@@ -1,0 +1,64 @@
+<!--
+  Fixture SINTÉTICO para casos determinísticos de teste (Etapa B).
+  Marcação espelha a estrutura real do Letterboxd observada na Fase 1
+  (article.production-viewing, span.inline-rating, .body-text, .collapsed-text,
+  p[data-likeable-identifier], placeholder de spoiler). NÃO é HTML baixado.
+-->
+<html><body>
+
+<!-- caso A: nota 3.5 (★★★½), completo, longo -->
+<article class="production-viewing -viewing">
+  <span class="inline-symbol inline-rating">★★★½</span>
+  <div class="body-text -prose -reset js-review-body js-collapsible-text" lang="en">
+    <p>A completely ordinary but sufficiently long review about pacing and craft that easily clears the one hundred and fifty character minimum imposed by the collection filter used here.</p>
+  </div>
+  <p class="like-link-target" data-likeable-identifier='{"lid":"aaa","uid":"viewing:900000001","type":"viewing","typeName":"review"}'></p>
+</article>
+
+<!-- caso B: nota 0.5 (★½ -> na verdade meia estrela = ★? não; meia estrela pura = "½") -->
+<article class="production-viewing -viewing">
+  <span class="inline-symbol inline-rating">½</span>
+  <div class="body-text -prose -reset js-review-body js-collapsible-text" lang="en">
+    <p>Half a star. This negative review is written to be long enough to also pass the one hundred and fifty character length filter so the rating parser for the half glyph can be exercised.</p>
+  </div>
+  <p class="like-link-target" data-likeable-identifier='{"lid":"bbb","uid":"viewing:900000002","type":"viewing","typeName":"review"}'></p>
+</article>
+
+<!-- caso C: SPOILER (placeholder no corpo) -->
+<article class="production-viewing -viewing">
+  <span class="inline-symbol inline-rating">★★★★★</span>
+  <div class="body-text -prose -reset js-review-body js-collapsible-text" lang="en">
+    <p>This review may contain spoilers. I can handle the truth.</p>
+  </div>
+  <p class="like-link-target" data-likeable-identifier='{"lid":"ccc","uid":"viewing:900000003","type":"viewing","typeName":"review"}'></p>
+</article>
+
+<!-- caso D: SEM NOTA -->
+<article class="production-viewing -viewing">
+  <div class="body-text -prose -reset js-review-body js-collapsible-text" lang="en">
+    <p>A review with no star rating at all, which the pipeline must discard because reviews without a nota are out of scope per the spec.</p>
+  </div>
+  <p class="like-link-target" data-likeable-identifier='{"lid":"ddd","uid":"viewing:900000004","type":"viewing","typeName":"review"}'></p>
+</article>
+
+<!-- caso E: TRUNCADA (collapsed-text + …) com data-full-text-url -->
+<article class="production-viewing -viewing">
+  <span class="inline-symbol inline-rating">★★★★</span>
+  <div class="body-text -prose -reset js-review-body js-collapsible-text" data-full-text-url="/s/full-text/viewing:900000005/" lang="en">
+    <div class="collapsed-text">
+      <p>This is the visible truncated portion of a long review that keeps going and going but is cut off by Letterboxd with an ellipsis at the end…</p>
+    </div>
+  </div>
+  <p class="like-link-target" data-likeable-identifier='{"lid":"eee","uid":"viewing:900000005","type":"viewing","typeName":"review"}'></p>
+</article>
+
+<!-- caso F: nota 2 (★★), completo, mas CURTO (< 150 chars) -->
+<article class="production-viewing -viewing">
+  <span class="inline-symbol inline-rating">★★</span>
+  <div class="body-text -prose -reset js-review-body js-collapsible-text" lang="en">
+    <p>too slow for me.</p>
+  </div>
+  <p class="like-link-target" data-likeable-identifier='{"lid":"fff","uid":"viewing:900000006","type":"viewing","typeName":"review"}'></p>
+</article>
+
+</body></html>
