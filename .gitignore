@@ -1,0 +1,11 @@
+# Segredos
+.env
+
+# Python
+venv/
+__pycache__/
+*.egg-info/
+.pytest_cache/
+
+# Cache de rede reconstruível (SPEC.md §3[B]) — não é código-fonte
+resultado/cache/
