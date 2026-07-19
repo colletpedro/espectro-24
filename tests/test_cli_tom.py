@@ -1,0 +1,126 @@
+"""CLI --tom (v1.2.0): estruturado NÃO chama o narrador; narrativo/ambos sim.
+
+Usa o caminho --reuse-synthesis (carrega um JSON existente) para exercitar a
+decisão de narração sem tocar em rede/coleta. `narrate_output` é mockado.
+"""
+import json
+
+import pytest
+
+from espectro24 import cli
+from espectro24.models import BucketResult, LevelResult, NarrativaResult, Review, Tema
+from espectro24.render import build_output
+
+
+def _escreve_json(out_dir, slug="cure"):
+    lvl = LevelResult(4.0, 150, 1, 3, 0, 0, 0, 0)
+    lvl.validas = [Review(viewing_id=f"v{i}", rating=4.0, text="x" * 200,
+                          truncated=False, full_text_url=None, spoiler=False,
+                          full_text="x" * 200) for i in range(3)]
+    b = BucketResult(nome="positivas", alvo=30, modo="completo", niveis=[lvl],
+                     temas=[Tema("ritmo", 2, 3, "grupo achou o ritmo bom")],
+                     observacao_geral="as reviews positivas destacam o ritmo")
+    out = build_output(slug, [b], "2026-01-01", {}, 42)
+    (out_dir / f"{slug}.json").write_text(json.dumps(out, ensure_ascii=False),
+                                          encoding="utf-8")
+
+
+@pytest.fixture
+def _iso_env(monkeypatch):
+    # isola do .env real e fixa uma chave fake
+    monkeypatch.setattr(cli, "load_dotenv", lambda *a, **k: None)
+    monkeypatch.setenv("GEMINI_API_KEY", "fake-key")
+    monkeypatch.delenv("ANTHROPIC_API_KEY", raising=False)
+
+
+def _mock_narrate(monkeypatch):
+    calls = []
+
+    def fake(output, model=None, provider=None):
+        calls.append(output)
+        return NarrativaResult(texto="PROSA_MOCK", idioma_invalido=False,
+                               escopo_suspeito=False, aspas_removidas=False)
+    monkeypatch.setattr(cli, "narrate_output", fake)
+    return calls
+
+
+def test_tom_estruturado_nao_chama_narrador(tmp_path, monkeypatch, _iso_env, capsys):
+    _escreve_json(tmp_path)
+    calls = _mock_narrate(monkeypatch)
+    cli.main(["--slug", "cure", "--reuse-synthesis", "--out-dir", str(tmp_path),
+              "--tom", "estruturado"])
+    assert calls == []                       # narrador NÃO chamado
+    out = capsys.readouterr().out
+    assert "mencionado em" in out            # estruturado renderizado
+    assert "PROSA_MOCK" not in out
+
+
+def test_tom_narrativo_chama_narrador_uma_vez(tmp_path, monkeypatch, _iso_env, capsys):
+    _escreve_json(tmp_path)
+    calls = _mock_narrate(monkeypatch)
+    cli.main(["--slug", "cure", "--reuse-synthesis", "--out-dir", str(tmp_path),
+              "--tom", "narrativo"])
+    assert len(calls) == 1                   # narrador chamado 1x
+    out = capsys.readouterr().out
+    assert "PROSA_MOCK" in out
+    assert "mencionado em" not in out        # temas escondidos no narrativo
+
+
+def test_tom_ambos_chama_narrador_e_persiste_no_json(tmp_path, monkeypatch, _iso_env, capsys):
+    _escreve_json(tmp_path)
+    calls = _mock_narrate(monkeypatch)
+    cli.main(["--slug", "cure", "--reuse-synthesis", "--out-dir", str(tmp_path),
+              "--tom", "ambos"])
+    assert len(calls) == 1
+    out = capsys.readouterr().out
+    assert "mencionado em" in out and "PROSA_MOCK" in out
+    # narrativa persistida no JSON
+    salvo = json.loads((tmp_path / "cure.json").read_text(encoding="utf-8"))
+    assert salvo["narrativa"] == "PROSA_MOCK"
+    assert salvo["narrativa_flags"]["falhou"] is False
+
+
+def test_reuse_sem_json_existente_falha(tmp_path, monkeypatch, _iso_env):
+    with pytest.raises(SystemExit):
+        cli.main(["--slug", "inexistente", "--reuse-synthesis",
+                  "--out-dir", str(tmp_path), "--tom", "narrativo"])
+
+
+# --- v1.3.0: ficha TMDB é aditiva — sucesso e falha não quebram o pipeline ---
+
+def test_ficha_sucesso_entra_no_json(tmp_path, monkeypatch, _iso_env, capsys):
+    _escreve_json(tmp_path)
+    _mock_narrate(monkeypatch)
+    ficha_mock = {"titulo": "Cure", "sinopse_oficial": "s", "sinopse_fallback_en": False,
+                 "generos": ["Terror"], "duracao_min": 111, "diretor": "Kiyoshi Kurosawa",
+                 "ano": 1997, "fonte": "tmdb"}
+    monkeypatch.setattr(cli, "buscar_ficha", lambda *a, **k: (ficha_mock, None))
+    cli.main(["--slug", "cure", "--reuse-synthesis", "--out-dir", str(tmp_path),
+              "--tom", "estruturado"])
+    salvo = json.loads((tmp_path / "cure.json").read_text(encoding="utf-8"))
+    assert salvo["ficha"]["diretor"] == "Kiyoshi Kurosawa"
+
+
+def test_ficha_falha_da_api_nao_quebra_pipeline(tmp_path, monkeypatch, _iso_env, capsys):
+    _escreve_json(tmp_path)
+    _mock_narrate(monkeypatch)
+    monkeypatch.setattr(cli, "buscar_ficha",
+                        lambda *a, **k: (None, "TMDB indisponível (erro simulado) — ficha pulada."))
+    cli.main(["--slug", "cure", "--reuse-synthesis", "--out-dir", str(tmp_path),
+              "--tom", "estruturado"])
+    salvo = json.loads((tmp_path / "cure.json").read_text(encoding="utf-8"))
+    assert salvo["ficha"] is None
+    err = capsys.readouterr().err
+    assert "Ficha TMDB" in err
+
+
+def test_no_ficha_pula_a_busca(tmp_path, monkeypatch, _iso_env, capsys):
+    _escreve_json(tmp_path)
+    _mock_narrate(monkeypatch)
+    chamou = []
+    monkeypatch.setattr(cli, "buscar_ficha", lambda *a, **k: chamou.append(1) or (None, None))
+    cli.main(["--slug", "cure", "--reuse-synthesis", "--out-dir", str(tmp_path),
+              "--tom", "estruturado", "--no-ficha"])
+    assert chamou == []
+    salvo = json.loads((tmp_path / "cure.json").read_text(encoding="utf-8"))
+    assert salvo["ficha"] is None
