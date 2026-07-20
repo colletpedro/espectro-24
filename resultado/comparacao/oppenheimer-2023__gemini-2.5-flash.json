@@ -1,0 +1,440 @@
+{
+  "slug": "oppenheimer-2023",
+  "data_coleta": "2026-07-19T07:37:52.899537+00:00",
+  "spec_version": "1.1.1",
+  "total_reviews_observadas": 228,
+  "origem_paginas": {
+    "oppenheimer-2023/pages/rated_0_5_page_1.html": "cache",
+    "oppenheimer-2023/pages/rated_0_5_page_2.html": "cache",
+    "oppenheimer-2023/fulltext/viewing_416885885.html": "cache",
+    "oppenheimer-2023/fulltext/viewing_417101886.html": "cache",
+    "oppenheimer-2023/fulltext/viewing_417475747.html": "cache",
+    "oppenheimer-2023/fulltext/viewing_417210375.html": "cache",
+    "oppenheimer-2023/fulltext/viewing_419353375.html": "cache",
+    "oppenheimer-2023/fulltext/viewing_560119434.html": "cache",
+    "oppenheimer-2023/pages/rated_1_page_1.html": "cache",
+    "oppenheimer-2023/fulltext/viewing_416642483.html": "cache",
+    "oppenheimer-2023/fulltext/viewing_424303277.html": "cache",
+    "oppenheimer-2023/fulltext/viewing_421410537.html": "cache",
+    "oppenheimer-2023/fulltext/viewing_423079060.html": "cache",
+    "oppenheimer-2023/fulltext/viewing_951913723.html": "cache",
+    "oppenheimer-2023/fulltext/viewing_418577442.html": "cache",
+    "oppenheimer-2023/pages/rated_1_5_page_1.html": "cache",
+    "oppenheimer-2023/pages/rated_1_5_page_2.html": "cache",
+    "oppenheimer-2023/fulltext/viewing_416907925.html": "cache",
+    "oppenheimer-2023/fulltext/viewing_412768696.html": "cache",
+    "oppenheimer-2023/fulltext/viewing_430780431.html": "cache",
+    "oppenheimer-2023/fulltext/viewing_421864411.html": "cache",
+    "oppenheimer-2023/fulltext/viewing_418299155.html": "cache",
+    "oppenheimer-2023/fulltext/viewing_419321626.html": "cache",
+    "oppenheimer-2023/fulltext/viewing_417116212.html": "cache",
+    "oppenheimer-2023/fulltext/viewing_551801129.html": "cache",
+    "oppenheimer-2023/pages/rated_2_page_1.html": "cache",
+    "oppenheimer-2023/pages/rated_2_page_2.html": "cache",
+    "oppenheimer-2023/fulltext/viewing_416289215.html": "cache",
+    "oppenheimer-2023/fulltext/viewing_429089876.html": "cache",
+    "oppenheimer-2023/fulltext/viewing_416369279.html": "cache",
+    "oppenheimer-2023/fulltext/viewing_418215469.html": "cache",
+    "oppenheimer-2023/fulltext/viewing_417677342.html": "cache",
+    "oppenheimer-2023/fulltext/viewing_553820412.html": "cache",
+    "oppenheimer-2023/fulltext/viewing_418492856.html": "cache",
+    "oppenheimer-2023/pages/rated_2_5_page_1.html": "cache",
+    "oppenheimer-2023/pages/rated_2_5_page_2.html": "cache",
+    "oppenheimer-2023/fulltext/viewing_415280930.html": "cache",
+    "oppenheimer-2023/fulltext/viewing_414851634.html": "cache",
+    "oppenheimer-2023/fulltext/viewing_416076305.html": "cache",
+    "oppenheimer-2023/fulltext/viewing_473955543.html": "cache",
+    "oppenheimer-2023/fulltext/viewing_418962245.html": "cache",
+    "oppenheimer-2023/pages/rated_3_page_1.html": "cache",
+    "oppenheimer-2023/fulltext/viewing_417494948.html": "cache",
+    "oppenheimer-2023/fulltext/viewing_416240930.html": "cache",
+    "oppenheimer-2023/fulltext/viewing_429574499.html": "cache",
+    "oppenheimer-2023/fulltext/viewing_420009990.html": "cache",
+    "oppenheimer-2023/fulltext/viewing_417361692.html": "cache",
+    "oppenheimer-2023/fulltext/viewing_413606240.html": "cache",
+    "oppenheimer-2023/fulltext/viewing_417958065.html": "cache",
+    "oppenheimer-2023/pages/rated_3_5_page_1.html": "cache",
+    "oppenheimer-2023/pages/rated_3_5_page_2.html": "cache",
+    "oppenheimer-2023/fulltext/viewing_416238469.html": "cache",
+    "oppenheimer-2023/fulltext/viewing_1397217909.html": "cache",
+    "oppenheimer-2023/fulltext/viewing_417368458.html": "cache",
+    "oppenheimer-2023/fulltext/viewing_554147535.html": "cache",
+    "oppenheimer-2023/fulltext/viewing_418895660.html": "cache",
+    "oppenheimer-2023/fulltext/viewing_417084557.html": "cache",
+    "oppenheimer-2023/fulltext/viewing_417028597.html": "cache",
+    "oppenheimer-2023/pages/rated_4_page_1.html": "cache",
+    "oppenheimer-2023/pages/rated_4_page_2.html": "cache",
+    "oppenheimer-2023/fulltext/viewing_416249607.html": "cache",
+    "oppenheimer-2023/fulltext/viewing_419707150.html": "cache",
+    "oppenheimer-2023/fulltext/viewing_416237182.html": "cache",
+    "oppenheimer-2023/fulltext/viewing_418589936.html": "cache",
+    "oppenheimer-2023/fulltext/viewing_417094935.html": "cache",
+    "oppenheimer-2023/fulltext/viewing_416071980.html": "cache",
+    "oppenheimer-2023/pages/rated_4_5_page_1.html": "cache",
+    "oppenheimer-2023/pages/rated_4_5_page_2.html": "cache",
+    "oppenheimer-2023/fulltext/viewing_417211213.html": "cache",
+    "oppenheimer-2023/fulltext/viewing_418610969.html": "cache",
+    "oppenheimer-2023/fulltext/viewing_415799521.html": "cache",
+    "oppenheimer-2023/fulltext/viewing_417322792.html": "cache",
+    "oppenheimer-2023/pages/rated_5_page_1.html": "cache",
+    "oppenheimer-2023/pages/rated_5_page_2.html": "cache",
+    "oppenheimer-2023/pages/rated_5_page_3.html": "cache",
+    "oppenheimer-2023/fulltext/viewing_418781291.html": "cache",
+    "oppenheimer-2023/fulltext/viewing_416235863.html": "cache",
+    "oppenheimer-2023/fulltext/viewing_417134128.html": "cache"
+  },
+  "buckets": [
+    {
+      "bucket": "negativas",
+      "alvo": 50,
+      "modo": "completo",
+      "n_validas": 50,
+      "niveis": [
+        {
+          "nivel": 0.5,
+          "n_validas": 10,
+          "n_brutas": 24,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 1,
+          "n_descartadas_curtas": 7,
+          "n_descartadas_truncamento": 0,
+          "paginas_buscadas": 2
+        },
+        {
+          "nivel": 1.0,
+          "n_validas": 10,
+          "n_brutas": 12,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 0,
+          "n_descartadas_curtas": 1,
+          "n_descartadas_truncamento": 0,
+          "paginas_buscadas": 1
+        },
+        {
+          "nivel": 1.5,
+          "n_validas": 10,
+          "n_brutas": 24,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 1,
+          "n_descartadas_curtas": 6,
+          "n_descartadas_truncamento": 0,
+          "paginas_buscadas": 2
+        },
+        {
+          "nivel": 2.0,
+          "n_validas": 10,
+          "n_brutas": 24,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 2,
+          "n_descartadas_curtas": 3,
+          "n_descartadas_truncamento": 0,
+          "paginas_buscadas": 2
+        },
+        {
+          "nivel": 2.5,
+          "n_validas": 10,
+          "n_brutas": 24,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 2,
+          "n_descartadas_curtas": 4,
+          "n_descartadas_truncamento": 0,
+          "paginas_buscadas": 2
+        }
+      ],
+      "temas": [
+        {
+          "tema": "Visão eurocêntrica e falta de representação das vítimas",
+          "mencoes_aproximadas": 15,
+          "n_reviews_analisadas": 50,
+          "exemplo_parafraseado": "O filme falha em abordar as consequências reais das bombas atômicas, focando na culpa de Oppenheimer ou na política americana, sem mostrar as vítimas japonesas ou sequer mencionar outras populações afetadas.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null
+        },
+        {
+          "tema": "Ritmo e edição caóticos/acelerados",
+          "mencoes_aproximadas": 15,
+          "n_reviews_analisadas": 50,
+          "exemplo_parafraseado": "Muitas cenas são curtas, com transições rápidas, o que torna difícil processar as informações e impede que a história e os personagens se desenvolvam, fazendo o filme parecer um longo trailer.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null
+        },
+        {
+          "tema": "Personagens femininas fracas ou estereotipadas",
+          "mencoes_aproximadas": 13,
+          "n_reviews_analisadas": 50,
+          "exemplo_parafraseado": "As mulheres são mal escritas e unidimensionais, reduzidas a figuras de apoio para o protagonista, como alcoólatras, manipuladoras ou meros objetos sexuais.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null
+        },
+        {
+          "tema": "Sonoplastia e trilha sonora excessivas/distrativas",
+          "mencoes_aproximadas": 9,
+          "n_reviews_analisadas": 50,
+          "exemplo_parafraseado": "A música é constantemente alta e opressora, buscando manipular as emoções do público e encobrir as fraquezas do roteiro, ao invés de permitir que o silêncio fale por si.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null
+        },
+        {
+          "tema": "Roteiro confuso e superficial",
+          "mencoes_aproximadas": 8,
+          "n_reviews_analisadas": 50,
+          "exemplo_parafraseado": "A narrativa é desorganizada, com saltos temporais desnecessários e um excesso de personagens sem desenvolvimento, resultando em uma história que é ao mesmo tempo longa demais e superficial.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null
+        },
+        {
+          "tema": "Filme pretensioso ou autoindulgente de Nolan",
+          "mencoes_aproximadas": 7,
+          "n_reviews_analisadas": 50,
+          "exemplo_parafraseado": "O filme é criticado por ser uma exibição do estilo de Nolan, com truques narrativos e visuais que não servem à história e um ar de pseudo-intelectualismo, sem profundidade emocional genuína.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null
+        }
+      ],
+      "observacao_geral": "As críticas negativas apontam para uma narrativa fragmentada e pretensiosa que, apesar dos aspectos técnicos notáveis, falha em aprofundar-se nas complexidades morais e humanas do tema, especialmente no que diz respeito às vítimas e à representação feminina."
+    },
+    {
+      "bucket": "medianas",
+      "alvo": 20,
+      "modo": "completo",
+      "n_validas": 20,
+      "niveis": [
+        {
+          "nivel": 3.0,
+          "n_validas": 10,
+          "n_brutas": 12,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 0,
+          "n_descartadas_curtas": 2,
+          "n_descartadas_truncamento": 0,
+          "paginas_buscadas": 1
+        },
+        {
+          "nivel": 3.5,
+          "n_validas": 10,
+          "n_brutas": 24,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 1,
+          "n_descartadas_curtas": 9,
+          "n_descartadas_truncamento": 0,
+          "paginas_buscadas": 2
+        }
+      ],
+      "temas": [
+        {
+          "tema": "Ritmo e duração do filme",
+          "mencoes_aproximadas": 10,
+          "n_reviews_analisadas": 20,
+          "exemplo_parafraseado": "Muitos acharam o filme longo e arrastado, especialmente no terceiro ato, enquanto outros destacaram a tensão crescente até a explosão da bomba.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null
+        },
+        {
+          "tema": "Atuações e elenco",
+          "mencoes_aproximadas": 8,
+          "n_reviews_analisadas": 20,
+          "exemplo_parafraseado": "A atuação de Cillian Murphy foi amplamente elogiada por sua imersão e complexidade, e Robert Downey Jr. também recebeu reconhecimento por seu papel.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null
+        },
+        {
+          "tema": "Estilo e megalomania de Nolan",
+          "mencoes_aproximadas": 7,
+          "n_reviews_analisadas": 20,
+          "exemplo_parafraseado": "Críticos notaram a abordagem grandiosa e, por vezes, egocêntrica de Nolan, que prioriza o indivíduo Oppenheimer em detrimento de outros aspectos da história.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null
+        },
+        {
+          "tema": "Aspectos técnicos (fotografia, som, trilha sonora)",
+          "mencoes_aproximadas": 7,
+          "n_reviews_analisadas": 20,
+          "exemplo_parafraseado": "A cinematografia e a trilha sonora foram frequentemente elogiadas, embora alguns mencionassem problemas de mixagem de som e música intrusiva.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null
+        },
+        {
+          "tema": "Roteiro e desenvolvimento de personagens",
+          "mencoes_aproximadas": 6,
+          "n_reviews_analisadas": 20,
+          "exemplo_parafraseado": "O filme foi visto como um estudo de personagem intenso, mas alguns sentiram que os personagens, especialmente os femininos, careciam de profundidade ou que a narrativa era excessivamente focada nos diálogos.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null
+        },
+        {
+          "tema": "Representação histórica e impacto das bombas",
+          "mencoes_aproximadas": 4,
+          "n_reviews_analisadas": 20,
+          "exemplo_parafraseado": "Houve críticas sobre a falta de representação visual das vítimas das bombas atômicas, com o filme focando mais nas consequências políticas e psicológicas para Oppenheimer e os EUA.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null
+        }
+      ],
+      "observacao_geral": "As críticas medianas apontam para um filme tecnicamente impressionante, com atuações fortes, mas que divide opiniões quanto ao ritmo, profundidade dos personagens e a abordagem narrativa de Nolan sobre o tema histórico."
+    },
+    {
+      "bucket": "positivas",
+      "alvo": 30,
+      "modo": "completo",
+      "n_validas": 30,
+      "niveis": [
+        {
+          "nivel": 4.0,
+          "n_validas": 10,
+          "n_brutas": 24,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 1,
+          "n_descartadas_curtas": 12,
+          "n_descartadas_truncamento": 0,
+          "paginas_buscadas": 2
+        },
+        {
+          "nivel": 4.5,
+          "n_validas": 10,
+          "n_brutas": 24,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 1,
+          "n_descartadas_curtas": 12,
+          "n_descartadas_truncamento": 0,
+          "paginas_buscadas": 2
+        },
+        {
+          "nivel": 5.0,
+          "n_validas": 10,
+          "n_brutas": 36,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 2,
+          "n_descartadas_curtas": 17,
+          "n_descartadas_truncamento": 0,
+          "paginas_buscadas": 3
+        }
+      ],
+      "temas": [
+        {
+          "tema": "Atuações e elenco",
+          "mencoes_aproximadas": 21,
+          "n_reviews_analisadas": 30,
+          "exemplo_parafraseado": "O desempenho de Cillian Murphy é frequentemente descrito como hipnotizante e com nuances, enquanto Robert Downey Jr. é elogiado por sua atuação digna de Oscar, mostrando que ele brilha em papéis fora do universo Marvel.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null
+        },
+        {
+          "tema": "Imersão e impacto sensorial (som e trilha sonora)",
+          "mencoes_aproximadas": 17,
+          "n_reviews_analisadas": 30,
+          "exemplo_parafraseado": "A trilha sonora de Ludwig Göransson e o design de som são consistentemente destacados por criar uma experiência imersiva e visceral, gerando uma sensação de terror e ansiedade que 'atinge o espectador no peito'.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null
+        },
+        {
+          "tema": "Direção e complexidade narrativa de Nolan",
+          "mencoes_aproximadas": 15,
+          "n_reviews_analisadas": 30,
+          "exemplo_parafraseado": "A direção de Christopher Nolan é elogiada por sua maestria técnica e a estrutura complexa do filme, que entrelaça múltiplas linhas do tempo, mantendo o público engajado apesar da longa duração e densidade do roteiro.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null
+        },
+        {
+          "tema": "Exploração temática e profundidade moral",
+          "mencoes_aproximadas": 12,
+          "n_reviews_analisadas": 30,
+          "exemplo_parafraseado": "O filme é reconhecido por sua profunda exploração das implicações morais e éticas da criação da bomba atômica, bem como por sua complexa análise do personagem de Oppenheimer, que é visto como uma figura assombrada e vítima de sua própria criação.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null
+        },
+        {
+          "tema": "Qualidade cinematográfica e visual",
+          "mencoes_aproximadas": 9,
+          "n_reviews_analisadas": 30,
+          "exemplo_parafraseado": "A cinematografia, especialmente nas sequências IMAX 70mm, é considerada deslumbrante e de tirar o fôlego, contribuindo para a grandiosidade e o espetáculo visual do filme.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null
+        },
+        {
+          "tema": "Impacto emocional e psicológico",
+          "mencoes_aproximadas": 6,
+          "n_reviews_analisadas": 30,
+          "exemplo_parafraseado": "A experiência de assistir ao filme é descrita como 'assustadoramente densa' e psicologicamente exaustiva, deixando os espectadores em um estado de profunda reflexão e admiração.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null
+        }
+      ],
+      "observacao_geral": "Os críticos elogiam 'Oppenheimer' como uma conquista cinematográfica monumental de Nolan, destacando suas atuações impecáveis, a imersão sonora e a complexidade narrativa, apesar de algumas ressalvas quanto à mixagem de áudio e desenvolvimento de personagens femininas. Muitos o consideram o melhor trabalho de Nolan até o momento."
+    }
+  ],
+  "comparacao": {
+    "modelo": "gemini-2.5-flash",
+    "metricas_por_bucket": {
+      "negativas": {
+        "json_valido": true,
+        "houve_retentativa": false,
+        "houve_backoff_rate_limit": false,
+        "finish_reason": "FinishReason.STOP",
+        "latencia_s": 6.84,
+        "n_temas": 6,
+        "soma_mencoes_aproximadas": 67,
+        "n_temas_clampados": 0,
+        "chamadas_detalhe": [
+          {
+            "tipo": "chamada",
+            "ok": true,
+            "erro": null,
+            "finish_reason": "FinishReason.STOP",
+            "latencia_s": 6.84,
+            "json_valido": true
+          }
+        ]
+      },
+      "medianas": {
+        "json_valido": true,
+        "houve_retentativa": false,
+        "houve_backoff_rate_limit": false,
+        "finish_reason": "FinishReason.STOP",
+        "latencia_s": 4.48,
+        "n_temas": 6,
+        "soma_mencoes_aproximadas": 42,
+        "n_temas_clampados": 0,
+        "chamadas_detalhe": [
+          {
+            "tipo": "chamada",
+            "ok": true,
+            "erro": null,
+            "finish_reason": "FinishReason.STOP",
+            "latencia_s": 4.48,
+            "json_valido": true
+          }
+        ]
+      },
+      "positivas": {
+        "json_valido": true,
+        "houve_retentativa": false,
+        "houve_backoff_rate_limit": false,
+        "finish_reason": "FinishReason.STOP",
+        "latencia_s": 5.43,
+        "n_temas": 6,
+        "soma_mencoes_aproximadas": 80,
+        "n_temas_clampados": 0,
+        "chamadas_detalhe": [
+          {
+            "tipo": "chamada",
+            "ok": true,
+            "erro": null,
+            "finish_reason": "FinishReason.STOP",
+            "latencia_s": 5.43,
+            "json_valido": true
+          }
+        ]
+      }
+    }
+  }
+}
