@@ -1,7 +1,7 @@
 {
   "slug": "cure",
   "data_coleta": "2026-07-19T08:09:00.011723+00:00",
-  "spec_version": "1.4.0",
+  "spec_version": "1.4.1",
   "total_reviews_observadas": 252,
   "buckets": [
     {
@@ -310,7 +310,7 @@
       "share_real": 79
     }
   ],
-  "narrativa": "Em A Cura, o diretor 黒沢清 nos apresenta a um thriller de crime, terror e mistério de 1997, onde um detetive se vê em um beco sem saída ao investigar assassinatos marcados por um estranho x, até a aparição de um rapaz tímido e peculiar que pode ter a chave para os crimes. Ao longo de 111 minutos, o filme desdobra uma atmosfera sombria e um ritmo marcadamente lento, que pode ser tanto hipnótico quanto arrastado, dependendo da perspectiva. Ele se caracteriza por explorar temas psicológicos profundos e manter uma ambiguidade constante, deixando muitas vezes o espectador na incerteza. \n\nA grande maioria das notas (~79%) aponta que A Cura é uma obra-prima do horror psicológico, elogiando sua atmosfera perturbadora e hipnótica, que muitos descrevem como essencial para o suspense e a exploração de temas existenciais, como a fragilidade da identidade e a natureza do mal. O ritmo lento e deliberado é visto como um trunfo que intensifica a experiência, com alguns destacando a atuação impactante do antagonista e a excelência do design de som e cinematografia. A ausência de respostas definitivas e a ambiguidade são apreciadas por forçarem a reflexão do espectador. Por outro lado, uma minoria das notas (~17%) posiciona o filme de forma mais ambivalente, reconhecendo suas ideias intrigantes e a eficácia de sua atmosfera e estilo visual, mas muitos sentem que a execução falha na clareza narrativa e que o ritmo lento leva à confusão, resultando em um final insatisfatório e ambíguo. Já uma pequena minoria das notas (~3%) teve uma experiência bastante negativa, classificando o ritmo como excessivamente lento e tedioso, o que, para a maioria, impede a construção de tensão ou o desenvolvimento de personagens envolventes. Para muitos neste grupo, o filme falha em gerar mistério ou terror, e o enredo é considerado fraco e repetitivo, culminando em um final insatisfatório.",
+  "narrativa": "Em A Cura, o diretor 黒沢清 nos leva a um suspense, terror e mistério japonês de 1997, onde um detetive se vê em um beco sem saída ao investigar assassinatos marcados por um estranho x, até que a prisão de um jovem misterioso pode ser a chave para desvendar os crimes. O filme se desenrola com um ritmo notavelmente lento e deliberado, construindo uma atmosfera densa e perturbadora que permeia toda a experiência. Frequentemente descrito como hipnótico, ele mergulha em uma ambiguidade constante, onde a linha entre o real e o inexplicável se torna difusa. \n\nA grande maioria das notas (~79%) avalia o filme positivamente, elogiando sua atmosfera e tom perturbador e hipnótico, que sutilmente instila apreensão e desconforto sem depender de sustos. Muitos também apreciam o pacing lento e deliberado, que intensifica o horror psicológico e reflete a temática da manipulação mental, além da exploração de temas psicológicos e existenciais profundos, como a fragilidade da identidade. Por outro lado, uma minoria das notas (~17%) ficou em uma posição mediana, reconhecendo ideias intrigantes e uma atmosfera e estilo visual eficazes, mas muitos sentiram que a execução falha em aprofundar esses conceitos ou os conecta de forma convincente, levando a um ritmo lento e confusão narrativa. Uma pequena minoria das notas (~3%) se mostrou negativa, com a maioria apontando o ritmo lento e tedioso como o principal problema, fazendo com que o filme perdesse a tensão ou o mistério, e muitos consideraram o enredo e o roteiro fracos e repetitivos, com personagens desinteressantes ou planos. Embora alguns do grupo negativo tenham achado o final insatisfatório, muitos que deram notas medianas e alguns do grupo positivo também observaram a ausência de respostas e a ambiguidade no final.",
   "narrativa_flags": {
     "idioma_invalido": false,
     "escopo_suspeito": false,
@@ -318,6 +318,7 @@
     "quantificador_suspeito": false,
     "consenso_suspeito": false,
     "peso_nao_ancorado": false,
+    "vocabulario_peso_suspeito": false,
     "aspas_removidas": true,
     "falhou": false
   },
@@ -338,18 +339,7 @@
   },
   "consensos_usados": [
     {
-      "propriedade": "atmosfera sombria",
-      "grupos_de_origem": [
-        "medianas",
-        "positivas"
-      ],
-      "temas_de_origem": [
-        "Atmosfera e estilo visual eficazes",
-        "Atmosfera e Tom Perturbador/Hipnótico"
-      ]
-    },
-    {
-      "propriedade": "ritmo lento",
+      "propriedade": "ritmo lento e deliberado",
       "grupos_de_origem": [
         "negativas",
         "medianas",
@@ -362,23 +352,27 @@
       ]
     },
     {
-      "propriedade": "temas psicológicos",
+      "propriedade": "atmosfera densa e perturbadora",
       "grupos_de_origem": [
+        "negativas",
         "medianas",
         "positivas"
       ],
       "temas_de_origem": [
-        "Ideias intrigantes, mas execução falha",
-        "Temas Psicológicos e Existenciais"
+        "Falta de tensão/mistério/terror",
+        "Atmosfera e estilo visual eficazes",
+        "Atmosfera e Tom Perturbador/Hipnótico"
       ]
     },
     {
       "propriedade": "ambiguidade",
       "grupos_de_origem": [
+        "negativas",
         "medianas",
         "positivas"
       ],
       "temas_de_origem": [
+        "Final insatisfatório/abrupto",
         "Final insatisfatório/ambíguo",
         "Ausência de Respostas e Ambiguidade"
       ]
@@ -404,5 +398,47 @@
       "positivas": 79
     },
     "fonte": "letterboxd_histograma"
-  }
+  },
+  "quantificadores_usados": [
+    {
+      "quantificador": "muitos",
+      "tema": "Atmosfera e Tom Perturbador/Hipnótico"
+    },
+    {
+      "quantificador": "muitos",
+      "tema": "Pacing Lento e Deliberado"
+    },
+    {
+      "quantificador": "muitos",
+      "tema": "Temas Psicológicos e Existenciais"
+    },
+    {
+      "quantificador": "muitos",
+      "tema": "Ideias intrigantes, mas execução falha"
+    },
+    {
+      "quantificador": "muitos",
+      "tema": "Ritmo lento e confusão narrativa"
+    },
+    {
+      "quantificador": "a maioria",
+      "tema": "Ritmo lento e tedioso"
+    },
+    {
+      "quantificador": "muitos",
+      "tema": "Enredo e roteiro fracos/repetitivos"
+    },
+    {
+      "quantificador": "alguns",
+      "tema": "Final insatisfatório/abrupto"
+    },
+    {
+      "quantificador": "muitos",
+      "tema": "Final insatisfatório/ambíguo"
+    },
+    {
+      "quantificador": "alguns",
+      "tema": "Ausência de Respostas e Ambiguidade"
+    }
+  ]
 }

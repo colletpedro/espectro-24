@@ -1,7 +1,7 @@
 {
   "slug": "cidade-de-deus",
   "data_coleta": "2026-07-19T08:27:41.045688+00:00",
-  "spec_version": "1.4.0",
+  "spec_version": "1.4.1",
   "total_reviews_observadas": 228,
   "origem_paginas": {
     "cidade-de-deus/pages/rated_0_5_page_1.html": "network",
@@ -380,7 +380,7 @@
       "share_real": 91
     }
   ],
-  "narrativa": "Dirigido por Fernando Meirelles em 2002, Cidade de Deus é um drama e crime que acompanha Buscapé, um jovem da Cidade de Deus que, em meio à violência, busca na fotografia uma saída para uma vida digna. Ao longo de 130 minutos, o filme desdobra uma narrativa marcada por um ritmo acelerado e uma estética visual intensa, que emprega uma edição dinâmica e um estilo cinematográfico distinto. A obra é permeada por um retrato visceral da violência e da realidade social, elementos que se manifestam de forma crua e impactante. No entanto, enquanto essa intensidade é percebida, a conexão emocional com os personagens e a profundidade narrativa são pontos de divergência entre os espectadores.\n\nA grande maioria das notas (~91%) considera Cidade de Deus uma obra-prima, enaltecendo seu estilo visual e edição dinâmicos, que conferem ritmo acelerado e energia contagiante. Muitos também destacam a narrativa envolvente e abrangente, capaz de contar múltiplas histórias sem perder a coesão, além de apreciar a brutalidade e o realismo da violência, apresentada de forma crua e impactante. Por outro lado, uma pequena minoria das notas (~1%) aponta que o filme peca ao estetizar e espetacularizar a violência e a miséria, transformando-as em um recurso estilístico para chocar. Muitos neste grupo criticam a representação estereotipada e deturpada da favela, que simplifica sua complexidade, e consideram a violência excessiva e gratuita. Já uma pequena minoria das notas (~8%) reconhece a qualidade técnica e estilística, mas muitos sentem que, apesar de ser bem-feito, o filme não conseguiu gerar uma conexão emocional profunda com os personagens ou com a tragédia retratada, sendo mais entretenimento do que uma experiência marcante. Alguns espectadores também acharam o ritmo do filme inconstante, dificultando o engajamento completo com a narrativa.",
+  "narrativa": "Dirigido por Fernando Meirelles em 2002, Cidade de Deus é um drama criminal que acompanha Buscapé, um jovem morador da Cidade de Deus que, em meio à violência, busca na fotografia uma chance de ter uma vida digna. Ao assistir ao filme, percebe-se um estilo visual e uma edição notavelmente dinâmicos, que imprimem um ritmo acelerado à narrativa. A representação da violência é retratada de forma crua e impactante, explorando a realidade social complexa da favela de maneira inequivocamente gráfica. \n\nA grande maioria das notas (~91%) considera Cidade de Deus uma obra-prima, destacando a maioria das reviews o estilo visual e a edição dinâmicos que dão ao filme um ritmo acelerado e energia contagiante. Muitos também elogiam a narrativa envolvente e abrangente, que consegue tecer múltiplas histórias ao longo de décadas sem perder a coesão. A brutalidade e o realismo da violência são igualmente ressaltados por muitos como impactantes, chocando e enfatizando a seriedade do tema. Já uma pequena minoria das notas (~8%) ficou no meio-termo, com cerca de metade dessas reviews apontando um retrato honesto da violência e da realidade social, e muitos elogiando a qualidade técnica e estilística, embora alguns considerem essa estilização excessiva. Contudo, muitos sentiram que o filme não conseguiu gerar uma conexão emocional profunda com os personagens. Por outro lado, uma pequena minoria das notas (~1%) expressa avaliações negativas. Muitos desses espectadores consideram que o filme incorre na estetização e espetacularização da violência e da miséria, além de oferecer uma representação estereotipada da favela. Para muitos, a violência é excessiva e gratuita, servindo mais para chocar do que para comunicar uma mensagem significativa.",
   "narrativa_flags": {
     "idioma_invalido": false,
     "escopo_suspeito": false,
@@ -388,6 +388,7 @@
     "quantificador_suspeito": false,
     "consenso_suspeito": false,
     "peso_nao_ancorado": false,
+    "vocabulario_peso_suspeito": false,
     "aspas_removidas": true,
     "falhou": false
   },
@@ -406,7 +407,18 @@
   },
   "consensos_usados": [
     {
-      "propriedade": "Ritmo acelerado e edição dinâmica",
+      "propriedade": "estilo visual e edição dinâmicos",
+      "grupos_de_origem": [
+        "medianas",
+        "positivas"
+      ],
+      "temas_de_origem": [
+        "Qualidade técnica e estilística",
+        "Estilo visual e edição dinâmicos"
+      ]
+    },
+    {
+      "propriedade": "ritmo acelerado",
       "grupos_de_origem": [
         "negativas",
         "positivas"
@@ -417,16 +429,29 @@
       ]
     },
     {
-      "propriedade": "Retrato visceral da violência e realidade social",
+      "propriedade": "representação crua e impactante da violência",
       "grupos_de_origem": [
+        "negativas",
         "medianas",
-        "positivas",
-        "negativas"
+        "positivas"
       ],
       "temas_de_origem": [
+        "Violência excessiva e gratuita",
         "Retrato da violência e realidade social",
-        "Brutalidade e realismo da violência",
-        "Violência excessiva e gratuita"
+        "Brutalidade e realismo da violência"
+      ]
+    },
+    {
+      "propriedade": "exploração da realidade social da favela",
+      "grupos_de_origem": [
+        "negativas",
+        "medianas",
+        "positivas"
+      ],
+      "temas_de_origem": [
+        "Representação estereotipada e deturpada da favela",
+        "Retrato da violência e realidade social",
+        "Contexto social e histórico"
       ]
     }
   ],
@@ -450,5 +475,43 @@
       "positivas": 91
     },
     "fonte": "letterboxd_histograma"
-  }
+  },
+  "quantificadores_usados": [
+    {
+      "quantificador": "a maioria",
+      "tema": "Estilo visual e edição dinâmicos"
+    },
+    {
+      "quantificador": "muitos",
+      "tema": "Narrativa envolvente e abrangente"
+    },
+    {
+      "quantificador": "muitos",
+      "tema": "Brutalidade e realismo da violência"
+    },
+    {
+      "quantificador": "cerca de metade",
+      "tema": "Retrato da violência e realidade social"
+    },
+    {
+      "quantificador": "muitos",
+      "tema": "Qualidade técnica e estilística"
+    },
+    {
+      "quantificador": "muitos",
+      "tema": "Entretenimento versus profundidade/conexão emocional"
+    },
+    {
+      "quantificador": "muitos",
+      "tema": "Estetização e espetacularização da violência/miséria"
+    },
+    {
+      "quantificador": "muitos",
+      "tema": "Representação estereotipada e deturpada da favela"
+    },
+    {
+      "quantificador": "muitos",
+      "tema": "Violência excessiva e gratuita"
+    }
+  ]
 }

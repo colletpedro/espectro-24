@@ -99,6 +99,10 @@ class NarrativaResult:
     # sem que NENHUM tema do filme tivesse fração >= 80% (o único modo de
     # falha observado de quantificador mais forte que o rótulo pré-computado
     # permitia) e a retentativa não corrigiu.
+    # v1.4.1: a MESMA flag passa a ser alimentada também pela checagem POR PAR
+    # de `quantificadores_usados` (quantificador declarado mais forte que o
+    # rótulo do tema declarado, ou tema inexistente) — a checagem de bucket
+    # continua ativa, esta é somada a ela.
     quantificador_suspeito: bool = False
     falhou: bool = False  # True se não houve JSON válido nem após retentativa
     # v1.3.1: telemetria dos consensos factuais usados no MOVIMENTO 2 — cada
@@ -114,6 +118,17 @@ class NarrativaResult:
     # equivalentes — e a retentativa não corrigiu. Sempre False quando não há
     # distribuição (não há o que ancorar).
     peso_nao_ancorado: bool = False
+    # v1.4.1: telemetria dos quantificadores usados no MOVIMENTO 3 — cada item
+    # é {quantificador, tema}, declarado pelo próprio LLM junto do tema EXATO
+    # de onde a frequência vem. Mesmo padrão de `consensos_usados` (v1.3.1):
+    # material pronto para revisão humana par a par, e insumo da checagem que
+    # alimenta `quantificador_suspeito`.
+    quantificadores_usados: list = field(default_factory=list)
+    # v1.4.1: True quando havia distribuição real e um rótulo de peso apareceu
+    # acompanhado de "reviews"/"público"/"espectadores" em vez de "notas" — o
+    # peso vem do histograma de NOTAS, os temas vêm das reviews com texto, e
+    # os dois vocabulários não se misturam — e a retentativa não corrigiu.
+    vocabulario_peso_suspeito: bool = False
 
 
 @dataclass

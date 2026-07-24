@@ -140,6 +140,31 @@ troque pelo rótulo_quantificador correto que veio no relatório — nunca \
 invente um quantificador mais forte do que o fornecido."""
 
 
+# Reforço adicional SÓ para o narrador [D2] (v1.4.1) — telemetria por PAR
+# {quantificador, tema}: anexado à retentativa combinada quando um
+# quantificador declarado é MAIS FORTE que o rótulo pré-computado do tema
+# que ele mesmo citou (ou o tema citado não existe no relatório).
+_REFORCO_QUANT_DECLARADO = """
+- Se algum item de `quantificadores_usados` declarou uma expressão de \
+frequência MAIS FORTE que o rótulo_quantificador do tema citado, ou citou um \
+tema que não existe com esse nome EXATO no relatório: reescreva a prosa \
+usando, para aquele tema, o rótulo_quantificador fornecido (ou um mais \
+fraco) e corrija a lista para citar somente nomes de tema copiados \
+literalmente do relatório. O rótulo do relatório é a autoridade — sua \
+impressão de "quase todos" não é."""
+
+
+# Reforço adicional SÓ para o narrador [D2] (v1.4.1) — vocabulário do peso:
+# rótulo de peso vem do histograma de NOTAS, não das reviews com texto.
+_REFORCO_VOCABULARIO_PESO = """
+- Se você escreveu um rótulo de peso acompanhado de "reviews", "público" ou \
+"espectadores" (ex.: "a grande maioria das reviews"): troque para "das \
+notas". O peso vem do histograma de NOTAS do Letterboxd — todo mundo que \
+avaliou o filme —, e não das reviews com texto, que são um subconjunto \
+menor. As frequências de TEMA, essas sim, continuam em relação às reviews \
+analisadas."""
+
+
 # Reforço adicional SÓ para o narrador [D2] (v1.3.1) — telemetria de
 # consensos: anexado à retentativa combinada quando `consensos_usados` cita
 # grupo/tema inexistente no relatório recebido.
@@ -587,9 +612,20 @@ NÃO mencionar qualidade de atuação/roteiro no MOVIMENTO 2 — essa disputa \
 pertence ao MOVIMENTO 3, atribuída a cada grupo separadamente.
 
 É PROIBIDO importar qualquer informação que não venha dos temas validados \
-dos três grupos. Se não houver nenhuma propriedade que passe nos três \
-critérios ao mesmo tempo, este movimento pode ser curto (1-2 frases) ou \
-quase ausente — NUNCA forçando um consenso que os dados não sustentam. Para \
+dos três grupos.
+
+OMISSÃO AUTORIZADA (v1.4.1 — leia isto antes de escrever o movimento): se \
+MENOS DE DUAS propriedades passarem nos três critérios ao mesmo tempo, este \
+movimento deve ser CURTO (1 frase) ou AUSENTE — e a narrativa passa direto \
+ao MOVIMENTO 3. OMITIR É O COMPORTAMENTO CORRETO, não uma falha: não há cota \
+de frases a cumprir aqui, e um filme cujos temas descritivos são poucos \
+simplesmente não tem um MOVIMENTO 2. Preencher o espaço com juízo de \
+qualidade suavizado ("estilo visual eficaz", "abordagem arrojada", \
+"atuações competentes", "roteiro habilidoso") é PIOR do que não ter o \
+movimento — é o defeito que o critério (a) proíbe, disfarçado de descrição \
+por um advérbio de hesitação. Quando o movimento é omitido, \
+`consensos_usados` vem como lista VAZIA ([]) — isso é resultado esperado, \
+não erro. Para \
 CADA propriedade usada no MOVIMENTO 2, registre em `consensos_usados` (ver \
 formato de saída) a propriedade, os grupos de onde ela veio e os nomes \
 EXATOS dos temas (copiados literalmente do relatório) que a sustentam — \
@@ -654,6 +690,16 @@ e um amplamente rejeitado não pode soar morno.
 minoritária, mas SEM desdém, ironia ou insinuação de que quem pensa assim \
 está errado. Menos espaço, mesma seriedade analítica: quem procura saber se \
 vai gostar precisa entender o que incomodou essa parcela.
+- VOCABULÁRIO OBRIGATÓRIO — NOTAS, NUNCA REVIEWS (v1.4.1): o rotulo_peso vem \
+do histograma de NOTAS do Letterboxd, ou seja, de TODO MUNDO que avaliou o \
+filme; os temas vêm das REVIEWS COM TEXTO, um subconjunto bem menor. São \
+duas populações diferentes. Portanto, ao expressar peso, é OBRIGATÓRIO \
+escrever "das notas" ("a grande maioria das notas (~79%)") e é PROIBIDO \
+escrever "das reviews", "dos espectadores" ou "do público" — o histograma \
+não diz nada sobre quem escreveu review nem sobre quem assistiu sem avaliar. \
+As frequências de TEMA seguem no vocabulário oposto (regra d): sempre em \
+relação às reviews analisadas daquele grupo. Os dois vocabulários nunca se \
+misturam.
 - Continua PROIBIDO inventar um número-síntese do filme (nota média, score, \
 "X de 10", "nota N"): os shares por faixa são a ÚNICA quantificação \
 permitida, e são três números, nunca um só.
@@ -675,6 +721,15 @@ quantificador MAIS FRACO é permitido se a fluência do texto pedir — nunca \
 o oposto. Escala de força, do mais fraco ao mais forte: poucos < \
 alguns/uma parte < muitos/boa parte < cerca de metade < a maioria/mais da \
 metade < quase todos/praticamente todos.
+DECLARAÇÃO OBRIGATÓRIA DOS QUANTIFICADORES (v1.4.1): para CADA expressão de \
+frequência que você usar na prosa ao falar de um tema, registre um item em \
+`quantificadores_usados` (ver formato de saída) com o quantificador EXATO \
+que você escreveu e o NOME EXATO do tema (copiado literalmente do relatório) \
+de onde aquela frequência vem — um item por expressão usada. Antes de \
+declarar, confira o par contra o relatório: se o quantificador que você \
+escreveu for mais forte que o rótulo_quantificador daquele tema, corrija a \
+PROSA (não o registro). Se você não usar nenhum quantificador de tema, a \
+lista vem vazia.
 e. ESTRUTURA: a divisão em três grupos (quem não gostou / quem ficou no meio \
 / quem gostou) deve permanecer legível na prosa do MOVIMENTO 3, em qualquer \
 ordem que sirva à narrativa.
@@ -693,9 +748,13 @@ rótulos dos movimentos no texto final, entre 250 e 400 palavras ao todo.
 Responda APENAS com JSON puro no formato: {"narrativa": "<seu texto>", \
 "consensos_usados": [{"propriedade": "<nome curto da propriedade \
 descritiva>", "grupos_de_origem": ["<negativas|medianas|positivas>", ...], \
-"temas_de_origem": ["<nome EXATO do tema, copiado do relatório>", ...]}]}. \
-`consensos_usados` pode ser `[]` se o MOVIMENTO 2 não usou nenhuma \
-propriedade consensual."""
+"temas_de_origem": ["<nome EXATO do tema, copiado do relatório>", ...]}], \
+"quantificadores_usados": [{"quantificador": "<a expressão de frequência \
+EXATA que você escreveu na prosa>", "tema": "<nome EXATO do tema, copiado \
+do relatório, de onde ela vem>"}]}. `consensos_usados` pode ser `[]` se o \
+MOVIMENTO 2 não usou nenhuma propriedade consensual (ver OMISSÃO \
+AUTORIZADA); `quantificadores_usados` pode ser `[]` se a prosa não \
+quantificou nenhum tema."""
 
 
 # Prompt histórico (sem distribuição) — mantido como CONSTANTE com o mesmo
@@ -800,6 +859,113 @@ def _tem_quantificador_forte_no_texto(texto: str) -> bool:
     return "quase todos" in t or "praticamente todos" in t
 
 
+# --- v1.4.1: telemetria POR PAR {quantificador, tema} ---
+# Motivação (3ª ocorrência do mesmo modo de falha): na v1.4.0 a narrativa de
+# `the-invite-2026` escreveu "Quase todos" para o tema "Atuações e química do
+# elenco" (20/30 = 67%, rótulo pré-computado "a maioria"). A rede de
+# segurança da v1.2.3 é de nível de BUCKET — ela só pergunta se ALGUM tema do
+# filme tem fração >=80% — e outro tema do mesmo grupo tinha 83%, dando
+# lastro. Nenhuma checagem via prosa consegue saber a QUAL tema um "quase
+# todos" solto se refere; por isso o próprio narrador passa a DECLARAR o par,
+# no mesmo padrão de `consensos_usados` (v1.3.1), e o código confere par a par
+# contra o rótulo pré-computado. O LLM continua sem decidir número ou rótulo:
+# ele só declara o que usou, e o código julga.
+
+# Expressão declarada -> posição na escala de força do prompt (0 = mais
+# fraco). As chaves cobrem os sinônimos que o próprio prompt autoriza
+# ("a maioria" ~ "mais da metade"; "muitos" ~ "boa parte"; "alguns" ~ "uma
+# parte") mais as flexões de gênero, que aparecem naturalmente em pt-BR.
+_FORCA_QUANTIFICADOR = {
+    "poucos": 0, "poucas": 0,
+    "alguns": 1, "algumas": 1, "uma parte": 1, "parte dos": 1, "parte das": 1,
+    "muitos": 2, "muitas": 2, "boa parte": 2,
+    "cerca de metade": 3, "aproximadamente metade": 3, "metade": 3,
+    "a maioria": 4, "maioria": 4, "mais da metade": 4,
+    "quase todos": 5, "quase todas": 5,
+    "praticamente todos": 5, "praticamente todas": 5,
+}
+
+# Ordem canônica dos rótulos pré-computados = a própria escala de força.
+_ORDEM_ROTULO_QUANTIFICADOR = [r for r, _, _, _ in
+                               _BANDAS_QUANTIFICADOR_FRACA_PARA_FORTE]
+
+
+def _forca_declarada(quantificador: str) -> int | None:
+    """Força (0-5) da expressão declarada pelo narrador, ou None se ela não
+    for reconhecível.
+
+    Casa por SUBSTRING, testando as chaves mais longas primeiro — assim
+    "quase todos os elogios" resolve para "quase todos", e "mais da metade"
+    não é confundido com "metade". Expressão irreconhecível devolve None e a
+    checagem a ignora: heurística deliberadamente permissiva, como as demais
+    redes de segurança do §D2 (limitação documentada na SPEC).
+    """
+    q = quantificador.lower()
+    for chave in sorted(_FORCA_QUANTIFICADOR, key=len, reverse=True):
+        if chave in q:
+            return _FORCA_QUANTIFICADOR[chave]
+    return None
+
+
+def _rotulos_por_tema(output: dict) -> dict[str, int]:
+    """{nome do tema: força do rótulo pré-computado}.
+
+    Tema com o MESMO nome em mais de um grupo (frações diferentes) resolve
+    para a força MAIS ALTA entre eles — o par declarado não diz de qual grupo
+    veio, e na ambiguidade a checagem prefere não flaggar uma prosa correta.
+    """
+    forcas: dict[str, int] = {}
+    for b in output.get("buckets", []):
+        for t in b.get("temas") or []:
+            nome = str(t.get("tema", ""))
+            _pct, rotulo = _fracao_e_rotulo(t)
+            forca = _ORDEM_ROTULO_QUANTIFICADOR.index(rotulo)
+            forcas[nome] = max(forcas.get(nome, -1), forca)
+    return forcas
+
+
+def _quantificadores_validos(quantificadores: list, output: dict) -> bool:
+    """True se todo par {quantificador, tema} declarado cita um tema REAL do
+    filme e usa uma expressão que NÃO é mais forte que o rótulo pré-computado
+    daquele tema. Lista vazia é vacuamente válida (a prosa pode não
+    quantificar tema nenhum)."""
+    forcas = _rotulos_por_tema(output)
+    for q in quantificadores or []:
+        if not isinstance(q, dict):
+            return False
+        tema = str(q.get("tema", ""))
+        if tema not in forcas:
+            return False
+        declarada = _forca_declarada(str(q.get("quantificador", "")))
+        if declarada is not None and declarada > forcas[tema]:
+            return False
+    return True
+
+
+def _normalizar_quantificadores(quantificadores: list) -> list[dict]:
+    out = []
+    for q in quantificadores or []:
+        if not isinstance(q, dict):
+            continue
+        out.append({
+            "quantificador": str(q.get("quantificador", "")),
+            "tema": str(q.get("tema", "")),
+        })
+    return out
+
+
+def conferencia_quantificador(output: dict, tema_nome: str) -> tuple[int, str] | None:
+    """(fração%, rótulo pré-computado) do tema com esse nome exato, ou None se
+    ele não existir no relatório. Usada pelo render para exibir, ao lado de
+    cada par declarado, o número real contra o qual ele foi conferido —
+    telemetria legível, não só um booleano de flag."""
+    for b in output.get("buckets", []):
+        for t in b.get("temas") or []:
+            if str(t.get("tema", "")) == tema_nome:
+                return _fracao_e_rotulo(t)
+    return None
+
+
 # --- Peso pré-computado por grupo (v1.4.0) ---
 # MESMO princípio da v1.2.3 (quantificador) e da v1.1.1 (denominador): o LLM
 # não escolhe o rótulo, o CÓDIGO escolhe. Aqui o insumo é o `share_real` do
@@ -883,6 +1049,57 @@ def _ancoragem_de_peso_ok(texto: str, pesos: dict[str, tuple[int, str]]) -> bool
         if f"{pct}%" in t:
             continue
         return False
+    return True
+
+
+# --- v1.4.1: invariante de vocabulário do peso (notas × reviews) ---
+# O rotulo_peso deriva do histograma de NOTAS (todos que avaliaram); os temas
+# derivam das REVIEWS COM TEXTO (subconjunto). Dizer "a grande maioria das
+# reviews" atribui ao peso um denominador que ele não tem — e é uma
+# infidelidade barata de detectar.
+_PESO_SUBSTANTIVOS_PROIBIDOS = ("reviews", "público", "publico", "espectadores")
+
+# Rótulos que só podem ser peso. "a maioria" fica DE FORA porque também é um
+# rótulo de quantificador de tema, e "a maioria das reviews negativas
+# analisadas" é a forma CORRETA exigida pela regra (d) — flaggá-la marcaria
+# prosa certa. O caso de "a maioria" usado como peso é coberto pela segunda
+# passada, ancorada no percentual (que só acompanha peso).
+_ROTULOS_PESO_INEQUIVOCOS = ("uma pequena minoria", "uma minoria",
+                             "uma parcela expressiva", "a grande maioria")
+
+
+def _janela_troca_notas_por_outro(janela: str) -> bool:
+    """True se a janela usa um substantivo proibido ANTES de "notas" (ou sem
+    "notas" nenhuma) — isto é, o peso foi atribuído a reviews/público/
+    espectadores em vez de à população de notas."""
+    pos_notas = janela.find("notas")
+    for termo in _PESO_SUBSTANTIVOS_PROIBIDOS:
+        pos = janela.find(termo)
+        if pos != -1 and (pos_notas == -1 or pos < pos_notas):
+            return True
+    return False
+
+
+def _vocabulario_peso_ok(texto: str, pesos: dict[str, tuple[int, str]]) -> bool:
+    """True se todo rótulo de peso na prosa está acompanhado de "notas".
+
+    Duas passadas complementares, ambas baratas e literais (não é NLP):
+    1. rótulos INEQUÍVOCOS de peso -> olha os 40 chars seguintes;
+    2. qualquer percentual (`~79%`) -> olha os 60 chars anteriores, o que pega
+       "a maioria", ambígua com o quantificador de tema, sem falso positivo:
+       frequência de tema nunca vem com percentual na prosa.
+    Sem distribuição não há peso a expressar — vacuamente OK.
+    """
+    if not pesos:
+        return True
+    t = texto.lower()
+    for rotulo in _ROTULOS_PESO_INEQUIVOCOS:
+        for m in re.finditer(re.escape(rotulo), t):
+            if _janela_troca_notas_por_outro(t[m.end():m.end() + 40]):
+                return False
+    for m in re.finditer(r"~?\d{1,3}\s?%", t):
+        if _janela_troca_notas_por_outro(t[max(0, m.start() - 60):m.start()]):
+            return False
     return True
 
 
@@ -1059,6 +1276,16 @@ def narrate_output(output: dict, client_call=None, model: str | None = None,
     único modo de falha observado (ver changelog v1.2.3). Deliberadamente
     restrita a esse quantificador mais forte; não cobre uso indevido dos
     demais rótulos.
+
+    v1.4.1 — telemetria POR PAR: a checagem acima é de nível de BUCKET e não
+    pegou a 3ª reincidência do modo de falha ("quase todos" para um tema de
+    67%, enquanto outro tema do mesmo grupo tinha 83% e dava lastro). O
+    narrador passa a DECLARAR `quantificadores_usados` — {quantificador,
+    tema} — e o código confere par a par contra o rótulo pré-computado
+    daquele tema; par inflado ou tema inexistente => retentativa com reforço
+    e, se persistir, a mesma flag `quantificador_suspeito`. Também v1.4.1: o
+    vocabulário do peso ("das notas", nunca "das reviews"/"do público"/"dos
+    espectadores"), com flag própria `vocabulario_peso_suspeito`.
     """
     from .models import NarrativaResult
 
@@ -1072,7 +1299,7 @@ def narrate_output(output: dict, client_call=None, model: str | None = None,
     user = _serialize_output_for_narrator(output)
     tem_tema_forte = _algum_tema_tem_fracao_forte(output)
 
-    def _uma_chamada(sys_prompt: str) -> tuple[str, list] | None:
+    def _uma_chamada(sys_prompt: str) -> tuple[str, list, list] | None:
         raw = call(sys_prompt, user, model)
         try:
             data = _parse_llm_json(raw)
@@ -1081,9 +1308,13 @@ def narrate_output(output: dict, client_call=None, model: str | None = None,
         consensos = data.get("consensos_usados")
         if not isinstance(consensos, list):
             consensos = []
-        return str(data.get("narrativa", "")), consensos
+        quantificadores = data.get("quantificadores_usados")
+        if not isinstance(quantificadores, list):
+            quantificadores = []
+        return str(data.get("narrativa", "")), consensos, quantificadores
 
-    def _quantificador_ok(texto: str) -> bool:
+    def _quantificador_bucket_ok(texto: str) -> bool:
+        """Rede de segurança da v1.2.3 (nível de BUCKET) — mantida em vigor."""
         return not (_tem_quantificador_forte_no_texto(texto) and not tem_tema_forte)
 
     # chamada + 1 retentativa de JSON inválido
@@ -1098,45 +1329,62 @@ def narrate_output(output: dict, client_call=None, model: str | None = None,
         # Sem distribuição não há o que ancorar: vacuamente OK.
         return _ancoragem_de_peso_ok(texto, pesos) if com_distribuicao else True
 
-    prosa, consensos_brutos = resultado
+    prosa, consensos_brutos, quantificadores_brutos = resultado
     texto, idioma_ok, escopo_ok, prevalencia_ok, aspas_removidas = _validar_prosa(
         prosa, com_distribuicao)
-    quantificador_ok = _quantificador_ok(texto)
+    quant_bucket_ok = _quantificador_bucket_ok(texto)
+    quant_declarado_ok = _quantificadores_validos(quantificadores_brutos, output)
     consensos_ok = _consensos_validos(consensos_brutos, output)
     ancoragem_ok = _ancoragem_ok(texto)
+    vocabulario_ok = _vocabulario_peso_ok(texto, pesos)
 
-    # 1 retentativa combinada se idioma, escopo, prevalência, quantificador,
-    # consensos_usados (v1.3.1) e/ou ancoragem de peso (v1.4.0) falharem
-    if not idioma_ok or not escopo_ok or not prevalencia_ok or not quantificador_ok \
-            or not consensos_ok or not ancoragem_ok:
+    # 1 retentativa combinada se idioma, escopo, prevalência, quantificador
+    # (nível de bucket, v1.2.3, ou por par declarado, v1.4.1), consensos_usados
+    # (v1.3.1), ancoragem de peso (v1.4.0) e/ou vocabulário do peso (v1.4.1)
+    # falharem.
+    if not idioma_ok or not escopo_ok or not prevalencia_ok \
+            or not quant_bucket_ok or not quant_declarado_ok \
+            or not consensos_ok or not ancoragem_ok or not vocabulario_ok:
         reforco = _REFORCO_VALIDACAO + _REFORCO_QUANTIFICADOR
         # o reforço de prevalência PROÍBE falar de peso — anexá-lo com
         # distribuição presente contradiria a regra (c) invertida.
         if not com_distribuicao:
             reforco += _REFORCO_PREVALENCIA
+        if not quant_declarado_ok:
+            reforco += _REFORCO_QUANT_DECLARADO
         if not consensos_ok:
             reforco += _REFORCO_CONSENSOS
         if not ancoragem_ok:
             reforco += _REFORCO_ANCORAGEM
+        if not vocabulario_ok:
+            reforco += _REFORCO_VOCABULARIO_PESO
         retry = _uma_chamada(system + reforco)
         if retry is not None:
-            prosa2, consensos2 = retry
+            prosa2, consensos2, quantificadores2 = retry
             t2, i2, e2, p2, a2 = _validar_prosa(prosa2, com_distribuicao)
             texto, idioma_ok, escopo_ok, prevalencia_ok = t2, i2, e2, p2
             aspas_removidas = aspas_removidas or a2
-            quantificador_ok = _quantificador_ok(texto)
+            quant_bucket_ok = _quantificador_bucket_ok(texto)
+            quantificadores_brutos = quantificadores2
+            quant_declarado_ok = _quantificadores_validos(
+                quantificadores_brutos, output)
             consensos_brutos = consensos2
             consensos_ok = _consensos_validos(consensos_brutos, output)
             ancoragem_ok = _ancoragem_ok(texto)
+            vocabulario_ok = _vocabulario_peso_ok(texto, pesos)
 
     return NarrativaResult(
         texto=texto,
         idioma_invalido=not idioma_ok,
         escopo_suspeito=not escopo_ok,
         prevalencia_suspeita=not prevalencia_ok,
-        quantificador_suspeito=not quantificador_ok,
+        # v1.4.1: a MESMA flag passa a ser alimentada pelas DUAS checagens —
+        # a de bucket (v1.2.3) e a por par declarado (v1.4.1).
+        quantificador_suspeito=not (quant_bucket_ok and quant_declarado_ok),
         aspas_removidas=aspas_removidas,
         consensos_usados=_normalizar_consensos(consensos_brutos),
         consenso_suspeito=not consensos_ok,
         peso_nao_ancorado=not ancoragem_ok,
+        quantificadores_usados=_normalizar_quantificadores(quantificadores_brutos),
+        vocabulario_peso_suspeito=not vocabulario_ok,
     )

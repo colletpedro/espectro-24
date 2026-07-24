@@ -233,6 +233,11 @@ def render_terminal(output: dict, tom: str = "estruturado") -> str:
         if flags.get("consenso_suspeito"):
             L.append("  ⚠️  narrativa: consensos_usados citou grupo/tema inexistente no "
                      "relatório mesmo após retentativa — revisar manualmente.")
+        if flags.get("vocabulario_peso_suspeito"):
+            L.append("  ⚠️  narrativa: rótulo de peso escrito como \"das reviews\"/"
+                     "\"do público\"/\"dos espectadores\" em vez de \"das notas\" mesmo "
+                     "após retentativa — o peso vem do histograma de NOTAS; "
+                     "revisar manualmente.")
         if flags.get("aspas_removidas"):
             L.append("  ⚠️  narrativa: aspas de citação removidas mecanicamente.")
 
@@ -246,6 +251,26 @@ def render_terminal(output: dict, tom: str = "estruturado") -> str:
                 grupos = ", ".join(c.get("grupos_de_origem") or [])
                 temas = "; ".join(c.get("temas_de_origem") or [])
                 L.append(f"  • {c.get('propriedade')} — grupos: {grupos} — temas: {temas}")
+
+        # v1.4.1: bloco compacto de quantificadores_usados — mesmo padrão do
+        # bloco acima. Cada par declarado vem com a CONFERÊNCIA contra a
+        # fração real do tema (o número é o que torna a telemetria útil; um
+        # par sozinho não diria se está inflado).
+        quantificadores = output.get("quantificadores_usados") or []
+        if quantificadores:
+            from .synthesize import conferencia_quantificador
+            L.append("")
+            L.append("Quantificadores do movimento 3:")
+            for q in quantificadores:
+                tema = q.get("tema", "")
+                conf = conferencia_quantificador(output, tema)
+                if conf is None:
+                    detalhe = "⚠️  tema inexistente no relatório"
+                else:
+                    pct, rotulo = conf
+                    detalhe = f"fração real {pct}% → rótulo: {rotulo}"
+                L.append(f"  • \"{q.get('quantificador')}\" — tema: {tema} "
+                         f"({detalhe})")
 
     L.append("")
     L.append(f"Total de reviews observadas na coleta: "

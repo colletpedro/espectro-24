@@ -11,7 +11,7 @@ window.ESPECTRO_DATA = {
     "the-invite-2026": {
       "slug": "the-invite-2026",
       "data_coleta": "2026-07-19T17:34:04.490686+00:00",
-      "spec_version": "1.4.0",
+      "spec_version": "1.4.1",
       "total_reviews_observadas": 276,
       "reviews_url": "https://letterboxd.com/film/the-invite-2026/reviews/",
       "buckets": [
@@ -330,7 +330,7 @@ window.ESPECTRO_DATA = {
           "share_real": 79
         }
       ],
-      "narrativa": "Em 2026, a diretora Olivia Wilde apresenta O Convite, um drama com toques de comédia sobre o casamento de Joe e Angela, que, à beira do colapso, toma rumos inesperados ao convidar os vizinhos para um jantar. A experiência de assistir ao filme é marcada por um ritmo que pode se tornar repetitivo e por um estilo visual que, embora eficaz em criar uma atmosfera íntima, não é considerado original por todos. O filme transita entre o humor e o drama, com uma abordagem que muitos consideram arrojada. A grande maioria das notas (~79%) elogiou intensamente a direção de Olivia Wilde e o roteiro, destacando a habilidade em equilibrar comédia e drama, criar tensão e explorar temas complexos de relacionamento. Quase todos também salientam o desempenho excepcional do elenco e a ótima química entre os atores. Cerca de metade apontou a capacidade do filme de ser hilário e, ao mesmo tempo, profundamente triste ou tocante. Já uma minoria das notas (~18%) sentiu que o ritmo e a duração prolongada tornaram a experiência cansativa na segunda metade do filme. Muitos riram bastante com o filme, mas alguns criticaram o humor por ser muito cômico, por vezes forçado, ou por se inclinar para um humor constrangedor que nem sempre funcionou. A transição do humor para o drama na parte final também dividiu opiniões. Por outro lado, uma pequena minoria das notas (~3%) classificou o humor do filme como previsível, pouco engraçado ou inexistente, com piadas que não funcionam e um roteiro que se arrasta, tornando a experiência tediosa. Muitos descreveram os personagens como superficiais e unidimensionais, com diálogos forçados. Para este grupo, a representação da sexualidade é percebida como constrangedora, exagerada ou gratuita, servindo mais como choque do que como elemento narrativo profundo.",
+      "narrativa": "O Convite, dirigido por Olivia Wilde em 2026, é um drama com toques de comédia que acompanha o casamento de Joe e Angela à beira do colapso. A trama se desenrola quando eles convidam seus misteriosos vizinhos do andar de cima para um jantar, levando a noite a desdobramentos inesperados.\n\nA experiência de assistir ao filme é marcada por um ritmo que pode ser percebido como arrastado, especialmente em sua segunda metade, e por uma exploração direta e por vezes explícita de temas relacionados à sexualidade e intimidade. O filme é conduzido por uma direção confiante que busca equilibrar o humor com o drama, situando a narrativa principalmente em um ambiente íntimo e focado nos personagens.\n\nA grande maioria das notas (~79%) para O Convite é positiva, com quase todos elogiando intensamente a direção de Olivia Wilde e o roteiro por sua capacidade de equilibrar comédia e drama, criar tensão e explorar temas complexos de relacionamento. A maioria dessas reviews também salienta o desempenho excepcional do elenco e a ótima química entre os atores, e cerca de metade destaca a habilidade do filme de ser hilário e, ao mesmo tempo, profundamente tocante. Uma minoria das notas (~18%) ocupa uma posição mediana, com muitos achando o filme divertido na primeira metade, mas sentindo que a repetição das situações e a duração prolongada tornaram a experiência cansativa no final. Ainda assim, muitos elogiaram as performances do elenco e a direção como confiante e eficaz. Por outro lado, uma pequena minoria das notas (~3%) é negativa; cerca de metade dessas reviews classificou o humor e o roteiro como fracos ou entediantes, apontando para piadas que não funcionam e um enredo que se arrasta. Muitos também descrevem os personagens e diálogos como superficiais ou irritantes, e muitos criticam a atuação de alguns membros do elenco e a direção por ser pedante ou forçada.",
       "narrativa_flags": {
         "idioma_invalido": false,
         "escopo_suspeito": false,
@@ -338,7 +338,8 @@ window.ESPECTRO_DATA = {
         "quantificador_suspeito": false,
         "consenso_suspeito": false,
         "peso_nao_ancorado": false,
-        "aspas_removidas": true,
+        "vocabulario_peso_suspeito": false,
+        "aspas_removidas": false,
         "falhou": false
       },
       "ficha": {
@@ -356,7 +357,7 @@ window.ESPECTRO_DATA = {
       },
       "consensos_usados": [
         {
-          "propriedade": "ritmo e duração",
+          "propriedade": "ritmo arrastado/prolongado",
           "grupos_de_origem": [
             "negativas",
             "medianas"
@@ -367,7 +368,29 @@ window.ESPECTRO_DATA = {
           ]
         },
         {
-          "propriedade": "estilo visual e ambientação",
+          "propriedade": "foco explícito na sexualidade/intimidade",
+          "grupos_de_origem": [
+            "negativas",
+            "positivas"
+          ],
+          "temas_de_origem": [
+            "Foco excessivo/explícito na sexualidade",
+            "Temas de relacionamento e casamento"
+          ]
+        },
+        {
+          "propriedade": "direção equilibrando humor e drama",
+          "grupos_de_origem": [
+            "medianas",
+            "positivas"
+          ],
+          "temas_de_origem": [
+            "Direção e estilo visual",
+            "Direção e roteiro (geral)"
+          ]
+        },
+        {
+          "propriedade": "ambientação em um único ambiente",
           "grupos_de_origem": [
             "medianas",
             "positivas"
@@ -375,17 +398,6 @@ window.ESPECTRO_DATA = {
           "temas_de_origem": [
             "Direção e estilo visual",
             "Cinematografia e design de produção"
-          ]
-        },
-        {
-          "propriedade": "equilíbrio entre humor e drama",
-          "grupos_de_origem": [
-            "medianas",
-            "positivas"
-          ],
-          "temas_de_origem": [
-            "Humor e tom",
-            "Humor e drama"
           ]
         }
       ],
@@ -409,12 +421,46 @@ window.ESPECTRO_DATA = {
           "positivas": 79
         },
         "fonte": "letterboxd_histograma"
-      }
+      },
+      "quantificadores_usados": [
+        {
+          "quantificador": "quase todos",
+          "tema": "Direção e roteiro (geral)"
+        },
+        {
+          "quantificador": "a maioria",
+          "tema": "Atuações e química do elenco"
+        },
+        {
+          "quantificador": "cerca de metade",
+          "tema": "Humor e drama"
+        },
+        {
+          "quantificador": "muitos",
+          "tema": "Ritmo e duração"
+        },
+        {
+          "quantificador": "muitos",
+          "tema": "Atuações do elenco"
+        },
+        {
+          "quantificador": "cerca de metade",
+          "tema": "Humor e roteiro fracos/entediantes"
+        },
+        {
+          "quantificador": "muitos",
+          "tema": "Personagens e diálogos superficiais/irritantes"
+        },
+        {
+          "quantificador": "muitos",
+          "tema": "Atuações e direção questionáveis"
+        }
+      ]
     },
     "cure": {
       "slug": "cure",
       "data_coleta": "2026-07-19T08:09:00.011723+00:00",
-      "spec_version": "1.4.0",
+      "spec_version": "1.4.1",
       "total_reviews_observadas": 252,
       "buckets": [
         {
@@ -723,7 +769,7 @@ window.ESPECTRO_DATA = {
           "share_real": 79
         }
       ],
-      "narrativa": "Em A Cura, o diretor 黒沢清 nos apresenta a um thriller de crime, terror e mistério de 1997, onde um detetive se vê em um beco sem saída ao investigar assassinatos marcados por um estranho x, até a aparição de um rapaz tímido e peculiar que pode ter a chave para os crimes. Ao longo de 111 minutos, o filme desdobra uma atmosfera sombria e um ritmo marcadamente lento, que pode ser tanto hipnótico quanto arrastado, dependendo da perspectiva. Ele se caracteriza por explorar temas psicológicos profundos e manter uma ambiguidade constante, deixando muitas vezes o espectador na incerteza. \n\nA grande maioria das notas (~79%) aponta que A Cura é uma obra-prima do horror psicológico, elogiando sua atmosfera perturbadora e hipnótica, que muitos descrevem como essencial para o suspense e a exploração de temas existenciais, como a fragilidade da identidade e a natureza do mal. O ritmo lento e deliberado é visto como um trunfo que intensifica a experiência, com alguns destacando a atuação impactante do antagonista e a excelência do design de som e cinematografia. A ausência de respostas definitivas e a ambiguidade são apreciadas por forçarem a reflexão do espectador. Por outro lado, uma minoria das notas (~17%) posiciona o filme de forma mais ambivalente, reconhecendo suas ideias intrigantes e a eficácia de sua atmosfera e estilo visual, mas muitos sentem que a execução falha na clareza narrativa e que o ritmo lento leva à confusão, resultando em um final insatisfatório e ambíguo. Já uma pequena minoria das notas (~3%) teve uma experiência bastante negativa, classificando o ritmo como excessivamente lento e tedioso, o que, para a maioria, impede a construção de tensão ou o desenvolvimento de personagens envolventes. Para muitos neste grupo, o filme falha em gerar mistério ou terror, e o enredo é considerado fraco e repetitivo, culminando em um final insatisfatório.",
+      "narrativa": "Em A Cura, o diretor 黒沢清 nos leva a um suspense, terror e mistério japonês de 1997, onde um detetive se vê em um beco sem saída ao investigar assassinatos marcados por um estranho x, até que a prisão de um jovem misterioso pode ser a chave para desvendar os crimes. O filme se desenrola com um ritmo notavelmente lento e deliberado, construindo uma atmosfera densa e perturbadora que permeia toda a experiência. Frequentemente descrito como hipnótico, ele mergulha em uma ambiguidade constante, onde a linha entre o real e o inexplicável se torna difusa. \n\nA grande maioria das notas (~79%) avalia o filme positivamente, elogiando sua atmosfera e tom perturbador e hipnótico, que sutilmente instila apreensão e desconforto sem depender de sustos. Muitos também apreciam o pacing lento e deliberado, que intensifica o horror psicológico e reflete a temática da manipulação mental, além da exploração de temas psicológicos e existenciais profundos, como a fragilidade da identidade. Por outro lado, uma minoria das notas (~17%) ficou em uma posição mediana, reconhecendo ideias intrigantes e uma atmosfera e estilo visual eficazes, mas muitos sentiram que a execução falha em aprofundar esses conceitos ou os conecta de forma convincente, levando a um ritmo lento e confusão narrativa. Uma pequena minoria das notas (~3%) se mostrou negativa, com a maioria apontando o ritmo lento e tedioso como o principal problema, fazendo com que o filme perdesse a tensão ou o mistério, e muitos consideraram o enredo e o roteiro fracos e repetitivos, com personagens desinteressantes ou planos. Embora alguns do grupo negativo tenham achado o final insatisfatório, muitos que deram notas medianas e alguns do grupo positivo também observaram a ausência de respostas e a ambiguidade no final.",
       "narrativa_flags": {
         "idioma_invalido": false,
         "escopo_suspeito": false,
@@ -731,6 +777,7 @@ window.ESPECTRO_DATA = {
         "quantificador_suspeito": false,
         "consenso_suspeito": false,
         "peso_nao_ancorado": false,
+        "vocabulario_peso_suspeito": false,
         "aspas_removidas": true,
         "falhou": false
       },
@@ -751,18 +798,7 @@ window.ESPECTRO_DATA = {
       },
       "consensos_usados": [
         {
-          "propriedade": "atmosfera sombria",
-          "grupos_de_origem": [
-            "medianas",
-            "positivas"
-          ],
-          "temas_de_origem": [
-            "Atmosfera e estilo visual eficazes",
-            "Atmosfera e Tom Perturbador/Hipnótico"
-          ]
-        },
-        {
-          "propriedade": "ritmo lento",
+          "propriedade": "ritmo lento e deliberado",
           "grupos_de_origem": [
             "negativas",
             "medianas",
@@ -775,23 +811,27 @@ window.ESPECTRO_DATA = {
           ]
         },
         {
-          "propriedade": "temas psicológicos",
+          "propriedade": "atmosfera densa e perturbadora",
           "grupos_de_origem": [
+            "negativas",
             "medianas",
             "positivas"
           ],
           "temas_de_origem": [
-            "Ideias intrigantes, mas execução falha",
-            "Temas Psicológicos e Existenciais"
+            "Falta de tensão/mistério/terror",
+            "Atmosfera e estilo visual eficazes",
+            "Atmosfera e Tom Perturbador/Hipnótico"
           ]
         },
         {
           "propriedade": "ambiguidade",
           "grupos_de_origem": [
+            "negativas",
             "medianas",
             "positivas"
           ],
           "temas_de_origem": [
+            "Final insatisfatório/abrupto",
             "Final insatisfatório/ambíguo",
             "Ausência de Respostas e Ambiguidade"
           ]
@@ -817,12 +857,54 @@ window.ESPECTRO_DATA = {
           "positivas": 79
         },
         "fonte": "letterboxd_histograma"
-      }
+      },
+      "quantificadores_usados": [
+        {
+          "quantificador": "muitos",
+          "tema": "Atmosfera e Tom Perturbador/Hipnótico"
+        },
+        {
+          "quantificador": "muitos",
+          "tema": "Pacing Lento e Deliberado"
+        },
+        {
+          "quantificador": "muitos",
+          "tema": "Temas Psicológicos e Existenciais"
+        },
+        {
+          "quantificador": "muitos",
+          "tema": "Ideias intrigantes, mas execução falha"
+        },
+        {
+          "quantificador": "muitos",
+          "tema": "Ritmo lento e confusão narrativa"
+        },
+        {
+          "quantificador": "a maioria",
+          "tema": "Ritmo lento e tedioso"
+        },
+        {
+          "quantificador": "muitos",
+          "tema": "Enredo e roteiro fracos/repetitivos"
+        },
+        {
+          "quantificador": "alguns",
+          "tema": "Final insatisfatório/abrupto"
+        },
+        {
+          "quantificador": "muitos",
+          "tema": "Final insatisfatório/ambíguo"
+        },
+        {
+          "quantificador": "alguns",
+          "tema": "Ausência de Respostas e Ambiguidade"
+        }
+      ]
     },
     "cidade-de-deus": {
       "slug": "cidade-de-deus",
       "data_coleta": "2026-07-19T08:27:41.045688+00:00",
-      "spec_version": "1.4.0",
+      "spec_version": "1.4.1",
       "total_reviews_observadas": 228,
       "buckets": [
         {
@@ -1131,7 +1213,7 @@ window.ESPECTRO_DATA = {
           "share_real": 91
         }
       ],
-      "narrativa": "Dirigido por Fernando Meirelles em 2002, Cidade de Deus é um drama e crime que acompanha Buscapé, um jovem da Cidade de Deus que, em meio à violência, busca na fotografia uma saída para uma vida digna. Ao longo de 130 minutos, o filme desdobra uma narrativa marcada por um ritmo acelerado e uma estética visual intensa, que emprega uma edição dinâmica e um estilo cinematográfico distinto. A obra é permeada por um retrato visceral da violência e da realidade social, elementos que se manifestam de forma crua e impactante. No entanto, enquanto essa intensidade é percebida, a conexão emocional com os personagens e a profundidade narrativa são pontos de divergência entre os espectadores.\n\nA grande maioria das notas (~91%) considera Cidade de Deus uma obra-prima, enaltecendo seu estilo visual e edição dinâmicos, que conferem ritmo acelerado e energia contagiante. Muitos também destacam a narrativa envolvente e abrangente, capaz de contar múltiplas histórias sem perder a coesão, além de apreciar a brutalidade e o realismo da violência, apresentada de forma crua e impactante. Por outro lado, uma pequena minoria das notas (~1%) aponta que o filme peca ao estetizar e espetacularizar a violência e a miséria, transformando-as em um recurso estilístico para chocar. Muitos neste grupo criticam a representação estereotipada e deturpada da favela, que simplifica sua complexidade, e consideram a violência excessiva e gratuita. Já uma pequena minoria das notas (~8%) reconhece a qualidade técnica e estilística, mas muitos sentem que, apesar de ser bem-feito, o filme não conseguiu gerar uma conexão emocional profunda com os personagens ou com a tragédia retratada, sendo mais entretenimento do que uma experiência marcante. Alguns espectadores também acharam o ritmo do filme inconstante, dificultando o engajamento completo com a narrativa.",
+      "narrativa": "Dirigido por Fernando Meirelles em 2002, Cidade de Deus é um drama criminal que acompanha Buscapé, um jovem morador da Cidade de Deus que, em meio à violência, busca na fotografia uma chance de ter uma vida digna. Ao assistir ao filme, percebe-se um estilo visual e uma edição notavelmente dinâmicos, que imprimem um ritmo acelerado à narrativa. A representação da violência é retratada de forma crua e impactante, explorando a realidade social complexa da favela de maneira inequivocamente gráfica. \n\nA grande maioria das notas (~91%) considera Cidade de Deus uma obra-prima, destacando a maioria das reviews o estilo visual e a edição dinâmicos que dão ao filme um ritmo acelerado e energia contagiante. Muitos também elogiam a narrativa envolvente e abrangente, que consegue tecer múltiplas histórias ao longo de décadas sem perder a coesão. A brutalidade e o realismo da violência são igualmente ressaltados por muitos como impactantes, chocando e enfatizando a seriedade do tema. Já uma pequena minoria das notas (~8%) ficou no meio-termo, com cerca de metade dessas reviews apontando um retrato honesto da violência e da realidade social, e muitos elogiando a qualidade técnica e estilística, embora alguns considerem essa estilização excessiva. Contudo, muitos sentiram que o filme não conseguiu gerar uma conexão emocional profunda com os personagens. Por outro lado, uma pequena minoria das notas (~1%) expressa avaliações negativas. Muitos desses espectadores consideram que o filme incorre na estetização e espetacularização da violência e da miséria, além de oferecer uma representação estereotipada da favela. Para muitos, a violência é excessiva e gratuita, servindo mais para chocar do que para comunicar uma mensagem significativa.",
       "narrativa_flags": {
         "idioma_invalido": false,
         "escopo_suspeito": false,
@@ -1139,6 +1221,7 @@ window.ESPECTRO_DATA = {
         "quantificador_suspeito": false,
         "consenso_suspeito": false,
         "peso_nao_ancorado": false,
+        "vocabulario_peso_suspeito": false,
         "aspas_removidas": true,
         "falhou": false
       },
@@ -1157,7 +1240,18 @@ window.ESPECTRO_DATA = {
       },
       "consensos_usados": [
         {
-          "propriedade": "Ritmo acelerado e edição dinâmica",
+          "propriedade": "estilo visual e edição dinâmicos",
+          "grupos_de_origem": [
+            "medianas",
+            "positivas"
+          ],
+          "temas_de_origem": [
+            "Qualidade técnica e estilística",
+            "Estilo visual e edição dinâmicos"
+          ]
+        },
+        {
+          "propriedade": "ritmo acelerado",
           "grupos_de_origem": [
             "negativas",
             "positivas"
@@ -1168,16 +1262,29 @@ window.ESPECTRO_DATA = {
           ]
         },
         {
-          "propriedade": "Retrato visceral da violência e realidade social",
+          "propriedade": "representação crua e impactante da violência",
           "grupos_de_origem": [
+            "negativas",
             "medianas",
-            "positivas",
-            "negativas"
+            "positivas"
           ],
           "temas_de_origem": [
+            "Violência excessiva e gratuita",
             "Retrato da violência e realidade social",
-            "Brutalidade e realismo da violência",
-            "Violência excessiva e gratuita"
+            "Brutalidade e realismo da violência"
+          ]
+        },
+        {
+          "propriedade": "exploração da realidade social da favela",
+          "grupos_de_origem": [
+            "negativas",
+            "medianas",
+            "positivas"
+          ],
+          "temas_de_origem": [
+            "Representação estereotipada e deturpada da favela",
+            "Retrato da violência e realidade social",
+            "Contexto social e histórico"
           ]
         }
       ],
@@ -1201,7 +1308,45 @@ window.ESPECTRO_DATA = {
           "positivas": 91
         },
         "fonte": "letterboxd_histograma"
-      }
+      },
+      "quantificadores_usados": [
+        {
+          "quantificador": "a maioria",
+          "tema": "Estilo visual e edição dinâmicos"
+        },
+        {
+          "quantificador": "muitos",
+          "tema": "Narrativa envolvente e abrangente"
+        },
+        {
+          "quantificador": "muitos",
+          "tema": "Brutalidade e realismo da violência"
+        },
+        {
+          "quantificador": "cerca de metade",
+          "tema": "Retrato da violência e realidade social"
+        },
+        {
+          "quantificador": "muitos",
+          "tema": "Qualidade técnica e estilística"
+        },
+        {
+          "quantificador": "muitos",
+          "tema": "Entretenimento versus profundidade/conexão emocional"
+        },
+        {
+          "quantificador": "muitos",
+          "tema": "Estetização e espetacularização da violência/miséria"
+        },
+        {
+          "quantificador": "muitos",
+          "tema": "Representação estereotipada e deturpada da favela"
+        },
+        {
+          "quantificador": "muitos",
+          "tema": "Violência excessiva e gratuita"
+        }
+      ]
     },
     "teste-degradado": {
       "slug": "teste-degradado",

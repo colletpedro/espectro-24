@@ -11,10 +11,13 @@ from espectro24.models import BucketResult, LevelResult, Review, Tema
 from espectro24.render import build_output
 from espectro24.synthesize import (
     NARRATOR_SYSTEM_PROMPT,
+    _forca_declarada,
     _fracao_e_rotulo,
     _fracao_percentual,
+    _quantificadores_validos,
     _rotulo_quantificador,
     _serialize_output_for_narrator,
+    conferencia_quantificador,
     narrate_output,
 )
 
@@ -544,6 +547,265 @@ def test_consensos_ausentes_no_json_nao_quebra_e_nao_marca_suspeito():
     r = narrate_output(_output_completo(), client_call=fake, model="m")
     assert r.consenso_suspeito is False
     assert r.consensos_usados == []
+
+
+# =====================================================================
+# v1.4.1 — telemetria POR PAR {quantificador, tema}
+# =====================================================================
+# A 3ª ocorrência do mesmo modo de falha: na v1.4.0 a narrativa de
+# `the-invite-2026` usou "Quase todos" para "Atuações e química do elenco"
+# (20/30 = 67%, rótulo "a maioria"). A rede da v1.2.3 é de nível de BUCKET e
+# não pega isso, porque outro tema do mesmo grupo tinha 83% e dava lastro.
+
+def test_prompt_pede_a_declaracao_de_quantificadores_usados():
+    assert "quantificadores_usados" in NARRATOR_SYSTEM_PROMPT
+    assert "DECLARAÇÃO OBRIGATÓRIA DOS QUANTIFICADORES" in NARRATOR_SYSTEM_PROMPT
+    # o par declarado é {quantificador, tema}, com o tema copiado literalmente
+    assert '"quantificador"' in NARRATOR_SYSTEM_PROMPT
+    assert "NOME EXATO do tema" in NARRATOR_SYSTEM_PROMPT
+
+
+@pytest.mark.parametrize("expressao,forca", [
+    ("poucos", 0), ("poucas reviews", 0),
+    ("alguns", 1), ("uma parte", 1),
+    ("muitos", 2), ("boa parte", 2),
+    ("cerca de metade", 3),
+    ("a maioria", 4), ("mais da metade", 4),
+    ("quase todos", 5), ("quase todos os elogios", 5),
+    ("praticamente todas", 5),
+    ("um punhado disperso", None),   # irreconhecível -> não comparável
+])
+def test_forca_declarada_resolve_a_escala_do_prompt(expressao, forca):
+    assert _forca_declarada(expressao) == forca
+
+
+def test_forca_declarada_prefere_a_chave_mais_longa():
+    # "mais da metade" (4) não pode ser lido como "metade" (3)
+    assert _forca_declarada("mais da metade") == 4
+    assert _forca_declarada("cerca de metade") == 3
+
+
+def test_par_valido_nao_flagga_nem_retenta():
+    # tema "ritmo" = 3/5 = 60% -> rótulo "cerca de metade"
+    calls = []
+
+    def fake(system, user, model):
+        calls.append(1)
+        return ('{"narrativa": "entre quem nao gostou, cerca de metade citou o '
+                'ritmo lento; ja entre quem gostou, a direcao foi elogiada.", '
+                '"consensos_usados": [], "quantificadores_usados": '
+                '[{"quantificador": "cerca de metade", "tema": "ritmo"}]}')
+
+    r = narrate_output(_output_completo(), client_call=fake, model="m")
+    assert r.quantificador_suspeito is False
+    assert len(calls) == 1                       # sem retentativa
+    assert r.quantificadores_usados == [
+        {"quantificador": "cerca de metade", "tema": "ritmo"}]
+
+
+def test_quantificador_declarado_mais_fraco_e_permitido():
+    """O prompt autoriza descer de força; só subir é violação."""
+    def fake(system, user, model):
+        return ('{"narrativa": "entre quem nao gostou, alguns citaram o ritmo '
+                'lento; ja entre quem gostou, a direcao foi elogiada.", '
+                '"quantificadores_usados": [{"quantificador": "alguns", '
+                '"tema": "ritmo"}]}')
+
+    r = narrate_output(_output_completo(), client_call=fake, model="m")
+    assert r.quantificador_suspeito is False
+
+
+def test_quantificador_declarado_inflado_retenta_e_flagga():
+    """O defeito do the-invite, reproduzido: quantificador MAIS FORTE que o
+    rótulo pré-computado do tema que o próprio narrador declarou."""
+    systems = []
+
+    def fake(system, user, model):
+        systems.append(system)
+        # "a maioria" (força 4) > "cerca de metade" (força 3) do tema ritmo
+        return ('{"narrativa": "entre quem nao gostou, a maioria citou o ritmo '
+                'lento; ja entre quem gostou, a direcao foi elogiada.", '
+                '"quantificadores_usados": [{"quantificador": "a maioria", '
+                '"tema": "ritmo"}]}')
+
+    r = narrate_output(_output_completo(), client_call=fake, model="m")
+    assert r.quantificador_suspeito is True
+    assert len(systems) == 2                     # houve retentativa
+    assert "rótulo_quantificador do tema citado" in systems[1]
+
+
+def test_quantificador_declarado_com_tema_inexistente_retenta_e_flagga():
+    systems = []
+
+    def fake(system, user, model):
+        systems.append(system)
+        return ('{"narrativa": "entre quem nao gostou, alguns citaram o ritmo; '
+                'ja entre quem gostou, a direcao foi elogiada.", '
+                '"quantificadores_usados": [{"quantificador": "alguns", '
+                '"tema": "tema que nao existe"}]}')
+
+    r = narrate_output(_output_completo(), client_call=fake, model="m")
+    assert r.quantificador_suspeito is True
+    assert len(systems) == 2
+    assert "copiados literalmente do relatório" in systems[1]
+
+
+def test_quantificador_declarado_corrigido_na_retentativa_zera_a_flag():
+    respostas = [
+        ('{"narrativa": "entre quem nao gostou, a maioria citou o ritmo.", '
+         '"quantificadores_usados": [{"quantificador": "a maioria", '
+         '"tema": "ritmo"}]}'),
+        ('{"narrativa": "entre quem nao gostou, cerca de metade citou o ritmo; '
+         'ja entre quem gostou, a direcao foi elogiada.", '
+         '"quantificadores_usados": [{"quantificador": "cerca de metade", '
+         '"tema": "ritmo"}]}'),
+    ]
+
+    def fake(system, user, model):
+        return respostas.pop(0)
+
+    r = narrate_output(_output_completo(), client_call=fake, model="m")
+    assert r.quantificador_suspeito is False
+    assert r.quantificadores_usados[0]["quantificador"] == "cerca de metade"
+
+
+def test_lista_vazia_de_quantificadores_e_valida_sem_retentativa():
+    calls = []
+
+    def fake(system, user, model):
+        calls.append(1)
+        return ('{"narrativa": "entre quem nao gostou, o ritmo incomodou; ja '
+                'entre quem gostou, a direcao foi elogiada.", '
+                '"quantificadores_usados": []}')
+
+    r = narrate_output(_output_completo(), client_call=fake, model="m")
+    assert r.quantificador_suspeito is False
+    assert r.quantificadores_usados == []
+    assert len(calls) == 1
+
+
+def test_campo_quantificadores_ausente_no_json_nao_quebra():
+    """Compatibilidade: resposta no formato v1.4.0 (sem o campo novo) segue
+    válida — vira [] e nada é sinalizado."""
+    def fake(system, user, model):
+        return ('{"narrativa": "entre quem nao gostou, o ritmo incomodou; ja '
+                'entre quem gostou, a direcao foi elogiada."}')
+
+    r = narrate_output(_output_completo(), client_call=fake, model="m")
+    assert r.quantificadores_usados == []
+    assert r.quantificador_suspeito is False
+
+
+def test_expressao_irreconhecivel_nao_e_tratada_como_violacao():
+    """Limitação documentada: sem casar a expressão na escala, o código não
+    tem como julgar força — e prefere não flaggar prosa possivelmente certa."""
+    out = _output_completo()
+    assert _quantificadores_validos(
+        [{"quantificador": "um punhado disperso", "tema": "ritmo"}], out) is True
+
+
+def test_rede_de_bucket_da_v1_2_3_continua_ativa():
+    """A checagem nova SOMA à antiga, não a substitui: "quase todos" sem
+    nenhum tema >=80% segue flaggando mesmo sem par declarado."""
+    def fake(system, user, model):
+        return ('{"narrativa": "entre quem nao gostou, quase todos citaram o '
+                'ritmo lento do filme ao longo da projecao inteira.", '
+                '"quantificadores_usados": []}')
+
+    r = narrate_output(_output_completo(), client_call=fake, model="m")
+    assert r.quantificador_suspeito is True
+
+
+def test_regressao_the_invite_quase_todos_com_lastro_de_outro_tema():
+    """O defeito REAL da v1.4.0, reproduzido: "quase todos" para um tema de
+    67% enquanto OUTRO tema do mesmo grupo tem 83%. A rede de bucket da
+    v1.2.3 acha lastro e deixa passar; a checagem por par (v1.4.1) pega."""
+    temas = [
+        Tema("Direção e roteiro (geral)", 25, 30, "elogio amplo à direção"),  # 83%
+        Tema("Atuações e química do elenco", 20, 30, "destaque para o elenco"),  # 67%
+    ]
+    buckets = [_bucket("positivas", 30, "completo", temas,
+                       "as reviews positivas elogiam a direção", 30)]
+    out = build_output("the-invite-2026", buckets, "2026-01-01", {}, 100)
+
+    # a rede de bucket sozinha não flagga (há tema >= 80% no filme)
+    from espectro24.synthesize import _algum_tema_tem_fracao_forte
+    assert _algum_tema_tem_fracao_forte(out) is True
+
+    systems = []
+
+    def fake(system, user, model):
+        systems.append(system)
+        return ('{"narrativa": "quase todos salientam o desempenho do elenco e '
+                'a quimica entre os atores deste filme.", '
+                '"quantificadores_usados": [{"quantificador": "Quase todos", '
+                '"tema": "Atuações e química do elenco"}]}')
+
+    r = narrate_output(out, client_call=fake, model="m")
+    assert r.quantificador_suspeito is True       # 67% -> rótulo "a maioria"
+    assert len(systems) == 2
+
+
+def test_conferencia_quantificador_devolve_fracao_e_rotulo_reais():
+    out = _output_completo()
+    assert conferencia_quantificador(out, "ritmo") == (60, "cerca de metade")
+    assert conferencia_quantificador(out, "inexistente") is None
+
+
+def test_tema_repetido_em_grupos_resolve_pela_forca_mais_alta():
+    """Par declarado não diz de qual grupo veio; na ambiguidade a checagem
+    aceita o rótulo mais forte entre os homônimos (não flagga prosa certa)."""
+    buckets = [
+        _bucket("negativas", 50, "completo", [Tema("ritmo", 1, 10, "poucos")],
+                "as reviews negativas comentam o ritmo", 10),      # 10% -> alguns
+        _bucket("positivas", 30, "completo", [Tema("ritmo", 9, 10, "quase todos")],
+                "as reviews positivas comentam o ritmo", 10),      # 90% -> quase todos
+    ]
+    out = build_output("filme-y", buckets, "2026-01-01", {}, 20)
+    assert _quantificadores_validos(
+        [{"quantificador": "a maioria", "tema": "ritmo"}], out) is True
+
+
+# --- v1.4.1: MOVIMENTO 2 pode ser OMITIDO (pressão de preenchimento) ---
+# Diagnóstico do defeito: o the-invite tem poucos temas descritivos e o
+# narrador completou o espaço com juízo de qualidade hedgeado ("estilo visual
+# eficaz", "abordagem arrojada"), violando o critério de categoria.
+
+def test_prompt_autoriza_explicitamente_a_omissao_do_movimento_2():
+    assert "OMISSÃO AUTORIZADA" in NARRATOR_SYSTEM_PROMPT
+    assert "MENOS DE DUAS propriedades" in NARRATOR_SYSTEM_PROMPT
+    assert "OMITIR É O COMPORTAMENTO CORRETO" in NARRATOR_SYSTEM_PROMPT
+    # nomear o defeito: preencher com juízo hedgeado é PIOR que omitir
+    assert "é PIOR do que não ter o movimento" in NARRATOR_SYSTEM_PROMPT
+    assert "estilo visual eficaz" in NARRATOR_SYSTEM_PROMPT
+    assert "abordagem arrojada" in NARRATOR_SYSTEM_PROMPT
+    # e o contrato de saída quando ele é omitido
+    assert "lista VAZIA ([])" in NARRATOR_SYSTEM_PROMPT
+
+
+def test_prompt_autoriza_omissao_nas_duas_variantes_da_regra_c():
+    from espectro24.synthesize import build_narrator_prompt
+    for com_dist in (False, True):
+        assert "OMISSÃO AUTORIZADA" in build_narrator_prompt(com_dist)
+
+
+def test_movimento_2_omitido_com_consensos_vazios_nao_e_suspeito():
+    """Omitir é o comportamento CORRETO — `consensos_usados: []` não pode
+    disparar nem retentativa nem flag."""
+    calls = []
+
+    def fake(system, user, model):
+        calls.append(1)
+        # narrativa sem movimento 2: premissa -> contraste, direto
+        return ('{"narrativa": "este filme e um drama dirigido por alguem. '
+                'entre quem nao gostou, o ritmo incomodou; ja entre quem '
+                'gostou, a direcao foi elogiada com entusiasmo.", '
+                '"consensos_usados": [], "quantificadores_usados": []}')
+
+    r = narrate_output(_output_completo(), client_call=fake, model="m")
+    assert r.consenso_suspeito is False
+    assert r.consensos_usados == []
+    assert len(calls) == 1                       # sem retentativa
 
 
 def test_prevalencia_corrigida_na_retentativa_zera_flag():

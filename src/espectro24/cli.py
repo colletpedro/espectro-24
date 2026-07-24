@@ -206,6 +206,9 @@ def main(argv=None):
         # v1.3.1: consensos_usados fica junto de narrativa (mesmo bloco
         # lógico) — artefato de revisão humana do MOVIMENTO 2.
         output["consensos_usados"] = res.consensos_usados
+        # v1.4.1: quantificadores_usados segue o mesmo padrão — telemetria
+        # par a par do MOVIMENTO 3, conferível contra a fração real.
+        output["quantificadores_usados"] = res.quantificadores_usados
         output["narrativa_flags"] = {
             "idioma_invalido": res.idioma_invalido,
             "escopo_suspeito": res.escopo_suspeito,
@@ -213,6 +216,7 @@ def main(argv=None):
             "quantificador_suspeito": res.quantificador_suspeito,
             "consenso_suspeito": res.consenso_suspeito,
             "peso_nao_ancorado": res.peso_nao_ancorado,
+            "vocabulario_peso_suspeito": res.vocabulario_peso_suspeito,
             "aspas_removidas": res.aspas_removidas,
             "falhou": res.falhou,
         }

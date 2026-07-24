@@ -24,6 +24,7 @@ from espectro24.synthesize import (
     _rotulo_peso,
     _rotulo_peso_completo,
     _serialize_output_for_narrator,
+    _vocabulario_peso_ok,
     build_narrator_prompt,
     narrate_output,
 )
@@ -381,3 +382,147 @@ def test_sem_distribuicao_prevalencia_continua_sendo_violacao():
 
     r = narrate_output(_output(com_distribuicao=False), client_call=fake, model="m")
     assert r.prevalencia_suspeita is True
+
+
+# =====================================================================
+# v1.4.1 — invariante de vocabulário do peso: NOTAS, não REVIEWS
+# =====================================================================
+# Os rótulos de peso derivam do histograma de NOTAS (todos que avaliaram); os
+# temas derivam das REVIEWS COM TEXTO (subconjunto). Dizer "a grande maioria
+# das reviews" empresta ao peso um denominador que não é o dele.
+
+def test_prompt_com_distribuicao_traz_a_invariante_de_vocabulario():
+    p = build_narrator_prompt(True)
+    assert "VOCABULÁRIO OBRIGATÓRIO — NOTAS, NUNCA REVIEWS" in p
+    assert 'é OBRIGATÓRIO escrever "das notas"' in p
+    assert 'é PROIBIDO escrever "das reviews", "dos espectadores" ou "do público"' in p
+    # e a distinção das duas populações fica explícita
+    assert "histograma de NOTAS do Letterboxd" in p
+    assert "os temas vêm das REVIEWS COM TEXTO" in p
+
+
+def test_invariante_de_vocabulario_so_existe_na_variante_com_distribuicao():
+    # sem distribuição não há peso a expressar — a regra não faz sentido lá
+    assert "NOTAS, NUNCA REVIEWS" not in build_narrator_prompt(False)
+
+
+_PESOS_CURE = {"negativas": (3, "uma pequena minoria"),
+               "medianas": (17, "uma minoria"),
+               "positivas": (79, "a grande maioria")}
+
+
+def test_vocabulario_ok_quando_o_rotulo_vem_com_notas():
+    assert _vocabulario_peso_ok(
+        "a grande maioria das notas (~79%) gostou; uma minoria das notas "
+        "(~17%) ficou no meio; uma pequena minoria das notas (~3%) nao gostou.",
+        _PESOS_CURE) is True
+
+
+def test_vocabulario_flagga_rotulo_de_peso_com_reviews():
+    assert _vocabulario_peso_ok(
+        "a grande maioria das reviews (~79%) gostou do filme.",
+        _PESOS_CURE) is False
+
+
+@pytest.mark.parametrize("prosa", [
+    "a grande maioria dos espectadores (~79%) gostou do filme.",
+    "uma pequena minoria do público (~3%) nao gostou do filme.",
+    "uma minoria dos espectadores ficou no meio-termo sobre o filme.",
+])
+def test_vocabulario_flagga_publico_e_espectadores(prosa):
+    assert _vocabulario_peso_ok(prosa, _PESOS_CURE) is False
+
+
+def test_frequencia_de_tema_em_relacao_a_reviews_continua_permitida():
+    """A regra (d) EXIGE ancorar frequência de tema nas reviews analisadas —
+    a checagem não pode flaggar isso. "a maioria" sem percentual é
+    quantificador de tema, não rótulo de peso."""
+    assert _vocabulario_peso_ok(
+        "a grande maioria das notas (~79%) gostou; dentro desse grupo, a "
+        "maioria das reviews analisadas destaca o ritmo, e muitas reviews "
+        "citam a atmosfera.", _PESOS_CURE) is True
+
+
+def test_vocabulario_dispara_retentativa_e_flagga_na_narrativa():
+    systems = []
+
+    def fake(system, user, model):
+        systems.append(system)
+        return ('{"narrativa": "a grande maioria das reviews (~79%) gostou e '
+                'destaca o ritmo; uma minoria das notas (~17%) ficou no meio; '
+                'uma pequena minoria das notas (~3%) reclamou do arrastado.", '
+                '"consensos_usados": [], "quantificadores_usados": []}')
+
+    r = narrate_output(_output(), client_call=fake, model="m")
+    assert r.vocabulario_peso_suspeito is True
+    assert len(systems) == 2                      # houve retentativa
+    assert 'troque para "das notas"' in systems[1]  # reforço específico anexado
+
+
+def test_vocabulario_corrigido_na_retentativa_zera_a_flag():
+    respostas = [
+        ('{"narrativa": "a grande maioria das reviews (~79%) gostou do ritmo.", '
+         '"consensos_usados": []}'),
+        _PROSA_ANCORADA,
+    ]
+
+    def fake(system, user, model):
+        return respostas.pop(0)
+
+    r = narrate_output(_output(), client_call=fake, model="m")
+    assert r.vocabulario_peso_suspeito is False
+
+
+def test_vocabulario_correto_nao_retenta_nem_flagga():
+    calls = []
+
+    def fake(system, user, model):
+        calls.append(1)
+        return _PROSA_ANCORADA
+
+    r = narrate_output(_output(), client_call=fake, model="m")
+    assert r.vocabulario_peso_suspeito is False
+    assert len(calls) == 1
+
+
+def test_sem_distribuicao_vocabulario_nunca_flagga():
+    """Sem histograma não há rótulo de peso — nada a checar (vacuamente OK)."""
+    def fake(system, user, model):
+        return ('{"narrativa": "entre quem nao gostou, o ritmo incomodou; ja '
+                'entre quem gostou, a maioria das reviews analisadas elogia a '
+                'direcao deste filme longo e denso."}')
+
+    r = narrate_output(_output(com_distribuicao=False), client_call=fake, model="m")
+    assert r.vocabulario_peso_suspeito is False
+
+
+def test_render_mostra_flag_de_vocabulario_de_peso():
+    out = _output()
+    out["narrativa"] = "prosa qualquer"
+    out["narrativa_flags"] = {"vocabulario_peso_suspeito": True}
+    assert "em vez de \"das notas\"" in render_terminal(out, tom="narrativo")
+
+
+# --- render: bloco compacto de quantificadores_usados (v1.4.1) ---
+
+def test_render_mostra_bloco_de_quantificadores_com_a_conferencia():
+    out = _output()
+    out["narrativa"] = "prosa qualquer"
+    out["narrativa_flags"] = {}
+    out["quantificadores_usados"] = [
+        {"quantificador": "cerca de metade", "tema": "ritmo"}]
+    r = render_terminal(out, tom="narrativo")
+    assert "Quantificadores do movimento 3:" in r
+    assert "cerca de metade" in r
+    # a conferência contra o número real é o que torna o bloco útil
+    assert "fração real 60%" in r
+    assert "rótulo: cerca de metade" in r
+
+
+def test_render_sinaliza_tema_inexistente_no_bloco_de_quantificadores():
+    out = _output()
+    out["narrativa"] = "prosa qualquer"
+    out["narrativa_flags"] = {}
+    out["quantificadores_usados"] = [
+        {"quantificador": "quase todos", "tema": "tema fantasma"}]
+    assert "tema inexistente no relatório" in render_terminal(out, tom="narrativo")
