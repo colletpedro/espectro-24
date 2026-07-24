@@ -140,6 +140,18 @@ troque pelo rótulo_quantificador correto que veio no relatório — nunca \
 invente um quantificador mais forte do que o fornecido."""
 
 
+# Reforço adicional SÓ para o narrador [D2] (v1.3.1) — telemetria de
+# consensos: anexado à retentativa combinada quando `consensos_usados` cita
+# grupo/tema inexistente no relatório recebido.
+_REFORCO_CONSENSOS = """
+- Se `consensos_usados` citou um grupo ("grupos_de_origem") que não é \
+exatamente "negativas", "medianas" ou "positivas", ou um tema \
+("temas_de_origem") que não existe, com esse nome EXATO, entre os temas do \
+grupo citado no relatório recebido: corrija a lista para citar SOMENTE \
+grupos e nomes de tema que existem de fato, copiados literalmente do \
+relatório — ou remova o item se ele não tiver sustentação real."""
+
+
 class LLMError(RuntimeError):
     pass
 
@@ -525,16 +537,52 @@ duração só se for relevante para o que os dois movimentos seguintes vão \
 dizer (ex.: filme muito longo/curto vira tema na experiência).
 
 MOVIMENTO 2 — A EXPERIÊNCIA (3-5 frases): descreva como é assistir ao filme \
-usando APENAS características em que os grupos CONCORDAM factualmente, \
-mesmo divergindo na avaliação — ex.: se as reviews negativas chamam o ritmo \
-de "lento e tedioso" e as positivas de "lento e deliberado", o fato \
-consensual compartilhado por trás da divergência é "ritmo lento e \
-contemplativo". Tom NEUTRO, SEM valência — este movimento descreve, não \
-julga; gostar ou não gostar fica para o MOVIMENTO 3. É PROIBIDO importar \
-qualquer informação que não venha dos temas validados dos três grupos. Se \
-não houver consensos claros o bastante entre os grupos, este movimento pode \
-ser curto (1-2 frases sobre o que os dados permitem dizer, sem forçar um \
-consenso que os dados não sustentam).
+usando APENAS propriedades DESCRITIVAS da experiência (ritmo, tom, \
+atmosfera, intensidade, estrutura, ambientação, nível de violência, \
+ambiguidade, densidade) em que os grupos CONCORDAM no NÚCLEO FACTUAL, mesmo \
+divergindo na avaliação. Tom NEUTRO, SEM valência — este movimento \
+descreve, não julga; gostar ou não gostar fica para o MOVIMENTO 3. Uma \
+propriedade só entra neste movimento se passar nos TRÊS critérios abaixo, \
+TODOS obrigatórios (v1.3.1 — reescrito após um defeito real observado):
+
+a. CRITÉRIO DE CATEGORIA: só propriedades DESCRITIVAS. É PROIBIDO qualquer \
+juízo de QUALIDADE (atuações boas/ruins, roteiro inteligente/fraco, direção \
+competente/questionável, elenco talentoso/fraco) — julgamento de qualidade \
+é sempre disputado entre quem gostou e quem não gostou, e pertence ao \
+MOVIMENTO 3, NUNCA a este.
+b. CRITÉRIO DE PRESENÇA: a propriedade precisa derivar de temas de PELO \
+MENOS DOIS grupos, com o mesmo núcleo factual — a valência pode divergir \
+("lento e tedioso" num grupo + "lento e deliberado" noutro = consenso \
+factual "ritmo lento"; a avaliação de cada grupo sobre esse ritmo é coisa \
+diferente e não entra aqui).
+c. CRITÉRIO DE NÃO-CONTRADIÇÃO: se QUALQUER grupo contradiz o núcleo \
+factual (não só diverge na avaliação, mas nega o fato em si), a propriedade \
+está desqualificada — não entra no MOVIMENTO 2 de jeito nenhum.
+
+EXEMPLO POSITIVO (os três critérios satisfeitos): as reviews negativas \
+chamam o ritmo de "lento e tedioso", as positivas de "lento e deliberado" \
+— ambos descrevem RITMO (categoria descritiva, critério a), os dois grupos \
+concordam no núcleo "lento" (critério b), nenhum grupo nega isso (critério \
+c) → consenso válido para o MOVIMENTO 2: "ritmo lento e contemplativo".
+
+EXEMPLO NEGATIVO (falha real observada, v1.3.0 — caso de "the-invite-2026"): \
+as reviews positivas elogiam "atuações marcantes" e "roteiro inteligente"; \
+as negativas têm os temas "atuações e direção questionáveis" e "roteiro \
+fraco". Isso NÃO é consenso: é uma propriedade AVALIATIVA (qualidade de \
+atuação, qualidade de roteiro — falha o critério a) E os grupos se \
+contradizem diretamente sobre ela (falha o critério c também). O correto é \
+NÃO mencionar qualidade de atuação/roteiro no MOVIMENTO 2 — essa disputa \
+pertence ao MOVIMENTO 3, atribuída a cada grupo separadamente.
+
+É PROIBIDO importar qualquer informação que não venha dos temas validados \
+dos três grupos. Se não houver nenhuma propriedade que passe nos três \
+critérios ao mesmo tempo, este movimento pode ser curto (1-2 frases) ou \
+quase ausente — NUNCA forçando um consenso que os dados não sustentam. Para \
+CADA propriedade usada no MOVIMENTO 2, registre em `consensos_usados` (ver \
+formato de saída) a propriedade, os grupos de onde ela veio e os nomes \
+EXATOS dos temas (copiados literalmente do relatório) que a sustentam — \
+esse registro é o artefato de revisão humana que confirma que o consenso é \
+real, não inventado.
 
 MOVIMENTO 3 — O CONTRASTE (enxuto — a interface já exibe as barras de \
 frequência tema a tema, então aqui priorize os 2-3 temas MAIS FORTES de \
@@ -589,7 +637,12 @@ sinopse oficial é tratada com a mesma cautela).
 h. FORMA: português do Brasil, SEM aspas de citação, SEM subtítulos ou \
 rótulos dos movimentos no texto final, entre 250 e 400 palavras ao todo.
 
-Responda APENAS com JSON puro no formato: {"narrativa": "<seu texto>"}"""
+Responda APENAS com JSON puro no formato: {"narrativa": "<seu texto>", \
+"consensos_usados": [{"propriedade": "<nome curto da propriedade \
+descritiva>", "grupos_de_origem": ["<negativas|medianas|positivas>", ...], \
+"temas_de_origem": ["<nome EXATO do tema, copiado do relatório>", ...]}]}. \
+`consensos_usados` pode ser `[]` se o MOVIMENTO 2 não usou nenhuma \
+propriedade consensual."""
 
 
 # --- Quantificador pré-computado (v1.2.3) ---
@@ -733,6 +786,54 @@ def _serialize_output_for_narrator(output: dict) -> str:
     return "\n".join(linhas)
 
 
+# --- v1.3.1: telemetria/validação de consensos_usados (MOVIMENTO 2) ---
+
+_GRUPOS_VALIDOS = {"negativas", "medianas", "positivas"}
+
+
+def _temas_por_grupo(output: dict) -> dict[str, set[str]]:
+    return {
+        b.get("bucket"): {t.get("tema") for t in (b.get("temas") or [])}
+        for b in output.get("buckets", [])
+    }
+
+
+def _consensos_validos(consensos: list, output: dict) -> bool:
+    """True se todo item de `consensos_usados` cita SOMENTE grupos válidos
+    (negativas/medianas/positivas presentes no relatório) e temas que
+    existem, com o nome EXATO, em algum dos grupos citados naquele item.
+    Lista vazia é vacuamente válida (MOVIMENTO 2 pode não usar nenhuma)."""
+    temas_por_grupo = _temas_por_grupo(output)
+    for c in consensos or []:
+        if not isinstance(c, dict):
+            return False
+        grupos = c.get("grupos_de_origem")
+        temas = c.get("temas_de_origem")
+        if not isinstance(grupos, list) or not isinstance(temas, list):
+            return False
+        if not all(g in _GRUPOS_VALIDOS and g in temas_por_grupo for g in grupos):
+            return False
+        temas_disponiveis = set()
+        for g in grupos:
+            temas_disponiveis |= temas_por_grupo.get(g, set())
+        if not all(t in temas_disponiveis for t in temas):
+            return False
+    return True
+
+
+def _normalizar_consensos(consensos: list) -> list[dict]:
+    out = []
+    for c in consensos or []:
+        if not isinstance(c, dict):
+            continue
+        out.append({
+            "propriedade": str(c.get("propriedade", "")),
+            "grupos_de_origem": [str(g) for g in (c.get("grupos_de_origem") or [])],
+            "temas_de_origem": [str(t) for t in (c.get("temas_de_origem") or [])],
+        })
+    return out
+
+
 def _validar_prosa(texto: str) -> tuple[str, bool, bool, bool, bool]:
     """Aplica as validações do §D que fazem sentido para prosa livre:
     remoção mecânica de aspas + checagem de idioma, escopo e prevalência (v1.2.1).
@@ -767,38 +868,49 @@ def narrate_output(output: dict, client_call=None, model: str | None = None,
     user = _serialize_output_for_narrator(output)
     tem_tema_forte = _algum_tema_tem_fracao_forte(output)
 
-    def _uma_chamada(sys_prompt: str) -> str | None:
+    def _uma_chamada(sys_prompt: str) -> tuple[str, list] | None:
         raw = call(sys_prompt, user, model)
         try:
             data = _parse_llm_json(raw)
         except (ValueError, json.JSONDecodeError):
             return None
-        return str(data.get("narrativa", ""))
+        consensos = data.get("consensos_usados")
+        if not isinstance(consensos, list):
+            consensos = []
+        return str(data.get("narrativa", "")), consensos
 
     def _quantificador_ok(texto: str) -> bool:
         return not (_tem_quantificador_forte_no_texto(texto) and not tem_tema_forte)
 
     # chamada + 1 retentativa de JSON inválido
-    prosa = _uma_chamada(system)
-    if prosa is None:
-        prosa = _uma_chamada(system)
-    if prosa is None:
+    resultado = _uma_chamada(system)
+    if resultado is None:
+        resultado = _uma_chamada(system)
+    if resultado is None:
         return NarrativaResult(texto="", falhou=True,
                                idioma_invalido=False, escopo_suspeito=False)
 
+    prosa, consensos_brutos = resultado
     texto, idioma_ok, escopo_ok, prevalencia_ok, aspas_removidas = _validar_prosa(prosa)
     quantificador_ok = _quantificador_ok(texto)
+    consensos_ok = _consensos_validos(consensos_brutos, output)
 
-    # 1 retentativa combinada se idioma, escopo, prevalência e/ou
-    # quantificador falharem
-    if not idioma_ok or not escopo_ok or not prevalencia_ok or not quantificador_ok:
+    # 1 retentativa combinada se idioma, escopo, prevalência, quantificador
+    # e/ou consensos_usados falharem (v1.3.1 adiciona o último critério)
+    if not idioma_ok or not escopo_ok or not prevalencia_ok or not quantificador_ok \
+            or not consensos_ok:
         reforco = _REFORCO_VALIDACAO + _REFORCO_PREVALENCIA + _REFORCO_QUANTIFICADOR
-        prosa_retry = _uma_chamada(system + reforco)
-        if prosa_retry is not None:
-            t2, i2, e2, p2, a2 = _validar_prosa(prosa_retry)
+        if not consensos_ok:
+            reforco += _REFORCO_CONSENSOS
+        retry = _uma_chamada(system + reforco)
+        if retry is not None:
+            prosa2, consensos2 = retry
+            t2, i2, e2, p2, a2 = _validar_prosa(prosa2)
             texto, idioma_ok, escopo_ok, prevalencia_ok = t2, i2, e2, p2
             aspas_removidas = aspas_removidas or a2
             quantificador_ok = _quantificador_ok(texto)
+            consensos_brutos = consensos2
+            consensos_ok = _consensos_validos(consensos_brutos, output)
 
     return NarrativaResult(
         texto=texto,
@@ -807,4 +919,6 @@ def narrate_output(output: dict, client_call=None, model: str | None = None,
         prevalencia_suspeita=not prevalencia_ok,
         quantificador_suspeito=not quantificador_ok,
         aspas_removidas=aspas_removidas,
+        consensos_usados=_normalizar_consensos(consensos_brutos),
+        consenso_suspeito=not consensos_ok,
     )

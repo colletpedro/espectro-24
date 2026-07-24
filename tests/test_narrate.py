@@ -429,6 +429,123 @@ def test_validacoes_de_prosa_seguem_ativas_com_ficha_presente():
     assert r.idioma_invalido is True
 
 
+# --- v1.3.1: regra do MOVIMENTO 2 reescrita (categoria/presença/não-contradição) ---
+
+def test_prompt_contem_os_tres_criterios_do_movimento_2():
+    assert "CRITÉRIO DE CATEGORIA" in NARRATOR_SYSTEM_PROMPT
+    assert "CRITÉRIO DE PRESENÇA" in NARRATOR_SYSTEM_PROMPT
+    assert "CRITÉRIO DE NÃO-CONTRADIÇÃO" in NARRATOR_SYSTEM_PROMPT
+    assert "PELO MENOS DOIS grupos" in NARRATOR_SYSTEM_PROMPT
+    assert "PROIBIDO qualquer" in NARRATOR_SYSTEM_PROMPT
+
+
+def test_prompt_contem_exemplo_positivo_e_negativo():
+    assert "EXEMPLO POSITIVO" in NARRATOR_SYSTEM_PROMPT
+    assert "EXEMPLO NEGATIVO" in NARRATOR_SYSTEM_PROMPT
+    # o caso real observado (the-invite-2026) está documentado no prompt
+    assert "atuações marcantes" in NARRATOR_SYSTEM_PROMPT
+    assert "roteiro inteligente" in NARRATOR_SYSTEM_PROMPT
+    assert "atuações e direção questionáveis" in NARRATOR_SYSTEM_PROMPT
+
+
+def test_prompt_pede_consensos_usados_no_formato_de_saida():
+    assert "consensos_usados" in NARRATOR_SYSTEM_PROMPT
+    assert "grupos_de_origem" in NARRATOR_SYSTEM_PROMPT
+    assert "temas_de_origem" in NARRATOR_SYSTEM_PROMPT
+
+
+# --- v1.3.1: parsing/telemetria de consensos_usados ---
+
+def test_consensos_usados_validos_sao_parseados_e_persistidos():
+    out = _output_completo()  # tema único "ritmo" em negativas/medianas/positivas
+
+    def fake(system, user, model):
+        return ('{"narrativa": "entre quem nao gostou, o ritmo incomodou; '
+                'ja entre quem gostou, a direcao foi elogiada.", '
+                '"consensos_usados": [{"propriedade": "ritmo lento", '
+                '"grupos_de_origem": ["negativas", "positivas"], '
+                '"temas_de_origem": ["ritmo"]}]}')
+
+    r = narrate_output(out, client_call=fake, model="m")
+    assert r.consenso_suspeito is False
+    assert len(r.consensos_usados) == 1
+    assert r.consensos_usados[0]["propriedade"] == "ritmo lento"
+    assert r.consensos_usados[0]["grupos_de_origem"] == ["negativas", "positivas"]
+
+
+def test_consensos_vazio_e_valido_sem_retentativa():
+    out = _output_completo()
+    calls = []
+
+    def fake(system, user, model):
+        calls.append(1)
+        return ('{"narrativa": "entre quem nao gostou, o ritmo incomodou; '
+                'ja entre quem gostou, a direcao foi elogiada.", '
+                '"consensos_usados": []}')
+
+    r = narrate_output(out, client_call=fake, model="m")
+    assert r.consenso_suspeito is False
+    assert r.consensos_usados == []
+    assert len(calls) == 1  # sem retentativa
+
+
+def test_consenso_com_grupo_inexistente_dispara_retentativa_e_flag():
+    systems = []
+
+    def fake(system, user, model):
+        systems.append(system)
+        return ('{"narrativa": "entre quem nao gostou, o ritmo incomodou; '
+                'ja entre quem gostou, a direcao foi elogiada.", '
+                '"consensos_usados": [{"propriedade": "ritmo", '
+                '"grupos_de_origem": ["neutras"], "temas_de_origem": ["ritmo"]}]}')
+
+    r = narrate_output(_output_completo(), client_call=fake, model="m")
+    assert r.consenso_suspeito is True
+    assert len(systems) == 2  # houve retentativa
+    assert "grupos e nomes de tema que existem" in systems[1]
+
+
+def test_consenso_com_tema_inexistente_dispara_retentativa_e_flag():
+    def fake(system, user, model):
+        return ('{"narrativa": "entre quem nao gostou, o ritmo incomodou; '
+                'ja entre quem gostou, a direcao foi elogiada.", '
+                '"consensos_usados": [{"propriedade": "roteiro", '
+                '"grupos_de_origem": ["negativas"], '
+                '"temas_de_origem": ["tema que nao existe"]}]}')
+
+    r = narrate_output(_output_completo(), client_call=fake, model="m")
+    assert r.consenso_suspeito is True
+
+
+def test_consenso_corrigido_na_retentativa_zera_flag():
+    respostas = [
+        ('{"narrativa": "primeira tentativa.", "consensos_usados": '
+         '[{"propriedade": "x", "grupos_de_origem": ["inexistente"], "temas_de_origem": []}]}'),
+        ('{"narrativa": "entre quem nao gostou, o ritmo incomodou; ja entre '
+         'quem gostou, a direcao foi elogiada.", "consensos_usados": '
+         '[{"propriedade": "ritmo", "grupos_de_origem": ["negativas"], '
+         '"temas_de_origem": ["ritmo"]}]}'),
+    ]
+
+    def fake(system, user, model):
+        return respostas.pop(0)
+
+    r = narrate_output(_output_completo(), client_call=fake, model="m")
+    assert r.consenso_suspeito is False
+    assert r.consensos_usados[0]["propriedade"] == "ritmo"
+
+
+def test_consensos_ausentes_no_json_nao_quebra_e_nao_marca_suspeito():
+    # compatibilidade: resposta sem o campo novo (formato v1.3.0) continua
+    # válida, consensos_usados vira [] e nada é sinalizado.
+    def fake(system, user, model):
+        return '{"narrativa": "entre quem nao gostou, o ritmo incomodou; ja entre quem gostou, a direcao foi elogiada."}'
+
+    r = narrate_output(_output_completo(), client_call=fake, model="m")
+    assert r.consenso_suspeito is False
+    assert r.consensos_usados == []
+
+
 def test_prevalencia_corrigida_na_retentativa_zera_flag():
     respostas = [
         '{"narrativa": "a recepcao e polarizada: um grupo grande e uma minoria."}',

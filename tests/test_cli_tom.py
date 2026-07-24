@@ -33,13 +33,14 @@ def _iso_env(monkeypatch):
     monkeypatch.delenv("ANTHROPIC_API_KEY", raising=False)
 
 
-def _mock_narrate(monkeypatch):
+def _mock_narrate(monkeypatch, consensos_usados=None):
     calls = []
 
     def fake(output, model=None, provider=None):
         calls.append(output)
         return NarrativaResult(texto="PROSA_MOCK", idioma_invalido=False,
-                               escopo_suspeito=False, aspas_removidas=False)
+                               escopo_suspeito=False, aspas_removidas=False,
+                               consensos_usados=consensos_usados or [])
     monkeypatch.setattr(cli, "narrate_output", fake)
     return calls
 
@@ -112,6 +113,24 @@ def test_ficha_falha_da_api_nao_quebra_pipeline(tmp_path, monkeypatch, _iso_env,
     assert salvo["ficha"] is None
     err = capsys.readouterr().err
     assert "Ficha TMDB" in err
+
+
+# --- v1.3.1: consensos_usados persiste no JSON e aparece no render ---
+
+def test_consensos_usados_persiste_no_json_e_renderiza(tmp_path, monkeypatch, _iso_env, capsys):
+    _escreve_json(tmp_path)
+    consensos = [{"propriedade": "ritmo lento", "grupos_de_origem": ["negativas", "positivas"],
+                 "temas_de_origem": ["ritmo"]}]
+    _mock_narrate(monkeypatch, consensos_usados=consensos)
+    monkeypatch.setattr(cli, "buscar_ficha", lambda *a, **k: (None, None))
+    cli.main(["--slug", "cure", "--reuse-synthesis", "--out-dir", str(tmp_path),
+              "--tom", "narrativo"])
+    salvo = json.loads((tmp_path / "cure.json").read_text(encoding="utf-8"))
+    assert salvo["consensos_usados"] == consensos
+    assert salvo["narrativa_flags"]["consenso_suspeito"] is False
+    out = capsys.readouterr().out
+    assert "Consensos do movimento 2:" in out
+    assert "ritmo lento" in out
 
 
 def test_no_ficha_pula_a_busca(tmp_path, monkeypatch, _iso_env, capsys):

@@ -131,3 +131,30 @@ def test_tom_narrativo_flags_da_narrativa_visiveis():
     render = render_terminal(out, tom="narrativo")
     assert "narrativa: possível generalização de escopo" in render
 
+
+# --- v1.3.1: bloco de consensos_usados (revisão humana do MOVIMENTO 2) ---
+
+def test_consensos_usados_renderizados_em_bloco_compacto():
+    out = _output_completo_com_narrativa()
+    out["consensos_usados"] = [
+        {"propriedade": "ritmo lento", "grupos_de_origem": ["negativas", "positivas"],
+         "temas_de_origem": ["ritmo"]},
+    ]
+    render = render_terminal(out, tom="narrativo")
+    assert "Consensos do movimento 2:" in render
+    assert "ritmo lento" in render
+    assert "negativas, positivas" in render
+
+
+def test_sem_consensos_usados_nao_gera_bloco():
+    out = _output_completo_com_narrativa()
+    out["consensos_usados"] = []
+    render = render_terminal(out, tom="narrativo")
+    assert "Consensos do movimento 2:" not in render
+
+
+def test_consenso_suspeito_mostra_aviso():
+    out = _output_completo_com_narrativa()
+    out["narrativa_flags"]["consenso_suspeito"] = True
+    render = render_terminal(out, tom="narrativo")
+    assert "consensos_usados citou grupo/tema inexistente" in render

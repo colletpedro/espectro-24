@@ -165,8 +165,22 @@ def render_terminal(output: dict, tom: str = "estruturado") -> str:
             L.append("  ⚠️  narrativa: \"quase todos\"/\"praticamente todos\" usado sem "
                      "nenhum tema do filme ter fração ≥80% mesmo após retentativa — "
                      "revisar manualmente.")
+        if flags.get("consenso_suspeito"):
+            L.append("  ⚠️  narrativa: consensos_usados citou grupo/tema inexistente no "
+                     "relatório mesmo após retentativa — revisar manualmente.")
         if flags.get("aspas_removidas"):
             L.append("  ⚠️  narrativa: aspas de citação removidas mecanicamente.")
+
+        # v1.3.1: bloco compacto de consensos_usados — artefato de revisão
+        # humana do MOVIMENTO 2 (a propriedade é consenso real, ou invenção?).
+        consensos = output.get("consensos_usados") or []
+        if consensos:
+            L.append("")
+            L.append("Consensos do movimento 2:")
+            for c in consensos:
+                grupos = ", ".join(c.get("grupos_de_origem") or [])
+                temas = "; ".join(c.get("temas_de_origem") or [])
+                L.append(f"  • {c.get('propriedade')} — grupos: {grupos} — temas: {temas}")
 
     L.append("")
     L.append(f"Total de reviews observadas na coleta: "

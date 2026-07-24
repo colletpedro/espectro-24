@@ -101,6 +101,13 @@ class NarrativaResult:
     # permitia) e a retentativa não corrigiu.
     quantificador_suspeito: bool = False
     falhou: bool = False  # True se não houve JSON válido nem após retentativa
+    # v1.3.1: telemetria dos consensos factuais usados no MOVIMENTO 2 — cada
+    # item é {propriedade, grupos_de_origem, temas_de_origem}, declarado pelo
+    # próprio LLM para permitir revisão humana (o consenso é real ou
+    # inventado?). `consenso_suspeito` = True quando algum item citou
+    # grupo/tema inexistente no relatório e a retentativa não corrigiu.
+    consensos_usados: list = field(default_factory=list)
+    consenso_suspeito: bool = False
 
 
 @dataclass

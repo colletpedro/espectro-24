@@ -177,11 +177,15 @@ def main(argv=None):
         print("Gerando narrativa (1 chamada LLM)...", file=sys.stderr)
         res = narrate_output(output, model=args.model, provider=args.provider)
         output["narrativa"] = res.texto
+        # v1.3.1: consensos_usados fica junto de narrativa (mesmo bloco
+        # lógico) — artefato de revisão humana do MOVIMENTO 2.
+        output["consensos_usados"] = res.consensos_usados
         output["narrativa_flags"] = {
             "idioma_invalido": res.idioma_invalido,
             "escopo_suspeito": res.escopo_suspeito,
             "prevalencia_suspeita": res.prevalencia_suspeita,
             "quantificador_suspeito": res.quantificador_suspeito,
+            "consenso_suspeito": res.consenso_suspeito,
             "aspas_removidas": res.aspas_removidas,
             "falhou": res.falhou,
         }
