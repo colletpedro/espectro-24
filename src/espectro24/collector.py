@@ -11,9 +11,14 @@ from .config import (
 )
 from .fetcher import Fetcher
 from .fulltext import complete_truncated
-from .models import BucketResult, LevelResult, Review
-from .parser import parse_reviews
-from .urls import level_page_cache_key, level_page_url
+from .models import BucketResult, Distribuicao, LevelResult, Review
+from .parser import parse_rating_histogram, parse_reviews
+from .urls import (
+    histogram_cache_key,
+    histogram_url,
+    level_page_cache_key,
+    level_page_url,
+)
 
 
 def _passes(r: Review, min_chars: int) -> bool:
@@ -80,6 +85,29 @@ def collect_level(fetcher: Fetcher, slug: str, nivel: float,
         n_descartadas_truncamento=n_trunc,
         validas=validas,
     )
+
+
+def collect_distribuicao(fetcher: Fetcher, slug: str) -> Distribuicao | None:
+    """[v1.4.0] Distribuição real de notas: 1 requisição por filme, cacheada.
+
+    ADITIVA POR DESIGN, como a ficha TMDB (§3a): qualquer falha (rede, HTTP,
+    anti-bot, layout inesperado) retorna None e o pipeline segue sem o dado
+    — o narrador cai automaticamente nas regras da v1.2.1 (proibição de
+    prevalência) e o render volta ao disclaimer antigo. Nenhuma exceção
+    escapa daqui, EXCETO nada: até AntiBotError é contida, porque perder a
+    distribuição não justifica abortar uma coleta que já custou dezenas de
+    requisições.
+    """
+    from .fetcher import AntiBotError, FetchError
+
+    try:
+        html = fetcher.get(histogram_url(slug), histogram_cache_key(slug))
+    except (FetchError, AntiBotError, OSError):
+        return None
+    por_nivel = parse_rating_histogram(html)
+    if por_nivel is None:
+        return None
+    return Distribuicao.de_histograma(por_nivel)
 
 
 def assemble_buckets(niveis: dict[float, LevelResult]) -> list[BucketResult]:

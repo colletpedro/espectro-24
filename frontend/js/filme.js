@@ -40,7 +40,7 @@
     app.appendChild(header(f));
     if (f.ficha) app.appendChild(fichaBlock(f.ficha));
     if (f.narrativa) app.appendChild(narrativaBlock(f.narrativa));
-    app.appendChild(detailDivider());
+    app.appendChild(detailDivider(f));
     (f.buckets || []).forEach(function (b) { app.appendChild(groupBlock(b, f)); });
     // micro-pesquisa (A/B) — módulo separado
     if (window.mountSurvey) window.mountSurvey(app, f);
@@ -127,14 +127,23 @@
   }
 
   // --- divisor EM DETALHE + disclaimer ---
-  function detailDivider() {
+  // v1.4.0: o disclaimer depende do dado disponível. Sem distribuição real,
+  // avisa que os tamanhos NÃO são prevalência (regra v1.2.1). Com ela, o peso
+  // real está exibido em cada grupo e o texto passa a explicar o método.
+  // Mantidos em sincronia com render.py (DISCLAIMER_*).
+  function detailDivider(f) {
+    var temDistribuicao = !!f.distribuicao;
+    var texto = temDistribuicao
+      ? "Análise em profundidade igual por grupo (50 · 20 · 30 reviews); " +
+        "o peso real de cada faixa está indicado em cada grupo."
+      : "Grupos de 50 · 20 · 30 reviews são cotas de coleta — " +
+        "não a proporção real das opiniões.";
     var el = document.createElement("div");
     el.className = "detail-divider";
     el.innerHTML =
       '<div class="spectrum-line" aria-hidden="true"></div>' +
       '<p class="detail-divider__label">Em detalhe · tema a tema</p>' +
-      '<p class="disclaimer">Grupos de 50 · 20 · 30 reviews são cotas de coleta — ' +
-      "não a proporção real das opiniões.</p>";
+      '<p class="disclaimer">' + texto + "</p>";
     return el;
   }
 
@@ -165,6 +174,15 @@
     head.appendChild(dot);
     head.appendChild(name);
     head.appendChild(stars);
+    // v1.4.0: share real do grupo — mono, discreto, MESMO estilo e MESMO
+    // formato nos três (neutralidade de TRATAMENTO; a assimetria vem do
+    // dado). Omitido por completo quando o filme não tem distribuição.
+    if (typeof b.share_real === "number") {
+      var share = document.createElement("span");
+      share.className = "group__share";
+      share.textContent = "~" + b.share_real + "% das notas";
+      head.appendChild(share);
+    }
     head.appendChild(count);
     el.appendChild(head);
 

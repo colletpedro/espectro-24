@@ -4,7 +4,7 @@ Nenhum valor aqui deve divergir da SPEC.md sem bump de versão.
 """
 from __future__ import annotations
 
-SPEC_VERSION = "1.3.1"
+SPEC_VERSION = "1.4.0"
 
 BASE = "https://letterboxd.com"
 

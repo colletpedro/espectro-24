@@ -108,6 +108,66 @@ class NarrativaResult:
     # grupo/tema inexistente no relatório e a retentativa não corrigiu.
     consensos_usados: list = field(default_factory=list)
     consenso_suspeito: bool = False
+    # v1.4.0: True quando havia distribuição real e a prosa NÃO ancorou algum
+    # grupo no rotulo_peso fornecido (nem num rótulo mais fraco, nem no
+    # percentual) — isto é, o narrador ignorou o peso e tratou os grupos como
+    # equivalentes — e a retentativa não corrigiu. Sempre False quando não há
+    # distribuição (não há o que ancorar).
+    peso_nao_ancorado: bool = False
+
+
+@dataclass
+class Distribuicao:
+    """[v1.4.0] Distribuição REAL de notas do filme (histograma do Letterboxd).
+
+    Distinta da cota de coleta (50/20/30), que é amostragem estratificada e
+    NÃO reflete prevalência. Este é o dado que faltava para a v1.2.1 — que
+    proibiu afirmações de prevalência justamente por não tê-lo (ver SPEC
+    §D2 e o changelog da v1.2.1, que já previa esta feature).
+
+    `por_bucket` guarda o **share real** de cada faixa em percentual inteiro.
+    NÃO é uma nota média nem um score agregado: são três números, um por
+    perspectiva, que somam a população de notas — a proibição de score
+    único (§1) permanece intacta.
+    """
+    por_nivel: dict[float, int]          # {0.5: 456, …, 5.0: 99242}
+    n_notas_total: int
+    por_bucket: dict[str, int]           # {"negativas": 3, "medianas": 17, …}
+    fonte: str = "letterboxd_histograma"
+
+    @classmethod
+    def de_histograma(cls, por_nivel: dict[float, int]) -> "Distribuicao | None":
+        """Agrega o histograma por bucket (§2 BUCKETS). None se não houver
+        nota alguma — sem denominador não existe share, e é preferível cair
+        no fallback (regras v1.2.1) a exibir 0%/0%/0%.
+
+        ARREDONDAMENTO: cada bucket é arredondado independentemente, para
+        que o número de cada grupo seja a melhor aproximação inteira do SEU
+        share. Consequência aceita e documentada: a soma dos três pode dar
+        99 ou 101. Preferido a redistribuir o resto (que tornaria algum
+        bucket menos fiel ao próprio dado) — coerente com a política do
+        projeto de não maquiar número. A interface nunca exibe a soma.
+        """
+        from .config import BUCKETS
+
+        total = sum(por_nivel.values())
+        if total <= 0:
+            return None
+        por_bucket = {
+            nome: round(100 * sum(por_nivel.get(n, 0) for n in niveis) / total)
+            for nome, niveis in BUCKETS.items()
+        }
+        return cls(por_nivel=dict(por_nivel), n_notas_total=total,
+                   por_bucket=por_bucket)
+
+    def metadata(self) -> dict[str, Any]:
+        return {
+            "n_notas_total": self.n_notas_total,
+            # chaves como string p/ o JSON não virar "0.5" vs 0.5 conforme o parser
+            "por_nivel": {str(k): v for k, v in sorted(self.por_nivel.items())},
+            "por_bucket": dict(self.por_bucket),
+            "fonte": self.fonte,
+        }
 
 
 @dataclass

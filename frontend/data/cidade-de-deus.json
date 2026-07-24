@@ -1,7 +1,7 @@
 {
   "slug": "cidade-de-deus",
   "data_coleta": "2026-07-19T08:27:41.045688+00:00",
-  "spec_version": "1.3.1",
+  "spec_version": "1.4.0",
   "total_reviews_observadas": 228,
   "buckets": [
     {
@@ -124,7 +124,8 @@
       ],
       "observacao_geral": "As reviews negativas apontam que o filme, apesar de seus méritos técnicos, falha eticamente ao estetizar a violência e a miséria, oferecendo uma representação estereotipada da favela para consumo externo. Este grupo de espectadores sentiu-se incomodado com a excessiva violência e a superficialidade na construção dos personagens e da narrativa.",
       "idioma_invalido": false,
-      "escopo_suspeito": false
+      "escopo_suspeito": false,
+      "share_real": 1
     },
     {
       "bucket": "medianas",
@@ -204,7 +205,8 @@
       ],
       "observacao_geral": "As reviews medianas de 3 a 3.5 estrelas apontam que o filme é tecnicamente impressionante e oferece um retrato realista e impactante da violência nas favelas, mas muitos sentem que, apesar do estilo visual marcante, ele falha em gerar uma conexão emocional profunda ou um fator 'uau' que justificaria uma nota mais alta.",
       "idioma_invalido": false,
-      "escopo_suspeito": false
+      "escopo_suspeito": false,
+      "share_real": 8
     },
     {
       "bucket": "positivas",
@@ -304,16 +306,18 @@
       ],
       "observacao_geral": "As reviews positivas apontam o filme como uma obra-prima do cinema mundial, elogiando sua inovação técnica e a maneira visceral como aborda a realidade brasileira. Este grupo destaca a narrativa envolvente, o estilo visual dinâmico e as atuações autênticas como pontos altos que tornam o filme impactante e memorável.",
       "idioma_invalido": false,
-      "escopo_suspeito": false
+      "escopo_suspeito": false,
+      "share_real": 91
     }
   ],
-  "narrativa": "Em Cidade de Deus, dirigido por Fernando Meirelles em 2002, somos apresentados a Buscapé, um jovem que cresce em um cenário de violência e encontra na fotografia uma esperança para escapar de um destino criminoso. Este drama de crime acompanha sua jornada em um ambiente desafiador. \n\nAssistir ao filme é ser imerso em uma narrativa que se desenrola com um estilo visual e uma edição notavelmente dinâmicos. A experiência é marcada por um ritmo acelerado e uma atmosfera intensa, características que sustentam uma abordagem brutal e realista da violência. A complexidade da trama se desdobra por meio de uma estrutura que lida com múltiplos personagens e histórias ao longo do tempo. \n\nEntre quem não gostou, muitos veem uma estetização e espetacularização da violência e da miséria, percebendo a representação da favela como estereotipada e, para muitos, com violência excessiva e gratuita. Alguns também apontam uma falta de autenticidade na perspectiva dos diretores, sentindo que os personagens são pouco desenvolvidos. Já para quem amou o filme, a maioria destaca o estilo visual e a edição dinâmicos, que conferem ritmo e energia contagiantes, juntamente com uma narrativa envolvente e abrangente. Muitos também valorizam a brutalidade e o realismo da violência, bem como as atuações marcantes do elenco. Para quem ficou no meio-termo, cerca de metade ressalta o retrato impactante da violência e da realidade social, elogiando também a qualidade técnica e estilística, embora muitos sintam que o filme, apesar de bem-feito, não conseguiu gerar uma conexão emocional profunda com a tragédia retratada.",
+  "narrativa": "Dirigido por Fernando Meirelles em 2002, Cidade de Deus é um drama e crime que acompanha Buscapé, um jovem da Cidade de Deus que, em meio à violência, busca na fotografia uma saída para uma vida digna. Ao longo de 130 minutos, o filme desdobra uma narrativa marcada por um ritmo acelerado e uma estética visual intensa, que emprega uma edição dinâmica e um estilo cinematográfico distinto. A obra é permeada por um retrato visceral da violência e da realidade social, elementos que se manifestam de forma crua e impactante. No entanto, enquanto essa intensidade é percebida, a conexão emocional com os personagens e a profundidade narrativa são pontos de divergência entre os espectadores.\n\nA grande maioria das notas (~91%) considera Cidade de Deus uma obra-prima, enaltecendo seu estilo visual e edição dinâmicos, que conferem ritmo acelerado e energia contagiante. Muitos também destacam a narrativa envolvente e abrangente, capaz de contar múltiplas histórias sem perder a coesão, além de apreciar a brutalidade e o realismo da violência, apresentada de forma crua e impactante. Por outro lado, uma pequena minoria das notas (~1%) aponta que o filme peca ao estetizar e espetacularizar a violência e a miséria, transformando-as em um recurso estilístico para chocar. Muitos neste grupo criticam a representação estereotipada e deturpada da favela, que simplifica sua complexidade, e consideram a violência excessiva e gratuita. Já uma pequena minoria das notas (~8%) reconhece a qualidade técnica e estilística, mas muitos sentem que, apesar de ser bem-feito, o filme não conseguiu gerar uma conexão emocional profunda com os personagens ou com a tragédia retratada, sendo mais entretenimento do que uma experiência marcante. Alguns espectadores também acharam o ritmo do filme inconstante, dificultando o engajamento completo com a narrativa.",
   "narrativa_flags": {
     "idioma_invalido": false,
     "escopo_suspeito": false,
     "prevalencia_suspeita": false,
     "quantificador_suspeito": false,
     "consenso_suspeito": false,
+    "peso_nao_ancorado": false,
     "aspas_removidas": true,
     "falhou": false
   },
@@ -332,43 +336,49 @@
   },
   "consensos_usados": [
     {
-      "propriedade": "estilo visual e edição dinâmicos",
+      "propriedade": "Ritmo acelerado e edição dinâmica",
       "grupos_de_origem": [
         "negativas",
-        "medianas",
         "positivas"
       ],
       "temas_de_origem": [
         "Roteiro confuso/repetitivo e montagem frenética",
-        "Qualidade técnica e estilística",
         "Estilo visual e edição dinâmicos"
       ]
     },
     {
-      "propriedade": "ritmo acelerado",
+      "propriedade": "Retrato visceral da violência e realidade social",
       "grupos_de_origem": [
-        "negativas",
         "medianas",
-        "positivas"
+        "positivas",
+        "negativas"
       ],
       "temas_de_origem": [
-        "Roteiro confuso/repetitivo e montagem frenética",
-        "Ritmo e engajamento",
-        "Estilo visual e edição dinâmicos"
-      ]
-    },
-    {
-      "propriedade": "brutalidade e realismo da violência",
-      "grupos_de_origem": [
-        "negativas",
-        "medianas",
-        "positivas"
-      ],
-      "temas_de_origem": [
-        "Violência excessiva e gratuita",
         "Retrato da violência e realidade social",
-        "Brutalidade e realismo da violência"
+        "Brutalidade e realismo da violência",
+        "Violência excessiva e gratuita"
       ]
     }
-  ]
+  ],
+  "distribuicao": {
+    "n_notas_total": 1216381,
+    "por_nivel": {
+      "0.5": 893,
+      "1.0": 1645,
+      "1.5": 1143,
+      "2.0": 5503,
+      "2.5": 6324,
+      "3.0": 35847,
+      "3.5": 58393,
+      "4.0": 245630,
+      "4.5": 241463,
+      "5.0": 619540
+    },
+    "por_bucket": {
+      "negativas": 1,
+      "medianas": 8,
+      "positivas": 91
+    },
+    "fonte": "letterboxd_histograma"
+  }
 }

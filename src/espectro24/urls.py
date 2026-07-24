@@ -26,6 +26,19 @@ def full_text_cache_key(slug: str, viewing_id: str) -> str:
     return f"{slug}/fulltext/{safe}.html"
 
 
+def histogram_url(slug: str) -> str:
+    """Fragmento CSI com a distribuição real de notas (v1.4.0, Etapa A).
+
+    Endpoint dedicado — mais barato e mais estável que raspar a página
+    principal do filme (que é grande e cheia de conteúdo irrelevante).
+    """
+    return f"{BASE}/csi/film/{slug}/rating-histogram/"
+
+
+def histogram_cache_key(slug: str) -> str:
+    return f"_histograma/{slug}.html"
+
+
 def search_url(query: str) -> str:
     return f"{BASE}/s/search/films/{quote(query)}/"
 

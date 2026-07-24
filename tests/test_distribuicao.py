@@ -1,0 +1,383 @@
+"""[v1.4.0] Distribuição real de notas — mock/fixtures, ZERO rede.
+
+Cobre: parsing do histograma (incl. níveis zerados, que não têm <a>),
+agregação por bucket, bordas do rótulo de peso, o fallback completo quando
+não há distribuição (regras v1.2.1 seguem ativas) e a validação de
+ancoragem do narrador.
+"""
+import pytest
+
+from conftest import FakeFetcher, fx
+
+from espectro24.collector import collect_distribuicao
+from espectro24.models import BucketResult, Distribuicao, LevelResult, Review, Tema
+from espectro24.parser import parse_rating_histogram
+from espectro24.render import (
+    DISCLAIMER_COM_DISTRIBUICAO,
+    DISCLAIMER_SEM_DISTRIBUICAO,
+    aplicar_distribuicao,
+    build_output,
+    render_terminal,
+)
+from espectro24.synthesize import (
+    NARRATOR_SYSTEM_PROMPT,
+    _rotulo_peso,
+    _rotulo_peso_completo,
+    _serialize_output_for_narrator,
+    build_narrator_prompt,
+    narrate_output,
+)
+from espectro24.urls import histogram_cache_key, histogram_url
+
+
+# --- parsing do fragmento CSI ---
+
+def test_parse_histograma_conta_os_10_niveis():
+    h = parse_rating_histogram(fx("histograma_cure.html"))
+    assert set(h) == {0.5, 1.0, 1.5, 2.0, 2.5, 3.0, 3.5, 4.0, 4.5, 5.0}
+    assert h[0.5] == 456          # separador de milhar tratado
+    assert h[4.0] == 110990
+    assert sum(h.values()) == 375278
+
+
+def test_parse_histograma_captura_niveis_zerados():
+    """Nível sem nota nenhuma vem como <span> (não <a>) e title='No ★½ ratings'.
+    Um parser que buscasse só `a.barcolumn` perderia esses e inflaria o total."""
+    h = parse_rating_histogram(fx("histograma_filme_minusculo.html"))
+    assert h[1.5] == 0
+    assert h[4.5] == 0
+    assert h[3.0] == 8
+    assert sum(h.values()) == 26   # total do filme minúsculo, com os zeros
+
+
+@pytest.mark.parametrize("html", [
+    "<html><body>sem tabela</body></html>",
+    "<table class='chart'><tbody><tr><th>★</th></tr></tbody></table>",  # 1 nível só
+    "",
+])
+def test_parse_histograma_estrutura_inesperada_vira_none(html):
+    assert parse_rating_histogram(html) is None
+
+
+# --- agregação por bucket ---
+
+def test_agregacao_por_bucket_do_cure():
+    d = Distribuicao.de_histograma(parse_rating_histogram(fx("histograma_cure.html")))
+    assert d.n_notas_total == 375278
+    # 12.947 / 64.742 / 297.589 sobre 375.278
+    assert d.por_bucket == {"negativas": 3, "medianas": 17, "positivas": 79}
+    assert d.fonte == "letterboxd_histograma"
+
+
+def test_agregacao_com_histograma_sintetico_exato():
+    # 10 por nível => negativas 50/100, medianas 20/100, positivas 30/100
+    por_nivel = {n: 10 for n in [0.5, 1, 1.5, 2, 2.5, 3, 3.5, 4, 4.5, 5]}
+    d = Distribuicao.de_histograma(por_nivel)
+    assert d.por_bucket == {"negativas": 50, "medianas": 20, "positivas": 30}
+    assert d.n_notas_total == 100
+
+
+def test_sem_nota_alguma_nao_produz_distribuicao():
+    assert Distribuicao.de_histograma({n: 0 for n in
+                                       [0.5, 1, 1.5, 2, 2.5, 3, 3.5, 4, 4.5, 5]}) is None
+
+
+def test_metadata_serializa_niveis_como_string():
+    d = Distribuicao.de_histograma({n: 1 for n in
+                                    [0.5, 1, 1.5, 2, 2.5, 3, 3.5, 4, 4.5, 5]})
+    meta = d.metadata()
+    assert meta["por_nivel"]["0.5"] == 1
+    assert meta["n_notas_total"] == 10
+    assert meta["fonte"] == "letterboxd_histograma"
+
+
+# --- bordas do rótulo de peso (mesma convenção da v1.2.3: mais fraco vence) ---
+
+@pytest.mark.parametrize("pct,esperado", [
+    (0, "uma pequena minoria"), (9, "uma pequena minoria"),
+    (10, "uma minoria"),            # borda: pequena minoria exige pct < 10
+    (24, "uma minoria"),
+    (25, "uma minoria"),            # borda: empata com parcela expressiva -> fraco
+    (26, "uma parcela expressiva"),
+    (44, "uma parcela expressiva"),
+    (45, "uma parcela expressiva"),  # borda: empata com a maioria -> fraco
+    (46, "a maioria"),
+    (69, "a maioria"),
+    (70, "a maioria"),              # borda: empata com a grande maioria -> fraco
+    (71, "a grande maioria"),
+    (100, "a grande maioria"),
+])
+def test_rotulo_peso_resolve_faixas_e_bordas(pct, esperado):
+    assert _rotulo_peso(pct) == esperado
+
+
+def test_rotulo_peso_completo_sempre_traz_o_percentual():
+    assert _rotulo_peso_completo(79) == "a grande maioria das notas (~79%)"
+    assert _rotulo_peso_completo(3) == "uma pequena minoria das notas (~3%)"
+
+
+# --- coleta: 1 requisição, cache, e falha que não quebra o pipeline ---
+
+def test_collect_distribuicao_usa_endpoint_csi_e_uma_requisicao():
+    key = histogram_cache_key("cure")
+    f = FakeFetcher({key: fx("histograma_cure.html")})
+    d = collect_distribuicao(f, "cure")
+    assert d.por_bucket["positivas"] == 79
+    assert len(f.calls) == 1
+    assert f.calls[0] == (histogram_url("cure"), key)
+    assert "csi/film/cure/rating-histogram" in histogram_url("cure")
+
+
+def test_collect_distribuicao_falha_de_rede_vira_none_sem_levantar():
+    key = histogram_cache_key("cure")
+    f = FakeFetcher({}, raise_on={key})
+    assert collect_distribuicao(f, "cure") is None
+
+
+def test_collect_distribuicao_html_invalido_vira_none():
+    key = histogram_cache_key("cure")
+    f = FakeFetcher({key: "<html>nada aqui</html>"})
+    assert collect_distribuicao(f, "cure") is None
+
+
+# --- helpers de output ---
+
+def _bucket(nome, alvo, n=5, temas=None):
+    lvl = LevelResult(4.0, 150, 1, n, 0, 0, 0, 0)
+    lvl.validas = [Review(viewing_id=f"v{nome}{i}", rating=4.0, text="x" * 200,
+                          truncated=False, full_text_url=None, spoiler=False,
+                          full_text="x" * 200) for i in range(n)]
+    return BucketResult(nome=nome, alvo=alvo, modo="completo", niveis=[lvl],
+                        temas=temas or [Tema("ritmo", 3, 5, "acharam o ritmo lento")],
+                        observacao_geral=f"as reviews {nome} comentam o ritmo")
+
+
+def _output(com_distribuicao=True):
+    buckets = [_bucket("negativas", 50), _bucket("medianas", 20),
+               _bucket("positivas", 30)]
+    d = None
+    if com_distribuicao:
+        d = Distribuicao.de_histograma(
+            parse_rating_histogram(fx("histograma_cure.html")))
+    return build_output("cure", buckets, "2026-01-01", {}, 252, distribuicao=d)
+
+
+# --- JSON de saída ---
+
+def test_output_traz_bloco_distribuicao_e_share_por_bucket():
+    out = _output()
+    assert out["distribuicao"]["n_notas_total"] == 375278
+    assert out["distribuicao"]["por_bucket"]["positivas"] == 79
+    shares = {b["bucket"]: b.get("share_real") for b in out["buckets"]}
+    assert shares == {"negativas": 3, "medianas": 17, "positivas": 79}
+
+
+def test_output_sem_distribuicao_nao_inventa_share():
+    out = _output(com_distribuicao=False)
+    assert out["distribuicao"] is None
+    for b in out["buckets"]:
+        assert "share_real" not in b   # ausente, não 0 — "não coletado" != "0%"
+
+
+def test_aplicar_distribuicao_reproduz_a_estrutura_do_caminho_fresh():
+    """O caminho --reuse-synthesis usa aplicar_distribuicao; tem que dar o
+    MESMO resultado que build_output produz no caminho fresh."""
+    d = Distribuicao.de_histograma(parse_rating_histogram(fx("histograma_cure.html")))
+    fresh = _output()
+    reaplicado = aplicar_distribuicao(_output(com_distribuicao=False), d)
+    assert reaplicado["distribuicao"] == fresh["distribuicao"]
+    assert [b.get("share_real") for b in reaplicado["buckets"]] == \
+           [b.get("share_real") for b in fresh["buckets"]]
+
+
+def test_aplicar_distribuicao_none_limpa_shares_orfaos():
+    out = aplicar_distribuicao(_output(), None)
+    assert out["distribuicao"] is None
+    for b in out["buckets"]:
+        assert "share_real" not in b
+
+
+# --- render de terminal ---
+
+def test_render_mostra_share_no_header_dos_tres_grupos():
+    render = render_terminal(_output())
+    assert "~3% das notas" in render
+    assert "~17% das notas" in render
+    assert "~79% das notas" in render
+
+
+def test_render_troca_o_disclaimer_conforme_o_dado():
+    assert DISCLAIMER_COM_DISTRIBUICAO in render_terminal(_output())
+    assert DISCLAIMER_SEM_DISTRIBUICAO in render_terminal(
+        _output(com_distribuicao=False))
+
+
+def test_render_sem_distribuicao_nao_mostra_share():
+    assert "% das notas" not in render_terminal(_output(com_distribuicao=False))
+
+
+def test_render_flag_peso_nao_ancorado_visivel():
+    out = _output()
+    out["narrativa"] = "prosa qualquer"
+    out["narrativa_flags"] = {"peso_nao_ancorado": True}
+    assert "não foi ancorado no seu peso" in render_terminal(out, tom="narrativo")
+
+
+# --- prompt: a regra (c) inverte SÓ quando há distribuição ---
+
+def test_prompt_sem_distribuicao_e_byte_identico_ao_historico():
+    assert build_narrator_prompt(False) == NARRATOR_SYSTEM_PROMPT
+    assert "PROIBIDO comparar tamanhos entre grupos" in NARRATOR_SYSTEM_PROMPT
+
+
+def test_prompt_com_distribuicao_inverte_a_regra():
+    p = build_narrator_prompt(True)
+    assert "PESO REAL DE CADA GRUPO" in p
+    assert "ANCORAGEM OBRIGATÓRIA" in p
+    assert "ABERTURA OBRIGATÓRIA" in p
+    assert "ÊNFASE PROPORCIONAL" in p
+    assert "RESPEITO À MINORIA" in p
+    # a proibição da v1.2.1 sai de cena
+    assert "PROIBIDO comparar tamanhos entre grupos" not in p
+    # mas a proibição de score agregado permanece
+    assert "nota média" in p
+
+
+def test_prompt_muda_apenas_a_regra_c():
+    """Todo o resto do prompt é byte-idêntico entre as variantes — a
+    comparação A/B precisa isolar a mudança."""
+    sem, com = build_narrator_prompt(False), build_narrator_prompt(True)
+    for marcador in ("MOVIMENTO 1", "MOVIMENTO 2", "MOVIMENTO 3",
+                     "CRITÉRIO DE CATEGORIA", "QUANTIFICADOR PRÉ-COMPUTADO",
+                     "consensos_usados", "ANTI-SPOILER"):
+        assert marcador in sem and marcador in com
+
+
+def test_narrador_recebe_a_variante_certa_conforme_o_output():
+    capturado = {}
+
+    def fake(system, user, model):
+        capturado["system"] = system
+        capturado["user"] = user
+        return ('{"narrativa": "a grande maioria das notas (~79%) veio de quem '
+                'gostou e elogia o ritmo; uma minoria das notas (~17%) ficou no '
+                'meio; uma pequena minoria das notas (~3%) nao gostou.", '
+                '"consensos_usados": []}')
+
+    narrate_output(_output(), client_call=fake, model="m")
+    assert "PESO REAL DE CADA GRUPO" in capturado["system"]
+    assert "DISTRIBUIÇÃO REAL DAS NOTAS" in capturado["user"]
+    assert 'rotulo_peso: "a grande maioria das notas (~79%)"' in capturado["user"]
+
+    capturado.clear()
+    narrate_output(_output(com_distribuicao=False), client_call=fake, model="m")
+    assert "PESO REAL DE CADA GRUPO" not in capturado["system"]
+    assert "DISTRIBUIÇÃO REAL DAS NOTAS" not in capturado["user"]
+
+
+# --- serialização ---
+
+def test_serializacao_injeta_rotulo_peso_por_grupo():
+    ser = _serialize_output_for_narrator(_output())
+    assert "DISTRIBUIÇÃO REAL DAS NOTAS" in ser
+    assert "375278 notas no total" in ser
+    assert 'rotulo_peso: "uma pequena minoria das notas (~3%)"' in ser
+    assert 'rotulo_peso: "a grande maioria das notas (~79%)"' in ser
+
+
+def test_serializacao_sem_distribuicao_nao_menciona_peso():
+    ser = _serialize_output_for_narrator(_output(com_distribuicao=False))
+    assert "rotulo_peso" not in ser
+    assert "DISTRIBUIÇÃO REAL" not in ser
+
+
+# --- validação: ancoragem de peso ---
+
+_PROSA_ANCORADA = (
+    '{"narrativa": "a grande maioria das notas (~79%) vem de quem gostou e '
+    'destaca o ritmo; uma minoria das notas (~17%) ficou no meio-termo; e uma '
+    'pequena minoria das notas (~3%) reclamou do arrastado.", '
+    '"consensos_usados": []}'
+)
+_PROSA_SEM_ANCORA = (
+    '{"narrativa": "entre quem nao gostou, o ritmo incomodou; para quem ficou '
+    'no meio, ficou irregular; ja entre quem amou, o ritmo foi elogiado como '
+    'deliberado e envolvente ao longo de toda a projecao.", '
+    '"consensos_usados": []}'
+)
+
+
+def test_ancoragem_presente_nao_flagga_nem_retenta():
+    calls = []
+
+    def fake(system, user, model):
+        calls.append(1)
+        return _PROSA_ANCORADA
+
+    r = narrate_output(_output(), client_call=fake, model="m")
+    assert r.peso_nao_ancorado is False
+    assert len(calls) == 1
+
+
+def test_ancoragem_ausente_retenta_e_flagga():
+    systems = []
+
+    def fake(system, user, model):
+        systems.append(system)
+        return _PROSA_SEM_ANCORA
+
+    r = narrate_output(_output(), client_call=fake, model="m")
+    assert r.peso_nao_ancorado is True
+    assert len(systems) == 2                      # houve retentativa
+    assert "ancorou cada grupo no rotulo_peso" in systems[1]
+
+
+def test_ancoragem_corrigida_na_retentativa_zera_a_flag():
+    respostas = [_PROSA_SEM_ANCORA, _PROSA_ANCORADA]
+
+    def fake(system, user, model):
+        return respostas.pop(0)
+
+    r = narrate_output(_output(), client_call=fake, model="m")
+    assert r.peso_nao_ancorado is False
+
+
+def test_rotulo_mais_fraco_conta_como_ancorado():
+    """O prompt permite descer de força; a checagem tem que aceitar isso."""
+    def fake(system, user, model):
+        return ('{"narrativa": "a maioria das notas veio de quem gostou; uma '
+                'minoria ficou no meio; uma pequena minoria nao gostou do ritmo '
+                'nem do roteiro deste filme longo.", "consensos_usados": []}')
+
+    r = narrate_output(_output(), client_call=fake, model="m")
+    assert r.peso_nao_ancorado is False
+
+
+def test_sem_distribuicao_ancoragem_nunca_flagga():
+    def fake(system, user, model):
+        return _PROSA_SEM_ANCORA
+
+    r = narrate_output(_output(com_distribuicao=False), client_call=fake, model="m")
+    assert r.peso_nao_ancorado is False
+
+
+# --- a rede de prevalência da v1.2.1 muda de sinal ---
+
+def test_com_distribuicao_palavra_minoria_nao_e_mais_violacao():
+    """"uma minoria" é EXIGIDA pela regra invertida — não pode mais flaggar
+    prevalencia_suspeita, senão toda narrativa correta viria marcada."""
+    def fake(system, user, model):
+        return _PROSA_ANCORADA
+
+    r = narrate_output(_output(), client_call=fake, model="m")
+    assert r.prevalencia_suspeita is False
+
+
+def test_sem_distribuicao_prevalencia_continua_sendo_violacao():
+    def fake(system, user, model):
+        return ('{"narrativa": "a recepcao e polarizada: um grupo grande de fas '
+                'e uma minoria de criticos que nao gostaram do filme.", '
+                '"consensos_usados": []}')
+
+    r = narrate_output(_output(com_distribuicao=False), client_call=fake, model="m")
+    assert r.prevalencia_suspeita is True

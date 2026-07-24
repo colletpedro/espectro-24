@@ -152,6 +152,18 @@ grupos e nomes de tema que existem de fato, copiados literalmente do \
 relatório — ou remova o item se ele não tiver sustentação real."""
 
 
+# Reforço adicional SÓ para o narrador [D2] (v1.4.0) — ancoragem de peso:
+# anexado à retentativa combinada quando a prosa ignorou os rotulo_peso
+# fornecidos (modo de falha esperado: o modelo reescreve a narrativa antiga,
+# de pesos iguais, sem citar nenhum share).
+_REFORCO_ANCORAGEM = """
+- Se você NÃO ancorou cada grupo no rotulo_peso fornecido pelo relatório: \
+reescreva o MOVIMENTO 3 apresentando cada grupo com o seu rotulo_peso (e o \
+percentual), começando pela perspectiva de MAIOR peso e dando mais espaço a \
+ela. Não trate os três grupos como se pesassem o mesmo — o relatório diz \
+quanto cada um pesa de verdade."""
+
+
 class LLMError(RuntimeError):
     pass
 
@@ -515,7 +527,7 @@ def synthesize_bucket(bucket: BucketResult, client_call=None,
 # A saída volta como JSON {"narrativa": "<texto>"} para reusar os mesmos
 # adaptadores (modo JSON nativo) e o parsing defensivo do §D.
 
-NARRATOR_SYSTEM_PROMPT = """\
+_NARRADOR_PARTE_1 = """\
 Você recebe um RELATÓRIO DE RECEPÇÃO já validado de um filme: três grupos de \
 reviews separados por faixa de nota (negativas, medianas, positivas), cada um \
 com seus temas, frequências aproximadas e uma observação; e, quando \
@@ -597,6 +609,17 @@ b. FIDELIDADE: toda afirmação deve derivar da ficha técnica e/ou dos temas e 
 números recebidos. É PROIBIDO adicionar fatos, opiniões próprias, ou \
 qualquer contexto externo sobre o filme, elenco, direção ou produção que \
 não esteja no relatório. Se não está nos dados, não existe.
+"""
+
+
+# --- Regra (c): as DUAS variantes (v1.4.0) ---
+# Sem distribuição real de notas, vale a proibição total da v1.2.1 (o dado
+# que justificaria falar de prevalência não existe). Com distribuição, a
+# regra INVERTE: o peso passa a ser obrigatório e ancorado no share real.
+# Só esta regra muda entre as variantes — todo o resto do prompt é
+# byte-idêntico, para que a comparação A/B isole a mudança.
+
+_REGRA_C_SEM_DISTRIBUICAO = """\
 c. TAMANHO DOS GRUPOS — REGRA CRÍTICA: os três grupos NÃO têm o tamanho da \
 opinião real do público. O tamanho de cada grupo é fixado pelo MÉTODO DE \
 COLETA (uma cota fixa por faixa de nota), não pela quantidade de pessoas que \
@@ -608,6 +631,36 @@ expressivo", "recepção polarizada", "opiniões divididas", "consenso" ou \
 qualquer equivalente. Trate cada grupo como uma PERSPECTIVA, não como uma \
 fatia quantificada do público: apresente-os como "entre quem não gostou...", \
 "já entre quem amou...", "para quem ficou no meio-termo...".
+"""
+
+
+_REGRA_C_COM_DISTRIBUICAO = """\
+c. PESO REAL DE CADA GRUPO — REGRA CRÍTICA (a distribuição está disponível \
+neste relatório): você recebeu a DISTRIBUIÇÃO REAL das notas do filme, vinda \
+do histograma público — quantas pessoas deram cada nota. Isso é um dado \
+diferente do tamanho dos grupos de reviews analisadas (50/20/30), que é \
+apenas a COTA DE COLETA e continua NÃO significando prevalência. Regras:
+- ANCORAGEM OBRIGATÓRIA: cada grupo DEVE ser apresentado, na primeira vez que \
+aparecer no MOVIMENTO 3, com o rotulo_peso que veio no relatório para ele \
+(ex.: "a grande maioria das notas (~79%)"). É PROIBIDO usar um rótulo MAIS \
+FORTE do que o fornecido; um MAIS FRACO é permitido se a fluência pedir — \
+nunca o oposto. Você NÃO calcula nem escolhe esse rótulo: ele é dado.
+- ABERTURA OBRIGATÓRIA: o MOVIMENTO 3 começa pela perspectiva de MAIOR peso. \
+Esta regra tem precedência sobre a liberdade de ordem da regra (e).
+- ÊNFASE PROPORCIONAL: dê aproximadamente mais espaço ao grupo de maior peso \
+e menos ao de menor peso — um filme amplamente amado não pode soar dividido, \
+e um amplamente rejeitado não pode soar morno.
+- RESPEITO À MINORIA: a perspectiva minoritária é apresentada COMO \
+minoritária, mas SEM desdém, ironia ou insinuação de que quem pensa assim \
+está errado. Menos espaço, mesma seriedade analítica: quem procura saber se \
+vai gostar precisa entender o que incomodou essa parcela.
+- Continua PROIBIDO inventar um número-síntese do filme (nota média, score, \
+"X de 10", "nota N"): os shares por faixa são a ÚNICA quantificação \
+permitida, e são três números, nunca um só.
+"""
+
+
+_NARRADOR_PARTE_2 = """\
 d. PROPORÇÕES (só DENTRO de um grupo): proporções são permitidas APENAS \
 internamente a um grupo e SEMPRE ancoradas ao denominador daquele grupo. \
 NUNCA uma proporção que compare grupos ou fale do público como um todo.
@@ -643,6 +696,29 @@ descritiva>", "grupos_de_origem": ["<negativas|medianas|positivas>", ...], \
 "temas_de_origem": ["<nome EXATO do tema, copiado do relatório>", ...]}]}. \
 `consensos_usados` pode ser `[]` se o MOVIMENTO 2 não usou nenhuma \
 propriedade consensual."""
+
+
+# Prompt histórico (sem distribuição) — mantido como CONSTANTE com o mesmo
+# nome e o mesmo conteúdo byte-a-byte da v1.3.1, para que o fallback seja
+# literalmente o comportamento anterior, não uma reescrita parecida.
+NARRATOR_SYSTEM_PROMPT = (
+    _NARRADOR_PARTE_1 + _REGRA_C_SEM_DISTRIBUICAO + _NARRADOR_PARTE_2
+)
+
+NARRATOR_SYSTEM_PROMPT_COM_DISTRIBUICAO = (
+    _NARRADOR_PARTE_1 + _REGRA_C_COM_DISTRIBUICAO + _NARRADOR_PARTE_2
+)
+
+
+def build_narrator_prompt(com_distribuicao: bool) -> str:
+    """Escolhe a variante da regra (c) do §D2 (v1.4.0).
+
+    `com_distribuicao=False` devolve EXATAMENTE o prompt da v1.3.1 — o
+    fallback não é uma aproximação, é o texto anterior. A escolha é feita
+    pelo CÓDIGO a partir da presença do dado, nunca pelo LLM.
+    """
+    return (NARRATOR_SYSTEM_PROMPT_COM_DISTRIBUICAO if com_distribuicao
+            else NARRATOR_SYSTEM_PROMPT)
 
 
 # --- Quantificador pré-computado (v1.2.3) ---
@@ -724,6 +800,92 @@ def _tem_quantificador_forte_no_texto(texto: str) -> bool:
     return "quase todos" in t or "praticamente todos" in t
 
 
+# --- Peso pré-computado por grupo (v1.4.0) ---
+# MESMO princípio da v1.2.3 (quantificador) e da v1.1.1 (denominador): o LLM
+# não escolhe o rótulo, o CÓDIGO escolhe. Aqui o insumo é o `share_real` do
+# bucket (percentual inteiro vindo do histograma real), não a cota de coleta.
+#
+# Faixas na ordem do mais FRACO ao mais FORTE; cada uma é
+# (rótulo, limite_inferior_inclusive, limite_superior, superior_inclusive).
+# "uma pequena minoria" é a única com superior EXCLUSIVO (pct < 10).
+#
+# Resolução de fronteira (itera do mais fraco pro mais forte, primeiro match
+# vence) — MESMA convenção da v1.2.3, "na dúvida, o rótulo mais fraco":
+#   pct == 10 -> "uma minoria"            (pequena minoria exige pct < 10)
+#   pct == 25 -> "uma minoria"            (empata com parcela expressiva)
+#   pct == 45 -> "uma parcela expressiva" (empata com a maioria)
+#   pct == 70 -> "a maioria"              (empata com a grande maioria)
+# Nota: por isso "a grande maioria" começa de fato em 71%, não em 70% —
+# subestimar o peso é aceitável, inflar não é.
+_BANDAS_PESO_FRACA_PARA_FORTE = [
+    ("uma pequena minoria", 0, 10, False),
+    ("uma minoria", 10, 25, True),
+    ("uma parcela expressiva", 25, 45, True),
+    ("a maioria", 45, 70, True),
+    ("a grande maioria", 70, 100, True),
+]
+
+
+def _rotulo_peso(pct: int) -> str:
+    """Rótulo determinístico para um share real (0-100)."""
+    for rotulo, lo, hi, hi_inclusive in _BANDAS_PESO_FRACA_PARA_FORTE:
+        if pct < lo:
+            continue
+        if (hi_inclusive and pct <= hi) or (not hi_inclusive and pct < hi):
+            return rotulo
+    return "a grande maioria"  # pct > 100 não deveria ocorrer; fallback seguro
+
+
+def _rotulo_peso_completo(pct: int) -> str:
+    """Forma como o narrador deve escrever: rótulo + percentual, sempre
+    juntos — o percentual é o que impede o rótulo de virar retórica solta."""
+    return f"{_rotulo_peso(pct)} das notas (~{pct}%)"
+
+
+def _rotulos_ate(rotulo: str) -> list[str]:
+    """O rótulo dado + todos os MAIS FRACOS que ele.
+
+    O prompt permite descer de força ("a grande maioria" -> "a maioria") mas
+    nunca subir; a checagem de ancoragem aceita exatamente esse conjunto.
+    """
+    ordem = [r for r, _, _, _ in _BANDAS_PESO_FRACA_PARA_FORTE]
+    return ordem[: ordem.index(rotulo) + 1] if rotulo in ordem else [rotulo]
+
+
+def _pesos_por_bucket(output: dict) -> dict[str, tuple[int, str]]:
+    """{bucket: (share_real, rótulo)} para os buckets que TÊM share real.
+
+    Vazio quando a distribuição não foi coletada — e é esse vazio que faz o
+    pipeline inteiro (prompt + validação + render) voltar ao comportamento
+    da v1.2.1, sem nenhuma flag extra para checar.
+    """
+    pesos: dict[str, tuple[int, str]] = {}
+    for b in output.get("buckets", []):
+        share = b.get("share_real")
+        if isinstance(share, int):
+            pesos[b.get("bucket", "?")] = (share, _rotulo_peso(share))
+    return pesos
+
+
+def _ancoragem_de_peso_ok(texto: str, pesos: dict[str, tuple[int, str]]) -> bool:
+    """True se TODO grupo com peso foi ancorado na prosa.
+
+    Aceita, por grupo: o rótulo fornecido, qualquer rótulo mais fraco (o
+    prompt permite), ou o percentual literal. Heurística deliberadamente
+    permissiva — a defesa principal é a instrução; isto é rede de segurança
+    para o caso de o narrador simplesmente ignorar os pesos e escrever a
+    narrativa antiga, que é o modo de falha que importa detectar.
+    """
+    t = texto.lower()
+    for pct, rotulo in pesos.values():
+        if any(r in t for r in _rotulos_ate(rotulo)):
+            continue
+        if f"{pct}%" in t:
+            continue
+        return False
+    return True
+
+
 def _serialize_output_for_narrator(output: dict) -> str:
     """Serialização COMPACTA do JSON validado para o narrador (§D2).
 
@@ -739,6 +901,11 @@ def _serialize_output_for_narrator(output: dict) -> str:
     FICHA TÉCNICA precede os grupos, fonte exclusiva do MOVIMENTO 1 do
     prompt. Ficha ausente (busca falhou/pulada) -> a seção some inteira e o
     prompt já instrui o narrador a pular o MOVIMENTO 1 nesse caso.
+
+    v1.4.0: quando há distribuição real, um bloco DISTRIBUIÇÃO REAL abre o
+    relatório e cada GRUPO passa a carregar seu `rotulo_peso` pré-computado.
+    Sem distribuição, nada disso aparece e o relatório é o da v1.3.1 — o
+    silêncio é o próprio fallback.
     """
     linhas = [
         "RELATÓRIO DE RECEPÇÃO (dados já validados; use SOMENTE isto):",
@@ -759,14 +926,34 @@ def _serialize_output_for_narrator(output: dict) -> str:
         linhas.append(f"  duracao_min: {ficha.get('duracao_min')}")
         linhas.append(f"  sinopse_oficial: {ficha.get('sinopse_oficial')}")
         linhas.append("")
+
+    pesos = _pesos_por_bucket(output)
+    if pesos:
+        distrib = output.get("distribuicao") or {}
+        linhas.append(
+            "DISTRIBUIÇÃO REAL DAS NOTAS (histograma público do Letterboxd — "
+            f"{distrib.get('n_notas_total', 0)} notas no total). Este é o PESO "
+            "de cada faixa na recepção real, e é diferente do número de "
+            "reviews analisadas (que é cota de coleta). Use o rotulo_peso "
+            "abaixo — não calcule nem escolha outro:")
+        for nome, (pct, _rot) in pesos.items():
+            linhas.append(
+                f'  {nome}: share_real {pct}% · rotulo_peso: '
+                f'"{_rotulo_peso_completo(pct)}"')
+        linhas.append("")
+
     rotulo = {"negativas": "NÃO GOSTARAM", "medianas": "FICARAM NO MEIO",
               "positivas": "GOSTARAM"}
     for b in output.get("buckets", []):
         nome = b.get("bucket", "?")
         intervalo = _intervalo_bucket(nome) if nome in BUCKETS else ""
+        peso_txt = ""
+        if nome in pesos:
+            peso_txt = f' · rotulo_peso: "{_rotulo_peso_completo(pesos[nome][0])}"'
         linhas.append(
             f"GRUPO {nome.upper()} ({rotulo.get(nome, '')}, {intervalo}) — "
-            f"{b.get('n_validas', 0)} reviews analisadas · modo={b.get('modo')}:")
+            f"{b.get('n_validas', 0)} reviews analisadas · "
+            f"modo={b.get('modo')}{peso_txt}:")
         obs = b.get("observacao_geral", "")
         if obs:
             linhas.append(f"  observação do grupo: {obs}")
@@ -834,14 +1021,26 @@ def _normalizar_consensos(consensos: list) -> list[dict]:
     return out
 
 
-def _validar_prosa(texto: str) -> tuple[str, bool, bool, bool, bool]:
+def _validar_prosa(texto: str, com_distribuicao: bool = False
+                   ) -> tuple[str, bool, bool, bool, bool]:
     """Aplica as validações do §D que fazem sentido para prosa livre:
     remoção mecânica de aspas + checagem de idioma, escopo e prevalência (v1.2.1).
-    Retorna (texto_limpo, idioma_ok, escopo_ok, prevalencia_ok, aspas_removidas)."""
+    Retorna (texto_limpo, idioma_ok, escopo_ok, prevalencia_ok, aspas_removidas).
+
+    v1.4.0 — a checagem de PREVALÊNCIA muda de sinal conforme o dado:
+    - SEM distribuição: como na v1.2.1, palavras como "minoria"/"a maioria do
+      público" são violação (o dado que as justificaria não existe).
+    - COM distribuição: essas mesmas palavras passam a ser EXIGIDAS pela
+      regra (c) invertida — manter o detector ligado geraria flag em toda
+      narrativa correta. Ele é desligado, e quem cobre este eixo passa a ser
+      a checagem de ANCORAGEM (`_ancoragem_de_peso_ok`), aplicada em
+      `narrate_output`.
+    """
     limpo, aspas_removidas = _remover_aspas(texto)
     idioma_ok = _idioma_e_pt_br(limpo)
     escopo_ok = not _tem_marcador_de_escopo(limpo)
-    prevalencia_ok = not _tem_marcador_de_prevalencia(limpo)
+    prevalencia_ok = (True if com_distribuicao
+                      else not _tem_marcador_de_prevalencia(limpo))
     return limpo, idioma_ok, escopo_ok, prevalencia_ok, aspas_removidas
 
 
@@ -864,7 +1063,12 @@ def narrate_output(output: dict, client_call=None, model: str | None = None,
     from .models import NarrativaResult
 
     call, model = _resolve_call_and_model(client_call, model, provider)
-    system = NARRATOR_SYSTEM_PROMPT
+    # v1.4.0: a presença do dado — não uma flag de configuração — decide qual
+    # variante da regra (c) vale. Sem distribuição, tudo abaixo degrada
+    # sozinho para o comportamento da v1.3.1.
+    pesos = _pesos_por_bucket(output)
+    com_distribuicao = bool(pesos)
+    system = build_narrator_prompt(com_distribuicao)
     user = _serialize_output_for_narrator(output)
     tem_tema_forte = _algum_tema_tem_fracao_forte(output)
 
@@ -890,27 +1094,40 @@ def narrate_output(output: dict, client_call=None, model: str | None = None,
         return NarrativaResult(texto="", falhou=True,
                                idioma_invalido=False, escopo_suspeito=False)
 
+    def _ancoragem_ok(texto: str) -> bool:
+        # Sem distribuição não há o que ancorar: vacuamente OK.
+        return _ancoragem_de_peso_ok(texto, pesos) if com_distribuicao else True
+
     prosa, consensos_brutos = resultado
-    texto, idioma_ok, escopo_ok, prevalencia_ok, aspas_removidas = _validar_prosa(prosa)
+    texto, idioma_ok, escopo_ok, prevalencia_ok, aspas_removidas = _validar_prosa(
+        prosa, com_distribuicao)
     quantificador_ok = _quantificador_ok(texto)
     consensos_ok = _consensos_validos(consensos_brutos, output)
+    ancoragem_ok = _ancoragem_ok(texto)
 
-    # 1 retentativa combinada se idioma, escopo, prevalência, quantificador
-    # e/ou consensos_usados falharem (v1.3.1 adiciona o último critério)
+    # 1 retentativa combinada se idioma, escopo, prevalência, quantificador,
+    # consensos_usados (v1.3.1) e/ou ancoragem de peso (v1.4.0) falharem
     if not idioma_ok or not escopo_ok or not prevalencia_ok or not quantificador_ok \
-            or not consensos_ok:
-        reforco = _REFORCO_VALIDACAO + _REFORCO_PREVALENCIA + _REFORCO_QUANTIFICADOR
+            or not consensos_ok or not ancoragem_ok:
+        reforco = _REFORCO_VALIDACAO + _REFORCO_QUANTIFICADOR
+        # o reforço de prevalência PROÍBE falar de peso — anexá-lo com
+        # distribuição presente contradiria a regra (c) invertida.
+        if not com_distribuicao:
+            reforco += _REFORCO_PREVALENCIA
         if not consensos_ok:
             reforco += _REFORCO_CONSENSOS
+        if not ancoragem_ok:
+            reforco += _REFORCO_ANCORAGEM
         retry = _uma_chamada(system + reforco)
         if retry is not None:
             prosa2, consensos2 = retry
-            t2, i2, e2, p2, a2 = _validar_prosa(prosa2)
+            t2, i2, e2, p2, a2 = _validar_prosa(prosa2, com_distribuicao)
             texto, idioma_ok, escopo_ok, prevalencia_ok = t2, i2, e2, p2
             aspas_removidas = aspas_removidas or a2
             quantificador_ok = _quantificador_ok(texto)
             consensos_brutos = consensos2
             consensos_ok = _consensos_validos(consensos_brutos, output)
+            ancoragem_ok = _ancoragem_ok(texto)
 
     return NarrativaResult(
         texto=texto,
@@ -921,4 +1138,5 @@ def narrate_output(output: dict, client_call=None, model: str | None = None,
         aspas_removidas=aspas_removidas,
         consensos_usados=_normalizar_consensos(consensos_brutos),
         consenso_suspeito=not consensos_ok,
+        peso_nao_ancorado=not ancoragem_ok,
     )

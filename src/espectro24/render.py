@@ -14,9 +14,37 @@ def reviews_url_de(slug: str) -> str:
     return f"{BASE}/film/{slug}/reviews/"
 
 
+# Disclaimer da seção tema-a-tema (v1.4.0). Duas variantes porque a mensagem
+# honesta depende do dado disponível: sem distribuição, o leitor precisa ser
+# avisado de que os tamanhos NÃO significam prevalência; com distribuição, o
+# peso real existe e está exibido, então o aviso vira uma explicação do
+# método. Mantidos em sincronia com os mesmos textos no frontend (filme.js).
+DISCLAIMER_SEM_DISTRIBUICAO = (
+    "grupos de 50 · 20 · 30 reviews são cotas de coleta — "
+    "não a proporção real das opiniões"
+)
+DISCLAIMER_COM_DISTRIBUICAO = (
+    "análise em profundidade igual por grupo (50·20·30 reviews); "
+    "o peso real de cada faixa está indicado em cada grupo"
+)
+
+
+def disclaimer_de(output: dict) -> str:
+    """Escolhe o disclaimer pela presença do dado, não por configuração."""
+    return (DISCLAIMER_COM_DISTRIBUICAO if output.get("distribuicao")
+            else DISCLAIMER_SEM_DISTRIBUICAO)
+
+
 def build_output(slug: str, buckets: list[BucketResult], data_coleta: str,
                  origens: dict[str, str], total_observado: int,
-                 ficha: dict[str, Any] | None = None) -> dict[str, Any]:
+                 ficha: dict[str, Any] | None = None,
+                 distribuicao=None) -> dict[str, Any]:
+    # v1.4.0: share real por bucket, quando a distribuição existe. Ausente
+    # (chave não emitida) quando não existe — o consumidor distingue
+    # "não coletado" de "coletado e deu 0%". A aplicação é delegada a
+    # `aplicar_distribuicao` para que o caminho fresh (aqui) e o caminho
+    # --reuse-synthesis (cli.py) produzam EXATAMENTE a mesma estrutura.
+    shares = distribuicao.por_bucket if distribuicao else {}
     return {
         "slug": slug,
         "data_coleta": data_coleta,
@@ -28,6 +56,9 @@ def build_output(slug: str, buckets: list[BucketResult], data_coleta: str,
         # v1.3.0: ficha técnica via TMDB — aditiva, None quando indisponível
         # (busca falhou, chave ausente, filme não encontrado) — ver ficha.py.
         "ficha": ficha,
+        # v1.4.0: distribuição REAL de notas (histograma do Letterboxd).
+        # None quando indisponível → narrador volta às regras da v1.2.1.
+        "distribuicao": distribuicao.metadata() if distribuicao else None,
         "origem_paginas": origens,  # cache | network por chave
         "buckets": [
             {
@@ -35,6 +66,7 @@ def build_output(slug: str, buckets: list[BucketResult], data_coleta: str,
                 "alvo": b.alvo,
                 "modo": b.modo,
                 "n_validas": b.n_validas,
+                **({"share_real": shares[b.nome]} if b.nome in shares else {}),
                 "niveis": [lvl.metadata() for lvl in b.niveis],
                 "temas": [
                     {
@@ -55,6 +87,25 @@ def build_output(slug: str, buckets: list[BucketResult], data_coleta: str,
             for b in buckets
         ],
     }
+
+
+def aplicar_distribuicao(output: dict, distribuicao) -> dict:
+    """[v1.4.0] Injeta a distribuição num `output` já montado (caminho
+    `--reuse-synthesis`, que carrega um JSON de disco em vez de reconstruí-lo).
+
+    Produz a MESMA estrutura que `build_output` monta no caminho fresh:
+    bloco global `distribuicao` + `share_real` por bucket. `None` limpa o
+    bloco e remove os shares — assim um JSON antigo re-renderizado sem o
+    dado não fica com share órfão de uma execução anterior.
+    """
+    output["distribuicao"] = distribuicao.metadata() if distribuicao else None
+    shares = distribuicao.por_bucket if distribuicao else {}
+    for b in output.get("buckets", []):
+        if b.get("bucket") in shares:
+            b["share_real"] = shares[b["bucket"]]
+        else:
+            b.pop("share_real", None)
+    return output
 
 
 def write_json(output: dict, out_dir: str | Path = "resultado") -> Path:
@@ -90,6 +141,11 @@ def render_terminal(output: dict, tom: str = "estruturado") -> str:
                  f"dir. {ficha.get('diretor')} — {generos} — {duracao} [TMDB]")
         if ficha.get("sinopse_fallback_en"):
             L.append("  ⚠️  ficha: sinopse oficial pt-BR indisponível — usando fallback em inglês.")
+    distrib = output.get("distribuicao")
+    if distrib:
+        L.append(f"  distribuição real: {distrib.get('n_notas_total', 0):,} notas "
+                 f"[Letterboxd]".replace(",", "."))
+    L.append(f"  ({disclaimer_de(output)})")
     reviews_url = output.get("reviews_url") or reviews_url_de(output["slug"])
     for b in output["buckets"]:
         L.append("")
@@ -97,8 +153,13 @@ def render_terminal(output: dict, tom: str = "estruturado") -> str:
             f"{n['nivel']}★: {n['n_validas']}" for n in b["niveis"]
         )
         # --- metadados + avisos: sempre visíveis, nos dois tons ---
+        # v1.4.0: o share real entra no header, com formato IDÊNTICO nos três
+        # grupos (neutralidade de TRATAMENTO — a assimetria vem do dado, não
+        # da apresentação). Ausente quando não há distribuição.
+        share = b.get("share_real")
+        share_txt = f"  · ~{share}% das notas" if isinstance(share, int) else ""
         L.append(f"▸ {b['bucket'].upper()}  {b['n_validas']}/{b['alvo']} válidas "
-                 f"[{decomposicao}]  modo={b['modo']}")
+                 f"[{decomposicao}]  modo={b['modo']}{share_txt}")
         filtros = sorted({n["filtro_aplicado"] for n in b["niveis"]})
         L.append(f"  filtro aplicado (chars): {filtros}")
 
@@ -165,6 +226,10 @@ def render_terminal(output: dict, tom: str = "estruturado") -> str:
             L.append("  ⚠️  narrativa: \"quase todos\"/\"praticamente todos\" usado sem "
                      "nenhum tema do filme ter fração ≥80% mesmo após retentativa — "
                      "revisar manualmente.")
+        if flags.get("peso_nao_ancorado"):
+            L.append("  ⚠️  narrativa: havia distribuição real, mas algum grupo não foi "
+                     "ancorado no seu peso (rótulo nem percentual) mesmo após "
+                     "retentativa — revisar manualmente.")
         if flags.get("consenso_suspeito"):
             L.append("  ⚠️  narrativa: consensos_usados citou grupo/tema inexistente no "
                      "relatório mesmo após retentativa — revisar manualmente.")

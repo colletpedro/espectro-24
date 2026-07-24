@@ -12,8 +12,14 @@ from dotenv import load_dotenv
 from .config import COTA_POR_NIVEL, PROVIDER_ENV_KEYS, SPEC_VERSION, TETO_PAGINAS
 from .fetcher import AntiBotError, Fetcher
 from .ficha import buscar_ficha, titulo_ano_de_slug
+from .collector import collect_distribuicao
 from .pipeline import resolve_slug, run_pipeline, total_observado
-from .render import build_output, render_terminal, write_json
+from .render import (
+    aplicar_distribuicao,
+    build_output,
+    render_terminal,
+    write_json,
+)
 from .synthesize import ProviderError, narrate_output
 
 
@@ -62,6 +68,10 @@ def _parse_args(argv):
                        "default: derivado do slug quando o slug tem sufixo -YYYY")
     p.add_argument("--no-ficha", action="store_true",
                    help="pula a busca da ficha TMDB (v1.3.0)")
+    p.add_argument("--no-distribuicao", action="store_true",
+                   help="pula a busca do histograma de notas do Letterboxd "
+                       "(v1.4.0); sem ele o narrador volta às regras da "
+                       "v1.2.1 (proibição de prevalência)")
     return p.parse_args(argv)
 
 
@@ -125,6 +135,17 @@ def main(argv=None):
         print(f"Reaproveitando síntese de {json_path} "
               f"(0 chamadas de síntese).", file=sys.stderr)
         fetcher_net = 0
+        # v1.4.0: a distribuição é buscada mesmo reaproveitando a síntese —
+        # é 1 requisição cacheada, e sem ela a narrativa regenerada cairia
+        # nas regras antigas. Aplicada pelo MESMO helper do caminho fresh.
+        if not args.no_distribuicao:
+            f_dist = Fetcher(cache_dir=args.cache_dir, offline=args.offline)
+            distrib = collect_distribuicao(f_dist, slug)
+            aplicar_distribuicao(output, distrib)
+            fetcher_net = f_dist.n_network
+            if distrib is None:
+                print("⚠️  Distribuição de notas indisponível — narrativa segue "
+                      "sob as regras da v1.2.1 (sem prevalência).", file=sys.stderr)
     else:
         fetcher = Fetcher(cache_dir=args.cache_dir, offline=args.offline)
         try:
@@ -137,11 +158,12 @@ def main(argv=None):
                       f"trunc-desc {lvl.n_descartadas_truncamento})", file=sys.stderr)
 
             print(f"Coletando {slug}...", file=sys.stderr)
-            buckets, niveis = run_pipeline(
+            buckets, niveis, distrib = run_pipeline(
                 fetcher, slug,
                 data_coleta=datetime.now(timezone.utc).isoformat(),
                 model=args.model, provider=args.provider, synth=not args.no_synth,
                 cota=args.cota, max_pages=args.max_pages, on_level=_on_level,
+                distribuicao=not args.no_distribuicao,
             )
         except AntiBotError as e:
             print(f"\n⛔ ANTI-BOT: {e}", file=sys.stderr)
@@ -152,7 +174,11 @@ def main(argv=None):
             slug=slug, buckets=buckets,
             data_coleta=datetime.now(timezone.utc).isoformat(),
             origens=fetcher.origins, total_observado=total_observado(niveis),
+            distribuicao=distrib,
         )
+        if not args.no_distribuicao and distrib is None:
+            print("⚠️  Distribuição de notas indisponível — narrativa segue "
+                  "sob as regras da v1.2.1 (sem prevalência).", file=sys.stderr)
         fetcher_net = fetcher.n_network
 
     # --- [1.1-1.4] ficha técnica via TMDB (aditiva, nunca bloqueia) ---
@@ -186,6 +212,7 @@ def main(argv=None):
             "prevalencia_suspeita": res.prevalencia_suspeita,
             "quantificador_suspeito": res.quantificador_suspeito,
             "consenso_suspeito": res.consenso_suspeito,
+            "peso_nao_ancorado": res.peso_nao_ancorado,
             "aspas_removidas": res.aspas_removidas,
             "falhou": res.falhou,
         }

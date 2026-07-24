@@ -1,7 +1,46 @@
-# Espectro 24 — Especificação v1.3.1
+# Espectro 24 — Especificação v1.4.0
 
-**Data:** 2026-07-20
-**Status:** v1 fechada (aceite em "Status de aceite da v1", fim do documento). v1.2.0 adiciona a etapa **[D2] narrador** (§D2) e a flag `--tom` como **mecanismo de desenvolvimento** para A/B de saída. v1.2.1 corrige uma classe de infidelidade do narrador (cota de amostragem apresentada como distribuição da recepção) — invariante nova no §D2 + telemetria. v1.2.2 adiciona calibração numérica dos quantificadores da narrativa (mapa fração→palavra, faixa mais fraca em caso de dúvida) — verificação por instrução ao LLM. v1.2.3 move a calibração do prompt para o CÓDIGO: os rótulos de quantificador passam a ser pré-computados e o LLM só os usa, não os escolhe (mesmo princípio da v1.1.1 — código como autoridade de número/rótulo). v1.3.0 adiciona uma **ficha técnica do filme via TMDB** (§3a, aditiva — nunca bloqueia o pipeline) e reestrutura §D2 para uma narrativa em **três movimentos** (filme → experiência consensual → contraste entre grupos), com uma emenda pontual à regra de "zero conteúdo de trama" para permitir a sinopse OFICIAL curta como fonte do primeiro movimento (ver §3[D] "Anti-spoiler"). **v1.3.1** corrige um defeito real observado na primeira execução do MOVIMENTO 2 (a narrativa de `the-invite-2026` importou um juízo de QUALIDADE — "atuações marcantes"/"roteiro inteligente" — como se fosse um consenso DESCRITIVO, contradizendo diretamente os temas do grupo negativas): a regra do MOVIMENTO 2 ganha três critérios explícitos (categoria/presença/não-contradição) e telemetria de `consensos_usados` para revisão humana de cada execução (ver §D2).
+**Data:** 2026-07-21
+**Status:** v1 fechada (aceite em "Status de aceite da v1", fim do documento). v1.2.0 adiciona a etapa **[D2] narrador** (§D2) e a flag `--tom` como **mecanismo de desenvolvimento** para A/B de saída. v1.2.1 corrige uma classe de infidelidade do narrador (cota de amostragem apresentada como distribuição da recepção) — invariante nova no §D2 + telemetria. v1.2.2 adiciona calibração numérica dos quantificadores da narrativa (mapa fração→palavra, faixa mais fraca em caso de dúvida) — verificação por instrução ao LLM. v1.2.3 move a calibração do prompt para o CÓDIGO: os rótulos de quantificador passam a ser pré-computados e o LLM só os usa, não os escolhe (mesmo princípio da v1.1.1 — código como autoridade de número/rótulo). v1.3.0 adiciona uma **ficha técnica do filme via TMDB** (§3a, aditiva — nunca bloqueia o pipeline) e reestrutura §D2 para uma narrativa em **três movimentos** (filme → experiência consensual → contraste entre grupos), com uma emenda pontual à regra de "zero conteúdo de trama" para permitir a sinopse OFICIAL curta como fonte do primeiro movimento (ver §3[D] "Anti-spoiler"). **v1.3.1** corrige um defeito real observado na primeira execução do MOVIMENTO 2 (a narrativa de `the-invite-2026` importou um juízo de QUALIDADE — "atuações marcantes"/"roteiro inteligente" — como se fosse um consenso DESCRITIVO, contradizendo diretamente os temas do grupo negativas): a regra do MOVIMENTO 2 ganha três critérios explícitos (categoria/presença/não-contradição) e telemetria de `consensos_usados` para revisão humana de cada execução (ver §D2). **v1.4.0** é a maior mudança desde a v1: o pipeline passa a coletar a **distribuição real de notas** (histograma público do Letterboxd, §3b) e, com ela, **inverte** a regra de prevalência do §D2 — o que a v1.2.1 proibiu por falta do dado, a v1.4.0 torna obrigatório e ancorado (ver "Princípio norteador" abaixo).
+
+---
+
+## 0. Princípio norteador (v1.4.0) — NEUTRALIDADE DE TRATAMENTO, NÃO DE FATO
+
+> Os três grupos recebem **formato idêntico**: mesma profundidade de análise
+> (cota 50/20/30), mesma estrutura de temas, mesmo estilo tipográfico, mesmo
+> espaço estrutural na interface. **A assimetria vem dos dados, não da
+> apresentação.**
+
+**O problema que motivou a versão** (feedback recorrente de usuários reais):
+filmes amplamente aclamados *soam divididos* no produto, porque os três grupos
+recebem o mesmo peso textual e visual. Um filme com 91% das notas na faixa alta
+era apresentado com a mesma proeminência dada ao grupo de 1% — o leitor saía
+com a impressão de controvérsia onde havia consenso. Isso é uma **infidelidade
+por omissão**: cada frase era verdadeira, mas o conjunto comunicava algo falso.
+
+A v1.2.1 já havia diagnosticado a raiz (as cotas de coleta não são a
+distribuição da recepção) e escolhido a única saída disponível na época:
+**proibir** qualquer afirmação de prevalência. O changelog daquela versão e a
+seção "Candidatos à próxima versão" registraram explicitamente que a correção
+de raiz seria coletar o histograma. É o que esta versão faz — e por isso a
+regra inverte em vez de ser "afrouxada": não é uma concessão, é o dado que
+faltava chegando.
+
+**Duas invariantes que a inversão NÃO toca:**
+
+1. **`share` por faixa NÃO é nota média.** São três números que particionam a
+   população de notas, cada um atribuído à sua faixa. A proibição de score
+   agregado, nota média ou "X de 10" (§1) permanece **intacta** e está escrita
+   dentro da própria regra invertida do prompt. Em nenhum lugar do produto
+   existe um número-síntese único do filme.
+2. **A perspectiva minoritária continua analisada com o mesmo rigor.** Menos
+   espaço na prosa, **mesma seriedade**: sem desdém, sem ironia, sem sugerir
+   que quem pensa assim está errado. Quem procura saber se vai gostar precisa
+   entender o que incomodou aquela parcela — e um grupo de 1% mantém seus 6
+   temas, suas barras e suas paráfrases na interface.
+
+---
 **Objetivo:** dado o nome de um filme, agregar reviews de usuários do Letterboxd em três buckets por nota e produzir, via LLM, uma síntese temática de cada bucket — pontos recorrentes com frequência — permitindo entender a recepção do filme sem viés de leitura seletiva e sem spoilers.
 
 **Público-alvo:** pessoa que ainda NÃO assistiu ao filme. Toda decisão de design que envolva trade-off entre completude e risco de spoiler resolve a favor de evitar spoiler.
@@ -61,16 +100,23 @@ input (nome do filme)
   → [B] coleta por nível de nota (com cache)
   → [C] filtros e cascata de relaxamento (por nível)
   → [C'] completamento de reviews truncadas
+  → [G] distribuição real de notas — histograma (aditiva — v1.4.0)
   → [D] síntese LLM por bucket
-  → [D2] narrador (opcional, --tom)
+  → [D2] narrador (opcional, --tom; lê [G] se existir)
   → [F] ficha do filme via TMDB (aditiva, independente de D/D2 — v1.3.0)
   → [E] render (JSON + terminal)
 ```
 
-**[F] roda em paralelo conceitual a [D]/[D2]:** não depende de reviews do
-Letterboxd nem é bloqueada por elas (usa só título/ano do filme, derivados
-do slug — ver §3a). Uma falha em [F] nunca impede [D]/[D2]/[E] de rodar, e
-vice-versa: as duas fontes de dados são independentes.
+**[F] e [G] rodam em paralelo conceitual a [D]/[D2]:** não dependem das
+reviews coletadas nem são bloqueadas por elas ([F] usa título/ano derivados
+do slug — §3[F]; [G] usa só o slug — §3[G]). Uma falha em [F] ou [G] nunca
+impede [D]/[D2]/[E] de rodar, e vice-versa: as fontes de dados são
+independentes.
+
+**[G] é a única exceção à independência total:** o narrador [D2] *lê* a
+distribuição quando ela existe, para escolher a variante da regra (c). Mas a
+dependência é **opcional por construção** — ausência de [G] não é erro, é o
+caminho de fallback (regras da v1.2.1), e nenhum outro estágio muda.
 
 ### [A] Resolução de slug
 Busca via o endpoint AJAX `letterboxd.com/s/search/films/<query>/` (**corrigido na Fase 1** — a URL humana `letterboxd.com/search/films/<query>/` é um shell React vazio no HTML estático; ver §2.1); apresentar os top resultados (título + ano) e pedir confirmação do usuário quando houver ambiguidade. Se o usuário passar o slug diretamente (flag `--slug`), pular a busca.
@@ -187,7 +233,7 @@ c. **Escopo:** checagem barata na `observacao_geral` por marcadores literais de 
 >
 > Ressalva operacional: a sinopse oficial do TMDB é, na prática observada, quase sempre limitada à premissa (é material de marketing) — mas não há garantia formal disso. Por isso o prompt do narrador (§D2) instrui explicitamente: se a `sinopse_oficial` parecer revelar algo além da premissa inicial, usar só a parte que é premissa. Essa é uma instrução ao LLM (julgamento, não checagem mecânica) — no mesmo espírito de risco aceito do parágrafo acima, não um novo validador de código.
 
-### [D2] Narrador — saída narrativa, em TRÊS MOVIMENTOS (v1.2.0, reescrito v1.3.0/v1.3.1)
+### [D2] Narrador — saída narrativa, em TRÊS MOVIMENTOS (v1.2.0, reescrito v1.3.0/v1.3.1/v1.4.0)
 
 Etapa **PÓS-síntese**, opcional, controlada pela flag `--tom` (ver abaixo). Uma **única chamada LLM para o filme inteiro** (não por bucket), mesmo provider/modelo da síntese.
 
@@ -235,6 +281,64 @@ Alvo de tamanho total: **250-400 palavras** (ajustado de 200-350 na v1.2.x — o
 >
 > Responda APENAS com JSON puro no formato: `{"narrativa": "<seu texto>", "consensos_usados": [{"propriedade": "<nome curto da propriedade descritiva>", "grupos_de_origem": ["<negativas|medianas|positivas>", ...], "temas_de_origem": ["<nome EXATO do tema, copiado do relatório>", ...]}]}`. `consensos_usados` pode ser `[]` se o MOVIMENTO 2 não usou nenhuma propriedade consensual.
 
+#### A regra (c) tem DUAS variantes (v1.4.0) — a escolha é do CÓDIGO, pelo dado
+
+O §D2 passa a ter duas versões da regra (c), e **só ela** muda entre as
+variantes: todo o resto do prompt (os três movimentos, os critérios do
+MOVIMENTO 2, o quantificador pré-computado, anti-spoiler, forma) é
+**byte-idêntico**, para que a comparação A/B isole a mudança.
+
+- **SEM distribuição** → `build_narrator_prompt(False)` devolve **exatamente**
+  o prompt da v1.3.1, byte a byte (verificado em teste). O fallback não é uma
+  reescrita parecida: é o texto anterior.
+- **COM distribuição** → a regra (c) INVERTE, virando "PESO REAL DE CADA GRUPO":
+
+> c. **PESO REAL DE CADA GRUPO — REGRA CRÍTICA** (a distribuição está disponível neste relatório): você recebeu a DISTRIBUIÇÃO REAL das notas do filme, vinda do histograma público — quantas pessoas deram cada nota. Isso é um dado diferente do tamanho dos grupos de reviews analisadas (50/20/30), que é apenas a COTA DE COLETA e continua NÃO significando prevalência. Regras:
+> - **ANCORAGEM OBRIGATÓRIA:** cada grupo DEVE ser apresentado, na primeira vez que aparecer no MOVIMENTO 3, com o `rotulo_peso` que veio no relatório para ele (ex.: "a grande maioria das notas (~79%)"). É PROIBIDO usar um rótulo MAIS FORTE do que o fornecido; um MAIS FRACO é permitido se a fluência pedir — nunca o oposto. Você NÃO calcula nem escolhe esse rótulo: ele é dado.
+> - **ABERTURA OBRIGATÓRIA:** o MOVIMENTO 3 começa pela perspectiva de MAIOR peso. Esta regra tem precedência sobre a liberdade de ordem da regra (e).
+> - **ÊNFASE PROPORCIONAL:** dê aproximadamente mais espaço ao grupo de maior peso e menos ao de menor peso — um filme amplamente amado não pode soar dividido, e um amplamente rejeitado não pode soar morno.
+> - **RESPEITO À MINORIA:** a perspectiva minoritária é apresentada COMO minoritária, mas SEM desdém, ironia ou insinuação de que quem pensa assim está errado. Menos espaço, mesma seriedade analítica: quem procura saber se vai gostar precisa entender o que incomodou essa parcela.
+> - Continua PROIBIDO inventar um número-síntese do filme (nota média, score, "X de 10", "nota N"): os shares por faixa são a ÚNICA quantificação permitida, e são três números, nunca um só.
+
+**`rotulo_peso` é PRÉ-COMPUTADO pelo código** — mesmo princípio da v1.2.3
+(quantificador) e da v1.1.1 (denominador): o LLM não escolhe rótulo numérico.
+Mapa determinístico sobre o `share_real`, do mais fraco ao mais forte:
+
+| Faixa | Rótulo |
+|---|---|
+| < 10% | uma pequena minoria |
+| 10–25% | uma minoria |
+| 25–45% | uma parcela expressiva |
+| 45–70% | a maioria |
+| ≥ 70% | a grande maioria |
+
+**Bordas resolvidas SEMPRE para o rótulo mais fraco** (itera do mais fraco ao
+mais forte, primeiro match vence) — mesma convenção da v1.2.3:
+`10 → uma minoria`, `25 → uma minoria`, `45 → uma parcela expressiva`,
+`70 → a maioria`. Consequência documentada: "a grande maioria" começa de fato
+em **71%**, não em 70% — subestimar o peso é aceitável, inflar não é.
+
+O rótulo é sempre entregue **junto do percentual** (`"a grande maioria das
+notas (~79%)"`): o número é o que impede o rótulo de virar retórica solta.
+
+**Validação — a rede de prevalência MUDA DE SINAL:**
+
+| | Sem distribuição | Com distribuição |
+|---|---|---|
+| Marcadores de prevalência ("minoria", "a maioria do público"…) | **violação** → retentativa → `prevalencia_suspeita` | **desligada** — essas palavras agora são EXIGIDAS pela regra (c); manter o detector ligado flaggaria toda narrativa correta |
+| Ancoragem de peso | não se aplica (nada a ancorar) | **exigida** → retentativa (`_REFORCO_ANCORAGEM`) → `peso_nao_ancorado` |
+
+A checagem de ancoragem (`_ancoragem_de_peso_ok`) aceita, por grupo: o rótulo
+fornecido, **qualquer rótulo mais fraco** (o prompt permite descer de força) ou
+o percentual literal. Heurística deliberadamente permissiva — a defesa
+principal é a instrução; isto detecta o modo de falha que importa: o narrador
+ignorar os pesos e reescrever a narrativa antiga, de grupos equivalentes.
+
+**Fallback (§3[G]):** sem distribuição, tudo isso desaparece sozinho — prompt
+histórico, rede de prevalência original ativa, `peso_nao_ancorado` sempre
+`False`, render com o disclaimer antigo, frontend sem shares. **Não há flag de
+configuração:** a presença do dado é o interruptor.
+
 **Por que a invariante (c) existe (v1.2.1 — defeito corrigido):** os buckets têm tamanhos fixados pela **cota de coleta** (50/20/30 = 10 válidas × nº de níveis de nota do bucket: 5/2/3), que **não** refletem a distribuição real da recepção. A narrativa da v1.2.0, sem a regra (c), inferia prevalência a partir das cotas ("grupo considerável", "igualmente expressivo", "minoria de opiniões medianas", "recepção polarizada") — as medianas seriam "minoria" em todo filme, para sempre, por construção. A invariante (c) é a **defesa principal**; a telemetria abaixo é a rede de segurança.
 
 **Por que o quantificador virou pré-computado (v1.2.3 — reincidência corrigida pela raiz):** a v1.2.2 tentou corrigir a inflação de quantificadores por INSTRUÇÃO — pedir ao LLM que calculasse a fração e escolhesse o rótulo por uma tabela. Funcionou parcialmente, mas **reincidiu**: na primeira regeneração das 3 narrativas pós-fix, "quase todos"/"praticamente todos" foi aplicado a frações de 65-70% **2 vezes** (a condição de escalada que o próprio changelog da v1.2.2 previa: *"um checador numérico pós-parsing é candidato futuro caso a inflação reincida"*). A correção pela raiz é o **mesmo princípio da v1.1.1** (denominador de `n_reviews_analisadas`): o LLM não decide número nem rótulo numérico — **o código é a autoridade**. `_serialize_output_for_narrator` agora pré-computa `fracao`/`rótulo_quantificador` por tema (`_fracao_e_rotulo`, mapa determinístico em `_rotulo_quantificador` — mesmas faixas da v1.2.2, resolução de sobreposição sempre para o rótulo mais fraco) e os injeta na entrada do narrador; o prompt (d) deixou de pedir cálculo e passou a proibir só usar um rótulo MAIS FORTE que o dado. **Rede de segurança complementar (v1.2.3):** checagem em nível de bucket — se a prosa contém "quase todos"/"praticamente todos" e NENHUM tema do filme tem fração ≥80%, 1 retentativa com reforço; se persistir, `quantificador_suspeito: true`. Deliberadamente restrita a esse quantificador (o único modo de falha observado) — não cobre uso indevido dos demais rótulos.
@@ -277,10 +381,81 @@ Etapa **aditiva e independente** do resto do pipeline (`ficha.py`): dado o títu
 
 **Consumo:** a ficha (quando presente) é serializada para o narrador (§D2) como fonte exclusiva do MOVIMENTO 1; fora do modo narrativo, o render estruturado/terminal também exibe um resumo de uma linha da ficha, quando existe (título/ano/diretor/gênero/duração), separado dos buckets e sem interferir nos avisos existentes.
 
+### [G] Distribuição real de notas (histograma do Letterboxd) — v1.4.0
+
+Etapa **aditiva e independente**, irmã da ficha TMDB (§F): não depende das
+reviews coletadas e não é bloqueada por elas. Detalhes de sondagem, seletores
+e armadilhas em **`FASE_HISTOGRAMA.md`**.
+
+**Endpoint:** `letterboxd.com/csi/film/<slug>/rating-histogram/` — fragmento CSI
+server-rendered, **1 requisição por filme**, cacheada em
+`<cache-dir>/_histograma/<slug>.html`. Preferido à página principal do filme
+por ser ~5,8 KB em vez de centenas, expondo exatamente o dado desejado.
+
+**Estrutura (validada ao vivo):** `table.chart tbody tr` × **10** (sempre 10,
+um por nível de 0.5 a 5, em ordem crescente). Nível em `th._sr-only` (glifos:
+`half-★`, `★`, `★½`, …). **Contagem exata no atributo `title` do `.barcolumn`.**
+
+Três armadilhas, todas tratadas (ver `FASE_HISTOGRAMA.md` §3):
+1. **Nível zerado não tem `<a>`** — vira `<span class="barcolumn" title="No ★½ ratings">`.
+   Buscar `a.barcolumn` perderia os zeros **em silêncio** e inflaria o total,
+   justamente em filmes pequenos (onde o denominador é mais frágil). O seletor
+   é `.barcolumn`, qualquer tag.
+2. **O `_sr-only` da barra ABREVIA** (`23.4K`, `111K`) — inútil como fonte. O
+   `title` traz o número exato.
+3. **Singular/plural e "No"** — `456 … ratings`, `1 … rating`, `No … ratings`.
+
+**Agregação (código, não prompt):** `share_real` por bucket =
+`soma dos níveis do bucket / total`, em **percentual inteiro**. Cada bucket é
+arredondado **independentemente**, para que o número de cada grupo seja a
+melhor aproximação inteira do seu próprio share. **Consequência aceita e
+documentada:** a soma dos três pode dar 99 ou 101 (ex.: `cure` → 3+17+79=99).
+Preferido a redistribuir o resto, o que tornaria algum bucket menos fiel ao
+próprio dado — coerente com a política do projeto de não maquiar número. A
+interface **nunca exibe a soma**.
+
+**A cota de coleta 50/20/30 NÃO muda** (decisão explícita). Racional: cota e
+peso respondem a perguntas diferentes e ambas continuam necessárias.
+- A **cota** é *amostragem estratificada*: garante **profundidade igual por
+  perspectiva**. Quem quer saber o que incomodou o grupo minoritário precisa de
+  ~50 reviews negativas lidas, não de 1 review porque só 1% deu nota baixa.
+  Reduzir a amostra do grupo pequeno destruiria a análise temática justamente
+  onde ela é mais informativa para a decisão de assistir.
+- O **peso** é a prevalência real, e agora está exibido separadamente.
+
+Ou seja: **profundidade igual, peso informado** — que é o princípio norteador
+(§0) aplicado à coleta.
+
+**Falha nunca bloqueia** (idêntico a §F): chave estrutural inesperada, rede,
+HTTP, anti-bot ou filme sem nota alguma → `collect_distribuicao` retorna `None`,
+o campo sai `null` e **todo o resto do pipeline degrada sozinho** para o
+comportamento da v1.3.1 (ver "Fallback" no §D2). Nem `AntiBotError` escapa:
+perder a distribuição não justifica abortar uma coleta que já custou dezenas de
+requisições.
+
+**Saída** (§4): bloco global `distribuicao` + `share_real` por bucket.
+```json
+{
+  "n_notas_total": 375278,
+  "por_nivel": {"0.5": 456, "1.0": 1037, "…": 0, "5.0": 99242},
+  "por_bucket": {"negativas": 3, "medianas": 17, "positivas": 79},
+  "fonte": "letterboxd_histograma"
+}
+```
+`share_real` é **omitido** (chave ausente, não `0`) quando não há distribuição —
+o consumidor distingue "não coletado" de "coletado e deu 0%".
+
+**Flag `--no-distribuicao`** pula a busca (e cai no fallback), para A/B.
+
 ### [E] Render
 1. `resultado/<slug>.json` — objeto completo: 3 buckets + metadados por nível e globais.
 2. Terminal — por bucket: título, `n_validas/alvo` (com decomposição por nível quando houver nível degradado), filtro aplicado, temas com frequência relativa ("mencionado em ~14 de 50 reviews"), observação geral. Avisos de modo reduzido/degradado sempre visíveis e concretos ("análise negativa baseada em apenas 7 de 50 reviews-alvo — interprete com cautela").
 3. Rodapé: contagem total de reviews observada, para distinguir "bucket vazio porque ninguém odeia" de "bucket vazio porque ninguém assistiu".
+4. **(v1.4.0)** Header do grupo ganha `· ~X% das notas` quando há distribuição — **formato e estilo idênticos nos três grupos** (§0: a assimetria vem do dado, não da apresentação). O disclaimer da seção tema-a-tema tem duas variantes, escolhidas pela presença do dado (constantes `DISCLAIMER_*` em `render.py`, mantidas em sincronia com o frontend):
+   - **sem** distribuição: *"grupos de 50 · 20 · 30 reviews são cotas de coleta — não a proporção real das opiniões"*
+   - **com** distribuição: *"análise em profundidade igual por grupo (50·20·30 reviews); o peso real de cada faixa está indicado em cada grupo"*
+
+   O frontend (`frontend/`) aplica exatamente o mesmo tratamento e **tolera JSONs sem `distribuicao`** (filmes antigos/fallback) sem quebrar: omite os shares e usa o disclaimer antigo. Ordem visual dos grupos permanece negativas → medianas → positivas em qualquer caso — **a ordem não é reordenada por peso**; quem muda de ordem é só a prosa do MOVIMENTO 3.
 
 ---
 
@@ -289,7 +464,8 @@ Etapa **aditiva e independente** do resto do pipeline (`ficha.py`): dado o títu
 Por nível: `n_validas`, `n_brutas`, `filtro_aplicado`, `n_descartadas_spoiler`, `n_descartadas_curtas`, `n_descartadas_truncamento`, `paginas_buscadas`.
 Por bucket: agregados dos níveis + `modo` (completo/reduzido/sem_analise) + **(v1.1.2)** `idioma_invalido`, `escopo_suspeito`.
 Por tema: **(v1.1.2)** `aspas_removidas`, além de `mencoes_clampadas`/`mencoes_valor_original` (v1.1.1).
-Globais: `slug`, `data_coleta`, `origem` (cache/rede por página), versão da spec, **(v1.1.4)** `reviews_url`, **(v1.2.0)** `narrativa` + `narrativa_flags` (só quando `--tom narrativo|ambos`), **(v1.3.0)** `ficha` (objeto TMDB ou `null` — §3a), **(v1.3.1)** `consensos_usados` (lista de `{propriedade, grupos_de_origem, temas_de_origem}` do MOVIMENTO 2 — só quando `--tom narrativo|ambos`) + `narrativa_flags.consenso_suspeito`.
+Globais: `slug`, `data_coleta`, `origem` (cache/rede por página), versão da spec, **(v1.1.4)** `reviews_url`, **(v1.2.0)** `narrativa` + `narrativa_flags` (só quando `--tom narrativo|ambos`), **(v1.3.0)** `ficha` (objeto TMDB ou `null` — §3a), **(v1.3.1)** `consensos_usados` (lista de `{propriedade, grupos_de_origem, temas_de_origem}` do MOVIMENTO 2 — só quando `--tom narrativo|ambos`) + `narrativa_flags.consenso_suspeito`, **(v1.4.0)** `distribuicao` (bloco do histograma ou `null` — §3[G]) + `narrativa_flags.peso_nao_ancorado`.
+Por bucket: **(v1.4.0)** `share_real` (percentual inteiro), **omitido** quando não há distribuição.
 
 ---
 
@@ -315,6 +491,18 @@ As três incógnitas abaixo foram resolvidas na Fase 1; os achados já estão in
 ---
 
 ## Changelog
+- **v1.4.0** (2026-07-21): **distribuição real de notas** coletada e a regra de prevalência do §D2 **invertida** — a maior mudança desde a v1.
+  - **A motivação (feedback de usuários reais, não hipótese):** filmes amplamente aclamados *soavam divididos*, porque os três grupos recebiam o mesmo peso textual e visual. `cidade-de-deus` tem **91%** das notas na faixa alta e era apresentado com a mesma proeminência dada ao grupo de **1%**. Infidelidade **por omissão**: cada frase verdadeira, o conjunto comunicando controvérsia onde havia consenso.
+  - **A v1.2.1 previu esta correção.** Ela proibiu prevalência *porque o dado não existia*, e registrou em "Candidatos à próxima versão" que a correção de raiz seria coletar o histograma (inclusive o custo: 1 requisição cacheável — confirmado exato). A regra não foi afrouxada; o dado que faltava chegou.
+  - **(a) Princípio norteador registrado (§0):** *neutralidade de TRATAMENTO, não de fato* — formato idêntico para os três grupos; a assimetria vem dos dados. Com duas invariantes intocadas: **share por faixa NÃO é nota média** (são três números que particionam a população; a proibição de score agregado segue escrita dentro da própria regra invertida) e **a minoria mantém o mesmo rigor analítico** (menos espaço na prosa, mesma seriedade; na interface, um grupo de 1% mantém seus 6 temas e barras).
+  - **(b) Coleta (§3[G], `FASE_HISTOGRAMA.md`):** endpoint CSI `/csi/film/<slug>/rating-histogram/`, 1 requisição cacheada por filme. Três armadilhas reais tratadas — nível zerado troca `<a>` por `<span>` (buscar `a.barcolumn` perderia os zeros **em silêncio** e inflaria o total justo em filmes pequenos); o `_sr-only` da barra **abrevia** (`23.4K`) e é imprestável como fonte, o `title` é exato; singular/plural/"No" no `title`. Validação estrutural exige os 10 níveis canônicos, senão `None`.
+  - **(c) Agregação em código:** `share_real` por bucket, percentual inteiro, cada bucket arredondado **independentemente** — a soma pode dar 99 ou 101 (`cure`: 3+17+79=99), aceito e documentado em vez de redistribuir o resto e tornar algum bucket menos fiel ao próprio dado. A interface nunca exibe a soma.
+  - **(d) Cota 50/20/30 MANTIDA, com racional explícito:** cota é *amostragem estratificada* (profundidade igual por perspectiva — entender o que incomodou o grupo de 1% exige ~50 reviews lidas, não 1); peso é prevalência, agora exibida à parte. **Profundidade igual, peso informado.**
+  - **(e) Regra (c) do §D2 em duas variantes, escolhidas pelo CÓDIGO:** sem distribuição, `build_narrator_prompt(False)` devolve o prompt da v1.3.1 **byte a byte** (verificado em teste) — o fallback é o texto anterior, não uma reescrita parecida. Com distribuição: ancoragem obrigatória no `rotulo_peso`, abertura do MOVIMENTO 3 pela perspectiva de maior peso, ênfase proporcional e respeito explícito à minoria. **Só a regra (c) difere** entre as variantes, para a comparação A/B isolar a mudança.
+  - **(f) `rotulo_peso` pré-computado** (mesmo princípio da v1.2.3/v1.1.1): mapa determinístico com bordas sempre para o rótulo **mais fraco** (`70% → "a maioria"`, não "a grande maioria" — que começa de fato em 71%). Sempre entregue junto do percentual, que é o que impede o rótulo de virar retórica.
+  - **(g) A rede de prevalência muda de sinal:** com distribuição, o detector da v1.2.1 é **desligado** (as palavras que ele caça passaram a ser exigidas) e quem cobre o eixo é a nova checagem de **ancoragem** (`peso_nao_ancorado`, 1 retentativa com `_REFORCO_ANCORAGEM`). Sem distribuição, o detector original continua ativo. **Não há flag de configuração — a presença do dado é o interruptor.**
+  - **(h) Render e frontend:** `· ~X% das notas` no header, formato idêntico nos três; disclaimer com duas variantes; frontend tolera JSON sem `distribuicao`. Ordem visual dos grupos **não** é reordenada por peso — só a prosa do MOVIMENTO 3 abre pelo dominante.
+  - **Resultado medido nas 3 demos:** ancoragem 3/3 filmes, abertura pelo grupo dominante 3/3, zero `peso_nao_ancorado`. Shares reais: `the-invite-2026` 3/18/79, `cure` 3/17/79, `cidade-de-deus` 1/8/91.
 - **v1.3.1** (2026-07-20): regra do MOVIMENTO 2 reescrita (categoria/presença/não-contradição) + telemetria `consensos_usados` (§D2).
   - **O defeito real:** na primeira execução da narrativa em três movimentos (v1.3.0), o MOVIMENTO 2 de `the-invite-2026` afirmou "elenco com atuações marcantes" e "roteiro elogiado por sua inteligência" como fatos neutros de experiência — mas o grupo negativas tem literalmente os temas "Atuações e direção questionáveis" (~15/50) e "Humor e roteiro fracos/entediantes" (~27/50), uma contradição direta, não um consenso. **Diagnóstico:** erro de CATEGORIA — o narrador importou um juízo AVALIATIVO (qualidade de atuação/roteiro, que é sempre disputado) como se fosse uma propriedade DESCRITIVA (ritmo/tom/atmosfera, sobre a qual pode haver consenso factual mesmo com valência diferente). A regra da v1.3.0 pedia "características em que os grupos concordam factualmente" mas não distinguia essas duas categorias nem dava um exemplo do modo de falha.
   - **(a) Regra reescrita com três critérios obrigatórios** (§D2, `NARRATOR_SYSTEM_PROMPT` em `synthesize.py`): **(i) CRITÉRIO DE CATEGORIA** — só propriedades descritivas (ritmo, tom, atmosfera, intensidade, estrutura, ambientação, nível de violência, ambiguidade, densidade); PROIBIDO qualquer juízo de qualidade, que pertence sempre ao MOVIMENTO 3. **(ii) CRITÉRIO DE PRESENÇA** — a propriedade precisa vir de temas de PELO MENOS DOIS grupos com o mesmo núcleo factual (valência pode divergir). **(iii) CRITÉRIO DE NÃO-CONTRADIÇÃO** — se qualquer grupo nega o núcleo factual (não só diverge na avaliação), a propriedade é desqualificada. O prompt inclui os dois exemplos pedidos: o POSITIVO (ritmo lento/tedioso vs lento/deliberado → consenso válido) e o NEGATIVO — o caso real das atuações do `the-invite-2026`, documentado por extenso como o modo de falha a evitar.
@@ -390,6 +578,7 @@ Evidência transversal de qualidade de instrução: `resultado/comparacao/COMPAR
 
 ## Candidatos à próxima versão (pós-v1.2)
 
-- **Histograma de distribuição real de notas (torna prevalência legítima em vez de proibida).** A v1.2.1 **proíbe** afirmações de prevalência entre grupos porque as cotas de coleta (50/20/30) não são a distribuição da recepção. A correção de raiz — em vez da proibição — é **coletar o histograma de notas da página do filme no Letterboxd** (a barra de distribuição de ratings; **1 requisição extra** por filme, cacheável). Com a distribuição real disponível, o narrador **e** o render estruturado poderiam fazer afirmações de prevalência **legítimas e ancoradas nos dados** ("a maior parte das avaliações fica na faixa alta"), e o `--tom` narrativo deixaria de ter uma invariante puramente restritiva. Enquanto o histograma não existe no pipeline, a proibição da v1.2.1 é o comportamento correto. *(Também destrava a distinção "bucket vazio porque ninguém odiou" vs "porque ninguém assistiu" com número real, não só o total observado do rodapé.)*
+- ~~**Histograma de distribuição real de notas (torna prevalência legítima em vez de proibida).**~~ **ENTREGUE na v1.4.0** (§0, §3[G], §D2) — o texto original do candidato fica abaixo como registro de que a v1.2.1 já previa esta correção de raiz, inclusive o custo estimado (1 requisição extra, cacheável), que se confirmou exato.
+- *(candidato original, cumprido)* **Histograma de distribuição real de notas.** A v1.2.1 **proíbe** afirmações de prevalência entre grupos porque as cotas de coleta (50/20/30) não são a distribuição da recepção. A correção de raiz — em vez da proibição — é **coletar o histograma de notas da página do filme no Letterboxd** (a barra de distribuição de ratings; **1 requisição extra** por filme, cacheável). Com a distribuição real disponível, o narrador **e** o render estruturado poderiam fazer afirmações de prevalência **legítimas e ancoradas nos dados** ("a maior parte das avaliações fica na faixa alta"), e o `--tom` narrativo deixaria de ter uma invariante puramente restritiva. Enquanto o histograma não existe no pipeline, a proibição da v1.2.1 é o comportamento correto. *(Também destrava a distinção "bucket vazio porque ninguém odiou" vs "porque ninguém assistiu" com número real, não só o total observado do rodapé.)*
 - **Validador pós-parsing por tema (não só o quantificador mais forte).** A v1.2.3 pré-computa o rótulo (código como autoridade) e adiciona uma rede de segurança em nível de BUCKET restrita a "quase todos"/"praticamente todos" — deliberadamente não cobre uso indevido dos demais rótulos (ex.: "poucos" aplicado a um tema de 40%). Candidato futuro: correspondência por `tema` no texto da narrativa, recalcular a fração daquele tema específico e conferir contra QUALQUER rótulo usado, não só o mais forte — mesma mecânica de retentativa + flag das demais validações de prosa. Só vale a pena se o padrão de uso indevido de rótulos mais fracos aparecer na prática; nenhuma evidência disso até a v1.2.3.
 - **Cache em `cache/`/`.cache/` na raiz** (desacoplar de `resultado/`, ver §3[B]) e **backfill barato de cota** (§3[C'].5) — candidatos herdados da v1.1.x.

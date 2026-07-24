@@ -389,6 +389,16 @@ a { color: inherit; }
   color: var(--text-mute);
   margin-left: auto;
 }
+/* v1.4.0 — share real da faixa. Mesmo estilo nos três grupos por decisão de
+   produto (neutralidade de TRATAMENTO): a diferença entre 3% e 79% deve vir
+   do número, nunca de destaque tipográfico dado a um dos lados. */
+.group__share {
+  font-family: var(--mono);
+  font-size: 0.68rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--text-dim);
+}
 .group[data-group="negativas"] .group__name { color: var(--neg); }
 .group[data-group="medianas"]  .group__name { color: var(--med); }
 .group[data-group="positivas"] .group__name { color: var(--pos); }

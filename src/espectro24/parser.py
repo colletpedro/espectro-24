@@ -137,6 +137,86 @@ def parse_full_text(html: str) -> str:
     return _soup(html).get_text(" ", strip=True)
 
 
+# --- Histograma de notas (endpoint CSI /csi/film/<slug>/rating-histogram/) ---
+# Validado na Etapa A da v1.4.0 (ver FASE_HISTOGRAMA.md). Estrutura:
+# `table.chart tbody tr` × 10 (sempre 10, um por nível de 0.5 a 5, em ordem
+# crescente), cada linha com `th._sr-only` nomeando o nível em glifos e um
+# `.barcolumn` cujo ATRIBUTO `title` carrega a contagem exata.
+
+# Nomes de nível como o Letterboxd os escreve no `th` (glifos, não decimal).
+_NIVEL_HALF = "half-"
+
+
+def _nivel_de_th(texto: str) -> float | None:
+    """'half-★'->0.5, '★'->1, '★½'->1.5, '★★★★★'->5. None se irreconhecível.
+
+    "half-★" é caso especial: tem UM ★ e nenhum ½, então a fórmula geral
+    (contar ★ + ½) daria 1.0 — errado. Tratado antes da fórmula.
+    """
+    t = texto.strip()
+    if t.startswith(_NIVEL_HALF):
+        return 0.5
+    n = t.count("★")
+    if n == 0:
+        return None
+    return n + (0.5 if "½" in t else 0.0)
+
+
+def _contagem_de_title(title: str) -> int:
+    """`title` do .barcolumn → contagem exata.
+
+    Três formas observadas ao vivo (Etapa A):
+      "456 half-★ ratings (0%)"  -> 456   (separador de milhar com vírgula)
+      "1 half-★ rating (4%)"     -> 1     (singular quando é 1)
+      "No ★½ ratings"            -> 0     (nível zerado, sem número)
+
+    NÃO usar o `span._sr-only` da barra como fonte: ele ABREVIA valores
+    grandes ("23.4K", "111K"), perdendo precisão. O `title` é exato.
+    """
+    m = re.match(r"\s*([\d,]+)", title or "")
+    return int(m.group(1).replace(",", "")) if m else 0
+
+
+def parse_rating_histogram(html: str | BeautifulSoup) -> dict[float, int] | None:
+    """Contagem de notas por nível (0.5 … 5) a partir do fragmento CSI.
+
+    Retorna `{0.5: 456, 1.0: 1037, …, 5.0: 99242}` com os 10 níveis SEMPRE
+    presentes (nível zerado = 0), ou **None** se a estrutura não for a
+    esperada — o chamador trata None como "sem distribuição" e o pipeline
+    segue sem o dado (v1.4.0, §3b: a distribuição é aditiva).
+
+    Nível zerado não tem `<a>`, e sim `<span class="barcolumn">` com
+    `title="No ★½ ratings"`; por isso o seletor é `.barcolumn` (qualquer
+    tag), não `a.barcolumn` — usar `a` perderia justamente os zeros e
+    produziria um total inflado em filmes pequenos.
+
+    Validação estrutural (defensiva, mesma postura do resto do módulo): só
+    devolve dados se os 10 níveis canônicos aparecerem exatamente uma vez.
+    Qualquer divergência (layout mudou, fragmento vazio, endpoint trocado)
+    vira None em vez de um histograma silenciosamente errado.
+    """
+    soup = _soup(html)
+    linhas = soup.select("table.chart tbody tr")
+    if not linhas:
+        return None
+
+    por_nivel: dict[float, int] = {}
+    for tr in linhas:
+        th = tr.select_one("th")
+        barra = tr.select_one(".barcolumn")
+        if th is None or barra is None:
+            continue
+        nivel = _nivel_de_th(th.get_text(strip=True))
+        if nivel is None or nivel in por_nivel:
+            continue
+        por_nivel[nivel] = _contagem_de_title(barra.get("title", ""))
+
+    esperados = {0.5, 1.0, 1.5, 2.0, 2.5, 3.0, 3.5, 4.0, 4.5, 5.0}
+    if set(por_nivel) != esperados:
+        return None
+    return por_nivel
+
+
 # --- Busca de filmes (endpoint AJAX /s/search/films/<query>/) ---
 
 def parse_search_results(html: str | BeautifulSoup) -> list[SearchResult]:
