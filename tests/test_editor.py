@@ -23,6 +23,7 @@ from espectro24.parser import parse_rating_histogram
 from espectro24.render import build_output, render_terminal
 from espectro24.synthesize import (
     _EDITOR_SYSTEM_PROMPT,
+    _formato_invalido,
     _protegido_presente,
     _tokens_numericos,
     build_editor_user_message,
@@ -512,3 +513,96 @@ def test_editor_NAO_pode_alterar_numero_do_rotulo_mesmo_com_caixa_ajustada():
                           client_call=fake, model="m")
     assert ed.edicao_descartada is True
     assert ed.texto == texto
+
+
+# =====================================================================
+# v1.7.2 — checagem ESTRUTURAL do formato da saída do editor
+# =====================================================================
+# Defeito real: o `cidade-de-deus` (v1.7.1) devolveu a prosa embrulhada num
+# invólucro `{ text: "..." }`. As checagens de então (protegidos, conjunto
+# numérico, honestidade) rodam sobre SUBSTRING e continuavam achando tudo
+# lá dentro — a edição foi aceita como "aplicada", e só a leitura humana
+# pegou o defeito antes de publicar.
+
+_TEXTO_LIMPO_PARA_INVOLUCRO = (
+    "A grande maioria das notas (~91%) considera o filme uma obra-prima. "
+    "Muitos elogiam o estilo visual."
+)
+
+
+def test_formato_invalido_detecta_involucro_de_objeto_com_campo_text():
+    """O caso real exato do `cidade-de-deus`."""
+    bruto = '{\n text: "' + _TEXTO_LIMPO_PARA_INVOLUCRO + '"\n}'
+    assert _formato_invalido(bruto) is True
+
+
+def test_formato_invalido_detecta_comeco_com_chave_ou_colchete():
+    assert _formato_invalido('{"narrativa": "texto"}') is True
+    assert _formato_invalido('["texto"]') is True
+
+
+def test_formato_invalido_detecta_cerca_de_codigo():
+    bruto = "```\n" + _TEXTO_LIMPO_PARA_INVOLUCRO + "\n```"
+    assert _formato_invalido(bruto) is True
+
+
+def test_formato_invalido_detecta_campo_json_nas_primeiras_linhas():
+    for prefixo in ('"text": ', "text: ", '"narrativa": '):
+        bruto = prefixo + '"' + _TEXTO_LIMPO_PARA_INVOLUCRO + '"'
+        assert _formato_invalido(bruto) is True, prefixo
+
+
+def test_formato_invalido_detecta_chaves_desbalanceadas():
+    bruto = "{" + _TEXTO_LIMPO_PARA_INVOLUCRO
+    assert _formato_invalido(bruto) is True
+
+
+def test_formato_invalido_nao_marca_texto_limpo():
+    assert _formato_invalido(_TEXTO_LIMPO_PARA_INVOLUCRO) is False
+
+
+def test_formato_invalido_nao_marca_chave_legitima_equilibrada_no_meio_da_prosa():
+    """Falso positivo a evitar: uma chave/colchete equilibrado no MEIO da
+    prosa (ex. uma observação entre chaves) não é invólucro estrutural."""
+    bruto = ("A grande maioria das notas (~91%) considera o filme uma "
+             "obra-prima {segundo a crítica especializada}. Muitos elogiam "
+             "o estilo visual.")
+    assert _formato_invalido(bruto) is False
+
+
+def test_editor_com_involucro_de_objeto_dispara_retentativa_e_depois_descarta():
+    out = {"buckets": [{"bucket": "positivas", "share_real": 91}]}
+    res = NarrativaResult(texto=_TEXTO_LIMPO_PARA_INVOLUCRO,
+                          quantificadores_usados=[], marcadores_perspectiva=[])
+    systems = []
+
+    def fake(system, user, model):
+        systems.append(system)
+        return '{\n text: "' + _TEXTO_LIMPO_PARA_INVOLUCRO + '"\n}'
+
+    ed = editar_narrativa(res, montar_protegidos(res, out), output=out,
+                          client_call=fake, model="m")
+    assert len(systems) == 2                       # houve retentativa
+    assert "EMBRULHADA" in systems[1]               # reforço de formato
+    assert ed.edicao_descartada is True
+    assert ed.motivo_descarte == "formato_invalido"
+    assert ed.texto == _TEXTO_LIMPO_PARA_INVOLUCRO  # bruta prevalece
+
+
+def test_editor_recupera_formato_na_retentativa_e_aceita():
+    out = {"buckets": [{"bucket": "positivas", "share_real": 91}]}
+    res = NarrativaResult(texto=_TEXTO_LIMPO_PARA_INVOLUCRO,
+                          quantificadores_usados=[], marcadores_perspectiva=[])
+    respostas = [
+        '{\n text: "' + _TEXTO_LIMPO_PARA_INVOLUCRO + '"\n}',
+        _TEXTO_LIMPO_PARA_INVOLUCRO + " Isso agrada muita gente.",
+    ]
+
+    def fake(system, user, model):
+        return respostas.pop(0)
+
+    ed = editar_narrativa(res, montar_protegidos(res, out), output=out,
+                          client_call=fake, model="m")
+    assert ed.edicao_descartada is False
+    assert ed.houve_retentativa is True
+    assert "Isso agrada muita gente." in ed.texto

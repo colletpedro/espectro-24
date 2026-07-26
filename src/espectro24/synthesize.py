@@ -1978,8 +1978,12 @@ decide. Já uma pequena minoria (~7%) não embarca em momento nenhum. Para \
 eles a lentidão nunca vira método, os personagens não saem do lugar, e o \
 final chega sem ter construído nada."
 
-Responda APENAS com o texto final editado. Sem preâmbulo, sem explicação, \
-sem JSON, sem aspas envolvendo o texto."""
+Responda APENAS com o texto final editado, em PROSA CORRIDA. Sem \
+preâmbulo, sem explicação, sem JSON, sem markdown, sem cerca de código \
+(```), sem envolver a resposta num objeto ou campo (nada de `{`, `}`, \
+`"text":`, `"narrativa":` ou qualquer rótulo antes do texto), sem aspas \
+envolvendo o texto. A primeira palavra da sua resposta já é a primeira \
+palavra da narrativa."""
 
 
 _REFORCO_EDITOR_PROTEGIDOS = """
@@ -1999,6 +2003,19 @@ conjunto de números e percentuais do texto final tem de ser IDÊNTICO ao do \
 texto recebido: nenhum número novo, nenhum removido, nenhum modificado. \
 Não arredonde, não converta, não escreva por extenso um número que veio em \
 algarismo (nem o contrário)."""
+
+
+# v1.7.2 — reforço para formato inválido (invólucro estrutural em vez de
+# prosa corrida): caso real do `cidade-de-deus`, onde o editor devolveu
+# `{ text: "..." }` em vez de só o texto.
+_REFORCO_EDITOR_FORMATO = """
+
+REFORÇO CRÍTICO — sua edição anterior veio EMBRULHADA em alguma estrutura \
+(JSON, cerca de código, um objeto com campo "text"/"narrativa") em vez de \
+ser só o texto corrido. Responda de novo com APENAS a prosa final, sem \
+chaves, colchetes, aspas de campo, cercas de código (```), ou qualquer \
+rótulo antes do texto — a primeira palavra da sua resposta já é a primeira \
+palavra da narrativa."""
 
 
 def _tokens_numericos(texto: str) -> list[str]:
@@ -2154,6 +2171,48 @@ def _protegidos_perdidos(texto_editado: str, protegidos: list[str]) -> list[str]
     return [p for p in protegidos if not _protegido_presente(p, texto_editado)]
 
 
+_CAMPO_JSON_RE = re.compile(r'^\s*"?[A-Za-z_][\w]*"?\s*:\s*\S')
+
+
+def _formato_invalido(bruto_editado: str) -> bool:
+    """[E2] Checagem ESTRUTURAL (v1.7.2), aplicada ANTES das demais.
+
+    Caso real: o `cidade-de-deus` (v1.7.1) devolveu a prosa embrulhada num
+    invólucro `{ text: "..." }`, ignorando a instrução de responder só
+    texto puro. As checagens de então (protegidos, conjunto numérico,
+    honestidade) rodam sobre SUBSTRING, então o protegido e os números
+    continuavam achados DENTRO do invólucro — nada pegou o defeito, que só
+    foi visto por leitura humana antes de publicar.
+
+    Sinais de invólucro, qualquer um já é o bastante:
+    - o texto COMEÇA com `{` ou `[` — a prosa nunca começa assim;
+    - contém cerca de código markdown (```);
+    - alguma das primeiras linhas casa um campo estilo JSON
+      (`"text":`, `text:`, `"narrativa":` — identificador seguido de `:`
+      logo no início da linha, com ou sem aspas);
+    - chaves desbalanceadas (`{`/`}` em quantidade diferente) — um objeto
+      truncado ou mal formado deixa esse rastro mesmo sem bater nos sinais
+      acima.
+
+    Deliberadamente NÃO rejeita uma chave/colchete equilibrado no MEIO da
+    prosa (ex. uma citação entre chaves que o narrador tenha usado) — só
+    pega o formato de invólucro, não qualquer ocorrência do caractere.
+    """
+    t = bruto_editado.strip()
+    if not t:
+        return False   # texto vazio é tratado em outro lugar
+    if t[0] in "{[":
+        return True
+    if "```" in t:
+        return True
+    primeiras_linhas = [l for l in t.splitlines() if l.strip()][:3]
+    if any(_CAMPO_JSON_RE.match(l) for l in primeiras_linhas):
+        return True
+    if t.count("{") != t.count("}"):
+        return True
+    return False
+
+
 def editar_narrativa(narrativa_result, protegidos: list[str], output: dict | None = None,
                      client_call=None, model: str | None = None,
                      provider: str | None = None):
@@ -2210,7 +2269,16 @@ def editar_narrativa(narrativa_result, protegidos: list[str], output: dict | Non
         return _strip_fences(str(raw)).strip() or None
 
     def _avaliar(bruto_editado: str):
-        """(texto_limpo, perdidos, numeros_ok, honestidade_ok, motivo)."""
+        """(texto_limpo, perdidos, numeros_ok, honestidade_ok, motivo).
+
+        v1.7.2 — a checagem ESTRUTURAL (`_formato_invalido`) roda PRIMEIRO,
+        antes de qualquer outra: um invólucro tipo `{ text: "..." }` ainda
+        contém os protegidos e os números como SUBSTRING lá dentro, então
+        as checagens seguintes o aceitariam. Se o formato já está errado,
+        nem avalia o resto — falha direto com motivo "formato_invalido".
+        """
+        if _formato_invalido(bruto_editado):
+            return bruto_editado, [], True, False, "formato_invalido"
         texto, idioma_ok, escopo_ok, prevalencia_ok, _asp = _validar_prosa(
             bruto_editado, com_distribuicao)
         perdidos = _protegidos_perdidos(texto, protegidos)
@@ -2253,6 +2321,8 @@ def editar_narrativa(narrativa_result, protegidos: list[str], output: dict | Non
 
     if perdidos or not numeros_ok or not honestidade_ok:
         reforco = ""
+        if motivo == "formato_invalido":
+            reforco += _REFORCO_EDITOR_FORMATO
         if perdidos:
             reforco += _REFORCO_EDITOR_PROTEGIDOS.format(
                 lista="\n".join(f"- {p}" for p in perdidos))
