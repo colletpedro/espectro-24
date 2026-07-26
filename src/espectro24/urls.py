@@ -39,6 +39,16 @@ def histogram_cache_key(slug: str) -> str:
     return f"_histograma/{slug}.html"
 
 
+def film_page_url(slug: str) -> str:
+    """Página principal do filme — usada só para resolver o ano de lançamento
+    quando o slug não o carrega (v1.7.0, ficha.resolver_ano_letterboxd)."""
+    return f"{BASE}/film/{slug}/"
+
+
+def film_page_cache_key(slug: str) -> str:
+    return f"{slug}/film_page.html"
+
+
 def search_url(query: str) -> str:
     return f"{BASE}/s/search/films/{quote(query)}/"
 

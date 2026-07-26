@@ -1,6 +1,6 @@
 """Síntese LLM: parsing defensivo, retentativa, skip de bucket sem análise."""
 from espectro24.models import BucketResult, LevelResult, Review
-from espectro24.synthesize import build_system_prompt, synthesize_bucket
+from espectro24.synthesize import _remover_aspas, build_system_prompt, synthesize_bucket
 
 
 def _bucket_com_reviews(n=5):
@@ -192,6 +192,30 @@ def test_sem_aspas_nao_marca_flag():
 
     b = synthesize_bucket(_bucket_com_reviews(n=5), client_call=fake)
     assert b.temas[0].aspas_removidas is False
+
+
+# --- v1.7.1 — bugfix: contrabarra residual da remoção de aspas ---
+
+def test_remover_aspas_nao_deixa_contrabarra_residual():
+    """Caso real publicado em `cure` e `the-invite-2026` (v1.7.0): o texto
+    trazia uma citação ESCAPADA ("\\"A Cura\\""), e a remoção mecânica
+    trocava só o caractere de aspas por "" — a contrabarra de escape
+    sobrevivia, publicando "\\A Cura\\" no texto final."""
+    texto = ('Kiyoshi Kurosawa nos entrega um thriller de crime e terror de '
+            '1997, em \\"A Cura\\". Nele, um detetive...')
+    limpo, removida = _remover_aspas(texto)
+    assert removida is True
+    assert "\\" not in limpo
+    assert '"' not in limpo
+    assert "em A Cura. Nele" in limpo
+
+
+def test_remover_aspas_ainda_remove_aspas_normais_sem_contrabarra():
+    """Não regride o caso comum (sem escape) que já funcionava."""
+    texto = 'o filme é descrito como "hipnótico" pela crítica'
+    limpo, removida = _remover_aspas(texto)
+    assert removida is True
+    assert limpo == "o filme é descrito como hipnótico pela crítica"
 
 
 # --- Tarefa v1.1.2: validação pós-parsing — IDIOMA (1 retentativa) ---

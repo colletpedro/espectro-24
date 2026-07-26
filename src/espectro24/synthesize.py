@@ -32,8 +32,11 @@ import re
 from .config import (
     BUCKETS,
     LLM_MAX_TOKENS,
+    LLM_TIMEOUT_MS,
     MAX_TEMAS,
     MODEL_DEFAULT,
+    PROSA_MAX_TOKENS,
+    PROSA_THINKING_BUDGET,
     PROVIDER_DEFAULT_MODELS,
     PROVIDER_ENV_KEYS,
     nota_para_url,
@@ -165,6 +168,21 @@ menor. As frequências de TEMA, essas sim, continuam em relação às reviews \
 analisadas."""
 
 
+# Reforço adicional SÓ para o narrador [D2] (v1.5.0) — marcação de
+# perspectiva: anexado à retentativa combinada quando algum grupo com
+# marcação exigida não teve marcador declarado, teve um trecho que não
+# aparece literalmente no texto, ou (marcacao="antecipada") o marcador veio
+# depois do meio do trecho sobre aquele grupo.
+_REFORCO_MARCADORES = """
+- Se algum grupo com marcacao_perspectiva "simples" ou "antecipada" ficou \
+SEM um marcador de perspectiva dentro do trecho que fala dele (ex.: "para \
+eles", "para esse grupo", "nessa leitura"), ou se `marcadores_perspectiva` \
+declarou um trecho que não existe literalmente na narrativa: reescreva \
+inserindo o marcador que falta, no início do trecho sobre aquele grupo \
+quando a marcação for "antecipada", e registre o trecho EXATO em \
+`marcadores_perspectiva`."""
+
+
 # Reforço adicional SÓ para o narrador [D2] (v1.3.1) — telemetria de
 # consensos: anexado à retentativa combinada quando `consensos_usados` cita
 # grupo/tema inexistente no relatório recebido.
@@ -199,7 +217,8 @@ class ProviderError(RuntimeError):
 
 # --- Adaptadores de provider (contrato: (system, user, model) -> str) ---
 
-def anthropic_client_call(system: str, user: str, model: str) -> str:
+def anthropic_client_call(system: str, user: str, model: str,
+                          max_tokens: int = LLM_MAX_TOKENS) -> str:
     import anthropic
 
     key = os.environ.get(PROVIDER_ENV_KEYS["anthropic"])
@@ -208,11 +227,18 @@ def anthropic_client_call(system: str, user: str, model: str) -> str:
     client = anthropic.Anthropic(api_key=key)
     resp = client.messages.create(
         model=model,
-        max_tokens=LLM_MAX_TOKENS,
+        max_tokens=max_tokens,
         system=system,
         messages=[{"role": "user", "content": user}],
     )
     return "".join(block.text for block in resp.content if block.type == "text")
+
+
+def anthropic_client_call_prosa(system: str, user: str, model: str) -> str:
+    """Variante de PROSA (§D2 narrador / §E2 editor) — v1.6.0: só o teto de
+    saída muda (`PROSA_MAX_TOKENS`). O Anthropic não compartilha orçamento
+    entre raciocínio e resposta como o Gemini, então não há budget a fixar."""
+    return anthropic_client_call(system, user, model, max_tokens=PROSA_MAX_TOKENS)
 
 
 def gemini_supports_thinking(model: str) -> bool:
@@ -253,20 +279,54 @@ def gemini_client_call(system: str, user: str, model: str) -> str:
     gemini-2.0-flash (sem mecanismo de thinking) pode ser rejeitado pela API;
     por isso o parâmetro só é incluído quando `gemini_supports_thinking(model)`.
     """
+    return _gemini_call(system, user, model, max_output_tokens=LLM_MAX_TOKENS,
+                        thinking_budget=0, json_mode=True)
+
+
+def gemini_client_call_prosa(system: str, user: str, model: str) -> str:
+    """Variante de PROSA (§D2 narrador / §E2 editor) — v1.6.0.
+
+    Reverte o `thinking_budget=0` da v1.2.x para um budget FIXO
+    (`PROSA_THINKING_BUDGET`) com teto de saída folgado
+    (`PROSA_MAX_TOKENS`). O diagnóstico v2 mostrou que o truncamento que
+    motivou desligar thinking vinha do raciocínio SEM TETO competindo com a
+    resposta pelo mesmo orçamento — com budget fixo, 4/4 chamadas
+    terminaram em STOP (ver comentário em `config.py`).
+    """
+    return _gemini_call(system, user, model,
+                        max_output_tokens=PROSA_MAX_TOKENS,
+                        thinking_budget=PROSA_THINKING_BUDGET, json_mode=True)
+
+
+def _gemini_call(system: str, user: str, model: str, *, max_output_tokens: int,
+                 thinking_budget: int, json_mode: bool) -> str:
+    """Transporte comum do Gemini. `thinking_budget` só é enviado quando o
+    modelo suporta (`gemini_supports_thinking`) — passá-lo a um gemini-2.0
+    pode ser rejeitado pela API. `json_mode=False` desliga
+    `response_mime_type` para etapas cuja saída é texto puro (§E2 editor)."""
     from google import genai
     from google.genai import types
 
     key = os.environ.get(PROVIDER_ENV_KEYS["gemini"])
     if not key:
         raise LLMError(f"{PROVIDER_ENV_KEYS['gemini']} não definida no ambiente.")
-    client = genai.Client(api_key=key)
+    # TIMEOUT (v1.6.0): sem ele o SDK bloqueia INDEFINIDAMENTE. Observado ao
+    # vivo durante a regeneração desta versão — um processo ficou 67 minutos
+    # parado, 0% de CPU, dormindo num socket, sem nunca voltar nem falhar.
+    # Um timeout transforma "trava para sempre" em "erro que o chamador vê".
+    client = genai.Client(
+        api_key=key,
+        http_options=types.HttpOptions(timeout=LLM_TIMEOUT_MS),
+    )
     config_kwargs = dict(
         system_instruction=system,
-        response_mime_type="application/json",
-        max_output_tokens=LLM_MAX_TOKENS,
+        max_output_tokens=max_output_tokens,
     )
+    if json_mode:
+        config_kwargs["response_mime_type"] = "application/json"
     if gemini_supports_thinking(model):
-        config_kwargs["thinking_config"] = types.ThinkingConfig(thinking_budget=0)
+        config_kwargs["thinking_config"] = types.ThinkingConfig(
+            thinking_budget=thinking_budget)
     resp = client.models.generate_content(
         model=model,
         contents=user,
@@ -278,6 +338,13 @@ def gemini_client_call(system: str, user: str, model: str) -> str:
 PROVIDER_CLIENTS = {
     "anthropic": anthropic_client_call,
     "gemini": gemini_client_call,
+}
+
+# v1.6.0: adaptadores das etapas de PROSA (§D2 narrador, §E2 editor) — thinking
+# fixo + teto folgado. A síntese por bucket (§D) continua em PROVIDER_CLIENTS.
+PROVIDER_CLIENTS_PROSA = {
+    "anthropic": anthropic_client_call_prosa,
+    "gemini": gemini_client_call_prosa,
 }
 
 
@@ -319,15 +386,22 @@ def detect_provider(explicit: str | None = None) -> str:
     )
 
 
-def _resolve_call_and_model(client_call, model, provider):
+def _resolve_call_and_model(client_call, model, provider, prosa: bool = False):
     """Resolve (call, model) para uma etapa LLM — compartilhado por
-    `synthesize_bucket` [D] e `narrate_output` [D2]. Client custom sem provider
-    conhecido cai no default histórico (`MODEL_DEFAULT`); caso contrário o
-    default de modelo segue o provider resolvido."""
+    `synthesize_bucket` [D], `narrate_output` [D2] e `editar_narrativa` [E2].
+    Client custom sem provider conhecido cai no default histórico
+    (`MODEL_DEFAULT`); caso contrário o default de modelo segue o provider
+    resolvido.
+
+    v1.6.0: `prosa=True` seleciona os adaptadores de PROSA (thinking fixo +
+    teto folgado, ver `config.py`). Um `client_call` injetado (testes) é
+    respeitado como sempre — a escolha de adaptador só vale quando o cliente
+    não foi fornecido."""
     if client_call is not None:
         return client_call, (model or MODEL_DEFAULT)
     resolved_provider = detect_provider(provider)
-    return PROVIDER_CLIENTS[resolved_provider], (model or PROVIDER_DEFAULT_MODELS[resolved_provider])
+    clients = PROVIDER_CLIENTS_PROSA if prosa else PROVIDER_CLIENTS
+    return clients[resolved_provider], (model or PROVIDER_DEFAULT_MODELS[resolved_provider])
 
 
 def build_user_message(bucket: BucketResult) -> str:
@@ -369,14 +443,24 @@ def _parse_llm_json(raw: str) -> dict:
 _ASPAS_CHARS = "\"'“”‘’«»‹›"
 
 
+_ASPAS_RE = re.compile(r"\\?[" + re.escape(_ASPAS_CHARS) + r"]")
+
+
 def _remover_aspas(texto: str) -> tuple[str, bool]:
     """Remoção MECÂNICA (não reescrita) de aspas de citação. Retorna
-    (texto_limpo, houve_remocao)."""
+    (texto_limpo, houve_remocao).
+
+    v1.7.1 — bugfix: a remoção trocava só o CARACTERE de aspas por "", então
+    uma citação escapada (`\\"A Cura\\"`, do jeito que o texto às vezes sai
+    de dentro de um valor JSON) virava `\\A Cura\\` — a aspas sumia, a
+    contrabarra de escape ficava, publicada ao vivo em `cure` e
+    `the-invite-2026` (v1.7.0). Agora a contrabarra que precede a aspas é
+    removida junto, como uma unidade — nunca uma contrabarra sozinha em
+    outro lugar do texto, só a que está imediatamente antes de uma aspas.
+    """
     if not any(c in texto for c in _ASPAS_CHARS):
         return texto, False
-    limpo = texto
-    for c in _ASPAS_CHARS:
-        limpo = limpo.replace(c, "")
+    limpo = _ASPAS_RE.sub("", texto)
     limpo = re.sub(r"[ \t]{2,}", " ", limpo).strip()
     return limpo, True
 
@@ -703,6 +787,33 @@ misturam.
 - Continua PROIBIDO inventar um número-síntese do filme (nota média, score, \
 "X de 10", "nota N"): os shares por faixa são a ÚNICA quantificação \
 permitida, e são três números, nunca um só.
+
+MARCAÇÃO DE PERSPECTIVA (v1.5.0 — motivada pela regra de REGISTRO abaixo): \
+ao reduzir os verbos de reporte, a fala de um grupo minoritário pode soar \
+como fato do narrador — porque ela chega depois de o texto já ter \
+estabelecido a leitura dominante. Cada grupo do relatório vem com uma \
+`marcacao_perspectiva` PRÉ-COMPUTADA (nenhuma/simples/antecipada, a partir \
+do share_real — você NÃO calcula nem escolhe esse valor):
+- TODO trecho que falar de um grupo precisa conter ao menos uma ANCORAGEM \
+de perspectiva para ele; para o grupo DOMINANTE, o próprio rótulo de peso \
+já cumpre esse papel ("quem gostou é a grande maioria das notas (~74%)" já \
+ancora — nenhum marcador extra é exigido).
+- marcacao_perspectiva="simples": além da abertura, inclua ao menos UM \
+marcador de perspectiva DENTRO do trecho que fala desse grupo (ex.: "para \
+eles", "para esse grupo", "nessa leitura", "quem está nessa faixa").
+- marcacao_perspectiva="antecipada": o marcador interno precisa vir ANTES \
+da primeira afirmação substantiva sobre esse grupo, não no fim do trecho.
+- Um marcador de perspectiva NÃO é um verbo de reporte e NÃO conta para o \
+limite da regra (f) de REGISTRO: "para eles o humor é previsível" é \
+marcação; "eles apontam que o humor é previsível" é reporte e continua \
+limitado.
+- É PROIBIDO um marcador com carga depreciativa ("apenas para eles", "só \
+para esses poucos") — a perspectiva minoritária continua apresentada com \
+respeito (mesma RESPEITO À MINORIA acima).
+Para CADA marcador de perspectiva que você usar, registre em \
+`marcadores_perspectiva` (ver formato de saída) o grupo e o TRECHO EXATO, \
+copiado literalmente da narrativa, onde ele aparece.
+
 """
 
 
@@ -745,16 +856,27 @@ sinopse oficial é tratada com a mesma cautela).
 h. FORMA: português do Brasil, SEM aspas de citação, SEM subtítulos ou \
 rótulos dos movimentos no texto final, entre 250 e 400 palavras ao todo.
 
+NOTA SOBRE ESTILO (v1.6.0): não se preocupe com ritmo, variação de frase ou \
+elegância da prosa. Um ESTÁGIO SEGUINTE de edição cuida disso, e ele NÃO \
+pode alterar nenhum número, rótulo ou atribuição que você escrever. Sua \
+única responsabilidade é dizer a verdade com a estrutura acima — escreva de \
+forma clara e gramaticalmente correta, e deixe o polimento para depois.
+
 Responda APENAS com JSON puro no formato: {"narrativa": "<seu texto>", \
 "consensos_usados": [{"propriedade": "<nome curto da propriedade \
 descritiva>", "grupos_de_origem": ["<negativas|medianas|positivas>", ...], \
 "temas_de_origem": ["<nome EXATO do tema, copiado do relatório>", ...]}], \
 "quantificadores_usados": [{"quantificador": "<a expressão de frequência \
 EXATA que você escreveu na prosa>", "tema": "<nome EXATO do tema, copiado \
-do relatório, de onde ela vem>"}]}. `consensos_usados` pode ser `[]` se o \
-MOVIMENTO 2 não usou nenhuma propriedade consensual (ver OMISSÃO \
-AUTORIZADA); `quantificadores_usados` pode ser `[]` se a prosa não \
-quantificou nenhum tema."""
+do relatório, de onde ela vem>"}], "marcadores_perspectiva": [{"grupo": \
+"<negativas|medianas|positivas>", "trecho": "<o trecho EXATO da narrativa, \
+copiado literalmente, onde o marcador de perspectiva desse grupo \
+aparece>"}]}. `consensos_usados` pode ser `[]` se o MOVIMENTO 2 não usou \
+nenhuma propriedade consensual (ver OMISSÃO AUTORIZADA); \
+`quantificadores_usados` pode ser `[]` se a prosa não quantificou nenhum \
+tema; `marcadores_perspectiva` pode ser `[]` quando nenhum grupo do \
+relatório exige marcação de perspectiva (regra específica, presente só \
+quando o relatório trouxer distribuição real de notas)."""
 
 
 # Prompt histórico (sem distribuição) — mantido como CONSTANTE com o mesmo
@@ -983,8 +1105,16 @@ def conferencia_quantificador(output: dict, tema_nome: str) -> tuple[int, str] |
 #   pct == 70 -> "a maioria"              (empata com a grande maioria)
 # Nota: por isso "a grande maioria" começa de fato em 71%, não em 70% —
 # subestimar o peso é aceitável, inflar não é.
+# v1.6.0 — faixa NOVA no extremo fraco: "uma fração mínima" (<5%). Motivo
+# (observado em `cidade-de-deus`, shares 91/8/1): 8% e 1% recebiam ambos
+# "uma pequena minoria", achatando uma diferença de OITO VEZES entre os dois
+# grupos minoritários. A faixa nova separa o "muito pouco" do "quase nada"
+# sem tocar nas demais fronteiras. Convenção de desempate inalterada (itera
+# do mais fraco ao mais forte, primeiro match vence => `pct == 5` resolve
+# para "uma pequena minoria", o mais fraco dos dois que batem).
 _BANDAS_PESO_FRACA_PARA_FORTE = [
-    ("uma pequena minoria", 0, 10, False),
+    ("uma fração mínima", 0, 5, False),
+    ("uma pequena minoria", 5, 10, False),
     ("uma minoria", 10, 25, True),
     ("uma parcela expressiva", 25, 45, True),
     ("a maioria", 45, 70, True),
@@ -1018,6 +1148,55 @@ def _rotulos_ate(rotulo: str) -> list[str]:
     return ordem[: ordem.index(rotulo) + 1] if rotulo in ordem else [rotulo]
 
 
+# --- Marcação de perspectiva pré-computada (v1.5.0) ---
+# Motivação: a regra de REGISTRO (v1.5.0) reduz os verbos de reporte a no
+# máximo 1 por movimento — mas isso tem um efeito colateral: a fala de um
+# grupo minoritário, sem "eles apontam que", pode soar como fato do narrador,
+# porque chega depois de o texto já ter estabelecido a leitura dominante. A
+# marcação é pré-computada a partir do share_real (MESMO princípio das demais
+# pré-computações do §D2: o LLM não decide o valor, só o usa) — depende do
+# dado real, por isso só existe quando há distribuição (o mesmo motivo pelo
+# qual não dá para usar a COTA de coleta aqui: usar 50/20/30 apresentaria a
+# cota como se fosse prevalência, o exato defeito que a v1.2.1 proíbe).
+#
+# Limiares (ponto de partida, calibráveis — não há evidência empírica ainda
+# que os justifique com precisão, ao contrário das faixas de quantificador/
+# peso, que vieram de casos reais observados):
+#   share > dominante/3   -> "nenhuma"     (grupo grande o bastante por si)
+#   share <= dominante/3  -> "simples"     (1 marcador em algum lugar do trecho)
+#   share <= dominante/10 -> "antecipada"  (marcador ANTES da 1ª afirmação)
+# A condição mais restritiva (antecipada) é checada primeiro: um share que
+# satisfaz dominante/10 também satisfaz dominante/3, e "antecipada" implica
+# "simples" (o marcador continua lá, só que mais cedo).
+def _dominante_share(pesos: dict[str, tuple[int, str]]) -> int | None:
+    """Maior share_real entre os grupos com peso, ou None se `pesos` vazio
+    (sem distribuição — não há o que ser dominante)."""
+    if not pesos:
+        return None
+    return max(pct for pct, _rot in pesos.values())
+
+
+def _marcacao_perspectiva(pct: int, dominante: int | None) -> str:
+    """Classifica um grupo (nenhuma/simples/antecipada) a partir do seu
+    share_real e do share_real do grupo dominante do filme."""
+    if not dominante:  # None ou 0 -> nada é dominante o bastante para exigir
+        return "nenhuma"
+    if pct <= dominante / 10:
+        return "antecipada"
+    if pct <= dominante / 3:
+        return "simples"
+    return "nenhuma"
+
+
+def _marcacoes_por_bucket(pesos: dict[str, tuple[int, str]]) -> dict[str, str]:
+    """{bucket: marcacao_perspectiva} para os buckets que TÊM share real.
+    Vazio quando `pesos` é vazio (sem distribuição) — mesmo padrão de
+    `_pesos_por_bucket`: o vazio é o próprio fallback, sem flag extra."""
+    dominante = _dominante_share(pesos)
+    return {nome: _marcacao_perspectiva(pct, dominante)
+            for nome, (pct, _rot) in pesos.items()}
+
+
 def _pesos_por_bucket(output: dict) -> dict[str, tuple[int, str]]:
     """{bucket: (share_real, rótulo)} para os buckets que TÊM share real.
 
@@ -1041,12 +1220,18 @@ def _ancoragem_de_peso_ok(texto: str, pesos: dict[str, tuple[int, str]]) -> bool
     permissiva — a defesa principal é a instrução; isto é rede de segurança
     para o caso de o narrador simplesmente ignorar os pesos e escrever a
     narrativa antiga, que é o modo de falha que importa detectar.
+
+    v1.6.1 — bugfix: `f"{pct}%" in t` era substring solta, então "1%" batia
+    DENTRO de "91%" — um grupo de 1% podia ser dado como ancorado só por
+    coincidência com o percentual de outro grupo (91%), mascarando um
+    `peso_nao_ancorado` real. Mesma causa raiz de `_ancora_de_grupo` (ver
+    ali); agora exige que o dígito não seja precedido por outro dígito.
     """
     t = texto.lower()
     for pct, rotulo in pesos.values():
         if any(r in t for r in _rotulos_ate(rotulo)):
             continue
-        if f"{pct}%" in t:
+        if re.search(rf"(?<!\d){pct}%", t):
             continue
         return False
     return True
@@ -1064,8 +1249,9 @@ _PESO_SUBSTANTIVOS_PROIBIDOS = ("reviews", "público", "publico", "espectadores"
 # analisadas" é a forma CORRETA exigida pela regra (d) — flaggá-la marcaria
 # prosa certa. O caso de "a maioria" usado como peso é coberto pela segunda
 # passada, ancorada no percentual (que só acompanha peso).
-_ROTULOS_PESO_INEQUIVOCOS = ("uma pequena minoria", "uma minoria",
-                             "uma parcela expressiva", "a grande maioria")
+_ROTULOS_PESO_INEQUIVOCOS = ("uma fração mínima", "uma pequena minoria",
+                             "uma minoria", "uma parcela expressiva",
+                             "a grande maioria")
 
 
 def _janela_troca_notas_por_outro(janela: str) -> bool:
@@ -1145,6 +1331,7 @@ def _serialize_output_for_narrator(output: dict) -> str:
         linhas.append("")
 
     pesos = _pesos_por_bucket(output)
+    marcacoes = _marcacoes_por_bucket(pesos)
     if pesos:
         distrib = output.get("distribuicao") or {}
         linhas.append(
@@ -1156,7 +1343,8 @@ def _serialize_output_for_narrator(output: dict) -> str:
         for nome, (pct, _rot) in pesos.items():
             linhas.append(
                 f'  {nome}: share_real {pct}% · rotulo_peso: '
-                f'"{_rotulo_peso_completo(pct)}"')
+                f'"{_rotulo_peso_completo(pct)}" · marcacao_perspectiva: '
+                f'"{marcacoes[nome]}"')
         linhas.append("")
 
     rotulo = {"negativas": "NÃO GOSTARAM", "medianas": "FICARAM NO MEIO",
@@ -1166,7 +1354,8 @@ def _serialize_output_for_narrator(output: dict) -> str:
         intervalo = _intervalo_bucket(nome) if nome in BUCKETS else ""
         peso_txt = ""
         if nome in pesos:
-            peso_txt = f' · rotulo_peso: "{_rotulo_peso_completo(pesos[nome][0])}"'
+            peso_txt = (f' · rotulo_peso: "{_rotulo_peso_completo(pesos[nome][0])}"'
+                        f' · marcacao_perspectiva: "{marcacoes[nome]}"')
         linhas.append(
             f"GRUPO {nome.upper()} ({rotulo.get(nome, '')}, {intervalo}) — "
             f"{b.get('n_validas', 0)} reviews analisadas · "
@@ -1238,6 +1427,281 @@ def _normalizar_consensos(consensos: list) -> list[dict]:
     return out
 
 
+# --- v1.5.0: telemetria/validação de marcadores_perspectiva ---
+# "Antecipada" na SPEC significa "antes da PRIMEIRA AFIRMAÇÃO SUBSTANTIVA
+# sobre aquele grupo" — não antes do movimento inteiro. No exemplo de estilo
+# do prompt, o marcador da minoria ("Para eles...") vem DEPOIS da frase que
+# ANCORA o grupo ("Já uma pequena minoria (~3%) não entra na brincadeira"),
+# só que na frase SEGUINTE — antes de qualquer afirmação de conteúdo sobre
+# esse grupo. A checagem aproxima isso por FRASE (não por parágrafo): acha a
+# frase onde o grupo é ancorado (rótulo de peso ou percentual) e exige que o
+# marcador apareça naquela mesma frase ou na imediatamente seguinte.
+
+def _ancora_de_grupo(texto: str, pct: int, rotulo: str) -> int | None:
+    """Índice (char, minúsculas) da primeira menção ao rótulo de peso do
+    grupo (ou um mais fraco — mesmo critério de `_ancoragem_de_peso_ok`) ou
+    ao seu percentual. None se nada for encontrado.
+
+    v1.6.1 — bugfix: a busca pelo percentual usava substring solta
+    (`t.find(f"{pct}%")`), que casa "1%" DENTRO de "91%" — descoberto ao
+    vivo no `cidade-de-deus` real (shares 1/8/91): a âncora de `negativas`
+    (1%) "encontrava" o "1" final de "(~91%)" de `positivas`, muito antes
+    da menção real, corrompendo o MOVIMENTO inteiro e produzindo falso
+    positivo em `perspectiva_nao_marcada`. A busca agora exige que o
+    percentual não seja precedido por outro dígito (`(?<!\\d)`), então "1%"
+    só casa como número de fato, nunca como sufixo de "91%"/"21%"/etc.
+    """
+    t = texto.lower()
+    candidatos = [t.find(r) for r in _rotulos_ate(rotulo) if t.find(r) != -1]
+    m_pct = re.search(rf"(?<!\d){pct}%", t)
+    if m_pct:
+        candidatos.append(m_pct.start())
+    return min(candidatos) if candidatos else None
+
+
+def _indice_frase_de(frases: list[str], texto: str, idx_char: int) -> int | None:
+    """Índice (0-based) da frase de `frases` (saída de `_dividir_frases`)
+    que contém o caractere de posição `idx_char` no `texto` original —
+    reconstrói offsets por busca sequencial, já que as frases preservam a
+    ordem de aparição."""
+    if idx_char is None:
+        return None
+    cursor = 0
+    for i, f in enumerate(frases):
+        pos = texto.find(f, cursor)
+        if pos == -1:
+            continue
+        fim = pos + len(f)
+        if pos <= idx_char <= fim:
+            return i
+        cursor = fim
+    return None
+
+
+def _span_de_movimento(texto: str, grupo: str,
+                       pesos: dict[str, tuple[int, str]]) -> tuple[int, int] | None:
+    """(início, fim) do trecho de `texto` associado a `grupo` (v1.6.1) — do
+    ponto em que o grupo é ANCORADO (rótulo de peso ou percentual) até a
+    âncora do PRÓXIMO grupo que aparece depois dele, ou o fim do texto.
+
+    Aproximação do "movimento daquele grupo", no mesmo espírito de
+    `_indice_frase_de`: os movimentos não têm marcação estrutural no texto
+    final (o prompt proíbe subtítulos), então a fronteira é inferida pela
+    ORDEM em que os grupos são ancorados — coerente com a regra do §D2 de
+    que o MOVIMENTO 3 segue a ordem de peso. None se o grupo não tiver peso
+    ou não estiver ancorado no texto (nesse caso `_ancoragem_de_peso_ok`,
+    checagem separada, já cobre o defeito)."""
+    if grupo not in pesos:
+        return None
+    pct, rotulo = pesos[grupo]
+    inicio = _ancora_de_grupo(texto, pct, rotulo)
+    if inicio is None:
+        return None
+    seguintes = [
+        idx for g, (p, r) in pesos.items() if g != grupo
+        for idx in [_ancora_de_grupo(texto, p, r)]
+        if idx is not None and idx > inicio
+    ]
+    fim = min(seguintes) if seguintes else len(texto)
+    return inicio, fim
+
+
+def _ocorrencias_de_atribuicao(texto: str, inicio: int, fim: int) -> list[int]:
+    """Índices ABSOLUTOS (no `texto` completo) de toda ocorrência de uma
+    expressão de atribuição reconhecida (`_EXPRESSOES_DE_PERSPECTIVA`)
+    dentro de `texto[inicio:fim]`, busca case-insensitive."""
+    janela = texto[inicio:fim].lower()
+    ocorrencias = []
+    for e in _EXPRESSOES_DE_PERSPECTIVA:
+        pos = 0
+        while True:
+            i = janela.find(e, pos)
+            if i == -1:
+                break
+            ocorrencias.append(inicio + i)
+            pos = i + len(e)
+    return sorted(ocorrencias)
+
+
+def _marcadores_validos(marcadores: list, texto: str,
+                        marcacoes: dict[str, str],
+                        pesos: dict[str, tuple[int, str]]) -> bool:
+    """True se, para TODO grupo com `marcacao_perspectiva != "nenhuma"`: (a)
+    o MOVIMENTO daquele grupo (§`_span_de_movimento`) contém alguma
+    expressão de atribuição reconhecida (`_EXPRESSOES_DE_PERSPECTIVA`); (b)
+    para `marcacao_perspectiva == "antecipada"`, PELO MENOS UMA dessas
+    ocorrências aparece na mesma frase em que o grupo é ancorado (rótulo de
+    peso/percentual) ou na imediatamente seguinte. Vacuamente válido quando
+    `marcacoes` é vazio (sem distribuição) ou nenhum grupo exige marcação.
+
+    `marcadores` (o que o LLM DECLAROU em `marcadores_perspectiva`) não
+    participa mais desta checagem — ver `_normalizar_marcadores`, que
+    continua persistindo a declaração como TELEMETRIA de auditoria humana,
+    e o changelog v1.6.1 para o porquê.
+
+    **v1.6.1 — por que a checagem passou a escanear o TEXTO, não o
+    `trecho` declarado:** a v1.6.0 já tinha corrigido dois defeitos aqui
+    (bastar UM marcador bem posicionado por grupo; normalizar caixa/acento/
+    demonstrativo antes de comparar), mas um caso real do `cidade-de-deus`
+    continuou dando falso positivo mesmo depois: o narrador declarou
+    *"Para esse grupo, muitos reconhecem…"* e escreveu na prosa *"Muitos
+    NESTE grupo reconhecem…"* — divergência de ORDEM DAS PALAVRAS, não de
+    grafia, que nenhuma normalização de caixa/acento fecha. Fechar por
+    comparação difusa (similaridade com limiar) foi descartado: um limiar é
+    uma linha arbitrária, e a checagem existe para confirmar que o marcador
+    de perspectiva EXISTE no texto — não que a frase declarada é uma
+    transcrição fiel dele. A correção pela raiz é verificar exatamente essa
+    existência: procurar, no trecho de texto associado ao grupo, qualquer
+    expressão da MESMA lista que `montar_protegidos` já usa para reconhecer
+    atribuição (`_EXPRESSOES_DE_PERSPECTIVA`) — fonte única, sem duplicação.
+    """
+    frases = _dividir_frases(texto)
+    for grupo, marcacao in marcacoes.items():
+        if marcacao == "nenhuma":
+            continue
+        span = _span_de_movimento(texto, grupo, pesos)
+        if span is None:
+            return False
+        ocorrencias = _ocorrencias_de_atribuicao(texto, *span)
+        if not ocorrencias:
+            return False
+        if marcacao == "antecipada":
+            pct, rotulo = pesos[grupo]
+            si_ancora = _indice_frase_de(
+                frases, texto, _ancora_de_grupo(texto, pct, rotulo))
+            cedo = any(
+                si_ancora is not None
+                and _indice_frase_de(frases, texto, idx) in (si_ancora, si_ancora + 1)
+                for idx in ocorrencias
+            )
+            if not cedo:
+                return False
+    return True
+
+
+def _normalizar_marcadores(marcadores: list) -> list[dict]:
+    out = []
+    for m in marcadores or []:
+        if not isinstance(m, dict):
+            continue
+        out.append({
+            "grupo": str(m.get("grupo", "")),
+            "trecho": str(m.get("trecho", "")),
+        })
+    return out
+
+
+# --- v1.5.0: telemetria de fluência (pós-parsing, código) ---
+# Diagnóstico (registrado no changelog): o acúmulo de invariantes de
+# honestidade (peso ancorado, quantificador pré-computado, escopo por
+# grupo...) levou o modelo à ÚNICA forma sintática que satisfaz todas
+# simultaneamente — rótulo de peso + verbo de reporte + complemento,
+# repetida três vezes, frases de 25-35 palavras quase sem variação. As
+# métricas abaixo tornam esse padrão MENSURÁVEL: o código não reescreve a
+# prosa, só mede e sinaliza — mesma filosofia das demais telemetrias do §D2.
+
+_VERBOS_REPORTE_STEMS = (
+    "elogi", "destac", "apont", "relat", "consider", "classific",
+    "mencion", "ressalt", "reconhec", "express", "descrev",
+)
+_RE_VERBO_REPORTE = re.compile(
+    r"\b(?:" + "|".join(_VERBOS_REPORTE_STEMS) + r")\w*", re.IGNORECASE)
+
+# Lista fechada e literal (não é NLP) — os quatro exemplos da regra (h) mais
+# sinônimos comuns da mesma família de intensificador. Deliberadamente NÃO
+# cobre todo advérbio em -mente (ex. "praticamente"/"geralmente" não são
+# intensificadores) — heurística restrita, como as demais do módulo.
+_ADVERBIOS_INTENSIFICADORES = {
+    "intensamente", "profundamente", "extremamente", "excessivamente",
+    "totalmente", "completamente", "absolutamente", "imensamente",
+    "tremendamente", "surpreendentemente", "extraordinariamente",
+    "impressionantemente", "brutalmente", "fortemente",
+}
+
+_RE_FRASE = re.compile(r"[^.!?]+[.!?]+|[^.!?]+$")
+_RE_PALAVRA = re.compile(r"[^\W\d_]+", re.UNICODE)
+
+
+def _dividir_frases(texto: str) -> list[str]:
+    """Divisão simples por pontuação de fim de frase (.!?) — heurística, não
+    trata abreviações; suficiente para telemetria de estilo, propositalmente
+    imperfeita como o resto do módulo."""
+    return [f.strip() for f in _RE_FRASE.findall(texto) if f.strip()]
+
+
+def _n_palavras(frase: str) -> int:
+    return len(_RE_PALAVRA.findall(frase))
+
+
+def _primeira_palavra(frase: str) -> str:
+    m = _RE_PALAVRA.search(frase)
+    return m.group(0).lower() if m else ""
+
+
+def _metricas_fluencia(texto: str) -> dict:
+    """Calcula as métricas de ritmo sobre o texto final da narrativa.
+
+    `cv_comprimento` = desvio padrão ÷ média de palavras por frase — mede
+    VARIAÇÃO de comprimento (a regra de ritmo pede variação, não frases
+    curtas o tempo todo). `aberturas_repetidas` conta pares de frases
+    CONSECUTIVAS que começam pela mesma primeira palavra (normalizada,
+    minúscula) — proxy barato para "mesma estrutura de abertura" (regra b),
+    não uma análise sintática real.
+    """
+    frases = _dividir_frases(texto)
+    n_frases = len(frases)
+    if n_frases == 0:
+        return {
+            "n_frases": 0, "media_palavras": 0.0, "cv_comprimento": 0.0,
+            "frase_mais_curta": 0, "aberturas_repetidas": 0,
+            "verbos_reporte": 0, "adverbios_mente": 0,
+        }
+    comprimentos = [_n_palavras(f) for f in frases]
+    media = sum(comprimentos) / n_frases
+    variancia = sum((c - media) ** 2 for c in comprimentos) / n_frases
+    desvio = variancia ** 0.5
+    cv = (desvio / media) if media > 0 else 0.0
+
+    aberturas = [_primeira_palavra(f) for f in frases]
+    aberturas_repetidas = sum(
+        1 for i in range(1, n_frases)
+        if aberturas[i] and aberturas[i] == aberturas[i - 1]
+    )
+
+    palavras_lower = [w.lower() for w in _RE_PALAVRA.findall(texto)]
+    adverbios_mente = sum(1 for w in palavras_lower
+                          if w in _ADVERBIOS_INTENSIFICADORES)
+    verbos_reporte = len(_RE_VERBO_REPORTE.findall(texto))
+
+    return {
+        "n_frases": n_frases,
+        "media_palavras": round(media, 1),
+        "cv_comprimento": round(cv, 2),
+        "frase_mais_curta": min(comprimentos),
+        "aberturas_repetidas": aberturas_repetidas,
+        "verbos_reporte": verbos_reporte,
+        "adverbios_mente": adverbios_mente,
+    }
+
+
+# v1.6.0 — `_fluencia_ok` REMOVIDA, e com ela os gatilhos automáticos de
+# retentativa por métrica e a flag `fluencia_baixa`.
+#
+# Motivo (DIAGNOSTICO_FLUENCIA_V2.md): as métricas NÃO acompanham qualidade.
+# No `cure`, o texto qualitativamente melhor (thinking on) pontuou PIOR em
+# `cv_comprimento` (0.35 -> 0.28) e em `verbos_reporte` (3 -> 6) que o texto
+# pior. `cv_comprimento` mede DISPERSÃO de comprimento de frase, não
+# legibilidade: um texto com frases uniformemente boas pontua mal, e um texto
+# truncado no meio pontua bem. Otimizar contra elas — que é o que uma
+# retentativa automática faz — empurra o modelo a degradar a prosa para
+# satisfazer um número.
+#
+# `_metricas_fluencia` continua sendo calculada e persistida em
+# `metricas_fluencia`: vira telemetria de DIAGNÓSTICO para leitura humana,
+# no mesmo estatuto de `consensos_usados` — material de revisão, não critério
+# automático. O eixo de fluência passa a ser responsabilidade do editor (§E2).
+
+
 def _validar_prosa(texto: str, com_distribuicao: bool = False
                    ) -> tuple[str, bool, bool, bool, bool]:
     """Aplica as validações do §D que fazem sentido para prosa livre:
@@ -1295,11 +1759,14 @@ def narrate_output(output: dict, client_call=None, model: str | None = None,
     # sozinho para o comportamento da v1.3.1.
     pesos = _pesos_por_bucket(output)
     com_distribuicao = bool(pesos)
+    # v1.5.0: marcação de perspectiva também depende do dado real — vazio
+    # sem distribuição, mesmo padrão de `pesos`.
+    marcacoes = _marcacoes_por_bucket(pesos)
     system = build_narrator_prompt(com_distribuicao)
     user = _serialize_output_for_narrator(output)
     tem_tema_forte = _algum_tema_tem_fracao_forte(output)
 
-    def _uma_chamada(sys_prompt: str) -> tuple[str, list, list] | None:
+    def _uma_chamada(sys_prompt: str) -> tuple[str, list, list, list] | None:
         raw = call(sys_prompt, user, model)
         try:
             data = _parse_llm_json(raw)
@@ -1311,7 +1778,10 @@ def narrate_output(output: dict, client_call=None, model: str | None = None,
         quantificadores = data.get("quantificadores_usados")
         if not isinstance(quantificadores, list):
             quantificadores = []
-        return str(data.get("narrativa", "")), consensos, quantificadores
+        marcadores = data.get("marcadores_perspectiva")
+        if not isinstance(marcadores, list):
+            marcadores = []
+        return str(data.get("narrativa", "")), consensos, quantificadores, marcadores
 
     def _quantificador_bucket_ok(texto: str) -> bool:
         """Rede de segurança da v1.2.3 (nível de BUCKET) — mantida em vigor."""
@@ -1329,7 +1799,7 @@ def narrate_output(output: dict, client_call=None, model: str | None = None,
         # Sem distribuição não há o que ancorar: vacuamente OK.
         return _ancoragem_de_peso_ok(texto, pesos) if com_distribuicao else True
 
-    prosa, consensos_brutos, quantificadores_brutos = resultado
+    prosa, consensos_brutos, quantificadores_brutos, marcadores_brutos = resultado
     texto, idioma_ok, escopo_ok, prevalencia_ok, aspas_removidas = _validar_prosa(
         prosa, com_distribuicao)
     quant_bucket_ok = _quantificador_bucket_ok(texto)
@@ -1337,14 +1807,20 @@ def narrate_output(output: dict, client_call=None, model: str | None = None,
     consensos_ok = _consensos_validos(consensos_brutos, output)
     ancoragem_ok = _ancoragem_ok(texto)
     vocabulario_ok = _vocabulario_peso_ok(texto, pesos)
+    marcadores_ok = _marcadores_validos(marcadores_brutos, texto, marcacoes, pesos)
+    # v1.6.0: métricas viram DIAGNÓSTICO — calculadas e persistidas, mas sem
+    # gatilho de retentativa (ver nota em `_metricas_fluencia`).
+    metricas = _metricas_fluencia(texto)
 
     # 1 retentativa combinada se idioma, escopo, prevalência, quantificador
     # (nível de bucket, v1.2.3, ou por par declarado, v1.4.1), consensos_usados
-    # (v1.3.1), ancoragem de peso (v1.4.0) e/ou vocabulário do peso (v1.4.1)
-    # falharem.
+    # (v1.3.1), ancoragem de peso (v1.4.0), vocabulário do peso (v1.4.1) ou
+    # marcadores de perspectiva (v1.5.0) falharem. Fluência saiu desta lista
+    # na v1.6.0 — é responsabilidade do editor (§E2), não do narrador.
     if not idioma_ok or not escopo_ok or not prevalencia_ok \
             or not quant_bucket_ok or not quant_declarado_ok \
-            or not consensos_ok or not ancoragem_ok or not vocabulario_ok:
+            or not consensos_ok or not ancoragem_ok or not vocabulario_ok \
+            or not marcadores_ok:
         reforco = _REFORCO_VALIDACAO + _REFORCO_QUANTIFICADOR
         # o reforço de prevalência PROÍBE falar de peso — anexá-lo com
         # distribuição presente contradiria a regra (c) invertida.
@@ -1358,9 +1834,11 @@ def narrate_output(output: dict, client_call=None, model: str | None = None,
             reforco += _REFORCO_ANCORAGEM
         if not vocabulario_ok:
             reforco += _REFORCO_VOCABULARIO_PESO
+        if not marcadores_ok:
+            reforco += _REFORCO_MARCADORES
         retry = _uma_chamada(system + reforco)
         if retry is not None:
-            prosa2, consensos2, quantificadores2 = retry
+            prosa2, consensos2, quantificadores2, marcadores2 = retry
             t2, i2, e2, p2, a2 = _validar_prosa(prosa2, com_distribuicao)
             texto, idioma_ok, escopo_ok, prevalencia_ok = t2, i2, e2, p2
             aspas_removidas = aspas_removidas or a2
@@ -1372,6 +1850,9 @@ def narrate_output(output: dict, client_call=None, model: str | None = None,
             consensos_ok = _consensos_validos(consensos_brutos, output)
             ancoragem_ok = _ancoragem_ok(texto)
             vocabulario_ok = _vocabulario_peso_ok(texto, pesos)
+            marcadores_brutos = marcadores2
+            marcadores_ok = _marcadores_validos(marcadores_brutos, texto, marcacoes, pesos)
+            metricas = _metricas_fluencia(texto)
 
     return NarrativaResult(
         texto=texto,
@@ -1387,4 +1868,415 @@ def narrate_output(output: dict, client_call=None, model: str | None = None,
         peso_nao_ancorado=not ancoragem_ok,
         quantificadores_usados=_normalizar_quantificadores(quantificadores_brutos),
         vocabulario_peso_suspeito=not vocabulario_ok,
+        marcadores_perspectiva=_normalizar_marcadores(marcadores_brutos),
+        perspectiva_nao_marcada=not marcadores_ok,
+        metricas_fluencia=metricas,
+    )
+
+
+# =====================================================================
+# [E2] Editor — passe de EDIÇÃO pós-narrador (SPEC §E2, v1.6.0)
+# =====================================================================
+# Por que existe: até a v1.5.0, um único prompt acumulava honestidade
+# (números, rótulos, atribuição, anti-spoiler) E fluência (ritmo, registro).
+# O diagnóstico mostrou que isso falhou em três frentes — as regras de ritmo
+# não transferiram entre filmes, as métricas que as fiscalizavam não
+# acompanhavam qualidade, e a configuração de produção chegou a publicar uma
+# frase agramatical. A v1.6.0 separa: o narrador (§D2) responde por VERDADE,
+# o editor (§E2) por LEITURA — e o editor é estruturalmente incapaz de
+# mentir, porque não recebe nenhuma fonte de fato (nem buckets, nem reviews,
+# nem ficha), só o texto já validado e a lista de trechos intocáveis.
+
+_EDITOR_SYSTEM_PROMPT = """\
+Você é um EDITOR de texto. Recebe um texto pronto sobre a recepção de um \
+filme e o reescreve para que ele SOE MELHOR — sem mudar nada do que ele diz.
+
+Você NÃO tem acesso aos dados de origem. Tudo o que você pode afirmar já \
+está no texto recebido; não há nada a acrescentar, e você não teria como \
+verificar nada que inventasse.
+
+REGRA INVIOLÁVEL — TRECHOS PROTEGIDOS: junto do texto você recebe uma lista \
+de TRECHOS PROTEGIDOS. Cada um deles precisa aparecer no seu texto final \
+EXATAMENTE como foi entregue — mesmos caracteres, mesma pontuação, mesmos \
+números, sem reformulação, sem sinônimo, sem reordenar as palavras dentro \
+do trecho. Você pode mover um trecho protegido para outro ponto da frase ou \
+do parágrafo, e pode reescrever tudo em volta dele; o que não pode é alterar \
+o trecho por dentro. Se uma melhoria de ritmo exigir quebrar um trecho \
+protegido, NÃO faça a melhoria — o trecho vence. EXCEÇÃO ÚNICA: se mover um \
+trecho protegido para o meio de uma frase deixar a letra inicial dele com a \
+caixa errada (maiúscula que devia virar minúscula, ou o contrário), você \
+PODE ajustar só essa primeira letra — nenhuma outra letra, palavra, número \
+ou pontuação do trecho.
+
+TAMBÉM PROIBIDO:
+- adicionar, remover ou alterar QUALQUER número ou percentual, mesmo fora \
+dos trechos protegidos;
+- adicionar, remover ou alterar nome próprio (de pessoa, filme, lugar);
+- adicionar, remover ou alterar qualquer afirmação factual — se o texto diz \
+que um grupo achou o ritmo lento, o seu texto diz a mesma coisa;
+- acrescentar informação que não esteja no texto recebido, inclusive \
+conhecimento seu sobre o filme;
+- trocar a quem uma opinião é atribuída.
+
+O QUE VOCÊ DEVE FAZER:
+
+RITMO:
+- alterne períodos longos (30-50 palavras) com frases curtas (3-10 palavras);
+- o texto final precisa ter pelo menos UMA frase de até 10 palavras;
+- não abra dois períodos seguidos com a mesma estrutura;
+- use conectivos de fala ("só que", "aí", "já", "e", "mas"); pode iniciar \
+período por conjunção.
+
+REGISTRO:
+- prefira verbos a nominalizações: "as situações se repetem e o filme cansa", \
+não "a repetição das situações torna a experiência cansativa";
+- no máximo UM advérbio terminado em -mente no texto inteiro;
+- reduza verbos de reporte (elogia, destaca, aponta, relata, considera, \
+classifica, menciona, ressalta, reconhece) quando já estiver claro de quem é \
+a opinião — MAS nunca à custa de um trecho protegido, e nunca apagando a \
+atribuição de quem pensa o quê.
+
+TOM: alguém contando de um filme para um amigo. Fluido e leve, mas SEM \
+gíria, SEM emoji, SEM interpelação direta ao leitor ("você vai adorar"), SEM \
+hipérbole, SEM aspas de citação.
+
+GRAMÁTICA (obrigatório): cada período do texto final precisa ser uma frase \
+completa e correta em português do Brasil — sujeito e predicado coerentes, \
+concordância certa, sem anacoluto. Se o texto recebido contiver um período \
+quebrado ou truncado, CORRIGI-LO É OBRIGATÓRIO; essa é a única situação em \
+que você reescreve a estrutura de uma frase por necessidade, e mesmo assim \
+preservando o que ela afirma e os trechos protegidos que ela contém. Isso \
+vale mesmo quando o defeito ocorre perto de um trecho protegido ou o \
+encosta ("destacando a a maioria o estilo visual", "de de", artigo ou \
+preposição repetidos): CORRIGIR É OBRIGATÓRIO, contanto que o trecho \
+protegido em si permaneça intacto por dentro — o que pode mudar é a \
+palavra ao lado dele, nunca ele mesmo.
+
+TAMANHO: o texto final deve ter entre 220 e 400 palavras.
+
+EXEMPLO DE RITMO COM FILME FICTÍCIO — nunca reaproveitar seu conteúdo. O \
+filme abaixo NÃO EXISTE e os números são INVENTADOS: servem só para mostrar \
+a FORMA (variação de comprimento, aberturas diferentes, atribuição \
+preservada). Copiar qualquer fato, adjetivo ou número daqui seria inventar \
+informação.
+
+ANTES (ritmo monótono):
+"A grande maioria das notas (~74%) elogia intensamente a condução do filme \
+e o trabalho de câmera, destacando a habilidade de sustentar o clima em \
+cena. Uma minoria das notas (~19%) reconhece a competência técnica, mas \
+sente que a indefinição do meio e a duração prolongada tornam a experiência \
+cansativa na segunda metade. Uma pequena minoria (~7%) classifica o ritmo \
+como arrastado e os personagens como estáticos."
+
+DEPOIS (ritmo desejado — mesmos fatos, mesmos números, mesma atribuição):
+"Quem gostou é a grande maioria das notas (~74%), e o elogio se concentra \
+num ponto só: o filme não tem pressa e usa isso a favor, porque cada \
+silêncio entre os dois protagonistas pesa mais que a cena anterior. Uma \
+minoria das notas (~19%) chega até a metade junto. Para esse grupo, o \
+problema aparece quando a história precisa decidir para onde vai, e não \
+decide. Já uma pequena minoria (~7%) não embarca em momento nenhum. Para \
+eles a lentidão nunca vira método, os personagens não saem do lugar, e o \
+final chega sem ter construído nada."
+
+Responda APENAS com o texto final editado. Sem preâmbulo, sem explicação, \
+sem JSON, sem aspas envolvendo o texto."""
+
+
+_REFORCO_EDITOR_PROTEGIDOS = """
+
+REFORÇO CRÍTICO — sua edição anterior QUEBROU trechos protegidos. Os \
+trechos abaixo precisam aparecer no texto final EXATAMENTE assim, \
+caractere por caractere, e NÃO apareceram:
+{lista}
+Reescreva mantendo cada um deles intacto. Se precisar, use menos liberdade \
+de ritmo: a integridade dos trechos vem antes do estilo."""
+
+
+_REFORCO_EDITOR_NUMEROS = """
+
+REFORÇO CRÍTICO — sua edição anterior ALTEROU os números do texto. O \
+conjunto de números e percentuais do texto final tem de ser IDÊNTICO ao do \
+texto recebido: nenhum número novo, nenhum removido, nenhum modificado. \
+Não arredonde, não converta, não escreva por extenso um número que veio em \
+algarismo (nem o contrário)."""
+
+
+def _tokens_numericos(texto: str) -> list[str]:
+    """Multiconjunto ORDENADO de tokens numéricos do texto (números com ou
+    sem `~`/`%`). Usado para provar que a edição não mexeu em nenhum número:
+    a comparação é de multiconjunto, então repetições contam — trocar
+    "~79%" por "~78%" ou duplicar um número quebra a igualdade."""
+    return sorted(re.findall(r"\d[\d.,]*\s?%?", texto))
+
+
+# Expressões de atribuição de perspectiva (§D2). São elas que carregam o
+# sentido "isto é a leitura DAQUELE grupo" — o resto do período declarado é
+# conteúdo comum, que o editor precisa poder reescrever.
+_EXPRESSOES_DE_PERSPECTIVA = (
+    "quem está nessa faixa", "quem está nesta faixa",
+    "para esse grupo", "para este grupo", "neste grupo", "nesse grupo",
+    "para esse público", "para este público", "esse público", "este público",
+    "nessa leitura", "nesta leitura", "para esses", "para estes",
+    "para eles", "para elas",
+    # v1.7.1 (Tarefa 3) — família "quem gostou/não gostou/amou/...": caso
+    # real do `cure`, grupo de 3% ("quem não gostou considerou o ritmo
+    # lento e tedioso") — a construção CUMPRE a função de atribuição, só
+    # não estava na lista, e produzia falso positivo em
+    # `perspectiva_nao_marcada` mesmo com o texto honesto e bem marcado.
+    "quem gostou", "quem não gostou", "quem amou", "quem ficou no meio",
+    "para quem gostou", "para quem não gostou",
+    # "para quem" ISOLADO ficou DE FORA de propósito: é pronome relativo
+    # comum ("para quem o filme é superestimado…") e casava dentro da
+    # própria frase agramatical do `cure`, blindando o defeito que o editor
+    # tem de consertar. Todo item acima exige uma palavra a mais depois de
+    # "quem" — nunca casa com esse uso solto.
+)
+
+
+def _fatia_real(texto: str, candidato: str) -> str | None:
+    """A fatia de `texto` que casa `candidato` ignorando maiúsculas, com o
+    caixa ORIGINAL preservado — ou None se não ocorrer."""
+    i = texto.lower().find(candidato.lower())
+    return texto[i:i + len(candidato)] if i != -1 else None
+
+
+def montar_protegidos(res, output: dict) -> list[str]:
+    """Lista de TRECHOS PROTEGIDOS (§E2 3.3), montada em CÓDIGO a partir do
+    que o narrador JÁ declarou — o editor nunca escolhe o que é intocável.
+
+    Fontes: (1) rótulos de peso COMPLETOS com percentual, (2) todo token que
+    contenha dígito.
+
+    v1.7.0 — a lista foi ENXUGADA: até a v1.6.2, também protegia as
+    expressões de quantificador (`quantificadores_usados`) e de atribuição
+    de perspectiva (`marcadores_perspectiva`) literalmente. Na prática, com
+    14-16 protegidos por filme (incluindo palavras soltas como "muitos"), o
+    editor era descartado com frequência (`cure`) ou inventava frases
+    penduradas só para reencaixar um protegido no lugar novo
+    (`cidade-de-deus`: "Essa é a opinião de uma fração mínima das notas.").
+    Um defeito gramatical real da bruta ("destacando a a maioria o estilo
+    visual") sobreviveu porque "a maioria" estava protegido.
+
+    A remoção é segura porque as duas coisas JÁ TÊM verificação SEMÂNTICA
+    melhor do que a comparação literal: quantificador é conferido pelo par
+    declarado contra o rótulo pré-computado (`conferencia_quantificador`,
+    v1.4.1), e atribuição é conferida pela varredura do movimento
+    (`_marcadores_validos`, v1.6.1) — nenhuma das duas exige que a STRING
+    exata sobreviva, só que a AFIRMAÇÃO sobreviva. Proteger a string era
+    redundante com uma checagem melhor, e engessava a reescrita.
+
+    Só entram candidatos que REALMENTE aparecem no texto do narrador —
+    proteger uma string ausente tornaria a checagem impossível de satisfazer
+    (o editor seria punido por algo que o narrador não escreveu).
+    """
+    texto = res.texto or ""
+    candidatos: list[str] = []
+
+    # (1) rótulos de peso — SEMPRE com percentual, a forma canônica e as
+    # mais fracas permitidas (nunca a forma nua "___ das notas" sem
+    # percentual, que não é o que a Tarefa 2.1(a) pede para proteger).
+    for pct, rotulo in _pesos_por_bucket(output).values():
+        candidatos.append(_rotulo_peso_completo(pct))
+        for r in _rotulos_ate(rotulo):
+            candidatos.append(f"{r} das notas (~{pct}%)")
+
+    # (2) todo token numérico (percentual, ano, duração), SEM a pontuação
+    # em volta: proteger "(~3%)," blindaria o parêntese e a vírgula, e
+    # repontuar é metade do trabalho de ritmo do editor.
+    candidatos.extend(re.findall(r"~?\d[\d.,]*\s?%?", texto))
+
+    vistos: set[str] = set()
+    protegidos: list[str] = []
+    for c in candidatos:
+        c = c.strip()
+        if not c:
+            continue
+        # O protegido tem de ser a forma COMO ELA APARECE no texto: o
+        # narrador capitaliza no início de frase ("A grande maioria das
+        # notas (~79%)"), enquanto o rótulo canônico é minúsculo. Proteger a
+        # forma canônica cobraria do editor uma string que o narrador nunca
+        # escreveu. Casa case-insensitive e guarda a fatia real.
+        real = c if c in texto else _fatia_real(texto, c)
+        if real is None or real in vistos:
+            continue
+        vistos.add(real)
+        protegidos.append(real)
+    # mais longos primeiro: se um protegido contém outro, o maior é o que
+    # realmente restringe, e a lista fica legível para o modelo
+    protegidos.sort(key=len, reverse=True)
+    return protegidos
+
+
+def build_editor_user_message(texto: str, protegidos: list[str]) -> str:
+    """Entrada do editor: SÓ o texto e os trechos protegidos.
+
+    Nenhum bucket, nenhuma review, nenhuma ficha, nenhum tema — a garantia
+    anti-invenção do §E2 é estrutural, não uma instrução que o modelo possa
+    ignorar: o que não está aqui, o editor não tem como saber.
+    """
+    linhas = ["TEXTO A EDITAR:", texto, "", "TRECHOS PROTEGIDOS (reproduza cada um EXATAMENTE):"]
+    if protegidos:
+        linhas.extend(f"- {p}" for p in protegidos)
+    else:
+        linhas.append("(nenhum)")
+    return "\n".join(linhas)
+
+
+def _variante_primeira_letra(s: str) -> str:
+    """`s` com a caixa da PRIMEIRA letra alternada (maiúscula<->minúscula) e
+    o resto intocado. Sem efeito se `s` for vazio ou começar por algo que
+    não é letra (ex. um token numérico)."""
+    if not s or not s[0].isalpha():
+        return s
+    primeira = s[0].lower() if s[0].isupper() else s[0].upper()
+    return primeira + s[1:]
+
+
+def _protegido_presente(protegido: str, texto: str) -> bool:
+    """True se `protegido` aparece LITERALMENTE em `texto`, ou aparece com
+    só a PRIMEIRA LETRA em caixa alternada (v1.7.1, Tarefa 2).
+
+    O rótulo de peso guarda a caixa de onde apareceu a primeira vez — em
+    início de frase, capitalizado ("A grande maioria das notas (~91%)").
+    Quando o editor move o trecho para o meio de um período
+    ("Para a grande maioria das notas (~91%), Cidade de Deus..."), só a
+    letra inicial deveria minguar para minúscula; o resto do trecho (a
+    palavra, o número, o percentual) continua exigido letra por letra.
+    Sem esta folga, o editor não tinha como corrigir a capitalização sem
+    quebrar o protegido e ser descartado — publicado ao vivo em
+    `cidade-de-deus` (v1.7.0): "Para A grande maioria...", "Já Uma pequena
+    minoria...", maiúscula no meio da frase.
+    """
+    return protegido in texto or _variante_primeira_letra(protegido) in texto
+
+
+def _protegidos_perdidos(texto_editado: str, protegidos: list[str]) -> list[str]:
+    return [p for p in protegidos if not _protegido_presente(p, texto_editado)]
+
+
+def editar_narrativa(narrativa_result, protegidos: list[str], output: dict | None = None,
+                     client_call=None, model: str | None = None,
+                     provider: str | None = None):
+    """[E2] Reescreve a narrativa para ritmo/leitura sem alterar conteúdo.
+
+    UMA chamada LLM por filme, após o narrador. A assinatura da spec
+    (`-> str`) corresponde ao campo `.texto` do `EdicaoResult` devolvido.
+
+    Verificação mecânica (§E2, Tarefa 4) sobre o texto editado:
+      (a) todo trecho protegido aparece LITERALMENTE;
+      (b) o multiconjunto de tokens numéricos é IDÊNTICO ao do original;
+      (c) as validações de honestidade do §D2 são REEXECUTADAS (idioma,
+          aspas, escopo, prevalência, vocabulário de peso, ancoragem) e
+          nenhuma pode regredir.
+    Falha em qualquer uma → 1 retentativa com reforço; se persistir, a
+    edição é DESCARTADA e a narrativa original do narrador prevalece
+    (`edicao_descartada=True`). O editor pode não melhorar o texto; o que
+    ele não pode, em hipótese alguma, é piorá-lo.
+    """
+    from .models import EdicaoResult
+
+    texto_bruto = (narrativa_result.texto or "").strip()
+    if not texto_bruto:
+        return EdicaoResult(texto="", texto_bruto="", falhou=True,
+                            edicao_descartada=True,
+                            motivo_descarte="narrativa vazia — nada a editar")
+
+    call, model = _resolve_call_and_model(client_call, model, provider, prosa=True)
+
+    output = output or {}
+    pesos = _pesos_por_bucket(output)
+    com_distribuicao = bool(pesos)
+    numeros_originais = _tokens_numericos(texto_bruto)
+    marcacoes = _marcacoes_por_bucket(pesos) if com_distribuicao else {}
+
+    # estado de honestidade do texto ORIGINAL — a edição não pode regredir
+    # em relação a ele (e não é obrigada a consertar o que já vinha marcado)
+    _, idioma0, escopo0, prevalencia0, _ = _validar_prosa(texto_bruto, com_distribuicao)
+    vocab0 = _vocabulario_peso_ok(texto_bruto, pesos)
+    ancora0 = _ancoragem_de_peso_ok(texto_bruto, pesos) if com_distribuicao else True
+    # v1.7.0 — a atribuição de perspectiva não é mais protegida por STRING
+    # literal (Tarefa 2): a checagem que garante que ela sobrevive é esta
+    # revalidação SEMÂNTICA (`_marcadores_validos`, a mesma do §D2 v1.6.1),
+    # não mais a presença de "Para eles"/"Para esse grupo" em `protegidos`.
+    marc0 = _marcadores_validos([], texto_bruto, marcacoes, pesos) if com_distribuicao else True
+
+    user = build_editor_user_message(texto_bruto, protegidos)
+
+    def _uma_chamada(sys_prompt: str) -> str | None:
+        raw = call(sys_prompt, user, model)
+        if not raw:
+            return None
+        # o editor responde texto puro; o strip de fences é defensivo
+        return _strip_fences(str(raw)).strip() or None
+
+    def _avaliar(bruto_editado: str):
+        """(texto_limpo, perdidos, numeros_ok, honestidade_ok, motivo)."""
+        texto, idioma_ok, escopo_ok, prevalencia_ok, _asp = _validar_prosa(
+            bruto_editado, com_distribuicao)
+        perdidos = _protegidos_perdidos(texto, protegidos)
+        numeros_ok = _tokens_numericos(texto) == numeros_originais
+        vocab_ok = _vocabulario_peso_ok(texto, pesos)
+        ancora_ok = _ancoragem_de_peso_ok(texto, pesos) if com_distribuicao else True
+        marc_ok = (_marcadores_validos([], texto, marcacoes, pesos)
+                  if com_distribuicao else True)
+        regressoes = []
+        if idioma0 and not idioma_ok:
+            regressoes.append("idioma")
+        if escopo0 and not escopo_ok:
+            regressoes.append("escopo")
+        if prevalencia0 and not prevalencia_ok:
+            regressoes.append("prevalencia")
+        if vocab0 and not vocab_ok:
+            regressoes.append("vocabulario_peso")
+        if ancora0 and not ancora_ok:
+            regressoes.append("ancoragem_peso")
+        if marc0 and not marc_ok:
+            regressoes.append("perspectiva_nao_marcada")
+        motivo = ""
+        if perdidos:
+            motivo = f"{len(perdidos)} trecho(s) protegido(s) perdido(s)"
+        elif not numeros_ok:
+            motivo = "conjunto de números do texto foi alterado"
+        elif regressoes:
+            motivo = "regressão de honestidade: " + ", ".join(regressoes)
+        return texto, perdidos, numeros_ok, not regressoes, motivo
+
+    editado = _uma_chamada(_EDITOR_SYSTEM_PROMPT)
+    houve_retentativa = False
+    if editado is None:
+        return EdicaoResult(texto=texto_bruto, texto_bruto=texto_bruto,
+                            edicao_descartada=True, falhou=True,
+                            motivo_descarte="editor não devolveu texto",
+                            metricas_fluencia=_metricas_fluencia(texto_bruto))
+
+    texto, perdidos, numeros_ok, honestidade_ok, motivo = _avaliar(editado)
+
+    if perdidos or not numeros_ok or not honestidade_ok:
+        reforco = ""
+        if perdidos:
+            reforco += _REFORCO_EDITOR_PROTEGIDOS.format(
+                lista="\n".join(f"- {p}" for p in perdidos))
+        if not numeros_ok:
+            reforco += _REFORCO_EDITOR_NUMEROS
+        if not reforco:   # regressão de honestidade: reforça o essencial
+            reforco = _REFORCO_EDITOR_NUMEROS
+        houve_retentativa = True
+        retry = _uma_chamada(_EDITOR_SYSTEM_PROMPT + reforco)
+        if retry is not None:
+            texto, perdidos, numeros_ok, honestidade_ok, motivo = _avaliar(retry)
+
+    if perdidos or not numeros_ok or not honestidade_ok:
+        # DESCARTE: a narrativa do narrador prevalece intacta.
+        return EdicaoResult(
+            texto=texto_bruto, texto_bruto=texto_bruto,
+            edicao_descartada=True, motivo_descarte=motivo,
+            protegidos_perdidos=perdidos[:10], numeros_alterados=not numeros_ok,
+            houve_retentativa=houve_retentativa,
+            metricas_fluencia=_metricas_fluencia(texto_bruto),
+        )
+
+    return EdicaoResult(
+        texto=texto, texto_bruto=texto_bruto,
+        edicao_descartada=False, houve_retentativa=houve_retentativa,
+        metricas_fluencia=_metricas_fluencia(texto),
     )

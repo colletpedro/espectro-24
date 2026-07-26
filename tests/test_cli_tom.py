@@ -8,7 +8,14 @@ import json
 import pytest
 
 from espectro24 import cli
-from espectro24.models import BucketResult, LevelResult, NarrativaResult, Review, Tema
+from espectro24.models import (
+    BucketResult,
+    EdicaoResult,
+    LevelResult,
+    NarrativaResult,
+    Review,
+    Tema,
+)
 from espectro24.render import build_output
 
 
@@ -42,6 +49,25 @@ def _mock_narrate(monkeypatch, consensos_usados=None):
                                escopo_suspeito=False, aspas_removidas=False,
                                consensos_usados=consensos_usados or [])
     monkeypatch.setattr(cli, "narrate_output", fake)
+    _mock_editor(monkeypatch)   # v1.6.0: o CLI chama [E2] logo após o narrador
+    return calls
+
+
+def _mock_editor(monkeypatch, texto=None, descartada=False):
+    """v1.6.0: mocka o passe de edição [E2]. Por default é IDENTIDADE — o
+    texto do narrador passa intacto —, para que os testes de --tom continuem
+    medindo só a decisão de narrar."""
+    calls = []
+
+    def fake_editar(narrativa_result, protegidos, output=None, model=None,
+                    provider=None):
+        calls.append((narrativa_result.texto, protegidos))
+        bruto = narrativa_result.texto
+        return EdicaoResult(texto=texto if texto is not None else bruto,
+                            texto_bruto=bruto, edicao_descartada=descartada)
+
+    monkeypatch.setattr(cli, "editar_narrativa", fake_editar)
+    monkeypatch.setattr(cli, "montar_protegidos", lambda res, out: [])
     return calls
 
 
@@ -95,7 +121,7 @@ def test_ficha_sucesso_entra_no_json(tmp_path, monkeypatch, _iso_env, capsys):
     ficha_mock = {"titulo": "Cure", "sinopse_oficial": "s", "sinopse_fallback_en": False,
                  "generos": ["Terror"], "duracao_min": 111, "diretor": "Kiyoshi Kurosawa",
                  "ano": 1997, "fonte": "tmdb"}
-    monkeypatch.setattr(cli, "buscar_ficha", lambda *a, **k: (ficha_mock, None))
+    monkeypatch.setattr(cli, "buscar_ficha", lambda *a, **k: (ficha_mock, None, None))
     cli.main(["--slug", "cure", "--reuse-synthesis", "--out-dir", str(tmp_path),
               "--tom", "estruturado"])
     salvo = json.loads((tmp_path / "cure.json").read_text(encoding="utf-8"))
@@ -106,7 +132,7 @@ def test_ficha_falha_da_api_nao_quebra_pipeline(tmp_path, monkeypatch, _iso_env,
     _escreve_json(tmp_path)
     _mock_narrate(monkeypatch)
     monkeypatch.setattr(cli, "buscar_ficha",
-                        lambda *a, **k: (None, "TMDB indisponível (erro simulado) — ficha pulada."))
+                        lambda *a, **k: (None, "TMDB indisponível (erro simulado) — ficha pulada.", None))
     cli.main(["--slug", "cure", "--reuse-synthesis", "--out-dir", str(tmp_path),
               "--tom", "estruturado"])
     salvo = json.loads((tmp_path / "cure.json").read_text(encoding="utf-8"))
@@ -122,7 +148,7 @@ def test_consensos_usados_persiste_no_json_e_renderiza(tmp_path, monkeypatch, _i
     consensos = [{"propriedade": "ritmo lento", "grupos_de_origem": ["negativas", "positivas"],
                  "temas_de_origem": ["ritmo"]}]
     _mock_narrate(monkeypatch, consensos_usados=consensos)
-    monkeypatch.setattr(cli, "buscar_ficha", lambda *a, **k: (None, None))
+    monkeypatch.setattr(cli, "buscar_ficha", lambda *a, **k: (None, None, None))
     cli.main(["--slug", "cure", "--reuse-synthesis", "--out-dir", str(tmp_path),
               "--tom", "narrativo"])
     salvo = json.loads((tmp_path / "cure.json").read_text(encoding="utf-8"))
@@ -137,9 +163,93 @@ def test_no_ficha_pula_a_busca(tmp_path, monkeypatch, _iso_env, capsys):
     _escreve_json(tmp_path)
     _mock_narrate(monkeypatch)
     chamou = []
-    monkeypatch.setattr(cli, "buscar_ficha", lambda *a, **k: chamou.append(1) or (None, None))
+    monkeypatch.setattr(cli, "buscar_ficha", lambda *a, **k: chamou.append(1) or (None, None, None))
     cli.main(["--slug", "cure", "--reuse-synthesis", "--out-dir", str(tmp_path),
               "--tom", "estruturado", "--no-ficha"])
     assert chamou == []
     salvo = json.loads((tmp_path / "cure.json").read_text(encoding="utf-8"))
     assert salvo["ficha"] is None
+
+
+# =====================================================================
+# v1.7.0 (Tarefa 1) — resolução de ano: slug -> Letterboxd -> sem ficha
+# =====================================================================
+# Defeito real corrigido: `espectro24 --slug cure` sem --ano resolvia no
+# TMDB para o filme errado (nenhum ano para desambiguar). Cobre a cadeia
+# INTEIRA de resolução tal como o CLI a executa, não só `ficha.py` isolado.
+
+def test_ano_do_slug_e_usado_direto_sem_letterboxd(tmp_path, monkeypatch, _iso_env):
+    """slug com sufixo -YYYY: ano vem do slug, resolver_ano_letterboxd nunca
+    é chamado (nenhuma requisição extra)."""
+    _escreve_json(tmp_path, slug="the-invite-2026")
+    _mock_narrate(monkeypatch)
+    chamado = []
+    monkeypatch.setattr(cli, "resolver_ano_letterboxd",
+                        lambda *a, **k: chamado.append(1))
+    recebido = {}
+
+    def fake_buscar(titulo, ano, cache_dir, ano_fonte=None, **k):
+        recebido["ano"] = ano
+        recebido["ano_fonte"] = ano_fonte
+        return None, None, None
+    monkeypatch.setattr(cli, "buscar_ficha", fake_buscar)
+    cli.main(["--slug", "the-invite-2026", "--reuse-synthesis",
+              "--out-dir", str(tmp_path), "--tom", "estruturado"])
+    assert chamado == []
+    assert recebido == {"ano": 2026, "ano_fonte": "slug"}
+
+
+def test_ano_ausente_no_slug_cai_para_letterboxd(tmp_path, monkeypatch, _iso_env):
+    """slug sem ano ('cure'): resolver_ano_letterboxd é chamado, e o ano que
+    ele devolve é o usado na busca TMDB — é o teste da Tarefa 1 (o defeito
+    real: sem isso, a busca ia sem ano e resolvia para o filme errado)."""
+    _escreve_json(tmp_path, slug="cure")
+    _mock_narrate(monkeypatch)
+    monkeypatch.setattr(cli, "resolver_ano_letterboxd", lambda fetcher, slug: 1997)
+    recebido = {}
+
+    def fake_buscar(titulo, ano, cache_dir, ano_fonte=None, **k):
+        recebido["titulo"] = titulo
+        recebido["ano"] = ano
+        recebido["ano_fonte"] = ano_fonte
+        ficha = {"titulo": "Cure", "diretor": "Kiyoshi Kurosawa", "ano": 1997,
+                "ano_fonte": ano_fonte, "fonte": "tmdb"}
+        return ficha, None, None
+    monkeypatch.setattr(cli, "buscar_ficha", fake_buscar)
+    cli.main(["--slug", "cure", "--reuse-synthesis", "--out-dir", str(tmp_path),
+              "--tom", "estruturado"])
+    assert recebido == {"titulo": "cure", "ano": 1997, "ano_fonte": "letterboxd"}
+    salvo = json.loads((tmp_path / "cure.json").read_text(encoding="utf-8"))
+    assert salvo["ficha"]["diretor"] == "Kiyoshi Kurosawa"
+
+
+def test_ano_indisponivel_em_lugar_nenhum_pula_a_busca_com_flag(tmp_path, monkeypatch, _iso_env):
+    """Tarefa 1.1c: sem ano nem no slug nem no Letterboxd, NÃO busca a ficha
+    (melhor nenhuma do que a do filme errado) — e o motivo fica registrado."""
+    _escreve_json(tmp_path, slug="cure")
+    _mock_narrate(monkeypatch)
+    monkeypatch.setattr(cli, "resolver_ano_letterboxd", lambda fetcher, slug: None)
+    chamou = []
+    monkeypatch.setattr(cli, "buscar_ficha", lambda *a, **k: chamou.append(1))
+    cli.main(["--slug", "cure", "--reuse-synthesis", "--out-dir", str(tmp_path),
+              "--tom", "estruturado"])
+    assert chamou == []                    # buscar_ficha nunca chamado
+    salvo = json.loads((tmp_path / "cure.json").read_text(encoding="utf-8"))
+    assert salvo["ficha"] is None
+    assert salvo["ficha_indisponivel"] == "ano_desconhecido"
+
+
+def test_ficha_descartada_por_ano_divergente_fica_registrada_no_json(tmp_path, monkeypatch, _iso_env):
+    """Tarefa 1.2: quando `buscar_ficha` descarta por divergência de ano, o
+    CLI persiste `ficha_descartada` no JSON (não só imprime o aviso)."""
+    _escreve_json(tmp_path, slug="cure")
+    _mock_narrate(monkeypatch)
+    monkeypatch.setattr(cli, "resolver_ano_letterboxd", lambda fetcher, slug: 1997)
+    descarte = {"motivo": "ano_divergente", "esperado": 1997, "recebido": 2026}
+    monkeypatch.setattr(cli, "buscar_ficha",
+                        lambda *a, **k: (None, "TMDB: ficha descartada — ano divergente.", descarte))
+    cli.main(["--slug", "cure", "--reuse-synthesis", "--out-dir", str(tmp_path),
+              "--tom", "estruturado"])
+    salvo = json.loads((tmp_path / "cure.json").read_text(encoding="utf-8"))
+    assert salvo["ficha"] is None
+    assert salvo["ficha_descartada"] == descarte

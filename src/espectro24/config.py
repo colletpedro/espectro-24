@@ -4,7 +4,7 @@ Nenhum valor aqui deve divergir da SPEC.md sem bump de versão.
 """
 from __future__ import annotations
 
-SPEC_VERSION = "1.4.1"
+SPEC_VERSION = "1.6.0"
 
 BASE = "https://letterboxd.com"
 
@@ -84,6 +84,34 @@ MODEL_DEFAULT = PROVIDER_DEFAULT_MODELS["anthropic"]
 # pior caso medido; 3000 dá margem folgada para ambos os providers.
 LLM_MAX_TOKENS = 3000
 MAX_TEMAS = 6                # §D.3
+
+# --- Configuração de produção da PROSA (narrador §D2 + editor §E2) — v1.6.0 ---
+# A síntese por bucket (§D) NÃO usa estes valores: continua com
+# LLM_MAX_TOKENS=3000 e thinking desligado, porque é extração estruturada, não
+# escrita — e nada no diagnóstico indicou problema lá.
+#
+# Para as etapas de PROSA, a v1.6.0 adota thinking LIGADO com orçamento FIXO,
+# revertendo o `thinking_budget=0` que valia desde a v1.2.x. Base empírica
+# (DIAGNOSTICO_FLUENCIA_V2.md, matriz B):
+#   - thinking DINÂMICO (sem budget fixo) sob teto de 8000 consumiu até 7676
+#     tokens — 96% do orçamento — e truncou 1 chamada em CADA célula testada
+#     (finish_reason=MAX_TOKENS, JSON inválido, correção descartada em
+#     silêncio). Foi esse modo de falha que originalmente justificou desligar
+#     thinking na v1.2.x;
+#   - com budget FIXO em 4096 e teto de 16000, as 4/4 chamadas terminaram em
+#     STOP, nenhuma truncou, e o raciocínio ficou entre 2430 e 4095 tokens.
+# Ou seja: o problema nunca foi "thinking", foi thinking SEM TETO competindo
+# com a resposta pelo mesmo orçamento. Fixar o budget resolve a causa raiz e
+# devolve o planejamento que a v1.2.x teve de sacrificar.
+PROSA_THINKING_BUDGET = 4096
+PROSA_MAX_TOKENS = 16000
+
+# Timeout de rede das chamadas LLM, em MILISSEGUNDOS (v1.6.0). Sem timeout
+# explícito o SDK do Gemini bloqueia indefinidamente: durante a regeneração
+# desta versão um processo ficou 67 minutos parado (0% CPU, dormindo num
+# socket), sem voltar nem falhar. 180s cobre com folga o pior caso medido
+# (~110s numa chamada com thinking) e converte trava permanente em erro.
+LLM_TIMEOUT_MS = 180_000
 
 
 def nota_para_url(n: float) -> str:

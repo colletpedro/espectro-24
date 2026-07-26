@@ -95,7 +95,10 @@ def test_metadata_serializa_niveis_como_string():
 # --- bordas do rótulo de peso (mesma convenção da v1.2.3: mais fraco vence) ---
 
 @pytest.mark.parametrize("pct,esperado", [
-    (0, "uma pequena minoria"), (9, "uma pequena minoria"),
+    # v1.6.0 — faixa NOVA "uma fração mínima" (<5%), para não achatar 1% e 8%
+    (0, "uma fração mínima"), (4, "uma fração mínima"),
+    (5, "uma pequena minoria"),   # borda: <5 é exclusivo -> 5 cai na seguinte
+    (9, "uma pequena minoria"),
     (10, "uma minoria"),            # borda: pequena minoria exige pct < 10
     (24, "uma minoria"),
     (25, "uma minoria"),            # borda: empata com parcela expressiva -> fraco
@@ -114,7 +117,8 @@ def test_rotulo_peso_resolve_faixas_e_bordas(pct, esperado):
 
 def test_rotulo_peso_completo_sempre_traz_o_percentual():
     assert _rotulo_peso_completo(79) == "a grande maioria das notas (~79%)"
-    assert _rotulo_peso_completo(3) == "uma pequena minoria das notas (~3%)"
+    assert _rotulo_peso_completo(3) == "uma fração mínima das notas (~3%)"
+    assert _rotulo_peso_completo(8) == "uma pequena minoria das notas (~8%)"
 
 
 # --- coleta: 1 requisição, cache, e falha que não quebra o pipeline ---
@@ -245,13 +249,22 @@ def test_prompt_com_distribuicao_inverte_a_regra():
 
 
 def test_prompt_muda_apenas_a_regra_c():
-    """Todo o resto do prompt é byte-idêntico entre as variantes — a
-    comparação A/B precisa isolar a mudança."""
+    """A regra (c) — e o que depende diretamente dela (marcação de
+    perspectiva e o exemplo de estilo, v1.5.0, que dependem do share_real) —
+    é o que muda entre as variantes; os marcadores dos três movimentos e das
+    invariantes independentes de distribuição seguem presentes nas duas."""
     sem, com = build_narrator_prompt(False), build_narrator_prompt(True)
     for marcador in ("MOVIMENTO 1", "MOVIMENTO 2", "MOVIMENTO 3",
                      "CRITÉRIO DE CATEGORIA", "QUANTIFICADOR PRÉ-COMPUTADO",
                      "consensos_usados", "ANTI-SPOILER"):
         assert marcador in sem and marcador in com
+    # v1.6.0: RITMO/REGISTRO saíram do narrador (migraram para o editor §E2)
+    for removido in ("RITMO (v1.5.0", "REGISTRO (v1.5.0"):
+        assert removido not in sem and removido not in com
+    # só a com_distribuicao carrega marcação de perspectiva e o few-shot,
+    # que dependem do share_real (não existe sem distribuição)
+    assert "MARCAÇÃO DE PERSPECTIVA" not in sem
+    assert "MARCAÇÃO DE PERSPECTIVA" in com
 
 
 def test_narrador_recebe_a_variante_certa_conforme_o_output():
@@ -282,7 +295,7 @@ def test_serializacao_injeta_rotulo_peso_por_grupo():
     ser = _serialize_output_for_narrator(_output())
     assert "DISTRIBUIÇÃO REAL DAS NOTAS" in ser
     assert "375278 notas no total" in ser
-    assert 'rotulo_peso: "uma pequena minoria das notas (~3%)"' in ser
+    assert 'rotulo_peso: "uma fração mínima das notas (~3%)"' in ser
     assert 'rotulo_peso: "a grande maioria das notas (~79%)"' in ser
 
 
@@ -295,10 +308,16 @@ def test_serializacao_sem_distribuicao_nao_menciona_peso():
 # --- validação: ancoragem de peso ---
 
 _PROSA_ANCORADA = (
-    '{"narrativa": "a grande maioria das notas (~79%) vem de quem gostou e '
-    'destaca o ritmo; uma minoria das notas (~17%) ficou no meio-termo; e uma '
-    'pequena minoria das notas (~3%) reclamou do arrastado.", '
-    '"consensos_usados": []}'
+    '{"narrativa": "Quem gostou é a grande maioria das notas (~79%), e para '
+    'esse grupo o filme prende do início ao fim, equilibra humor e drama sem '
+    'perder o ritmo em nenhum momento. Já uma minoria das notas (~17%) ficou '
+    'no meio-termo. Nessa leitura, o ritmo pesa mais do que deveria. Uma '
+    'pequena minoria das notas (~3%) reclamou do arrastado. Para eles, nada '
+    'funciona.", '
+    '"consensos_usados": [], "quantificadores_usados": [], '
+    '"marcadores_perspectiva": ['
+    '{"grupo": "medianas", "trecho": "Nessa leitura, o ritmo pesa mais do que deveria."}, '
+    '{"grupo": "negativas", "trecho": "Para eles, nada funciona."}]}'
 )
 _PROSA_SEM_ANCORA = (
     '{"narrativa": "entre quem nao gostou, o ritmo incomodou; para quem ficou '
@@ -347,7 +366,7 @@ def test_rotulo_mais_fraco_conta_como_ancorado():
     """O prompt permite descer de força; a checagem tem que aceitar isso."""
     def fake(system, user, model):
         return ('{"narrativa": "a maioria das notas veio de quem gostou; uma '
-                'minoria ficou no meio; uma pequena minoria nao gostou do ritmo '
+                'minoria ficou no meio; uma fração mínima nao gostou do ritmo '
                 'nem do roteiro deste filme longo.", "consensos_usados": []}')
 
     r = narrate_output(_output(), client_call=fake, model="m")

@@ -238,6 +238,10 @@ def render_terminal(output: dict, tom: str = "estruturado") -> str:
                      "\"do público\"/\"dos espectadores\" em vez de \"das notas\" mesmo "
                      "após retentativa — o peso vem do histograma de NOTAS; "
                      "revisar manualmente.")
+        if flags.get("perspectiva_nao_marcada"):
+            L.append("  ⚠️  narrativa: algum grupo com marcação de perspectiva exigida "
+                     "ficou sem marcador (ou com trecho inexistente/tardio) mesmo "
+                     "após retentativa — revisar manualmente.")
         if flags.get("aspas_removidas"):
             L.append("  ⚠️  narrativa: aspas de citação removidas mecanicamente.")
 
@@ -271,6 +275,44 @@ def render_terminal(output: dict, tom: str = "estruturado") -> str:
                     detalhe = f"fração real {pct}% → rótulo: {rotulo}"
                 L.append(f"  • \"{q.get('quantificador')}\" — tema: {tema} "
                          f"({detalhe})")
+
+        # v1.5.0: bloco compacto de marcadores_perspectiva — mesmo padrão.
+        marcadores = output.get("marcadores_perspectiva") or []
+        if marcadores:
+            L.append("")
+            L.append("Marcadores de perspectiva:")
+            for m in marcadores:
+                L.append(f"  • {m.get('grupo')} — \"{m.get('trecho')}\"")
+
+        # v1.5.0: métricas de fluência — resumo numérico, telemetria de
+        # ritmo (não bloqueia, só informa).
+        metricas = output.get("metricas_fluencia") or {}
+        # v1.6.0: telemetria do passe de edição [E2].
+        ed = output.get("edicao_flags") or {}
+        if ed:
+            L.append("")
+            if ed.get("edicao_descartada"):
+                L.append(f"  ⚠️  edição [E2] DESCARTADA ({ed.get('motivo_descarte')}) "
+                         f"— publicada a narrativa do narrador, sem edição.")
+                if ed.get("protegidos_perdidos"):
+                    for p in ed["protegidos_perdidos"]:
+                        L.append(f"        · trecho perdido: {p}")
+            else:
+                L.append(f"Edição [E2]: aplicada · {ed.get('n_protegidos', 0)} "
+                         f"trechos protegidos preservados · retentativa="
+                         f"{ed.get('houve_retentativa')}")
+
+        if metricas:
+            L.append("")
+            L.append(
+                "Fluência (diagnóstico, não critério): "
+                f"n_frases={metricas.get('n_frases')} · "
+                f"media_palavras={metricas.get('media_palavras')} · "
+                f"cv_comprimento={metricas.get('cv_comprimento')} · "
+                f"frase_mais_curta={metricas.get('frase_mais_curta')} · "
+                f"aberturas_repetidas={metricas.get('aberturas_repetidas')} · "
+                f"verbos_reporte={metricas.get('verbos_reporte')} · "
+                f"adverbios_mente={metricas.get('adverbios_mente')}")
 
     L.append("")
     L.append(f"Total de reviews observadas na coleta: "

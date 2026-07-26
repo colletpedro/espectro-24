@@ -129,6 +129,59 @@ class NarrativaResult:
     # peso vem do histograma de NOTAS, os temas vêm das reviews com texto, e
     # os dois vocabulários não se misturam — e a retentativa não corrigiu.
     vocabulario_peso_suspeito: bool = False
+    # v1.5.0: telemetria dos marcadores de perspectiva ("para eles", "nessa
+    # leitura") declarados pelo narrador — cada item é {grupo, trecho}, no
+    # mesmo padrão de consensos_usados/quantificadores_usados. Existe para
+    # que a remoção dos verbos de reporte (regra de registro) não deixe a
+    # fala de um grupo minoritário soar como fato do narrador.
+    marcadores_perspectiva: list = field(default_factory=list)
+    # v1.5.0: True quando algum grupo com marcação exigida (simples/antecipada,
+    # pré-computada a partir do share_real) não teve marcador declarado, teve
+    # um trecho que não aparece literalmente na narrativa, ou (caso
+    # "antecipada") o trecho veio depois do meio do movimento — e a
+    # retentativa não corrigiu. Sempre False sem distribuição (não há share
+    # para calcular a marcação).
+    perspectiva_nao_marcada: bool = False
+    # v1.5.0: métricas de fluência calculadas em CÓDIGO sobre o texto final —
+    # n_frases, media_palavras, cv_comprimento (desvio padrão / média de
+    # palavras por frase), frase_mais_curta, aberturas_repetidas,
+    # verbos_reporte, adverbios_mente. Ver `_metricas_fluencia` em
+    # synthesize.py — mesma política de telemetria visível, não correção
+    # silenciosa de estilo.
+    # v1.6.0: as métricas viram DIAGNÓSTICO PURO — a flag `fluencia_baixa` e
+    # os gatilhos de retentativa por métrica foram REMOVIDOS, porque as
+    # métricas não acompanham qualidade (no `cure`, o texto melhor pontuou
+    # pior; ver DIAGNOSTICO_FLUENCIA_V2.md e a nota em synthesize.py).
+    metricas_fluencia: dict = field(default_factory=dict)
+
+
+@dataclass
+class EdicaoResult:
+    """[v1.6.0] Saída da etapa [E2] — passe de EDIÇÃO sobre a narrativa.
+
+    Separa as duas responsabilidades que a v1.5.0 tentou (e falhou) empilhar
+    num prompt só: o narrador (§D2) diz a verdade com a estrutura certa; o
+    editor (§E2) cuida de ritmo e leitura SEM poder tocar em número, rótulo
+    ou atribuição. O editor não recebe os buckets, nem as reviews, nem a
+    ficha — não tem fonte de fato, logo não tem como inventar fato.
+
+    A assinatura da spec `editar_narrativa(...) -> str` refere-se ao campo
+    `.texto` (mesma convenção de `narrate_output`/`NarrativaResult`); as
+    flags acompanham para telemetria.
+    """
+    texto: str                    # texto FINAL (editado, ou o bruto se descartado)
+    texto_bruto: str = ""         # saída do narrador, preservada p/ auditoria
+    # True quando a edição foi rejeitada pelas checagens mecânicas (trecho
+    # protegido perdido, número alterado, ou regressão de honestidade) e o
+    # pipeline manteve a narrativa ORIGINAL. Não é erro fatal: é a garantia
+    # de que o editor nunca degrada o que o narrador validou.
+    edicao_descartada: bool = False
+    motivo_descarte: str = ""     # qual checagem falhou (auditoria)
+    protegidos_perdidos: list = field(default_factory=list)
+    numeros_alterados: bool = False
+    houve_retentativa: bool = False
+    falhou: bool = False          # editor não devolveu texto utilizável
+    metricas_fluencia: dict = field(default_factory=dict)  # do texto FINAL
 
 
 @dataclass

@@ -60,7 +60,7 @@ def test_narrador_prompt_construido_nao_contem_reviews_brutas():
     def fake(system, user, model):
         capturado["system"] = system
         capturado["user"] = user
-        return '{"narrativa": "as reviews negativas apontam ritmo; quem gostou elogia a direção; o grupo mediano ficou dividido."}'
+        return '{"narrativa": "as reviews negativas apontam ritmo; quem gostou elogia a direção; o grupo mediano ficou dividido. Só que muda."}'
 
     narrate_output(out, client_call=fake, model="gemini-2.5-flash")
     assert "SPOILER_DO_FINAL_XYZ" not in capturado["user"]
@@ -73,7 +73,7 @@ def test_uma_chamada_para_o_filme_inteiro():
 
     def fake(system, user, model):
         calls.append(1)
-        return '{"narrativa": "as reviews negativas apontam ritmo lento; quem deu nota alta elogia a direção."}'
+        return '{"narrativa": "as reviews negativas apontam ritmo lento; quem deu nota alta elogia a direção. Só que muda."}'
 
     narrate_output(out, client_call=fake, model="gemini-2.5-flash")
     assert len(calls) == 1  # não por bucket
@@ -108,7 +108,7 @@ def test_idioma_ptbr_nao_marca_flag_e_nao_retenta():
 
     def fake(system, user, model):
         calls.append(1)
-        return '{"narrativa": "as reviews negativas apontam que o ritmo do filme e lento e arrastado, enquanto quem deu notas altas elogia a direcao e a construcao dos personagens ao longo da trama."}'
+        return '{"narrativa": "as reviews negativas apontam que o ritmo do filme e lento e arrastado, enquanto quem deu notas altas elogia a direcao e a construcao dos personagens ao longo da trama. Só que muda."}'
 
     r = narrate_output(out, client_call=fake, model="m")
     assert r.idioma_invalido is False
@@ -303,7 +303,7 @@ def test_quantificador_forte_com_lastro_nao_marca_flag():
 
     def fake(system, user, model):
         calls.append(1)
-        return '{"narrativa": "entre quem amou, quase todos elogiam a direção deste filme."}'
+        return '{"narrativa": "entre quem amou, quase todos elogiam a direção deste filme. Só que muda."}'
 
     r = narrate_output(out, client_call=fake, model="m")
     assert r.quantificador_suspeito is False
@@ -318,7 +318,7 @@ def test_quantificador_fraco_nunca_dispara_a_checagem():
 
     def fake(system, user, model):
         calls.append(1)
-        return '{"narrativa": "entre quem nao gostou, a maioria citou o ritmo; ja entre quem gostou, alguns elogiaram a direcao."}'
+        return '{"narrativa": "entre quem nao gostou, a maioria citou o ritmo; ja entre quem gostou, alguns elogiaram a direcao. Só que muda."}'
 
     r = narrate_output(_output_completo(), client_call=fake, model="m")
     assert r.quantificador_suspeito is False
@@ -348,7 +348,8 @@ def test_prevalencia_prosa_limpa_nao_flagga():
         return ('{"narrativa": "entre quem nao gostou, o ritmo e o roteiro foram '
                 'os alvos; mais da metade das reviews negativas analisadas citou o '
                 'humor fraco. ja entre quem amou, a direcao e as atuacoes brilham '
-                'para esse grupo, sem que se possa dizer nada sobre o publico geral."}')
+                'para esse grupo, sem que se possa dizer nada sobre o publico geral. '
+                'Só que muda."}')
 
     r = narrate_output(_output_completo(), client_call=fake, model="m")
     assert r.prevalencia_suspeita is False
@@ -483,7 +484,7 @@ def test_consensos_vazio_e_valido_sem_retentativa():
     def fake(system, user, model):
         calls.append(1)
         return ('{"narrativa": "entre quem nao gostou, o ritmo incomodou; '
-                'ja entre quem gostou, a direcao foi elogiada.", '
+                'ja entre quem gostou, a direcao foi elogiada. Só que muda.", '
                 '"consensos_usados": []}')
 
     r = narrate_output(out, client_call=fake, model="m")
@@ -592,7 +593,8 @@ def test_par_valido_nao_flagga_nem_retenta():
     def fake(system, user, model):
         calls.append(1)
         return ('{"narrativa": "entre quem nao gostou, cerca de metade citou o '
-                'ritmo lento; ja entre quem gostou, a direcao foi elogiada.", '
+                'ritmo lento; ja entre quem gostou, a direcao foi elogiada. '
+                'Só que muda.", '
                 '"consensos_usados": [], "quantificadores_usados": '
                 '[{"quantificador": "cerca de metade", "tema": "ritmo"}]}')
 
@@ -675,7 +677,7 @@ def test_lista_vazia_de_quantificadores_e_valida_sem_retentativa():
     def fake(system, user, model):
         calls.append(1)
         return ('{"narrativa": "entre quem nao gostou, o ritmo incomodou; ja '
-                'entre quem gostou, a direcao foi elogiada.", '
+                'entre quem gostou, a direcao foi elogiada. Só que muda.", '
                 '"quantificadores_usados": []}')
 
     r = narrate_output(_output_completo(), client_call=fake, model="m")
@@ -799,7 +801,7 @@ def test_movimento_2_omitido_com_consensos_vazios_nao_e_suspeito():
         # narrativa sem movimento 2: premissa -> contraste, direto
         return ('{"narrativa": "este filme e um drama dirigido por alguem. '
                 'entre quem nao gostou, o ritmo incomodou; ja entre quem '
-                'gostou, a direcao foi elogiada com entusiasmo.", '
+                'gostou, a direcao foi elogiada com entusiasmo. Só que muda.", '
                 '"consensos_usados": [], "quantificadores_usados": []}')
 
     r = narrate_output(_output_completo(), client_call=fake, model="m")

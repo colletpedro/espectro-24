@@ -105,7 +105,7 @@ def test_gemini_client_call_usa_modo_json_nativo(monkeypatch):
     import google.genai as genai
     monkeypatch.setattr(
         genai, "Client",
-        lambda api_key: _FakeGeminiClient(capture, '{"temas":[],"observacao_geral":"ok"}'),
+        lambda api_key, **kw: _FakeGeminiClient(capture, '{"temas":[],"observacao_geral":"ok"}'),
     )
 
     out = gemini_client_call("SYSTEM", "USER", "gemini-2.5-flash")
@@ -133,7 +133,7 @@ def test_gemini_client_call_modelo_2_0_nao_recebe_thinking_config(monkeypatch):
     import google.genai as genai
     monkeypatch.setattr(
         genai, "Client",
-        lambda api_key: _FakeGeminiClient(capture, '{"temas":[],"observacao_geral":"ok"}'),
+        lambda api_key, **kw: _FakeGeminiClient(capture, '{"temas":[],"observacao_geral":"ok"}'),
     )
 
     out = gemini_client_call("SYSTEM", "USER", "gemini-2.0-flash")
