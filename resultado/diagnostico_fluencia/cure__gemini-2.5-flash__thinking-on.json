@@ -1,0 +1,140 @@
+{
+  "combinacao": "B",
+  "slug": "cure",
+  "modelo": "gemini-2.5-flash",
+  "thinking": "on",
+  "max_output_tokens": 8000,
+  "pulado": false,
+  "narrativa": "A Cura, um thriller, terror e mistério dirigido por 黒沢清 em 1997, segue um detetive que investiga uma série de assassinatos bizarros, todos marcados por um enigmático x nos corpos das vítimas, sem qualquer pista óbvia. Um ritmo lento, característica marcante da obra, permeia a experiência. \nA grande maioria das notas (~79%) abraça a proposta do filme, com muitos descrevendo sua atmosfera e tom como perturbadores e hipnóticos. O ritmo é notado como lento e deliberado, intensificando o suspense psicológico. Há também uma apreciação pelos temas psicológicos e existenciais que a narrativa explora, mergulhando na fragilidade da identidade e na natureza do mal. Para alguns, a ausência de respostas e a ambiguidade são pontos fortes, enriquecendo a reflexão. \nUma minoria das notas (~17%) teve uma experiência mista. Para esse grupo, embora o filme apresente ideias intrigantes e uma atmosfera e estilo visual eficazes, muitos sentem que a execução falha no aprofundamento. Para eles, o ritmo é lento e a narrativa gera confusão, e muitos também apontam um final insatisfatório e ambíguo que deixa pontas soltas. \nUma pequena minoria das notas (~3%) não se conecta com a obra. Para eles, o ritmo é lento e tedioso para a maioria, não gerando a tensão, mistério ou terror prometidos. Muitos também veem o enredo e o roteiro como fracos e repetitivos, com personagens desinteressantes e planos, resultando numa experiência decepcionante.",
+  "n_palavras": 227,
+  "metricas_fluencia": {
+    "n_frases": 12,
+    "media_palavras": 18.6,
+    "cv_comprimento": 0.4,
+    "frase_mais_curta": 8,
+    "aberturas_repetidas": 1,
+    "verbos_reporte": 2,
+    "adverbios_mente": 0
+  },
+  "flags": {
+    "idioma_invalido": false,
+    "escopo_suspeito": false,
+    "prevalencia_suspeita": false,
+    "quantificador_suspeito": false,
+    "consenso_suspeito": false,
+    "peso_nao_ancorado": false,
+    "vocabulario_peso_suspeito": false,
+    "perspectiva_nao_marcada": true,
+    "fluencia_baixa": true,
+    "aspas_removidas": true,
+    "falhou": false
+  },
+  "consensos_usados": [
+    {
+      "propriedade": "Ritmo lento",
+      "grupos_de_origem": [
+        "negativas",
+        "medianas",
+        "positivas"
+      ],
+      "temas_de_origem": [
+        "Ritmo lento e tedioso",
+        "Ritmo lento e confusão narrativa",
+        "Pacing Lento e Deliberado"
+      ]
+    }
+  ],
+  "quantificadores_usados": [
+    {
+      "quantificador": "muitos",
+      "tema": "Atmosfera e Tom Perturbador/Hipnótico"
+    },
+    {
+      "quantificador": "muitos",
+      "tema": "Pacing Lento e Deliberado"
+    },
+    {
+      "quantificador": "muitos",
+      "tema": "Temas Psicológicos e Existenciais"
+    },
+    {
+      "quantificador": "alguns",
+      "tema": "Ausência de Respostas e Ambiguidade"
+    },
+    {
+      "quantificador": "muitos",
+      "tema": "Ideias intrigantes, mas execução falha"
+    },
+    {
+      "quantificador": "muitos",
+      "tema": "Atmosfera e estilo visual eficazes"
+    },
+    {
+      "quantificador": "muitos",
+      "tema": "Ritmo lento e confusão narrativa"
+    },
+    {
+      "quantificador": "muitos",
+      "tema": "Final insatisfatório/ambíguo"
+    },
+    {
+      "quantificador": "a maioria",
+      "tema": "Ritmo lento e tedioso"
+    },
+    {
+      "quantificador": "muitos",
+      "tema": "Falta de tensão/mistério/terror"
+    },
+    {
+      "quantificador": "muitos",
+      "tema": "Enredo e roteiro fracos/repetitivos"
+    },
+    {
+      "quantificador": "muitos",
+      "tema": "Personagens desinteressantes/planos"
+    }
+  ],
+  "marcadores_perspectiva": [
+    {
+      "grupo": "medianas",
+      "trecho": "Para esse grupo"
+    },
+    {
+      "grupo": "negativas",
+      "trecho": "Para eles"
+    }
+  ],
+  "houve_retentativa": true,
+  "n_chamadas_llm": 2,
+  "latencia_total_s": 61.68,
+  "chamadas": [
+    {
+      "tipo": "chamada",
+      "ok": true,
+      "erro": null,
+      "finish_reason": "FinishReason.STOP",
+      "latencia_s": 25.81,
+      "json_valido": true,
+      "usage": {
+        "prompt_tokens": 6765,
+        "output_tokens": 932,
+        "thinking_tokens": 5153
+      }
+    },
+    {
+      "tipo": "chamada",
+      "ok": true,
+      "erro": null,
+      "finish_reason": "FinishReason.MAX_TOKENS",
+      "latencia_s": 35.84,
+      "json_valido": false,
+      "usage": {
+        "prompt_tokens": 7170,
+        "output_tokens": 407,
+        "thinking_tokens": 7576
+      }
+    }
+  ],
+  "contaminacao_detectada": false,
+  "n_gramas_compartilhados": []
+}

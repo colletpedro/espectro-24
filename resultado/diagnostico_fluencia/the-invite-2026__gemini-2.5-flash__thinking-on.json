@@ -1,0 +1,119 @@
+{
+  "combinacao": "B",
+  "slug": "the-invite-2026",
+  "modelo": "gemini-2.5-flash",
+  "thinking": "on",
+  "max_output_tokens": 8000,
+  "pulado": false,
+  "narrativa": "Olivia Wilde dirige O Convite, um drama e comédia de 2026 que acompanha o casal Joe e Angela em um momento de crise. A premissa se desenrola quando eles convidam seus misteriosos vizinhos para um jantar, e a noite toma um rumo inesperado.\n\nA grande maioria das notas (~79%) abraça O Convite. O filme, para eles, possui uma direção e um roteiro que se destacam pela habilidade em equilibrar comédia e drama, criando tensão enquanto explora relações complexas. As atuações excepcionais do elenco e a ótima química entre os atores são um grande ponto. O humor é hilário e, ao mesmo tempo, profundamente tocante, com um equilíbrio perfeito entre os dois tons.\nUma minoria das notas (~18%) também tem pontos positivos a considerar. O filme, para esse grupo, tem atuações fortes e uma direção confiante que capta a atmosfera íntima do apartamento. Só que muitos acharam que, embora divertido na primeira metade, o ritmo e a repetição das situações o tornaram cansativo no final. O roteiro é visto como inteligente, mas alguns viram as motivações e os temas como um tanto previsíveis ou superficiais, com uma mudança de tom para o drama final que dividiu opiniões.\nJá uma pequena minoria das notas (~3%) não foi conquistada pelo convite. Para eles, cerca de metade das reviews classifica o humor e o roteiro como fracos e entediantes, com piadas que não funcionam e a história se arrastando. Muitos também acharam os personagens superficiais e irritantes, com diálogos forçados. Nessa leitura, atuações e direção são questionáveis, e o foco excessivo na sexualidade parece constrangedor ou gratuito.",
+  "n_palavras": 263,
+  "metricas_fluencia": {
+    "n_frases": 14,
+    "media_palavras": 18.5,
+    "cv_comprimento": 0.37,
+    "frase_mais_curta": 8,
+    "aberturas_repetidas": 1,
+    "verbos_reporte": 3,
+    "adverbios_mente": 1
+  },
+  "flags": {
+    "idioma_invalido": false,
+    "escopo_suspeito": false,
+    "prevalencia_suspeita": false,
+    "quantificador_suspeito": false,
+    "consenso_suspeito": false,
+    "peso_nao_ancorado": false,
+    "vocabulario_peso_suspeito": false,
+    "perspectiva_nao_marcada": true,
+    "fluencia_baixa": true,
+    "aspas_removidas": true,
+    "falhou": false
+  },
+  "consensos_usados": [],
+  "quantificadores_usados": [
+    {
+      "quantificador": "Quase todos",
+      "tema": "Direção e roteiro (geral)"
+    },
+    {
+      "quantificador": "a maioria",
+      "tema": "Atuações e química do elenco"
+    },
+    {
+      "quantificador": "muitos",
+      "tema": "Ritmo e duração"
+    },
+    {
+      "quantificador": "alguns",
+      "tema": "Roteiro e temas abordados"
+    },
+    {
+      "quantificador": "cerca de metade",
+      "tema": "Humor e roteiro fracos/entediantes"
+    },
+    {
+      "quantificador": "Muitos",
+      "tema": "Personagens e diálogos superficiais/irritantes"
+    }
+  ],
+  "marcadores_perspectiva": [
+    {
+      "grupo": "medianas",
+      "trecho": "Para esse grupo"
+    },
+    {
+      "grupo": "negativas",
+      "trecho": "Para eles"
+    },
+    {
+      "grupo": "negativas",
+      "trecho": "Nessa leitura"
+    }
+  ],
+  "houve_retentativa": true,
+  "n_chamadas_llm": 3,
+  "latencia_total_s": 110.63,
+  "chamadas": [
+    {
+      "tipo": "chamada",
+      "ok": true,
+      "erro": null,
+      "finish_reason": "FinishReason.MAX_TOKENS",
+      "latencia_s": 38.01,
+      "json_valido": false,
+      "usage": {
+        "prompt_tokens": 6636,
+        "output_tokens": 307,
+        "thinking_tokens": 7676
+      }
+    },
+    {
+      "tipo": "chamada",
+      "ok": true,
+      "erro": null,
+      "finish_reason": "FinishReason.STOP",
+      "latencia_s": 35.5,
+      "json_valido": true,
+      "usage": {
+        "prompt_tokens": 6636,
+        "output_tokens": 990,
+        "thinking_tokens": 6533
+      }
+    },
+    {
+      "tipo": "chamada",
+      "ok": true,
+      "erro": null,
+      "finish_reason": "FinishReason.STOP",
+      "latencia_s": 32.78,
+      "json_valido": true,
+      "usage": {
+        "prompt_tokens": 6925,
+        "output_tokens": 693,
+        "thinking_tokens": 6916
+      }
+    }
+  ],
+  "contaminacao_detectada": false,
+  "n_gramas_compartilhados": []
+}

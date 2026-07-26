@@ -1,0 +1,128 @@
+{
+  "combinacao": "B",
+  "slug": "the-invite-2026",
+  "modelo": "gemini-2.5-flash",
+  "thinking_budget": 4096,
+  "max_output_tokens": 16000,
+  "pulado": false,
+  "narrativa": "O Convite, dirigido por Olivia Wilde em 2026, é um drama com elementos de comédia que apresenta o casamento de Joe e Angela por um fio. A premissa se desenvolve quando o casal convida seus enigmáticos vizinhos para um jantar, e a noite toma rumos inesperados. \n\nEm sua essência, o filme explora um tom que mescla comédia e drama, com a narrativa se concentrando em um único ambiente. Dentro desse cenário, ele flerta com situações que alguns podem descrever como forçadas ou constrangedoras. \n\nA grande maioria das notas (~79%) elogia a direção de Olivia Wilde e o roteiro, destacando a habilidade em equilibrar comédia e drama para criar tensão e explorar temas complexos de relacionamento. Para esse grupo, o filme consegue ser hilário e, ao mesmo tempo, profundamente triste ou tocante, com uma parte dos espectadores salientando o desempenho excepcional do elenco e a ótima química entre os atores. Uma minoria das notas (~18%) também vê as performances como amplamente elogiadas, com a direção eficaz. Para esse grupo, o filme é divertido na primeira metade, só que a repetição das situações e a duração prolongada tornam a experiência cansativa no final, com muitos achando o humor, por vezes, forçado. Já uma pequena minoria das notas (~3%) não embarca na proposta. Para eles, o humor e o roteiro são fracos e entediantes, e muitos consideram os personagens e diálogos superficiais. Quem está nessa faixa também aponta um foco excessivo ou explícito na sexualidade, algo que é percebido como constrangedor ou gratuito.",
+  "n_palavras": 250,
+  "metricas_fluencia": {
+    "n_frases": 11,
+    "media_palavras": 22.4,
+    "cv_comprimento": 0.34,
+    "frase_mais_curta": 10,
+    "aberturas_repetidas": 0,
+    "verbos_reporte": 6,
+    "adverbios_mente": 1
+  },
+  "flags": {
+    "idioma_invalido": false,
+    "escopo_suspeito": false,
+    "prevalencia_suspeita": false,
+    "quantificador_suspeito": false,
+    "consenso_suspeito": false,
+    "peso_nao_ancorado": false,
+    "vocabulario_peso_suspeito": false,
+    "perspectiva_nao_marcada": true,
+    "fluencia_baixa": true,
+    "aspas_removidas": false,
+    "falhou": false
+  },
+  "consensos_usados": [
+    {
+      "propriedade": "Tom que mescla comédia e drama, com humor forçado/constrangedor",
+      "grupos_de_origem": [
+        "negativas",
+        "medianas",
+        "positivas"
+      ],
+      "temas_de_origem": [
+        "Foco excessivo/explícito na sexualidade",
+        "Humor e tom",
+        "Humor e drama"
+      ]
+    },
+    {
+      "propriedade": "Ambientação em um único ambiente",
+      "grupos_de_origem": [
+        "medianas",
+        "positivas"
+      ],
+      "temas_de_origem": [
+        "Direção e estilo visual",
+        "Cinematografia e design de produção"
+      ]
+    }
+  ],
+  "quantificadores_usados": [
+    {
+      "quantificador": "uma parte dos espectadores",
+      "tema": "Atuações e química do elenco"
+    },
+    {
+      "quantificador": "muitos",
+      "tema": "Ritmo e duração"
+    },
+    {
+      "quantificador": "muitos",
+      "tema": "Humor e tom"
+    },
+    {
+      "quantificador": "muitos",
+      "tema": "Personagens e diálogos superficiais/irritantes"
+    },
+    {
+      "quantificador": "muitos",
+      "tema": "Foco excessivo/explícito na sexualidade"
+    }
+  ],
+  "marcadores_perspectiva": [
+    {
+      "grupo": "medianas",
+      "trecho": "Para esse grupo, o filme é divertido na primeira metade, só que a repetição das situações e a duração prolongada tornam a experiência cansativa no final, com muitos achando o humor, por vezes, forçado."
+    },
+    {
+      "grupo": "negativas",
+      "trecho": "Para eles, o humor e o roteiro são fracos e entediantes, e muitos consideram os personagens e diálogos superficiais."
+    },
+    {
+      "grupo": "negativas",
+      "trecho": "Quem está nessa faixa também aponta um foco excessivo ou explícito na sexualidade, algo que é percebido como constrangedor ou gratuito."
+    }
+  ],
+  "houve_retentativa": true,
+  "n_chamadas_llm": 2,
+  "latencia_total_s": 34.42,
+  "algum_finish_max_tokens": false,
+  "chamadas": [
+    {
+      "tipo": "chamada",
+      "ok": true,
+      "erro": null,
+      "finish_reason": "FinishReason.STOP",
+      "latencia_s": 16.27,
+      "json_valido": true,
+      "usage": {
+        "prompt_tokens": 6636,
+        "output_tokens": 1073,
+        "thinking_tokens": 2430
+      }
+    },
+    {
+      "tipo": "chamada",
+      "ok": true,
+      "erro": null,
+      "finish_reason": "FinishReason.STOP",
+      "latencia_s": 18.09,
+      "json_valido": true,
+      "usage": {
+        "prompt_tokens": 7041,
+        "output_tokens": 925,
+        "thinking_tokens": 2871
+      }
+    }
+  ],
+  "contaminacao_detectada": false,
+  "n_gramas_compartilhados": []
+}

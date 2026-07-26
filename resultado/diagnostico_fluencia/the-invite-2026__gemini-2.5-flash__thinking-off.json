@@ -1,0 +1,147 @@
+{
+  "combinacao": "A",
+  "slug": "the-invite-2026",
+  "modelo": "gemini-2.5-flash",
+  "thinking": "off",
+  "max_output_tokens": 3000,
+  "pulado": false,
+  "narrativa": "Em 2026, a diretora Olivia Wilde traz a público O Convite, um drama com toques de comédia sobre o casamento de Joe e Angela, que, à beira do colapso, decide convidar os vizinhos misteriosos para um jantar que promete reviravoltas. O filme se desenrola em um cenário predominantemente íntimo, com a narrativa equilibrando momentos de riso com tensão crescente. Há uma progressão notável de tom, partindo de uma atmosfera mais cômica para explorar dilemas mais profundos dos relacionamentos. Sua abordagem da intimidade e das relações interpessoais é bastante explícita. A grande maioria das notas (~79%) elogia a direção e o roteiro por equilibrar comédia e drama, criando tensão e explorando temas complexos de relacionamento. Quase todos que gostaram destacam ainda o desempenho excepcional do elenco e a ótima química entre os atores. Para muitos, o filme consegue ser hilário e, ao mesmo tempo, profundamente triste ou tocante. Já uma minoria das notas (~18%) tem uma visão mais matizada. Para eles, o filme é divertido na primeira metade, mas muitos sentiram que a repetição das situações e a duração prolongada tornaram a experiência cansativa no final. Por esse motivo, as atuações são elogiadas, e a direção é vista como confiante, equilibrando os tons, mas a mudança de tom e o final dividem opiniões. Uma pequena minoria das notas (~3%) não se conecta à proposta do filme. Para eles, cerca de metade das reviews classificou o humor do filme como previsível e o roteiro como arrastado, tornando a experiência tediosa. Muitos veem os personagens como caricaturas e superficiais, com diálogos que parecem forçados ou sem profundidade, e consideram as atuações e a direção questionáveis.",
+  "n_palavras": 272,
+  "metricas_fluencia": {
+    "n_frases": 13,
+    "media_palavras": 20.6,
+    "cv_comprimento": 0.37,
+    "frase_mais_curta": 10,
+    "aberturas_repetidas": 0,
+    "verbos_reporte": 5,
+    "adverbios_mente": 1
+  },
+  "flags": {
+    "idioma_invalido": false,
+    "escopo_suspeito": false,
+    "prevalencia_suspeita": false,
+    "quantificador_suspeito": false,
+    "consenso_suspeito": false,
+    "peso_nao_ancorado": false,
+    "vocabulario_peso_suspeito": false,
+    "perspectiva_nao_marcada": false,
+    "fluencia_baixa": true,
+    "aspas_removidas": true,
+    "falhou": false
+  },
+  "consensos_usados": [
+    {
+      "propriedade": "equilíbrio entre comédia e drama",
+      "grupos_de_origem": [
+        "medianas",
+        "positivas"
+      ],
+      "temas_de_origem": [
+        "Humor e tom",
+        "Humor e drama"
+      ]
+    },
+    {
+      "propriedade": "progressão de tom",
+      "grupos_de_origem": [
+        "medianas",
+        "positivas"
+      ],
+      "temas_de_origem": [
+        "Mudança de tom e final",
+        "Direção e roteiro (geral)"
+      ]
+    },
+    {
+      "propriedade": "abordagem explícita da sexualidade/intimidade",
+      "grupos_de_origem": [
+        "negativas",
+        "positivas"
+      ],
+      "temas_de_origem": [
+        "Foco excessivo/explícito na sexualidade",
+        "Temas de relacionamento e casamento"
+      ]
+    },
+    {
+      "propriedade": "ritmo arrastado/repetitivo na segunda metade",
+      "grupos_de_origem": [
+        "negativas",
+        "medianas"
+      ],
+      "temas_de_origem": [
+        "Humor e roteiro fracos/entediantes",
+        "Ritmo e duração"
+      ]
+    }
+  ],
+  "quantificadores_usados": [
+    {
+      "quantificador": "quase todos",
+      "tema": "Direção e roteiro (geral)"
+    },
+    {
+      "quantificador": "a maioria",
+      "tema": "Atuações e química do elenco"
+    },
+    {
+      "quantificador": "cerca de metade",
+      "tema": "Humor e drama"
+    },
+    {
+      "quantificador": "muitos",
+      "tema": "Ritmo e duração"
+    },
+    {
+      "quantificador": "cerca de metade",
+      "tema": "Humor e roteiro fracos/entediantes"
+    },
+    {
+      "quantificador": "Muitos",
+      "tema": "Personagens e diálogos superficiais/irritantes"
+    }
+  ],
+  "marcadores_perspectiva": [
+    {
+      "grupo": "medianas",
+      "trecho": "Para eles, o filme é divertido na primeira metade, mas muitos sentiram que a repetição das situações e a duração prolongada tornaram a experiência cansativa no final."
+    },
+    {
+      "grupo": "negativas",
+      "trecho": "Para eles, cerca de metade das reviews classificou o humor do filme como previsível e o roteiro como arrastado, tornando a experiência tediosa."
+    }
+  ],
+  "houve_retentativa": true,
+  "n_chamadas_llm": 2,
+  "latencia_total_s": 16.04,
+  "chamadas": [
+    {
+      "tipo": "chamada",
+      "ok": true,
+      "erro": null,
+      "finish_reason": "FinishReason.STOP",
+      "latencia_s": 5.59,
+      "json_valido": true,
+      "usage": {
+        "prompt_tokens": 6636,
+        "output_tokens": 859,
+        "thinking_tokens": null
+      }
+    },
+    {
+      "tipo": "chamada",
+      "ok": true,
+      "erro": null,
+      "finish_reason": "FinishReason.STOP",
+      "latencia_s": 6.0,
+      "json_valido": true,
+      "usage": {
+        "prompt_tokens": 7041,
+        "output_tokens": 1093,
+        "thinking_tokens": null
+      }
+    }
+  ],
+  "contaminacao_detectada": false,
+  "n_gramas_compartilhados": []
+}

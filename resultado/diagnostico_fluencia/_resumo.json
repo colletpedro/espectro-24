@@ -1,0 +1,653 @@
+{
+  "gerado_em": "2026-07-25T18:39:04.998635+00:00",
+  "chamadas_gemini": 16,
+  "teto": 16,
+  "resultados": [
+    {
+      "combinacao": "A",
+      "slug": "the-invite-2026",
+      "modelo": "gemini-2.5-flash",
+      "thinking": "off",
+      "max_output_tokens": 3000,
+      "pulado": false,
+      "narrativa": "Em 2026, a diretora Olivia Wilde traz a público O Convite, um drama com toques de comédia sobre o casamento de Joe e Angela, que, à beira do colapso, decide convidar os vizinhos misteriosos para um jantar que promete reviravoltas. O filme se desenrola em um cenário predominantemente íntimo, com a narrativa equilibrando momentos de riso com tensão crescente. Há uma progressão notável de tom, partindo de uma atmosfera mais cômica para explorar dilemas mais profundos dos relacionamentos. Sua abordagem da intimidade e das relações interpessoais é bastante explícita. A grande maioria das notas (~79%) elogia a direção e o roteiro por equilibrar comédia e drama, criando tensão e explorando temas complexos de relacionamento. Quase todos que gostaram destacam ainda o desempenho excepcional do elenco e a ótima química entre os atores. Para muitos, o filme consegue ser hilário e, ao mesmo tempo, profundamente triste ou tocante. Já uma minoria das notas (~18%) tem uma visão mais matizada. Para eles, o filme é divertido na primeira metade, mas muitos sentiram que a repetição das situações e a duração prolongada tornaram a experiência cansativa no final. Por esse motivo, as atuações são elogiadas, e a direção é vista como confiante, equilibrando os tons, mas a mudança de tom e o final dividem opiniões. Uma pequena minoria das notas (~3%) não se conecta à proposta do filme. Para eles, cerca de metade das reviews classificou o humor do filme como previsível e o roteiro como arrastado, tornando a experiência tediosa. Muitos veem os personagens como caricaturas e superficiais, com diálogos que parecem forçados ou sem profundidade, e consideram as atuações e a direção questionáveis.",
+      "n_palavras": 272,
+      "metricas_fluencia": {
+        "n_frases": 13,
+        "media_palavras": 20.6,
+        "cv_comprimento": 0.37,
+        "frase_mais_curta": 10,
+        "aberturas_repetidas": 0,
+        "verbos_reporte": 5,
+        "adverbios_mente": 1
+      },
+      "flags": {
+        "idioma_invalido": false,
+        "escopo_suspeito": false,
+        "prevalencia_suspeita": false,
+        "quantificador_suspeito": false,
+        "consenso_suspeito": false,
+        "peso_nao_ancorado": false,
+        "vocabulario_peso_suspeito": false,
+        "perspectiva_nao_marcada": false,
+        "fluencia_baixa": true,
+        "aspas_removidas": true,
+        "falhou": false
+      },
+      "consensos_usados": [
+        {
+          "propriedade": "equilíbrio entre comédia e drama",
+          "grupos_de_origem": [
+            "medianas",
+            "positivas"
+          ],
+          "temas_de_origem": [
+            "Humor e tom",
+            "Humor e drama"
+          ]
+        },
+        {
+          "propriedade": "progressão de tom",
+          "grupos_de_origem": [
+            "medianas",
+            "positivas"
+          ],
+          "temas_de_origem": [
+            "Mudança de tom e final",
+            "Direção e roteiro (geral)"
+          ]
+        },
+        {
+          "propriedade": "abordagem explícita da sexualidade/intimidade",
+          "grupos_de_origem": [
+            "negativas",
+            "positivas"
+          ],
+          "temas_de_origem": [
+            "Foco excessivo/explícito na sexualidade",
+            "Temas de relacionamento e casamento"
+          ]
+        },
+        {
+          "propriedade": "ritmo arrastado/repetitivo na segunda metade",
+          "grupos_de_origem": [
+            "negativas",
+            "medianas"
+          ],
+          "temas_de_origem": [
+            "Humor e roteiro fracos/entediantes",
+            "Ritmo e duração"
+          ]
+        }
+      ],
+      "quantificadores_usados": [
+        {
+          "quantificador": "quase todos",
+          "tema": "Direção e roteiro (geral)"
+        },
+        {
+          "quantificador": "a maioria",
+          "tema": "Atuações e química do elenco"
+        },
+        {
+          "quantificador": "cerca de metade",
+          "tema": "Humor e drama"
+        },
+        {
+          "quantificador": "muitos",
+          "tema": "Ritmo e duração"
+        },
+        {
+          "quantificador": "cerca de metade",
+          "tema": "Humor e roteiro fracos/entediantes"
+        },
+        {
+          "quantificador": "Muitos",
+          "tema": "Personagens e diálogos superficiais/irritantes"
+        }
+      ],
+      "marcadores_perspectiva": [
+        {
+          "grupo": "medianas",
+          "trecho": "Para eles, o filme é divertido na primeira metade, mas muitos sentiram que a repetição das situações e a duração prolongada tornaram a experiência cansativa no final."
+        },
+        {
+          "grupo": "negativas",
+          "trecho": "Para eles, cerca de metade das reviews classificou o humor do filme como previsível e o roteiro como arrastado, tornando a experiência tediosa."
+        }
+      ],
+      "houve_retentativa": true,
+      "n_chamadas_llm": 2,
+      "latencia_total_s": 16.04,
+      "chamadas": [
+        {
+          "tipo": "chamada",
+          "ok": true,
+          "erro": null,
+          "finish_reason": "FinishReason.STOP",
+          "latencia_s": 5.59,
+          "json_valido": true,
+          "usage": {
+            "prompt_tokens": 6636,
+            "output_tokens": 859,
+            "thinking_tokens": null
+          }
+        },
+        {
+          "tipo": "chamada",
+          "ok": true,
+          "erro": null,
+          "finish_reason": "FinishReason.STOP",
+          "latencia_s": 6.0,
+          "json_valido": true,
+          "usage": {
+            "prompt_tokens": 7041,
+            "output_tokens": 1093,
+            "thinking_tokens": null
+          }
+        }
+      ],
+      "contaminacao_detectada": false,
+      "n_gramas_compartilhados": []
+    },
+    {
+      "combinacao": "A",
+      "slug": "cure",
+      "modelo": "gemini-2.5-flash",
+      "thinking": "off",
+      "max_output_tokens": 3000,
+      "pulado": false,
+      "narrativa": "Em 1997, o diretor 黒沢清 apresentou A Cura, um suspense de crime e terror que mergulha na busca desesperada de um detetive por respostas, enquanto pessoas são encontradas mortas com uma estranha marca em x e ele tenta ligar os crimes a um rapaz misterioso. O filme se desenrola com um ritmo lento, construindo uma atmosfera densa e um tanto enigmática, que se inclina para o horror psicológico. Essa cadência e o tom perturbador são essenciais para a experiência, que se mantém ambígua, deixando muitas vezes o espectador sem respostas claras. \nA grande maioria das notas (~79%) elogia a maestria do filme em criar uma atmosfera perturbadora e hipnótica, onde o pacing lento e deliberado intensifica o horror psicológico. Muitos destacam como o filme explora temas psicológicos e existenciais profundos, como a fragilidade da identidade e a natureza do mal, e alguns apreciam a ambiguidade e ausência de respostas, que convidam à reflexão. Já uma minoria das notas (~17%) reconhece as ideias intrigantes e a atmosfera eficaz, mas muitos veem um ritmo lento que leva à confusão narrativa. Para esse grupo, o filme peca na execução e apresenta um final que parece insatisfatório ou ambíguo. Para uma pequena minoria das notas (~3%), o filme é excessivamente lento e tedioso. Muitos para eles, há uma falta de tensão ou mistério e o enredo é repetitivo, com personagens desinteressantes que não cativam.",
+      "n_palavras": 230,
+      "metricas_fluencia": {
+        "n_frases": 9,
+        "media_palavras": 25.1,
+        "cv_comprimento": 0.35,
+        "frase_mais_curta": 13,
+        "aberturas_repetidas": 1,
+        "verbos_reporte": 3,
+        "adverbios_mente": 1
+      },
+      "flags": {
+        "idioma_invalido": false,
+        "escopo_suspeito": false,
+        "prevalencia_suspeita": false,
+        "quantificador_suspeito": false,
+        "consenso_suspeito": false,
+        "peso_nao_ancorado": false,
+        "vocabulario_peso_suspeito": false,
+        "perspectiva_nao_marcada": false,
+        "fluencia_baixa": true,
+        "aspas_removidas": true,
+        "falhou": false
+      },
+      "consensos_usados": [
+        {
+          "propriedade": "ritmo lento",
+          "grupos_de_origem": [
+            "negativas",
+            "medianas",
+            "positivas"
+          ],
+          "temas_de_origem": [
+            "Ritmo lento e tedioso",
+            "Ritmo lento e confusão narrativa",
+            "Pacing Lento e Deliberado"
+          ]
+        },
+        {
+          "propriedade": "atmosfera perturbadora",
+          "grupos_de_origem": [
+            "medianas",
+            "positivas"
+          ],
+          "temas_de_origem": [
+            "Atmosfera e estilo visual eficazes",
+            "Atmosfera e Tom Perturbador/Hipnótico"
+          ]
+        },
+        {
+          "propriedade": "final ambíguo",
+          "grupos_de_origem": [
+            "negativas",
+            "medianas",
+            "positivas"
+          ],
+          "temas_de_origem": [
+            "Final insatisfatório/abrupto",
+            "Final insatisfatório/ambíguo",
+            "Ausência de Respostas e Ambiguidade"
+          ]
+        }
+      ],
+      "quantificadores_usados": [
+        {
+          "quantificador": "muitos",
+          "tema": "Atmosfera e Tom Perturbador/Hipnótico"
+        },
+        {
+          "quantificador": "muitos",
+          "tema": "Pacing Lento e Deliberado"
+        },
+        {
+          "quantificador": "muitos",
+          "tema": "Temas Psicológicos e Existenciais"
+        },
+        {
+          "quantificador": "alguns",
+          "tema": "Ausência de Respostas e Ambiguidade"
+        },
+        {
+          "quantificador": "muitos",
+          "tema": "Ritmo lento e confusão narrativa"
+        },
+        {
+          "quantificador": "muitos",
+          "tema": "Ritmo lento e tedioso"
+        },
+        {
+          "quantificador": "muitos",
+          "tema": "Falta de tensão/mistério/terror"
+        }
+      ],
+      "marcadores_perspectiva": [
+        {
+          "grupo": "medianas",
+          "trecho": "Para esse grupo"
+        },
+        {
+          "grupo": "negativas",
+          "trecho": "Para uma pequena minoria das notas (~3%), o filme é excessivamente lento e tedioso. Muitos para eles"
+        }
+      ],
+      "houve_retentativa": true,
+      "n_chamadas_llm": 2,
+      "latencia_total_s": 19.72,
+      "chamadas": [
+        {
+          "tipo": "chamada",
+          "ok": true,
+          "erro": null,
+          "finish_reason": "FinishReason.STOP",
+          "latencia_s": 5.8,
+          "json_valido": true,
+          "usage": {
+            "prompt_tokens": 6765,
+            "output_tokens": 927,
+            "thinking_tokens": null
+          }
+        },
+        {
+          "tipo": "chamada",
+          "ok": true,
+          "erro": null,
+          "finish_reason": "FinishReason.STOP",
+          "latencia_s": 5.7,
+          "json_valido": true,
+          "usage": {
+            "prompt_tokens": 7054,
+            "output_tokens": 970,
+            "thinking_tokens": null
+          }
+        }
+      ],
+      "contaminacao_detectada": false,
+      "n_gramas_compartilhados": []
+    },
+    {
+      "combinacao": "B",
+      "slug": "the-invite-2026",
+      "modelo": "gemini-2.5-flash",
+      "thinking": "on",
+      "max_output_tokens": 8000,
+      "pulado": false,
+      "narrativa": "Olivia Wilde dirige O Convite, um drama e comédia de 2026 que acompanha o casal Joe e Angela em um momento de crise. A premissa se desenrola quando eles convidam seus misteriosos vizinhos para um jantar, e a noite toma um rumo inesperado.\n\nA grande maioria das notas (~79%) abraça O Convite. O filme, para eles, possui uma direção e um roteiro que se destacam pela habilidade em equilibrar comédia e drama, criando tensão enquanto explora relações complexas. As atuações excepcionais do elenco e a ótima química entre os atores são um grande ponto. O humor é hilário e, ao mesmo tempo, profundamente tocante, com um equilíbrio perfeito entre os dois tons.\nUma minoria das notas (~18%) também tem pontos positivos a considerar. O filme, para esse grupo, tem atuações fortes e uma direção confiante que capta a atmosfera íntima do apartamento. Só que muitos acharam que, embora divertido na primeira metade, o ritmo e a repetição das situações o tornaram cansativo no final. O roteiro é visto como inteligente, mas alguns viram as motivações e os temas como um tanto previsíveis ou superficiais, com uma mudança de tom para o drama final que dividiu opiniões.\nJá uma pequena minoria das notas (~3%) não foi conquistada pelo convite. Para eles, cerca de metade das reviews classifica o humor e o roteiro como fracos e entediantes, com piadas que não funcionam e a história se arrastando. Muitos também acharam os personagens superficiais e irritantes, com diálogos forçados. Nessa leitura, atuações e direção são questionáveis, e o foco excessivo na sexualidade parece constrangedor ou gratuito.",
+      "n_palavras": 263,
+      "metricas_fluencia": {
+        "n_frases": 14,
+        "media_palavras": 18.5,
+        "cv_comprimento": 0.37,
+        "frase_mais_curta": 8,
+        "aberturas_repetidas": 1,
+        "verbos_reporte": 3,
+        "adverbios_mente": 1
+      },
+      "flags": {
+        "idioma_invalido": false,
+        "escopo_suspeito": false,
+        "prevalencia_suspeita": false,
+        "quantificador_suspeito": false,
+        "consenso_suspeito": false,
+        "peso_nao_ancorado": false,
+        "vocabulario_peso_suspeito": false,
+        "perspectiva_nao_marcada": true,
+        "fluencia_baixa": true,
+        "aspas_removidas": true,
+        "falhou": false
+      },
+      "consensos_usados": [],
+      "quantificadores_usados": [
+        {
+          "quantificador": "Quase todos",
+          "tema": "Direção e roteiro (geral)"
+        },
+        {
+          "quantificador": "a maioria",
+          "tema": "Atuações e química do elenco"
+        },
+        {
+          "quantificador": "muitos",
+          "tema": "Ritmo e duração"
+        },
+        {
+          "quantificador": "alguns",
+          "tema": "Roteiro e temas abordados"
+        },
+        {
+          "quantificador": "cerca de metade",
+          "tema": "Humor e roteiro fracos/entediantes"
+        },
+        {
+          "quantificador": "Muitos",
+          "tema": "Personagens e diálogos superficiais/irritantes"
+        }
+      ],
+      "marcadores_perspectiva": [
+        {
+          "grupo": "medianas",
+          "trecho": "Para esse grupo"
+        },
+        {
+          "grupo": "negativas",
+          "trecho": "Para eles"
+        },
+        {
+          "grupo": "negativas",
+          "trecho": "Nessa leitura"
+        }
+      ],
+      "houve_retentativa": true,
+      "n_chamadas_llm": 3,
+      "latencia_total_s": 110.63,
+      "chamadas": [
+        {
+          "tipo": "chamada",
+          "ok": true,
+          "erro": null,
+          "finish_reason": "FinishReason.MAX_TOKENS",
+          "latencia_s": 38.01,
+          "json_valido": false,
+          "usage": {
+            "prompt_tokens": 6636,
+            "output_tokens": 307,
+            "thinking_tokens": 7676
+          }
+        },
+        {
+          "tipo": "chamada",
+          "ok": true,
+          "erro": null,
+          "finish_reason": "FinishReason.STOP",
+          "latencia_s": 35.5,
+          "json_valido": true,
+          "usage": {
+            "prompt_tokens": 6636,
+            "output_tokens": 990,
+            "thinking_tokens": 6533
+          }
+        },
+        {
+          "tipo": "chamada",
+          "ok": true,
+          "erro": null,
+          "finish_reason": "FinishReason.STOP",
+          "latencia_s": 32.78,
+          "json_valido": true,
+          "usage": {
+            "prompt_tokens": 6925,
+            "output_tokens": 693,
+            "thinking_tokens": 6916
+          }
+        }
+      ],
+      "contaminacao_detectada": false,
+      "n_gramas_compartilhados": []
+    },
+    {
+      "combinacao": "B",
+      "slug": "cure",
+      "modelo": "gemini-2.5-flash",
+      "thinking": "on",
+      "max_output_tokens": 8000,
+      "pulado": false,
+      "narrativa": "A Cura, um thriller, terror e mistério dirigido por 黒沢清 em 1997, segue um detetive que investiga uma série de assassinatos bizarros, todos marcados por um enigmático x nos corpos das vítimas, sem qualquer pista óbvia. Um ritmo lento, característica marcante da obra, permeia a experiência. \nA grande maioria das notas (~79%) abraça a proposta do filme, com muitos descrevendo sua atmosfera e tom como perturbadores e hipnóticos. O ritmo é notado como lento e deliberado, intensificando o suspense psicológico. Há também uma apreciação pelos temas psicológicos e existenciais que a narrativa explora, mergulhando na fragilidade da identidade e na natureza do mal. Para alguns, a ausência de respostas e a ambiguidade são pontos fortes, enriquecendo a reflexão. \nUma minoria das notas (~17%) teve uma experiência mista. Para esse grupo, embora o filme apresente ideias intrigantes e uma atmosfera e estilo visual eficazes, muitos sentem que a execução falha no aprofundamento. Para eles, o ritmo é lento e a narrativa gera confusão, e muitos também apontam um final insatisfatório e ambíguo que deixa pontas soltas. \nUma pequena minoria das notas (~3%) não se conecta com a obra. Para eles, o ritmo é lento e tedioso para a maioria, não gerando a tensão, mistério ou terror prometidos. Muitos também veem o enredo e o roteiro como fracos e repetitivos, com personagens desinteressantes e planos, resultando numa experiência decepcionante.",
+      "n_palavras": 227,
+      "metricas_fluencia": {
+        "n_frases": 12,
+        "media_palavras": 18.6,
+        "cv_comprimento": 0.4,
+        "frase_mais_curta": 8,
+        "aberturas_repetidas": 1,
+        "verbos_reporte": 2,
+        "adverbios_mente": 0
+      },
+      "flags": {
+        "idioma_invalido": false,
+        "escopo_suspeito": false,
+        "prevalencia_suspeita": false,
+        "quantificador_suspeito": false,
+        "consenso_suspeito": false,
+        "peso_nao_ancorado": false,
+        "vocabulario_peso_suspeito": false,
+        "perspectiva_nao_marcada": true,
+        "fluencia_baixa": true,
+        "aspas_removidas": true,
+        "falhou": false
+      },
+      "consensos_usados": [
+        {
+          "propriedade": "Ritmo lento",
+          "grupos_de_origem": [
+            "negativas",
+            "medianas",
+            "positivas"
+          ],
+          "temas_de_origem": [
+            "Ritmo lento e tedioso",
+            "Ritmo lento e confusão narrativa",
+            "Pacing Lento e Deliberado"
+          ]
+        }
+      ],
+      "quantificadores_usados": [
+        {
+          "quantificador": "muitos",
+          "tema": "Atmosfera e Tom Perturbador/Hipnótico"
+        },
+        {
+          "quantificador": "muitos",
+          "tema": "Pacing Lento e Deliberado"
+        },
+        {
+          "quantificador": "muitos",
+          "tema": "Temas Psicológicos e Existenciais"
+        },
+        {
+          "quantificador": "alguns",
+          "tema": "Ausência de Respostas e Ambiguidade"
+        },
+        {
+          "quantificador": "muitos",
+          "tema": "Ideias intrigantes, mas execução falha"
+        },
+        {
+          "quantificador": "muitos",
+          "tema": "Atmosfera e estilo visual eficazes"
+        },
+        {
+          "quantificador": "muitos",
+          "tema": "Ritmo lento e confusão narrativa"
+        },
+        {
+          "quantificador": "muitos",
+          "tema": "Final insatisfatório/ambíguo"
+        },
+        {
+          "quantificador": "a maioria",
+          "tema": "Ritmo lento e tedioso"
+        },
+        {
+          "quantificador": "muitos",
+          "tema": "Falta de tensão/mistério/terror"
+        },
+        {
+          "quantificador": "muitos",
+          "tema": "Enredo e roteiro fracos/repetitivos"
+        },
+        {
+          "quantificador": "muitos",
+          "tema": "Personagens desinteressantes/planos"
+        }
+      ],
+      "marcadores_perspectiva": [
+        {
+          "grupo": "medianas",
+          "trecho": "Para esse grupo"
+        },
+        {
+          "grupo": "negativas",
+          "trecho": "Para eles"
+        }
+      ],
+      "houve_retentativa": true,
+      "n_chamadas_llm": 2,
+      "latencia_total_s": 61.68,
+      "chamadas": [
+        {
+          "tipo": "chamada",
+          "ok": true,
+          "erro": null,
+          "finish_reason": "FinishReason.STOP",
+          "latencia_s": 25.81,
+          "json_valido": true,
+          "usage": {
+            "prompt_tokens": 6765,
+            "output_tokens": 932,
+            "thinking_tokens": 5153
+          }
+        },
+        {
+          "tipo": "chamada",
+          "ok": true,
+          "erro": null,
+          "finish_reason": "FinishReason.MAX_TOKENS",
+          "latencia_s": 35.84,
+          "json_valido": false,
+          "usage": {
+            "prompt_tokens": 7170,
+            "output_tokens": 407,
+            "thinking_tokens": 7576
+          }
+        }
+      ],
+      "contaminacao_detectada": false,
+      "n_gramas_compartilhados": []
+    },
+    {
+      "combinacao": "C",
+      "slug": "the-invite-2026",
+      "modelo": "gemini-2.5-pro",
+      "thinking": "off",
+      "pulado": true,
+      "motivo": "gemini-2.5-pro falhou de novo após backoff: 429 RESOURCE_EXHAUSTED. {'error': {'code': 429, 'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \\n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_input_token_count, limit: 0, model: gemini-2.5-pro\\n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 0, model: gemini-2.5-pro\\n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 0, model: gemini-2.5-pro\\n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_input_token_count, limit: 0, model: gemini-2.5-pro\\nPlease retry in 27.160771047s.', 'status': 'RESOURCE_EXHAUSTED', 'details': [{'@type': 'type.googleapis.com/google.rpc.Help', 'links': [{'description': 'Learn more about Gemini API quotas', 'url': 'https://ai.google.dev/gemini-api/docs/rate-limits'}]}, {'@type': 'type.googleapis.com/google.rpc.QuotaFailure', 'violations': [{'quotaMetric': 'generativelanguage.googleapis.com/generate_content_free_tier_input_token_count', 'quotaId': 'GenerateContentInputTokensPerModelPerMinute-FreeTier', 'quotaDimensions': {'location': 'global', 'model': 'gemini-2.5-pro'}}, {'quotaMetric': 'generativelanguage.googleapis.com/generate_content_free_tier_requests', 'quotaId': 'GenerateRequestsPerMinutePerProjectPerModel-FreeTier', 'quotaDimensions': {'model': 'gemini-2.5-pro', 'location': 'global'}}, {'quotaMetric': 'generativelanguage.googleapis.com/generate_content_free_tier_requests', 'quotaId': 'GenerateRequestsPerDayPerProjectPerModel-FreeTier', 'quotaDimensions': {'model': 'gemini-2.5-pro', 'location': 'global'}}, {'quotaMetric': 'generativelanguage.googleapis.com/generate_content_free_tier_input_token_count', 'quotaId': 'GenerateContentInputTokensPerModelPerDay-FreeTier', 'quotaDimensions': {'location': 'global', 'model': 'gemini-2.5-pro'}}]}, {'@type': 'type.googleapis.com/google.rpc.RetryInfo', 'retryDelay': '27s'}]}}",
+      "chamadas": [
+        {
+          "tipo": "chamada",
+          "ok": false,
+          "erro": "ClientError: 429 RESOURCE_EXHAUSTED. {'error': {'code': 429, 'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \\n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_input_token_count, limit: 0, model: gemini-2.5-pro\\n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 0, model: gemini-2.5-pro\\n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 0, model: gemini-2.5-pro\\n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_input_token_count, limit: 0, model: gemini-2.5-pro\\nPlease retry in 27.811204436s.', 'status': 'RESOURCE_EXHAUSTED', 'details': [{'@type': 'type.googleapis.com/google.rpc.Help', 'links': [{'description': 'Learn more about Gemini API quotas', 'url': 'https://ai.google.dev/gemini-api/docs/rate-limits'}]}, {'@type': 'type.googleapis.com/google.rpc.QuotaFailure', 'violations': [{'quotaMetric': 'generativelanguage.googleapis.com/generate_content_free_tier_input_token_count', 'quotaId': 'GenerateContentInputTokensPerModelPerDay-FreeTier', 'quotaDimensions': {'location': 'global', 'model': 'gemini-2.5-pro'}}, {'quotaMetric': 'generativelanguage.googleapis.com/generate_content_free_tier_requests', 'quotaId': 'GenerateRequestsPerDayPerProjectPerModel-FreeTier', 'quotaDimensions': {'location': 'global', 'model': 'gemini-2.5-pro'}}, {'quotaMetric': 'generativelanguage.googleapis.com/generate_content_free_tier_requests', 'quotaId': 'GenerateRequestsPerMinutePerProjectPerModel-FreeTier', 'quotaDimensions': {'location': 'global', 'model': 'gemini-2.5-pro'}}, {'quotaMetric': 'generativelanguage.googleapis.com/generate_content_free_tier_input_token_count', 'quotaId': 'GenerateContentInputTokensPerModelPerMinute-FreeTier', 'quotaDimensions': {'location': 'global', 'model': 'gemini-2.5-pro'}}]}, {'@type': 'type.googleapis.com/google.rpc.RetryInfo', 'retryDelay': '27s'}]}}",
+          "finish_reason": null,
+          "latencia_s": null
+        },
+        {
+          "tipo": "retentativa_rate_limit",
+          "ok": false,
+          "erro": "ClientError: 429 RESOURCE_EXHAUSTED. {'error': {'code': 429, 'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \\n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_input_token_count, limit: 0, model: gemini-2.5-pro\\n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 0, model: gemini-2.5-pro\\n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 0, model: gemini-2.5-pro\\n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_input_token_count, limit: 0, model: gemini-2.5-pro\\nPlease retry in 27.160771047s.', 'status': 'RESOURCE_EXHAUSTED', 'details': [{'@type': 'type.googleapis.com/google.rpc.Help', 'links': [{'description': 'Learn more about Gemini API quotas', 'url': 'https://ai.google.dev/gemini-api/docs/rate-limits'}]}, {'@type': 'type.googleapis.com/google.rpc.QuotaFailure', 'violations': [{'quotaMetric': 'generativelanguage.googleapis.com/generate_content_free_tier_input_token_count', 'quotaId': 'GenerateContentInputTokensPerModelPerMinute-FreeTier', 'quotaDimensions': {'location': 'global', 'model': 'gemini-2.5-pro'}}, {'quotaMetric': 'generativelanguage.googleapis.com/generate_content_free_tier_requests', 'quotaId': 'GenerateRequestsPerMinutePerProjectPerModel-FreeTier', 'quotaDimensions': {'model': 'gemini-2.5-pro', 'location': 'global'}}, {'quotaMetric': 'generativelanguage.googleapis.com/generate_content_free_tier_requests', 'quotaId': 'GenerateRequestsPerDayPerProjectPerModel-FreeTier', 'quotaDimensions': {'model': 'gemini-2.5-pro', 'location': 'global'}}, {'quotaMetric': 'generativelanguage.googleapis.com/generate_content_free_tier_input_token_count', 'quotaId': 'GenerateContentInputTokensPerModelPerDay-FreeTier', 'quotaDimensions': {'location': 'global', 'model': 'gemini-2.5-pro'}}]}, {'@type': 'type.googleapis.com/google.rpc.RetryInfo', 'retryDelay': '27s'}]}}",
+          "finish_reason": null,
+          "latencia_s": null
+        }
+      ]
+    },
+    {
+      "combinacao": "C",
+      "slug": "cure",
+      "modelo": "gemini-2.5-pro",
+      "thinking": "off",
+      "pulado": true,
+      "motivo": "gemini-2.5-pro falhou de novo após backoff: 429 RESOURCE_EXHAUSTED. {'error': {'code': 429, 'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \\n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_input_token_count, limit: 0, model: gemini-2.5-pro\\n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 0, model: gemini-2.5-pro\\n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 0, model: gemini-2.5-pro\\n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_input_token_count, limit: 0, model: gemini-2.5-pro\\nPlease retry in 16.281835206s.', 'status': 'RESOURCE_EXHAUSTED', 'details': [{'@type': 'type.googleapis.com/google.rpc.Help', 'links': [{'description': 'Learn more about Gemini API quotas', 'url': 'https://ai.google.dev/gemini-api/docs/rate-limits'}]}, {'@type': 'type.googleapis.com/google.rpc.QuotaFailure', 'violations': [{'quotaMetric': 'generativelanguage.googleapis.com/generate_content_free_tier_input_token_count', 'quotaId': 'GenerateContentInputTokensPerModelPerDay-FreeTier', 'quotaDimensions': {'location': 'global', 'model': 'gemini-2.5-pro'}}, {'quotaMetric': 'generativelanguage.googleapis.com/generate_content_free_tier_requests', 'quotaId': 'GenerateRequestsPerDayPerProjectPerModel-FreeTier', 'quotaDimensions': {'location': 'global', 'model': 'gemini-2.5-pro'}}, {'quotaMetric': 'generativelanguage.googleapis.com/generate_content_free_tier_requests', 'quotaId': 'GenerateRequestsPerMinutePerProjectPerModel-FreeTier', 'quotaDimensions': {'location': 'global', 'model': 'gemini-2.5-pro'}}, {'quotaMetric': 'generativelanguage.googleapis.com/generate_content_free_tier_input_token_count', 'quotaId': 'GenerateContentInputTokensPerModelPerMinute-FreeTier', 'quotaDimensions': {'location': 'global', 'model': 'gemini-2.5-pro'}}]}, {'@type': 'type.googleapis.com/google.rpc.RetryInfo', 'retryDelay': '16s'}]}}",
+      "chamadas": [
+        {
+          "tipo": "chamada",
+          "ok": false,
+          "erro": "ClientError: 429 RESOURCE_EXHAUSTED. {'error': {'code': 429, 'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \\n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_input_token_count, limit: 0, model: gemini-2.5-pro\\n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 0, model: gemini-2.5-pro\\n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 0, model: gemini-2.5-pro\\n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_input_token_count, limit: 0, model: gemini-2.5-pro\\nPlease retry in 17.151409878s.', 'status': 'RESOURCE_EXHAUSTED', 'details': [{'@type': 'type.googleapis.com/google.rpc.Help', 'links': [{'description': 'Learn more about Gemini API quotas', 'url': 'https://ai.google.dev/gemini-api/docs/rate-limits'}]}, {'@type': 'type.googleapis.com/google.rpc.QuotaFailure', 'violations': [{'quotaMetric': 'generativelanguage.googleapis.com/generate_content_free_tier_input_token_count', 'quotaId': 'GenerateContentInputTokensPerModelPerDay-FreeTier', 'quotaDimensions': {'location': 'global', 'model': 'gemini-2.5-pro'}}, {'quotaMetric': 'generativelanguage.googleapis.com/generate_content_free_tier_requests', 'quotaId': 'GenerateRequestsPerDayPerProjectPerModel-FreeTier', 'quotaDimensions': {'location': 'global', 'model': 'gemini-2.5-pro'}}, {'quotaMetric': 'generativelanguage.googleapis.com/generate_content_free_tier_requests', 'quotaId': 'GenerateRequestsPerMinutePerProjectPerModel-FreeTier', 'quotaDimensions': {'location': 'global', 'model': 'gemini-2.5-pro'}}, {'quotaMetric': 'generativelanguage.googleapis.com/generate_content_free_tier_input_token_count', 'quotaId': 'GenerateContentInputTokensPerModelPerMinute-FreeTier', 'quotaDimensions': {'location': 'global', 'model': 'gemini-2.5-pro'}}]}, {'@type': 'type.googleapis.com/google.rpc.RetryInfo', 'retryDelay': '17s'}]}}",
+          "finish_reason": null,
+          "latencia_s": null
+        },
+        {
+          "tipo": "retentativa_rate_limit",
+          "ok": false,
+          "erro": "ClientError: 429 RESOURCE_EXHAUSTED. {'error': {'code': 429, 'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \\n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_input_token_count, limit: 0, model: gemini-2.5-pro\\n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 0, model: gemini-2.5-pro\\n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 0, model: gemini-2.5-pro\\n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_input_token_count, limit: 0, model: gemini-2.5-pro\\nPlease retry in 16.281835206s.', 'status': 'RESOURCE_EXHAUSTED', 'details': [{'@type': 'type.googleapis.com/google.rpc.Help', 'links': [{'description': 'Learn more about Gemini API quotas', 'url': 'https://ai.google.dev/gemini-api/docs/rate-limits'}]}, {'@type': 'type.googleapis.com/google.rpc.QuotaFailure', 'violations': [{'quotaMetric': 'generativelanguage.googleapis.com/generate_content_free_tier_input_token_count', 'quotaId': 'GenerateContentInputTokensPerModelPerDay-FreeTier', 'quotaDimensions': {'location': 'global', 'model': 'gemini-2.5-pro'}}, {'quotaMetric': 'generativelanguage.googleapis.com/generate_content_free_tier_requests', 'quotaId': 'GenerateRequestsPerDayPerProjectPerModel-FreeTier', 'quotaDimensions': {'location': 'global', 'model': 'gemini-2.5-pro'}}, {'quotaMetric': 'generativelanguage.googleapis.com/generate_content_free_tier_requests', 'quotaId': 'GenerateRequestsPerMinutePerProjectPerModel-FreeTier', 'quotaDimensions': {'location': 'global', 'model': 'gemini-2.5-pro'}}, {'quotaMetric': 'generativelanguage.googleapis.com/generate_content_free_tier_input_token_count', 'quotaId': 'GenerateContentInputTokensPerModelPerMinute-FreeTier', 'quotaDimensions': {'location': 'global', 'model': 'gemini-2.5-pro'}}]}, {'@type': 'type.googleapis.com/google.rpc.RetryInfo', 'retryDelay': '16s'}]}}",
+          "finish_reason": null,
+          "latencia_s": null
+        }
+      ]
+    },
+    {
+      "combinacao": "D",
+      "slug": "the-invite-2026",
+      "modelo": "gemini-2.5-pro",
+      "thinking": "on",
+      "pulado": true,
+      "motivo": "gemini-2.5-pro falhou de novo após backoff: 429 RESOURCE_EXHAUSTED. {'error': {'code': 429, 'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \\n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_input_token_count, limit: 0, model: gemini-2.5-pro\\n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_input_token_count, limit: 0, model: gemini-2.5-pro\\n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 0, model: gemini-2.5-pro\\n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 0, model: gemini-2.5-pro\\nPlease retry in 4.44944948s.', 'status': 'RESOURCE_EXHAUSTED', 'details': [{'@type': 'type.googleapis.com/google.rpc.Help', 'links': [{'description': 'Learn more about Gemini API quotas', 'url': 'https://ai.google.dev/gemini-api/docs/rate-limits'}]}, {'@type': 'type.googleapis.com/google.rpc.QuotaFailure', 'violations': [{'quotaMetric': 'generativelanguage.googleapis.com/generate_content_free_tier_input_token_count', 'quotaId': 'GenerateContentInputTokensPerModelPerDay-FreeTier', 'quotaDimensions': {'location': 'global', 'model': 'gemini-2.5-pro'}}, {'quotaMetric': 'generativelanguage.googleapis.com/generate_content_free_tier_input_token_count', 'quotaId': 'GenerateContentInputTokensPerModelPerMinute-FreeTier', 'quotaDimensions': {'location': 'global', 'model': 'gemini-2.5-pro'}}, {'quotaMetric': 'generativelanguage.googleapis.com/generate_content_free_tier_requests', 'quotaId': 'GenerateRequestsPerMinutePerProjectPerModel-FreeTier', 'quotaDimensions': {'location': 'global', 'model': 'gemini-2.5-pro'}}, {'quotaMetric': 'generativelanguage.googleapis.com/generate_content_free_tier_requests', 'quotaId': 'GenerateRequestsPerDayPerProjectPerModel-FreeTier', 'quotaDimensions': {'location': 'global', 'model': 'gemini-2.5-pro'}}]}, {'@type': 'type.googleapis.com/google.rpc.RetryInfo', 'retryDelay': '4s'}]}}",
+      "chamadas": [
+        {
+          "tipo": "chamada",
+          "ok": false,
+          "erro": "ClientError: 429 RESOURCE_EXHAUSTED. {'error': {'code': 429, 'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \\n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_input_token_count, limit: 0, model: gemini-2.5-pro\\n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 0, model: gemini-2.5-pro\\n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 0, model: gemini-2.5-pro\\n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_input_token_count, limit: 0, model: gemini-2.5-pro\\nPlease retry in 5.72898352s.', 'status': 'RESOURCE_EXHAUSTED', 'details': [{'@type': 'type.googleapis.com/google.rpc.Help', 'links': [{'description': 'Learn more about Gemini API quotas', 'url': 'https://ai.google.dev/gemini-api/docs/rate-limits'}]}, {'@type': 'type.googleapis.com/google.rpc.QuotaFailure', 'violations': [{'quotaMetric': 'generativelanguage.googleapis.com/generate_content_free_tier_input_token_count', 'quotaId': 'GenerateContentInputTokensPerModelPerMinute-FreeTier', 'quotaDimensions': {'location': 'global', 'model': 'gemini-2.5-pro'}}, {'quotaMetric': 'generativelanguage.googleapis.com/generate_content_free_tier_requests', 'quotaId': 'GenerateRequestsPerMinutePerProjectPerModel-FreeTier', 'quotaDimensions': {'location': 'global', 'model': 'gemini-2.5-pro'}}, {'quotaMetric': 'generativelanguage.googleapis.com/generate_content_free_tier_requests', 'quotaId': 'GenerateRequestsPerDayPerProjectPerModel-FreeTier', 'quotaDimensions': {'location': 'global', 'model': 'gemini-2.5-pro'}}, {'quotaMetric': 'generativelanguage.googleapis.com/generate_content_free_tier_input_token_count', 'quotaId': 'GenerateContentInputTokensPerModelPerDay-FreeTier', 'quotaDimensions': {'location': 'global', 'model': 'gemini-2.5-pro'}}]}, {'@type': 'type.googleapis.com/google.rpc.RetryInfo', 'retryDelay': '5s'}]}}",
+          "finish_reason": null,
+          "latencia_s": null
+        },
+        {
+          "tipo": "retentativa_rate_limit",
+          "ok": false,
+          "erro": "ClientError: 429 RESOURCE_EXHAUSTED. {'error': {'code': 429, 'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \\n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_input_token_count, limit: 0, model: gemini-2.5-pro\\n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_input_token_count, limit: 0, model: gemini-2.5-pro\\n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 0, model: gemini-2.5-pro\\n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 0, model: gemini-2.5-pro\\nPlease retry in 4.44944948s.', 'status': 'RESOURCE_EXHAUSTED', 'details': [{'@type': 'type.googleapis.com/google.rpc.Help', 'links': [{'description': 'Learn more about Gemini API quotas', 'url': 'https://ai.google.dev/gemini-api/docs/rate-limits'}]}, {'@type': 'type.googleapis.com/google.rpc.QuotaFailure', 'violations': [{'quotaMetric': 'generativelanguage.googleapis.com/generate_content_free_tier_input_token_count', 'quotaId': 'GenerateContentInputTokensPerModelPerDay-FreeTier', 'quotaDimensions': {'location': 'global', 'model': 'gemini-2.5-pro'}}, {'quotaMetric': 'generativelanguage.googleapis.com/generate_content_free_tier_input_token_count', 'quotaId': 'GenerateContentInputTokensPerModelPerMinute-FreeTier', 'quotaDimensions': {'location': 'global', 'model': 'gemini-2.5-pro'}}, {'quotaMetric': 'generativelanguage.googleapis.com/generate_content_free_tier_requests', 'quotaId': 'GenerateRequestsPerMinutePerProjectPerModel-FreeTier', 'quotaDimensions': {'location': 'global', 'model': 'gemini-2.5-pro'}}, {'quotaMetric': 'generativelanguage.googleapis.com/generate_content_free_tier_requests', 'quotaId': 'GenerateRequestsPerDayPerProjectPerModel-FreeTier', 'quotaDimensions': {'location': 'global', 'model': 'gemini-2.5-pro'}}]}, {'@type': 'type.googleapis.com/google.rpc.RetryInfo', 'retryDelay': '4s'}]}}",
+          "finish_reason": null,
+          "latencia_s": null
+        }
+      ]
+    },
+    {
+      "combinacao": "D",
+      "slug": "cure",
+      "modelo": "gemini-2.5-pro",
+      "thinking": "on",
+      "pulado": true,
+      "motivo": "gemini-2.5-pro falhou de novo após backoff: orçamento de 16 chamadas Gemini esgotado (tentativa: gemini-2.5-pro/thinking-on)",
+      "chamadas": [
+        {
+          "tipo": "chamada",
+          "ok": false,
+          "erro": "ClientError: 429 RESOURCE_EXHAUSTED. {'error': {'code': 429, 'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \\n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 0, model: gemini-2.5-pro\\n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 0, model: gemini-2.5-pro\\n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_input_token_count, limit: 0, model: gemini-2.5-pro\\n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_input_token_count, limit: 0, model: gemini-2.5-pro\\nPlease retry in 55.080958389s.', 'status': 'RESOURCE_EXHAUSTED', 'details': [{'@type': 'type.googleapis.com/google.rpc.Help', 'links': [{'description': 'Learn more about Gemini API quotas', 'url': 'https://ai.google.dev/gemini-api/docs/rate-limits'}]}, {'@type': 'type.googleapis.com/google.rpc.QuotaFailure', 'violations': [{'quotaMetric': 'generativelanguage.googleapis.com/generate_content_free_tier_requests', 'quotaId': 'GenerateRequestsPerDayPerProjectPerModel-FreeTier', 'quotaDimensions': {'model': 'gemini-2.5-pro', 'location': 'global'}}, {'quotaMetric': 'generativelanguage.googleapis.com/generate_content_free_tier_requests', 'quotaId': 'GenerateRequestsPerMinutePerProjectPerModel-FreeTier', 'quotaDimensions': {'location': 'global', 'model': 'gemini-2.5-pro'}}, {'quotaMetric': 'generativelanguage.googleapis.com/generate_content_free_tier_input_token_count', 'quotaId': 'GenerateContentInputTokensPerModelPerMinute-FreeTier', 'quotaDimensions': {'location': 'global', 'model': 'gemini-2.5-pro'}}, {'quotaMetric': 'generativelanguage.googleapis.com/generate_content_free_tier_input_token_count', 'quotaId': 'GenerateContentInputTokensPerModelPerDay-FreeTier', 'quotaDimensions': {'model': 'gemini-2.5-pro', 'location': 'global'}}]}, {'@type': 'type.googleapis.com/google.rpc.RetryInfo', 'retryDelay': '55s'}]}}",
+          "finish_reason": null,
+          "latencia_s": null
+        },
+        {
+          "tipo": "retentativa_rate_limit",
+          "ok": false,
+          "erro": "BudgetExceededError: orçamento de 16 chamadas Gemini esgotado (tentativa: gemini-2.5-pro/thinking-on)",
+          "finish_reason": null,
+          "latencia_s": null
+        }
+      ]
+    }
+  ]
+}
