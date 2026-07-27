@@ -177,11 +177,16 @@ def test_protegido_perdido_dispara_retentativa_e_depois_descarta():
     out = _output()
     ed = editar_narrativa(res, montar_protegidos(res, out), output=out,
                           client_call=fake, model="m")
-    assert len(systems) == 2                      # houve retentativa
+    # v1.7.3: até 1 + EDITOR_MAX_TENTATIVAS (=3) chamadas — falhando sempre
+    # da mesma forma, esgota as 4
+    assert len(systems) == 4
+    assert ed.n_tentativas == 4
     assert "QUEBROU trechos protegidos" in systems[1]
     assert ed.edicao_descartada is True
     assert ed.texto == _TEXTO_NARRADOR            # narrativa original preservada
     assert ed.protegidos_perdidos
+    assert len(ed.motivos_por_tentativa) == 4
+    assert all("protegido" in m for m in ed.motivos_por_tentativa)
 
 
 def test_protegido_recuperado_na_retentativa_e_aceito():
@@ -277,6 +282,9 @@ def test_edicao_limpa_e_aceita_sem_retentativa():
     assert ed.edicao_descartada is False
     assert len(calls) == 1
     assert ed.texto == novo
+    # v1.7.3: acerto de primeira -> n_tentativas=1, sem motivo de falha
+    assert ed.n_tentativas == 1
+    assert ed.motivos_por_tentativa == []
     assert ed.texto_bruto == _TEXTO_NARRADOR      # auditoria preservada
     assert ed.metricas_fluencia["n_frases"] > 0
 
@@ -582,11 +590,13 @@ def test_editor_com_involucro_de_objeto_dispara_retentativa_e_depois_descarta():
 
     ed = editar_narrativa(res, montar_protegidos(res, out), output=out,
                           client_call=fake, model="m")
-    assert len(systems) == 2                       # houve retentativa
+    assert len(systems) == 4                        # v1.7.3: esgota as 4
+    assert ed.n_tentativas == 4
     assert "EMBRULHADA" in systems[1]               # reforço de formato
     assert ed.edicao_descartada is True
     assert ed.motivo_descarte == "formato_invalido"
     assert ed.texto == _TEXTO_LIMPO_PARA_INVOLUCRO  # bruta prevalece
+    assert ed.motivos_por_tentativa == ["formato_invalido"] * 4
 
 
 def test_editor_recupera_formato_na_retentativa_e_aceita():
@@ -606,3 +616,120 @@ def test_editor_recupera_formato_na_retentativa_e_aceita():
     assert ed.edicao_descartada is False
     assert ed.houve_retentativa is True
     assert "Isso agrada muita gente." in ed.texto
+
+
+# =====================================================================
+# v1.7.3 (Tarefa 3) — política de até 1 + EDITOR_MAX_TENTATIVAS chamadas
+# =====================================================================
+# Defeito real que motivou a mudança: na regeneração da v1.7.1, a edição
+# foi DESCARTADA em 2 dos 3 filmes (`cure` — número alterado;
+# `cidade-de-deus` — regressão de `perspectiva_nao_marcada`), publicando a
+# bruta nos dois, enquanto a v1.7.0 (mesmo código+dados) tinha aceitado os
+# 3 — VARIÂNCIA do modelo, não regressão. Uma única retentativa dava pouca
+# chance de a variância favorecer.
+
+def test_falha_nas_3_primeiras_e_acerto_na_4a_aceita_com_n_tentativas_4():
+    novo_limpo = (
+        "Em 1997, o diretor Kiyoshi Kurosawa apresenta A Cura, um suspense de "
+        "111 minutos. A grande maioria das notas (~79%) descreve o filme como "
+        "hipnótico. E muitos destacam o ritmo lento e deliberado. Uma minoria "
+        "das notas (~17%) reconhece as ideias. Para esse grupo, o ritmo gera "
+        "confusão. Uma fração mínima das notas (~3%) considerou o filme tedioso."
+    )
+    respostas = [
+        # 1ª: quebra um protegido (rótulo de peso trocado)
+        _TEXTO_NARRADOR.replace("A grande maioria das notas (~79%)", "Quase todo mundo"),
+        # 2ª: invólucro estrutural
+        '{\n text: "' + novo_limpo + '"\n}',
+        # 3ª: regressão de honestidade (vocabulário do peso)
+        novo_limpo.replace("das notas (~17%)", "das reviews (~17%)"),
+        # 4ª: limpa, aceita
+        novo_limpo,
+    ]
+
+    def fake(system, user, model):
+        return respostas.pop(0)
+
+    res = _res()
+    out = _output()
+    ed = editar_narrativa(res, montar_protegidos(res, out), output=out,
+                          client_call=fake, model="m")
+    assert ed.edicao_descartada is False
+    assert ed.n_tentativas == 4
+    assert ed.texto == novo_limpo
+    assert len(ed.motivos_por_tentativa) == 3   # só as que falharam
+
+
+def test_falha_nas_4_descarta_com_fallback_e_4_motivos():
+    def fake(system, user, model):
+        # sempre quebra o mesmo protegido — nunca acerta
+        return _TEXTO_NARRADOR.replace("A grande maioria das notas (~79%)", "Quase todo mundo")
+
+    res = _res()
+    out = _output()
+    ed = editar_narrativa(res, montar_protegidos(res, out), output=out,
+                          client_call=fake, model="m")
+    assert ed.edicao_descartada is True
+    assert ed.texto == _TEXTO_NARRADOR              # fallback para a bruta
+    assert ed.n_tentativas == 4
+    assert len(ed.motivos_por_tentativa) == 4
+
+
+def test_acerto_de_primeira_n_tentativas_1_sem_reforco():
+    novo = (
+        "Em 1997, o diretor Kiyoshi Kurosawa apresenta A Cura, um suspense de "
+        "111 minutos. A grande maioria das notas (~79%) descreve o filme como "
+        "hipnótico. E muitos destacam o ritmo lento e deliberado. Uma minoria "
+        "das notas (~17%) reconhece as ideias. Para esse grupo, o ritmo gera "
+        "confusão. Uma fração mínima das notas (~3%) considerou o filme tedioso."
+    )
+    systems = []
+
+    def fake(system, user, model):
+        systems.append(system)
+        return novo
+
+    res = _res()
+    out = _output()
+    ed = editar_narrativa(res, montar_protegidos(res, out), output=out,
+                          client_call=fake, model="m")
+    assert ed.edicao_descartada is False
+    assert ed.n_tentativas == 1
+    assert ed.motivos_por_tentativa == []
+    assert len(systems) == 1
+    assert systems[0] == _EDITOR_SYSTEM_PROMPT   # sem NENHUM reforço anexado
+
+
+def test_reforco_acumulado_terceira_chamada_contem_os_dois_reforcos():
+    """2ª falha DIFERENTE da 1ª -> a 3ª chamada recebe os reforços das duas,
+    não só o da mais recente."""
+    novo_limpo = (
+        "Em 1997, o diretor Kiyoshi Kurosawa apresenta A Cura, um suspense de "
+        "111 minutos. A grande maioria das notas (~79%) descreve o filme como "
+        "hipnótico. E muitos destacam o ritmo lento e deliberado. Uma minoria "
+        "das notas (~17%) reconhece as ideias. Para esse grupo, o ritmo gera "
+        "confusão. Uma fração mínima das notas (~3%) considerou o filme tedioso."
+    )
+    respostas = [
+        # 1ª: número alterado (também derruba o protegido "111")
+        _TEXTO_NARRADOR.replace("111 minutos", "112 minutos"),
+        # 2ª: invólucro estrutural — falha DIFERENTE da 1ª
+        '{\n text: "' + novo_limpo + '"\n}',
+        # 3ª: aceita (só para não gastar a 4ª)
+        novo_limpo,
+    ]
+    systems = []
+
+    def fake(system, user, model):
+        systems.append(system)
+        return respostas.pop(0)
+
+    res = _res()
+    out = _output()
+    ed = editar_narrativa(res, montar_protegidos(res, out), output=out,
+                          client_call=fake, model="m")
+    assert ed.edicao_descartada is False
+    assert ed.n_tentativas == 3
+    terceira_chamada = systems[2]
+    assert "REFORÇO CRÍTICO — sua edição anterior ALTEROU os números" in terceira_chamada
+    assert "EMBRULHADA" in terceira_chamada   # os DOIS reforços presentes juntos

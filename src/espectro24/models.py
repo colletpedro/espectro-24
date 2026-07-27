@@ -182,6 +182,12 @@ class EdicaoResult:
     houve_retentativa: bool = False
     falhou: bool = False          # editor não devolveu texto utilizável
     metricas_fluencia: dict = field(default_factory=dict)  # do texto FINAL
+    # v1.7.3: quantas chamadas foram feitas (1 = aceita/descartada de
+    # primeira, até 1 + EDITOR_MAX_TENTATIVAS no pior caso) e o motivo de
+    # cada falha ao longo do caminho — telemetria para saber qual checagem
+    # mais reprova o editor, não critério de aprovação.
+    n_tentativas: int = 1
+    motivos_por_tentativa: list = field(default_factory=list)
 
 
 @dataclass

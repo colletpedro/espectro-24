@@ -282,6 +282,10 @@ def main(argv=None):
                 "houve_retentativa": ed.houve_retentativa,
                 "falhou": ed.falhou,
                 "n_protegidos": len(protegidos),
+                # v1.7.3: telemetria da política de retentativa — quantas
+                # chamadas foram feitas e o motivo de falha de cada uma.
+                "n_tentativas": ed.n_tentativas,
+                "motivos_por_tentativa": ed.motivos_por_tentativa,
             }
             if ed.edicao_descartada:
                 print(f"⚠️  Edição descartada ({ed.motivo_descarte}) — "

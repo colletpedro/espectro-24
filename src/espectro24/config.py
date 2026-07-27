@@ -106,6 +106,20 @@ MAX_TEMAS = 6                # §D.3
 PROSA_THINKING_BUDGET = 4096
 PROSA_MAX_TOKENS = 16000
 
+# Teto de TENTATIVAS do editor [E2] (v1.7.3). Até a v1.7.2, era 1 chamada +
+# 1 retentativa (2 no total) — restritivo demais para uma etapa cujo
+# descarte já é fail-safe (a bruta do narrador sempre prevalece). Defeito
+# real: na regeneração da v1.7.1, a edição foi DESCARTADA em 2 dos 3 filmes
+# (`cure` — número alterado; `cidade-de-deus` — regressão de
+# `perspectiva_nao_marcada`), publicando a bruta nos dois, enquanto a MESMA
+# combinação de código+dados na v1.7.0 tinha aceitado os 3 — nada mudou no
+# código nesse sentido, é VARIÂNCIA do modelo entre chamadas. Subir o teto
+# dá mais chances de a variância favorecer sem custo de honestidade (o
+# fail-safe de descarte continua intacto se todas as tentativas falharem).
+# `EDITOR_MAX_TENTATIVAS` conta RETENTATIVAS (não a chamada inicial): total
+# de chamadas no pior caso = 1 (chamada inicial) + `EDITOR_MAX_TENTATIVAS`.
+EDITOR_MAX_TENTATIVAS = 3
+
 # Timeout de rede das chamadas LLM, em MILISSEGUNDOS (v1.6.0). Sem timeout
 # explícito o SDK do Gemini bloqueia indefinidamente: durante a regeneração
 # desta versão um processo ficou 67 minutos parado (0% CPU, dormindo num

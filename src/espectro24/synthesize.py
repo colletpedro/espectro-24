@@ -31,6 +31,7 @@ import re
 
 from .config import (
     BUCKETS,
+    EDITOR_MAX_TENTATIVAS,
     LLM_MAX_TOKENS,
     LLM_TIMEOUT_MS,
     MAX_TEMAS,
@@ -2218,19 +2219,28 @@ def editar_narrativa(narrativa_result, protegidos: list[str], output: dict | Non
                      provider: str | None = None):
     """[E2] Reescreve a narrativa para ritmo/leitura sem alterar conteúdo.
 
-    UMA chamada LLM por filme, após o narrador. A assinatura da spec
+    De 1 a `1 + EDITOR_MAX_TENTATIVAS` chamadas LLM por filme, após o
+    narrador (v1.7.3 — até a v1.7.2 eram no máximo 2). A assinatura da spec
     (`-> str`) corresponde ao campo `.texto` do `EdicaoResult` devolvido.
 
-    Verificação mecânica (§E2, Tarefa 4) sobre o texto editado:
-      (a) todo trecho protegido aparece LITERALMENTE;
+    Verificação mecânica (§E2, Tarefa 4) sobre o texto editado, na ordem:
+      (0, v1.7.2) checagem ESTRUTURAL — rejeita invólucro tipo JSON/markdown;
+      (a) todo trecho protegido aparece LITERALMENTE (com a exceção de
+          capitalização inicial, v1.7.1);
       (b) o multiconjunto de tokens numéricos é IDÊNTICO ao do original;
       (c) as validações de honestidade do §D2 são REEXECUTADAS (idioma,
-          aspas, escopo, prevalência, vocabulário de peso, ancoragem) e
-          nenhuma pode regredir.
-    Falha em qualquer uma → 1 retentativa com reforço; se persistir, a
-    edição é DESCARTADA e a narrativa original do narrador prevalece
+          aspas, escopo, prevalência, vocabulário de peso, ancoragem,
+          atribuição de perspectiva) e nenhuma pode regredir.
+    Falha em qualquer uma → retentativa com o reforço da checagem que
+    falhou, ACUMULADO com o de tentativas anteriores (v1.7.3, Tarefa 2 —
+    se a tentativa 1 falhar por número e a 2 por atribuição, a 3 recebe os
+    dois reforços, para o modelo não consertar um problema criando outro).
+    Esgotadas as `EDITOR_MAX_TENTATIVAS` retentativas, a edição é
+    DESCARTADA e a narrativa original do narrador prevalece
     (`edicao_descartada=True`). O editor pode não melhorar o texto; o que
-    ele não pode, em hipótese alguma, é piorá-lo.
+    ele não pode, em hipótese alguma, é piorá-lo. `n_tentativas` e
+    `motivos_por_tentativa` (`EdicaoResult`) registram quantas chamadas
+    foram feitas e por que cada uma falhou, para telemetria.
     """
     from .models import EdicaoResult
 
@@ -2309,44 +2319,80 @@ def editar_narrativa(narrativa_result, protegidos: list[str], output: dict | Non
             motivo = "regressão de honestidade: " + ", ".join(regressoes)
         return texto, perdidos, numeros_ok, not regressoes, motivo
 
-    editado = _uma_chamada(_EDITOR_SYSTEM_PROMPT)
-    houve_retentativa = False
-    if editado is None:
-        return EdicaoResult(texto=texto_bruto, texto_bruto=texto_bruto,
-                            edicao_descartada=True, falhou=True,
-                            motivo_descarte="editor não devolveu texto",
-                            metricas_fluencia=_metricas_fluencia(texto_bruto))
-
-    texto, perdidos, numeros_ok, honestidade_ok, motivo = _avaliar(editado)
-
-    if perdidos or not numeros_ok or not honestidade_ok:
-        reforco = ""
+    def _reforco_desta_falha(motivo: str, perdidos: list[str], numeros_ok: bool) -> str:
+        """Bloco de reforço específico da checagem que falhou NESTA
+        tentativa. v1.7.3: cada bloco distinto é ACUMULADO entre
+        tentativas (ver loop abaixo) em vez de substituir o anterior — se
+        a tentativa 1 falhou por número e a 2 por atribuição, a 3 recebe
+        os dois reforços, para o modelo não consertar um problema criando
+        outro."""
+        r = ""
         if motivo == "formato_invalido":
-            reforco += _REFORCO_EDITOR_FORMATO
+            r += _REFORCO_EDITOR_FORMATO
         if perdidos:
-            reforco += _REFORCO_EDITOR_PROTEGIDOS.format(
+            r += _REFORCO_EDITOR_PROTEGIDOS.format(
                 lista="\n".join(f"- {p}" for p in perdidos))
         if not numeros_ok:
-            reforco += _REFORCO_EDITOR_NUMEROS
-        if not reforco:   # regressão de honestidade: reforça o essencial
-            reforco = _REFORCO_EDITOR_NUMEROS
-        houve_retentativa = True
-        retry = _uma_chamada(_EDITOR_SYSTEM_PROMPT + reforco)
-        if retry is not None:
-            texto, perdidos, numeros_ok, honestidade_ok, motivo = _avaliar(retry)
+            r += _REFORCO_EDITOR_NUMEROS
+        if not r:   # regressão de honestidade sem os motivos acima: reforça o essencial
+            r = _REFORCO_EDITOR_NUMEROS
+        return r
+
+    # v1.7.3 (Tarefa 1): até `1 + EDITOR_MAX_TENTATIVAS` chamadas no total —
+    # a chamada inicial mais até `EDITOR_MAX_TENTATIVAS` retentativas.
+    # Defeito real que motivou a mudança: na regeneração da v1.7.1, a
+    # mesma combinação de código+dados que a v1.7.0 tinha aceitado nos 3
+    # filmes foi DESCARTADA em 2 deles (`cure` — número alterado;
+    # `cidade-de-deus` — regressão de `perspectiva_nao_marcada`) — pura
+    # VARIÂNCIA do modelo entre chamadas, não regressão de código. Uma
+    # única retentativa dava pouca chance de a variância favorecer, e o
+    # descarte já é fail-safe (a bruta sempre prevalece), então o custo de
+    # tentar mais vezes é só chamadas de API, nunca honestidade.
+    reforcos_acumulados: list[str] = []   # blocos DISTINTOS já usados
+    motivos_por_tentativa: list[str] = []
+    texto = texto_bruto
+    perdidos: list[str] = []
+    numeros_ok = True
+    honestidade_ok = True
+    motivo = ""
+    n_tentativas = 0
+    teve_resposta = False   # ao menos uma chamada devolveu texto avaliável
+
+    for _ in range(1 + EDITOR_MAX_TENTATIVAS):
+        sys_prompt = _EDITOR_SYSTEM_PROMPT + "".join(reforcos_acumulados)
+        resposta = _uma_chamada(sys_prompt)
+        n_tentativas += 1
+
+        if resposta is None:
+            motivo = "editor não devolveu texto"
+            perdidos, numeros_ok, honestidade_ok = [], True, False
+        else:
+            teve_resposta = True
+            texto, perdidos, numeros_ok, honestidade_ok, motivo = _avaliar(resposta)
+            if not (perdidos or not numeros_ok or not honestidade_ok):
+                break   # aceita — nenhuma checagem falhou
+
+        motivos_por_tentativa.append(motivo)
+        bloco = _reforco_desta_falha(motivo, perdidos, numeros_ok)
+        if bloco not in reforcos_acumulados:
+            reforcos_acumulados.append(bloco)
+
+    houve_retentativa = n_tentativas > 1
 
     if perdidos or not numeros_ok or not honestidade_ok:
-        # DESCARTE: a narrativa do narrador prevalece intacta.
+        # DESCARTE: esgotadas as tentativas, a narrativa do narrador prevalece.
         return EdicaoResult(
             texto=texto_bruto, texto_bruto=texto_bruto,
-            edicao_descartada=True, motivo_descarte=motivo,
+            edicao_descartada=True, motivo_descarte=motivo, falhou=not teve_resposta,
             protegidos_perdidos=perdidos[:10], numeros_alterados=not numeros_ok,
             houve_retentativa=houve_retentativa,
             metricas_fluencia=_metricas_fluencia(texto_bruto),
+            n_tentativas=n_tentativas, motivos_por_tentativa=motivos_por_tentativa,
         )
 
     return EdicaoResult(
         texto=texto, texto_bruto=texto_bruto,
         edicao_descartada=False, houve_retentativa=houve_retentativa,
         metricas_fluencia=_metricas_fluencia(texto),
+        n_tentativas=n_tentativas, motivos_por_tentativa=motivos_por_tentativa,
     )

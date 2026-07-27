@@ -293,14 +293,19 @@ def render_terminal(output: dict, tom: str = "estruturado") -> str:
             L.append("")
             if ed.get("edicao_descartada"):
                 L.append(f"  ⚠️  edição [E2] DESCARTADA ({ed.get('motivo_descarte')}) "
-                         f"— publicada a narrativa do narrador, sem edição.")
+                         f"— publicada a narrativa do narrador, sem edição. "
+                         f"({ed.get('n_tentativas', 1)} tentativa(s))")
                 if ed.get("protegidos_perdidos"):
                     for p in ed["protegidos_perdidos"]:
                         L.append(f"        · trecho perdido: {p}")
+                if ed.get("motivos_por_tentativa"):
+                    for i, m in enumerate(ed["motivos_por_tentativa"], 1):
+                        L.append(f"        · tentativa {i}: {m}")
             else:
                 L.append(f"Edição [E2]: aplicada · {ed.get('n_protegidos', 0)} "
                          f"trechos protegidos preservados · retentativa="
-                         f"{ed.get('houve_retentativa')}")
+                         f"{ed.get('houve_retentativa')} · "
+                         f"{ed.get('n_tentativas', 1)} tentativa(s)")
 
         if metricas:
             L.append("")
