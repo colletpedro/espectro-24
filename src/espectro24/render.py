@@ -306,6 +306,10 @@ def render_terminal(output: dict, tom: str = "estruturado") -> str:
                          f"trechos protegidos preservados · retentativa="
                          f"{ed.get('houve_retentativa')} · "
                          f"{ed.get('n_tentativas', 1)} tentativa(s)")
+                if ed.get("capitalizacao_ajustada"):
+                    L.append("        · capitalização de rótulo movido ajustada")
+            if ed.get("similaridade") is not None:
+                L.append(f"  similaridade bruta×editada: {ed['similaridade']:.3f}")
 
         if metricas:
             L.append("")

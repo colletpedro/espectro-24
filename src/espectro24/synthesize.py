@@ -25,12 +25,14 @@ problemas, não a defesa principal.
 """
 from __future__ import annotations
 
+import difflib
 import json
 import os
 import re
 
 from .config import (
     BUCKETS,
+    EDITOR_LIMIAR_EDICAO_NULA,
     EDITOR_MAX_TENTATIVAS,
     LLM_MAX_TOKENS,
     LLM_TIMEOUT_MS,
@@ -2019,6 +2021,18 @@ rótulo antes do texto — a primeira palavra da sua resposta já é a primeira 
 palavra da narrativa."""
 
 
+# v1.7.4 — reforço para edição NULA (texto devolvido praticamente idêntico
+# ao recebido, sem reestruturação real de ritmo).
+_REFORCO_EDITOR_EDICAO_NULA = """
+
+REFORÇO CRÍTICO — o texto que você devolveu é PRATICAMENTE IDÊNTICO ao que \
+você recebeu. Isso não é uma edição: é a mesma coisa de novo. Reescreva de \
+verdade — reestruture os períodos (junte frases curtas, quebre frases \
+longas, varie a abertura de cada uma), sem mudar nenhum número, rótulo de \
+peso ou atribuição. O texto final deve LER diferente do original, mesmo \
+dizendo exatamente a mesma coisa."""
+
+
 def _tokens_numericos(texto: str) -> list[str]:
     """Multiconjunto ORDENADO de tokens numéricos do texto (números com ou
     sem `~`/`%`). Usado para provar que a edição não mexeu em nenhum número:
@@ -2214,6 +2228,66 @@ def _formato_invalido(bruto_editado: str) -> bool:
     return False
 
 
+def _normalizar_espacos(texto: str) -> str:
+    return re.sub(r"\s+", " ", texto).strip()
+
+
+def _similaridade(a: str, b: str) -> float:
+    """[E2] Similaridade (0-1) entre dois textos, normalizados só por
+    espaço em branco (v1.7.4) — `difflib.SequenceMatcher.ratio`, a mesma
+    ferramenta que `diff`/`git diff` usam por baixo. Não normaliza caixa
+    nem pontuação de propósito: o que importa aqui é se o editor
+    REESTRUTUROU o texto, não se ele preserva palavras (preservar
+    vocabulário protegido é esperado e correto)."""
+    return difflib.SequenceMatcher(
+        None, _normalizar_espacos(a), _normalizar_espacos(b)).ratio()
+
+
+_ROTULOS_PESO_CANONICOS = [r for r, _, _, _ in _BANDAS_PESO_FRACA_PARA_FORTE]
+
+
+def _inicio_de_periodo(texto: str, pos: int) -> bool:
+    """True se a posição `pos` está em início de período: ou é o início do
+    próprio texto, ou o primeiro caractere não-espaço antes dela é
+    `.`/`!`/`?`."""
+    i = pos - 1
+    while i >= 0 and texto[i].isspace():
+        i -= 1
+    return i < 0 or texto[i] in ".!?"
+
+
+def _corrigir_capitalizacao_residual(texto: str) -> tuple[str, bool]:
+    """[E2] Pós-processamento DETERMINÍSTICO sobre a edição já ACEITA
+    (v1.7.4, Tarefa 2) — baixa a inicial de um rótulo de peso que apareça
+    capitalizado no MEIO de um período.
+
+    Defeito conhecido e recorrente: a v1.7.1 AUTORIZOU o editor a ajustar
+    a caixa de um rótulo de peso movido para o meio da frase (ver
+    `_protegido_presente`), mas não o OBRIGA — e ele frequentemente não
+    ajusta ("Já Uma fração mínima das notas...", "Para A grande
+    maioria..."). Mesmo princípio de todas as pré-computações do pipeline:
+    o que é determinístico, o CÓDIGO decide, o LLM só usa. Só a primeira
+    letra do rótulo é tocada, e só quando ele NÃO está em início de
+    período; nenhuma outra palavra, número ou pontuação é alterada.
+    """
+    ajustado = False
+    for rotulo in _ROTULOS_PESO_CANONICOS:
+        capitalizado = rotulo[0].upper() + rotulo[1:]
+        padrao = re.compile(r"\b" + re.escape(capitalizado) + r"\b")
+        pos = 0
+        while True:
+            m = padrao.search(texto, pos)
+            if not m:
+                break
+            if _inicio_de_periodo(texto, m.start()):
+                pos = m.end()
+                continue
+            texto = texto[:m.start()] + rotulo[0].lower() + rotulo[1:] + texto[m.end():]
+            ajustado = True
+            pos = m.start() + len(rotulo)
+    return texto, ajustado
+
+
 def editar_narrativa(narrativa_result, protegidos: list[str], output: dict | None = None,
                      client_call=None, model: str | None = None,
                      provider: str | None = None):
@@ -2230,7 +2304,12 @@ def editar_narrativa(narrativa_result, protegidos: list[str], output: dict | Non
       (b) o multiconjunto de tokens numéricos é IDÊNTICO ao do original;
       (c) as validações de honestidade do §D2 são REEXECUTADAS (idioma,
           aspas, escopo, prevalência, vocabulário de peso, ancoragem,
-          atribuição de perspectiva) e nenhuma pode regredir.
+          atribuição de perspectiva) e nenhuma pode regredir;
+      (d, v1.7.4) EDIÇÃO NULA — se (a)-(c) TERIAM passado mas o texto é
+          praticamente idêntico à bruta (similaridade >=
+          `EDITOR_LIMIAR_EDICAO_NULA`), reprova mesmo assim: um editor que
+          devolve a entrada quase intacta passava por (a)-(c) sem
+          nenhum sinal (é o mesmo texto), e ficava marcado "aplicada".
     Falha em qualquer uma → retentativa com o reforço da checagem que
     falhou, ACUMULADO com o de tentativas anteriores (v1.7.3, Tarefa 2 —
     se a tentativa 1 falhar por número e a 2 por atribuição, a 3 recebe os
@@ -2241,6 +2320,11 @@ def editar_narrativa(narrativa_result, protegidos: list[str], output: dict | Non
     ele não pode, em hipótese alguma, é piorá-lo. `n_tentativas` e
     `motivos_por_tentativa` (`EdicaoResult`) registram quantas chamadas
     foram feitas e por que cada uma falhou, para telemetria.
+    `similaridade` (v1.7.4) é persistida SEMPRE, aceita ou não, para
+    calibração humana do limiar. Uma edição ACEITA ainda passa por um
+    pós-processamento determinístico (`_corrigir_capitalizacao_residual`,
+    v1.7.4) que baixa a caixa de um rótulo de peso capitalizado fora de
+    início de período — `capitalizacao_ajustada` registra se algo mudou.
     """
     from .models import EdicaoResult
 
@@ -2279,16 +2363,28 @@ def editar_narrativa(narrativa_result, protegidos: list[str], output: dict | Non
         return _strip_fences(str(raw)).strip() or None
 
     def _avaliar(bruto_editado: str):
-        """(texto_limpo, perdidos, numeros_ok, honestidade_ok, motivo).
+        """(texto_limpo, perdidos, numeros_ok, honestidade_ok, motivo, similaridade).
 
         v1.7.2 — a checagem ESTRUTURAL (`_formato_invalido`) roda PRIMEIRO,
         antes de qualquer outra: um invólucro tipo `{ text: "..." }` ainda
         contém os protegidos e os números como SUBSTRING lá dentro, então
         as checagens seguintes o aceitariam. Se o formato já está errado,
         nem avalia o resto — falha direto com motivo "formato_invalido".
+
+        v1.7.4 — a SIMILARIDADE com a bruta é calculada SEMPRE (mesmo nos
+        casos que falham por outro motivo), para telemetria persistida em
+        todo resultado. A checagem de EDIÇÃO NULA roda por ÚLTIMO, só
+        quando as demais TERIAM passado: se perdidos/números/honestidade
+        já reprovam a edição por um motivo mais específico, é esse motivo
+        que importa reportar — a edição nula só precisa de checagem
+        própria no caso que mais importa, o que passaria despercebido por
+        TODAS as outras (o editor devolve a entrada praticamente intacta:
+        protegidos presentes porque nunca saíram, números idênticos porque
+        nada mudou, honestidade não regride porque é o mesmo texto).
         """
+        similaridade = _similaridade(texto_bruto, bruto_editado)
         if _formato_invalido(bruto_editado):
-            return bruto_editado, [], True, False, "formato_invalido"
+            return bruto_editado, [], True, False, "formato_invalido", similaridade
         texto, idioma_ok, escopo_ok, prevalencia_ok, _asp = _validar_prosa(
             bruto_editado, com_distribuicao)
         perdidos = _protegidos_perdidos(texto, protegidos)
@@ -2317,7 +2413,11 @@ def editar_narrativa(narrativa_result, protegidos: list[str], output: dict | Non
             motivo = "conjunto de números do texto foi alterado"
         elif regressoes:
             motivo = "regressão de honestidade: " + ", ".join(regressoes)
-        return texto, perdidos, numeros_ok, not regressoes, motivo
+        elif similaridade >= EDITOR_LIMIAR_EDICAO_NULA:
+            # v1.7.4: só chega aqui quando NENHUMA outra checagem reprovou —
+            # é exatamente o caso que passava despercebido até esta versão.
+            return bruto_editado, [], True, False, "edicao_nula", similaridade
+        return texto, perdidos, numeros_ok, not regressoes, motivo, similaridade
 
     def _reforco_desta_falha(motivo: str, perdidos: list[str], numeros_ok: bool) -> str:
         """Bloco de reforço específico da checagem que falhou NESTA
@@ -2329,6 +2429,8 @@ def editar_narrativa(narrativa_result, protegidos: list[str], output: dict | Non
         r = ""
         if motivo == "formato_invalido":
             r += _REFORCO_EDITOR_FORMATO
+        if motivo == "edicao_nula":
+            r += _REFORCO_EDITOR_EDICAO_NULA
         if perdidos:
             r += _REFORCO_EDITOR_PROTEGIDOS.format(
                 lista="\n".join(f"- {p}" for p in perdidos))
@@ -2355,6 +2457,7 @@ def editar_narrativa(narrativa_result, protegidos: list[str], output: dict | Non
     numeros_ok = True
     honestidade_ok = True
     motivo = ""
+    similaridade = None   # só definida quando alguma tentativa é avaliada
     n_tentativas = 0
     teve_resposta = False   # ao menos uma chamada devolveu texto avaliável
 
@@ -2368,7 +2471,7 @@ def editar_narrativa(narrativa_result, protegidos: list[str], output: dict | Non
             perdidos, numeros_ok, honestidade_ok = [], True, False
         else:
             teve_resposta = True
-            texto, perdidos, numeros_ok, honestidade_ok, motivo = _avaliar(resposta)
+            texto, perdidos, numeros_ok, honestidade_ok, motivo, similaridade = _avaliar(resposta)
             if not (perdidos or not numeros_ok or not honestidade_ok):
                 break   # aceita — nenhuma checagem falhou
 
@@ -2388,11 +2491,19 @@ def editar_narrativa(narrativa_result, protegidos: list[str], output: dict | Non
             houve_retentativa=houve_retentativa,
             metricas_fluencia=_metricas_fluencia(texto_bruto),
             n_tentativas=n_tentativas, motivos_por_tentativa=motivos_por_tentativa,
+            similaridade=similaridade,
         )
+
+    # v1.7.4 (Tarefa 2): pós-processamento DETERMINÍSTICO sobre a edição já
+    # ACEITA — baixa a caixa de um rótulo de peso capitalizado no meio de
+    # um período (a v1.7.1 autorizou o editor a fazer isso, mas não o
+    # obriga, e ele frequentemente não ajusta).
+    texto, capitalizacao_ajustada = _corrigir_capitalizacao_residual(texto)
 
     return EdicaoResult(
         texto=texto, texto_bruto=texto_bruto,
         edicao_descartada=False, houve_retentativa=houve_retentativa,
         metricas_fluencia=_metricas_fluencia(texto),
         n_tentativas=n_tentativas, motivos_por_tentativa=motivos_por_tentativa,
+        similaridade=similaridade, capitalizacao_ajustada=capitalizacao_ajustada,
     )

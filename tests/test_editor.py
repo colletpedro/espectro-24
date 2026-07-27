@@ -23,8 +23,10 @@ from espectro24.parser import parse_rating_histogram
 from espectro24.render import build_output, render_terminal
 from espectro24.synthesize import (
     _EDITOR_SYSTEM_PROMPT,
+    _corrigir_capitalizacao_residual,
     _formato_invalido,
     _protegido_presente,
+    _similaridade,
     _tokens_numericos,
     build_editor_user_message,
     editar_narrativa,
@@ -192,7 +194,13 @@ def test_protegido_perdido_dispara_retentativa_e_depois_descarta():
 def test_protegido_recuperado_na_retentativa_e_aceito():
     respostas = [
         _TEXTO_NARRADOR.replace("A grande maioria das notas (~79%)", "Quase todo mundo"),
-        _TEXTO_NARRADOR + " Só que muda.",
+        # reescrita o bastante para não cair no limiar de edição nula (v1.7.4)
+        ("Em 1997, o diretor Kiyoshi Kurosawa apresenta A Cura, um suspense de "
+         "111 minutos. A grande maioria das notas (~79%) descreve o filme como "
+         "hipnótico. Só que muda. E muitos destacam o ritmo lento e deliberado. "
+         "Uma minoria das notas (~17%) reconhece as ideias. Para esse grupo, o "
+         "ritmo gera confusão. Uma fração mínima das notas (~3%) considerou o "
+         "filme tedioso."),
     ]
 
     def fake(system, user, model):
@@ -733,3 +741,149 @@ def test_reforco_acumulado_terceira_chamada_contem_os_dois_reforcos():
     terceira_chamada = systems[2]
     assert "REFORÇO CRÍTICO — sua edição anterior ALTEROU os números" in terceira_chamada
     assert "EMBRULHADA" in terceira_chamada   # os DOIS reforços presentes juntos
+
+
+# =====================================================================
+# v1.7.4 (Tarefa 1) — checagem de EDIÇÃO NULA
+# =====================================================================
+# Buraco identificado: as checagens até a v1.7.3 verificam que a edição
+# não QUEBROU nada; nenhuma verifica que ela FEZ algo. Um editor que
+# devolva a entrada intacta (ou trivialmente igual) passa em protegidos,
+# números e honestidade — é o MESMO texto — e era marcado como "aplicada".
+
+def test_devolucao_literal_e_detectada_como_nula_e_descarta():
+    def fake(system, user, model):
+        return _TEXTO_NARRADOR   # devolve a entrada, sem alterar nada
+
+    res = _res()
+    out = _output()
+    ed = editar_narrativa(res, montar_protegidos(res, out), output=out,
+                          client_call=fake, model="m")
+    assert ed.edicao_descartada is True
+    assert ed.motivo_descarte == "edicao_nula"
+    assert ed.texto == _TEXTO_NARRADOR
+    assert ed.n_tentativas == 4                 # esgota as tentativas
+    assert ed.motivos_por_tentativa == ["edicao_nula"] * 4
+    assert ed.similaridade == 1.0
+
+
+def test_edicao_legitima_preservando_vocabulario_nao_e_reprovada():
+    """Reestruturar frases (juntar, quebrar, trocar aberturas) É esperado
+    que preserve MUITO vocabulário — rótulo de peso e números são
+    protegidos, atribuição é esperada. Isso não pode ser confundido com
+    edição nula."""
+    novo = (
+        "Em 1997, Kiyoshi Kurosawa dirige A Cura. É um suspense de 111 "
+        "minutos. Para a grande maioria das notas (~79%), o filme é "
+        "hipnótico — muitos destacam justamente o ritmo lento e "
+        "deliberado. Já uma minoria das notas (~17%) reconhece as ideias, "
+        "só que acha a execução falha; para esse grupo, o ritmo confunde. "
+        "Uma fração mínima das notas (~3%) achou tudo isso tedioso."
+    )
+
+    def fake(system, user, model):
+        return novo
+
+    res = _res()
+    out = _output()
+    ed = editar_narrativa(res, montar_protegidos(res, out), output=out,
+                          client_call=fake, model="m")
+    assert ed.edicao_descartada is False
+    assert ed.motivo_descarte != "edicao_nula"
+    assert ed.similaridade < 0.97
+
+
+def test_similaridade_persistida_em_todos_os_casos():
+    """Aceita, descarta por outro motivo, e descarta por edição nula —
+    `similaridade` sempre presente (Tarefa 1.4)."""
+    # aceita
+    ed_aceita = editar_narrativa(
+        _res(), montar_protegidos(_res(), _output()), output=_output(),
+        client_call=lambda s, u, m: (
+            "Em 1997, Kiyoshi Kurosawa dirige A Cura. É um suspense de 111 "
+            "minutos. Para a grande maioria das notas (~79%), o filme é "
+            "hipnótico. Muitos destacam o ritmo lento. Já uma minoria das "
+            "notas (~17%) reconhece as ideias, mas acha a execução falha. "
+            "Para esse grupo, o ritmo confunde. Uma fração mínima das "
+            "notas (~3%) achou tudo tedioso."
+        ),
+        model="m")
+    assert ed_aceita.similaridade is not None
+
+    # descarta por protegido perdido (motivo diferente de edicao_nula)
+    ed_perdido = editar_narrativa(
+        _res(), montar_protegidos(_res(), _output()), output=_output(),
+        client_call=lambda s, u, m: _TEXTO_NARRADOR.replace(
+            "A grande maioria das notas (~79%)", "Quase todo mundo"),
+        model="m")
+    assert ed_perdido.similaridade is not None
+
+    # descarta por edição nula
+    ed_nula = editar_narrativa(
+        _res(), montar_protegidos(_res(), _output()), output=_output(),
+        client_call=lambda s, u, m: _TEXTO_NARRADOR, model="m")
+    assert ed_nula.similaridade == 1.0
+
+
+def test_similaridade_ausente_quando_editor_nunca_responde():
+    def fake(system, user, model):
+        return ""
+
+    res = _res()
+    out = _output()
+    ed = editar_narrativa(res, montar_protegidos(res, out), output=out,
+                          client_call=fake, model="m")
+    assert ed.falhou is True
+    assert ed.similaridade is None   # nenhuma tentativa chegou a ser avaliada
+
+
+# =====================================================================
+# v1.7.4 (Tarefa 2) — correção determinística de capitalização residual
+# =====================================================================
+# Defeito conhecido e recorrente: a v1.7.1 autorizou o editor a ajustar a
+# caixa de um rótulo de peso movido para o meio da frase, mas não o
+# obriga — e ele frequentemente não ajusta ("Já Uma fração mínima das
+# notas...", "Para A grande maioria...").
+
+def test_capitalizacao_residual_e_baixada_no_meio_do_periodo():
+    texto = "Já Uma fração mínima das notas (~3%) discordou."
+    corrigido, ajustado = _corrigir_capitalizacao_residual(texto)
+    assert corrigido == "Já uma fração mínima das notas (~3%) discordou."
+    assert ajustado is True
+
+
+def test_capitalizacao_em_inicio_de_periodo_permanece_maiuscula():
+    texto = "Uma fração mínima das notas (~3%) discordou. Outra frase aqui."
+    corrigido, ajustado = _corrigir_capitalizacao_residual(texto)
+    assert corrigido == texto        # nada muda — já está em início de período
+    assert ajustado is False
+
+
+def test_capitalizacao_nao_altera_mais_nada_alem_da_inicial():
+    texto = ("A grande maioria das notas (~91%) aprova. Para A grande "
+             "maioria das notas (~91%), o estilo visual convence.")
+    corrigido, ajustado = _corrigir_capitalizacao_residual(texto)
+    assert ajustado is True
+    # a 1ª ocorrência (início de período) NÃO muda
+    assert corrigido.startswith("A grande maioria das notas (~91%) aprova.")
+    # só a 2ª (meio de período) tem a inicial baixada — resto intocado
+    assert "Para a grande maioria das notas (~91%), o estilo visual convence." in corrigido
+
+
+def test_capitalizacao_ajustada_e_registrada_em_edicao_aceita():
+    def fake(system, user, model):
+        return ("Em 1997, Kiyoshi Kurosawa dirige A Cura. É um suspense de "
+                "111 minutos. Para A grande maioria das notas (~79%), o "
+                "filme é hipnótico. Muitos destacam o ritmo lento. Já uma "
+                "minoria das notas (~17%) reconhece as ideias, mas acha a "
+                "execução falha. Para esse grupo, o ritmo confunde. Uma "
+                "fração mínima das notas (~3%) achou tudo tedioso.")
+
+    res = _res()
+    out = _output()
+    ed = editar_narrativa(res, montar_protegidos(res, out), output=out,
+                          client_call=fake, model="m")
+    assert ed.edicao_descartada is False
+    assert ed.capitalizacao_ajustada is True
+    assert "Para a grande maioria das notas (~79%)" in ed.texto
+    assert "Para A grande maioria" not in ed.texto

@@ -188,6 +188,15 @@ class EdicaoResult:
     # mais reprova o editor, não critério de aprovação.
     n_tentativas: int = 1
     motivos_por_tentativa: list = field(default_factory=list)
+    # v1.7.4: similaridade (0-1) entre `texto_bruto` e o último texto
+    # editado avaliado — telemetria persistida SEMPRE, mesmo quando a
+    # edição é aceita, para calibração humana do limiar de edição nula
+    # (`EDITOR_LIMIAR_EDICAO_NULA`). `None` só quando nenhuma tentativa
+    # chegou a devolver texto avaliável.
+    similaridade: float | None = None
+    # True quando o pós-processamento determinístico baixou a caixa de
+    # algum rótulo de peso capitalizado no meio de um período.
+    capitalizacao_ajustada: bool = False
 
 
 @dataclass

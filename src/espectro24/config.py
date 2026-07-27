@@ -120,6 +120,23 @@ PROSA_MAX_TOKENS = 16000
 # de chamadas no pior caso = 1 (chamada inicial) + `EDITOR_MAX_TENTATIVAS`.
 EDITOR_MAX_TENTATIVAS = 3
 
+# Limiar de EDIÇÃO NULA do editor [E2] (v1.7.4): similaridade (0-1,
+# `difflib.SequenceMatcher.ratio` sobre os textos normalizados por espaço
+# em branco) entre `narrativa_bruta` e o texto editado a partir da qual a
+# edição é tratada como "não editou de verdade" — falha de tentativa, não
+# sucesso. Buraco identificado: até a v1.7.3, nenhuma checagem verificava
+# que a edição FEZ algo — só que não QUEBROU nada. Um editor que devolva a
+# entrada praticamente intacta passa em protegidos, números e honestidade
+# (é o mesmo texto) e era marcado como "aplicada".
+# 0.97 é DELIBERADAMENTE conservador: só pega devolução literal ou
+# trivialmente alterada (pontuação, um sinônimo isolado); uma edição
+# legítima que preserve bastante vocabulário do rótulo/atribuição
+# protegidos (que É esperado — eles são intocáveis por definição) não deve
+# cair aqui. Calibrável: se a telemetria (`edicao_flags.similaridade`,
+# persistida SEMPRE, em todo resultado) mostrar edições legítimas perto
+# do limiar, ajustar aqui é a mudança certa — não no código do editor.
+EDITOR_LIMIAR_EDICAO_NULA = 0.97
+
 # Timeout de rede das chamadas LLM, em MILISSEGUNDOS (v1.6.0). Sem timeout
 # explícito o SDK do Gemini bloqueia indefinidamente: durante a regeneração
 # desta versão um processo ficou 67 minutos parado (0% CPU, dormindo num

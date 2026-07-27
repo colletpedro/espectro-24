@@ -286,6 +286,10 @@ def main(argv=None):
                 # chamadas foram feitas e o motivo de falha de cada uma.
                 "n_tentativas": ed.n_tentativas,
                 "motivos_por_tentativa": ed.motivos_por_tentativa,
+                # v1.7.4: similaridade bruta×editada (telemetria de edição
+                # nula) e se a capitalização residual foi corrigida.
+                "similaridade": ed.similaridade,
+                "capitalizacao_ajustada": ed.capitalizacao_ajustada,
             }
             if ed.edicao_descartada:
                 print(f"⚠️  Edição descartada ({ed.motivo_descarte}) — "
