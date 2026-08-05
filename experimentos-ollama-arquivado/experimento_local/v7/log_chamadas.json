@@ -1,0 +1,77 @@
+{
+  "chamadas": 12,
+  "log": [
+    {
+      "chamada_n": 1,
+      "pulada_por_orcamento": false,
+      "tempo_s": 178.3,
+      "erro": null
+    },
+    {
+      "chamada_n": 2,
+      "pulada_por_orcamento": false,
+      "tempo_s": 172.6,
+      "erro": null
+    },
+    {
+      "chamada_n": 3,
+      "pulada_por_orcamento": false,
+      "tempo_s": 162.9,
+      "erro": null
+    },
+    {
+      "chamada_n": 4,
+      "pulada_por_orcamento": false,
+      "tempo_s": 174.2,
+      "erro": null
+    },
+    {
+      "chamada_n": 5,
+      "pulada_por_orcamento": false,
+      "tempo_s": 83.3,
+      "erro": null
+    },
+    {
+      "chamada_n": 6,
+      "pulada_por_orcamento": false,
+      "tempo_s": 58.0,
+      "erro": null
+    },
+    {
+      "chamada_n": 7,
+      "pulada_por_orcamento": false,
+      "tempo_s": 19.9,
+      "erro": null
+    },
+    {
+      "chamada_n": 8,
+      "pulada_por_orcamento": false,
+      "tempo_s": 13.2,
+      "erro": null
+    },
+    {
+      "chamada_n": 9,
+      "pulada_por_orcamento": false,
+      "tempo_s": 24.7,
+      "erro": null
+    },
+    {
+      "chamada_n": 10,
+      "pulada_por_orcamento": false,
+      "tempo_s": 11.1,
+      "erro": null
+    },
+    {
+      "chamada_n": 11,
+      "pulada_por_orcamento": false,
+      "tempo_s": 29.5,
+      "erro": null
+    },
+    {
+      "chamada_n": 12,
+      "pulada_por_orcamento": false,
+      "tempo_s": 5.9,
+      "erro": null
+    }
+  ]
+}

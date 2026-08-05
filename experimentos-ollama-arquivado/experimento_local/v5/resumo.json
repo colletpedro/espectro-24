@@ -1,0 +1,46 @@
+{
+  "gerado_em": "2026-07-28T03:35:26.249038+00:00",
+  "lote_tamanho": 25,
+  "filmes": [
+    {
+      "slug": "cure",
+      "buckets": [
+        {
+          "bucket": "negativas",
+          "falhou": false,
+          "tempo_total_s": 260.31
+        },
+        {
+          "bucket": "medianas",
+          "falhou": false,
+          "tempo_total_s": 245.46
+        },
+        {
+          "bucket": "positivas",
+          "falhou": false,
+          "tempo_total_s": 295.43
+        }
+      ]
+    },
+    {
+      "slug": "cidade-de-deus",
+      "buckets": [
+        {
+          "bucket": "negativas",
+          "falhou": false,
+          "tempo_total_s": 552.32
+        },
+        {
+          "bucket": "medianas",
+          "falhou": false,
+          "tempo_total_s": 172.85
+        },
+        {
+          "bucket": "positivas",
+          "falhou": false,
+          "tempo_total_s": 209.82
+        }
+      ]
+    }
+  ]
+}

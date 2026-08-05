@@ -1,0 +1,45 @@
+{
+  "slug": "cidade-de-deus",
+  "condicao": "B2",
+  "texto_entrada": "Em Cidade de Deus (2002), dirigida por Fernando Meirelles no gênero Drama e Crime, um jovem morador da periferia busca uma vida digna através da fotografia para fugir do destino violento que o cerca. A obra se destaca pelo estilo visual dinâmico, cinematografia marcante e edição ágil criam imersão intensa enquanto a montagem rápida estrutura uma narrativa que abrange décadas de história local com ritmo variável. O filme apresenta violência brutal e realista ao lado de um retrato crueiro da miséria e das condições sociais nas favelas, construindo uma atmosfera densa onde personagens carismáticos enfrentam um ambiente hostil sem perder o foco na realidade social complexa que permeia a trama.",
+  "texto_editado": "Em Cidade de Deus (2002), dirigida por Fernando Meirelles no gênero Drama e Crime, um jovem morador da periferia busca uma vida digna através da fotografia para fugir do destino violento que o cerca. A obra se destaca pelo estilo visual dinâmico, cinematografia marcante e edição ágil criam imersão intensa enquanto a montagem rápida estrutura uma narrativa que abrange décadas de história local com ritmo variável. O filme apresenta violência brutal e realista ao lado de um retrato crueiro da miséria e das condições sociais nas favelas, construindo uma atmosfera densa onde personagens carismáticos enfrentam um ambiente hostil sem perder o foco na realidade social complexa que permeia a trama.",
+  "edicao_flags": {
+    "edicao_descartada": true,
+    "motivo_descarte": "formato_invalido",
+    "protegidos_perdidos": [],
+    "numeros_alterados": false,
+    "houve_retentativa": true,
+    "n_tentativas": 2,
+    "motivos_por_tentativa": [
+      "formato_invalido",
+      "formato_invalido"
+    ],
+    "n_protegidos": 1,
+    "similaridade": 0.0,
+    "capitalizacao_ajustada": false,
+    "falhou": false
+  },
+  "protegidos": [
+    "2002"
+  ],
+  "metricas_fluencia_entrada": {
+    "n_frases": 3,
+    "media_palavras": 36.3,
+    "cv_comprimento": 0.15,
+    "frase_mais_curta": 32,
+    "aberturas_repetidas": 0,
+    "verbos_reporte": 1,
+    "adverbios_mente": 0
+  },
+  "metricas_fluencia_saida": {
+    "n_frases": 3,
+    "media_palavras": 36.3,
+    "cv_comprimento": 0.15,
+    "frase_mais_curta": 32,
+    "aberturas_repetidas": 0,
+    "verbos_reporte": 1,
+    "adverbios_mente": 0
+  },
+  "n_chamadas_ollama": 2,
+  "tempo_total_s": 35.4
+}

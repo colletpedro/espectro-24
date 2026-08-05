@@ -1,0 +1,389 @@
+{
+  "bucket": "positivas",
+  "n_reviews": 30,
+  "falhou": false,
+  "lote_tamanho": 25,
+  "tempo_estagio1_s": 103.74,
+  "tempo_estagio2_s": 106.08,
+  "tempo_total_s": 209.82,
+  "estagio1_log": [
+    {
+      "tentativa": 1,
+      "tempo_s": 103.74,
+      "done_reason": "stop",
+      "eval_count": 337,
+      "conteudo_chars": 1187,
+      "json_valido": true
+    }
+  ],
+  "estagio1_temas_propostos": [
+    {
+      "id": "t1",
+      "tema": "Edição frenética e ritmo acelerado",
+      "descricao_curta": "gera uma imersão avassaladora, cria tensão constante e evita momentos de tédio através da fluidez visual",
+      "aspas_removidas_da_descricao": false
+    },
+    {
+      "id": "t2",
+      "tema": "Atuações cruas sem filtro artístico",
+      "descricao_curta": "transmite a sensação de ver a realidade se desenrolar espontaneamente, aumentando o impacto emocional e o realismo brutal",
+      "aspas_removidas_da_descricao": false
+    },
+    {
+      "id": "t3",
+      "tema": "Paleta de cores vibrante marcadora da época",
+      "descricao_curta": "transmite energia vitalícia para a narrativa enquanto distingue visualmente as diferentes fases históricas mostradas no longa metragem",
+      "aspas_removidas_da_descricao": false
+    },
+    {
+      "id": "t4",
+      "tema": "Enorme número de personagens complexos",
+      "descricao_curta": "cria uma densidade narrativa intensa que permite acompanhar múltiplos destinos sem perder o foco da trama central",
+      "aspas_removidas_da_descricao": false
+    },
+    {
+      "id": "t5",
+      "tema": "Depictão despojado das favelas",
+      "descricao_curta": "instila tristeza profunda e impotência ao expor a pobreza extrema, falta de oportunidades e violência cotidiana como fatos naturais",
+      "aspas_removidas_da_descricao": false
+    }
+  ],
+  "estagio2_lotes": [
+    {
+      "offset": 0,
+      "tamanho": 25,
+      "chamadas": [
+        {
+          "tentativa": 1,
+          "tempo_s": 78.12,
+          "done_reason": "stop",
+          "eval_count": 310,
+          "conteudo_chars": 493,
+          "json_valido": true
+        }
+      ],
+      "ok": true,
+      "ids_invalidos": 0
+    },
+    {
+      "offset": 25,
+      "tamanho": 5,
+      "chamadas": [
+        {
+          "tentativa": 1,
+          "tempo_s": 27.96,
+          "done_reason": "stop",
+          "eval_count": 80,
+          "conteudo_chars": 121,
+          "json_valido": true
+        }
+      ],
+      "ok": true,
+      "ids_invalidos": 0
+    }
+  ],
+  "estagio2_ids_invalidos_total": 0,
+  "n_reviews_sem_tema": 5,
+  "n_reviews_nao_classificadas_falha_lote": 0,
+  "n_reviews_com_tema": 25,
+  "media_temas_por_review_classificada": 1.8,
+  "idioma_pt_br_ok": true,
+  "temas_finais": [
+    {
+      "tema": "Depictão despojado das favelas",
+      "mencoes_aproximadas": 16,
+      "n_reviews_analisadas": 30,
+      "exemplo_parafraseado": "instila tristeza profunda e impotência ao expor a pobreza extrema, falta de oportunidades e violência cotidiana como fatos naturais",
+      "id_estagio1": "t5"
+    },
+    {
+      "tema": "Edição frenética e ritmo acelerado",
+      "mencoes_aproximadas": 11,
+      "n_reviews_analisadas": 30,
+      "exemplo_parafraseado": "gera uma imersão avassaladora, cria tensão constante e evita momentos de tédio através da fluidez visual",
+      "id_estagio1": "t1"
+    },
+    {
+      "tema": "Enorme número de personagens complexos",
+      "mencoes_aproximadas": 11,
+      "n_reviews_analisadas": 30,
+      "exemplo_parafraseado": "cria uma densidade narrativa intensa que permite acompanhar múltiplos destinos sem perder o foco da trama central",
+      "id_estagio1": "t4"
+    },
+    {
+      "tema": "Atuações cruas sem filtro artístico",
+      "mencoes_aproximadas": 10,
+      "n_reviews_analisadas": 30,
+      "exemplo_parafraseado": "transmite a sensação de ver a realidade se desenrolar espontaneamente, aumentando o impacto emocional e o realismo brutal",
+      "id_estagio1": "t2"
+    },
+    {
+      "tema": "Paleta de cores vibrante marcadora da época",
+      "mencoes_aproximadas": 6,
+      "n_reviews_analisadas": 30,
+      "exemplo_parafraseado": "transmite energia vitalícia para a narrativa enquanto distingue visualmente as diferentes fases históricas mostradas no longa metragem",
+      "id_estagio1": "t3"
+    }
+  ],
+  "amostra_completa": [
+    {
+      "indice": 0,
+      "rating": 4.0,
+      "texto": "PTAbro's World Tour Stop 27: Brazil Drama. Romance. Comedy. Coming-of-age. Period Piece. Social Commentary. Crime Thriller. Biopic. The fact that City of God can squeeze all those different genres into one film and have it remain internally consistent and consistently entertaining is a downright miracle. Another incredible aspect of the production is the fact that nearly all of the actors had little to no filming experience at the time of shooting. I learned this afterwards, and still have trouble believing it, especially when I think back to Li'l Zé: easily one of the top villains on film of the '00s. While I might have had issues with the dependence on stylistic flourishes early on, they were either scaled back later in the picture or simply became part of the world Meirelles and Lund created. The chapter headings and machine-gun cuts became as much a part of the film as the subject matter, giving it a unique visual identity, and additional momentum scene-to-scene; if anything, at two hours here, it's no wonder Meirelles and Lund expanded this into a TV series with the amount of material available and the sense of hurry that can be felt in City of God . Yes, it's violent, yes, it's terrifying that children are the main perpetrators of that violence. Thankfully, though, there is no overt sermonizing on that fact, no lengthy speeches of right and wrong, since those speeches are rarely made in real life. And while I wouldn't imagine anyone would ever mistake this for a documentary, it does a great job balancing the theatrical with an honest sense of trying to capture life in the slums, and of simply growing up in any challenging environment. That might be why cramming all those different genres together works - that's what real life can be like, a different genre every moment. City of God looks at real life through its own cinematic filter, trimming the mundane and adding some atmosphere, leaving a film that's as exciting to watch as it is enlightening.",
+      "temas_atribuidos": [
+        "t1",
+        "t2"
+      ]
+    },
+    {
+      "indice": 1,
+      "rating": 4.0,
+      "texto": "Fantastic use of handheld camera work and rapid fire editing makes this Brazilian gangland story come to life. With all the dynamic visual story telling in this movie, I already feel the urge to re watch it and not read the subtitles in order to soak it all in. The film has the feel of 'Goodfellas', with how it tells this crime story. This includes starting the movie by teasing the conflict toward the end, and focusing on mini stories throughout in order to provide context on the large amount of characters that come into play. The story is told from the perspective of our main character Rocket, who from a young age wants nothing to do with the violence that consumes the slums of Rio that he lives in known as the City of God. Rocket says he is afraid of being shot, and has a passion to be a photographer. I have heard analysis that the chicken at the beginning of the film represents some of the hoodlums desire to desperately try to escape the community, but being unable to do so. By far the most interesting character is the antagonist, who becomes known as Li'l Zé once he rises to power as one of the slums prominent drug/crime bosses. Even as a little kid this character is excellently depicted as being totally out of his mind, with no regard for human life. He laughs hysterically as he guns down his victims. Later on we get more depth from this monstrous personality, as we see that despite all the fear and intimidation he wields, none of that confidence carries over into social situations. But where Li'l Zé lacks any charm with the ladies, his right hand man Benny is all about being the guy that everyone loves. Heading into the third act we find out how critical Benny is, since he is one person preventing the whole community from falling into chaos. City of God is based on true events so it ends up being a period piece, where we get to see the cultural differences for these characters stretching from the 60s into the 70s. Spoilers... I came into the movie expecting some extremely gritty violence, and those moments are definitely there. There is one scene where a wife who is caught cheating gets beaten with a shovel and buried alive. The most tense moment had to be the scene where Li'l Zé has younger kids who they call Runts at gunpoint. You can really feel the fear coming from one of the kids who is sobbing uncontrollably, and then screams in agony when he gets shot in the foot. The movie does a great job of delivering a bloody action packed climax. But what really hits you is despite all these older hoodlums being gunned down in the street, we see the Runts begin to rise up and get excited about taking control of the City of God ... and thus restarting the cycle of violence. \"I'm finished!\" - Daniel Plainview Happy movie watching ... SKOL!",
+      "temas_atribuidos": [
+        "t1",
+        "t3",
+        "t4",
+        "t5"
+      ]
+    },
+    {
+      "indice": 2,
+      "rating": 4.0,
+      "texto": "If you thought that Matheus Nachtergaele was great here as Sandro \"Carrot\" Cenoura, wait'll you get a load of his brief but unforgettable role in Lucrecia Martel's Zama; it's all I could think about while watching this, whenever he popped up on screen.",
+      "temas_atribuidos": []
+    },
+    {
+      "indice": 3,
+      "rating": 4.0,
+      "texto": "İzlemekte geç kaldıklarımdan bir film daha .... Yaşanmış olayları anlatan bir film olması... Karakterlerin rollerini gerçek gibi oynaması filmi baya bir sarsıcı hale getirmiş.... Birçok karakterin iç içe geçen ve birbiri ile kesişen ama kafa karıştırmayan beyin yakmayan bir şekilde anlatması ekstra bir güzellik katmış ... Ayrıca hiçbir filmde bu kadar SU TESTİSİ gördüğümü hatırlamıyorum 🙂 ⭐⭐⭐⭐ Bir film daha eksilttik IMDB listesinden 👍👍👍👍",
+      "temas_atribuidos": [
+        "t2",
+        "t4"
+      ]
+    },
+    {
+      "indice": 4,
+      "rating": 4.0,
+      "texto": "Why return to the City of God, where God forgets about you? Incredible story telling. The slum’s gangster lifestyle pictured over three decades through the point of view of a single photographer. It’s hard to get as gritty, real and simultaneously stunning as this. Just radiates energy.",
+      "temas_atribuidos": [
+        "t5"
+      ]
+    },
+    {
+      "indice": 5,
+      "rating": 4.0,
+      "texto": "City of God is the type of hard-hitting, sensational crime saga destined to become a modern classic. Based on real-life events, City of God delves deep into the dark underbelly of the notorious Brazilian slum, where survival of the fittest rules. With a very new millennial coded style exercise, Director Fernando Meirelles provides an engrossing, soulful tale of two childhood friends growing into different paths amid the gang wars inside the City of God. Both life's quirk and cruelty are on full display here, as the witty structure of the plot developments provides one shock after another, where all the bloodshed and tears eventually feel like God's ultimate heartless prank on his people in his city. From a pure storytelling perspective, this is top-notch among mainstream action efforts, and comes with a heavy aftertaste. Highly recommended.",
+      "temas_atribuidos": [
+        "t2",
+        "t5"
+      ]
+    },
+    {
+      "indice": 6,
+      "rating": 4.0,
+      "texto": "I feel like I lived an entire life in just two hours. What a raw, violent, and impactful story. I still can't believe this actually happened in real life, which makes the movie even more unforgettable. The gritty visuals and the vibrant color palette used to represent time jumps were amazing. It's a very good movie, and I'm grateful for the somewhat happy ending.",
+      "temas_atribuidos": [
+        "t1",
+        "t3",
+        "t5"
+      ]
+    },
+    {
+      "indice": 7,
+      "rating": 4.0,
+      "texto": "Una de las obras audiovisuales latinoamericanas más contundentes de este siglo. Ciudad de Dios impone por su crudeza y su mirada descarnada sobre la violencia. lejos de ser una denuncia frontal, La película expone un ciclo interminable de brutalidad que actúa como tumba no solo para las incontables vidas que retrata, sino también para la comunidad misma hasta hoy en día. 8 gallinas de 10",
+      "temas_atribuidos": [
+        "t2",
+        "t5"
+      ]
+    },
+    {
+      "indice": 8,
+      "rating": 4.0,
+      "texto": "Um caminho do bem.. Acho que Cidade de Deus é o primeiro filme brasileiro que vejo, vergonha? Talvez. O filme transmite perfeitamente a cultura brasileira e a direção dele é dinâmica demais, demais mesmo. Fiquei bem impressionado, mesmo tando no top doze do letterboxd não esperava muita coisa, ainda mais que não curto o tipo de tema que o filme aborda. Corrupção, estrupo, drogas, favelas, é tudo importante? Com certeza, mas não é o tipo de entretenimento que procuro num domingo a noite. Em um universo muito representativo tendo como influencia acontecimentos reais, o filme é impressionante em todos os fatores, e o trabalho de toda equipe envolvida é majestral nos únicos detalhes. Jóia brasileira da sétima arte.",
+      "temas_atribuidos": []
+    },
+    {
+      "indice": 9,
+      "rating": 4.0,
+      "texto": "الفيلم متصور بكاميرا نوكيا باين بس غالبًا هما قاصدين كده علشان يورونا الحياة على حقيقتها من غير أي تزيين السرد بتاع الفيلم حلو ومش ممل خالص بيحكي القصة بطريقة تشد وتخليك عايشة جوه الأحداث كل همي في الأول كان ع الفرخة اللي كانت هتتقتل لحد ما اكتشفت إن كله هيموت بعد شوية واغلبيتهم أطفال يا يمسكوا سلاح ويقتلوا يا هما اللي هيموتوا مفيش غير كده",
+      "temas_atribuidos": [
+        "t2"
+      ]
+    },
+    {
+      "indice": 10,
+      "rating": 4.5,
+      "texto": "A kid? I smoke, I snort. I've killed and robbed. I'm a man. Total beast of a film. Crime culture in bleeding, hyper-realistic vignettes of a city where in order to live, you have to survive. Witnessing the evolution and downcast fate of people in the rejected City of God, the unspoken back-garden of Rio, where children have no time for childhood so seek quick gains, but meet even quicker, tragic ends. Tension boils over inevitably in the heat of idle hands, after a short period where senseless chaos provided it’s own twisted sense of order. Dog eat dog world, where the loudest bark wins. Compact, visually alive account of almost two decades of transgression. Real, angry, beautiful. Barbarity treated casually, immersing in a world where death and violence are salt and pepper. Life for the citizens of the City of God for many has no beginning nor end, but this harrowing, brutally honest film is as much about them as it is about the few who can blossom within an overshadowed field of weeds, and step out from the dark",
+      "temas_atribuidos": [
+        "t2",
+        "t4",
+        "t5"
+      ]
+    },
+    {
+      "indice": 11,
+      "rating": 4.5,
+      "texto": "“fod*-se os estados unidos aqui é brasil mano ” old que cidade de deus fez história único *defeito* desse filme é ser baseado em *fatos reais* dadinho ressurgiu dos mortos e virou ex bbb bené seu único crime foi amar dms 💔 mto injusto não ter levado o oscar de melhor filme estrangeiro “se correr o bicho pega e se ficar o bicho come” desconheço uma fala mais brasil do que essa aqui meus amigos —> fico aqui imaginando a potência cinematográfica que o brasil seria se investisse corretamente em arte <— cidade de deus é mais do que um filme é uma realidade! uma realidade brasileira e fernando meireles soube dirigir de forma magnífica esse filme a ponto de nem parecer que tão atuando",
+      "temas_atribuidos": [
+        "t2",
+        "t5"
+      ]
+    },
+    {
+      "indice": 12,
+      "rating": 4.5,
+      "texto": "The scope is incredible — wild how there is so much energy and genuine humour without ever alienating the pretty horrifying violence of it all. I miss Benny, love Rocket, am absolutely petrified by Lil Zé. Best child acting ever? Shoutout to the journalism digs. Insane cinema!",
+      "temas_atribuidos": [
+        "t2",
+        "t4"
+      ]
+    },
+    {
+      "indice": 13,
+      "rating": 4.5,
+      "texto": "“ Hoods don’t love, they desire .” The streets of Cidade de Deus are littered with the bodies of dead boys who started masquerading as men long before they fully understood the full scope of such a choice. Dying boys are asked why they joined a war that they seemingly were born into and there’s no real answer besides it being all they’ve ever known. Violence begetting violence to an extent that doesn’t necessarily feel overdrawn but does feel particularly devastating when processing just how young the fallen are. City of God has a snappy aesthetic that catches its viewers’ attention quickly and refuses to let it go until the bittersweet end. A coming of age story for a way of life so beyond my comprehension thanks to my own privilege but one that feels overwhelmingly impactful in its emotional weight. Despite a painfully glaring lack of women, I was truly engaged from start to finish, eager to see how each character made it out, dead or alive. The type of film you know will be a great watch due to its acclaim but still surprises you with just how great it is when you finally see it for yourself.",
+      "temas_atribuidos": [
+        "t4",
+        "t5"
+      ]
+    },
+    {
+      "indice": 14,
+      "rating": 4.5,
+      "texto": "Film Club #21 This was one of the most captivating movies I’ve ever seen. I was immediately absorbed into this story and I couldn’t look away even when faced with the brutality and violence in this story. I like that unlike most of the other gangster or mob stories I’ve seen, this one never feels glamorous or inviting. It is grim and dirty and deeply sad. I really like the choice of the narrator because seeing this story through the eyes of a spectator gave us a sort of arial view of everyone instead of being pulled into one side. Brilliant film, I loved it.",
+      "temas_atribuidos": []
+    },
+    {
+      "indice": 15,
+      "rating": 4.5,
+      "texto": "Shameful that I waited this long to finally watch this. A full-force, brutal, and genuine depiction of a city overrun with violence and corruption. Honest and terrifying depictions of evil and how everyone is completely desensitized to the everyday horrors drowning their youth and the continued perpetuation of crime. Brilliant character work and seamless editing make this decades-spanning coming-of-age terror flow with such flow and rhythm that you become completely absorbed in and entranced by the city just to continually be punched in the gut over and over again. Very impressive and essential film.",
+      "temas_atribuidos": [
+        "t1",
+        "t2",
+        "t5"
+      ]
+    },
+    {
+      "indice": 16,
+      "rating": 4.5,
+      "texto": "Even Timothée Chalamet's doppelgänger is a twink, he really got soft boy energy hardcoded across every universe And Whoever named this place City of God deserves an award for irony",
+      "temas_atribuidos": []
+    },
+    {
+      "indice": 17,
+      "rating": 4.5,
+      "texto": "This gave me very strong Danny Boyle and Martin Scorsese vibes. The editing and tension reminded me a lot of Slumdog Millionaire , but I think this movie is way more successful at incorporating it seamlessly into the narrative. Very heavy movie, but easily one of the best gangster movies out there. It’s got a lot to say and does so in a way that most gangster films don’t, and that’s by being far more bleak and depressing as opposed to having any kind of glamorization of the gangster world. Both ways get the message across, but this way will definitely stick with me a little longer.",
+      "temas_atribuidos": [
+        "t1"
+      ]
+    },
+    {
+      "indice": 18,
+      "rating": 4.5,
+      "texto": "\"It was like a message from God: Honesty doesn't pay, sucker.\" This was one hell of an explosive movie. The editing is perfect and moves with a restless energy that feels like the literal heartbeat of Rio. Beneath the tight pacing is a brutal look at the cycle of violence and trauma, a place where guns are passed down to children like an inheritance and a peaceful childhood is a luxury few can afford. Very solid all around.",
+      "temas_atribuidos": [
+        "t1",
+        "t5"
+      ]
+    },
+    {
+      "indice": 19,
+      "rating": 4.5,
+      "texto": "My Top 200 1001 movies you must see before you die (Ranked) Movies based on real events ranked Coming of age films ranked Watched this film a couple years ago now and even whilst watching I knew I wasn’t in the right mindset for it so turned it off half way through and because I didn’t know better I still logged it back then but this is practically a new watch. Es sou muito estúpido This was obviously as fantastic as everyone says it is; genuinely the only problem I had with it was the editing but that’s really more of a preference thing rather than a problem with the film everything other then that I “loved” but god damn this film rips raw emotion out of you. Thank god I gave this one another chance, such a brilliant film. If you’re like me and have waited ages to watch let this be your push.",
+      "temas_atribuidos": [
+        "t5"
+      ]
+    },
+    {
+      "indice": 20,
+      "rating": 5.0,
+      "texto": "This was so impressive. How they managed to tell so many stories at once without any of them feeling unnecessary or a waste of time is mind blowing. This film is fantastically paced, It’s so rhythmic and edited better than anything else I’ve seen.",
+      "temas_atribuidos": [
+        "t4"
+      ]
+    },
+    {
+      "indice": 21,
+      "rating": 5.0,
+      "texto": "One of the best films of the 21st century, City of God ( Cidade de Deus ) paints a disturbing portrait of life in the slums of Rio de Janeiro and covers the birth & flourishing world of gangsters, gang wars & drug deals spanning over 3 decades from 1960s to 1980s, all meticulously captured through the eyes of a young photographer who continuously finds himself in the middle of this milieu despite never wanting any part of it. There are several relevant characters introduced throughout the story and yet, it ingeniously follows the journey of every single one of them. The direction is as honest as it is ruthless, the script is uncompromising with its content, cinematography is raw, evocative & stylish, editing is tight & inventive, music has a dynamic kick to it, and the performances from the entire cast is top-notch, especially the show-stealing inputs by the child actors (my favourite being the kid who played Li'l Dice). Based on a true story, City of God is a downright brutal, violent, intense, shocking & merciless crime thriller that will leave its viewers gasping for air from start to finish with its potent combination of fierce storytelling, explosive pace & aggressive style of filmmaking. Unquestionably one of world cinema's greatest triumphs and certainly the finest film to surface from Brazil, this genre-defining masterpiece is a must for every film lover around the globe and comes very highly recommended.",
+      "temas_atribuidos": [
+        "t3",
+        "t4",
+        "t5"
+      ]
+    },
+    {
+      "indice": 22,
+      "rating": 5.0,
+      "texto": "it felt weird seeing a lot of non-brazilians saying this is one of their favorite movies when i first started browsing through IMDb and Letterboxd. not that Cidade de Deus doesn't earn its enormous praise, but it's such a deeply brazilian movie! but i should have known: violence speaks all languages. shout out to Leandro Firmino for his flawless performance of one of the best villains of all-time, Zé Pequeno. \"quem falou que a boca é tua, rapá?\"",
+      "temas_atribuidos": []
+    },
+    {
+      "indice": 23,
+      "rating": 5.0,
+      "texto": "GIVE ME A FLAW IN THIS FILM! And not that you would’ve liked it to be longer, because that’s all I’ve got. This might just be one of the most impactful pieces of cinema I have ever seen. The amount of different emotions I have felt in a 2-hour period is unbelievable; the majority of films with this approach tend to leave me overwhelmed. This was definitely not one of those films. The stylistic camera work is complete genius. Every character is unforgettable. The pacing is phenomenal, and all three acts are just as good as each other. Some of the lines and dialogue in this film are so well written, to the point where I was actually shocked at just how clever they were. They told so many stories at once, and it didn’t at one point feel forced or unnecessary. What??? So much more I could say, but seriously, if you haven’t watched this, then get it done once you’re next in front of the screen.",
+      "temas_atribuidos": [
+        "t1",
+        "t4"
+      ]
+    },
+    {
+      "indice": 24,
+      "rating": 5.0,
+      "texto": "what a gut punch of a film. the plot is constantly moving; seamlessly changing tones, genres, and storylines throughout the duration. i genuinely have no clue how they pulled it off without making it feel overwhelmed, but they did, and it was brilliant.",
+      "temas_atribuidos": [
+        "t1"
+      ]
+    },
+    {
+      "indice": 25,
+      "rating": 5.0,
+      "texto": "Na minha humilde opinião, um dos melhores filmes de todos os tempos. Gringo não vai entender (provavelmente), mas a gente que é brasileiro entende. Tem uma história que coloca muito roteirista americano no chinelo. Afinal, a história é real. E as atuações? Os caras nem parece que estão atuando. Leandro Firmino e Seu Jorge foram tão excelentes que até hoje são reconhecidos respectivamente como Zé Pequeno e Mané Galinha. A parte ruim do filme é que ele mostra a realidade. OBRA-PRIMA!",
+      "temas_atribuidos": [
+        "t5"
+      ]
+    },
+    {
+      "indice": 26,
+      "rating": 5.0,
+      "texto": "''Honesty doesn't pay, sucker.'' Oh, the camera work! What style! What fluidity! Especially the opening scene where they show rocket stuck in the middle of the conflict between the gangsters and the police. I'm shedding tears of joy, it's as if my eyes have been baptized. Daniel Rezende’s editing was full of energy, absolutely wonderful! Took me way too long to watch this masterpiece!",
+      "temas_atribuidos": [
+        "t1",
+        "t3"
+      ]
+    },
+    {
+      "indice": 27,
+      "rating": 5.0,
+      "texto": "DADINHO É O CARALHO, MEU NOME AGORA É ZÉ PEQUENO, PORRA! I swear to you guys, if only y'all could understand portuguese and know how rich and funny Bra s il's vocabulary is, especially the swear-words vocabulary. lol This movie is one of the few things people from our country have to be proud of. Everything that happens in this movie, still happens in some parts of the country, on a daily basis. I admire how the people involved in Cidade de Deus could take a sad reality and make one of the most iconic movies from the 2000s. It's insane how the re-watch value is so big.",
+      "temas_atribuidos": [
+        "t2",
+        "t4",
+        "t5"
+      ]
+    },
+    {
+      "indice": 28,
+      "rating": 5.0,
+      "texto": "With unforgettable characters, perfect editing, some of the most insane and mesmerising cinematography, City of God is an extremely stylised film with a rollercoaster of \"OH SHIT\" moments, heartache and is a damn eye-opener. There are so many scenes, too many to mention, that stand out to me. What got me first was the editing, how it all came full circle and how it always playing catch up with its self was mind-blowing. Mixed in with some of the coolest camerawork, there was never a dull moment. As soon as the \"Based on a real story\" came up at the end, I was gobsmacked. An absolutely perfect way to knock over the audience for the final time. It's perfect.",
+      "temas_atribuidos": [
+        "t1",
+        "t3",
+        "t4",
+        "t5"
+      ]
+    },
+    {
+      "indice": 29,
+      "rating": 5.0,
+      "texto": "City of God is kinetic, stunning, one-of-a-kind cinema. Sometimes I think this must be the best edited film of the past 20 years, because it is so ferociously fierce, energetic, and gripping. It is so fast in pace, but despite the chaos it tells a really clear and coherent story that is also educational on the history of Cidade de Deus. City of God is more stylish than Scorsese at his most excessive, filled with freeze frames, lively music, time lapses, criss-crossing montages, split screen, and the slickest cinematography. As a work of technical genius, City of God is unparalleled in multiple respects. Centering over many changing years of crime, City of God is an examination of the impoverished. The favela here is full of people left behind by the powerful, at the mercies of a corrupt, abusive police force and a life with little opportunity. The economics presented here show talented people reduced to menial jobs because it's all they can get, and it's easy to get fired when it's known which favela you come from. So instead the economics of crime and drug dealing take over. Choice becomes scarce. With extreme poverty and little opportunity, this is the world you create, a slum of addicts and criminals. Trying to escape this life is difficult, and in City of God those who escape are those who die. Sweat. Gunshots. Vengeance. War. City of God turns history into a story, rather literally with voiceover, and depicts the turbulence of the 1960s - 1980s in Cidade de Deus. The character of Li'l Zé is a sadistic and sociopathic, enforcing his rule over the favela as judge, jury, and executioner. His rise within Cidade de Deus initially brings peace and stability, before descending into evil once gang warfare breaks out. Yet as a leader Li'l Zé still exists within a world of corruption. Him and the police exist interdependently. They pay each other off, each trying to survive. The relationship is cyclical. Cidade de Deus plunges into war and addiction, making guns and drugs the most valued commodities. Even good men get drawn into this world when they have to live in it. City of God is about a community in tatters, all that unifies them is that none of them can escape. It's frightening how young the characters in City of God are. The ensemble contains almost all young actors. The world of City of God is one without authority, where the young make the rules. But these kids don't know better, this is the life they were born into. They clutch guns and pray before shootouts, but they have no concept of life. City of God devolves into constant bodies, constant blood, and constant violence. Yet it does not glamourise any of the killing. The film is brutal and leaves only an impression of poverty, pain, and death. One scene involving the calculated shooting of two young children is particularly distressing, lingering on real tears. City of God is ultimately a film of dead children. Death becomes so common it's just a fact of this life. The film executes it all so complacently, with no glamour and no meaning. We are left helpless, and yet this is the reality we exist in. Kids are constant in City of God , they permeate every scene, yet they don't rule over it. Li'l Zé is not a child. Yet by the end, kids are the winners within Cidade de Deus and they are the ones left in charge. As one cycle ends, another begins. The next generation of children will grow up to kill more children. City of God is probably the greatest gangster film of them all. It may not be the most profound or high brow, but it has a much stronger relevancy. Gangsters in most of the world don't monologue about family and wear suits and ties. Most people affected by gangs are born in poverty and drawn into conflict. City of God is about that reality. There is no glamour to this world. It is one of ignorant children killing people for reasons they don't know. There's not much of a philosophy to it, just circumstance and the need to survive. City of God has such style, which allows it to make such points in an incredibly compelling way. It presents gang conflict not as one of conversation or business, but as a state of purgatory always about to enter hell. My Top Films of the 2000s",
+      "temas_atribuidos": [
+        "t1",
+        "t3",
+        "t4",
+        "t5"
+      ]
+    }
+  ]
+}

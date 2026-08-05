@@ -1,0 +1,279 @@
+{
+  "variante": "v3_sembloco_lote10",
+  "com_bloco_recall": false,
+  "lote_tamanho": 10,
+  "n_reviews": 50,
+  "tempo_total_s": 232.22,
+  "n_chamadas": 5,
+  "tempo_medio_por_chamada_s": 46.44,
+  "contagem_por_tema": {
+    "t1": 21,
+    "t2": 14,
+    "t3": 11,
+    "t4": 8,
+    "t5": 13,
+    "t6": 18
+  },
+  "n_reviews_sem_tema": 10,
+  "n_reviews_nao_classificadas_falha_lote": 0,
+  "estagio2_ids_invalidos_total": 0,
+  "estagio2_lotes": [
+    {
+      "offset": 0,
+      "tamanho": 10,
+      "chamadas": [
+        {
+          "tentativa": 1,
+          "tempo_s": 42.51,
+          "done_reason": "stop",
+          "eval_count": 118,
+          "conteudo_chars": 189,
+          "json_valido": true
+        }
+      ],
+      "ok": true,
+      "ids_invalidos": 0
+    },
+    {
+      "offset": 10,
+      "tamanho": 10,
+      "chamadas": [
+        {
+          "tentativa": 1,
+          "tempo_s": 37.21,
+          "done_reason": "stop",
+          "eval_count": 133,
+          "conteudo_chars": 211,
+          "json_valido": true
+        }
+      ],
+      "ok": true,
+      "ids_invalidos": 0
+    },
+    {
+      "offset": 20,
+      "tamanho": 10,
+      "chamadas": [
+        {
+          "tentativa": 1,
+          "tempo_s": 43.89,
+          "done_reason": "stop",
+          "eval_count": 117,
+          "conteudo_chars": 187,
+          "json_valido": true
+        }
+      ],
+      "ok": true,
+      "ids_invalidos": 0
+    },
+    {
+      "offset": 30,
+      "tamanho": 10,
+      "chamadas": [
+        {
+          "tentativa": 1,
+          "tempo_s": 48.18,
+          "done_reason": "stop",
+          "eval_count": 119,
+          "conteudo_chars": 201,
+          "json_valido": true
+        }
+      ],
+      "ok": true,
+      "ids_invalidos": 0
+    },
+    {
+      "offset": 40,
+      "tamanho": 10,
+      "chamadas": [
+        {
+          "tentativa": 1,
+          "tempo_s": 60.42,
+          "done_reason": "stop",
+          "eval_count": 93,
+          "conteudo_chars": 163,
+          "json_valido": true
+        }
+      ],
+      "ok": true,
+      "ids_invalidos": 0
+    }
+  ],
+  "atribuicoes": {
+    "0": [
+      "t3"
+    ],
+    "1": [
+      "t4",
+      "t6",
+      "t2"
+    ],
+    "2": [
+      "t5",
+      "t1",
+      "t6",
+      "t2"
+    ],
+    "3": [
+      "t1",
+      "t4",
+      "t2"
+    ],
+    "4": [
+      "t1"
+    ],
+    "5": [],
+    "6": [],
+    "7": [],
+    "8": [
+      "t1"
+    ],
+    "9": [
+      "t3",
+      "t2"
+    ],
+    "10": [
+      "t2",
+      "t5",
+      "t6"
+    ],
+    "11": [
+      "t3",
+      "t4"
+    ],
+    "12": [],
+    "13": [
+      "t1",
+      "t6"
+    ],
+    "14": [
+      "t1",
+      "t5",
+      "t6"
+    ],
+    "15": [],
+    "16": [
+      "t1",
+      "t2",
+      "t6"
+    ],
+    "17": [
+      "t1",
+      "t6"
+    ],
+    "18": [
+      "t1",
+      "t5"
+    ],
+    "19": [
+      "t3",
+      "t4"
+    ],
+    "20": [
+      "t3",
+      "t4"
+    ],
+    "21": [],
+    "22": [
+      "t5",
+      "t6"
+    ],
+    "23": [
+      "t1"
+    ],
+    "24": [
+      "t2",
+      "t5"
+    ],
+    "25": [
+      "t1",
+      "t2"
+    ],
+    "26": [
+      "t1"
+    ],
+    "27": [
+      "t6",
+      "t3"
+    ],
+    "28": [
+      "t4",
+      "t5",
+      "t2"
+    ],
+    "29": [],
+    "30": [
+      "t6",
+      "t2"
+    ],
+    "31": [
+      "t1",
+      "t3",
+      "t4",
+      "t5",
+      "t6",
+      "t2"
+    ],
+    "32": [
+      "t1"
+    ],
+    "33": [
+      "t5"
+    ],
+    "34": [],
+    "35": [
+      "t3"
+    ],
+    "36": [
+      "t1",
+      "t3"
+    ],
+    "37": [
+      "t1",
+      "t6",
+      "t2"
+    ],
+    "38": [
+      "t1",
+      "t2",
+      "t3",
+      "t4",
+      "t5"
+    ],
+    "39": [],
+    "40": [
+      "t6"
+    ],
+    "41": [
+      "t5",
+      "t6"
+    ],
+    "42": [
+      "t5"
+    ],
+    "43": [],
+    "44": [
+      "t6"
+    ],
+    "45": [
+      "t1",
+      "t2",
+      "t3"
+    ],
+    "46": [
+      "t6",
+      "t1"
+    ],
+    "47": [
+      "t5",
+      "t6"
+    ],
+    "48": [
+      "t1",
+      "t6"
+    ],
+    "49": [
+      "t1"
+    ]
+  }
+}

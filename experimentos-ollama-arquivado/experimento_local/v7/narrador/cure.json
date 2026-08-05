@@ -1,0 +1,32 @@
+{
+  "slug": "cure",
+  "narrativa_gerada": "A Cura",
+  "narrativa_bruta_gabarito_gemini": "Em 1997, Kiyoshi Kurosawa dirigiu A Cura, um filme de Crime, Thriller, Terror e Mistério que segue um detetive em uma investigação sobre mortes misteriosas marcadas por um x nos corpos, cuja busca por respostas o leva a um rapaz enigmático. A experiência de assistir ao filme é marcada por um ritmo lento e uma atmosfera sombria, utilizando planos longos para criar uma sensação de desconforto e um estilo visual eficaz. Essa ambientação sombria contribui para a experiência geral, que é descrita como sendo bastante ambígua.\n\nA grande maioria das notas (~79%) avalia A Cura de forma positiva, com muitos descrevendo o filme como hipnótico e perturbador, gerando uma sensação constante de apreensão. Para quem está nessa faixa, o ritmo lento e metódico intensifica o horror psicológico, levando o espectador a um estado de transe. Muitos também ressaltam a exploração de temas profundos como a fragilidade da identidade e a natureza do mal, e alguns apreciam o filme por não fornecer respostas definitivas, mantendo uma ambiguidade que força a reflexão. Por outro lado, uma minoria das notas (~17%) teve uma experiência mediana. Para eles, o filme tem ideias intrigantes e uma atmosfera eficaz, mas muitos apontam que o ritmo lento e a confusão narrativa, além de um final insatisfatório e ambíguo, impedem uma conexão plena. Uma fração mínima das notas (~3%) considera o filme decepcionante; para esse grupo, a maioria reclama do ritmo excessivamente lento e tedioso, o que o torna arrastado e chato. Muitos também sentiram uma falta de tensão e mistério, e alguns criticam o enredo e roteiro por serem fracos e repetitivos.",
+  "flags": {
+    "idioma_invalido": false,
+    "escopo_suspeito": false,
+    "prevalencia_suspeita": false,
+    "quantificador_suspeito": false,
+    "consenso_suspeito": false,
+    "peso_nao_ancorado": true,
+    "vocabulario_peso_suspeito": false,
+    "perspectiva_nao_marcada": true,
+    "aspas_removidas": false,
+    "falhou": false
+  },
+  "consensos_usados": [],
+  "quantificadores_usados": [],
+  "marcadores_perspectiva": [],
+  "metricas_fluencia": {
+    "n_frases": 1,
+    "media_palavras": 2.0,
+    "cv_comprimento": 0.0,
+    "frase_mais_curta": 2,
+    "aberturas_repetidas": 0,
+    "verbos_reporte": 0,
+    "adverbios_mente": 0
+  },
+  "n_chamadas_ollama": 2,
+  "houve_retentativa": true,
+  "tempo_total_s": 350.9
+}

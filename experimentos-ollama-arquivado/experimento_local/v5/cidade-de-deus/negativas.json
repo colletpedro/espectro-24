@@ -1,0 +1,569 @@
+{
+  "bucket": "negativas",
+  "n_reviews": 50,
+  "falhou": false,
+  "lote_tamanho": 25,
+  "tempo_estagio1_s": 266.59,
+  "tempo_estagio2_s": 285.73,
+  "tempo_total_s": 552.32,
+  "estagio1_log": [
+    {
+      "tentativa": 1,
+      "tempo_s": 266.59,
+      "done_reason": "stop",
+      "eval_count": 332,
+      "conteudo_chars": 1147,
+      "json_valido": true
+    }
+  ],
+  "estagio1_temas_propostos": [
+    {
+      "id": "t1",
+      "tema": "Violência como espetáculo frenético",
+      "descricao_curta": "Transforma mortes de crianças e atrocidades em ritmo acelerado, criando excitação visual ao invés de reflexão ou pesar.",
+      "aspas_removidas_da_descricao": false
+    },
+    {
+      "id": "t2",
+      "tema": "Estética do colonialismo favela-ficção",
+      "descricao_curta": "Fetichiza a pobreza e o sofrimento como cenário exótico para consumo público, ignorando contextos reais.",
+      "aspas_removidas_da_descricao": false
+    },
+    {
+      "id": "t3",
+      "tema": "Voz em off que distancia do humano",
+      "descricao_curta": "Narrador serve apenas de guia técnico impessoal, impedindo conexão emocional com as histórias contadas por trás dele.",
+      "aspas_removidas_da_descricao": false
+    },
+    {
+      "id": "t4",
+      "tema": "Personagens como arquétipos vazios",
+      "descricao_curta": "Figuras são reduzidas a estereótipos funcionais para sustentar conflitos, sem interioridade ou complexidade.",
+      "aspas_removidas_da_descricao": false
+    },
+    {
+      "id": "t5",
+      "tema": "Falta de agência dos moradores reais",
+      "descricao_curta": "A favelada se apresenta como palco passivo onde a violência ocorre fora da capacidade das pessoas mudarem seu destino.",
+      "aspas_removidas_da_descricao": false
+    }
+  ],
+  "estagio2_lotes": [
+    {
+      "offset": 0,
+      "tamanho": 25,
+      "chamadas": [
+        {
+          "tentativa": 1,
+          "tempo_s": 156.61,
+          "done_reason": "stop",
+          "eval_count": 360,
+          "conteudo_chars": 557,
+          "json_valido": true
+        }
+      ],
+      "ok": true,
+      "ids_invalidos": 0
+    },
+    {
+      "offset": 25,
+      "tamanho": 25,
+      "chamadas": [
+        {
+          "tentativa": 1,
+          "tempo_s": 129.12,
+          "done_reason": "stop",
+          "eval_count": 336,
+          "conteudo_chars": 533,
+          "json_valido": true
+        }
+      ],
+      "ok": true,
+      "ids_invalidos": 0
+    }
+  ],
+  "estagio2_ids_invalidos_total": 0,
+  "n_reviews_sem_tema": 15,
+  "n_reviews_nao_classificadas_falha_lote": 0,
+  "n_reviews_com_tema": 35,
+  "media_temas_por_review_classificada": 2.08,
+  "idioma_pt_br_ok": true,
+  "temas_finais": [
+    {
+      "tema": "Violência como espetáculo frenético",
+      "mencoes_aproximadas": 27,
+      "n_reviews_analisadas": 50,
+      "exemplo_parafraseado": "Transforma mortes de crianças e atrocidades em ritmo acelerado, criando excitação visual ao invés de reflexão ou pesar.",
+      "id_estagio1": "t1"
+    },
+    {
+      "tema": "Falta de agência dos moradores reais",
+      "mencoes_aproximadas": 26,
+      "n_reviews_analisadas": 50,
+      "exemplo_parafraseado": "A favelada se apresenta como palco passivo onde a violência ocorre fora da capacidade das pessoas mudarem seu destino.",
+      "id_estagio1": "t5"
+    },
+    {
+      "tema": "Estética do colonialismo favela-ficção",
+      "mencoes_aproximadas": 20,
+      "n_reviews_analisadas": 50,
+      "exemplo_parafraseado": "Fetichiza a pobreza e o sofrimento como cenário exótico para consumo público, ignorando contextos reais.",
+      "id_estagio1": "t2"
+    },
+    {
+      "tema": "Personagens como arquétipos vazios",
+      "mencoes_aproximadas": 19,
+      "n_reviews_analisadas": 50,
+      "exemplo_parafraseado": "Figuras são reduzidas a estereótipos funcionais para sustentar conflitos, sem interioridade ou complexidade.",
+      "id_estagio1": "t4"
+    },
+    {
+      "tema": "Voz em off que distancia do humano",
+      "mencoes_aproximadas": 12,
+      "n_reviews_analisadas": 50,
+      "exemplo_parafraseado": "Narrador serve apenas de guia técnico impessoal, impedindo conexão emocional com as histórias contadas por trás dele.",
+      "id_estagio1": "t3"
+    }
+  ],
+  "amostra_completa": [
+    {
+      "indice": 0,
+      "rating": 0.5,
+      "texto": "Brasil com Z “O mundo inteiro vai saber que esse filme não trouxe nada de bom para a favela, nem benefício social, nem moral, nenhum benefício humano. O mundo vai saber que eles exploraram a imagem das crianças daqui da CDD. O que vemos é que o tamanho do estigma que elas vão ter que carregar pela vida só aumentou, só cresceu com esse filme. Estereotiparam nossa gente e não deram nada em troca para essas pessoas. Pior, estereotiparam como ficção e venderam como verdade.” MV Bill, 2003. Vale ressaltar que, da população residente das favelas, a maior parte não tem ligação alguma com o tráfico, não tem propensão ao crime e nem apoia bandidos. Ainda assim, essas pessoas não deixam de vincular o banditismo sofrido em sua experiência social à pobreza, à marginalização econômica, ao desemprego ou aos baixos salários. Convivem, de certa forma harmoniosamente, duas imagens contraditórias. Dito isso, muitos moradores da Cidade de Deus não ficaram satisfeitos com a forma como sua comunidade foi apresentada no filme, no qual praticamente todos foram retratados como traficantes de drogas, e as mulheres estavam, em grande parte, ausentes (DENNISON, 2024). O rapper MV Bill, morador da Cidade de Deus, foi especialmente enfático em suas reclamações, criticando a falta de sensibilidade dos cineastas ao abordar o bairro. O que aqueles que elogiaram Cidade de Deus deixaram de perceber, segundo o artista, foi o perigo de que o preconceito contra jovens negros marginalizados realmente aumentasse como resultado de como foram retratados no filme. O espaço criado pelo filme ajuda o espectador a criar sua imagem sobre este território que não tem total acesso, mas ao espaço construído \"via mediação\" (MAIA, 2007). Espaço que está distante da realidade de aproximadamente 92% de brasileiros, sendo que 8% deles vivem nas favelas e muitos destes não tem contato direto com o crime (CNM, 2024). Realidade distante também dos diretores do filme. Fernando Meirelles conta em sua autobiografia que, para realizar o longa-metragem, trocou sua vida de compromissada de \"semimauricinho\" e passou imergir na realidade das comunidades, criando cenas e conversando com moradores (CAETANO, 2007). Kátia Lund formou-se em Literatura Comparada na Brown University, nos Estados Unidos. Filha de pais americanos que migraram para o Brasil antes de seu nascimento, passou a trabalhar em cinema como assistente de direção a partir do fim dos anos 80 [...] ao analisar a relação entre o roteiro do filme e a veracidade dos eventos retratados, é importante reconhecer que o Brasil é um país vasto, com uma das maiores diversidades do mundo, no qual nenhuma generalização é cabível. Sua complexidade social e cultural impede simplificações e soluções uniformes e exige uma abordagem matizada. Esta diversidade dá-se, inclusive, pela integração africana herdada no período colonial, manifestada por meio da língua, música, culinária, arte, religião e outros traços que enriquecem o país e não permeiam completamente a narrativa de Cidade de Deus. O bairro carioca da vida real é habitado por aproximadamente 38 mil pessoas de diferentes idades, etnias e origens sociais. Apesar dos desafios relacionados à violência e à criminalidade, a comunidade também é formada por estudantes, trabalhadores e profissionais de diversas áreas. Desde a década de 1980, existem na região associações de moradores, escolas de samba, clubes esportivos, grupos teatrais, revistas, cineclubes, igrejas, grupos de dança e movimentos negros. Dada a diversidade do bairro, é preciso reconhecer que o filme dramatiza eventos que, embora reflitam aspectos da realidade brasileira, representam apenas uma pequena parcela da população e não capturam toda a complexidade da Cidade de Deus e do país como um todo. Fonte: Portal de Periódicos Científicos da UTFPR (PERI) Produzido por Walter Salles, co-dirigido por Katia Lund e dirigido por Fernando Meirelles, erroneamente rotulado e vendido como ''filme-denúncia'', Cidade de Deus promove uma experiência imersiva e profundamente sedutora, e é justamente aí que reside o seu maior problema. A montagem ágil, o ritmo acelerado e a fluidez narrativa constroem uma experiência tão envolvente que sem perceber, somos levados a consumir a violência como espetáculo, não apenas como denúncia. O filme parece dominar com precisão os mecanismos de impacto, mas essa mesma precisão acaba por organizar a realidade que retrata dentro de um recorte estreito, onde a favela surge reiteradamente associada ao crime, ao descontrole e à brutalidade - simplificando um espaço que é muito mais complexo do que isso. E não se trata de negar a existência dessa violência, mas de perceber como ela se torna praticamente o único idioma possível dentro do filme. A insistência nesse registro produz uma imagem que, embora eficaz dramaticamente, tende a reduzir a complexidade daquele espaço a uma lógica única, como se não houvesse outras formas de vida, outras experiências ou mesmo outras narrativas possíveis. Aos poucos, a repetição desse olhar não apenas descreve um mundo, mas o consolida, solidificando uma percepção que se aproxima mais do estereótipo do que de uma investigação mais ampla acerca daquele lugar. Não por acaso, é na própria forma que essa sensação se torna mais evidente. O frenesi maníaco da montagem que, não à toa, visando conquistar o prestigio de festivais, muito se assemelha com filmes do Scorsese ( qualquer comparação com Goodfellas não é mera coincidência ), [1] imprimindo uma velocidade que substitui o peso pela circulação incessante de estímulos. A estética próxima ao videoclipe reforça a ideia de transformar cada momento em impacto imediato, como se tudo precisasse ser consumido rapidamente antes de perder o efeito. Não há pausa, não há duração, não há espaço para que a experiência se consolide. O que poderia exigir tempo é comprimido em sequência acelerada, o que poderia incomodar é reorganizado como estímulo. E então tudo passa a operar sob uma lógica de estilização que esvazia o peso do que é mostrado. Não há tempo para que a violência se transforme em tragédia, apenas em ritmo. Não há espaço para o espanto, apenas para a continuidade. A morte deixa de interromper e passa a integrar o ritmo. O corpo vira imagem, o trauma vira recurso, o perigo vira coreografia. A infância se dissolve em função narrativa, a miséria se torna textura, o medo se organiza em sequência. O olhar já não hesita, apenas reconhece padrões. O que poderia ferir é rapidamente absorvido pela forma, transformado em linguagem, em assinatura, em marca estética. Nesse sentido, para fins de comparação, [2] peguemos outro filme brasileiro que também retrata a favela, mas com uma abordagem diferente: Rio, 40 graus, de Nelson Pereira dos Santos. No filme de Nelson, os moradores da comunidade são filmados como pessoas de verdade, mesmo que muitos ali não tenham boas condições financeiras, eles tentam levar a vida de forma otimista. As crianças no filme de Nelson , trabalham honestamente, já no filme de Meirelles , são reduzidas a meros participantes do mundo do crime, seja como vitima ou como integrante. A problemática deste método é o fato de nada ser articulado a partir disso; é como se todos ali estivessem fadados a serem criminosos, sem qualquer possibilidade de mudança. Há quem argumente dizendo que o filme “retrata a realidade”, mas esse é um argumento que já nasce fragilizado desde o início, justamente por se apoiar em uma noção simplificada e pouco questionada do que seria essa própria realidade. Isso porque, nesse caso, a realidade não é apenas mostrada de maneira neutra ou transparente, como se fosse possível captá-la tal qual ela é, mas sim cuidadosamente selecionada, organizada e intensificada segundo uma lógica de espetáculo que orienta toda a construção do filme. O que se vê em cena, portanto, não é simplesmente o mundo como ele é em sua complexidade cotidiana, mas uma versão construída, moldada e recortada que privilegia certos aspectos em detrimento de outros, enfatizando aquilo que é mais impactante visualmente e mais facilmente assimilável pelo público. Alegar a realidade como justificativa, nesse sentido, acaba ignorando justamente o trabalho formal que transforma essa realidade em narrativa, em ritmo e em imagem, um trabalho que não apenas organiza os acontecimentos, mas também direciona o olhar do espectador e molda a forma como essa visão é percebida e interpretada. É uma abordagem publicitária, condescendente e oportunista, que registra a vida na comunidade de forma deturpada ao mesmo tempo em que a estiliza, visando agradar circuitos de festivais e aumentar suas chances de reconhecimento e premiação em âmbito internacional. A grande tragédia do filme ter repercutido internacionalmente [3] com tamanha força não está apenas em seu sucesso em si, mas nas consequências simbólicas dessa recepção, já que essa imagem da favela, definida quase exclusivamente pela violência, pelo caos e pela tensão constante, contribui para consolidar uma visão estereotipada do Brasil que é facilmente assimilada, reproduzida e raramente questionada fora do país. Não se trata, evidentemente, de atribuir ao filme uma responsabilidade total por essa construção, como se ele fosse o único responsável por esse imaginário, mas sim de reconhecer que ele participa ativamente desse processo ao reforçar certos recortes e silenciar outros. Dessa forma, a complexidade social brasileira, que envolve múltiplas camadas, contradições e experiências, acaba sendo reduzida a um espetáculo de brutalidade dinâmica e visualmente excitante. Não só revoltante, como também muito triste o fato de um filme que esteriotipa nosso povo ser um dos (se não o mais) filmes brasileiros mais reconhecidos e aclamados no exterior. Pior ainda, é o fato de que os próprios Brasileiros - em sua maioria -, não repreendem esta repercussão, mas legitimam colocando-o no pedestal de maior obra-prima do nosso cinema. Lamentável. Notas: 1- Com a diferença de que Cidade de Deus leva esse princípio a um nível ainda mais acelerado do que Goodfellas . 2- A comparação foi realizada com o intuito de evidenciar diferenças de abordagem e de intenção entre os filmes. 3- O filme recebeu quatro indicações ao Oscar em 2004. Sendo elas para direção, roteiro adaptado, edição e fotografia. Além disso, recebeu outras inúmeras premiações, confira em: https://www.imdb.com/pt/title/tt0317248/awards/?ref_=ext_shr_lnk",
+      "temas_atribuidos": [
+        "t1",
+        "t2",
+        "t3",
+        "t4",
+        "t5"
+      ]
+    },
+    {
+      "indice": 1,
+      "rating": 0.5,
+      "texto": "Had someone like Buscapé (Alexandre Rodrigues) with a camera like his been telling the story of his life and his home and not some white guy like Fernando Meirelles, then Cidade de Deus could have been something more than the saviourist trash at its core. No matter how well-crafted and ingenious the film-making (which it all truly is), what real story is there being told here? None. Put film-making into the hands of the people whom these characters are meant to portray instead of puppeteering them. Let them seize control of their own narratives.",
+      "temas_atribuidos": []
+    },
+    {
+      "indice": 2,
+      "rating": 0.5,
+      "texto": "Oh, how I loathed CITY OF GOD's hypocrisy, its reliance on whizzbang visuals to thrill, all the while insisting -- quite obviously, mind you -- that guns and gangsta-life are bad, that violence begets violence. Now, were the film to glamorize the violence et al. in such a way as to woo us spectators into this life, were it to show us this life's allure rather than simply blitzing our senses with flashy, impersonal imagery, perhaps then I wouldn't find the film's pretty well-intentioned ethics so dishonest and offensive. What so many contemporary filmmakers keep refusing to acknowledge is that the individualization and humanization of all things morally abhorrent actually makes for a much more recognizable and truthful and scary reality than presenting some sort of tautological reality in which hoods are just hoods because they're hoods.",
+      "temas_atribuidos": [
+        "t1",
+        "t5"
+      ]
+    },
+    {
+      "indice": 3,
+      "rating": 0.5,
+      "texto": "just felt a sudden pang of disgust for this movie out of nowhere. city of god is a vulgar cinema, voyeuristic and exploitative. a void of character filled by genre convention, drained of both life and empathy, a cruel gaze. the favela at once becomes immaterial, of a disembodied mythological/allegorical character, and reduced utterly to its material condition, or at least the material condition as perceived by the tourist's well-meaning disdain for the poor.",
+      "temas_atribuidos": [
+        "t1",
+        "t2",
+        "t3",
+        "t4",
+        "t5"
+      ]
+    },
+    {
+      "indice": 4,
+      "rating": 0.5,
+      "texto": "a truly horrible and disgusting kind of cinema. this film does nothing but judge and reinforce systems of oppression against afro-brazilians. there are people much more qualified than me that can attest to this film's horrible effect on the lives of people living in Cidade de Deus.",
+      "temas_atribuidos": [
+        "t2",
+        "t5"
+      ]
+    },
+    {
+      "indice": 5,
+      "rating": 0.5,
+      "texto": "A caricatura mais cínica que eu já vi na vida. Um poço de senso comum que não poderia ter escolhido um framing narrativo mais hediondo que o entoado. Formalmente impotente (uma montagem obcecada na overdose dos estímulos, não de maneira contundente e funcional para as dinâmicas rebuscadas, mais para uma caracterização puramente excepcional), e o conteúdo é a quimera da manutenção de todo discurso neo-liberal disciplinar possível. Quase tudo de errado é introjenado pela imputação de tropes de gangster numa tonalidade tão arbitrária que convoca a sugestão de um recorte cultural que implica no pressuposto da classe social correspondida condicionada a barbárie. Inclusive, não só esse exemplo, mas quase todos os problemas se acoplam nisto: entimemas infundados. Se tem algo mais prepotente e condescendente que esse filme, eu real desconheço.",
+      "temas_atribuidos": [
+        "t1",
+        "t2",
+        "t4"
+      ]
+    },
+    {
+      "indice": 6,
+      "rating": 0.5,
+      "texto": "After a few minutes I asked myself what this story would lead us to. Two hours of pure violence later, I still don't know. To show how hard life is in slums? How easy it is to end up in a gang? Sorry, you can read about that in newspapers. And so I came to the conclusion that this film was made for people that enjoy watching violence. But this understanding still sucks less than the poor dialogues.",
+      "temas_atribuidos": []
+    },
+    {
+      "indice": 7,
+      "rating": 0.5,
+      "texto": "i just don't like violence... i spent the whole movie trying not to cry and questioning why would someone be this evil... horrible experience. edit: no i couldn't \"just stopped watching\" bc i was obligated to by a university class. i just didn't like it its not that deep jeez go touch some grass.",
+      "temas_atribuidos": []
+    },
+    {
+      "indice": 8,
+      "rating": 0.5,
+      "texto": "It’s all just vapid egoism! Low-concept. Depraved. The bourgeoisie laments the material conditions of the proletariat. Glorifies gang violence, rape, drug trafficking, death, destruction, public humiliation, moral apathy for the American audience. Violence as spectacle. The oppressed as animals. Favelas as a site of extraction. solidarity with the people of brazil & the workers party struggling against far-right wing, imperialist, fascist forces ✊🇧🇷",
+      "temas_atribuidos": [
+        "t1",
+        "t2",
+        "t4",
+        "t5"
+      ]
+    },
+    {
+      "indice": 9,
+      "rating": 0.5,
+      "texto": "yeah it’s well made, important story to tell and history to recognize. That’s not all that matters to me in a film, or in art in general. Art can make you uncomfortable, but it shouldn’t make someone feel unsafe. Watching children get shot and women be raped caused a genuine bodily reaction of panic and horror. Maybe that was the point, but it felt cruel. And it ruined my night. How anyone could enjoy watching this, and choose to watch it again, I’ll never know. And every woman in it was used as a prop. Either for the plot, or for their bodies. Why would anyone enjoy watching that? rape should never be in a movie, idc. Never.",
+      "temas_atribuidos": []
+    },
+    {
+      "indice": 10,
+      "rating": 1.0,
+      "texto": "“As we are here, talking about Rubinho, how many people are dying in Africa, in the Middle-East, Israel, Rio? And we are here, talking about ten years ago, just to prove someone something, so this movie can go to a Festival, to the movie theaters, TV, cable, so people can say “oh look he’s well” or “he’s not well”. Just to please someone something, just to please our egos. Mine, his, yours, or whoever's watching. We want to prove it, we want to show to someone else how someone's life is going. We are not worried about changing people's lives” -Rubén Sabino “Neguinho” - City Of God: Ten Years Later “And they said “Fuck, you were in City Of God, why are you on jail?” I said “I’m in jail cause I’m hustling, I need money, the movie didn’t give me that much money” it didn’t mean anything. There’s no point in making a movie that's know worldwide if I’m broke, man.” -Ivanzinho “gang member of lil Z” “City of God didn't portray life here properly. Most people in the community did not see the film because they can't afford the cinema, and the ones that did see it didn't like the fact that it showed only the negative side of life. It suggested that everyone in the favelas is black, violent and ready to be judged. After the film came out, people from Cidade de Deus would go into town for their jobs as maids and cleaners as usual. Their bosses would sack them when they discovered that they were from somewhere so horrible (...) I'm not a film critic, but I can see a reality in them that I didn't see in City of God” “The world will know that they exploited the image of the children who live here in Cidade de Deus. What is obvious is that they are going to carry a bigger stigma throughout their lives; it has only become greater because of the film.\" -MC Bill, resident of Cidade de Deus",
+      "temas_atribuidos": []
+    },
+    {
+      "indice": 11,
+      "rating": 1.0,
+      "texto": "You can only really compare this to Goodfellas on a structural level because this is just Goodfellas if Scorcese was a moron who hadn’t cared for a second about what he depicted. It is such a tourist’s view of violence and crime; the boys are literally gleaming because Fernando Meirelles is so distracted by what kind of playground he can make out of a destitute, dangerous neighborhood. But Meirelles does it all in the name of “authenticity” as though he wants all of his frenetic camerawork (which is just as mindless as the treatment of the neighborhood itself) to serve as some kind of statement. Some people do not know that City of God was co-directed by Kátia Lund and it makes so much sense that it is a work of two directors because the direction of the actors is the one good thing about the movie. Lund had experience documenting violence in Rio de Janeiro and Meirelles admits that she was the one who directed all of the non-professional child actors. Of course, only Meirelles was nominated for best director at the Oscars, and he has tried to downplay Lund’s contributions profusely. Apparently the novel the movie is based on—written by Paulo Lins, who grew up in the real life City of God—is much more dense than the movie itself, and that is both impressive in the sense that the screenwriter Bráulio Mantovan managed to streamline it, but it also makes perfect sense that the movie is such a clusterfuck. It plays like a traveler’s view of the neighborhood, like Meirelles drove through and only managed to capture the most extreme, dull, and idiotic sensations of the violence and thought it was powerful.",
+      "temas_atribuidos": [
+        "t1",
+        "t3",
+        "t4",
+        "t5"
+      ]
+    },
+    {
+      "indice": 12,
+      "rating": 1.0,
+      "texto": "“Quanto mais total a sociedade se torna, tanto mais a arte se torna o seu documento de acusação.” - Adorno A história da imagem ocidental - de Goya a Griffith, de Eisenstein a Coppola - é também a história de como representamos o sofrimento, e de como esse sofrimento pode ser estetizado, apropriado, destilado e revendido como forma artística. Desde que a câmera foi colocada diante da miséria, ela se viu diante de uma encruzilhada ética: olhar o horror como denúncia ou como espetáculo? Filmar a dor para interromper seu ciclo ou para repeti-la infinitamente sob novas formas de gozo visual? Nesse dilema originário se inscreve a gênese de Cidade de Deus obra de Fernando Meirelles que  converte-se num laboratório publicitário da barbárie, num parque temático da miséria tropical, numa galeria de fetiches exóticos sobre a favela transformada em palco de tiroteios e execuções coreografadas. E o que deveria ser denúncia social - uma crônica da periferia carioca inspirada no romance denso, calejado e estruturalmente complexo de Paulo Lins - converte-se em peça de propaganda global da desumanização, onde o sangue jorra como tinta de videoclipe e as crianças armadas tornam-se ícones pop da violência convertida em estética. Muito antes de ser cinema, Cidade de Deus já é uma engrenagem ideológica; um artefato criado não para compreender a realidade, mas para satisfazer as expectativas imaginárias de um público branco, urbano, cosmopolita e ansioso por consumir o exótico sob a forma do hiperviolento. Trata-se, em suma, de uma fantasia neoliberal da miséria e, por isso mesmo, perfeitamente compatível com o sistema que a produziu. Há, neste filme, algo de profundamente confortável para o espectador globalizado: a favela surge como um território fechado, sem história nem política, habitado por espectros de selvageria e pulsão de morte, onde a única linguagem possível é a do revólver, e toda tentativa de transformação social já nasce abortada. Assim, Cidade de Deus não oferece ao mundo uma reflexão crítica sobre o Brasil: oferece uma caricatura narcotizada, acelerada, sensacionalista — uma montagem frenética de dor transformada em clímax narrativo. Cada bala é um corte de edição. Cada cadáver é um plano bem fotografado. Cada vida negra ceifada é apenas mais um ponto de tensão na curva do roteiro. Aqui deixo um entrevista realizada com Sganzerla, peço que todos assistam e vejam com clareza o homem que fez esta grande maravilha: https://youtu.be/3HRBm8oFnRk?si=2ICrzxQ8YIEZPcDI O filme é uma adaptação do romance de Paulo Lins - cuja densidade literária e complexidade sociológica estão ausentes no produto final - é, na verdade, uma inversão de sentido, uma tradução infiel que subtrai a crítica estrutural da obra original e a substitui por uma narrativa pulsante, fragmentada e sensualizada da violência. Lins, apesar de partir da crueza da experiência vivida, constrói no livro um painel que tenta abarcar o tecido social da Cidade de Deus, os mecanismos do racismo estrutural, o abandono do Estado, a necropolítica brasileira e os desdobramentos históricos da exclusão. Meirelles, ao contrário, filtra esse conteúdo por um filtro publicitário, tornando-o palatável, exportável e mercantilizável — é o embrulho exótico da tragédia para o consumo europeu e estadunidense, uma espécie de \"Favela Fiction\" que encontra espaço confortável na mentalidade colonizada de um país que, desesperado por aprovação internacional, se orgulha de transformar sua própria ferida, a sua dor, o seu problema em produto audiovisual. Mas o crime maior do filme não está apenas na escolha do tema - afinal, a violência é um objeto legítimo da arte desde Ésquilo - e sim na maneira como essa violência é capturada, duplicada e sublimada pela linguagem audiovisual. O que temos aqui é um uso publicitário da linguagem do real. A favela filmada por Meirelles e Lund não é um espaço vivo, contraditório e habitado por forças sociais, mas um cenário irreal, esquematizado, onde a violência é a única trama possível, o único destino concebível. O tempo do filme é circular, sem transcendência; a narrativa é episódica, como um zapping televisivo; os personagens são desprovidos de interioridade, reduzidos a funções dramáticas (o monstro, o inocente, o traidor, o herói improvável), e a lógica da montagem é mais próxima da propaganda do que do documentário: ritmo vertiginoso, coloração vibrante, estetização da decadência. O que emerge, no fim, é um universo fechado em si mesmo, no qual a pobreza se torna espetáculo e a vida dos pobres, um dado descartável - algo a ser consumido com um misto de horror e fascínio idolatrado. A grande tragédia  de Cidade de Deus é que ele mesmo não permite outra leitura que não seja a do horror viciado em si mesmo. A câmera - que deveria servir como ferramenta de escavação histórica ou gesto de empatia radical - torna-se instrumento de fetichização. A linguagem cinematográfica não dá voz ao silenciado, mas o fixa como imagem-mito, como estereótipo consolidado. Ao contrário da obra de Paulo Lins, que investiga o nascimento de um sistema de exclusão armado pelo próprio Estado brasileiro, Meirelles opta por suprimir o contexto sociopolítico e estrutural que levou aquelas crianças ao crime, preferindo substituí-lo por uma dramaturgia da adrenalina. Assim, o tráfico vira folclore, o tiroteio vira entretenimento, e o genocídio da juventude negra é reconfigurado como um espetáculo frenético que apenas reafirma os medos e preconceitos de uma classe média TOTALMENTE alienada. A estética aqui empregada + que muitos chamaram de “moderna”, “ousada”, “inovadora” - é, no fundo, profundamente reacionária. O uso da narração em off por Buscapé, suposto “olhar interno” sobre a favela, serve apenas como mecanismo de distanciamento. Buscapé não age, não interfere, não se posiciona politicamente; ele apenas observa, descreve e sobrevive. Ele é o dispositivo narrativo através do qual o espectador se isenta da responsabilidade moral. Sua câmera fotográfica substitui a câmera de filmagem como símbolo último da impotência ética: capturar sem intervir, registrar sem transformar, estetizar sem denunciar. Ele é a alegoria perfeita do espectador burguês diante da miséria - olha, se emociona, talvez até se comova, mas jamais se compromete. Assim, a violência vira uma sequência de imagens para apreciação estética e não um sintoma de um sistema a ser questionado. É por isso que Cidade de Deus , apesar de sua técnica refinada, é uma tragédia ética e simbólica. Ao pretender retratar a violência, o filme apenas a reproduce. Ao querer denunciar o inferno, acaba vendendo ingressos para o passeio turístico pelas suas chamas. E é neste ponto que a estética do filme deixa de ser uma escolha estilística e passa a ser uma posição política. A posição de quem filma o pobre como espetáculo. De quem transforma o sofrimento em mercadoria. De quem troca o grito por uma montagem bem feita. De quem troca a história pelo mito. De quem trai o livro, trai a favela, e sobretudo, trai o cinema. A Cidade de Deus que emerge da lente de Meirelles não é uma construção histórica, mas uma prisão. Não há tempo, não há transformação, não há dialética. O tempo narrativo é cíclico, eterno retorno da barbárie, onde cada novo personagem é apenas a reencarnação do mesmo velho destino. A favela, enquanto espaço simbólico, é confinada a uma onda incessante da violência: ela existe para ser violenta, ela se repete como violência, ela se explica apenas por sua violência. Ao negar a complexidade histórica da formação das favelas brasileiras, o filme naturaliza uma concepção primitiva e essencialista do espaço urbano periférico — a favela não é uma forma social produzida por políticas de exclusão, mas um território que contém, em si mesmo, uma natureza pulsional de degeneração. Essa operação de naturalização é fundamentalmente racista, ainda que se esconda sob o véu da estética “moderna”. E desta maneira, não existe em Cidade de Deus personagens que pensem, que formulem hipóteses, que articulem visões políticas, que se organizem coletivamente. A subjetividade é interditada. O sujeito periférico - que em Lins pensa, deseja, se contradiz, delira e resiste - aqui aparece como puro vetor de ação instintiva. Dadinho, Zé Pequeno, Mané Galinha, Cenoura, todos esses nomes são ecos vazios de figuras que poderiam carregar densidade histórica, mas que são reduzidos a ícones de uma cartilha arquetípica: o monstro, o vingador, o traidor, o bandido carismático. São todos versões degradadas de arquétipos ocidentais reciclados, inseridos numa moldura tropicalizada que finge novidade enquanto repete os mesmos gestos coloniais de classificação e exotismo. Nenhum deles ganha espessura real. Nenhum deles pensa para além da próxima bala. Nesse sentido, o filme se encaixa perfeitamente dentro da lógica do “terceiro-mundismo estético”, conceito que alguns teóricos latino-americanos utilizaram para criticar produtos culturais que se projetam para o exterior como representações “autênticas” das mazelas locais, mas que, na verdade, se dirigem a um olhar europeu ou norte-americano, interessando-se mais pelo consumo da alteridade do que por sua complexidade interna. Cidade de Deus é exemplar nesse movimento: ao invés de tensionar a imagem da favela, a reafirma como um ambiente disfuncional e entrópico, onde o único destino possível é a morte - e a única salvação, a arte de observar à distância. Por isso, Buscapé é mais que um narrador: ele é a encarnação do olhar externo que se quer inocente, distanciado, seguro. Sua câmera fotográfica representa não apenas a documentarização do horror, mas sua estetização alienada. Ele não salva ninguém. Ele apenas fotografa corpos mortos. a montagem - elogiada por sua fluidez e por sua potência cinética - é, na verdade, uma armadilha para o pensamento. Ela fragmenta o tempo, impede o aprofundamento das relações, suprime a reflexão. A sucessão de planos e episódios, a estrutura quase episódica da narrativa, a multiplicidade de personagens que surgem e desaparecem como faíscas em meio ao caos, tudo isso colabora para impedir que o espectador veja a favela como uma totalidade social. Ela é convertida em labirinto caótico, sem mapa, onde a única bússola é o próximo conflito, a próxima morte, a próxima surpresa. O filme não se interessa pela genealogia da violência, mas por seu chocante efeito dramático. O filme não indaga de onde vêm os corpos armados, quem lhes fornece armas, por que o Estado os abandona, por que os ricos se beneficiam do tráfico. A única questão é: quem vai matar quem na próxima cena? Ou melhor, qual a melhor maneira de só mostrar o morto?  Há ainda uma questão geopolítica que não pode ser ignorada: o filme, ao circular nos principais festivais internacionais e conquistar aclamação no exterior, torna-se símbolo da imagem que o Brasil aceita projetar de si mesmo. É uma imagem colonizada, rebaixada, que reitera as fantasias eurocêntricas sobre o sul global como espaço de violência irracional. Ao mesmo tempo, o filme absolve seus espectadores. Permite que o europeu se compadeça da “tragédia brasileira” sem questionar as relações econômicas globais que sustentam essa tragédia. Permite que o brasileiro de classe média consuma a favela como um espetáculo distante, sem jamais se ver implicado na manutenção do apartheid social. Cidade de Deus representa: a estetização da morte. Um filme que não dá voz ao sofrimento, mas o transforma em mercadoria, em forma, em consumo. Seu sucesso é a medida exata de sua derrota ética. \"uma arte que falha ao representar o sofrimento acaba por reproduzi-lo.\" Cidade de Deus é, apesar de seus disfarces de realismo e sua retórica de denúncia, um filme que reafirma com vigor a lógica espetacular do neoliberalismo cinematográfico, no qual a dor dos marginalizados serve apenas para reforçar sua marginalidade, e sua imagem - depurada, ritmada, esteticamente refinada - circula como moeda simbólica de uma cultura que finge empatia enquanto consome fetiches de destruição. Trata-se, no fundo, de um produto cultural que ratifica o apartheid social sob a aparência de crítica, que transforma o abismo em estética e o abate em conteúdo, e que, em última instância, afirma que a violência é o único destino possível da negritude periférica. O que poderia ser uma denúncia sociológica - como o foi, com todas as suas complexidades, o romance de Paulo Lins -  é convertido em um papel  publicitário, em um transe absurdo técnico com pretensões de crítica, mas enraizado na lógica do entretenimento. A máquina de recepção crítica que consagrou Cidade de Deus — festivais, prêmios, artigos laudatórios, inserção em listas “dos melhores de todos os tempos” - funciona como uma engrenagem complementar à sua própria ideologia. Quanto mais o filme é celebrado por sua coragem estética, mais se apaga o conteúdo histórico que jamais teve. E quanto mais ele é reconhecido por “dar visibilidade à favela”, mais se reforça o gesto obsceno de transformar a favela num espetáculo que não se transforma, não resiste, não pensa, apenas sangra. Não se trata aqui de rejeitar o cinema da violência - o problema não está na representação da brutalidade, mas na maneira como ela é organizada esteticamente para produzir prazer, tensão, eclesiástica emoção dramática, e não consciência histórica. A violência em Cidade de Deus é kitsch tropicalizado, convertida em narrativa pulsante e frenética, que sufoca qualquer vestígio de análise, contexto, ou crítica estrutural. O filme fracassa moralmente porque abdica da responsabilidade estética. Sua linguagem é construída não em torno da escuta, mas do espetáculo. Não há espaço para a complexidade dos corpos filmados, apenas para a composição visual de seus tombamentos. Não há dialética entre o sofrimento e a estrutura que o produz, apenas uma sequência de eventos caóticos que se acumulam como forma de excitação. O cinema, neste caso, não serve como ferramenta de pensamento, mas como reforço do senso comum. É a visão da favela a partir da varanda blindada da classe média. É o pobre visto como objeto de fascínio mórbido, e nunca como sujeito de transformação. E o que mais me impressiona é que essa operação é feita com tamanha destreza técnica que quase ninguém percebe sua natureza profundamente reacionária de um homens que NUNCA sequer esteve lá,e todo mundo sabe quem é esse homem. O aspecto mais incrível de Cidade de Deus seja exatamente esse: sua habilidade em camuflar a ideologia sob a superfície do estilo. Seu virtuosismo formal seduz. Sua montagem acelera os sentidos. Sua câmera se move com energia. E tudo isso é precisamente o que impede o pensamento. Trata-se de um cinema da distração, que finge profundidade, mas opera no plano do estímulo. O espectador não é convidado a pensar - é conduzido como por um videoclipe, manipulado pelo ritmo, pela cor, pelo choque. A violência se torna pop. A morte, coreografia. A miséria, merchandising. A periferia, um cenário para o gozo estético da classe que a oprime. Em um país como o Brasil - onde a elite econômica se construiu sobre o genocídio indígena, a escravidão negra e a colonização permanente dos pobres - um filme como Cidade de Deus não pode ser neutro. Ele é cúmplice. Ao negar o pensamento, ao estetizar o sofrimento, ao transformar a barbárie em linguagem sedutora, ele não denuncia o sistema: ele o perpetua. E ao fazê-lo com o respaldo internacional da crítica estrangeira, torna-se símbolo de um cinema colonizado, feito para exportação, moldado para o olhar europeu e americano que deseja ver a favela como selva, e não como parte do tecido social destruído por séculos de política elitista e genocida. Neste sentido, Cidade de Deus não representa a favela. Representa o desejo das elites de ver a favela sob um prisma confortável: como algo distante, predestinado ao caos, exótico, inescapável. O filme não incomoda, não interroga, não propõe alternativas. Ele reafirma que o mundo é como é - uma lógica fatalista que aniquila qualquer possibilidade de transformação. Nenhum grito é escutado. Nenhuma pergunta é feita. Nenhuma saída é imaginada. Cidade de Deus , enfim, é a vitória do olhar colonizado sobre si mesmo. Um filme feito sob a lógica do colonizador, vendido como produto de identidade nacional, mas que só reforça os grilhões da representação opressiva. É a imagem do pobre feita para que o rico durma tranquilo. E isso, por mais tecnicamente sofisticado que seja, é imperdoável .",
+      "temas_atribuidos": [
+        "t1",
+        "t2",
+        "t3",
+        "t4",
+        "t5"
+      ]
+    },
+    {
+      "indice": 13,
+      "rating": 1.0,
+      "texto": "I have this on my HD and never can get past the first 2 minutes. (I watched the whole thing a few times back in the 2000s) This was on NYT list of “greatest” movies of the century I think there is no worst approach to a film - as an object - that the world \"greatest\" - at times, the question \"greatest\"  leads to pick up films that are \"meaningful\"  as movies, so movies that can be used to make a point about movies (Vertigo, Kane, 8 1/2, maybe Journey to Italy, maybe le mepris, etc.). A list made by a person, a well-informed viewer, will generally be better because it can actually articulate a point of view, and also diversify it. A list made by several critics will point out what the most popular \"greatest\" movies are. The most you can get out of it is an official history of current cinema, a rambling and incoherent one. And of course, when different short of projects interpose in the making of a list of greatest movies, it becomes \"what movie made by a woman is the most famous\" or \"what movie made by a woman is the most movie made by a woman\", and this to all social groups, ever, and we end up with Jeanne Dielman as the best movie ever, which is fine, I guess. That is what puts movies like \"Roma\", \"City of God\", in lists, they are very much famous movies made by Mexico, Brazil, about Mexico, Brazil, known in the United States. The NYT list is orphaned, however, of any thinking about greatness, and any thinking of how the XXI century may shape up in terms of movies so far. History is over. It is a list of important movies. It can’t even sketch out any form of narrative, being just the aggregation of a lot of absent minded ballots, maybe even cast by representatives of the ‘celebrities’ it chose to poll. An important Brazilian movie, an important Mexican movie, an important movie about racism, and a few agreed upon “greats,” from the early 2000s. This sort of stereotypical selection implies the most uncritical form of viewing, the assumption of a movie as an ‘unproblematic’ outing of those being represented. Anybody curious about movies should just avoid this kind of lists. Never watch a movie because it is great, or important. Go watch Noroi, the curse instead.",
+      "temas_atribuidos": [
+        "t2",
+        "t4"
+      ]
+    },
+    {
+      "indice": 14,
+      "rating": 1.0,
+      "texto": "It's worth knowing how universal the disdain for this film is from the City of God residents. Obviously this isn't inherently problematic, if art is offending or upsetting it means that it is at least saying something. But given how the film rides on the waves of 'realism' and even neorealist staples - casting real non-actors from the community - it is massively disappointing to learn just how stereotypical and narrow the view shown truly is. Much like Timbuktu this is a film showing persecution, poverty and oppression of a people constructed by and within a foreign environment. Add as many exotic motifs as possible to form the façade of experiencing a guilt trip. In reality, this is the perfect form of tourism for privileged liberal film-festival attendees who feel like they've 'learnt something' or been moved in some way by a product built of multiple falsehoods. Aging poorly in a meta sense, Meirelles used this project to catapult himself into writing radical centrist English-language prestige dramas. Calls into question how much he ever cared about telling a truthful story of a marginalised group. The fast, snappy cuts of smiling children holding guns, stylised violence and shaky camera is all egregiously pathetic. Like the only way to present social commentary the director is aware of is an amateur attempt at some prompts from Goodfellas . The scenes at the night club in particular are so bad because you can tell the director and editor were probably really proud of them given how much screentime they get when they are painfully derivative and basic. I like the colour grading and I like the opening scene.",
+      "temas_atribuidos": [
+        "t1",
+        "t2",
+        "t4",
+        "t5"
+      ]
+    },
+    {
+      "indice": 15,
+      "rating": 1.0,
+      "texto": "El producto de exportación perfecto para el tratado de libre comercio del cine espectaculo. Rabiosa paleta de pornomiseria tercermundista con trasfondo de superación personal en clave de mala conciencia. Todo lo que parece que está bien pero en realidad está mal. El oscuro trabajo de la ideología diría Barthes.",
+      "temas_atribuidos": [
+        "t2",
+        "t4",
+        "t5"
+      ]
+    },
+    {
+      "indice": 16,
+      "rating": 1.0,
+      "texto": "A visceral highly-kinetic mash-up of Buñuel, Babenco and Scorsese that hoodwinked nearly everyone in the early 2000s into believing that this cynical exercise in style over content was a powerful masterpiece. An overreaching faux-arthouse excuse for what is essentially an exploitation flick—in more ways than one. It has parallels with The Constant Gardener (2005) in that it uses real-life poverty and desperation as a backdrop for a shamefully escapist, crowd-pleasing, box-office-friendly, career-advancing grotesque. I find it hard to believe that CITY OF GOD has been widely acclaimed as a masterpiece when it seems to me that one ought to come away feeling sullied or complicit.",
+      "temas_atribuidos": [
+        "t2",
+        "t5"
+      ]
+    },
+    {
+      "indice": 17,
+      "rating": 1.0,
+      "texto": "I. « An overreaching faux-arthouse excuse for what is essentially an exploitation flick—in more ways than one. It has parallels with The Constant Gardener (2005) in that it uses real-life poverty and desperation as a backdrop for a shamefully escapist, crowd-pleasing, box-office-friendly, career-advancing grotesque. I find it hard to believe that CITY OF GOD has been widely acclaimed as a masterpiece when it seems to me that one ought to come away feeling sullied or complicit. » II . « A product of tourism both in the act of production — two bourgeois white latinos taking a dip into the gritty \"realness\" of the \"urban\" reality of favelas, stylized and filtered through American genre tropes until Stateside audiences could be fooled into granting it the cachet of authenticity. Interesting Meirelles and Lund stopped caring about the stories of the \"real\" Brazil as soon as the checks stopped clearing, opting instead for colonial spy thrillers and English-language prestige fare. »",
+      "temas_atribuidos": []
+    },
+    {
+      "indice": 18,
+      "rating": 1.0,
+      "texto": "In the City of God , two hours of endless violence unfold between gang-affiliated children with no thematic justification. Teenagers rob and kill rivals, strangers, other kids, and the helpless. And for what? To tell us that gun-on-gun violence is rampant in third-world countries? We know that already. That corrupt people pay money to keep them that way? We know that, too. The City of God cannot decide whether to condemn or glorify these inhumane actions. A child joyfully murders several members of his community. Yet, in a flick full of moments like it, it's not disturbing. It's just meaningless. The only scene that startled me featured a crying child's execution. The film moves frantically from place to place as if the editors were dicing chili peppers instead of crafting a coherent picture. And it lacks a compelling character. The protagonist may look redeemable, but his work as a photographer makes him a morally guilty bystander with no backbone. So, we're left watching awful people doing awful things. The film indulges in its cruelty, but a reason to care is absent. I felt empty watching the story's cold river of carnage perpetually flow. 🔙 Life Is Beautiful (⭐️⭐️½) 🔜 Make It Happen (⭐️⭐️½)",
+      "temas_atribuidos": [
+        "t1",
+        "t3",
+        "t4",
+        "t5"
+      ]
+    },
+    {
+      "indice": 19,
+      "rating": 1.0,
+      "texto": "Me surgen varias preguntas en esta revisión de Ciudad de Dios : ¿por qué Meireles, proviniendo del estrato social del que proviene, decide hacer este filme sin querer desmarcarse nunca de los protagonistas como una otredad o por qué no parece interesado en dignificarlos en ningún momento?, ¿por qué razón se regodea tanto en la violencia abandonando cualquier sutileza, de una forma que cualquier propósito de denuncia queda empañado por la necesidad de impresionar? ¿qué lo llevó a emplear una estructura narrativa tan ridículamente enrevesada que solo sirve al efectismo?, ¿por qué algunas escenas tienen tantísimos cortes?... Y mi pregunta más importante, ¿por qué la crítica norteamericana y europea, que se ha encargado de denostar el cine latinoamericano, con un infame olvido de tantos grandes maestros del siglo XX o el mínimo interés por los realizadores contemporáneos, jamás deja de colocar a esta película como una de las mejores del siglo? Evidentemente sé la respuesta de esta y el resto de preguntas. Mi objetivo es que se las hagan ustedes mismos y, solo entonces, piensen en cómo debe ser el cine de nuestro continente.",
+      "temas_atribuidos": [
+        "t1",
+        "t2",
+        "t3",
+        "t4",
+        "t5"
+      ]
+    },
+    {
+      "indice": 20,
+      "rating": 1.5,
+      "texto": "this was the longest prequel to chicken run i've ever seen this was a wild ride of a film. the cinematography was incredible, but honestly this is one of those situations where once again the violence/graphic imagery was just way too much for me. it was chaos, death and destruction. total eruption. i'm aware that's why a lot of people love this, and they love its honest and raw portrayal of the story.. but i just couldn't handle it. at a certain point i kind of checked out of the film emotionally because i just found it sooo upsetting. it's an extremely well-made movie, the technical aspects are there; the editing and transitions are great, the film looks gorgeous in every frame.. i would love to rate this highly and call it a masterpiece, but it was just too much for me.",
+      "temas_atribuidos": [
+        "t1"
+      ]
+    },
+    {
+      "indice": 21,
+      "rating": 1.5,
+      "texto": "Não quero entrar no quesito cosmética da fome, mas mesmo que se afaste essa ideia, não dá pra dizer que Cidade de Deus é um bom filme, e muitos já sabem disso na verdade. Um voice-over tatibitate, esse filtro horroroso junto com essa montagem acelerada que já eram péssimas dois anos antes em Bicho de Sete Cabeças (e que o Fernando Meirelles teve a pachorra de fazer pior em Blindness ), uma edição que parece achar descolado filmar gente morrendo crivado de bala e transforma qualquer morte dramática em um mini-videoclipe, além da tentativa desastrosa de levar o romantismo à favela (todo o começo sobre o Trio Ternura, a morte do Cabeleira, a vida do Zé Pequeno) e do uso de tipos tão rasteiro como se fossem profundos (Mané Galinha, Cenoura, o branquelo ruivo cheirador de cocaína, o Dadinho criança) que chega a soar ofensivo. A cena da praia , por exemplo, quando Buscapé revela sua paixão pela Angélica, nem precisa de muito pra ver que ela é um amontoado de imagens jogadas um por cima da outra com um filtro mais distorcido e tosco, sem ideia alguma além de cumprir um checklist do roteiro (apresentar o interesse amoroso do herói). Daí, não é difícil entender que a construção ou a ideia estética de um filme tem tudo a ver com o conteúdo/tema/assunto. De qualquer forma, sempre é preferível ver Nelson Pereira dos Santos ou então, já que falamos de herdeiro, Luis Buñuel.",
+      "temas_atribuidos": [
+        "t1",
+        "t3",
+        "t4",
+        "t5"
+      ]
+    },
+    {
+      "indice": 22,
+      "rating": 1.5,
+      "texto": "Thanks for recommending me to watch this film seth So raw and powerful. The depths of organized crime and how poverty strikes them. What a story to tell. Now i understand the movie as a whole and don’t be mean to me, but sadly, it was little too much for me with the violence and all. I know, i know, it’s somewhat of the plot of the film but I just couldn’t handle it. I do appreciate the movie very much, okay.  And I know a lot of you praise the film, and I can clearly see why. (Yes, this did take me over an hour to type out) “Whoa, the chicken ran away. Get that chicken, dude!” 2002 ranked recommend me movies",
+      "temas_atribuidos": []
+    },
+    {
+      "indice": 23,
+      "rating": 1.5,
+      "texto": "Just gave me bad vibes while watching, and looking into its production didn’t put me at ease. Gang wars and poverty are used almost lightheartedly as the circumstances for the narrator’s dreams to become a photographer—third world violence, now consumable for the neoliberal, with no critique of the system causing these conditions in the first place.",
+      "temas_atribuidos": [
+        "t1",
+        "t2",
+        "t5"
+      ]
+    },
+    {
+      "indice": 24,
+      "rating": 1.5,
+      "texto": "مش شرط لما يكون الفيلم واقعي او بيحكي قصه حقيقيه انه لازم  يكون حلو او ممتع .. الوضع معكوس هنا تماما ، يعني القصه نفسها كويسه لكن الفيلم ممل وفوضاوي وتجربه مشاهده مزعجه قوي .. اكتر من مره افتح الفيلم اشوف شويه واتقفل منه ومكملش وبعد سنين اخيرا كملته وفعلا لا يستحق تقييم متوسط حتى!",
+      "temas_atribuidos": []
+    },
+    {
+      "indice": 25,
+      "rating": 1.5,
+      "texto": "An overreliance on style bordering on camp (not always without its charms) and the incessant voice over narration nearly suffocate the movie's narrative drive. Rather than shocking or provocative I found large parts of it to be exploitative and predictable. The super stylized, cynical machine gun storytelling is certainly effective to an extent, but to what end? You can't deny the movie's celebratory, showy orchestration of gang violence against and among children and teenagers. It's a questionable match at best for the harrowing subject matter, especially considering the involvement of an all amateur cast picked up from the very streets and slums the film was set in and momentarily taken away from the very lives they would end up portraying in the film. I'm not sure if there's a message to be taken away from all this but I find it's a pretty morally reprehensible film.",
+      "temas_atribuidos": [
+        "t3",
+        "t2"
+      ]
+    },
+    {
+      "indice": 26,
+      "rating": 1.5,
+      "texto": "overrated, bardzo dlugo to ogladalam fabula to napierdalanie sie w jakiejs suchej wiosce, kilka bohaterow z ktorymi nie czulam żadnej więzi i ciagle sceny ruchania👎👎",
+      "temas_atribuidos": []
+    },
+    {
+      "indice": 27,
+      "rating": 1.5,
+      "texto": "Hoje apareceu para mim o infame vídeo do Fernando falando que nunca sairia do Brasil (infelizmente) por causa que ele tem uma forte ligação com sua terra natal... Ligação essa só se for de usar pobre como artificio pra ter oportunidade de lamber bota  de americano, qualquer um consegue encontrar e saber  opinião do Fernando sobre o cinema Brasileiro durante cinema novo e cinema marginal. Ele odeia, não por achar ruim, mas por não compreender, pois é uma linguagem brasileira e não estrangeira,  poderia falar mil e um motivos por qual odeio ele, mas acredito que acabaria so repetindo o que alguns já falaram aqui nesse site.",
+      "temas_atribuidos": []
+    },
+    {
+      "indice": 28,
+      "rating": 1.5,
+      "texto": "This one was super heavy, I mean no joke we might have watched 50 people or more get killed in this film as well as rape and other sexual violence. I think the story that it's based on is very important but in the end it's really just an American gangster film but with Brazilian gangs from the favelas instead. The directing was great with effective storytelling and amazing music and visuals (the film is genuinely gorgeous to look at) but for me watching events like this on screen won't ever make for an enjoyable experience.",
+      "temas_atribuidos": [
+        "t5"
+      ]
+    },
+    {
+      "indice": 29,
+      "rating": 1.5,
+      "texto": "Perhaps the most shameless “mainstream” film ever made. A truly disgusting picture which plays into an almost primal, vulgar sadism while hiding behind it’s supposed —yet very shallow— critique of neoliberalism and it’s gritty, Tony Scott-like technical qualities (one of the few decent things about the film, along with the great performances). Women are relegated to purely narrative “functions”, either serving as virgin idols (Angelica, Bernice) or tools for violent men (the horrific rape scene involving Knockout Ned’s girlfriend, Shorty murdering his wife out of jealousy and anger towards Goose). The men themselves are humanised through character arcs and are given (an albeit shallow) level of complexity, but are still used as tools for the filmmakers to induce their “ultra (non) realistic depiction” of depravity which only exists to fuel the egos of the audience and the deepest darkest corner of the human psyche— an almost lustful execution of violence in film.",
+      "temas_atribuidos": [
+        "t1",
+        "t5"
+      ]
+    },
+    {
+      "indice": 30,
+      "rating": 2.0,
+      "texto": "Tava há um tempo sem ver e decidi revisitar Cidade de Deus . Não mudou muita coisa, filme sobre ciclos de violência que ganha força na espontaneidade das atuações. Tá todo mundo bem aqui, mesmo que não tendo muito espaço pra ninguém ser realmente potencializado. Nessa revisita eu senti menos o peso da exploração da dor pela câmera. Acho que o Meirelles e a Kátia Lund encontraram um meio termo equilibrado de retratar a violência. Quando o Zé Pequeno manda o Filé com Fritas matar uma das crianças, por exemplo, a câmera busca muito mais a tristeza e a angústia do olhar do Filé do que o desespero dos meninos prestes a serem executados. Mas também há momentos que me incomodam, como quando o filme abandona um pouco a crueza e tenta fazer humor com essa violência, caindo um pouco na romantização. O Dadinho atirando em todo mundo enquanto ri, com a câmera filmando de baixo pra cima, em uma cena montada como um videoclipe, não é muito legal e também não é muito bom como cinema. Acho que esses momentos de transição, inclusive, são quando o filme mais se perde. O que tem de bom no Cidade de Deus tá muito mais evidente quando uma trama assenta e os personagens conseguem respirar e conversar. Quando se conecta as linhas do tempo ou se faz um apanhadão de eventos pra resumir meses ou anos, a pressa está não só em acelerar a narrativa, mas também no modo de filmar. A câmera tremida é proposital, faz parte da proposta, e seria meio tonto crucificar o filme por isso. Mas a própria montagem tem momentos que quer dar mais agilidade do que precisa. A perseguição à galinha, por exemplo, é tão dilacerada pelos cortes que mal é possível ter uma noção espacial do que está acontecendo. Outra coisa que me incomoda – e essa um pouco mais. Filmar uma morte não é como filmar um abraço. Peguemos por exemplo o clímax de O Chefão de Nova York , de Larry Cohen. Aquele encerramento com o protagonista sendo traído pelos meninos e perdendo o posto de gângster mais temido do Harlem é o mesmo que acontece com Zé Pequeno em Cidade de Deus . Mas há uma diferença fundamental. No filme de Cohen, essa morte é toda estruturada como uma tragédia. O homem que se tornou o maior criminoso do bairro como resposta ao racismo que sofreu, mas que no caminho perdeu sua humanidade, passou a ser uma ferramenta do sistema e nada mais. Morre quase como um indigente, mas em tom trágico. A morte de Zé Pequeno serve a todos os personagens, menos ao próprio. Ele se torna mais um capítulo do ciclo de violência, mas ali, tudo é sobre os outros, nada sobre ele. É sobre Buscapé fazendo a foto que lhe garante o emprego, é sobre a polícia corrupta participando da violência, é sobre os meninos formando a nova geração do tráfico enquanto destronam seu antigo algoz. Mas e sobre Zé Pequeno? O aceitamos como representação de um mal absoluto? Pois por mais que o filme mostre que ele é resultado desse ciclo de violência, seu fim não lhe dá nenhuma humanidade, nenhuma dignidade. Morre para servir à narrativa e aos demais arcos que acontecem. É praticamente uma instrumentalização dessa morte. Não é a pior cena do mundo, longe disso, mas é uma cena que não traz nada de humano e opera apenas como fechamento de pontas soltas de outros personagens. E em um filme dramático e proposto realista, uma morte ser esvaziada de drama e humanidade e instrumentalizada para outros fins, nunca vai fazer sentido pra mim. Mesmo que o filme abandone uma estrutura de roteiro clássica e tenha como protagonista o espaço, não as pessoas, falta a Lund e Meirelles entender que é pela humanidade das pessoas que se conta essa história. Todo bom filme, querendo ou não, é sobre pessoas. E quando se mostra o impacto da violência em uma comunidade, há de se buscar preservar o que resta de humanidade, e não só empilhar corpos como NPCs que morrem em um jogo e desaparecem do chão em alguns segundos. Não que toda morte seja assim, o citado momento do File com Fritas, por exemplo, é bom. Mas Mané Galinha e Zé Pequeno, os dois melhores personagens do filme, são duas figuras cujos assassinatos são totalmente esvaziados por todo o resto que acontece em tela. A morte do primeiro é sobre a vingança do menino, com direito a flashback e tudo, enquanto a do segundo é sobre o emprego do narrador, o papel da polícia, o ciclo se repetindo… mas e os próprios Mané e Zé? O que sobra para eles? ——————————————————— Sobre os comentários, o de sempre: discorde à vontade, mas mantenha o nível. Xingou, foi engraçadinho etc é só block e fim.",
+      "temas_atribuidos": [
+        "t3",
+        "t4",
+        "t5",
+        "t1"
+      ]
+    },
+    {
+      "indice": 31,
+      "rating": 2.0,
+      "texto": "Baby's first foreign film. A product of tourism both in the act of production — two bourgeois white latinos taking a dip into the gritty \"realness\" of the \"urban\" reality of favelas, stylized and filtered through American genre tropes until Stateside audiences could be fooled into granting it the cachet of authenticity. Interesting Meirelles and Lund stopped caring about the stories of the \"real\" Brazil as soon as the checks stopped clearing, opting instead for colonial spy thrillers and English-language prestige fare. Made somewhat more despicable by warping the source material to include an audience surrogate acting truly as director surrogate, choosing careerism over any ideological groundings in the end — I guess you can't knock them for being dishonest, but you certainly can for their brazenness. 4.1/10",
+      "temas_atribuidos": [
+        "t2",
+        "t5",
+        "t1"
+      ]
+    },
+    {
+      "indice": 32,
+      "rating": 2.0,
+      "texto": "As far back as I can remember, I always wanted to be a hood. I'm not comfortable with the style of the film. I'm not comfortable with the fact that it's a packaged product glorifying poverty in an American style movie that can therefore readily be consumed as a product through the Hollywood style consumeristic model by which films have to be flashy and made to look fun. But poverty and tragedy and child gangs and rape should not be made to look fun. And that makes me (and much more importantly, from what I've read, many Brazilian critics too) extremely uncomfortable. Ivana Bentes said that City of God \"promotes tourism in hell\", and that nails it. I also know that after the film came out, many people from the favelas were not able to get jobs, due to the portrayal this film made of them. Maybe its style is why this film is so praised by so many. It's social criticism for people who want their social criticism to look like a cross between Fight Club and Pulp Fiction.",
+      "temas_atribuidos": [
+        "t2",
+        "t1"
+      ]
+    },
+    {
+      "indice": 33,
+      "rating": 2.0,
+      "texto": "In the running for the most overrated movie ever. Number 12 on the Letterboxd top 25 and 4.5 average rating? Not remotely deserving. I found this thoroughly uninteresting. It's very repetitive, just the same stuff over and over again. I dislike the framing device of the film, I don't care about each random character's backstory. I don't need 50 thousand flashbacks so that I can understand why stuff happens. It's really long and boring. It's just kids killing other kids in these slums and that's not compelling. If you want a film about a cycle of violence there are much better options out there, there's nothing here that this does that's better than any other crime film. I also don't need to see the sadism portrayed in this, it's deeply unpleasant to have to watch scenes of small children crying before getting shot by other children. It's disturbing and there's no reason for the audience to be shown that, other than I guess to torture the audience with gritty \"realism\". Did not enjoy this whatsoever. The editing is also straight garbage and the shaky cam is awful. Perhaps not without technical qualities, but there is nothing appealing visually or thematically here.",
+      "temas_atribuidos": []
+    },
+    {
+      "indice": 34,
+      "rating": 2.0,
+      "texto": "City of God is a glitzy and glamorous Hollywood movie masquerading as a revolutionary foreign language indie. People are so impressed (at least based off my film class) to see the country of Brazil pornographically shot in a Tarantino, MTV-esque fashion that fetishizes violence, drugs and sex with outrageous vigor. No surprise that this was directed by somebody in the advertising field because it is a great looking film that is nonetheless empty of heart and soul. It's Brazil n' tha Hood, a pantomime of popular American films without even a tinge of visual realism or relevance to the real slums of Brazil. Not to say I know a damn thing about how it actually runs but I found very little to find believable among the pretty lighting and eye catching editing. I suppose I understand why this is so highly rated because City of God might be a good movie but it's also one that lies or at least blinds the audience to the non-sensational reality. The movie has many shocking moments but it doesn't earn them because of how it doesn't even bother to make a point out of anything, since again, this is a wildly slick picture interested in the surface and not much else. I can't say I'm a fan, and ignoring the technical merits of it, I feel largely nothing about this shell of \"neorealist\" cinema.",
+      "temas_atribuidos": [
+        "t2",
+        "t1"
+      ]
+    },
+    {
+      "indice": 35,
+      "rating": 2.0,
+      "texto": "Eis aqui um dos melhores exemplares de uma \"estética inapropriada\" que o cinema da retomada se apropria. Desigualmente a uma estética do Cinema Novo, na qual Glauber Rocha apelidou como \"estética da fome\", um número de obras (para não generalizar), se apropriam de um antagônico. Agora, é inexistente a crueldade das imagens, característica de obras como Rio, Zona Norte (1956) e Rio, 40 Graus (1955). A mensagem não é mais passada pela forma. O que antes era intrínseco, de maneira tão expressiva de que só de olhar era inevitável captar a mensagem, se torna obsoleto e trabalhado não para um realismo crítico, mas um realismo falso que tem o desejo de alimentar outros povos. A questão é: como criar um modo de expressão, compreensão e representação dos fenômenos ligados da pobreza, dos sertões e das favelas? A ética-estética se encontram e conjuntamente vão para o mesmo caminho, e desejam no final desmembrar um novo método de fácil compreensão a todos. Cidade de Deus (2002) possui suas abordagens realistas, mas a custo de um dissimulado realismo. Filmes do Cinema Novo tratavam seus temas de uma maneira digamos que \"correta\". Tais filmes partiam de uma premissa crua, triste e desoladora, e a forma seguia tal premissa. Não era uma estética vendável. O querer se centrava conscientemente na comunicação com o espectador, para que assim atingisse a conscientização através do cinema. O cinema brasileiro passou de uma \"estética da fome\", para uma \"cosmética da fome\" (assim pontuado por Ivana Bentes). Imagens violentas eram manuseadas com um fim crítico. Doravante, o antropomorfismo espacial de nada serve, as favelas se tornaram museus, onde quem assiste se sente maravilhado com o que vê. Norte-americanos se sentem agradecidos, tanto pela maneira que se assemelha à deles, quanto pela representação. Para eles o Brasil é isso; Brasil é o retratamento de Cidade de Deus (2002). Favelas no momento são museus, onde a câmera passeia e vislumbra o que acontece. Se varia das demais conotações precedentes. Favelas são microcosmos, jardins exóticos de passeio turístico, é ignorada toda a falha estrutural que organiza tantos crimes. O governo não é culpado, as inúmeras colocações que mantém de pé o tráfico são ignoradas, para dar lugar à culpa dos próprios traficantes, bandidos e moradores. O filme até fala que Cidade de Deus não é o cartão-postal do Rio de Janeiro; o que acontece é que não demonstra isso. Fernando Meirelles e Kátia Lund estilizam as formas. Tornam tais formas agradáveis, glorificadas, bonitas de se assistir. Deixa tudo muito dinâmico, utiliza luzes difusas, cores frias que agradam os olhos, montagem expressiva e recheada de elipses. A decupagem do trabalho é abrupta. Tempos em que a câmera na mão rouba a cena, conseguindo uma dose de realismo: um realismo problemático. O gênero se transforma em ação, o êxtase toma conta do todo. Dolência é deixada para trás, falhas governamentais são substituídas por trocas de tiro em uma bolha irreversível. Como André Bazin dizia: todo realismo parte de artifícios, por mais verossímil que seja, essa verossimilhança é manipulada e não é de completa integridade e originalidade real. A direção sabe realizar um trabalho realista, mas descontextualizado. Recorrente à tais circunstâncias, brota a mimese da interpretação, que querendo ou não, distorce e inventa inexistentes dialéticas. Fatores surgem do nada. Minto, não surgem do nada, se devem à premissa e contextos nos quais a forma deveria se apropriar. O espectador se sabota, pressupõe estar testemunhando uma crítica, quando o fato é único: ele está contemplando cenas sanguinárias, revestida superficialmente, e objetivamente posicionadas a favor de venda. Sotaques, músicas, costumes, nada isso é expressivo mais. Um samba em Rio, 40 Graus é contemplativo, admirável. Espírito cantando em Rio, Zona Norte nos abre um largo sorriso imediatamente. A morte de uma criança por recorrência do crime nos impactam profundamente em Rio, Zona Norte. Uma criança sendo atropelada em Rio, 40 Graus é valiosa dentro um contexto real e crítico. Signo dessa nova contextualização é a vinda de Michael Jackson para o Brasil, decidido gravar um videoclipe numa favela do Rio de Janeiro, em 1998. Os moradores de uma favela são utilizados como figurantes de um cenário. O popstar usa imagens da miséria para \"melhorar\" seu clipe, deixá-lo bonito e \"representativo\". Cidade de Deus (2002) serve muito bem para uma chave introdutória para a integralidade desse todo. A pobreza não tem mais importância, ela existe e não pode ser alterada. Sua existência é mercadológica, é um produto usado para desoladores (ou que deveriam ser desoladores). Nada mais é dramático; a pobreza é desfrutada, parte de um meio de entretenimento, não para conscientização populacional. Ela é magnífica, palco para desgraça, sem escapatória. Grupo no Telegram sobre cinema aqui. Basta clicar que você será redirecionado para lá.",
+      "temas_atribuidos": [
+        "t2",
+        "t5",
+        "t1"
+      ]
+    },
+    {
+      "indice": 36,
+      "rating": 2.0,
+      "texto": "this one somehow didn’t get to me. i have no idea why but i was hoping i would enjoy this more… maybe one day i’ll rewatch it because i would love to discover what everyone adores about the film :)",
+      "temas_atribuidos": []
+    },
+    {
+      "indice": 37,
+      "rating": 2.0,
+      "texto": "So stylish kann Armut sein. Mit Sicherheit einer der miefigsten Exploitationfilme aller Zeiten. Dass diese exotistischte Machwerk auf Letterboxd mit 4.5 dasteht und alllgemeinhin als einer der besten Filme aller Zeiten gilt, ist symptomatisch für eine pseudo-sozialbewusste Filmrezeption von Wannabe-Kosmopoliten, die ihr wohlstandsgeplagtes schlechtes Gewissen und die sorgenlose Langeweile nicht anders sublimieren kann, als jeden reißerischen Schund aus dem Ausland zum großen Filmereignis zu erklären. Da ist es auch egal, dass die Figuren, für die der Film ja angeblich ach so viel Empathie aufbringt und auslöst, dunkelhäutige Groschenroman-Skizzen sind, die wie einem unironischen Blaxploitation-Porno, sich durch nicht mehr auszeichnen als dicke Schwänze und dicke Wummen. Vereinzelt sind es der Abwechslung halber auch mal dicke Schwänze mit dicken Wummen. Erstaunlicherweise kann man dem Film nicht mal vorwerfen unclever zu sein, ganz im Gegenteil, er ist beachtlich geschickt konstruiert. Hier werden nämlich die niedersten Reize eines sich selbst und seine perversen Gelüste nie reflektierendes Publikum bestens bedient. Der ästhetisierte Pseudorealismus erheuchelt sich einen erregenden Schauer beim, von seiner eigenen Sicherheit erschlafften Panzerglas-Bildungsbürger, der diesen Reiz mit Mitgefühl und Verständnis verwechselt. Dabei werden nur die niedersten Wünsche nach einen bisschen kontrolliertem Dreck befriedigt, indem man sich hier 2 Stunden zu Genüge wälzen kann, um sich im Nachhinein in hyterischer Dankbarkeit zu suhlen, unter solchen Umständen nicht leben zu müssen. Die degoutante Authentizitäts-Lüge dieses schmierigen B-Movies, die durch die aus den Vierteln Braisliens gecasteten Darsteller hergestellt werden soll (die im Übrigen von den beachtlichen Erträgen des Films fast nichts gesehen haben), immunisiert diesen menschenverachtenden Elendstourismus vor jeder Kritik. Man wisse ja nicht, wie es da zu geht und der Film würde das bestimmt wahrhaftig darstellen, das kann man als weißer, heterosexueller, privilged Cis-White-Dude nicht beurteilen. Jaja, klar, so sexy und rauschhaft, wie wir unser soziales Elend am liebsten haben, hätten es die Favela-Bewohner auch gern. Fernando Meirelles hat sich die Filme von Martin Scorsese offensichtlich angeschaut und sie nicht mal im Ansatz verstanden. War die durch Voice-Over einladend gestaltete, stylische Parallelwelt in Scorseses Gangster-Filmen nur ein Vorwand, um die eigentliche Systemkonformität und Spießigkeit jener selbsternannter Rebellen dialektisch in ihrer Faszination und Systemimmanenz darzustellen, nutzt Meirelles das gleiche Stilmittel für Armutsviertel und stigmatisiert diese Welt so automatisch zu einer fremdartigen Masse, der wir uns in Zukunft auch besser nicht nähern sollten. Die Gewalt und das Blutvergießen, die sadistischen Gangster und kleinlauten Bewohner sind ein naturalisiertes Ornament, ein Kreislauf, undurchbrechbar, so sind die Zustände nunmal, die uns vom eigentlich außen stehenden Reiseführer Buscape anekdotisch konsumerbel serviert werden. Reiht sich gut ein, in eine Gegenwart, in denen verwirrten Jugendlichen und Menschen, die es noch nicht in einen Urlich Seidl geschafft haben, kein Land zu arm ist, um sich dort seine spirituelle Erleuchtung für das eigene langweilige Leben zu holen. Der Film erdreistet sich sogar, Buscape die Postkarten-idyllen Rio de Janeiros kritisieren zu lassen, liefert aber am laufenden Band, in einer kaum noch zu ertragenden MTV-Ästhetik, einen einzigen Werbeclip, für jeden, der mal wieder Urlaub mit ein bisschen Nervenkitzel will. Ein geiler Song jagt den nächsten, die Kamera rast mitreißend von einer Guy-Ritchie-Montage in die nächste, Vergewaltigungen im Hintergrund kriegen noch einen gewievten Inszenierungseinfall spendiert und so kann man auch beim voyeuristischen Gewalt-Porno seinen Spaß haben. Und wenn man ein bisschen Betroffenheit in den würzigen Herzschmerz-Cocktail rühren will, ballert man, wie der andere große Profi-Schund-Meister Denis Villeneuve, einfach noch ein ein paar Kinder ab, damit dann auch der letzte Otto begriffen hat, dass das hier ein wichtiger Film ist, der das Prädikat \"besonders wertvoll\" verdient. Tribalistische Dschungel-Musik soll atmosphärische Nähe zum Milieau herstellen, doch letztlich ist man hiernach genauso weit von den Favelas entfernt wie vorher, wenn nicht sogar noch weiter. Denn letztlich affirmiert \"City of God\" nur gängige, abschreckende Klischees, denn auch unsere Figur Busquape schlussfolgert: Hier ist nichts mehr zu retten, versuch aber wenigtstens auf Kosten des Elends noch Geld zu schaufeln und Karriere zu machen. Buscape ist nämlich eigentlich wie unser Regisseur: Für eine liberale Medienöffentlichkeit, dient das Ghetto, die Leiche nur noch für schockierendes Bildmaterial, dass man einem sensationslüsternen gehobenen Klientel zum Fraß vorwirft, damit es in seiner sich selbst bestätigenden Gleichgültigkeit trainiert bleibt und es weiterhin defätistisch den Kopf schüttelt mit der Konklusion: Mensch, Sachen gibts. Dabei scheint uns die Tatsache, dass die Welt brennt, kontraintuitiv zu beruhigen, solange es eben nicht in unserem Garten ist. Denn wenn sich Neger in den Favelas gegenseitig die Ärsche wegknallen, ist ja eigentlich alles so wie immer.",
+      "temas_atribuidos": [
+        "t2",
+        "t4",
+        "t3",
+        "t5",
+        "t1"
+      ]
+    },
+    {
+      "indice": 38,
+      "rating": 2.0,
+      "texto": "Bu kadar akıcı bir temposu olmasına rağmen çok sıkıldığımı söylemeliyim. Konusu suça sürüklenen çocuklar olunca beni çok etkilemesini bekliyordum ama bir türlü içine giremedim. Karakter sayısının fazlalığı da bu durumu imkansız hale getirdi. Yani kısacası filmdeki hiçbir şey beni çekemedi izlerken bayağı sıkıldım.",
+      "temas_atribuidos": [
+        "t4"
+      ]
+    },
+    {
+      "indice": 39,
+      "rating": 2.0,
+      "texto": "First viewing since its–fairly under-the-radar relative to its afterlife–theatrical run in '03; I even covered it for my college newspaper which thankfully seems to have been scrubbed from the internet (I looked for it for an hour thinking it would be funny to link to here but no dice). I will attempt to explain why I kind of hate this still hugely popular film (placed at #15 on the recent NY Times Best of the Century poll and, even more astonishing, as of this typing it's the 9th most popular title *of all time* on this platform) without going to war with the nation of Brazil. It’s not the empty flash of Meirelles' filmmaking which after the opening ten minutes settles down some (although I still think the quasi-bullet time transition stuff is super lame) or any sort of squishy, stereotypically liberal misgivings about the film exoticizing the favelas or brown-on-brown violence. No, it really does stem from the fact that it plays to me as a series of disparate tall tales of gang warfare and casual criminality relayed back to the audience with the breathless enthusiasm and, more damningly, shallowness of an excitable tourist. Most of my issues come back to the decision to center the film around the perspective of Alexandre Rodrigues’ Rocket who, notably, wasn’t directly involved with 90% of what happens in the film and has, at best, a tangential relationship to them or the people involved. As a result the film is mostly superficial and lacking in any sort of insight into the characters’ psychology while connective tissue is basically nonexistent. It’s simply \"here’s a colorful and/or tragic anecdote gleaned through secondhand accounts of some charismatic but fundamentally unknowable local legend who’s reduced down to the violence they perpetrated (or was perpetrated against them).\" There’s no flow or momentum to the film with Rodrigues’ voice over narration often having to pause and annotate that we’ll need to circle back to something later because it’ll be important as though it were a hyperlink in a Wikipedia article. Just endless rabbit holes to chase down that can typically amount to \"and here’s another interesting story I heard about.\" Never really gets its arms around larger than life figures like Li'l Zé or Knockout Ned (as an aside, it’s amusing to recall this was Seu Jorge’s actual breakout role as I mostly associate him with The Life Aquatic ) beyond figures of myth and/or infamy. And again, Rocket is such a fucking *lame* character who, save for the contrived events of the final sequence (not only finding himself in the middle of an armed standoff with the very people he was strenuously avoiding but witnessing the police illegally shaking down Li'l Zé and then his immediate murder at the hands of a roving gang of child thieves, both of which he’s conveniently able to document), has no actual agency in the film. I can recognize that Henry Hill is less magnetic than Jimmy Conway or Tommy DeVito and is primarily serving as the eyes and ears of the audience but at least he, ya know, does stuff on his own which is compelling in its own right. But Rodrigues is essentially an onscreen void without any sort of personality beyond being vaguely affable. Really started to get annoyed with this when we get to the stretch where Rocket’s freak out in the newsroom leads directly to his deflowering at the hands of an older woman which is staged with all the verisimilitude of a Penthouse Forum letter (does that reference mean anything to anyone under the age of 40 anymore? I digress… ) There are plenty of films other people adore that I don’t but in most of those instances I can either recognize what they are responding to or can acknowledge that there's something so sui generis about them that there was never going to be a version of it I would have enjoyed. But I look at City of God and my overriding thought is \"you know, there are actually *good* versions of this kind of thing, right?\" (although admittedly, most of them have been made for television lately)",
+      "temas_atribuidos": [
+        "t3",
+        "t5",
+        "t1"
+      ]
+    },
+    {
+      "indice": 40,
+      "rating": 2.5,
+      "texto": "A melhor coisa do filme é o tom espontâneo do elenco e a maneira bastante orgânica que aspectos do livro do Paulo Lins ganham vida. Existe um ótimo trabalho tanto de caracterização dos ambientes como também na forma geral em que o elenco interage. Mas infelizmente esse realismo estilizado à Alejandro Iñárritu da direção pouco se aproveita desses aspectos. Todo plano busca uma espécie de agilidade obsessiva que nunca parte de elementos da situação que é retratada, mas de uma eficiência publicitária que se apropria daquele contexto. Em uma perspectiva de cinema de gênero, o Meirelles trabalha bem com algumas convenções. Principalmente em como usa a violência, em certas cenas, mais como um ingrediente gráfico à Tarantino do que como um aspecto totalmente realista. O filme cai muito quando tenta equilibrar essa relação plástica da violência com algum elemento do cotidiano. Toda aquela realidade soa mais como algo que deve se adequar a esse modelo de filme violento cool do que algo que de fato irá afetar essa dinâmica. A montagem do filme mascara muito bem essa distância, já que praticamente nunca deixa uma cena se desenvolver até certo ponto e transforma tudo numa experiência de estímulos que, também, está mais interessada em usar as particularidades da caracterização e da atuação como ingredientes da sua desconstrução legalzona do que em intuir aspectos particulares disso na sua prática. Pensando na premissa dramática como um todo, é interessante o fato do filme não seguir o modelo de uma catarse pela piedade que era comum na retomada (o Fernão Ramos tem ótimas teorias sobre isso). O longa meio que assume a psicopatia do Zé Pequeno com todas as letras e nunca é muito condescendente ou paternalista com os seus personagens de modo geral (como o Babenco é no Carandiru). Pena que não define um real escape pra isso e tenta resolver quase tudo na base da violência cool e da ironia. Algo que, novamente, pode funcionar em uma perspectiva crítica pessimista daquele entorno, mas que nunca desenvolve isso pra além de algo bem pontual.",
+      "temas_atribuidos": [
+        "t1",
+        "t5",
+        "t4"
+      ]
+    },
+    {
+      "indice": 41,
+      "rating": 2.5,
+      "texto": "[49] Like Brazilian GOODFELLAS, but is there anybody here even one-tenth as interesting as almost anyone in Scorsese’s gangland masterpiece? Might go so far as to say this is the most critically acclaimed film with the glassiest excuse for a protagonist I’ve ever seen (only other contender I can immediately think of: MOONLIGHT). Cannot even recall the kid’s name, to be completely honest (and I even remember “Chrion,” for Christ’s sake). The hyperkinetic style of filmmaking calls to mind the things that annoy me most about e.g. Danny Boyle or Guy Ritchie : flashy and assertive but weightless in any capacity. Superficially stylized violence only works on rare occasions for me, usually when [1] it carries otherwise significant implications, or [2] it meshes with the overarching disposition of the film itself. Here, everything’s kind of confused : it’s trying to depict a scarcely visited projection of realistic hardship in (parts of) Rio de Janeiro, but the violence is constructed in a way that’s neither real nor properly heightened in the vein of extreme expressionism. It merely feels like a swinging-for-the-fences attempt at Distinct Direction, but *thonk thonk thonk* -- it’s hollow as can be. It comes off not only tonally at odds with itself, but strangely self-assured without a real reason to be : I mean, yes it’s clear talent was involved, but much of that competence is wasted on gaudy showmanship, directly undercutting the grittiness that tries to surface at seemingly every junction. (That is, except when it awkwardly attempts to be funny and/or cute about women, or is busy showing us yet another compilation of Cute Kids With Guns.) Some inspired formal choices : the color palate -- adding some much-needed slime to the mix -- might be my favorite thing about the entire film. Story structure is interesting, but not quite necessary : methinks it still coagulates like rinky-dink Scorsese, but maybe I just need to let the GOODFELLAS parity die. Also you’d think for all of the shit that these people endure, day in and day out, they’d eventually learn to never turn their back on someone with a gun no matter who they are . I wouldn’t even trust a 12-year-old to cut my lawn properly, yeesh .",
+      "temas_atribuidos": [
+        "t1",
+        "t5",
+        "t2",
+        "t4"
+      ]
+    },
+    {
+      "indice": 42,
+      "rating": 2.5,
+      "texto": "Around The World In 80 Days - Brazil Unfortunately this film just wasn’t for my taste, it felt like a chore to get through and I felt the runtime. This was a well made film no doubt, great cinematography, well acted some well shot fighting sequences and death scenes and a raw and emotional look at the lives of these people that have to survive in this world of corruption but it just wasn’t a film I could invest in or find enjoyment watching.",
+      "temas_atribuidos": []
+    },
+    {
+      "indice": 43,
+      "rating": 2.5,
+      "texto": "this movie thinks it's Rocket, the from-the-slums aspiring photographer who through the bad luck of being in the wrong place at any time captures horrifying images of gang warfare. it's actually the reporter at the paper who publishes Rocket's photos without asking first, requests he return to take more in exchange for slight pay, is blatantly pleased to be capturing violence in action, and—because Rocket can't go home after the publication and needs somewhere to stay—offers the likely decade-younger boy a bed and summarily takes his virginity. somewhat entertaining though sure.",
+      "temas_atribuidos": [
+        "t3",
+        "t5",
+        "t1"
+      ]
+    },
+    {
+      "indice": 44,
+      "rating": 2.5,
+      "texto": "Birthday Challenge: 25/31 Recommended by joaquin \"the 3.5 stars guy\" zanzio letterboxd.com/joakocritica/ Joaquin, I like you man. But honestly, I didn't seemed to enjoy it. So City of Gods is a Brazilian gangster movie based on a true story. So I watched it and there's some things I didn't like. It's not terrible, like I do appreciate the cinematography, screenplay, and acting, and how it's able to replicate the dark crimes in Brazil. Although there's one thing that did bothered me, which is less of a film problem and more of my taste, which is the onscreen violence. Although I can handle graphic violence in media, the movie presents in a rather realistic and brutal manner. And I mean, showing a child getting shot in the leg, and it's realistic brutal street violence. It's just sad and upsetting for me. Not trying to sound biased and I know that the movie's showing the brutality of street violence, especially influence in children, but honestly, it's a bit too much for me. So overall, City of God is not a movie for me. I can appreciate the effort and time the people put into this movie, but honestly, the realistic and upsetting imagery in it just isn't for me. So Idk how should I recommend this. If you like Gangster/Mafia movies and don't mind the violence, worth a watch, but for someone who doesn't like the realistic and brutal violence and depressing imagery, skip it.",
+      "temas_atribuidos": [
+        "t1",
+        "t5"
+      ]
+    },
+    {
+      "indice": 45,
+      "rating": 2.5,
+      "texto": "Undoubtedly well-made and with some great performances, but just not a subject I’m interested in or could connect to.  The rampant drug use and violence in this slum in Brazil which escalated to an all-out gang war was just too dark and one-note for me, especially in its first half.  Li’l Z forcing a guy to strip on a dance floor, having kids shoot kids, raping women, and executing even those close to him at the drop of a hat was depressing to watch, and all of that was just the tip of the iceberg.  I would have loved to seen another slice of the human condition in this environment, some other set of emotions, because this felt like it was reveling in the violence.  It got a little a better in the second half with the subplot of the boy becoming a photographer, but never rounded the corner for me.  I can see why people might like it though, as Fernando Meirelles created it with quite a visual flair.",
+      "temas_atribuidos": [
+        "t1",
+        "t4"
+      ]
+    },
+    {
+      "indice": 46,
+      "rating": 2.5,
+      "texto": "Has to be one of the most overrated movies I've ever seen, I really don't get what people see in it. It's nothing I haven't seen before, almost every storytelling/editing/filming technique was so overused and repetitive. I didn't care for any of the characters, and I really tried to focus for the first 90 minutes, but then I just lost it and couldn't even follow what was happening on screen. I truly don't get the hype around it, it doesn't even feel like it has some deeper meaning. Just feels like the whole time it screams at you \"BEING POOR SUCKS\". It also relies way too much on the shock effect and honestly only succeeds once or twice. 2002 RANKED",
+      "temas_atribuidos": []
+    },
+    {
+      "indice": 47,
+      "rating": 2.5,
+      "texto": "The bright images and frenzied editing breathe remarkable life into a film about a perpetual cycle of death. I particularly enjoyed when soundbites played on a closing door or clanging fence, embellishing the impact of an action. This is ferocious filmmaking, a shot of caffeine injected straight into celluloid. However, the broad painting of characters and the focus on environmental details in each image lend themselves better to a mosaic film than the coming-of-age tale City of God occasionally attempts to be. This is a masterful examination of violence and its ability to prey on the infallibility of youth. When characters are used in tides of brutality, it is affecting, emotional, and horrifying. But the movie's protagonist is a cipher, devoid of any interesting traits. For a film presented with such character, Rocket has almost none. His role as an audience stand-in creates too much stability for a film that is often chaotic. Navigating this world should be a difficult process and a test of morals, but Rocket's existence lays out a clear pathway that any viewer can follow. With an obvious through line, the movie becomes a sort of tour of savagery and the impact of the tragedy is never truly felt as a result. Focusing on a central character is counter-intuitive to City of God's central conceit of painting a picture of cyclical brutality. Narrative problems aside, the exhilarating presentation of City of God is too stimulating to pass up. The vibrance of the deep oranges and blue skies beat down upon the citizens and entrap them in perpetual savagery. The most interesting character is the city of God itself (I hate saying that, but it's really true here), and all of its inhabitants add shades of color to its personality. If the film committed to this broad scope, I feel this really could have been a masterpiece. Entry #1: Scavenger Hunt 15 (June 2016) Task #26: A film with a fast motion scene",
+      "temas_atribuidos": [
+        "t1",
+        "t4",
+        "t5"
+      ]
+    },
+    {
+      "indice": 48,
+      "rating": 2.5,
+      "texto": "I loved the chicken opening but unfortunately that was the only really interesting thing for me. There are some nasty scenes here and there but the tone shifts too quickly between serious and Quentin Tarantino so there's no room to let the tough stuff sink in. Maybe it's because I'm dead inside but the movie is much \"lighter\" than I thought it would be and got a lot of laughs from the audience. I do appreciate the storytelling and the way the various characters are introduced, but overall I'm not a fan.",
+      "temas_atribuidos": [
+        "t2"
+      ]
+    },
+    {
+      "indice": 49,
+      "rating": 2.5,
+      "texto": "What is the real purpose of traveling knowing that films of this magnitude are deliberately offered to us The city of gods transpires of talent with its frightening complexity and its Dantesque photography, blablabla.... It is a masterpiece, I was perplexed, dubious, doubtful at the idea of viewing it and then finally it remains one of the best films I have attended this year",
+      "temas_atribuidos": []
+    }
+  ]
+}

@@ -1,0 +1,310 @@
+{
+  "bucket": "medianas",
+  "n_reviews": 20,
+  "falhou": false,
+  "lote_tamanho": 25,
+  "tempo_estagio1_s": 125.14,
+  "tempo_estagio2_s": 120.32,
+  "tempo_total_s": 245.46,
+  "estagio1_log": [
+    {
+      "tentativa": 1,
+      "tempo_s": 125.14,
+      "done_reason": "stop",
+      "eval_count": 412,
+      "conteudo_chars": 1352,
+      "json_valido": true
+    }
+  ],
+  "estagio1_temas_propostos": [
+    {
+      "id": "t1",
+      "tema": "Ritmo lento e hipnótico",
+      "descricao_curta": "Gera uma sensação de tédio e letargia, mas também cria um estado mental fixado que parece envolver a mente do espectador.",
+      "aspas_removidas_da_descricao": false
+    },
+    {
+      "id": "t2",
+      "tema": "Ambiente opressivo vazio",
+      "descricao_curta": "Transmite uma frieza desconcertante e gera mal-estar através de atmosferas sombrias, silêncio abafado e cenários minimalistas.",
+      "aspas_removidas_da_descricao": false
+    },
+    {
+      "id": "t3",
+      "tema": "Resolução confusa narrativa",
+      "descricao_curta": "Causa frustração e deixa o espectador com um sentimento de insatisfação por falta de clareza na conclusão dos eventos.",
+      "aspas_removidas_da_descricao": false
+    },
+    {
+      "id": "t4",
+      "tema": "Desconexão emocional distante",
+      "descricao_curta": "Produce estranheza e mantém o espectador afastado, impedindo que ele se sinta parte da história ou das tensões vividas.",
+      "aspas_removidas_da_descricao": false
+    },
+    {
+      "id": "t5",
+      "tema": "Vilania intangível interior",
+      "descricao_curta": "Foca na destruição silenciosa do self e no colapso da identidade, criando um terror existencial sem mecanismos externos claros.",
+      "aspas_removidas_da_descricao": false
+    },
+    {
+      "id": "t6",
+      "tema": "Mistério elíptico abstrato",
+      "descricao_curta": "Provoca confusão sobre a trama e gera uma sensação de que os eventos são difíceis de seguir lógicamente.",
+      "aspas_removidas_da_descricao": false
+    }
+  ],
+  "estagio2_lotes": [
+    {
+      "offset": 0,
+      "tamanho": 20,
+      "chamadas": [
+        {
+          "tentativa": 1,
+          "tempo_s": 120.32,
+          "done_reason": "stop",
+          "eval_count": 307,
+          "conteudo_chars": 483,
+          "json_valido": true
+        }
+      ],
+      "ok": true,
+      "ids_invalidos": 0
+    }
+  ],
+  "estagio2_ids_invalidos_total": 0,
+  "n_reviews_sem_tema": 4,
+  "n_reviews_nao_classificadas_falha_lote": 0,
+  "n_reviews_com_tema": 16,
+  "media_temas_por_review_classificada": 2.35,
+  "idioma_pt_br_ok": true,
+  "temas_finais": [
+    {
+      "tema": "Ritmo lento e hipnótico",
+      "mencoes_aproximadas": 9,
+      "n_reviews_analisadas": 20,
+      "exemplo_parafraseado": "Gera uma sensação de tédio e letargia, mas também cria um estado mental fixado que parece envolver a mente do espectador.",
+      "id_estagio1": "t1"
+    },
+    {
+      "tema": "Mistério elíptico abstrato",
+      "mencoes_aproximadas": 9,
+      "n_reviews_analisadas": 20,
+      "exemplo_parafraseado": "Provoca confusão sobre a trama e gera uma sensação de que os eventos são difíceis de seguir lógicamente.",
+      "id_estagio1": "t6"
+    },
+    {
+      "tema": "Ambiente opressivo vazio",
+      "mencoes_aproximadas": 8,
+      "n_reviews_analisadas": 20,
+      "exemplo_parafraseado": "Transmite uma frieza desconcertante e gera mal-estar através de atmosferas sombrias, silêncio abafado e cenários minimalistas.",
+      "id_estagio1": "t2"
+    },
+    {
+      "tema": "Resolução confusa narrativa",
+      "mencoes_aproximadas": 8,
+      "n_reviews_analisadas": 20,
+      "exemplo_parafraseado": "Causa frustração e deixa o espectador com um sentimento de insatisfação por falta de clareza na conclusão dos eventos.",
+      "id_estagio1": "t3"
+    },
+    {
+      "tema": "Desconexão emocional distante",
+      "mencoes_aproximadas": 8,
+      "n_reviews_analisadas": 20,
+      "exemplo_parafraseado": "Produce estranheza e mantém o espectador afastado, impedindo que ele se sinta parte da história ou das tensões vividas.",
+      "id_estagio1": "t4"
+    },
+    {
+      "tema": "Vilania intangível interior",
+      "mencoes_aproximadas": 5,
+      "n_reviews_analisadas": 20,
+      "exemplo_parafraseado": "Foca na destruição silenciosa do self e no colapso da identidade, criando um terror existencial sem mecanismos externos claros.",
+      "id_estagio1": "t5"
+    }
+  ],
+  "amostra_completa": [
+    {
+      "indice": 0,
+      "rating": 3.0,
+      "texto": "55/100 Second viewing, last seen 20 years ago. That happened to be two months before Pulse scared the living shit out of me at TIFF '01, so my Time Out New York review—fully half of which just complains that Kurosawa's reputation had somehow gotten out ahead of his demonstrable talent—has gained an ironic aftertaste. (To be fair to myself, Pulse remains, two decades and a dozen features later, the only one of his films that I actively like. Just happens to be among my favorites of the century.) Most of my writing about Cure took the form of a discussion-group debate with various friends; since those remarks still more or less accurately reflect my frustration with this film, I'll post the edited highlights here. Bear in mind that they are in fact edited, though—the argument raged literally for days, and would be quite tedious to read in full. As usual in these instances, I've included only enough of other folks' posts to provide necessary context; they made much lengthier and more cogent points at the time, which means that there's no need for you to make them in the comments now. Trust me, I was ably rebutted, even if my mind remained (and remains, following this revisit) unchanged. Also, I hadn't yet watched any X-Files at the time, so it didn't occur to me then to point out that Cure in many respects plays exactly like a Monster of the Week episode, right down to the similar case file from many years earlier that's discovered halfway through. Pulse benefits enormously from having neither a detective nor a single antagonist; the creepiness is genuinely societal and free-floating. Anyway, here's some stuff I said at the time of its belated U.S. release. (As always, there's some in-group wonkiness, e.g. it's not a mistake that I refer to someone's website as a \"sight\" and then say that I was seeking their \"insite.\" One of many running jokes we had.) NOTE: The quoted text is from multiple people, none of whom I've named since I haven't asked their permission to repost any of this. __________________________________________________________ Unlike everybody else on Earth, it seems, I didn't think this movie was all that hot. Kurosawa's films call to mind the trajectory of Twin Peaks , except with the slow slide from eerily gripping premise to irritatingly \"enigmatic\" conclusion compressed into a mere two hours. License to Live, Seance, Cure —they all go nowhere, as far as I can tell. Not only does the narrative prove unsatisfying in each case, but thematically the films are so vague that it's possible to read pretty much anything you want into them. I went to Steve's sight hoping for more insite into his \"response to the subway gas attack\" reading, but apparently he hasn't yet written a review. I mean, what's hypnosis got to do with anything, even in a metaphorical sense? I don't get it. I had the feeling you wouldn't like it, given its narrative ellipses. Given my well-known loathing for elliptical filmmakers like Egoyan and Tsai, that was a fair assumption. [MAY 2021: To be clear, <----- sarcasm] Here's the difference between, say, Egoyan and Kurosawa. In an Egoyan movie, the connections between various characters are frequently murky, and key events throughout the film are omitted, suggested or chronologically structured in such a way as to make them confusing. In other words, the entire film is elliptical, and has clearly been designed that way from the outset and for a purpose. In a Kurosawa movie, while there may be a central mystery and a strong sense of foreboding, the narrative proceeds in a relatively straightforward, genre-respectful fashion until the last reel, at which point a whole bunch of things happen that make no apparent sense whatsoever and leave even the film's admirers asking themselves \"uh, what happened here?\" and answering \"uh, beats the fuck outta me.\"  Now, maybe that's all part of Kurosawa's particular formal genius, but until I read a pretty strong analysis of same (and I've been searching in vain), I have to say that he looks to me like somebody who's good at creating mysteries but totally inept at resolving them, and thus resorts to vague metaphysical hogwash once he hits page 100 of the screenplay. [...] As for the film's alleged meditation on recent senseless acts of violence in Japan, I'm eager to hear how the tale of a serial killer who hypnotizes others into committing murder sheds any kind of metaphorical light on this subject. Who or what is the hypnotist's analogue in the real world? The media? Eroding values? A lack of purpose? Hell, name anything you like—nothing onscreen will contradict you. And wouldn't it make more thematic sense if nobody were inducing these people to kill? I'd be much more creeped out by a movie in which apparently ordinary folks started slaughtering loved ones for no reason, passing the madness like a virus; introducing a Mysterious Amnesiac Dude who's responsible for it seems to defeat the film's ostensible purpose. (In that light, I almost prefer Adam's theory that he doesn't exist, and would accept it if only the film supported it in any way at all.) There's something being said here, however, about \"the evil that lurks within men's souls\" This is precisely what I mean when I complain that the movie is ridiculously vague. Any film featuring motiveless killings will automatically be perceived as saying something about the evil that lurks within men's souls. I'm asking what is being said in this particular instance and (more important) how the film is saying it, which seem to me eminently reasonable questions. Given that the film has no satisfying narrative conclusion (which even its champions must admit), it had better damn well boast a fascinating subtext. But while various folks have offered theories regarding what it's about, I have yet to see anyone offer an analysis of how it's about it. (Manohla Dargis's \"crisis in human identity\" reading is based solely on the killer's repeated and in my opinion terminally dorky question \"Who are you?\", as far as I can tell—an awfully slender thread. Too bad she only wrote a capsule.) But the \"nobody inducing them to kill\" idea is actually kind of the movie Cure is. Mysterious Amnesiac Dude is basically a cypher, isn't he? He might as well not exist—which is sort of the film's point. By the end, he's gone, but the madness continues. If he might as well not exist, how is the movie improved by his presence? __________________________________________________________ Back to the present day. That last question is the crux of the matter for me. (Though, again, said question was hashed out at laborious length in subsequent posts not reproduced here; no need to chime in now.) While I adore Cure 's final shot in a vacuum—had someone shown it to me with zero context, I'd have thought \"What a badass way to end a movie\"—it doesn't make much sense to me as the ending of this movie. Were Takabe (the detective) not present, I could perhaps conclude that the power of suggestion is no longer necessary to unleash people's violent impulses; that'd be more Pulse -like, heralding the sort of widespread societal chaos that we see in that film's batshit apocalyptic conclusion. Instead, it's as if hearing the wax cylinder in the abandoned farmhouse—a quasi-explanation that I neither required nor found remotely satisfying—has transferred Mamiya's strange powers to him, but in a way that somehow requires no hypnosis and I guess might even be inadvertent/unconscious. There's just too much WTF here for my taste, ultimately; if Miyami's meant to be a red herring, as several of my friends insisted at the time, that approach seems counterproductive, especially given how little we learn about any of the random people he urges to commit murder. For the record, here's the TONY review, which as noted features, from my perspective, an especially ironic final sentence, since I would be sold on Kurosawa's greatness (in one instance, anyway) just two months later. __________________________________________________________ Filmmakers, like stocks, can be overvalued or undervalued, and Japanese director Kiyoshi \"no relation\" Kurosawa is currently being sold by critics and programmers for considerably more than he's worth. As recently as ten years ago, he would have been hailed as \"quite promising\" on the basis of the solemn, clumsily enigmatic genre efforts he's been churning out. Today, however, in a climate where new masters are actively (and somewhat desperately) being sought in every corner of the globe, he's been anointed prematurely—already the subject of a career retrospective at the Toronto Film Festival, for example, which programs only one such retro each year. Cure , like his subsequent films License to Live and Séance , squanders a potentially compelling scenario, expertly toying with the audience's expectations but ultimately provoking little more than an exasperated shrug. There's no denying the guy's ambition and talent, but let's calm down here, folks. Almost entirely devoid of music and chillingly detached in its presentation of violence, Cure follows a police detective (Kurosawa regular Kōji Yakusho) as he hunts down an amnesiac serial killer (Masato Hagiwara) who hypnotizes others into committing murder, usually with the aid of a cigarette lighter. Murder-by-catalysis is an intriguing notion—Iago employs more or less the same strategy in Othello , if you think about it—but Cure 's woozy psychopath remains a ludicrously opaque figure throughout, repeating the same banal pop-psych question to each interrogator (basically: Who are you? No, who are you really , deep inside?), and Kurosawa fails to make any kind of cogent statement about the nature of apparently motiveless crimes or the inherent unknowability of the human heart. What's more, Yakusho's flatfoot has been saddled with a mentally disturbed wife (Anna Nakagawa), upping the emotional ante in the cheapest possible way. Individual scenes work beautifully, it's true, but they utterly fail to coalesce into a satisfying whole. Kurosawa may yet achieve greatness, but I'm afraid that I'm not sold just yet.",
+      "temas_atribuidos": [
+        "t2",
+        "t3",
+        "t4",
+        "t5",
+        "t6"
+      ]
+    },
+    {
+      "indice": 1,
+      "rating": 3.0,
+      "texto": "This is my second Kyoshi Kurosawa film after last week’s Sweet Home . Cure is a gritty cat and mouse psychological thriller that is suspenseful and dabbles in horror (as the genre is KK’s great staple). The mise-en-scene and plain atmosphere is a solid foundation for where the film’s themes further extrapolate. Lately I’ve been utilizing a lot of film comparisons so I’m going to keep rolling with that. More than Kurosawa’s obvious statement of the influence of Fincher’s Se7en (which I see), I feel there is an even greater similarity to Michael Mann’s Manhunter , which barring any other significant film I’m possibly forgetting at this moment, is probably the greatest example of the “good” guy getting into the head of the “bad” guy. While Manhunter approaches this method in a much more straight forward fashion I find it to be infinitely more terrifying exactly for that reason. It isn’t a horror film as a genre piece, but it’s psychological digression sure could be argued as one. The idea of one getting dramatically overtaken by their work via the examination of evil is certainly a great one. Cure , on the other hand, goes for the subdued approach, and while I certainly felt plenty of suspense amidst the lackadaisical yet gripping conversations, I feel a huge suppression of actual horror. I’ve read plenty of reviews and analyzations of this piece, and many do successfully feel the transference of this horror so to each their own. Not once was there any terrifying significance of the provided symbols. The process of the antagonist’s questioning comes across vastly superior in the reasoning behind the plot points, but the writing doesn’t take the ideas far enough. All of it feels just barely scratched upon the surface. While the idea of evil spreading like a plague is an intriguing one, I’m not so sure it is handled in the most proper way of getting this across. So far, it seems to me Kurosawa as a director is one of those examples (like Scorsese) who is outdone in several aspects many claim to be his best. In fact, Haneke may be the best recent example for me to throw out there attempting to depict horrors amidst the human race philosophically. Heck, I’ve even felt more horrified from straight up dramas like Sátántangó that wallow in their own existential dread (and even that one isn’t the best of it’s kind). Anyway, I’m not here to bash on anyone’s particular love for this film. It just didn’t hit the high notes as well as it could have, particularly with the writing. The directorial skill is there but not tuned or well adjusted to the themes at hand. Viewed on the Criterion Channel.",
+      "temas_atribuidos": []
+    },
+    {
+      "indice": 2,
+      "rating": 3.0,
+      "texto": "It frustrates me because I feel like I didn’t connect with this film in the same way most people seem to have. I’ve read so many glowing reviews praising it, and yet I have to admit that I found it somewhat slow and even boring for most of its runtime. The premise is incredibly interesting, and after reading more online about the story and the ending, I can absolutely see and understand what the film is trying to convey. Still, there remains an intangible barrier preventing me from fully surrendering to its atmosphere and emotional rhythm.… maybe I should revisit it in a few months and see if it resonates differently. As of now, however, it has left me feeling strangely indifferent.",
+      "temas_atribuidos": [
+        "t1",
+        "t2",
+        "t4"
+      ]
+    },
+    {
+      "indice": 3,
+      "rating": 3.0,
+      "texto": "100-word review: I read that Kiyoshi Kurosawa is better at creating mysteries than he's at resolving them; and in a nutshell that's how I feel about Cure , which drew me in with it's Se7en -esque atmosphere and detective vs. enigmatic antagonist dynamics, without ever giving me the same satisfying resolution. Why the things happen that happen in act three beats me. I get that there's more than just a narratively supposed connection between the hypnotist and senseless \"we live in a society\" murders, but I fail to see the metaphorical one. It's well-made, but Cure eludes me too much to love it. Part of the September & October 2023 Hooptober X challenge; 18th out of 31 films. 6 countries [Japan] (9/6) 8 decades [1970s] (7/8) 2 post apocalyptic or natural disaster related films (1/2) 1 film with Robert Englund (0/1) 1 something is underground film (2/1) 3 Satan/Devil centred films (2/3) 1 Amicus film (0/1) 1 the worst, unseen, accessible Dracula film (1/1) 1 LGBTQ+ connected film (1/1) 5 De Palma, Craven, Russell, Hitchcock or Moorhead & Benson films (3/5) 2 Peter Cushing films (1/2) 1 film based on a work of or invoking the name Bram Stoker (2/1) 1 film based on a Clive Barker story (1/1) 1 film that was released the year that you turned 10 (0/1) 1 Mario Bava film (0/1) 1 film with an 'x' in the title (1/1) 1 Tobe Hooper film (1/1)",
+      "temas_atribuidos": [
+        "t1",
+        "t3",
+        "t6"
+      ]
+    },
+    {
+      "indice": 4,
+      "rating": 3.0,
+      "texto": "i can’t put my finger on what felt so off about this but it was really hard to follow along. i definitely think my rating will go higher on a rewatch though!",
+      "temas_atribuidos": [
+        "t1",
+        "t3",
+        "t6"
+      ]
+    },
+    {
+      "indice": 5,
+      "rating": 3.0,
+      "texto": "Beware of Nosy Nates, is all I gotta say. Indeed, Kiyoshi Kurosawa's psychological crime thriller warns against telling too much about yourself to strangers, like to Hannibal Lecter for instance?, but also to severe amnesiacs who ask a lot of personal questions but can't remember two minutes ago. \"Who are you?\" That's the central question of this whole story, and Cure is at its best when our amnesiac pushes that question into his prey's faces and won't let up. As a mood piece this is pretty effective, I liked the performances, but I think I like my hypnosis-related murder mysteries a little more grounded in the external world than this. Full disclosure, I'm not much of a horror fan or expert so I can't really say whether this is a good, medium or bad genre film. This is not boring, but there are problematic elements here that I find often crop up in these types of films. One, motive. I get Mayima as an unstable young loner who takes his field of study much too far and slips into psychopathy (a descent related to the burn he suffers at the junkyard? Maybe, who knows, it wasn't clear at all to me). And I can get on board with the far-fetched but compelling notion of him inciting others to murder by bringing to the surface the fault lines already there within them. But how to explain the detective apparently taking over the mantle of hypno-murder-inciter? Why on Earth would he do that, I asked myself. I didn't have an answer. My other bugaboo involves the visions at least one if not more of the characters suffer from. While using dreams or hallucinations to create shocks has its place, Cure just goes to that well a little too often for my taste; towards the end we see one or two more shocking images and we're left to toss a coin about whether those are real or imagined. Plus I find that device can become a form of laziness, a shortcut to explain what you want explained, like our detective's state of mind and increasing vulnerability to Mayima's Mesmer-inspired powers. That could have been conveyed otherwise.",
+      "temas_atribuidos": [
+        "t3",
+        "t4",
+        "t6"
+      ]
+    },
+    {
+      "indice": 6,
+      "rating": 3.0,
+      "texto": "Truly one of the most annoying serial killers ever put to film. An amnesiac with astoundingly poor context clue skills, all the pep of a costco jug of barbiturates, can only talk like the world's least interested magic 8-ball, and keeps spilling water on the goddamn floor.",
+      "temas_atribuidos": []
+    },
+    {
+      "indice": 7,
+      "rating": 3.0,
+      "texto": "I just got finished with seeing Cure, and I am SO confused. While I didn’t understand a thing that happened in Cure, which if anyone can explain it to me that would be amazing. However, the other thing was liking it, I was very on and off about it. It had its moments of being a strong, gruesome, dark, twisted thriller film. But at times it got extremely slow if you asked me, it was unevenly paced and often caused very back and forth issues for me to connect with it. When I did, it was going well, with the Se7en vibes, and the creepy horror element to it. But when it wasn’t, it just felt really off, like a super slow drama film. To be fair on the review/rating, I do fully believe that not understanding what on earth was happening, nor what JUST happened. Does not greatly appreciate the overall rating to this. It leaves a lot of mystery yes, and I do like a bit of mystery. However when I genuinely have no idea what’s going on, and I’m being thick I know, but it’s very unclear and subtle at times. It often could have my attention, but lose it at the same time? Maybe I’m just being an idiot, but I got a little bit of it, as I believe there was something to do with hypnosis mentioned?? But to be honest it kept losing me at times, when I couldn’t tell what it wanted to be. In a sense of, a gritty realistic thriller, or a darker, twisted, supernatural occurrences thriller/horror. My main complaint which is a me being a total dumbass, was not understanding it. I just felt a lot was needed to be explained, which I know that sounds stupid but, I just felt really off it? It felt as if there were two trains, one with everyone who loves it and understands it, then the other who thinks it’s good…but doesn’t understand a single piece of it. Please don’t come at me for this opinion, and I’m sorry for being a total dumbass and idiot!! But hey, we’re not all perfect🥲. I also felt Cure was highly overhyped and overall just kinda lack-luster, IMO!!! Maybe I need a rewatch on this film, but right now, wasn’t a big fan unfortunately.",
+      "temas_atribuidos": [
+        "t1",
+        "t3",
+        "t6"
+      ]
+    },
+    {
+      "indice": 8,
+      "rating": 3.0,
+      "texto": "Hypnotic, unsettling, slow, dark, surreal, atmospheric, complex, confusing, boring, well-acted, well-made, and unsatisfying. Not sure why this didn’t quite click for me but it is a great movie to fall asleep to.",
+      "temas_atribuidos": [
+        "t1",
+        "t2",
+        "t5",
+        "t6"
+      ]
+    },
+    {
+      "indice": 9,
+      "rating": 3.0,
+      "texto": "Saglasan sam i postujem ljude koji smatraju ovaj film remek-delom, ali na mene jednostavno nije ostavio utisak kakav sam ocekivao. Volim psiholoske, dublje trilere, a nemam nikakav problem ni sa sporijim pejsingom kada me film zainteresuje. Medjutim, ovde nisam uspeo da se povezem sa pricom, niti da osetim napetost koju su mnogi opisivali. Ideja o potisnutom nasilju, gubitku identiteta i zlu koje se siri kao zaraza jeste zanimljiva, ali mi je film vise delovao kao skup ideja koje me nisu toliko \"kupile\". U jednom trenutku sam imao osecaj da sam i ja hipnotisan, zajedno sa likovima. Bio sam sve letargicniji i umorniji kako je film odmicao. Cenim atmosferu, minimalisticku reziju i cinjenicu da film ne nudi lake odgovore, ali sam na kraju ostao sa osecajem da posmatram film sa distance, umesto da budem deo njega. Mozda ce mi vise leci na rewatchu, ako ga uopste bude i bilo. Da rezimiramo, film uopste nije los, samo meni u ovom trenutku nije toliko prijao.",
+      "temas_atribuidos": [
+        "t1",
+        "t2",
+        "t4"
+      ]
+    },
+    {
+      "indice": 10,
+      "rating": 3.5,
+      "texto": "J apanuary 2025 🇯🇵 is there a ‘ Cure’ for us to really connect with these type of films? will it be that we aren’t susceptible to hypnosis? will a rewatch do the work? the thing is that my expectation is to love them because supposedly i’m fascinated by the concept of atmospheric horror and the inclusion of philosophical thinking , but at the end they don’t made me feel much dread or don’t fully understand their themes. leaving more questions than answers leaves an unsatisfied feeling. with that said, there is no doubt that this is an enriched and interesting product. just matter of time, i suppose :) - @uzhiel *score : 72/100",
+      "temas_atribuidos": [
+        "t3",
+        "t4",
+        "t6"
+      ]
+    },
+    {
+      "indice": 11,
+      "rating": 3.5,
+      "texto": "(The Average Joe’s Movie Club Cast) Criterion Collection Spine #1155 (Foreign language film - Japanese) A slow-burning police procedural investigation into a series of vicious manipulated killings ... but is there really any substance behind the film's contrasting reserved but then brutal style. \"But even if you manage to hypnotize someone ... you can't change their basic moral sense. A person who thinks murder is evil won't kill anyone ... under hypnotic suggestion.\" When first watching Cure I was compelled by these odd killings that reminded me of 'Se7en', but not unclear what it was driving at. With flipping back through the puzzle it was fascinating to see just how much the film packs in under our noses within just the first 30 minutes. But is a movie's ability to hide its cards worth that much, with this kind of muddled final statement? (Quick Hits) .... Spoilers: - Well you know this has arthouse roots based on that looooog intro for our antagonist - A friend of mine pointed out that it is awfully convenient how powerful the hypnotism is here, to pull off these quite detached killings - I looked up what that 'Blue Beard' story is all about, and it does not fully pull into what Cure has going on - I guess what this movie boils down to is that anyone can be tricked to kill someone with the right suggestion. But our main character for some reason forms a connection with the killer that passes on his ability to hypnotically kill, in order to Cure the detective of the dilemma of his strained home life against the cold cruelty of his job - I might be reaching a bit since this is all possibly conveyed from such an ambiguously, cold, and distance perspective - Often when a film is praised that I don't get along with I always want to try and figure out why. Ultimately for me, Cure has a clever way of grabbing our attention with the violence of these murders while hiding the motive behind it all in plain view - By the end there are some neat ideas going on here from the visuals of the lighter, to the detective being overcome by dread and hallucinations as a result of his mounting stress - But ultimately this is a case where the movie does not feel elevated for me as a result of all the conveniences, and the questioned themes not fully coming together at the end in a convincing way There are a bunch more elements to consider, so if you want to fully dive into my conflicted thoughts on Cure with Joey Porter just click HERE! Thanks for reading. Happy movie watching ... Skål! 🍻",
+      "temas_atribuidos": [
+        "t2",
+        "t3",
+        "t4",
+        "t5",
+        "t6"
+      ]
+    },
+    {
+      "indice": 12,
+      "rating": 3.5,
+      "texto": "Sat down to watch this with sky-high expectations, only to finish it completely confused, wondering why people rated it so highly when it felt like barely anything happened. Then I had the plot explained afterward and… yeah, now I get the hype. Kiyoshi Kurosawa’s concept is genuinely brilliant, and that ending has been stuck in my head ever since. As a first-time viewing experience, it still felt emotionally distant and a bit slow for me personally. But purely for its ideas, atmosphere, and haunting final impression, I can absolutely see why this film is so respected.",
+      "temas_atribuidos": [
+        "t1",
+        "t3",
+        "t4",
+        "t6"
+      ]
+    },
+    {
+      "indice": 13,
+      "rating": 3.5,
+      "texto": "🇬🇧\"Cure\", written and directed by Kiyoshi Kurosawa, is a Japanese film that blends police procedural, horror, and the supernatural. We follow a series of murders in which each victim is found mutilated with an X carved into their body. This is a heavy, suffocating film with a dark atmosphere, where the city itself becomes part of the unease. The investigation into the serial killer ultimately isn't the film's true subject, since we quickly learn who is responsible. In any society, and perhaps even more so in Japan, when established rules begin to collapse, something starts to fall apart. Inspector Kenichi Takabe gradually neglects his personal life in favor of his work, while madness and the supernatural slowly take hold through the murders and the mysterious drifter. Kiyoshi Kurosawa immerses us in this state of mind through his direction: long takes, extended conversations, carefully composed frames, and precise cinematography. He also reinforces this feeling with a hypnotic score and a constant use of off-screen space, where fear comes more from suggestion than from what is actually shown. The layered framing, the mystical atmosphere, and hypnosis all contribute to the idea of a rigid society slowly cracking and becoming contaminated by evil. As for the pacing. I’m not yet sure if I liked it. In any case, it didn’t completely put me off. What is really happening inside Takabe's mind? I found myself wondering: would I have made the same choices? Better ones? Worse ones? How powerful is the human mind, and at what point does it surrender to the inexplicable? More than its answers, Cure is about nihilism and the questions it leaves behind. In the end, there may be very few answers, but whether you love the film or not, I think you'll be struck by its framing, its rhythm, and its atmosphere. Is evil already within all of us, simply waiting to emerge? Or is it born from the choices we make? And are those choices truly ours... or beyond explanation? Reviews: 🔙 Evil Dead Burn 🔜Not yet Add to my list of movies seen in 2026 Add also to my list of Horror movies 🇫🇷« Cure » est un film japonais écrit et réalisé par Kiyoshi Kurosawa. C’est à la fois un film policier, d’horreur et fantastique. Nous suivons une série de meurtres dont les victimes sont retrouvées mutilées avec un X gravé sur leur corps. Nous sommes plongés dans un film lourd, poisseux, à l’ambiance sombre, où la ville participe pleinement au malaise. L’enquête autour du tueur en série n’est finalement pas le véritable sujet du film, puisque l’on apprend assez rapidement qui il est. Dans n’importe quelle société, et peut-être encore plus au Japon, lorsque les règles commencent à vaciller, quelque chose finit par s’effondrer. L’inspecteur Kenichi Takabe délaisse peu à peu sa vie personnelle pour son travail, tandis que la folie et le fantastique s’installent progressivement à travers les meurtres et cet étrange personnage. Kiyoshi Kurosawa nous plonge dans cet état d’esprit grâce à sa mise en scène : plans-séquences, longues discussions, cadres très soignés et composition précise. Il renforce aussi cette sensation par une bande-son hypnotique et un travail constant sur le hors-champ, où la peur naît davantage de ce que l’on imagine que de ce que l’on voit. Le surcadrage, le côté mystique et l’hypnose participent également à cette idée d’une société rigide qui se fissure peu à peu, jusqu’à être contaminée par le mal. Pour la question de rythme (qui peut faire débat). Je ne sais pas encore si j’ai aimé. En tout cas elle m’a pas totalement rebuté. Que se passe-t-il réellement dans la tête de Takabe ? Je me suis demandé : est-ce que j’aurais fait les mêmes choix ? Pire ? Mieux ? À quel point l’esprit humain est-il puissant, et à quel moment se laisse-t-il emporter par l’indescriptible ? Plus que les réponses, Cure parle de nihilisme et des questions qu’il laisse derrière lui. Il apporte finalement peu de réponses, mais je pense que, qu’on aime ou non le film, on sera marqué par ses cadrages, son rythme et son atmosphère. Le mal est-il déjà présent en chacun de nous et n’attend-il qu’à surgir ? Ou dépend-il uniquement de nos choix ? Et ces choix sont-ils vraiment les nôtres, ou relèvent-ils de l’inexplicable ? Reviews: 🔙 Evil Dead Burn 🔜Not yet Add to my list of movies seen in 2026 Add also to my list of Horror movies",
+      "temas_atribuidos": []
+    },
+    {
+      "indice": 14,
+      "rating": 3.5,
+      "texto": "Japanuary ( Japanuary 🇯🇵 2022 boxd.it/ef5Rw ) Als Fan von Filmen mit dem Hang Neues zu entdecken, mich tiefer in die Materie hinein zu graben und mich hinein zu sehen, ob aus dem verschlossenen Russland oder dem zweiten großen Markt neben dem Westlichen, dem Östlichen, bin ich grundsätzlich offen für jedwedes Genre mit einigen, selbstverständlichen, Präferenzen. Nach meinen Favoriten zu schließen, die ich gut und gerne auf das doppelte höherschrauben könnte, findet sich „Oldboy“ gleich neben einem „Herr der Ringe: Die zwei Türme“ darauffolgend „Terminator“ und abschließend „Leon – Der Profi“. Somit bin ich ebenso dem westlichen wie dem östlichen Kino angetan. Würde ich mich Asien-Connaisseur bezeichnen, würde ich mich sehr, sehr weit aus dem Fenster lehnen und gar meiner eigenen Lüge anheimfallen. Jedoch schätze ich das jüngste asiatische Kino für ihre Thriller, die die Produktionen aus Hollywood – die wenigen nennenswerten die zu uns schwappen – abgelöst haben und meist übertrumpfen an Originalität, Inszenierung und dem Härtegrad. Ältere Werke, besonders die aus meiner Kindheit, sind prägend von „Kung Fu“-Filmen mit dem Hang, und dank meines Papas der selbst kampfsportaffin wie selbst diverse Kampfsport-Richtungen ausübte, zu Bruce Lee. Da hinzukommend gesellten sich Ninja-Filme wie Samurai-Filme, abermals ein vom Vater zum Sohn überschwappende Vorbliebe. Nach jetzt knappen zwei Jahren Letterboxd und dem Erweitern des Horizontes ins Unermessliche, vertiefte ich mein Filmwissen und erkannte heute wieder einmal, wie verklärend gerade Werke aus dem östlichen Kino auf mich sind, bestens Beispiel: „Cure“. Kiyoshi Kurosawa 1997 erschienene Werk ist dröge, nihilistisch, still, anstrengend, zäh und für mich, der seine Filmauswahl sorgsam aussucht, ein Grund, einem Frevel gleich, ihn zeitig auszuschalten der „verschwendeten“ Zeit. Doch hier kam das Neue, das Neue aus dem östlichen Kino ins Spiel. Wohl jedwedes westliche, Hollywood-Werk der mir so rübergekommen wäre, hätte ich vorzeitig abgebrochen. Die alles andere als schlechten Bewertungen wie eine überaus vielversprechende Letterboxd-Bewertung von 4,1 und die asiatische, hier die japanische Machart, hielten mich an die knappen zwei Stunden und ließ mich mit derselben Erkenntnis zurück, die ich nach gut vierzig Minuten erlangt hatte: der Film und ich, das wird nichts. Verblendet und befangen der aufgezeigten Punkte und Gründe, blieb ich bei einer überaus positiven 3,5/5 Bewertung wo ich sonst mit ziemlicher Sicherheit eine 3/5 gezückt hätte und wohl weiter machen werde, sobald ich in den asiatischen Gefilden wandere. Hier noch ein kleines Dankeschön an meinen „Namensvetter“ 0oldboy0 für seine Expertise, Empfehlung und für das Bereitstellen dieses und noch kommende Filme. Link - www.youtube.com/watch?v=Mk6Tn2u8rXc&t=7s",
+      "temas_atribuidos": [
+        "t1"
+      ]
+    },
+    {
+      "indice": 15,
+      "rating": 3.5,
+      "texto": "People like to think a crime has some meaning, but most of them don't. I tried watching this like a month or so ago, but only got twenty minutes in. It was clear that this was going to be a very slow, quiet feature, and I wasn't really in the mood to continue with that. Instead of possibly having a quality movie tampered by watching it in the wrong situation, I waited until now to give it another shot. I'm glad I did. I don't think Cure is great, but I find it to be unique. I like how it presents the murders. Is there something supernatural behind this? is it just a lot of people going crazy? Something beyond either of those? No straight answers. There's maybe even more questions at the ending of Cure than there were at the beginning. But I like that about it. The film is very cinematic, shot well, really long shots, dramatic acting, but it all feels so eerily realistic. If there was some odd serial killings like this that happened, the more drastic decisions of people surrounding the murders felt realistic. Silence is almost always in the film. Whenever someone isn't talking, there's almost no music at all beyond the opening and ending. Silence. People have to sit with what has happened. It's chilling in a good way. There's one moment involving the lead detective and his wife that I won't spoil, but it scared the shit out of me. A very memorable scene that I think is going to stick with me for a while. Not blown away, but I can also see myself watching this again eventually. Feels like it's completely its own, which you can't say for many movies. 7/10",
+      "temas_atribuidos": [
+        "t2",
+        "t5"
+      ]
+    },
+    {
+      "indice": 16,
+      "rating": 3.5,
+      "texto": "M I N D F U C K. A movie about being mindfucked. Many minds are fucked in this movie. My mind remains unfucked, or maybe it was fucked all along. Is my mind a virgin? What was I just doing? What am I holding? What does this button",
+      "temas_atribuidos": []
+    },
+    {
+      "indice": 17,
+      "rating": 3.5,
+      "texto": "Contemplate, in Cure, the birth of evil — or perhaps the awakening of a human nature already vile, frustrated, or repressed not through a virulent force, but like a silent, apathetic virus. An evil that begins intangible, germinates evenly, crawls patiently until it finally transmutes into a demon. Here, evil doesn't scream. It is whispered. Whispered through calm ideas, quiet rituals. Like an infectious gospel, an empty doctrine that offers no answers, only dissolves questions, unravels, dismantles the \"self\". Slowly, like a cancer, it seeps into the cracks of the psyche, tears apart values, erases what was left of conviction, until nothing remains but raw impulse. Evil here doesn’t destroy the body. It devastes identity. Kiyoshi Kurosawa builds this terror without relying on monsters or ghosts. The true horror isn’t in the other, but in the unmasked self — in what arises when reason weakens and identity collapses. And that’s what the film captures: not with jump scares or loud soundtracks, but with long takes, silent hallways, empty stares and dialogues that lead nowhere. Evil is in the absence: of meaning, of direction, of certainty. Best Japanese Movies",
+      "temas_atribuidos": [
+        "t2",
+        "t5"
+      ]
+    },
+    {
+      "indice": 18,
+      "rating": 3.5,
+      "texto": "\"You'll be born again, just like me\" Kiyoshi Kurosawa's magnum opus, a crime thriller that brings a cure for society's ailments. A film that makes you re-evaluate your own morals. I fell asleep the first time i tried watching it because the slow pace and disturbingly quiet atmosphere of this film had an oddly hypnotic effect on me. While I love Kurosawa's style it does take a while to grow on me. I wasn't too impressed with the way it started and when the killer's methods become known but as it progressed Cure managed to get under my skin. Similar to Pulse, the atmosphere is the key here. It's the muted tones, flickering lights, leaking pipes, dark corners, silent screams that sets the disturbing ambience in which Cure thrives.",
+      "temas_atribuidos": [
+        "t1",
+        "t2"
+      ]
+    },
+    {
+      "indice": 19,
+      "rating": 3.5,
+      "texto": "An elusive, elliptical & enigmatic psychological horror that only gets more n more intriguing as it progresses, Cure is a serial killer film that doesn't bother itself with procedural aspects of its genre and is instead far more interested in the dissection of the human psyche. As subtle as it is unrelenting, it paints an absorbing portrait of psychology & psychosis. Written & directed by Kiyoshi Kurosawa ( Pulse ), the film equips the viewers with the info they seek yet keeps them at a distance from its characters for their own sake. It is less an investigation into the brutal killings and more an inspection of the human condition, and Kurosawa underlines the film's thematic context by digging deeper into the complexity of his characters. Unlike most serial killer features, the film finds horror in the most basic of things, like flame of a lighter or a glass of water. Several scenes that seem harmless pack more chills than the disturbing details of the crime scenes. The performances are restrained, layered & top-notch, with Masato Hagiwara impressing the most with an evasive act that's as interesting as it is irritating. Overall, Cure is a fascinating meditation on evil and what happens when you get too close to it, and is one of those films that linger on long after the credits have rolled. As mesmeric as it is mysterious, this Japanese chiller brims with a mystical aura & hypnotic quality that only magnifies as plot progresses. And even if it fails to leave a memorable mark, one can't deny the wicked & alluring power of its dimly lit imagery. Multiple viewings advised.",
+      "temas_atribuidos": [
+        "t4"
+      ]
+    }
+  ]
+}

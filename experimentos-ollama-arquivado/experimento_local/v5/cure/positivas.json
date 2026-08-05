@@ -1,0 +1,379 @@
+{
+  "bucket": "positivas",
+  "n_reviews": 30,
+  "falhou": false,
+  "lote_tamanho": 25,
+  "tempo_estagio1_s": 134.1,
+  "tempo_estagio2_s": 161.33,
+  "tempo_total_s": 295.43,
+  "estagio1_log": [
+    {
+      "tentativa": 1,
+      "tempo_s": 134.1,
+      "done_reason": "stop",
+      "eval_count": 342,
+      "conteudo_chars": 1144,
+      "json_valido": true
+    }
+  ],
+  "estagio1_temas_propostos": [
+    {
+      "id": "t1",
+      "tema": "Atmosfera opressiva e onírica",
+      "descricao_curta": "gera um estado de transe, paranoia constante e desorientação onde a realidade parece se dissolver na mente do espectador.",
+      "aspas_removidas_da_descricao": false
+    },
+    {
+      "id": "t2",
+      "tema": "Vazio interior dos personagens",
+      "descricao_curta": "provoca uma sensação angustiante de frieza, vazio existencial e identidade frágil que se desmorona facilmente sob pressão.",
+      "aspas_removidas_da_descricao": false
+    },
+    {
+      "id": "t3",
+      "tema": "Violência mecânica e banal",
+      "descricao_curta": "transmite repulsa por causa da sua execução calma, sem drama ou emoção, como se fosse uma rotina cotidiana. ",
+      "aspas_removidas_da_descricao": false
+    },
+    {
+      "id": "t4",
+      "tema": "Estilo visual minimalista e clínico",
+      "descricao_curta": "causa inquietação através de cenários limpos mas frios, iluminação neutra e longas tomadas que impedem a fuga do olhar.",
+      "aspas_removidas_da_descricao": false
+    },
+    {
+      "id": "t5",
+      "tema": "Som ambiente perturbador",
+      "descricao_curta": "induz alucinações auditivas onde o espectador não consegue distinguir se os sons vêm da tela ou de fora, aumentando a tensão. ",
+      "aspas_removidas_da_descricao": false
+    }
+  ],
+  "estagio2_lotes": [
+    {
+      "offset": 0,
+      "tamanho": 25,
+      "chamadas": [
+        {
+          "tentativa": 1,
+          "tempo_s": 137.64,
+          "done_reason": "stop",
+          "eval_count": 305,
+          "conteudo_chars": 475,
+          "json_valido": true
+        }
+      ],
+      "ok": true,
+      "ids_invalidos": 3
+    },
+    {
+      "offset": 25,
+      "tamanho": 5,
+      "chamadas": [
+        {
+          "tentativa": 1,
+          "tempo_s": 23.69,
+          "done_reason": "stop",
+          "eval_count": 57,
+          "conteudo_chars": 87,
+          "json_valido": true
+        }
+      ],
+      "ok": true,
+      "ids_invalidos": 0
+    }
+  ],
+  "estagio2_ids_invalidos_total": 3,
+  "n_reviews_sem_tema": 10,
+  "n_reviews_nao_classificadas_falha_lote": 0,
+  "n_reviews_com_tema": 20,
+  "media_temas_por_review_classificada": 1.633,
+  "idioma_pt_br_ok": true,
+  "temas_finais": [
+    {
+      "tema": "Estilo visual minimalista e clínico",
+      "mencoes_aproximadas": 15,
+      "n_reviews_analisadas": 30,
+      "exemplo_parafraseado": "causa inquietação através de cenários limpos mas frios, iluminação neutra e longas tomadas que impedem a fuga do olhar.",
+      "id_estagio1": "t4"
+    },
+    {
+      "tema": "Atmosfera opressiva e onírica",
+      "mencoes_aproximadas": 13,
+      "n_reviews_analisadas": 30,
+      "exemplo_parafraseado": "gera um estado de transe, paranoia constante e desorientação onde a realidade parece se dissolver na mente do espectador.",
+      "id_estagio1": "t1"
+    },
+    {
+      "tema": "Vazio interior dos personagens",
+      "mencoes_aproximadas": 10,
+      "n_reviews_analisadas": 30,
+      "exemplo_parafraseado": "provoca uma sensação angustiante de frieza, vazio existencial e identidade frágil que se desmorona facilmente sob pressão.",
+      "id_estagio1": "t2"
+    },
+    {
+      "tema": "Som ambiente perturbador",
+      "mencoes_aproximadas": 7,
+      "n_reviews_analisadas": 30,
+      "exemplo_parafraseado": "induz alucinações auditivas onde o espectador não consegue distinguir se os sons vêm da tela ou de fora, aumentando a tensão. ",
+      "id_estagio1": "t5"
+    },
+    {
+      "tema": "Violência mecânica e banal",
+      "mencoes_aproximadas": 4,
+      "n_reviews_analisadas": 30,
+      "exemplo_parafraseado": "transmite repulsa por causa da sua execução calma, sem drama ou emoção, como se fosse uma rotina cotidiana. ",
+      "id_estagio1": "t3"
+    }
+  ],
+  "amostra_completa": [
+    {
+      "indice": 0,
+      "rating": 4.0,
+      "texto": "This is good. Very good. Great, even. I just prefer my East-Asian serial-killing murder mysteries be more heavy on the dropkicks. Flying dropkicks , to be exact.",
+      "temas_atribuidos": []
+    },
+    {
+      "indice": 1,
+      "rating": 4.0,
+      "texto": "The moment I realized the opening contained reference to the story of Bluebeard I knew I’d fall for this film. Although that’s probably not the right language because this film is bleak as fuck. I found it’s ugliness both visually and narratively and morally both repugnant and mesmerizing. The acting is on point. The deaths and their typical bloodiness are unnerving. The film’s view of humanity and its nature is fascinating if disheartening in a way — limning the dynamics of how trauma replicates and bleeds through life.",
+      "temas_atribuidos": [
+        "t4",
+        "t2"
+      ]
+    },
+    {
+      "indice": 2,
+      "rating": 4.0,
+      "texto": "ENCOURAGED BY Moosa Behold! A J-horror/thriller that takes the pacing of Fincher's Zodiac , the odd nature of Lanthimos in films like The Killing Of A Sacred Deer and some of the level of cynicism of Haneke and adds some grounded yet supernatural elements for a hynoptic journey into a cat and mouse movie. The cinematography and the direction is hard to ignore, like you have to be distracted somewhere else to not fall in real love with the way how director Kurosawa (no relation with the iconic auteur) places and moves the camera around the scenery with the actors moving in way that often feel staged but you don't care as they choreographed perfectly. You know how Memories of a Murderer is used as a perfect example on how to block and set up a scene, I'll go to the extreme of calling this a much better one. Most of the reason why many of this works is because the actors here fully embrace the tone. There's an offbeat humor and the way everyone behaves its surreal, which fits very well once you know the modus operandi of the killer here; but some of the very stoic and lifeless everyone behaves here makes for much of an eerie and upsetting vibe that all the perfomers capture very well. My only biggest complain and the reason why I can't give this a 5 or 4.5 is because it gets to a point where the film moves at an almost obnoxious slow pace. At first I get and was buying for it as it built a lot of suspense, but I believe some speed in just mundane or expository scenes would have helped the movie. All in all, this is one thats been taking the reigns of Letterboxd with many friends catching up, but if you haven't even thought about it, I woud definitely suggest you to rush in right away. TODAY SCHEDULE El The Ninth Configuration Ill Manors Cure",
+      "temas_atribuidos": [
+        "t5",
+        "t4",
+        "t1"
+      ]
+    },
+    {
+      "indice": 3,
+      "rating": 4.0,
+      "texto": "\"who are you?\" I really liked Cure, but I never fully sank into its darkness. It’s a film I mostly kept at analytic distance. I’m pretty sure that wasn’t the point, but the main metaphor felt so obvious – the killer slips through the gaps in people, the hollowness at the center of their identity. And of course that hollowness is the most horrifying thing. Still, the film keeps circling this somewhat rigid dialectic of civic identity versus non-identity, embodied in a “lunatic” who floats completely free, untouched by responsibility or the grounding weight of a civilian life. Characters only answer with their job titles, as if that were a self, which makes them easy targets. They’re rigid on the outside and empty on the inside, so he gets in without resistance. “i’m holding on to what’s mine.” With the detective, something different happens: he feels the pull, but on the edge of collapse he fights back, staying in contact with his emotions, his demons, refusing to let the void spread through him. And that gives the film its sharpest tension – the sense that a self can still hold, and how much containment and pathways it needs to stay intact, even if that means ending it, as the psychologist does the moment he feels it closing in. Which struck me, since the expert in theory collapses while the detective holds on by sheer bodily, intuitive, emotional resistance. I actually loved that. \"everyone has a place where the light doesn’t reach.” I just wasn’t taken by the hypnosis angle or the mystery structure surrounding the Austrian doctor Mesmer, so the tone never fully swallowed me. But the metaphor works, and the bleakness steadily creeps in: people undone by what they never questioned, and something old, maybe older than them, passed on, moving through the cracks. And the film stays atmospherically coherent, meandering between something grounded and the slow encroachment of dread, with some strikingly unique shots and editing choices that brought the most disruption and shock to me. The killer isn’t a real person but madness taking shape, and madness doesn’t die. It shifts, it changes faces, it keeps going, drawn to the void beneath identities shaped more by order and conformity than by desire or inner conflict. And honestly, that’s about as unsurprising as it gets. This unease didn’t linger, because it’s long been a familiar presence. This struggle is much too real. --- watched on blu-ray (eureka masters of cinema). some shots drift into muddy territory, and overall the film takes on a warm hue with a color palette I’m not completely sold on, but the deep blacks are great, like the film is swallowing the light on purpose. the sound design is the real standout – mixing classic and minimal electronic music with those low rumbles and strange organic, ambient noises. what does it all mean? that’s for mamiya to find out, not me. 4/5",
+      "temas_atribuidos": [
+        "t2",
+        "t4",
+        "t5"
+      ]
+    },
+    {
+      "indice": 4,
+      "rating": 4.0,
+      "texto": "\"All the things that used to be inside of me... now they are all outside.\" Mind over matter, does it matter? I think Cure proves it. The Japanese say you have three faces. The first face, you show to the world. The second face, you show to your close friends, and your family. The third face, you never show anyone. It is the truest reflection of who you are. What if someone discovered our third face and used it to manipulate us? It was the second Kiyoshi Kurosawa film I watched, after Tokyo Sonata . After two films, I don't think I fully understand or can explain his style, but Kurosawa tells the tragedy in his films in a \"quiet\" way. It's far from exaggerated scenes and emotional outbursts, as if it's telling something that could happen to us every day. In Tokyo Sonata we watch a big family drama, while in Cure we watch the horrors of mind control and a lot of brutal murders. But calmly, breathing. That's what makes this film horrifying: It seems normal. Cure , which reeks of uncertainty in every scene, is interesting in that it makes us think about what can be used against you in the terrible situation the characters are going through, and how the thoughts you have buried can be turned into a weapon. A surreal and fascinating work. It's scary how our minds and our darkest thoughts can be our worst enemies. It is surprising how much this killer and his method exhaust you, but at the same time you do not want to think about it and you cannot stop thinking about it, the presence of the killer becomes surreal like a fear and offers you two questions in exchange for an answer. With each step he draws you deeper into the darkness. There is only one question left in your mind that you are afraid to ask yourself: \"Who are you?\" The elliptical plot turns the narrative and its mental and emotional atmosphere into an unforgettable adventure that will make you want to watch it again with a strong ending and see the film from a different perspective. Mamiya, who gives me goosebumps with just his voice in every scene in the film, is a pale, thin man in his twenties. This man, who cannot remember what was said ten seconds ago, is quite talented at controlling the minds of the people he comes into contact with. Mamiya is either crazy or the embodiment of the devil, constantly asking \"Who are you\" to people he meets. Thus, we know who the villain is in the first scene of the film. In fact, Cure is not about who is behind the mystery, but what is. The question of who are you is not just a question about our names. Who are you actually? What do you do when no one is around? I think one of the most impressive scenes of the film was the scene of the doctor woman and Mamiya. It was a scene that showed that there is no such thing as a completely normal person, and that the \"normal\" of people is the dark secrets inside them, just like all of us. I also have to praise Masato Hagiwara's acting. He managed to destroy me with his calmness. Every scene he spoke in, I felt manipulated and wanted to mess things up like Takabe. Cure is not a film that immediately draws you in or that you don't want to end. On the contrary, it was especially hard to tolerate Mamiya. But it is a film that will make you think about it and google Mesmerism after the film is over. Anton Mesmer and Mesmerism have interested me so much that I have been reading everything I can find on the online since yesterday. I even found a book written by Anton Mesmer and I'm thinking of buying it. It is interesting to see that a film has such an effect on me. Thanks to Moresbi , Umut and Kieran for recommending this to me <3 Now I understand why you recommended this to me. Recommend me movies Ranked: Your Recommendations March 2025 Watched 🔪",
+      "temas_atribuidos": [
+        "t2",
+        "t1",
+        "t4"
+      ]
+    },
+    {
+      "indice": 5,
+      "rating": 4.0,
+      "texto": "I’m but a mere Kiyoshi Kurosawa initiate, but between this film and a scene from Pulse Yush and Trevor showed me a while back, I’d say he’s someone who can do the most with the least amount of trickery. The atmosphere is very meticulous but also very bare bones, and what he’s able to draw from simple cuts, props, and narrative contradictions develops into an ethereal unease that feels as though not just the contents of the story but the presentation itself is of another world, while grounded enough to feel it infiltrating our own. First person to call this movie hypnotic or mesmerizing must’ve felt real clever.",
+      "temas_atribuidos": [
+        "t1",
+        "t4"
+      ]
+    },
+    {
+      "indice": 6,
+      "rating": 4.0,
+      "texto": "“All the things that used to be inside of me... now they are all outside.” A solid psychological horror film that definitely fiddles with your brain and interrupts your perception of certain scenes, I wish the film would have let me connect more with the detective— although I do like the psychological aspects of this so i guess it makes up for it ? However i really enjoy the themes that this film is touching upon sure it’s about evil and all that stuff, but it’s also about the desires of being human and the thoughts and they end up getting repressed— idk maybe im tripping, but that’s kinda what I walked away with especially of who the kind of people the antagonist was targeting. Cure is such an interesting film because it seems like such a far fetched thing especially when hypnosis comes to play, but kiyoshi implemented it in such a grounded manner that was so beautiful while also being disturbing. The sound mixing in this film is genuine work of art here and is probably the best form i’ve ever heard it being used before.",
+      "temas_atribuidos": []
+    },
+    {
+      "indice": 7,
+      "rating": 4.0,
+      "texto": "Probably one of the most under-appreciated J-horror movies out there. Director Kiyoshi Kurosawa knows very well how to create an omnipresent web of dread and danger that the audience members cannot escape. The social commentary elements are the cherry on top as well. A must see for horror fans in general.",
+      "temas_atribuidos": [
+        "t1"
+      ]
+    },
+    {
+      "indice": 8,
+      "rating": 4.0,
+      "texto": "People like to think a crime has some meaning. But most of them don't. Gloomy, dark streets. Cold weather, long coats. Murder, blood. A killer who \"kills\" his victims without touching them. Hypnosis or magic? Are the police facing a serial killer or a wizard? There is no connection between the victims. They were just cut in an X shape down their throats. The people who killed them are different too. But they are just a tool. There is some strange, evil force behind it. Did the devil make them do it or did an evil psychopath? Cure promises you a huge mystery. You are left with hundreds of questions. The case gets more complicated as it is solved. The movie hangs over you like a dark cloud. You are dying of curiosity as fear grips your body. But I must warn you, you may not find definitive answers. The serial killer theme is one of my favorites. I've always been interested in true crime, unsolved mysteries, and murders. I thought I'd watch a familiar serial killer story in Cure . But no. This was different. Like unremembered nightmares, dark secrets, evil spirits. There are no paranormal or fantastic elements. That's what's scary. Unusual things happen, but how? There are so many things that can't be explained. There is no paranormal but there is no scientific explanation either. It's mentioned, there are a few clues. However, while watching Cure , we are the police. All we are given are clues. It is up to us to solve it. Maybe we will never reach the conclusion. Isn't it great? If you haven't experienced Cure yet, do it. It's a ghost. It won't give you answers, it won't enlighten you. You'll be drawn into the darkness and learn to enjoy it. There are still too many closed doors in psychology, mind control, hypnosis, etc. Doors that perhaps even science cannot open. I had never heard of Mesmer before, and I'm grateful for what films taught me. This subject, the way it's handled, aesthetics, acting. I understand now, this is a masterpiece. This is my first Kiyoshi Kurosawa film. I heard his style is usually like this (dark, suspenseful). I'm excited for his other works. And Masato Hagiwara terrified me. Great acting. I got goosebumps just looking at him. I think this is the most recommended film to me. Thank you Moresbi, Tom , George Shaw , Umut , Carter . recommend me movies recommendations ranked march 2025 🔎",
+      "temas_atribuidos": [
+        "t2",
+        "t4"
+      ]
+    },
+    {
+      "indice": 9,
+      "rating": 4.0,
+      "texto": "Spanish version... ‎Primera que veo del otro Kurosawa y me gustó bastante. ‎Por lo general evito las comparaciones negativas, pero después de ver ZODIAC y MEMORIES OF MURDER, algo como CURE no se siente tan impactante. ‎Sin embargo, algo que le juega muy a favor es el aspecto sobrenatural no muy común en el género. Si bien intentan darle una explicación científica y lógica a los extraños sucesos, el misticismo alrededor del antagonista está muy presente en cada momento. ‎English version... ‎This is the first film I've seen by the other Kurosawa, and I quite liked it. ‎I generally avoid negative comparisons, but after watching ZODIAC and MEMORIES OF MURDER, something like CURE doesn't feel as impactful to me. ‎However, one thing that works very much in its favor is the supernatural element which is uncommon in the genre. While they try to give a scientific and logical explanation to the strange events, the mysticism surrounding the antagonist is very present at every moment.",
+      "temas_atribuidos": []
+    },
+    {
+      "indice": 10,
+      "rating": 4.5,
+      "texto": "As I mentioned with Pulse , one of Kiyoshi Kurosawa's best traits as a filmmaker is that his presentation of material has a lack of an emphatic expression to it. The shibui nature of his filmic style, as Bordwell suggests , offers us all the narrative information in the frame necessary, but rarely highlights its relative importance. The rigorousness of this formula thus puts an indelible amount of faith in the spectator to become involved in the narrative, finding horror in commonplace frames that don't tell us to find horror. Cure 's one mistake comes in its initial moments, a murder that happens indifferent to the frame involving a blunt object, ironically scored to kitschy music that feels like something out of the Von Trier/Haneke playbook, which is to say it tells you what to expect. But Kurosawa is in full control otherwise, linking every aesthetic idea to the same idea as his protagonist: an unknowable quantity who turns every investigation into his motivations or origins back on the basic premise of who is investigating him. While the film is told in long takes, these takes are given a mundane design. The initial scene at the beach is one of the most frightening moments in the film without anything in the frame to suggest that this moment is frightening. Characters are relaxedly placed in the frame, not tightly ordered, and the way that the antagonist controls his doomed subjects is through commonplace lighters and glasses of water. Kurosawa emphasizes their importance the first time in the frame, but then allows them to stand as far back in the frame as possible otherwise, letting our own paranoid spectatorship create the fear than letting the camera do it. Cure 's mise-en-scene does everything possible to tell you \"this is not a horror movie,\" in the same way that the hypnotized have no understanding of the atrocities they are forced to commit. Cure gives us a thesis early on when the psychiatrist explains how most murders are inexplainable, and the constant refrain that the killer must have read this in a book or a movie reminds us to think differently about how this film operates. \"No one understands.\" Kurosawa emphasizes that throughout his plain use of naturalistic locations, garishly plain lighting, a sparse unobtrusive score, unstylized acting* (especially by the phenomenal Masato Hagiwara, who looks bored in every scene), and simply shot choices that never tell us how to interpret the information. It is telling that the silent film we see features the hypnotist in the place of the cameraman—the killer is both director and spectator. This spectatorial involvement turns neatly back onto the protagonist himself, whose obvious traits as a cliche of the genre suddenly turn inside out where his own personality is just as externalized as everything else in the film. Along with Zodiac (Kurosawa mentions Se7en as an influence ), it is the ultimate film about obsession with the unknowable, providing just enough clues to string us to a literally blank face. This is a mystery that we can stare directly at, but never truly understand. *I usually have trouble knowing how to judge or examine non-English language performances, but I was struck at the plainness of the delivery of dialogue throughout the film, in which actors rarely break out of any mold of unnatural delivery beyond some of the more frustrated antics and screams of the protagonist.",
+      "temas_atribuidos": [
+        "t4",
+        "t3"
+      ]
+    },
+    {
+      "indice": 11,
+      "rating": 4.5,
+      "texto": "You have to be one of two things to be able to portray psychopathy in cinema as chillingly well as Kurosawa does: a psychopath yourself, or a master of the craft.",
+      "temas_atribuidos": []
+    },
+    {
+      "indice": 12,
+      "rating": 4.5,
+      "texto": "everything about this movie feels so off -- like when you have a single strand of hair down your shirt and it's vaguely itchy but you can't quite place the sensation. it's brilliant. from the first murder to the faint club music (?!) during the interrogation scene, right down to the colors! i didn't realize kurosawa explicitly stated SE7EN as an influence but i was thinking of fincher's greens (and to a degree, james wan's greens, which look like fincher's hand-me-downs) while watching this movie, admiring how kurosawa instead went for the feel-good mint green when nothing about this movie is feel-good. also this was cool as hell. 35mm. Japan Society.",
+      "temas_atribuidos": [
+        "t4",
+        "t5"
+      ]
+    },
+    {
+      "indice": 13,
+      "rating": 4.5,
+      "texto": "About halfway through watching this, my roommate had friends over and they started loudly free styling over some random beats. Here’s the line that made me grab my headphones: “dick long like King Kong I’m fucking my bitch call me Klingon Driving my Benz and I                                    gotta bitch in the back and she has white pants on” Anyways, this film is absolutely mesmerizing (pun intended). 9.7 / 10",
+      "temas_atribuidos": []
+    },
+    {
+      "indice": 14,
+      "rating": 4.5,
+      "texto": "Hooptober #14 Hypnotic. Cure is a masterpiece of fear, told in a clinical and elliptical manner that gives us no comfort. Scenes pass by peacefully in execution, contrasting with the grim plot at hand. People are placed in large, almost empty rooms, the fear coming not from the environment but the internal workings of the mind. Cure is about the way the mind lets us down. It's about the fear of what we do without knowing. Kiyoshi Kurosawa has total command of every scene, flexing the film into something utterly despairing. The deliberate lack of clarity makes for uneasy viewing, and yet it passes by like a trance. It even ends without providing answers. Cure is scary because it's too close to reality. We all could have our darkest desires exposed and be manipulated to carry them out. It turns me on how much I am terrified by this film. I genuinely want to vomit. My Top Films of the 1990s My Top Horror Films",
+      "temas_atribuidos": [
+        "t2",
+        "t4",
+        "t1",
+        "t3"
+      ]
+    },
+    {
+      "indice": 15,
+      "rating": 4.5,
+      "texto": "A truly modern masterpiece, unlike anything I’ve encountered before. It’s a work that doesn’t want to be fully grasped, leaving vast spaces for interpretation, and I found myself questioning not only what it meant but also whether I actually liked it. That uncertainty, I'm now realizing, is part of its power. One of the parts that unsettled me the most wasn’t the horror of the violence itself, but its very presentation. The narrative unfolds through the uneasy dynamic between a detective, Takabe, and a drifting, amnesiac figure, Mamiya. Takabe is drawn into a string of murders committed by ordinary people, individuals with no criminal history, no motive, and not even a hint of anger. They kill with a disarming absence of drama, as if murder had simply slipped into the order of daily habits. This becomes immediately evident at the beginning. A man walks home after work, his face blank, devoid of threat. He enters his house, goes to bed, and murders the woman lying there. The usual cinematic signs of suspense or dread do not heighten the horror of the act. Instead, Kurosawa overlays the scene with music that could belong to a comedy, it’s light, playful, almost indifferent. The contrast is grotesque. Murder here is stripped of rage, stripped even of catharsis; it becomes mechanical, banal, as ordinary as a repetitive routine. And that choice is actually devastating. By removing the expected emotional markers, the film generates neither empathy nor repulsion, but a disturbing estrangement. Violence ceases to be an “eruption of passion” and instead becomes something inexplicable, contagious, detached from reason. We are left with the terrifying suggestion that what anchors us to morality, to order, is fragile, so fragile that the slightest suggestion might unravel it. As Takabe’s investigation deepens, the mystery turns inward. The question is no longer who kills, or even why, but rather about human susceptibility to manipulation, to suggestion, to emptiness. Mamiya embodies this emptiness: his amnesia, his evasive manner, his strange tendency to reflect questions back on those who ask them. He is a mirror, reflecting and amplifying the fissures of those around him. He corrodes certainties by insinuation. For me, there is no resolution here, only an atmosphere: a diffuse sense of fragility. Evil is not just monstrous but ambient, creeping in through silence, hesitation, and meaninglessness. It suggests that horror does not reside in violent impulses themselves rather in the dissolution of boundaries that keep them at bay. It's truly disturbing to think that beneath the surface of routine and reason, there is a void, and sometimes, all it takes is a whisper for someone to fall into it.",
+      "temas_atribuidos": [
+        "t3",
+        "t2",
+        "t4"
+      ]
+    },
+    {
+      "indice": 16,
+      "rating": 4.5,
+      "texto": "trying to distinguish between \"ambient city white noise\" outside real living room window and \"ambient movie white noise\" within the movie became literally impossible as the film went on. could not figure out what I was hearing, from where, and when. what I mean to say here, of course, is that the sound design work is crazy. around the 2/3rds mark, a bunch of little candies fell out of their bag from the top of our fridge onto the kitchen floor – scary af. maybe a little too slow for me overall but I had nightmares so: success",
+      "temas_atribuidos": [
+        "t5",
+        "t1"
+      ]
+    },
+    {
+      "indice": 17,
+      "rating": 4.5,
+      "texto": "Who’s in control? Is free will real or just an illusion? If real, to which extent is our will free, and when does the trial come to an end? Aren’t our thoughts, our actions, and our reasoning influenced by others? We seek answers in philosophy, politics, religion, and other fields, basing our entire worldview on a collection of others' ideas. Other’s ideas were also, like a doll, built in by other people's pieces. And so on and on and on and on. We could sit here and discuss our entire lives for the reasoning in favor and against. It’s been a subject that has haunted humanity for millennia. The film, at its core, is built upon this notion. Suggestion (or hypnosis) only serves as a key to our desires, traumas, and the feelings that we hold within us. Manipulation definitely plays a role, but it only drives these emotions, good or bad, towards a target or specific direction. I also loved how water—which, at least if you have Aquaphobia or it causes harm as a result of a flood or heavy rain—is normally synonymous with tranquility. Here, our killer uses this as a trigger for us to unleash our darkest impulses. Speaking of calm, this is arguably the film that uses the filmmaker's brand of pensive, slow-burn cinema to perfection. It not only fits the story, but it heightens it. It makes the moments of violence strikingly effective. The ominous score also does a lot of the heavy lifting in setting up the tone and the psychological horror that evades us. Masato Hagiwara’s turn as Kunio Mamiya is chilling. His sleepy, monotone demeanor is not only creepy but makes you wonder whether he himself is a puppet with the power of a puppeteer. This personality contrasts incredibly well with Yakusho’s most emotional performance as our lead detective. The first one intrigues you; the second one serves as a great vessel, an avatar for audiences who like him, becoming more frustrating as the mystery seems to ravel instead of unravel. Yet there’s something that pulls us into this case as we become gradually obsessed. All in all, it’s pacing may prove to be challenging for many, but those willing to let themselves be mesmerized would be rewarded with big questions and some good ole’ existentialism all wrapped in an eerie envelope. TODAY SCHEDULE The Silence of the Lambs Cure Longlegs Red Rooms",
+      "temas_atribuidos": [
+        "t1",
+        "t2",
+        "t5",
+        "t4"
+      ]
+    },
+    {
+      "indice": 18,
+      "rating": 4.5,
+      "texto": "A milestone in unremitting cinematic dread. Paranoia surges from beginning to end, never allowing your thoughts to leave the riveting mystery. It begins as a typical police procedure, but gradually goes into the depths of psychosis. Distorting your perspective of reality through sound and the utilisation of space—very similar to 'Pulse,' another of Kiyoshi Kurosawa's films that I really liked. People in big, void spaces enabling those watching to completely lose themselves in the unsettling environments. Meticulously built with not a single detail overlooked, look forward to coming back to this as I have a feeling it could become an all-time favourite down the line.",
+      "temas_atribuidos": [
+        "t1",
+        "t4"
+      ]
+    },
+    {
+      "indice": 19,
+      "rating": 4.5,
+      "texto": "\"all the things that used to be inside me. now they're all outside.\" gets under your skin in the most fascinating way & is constantly playing mind tricks on you. so much of it is about revealing yourself and the consequences of doing so. everything that was bubbling under the surface needs to find a home, something to latch onto, something to take ahold of.",
+      "temas_atribuidos": []
+    },
+    {
+      "indice": 20,
+      "rating": 5.0,
+      "texto": "A work almost too disquieting: Procedural pushed to obsession pushed to psychosis.  Starts as a seeming vision of 90's Tokyo as a city of corpses and interrogation rooms, but even as it does work on sociological levels, (similar to Pulse, Kurosawa uses genre trappings to have us reflect on present spaces and objects) it's a film of the psyche first and foremost.  I can't think of a movie that feels more scarring.  Even reflections on voyeurism & cinema: by desiring to understand evil we risk getting to close to it, and if we get too close to evil we will become evil.  Even as we travese physical spaces we enter psychological ones, like Mamiya's cell or the abandoned house.  And when these spaces intercut, even a cup of water is terrifying.",
+      "temas_atribuidos": []
+    },
+    {
+      "indice": 21,
+      "rating": 5.0,
+      "texto": "choose the word or phrase that doesn't belong in the set 1. do you remember? 2. tell me about yourself 3. i am empty and you are filled with rage 4. human beings are essentially good 1. waves 2. fire 3. air 4. paper 1. a blurred face 2. blood dripping down a sink 3. two men dueling in a room 4. your sanity 1. a happy marriage 2. a fulfilling job 3. a healthy outlook on life 4. a job that asks you to stare straight in the face of evil and tells you that sometimes the cause is... nothing 1. you know nothing 2. you will never know 3. the world is far vaster and more scary than you will ever know 4. listen to the man's voice on the recording, he will spell it out for you 1. they were ordinary people 2. their faces are blank as they describe the indescribable 3. he screams and he cries but he does not seem to regret 4. you put your head in your shaking hands",
+      "temas_atribuidos": []
+    },
+    {
+      "indice": 22,
+      "rating": 5.0,
+      "texto": "MESMERISM AND THE END OF THE ENLIGHTENMENT IN FRANCE This one little stray title on a textbook lying discarded in Mamiya's room was what tied it all together for me. The Enlightenment was a 17th and 18th century philosophical movement that sought to understand the world through empiricism and rationality. Here, in 1997 when Kiyoshi Kurosawa's Cure was released, at the end of the 20th century, at the peak of the postmodern era, that search for truth and understanding is over. It has failed. This failure rests at the heart of the film, it is the socio-cultural anxiety that drives the engine of the narrative: the death of knowledge and meaning. It starts out so simple. \"People like to think a crime has some meaning,\" psychologist Dr. Sakuma tells police detective Kenichi Takabe, \"but most of them don't,\" perhaps attempting to comfort him in his inability to uncover the mastermind behind a series of mysterious serial killings. But this is the burden of all detectives, it is the characteristic cargo of their career: living with the unknown. Because even if Takabe catches this one particular criminal or solves this one particular case, the deeper search is for the source of this deeper evil in society, for what motivates criminals to become criminals. All of the perpetrators in Takabe's current case say that the devil made them do it, and that is who he's really looking for. \"This great evil, where's it come from? How'd it steal into the world? What seed, what root did it grow from? Who's doing this? Who's killing us, robbing us of life and light, mocking us with the sight of what we might've known? Does our ruin benefit the earth, does it help the grass to grow, the sun to shine? Is this darkness in you, too? Have you passed through this night?\" Takabe's wife introduces another complication. She suffers from some sort of mental disability characterized by memory loss; in particular, she will get \"lost,\" forget what she's doing, where she's going, and simply stop, for example, halfway between the grocery store and her house, groceries still in hand. It's hard for her to know anything for certain — and even when she does, she might lose it moments later. While her case is somewhat exceptional, her condition speaks to a more fundamental instability of the mind: we may not share in her specific experience, but we are all more fragile than we may realize. Takabe brings his wife to the hospital, and the doctor tells him he looks more sick than his wife. Some of us are just better at hiding it. It's precisely this concealed fragility that Mamiya exploits in the methodology his murders. He's a hypnotist, and a brilliant one if we're to take Dr. Sakuma's word for it. He intrudes into the minds of his victims and compels them to kill, and the means of his infiltration is particularly interesting. Part of his hypnosis routine involves asking his targets to tell him about themselves. He uses their own supposed self-knowledge against them, at one point repeatedly asking a man \"Who are you?\" long after he'd repeated his occupation and position, as if interrogating the nature of identity itself. Is that really who you are? he seems to ask. We think we know ourselves, we live with ourselves every day, but what if we don't know as much as we think? \"We say the eye is the window of the soul. But what if there is no soul behind the eye? What if the eye is a crack through which we can perceive just the abyss of a netherworld? When we look through these cracks, we see the dark, other side, where hidden forces run the show.\" Mamiya also exhibits a kind of memory loss, although it progressively becomes unclear how much of it is genuine and how much of it is affected, how much of it is part of his routine, his performance, his hypnosis. It slowly begins to seem as though he has constructed this identity for himself, this seemingly unknowing existence. \"All the things that used to be inside me, now they're all outside. So, I can see all of the things inside you… But the inside of me is empty.\" He is a being of pure void, an incarnated abyss, a pair of eyes with no soul behind them, a crack covering over an abyssal netherworld of hidden forces. Negating Descartes, he does not think and therefore he is not, and he spreads that nothingness to his victims. Mamiya gives the lie to Takabe's enlightenment rationality not only because he himself cannot be known but because he is a singular embodiment of the broader sociological impossibility of empirical knowledge. \"We should all relax, enjoy ourselves, lead peaceful lives. But society isn't like that!\" Takabe bemoans to Mamiya. Whether it's this Mamiya or another, there will always be a devil making people do it, and it's this great evil that's fundamentally unknowable, this ruin robbing us of light and life. No matter how many nights we pass through, this darkness is in all of us, and we cannot know its meaning. 1990s | Neo-Noir | Japan | Horror Favorite First-Watches 2022",
+      "temas_atribuidos": [
+        "t2",
+        "t1"
+      ]
+    },
+    {
+      "indice": 23,
+      "rating": 5.0,
+      "texto": "Cure is the manifestation of malaise, it's being in the same room with a serial killer, where each sound made is distinctly registered and every tiny action raises an alarm. Cure is pure evil, it makes us jump at the most insignificant details, the flick of a lighter, the tilt of a glass of water, motions of a mere plastic stirrer, the faint, omnipresent static noise, listen to it, that's our brain trying to shut everything out, a self-defense mechanism against the unknown. Cure is a peaceful death under calm, unwavering hands, violence stripped of impact, blood detached from reality, while the musicians forgot to do their job and the camera unflinchingly stared ahead -- but still -- the sight of a knife at the hands of a waitress still has the same effect of a conventional jumpscare.. how? I'll ask you again, Fujiwara of headquarters, who are you? The serial killer that never killed, an innocent sinner forcing us to reexamine ourselves. The X is a reminder for an amnesiac and those with their memory intact, but chose to forget. Cure is murder without motivation, brutality without reason, effect without cause, question after question after question leads towards confusion morphs into uneasiness morphs into desperation, without end. Now that I've seen this, am I finally prepared to step into Pulse ? I- I hope.",
+      "temas_atribuidos": [
+        "t4",
+        "t5",
+        "t3",
+        "t1"
+      ]
+    },
+    {
+      "indice": 24,
+      "rating": 5.0,
+      "texto": "memetic. draws you in and presses down on you unrelentingly, tricking you into its deep, words-cant-capture-the-darkness world with the trappings of a mystery. you don’t understand it until you do and once you do you realize you were falling for it the whole time and wait do you really understand it or are you still staring into the flame, are you still falling for it? if you glance away you could miss the magic here but you can’t glance away. you’re the victim.",
+      "temas_atribuidos": []
+    },
+    {
+      "indice": 25,
+      "rating": 5.0,
+      "texto": "Blown away by its sheer construction. A masterclass in how editing can be so incredibly effective without drawing attention to itself, timing alone creating in us the same feelings as the characters and locating us closer to the brainsickness that seems to be latent in us all. Kiyoshi's long takes and camera movements naturally draw us into the scene as a participant, nearly always distanced but there, on the sidelines, indeterminately witnessing and lurking simultaneously; we are naturally mesmerized, taking in every flicker of the flame and trickle of the stream, the rhythms surrounding us absorbing our attention until we are rapt, placated and suddenly anything seems reasonable, anything seems possible, why not do what you've al- And then it cuts a bit earlier than expected, and suddenly we're out of our waking dream. Such editing pulls the viewer out of the moment in drawing attention to its strangeness, its artificiality, an immediate questioning of what just happened and where did the previous scene go and where are we now. What did we do. No question mark because we know, deep down inside the recesses of our mind, what we did and what we truly desire. But our psyche shields behind the cut, the sudden awareness of being out of place and out of time with what we expect. It's normal now. It always was.",
+      "temas_atribuidos": [
+        "t1",
+        "t4"
+      ]
+    },
+    {
+      "indice": 26,
+      "rating": 5.0,
+      "texto": "One of the best films ever made. A pivotal breakthrough in cinematic unease, with palpable paranoia-induced horror dominating every single scene. Mesmirising, truly one-of-a-kind. And a film that only gets better with repeated viewings.",
+      "temas_atribuidos": [
+        "t1"
+      ]
+    },
+    {
+      "indice": 27,
+      "rating": 5.0,
+      "texto": "Ringu if the thing that perpetuated death was not a mystical force but our own complicity in seeking out violence. A film about repressed Japanese id that feels disturbingly universal in how it depicts that the mere suggestion to be oneself might unlock our basest evils. Kurosawa is the best director of horror since Polanski, a filmmaker who does not jolt or shock but instead places everything in the frame, or just tantalizingly outside it to the point that you can't stop yourself from craning your neck as if you might be able to peek around the corner.",
+      "temas_atribuidos": [
+        "t2"
+      ]
+    },
+    {
+      "indice": 28,
+      "rating": 5.0,
+      "texto": "Allure of evil. Like most great horror it goes back to the best Lewton and Lang. Cure gets a lot of mileage of actually confronting unknown,of making everything very readable while not allowing it to be explained, sometimes evil just remains clear but out of reach. Kurosawa gets a lot out of the sadness of his drab sets that Yokusho can never really leave behind. Cure starting point is very similiar to Cohen's God Told Me To (a title Kurosawa could easily taken) and it is similar predicted in playing its procedural elements against its well placed horror images, but they have such different set of psychological/theological implications to arrive in complete different unsetting place.",
+      "temas_atribuidos": []
+    },
+    {
+      "indice": 29,
+      "rating": 5.0,
+      "texto": "11 or 12 years since I last saw it?  I was still living alone in San Francisco.  Throughout so much of this, there is either no music at all or there is a persistent, flat pulsing sound; a strange, resonating drone; the wind blowing.  It is not music — it's more like something in place to emphasize the absence of music.  Dingy and pale/white interiors, a Tokyo that feels simultaneously overcast and awash in diffuse sunlight, drained of color... All is emptiness; the horror emerges from it almost imperceptibly. Cure takes a very different tack in approaching material similar to that of Pulse : the vanishing of identity and empathy in a world where the desolate void between people grows wider and wider until only vague shadows remain.  This is one of the most disquieting films you'll ever see.  I'm going for a walk.",
+      "temas_atribuidos": [
+        "t1",
+        "t2",
+        "t4",
+        "t5"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,291 @@
+{
+  "bucket": "medianas",
+  "n_reviews": 20,
+  "falhou": false,
+  "lote_tamanho": 25,
+  "tempo_estagio1_s": 99.48,
+  "tempo_estagio2_s": 73.37,
+  "tempo_total_s": 172.85,
+  "estagio1_log": [
+    {
+      "tentativa": 1,
+      "tempo_s": 99.48,
+      "done_reason": "stop",
+      "eval_count": 452,
+      "conteudo_chars": 1632,
+      "json_valido": true
+    }
+  ],
+  "estagio1_temas_propostos": [
+    {
+      "id": "t1",
+      "tema": "Violência crua e hipnótica",
+      "descricao_curta": "Gera um impacto de choque constante, onde a brutalidade dos assassinatos atordoa o espectador com a falta de senso comum em meio à pobreza extrema.",
+      "aspas_removidas_da_descricao": false
+    },
+    {
+      "id": "t2",
+      "tema": "Ritmo frenético e cinematográfico",
+      "descricao_curta": "Cria uma experiência visual intensa e agitada através do uso intenso da câmera na mão, edição rápida e movimentos de tela acelerados que mantêm o olho fixo no acontecimento.",
+      "aspas_removidas_da_descricao": false
+    },
+    {
+      "id": "t3",
+      "tema": "Falta de conexão com os personagens",
+      "descricao_curta": "Impede a identificação emocional profunda do público, fazendo-os sentir como observadores distantes de uma peça teatral onde ninguém realmente importa.",
+      "aspas_removidas_da_descricao": false
+    },
+    {
+      "id": "t4",
+      "tema": "Estilização artificial e excessiva",
+      "descricao_curta": "Produz a sensação de que o filme é mais um espetáculo colorido do que uma representação realista, com cores saturadas e composições que parecem forçadas para chamar atenção.",
+      "aspas_removidas_da_descricao": false
+    },
+    {
+      "id": "t5",
+      "tema": "Trilha sonora pop desconectada",
+      "descricao_curta": "Adiciona um tom leve de diversão a momentos trágicos, diluindo a gravidade da realidade apresentada e gerando uma dissonância entre o som alegre e os eventos violentos.",
+      "aspas_removidas_da_descricao": false
+    },
+    {
+      "id": "t6",
+      "tema": "Narrativa fragmentada e esquemática",
+      "descricao_curta": "Causa confusão na estrutura geral, onde a forma técnica impede que o público entenda ou sinta as profundezas emocionais das histórias individuais.",
+      "aspas_removidas_da_descricao": false
+    }
+  ],
+  "estagio2_lotes": [
+    {
+      "offset": 0,
+      "tamanho": 20,
+      "chamadas": [
+        {
+          "tentativa": 1,
+          "tempo_s": 73.37,
+          "done_reason": "stop",
+          "eval_count": 188,
+          "conteudo_chars": 327,
+          "json_valido": true
+        }
+      ],
+      "ok": true,
+      "ids_invalidos": 0
+    }
+  ],
+  "estagio2_ids_invalidos_total": 0,
+  "n_reviews_sem_tema": 4,
+  "n_reviews_nao_classificadas_falha_lote": 0,
+  "n_reviews_com_tema": 16,
+  "media_temas_por_review_classificada": 1.4,
+  "idioma_pt_br_ok": true,
+  "temas_finais": [
+    {
+      "tema": "Ritmo frenético e cinematográfico",
+      "mencoes_aproximadas": 8,
+      "n_reviews_analisadas": 20,
+      "exemplo_parafraseado": "Cria uma experiência visual intensa e agitada através do uso intenso da câmera na mão, edição rápida e movimentos de tela acelerados que mantêm o olho fixo no acontecimento.",
+      "id_estagio1": "t2"
+    },
+    {
+      "tema": "Violência crua e hipnótica",
+      "mencoes_aproximadas": 6,
+      "n_reviews_analisadas": 20,
+      "exemplo_parafraseado": "Gera um impacto de choque constante, onde a brutalidade dos assassinatos atordoa o espectador com a falta de senso comum em meio à pobreza extrema.",
+      "id_estagio1": "t1"
+    },
+    {
+      "tema": "Falta de conexão com os personagens",
+      "mencoes_aproximadas": 5,
+      "n_reviews_analisadas": 20,
+      "exemplo_parafraseado": "Impede a identificação emocional profunda do público, fazendo-os sentir como observadores distantes de uma peça teatral onde ninguém realmente importa.",
+      "id_estagio1": "t3"
+    },
+    {
+      "tema": "Narrativa fragmentada e esquemática",
+      "mencoes_aproximadas": 4,
+      "n_reviews_analisadas": 20,
+      "exemplo_parafraseado": "Causa confusão na estrutura geral, onde a forma técnica impede que o público entenda ou sinta as profundezas emocionais das histórias individuais.",
+      "id_estagio1": "t6"
+    },
+    {
+      "tema": "Trilha sonora pop desconectada",
+      "mencoes_aproximadas": 3,
+      "n_reviews_analisadas": 20,
+      "exemplo_parafraseado": "Adiciona um tom leve de diversão a momentos trágicos, diluindo a gravidade da realidade apresentada e gerando uma dissonância entre o som alegre e os eventos violentos.",
+      "id_estagio1": "t5"
+    },
+    {
+      "tema": "Estilização artificial e excessiva",
+      "mencoes_aproximadas": 2,
+      "n_reviews_analisadas": 20,
+      "exemplo_parafraseado": "Produz a sensação de que o filme é mais um espetáculo colorido do que uma representação realista, com cores saturadas e composições que parecem forçadas para chamar atenção.",
+      "id_estagio1": "t4"
+    }
+  ],
+  "amostra_completa": [
+    {
+      "indice": 0,
+      "rating": 3.0,
+      "texto": "كنت حاسس انو هيبقي زي la haine و بعد كام مشهد اتاكدت الي خلاني اتفرج عليه هو الريت العالي فشخ الي واخده و كنت داخل مستني حاجه مفيش زيها بس حرفيا الفيلم ممل لابعد الحدود مش هبالغ لو قولت ان مفيش اي مشهد في الفيلم عجبني او علق معايا متاثرتش ب اي حاجه طول الفيلم و متاكد ان كمان يومين ولا حاجه هكون نسيت الفيلم بكل ما فيههو احلي حاجه فيه انو واقعي في كل حاجه بالذات التمثيل بس جو الشغب و ضرب النار و المسدسات الكتير طلع مش جي معايا خالص",
+      "temas_atribuidos": [
+        "t3",
+        "t2"
+      ]
+    },
+    {
+      "indice": 1,
+      "rating": 3.0,
+      "texto": "الفلم صادق وواقعي بشكل يخليك تحس إنك بينهم تعيش معهم الفقر، الخوف، والضياع اللي ما يرحم أحد وكيف ان القسوة تصير رد فعل طبيعي وقت تعيش في بيئة ما تعطيك فرصة تكون إنسان سوي لكن رغم إن الفيلم كان حلو سردياً بس كمية السب والكلام الفاحش كانت كثيرة بشكل مزعج حتى وان كان الغرض منها التماس الواقع، وبعد حسيت الفلم وثائقي اكثر من كونه سينمائي وأي فلم فيه بزران يطلقون النار مايعجبني مدري ليش مجملا هو من النوع اللي تتذكره وتحترمه بس ما تستمع وانت تتابعه",
+      "temas_atribuidos": []
+    },
+    {
+      "indice": 2,
+      "rating": 3.0,
+      "texto": "Hoods don't love, they desire. Hoods don't talk, they smooth-talk. Hoods don't stop, they take a break. Hi-octane. Hyper-kinetic. Adrenaline. Top 500 Narrative Features: #127",
+      "temas_atribuidos": [
+        "t2"
+      ]
+    },
+    {
+      "indice": 3,
+      "rating": 3.0,
+      "texto": "Why remain in the City of God when God has forgotten you? In the first scene, we see a chicken escaping and being chased by an armed gang, while the poor bird runs desperate, trying to survive. I found that opening scene hilarious and I was laughing a lot... Little did I know, there would be no more laughs during this movie. And actually, the characters are a lot like this chicken, trying to run but unable to escape from the claws of Zé Pequeno. In the City of God —that was the name of the housing project the brazilian government created in the 60's— were we meet all these characters and their evolution over the decades. The violence in this slum is brutal. The whole rawness of it, the cold blood murders, the just-for-fun killings terrified me more than any horror movie could... Cause those are real life events. Some scenes where truly disturbing for me and I felt awful, but I couldn't take my eyes of this. The editing of this movie was superb and the fantastic movements of the handheld camera added a lot to the suspense and tension City of God puts on us. We are deeply absorbed by the roughness and frenzy of the favela, of the City of God, which is a very ironic name, cause this characters are in a living hell .",
+      "temas_atribuidos": [
+        "t6"
+      ]
+    },
+    {
+      "indice": 4,
+      "rating": 3.0,
+      "texto": "this was a bit different to what i was expecting. i got a bit disengaged towards the end but that’s because i’m not feeling great right now so hopefully on a rewatch i’ll like it even more.",
+      "temas_atribuidos": [
+        "t2",
+        "t3"
+      ]
+    },
+    {
+      "indice": 5,
+      "rating": 3.0,
+      "texto": "Konusuna uygun biçimde ilerliyor fakat bu tür filmleri izlerken herhangi bir seyir keyfi almadığımı bilmeme rağmen popüler bir film olduğu için izlemek istedim. Bu yüzden benim için ortalama bir filmdi.",
+      "temas_atribuidos": []
+    },
+    {
+      "indice": 6,
+      "rating": 3.0,
+      "texto": "Very well made and crafted and told but what a wasteful and violence excessive tale of murder and blood and shocking injustice turned to the killing of young corrupt men. The racism of degenerate poverty.",
+      "temas_atribuidos": [
+        "t6"
+      ]
+    },
+    {
+      "indice": 7,
+      "rating": 3.0,
+      "texto": "The cinematography and shot compositions were enthralling and the fast paced camera movements were visually satisfying, however, this film did not contain any memorable characters that made me care about them or their story arcs. Classic style over substance piece.",
+      "temas_atribuidos": [
+        "t3",
+        "t2",
+        "t4"
+      ]
+    },
+    {
+      "indice": 8,
+      "rating": 3.0,
+      "texto": "Really does capture the essence of a rough living area, and the circulation of age-independent violence. But what even matters if all I’d noticeably remember is the opening scene, unlimited gunshots, and the savior named Second Half .",
+      "temas_atribuidos": [
+        "t1",
+        "t6"
+      ]
+    },
+    {
+      "indice": 9,
+      "rating": 3.0,
+      "texto": "Life on the fringes isn’t pretty, no matter how well off you are. It’s like putting glitter over a dumpster. You’re still shit, but at least you sparkle. No one gets to choose where they were born, so why not sparkle the brightest while you can? Make a name for yourself, place your mark on history—or at least the newspaper. Opportunity is an invention of your own design when you’re stuck in the slums of the biggest city in the continent. Even if you’re lucky enough to not become caught in the crossfire, the violence will still get to you, in all manners. Ultimately, everyone is connected, implicated, and involved.",
+      "temas_atribuidos": [
+        "t1"
+      ]
+    },
+    {
+      "indice": 10,
+      "rating": 3.5,
+      "texto": "Future MOTW at The Dissolve. I might have to serve as a mild voice of dissent on this one, which remains thrilling on a surface level, but has an unbearable lightness of being. Here's a story about generation after generation of slum-dwelling young boys caught up in a terrible cycle of violence, yet the tragedy of it never comes close to registering. It all feels too much like an entertainment-- but hey, it's entertaining.",
+      "temas_atribuidos": [
+        "t2",
+        "t5"
+      ]
+    },
+    {
+      "indice": 11,
+      "rating": 3.5,
+      "texto": "Fernando Meirelles' epic tale of growing up in the drug-ruled midst of Rio's favelas doesn't suffer from a lack of style. City of God contains some of the most memorable, purely-cinematic sequences of the decade. The kinetic, free-for-all sensibility could come off as insensitive to the hyperviolence and poverty of the setting, but it turns out the be exactly the right choice. Because life in the favelas can't be defined solely by drugs and violence: people live there, they fall in love, they dance, they raise families, and Meirelles' film contains the multitude of that experience.",
+      "temas_atribuidos": [
+        "t2",
+        "t5"
+      ]
+    },
+    {
+      "indice": 12,
+      "rating": 3.5,
+      "texto": "مدينتنا تؤرّق ليلها نار بلا لهب تحمّ دروبها و الدّور ثم تزول حمّاها و يصبغها الغروب بكل ما حملته من سحب فتوشك أن تطير شرارة و يهب موتاها وجبة فنية دسمة و غنية معبرة عن الفقر و الطفولة المشردة مدينة الرب دي طلعت اخطر من الباطنية بجد ليل زي دا صعب اوي متعطش للدماء من طفولته هو حرفيا بيقتل بسبب و بدون سبب و الواد بيني دا رايق اوي صابغ شعره اصفر زي فالديراما فيلم واقعي اوي و التمثيل فيه يتصدق اووي أنا بحب البرازيل و بخاف منها برضو",
+      "temas_atribuidos": [
+        "t1",
+        "t5",
+        "t4"
+      ]
+    },
+    {
+      "indice": 13,
+      "rating": 3.5,
+      "texto": "Curioso como esse filme sofre por ser ao mesmo tempo tratado como uma obra–prima do cinema brasileiro e da filmografia em geral – e nessa revisão ficou evidente que ele não é isso – e ser desvalorizado por outro lado como se fosse uma atrocidade sem méritos fortes. E acaba não sendo nem uma coisa e nem outro. Representa de certa maneira o apogeu da Retomada (co–produção do Walter Salles, co–dirigido pelo Fernando Meirelles, envolvimento do Daniel Filho na época na recente Globo Filmes já exibindo os laços do filme com a Globo e distribuído internacionalmente pela Miramax dos Irmãos Weinstein que com a sua campanha levaram o filme pro Oscar) e do lado mais popular dela representado pelas suas elites paulistanas e cariocas com os seus contatos internacionais, porém não é porque existem filmes brasileiros muito melhores que Cidade de Deus, que ele deixa de ser um filme bem competente apesar das suas questões. É uma história de crescimento e um painel historiográfico épico da vida criminosa nas periferias brasileiras que se utiliza de todos os recursos técnicos possíveis desenhados na sua cara. Geralmente esse realismo estilizado épico do co–diretor Meirelles, essa coisa que ele tem nos filmes dele de filmar narrativas extremamente clássicas e básicas de um jeito esteticamente sempre ativo, energético, extravagante e com uma pegada pop livre de rápidos planos detalhes e diferentes ângulos de câmera e enquadramentos rápidos continuamente ao mesmo tempo de muita gravidade dramática levada a sério ou com um verniz social nesse sentido, geralmente fica muito afetada, sem atenção para o que está usando na tela só jogando por jogar e ele tem o grande problema de ser um cineasta muito frio que quer desesperadamente parecer muito caloroso (o que deixa os seus filmes muito falsos) mas aqui isso é bem organizado para configurar diferentes ambientações da construção do espaço que é a Cidade de Deus e as voltas que damos pela história dela dando uma vitalidade para o convívio naquele espaço muito bem traçado e os detalhes que compõe esse convívio. Isso é somado com a saturação das imagens da fotografia do César Charlone e da movimentação intensa da sua câmera na mão. As diferentes texturas do Charlone com a sua saturação, o sépia da primeira parte do filme, as luzes fortes, as sombras marcadas, o amarelado, o azul da noite, os planos fechados nos rostos, a estilização da filmagem de uma favela realista, os registros fotográficos do Buscapé compondo e se misturando com as cenas, a claridade e o calor estourando no colorido cromático visualizado nos personagens e nos ambientes dos cenários até a paleta visual se tornar mais gélida e sombria a partir do desfecho de Benê vai situando diferentes momentos de vivência grandiosa que conversa com as referências narrativas a arcos e elementos dramáticos do cinema de gangster estadunidense no roteiro do Bráulio Mantovani e seus parceiros (Kátia Lund que queria receber o crédito de co-roteirista mas foi impedida pelos seus colaboradores, Meirelles e outros) fazendo muito bom uso do material de origem fortíssimo do Paulo Lins que já dá um leque de histórias a serem tratadas e uma planta daquilo que move a sua ambientação central com o Zé Pequeno sendo uma espécie de Tony Montana no “Scarface” e a narração em off remetendo a energia dos os filmes do Scorsese, ao mesmo tempo que o filme segue procedimentos muito clássicos de dramaturgia amarrando todas as suas pontas, formando seus arcos muito bem definidos aos poucos para depois fecha–lós e dando pistas de coisas que depois serão resolvidas de modo catártico ou desenvolvidas como o Mané Galinha aparecendo antes, as crianças e o Zé Pequeno, a união de Angélica com Bené, o seu desfecho e o próprio destino do Dadinho. Não é nenhuma surpresa que os primeiros tratamentos do filme tenha tido participação do Alexander Payne e tenha ganhado um respaldo internacional porque ele se encaixa muito nessas regras mais certinhas de narrativa clássica estadunidense mesmo filmado e composto por histórias fragmentadas, ele consegue não ficar quadrado justamente porque consegue um vigor na caracterização dos personagens. A violência tem uma gravidade dramática social (os garotos que matam Zé Pequeno acabando o filme falando do mundo de crime e tratando tudo como se fosse uma brincadeira de criança e sendo seguidos pela câmera cada vez mais ao longe), mas também é tratada como algo bem–humorado (o Zé Pequeno matando o capanga que não cala a boca ou lembrar que tem que voltar para matar o Mané Galinha) ou puramente catártico, que rende bons momentos, assim como dilui o uso dela. É um filme em que as áreas estão em fluidez e afiadas para adicionar ao material que tem em mãos como o Daniel Rezende fazendo uma montagem pop muito ágil, cheia de cortes velozes, inserções de imagens externas e de estabelecer a narrativa do filme por meio de soluções visuais como a história do apartamento ou o trabalho da co–diretora Kátia Lund que me parece materializar cinematograficamente o seu trabalho de pesquisa, de um realismo cotidiano na vida de periferias, nos seus espaços e na espontaneidade dos seus atores – que tem em mãos personagens muito carismáticos – e essa sua parceria com o Meirelles traz uma combinação interessante aonde a afetação visual hiperbólica e esquemática dele que em outros filmes é engessada ganha um folego mais natural com ajuda de outros elementos também. Do ritmo muito envolvente, da preocupação com o icônico no roteiro com suas grandes frases e personagens que são tipos com caracterizações muito marcantes e sedutoras. A imagética mescla a intensidade do realismo com uma estilização desse realismo que se beneficia de um elenco perfeito (o Douglas Silva/Leandro Firmino são realmente uma força da natureza na exposição da psicopatia do seu personagem) devido ao frescor de cada uma das figuras. São combinações que explicam o tamanho do êxito desse filme, porque ele de fato muito bom e porque o Meirelles nunca fez nada do mesmo nível antes ou depois no cinema. Ao mesmo tempo Cidade de Deus está longe de qualquer genialidade ou perfeição tendo coisas que infestam o filme e fazem com que ele nunca de um salto para se transcender: a caracterização dos personagens é boa mas ao mesmo tempo as trajetórias deles e o painel que o filme traça com eles é extremamente simplório e óbvio – bem e mal são coisas muito definitivas e marcadas ao ponto de ser desenhado da mesma forma que os personagens existem muito pouco para além das suas funções dramáticas de levar a trama – ao mesmo tempo que ele tenta parecer muito mais profundo do que é nessa tese social (que é muito mais interessante quando é um filme que mescla a gravidade do contexto com uma leveza de aventuras cotidianas), as cenas do tiro nas crianças é de um sensacionalismo terrível exploratório (por mais que o papo de “cosmética da fome” seja válido ele não se segura em pé) e o filme segue uma cartilha cinematograficamente quadrada, básica e esquemática na narrativa e na decupagem da sua visualidade mais expansiva, explosiva e ideias de câmera extravagantes, enquanto plasticamente é muito “limpo” cinematograficamente até quando é sujo e violento. Muitas coisas existem só pelo procedimento técnico e não pela criação desse procedimento ou onde isso leva tipo a cena da galinha (faz muito sentido essa ter sido a cena que mais impressionou o Spielberg). O cálculo que leva o filme fica muito descarado diversas partes e faz com que seja visível as artimanhas convencionais que ele usa na sua construção, ao invés de me envolver plenamente nela. E ele não faz mal nada disso, ele segue bem essa cartilha, só que isso torna a execução do filme levemente esquemática no geral e pouco orgânica. Isso não apaga os méritos que vejo no filme, que é prazeroso de se ver, ao mesmo tempo que eles não apagam o fato que é meio triste que esse seja o filme brasileiro mais famoso lá fora e aqui no Brasil, enquanto o cinema brasileiro tem milhões de filme infinitamente mais geniais e melhores. Porém a história do cinema é cheia de coisas assim e acho que por mais que seja desprezível diversas coisas envolvendo a história da produção desse filme como o Fernando Meirelles basicamente obrigando a Kátia Lund de ceder os seus créditos como se o filme não fosse dela também e ele com apoio da Miramax e do Harvey Weinstein descartando ela como diretora, o que gera que a maioria das pessoas nem saiba do envolvimento dela no filme e ela não tenha engatado uma carreira, enquanto o Meirelles nada nos louros do filme até hoje mesmo com uma carreira medíocre. Isso sem falar dos brancos de classe média e ricos responsáveis pelo filme ou envolvidos com ele nadando em grana e prestígio enquanto os atores negros e periféricos do Cidade de Deus não receberam nada perto da mesma consideração sendo praticamente jogados após serem usados. A atriz com carreira mais bem sucedida do filme ser uma atriz branca, sobrinha de uma atriz famosa nacionalmente e internacionalmente, que é Alice Braga já diz muito sobre como as coisas funcionam. Enfim essas coisas não devem ser esquecidas ao se pensar nele, mas é um filme melhor do que os detratores tentam fazer parecer, porém também é pior do que os defensores dizem que ele é.",
+      "temas_atribuidos": []
+    },
+    {
+      "indice": 14,
+      "rating": 3.5,
+      "texto": "It was like a message from God: \"Honesty doesn't pay, sucker.\" My big moviegoer goal of next year: Watch everything on the Letterboxd Top 250, and IMDb's equivalent as well. I desire to be truly \"learned,\" feel like I can own that badge of being a true appreciator of the art form, stuff like that. I can start a little bit early, at least pick at it before I dedicate myself to it more directly come January. So, here's a really big one. I'm sure Roger Ebert categorized this as one of his \"films are empathy machines\" experiences, where you're seeing an experience that you really wouldn't get to see otherwise outside of film as an American. Watch a movie like this, and suddenly all of your little personal problems are going to feel a lot smaller. At least you're not a child getting shot in the foot by another child. That said, to try to go beyond it just being a movie that exists for a means of perspective, City of God I think also does a good job of thinking about movies as a means to then reflect back on society, beyond the world of the film itself. You don't just walk out of it thinking \"Oh, that was sad.\" or \"Oh, that was a fun ride.\" Instead, you might be directly engaged to think something like \"This movie really has something to say and show about the woes of the world, what could we do in order to change it, and what even are our true core issues?\" Police and other forms of authority rarely show up in this film, and when they eventually do, they come off as more of a nuisance to the conflicts of the film instead of something to help solve said conflicts. it insinuates that this is a structural dilemma, a way in which the systems of the world are fundamentally flawed to the point of not being able to solve these wider problems by working with what we have. Change is required. Something new to take the place of what's existing now. So, in other words, even if I feel like I'm being kept from four stars, this is a damn good movie, and I'm glad I gave it a watch. Some real neat cinematography and editing, plus the most energetic chicken ever. 7.5/10",
+      "temas_atribuidos": [
+        "t1"
+      ]
+    },
+    {
+      "indice": 15,
+      "rating": 3.5,
+      "texto": "what a ride!! one of the most authentic stories I’ve ever watched. every single element on screen is so specific working in favor for the perfect portrayal of a specific culture and social conflict, the characters are the stand outs for me (even thought at some times I was confused at who was who but that’s totally my fault) brazilian timothée chalamet kinda snapped ngl",
+      "temas_atribuidos": []
+    },
+    {
+      "indice": 16,
+      "rating": 3.5,
+      "texto": "For a movie to get a 4/5 or higher there needs to that WOW factor. This is a very good movie, with some excellent performances, a unique perspective on Rio De Janeiro in the 60s-70s, and some gritty and brutal violence that plays out more like a documentary than a film, but this never had the WOW factor for me. It’s flashy and well directed but I never felt anything other than the feeling of being somewhat entertained.",
+      "temas_atribuidos": [
+        "t2",
+        "t3"
+      ]
+    },
+    {
+      "indice": 17,
+      "rating": 3.5,
+      "texto": "\"In God we trust.\" Inherited evil. Passing onto generation upon generation. In a city of faith, what even is one's will anymore? Caught in a world of evil on both sides, kindness and generosity, both few and far in between. The death of honour and innocence, stepped on and crushed. Can't say it always worked for me, but it's an experience I'll never forget.",
+      "temas_atribuidos": [
+        "t1"
+      ]
+    },
+    {
+      "indice": 18,
+      "rating": 3.5,
+      "texto": "Gerçek hayattan uyarlama olduğunu izlemeden önce bilseydim belki bakış açım değişirdi.. | spoiler içermiyor. Filmleri izlemeden önce hiçbir şekilde fragmanına ve konusuna bakmam. Bu olay bazen iyi olurken bazen de ters tepiyor. Bu filmin gerçek hayattan uyarlama olduğu aklımın ucundan bile geçmemişti ve film sonuna kadar bir kurgu gibi değerlendirdim kafamda. Olayların yaşanış şekli gerçekliği yansıtması açısından başarılı olabilir ama ben izlerken çok sıkıldım. Filmin temposu sürekli olarak yükselip düşüyor. Bir türlü içine giremedim. Filmde en başarılı bulduğum şey, hikayeleri bölmeleri oldu. Başka bir filmde buna benzer bir şey görmemiştim ve fazlasıyla yakıştırdım. Genel olarak: Bu film de benim için abartılan filmler arasına girdi. Kötü değil fakat herkesin tam puan verecek kadar sevmesi garibime gitti. Bu çok sevilen filmlerde belki de sürü psikolojisi vardır, bilemiyorum.",
+      "temas_atribuidos": [
+        "t2",
+        "t6",
+        "t3"
+      ]
+    },
+    {
+      "indice": 19,
+      "rating": 3.5,
+      "texto": "“a picture could change my life, but in the city of god, if you run away, they get you and, if you stay, they get you too.” 🪽 𓂅 it is both heartbreaking and terrifying to realize that people live like this in our world. the scene where the two young boys were shot shattered me — in truth, the entire film did. the final 50 minutes will remain with me forever.",
+      "temas_atribuidos": [
+        "t1"
+      ]
+    }
+  ]
+}

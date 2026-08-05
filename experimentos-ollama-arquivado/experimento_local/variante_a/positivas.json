@@ -1,0 +1,78 @@
+{
+  "variante": "variante_a",
+  "bucket": "positivas",
+  "n_validas": 30,
+  "tempo_total_s": 146.69,
+  "n_chamadas": 1,
+  "chamadas": [
+    {
+      "tempo_s": 146.69,
+      "done_reason": "stop",
+      "prompt_eval_count": 9533,
+      "eval_count": 706,
+      "thinking_chars": 0,
+      "conteudo_chars": 2500
+    }
+  ],
+  "falhou": false,
+  "erro": null,
+  "idioma_invalido": false,
+  "escopo_suspeito": false,
+  "temas": [
+    {
+      "tema": "Atmosfera de vazio e paranoia onipresente",
+      "mencoes_aproximadas": 28,
+      "n_reviews_analisadas": 30,
+      "exemplo_parafraseado": "Os textos destacam uma sensação persistente de medo gerada por espaços vazios, silêncios e a ausência explicativa dos crimes, criando um clima onde o espectador se sente observado ou envolvido sem motivo aparente.",
+      "mencoes_clampadas": false,
+      "mencoes_valor_original": null,
+      "aspas_removidas": false
+    },
+    {
+      "tema": "Manipulação psicológica através do vazio interior",
+      "mencoes_aproximadas": 18,
+      "n_reviews_analisadas": 30,
+      "exemplo_parafraseado": "A crítica foca na capacidade de um agente externo explorar as lacunas e repressões internas dos personagens, transformando inseguranças em armas contra eles mesmos.",
+      "mencoes_clampadas": false,
+      "mencoes_valor_original": null,
+      "aspas_removidas": false
+    },
+    {
+      "tema": "Estética naturalista e estética sóbria",
+      "mencoes_aproximadas": 15,
+      "n_reviews_analisadas": 30,
+      "exemplo_parafraseado": "Elas elogiam o uso de cenários comuns, luzes naturais sem exageros, tomas longas e uma paleta de cores apagada que reforça a banalidade assustadora do cenário.",
+      "mencoes_clampadas": false,
+      "mencoes_valor_original": null,
+      "aspas_removidas": false
+    },
+    {
+      "tema": "Som design e ruído ambiente como ferramenta narrativa",
+      "mencoes_aproximadas": 12,
+      "n_reviews_analisadas": 30,
+      "exemplo_parafraseado": "Múltiplos comentários apontam para o uso eficaz de drones sutis, sons orgânicos e ambientes sonoros estranhos que aumentam a tensão sem diálogo excessivo.",
+      "mencoes_clampadas": false,
+      "mencoes_valor_original": null,
+      "aspas_removidas": false
+    },
+    {
+      "tema": "Desconstrução da identidade humana",
+      "mencoes_aproximadas": 10,
+      "n_reviews_analisadas": 30,
+      "exemplo_parafraseado": "As análises exploram como a obra questiona quem são as pessoas por trás das máscaras sociais e profissionais quando elas perdem suas memórias ou vontades.",
+      "mencoes_clampadas": false,
+      "mencoes_valor_original": null,
+      "aspas_removidas": false
+    },
+    {
+      "tema": "Violência banalizada sem drama",
+      "mencoes_aproximadas": 8,
+      "n_reviews_analisadas": 30,
+      "exemplo_parafraseado": "Os textos descrevem atos de violência cometidos com frieza e rotina diária, gerando desconforto por não haver a explosão emocional típica do gênero.",
+      "mencoes_clampadas": false,
+      "mencoes_valor_original": null,
+      "aspas_removidas": false
+    }
+  ],
+  "observacao_geral": "Esta seleção de reviews positivas celebra profundamente a capacidade do filme em evocar um medo psicológico através da exploração sistemática do vazio interior humano e das falhas na identidade individual. Os elogiados principais são o estilo visual sóbrio, que transforma locais comuns em lugares de perigo latente, assim como uma trilha sonora atmosférica capaz de imergir a audiência em estados de transe."
+}

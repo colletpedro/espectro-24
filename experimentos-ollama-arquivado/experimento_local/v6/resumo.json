@@ -1,0 +1,96 @@
+{
+  "gerado_em": "2026-08-04T17:15:13.828991+00:00",
+  "slug": "cure",
+  "bucket": "negativas",
+  "n_reviews": 50,
+  "n_network": 0,
+  "estagio1_temas_reusados_de": "resultado/experimento_local/v5/cure/negativas.json",
+  "estagio1_temas_propostos": [
+    {
+      "id": "t1",
+      "tema": "Ritmo excessivamente lento e estático",
+      "descricao_curta": "Gera sensação de tédio prolongado, vazio existencial e desconexão mental com a narrativa devido ao ritmo pausadíssimo e à falta de dinamismo visual.",
+      "aspas_removidas_da_descricao": false
+    },
+    {
+      "id": "t2",
+      "tema": "Personagens planos e sem profundidade emocional",
+      "descricao_curta": "Causa indiferença total, pois os detetives e assassinos são tratados como figuras robóticas ou estéreis que não provocam empatia nem curiosidade real.",
+      "aspas_removidas_da_descricao": false
+    },
+    {
+      "id": "t3",
+      "tema": "Atmosfera clínica fria demais",
+      "descricao_curta": "Transmite frieza excessiva e esterilidade emocional, criando um ambiente distanciado que impede o espectador de sentir tensão ou medo.",
+      "aspas_removidas_da_descricao": false
+    },
+    {
+      "id": "t4",
+      "tema": "Diálogos artificiais e repetitivos",
+      "descricao_curta": "Produce desconforto ao apresentar trocas verbais robóticas, sem avanço da trama nem desenvolvimento significativo das ideias.",
+      "aspas_removidas_da_descricao": false
+    },
+    {
+      "id": "t5",
+      "tema": "Conceito de hipnose questionado logicamente",
+      "descricao_curta": "Desperta confusão e incredulidade ao apresentar uma premissa que soa simplória ou pseudo-científica para muitos espectadores.",
+      "aspas_removidas_da_descricao": false
+    },
+    {
+      "id": "t6",
+      "tema": "Narrativa sem evolução dramática",
+      "descricao_curta": "Provoca frustração por repetir o mesmo padrão de cenas repetitivas, sem gerar novos giros ou avançar a investigação principal.",
+      "aspas_removidas_da_descricao": false
+    }
+  ],
+  "variantes": [
+    {
+      "variante": "v1_bloco_lote25",
+      "com_bloco_recall": true,
+      "lote_tamanho": 25,
+      "tempo_total_s": 158.15,
+      "n_chamadas": 2,
+      "n_reviews_sem_tema": 19,
+      "contagem_por_tema": {
+        "t1": 13,
+        "t2": 11,
+        "t3": 11,
+        "t4": 9,
+        "t5": 11,
+        "t6": 17
+      }
+    },
+    {
+      "variante": "v2_bloco_lote10",
+      "com_bloco_recall": true,
+      "lote_tamanho": 10,
+      "tempo_total_s": 215.98,
+      "n_chamadas": 5,
+      "n_reviews_sem_tema": 13,
+      "contagem_por_tema": {
+        "t1": 15,
+        "t2": 12,
+        "t3": 12,
+        "t4": 13,
+        "t5": 10,
+        "t6": 16
+      }
+    },
+    {
+      "variante": "v3_sembloco_lote10",
+      "com_bloco_recall": false,
+      "lote_tamanho": 10,
+      "tempo_total_s": 232.22,
+      "n_chamadas": 5,
+      "n_reviews_sem_tema": 10,
+      "contagem_por_tema": {
+        "t1": 21,
+        "t2": 14,
+        "t3": 11,
+        "t4": 8,
+        "t5": 13,
+        "t6": 18
+      }
+    }
+  ]
+}

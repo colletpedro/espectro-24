@@ -1,0 +1,51 @@
+{
+  "slug": "cure",
+  "condicao": "B1",
+  "texto_entrada": "Em 1997, Kiyoshi Kurosawa dirigiu A Cura, um filme de Crime, Thriller, Terror e Mistério que segue um detetive em uma investigação sobre mortes misteriosas marcadas por um x nos corpos, cuja busca por respostas o leva a um rapaz enigmático. A experiência de assistir ao filme é marcada por um ritmo lento e uma atmosfera sombria, utilizando planos longos para criar uma sensação de desconforto e um estilo visual eficaz. Essa ambientação sombria contribui para a experiência geral, que é descrita como sendo bastante ambígua.\n\nA grande maioria das notas (~79%) avalia A Cura de forma positiva, com muitos descrevendo o filme como hipnótico e perturbador, gerando uma sensação constante de apreensão. Para quem está nessa faixa, o ritmo lento e metódico intensifica o horror psicológico, levando o espectador a um estado de transe. Muitos também ressaltam a exploração de temas profundos como a fragilidade da identidade e a natureza do mal, e alguns apreciam o filme por não fornecer respostas definitivas, mantendo uma ambiguidade que força a reflexão. Por outro lado, uma minoria das notas (~17%) teve uma experiência mediana. Para eles, o filme tem ideias intrigantes e uma atmosfera eficaz, mas muitos apontam que o ritmo lento e a confusão narrativa, além de um final insatisfatório e ambíguo, impedem uma conexão plena. Uma fração mínima das notas (~3%) considera o filme decepcionante; para esse grupo, a maioria reclama do ritmo excessivamente lento e tedioso, o que o torna arrastado e chato. Muitos também sentiram uma falta de tensão e mistério, e alguns criticam o enredo e roteiro por serem fracos e repetitivos.",
+  "texto_editado": "Em 1997, Kiyoshi Kurosawa dirigiu A Cura, um filme de Crime, Thriller, Terror e Mistério que segue um detetive em uma investigação sobre mortes misteriosas marcadas por um x nos corpos, cuja busca por respostas o leva a um rapaz enigmático. A experiência de assistir ao filme é marcada por um ritmo lento e uma atmosfera sombria, utilizando planos longos para criar uma sensação de desconforto e um estilo visual eficaz. Essa ambientação sombria contribui para a experiência geral, que é descrita como sendo bastante ambígua.\n\nA grande maioria das notas (~79%) avalia A Cura de forma positiva, com muitos descrevendo o filme como hipnótico e perturbador, gerando uma sensação constante de apreensão. Para quem está nessa faixa, o ritmo lento e metódico intensifica o horror psicológico, levando o espectador a um estado de transe. Muitos também ressaltam a exploração de temas profundos como a fragilidade da identidade e a natureza do mal, e alguns apreciam o filme por não fornecer respostas definitivas, mantendo uma ambiguidade que força a reflexão. Por outro lado, uma minoria das notas (~17%) teve uma experiência mediana. Para eles, o filme tem ideias intrigantes e uma atmosfera eficaz, mas muitos apontam que o ritmo lento e a confusão narrativa, além de um final insatisfatório e ambíguo, impedem uma conexão plena. Uma fração mínima das notas (~3%) considera o filme decepcionante; para esse grupo, a maioria reclama do ritmo excessivamente lento e tedioso, o que o torna arrastado e chato. Muitos também sentiram uma falta de tensão e mistério, e alguns criticam o enredo e roteiro por serem fracos e repetitivos.",
+  "edicao_flags": {
+    "edicao_descartada": true,
+    "motivo_descarte": "formato_invalido",
+    "protegidos_perdidos": [],
+    "numeros_alterados": false,
+    "houve_retentativa": true,
+    "n_tentativas": 2,
+    "motivos_por_tentativa": [
+      "formato_invalido",
+      "formato_invalido"
+    ],
+    "n_protegidos": 7,
+    "similaridade": 0.34821967410983706,
+    "capitalizacao_ajustada": false,
+    "falhou": false
+  },
+  "protegidos": [
+    "Uma fração mínima das notas (~3%)",
+    "A grande maioria das notas (~79%)",
+    "uma minoria das notas (~17%)",
+    "1997,",
+    "~79%",
+    "~17%",
+    "~3%"
+  ],
+  "metricas_fluencia_entrada": {
+    "n_frases": 10,
+    "media_palavras": 26.1,
+    "cv_comprimento": 0.33,
+    "frase_mais_curta": 11,
+    "aberturas_repetidas": 0,
+    "verbos_reporte": 4,
+    "adverbios_mente": 1
+  },
+  "metricas_fluencia_saida": {
+    "n_frases": 10,
+    "media_palavras": 26.1,
+    "cv_comprimento": 0.33,
+    "frase_mais_curta": 11,
+    "aberturas_repetidas": 0,
+    "verbos_reporte": 4,
+    "adverbios_mente": 1
+  },
+  "n_chamadas_ollama": 2,
+  "tempo_total_s": 141.4
+}

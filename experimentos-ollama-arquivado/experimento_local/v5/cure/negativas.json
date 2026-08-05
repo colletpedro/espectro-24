@@ -1,0 +1,587 @@
+{
+  "bucket": "negativas",
+  "n_reviews": 50,
+  "falhou": false,
+  "lote_tamanho": 25,
+  "tempo_estagio1_s": 116.07,
+  "tempo_estagio2_s": 144.25,
+  "tempo_total_s": 260.31,
+  "estagio1_log": [
+    {
+      "tentativa": 1,
+      "tempo_s": 116.07,
+      "done_reason": "stop",
+      "eval_count": 427,
+      "conteudo_chars": 1511,
+      "json_valido": true
+    }
+  ],
+  "estagio1_temas_propostos": [
+    {
+      "id": "t1",
+      "tema": "Ritmo excessivamente lento e estático",
+      "descricao_curta": "Gera sensação de tédio prolongado, vazio existencial e desconexão mental com a narrativa devido ao ritmo pausadíssimo e à falta de dinamismo visual.",
+      "aspas_removidas_da_descricao": false
+    },
+    {
+      "id": "t2",
+      "tema": "Personagens planos e sem profundidade emocional",
+      "descricao_curta": "Causa indiferença total, pois os detetives e assassinos são tratados como figuras robóticas ou estéreis que não provocam empatia nem curiosidade real.",
+      "aspas_removidas_da_descricao": false
+    },
+    {
+      "id": "t3",
+      "tema": "Atmosfera clínica fria demais",
+      "descricao_curta": "Transmite frieza excessiva e esterilidade emocional, criando um ambiente distanciado que impede o espectador de sentir tensão ou medo.",
+      "aspas_removidas_da_descricao": false
+    },
+    {
+      "id": "t4",
+      "tema": "Diálogos artificiais e repetitivos",
+      "descricao_curta": "Produce desconforto ao apresentar trocas verbais robóticas, sem avanço da trama nem desenvolvimento significativo das ideias.",
+      "aspas_removidas_da_descricao": false
+    },
+    {
+      "id": "t5",
+      "tema": "Conceito de hipnose questionado logicamente",
+      "descricao_curta": "Desperta confusão e incredulidade ao apresentar uma premissa que soa simplória ou pseudo-científica para muitos espectadores.",
+      "aspas_removidas_da_descricao": false
+    },
+    {
+      "id": "t6",
+      "tema": "Narrativa sem evolução dramática",
+      "descricao_curta": "Provoca frustração por repetir o mesmo padrão de cenas repetitivas, sem gerar novos giros ou avançar a investigação principal.",
+      "aspas_removidas_da_descricao": false
+    }
+  ],
+  "estagio2_lotes": [
+    {
+      "offset": 0,
+      "tamanho": 25,
+      "chamadas": [
+        {
+          "tentativa": 1,
+          "tempo_s": 59.24,
+          "done_reason": "stop",
+          "eval_count": 382,
+          "conteudo_chars": 601,
+          "json_valido": true
+        }
+      ],
+      "ok": true,
+      "ids_invalidos": 2
+    },
+    {
+      "offset": 25,
+      "tamanho": 25,
+      "chamadas": [
+        {
+          "tentativa": 1,
+          "tempo_s": 85.0,
+          "done_reason": "stop",
+          "eval_count": 301,
+          "conteudo_chars": 505,
+          "json_valido": true
+        }
+      ],
+      "ok": true,
+      "ids_invalidos": 0
+    }
+  ],
+  "estagio2_ids_invalidos_total": 2,
+  "n_reviews_sem_tema": 13,
+  "n_reviews_nao_classificadas_falha_lote": 0,
+  "n_reviews_com_tema": 37,
+  "media_temas_por_review_classificada": 2.14,
+  "idioma_pt_br_ok": true,
+  "temas_finais": [
+    {
+      "tema": "Ritmo excessivamente lento e estático",
+      "mencoes_aproximadas": 23,
+      "n_reviews_analisadas": 50,
+      "exemplo_parafraseado": "Gera sensação de tédio prolongado, vazio existencial e desconexão mental com a narrativa devido ao ritmo pausadíssimo e à falta de dinamismo visual.",
+      "id_estagio1": "t1"
+    },
+    {
+      "tema": "Narrativa sem evolução dramática",
+      "mencoes_aproximadas": 22,
+      "n_reviews_analisadas": 50,
+      "exemplo_parafraseado": "Provoca frustração por repetir o mesmo padrão de cenas repetitivas, sem gerar novos giros ou avançar a investigação principal.",
+      "id_estagio1": "t6"
+    },
+    {
+      "tema": "Diálogos artificiais e repetitivos",
+      "mencoes_aproximadas": 18,
+      "n_reviews_analisadas": 50,
+      "exemplo_parafraseado": "Produce desconforto ao apresentar trocas verbais robóticas, sem avanço da trama nem desenvolvimento significativo das ideias.",
+      "id_estagio1": "t4"
+    },
+    {
+      "tema": "Personagens planos e sem profundidade emocional",
+      "mencoes_aproximadas": 15,
+      "n_reviews_analisadas": 50,
+      "exemplo_parafraseado": "Causa indiferença total, pois os detetives e assassinos são tratados como figuras robóticas ou estéreis que não provocam empatia nem curiosidade real.",
+      "id_estagio1": "t2"
+    },
+    {
+      "tema": "Conceito de hipnose questionado logicamente",
+      "mencoes_aproximadas": 15,
+      "n_reviews_analisadas": 50,
+      "exemplo_parafraseado": "Desperta confusão e incredulidade ao apresentar uma premissa que soa simplória ou pseudo-científica para muitos espectadores.",
+      "id_estagio1": "t5"
+    },
+    {
+      "tema": "Atmosfera clínica fria demais",
+      "mencoes_aproximadas": 14,
+      "n_reviews_analisadas": 50,
+      "exemplo_parafraseado": "Transmite frieza excessiva e esterilidade emocional, criando um ambiente distanciado que impede o espectador de sentir tensão ou medo.",
+      "id_estagio1": "t3"
+    }
+  ],
+  "amostra_completa": [
+    {
+      "indice": 0,
+      "rating": 0.5,
+      "texto": "DULL. Horror movie it definitely isn’t. There is nothing remotely scary or hair rising or even creepy about it. Unless a carved x on a chest is what defines this as horror. Critique on Japanese society. Perhaps. But without any other context (which there isn’t) it just feels like a bad arty song lyric sheet. Clinical and elliptical approach that slowly lures you into the narrative. Clinical it is indeed. Did it lure me in? Definitely not. On the contrary this sterile approach has nothing else on it to lure, so it just became more distant from me minute after minute. I was watching with the same apathy that the people were performing murders. To be frank this movie was so horribly bad that I felt what the guy in the opening scene bashing the head of the prostitute with a water pipe felt: absolutely nothing.",
+      "temas_atribuidos": [
+        "t3"
+      ]
+    },
+    {
+      "indice": 1,
+      "rating": 0.5,
+      "texto": "Why do people like this. It is not creepy, it is not clever, it’s just fucking boring and annoying. Not even atmospheric just fucking drab. I get why it’s frustrating, I guess trying to put you in the detective’s shoes?? But still just frustrating in a way that doesn’t add any tension. So much nothing. I can’t even divulge any details cus it’s just. Annoying. Everyone sucked in this too, couldn’t relate to anyone. The only funny part was the flash of the monkey.",
+      "temas_atribuidos": [
+        "t6",
+        "t1"
+      ]
+    },
+    {
+      "indice": 2,
+      "rating": 0.5,
+      "texto": "Maybe things were different in 1997 but the true horror was the agonizingly slow pace of this movie. No amount of \"no, the real question is who are you?\" makes this psychological or introspective more than it makes it annoying. After a few minutes of typical detective film we're left to suffer a series of frames moved along by a series of scenes and nothing of note. There's blood and there's bodies, because of course there have to be, but names, faces, and places that are so easily forgotten that they might as well not have been anything. If content is the thing in the box, then this film is all wrapping paper and nothing of substance. Atmosphere for atmosphere sake. It's up to the detectives to figure out the \"complex mind of a criminal\" but this dude doesn't even know why he's doing it either. At some point he gets hypnotized by what amounts to ye olde books on tape and some liberal arts classes then prances from place to place playing at the arrogant ass with amnesia. The real \"villain\" is an unknown catalyst from 200 years ago and a few handwaving woo woo concepts like power of suggestion and alchemy for no reason. Main detective's sick wife was an initial thread of intrigue, that turned into nothing, and then she was tucked away until the very heavily telegraphed shock value scene. But at least main detective emptied his clip into that guy before very expectedly becoming that guy.",
+      "temas_atribuidos": [
+        "t5",
+        "t4",
+        "t6",
+        "t2",
+        "t1"
+      ]
+    },
+    {
+      "indice": 3,
+      "rating": 0.5,
+      "texto": "everything about this movie from its theme and subtext to its pacing, dialogue, and atmosphere is unbearably dull. the characters bored me, and maybe if at least one of them had been remotely intriguing i would have found something to hold onto, but there was nothing special about any of them. i genuinely have no idea what people see in this. it’s rated ridiculously high and the level of glazing is insane, maybe they’ve lost their minds too.",
+      "temas_atribuidos": [
+        "t2",
+        "t4",
+        "t1"
+      ]
+    },
+    {
+      "indice": 4,
+      "rating": 0.5,
+      "texto": "DNF 47:40 Every scene is this slow, methodical and static long-take and i’m sorry i just can’t take it. My mind can’t handle films with less than 5 cuts a second. I get so, so, so bored. I also think i just don’t like Japanese storytelling. Miyazaki, Kurosawa, most of Miike and Oshii’s work i’ve more or less bounced off. I’ve found the large majority of the anime i’ve seen to be dull. Even the stuff i’ve liked has generally been less for the storytelling and more because they are filled with action or a certain big lizard. Smarter people than i have told me that the Japanese generally has a completely different approach to storytelling and structure than most countries and maybe that’s why it doesn’t connect with me. Or maybe i’m just horribly racist. Who knows?",
+      "temas_atribuidos": [
+        "t1",
+        "t4",
+        "t2"
+      ]
+    },
+    {
+      "indice": 5,
+      "rating": 0.5,
+      "texto": "I’ve seen some truly terrible films. Films that bore me, films that talk a LOT without saying anything, and films that drag on until I start to weep tears of joy when the credits finally roll. This film was all three; neatly stacked to create the most bland sandwich ever consumed. No substance. No depth. No aesthetic. I came looking for the love child of “Se7en” and “Memories of Murder” but instead what was delivered was a sickly stillborn abomination that gives this decade’s worst horror/thriller film, “Longlegs” a run for its money.",
+      "temas_atribuidos": [
+        "t1",
+        "t3",
+        "t4",
+        "t2",
+        "t6"
+      ]
+    },
+    {
+      "indice": 6,
+      "rating": 0.5,
+      "texto": "cure me from the boredom this film has brought me. couldn’t tell you a single thing that happened. felt like a weird fever dream. 4.3 average is crazyy utter woke nonsense. i’m never trusting letterboxd ever again. people have willingly rewatched this????",
+      "temas_atribuidos": []
+    },
+    {
+      "indice": 7,
+      "rating": 0.5,
+      "texto": "Que nadie la vea, es una puta mierda de estas que te tienes que leer un libro despues para entender la peli. Buenisima premisa, pero aburrida de cojones y no se sabe explicar por si sola, ninguna pelicula con estas condiciones deberia superar las 3 estrellas. Esto es culpa vuestra miserables de los cojones inflando las pelis japonesas, devolvedme mis dos horas perdidas",
+      "temas_atribuidos": [
+        "t1",
+        "t4"
+      ]
+    },
+    {
+      "indice": 8,
+      "rating": 0.5,
+      "texto": "painfully boring, it had some good scenes but the overall narrative was so bland. The whole movie was understood in the first 30 minutes of the movie. It was so unbearably predictable. unnecessary length for a narrative that could’ve been digested in an hour. I’m never going to watch a movie just because of letterboxd reviews ever again, damn film nerds",
+      "temas_atribuidos": [
+        "t1",
+        "t4",
+        "t6"
+      ]
+    },
+    {
+      "indice": 9,
+      "rating": 0.5,
+      "texto": "tenia muchisimas ganas de ver esta pelicula y me he llevado una decepcion tremenda. que horror. para empezar es una pelicula con una ausencia increible de tension narrativa y no, no tiene nada que ver con que el ritmo sea pausado, para mi eso no es un problema. el problema es que aunque el ritmo sea pausado no estas avanzando, las escenas no tienen un proposito narrativo claro. es siempre lo mismo, una repeticion sin crecimiento ni consecuencias. no hay progresion dramatica, no hay giros, no hay revelaciones. solo una sucesion de escenas que se parecen demasiado entre si, sin tension interna ni verdadero conflicto. por ejemplo en se7en los asesinatos iban revelando pequeñas cosas y se iba completando todo como un puzzle con todos esos avances, pero aqui no hay una progresion, simplemente se repite lo mismo durante practicamente 1h. la historia y el guion son realmente flojos. la trama es repetitiva y no ofrece nada nuevo ni sorprendente; se limita a mostrar una y otra vez el mismo patron sin profundizar en sus causas ni en las consecuencias de los hechos. los dialogos son escasos y muchas veces vacios, sin aportar desarrollo a los personajes ni al conflicto central. la repeticion excesiva desgasta la tension en lugar de construirla. ademas los personajes son excesivamente planos, no aportan nada. no me han movido por dentro ni para bien ni para mal, me han dejado indiferente. una historia que no tiene nada interesante que contar, no se desarrolla, y podria contarse en 10 minutos. no hay complejidad, ni tan siquiera una direccion brillante, nada. es literalmente anodina , que es lo peor que puedes hacer: una pelicula que no tiene nada especial ni para bien ni para mal. no genera ni miedo ni suspense ni asco ni nada. no se genera una atmosfera de interes, nada de nada. yo soy una persona que se fija muchisimo en los personajes, me tienen que atraer, por su frialdad, por su magnetismo, por su violencia, por su lo que sea. tambien me fijo en una buena historia, si tiene escenas largas y lentas que su guion sea brillante por lo menos, que se genere una tension enorme o se utilicen grandes planos. tiene que haber al menos algo por dios y aqui nada. decepcionante.",
+      "temas_atribuidos": [
+        "t5",
+        "t1",
+        "t3",
+        "t4",
+        "t2",
+        "t6"
+      ]
+    },
+    {
+      "indice": 10,
+      "rating": 1.0,
+      "texto": "I signed up for the Criterion Channel just to watch this. Cure was a massive disappointment. One of those films that makes me go crazy...questioning why it is held in such high regard. I can take slow burn, abstract and subliminal. What I can’t take is obtuse, uninteresting, pretentious and worst of all boring. Cure seems to be aiming for the former but feels more like the latter. This is a slog of a movie, without a single character to latch unto or care about and a mystery that is not as interesting as it pretends to be, even after lifting the veil of symbolism behind it. The idea of a hypnotist serial killer that brings out the violent suppressed desires of a repressed and tired society of seemingly innocent human beings is all well and good, but the storytelling here by director Kiyoshi Kurosawa just did not work for me at all. Cure is a mind bender of a movie I have no desire to analyze as I found nothing about it to be worthy of my time. It’s been a while since I actively disliked a movie that I know has artistry, thought and effort behind it, yet I could not connect with any of it.",
+      "temas_atribuidos": [
+        "t5",
+        "t4",
+        "t6",
+        "t2",
+        "t1"
+      ]
+    },
+    {
+      "indice": 11,
+      "rating": 1.0,
+      "texto": "ahhhhh WTF????????? it may be a directorial choice but the delivery of lines was so unnatural and I couldn't stop cringing lmao also, it bothered me that the detective's house did NOT look like it was lived in. (again, it may be a directorial choice. but Japanese movies are bad at home decorations in general) but other than that this movie did a great job at creating an eerie atmosphere.",
+      "temas_atribuidos": []
+    },
+    {
+      "indice": 12,
+      "rating": 1.0,
+      "texto": "Di lemari buku Mamiya ada bukunya Jung tapi bukunya Freud ga ada. Film tentang hipnosis tapi nggak ngomongin Freud. Pemeran utamanya yang ada di poster mirip Lee Jung-jae, deh.",
+      "temas_atribuidos": []
+    },
+    {
+      "indice": 13,
+      "rating": 1.0,
+      "texto": "Hooptober 8.0 : #13 of 31 (Asian Film) I must have the cilantro gene for this film. I feel like it’s an absolute waste of time, with missed opportunities, and no interesting beats.",
+      "temas_atribuidos": []
+    },
+    {
+      "indice": 14,
+      "rating": 1.0,
+      "texto": "insanely disappointing, i love slow paced ambient movies and this just had literally nothing going on at all, wasnt creeped out for a second, called the ending about halfway through, hypnotism is way too goofy of a topic for how slow and serious this takes itself, a dude being confused and pleading the 5th for literally the entire runtime with no dramatic irony no suspense, just baffling to me i like the color grading/palette and the monkey ig",
+      "temas_atribuidos": [
+        "t5",
+        "t1",
+        "t2",
+        "t6",
+        "t4"
+      ]
+    },
+    {
+      "indice": 15,
+      "rating": 1.0,
+      "texto": "What a thrilling ride from start to finish. I was so engrossed in the lives of… oh and you can’t forget about the part when… And wow, that ending. I’ll never forget when… But yeah, this movie fires on all cylinders, a must watch for every cinephile like myself.",
+      "temas_atribuidos": []
+    },
+    {
+      "indice": 16,
+      "rating": 1.0,
+      "texto": "Yes, there was some murder but where was the madness? Where was the terror? What amazing visuals and frames did I miss that y'all are talking about? I'd like to see em, please! Like really, watching this made me really appreciate watching Memories Of Murder, Zodiac and everything else good in the \"similar films\" section so much more. For real, I didn't care for any of the characters or their deaths, which is never a good sign to me in a movie...This was just insanely boring and the story didn't go anywhere. Was it really supposed to end that stupidly or did I just not get it?",
+      "temas_atribuidos": [
+        "t1",
+        "t6",
+        "t2"
+      ]
+    },
+    {
+      "indice": 17,
+      "rating": 1.0,
+      "texto": "An attempt was made at having some kinda point but I'll be fucked if I understand what. Long, boring, and nonsensical with a wet fart for an ending. At least 90s Japan is a nice looking aesthetic",
+      "temas_atribuidos": [
+        "t6",
+        "t1",
+        "t3"
+      ]
+    },
+    {
+      "indice": 18,
+      "rating": 1.0,
+      "texto": "The main concept hypnosis will be understandable in the first half an hour itself. After that u just keep waiting for some good moments. And that wait is going to be indefinite 🤕🤕🤕🤕",
+      "temas_atribuidos": []
+    },
+    {
+      "indice": 19,
+      "rating": 1.0,
+      "texto": "It has very very calming environment that made me bore to death. I believe it was coded like that to give us a chilling experience but I couldn't feel it. There are lot of key details thrown at us to tell us what the director wants to tell through this film but none of it registered with me nor did it make me go WOW, like i couldn't care less about any of it. The movie always gives you the vibes of \"There's some high level stuff in this but you gotta figure it out by yourself to come to a conclusion\". After going through few articles understanding the film - I understood that a lot of people did a lot of research not only on the film but also on the personal views of the director and finally concluded that \"THIS IS PEAK CINEMA\". I can only come to a conclusion based on what I see and what I feel. I can see the hidden ideology of the film but I couldn't feel the impact of it - may be it's because of the very very calming environment, slow and beaten to death narration, may be I was getting irritated with the same structured conversations, may be I was lost with few landscape changes like in one scene we are in the streets and in the next we go to a abandoned mansion - I had to guess on how we got there by framing scenes but still it didn't make any sense , may be I was irked to see director giving us the backstory of hypnosis or mesmer whenever it's convenient rather than having a flow to it - We see the psychiatrist explaining the video tape but how we got to that is where my problem is May be, I'm the problem 😔",
+      "temas_atribuidos": [
+        "t5",
+        "t4",
+        "t3",
+        "t2"
+      ]
+    },
+    {
+      "indice": 20,
+      "rating": 1.5,
+      "texto": "I could have watched 2 Hisayasu Satô movies instead of this. So of course, I chose wrong. I really wanted to like this film. With the reviews, I expected an immediate masterpiece that could hypnotize me. But there's nothing here. It's limp. Too clean. Sterile. Safe. There's no moods here. No longing. Alienation. Nihilism. Nothing beautiful to look at. Nothing grotesque. Nothing grungy. The edges have been sanded off and talked away. Even if he survives on the worst VHS transfers, Satô is the 90s. He paints in beautiful blues, captures the coldness of the city, and its strangeness. \"Cure\" is never shocking nor even eerie or dream-like. It's a dull procedural far too conventional in plot and cinematography for me. This is somewhat the same struggle I had with \" Trouble Every Day \" (2001) recently, but that film was worse and suffered from terrible acting from the husband (Vincent Gallo) and his wife. No one is a bad actor in \"Cure,\" but I want someone to possess me here. My husband asked me if we're jaded. I disagree: I'm worshipping and throwing five stars at the alter of Jess Franco (and I can't convince him to share that delusion). I can handle slow, aimless plots that are pure cinematic dreams. I can handle Criterion films with slower pacing: like my 5 stars for both \"Belle de Jour\" and \"The Night Porter.\" Hypnosis just doesn't work on all people.",
+      "temas_atribuidos": [
+        "t3",
+        "t5",
+        "t6",
+        "t4"
+      ]
+    },
+    {
+      "indice": 21,
+      "rating": 1.5,
+      "texto": "boring / pretentious bs bummer, had my eye on this one for a long time one of the most overrated movies i've ever seen overall a superfluous film, with no meaning or enjoyability whatsoever extremely overrated",
+      "temas_atribuidos": []
+    },
+    {
+      "indice": 22,
+      "rating": 1.5,
+      "texto": "This was a challenging film to watch. I watched it about 10 years ago and thought it to be entirely forgettable and sleep-inducing, and figured it was worth a re-watch. I want my time back. Considering how highly rated/reviewed this is, I'm clearly missing something here. Is this me finding out I have ADHD for being unable to piece together why this is a worthwhile or interesting story? College dropout uses \"hypnosis\" (a zippo lighter) to get strangers to commit murders, and we're just supposed to believe that at face value without any sort of logical explanation other than \"he learned it in a book\" like get the f*ck out of here. Slow burn, no payoff, no explanations, no sense of dread. Great cinematography tho. The plot synopsis on wikipedia is far more interesting and worthwhile than wasting an hour and 51 minutes of your time. I'll say it's got a solid premise, executed supremely poorly, but with pretty camera angles, and this is the last time I ever want to think about this one. Hooptober8 14/34",
+      "temas_atribuidos": [
+        "t5",
+        "t1"
+      ]
+    },
+    {
+      "indice": 23,
+      "rating": 1.5,
+      "texto": "Masterpiece? Get the fuck out. Starts out being somewhat interesting then grinds to a halt. Spends the next hour looking at you. You figure out the conceit really early and the movie doesn't really catch up, ever. To make it worse it's boring as shit. I liked the sound design and some of the direction but that's it. I found this drab and unappealing, as did my viewing companions. Film #469 of 2021.",
+      "temas_atribuidos": []
+    },
+    {
+      "indice": 24,
+      "rating": 1.5,
+      "texto": "Just so fundamentally frustrating, so vague, characters are so thinly shaded. Not even productively freaky. Probably the most beloved movie I like the least, never fails to put me to sleep",
+      "temas_atribuidos": []
+    },
+    {
+      "indice": 25,
+      "rating": 1.5,
+      "texto": "Certainly unique and thought-provoking, but it didn’t hit the mark for me. I found it really underwhelming, which is disappointing because I have heard so many amazing things about it. I enjoy a slow burner but the long, quiet shots were just too frequent for my brain to keep engaged with the plot. I wasn’t interested in the characters at all and it didn’t really elicit much emotion from me either. The scenes where I was supposed to feel frightened or uncomfortable, I felt nothing. It felt flat and dull to me, so I just couldn’t see it through until the end. Maybe you have to be in a particular mood to watch it and I’ll try again another time.",
+      "temas_atribuidos": [
+        "t2",
+        "t6"
+      ]
+    },
+    {
+      "indice": 26,
+      "rating": 1.5,
+      "texto": "I didn’t enjoy it. Maybe it’s the fact it’s a thriller, maybe it’s the fact that it was rather austere, but this Japanese film of the 90s didn’t draw me in at all. It just felt sort of dragging and not particularly engaging. And reading other people’s critiques and takes does show that this film captivates others in a way that it could not with me. Sometimes it just doesn’t click, it’s not the film’s fault. It might be my state of mind that just needed something lighter. This is essentially social critque expressed through the lens of the horror genre. The story follows a detective investigating a string of murders where an X is carved into the neck of each victim, the murderer is found near the victim of each case and remembers nothing of the crime. The detective is a repressed, cold man who looks after his unstable wife. The film is driven by his desire to understand the workings of the man who can seemingly hypnotise people, getting them to commit heinous crimes. While trying to figure all of this out, his own mind starts to slip, losing sense of what is real and what not. If you like tense, austere horror / thriller — this will be perfect. I, turns out, am not particularly excited by it.",
+      "temas_atribuidos": []
+    },
+    {
+      "indice": 27,
+      "rating": 1.5,
+      "texto": "Watched as a part of the Watchlist Genre Challenge God that was one of the most overwhelmingly underwhelming movies I've seen ever, pretentious boring uninteresting crap that gets repetitively repetitive. So much potential because the concept the eerie atmosphere but everything falls apart in execution. They clearly ran out of ideas in the middle part and gave that shitty ending just to be seen as cool. A solid acting performance by the lead but god damn it his character is so shite. I don't think I've been so bored ever watching a movie, it even has the mystery tag which is one of my most favourite genres and what makes them great is the intrigue but there is none of that here, little to no horror elements and barely any thrill.",
+      "temas_atribuidos": [
+        "t4",
+        "t5",
+        "t6"
+      ]
+    },
+    {
+      "indice": 28,
+      "rating": 1.5,
+      "texto": "An inept detective tracks down a serial killer who hypnotizes people by mimicking the annoying questions of a seven year old. I am baffled by the love for this movie. The acting is laughably bad, the dialogue is barely functional, the plot is nearly non-existent. My best guess as to why people like this film is its insufferable dedication to being “mysterious”. The only mystery here is how someone could cobble together such a half-assed production. If as other reviewers suggest, the film is riffing on the idea that there is violence within all of us that we suppress out of some loyalty to social norms, then this is a movie I want to watch, not some convoluted nonsense about a century-old hypnotist whose dark art of drawing Xs in the air resurfaces in 90s in the form of a serial killer. This is a movie that is half-committed to a great idea but abandons its other half to schlocky genius-psychopath tropes and hammy psychobabble. And seriously, not one actor changed their clothes the whole movie. There are two things worth remembering about this otherwise boring film, the sound design which blends mechanical ambient noise with a a sound mix that puts incidental noises and the voices front and center, and the effectively creepy art direction that feels almost post-apocalyptic at times and in a better movie would have been utilized to tell us something about the world and the characters we see on screen. I’m going to give Kurosawa one more chance with Pulse but after Spy’s Wife and Cure I can’t see my opinion changing much.",
+      "temas_atribuidos": [
+        "t2",
+        "t3",
+        "t4",
+        "t5",
+        "t6"
+      ]
+    },
+    {
+      "indice": 29,
+      "rating": 1.5,
+      "texto": "I couldn't find a single appealing element in Cure , although I'm a passionate of crime-related stuff I don't seem to enjoy these kind of thrillers. The film didn't hold any suspense nor intrigue for me, I struggled to get invested or even interested in continue watching. The plot, the script, the acting, nothing succeeded. This is an example of slow thrillers that intend to unravel a super interesting and critical plot, while in the end results in just another lazy film with a lazy reflection on how people can \"murder without any reason or motivation\" (what the fuck?). The intended nihilistic atmosphere was spot-on, the rest wasn't. As I see it, it'd have worked better if our villain character was only a methapor, then you'd have given the film a whole different meaning.",
+      "temas_atribuidos": [
+        "t1",
+        "t3",
+        "t6"
+      ]
+    },
+    {
+      "indice": 30,
+      "rating": 2.0,
+      "texto": "Watched as part of the Watchlist Genre Challenge Similar to Se7en and Zodiac (two movies i'm not crazy about) so naturally this did not work for me as it's a lesser version of those two. The initial mystery was so captivating and got me fully on board. I like the atmosphere and the almost fantasy elements that spice up the usual Zodiac -ish recipe with the killer. A real good start but it runs out of ideas somewhere in the second act and after that it's just rince, repeat, rince, repeat... until I got irritated and disinterested in the outcome. There's no twist really at the end, it just hits a brick wall and expects you to come up with an ending. So flat. Nothing memorable. The main character is the worst detective ever, he can't even interrogate someone for more than 5 minutes without having an outburst of emotions—but at the same time I get it, the killer is very irritating! No charisma or personality in sight, just a robot that pops out questions. I didn't really feel much watching this movie either, it tries to get emotional a few times but it was just poor and cheesy. Very light horror elements, this is more of a dark crime thriller with a couple of bloody scenes.",
+      "temas_atribuidos": [
+        "t2",
+        "t3",
+        "t4",
+        "t6"
+      ]
+    },
+    {
+      "indice": 31,
+      "rating": 2.0,
+      "texto": "Spooktober 2024: Day 25 watching a horror movie Truly sorry, folks, but I seriously don’t get the hype for this. Throughout it's protracted runtime, i found Cure excruciatingly overstays it's welcome, by spinning out in a mystery that leads nowhere significant. To be fair, the premise itself is thoroughly intriguing: a killer feigning amnesia, endowed with a disquieting aura and a hypnotic prowess that allows him to tap into the subconscious of others, compelling them to commit heinous acts of violence without their cognizance. Such concept is actually rife with potential for exploration into the sinister recesses of human psychology. Yet, alas, the execution is agonizingly elongated, dragging it's feet through a mire of monotony that offers neither excitement nor genuine intrigue. Instead of gripping suspense or tension, we’re given repetitive interrogations and a mystery that barely unfolds, with Detective Takabe going in circles without ever yielding anything fruitful. There's also hardly any dramatic tension from Takabe’s personal family life, which could have added much-needed stakes, yet it's barely developed. As for Cure being labeled as “horror” is just wildly exaggerated & preposterous. There is scarcely any signs of the ominous, the horrific, let alone the thrills to be found within it's frames. Sure, it leans into police procedural thriller territory, but unlike other renowned crime films that takes advantage of dark atmospheres, intense thrills and menacing villain, yet Cure chooses instead to meander, devoid of the tension that one might reasonably expect. As for the ending, it is just okay at best, or perhaps an anticlimactic denouement to an otherwise excruciatingly drawn-out narrative. Overall, for lack of a better word, Cure is basically just nothing burger, and a snoozefest, wrapped up in an overrated hype that it doesn’t live up to. In the end, I confess I am at a loss to understand it's appeal, and I find myself utterly indifferent to the exalted status it has amassed within cinematic discourse. Perhaps some among you might wish to send me to the guillotine for this audacious opinion, so i’ll evade for a bit!🤐 However, i'll definitely be back soon after my rewatch for a review from a movie what i consider a truly profound horror experience, that is The Substance (2024), to cleanse my palate and to appropriately conclude this Halloween season. Ranking country: 🇯🇵",
+      "temas_atribuidos": [
+        "t1",
+        "t2",
+        "t5",
+        "t6"
+      ]
+    },
+    {
+      "indice": 32,
+      "rating": 2.0,
+      "texto": "Day 11 of 31 🎃 The movie starts with a series of strange murders: ordinary people killing others, and all the victims have an “X” marked on their bodies. The creepy part is that the killers don’t know why they did it, which creates a mystery from the very beginning. Mamiya, the strange student who connects all the crimes, is super stressful. At one point, he even made me laugh, because he kept repeating the same things over and over without really saying anything. I felt just like Detective Takabe, lost and trying to make sense of it all. However, I found the movie very slow and boring. I understand that for some people, the slow pace and psychological horror might be interesting, but for me, it was hard to enjoy. The tension and mystery they try to create didn’t really grab me. That’s why my rating is 2 out of 5 stars. Maybe someone else will enjoy it, but for me, it was just too slow and not exciting enough🎃",
+      "temas_atribuidos": [
+        "t1",
+        "t3"
+      ]
+    },
+    {
+      "indice": 33,
+      "rating": 2.0,
+      "texto": "“Tell me about yourself.” I do think this movie ended really well, but I really was expecting so much more from this “masterpiece.” I wasn’t invested in the detective story, and even though the hypnotism was much more interesting, the horror was very marginal and the way that story was concluded felt so abrupt and awkward. By the time I understood what the movie was trying to do, I was already off put. If there were more thrillery twists or more horrory scenes this would’ve stuck the landing, but I was very underwhelmed…",
+      "temas_atribuidos": [
+        "t5",
+        "t6"
+      ]
+    },
+    {
+      "indice": 34,
+      "rating": 2.0,
+      "texto": "I desperately wanted to love this film because so many artists I admire list it as a favorite and an inspiration... but I just didn’t feel the same horror or desperation that they did. At all. A meandering, repetitive slog with no character, plot, or mystery to care about or speculate on I was left feeling partially desperate for it to end, but mostly confused how so many see it as a masterpiece. Am I dumb?! I think I’m dumb!",
+      "temas_atribuidos": []
+    },
+    {
+      "indice": 35,
+      "rating": 2.0,
+      "texto": "Eu tive vontade de colocar o filme no 2x, e me senti mal por isso. Eu entendo que o filme quer mostrar uma forma mais filosófica e abstrata do mal, eu realmente entendo. Porém, não gostei pois isso se torna ambíguo, é uma abstração excessiva . Não tem nada claro e objetivo. Fiquei frustada por não ter gostado, só havia visto coisas boas dessa obra. Ela não me prendeu. Mas não foi tudo ruim, eu gostei da estética fria e clínica, porque aproxima a alienação ao mistério da trama. Além disso, é notável as perfomaces, me transmitiu um desgaste emocional contido.",
+      "temas_atribuidos": [
+        "t3"
+      ]
+    },
+    {
+      "indice": 36,
+      "rating": 2.0,
+      "texto": "I think if I saw this at the start of the pandemic, it would hit differently. From the beginning to the end of this film, it stayed at that flat pace. Nothing builds. I was not as engaged as I would be watching Se7en or even Fallen . The movie's overall look was gorgeous, but it was too clean to be a detective story. Where was the music? The ambient sound needed to be louder and weirder.",
+      "temas_atribuidos": [
+        "t1",
+        "t3"
+      ]
+    },
+    {
+      "indice": 37,
+      "rating": 2.0,
+      "texto": "A shame that very little of this works for me. Personally feels far less dense and thoughtful than others have given it credit for, but this could be because the self-serious, dry, quiet horror doesn't amount to very much and only invokes dryness alone, rather than any unsettling feeling. Compared to the Kurosawa films I've seen and adored (Bright Future, Charisma, Pulse, Seance) Cure just isn't particularly interesting or dynamic or fluid(?), I'm not completely sure what isn't clicking with me but it feels like disinterest, I may not be able to blame Kurosawa for that. Stopped halfway through, I probably appreciate what ppl have written about it more than what it is.",
+      "temas_atribuidos": [
+        "t4",
+        "t6"
+      ]
+    },
+    {
+      "indice": 38,
+      "rating": 2.0,
+      "texto": "اغلب الي تابعوه قالوا انه يترك بداخلك شعور الخوف والرعب النفسي يخوي والله ماترك الا الملل و الفراغ الرعب النفسي عمره ماكان بذي الصوره و القاتل ماعنده اي طابع مُرعب فقط اداءه كان جيد لكن مايحسسك ب أي رعب و حواراته فارغه بس يقعد يقول انت مين و انا مين و ايش وظيفتك حتى المؤثرات الصوتيه الي من المفترض ان يتم استعماله بكثرة او على الاقل بالشكل المطلوب في افلام الرعب النفسي ماتوفرت بهذا الفلم الا بلحظات قليلة الشيء الوحيد الإيجابي بالفلم و الي ابهرني هو الإخراج و التصوير السنيمائي الي كان معطي طابع هادئ و مريح و هذا النوع يُلائم الافلام الدراميه اكثر لكن استعماله بالفلم ما اشعرني ب أي شعور خوف او رعب",
+      "temas_atribuidos": [
+        "t1",
+        "t3",
+        "t4"
+      ]
+    },
+    {
+      "indice": 39,
+      "rating": 2.0,
+      "texto": "It's hard not to appreciate the amazing acting going on in CURE, in particular, the performance of Koji Yakusho but despite some gut-wrenching emotion and power punches of anger, the displays of acting ability are overshadowed by a very bland & uninteresting story that is (intentionally?) obvious from kill #2 before blandly teasing higher powers at work. I can't say I didn't enjoy looking at the movie, the use of locations, inside and outside, gave an interesting look at Tokyo and surrounding areas. When the film focuses on the gruesome, it does hit a home run and while using it sparingly, it does so effectively. A huge influence to J-horror of the coming years for sure, I would have just preferred a straight-up serial killer chase as opposed to anything more.",
+      "temas_atribuidos": [
+        "t6"
+      ]
+    },
+    {
+      "indice": 40,
+      "rating": 2.5,
+      "texto": "Overrated bir film daha. Mıy mıy mıy 2 saatte anlatamadı bir şeyi ve olayın daha başlarda açıklanması merağımı kaybettirdi. Filmin devasa bir tempo sorunu var beni her anında bağlayamadı kendine, tam heyecanlı bir an oluyor hop tempo yine düşüyor. Filmin başı da son 30-40dksı gibi gerici ve heyecanlı olsa iyi olurmuş. Finali de beğenemedim meh.",
+      "temas_atribuidos": [
+        "t1",
+        "t5"
+      ]
+    },
+    {
+      "indice": 41,
+      "rating": 2.5,
+      "texto": "Hipnoz yeteneğiyle insanları cinayete sürükleyen bir adamın etrafında dönen enteresan olaylar zincirine sahip filmlerden. Bazı açılardan harikulade sahneleri, cinayet tasarımları varken bazı noktalardan da neden bu kadar abartıldığına asla anlam veremediğim noktaları var. Anlatmaya çalıştığı olaylarda değil, anlatısında sıkıntı var ve bunun tamamen iyi kurgulanmamış olmasına bağlıyorum. Film öyle çekimlerle tempo kazanacak gibi duruyor ki bir anlık yükseliyorsunuz fakat sonraki girizgah ile kendisini tekrara düşüren seti çekerek adeta son yüz metrede atı inatla salmayan jokeyler gibi hissettiriyor. Hipnoz, psikoloji tandanslı altyapısı aslında başyapıt çıkarılabilecek etkiye sahip. Filmin matematiği iyi ayarlanamadığı için yapmak istediği ne varsa bana pek geçiremedi. Anları yaşattı, bütünü veremedi. Merak ettiğim yapımlardandı doğrusu ama vasat buldum. Sevenleriyle mutluluklar dileyelim.",
+      "temas_atribuidos": [
+        "t1",
+        "t5"
+      ]
+    },
+    {
+      "indice": 42,
+      "rating": 2.5,
+      "texto": "Probably no one should go into a movie they've heard is \"the greatest movie ever,\" perhaps except \"The Godfather,\" which can still withstand the onslaught of the highest expectations. In this case, director Ari Aster has said \"Cure\" possibly is such. Watching this and knowing his filmography, you can see all of the connections.  Also, the ones with Bong Joon-ho. In truth I would rather rewatch Aster or Joon-ho, even though I do like Kurosawa. One strong element coming up here is the subject matter.  In this time period you get plenty of films with serial killers, some often feeling that a rationalization for their killings or methods is necessary.  What's tackled in \"Cure,\" and this is possibly a mild spoiler, is hypnotism. If you know the topic decently well, you can see when a script is handwaving.  Here it's the scene where the detective inquires about whether a subject can be hypnotized into killing someone.  The answer is \"no,\" you can't, because it's darn near impossible for a practicing hynoptist to make you do something against your will and to violate your self-sure identity.  In other words, if you aren't a killer and don't want to, a master hypnotist can't just come up to you, \"make you sleepy,\" and then get you to off a rando. This movies presumes that to be the case, so it goes beyond believability to me.  I am one who often calls movies \"hypnotic experiences,\" because they are.  They induce trance-like states in suggestible people. Guilty as charged. To go about hypnotism for a minute, the subject is fascinating when it's consider at a more mundane level, where it is in fact often wielded insidiously.  Take any marketing class for proof.  Just yesterday, picking up a prescription, the pharmacist nearly got me to bite on a couple of inoculations.  She was decent-looking, she used quite persuasive language on the level of good marketers and hypnotists, and I was already suggestible towards \"eradicating' bad diseases.  What I had to do was pause and say to myself, \"decide later,\" which I did. This is not easy for almost all of us.  Some philosophers and hypnotists have suggested that because we all always somewhat suggestible, we may not have \"free will.\"  I have no opinion on that matter, though the unconscious mind does control an awful lot, does it not? Anyway, \"Cure\" is effectively a slowburn detective thriller that uses this topic as its basis for proceeding.  It may be credibly watched as a discussion on the topic as well, which is where I object to what it's portraying. As a slowburn, ala Aster movies, it occasionally shocks successfully. A director like Aster could learn much from the setups and payoffs here, especially the takes that don't cut and then shock. That wouldn't make this the greatest movie ever, not even a good movie; just an effective one at using certain techniques at certain times. Unfairly, perhaps, I'm reminded of David Fincher's work -- \"Se7en\" did come out before this -- \"Memories of Murder,\" S. Craig Zahler's work, ad infinitum. A bunch of those I'd rather rewatch rather than this one, to state a personal preference.  To put all cards on the table, I've always loved the stuff that has flair a bit more than those that don't: Welles, Gilliam, etc. There's surely more to this movie than anybody can examine, a truism of mediocre to bad movies too! But there's so little time, and so much to watch. I'd rather have somebody else and some other movie hypnotize me.",
+      "temas_atribuidos": [
+        "t2",
+        "t5"
+      ]
+    },
+    {
+      "indice": 43,
+      "rating": 2.5,
+      "texto": "English Version below Nachdem Longlegs ein als Thriller verkleideter Horrorfilm war, dachte ich mir, dass es an der Zeit wäre, weitere Filme dieser seltenen Kategorie zu sichten. Zufällig gab mir ein guter Freund den Impuls, es mit Cure zu versuchen. Der 90er Jahre Japan-Horror erfreut sich global großer Beleibtheit und war mir in den letzten Jahren häufiger in diversen Listen oder Kritiken begegnet. Und recht schnell stelle ich hier sehr deutliche Parallelen zu Longlegs fest, denn die Ausgangslage der Hauptfigur ist hier nahezu identisch. Doch Cure leidet inhaltlich stark darunter, dass sich der Film unglaublich ernst nimmt und leider genau dies nicht ist. Die Figuren handeln zu oft derart unplausibel, dass es mich mehrfach aus der Geschichte rausgehauen hat, weil ich es nicht ertragen konnte, wie unglaubwürdig dumm hier agiert wurde. Ärgerlich ist hierbei besonders, dass dadurch jegliche Spannung verloren ging, da man auch den Antagonisten nicht mehr ernst nehmen konnte. Dabei sind Szenenbild und Sound durchaus gelungen. Und die Prämisse, in einem Lichtstrahl, einem Feuerschein, einem Windhauch oder nur im Umblättern von Notizbüchern eine Gefahr zu wähnen, ist durchaus ambitioniert und gelingt sogar einige Male. Denn dass man nur einen Feuerzeugschein vom totalen Kontrollverlust entfernt ist, bringt der Film in vielen Stellen deutlich auf den Punkt. Die Idee und die Inszenierung sind zum Großteil gut. Leider sorgen die Schwächen der Geschichte und die hölzerne Darstellung dafür, dass die Gefahr nur selten bei mir ankam. Das Ende ist dann inhaltlich ebenfalls nicht mehr meins, da der Film für diese nihilistische Note dann gar nicht düster genug war. Die überschwänglichen Bewertungen kann ich mir nur so erklären, dass hier Mesmerismus am Werk war. ------------------------------- After *Longlegs* turned out to be a horror film disguised as a thriller, I thought it was time to explore more movies in this rare category. Coincidentally, a good friend suggested that I try *Cure*. 90s Japanese horror enjoys great global popularity and has appeared frequently in various lists or reviews in recent years. I quickly noticed very clear parallels to *Longlegs*, as the main character's initial situation is almost identical. However, *Cure* suffers greatly from the fact that the film takes itself incredibly seriously, but unfortunately, it doesn't quite succeed in that regard. The characters act so implausibly that it pulled me out of the story multiple times because I couldn’t bear how unbelievably foolish their actions were. What’s particularly frustrating is that this completely eroded any tension, as it also made it impossible to take the antagonist seriously. That said, the set design and sound are quite well done. And the premise of perceiving danger in a beam of light, a flicker of flame, a gust of wind, or even just in the turning of notebook pages is certainly ambitious and succeeds a few times. The film effectively conveys that one is just a flicker of a lighter away from total loss of control at many points. The idea and the execution are mostly good. Unfortunately, the weaknesses in the story and the wooden performances meant that the sense of danger rarely reached me. The ending also didn’t sit well with me, as the film wasn’t dark enough to justify this nihilistic note. I can only explain the rave reviews by assuming that mesmerism was at work here.",
+      "temas_atribuidos": [
+        "t2",
+        "t6"
+      ]
+    },
+    {
+      "indice": 44,
+      "rating": 2.5,
+      "texto": "This one hurts. As much as I wanted to like Cure , I just could not get into it. It’s not for lack of trying either. Kiyoshi Kurosawa treats this entire thing with the same hypnotic-like pageantry as its subject matter and it is wonderous to behold but, by the end, I just found myself expecting more. I have a feeling this is one of those movies that only get better with each rewatch but as of now, I am a bit disappointed.",
+      "temas_atribuidos": []
+    },
+    {
+      "indice": 45,
+      "rating": 2.5,
+      "texto": "Kiyoshi Kurosawa's Hypnotism Doesn't Work on Me Listen, I'm not trying to be an angry contrarian but...holy cinepheliac fucking fuck does Letterboxd glaze the cinematic shit out of this movie (and director, actually). Not me. I like hearing all opinions. I've read enough. I've seen...enough. I had to doom-scroll to find any critical reviews and even then, they are mostly drowning in film nerd pretension (thank you to people who don't feel the need to close read film themes). Shoutout to all the meme reviews. My search tells me people either actually love this film or have been fooled--perhaps even bullied--into loving it. Not me. I was so fucking bored. Let's talk about why. Respect to any and all who found any joy watching this (sorry that hypnotism works on you). This review is not for you. This is my third Kurosawa film. I know his style. He's here for the big mood. He wants us hypnotized. And he is definitely a competent filmmaker. He loves his ambient noise. He loves bridge shots. He loves a panning camera. He loves natural light. And as a mood piece, this style works. If that's all every movie ever (ever) was...I'd literally burn down the world and laugh until my head came off. I watch movies to have fun and escape my shitty little life. Not to be numb. Cure is cinematic anesthesia. As compelling as the narrative is in spades, it's not remotely exciting paired with the delirious ennui of the film's introspective direction where I just feel a whole lot of nothing the whole time. Or, in simpler words, the mood behind the direction gets in the way of the film's plot for me and makes me feel empty. Maybe that's the point but it doesn't mean I have to agree. I think it's pretentious bullshit. Give me resolution or give me death. Make me feel something or go fuck yourself. I've read people speak on the realism of this film. Unfortunately, these aren't real people (you are not real people) and they don't feel real either (you don't feel real). We have an angry detective, his crazy wife, and a defiant third character. It's not compelling. I am not compelled. It's impersonal. It's apathetic. It's cold and the cold feels calculated. It might even be misanthropic. It is objectively a nihilist film. And worst of all? I actually almost like it. It's a painful type of indifference I rarely encounter in media and for that, I say, fuck it: I'll keep watching Kurosawa movies until one makes me feel something. (*^▽^)/★*☆♪ Neither recommended nor...not recommended (yes I am crying about it),  2.5/5.",
+      "temas_atribuidos": [
+        "t1",
+        "t3",
+        "t4",
+        "t6"
+      ]
+    },
+    {
+      "indice": 46,
+      "rating": 2.5,
+      "texto": "I didn't know really what was going on but yeah very good way to start the film I liked it really, I just felt like it got boring a bit if I am being honest it's not my cup of tea but I do understand why people do like this film.",
+      "temas_atribuidos": [
+        "t1",
+        "t6"
+      ]
+    },
+    {
+      "indice": 47,
+      "rating": 2.5,
+      "texto": "Very moody in a post-Se7en way, this horror-themed crime drama sadly doesn't live up to its early promise. Kôji Yakusho puts in a strong performance as Takabe, a murder detective whose latest case threatens to break his brain. An epidemic seems to be emerging in Tokyo, in which ordinary people suddenly snap and brutally kill a loved one or colleague, each time in the same specific way that has a strange, ritualistic element. When questioned by Takabe, none of these killers can explain why they did it, and are also afflicted by amnesia, which connects them to a strange young man with the memory of a goldfish. So far, so intriguing - and there's at least one splash of seriously gruesome gore - but as Takabe starts to piece together a rational explanation for all this (by horror movie standards, that is), the mystery that's made it so interesting all but vanishes, just leaving unbelievable pseudo-science. There is a cracker of a shock moment at one point, involving Takabe's mentally ill wife, but unfortunately the film doesn't pursue that particular line of plot development in any meaningful way.",
+      "temas_atribuidos": [
+        "t4",
+        "t5"
+      ]
+    },
+    {
+      "indice": 48,
+      "rating": 2.5,
+      "texto": "As horrific and unnerving as this was, I think there’s something missing Kiyoshi Kurosawa has an amazing ability when it comes to ambiguity. He can create mysteries like no other, but I don’t know why I couldn’t connect with this story. I love how it delves into the supernatural stuff, hypnotism- it’s all interesting. I just feel like there should’ve been more than just ambiguity . I was bored most of the time. I thought the story would pick up after the opening, but it just got boring, to entertaining, to boring again, and so on. It wasn’t fun. I’d rather watch Zodiac again, and I’ve seen that film five times already! I can’t connect with Kurosawa. I’ve seen Creepy (2016) & To The Ends of The Earth (2021) and I felt empty. Completely empty. Are there any other Kurosawa films that I should try before I avoid his films altogether",
+      "temas_atribuidos": [
+        "t1"
+      ]
+    },
+    {
+      "indice": 49,
+      "rating": 2.5,
+      "texto": "Sve je govorilo da ce ovo biti savrsen film za mene, opis price mi se svideo i dobra prosecna ocena, ali potpuno druga prica Obozavam misterije/triler/drama ali sama prica je jako dosadna i sve se odvija presporo i na bukvalno se nista zanimljivo nije desilo Cak mi je i sama gluma pojedinih likova losa Jako sam brzo izgubio volju za gledanjem i imao sam osecaj da film traje blize 3 sata, a ne manje od 2 Mozda moj hottake ali svako ima svoj ukus",
+      "temas_atribuidos": []
+    }
+  ]
+}

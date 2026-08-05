@@ -1,0 +1,228 @@
+{
+  "slug": "cure",
+  "provider": "ollama",
+  "model": "qwen3-espectro",
+  "gerado_em": "2026-07-27T06:30:49.468944+00:00",
+  "buckets": [
+    {
+      "bucket": "negativas",
+      "alvo": 50,
+      "modo": "completo",
+      "n_validas": 50,
+      "tempo_total_s": 126.15,
+      "n_chamadas": 1,
+      "chamadas": [
+        {
+          "tempo_s": 126.15,
+          "tamanho_resposta_chars": 2701
+        }
+      ],
+      "idioma_invalido": false,
+      "escopo_suspeito": false,
+      "temas": [
+        {
+          "tema": "Ritmo excessivamente lento e estagnação da narrativa",
+          "mencoes_aproximadas": 48,
+          "n_reviews_analisadas": 50,
+          "exemplo_parafraseado": "O grupo relata uma experiência marcante de monotonia extrema, onde o desenvolvimento da trama se move a passos lentos sem avanço significativo até mesmo para os primeiros momentos do filme.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Personagens desprovidos de profundidade e interesse",
+          "mencoes_aproximadas": 35,
+          "n_reviews_analisadas": 50,
+          "exemplo_parafraseado": "Os protagonistas são descritos como planos e incapazes de gerar empatia ou curiosidade, resultando em uma falta total de conexão emocional com as figuras centrais da história.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Narrativa previsível sem tensão dramática",
+          "mencoes_aproximadas": 32,
+          "n_reviews_analisadas": 50,
+          "exemplo_parafraseado": "A estrutura da história é considerada tão clara desde o início que elimina qualquer suspense ou mistério, fazendo com que a sequência de cenas se repita sem oferecer novas reviravoltas.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Atmosfera clínica e excessivamente limpa",
+          "mencoes_aproximadas": 18,
+          "n_reviews_analisadas": 50,
+          "exemplo_parafraseado": "A estética visual e sonora é elogiada por alguns como bonita, mas criticada severamente aqui por ser estéril demais para o gênero de terror ou crime, parecendo mais adequada a uma drameiro do que um thriller.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Tratamento superficial dos temas de hipnose e psicologia",
+          "mencoes_aproximadas": 15,
+          "n_reviews_analisadas": 50,
+          "exemplo_parafraseado": "Os conceitos psicológicos apresentados são vistos como plausíveis apenas na teoria, mas fracassam totalmente em sua execução prática dentro da trama, parecendo ilógicos quando observados à luz das ações dos personagens.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Atores entregando performances impessoais ou robóticas",
+          "mencoes_aproximadas": 12,
+          "n_reviews_analisadas": 50,
+          "exemplo_parafraseado": "Embora alguns nomes sejam mencionados com respeito técnico, a interpretação é criticada por ser mecânica e fria, como se os atores estivessem apenas lendo diálogos sem sentir as emoções necessárias.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        }
+      ],
+      "observacao_geral": "Este grupo de reviews destaca uma frustração generalizada com o tédio crônico e a falta de progresso da trama que dominam toda a duração do filme, além de considerar os personagens como meras funções estéris sem profundidade emocional real. A atmosfera descrita aqui é vista não como intimidadora ou misteriosa, mas sim como aborrecida demais para sustentar o interesse visual."
+    },
+    {
+      "bucket": "medianas",
+      "alvo": 20,
+      "modo": "completo",
+      "n_validas": 20,
+      "tempo_total_s": 131.06,
+      "n_chamadas": 1,
+      "chamadas": [
+        {
+          "tempo_s": 131.06,
+          "tamanho_resposta_chars": 2555
+        }
+      ],
+      "idioma_invalido": false,
+      "escopo_suspeito": false,
+      "temas": [
+        {
+          "tema": "Atmosfera lenta e ambígua que divide a audiência",
+          "mencoes_aproximadas": 12,
+          "n_reviews_analisadas": 20,
+          "exemplo_parafraseado": "Os textos destacam um ritmo deliberadamente desacelerado e uma atmosfera densa que gera sentimentos opostos: enquanto alguns acham o clima hipnótico, outros relatam tédio, lentidão excessiva ou dificuldade em se conectar emocionalmente com a narrativa.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Problemas na resolução dos mistérios",
+          "mencoes_aproximadas": 9,
+          "n_reviews_analisadas": 20,
+          "exemplo_parafraseado": "Muitos críticos apontam que o filme se destaca em criar enigmas psicológicos, mas falha ao fornecer uma conclusão satisfatória ou lógica para os crimes e motivações apresentados.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Conceitos abstratos de identidade e mal",
+          "mencoes_aproximadas": 8,
+          "n_reviews_analisadas": 20,
+          "exemplo_parafraseado": "As opiniões enfatizam a exploração filosófica sobre o surgimento do mal interiormente, a dissolução da identidade pessoal e as questões éticas que permanecem sem respostas claras.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Distância emocional entre espectador e personagens",
+          "mencoes_aproximadas": 6,
+          "n_reviews_analisadas": 20,
+          "exemplo_parafraseado": "A postura dos atores é descrita como contida, o que resulta em uma sensação de distanciamento onde a audiência observa os eventos como se estivesse à distância.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Confusão narrativa sobre motivações",
+          "mencoes_aproximadas": 5,
+          "n_reviews_analisadas": 20,
+          "exemplo_parafraseado": "Há uma crítica recorrente quanto à falta de clareza sobre as razões por trás dos atos violentos e a transição entre o personagem amnésico e outras vítimas.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Realismo perturbador versus elementos sobrenaturais",
+          "mencoes_aproximadas": 4,
+          "n_reviews_analisadas": 20,
+          "exemplo_parafraseado": "Os comentários discutem o equilíbrio difícil entre a abordagem realista dos crimes e toques de suspense sobrenatural que parecem artificiais ou pouco convincentes para alguns.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        }
+      ],
+      "observacao_geral": "Este grupo de reviews medianas relata uma experiência polarizada onde as qualidades visuais, atoriais e atmosféricas são elogiadas coexistindo com frustrações quanto à compreensão da trama e falta de resolução satisfatória do enigma central. As críticas nesta faixa tendem a ver o filme como interessante conceitualmente mas insatisfeito narrativamente."
+    },
+    {
+      "bucket": "positivas",
+      "alvo": 30,
+      "modo": "completo",
+      "n_validas": 30,
+      "tempo_total_s": 133.1,
+      "n_chamadas": 1,
+      "chamadas": [
+        {
+          "tempo_s": 133.1,
+          "tamanho_resposta_chars": 2359
+        }
+      ],
+      "idioma_invalido": false,
+      "escopo_suspeito": false,
+      "temas": [
+        {
+          "tema": "Atmosfera de opressão e paranoia",
+          "mencoes_aproximadas": 15,
+          "n_reviews_analisadas": 30,
+          "exemplo_parafraseado": "O grupo destaca como o filme cria um ambiente sufocante onde a realidade se distorce através de sons ambientais, espaços vazios e uma sensação constante que os personagens não podem escapar.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Atuação contida dos atores",
+          "mencoes_aproximadas": 12,
+          "n_reviews_analisadas": 30,
+          "exemplo_parafraseado": "As performances são elogiadas pela restrição emocional, monótonas e desoladoras dos protagonistas que tornam as cenas inquietantes por revelarem um vazio interior.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Estética visual minimalista",
+          "mencoes_aproximadas": 10,
+          "n_reviews_analisadas": 30,
+          "exemplo_parafraseado": "A direção de fotografia e o design sonoro são apontados como elementos que geram desconforto através do uso de planos longos, iluminação naturalista e paletas de cores desbotadas.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Tema da identidade perdida",
+          "mencoes_aproximadas": 9,
+          "n_reviews_analisadas": 30,
+          "exemplo_parafraseado": "A narrativa é analisada como uma exploração profunda sobre o desaparecimento do self e a fragilidade humana quando confrontada com forças externas que apagam a individualidade.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Psicologia do mal oculto",
+          "mencoes_aproximadas": 8,
+          "n_reviews_analisadas": 30,
+          "exemplo_parafraseado": "Críticos observam como o filme desmantela a moralidade convencional mostrando que a violência pode surgir sem motivo aparente de dentro das próprias mentes ordinárias.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Tratamento lento e deliberado",
+          "mencoes_aproximadas": 7,
+          "n_reviews_analisadas": 30,
+          "exemplo_parafraseado": "O ritmo pausado da obra é citado não como uma falha de edição mas como uma escolha estética que força o espectador a sentir os mesmos momentos de tensão e silêncio dos personagens.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        }
+      ],
+      "observacao_geral": "Este grupo de reviews positivas destaca consistentemente a atmosfera opressora, as atuações contidas e o minimalismo visual do filme. As análises focam nos temas abstratos como a fragilidade da identidade humana, a perda do self e como uma violência banal pode surgir sem motivo aparente."
+    }
+  ],
+  "tempo_total_s": 390.31
+}

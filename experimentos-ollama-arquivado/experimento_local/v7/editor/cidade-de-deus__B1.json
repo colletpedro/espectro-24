@@ -1,0 +1,51 @@
+{
+  "slug": "cidade-de-deus",
+  "condicao": "B1",
+  "texto_entrada": "Dirigido por Fernando Meirelles em 2002, Cidade de Deus é um drama criminal que segue Buscapé, um jovem morador da Cidade de Deus que, crescendo em meio à violência, busca na fotografia uma saída para uma vida digna. O filme apresenta uma narrativa abrangente, com ritmo e edição dinâmicos que contribuem para a intensidade da experiência. Sua abordagem da violência é visceral e focada na realidade social, ambientada em um contexto de extrema pobreza. \n\nA grande maioria das notas (~91%) considera Cidade de Deus uma obra-prima. A maioria dessas reviews positivas elogia o estilo visual e a edição dinâmicos, que conferem um ritmo acelerado e energia contagiante. Muitos também destacam a narrativa envolvente e abrangente, capaz de contar múltiplas histórias ao longo de décadas sem perder a coesão. Para uma fração mínima das notas (~1%), porém, muitos criticam a estetização e espetacularização da violência e miséria, vendo o filme como uma representação estereotipada da favela. Para esses espectadores, a violência é excessiva e gratuita. Já para uma pequena minoria das notas (~8%), que se posiciona de forma mediana, a qualidade técnica e estilística é notável, com a edição ágil e a direção estilizada sendo pontos fortes, mas muitos sentem que o filme não consegue gerar uma conexão emocional profunda, sendo mais entretenimento do que uma experiência marcante.",
+  "texto_editado": "Dirigido por Fernando Meirelles em 2002, Cidade de Deus é um drama criminal que segue Buscapé, um jovem morador da Cidade de Deus que, crescendo em meio à violência, busca na fotografia uma saída para uma vida digna. O filme apresenta uma narrativa abrangente, com ritmo e edição dinâmicos que contribuem para a intensidade da experiência. Sua abordagem da violência é visceral e focada na realidade social, ambientada em um contexto de extrema pobreza. \n\nA grande maioria das notas (~91%) considera Cidade de Deus uma obra-prima. A maioria dessas reviews positivas elogia o estilo visual e a edição dinâmicos, que conferem um ritmo acelerado e energia contagiante. Muitos também destacam a narrativa envolvente e abrangente, capaz de contar múltiplas histórias ao longo de décadas sem perder a coesão. Para uma fração mínima das notas (~1%), porém, muitos criticam a estetização e espetacularização da violência e miséria, vendo o filme como uma representação estereotipada da favela. Para esses espectadores, a violência é excessiva e gratuita. Já para uma pequena minoria das notas (~8%), que se posiciona de forma mediana, a qualidade técnica e estilística é notável, com a edição ágil e a direção estilizada sendo pontos fortes, mas muitos sentem que o filme não consegue gerar uma conexão emocional profunda, sendo mais entretenimento do que uma experiência marcante.",
+  "edicao_flags": {
+    "edicao_descartada": true,
+    "motivo_descarte": "formato_invalido",
+    "protegidos_perdidos": [],
+    "numeros_alterados": false,
+    "houve_retentativa": true,
+    "n_tentativas": 2,
+    "motivos_por_tentativa": [
+      "formato_invalido",
+      "formato_invalido"
+    ],
+    "n_protegidos": 7,
+    "similaridade": 0.056179775280898875,
+    "capitalizacao_ajustada": false,
+    "falhou": false
+  },
+  "protegidos": [
+    "uma pequena minoria das notas (~8%)",
+    "uma fração mínima das notas (~1%)",
+    "A grande maioria das notas (~91%)",
+    "2002,",
+    "~91%",
+    "~1%",
+    "~8%"
+  ],
+  "metricas_fluencia_entrada": {
+    "n_frases": 9,
+    "media_palavras": 23.8,
+    "cv_comprimento": 0.53,
+    "frase_mais_curta": 9,
+    "aberturas_repetidas": 2,
+    "verbos_reporte": 3,
+    "adverbios_mente": 0
+  },
+  "metricas_fluencia_saida": {
+    "n_frases": 9,
+    "media_palavras": 23.8,
+    "cv_comprimento": 0.53,
+    "frase_mais_curta": 9,
+    "aberturas_repetidas": 2,
+    "verbos_reporte": 3,
+    "adverbios_mente": 0
+  },
+  "n_chamadas_ollama": 2,
+  "tempo_total_s": 35.8
+}

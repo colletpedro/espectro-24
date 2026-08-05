@@ -1,0 +1,78 @@
+{
+  "variante": "variante_a",
+  "bucket": "medianas",
+  "n_validas": 20,
+  "tempo_total_s": 139.99,
+  "n_chamadas": 1,
+  "chamadas": [
+    {
+      "tempo_s": 139.99,
+      "done_reason": "stop",
+      "prompt_eval_count": 9409,
+      "eval_count": 774,
+      "thinking_chars": 0,
+      "conteudo_chars": 2873
+    }
+  ],
+  "falhou": false,
+  "erro": null,
+  "idioma_invalido": false,
+  "escopo_suspeito": false,
+  "temas": [
+    {
+      "tema": "Narrativa elíptica e ambiguidade da resolução do mistério",
+      "mencoes_aproximadas": 18,
+      "n_reviews_analisadas": 20,
+      "exemplo_parafraseado": "Este grupo de opiniões aponta consistentemente que a estrutura narrativa prioriza o enigma em detrimento de uma conclusão lógica ou satisfatória, deixando muitos espectadores confusos quanto às motivações finais e ao desfecho dos eventos.",
+      "mencoes_clampadas": false,
+      "mencoes_valor_original": null,
+      "aspas_removidas": false
+    },
+    {
+      "tema": "Ritmo lento, atmosfera opressora e tom surrealista",
+      "mencoes_aproximadas": 16,
+      "n_reviews_analisadas": 20,
+      "exemplo_parafraseado": "As críticas destacam a prevalência de um clima denso e pesado, onde o desenvolvimento da trama é extremamente pausado, gerando uma sensação constante de lentidão que afasta alguns públicos menos habituados ao estilo.",
+      "mencoes_clampadas": false,
+      "mencoes_valor_original": null,
+      "aspas_removidas": false
+    },
+    {
+      "tema": "Desconexão emocional do público com os temas filosóficos",
+      "mencoes_aproximadas": 12,
+      "n_reviews_analisadas": 20,
+      "exemplo_parafraseado": "Muitos comentaristas sentem dificuldade em se identificar ou envolver-se profundamente nas reflexões sobre a natureza do mal e o colapso da identidade, vendo as ideias propostas como distantes demais de suas experiências pessoais.",
+      "mencoes_clampadas": false,
+      "mencoes_valor_original": null,
+      "aspas_removidas": false
+    },
+    {
+      "tema": "Atuações contidas e presença marcante de silêncios",
+      "mencoes_aproximadas": 10,
+      "n_reviews_analisadas": 20,
+      "exemplo_parafraseado": "A atuação dos personagens é descrita como restrita àquilo que não se diz explicitamente, com diálogos pausados e longos intervalos de silêncio que funcionam tanto como força artística quanto como barreira para o engajamento total.",
+      "mencoes_clampadas": false,
+      "mencoes_valor_original": null,
+      "aspas_removidas": false
+    },
+    {
+      "tema": "Incerteza sobre a natureza do mal: sobrenatural versus psicológico",
+      "mencoes_aproximadas": 8,
+      "n_reviews_analisadas": 20,
+      "exemplo_parafraseado": "Há um debate recorrente na análise das críticas quanto à origem dos horrores mostrados, oscilando entre uma interpretação de forças ocultas invisíveis e manifestações puramente da psicologia humana distorcida.",
+      "mencoes_clampadas": false,
+      "mencoes_valor_original": null,
+      "aspas_removidas": false
+    },
+    {
+      "tema": "Insatisfação com a falta de respostas concretas ao final",
+      "mencoes_aproximadas": 6,
+      "n_reviews_analisadas": 20,
+      "exemplo_parafraseado": "Uma parte significativa deste grupo sente que o filme não oferece as explicações necessárias ou definitivas para os conflitos centrais, deixando a sensação de que muitas questões importantes permaneceram sem solução.",
+      "mencoes_clampadas": false,
+      "mencoes_valor_original": null,
+      "aspas_removidas": false
+    }
+  ],
+  "observacao_geral": "Este recorte específico de reviews com notas medianas evidencia uma polarização em torno da clareza narrativa e do envolvimento emocional: enquanto as performances são elogiadas por sua contenção atmosférica, a falta de resolução clara e o ritmo pausado geram frustração e confusão em grande parte dos leitores que procuravam respostas concretas."
+}

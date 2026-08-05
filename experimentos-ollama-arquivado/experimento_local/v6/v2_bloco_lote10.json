@@ -1,0 +1,269 @@
+{
+  "variante": "v2_bloco_lote10",
+  "com_bloco_recall": true,
+  "lote_tamanho": 10,
+  "n_reviews": 50,
+  "tempo_total_s": 215.98,
+  "n_chamadas": 5,
+  "tempo_medio_por_chamada_s": 43.2,
+  "contagem_por_tema": {
+    "t1": 15,
+    "t2": 12,
+    "t3": 12,
+    "t4": 13,
+    "t5": 10,
+    "t6": 16
+  },
+  "n_reviews_sem_tema": 13,
+  "n_reviews_nao_classificadas_falha_lote": 0,
+  "estagio2_ids_invalidos_total": 0,
+  "estagio2_lotes": [
+    {
+      "offset": 0,
+      "tamanho": 10,
+      "chamadas": [
+        {
+          "tentativa": 1,
+          "tempo_s": 34.08,
+          "done_reason": "stop",
+          "eval_count": 69,
+          "conteudo_chars": 119,
+          "json_valido": true
+        }
+      ],
+      "ok": true,
+      "ids_invalidos": 0
+    },
+    {
+      "offset": 10,
+      "tamanho": 10,
+      "chamadas": [
+        {
+          "tentativa": 1,
+          "tempo_s": 34.37,
+          "done_reason": "stop",
+          "eval_count": 115,
+          "conteudo_chars": 179,
+          "json_valido": true
+        }
+      ],
+      "ok": true,
+      "ids_invalidos": 0
+    },
+    {
+      "offset": 20,
+      "tamanho": 10,
+      "chamadas": [
+        {
+          "tentativa": 1,
+          "tempo_s": 46.16,
+          "done_reason": "stop",
+          "eval_count": 134,
+          "conteudo_chars": 213,
+          "json_valido": true
+        }
+      ],
+      "ok": true,
+      "ids_invalidos": 0
+    },
+    {
+      "offset": 30,
+      "tamanho": 10,
+      "chamadas": [
+        {
+          "tentativa": 1,
+          "tempo_s": 43.62,
+          "done_reason": "stop",
+          "eval_count": 103,
+          "conteudo_chars": 177,
+          "json_valido": true
+        }
+      ],
+      "ok": true,
+      "ids_invalidos": 0
+    },
+    {
+      "offset": 40,
+      "tamanho": 10,
+      "chamadas": [
+        {
+          "tentativa": 1,
+          "tempo_s": 57.75,
+          "done_reason": "stop",
+          "eval_count": 89,
+          "conteudo_chars": 157,
+          "json_valido": true
+        }
+      ],
+      "ok": true,
+      "ids_invalidos": 0
+    }
+  ],
+  "atribuicoes": {
+    "0": [
+      "t3"
+    ],
+    "1": [],
+    "2": [
+      "t5",
+      "t4",
+      "t6",
+      "t3"
+    ],
+    "3": [
+      "t2",
+      "t4"
+    ],
+    "4": [
+      "t1"
+    ],
+    "5": [
+      "t6",
+      "t2",
+      "t4"
+    ],
+    "6": [],
+    "7": [],
+    "8": [],
+    "9": [],
+    "10": [
+      "t2",
+      "t4",
+      "t6"
+    ],
+    "11": [
+      "t3",
+      "t4"
+    ],
+    "12": [],
+    "13": [
+      "t6"
+    ],
+    "14": [
+      "t1",
+      "t5"
+    ],
+    "15": [],
+    "16": [
+      "t2",
+      "t6"
+    ],
+    "17": [
+      "t1",
+      "t6"
+    ],
+    "18": [
+      "t1",
+      "t5"
+    ],
+    "19": [
+      "t1",
+      "t3",
+      "t4"
+    ],
+    "20": [
+      "t2",
+      "t3"
+    ],
+    "21": [],
+    "22": [
+      "t5",
+      "t6",
+      "t4"
+    ],
+    "23": [
+      "t1",
+      "t6",
+      "t4"
+    ],
+    "24": [
+      "t1",
+      "t2"
+    ],
+    "25": [
+      "t1",
+      "t2",
+      "t3"
+    ],
+    "26": [],
+    "27": [
+      "t2",
+      "t3",
+      "t6"
+    ],
+    "28": [
+      "t2",
+      "t4",
+      "t5"
+    ],
+    "29": [],
+    "30": [
+      "t6",
+      "t2"
+    ],
+    "31": [
+      "t1",
+      "t4",
+      "t5",
+      "t3",
+      "t2"
+    ],
+    "32": [
+      "t1"
+    ],
+    "33": [
+      "t5"
+    ],
+    "34": [],
+    "35": [
+      "t3"
+    ],
+    "36": [
+      "t3",
+      "t1",
+      "t4"
+    ],
+    "37": [
+      "t1",
+      "t4",
+      "t3"
+    ],
+    "38": [
+      "t4"
+    ],
+    "39": [],
+    "40": [
+      "t6"
+    ],
+    "41": [
+      "t5",
+      "t6"
+    ],
+    "42": [
+      "t5"
+    ],
+    "43": [],
+    "44": [
+      "t6"
+    ],
+    "45": [
+      "t1",
+      "t2",
+      "t3"
+    ],
+    "46": [
+      "t6"
+    ],
+    "47": [
+      "t5",
+      "t6"
+    ],
+    "48": [
+      "t1",
+      "t6"
+    ],
+    "49": [
+      "t1"
+    ]
+  }
+}

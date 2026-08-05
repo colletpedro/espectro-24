@@ -1,0 +1,14 @@
+{
+  "variante": "variante_b",
+  "bucket": "negativas",
+  "n_validas": 50,
+  "tempo_total_s": 600.03,
+  "n_chamadas": 0,
+  "chamadas": [],
+  "falhou": true,
+  "erro": "Ollama indisponível em http://localhost:11434 (HTTPConnectionPool(host='localhost', port=11434): Read timed out. (read timeout=600)) — servidor local rodando?",
+  "idioma_invalido": false,
+  "escopo_suspeito": false,
+  "temas": [],
+  "observacao_geral": ""
+}

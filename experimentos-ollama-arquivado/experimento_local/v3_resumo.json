@@ -1,0 +1,59 @@
+{
+  "gerado_em": "2026-07-27T22:36:25.958030+00:00",
+  "variantes": {
+    "variante_a": {
+      "think": false,
+      "num_predict": 3000,
+      "buckets": [
+        {
+          "bucket": "negativas",
+          "falhou": false,
+          "n_temas": 5,
+          "n_chamadas": 1,
+          "tempo_total_s": 134.82
+        },
+        {
+          "bucket": "medianas",
+          "falhou": false,
+          "n_temas": 6,
+          "n_chamadas": 1,
+          "tempo_total_s": 139.99
+        },
+        {
+          "bucket": "positivas",
+          "falhou": false,
+          "n_temas": 6,
+          "n_chamadas": 1,
+          "tempo_total_s": 146.69
+        }
+      ]
+    },
+    "variante_b": {
+      "think": true,
+      "num_predict": 6000,
+      "buckets": [
+        {
+          "bucket": "negativas",
+          "falhou": true,
+          "n_temas": 0,
+          "n_chamadas": 0,
+          "tempo_total_s": 600.03
+        },
+        {
+          "bucket": "medianas",
+          "falhou": true,
+          "n_temas": 0,
+          "n_chamadas": 0,
+          "tempo_total_s": 599.99
+        },
+        {
+          "bucket": "positivas",
+          "falhou": true,
+          "n_temas": 0,
+          "n_chamadas": 0,
+          "tempo_total_s": 600.02
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,69 @@
+{
+  "variante": "variante_a",
+  "bucket": "negativas",
+  "n_validas": 50,
+  "tempo_total_s": 134.82,
+  "n_chamadas": 1,
+  "chamadas": [
+    {
+      "tempo_s": 134.81,
+      "done_reason": "stop",
+      "prompt_eval_count": 11225,
+      "eval_count": 583,
+      "thinking_chars": 0,
+      "conteudo_chars": 2071
+    }
+  ],
+  "falhou": false,
+  "erro": null,
+  "idioma_invalido": false,
+  "escopo_suspeito": false,
+  "temas": [
+    {
+      "tema": "Aburrimento e ritmo excessivamente lento",
+      "mencoes_aproximadas": 42,
+      "n_reviews_analisadas": 50,
+      "exemplo_parafraseado": "A maioria das críticas aponta um progresso narrativo quase nulo após os primeiros minutos, caracterizando o filme como uma tortura que leva espectadores ao tédio e ao sono devido à falta de dinamismo.",
+      "mencoes_clampadas": false,
+      "mencoes_valor_original": null,
+      "aspas_removidas": false
+    },
+    {
+      "tema": "Narrativa repetitiva sem evolução",
+      "mencoes_aproximadas": 35,
+      "n_reviews_analisadas": 50,
+      "exemplo_parafraseado": "A estrutura da história é descrita como uma sucessão de cenas idênticas que não trazem avanços plausíveis ou novos elementos surpreendentes ao enredo.",
+      "mencoes_clampadas": false,
+      "mencoes_valor_original": null,
+      "aspas_removidas": false
+    },
+    {
+      "tema": "Personagens planos e pouco envolventes",
+      "mencoes_aproximadas": 28,
+      "n_reviews_analisadas": 50,
+      "exemplo_parafraseado": "Os protagonistas são elogiados pontualmente pelas atuações, mas criticados em bloco por serem carencialmente desenvolvidos e incapazes de gerar empatia ou interesse.",
+      "mencoes_clampadas": false,
+      "mencoes_valor_original": null,
+      "aspas_removidas": false
+    },
+    {
+      "tema": "Incredibilidade dos elementos centrais",
+      "mencoes_aproximadas": 18,
+      "n_reviews_analisadas": 50,
+      "exemplo_parafraseado": "O uso de temas como hipnose e amnésia é visto por muitos como um pseudo-científico sem lógica interna ou explicação satisfatória para os fatos apresentados.",
+      "mencoes_clampadas": false,
+      "mencoes_valor_original": null,
+      "aspas_removidas": false
+    },
+    {
+      "tema": "Falta realista da atmosfera de terror",
+      "mencoes_aproximadas": 12,
+      "n_reviews_analisadas": 50,
+      "exemplo_parafraseado": "Apesar do rótulo de filme de horror ou thriller psicológico, a experiência visual e sonora não consegue instilar medo, tensão genuína ou inquietude no espectador.",
+      "mencoes_clampadas": false,
+      "mencoes_valor_original": null,
+      "aspas_removidas": false
+    }
+  ],
+  "observacao_geral": "Este grupo específico de reviews foca quase exclusivamente na sensação de tédio gerada pelo progresso narrativo estagnado e na falta realista da atmosfera de terror. A maioria dos espectadores sente que a história se perde em uma repetição monótona onde personagens planos não conseguem sustentar o interesse ao longo do tempo."
+}
