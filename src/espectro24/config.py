@@ -197,39 +197,55 @@ EDITOR_LIMIAR_EDICAO_NULA = 0.97
 # (debug, economia de 1 chamada), independente deste default.
 EDITOR_ATIVO = True
 
-# --- Checagem de CONTEÚDO ADICIONADO pelo editor [E2] (v1.8.0, Tarefa 3) ---
+# --- Checagem de CONTEÚDO ADICIONADO pelo editor [E2] (v1.8.0, Tarefa 3;
+# métrica corrigida na v1.8.2) ---
 # Motivação: ver comentário de `EDITOR_ATIVO` acima. Estratégia: dividir bruto
 # e editado em frases (`_dividir_frases`, já usado pela telemetria de
-# fluência) e, para cada frase do EDITADO, calcular a MELHOR similaridade
-# (`difflib.SequenceMatcher.ratio`) contra TODAS as frases do BRUTO — uma
-# frase sem nenhuma correspondência razoável no texto recebido é candidata a
-# invenção.
+# fluência) e, para cada frase do EDITADO, calcular a MELHOR COBERTURA DE
+# PALAVRAS (v1.8.2 — multiset, insensível a ORDEM; ver
+# `_melhor_cobertura_palavras` em synthesize.py) contra a MELHOR frase
+# individual do BRUTO — uma frase sem nenhuma cobertura razoável em
+# qualquer frase do texto recebido é candidata a invenção.
 #
-# Calibração EMPÍRICA (não só teórica): medida sobre os 3 filmes reais da
-# validação (VALIDACAO_DEEPSEEK.md), comparando bruto×editado de verdade —
-#   - `cure` (edição LEGÍTIMA, aceita em produção): o editor QUEBROU uma
-#     frase longa do bruto em duas menores — comportamento normal de ritmo —
-#     e isso sozinho gera 2 frases com similaridade < 0,45 contra qualquer
-#     frase INTEIRA do bruto (uma metade de frase longa nunca bate bem
-#     contra a frase inteira). Resultado real: 2 frases "candidatas", 18,1%
-#     das palavras do texto editado.
-#   - `cidade-de-deus` (edição LEGÍTIMA, aceita): 1 frase candidata, 16,9%
-#     das palavras.
-#   - `the-invite-2026` (edição COM DEFEITO REAL — parágrafo de opinião
-#     inteiro inventado, ver `EDITOR_ATIVO`): 15 frases candidatas, 69,6%
-#     das palavras — nada perto dos dois casos legítimos acima.
-# A folga entre os dois grupos (18,1%/16,9% vs 69,6%; 1-2 frases vs 15) é
-# grande o bastante para os limiares abaixo ficarem bem longe de ambos os
-# lados, mesmo sem uma amostra maior:
+# v1.8.2 — CORREÇÃO DE FALSO POSITIVO (DIAGNOSTICO_CONTEUDO_ADICIONADO.md).
+# A métrica original da v1.8.0 (`difflib.SequenceMatcher.ratio`, char-level,
+# SENSÍVEL A ORDEM, frase inteira contra frase inteira) reprovava edição
+# LEGÍTIMA sempre que o editor (a) quebrava uma frase longa do bruto em duas
+# menores — cada metade, sozinha, tem `ratio()` baixo contra a frase-fonte
+# inteira só por diferença de COMPRIMENTO — ou (b) reordenava palavras
+# dentro da frase (mesmo conteúdo, ordem diferente). Foi o que descartou o
+# `cure` na v1.8.1 após 3 reprovações seguidas por este motivo. A correção
+# troca para cobertura de palavras (multiset), restrita à MELHOR frase
+# INDIVIDUAL do bruto (comparar contra o bruto INTEIRO de uma vez, medido ao
+# vivo, infla o placar de frases genuinamente inventadas — elas pegam
+# carona em vocabulário genérico de crítica de cinema espalhado por frases
+# distantes do bruto).
+#
+# Calibração EMPÍRICA (não só teórica) — dados completos em
+# DIAGNOSTICO_CONTEUDO_ADICIONADO.md, VALIDACAO_DEEPSEEK.md e
+# VALIDACAO_EDITOR_V18.md:
+#   - 6 frases legítimas marcadas nas duas validações (quebras de frase +
+#     1 caso de reordenação) — cobertura entre 0,765 e 1,000 com a métrica
+#     nova (a MESMA reordenação que zerava a métrica antiga bate 1,000
+#     aqui: "conforme avança, o ritmo desacelera" ~ bruto "ritmo que
+#     desacelera conforme avança", mesmas palavras);
+#   - as frases do parágrafo REALMENTE inventado do `the-invite-2026`
+#     (texto literal da v1.8.0/v1.8.1) — cobertura entre 0,222 e 0,500.
+# Folga de 0,265 entre os dois grupos (0,765 legítimo mínimo vs 0,500
+# inventado máximo) — `EDITOR_LIMIAR_FRASE_SEM_ORIGEM = 0.6` fica bem no
+# meio, com margem folgada dos dois lados.
+# `EDITOR_MIN_FRASES_SEM_ORIGEM`/`EDITOR_LIMIAR_PALAVRAS_SEM_ORIGEM_FRACAO`
+# mantidos como estavam (v1.8.0) — a Tarefa 1 da v1.8.2 corrige só a
+# métrica POR FRASE, não a política de agregação:
 #   - abaixo de EDITOR_LIMIAR_FRASE_SEM_ORIGEM: a frase é candidata;
 #   - EDITOR_MIN_FRASES_SEM_ORIGEM+ candidatas, OU candidatas somando mais de
 #     EDITOR_LIMIAR_PALAVRAS_SEM_ORIGEM_FRACAO das palavras do texto editado
 #     → falha "conteudo_adicionado" (retentativa, depois descarte).
 # CALIBRÁVEL: se a telemetria `edicao_flags.frases_sem_origem`/
-# `similaridade_minima_por_frase` (persistida SEMPRE) mostrar, com mais
-# filmes, edições legítimas perto destes números, ajustar aqui — não no
-# código do editor nem na lógica da checagem.
-EDITOR_LIMIAR_FRASE_SEM_ORIGEM = 0.45
+# `similaridade_minima_por_frase`/`tentativas_detalhe` (persistida SEMPRE)
+# mostrar, com mais filmes, edições legítimas perto destes números, ajustar
+# aqui — não no código do editor nem na lógica da checagem.
+EDITOR_LIMIAR_FRASE_SEM_ORIGEM = 0.6
 EDITOR_MIN_FRASES_SEM_ORIGEM = 4
 EDITOR_LIMIAR_PALAVRAS_SEM_ORIGEM_FRACAO = 0.35
 

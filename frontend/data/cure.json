@@ -310,7 +310,7 @@
       "share_real": 79
     }
   ],
-  "narrativa": "Em A Cura (1997), de Kiyoshi Kurosawa, um detetive investiga uma série de assassinatos marcados por um misterioso x nos corpos das vítimas, levando a interrogatórios exaustivos e à prisão de um jovem de trejeitos estranhos. Misturando crime, thriller, terror e mistério, o filme constrói uma premissa inquietante desde o início. A experiência é marcada por um ritmo lento e deliberado, que pode ser visto como tedioso ou hipnótico, e uma atmosfera perturbadora, criada por longas tomadas, silêncios e um desconforto constante, sem depender de sustos óbvios. A trama se desenvolve de forma ambígua, com um final que deixa pontas soltas, e a narrativa frequentemente exige paciência e até uma segunda visita para ser plenamente apreendida. A grande maioria das notas (~79%) é positiva, e quem está nessa faixa elogia principalmente a atmosfera perturbadora e hipnótica, que muitos descrevem como uma imersão em um estado de apreensão constante. Para eles, o ritmo lento e deliberado intensifica o suspense e o horror psicológico, levando a um transe que reflete a temática da manipulação mental. Além disso, a ausência de respostas definitivas e a ambiguidade são valorizadas por forçar uma reflexão duradoura sobre o mistério. Uma minoria das notas (~17%) representa quem ficou no meio, e para esse grupo a experiência é de ideias intrigantes, mas com execução falha: muitos apontam um ritmo lento que gera confusão narrativa e um final insatisfatório ou ambíguo, embora reconheçam a atmosfera e o estilo visual eficazes. Já uma fração mínima das notas (~3%) é negativa, e para essa parcela o filme é um caso de ritmo lento e tedioso — a maioria dessas reviews aponta que a lentidão se torna um defeito, sem tensão ou progressão narrativa, com muitos afirmando que a falta de tensão, mistério ou terror compromete a experiência; para eles, o enredo fraca e repetitivo e personagens desinteressantes dificultam qualquer conexão, tornando a obra decepcionante e superestimada.",
+  "narrativa": "Em A Cura (1997), do diretor Kiyoshi Kurosawa, um detetive investiga mortes marcadas por um x estranho, levando-o a um suspeito tímido e enigmático — um thriller de crime e mistério que mergulha no horror psicológico. A experiência é marcada por um ritmo lento que domina a narrativa, com uma atmosfera sombria e perturbadora, mas que se desdobra de forma ambígua e sem respostas definitivas. A grande maioria das notas (~79%) é positiva, e essas reviews celebram o trabalho como hipnótico e perturbador: para esse grupo, o ritmo lento e deliberado intensifica o suspense, e a ausência de respostas é vista como um trunfo, forçando a reflexão sobre temas psicológicos profundos. Uma minoria das notas (~17%) fica no meio-termo — nessa leitura, o mesmo ritmo lento gera confusão narrativa, e o final ambíguo deixa pontas soltas, embora reconheçam ideias intrigantes e uma atmosfera eficaz. Para a fração mínima das notas (~3%), que não gostou, o filme é tedioso e arrastado, sem tensão, com personagens planos e um enredo repetitivo — uma experiência que, para eles, não cumpre o potencial da premissa.",
   "narrativa_flags": {
     "idioma_invalido": false,
     "escopo_suspeito": false,
@@ -340,45 +340,7 @@
     "fonte": "tmdb",
     "ano_fonte": "letterboxd"
   },
-  "consensos_usados": [
-    {
-      "propriedade": "ritmo lento",
-      "grupos_de_origem": [
-        "negativas",
-        "medianas",
-        "positivas"
-      ],
-      "temas_de_origem": [
-        "Ritmo lento e tedioso",
-        "Ritmo lento e confusão narrativa",
-        "Pacing Lento e Deliberado"
-      ]
-    },
-    {
-      "propriedade": "atmosfera perturbadora/hipnótica",
-      "grupos_de_origem": [
-        "medianas",
-        "positivas"
-      ],
-      "temas_de_origem": [
-        "Atmosfera e estilo visual eficazes",
-        "Atmosfera e Tom Perturbador/Hipnótico"
-      ]
-    },
-    {
-      "propriedade": "ambiguidade e final sem respostas",
-      "grupos_de_origem": [
-        "negativas",
-        "medianas",
-        "positivas"
-      ],
-      "temas_de_origem": [
-        "Final insatisfatório/abrupto",
-        "Final insatisfatório/ambíguo",
-        "Ausência de Respostas e Ambiguidade"
-      ]
-    }
-  ],
+  "consensos_usados": [],
   "distribuicao": {
     "n_notas_total": 375278,
     "por_nivel": {
@@ -400,81 +362,100 @@
     },
     "fonte": "letterboxd_histograma"
   },
-  "quantificadores_usados": [
-    {
-      "quantificador": "muitos",
-      "tema": "Atmosfera e Tom Perturbador/Hipnótico"
-    },
-    {
-      "quantificador": "muitos",
-      "tema": "Ritmo lento e confusão narrativa"
-    },
-    {
-      "quantificador": "a maioria",
-      "tema": "Ritmo lento e tedioso"
-    },
-    {
-      "quantificador": "muitos",
-      "tema": "Falta de tensão/mistério/terror"
-    }
-  ],
-  "marcadores_perspectiva": [
-    {
-      "grupo": "negativas",
-      "trecho": "para essa parcela"
-    },
-    {
-      "grupo": "medianas",
-      "trecho": "para esse grupo"
-    }
-  ],
+  "quantificadores_usados": [],
+  "marcadores_perspectiva": [],
   "metricas_fluencia": {
-    "n_frases": 9,
-    "media_palavras": 34.4,
-    "cv_comprimento": 0.46,
-    "frase_mais_curta": 15,
-    "aberturas_repetidas": 2,
-    "verbos_reporte": 4,
+    "n_frases": 5,
+    "media_palavras": 35.2,
+    "cv_comprimento": 0.15,
+    "frase_mais_curta": 29,
+    "aberturas_repetidas": 1,
+    "verbos_reporte": 0,
     "adverbios_mente": 0
   },
-  "narrativa_bruta": "Em A Cura (1997), de Kiyoshi Kurosawa, um detetive investiga uma série de assassinatos marcados por um misterioso x nos corpos das vítimas, levando a interrogatórios exaustivos e à prisão de um jovem de trejeitos estranhos. Misturando crime, thriller, terror e mistério, o filme constrói uma premissa inquietante desde o início. A experiência é marcada por um ritmo lento e deliberado, que pode ser visto como tedioso ou hipnótico, e uma atmosfera perturbadora, criada por longas tomadas, silêncios e um desconforto constante, sem depender de sustos óbvios. A trama se desenvolve de forma ambígua, com um final que deixa pontas soltas, e a narrativa frequentemente exige paciência e até uma segunda visita para ser plenamente apreendida. A grande maioria das notas (~79%) é positiva, e quem está nessa faixa elogia principalmente a atmosfera perturbadora e hipnótica, que muitos descrevem como uma imersão em um estado de apreensão constante. Para eles, o ritmo lento e deliberado intensifica o suspense e o horror psicológico, levando a um transe que reflete a temática da manipulação mental. Além disso, a ausência de respostas definitivas e a ambiguidade são valorizadas por forçar uma reflexão duradoura sobre o mistério. Uma minoria das notas (~17%) representa quem ficou no meio, e para esse grupo a experiência é de ideias intrigantes, mas com execução falha: muitos apontam um ritmo lento que gera confusão narrativa e um final insatisfatório ou ambíguo, embora reconheçam a atmosfera e o estilo visual eficazes. Já uma fração mínima das notas (~3%) é negativa, e para essa parcela o filme é um caso de ritmo lento e tedioso — a maioria dessas reviews aponta que a lentidão se torna um defeito, sem tensão ou progressão narrativa, com muitos afirmando que a falta de tensão, mistério ou terror compromete a experiência; para eles, o enredo fraca e repetitivo e personagens desinteressantes dificultam qualquer conexão, tornando a obra decepcionante e superestimada.",
+  "narrativa_bruta": "Em A Cura (1997), do diretor Kiyoshi Kurosawa, um detetive investiga mortes marcadas por um x estranho, levando-o a um suspeito tímido e enigmático — um thriller de crime e mistério que mergulha no horror psicológico. A experiência é marcada por um ritmo lento que domina a narrativa, com uma atmosfera sombria e perturbadora, mas que se desdobra de forma ambígua e sem respostas definitivas. A grande maioria das notas (~79%) é positiva, e essas reviews celebram o trabalho como hipnótico e perturbador: para esse grupo, o ritmo lento e deliberado intensifica o suspense, e a ausência de respostas é vista como um trunfo, forçando a reflexão sobre temas psicológicos profundos. Uma minoria das notas (~17%) fica no meio-termo — nessa leitura, o mesmo ritmo lento gera confusão narrativa, e o final ambíguo deixa pontas soltas, embora reconheçam ideias intrigantes e uma atmosfera eficaz. Para a fração mínima das notas (~3%), que não gostou, o filme é tedioso e arrastado, sem tensão, com personagens planos e um enredo repetitivo — uma experiência que, para eles, não cumpre o potencial da premissa.",
   "edicao_flags": {
     "edicao_descartada": true,
-    "motivo_descarte": "regressão de honestidade: perspectiva_nao_marcada",
+    "motivo_descarte": "edicao_nula",
     "protegidos_perdidos": [],
     "numeros_alterados": false,
     "houve_retentativa": true,
     "falhou": false,
-    "n_protegidos": 7,
+    "n_protegidos": 6,
     "n_tentativas": 4,
     "motivos_por_tentativa": [
-      "conteudo_adicionado",
-      "conteudo_adicionado",
-      "conteudo_adicionado",
-      "regressão de honestidade: perspectiva_nao_marcada"
+      "ordem_alterada",
+      "regressão de honestidade: perspectiva_nao_marcada",
+      "regressão de honestidade: perspectiva_nao_marcada",
+      "edicao_nula"
     ],
-    "similaridade": 0.9601623953311342,
+    "similaridade": 0.9715575620767495,
     "capitalizacao_ajustada": false,
-    "frases_sem_origem": [
-      "A grande maioria das notas (~79%) é positiva.",
-      "Já uma fração mínima das notas (~3%) é negativa.",
-      "Para eles, o enredo fraca e repetitivo e personagens desinteressantes dificultam qualquer conexão, tornando a obra decepcionante e superestimada."
-    ],
+    "frases_sem_origem": [],
     "similaridade_minima_por_frase": {
-      "Em A Cura (1997), de Kiyoshi Kurosawa, um detetive investiga uma série de assassinatos marcados por um misterioso x nos corpos das vítimas, e o caso o leva a interrogatórios exaustivos e à prisão de um jovem de trejeitos estranhos.": 0.9691629955947136,
-      "Misturando crime, thriller, terror e mistério, o filme constrói uma premissa inquietante desde o início.": 1.0,
-      "A experiência é marcada por um ritmo lento e deliberado, e isso pode ser visto como tedioso ou hipnótico.": 0.5945945945945946,
-      "A atmosfera perturbadora vem de longas tomadas, silêncios e um desconforto constante, sem depender de sustos óbvios.": 0.6337209302325582,
-      "A trama se desenvolve de forma ambígua, com um final que deixa pontas soltas, e a narrativa frequentemente exige paciência e até uma segunda visita para ser plenamente apreendida.": 1.0,
-      "A grande maioria das notas (~79%) é positiva.": 0.3614457831325301,
-      "Quem está nessa faixa elogia principalmente a atmosfera perturbadora e hipnótica, que muitos descrevem como uma imersão em um estado de apreensão constante.": 0.8611111111111112,
-      "Para eles, o ritmo lento e deliberado intensifica o suspense e o horror psicológico, levando a um transe que reflete a temática da manipulação mental.": 1.0,
-      "Além disso, a ausência de respostas definitivas e a ambiguidade são valorizadas por forçar uma reflexão duradoura sobre o mistério.": 1.0,
-      "Uma minoria das notas (~17%) representa quem ficou no meio, e para esse grupo a experiência é de ideias intrigantes, mas com execução falha.": 0.6451612903225806,
-      "Muitos apontam um ritmo lento que gera confusão narrativa e um final insatisfatório ou ambíguo, embora reconheçam a atmosfera e o estilo visual eficazes.": 0.680089485458613,
-      "Já uma fração mínima das notas (~3%) é negativa.": 0.2011173184357542,
-      "Para essa parcela, o filme é um caso de ritmo lento e tedioso — a maioria dessas reviews aponta que a lentidão se torna um defeito, sem tensão ou progressão narrativa, e muitos afirmam que a falta de tensão, mistério ou terror compromete a experiência.": 0.5965909090909091,
-      "Para eles, o enredo fraca e repetitivo e personagens desinteressantes dificultam qualquer conexão, tornando a obra decepcionante e superestimada.": 0.4
-    }
+      "Em A Cura (1997), do diretor Kiyoshi Kurosawa, um detetive investiga mortes marcadas por um x estranho, levando-o a um suspeito tímido e enigmático.": 1.0,
+      "É um thriller de crime e mistério que mergulha no horror psicológico.": 0.9166666666666666,
+      "A experiência é marcada por um ritmo lento que domina a narrativa, com uma atmosfera sombria e perturbadora.": 1.0,
+      "Só que tudo se desdobra de forma ambígua e sem respostas definitivas.": 0.8333333333333334,
+      "A grande maioria das notas (~79%) é positiva, e essas reviews celebram o trabalho como hipnótico e perturbador.": 1.0,
+      "Para esse grupo, o ritmo lento e deliberado intensifica o suspense, e a ausência de respostas é vista como um trunfo, forçando a reflexão sobre temas psicológicos profundos.": 1.0,
+      "Uma minoria das notas (~17%) fica no meio-termo — nessa leitura, o mesmo ritmo lento gera confusão narrativa, e o final ambíguo deixa pontas soltas.": 1.0,
+      "Mesmo assim, reconhecem ideias intrigantes e uma atmosfera eficaz.": 0.7777777777777778,
+      "Já para a fração mínima das notas (~3%), que não gostou, o filme é tedioso e arrastado, sem tensão, com personagens planos e um enredo repetitivo.": 0.96,
+      "Uma experiência que, para eles, não cumpre o potencial da premissa.": 1.0
+    },
+    "tentativas_detalhe": [
+      {
+        "tentativa": 1,
+        "motivo": "ordem_alterada",
+        "similaridade": 0.768976897689769,
+        "frases_sem_origem": [
+          {
+            "frase": "O conjunto é exatamente isso: um trabalho que divide opiniões, e cada grupo tira uma leitura diferente da mesma lentidão.",
+            "similaridade": 0.35
+          },
+          {
+            "frase": "A obra de Kurosawa incomoda não pelo que mostra, mas pelo que deixa em aberto.",
+            "similaridade": 0.3333333333333333
+          },
+          {
+            "frase": "Uns se perdem nesse vazio; outros, se encontram.",
+            "similaridade": 0.125
+          }
+        ],
+        "texto": "A Cura (1997), do diretor Kiyoshi Kurosawa, acompanha um detetive que investiga mortes marcadas por um x estranho. O caso o leva até um suspeito tímido e enigmático, num thriller de crime e mistério que mergulha no horror psicológico. O ritmo lento domina a narrativa, e a atmosfera é sombria e perturbadora, mas o filme se desdobra de forma ambígua, sem respostas definitivas. A grande maioria das notas (~79%) é positiva. Essas reviews celebram o trabalho como hipnótico e perturbador: para esse grupo, o ritmo lento e deliberado intensifica o suspense, e a ausência de respostas vira um trunfo, forçando a reflexão sobre temas psicológicos profundos. Já uma minoria das notas (~17%) fica no meio-termo. Nessa leitura, o mesmo ritmo lento gera confusão narrativa, e o final ambíguo deixa pontas soltas, embora reconheçam ideias intrigantes e uma atmosfera eficaz. Para a fração mínima das notas (~3%), que não gostou, o filme é tedioso e arrastado, sem tensão, com personagens planos e um enredo repetitivo. Para eles, essa experiência não cumpre o potencial da premissa. O conjunto é exatamente isso: um trabalho que divide opiniões, e cada grupo tira uma leitura diferente da mesma lentidão. A obra de Kurosawa incomoda não pelo que mostra, mas pelo que deixa em aberto. Uns se perdem nesse vazio; outros, se encontram."
+      },
+      {
+        "tentativa": 2,
+        "motivo": "regressão de honestidade: perspectiva_nao_marcada",
+        "similaridade": 0.8825112107623319,
+        "frases_sem_origem": [
+          {
+            "frase": "É um equilíbrio entre críticas e elogios.",
+            "similaridade": 0.42857142857142855
+          }
+        ],
+        "texto": "Em A Cura (1997), do diretor Kiyoshi Kurosawa, um detetive investiga mortes marcadas por um x estranho, levando-o a um suspeito tímido e enigmático. É um thriller de crime e mistério que mergulha no horror psicológico. A experiência é dominada por um ritmo lento, com uma atmosfera sombria e perturbadora, mas que se desdobra de forma ambígua e sem respostas definitivas.\n\nA grande maioria das notas (~79%) é positiva, e essas reviews celebram o trabalho como hipnótico e perturbador. Para esse grupo, o ritmo lento e deliberado intensifica o suspense, e a ausência de respostas é vista como um trunfo, forçando a reflexão sobre temas psicológicos profundos.\n\nJá uma minoria das notas (~17%) fica no meio-termo. Nessa leitura, o mesmo ritmo lento gera confusão narrativa, e o final ambíguo deixa pontas soltas — embora reconheçam ideias intrigantes e uma atmosfera eficaz. É um equilíbrio entre críticas e elogios.\n\nPara a fração mínima das notas (~3%), que não gostou, o filme é tedioso e arrastado, sem tensão. Os personagens são planos, e o enredo se torna repetitivo. Para eles, a experiência não cumpre o potencial da premissa."
+      },
+      {
+        "tentativa": 3,
+        "motivo": "regressão de honestidade: perspectiva_nao_marcada",
+        "similaridade": 0.7642427049559981,
+        "frases_sem_origem": [
+          {
+            "frase": "Não há tensão, os personagens são planos e o enredo se repete.",
+            "similaridade": 0.5833333333333334
+          }
+        ],
+        "texto": "Em A Cura (1997), do diretor Kiyoshi Kurosawa, um detetive investiga mortes marcadas por um x estranho, e isso o leva a um suspeito tímido e enigmático. É um thriller de crime e mistério que mergulha no horror psicológico. O ritmo lento domina a narrativa, com uma atmosfera sombria e perturbadora, mas o desdobrar é ambíguo e sem respostas definitivas.\n\nA grande maioria das notas (~79%) é positiva, e essas reviews celebram o trabalho como hipnótico e perturbador. Para esse grupo, o ritmo lento e deliberado intensifica o suspense. A ausência de respostas é vista como um trunfo, forçando a reflexão sobre temas psicológicos profundos.\n\nUma minoria das notas (~17%) fica no meio-termo. Nessa leitura, o mesmo ritmo lento gera confusão narrativa, e o final ambíguo deixa pontas soltas. Mas eles reconhecem ideias intrigantes e uma atmosfera eficaz. Já a fração mínima das notas (~3%), que não gostou, acha o filme tedioso e arrastado. Não há tensão, os personagens são planos e o enredo se repete. Para eles, a experiência não cumpre o potencial da premissa."
+      },
+      {
+        "tentativa": 4,
+        "motivo": "edicao_nula",
+        "similaridade": 0.9715575620767495,
+        "frases_sem_origem": [],
+        "texto": "Em A Cura (1997), do diretor Kiyoshi Kurosawa, um detetive investiga mortes marcadas por um x estranho, levando-o a um suspeito tímido e enigmático. É um thriller de crime e mistério que mergulha no horror psicológico. A experiência é marcada por um ritmo lento que domina a narrativa, com uma atmosfera sombria e perturbadora. Só que tudo se desdobra de forma ambígua e sem respostas definitivas.\n\nA grande maioria das notas (~79%) é positiva, e essas reviews celebram o trabalho como hipnótico e perturbador. Para esse grupo, o ritmo lento e deliberado intensifica o suspense, e a ausência de respostas é vista como um trunfo, forçando a reflexão sobre temas psicológicos profundos. Uma minoria das notas (~17%) fica no meio-termo — nessa leitura, o mesmo ritmo lento gera confusão narrativa, e o final ambíguo deixa pontas soltas. Mesmo assim, reconhecem ideias intrigantes e uma atmosfera eficaz. Já para a fração mínima das notas (~3%), que não gostou, o filme é tedioso e arrastado, sem tensão, com personagens planos e um enredo repetitivo. Uma experiência que, para eles, não cumpre o potencial da premissa."
+      }
+    ]
   }
 }

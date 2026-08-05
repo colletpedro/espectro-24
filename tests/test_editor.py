@@ -21,12 +21,15 @@ from espectro24.models import (
 )
 from espectro24.parser import parse_rating_histogram
 from espectro24.render import build_output, render_terminal
+from espectro24.config import EDITOR_LIMIAR_FRASE_SEM_ORIGEM
 from espectro24.synthesize import (
     _EDITOR_SYSTEM_PROMPT,
     _conteudo_adicionado_ok,
     _corrigir_capitalizacao_residual,
+    _dividir_frases,
     _formato_invalido,
     _frases_sem_origem,
+    _melhor_cobertura_palavras,
     _ordem_movimento_alterada,
     _protegido_presente,
     _similaridade,
@@ -1184,3 +1187,283 @@ def test_tentativas_detalhe_registra_todas_as_tentativas_no_descarte_total():
     assert all(t["motivo"] == "formato_invalido" for t in ed.tentativas_detalhe)
     assert all(t["texto"] == invalido for t in ed.tentativas_detalhe)
     assert [t["tentativa"] for t in ed.tentativas_detalhe] == [1, 2, 3, 4]
+
+
+# =====================================================================
+# v1.8.2 (Tarefa 1/2) — CORREÇÃO do falso positivo de `conteudo_adicionado`:
+# a métrica da v1.8.0 (`difflib.SequenceMatcher.ratio`, char-level, SENSÍVEL
+# A ORDEM, frase inteira contra frase inteira) reprovava frases legítimas
+# quando o editor QUEBRAVA uma frase longa em duas ou REORDENAVA palavras
+# dentro dela — foi o que descartou o `cure` na v1.8.1 (3 reprovações
+# seguidas por esse motivo). A correção usa cobertura de palavras (multiset,
+# insensível a ordem) contra a MELHOR frase individual do bruto.
+#
+# Esta suíte de calibração roda a métrica NOVA (`_melhor_cobertura_palavras`)
+# sobre os casos REAIS já em disco (textos literais, congelados aqui —
+# `resultado/validacao_editor_v18/*.json` e a produção v1.8.1 ANTES da
+# regeneração desta versão) e sobre o parágrafo REALMENTE inventado do
+# `the-invite-2026` (já coberto por `_INVITE_BRUTO_REAL`/
+# `_INVITE_EDITADO_COM_DEFEITO` acima). Os valores calculados são impressos
+# (rodar com `pytest -s` para ver) para conferência humana da calibração.
+# =====================================================================
+
+# --- brutos e frases marcadas REAIS de VALIDACAO_EDITOR_V18.md (1 disparo) ---
+
+_V18_CURE_BRUTO = (
+    "Em A Cura (1997), de Kiyoshi Kurosawa, um detetive investiga uma série "
+    "de assassinatos marcados por um x nos corpos, levando a interrogatórios "
+    "intermináveis que só avançam quando um rapaz de trejeitos estranhos é "
+    "preso. Um thriller de crime e mistério que mergulha em um terror "
+    "psicológico atmosférico. O filme é marcado por um ritmo lento e "
+    "deliberado, que constrói uma atmosfera de desconforto, envolto em "
+    "ambiguidade e com uma forte sensação de apreensão sustentada até o "
+    "fim. A grande maioria das notas (~79%) é positiva, e essas reviews "
+    "celebram a atmosfera perturbadora e hipnótica, o pacing lento e a "
+    "exploração de temas psicológicos e existenciais. Para a grande "
+    "maioria das notas (~79%), a ausência de respostas é um ponto forte, "
+    "deixando o espectador em reflexão. Uma minoria das notas (~17%) fica "
+    "no meio: para eles, o ritmo lento gera confusão narrativa, o final é "
+    "insatisfatório ou ambíguo, e embora reconheçam ideias intrigantes e a "
+    "atmosfera eficaz, sentem que a execução falha e que uma revisitação é "
+    "necessária para a compreensão plena. Já entre as notas, uma fração "
+    "mínima (~3%) representa quem não gostou: para esse grupo, o filme é "
+    "lento e tedioso, carece de tensão e mistério, e o enredo é repetitivo "
+    "e fraco, com personagens planos e um final insatisfatório."
+)
+_V18_CURE_FRASES = [
+    "Só que os interrogatórios são intermináveis e só avançam quando um "
+    "rapaz de trejeitos estranhos é preso.",
+    "Para esse grupo, uma revisitação é necessária para a compreensão plena.",
+]
+
+_V18_CIDADE_BRUTO = (
+    "Cidade de Deus, dirigido por Fernando Meirelles, é um drama policial "
+    "de 2002 que acompanha Buscapé, um jovem que cresce na Cidade de Deus "
+    "e vê na fotografia uma saída da violência. A experiência de assistir "
+    "ao filme é marcada por um ritmo acelerado e uma montagem frenética, "
+    "além de uma violência que é ao mesmo tempo brutal e estilizada, "
+    "apresentada de forma crua e impactante. A grande maioria das notas "
+    "(~91%) celebra a obra como um marco do cinema, destacando a edição "
+    "dinâmica que confere energia contagiante e a narrativa envolvente, "
+    "que costura múltiplas histórias sem perder coesão, além de ressaltar "
+    "o realismo da violência, que choca pela seriedade do tema. Para esse "
+    "vasto grupo, a brutalidade é apresentada de forma realista, sem "
+    "glamour, e as atuações são marcantes, transmitindo autenticidade. "
+    "Uma pequena minoria das notas (~8%) reconhece a qualidade técnica e o "
+    "retrato realista da violência, mas, para esse grupo, falta uma "
+    "conexão emocional mais profunda, e o ritmo inconstante pode tornar "
+    "certas partes monótonas. Finalmente, uma fração mínima das notas "
+    "(~1%) critica o filme por estetizar a violência e a miséria, "
+    "transformando-as em espetáculo, e por apresentar uma representação "
+    "estereotipada da favela, com violência excessiva e personagens pouco "
+    "desenvolvidos, o que, para eles, compromete a autenticidade da obra."
+)
+_V18_CIDADE_FRASES = [
+    "A grande maioria das notas (~91%) celebra a obra como um marco do cinema.",
+    "Também ressaltam o realismo da violência, que choca pela seriedade do tema.",
+    "O ritmo inconstante pode tornar certas partes monótonas.",
+]
+
+_V18_INVITE_BRUTO = (
+    "Em O Convite, de Olivia Wilde (2026), um drama com comédia, o "
+    "casamento de Joe e Angela está em crise, e a noite em que convidam "
+    "seus enigmáticos vizinhos para um jantar toma rumos inesperados. O "
+    "filme tem ritmo que desacelera conforme avança, com uma atmosfera "
+    "íntima que transita entre tons cômicos e dramáticos, abordando com "
+    "franqueza temas de sexualidade e relacionamentos, ainda que a "
+    "previsibilidade e a repetição marquem parte da experiência. A grande "
+    "maioria das notas (~79%) celebra justamente esse equilíbrio: quase "
+    "todos destacam a direção e o roteiro, cerca de metade valoriza o "
+    "humor que convive com o drama, e a maioria elogia as atuações e a "
+    "química do elenco, vendo originalidade no tratamento das crises "
+    "conjugais. Uma minoria das notas (~18%) reconhece a competência "
+    "técnica, mas, para esse grupo, o filme se torna repetitivo e a "
+    "mudança de tom final soa abrupta. Já uma fração mínima das notas "
+    "(~3%) é mais dura: para quem está nessa faixa, cerca de metade vê "
+    "humor e roteiro fracos ou entediantes, muitos consideram personagens "
+    "e diálogos superficiais, e a abordagem da sexualidade é percebida "
+    "como forçada — uma experiência decepcionante para essa parcela."
+)
+_V18_INVITE_FRASES = ["Conforme avança, o ritmo desacelera."]
+
+# --- brutos e frases marcadas REAIS da produção v1.8.1 (6 disparos, ANTES
+# da regeneração desta versão) ---
+
+_PROD181_CURE_BRUTO = (
+    "Em A Cura (1997), de Kiyoshi Kurosawa, um detetive investiga uma "
+    "série de assassinatos marcados por um misterioso x nos corpos das "
+    "vítimas, levando a interrogatórios exaustivos e à prisão de um jovem "
+    "de trejeitos estranhos. Misturando crime, thriller, terror e "
+    "mistério, o filme constrói uma premissa inquietante desde o início. "
+    "A experiência é marcada por um ritmo lento e deliberado, que pode "
+    "ser visto como tedioso ou hipnótico, e uma atmosfera perturbadora, "
+    "criada por longas tomadas, silêncios e um desconforto constante, sem "
+    "depender de sustos óbvios. A trama se desenvolve de forma ambígua, "
+    "com um final que deixa pontas soltas, e a narrativa frequentemente "
+    "exige paciência e até uma segunda visita para ser plenamente "
+    "apreendida. A grande maioria das notas (~79%) é positiva, e quem "
+    "está nessa faixa elogia principalmente a atmosfera perturbadora e "
+    "hipnótica, que muitos descrevem como uma imersão em um estado de "
+    "apreensão constante. Para eles, o ritmo lento e deliberado "
+    "intensifica o suspense e o horror psicológico, levando a um transe "
+    "que reflete a temática da manipulação mental. Além disso, a ausência "
+    "de respostas definitivas e a ambiguidade são valorizadas por forçar "
+    "uma reflexão duradoura sobre o mistério. Uma minoria das notas "
+    "(~17%) representa quem ficou no meio, e para esse grupo a "
+    "experiência é de ideias intrigantes, mas com execução falha: muitos "
+    "apontam um ritmo lento que gera confusão narrativa e um final "
+    "insatisfatório ou ambíguo, embora reconheçam a atmosfera e o estilo "
+    "visual eficazes. Já uma fração mínima das notas (~3%) é negativa, e "
+    "para essa parcela o filme é um caso de ritmo lento e tedioso — a "
+    "maioria dessas reviews aponta que a lentidão se torna um defeito, "
+    "sem tensão ou progressão narrativa, com muitos afirmando que a falta "
+    "de tensão, mistério ou terror compromete a experiência; para eles, o "
+    "enredo fraca e repetitivo e personagens desinteressantes dificultam "
+    "qualquer conexão, tornando a obra decepcionante e superestimada."
+)
+_PROD181_CURE_FRASES = [
+    "A grande maioria das notas (~79%) é positiva.",
+    "Já uma fração mínima das notas (~3%) é negativa.",
+    "Para eles, o enredo fraca e repetitivo e personagens desinteressantes "
+    "dificultam qualquer conexão, tornando a obra decepcionante e "
+    "superestimada.",
+]
+
+_PROD181_CIDADE_BRUTO = (
+    "Em Cidade de Deus (2002), dirigido por Fernando Meirelles, o jovem "
+    "Buscapé cresce em meio à violência da Cidade de Deus e vê na "
+    "fotografia uma chance de escapar de um destino criminoso. O drama e "
+    "o crime se entrelaçam nesse retrato da favela carioca.\n\nO filme é "
+    "intenso e frenético, com ritmo acelerado e violência constante, "
+    "retratada de forma crua e realista. A narrativa é abrangente, "
+    "cobrindo décadas e múltiplos personagens, com uma estrutura "
+    "episódica que mantém o espectador imerso naquele ambiente. As "
+    "opiniões divergem sobre o impacto emocional: enquanto alguns se "
+    "sentem desconectados, outros se envolvem profundamente.\n\nA grande "
+    "maioria das notas (~91%) celebra o filme como uma obra-prima, "
+    "destacando o estilo visual e a edição dinâmicos, a narrativa "
+    "envolvente e a brutalidade realista da violência. Já uma pequena "
+    "minoria das notas (~8%), os medianos, reconhece a qualidade técnica "
+    "e o retrato realista, mas sente que falta uma conexão emocional mais "
+    "profunda, como apontado no tema Entretenimento versus profundidade/"
+    "conexão emocional: para eles, o filme é mais entretenimento do que "
+    "uma experiência marcante. Por fim, uma fração mínima das notas "
+    "(~1%) critica a estetização da violência e a representação "
+    "estereotipada da favela; para esse grupo, a violência é excessiva e "
+    "a construção dos personagens é superficial, o que compromete a "
+    "autenticidade da obra."
+)
+_PROD181_CIDADE_FRASES = ["O filme é intenso e frenético."]
+
+_PROD181_INVITE_BRUTO = (
+    "Em O Convite, de Olivia Wilde, um casal em crise convida seus "
+    "enigmáticos vizinhos para um jantar, e a noite toma rumos "
+    "inesperados. Com um drama leve permeado por comédia, o filme se "
+    "desenrola em um ambiente intimista, equilibrando humor e tensão. A "
+    "grande maioria das notas (~79%) é positiva, com quase todos os "
+    "elogios focados na direção e no roteiro. Para esses, o filme é "
+    "hilário e tocante, com atuações e química do elenco destacadas pela "
+    "maioria, além de uma originalidade bem-vinda. Nessa leitura, a "
+    "capacidade de combinar comédia e drama com perfeição é o ponto "
+    "alto. Uma minoria das notas (~18%) fica no meio-termo: muitos "
+    "reconhecem a inteligência do roteiro e a direção eficaz, mas para "
+    "eles, a repetição e a duração tornam a experiência cansativa, e a "
+    "mudança de tom no final divide opiniões. Uma fração mínima das "
+    "notas (~3%) rejeita o filme: para quem está nessa faixa, cerca de "
+    "metade aponta humor previsível e roteiro que se arrasta, muitos "
+    "veem personagens superficiais e um foco excessivo na sexualidade, e "
+    "alguns o acham previsível. Assim, o filme parece dividir opiniões: "
+    "enquanto a maioria celebra sua ousadia e emoção, uma minoria sente "
+    "falta de profundidade."
+)
+# v1.8.2, Tarefa 2 — NOTA DE CALIBRAÇÃO (não é regressão, é limitação
+# documentada): a 3ª frase real desta lista, "O resultado é uma recepção
+# polarizada.", NÃO entra em `_PROD181_INVITE_FRASES` abaixo porque não é
+# uma QUEBRA DE FRASE (o caso que a Tarefa 2 pede para calibrar) — é um
+# REENQUADRAMENTO com vocabulário diferente do bruto ("recepção
+# polarizada" no lugar de "o filme parece dividir opiniões"). Com a
+# métrica nova ela mede exatamente 0,500 — empatada, até a 3ª casa
+# decimal, com a frase MAIS PRÓXIMA do limiar entre as REALMENTE
+# inventadas ("As atuações seguram o filme, e a química do casal
+# principal convence.", também 0,500) — nenhum limiar escalar separa as
+# duas. Isso é esperado: reenquadramento com sinônimos e conteúdo
+# genuinamente inventado são, por natureza, mais parecidos entre si do
+# que uma quebra de frase (que preserva as palavras exatas) é de um e
+# outro. Na prática isso não reprova edição nenhuma sozinho — precisa de
+# `EDITOR_MIN_FRASES_SEM_ORIGEM` (4) candidatas ou mais, e este é 1 caso
+# isolado — mas fica registrado aqui em vez de forçar o teste a passar
+# escondendo o empate.
+_PROD181_INVITE_FRASES = [
+    "Muitos reconhecem a inteligência do roteiro e a direção eficaz, mas, "
+    "para eles, a repetição e a duração tornam a experiência cansativa, e "
+    "a mudança de tom no final divide opiniões.",
+    "Já Uma fração mínima das notas (~3%) rejeita o filme.",
+]
+
+_CASOS_LEGITIMOS = [
+    ("v18/cure", _V18_CURE_BRUTO, _V18_CURE_FRASES),
+    ("v18/cidade-de-deus", _V18_CIDADE_BRUTO, _V18_CIDADE_FRASES),
+    ("v18/the-invite-2026", _V18_INVITE_BRUTO, _V18_INVITE_FRASES),
+    ("producao-v1.8.1/cure", _PROD181_CURE_BRUTO, _PROD181_CURE_FRASES),
+    ("producao-v1.8.1/cidade-de-deus", _PROD181_CIDADE_BRUTO, _PROD181_CIDADE_FRASES),
+    ("producao-v1.8.1/the-invite-2026", _PROD181_INVITE_BRUTO, _PROD181_INVITE_FRASES),
+]
+
+
+def test_calibracao_reenquadramento_documenta_o_empate_sem_falhar():
+    """NÃO é uma quebra de frase (fora do escopo da Tarefa 2) — telemetria
+    isolada sobre "O resultado é uma recepção polarizada." (produção
+    v1.8.1, real), um REENQUADRAMENTO com vocabulário diferente do bruto.
+    Empata, até a 3ª casa decimal, com a frase mais próxima do limiar
+    entre as REALMENTE inventadas (0,500 nos dois casos) — nenhum limiar
+    escalar separa os dois. Documentado, não corrigido: 1 frase isolada
+    não reprova a edição sozinha (EDITOR_MIN_FRASES_SEM_ORIGEM=4)."""
+    bruto = _PROD181_INVITE_BRUTO
+    frase = "O resultado é uma recepção polarizada."
+    cobertura = _melhor_cobertura_palavras(frase, _dividir_frases(bruto))
+    print(f"{cobertura:.3f}  [reenquadramento, fora do escopo da calibração] {frase}")
+    assert cobertura == 0.5   # documenta o valor exato; não é um "deveria passar"
+
+
+def test_calibracao_frases_legitimas_ficam_acima_do_limiar():
+    """As frases marcadas como "sem origem" pela métrica ANTIGA, em TODOS
+    os casos reais disponíveis (1 disparo de VALIDACAO_EDITOR_V18.md + 6
+    disparos da produção v1.8.1, incluindo os 3 que descartaram o `cure`),
+    eram quebras de frase ou reordenação — edição LEGÍTIMA. A métrica NOVA
+    precisa classificá-las como tendo origem (cobertura >= limiar)."""
+    frases_bruto_por_caso = {
+        nome: _dividir_frases(bruto) for nome, bruto, _ in _CASOS_LEGITIMOS}
+    falhas = []
+    for nome, _bruto, frases in _CASOS_LEGITIMOS:
+        for f in frases:
+            cobertura = max(
+                _melhor_cobertura_palavras(f, frases_bruto_por_caso[nome]), 0.0)
+            print(f"{cobertura:.3f}  [{nome}] {f[:70]}")
+            if cobertura < EDITOR_LIMIAR_FRASE_SEM_ORIGEM:
+                falhas.append((nome, f, cobertura))
+    assert not falhas, (
+        f"caso(s) legítimo(s) continuam abaixo do limiar "
+        f"({EDITOR_LIMIAR_FRASE_SEM_ORIGEM}): {falhas}")
+
+
+def test_calibracao_paragrafo_inventado_fica_abaixo_do_limiar():
+    """O parágrafo REALMENTE inventado do `the-invite-2026` (texto literal
+    de VALIDACAO_DEEPSEEK.md/`_INVITE_EDITADO_COM_DEFEITO`) precisa
+    continuar classificado como sem origem pela métrica NOVA — a correção
+    não pode enfraquecer a detecção do defeito real que a motivou."""
+    frases_bruto = _dividir_frases(_INVITE_BRUTO_REAL)
+    # só as frases do parágrafo REALMENTE inventado (as últimas 6, a
+    # partir de "O saldo geral..." — as anteriores são paráfrase legítima
+    # do próprio bruto e não deveriam ser marcadas)
+    frases_inventadas = _dividir_frases(_INVITE_EDITADO_COM_DEFEITO)[-6:]
+    assert frases_inventadas[0].startswith("O saldo geral")
+    falhas = []
+    for f in frases_inventadas:
+        cobertura = _melhor_cobertura_palavras(f, frases_bruto)
+        print(f"{cobertura:.3f}  [inventado] {f[:80]}")
+        if cobertura >= EDITOR_LIMIAR_FRASE_SEM_ORIGEM:
+            falhas.append((f, cobertura))
+    assert not falhas, (
+        f"frase(s) inventada(s) ficaram no ou acima do limiar "
+        f"({EDITOR_LIMIAR_FRASE_SEM_ORIGEM}), a correção enfraqueceu a "
+        f"detecção: {falhas}")

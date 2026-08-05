@@ -2368,17 +2368,91 @@ def _similaridade(a: str, b: str) -> float:
 # inteiro, sem fonte no texto recebido. As checagens abaixo detectam ADIÇÃO.
 
 def _melhor_similaridade(frase: str, frases_ref: list[str]) -> float:
-    """Maior `_similaridade` entre `frase` e qualquer frase de `frases_ref`.
-    0.0 se `frases_ref` for vazia (nada para comparar — trivialmente "sem
-    origem", mas esse caso só ocorre com um texto bruto vazio, já tratado
-    antes de `editar_narrativa` chegar aqui)."""
+    """Maior `_similaridade` (char, SENSÍVEL À ORDEM) entre `frase` e
+    qualquer frase de `frases_ref`. 0.0 se `frases_ref` for vazia.
+
+    Usada SÓ por `_ordem_movimento_alterada` — checar se a ABERTURA do
+    texto é a mesma é, por natureza, uma comparação de ORDEM (a frase
+    inteira precisa estar no mesmo lugar relativo), então a sensibilidade a
+    ordem daqui é desejada. NÃO é mais usada pela checagem de conteúdo
+    adicionado (ver `_cobertura_palavras_por_frase` abaixo, v1.8.2) — essa
+    precisa tolerar reescrita/reordenação DENTRO da frase, que é dentro do
+    trabalho normal do editor."""
     if not frases_ref:
         return 0.0
     return max(_similaridade(frase, ref) for ref in frases_ref)
 
 
+# --- v1.8.2 — correção do falso positivo de `conteudo_adicionado` ---
+# Diagnóstico (DIAGNOSTICO_CONTEUDO_ADICIONADO.md → achado do relatório
+# desta versão): a métrica da v1.8.0 (`_similaridade`, char-level,
+# SENSÍVEL A ORDEM, comparando a frase inteira do editado contra frases
+# INTEIRAS do bruto) reprovava edição LEGÍTIMA sempre que o editor (a)
+# quebrava uma frase longa do bruto em duas menores (cada metade, sozinha,
+# tem baixa `ratio()` contra a frase-fonte inteira só por diferença de
+# COMPRIMENTO) ou (b) reordenava palavras/orações dentro da frase (ex.:
+# bruto "ritmo que desacelera conforme avança" → editado "conforme avança,
+# o ritmo desacelera" — mesmas palavras, ordem diferente). Foi o que
+# descartou o `cure` na v1.8.1 depois de 3 reprovações seguidas.
+#
+# A correção troca a métrica por COBERTURA DE PALAVRAS (multiset,
+# insensível a ordem): quantas palavras da frase do editado aparecem no
+# BRUTO, contra a MELHOR frase individual do bruto (não o texto inteiro —
+# ver por quê logo abaixo). Implementação: tokeniza frase e frase-de-
+# referência em palavras, ORDENA os tokens (o que remove a informação de
+# posição) e roda `difflib.SequenceMatcher.get_matching_blocks()` sobre as
+# duas listas ordenadas — o resultado é matematicamente equivalente à
+# interseção de multiset (cada palavra conta até o mínimo de ocorrências
+# nos dois lados), mas ainda usando SequenceMatcher como sugerido. Restrito
+# à MELHOR frase individual do bruto (não ao texto inteiro): medido ao
+# vivo que comparar contra o bruto INTEIRO de uma vez infla o placar de
+# frases genuinamente inventadas (elas pegam carona em palavras comuns
+# espalhadas por frases distantes do bruto — "filme", "notas", "atuações"
+# aparecem em quase toda frase de uma crítica de cinema); por frase
+# individual, uma frase inventada não tem uma ÚNICA frase de origem que
+# explique a maior parte das suas palavras.
+#
+# Calibração EMPÍRICA (ver DIAGNOSTICO_CONTEUDO_ADICIONADO.md e
+# VALIDACAO_DEEPSEEK.md/VALIDACAO_EDITOR_V18.md para os dados completos):
+# as 6 frases legítimas marcadas nas validações (quebras de frase +
+# reordenação) ficaram entre 0,765 e 1,000 com esta métrica; as frases do
+# parágrafo REALMENTE inventado do `the-invite-2026` (texto literal,
+# "O saldo geral, no entanto, é positivo... não apaga o brilho do
+# conjunto") ficaram entre 0,222 e 0,500 — folga clara para o limiar em
+# 0,6 (`EDITOR_LIMIAR_FRASE_SEM_ORIGEM`, calibrável).
+
+_RE_PALAVRA_COBERTURA = re.compile(r"[^\W\d_]+", re.UNICODE)
+
+
+def _palavras_ordenadas(texto: str) -> list[str]:
+    return sorted(w.lower() for w in _RE_PALAVRA_COBERTURA.findall(texto))
+
+
+def _cobertura_palavras(frase: str, referencia: str) -> float:
+    """Fração (0-1) das palavras de `frase` (multiset) encontradas em
+    `referencia` (multiset) — insensível à ORDEM. 1.0 se `frase` não tiver
+    palavras (nada a cobrir)."""
+    palavras_frase = _palavras_ordenadas(frase)
+    if not palavras_frase:
+        return 1.0
+    sm = difflib.SequenceMatcher(
+        None, palavras_frase, _palavras_ordenadas(referencia), autojunk=False)
+    cobertas = sum(b.size for b in sm.get_matching_blocks())
+    return cobertas / len(palavras_frase)
+
+
+def _melhor_cobertura_palavras(frase: str, frases_ref: list[str]) -> float:
+    """Maior `_cobertura_palavras` entre `frase` e qualquer frase de
+    `frases_ref` (a MELHOR frase de origem individual, não o texto todo —
+    ver motivação acima). 0.0 se `frases_ref` for vazia."""
+    if not frases_ref:
+        return 0.0
+    return max(_cobertura_palavras(frase, ref) for ref in frases_ref)
+
+
 def _similaridades_por_frase(bruto: str, editado: str) -> dict[str, float]:
-    """{frase do EDITADO: melhor similaridade contra alguma frase do BRUTO}.
+    """{frase do EDITADO: melhor cobertura de palavras contra alguma frase
+    do BRUTO} (v1.8.2 — ver `_melhor_cobertura_palavras`).
 
     Uma frase repetida (mesmo texto exato) mais de uma vez no editado colapsa
     para uma única chave — comportamento aceitável para telemetria de
@@ -2388,18 +2462,19 @@ def _similaridades_por_frase(bruto: str, editado: str) -> dict[str, float]:
     """
     frases_bruto = _dividir_frases(bruto)
     frases_editado = _dividir_frases(editado)
-    return {f: _melhor_similaridade(f, frases_bruto) for f in frases_editado}
+    return {f: _melhor_cobertura_palavras(f, frases_bruto) for f in frases_editado}
 
 
 def _frases_sem_origem(bruto: str, editado: str,
                        limiar: float = EDITOR_LIMIAR_FRASE_SEM_ORIGEM) -> list[str]:
-    """Frases do EDITADO (na ordem em que aparecem) cuja melhor similaridade
-    contra QUALQUER frase do BRUTO fica abaixo de `limiar` — candidatas a
-    conteúdo inventado (ver `_conteudo_adicionado_ok` para o critério de
-    falha, que exige 2+ candidatas OU uma fração relevante de palavras)."""
+    """Frases do EDITADO (na ordem em que aparecem) cuja melhor cobertura de
+    palavras (v1.8.2) contra QUALQUER frase do BRUTO fica abaixo de
+    `limiar` — candidatas a conteúdo inventado (ver `_conteudo_adicionado_ok`
+    para o critério de falha, que exige N+ candidatas OU uma fração
+    relevante de palavras)."""
     frases_bruto = _dividir_frases(bruto)
     return [f for f in _dividir_frases(editado)
-            if _melhor_similaridade(f, frases_bruto) < limiar]
+            if _melhor_cobertura_palavras(f, frases_bruto) < limiar]
 
 
 def _conteudo_adicionado_ok(frases_ruins: list[str], texto_editado: str) -> bool:
