@@ -59,6 +59,7 @@ ORDENACAO = "by/activity"    # §2
 PROVIDER_ENV_KEYS = {
     "anthropic": "ANTHROPIC_API_KEY",
     "gemini": "GEMINI_API_KEY",
+    "deepseek": "DEEPSEEK_API_KEY",
 }
 PROVIDER_DEFAULT_MODELS = {
     "anthropic": "claude-sonnet-4-6",
@@ -71,6 +72,18 @@ PROVIDER_DEFAULT_MODELS = {
     # o próprio erro de enquadramento que motivou o preâmbulo de papel da
     # v1.1.2. O 2.5-flash, no mesmo teste, não repetiu nenhuma das três.
     "gemini": "gemini-2.5-flash",
+    # deepseek-v4-flash (v1.8.0) — provider adicional, NÃO default de
+    # produção (ver PROVIDER_CLIENTS em synthesize.py). Aposta seguinte após
+    # o encerramento dos experimentos de LLM local (ver
+    # experimentos-ollama-arquivado/): SDK compatível com o da OpenAI,
+    # ~$0,14/M tokens de entrada (cache miss; ~$0,0028/M com prefixo
+    # cacheado) e ~$0,28/M de saída, sem teto diário de requisições — ataca
+    # diretamente o gargalo do free tier do Gemini (20 req/dia) que
+    # inviabilizava construir catálogo. ATENÇÃO: os aliases antigos
+    # `deepseek-chat`/`deepseek-reasoner` foram descontinuados em 24/07/2026;
+    # não existe mais "DeepSeek-V3" na API — os nomes atuais são
+    # `deepseek-v4-flash` e `deepseek-v4-pro`.
+    "deepseek": "deepseek-v4-flash",
 }
 # mantido por compatibilidade (era o único provider na v1.1.0)
 MODEL_DEFAULT = PROVIDER_DEFAULT_MODELS["anthropic"]

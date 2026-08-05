@@ -1,9 +1,15 @@
-"""Tarefa 2 (v1.1.1): adaptador Gemini + seleção de provider (zero chamadas reais)."""
+"""Tarefa 2 (v1.1.1): adaptador Gemini + seleção de provider (zero chamadas reais).
+v1.8.0 acrescenta o adaptador DeepSeek (mesmo princípio: zero chamadas reais,
+SDK mockado)."""
 import pytest
 
 from espectro24.config import PROVIDER_DEFAULT_MODELS, PROVIDER_ENV_KEYS
 from espectro24.synthesize import (
+    PROVIDER_CLIENTS,
+    PROVIDER_CLIENTS_PROSA,
     ProviderError,
+    deepseek_client_call,
+    deepseek_client_call_prosa,
     detect_provider,
     gemini_client_call,
     gemini_supports_thinking,
@@ -74,9 +80,10 @@ def test_detect_provider_nenhuma_chave_e_erro_claro(monkeypatch):
         detect_provider(None)
 
 
-def test_provider_default_models_tem_as_duas_chaves():
-    assert set(PROVIDER_DEFAULT_MODELS) == {"anthropic", "gemini"}
+def test_provider_default_models_tem_as_tres_chaves():
+    assert set(PROVIDER_DEFAULT_MODELS) == {"anthropic", "gemini", "deepseek"}
     assert PROVIDER_DEFAULT_MODELS["gemini"] == "gemini-2.5-flash"
+    assert PROVIDER_DEFAULT_MODELS["deepseek"] == "deepseek-v4-flash"
 
 
 # --- GeminiClient: mock do SDK, ZERO chamadas reais ---
@@ -208,3 +215,118 @@ def test_synthesize_bucket_provider_explicito_resolve_ambiguidade(monkeypatch):
 
     synthesize_bucket(_bucket_com_reviews(), provider="gemini")
     assert captured["model"] == PROVIDER_DEFAULT_MODELS["gemini"]
+
+
+# --- DeepSeekClient: mock do SDK da OpenAI, ZERO chamadas reais (v1.8.0) ---
+
+class _FakeDeepSeekMessage:
+    def __init__(self, content):
+        self.content = content
+
+
+class _FakeDeepSeekChoice:
+    def __init__(self, content):
+        self.message = _FakeDeepSeekMessage(content)
+
+
+class _FakeDeepSeekResponse:
+    def __init__(self, content):
+        self.choices = [_FakeDeepSeekChoice(content)]
+
+
+class _FakeDeepSeekCompletions:
+    def __init__(self, capture, response_text):
+        self._capture = capture
+        self._response_text = response_text
+
+    def create(self, **kwargs):
+        self._capture.update(kwargs)
+        return _FakeDeepSeekResponse(self._response_text)
+
+
+class _FakeDeepSeekChat:
+    def __init__(self, capture, response_text):
+        self.completions = _FakeDeepSeekCompletions(capture, response_text)
+
+
+class _FakeDeepSeekClient:
+    def __init__(self, capture, response_text):
+        self.chat = _FakeDeepSeekChat(capture, response_text)
+
+
+def _patch_openai(monkeypatch, init_capture, call_capture, response_text):
+    import openai
+
+    def fake_openai_ctor(**kwargs):
+        init_capture.update(kwargs)
+        return _FakeDeepSeekClient(call_capture, response_text)
+
+    monkeypatch.setattr(openai, "OpenAI", fake_openai_ctor)
+
+
+def test_deepseek_client_call_monta_base_url_modelo_e_non_thinking(monkeypatch):
+    monkeypatch.setenv("DEEPSEEK_API_KEY", "fake-key")
+    init_capture, call_capture = {}, {}
+    _patch_openai(monkeypatch, init_capture, call_capture,
+                  '{"temas":[],"observacao_geral":"ok"}')
+
+    out = deepseek_client_call("SYSTEM", "USER", "deepseek-v4-flash")
+
+    assert out == '{"temas":[],"observacao_geral":"ok"}'
+    # base_url próprio da API DeepSeek (SDK OpenAI, só transporte muda)
+    assert init_capture["base_url"] == "https://api.deepseek.com"
+    assert init_capture["api_key"] == "fake-key"
+    assert call_capture["model"] == "deepseek-v4-flash"
+    assert call_capture["messages"] == [
+        {"role": "system", "content": "SYSTEM"},
+        {"role": "user", "content": "USER"},
+    ]
+    # NON-THINKING explícito — regressão: sem isso, thinking fica LIGADO por
+    # padrão (esforço "high") e compete pelo mesmo orçamento de max_tokens
+    # que a resposta visível, o mesmo modo de falha já visto em outro
+    # provider (ver config.py).
+    assert call_capture["extra_body"] == {"thinking": {"type": "disabled"}}
+    # chamada de SÍNTESE/NARRADOR é JSON — response_format explícito
+    assert call_capture["response_format"] == {"type": "json_object"}
+
+
+def test_deepseek_client_call_prosa_nao_forca_formato_json(monkeypatch):
+    # DIFERENCIAÇÃO deliberada (Tarefa 2): o editor espera prosa corrida, não
+    # JSON — forçar response_format=json_object aqui foi exatamente o bug
+    # que invalidou o teste do editor no experimento local com Ollama.
+    monkeypatch.setenv("DEEPSEEK_API_KEY", "fake-key")
+    init_capture, call_capture = {}, {}
+    _patch_openai(monkeypatch, init_capture, call_capture, "texto editado em prosa")
+
+    out = deepseek_client_call_prosa("SYSTEM", "USER", "deepseek-v4-flash")
+
+    assert out == "texto editado em prosa"
+    assert call_capture["extra_body"] == {"thinking": {"type": "disabled"}}
+    assert "response_format" not in call_capture
+
+
+def test_deepseek_client_call_sem_chave_levanta(monkeypatch):
+    monkeypatch.delenv("DEEPSEEK_API_KEY", raising=False)
+    from espectro24.synthesize import LLMError
+    with pytest.raises(LLMError):
+        deepseek_client_call("s", "u", "deepseek-v4-flash")
+
+
+def test_deepseek_mantem_parsing_defensivo_e_retentativa(monkeypatch):
+    # prompt fixo byte-idêntico entre providers; só o transporte muda —
+    # mesmo teste de regressão que já existe para o Gemini.
+    respostas = ["não é json", '{"temas":[],"observacao_geral":"via deepseek"}']
+
+    def fake_deepseek(system, user, model):
+        assert "PROIBIDO mencionar eventos da trama" in system
+        return respostas.pop(0)
+
+    b = synthesize_bucket(_bucket_com_reviews(), client_call=fake_deepseek)
+    assert b.observacao_geral == "via deepseek"
+
+
+def test_deepseek_registrado_nos_tres_dicionarios():
+    assert PROVIDER_CLIENTS["deepseek"] is deepseek_client_call
+    assert PROVIDER_CLIENTS_PROSA["deepseek"] is deepseek_client_call_prosa
+    assert PROVIDER_DEFAULT_MODELS["deepseek"] == "deepseek-v4-flash"
+    assert PROVIDER_ENV_KEYS["deepseek"] == "DEEPSEEK_API_KEY"

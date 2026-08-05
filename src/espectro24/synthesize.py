@@ -338,9 +338,85 @@ def _gemini_call(system: str, user: str, model: str, *, max_output_tokens: int,
     return resp.text
 
 
+def deepseek_client_call(system: str, user: str, model: str) -> str:
+    """Adaptador DeepSeek (v1.8.0) via SDK da OpenAI (compatível — só
+    `base_url`/`api_key` mudam), usando MODO JSON explícito.
+
+    Provider ADICIONAL, não default de produção (ver PROVIDER_CLIENTS
+    abaixo) — decisão registrada após o encerramento dos experimentos de LLM
+    local (`experimentos-ollama-arquivado/`): o free tier do Gemini (20
+    req/dia) inviabiliza construir catálogo, e o modelo local não sustentou
+    as ~18 invariantes do narrador numa única chamada.
+
+    NON-THINKING explícito (`extra_body={"thinking": {"type": "disabled"}}`)
+    — MESMO motivo documentado para o Gemini (`gemini_client_call`) e
+    observado também no experimento local: tokens de raciocínio competem
+    pelo MESMO orçamento de `max_tokens` que a resposta visível, e já
+    causaram truncamento de JSON em dois providers diferentes. deepseek-v4-*
+    tem thinking LIGADO por padrão (esforço "high") — desligar não é
+    cosmético, é a causa raiz que este adaptador evita de saída.
+
+    `response_format={"type": "json_object"}` — a API exige que a palavra
+    "json" apareça em algum lugar do prompt quando esse modo é usado; os
+    prompts fixos do §D/§D2 já pedem "Responda APENAS o JSON" (byte-idênticos
+    entre providers), então nenhum ajuste de prompt foi necessário.
+    """
+    return _deepseek_call(system, user, model, max_tokens=LLM_MAX_TOKENS,
+                          json_mode=True)
+
+
+def deepseek_client_call_prosa(system: str, user: str, model: str) -> str:
+    """Variante de PROSA (§E2 editor) — v1.8.0.
+
+    DIFERENÇA DELIBERADA da variante JSON: `json_mode=False` (sem
+    `response_format`). O editor espera e devolve TEXTO PURO
+    (`editar_narrativa`/`_uma_chamada` fazem só um strip de fences
+    defensivo) — forçar `response_format=json_object` aqui faria a API
+    rejeitar a chamada (ela exige a palavra "json" no prompt quando o modo
+    está ligado, e o prompt do editor não promete JSON) ou, na melhor das
+    hipóteses, embrulhar a prosa num objeto que `_formato_invalido` (§E2,
+    v1.7.2) já rejeitaria. Esse foi exatamente o defeito que invalidou o
+    teste do editor no experimento local com Ollama — aqui a diferenciação
+    é estrutural desde o primeiro commit, não um fix posterior.
+    """
+    return _deepseek_call(system, user, model, max_tokens=PROSA_MAX_TOKENS,
+                          json_mode=False)
+
+
+def _deepseek_call(system: str, user: str, model: str, *, max_tokens: int,
+                   json_mode: bool) -> str:
+    """Transporte comum do DeepSeek. Timeout convertido de ms (`LLM_TIMEOUT_MS`,
+    ver `config.py`) para segundos, unidade que o SDK da OpenAI espera."""
+    from openai import OpenAI
+
+    key = os.environ.get(PROVIDER_ENV_KEYS["deepseek"])
+    if not key:
+        raise LLMError(f"{PROVIDER_ENV_KEYS['deepseek']} não definida no ambiente.")
+    client = OpenAI(
+        api_key=key,
+        base_url="https://api.deepseek.com",
+        timeout=LLM_TIMEOUT_MS / 1000,
+    )
+    kwargs = dict(
+        model=model,
+        messages=[
+            {"role": "system", "content": system},
+            {"role": "user", "content": user},
+        ],
+        max_tokens=max_tokens,
+        # NON-THINKING explícito — ver docstring de deepseek_client_call.
+        extra_body={"thinking": {"type": "disabled"}},
+    )
+    if json_mode:
+        kwargs["response_format"] = {"type": "json_object"}
+    resp = client.chat.completions.create(**kwargs)
+    return resp.choices[0].message.content or ""
+
+
 PROVIDER_CLIENTS = {
     "anthropic": anthropic_client_call,
     "gemini": gemini_client_call,
+    "deepseek": deepseek_client_call,
 }
 
 # v1.6.0: adaptadores das etapas de PROSA (§D2 narrador, §E2 editor) — thinking
@@ -348,6 +424,7 @@ PROVIDER_CLIENTS = {
 PROVIDER_CLIENTS_PROSA = {
     "anthropic": anthropic_client_call_prosa,
     "gemini": gemini_client_call_prosa,
+    "deepseek": deepseek_client_call_prosa,
 }
 
 

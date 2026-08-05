@@ -40,10 +40,11 @@ def _parse_args(argv):
                    help="raiz do cache em disco (default: resultado/cache)")
     p.add_argument("--out-dir", default="resultado")
     p.add_argument("--provider", choices=sorted(PROVIDER_ENV_KEYS),
-                   help="provider do LLM (gemini|anthropic); sem a flag, "
-                       "auto-detecta pela chave presente no ambiente "
-                       "(GEMINI_API_KEY / ANTHROPIC_API_KEY); erro se "
-                       "ambas ou nenhuma estiverem presentes")
+                   help="provider do LLM (gemini|anthropic|deepseek); sem a "
+                       "flag, auto-detecta pela chave presente no ambiente "
+                       "(GEMINI_API_KEY / ANTHROPIC_API_KEY / "
+                       "DEEPSEEK_API_KEY); erro se mais de uma ou nenhuma "
+                       "estiverem presentes")
     p.add_argument("--model", default=None,
                    help="modelo do LLM; default depende do provider "
                        "resolvido (ver PROVIDER_DEFAULT_MODELS)")

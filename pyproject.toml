@@ -16,7 +16,8 @@ dependencies = [
 [project.optional-dependencies]
 anthropic = ["anthropic>=0.117"]
 gemini = ["google-genai>=0.3"]
-llm = ["anthropic>=0.117", "google-genai>=0.3"]
+deepseek = ["openai>=1.50"]
+llm = ["anthropic>=0.117", "google-genai>=0.3", "openai>=1.50"]
 test = ["pytest>=7.0"]
 
 [project.scripts]
