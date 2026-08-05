@@ -34,9 +34,14 @@ def _escreve_json(out_dir, slug="cure"):
 
 @pytest.fixture
 def _iso_env(monkeypatch):
-    # isola do .env real e fixa uma chave fake
+    # isola do .env real e fixa uma chave fake. v1.8.0: DEEPSEEK_API_KEY,
+    # não mais GEMINI_API_KEY — o provider default do CLI (sem --provider)
+    # passou a ser "deepseek" (DEFAULT_PROVIDER, config.py); narrate_output/
+    # editar_narrativa são mockados nestes testes, então só a PRESENÇA da
+    # chave do provider resolvido importa, não qual provider é.
     monkeypatch.setattr(cli, "load_dotenv", lambda *a, **k: None)
-    monkeypatch.setenv("GEMINI_API_KEY", "fake-key")
+    monkeypatch.setenv("DEEPSEEK_API_KEY", "fake-key")
+    monkeypatch.delenv("GEMINI_API_KEY", raising=False)
     monkeypatch.delenv("ANTHROPIC_API_KEY", raising=False)
 
 
@@ -253,3 +258,79 @@ def test_ficha_descartada_por_ano_divergente_fica_registrada_no_json(tmp_path, m
     salvo = json.loads((tmp_path / "cure.json").read_text(encoding="utf-8"))
     assert salvo["ficha"] is None
     assert salvo["ficha_descartada"] == descarte
+
+
+# =====================================================================
+# v1.8.0 (Tarefa 2/4) — editor [E2] DESLIGADO por padrão (EDITOR_ATIVO)
+# =====================================================================
+
+def test_editor_desativado_por_padrao_nao_chama_o_llm_do_editor(
+        tmp_path, monkeypatch, _iso_env, capsys):
+    """Sem --com-editor: `editar_narrativa` NUNCA é chamado — 0 chamadas
+    LLM além do narrador —, e o pipeline publica a narrativa do narrador
+    tal como está (mesmo texto em `narrativa` e `narrativa_bruta`)."""
+    _escreve_json(tmp_path)
+    calls_narrar = _mock_narrate(monkeypatch)   # também mocka editar_narrativa
+    import espectro24.cli as cli_mod
+    chamou_editor = []
+    original = cli_mod.editar_narrativa
+    def _falha_se_chamado(*a, **k):
+        chamou_editor.append(1)
+        return original(*a, **k)
+    monkeypatch.setattr(cli_mod, "editar_narrativa", _falha_se_chamado)
+
+    cli.main(["--slug", "cure", "--reuse-synthesis", "--out-dir", str(tmp_path),
+              "--tom", "ambos"])
+
+    assert len(calls_narrar) == 1              # narrador chamado normalmente
+    assert chamou_editor == []                 # editor NUNCA chamado
+    salvo = json.loads((tmp_path / "cure.json").read_text(encoding="utf-8"))
+    assert salvo["narrativa"] == "PROSA_MOCK"
+    assert salvo["narrativa_bruta"] == "PROSA_MOCK"   # bruta == final, sem edição
+    assert salvo["edicao_flags"] == {"editor_desativado": True}
+    out = capsys.readouterr().out
+    assert "DESLIGADA por padrão" in out
+
+
+def test_com_editor_reativa_o_passe_de_edicao(tmp_path, monkeypatch, _iso_env, capsys):
+    """--com-editor liga o editor de volta — mesmo comportamento de antes
+    da v1.8.0 (editar_narrativa É chamado, 1 chamada LLM a mais)."""
+    _escreve_json(tmp_path)
+    calls_narrar = _mock_narrate(monkeypatch)
+    import espectro24.cli as cli_mod
+    calls_editor = []
+    def fake_editar(narrativa_result, protegidos, output=None, model=None,
+                    provider=None):
+        calls_editor.append(1)
+        from espectro24.models import EdicaoResult
+        return EdicaoResult(texto=narrativa_result.texto,
+                            texto_bruto=narrativa_result.texto,
+                            edicao_descartada=False)
+    monkeypatch.setattr(cli_mod, "editar_narrativa", fake_editar)
+
+    cli.main(["--slug", "cure", "--reuse-synthesis", "--out-dir", str(tmp_path),
+              "--tom", "ambos", "--com-editor"])
+
+    assert len(calls_narrar) == 1
+    assert len(calls_editor) == 1
+    salvo = json.loads((tmp_path / "cure.json").read_text(encoding="utf-8"))
+    assert "editor_desativado" not in salvo["edicao_flags"]
+    assert salvo["edicao_flags"]["edicao_descartada"] is False
+
+
+def test_no_edicao_vence_mesmo_com_com_editor(tmp_path, monkeypatch, _iso_env):
+    """--no-edicao sempre desliga, mesmo se --com-editor também foi
+    passado — desempate explícito documentado no CLI."""
+    _escreve_json(tmp_path)
+    _mock_narrate(monkeypatch)
+    import espectro24.cli as cli_mod
+    chamou_editor = []
+    monkeypatch.setattr(cli_mod, "editar_narrativa",
+                        lambda *a, **k: chamou_editor.append(1))
+
+    cli.main(["--slug", "cure", "--reuse-synthesis", "--out-dir", str(tmp_path),
+              "--tom", "ambos", "--com-editor", "--no-edicao"])
+
+    assert chamou_editor == []
+    salvo = json.loads((tmp_path / "cure.json").read_text(encoding="utf-8"))
+    assert salvo["edicao_flags"] == {"editor_desativado": True}

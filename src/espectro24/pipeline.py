@@ -37,8 +37,9 @@ def run_pipeline(fetcher: Fetcher, slug: str, data_coleta: str,
 
     `model`/`provider` propagam para `synthesize_bucket` sem forçar um default
     aqui (v1.1.1): o default de modelo depende do provider resolvido lá —
-    forçar MODEL_DEFAULT (Anthropic) neste nível quebraria o default
-    provider-específico do Gemini quando nenhum --model é passado.
+    forçar MODEL_DEFAULT (v1.8.0: DeepSeek, ver DEFAULT_PROVIDER em
+    config.py) neste nível quebraria o default provider-específico do
+    Gemini/Anthropic quando nenhum --model é passado.
 
     v1.4.0: `distribuicao` controla a busca do histograma (+1 requisição
     cacheada). Falha vira None sem interromper nada (§3b).

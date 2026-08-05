@@ -23,8 +23,11 @@ from espectro24.parser import parse_rating_histogram
 from espectro24.render import build_output, render_terminal
 from espectro24.synthesize import (
     _EDITOR_SYSTEM_PROMPT,
+    _conteudo_adicionado_ok,
     _corrigir_capitalizacao_residual,
     _formato_invalido,
+    _frases_sem_origem,
+    _ordem_movimento_alterada,
     _protegido_presente,
     _similaridade,
     _tokens_numericos,
@@ -608,12 +611,21 @@ def test_editor_com_involucro_de_objeto_dispara_retentativa_e_depois_descarta():
 
 
 def test_editor_recupera_formato_na_retentativa_e_aceita():
+    # v1.8.0: a 2ª resposta precisa ser uma PARÁFRASE legítima (deriva das
+    # mesmas frases da bruta) — texto idêntico dispara "edicao_nula"
+    # (similaridade >= EDITOR_LIMIAR_EDICAO_NULA) e conteúdo genuinamente
+    # novo dispara "conteudo_adicionado" (Tarefa 3.1); nenhum dos dois é o
+    # que este teste mede (recuperação de FORMATO).
     out = {"buckets": [{"bucket": "positivas", "share_real": 91}]}
     res = NarrativaResult(texto=_TEXTO_LIMPO_PARA_INVOLUCRO,
                           quantificadores_usados=[], marcadores_perspectiva=[])
+    texto_parafraseado = (
+        "A grande maioria das notas (~91%) considera o filme uma "
+        "obra-prima. Muitos elogiam bastante o estilo visual do filme."
+    )
     respostas = [
         '{\n text: "' + _TEXTO_LIMPO_PARA_INVOLUCRO + '"\n}',
-        _TEXTO_LIMPO_PARA_INVOLUCRO + " Isso agrada muita gente.",
+        texto_parafraseado,
     ]
 
     def fake(system, user, model):
@@ -623,7 +635,7 @@ def test_editor_recupera_formato_na_retentativa_e_aceita():
                           client_call=fake, model="m")
     assert ed.edicao_descartada is False
     assert ed.houve_retentativa is True
-    assert "Isso agrada muita gente." in ed.texto
+    assert ed.texto == texto_parafraseado
 
 
 # =====================================================================
@@ -887,3 +899,201 @@ def test_capitalizacao_ajustada_e_registrada_em_edicao_aceita():
     assert ed.capitalizacao_ajustada is True
     assert "Para a grande maioria das notas (~79%)" in ed.texto
     assert "Para A grande maioria" not in ed.texto
+
+
+# =====================================================================
+# v1.8.0 (Tarefa 3/4) — checagem de CONTEÚDO ADICIONADO e ORDEM DOS
+# MOVIMENTOS. Textos LITERAIS do caso real (VALIDACAO_DEEPSEEK.md,
+# `the-invite-2026`, DeepSeek): o editor foi ACEITO por todas as checagens
+# até a v1.7.4 mesmo tendo (a) reordenado o MOVIMENTO 1 para o meio do
+# texto e (b) acrescentado um parágrafo de opinião inteiro sem origem no
+# texto recebido.
+# =====================================================================
+
+_INVITE_BRUTO_REAL = (
+    "O Convite (2026), dirigido por Olivia Wilde, mistura drama e comédia "
+    "ao apresentar um casal à beira do divórcio que convida os enigmáticos "
+    "vizinhos do andar de cima para um jantar, transformando a noite em "
+    "algo inesperado. O filme transita entre o humor e o drama em um "
+    "cenário íntimo, com um ritmo que se torna mais cansativo na segunda "
+    "metade, especialmente pela repetição de situações e pela transição "
+    "tonal percebida como abrupta por parte das análises. A grande "
+    "maioria das notas (~79%) celebra a produção, destacando quase todos "
+    "dos textos positivos a direção e o roteiro como pontos fortes, além "
+    "do equilíbrio entre comédia e drama e das atuações, vistas por cerca "
+    "de metade como excepcionais e com boa química. Para esses "
+    "espectadores, o filme é hilário e tocante ao mesmo tempo, com uma "
+    "abordagem original e visualmente envolvente. Já para a minoria das "
+    "notas (~18%), que se posiciona no meio, trata-se de uma comédia bem "
+    "executada, com atuações elogiadas por muitos e um roteiro "
+    "inteligente, mas que se torna repetitivo e previsível, e cuja "
+    "mudança de tom no final divide opiniões — enquanto alguns acham o "
+    "desfecho impactante, outros o veem como abrupto e pouco "
+    "desenvolvido. Por fim, uma fração mínima das notas (~3%) rejeita a "
+    "obra: para esse grupo, cerca de metade aponta humor e roteiro fracos "
+    "e entediantes, muitos criticam personagens e diálogos superficiais, "
+    "e a abordagem da sexualidade é percebida como forçada e "
+    "constrangedora, resultando em uma experiência decepcionante e "
+    "previsível."
+)
+
+# Editado REAL publicado na validação: reordena o MOVIMENTO 1 (apresentação
+# do filme, "O Convite (2026)...") para o MEIO do texto, e acrescenta um
+# parágrafo de fechamento inteiro ("O saldo geral, no entanto...") sem
+# correspondência no bruto acima.
+_INVITE_EDITADO_COM_DEFEITO = (
+    "A grande maioria das notas (~79%) celebra o filme. Os textos "
+    "positivos destacam a direção, o roteiro, o equilíbrio entre comédia "
+    "e drama e as atuações, que cerca de metade considera excepcionais, "
+    "com boa química. Para esse grupo, o filme é hilário e tocante ao "
+    "mesmo tempo, com abordagem original e visualmente envolvente. O "
+    "Convite (2026), de Olivia Wilde, mistura drama e comédia: um casal à "
+    "beira do divórcio convida os enigmáticos vizinhos do andar de cima "
+    "para um jantar, e a noite vira algo inesperado. O ritmo, porém, "
+    "cansa na segunda metade, sobretudo pela repetição de situações e "
+    "pela transição tonal que algumas análises veem como abrupta. "
+    "Já a minoria das notas (~18%) fica no meio. Para ela, é uma comédia "
+    "bem executada, com atuações elogiadas por muitos e um roteiro "
+    "inteligente, só que repetitivo e previsível. A mudança de tom no "
+    "final divide opiniões: uns acham o desfecho impactante, outros o "
+    "veem como abrupto e pouco desenvolvido. O filme transita entre o "
+    "humor e o drama num cenário íntimo, e aí está o nó. "
+    "Por fim, uma fração mínima das notas (~3%) rejeita a obra. Cerca de "
+    "metade desse grupo aponta humor e roteiro fracos e entediantes; "
+    "muitos criticam personagens e diálogos superficiais. A abordagem da "
+    "sexualidade parece forçada e constrangedora para eles. O resultado é "
+    "uma experiência decepcionante e previsível. O saldo geral, no "
+    "entanto, é positivo. O drama se mistura à comédia com originalidade, "
+    "e mesmo os críticos reconhecem a qualidade técnica da direção. As "
+    "atuações seguram o filme, e a química do casal principal convence. A "
+    "segunda metade perde fôlego, mas a ideia central sustenta o "
+    "interesse até o fim. O desfecho polariza, e é justamente essa "
+    "divisão que faz o filme render conversa. No conjunto, a recepção "
+    "majoritária é calorosa, e a minoria que reprova não apaga o brilho "
+    "do conjunto."
+)
+
+
+def test_conteudo_adicionado_detecta_paragrafo_inventado_caso_real_invite():
+    """Unidade: as funções de checagem, isoladas, sobre o texto LITERAL do
+    caso real — sem passar pela retentativa do editor."""
+    frases_ruins = _frases_sem_origem(_INVITE_BRUTO_REAL, _INVITE_EDITADO_COM_DEFEITO)
+    assert len(frases_ruins) >= 4          # bem acima de EDITOR_MIN_FRASES_SEM_ORIGEM
+    assert _conteudo_adicionado_ok(frases_ruins, _INVITE_EDITADO_COM_DEFEITO) is False
+    # o parágrafo inventado propriamente dito está entre as frases flagradas
+    assert any("saldo geral" in f for f in frases_ruins)
+
+
+def test_ordem_movimento_alterada_detecta_deslocamento_caso_real_invite():
+    assert _ordem_movimento_alterada(
+        _INVITE_BRUTO_REAL, _INVITE_EDITADO_COM_DEFEITO) is True
+
+
+def test_editor_descarta_o_caso_real_do_the_invite_apos_retentar():
+    """Integração: `editar_narrativa` recebendo repetidamente o texto COM
+    DEFEITO real (o editor "insiste" no mesmo erro) — detectado, retentado
+    (reforço específico anexado) e, esgotadas as tentativas, DESCARTADO. A
+    bruta prevalece, exatamente como qualquer outro motivo de descarte."""
+    out = {"buckets": [{"bucket": "positivas", "share_real": 79},
+                       {"bucket": "medianas", "share_real": 18},
+                       {"bucket": "negativas", "share_real": 3}]}
+    res = NarrativaResult(texto=_INVITE_BRUTO_REAL, quantificadores_usados=[],
+                          marcadores_perspectiva=[])
+    systems = []
+
+    def fake(system, user, model):
+        systems.append(system)
+        return _INVITE_EDITADO_COM_DEFEITO
+
+    ed = editar_narrativa(res, montar_protegidos(res, out), output=out,
+                          client_call=fake, model="m")
+
+    assert ed.edicao_descartada is True
+    assert ed.motivo_descarte == "conteudo_adicionado"
+    assert ed.texto == _INVITE_BRUTO_REAL             # bruta prevalece
+    assert all(m == "conteudo_adicionado" for m in ed.motivos_por_tentativa)
+    assert ed.frases_sem_origem                       # telemetria não-vazia
+    assert ed.similaridade_minima_por_frase            # telemetria não-vazia
+    # o reforço específico foi anexado a partir da 2ª tentativa
+    assert any("ACRESCENTOU conteúdo" in s for s in systems[1:])
+
+
+def test_edicao_legitima_de_ritmo_preservando_conteudo_nao_e_reprovada():
+    """A checagem nova NÃO pode reprovar uma edição honesta — reescrita de
+    ritmo (frase longa quebrada em duas, conectivos, sinônimos) que
+    preserva o conteúdo inteiro. Caso real ACEITO em produção (`cure`,
+    ver VALIDACAO_DEEPSEEK.md) usado como regressão: a quebra de UMA frase
+    longa em duas menores, sozinha, não pode disparar "conteudo_adicionado".
+    """
+    bruto = (
+        "Em A Cura (1997), o diretor Kiyoshi Kurosawa conduz um thriller de "
+        "mistério e terror sobre um detetive obcecado em investigar "
+        "assassinatos marcados por um estranho x. A premissa de um "
+        "suspeito tímido e enigmático promete um mergulho psicológico "
+        "sombrio. A experiência de assistir é marcada por um ritmo "
+        "deliberadamente lento e contemplativo, sustentado por uma "
+        "atmosfera perturbadora e hipnótica, que se constrói mais pela "
+        "sugestão do que por sustos diretos. A narrativa evita respostas "
+        "fáceis e mantém uma ambiguidade constante, mergulhando em temas "
+        "sobre a fragilidade da mente e a natureza inexplicável do mal. "
+        "Entre as notas, a grande maioria das notas (~79%) é positiva, e "
+        "para esses espectadores, o ritmo lento é uma ferramenta que "
+        "intensifica a sensação de transe e desconforto, com muitos "
+        "destacando a maestria em criar uma atmosfera perturbadora e a "
+        "exploração de temas psicológicos profundos. Alguns também "
+        "elogiam a atuação do antagonista, descrita como assustadoramente "
+        "calma. Já uma minoria das notas (~17%) ficou no meio-termo: para "
+        "eles, as ideias são intrigantes, mas a execução falha em "
+        "aprofundá-las, e o ritmo lento gera confusão narrativa, com "
+        "muitos apontando um final ambíguo e insatisfatório. Por fim, uma "
+        "fração mínima das notas (~3%) rejeita o filme: para esse grupo, "
+        "antes de qualquer análise, o ritmo é simplesmente tedioso e "
+        "arrastado, e a falta de tensão ou mistério torna a experiência "
+        "decepcionante, com muitos considerando o enredo repetitivo e os "
+        "personagens desinteressantes."
+    )
+    editado = (
+        "A Cura (1997) começa com Kiyoshi Kurosawa à frente de um thriller "
+        "de mistério e terror, e a trama acompanha um detetive obcecado em "
+        "investigar assassinatos marcados por um estranho x. A premissa de "
+        "um suspeito tímido e enigmático promete um mergulho psicológico "
+        "sombrio. Só que a experiência de assistir é marcada por um ritmo "
+        "deliberadamente lento e contemplativo, sustentado por uma "
+        "atmosfera perturbadora e hipnótica, que se constrói mais pela "
+        "sugestão do que por sustos diretos. A narrativa evita respostas "
+        "fáceis e mantém uma ambiguidade constante, mergulhando em temas "
+        "sobre a fragilidade da mente e a natureza inexplicável do mal. "
+        "Entre as notas, a grande maioria das notas (~79%) é positiva, e "
+        "para esses espectadores o ritmo lento funciona como ferramenta "
+        "que intensifica a sensação de transe e desconforto. Muitos "
+        "destacam a maestria em criar uma atmosfera perturbadora e a "
+        "exploração de temas psicológicos profundos, e alguns também "
+        "elogiam a atuação do antagonista, descrita como assustadoramente "
+        "calma. Já uma minoria das notas (~17%) ficou no meio-termo: para "
+        "eles, as ideias são intrigantes, mas a execução falha em "
+        "aprofundá-las, e o ritmo lento gera confusão narrativa, com "
+        "muitos apontando um final ambíguo e insatisfatório. Por fim, uma "
+        "fração mínima das notas (~3%) rejeita o filme. Para esse grupo, "
+        "antes de qualquer análise, o ritmo é simplesmente tedioso e "
+        "arrastado. A falta de tensão ou mistério torna a experiência "
+        "decepcionante, e muitos consideram o enredo repetitivo e os "
+        "personagens desinteressantes."
+    )
+    frases_ruins = _frases_sem_origem(bruto, editado)
+    assert _conteudo_adicionado_ok(frases_ruins, editado) is True
+    assert _ordem_movimento_alterada(bruto, editado) is False
+
+    out = {"buckets": [{"bucket": "positivas", "share_real": 79},
+                       {"bucket": "medianas", "share_real": 17},
+                       {"bucket": "negativas", "share_real": 3}]}
+    res = NarrativaResult(texto=bruto, quantificadores_usados=[],
+                          marcadores_perspectiva=[])
+
+    def fake(system, user, model):
+        return editado
+
+    ed = editar_narrativa(res, montar_protegidos(res, out), output=out,
+                          client_call=fake, model="m")
+    assert ed.edicao_descartada is False
+    assert ed.motivo_descarte != "conteudo_adicionado"
+    assert ed.texto == editado

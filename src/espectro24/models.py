@@ -197,6 +197,18 @@ class EdicaoResult:
     # True quando o pós-processamento determinístico baixou a caixa de
     # algum rótulo de peso capitalizado no meio de um período.
     capitalizacao_ajustada: bool = False
+    # v1.8.0 (Tarefa 3.1): frases do texto EDITADO (última tentativa
+    # avaliada) sem correspondência razoável em nenhuma frase do texto
+    # BRUTO — candidatas a conteúdo inventado pelo editor. Persistidas
+    # SEMPRE (aceita ou não), telemetria para calibrar
+    # `EDITOR_LIMIAR_FRASE_SEM_ORIGEM` (config.py). Lista vazia é o caso
+    # normal — toda frase do editado rastreia até alguma frase do bruto.
+    frases_sem_origem: list = field(default_factory=list)
+    # v1.8.0 (Tarefa 3.1): {frase do editado: melhor similaridade contra
+    # alguma frase do bruto} — mesma telemetria acima, mas para TODAS as
+    # frases (não só as candidatas), para ver a distribuição completa e
+    # calibrar o limiar com contexto.
+    similaridade_minima_por_frase: dict = field(default_factory=dict)
 
 
 @dataclass

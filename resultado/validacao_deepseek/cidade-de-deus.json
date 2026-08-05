@@ -1,0 +1,525 @@
+{
+  "slug": "cidade-de-deus",
+  "data_coleta": "2026-07-19T08:27:41.045688+00:00",
+  "spec_version": "1.6.0",
+  "total_reviews_observadas": 228,
+  "origem_paginas": {
+    "cidade-de-deus/pages/rated_0_5_page_1.html": "network",
+    "cidade-de-deus/pages/rated_0_5_page_2.html": "network",
+    "cidade-de-deus/fulltext/viewing_1263787543.html": "network",
+    "cidade-de-deus/fulltext/viewing_2288074.html": "network",
+    "cidade-de-deus/fulltext/viewing_927224781.html": "network",
+    "cidade-de-deus/fulltext/viewing_1218163598.html": "network",
+    "cidade-de-deus/pages/rated_1_page_1.html": "network",
+    "cidade-de-deus/fulltext/viewing_279894550.html": "network",
+    "cidade-de-deus/fulltext/viewing_362703553.html": "network",
+    "cidade-de-deus/fulltext/viewing_966468008.html": "network",
+    "cidade-de-deus/fulltext/viewing_937322977.html": "network",
+    "cidade-de-deus/fulltext/viewing_792038726.html": "network",
+    "cidade-de-deus/fulltext/viewing_633795873.html": "network",
+    "cidade-de-deus/fulltext/viewing_427763426.html": "network",
+    "cidade-de-deus/fulltext/viewing_1067404602.html": "network",
+    "cidade-de-deus/pages/rated_1_5_page_1.html": "network",
+    "cidade-de-deus/pages/rated_1_5_page_2.html": "network",
+    "cidade-de-deus/fulltext/viewing_81821448.html": "network",
+    "cidade-de-deus/fulltext/viewing_513693705.html": "network",
+    "cidade-de-deus/fulltext/viewing_682338989.html": "network",
+    "cidade-de-deus/fulltext/viewing_796944.html": "network",
+    "cidade-de-deus/fulltext/viewing_377180647.html": "network",
+    "cidade-de-deus/fulltext/viewing_470893512.html": "network",
+    "cidade-de-deus/pages/rated_2_page_1.html": "network",
+    "cidade-de-deus/pages/rated_2_page_2.html": "network",
+    "cidade-de-deus/fulltext/viewing_895066236.html": "network",
+    "cidade-de-deus/fulltext/viewing_251783551.html": "network",
+    "cidade-de-deus/fulltext/viewing_359429534.html": "network",
+    "cidade-de-deus/fulltext/viewing_765786659.html": "network",
+    "cidade-de-deus/fulltext/viewing_30995054.html": "network",
+    "cidade-de-deus/fulltext/viewing_481871292.html": "network",
+    "cidade-de-deus/fulltext/viewing_433077677.html": "network",
+    "cidade-de-deus/fulltext/viewing_935190708.html": "network",
+    "cidade-de-deus/pages/rated_2_5_page_1.html": "network",
+    "cidade-de-deus/pages/rated_2_5_page_2.html": "network",
+    "cidade-de-deus/fulltext/viewing_529290901.html": "network",
+    "cidade-de-deus/fulltext/viewing_42465371.html": "network",
+    "cidade-de-deus/fulltext/viewing_250340098.html": "network",
+    "cidade-de-deus/fulltext/viewing_512581003.html": "network",
+    "cidade-de-deus/fulltext/viewing_202426571.html": "network",
+    "cidade-de-deus/fulltext/viewing_14704009.html": "network",
+    "cidade-de-deus/pages/rated_3_page_1.html": "network",
+    "cidade-de-deus/pages/rated_3_page_2.html": "network",
+    "cidade-de-deus/fulltext/viewing_81791131.html": "network",
+    "cidade-de-deus/fulltext/viewing_1398049611.html": "network",
+    "cidade-de-deus/pages/rated_3_5_page_1.html": "network",
+    "cidade-de-deus/pages/rated_3_5_page_2.html": "network",
+    "cidade-de-deus/fulltext/viewing_617643331.html": "network",
+    "cidade-de-deus/fulltext/viewing_213649845.html": "network",
+    "cidade-de-deus/fulltext/viewing_1321898389.html": "network",
+    "cidade-de-deus/pages/rated_4_page_1.html": "network",
+    "cidade-de-deus/pages/rated_4_page_2.html": "network",
+    "cidade-de-deus/fulltext/viewing_1880886.html": "network",
+    "cidade-de-deus/fulltext/viewing_41471448.html": "network",
+    "cidade-de-deus/fulltext/viewing_679115030.html": "network",
+    "cidade-de-deus/fulltext/viewing_712846402.html": "network",
+    "cidade-de-deus/pages/rated_4_5_page_1.html": "network",
+    "cidade-de-deus/pages/rated_4_5_page_2.html": "network",
+    "cidade-de-deus/fulltext/viewing_231443579.html": "network",
+    "cidade-de-deus/fulltext/viewing_323069074.html": "network",
+    "cidade-de-deus/fulltext/viewing_153919713.html": "network",
+    "cidade-de-deus/fulltext/viewing_970573226.html": "network",
+    "cidade-de-deus/pages/rated_5_page_1.html": "network",
+    "cidade-de-deus/pages/rated_5_page_2.html": "network",
+    "cidade-de-deus/fulltext/viewing_4959482.html": "network",
+    "cidade-de-deus/fulltext/viewing_275680399.html": "network",
+    "cidade-de-deus/fulltext/viewing_138869096.html": "network",
+    "cidade-de-deus/fulltext/viewing_171606831.html": "network"
+  },
+  "buckets": [
+    {
+      "bucket": "negativas",
+      "alvo": 50,
+      "modo": "completo",
+      "n_validas": 50,
+      "niveis": [
+        {
+          "nivel": 0.5,
+          "n_validas": 10,
+          "n_brutas": 24,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 1,
+          "n_descartadas_curtas": 10,
+          "n_descartadas_truncamento": 0,
+          "paginas_buscadas": 2
+        },
+        {
+          "nivel": 1.0,
+          "n_validas": 10,
+          "n_brutas": 12,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 0,
+          "n_descartadas_curtas": 0,
+          "n_descartadas_truncamento": 0,
+          "paginas_buscadas": 1
+        },
+        {
+          "nivel": 1.5,
+          "n_validas": 10,
+          "n_brutas": 24,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 0,
+          "n_descartadas_curtas": 10,
+          "n_descartadas_truncamento": 0,
+          "paginas_buscadas": 2
+        },
+        {
+          "nivel": 2.0,
+          "n_validas": 10,
+          "n_brutas": 24,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 1,
+          "n_descartadas_curtas": 5,
+          "n_descartadas_truncamento": 0,
+          "paginas_buscadas": 2
+        },
+        {
+          "nivel": 2.5,
+          "n_validas": 10,
+          "n_brutas": 24,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 0,
+          "n_descartadas_curtas": 7,
+          "n_descartadas_truncamento": 0,
+          "paginas_buscadas": 2
+        }
+      ],
+      "temas": [
+        {
+          "tema": "Estetização e espetacularização da violência/miséria",
+          "mencoes_aproximadas": 25,
+          "n_reviews_analisadas": 50,
+          "exemplo_parafraseado": "Muitos consideram que o filme transforma a violência e a miséria da favela em um espetáculo cinematográfico, utilizando-as como um recurso estilístico para chocar e impressionar, em vez de gerar uma reflexão profunda. A montagem acelerada e a fotografia vibrante são vistas como formas de glamorizar o sofrimento.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Representação estereotipada e deturpada da favela",
+          "mencoes_aproximadas": 18,
+          "n_reviews_analisadas": 50,
+          "exemplo_parafraseado": "As reviews negativas criticam o filme por simplificar a complexidade da favela, retratando-a quase exclusivamente através da lente do crime e da violência, ignorando outras dimensões da vida da comunidade. Isso é percebido como um reforço de estereótipos prejudiciais, especialmente para os moradores.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Violência excessiva e gratuita",
+          "mencoes_aproximadas": 15,
+          "n_reviews_analisadas": 50,
+          "exemplo_parafraseado": "Um número considerável de espectadores achou a violência do filme excessiva e difícil de suportar, sentindo que ela servia mais para chocar do que para comunicar uma mensagem significativa. Cenas de crianças envolvidas em violência ou crimes sexuais foram particularmente perturbadoras.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Falta de autenticidade/Crítica à perspectiva dos diretores",
+          "mencoes_aproximadas": 10,
+          "n_reviews_analisadas": 50,
+          "exemplo_parafraseado": "Este grupo questiona a autenticidade da narrativa, argumentando que os diretores, por não serem da comunidade retratada, oferecem uma visão superficial e turística da realidade da favela. Também há menções à apropriação cultural e à falta de benefício para os moradores reais.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Personagens pouco desenvolvidos e falta de conexão emocional",
+          "mencoes_aproximadas": 8,
+          "n_reviews_analisadas": 50,
+          "exemplo_parafraseado": "Alguns críticos sentiram que os personagens, incluindo o protagonista, eram unidimensionais ou serviam apenas como ferramentas narrativas, dificultando a conexão emocional com a história. A multiplicidade de personagens e a narrativa episódica são vistas como fatores que impedem o aprofundamento.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Roteiro confuso/repetitivo e montagem frenética",
+          "mencoes_aproximadas": 7,
+          "n_reviews_analisadas": 50,
+          "exemplo_parafraseado": "A montagem rápida e a estrutura narrativa não linear são descritas como confusas e sem propósito, resultando em uma experiência de visualização entediante ou frustrante. Alguns consideram que o filme se torna repetitivo, mostrando os mesmos eventos sem evolução.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        }
+      ],
+      "observacao_geral": "As reviews negativas apontam que o filme, apesar de seus méritos técnicos, falha eticamente ao estetizar a violência e a miséria, oferecendo uma representação estereotipada da favela para consumo externo. Este grupo de espectadores sentiu-se incomodado com a excessiva violência e a superficialidade na construção dos personagens e da narrativa.",
+      "idioma_invalido": false,
+      "escopo_suspeito": false,
+      "share_real": 1
+    },
+    {
+      "bucket": "medianas",
+      "alvo": 20,
+      "modo": "completo",
+      "n_validas": 20,
+      "niveis": [
+        {
+          "nivel": 3.0,
+          "n_validas": 10,
+          "n_brutas": 24,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 0,
+          "n_descartadas_curtas": 11,
+          "n_descartadas_truncamento": 0,
+          "paginas_buscadas": 2
+        },
+        {
+          "nivel": 3.5,
+          "n_validas": 10,
+          "n_brutas": 24,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 0,
+          "n_descartadas_curtas": 7,
+          "n_descartadas_truncamento": 0,
+          "paginas_buscadas": 2
+        }
+      ],
+      "temas": [
+        {
+          "tema": "Retrato da violência e realidade social",
+          "mencoes_aproximadas": 11,
+          "n_reviews_analisadas": 20,
+          "exemplo_parafraseado": "Este grupo de reviews destaca a representação honesta e impactante da violência, pobreza e condições de vida nas favelas, muitas vezes comparando a experiência a um documentário pela sua crueza e realismo.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Qualidade técnica e estilística",
+          "mencoes_aproximadas": 9,
+          "n_reviews_analisadas": 20,
+          "exemplo_parafraseado": "As reviews medianas frequentemente elogiam a cinematografia, a edição ágil, os movimentos de câmera dinâmicos e a direção estilizada, embora alguns considerem essa estilização excessiva ou fria em certos momentos.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Entretenimento versus profundidade/conexão emocional",
+          "mencoes_aproximadas": 7,
+          "n_reviews_analisadas": 20,
+          "exemplo_parafraseado": "Muitas avaliações apontam que, apesar de ser um filme bem-feito e muitas vezes cativante na superfície, ele não conseguiu gerar uma conexão emocional profunda com os personagens ou com a tragédia retratada, sendo mais entretenimento do que uma experiência marcante.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Ritmo e engajamento",
+          "mencoes_aproximadas": 4,
+          "n_reviews_analisadas": 20,
+          "exemplo_parafraseado": "Alguns espectadores acharam o filme monótono ou entediante em certas partes, com um ritmo inconstante, o que dificultou o engajamento completo com a narrativa.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Caracterização dos personagens",
+          "mencoes_aproximadas": 3,
+          "n_reviews_analisadas": 20,
+          "exemplo_parafraseado": "Existe uma percepção mista sobre os personagens; enquanto alguns os consideram carismáticos e bem caracterizados, outros sentiram que eram pouco memoráveis ou serviam apenas a funções dramáticas, sem maior profundidade.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        }
+      ],
+      "observacao_geral": "As reviews medianas de 3 a 3.5 estrelas apontam que o filme é tecnicamente impressionante e oferece um retrato realista e impactante da violência nas favelas, mas muitos sentem que, apesar do estilo visual marcante, ele falha em gerar uma conexão emocional profunda ou um fator 'uau' que justificaria uma nota mais alta.",
+      "idioma_invalido": false,
+      "escopo_suspeito": false,
+      "share_real": 8
+    },
+    {
+      "bucket": "positivas",
+      "alvo": 30,
+      "modo": "completo",
+      "n_validas": 30,
+      "niveis": [
+        {
+          "nivel": 4.0,
+          "n_validas": 10,
+          "n_brutas": 24,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 2,
+          "n_descartadas_curtas": 11,
+          "n_descartadas_truncamento": 0,
+          "paginas_buscadas": 2
+        },
+        {
+          "nivel": 4.5,
+          "n_validas": 10,
+          "n_brutas": 24,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 0,
+          "n_descartadas_curtas": 4,
+          "n_descartadas_truncamento": 0,
+          "paginas_buscadas": 2
+        },
+        {
+          "nivel": 5.0,
+          "n_validas": 10,
+          "n_brutas": 24,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 2,
+          "n_descartadas_curtas": 11,
+          "n_descartadas_truncamento": 0,
+          "paginas_buscadas": 2
+        }
+      ],
+      "temas": [
+        {
+          "tema": "Estilo visual e edição dinâmicos",
+          "mencoes_aproximadas": 21,
+          "n_reviews_analisadas": 30,
+          "exemplo_parafraseado": "As reviews frequentemente elogiam a edição, que confere um ritmo acelerado e energia contagiante ao filme, além da cinematografia estilizada e do uso inovador da câmera, que contribuem para a imersão e a intensidade da narrativa.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Narrativa envolvente e abrangente",
+          "mencoes_aproximadas": 15,
+          "n_reviews_analisadas": 30,
+          "exemplo_parafraseado": "Este grupo de reviews destaca a capacidade do filme de contar múltiplas histórias e apresentar diversos personagens ao longo de décadas, sem que a trama se torne confusa ou perca coesão, mantendo o espectador constantemente engajado.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Brutalidade e realismo da violência",
+          "mencoes_aproximadas": 14,
+          "n_reviews_analisadas": 30,
+          "exemplo_parafraseado": "As reviews positivas ressaltam a representação crua e impactante da violência, que é mostrada de forma realista e não glamourizada, chocando os espectadores e enfatizando a seriedade do tema abordado.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Atuações marcantes",
+          "mencoes_aproximadas": 10,
+          "n_reviews_analisadas": 30,
+          "exemplo_parafraseado": "Muitas reviews elogiam as performances do elenco, especialmente as das crianças e de Zé Pequeno, que transmitem autenticidade e profundidade aos personagens, tornando-os inesquecíveis.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Contexto social e histórico",
+          "mencoes_aproximadas": 9,
+          "n_reviews_analisadas": 30,
+          "exemplo_parafraseado": "Os comentários positivos apreciam como o filme explora o ciclo de violência e a falta de oportunidades em um ambiente de extrema pobreza, oferecendo um retrato fiel de uma realidade social complexa e baseada em eventos reais.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Mistura de gêneros",
+          "mencoes_aproximadas": 3,
+          "n_reviews_analisadas": 30,
+          "exemplo_parafraseado": "As reviews positivas notam a habilidade do filme em incorporar elementos de diferentes gêneros, como drama, romance, comédia e thriller policial, de maneira consistente e sem perder a identidade.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        }
+      ],
+      "observacao_geral": "As reviews positivas apontam o filme como uma obra-prima do cinema mundial, elogiando sua inovação técnica e a maneira visceral como aborda a realidade brasileira. Este grupo destaca a narrativa envolvente, o estilo visual dinâmico e as atuações autênticas como pontos altos que tornam o filme impactante e memorável.",
+      "idioma_invalido": false,
+      "escopo_suspeito": false,
+      "share_real": 91
+    }
+  ],
+  "narrativa": "Uma verdadeira porradaria visual, e Cidade de Deus, dirigido por Fernando Meirelles, é um drama criminal de 2002 que acompanha Buscapé, um jovem que cresce em meio à violência da favela e vê na fotografia uma chance de escapar desse destino. A experiência de assistir ao filme é marcada por um ritmo acelerado e uma montagem frenética. A representação é crua e realista da violência e da realidade social. Já o estilo visual é dinâmico e estilizado, criando uma atmosfera intensa que não se aprofunda emocionalmente nos personagens. É essa estetização que divide opiniões, e a abordagem da violência também.\n\nA grande maioria das notas (~91%) são as positivas, e o grupo considera a obra uma obra-prima, elogiando o estilo visual e a edição dinâmicos, a narrativa envolvente e a brutalidade realista da violência, que para eles é impactante e não glamourizada. Mas há uma pequena minoria das notas (~8%), as medianas, que reconhecem a qualidade técnica e o retrato realista, só que sentem falta de conexão emocional e de um ritmo mais constante. Para eles, o filme é tecnicamente impressionante, mas não gera o uau esperado. E existe ainda uma fração mínima das notas (~1%), as negativas, que criticam a estetização e espetacularização da violência, a representação estereotipada da favela e a violência excessiva, vendo essas escolhas como um recurso para chocar em vez de gerar reflexão. Para esse grupo, a abordagem é eticamente questionável e a narrativa, superficial.",
+  "narrativa_flags": {
+    "idioma_invalido": false,
+    "escopo_suspeito": false,
+    "prevalencia_suspeita": false,
+    "quantificador_suspeito": false,
+    "consenso_suspeito": false,
+    "peso_nao_ancorado": false,
+    "vocabulario_peso_suspeito": false,
+    "perspectiva_nao_marcada": false,
+    "aspas_removidas": true,
+    "falhou": false
+  },
+  "ficha": {
+    "titulo": "Cidade de Deus",
+    "sinopse_oficial": "Buscapé é um jovem morador da Cidade de Deus que cresce em meio à violência. Com medo de se tornar um bandido, enxerga na fotografia uma oportunidade de ter uma vida digna.",
+    "sinopse_fallback_en": false,
+    "generos": [
+      "Drama",
+      "Crime"
+    ],
+    "duracao_min": 130,
+    "diretor": "Fernando Meirelles",
+    "diretor_transliterado": false,
+    "ano": 2002,
+    "fonte": "tmdb",
+    "ano_fonte": "letterboxd"
+  },
+  "consensos_usados": [
+    {
+      "propriedade": "ritmo acelerado e montagem frenética",
+      "grupos_de_origem": [
+        "negativas",
+        "positivas"
+      ],
+      "temas_de_origem": [
+        "Roteiro confuso/repetitivo e montagem frenética",
+        "Estilo visual e edição dinâmicos"
+      ]
+    },
+    {
+      "propriedade": "representação crua e realista da violência",
+      "grupos_de_origem": [
+        "medianas",
+        "positivas"
+      ],
+      "temas_de_origem": [
+        "Retrato da violência e realidade social",
+        "Brutalidade e realismo da violência"
+      ]
+    },
+    {
+      "propriedade": "estilo visual dinâmico e estilizado",
+      "grupos_de_origem": [
+        "medianas",
+        "positivas"
+      ],
+      "temas_de_origem": [
+        "Qualidade técnica e estilística",
+        "Estilo visual e edição dinâmicos"
+      ]
+    },
+    {
+      "propriedade": "falta de conexão emocional com os personagens",
+      "grupos_de_origem": [
+        "negativas",
+        "medianas"
+      ],
+      "temas_de_origem": [
+        "Personagens pouco desenvolvidos e falta de conexão emocional",
+        "Entretenimento versus profundidade/conexão emocional"
+      ]
+    }
+  ],
+  "distribuicao": {
+    "n_notas_total": 1216381,
+    "por_nivel": {
+      "0.5": 893,
+      "1.0": 1645,
+      "1.5": 1143,
+      "2.0": 5503,
+      "2.5": 6324,
+      "3.0": 35847,
+      "3.5": 58393,
+      "4.0": 245630,
+      "4.5": 241463,
+      "5.0": 619540
+    },
+    "por_bucket": {
+      "negativas": 1,
+      "medianas": 8,
+      "positivas": 91
+    },
+    "fonte": "letterboxd_histograma"
+  },
+  "quantificadores_usados": [
+    {
+      "quantificador": "a grande maioria das notas (~91%)",
+      "tema": "Estilo visual e edição dinâmicos"
+    },
+    {
+      "quantificador": "uma pequena minoria das notas (~8%)",
+      "tema": "Retrato da violência e realidade social"
+    },
+    {
+      "quantificador": "uma fração mínima das notas (~1%)",
+      "tema": "Estetização e espetacularização da violência/miséria"
+    }
+  ],
+  "marcadores_perspectiva": [
+    {
+      "grupo": "medianas",
+      "trecho": "Para eles, o filme é tecnicamente impressionante, mas não gera o 'uau' esperado."
+    },
+    {
+      "grupo": "negativas",
+      "trecho": "Para esse grupo, a abordagem é eticamente questionável e a narrativa, superficial."
+    }
+  ],
+  "metricas_fluencia": {
+    "n_frases": 10,
+    "media_palavras": 23.7,
+    "cv_comprimento": 0.52,
+    "frase_mais_curta": 12,
+    "aberturas_repetidas": 1,
+    "verbos_reporte": 3,
+    "adverbios_mente": 0
+  },
+  "narrativa_bruta": "Cidade de Deus, dirigido por Fernando Meirelles, é um drama criminal de 2002 que acompanha Buscapé, um jovem que cresce em meio à violência da favela e vê na fotografia uma chance de escapar desse destino. A experiência de assistir ao filme é marcada por um ritmo acelerado e uma montagem frenética, com uma representação crua e realista da violência e da realidade social. O estilo visual é dinâmico e estilizado, criando uma atmosfera intensa que não se aprofunda emocionalmente nos personagens. Essa estetização e a abordagem da violência dividem opiniões. A grande maioria das notas (~91%), as positivas, consideram a obra uma obra-prima, elogiando o estilo visual e a edição dinâmicos, a narrativa envolvente e a brutalidade realista da violência, que para eles é impactante e não glamourizada. Uma pequena minoria das notas (~8%), as medianas, reconhecem a qualidade técnica e o retrato realista, mas sentem falta de conexão emocional e de um ritmo mais constante. Para eles, o filme é tecnicamente impressionante, mas não gera o uau esperado. Uma fração mínima das notas (~1%), as negativas, criticam a estetização e espetacularização da violência, a representação estereotipada da favela e a violência excessiva, vendo-as como um recurso para chocar em vez de gerar reflexão. Para esse grupo, a abordagem é eticamente questionável e a narrativa, superficial.",
+  "edicao_flags": {
+    "edicao_descartada": false,
+    "motivo_descarte": "",
+    "protegidos_perdidos": [],
+    "numeros_alterados": false,
+    "houve_retentativa": false,
+    "falhou": false,
+    "n_protegidos": 7,
+    "n_tentativas": 1,
+    "motivos_por_tentativa": [],
+    "similaridade": 0.922805780754318,
+    "capitalizacao_ajustada": true
+  }
+}

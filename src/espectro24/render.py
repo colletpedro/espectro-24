@@ -291,7 +291,17 @@ def render_terminal(output: dict, tom: str = "estruturado") -> str:
         ed = output.get("edicao_flags") or {}
         if ed:
             L.append("")
-            if ed.get("edicao_descartada"):
+            if ed.get("editor_desativado"):
+                # v1.8.0: editor DESLIGADO por padrão (EDITOR_ATIVO=False,
+                # config.py) — publicada a narrativa do narrador tal como
+                # está, sem chamada de edição. Checagem explícita ANTES da
+                # ramificação "descartada"/"aplicada": `ed.get(...)` em
+                # falso por ausência de chave (dict só com esta flag)
+                # cairia no "else" e diria "aplicada" por engano.
+                L.append("  Edição [E2]: DESLIGADA por padrão (v1.8.0) — "
+                         "publicada a narrativa do narrador. Use "
+                         "--com-editor para reativar.")
+            elif ed.get("edicao_descartada"):
                 L.append(f"  ⚠️  edição [E2] DESCARTADA ({ed.get('motivo_descarte')}) "
                          f"— publicada a narrativa do narrador, sem edição. "
                          f"({ed.get('n_tentativas', 1)} tentativa(s))")

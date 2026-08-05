@@ -1,0 +1,547 @@
+{
+  "slug": "cure",
+  "data_coleta": "2026-07-19T08:09:00.011723+00:00",
+  "spec_version": "1.6.0",
+  "total_reviews_observadas": 252,
+  "origem_paginas": {
+    "cure/pages/rated_0_5_page_1.html": "network",
+    "cure/pages/rated_0_5_page_2.html": "network",
+    "cure/fulltext/viewing_135536620.html": "network",
+    "cure/fulltext/viewing_640057140.html": "network",
+    "cure/fulltext/viewing_630664180.html": "network",
+    "cure/fulltext/viewing_959805926.html": "network",
+    "cure/pages/rated_1_page_1.html": "network",
+    "cure/pages/rated_1_page_2.html": "network",
+    "cure/pages/rated_1_page_3.html": "network",
+    "cure/fulltext/viewing_134416332.html": "network",
+    "cure/fulltext/viewing_471713044.html": "network",
+    "cure/fulltext/viewing_1067783607.html": "network",
+    "cure/pages/rated_1_5_page_1.html": "network",
+    "cure/pages/rated_1_5_page_2.html": "network",
+    "cure/fulltext/viewing_411913910.html": "network",
+    "cure/fulltext/viewing_200465981.html": "network",
+    "cure/fulltext/viewing_260573816.html": "network",
+    "cure/fulltext/viewing_127973158.html": "network",
+    "cure/fulltext/viewing_564162766.html": "network",
+    "cure/fulltext/viewing_241402084.html": "network",
+    "cure/fulltext/viewing_175276227.html": "network",
+    "cure/pages/rated_2_page_1.html": "network",
+    "cure/pages/rated_2_page_2.html": "network",
+    "cure/fulltext/viewing_564196303.html": "network",
+    "cure/fulltext/viewing_704588621.html": "network",
+    "cure/fulltext/viewing_1038984174.html": "network",
+    "cure/fulltext/viewing_1341909487.html": "network",
+    "cure/fulltext/viewing_133698051.html": "network",
+    "cure/fulltext/viewing_993213969.html": "network",
+    "cure/fulltext/viewing_232659881.html": "network",
+    "cure/pages/rated_2_5_page_1.html": "network",
+    "cure/pages/rated_2_5_page_2.html": "network",
+    "cure/fulltext/viewing_782247566.html": "network",
+    "cure/fulltext/viewing_770632907.html": "network",
+    "cure/fulltext/viewing_653485644.html": "network",
+    "cure/fulltext/viewing_970123298.html": "network",
+    "cure/fulltext/viewing_17623554.html": "network",
+    "cure/fulltext/viewing_625943694.html": "network",
+    "cure/pages/rated_3_page_1.html": "network",
+    "cure/pages/rated_3_page_2.html": "network",
+    "cure/fulltext/viewing_172220117.html": "network",
+    "cure/fulltext/viewing_128110701.html": "network",
+    "cure/fulltext/viewing_1327839394.html": "network",
+    "cure/fulltext/viewing_456272815.html": "network",
+    "cure/fulltext/viewing_417665365.html": "network",
+    "cure/fulltext/viewing_1060200718.html": "network",
+    "cure/fulltext/viewing_1346311577.html": "network",
+    "cure/pages/rated_3_5_page_1.html": "network",
+    "cure/pages/rated_3_5_page_2.html": "network",
+    "cure/fulltext/viewing_763162939.html": "network",
+    "cure/fulltext/viewing_292831579.html": "network",
+    "cure/fulltext/viewing_1388336375.html": "network",
+    "cure/fulltext/viewing_228323951.html": "network",
+    "cure/fulltext/viewing_98697714.html": "network",
+    "cure/fulltext/viewing_909464341.html": "network",
+    "cure/fulltext/viewing_246543981.html": "network",
+    "cure/fulltext/viewing_130523592.html": "network",
+    "cure/pages/rated_4_page_1.html": "network",
+    "cure/pages/rated_4_page_2.html": "network",
+    "cure/fulltext/viewing_124613010.html": "network",
+    "cure/fulltext/viewing_1080136268.html": "network",
+    "cure/fulltext/viewing_828274539.html": "network",
+    "cure/fulltext/viewing_192827645.html": "network",
+    "cure/fulltext/viewing_776893218.html": "network",
+    "cure/fulltext/viewing_828274540.html": "network",
+    "cure/fulltext/viewing_1071896019.html": "network",
+    "cure/pages/rated_4_5_page_1.html": "network",
+    "cure/pages/rated_4_5_page_2.html": "network",
+    "cure/fulltext/viewing_6162586.html": "network",
+    "cure/fulltext/viewing_50510462.html": "network",
+    "cure/fulltext/viewing_75686244.html": "network",
+    "cure/fulltext/viewing_1020093178.html": "network",
+    "cure/fulltext/viewing_682487488.html": "network",
+    "cure/pages/rated_5_page_1.html": "network",
+    "cure/pages/rated_5_page_2.html": "network",
+    "cure/fulltext/viewing_9950088.html": "network",
+    "cure/fulltext/viewing_104468977.html": "network",
+    "cure/fulltext/viewing_319835988.html": "network",
+    "cure/fulltext/viewing_27321587.html": "network",
+    "cure/fulltext/viewing_364672456.html": "network",
+    "cure/fulltext/viewing_337014984.html": "network",
+    "cure/fulltext/viewing_16426720.html": "network"
+  },
+  "buckets": [
+    {
+      "bucket": "negativas",
+      "alvo": 50,
+      "modo": "completo",
+      "n_validas": 50,
+      "niveis": [
+        {
+          "nivel": 0.5,
+          "n_validas": 10,
+          "n_brutas": 24,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 1,
+          "n_descartadas_curtas": 13,
+          "n_descartadas_truncamento": 0,
+          "paginas_buscadas": 2
+        },
+        {
+          "nivel": 1.0,
+          "n_validas": 10,
+          "n_brutas": 36,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 2,
+          "n_descartadas_curtas": 22,
+          "n_descartadas_truncamento": 0,
+          "paginas_buscadas": 3
+        },
+        {
+          "nivel": 1.5,
+          "n_validas": 10,
+          "n_brutas": 24,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 0,
+          "n_descartadas_curtas": 10,
+          "n_descartadas_truncamento": 0,
+          "paginas_buscadas": 2
+        },
+        {
+          "nivel": 2.0,
+          "n_validas": 10,
+          "n_brutas": 24,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 1,
+          "n_descartadas_curtas": 7,
+          "n_descartadas_truncamento": 0,
+          "paginas_buscadas": 2
+        },
+        {
+          "nivel": 2.5,
+          "n_validas": 10,
+          "n_brutas": 24,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 1,
+          "n_descartadas_curtas": 11,
+          "n_descartadas_truncamento": 0,
+          "paginas_buscadas": 2
+        }
+      ],
+      "temas": [
+        {
+          "tema": "Ritmo lento e tedioso",
+          "mencoes_aproximadas": 35,
+          "n_reviews_analisadas": 50,
+          "exemplo_parafraseado": "Muitas reviews reclamam que o filme é insuportavelmente lento, arrastado e chato, sem tensão ou progressão narrativa, fazendo com que o espectador perca o interesse rapidamente.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Falta de tensão/mistério/terror",
+          "mencoes_aproximadas": 25,
+          "n_reviews_analisadas": 50,
+          "exemplo_parafraseado": "Apesar de ser categorizado como suspense ou terror, este grupo de reviews achou que o filme não consegue gerar medo, suspense ou uma atmosfera arrepiante, e o mistério se torna óbvio cedo demais.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Enredo e roteiro fracos/repetitivos",
+          "mencoes_aproximadas": 18,
+          "n_reviews_analisadas": 50,
+          "exemplo_parafraseado": "Reviewers criticam a história por ser repetitiva, sem profundidade ou desenvolvimento, com um roteiro que não avança e diálogos vazios, levando a uma trama que poderia ser contada em muito menos tempo.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Personagens desinteressantes/planos",
+          "mencoes_aproximadas": 15,
+          "n_reviews_analisadas": 50,
+          "exemplo_parafraseado": "Os personagens são descritos como desinteressantes, sem carisma ou profundidade, o que dificulta a conexão do espectador com a narrativa ou o desenvolvimento de qualquer empatia por eles.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Filme superestimado/pretensioso",
+          "mencoes_aproximadas": 12,
+          "n_reviews_analisadas": 50,
+          "exemplo_parafraseado": "Vários usuários expressam confusão com a alta classificação do filme, considerando-o superestimado e pretensioso, e que não cumpre as expectativas geradas pelo hype.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Final insatisfatório/abrupto",
+          "mencoes_aproximadas": 8,
+          "n_reviews_analisadas": 50,
+          "exemplo_parafraseado": "Alguns comentários apontam que o final é anticlimático, abrupto ou que não oferece uma conclusão satisfatória, deixando o espectador com a sensação de que o filme atingiu uma parede de tijolos.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": true
+        }
+      ],
+      "observacao_geral": "As reviews negativas apontam que, apesar de uma premissa intrigante, o filme sofre de um ritmo excessivamente lento e uma execução que falha em construir tensão ou desenvolver personagens cativantes, resultando em uma experiência tediosa e decepcionante. Este grupo destaca a falta de engajamento com o mistério e o enredo, que consideram repetitivo e pouco substancial.",
+      "idioma_invalido": false,
+      "escopo_suspeito": false,
+      "share_real": 3
+    },
+    {
+      "bucket": "medianas",
+      "alvo": 20,
+      "modo": "completo",
+      "n_validas": 20,
+      "niveis": [
+        {
+          "nivel": 3.0,
+          "n_validas": 10,
+          "n_brutas": 24,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 2,
+          "n_descartadas_curtas": 7,
+          "n_descartadas_truncamento": 0,
+          "paginas_buscadas": 2
+        },
+        {
+          "nivel": 3.5,
+          "n_validas": 10,
+          "n_brutas": 24,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 1,
+          "n_descartadas_curtas": 6,
+          "n_descartadas_truncamento": 0,
+          "paginas_buscadas": 2
+        }
+      ],
+      "temas": [
+        {
+          "tema": "Ritmo lento e confusão narrativa",
+          "mencoes_aproximadas": 10,
+          "n_reviews_analisadas": 20,
+          "exemplo_parafraseado": "Muitas reviews descrevem o filme como lento, arrastado e, por vezes, entediante, gerando confusão sobre a trama e suas intenções.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Final insatisfatório/ambíguo",
+          "mencoes_aproximadas": 8,
+          "n_reviews_analisadas": 20,
+          "exemplo_parafraseado": "A resolução da narrativa é frequentemente criticada por ser vaga, deixar muitas pontas soltas ou por não oferecer um desfecho claro para os mistérios apresentados.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Ideias intrigantes, mas execução falha",
+          "mencoes_aproximadas": 7,
+          "n_reviews_analisadas": 20,
+          "exemplo_parafraseado": "O grupo de reviews medianas reconhece que o filme explora conceitos interessantes sobre a natureza do mal, identidade e hipnose, mas sente que a execução do roteiro não os aprofunda adequadamente ou que as ideias não se conectam de forma convincente.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Atmosfera e estilo visual eficazes",
+          "mencoes_aproximadas": 6,
+          "n_reviews_analisadas": 20,
+          "exemplo_parafraseado": "Apesar das ressalvas, a ambientação sombria, a cinematografia precisa e o uso de longos planos para criar uma sensação de desconforto são aspectos elogiados por este grupo.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Necessidade de revisitação para compreensão",
+          "mencoes_aproximadas": 6,
+          "n_reviews_analisadas": 20,
+          "exemplo_parafraseado": "Muitos espectadores sugerem que uma segunda visualização seria benéfica para captar nuances perdidas e para melhor apreciar as camadas temáticas do filme.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        }
+      ],
+      "observacao_geral": "As reviews medianas apontam para um filme com ideias e atmosfera intrigantes, mas que peca em clareza narrativa e na profundidade com que desenvolve seus temas, deixando muitos espectadores confusos ou insatisfeitos com seu ritmo e conclusão. Este grupo frequentemente expressa a sensação de não ter se conectado plenamente com a obra, apesar de reconhecer seu valor artístico e a profundidade potencial de suas premissas.",
+      "idioma_invalido": false,
+      "escopo_suspeito": false,
+      "share_real": 17
+    },
+    {
+      "bucket": "positivas",
+      "alvo": 30,
+      "modo": "completo",
+      "n_validas": 30,
+      "niveis": [
+        {
+          "nivel": 4.0,
+          "n_validas": 10,
+          "n_brutas": 24,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 0,
+          "n_descartadas_curtas": 7,
+          "n_descartadas_truncamento": 0,
+          "paginas_buscadas": 2
+        },
+        {
+          "nivel": 4.5,
+          "n_validas": 10,
+          "n_brutas": 24,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 1,
+          "n_descartadas_curtas": 7,
+          "n_descartadas_truncamento": 0,
+          "paginas_buscadas": 2
+        },
+        {
+          "nivel": 5.0,
+          "n_validas": 10,
+          "n_brutas": 24,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 2,
+          "n_descartadas_curtas": 4,
+          "n_descartadas_truncamento": 0,
+          "paginas_buscadas": 2
+        }
+      ],
+      "temas": [
+        {
+          "tema": "Atmosfera e Tom Perturbador/Hipnótico",
+          "mencoes_aproximadas": 15,
+          "n_reviews_analisadas": 30,
+          "exemplo_parafraseado": "Muitas reviews descrevem o filme como hipnótico, perturbador e gerador de uma sensação constante de apreensão, com o mal se infiltrando de forma sutil e uma estética que cria desconforto sem depender de sustos óbvios.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Pacing Lento e Deliberado",
+          "mencoes_aproximadas": 10,
+          "n_reviews_analisadas": 30,
+          "exemplo_parafraseado": "O ritmo do filme é frequentemente descrito como lento e metódico, o que intensifica o suspense e o horror psicológico, levando o espectador a um estado de transe que reflete a temática da manipulação mental.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Temas Psicológicos e Existenciais",
+          "mencoes_aproximadas": 9,
+          "n_reviews_analisadas": 30,
+          "exemplo_parafraseado": "Este grupo de reviews ressalta a exploração de temas profundos como a fragilidade da identidade, a manipulação da mente, a natureza do mal e a busca por significado em atos inexplicáveis, questionando a existência do livre-arbítrio e as camadas ocultas da psique humana.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Atuação do Antagonista",
+          "mencoes_aproximadas": 6,
+          "n_reviews_analisadas": 30,
+          "exemplo_parafraseado": "A performance do ator que interpreta o antagonista é muito elogiada por sua calma, comportamento monótono e a capacidade de transmitir uma presença assustadora e manipuladora, causando arrepios com sua mera voz e expressão vazia.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Design de Som e Cinematografia",
+          "mencoes_aproximadas": 6,
+          "n_reviews_analisadas": 30,
+          "exemplo_parafraseado": "As reviews positivas destacam o excelente design de som, que mistura músicas mínimas com ruídos ambientes estranhos, e a cinematografia, que utiliza longas tomadas, iluminação sutil e posicionamento de câmera para criar uma atmosfera de desorientação e inquietação.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Ausência de Respostas e Ambiguidade",
+          "mencoes_aproximadas": 5,
+          "n_reviews_analisadas": 30,
+          "exemplo_parafraseado": "O filme é apreciado por não fornecer respostas definitivas, deixando muitas perguntas sem solução e mantendo uma ambiguidade que força o espectador a refletir sobre o mistério, o que contribui para o seu impacto duradouro.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        }
+      ],
+      "observacao_geral": "As reviews positivas enfatizam a maestria do filme em criar uma atmosfera de horror psicológico profundamente inquietante e hipnótica, utilizando um ritmo lento e deliberado para explorar temas complexos sobre a fragilidade da mente humana e a natureza inexplicável do mal. Este grupo destaca a atuação impactante do antagonista e a excelência técnica na cinematografia e design de som, que contribuem para a sensação de paranoia e a ambiguidade persistente.",
+      "idioma_invalido": false,
+      "escopo_suspeito": false,
+      "share_real": 79
+    }
+  ],
+  "narrativa": "Em A Cura (1997), de Kiyoshi Kurosawa, um detetive investiga uma série de assassinatos marcados por um x nos corpos. Só que os interrogatórios são intermináveis e só avançam quando um rapaz de trejeitos estranhos é preso. Thriller de crime e mistério, o filme mergulha em um terror psicológico atmosférico. O ritmo é lento e deliberado, e essa escolha constrói uma atmosfera de desconforto, envolta em ambiguidade, com uma forte sensação de apreensão sustentada até o fim.\n\na grande maioria das notas (~79%) é positiva, e essas reviews celebram a atmosfera perturbadora e hipnótica, o pacing lento e a exploração de temas psicológicos e existenciais. Para esse mesmo grupo (~79%), a ausência de respostas é um ponto forte, porque deixa o espectador em reflexão.\n\nUma minoria das notas (~17%) fica no meio: para eles, o ritmo lento gera confusão narrativa, o final é insatisfatório ou ambíguo, e embora reconheçam ideias intrigantes e a atmosfera eficaz, sentem que a execução falha. Para esse grupo, uma revisitação é necessária para a compreensão plena.\n\nJá entre as notas, uma fração mínima (~3%) representa quem não gostou. Para esse grupo, o filme é lento e tedioso, carece de tensão e mistério, e o enredo é repetitivo e fraco, com personagens planos e um final insatisfatório.",
+  "narrativa_flags": {
+    "idioma_invalido": false,
+    "escopo_suspeito": false,
+    "prevalencia_suspeita": false,
+    "quantificador_suspeito": false,
+    "consenso_suspeito": false,
+    "peso_nao_ancorado": false,
+    "vocabulario_peso_suspeito": false,
+    "perspectiva_nao_marcada": false,
+    "aspas_removidas": true,
+    "falhou": false
+  },
+  "ficha": {
+    "titulo": "A Cura",
+    "sinopse_oficial": "Pessoas são encontradas mortas com um bizarro \"x\" cravado em seus corpos. Desesperado, um detetive chamado Takabe decide iniciar uma investigação à base de longos e intermináveis sessões de interrogatórios. Porém, sua investigação não resulta em nada. Até que um determinado dia um rapaz é preso por estar perto de mais uma pessoa assassinada. Tímido e de trejeitos estranhos, resta saber qual a ligação entre ele o os crimes (e quem sabe, com o assassino)",
+    "sinopse_fallback_en": false,
+    "generos": [
+      "Crime",
+      "Thriller",
+      "Terror",
+      "Mistério"
+    ],
+    "duracao_min": 111,
+    "diretor": "Kiyoshi Kurosawa",
+    "diretor_transliterado": true,
+    "ano": 1997,
+    "fonte": "tmdb",
+    "ano_fonte": "letterboxd"
+  },
+  "consensos_usados": [
+    {
+      "propriedade": "ritmo lento e deliberado",
+      "grupos_de_origem": [
+        "negativas",
+        "medianas",
+        "positivas"
+      ],
+      "temas_de_origem": [
+        "Ritmo lento e tedioso",
+        "Ritmo lento e confusão narrativa",
+        "Pacing Lento e Deliberado"
+      ]
+    },
+    {
+      "propriedade": "atmosfera de desconforto e ambiguidade",
+      "grupos_de_origem": [
+        "medianas",
+        "positivas"
+      ],
+      "temas_de_origem": [
+        "Atmosfera e estilo visual eficazes",
+        "Atmosfera e Tom Perturbador/Hipnótico"
+      ]
+    }
+  ],
+  "distribuicao": {
+    "n_notas_total": 375278,
+    "por_nivel": {
+      "0.5": 456,
+      "1.0": 1037,
+      "1.5": 989,
+      "2.0": 4251,
+      "2.5": 6214,
+      "3.0": 23371,
+      "3.5": 41371,
+      "4.0": 110990,
+      "4.5": 87357,
+      "5.0": 99242
+    },
+    "por_bucket": {
+      "negativas": 3,
+      "medianas": 17,
+      "positivas": 79
+    },
+    "fonte": "letterboxd_histograma"
+  },
+  "quantificadores_usados": [
+    {
+      "quantificador": "muitos",
+      "tema": "Pacing Lento e Deliberado"
+    },
+    {
+      "quantificador": "muitos",
+      "tema": "Atmosfera e Tom Perturbador/Hipnótico"
+    },
+    {
+      "quantificador": "muitos",
+      "tema": "Ritmo lento e confusão narrativa"
+    },
+    {
+      "quantificador": "muitos",
+      "tema": "Final insatisfatório/ambíguo"
+    },
+    {
+      "quantificador": "muitos",
+      "tema": "Atmosfera e estilo visual eficazes"
+    }
+  ],
+  "marcadores_perspectiva": [
+    {
+      "grupo": "negativas",
+      "trecho": "para esse grupo, o filme é lento e tedioso"
+    },
+    {
+      "grupo": "medianas",
+      "trecho": "para eles, o ritmo lento gera confusão narrativa"
+    }
+  ],
+  "metricas_fluencia": {
+    "n_frases": 10,
+    "media_palavras": 20.6,
+    "cv_comprimento": 0.38,
+    "frase_mais_curta": 11,
+    "aberturas_repetidas": 0,
+    "verbos_reporte": 0,
+    "adverbios_mente": 0
+  },
+  "narrativa_bruta": "Em A Cura (1997), de Kiyoshi Kurosawa, um detetive investiga uma série de assassinatos marcados por um x nos corpos, levando a interrogatórios intermináveis que só avançam quando um rapaz de trejeitos estranhos é preso. Um thriller de crime e mistério que mergulha em um terror psicológico atmosférico. O filme é marcado por um ritmo lento e deliberado, que constrói uma atmosfera de desconforto, envolto em ambiguidade e com uma forte sensação de apreensão sustentada até o fim. A grande maioria das notas (~79%) é positiva, e essas reviews celebram a atmosfera perturbadora e hipnótica, o pacing lento e a exploração de temas psicológicos e existenciais. Para a grande maioria das notas (~79%), a ausência de respostas é um ponto forte, deixando o espectador em reflexão. Uma minoria das notas (~17%) fica no meio: para eles, o ritmo lento gera confusão narrativa, o final é insatisfatório ou ambíguo, e embora reconheçam ideias intrigantes e a atmosfera eficaz, sentem que a execução falha e que uma revisitação é necessária para a compreensão plena. Já entre as notas, uma fração mínima (~3%) representa quem não gostou: para esse grupo, o filme é lento e tedioso, carece de tensão e mistério, e o enredo é repetitivo e fraco, com personagens planos e um final insatisfatório.",
+  "edicao_flags": {
+    "edicao_descartada": false,
+    "motivo_descarte": "",
+    "protegidos_perdidos": [],
+    "numeros_alterados": false,
+    "houve_retentativa": true,
+    "falhou": false,
+    "n_protegidos": 6,
+    "n_tentativas": 2,
+    "motivos_por_tentativa": [
+      "conjunto de números do texto foi alterado"
+    ],
+    "similaridade": 0.7471668620554904,
+    "capitalizacao_ajustada": false,
+    "frases_sem_origem": [
+      "Só que os interrogatórios são intermináveis e só avançam quando um rapaz de trejeitos estranhos é preso.",
+      "Para esse grupo, uma revisitação é necessária para a compreensão plena."
+    ],
+    "similaridade_minima_por_frase": {
+      "Em A Cura (1997), de Kiyoshi Kurosawa, um detetive investiga uma série de assassinatos marcados por um x nos corpos.": 0.6925373134328359,
+      "Só que os interrogatórios são intermináveis e só avançam quando um rapaz de trejeitos estranhos é preso.": 0.39009287925696595,
+      "Thriller de crime e mistério, o filme mergulha em um terror psicológico atmosférico.": 0.9156626506024096,
+      "O ritmo é lento e deliberado, e essa escolha constrói uma atmosfera de desconforto, envolta em ambiguidade, com uma forte sensação de apreensão sustentada até o fim.": 0.8680351906158358,
+      "a grande maioria das notas (~79%) é positiva, e essas reviews celebram a atmosfera perturbadora e hipnótica, o pacing lento e a exploração de temas psicológicos e existenciais.": 0.9943181818181818,
+      "Para esse mesmo grupo (~79%), a ausência de respostas é um ponto forte, porque deixa o espectador em reflexão.": 0.8141592920353983,
+      "Uma minoria das notas (~17%) fica no meio: para eles, o ritmo lento gera confusão narrativa, o final é insatisfatório ou ambíguo, e embora reconheçam ideias intrigantes e a atmosfera eficaz, sentem que a execução falha.": 0.8795180722891566,
+      "Para esse grupo, uma revisitação é necessária para a compreensão plena.": 0.3157894736842105,
+      "Já entre as notas, uma fração mínima (~3%) representa quem não gostou.": 0.47297297297297297,
+      "Para esse grupo, o filme é lento e tedioso, carece de tensão e mistério, e o enredo é repetitivo e fraco, com personagens planos e um final insatisfatório.": 0.7664041994750657
+    }
+  }
+}

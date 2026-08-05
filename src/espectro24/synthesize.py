@@ -33,7 +33,11 @@ import re
 from .config import (
     BUCKETS,
     EDITOR_LIMIAR_EDICAO_NULA,
+    EDITOR_LIMIAR_FRASE_SEM_ORIGEM,
+    EDITOR_LIMIAR_ORDEM_MOVIMENTO_1,
+    EDITOR_LIMIAR_PALAVRAS_SEM_ORIGEM_FRACAO,
     EDITOR_MAX_TENTATIVAS,
+    EDITOR_MIN_FRASES_SEM_ORIGEM,
     LLM_MAX_TOKENS,
     LLM_TIMEOUT_MS,
     MAX_TEMAS,
@@ -1996,7 +2000,15 @@ dos trechos protegidos;
 que um grupo achou o ritmo lento, o seu texto diz a mesma coisa;
 - acrescentar informação que não esteja no texto recebido, inclusive \
 conhecimento seu sobre o filme;
-- trocar a quem uma opinião é atribuída.
+- trocar a quem uma opinião é atribuída;
+- acrescentar QUALQUER frase, oração ou parágrafo cujo conteúdo não venha do \
+texto recebido — nem uma opinião própria sobre o filme, nem uma avaliação, \
+nem uma frase de fechamento/resumo geral ("no fim, o filme vale a pena", "o \
+saldo é positivo") que amarre o texto: se essa frase não existe, em \
+substância, no texto que você recebeu, ela não pode existir no seu também;
+- reordenar os MOVIMENTOS do texto: a apresentação do filme (quando \
+presente) é sempre a ABERTURA do texto — não pode ser deslocada para o \
+meio ou o fim, mesmo que isso pareça melhorar o ritmo.
 
 O QUE VOCÊ DEVE FAZER:
 
@@ -2096,6 +2108,34 @@ ser só o texto corrido. Responda de novo com APENAS a prosa final, sem \
 chaves, colchetes, aspas de campo, cercas de código (```), ou qualquer \
 rótulo antes do texto — a primeira palavra da sua resposta já é a primeira \
 palavra da narrativa."""
+
+
+# v1.8.0 (Tarefa 3.3) — reforço para conteúdo inventado: caso real do
+# `the-invite-2026`, onde o editor acrescentou um parágrafo de opinião
+# inteiro (ver EDITOR_ATIVO em config.py) sem que nenhuma checagem até a
+# v1.7.4 detectasse — todas checavam PERDA, nenhuma checava ADIÇÃO.
+_REFORCO_EDITOR_CONTEUDO_ADICIONADO = """
+
+REFORÇO CRÍTICO — sua edição anterior ACRESCENTOU conteúdo que não estava \
+no texto recebido (uma frase, uma opinião, uma avaliação, ou um parágrafo de \
+fechamento/resumo geral que o texto original não tinha). Você não tem fonte \
+de fato nenhuma além do texto recebido — não pode concluir nada por conta \
+própria, nem "amarrar" o texto com uma frase-síntese que não vinha nele. \
+Reescreva usando APENAS o que foi fornecido: toda frase do seu texto final \
+precisa corresponder a algo que já estava dito no texto recebido."""
+
+
+# v1.8.0 (Tarefa 3.3) — reforço para reordenação dos movimentos: mesmo caso
+# real do `the-invite-2026`, onde a apresentação do filme (movimento 1) foi
+# deslocada do início do texto para o meio.
+_REFORCO_EDITOR_ORDEM = """
+
+REFORÇO CRÍTICO — sua edição anterior MUDOU A ORDEM dos movimentos do \
+texto: a apresentação do filme, que deve ABRIR o texto, apareceu deslocada \
+para o meio ou o fim. Reescreva mantendo a apresentação do filme como a \
+PRIMEIRA parte do texto, na mesma posição em que ela está no texto \
+recebido — você pode reescrever as frases à vontade, mas não pode mover o \
+bloco inteiro de lugar."""
 
 
 # v1.7.4 — reforço para edição NULA (texto devolvido praticamente idêntico
@@ -2320,6 +2360,81 @@ def _similaridade(a: str, b: str) -> float:
         None, _normalizar_espacos(a), _normalizar_espacos(b)).ratio()
 
 
+# --- v1.8.0 (Tarefa 3): checagem de CONTEÚDO ADICIONADO pelo editor [E2] ---
+# Motivação: ver o comentário de `EDITOR_ATIVO` em config.py — o caso real de
+# `the-invite-2026` foi ACEITO por todas as checagens até a v1.7.4 (elas só
+# detectam PERDA: protegido perdido, número alterado, regressão de
+# honestidade) mesmo tendo o editor acrescentado um parágrafo de opinião
+# inteiro, sem fonte no texto recebido. As checagens abaixo detectam ADIÇÃO.
+
+def _melhor_similaridade(frase: str, frases_ref: list[str]) -> float:
+    """Maior `_similaridade` entre `frase` e qualquer frase de `frases_ref`.
+    0.0 se `frases_ref` for vazia (nada para comparar — trivialmente "sem
+    origem", mas esse caso só ocorre com um texto bruto vazio, já tratado
+    antes de `editar_narrativa` chegar aqui)."""
+    if not frases_ref:
+        return 0.0
+    return max(_similaridade(frase, ref) for ref in frases_ref)
+
+
+def _similaridades_por_frase(bruto: str, editado: str) -> dict[str, float]:
+    """{frase do EDITADO: melhor similaridade contra alguma frase do BRUTO}.
+
+    Uma frase repetida (mesmo texto exato) mais de uma vez no editado colapsa
+    para uma única chave — comportamento aceitável para telemetria de
+    calibração (o valor é o mesmo em qualquer ocorrência); `frases_sem_origem`
+    (abaixo) preserva a ORDEM original em vez de deduplicar, para auditoria
+    humana ler o texto na ordem em que ele aparece.
+    """
+    frases_bruto = _dividir_frases(bruto)
+    frases_editado = _dividir_frases(editado)
+    return {f: _melhor_similaridade(f, frases_bruto) for f in frases_editado}
+
+
+def _frases_sem_origem(bruto: str, editado: str,
+                       limiar: float = EDITOR_LIMIAR_FRASE_SEM_ORIGEM) -> list[str]:
+    """Frases do EDITADO (na ordem em que aparecem) cuja melhor similaridade
+    contra QUALQUER frase do BRUTO fica abaixo de `limiar` — candidatas a
+    conteúdo inventado (ver `_conteudo_adicionado_ok` para o critério de
+    falha, que exige 2+ candidatas OU uma fração relevante de palavras)."""
+    frases_bruto = _dividir_frases(bruto)
+    return [f for f in _dividir_frases(editado)
+            if _melhor_similaridade(f, frases_bruto) < limiar]
+
+
+def _conteudo_adicionado_ok(frases_ruins: list[str], texto_editado: str) -> bool:
+    """True se o texto NÃO falha a checagem de conteúdo adicionado — ver
+    `EDITOR_MIN_FRASES_SEM_ORIGEM`/`EDITOR_LIMIAR_PALAVRAS_SEM_ORIGEM_FRACAO`
+    em config.py. Duas condições, qualquer uma já reprova: quantidade de
+    frases sem origem, OU fração de palavras que elas somam (uma única frase
+    longa pode pesar tanto quanto duas curtas)."""
+    if len(frases_ruins) >= EDITOR_MIN_FRASES_SEM_ORIGEM:
+        return False
+    total_palavras = _n_palavras(texto_editado)
+    if total_palavras <= 0:
+        return True
+    palavras_ruins = sum(_n_palavras(f) for f in frases_ruins)
+    return (palavras_ruins / total_palavras) <= EDITOR_LIMIAR_PALAVRAS_SEM_ORIGEM_FRACAO
+
+
+def _ordem_movimento_alterada(bruto: str, editado: str,
+                              limiar: float = EDITOR_LIMIAR_ORDEM_MOVIMENTO_1) -> bool:
+    """True se a ABERTURA do texto mudou de lugar (v1.8.0, Tarefa 3.2): a
+    primeira frase do EDITADO não tem correspondência razoável entre as 3
+    primeiras do BRUTO (o narrador sempre abre com o MOVIMENTO 1 — a
+    apresentação do filme, quando há ficha técnica). Compara contra as 3
+    primeiras, não só a primeira, porque o editor pode legitimamente
+    fundir/quebrar frases de abertura sem deslocar o movimento inteiro."""
+    frases_editado = _dividir_frases(editado)
+    if not frases_editado:
+        return False   # texto vazio: outra checagem (formato) já cobre isso
+    primeira_editada = frases_editado[0]
+    primeiras_brutas = _dividir_frases(bruto)[:3]
+    if not primeiras_brutas:
+        return False
+    return _melhor_similaridade(primeira_editada, primeiras_brutas) < limiar
+
+
 _ROTULOS_PESO_CANONICOS = [r for r, _, _, _ in _BANDAS_PESO_FRACA_PARA_FORTE]
 
 
@@ -2440,7 +2555,8 @@ def editar_narrativa(narrativa_result, protegidos: list[str], output: dict | Non
         return _strip_fences(str(raw)).strip() or None
 
     def _avaliar(bruto_editado: str):
-        """(texto_limpo, perdidos, numeros_ok, honestidade_ok, motivo, similaridade).
+        """(texto_limpo, perdidos, numeros_ok, honestidade_ok, motivo,
+        similaridade, frases_sem_origem, similaridade_minima_por_frase).
 
         v1.7.2 — a checagem ESTRUTURAL (`_formato_invalido`) roda PRIMEIRO,
         antes de qualquer outra: um invólucro tipo `{ text: "..." }` ainda
@@ -2448,20 +2564,40 @@ def editar_narrativa(narrativa_result, protegidos: list[str], output: dict | Non
         as checagens seguintes o aceitariam. Se o formato já está errado,
         nem avalia o resto — falha direto com motivo "formato_invalido".
 
+        v1.8.0 (Tarefa 3) — CONTEÚDO ADICIONADO e ORDEM DOS MOVIMENTOS rodam
+        logo depois, ANTES de protegidos/números/honestidade/edição-nula:
+        são checagens de ADIÇÃO (a categoria de defeito que nenhuma
+        checagem anterior detectava — ver `EDITOR_ATIVO` em config.py), e
+        devem ter prioridade de relato sobre as demais quando ambas
+        falharem juntas (o texto ter inventado um parágrafo é um problema
+        mais grave para reportar do que, por exemplo, uma edição nula).
+
         v1.7.4 — a SIMILARIDADE com a bruta é calculada SEMPRE (mesmo nos
         casos que falham por outro motivo), para telemetria persistida em
-        todo resultado. A checagem de EDIÇÃO NULA roda por ÚLTIMO, só
-        quando as demais TERIAM passado: se perdidos/números/honestidade
-        já reprovam a edição por um motivo mais específico, é esse motivo
-        que importa reportar — a edição nula só precisa de checagem
-        própria no caso que mais importa, o que passaria despercebido por
-        TODAS as outras (o editor devolve a entrada praticamente intacta:
-        protegidos presentes porque nunca saíram, números idênticos porque
-        nada mudou, honestidade não regride porque é o mesmo texto).
+        todo resultado. `frases_sem_origem`/`similaridade_minima_por_frase`
+        (v1.8.0) seguem o mesmo princípio — persistidas SEMPRE, mesmo
+        quando a falha é de outro motivo, para calibração humana dos
+        limiares. A checagem de EDIÇÃO NULA roda por ÚLTIMO, só quando as
+        demais TERIAM passado: se perdidos/números/honestidade já reprovam
+        a edição por um motivo mais específico, é esse motivo que importa
+        reportar — a edição nula só precisa de checagem própria no caso que
+        mais importa, o que passaria despercebido por TODAS as outras (o
+        editor devolve a entrada praticamente intacta: protegidos presentes
+        porque nunca saíram, números idênticos porque nada mudou,
+        honestidade não regride porque é o mesmo texto).
         """
         similaridade = _similaridade(texto_bruto, bruto_editado)
+        sim_por_frase = _similaridades_por_frase(texto_bruto, bruto_editado)
+        frases_ruins = _frases_sem_origem(texto_bruto, bruto_editado)
         if _formato_invalido(bruto_editado):
-            return bruto_editado, [], True, False, "formato_invalido", similaridade
+            return (bruto_editado, [], True, False, "formato_invalido",
+                    similaridade, frases_ruins, sim_por_frase)
+        if not _conteudo_adicionado_ok(frases_ruins, bruto_editado):
+            return (bruto_editado, [], True, False, "conteudo_adicionado",
+                    similaridade, frases_ruins, sim_por_frase)
+        if _ordem_movimento_alterada(texto_bruto, bruto_editado):
+            return (bruto_editado, [], True, False, "ordem_alterada",
+                    similaridade, frases_ruins, sim_por_frase)
         texto, idioma_ok, escopo_ok, prevalencia_ok, _asp = _validar_prosa(
             bruto_editado, com_distribuicao)
         perdidos = _protegidos_perdidos(texto, protegidos)
@@ -2493,8 +2629,10 @@ def editar_narrativa(narrativa_result, protegidos: list[str], output: dict | Non
         elif similaridade >= EDITOR_LIMIAR_EDICAO_NULA:
             # v1.7.4: só chega aqui quando NENHUMA outra checagem reprovou —
             # é exatamente o caso que passava despercebido até esta versão.
-            return bruto_editado, [], True, False, "edicao_nula", similaridade
-        return texto, perdidos, numeros_ok, not regressoes, motivo, similaridade
+            return (bruto_editado, [], True, False, "edicao_nula",
+                    similaridade, frases_ruins, sim_por_frase)
+        return (texto, perdidos, numeros_ok, not regressoes, motivo,
+                similaridade, frases_ruins, sim_por_frase)
 
     def _reforco_desta_falha(motivo: str, perdidos: list[str], numeros_ok: bool) -> str:
         """Bloco de reforço específico da checagem que falhou NESTA
@@ -2506,6 +2644,10 @@ def editar_narrativa(narrativa_result, protegidos: list[str], output: dict | Non
         r = ""
         if motivo == "formato_invalido":
             r += _REFORCO_EDITOR_FORMATO
+        if motivo == "conteudo_adicionado":
+            r += _REFORCO_EDITOR_CONTEUDO_ADICIONADO
+        if motivo == "ordem_alterada":
+            r += _REFORCO_EDITOR_ORDEM
         if motivo == "edicao_nula":
             r += _REFORCO_EDITOR_EDICAO_NULA
         if perdidos:
@@ -2535,6 +2677,8 @@ def editar_narrativa(narrativa_result, protegidos: list[str], output: dict | Non
     honestidade_ok = True
     motivo = ""
     similaridade = None   # só definida quando alguma tentativa é avaliada
+    frases_ruins: list[str] = []                    # v1.8.0 (Tarefa 3.1)
+    sim_por_frase: dict[str, float] = {}             # v1.8.0 (Tarefa 3.1)
     n_tentativas = 0
     teve_resposta = False   # ao menos uma chamada devolveu texto avaliável
 
@@ -2548,7 +2692,8 @@ def editar_narrativa(narrativa_result, protegidos: list[str], output: dict | Non
             perdidos, numeros_ok, honestidade_ok = [], True, False
         else:
             teve_resposta = True
-            texto, perdidos, numeros_ok, honestidade_ok, motivo, similaridade = _avaliar(resposta)
+            (texto, perdidos, numeros_ok, honestidade_ok, motivo,
+             similaridade, frases_ruins, sim_por_frase) = _avaliar(resposta)
             if not (perdidos or not numeros_ok or not honestidade_ok):
                 break   # aceita — nenhuma checagem falhou
 
@@ -2569,6 +2714,8 @@ def editar_narrativa(narrativa_result, protegidos: list[str], output: dict | Non
             metricas_fluencia=_metricas_fluencia(texto_bruto),
             n_tentativas=n_tentativas, motivos_por_tentativa=motivos_por_tentativa,
             similaridade=similaridade,
+            frases_sem_origem=frases_ruins,
+            similaridade_minima_por_frase=sim_por_frase,
         )
 
     # v1.7.4 (Tarefa 2): pós-processamento DETERMINÍSTICO sobre a edição já
@@ -2583,4 +2730,6 @@ def editar_narrativa(narrativa_result, protegidos: list[str], output: dict | Non
         metricas_fluencia=_metricas_fluencia(texto),
         n_tentativas=n_tentativas, motivos_por_tentativa=motivos_por_tentativa,
         similaridade=similaridade, capitalizacao_ajustada=capitalizacao_ajustada,
+        frases_sem_origem=frases_ruins,
+        similaridade_minima_por_frase=sim_por_frase,
     )

@@ -72,21 +72,38 @@ PROVIDER_DEFAULT_MODELS = {
     # o próprio erro de enquadramento que motivou o preâmbulo de papel da
     # v1.1.2. O 2.5-flash, no mesmo teste, não repetiu nenhuma das três.
     "gemini": "gemini-2.5-flash",
-    # deepseek-v4-flash (v1.8.0) — provider adicional, NÃO default de
-    # produção (ver PROVIDER_CLIENTS em synthesize.py). Aposta seguinte após
-    # o encerramento dos experimentos de LLM local (ver
-    # experimentos-ollama-arquivado/): SDK compatível com o da OpenAI,
-    # ~$0,14/M tokens de entrada (cache miss; ~$0,0028/M com prefixo
-    # cacheado) e ~$0,28/M de saída, sem teto diário de requisições — ataca
-    # diretamente o gargalo do free tier do Gemini (20 req/dia) que
-    # inviabilizava construir catálogo. ATENÇÃO: os aliases antigos
-    # `deepseek-chat`/`deepseek-reasoner` foram descontinuados em 24/07/2026;
-    # não existe mais "DeepSeek-V3" na API — os nomes atuais são
+    # deepseek-v4-flash — aposta seguinte após o encerramento dos
+    # experimentos de LLM local (ver experimentos-ollama-arquivado/): SDK
+    # compatível com o da OpenAI, ~$0,14/M tokens de entrada (cache miss;
+    # ~$0,0028/M com prefixo cacheado) e ~$0,28/M de saída, sem teto diário
+    # de requisições — ataca diretamente o gargalo do free tier do Gemini
+    # (20 req/dia) que inviabilizava construir catálogo. ATENÇÃO: os aliases
+    # antigos `deepseek-chat`/`deepseek-reasoner` foram descontinuados em
+    # 24/07/2026; não existe mais "DeepSeek-V3" na API — os nomes atuais são
     # `deepseek-v4-flash` e `deepseek-v4-pro`.
     "deepseek": "deepseek-v4-flash",
 }
-# mantido por compatibilidade (era o único provider na v1.1.0)
-MODEL_DEFAULT = PROVIDER_DEFAULT_MODELS["anthropic"]
+
+# Provider DEFAULT de produção (v1.8.0 — TROCA de anthropic para deepseek).
+# Decisão registrada em VALIDACAO_DEEPSEEK.md, após smoke test (`cure`) +
+# validação em 3 filmes do catálogo, todos via --reuse-synthesis (mesmos
+# dados de síntese, só o narrador/editor mudam de provider):
+#   - TESTE DECISIVO (o ponto em que o modelo local Qwen3.5-9B falhava —
+#     colapso da narrativa num resumo de filme só, ou omissão do movimento
+#     de contraste): PASSOU nos 3/3 filmes — os três movimentos completos,
+#     rótulos de peso ancorados, marcadores de perspectiva presentes;
+#   - 23 das 24 checagens de honestidade (3 filmes × 8 flags) vieram limpas
+#     — a única exceção foi `perspectiva_nao_marcada` num filme;
+#   - custo ~US$0,0005/filme (narrador+editor), com 96-99% de cache hit no
+#     prompt do narrador, e SEM teto diário de requisições — o gargalo que
+#     inviabilizava o Gemini free tier para construir catálogo.
+# `anthropic` e `gemini` continuam plenamente selecionáveis via --provider;
+# a troca é só do que o CLI assume quando a flag é omitida.
+DEFAULT_PROVIDER = "deepseek"
+
+# mantido por compatibilidade (era o único provider na v1.1.0); agora segue
+# o provider DEFAULT de produção (v1.8.0), não mais fixo em "anthropic".
+MODEL_DEFAULT = PROVIDER_DEFAULT_MODELS[DEFAULT_PROVIDER]
 # Nota histórica: 2000 causava JSON truncado no Gemini porque, por padrão,
 # gemini-2.5-flash gasta tokens de "thinking" do MESMO orçamento de
 # max_output_tokens antes do JSON — consumo que escala com o tamanho do
@@ -149,6 +166,75 @@ EDITOR_MAX_TENTATIVAS = 3
 # persistida SEMPRE, em todo resultado) mostrar edições legítimas perto
 # do limiar, ajustar aqui é a mudança certa — não no código do editor.
 EDITOR_LIMIAR_EDICAO_NULA = 0.97
+
+# EDITOR [E2] LIGADO/DESLIGADO por padrão (v1.8.0) — MEDIDA DE CONTENÇÃO.
+# Defeito real observado na validação de 3 filmes (VALIDACAO_DEEPSEEK.md,
+# `the-invite-2026`): o editor foi ACEITO por TODAS as checagens mecânicas
+# então existentes (protegidos presentes, números idênticos, honestidade sem
+# regressão — similaridade 0,406) e, mesmo assim, (a) reordenou o MOVIMENTO 1
+# (a apresentação do filme) para o meio do texto e (b) ACRESCENTOU um
+# parágrafo de fechamento inteiro com opinião própria ("O saldo geral, no
+# entanto, é positivo... a minoria que reprova não apaga o brilho do
+# conjunto") sem correspondência no texto recebido. Isso é CONTEÚDO
+# INVENTADO — viola a regra central do produto (o editor não tem fonte de
+# fato, não pode ter opinião) — e nenhuma checagem até a v1.7.4 detecta
+# ADIÇÃO: todas checam PERDA (protegido perdido, número alterado, regressão
+# de honestidade). A Tarefa 3 da v1.8.0 fecha esse buraco (checagem de
+# conteúdo novo + ordem dos movimentos, ver `synthesize.py`), mas até essa
+# checagem rodar em produção contra mais filmes, o editor fica DESLIGADO por
+# padrão — o fail-safe mais simples possível (nenhuma chamada extra, a
+# narrativa do narrador é publicada como está). Reativável com --com-editor
+# (CLI) para testes/validação, sem mexer neste default.
+EDITOR_ATIVO = False
+
+# --- Checagem de CONTEÚDO ADICIONADO pelo editor [E2] (v1.8.0, Tarefa 3) ---
+# Motivação: ver comentário de `EDITOR_ATIVO` acima. Estratégia: dividir bruto
+# e editado em frases (`_dividir_frases`, já usado pela telemetria de
+# fluência) e, para cada frase do EDITADO, calcular a MELHOR similaridade
+# (`difflib.SequenceMatcher.ratio`) contra TODAS as frases do BRUTO — uma
+# frase sem nenhuma correspondência razoável no texto recebido é candidata a
+# invenção.
+#
+# Calibração EMPÍRICA (não só teórica): medida sobre os 3 filmes reais da
+# validação (VALIDACAO_DEEPSEEK.md), comparando bruto×editado de verdade —
+#   - `cure` (edição LEGÍTIMA, aceita em produção): o editor QUEBROU uma
+#     frase longa do bruto em duas menores — comportamento normal de ritmo —
+#     e isso sozinho gera 2 frases com similaridade < 0,45 contra qualquer
+#     frase INTEIRA do bruto (uma metade de frase longa nunca bate bem
+#     contra a frase inteira). Resultado real: 2 frases "candidatas", 18,1%
+#     das palavras do texto editado.
+#   - `cidade-de-deus` (edição LEGÍTIMA, aceita): 1 frase candidata, 16,9%
+#     das palavras.
+#   - `the-invite-2026` (edição COM DEFEITO REAL — parágrafo de opinião
+#     inteiro inventado, ver `EDITOR_ATIVO`): 15 frases candidatas, 69,6%
+#     das palavras — nada perto dos dois casos legítimos acima.
+# A folga entre os dois grupos (18,1%/16,9% vs 69,6%; 1-2 frases vs 15) é
+# grande o bastante para os limiares abaixo ficarem bem longe de ambos os
+# lados, mesmo sem uma amostra maior:
+#   - abaixo de EDITOR_LIMIAR_FRASE_SEM_ORIGEM: a frase é candidata;
+#   - EDITOR_MIN_FRASES_SEM_ORIGEM+ candidatas, OU candidatas somando mais de
+#     EDITOR_LIMIAR_PALAVRAS_SEM_ORIGEM_FRACAO das palavras do texto editado
+#     → falha "conteudo_adicionado" (retentativa, depois descarte).
+# CALIBRÁVEL: se a telemetria `edicao_flags.frases_sem_origem`/
+# `similaridade_minima_por_frase` (persistida SEMPRE) mostrar, com mais
+# filmes, edições legítimas perto destes números, ajustar aqui — não no
+# código do editor nem na lógica da checagem.
+EDITOR_LIMIAR_FRASE_SEM_ORIGEM = 0.45
+EDITOR_MIN_FRASES_SEM_ORIGEM = 4
+EDITOR_LIMIAR_PALAVRAS_SEM_ORIGEM_FRACAO = 0.35
+
+# Checagem de ORDEM DOS MOVIMENTOS (v1.8.0, Tarefa 3.2): o texto bruto do
+# narrador sempre abre com o MOVIMENTO 1 (a apresentação do filme, quando há
+# ficha técnica) — é a própria estrutura exigida pelo prompt (§D2). O caso
+# real de `the-invite-2026` moveu esse movimento para o meio do texto. A
+# checagem compara a PRIMEIRA frase do editado contra as 3 PRIMEIRAS frases
+# do bruto (não só a primeira — o editor pode legitimamente fundir/quebrar
+# frases de abertura sem mudar a ordem dos movimentos); se a melhor
+# similaridade entre elas for menor que este limiar, a abertura mudou de
+# lugar → falha "ordem_alterada". Mesma calibração propositalmente
+# permissiva do limiar acima — 0,5 aceita reescrita de abertura considerável,
+# só pega deslocamento real.
+EDITOR_LIMIAR_ORDEM_MOVIMENTO_1 = 0.5
 
 # Timeout de rede das chamadas LLM, em MILISSEGUNDOS (v1.6.0). Sem timeout
 # explícito o SDK do Gemini bloqueia indefinidamente: durante a regeneração

@@ -9,7 +9,14 @@ from pathlib import Path
 
 from dotenv import load_dotenv
 
-from .config import COTA_POR_NIVEL, PROVIDER_ENV_KEYS, SPEC_VERSION, TETO_PAGINAS
+from .config import (
+    COTA_POR_NIVEL,
+    DEFAULT_PROVIDER,
+    EDITOR_ATIVO,
+    PROVIDER_ENV_KEYS,
+    SPEC_VERSION,
+    TETO_PAGINAS,
+)
 from .fetcher import AntiBotError, Fetcher
 from .ficha import buscar_ficha, resolver_ano_letterboxd, titulo_ano_de_slug
 from .collector import collect_distribuicao
@@ -40,11 +47,13 @@ def _parse_args(argv):
                    help="raiz do cache em disco (default: resultado/cache)")
     p.add_argument("--out-dir", default="resultado")
     p.add_argument("--provider", choices=sorted(PROVIDER_ENV_KEYS),
-                   help="provider do LLM (gemini|anthropic|deepseek); sem a "
-                       "flag, auto-detecta pela chave presente no ambiente "
-                       "(GEMINI_API_KEY / ANTHROPIC_API_KEY / "
-                       "DEEPSEEK_API_KEY); erro se mais de uma ou nenhuma "
-                       "estiverem presentes")
+                   default=DEFAULT_PROVIDER,
+                   help="provider do LLM (gemini|anthropic|deepseek); "
+                       f"default (v1.8.0): {DEFAULT_PROVIDER!r} — ver "
+                       "DEFAULT_PROVIDER em config.py e VALIDACAO_DEEPSEEK.md "
+                       "para a decisão. anthropic/gemini seguem selecionáveis "
+                       "passando a flag explicitamente (requer "
+                       "ANTHROPIC_API_KEY / GEMINI_API_KEY no ambiente)")
     p.add_argument("--model", default=None,
                    help="modelo do LLM; default depende do provider "
                        "resolvido (ver PROVIDER_DEFAULT_MODELS)")
@@ -76,7 +85,17 @@ def _parse_args(argv):
                    help="pula a busca da ficha TMDB (v1.3.0)")
     p.add_argument("--no-edicao", action="store_true",
                    help="pula o passe de edição [E2] (v1.6.0) e publica a "
-                       "narrativa crua do narrador; economiza 1 chamada LLM")
+                       "narrativa crua do narrador; economiza 1 chamada LLM "
+                       "(v1.8.0: o editor já vem DESLIGADO por padrão — ver "
+                       "--com-editor —, então esta flag só importa se você "
+                       "ligou --com-editor e quer desligar de novo)")
+    p.add_argument("--com-editor", action="store_true",
+                   help="reativa o passe de edição [E2], desligado por "
+                       "padrão desde a v1.8.0 (EDITOR_ATIVO=False em "
+                       "config.py — defeito de conteúdo inventado detectado "
+                       "na validação, ver VALIDACAO_DEEPSEEK.md; a checagem "
+                       "nova da Tarefa 3 mitiga, mas o default segue "
+                       "conservador). Uso: testes/validação")
     p.add_argument("--no-distribuicao", action="store_true",
                    help="pula a busca do histograma de notas do Letterboxd "
                        "(v1.4.0); sem ele o narrador volta às regras da "
@@ -267,7 +286,15 @@ def main(argv=None):
         # buckets, as reviews ou a ficha. Se a edição quebrar qualquer
         # checagem mecânica, ela é DESCARTADA e a narrativa do narrador
         # prevalece: o editor pode não melhorar, mas não pode piorar.
-        if not args.no_edicao:
+        #
+        # v1.8.0: `editor_ativo` decide se o editor roda. `EDITOR_ATIVO`
+        # (config.py) é o default de produção — DESLIGADO, ver o comentário
+        # lá — e `--com-editor` liga de volta (uso: testes/validação);
+        # `--no-edicao` sempre vence (desliga mesmo com --com-editor), para
+        # continuar existindo como "desligar explicitamente" sem depender
+        # do valor do default.
+        editor_ativo = (EDITOR_ATIVO or args.com_editor) and not args.no_edicao
+        if editor_ativo:
             print("Editando narrativa (1 chamada LLM)...", file=sys.stderr)
             protegidos = montar_protegidos(res, output)
             ed = editar_narrativa(res, protegidos, output=output,
@@ -291,10 +318,22 @@ def main(argv=None):
                 # nula) e se a capitalização residual foi corrigida.
                 "similaridade": ed.similaridade,
                 "capitalizacao_ajustada": ed.capitalizacao_ajustada,
+                # v1.8.0 (Tarefa 3.1): telemetria da checagem de conteúdo
+                # adicionado — persistida SEMPRE, aceita ou não a edição.
+                "frases_sem_origem": ed.frases_sem_origem,
+                "similaridade_minima_por_frase": ed.similaridade_minima_por_frase,
             }
             if ed.edicao_descartada:
                 print(f"⚠️  Edição descartada ({ed.motivo_descarte}) — "
                       f"mantida a narrativa do narrador.", file=sys.stderr)
+        else:
+            # v1.8.0: editor DESLIGADO — mesmo formato de saída que um
+            # descarte (narrativa == narrativa_bruta == texto do narrador),
+            # caminho já existente e testado, só que sem gastar a chamada
+            # LLM do editor. `editor_desativado` deixa o motivo explícito no
+            # JSON em vez de "edicao_flags" simplesmente sumir.
+            output["narrativa_bruta"] = res.texto
+            output["edicao_flags"] = {"editor_desativado": True}
 
     path = write_json(output, args.out_dir)
     print(render_terminal(output, tom=args.tom))
