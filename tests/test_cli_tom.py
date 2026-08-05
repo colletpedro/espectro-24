@@ -261,40 +261,63 @@ def test_ficha_descartada_por_ano_divergente_fica_registrada_no_json(tmp_path, m
 
 
 # =====================================================================
-# v1.8.0 (Tarefa 2/4) — editor [E2] DESLIGADO por padrão (EDITOR_ATIVO)
+# v1.8.1 — editor [E2] LIGADO por padrão (EDITOR_ATIVO=True desde esta
+# versão; era False na v1.8.0). --no-edicao continua sendo o jeito de
+# desligar pontualmente; --com-editor virou redundante mas segue aceito.
 # =====================================================================
 
-def test_editor_desativado_por_padrao_nao_chama_o_llm_do_editor(
+def test_editor_ativo_por_padrao_chama_o_llm_do_editor(
         tmp_path, monkeypatch, _iso_env, capsys):
-    """Sem --com-editor: `editar_narrativa` NUNCA é chamado — 0 chamadas
-    LLM além do narrador —, e o pipeline publica a narrativa do narrador
-    tal como está (mesmo texto em `narrativa` e `narrativa_bruta`)."""
+    """Sem nenhuma flag: `editar_narrativa` É chamado (EDITOR_ATIVO=True é
+    o default desde a v1.8.1) — 1 chamada LLM a mais além do narrador."""
     _escreve_json(tmp_path)
     calls_narrar = _mock_narrate(monkeypatch)   # também mocka editar_narrativa
     import espectro24.cli as cli_mod
     chamou_editor = []
     original = cli_mod.editar_narrativa
-    def _falha_se_chamado(*a, **k):
+    def _conta_chamada(*a, **k):
         chamou_editor.append(1)
         return original(*a, **k)
-    monkeypatch.setattr(cli_mod, "editar_narrativa", _falha_se_chamado)
+    monkeypatch.setattr(cli_mod, "editar_narrativa", _conta_chamada)
 
     cli.main(["--slug", "cure", "--reuse-synthesis", "--out-dir", str(tmp_path),
               "--tom", "ambos"])
 
     assert len(calls_narrar) == 1              # narrador chamado normalmente
+    assert len(chamou_editor) == 1             # editor chamado por padrão
+    salvo = json.loads((tmp_path / "cure.json").read_text(encoding="utf-8"))
+    assert "editor_desativado" not in salvo["edicao_flags"]
+    assert salvo["edicao_flags"]["edicao_descartada"] is False
+
+
+def test_no_edicao_desliga_o_editor_apesar_do_default_ligado(
+        tmp_path, monkeypatch, _iso_env, capsys):
+    """--no-edicao continua desligando o editor mesmo com EDITOR_ATIVO=True
+    — mesmo formato de saída de antes (narrativa == narrativa_bruta), sem
+    gastar a chamada LLM do editor."""
+    _escreve_json(tmp_path)
+    calls_narrar = _mock_narrate(monkeypatch)
+    import espectro24.cli as cli_mod
+    chamou_editor = []
+    monkeypatch.setattr(cli_mod, "editar_narrativa",
+                        lambda *a, **k: chamou_editor.append(1))
+
+    cli.main(["--slug", "cure", "--reuse-synthesis", "--out-dir", str(tmp_path),
+              "--tom", "ambos", "--no-edicao"])
+
+    assert len(calls_narrar) == 1
     assert chamou_editor == []                 # editor NUNCA chamado
     salvo = json.loads((tmp_path / "cure.json").read_text(encoding="utf-8"))
     assert salvo["narrativa"] == "PROSA_MOCK"
     assert salvo["narrativa_bruta"] == "PROSA_MOCK"   # bruta == final, sem edição
     assert salvo["edicao_flags"] == {"editor_desativado": True}
     out = capsys.readouterr().out
-    assert "DESLIGADA por padrão" in out
+    assert "DESLIGADA (--no-edicao)" in out
 
 
-def test_com_editor_reativa_o_passe_de_edicao(tmp_path, monkeypatch, _iso_env, capsys):
-    """--com-editor liga o editor de volta — mesmo comportamento de antes
-    da v1.8.0 (editar_narrativa É chamado, 1 chamada LLM a mais)."""
+def test_com_editor_e_redundante_mas_continua_aceito(tmp_path, monkeypatch, _iso_env):
+    """--com-editor não muda mais nada por padrão (o editor já está
+    ligado), mas continua sendo uma flag válida, sem erro."""
     _escreve_json(tmp_path)
     calls_narrar = _mock_narrate(monkeypatch)
     import espectro24.cli as cli_mod
@@ -315,7 +338,6 @@ def test_com_editor_reativa_o_passe_de_edicao(tmp_path, monkeypatch, _iso_env, c
     assert len(calls_editor) == 1
     salvo = json.loads((tmp_path / "cure.json").read_text(encoding="utf-8"))
     assert "editor_desativado" not in salvo["edicao_flags"]
-    assert salvo["edicao_flags"]["edicao_descartada"] is False
 
 
 def test_no_edicao_vence_mesmo_com_com_editor(tmp_path, monkeypatch, _iso_env):

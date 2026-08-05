@@ -86,16 +86,16 @@ def _parse_args(argv):
     p.add_argument("--no-edicao", action="store_true",
                    help="pula o passe de edição [E2] (v1.6.0) e publica a "
                        "narrativa crua do narrador; economiza 1 chamada LLM "
-                       "(v1.8.0: o editor já vem DESLIGADO por padrão — ver "
-                       "--com-editor —, então esta flag só importa se você "
-                       "ligou --com-editor e quer desligar de novo)")
+                       "(o editor vem LIGADO por padrão desde a v1.8.1 — "
+                       "EDITOR_ATIVO=True em config.py —, então esta flag é "
+                       "o jeito de desligar pontualmente, ex. para debug ou "
+                       "economizar a chamada)")
     p.add_argument("--com-editor", action="store_true",
-                   help="reativa o passe de edição [E2], desligado por "
-                       "padrão desde a v1.8.0 (EDITOR_ATIVO=False em "
-                       "config.py — defeito de conteúdo inventado detectado "
-                       "na validação, ver VALIDACAO_DEEPSEEK.md; a checagem "
-                       "nova da Tarefa 3 mitiga, mas o default segue "
-                       "conservador). Uso: testes/validação")
+                   help="liga o passe de edição [E2] explicitamente — "
+                       "redundante desde a v1.8.1 (EDITOR_ATIVO=True já é "
+                       "o default; ver config.py e VALIDACAO_EDITOR_V18.md "
+                       "para a validação que motivou a reativação), mantida "
+                       "por compatibilidade")
     p.add_argument("--no-distribuicao", action="store_true",
                    help="pula a busca do histograma de notas do Letterboxd "
                        "(v1.4.0); sem ele o narrador volta às regras da "
@@ -287,12 +287,11 @@ def main(argv=None):
         # checagem mecânica, ela é DESCARTADA e a narrativa do narrador
         # prevalece: o editor pode não melhorar, mas não pode piorar.
         #
-        # v1.8.0: `editor_ativo` decide se o editor roda. `EDITOR_ATIVO`
-        # (config.py) é o default de produção — DESLIGADO, ver o comentário
-        # lá — e `--com-editor` liga de volta (uso: testes/validação);
-        # `--no-edicao` sempre vence (desliga mesmo com --com-editor), para
-        # continuar existindo como "desligar explicitamente" sem depender
-        # do valor do default.
+        # `editor_ativo` decide se o editor roda. `EDITOR_ATIVO` (config.py)
+        # é o default de produção — LIGADO desde a v1.8.1, ver o comentário
+        # lá — e `--no-edicao` sempre vence (desliga mesmo com
+        # --com-editor), para continuar existindo como "desligar
+        # explicitamente" sem depender do valor do default.
         editor_ativo = (EDITOR_ATIVO or args.com_editor) and not args.no_edicao
         if editor_ativo:
             print("Editando narrativa (1 chamada LLM)...", file=sys.stderr)
@@ -327,7 +326,8 @@ def main(argv=None):
                 print(f"⚠️  Edição descartada ({ed.motivo_descarte}) — "
                       f"mantida a narrativa do narrador.", file=sys.stderr)
         else:
-            # v1.8.0: editor DESLIGADO — mesmo formato de saída que um
+            # editor DESLIGADO (v1.8.1: só via --no-edicao explícito, já que
+            # o default agora é LIGADO) — mesmo formato de saída que um
             # descarte (narrativa == narrativa_bruta == texto do narrador),
             # caminho já existente e testado, só que sem gastar a chamada
             # LLM do editor. `editor_desativado` deixa o motivo explícito no

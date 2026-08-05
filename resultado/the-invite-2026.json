@@ -386,7 +386,7 @@
       "share_real": 79
     }
   ],
-  "narrativa": "O Convite, de 2026, dirigido por Olivia Wilde, mostra Joe e Angela, um casal em crise. Eles decidem convidar os vizinhos enigmáticos para um jantar, e essa noite logo toma rumos inesperados, misturando Drama e Comédia. A experiência do filme se destaca pela mistura de humor e drama, ao explorar temas de relacionamento e casamento. A ambientação é íntima e, muitas vezes, fica restrita a um único espaço. Isso se mostra eficaz para criar uma atmosfera envolvente. A grande maioria das notas (~79%) teve uma recepção positiva. Praticamente todos elogiam muito a direção de Olivia Wilde e o roteiro, destacando como ela consegue equilibrar comédia e drama e ainda criar tensão. Além disso, a maioria das críticas aponta o desempenho excepcional do elenco e a ótima química entre os atores. Cerca de metade das pessoas também nota a capacidade do filme de ser hilário e, ao mesmo tempo, profundamente triste ou tocante. Já Uma minoria das notas (~18%) viu uma experiência mais mediana. Para esse grupo, as performances receberam muitos elogios, mas muita gente achou o filme divertido apenas na primeira metade. Depois, a repetição das situações tornou a experiência cansativa no final. Mas, para uma fração mínima das notas (~3%), o filme foi uma decepção. Para eles, quase metade das avaliações classificou o humor como previsível e pouco engraçado, e muitos ainda acharam os personagens e diálogos superficiais ou até irritantes.",
+  "narrativa": "Em O Convite, de Olivia Wilde, um casal em crise convida seus enigmáticos vizinhos para um jantar, e a noite toma rumos inesperados. O clima é de drama leve, com comédia permeando tudo, e o filme se desenrola num ambiente intimista, equilibrando humor e tensão. A grande maioria das notas (~79%) é positiva, e quase todos os elogios miram a direção e o roteiro. Para esse grupo, o filme é hilário e tocante, com atuações e química do elenco destacadas pela maioria, além de uma originalidade bem-vinda. Nessa leitura, combinar comédia e drama com perfeição é o ponto mais alto.\n\nUma minoria das notas (~18%) fica no meio-termo. Muitos reconhecem a inteligência do roteiro e a direção eficaz, mas, para eles, a repetição e a duração tornam a experiência cansativa, e a mudança de tom no final divide opiniões. Já uma fração mínima das notas (~3%) rejeita o filme. Quem está nessa faixa se divide: cerca de metade aponta humor previsível e roteiro que se arrasta, muitos veem personagens superficiais e um foco excessivo na sexualidade, e alguns o acham previsível. O resultado é uma recepção polarizada. Enquanto a maioria celebra a ousadia e a emoção, uma minoria sente falta de profundidade.",
   "narrativa_flags": {
     "idioma_invalido": false,
     "escopo_suspeito": false,
@@ -414,41 +414,7 @@
     "fonte": "tmdb",
     "ano_fonte": "slug"
   },
-  "consensos_usados": [
-    {
-      "propriedade": "mistura de humor e drama",
-      "grupos_de_origem": [
-        "medianas",
-        "positivas"
-      ],
-      "temas_de_origem": [
-        "Humor e tom",
-        "Humor e drama"
-      ]
-    },
-    {
-      "propriedade": "abordagem de temas de relacionamento",
-      "grupos_de_origem": [
-        "medianas",
-        "positivas"
-      ],
-      "temas_de_origem": [
-        "Roteiro e temas abordados",
-        "Temas de relacionamento e casamento"
-      ]
-    },
-    {
-      "propriedade": "ambientação íntima",
-      "grupos_de_origem": [
-        "medianas",
-        "positivas"
-      ],
-      "temas_de_origem": [
-        "Direção e estilo visual",
-        "Cinematografia e design de produção"
-      ]
-    }
-  ],
+  "consensos_usados": [],
   "distribuicao": {
     "n_notas_total": 338448,
     "por_nivel": {
@@ -480,10 +446,6 @@
       "tema": "Atuações e química do elenco"
     },
     {
-      "quantificador": "Cerca de metade",
-      "tema": "Humor e drama"
-    },
-    {
       "quantificador": "muitos",
       "tema": "Ritmo e duração"
     },
@@ -494,28 +456,36 @@
     {
       "quantificador": "muitos",
       "tema": "Personagens e diálogos superficiais/irritantes"
+    },
+    {
+      "quantificador": "muitos",
+      "tema": "Foco excessivo/explícito na sexualidade"
+    },
+    {
+      "quantificador": "alguns",
+      "tema": "Previsibilidade e falta de originalidade"
     }
   ],
   "marcadores_perspectiva": [
     {
       "grupo": "medianas",
-      "trecho": "para esse grupo"
+      "trecho": "mas para eles, a repetição e a duração tornam a experiência cansativa"
     },
     {
       "grupo": "negativas",
-      "trecho": "para eles"
+      "trecho": "para quem está nessa faixa, cerca de metade aponta humor previsível"
     }
   ],
   "metricas_fluencia": {
-    "n_frases": 14,
-    "media_palavras": 16.3,
-    "cv_comprimento": 0.34,
-    "frase_mais_curta": 9,
-    "aberturas_repetidas": 1,
-    "verbos_reporte": 6,
-    "adverbios_mente": 1
+    "n_frases": 11,
+    "media_palavras": 18.3,
+    "cv_comprimento": 0.47,
+    "frase_mais_curta": 6,
+    "aberturas_repetidas": 0,
+    "verbos_reporte": 4,
+    "adverbios_mente": 0
   },
-  "narrativa_bruta": "Em O Convite, de 2026, dirigido por Olivia Wilde, um casal em crise, Joe e Angela, decide convidar seus enigmáticos vizinhos para um jantar, o que rapidamente leva a noite a rumos inesperados, explorando os gêneros de Drama e Comédia.\n\nA experiência de assistir ao filme é marcada por um tom que mistura humor e drama, explorando temas de relacionamento e casamento. A ambientação íntima, muitas vezes restrita a um único espaço, é percebida como eficaz na construção de uma atmosfera envolvente.\n\nA grande maioria das notas (~79%) reflete uma recepção positiva, com quase todos elogiando intensamente a direção de Olivia Wilde e o roteiro, destacando a habilidade em equilibrar comédia e drama e criar tensão. A maioria dessas reviews salienta também o desempenho excepcional do elenco e a ótima química entre os atores. Cerca de metade aponta a capacidade do filme de ser hilário e, ao mesmo tempo, profundamente triste ou tocante. Uma minoria das notas (~18%) aponta uma experiência mais mediana; para esse grupo, as performances foram amplamente elogiadas, mas muitos acharam o filme divertido na primeira metade e sentiram que a repetição das situações tornava a experiência cansativa no final. Para uma fração mínima das notas (~3%), o filme foi uma decepção; para eles, cerca de metade das reviews classificou o humor como previsível e pouco engraçado, com muitos achando os personagens e diálogos superficiais ou irritantes.",
+  "narrativa_bruta": "Em O Convite, de Olivia Wilde, um casal em crise convida seus enigmáticos vizinhos para um jantar, e a noite toma rumos inesperados. Com um drama leve permeado por comédia, o filme se desenrola em um ambiente intimista, equilibrando humor e tensão. A grande maioria das notas (~79%) é positiva, com quase todos os elogios focados na direção e no roteiro. Para esses, o filme é hilário e tocante, com atuações e química do elenco destacadas pela maioria, além de uma originalidade bem-vinda. Nessa leitura, a capacidade de combinar comédia e drama com perfeição é o ponto alto. Uma minoria das notas (~18%) fica no meio-termo: muitos reconhecem a inteligência do roteiro e a direção eficaz, mas para eles, a repetição e a duração tornam a experiência cansativa, e a mudança de tom no final divide opiniões. Uma fração mínima das notas (~3%) rejeita o filme: para quem está nessa faixa, cerca de metade aponta humor previsível e roteiro que se arrasta, muitos veem personagens superficiais e um foco excessivo na sexualidade, e alguns o acham previsível. Assim, o filme parece dividir opiniões: enquanto a maioria celebra sua ousadia e emoção, uma minoria sente falta de profundidade.",
   "edicao_flags": {
     "edicao_descartada": false,
     "motivo_descarte": "",
@@ -523,6 +493,32 @@
     "numeros_alterados": false,
     "houve_retentativa": true,
     "falhou": false,
-    "n_protegidos": 7
+    "n_protegidos": 6,
+    "n_tentativas": 4,
+    "motivos_por_tentativa": [
+      "conteudo_adicionado",
+      "regressão de honestidade: perspectiva_nao_marcada",
+      "conteudo_adicionado"
+    ],
+    "similaridade": 0.6607669616519174,
+    "capitalizacao_ajustada": true,
+    "frases_sem_origem": [
+      "Muitos reconhecem a inteligência do roteiro e a direção eficaz, mas, para eles, a repetição e a duração tornam a experiência cansativa, e a mudança de tom no final divide opiniões.",
+      "Já Uma fração mínima das notas (~3%) rejeita o filme.",
+      "O resultado é uma recepção polarizada."
+    ],
+    "similaridade_minima_por_frase": {
+      "Em O Convite, de Olivia Wilde, um casal em crise convida seus enigmáticos vizinhos para um jantar, e a noite toma rumos inesperados.": 1.0,
+      "O clima é de drama leve, com comédia permeando tudo, e o filme se desenrola num ambiente intimista, equilibrando humor e tensão.": 0.7983539094650206,
+      "A grande maioria das notas (~79%) é positiva, e quase todos os elogios miram a direção e o roteiro.": 0.9215686274509803,
+      "Para esse grupo, o filme é hilário e tocante, com atuações e química do elenco destacadas pela maioria, além de uma originalidade bem-vinda.": 0.9745454545454545,
+      "Nessa leitura, combinar comédia e drama com perfeição é o ponto mais alto.": 0.8679245283018868,
+      "Uma minoria das notas (~18%) fica no meio-termo.": 0.45751633986928103,
+      "Muitos reconhecem a inteligência do roteiro e a direção eficaz, mas, para eles, a repetição e a duração tornam a experiência cansativa, e a mudança de tom no final divide opiniões.": 0.4117647058823529,
+      "Já Uma fração mínima das notas (~3%) rejeita o filme.": 0.35443037974683544,
+      "Quem está nessa faixa se divide: cerca de metade aponta humor previsível e roteiro que se arrasta, muitos veem personagens superficiais e um foco excessivo na sexualidade, e alguns o acham previsível.": 0.8430493273542601,
+      "O resultado é uma recepção polarizada.": 0.3076923076923077,
+      "Enquanto a maioria celebra a ousadia e a emoção, uma minoria sente falta de profundidade.": 0.7889908256880734
+    }
   }
 }

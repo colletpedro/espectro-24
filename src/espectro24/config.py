@@ -167,25 +167,35 @@ EDITOR_MAX_TENTATIVAS = 3
 # do limiar, ajustar aqui é a mudança certa — não no código do editor.
 EDITOR_LIMIAR_EDICAO_NULA = 0.97
 
-# EDITOR [E2] LIGADO/DESLIGADO por padrão (v1.8.0) — MEDIDA DE CONTENÇÃO.
-# Defeito real observado na validação de 3 filmes (VALIDACAO_DEEPSEEK.md,
-# `the-invite-2026`): o editor foi ACEITO por TODAS as checagens mecânicas
-# então existentes (protegidos presentes, números idênticos, honestidade sem
-# regressão — similaridade 0,406) e, mesmo assim, (a) reordenou o MOVIMENTO 1
-# (a apresentação do filme) para o meio do texto e (b) ACRESCENTOU um
-# parágrafo de fechamento inteiro com opinião própria ("O saldo geral, no
-# entanto, é positivo... a minoria que reprova não apaga o brilho do
-# conjunto") sem correspondência no texto recebido. Isso é CONTEÚDO
-# INVENTADO — viola a regra central do produto (o editor não tem fonte de
-# fato, não pode ter opinião) — e nenhuma checagem até a v1.7.4 detecta
-# ADIÇÃO: todas checam PERDA (protegido perdido, número alterado, regressão
-# de honestidade). A Tarefa 3 da v1.8.0 fecha esse buraco (checagem de
-# conteúdo novo + ordem dos movimentos, ver `synthesize.py`), mas até essa
-# checagem rodar em produção contra mais filmes, o editor fica DESLIGADO por
-# padrão — o fail-safe mais simples possível (nenhuma chamada extra, a
-# narrativa do narrador é publicada como está). Reativável com --com-editor
-# (CLI) para testes/validação, sem mexer neste default.
-EDITOR_ATIVO = False
+# EDITOR [E2] LIGADO por padrão (v1.8.1 — REATIVADO; era False na v1.8.0).
+# Histórico: a v1.8.0 desligou o editor por precaução depois de um defeito
+# real em `the-invite-2026` — ACEITO por todas as checagens mecânicas então
+# existentes (protegidos presentes, números idênticos, honestidade sem
+# regressão) e, mesmo assim, o editor reordenou o MOVIMENTO 1 e ACRESCENTOU
+# um parágrafo de opinião inteiro sem origem no texto recebido (CONTEÚDO
+# INVENTADO — nenhuma checagem até a v1.7.4 detectava ADIÇÃO, só PERDA). A
+# MESMA v1.8.0 já implementou a correção: a checagem de CONTEÚDO ADICIONADO
+# + ORDEM DOS MOVIMENTOS logo abaixo, que roda ANTES das demais em
+# `editar_narrativa` (`synthesize.py`).
+#
+# Reativação (v1.8.1) baseada em validação DEPOIS da correção
+# (VALIDACAO_EDITOR_V18.md, 3 filmes reais, --com-editor): os 3/3 foram
+# aceitos com ganho de ritmo sobre a bruta; a checagem nova DISPAROU DE
+# VERDADE em produção uma vez (`cidade-de-deus`, 1ª tentativa, motivo
+# "conteudo_adicionado") e o modelo se AUTOCORRIGIU na retentativa — prova
+# de que o fail-safe funciona sobre dados reais, não só em teste sintético;
+# e os limiares calibrados ficaram bem separados do ruído normal de uma
+# boa edição de ritmo (1-3 frases "sem origem" nos casos legítimos,
+# EDITOR_MIN_FRASES_SEM_ORIGEM=4, contra as 15 do defeito original). O
+# defeito de `the-invite-2026` não se repetiu na validação, mas está
+# coberto por um teste de regressão determinístico
+# (`tests/test_editor.py`) que injeta o texto literal do defeito e
+# confirma DESCARTE — a garantia não depende de o defeito nunca mais
+# ocorrer, depende de ele ser pego quando ocorrer.
+#
+# `--no-edicao` (CLI) continua disponível para desligar pontualmente
+# (debug, economia de 1 chamada), independente deste default.
+EDITOR_ATIVO = True
 
 # --- Checagem de CONTEÚDO ADICIONADO pelo editor [E2] (v1.8.0, Tarefa 3) ---
 # Motivação: ver comentário de `EDITOR_ATIVO` acima. Estratégia: dividir bruto

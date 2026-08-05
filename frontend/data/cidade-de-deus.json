@@ -310,7 +310,7 @@
       "share_real": 91
     }
   ],
-  "narrativa": "Dirigido por Fernando Meirelles em 2002, Cidade de Deus é um drama criminal que segue Buscapé, um jovem morador da Cidade de Deus que, crescendo em meio à violência, busca na fotografia uma saída para uma vida digna. O filme apresenta uma narrativa abrangente, com ritmo e edição dinâmicos que contribuem para a intensidade da experiência. Sua abordagem da violência é visceral e focada na realidade social, ambientada em um contexto de extrema pobreza. \n\nA grande maioria das notas (~91%) considera Cidade de Deus uma obra-prima. A maioria dessas reviews positivas elogia o estilo visual e a edição dinâmicos, que conferem um ritmo acelerado e energia contagiante. Muitos também destacam a narrativa envolvente e abrangente, capaz de contar múltiplas histórias ao longo de décadas sem perder a coesão. Para uma fração mínima das notas (~1%), porém, muitos criticam a estetização e espetacularização da violência e miséria, vendo o filme como uma representação estereotipada da favela. Para esses espectadores, a violência é excessiva e gratuita. Já para uma pequena minoria das notas (~8%), que se posiciona de forma mediana, a qualidade técnica e estilística é notável, com a edição ágil e a direção estilizada sendo pontos fortes, mas muitos sentem que o filme não consegue gerar uma conexão emocional profunda, sendo mais entretenimento do que uma experiência marcante.",
+  "narrativa": "Em Cidade de Deus (2002), dirigido por Fernando Meirelles, o jovem Buscapé cresce em meio à violência da favela e enxerga na fotografia uma saída possível do destino criminoso. Drama e crime se misturam nesse retrato do Rio de Janeiro.\n\nO filme é intenso e frenético. O ritmo é acelerado, a violência é constante e aparece de forma crua e realista. A narrativa cobre décadas e muitos personagens, com uma estrutura episódica que mantém o público imerso naquele ambiente. Só que as opiniões divergem sobre o impacto emocional: alguns se sentem desconectados, outros se envolvem de verdade.\n\nA grande maioria das notas (~91%) celebra o filme como uma obra-prima. Os elogios vão para o estilo visual e a edição dinâmicos, a narrativa envolvente e a brutalidade realista da violência. Já uma pequena minoria das notas (~8%), os medianos, reconhece a qualidade técnica e o retrato realista, mas sente que falta uma conexão emocional mais profunda, como apontado no tema Entretenimento versus profundidade/conexão emocional. Para eles, o filme é mais entretenimento do que uma experiência marcante. E uma fração mínima das notas (~1%) critica a estetização da violência e a representação estereotipada da favela; nesse grupo, a violência é excessiva e a construção dos personagens é superficial, o que compromete a autenticidade da obra.",
   "narrativa_flags": {
     "idioma_invalido": false,
     "escopo_suspeito": false,
@@ -340,29 +340,36 @@
   },
   "consensos_usados": [
     {
-      "propriedade": "Ritmo e edição dinâmicos",
+      "propriedade": "ritmo acelerado",
       "grupos_de_origem": [
         "negativas",
-        "medianas",
-        "positivas"
-      ],
-      "temas_de_origem": [
-        "Roteiro confuso/repetitivo e montagem frenética",
-        "Qualidade técnica e estilística",
-        "Estilo visual e edição dinâmicos"
-      ]
-    },
-    {
-      "propriedade": "Abordagem visceral da violência e realidade social",
-      "grupos_de_origem": [
-        "negativas",
-        "medianas",
         "positivas"
       ],
       "temas_de_origem": [
         "Estetização e espetacularização da violência/miséria",
+        "Estilo visual e edição dinâmicos"
+      ]
+    },
+    {
+      "propriedade": "violência crua e realista",
+      "grupos_de_origem": [
+        "medianas",
+        "positivas"
+      ],
+      "temas_de_origem": [
         "Retrato da violência e realidade social",
         "Brutalidade e realismo da violência"
+      ]
+    },
+    {
+      "propriedade": "narrativa abrangente e episódica",
+      "grupos_de_origem": [
+        "negativas",
+        "positivas"
+      ],
+      "temas_de_origem": [
+        "Personagens pouco desenvolvidos e falta de conexão emocional",
+        "Narrativa envolvente e abrangente"
       ]
     }
   ],
@@ -389,57 +396,67 @@
   },
   "quantificadores_usados": [
     {
-      "quantificador": "A maioria",
-      "tema": "Estilo visual e edição dinâmicos"
-    },
-    {
-      "quantificador": "Muitos",
-      "tema": "Narrativa envolvente e abrangente"
-    },
-    {
       "quantificador": "muitos",
-      "tema": "Estetização e espetacularização da violência/miséria"
-    },
-    {
-      "quantificador": "Muitos",
-      "tema": "Violência excessiva e gratuita"
+      "tema": "Estilo visual e edição dinâmicos"
     },
     {
       "quantificador": "muitos",
       "tema": "Entretenimento versus profundidade/conexão emocional"
+    },
+    {
+      "quantificador": "muitos",
+      "tema": "Brutalidade e realismo da violência"
     }
   ],
   "marcadores_perspectiva": [
     {
-      "grupo": "negativas",
-      "trecho": "Para uma fração mínima das notas (~1%), porém, muitos criticam a estetização e espetacularização da violência e miséria"
-    },
-    {
-      "grupo": "negativas",
-      "trecho": "Para esses espectadores, a violência é excessiva e gratuita"
-    },
-    {
       "grupo": "medianas",
-      "trecho": "Já para uma pequena minoria das notas (~8%), que se posiciona de forma mediana, a qualidade técnica e estilística é notável"
+      "trecho": "para eles, o filme é mais entretenimento do que uma experiência marcante"
+    },
+    {
+      "grupo": "negativas",
+      "trecho": "para esse grupo, a violência é excessiva e a construção dos personagens é superficial"
     }
   ],
   "metricas_fluencia": {
-    "n_frases": 9,
-    "media_palavras": 23.8,
-    "cv_comprimento": 0.53,
-    "frase_mais_curta": 9,
-    "aberturas_repetidas": 2,
+    "n_frases": 11,
+    "media_palavras": 19.2,
+    "cv_comprimento": 0.49,
+    "frase_mais_curta": 6,
+    "aberturas_repetidas": 1,
     "verbos_reporte": 3,
     "adverbios_mente": 0
   },
-  "narrativa_bruta": "Dirigido por Fernando Meirelles em 2002, Cidade de Deus é um drama criminal que segue Buscapé, um jovem morador da Cidade de Deus que, crescendo em meio à violência, busca na fotografia uma saída para uma vida digna. O filme apresenta uma narrativa abrangente, com ritmo e edição dinâmicos que contribuem para a intensidade da experiência. Sua abordagem da violência é visceral e focada na realidade social, ambientada em um contexto de extrema pobreza. \n\nA grande maioria das notas (~91%) considera Cidade de Deus uma obra-prima. A maioria dessas reviews positivas elogia o estilo visual e a edição dinâmicos, que conferem um ritmo acelerado e energia contagiante. Muitos também destacam a narrativa envolvente e abrangente, capaz de contar múltiplas histórias ao longo de décadas sem perder a coesão. Para uma fração mínima das notas (~1%), porém, muitos criticam a estetização e espetacularização da violência e miséria, vendo o filme como uma representação estereotipada da favela. Para esses espectadores, a violência é excessiva e gratuita. Já para uma pequena minoria das notas (~8%), que se posiciona de forma mediana, a qualidade técnica e estilística é notável, com a edição ágil e a direção estilizada sendo pontos fortes, mas muitos sentem que o filme não consegue gerar uma conexão emocional profunda, sendo mais entretenimento do que uma experiência marcante.",
+  "narrativa_bruta": "Em Cidade de Deus (2002), dirigido por Fernando Meirelles, o jovem Buscapé cresce em meio à violência da Cidade de Deus e vê na fotografia uma chance de escapar de um destino criminoso. O drama e o crime se entrelaçam nesse retrato da favela carioca.\n\nO filme é intenso e frenético, com ritmo acelerado e violência constante, retratada de forma crua e realista. A narrativa é abrangente, cobrindo décadas e múltiplos personagens, com uma estrutura episódica que mantém o espectador imerso naquele ambiente. As opiniões divergem sobre o impacto emocional: enquanto alguns se sentem desconectados, outros se envolvem profundamente.\n\nA grande maioria das notas (~91%) celebra o filme como uma obra-prima, destacando o estilo visual e a edição dinâmicos, a narrativa envolvente e a brutalidade realista da violência. Já uma pequena minoria das notas (~8%), os medianos, reconhece a qualidade técnica e o retrato realista, mas sente que falta uma conexão emocional mais profunda, como apontado no tema Entretenimento versus profundidade/conexão emocional: para eles, o filme é mais entretenimento do que uma experiência marcante. Por fim, uma fração mínima das notas (~1%) critica a estetização da violência e a representação estereotipada da favela; para esse grupo, a violência é excessiva e a construção dos personagens é superficial, o que compromete a autenticidade da obra.",
   "edicao_flags": {
-    "edicao_descartada": true,
-    "motivo_descarte": "regressão de honestidade: perspectiva_nao_marcada",
+    "edicao_descartada": false,
+    "motivo_descarte": "",
     "protegidos_perdidos": [],
     "numeros_alterados": false,
     "houve_retentativa": true,
     "falhou": false,
-    "n_protegidos": 7
+    "n_protegidos": 7,
+    "n_tentativas": 2,
+    "motivos_por_tentativa": [
+      "conteudo_adicionado"
+    ],
+    "similaridade": 0.6175490559052202,
+    "capitalizacao_ajustada": false,
+    "frases_sem_origem": [
+      "O filme é intenso e frenético."
+    ],
+    "similaridade_minima_por_frase": {
+      "Em Cidade de Deus (2002), dirigido por Fernando Meirelles, o jovem Buscapé cresce em meio à violência da favela e enxerga na fotografia uma saída possível do destino criminoso.": 0.8421052631578947,
+      "Drama e crime se misturam nesse retrato do Rio de Janeiro.": 0.6721311475409836,
+      "O filme é intenso e frenético.": 0.4316546762589928,
+      "O ritmo é acelerado, a violência é constante e aparece de forma crua e realista.": 0.708994708994709,
+      "A narrativa cobre décadas e muitos personagens, com uma estrutura episódica que mantém o público imerso naquele ambiente.": 0.8603773584905661,
+      "Só que as opiniões divergem sobre o impacto emocional: alguns se sentem desconectados, outros se envolvem de verdade.": 0.8619246861924686,
+      "A grande maioria das notas (~91%) celebra o filme como uma obra-prima.": 0.5577689243027888,
+      "Os elogios vão para o estilo visual e a edição dinâmicos, a narrativa envolvente e a brutalidade realista da violência.": 0.7333333333333333,
+      "Já uma pequena minoria das notas (~8%), os medianos, reconhece a qualidade técnica e o retrato realista, mas sente que falta uma conexão emocional mais profunda, como apontado no tema Entretenimento versus profundidade/conexão emocional.": 0.864963503649635,
+      "Para eles, o filme é mais entretenimento do que uma experiência marcante.": 0.45255474452554745,
+      "E uma fração mínima das notas (~1%) critica a estetização da violência e a representação estereotipada da favela; nesse grupo, a violência é excessiva e a construção dos personagens é superficial, o que compromete a autenticidade da obra.": 0.9691991786447639
+    }
   }
 }
