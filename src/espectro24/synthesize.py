@@ -2671,6 +2671,7 @@ def editar_narrativa(narrativa_result, protegidos: list[str], output: dict | Non
     # tentar mais vezes é só chamadas de API, nunca honestidade.
     reforcos_acumulados: list[str] = []   # blocos DISTINTOS já usados
     motivos_por_tentativa: list[str] = []
+    tentativas_detalhe: list[dict] = []   # v1.8.1 (Tarefa 1) — TODA tentativa, não só a aceita
     texto = texto_bruto
     perdidos: list[str] = []
     numeros_ok = True
@@ -2690,12 +2691,54 @@ def editar_narrativa(narrativa_result, protegidos: list[str], output: dict | Non
         if resposta is None:
             motivo = "editor não devolveu texto"
             perdidos, numeros_ok, honestidade_ok = [], True, False
+            # `similaridade` (fora do if) NÃO é tocada aqui de propósito —
+            # mantém o valor da ÚLTIMA tentativa que produziu texto
+            # avaliável (mesmo comportamento de antes da v1.8.1); só o
+            # registro POR TENTATIVA abaixo usa None, correto para ESTA
+            # tentativa específica (nada foi avaliado).
+            texto_desta_tentativa, sim_desta_tentativa = "", None
+            frases_ruins, sim_por_frase = [], {}
         else:
             teve_resposta = True
             (texto, perdidos, numeros_ok, honestidade_ok, motivo,
              similaridade, frases_ruins, sim_por_frase) = _avaliar(resposta)
+            texto_desta_tentativa = texto
+            sim_desta_tentativa = similaridade
             if not (perdidos or not numeros_ok or not honestidade_ok):
+                # v1.8.1 (Tarefa 1): registra a tentativa ACEITA também —
+                # motivo="" a distingue das reprovadas na mesma lista.
+                tentativas_detalhe.append({
+                    "tentativa": n_tentativas, "motivo": "",
+                    "similaridade": sim_desta_tentativa,
+                    "frases_sem_origem": [
+                        {"frase": f, "similaridade": sim_por_frase.get(f)}
+                        for f in frases_ruins],
+                    "texto": texto_desta_tentativa,
+                })
                 break   # aceita — nenhuma checagem falhou
+
+        # v1.8.1 (Tarefa 1) — telemetria de DIAGNÓSTICO: registra a
+        # tentativa REPROVADA por completo (motivo, similaridade, frases
+        # sem origem COM a similaridade máxima de cada uma, e o texto
+        # inteiro produzido). Até esta versão, uma tentativa reprovada
+        # desaparecia sem rastro — só a última (aceita ou não) sobrevivia
+        # em `frases_sem_origem`/`similaridade_minima_por_frase`, que
+        # persistem UM estado só. Mesmo espírito de `consensos_usados`/
+        # `metricas_fluencia`: não muda comportamento, só torna auditável
+        # POR QUE cada tentativa foi reprovada — motivado pela pergunta em
+        # aberto na regeneração da v1.8.1 (6 disparos de
+        # "conteudo_adicionado" em 3 filmes, contra 1 na validação
+        # anterior): sem o texto de cada tentativa reprovada, não dá para
+        # saber se a checagem está apertada demais ou se o modelo está
+        # mesmo inventando com frequência alta.
+        tentativas_detalhe.append({
+            "tentativa": n_tentativas, "motivo": motivo,
+            "similaridade": sim_desta_tentativa,
+            "frases_sem_origem": [
+                {"frase": f, "similaridade": sim_por_frase.get(f)}
+                for f in frases_ruins],
+            "texto": texto_desta_tentativa,
+        })
 
         motivos_por_tentativa.append(motivo)
         bloco = _reforco_desta_falha(motivo, perdidos, numeros_ok)
@@ -2716,6 +2759,7 @@ def editar_narrativa(narrativa_result, protegidos: list[str], output: dict | Non
             similaridade=similaridade,
             frases_sem_origem=frases_ruins,
             similaridade_minima_por_frase=sim_por_frase,
+            tentativas_detalhe=tentativas_detalhe,
         )
 
     # v1.7.4 (Tarefa 2): pós-processamento DETERMINÍSTICO sobre a edição já
@@ -2732,4 +2776,5 @@ def editar_narrativa(narrativa_result, protegidos: list[str], output: dict | Non
         similaridade=similaridade, capitalizacao_ajustada=capitalizacao_ajustada,
         frases_sem_origem=frases_ruins,
         similaridade_minima_por_frase=sim_por_frase,
+        tentativas_detalhe=tentativas_detalhe,
     )

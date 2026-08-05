@@ -209,6 +209,20 @@ class EdicaoResult:
     # frases (não só as candidatas), para ver a distribuição completa e
     # calibrar o limiar com contexto.
     similaridade_minima_por_frase: dict = field(default_factory=dict)
+    # v1.8.1 (Tarefa 1, DIAGNOSTICO_CONTEUDO_ADICIONADO.md): registro
+    # COMPLETO de TODA tentativa do editor (aceita ou reprovada, na ordem),
+    # não só a última. Cada item: {tentativa (int, 1-based), motivo (""
+    # para a aceita), similaridade (None se a chamada não devolveu texto),
+    # frases_sem_origem (lista de {frase, similaridade}, a mesma
+    # similaridade MÁXIMA contra o bruto usada na checagem), texto (a
+    # saída completa daquela tentativa)}. Motivação: antes desta versão,
+    # uma tentativa REPROVADA desaparecia sem rastro — só o estado da
+    # ÚLTIMA tentativa avaliada sobrevivia em `frases_sem_origem`/
+    # `similaridade_minima_por_frase` acima. Telemetria de DIAGNÓSTICO, no
+    # mesmo espírito de `consensos_usados`/`metricas_fluencia`: não muda
+    # nenhum comportamento do editor, só torna auditável POR QUE cada
+    # tentativa foi reprovada.
+    tentativas_detalhe: list = field(default_factory=list)
 
 
 @dataclass

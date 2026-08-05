@@ -321,6 +321,12 @@ def main(argv=None):
                 # adicionado — persistida SEMPRE, aceita ou não a edição.
                 "frases_sem_origem": ed.frases_sem_origem,
                 "similaridade_minima_por_frase": ed.similaridade_minima_por_frase,
+                # v1.8.1 (Tarefa 1, diagnóstico): registro completo de TODA
+                # tentativa (aceita ou reprovada) — motivo, similaridade,
+                # frases_sem_origem com similaridade máxima e o texto
+                # inteiro produzido em cada uma. Ver EdicaoResult em
+                # models.py para o formato exato.
+                "tentativas_detalhe": ed.tentativas_detalhe,
             }
             if ed.edicao_descartada:
                 print(f"⚠️  Edição descartada ({ed.motivo_descarte}) — "

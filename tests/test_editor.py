@@ -1097,3 +1097,90 @@ def test_edicao_legitima_de_ritmo_preservando_conteudo_nao_e_reprovada():
     assert ed.edicao_descartada is False
     assert ed.motivo_descarte != "conteudo_adicionado"
     assert ed.texto == editado
+
+
+# =====================================================================
+# v1.8.1 (Tarefa 1, DIAGNOSTICO_CONTEUDO_ADICIONADO.md) —
+# `tentativas_detalhe`: registro COMPLETO de toda tentativa do editor
+# (aceita ou reprovada), não só a última avaliada.
+# =====================================================================
+
+def test_tentativas_detalhe_registra_reprovada_e_aceita_na_ordem():
+    """Reprova por formato na 1ª, aceita (paráfrase legítima) na 2ª —
+    `tentativas_detalhe` precisa ter os DOIS registros, na ordem, com o
+    texto completo de cada tentativa e o motivo certo em cada uma."""
+    out = {"buckets": [{"bucket": "positivas", "share_real": 91}]}
+    res = NarrativaResult(texto=_TEXTO_LIMPO_PARA_INVOLUCRO,
+                          quantificadores_usados=[], marcadores_perspectiva=[])
+    invalido = '{\n text: "' + _TEXTO_LIMPO_PARA_INVOLUCRO + '"\n}'
+    texto_parafraseado = (
+        "A grande maioria das notas (~91%) considera o filme uma "
+        "obra-prima. Muitos elogiam bastante o estilo visual do filme."
+    )
+    respostas = [invalido, texto_parafraseado]
+
+    def fake(system, user, model):
+        return respostas.pop(0)
+
+    ed = editar_narrativa(res, montar_protegidos(res, out), output=out,
+                          client_call=fake, model="m")
+
+    assert len(ed.tentativas_detalhe) == 2
+    t1, t2 = ed.tentativas_detalhe
+    assert t1["tentativa"] == 1
+    assert t1["motivo"] == "formato_invalido"
+    assert t1["texto"] == invalido            # texto CRU da tentativa reprovada
+    assert isinstance(t1["frases_sem_origem"], list)   # pode ser [] (formato barra antes)
+    assert t2["tentativa"] == 2
+    assert t2["motivo"] == ""                 # aceita
+    assert t2["texto"] == texto_parafraseado
+    assert t2["similaridade"] is not None
+
+
+def test_tentativas_detalhe_frases_sem_origem_carrega_similaridade_maxima():
+    """Cada item de `frases_sem_origem` (dentro de uma tentativa) tem a
+    MESMA similaridade máxima usada pela checagem — não um valor
+    recalculado à parte."""
+    out = {"buckets": [{"bucket": "positivas", "share_real": 79},
+                       {"bucket": "medianas", "share_real": 18},
+                       {"bucket": "negativas", "share_real": 3}]}
+    res = NarrativaResult(texto=_INVITE_BRUTO_REAL, quantificadores_usados=[],
+                          marcadores_perspectiva=[])
+
+    def fake(system, user, model):
+        return _INVITE_EDITADO_COM_DEFEITO
+
+    ed = editar_narrativa(res, montar_protegidos(res, out), output=out,
+                          client_call=fake, model="m")
+
+    assert ed.edicao_descartada is True
+    assert len(ed.tentativas_detalhe) == ed.n_tentativas
+    for t in ed.tentativas_detalhe:
+        assert t["motivo"] == "conteudo_adicionado"
+        assert t["texto"] == _INVITE_EDITADO_COM_DEFEITO   # o mock sempre devolve o mesmo texto
+        for item in t["frases_sem_origem"]:
+            assert set(item) == {"frase", "similaridade"}
+            # a mesma similaridade que apareceria em similaridade_minima_por_frase
+            assert item["similaridade"] == ed.similaridade_minima_por_frase[item["frase"]]
+
+
+def test_tentativas_detalhe_registra_todas_as_tentativas_no_descarte_total():
+    """Esgotadas as `1 + EDITOR_MAX_TENTATIVAS` chamadas (caso real do
+    invólucro), `tentativas_detalhe` tem exatamente esse número de
+    registros, todos com motivo não-vazio (nenhuma foi aceita)."""
+    out = {"buckets": [{"bucket": "positivas", "share_real": 91}]}
+    res = NarrativaResult(texto=_TEXTO_LIMPO_PARA_INVOLUCRO,
+                          quantificadores_usados=[], marcadores_perspectiva=[])
+    invalido = '{\n text: "' + _TEXTO_LIMPO_PARA_INVOLUCRO + '"\n}'
+
+    def fake(system, user, model):
+        return invalido
+
+    ed = editar_narrativa(res, montar_protegidos(res, out), output=out,
+                          client_call=fake, model="m")
+
+    assert ed.edicao_descartada is True
+    assert len(ed.tentativas_detalhe) == ed.n_tentativas == 4
+    assert all(t["motivo"] == "formato_invalido" for t in ed.tentativas_detalhe)
+    assert all(t["texto"] == invalido for t in ed.tentativas_detalhe)
+    assert [t["tentativa"] for t in ed.tentativas_detalhe] == [1, 2, 3, 4]
