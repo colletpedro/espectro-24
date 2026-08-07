@@ -164,17 +164,21 @@ def carregar(slug: str, raiz: str | Path = DADOS_BRUTO_DIR
     return meta, reviews
 
 
-def _percentil(datas_ordenadas: list[str], p: float) -> str:
-    """Percentil `p` (0-1) por nearest-rank sobre datas já ordenadas.
+def percentil(valores_ordenados: list, p: float):
+    """Percentil `p` (0-1) por nearest-rank sobre uma sequência JÁ ordenada.
 
-    `n == 1` devolve a única data para qualquer `p` — não há o que
+    Genérico — funciona sobre datas (`janela_temporal`) e sobre inteiros de
+    `pagina_origem` (`distribuicao_pagina_origem`, v1.9.2): uma única fórmula
+    de percentil, não duas.
+
+    `n == 1` devolve o único valor para qualquer `p` — não há o que
     interpolar. Índice sempre clampado a `[0, n-1]`.
     """
-    n = len(datas_ordenadas)
+    n = len(valores_ordenados)
     if n == 1:
-        return datas_ordenadas[0]
+        return valores_ordenados[0]
     idx = max(0, min(n - 1, round(p * (n - 1))))
-    return datas_ordenadas[idx]
+    return valores_ordenados[idx]
 
 
 def janela_temporal(reviews: Iterable[ReviewBruta]) -> dict | None:
@@ -201,9 +205,67 @@ def janela_temporal(reviews: Iterable[ReviewBruta]) -> dict | None:
         "n": len(datas),
         "min": datas[0],
         "max": datas[-1],
-        "p5": _percentil(datas, 0.05),
-        "p50": _percentil(datas, 0.50),
-        "p95": _percentil(datas, 0.95),
+        "p5": percentil(datas, 0.05),
+        "p50": percentil(datas, 0.50),
+        "p95": percentil(datas, 0.95),
+    }
+
+
+def distribuicao_pagina_origem(
+    reviews: Iterable[ReviewBruta],
+    orcamento_por_nivel: dict[float, int] | None = None,
+) -> dict | None:
+    """[v1.9.2, §3[B']] min/max/p5/p50/p95 de `pagina_origem` — instrumento
+    temporal PRIMÁRIO, sobre a amostra SELECIONADA (quem chama decide o quê:
+    normalmente `pipeline.py` passa só as reviews escolhidas de um bucket,
+    não o bruto inteiro).
+
+    Substitui `janela_temporal` (por `data`) como sinal principal de "onde a
+    amostra está": `data` é a data ASSISTIDA, contaminada por quem registra
+    filmes com atraso (causa do resultado misto do gate de profundidade,
+    v1.9.1). `pagina_origem`, sob ordenação cronológica, é o RANK DE ADIÇÃO
+    — sem essa contaminação.
+
+    `fracao_profunda`: fração da amostra cujo `pagina_origem` cai no bloco
+    PROFUNDO do respectivo nível (posicionamento estratificado, §3[B]) —
+    calculada com a MESMA `alocacao.dividir_raso_profundo` usada na coleta,
+    para que telemetria e coleta nunca divirjam sobre o que conta como
+    "profundo". `None` quando `orcamento_por_nivel` não é fornecido (não dá
+    para saber onde fica o corte raso/profundo sem o orçamento que gerou a
+    amostra).
+
+    Função pura e bucket-agnóstica, como `janela_temporal`. `None` quando a
+    lista está vazia.
+    """
+    from .alocacao import dividir_raso_profundo
+
+    reviews = list(reviews)
+    paginas = sorted(r.pagina_origem for r in reviews)
+    if not paginas:
+        return None
+
+    fracao_profunda = None
+    if orcamento_por_nivel is not None:
+        n_raso_por_nivel: dict[float, int] = {}
+        n_profundas = 0
+        for r in reviews:
+            orc = orcamento_por_nivel.get(r.nivel)
+            if orc is None:
+                continue
+            if r.nivel not in n_raso_por_nivel:
+                n_raso_por_nivel[r.nivel], _ = dividir_raso_profundo(orc)
+            if r.pagina_origem > n_raso_por_nivel[r.nivel]:
+                n_profundas += 1
+        fracao_profunda = n_profundas / len(reviews)
+
+    return {
+        "n": len(paginas),
+        "min": paginas[0],
+        "max": paginas[-1],
+        "p5": percentil(paginas, 0.05),
+        "p50": percentil(paginas, 0.50),
+        "p95": percentil(paginas, 0.95),
+        "fracao_profunda": fracao_profunda,
     }
 
 

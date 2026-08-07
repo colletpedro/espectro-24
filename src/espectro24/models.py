@@ -326,6 +326,11 @@ class BucketResult:
     composicao_atingida: dict = field(default_factory=dict)
     cascata_por_degrau: dict = field(default_factory=dict)
     deficit_redistribuido: int = 0
+    # v1.9.2 (§3[B']): instrumento temporal PRIMÁRIO — distribuição de
+    # `pagina_origem` (rank de adição, sem a contaminação de `data`, que é a
+    # data ASSISTIDA) sobre a amostra SELECIONADA deste bucket.
+    # `{n, min, max, p5, p50, p95, fracao_profunda}` ou `None`.
+    distribuicao_pagina_origem: dict | None = None
     temas: list[Tema] = field(default_factory=list)
     observacao_geral: str = ""
     # v1.1.2: rede de segurança pós-parsing (§D) — telemetria, não correção

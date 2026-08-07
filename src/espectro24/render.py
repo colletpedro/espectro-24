@@ -89,6 +89,10 @@ def build_output(slug: str, buckets: list[BucketResult], data_coleta: str,
                 "composicao_atingida": b.composicao_atingida,
                 "cascata_por_degrau": b.cascata_por_degrau,
                 "deficit_redistribuido": b.deficit_redistribuido,
+                # v1.9.2 (§3[B']): instrumento temporal PRIMÁRIO — ver
+                # `janela_temporal` (bloco global `coleta`) para o proxy
+                # SECUNDÁRIO por `data`, contaminado por data assistida.
+                "distribuicao_pagina_origem": b.distribuicao_pagina_origem,
                 "niveis": [lvl.metadata() for lvl in b.niveis],
                 "temas": [
                     {

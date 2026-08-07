@@ -78,11 +78,19 @@ def montar_buckets(selecao, superset=None) -> list[BucketResult]:
     sempre — render e frontend o consomem e estão fora do escopo desta
     versão; `estado_piso` entra ao lado, não no lugar.
     """
+    from .bruto import distribuicao_pagina_origem
     from .config import BUCKET_ALVO, PISO_POR_BUCKET
 
     paginas = {}
+    orcamento_por_nivel = None
     if superset is not None:
         paginas = {n: nb.paginas_gastas for n, nb in superset.niveis.items()}
+        # v1.9.2 (§3[B']): orçamento por nível, para classificar a amostra
+        # selecionada em rasa/profunda (`distribuicao_pagina_origem`) com a
+        # MESMA divisão usada na coleta — chaves do meta.json são string.
+        orc_meta = superset.meta.get("orcamento_paginas_por_nivel")
+        if orc_meta:
+            orcamento_por_nivel = {float(k): v for k, v in orc_meta.items()}
 
     buckets: list[BucketResult] = []
     for nome in BUCKETS:
@@ -111,6 +119,7 @@ def montar_buckets(selecao, superset=None) -> list[BucketResult]:
             modo = "completo"
         else:
             modo = "reduzido"
+        amostra = [r for ns in sel.niveis.values() for r in ns.validas]
         buckets.append(BucketResult(
             nome=nome, alvo=alvo, modo=modo, estado_piso=sel.estado_piso,
             niveis=lvls,
@@ -118,6 +127,8 @@ def montar_buckets(selecao, superset=None) -> list[BucketResult]:
             composicao_atingida={str(k): v for k, v in sel.composicao_atingida.items()},
             cascata_por_degrau={str(k): v for k, v in sel.cascata_por_degrau.items()},
             deficit_redistribuido=sel.deficit_redistribuido,
+            distribuicao_pagina_origem=distribuicao_pagina_origem(
+                amostra, orcamento_por_nivel),
         ))
     return buckets
 
