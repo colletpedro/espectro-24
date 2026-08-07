@@ -131,12 +131,22 @@
   // avisa que os tamanhos NÃO são prevalência (regra v1.2.1). Com ela, o peso
   // real está exibido em cada grupo e o texto passa a explicar o método.
   // Mantidos em sincronia com render.py (DISCLAIMER_*).
+  // v1.9.1: as cotas vêm do PRÓPRIO JSON (f.buckets[i].alvo), não de um
+  // literal — o frontend não importa config.py, então deriva do dado (mesmo
+  // princípio do des-hardcoding já feito em render.py/synthesize.py na
+  // v1.9.0). A cota mudou de 50/20/30 para 40/40/40 nessa versão; um
+  // literal aqui teria ficado desatualizado sem nenhum erro visível.
+  function cotasTexto(f) {
+    return (f.buckets || []).map(function (b) { return b.alvo; }).join(" · ");
+  }
+
   function detailDivider(f) {
     var temDistribuicao = !!f.distribuicao;
+    var cotas = cotasTexto(f);
     var texto = temDistribuicao
-      ? "Análise em profundidade igual por grupo (50 · 20 · 30 reviews); " +
+      ? "Análise em profundidade igual por grupo (" + cotas + " reviews); " +
         "o peso real de cada faixa está indicado em cada grupo."
-      : "Grupos de 50 · 20 · 30 reviews são cotas de coleta — " +
+      : "Grupos de " + cotas + " reviews são cotas de coleta — " +
         "não a proporção real das opiniões.";
     var el = document.createElement("div");
     el.className = "detail-divider";
