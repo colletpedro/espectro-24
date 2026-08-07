@@ -1,11 +1,17 @@
 # Espectro 24
 
 Agregador de reviews do [Letterboxd](https://letterboxd.com) que separa opiniões
-em três **buckets por nota** — negativas (0.5–2.5), medianas (3–3.5), positivas
-(4–5) — e produz, via LLM, uma **síntese temática** de cada bucket, **sem
+em três **buckets por nota** — negativas (0,5–2,0), mornos (2,5–3,0), positivas
+(3,5–5,0) — e produz, via LLM, uma **síntese temática** de cada bucket, **sem
 spoilers**, para quem ainda não assistiu ao filme.
 
-A autoridade do projeto é [`SPEC.md`](SPEC.md) (v1.2.3). As incógnitas técnicas
+Desde a **v1.9.0**, coleta e análise são camadas separadas: a coleta raspa um
+**superset por nível de estrela** e persiste tudo em `dados/bruto/<slug>/`;
+fronteira de bucket, cota, filtros e piso são **parâmetros aplicados
+downstream**, sobre esse material. Consequência prática: mudar qualquer uma
+dessas decisões custa **zero requisições de rede**.
+
+A autoridade do projeto é [`SPEC.md`](SPEC.md) (v1.9.0). As incógnitas técnicas
 foram resolvidas na Fase 1 — ver [`FASE1_INCOGNITAS.md`](FASE1_INCOGNITAS.md).
 
 ## Instalação
@@ -80,9 +86,13 @@ explícito. O modelo default depende do provider resolvido
 As instruções fixas do prompt (§D da spec) são **byte-idênticas** entre os
 dois providers; só o transporte muda.
 
-Flags úteis: `--provider` (`gemini`|`anthropic`), `--model`, `--cota` (válidas
-por nível, default 10), `--max-pages` (teto por nível, default 6),
-`--cache-dir` (default `resultado/cache`), `--out-dir` (default `resultado`).
+Flags úteis: `--provider` (`gemini`|`anthropic`|`deepseek`), `--model`,
+`--cota` (cota de análise **por bucket**, default 40 — era por nível até a
+v1.8.2), `--max-pages` (teto por nível, default 4), `--ordenacao`
+(`mais_recentes` (default) | `mais_antigas` | `atividade` — parâmetro de
+amostragem, ver SPEC §2.3), `--dados-dir` (superset bruto, default
+`dados/bruto`), `--cache-dir` (default `resultado/cache`), `--out-dir`
+(default `resultado`).
 
 ### Comportamento
 - **Coleta educada:** delay ≥2s entre requisições, sem paralelismo. Cache em disco
