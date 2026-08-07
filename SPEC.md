@@ -1099,6 +1099,65 @@ sequencial ≥2s continua valendo, filme a filme) e qualquer mudança de
 parâmetro de coleta — o harness só ORQUESTRA a execução de [A]→[B'] já
 existente, não modifica seu comportamento.
 
+**Diagnose do déficit de buckets nos 3 filmes da Entrega 2 (v1.9.3,
+2026-08-07, offline sobre o bruto já em disco — zero requisições).** O
+relatório da Entrega 2 afirmou "os 3 fecharam 40/40/40" — **errado**,
+contradizendo a própria tabela: só 5 dos 9 buckets atingem a cota cheia
+de 40 (`parasite-2019` 28/40/32, `eighth-grade` 38/39/40,
+`everything-everywhere-all-at-once` 40/40/40); os 9 fecham
+`estado_piso=completa` (limiar n≥15, §3[C3]) — as duas afirmações não são
+a mesma coisa, e a confusão entre elas foi o erro. Corrigido em §5.6.
+
+Classificação dos 4 déficits (`parasite-2019`/negativas=28,
+`parasite-2019`/positivas=32, `eighth-grade`/negativas=38,
+`eighth-grade`/medianas=39), via `selecao.selecionar` reexecutado sobre o
+bruto persistido:
+
+- **`motivo_parada_por_nivel` = `orcamento_esgotado` em TODOS os 30
+  níveis dos 3 filmes** — nenhum esgotou material organicamente;
+  `paginas_gastas_por_nivel` == `orcamento_paginas_por_nivel` em todos.
+- **Zero sondagem caindo em página vazia dentro do orçamento** — para
+  cada nível, o número de `pagina_origem` distintos com review bate
+  exatamente com `paginas_gastas`; toda página orçada retornou conteúdo
+  real. Não há DESPERDÍCIO em nenhum dos 4 déficits.
+- **Descarte dominado por `abaixo_min_chars`**, 63-87% do bruto de cada
+  nível deficitário (ex.: `parasite-2019`/negativas nível 2,0★: 101/120;
+  `parasite-2019`/positivas nível 5,0★: 78/96) — o filtro `MIN_CHARS=150`
+  descarta reviews curtas. `deficit_redistribuido` (§3[C1]) ativou
+  corretamente em todos os 4 (puxou excedente de níveis com sobra para os
+  com falta, dentro do mesmo bucket) mas não bastou porque o BUCKET
+  inteiro carecia de material elegível, não só um nível.
+- **Hipótese de spoiler (`parasite-2019`/positivas, suspeita de
+  reviravolta) REFUTADA.** Fração de `spoiler_flag=True` sobre o bruto
+  por bucket, nos 6 filmes já coletados: 0,5%-4,9%, `parasite-2019` em
+  2,1%-2,6% — dentro do mesmo intervalo dos outros 5 filmes (`cure`,
+  aliás, tem a fração mais alta, 4,9% em `medianas`/`positivas`, e fechou
+  40/40/40). Spoiler não explica um déficit de 20% da cota; a causa é
+  `abaixo_min_chars`, não `spoiler`.
+- **Comparação com o catálogo (`cure`/`cidade-de-deus`/`the-invite-2026`,
+  os 3 fecham 40/40/40 nos 9 buckets):** a diferença não é volume bruto
+  (`n_brutas` por nível é da mesma ordem de grandeza nos dois grupos) —
+  é a FRAÇÃO que sobrevive ao filtro de 150 caracteres. No nível 2,0★ de
+  `negativas`, o pool elegível pós-filtro foi ~12% do bruto em
+  `parasite-2019` (14/120) contra ~36% em `cidade-de-deus` (43/120), quase
+  3× de diferença. Estrutural, não ruído: filmes muito populares atraem
+  um volume desproporcional de reviews curtas de reação rápida
+  ("garbage", "meh"), diluindo o pool de texto substantivo (≥150 chars)
+  amostrado dentro de um orçamento de páginas FIXO — o histograma de
+  notas é enorme, mas isso não garante densidade de review LONGA na
+  amostra. **Achado estrutural para o lote (registrado, não corrigido
+  nesta sessão):** filmes populares (alto volume no Letterboxd) tendem a
+  fechar buckets extremos (`negativas`/`positivas`) abaixo da cota mais
+  do que filmes de nicho, mesmo com orçamento de páginas idêntico — o
+  piso escalonado absorve isso corretamente (n≥15 ainda dá `completa`),
+  mas a narrativa de um filme popular pode ter `n` menor que a de um
+  filme obscuro do catálogo, contra a intuição.
+- **Achado lateral, fora do escopo desta diagnose:** recolher os MESMOS 3
+  filmes do zero duas vezes (a 1ª rodada de dados foi apagada por engano
+  e precisou ser refeita, ~2h de intervalo entre as duas coletas) produziu
+  `n` finais diferentes por bucket sob os MESMOS parâmetros — ver §5.6,
+  "Achado lateral não previsto".
+
 ### [C2] Seleção downstream — cota 40/40/40 sobre o bruto persistido (v1.9.0)
 
 Lê `dados/bruto/<slug>/` e escolhe **até 40 reviews por bucket**, com tudo o
@@ -1902,7 +1961,7 @@ Por bucket: **(v1.4.0)** `share_real` (percentual inteiro), **omitido** quando n
 3. Filme obscuro (a escolher): modo degradado severo — piso de 3 por bucket respeitado, bucket sem análise renderiza aviso (contagem + `reviews_url`) e não inventa temas; a cascata de relaxamento por nível (`filtro_aplicado` assumindo 50/0) é exercitada aqui.
 4. **Nenhum texto truncado chega ao LLM:** teste com filme contendo reviews longas colapsadas; verificar que todas as reviews enviadas ao LLM têm texto completo ou foram descartadas com registro.
 5. Segunda execução de qualquer filme: **zero requisições de rede** (100% cache).
-6. Orçamento de requisições por filme novo — **reescrito na v1.9.1**: teto absoluto de **paginação** = **48** (3 buckets × 16 páginas de orçamento — era 40 = 10 níveis × 4 na v1.9.0, computado por nível; a v1.9.1 muda a unidade de contagem para bucket, não o gasto real, que segue medido, não projetado), + 1 histograma + truncadas completadas + busca de slug. **Valor típico MEDIDO sob a v1.9.0 (2026-08-07, 3 filmes): 58-65, média 61** — 32-33 de paginação, 24-33 de completamento, 1 de histograma; abaixo dos 83 (`cure`) e 68 (`cidade-de-deus`) da v1.8.2, apesar de ~50% mais material bruto coletado. **Valor MEDIDO sob a v1.9.1, recoleta INCREMENTAL sobre o bruto da v1.9.0 (2026-08-07, 3 filmes): 17-26, média 21** — não comparável 1:1 com os 61 da v1.9.0 (que foi coleta do zero); é o custo real de alargar uma coleta já existente para o orçamento maior, o caso de uso que a incrementalidade do bruto (§3[B']) foi desenhada para servir. Tabela completa e o achado residual (`cidade-de-deus`/`medianas` fechou 37/40, não 40/40) em §3[B], "Resultado MEDIDO da recoleta v1.9.1". **Valor ESPERADO sob a v1.9.2** (parada determinística — orçamento sempre gasto, salvo esgotamento real): ~32→48 páginas/filme, ~61→~85 requisições numa coleta DO ZERO — custo aceito explicitamente em troca de determinismo (§3[B]). **Valor MEDIDO (2026-08-07, recoleta incremental sobre o bruto da v1.9.1, 3 filmes): 13-15, média 14,3** — não comparável ao valor esperado de coleta do zero, mesmo motivo das sessões anteriores (a maior parte do material já estava cacheada; o custo novo concentrou-se nas posições profundas, nunca visitadas antes). **Resultado central: os 3 filmes fecharam 40/40/40 nos 9 buckets — o déficit residual da v1.9.1 (`cidade-de-deus`/`medianas`, 37/40) fechou.** Tabela completa em §3[B], "Resultado MEDIDO da recoleta v1.9.2". **Valor MEDIDO sob a v1.9.3 (coleta DO ZERO, 3 filmes, harness de lote, 2026-08-07): 61-76 requisições, média 69,0** (`parasite-2019`=61, `eighth-grade`=70, `everything-everywhere-all-at-once`=76) — a primeira medição do zero desde a v1.9.0, com o coletor da v1.9.2 (parada determinística + posicionamento estratificado); os 3 fecharam 40/40/40 (9/9 buckets `completa`). Tempo de parede: 489,3s para os 3 (média 163,1s/filme, ~2,7 min/filme, com `DELAY_SECONDS=2.0`). Disco do bruto persistido: 220-268 KB/filme, média 242,7 KB/filme. **Extrapolação para 30 filmes: ~2070 requisições, ~82 min (~1,4 h), ~7,1 MB. Para 50 filmes: ~3450 requisições, ~136 min (~2,3 h), ~11,8 MB** — ambos bem abaixo do teto de ~4h que dispararia parada e pedido de decisão ao usuário (§3[H]).
+6. Orçamento de requisições por filme novo — **reescrito na v1.9.1**: teto absoluto de **paginação** = **48** (3 buckets × 16 páginas de orçamento — era 40 = 10 níveis × 4 na v1.9.0, computado por nível; a v1.9.1 muda a unidade de contagem para bucket, não o gasto real, que segue medido, não projetado), + 1 histograma + truncadas completadas + busca de slug. **Valor típico MEDIDO sob a v1.9.0 (2026-08-07, 3 filmes): 58-65, média 61** — 32-33 de paginação, 24-33 de completamento, 1 de histograma; abaixo dos 83 (`cure`) e 68 (`cidade-de-deus`) da v1.8.2, apesar de ~50% mais material bruto coletado. **Valor MEDIDO sob a v1.9.1, recoleta INCREMENTAL sobre o bruto da v1.9.0 (2026-08-07, 3 filmes): 17-26, média 21** — não comparável 1:1 com os 61 da v1.9.0 (que foi coleta do zero); é o custo real de alargar uma coleta já existente para o orçamento maior, o caso de uso que a incrementalidade do bruto (§3[B']) foi desenhada para servir. Tabela completa e o achado residual (`cidade-de-deus`/`medianas` fechou 37/40, não 40/40) em §3[B], "Resultado MEDIDO da recoleta v1.9.1". **Valor ESPERADO sob a v1.9.2** (parada determinística — orçamento sempre gasto, salvo esgotamento real): ~32→48 páginas/filme, ~61→~85 requisições numa coleta DO ZERO — custo aceito explicitamente em troca de determinismo (§3[B]). **Valor MEDIDO (2026-08-07, recoleta incremental sobre o bruto da v1.9.1, 3 filmes): 13-15, média 14,3** — não comparável ao valor esperado de coleta do zero, mesmo motivo das sessões anteriores (a maior parte do material já estava cacheada; o custo novo concentrou-se nas posições profundas, nunca visitadas antes). **Resultado central: os 3 filmes fecharam 40/40/40 nos 9 buckets — o déficit residual da v1.9.1 (`cidade-de-deus`/`medianas`, 37/40) fechou.** Tabela completa em §3[B], "Resultado MEDIDO da recoleta v1.9.2". **Valor MEDIDO sob a v1.9.3 (coleta DO ZERO, 3 filmes, harness de lote, 2026-08-07): 67-73 requisições, média 70,0** (`parasite-2019`=67, `eighth-grade`=70, `everything-everywhere-all-at-once`=73) — a primeira medição do zero desde a v1.9.0, com o coletor da v1.9.2 (parada determinística + posicionamento estratificado). **Correção de registro (achado da diagnose pós-Entrega 2, ver §3[H] "Diagnose do déficit de buckets"): os 9 buckets fecham `estado_piso=completa` (n≥15 em todos), mas só 5 dos 9 atingem a COTA cheia de 40** — `parasite-2019` fechou 28/40/32 (negativas/medianas/positivas), `eighth-grade` 38/39/40, `everything-everywhere-all-at-once` 40/40/40; NÃO é "40/40/40 nos 9 buckets" como uma versão anterior deste parágrafo afirmou incorretamente, contradizendo a própria tabela do relatório da Entrega 2. Diagnose completa (motivo de parada, páginas orçadas vs. gastas, descarte discriminado, teste da hipótese de spoiler) em §3[H]: os 4 déficits são 100% ESCASSEZ (filtro `min_chars=150` descartando reviews curtas — 63-87% do bruto de cada nível deficitário — sobre um bruto onde TODAS as páginas orçadas retornaram conteúdo, zero sondagem caindo em página vazia); nenhum é DESPERDÍCIO. Tempo de parede: 499,5s para os 3 (média 166,5s/filme, ~2,8 min/filme, `DELAY_SECONDS=2.0`). Disco do bruto persistido: 240-264 KB/filme, média 248 KB/filme. **Extrapolação para 30 filmes: ~2100 requisições, ~83 min (~1,4 h), ~7,3 MB. Para 50 filmes: ~3500 requisições, ~139 min (~2,3 h), ~12,1 MB** — ambos bem abaixo do teto de ~4h que dispararia parada e pedido de decisão ao usuário (§3[H]). **Achado lateral não previsto:** recoletando os MESMOS 3 filmes do zero ~2h depois com os MESMOS parâmetros, `n` final por bucket variou (`parasite-2019`/positivas: 36→32; `eighth-grade`/negativas: 37→38, medianas: 37→39) — o site é um alvo VIVO sob `by/added`; buckets que fecham exatamente na cota mascaram essa variância, buckets abaixo dela a revelam. Registrado como achado, não corrigido (fora de escopo desta sessão).
 
 ---
 
@@ -1919,11 +1978,12 @@ As três incógnitas abaixo foram resolvidas na Fase 1; os achados já estão in
 ## Changelog
 - **v1.9.3** (2026-08-07) — harness de LOTE (§3[H]), infraestrutura sobre a camada de coleta fechada na v1.9.2. Nenhum parâmetro de coleta tocado; nenhuma síntese/narrativa.
   - **(1) Checkpoint em arquivo.** `estado.json` por lote, atualizado APÓS cada filme (não em lote ao final) — resume pula todo slug já `concluido`, sem refazer trabalho nem perder o parcial de um lote interrompido a qualquer momento.
-  - **(2) Validação de slug — 1 requisição, antes do orçamento de páginas.** Página principal do filme (mesma usada por `ficha.resolver_ano_letterboxd`): 404/erro → slug inválido; 200 sem reviews (contagem do tooltip de navegação) → `sem_reviews`. Histograma ausente NÃO é motivo de rejeição — o pipeline já degrada esse caso (§3[G]), pré-validar de novo seria custo redundante.
+  - **(2) Validação de slug — 1 requisição, antes do orçamento de páginas.** Listagem "qualquer nota" (`reviews_qualquer_nota_url`) + `parser.parse_reviews` já testado: 404/erro → slug inválido; 200 sem review reconhecida pelo parser → `sem_reviews`. **Corrigido durante a Entrega 2** — a primeira versão buscava a página principal do filme e casava a tag `js-route-reviews`, que só existe em páginas de LISTAGEM de reviews, não na raiz; achado real contra os 3 filmes de teste, invisível nas fixtures sintéticas. Detalhe em §3[H]. Histograma ausente NÃO é motivo de rejeição — o pipeline já degrada esse caso (§3[G]), pré-validar de novo seria custo redundante.
   - **(3) Falha isolada.** Todo o pipeline de coleta de um slug roda dentro de um `try/except`; qualquer exceção vira entrada `falhou` no checkpoint com o motivo, e o lote segue.
   - **(4) `material_esgotado` tratado como caso ESPERADO** — os 3 filmes do catálogo, populares, nunca exercitaram esse caminho em produção; testado explicitamente que não quebra persistência, `montar_buckets` nem o JSON.
   - **(5) Estimativa de custo medida antes do lote** — 3 filmes DO ZERO (`parasite-2019`, `eighth-grade`, `everything-everywhere-all-at-once`): 61-76 requisições/filme (média 69,0), ~163s/filme, 220-268 KB/filme (média 242,7 KB). Extrapolado: 30 filmes ≈ 2070 requisições / ~1,4h / ~7,1 MB; 50 filmes ≈ 3450 requisições / ~2,3h / ~11,8 MB — ambos abaixo do teto de ~4h, sem necessidade de veto. Detalhe completo em §5.6.
   - **(6) Lote executado — `<PREENCHER após a entrega 3, com a lista fornecida pelo usuário>`.**
+  - **(7) Diagnose do déficit de buckets nos 3 filmes da Entrega 2** — corrige o registro "40/40/40 nos 9 buckets" (errado; real: 5/9 na cota, 9/9 em `estado_piso=completa`) e classifica os 4 déficits como ESCASSEZ (filtro `min_chars`, zero desperdício de página) via `selecao.selecionar` reexecutado offline sobre o bruto. Hipótese de spoiler testada e refutada. Achado estrutural: filmes populares tendem a fechar buckets extremos abaixo da cota mais que filmes de nicho, mesmo com orçamento idêntico — registrado, não corrigido. Detalhe completo em §3[H].
 - **v1.9.2** (2026-08-07) — fecha o gate de profundidade da v1.9.1 e resolve o déficit residual de `medianas`. Última sessão de coleta antes do lote de 30-50 filmes. Fronteiras, cota, piso escalonado, `min_chars`, ordenação e qualquer etapa de síntese/narrador/editor **não tocados**.
   - **(1) Parada por ALVO removida (§3[B]).** Era um vestígio de quando o teto era por NÍVEL e o custo por BUCKET não tinha limite (v1.9.0); sob o orçamento por bucket da v1.9.1 virou fonte de NÃO-DETERMINISMO — foi o mecanismo exato do 37/40 residual de `cidade-de-deus` (nível 2,5★ parou por ALVO na página 3, com 3 páginas de orçamento ainda disponíveis, página 4 nunca buscada). Agora o orçamento de páginas por nível é sempre gasto INTEGRALMENTE; única parada antecipada é esgotamento REAL de material. `motivo_parada` por nível: `"orcamento_esgotado"` \| `"material_esgotado"`, gravado em `meta.json`. O piso de páginas por nível (gate do ALVO) some — a garantia de reversibilidade da fronteira (§2.2) já vinha, desde a v1.9.1, do piso da ALOCAÇÃO de páginas, não deste parâmetro. `FOLGA_ALVO_COLETA` sobrevive com escopo reduzido: só decide o orçamento do completamento [C'], nunca mais quando parar de paginar. Custo aceito e medido em troca de determinismo — ver Resultado MEDIDO.
   - **(2) Posicionamento estratificado por profundidade (§3[B]).** O defeito: páginas de um nível eram sempre as primeiras `N` consecutivas, amostrando sistematicamente o mais recente sob `by/added` (79-100% da amostra em ~7 semanas, medido na v1.9.0). Correção: `RESERVA_PROFUNDIDADE = 0,25` do orçamento de cada nível é posicionada em progressão geométrica (`n_raso+2, n_raso+4, n_raso+8, …`) a partir do fim do bloco raso; a primeira posição profunda vazia revela a profundidade real (por monotonicidade da paginação), e o orçamento não gasto é redistribuído para dentro do intervalo JÁ CONFIRMADO como válido (nunca além — no máximo 1 página desperdiçada por nível). A redistribuição **reaproveita `redistribuir_deficit`** — terceiro uso da mesma função (reviews entre níveis, páginas entre níveis, agora posições dentro de um nível), nenhum mecanismo novo. **Custo IGUAL ao consecutivo no caso comum (profundidade folgada); nunca MAIOR em nenhum caso** — no caso de fronteira exata (profundidade real cai dentro de um salto geométrico ainda não confirmado), o orçamento pode ficar parcialmente não-gasto em vez de arriscar mais de 1 página vazia — testado explicitamente (`tests/test_posicionamento.py`). Degrada para consecutivo puro quando o nível é raso (material esgota dentro do bloco raso, fase profunda nunca tentada). **Racional de reversibilidade:** com raso e profundo no MESMO bruto, "analisar só o recente" vs. "analisar tudo" vira parâmetro filtrável por `pagina_origem` na seleção (não implementado, mas agora POSSÍVEL sem recoleta) — a profundidade de paginação era o único parâmetro de coleta que o superset ainda não tornava reversível.

@@ -9,3 +9,8 @@ __pycache__/
 
 # Cache de rede reconstruível (SPEC.md §3[B]) — não é código-fonte
 resultado/cache/
+
+# Checkpoint de execução do harness de lote (SPEC.md §3[H]) — estado local
+# de UMA rodada, não um artefato a versionar (ao contrário de dados/bruto/,
+# que É versionado: é o superset reusável, §3[B']).
+dados/lote/
