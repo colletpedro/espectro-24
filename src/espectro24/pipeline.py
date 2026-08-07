@@ -72,6 +72,7 @@ def montar_buckets(selecao, superset=None) -> list[BucketResult]:
                 n_descartadas_curtas=ns.n_descartadas_curtas,
                 n_descartadas_truncamento=ns.n_descartadas_truncamento,
                 n_indisponivel_truncamento=ns.n_indisponivel_truncamento,
+                motivos_descarte=ns.motivos_descarte,
                 n_alvo=ns.n_alvo,
                 validas=[r.para_review() for r in ns.validas],
             ))

@@ -25,6 +25,15 @@ from .config import (
 )
 
 
+# Ordem de precedência da discriminação de descarte (v1.9.1, §3[C2]) — cada
+# review cai em EXATAMENTE uma categoria, nesta ordem. `duplicata`/`outros`
+# são defensivos: esperados sempre zero (o dedupe real acontece na
+# persistência do bruto, §3[B']); existirem e não serem zero é sinal de bug
+# na camada de baixo, não desta camada.
+_MOTIVOS_DESCARTE = ("truncada_sem_texto", "spoiler", "abaixo_min_chars",
+                    "excedente_cota", "duplicata", "outros")
+
+
 @dataclass
 class NivelSelecionado:
     nivel: float
@@ -37,6 +46,10 @@ class NivelSelecionado:
     n_descartadas_curtas: int = 0
     n_descartadas_truncamento: int = 0
     n_indisponivel_truncamento: int = 0
+    # v1.9.1: dict motivo→n — ver `_discriminar_descartes`. Os quatro campos
+    # acima continuam existindo (consumidores antigos), mas são DERIVADOS
+    # deste dict, não computados de novo — uma fonte de verdade.
+    motivos_descarte: dict = field(default_factory=dict)
 
     @property
     def n_validas(self) -> int:
@@ -70,6 +83,57 @@ def _escada(min_chars: int, cascata: list[int]) -> list[int]:
     `[150, 50, 0]` com um 200 ignorado.
     """
     return [min_chars] + [c for c in cascata if c < min_chars]
+
+
+def _discriminar_descartes(brutas_do_nivel: list[ReviewBruta],
+                           selecionadas_ids: set[str],
+                           filtro_aplicado: int,
+                           excluir_spoiler: bool) -> dict[str, int]:
+    """Classifica cada review do bruto de um nível em EXATAMENTE uma categoria
+    — `selecionada` (não contada) ou um dos motivos de `_MOTIVOS_DESCARTE` —
+    numa ordem de precedência fixa (v1.9.1, §3[C2]):
+
+    0. `duplicata` — id já visto nesta mesma passagem (defensivo; o dedupe
+       real acontece na persistência do bruto, §3[B'] — esperado sempre 0);
+    1. selecionada — está em `selecionadas_ids` (não conta como descarte);
+    2. `truncada_sem_texto` — `texto_completo == false`;
+    3. `spoiler` — marcada spoiler E `excluir_spoiler=True` (não conta quando
+       o parâmetro é `False`: a review É elegível nesse caso);
+    4. `abaixo_min_chars` — mais curta que `filtro_aplicado` (o degrau da
+       cascata que vigorou NAQUELE nível, não o `min_chars` nominal);
+    5. `excedente_cota` — passou em tudo, mas ficou além do que a
+       alocação/redistribuição permitiu;
+    6. `outros` — catch-all; esperado sempre 0, canário de classificação
+       incompleta.
+
+    Garantia: `sum(resultado.values()) == len(brutas_do_nivel) - len(selecionadas_ids)`,
+    sempre — todo review classificado numa categoria e só uma.
+    """
+    motivos = {m: 0 for m in _MOTIVOS_DESCARTE}
+    vistos: set[str] = set()
+    for r in brutas_do_nivel:
+        if r.id in vistos:
+            motivos["duplicata"] += 1
+            continue
+        vistos.add(r.id)
+        if r.id in selecionadas_ids:
+            continue
+        if not r.texto_completo:
+            motivos["truncada_sem_texto"] += 1
+        elif excluir_spoiler and r.spoiler_flag:
+            motivos["spoiler"] += 1
+        elif r.n_chars < filtro_aplicado:
+            motivos["abaixo_min_chars"] += 1
+        else:
+            # Passou em texto/spoiler/comprimento — a única razão de não
+            # estar em `selecionadas_ids` é ter ficado além do que a
+            # alocação/redistribuição permitiu. `outros` fica de fora deste
+            # ramo por construção: não há categoria "desconhecida" alcançável
+            # daqui — a chave existe no dict só para o schema ser estável e
+            # para acusar, se algum dia deixar de ser 0, que a classificação
+            # ficou incompleta.
+            motivos["excedente_cota"] += 1
+    return motivos
 
 
 def _cascade_pool(reviews: list[ReviewBruta], min_chars: int,
@@ -151,7 +215,11 @@ def selecionar(reviews: list[ReviewBruta],
         for n in niveis:
             brutas_do_nivel = por_nivel.get(n, [])
             escolhidas = pools[n][:final[n]]
-            com_texto = [r for r in brutas_do_nivel if r.texto_completo]
+            # v1.9.1: classificação única de descarte (§3[C2]) — os quatro
+            # campos antigos abaixo são DERIVADOS deste dict, não uma segunda
+            # contagem que pode divergir dele.
+            motivos = _discriminar_descartes(
+                brutas_do_nivel, {r.id for r in escolhidas}, filtros[n], excluir_spoiler)
             bucket.niveis[n] = NivelSelecionado(
                 nivel=n,
                 n_alvo=alocacao[n],
@@ -159,12 +227,10 @@ def selecionar(reviews: list[ReviewBruta],
                 validas=escolhidas,
                 n_brutas=len(brutas_do_nivel),
                 n_sem_nota=0,   # a URL de coleta já é por nível (§3[B])
-                n_descartadas_spoiler=sum(1 for r in com_texto if r.spoiler_flag),
-                n_descartadas_curtas=sum(
-                    1 for r in com_texto
-                    if not r.spoiler_flag and r.n_chars < filtros[n]),
-                n_indisponivel_truncamento=sum(
-                    1 for r in brutas_do_nivel if not r.texto_completo),
+                n_descartadas_spoiler=motivos["spoiler"],
+                n_descartadas_curtas=motivos["abaixo_min_chars"],
+                n_indisponivel_truncamento=motivos["truncada_sem_texto"],
+                motivos_descarte=motivos,
             )
             bucket.cascata_por_degrau[filtros[n]] = (
                 bucket.cascata_por_degrau.get(filtros[n], 0) + len(escolhidas))

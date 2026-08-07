@@ -62,6 +62,11 @@ class LevelResult:
     # (truncada cujo completamento não foi feito ou falhou). Torna visível o
     # material que existe mas a regra "nunca pela metade" mantém de fora.
     n_indisponivel_truncamento: int = 0
+    # v1.9.1 (§3[C2]): motivo→n, cada review do bruto classificada em
+    # exatamente uma categoria. `n_descartadas_spoiler`/`n_descartadas_curtas`/
+    # `n_indisponivel_truncamento` acima são DERIVADOS deste dict — uma
+    # fonte de verdade, não duas contagens que podem divergir.
+    motivos_descarte: dict = field(default_factory=dict)
 
     @property
     def n_validas(self) -> int:
@@ -79,6 +84,7 @@ class LevelResult:
             "n_descartadas_curtas": self.n_descartadas_curtas,
             "n_descartadas_truncamento": self.n_descartadas_truncamento,
             "n_indisponivel_truncamento": self.n_indisponivel_truncamento,
+            "motivos_descarte": self.motivos_descarte,
             "paginas_buscadas": self.paginas_buscadas,
         }
 
