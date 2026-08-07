@@ -820,21 +820,41 @@ profundidade a priori (a reserva geométrica descobre e se adapta, custando
 no máximo 1 página por nível), então o argumento "custo não muda só se o
 teto de 256 se confirmar" deixou de ser bloqueante.
 
-#### Confirmação do teto de 256 páginas (v1.9.2, Entrega 3)
+#### Confirmação do teto de 256 páginas (v1.9.2, Entrega 3) — RESULTADO MEDIDO
 
-Medido num filme OBSCURO — `<PREENCHER: slug e contagem de notas>` — via
-busca binária (~8 requisições) no mesmo nível/ordenação da sondagem da
-v1.9.1 (ou o nível mais populoso disponível, se o filme não tiver 4,0★
-suficiente). Resultado:
+Medido em `the-room-1993` — **890 notas no total** (`collect_distribuicao`),
+um filme genuinamente obscuro (não confundir com o "The Room" de 2003; é um
+título homônimo de 1993 quase sem audiência). Nível mais populoso: **3,0★,
+249 notas** — o testado, sob `by/added` (mesma ordenação da sondagem v1.9.1).
 
-`<PREENCHER: última página não-vazia = N; a profundidade foi determinada
-pelo TETO DO SITE ou pelo CONTEÚDO REAL do filme?>`
+Sonda exponencial (`1, 2, 4, 8`) + busca binária de refinamento, **6
+requisições no total**:
 
-**Consequência para o posicionamento estratificado:** nenhuma — o algoritmo
-de descoberta (acima) não assume o valor 256 em nenhum ponto; ele funciona
-igual, e com o mesmo custo, seja a profundidade real do nível 3 páginas ou
-3.000. Esta medição existe para completar o registro do achado da v1.9.1,
-não porque o posicionamento estratificado dependesse da resposta.
+```
+página 1: 12 reviews    página 2: 12 reviews    página 4: 2 reviews
+página 8: 0 reviews (limite superior)
+página 6: 0 reviews     página 5: 0 reviews
+→ última página não-vazia = 4; primeira vazia = 5
+```
+
+**Resultado: a profundidade foi determinada pelo CONTEÚDO REAL do filme, não
+por um teto do site.** A última página com conteúdo é a **4**, muitíssimo
+abaixo de 256 — confirma a hipótese: um filme obscuro esgota organicamente
+muito antes de qualquer teto de plataforma, enquanto os 3 filmes populares
+da v1.9.1 bateram EXATAMENTE no mesmo ponto (256/512) apesar de terem
+volumes de notas completamente diferentes entre si (120 mil a 1,2 milhão) —
+um padrão que só faz sentido como limite do SITE, não como coincidência de
+conteúdo. **O achado lateral da v1.9.1 fica CONFIRMADO** (ainda que só para
+os 4 níveis testados até agora, não generalizado para toda a plataforma):
+Letterboxd aparenta impor um teto de paginação por volta de 256 páginas para
+listagens populosas, e filmes obscuros nunca chegam perto dele.
+
+**Consequência para o posicionamento estratificado:** nenhuma, como previsto
+— o algoritmo de descoberta (acima) não assume o valor 256 em nenhum ponto;
+funciona igual, e com o mesmo custo, seja a profundidade real do nível 4
+páginas (`the-room-1993`) ou 256 (os filmes populares da v1.9.1). Esta
+medição completa o registro do achado da v1.9.1; não foi bloqueante para o
+posicionamento estratificado, que já estava implementado sem depender dela.
 
 **Cache:** por filme+nível+página (e por texto completo, ver C'), em disco.
 Nunca rebuscar página cacheada. Cache não expira. **A chave de cache inclui a
@@ -1786,7 +1806,7 @@ As três incógnitas abaixo foram resolvidas na Fase 1; os achados já estão in
 - **v1.9.2** (2026-08-07) — fecha o gate de profundidade da v1.9.1 e resolve o déficit residual de `medianas`. Última sessão de coleta antes do lote de 30-50 filmes. Fronteiras, cota, piso escalonado, `min_chars`, ordenação e qualquer etapa de síntese/narrador/editor **não tocados**.
   - **(1) Parada por ALVO removida (§3[B]).** Era um vestígio de quando o teto era por NÍVEL e o custo por BUCKET não tinha limite (v1.9.0); sob o orçamento por bucket da v1.9.1 virou fonte de NÃO-DETERMINISMO — foi o mecanismo exato do 37/40 residual de `cidade-de-deus` (nível 2,5★ parou por ALVO na página 3, com 3 páginas de orçamento ainda disponíveis, página 4 nunca buscada). Agora o orçamento de páginas por nível é sempre gasto INTEGRALMENTE; única parada antecipada é esgotamento REAL de material. `motivo_parada` por nível: `"orcamento_esgotado"` \| `"material_esgotado"`, gravado em `meta.json`. O piso de páginas por nível (gate do ALVO) some — a garantia de reversibilidade da fronteira (§2.2) já vinha, desde a v1.9.1, do piso da ALOCAÇÃO de páginas, não deste parâmetro. `FOLGA_ALVO_COLETA` sobrevive com escopo reduzido: só decide o orçamento do completamento [C'], nunca mais quando parar de paginar. Custo aceito e medido em troca de determinismo — ver Resultado MEDIDO.
   - **(2) Posicionamento estratificado por profundidade (§3[B]).** O defeito: páginas de um nível eram sempre as primeiras `N` consecutivas, amostrando sistematicamente o mais recente sob `by/added` (79-100% da amostra em ~7 semanas, medido na v1.9.0). Correção: `RESERVA_PROFUNDIDADE = 0,25` do orçamento de cada nível é posicionada em progressão geométrica (`n_raso+2, n_raso+4, n_raso+8, …`) a partir do fim do bloco raso; a primeira posição profunda vazia revela a profundidade real (por monotonicidade da paginação), e o orçamento não gasto é redistribuído para dentro do intervalo JÁ CONFIRMADO como válido (nunca além — no máximo 1 página desperdiçada por nível). A redistribuição **reaproveita `redistribuir_deficit`** — terceiro uso da mesma função (reviews entre níveis, páginas entre níveis, agora posições dentro de um nível), nenhum mecanismo novo. **Custo IGUAL ao consecutivo no caso comum (profundidade folgada); nunca MAIOR em nenhum caso** — no caso de fronteira exata (profundidade real cai dentro de um salto geométrico ainda não confirmado), o orçamento pode ficar parcialmente não-gasto em vez de arriscar mais de 1 página vazia — testado explicitamente (`tests/test_posicionamento.py`). Degrada para consecutivo puro quando o nível é raso (material esgota dentro do bloco raso, fase profunda nunca tentada). **Racional de reversibilidade:** com raso e profundo no MESMO bruto, "analisar só o recente" vs. "analisar tudo" vira parâmetro filtrável por `pagina_origem` na seleção (não implementado, mas agora POSSÍVEL sem recoleta) — a profundidade de paginação era o único parâmetro de coleta que o superset ainda não tornava reversível.
-  - **(3) Confirmação do teto de 256 páginas — Entrega 3.** Medido num filme obscuro (`<PREENCHER>`), busca binária ~8 requisições. `<PREENCHER: resultado e leitura>`. O posicionamento estratificado (item 2) não depende desta resposta — funciona igual, mesmo custo, seja a profundidade real 3 páginas ou 3.000; a medição só completa o registro do achado lateral da v1.9.1.
+  - **(3) Confirmação do teto de 256 páginas — Entrega 3.** Medido em `the-room-1993` (890 notas, obscuro), nível mais populoso 3,0★ (249 notas) — sonda exponencial + binária, **6 requisições**. Resultado: **última página com conteúdo = 4**, muitíssimo abaixo de 256 — a profundidade foi determinada pelo CONTEÚDO REAL, não por um teto de site, ao contrário dos 3 filmes populares da v1.9.1 (todos batendo exatamente em 256/512 apesar de volumes de notas muito diferentes entre si). O achado lateral da v1.9.1 fica CONFIRMADO: Letterboxd aparenta impor um teto de paginação por volta de 256 para listagens populosas. O posicionamento estratificado (item 2) não dependeu desta resposta — funciona igual, mesmo custo, seja a profundidade real 4 páginas ou 256.
   - **(4) `pagina_origem` vira instrumento temporal PRIMÁRIO (§3[B']).** `janela_temporal` (v1.9.1) mede `data`, que é a data ASSISTIDA (diário) — contaminada por quem registra filmes com atraso, causa raiz do resultado MISTO do gate da v1.9.1 (janela por `data` ESTREITOU sob amostragem mais profunda em 2 dos 3 filmes). `pagina_origem`, sob ordenação cronológica, é o rank de ADIÇÃO — sem essa contaminação. Nova telemetria `distribuicao_pagina_origem` por bucket (`{n, min, max, p5, p50, p95, fracao_profunda}`), sobre a amostra SELECIONADA (não o bruto inteiro), com `fracao_profunda` usando a MESMA divisão raso/profundo do item 2 — telemetria e coleta nunca divergem sobre o que conta como profundo. `janela_temporal` rebaixada a secundária, rotulada como proxy contaminado, mantida (é o único sinal de calendário real que existe).
   - **(5) Recoleta dos 3 filmes, MEDIDA — ver §3[B] "Resultado MEDIDO da recoleta v1.9.2" e §5.6.** `<PREENCHER após a recoleta>`.
 - **v1.9.1** (2026-08-07) — corrige dois defeitos que a telemetria MEDIDA da v1.9.0 revelou na camada de coleta, mais duas entregas de acabamento. Nenhuma etapa de síntese/narrador/editor tocada; fronteiras, cota e piso escalonado **não mudaram**.
