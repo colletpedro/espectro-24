@@ -44,7 +44,7 @@ def disclaimer_de(output: dict) -> str:
 def build_output(slug: str, buckets: list[BucketResult], data_coleta: str,
                  origens: dict[str, str], total_observado: int,
                  ficha: dict[str, Any] | None = None,
-                 distribuicao=None) -> dict[str, Any]:
+                 distribuicao=None, coleta: dict[str, Any] | None = None) -> dict[str, Any]:
     # v1.4.0: share real por bucket, quando a distribuição existe. Ausente
     # (chave não emitida) quando não existe — o consumidor distingue
     # "não coletado" de "coletado e deu 0%". A aplicação é delegada a
@@ -65,14 +65,30 @@ def build_output(slug: str, buckets: list[BucketResult], data_coleta: str,
         # v1.4.0: distribuição REAL de notas (histograma do Letterboxd).
         # None quando indisponível → narrador volta às regras da v1.2.1.
         "distribuicao": distribuicao.metadata() if distribuicao else None,
+        # v1.9.0 (§4): espelha o meta.json do bruto (§3[B']) dentro do
+        # resultado, para que um JSON de entrega seja auditável — sob qual
+        # ordenação, qual coletor, quantas páginas por nível, quais níveis
+        # pararam no teto — sem precisar abrir `dados/`.
+        "coleta": coleta,
         "origem_paginas": origens,  # cache | network por chave
         "buckets": [
             {
                 "bucket": b.nome,
                 "alvo": b.alvo,
                 "modo": b.modo,
+                # v1.9.0 (§3[C3]): piso escalonado, ao lado de `modo` — só o
+                # CAMPO nesta versão; variantes de narrador e estados de UI
+                # ficam para depois.
+                "estado_piso": b.estado_piso,
                 "n_validas": b.n_validas,
                 **({"share_real": shares[b.nome]} if b.nome in shares else {}),
+                # v1.9.0 (§3[C1], ressalva 2): a redistribuição de déficit
+                # muda a composição em silêncio — ALVO e ATINGIDA lado a lado
+                # é a mitigação obrigatória.
+                "composicao_alvo": b.composicao_alvo,
+                "composicao_atingida": b.composicao_atingida,
+                "cascata_por_degrau": b.cascata_por_degrau,
+                "deficit_redistribuido": b.deficit_redistribuido,
                 "niveis": [lvl.metadata() for lvl in b.niveis],
                 "temas": [
                     {

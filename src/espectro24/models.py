@@ -53,6 +53,15 @@ class LevelResult:
     n_descartadas_curtas: int
     n_descartadas_truncamento: int
     validas: list[Review] = field(default_factory=list)
+    # v1.9.0: a alocação de §3[C1] para este nível — é o "ALVO" da ressalva 2
+    # (a redistribuição de déficit muda a composição em silêncio). Sem ele, a
+    # composição ATINGIDA não é interpretável: 40 alcançados como planejado e
+    # 40 alcançados por redistribuição não podem parecer a mesma coisa.
+    n_alvo: int = 0
+    # v1.9.0: persistidas no bruto mas inelegíveis por texto incompleto
+    # (truncada cujo completamento não foi feito ou falhou). Torna visível o
+    # material que existe mas a regra "nunca pela metade" mantém de fora.
+    n_indisponivel_truncamento: int = 0
 
     @property
     def n_validas(self) -> int:
@@ -62,12 +71,14 @@ class LevelResult:
         return {
             "nivel": self.nivel,
             "n_validas": self.n_validas,
+            "n_alvo": self.n_alvo,
             "n_brutas": self.n_brutas,
             "filtro_aplicado": self.filtro_aplicado,
             "n_sem_nota": self.n_sem_nota,
             "n_descartadas_spoiler": self.n_descartadas_spoiler,
             "n_descartadas_curtas": self.n_descartadas_curtas,
             "n_descartadas_truncamento": self.n_descartadas_truncamento,
+            "n_indisponivel_truncamento": self.n_indisponivel_truncamento,
             "paginas_buscadas": self.paginas_buscadas,
         }
 
@@ -294,7 +305,21 @@ class BucketResult:
     nome: str
     alvo: int
     modo: str                      # completo | reduzido | sem_analise
+    # v1.9.0 (§3[C3]): piso ESCALONADO — completa | sem_quantificador |
+    # sem_numero | sem_analise, calculado sobre o n final. Convive com `modo`
+    # em vez de substituí-lo: `modo` é consumido por render e frontend, que
+    # estão fora do escopo desta versão. Nesta sessão só o CAMPO é exposto —
+    # as variantes de narrador e os estados de UI ficam para depois.
+    estado_piso: str = "sem_analise"
     niveis: list[LevelResult] = field(default_factory=list)
+    # v1.9.0: telemetria da seleção (§4). `composicao_alvo` vs.
+    # `composicao_atingida` é a mitigação OBRIGATÓRIA da ressalva 2 de
+    # §3[C1] — a redistribuição de déficit muda a composição em silêncio, e
+    # sem os dois lado a lado isso ficaria invisível.
+    composicao_alvo: dict = field(default_factory=dict)
+    composicao_atingida: dict = field(default_factory=dict)
+    cascata_por_degrau: dict = field(default_factory=dict)
+    deficit_redistribuido: int = 0
     temas: list[Tema] = field(default_factory=list)
     observacao_geral: str = ""
     # v1.1.2: rede de segurança pós-parsing (§D) — telemetria, não correção

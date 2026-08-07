@@ -3,17 +3,32 @@ from __future__ import annotations
 
 from urllib.parse import quote
 
-from .config import BASE, nota_para_url
+from .config import BASE, ORDENACAO, nota_para_url
 
 
-def level_page_url(slug: str, nivel: float, page: int) -> str:
+def level_page_url(slug: str, nivel: float, page: int,
+                   ordenacao: str = ORDENACAO) -> str:
+    """URL de uma página de reviews de um nível.
+
+    v1.9.0: `ordenacao` é PARÂMETRO DE AMOSTRAGEM (§2.3), não detalhe de URL
+    — só as primeiras páginas são lidas, então a ordenação decide QUAIS
+    reviews entram na amostra.
+    """
     n = nota_para_url(nivel)
-    return f"{BASE}/film/{slug}/reviews/rated/{n}/by/activity/page/{page}/"
+    return f"{BASE}/film/{slug}/reviews/rated/{n}/{ordenacao}/page/{page}/"
 
 
-def level_page_cache_key(slug: str, nivel: float, page: int) -> str:
+def level_page_cache_key(slug: str, nivel: float, page: int,
+                         ordenacao: str = ORDENACAO) -> str:
+    """Chave de cache — INCLUI a ordenação (v1.9.0).
+
+    Ordenação diferente é uma AMOSTRA diferente da mesma página nominal;
+    servir a antiga do cache seria um erro silencioso, do tipo que só
+    apareceria como "a coleta nova saiu igual à velha".
+    """
     n = nota_para_url(nivel).replace(".", "_")
-    return f"{slug}/pages/rated_{n}_page_{page}.html"
+    ord_safe = ordenacao.strip("/").replace("/", "_")
+    return f"{slug}/pages/{ord_safe}/rated_{n}_page_{page}.html"
 
 
 def full_text_url(path: str) -> str:

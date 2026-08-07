@@ -68,6 +68,24 @@ class ReviewBruta:
     texto_completo: bool
     data: str | None
 
+    def para_review(self):
+        """Adaptador para a `Review` que a camada de análise (§D) consome.
+
+        `full_text` recebe o texto persistido porque, para uma review que
+        chegou aqui, ele JÁ é o texto vigente — a seleção só considera
+        elegível quem tem `texto_completo`. Assim `effective_text` (que o
+        prompt da síntese usa) devolve o texto certo sem caso especial.
+        `rating` vem do `nivel`, que veio da URL de coleta (autoritativa).
+        """
+        from .models import Review
+
+        return Review(
+            viewing_id=self.id, rating=self.nivel, text=self.texto,
+            truncated=self.truncada, full_text_url=None,
+            spoiler=self.spoiler_flag, full_text=self.texto,
+            permalink=self.url or None, data=self.data,
+        )
+
 
 @dataclass
 class ResultadoPersistencia:

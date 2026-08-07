@@ -10,9 +10,12 @@ from pathlib import Path
 from dotenv import load_dotenv
 
 from .config import (
-    COTA_POR_NIVEL,
+    COTA_POR_BUCKET,
+    DADOS_BRUTO_DIR,
     DEFAULT_PROVIDER,
     EDITOR_ATIVO,
+    ORDENACAO_DEFAULT,
+    ORDENACOES,
     PROVIDER_ENV_KEYS,
     SPEC_VERSION,
     TETO_PAGINAS,
@@ -57,8 +60,22 @@ def _parse_args(argv):
     p.add_argument("--model", default=None,
                    help="modelo do LLM; default depende do provider "
                        "resolvido (ver PROVIDER_DEFAULT_MODELS)")
-    p.add_argument("--cota", type=int, default=COTA_POR_NIVEL)
-    p.add_argument("--max-pages", type=int, default=TETO_PAGINAS)
+    p.add_argument("--cota", type=int, default=COTA_POR_BUCKET,
+                   help="cota de análise POR BUCKET (v1.9.0; era por nível "
+                       f"até a v1.8.2). Default: {COTA_POR_BUCKET}")
+    p.add_argument("--max-pages", type=int, default=TETO_PAGINAS,
+                   help=f"teto de páginas por nível (§3[B]); default {TETO_PAGINAS}")
+    p.add_argument("--ordenacao", choices=sorted(ORDENACOES),
+                   default=ORDENACAO_DEFAULT,
+                   help="ordenação da listagem — PARÂMETRO DE AMOSTRAGEM "
+                       "(§2.3), gravado no meta.json do bruto e na chave de "
+                       f"cache. Default: {ORDENACAO_DEFAULT!r} "
+                       f"({ORDENACOES[ORDENACAO_DEFAULT]}, cronológica). "
+                       "'atividade' ordena por ENGAJAMENTO e enviesa para "
+                       "review longa e promovida")
+    p.add_argument("--dados-dir", default=DADOS_BRUTO_DIR,
+                   help="raiz do superset bruto persistido (§3[B']); "
+                       f"default: {DADOS_BRUTO_DIR}")
     p.add_argument("--no-synth", action="store_true",
                    help="não chamar o LLM (só coleta + metadados)")
     p.add_argument("--offline", action="store_true",
@@ -179,19 +196,22 @@ def main(argv=None):
         try:
             slug = args.slug or _pick_slug(fetcher, args.filme)
 
-            def _on_level(lvl):
-                print(f"  [{lvl.nivel}★] {lvl.n_validas} válidas / "
-                      f"{lvl.n_brutas} brutas / {lvl.paginas_buscadas}p "
-                      f"(filtro {lvl.filtro_aplicado}c, "
-                      f"trunc-desc {lvl.n_descartadas_truncamento})", file=sys.stderr)
+            def _on_level(nb):
+                parada = ("teto" if nb.parou_por_teto
+                          else "esgotado" if nb.esgotado else "alvo")
+                print(f"  [{nb.nivel}★] {nb.n_bruta} brutas / "
+                      f"{nb.n_estimada_valida} válidas(heur) / "
+                      f"{nb.paginas_gastas}p → parada: {parada}", file=sys.stderr)
 
-            print(f"Coletando {slug}...", file=sys.stderr)
-            buckets, niveis, distrib = run_pipeline(
+            print(f"Coletando superset de {slug} "
+                  f"(ordenação {ORDENACOES[args.ordenacao]})...", file=sys.stderr)
+            buckets, superset, distrib = run_pipeline(
                 fetcher, slug,
                 data_coleta=datetime.now(timezone.utc).isoformat(),
                 model=args.model, provider=args.provider, synth=not args.no_synth,
-                cota=args.cota, max_pages=args.max_pages, on_level=_on_level,
-                distribuicao=not args.no_distribuicao,
+                cota_por_bucket=args.cota, max_pages=args.max_pages,
+                on_level=_on_level, distribuicao=not args.no_distribuicao,
+                ordenacao=ORDENACOES[args.ordenacao], dados_dir=args.dados_dir,
             )
         except AntiBotError as e:
             print(f"\n⛔ ANTI-BOT: {e}", file=sys.stderr)
@@ -201,8 +221,11 @@ def main(argv=None):
         output = build_output(
             slug=slug, buckets=buckets,
             data_coleta=datetime.now(timezone.utc).isoformat(),
-            origens=fetcher.origins, total_observado=total_observado(niveis),
+            origens=fetcher.origins, total_observado=total_observado(superset),
             distribuicao=distrib,
+            # v1.9.0 (§4): o meta.json do bruto espelhado no resultado, mais
+            # o total persistido — auditoria sem abrir `dados/`.
+            coleta={**superset.meta, "n_reviews_bruto": superset.n_reviews},
         )
         if not args.no_distribuicao and distrib is None:
             print("⚠️  Distribuição de notas indisponível — narrativa segue "
