@@ -14,11 +14,11 @@ from .config import (
     DADOS_BRUTO_DIR,
     DEFAULT_PROVIDER,
     EDITOR_ATIVO,
+    ORCAMENTO_PAGINAS_POR_BUCKET,
     ORDENACAO_DEFAULT,
     ORDENACOES,
     PROVIDER_ENV_KEYS,
     SPEC_VERSION,
-    TETO_PAGINAS,
 )
 from .fetcher import AntiBotError, Fetcher
 from .ficha import buscar_ficha, resolver_ano_letterboxd, titulo_ano_de_slug
@@ -63,8 +63,12 @@ def _parse_args(argv):
     p.add_argument("--cota", type=int, default=COTA_POR_BUCKET,
                    help="cota de análise POR BUCKET (v1.9.0; era por nível "
                        f"até a v1.8.2). Default: {COTA_POR_BUCKET}")
-    p.add_argument("--max-pages", type=int, default=TETO_PAGINAS,
-                   help=f"teto de páginas por nível (§3[B]); default {TETO_PAGINAS}")
+    p.add_argument("--orcamento-paginas", type=int,
+                   default=ORCAMENTO_PAGINAS_POR_BUCKET,
+                   help="orçamento de páginas POR BUCKET (v1.9.1, §3[B]); "
+                       "substitui o antigo teto por nível — igual para os "
+                       "três buckets, não importa quantos níveis cada um "
+                       f"tem. Default: {ORCAMENTO_PAGINAS_POR_BUCKET}")
     p.add_argument("--ordenacao", choices=sorted(ORDENACOES),
                    default=ORDENACAO_DEFAULT,
                    help="ordenação da listagem — PARÂMETRO DE AMOSTRAGEM "
@@ -209,7 +213,8 @@ def main(argv=None):
                 fetcher, slug,
                 data_coleta=datetime.now(timezone.utc).isoformat(),
                 model=args.model, provider=args.provider, synth=not args.no_synth,
-                cota_por_bucket=args.cota, max_pages=args.max_pages,
+                cota_por_bucket=args.cota,
+                orcamento_paginas_bucket=args.orcamento_paginas,
                 on_level=_on_level, distribuicao=not args.no_distribuicao,
                 ordenacao=ORDENACOES[args.ordenacao], dados_dir=args.dados_dir,
             )

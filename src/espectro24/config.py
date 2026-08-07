@@ -94,21 +94,43 @@ COTA_POR_NIVEL = 10
 MIN_CHARS = 150              # §2: filtro de comprimento padrão
 CASCATA_CHARS = [150, 50, 0] # §2/§C: 150 → 50 → sem filtro (0 = sem filtro)
 
-# --- Parâmetros de COLETA do superset (§3[B], v1.9.0) ---
-# Teto de paginação por nível: 6 → 4. A moagem de 6 páginas existia para
-# fechar uma cota RÍGIDA de 10 válidas por nível. Sob alocação proporcional,
-# quem precisa de muitas reviews são os níveis populosos (onde 4 páginas × 12
-# brutas sobram) e quem não fecha são os raros (onde a 5ª página raramente
-# existe): migrar o teto de 6 para o superset multiplicaria o custo por 10
-# níveis sem ganho, e o déficit tem tratamento explícito (redistribuição +
-# telemetria) em vez de ser escondido gastando requisição.
+# --- Parâmetros de COLETA do superset (§3[B], v1.9.0/v1.9.1) ---
+# LEGADO — teto de paginação POR NÍVEL (6 → 4 na v1.9.0). REVOGADO na v1.9.1:
+# misturava unidades (teto por NÍVEL, cota por BUCKET) — um bucket com menos
+# níveis (ex. `medianas`, 2 níveis sob a opção C) tinha metade do teto
+# AGREGADO de um bucket de 4 níveis, e por isso nunca fechava a cota (medido:
+# 35/23/26 de 40 nos 3 filmes, sempre `medianas`). Substituído por
+# ORCAMENTO_PAGINAS_POR_BUCKET (abaixo). Mantida como default de
+# `raspar_nivel`/`coletar_superset` para uso direto/testes de unidade — a
+# v1.9.1 e sua produção não a usam mais (pipeline.py passa um orçamento POR
+# NÍVEL calculado via `alocacao.orcamento_paginas`).
 TETO_PAGINAS = 4
 # Piso de páginas por nível — SEGURO DE REVERSIBILIDADE DA FRONTEIRA (§2.2).
 # Vale mesmo para níveis cuja alocação é zero: sem ele, um nível fora de todo
 # alvo nunca seria raspado, e uma fronteira futura que o incluísse não teria
 # material para reavaliar — voltaríamos a pagar recoleta para mudar uma
 # decisão de análise, que é o problema que a v1.9.0 existe para resolver.
+# v1.9.1: também usado como piso da alocação de PÁGINAS por bucket
+# (`alocacao.orcamento_paginas_bucket`) — mesmo princípio, mesma constante.
 PISO_PAGINAS_POR_NIVEL = 1
+
+# Orçamento de páginas POR BUCKET (v1.9.1, §3[B]) — substitui TETO_PAGINAS
+# como o mecanismo real de parada em produção. `16 = 4 × 4`: o mesmo teto
+# AGREGADO que `negativas`/`positivas` (4 níveis cada, sob a opção C) já
+# tinham na v1.9.0 (4 páginas/nível × 4 níveis). O orçamento não SOBE para
+# esses dois — ele EQUALIZA o que `medianas` (2 níveis) tinha pela metade (8).
+# Distribuído entre os níveis do bucket proporcional ao histograma, reusando
+# `alocar_bucket` (a mesma função da alocação de reviews) — não é uma segunda
+# fórmula de distribuição.
+ORCAMENTO_PAGINAS_POR_BUCKET = 16
+# Teto de SEGURANÇA por nível dentro do orçamento do bucket (v1.9.1). Sem
+# ele, um bucket de 2 níveis muito desbalanceado no histograma (ex.:
+# `medianas` de `cidade-de-deus`, onde 3,0★ tem 85% do bucket) daria a esse
+# nível sozinho quase o orçamento inteiro. O excedente cortado é
+# redistribuído para os outros níveis do MESMO bucket reusando
+# `redistribuir_deficit` (§3[C1]) — não um mecanismo novo, o mesmo já usado
+# para o déficit de reviews, com o teto como "disponibilidade".
+TETO_SEGURANCA_PAGINAS_NIVEL = 10
 # Folga sobre a cota alocada ao contar "já tenho material suficiente" (§3[B],
 # degrau b). A contagem de parada é OTIMISTA por construção: usa o texto
 # VISÍVEL, e parte do que ela aprova cai depois no completamento [C'] ou na

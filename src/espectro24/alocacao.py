@@ -28,7 +28,12 @@ sozinho e por isso a spec obriga a telemetria:
 from __future__ import annotations
 
 from .buckets import FRONTEIRAS, mapa_de_niveis
-from .config import PISO_ALOCACAO_POR_NIVEL
+from .config import (
+    ORCAMENTO_PAGINAS_POR_BUCKET,
+    PISO_ALOCACAO_POR_NIVEL,
+    PISO_PAGINAS_POR_NIVEL,
+    TETO_SEGURANCA_PAGINAS_NIVEL,
+)
 
 
 def _maior_resto(n_total: int, pesos: dict[float, float]) -> dict[float, int]:
@@ -167,3 +172,60 @@ def redistribuir_deficit(alocacao: dict[float, int],
         deficit -= 1
 
     return final
+
+
+def orcamento_paginas_bucket(orcamento_bucket: int, contagens: dict[float, int],
+                             niveis: list[float],
+                             piso: int = PISO_PAGINAS_POR_NIVEL,
+                             teto_nivel: int = TETO_SEGURANCA_PAGINAS_NIVEL
+                             ) -> dict[float, int]:
+    """Orçamento de PÁGINAS por nível dentro de um bucket (v1.9.1, §3[B]).
+
+    Corrige o defeito estrutural registrado na v1.9.0: o teto de páginas era
+    por NÍVEL (flat) enquanto a cota de análise é por BUCKET — um bucket com
+    menos níveis tinha um teto agregado menor sem nenhuma razão de conteúdo,
+    só de aritmética. Aqui o orçamento é definido **por bucket** e distribuído
+    entre os níveis, então dois buckets com o mesmo `orcamento_bucket` sempre
+    têm o mesmo teto agregado, não importa quantos níveis cada um tem.
+
+    **Não é uma segunda fórmula de distribuição.** A distribuição proporcional
+    é literalmente `alocar_bucket` — a MESMA função que já aloca reviews
+    (§3[C1]) — chamada com o orçamento de páginas no lugar da cota de
+    reviews. O teto de segurança por nível (nenhum nível consome o orçamento
+    do bucket sozinho) é aplicado chamando `redistribuir_deficit` de novo,
+    com o teto como "disponibilidade" — não um mecanismo de redistribuição
+    novo, o mesmo já usado para o déficit de reviews (§3[C1]), só com um
+    `disponivel` diferente.
+
+    Garantias: soma nunca excede `orcamento_bucket`; fica ABAIXO dele só no
+    caso degenerado de um bucket com um único nível capado pelo teto de
+    segurança (nada para receber o excedente redistribuído).
+    """
+    base = alocar_bucket(orcamento_bucket, contagens, niveis, piso_nivel=piso)
+    return redistribuir_deficit(base, {n: teto_nivel for n in niveis})
+
+
+def orcamento_paginas(
+    orcamento_por_bucket: dict[str, int],
+    histograma: dict[float, int] | None,
+    fronteiras: dict[str, tuple[float, float]] | None = None,
+    piso: int = PISO_PAGINAS_POR_NIVEL,
+    teto_nivel: int = TETO_SEGURANCA_PAGINAS_NIVEL,
+) -> dict[str, dict[float, int]]:
+    """Orçamento de páginas do filme inteiro: `{bucket: {nível: páginas}}`.
+
+    Espelha `alocar()` (§3[C1]): mesmo fallback sem histograma (uniforme),
+    mesmas fronteiras como parâmetro. `orcamento_por_bucket` tipicamente é o
+    mesmo valor (`ORCAMENTO_PAGINAS_POR_BUCKET`) para os três nomes — é
+    exatamente essa igualdade, independente do número de níveis de cada
+    bucket, que fecha o defeito estrutural da v1.9.0.
+    """
+    fr = FRONTEIRAS if fronteiras is None else fronteiras
+    mapa = mapa_de_niveis(fr)
+    hist = histograma or {}
+    return {
+        nome: orcamento_paginas_bucket(
+            orcamento_por_bucket.get(nome, ORCAMENTO_PAGINAS_POR_BUCKET),
+            hist, mapa[nome], piso, teto_nivel)
+        for nome in mapa
+    }

@@ -17,7 +17,7 @@ from __future__ import annotations
 
 from pathlib import Path
 
-from .alocacao import alocar
+from .alocacao import alocar, orcamento_paginas
 from .bruto import carregar
 from .collector import coletar_superset, collect_distribuicao
 from .config import (
@@ -25,8 +25,8 @@ from .config import (
     COTA_POR_BUCKET,
     DADOS_BRUTO_DIR,
     NIVEIS_ORDENADOS,
+    ORCAMENTO_PAGINAS_POR_BUCKET,
     ORDENACAO,
-    TETO_PAGINAS,
 )
 from .fetcher import Fetcher
 from .models import BucketResult, LevelResult, SearchResult
@@ -96,7 +96,7 @@ def montar_buckets(selecao, superset=None) -> list[BucketResult]:
 
 def collect_all_levels(fetcher: Fetcher, slug: str,
                        cota_por_bucket: int = COTA_POR_BUCKET,
-                       max_pages: int = TETO_PAGINAS,
+                       orcamento_paginas_bucket: int = ORCAMENTO_PAGINAS_POR_BUCKET,
                        ordenacao: str = ORDENACAO,
                        dados_dir: str | Path = DADOS_BRUTO_DIR,
                        distribuicao: bool = True,
@@ -105,6 +105,14 @@ def collect_all_levels(fetcher: Fetcher, slug: str,
 
     Devolve `(superset, distrib)`. Não seleciona nada — quem faz isso é
     `selecionar`, sobre o que este passo deixou em disco.
+
+    `orcamento_paginas_bucket` (v1.9.1, §3[B]) é o orçamento de páginas POR
+    BUCKET — igual para os três nomes, não importa quantos níveis cada um
+    tem, o que fecha o defeito estrutural da v1.9.0 (teto por NÍVEL misturava
+    unidades com cota por BUCKET). Distribuído entre os níveis de cada
+    bucket via `alocacao.orcamento_paginas` (reusa `alocar_bucket`) e
+    entregue a `coletar_superset` como um teto POR NÍVEL — o coletor em si
+    continua sem saber o que é um bucket.
     """
     distrib = collect_distribuicao(fetcher, slug) if distribuicao else None
     hist = distrib.por_nivel if distrib else None
@@ -114,16 +122,22 @@ def collect_all_levels(fetcher: Fetcher, slug: str,
     for por_nivel in alocacao.values():
         alvo_por_nivel.update(por_nivel)
 
+    orc = orcamento_paginas(
+        {nome: orcamento_paginas_bucket for nome in BUCKETS}, hist)
+    teto_por_nivel = {n: orcamento_paginas_bucket for n in NIVEIS_ORDENADOS}
+    for por_nivel in orc.values():
+        teto_por_nivel.update(por_nivel)
+
     superset = coletar_superset(
         fetcher, slug, alvo_por_nivel, hist, raiz=dados_dir,
-        ordenacao=ordenacao, teto_paginas=max_pages, on_level=on_level)
+        ordenacao=ordenacao, teto_paginas=teto_por_nivel, on_level=on_level)
     return superset, distrib
 
 
 def run_pipeline(fetcher: Fetcher, slug: str, data_coleta: str,
                  client_call=None, model=None, provider=None, synth: bool = True,
                  cota_por_bucket: int = COTA_POR_BUCKET,
-                 max_pages: int = TETO_PAGINAS,
+                 orcamento_paginas_bucket: int = ORCAMENTO_PAGINAS_POR_BUCKET,
                  on_level=None, distribuicao: bool = True,
                  ordenacao: str = ORDENACAO,
                  dados_dir: str | Path = DADOS_BRUTO_DIR):
@@ -133,10 +147,13 @@ def run_pipeline(fetcher: Fetcher, slug: str, data_coleta: str,
 
     `model`/`provider` propagam para `synthesize_bucket` sem forçar um default
     aqui (v1.1.1): o default de modelo depende do provider resolvido lá.
+
+    `orcamento_paginas_bucket` (v1.9.1) substitui o antigo `max_pages` (teto
+    POR NÍVEL) — ver `collect_all_levels`.
     """
     superset, distrib = collect_all_levels(
-        fetcher, slug, cota_por_bucket, max_pages, ordenacao, dados_dir,
-        distribuicao, on_level)
+        fetcher, slug, cota_por_bucket, orcamento_paginas_bucket, ordenacao,
+        dados_dir, distribuicao, on_level)
 
     # A seleção lê o BRUTO PERSISTIDO, não o que acabou de ser raspado: assim
     # ela enxerga o material acumulado de todas as coletas anteriores, e o

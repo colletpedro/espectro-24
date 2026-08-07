@@ -208,18 +208,29 @@ def coletar_superset(fetcher: Fetcher, slug: str,
                      histograma: dict[float, int] | None,
                      raiz: str | Path = DADOS_BRUTO_DIR,
                      ordenacao: str = ORDENACAO,
-                     teto_paginas: int = TETO_PAGINAS,
+                     teto_paginas: int | dict[float, int] = TETO_PAGINAS,
                      on_level=None) -> SupersetResult:
     """Varre os 10 níveis, persiste o superset e devolve a telemetria (§3[B']).
 
     A varredura é pela **escala inteira**, na ordem crescente de estrela — o
     coletor não sabe onde ficam as fronteiras, e um nível que hoje não
     pertence a bucket nenhum continuaria sendo raspado.
+
+    `teto_paginas` aceita **int** (mesmo teto para todo nível — uso direto/
+    testes de unidade) ou **dict `{nível: teto}`** (v1.9.1: o orçamento POR
+    NÍVEL que `alocacao.orcamento_paginas` calculou a partir do orçamento POR
+    BUCKET, §3[B] — é assim que `pipeline.py` corrige o defeito estrutural da
+    v1.9.0 sem que este módulo precise saber o que é um bucket). Nível
+    ausente do dict usa `TETO_PAGINAS` como fallback.
     """
     res = SupersetResult(slug=slug, ordenacao=ordenacao)
+    orcamento_por_nivel: dict[float, int] = {}
     for nivel in NIVEIS_ORDENADOS:
+        teto = (teto_paginas.get(nivel, TETO_PAGINAS) if isinstance(teto_paginas, dict)
+               else teto_paginas)
+        orcamento_por_nivel[nivel] = teto
         nb = raspar_nivel(fetcher, slug, nivel, alvo_por_nivel.get(nivel, 0),
-                          ordenacao=ordenacao, teto_paginas=teto_paginas)
+                          ordenacao=ordenacao, teto_paginas=teto)
         res.niveis[nivel] = nb
         if on_level:
             on_level(nb)
@@ -230,6 +241,11 @@ def coletar_superset(fetcher: Fetcher, slug: str,
         "versao_coletor": VERSAO_COLETOR,
         "ordenacao_usada": ordenacao,
         "histograma_bruto": {str(k): v for k, v in sorted((histograma or {}).items())},
+        # v1.9.1: o orçamento QUE FOI DADO a cada nível — distinto de
+        # `paginas_gastas_por_nivel` (o QUANTO foi de fato usado). A razão
+        # entre os dois é a composição-alvo-vs-atingida de §3[C1], agora
+        # também para páginas.
+        "orcamento_paginas_por_nivel": {str(n): v for n, v in orcamento_por_nivel.items()},
         "paginas_gastas_por_nivel": {str(n): r.paginas_gastas
                                      for n, r in res.niveis.items()},
         "paradas_por_limite": [str(n) for n in res.paradas_por_limite],
