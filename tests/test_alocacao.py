@@ -221,3 +221,39 @@ def test_redistribuicao_e_deterministica():
     disponivel = {0.5: 1, 1.0: 50, 1.5: 50, 2.0: 50}
     assert (redistribuir_deficit(alocacao, disponivel)
             == redistribuir_deficit(alocacao, disponivel))
+
+
+# --- [v1.9.2] divisão raso/profundo (posicionamento estratificado, §3[B]) ---
+
+from espectro24.alocacao import dividir_raso_profundo  # noqa: E402
+
+
+@pytest.mark.parametrize("orcamento,esperado", [
+    (16, (12, 4)),   # round(16*0.25)=4
+    (10, (8, 2)),    # round(10*0.25)=round(2.5)=2 (banker's rounding)
+    (6, (4, 2)),     # round(6*0.25)=round(1.5)=2 (banker's rounding, 2 é par)
+    (3, (2, 1)),     # round(3*0.25)=round(0.75)=1
+    (1, (1, 0)),     # round(1*0.25)=round(0.25)=0
+    (2, (2, 0)),     # round(2*0.25)=round(0.5)=0 (banker's rounding, 0 é par)
+    (0, (0, 0)),
+])
+def test_dividir_raso_profundo_valores_conhecidos(orcamento, esperado):
+    assert dividir_raso_profundo(orcamento) == esperado
+
+
+def test_dividir_raso_profundo_soma_sempre_bate():
+    for orc in range(0, 40):
+        raso, profundo = dividir_raso_profundo(orc)
+        assert raso + profundo == orc
+
+
+def test_dividir_raso_profundo_raso_nunca_negativo_e_ge_1_quando_orc_ge_1():
+    for orc in range(1, 40):
+        raso, profundo = dividir_raso_profundo(orc)
+        assert raso >= 1
+        assert profundo >= 0
+
+
+def test_dividir_raso_profundo_reserva_e_parametro():
+    assert dividir_raso_profundo(16, reserva=0.5) == (8, 8)
+    assert dividir_raso_profundo(16, reserva=0.0) == (16, 0)

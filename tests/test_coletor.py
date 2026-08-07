@@ -93,91 +93,62 @@ def test_coletor_usa_a_ordenacao_recebida_na_url_de_rede():
     assert all("by/activity" in url for url, _ in ff.calls)
 
 
-# --- condição de parada, na ordem de precedência de §3[B] ---
+# --- condição de parada DETERMINÍSTICA (v1.9.2, §3[B]) ---
+# Só dois motivos possíveis agora: "orcamento_esgotado" (o orçamento foi
+# gasto integralmente, o site provavelmente tem mais) ou "material_esgotado"
+# (página vazia encontrada — o nível está provadamente completo). A parada
+# por ALVO (heurística) foi REMOVIDA — ver changelog v1.9.2.
 
-def test_piso_vence_alocacao_zero():
-    """(a) PISO — nível com alvo 0 ainda gasta 1 página, se houver material.
-
-    É o seguro de reversibilidade da fronteira: sem isso, um nível fora de
-    todo alvo nunca seria raspado, e uma fronteira futura que o incluísse não
-    teria material para reavaliar.
-    """
-    ff = _fetcher_com_paginas("cure", 0.5, [_pagina(12), _pagina(12)])
-    r = raspar_nivel(ff, "cure", 0.5, alvo=0)
-    assert r.paginas_gastas == 1
-    assert r.n_bruta == 12          # e o material FOI persistido, não descartado
+def test_orcamento_e_sempre_gasto_integralmente_quando_ha_material():
+    """teto_paginas=2, sem reserva profunda (teto pequeno demais para reservar
+    nada — dividir_raso_profundo(2)==(2,0)): as 2 páginas do orçamento são
+    buscadas, mesmo que o material heuristicamente já bastasse na 1ª."""
+    ff = _fetcher_com_paginas("cure", 4.0, [_pagina(12, base_id=0), _pagina(12, base_id=100)])
+    r = raspar_nivel(ff, "cure", 4.0, alvo=1, teto_paginas=2)
+    assert r.paginas_gastas == 2
+    assert r.motivo_parada == "orcamento_esgotado"
+    assert r.n_bruta == 24
 
 
-def test_piso_nao_gasta_pagina_em_nivel_sem_material():
+def test_alvo_zero_nao_afeta_mais_a_paginacao():
+    """`alvo` não decide mais quando parar — só o orçamento do completamento.
+    Com alvo=0, o nível ainda pagina o orçamento inteiro."""
+    ff = _fetcher_com_paginas("cure", 0.5, [_pagina(12, base_id=0), _pagina(12, base_id=100)])
+    r = raspar_nivel(ff, "cure", 0.5, alvo=0, teto_paginas=2)
+    assert r.paginas_gastas == 2
+    assert r.n_bruta == 24          # e o material FOI persistido, não descartado
+
+
+def test_nivel_sem_material_nenhum_nao_gasta_pagina():
     ff = FakeFetcher({})            # toda página vem vazia
-    r = raspar_nivel(ff, "cure", 0.5, alvo=0)
+    r = raspar_nivel(ff, "cure", 0.5, alvo=0, teto_paginas=4)
     assert r.paginas_gastas == 0 and r.n_bruta == 0
+    assert r.motivo_parada == "material_esgotado"
     assert len(ff.calls) == 1       # 1 requisição para descobrir que está vazio
 
 
-def test_alvo_com_folga_de_25_por_cento_encerra_a_paginacao():
-    """(b) ALVO — para quando a contagem heurística alcança alvo × 1,25.
-
-    alvo 8 → 10 com folga. 12 válidas por página ⇒ a 1ª já basta.
-    """
-    ff = _fetcher_com_paginas("cure", 4.0, [_pagina(12), _pagina(12), _pagina(12)])
-    r = raspar_nivel(ff, "cure", 4.0, alvo=8)
+def test_material_esgotado_para_antes_do_orcamento_e_registra():
+    ff = _fetcher_com_paginas("cure", 4.0, [_pagina(3)])   # página 2 vem vazia
+    r = raspar_nivel(ff, "cure", 4.0, alvo=40, teto_paginas=4)
     assert r.paginas_gastas == 1
-    assert r.parou_por_teto is False
+    assert r.esgotado is True
+    assert r.motivo_parada == "material_esgotado"
+    assert r.parou_por_teto is False       # esgotou, não gastou o orçamento
 
 
-def test_alvo_alto_pagina_mais():
-    # alvo 20 → 25 com folga; 12 por página ⇒ precisa de 3 páginas
-    ff = _fetcher_com_paginas("cure", 4.0, [_pagina(12, base_id=b * 100)
-                                            for b in range(4)])
-    r = raspar_nivel(ff, "cure", 4.0, alvo=20)
-    assert r.paginas_gastas == 3
-    assert r.parou_por_teto is False
-
-
-def test_a_folga_existe_porque_a_contagem_e_otimista():
-    """Reviews curtas não contam para a heurística, então a paginação segue."""
-    ff = _fetcher_com_paginas("cure", 4.0, [_pagina(12, chars=10, base_id=b * 100)
-                                            for b in range(4)])
-    r = raspar_nivel(ff, "cure", 4.0, alvo=8)
-    assert r.n_estimada_valida == 0
-    assert r.paginas_gastas == 4          # nunca alcançou o alvo → foi até o teto
-    assert r.parou_por_teto is True
-
-
-def test_teto_interrompe_e_REGISTRA():
-    """(c) TETO — 4 páginas, para, registra, e segue. Superset incompleto é
-    resultado honesto."""
-    ff = _fetcher_com_paginas("cure", 4.0, [_pagina(2, base_id=b * 100)
-                                            for b in range(9)])
-    r = raspar_nivel(ff, "cure", 4.0, alvo=40)
-    assert r.paginas_gastas == 4
-    assert r.parou_por_teto is True
-    assert r.n_bruta == 8
-
-
-def test_teto_e_parametro():
+def test_orcamento_pequeno_e_parametro():
     ff = _fetcher_com_paginas("cure", 4.0, [_pagina(2, base_id=b * 100)
                                             for b in range(9)])
     r = raspar_nivel(ff, "cure", 4.0, alvo=40, teto_paginas=2)
-    assert r.paginas_gastas == 2 and r.parou_por_teto is True
+    assert r.paginas_gastas == 2
+    assert r.motivo_parada == "orcamento_esgotado"
 
 
-def test_pagina_vazia_encerra_o_nivel_sem_marcar_parada_por_teto():
-    ff = _fetcher_com_paginas("cure", 4.0, [_pagina(3)])   # página 2 vem vazia
-    r = raspar_nivel(ff, "cure", 4.0, alvo=40)
-    assert r.paginas_gastas == 1
-    assert r.esgotado is True
-    assert r.parou_por_teto is False       # esgotou, não bateu no teto
-
-
-def test_precedencia_piso_vence_alvo_mas_teto_vence_tudo():
-    ff = _fetcher_com_paginas("cure", 4.0, [_pagina(12, base_id=b * 100)
-                                            for b in range(9)])
-    assert raspar_nivel(ff, "cure", 4.0, alvo=0).paginas_gastas == 1     # piso
-    ff2 = _fetcher_com_paginas("cure", 4.0, [_pagina(1, base_id=b * 100)
-                                             for b in range(9)])
-    assert raspar_nivel(ff2, "cure", 4.0, alvo=40).paginas_gastas == 4   # teto
+def test_orcamento_zero_nao_faz_nenhuma_requisicao_de_paginacao():
+    ff = FakeFetcher({})
+    r = raspar_nivel(ff, "cure", 4.0, alvo=0, teto_paginas=0)
+    assert r.paginas_gastas == 0 and r.n_bruta == 0
+    assert len(ff.calls) == 0
 
 
 # --- persiste TUDO: os filtros só decidem parar ---

@@ -554,17 +554,25 @@ o resto — a mesma função que já redistribui déficit de reviews entre níve
 de um bucket (§3[C1]) e déficit de páginas entre níveis (v1.9.1, acima),
 agora aplicada a POSIÇÕES DENTRO de um nível. Três usos, uma implementação.
 
-**Custo: IGUAL ao consecutivo, para o mesmo orçamento.** O número de
-requisições que uma coleta estratificada faz por nível é, no pior caso
-(profundidade real ≥ maior posição profunda tentada), exatamente
-`n_raso + n_profundo` = o orçamento — o mesmo que o esquema puramente
-consecutivo faria. No caso de descoberta (profundidade real menor), o total
-cai para `n_raso + (posições até a descoberta) + (redistribuídas dentro do
-intervalo válido)`, sempre `≤` ao orçamento — nunca mais caro, e igual
-sempre que há profundidade suficiente para preencher a reserva. Testado
-explicitamente (`tests/test_posicionamento.py`): requisições do
-posicionamento estratificado === requisições do consecutivo, mesmo
-orçamento, para um conjunto de profundidades reais sintéticas.
+**Custo: IGUAL ao consecutivo no caso comum; NUNCA maior, em qualquer caso.**
+Quando a profundidade real cobre todas as posições tentadas (o caso
+DOMINANTE — é justamente o material populoso que justifica gastar reserva
+profunda), o total é exatamente `n_raso + n_profundo` = o orçamento, igual
+ao esquema consecutivo. **Ressalva honesta, no caso de fronteira exata:** o
+backfill só usa posições JÁ CONFIRMADAS (nunca aposta em território
+desconhecido, para preservar a garantia de ≤1 desperdício) — se a
+profundidade real cai DENTRO de um salto geométrico ainda não coberto por
+nenhuma posição confirmada (ex.: confirmado até `n_raso+2`, a profundidade
+real é `n_raso+3`, mas a próxima tentativa geométrica é `n_raso+4` e vem
+vazia), esse conteúdo real específico fica **fora do backfill** — o
+orçamento correspondente simplesmente não é gasto nesse nível, em vez de
+arriscar uma segunda página vazia para persegui-lo. **Nunca mais caro que o
+consecutivo; igual sempre que há posições confirmadas suficientes para
+preencher a reserva (o caso comum); pode ficar levemente ABAIXO do
+consecutivo no caso de fronteira, deixando uma fração pequena e real do
+conteúdo fora — aceito em troca da garantia de custo previsível.** Testado
+explicitamente (`tests/test_posicionamento.py`): igualdade exata no caso
+comum (profundidade folgada); nunca excede o orçamento em nenhum caso.
 
 **Degrada para consecutivo quando o nível é raso.** Se a profundidade real
 do nível é menor que `n_raso`, o bloco raso já esgota o material (página
@@ -1777,7 +1785,7 @@ As três incógnitas abaixo foram resolvidas na Fase 1; os achados já estão in
 ## Changelog
 - **v1.9.2** (2026-08-07) — fecha o gate de profundidade da v1.9.1 e resolve o déficit residual de `medianas`. Última sessão de coleta antes do lote de 30-50 filmes. Fronteiras, cota, piso escalonado, `min_chars`, ordenação e qualquer etapa de síntese/narrador/editor **não tocados**.
   - **(1) Parada por ALVO removida (§3[B]).** Era um vestígio de quando o teto era por NÍVEL e o custo por BUCKET não tinha limite (v1.9.0); sob o orçamento por bucket da v1.9.1 virou fonte de NÃO-DETERMINISMO — foi o mecanismo exato do 37/40 residual de `cidade-de-deus` (nível 2,5★ parou por ALVO na página 3, com 3 páginas de orçamento ainda disponíveis, página 4 nunca buscada). Agora o orçamento de páginas por nível é sempre gasto INTEGRALMENTE; única parada antecipada é esgotamento REAL de material. `motivo_parada` por nível: `"orcamento_esgotado"` \| `"material_esgotado"`, gravado em `meta.json`. O piso de páginas por nível (gate do ALVO) some — a garantia de reversibilidade da fronteira (§2.2) já vinha, desde a v1.9.1, do piso da ALOCAÇÃO de páginas, não deste parâmetro. `FOLGA_ALVO_COLETA` sobrevive com escopo reduzido: só decide o orçamento do completamento [C'], nunca mais quando parar de paginar. Custo aceito e medido em troca de determinismo — ver Resultado MEDIDO.
-  - **(2) Posicionamento estratificado por profundidade (§3[B]).** O defeito: páginas de um nível eram sempre as primeiras `N` consecutivas, amostrando sistematicamente o mais recente sob `by/added` (79-100% da amostra em ~7 semanas, medido na v1.9.0). Correção: `RESERVA_PROFUNDIDADE = 0,25` do orçamento de cada nível é posicionada em progressão geométrica (`n_raso+2, n_raso+4, n_raso+8, …`) a partir do fim do bloco raso; a primeira posição profunda vazia revela a profundidade real (por monotonicidade da paginação), e o orçamento não gasto é redistribuído para dentro do intervalo JÁ CONFIRMADO como válido (nunca além — no máximo 1 página desperdiçada por nível). A redistribuição **reaproveita `redistribuir_deficit`** — terceiro uso da mesma função (reviews entre níveis, páginas entre níveis, agora posições dentro de um nível), nenhum mecanismo novo. **Custo IGUAL ao consecutivo para o mesmo orçamento** — testado explicitamente (`tests/test_posicionamento.py`): requisições estratificadas === requisições consecutivas. Degrada para consecutivo puro quando o nível é raso (material esgota dentro do bloco raso, fase profunda nunca tentada). **Racional de reversibilidade:** com raso e profundo no MESMO bruto, "analisar só o recente" vs. "analisar tudo" vira parâmetro filtrável por `pagina_origem` na seleção (não implementado, mas agora POSSÍVEL sem recoleta) — a profundidade de paginação era o único parâmetro de coleta que o superset ainda não tornava reversível.
+  - **(2) Posicionamento estratificado por profundidade (§3[B]).** O defeito: páginas de um nível eram sempre as primeiras `N` consecutivas, amostrando sistematicamente o mais recente sob `by/added` (79-100% da amostra em ~7 semanas, medido na v1.9.0). Correção: `RESERVA_PROFUNDIDADE = 0,25` do orçamento de cada nível é posicionada em progressão geométrica (`n_raso+2, n_raso+4, n_raso+8, …`) a partir do fim do bloco raso; a primeira posição profunda vazia revela a profundidade real (por monotonicidade da paginação), e o orçamento não gasto é redistribuído para dentro do intervalo JÁ CONFIRMADO como válido (nunca além — no máximo 1 página desperdiçada por nível). A redistribuição **reaproveita `redistribuir_deficit`** — terceiro uso da mesma função (reviews entre níveis, páginas entre níveis, agora posições dentro de um nível), nenhum mecanismo novo. **Custo IGUAL ao consecutivo no caso comum (profundidade folgada); nunca MAIOR em nenhum caso** — no caso de fronteira exata (profundidade real cai dentro de um salto geométrico ainda não confirmado), o orçamento pode ficar parcialmente não-gasto em vez de arriscar mais de 1 página vazia — testado explicitamente (`tests/test_posicionamento.py`). Degrada para consecutivo puro quando o nível é raso (material esgota dentro do bloco raso, fase profunda nunca tentada). **Racional de reversibilidade:** com raso e profundo no MESMO bruto, "analisar só o recente" vs. "analisar tudo" vira parâmetro filtrável por `pagina_origem` na seleção (não implementado, mas agora POSSÍVEL sem recoleta) — a profundidade de paginação era o único parâmetro de coleta que o superset ainda não tornava reversível.
   - **(3) Confirmação do teto de 256 páginas — Entrega 3.** Medido num filme obscuro (`<PREENCHER>`), busca binária ~8 requisições. `<PREENCHER: resultado e leitura>`. O posicionamento estratificado (item 2) não depende desta resposta — funciona igual, mesmo custo, seja a profundidade real 3 páginas ou 3.000; a medição só completa o registro do achado lateral da v1.9.1.
   - **(4) `pagina_origem` vira instrumento temporal PRIMÁRIO (§3[B']).** `janela_temporal` (v1.9.1) mede `data`, que é a data ASSISTIDA (diário) — contaminada por quem registra filmes com atraso, causa raiz do resultado MISTO do gate da v1.9.1 (janela por `data` ESTREITOU sob amostragem mais profunda em 2 dos 3 filmes). `pagina_origem`, sob ordenação cronológica, é o rank de ADIÇÃO — sem essa contaminação. Nova telemetria `distribuicao_pagina_origem` por bucket (`{n, min, max, p5, p50, p95, fracao_profunda}`), sobre a amostra SELECIONADA (não o bruto inteiro), com `fracao_profunda` usando a MESMA divisão raso/profundo do item 2 — telemetria e coleta nunca divergem sobre o que conta como profundo. `janela_temporal` rebaixada a secundária, rotulada como proxy contaminado, mantida (é o único sinal de calendário real que existe).
   - **(5) Recoleta dos 3 filmes, MEDIDA — ver §3[B] "Resultado MEDIDO da recoleta v1.9.2" e §5.6.** `<PREENCHER após a recoleta>`.

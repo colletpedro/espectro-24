@@ -106,12 +106,12 @@ CASCATA_CHARS = [150, 50, 0] # §2/§C: 150 → 50 → sem filtro (0 = sem filtr
 # NÍVEL calculado via `alocacao.orcamento_paginas`).
 TETO_PAGINAS = 4
 # Piso de páginas por nível — SEGURO DE REVERSIBILIDADE DA FRONTEIRA (§2.2).
-# Vale mesmo para níveis cuja alocação é zero: sem ele, um nível fora de todo
-# alvo nunca seria raspado, e uma fronteira futura que o incluísse não teria
-# material para reavaliar — voltaríamos a pagar recoleta para mudar uma
-# decisão de análise, que é o problema que a v1.9.0 existe para resolver.
-# v1.9.1: também usado como piso da alocação de PÁGINAS por bucket
-# (`alocacao.orcamento_paginas_bucket`) — mesmo princípio, mesma constante.
+# v1.9.1: piso da alocação de PÁGINAS por bucket (`orcamento_paginas_bucket`)
+# — garante que todo nível com material no histograma receba orçamento >= 1,
+# mesmo que a alocação de REVIEWS daquele nível seja zero.
+# v1.9.2: deixou de ter um segundo uso em `raspar_nivel` (gating da parada
+# por ALVO, removida — ver changelog v1.9.2). A reversibilidade continua
+# garantida, só que por este único caminho agora.
 PISO_PAGINAS_POR_NIVEL = 1
 
 # Orçamento de páginas POR BUCKET (v1.9.1, §3[B]) — substitui TETO_PAGINAS
@@ -131,11 +131,26 @@ ORCAMENTO_PAGINAS_POR_BUCKET = 16
 # `redistribuir_deficit` (§3[C1]) — não um mecanismo novo, o mesmo já usado
 # para o déficit de reviews, com o teto como "disponibilidade".
 TETO_SEGURANCA_PAGINAS_NIVEL = 10
-# Folga sobre a cota alocada ao contar "já tenho material suficiente" (§3[B],
-# degrau b). A contagem de parada é OTIMISTA por construção: usa o texto
-# VISÍVEL, e parte do que ela aprova cai depois no completamento [C'] ou na
-# re-checagem de spoiler.
+# Folga sobre a cota alocada, usada SÓ para o orçamento do completamento [C']
+# desde a v1.9.2 (não decide mais quando parar de paginar — ver
+# RESERVA_PROFUNDIDADE e o changelog v1.9.2). A contagem é OTIMISTA por
+# construção: usa o texto VISÍVEL, e parte do que ela aprova cai depois no
+# completamento ou na re-checagem de spoiler.
 FOLGA_ALVO_COLETA = 1.25
+
+# Fração do orçamento de páginas de um NÍVEL reservada para posicionamento
+# PROFUNDO (v1.9.2, §3[B]) — o resto (1 - RESERVA_PROFUNDIDADE) fica no bloco
+# RASO, consecutivo, como sempre. Motivação: sob `by/added`, páginas
+# consecutivas amostram sistematicamente o material mais RECENTE (medido na
+# v1.9.0: 79-100% da amostra numa janela de ~7 semanas). Reservar uma fração
+# do orçamento para posições em progressão geométrica além do bloco raso
+# alarga a cobertura temporal sem gastar requisição extra — mesmo orçamento,
+# posições diferentes (ver `alocacao.dividir_raso_profundo`).
+# 0,25 é o ponto de partida: grande o bastante para alcançar profundidade
+# real com poucos termos geométricos (2,4,8,16,…), pequeno o bastante para
+# não sacrificar a densidade do bloco raso. Não há evidência empírica prévia
+# que o calibre — mesma política dos limiares do piso escalonado (§3[C3]).
+RESERVA_PROFUNDIDADE = 0.25
 
 # --- Ordenação da listagem: PARÂMETRO DE AMOSTRAGEM (§2.3, v1.9.0) ---
 # Só as primeiras N páginas de cada nível são lidas, então a ordenação decide

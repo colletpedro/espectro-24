@@ -32,6 +32,7 @@ from .config import (
     ORCAMENTO_PAGINAS_POR_BUCKET,
     PISO_ALOCACAO_POR_NIVEL,
     PISO_PAGINAS_POR_NIVEL,
+    RESERVA_PROFUNDIDADE,
     TETO_SEGURANCA_PAGINAS_NIVEL,
 )
 
@@ -172,6 +173,36 @@ def redistribuir_deficit(alocacao: dict[float, int],
         deficit -= 1
 
     return final
+
+
+def dividir_raso_profundo(orcamento: int,
+                          reserva: float = RESERVA_PROFUNDIDADE) -> tuple[int, int]:
+    """Divide o orçamento de páginas de UM NÍVEL em `(n_raso, n_profundo)`.
+
+    v1.9.2, §3[B] — posicionamento estratificado. Usada TANTO pela coleta
+    (`collector.raspar_nivel`, para decidir quais posições buscar) QUANTO
+    pela telemetria (`distribuicao_pagina_origem`, §3[B'], para classificar
+    uma review já coletada como rasa ou profunda) — uma única fórmula, para
+    que coleta e telemetria nunca divirjam sobre o que conta como "profundo".
+
+    `n_profundo = round(orcamento * reserva)`; `n_raso` é o resto. Usa o
+    `round()` padrão do Python (banker's rounding — arredonda para o par mais
+    próximo em empates exatos, ex. `round(2.5) == 2`) sem tratamento
+    especial: para os orçamentos pequenos que esta spec usa (tipicamente
+    1-16), a diferença entre arredondar 0,5 para cima ou para baixo não muda
+    a ordem de grandeza da reserva.
+
+    Garantias: `n_raso + n_profundo == orcamento`, sempre; `n_raso >= 1`
+    sempre que `orcamento >= 1` (a reserva nunca consome o bloco raso
+    inteiro, mesmo com `reserva` alta) — sem bloco raso não há posição 1,
+    e todo nível continua sendo raspado a partir do início.
+    """
+    if orcamento <= 0:
+        return 0, 0
+    n_profundo = round(orcamento * reserva)
+    n_raso = max(1, orcamento - n_profundo)
+    n_profundo = orcamento - n_raso
+    return n_raso, n_profundo
 
 
 def orcamento_paginas_bucket(orcamento_bucket: int, contagens: dict[float, int],

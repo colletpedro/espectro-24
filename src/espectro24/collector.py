@@ -17,6 +17,7 @@ from dataclasses import dataclass, field
 from datetime import datetime, timezone
 from pathlib import Path
 
+from .alocacao import dividir_raso_profundo, redistribuir_deficit
 from .bruto import ReviewBruta, autor_hash, id_estavel, persistir
 from .config import (
     DADOS_BRUTO_DIR,
@@ -25,7 +26,7 @@ from .config import (
     NIVEIS_ORDENADOS,
     ORDENACAO,
     PISO_ESCALONADO,
-    PISO_PAGINAS_POR_NIVEL,
+    RESERVA_PROFUNDIDADE,
     TETO_PAGINAS,
     VERSAO_COLETOR,
 )
@@ -47,9 +48,20 @@ class NivelBruto:
     nivel: float
     paginas_gastas: int
     reviews: list[ReviewBruta] = field(default_factory=list)
-    parou_por_teto: bool = False
-    esgotado: bool = False
+    # v1.9.2 (§3[B]): motivo de parada DETERMINÍSTICO — exatamente dois
+    # valores possíveis. Substitui os booleans `parou_por_teto`/`esgotado`
+    # da v1.9.0/v1.9.1 (mantidos abaixo como propriedades DERIVADAS, para
+    # não quebrar consumidores existentes — cli.py, `paradas_por_limite`).
+    motivo_parada: str = "orcamento_esgotado"
     n_sem_nota_no_html: int = 0
+
+    @property
+    def parou_por_teto(self) -> bool:
+        return self.motivo_parada == "orcamento_esgotado"
+
+    @property
+    def esgotado(self) -> bool:
+        return self.motivo_parada == "material_esgotado"
 
     @property
     def n_bruta(self) -> int:
@@ -112,46 +124,45 @@ def _para_bruta(r: Review, nivel: float, pagina: int) -> ReviewBruta:
 def raspar_nivel(fetcher: Fetcher, slug: str, nivel: float, alvo: int,
                  ordenacao: str = ORDENACAO,
                  teto_paginas: int = TETO_PAGINAS,
-                 piso_paginas: int = PISO_PAGINAS_POR_NIVEL,
                  folga: float = FOLGA_ALVO_COLETA,
-                 min_chars: int = MIN_CHARS) -> NivelBruto:
+                 min_chars: int = MIN_CHARS,
+                 reserva_profundidade: float = RESERVA_PROFUNDIDADE) -> NivelBruto:
     """Pagina UM nível e devolve tudo o que veio (§3[B]).
 
-    Condição de parada, **nesta ordem de precedência**:
+    **v1.9.2 — condição de parada DETERMINÍSTICA, dois motivos possíveis:**
+    o orçamento (`teto_paginas`) é sempre gasto INTEGRALMENTE, salvo
+    esgotamento REAL de material (página vazia, §2.1). A parada por ALVO
+    (heurística, cota × folga) da v1.9.0/v1.9.1 foi REMOVIDA — sob orçamento
+    fixo por bucket (v1.9.1), ela só introduzia não-determinismo (foi a causa
+    exata do 37/40 residual de `cidade-de-deus` na v1.9.1). `alvo`/`folga`
+    continuam existindo, mas com escopo REDUZIDO: só decidem o orçamento do
+    completamento [C'] (quantas truncadas resolver), nunca mais quando parar
+    de paginar.
 
-    **(a) PISO** — no mínimo `piso_paginas` página(s), sempre que houver
-    material, *mesmo com `alvo == 0`*. É o seguro de reversibilidade da
-    fronteira (§2.2, Risco 3): sem ele, um nível fora de todo alvo nunca
-    seria raspado, e uma fronteira futura que o incluísse não teria material
-    para reavaliar — voltaríamos a pagar recoleta para mudar uma decisão de
-    análise.
-
-    **(b) ALVO** — `alvo × folga` válidas pela contagem heurística. Os filtros
-    decidem apenas **parar**; tudo continua sendo persistido, inclusive o que
-    eles reprovaram.
-
-    **(c) TETO** — `teto_paginas`. Ao bater, PARA e registra
-    `parou_por_teto=True`. Superset incompleto é resultado honesto.
-
-    Página vazia (200 com lista vazia, §2.1) encerra o nível como `esgotado`
-    — que não é o mesmo que bater no teto, e a telemetria distingue os dois.
+    **v1.9.2 — posicionamento ESTRATIFICADO por profundidade (§3[B]).** O
+    orçamento do nível se divide em bloco RASO (posições `1..n_raso`,
+    consecutivas) e bloco PROFUNDO (até `n_profundo` posições em progressão
+    geométrica a partir do fim do bloco raso — `dividir_raso_profundo`,
+    `alocacao.py`). O bloco profundo só é tentado se o raso não esgotar
+    primeiro (degrada para puramente consecutivo em níveis rasos). A primeira
+    posição profunda vazia revela a profundidade real (por monotonicidade da
+    paginação); o orçamento não gasto é redistribuído — **reaproveitando
+    `redistribuir_deficit`** — só para posições JÁ CONFIRMADAS como válidas
+    (nunca além da maior posição buscada com sucesso), garantindo no máximo 1
+    página desperdiçada por nível.
     """
-    alvo_com_folga = math.ceil(alvo * folga)
     res = NivelBruto(nivel=nivel, paginas_gastas=0)
     vistos: set[str] = set()
     # Pareia cada registro persistível com a `Review` de onde ele veio — o
     # completamento precisa da `full_text_url`, que não existe no registro.
     origem: list[Review] = []
 
-    for pagina in range(1, teto_paginas + 1):
+    def _buscar(pagina: int) -> list:
         html = fetcher.get(level_page_url(slug, nivel, pagina, ordenacao),
                            level_page_cache_key(slug, nivel, pagina, ordenacao))
-        brutas = parse_reviews(html)
-        if not brutas:
-            res.esgotado = True
-            break
-        res.paginas_gastas = pagina
+        return parse_reviews(html)
 
+    def _registrar(brutas: list, pagina: int) -> None:
         for r in brutas:
             if r.rating is None:
                 res.n_sem_nota_no_html += 1
@@ -162,14 +173,72 @@ def raspar_nivel(fetcher: Fetcher, slug: str, nivel: float, alvo: int,
             res.reviews.append(reg)
             origem.append(r)
 
-        # (a) tem precedência sobre (b): o alvo só pode encerrar depois do piso
-        if pagina >= piso_paginas and res.n_estimada_valida >= alvo_com_folga:
-            break
-    else:
-        # esgotou o range sem `break`: bateu no teto
-        res.parou_por_teto = res.n_estimada_valida < alvo_com_folga
+    if teto_paginas > 0:
+        n_raso, n_profundo = dividir_raso_profundo(teto_paginas, reserva_profundidade)
+        paginas_com_conteudo = 0
+        esgotou = False
 
-    _completar_truncadas(fetcher, slug, res, origem, alvo_com_folga, min_chars)
+        # --- bloco raso: consecutivo, 1..n_raso ---
+        for pagina in range(1, n_raso + 1):
+            brutas = _buscar(pagina)
+            if not brutas:
+                esgotou = True
+                break
+            _registrar(brutas, pagina)
+            paginas_com_conteudo += 1
+
+        # --- bloco profundo: só se o raso não esgotou ---
+        if not esgotou and n_profundo > 0:
+            geometricas = [n_raso + 2 ** k for k in range(1, n_profundo + 1)]
+            tentadas: list[int] = []
+            k_vazio: int | None = None
+            maior_confirmada = n_raso
+            for pos in geometricas:
+                brutas = _buscar(pos)
+                if not brutas:
+                    k_vazio = pos
+                    break
+                _registrar(brutas, pos)
+                paginas_com_conteudo += 1
+                tentadas.append(pos)
+                maior_confirmada = pos
+
+            if k_vazio is not None:
+                esgotou = True
+                # A posição vazia (k_vazio) JÁ consumiu 1 unidade real de
+                # orçamento (a requisição foi feita, só não trouxe conteúdo)
+                # — não entra de novo como "deficit" a redistribuir, senão
+                # seria contada duas vezes. Só a CAUDA nunca tentada da
+                # progressão geométrica (depois de k_vazio — sabidamente
+                # vazia por monotonicidade, nunca requisitada) representa
+                # orçamento genuinamente sobrando.
+                cauda_nao_tentada = geometricas[len(tentadas) + 1:]
+                if cauda_nao_tentada:
+                    # Candidatas SEGURAS: posições dentro do intervalo já
+                    # confirmado (<= maior_confirmada), ainda não buscadas.
+                    # Nunca além — por isso o desperdício fica em no máximo
+                    # 1 página por nível (a que revelou k_vazio).
+                    candidatas = [p for p in range(n_raso + 1, maior_confirmada + 1)
+                                 if p not in tentadas]
+                    if candidatas:
+                        universo = sorted(set(cauda_nao_tentada) | set(candidatas))
+                        alocacao_pos = {p: (1 if p in cauda_nao_tentada else 0)
+                                        for p in universo}
+                        disponivel_pos = {p: (1 if p <= maior_confirmada else 0)
+                                          for p in universo}
+                        final_pos = redistribuir_deficit(alocacao_pos, disponivel_pos)
+                        extras = sorted(p for p in candidatas if final_pos.get(p, 0) == 1)
+                        for pos in extras:
+                            brutas = _buscar(pos)
+                            if brutas:   # garantido pela monotonicidade; defensivo
+                                _registrar(brutas, pos)
+                                paginas_com_conteudo += 1
+
+        res.paginas_gastas = paginas_com_conteudo
+        res.motivo_parada = "material_esgotado" if esgotou else "orcamento_esgotado"
+
+    orcamento_completar = math.ceil(alvo * folga)
+    _completar_truncadas(fetcher, slug, res, origem, orcamento_completar, min_chars)
     return res
 
 
@@ -252,6 +321,11 @@ def coletar_superset(fetcher: Fetcher, slug: str,
         "contagem_bruta_por_nivel": {str(n): r.n_bruta for n, r in res.niveis.items()},
         "contagem_estimada_valida_por_nivel": {str(n): r.n_estimada_valida
                                                for n, r in res.niveis.items()},
+        # v1.9.2 (§3[B]): motivo de parada DETERMINÍSTICO por nível — fonte
+        # primária de telemetria de parada; `paradas_por_limite` permanece,
+        # derivado, para não quebrar consumidores existentes.
+        "motivo_parada_por_nivel": {str(n): r.motivo_parada
+                                    for n, r in res.niveis.items()},
     }
     todas = [rev for nb in res.niveis.values() for rev in nb.reviews]
     persistido = persistir(slug, res.meta, todas, raiz=raiz)
