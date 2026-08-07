@@ -5,7 +5,7 @@ import json
 from pathlib import Path
 from typing import Any
 
-from .config import BASE, SPEC_VERSION
+from .config import BASE, BUCKET_ALVO, SPEC_VERSION
 from .models import BucketResult
 
 
@@ -19,12 +19,18 @@ def reviews_url_de(slug: str) -> str:
 # avisado de que os tamanhos NÃO significam prevalência; com distribuição, o
 # peso real existe e está exibido, então o aviso vira uma explicação do
 # método. Mantidos em sincronia com os mesmos textos no frontend (filme.js).
+#
+# v1.9.0: os números vêm de `BUCKET_ALVO` (config), não de um literal. A cota
+# passou de 50/20/30 para 40/40/40 nesta versão, e um disclaimer com o número
+# antigo seria uma afirmação falsa sobre o método na cara do leitor — o tipo
+# de coisa que este projeto não deixa passar em silêncio.
+_COTAS = " · ".join(str(BUCKET_ALVO[n]) for n in BUCKET_ALVO)
 DISCLAIMER_SEM_DISTRIBUICAO = (
-    "grupos de 50 · 20 · 30 reviews são cotas de coleta — "
+    f"grupos de {_COTAS} reviews são cotas de coleta — "
     "não a proporção real das opiniões"
 )
 DISCLAIMER_COM_DISTRIBUICAO = (
-    "análise em profundidade igual por grupo (50·20·30 reviews); "
+    f"análise em profundidade igual por grupo ({_COTAS} reviews); "
     "o peso real de cada faixa está indicado em cada grupo"
 )
 

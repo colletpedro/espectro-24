@@ -142,10 +142,12 @@ def test_numerador_dentro_do_range_nao_e_marcado_como_clampado():
 # --- Tarefa v1.1.2: preâmbulo de papel parametrizado por bucket ---
 
 def test_preambulo_contem_nome_e_intervalo_de_notas_por_bucket():
+    # v1.9.0: intervalos DERIVADOS das fronteiras em vigor (opção C, §2.2) —
+    # o preâmbulo dizia "0.5–2.5 / 3–3.5 / 4–5" até a v1.8.2.
     casos = {
-        "negativas": "0.5–2.5 estrelas",
-        "medianas": "3–3.5 estrelas",
-        "positivas": "4–5 estrelas",
+        "negativas": "0.5–2 estrelas",
+        "medianas": "2.5–3 estrelas",
+        "positivas": "3.5–5 estrelas",
     }
     for nome, intervalo_esperado in casos.items():
         prompt = build_system_prompt(nome)

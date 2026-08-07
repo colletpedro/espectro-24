@@ -256,16 +256,18 @@ class Distribuicao:
         99 ou 101. Preferido a redistribuir o resto (que tornaria algum
         bucket menos fiel ao próprio dado) — coerente com a política do
         projeto de não maquiar número. A interface nunca exibe a soma.
+
+        v1.9.0: a agregação delega a `buckets.shares_por_bucket`, que aceita
+        as fronteiras como PARÂMETRO — é a mesma função usada para publicar
+        os shares sob as fronteiras antiga e nova lado a lado (§2.2), então
+        não existe uma segunda fórmula a divergir desta.
         """
-        from .config import BUCKETS
+        from .buckets import shares_por_bucket
 
         total = sum(por_nivel.values())
-        if total <= 0:
+        por_bucket = shares_por_bucket(por_nivel)
+        if por_bucket is None:
             return None
-        por_bucket = {
-            nome: round(100 * sum(por_nivel.get(n, 0) for n in niveis) / total)
-            for nome, niveis in BUCKETS.items()
-        }
         return cls(por_nivel=dict(por_nivel), n_notas_total=total,
                    por_bucket=por_bucket)
 

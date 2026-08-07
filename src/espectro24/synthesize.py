@@ -32,6 +32,7 @@ import re
 
 from .config import (
     BUCKETS,
+    BUCKET_ALVO,
     EDITOR_LIMIAR_EDICAO_NULA,
     EDITOR_LIMIAR_FRASE_SEM_ORIGEM,
     EDITOR_LIMIAR_ORDEM_MOVIMENTO_1,
@@ -838,11 +839,17 @@ fatia quantificada do público: apresente-os como "entre quem não gostou...", \
 """
 
 
-_REGRA_C_COM_DISTRIBUICAO = """\
+# v1.9.0 — o literal da cota vira DERIVADO de BUCKET_ALVO. Não é mudança de
+# regra: a cota passou de 50/20/30 para 40/40/40 nesta versão, e deixar o
+# número antigo escrito no prompt entregaria ao LLM um dado falso sobre o
+# próprio pipeline. Mesma correção feita no disclaimer de `render.py`.
+_COTAS_TXT = "/".join(str(BUCKET_ALVO[n]) for n in BUCKET_ALVO)
+
+_REGRA_C_COM_DISTRIBUICAO = f"""\
 c. PESO REAL DE CADA GRUPO — REGRA CRÍTICA (a distribuição está disponível \
 neste relatório): você recebeu a DISTRIBUIÇÃO REAL das notas do filme, vinda \
 do histograma público — quantas pessoas deram cada nota. Isso é um dado \
-diferente do tamanho dos grupos de reviews analisadas (50/20/30), que é \
+diferente do tamanho dos grupos de reviews analisadas ({_COTAS_TXT}), que é \
 apenas a COTA DE COLETA e continua NÃO significando prevalência. Regras:
 - ANCORAGEM OBRIGATÓRIA: cada grupo DEVE ser apresentado, na primeira vez que \
 aparecer no MOVIMENTO 3, com o rotulo_peso que veio no relatório para ele \

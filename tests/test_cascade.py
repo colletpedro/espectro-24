@@ -55,12 +55,13 @@ def test_piso_por_bucket_sem_analise():
 
 
 def test_piso_por_bucket_reduzido_e_completo():
+    # v1.9.0: alvo = 40 nos três buckets; positivas tem 4 níveis (3.5–5.0).
     niveis = {n: LevelResult(n, 150, 1, 0, 0, 0, 0, 0) for n in
               [0.5, 1.0, 1.5, 2.0, 2.5, 3.0, 3.5, 4.0, 4.5, 5.0]}
-    # medianas: 3 válidas (>=piso 3, <alvo 20) → reduzido
+    # medianas: 3 válidas (>=piso 3, <alvo 40) → reduzido
     niveis[3.0].validas = [_r(3.0, 200, vid=f"m{i}") for i in range(3)]
-    # positivas: cada nível com 10 → 30 = alvo → completo
-    for n in (4.0, 4.5, 5.0):
+    # positivas: cada um dos 4 níveis com 10 → 40 = alvo → completo
+    for n in (3.5, 4.0, 4.5, 5.0):
         niveis[n].validas = [_r(n, 200, vid=f"p{n}{i}") for i in range(10)]
     buckets = {b.nome: b for b in assemble_buckets(niveis)}
     assert buckets["medianas"].modo == "reduzido"

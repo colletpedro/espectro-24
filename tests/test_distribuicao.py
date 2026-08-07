@@ -7,7 +7,7 @@ ancoragem do narrador.
 """
 import pytest
 
-from conftest import FakeFetcher, fx
+from conftest import CONTAGENS_3_17_79, FakeFetcher, fx, histograma_de_contagens
 
 from espectro24.collector import collect_distribuicao
 from espectro24.models import BucketResult, Distribuicao, LevelResult, Review, Tema
@@ -63,18 +63,22 @@ def test_parse_histograma_estrutura_inesperada_vira_none(html):
 # --- agregação por bucket ---
 
 def test_agregacao_por_bucket_do_cure():
+    """v1.9.0 — sob a opção C o `cure` sai 2/8/90 (era 3/17/79 até a v1.8.2).
+
+    6.733 / 29.585 / 338.960 sobre 375.278. A mudança é a consequência
+    declarada em §2.2 (o 3,5★ populoso migra para positivas), não regressão.
+    """
     d = Distribuicao.de_histograma(parse_rating_histogram(fx("histograma_cure.html")))
     assert d.n_notas_total == 375278
-    # 12.947 / 64.742 / 297.589 sobre 375.278
-    assert d.por_bucket == {"negativas": 3, "medianas": 17, "positivas": 79}
+    assert d.por_bucket == {"negativas": 2, "medianas": 8, "positivas": 90}
     assert d.fonte == "letterboxd_histograma"
 
 
 def test_agregacao_com_histograma_sintetico_exato():
-    # 10 por nível => negativas 50/100, medianas 20/100, positivas 30/100
+    # 10 por nível => 4/2/4 níveis sob a opção C => 40/20/40 de 100
     por_nivel = {n: 10 for n in [0.5, 1, 1.5, 2, 2.5, 3, 3.5, 4, 4.5, 5]}
     d = Distribuicao.de_histograma(por_nivel)
-    assert d.por_bucket == {"negativas": 50, "medianas": 20, "positivas": 30}
+    assert d.por_bucket == {"negativas": 40, "medianas": 20, "positivas": 40}
     assert d.n_notas_total == 100
 
 
@@ -127,7 +131,7 @@ def test_collect_distribuicao_usa_endpoint_csi_e_uma_requisicao():
     key = histogram_cache_key("cure")
     f = FakeFetcher({key: fx("histograma_cure.html")})
     d = collect_distribuicao(f, "cure")
-    assert d.por_bucket["positivas"] == 79
+    assert d.por_bucket["positivas"] == 90   # v1.9.0, opção C (era 79)
     assert len(f.calls) == 1
     assert f.calls[0] == (histogram_url("cure"), key)
     assert "csi/film/cure/rating-histogram" in histogram_url("cure")
@@ -158,12 +162,14 @@ def _bucket(nome, alvo, n=5, temas=None):
 
 
 def _output(com_distribuicao=True):
-    buckets = [_bucket("negativas", 50), _bucket("medianas", 20),
-               _bucket("positivas", 30)]
+    # v1.9.0: histograma SINTÉTICO com shares 3/17/79 em vez do histograma
+    # real do `cure` — as asserções abaixo são sobre rótulo de peso e
+    # ancoragem, não sobre onde fica a fronteira (ver conftest).
+    buckets = [_bucket("negativas", 40), _bucket("medianas", 40),
+               _bucket("positivas", 40)]
     d = None
     if com_distribuicao:
-        d = Distribuicao.de_histograma(
-            parse_rating_histogram(fx("histograma_cure.html")))
+        d = Distribuicao.de_histograma(histograma_de_contagens(**CONTAGENS_3_17_79))
     return build_output("cure", buckets, "2026-01-01", {}, 252, distribuicao=d)
 
 
@@ -171,7 +177,7 @@ def _output(com_distribuicao=True):
 
 def test_output_traz_bloco_distribuicao_e_share_por_bucket():
     out = _output()
-    assert out["distribuicao"]["n_notas_total"] == 375278
+    assert out["distribuicao"]["n_notas_total"] == 10000   # sintético (conftest)
     assert out["distribuicao"]["por_bucket"]["positivas"] == 79
     shares = {b["bucket"]: b.get("share_real") for b in out["buckets"]}
     assert shares == {"negativas": 3, "medianas": 17, "positivas": 79}
@@ -187,7 +193,7 @@ def test_output_sem_distribuicao_nao_inventa_share():
 def test_aplicar_distribuicao_reproduz_a_estrutura_do_caminho_fresh():
     """O caminho --reuse-synthesis usa aplicar_distribuicao; tem que dar o
     MESMO resultado que build_output produz no caminho fresh."""
-    d = Distribuicao.de_histograma(parse_rating_histogram(fx("histograma_cure.html")))
+    d = Distribuicao.de_histograma(histograma_de_contagens(**CONTAGENS_3_17_79))
     fresh = _output()
     reaplicado = aplicar_distribuicao(_output(com_distribuicao=False), d)
     assert reaplicado["distribuicao"] == fresh["distribuicao"]
@@ -294,7 +300,7 @@ def test_narrador_recebe_a_variante_certa_conforme_o_output():
 def test_serializacao_injeta_rotulo_peso_por_grupo():
     ser = _serialize_output_for_narrator(_output())
     assert "DISTRIBUIÇÃO REAL DAS NOTAS" in ser
-    assert "375278 notas no total" in ser
+    assert "10000 notas no total" in ser   # histograma sintético (conftest)
     assert 'rotulo_peso: "uma fração mínima das notas (~3%)"' in ser
     assert 'rotulo_peso: "a grande maioria das notas (~79%)"' in ser
 

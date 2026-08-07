@@ -63,10 +63,12 @@ def _bucket(nome, alvo, n=5, temas=None):
 
 
 def _output():
-    buckets = [_bucket("negativas", 50), _bucket("medianas", 20),
-               _bucket("positivas", 30)]
-    d = Distribuicao.de_histograma(
-        parse_rating_histogram(fx("histograma_cure.html")))
+    # v1.9.0: shares 3/17/79 a partir de histograma SINTÉTICO — os trechos
+    # protegidos derivam do share, não da fronteira (ver conftest).
+    from conftest import CONTAGENS_3_17_79, histograma_de_contagens
+    buckets = [_bucket("negativas", 40), _bucket("medianas", 40),
+               _bucket("positivas", 40)]
+    d = Distribuicao.de_histograma(histograma_de_contagens(**CONTAGENS_3_17_79))
     return build_output("cure", buckets, "2026-01-01", {}, 252, distribuicao=d)
 
 

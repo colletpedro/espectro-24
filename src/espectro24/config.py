@@ -4,9 +4,18 @@ Nenhum valor aqui deve divergir da SPEC.md sem bump de versão.
 """
 from __future__ import annotations
 
-SPEC_VERSION = "1.6.0"
+SPEC_VERSION = "1.9.0"
 
 BASE = "https://letterboxd.com"
+
+# Fronteiras de bucket: leia `buckets.py`. NADA aqui redigita uma fronteira —
+# tudo abaixo é derivado (SPEC §2.2, v1.9.0).
+from .buckets import (  # noqa: E402  (import posicionado junto do que ele alimenta)
+    FRONTEIRAS,
+    NIVEIS,
+    bucket_de_nivel,
+    mapa_de_niveis,
+)
 
 # --- Headers validados na Fase 0 (RESULTADO.md / §2.1) ---
 # IMPORTANTE: Accept-Encoding sem `br` — requests não decodifica Brotli.
@@ -36,22 +45,106 @@ HEADERS = {
 DELAY_SECONDS = 2.0  # §2: ≥2s, sem paralelismo
 
 # --- Buckets e cotas (§2) ---
-# Cada nível de nota (0.5 .. 5) pertence a exatamente um bucket.
-BUCKETS: dict[str, list[float]] = {
-    "negativas": [0.5, 1.0, 1.5, 2.0, 2.5],
-    "medianas": [3.0, 3.5],
-    "positivas": [4.0, 4.5, 5.0],
-}
-# alvo derivado por bucket (5/2/3 níveis × 10)
-BUCKET_ALVO = {"negativas": 50, "medianas": 20, "positivas": 30}
+# DERIVADO das fronteiras (v1.9.0). Cada nível pertence a exatamente um bucket
+# — garantido por `validar_fronteiras`, que roda no import de `buckets.py`.
+BUCKETS: dict[str, list[float]] = mapa_de_niveis(FRONTEIRAS)
 
-COTA_POR_NIVEL = 10          # §2: cota de reviews válidas POR NÍVEL
-PISO_POR_BUCKET = 3          # §2: piso mínimo por bucket p/ análise temática
+# --- Cota de ANÁLISE (§2, v1.9.0) ---
+# 40 por bucket, IGUAL nos três. Até a v1.8.2 os alvos eram 50/20/30, que não
+# era decisão de profundidade e sim aritmética: 10 reviews × o número de
+# níveis de estrela de cada faixa (5/2/3). O grupo mediano recebia 40% da
+# profundidade do negativo por ter dois níveis em vez de cinco. A cota igual
+# escreve como número o que o §0 já dizia como frase: profundidade igual por
+# perspectiva, peso informado à parte.
+COTA_POR_BUCKET = 40
+BUCKET_ALVO = {nome: COTA_POR_BUCKET for nome in BUCKETS}
+
+# Piso de alocação POR NÍVEL dentro do bucket (§3[C1]). Só se aplica a níveis
+# que têm material no histograma. Garante que um nível pequeno não desapareça
+# da amostra por arredondamento — sem ele, "negativas" de um filme muito
+# amado poderia virar só 2,0★.
+# ARBITRÁRIO e calibrável, como os limiares do piso escalonado abaixo: não há
+# evidência empírica que o fixe em 2; é a ordem de grandeza que faz sentido
+# para 4 níveis dividindo 40 vagas.
+PISO_ALOCACAO_POR_NIVEL = 2
+
+# Piso de análise por bucket — ESCALONADO em 4 estados (§3[C3], v1.9.0).
+# Substitui o piso binário de 3 (`PISO_POR_BUCKET`), que só distinguia "tem
+# análise" de "não tem". Lido do maior para o menor: o primeiro limiar que o
+# `n` final alcançar vence.
+# LIMIARES ARBITRÁRIOS — entram na spec com esse rótulo explícito, mesma
+# política dos limiares de `marcacao_perspectiva` (v1.5.0). A ordem de
+# grandeza é defensável pela tabela de precisão de §3[C2] (em n=8 o intervalo
+# de 95% já passa de ±34pp, o que torna um quantificador verbal
+# indefensável); os cortes exatos não são.
+PISO_ESCALONADO: tuple[tuple[int, str], ...] = (
+    (15, "completa"),            # temas + frequências + quantificadores
+    (8, "sem_quantificador"),    # frequências, com marca de amostra pequena
+    (3, "sem_numero"),           # temas listados, sem número nem quantificador
+    (0, "sem_analise"),          # contagem + reviews_url, nenhum tema
+)
+PISO_POR_BUCKET = 3          # piso mínimo p/ QUALQUER análise temática (= 3)
+
+# LEGADO — cota de reviews válidas POR NÍVEL (v1.1.0), REVOGADA em §2 pela
+# alocação proporcional (§3[C1]). Ainda referenciada pelo caminho de coleta
+# da v1.8.2 (`collector.collect_level`), que é substituído mais adiante nesta
+# mesma versão pelo superset (§3[B]). Some junto com ele.
+COTA_POR_NIVEL = 10
+
 MIN_CHARS = 150              # §2: filtro de comprimento padrão
 CASCATA_CHARS = [150, 50, 0] # §2/§C: 150 → 50 → sem filtro (0 = sem filtro)
-TETO_PAGINAS = 6             # §2: teto de paginação por nível
 
-ORDENACAO = "by/activity"    # §2
+# --- Parâmetros de COLETA do superset (§3[B], v1.9.0) ---
+# Teto de paginação por nível: 6 → 4. A moagem de 6 páginas existia para
+# fechar uma cota RÍGIDA de 10 válidas por nível. Sob alocação proporcional,
+# quem precisa de muitas reviews são os níveis populosos (onde 4 páginas × 12
+# brutas sobram) e quem não fecha são os raros (onde a 5ª página raramente
+# existe): migrar o teto de 6 para o superset multiplicaria o custo por 10
+# níveis sem ganho, e o déficit tem tratamento explícito (redistribuição +
+# telemetria) em vez de ser escondido gastando requisição.
+TETO_PAGINAS = 4
+# Piso de páginas por nível — SEGURO DE REVERSIBILIDADE DA FRONTEIRA (§2.2).
+# Vale mesmo para níveis cuja alocação é zero: sem ele, um nível fora de todo
+# alvo nunca seria raspado, e uma fronteira futura que o incluísse não teria
+# material para reavaliar — voltaríamos a pagar recoleta para mudar uma
+# decisão de análise, que é o problema que a v1.9.0 existe para resolver.
+PISO_PAGINAS_POR_NIVEL = 1
+# Folga sobre a cota alocada ao contar "já tenho material suficiente" (§3[B],
+# degrau b). A contagem de parada é OTIMISTA por construção: usa o texto
+# VISÍVEL, e parte do que ela aprova cai depois no completamento [C'] ou na
+# re-checagem de spoiler.
+FOLGA_ALVO_COLETA = 1.25
+
+# --- Ordenação da listagem: PARÂMETRO DE AMOSTRAGEM (§2.3, v1.9.0) ---
+# Só as primeiras N páginas de cada nível são lidas, então a ordenação decide
+# QUAIS reviews entram na amostra. Medido ao vivo em `cure`/4★ (datas das 6
+# primeiras reviews de cada uma):
+#   by/added          2026-08-07 … 2026-08-06   estritamente DECRESCENTE
+#   by/added-earliest 2012-11-10 … 2014-03-16   estritamente CRESCENTE
+#   by/activity       2023, 2020, 2024, 2022, 2021, 2025 — SEM ordem temporal
+# A terceira é a prova de que `by/activity` ordena por ENGAJAMENTO (curtidas,
+# comentários), não por tempo — e engajamento enviesa para review longa e
+# promovida. Default trocado para a cronológica mais recente.
+# `by/added-earliest`, embora igualmente cronológica, concentraria a amostra
+# na janela de lançamento (coorte de festival / primeiros adeptos).
+ORDENACOES: dict[str, str] = {
+    "mais_recentes": "by/added",           # Newest First
+    "mais_antigas": "by/added-earliest",   # Earliest First
+    "atividade": "by/activity",            # Review Activity (engajamento)
+}
+ORDENACAO_DEFAULT = "mais_recentes"
+ORDENACAO = ORDENACOES[ORDENACAO_DEFAULT]  # segmento de URL em vigor
+
+# Versão do COLETOR, gravada em meta.json do bruto (§3[B']). Distinta de
+# SPEC_VERSION: só sobe quando muda o que é RASPADO ou PERSISTIDO, para que
+# um bruto antigo diga sob qual coletor foi obtido.
+VERSAO_COLETOR = "1.9.0"
+
+# Raiz do superset persistido (§3[B']). Versionada no git, ao contrário de
+# `resultado/cache/`: o cache é HTML reconstruível e volumoso; o bruto é o
+# INSUMO DE ANÁLISE — pequeno, textual, e a coisa cuja recoleta a v1.9.0
+# existe para evitar.
+DADOS_BRUTO_DIR = "dados/bruto"
 
 # --- LLM (§D / B2) — provider-agnostic (v1.1.1) ---
 # As instruções fixas do prompt (SYSTEM_PROMPT em synthesize.py) são
@@ -276,10 +369,16 @@ def nota_para_url(n: float) -> str:
 
 
 def bucket_de_nota(n: float) -> str | None:
-    for nome, niveis in BUCKETS.items():
-        if n in niveis:
-            return nome
-    return None
+    """Alias histórico de `buckets.bucket_de_nivel` (v1.9.0).
+
+    Mantido para não churnar os call sites; a implementação é a função pura
+    do módulo de fronteiras, então não há um segundo mapeamento a divergir.
+    """
+    return bucket_de_nivel(n)
 
 
-NIVEIS_ORDENADOS = [n for niveis in BUCKETS.values() for n in niveis]
+# Ordem de VARREDURA dos níveis na coleta: a escala inteira, crescente. Até a
+# v1.8.2 era derivada de `BUCKETS` (e portanto reordenada pelas fronteiras);
+# agora vem de `NIVEIS`, porque a coleta não sabe nada de bucket — varre a
+# escala do Letterboxd (v1.9.0, §3).
+NIVEIS_ORDENADOS = list(NIVEIS)
