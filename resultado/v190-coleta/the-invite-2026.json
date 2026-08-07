@@ -1,0 +1,369 @@
+{
+  "slug": "the-invite-2026",
+  "data_coleta": "2026-08-07T05:26:16.839836+00:00",
+  "spec_version": "1.9.0",
+  "total_reviews_observadas": 396,
+  "reviews_url": "https://letterboxd.com/film/the-invite-2026/reviews/",
+  "ficha": null,
+  "distribuicao": {
+    "n_notas_total": 338448,
+    "por_nivel": {
+      "0.5": 503,
+      "1.0": 909,
+      "1.5": 926,
+      "2.0": 3169,
+      "2.5": 4999,
+      "3.0": 18554,
+      "3.5": 41311,
+      "4.0": 125276,
+      "4.5": 86297,
+      "5.0": 56504
+    },
+    "por_bucket": {
+      "negativas": 2,
+      "medianas": 7,
+      "positivas": 91
+    },
+    "fonte": "letterboxd_histograma"
+  },
+  "coleta": {
+    "slug": "the-invite-2026",
+    "coletado_em": "2026-08-07T05:26:16.828543+00:00",
+    "versao_coletor": "1.9.0",
+    "ordenacao_usada": "by/added",
+    "histograma_bruto": {
+      "0.5": 503,
+      "1.0": 909,
+      "1.5": 926,
+      "2.0": 3169,
+      "2.5": 4999,
+      "3.0": 18554,
+      "3.5": 41311,
+      "4.0": 125276,
+      "4.5": 86297,
+      "5.0": 56504
+    },
+    "paginas_gastas_por_nivel": {
+      "0.5": 2,
+      "1.0": 3,
+      "1.5": 4,
+      "2.0": 4,
+      "2.5": 4,
+      "3.0": 4,
+      "3.5": 1,
+      "4.0": 4,
+      "4.5": 4,
+      "5.0": 3
+    },
+    "paradas_por_limite": [
+      "2.0",
+      "3.0",
+      "4.0",
+      "4.5"
+    ],
+    "contagem_bruta_por_nivel": {
+      "0.5": 24,
+      "1.0": 36,
+      "1.5": 48,
+      "2.0": 48,
+      "2.5": 48,
+      "3.0": 48,
+      "3.5": 12,
+      "4.0": 48,
+      "4.5": 48,
+      "5.0": 36
+    },
+    "contagem_estimada_valida_por_nivel": {
+      "0.5": 7,
+      "1.0": 13,
+      "1.5": 16,
+      "2.0": 13,
+      "2.5": 14,
+      "3.0": 12,
+      "3.5": 8,
+      "4.0": 12,
+      "4.5": 13,
+      "5.0": 11
+    },
+    "n_reviews_bruto": 396
+  },
+  "origem_paginas": {
+    "_histograma/the-invite-2026.html": "cache",
+    "the-invite-2026/pages/by_added/rated_0_5_page_1.html": "network",
+    "the-invite-2026/pages/by_added/rated_0_5_page_2.html": "network",
+    "the-invite-2026/fulltext/viewing_1436462295.html": "network",
+    "the-invite-2026/fulltext/viewing_1431709007.html": "network",
+    "the-invite-2026/fulltext/viewing_1431532534.html": "network",
+    "the-invite-2026/pages/by_added/rated_1_page_1.html": "network",
+    "the-invite-2026/pages/by_added/rated_1_page_2.html": "network",
+    "the-invite-2026/pages/by_added/rated_1_page_3.html": "network",
+    "the-invite-2026/fulltext/viewing_1435311976.html": "network",
+    "the-invite-2026/fulltext/viewing_1434274775.html": "network",
+    "the-invite-2026/pages/by_added/rated_1_5_page_1.html": "network",
+    "the-invite-2026/pages/by_added/rated_1_5_page_2.html": "network",
+    "the-invite-2026/pages/by_added/rated_1_5_page_3.html": "network",
+    "the-invite-2026/pages/by_added/rated_1_5_page_4.html": "network",
+    "the-invite-2026/fulltext/viewing_1433307734.html": "network",
+    "the-invite-2026/fulltext/viewing_1432852794.html": "network",
+    "the-invite-2026/fulltext/viewing_1430924355.html": "network",
+    "the-invite-2026/fulltext/viewing_1430806520.html": "network",
+    "the-invite-2026/pages/by_added/rated_2_page_1.html": "network",
+    "the-invite-2026/pages/by_added/rated_2_page_2.html": "network",
+    "the-invite-2026/pages/by_added/rated_2_page_3.html": "network",
+    "the-invite-2026/pages/by_added/rated_2_page_4.html": "network",
+    "the-invite-2026/fulltext/viewing_1436629771.html": "network",
+    "the-invite-2026/fulltext/viewing_1436208727.html": "network",
+    "the-invite-2026/pages/by_added/rated_2_5_page_1.html": "network",
+    "the-invite-2026/pages/by_added/rated_2_5_page_2.html": "network",
+    "the-invite-2026/pages/by_added/rated_2_5_page_3.html": "network",
+    "the-invite-2026/pages/by_added/rated_2_5_page_4.html": "network",
+    "the-invite-2026/fulltext/viewing_1437060738.html": "network",
+    "the-invite-2026/fulltext/viewing_1436799190.html": "network",
+    "the-invite-2026/fulltext/viewing_1435840912.html": "network",
+    "the-invite-2026/fulltext/viewing_1435646529.html": "network",
+    "the-invite-2026/pages/by_added/rated_3_page_1.html": "network",
+    "the-invite-2026/pages/by_added/rated_3_page_2.html": "network",
+    "the-invite-2026/pages/by_added/rated_3_page_3.html": "network",
+    "the-invite-2026/pages/by_added/rated_3_page_4.html": "network",
+    "the-invite-2026/pages/by_added/rated_3_5_page_1.html": "network",
+    "the-invite-2026/fulltext/viewing_1437691122.html": "network",
+    "the-invite-2026/fulltext/viewing_1437464334.html": "network",
+    "the-invite-2026/fulltext/viewing_1437644113.html": "network",
+    "the-invite-2026/pages/by_added/rated_4_page_1.html": "network",
+    "the-invite-2026/pages/by_added/rated_4_page_2.html": "network",
+    "the-invite-2026/pages/by_added/rated_4_page_3.html": "network",
+    "the-invite-2026/pages/by_added/rated_4_page_4.html": "network",
+    "the-invite-2026/fulltext/viewing_1437699666.html": "network",
+    "the-invite-2026/fulltext/viewing_1437697827.html": "network",
+    "the-invite-2026/fulltext/viewing_1437691881.html": "network",
+    "the-invite-2026/fulltext/viewing_1437665158.html": "network",
+    "the-invite-2026/fulltext/viewing_1437664784.html": "network",
+    "the-invite-2026/pages/by_added/rated_4_5_page_1.html": "network",
+    "the-invite-2026/pages/by_added/rated_4_5_page_2.html": "network",
+    "the-invite-2026/pages/by_added/rated_4_5_page_3.html": "network",
+    "the-invite-2026/pages/by_added/rated_4_5_page_4.html": "network",
+    "the-invite-2026/fulltext/viewing_1437655605.html": "network",
+    "the-invite-2026/pages/by_added/rated_5_page_1.html": "network",
+    "the-invite-2026/pages/by_added/rated_5_page_2.html": "network",
+    "the-invite-2026/pages/by_added/rated_5_page_3.html": "network",
+    "the-invite-2026/fulltext/viewing_1437650267.html": "network"
+  },
+  "buckets": [
+    {
+      "bucket": "negativas",
+      "alvo": 40,
+      "modo": "completo",
+      "estado_piso": "completa",
+      "n_validas": 40,
+      "share_real": 2,
+      "composicao_alvo": {
+        "0.5": 4,
+        "1.0": 6,
+        "1.5": 7,
+        "2.0": 23
+      },
+      "composicao_atingida": {
+        "0.5": 4,
+        "1.0": 10,
+        "1.5": 13,
+        "2.0": 13
+      },
+      "cascata_por_degrau": {
+        "150": 40
+      },
+      "deficit_redistribuido": 10,
+      "niveis": [
+        {
+          "nivel": 0.5,
+          "n_validas": 4,
+          "n_alvo": 4,
+          "n_brutas": 24,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 1,
+          "n_descartadas_curtas": 16,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 0,
+          "paginas_buscadas": 2
+        },
+        {
+          "nivel": 1.0,
+          "n_validas": 10,
+          "n_alvo": 6,
+          "n_brutas": 36,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 2,
+          "n_descartadas_curtas": 21,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 0,
+          "paginas_buscadas": 3
+        },
+        {
+          "nivel": 1.5,
+          "n_validas": 13,
+          "n_alvo": 7,
+          "n_brutas": 48,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 1,
+          "n_descartadas_curtas": 30,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 1,
+          "paginas_buscadas": 4
+        },
+        {
+          "nivel": 2.0,
+          "n_validas": 13,
+          "n_alvo": 23,
+          "n_brutas": 48,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 1,
+          "n_descartadas_curtas": 34,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 0,
+          "paginas_buscadas": 4
+        }
+      ],
+      "temas": [],
+      "observacao_geral": "",
+      "idioma_invalido": false,
+      "escopo_suspeito": false
+    },
+    {
+      "bucket": "medianas",
+      "alvo": 40,
+      "modo": "reduzido",
+      "estado_piso": "completa",
+      "n_validas": 26,
+      "share_real": 7,
+      "composicao_alvo": {
+        "2.5": 8,
+        "3.0": 32
+      },
+      "composicao_atingida": {
+        "2.5": 14,
+        "3.0": 12
+      },
+      "cascata_por_degrau": {
+        "150": 26
+      },
+      "deficit_redistribuido": 6,
+      "niveis": [
+        {
+          "nivel": 2.5,
+          "n_validas": 14,
+          "n_alvo": 8,
+          "n_brutas": 48,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 0,
+          "n_descartadas_curtas": 34,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 0,
+          "paginas_buscadas": 4
+        },
+        {
+          "nivel": 3.0,
+          "n_validas": 12,
+          "n_alvo": 32,
+          "n_brutas": 48,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 0,
+          "n_descartadas_curtas": 34,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 2,
+          "paginas_buscadas": 4
+        }
+      ],
+      "temas": [],
+      "observacao_geral": "",
+      "idioma_invalido": false,
+      "escopo_suspeito": false
+    },
+    {
+      "bucket": "positivas",
+      "alvo": 40,
+      "modo": "completo",
+      "estado_piso": "completa",
+      "n_validas": 40,
+      "share_real": 91,
+      "composicao_alvo": {
+        "3.5": 6,
+        "4.0": 16,
+        "4.5": 11,
+        "5.0": 7
+      },
+      "composicao_atingida": {
+        "3.5": 6,
+        "4.0": 12,
+        "4.5": 12,
+        "5.0": 10
+      },
+      "cascata_por_degrau": {
+        "150": 40
+      },
+      "deficit_redistribuido": 4,
+      "niveis": [
+        {
+          "nivel": 3.5,
+          "n_validas": 6,
+          "n_alvo": 6,
+          "n_brutas": 12,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 0,
+          "n_descartadas_curtas": 4,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 0,
+          "paginas_buscadas": 1
+        },
+        {
+          "nivel": 4.0,
+          "n_validas": 12,
+          "n_alvo": 16,
+          "n_brutas": 48,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 2,
+          "n_descartadas_curtas": 33,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 1,
+          "paginas_buscadas": 4
+        },
+        {
+          "nivel": 4.5,
+          "n_validas": 12,
+          "n_alvo": 11,
+          "n_brutas": 48,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 1,
+          "n_descartadas_curtas": 34,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 0,
+          "paginas_buscadas": 4
+        },
+        {
+          "nivel": 5.0,
+          "n_validas": 10,
+          "n_alvo": 7,
+          "n_brutas": 36,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 1,
+          "n_descartadas_curtas": 24,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 0,
+          "paginas_buscadas": 3
+        }
+      ],
+      "temas": [],
+      "observacao_geral": "",
+      "idioma_invalido": false,
+      "escopo_suspeito": false
+    }
+  ]
+}

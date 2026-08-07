@@ -96,6 +96,23 @@ def relatorio(slug: str, out_dir: Path, dados_dir: Path) -> None:
     print(f"  selecionadas para análise ....... {selecionadas} "
           f"({100 * selecionadas / total_bruto:.1f}% do bruto)")
 
+    # --- janela temporal da amostra (evidência da ordenação, §2.3) ---
+    datas = sorted((r.data or "")[:10] for r in brutas if r.data)
+    if datas:
+        from collections import Counter
+        meses = Counter(d[:7] for d in datas)
+        top2 = meses.most_common(2)
+        concentracao = sum(v for _, v in top2) / len(datas)
+        print("\nJANELA TEMPORAL DA AMOSTRA (§2.3 — consequência da ordenação)")
+        print(f"  extremos ....................... {datas[0]} → {datas[-1]}")
+        print(f"  2 meses mais densos ............ "
+              f"{', '.join(f'{m} ({v})' for m, v in top2)}")
+        print(f"  concentração nesses 2 meses .... {100 * concentracao:.0f}% "
+              f"das {len(datas)} reviews com data")
+        print("  ATENÇÃO: `data` é a data ASSISTIDA (diário), não a de publicação "
+              "da review;\n           os extremos antigos são reviews recentes "
+              "sobre sessões antigas.")
+
     # --- shares sob as duas fronteiras ---
     hist = {float(k): v for k, v in (coleta.get("histograma_bruto") or {}).items()}
     if hist:

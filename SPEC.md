@@ -252,6 +252,40 @@ original não se sustenta contra o HTML observado, e está corrigida aqui.
 menu — existe amostragem **declarada**. O ganho desta versão é que a escolha
 virou parâmetro visível e gravado, não uma constante enterrada numa URL.
 
+#### O tamanho MEDIDO do viés de recência (recoleta de 2026-08-07)
+
+A ressalva acima era qualitativa. Medida sobre o bruto persistido, ela é
+maior do que a palavra "recência" sugere:
+
+| Filme | janela dos 2 meses mais densos | concentração |
+|---|---|---|
+| `the-invite-2026` | 2026-07 + 2026-08 | **100%** das 396 |
+| `cure` (1997) | 2026-07 + 2026-08 | **95%** das 384 |
+| `cidade-de-deus` (2002) | 2026-07 + 2026-08 | **79%** das 384 |
+
+Para um filme de catálogo com centenas de milhares de notas, **a amostra
+inteira vem de ~6 semanas de atividade recente**. Isso não é um detalhe de
+ordenação: a análise temática passa a descrever *quem está descobrindo o filme
+agora*, não a recepção acumulada. Sob `by/activity` a mesma sondagem devolvia
+reviews espalhadas por 2020-2025 (§2.3, tabela do menu).
+
+**Isso não reverte a decisão** — engajamento continua sendo o pior dos dois
+vieses, porque correlaciona com o *conteúdo* da review (longa, performática,
+promovida), enquanto recência correlaciona só com *quando*. Mas o tamanho do
+efeito precisa estar escrito, e agora está. Candidato de próxima versão:
+amostragem estratificada por período (N páginas de `by/added` + N de
+`by/added-earliest`), que o superset persistido já suporta sem mudança de
+arquitetura — coletas com ordenações diferentes **acumulam** no mesmo `jsonl`
+(§3[B']).
+
+**Correção sobre o campo `data` (§3[B']):** ele vem do `<time class="timestamp">`
+da listagem, que é a data **ASSISTIDA** (entrada de diário), não a data em que
+a review foi publicada. Consequência observada: ~16% dos pares consecutivos do
+`cure` aparecem "fora de ordem" decrescente, e a amostra tem extremos de 2023
+— são reviews **recentes** sobre sessões **antigas**, não falha de ordenação.
+O campo continua sendo a melhor evidência disponível sobre a janela da amostra,
+mas é evidência **indireta**; a spec não deve tratá-lo como carimbo de ordem.
+
 ---
 
 ## 3. Pipeline
@@ -398,6 +432,63 @@ níveis sem ganho correspondente — e o déficit tem tratamento explícito
 
 Página além da última devolve **200 com lista vazia** (§2.1) — sinal de nível
 esgotado, e o quarto motivo de parada.
+
+#### Resultado MEDIDO da primeira recoleta (2026-08-07) — e um defeito estrutural
+
+Recoleta ao vivo dos 3 filmes do catálogo, sob `by/added`, teto 4, cota 40:
+
+| Filme | requisições | páginas | bruto | níveis no teto | negativas | medianas | positivas |
+|---|---|---|---|---|---|---|---|
+| `cure` | **65** | 32 | 384 | 3 | 39/40 | **35/40** | 40/40 |
+| `cidade-de-deus` | **61** | 32 | 384 | 4 | 40/40 | **23/40** | 40/40 |
+| `the-invite-2026` | **58** | 33 | 396 | 4 | 40/40 | **26/40** | 40/40 |
+
+**DEFEITO ESTRUTURAL — `medianas` não consegue fechar a cota, e a causa é
+aritmética, não de material.** O bucket do meio tem **2 níveis** sob a opção
+C; os outros dois têm 4. Com teto de 4 páginas e ~12 reviews por página, o
+material bruto máximo de um bucket é `nº de níveis × 4 × 12`:
+
+| Bucket | níveis | bruto máximo | válidas a 27% (rendimento medido) |
+|---|---|---|---|
+| `negativas` / `positivas` | 4 | 192 | ~52 |
+| **`medianas`** | **2** | **96** | **~26** |
+
+Ou seja: **`medianas` topa em ~26 válidas e a cota de 40 é inalcançável por
+construção** — não por falta de reviews no Letterboxd, mas porque o teto de
+páginas é POR NÍVEL e o bucket do meio tem metade dos níveis. Foi o que
+aconteceu nos 3 filmes (35, 23 e 26), e vai acontecer em todo filme.
+
+Isto é uma **interação não prevista** entre três decisões desta versão que
+foram tomadas separadamente: a fronteira 4/2/4 (§2.2), a cota igual 40/40/40
+(§0) e o teto de 4 páginas por nível (§3[B]). Cada uma é defensável sozinha;
+juntas, tornam um terço da promessa "profundidade igual" impossível de
+cumprir.
+
+**Não corrigido nesta versão** — corrigir exigiria mexer numa das três
+decisões que a v1.9.0 acabou de congelar, e a escolha entre elas merece uma
+decisão explícita e não uma correção de rodapé. Registrado como o **candidato
+número 1 da próxima versão**, com quatro saídas conhecidas:
+1. **orçamento de páginas por BUCKET** em vez de por nível (`4 × nº de níveis`,
+   redistribuível internamente) — corrige a assimetria na raiz e não muda
+   fronteira nem cota; custo: até +8 páginas/filme só no bucket do meio;
+2. **teto de volta a 6** globalmente — custo: até +20 páginas/filme, e ainda
+   assim `medianas` chegaria a ~39, no limite;
+3. **aceitar** e deixar o piso escalonado reportar — hoje `medianas` fecha em
+   23-35, que é `completa` (≥15) nos 3 filmes; a precisão em `n=26` é ±9,8pp
+   (1 EP) / ±19,2pp (95%), pior que a de 40 mas dentro da mesma ordem;
+4. **fronteira com 3 níveis no meio** — reabre §2.2, que acabou de ser
+   decidida com base semântica.
+
+A opção 3 é o comportamento em vigor, por omissão: nada quebra, os três
+buckets ficam `completa`, e a telemetria mostra a diferença em vez de
+escondê-la.
+
+**Orçamento de requisições, MEDIDO:** 58-65 por filme (média 61), dos quais
+32-33 de paginação, 24-33 de completamento e 1 de histograma. Para comparação,
+sob a v1.8.2 o `cure` custou **83** e o `cidade-de-deus` **68** — a v1.9.0
+custa **menos** apesar de coletar ~50% mais material bruto (384 vs. 252 no
+`cure`), porque o orçamento de completamento cortou a parte cara. A estimativa
+de "~45" feita antes desta medição estava otimista, como se previa.
 
 **Cache:** por filme+nível+página (e por texto completo, ver C'), em disco.
 Nunca rebuscar página cacheada. Cache não expira. **A chave de cache inclui a
@@ -1224,7 +1315,7 @@ Por bucket: **(v1.4.0)** `share_real` (percentual inteiro), **omitido** quando n
 3. Filme obscuro (a escolher): modo degradado severo — piso de 3 por bucket respeitado, bucket sem análise renderiza aviso (contagem + `reviews_url`) e não inventa temas; a cascata de relaxamento por nível (`filtro_aplicado` assumindo 50/0) é exercitada aqui.
 4. **Nenhum texto truncado chega ao LLM:** teste com filme contendo reviews longas colapsadas; verificar que todas as reviews enviadas ao LLM têm texto completo ou foram descartadas com registro.
 5. Segunda execução de qualquer filme: **zero requisições de rede** (100% cache).
-6. Orçamento de requisições por filme novo — **reescrito na v1.9.0**: teto absoluto de **paginação** = **40** (10 níveis × 4 páginas), + 1 histograma + truncadas completadas + busca de slug. **O valor típico é "a medir"** e só é preenchido com medição real. A estimativa anterior desta sessão (~70 → ~45) foi calculada sob cota 30 **sem folga** e **NÃO vale** para a cota 40 com folga de 1,25 — registrar o medido, nunca o projetado.
+6. Orçamento de requisições por filme novo — **reescrito na v1.9.0**: teto absoluto de **paginação** = **40** (10 níveis × 4 páginas), + 1 histograma + truncadas completadas + busca de slug. **Valor típico MEDIDO (2026-08-07, 3 filmes): 58-65, média 61** — 32-33 de paginação, 24-33 de completamento, 1 de histograma. Abaixo dos 83 (`cure`) e 68 (`cidade-de-deus`) da v1.8.2, apesar de ~50% mais material bruto coletado. A estimativa de "~45" feita antes da medição estava otimista; ficou registrado o medido, não o projetado.
 
 ---
 
@@ -1249,7 +1340,10 @@ As três incógnitas abaixo foram resolvidas na Fase 1; os achados já estão in
   - **(6) Cota de análise 40/40/40 aplicada downstream (§3[C2]),** sobre o bruto persistido, com `fronteiras`/`cota_por_bucket`/`min_chars`/`excluir_spoiler`/`cascata`/`piso_nivel` como **parâmetros de chamada** e **zero rede**. A cascata mantém a semântica da v1.1.0 (dispara **só em zero**, nunca para completar cota) e passa a registrar quantas reviews entraram por cada degrau. Ordem de escolha dentro do nível = `(pagina_origem, ordem no jsonl)`, que é a ordem de amostragem da ordenação escolhida — determinística e reproduzível. **Precisão registrada nos DOIS níveis de confiança**, porque a régua de 1 erro padrão sozinha promete mais do que entrega (cobre ~68%, não a confiança que um leitor assume ao ver uma barra): `n=40` → **±7,9pp (1 EP) / ±15,5pp (95%)**; `n=30` → **±9,1pp / ±17,9pp**. Leitura direta: com `n=40`, um tema em 40% e um em 25% **não são distinguíveis** a 95%.
   - **(7) Piso escalonado, 4 estados (§3[C3]):** `≥15 → completa` · `8–14 → sem_quantificador` · `3–7 → sem_numero` · `<3 → sem_analise`. **Os limiares são ARBITRÁRIOS** e entram com esse rótulo explícito (mesma política dos limiares de `marcacao_perspectiva`, v1.5.0) — a ordem de grandeza é defensável pela tabela de precisão (em `n=8` o intervalo de 95% já passa de ±34pp, o que torna um quantificador verbal indefensável), os cortes exatos não. **Nesta versão apenas o CAMPO é exposto** (`estado_piso` no JSON, consumível por frontend e narrador); **variantes de narrador e estados de UI NÃO foram implementados**, e `modo` permanece intacto para não quebrar render/frontend. **Caso de borda definido e documentado (não implementado):** quando o bucket DOMINANTE cai em modo reduzido, a abertura do MOVIMENTO 3 **continua sendo dele** — o peso vem do histograma de NOTAS e não depende de haver review com texto; suprimi-lo reintroduziria a infidelidade por omissão que a v1.4.0 corrigiu. Muda o conteúdo: `sem_numero` cita temas sem nenhuma frequência; `sem_analise` declara explicitamente que **não há material escrito suficiente daquele grupo** e só então passa ao grupo de maior peso seguinte — a ausência é declarada, nunca preenchida com temas de outro grupo nem disfarçada reordenando os grupos.
   - **Duas mudanças fora da camada de coleta, ambas de DES-HARDCODING de número, zero mudança de regra:** o disclaimer de `render.py` e o literal `(50/20/30)` dentro da regra (c) do prompt do narrador passaram a ser **derivados de `BUCKET_ALVO`**. Não são mudanças de comportamento — são a correção de um número que a v1.9.0 tornaria falso, e ficam registradas aqui por atravessarem a fronteira de escopo desta sessão. **PENDÊNCIA CONHECIDA:** `frontend/js/filme.js` tem o mesmo texto "50 · 20 · 30" hardcoded em duas linhas e **NÃO foi tocado** (frontend está fora do escopo); precisa ser atualizado para 40 · 40 · 40 antes da próxima publicação do site.
-  - **Orçamento de requisições (§5.6) reescrito:** teto absoluto de paginação = **40** (10 × 4) + 1 histograma + truncadas + busca de slug; o **valor típico é "a medir"**. A estimativa de sessão anterior (~70 → ~45) foi calculada sob cota 30 **sem folga** e não vale para cota 40 com folga de 1,25.
+  - **Orçamento de requisições (§5.6), MEDIDO na recoleta de 2026-08-07:** **58-65 por filme (média 61)** — 32-33 de paginação, 24-33 de completamento, 1 de histograma. **Abaixo** dos 83 (`cure`) e 68 (`cidade-de-deus`) da v1.8.2, apesar de coletar ~50% mais material bruto (384 vs. 252 no `cure`): o orçamento de completamento cortou a parte cara. A estimativa de "~45" feita antes da medição estava otimista, como a própria sessão previu ao exigir "a medir".
+  - **DEFEITO ESTRUTURAL descoberto pela recoleta, NÃO corrigido nesta versão (§3[B], "Resultado medido"):** o bucket `medianas` **não consegue fechar a cota de 40 em filme nenhum** — 35, 23 e 26 nos três. A causa é aritmética, não falta de material: sob a opção C o bucket do meio tem **2 níveis** contra 4 dos outros, e o teto de páginas é **por nível**, então o bruto máximo de `medianas` é metade (96 vs. 192) e, ao rendimento medido de ~27%, topa em ~26 válidas. É uma **interação não prevista** entre três decisões desta versão tomadas separadamente — fronteira 4/2/4, cota igual 40/40/40 e teto de 4 páginas por nível: cada uma defensável sozinha, juntas tornando um terço da promessa de "profundidade igual" impossível de cumprir. Deixado em aberto de propósito: corrigir exige mexer numa das três decisões recém-congeladas, e essa escolha merece decisão explícita, não correção de rodapé. Quatro saídas registradas em §3[B]; a que vigora por omissão é a (3) — aceitar e deixar o piso escalonado reportar, já que `medianas` fecha em `completa` (≥15) nos três filmes.
+  - **Viés de recência MEDIDO (§2.3):** a ressalva qualitativa da spec subestimava o efeito. **79-100% da amostra de cada filme vem dos 2 meses mais recentes** — para `cure` (1997) e `cidade-de-deus` (2002), a análise passa a descrever quem está descobrindo o filme AGORA, não a recepção acumulada. A decisão não é revertida (engajamento continua sendo o pior viés, por correlacionar com o CONTEÚDO da review e não só com o quando), mas o tamanho do efeito ficou escrito. Candidato: amostragem estratificada por período, que o superset já suporta — coletas com ordenações diferentes acumulam no mesmo `jsonl`. **Correção junto:** o campo `data` é a data ASSISTIDA (diário), não a de publicação da review — daí ~16% de pares "fora de ordem" e extremos de 2023 numa amostra recente; é evidência indireta da janela, não carimbo de ordem.
+  - **Regeneração de síntese/narrativa NÃO foi feita** (fora do escopo da sessão): a recoleta escreveu em `resultado/v190-coleta/` e os `resultado/*.json` publicados seguem os da v1.8.2 — portanto com os shares das fronteiras ANTIGAS (3/17/79, 1/8/91, 3/18/79) e com a cota 50/20/30. **Publicar exige regenerar**, e até lá o site e os JSONs de entrega estão defasados em relação à spec.
 - **v1.8.2** (2026-08-04) — corrige o **falso positivo** da checagem `conteudo_adicionado` (v1.8.0) e regenera a produção. Detalhe completo em `CORRECAO_CONTEUDO_ADICIONADO_V182.md` e `DIAGNOSTICO_CONTEUDO_ADICIONADO.md`.
   - **Diagnóstico:** a métrica original comparava cada frase do editado contra frases INTEIRAS do bruto com `SequenceMatcher.ratio()` (char-level, sensível a ORDEM). Quando o editor QUEBRAVA uma frase longa em duas (o trabalho normal de ritmo) ou REORDENAVA palavras dentro dela, a métrica caía por diferença de comprimento/ordem, não por conteúdo novo — foi o que descartou o `cure` na v1.8.1 após 3 reprovações seguidas por `conteudo_adicionado`.
   - **Correção (Tarefa 1):** métrica trocada para COBERTURA DE PALAVRAS (multiset, insensível a ordem — tokeniza, ordena os tokens, roda `SequenceMatcher.get_matching_blocks()`, matematicamente equivalente à interseção de multiset), contra a MELHOR frase INDIVIDUAL do bruto (comparar contra o bruto inteiro de uma vez infla o placar de frases inventadas, medido ao vivo). `EDITOR_LIMIAR_FRASE_SEM_ORIGEM` sobe de 0,45 para 0,6; `EDITOR_MIN_FRASES_SEM_ORIGEM`/`EDITOR_LIMIAR_PALAVRAS_SEM_ORIGEM_FRACAO` mantidos.
