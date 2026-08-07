@@ -111,6 +111,51 @@ def is_spoiler_text(text: str) -> bool:
     return SPOILER_PLACEHOLDER in text
 
 
+def extract_autor(item: Tag) -> str | None:
+    """Handle do autor. Fonte primária: `.displayname` do bloco de atribuição.
+
+    Fallback: o slug do href do avatar (`/justinwuah/` → `justinwuah`), que é
+    o mesmo dado por outro caminho — usado quando o displayname vem vazio ou
+    o bloco de atribuição muda de forma.
+    """
+    nome = item.select_one(".attribution-detail .displayname") \
+        or item.select_one(".displayname")
+    if nome:
+        txt = nome.get_text(strip=True)
+        if txt:
+            return txt
+    avatar = item.select_one("a.avatar[href]")
+    if avatar:
+        partes = [p for p in (avatar["href"] or "").split("/") if p]
+        if len(partes) == 1:
+            return partes[0]
+    return None
+
+
+def extract_permalink(item: Tag) -> str | None:
+    """URL pública da review (`/<autor>/film/<slug>/`), absolutizada."""
+    a = item.select_one("a.context[href]") or item.select_one(".attribution-detail a[href]")
+    if a and a.get("href"):
+        href = a["href"]
+        return href if href.startswith("http") else f"https://letterboxd.com{href}"
+    return None
+
+
+def extract_data(item: Tag) -> str | None:
+    """Data da review, do atributo `datetime` de `time.timestamp` (ISO).
+
+    v1.9.0: é a evidência de que a ordenação usada (§2.3) é a declarada —
+    sob `by/added` as datas de uma página vêm decrescentes, sob
+    `by/activity` não vêm em ordem nenhuma.
+    """
+    t = item.select_one("time[datetime]")
+    if t and t.get("datetime"):
+        return t["datetime"]
+    if t:
+        return t.get_text(strip=True) or None
+    return None
+
+
 def parse_review(item: Tag) -> Review:
     body = _body(item)
     text = body.get_text(" ", strip=True) if body else ""
@@ -123,6 +168,9 @@ def parse_review(item: Tag) -> Review:
         full_text_url=full_text_url(item),
         spoiler=is_spoiler_text(text),
         lang=lang,
+        autor=extract_autor(item),
+        permalink=extract_permalink(item),
+        data=extract_data(item),
     )
 
 

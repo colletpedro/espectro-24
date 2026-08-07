@@ -15,6 +15,14 @@ class Review:
     spoiler: bool              # placeholder de spoiler no corpo
     lang: str | None = None
     full_text: str | None = None  # preenchido em C' (texto completo)
+    # v1.9.0 (§3[B']): metadados persistidos no superset bruto. `autor` é o
+    # handle público (guardado só em memória — o que vai para o disco é o
+    # `autor_hash`); `permalink` é a URL da review; `data` é a data em que
+    # ela foi escrita, que é a EVIDÊNCIA de que a ordenação declarada em
+    # `meta.json` é a que de fato foi usada (§2.3).
+    autor: str | None = None
+    permalink: str | None = None
+    data: str | None = None
 
     @property
     def chars(self) -> int:

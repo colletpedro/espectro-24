@@ -108,3 +108,29 @@ def test_full_text_parse():
     ft = parser.parse_full_text(fx("fulltext_pos_2_viewing1401220676.html"))
     assert len(ft) == 3237
     assert "post Oppenheimer world" in ft
+
+
+# --- v1.9.0: metadados persistidos no superset bruto (§3[B']) ---
+
+def test_extrai_autor_permalink_e_data_da_fixture_real():
+    revs = parser.parse_reviews(fx("oppenheimer-2023_rated5_page1.html"))
+    r = revs[0]
+    assert r.autor == "justinwuah"
+    assert r.permalink == "https://letterboxd.com/justinwuah/film/oppenheimer-2023/"
+    assert r.data == "2023-07-12"
+
+
+def test_todas_as_reviews_da_pagina_real_tem_autor_e_data():
+    revs = parser.parse_reviews(fx("oppenheimer-2023_rated5_page1.html"))
+    assert len(revs) == 12
+    assert all(r.autor for r in revs)
+    assert all(r.data for r in revs)
+    assert all(r.permalink and r.permalink.startswith("https://letterboxd.com/")
+               for r in revs)
+
+
+def test_metadados_ausentes_viram_none_sem_levantar():
+    # fixture sintética não tem avatar/atribuição/timestamp
+    revs = parser.parse_reviews(fx("synthetic_cases.html"))
+    assert all(r.data is None for r in revs)
+    assert revs[0].permalink is None or revs[0].permalink.startswith("https://")
