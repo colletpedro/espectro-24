@@ -18,7 +18,8 @@ from __future__ import annotations
 from pathlib import Path
 
 from .alocacao import alocar, orcamento_paginas
-from .bruto import carregar
+from .bruto import atualizar_meta, carregar, janela_temporal
+from .buckets import FRONTEIRAS, mapa_de_niveis
 from .collector import coletar_superset, collect_distribuicao
 from .config import (
     BUCKETS,
@@ -34,6 +35,32 @@ from .parser import parse_search_results
 from .selecao import selecionar
 from .synthesize import synthesize_bucket
 from .urls import search_cache_key, search_url
+
+
+def atualizar_janela_temporal(slug: str,
+                              fronteiras: dict[str, tuple[float, float]] | None = None,
+                              raiz: str | Path = DADOS_BRUTO_DIR) -> dict | None:
+    """[v1.9.1, §3[B']] Grava `janela_temporal` no `meta.json` do bruto.
+
+    A única peça bucket-AWARE desta operação: agrupa o bruto persistido pelas
+    fronteiras (§2.2) e chama a função pura `bruto.janela_temporal` uma vez
+    por bucket + uma vez no total, depois mescla o resultado via
+    `bruto.atualizar_meta` (sem reescrever `reviews.jsonl`). Mesmo padrão de
+    `montar_buckets`: é o único lugar que já enxerga as duas camadas.
+
+    Devolve o bloco `{"total": ..., "por_bucket": {...}}` gravado (também
+    útil para quem quiser inspecionar sem reler o arquivo).
+    """
+    fr = FRONTEIRAS if fronteiras is None else fronteiras
+    _, todas = carregar(slug, raiz=raiz)
+    mapa = mapa_de_niveis(fr)
+    por_bucket = {}
+    for nome, niveis in mapa.items():
+        subset = [r for r in todas if r.nivel in niveis]
+        por_bucket[nome] = janela_temporal(subset)
+    bloco = {"total": janela_temporal(todas), "por_bucket": por_bucket}
+    atualizar_meta(slug, {"janela_temporal": bloco}, raiz=raiz)
+    return bloco
 
 
 def resolve_slug(fetcher: Fetcher, query: str) -> list[SearchResult]:
@@ -132,6 +159,12 @@ def collect_all_levels(fetcher: Fetcher, slug: str,
     superset = coletar_superset(
         fetcher, slug, alvo_por_nivel, hist, raiz=dados_dir,
         ordenacao=ordenacao, teto_paginas=teto_por_nivel, on_level=on_level)
+    # v1.9.1 (§3[B']): janela temporal sobre o bruto ACUMULADO (não só o
+    # lote desta execução) — mesmo espírito de `selecionar` ler o bruto
+    # persistido em vez do que acabou de ser raspado. Espelhada também em
+    # `superset.meta` (em memória) para que `output["coleta"]` (cli.py, que
+    # espalha `superset.meta`) continue batendo com o `meta.json` em disco.
+    superset.meta["janela_temporal"] = atualizar_janela_temporal(slug, raiz=dados_dir)
     return superset, distrib
 
 

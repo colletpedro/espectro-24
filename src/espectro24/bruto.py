@@ -164,6 +164,68 @@ def carregar(slug: str, raiz: str | Path = DADOS_BRUTO_DIR
     return meta, reviews
 
 
+def _percentil(datas_ordenadas: list[str], p: float) -> str:
+    """Percentil `p` (0-1) por nearest-rank sobre datas já ordenadas.
+
+    `n == 1` devolve a única data para qualquer `p` — não há o que
+    interpolar. Índice sempre clampado a `[0, n-1]`.
+    """
+    n = len(datas_ordenadas)
+    if n == 1:
+        return datas_ordenadas[0]
+    idx = max(0, min(n - 1, round(p * (n - 1))))
+    return datas_ordenadas[idx]
+
+
+def janela_temporal(reviews: Iterable[ReviewBruta]) -> dict | None:
+    """[v1.9.1, §3[B']] min/max/p5/p50/p95 das datas de uma lista de reviews.
+
+    **Função pura e bucket-agnóstica** — opera sobre QUALQUER lista que
+    receba, sem embutir fronteira nenhuma; quem agrupa por bucket antes de
+    chamar é `pipeline.py` (§3[B'], "Janela temporal").
+
+    Motivada por dois achados: o viés de recência medido na v1.9.0 e o
+    achado do gate de profundidade desta versão de que `min`/`max` sozinhos
+    são enganosos — `data` é a data ASSISTIDA (diário), não a de publicação,
+    e um único outlier em qualquer posição da amostra domina o extremo. A
+    mediana (`p50`) é a leitura honesta de "quando a amostra realmente está".
+
+    Datas truncadas para `YYYY-MM-DD` (o campo `data` mistura formatos com e
+    sem hora — a hora não importa para janela). `None` quando não há
+    nenhuma review com `data`.
+    """
+    datas = sorted((r.data or "")[:10] for r in reviews if r.data)
+    if not datas:
+        return None
+    return {
+        "n": len(datas),
+        "min": datas[0],
+        "max": datas[-1],
+        "p5": _percentil(datas, 0.05),
+        "p50": _percentil(datas, 0.50),
+        "p95": _percentil(datas, 0.95),
+    }
+
+
+def atualizar_meta(slug: str, atualizacoes: dict,
+                   raiz: str | Path = DADOS_BRUTO_DIR) -> None:
+    """Mescla `atualizacoes` no `meta.json` existente — NÃO toca `reviews.jsonl`.
+
+    Usado por `pipeline.py` para gravar `janela_temporal` (§3[B'], bucket-aware)
+    como um passo posterior a `persistir()` (bucket-agnóstico), sem reescrever
+    o log de reviews. Filme sem `meta.json` ainda cria um novo com só as
+    `atualizacoes` — não é o caminho normal (toda coleta passa por
+    `persistir()` primeiro), mas não quebra.
+    """
+    meta, _ = carregar(slug, raiz=raiz)
+    meta = dict(meta) if meta else {}
+    meta.update(atualizacoes)
+    destino = dir_do_filme(slug, raiz)
+    destino.mkdir(parents=True, exist_ok=True)
+    caminho_meta(slug, raiz).write_text(
+        json.dumps(meta, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
+
+
 def persistir(slug: str, meta: dict, reviews: Iterable[ReviewBruta],
               raiz: str | Path = DADOS_BRUTO_DIR) -> ResultadoPersistencia:
     """Grava o lote, mesclando com o que já existe. Idempotente e incremental.
