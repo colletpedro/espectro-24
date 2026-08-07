@@ -64,6 +64,24 @@ def film_page_cache_key(slug: str) -> str:
     return f"{slug}/film_page.html"
 
 
+def reviews_qualquer_nota_url(slug: str) -> str:
+    """[v1.9.3, §3[H]] Listagem de reviews SEM filtro de nota — página 1,
+    ordenação padrão do site.
+
+    Usada só para `lote.validar_slug`: confirma existência do slug (404 se
+    não existir) e presença de review de verdade com o MESMO parser já
+    testado (`parser.parse_reviews`), em vez de casar um trecho de markup à
+    mão contra a página principal do filme — que **não** carrega essa
+    contagem (achado real, v1.9.3: a tag `js-route-reviews` só existe nas
+    páginas de LISTAGEM de reviews, não na página raiz do filme).
+    """
+    return f"{BASE}/film/{slug}/reviews/by/activity/"
+
+
+def reviews_qualquer_nota_cache_key(slug: str) -> str:
+    return f"{slug}/reviews_qualquer_nota_page1.html"
+
+
 def search_url(query: str) -> str:
     return f"{BASE}/s/search/films/{quote(query)}/"
 

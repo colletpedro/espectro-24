@@ -19,10 +19,9 @@ from espectro24.lote import (
     validar_slug,
 )
 from espectro24.urls import (
-    film_page_cache_key,
-    film_page_url,
     histogram_cache_key,
     level_page_cache_key,
+    reviews_qualquer_nota_cache_key,
 )
 
 
@@ -46,16 +45,10 @@ def _pagina(n_reviews: int, base_id: int = 0) -> str:
     return "<html><body>" + "".join(itens) + "</body></html>"
 
 
-def _film_page(n_reviews: int = 100) -> str:
-    return (f'<html><body><ul class="sub-nav"><li class="js-route-reviews">'
-            f'<a href="/film/x/reviews/" title="{n_reviews}&nbsp;reviews">Reviews</a>'
-            f'</li></ul></body></html>')
-
-
 def _fetcher_filme_abundante(slug: str, ordenacao: str = "by/added") -> FakeFetcher:
     """Fetcher com material "infinito" (nunca esgota) para todos os níveis —
     monta um filme que fecha 40/40/40 folgadamente."""
-    resp = {film_page_cache_key(slug): _film_page(),
+    resp = {reviews_qualquer_nota_cache_key(slug): _pagina(5, base_id=900000),
            histogram_cache_key(slug): fx("histograma_cure.html")}
     for n in NIVEIS:
         for p in range(1, 30):
@@ -67,7 +60,7 @@ def _fetcher_filme_abundante(slug: str, ordenacao: str = "by/added") -> FakeFetc
 def _fetcher_filme_obscuro(slug: str, ordenacao: str = "by/added") -> FakeFetcher:
     """Fetcher com pouquíssimo material — todo nível esgota logo na 1ª
     página (ou fica vazio), simulando um filme genuinamente obscuro."""
-    resp = {film_page_cache_key(slug): _film_page(n_reviews=3),
+    resp = {reviews_qualquer_nota_cache_key(slug): _pagina(2, base_id=800000),
            histogram_cache_key(slug): fx("histograma_filme_minusculo.html")}
     # só o primeiro nível com material ganha 1-2 reviews; o resto fica vazio
     resp[level_page_cache_key(slug, 3.0, 1, ordenacao)] = _pagina(2, base_id=1)
@@ -128,16 +121,20 @@ def test_estado_lote_persiste_apos_cada_marcacao(tmp_path):
 
 
 # --- validação de slug: 1 requisição ---
+# v1.9.3, achado real (Entrega 2): a 1ª versão casava markup contra a página
+# PRINCIPAL do filme e falhou nos 3 filmes reais testados — essa tag só
+# existe em páginas de LISTAGEM de reviews. A correção usa a listagem
+# "qualquer nota" + o parser já testado (ver `lote.validar_slug`).
 
 def test_validar_slug_valido_com_reviews():
-    ff = FakeFetcher({film_page_cache_key("cure"): _film_page(n_reviews=500)})
+    ff = FakeFetcher({reviews_qualquer_nota_cache_key("cure"): _pagina(5)})
     ok, motivo = validar_slug(ff, "cure")
     assert ok is True and motivo == ""
     assert len(ff.calls) == 1
 
 
 def test_validar_slug_inexistente_gasta_1_requisicao_nao_uma_coleta():
-    ff = FakeFetcher({}, raise_on={film_page_cache_key("slug-que-nao-existe")})
+    ff = FakeFetcher({}, raise_on={reviews_qualquer_nota_cache_key("slug-que-nao-existe")})
     ok, motivo = validar_slug(ff, "slug-que-nao-existe")
     assert ok is False
     assert "slug_invalido" in motivo
@@ -145,18 +142,19 @@ def test_validar_slug_inexistente_gasta_1_requisicao_nao_uma_coleta():
 
 
 def test_validar_slug_sem_reviews():
-    ff = FakeFetcher({film_page_cache_key("obscuro"): _film_page(n_reviews=0)})
+    ff = FakeFetcher({reviews_qualquer_nota_cache_key("obscuro"):
+                      "<html><body></body></html>"})
     ok, motivo = validar_slug(ff, "obscuro")
     assert ok is False and motivo == "sem_reviews"
     assert len(ff.calls) == 1
 
 
-def test_validar_slug_review_singular_nao_falha():
-    html = ('<html><body><ul class="sub-nav"><li class="js-route-reviews">'
-            '<a href="/film/x/reviews/" title="1&nbsp;review">Reviews</a>'
-            '</li></ul></body></html>')
-    ff = FakeFetcher({film_page_cache_key("um-review"): html})
-    ok, motivo = validar_slug(ff, "um-review")
+def test_validar_slug_usa_o_MESMO_parser_da_coleta_de_verdade():
+    """Não é um regex ad-hoc de segunda mão — é `parser.parse_reviews`,
+    testado contra fixture real em `tests/test_parser.py`."""
+    ff = FakeFetcher({reviews_qualquer_nota_cache_key("oppenheimer-2023"):
+                      fx("oppenheimer-2023_rated5_page1.html")})
+    ok, motivo = validar_slug(ff, "oppenheimer-2023")
     assert ok is True
 
 
@@ -172,11 +170,9 @@ def test_coletar_um_filme_sucesso(tmp_path):
 def test_coletar_um_filme_falha_isolada_nao_propaga(tmp_path):
     """Uma exceção durante a coleta (ex. HTML corrompido, erro de rede em
     página no meio) vira status `falhou`, não uma exceção não tratada."""
-    ff = FakeFetcher({film_page_cache_key("cure"): _film_page()},
-                     raise_on={histogram_cache_key("cure")})
     # força uma falha "inesperada" simulando erro de rede na própria
     # paginação (nível 0.5, página 1)
-    ff2 = FakeFetcher({film_page_cache_key("quebra"): _film_page()},
+    ff2 = FakeFetcher({histogram_cache_key("quebra"): fx("histograma_cure.html")},
                       raise_on={level_page_cache_key("quebra", 0.5, 1, "by/added")})
     r = coletar_um_filme(ff2, "quebra", dados_dir=tmp_path)
     assert r.status == "falhou"
@@ -266,7 +262,7 @@ def test_rodar_lote_resume_pula_slug_ja_concluido(tmp_path):
 def test_rodar_lote_falha_isolada_nao_impede_os_seguintes(tmp_path):
     def _fabrica(slug):
         if slug == "slug-invalido":
-            return FakeFetcher({}, raise_on={film_page_cache_key(slug)})
+            return FakeFetcher({}, raise_on={reviews_qualquer_nota_cache_key(slug)})
         return _fetcher_filme_abundante(slug)
 
     rel = rodar_lote(["cure", "slug-invalido", "cidade-de-deus"],

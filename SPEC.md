@@ -1045,12 +1045,27 @@ momento (rede, Ctrl-C, sono da máquina) retoma pulando todo slug já
 checkpoint é o que falta para não RECOMEÇAR a decidir o que já foi feito.
 
 **Validação de slug — 1 requisição, antes de gastar orçamento de páginas.**
-Busca a página principal do filme (`film_page_url`, já usada por
-`ficha.resolver_ano_letterboxd`, mesmo fetcher/cache): 404/erro de rede →
-slug inválido, `FetchError`/`AntiBotError` capturado e reportado como falha
-isolada, sem derrubar o lote; 200 sem nenhuma review (contagem extraída do
-mesmo tooltip de navegação usado pelos scripts de medição das sessões B/C)
-→ tratado como falha de validação (`sem_reviews`), pulando a coleta pesada.
+Busca a listagem de reviews "qualquer nota" (`reviews_qualquer_nota_url`,
+`/film/<slug>/reviews/by/activity/`) e reaproveita o `parser.parse_reviews`
+já testado: 404/erro de rede → slug inválido, `FetchError`/`AntiBotError`
+capturado e reportado como falha isolada, sem derrubar o lote; 200 sem
+nenhuma review reconhecida pelo parser → tratado como falha de validação
+(`sem_reviews`), pulando a coleta pesada.
+
+**Achado real (v1.9.3, durante a Entrega 2):** a primeira versão desta
+função buscava a página PRINCIPAL do filme (`film_page_url`, mesma usada
+por `ficha.resolver_ano_letterboxd`) e casava um trecho de markup
+(`js-route-reviews`, tooltip de contagem) contra ela — e falhou contra os
+3 filmes reais testados (`parasite-2019`, `eighth-grade`,
+`everything-everywhere-all-at-once`), todos marcados `sem_reviews`
+incorretamente, porque essa tag só existe nas páginas de LISTAGEM de
+reviews, não na página raiz do filme. Um detalhe de markup que as
+fixtures sintéticas dos testes não capturavam (a fixture reproduzia a
+mesma suposição errada). Corrigido para reusar o parser real de reviews
+em vez de um regex ad-hoc — existência e presença de review verificadas
+juntas, na mesma requisição, pelo mesmo código que a coleta de verdade
+usa. Duas funções novas em `urls.py`: `reviews_qualquer_nota_url` e
+`reviews_qualquer_nota_cache_key`.
 `histograma` ausente **não** é motivo de rejeição aqui — o pipeline já
 degrada esse caso graciosamente (alocação uniforme, §3[G]), então
 pré-validar duas vezes a mesma coisa seria custo redundante, não segurança.

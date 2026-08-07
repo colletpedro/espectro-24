@@ -8,7 +8,6 @@ executa o pipeline já existente (`pipeline.run_pipeline`) repetidamente.
 from __future__ import annotations
 
 import json
-import re
 from dataclasses import dataclass, field
 from datetime import datetime, timezone
 from pathlib import Path
@@ -20,13 +19,9 @@ from .config import (
     ORDENACAO,
 )
 from .fetcher import AntiBotError, FetchError, Fetcher
+from .parser import parse_reviews
 from .pipeline import run_pipeline
-from .urls import film_page_cache_key, film_page_url
-
-# Tolerante a singular/plural ("1 review" / "N reviews") — mesmo padrão já
-# usado nos scripts de medição das sessões B/C, agora com o "s" opcional.
-_REVIEWS_RE = re.compile(r'js-route-reviews.*?title="([\d,]+)&nbsp;reviews?"',
-                         re.S)
+from .urls import reviews_qualquer_nota_cache_key, reviews_qualquer_nota_url
 
 
 def ler_lista_slugs(caminho: str | Path) -> list[str]:
@@ -44,6 +39,20 @@ def validar_slug(fetcher, slug: str) -> tuple[bool, str]:
     """[§3[H]] Verificação BARATA — 1 requisição — antes de gastar orçamento
     de páginas: o slug existe e tem pelo menos 1 review.
 
+    **v1.9.3, achado real durante a medição de custo (Entrega 2):** a
+    primeira versão desta função casava um trecho de markup (`js-route-
+    reviews`, tooltip de contagem) contra a página PRINCIPAL do filme
+    (`film_page_url`) — e falhou para os 3 filmes reais testados (`parasite-
+    2019`, `eighth-grade`, `everything-everywhere-all-at-once`), todos
+    marcados `sem_reviews` incorretamente. Causa: essa tag só existe nas
+    páginas de LISTAGEM de reviews, não na página raiz do filme — um
+    detalhe de markup que só apareceu contra dado real, não contra fixture.
+    A correção usa a listagem "qualquer nota" (`reviews_qualquer_nota_url`)
+    e o `parser.parse_reviews` JÁ TESTADO, em vez de inventar um segundo
+    parser ad-hoc: existência (404 → `FetchError`) e presença de review são
+    verificadas juntas, na mesma requisição, pelo mesmo código que a coleta
+    de verdade usa.
+
     `histograma` ausente NÃO é checado aqui — o pipeline já degrada esse
     caso graciosamente (alocação uniforme, §3[G]); checá-lo de novo seria
     custo redundante, não segurança adicional.
@@ -51,12 +60,11 @@ def validar_slug(fetcher, slug: str) -> tuple[bool, str]:
     Devolve `(ok, motivo)` — `motivo == ""` quando `ok` é `True`.
     """
     try:
-        html = fetcher.get(film_page_url(slug), film_page_cache_key(slug))
+        html = fetcher.get(reviews_qualquer_nota_url(slug),
+                           reviews_qualquer_nota_cache_key(slug))
     except (FetchError, AntiBotError) as e:
         return False, f"slug_invalido: {e}"
-    m = _REVIEWS_RE.search(html)
-    n_reviews = int(m.group(1).replace(",", "")) if m else 0
-    if n_reviews <= 0:
+    if not parse_reviews(html):
         return False, "sem_reviews"
     return True, ""
 
