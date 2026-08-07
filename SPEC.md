@@ -724,10 +724,54 @@ a amostra realmente está.
 
 #### Resultado MEDIDO da recoleta v1.9.2 (2026-08-07) — parada determinística + posicionamento estratificado
 
-Ver §5.6 e o changelog da v1.9.2 para a tabela completa (n final por bucket,
-requisições contra a v1.9.1, páginas profundas alcançadas, distribuição de
-`pagina_origem`) — reportada após a recoleta desta sessão, para não misturar
-medição com previsão.
+Recoleta incremental (sobre o bruto da v1.9.1), sob a parada determinística
+(entrega 1) e o posicionamento estratificado (entrega 2):
+
+| Filme | requisições de rede | negativas | medianas | positivas |
+|---|---|---|---|---|
+| `cure` | **15** | 40/40 | 40/40 | 40/40 |
+| `cidade-de-deus` | **15** | 40/40 | **40/40** | 40/40 |
+| `the-invite-2026` | **13** | 40/40 | 40/40 | 40/40 |
+
+**O DÉFICIT RESIDUAL DA v1.9.1 FECHOU.** `cidade-de-deus`/`medianas`, que
+tinha ficado em 37/40 (o nível 2,5★ parando cedo por ALVO antes de esgotar
+o orçamento), agora fecha **40/40** — exatamente a correção prevista ao
+remover a parada heurística. **Os 3 filmes, os 9 buckets, todos em 40/40 —
+a primeira vez desde a v1.9.0 que isso acontece nos três simultaneamente.**
+
+**`motivo_parada` por nível: 100% `orcamento_esgotado`, nos 3 filmes, em
+todos os 10 níveis de cada um** (30 valores no total, nenhum
+`material_esgotado`) — os 3 filmes do catálogo têm material de sobra em
+todo nível, então o orçamento (16/bucket) foi o fator limitante em toda
+parte, nunca o conteúdo real do Letterboxd. Consistente com o achado da
+Entrega 3 (filmes populares raramente esgotam organicamente).
+
+**Requisições: 13-15 por filme, média 14,3** — abaixo da execução incremental
+da v1.9.1 (~21), porque grande parte do bloco raso já estava cacheada;
+o custo novo concentrou-se nas posições PROFUNDAS (nunca visitadas antes).
+Não comparável ao valor esperado de coleta do zero (~85, §5.6) pelo mesmo
+motivo já registrado nas sessões anteriores: incremental reaproveita cache.
+
+**Distribuição de `pagina_origem` (entrega 4) — a primeira medição real do
+posicionamento estratificado.** `fracao_profunda` variou de **0,00 a 0,23**
+entre buckets — no `the-invite-2026`/negativas, **23% da amostra final veio
+do bloco profundo**, contribuição real e mensurável à diversidade temporal
+da amostra. Em buckets com material abundante (`cure`/positivas), a fração
+profunda ficou em 0 — o bloco raso já basta para fechar a cota, e a seleção
+(ainda ordenada por `pagina_origem` ascendente, §3[B], "Reversibilidade")
+não precisa alcançar o material profundo. **Confirma a hipótese registrada
+durante a implementação (Entrega 4, commit [2/6]):** o benefício do
+posicionamento estratificado na amostra FINAL depende de quão escasso é o
+material raso — não é automático, é condicional à disponibilidade.
+
+**Janela por `data` (secundária)** segue reportada lado a lado — sem
+mudança de leitura em relação à v1.9.1 (ainda concentrada nos últimos
+meses/dias em todos os buckets), confirmando que `pagina_origem` e `data`
+medem coisas relacionadas mas distintas: a amostra ficou mais profunda em
+RANK DE ADIÇÃO sem necessariamente recuar em CALENDÁRIO — o que é esperado
+sob `by/added`, onde adições recentes concentram-se numa janela curta e
+"profundo" ainda significa, na maioria dos casos, "há algumas semanas", não
+"há anos".
 
 #### Medição de profundidade de paginação (v1.9.1, GATE — passo largo NÃO implementado)
 
@@ -1788,7 +1832,7 @@ Por bucket: **(v1.4.0)** `share_real` (percentual inteiro), **omitido** quando n
 3. Filme obscuro (a escolher): modo degradado severo — piso de 3 por bucket respeitado, bucket sem análise renderiza aviso (contagem + `reviews_url`) e não inventa temas; a cascata de relaxamento por nível (`filtro_aplicado` assumindo 50/0) é exercitada aqui.
 4. **Nenhum texto truncado chega ao LLM:** teste com filme contendo reviews longas colapsadas; verificar que todas as reviews enviadas ao LLM têm texto completo ou foram descartadas com registro.
 5. Segunda execução de qualquer filme: **zero requisições de rede** (100% cache).
-6. Orçamento de requisições por filme novo — **reescrito na v1.9.1**: teto absoluto de **paginação** = **48** (3 buckets × 16 páginas de orçamento — era 40 = 10 níveis × 4 na v1.9.0, computado por nível; a v1.9.1 muda a unidade de contagem para bucket, não o gasto real, que segue medido, não projetado), + 1 histograma + truncadas completadas + busca de slug. **Valor típico MEDIDO sob a v1.9.0 (2026-08-07, 3 filmes): 58-65, média 61** — 32-33 de paginação, 24-33 de completamento, 1 de histograma; abaixo dos 83 (`cure`) e 68 (`cidade-de-deus`) da v1.8.2, apesar de ~50% mais material bruto coletado. **Valor MEDIDO sob a v1.9.1, recoleta INCREMENTAL sobre o bruto da v1.9.0 (2026-08-07, 3 filmes): 17-26, média 21** — não comparável 1:1 com os 61 da v1.9.0 (que foi coleta do zero); é o custo real de alargar uma coleta já existente para o orçamento maior, o caso de uso que a incrementalidade do bruto (§3[B']) foi desenhada para servir. Tabela completa e o achado residual (`cidade-de-deus`/`medianas` fechou 37/40, não 40/40) em §3[B], "Resultado MEDIDO da recoleta v1.9.1". **Valor ESPERADO sob a v1.9.2** (parada determinística — orçamento sempre gasto, salvo esgotamento real): ~32→48 páginas/filme, ~61→~85 requisições numa coleta DO ZERO — custo aceito explicitamente em troca de determinismo (§3[B]). **Valor MEDIDO:** ver §3[B], "Resultado MEDIDO da recoleta v1.9.2".
+6. Orçamento de requisições por filme novo — **reescrito na v1.9.1**: teto absoluto de **paginação** = **48** (3 buckets × 16 páginas de orçamento — era 40 = 10 níveis × 4 na v1.9.0, computado por nível; a v1.9.1 muda a unidade de contagem para bucket, não o gasto real, que segue medido, não projetado), + 1 histograma + truncadas completadas + busca de slug. **Valor típico MEDIDO sob a v1.9.0 (2026-08-07, 3 filmes): 58-65, média 61** — 32-33 de paginação, 24-33 de completamento, 1 de histograma; abaixo dos 83 (`cure`) e 68 (`cidade-de-deus`) da v1.8.2, apesar de ~50% mais material bruto coletado. **Valor MEDIDO sob a v1.9.1, recoleta INCREMENTAL sobre o bruto da v1.9.0 (2026-08-07, 3 filmes): 17-26, média 21** — não comparável 1:1 com os 61 da v1.9.0 (que foi coleta do zero); é o custo real de alargar uma coleta já existente para o orçamento maior, o caso de uso que a incrementalidade do bruto (§3[B']) foi desenhada para servir. Tabela completa e o achado residual (`cidade-de-deus`/`medianas` fechou 37/40, não 40/40) em §3[B], "Resultado MEDIDO da recoleta v1.9.1". **Valor ESPERADO sob a v1.9.2** (parada determinística — orçamento sempre gasto, salvo esgotamento real): ~32→48 páginas/filme, ~61→~85 requisições numa coleta DO ZERO — custo aceito explicitamente em troca de determinismo (§3[B]). **Valor MEDIDO (2026-08-07, recoleta incremental sobre o bruto da v1.9.1, 3 filmes): 13-15, média 14,3** — não comparável ao valor esperado de coleta do zero, mesmo motivo das sessões anteriores (a maior parte do material já estava cacheada; o custo novo concentrou-se nas posições profundas, nunca visitadas antes). **Resultado central: os 3 filmes fecharam 40/40/40 nos 9 buckets — o déficit residual da v1.9.1 (`cidade-de-deus`/`medianas`, 37/40) fechou.** Tabela completa em §3[B], "Resultado MEDIDO da recoleta v1.9.2".
 
 ---
 
@@ -1808,7 +1852,7 @@ As três incógnitas abaixo foram resolvidas na Fase 1; os achados já estão in
   - **(2) Posicionamento estratificado por profundidade (§3[B]).** O defeito: páginas de um nível eram sempre as primeiras `N` consecutivas, amostrando sistematicamente o mais recente sob `by/added` (79-100% da amostra em ~7 semanas, medido na v1.9.0). Correção: `RESERVA_PROFUNDIDADE = 0,25` do orçamento de cada nível é posicionada em progressão geométrica (`n_raso+2, n_raso+4, n_raso+8, …`) a partir do fim do bloco raso; a primeira posição profunda vazia revela a profundidade real (por monotonicidade da paginação), e o orçamento não gasto é redistribuído para dentro do intervalo JÁ CONFIRMADO como válido (nunca além — no máximo 1 página desperdiçada por nível). A redistribuição **reaproveita `redistribuir_deficit`** — terceiro uso da mesma função (reviews entre níveis, páginas entre níveis, agora posições dentro de um nível), nenhum mecanismo novo. **Custo IGUAL ao consecutivo no caso comum (profundidade folgada); nunca MAIOR em nenhum caso** — no caso de fronteira exata (profundidade real cai dentro de um salto geométrico ainda não confirmado), o orçamento pode ficar parcialmente não-gasto em vez de arriscar mais de 1 página vazia — testado explicitamente (`tests/test_posicionamento.py`). Degrada para consecutivo puro quando o nível é raso (material esgota dentro do bloco raso, fase profunda nunca tentada). **Racional de reversibilidade:** com raso e profundo no MESMO bruto, "analisar só o recente" vs. "analisar tudo" vira parâmetro filtrável por `pagina_origem` na seleção (não implementado, mas agora POSSÍVEL sem recoleta) — a profundidade de paginação era o único parâmetro de coleta que o superset ainda não tornava reversível.
   - **(3) Confirmação do teto de 256 páginas — Entrega 3.** Medido em `the-room-1993` (890 notas, obscuro), nível mais populoso 3,0★ (249 notas) — sonda exponencial + binária, **6 requisições**. Resultado: **última página com conteúdo = 4**, muitíssimo abaixo de 256 — a profundidade foi determinada pelo CONTEÚDO REAL, não por um teto de site, ao contrário dos 3 filmes populares da v1.9.1 (todos batendo exatamente em 256/512 apesar de volumes de notas muito diferentes entre si). O achado lateral da v1.9.1 fica CONFIRMADO: Letterboxd aparenta impor um teto de paginação por volta de 256 para listagens populosas. O posicionamento estratificado (item 2) não dependeu desta resposta — funciona igual, mesmo custo, seja a profundidade real 4 páginas ou 256.
   - **(4) `pagina_origem` vira instrumento temporal PRIMÁRIO (§3[B']).** `janela_temporal` (v1.9.1) mede `data`, que é a data ASSISTIDA (diário) — contaminada por quem registra filmes com atraso, causa raiz do resultado MISTO do gate da v1.9.1 (janela por `data` ESTREITOU sob amostragem mais profunda em 2 dos 3 filmes). `pagina_origem`, sob ordenação cronológica, é o rank de ADIÇÃO — sem essa contaminação. Nova telemetria `distribuicao_pagina_origem` por bucket (`{n, min, max, p5, p50, p95, fracao_profunda}`), sobre a amostra SELECIONADA (não o bruto inteiro), com `fracao_profunda` usando a MESMA divisão raso/profundo do item 2 — telemetria e coleta nunca divergem sobre o que conta como profundo. `janela_temporal` rebaixada a secundária, rotulada como proxy contaminado, mantida (é o único sinal de calendário real que existe).
-  - **(5) Recoleta dos 3 filmes, MEDIDA — ver §3[B] "Resultado MEDIDO da recoleta v1.9.2" e §5.6.** `<PREENCHER após a recoleta>`.
+  - **(5) Recoleta dos 3 filmes, MEDIDA — o déficit residual da v1.9.1 fechou.** `cidade-de-deus`/`medianas` (37/40 na v1.9.1, nível 2,5★ parando cedo por ALVO) agora fecha **40/40** — os 3 filmes, os 9 buckets, todos em 40/40/40 pela primeira vez desde a v1.9.0. Requisições: 13-15 por filme (incremental, não comparável à coleta do zero). `motivo_parada`: 100% `orcamento_esgotado` nos 30 níveis medidos (10 níveis × 3 filmes) — os filmes do catálogo têm material de sobra em todo nível, nunca esgotam organicamente. `fracao_profunda` (entrega 4) variou 0,00-0,23 entre buckets — real e mensurável quando o material raso não basta para fechar a cota (`the-invite-2026`/negativas: 23% da amostra final veio do bloco profundo), zero quando basta (o bloco raso já fecha a cota e a seleção, ainda ordenada por `pagina_origem` ascendente, não precisa alcançar o profundo — o filtro de profundidade na seleção continua não-implementado, só possível). Ver §3[B] "Resultado MEDIDO da recoleta v1.9.2" e §5.6 para a tabela completa.
 - **v1.9.1** (2026-08-07) — corrige dois defeitos que a telemetria MEDIDA da v1.9.0 revelou na camada de coleta, mais duas entregas de acabamento. Nenhuma etapa de síntese/narrador/editor tocada; fronteiras, cota e piso escalonado **não mudaram**.
   - **(1) Orçamento de páginas POR BUCKET, não por nível (§3[B]) — fecha o defeito estrutural.** O teto de páginas era por NÍVEL (4, flat) enquanto a cota é por BUCKET (40); sob a opção C, `medianas` (2 níveis) tinha metade do teto AGREGADO de `negativas`/`positivas` (4 níveis) — 8 contra 16 — e por isso nunca fechava a cota (medido na v1.9.0: 35, 23, 26). Correção: `ORCAMENTO_PAGINAS_POR_BUCKET = 16`, igual nos três buckets, distribuído entre os níveis do bucket **reaproveitando `alocar_bucket`** (a mesma função da alocação de reviews, agora recebendo páginas em vez de reviews como `N`) com piso de 1 página/nível (mesmo seguro de reversibilidade) e teto de segurança de 10 páginas/nível (nenhum nível domina o orçamento do bucket sozinho) — o excedente cortado pelo teto de segurança é redistribuído **reaproveitando `redistribuir_deficit`** com o teto como "disponibilidade", não um segundo mecanismo. `16 = 4×4`: o orçamento não sobe para os buckets de 4 níveis, ele equaliza o que `medianas` tinha pela metade.
   - **(2) Motivos de descarte discriminados (§3[C2]) — telemetria pura.** Cada review do bruto é classificada em exatamente uma categoria (`selecionada` ou um motivo), em ordem de precedência fixa: `truncada_sem_texto` → `spoiler` (só quando `excluir_spoiler=True`) → `abaixo_min_chars` (contra o degrau de cascata que vigorou, não o `min_chars` nominal) → `excedente_cota` (passou em tudo, mas além do que a alocação permitiu) → `duplicata`/`outros` (defensivos, esperados sempre zero — canário de bug). Invariante: soma dos motivos == `n_brutas − n_validas`, sempre. `n_descartadas_spoiler`/`n_descartadas_curtas`/`n_indisponivel_truncamento` passam a ser derivados do mesmo dict, uma fonte de verdade em vez de duas contagens que podiam divergir. Zero mudança de comportamento.
