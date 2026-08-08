@@ -1342,9 +1342,77 @@ deficitários a `abaixo_min_chars`. Medido sobre os 6 filmes em
   notas, ficam em 67,7-72,5%. Direção consistente com a hipótese da
   diagnose, mas `n=6` não sustenta conclusão estatística.
 
-**Nenhuma decisão tomada.** `MIN_CHARS`, `CASCATA_CHARS` e o orçamento de
-páginas seguem inalterados — a leitura dos dados acima e a decisão sobre
-o limiar são do usuário.
+**Decisão (usuário, pós-leitura da Entrega 2): manter `MIN_CHARS=150` e
+`CASCATA_CHARS=[150, 50, 0]`.** Nenhum parâmetro alterado nem commitado
+por causa desta auditoria — a simulação em 100 quase não mudou nada
+(17/18 vs. 14/18) e a rung intermediária testada na Entrega 4 piorou um
+bucket já deficitário; a leitura foi que 150 não é o defeito.
+
+**Diagnose de acompanhamento (v1.9.3, pós-lote de 29 filmes) — bucket
+DOMINANTE abaixo da cota, quando popularidade não é a causa.** Motivada
+por `wicked-2024`/positivas: 76,2% do histograma, 2,8M notas, mas
+`n_final=20` — volume não explica escassez. Diagnose sobre o bruto
+persistido (`selecao.selecionar` reexecutado, zero rede):
+
+- **H1 (rendimento extremo) — CONFIRMADA.** Rendimento pós-filtro por
+  nível de `wicked-2024`/positivas comparado à mediana dos 35 filmes:
+  nível 3,5★ = 8,3% (mediana 20,8%, **pior de 35**); 4,0★ = 6,9%
+  (mediana 20,8%, **pior de 35**); 5,0★ = 10,0% (mediana 19,8%, 4º pior
+  de 35); só 4,5★ fica perto da mediana (25,0% vs. 20,8%). Não é
+  escassez de material — é rendimento pós-filtro anormalmente baixo em
+  3 dos 4 níveis, contra o mesmo filtro que os outros 34 filmes
+  atravessam melhor.
+- **H2 (concentração da alocação) — fator AMPLIFICADOR, não causa
+  isolada.** A alocação proporcional ao histograma concentra 35,0% do
+  orçamento do bucket no nível 4,0★ e 32,5% no 5,0★ — exatamente os 2
+  níveis com pior rendimento (6,9% e 10,0%). `deficit_redistribuido=0`:
+  a redistribuição (§3[C1]) não teve de onde puxar excedente porque
+  TODOS os níveis do bucket rendem mal ao mesmo tempo — o mecanismo que
+  socorre um nível fraco com sobra de outro não tem sobra para dar
+  quando o déficit é sistêmico ao bucket inteiro, não pontual a um
+  nível.
+- **H3 (profundidade insuficiente) — REFUTADA.** Zero páginas vazias:
+  `paginas_gastas` == páginas distintas com review em todo nível do
+  bucket. O orçamento de 16 páginas foi todo gasto em páginas com
+  conteúdo real; a causa não é alcance, é filtro.
+- **Distribuição de `n_chars` do bucket:** 52,6% abaixo de 50 chars,
+  79,2% abaixo de 150 — mais pesado na cauda curta que a média geral dos
+  6 filmes da auditoria anterior (74,3%), consistente com H1.
+
+**Generalização (35 filmes) — não é só `wicked-2024`, é uma CLASSE.** 10
+casos de bucket dominante abaixo da cota; excluindo `obsession-2026`
+(escassez genuína — só 214 notas totais, mecanismo diferente), os outros
+9 são TODOS filmes muito populares (1,4M-5,7M notas) com rendimento
+10-20%: `talk-to-me-2022`, `pearl-2022`, `parasite-2019`, `wonka`,
+`avengers-endgame`, `hereditary`, `shutter-island`, `aftersun`, além de
+`wicked-2024`. **Isso reconcilia com o `r≈0,05-0,13` do relatório
+agregado do lote** (que olhou os 105 buckets, dominantes e minoritários
+juntos, e por isso diluiu o padrão) — filtrando só para o bucket
+DOMINANTE de cada filme, o padrão aparece: filme muito popular tende a
+render pior no bucket que concentra a maioria das notas, porque esse é o
+bucket que mais atrai reação curta de massa. Share do histograma e
+volume total de notas **não predizem** `n_final` olhando todos os
+buckets juntos, mas prediz mal especificamente o bucket que mais precisa
+de precisão (o dominante).
+
+**Consequência para o produto.** Em **4 dos 35 filmes**
+(`wicked-2024`, `avengers-endgame`, `talk-to-me-2022`, `aftersun` — os
+mesmos 4 mais extremos da lista acima) **o bucket que abre o MOVIMENTO 3
+e carrega o rótulo de peso mais forte tem `n` MENOR que os outros dois
+buckets do mesmo filme** — a perspectiva majoritária é medida com MENOS
+precisão que a minoritária, o oposto do que a intuição sugeriria. Não é
+um defeito de honestidade (o piso escalonado e as invariantes de §D2
+continuam corretos com qualquer `n`), mas é uma tensão real entre
+"popular" e "bem-medido" que a narrativa não expõe ao leitor.
+
+**Correção possível, NÃO aplicada — decisão do usuário.** O mecanismo
+identificado é uma interação entre duas decisões independentes e válidas
+isoladamente: alocação proporcional ao histograma (§3[C1], que concentra
+orçamento nos níveis com mais notas) e `MIN_CHARS=150` (que filtra pior
+justamente os níveis de blockbuster com reação de massa) — juntas,
+sistematicamente subalocam páginas para o nível ERRADO quando os dois
+efeitos coincidem no MESMO nível popular. Não corrigido nesta sessão,
+por instrução explícita.
 
 ### [C3] Piso escalonado — 4 estados (v1.9.0)
 
