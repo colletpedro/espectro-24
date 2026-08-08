@@ -1238,6 +1238,56 @@ distinguíveis** a 95%. É o que justifica o piso escalonado (§3[C3]) suprimir
 número antes de suprimir tema — o tema é observação, o número é estimativa, e
 os dois degradam em ritmos diferentes.
 
+**Auditoria de `MIN_CHARS=150` (v1.9.3, 2026-08-08) — MEDIÇÃO, zero
+requisições, nenhum parâmetro alterado.** `min_chars=150` nunca tinha sido
+validado contra dado (herança da v1.0). Motivada pela diagnose do déficit
+de buckets (§3[H]), que atribuiu 63-87% do descarte dos 4 buckets
+deficitários a `abaixo_min_chars`. Medido sobre os 6 filmes em
+`dados/bruto/` (`selecao.selecionar` reexecutado, sem tocar `config.py`):
+
+- **Distribuição de `n_chars`:** 40,6% do bruto agregado tem 0-49 chars,
+  23,8% tem 50-99, 9,9% tem 100-149 — **74,3% do bruto fica abaixo de 150**
+  em TODOS os 6 filmes, deficitários ou não (46,2%/26,4%/10,4% nos
+  deficitários vs. 39,0%/23,1%/9,7% no resto — a cauda curta não é
+  exclusiva dos buckets que faltam cota, é a forma normal da distribuição
+  em qualquer filme).
+- **Simulação de limiares (18 buckets, 6 filmes):** `min_chars=50` fecha
+  18/18 na cota; `100` fecha 17/18; `150` (atual) fecha 14/18; `200` fecha
+  9/18. Comprimento médio da amostra selecionada cresce monotonicamente
+  com o limiar (270 → 362 → 459 → 564 chars). Composição por nível
+  respeitada em todos os casos testados (a alocação proporcional não
+  quebra sob nenhum limiar simulado).
+- **Cascata com rung intermediária (`150→100→50→0` vs. atual
+  `150→50→0`):** **NÃO ajudou — piorou um bucket já deficitário.**
+  `parasite-2019`/negativas caiu de 28 para 22. Causa isolada por nível:
+  o nível 0,5★ (12 reviews brutas, nenhuma ≥150 chars) tem 6 reviews entre
+  50-99 chars e só 1 entre 100-149; sob a cascata atual ele cai direto
+  para o degrau 50 e pega as 7 (filtro nunca desce "para completar cota",
+  só quando o degrau atual dá ZERO — regra da v1.1.0, preservada); sob a
+  cascata testada ele para no degrau 100 (não-zero, 1 review) e NUNCA
+  chega ao 50, perdendo as 6 reviews de 50-99 que a cascata atual
+  aproveitava. Os buckets que já fecham a 150 não mudaram em nenhum caso
+  (mudança é localizada, como esperado), mas o efeito na direção oposta
+  à hipótese — a regra "só desce em zero" pode tornar uma rung
+  intermediária estritamente PIOR para um nível específico, não neutra.
+- **Amostra qualitativa (40 reviews, 50-149 chars, semente `24081900`,
+  estratificada pelos 6 filmes × 3 buckets):** dado bruto, sem
+  classificação — decisão do usuário. **Ressalva de qualidade:** 4 das 40
+  (10%) são o placeholder de spoiler do parser (`SPOILER_PLACEHOLDER`,
+  "This review may contain spoilers..."), não texto real — `n_chars`
+  mede o placeholder, não a review original redigida.
+- **Rendimento vs. popularidade (n=6, sinal direcional, NÃO conclusivo):**
+  correlação de Pearson entre total de notas do histograma e fração de
+  bruto abaixo de 150 chars — os 2 filmes mais populares (`parasite-2019`
+  5,7M notas, `everything-everywhere-all-at-once` 4,1M) têm as maiores
+  frações abaixo de 150 (83,3% e 74,8%); os 3 do catálogo, com 0,3-1,2M
+  notas, ficam em 67,7-72,5%. Direção consistente com a hipótese da
+  diagnose, mas `n=6` não sustenta conclusão estatística.
+
+**Nenhuma decisão tomada.** `MIN_CHARS`, `CASCATA_CHARS` e o orçamento de
+páginas seguem inalterados — a leitura dos dados acima e a decisão sobre
+o limiar são do usuário.
+
 ### [C3] Piso escalonado — 4 estados (v1.9.0)
 
 Substitui o piso binário de 3 (`sem_analise` ou tudo). Calculado sobre o **`n`
