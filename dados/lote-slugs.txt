@@ -1,0 +1,44 @@
+# Espectro 24 — lote 1
+# 29 filmes. parasite-2019 removido: já coletado na Entrega 2,
+# gastaria ~69 requisições sem informação nova.
+
+# --- distribuição invertida (negativas dominantes) ---
+# nunca exercitado: abertura do movimento 3 pelo bucket negativo,
+# piso escalonado do lado das positivas
+joker-folie-a-deux
+cats-2019
+napoleon-2023
+wonka
+
+# --- divisivos / morno grande ---
+mother-2017
+bones-and-all
+the-northman
+pearl-2022
+the-substance
+longlegs
+
+# --- reviravolta forte (efeito do spoiler_flag) ---
+shutter-island
+hereditary
+talk-to-me-2022
+friday-the-13th-2009
+
+# --- não-anglófono / arthouse ---
+perfect-days-2023
+anatomy-of-a-fall
+aftersun
+im-still-here-2024
+
+# --- blockbuster aclamado (caso já conhecido, baseline) ---
+interstellar
+the-godfather
+spider-man-across-the-spider-verse
+dune-2021
+dune-part-two
+oppenheimer-2023
+barbie
+avengers-endgame
+wicked-2024
+the-hateful-eight
+obsession-2026

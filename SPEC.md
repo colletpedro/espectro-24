@@ -1158,6 +1158,64 @@ bruto persistido:
   `n` finais diferentes por bucket sob os MESMOS parâmetros — ver §5.6,
   "Achado lateral não previsto".
 
+**Resultado do lote (v1.9.3, 2026-08-08) — 29 filmes, 0 falhas, `min_chars`
+e cascata mantidos em 150/[150,50,0] (auditoria fechou pela manutenção).**
+Custo real: 2254 requisições (média 77,7/filme, 12,6% acima da projeção de
+69 medida na Entrega 2), 5363s de parede (~1,49h, 15% acima da projeção de
+~1,3h — ainda bem abaixo do teto de ~4h), ~6,95 MB de bruto (quase exato à
+projeção de ~7,1 MB). Achados estruturais (REGISTRADOS, não corrigidos):
+
+- **`material_esgotado` disparou pela primeira vez em produção.**
+  `obsession-2026` (214 notas no total — o filme mais obscuro já coletado)
+  parou por esgotamento real em 9 dos 10 níveis (só 1,5★ parou por
+  orçamento, tendo 1 página de orçamento e 3 notas totais no nível).
+  Persistência, `montar_buckets` e o JSON se comportaram corretamente —
+  produziu os primeiros estados REAIS de piso reduzido:
+  `negativas`=5 (`sem_numero`), `medianas`=6 (`sem_numero`),
+  `positivas`=8 (`sem_quantificador`). Os 3 outros estados do piso
+  escalonado (todos exceto `completa`) agora têm exemplo real, não só
+  sintético.
+- **Distribuição invertida — 2 de 4 candidatos confirmados, não 4.** A
+  lista foi curada esperando `joker-folie-a-deux`, `cats-2019`,
+  `napoleon-2023` e `wonka` como negativas-dominantes. Medido sob as
+  fronteiras C: só `cats-2019` (85,9%) e `joker-folie-a-deux` (46,2%) têm
+  `negativas` como bucket dominante do histograma; `napoleon-2023` é
+  dominado por `medianas` (44,8%) e `wonka` por `positivas` (50,2%) — a
+  expectativa de reputação/crítica não bate com a distribuição real de
+  NOTAS sob a fronteira C. Onde a inversão realmente ocorreu, a montagem
+  de buckets e a agregação do histograma funcionaram sem incidente — o
+  caminho "bucket dominante = negativas" nunca tinha sido exercitado
+  contra dado real e não quebrou nada; o campo que informa a ordem de
+  abertura do MOVIMENTO 3 ao narrador (fora de escopo tocar aqui) recebe
+  o mesmo dado de sempre, só que agora com `negativas` no topo em 2 casos
+  reais.
+- **Rendimento pós-filtro NÃO correlaciona com popularidade — corrige o
+  sinal direcional da diagnose anterior (n=6).** Com os 35 filmes já
+  coletados (105 buckets), Pearson r(total de notas do histograma,
+  n_final) = 0,05-0,13 por tipo de bucket — essencialmente ZERO,
+  contra a leitura direcional de n=6 que sugeria filmes populares
+  rendendo pior. Também r(share do bucket no histograma, n_final) = 0,06
+  no agregado dos 105 buckets; buckets com share <10% do histograma
+  fecham a cota tanto quanto buckets com share ≥10% (70% vs. 65%, mediana
+  40 em ambos os grupos). Caso ilustrativo: `wicked-2024`/`positivas` é
+  76,2% do histograma (bucket dominante, filme com 2,8M notas) e ainda
+  assim fecha só `n=20` — o rendimento pós-filtro é IDIOSSINCRÁTICO ao
+  filme (composição de quem escreve review longa naquele fandom
+  específico), não previsível por popularidade nem por share. **A
+  correção do sinal de n=6: não há evidência, com n grande, de que
+  filmes populares rendam sistematicamente pior.**
+- **Fechamento de cota por tipo de bucket é equilibrado, não estrutural.**
+  `negativas` fecha 66% (23/35), `medianas` 63% (22/35), `positivas` 71%
+  (25/35) — nenhum dos três tipos concentra o déficit. Sob o orçamento
+  POR BUCKET (v1.9.1+), o viés histórico contra `medianas` (2 níveis vs.
+  4) não reaparece; o déficit, quando ocorre, é por filme e por nível
+  específico, não pelo formato do bucket.
+- **14/29 filmes fecham a cota 40 nos 3 buckets; 84/87 buckets em
+  `estado_piso=completa`.** A maioria dos déficits (todos exceto
+  `obsession-2026`) fica acima do limiar `completa` (≥15) — a narrativa
+  teria número/quantificador/temas completos mesmo nos buckets abaixo da
+  cota cheia.
+
 ### [C2] Seleção downstream — cota 40/40/40 sobre o bruto persistido (v1.9.0)
 
 Lê `dados/bruto/<slug>/` e escolhe **até 40 reviews por bucket**, com tudo o
@@ -2032,7 +2090,7 @@ As três incógnitas abaixo foram resolvidas na Fase 1; os achados já estão in
   - **(3) Falha isolada.** Todo o pipeline de coleta de um slug roda dentro de um `try/except`; qualquer exceção vira entrada `falhou` no checkpoint com o motivo, e o lote segue.
   - **(4) `material_esgotado` tratado como caso ESPERADO** — os 3 filmes do catálogo, populares, nunca exercitaram esse caminho em produção; testado explicitamente que não quebra persistência, `montar_buckets` nem o JSON.
   - **(5) Estimativa de custo medida antes do lote** — 3 filmes DO ZERO (`parasite-2019`, `eighth-grade`, `everything-everywhere-all-at-once`): 61-76 requisições/filme (média 69,0), ~163s/filme, 220-268 KB/filme (média 242,7 KB). Extrapolado: 30 filmes ≈ 2070 requisições / ~1,4h / ~7,1 MB; 50 filmes ≈ 3450 requisições / ~2,3h / ~11,8 MB — ambos abaixo do teto de ~4h, sem necessidade de veto. Detalhe completo em §5.6.
-  - **(6) Lote executado — `<PREENCHER após a entrega 3, com a lista fornecida pelo usuário>`.**
+  - **(6) Lote executado — 29 filmes, lista fornecida pelo usuário (`dados/lote-slugs.txt`), 0 falhas.** 2254 requisições (média 77,7/filme — 12,6% acima da projeção de 69, dentro do razoável), 5363s de parede (~1,49h — 15% acima da projeção de ~1,3h), ~6,95 MB de bruto persistido (quase exato à projeção de ~7,1 MB). `material_esgotado` disparou pela primeira vez em produção (`obsession-2026`, 214 notas no total, 9 de 10 níveis — primeira vez fora de teste sintético) sem quebrar persistência nem montagem de buckets, produzindo os primeiros estados reais de piso reduzido (`sem_numero` ×2, `sem_quantificador` ×1). 14/29 filmes fecham a cota 40 nos 3 buckets; 84/87 buckets em `estado_piso=completa`. Achados estruturais em §3[H], "Resultado do lote (v1.9.3)" — não corrigidos nesta sessão.
   - **(7) Diagnose do déficit de buckets nos 3 filmes da Entrega 2** — corrige o registro "40/40/40 nos 9 buckets" (errado; real: 5/9 na cota, 9/9 em `estado_piso=completa`) e classifica os 4 déficits como ESCASSEZ (filtro `min_chars`, zero desperdício de página) via `selecao.selecionar` reexecutado offline sobre o bruto. Hipótese de spoiler testada e refutada. Achado estrutural: filmes populares tendem a fechar buckets extremos abaixo da cota mais que filmes de nicho, mesmo com orçamento idêntico — registrado, não corrigido. Detalhe completo em §3[H].
 - **v1.9.2** (2026-08-07) — fecha o gate de profundidade da v1.9.1 e resolve o déficit residual de `medianas`. Última sessão de coleta antes do lote de 30-50 filmes. Fronteiras, cota, piso escalonado, `min_chars`, ordenação e qualquer etapa de síntese/narrador/editor **não tocados**.
   - **(1) Parada por ALVO removida (§3[B]).** Era um vestígio de quando o teto era por NÍVEL e o custo por BUCKET não tinha limite (v1.9.0); sob o orçamento por bucket da v1.9.1 virou fonte de NÃO-DETERMINISMO — foi o mecanismo exato do 37/40 residual de `cidade-de-deus` (nível 2,5★ parou por ALVO na página 3, com 3 páginas de orçamento ainda disponíveis, página 4 nunca buscada). Agora o orçamento de páginas por nível é sempre gasto INTEGRALMENTE; única parada antecipada é esgotamento REAL de material. `motivo_parada` por nível: `"orcamento_esgotado"` \| `"material_esgotado"`, gravado em `meta.json`. O piso de páginas por nível (gate do ALVO) some — a garantia de reversibilidade da fronteira (§2.2) já vinha, desde a v1.9.1, do piso da ALOCAÇÃO de páginas, não deste parâmetro. `FOLGA_ALVO_COLETA` sobrevive com escopo reduzido: só decide o orçamento do completamento [C'], nunca mais quando parar de paginar. Custo aceito e medido em troca de determinismo — ver Resultado MEDIDO.
