@@ -1,0 +1,139 @@
+{
+  "slugs": {
+    "wicked-2024": {
+      "status": "concluido",
+      "atualizado_em": "2026-08-08T19:30:38.191328+00:00",
+      "n_por_bucket": {
+        "negativas": 36,
+        "medianas": 40,
+        "positivas": 24
+      },
+      "estado_piso": {
+        "negativas": "completa",
+        "medianas": "completa",
+        "positivas": "completa"
+      },
+      "requisicoes": 26
+    },
+    "avengers-endgame": {
+      "status": "concluido",
+      "atualizado_em": "2026-08-08T19:31:28.591340+00:00",
+      "n_por_bucket": {
+        "negativas": 40,
+        "medianas": 40,
+        "positivas": 40
+      },
+      "estado_piso": {
+        "negativas": "completa",
+        "medianas": "completa",
+        "positivas": "completa"
+      },
+      "requisicoes": 20
+    },
+    "talk-to-me-2022": {
+      "status": "concluido",
+      "atualizado_em": "2026-08-08T19:32:41.094881+00:00",
+      "n_por_bucket": {
+        "negativas": 40,
+        "medianas": 31,
+        "positivas": 34
+      },
+      "estado_piso": {
+        "negativas": "completa",
+        "medianas": "completa",
+        "positivas": "completa"
+      },
+      "requisicoes": 30
+    },
+    "aftersun": {
+      "status": "concluido",
+      "atualizado_em": "2026-08-08T19:33:03.062672+00:00",
+      "n_por_bucket": {
+        "negativas": 40,
+        "medianas": 40,
+        "positivas": 40
+      },
+      "estado_piso": {
+        "negativas": "completa",
+        "medianas": "completa",
+        "positivas": "completa"
+      },
+      "requisicoes": 9
+    },
+    "pearl-2022": {
+      "status": "concluido",
+      "atualizado_em": "2026-08-08T19:34:09.524814+00:00",
+      "n_por_bucket": {
+        "negativas": 26,
+        "medianas": 33,
+        "positivas": 35
+      },
+      "estado_piso": {
+        "negativas": "completa",
+        "medianas": "completa",
+        "positivas": "completa"
+      },
+      "requisicoes": 27
+    },
+    "parasite-2019": {
+      "status": "concluido",
+      "atualizado_em": "2026-08-08T19:35:29.976530+00:00",
+      "n_por_bucket": {
+        "negativas": 40,
+        "medianas": 40,
+        "positivas": 40
+      },
+      "estado_piso": {
+        "negativas": "completa",
+        "medianas": "completa",
+        "positivas": "completa"
+      },
+      "requisicoes": 32
+    },
+    "wonka": {
+      "status": "concluido",
+      "atualizado_em": "2026-08-08T19:36:30.638471+00:00",
+      "n_por_bucket": {
+        "negativas": 32,
+        "medianas": 25,
+        "positivas": 38
+      },
+      "estado_piso": {
+        "negativas": "completa",
+        "medianas": "completa",
+        "positivas": "completa"
+      },
+      "requisicoes": 25
+    },
+    "hereditary": {
+      "status": "concluido",
+      "atualizado_em": "2026-08-08T19:37:29.577041+00:00",
+      "n_por_bucket": {
+        "negativas": 36,
+        "medianas": 40,
+        "positivas": 39
+      },
+      "estado_piso": {
+        "negativas": "completa",
+        "medianas": "completa",
+        "positivas": "completa"
+      },
+      "requisicoes": 24
+    },
+    "shutter-island": {
+      "status": "concluido",
+      "atualizado_em": "2026-08-08T19:38:46.536761+00:00",
+      "n_por_bucket": {
+        "negativas": 40,
+        "medianas": 40,
+        "positivas": 40
+      },
+      "estado_piso": {
+        "negativas": "completa",
+        "medianas": "completa",
+        "positivas": "completa"
+      },
+      "requisicoes": 29
+    }
+  }
+}

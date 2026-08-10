@@ -54,6 +54,22 @@ class NivelBruto:
     # não quebrar consumidores existentes — cli.py, `paradas_por_limite`).
     motivo_parada: str = "orcamento_esgotado"
     n_sem_nota_no_html: int = 0
+    # v1.9.4 (§3[B]): contabilidade posicional, para que a EXTENSÃO saiba onde
+    # continuar sem recalcular a divisão raso/profundo — se recalculasse, as
+    # posições geométricas mudariam e a coleta base deixaria de ser prefixo
+    # exato da coleta estendida. `posicoes_buscadas` inclui a posição vazia
+    # que revelou a profundidade (a requisição foi feita); `maior_confirmada`
+    # é a maior posição buscada COM conteúdo — por monotonicidade da
+    # paginação, todo buraco abaixo dela tem conteúdo garantido.
+    posicoes_buscadas: set = field(default_factory=set)
+    maior_confirmada: int = 0
+    # As `Review` de onde cada registro veio, alinhadas por índice com
+    # `reviews`. Só o completamento [C'] precisa delas (a `full_text_url` não
+    # existe no registro persistível). Vive aqui, e não numa variável local de
+    # `raspar_nivel`, porque a extensão (v1.9.4) completa as truncadas que ela
+    # mesma trouxe — página extra cujo texto fica truncado é página que a
+    # seleção descarta, o que faria a extensão girar sem render nada.
+    origem: list = field(default_factory=list)
 
     @property
     def parou_por_teto(self) -> bool:
@@ -153,14 +169,16 @@ def raspar_nivel(fetcher: Fetcher, slug: str, nivel: float, alvo: int,
     """
     res = NivelBruto(nivel=nivel, paginas_gastas=0)
     vistos: set[str] = set()
-    # Pareia cada registro persistível com a `Review` de onde ele veio — o
-    # completamento precisa da `full_text_url`, que não existe no registro.
-    origem: list[Review] = []
+    origem = res.origem
 
     def _buscar(pagina: int) -> list:
         html = fetcher.get(level_page_url(slug, nivel, pagina, ordenacao),
                            level_page_cache_key(slug, nivel, pagina, ordenacao))
-        return parse_reviews(html)
+        res.posicoes_buscadas.add(pagina)
+        brutas = parse_reviews(html)
+        if brutas:
+            res.maior_confirmada = max(res.maior_confirmada, pagina)
+        return brutas
 
     def _registrar(brutas: list, pagina: int) -> None:
         for r in brutas:
@@ -242,9 +260,67 @@ def raspar_nivel(fetcher: Fetcher, slug: str, nivel: float, alvo: int,
     return res
 
 
+def estender_nivel(fetcher: Fetcher, slug: str, nb: NivelBruto,
+                   ordenacao: str = ORDENACAO,
+                   min_chars: int = MIN_CHARS) -> bool:
+    """[v1.9.4, §3[B]] Busca UMA página extra neste nível. Devolve se ela veio
+    com conteúdo.
+
+    **Não recalcula a divisão raso/profundo** — a base continua sendo prefixo
+    exato da coleta estendida (`tests/test_extensao_posicao.py`). A posição
+    escolhida é, nesta ordem:
+
+    1. o menor **buraco** dentro do intervalo já confirmado (`≤
+       maior_confirmada`) ainda não buscado. Por monotonicidade da paginação,
+       essas páginas têm conteúdo garantido: toda extra gasta ali rende;
+    2. esgotados os buracos, a posição consecutiva seguinte à mais profunda
+       já buscada. Aqui a página PODE vir vazia — e vir vazia marca o nível
+       `material_esgotado`, tirando-o do jogo pelo resto da extensão.
+
+    Nível já esgotado não gasta requisição (guarda defensiva: quem chama já
+    deveria tê-lo tirado de `vivos`).
+
+    As truncadas trazidas pela página extra são completadas na mesma chamada:
+    review sem texto completo é descartada pela seleção (§3[C2]), então
+    deixá-las pela metade faria a extensão gastar página sem render válida.
+    """
+    if nb.motivo_parada == "material_esgotado":
+        return False
+
+    buracos = [p for p in range(1, nb.maior_confirmada + 1)
+               if p not in nb.posicoes_buscadas]
+    pagina = buracos[0] if buracos else (max(nb.posicoes_buscadas, default=0) + 1)
+
+    html = fetcher.get(level_page_url(slug, nb.nivel, pagina, ordenacao),
+                       level_page_cache_key(slug, nb.nivel, pagina, ordenacao))
+    nb.posicoes_buscadas.add(pagina)
+    brutas = parse_reviews(html)
+    if not brutas:
+        nb.motivo_parada = "material_esgotado"
+        return False
+
+    nb.maior_confirmada = max(nb.maior_confirmada, pagina)
+    nb.paginas_gastas += 1
+    inicio = len(nb.reviews)
+    vistos = {r.id for r in nb.reviews}
+    for r in brutas:
+        if r.rating is None:
+            nb.n_sem_nota_no_html += 1
+        reg = _para_bruta(r, nb.nivel, pagina)
+        if reg.id in vistos:
+            continue
+        vistos.add(reg.id)
+        nb.reviews.append(reg)
+        nb.origem.append(r)
+
+    _completar_truncadas(fetcher, slug, nb, nb.origem,
+                         len(nb.reviews) - inicio, min_chars, inicio=inicio)
+    return True
+
+
 def _completar_truncadas(fetcher: Fetcher, slug: str, res: NivelBruto,
                          origem: list[Review], orcamento: int,
-                         min_chars: int) -> None:
+                         min_chars: int, inicio: int = 0) -> None:
     """[C'] Resolve o texto completo das truncadas — com ORÇAMENTO (v1.9.0).
 
     O completamento custa 1 requisição por review. Sob o superset, completar
@@ -260,6 +336,8 @@ def _completar_truncadas(fetcher: Fetcher, slug: str, res: NivelBruto,
     """
     gastos = 0
     for i, (reg, r) in enumerate(zip(res.reviews, origem)):
+        if i < inicio:
+            continue   # v1.9.4: a extensão completa só o que ELA trouxe
         if reg.texto_completo or gastos >= orcamento:
             continue
         # mesma política da v1.1.1: não gastar requisição com review que os
@@ -278,12 +356,19 @@ def coletar_superset(fetcher: Fetcher, slug: str,
                      raiz: str | Path = DADOS_BRUTO_DIR,
                      ordenacao: str = ORDENACAO,
                      teto_paginas: int | dict[float, int] = TETO_PAGINAS,
-                     on_level=None) -> SupersetResult:
+                     on_level=None, extensao=None) -> SupersetResult:
     """Varre os 10 níveis, persiste o superset e devolve a telemetria (§3[B']).
 
     A varredura é pela **escala inteira**, na ordem crescente de estrela — o
     coletor não sabe onde ficam as fronteiras, e um nível que hoje não
     pertence a bucket nenhum continuaria sendo raspado.
+
+    `extensao` (v1.9.4, §3[B]) é um gancho `(SupersetResult) -> dict | None`,
+    chamado DEPOIS do orçamento base de todos os níveis e ANTES da
+    persistência. Existe para que a extensão por déficit — que é uma decisão
+    por BUCKET — possa rodar sem que este módulo aprenda o que é um bucket:
+    quem passa o gancho é o `pipeline`, a única camada que já sabe disso. O
+    dict devolvido vira `meta["extensao_por_bucket"]`.
 
     `teto_paginas` aceita **int** (mesmo teto para todo nível — uso direto/
     testes de unidade) ou **dict `{nível: teto}`** (v1.9.1: o orçamento POR
@@ -303,6 +388,12 @@ def coletar_superset(fetcher: Fetcher, slug: str,
         res.niveis[nivel] = nb
         if on_level:
             on_level(nb)
+
+    # v1.9.4 (§3[B]): páginas do orçamento BASE, congeladas antes da extensão
+    # — `paginas_gastas` passa a incluir as extras, e a telemetria precisa
+    # conseguir separar as duas coisas.
+    base_por_nivel = {n: r.paginas_gastas for n, r in res.niveis.items()}
+    telemetria_extensao = extensao(res) if extensao else None
 
     res.meta = {
         "slug": slug,
@@ -326,7 +417,15 @@ def coletar_superset(fetcher: Fetcher, slug: str,
         # derivado, para não quebrar consumidores existentes.
         "motivo_parada_por_nivel": {str(n): r.motivo_parada
                                     for n, r in res.niveis.items()},
+        # v1.9.4 (§3[B]): base e extensão separadas por nível. A soma das
+        # duas é `paginas_gastas_por_nivel`, sempre.
+        "paginas_base_por_nivel": {str(n): v for n, v in base_por_nivel.items()},
+        "paginas_extensao_por_nivel": {
+            str(n): r.paginas_gastas - base_por_nivel[n]
+            for n, r in res.niveis.items()},
     }
+    if telemetria_extensao is not None:
+        res.meta["extensao_por_bucket"] = telemetria_extensao
     todas = [rev for nb in res.niveis.values() for rev in nb.reviews]
     persistido = persistir(slug, res.meta, todas, raiz=raiz)
     res.n_reviews = persistido.n_total

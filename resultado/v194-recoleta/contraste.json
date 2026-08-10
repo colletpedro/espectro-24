@@ -1,0 +1,305 @@
+{
+  "fonte": "resultado/gate-taxonomia/classificacoes.jsonl (8 eixos, sem reclassificar)",
+  "n_filmes_elegiveis": 14,
+  "n_min_bucket": 15,
+  "n_reviews_por_bucket_na_amostra": 20,
+  "observado": {
+    "aftersun": {
+      "perfil": "arthouse",
+      "melhor_eixo": "impacto_emocional",
+      "melhor_lift": 0.35,
+      "n_acima": {
+        "0.15": 4,
+        "0.2": 2
+      },
+      "lift_por_eixo": {
+        "ritmo": 0.15000000000000002,
+        "atuacao": 0.09999999999999998,
+        "direcao_imagem": 0.0,
+        "roteiro_estrutura": 0.050000000000000044,
+        "som_trilha": 0.0,
+        "tom_atmosfera": 0.25,
+        "impacto_emocional": 0.35,
+        "comparacoes": 0.15
+      }
+    },
+    "anatomy-of-a-fall": {
+      "perfil": "arthouse",
+      "melhor_eixo": "direcao_imagem",
+      "melhor_lift": 0.25,
+      "n_acima": {
+        "0.15": 4,
+        "0.2": 2
+      },
+      "lift_por_eixo": {
+        "ritmo": 0.19999999999999996,
+        "atuacao": 0.15000000000000002,
+        "direcao_imagem": 0.25,
+        "roteiro_estrutura": 0.25,
+        "som_trilha": 0.04999999999999999,
+        "tom_atmosfera": 0.0,
+        "impacto_emocional": 0.0,
+        "comparacoes": 0.04999999999999999
+      }
+    },
+    "avengers-endgame": {
+      "perfil": "aclamado",
+      "melhor_eixo": "ritmo",
+      "melhor_lift": 0.2,
+      "n_acima": {
+        "0.15": 2,
+        "0.2": 1
+      },
+      "lift_por_eixo": {
+        "ritmo": 0.2,
+        "atuacao": 0.1,
+        "direcao_imagem": 0.15,
+        "roteiro_estrutura": 0.050000000000000044,
+        "som_trilha": 0.05,
+        "tom_atmosfera": 0.0,
+        "impacto_emocional": 0.0,
+        "comparacoes": 0.0
+      }
+    },
+    "barbie": {
+      "perfil": "divisivo",
+      "melhor_eixo": "ritmo",
+      "melhor_lift": 0.1,
+      "n_acima": {
+        "0.15": 0,
+        "0.2": 0
+      },
+      "lift_por_eixo": {
+        "ritmo": 0.1,
+        "atuacao": 0.1,
+        "direcao_imagem": 0.1,
+        "roteiro_estrutura": 0.04999999999999999,
+        "som_trilha": 0.0,
+        "tom_atmosfera": 0.09999999999999998,
+        "impacto_emocional": 0.0,
+        "comparacoes": 0.04999999999999999
+      }
+    },
+    "bones-and-all": {
+      "perfil": "aclamado",
+      "melhor_eixo": "tom_atmosfera",
+      "melhor_lift": 0.20000000000000007,
+      "n_acima": {
+        "0.15": 3,
+        "0.2": 1
+      },
+      "lift_por_eixo": {
+        "ritmo": 0.1,
+        "atuacao": 0.04999999999999999,
+        "direcao_imagem": 0.04999999999999999,
+        "roteiro_estrutura": 0.10000000000000003,
+        "som_trilha": 0.15000000000000002,
+        "tom_atmosfera": 0.20000000000000007,
+        "impacto_emocional": 0.15000000000000002,
+        "comparacoes": 0.09999999999999998
+      }
+    },
+    "cats-2019": {
+      "perfil": "invertido",
+      "melhor_eixo": "tom_atmosfera",
+      "melhor_lift": 0.3,
+      "n_acima": {
+        "0.15": 3,
+        "0.2": 3
+      },
+      "lift_por_eixo": {
+        "ritmo": 0.09999999999999999,
+        "atuacao": 0.1,
+        "direcao_imagem": 0.25,
+        "roteiro_estrutura": 0.04999999999999999,
+        "som_trilha": 0.050000000000000044,
+        "tom_atmosfera": 0.3,
+        "impacto_emocional": 0.2,
+        "comparacoes": 0.10000000000000003
+      }
+    },
+    "cure": {
+      "perfil": "arthouse",
+      "melhor_eixo": "tom_atmosfera",
+      "melhor_lift": 0.35000000000000003,
+      "n_acima": {
+        "0.15": 2,
+        "0.2": 2
+      },
+      "lift_por_eixo": {
+        "ritmo": 0.30000000000000004,
+        "atuacao": 0.1,
+        "direcao_imagem": 0.0,
+        "roteiro_estrutura": 0.04999999999999993,
+        "som_trilha": 0.0,
+        "tom_atmosfera": 0.35000000000000003,
+        "impacto_emocional": 0.10000000000000003,
+        "comparacoes": 0.14999999999999997
+      }
+    },
+    "friday-the-13th-2009": {
+      "perfil": "invertido",
+      "melhor_eixo": "ritmo",
+      "melhor_lift": 0.30000000000000004,
+      "n_acima": {
+        "0.15": 2,
+        "0.2": 1
+      },
+      "lift_por_eixo": {
+        "ritmo": 0.30000000000000004,
+        "atuacao": 0.09999999999999998,
+        "direcao_imagem": 0.10000000000000003,
+        "roteiro_estrutura": 0.04999999999999999,
+        "som_trilha": 0.05,
+        "tom_atmosfera": 0.0,
+        "impacto_emocional": 0.1,
+        "comparacoes": 0.15000000000000002
+      }
+    },
+    "joker-folie-a-deux": {
+      "perfil": "invertido",
+      "melhor_eixo": "direcao_imagem",
+      "melhor_lift": 0.2,
+      "n_acima": {
+        "0.15": 3,
+        "0.2": 2
+      },
+      "lift_por_eixo": {
+        "ritmo": 0.10000000000000003,
+        "atuacao": 0.15000000000000002,
+        "direcao_imagem": 0.2,
+        "roteiro_estrutura": 0.2,
+        "som_trilha": 0.04999999999999999,
+        "tom_atmosfera": 0.04999999999999999,
+        "impacto_emocional": 0.04999999999999999,
+        "comparacoes": 0.09999999999999998
+      }
+    },
+    "longlegs": {
+      "perfil": "divisivo",
+      "melhor_eixo": "ritmo",
+      "melhor_lift": 0.30000000000000004,
+      "n_acima": {
+        "0.15": 2,
+        "0.2": 1
+      },
+      "lift_por_eixo": {
+        "ritmo": 0.30000000000000004,
+        "atuacao": 0.14999999999999997,
+        "direcao_imagem": 0.09999999999999998,
+        "roteiro_estrutura": 0.15000000000000002,
+        "som_trilha": 0.05,
+        "tom_atmosfera": 0.050000000000000044,
+        "impacto_emocional": 0.04999999999999999,
+        "comparacoes": 0.0
+      }
+    },
+    "napoleon-2023": {
+      "perfil": "invertido",
+      "melhor_eixo": "atuacao",
+      "melhor_lift": 0.15000000000000002,
+      "n_acima": {
+        "0.15": 1,
+        "0.2": 0
+      },
+      "lift_por_eixo": {
+        "ritmo": 0.10000000000000003,
+        "atuacao": 0.15000000000000002,
+        "direcao_imagem": 0.0,
+        "roteiro_estrutura": 0.04999999999999993,
+        "som_trilha": 0.05,
+        "tom_atmosfera": 0.0,
+        "impacto_emocional": 0.0,
+        "comparacoes": 0.0
+      }
+    },
+    "perfect-days-2023": {
+      "perfil": "arthouse",
+      "melhor_eixo": "ritmo",
+      "melhor_lift": 0.15000000000000002,
+      "n_acima": {
+        "0.15": 3,
+        "0.2": 0
+      },
+      "lift_por_eixo": {
+        "ritmo": 0.15000000000000002,
+        "atuacao": 0.15,
+        "direcao_imagem": 0.15000000000000002,
+        "roteiro_estrutura": 0.10000000000000003,
+        "som_trilha": 0.05000000000000002,
+        "tom_atmosfera": 0.09999999999999998,
+        "impacto_emocional": 0.09999999999999998,
+        "comparacoes": 0.09999999999999998
+      }
+    },
+    "shutter-island": {
+      "perfil": "aclamado",
+      "melhor_eixo": "atuacao",
+      "melhor_lift": 0.2,
+      "n_acima": {
+        "0.15": 4,
+        "0.2": 2
+      },
+      "lift_por_eixo": {
+        "ritmo": 0.15000000000000002,
+        "atuacao": 0.2,
+        "direcao_imagem": 0.09999999999999998,
+        "roteiro_estrutura": 0.04999999999999993,
+        "som_trilha": 0.15,
+        "tom_atmosfera": 0.09999999999999998,
+        "impacto_emocional": 0.2,
+        "comparacoes": 0.0
+      }
+    },
+    "talk-to-me-2022": {
+      "perfil": "divisivo",
+      "melhor_eixo": "ritmo",
+      "melhor_lift": 0.25,
+      "n_acima": {
+        "0.15": 4,
+        "0.2": 3
+      },
+      "lift_por_eixo": {
+        "ritmo": 0.25,
+        "atuacao": 0.04999999999999999,
+        "direcao_imagem": 0.25,
+        "roteiro_estrutura": 0.10000000000000003,
+        "som_trilha": 0.0,
+        "tom_atmosfera": 0.04999999999999999,
+        "impacto_emocional": 0.25,
+        "comparacoes": 0.15000000000000002
+      }
+    }
+  },
+  "sem_contraste_tematico": {
+    "0.15": {
+      "n": 1,
+      "filmes": [
+        "barbie"
+      ]
+    },
+    "0.2": {
+      "n": 3,
+      "filmes": [
+        "barbie",
+        "napoleon-2023",
+        "perfect-days-2023"
+      ]
+    }
+  },
+  "nulo_de_permutacao": {
+    "n_rodadas": 2000,
+    "filmes_sem_contraste_sob_o_nulo": {
+      "0.15": {
+        "media": 2.1885,
+        "p5": 0,
+        "p95": 4
+      },
+      "0.2": {
+        "media": 6.824,
+        "p5": 4,
+        "p95": 10
+      }
+    }
+  }
+}

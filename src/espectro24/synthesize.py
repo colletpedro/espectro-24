@@ -388,20 +388,36 @@ def deepseek_client_call_prosa(system: str, user: str, model: str) -> str:
                           json_mode=False)
 
 
-def _deepseek_call(system: str, user: str, model: str, *, max_tokens: int,
-                   json_mode: bool) -> str:
-    """Transporte comum do DeepSeek. Timeout convertido de ms (`LLM_TIMEOUT_MS`,
-    ver `config.py`) para segundos, unidade que o SDK da OpenAI espera."""
+def deepseek_client(timeout_ms: int = LLM_TIMEOUT_MS):
+    """Cliente DeepSeek reutilizável — a ÚNICA fábrica autorizada (v1.9.4).
+
+    Existe para que um chamador de fora do pacote (script de medição, com
+    centenas de chamadas concorrentes) possa reaproveitar a conexão sem
+    instanciar o SDK por conta própria. Instanciar por conta própria é
+    exatamente o caminho que o guard-rail de §3[D] fecha — e é o caminho pelo
+    qual `thinking: disabled` se perde.
+    """
     from openai import OpenAI
 
     key = os.environ.get(PROVIDER_ENV_KEYS["deepseek"])
     if not key:
         raise LLMError(f"{PROVIDER_ENV_KEYS['deepseek']} não definida no ambiente.")
-    client = OpenAI(
-        api_key=key,
-        base_url="https://api.deepseek.com",
-        timeout=LLM_TIMEOUT_MS / 1000,
-    )
+    return OpenAI(api_key=key, base_url="https://api.deepseek.com",
+                  timeout=timeout_ms / 1000)
+
+
+def deepseek_resposta(system: str, user: str, model: str, *, max_tokens: int,
+                      json_mode: bool, client=None):
+    """A chamada crua, com a resposta INTEIRA — inclusive `usage`.
+
+    Adicionada na v1.9.4 junto do guard-rail (§3[D]): scripts de medição
+    precisam dos contadores de token para reportar custo real, e era essa
+    necessidade — que `_deepseek_call` não atendia, por devolver só o texto —
+    que empurrava cada script novo a reimplementar o transporte e, no caminho,
+    esquecer `thinking: disabled`. Fechar o buraco é o que torna o guard-rail
+    aplicável em vez de apenas restritivo.
+    """
+    client = deepseek_client() if client is None else client
     kwargs = dict(
         model=model,
         messages=[
@@ -414,7 +430,28 @@ def _deepseek_call(system: str, user: str, model: str, *, max_tokens: int,
     )
     if json_mode:
         kwargs["response_format"] = {"type": "json_object"}
-    resp = client.chat.completions.create(**kwargs)
+    return client.chat.completions.create(**kwargs)
+
+
+def deepseek_uso(resp) -> dict:
+    """Contadores de token de uma resposta, no formato que os relatórios de
+    custo usam. Os dois campos de cache são específicos do DeepSeek e vêm
+    ausentes em provider que não os expõe — daí o `getattr` com default."""
+    u = resp.usage
+    return {
+        "prompt_tokens": u.prompt_tokens,
+        "completion_tokens": u.completion_tokens,
+        "cache_hit_tokens": getattr(u, "prompt_cache_hit_tokens", 0) or 0,
+        "cache_miss_tokens": getattr(u, "prompt_cache_miss_tokens", 0) or 0,
+    }
+
+
+def _deepseek_call(system: str, user: str, model: str, *, max_tokens: int,
+                   json_mode: bool) -> str:
+    """Transporte comum do DeepSeek. Timeout convertido de ms (`LLM_TIMEOUT_MS`,
+    ver `config.py`) para segundos, unidade que o SDK da OpenAI espera."""
+    resp = deepseek_resposta(system, user, model, max_tokens=max_tokens,
+                             json_mode=json_mode)
     return resp.choices[0].message.content or ""
 
 

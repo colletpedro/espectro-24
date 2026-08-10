@@ -123,6 +123,24 @@ PISO_PAGINAS_POR_NIVEL = 1
 # `alocar_bucket` (a mesma função da alocação de reviews) — não é uma segunda
 # fórmula de distribuição.
 ORCAMENTO_PAGINAS_POR_BUCKET = 16
+# Teto de EXTENSÃO por bucket (v1.9.4, §3[B]) — o orçamento MÁXIMO que um
+# bucket pode alcançar somando a base às páginas extras concedidas por
+# déficit. `24 = 16 + 8`, ou seja +50% sobre a base.
+#
+# Não é um novo orçamento: é um TETO DE CUSTO para a extensão. Um bucket que
+# fecha a meta com folga dentro da base continua parando em 16, exatamente
+# como antes da v1.9.4 — a extensão nunca dispara para ele, e o custo dos
+# filmes que já fechavam a cota é ZERO. Só o bucket que fecha a base abaixo da
+# meta chega perto de 24.
+#
+# Por que 24 e não "até fechar": sem teto, a extensão vira paginação sem
+# limite num bucket cujo rendimento é estruturalmente baixo — exatamente o
+# caso que a diagnose descreve (rendimento 6,9%-10% em `wicked-2024`), onde
+# fechar 40 exigiria dezenas de páginas. O teto é o que mantém o custo de um
+# lote previsível, e é também o que garante que ALGUNS buckets sigam abaixo
+# de 40 — resíduo esperado, absorvido pelo piso escalonado (§3[C3]), não
+# falha da extensão (§3[B], "Correção e declaração são CAMADAS").
+TETO_EXTENSAO_PAGINAS = 24
 # Teto de SEGURANÇA por nível dentro do orçamento do bucket (v1.9.1). Sem
 # ele, um bucket de 2 níveis muito desbalanceado no histograma (ex.:
 # `medianas` de `cidade-de-deus`, onde 3,0★ tem 85% do bucket) daria a esse

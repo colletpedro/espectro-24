@@ -1,7 +1,7 @@
-# Espectro 24 — Especificação v1.9.3
+# Espectro 24 — Especificação v1.9.4
 
-**Data:** 2026-08-07
-**Status:** v1 fechada (aceite em "Status de aceite da v1", fim do documento). **v1.9.3 não muda a camada de coleta — constrói o harness de LOTE (§3[H]) sobre ela e roda a coleta de um conjunto maior de filmes.** Checkpoint em arquivo (resume sem refazer filme completo), validação de slug por 1 requisição antes de gastar orçamento de páginas, falha isolada por filme (um slug ruim nunca derruba o lote), e `material_esgotado` tratado explicitamente como caso esperado — os 3 filmes do catálogo, sendo populares, nunca tinham exercitado esse caminho em produção. Estimativa de custo medida ANTES do lote (§5.6), com veto explícito se a projeção para 50 filmes passar de ~4h. **v1.9.2 fechou o gate de profundidade que a v1.9.1 deixou em aberto e resolve o déficit residual de `medianas`.** É a última sessão de coleta antes do lote de 30-50 filmes, e o reenquadramento que a motiva é este: a profundidade de paginação é o ÚNICO parâmetro da camada de coleta que o superset NÃO torna reversível — página não baixada não está em disco, e coletar o lote sem resolver isso é aceitar recoleta total se a janela temporal se provar um problema. Quatro entregas: (a) a **parada por ALVO é removida** — era um vestígio de quando o teto era por nível e o custo por bucket não tinha limite; sob o orçamento por bucket da v1.9.1 ela só introduzia não-determinismo (foi a causa exata do 37/40 residual de `cidade-de-deus`), e o orçamento passa a ser sempre gasto integralmente, com única parada antecipada por esgotamento real de material — custo aceito e medido: ~32→48 páginas/filme; (b) **posicionamento estratificado por profundidade** substitui a paginação puramente consecutiva — uma reserva de 25% do orçamento de cada nível (`RESERVA_PROFUNDIDADE`) é posicionada em progressão geométrica a partir do fim do bloco raso, com descoberta de profundidade real e redistribuição do orçamento restante **reaproveitando `redistribuir_deficit`** — MESMO número de requisições que a paginação consecutiva, cobertura temporal muito maior; (c) o **teto de 256 páginas** suspeitado na v1.9.1 é medido num filme obscuro — resultado em §3[B]; (d) `pagina_origem` (rank de adição sob ordenação cronológica, sem a contaminação de `data`, que é a data ASSISTIDA) vira o **instrumento temporal PRIMÁRIO**; `janela_temporal` por `data` (v1.9.1) fica como secundária, rotulada como proxy contaminado. Nada de fronteira, cota, piso escalonado, `min_chars`, ordenação ou síntese é tocado. **v1.9.1 corrigiu dois defeitos que a telemetria MEDIDA da v1.9.0 revelou na camada de coleta**, sem tocar fronteira, cota, piso escalonado ou qualquer etapa de síntese/narrativa: (a) o **orçamento de páginas por BUCKET** (§3[B]) substitui o teto por NÍVEL, corrigindo o defeito estrutural registrado na v1.9.0 (o bucket `medianas`, com metade dos níveis dos outros dois, nunca conseguia o mesmo teto agregado de páginas — 8 contra 16 — e por isso nunca fechava a cota) — **medido: fecha 40/40 em 2 dos 3 filmes (era 35 e 26) e melhora para 37/40 no terceiro (era 23)**, um achado residual e distinto, com causa identificada, registrado em §3[B]; (b) os **motivos de descarte** na seleção passam a ser discriminados (`abaixo_min_chars`/`spoiler`/`truncada_sem_texto`/`duplicata`/`excedente_cota`/`outros`), telemetria pura, sem mudança de comportamento. Duas entregas adicionais: (c) a **janela temporal** (mín./máx./p5/p50/p95 das datas do bruto, por bucket e total) passa a ser gravada em `meta.json`, não exposta ao frontend; (d) o literal `50 · 20 · 30` remanescente em `frontend/js/filme.js` (pendência registrada na v1.9.0) passa a derivar do próprio JSON de resultado. Uma quinta questão — **paginação de passo largo**, candidata a resolver o viés de recência medido na v1.9.0 (79-100% da amostra em ~7 semanas) — foi **só MEDIDA nesta versão, não implementada**: o gate de decisão está em §3[B], "Medição de profundidade (v1.9.1, gate)", com um achado que contraria a expectativa registrada no briefing (o custo de descobrir a profundidade via sonda de rede NÃO é neutro — é uma sonda de ~10 requisições por nível — mas há evidência forte, ainda que de amostra pequena, de um TETO FIXO do site em 256 páginas que, se confirmado mais amplamente, eliminaria essa sonda por completo). **v1.9.0 reestruturou a camada de COLETA e desacoplou COLETA de ANÁLISE** — a maior mudança de arquitetura de dados desde a v1. Até a v1.8.2, a coleta usava cota fixa de 10 reviews por nível de estrela e gravava, no material coletado, as decisões de **fronteira de bucket**, **cota** e **filtro**: mudar qualquer uma delas custava recoletar tudo. A v1.9.0 (a) move as **fronteiras de bucket** para configuração lida de um único lugar, com o mapeamento nível→bucket como função pura (§2.2), e adota a **opção C** (`0,5–2,0` / `2,5–3,0` / `3,5–5,0`, semântica "não recomendam / mornos / recomendam"); (b) faz a coleta raspar um **superset por nível** e **persistir tudo em disco** (`dados/bruto/<slug>/`, §3[B']), com condição de parada em três degraus de precedência (piso de 1 página por nível com material > alvo com folga de 25% > teto de 4 páginas); (c) torna a **ordenação de listagem** um parâmetro de amostragem explícito, gravado no material coletado, com default trocado de `by/activity` (ordenada por ENGAJAMENTO) para `by/added` (**cronológica**, mais recentes primeiro) — ver §2.3; (d) substitui a cota igual por nível por **alocação proporcional ao histograma** dentro de cada bucket, com piso por nível e redistribuição de déficit restrita ao mesmo bucket (§3[C1]); (e) aplica a **cota de análise 40/40/40 downstream**, sobre o bruto persistido, com min_chars/spoiler/cascata como parâmetros (§3[C2]); e (f) troca o piso binário de 3 por um **piso escalonado de 4 estados** (`completa`/`sem_quantificador`/`sem_numero`/`sem_analise`), exposto como campo no JSON (§3[C3]). **Consequência publicada:** sob as fronteiras C os shares dos 3 filmes do catálogo MUDAM — `cure` 3/17/79 → 2/8/90, `the-invite-2026` 3/18/79 → 2/7/91, `cidade-de-deus` 1/8/91 → 1/3/96. **Risco aceito e mitigações** em §2.2. v1.2.0 adiciona a etapa **[D2] narrador** (§D2) e a flag `--tom` como **mecanismo de desenvolvimento** para A/B de saída. v1.2.1 corrige uma classe de infidelidade do narrador (cota de amostragem apresentada como distribuição da recepção) — invariante nova no §D2 + telemetria. v1.2.2 adiciona calibração numérica dos quantificadores da narrativa (mapa fração→palavra, faixa mais fraca em caso de dúvida) — verificação por instrução ao LLM. v1.2.3 move a calibração do prompt para o CÓDIGO: os rótulos de quantificador passam a ser pré-computados e o LLM só os usa, não os escolhe (mesmo princípio da v1.1.1 — código como autoridade de número/rótulo). v1.3.0 adiciona uma **ficha técnica do filme via TMDB** (§3a, aditiva — nunca bloqueia o pipeline) e reestrutura §D2 para uma narrativa em **três movimentos** (filme → experiência consensual → contraste entre grupos), com uma emenda pontual à regra de "zero conteúdo de trama" para permitir a sinopse OFICIAL curta como fonte do primeiro movimento (ver §3[D] "Anti-spoiler"). **v1.3.1** corrige um defeito real observado na primeira execução do MOVIMENTO 2 (a narrativa de `the-invite-2026` importou um juízo de QUALIDADE — "atuações marcantes"/"roteiro inteligente" — como se fosse um consenso DESCRITIVO, contradizendo diretamente os temas do grupo negativas): a regra do MOVIMENTO 2 ganha três critérios explícitos (categoria/presença/não-contradição) e telemetria de `consensos_usados` para revisão humana de cada execução (ver §D2). **v1.4.0** é a maior mudança desde a v1: o pipeline passa a coletar a **distribuição real de notas** (histograma público do Letterboxd, §3b) e, com ela, **inverte** a regra de prevalência do §D2 — o que a v1.2.1 proibiu por falta do dado, a v1.4.0 torna obrigatório e ancorado (ver "Princípio norteador" abaixo). **v1.4.1** corrige três defeitos pontuais observados na entrega da v1.4.0, todos no §D2: (1) telemetria de quantificadores **por par declarado** (`quantificadores_usados`), depois da 3ª reincidência do mesmo modo de falha, que a rede de nível de bucket não pega; (2) **omissão autorizada** do MOVIMENTO 2, contra a pressão de preenchimento que produz juízo de qualidade hedgeado; (3) **invariante de vocabulário do peso** — rótulos de peso dizem "das notas", nunca "das reviews"/"do público"/"dos espectadores". **v1.5.0** ataca um defeito de **fluência**, não de honestidade: as narrativas entregues até a v1.4.1 são factualmente corretas, mas soam mecânicas — forma sintática repetida (rótulo de peso + verbo de reporte + complemento, três vezes seguidas), frases quase todas do mesmo comprimento, excesso de verbos de reporte e nominalizações no lugar de verbos. O diagnóstico (registrado no changelog) é que o acúmulo de invariantes de honestidade das versões anteriores empurrou o modelo à única forma que satisfaz todas simultaneamente. A correção prescreve **ritmo** e **registro** com a mesma precisão de código com que já se prescrevem números, adiciona uma **marcação de perspectiva** pré-computada (para que a redução de verbos de reporte não deixe a fala de um grupo minoritário soar como fato do narrador) e duas telemetrias novas (`marcadores_perspectiva`, `metricas_fluencia`) — **sem afrouxar nenhuma invariante de honestidade** das versões anteriores. **v1.6.0** conclui que a v1.5.0 errou no MÉTODO, não no objetivo: empilhar honestidade e fluência num prompt só não funcionou (as regras de ritmo não transferiram entre filmes, as métricas que as fiscalizavam não acompanhavam qualidade, e a configuração de produção chegou a publicar uma frase agramatical). A correção é **separar responsabilidades**: o narrador (§D2) é podado de volta a UMA responsabilidade — dizer a verdade com a estrutura certa — e um estágio novo, o **editor [E2]** (§E2), assume ritmo e leitura sem ter acesso a nenhuma fonte de fato e sem poder alterar número, rótulo ou atribuição (trechos protegidos + verificação mecânica + descarte da edição em caso de violação). **v1.6.1** corrige o defeito 5.2 que a v1.6.0 deixou em aberto: em vez de normalizar a COMPARAÇÃO entre o trecho declarado e o texto (caixa/acento/demonstrativo), passa a verificar a EXISTÊNCIA de uma expressão de atribuição reconhecida no texto realmente escrito — o que fecha também o caso de reordenação de palavras que a normalização não alcançava, e reduz `marcadores_perspectiva` a telemetria pura (auditoria humana, não fonte de validação). **v1.6.2** corrige um bug de substring solta descoberto ao vivo na regeneração de `cidade-de-deus` (shares 1%/8%/91%): `_ancora_de_grupo` e `_ancoragem_de_peso_ok` buscavam o percentual de um grupo com `f"{pct}%" in texto`/`texto.find(...)`, que casa **dentro** de outro número — `"1%"` combinava com o "1" final de `"(~91%)"`, ancorando o grupo `negativas` (1%) numa posição muito anterior à sua menção real, corrompendo o cálculo do span de movimento e produzindo falso positivo em `perspectiva_nao_marcada` mesmo com o texto correto e bem marcado. A busca agora usa `re.search(rf"(?<!\d){pct}%", texto)` (nega dígito imediatamente anterior), então `"1%"` só casa como número isolado, nunca como sufixo de `"91%"`/`"21%"`/etc. Mesmo defeito corrigido nos dois pontos que faziam a busca (âncora de grupo e checagem de ancoragem de peso), com testes de regressão cobrindo o caso real. Nenhuma invariante de honestidade foi afrouxada — o fix é estritamente sobre a CHECAGEM, não sobre o que é permitido no texto. **v1.7.0** corrige dois defeitos reais observados na regeneração das narrativas: (1) **resolução de ficha do filme errado** — `espectro24 --slug cure` sem `--ano` resolvia no TMDB para "The Cure" (2026, dir. Nancy Leopardi) em vez de Cure (1997, Kiyoshi Kurosawa), porque a desambiguação por popularidade sem ano escolhe o candidato errado quando o título é comum; a resolução de ano ganha uma cadeia de fallback confiável (slug → página do Letterboxd → sem ficha) e uma guarda de sanidade que descarta a ficha inteira se o ano devolvido pelo TMDB divergir do esperado em mais de 1 ano (ver §3[A]); (2) **lista de protegidos do editor §E2 enxugada** — protegia até 16 trechos por filme, incluindo quantificadores soltos ("muitos") e expressões de atribuição, o que descartava o editor com frequência (`cure`) ou o levava a inventar frases só para reencaixar um protegido movido ("Essa é a opinião de uma fração mínima das notas.", `cidade-de-deus`), e ainda deixava sobreviver um defeito gramatical real ("destacando a a maioria o estilo visual") porque a frase continha um rótulo protegido; a proteção literal agora cobre só rótulo de peso COM percentual e tokens numéricos — quantificador e atribuição passam a valer SÓ pela checagem semântica que já existia e era mais forte (`conferencia_quantificador` v1.4.1, `_marcadores_validos` v1.6.1), revalidada dentro do próprio `editar_narrativa` (ver §E2). **v1.7.1** corrige três defeitos de acabamento observados no texto PUBLICADO da v1.7.0, nenhum deles de honestidade: (1) **contrabarra residual** — `_remover_aspas` trocava só o caractere de aspas por "", então uma citação escapada (`\"A Cura\"`) virava `\A Cura\` (publicado em `cure` e `the-invite-2026`); a remoção agora consome a contrabarra que precede a aspas junto, como uma unidade. (2) **capitalização de rótulo protegido movido** — o rótulo de peso guarda a caixa de onde apareceu a primeira vez (início de frase, capitalizado); quando o editor o move para o meio de um período, a checagem 100% literal não deixava ajustar só a inicial, e o defeito ("Para A grande maioria...", `cidade-de-deus`) sobrevivia porque corrigir quebraria o protegido; a checagem de trecho perdido agora aceita a primeira letra em qualquer caixa — e SÓ ela, nenhuma outra letra, palavra ou número do trecho. (3) **família "quem gostou/não gostou" ausente do vocabulário de atribuição** — o `cure` escreveu "quem não gostou considerou o ritmo lento e tedioso" para o grupo de 3%, uma atribuição real, mas fora da lista de expressões reconhecidas (`_EXPRESSOES_DE_PERSPECTIVA`), produzindo falso positivo em `perspectiva_nao_marcada`; a família foi acrescentada ("quem gostou", "quem não gostou", "quem amou", "quem ficou no meio", e as formas com "para" na frente), mantendo de fora o "para quem" ISOLADO (pronome relativo comum, motivo do falso negativo original da v1.6.0). Nenhuma invariante de honestidade foi afrouxada nas três correções — são fixes de CHECAGEM e de limpeza mecânica, não mudança do que é permitido no texto. **v1.7.2** corrige um defeito real observado na regeneração do `cidade-de-deus` sob a v1.7.1: o editor devolveu a prosa embrulhada num invólucro `{ text: "..." }`, ignorando a instrução de responder só texto puro — e TODAS as checagens mecânicas de então (protegidos, conjunto numérico, honestidade) passaram, porque rodam sobre SUBSTRING e o protegido/os números continuavam achados DENTRO do invólucro. A edição foi marcada "aplicada"; só a leitura humana antes de publicar pegou o defeito. A correção acrescenta uma **checagem ESTRUTURAL** (`_formato_invalido`, §E2), aplicada ANTES de todas as outras: rejeita o texto se ele começar com `{`/`[`, contiver cerca de código (```), tiver uma das primeiras linhas com cara de campo JSON (`"text":`, `text:`, `"narrativa":`), ou tiver chaves desbalanceadas — mesma política das demais checagens (1 retentativa com reforço explicando o formato exigido; se persistir, descarta com `motivo_descarte: "formato_invalido"` e publica a bruta). Deliberadamente NÃO rejeita uma chave/colchete equilibrado no MEIO da prosa — só o formato de invólucro, não qualquer ocorrência do caractere. **v1.7.3** corrige um defeito de POLÍTICA, não de checagem: na regeneração da v1.7.1, a edição foi DESCARTADA em 2 dos 3 filmes (`cure` — número alterado; `cidade-de-deus` — regressão de `perspectiva_nao_marcada`), publicando a bruta nos dois, enquanto a MESMA combinação de código e dados tinha sido ACEITA nos 3 filmes sob a v1.7.0 — nada mudou no código nesse sentido entre as duas rodadas; é VARIÂNCIA do modelo entre chamadas, e a política de então (1 chamada + 1 retentativa, 2 no total) dava pouca margem para a variância favorecer numa etapa cujo descarte já é fail-safe (a bruta do narrador sempre prevalece). A correção eleva o teto para até `1 + EDITOR_MAX_TENTATIVAS` chamadas (`EDITOR_MAX_TENTATIVAS = 3` em `config.py`, 4 no total no pior caso) e muda o reforço de SUBSTITUÍDO para ACUMULADO entre tentativas — se a 1ª falha por número e a 2ª por atribuição, a 3ª recebe os dois reforços juntos, para o modelo não consertar um problema criando outro. Nova telemetria em `edicao_flags`: `n_tentativas` (quantas chamadas foram feitas) e `motivos_por_tentativa` (o motivo de cada falha, na ordem) — visibilidade de qual checagem mais reprova o editor, não critério de aprovação. Nenhuma invariante de honestidade foi afrouxada: o fail-safe de descarte após esgotar as tentativas continua idêntico, só o número de chances antes dele mudou. **v1.7.4** corrige dois defeitos: um buraco de arquitetura e um resíduo cosmético recorrente. (1) **checagem de EDIÇÃO NULA** — nenhuma checagem até a v1.7.3 verificava que a edição FEZ algo, só que ela não QUEBROU nada; um editor que devolva a entrada praticamente intacta passa em protegidos (nunca saíram), números (nada mudou) e honestidade (é o mesmo texto), e era marcado "aplicada" sem nenhum sinal de que não houve edição de verdade. A correção calcula a similaridade (`difflib.SequenceMatcher.ratio`, textos normalizados só por espaço em branco) entre `narrativa_bruta` e o texto editado; se as demais checagens TERIAM passado mas a similaridade é `>= EDITOR_LIMIAR_EDICAO_NULA` (0.97, deliberadamente conservador — só pega devolução literal ou trivial, não uma edição legítima que preserve vocabulário protegido), trata como falha de tentativa com motivo `"edicao_nula"`, no mesmo ciclo de retentativa/descarte já existente. `edicao_flags.similaridade` é persistido SEMPRE (aceita ou não), telemetria para calibrar o limiar. (2) **capitalização residual, correção determinística** — a v1.7.1 AUTORIZOU o editor a ajustar a caixa de um rótulo de peso movido para o meio da frase, mas não o OBRIGA, e ele frequentemente não ajusta ("Já Uma fração mínima...", "Para A grande maioria..."). Em vez de depender do LLM, um pós-processamento em CÓDIGO (`_corrigir_capitalizacao_residual`) roda sobre toda edição ACEITA: baixa a inicial de qualquer rótulo de peso canônico que apareça capitalizado fora de início de período (mesmo princípio de toda pré-computação do pipeline — o determinístico é decidido pelo código, não pelo LLM). `edicao_flags.capitalizacao_ajustada` registra se algo mudou. **v1.8.1** REATIVA o editor [E2] por padrão (`EDITOR_ATIVO=True`) — a v1.8.0 tinha desligado por precaução após um defeito de conteúdo inventado, mas a MESMA versão já corrigira a causa raiz (checagem de conteúdo adicionado + ordem dos movimentos); a validação pós-correção (`VALIDACAO_EDITOR_V18.md`, 3 filmes reais) mostrou a checagem disparando de verdade em produção e o modelo se autocorrigindo na retentativa, com os limiares bem separados do ruído normal de uma edição legítima — evidência suficiente para reativar. **v1.8.0** troca o provider DEFAULT de produção para **DeepSeek** (`deepseek-v4-flash`, ver Changelog) e, na mesma versão, DESLIGA o editor [E2] por padrão como medida de contenção — a validação que justificou a troca de provider também descobriu um defeito real e mais sério: o editor pode ACRESCENTAR conteúdo (opinião, frase de fechamento, reordenar movimentos) sem que nenhuma checagem mecânica até a v1.7.4 detecte, porque todas checavam PERDA, nenhuma ADIÇÃO. Duas checagens novas (conteúdo adicionado por similaridade de frase, ordem dos movimentos) mitigam o defeito e o editor volta a ser ligável via `--com-editor`, mas o default de produção segue conservador até mais evidência.
+**Data:** 2026-08-08
+**Status:** v1 fechada (aceite em "Status de aceite da v1", fim do documento). **v1.9.4 corrige o déficit do bucket DOMINANTE com uma extensão de orçamento por DÉFICIT (§3[B]) e transforma numa verificação mecânica a lição sobre o adaptador de LLM (§3[D]).** A extensão é OBSERVACIONAL por decisão explícita — nenhum rendimento é estimado: o bucket gasta a base de 16 páginas exatamente como antes e, só se fechar abaixo da meta com folga, recebe páginas extras uma a uma até o teto de 24, alocadas aos níveis em déficit MEDIDO pelo quarto uso de `redistribuir_deficit`. O desenho preditivo foi rejeitado com racional registrado (as páginas são log-espaçadas desde a v1.9.2 e não amostram o mesmo regime; e a parada por ALVO, removida na v1.9.2, já era uma heurística otimista decidindo orçamento). Registra também que correção e declaração são CAMADAS: a extensão encolhe a classe de buckets sub-40, o piso escalonado absorve o resíduo, e a declaração honesta segue sendo o mecanismo final. Nada de `min_chars`, cascata, fronteira, cota, alocação proporcional, orçamento BASE, ordenação ou reserva de profundidade é tocado. **v1.9.3 não muda a camada de coleta — constrói o harness de LOTE (§3[H]) sobre ela e roda a coleta de um conjunto maior de filmes.** Checkpoint em arquivo (resume sem refazer filme completo), validação de slug por 1 requisição antes de gastar orçamento de páginas, falha isolada por filme (um slug ruim nunca derruba o lote), e `material_esgotado` tratado explicitamente como caso esperado — os 3 filmes do catálogo, sendo populares, nunca tinham exercitado esse caminho em produção. Estimativa de custo medida ANTES do lote (§5.6), com veto explícito se a projeção para 50 filmes passar de ~4h. **v1.9.2 fechou o gate de profundidade que a v1.9.1 deixou em aberto e resolve o déficit residual de `medianas`.** É a última sessão de coleta antes do lote de 30-50 filmes, e o reenquadramento que a motiva é este: a profundidade de paginação é o ÚNICO parâmetro da camada de coleta que o superset NÃO torna reversível — página não baixada não está em disco, e coletar o lote sem resolver isso é aceitar recoleta total se a janela temporal se provar um problema. Quatro entregas: (a) a **parada por ALVO é removida** — era um vestígio de quando o teto era por nível e o custo por bucket não tinha limite; sob o orçamento por bucket da v1.9.1 ela só introduzia não-determinismo (foi a causa exata do 37/40 residual de `cidade-de-deus`), e o orçamento passa a ser sempre gasto integralmente, com única parada antecipada por esgotamento real de material — custo aceito e medido: ~32→48 páginas/filme; (b) **posicionamento estratificado por profundidade** substitui a paginação puramente consecutiva — uma reserva de 25% do orçamento de cada nível (`RESERVA_PROFUNDIDADE`) é posicionada em progressão geométrica a partir do fim do bloco raso, com descoberta de profundidade real e redistribuição do orçamento restante **reaproveitando `redistribuir_deficit`** — MESMO número de requisições que a paginação consecutiva, cobertura temporal muito maior; (c) o **teto de 256 páginas** suspeitado na v1.9.1 é medido num filme obscuro — resultado em §3[B]; (d) `pagina_origem` (rank de adição sob ordenação cronológica, sem a contaminação de `data`, que é a data ASSISTIDA) vira o **instrumento temporal PRIMÁRIO**; `janela_temporal` por `data` (v1.9.1) fica como secundária, rotulada como proxy contaminado. Nada de fronteira, cota, piso escalonado, `min_chars`, ordenação ou síntese é tocado. **v1.9.1 corrigiu dois defeitos que a telemetria MEDIDA da v1.9.0 revelou na camada de coleta**, sem tocar fronteira, cota, piso escalonado ou qualquer etapa de síntese/narrativa: (a) o **orçamento de páginas por BUCKET** (§3[B]) substitui o teto por NÍVEL, corrigindo o defeito estrutural registrado na v1.9.0 (o bucket `medianas`, com metade dos níveis dos outros dois, nunca conseguia o mesmo teto agregado de páginas — 8 contra 16 — e por isso nunca fechava a cota) — **medido: fecha 40/40 em 2 dos 3 filmes (era 35 e 26) e melhora para 37/40 no terceiro (era 23)**, um achado residual e distinto, com causa identificada, registrado em §3[B]; (b) os **motivos de descarte** na seleção passam a ser discriminados (`abaixo_min_chars`/`spoiler`/`truncada_sem_texto`/`duplicata`/`excedente_cota`/`outros`), telemetria pura, sem mudança de comportamento. Duas entregas adicionais: (c) a **janela temporal** (mín./máx./p5/p50/p95 das datas do bruto, por bucket e total) passa a ser gravada em `meta.json`, não exposta ao frontend; (d) o literal `50 · 20 · 30` remanescente em `frontend/js/filme.js` (pendência registrada na v1.9.0) passa a derivar do próprio JSON de resultado. Uma quinta questão — **paginação de passo largo**, candidata a resolver o viés de recência medido na v1.9.0 (79-100% da amostra em ~7 semanas) — foi **só MEDIDA nesta versão, não implementada**: o gate de decisão está em §3[B], "Medição de profundidade (v1.9.1, gate)", com um achado que contraria a expectativa registrada no briefing (o custo de descobrir a profundidade via sonda de rede NÃO é neutro — é uma sonda de ~10 requisições por nível — mas há evidência forte, ainda que de amostra pequena, de um TETO FIXO do site em 256 páginas que, se confirmado mais amplamente, eliminaria essa sonda por completo). **v1.9.0 reestruturou a camada de COLETA e desacoplou COLETA de ANÁLISE** — a maior mudança de arquitetura de dados desde a v1. Até a v1.8.2, a coleta usava cota fixa de 10 reviews por nível de estrela e gravava, no material coletado, as decisões de **fronteira de bucket**, **cota** e **filtro**: mudar qualquer uma delas custava recoletar tudo. A v1.9.0 (a) move as **fronteiras de bucket** para configuração lida de um único lugar, com o mapeamento nível→bucket como função pura (§2.2), e adota a **opção C** (`0,5–2,0` / `2,5–3,0` / `3,5–5,0`, semântica "não recomendam / mornos / recomendam"); (b) faz a coleta raspar um **superset por nível** e **persistir tudo em disco** (`dados/bruto/<slug>/`, §3[B']), com condição de parada em três degraus de precedência (piso de 1 página por nível com material > alvo com folga de 25% > teto de 4 páginas); (c) torna a **ordenação de listagem** um parâmetro de amostragem explícito, gravado no material coletado, com default trocado de `by/activity` (ordenada por ENGAJAMENTO) para `by/added` (**cronológica**, mais recentes primeiro) — ver §2.3; (d) substitui a cota igual por nível por **alocação proporcional ao histograma** dentro de cada bucket, com piso por nível e redistribuição de déficit restrita ao mesmo bucket (§3[C1]); (e) aplica a **cota de análise 40/40/40 downstream**, sobre o bruto persistido, com min_chars/spoiler/cascata como parâmetros (§3[C2]); e (f) troca o piso binário de 3 por um **piso escalonado de 4 estados** (`completa`/`sem_quantificador`/`sem_numero`/`sem_analise`), exposto como campo no JSON (§3[C3]). **Consequência publicada:** sob as fronteiras C os shares dos 3 filmes do catálogo MUDAM — `cure` 3/17/79 → 2/8/90, `the-invite-2026` 3/18/79 → 2/7/91, `cidade-de-deus` 1/8/91 → 1/3/96. **Risco aceito e mitigações** em §2.2. v1.2.0 adiciona a etapa **[D2] narrador** (§D2) e a flag `--tom` como **mecanismo de desenvolvimento** para A/B de saída. v1.2.1 corrige uma classe de infidelidade do narrador (cota de amostragem apresentada como distribuição da recepção) — invariante nova no §D2 + telemetria. v1.2.2 adiciona calibração numérica dos quantificadores da narrativa (mapa fração→palavra, faixa mais fraca em caso de dúvida) — verificação por instrução ao LLM. v1.2.3 move a calibração do prompt para o CÓDIGO: os rótulos de quantificador passam a ser pré-computados e o LLM só os usa, não os escolhe (mesmo princípio da v1.1.1 — código como autoridade de número/rótulo). v1.3.0 adiciona uma **ficha técnica do filme via TMDB** (§3a, aditiva — nunca bloqueia o pipeline) e reestrutura §D2 para uma narrativa em **três movimentos** (filme → experiência consensual → contraste entre grupos), com uma emenda pontual à regra de "zero conteúdo de trama" para permitir a sinopse OFICIAL curta como fonte do primeiro movimento (ver §3[D] "Anti-spoiler"). **v1.3.1** corrige um defeito real observado na primeira execução do MOVIMENTO 2 (a narrativa de `the-invite-2026` importou um juízo de QUALIDADE — "atuações marcantes"/"roteiro inteligente" — como se fosse um consenso DESCRITIVO, contradizendo diretamente os temas do grupo negativas): a regra do MOVIMENTO 2 ganha três critérios explícitos (categoria/presença/não-contradição) e telemetria de `consensos_usados` para revisão humana de cada execução (ver §D2). **v1.4.0** é a maior mudança desde a v1: o pipeline passa a coletar a **distribuição real de notas** (histograma público do Letterboxd, §3b) e, com ela, **inverte** a regra de prevalência do §D2 — o que a v1.2.1 proibiu por falta do dado, a v1.4.0 torna obrigatório e ancorado (ver "Princípio norteador" abaixo). **v1.4.1** corrige três defeitos pontuais observados na entrega da v1.4.0, todos no §D2: (1) telemetria de quantificadores **por par declarado** (`quantificadores_usados`), depois da 3ª reincidência do mesmo modo de falha, que a rede de nível de bucket não pega; (2) **omissão autorizada** do MOVIMENTO 2, contra a pressão de preenchimento que produz juízo de qualidade hedgeado; (3) **invariante de vocabulário do peso** — rótulos de peso dizem "das notas", nunca "das reviews"/"do público"/"dos espectadores". **v1.5.0** ataca um defeito de **fluência**, não de honestidade: as narrativas entregues até a v1.4.1 são factualmente corretas, mas soam mecânicas — forma sintática repetida (rótulo de peso + verbo de reporte + complemento, três vezes seguidas), frases quase todas do mesmo comprimento, excesso de verbos de reporte e nominalizações no lugar de verbos. O diagnóstico (registrado no changelog) é que o acúmulo de invariantes de honestidade das versões anteriores empurrou o modelo à única forma que satisfaz todas simultaneamente. A correção prescreve **ritmo** e **registro** com a mesma precisão de código com que já se prescrevem números, adiciona uma **marcação de perspectiva** pré-computada (para que a redução de verbos de reporte não deixe a fala de um grupo minoritário soar como fato do narrador) e duas telemetrias novas (`marcadores_perspectiva`, `metricas_fluencia`) — **sem afrouxar nenhuma invariante de honestidade** das versões anteriores. **v1.6.0** conclui que a v1.5.0 errou no MÉTODO, não no objetivo: empilhar honestidade e fluência num prompt só não funcionou (as regras de ritmo não transferiram entre filmes, as métricas que as fiscalizavam não acompanhavam qualidade, e a configuração de produção chegou a publicar uma frase agramatical). A correção é **separar responsabilidades**: o narrador (§D2) é podado de volta a UMA responsabilidade — dizer a verdade com a estrutura certa — e um estágio novo, o **editor [E2]** (§E2), assume ritmo e leitura sem ter acesso a nenhuma fonte de fato e sem poder alterar número, rótulo ou atribuição (trechos protegidos + verificação mecânica + descarte da edição em caso de violação). **v1.6.1** corrige o defeito 5.2 que a v1.6.0 deixou em aberto: em vez de normalizar a COMPARAÇÃO entre o trecho declarado e o texto (caixa/acento/demonstrativo), passa a verificar a EXISTÊNCIA de uma expressão de atribuição reconhecida no texto realmente escrito — o que fecha também o caso de reordenação de palavras que a normalização não alcançava, e reduz `marcadores_perspectiva` a telemetria pura (auditoria humana, não fonte de validação). **v1.6.2** corrige um bug de substring solta descoberto ao vivo na regeneração de `cidade-de-deus` (shares 1%/8%/91%): `_ancora_de_grupo` e `_ancoragem_de_peso_ok` buscavam o percentual de um grupo com `f"{pct}%" in texto`/`texto.find(...)`, que casa **dentro** de outro número — `"1%"` combinava com o "1" final de `"(~91%)"`, ancorando o grupo `negativas` (1%) numa posição muito anterior à sua menção real, corrompendo o cálculo do span de movimento e produzindo falso positivo em `perspectiva_nao_marcada` mesmo com o texto correto e bem marcado. A busca agora usa `re.search(rf"(?<!\d){pct}%", texto)` (nega dígito imediatamente anterior), então `"1%"` só casa como número isolado, nunca como sufixo de `"91%"`/`"21%"`/etc. Mesmo defeito corrigido nos dois pontos que faziam a busca (âncora de grupo e checagem de ancoragem de peso), com testes de regressão cobrindo o caso real. Nenhuma invariante de honestidade foi afrouxada — o fix é estritamente sobre a CHECAGEM, não sobre o que é permitido no texto. **v1.7.0** corrige dois defeitos reais observados na regeneração das narrativas: (1) **resolução de ficha do filme errado** — `espectro24 --slug cure` sem `--ano` resolvia no TMDB para "The Cure" (2026, dir. Nancy Leopardi) em vez de Cure (1997, Kiyoshi Kurosawa), porque a desambiguação por popularidade sem ano escolhe o candidato errado quando o título é comum; a resolução de ano ganha uma cadeia de fallback confiável (slug → página do Letterboxd → sem ficha) e uma guarda de sanidade que descarta a ficha inteira se o ano devolvido pelo TMDB divergir do esperado em mais de 1 ano (ver §3[A]); (2) **lista de protegidos do editor §E2 enxugada** — protegia até 16 trechos por filme, incluindo quantificadores soltos ("muitos") e expressões de atribuição, o que descartava o editor com frequência (`cure`) ou o levava a inventar frases só para reencaixar um protegido movido ("Essa é a opinião de uma fração mínima das notas.", `cidade-de-deus`), e ainda deixava sobreviver um defeito gramatical real ("destacando a a maioria o estilo visual") porque a frase continha um rótulo protegido; a proteção literal agora cobre só rótulo de peso COM percentual e tokens numéricos — quantificador e atribuição passam a valer SÓ pela checagem semântica que já existia e era mais forte (`conferencia_quantificador` v1.4.1, `_marcadores_validos` v1.6.1), revalidada dentro do próprio `editar_narrativa` (ver §E2). **v1.7.1** corrige três defeitos de acabamento observados no texto PUBLICADO da v1.7.0, nenhum deles de honestidade: (1) **contrabarra residual** — `_remover_aspas` trocava só o caractere de aspas por "", então uma citação escapada (`\"A Cura\"`) virava `\A Cura\` (publicado em `cure` e `the-invite-2026`); a remoção agora consome a contrabarra que precede a aspas junto, como uma unidade. (2) **capitalização de rótulo protegido movido** — o rótulo de peso guarda a caixa de onde apareceu a primeira vez (início de frase, capitalizado); quando o editor o move para o meio de um período, a checagem 100% literal não deixava ajustar só a inicial, e o defeito ("Para A grande maioria...", `cidade-de-deus`) sobrevivia porque corrigir quebraria o protegido; a checagem de trecho perdido agora aceita a primeira letra em qualquer caixa — e SÓ ela, nenhuma outra letra, palavra ou número do trecho. (3) **família "quem gostou/não gostou" ausente do vocabulário de atribuição** — o `cure` escreveu "quem não gostou considerou o ritmo lento e tedioso" para o grupo de 3%, uma atribuição real, mas fora da lista de expressões reconhecidas (`_EXPRESSOES_DE_PERSPECTIVA`), produzindo falso positivo em `perspectiva_nao_marcada`; a família foi acrescentada ("quem gostou", "quem não gostou", "quem amou", "quem ficou no meio", e as formas com "para" na frente), mantendo de fora o "para quem" ISOLADO (pronome relativo comum, motivo do falso negativo original da v1.6.0). Nenhuma invariante de honestidade foi afrouxada nas três correções — são fixes de CHECAGEM e de limpeza mecânica, não mudança do que é permitido no texto. **v1.7.2** corrige um defeito real observado na regeneração do `cidade-de-deus` sob a v1.7.1: o editor devolveu a prosa embrulhada num invólucro `{ text: "..." }`, ignorando a instrução de responder só texto puro — e TODAS as checagens mecânicas de então (protegidos, conjunto numérico, honestidade) passaram, porque rodam sobre SUBSTRING e o protegido/os números continuavam achados DENTRO do invólucro. A edição foi marcada "aplicada"; só a leitura humana antes de publicar pegou o defeito. A correção acrescenta uma **checagem ESTRUTURAL** (`_formato_invalido`, §E2), aplicada ANTES de todas as outras: rejeita o texto se ele começar com `{`/`[`, contiver cerca de código (```), tiver uma das primeiras linhas com cara de campo JSON (`"text":`, `text:`, `"narrativa":`), ou tiver chaves desbalanceadas — mesma política das demais checagens (1 retentativa com reforço explicando o formato exigido; se persistir, descarta com `motivo_descarte: "formato_invalido"` e publica a bruta). Deliberadamente NÃO rejeita uma chave/colchete equilibrado no MEIO da prosa — só o formato de invólucro, não qualquer ocorrência do caractere. **v1.7.3** corrige um defeito de POLÍTICA, não de checagem: na regeneração da v1.7.1, a edição foi DESCARTADA em 2 dos 3 filmes (`cure` — número alterado; `cidade-de-deus` — regressão de `perspectiva_nao_marcada`), publicando a bruta nos dois, enquanto a MESMA combinação de código e dados tinha sido ACEITA nos 3 filmes sob a v1.7.0 — nada mudou no código nesse sentido entre as duas rodadas; é VARIÂNCIA do modelo entre chamadas, e a política de então (1 chamada + 1 retentativa, 2 no total) dava pouca margem para a variância favorecer numa etapa cujo descarte já é fail-safe (a bruta do narrador sempre prevalece). A correção eleva o teto para até `1 + EDITOR_MAX_TENTATIVAS` chamadas (`EDITOR_MAX_TENTATIVAS = 3` em `config.py`, 4 no total no pior caso) e muda o reforço de SUBSTITUÍDO para ACUMULADO entre tentativas — se a 1ª falha por número e a 2ª por atribuição, a 3ª recebe os dois reforços juntos, para o modelo não consertar um problema criando outro. Nova telemetria em `edicao_flags`: `n_tentativas` (quantas chamadas foram feitas) e `motivos_por_tentativa` (o motivo de cada falha, na ordem) — visibilidade de qual checagem mais reprova o editor, não critério de aprovação. Nenhuma invariante de honestidade foi afrouxada: o fail-safe de descarte após esgotar as tentativas continua idêntico, só o número de chances antes dele mudou. **v1.7.4** corrige dois defeitos: um buraco de arquitetura e um resíduo cosmético recorrente. (1) **checagem de EDIÇÃO NULA** — nenhuma checagem até a v1.7.3 verificava que a edição FEZ algo, só que ela não QUEBROU nada; um editor que devolva a entrada praticamente intacta passa em protegidos (nunca saíram), números (nada mudou) e honestidade (é o mesmo texto), e era marcado "aplicada" sem nenhum sinal de que não houve edição de verdade. A correção calcula a similaridade (`difflib.SequenceMatcher.ratio`, textos normalizados só por espaço em branco) entre `narrativa_bruta` e o texto editado; se as demais checagens TERIAM passado mas a similaridade é `>= EDITOR_LIMIAR_EDICAO_NULA` (0.97, deliberadamente conservador — só pega devolução literal ou trivial, não uma edição legítima que preserve vocabulário protegido), trata como falha de tentativa com motivo `"edicao_nula"`, no mesmo ciclo de retentativa/descarte já existente. `edicao_flags.similaridade` é persistido SEMPRE (aceita ou não), telemetria para calibrar o limiar. (2) **capitalização residual, correção determinística** — a v1.7.1 AUTORIZOU o editor a ajustar a caixa de um rótulo de peso movido para o meio da frase, mas não o OBRIGA, e ele frequentemente não ajusta ("Já Uma fração mínima...", "Para A grande maioria..."). Em vez de depender do LLM, um pós-processamento em CÓDIGO (`_corrigir_capitalizacao_residual`) roda sobre toda edição ACEITA: baixa a inicial de qualquer rótulo de peso canônico que apareça capitalizado fora de início de período (mesmo princípio de toda pré-computação do pipeline — o determinístico é decidido pelo código, não pelo LLM). `edicao_flags.capitalizacao_ajustada` registra se algo mudou. **v1.8.1** REATIVA o editor [E2] por padrão (`EDITOR_ATIVO=True`) — a v1.8.0 tinha desligado por precaução após um defeito de conteúdo inventado, mas a MESMA versão já corrigira a causa raiz (checagem de conteúdo adicionado + ordem dos movimentos); a validação pós-correção (`VALIDACAO_EDITOR_V18.md`, 3 filmes reais) mostrou a checagem disparando de verdade em produção e o modelo se autocorrigindo na retentativa, com os limiares bem separados do ruído normal de uma edição legítima — evidência suficiente para reativar. **v1.8.0** troca o provider DEFAULT de produção para **DeepSeek** (`deepseek-v4-flash`, ver Changelog) e, na mesma versão, DESLIGA o editor [E2] por padrão como medida de contenção — a validação que justificou a troca de provider também descobriu um defeito real e mais sério: o editor pode ACRESCENTAR conteúdo (opinião, frase de fechamento, reordenar movimentos) sem que nenhuma checagem mecânica até a v1.7.4 detecte, porque todas checavam PERDA, nenhuma ADIÇÃO. Duas checagens novas (conteúdo adicionado por similaridade de frase, ordem dos movimentos) mitigam o defeito e o editor volta a ser ligável via `--com-editor`, mas o default de produção segue conservador até mais evidência.
 
 ---
 
@@ -92,8 +92,9 @@ faltava chegando.
 | ~~Parada por ALVO (cota × folga, heurística)~~ | **REMOVIDA na v1.9.2** — causava não-determinismo sob orçamento fixo (foi a causa do 37/40 residual de `cidade-de-deus` na v1.9.1); o orçamento de páginas passa a ser sempre gasto integralmente | coleta | v1.9.0, revogada v1.9.2 (§3[B]) |
 | ~~Teto de paginação por nível de nota (4 páginas)~~ | **REVOGADO na v1.9.1** — o teto passou a ser por BUCKET, não por nível (defeito estrutural registrado na v1.9.0) | — | v1.9.0, revogado v1.9.1 |
 | **Orçamento de páginas por BUCKET** | **16 páginas** (~192 reviews brutas), distribuídas entre os níveis do bucket proporcional ao histograma | coleta | **v1.9.1 (§3[B])** |
+| **Teto de EXTENSÃO por bucket** | **24 páginas** (= base 16 + até 8 extras, +50%) — só é alcançado por bucket que fecha o orçamento base ABAIXO da meta com folga; bucket que fecha a meta na base para em 16, como sempre | coleta | **v1.9.4 (§3[B])** |
 | **Teto de segurança por nível** | **10 páginas** — nenhum nível sozinho consome o orçamento inteiro do bucket | coleta | **v1.9.1 (§3[B])** |
-| **Reserva de profundidade** | **25%** do orçamento de cada nível, posicionada em progressão geométrica além do bloco raso | coleta | **v1.9.2 (§3[B])** |
+| **Reserva de profundidade** | **25%** do orçamento de cada nível | coleta | **v1.9.2 (§3[B])** |
 | **Texto truncado enviado ao LLM** | **PROIBIDO — texto completo obrigatório ou descarte** | ambas | **v1.1.0 — decisão do usuário** |
 | Delay entre requisições | ≥ 2s, sem paralelismo | coleta | Fase 0: anti-bot presente |
 | **Ordenação da listagem** | **`by/added`** (cronológica, mais recentes primeiro) | coleta | **v1.9.0 (§2.3)** — era `by/activity` |
@@ -592,6 +593,222 @@ escopo: a seleção continua escolhendo por `(pagina_origem, ordem no jsonl)`,
 sem filtro de profundidade), mas agora POSSÍVEL sem recoleta. Sem isto, a
 janela temporal ficaria gravada no bruto de forma irreversível, e corrigi-la
 exigiria recoletar os 30-50 filmes do lote inteiro depois de já publicados.
+
+#### Extensão de orçamento por DÉFICIT (v1.9.4)
+
+**O defeito que corrige.** A diagnose da v1.9.3 (registrada em §3[H]) achou
+uma classe, não um caso: **10 buckets DOMINANTES abaixo da cota**, dos quais
+9 são filmes muito populares (1,4M-5,7M notas) com rendimento pós-filtro de
+10-20%. Em **4 deles** (`wicked-2024`, `avengers-endgame`, `talk-to-me-2022`,
+`aftersun`) o bucket dominante — o que abre o MOVIMENTO 3 e carrega o rótulo
+de peso mais forte — tem `n` **MENOR** que os outros dois buckets do mesmo
+filme: a perspectiva majoritária medida com menos precisão que a minoritária.
+
+O mecanismo é uma **interação entre duas decisões válidas isoladamente**: a
+alocação proporcional ao histograma (§3[C1]) concentra o orçamento de páginas
+nos níveis mais populosos, e `MIN_CHARS` filtra pior justamente esses níveis,
+porque reação de massa é curta. A redistribuição de déficit (§3[C1]) não
+socorre: ela pressupõe SOBRA em algum nível do bucket, e aqui o bucket inteiro
+rende mal ao mesmo tempo (`deficit_redistribuido = 0` no caso medido).
+
+**Por que corrigir agora, e não depois.** O orçamento de páginas é o **único**
+parâmetro da camada de coleta que o superset (§3[B']) não torna reversível —
+página não baixada não está em disco, e nenhum parâmetro downstream a traz de
+volta. Com 35 filmes, corrigir custa ~20 minutos de recoleta incremental;
+com mais 100 filmes coletados sob o orçamento antigo, custa horas. E o gate de
+taxonomia mediu, por nulo de permutação, que a margem de lift de 15 pp só é
+defensável na cota de 40 (a 20 reviews por bucket, ~2/3 dos pares que cruzam a
+margem cruzariam por acaso) — déficit no bucket dominante degrada exatamente
+a comparação ENTRE buckets, que é a tese do produto.
+
+**A regra — OBSERVACIONAL, e é isso que a define:**
+
+1. Gastar o orçamento base do bucket (`ORCAMENTO_PAGINAS_POR_BUCKET = 16`),
+   **exatamente como hoje**, com o mesmo posicionamento estratificado.
+2. Se, ao fim do orçamento base, o total de reviews **VÁLIDAS** do bucket for
+   menor que a meta com folga (`cota × FOLGA_ALVO_COLETA` = 40 × 1,25 = 50),
+   conceder páginas extras **UMA A UMA**, até `TETO_EXTENSAO_PAGINAS = 24`
+   (+8 sobre a base), alocadas aos níveis **em déficit**.
+3. Parar no teto ou ao atingir a meta, o que vier primeiro.
+
+O bucket que rende bem para em 16 exatamente como antes — a extensão nunca
+dispara para ele, e o custo dos filmes que já fechavam a cota é **zero**. O
+bucket que rende mal ganha até 8 páginas extras.
+
+**Por que observacional e NÃO preditivo.** A saída óbvia seria estimar o
+rendimento de cada nível pelas páginas já baixadas e comprar páginas onde o
+rendimento previsto compensa. Está rejeitada, por duas razões:
+
+- **as páginas não são uma amostra do mesmo regime.** Desde a v1.9.2 elas são
+  log-espaçadas em profundidade (bloco raso consecutivo + bloco profundo
+  geométrico). O rendimento do bloco raso de um blockbuster mede reação de
+  massa em semana de estreia; o do bloco profundo mede outra coorte, outro
+  tamanho de texto, outro rendimento. Um estimador ajustado no primeiro não
+  descreve o segundo;
+- **um preditor ruidoso decidindo orçamento é uma peça nova com modo de falha
+  próprio** — e esta spec já pagou esse preço uma vez: a parada por ALVO
+  (v1.9.0) era exatamente isso, uma heurística otimista decidindo quando
+  parar, e foi removida na v1.9.2 por não-determinismo depois de causar o
+  37/40 de `cidade-de-deus`. Reintroduzir estimativa na mesma decisão, dois
+  releases depois de tê-la removido dali, seria repetir o erro com outro nome.
+
+A regra acima **não estima nada**. Todo número que ela consulta já foi medido:
+quantas válidas o bucket tem AGORA (contadas sobre o bruto em disco, pelo
+mesmo `_cascade_pool` da seleção), e quais níveis estão abaixo do próprio
+alvo. Nenhum parâmetro de calibração novo é introduzido: `TETO_EXTENSAO_PAGINAS`
+é um teto de custo, não um limiar ajustável de qualidade, e a meta com folga
+reusa `FOLGA_ALVO_COLETA`, que já existe.
+
+**Alocação das extras — QUARTO uso de `redistribuir_deficit`, nenhum mecanismo
+novo.** A cada página concedida, o plano de gasto das extras restantes é
+recalculado:
+
+```
+deficit(L)   = max(0, alvo_com_folga(L) − válidas_atuais(L))
+plano        = alocar_bucket(extras_restantes, deficit, níveis_vivos, piso=0)
+plano_final  = redistribuir_deficit(plano, {L: extras_restantes se L vivo senão 0})
+```
+
+e a página vai para o nível com maior alocação no plano (desempate pelo nível
+mais alto, o mesmo de `_maior_resto`). "Nível vivo" é o que ainda não devolveu
+página vazia. São as MESMAS duas funções que já alocam reviews entre níveis
+(§3[C1]), páginas entre níveis (v1.9.1) e posições dentro de um nível
+(v1.9.2) — agora extras entre níveis. Quatro usos, uma implementação.
+
+**Peso por DÉFICIT, não por histograma — e a escolha é deliberada.** Todos os
+outros usos de `alocar_bucket` pesam pelo histograma. Aqui não: pesar as
+extras pelo histograma daria todas elas ao mesmo nível populoso de baixo
+rendimento que a diagnose identificou como o amplificador do problema —
+repetiria a concentração em vez de corrigi-la. O déficit é **medido**, não
+estimado, e é o que a extensão existe para fechar.
+
+**Onde as páginas extras caem, posicionalmente.** Não recalculam a divisão
+raso/profundo — isso mudaria as posições geométricas e faria a base deixar de
+ser um prefixo da coleta estendida. Elas são **anexadas**, nesta ordem:
+
+1. posições ainda não buscadas **dentro do intervalo já confirmado** (`≤` a
+   maior posição buscada com sucesso). Por monotonicidade da paginação, essas
+   páginas **têm conteúdo garantido** — toda extra gasta ali rende;
+2. esgotadas essas, posições consecutivas **além** da mais profunda já
+   buscada. Aqui uma página pode vir vazia, e vir vazia marca o nível como
+   `material_esgotado` para o resto da extensão.
+
+**O teto é POR EXECUÇÃO, não pela vida do bruto — limitação declarada.** A
+contabilidade posicional (`posicoes_buscadas`, `maior_confirmada`) vive no
+resultado da raspagem, não no `meta.json`, então uma segunda execução do mesmo
+filme reconstrói o estado a partir do orçamento BASE e volta a ter 8 extras
+disponíveis. Consequências, ambas benignas mas reais: (a) o bruto de um filme
+executado duas vezes pode acumular mais que 24 páginas num bucket; (b) a
+segunda execução gasta parte das extras **em posições que a primeira já
+buscou** — cacheadas, portanto sem custo de rede, mas também sem material
+novo, o que aparece na telemetria como extras concedidas sem ganho de
+válidas. Não é corrigido aqui: exigiria um registro posicional persistente, e
+o checkpoint do lote (§3[H]) já evita a reexecução acidental. Quem reexecutar
+um filme de propósito precisa saber disso.
+
+**`--offline` não estende, e preserva a telemetria da coleta que houve.** A
+reexecução 100% cache é uma garantia anterior a esta versão (README: "zero
+rede, nunca falha"), e a extensão a quebrou: um filme coletado ANTES da
+v1.9.4 pede, em `--offline`, uma página que nunca esteve no cache, e o
+`FetchError` sobe pelo pipeline inteiro — observado ao vivo em `longlegs`,
+página 9 do nível 2,0★. A guarda é explícita: com `fetcher.offline`, o gancho
+devolve o `extensao_por_bucket` já gravado em disco, sem buscar nada. Não
+devolver nada apagaria o registro (`persistir` SOBRESCREVE o meta) e devolver
+zeros inventaria uma extensão que não aconteceu.
+
+**Telemetria obrigatória, por bucket, em `meta.json` (`extensao_por_bucket`):**
+
+| campo | significado |
+|---|---|
+| `paginas_base` | páginas com conteúdo gastas no orçamento base |
+| `paginas_extensao` | extras efetivamente concedidas (0 quando não disparou) |
+| `extras_por_nivel` | `{nível: extras}` — a quem foram |
+| `motivo_parada` | `meta_atingida` \| `teto_extensao` \| `material_esgotado` |
+| `n_validas_pos_base` | válidas do bucket ao fim da base |
+| `n_validas_pos_extensao` | válidas do bucket ao fim da extensão |
+| `meta` | a meta com folga usada (cota × 1,25) |
+
+A extensão precisa ser **auditável**: "o bucket X recebeu N páginas de extensão
+e parou por Y" tem de ser lido do `meta.json`, não reconstruído.
+
+#### Correção e declaração são CAMADAS, não alternativas (v1.9.4)
+
+O teto de 24 garante que **alguns buckets ainda não fecharão 40**. Isso é
+esperado e **não é falha da extensão** — é a consequência de haver um teto de
+custo, que é o que impede a extensão de virar paginação sem limite.
+
+O registro explícito, para que nenhuma versão futura leia uma coisa como
+substituta da outra:
+
+- a **extensão** (§3[B], acima) encolhe a CLASSE de buckets sub-40 — ataca os
+  casos em que o material existe e o orçamento é que acabou cedo;
+- o **piso escalonado** (§3[C3]) e o **denominador visível** na interface
+  absorvem o RESÍDUO — os casos em que o material simplesmente não está lá,
+  ou está atrás de mais páginas do que o teto autoriza.
+
+A declaração honesta continua sendo o mecanismo **final**, não a alternativa
+rejeitada. Nenhuma quantidade de orçamento de páginas torna o piso escalonado
+dispensável: sempre existirá filme obscuro (`obsession-2026`, 214 notas no
+total) para o qual nenhum orçamento acha material que não existe. A extensão
+muda **quantos** buckets caem no resíduo, nunca **se** o resíduo precisa ser
+declarado.
+
+#### Resultado MEDIDO da recoleta v1.9.4 (2026-08-08) — extensão por déficit
+
+Recoleta SELETIVA dos 9 filmes da classe identificada pela diagnose
+(`obsession-2026` fora: escassez genuína, mecanismo diferente). Incremental —
+as páginas da base já estavam no cache do lote da v1.9.3, então o custo de
+rede medido é o das páginas de EXTENSÃO e do completamento que elas geram.
+
+| Filme | dom. | antes (n/m/p) | depois | extras (n/m/p) | motivo (n/m/p) | rede |
+|---|---|---|---|---|---|---|
+| `wicked-2024` | pos | 30/32/**20** | 36/40/**24** | 8/8/8 | teto/teto/teto | 26 |
+| `avengers-endgame` | pos | 40/40/**34** | **40/40/40** | 3/3/8 | meta/meta/teto | 20 |
+| `talk-to-me-2022` | pos | 28/24/**23** | 40/31/**34** | 8/8/8 | teto/teto/teto | 30 |
+| `aftersun` | pos | 40/40/**38** | **40/40/40** | 0/0/8 | meta/meta/teto | 9 |
+| `pearl-2022` | pos | 15/24/**30** | 26/33/**35** | 8/8/8 | teto/teto/teto | 27 |
+| `parasite-2019` | pos | 28/40/**32** | **40/40/40** | 8/7/8 | teto/meta/teto | 32 |
+| `wonka` | pos | 18/23/**32** | 32/25/**38** | 8/8/8 | teto/teto/teto | 25 |
+| `hereditary` | pos | 28/31/**34** | 36/40/**39** | 8/8/8 | teto/teto/teto | 24 |
+| `shutter-island` | pos | 30/36/**36** | **40/40/40** | 8/7/8 | teto/meta/teto | 29 |
+
+**Agregado:** bucket dominante fechando a cota **0/9 → 4/9**; buckets abaixo
+de 40 **22/27 → 12/27**; dominante MENOR que outro bucket do mesmo filme
+**5 → 3**. Os 27 buckets em `estado_piso = completa` antes e depois.
+
+**Custo:** 222 requisições nos 9 filmes (**24,7/filme**, contra ~78/filme de
+uma coleta do zero), 603 servidas de cache, 551 s (~9 min).
+
+**Rendimento das extras: 188 páginas concedidas → 225 válidas ganhas**, ~10%
+do bruto (a ~12 reviews/página) — exatamente a faixa de 10-20% que a diagnose
+mediu para esta classe. A extensão não descobriu material melhor; comprou
+mais material do mesmo, que é tudo o que um desenho observacional promete.
+
+**Motivos de parada: 21 `teto_extensao`, 6 `meta_atingida`, 0
+`material_esgotado`.** Coerente com serem os filmes mais populares do
+catálogo: nenhum chega perto de esgotar o Letterboxd.
+
+**A seletividade é o que distingue isto de um aumento de orçamento.**
+`aftersun` é o caso limpo: `negativas` e `medianas` fecharam a meta dentro da
+base e receberam ZERO extras (9 requisições no filme inteiro); só `positivas`
+estendeu. Um aumento de `ORCAMENTO_PAGINAS_POR_BUCKET` teria gasto 24 páginas
+nos três.
+
+**O que NÃO fechou, e por quê — resíduo esperado, não falha:**
+- `wicked-2024`/positivas (20→24): 8 extras renderam +4 válidas (~4%), pior
+  que os 6,9% da diagnose. Fechar 40 exigiria da ordem de 40-50 páginas no
+  bucket. É o pior rendimento dos 35 filmes.
+- `hereditary` **passou** a ter o dominante menor que outro bucket (39 contra
+  40 em `medianas`) — efeito colateral da extensão ter ajudado mais
+  `medianas`; diferença de 1 review, irrelevante para precisão (±7,9pp vs.
+  ±8,0pp a 1 EP), mas registrada por honestidade.
+- `talk-to-me-2022`/medianas (24→31): o bucket morno tem 2 níveis sob a opção
+  C, então as extras se espalham por menos níveis e batem antes no material
+  de baixo rendimento.
+
+**Consequência de custo, medida:** a regra é POR BUCKET, então um filme
+deficitário estende os três — até 24 páginas extras por filme, não 8. Nos 9
+filmes: 188 extras, média 20,9/filme.
 
 #### Resultado MEDIDO da primeira recoleta, v1.9.0 (2026-08-07) — o defeito ANTES da correção
 
@@ -1234,9 +1451,6 @@ Por bucket:
    dispara quando o degrau anterior daria zero naquele nível, nunca para
    "completar cota".
 4. **Redistribuição de déficit** ([C1], ressalva 2), restrita ao mesmo bucket.
-5. Ordem de escolha dentro do nível: `(pagina_origem, ordem de aparição no
-   jsonl)` — que é a ordem de amostragem da ordenação escolhida (§2.3).
-   Determinística e reproduzível.
 
 **Registrar por bucket** (§4): `n` final, **composição por nível** (alvo vs.
 atingida), e **quantas reviews entraram por cada degrau da cascata**.
@@ -1414,6 +1628,13 @@ sistematicamente subalocam páginas para o nível ERRADO quando os dois
 efeitos coincidem no MESMO nível popular. Não corrigido nesta sessão,
 por instrução explícita.
 
+**CORRIGIDO na v1.9.4** pela extensão de orçamento por déficit (§3[B]) —
+a correção é observacional, não preditiva, e não toca nenhuma das duas
+decisões acima: `MIN_CHARS` e a alocação proporcional seguem idênticos; o
+que muda é que um bucket que fecha o orçamento base abaixo da meta com
+folga ganha até 8 páginas extras. Resultado medido em §3[B], "Resultado
+MEDIDO da recoleta v1.9.4".
+
 ### [C3] Piso escalonado — 4 estados (v1.9.0)
 
 Substitui o piso binário de 3 (`sem_analise` ou tudo). Calculado sobre o **`n`
@@ -1520,6 +1741,56 @@ Aplicado somente a reviews que **já passaram todos os filtros** (não gastar re
 Custo estimado: no pior caso ~100 requisições extras por filme novo (uma por review válida truncada), ~3 min adicionais a 2s/req. Aceitável para ferramenta pessoal com cache.
 
 ### [D] Síntese LLM
+
+> #### Guard-rail: nenhum caminho novo fala com o SDK do LLM direto (v1.9.4)
+>
+> **A reincidência que o motiva.** A v1.8.0 documentou e resolveu uma causa
+> raiz: `deepseek-v4-*` tem *thinking* LIGADO por padrão, os tokens de
+> raciocínio competem pelo MESMO orçamento de `max_tokens` que a resposta, e
+> sem `thinking: {"type": "disabled"}` a resposta volta truncada ou vazia. A
+> correção vive em `synthesize.deepseek_client_call` desde então — e mesmo
+> assim o defeito voltou: o script do gate de taxonomia (2026-08-08) chamou a
+> API direto, sem o parâmetro, e **8 de 12 chamadas voltaram com `content`
+> vazio**. Não porque a lição estivesse perdida: porque um caminho novo não
+> herda o que não usa.
+>
+> **Uma regra escrita não resolve isso.** "Nenhum script novo chama a API
+> direto" falharia da mesma forma na próxima vez — a fase de síntese vai
+> gerar mais scripts de medição, e cada um é uma chance de reintroduzir o
+> mesmo bug. O padrão desta spec, aplicado desde a v1.2.3 (quantificador
+> pré-computado em vez de instruído) e a v1.6.1 (checagem de existência em
+> vez de comparação de string), é **lição vira mecanismo**.
+>
+> **O mecanismo:** `tests/test_guardrail_adaptador.py` varre `src/` e
+> `scripts/` — a varredura inclui deliberadamente os scripts de análise e
+> medição, que foi onde o defeito reapareceu — procurando import ou
+> instanciação de SDK de LLM (`openai`/`OpenAI(`, `anthropic`,
+> `google.genai`) e chamadas diretas de geração (`chat.completions.create`,
+> `messages.create`, `models.generate_content`) fora do módulo adaptador
+> (`src/espectro24/synthesize.py`). Qualquer ocorrência **falha o teste**, com
+> o arquivo e a linha.
+>
+> **A allowlist é explícita e justificada, arquivo por arquivo.** Três scripts
+> de diagnóstico anteriores (`diagnostico_fluencia.py`,
+> `diagnostico_fluencia_v2.py`, `compare_models.py`) chamam o SDK direto de
+> propósito: o `thinking_budget` e o modelo **são o objeto de estudo** deles —
+> passar pelo adaptador, que fixa esses parâmetros, tornaria o experimento
+> impossível. Eles estão numa constante literal no próprio teste, com o
+> motivo escrito ao lado; adicionar um arquivo à allowlist é uma mudança
+> deliberada e revisável, não um efeito colateral.
+>
+> **`tests/` fica FORA da varredura** — os testes importam o SDK para
+> construir dublês e nunca fazem chamada real. A única exceção é a fixture do
+> próprio guard-rail, que injeta uma violação sintética num arquivo temporário
+> e confirma que a varredura a detecta: sem ela, um guard-rail que não
+> detecta nada passaria como um que não tem nada a detectar.
+>
+> **O que o guard-rail NÃO garante.** Ele checa o CAMINHO, não os parâmetros:
+> um chamador que use o adaptador está protegido; um que replique o transporte
+> com outro nome de variável pode escapar da varredura textual. É uma rede de
+> classe de regressão, no mesmo estatuto das checagens mecânicas do §E2 — cobre
+> o modo de falha observado, não todo modo de falha concebível.
+
 - **Uma chamada por bucket** (máx. 3 por filme), modelo configurável.
 - **Provider-agnóstico (v1.1.1):** a interface de cliente injetável (`client_call(system, user, model) -> str`) é o **contrato formal**. Providers suportados: **Gemini** (chave `GEMINI_API_KEY`, modo JSON nativo) e **Anthropic** (chave `ANTHROPIC_API_KEY`). Seleção via `--provider {gemini,anthropic}`; sem a flag, auto-detecta pela chave presente no ambiente; se ambas as chaves estiverem presentes, ou nenhuma, é erro — exige decisão explícita.
 - **Default de modelo Gemini — `gemini-2.5-flash` (v1.1.2, ratificado com evidência):** a comparação de modelos (`resultado/comparacao/COMPARACAO.md`) rodou o MESMO prompt sobre o MESMO corpus (`oppenheimer-2023`) em `gemini-2.5-flash-lite` e `gemini-2.5-flash`. O flash-lite cometeu **3 violações de instrução** documentadas: (1) bucket `negativas` inteiro em inglês, violando "saída sempre em pt-BR"; (2)-(3) `observacao_geral` generalizando o recorte filtrado do bucket para "a maioria dos críticos considera o filme um fracasso" — o próprio erro de enquadramento que motivou o preâmbulo de papel abaixo. O `gemini-2.5-flash`, no mesmo teste, não repetiu nenhuma das três. Default Anthropic: `claude-sonnet-4-6`.
@@ -2152,6 +2423,12 @@ As três incógnitas abaixo foram resolvidas na Fase 1; os achados já estão in
 ---
 
 ## Changelog
+- **v1.9.4** (2026-08-08) — **extensão de orçamento por DÉFICIT** (§3[B]) + guard-rail de adaptador de LLM (§3[D]). Nenhum outro parâmetro de coleta tocado: `MIN_CHARS`, cascata, fronteiras, cota, alocação proporcional, `ORCAMENTO_PAGINAS_POR_BUCKET` (a base **continua 16**), ordenação e reserva de profundidade seguem idênticos. Nenhuma etapa de síntese/narrador/editor tocada; nenhum `resultado/*.json` republicado.
+  - **(1) Extensão por déficit, OBSERVACIONAL (§3[B]).** Fecha a classe achada pela diagnose da v1.9.3: 9 filmes muito populares com o bucket DOMINANTE abaixo da cota, 4 deles com o dominante tendo `n` MENOR que os buckets minoritários do mesmo filme. Regra: gasta a base de 16 como sempre; se o bucket fecha a base com menos válidas que a meta com folga (40 × 1,25 = 50), concede páginas extras **uma a uma** até `TETO_EXTENSAO_PAGINAS = 24`, aos níveis em déficit; para no teto, na meta ou em material esgotado. **Zero estimativa de rendimento** — a rejeição do desenho preditivo está registrada em §3[B] com o racional (páginas log-espaçadas não são amostra do mesmo regime; e a parada por ALVO, removida na v1.9.2, era exatamente uma heurística otimista decidindo orçamento). Alocação das extras: **quarto uso de `redistribuir_deficit`**, pesada por DÉFICIT MEDIDO e não por histograma — pesar por histograma daria as extras ao mesmo nível populoso de baixo rendimento que a diagnose apontou como amplificador. Extras são ANEXADAS (posições não buscadas dentro do intervalo já confirmado primeiro, com conteúdo garantido por monotonicidade; depois consecutivas além), nunca recalculam a divisão raso/profundo — a base continua sendo prefixo exato da coleta estendida. Telemetria obrigatória por bucket em `meta.json` (`extensao_por_bucket`): páginas base, extras concedidas, extras por nível, motivo de parada, válidas antes e depois.
+  - **(2) Correção e declaração como CAMADAS (§3[B]).** O teto de 24 garante que alguns buckets seguem abaixo de 40 — esperado, não falha. Registrado que a extensão encolhe a CLASSE de buckets sub-40 e que o piso escalonado (§3[C3]) + o denominador visível absorvem o RESÍDUO; a declaração honesta continua sendo o mecanismo final, não a alternativa rejeitada.
+  - **(2b) Recoleta seletiva MEDIDA — 9 filmes, 0 falhas.** Bucket dominante fechando a cota **0/9 → 4/9**; buckets abaixo de 40 **22/27 → 12/27**; dominante medido com menos precisão que um minoritário do mesmo filme **5 → 3** filmes. 222 requisições (24,7/filme, contra ~78/filme de coleta do zero), 551 s. 188 páginas extras → 225 válidas (~10% de rendimento, dentro da faixa que a diagnose mediu). 21 buckets pararam por `teto_extensao`, 6 por `meta_atingida`, **0 por `material_esgotado`**. Os 12 buckets que seguem abaixo de 40 param TODOS por teto de custo, não por falta de material — é o resíduo que o piso escalonado absorve (27/27 em `completa`). Tabela e ressalvas em §3[B], "Resultado MEDIDO da recoleta v1.9.4".
+  - **(2c) Regressão introduzida pela extensão e corrigida na mesma sessão:** `--offline` passou a quebrar em todo filme coletado ANTES da v1.9.4 — a extensão pedia página nunca cacheada e o `FetchError` subia pelo pipeline (reproduzido em `longlegs`, página 9 do nível 2,0★). Guarda explícita no gancho: com `fetcher.offline`, devolve o `extensao_por_bucket` já em disco sem buscar nada (não devolver nada apagaria o registro, porque `persistir` sobrescreve o meta). Verificado contra dado real: 0 requisições de rede. Limitação declarada e NÃO corrigida: o teto de 24 é por EXECUÇÃO, não pela vida do bruto.
+  - **(3) Guard-rail do adaptador de LLM (§3[D]).** O gate de taxonomia reintroduziu um bug resolvido na v1.8.0 — chamada direta ao SDK do DeepSeek sem `thinking: disabled`, 8 de 12 respostas vazias. Uma regra escrita falharia igual na próxima; o padrão da spec é lição vira mecanismo. `tests/test_guardrail_adaptador.py` varre `src/` **e `scripts/`** procurando import/instanciação de SDK e chamadas diretas de geração fora de `synthesize.py`, com allowlist literal e justificada (os 3 scripts de diagnóstico cujo objeto de estudo É o parâmetro de thinking). `scripts/gate_taxonomia.py` foi reparado para usar o adaptador.
 - **v1.9.3** (2026-08-07) — harness de LOTE (§3[H]), infraestrutura sobre a camada de coleta fechada na v1.9.2. Nenhum parâmetro de coleta tocado; nenhuma síntese/narrativa.
   - **(1) Checkpoint em arquivo.** `estado.json` por lote, atualizado APÓS cada filme (não em lote ao final) — resume pula todo slug já `concluido`, sem refazer trabalho nem perder o parcial de um lote interrompido a qualquer momento.
   - **(2) Validação de slug — 1 requisição, antes do orçamento de páginas.** Listagem "qualquer nota" (`reviews_qualquer_nota_url`) + `parser.parse_reviews` já testado: 404/erro → slug inválido; 200 sem review reconhecida pelo parser → `sem_reviews`. **Corrigido durante a Entrega 2** — a primeira versão buscava a página principal do filme e casava a tag `js-route-reviews`, que só existe em páginas de LISTAGEM de reviews, não na raiz; achado real contra os 3 filmes de teste, invisível nas fixtures sintéticas. Detalhe em §3[H]. Histograma ausente NÃO é motivo de rejeição — o pipeline já degrada esse caso (§3[G]), pré-validar de novo seria custo redundante.

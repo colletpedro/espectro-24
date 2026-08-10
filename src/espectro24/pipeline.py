@@ -17,18 +17,22 @@ from __future__ import annotations
 
 from pathlib import Path
 
-from .alocacao import alocar, orcamento_paginas
+from .alocacao import alocar, alocar_bucket, orcamento_paginas
 from .bruto import atualizar_meta, carregar, janela_temporal
 from .buckets import FRONTEIRAS, mapa_de_niveis
-from .collector import coletar_superset, collect_distribuicao
+from .collector import coletar_superset, collect_distribuicao, estender_nivel
 from .config import (
     BUCKETS,
+    CASCATA_CHARS,
     COTA_POR_BUCKET,
     DADOS_BRUTO_DIR,
+    MIN_CHARS,
     NIVEIS_ORDENADOS,
     ORCAMENTO_PAGINAS_POR_BUCKET,
     ORDENACAO,
+    TETO_EXTENSAO_PAGINAS,
 )
+from .extensao import estender_bucket, meta_com_folga
 from .fetcher import Fetcher
 from .models import BucketResult, LevelResult, SearchResult
 from .parser import parse_search_results
@@ -133,9 +137,106 @@ def montar_buckets(selecao, superset=None) -> list[BucketResult]:
     return buckets
 
 
+def _pool_validas_por_nivel(reviews, niveis, min_chars=MIN_CHARS,
+                            cascata=None, excluir_spoiler=True) -> dict[float, int]:
+    """Quantas VÁLIDAS cada nível tem AGORA — a contagem que a extensão lê.
+
+    Reusa `selecao._cascade_pool`, a MESMA função que a seleção downstream
+    usa para decidir o que é elegível. Se a extensão contasse "válida" por um
+    critério próprio, ela poderia parar satisfeita com material que a seleção
+    depois descarta — que é exatamente o modo de falha da parada por ALVO
+    removida na v1.9.2 (contagem heurística otimista decidindo paginação).
+    """
+    from .selecao import _cascade_pool
+
+    cascata = CASCATA_CHARS if cascata is None else cascata
+    por_nivel: dict[float, list] = {n: [] for n in niveis}
+    for r in reviews:
+        if r.nivel in por_nivel:
+            por_nivel[r.nivel].append(r)
+    return {n: len(_cascade_pool(por_nivel[n], min_chars, cascata,
+                                 excluir_spoiler)[0])
+            for n in niveis}
+
+
+def _gancho_de_extensao(fetcher: Fetcher, slug: str, hist, *,
+                        cota_por_bucket: int,
+                        orcamento_base: int,
+                        teto_extensao: int,
+                        ordenacao: str,
+                        dados_dir,
+                        fronteiras=None):
+    """[v1.9.4, §3[B]] Monta o gancho que `coletar_superset` chama entre o
+    orçamento base e a persistência.
+
+    Esta é a única camada que sabe o que é um bucket — o coletor continua
+    varrendo a escala de estrelas sem saber onde ficam as fronteiras. O que o
+    gancho faz por bucket: conta as válidas sobre o material acumulado
+    (bruto em disco ∪ o que esta execução acabou de raspar), e delega a regra
+    inteira a `extensao.estender_bucket`.
+    """
+    mapa = mapa_de_niveis(FRONTEIRAS if fronteiras is None else fronteiras)
+    meta = meta_com_folga(cota_por_bucket)
+    teto_extras = max(0, teto_extensao - orcamento_base)
+
+    def gancho(superset) -> dict | None:
+        # REEXECUÇÃO 100% CACHE (`--offline`, README): a extensão não pode
+        # buscar página nenhuma, e a garantia de "zero rede, nunca falha" é
+        # anterior a esta versão. Sem esta guarda, todo filme coletado ANTES
+        # da v1.9.4 quebrava em `--offline` — a extensão pedia uma página que
+        # nunca esteve no cache e o `FetchError` subia pelo pipeline inteiro
+        # (verificado ao vivo em `longlegs`, página 9 do nível 2,0★).
+        # Devolve a telemetria da coleta que de fato aconteceu, lida do disco:
+        # `persistir` SOBRESCREVE o meta, então não devolver nada apagaria o
+        # registro, e devolver zeros inventaria uma extensão que não houve.
+        if getattr(fetcher, "offline", False):
+            meta_disco, _ = carregar(slug, raiz=dados_dir)
+            return (meta_disco or {}).get("extensao_por_bucket")
+
+        # O bruto de execuções anteriores ainda não foi mesclado (a
+        # persistência roda depois deste gancho), então a contagem tem de ver
+        # as duas metades. `id` é a chave de dedupe do §3[B'] — o material
+        # recém-raspado prevalece, por ser o mais atual.
+        _, do_disco = carregar(slug, raiz=dados_dir)
+        acumulado = {r.id: r for r in do_disco}
+
+        def todas():
+            atual = dict(acumulado)
+            for nb in superset.niveis.values():
+                for r in nb.reviews:
+                    atual[r.id] = r
+            return list(atual.values())
+
+        telemetria = {}
+        for nome, niveis in mapa.items():
+            paginas_base = sum(superset.niveis[n].paginas_gastas
+                               for n in niveis if n in superset.niveis)
+            res = estender_bucket(
+                nome, niveis,
+                # Alvo por nível da META COM FOLGA (não da cota): é contra ele
+                # que o déficit de cada nível é medido, e a soma dos alvos é
+                # exatamente a meta.
+                alvo_por_nivel=alocar_bucket(
+                    meta, {n: (hist or {}).get(n, 0) for n in niveis}, niveis),
+                contar_validas=lambda ns=niveis: _pool_validas_por_nivel(todas(), ns),
+                buscar_extra=lambda nivel: estender_nivel(
+                    fetcher, slug, superset.niveis[nivel], ordenacao),
+                paginas_base=paginas_base,
+                vivos={n for n in niveis
+                       if superset.niveis[n].motivo_parada != "material_esgotado"},
+                teto_extras=teto_extras,
+                meta=meta,
+            )
+            telemetria[nome] = res.para_meta()
+        return telemetria
+
+    return gancho
+
+
 def collect_all_levels(fetcher: Fetcher, slug: str,
                        cota_por_bucket: int = COTA_POR_BUCKET,
                        orcamento_paginas_bucket: int = ORCAMENTO_PAGINAS_POR_BUCKET,
+                       teto_extensao: int = TETO_EXTENSAO_PAGINAS,
                        ordenacao: str = ORDENACAO,
                        dados_dir: str | Path = DADOS_BRUTO_DIR,
                        distribuicao: bool = True,
@@ -169,7 +270,12 @@ def collect_all_levels(fetcher: Fetcher, slug: str,
 
     superset = coletar_superset(
         fetcher, slug, alvo_por_nivel, hist, raiz=dados_dir,
-        ordenacao=ordenacao, teto_paginas=teto_por_nivel, on_level=on_level)
+        ordenacao=ordenacao, teto_paginas=teto_por_nivel, on_level=on_level,
+        extensao=_gancho_de_extensao(
+            fetcher, slug, hist, cota_por_bucket=cota_por_bucket,
+            orcamento_base=orcamento_paginas_bucket,
+            teto_extensao=teto_extensao, ordenacao=ordenacao,
+            dados_dir=dados_dir))
     # v1.9.1 (§3[B']): janela temporal sobre o bruto ACUMULADO (não só o
     # lote desta execução) — mesmo espírito de `selecionar` ler o bruto
     # persistido em vez do que acabou de ser raspado. Espelhada também em
@@ -183,6 +289,7 @@ def run_pipeline(fetcher: Fetcher, slug: str, data_coleta: str,
                  client_call=None, model=None, provider=None, synth: bool = True,
                  cota_por_bucket: int = COTA_POR_BUCKET,
                  orcamento_paginas_bucket: int = ORCAMENTO_PAGINAS_POR_BUCKET,
+                 teto_extensao: int = TETO_EXTENSAO_PAGINAS,
                  on_level=None, distribuicao: bool = True,
                  ordenacao: str = ORDENACAO,
                  dados_dir: str | Path = DADOS_BRUTO_DIR):
@@ -197,8 +304,8 @@ def run_pipeline(fetcher: Fetcher, slug: str, data_coleta: str,
     POR NÍVEL) — ver `collect_all_levels`.
     """
     superset, distrib = collect_all_levels(
-        fetcher, slug, cota_por_bucket, orcamento_paginas_bucket, ordenacao,
-        dados_dir, distribuicao, on_level)
+        fetcher, slug, cota_por_bucket, orcamento_paginas_bucket, teto_extensao,
+        ordenacao, dados_dir, distribuicao, on_level)
 
     # A seleção lê o BRUTO PERSISTIDO, não o que acabou de ser raspado: assim
     # ela enxerga o material acumulado de todas as coletas anteriores, e o
