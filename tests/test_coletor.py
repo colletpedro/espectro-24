@@ -87,6 +87,19 @@ def test_chave_de_cache_INCLUI_a_ordenacao():
     assert "by_added" in a and "by_activity" in b
 
 
+def test_chave_de_cache_distingue_added_de_added_earliest():
+    """[v1.9.6, §2.3] A passada depende disto: as duas ordenações CRONOLÓGICAS
+    são prefixo uma da outra como texto, e confundi-las serviria a ponta
+    errada do bruto — do cache, sem tocar a rede, sem erro visível."""
+    a = level_page_cache_key("cure", 4.0, 1, "by/added")
+    b = level_page_cache_key("cure", 4.0, 1, "by/added-earliest")
+    assert a != b
+    assert a not in b and b not in a
+    ua = level_page_url("cure", 4.0, 1, "by/added")
+    ub = level_page_url("cure", 4.0, 1, "by/added-earliest")
+    assert ua != ub and ua.endswith("/by/added/page/1/")
+
+
 def test_coletor_usa_a_ordenacao_recebida_na_url_de_rede():
     ff = FakeFetcher({})
     raspar_nivel(ff, "cure", 4.0, alvo=0, ordenacao="by/activity")

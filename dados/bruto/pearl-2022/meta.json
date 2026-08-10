@@ -181,5 +181,87 @@
         "p95": "2026-08-08"
       }
     }
+  },
+  "dias_por_100_paginas": {
+    "n_paginas": 18,
+    "pagina_min": 1,
+    "pagina_max": 18,
+    "dias": 14,
+    "dias_por_100_paginas": 82.3529411764706,
+    "paginas_para_1_ano": 443
+  },
+  "dias_por_100_paginas_por_nivel": {
+    "1.0": {
+      "n_paginas": 3,
+      "pagina_min": 1,
+      "pagina_max": 4,
+      "dias": 6,
+      "dias_por_100_paginas": 200.0,
+      "paginas_para_1_ano": 182
+    },
+    "1.5": {
+      "n_paginas": 2,
+      "pagina_min": 1,
+      "pagina_max": 2,
+      "dias": 3,
+      "dias_por_100_paginas": 300.0,
+      "paginas_para_1_ano": 122
+    },
+    "2.0": {
+      "n_paginas": 18,
+      "pagina_min": 1,
+      "pagina_max": 18,
+      "dias": 14,
+      "dias_por_100_paginas": 82.3529411764706,
+      "paginas_para_1_ano": 443
+    },
+    "2.5": {
+      "n_paginas": 6,
+      "pagina_min": 1,
+      "pagina_max": 8,
+      "dias": 4,
+      "dias_por_100_paginas": 57.142857142857146,
+      "paginas_para_1_ano": 639
+    },
+    "3.0": {
+      "n_paginas": 17,
+      "pagina_min": 1,
+      "pagina_max": 18,
+      "dias": 3,
+      "dias_por_100_paginas": 17.647058823529413,
+      "paginas_para_1_ano": 2068
+    },
+    "3.5": {
+      "n_paginas": 4,
+      "pagina_min": 1,
+      "pagina_max": 5,
+      "dias": 1,
+      "dias_por_100_paginas": 25.0,
+      "paginas_para_1_ano": 1460
+    },
+    "4.0": {
+      "n_paginas": 12,
+      "pagina_min": 1,
+      "pagina_max": 14,
+      "dias": 1,
+      "dias_por_100_paginas": 7.6923076923076925,
+      "paginas_para_1_ano": 4745
+    },
+    "4.5": {
+      "n_paginas": 2,
+      "pagina_min": 1,
+      "pagina_max": 2,
+      "dias": 0,
+      "dias_por_100_paginas": 0.0,
+      "paginas_para_1_ano": null
+    },
+    "5.0": {
+      "n_paginas": 4,
+      "pagina_min": 1,
+      "pagina_max": 5,
+      "dias": 0,
+      "dias_por_100_paginas": 0.0,
+      "paginas_para_1_ano": null
+    }
   }
 }

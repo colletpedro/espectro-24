@@ -1,0 +1,282 @@
+{
+  "aftersun": {
+    "n_paginas": 17,
+    "pagina_min": 1,
+    "pagina_max": 128,
+    "dias": 8,
+    "dias_por_100_paginas": 6.299212598425197,
+    "paginas_para_1_ano": 5794
+  },
+  "anatomy-of-a-fall": {
+    "n_paginas": 19,
+    "pagina_min": 1,
+    "pagina_max": 128,
+    "dias": 26,
+    "dias_por_100_paginas": 20.47244094488189,
+    "paginas_para_1_ano": 1783
+  },
+  "avengers-endgame": {
+    "n_paginas": 19,
+    "pagina_min": 1,
+    "pagina_max": 128,
+    "dias": 1,
+    "dias_por_100_paginas": 0.7874015748031497,
+    "paginas_para_1_ano": 46355
+  },
+  "barbie": {
+    "n_paginas": 24,
+    "pagina_min": 1,
+    "pagina_max": 128,
+    "dias": 7,
+    "dias_por_100_paginas": 5.511811023622047,
+    "paginas_para_1_ano": 6622
+  },
+  "bones-and-all": {
+    "n_paginas": 24,
+    "pagina_min": 1,
+    "pagina_max": 128,
+    "dias": 10,
+    "dias_por_100_paginas": 7.874015748031496,
+    "paginas_para_1_ano": 4636
+  },
+  "cats-2019": {
+    "n_paginas": 15,
+    "pagina_min": 1,
+    "pagina_max": 128,
+    "dias": 149,
+    "dias_por_100_paginas": 117.32283464566929,
+    "paginas_para_1_ano": 311
+  },
+  "cidade-de-deus": {
+    "n_paginas": 15,
+    "pagina_min": 1,
+    "pagina_max": 128,
+    "dias": 3,
+    "dias_por_100_paginas": 2.3622047244094486,
+    "paginas_para_1_ano": 15452
+  },
+  "cure": {
+    "n_paginas": 16,
+    "pagina_min": 1,
+    "pagina_max": 64,
+    "dias": 16,
+    "dias_por_100_paginas": 25.396825396825395,
+    "paginas_para_1_ano": 1437
+  },
+  "dune-2021": {
+    "n_paginas": 11,
+    "pagina_min": 1,
+    "pagina_max": 12,
+    "dias": 1,
+    "dias_por_100_paginas": 9.090909090909092,
+    "paginas_para_1_ano": 4015
+  },
+  "dune-part-two": {
+    "n_paginas": 11,
+    "pagina_min": 1,
+    "pagina_max": 12,
+    "dias": 8,
+    "dias_por_100_paginas": 72.72727272727273,
+    "paginas_para_1_ano": 502
+  },
+  "eighth-grade": {
+    "n_paginas": 12,
+    "pagina_min": 1,
+    "pagina_max": 12,
+    "dias": 15,
+    "dias_por_100_paginas": 136.36363636363637,
+    "paginas_para_1_ano": 268
+  },
+  "everything-everywhere-all-at-once": {
+    "n_paginas": 19,
+    "pagina_min": 1,
+    "pagina_max": 128,
+    "dias": 4,
+    "dias_por_100_paginas": 3.1496062992125986,
+    "paginas_para_1_ano": 11589
+  },
+  "friday-the-13th-2009": {
+    "n_paginas": 12,
+    "pagina_min": 1,
+    "pagina_max": 12,
+    "dias": 18,
+    "dias_por_100_paginas": 163.63636363636363,
+    "paginas_para_1_ano": 223
+  },
+  "hereditary": {
+    "n_paginas": 18,
+    "pagina_min": 1,
+    "pagina_max": 18,
+    "dias": 2,
+    "dias_por_100_paginas": 11.764705882352942,
+    "paginas_para_1_ano": 3102
+  },
+  "im-still-here-2024": {
+    "n_paginas": 12,
+    "pagina_min": 1,
+    "pagina_max": 12,
+    "dias": 225,
+    "dias_por_100_paginas": 2045.4545454545455,
+    "paginas_para_1_ano": 18
+  },
+  "interstellar": {
+    "n_paginas": 12,
+    "pagina_min": 1,
+    "pagina_max": 12,
+    "dias": 5,
+    "dias_por_100_paginas": 45.45454545454545,
+    "paginas_para_1_ano": 803
+  },
+  "joker-folie-a-deux": {
+    "n_paginas": 10,
+    "pagina_min": 1,
+    "pagina_max": 11,
+    "dias": 9,
+    "dias_por_100_paginas": 90.0,
+    "paginas_para_1_ano": 406
+  },
+  "longlegs": {
+    "n_paginas": 20,
+    "pagina_min": 1,
+    "pagina_max": 128,
+    "dias": 35,
+    "dias_por_100_paginas": 27.559055118110237,
+    "paginas_para_1_ano": 1324
+  },
+  "mother-2017": {
+    "n_paginas": 19,
+    "pagina_min": 1,
+    "pagina_max": 128,
+    "dias": 76,
+    "dias_por_100_paginas": 59.84251968503937,
+    "paginas_para_1_ano": 610
+  },
+  "napoleon-2023": {
+    "n_paginas": 12,
+    "pagina_min": 1,
+    "pagina_max": 12,
+    "dias": 19,
+    "dias_por_100_paginas": 172.72727272727272,
+    "paginas_para_1_ano": 211
+  },
+  "obsession-2026": {
+    "n_paginas": 2,
+    "pagina_min": 1,
+    "pagina_max": 2,
+    "dias": 61,
+    "dias_por_100_paginas": 6100.0,
+    "paginas_para_1_ano": 6
+  },
+  "oppenheimer-2023": {
+    "n_paginas": 10,
+    "pagina_min": 1,
+    "pagina_max": 12,
+    "dias": 5,
+    "dias_por_100_paginas": 45.45454545454545,
+    "paginas_para_1_ano": 803
+  },
+  "parasite-2019": {
+    "n_paginas": 17,
+    "pagina_min": 1,
+    "pagina_max": 17,
+    "dias": 15,
+    "dias_por_100_paginas": 93.75,
+    "paginas_para_1_ano": 389
+  },
+  "pearl-2022": {
+    "n_paginas": 18,
+    "pagina_min": 1,
+    "pagina_max": 18,
+    "dias": 14,
+    "dias_por_100_paginas": 82.3529411764706,
+    "paginas_para_1_ano": 443
+  },
+  "perfect-days-2023": {
+    "n_paginas": 16,
+    "pagina_min": 1,
+    "pagina_max": 128,
+    "dias": 13,
+    "dias_por_100_paginas": 10.236220472440944,
+    "paginas_para_1_ano": 3566
+  },
+  "shutter-island": {
+    "n_paginas": 18,
+    "pagina_min": 1,
+    "pagina_max": 18,
+    "dias": 44,
+    "dias_por_100_paginas": 258.8235294117647,
+    "paginas_para_1_ano": 141
+  },
+  "spider-man-across-the-spider-verse": {
+    "n_paginas": 16,
+    "pagina_min": 1,
+    "pagina_max": 128,
+    "dias": 0,
+    "dias_por_100_paginas": 0.0,
+    "paginas_para_1_ano": null
+  },
+  "talk-to-me-2022": {
+    "n_paginas": 18,
+    "pagina_min": 1,
+    "pagina_max": 18,
+    "dias": 4,
+    "dias_por_100_paginas": 23.529411764705884,
+    "paginas_para_1_ano": 1551
+  },
+  "the-godfather": {
+    "n_paginas": 12,
+    "pagina_min": 1,
+    "pagina_max": 12,
+    "dias": 6,
+    "dias_por_100_paginas": 54.54545454545455,
+    "paginas_para_1_ano": 669
+  },
+  "the-hateful-eight": {
+    "n_paginas": 11,
+    "pagina_min": 1,
+    "pagina_max": 12,
+    "dias": 23,
+    "dias_por_100_paginas": 209.0909090909091,
+    "paginas_para_1_ano": 175
+  },
+  "the-invite-2026": {
+    "n_paginas": 12,
+    "pagina_min": 1,
+    "pagina_max": 12,
+    "dias": 0,
+    "dias_por_100_paginas": 0.0,
+    "paginas_para_1_ano": null
+  },
+  "the-northman": {
+    "n_paginas": 11,
+    "pagina_min": 1,
+    "pagina_max": 12,
+    "dias": 7,
+    "dias_por_100_paginas": 63.63636363636363,
+    "paginas_para_1_ano": 574
+  },
+  "the-substance": {
+    "n_paginas": 12,
+    "pagina_min": 1,
+    "pagina_max": 12,
+    "dias": 1,
+    "dias_por_100_paginas": 9.090909090909092,
+    "paginas_para_1_ano": 4015
+  },
+  "wicked-2024": {
+    "n_paginas": 18,
+    "pagina_min": 1,
+    "pagina_max": 18,
+    "dias": 4,
+    "dias_por_100_paginas": 23.529411764705884,
+    "paginas_para_1_ano": 1551
+  },
+  "wonka": {
+    "n_paginas": 18,
+    "pagina_min": 1,
+    "pagina_max": 18,
+    "dias": 5,
+    "dias_por_100_paginas": 29.41176470588235,
+    "paginas_para_1_ano": 1241
+  }
+}

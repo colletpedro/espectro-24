@@ -1,0 +1,1030 @@
+{
+  "por_filme": {
+    "aftersun": {
+      "n_bruto_antes": 692,
+      "n_bruto_depois": 908,
+      "n_antigas": 216,
+      "janela_antes": {
+        "n": 692,
+        "min": "2023-02-06",
+        "max": "2026-08-08",
+        "p5": "2026-06-25",
+        "p50": "2026-08-05",
+        "p95": "2026-08-08"
+      },
+      "janela_depois": {
+        "n": 908,
+        "min": "2022-05-21",
+        "max": "2026-08-08",
+        "p5": "2022-05-22",
+        "p50": "2026-08-03",
+        "p95": "2026-08-08"
+      },
+      "anos_antes": 3.5,
+      "anos_depois": 4.22,
+      "p5_p95_antes": 44,
+      "p5_p95_depois": 1539,
+      "buckets_na_cota_antes": 3,
+      "buckets_na_cota_depois": 3,
+      "perfil_antigo": {
+        "n": 216,
+        "n_chars_medio": 299.0,
+        "n_chars_mediano": 130.5,
+        "fracao_abaixo_min_chars": 0.5324,
+        "fracao_spoiler": 0.0185,
+        "fracao_truncada": 0.1019,
+        "fracao_texto_completo": 1.0,
+        "janela": {
+          "n": 216,
+          "min": "2022-05-21",
+          "max": "2022-11-03",
+          "p5": "2022-05-21",
+          "p50": "2022-09-04",
+          "p95": "2022-10-27"
+        },
+        "por_nivel": {
+          "0.5": 12,
+          "1.0": 12,
+          "1.5": 12,
+          "2.0": 36,
+          "2.5": 12,
+          "3.0": 60,
+          "3.5": 12,
+          "4.0": 24,
+          "4.5": 12,
+          "5.0": 24
+        }
+      },
+      "perfil_recente": {
+        "n": 692,
+        "n_chars_medio": 170.4,
+        "n_chars_mediano": 69.0,
+        "fracao_abaixo_min_chars": 0.7327,
+        "fracao_spoiler": 0.0361,
+        "fracao_truncada": 0.0708,
+        "fracao_texto_completo": 0.9913,
+        "janela": {
+          "n": 692,
+          "min": "2023-02-06",
+          "max": "2026-08-08",
+          "p5": "2026-06-25",
+          "p50": "2026-08-05",
+          "p95": "2026-08-08"
+        },
+        "por_nivel": {
+          "0.5": 12,
+          "1.0": 46,
+          "1.5": 24,
+          "2.0": 129,
+          "2.5": 76,
+          "3.0": 134,
+          "3.5": 24,
+          "4.0": 88,
+          "4.5": 63,
+          "5.0": 96
+        }
+      }
+    },
+    "avengers-endgame": {
+      "n_bruto_antes": 791,
+      "n_bruto_depois": 1007,
+      "n_antigas": 216,
+      "janela_antes": {
+        "n": 791,
+        "min": "2019-04-22",
+        "max": "2026-08-09",
+        "p5": "2026-07-21",
+        "p50": "2026-08-06",
+        "p95": "2026-08-08"
+      },
+      "janela_depois": {
+        "n": 1007,
+        "min": "2019-04-17",
+        "max": "2026-08-09",
+        "p5": "2019-04-23",
+        "p50": "2026-08-05",
+        "p95": "2026-08-08"
+      },
+      "anos_antes": 7.3,
+      "anos_depois": 7.31,
+      "p5_p95_antes": 18,
+      "p5_p95_depois": 2664,
+      "buckets_na_cota_antes": 3,
+      "buckets_na_cota_depois": 3,
+      "perfil_antigo": {
+        "n": 216,
+        "n_chars_medio": 412.2,
+        "n_chars_mediano": 84.0,
+        "fracao_abaixo_min_chars": 0.6157,
+        "fracao_spoiler": 0.1713,
+        "fracao_truncada": 0.1806,
+        "fracao_texto_completo": 0.9861,
+        "janela": {
+          "n": 216,
+          "min": "2019-04-17",
+          "max": "2021-06-04",
+          "p5": "2019-04-23",
+          "p50": "2019-04-24",
+          "p95": "2019-04-25"
+        },
+        "por_nivel": {
+          "0.5": 12,
+          "1.0": 12,
+          "1.5": 12,
+          "2.0": 36,
+          "2.5": 12,
+          "3.0": 60,
+          "3.5": 12,
+          "4.0": 24,
+          "4.5": 12,
+          "5.0": 24
+        }
+      },
+      "perfil_recente": {
+        "n": 791,
+        "n_chars_medio": 135.7,
+        "n_chars_mediano": 57,
+        "fracao_abaixo_min_chars": 0.7977,
+        "fracao_spoiler": 0.0556,
+        "fracao_truncada": 0.0468,
+        "fracao_texto_completo": 0.9937,
+        "janela": {
+          "n": 791,
+          "min": "2019-04-22",
+          "max": "2026-08-09",
+          "p5": "2026-07-21",
+          "p50": "2026-08-06",
+          "p95": "2026-08-08"
+        },
+        "por_nivel": {
+          "0.5": 12,
+          "1.0": 58,
+          "1.5": 24,
+          "2.0": 129,
+          "2.5": 84,
+          "3.0": 158,
+          "3.5": 36,
+          "4.0": 96,
+          "4.5": 36,
+          "5.0": 158
+        }
+      }
+    },
+    "barbie": {
+      "n_bruto_antes": 759,
+      "n_bruto_depois": 975,
+      "n_antigas": 216,
+      "janela_antes": {
+        "n": 759,
+        "min": "2023-06-06",
+        "max": "2026-08-09",
+        "p5": "2023-07-25",
+        "p50": "2026-08-06",
+        "p95": "2026-08-08"
+      },
+      "janela_depois": {
+        "n": 975,
+        "min": "1442-07-09",
+        "max": "2026-08-09",
+        "p5": "2023-07-09",
+        "p50": "2026-08-05",
+        "p95": "2026-08-08"
+      },
+      "anos_antes": 3.18,
+      "anos_depois": 584.07,
+      "p5_p95_antes": 1110,
+      "p5_p95_depois": 1126,
+      "buckets_na_cota_antes": 3,
+      "buckets_na_cota_depois": 3,
+      "perfil_antigo": {
+        "n": 216,
+        "n_chars_medio": 374.9,
+        "n_chars_mediano": 100.5,
+        "fracao_abaixo_min_chars": 0.625,
+        "fracao_spoiler": 0.0463,
+        "fracao_truncada": 0.1713,
+        "fracao_texto_completo": 0.9954,
+        "janela": {
+          "n": 216,
+          "min": "1442-07-09",
+          "max": "2023-08-01",
+          "p5": "2023-07-07",
+          "p50": "2023-07-17",
+          "p95": "2023-07-19"
+        },
+        "por_nivel": {
+          "0.5": 12,
+          "1.0": 12,
+          "1.5": 12,
+          "2.0": 36,
+          "2.5": 12,
+          "3.0": 60,
+          "3.5": 12,
+          "4.0": 24,
+          "4.5": 12,
+          "5.0": 24
+        }
+      },
+      "perfil_recente": {
+        "n": 759,
+        "n_chars_medio": 123.6,
+        "n_chars_mediano": 53,
+        "fracao_abaixo_min_chars": 0.809,
+        "fracao_spoiler": 0.0198,
+        "fracao_truncada": 0.0514,
+        "fracao_texto_completo": 0.9881,
+        "janela": {
+          "n": 759,
+          "min": "2023-06-06",
+          "max": "2026-08-09",
+          "p5": "2023-07-25",
+          "p50": "2026-08-06",
+          "p95": "2026-08-08"
+        },
+        "por_nivel": {
+          "0.5": 19,
+          "1.0": 36,
+          "1.5": 24,
+          "2.0": 179,
+          "2.5": 94,
+          "3.0": 155,
+          "3.5": 48,
+          "4.0": 96,
+          "4.5": 36,
+          "5.0": 72
+        }
+      }
+    },
+    "bones-and-all": {
+      "n_bruto_antes": 787,
+      "n_bruto_depois": 1003,
+      "n_antigas": 216,
+      "janela_antes": {
+        "n": 787,
+        "min": "2022-08-10",
+        "max": "2026-08-09",
+        "p5": "2026-07-25",
+        "p50": "2026-08-05",
+        "p95": "2026-08-08"
+      },
+      "janela_depois": {
+        "n": 1003,
+        "min": "2022-06-13",
+        "max": "2026-08-09",
+        "p5": "2022-09-02",
+        "p50": "2026-08-03",
+        "p95": "2026-08-08"
+      },
+      "anos_antes": 4.0,
+      "anos_depois": 4.16,
+      "p5_p95_antes": 14,
+      "p5_p95_depois": 1436,
+      "buckets_na_cota_antes": 3,
+      "buckets_na_cota_depois": 3,
+      "perfil_antigo": {
+        "n": 216,
+        "n_chars_medio": 338.4,
+        "n_chars_mediano": 80.0,
+        "fracao_abaixo_min_chars": 0.6435,
+        "fracao_spoiler": 0.037,
+        "fracao_truncada": 0.1296,
+        "fracao_texto_completo": 0.9907,
+        "janela": {
+          "n": 216,
+          "min": "2022-06-13",
+          "max": "2022-11-03",
+          "p5": "2022-09-02",
+          "p50": "2022-09-03",
+          "p95": "2022-10-24"
+        },
+        "por_nivel": {
+          "0.5": 12,
+          "1.0": 12,
+          "1.5": 12,
+          "2.0": 36,
+          "2.5": 12,
+          "3.0": 60,
+          "3.5": 12,
+          "4.0": 24,
+          "4.5": 12,
+          "5.0": 24
+        }
+      },
+      "perfil_recente": {
+        "n": 787,
+        "n_chars_medio": 114.9,
+        "n_chars_mediano": 51,
+        "fracao_abaixo_min_chars": 0.8183,
+        "fracao_spoiler": 0.0318,
+        "fracao_truncada": 0.0432,
+        "fracao_texto_completo": 0.9848,
+        "janela": {
+          "n": 787,
+          "min": "2022-08-10",
+          "max": "2026-08-09",
+          "p5": "2026-07-25",
+          "p50": "2026-08-05",
+          "p95": "2026-08-08"
+        },
+        "por_nivel": {
+          "0.5": 24,
+          "1.0": 41,
+          "1.5": 31,
+          "2.0": 165,
+          "2.5": 93,
+          "3.0": 169,
+          "3.5": 48,
+          "4.0": 120,
+          "4.5": 24,
+          "5.0": 72
+        }
+      }
+    },
+    "cidade-de-deus": {
+      "n_bruto_antes": 679,
+      "n_bruto_depois": 895,
+      "n_antigas": 216,
+      "janela_antes": {
+        "n": 679,
+        "min": "2022-03-01",
+        "max": "2026-08-07",
+        "p5": "2026-03-22",
+        "p50": "2026-07-27",
+        "p95": "2026-08-06"
+      },
+      "janela_depois": {
+        "n": 895,
+        "min": "2003-04-01",
+        "max": "2026-08-07",
+        "p5": "2012-08-30",
+        "p50": "2026-07-13",
+        "p95": "2026-08-06"
+      },
+      "anos_antes": 4.44,
+      "anos_depois": 23.35,
+      "p5_p95_antes": 137,
+      "p5_p95_depois": 5089,
+      "buckets_na_cota_antes": 3,
+      "buckets_na_cota_depois": 3,
+      "perfil_antigo": {
+        "n": 216,
+        "n_chars_medio": 392.2,
+        "n_chars_mediano": 200.5,
+        "fracao_abaixo_min_chars": 0.4259,
+        "fracao_spoiler": 0.0417,
+        "fracao_truncada": 0.1806,
+        "fracao_texto_completo": 0.9954,
+        "janela": {
+          "n": 216,
+          "min": "2003-04-01",
+          "max": "2022-07-03",
+          "p5": "2011-11-27",
+          "p50": "2016-05-15",
+          "p95": "2022-02-09"
+        },
+        "por_nivel": {
+          "0.5": 12,
+          "1.0": 12,
+          "1.5": 12,
+          "2.0": 36,
+          "2.5": 12,
+          "3.0": 60,
+          "3.5": 12,
+          "4.0": 12,
+          "4.5": 12,
+          "5.0": 36
+        }
+      },
+      "perfil_recente": {
+        "n": 679,
+        "n_chars_medio": 185.2,
+        "n_chars_mediano": 65,
+        "fracao_abaixo_min_chars": 0.7187,
+        "fracao_spoiler": 0.0177,
+        "fracao_truncada": 0.0825,
+        "fracao_texto_completo": 0.9897,
+        "janela": {
+          "n": 679,
+          "min": "2022-03-01",
+          "max": "2026-08-07",
+          "p5": "2026-03-22",
+          "p50": "2026-07-27",
+          "p95": "2026-08-06"
+        },
+        "por_nivel": {
+          "0.5": 24,
+          "1.0": 48,
+          "1.5": 36,
+          "2.0": 120,
+          "2.5": 72,
+          "3.0": 131,
+          "3.5": 12,
+          "4.0": 60,
+          "4.5": 48,
+          "5.0": 128
+        }
+      }
+    },
+    "dune-2021": {
+      "n_bruto_antes": 576,
+      "n_bruto_depois": 792,
+      "n_antigas": 216,
+      "janela_antes": {
+        "n": 576,
+        "min": "2021-09-01",
+        "max": "2026-08-08",
+        "p5": "2026-07-05",
+        "p50": "2026-08-07",
+        "p95": "2026-08-08"
+      },
+      "janela_depois": {
+        "n": 792,
+        "min": "2021-06-01",
+        "max": "2026-08-08",
+        "p5": "2021-09-03",
+        "p50": "2026-08-06",
+        "p95": "2026-08-08"
+      },
+      "anos_antes": 4.93,
+      "anos_depois": 5.19,
+      "p5_p95_antes": 34,
+      "p5_p95_depois": 1800,
+      "buckets_na_cota_antes": 2,
+      "buckets_na_cota_depois": 3,
+      "perfil_antigo": {
+        "n": 216,
+        "n_chars_medio": 604.5,
+        "n_chars_mediano": 222.5,
+        "fracao_abaixo_min_chars": 0.4352,
+        "fracao_spoiler": 0.0139,
+        "fracao_truncada": 0.3009,
+        "fracao_texto_completo": 0.9954,
+        "janela": {
+          "n": 216,
+          "min": "2021-06-01",
+          "max": "2021-09-19",
+          "p5": "2021-09-03",
+          "p50": "2021-09-10",
+          "p95": "2021-09-17"
+        },
+        "por_nivel": {
+          "0.5": 12,
+          "1.0": 12,
+          "1.5": 12,
+          "2.0": 36,
+          "2.5": 12,
+          "3.0": 60,
+          "3.5": 12,
+          "4.0": 36,
+          "4.5": 12,
+          "5.0": 12
+        }
+      },
+      "perfil_recente": {
+        "n": 576,
+        "n_chars_medio": 127.5,
+        "n_chars_mediano": 64.0,
+        "fracao_abaixo_min_chars": 0.7812,
+        "fracao_spoiler": 0.0122,
+        "fracao_truncada": 0.0503,
+        "fracao_texto_completo": 0.9931,
+        "janela": {
+          "n": 576,
+          "min": "2021-09-01",
+          "max": "2026-08-08",
+          "p5": "2026-07-05",
+          "p50": "2026-08-07",
+          "p95": "2026-08-08"
+        },
+        "por_nivel": {
+          "0.5": 12,
+          "1.0": 36,
+          "1.5": 24,
+          "2.0": 120,
+          "2.5": 72,
+          "3.0": 120,
+          "3.5": 36,
+          "4.0": 84,
+          "4.5": 36,
+          "5.0": 36
+        }
+      }
+    },
+    "everything-everywhere-all-at-once": {
+      "n_bruto_antes": 652,
+      "n_bruto_depois": 868,
+      "n_antigas": 216,
+      "janela_antes": {
+        "n": 652,
+        "min": "2022-03-28",
+        "max": "2026-08-08",
+        "p5": "2024-08-07",
+        "p50": "2026-08-05",
+        "p95": "2026-08-07"
+      },
+      "janela_depois": {
+        "n": 868,
+        "min": "2021-12-01",
+        "max": "2026-08-08",
+        "p5": "2022-03-11",
+        "p50": "2026-08-04",
+        "p95": "2026-08-07"
+      },
+      "anos_antes": 4.36,
+      "anos_depois": 4.68,
+      "p5_p95_antes": 730,
+      "p5_p95_depois": 1610,
+      "buckets_na_cota_antes": 3,
+      "buckets_na_cota_depois": 3,
+      "perfil_antigo": {
+        "n": 216,
+        "n_chars_medio": 351.7,
+        "n_chars_mediano": 131.5,
+        "fracao_abaixo_min_chars": 0.5278,
+        "fracao_spoiler": 0.0417,
+        "fracao_truncada": 0.1574,
+        "fracao_texto_completo": 0.9954,
+        "janela": {
+          "n": 216,
+          "min": "2021-12-01",
+          "max": "2022-04-04",
+          "p5": "2022-03-11",
+          "p50": "2022-03-24",
+          "p95": "2022-04-04"
+        },
+        "por_nivel": {
+          "0.5": 12,
+          "1.0": 12,
+          "1.5": 12,
+          "2.0": 36,
+          "2.5": 12,
+          "3.0": 60,
+          "3.5": 12,
+          "4.0": 12,
+          "4.5": 12,
+          "5.0": 36
+        }
+      },
+      "perfil_recente": {
+        "n": 652,
+        "n_chars_medio": 155.8,
+        "n_chars_mediano": 66.0,
+        "fracao_abaixo_min_chars": 0.7485,
+        "fracao_spoiler": 0.0169,
+        "fracao_truncada": 0.0567,
+        "fracao_texto_completo": 0.9847,
+        "janela": {
+          "n": 652,
+          "min": "2022-03-28",
+          "max": "2026-08-08",
+          "p5": "2024-08-07",
+          "p50": "2026-08-05",
+          "p95": "2026-08-07"
+        },
+        "por_nivel": {
+          "0.5": 12,
+          "1.0": 52,
+          "1.5": 24,
+          "2.0": 108,
+          "2.5": 72,
+          "3.0": 144,
+          "3.5": 12,
+          "4.0": 60,
+          "4.5": 48,
+          "5.0": 120
+        }
+      }
+    },
+    "hereditary": {
+      "n_bruto_antes": 788,
+      "n_bruto_depois": 1004,
+      "n_antigas": 216,
+      "janela_antes": {
+        "n": 788,
+        "min": "2018-03-20",
+        "max": "2026-08-09",
+        "p5": "2026-07-05",
+        "p50": "2026-08-06",
+        "p95": "2026-08-08"
+      },
+      "janela_depois": {
+        "n": 1004,
+        "min": "2018-01-21",
+        "max": "2026-08-09",
+        "p5": "2018-03-12",
+        "p50": "2026-08-05",
+        "p95": "2026-08-08"
+      },
+      "anos_antes": 8.39,
+      "anos_depois": 8.55,
+      "p5_p95_antes": 34,
+      "p5_p95_depois": 3071,
+      "buckets_na_cota_antes": 3,
+      "buckets_na_cota_depois": 3,
+      "perfil_antigo": {
+        "n": 216,
+        "n_chars_medio": 398.1,
+        "n_chars_mediano": 163.0,
+        "fracao_abaixo_min_chars": 0.4444,
+        "fracao_spoiler": 0.0694,
+        "fracao_truncada": 0.2222,
+        "fracao_texto_completo": 1.0,
+        "janela": {
+          "n": 216,
+          "min": "2018-01-21",
+          "max": "2018-06-14",
+          "p5": "2018-01-23",
+          "p50": "2018-06-07",
+          "p95": "2018-06-09"
+        },
+        "por_nivel": {
+          "0.5": 12,
+          "1.0": 12,
+          "1.5": 12,
+          "2.0": 36,
+          "2.5": 12,
+          "3.0": 60,
+          "3.5": 12,
+          "4.0": 24,
+          "4.5": 12,
+          "5.0": 24
+        }
+      },
+      "perfil_recente": {
+        "n": 788,
+        "n_chars_medio": 98.7,
+        "n_chars_mediano": 50.5,
+        "fracao_abaixo_min_chars": 0.8312,
+        "fracao_spoiler": 0.0254,
+        "fracao_truncada": 0.0305,
+        "fracao_texto_completo": 0.9886,
+        "janela": {
+          "n": 788,
+          "min": "2018-03-20",
+          "max": "2026-08-09",
+          "p5": "2026-07-05",
+          "p50": "2026-08-06",
+          "p95": "2026-08-08"
+        },
+        "por_nivel": {
+          "0.5": 24,
+          "1.0": 56,
+          "1.5": 24,
+          "2.0": 171,
+          "2.5": 83,
+          "3.0": 185,
+          "3.5": 36,
+          "4.0": 108,
+          "4.5": 36,
+          "5.0": 65
+        }
+      }
+    },
+    "perfect-days-2023": {
+      "n_bruto_antes": 649,
+      "n_bruto_depois": 865,
+      "n_antigas": 216,
+      "janela_antes": {
+        "n": 649,
+        "min": "2023-12-24",
+        "max": "2026-08-08",
+        "p5": "2026-06-19",
+        "p50": "2026-08-01",
+        "p95": "2026-08-08"
+      },
+      "janela_depois": {
+        "n": 865,
+        "min": "2023-05-25",
+        "max": "2026-08-08",
+        "p5": "2023-05-25",
+        "p50": "2026-07-28",
+        "p95": "2026-08-07"
+      },
+      "anos_antes": 2.62,
+      "anos_depois": 3.21,
+      "p5_p95_antes": 50,
+      "p5_p95_depois": 1170,
+      "buckets_na_cota_antes": 3,
+      "buckets_na_cota_depois": 3,
+      "perfil_antigo": {
+        "n": 216,
+        "n_chars_medio": 345.8,
+        "n_chars_mediano": 111.5,
+        "fracao_abaixo_min_chars": 0.5787,
+        "fracao_spoiler": 0.0,
+        "fracao_truncada": 0.1481,
+        "fracao_texto_completo": 0.9815,
+        "janela": {
+          "n": 216,
+          "min": "2023-05-25",
+          "max": "2024-01-11",
+          "p5": "2023-05-25",
+          "p50": "2023-06-01",
+          "p95": "2023-12-06"
+        },
+        "por_nivel": {
+          "0.5": 12,
+          "1.0": 12,
+          "1.5": 12,
+          "2.0": 36,
+          "2.5": 12,
+          "3.0": 60,
+          "3.5": 12,
+          "4.0": 24,
+          "4.5": 12,
+          "5.0": 24
+        }
+      },
+      "perfil_recente": {
+        "n": 649,
+        "n_chars_medio": 215.6,
+        "n_chars_mediano": 84,
+        "fracao_abaixo_min_chars": 0.6903,
+        "fracao_spoiler": 0.0185,
+        "fracao_truncada": 0.0986,
+        "fracao_texto_completo": 0.9861,
+        "janela": {
+          "n": 649,
+          "min": "2023-12-24",
+          "max": "2026-08-08",
+          "p5": "2026-06-19",
+          "p50": "2026-08-01",
+          "p95": "2026-08-08"
+        },
+        "por_nivel": {
+          "0.5": 12,
+          "1.0": 36,
+          "1.5": 24,
+          "2.0": 120,
+          "2.5": 79,
+          "3.0": 138,
+          "3.5": 24,
+          "4.0": 72,
+          "4.5": 48,
+          "5.0": 96
+        }
+      }
+    },
+    "spider-man-across-the-spider-verse": {
+      "n_bruto_antes": 649,
+      "n_bruto_depois": 865,
+      "n_antigas": 216,
+      "janela_antes": {
+        "n": 649,
+        "min": "2023-03-19",
+        "max": "2026-08-08",
+        "p5": "2026-01-20",
+        "p50": "2026-08-06",
+        "p95": "2026-08-08"
+      },
+      "janela_depois": {
+        "n": 865,
+        "min": "2023-03-19",
+        "max": "2566-05-31",
+        "p5": "2023-05-29",
+        "p50": "2026-08-04",
+        "p95": "2026-08-08"
+      },
+      "anos_antes": 3.39,
+      "anos_depois": 543.19,
+      "p5_p95_antes": 200,
+      "p5_p95_depois": 1167,
+      "buckets_na_cota_antes": 3,
+      "buckets_na_cota_depois": 3,
+      "perfil_antigo": {
+        "n": 216,
+        "n_chars_medio": 301.9,
+        "n_chars_mediano": 100.0,
+        "fracao_abaixo_min_chars": 0.5972,
+        "fracao_spoiler": 0.0926,
+        "fracao_truncada": 0.1065,
+        "fracao_texto_completo": 0.9907,
+        "janela": {
+          "n": 216,
+          "min": "2023-05-19",
+          "max": "2566-05-31",
+          "p5": "2023-05-24",
+          "p50": "2023-05-31",
+          "p95": "2023-06-01"
+        },
+        "por_nivel": {
+          "0.5": 12,
+          "1.0": 12,
+          "1.5": 12,
+          "2.0": 36,
+          "2.5": 12,
+          "3.0": 60,
+          "3.5": 12,
+          "4.0": 24,
+          "4.5": 12,
+          "5.0": 24
+        }
+      },
+      "perfil_recente": {
+        "n": 649,
+        "n_chars_medio": 177.2,
+        "n_chars_mediano": 61,
+        "fracao_abaixo_min_chars": 0.7488,
+        "fracao_spoiler": 0.0231,
+        "fracao_truncada": 0.0817,
+        "fracao_texto_completo": 0.9892,
+        "janela": {
+          "n": 649,
+          "min": "2023-03-19",
+          "max": "2026-08-08",
+          "p5": "2026-01-20",
+          "p50": "2026-08-06",
+          "p95": "2026-08-08"
+        },
+        "por_nivel": {
+          "0.5": 12,
+          "1.0": 36,
+          "1.5": 24,
+          "2.0": 132,
+          "2.5": 77,
+          "3.0": 128,
+          "3.5": 12,
+          "4.0": 60,
+          "4.5": 48,
+          "5.0": 120
+        }
+      }
+    },
+    "the-invite-2026": {
+      "n_bruto_antes": 636,
+      "n_bruto_depois": 852,
+      "n_antigas": 216,
+      "janela_antes": {
+        "n": 636,
+        "min": "2026-06-10",
+        "max": "2026-08-07",
+        "p5": "2026-07-26",
+        "p50": "2026-08-06",
+        "p95": "2026-08-07"
+      },
+      "janela_depois": {
+        "n": 852,
+        "min": "2025-11-24",
+        "max": "2026-08-07",
+        "p5": "2026-01-24",
+        "p50": "2026-08-05",
+        "p95": "2026-08-07"
+      },
+      "anos_antes": 0.16,
+      "anos_depois": 0.7,
+      "p5_p95_antes": 12,
+      "p5_p95_depois": 195,
+      "buckets_na_cota_antes": 3,
+      "buckets_na_cota_depois": 3,
+      "perfil_antigo": {
+        "n": 216,
+        "n_chars_medio": 248.9,
+        "n_chars_mediano": 100.5,
+        "fracao_abaixo_min_chars": 0.6157,
+        "fracao_spoiler": 0.0324,
+        "fracao_truncada": 0.1111,
+        "fracao_texto_completo": 0.9954,
+        "janela": {
+          "n": 216,
+          "min": "2025-11-24",
+          "max": "2026-07-01",
+          "p5": "2026-01-24",
+          "p50": "2026-04-29",
+          "p95": "2026-06-29"
+        },
+        "por_nivel": {
+          "0.5": 12,
+          "1.0": 12,
+          "1.5": 12,
+          "2.0": 36,
+          "2.5": 12,
+          "3.0": 60,
+          "3.5": 12,
+          "4.0": 24,
+          "4.5": 24,
+          "5.0": 12
+        }
+      },
+      "perfil_recente": {
+        "n": 636,
+        "n_chars_medio": 170.4,
+        "n_chars_mediano": 69.5,
+        "fracao_abaixo_min_chars": 0.7248,
+        "fracao_spoiler": 0.0189,
+        "fracao_truncada": 0.0645,
+        "fracao_texto_completo": 0.9906,
+        "janela": {
+          "n": 636,
+          "min": "2026-06-10",
+          "max": "2026-08-07",
+          "p5": "2026-07-26",
+          "p50": "2026-08-06",
+          "p95": "2026-08-07"
+        },
+        "por_nivel": {
+          "0.5": 24,
+          "1.0": 45,
+          "1.5": 48,
+          "2.0": 120,
+          "2.5": 72,
+          "3.0": 117,
+          "3.5": 24,
+          "4.0": 78,
+          "4.5": 60,
+          "5.0": 48
+        }
+      }
+    },
+    "the-substance": {
+      "n_bruto_antes": 576,
+      "n_bruto_depois": 791,
+      "n_antigas": 215,
+      "janela_antes": {
+        "n": 576,
+        "min": "2024-05-12",
+        "max": "2026-08-08",
+        "p5": "2025-12-30",
+        "p50": "2026-08-07",
+        "p95": "2026-08-08"
+      },
+      "janela_depois": {
+        "n": 791,
+        "min": "2024-05-12",
+        "max": "2026-08-08",
+        "p5": "2024-05-19",
+        "p50": "2026-08-06",
+        "p95": "2026-08-08"
+      },
+      "anos_antes": 2.24,
+      "anos_depois": 2.24,
+      "p5_p95_antes": 221,
+      "p5_p95_depois": 811,
+      "buckets_na_cota_antes": 2,
+      "buckets_na_cota_depois": 3,
+      "perfil_antigo": {
+        "n": 215,
+        "n_chars_medio": 265.7,
+        "n_chars_mediano": 108,
+        "fracao_abaixo_min_chars": 0.5767,
+        "fracao_spoiler": 0.0279,
+        "fracao_truncada": 0.1581,
+        "fracao_texto_completo": 0.9674,
+        "janela": {
+          "n": 215,
+          "min": "2024-05-18",
+          "max": "2024-09-23",
+          "p5": "2024-05-19",
+          "p50": "2024-05-20",
+          "p95": "2024-07-03"
+        },
+        "por_nivel": {
+          "0.5": 12,
+          "1.0": 12,
+          "1.5": 12,
+          "2.0": 36,
+          "2.5": 12,
+          "3.0": 59,
+          "3.5": 12,
+          "4.0": 36,
+          "4.5": 12,
+          "5.0": 12
+        }
+      },
+      "perfil_recente": {
+        "n": 576,
+        "n_chars_medio": 134.9,
+        "n_chars_mediano": 57.0,
+        "fracao_abaixo_min_chars": 0.7795,
+        "fracao_spoiler": 0.0295,
+        "fracao_truncada": 0.0399,
+        "fracao_texto_completo": 0.9878,
+        "janela": {
+          "n": 576,
+          "min": "2024-05-12",
+          "max": "2026-08-08",
+          "p5": "2025-12-30",
+          "p50": "2026-08-07",
+          "p95": "2026-08-08"
+        },
+        "por_nivel": {
+          "0.5": 24,
+          "1.0": 36,
+          "1.5": 24,
+          "2.0": 108,
+          "2.5": 72,
+          "3.0": 120,
+          "3.5": 36,
+          "4.0": 72,
+          "4.5": 36,
+          "5.0": 48
+        }
+      }
+    }
+  },
+  "mediana": {
+    "anos_antes": 3.75,
+    "anos_depois": 4.94,
+    "p5p95_antes": 47.0,
+    "p5p95_depois": 1487.5
+  }
+}

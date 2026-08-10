@@ -161,38 +161,187 @@
   },
   "janela_temporal": {
     "total": {
-      "n": 679,
-      "min": "2022-03-01",
+      "n": 895,
+      "min": "2003-04-01",
       "max": "2026-08-07",
-      "p5": "2026-03-22",
-      "p50": "2026-07-27",
+      "p5": "2012-08-30",
+      "p50": "2026-07-13",
       "p95": "2026-08-06"
     },
     "por_bucket": {
       "negativas": {
-        "n": 228,
-        "min": "2023-07-23",
+        "n": 300,
+        "min": "2004-10-14",
         "max": "2026-08-06",
-        "p5": "2026-02-25",
-        "p50": "2026-06-16",
-        "p95": "2026-08-02"
+        "p5": "2018-07-13",
+        "p50": "2026-05-23",
+        "p95": "2026-07-31"
       },
       "medianas": {
-        "n": 203,
-        "min": "2026-01-01",
+        "n": 275,
+        "min": "2003-04-01",
         "max": "2026-08-07",
-        "p5": "2026-05-31",
-        "p50": "2026-07-24",
+        "p5": "2014-11-28",
+        "p50": "2026-07-19",
         "p95": "2026-08-05"
       },
       "positivas": {
-        "n": 248,
-        "min": "2022-03-01",
+        "n": 320,
+        "min": "2004-02-28",
         "max": "2026-08-07",
-        "p5": "2026-06-16",
+        "p5": "2012-03-06",
         "p50": "2026-08-06",
         "p95": "2026-08-07"
       }
     }
-  }
+  },
+  "dias_por_100_paginas": {
+    "n_paginas": 15,
+    "pagina_min": 1,
+    "pagina_max": 128,
+    "dias": 3,
+    "dias_por_100_paginas": 2.3622047244094486,
+    "paginas_para_1_ano": 15452
+  },
+  "dias_por_100_paginas_por_nivel": {
+    "0.5": {
+      "n_paginas": 2,
+      "pagina_min": 1,
+      "pagina_max": 2,
+      "dias": 27,
+      "dias_por_100_paginas": 2700.0,
+      "paginas_para_1_ano": 14
+    },
+    "1.0": {
+      "n_paginas": 4,
+      "pagina_min": 1,
+      "pagina_max": 4,
+      "dias": 74,
+      "dias_por_100_paginas": 2466.6666666666665,
+      "paginas_para_1_ano": 15
+    },
+    "1.5": {
+      "n_paginas": 3,
+      "pagina_min": 1,
+      "pagina_max": 3,
+      "dias": 95,
+      "dias_por_100_paginas": 4750.0,
+      "paginas_para_1_ano": 8
+    },
+    "2.0": {
+      "n_paginas": 10,
+      "pagina_min": 1,
+      "pagina_max": 12,
+      "dias": 153,
+      "dias_por_100_paginas": 1390.909090909091,
+      "paginas_para_1_ano": 26
+    },
+    "2.5": {
+      "n_paginas": 6,
+      "pagina_min": 1,
+      "pagina_max": 8,
+      "dias": 62,
+      "dias_por_100_paginas": 885.7142857142857,
+      "paginas_para_1_ano": 41
+    },
+    "3.0": {
+      "n_paginas": 12,
+      "pagina_min": 1,
+      "pagina_max": 12,
+      "dias": 20,
+      "dias_por_100_paginas": 181.8181818181818,
+      "paginas_para_1_ano": 201
+    },
+    "4.0": {
+      "n_paginas": 5,
+      "pagina_min": 1,
+      "pagina_max": 25,
+      "dias": 4,
+      "dias_por_100_paginas": 16.666666666666668,
+      "paginas_para_1_ano": 2190
+    },
+    "4.5": {
+      "n_paginas": 4,
+      "pagina_min": 1,
+      "pagina_max": 25,
+      "dias": 2,
+      "dias_por_100_paginas": 8.333333333333334,
+      "paginas_para_1_ano": 4380
+    },
+    "5.0": {
+      "n_paginas": 11,
+      "pagina_min": 1,
+      "pagina_max": 128,
+      "dias": 4,
+      "dias_por_100_paginas": 3.1496062992125986,
+      "paginas_para_1_ano": 11589
+    }
+  },
+  "passadas": [
+    {
+      "ordenacao": "by/added-earliest",
+      "coletado_em": "2026-08-09T22:37:07.345416+00:00",
+      "versao_coletor": "1.9.0",
+      "motivo": "dias_por_100_paginas=2.4 < 20",
+      "orcamento_paginas_por_bucket": 6,
+      "orcamento_paginas_por_nivel": {
+        "0.5": 1,
+        "1.0": 1,
+        "1.5": 1,
+        "2.0": 3,
+        "2.5": 1,
+        "3.0": 5,
+        "3.5": 1,
+        "4.0": 1,
+        "4.5": 1,
+        "5.0": 3
+      },
+      "paginas_gastas_por_nivel": {
+        "0.5": 1,
+        "1.0": 1,
+        "1.5": 1,
+        "2.0": 3,
+        "2.5": 1,
+        "3.0": 5,
+        "3.5": 1,
+        "4.0": 1,
+        "4.5": 1,
+        "5.0": 3
+      },
+      "motivo_parada_por_nivel": {
+        "0.5": "orcamento_esgotado",
+        "1.0": "orcamento_esgotado",
+        "1.5": "orcamento_esgotado",
+        "2.0": "orcamento_esgotado",
+        "2.5": "orcamento_esgotado",
+        "3.0": "orcamento_esgotado",
+        "3.5": "orcamento_esgotado",
+        "4.0": "orcamento_esgotado",
+        "4.5": "orcamento_esgotado",
+        "5.0": "orcamento_esgotado"
+      },
+      "contagem_bruta_por_nivel": {
+        "0.5": 12,
+        "1.0": 12,
+        "1.5": 12,
+        "2.0": 36,
+        "2.5": 12,
+        "3.0": 60,
+        "3.5": 12,
+        "4.0": 12,
+        "4.5": 12,
+        "5.0": 36
+      },
+      "requisicoes": 50,
+      "retentativa": {
+        "n_retentativas": 0,
+        "por_tipo": {},
+        "n_503": 0,
+        "n_network": 50
+      },
+      "n_novas": 216,
+      "n_atualizadas": 0,
+      "n_total_no_bruto": 895
+    }
+  ]
 }

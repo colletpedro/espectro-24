@@ -1,0 +1,154 @@
+{
+  "segundos": 2236.1,
+  "por_filme": {
+    "aftersun": {
+      "requisicoes": 40,
+      "cache": 0,
+      "n_novas": 216,
+      "paginas": 18,
+      "retentativa": {
+        "n_retentativas": 0,
+        "por_tipo": {},
+        "n_503": 0,
+        "n_network": 40
+      }
+    },
+    "avengers-endgame": {
+      "requisicoes": 54,
+      "cache": 0,
+      "n_novas": 216,
+      "paginas": 18,
+      "retentativa": {
+        "n_retentativas": 0,
+        "por_tipo": {},
+        "n_503": 0,
+        "n_network": 54
+      }
+    },
+    "barbie": {
+      "requisicoes": 54,
+      "cache": 0,
+      "n_novas": 216,
+      "paginas": 18,
+      "retentativa": {
+        "n_retentativas": 1,
+        "por_tipo": {
+          "ConnectionError": 1
+        },
+        "n_503": 0,
+        "n_network": 54
+      }
+    },
+    "bones-and-all": {
+      "requisicoes": 44,
+      "cache": 0,
+      "n_novas": 216,
+      "paginas": 18,
+      "retentativa": {
+        "n_retentativas": 0,
+        "por_tipo": {},
+        "n_503": 0,
+        "n_network": 44
+      }
+    },
+    "cidade-de-deus": {
+      "requisicoes": 50,
+      "cache": 6,
+      "n_novas": 216,
+      "paginas": 18,
+      "retentativa": {
+        "n_retentativas": 0,
+        "por_tipo": {},
+        "n_503": 0,
+        "n_network": 50
+      }
+    },
+    "dune-2021": {
+      "requisicoes": 82,
+      "cache": 0,
+      "n_novas": 216,
+      "paginas": 18,
+      "retentativa": {
+        "n_retentativas": 0,
+        "por_tipo": {},
+        "n_503": 0,
+        "n_network": 82
+      }
+    },
+    "everything-everywhere-all-at-once": {
+      "requisicoes": 51,
+      "cache": 0,
+      "n_novas": 216,
+      "paginas": 18,
+      "retentativa": {
+        "n_retentativas": 0,
+        "por_tipo": {},
+        "n_503": 0,
+        "n_network": 51
+      }
+    },
+    "hereditary": {
+      "requisicoes": 66,
+      "cache": 0,
+      "n_novas": 216,
+      "paginas": 18,
+      "retentativa": {
+        "n_retentativas": 0,
+        "por_tipo": {},
+        "n_503": 0,
+        "n_network": 66
+      }
+    },
+    "perfect-days-2023": {
+      "requisicoes": 46,
+      "cache": 0,
+      "n_novas": 216,
+      "paginas": 18,
+      "retentativa": {
+        "n_retentativas": 0,
+        "por_tipo": {},
+        "n_503": 0,
+        "n_network": 46
+      }
+    },
+    "spider-man-across-the-spider-verse": {
+      "requisicoes": 39,
+      "cache": 0,
+      "n_novas": 216,
+      "paginas": 18,
+      "retentativa": {
+        "n_retentativas": 0,
+        "por_tipo": {},
+        "n_503": 0,
+        "n_network": 39
+      }
+    },
+    "the-invite-2026": {
+      "requisicoes": 39,
+      "cache": 2,
+      "n_novas": 216,
+      "paginas": 18,
+      "retentativa": {
+        "n_retentativas": 0,
+        "por_tipo": {},
+        "n_503": 0,
+        "n_network": 39
+      }
+    },
+    "the-substance": {
+      "requisicoes": 45,
+      "cache": 0,
+      "n_novas": 216,
+      "paginas": 18,
+      "retentativa": {
+        "n_retentativas": 0,
+        "por_tipo": {},
+        "n_503": 0,
+        "n_network": 45
+      }
+    }
+  },
+  "requisicoes_total": 610,
+  "retentativas_total": 1,
+  "n_503": 0
+}

@@ -185,5 +185,31 @@
         "p95": "2026-07-20"
       }
     }
+  },
+  "dias_por_100_paginas": {
+    "n_paginas": 2,
+    "pagina_min": 1,
+    "pagina_max": 2,
+    "dias": 61,
+    "dias_por_100_paginas": 6100.0,
+    "paginas_para_1_ano": 6
+  },
+  "dias_por_100_paginas_por_nivel": {
+    "3.0": {
+      "n_paginas": 2,
+      "pagina_min": 1,
+      "pagina_max": 2,
+      "dias": 61,
+      "dias_por_100_paginas": 6100.0,
+      "paginas_para_1_ano": 6
+    },
+    "5.0": {
+      "n_paginas": 2,
+      "pagina_min": 1,
+      "pagina_max": 2,
+      "dias": 138,
+      "dias_por_100_paginas": 13800.0,
+      "paginas_para_1_ano": 3
+    }
   }
 }

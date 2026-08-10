@@ -18,7 +18,14 @@ from __future__ import annotations
 from pathlib import Path
 
 from .alocacao import alocar, alocar_bucket, orcamento_paginas
-from .bruto import atualizar_meta, carregar, janela_temporal
+from .bruto import (
+    atualizar_meta,
+    carregar,
+    dias_por_100_paginas,
+    dias_por_100_paginas_por_nivel,
+    janela_temporal,
+    reviews_da_ordenacao,
+)
 from .buckets import FRONTEIRAS, mapa_de_niveis
 from .collector import coletar_superset, collect_distribuicao, estender_nivel
 from .config import (
@@ -69,6 +76,32 @@ def atualizar_janela_temporal(slug: str,
         por_bucket[nome] = janela_temporal(subset)
     bloco = {"total": janela_temporal(todas), "por_bucket": por_bucket}
     atualizar_meta(slug, {"janela_temporal": bloco}, raiz=raiz)
+    return bloco
+
+
+def atualizar_dias_por_100_paginas(slug: str,
+                                   raiz: str | Path = DADOS_BRUTO_DIR) -> dict | None:
+    """[v1.9.6, §3[B']] Grava `dias_por_100_paginas` no `meta.json` do bruto.
+
+    **Calculada sobre UMA ordenação de cada vez** — a da coleta base
+    (`meta["ordenacao_usada"]`). Misturar as duas ordenações somaria posições
+    que não significam a mesma coisa: página 3 sob `by/added` é a 3ª adição
+    mais recente; sob `by/added-earliest`, a 3ª mais antiga.
+
+    Reaproveita a mesma resolução de `ordenacao_origem is None` que todo
+    consumidor usa (`bruto.reviews_da_ordenacao`) — não uma segunda regra que
+    possa divergir dela. Zero rede: lê o bruto que a coleta acabou de
+    persistir, como `atualizar_janela_temporal`.
+    """
+    meta, todas = carregar(slug, raiz=raiz)
+    base = (meta or {}).get("ordenacao_usada") or ORDENACAO
+    da_base = reviews_da_ordenacao(todas, base, base)
+    bloco = dias_por_100_paginas(da_base)
+    atualizacoes = {
+        "dias_por_100_paginas": bloco,
+        "dias_por_100_paginas_por_nivel": dias_por_100_paginas_por_nivel(da_base),
+    }
+    atualizar_meta(slug, atualizacoes, raiz=raiz)
     return bloco
 
 
@@ -301,6 +334,10 @@ def collect_all_levels(fetcher: Fetcher, slug: str,
     # `superset.meta` (em memória) para que `output["coleta"]` (cli.py, que
     # espalha `superset.meta`) continue batendo com o `meta.json` em disco.
     superset.meta["janela_temporal"] = atualizar_janela_temporal(slug, raiz=dados_dir)
+    # v1.9.6 (§3[B']): o discriminador que decide qual estratégia cada filme
+    # precisa (§2.3) passa a ser calculado NA COLETA, não em análise ad-hoc.
+    superset.meta["dias_por_100_paginas"] = atualizar_dias_por_100_paginas(
+        slug, raiz=dados_dir)
     return superset, distrib
 
 

@@ -18,7 +18,7 @@ from .config import (
     ORCAMENTO_PAGINAS_POR_BUCKET,
     ORDENACAO,
 )
-from .fetcher import AntiBotError, FetchError, Fetcher
+from .fetcher import AntiBotError, FetchError, Fetcher, SobrecargaError
 from .parser import parse_reviews
 from .pipeline import run_pipeline
 from .urls import reviews_qualquer_nota_cache_key, reviews_qualquer_nota_url
@@ -103,6 +103,12 @@ def coletar_um_filme(fetcher, slug: str,
     material antes do orçamento produz `status="concluido"` normalmente,
     com buckets possivelmente abaixo de `completa` — resultado honesto, não
     erro do harness.
+
+    **v1.9.6 (§2.4):** `SobrecargaError` (2º HTTP 503 do lote) acompanha
+    `AntiBotError` como a segunda condição que PARA o lote em vez de virar
+    falha isolada. As duas dizem a mesma coisa — o site pediu para parar —, e
+    absorvê-las por filme transformaria a política em "insistir uma vez por
+    filme, para sempre".
     """
     try:
         buckets, superset, distrib = run_pipeline(
@@ -111,7 +117,7 @@ def coletar_um_filme(fetcher, slug: str,
             orcamento_paginas_bucket=orcamento_paginas_bucket,
             ordenacao=ordenacao, dados_dir=dados_dir, on_level=on_level,
         )
-    except AntiBotError:
+    except (AntiBotError, SobrecargaError):
         raise
     except Exception as e:   # noqa: BLE001 — falha isolada é o contrato desta função
         return ResultadoFilme(slug=slug, status="falhou",
@@ -233,11 +239,12 @@ def rodar_lote(slugs: list[str], *,
             resultado = coletar_um_filme(
                 fetcher, slug, dados_dir=dados_dir, cota_por_bucket=cota_por_bucket,
                 orcamento_paginas_bucket=orcamento_paginas_bucket, ordenacao=ordenacao)
-        except AntiBotError as e:
-            # Única exceção que ainda para o lote inteiro (§restrições) —
-            # mas registrada no checkpoint ANTES de propagar, para o resume
-            # saber exatamente onde parou.
-            estado.marcar_falhou(slug, f"anti_bot: {e}")
+        except (AntiBotError, SobrecargaError) as e:
+            # As duas exceções que param o lote inteiro (§restrições, §2.4) —
+            # registradas no checkpoint ANTES de propagar, para o resume saber
+            # exatamente onde parou.
+            rotulo = "anti_bot" if isinstance(e, AntiBotError) else "sobrecarga_503"
+            estado.marcar_falhou(slug, f"{rotulo}: {e}")
             estado.salvar()
             raise
 

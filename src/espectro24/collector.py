@@ -114,12 +114,18 @@ class SupersetResult:
         return [n for n, r in self.niveis.items() if r.parou_por_teto]
 
 
-def _para_bruta(r: Review, nivel: float, pagina: int) -> ReviewBruta:
+def _para_bruta(r: Review, nivel: float, pagina: int,
+                ordenacao: str | None = None) -> ReviewBruta:
     """Converte a review raspada no registro persistível (§3[B']).
 
     `nivel` vem da URL, não do parsing: a URL já filtra por nível, então é a
     fonte autoritativa. O `rating` parseado fica como canário (ver
     `n_sem_nota_no_html`).
+
+    `ordenacao` (v1.9.6, §3[B']) vem da URL pelo mesmo motivo, e é o que torna
+    `pagina_origem` interpretável quando o bruto guarda duas ordenações: sem
+    ele, a página 1 significaria "mais recente" e "mais antiga" no mesmo
+    arquivo.
     """
     texto = r.effective_text
     completo = (not r.truncated) or (r.full_text is not None)
@@ -135,6 +141,7 @@ def _para_bruta(r: Review, nivel: float, pagina: int) -> ReviewBruta:
         truncada=r.truncated,
         texto_completo=completo,
         data=r.data,
+        ordenacao_origem=ordenacao,
     )
 
 
@@ -196,7 +203,7 @@ def raspar_nivel(fetcher: Fetcher, slug: str, nivel: float, alvo: int,
         for r in brutas:
             if r.rating is None:
                 res.n_sem_nota_no_html += 1
-            reg = _para_bruta(r, nivel, pagina)
+            reg = _para_bruta(r, nivel, pagina, ordenacao)
             if reg.id in vistos:
                 continue
             vistos.add(reg.id)
@@ -324,7 +331,7 @@ def estender_nivel(fetcher: Fetcher, slug: str, nb: NivelBruto,
     for r in brutas:
         if r.rating is None:
             nb.n_sem_nota_no_html += 1
-        reg = _para_bruta(r, nb.nivel, pagina)
+        reg = _para_bruta(r, nb.nivel, pagina, ordenacao)
         if reg.id in vistos:
             continue
         vistos.add(reg.id)
@@ -365,7 +372,8 @@ def _completar_truncadas(fetcher: Fetcher, slug: str, res: NivelBruto,
         gastos += 1
         if not complete_review(fetcher, slug, r):
             continue   # descartada no completamento → segue marcada, no bruto
-        res.reviews[i] = _para_bruta(r, reg.nivel, reg.pagina_origem)
+        res.reviews[i] = _para_bruta(r, reg.nivel, reg.pagina_origem,
+                                     reg.ordenacao_origem)
 
 
 def coletar_superset(fetcher: Fetcher, slug: str,
@@ -376,7 +384,8 @@ def coletar_superset(fetcher: Fetcher, slug: str,
                      teto_paginas: int | dict[float, int] = TETO_PAGINAS,
                      on_level=None, extensao=None,
                      profundidade_por_nivel: dict[float, int] | None = None,
-                     sondagem: dict | None = None) -> SupersetResult:
+                     sondagem: dict | None = None,
+                     meta_hook=None) -> SupersetResult:
     """Varre os 10 níveis, persiste o superset e devolve a telemetria (§3[B']).
 
     A varredura é pela **escala inteira**, na ordem crescente de estrela — o
@@ -389,6 +398,12 @@ def coletar_superset(fetcher: Fetcher, slug: str,
     por BUCKET — possa rodar sem que este módulo aprenda o que é um bucket:
     quem passa o gancho é o `pipeline`, a única camada que já sabe disso. O
     dict devolvido vira `meta["extensao_por_bucket"]`.
+
+    `meta_hook` (v1.9.6, §3[B']) é um gancho `(meta_desta_execucao) -> meta`
+    aplicado ANTES da persistência. Existe porque `persistir` SOBRESCREVE o
+    `meta.json`, e a passada por ordenação (§2.3) precisa preservar o meta da
+    coleta BASE — sem que este módulo aprenda o que é uma passada. Ausente, o
+    comportamento é o de sempre (o meta desta execução é o que vai a disco).
 
     `teto_paginas` aceita **int** (mesmo teto para todo nível — uso direto/
     testes de unidade) ou **dict `{nível: teto}`** (v1.9.1: o orçamento POR
@@ -454,6 +469,11 @@ def coletar_superset(fetcher: Fetcher, slug: str,
     if profundidade_por_nivel:
         res.meta["profundidade_estimada_por_nivel"] = {
             str(n): v for n, v in sorted(profundidade_por_nivel.items())}
+    if meta_hook is not None:
+        # `res.meta` passa a ser o que foi de fato a disco — a invariante de
+        # que memória e `meta.json` batem (de que `cli.py` depende ao espalhar
+        # `superset.meta` em `output["coleta"]`) vale também aqui.
+        res.meta = meta_hook(res.meta)
     todas = [rev for nb in res.niveis.values() for rev in nb.reviews]
     persistido = persistir(slug, res.meta, todas, raiz=raiz)
     res.n_reviews = persistido.n_total

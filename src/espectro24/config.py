@@ -44,6 +44,29 @@ HEADERS = {
 
 DELAY_SECONDS = 2.0  # §2: ≥2s, sem paralelismo
 
+# --- Retentativa de rede (§2.4, v1.9.6) ------------------------------------
+# Só erro de TRANSPORTE retenta. 403/challenge, 404 e o SEGUNDO 503 do lote
+# param imediatamente — retentar bloqueio é evasão, e a spec proíbe.
+# Motivação medida: na recoleta da v1.9.5, 10 falhas de rede em 28 filmes
+# (36%), todas transitórias, cada uma abortando um filme inteiro por falta de
+# uma segunda tentativa.
+MAX_TENTATIVAS = 3
+# Backoff exponencial `2s · 4s` entre as tentativas (a 3ª falha não espera:
+# não há quarta). O jitter existe para que um lote que tropece no mesmo
+# instante não volte em uníssono — sem ele, a retentativa vira pressão
+# coordenada, que é o oposto do que o delay de educação (§2) protege.
+BACKOFF_BASE_SEGUNDOS = 2.0
+BACKOFF_JITTER = 0.25
+# 503 é o servidor dizendo que está sobrecarregado. A espera é
+# DELIBERADAMENTE muito maior que a de transporte: ali o problema é o
+# caminho, aqui é o site — esperar mais é cooperar, insistir rápido seria
+# pressão.
+ESPERA_503 = 30.0
+# Quantos 503 o LOTE absorve com retentativa antes de PARAR. `1` — a segunda
+# ocorrência levanta `SobrecargaError`. A v1.9.5 foi interrompida por um 503 e
+# essa decisão foi correta; automatizar a insistência a desfaria.
+LIMITE_503_LOTE = 1
+
 # --- Buckets e cotas (§2) ---
 # DERIVADO das fronteiras (v1.9.0). Cada nível pertence a exatamente um bucket
 # — garantido por `validar_fronteiras`, que roda no import de `buckets.py`.
@@ -223,10 +246,40 @@ ORDENACOES: dict[str, str] = {
 ORDENACAO_DEFAULT = "mais_recentes"
 ORDENACAO = ORDENACOES[ORDENACAO_DEFAULT]  # segmento de URL em vigor
 
+# --- Passada seletiva sob `by/added-earliest` (§2.3, v1.9.6) ---------------
+# A v1.9.5 mediu que cobertura temporal NÃO é alcançável por posição de
+# página: a mediana do catálogo precisa de 1783 páginas para cobrir um ano
+# contra um teto de plataforma de 256. O parâmetro que a controla é a
+# ORDENAÇÃO — e `by/added-earliest` devolve a listagem crescente desde 2012.
+ORDENACAO_PASSADA = ORDENACOES["mais_antigas"]
+# Limiar de `dias_por_100_paginas` (§3[B']) abaixo do qual um filme RECEBE a
+# passada. Acima dele, as 256 páginas expostas sob `by/added` já cobrem mais
+# de um ano e a passada compraria cobertura que já existe — `friday-the-13th-
+# 2009` (163,6) sequer sai da página ~14, enquanto `avengers-endgame` (0,8)
+# não alcança nada além de dias.
+# ARBITRÁRIO na mesma acepção dos limiares do piso escalonado (§3[C3]): a
+# ordem de grandeza é defensável (é o corte que responde "as 256 páginas que
+# existem cobrem pelo menos um ano?"), o número exato não.
+LIMIAR_PASSADA_ANTIGA = 20.0
+# Orçamento de páginas POR BUCKET da passada — uma FATIA do orçamento base
+# (16, `ORCAMENTO_PAGINAS_POR_BUCKET`), não um segundo orçamento cheio: a
+# passada compra cobertura temporal, não cota de análise. ~18 páginas por
+# filme contra as 48 da coleta base.
+ORCAMENTO_PAGINAS_PASSADA = 6
+
 # Versão do COLETOR, gravada em meta.json do bruto (§3[B']). Distinta de
 # SPEC_VERSION: só sobe quando muda o que é RASPADO ou PERSISTIDO, para que
 # um bruto antigo diga sob qual coletor foi obtido.
-VERSAO_COLETOR = "1.9.0"
+#
+# v1.9.6: sobe pela primeira vez desde a v1.9.0, porque `reviews.jsonl` ganhou
+# um campo (`ordenacao_origem`, §3[B']) — o gatilho que o parágrafo acima
+# descreve. REGISTRO HONESTO: ela deveria ter subido antes (a v1.9.2 e a
+# v1.9.4/v1.9.5 acrescentaram campos ao meta.json e ficou em "1.9.0"), e a
+# passada desta sessão rodou com o processo que já tinha importado o valor
+# antigo — as 12 entradas de `passadas` gravadas em 2026-08-09 dizem "1.9.0"
+# apesar de terem sido feitas pelo coletor 1.9.6. Não reescrito à mão: um
+# carimbo de versão corrigido depois do fato não é evidência de nada.
+VERSAO_COLETOR = "1.9.6"
 
 # Raiz do superset persistido (§3[B']). Versionada no git, ao contrário de
 # `resultado/cache/`: o cache é HTML reconstruível e volumoso; o bruto é o

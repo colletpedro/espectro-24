@@ -11,6 +11,7 @@ import pytest
 from conftest import FakeFetcher, fx
 
 from espectro24.buckets import NIVEIS
+from espectro24.fetcher import SobrecargaError
 from espectro24.lote import (
     EstadoLote,
     coletar_um_filme,
@@ -289,3 +290,31 @@ def test_rodar_lote_checkpoint_gravado_apos_cada_filme_nao_so_no_fim(tmp_path):
     rodar_lote(["cure", "cidade-de-deus"], dados_dir=tmp_path / "dados",
               estado_path=estado_path, fabrica_fetcher=_fabrica)
     assert processados == ["cure", "cidade-de-deus"]
+
+
+# --- v1.9.6 (§2.4): sobrecarga do site PARA o lote, não vira falha isolada ---
+
+def test_sobrecarga_503_para_o_lote_e_fica_no_checkpoint(tmp_path):
+    """Segundo 503 do lote não pode virar `falhou` e seguir para o próximo
+    filme: seguir seria insistir com o site que acabou de pedir espaço."""
+    from espectro24.fetcher import SobrecargaError
+    from espectro24.lote import EstadoLote, rodar_lote
+
+    estado_path = tmp_path / "estado.json"
+
+    class FetcherQueSobrecarrega(FakeFetcher):
+        def get(self, url, cache_key):
+            if "rated" in url:
+                raise SobrecargaError("HTTP 503 pela 2ª vez neste lote")
+            return super().get(url, cache_key)
+
+    with pytest.raises(SobrecargaError):
+        rodar_lote(["a", "b"], dados_dir=str(tmp_path / "bruto"),
+                   estado_path=estado_path,
+                   fabrica_fetcher=lambda slug: FetcherQueSobrecarrega(
+                       {reviews_qualquer_nota_cache_key(slug): _pagina(5)}))
+
+    estado = EstadoLote(estado_path).carregar()
+    assert estado.status("a") == "falhou"
+    assert "sobrecarga_503" in estado.dados("a")["motivo"]
+    assert estado.status("b") == "pendente"     # o lote parou, não seguiu

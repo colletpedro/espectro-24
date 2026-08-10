@@ -1,0 +1,182 @@
+{
+  "limiar": 20.0,
+  "dentro": [
+    {
+      "slug": "aftersun",
+      "dias_por_100_paginas": 6.299212598425197,
+      "motivo": "dias_por_100_paginas=6.3 < 20"
+    },
+    {
+      "slug": "avengers-endgame",
+      "dias_por_100_paginas": 0.7874015748031497,
+      "motivo": "dias_por_100_paginas=0.8 < 20"
+    },
+    {
+      "slug": "barbie",
+      "dias_por_100_paginas": 5.511811023622047,
+      "motivo": "dias_por_100_paginas=5.5 < 20"
+    },
+    {
+      "slug": "bones-and-all",
+      "dias_por_100_paginas": 7.874015748031496,
+      "motivo": "dias_por_100_paginas=7.9 < 20"
+    },
+    {
+      "slug": "cidade-de-deus",
+      "dias_por_100_paginas": 2.3622047244094486,
+      "motivo": "dias_por_100_paginas=2.4 < 20"
+    },
+    {
+      "slug": "dune-2021",
+      "dias_por_100_paginas": 9.090909090909092,
+      "motivo": "dias_por_100_paginas=9.1 < 20"
+    },
+    {
+      "slug": "everything-everywhere-all-at-once",
+      "dias_por_100_paginas": 3.1496062992125986,
+      "motivo": "dias_por_100_paginas=3.1 < 20"
+    },
+    {
+      "slug": "hereditary",
+      "dias_por_100_paginas": 11.764705882352942,
+      "motivo": "dias_por_100_paginas=11.8 < 20"
+    },
+    {
+      "slug": "perfect-days-2023",
+      "dias_por_100_paginas": 10.236220472440944,
+      "motivo": "dias_por_100_paginas=10.2 < 20"
+    },
+    {
+      "slug": "spider-man-across-the-spider-verse",
+      "dias_por_100_paginas": 0.0,
+      "motivo": "dias_por_100_paginas=0.0 < 20"
+    },
+    {
+      "slug": "the-invite-2026",
+      "dias_por_100_paginas": 0.0,
+      "motivo": "dias_por_100_paginas=0.0 < 20"
+    },
+    {
+      "slug": "the-substance",
+      "dias_por_100_paginas": 9.090909090909092,
+      "motivo": "dias_por_100_paginas=9.1 < 20"
+    }
+  ],
+  "fora": [
+    {
+      "slug": "anatomy-of-a-fall",
+      "dias_por_100_paginas": 20.47244094488189,
+      "motivo": "dias_por_100_paginas=20.5 >= 20 — a profundidade sob by/added já cobre mais de um ano"
+    },
+    {
+      "slug": "cats-2019",
+      "dias_por_100_paginas": 117.32283464566929,
+      "motivo": "dias_por_100_paginas=117.3 >= 20 — a profundidade sob by/added já cobre mais de um ano"
+    },
+    {
+      "slug": "cure",
+      "dias_por_100_paginas": 25.396825396825395,
+      "motivo": "dias_por_100_paginas=25.4 >= 20 — a profundidade sob by/added já cobre mais de um ano"
+    },
+    {
+      "slug": "dune-part-two",
+      "dias_por_100_paginas": 72.72727272727273,
+      "motivo": "dias_por_100_paginas=72.7 >= 20 — a profundidade sob by/added já cobre mais de um ano"
+    },
+    {
+      "slug": "eighth-grade",
+      "dias_por_100_paginas": 136.36363636363637,
+      "motivo": "dias_por_100_paginas=136.4 >= 20 — a profundidade sob by/added já cobre mais de um ano"
+    },
+    {
+      "slug": "friday-the-13th-2009",
+      "dias_por_100_paginas": 163.63636363636363,
+      "motivo": "dias_por_100_paginas=163.6 >= 20 — a profundidade sob by/added já cobre mais de um ano"
+    },
+    {
+      "slug": "im-still-here-2024",
+      "dias_por_100_paginas": 2045.4545454545455,
+      "motivo": "dias_por_100_paginas=2045.5 >= 20 — a profundidade sob by/added já cobre mais de um ano"
+    },
+    {
+      "slug": "interstellar",
+      "dias_por_100_paginas": 45.45454545454545,
+      "motivo": "dias_por_100_paginas=45.5 >= 20 — a profundidade sob by/added já cobre mais de um ano"
+    },
+    {
+      "slug": "joker-folie-a-deux",
+      "dias_por_100_paginas": 90.0,
+      "motivo": "dias_por_100_paginas=90.0 >= 20 — a profundidade sob by/added já cobre mais de um ano"
+    },
+    {
+      "slug": "longlegs",
+      "dias_por_100_paginas": 27.559055118110237,
+      "motivo": "dias_por_100_paginas=27.6 >= 20 — a profundidade sob by/added já cobre mais de um ano"
+    },
+    {
+      "slug": "mother-2017",
+      "dias_por_100_paginas": 59.84251968503937,
+      "motivo": "dias_por_100_paginas=59.8 >= 20 — a profundidade sob by/added já cobre mais de um ano"
+    },
+    {
+      "slug": "napoleon-2023",
+      "dias_por_100_paginas": 172.72727272727272,
+      "motivo": "dias_por_100_paginas=172.7 >= 20 — a profundidade sob by/added já cobre mais de um ano"
+    },
+    {
+      "slug": "obsession-2026",
+      "dias_por_100_paginas": 6100.0,
+      "motivo": "dias_por_100_paginas=6100.0 >= 20 — a profundidade sob by/added já cobre mais de um ano"
+    },
+    {
+      "slug": "oppenheimer-2023",
+      "dias_por_100_paginas": 45.45454545454545,
+      "motivo": "dias_por_100_paginas=45.5 >= 20 — a profundidade sob by/added já cobre mais de um ano"
+    },
+    {
+      "slug": "parasite-2019",
+      "dias_por_100_paginas": 93.75,
+      "motivo": "dias_por_100_paginas=93.8 >= 20 — a profundidade sob by/added já cobre mais de um ano"
+    },
+    {
+      "slug": "pearl-2022",
+      "dias_por_100_paginas": 82.3529411764706,
+      "motivo": "dias_por_100_paginas=82.4 >= 20 — a profundidade sob by/added já cobre mais de um ano"
+    },
+    {
+      "slug": "shutter-island",
+      "dias_por_100_paginas": 258.8235294117647,
+      "motivo": "dias_por_100_paginas=258.8 >= 20 — a profundidade sob by/added já cobre mais de um ano"
+    },
+    {
+      "slug": "talk-to-me-2022",
+      "dias_por_100_paginas": 23.529411764705884,
+      "motivo": "dias_por_100_paginas=23.5 >= 20 — a profundidade sob by/added já cobre mais de um ano"
+    },
+    {
+      "slug": "the-godfather",
+      "dias_por_100_paginas": 54.54545454545455,
+      "motivo": "dias_por_100_paginas=54.5 >= 20 — a profundidade sob by/added já cobre mais de um ano"
+    },
+    {
+      "slug": "the-hateful-eight",
+      "dias_por_100_paginas": 209.0909090909091,
+      "motivo": "dias_por_100_paginas=209.1 >= 20 — a profundidade sob by/added já cobre mais de um ano"
+    },
+    {
+      "slug": "the-northman",
+      "dias_por_100_paginas": 63.63636363636363,
+      "motivo": "dias_por_100_paginas=63.6 >= 20 — a profundidade sob by/added já cobre mais de um ano"
+    },
+    {
+      "slug": "wicked-2024",
+      "dias_por_100_paginas": 23.529411764705884,
+      "motivo": "dias_por_100_paginas=23.5 >= 20 — a profundidade sob by/added já cobre mais de um ano"
+    },
+    {
+      "slug": "wonka",
+      "dias_por_100_paginas": 29.41176470588235,
+      "motivo": "dias_por_100_paginas=29.4 >= 20 — a profundidade sob by/added já cobre mais de um ano"
+    }
+  ]
+}

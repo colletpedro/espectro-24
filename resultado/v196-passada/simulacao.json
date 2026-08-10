@@ -1,0 +1,1672 @@
+{
+  "filmes": {
+    "aftersun": {
+      "fracao_antiga_no_bruto": {
+        "negativas": 0.2544,
+        "medianas": 0.2553,
+        "positivas": 0.2099
+      },
+      "S1": {
+        "negativas": {
+          "n_final": 40,
+          "fecha_cota": true,
+          "n_antigas": 9,
+          "n_chars_medio": 493.7,
+          "janela": {
+            "n": 40,
+            "min": "2022-07-17",
+            "max": "2026-08-07",
+            "p5": "2022-08-07",
+            "p50": "2026-08-01",
+            "p95": "2026-08-07"
+          }
+        },
+        "medianas": {
+          "n_final": 40,
+          "fecha_cota": true,
+          "n_antigas": 11,
+          "n_chars_medio": 495.9,
+          "janela": {
+            "n": 40,
+            "min": "2022-06-01",
+            "max": "2026-08-08",
+            "p5": "2022-08-13",
+            "p50": "2026-08-03",
+            "p95": "2026-08-08"
+          }
+        },
+        "positivas": {
+          "n_final": 40,
+          "fecha_cota": true,
+          "n_antigas": 7,
+          "n_chars_medio": 611.1,
+          "janela": {
+            "n": 40,
+            "min": "2022-05-21",
+            "max": "2026-08-08",
+            "p5": "2022-05-21",
+            "p50": "2026-08-07",
+            "p95": "2026-08-08"
+          }
+        }
+      },
+      "S2": {
+        "negativas": {
+          "n_final": 40,
+          "fecha_cota": true,
+          "n_antigas": 12,
+          "n_chars_medio": 576.6,
+          "janela": {
+            "n": 40,
+            "min": "2022-07-17",
+            "max": "2026-08-07",
+            "p5": "2022-09-20",
+            "p50": "2026-07-30",
+            "p95": "2026-08-07"
+          }
+        },
+        "medianas": {
+          "n_final": 40,
+          "fecha_cota": true,
+          "n_antigas": 12,
+          "n_chars_medio": 442.3,
+          "janela": {
+            "n": 40,
+            "min": "2022-06-01",
+            "max": "2026-08-08",
+            "p5": "2022-08-05",
+            "p50": "2026-08-04",
+            "p95": "2026-08-08"
+          }
+        },
+        "positivas": {
+          "n_final": 40,
+          "fecha_cota": true,
+          "n_antigas": 12,
+          "n_chars_medio": 602.8,
+          "janela": {
+            "n": 40,
+            "min": "2022-05-21",
+            "max": "2026-08-08",
+            "p5": "2022-05-21",
+            "p50": "2026-08-07",
+            "p95": "2026-08-08"
+          }
+        }
+      },
+      "S3": {
+        "negativas": {
+          "n_final": 40,
+          "fecha_cota": true,
+          "n_antigas": 10,
+          "n_chars_medio": 584.9,
+          "janela": {
+            "n": 40,
+            "min": "2022-07-17",
+            "max": "2026-08-07",
+            "p5": "2022-09-28",
+            "p50": "2026-07-31",
+            "p95": "2026-08-07"
+          }
+        },
+        "medianas": {
+          "n_final": 40,
+          "fecha_cota": true,
+          "n_antigas": 10,
+          "n_chars_medio": 472.9,
+          "janela": {
+            "n": 40,
+            "min": "2022-06-01",
+            "max": "2026-08-08",
+            "p5": "2022-08-05",
+            "p50": "2026-08-04",
+            "p95": "2026-08-08"
+          }
+        },
+        "positivas": {
+          "n_final": 40,
+          "fecha_cota": true,
+          "n_antigas": 8,
+          "n_chars_medio": 653.6,
+          "janela": {
+            "n": 40,
+            "min": "2022-05-21",
+            "max": "2026-08-08",
+            "p5": "2022-05-21",
+            "p50": "2026-08-07",
+            "p95": "2026-08-08"
+          }
+        }
+      }
+    },
+    "avengers-endgame": {
+      "fracao_antiga_no_bruto": {
+        "negativas": 0.2441,
+        "medianas": 0.2293,
+        "positivas": 0.1809
+      },
+      "S1": {
+        "negativas": {
+          "n_final": 40,
+          "fecha_cota": true,
+          "n_antigas": 8,
+          "n_chars_medio": 648.2,
+          "janela": {
+            "n": 40,
+            "min": "2019-04-23",
+            "max": "2026-08-08",
+            "p5": "2019-04-23",
+            "p50": "2026-07-31",
+            "p95": "2026-08-07"
+          }
+        },
+        "medianas": {
+          "n_final": 40,
+          "fecha_cota": true,
+          "n_antigas": 9,
+          "n_chars_medio": 642.6,
+          "janela": {
+            "n": 40,
+            "min": "2019-04-23",
+            "max": "2026-08-08",
+            "p5": "2019-04-23",
+            "p50": "2026-08-06",
+            "p95": "2026-08-08"
+          }
+        },
+        "positivas": {
+          "n_final": 40,
+          "fecha_cota": true,
+          "n_antigas": 5,
+          "n_chars_medio": 363.4,
+          "janela": {
+            "n": 40,
+            "min": "2019-04-22",
+            "max": "2026-08-09",
+            "p5": "2019-04-23",
+            "p50": "2026-08-07",
+            "p95": "2026-08-08"
+          }
+        }
+      },
+      "S2": {
+        "negativas": {
+          "n_final": 40,
+          "fecha_cota": true,
+          "n_antigas": 12,
+          "n_chars_medio": 787.7,
+          "janela": {
+            "n": 40,
+            "min": "2019-04-23",
+            "max": "2026-08-08",
+            "p5": "2019-04-23",
+            "p50": "2026-07-30",
+            "p95": "2026-08-07"
+          }
+        },
+        "medianas": {
+          "n_final": 40,
+          "fecha_cota": true,
+          "n_antigas": 12,
+          "n_chars_medio": 922.0,
+          "janela": {
+            "n": 40,
+            "min": "2019-04-23",
+            "max": "2026-08-08",
+            "p5": "2019-04-23",
+            "p50": "2026-08-06",
+            "p95": "2026-08-08"
+          }
+        },
+        "positivas": {
+          "n_final": 40,
+          "fecha_cota": true,
+          "n_antigas": 12,
+          "n_chars_medio": 474.6,
+          "janela": {
+            "n": 40,
+            "min": "2019-04-19",
+            "max": "2026-08-09",
+            "p5": "2019-04-23",
+            "p50": "2026-08-07",
+            "p95": "2026-08-08"
+          }
+        }
+      },
+      "S3": {
+        "negativas": {
+          "n_final": 40,
+          "fecha_cota": true,
+          "n_antigas": 10,
+          "n_chars_medio": 678.2,
+          "janela": {
+            "n": 40,
+            "min": "2019-04-23",
+            "max": "2026-08-08",
+            "p5": "2019-04-24",
+            "p50": "2026-07-31",
+            "p95": "2026-08-07"
+          }
+        },
+        "medianas": {
+          "n_final": 40,
+          "fecha_cota": true,
+          "n_antigas": 9,
+          "n_chars_medio": 942.9,
+          "janela": {
+            "n": 40,
+            "min": "2019-04-23",
+            "max": "2026-08-08",
+            "p5": "2019-04-23",
+            "p50": "2026-08-06",
+            "p95": "2026-08-08"
+          }
+        },
+        "positivas": {
+          "n_final": 40,
+          "fecha_cota": true,
+          "n_antigas": 7,
+          "n_chars_medio": 368.1,
+          "janela": {
+            "n": 40,
+            "min": "2019-04-19",
+            "max": "2026-08-09",
+            "p5": "2019-04-22",
+            "p50": "2026-08-07",
+            "p95": "2026-08-08"
+          }
+        }
+      }
+    },
+    "barbie": {
+      "fracao_antiga_no_bruto": {
+        "negativas": 0.2182,
+        "medianas": 0.2243,
+        "positivas": 0.2222
+      },
+      "S1": {
+        "negativas": {
+          "n_final": 40,
+          "fecha_cota": true,
+          "n_antigas": 7,
+          "n_chars_medio": 517.8,
+          "janela": {
+            "n": 40,
+            "min": "2023-07-10",
+            "max": "2026-08-08",
+            "p5": "2023-07-18",
+            "p50": "2026-08-04",
+            "p95": "2026-08-08"
+          }
+        },
+        "medianas": {
+          "n_final": 40,
+          "fecha_cota": true,
+          "n_antigas": 18,
+          "n_chars_medio": 373.4,
+          "janela": {
+            "n": 40,
+            "min": "2023-02-09",
+            "max": "2026-08-07",
+            "p5": "2023-07-09",
+            "p50": "2024-02-07",
+            "p95": "2026-08-07"
+          }
+        },
+        "positivas": {
+          "n_final": 40,
+          "fecha_cota": true,
+          "n_antigas": 4,
+          "n_chars_medio": 511.2,
+          "janela": {
+            "n": 40,
+            "min": "2023-07-01",
+            "max": "2026-08-08",
+            "p5": "2023-07-09",
+            "p50": "2026-08-07",
+            "p95": "2026-08-08"
+          }
+        }
+      },
+      "S2": {
+        "negativas": {
+          "n_final": 40,
+          "fecha_cota": true,
+          "n_antigas": 12,
+          "n_chars_medio": 580.8,
+          "janela": {
+            "n": 40,
+            "min": "2023-07-10",
+            "max": "2026-08-08",
+            "p5": "2023-07-17",
+            "p50": "2026-08-04",
+            "p95": "2026-08-08"
+          }
+        },
+        "medianas": {
+          "n_final": 40,
+          "fecha_cota": true,
+          "n_antigas": 12,
+          "n_chars_medio": 494.4,
+          "janela": {
+            "n": 40,
+            "min": "2023-02-09",
+            "max": "2026-08-07",
+            "p5": "2023-07-10",
+            "p50": "2026-08-04",
+            "p95": "2026-08-07"
+          }
+        },
+        "positivas": {
+          "n_final": 40,
+          "fecha_cota": true,
+          "n_antigas": 12,
+          "n_chars_medio": 539.4,
+          "janela": {
+            "n": 40,
+            "min": "2023-07-01",
+            "max": "2026-08-08",
+            "p5": "2023-07-09",
+            "p50": "2026-08-07",
+            "p95": "2026-08-08"
+          }
+        }
+      },
+      "S3": {
+        "negativas": {
+          "n_final": 40,
+          "fecha_cota": true,
+          "n_antigas": 9,
+          "n_chars_medio": 559,
+          "janela": {
+            "n": 40,
+            "min": "2023-07-10",
+            "max": "2026-08-08",
+            "p5": "2023-07-18",
+            "p50": "2026-08-04",
+            "p95": "2026-08-08"
+          }
+        },
+        "medianas": {
+          "n_final": 40,
+          "fecha_cota": true,
+          "n_antigas": 9,
+          "n_chars_medio": 381.4,
+          "janela": {
+            "n": 40,
+            "min": "2023-02-09",
+            "max": "2026-08-07",
+            "p5": "2023-07-17",
+            "p50": "2026-08-04",
+            "p95": "2026-08-07"
+          }
+        },
+        "positivas": {
+          "n_final": 40,
+          "fecha_cota": true,
+          "n_antigas": 9,
+          "n_chars_medio": 540.3,
+          "janela": {
+            "n": 40,
+            "min": "2023-07-01",
+            "max": "2026-08-08",
+            "p5": "2023-07-09",
+            "p50": "2026-08-07",
+            "p95": "2026-08-08"
+          }
+        }
+      }
+    },
+    "bones-and-all": {
+      "fracao_antiga_no_bruto": {
+        "negativas": 0.2162,
+        "medianas": 0.2156,
+        "positivas": 0.2143
+      },
+      "S1": {
+        "negativas": {
+          "n_final": 40,
+          "fecha_cota": true,
+          "n_antigas": 7,
+          "n_chars_medio": 325.6,
+          "janela": {
+            "n": 40,
+            "min": "2022-09-02",
+            "max": "2026-08-06",
+            "p5": "2022-09-04",
+            "p50": "2026-08-02",
+            "p95": "2026-08-06"
+          }
+        },
+        "medianas": {
+          "n_final": 40,
+          "fecha_cota": true,
+          "n_antigas": 10,
+          "n_chars_medio": 439.6,
+          "janela": {
+            "n": 40,
+            "min": "2022-09-02",
+            "max": "2026-08-08",
+            "p5": "2022-09-02",
+            "p50": "2026-08-04",
+            "p95": "2026-08-07"
+          }
+        },
+        "positivas": {
+          "n_final": 40,
+          "fecha_cota": true,
+          "n_antigas": 4,
+          "n_chars_medio": 572.2,
+          "janela": {
+            "n": 40,
+            "min": "2022-09-02",
+            "max": "2026-08-08",
+            "p5": "2022-09-02",
+            "p50": "2026-08-07",
+            "p95": "2026-08-08"
+          }
+        }
+      },
+      "S2": {
+        "negativas": {
+          "n_final": 40,
+          "fecha_cota": true,
+          "n_antigas": 12,
+          "n_chars_medio": 374.8,
+          "janela": {
+            "n": 40,
+            "min": "2022-09-02",
+            "max": "2026-08-06",
+            "p5": "2022-09-02",
+            "p50": "2026-08-01",
+            "p95": "2026-08-06"
+          }
+        },
+        "medianas": {
+          "n_final": 40,
+          "fecha_cota": true,
+          "n_antigas": 12,
+          "n_chars_medio": 409.0,
+          "janela": {
+            "n": 40,
+            "min": "2022-09-02",
+            "max": "2026-08-08",
+            "p5": "2022-09-02",
+            "p50": "2026-08-04",
+            "p95": "2026-08-07"
+          }
+        },
+        "positivas": {
+          "n_final": 40,
+          "fecha_cota": true,
+          "n_antigas": 12,
+          "n_chars_medio": 582.8,
+          "janela": {
+            "n": 40,
+            "min": "2022-09-02",
+            "max": "2026-08-08",
+            "p5": "2022-09-02",
+            "p50": "2026-08-07",
+            "p95": "2026-08-08"
+          }
+        }
+      },
+      "S3": {
+        "negativas": {
+          "n_final": 40,
+          "fecha_cota": true,
+          "n_antigas": 9,
+          "n_chars_medio": 340.7,
+          "janela": {
+            "n": 40,
+            "min": "2022-09-02",
+            "max": "2026-08-06",
+            "p5": "2022-09-02",
+            "p50": "2026-08-01",
+            "p95": "2026-08-06"
+          }
+        },
+        "medianas": {
+          "n_final": 40,
+          "fecha_cota": true,
+          "n_antigas": 9,
+          "n_chars_medio": 395.7,
+          "janela": {
+            "n": 40,
+            "min": "2022-09-02",
+            "max": "2026-08-08",
+            "p5": "2022-09-02",
+            "p50": "2026-08-04",
+            "p95": "2026-08-07"
+          }
+        },
+        "positivas": {
+          "n_final": 40,
+          "fecha_cota": true,
+          "n_antigas": 9,
+          "n_chars_medio": 562.7,
+          "janela": {
+            "n": 40,
+            "min": "2022-09-02",
+            "max": "2026-08-08",
+            "p5": "2022-09-02",
+            "p50": "2026-08-07",
+            "p95": "2026-08-08"
+          }
+        }
+      }
+    },
+    "cidade-de-deus": {
+      "fracao_antiga_no_bruto": {
+        "negativas": 0.24,
+        "medianas": 0.2618,
+        "positivas": 0.225
+      },
+      "S1": {
+        "negativas": {
+          "n_final": 40,
+          "fecha_cota": true,
+          "n_antigas": 5,
+          "n_chars_medio": 730.1,
+          "janela": {
+            "n": 40,
+            "min": "2014-05-03",
+            "max": "2026-08-02",
+            "p5": "2017-10-19",
+            "p50": "2026-06-04",
+            "p95": "2026-07-29"
+          }
+        },
+        "medianas": {
+          "n_final": 40,
+          "fecha_cota": true,
+          "n_antigas": 14,
+          "n_chars_medio": 690.6,
+          "janela": {
+            "n": 40,
+            "min": "2003-04-01",
+            "max": "2026-08-06",
+            "p5": "2013-01-02",
+            "p50": "2026-07-20",
+            "p95": "2026-08-05"
+          }
+        },
+        "positivas": {
+          "n_final": 40,
+          "fecha_cota": true,
+          "n_antigas": 1,
+          "n_chars_medio": 417.8,
+          "janela": {
+            "n": 40,
+            "min": "2011-10-27",
+            "max": "2026-08-07",
+            "p5": "2025-10-24",
+            "p50": "2026-08-06",
+            "p95": "2026-08-07"
+          }
+        }
+      },
+      "S2": {
+        "negativas": {
+          "n_final": 40,
+          "fecha_cota": true,
+          "n_antigas": 12,
+          "n_chars_medio": 772.4,
+          "janela": {
+            "n": 40,
+            "min": "2004-10-14",
+            "max": "2026-08-02",
+            "p5": "2013-08-03",
+            "p50": "2026-06-04",
+            "p95": "2026-07-29"
+          }
+        },
+        "medianas": {
+          "n_final": 40,
+          "fecha_cota": true,
+          "n_antigas": 12,
+          "n_chars_medio": 611.8,
+          "janela": {
+            "n": 40,
+            "min": "2003-04-01",
+            "max": "2026-08-06",
+            "p5": "2013-12-13",
+            "p50": "2026-07-21",
+            "p95": "2026-08-05"
+          }
+        },
+        "positivas": {
+          "n_final": 40,
+          "fecha_cota": true,
+          "n_antigas": 12,
+          "n_chars_medio": 473.5,
+          "janela": {
+            "n": 40,
+            "min": "2011-10-27",
+            "max": "2026-08-07",
+            "p5": "2011-11-27",
+            "p50": "2026-08-06",
+            "p95": "2026-08-07"
+          }
+        }
+      },
+      "S3": {
+        "negativas": {
+          "n_final": 40,
+          "fecha_cota": true,
+          "n_antigas": 10,
+          "n_chars_medio": 771.9,
+          "janela": {
+            "n": 40,
+            "min": "2004-10-14",
+            "max": "2026-08-02",
+            "p5": "2013-08-03",
+            "p50": "2026-06-10",
+            "p95": "2026-07-29"
+          }
+        },
+        "medianas": {
+          "n_final": 40,
+          "fecha_cota": true,
+          "n_antigas": 10,
+          "n_chars_medio": 602.2,
+          "janela": {
+            "n": 40,
+            "min": "2003-04-01",
+            "max": "2026-08-06",
+            "p5": "2013-12-13",
+            "p50": "2026-07-24",
+            "p95": "2026-08-05"
+          }
+        },
+        "positivas": {
+          "n_final": 40,
+          "fecha_cota": true,
+          "n_antigas": 9,
+          "n_chars_medio": 454.2,
+          "janela": {
+            "n": 40,
+            "min": "2011-10-27",
+            "max": "2026-08-07",
+            "p5": "2011-11-27",
+            "p50": "2026-08-06",
+            "p95": "2026-08-07"
+          }
+        }
+      }
+    },
+    "dune-2021": {
+      "fracao_antiga_no_bruto": {
+        "negativas": 0.2727,
+        "medianas": 0.2727,
+        "positivas": 0.2727
+      },
+      "S1": {
+        "negativas": {
+          "n_final": 40,
+          "fecha_cota": true,
+          "n_antigas": 17,
+          "n_chars_medio": 543.5,
+          "janela": {
+            "n": 40,
+            "min": "2021-06-01",
+            "max": "2026-08-08",
+            "p5": "2021-09-03",
+            "p50": "2026-08-03",
+            "p95": "2026-08-07"
+          }
+        },
+        "medianas": {
+          "n_final": 40,
+          "fecha_cota": true,
+          "n_antigas": 11,
+          "n_chars_medio": 794.6,
+          "janela": {
+            "n": 40,
+            "min": "2021-09-03",
+            "max": "2026-08-08",
+            "p5": "2021-09-03",
+            "p50": "2026-08-06",
+            "p95": "2026-08-07"
+          }
+        },
+        "positivas": {
+          "n_final": 40,
+          "fecha_cota": true,
+          "n_antigas": 7,
+          "n_chars_medio": 575.2,
+          "janela": {
+            "n": 40,
+            "min": "2021-09-03",
+            "max": "2026-08-08",
+            "p5": "2021-09-03",
+            "p50": "2026-08-07",
+            "p95": "2026-08-08"
+          }
+        }
+      },
+      "S2": {
+        "negativas": {
+          "n_final": 40,
+          "fecha_cota": true,
+          "n_antigas": 12,
+          "n_chars_medio": 674.4,
+          "janela": {
+            "n": 40,
+            "min": "2021-09-03",
+            "max": "2026-08-08",
+            "p5": "2021-09-06",
+            "p50": "2026-08-05",
+            "p95": "2026-08-07"
+          }
+        },
+        "medianas": {
+          "n_final": 40,
+          "fecha_cota": true,
+          "n_antigas": 12,
+          "n_chars_medio": 804.9,
+          "janela": {
+            "n": 40,
+            "min": "2021-09-03",
+            "max": "2026-08-08",
+            "p5": "2021-09-03",
+            "p50": "2026-08-06",
+            "p95": "2026-08-07"
+          }
+        },
+        "positivas": {
+          "n_final": 40,
+          "fecha_cota": true,
+          "n_antigas": 12,
+          "n_chars_medio": 636.3,
+          "janela": {
+            "n": 40,
+            "min": "2021-08-23",
+            "max": "2026-08-08",
+            "p5": "2021-09-03",
+            "p50": "2026-08-07",
+            "p95": "2026-08-08"
+          }
+        }
+      },
+      "S3": {
+        "negativas": {
+          "n_final": 40,
+          "fecha_cota": true,
+          "n_antigas": 11,
+          "n_chars_medio": 646.6,
+          "janela": {
+            "n": 40,
+            "min": "2021-09-03",
+            "max": "2026-08-08",
+            "p5": "2021-09-06",
+            "p50": "2026-08-05",
+            "p95": "2026-08-07"
+          }
+        },
+        "medianas": {
+          "n_final": 40,
+          "fecha_cota": true,
+          "n_antigas": 11,
+          "n_chars_medio": 751.8,
+          "janela": {
+            "n": 40,
+            "min": "2021-09-03",
+            "max": "2026-08-08",
+            "p5": "2021-09-03",
+            "p50": "2026-08-06",
+            "p95": "2026-08-07"
+          }
+        },
+        "positivas": {
+          "n_final": 40,
+          "fecha_cota": true,
+          "n_antigas": 11,
+          "n_chars_medio": 648.5,
+          "janela": {
+            "n": 40,
+            "min": "2021-08-23",
+            "max": "2026-08-08",
+            "p5": "2021-09-03",
+            "p50": "2026-08-07",
+            "p95": "2026-08-08"
+          }
+        }
+      }
+    },
+    "everything-everywhere-all-at-once": {
+      "fracao_antiga_no_bruto": {
+        "negativas": 0.2687,
+        "medianas": 0.25,
+        "positivas": 0.2308
+      },
+      "S1": {
+        "negativas": {
+          "n_final": 40,
+          "fecha_cota": true,
+          "n_antigas": 7,
+          "n_chars_medio": 576.4,
+          "janela": {
+            "n": 40,
+            "min": "2022-03-15",
+            "max": "2026-08-07",
+            "p5": "2022-03-24",
+            "p50": "2026-07-31",
+            "p95": "2026-08-07"
+          }
+        },
+        "medianas": {
+          "n_final": 40,
+          "fecha_cota": true,
+          "n_antigas": 16,
+          "n_chars_medio": 477.9,
+          "janela": {
+            "n": 40,
+            "min": "2022-03-01",
+            "max": "2026-08-06",
+            "p5": "2022-03-11",
+            "p50": "2026-08-01",
+            "p95": "2026-08-05"
+          }
+        },
+        "positivas": {
+          "n_final": 40,
+          "fecha_cota": true,
+          "n_antigas": 10,
+          "n_chars_medio": 425.3,
+          "janela": {
+            "n": 40,
+            "min": "2022-02-02",
+            "max": "2026-08-08",
+            "p5": "2022-03-11",
+            "p50": "2026-08-06",
+            "p95": "2026-08-07"
+          }
+        }
+      },
+      "S2": {
+        "negativas": {
+          "n_final": 40,
+          "fecha_cota": true,
+          "n_antigas": 12,
+          "n_chars_medio": 574.4,
+          "janela": {
+            "n": 40,
+            "min": "2022-02-08",
+            "max": "2026-08-07",
+            "p5": "2022-03-24",
+            "p50": "2026-07-31",
+            "p95": "2026-08-07"
+          }
+        },
+        "medianas": {
+          "n_final": 40,
+          "fecha_cota": true,
+          "n_antigas": 12,
+          "n_chars_medio": 528.8,
+          "janela": {
+            "n": 40,
+            "min": "2022-03-01",
+            "max": "2026-08-07",
+            "p5": "2022-03-12",
+            "p50": "2026-08-03",
+            "p95": "2026-08-06"
+          }
+        },
+        "positivas": {
+          "n_final": 40,
+          "fecha_cota": true,
+          "n_antigas": 12,
+          "n_chars_medio": 384.5,
+          "janela": {
+            "n": 40,
+            "min": "2022-02-02",
+            "max": "2026-08-08",
+            "p5": "2022-03-11",
+            "p50": "2026-08-06",
+            "p95": "2026-08-07"
+          }
+        }
+      },
+      "S3": {
+        "negativas": {
+          "n_final": 40,
+          "fecha_cota": true,
+          "n_antigas": 11,
+          "n_chars_medio": 566.9,
+          "janela": {
+            "n": 40,
+            "min": "2022-02-08",
+            "max": "2026-08-07",
+            "p5": "2022-03-24",
+            "p50": "2026-07-31",
+            "p95": "2026-08-07"
+          }
+        },
+        "medianas": {
+          "n_final": 40,
+          "fecha_cota": true,
+          "n_antigas": 10,
+          "n_chars_medio": 508.8,
+          "janela": {
+            "n": 40,
+            "min": "2022-03-01",
+            "max": "2026-08-07",
+            "p5": "2022-03-12",
+            "p50": "2026-08-03",
+            "p95": "2026-08-06"
+          }
+        },
+        "positivas": {
+          "n_final": 40,
+          "fecha_cota": true,
+          "n_antigas": 9,
+          "n_chars_medio": 358.8,
+          "janela": {
+            "n": 40,
+            "min": "2022-02-02",
+            "max": "2026-08-08",
+            "p5": "2022-03-11",
+            "p50": "2026-08-07",
+            "p95": "2026-08-07"
+          }
+        }
+      }
+    },
+    "hereditary": {
+      "fracao_antiga_no_bruto": {
+        "negativas": 0.2075,
+        "medianas": 0.2118,
+        "positivas": 0.2271
+      },
+      "S1": {
+        "negativas": {
+          "n_final": 40,
+          "fecha_cota": true,
+          "n_antigas": 12,
+          "n_chars_medio": 549.5,
+          "janela": {
+            "n": 40,
+            "min": "2018-01-23",
+            "max": "2026-08-08",
+            "p5": "2018-05-23",
+            "p50": "2026-08-02",
+            "p95": "2026-08-07"
+          }
+        },
+        "medianas": {
+          "n_final": 40,
+          "fecha_cota": true,
+          "n_antigas": 12,
+          "n_chars_medio": 375.8,
+          "janela": {
+            "n": 40,
+            "min": "2018-01-24",
+            "max": "2026-08-08",
+            "p5": "2018-05-23",
+            "p50": "2026-08-06",
+            "p95": "2026-08-07"
+          }
+        },
+        "positivas": {
+          "n_final": 40,
+          "fecha_cota": true,
+          "n_antigas": 8,
+          "n_chars_medio": 327.9,
+          "janela": {
+            "n": 40,
+            "min": "2018-01-21",
+            "max": "2026-08-09",
+            "p5": "2018-01-22",
+            "p50": "2026-08-07",
+            "p95": "2026-08-08"
+          }
+        }
+      },
+      "S2": {
+        "negativas": {
+          "n_final": 40,
+          "fecha_cota": true,
+          "n_antigas": 12,
+          "n_chars_medio": 566.9,
+          "janela": {
+            "n": 40,
+            "min": "2018-01-23",
+            "max": "2026-08-08",
+            "p5": "2018-06-07",
+            "p50": "2026-08-02",
+            "p95": "2026-08-07"
+          }
+        },
+        "medianas": {
+          "n_final": 40,
+          "fecha_cota": true,
+          "n_antigas": 12,
+          "n_chars_medio": 435.3,
+          "janela": {
+            "n": 40,
+            "min": "2018-01-24",
+            "max": "2026-08-08",
+            "p5": "2018-05-23",
+            "p50": "2026-08-06",
+            "p95": "2026-08-08"
+          }
+        },
+        "positivas": {
+          "n_final": 40,
+          "fecha_cota": true,
+          "n_antigas": 12,
+          "n_chars_medio": 323.2,
+          "janela": {
+            "n": 40,
+            "min": "2018-01-21",
+            "max": "2026-08-09",
+            "p5": "2018-01-22",
+            "p50": "2026-08-07",
+            "p95": "2026-08-08"
+          }
+        }
+      },
+      "S3": {
+        "negativas": {
+          "n_final": 40,
+          "fecha_cota": true,
+          "n_antigas": 8,
+          "n_chars_medio": 485.3,
+          "janela": {
+            "n": 40,
+            "min": "2018-01-23",
+            "max": "2026-08-08",
+            "p5": "2018-06-07",
+            "p50": "2026-08-02",
+            "p95": "2026-08-07"
+          }
+        },
+        "medianas": {
+          "n_final": 40,
+          "fecha_cota": true,
+          "n_antigas": 8,
+          "n_chars_medio": 421.4,
+          "janela": {
+            "n": 40,
+            "min": "2018-01-24",
+            "max": "2026-08-08",
+            "p5": "2018-06-02",
+            "p50": "2026-08-06",
+            "p95": "2026-08-08"
+          }
+        },
+        "positivas": {
+          "n_final": 40,
+          "fecha_cota": true,
+          "n_antigas": 9,
+          "n_chars_medio": 330.7,
+          "janela": {
+            "n": 40,
+            "min": "2018-01-21",
+            "max": "2026-08-09",
+            "p5": "2018-01-22",
+            "p50": "2026-08-07",
+            "p95": "2026-08-08"
+          }
+        }
+      }
+    },
+    "perfect-days-2023": {
+      "fracao_antiga_no_bruto": {
+        "negativas": 0.2727,
+        "medianas": 0.2491,
+        "positivas": 0.2308
+      },
+      "S1": {
+        "negativas": {
+          "n_final": 40,
+          "fecha_cota": true,
+          "n_antigas": 8,
+          "n_chars_medio": 516.5,
+          "janela": {
+            "n": 40,
+            "min": "2023-05-25",
+            "max": "2026-08-08",
+            "p5": "2023-05-26",
+            "p50": "2026-07-20",
+            "p95": "2026-08-06"
+          }
+        },
+        "medianas": {
+          "n_final": 40,
+          "fecha_cota": true,
+          "n_antigas": 4,
+          "n_chars_medio": 515.5,
+          "janela": {
+            "n": 40,
+            "min": "2023-05-25",
+            "max": "2026-08-07",
+            "p5": "2023-10-07",
+            "p50": "2026-08-02",
+            "p95": "2026-08-07"
+          }
+        },
+        "positivas": {
+          "n_final": 40,
+          "fecha_cota": true,
+          "n_antigas": 3,
+          "n_chars_medio": 624.1,
+          "janela": {
+            "n": 40,
+            "min": "2023-05-25",
+            "max": "2026-08-08",
+            "p5": "2023-05-25",
+            "p50": "2026-08-07",
+            "p95": "2026-08-08"
+          }
+        }
+      },
+      "S2": {
+        "negativas": {
+          "n_final": 40,
+          "fecha_cota": true,
+          "n_antigas": 12,
+          "n_chars_medio": 460.8,
+          "janela": {
+            "n": 40,
+            "min": "2023-05-25",
+            "max": "2026-08-08",
+            "p5": "2023-05-28",
+            "p50": "2026-07-05",
+            "p95": "2026-08-05"
+          }
+        },
+        "medianas": {
+          "n_final": 40,
+          "fecha_cota": true,
+          "n_antigas": 12,
+          "n_chars_medio": 611.5,
+          "janela": {
+            "n": 40,
+            "min": "2023-05-25",
+            "max": "2026-08-07",
+            "p5": "2023-05-27",
+            "p50": "2026-07-30",
+            "p95": "2026-08-07"
+          }
+        },
+        "positivas": {
+          "n_final": 40,
+          "fecha_cota": true,
+          "n_antigas": 12,
+          "n_chars_medio": 609.1,
+          "janela": {
+            "n": 40,
+            "min": "2023-05-25",
+            "max": "2026-08-08",
+            "p5": "2023-05-25",
+            "p50": "2026-08-07",
+            "p95": "2026-08-08"
+          }
+        }
+      },
+      "S3": {
+        "negativas": {
+          "n_final": 40,
+          "fecha_cota": true,
+          "n_antigas": 11,
+          "n_chars_medio": 462.7,
+          "janela": {
+            "n": 40,
+            "min": "2023-05-25",
+            "max": "2026-08-08",
+            "p5": "2023-06-04",
+            "p50": "2026-07-22",
+            "p95": "2026-08-05"
+          }
+        },
+        "medianas": {
+          "n_final": 40,
+          "fecha_cota": true,
+          "n_antigas": 10,
+          "n_chars_medio": 505.2,
+          "janela": {
+            "n": 40,
+            "min": "2023-05-25",
+            "max": "2026-08-07",
+            "p5": "2023-06-01",
+            "p50": "2026-08-01",
+            "p95": "2026-08-07"
+          }
+        },
+        "positivas": {
+          "n_final": 40,
+          "fecha_cota": true,
+          "n_antigas": 9,
+          "n_chars_medio": 589.3,
+          "janela": {
+            "n": 40,
+            "min": "2023-05-25",
+            "max": "2026-08-08",
+            "p5": "2023-05-25",
+            "p50": "2026-08-07",
+            "p95": "2026-08-08"
+          }
+        }
+      }
+    },
+    "spider-man-across-the-spider-verse": {
+      "fracao_antiga_no_bruto": {
+        "negativas": 0.2609,
+        "medianas": 0.2599,
+        "positivas": 0.2308
+      },
+      "S1": {
+        "negativas": {
+          "n_final": 40,
+          "fecha_cota": true,
+          "n_antigas": 4,
+          "n_chars_medio": 647.6,
+          "janela": {
+            "n": 40,
+            "min": "2023-03-19",
+            "max": "2026-08-08",
+            "p5": "2023-06-01",
+            "p50": "2026-07-30",
+            "p95": "2026-08-07"
+          }
+        },
+        "medianas": {
+          "n_final": 40,
+          "fecha_cota": true,
+          "n_antigas": 17,
+          "n_chars_medio": 698.5,
+          "janela": {
+            "n": 40,
+            "min": "2023-05-10",
+            "max": "2566-05-31",
+            "p5": "2023-05-30",
+            "p50": "2026-08-03",
+            "p95": "2026-08-07"
+          }
+        },
+        "positivas": {
+          "n_final": 40,
+          "fecha_cota": true,
+          "n_antigas": 5,
+          "n_chars_medio": 515.2,
+          "janela": {
+            "n": 40,
+            "min": "2023-05-19",
+            "max": "2026-08-08",
+            "p5": "2023-05-24",
+            "p50": "2026-08-07",
+            "p95": "2026-08-08"
+          }
+        }
+      },
+      "S2": {
+        "negativas": {
+          "n_final": 40,
+          "fecha_cota": true,
+          "n_antigas": 12,
+          "n_chars_medio": 667.1,
+          "janela": {
+            "n": 40,
+            "min": "2023-05-31",
+            "max": "2026-08-08",
+            "p5": "2023-06-01",
+            "p50": "2026-07-29",
+            "p95": "2026-08-07"
+          }
+        },
+        "medianas": {
+          "n_final": 40,
+          "fecha_cota": true,
+          "n_antigas": 12,
+          "n_chars_medio": 527.6,
+          "janela": {
+            "n": 40,
+            "min": "2023-05-10",
+            "max": "2566-05-31",
+            "p5": "2023-05-30",
+            "p50": "2026-08-05",
+            "p95": "2026-08-07"
+          }
+        },
+        "positivas": {
+          "n_final": 40,
+          "fecha_cota": true,
+          "n_antigas": 12,
+          "n_chars_medio": 554.4,
+          "janela": {
+            "n": 40,
+            "min": "2023-05-19",
+            "max": "2026-08-08",
+            "p5": "2023-05-24",
+            "p50": "2026-08-07",
+            "p95": "2026-08-08"
+          }
+        }
+      },
+      "S3": {
+        "negativas": {
+          "n_final": 40,
+          "fecha_cota": true,
+          "n_antigas": 10,
+          "n_chars_medio": 661.2,
+          "janela": {
+            "n": 40,
+            "min": "2023-05-31",
+            "max": "2026-08-08",
+            "p5": "2023-06-01",
+            "p50": "2026-07-29",
+            "p95": "2026-08-07"
+          }
+        },
+        "medianas": {
+          "n_final": 40,
+          "fecha_cota": true,
+          "n_antigas": 10,
+          "n_chars_medio": 495.9,
+          "janela": {
+            "n": 40,
+            "min": "2023-05-10",
+            "max": "2026-08-07",
+            "p5": "2023-05-30",
+            "p50": "2026-08-05",
+            "p95": "2026-08-07"
+          }
+        },
+        "positivas": {
+          "n_final": 40,
+          "fecha_cota": true,
+          "n_antigas": 9,
+          "n_chars_medio": 550.3,
+          "janela": {
+            "n": 40,
+            "min": "2023-05-19",
+            "max": "2026-08-08",
+            "p5": "2023-05-24",
+            "p50": "2026-08-07",
+            "p95": "2026-08-08"
+          }
+        }
+      }
+    },
+    "the-invite-2026": {
+      "fracao_antiga_no_bruto": {
+        "negativas": 0.233,
+        "medianas": 0.2759,
+        "positivas": 0.2553
+      },
+      "S1": {
+        "negativas": {
+          "n_final": 40,
+          "fecha_cota": true,
+          "n_antigas": 6,
+          "n_chars_medio": 619.1,
+          "janela": {
+            "n": 40,
+            "min": "2026-06-05",
+            "max": "2026-08-06",
+            "p5": "2026-06-18",
+            "p50": "2026-08-04",
+            "p95": "2026-08-06"
+          }
+        },
+        "medianas": {
+          "n_final": 40,
+          "fecha_cota": true,
+          "n_antigas": 9,
+          "n_chars_medio": 327.7,
+          "janela": {
+            "n": 40,
+            "min": "2026-01-24",
+            "max": "2026-08-07",
+            "p5": "2026-01-30",
+            "p50": "2026-08-06",
+            "p95": "2026-08-07"
+          }
+        },
+        "positivas": {
+          "n_final": 40,
+          "fecha_cota": true,
+          "n_antigas": 6,
+          "n_chars_medio": 484,
+          "janela": {
+            "n": 40,
+            "min": "2026-01-24",
+            "max": "2026-08-07",
+            "p5": "2026-01-24",
+            "p50": "2026-08-06",
+            "p95": "2026-08-07"
+          }
+        }
+      },
+      "S2": {
+        "negativas": {
+          "n_final": 40,
+          "fecha_cota": true,
+          "n_antigas": 12,
+          "n_chars_medio": 626.2,
+          "janela": {
+            "n": 40,
+            "min": "2026-04-17",
+            "max": "2026-08-06",
+            "p5": "2026-06-05",
+            "p50": "2026-08-04",
+            "p95": "2026-08-06"
+          }
+        },
+        "medianas": {
+          "n_final": 40,
+          "fecha_cota": true,
+          "n_antigas": 12,
+          "n_chars_medio": 345.6,
+          "janela": {
+            "n": 40,
+            "min": "2026-01-24",
+            "max": "2026-08-07",
+            "p5": "2026-01-27",
+            "p50": "2026-08-06",
+            "p95": "2026-08-07"
+          }
+        },
+        "positivas": {
+          "n_final": 40,
+          "fecha_cota": true,
+          "n_antigas": 12,
+          "n_chars_medio": 527.2,
+          "janela": {
+            "n": 40,
+            "min": "2026-01-24",
+            "max": "2026-08-07",
+            "p5": "2026-01-24",
+            "p50": "2026-08-06",
+            "p95": "2026-08-07"
+          }
+        }
+      },
+      "S3": {
+        "negativas": {
+          "n_final": 40,
+          "fecha_cota": true,
+          "n_antigas": 9,
+          "n_chars_medio": 632.1,
+          "janela": {
+            "n": 40,
+            "min": "2026-04-17",
+            "max": "2026-08-06",
+            "p5": "2026-06-05",
+            "p50": "2026-08-04",
+            "p95": "2026-08-06"
+          }
+        },
+        "medianas": {
+          "n_final": 40,
+          "fecha_cota": true,
+          "n_antigas": 11,
+          "n_chars_medio": 348.2,
+          "janela": {
+            "n": 40,
+            "min": "2026-01-24",
+            "max": "2026-08-07",
+            "p5": "2026-01-27",
+            "p50": "2026-08-06",
+            "p95": "2026-08-07"
+          }
+        },
+        "positivas": {
+          "n_final": 40,
+          "fecha_cota": true,
+          "n_antigas": 10,
+          "n_chars_medio": 459.2,
+          "janela": {
+            "n": 40,
+            "min": "2026-01-24",
+            "max": "2026-08-07",
+            "p5": "2026-01-24",
+            "p50": "2026-08-06",
+            "p95": "2026-08-07"
+          }
+        }
+      }
+    },
+    "the-substance": {
+      "fracao_antiga_no_bruto": {
+        "negativas": 0.2727,
+        "medianas": 0.27,
+        "positivas": 0.2727
+      },
+      "S1": {
+        "negativas": {
+          "n_final": 40,
+          "fecha_cota": true,
+          "n_antigas": 13,
+          "n_chars_medio": 362.3,
+          "janela": {
+            "n": 40,
+            "min": "2024-05-19",
+            "max": "2026-08-08",
+            "p5": "2024-05-19",
+            "p50": "2026-08-05",
+            "p95": "2026-08-07"
+          }
+        },
+        "medianas": {
+          "n_final": 40,
+          "fecha_cota": true,
+          "n_antigas": 19,
+          "n_chars_medio": 645.5,
+          "janela": {
+            "n": 40,
+            "min": "2024-05-19",
+            "max": "2026-08-08",
+            "p5": "2024-05-19",
+            "p50": "2026-08-03",
+            "p95": "2026-08-07"
+          }
+        },
+        "positivas": {
+          "n_final": 40,
+          "fecha_cota": true,
+          "n_antigas": 2,
+          "n_chars_medio": 556.7,
+          "janela": {
+            "n": 40,
+            "min": "2024-05-19",
+            "max": "2026-08-08",
+            "p5": "2026-05-07",
+            "p50": "2026-08-07",
+            "p95": "2026-08-08"
+          }
+        }
+      },
+      "S2": {
+        "negativas": {
+          "n_final": 40,
+          "fecha_cota": true,
+          "n_antigas": 12,
+          "n_chars_medio": 383.7,
+          "janela": {
+            "n": 40,
+            "min": "2024-05-19",
+            "max": "2026-08-08",
+            "p5": "2024-05-20",
+            "p50": "2026-08-05",
+            "p95": "2026-08-07"
+          }
+        },
+        "medianas": {
+          "n_final": 40,
+          "fecha_cota": true,
+          "n_antigas": 12,
+          "n_chars_medio": 517.9,
+          "janela": {
+            "n": 40,
+            "min": "2024-05-19",
+            "max": "2026-08-08",
+            "p5": "2024-05-19",
+            "p50": "2026-08-06",
+            "p95": "2026-08-08"
+          }
+        },
+        "positivas": {
+          "n_final": 40,
+          "fecha_cota": true,
+          "n_antigas": 12,
+          "n_chars_medio": 518.2,
+          "janela": {
+            "n": 40,
+            "min": "2024-05-19",
+            "max": "2026-08-08",
+            "p5": "2024-05-19",
+            "p50": "2026-08-07",
+            "p95": "2026-08-08"
+          }
+        }
+      },
+      "S3": {
+        "negativas": {
+          "n_final": 40,
+          "fecha_cota": true,
+          "n_antigas": 11,
+          "n_chars_medio": 391.9,
+          "janela": {
+            "n": 40,
+            "min": "2024-05-19",
+            "max": "2026-08-08",
+            "p5": "2024-05-20",
+            "p50": "2026-08-06",
+            "p95": "2026-08-07"
+          }
+        },
+        "medianas": {
+          "n_final": 40,
+          "fecha_cota": true,
+          "n_antigas": 11,
+          "n_chars_medio": 515.8,
+          "janela": {
+            "n": 40,
+            "min": "2024-05-19",
+            "max": "2026-08-08",
+            "p5": "2024-05-19",
+            "p50": "2026-08-06",
+            "p95": "2026-08-08"
+          }
+        },
+        "positivas": {
+          "n_final": 40,
+          "fecha_cota": true,
+          "n_antigas": 11,
+          "n_chars_medio": 518.6,
+          "janela": {
+            "n": 40,
+            "min": "2024-05-19",
+            "max": "2026-08-08",
+            "p5": "2024-05-19",
+            "p50": "2026-08-07",
+            "p95": "2026-08-08"
+          }
+        }
+      }
+    }
+  }
+}

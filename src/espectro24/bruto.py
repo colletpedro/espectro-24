@@ -55,6 +55,16 @@ class ReviewBruta:
     - `data` — a data da review. É a EVIDÊNCIA de que `ordenacao_usada` é o
       que se declara; sem ela, a ordenação gravada no meta seria uma
       afirmação inverificável a partir do próprio material coletado.
+    - `ordenacao_origem` (v1.9.6, §3[B']) — o segmento de URL sob o qual ESTA
+      review foi raspada. Propriedade da review na mesma acepção de
+      `pagina_origem` (*como ela foi obtida*), nunca decisão de seleção. Sem
+      ele, com duas ordenações no mesmo bruto (§2.3), `pagina_origem = 1`
+      significaria "mais recente" e "mais antiga" no MESMO arquivo — e a
+      estratificação da seleção (§3[C2]) trataria review de 2012 como a faixa
+      mais rasa, silenciosamente. `None` = coletada antes do campo existir; a
+      leitura correta é `meta["ordenacao_usada"]` da coleta base, resolvida no
+      consumo (`reviews_da_ordenacao`) e NUNCA gravada por inferência sobre
+      dado histórico.
     """
     id: str
     nivel: float
@@ -67,6 +77,7 @@ class ReviewBruta:
     truncada: bool
     texto_completo: bool
     data: str | None
+    ordenacao_origem: str | None = None
 
     def para_review(self):
         """Adaptador para a `Review` que a camada de análise (§D) consome.
@@ -209,6 +220,118 @@ def janela_temporal(reviews: Iterable[ReviewBruta]) -> dict | None:
         "p50": percentil(datas, 0.50),
         "p95": percentil(datas, 0.95),
     }
+
+
+def _dia(s: str | None) -> str | None:
+    """`YYYY-MM-DD` de uma `data` que pode ou não trazer hora (§3[B'])."""
+    return s[:10] if s and len(s) >= 10 else None
+
+
+def _para_date(s: str | None):
+    from datetime import date
+
+    s = _dia(s)
+    if not s:
+        return None
+    try:
+        y, m, d = (int(x) for x in s.split("-"))
+        return date(y, m, d)
+    except ValueError:
+        return None
+
+
+def _mediana_de_datas(datas: list):
+    return sorted(datas)[len(datas) // 2]
+
+
+def dias_por_100_paginas(reviews: Iterable[ReviewBruta]) -> dict | None:
+    """[v1.9.6, §3[B']] Quanto TEMPO cada 100 páginas da listagem cobre.
+
+    **O discriminador de qual estratégia cada filme precisa** (§2.3): abaixo do
+    limiar, as 256 páginas que a plataforma expõe não cobrem um ano e só a
+    ordenação alcança o passado; acima, a profundidade sob `by/added` já
+    entrega anos e uma passada compraria cobertura existente.
+
+        dias = mediana(data na página mais RASA) − mediana(data na mais FUNDA)
+        dias_por_100_paginas = 100 × dias / (pagina_max − pagina_min)
+
+    A **mediana por página**, não a data de uma review: uma página tem ~12
+    reviews e `data` é a data ASSISTIDA (proxy contaminado, §3[B']) — a
+    mediana da página é robusta ao outlier que domina min/max.
+
+    **A contaminação importa pouco AQUI** e a razão é específica: o que se mede
+    é a TAXA ao longo das páginas, não a data absoluta, e a contaminação é
+    ruído aproximadamente uniforme sobre as posições — alarga a dispersão
+    dentro de cada página sem inclinar sistematicamente a diferença ENTRE
+    páginas distantes. O uso proibido continua proibido: "a amostra cobre de X
+    a Y" segue sendo afirmação sobre `data` absoluta.
+
+    **Função pura, e cega a ordenação** — quem chama é que decide o quê. Passar
+    reviews de DUAS ordenações somaria posições que não significam a mesma
+    coisa (`reviews_da_ordenacao` existe para isso).
+
+    Bordas: menos de 2 páginas distintas com data → `None`; todas as datas
+    iguais → `dias = 0` e `paginas_para_1_ano = None` (não há resposta finita,
+    e `0` mentiria). Taxa NEGATIVA (fundo mais novo que o topo, possível sob
+    contaminação) é reportada como medida, não zerada.
+    """
+    por_pagina: dict[int, list] = {}
+    for r in reviews:
+        dt = _para_date(r.data)
+        if dt is not None:
+            por_pagina.setdefault(r.pagina_origem, []).append(dt)
+    if len(por_pagina) < 2:
+        return None
+
+    p_min, p_max = min(por_pagina), max(por_pagina)
+    dias = (_mediana_de_datas(por_pagina[p_min])
+            - _mediana_de_datas(por_pagina[p_max])).days
+    vao = p_max - p_min
+    return {
+        "n_paginas": len(por_pagina),
+        "pagina_min": p_min,
+        "pagina_max": p_max,
+        "dias": dias,
+        "dias_por_100_paginas": 100 * dias / vao,
+        # Quantas páginas cobririam 1 ano — a leitura direta contra o teto de
+        # plataforma (256). `None` quando a taxa é zero ou negativa: não existe
+        # número finito de páginas que chegue lá.
+        "paginas_para_1_ano": round(365 * vao / dias) if dias > 0 else None,
+    }
+
+
+def dias_por_100_paginas_por_nivel(reviews: Iterable[ReviewBruta]) -> dict:
+    """[v1.9.6] A mesma métrica, um bloco por NÍVEL (chave string, como todo
+    mapa por nível do `meta.json`).
+
+    Por nível, e não por bucket, porque a paginação é por nível: cada nível tem
+    a própria listagem, o próprio fluxo de reviews e a própria taxa. Nível sem
+    taxa mensurável (menos de 2 páginas com data) simplesmente não aparece —
+    inventar uma entrada nula seria fingir medição.
+    """
+    por_nivel: dict[float, list] = {}
+    for r in reviews:
+        por_nivel.setdefault(r.nivel, []).append(r)
+    saida = {}
+    for nivel in sorted(por_nivel):
+        m = dias_por_100_paginas(por_nivel[nivel])
+        if m is not None:
+            saida[str(nivel)] = m
+    return saida
+
+
+def reviews_da_ordenacao(reviews: Iterable[ReviewBruta], ordenacao: str,
+                         ordenacao_base: str | None) -> list[ReviewBruta]:
+    """[v1.9.6, §3[B']] Filtra o bruto por ordenação, resolvendo `None`.
+
+    `ordenacao_origem is None` significa "coletada antes do campo existir" — a
+    leitura correta é a `ordenacao_usada` da coleta base (`ordenacao_base`,
+    lida do `meta.json`). A resolução acontece no CONSUMO, deliberadamente:
+    reescrever o histórico com `ordenacao_origem="by/added"` seria gravar uma
+    inferência como se fosse dado observado.
+    """
+    return [r for r in reviews
+            if (r.ordenacao_origem or ordenacao_base) == ordenacao]
 
 
 def distribuicao_pagina_origem(

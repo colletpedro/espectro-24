@@ -78,6 +78,11 @@ def test_campos_da_linha_sao_os_da_spec(tmp_path):
         "url", "autor_hash",
         # três adições documentadas em §3[B'], todas propriedades da review
         "truncada", "texto_completo", "data",
+        # v1.9.6 (§3[B']): a quarta, pelo mesmo critério — COMO a review foi
+        # obtida. Sem ela, com duas ordenações no mesmo bruto (§2.3),
+        # `pagina_origem=1` significaria "mais recente" e "mais antiga" no
+        # mesmo arquivo.
+        "ordenacao_origem",
     }
     assert d["nivel"] == 2.5 and d["n_chars"] == 200
 

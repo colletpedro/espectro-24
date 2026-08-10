@@ -1,0 +1,88 @@
+{
+  "slugs": {
+    "aftersun": {
+      "status": "concluido",
+      "atualizado_em": "2026-08-09T22:16:38.647759+00:00",
+      "n_por_bucket": {},
+      "estado_piso": {},
+      "requisicoes": 40
+    },
+    "avengers-endgame": {
+      "status": "concluido",
+      "atualizado_em": "2026-08-09T22:18:46.389161+00:00",
+      "n_por_bucket": {},
+      "estado_piso": {},
+      "requisicoes": 54
+    },
+    "barbie": {
+      "status": "concluido",
+      "atualizado_em": "2026-08-09T22:33:14.077616+00:00",
+      "n_por_bucket": {},
+      "estado_piso": {},
+      "requisicoes": 54
+    },
+    "bones-and-all": {
+      "status": "concluido",
+      "atualizado_em": "2026-08-09T22:34:58.937314+00:00",
+      "n_por_bucket": {},
+      "estado_piso": {},
+      "requisicoes": 44
+    },
+    "cidade-de-deus": {
+      "status": "concluido",
+      "atualizado_em": "2026-08-09T22:37:07.408693+00:00",
+      "n_por_bucket": {},
+      "estado_piso": {},
+      "requisicoes": 50
+    },
+    "dune-2021": {
+      "status": "concluido",
+      "atualizado_em": "2026-08-09T22:40:19.598275+00:00",
+      "n_por_bucket": {},
+      "estado_piso": {},
+      "requisicoes": 82
+    },
+    "everything-everywhere-all-at-once": {
+      "status": "concluido",
+      "atualizado_em": "2026-08-09T22:42:21.566941+00:00",
+      "n_por_bucket": {},
+      "estado_piso": {},
+      "requisicoes": 51
+    },
+    "hereditary": {
+      "status": "concluido",
+      "atualizado_em": "2026-08-09T22:44:56.766241+00:00",
+      "n_por_bucket": {},
+      "estado_piso": {},
+      "requisicoes": 66
+    },
+    "perfect-days-2023": {
+      "status": "concluido",
+      "atualizado_em": "2026-08-09T22:47:12.096049+00:00",
+      "n_por_bucket": {},
+      "estado_piso": {},
+      "requisicoes": 46
+    },
+    "spider-man-across-the-spider-verse": {
+      "status": "concluido",
+      "atualizado_em": "2026-08-09T22:48:54.475568+00:00",
+      "n_por_bucket": {},
+      "estado_piso": {},
+      "requisicoes": 39
+    },
+    "the-invite-2026": {
+      "status": "concluido",
+      "atualizado_em": "2026-08-09T22:50:28.579440+00:00",
+      "n_por_bucket": {},
+      "estado_piso": {},
+      "requisicoes": 39
+    },
+    "the-substance": {
+      "status": "concluido",
+      "atualizado_em": "2026-08-09T22:52:15.211022+00:00",
+      "n_por_bucket": {},
+      "estado_piso": {},
+      "requisicoes": 45
+    }
+  }
+}
