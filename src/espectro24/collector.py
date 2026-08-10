@@ -18,6 +18,7 @@ from datetime import datetime, timezone
 from pathlib import Path
 
 from .alocacao import dividir_raso_profundo, redistribuir_deficit
+from .profundidade import posicoes_profundas
 from .bruto import ReviewBruta, autor_hash, id_estavel, persistir
 from .config import (
     DADOS_BRUTO_DIR,
@@ -142,7 +143,8 @@ def raspar_nivel(fetcher: Fetcher, slug: str, nivel: float, alvo: int,
                  teto_paginas: int = TETO_PAGINAS,
                  folga: float = FOLGA_ALVO_COLETA,
                  min_chars: int = MIN_CHARS,
-                 reserva_profundidade: float = RESERVA_PROFUNDIDADE) -> NivelBruto:
+                 reserva_profundidade: float = RESERVA_PROFUNDIDADE,
+                 profundidade: int | None = None) -> NivelBruto:
     """Pagina UM nível e devolve tudo o que veio (§3[B]).
 
     **v1.9.2 — condição de parada DETERMINÍSTICA, dois motivos possíveis:**
@@ -154,6 +156,16 @@ def raspar_nivel(fetcher: Fetcher, slug: str, nivel: float, alvo: int,
     continuam existindo, mas com escopo REDUZIDO: só decidem o orçamento do
     completamento [C'] (quantas truncadas resolver), nunca mais quando parar
     de paginar.
+
+    **v1.9.5 — a ÂNCORA do bloco profundo muda (§3[B]).** `profundidade` é a
+    profundidade REAL estimada deste nível (`profundidade.sondar_profundidade`
+    + escala por histograma). Com ela, as posições profundas passam a ser
+    FRAÇÕES dessa profundidade em vez de incrementos geométricos a partir do
+    fim do bloco raso — o defeito medido era que a âncora antiga punha
+    "profundo" na página 14-28 de níveis que vão a ~256, comprando mediana de
+    3 dias sobre o raso. `profundidade=None` degrada para o comportamento
+    v1.9.2, byte-idêntico. **O NÚMERO de páginas buscadas não muda em nenhum
+    dos dois casos** — só onde elas caem (`tests/test_profundidade.py`).
 
     **v1.9.2 — posicionamento ESTRATIFICADO por profundidade (§3[B]).** O
     orçamento do nível se divide em bloco RASO (posições `1..n_raso`,
@@ -207,7 +219,13 @@ def raspar_nivel(fetcher: Fetcher, slug: str, nivel: float, alvo: int,
 
         # --- bloco profundo: só se o raso não esgotou ---
         if not esgotou and n_profundo > 0:
-            geometricas = [n_raso + 2 ** k for k in range(1, n_profundo + 1)]
+            # v1.9.5: as posições vêm de `posicoes_profundas`, que devolve
+            # frações da profundidade real quando ela é conhecida e a
+            # progressão geométrica da v1.9.2 quando não é. O resto deste
+            # bloco — descoberta por página vazia, backfill dentro do
+            # intervalo confirmado, `redistribuir_deficit` — é o mesmo de
+            # antes e não sabe de onde as posições vieram.
+            geometricas = posicoes_profundas(n_raso, n_profundo, profundidade)
             tentadas: list[int] = []
             k_vazio: int | None = None
             maior_confirmada = n_raso
@@ -356,7 +374,9 @@ def coletar_superset(fetcher: Fetcher, slug: str,
                      raiz: str | Path = DADOS_BRUTO_DIR,
                      ordenacao: str = ORDENACAO,
                      teto_paginas: int | dict[float, int] = TETO_PAGINAS,
-                     on_level=None, extensao=None) -> SupersetResult:
+                     on_level=None, extensao=None,
+                     profundidade_por_nivel: dict[float, int] | None = None,
+                     sondagem: dict | None = None) -> SupersetResult:
     """Varre os 10 níveis, persiste o superset e devolve a telemetria (§3[B']).
 
     A varredura é pela **escala inteira**, na ordem crescente de estrela — o
@@ -384,7 +404,8 @@ def coletar_superset(fetcher: Fetcher, slug: str,
                else teto_paginas)
         orcamento_por_nivel[nivel] = teto
         nb = raspar_nivel(fetcher, slug, nivel, alvo_por_nivel.get(nivel, 0),
-                          ordenacao=ordenacao, teto_paginas=teto)
+                          ordenacao=ordenacao, teto_paginas=teto,
+                          profundidade=(profundidade_por_nivel or {}).get(nivel))
         res.niveis[nivel] = nb
         if on_level:
             on_level(nb)
@@ -426,6 +447,13 @@ def coletar_superset(fetcher: Fetcher, slug: str,
     }
     if telemetria_extensao is not None:
         res.meta["extensao_por_bucket"] = telemetria_extensao
+    # v1.9.5 (§3[B]): sem estes dois campos, "por que a página 137 foi
+    # buscada" é irrespondível a partir do bruto.
+    if sondagem is not None:
+        res.meta["profundidade_sondagem"] = sondagem
+    if profundidade_por_nivel:
+        res.meta["profundidade_estimada_por_nivel"] = {
+            str(n): v for n, v in sorted(profundidade_por_nivel.items())}
     todas = [rev for nb in res.niveis.values() for rev in nb.reviews]
     persistido = persistir(slug, res.meta, todas, raiz=raiz)
     res.n_reviews = persistido.n_total

@@ -13,7 +13,9 @@ from __future__ import annotations
 
 from dataclasses import dataclass, field
 
-from .alocacao import alocar_bucket, redistribuir_deficit
+import math
+
+from .alocacao import alocar_bucket, dividir_raso_profundo, redistribuir_deficit
 from .bruto import ReviewBruta
 from .buckets import FRONTEIRAS, mapa_de_niveis
 from .collector import estado_do_piso
@@ -136,6 +138,69 @@ def _discriminar_descartes(brutas_do_nivel: list[ReviewBruta],
     return motivos
 
 
+def faixas_de_profundidade(pool: list[ReviewBruta],
+                           n_raso: int) -> tuple[list, list, list]:
+    """As 3 faixas de profundidade de UM nível (v1.9.5, §3[C2]).
+
+    A divisão é **estrutural, não um tercil da distribuição observada**: a
+    coleta (§3[B]) já produz dois blocos de naturezas diferentes — o RASO é
+    consecutivo e denso (posições `1..n_raso`), o PROFUNDO é esparso e cada
+    página cobre muito mais tempo. Partir o raso ao meio e manter o profundo
+    inteiro respeita essa estrutura; cortar por tercil das posições presentes
+    daria faixas diferentes em cada filme, sem significado comum entre eles.
+    """
+    meio = max(1, math.ceil(n_raso / 2))
+    return ([r for r in pool if r.pagina_origem <= meio],
+            [r for r in pool if meio < r.pagina_origem <= n_raso],
+            [r for r in pool if r.pagina_origem > n_raso])
+
+
+def _escolher_estratificado(pool: list[ReviewBruta], n_alvo: int,
+                            n_raso: int) -> list[ReviewBruta]:
+    """Escolhe `n_alvo` reviews do pool de UM nível, com cota por faixa (E1).
+
+    A ordem DENTRO da faixa continua sendo `(pagina_origem, ordem no jsonl)` —
+    muda quantas vagas cada faixa recebe, nunca o desempate dentro dela.
+
+    A alocação entre faixas é `alocar_bucket` com pesos iguais seguida de
+    `redistribuir_deficit` com a contagem de cada faixa como disponibilidade —
+    **quinto uso da mesma função** (reviews entre níveis, páginas entre
+    níveis, posições dentro de um nível, extras da v1.9.4 entre níveis, agora
+    vagas entre faixas). Faixa vazia devolve suas vagas às outras.
+
+    **Quando os dois critérios de estratificação competem, este cede.** Com
+    `n_alvo < 3` não há como preencher três faixas; a função devolve o prefixo
+    do pool, que é exatamente o comportamento anterior à v1.9.5. A precedência
+    não é arbitrária: a alocação proporcional por nível (§3[C1]) carrega uma
+    garantia de representatividade que o histograma sustenta, enquanto a
+    estratificação por profundidade é preferência de cobertura.
+    """
+    if n_alvo <= 0 or not pool:
+        return []
+    if n_alvo < 3 or n_raso <= 0:
+        return pool[:n_alvo]
+
+    faixas = faixas_de_profundidade(pool, n_raso)
+    disponivel = {i: len(f) for i, f in enumerate(faixas)}
+    alvo = alocar_bucket(n_alvo, {i: 1 for i in range(3)}, list(range(3)),
+                         piso_nivel=0)
+    final = redistribuir_deficit(alvo, disponivel)
+
+    escolhidas: list[ReviewBruta] = []
+    for i in range(3):
+        escolhidas.extend(faixas[i][:final.get(i, 0)])
+    # Todas as faixas curtas ao mesmo tempo: completa na ordem de sempre, para
+    # que a estratificação nunca CUSTE uma review que a seleção antiga teria.
+    if len(escolhidas) < n_alvo:
+        ja = {r.id for r in escolhidas}
+        for r in pool:
+            if r.id not in ja:
+                escolhidas.append(r)
+                if len(escolhidas) >= n_alvo:
+                    break
+    return escolhidas[:n_alvo]
+
+
 def _cascade_pool(reviews: list[ReviewBruta], min_chars: int,
                   cascata: list[int], excluir_spoiler: bool
                   ) -> tuple[list[ReviewBruta], int]:
@@ -164,6 +229,7 @@ def selecionar(reviews: list[ReviewBruta],
                excluir_spoiler: bool = True,
                cascata: list[int] | None = None,
                piso_nivel: int = PISO_ALOCACAO_POR_NIVEL,
+               orcamento_paginas_por_nivel: dict[float, int] | None = None,
                ) -> dict[str, BucketSelecionado]:
     """Escolhe até `cota_por_bucket` reviews por bucket, a partir do bruto.
 
@@ -179,9 +245,16 @@ def selecionar(reviews: list[ReviewBruta],
     3. **Cascata por nível** — `min_chars` → degraus menores, disparando só em
        zero.
     4. **Redistribuição de déficit** — restrita ao mesmo bucket.
-    5. **Ordem de escolha** — `(pagina_origem, ordem no jsonl)`, que é a ordem
-       de amostragem da ordenação usada na coleta (§2.3). Determinística e
-       reproduzível: a mesma entrada dá sempre a mesma saída.
+    5. **Estratificação por profundidade (v1.9.5, §3[C2])** — a cota de cada
+       nível é alocada entre 3 faixas de `pagina_origem`; dentro da faixa, a
+       ordem continua sendo `(pagina_origem, ordem no jsonl)`. Determinística
+       e reproduzível: a mesma entrada dá sempre a mesma saída.
+
+    `orcamento_paginas_por_nivel` (v1.9.5) é o que define onde fica a
+    fronteira raso/profundo de cada nível — vem do `meta.json` do bruto.
+    **Omiti-lo devolve o comportamento byte-idêntico ao da v1.9.4**, o que
+    mantém válidos o caminho offline e todo teste anterior: a estratificação é
+    uma adição, não uma substituição.
     """
     fr = FRONTEIRAS if fronteiras is None else fronteiras
     cascata = CASCATA_CHARS if cascata is None else cascata
@@ -214,7 +287,13 @@ def selecionar(reviews: list[ReviewBruta],
         bucket.composicao_alvo = dict(alocacao)
         for n in niveis:
             brutas_do_nivel = por_nivel.get(n, [])
-            escolhidas = pools[n][:final[n]]
+            n_raso = 0
+            if orcamento_paginas_por_nivel:
+                orc = orcamento_paginas_por_nivel.get(n)
+                if orc:
+                    n_raso, _ = dividir_raso_profundo(orc)
+            escolhidas = (_escolher_estratificado(pools[n], final[n], n_raso)
+                          if n_raso else pools[n][:final[n]])
             # v1.9.1: classificação única de descarte (§3[C2]) — os quatro
             # campos antigos abaixo são DERIVADOS deste dict, não uma segunda
             # contagem que pode divergir dele.

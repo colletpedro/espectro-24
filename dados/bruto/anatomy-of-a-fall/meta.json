@@ -1,6 +1,6 @@
 {
   "slug": "anatomy-of-a-fall",
-  "coletado_em": "2026-08-08T08:24:59.519190+00:00",
+  "coletado_em": "2026-08-09T07:43:04.749441+00:00",
   "versao_coletor": "1.9.0",
   "ordenacao_usada": "by/added",
   "histograma_bruto": {
@@ -31,7 +31,7 @@
     "0.5": 1,
     "1.0": 3,
     "1.5": 2,
-    "2.0": 10,
+    "2.0": 13,
     "2.5": 6,
     "3.0": 10,
     "3.5": 2,
@@ -55,8 +55,8 @@
     "0.5": 12,
     "1.0": 36,
     "1.5": 24,
-    "2.0": 120,
-    "2.5": 72,
+    "2.0": 138,
+    "2.5": 66,
     "3.0": 120,
     "3.5": 24,
     "4.0": 84,
@@ -65,15 +65,15 @@
   },
   "contagem_estimada_valida_por_nivel": {
     "0.5": 4,
-    "1.0": 5,
+    "1.0": 3,
     "1.5": 11,
-    "2.0": 26,
+    "2.0": 28,
     "2.5": 19,
-    "3.0": 28,
+    "3.0": 29,
     "3.5": 6,
-    "4.0": 22,
-    "4.5": 12,
-    "5.0": 13
+    "4.0": 27,
+    "4.5": 15,
+    "5.0": 8
   },
   "motivo_parada_por_nivel": {
     "0.5": "orcamento_esgotado",
@@ -87,38 +87,112 @@
     "4.5": "orcamento_esgotado",
     "5.0": "orcamento_esgotado"
   },
+  "paginas_base_por_nivel": {
+    "0.5": 1,
+    "1.0": 3,
+    "1.5": 2,
+    "2.0": 10,
+    "2.5": 6,
+    "3.0": 10,
+    "3.5": 2,
+    "4.0": 7,
+    "4.5": 4,
+    "5.0": 3
+  },
+  "paginas_extensao_por_nivel": {
+    "0.5": 0,
+    "1.0": 0,
+    "1.5": 0,
+    "2.0": 3,
+    "2.5": 0,
+    "3.0": 0,
+    "3.5": 0,
+    "4.0": 0,
+    "4.5": 0,
+    "5.0": 0
+  },
+  "extensao_por_bucket": {
+    "negativas": {
+      "paginas_base": 16,
+      "paginas_extensao": 3,
+      "extras_por_nivel": {
+        "2.0": 3
+      },
+      "motivo_parada": "meta_atingida",
+      "n_validas_pos_base": 49,
+      "n_validas_pos_extensao": 50,
+      "meta": 50
+    },
+    "medianas": {
+      "paginas_base": 16,
+      "paginas_extensao": 0,
+      "extras_por_nivel": {},
+      "motivo_parada": "meta_atingida",
+      "n_validas_pos_base": 57,
+      "n_validas_pos_extensao": 57,
+      "meta": 50
+    },
+    "positivas": {
+      "paginas_base": 16,
+      "paginas_extensao": 0,
+      "extras_por_nivel": {},
+      "motivo_parada": "meta_atingida",
+      "n_validas_pos_base": 67,
+      "n_validas_pos_extensao": 67,
+      "meta": 50
+    }
+  },
+  "profundidade_sondagem": {
+    "nivel_sondado": 4.0,
+    "profundidade": 256,
+    "exata": false,
+    "requisicoes": 4,
+    "motivo": "teto_plataforma"
+  },
+  "profundidade_estimada_por_nivel": {
+    "0.5": 1,
+    "1.0": 3,
+    "1.5": 2,
+    "2.0": 10,
+    "2.5": 12,
+    "3.0": 56,
+    "3.5": 90,
+    "4.0": 256,
+    "4.5": 151,
+    "5.0": 135
+  },
   "janela_temporal": {
     "total": {
-      "n": 576,
+      "n": 681,
       "min": "2021-03-25",
       "max": "2026-08-08",
       "p5": "2026-05-30",
-      "p50": "2026-08-02",
+      "p50": "2026-07-30",
       "p95": "2026-08-07"
     },
     "por_bucket": {
       "negativas": {
-        "n": 192,
+        "n": 222,
         "min": "2024-04-20",
         "max": "2026-08-08",
-        "p5": "2026-05-29",
-        "p50": "2026-07-20",
-        "p95": "2026-08-06"
+        "p5": "2026-05-27",
+        "p50": "2026-07-17",
+        "p95": "2026-08-05"
       },
       "medianas": {
-        "n": 192,
+        "n": 219,
         "min": "2021-03-25",
         "max": "2026-08-08",
-        "p5": "2026-04-21",
-        "p50": "2026-07-31",
+        "p5": "2025-06-24",
+        "p50": "2026-07-30",
         "p95": "2026-08-07"
       },
       "positivas": {
-        "n": 192,
+        "n": 240,
         "min": "2024-01-22",
         "max": "2026-08-08",
-        "p5": "2026-07-31",
-        "p50": "2026-08-07",
+        "p5": "2026-07-12",
+        "p50": "2026-08-06",
         "p95": "2026-08-08"
       }
     }

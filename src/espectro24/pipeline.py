@@ -33,6 +33,11 @@ from .config import (
     TETO_EXTENSAO_PAGINAS,
 )
 from .extensao import estender_bucket, meta_com_folga
+from .profundidade import (
+    escalar_por_histograma,
+    nivel_mais_populoso,
+    sondar_profundidade,
+)
 from .fetcher import Fetcher
 from .models import BucketResult, LevelResult, SearchResult
 from .parser import parse_search_results
@@ -268,9 +273,23 @@ def collect_all_levels(fetcher: Fetcher, slug: str,
     for por_nivel in orc.values():
         teto_por_nivel.update(por_nivel)
 
+    # v1.9.5 (§3[B]): sondagem de profundidade POR FILME, ~4 requisições, ANTES
+    # de gastar o orçamento de páginas — é ela que dá a âncora do bloco
+    # profundo. Aditiva: falha devolve None e a coleta segue com o
+    # comportamento da v1.9.2.
+    nivel_sonda = nivel_mais_populoso(hist)
+    sondagem = None
+    profundidade_por_nivel: dict[float, int] = {}
+    if nivel_sonda is not None:
+        s = sondar_profundidade(fetcher, slug, nivel_sonda, ordenacao)
+        sondagem = s.para_meta()
+        profundidade_por_nivel = escalar_por_histograma(
+            s.profundidade, nivel_sonda, hist)
+
     superset = coletar_superset(
         fetcher, slug, alvo_por_nivel, hist, raiz=dados_dir,
         ordenacao=ordenacao, teto_paginas=teto_por_nivel, on_level=on_level,
+        profundidade_por_nivel=profundidade_por_nivel, sondagem=sondagem,
         extensao=_gancho_de_extensao(
             fetcher, slug, hist, cota_por_bucket=cota_por_bucket,
             orcamento_base=orcamento_paginas_bucket,
@@ -311,8 +330,15 @@ def run_pipeline(fetcher: Fetcher, slug: str, data_coleta: str,
     # ela enxerga o material acumulado de todas as coletas anteriores, e o
     # caminho de re-seleção offline é literalmente o mesmo código.
     _, todas = carregar(slug, raiz=dados_dir)
+    # v1.9.5 (§3[C2]): o orçamento por nível é o que define a fronteira
+    # raso/profundo de cada nível, e portanto as faixas da estratificação.
+    # Vem do superset desta execução; ausente, a seleção cai no comportamento
+    # da v1.9.4.
+    orc_meta = superset.meta.get("orcamento_paginas_por_nivel") or {}
     sel = selecionar(todas, distrib.por_nivel if distrib else None,
-                     cota_por_bucket=cota_por_bucket)
+                     cota_por_bucket=cota_por_bucket,
+                     orcamento_paginas_por_nivel={float(k): v
+                                                  for k, v in orc_meta.items()})
     buckets = montar_buckets(sel, superset)
 
     if synth:

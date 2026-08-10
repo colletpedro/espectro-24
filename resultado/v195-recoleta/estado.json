@@ -1,0 +1,324 @@
+{
+  "slugs": {
+    "aftersun": {
+      "status": "concluido",
+      "atualizado_em": "2026-08-09T07:42:09.942405+00:00",
+      "n_por_bucket": {
+        "negativas": 40,
+        "medianas": 40,
+        "positivas": 40
+      },
+      "estado_piso": {
+        "negativas": "completa",
+        "medianas": "completa",
+        "positivas": "completa"
+      },
+      "requisicoes": 13
+    },
+    "anatomy-of-a-fall": {
+      "status": "concluido",
+      "atualizado_em": "2026-08-09T07:43:04.771966+00:00",
+      "n_por_bucket": {
+        "negativas": 40,
+        "medianas": 40,
+        "positivas": 40
+      },
+      "estado_piso": {
+        "negativas": "completa",
+        "medianas": "completa",
+        "positivas": "completa"
+      },
+      "requisicoes": 22
+    },
+    "avengers-endgame": {
+      "status": "concluido",
+      "atualizado_em": "2026-08-09T07:43:38.749825+00:00",
+      "n_por_bucket": {
+        "negativas": 40,
+        "medianas": 40,
+        "positivas": 40
+      },
+      "estado_piso": {
+        "negativas": "completa",
+        "medianas": "completa",
+        "positivas": "completa"
+      },
+      "requisicoes": 13
+    },
+    "barbie": {
+      "status": "concluido",
+      "atualizado_em": "2026-08-09T07:44:52.570602+00:00",
+      "n_por_bucket": {
+        "negativas": 40,
+        "medianas": 40,
+        "positivas": 40
+      },
+      "estado_piso": {
+        "negativas": "completa",
+        "medianas": "completa",
+        "positivas": "completa"
+      },
+      "requisicoes": 29
+    },
+    "bones-and-all": {
+      "status": "concluido",
+      "atualizado_em": "2026-08-09T07:46:14.243694+00:00",
+      "n_por_bucket": {
+        "negativas": 40,
+        "medianas": 40,
+        "positivas": 40
+      },
+      "estado_piso": {
+        "negativas": "completa",
+        "medianas": "completa",
+        "positivas": "completa"
+      },
+      "requisicoes": 33
+    },
+    "cats-2019": {
+      "status": "concluido",
+      "atualizado_em": "2026-08-09T07:47:08.240769+00:00",
+      "n_por_bucket": {
+        "negativas": 40,
+        "medianas": 40,
+        "positivas": 40
+      },
+      "estado_piso": {
+        "negativas": "completa",
+        "medianas": "completa",
+        "positivas": "completa"
+      },
+      "requisicoes": 21
+    },
+    "cidade-de-deus": {
+      "status": "concluido",
+      "atualizado_em": "2026-08-09T07:47:35.701778+00:00",
+      "n_por_bucket": {
+        "negativas": 40,
+        "medianas": 40,
+        "positivas": 40
+      },
+      "estado_piso": {
+        "negativas": "completa",
+        "medianas": "completa",
+        "positivas": "completa"
+      },
+      "requisicoes": 10
+    },
+    "cure": {
+      "status": "concluido",
+      "atualizado_em": "2026-08-09T07:48:19.107519+00:00",
+      "n_por_bucket": {
+        "negativas": 40,
+        "medianas": 40,
+        "positivas": 40
+      },
+      "estado_piso": {
+        "negativas": "completa",
+        "medianas": "completa",
+        "positivas": "completa"
+      },
+      "requisicoes": 13
+    },
+    "dune-2021": {
+      "status": "falhou",
+      "atualizado_em": "2026-08-09T08:51:30.822549+00:00",
+      "motivo": "ReadTimeout: HTTPSConnectionPool(host='letterboxd.com', port=443): Read timed out. (read timeout=15)"
+    },
+    "dune-part-two": {
+      "status": "falhou",
+      "atualizado_em": "2026-08-09T09:49:31.914224+00:00",
+      "motivo": "ConnectionError: ('Connection aborted.', ConnectionResetError(54, 'Connection reset by peer'))"
+    },
+    "eighth-grade": {
+      "status": "falhou",
+      "atualizado_em": "2026-08-09T09:59:54.771479+00:00",
+      "motivo": "ConnectionError: ('Connection aborted.', ConnectionResetError(54, 'Connection reset by peer'))"
+    },
+    "everything-everywhere-all-at-once": {
+      "status": "concluido",
+      "atualizado_em": "2026-08-09T10:00:38.798284+00:00",
+      "n_por_bucket": {
+        "negativas": 40,
+        "medianas": 40,
+        "positivas": 40
+      },
+      "estado_piso": {
+        "negativas": "completa",
+        "medianas": "completa",
+        "positivas": "completa"
+      },
+      "requisicoes": 17
+    },
+    "friday-the-13th-2009": {
+      "status": "concluido",
+      "atualizado_em": "2026-08-09T10:33:22.625624+00:00",
+      "n_por_bucket": {
+        "negativas": 40,
+        "medianas": 40,
+        "positivas": 40
+      },
+      "estado_piso": {
+        "negativas": "completa",
+        "medianas": "completa",
+        "positivas": "completa"
+      },
+      "requisicoes": 3
+    },
+    "hereditary": {
+      "status": "concluido",
+      "atualizado_em": "2026-08-09T11:50:49.055293+00:00",
+      "n_por_bucket": {
+        "negativas": 40,
+        "medianas": 40,
+        "positivas": 40
+      },
+      "estado_piso": {
+        "negativas": "completa",
+        "medianas": "completa",
+        "positivas": "completa"
+      },
+      "requisicoes": 8
+    },
+    "im-still-here-2024": {
+      "status": "falhou",
+      "atualizado_em": "2026-08-09T12:07:33.921143+00:00",
+      "motivo": "ConnectionError: ('Connection aborted.', ConnectionResetError(54, 'Connection reset by peer'))"
+    },
+    "interstellar": {
+      "status": "falhou",
+      "atualizado_em": "2026-08-09T12:25:42.520508+00:00",
+      "motivo": "ConnectionError: ('Connection aborted.', ConnectionResetError(54, 'Connection reset by peer'))"
+    },
+    "joker-folie-a-deux": {
+      "status": "concluido",
+      "atualizado_em": "2026-08-09T12:51:47.908346+00:00",
+      "n_por_bucket": {
+        "negativas": 40,
+        "medianas": 40,
+        "positivas": 40
+      },
+      "estado_piso": {
+        "negativas": "completa",
+        "medianas": "completa",
+        "positivas": "completa"
+      },
+      "requisicoes": 9
+    },
+    "longlegs": {
+      "status": "concluido",
+      "atualizado_em": "2026-08-09T12:52:45.042915+00:00",
+      "n_por_bucket": {
+        "negativas": 40,
+        "medianas": 40,
+        "positivas": 40
+      },
+      "estado_piso": {
+        "negativas": "completa",
+        "medianas": "completa",
+        "positivas": "completa"
+      },
+      "requisicoes": 21
+    },
+    "mother-2017": {
+      "status": "concluido",
+      "atualizado_em": "2026-08-09T12:55:04.757185+00:00",
+      "n_por_bucket": {
+        "negativas": 40,
+        "medianas": 40,
+        "positivas": 40
+      },
+      "estado_piso": {
+        "negativas": "completa",
+        "medianas": "completa",
+        "positivas": "completa"
+      },
+      "requisicoes": 22
+    },
+    "napoleon-2023": {
+      "status": "falhou",
+      "atualizado_em": "2026-08-09T13:12:15.958641+00:00",
+      "motivo": "ConnectionError: ('Connection aborted.', ConnectionResetError(54, 'Connection reset by peer'))"
+    },
+    "obsession-2026": {
+      "status": "concluido",
+      "atualizado_em": "2026-08-09T13:12:28.673904+00:00",
+      "n_por_bucket": {
+        "negativas": 5,
+        "medianas": 6,
+        "positivas": 8
+      },
+      "estado_piso": {
+        "negativas": "sem_numero",
+        "medianas": "sem_numero",
+        "positivas": "sem_quantificador"
+      },
+      "requisicoes": 2
+    },
+    "oppenheimer-2023": {
+      "status": "falhou",
+      "atualizado_em": "2026-08-09T13:28:13.873601+00:00",
+      "motivo": "ConnectionError: ('Connection aborted.', ConnectionResetError(54, 'Connection reset by peer'))"
+    },
+    "parasite-2019": {
+      "status": "concluido",
+      "atualizado_em": "2026-08-09T13:51:51.729034+00:00",
+      "n_por_bucket": {
+        "negativas": 40,
+        "medianas": 40,
+        "positivas": 40
+      },
+      "estado_piso": {
+        "negativas": "completa",
+        "medianas": "completa",
+        "positivas": "completa"
+      },
+      "requisicoes": 5
+    },
+    "pearl-2022": {
+      "status": "falhou",
+      "atualizado_em": "2026-08-09T14:41:04.077430+00:00",
+      "motivo": "ReadTimeout: HTTPSConnectionPool(host='letterboxd.com', port=443): Read timed out. (read timeout=15)"
+    },
+    "perfect-days-2023": {
+      "status": "concluido",
+      "atualizado_em": "2026-08-09T14:53:15.853823+00:00",
+      "n_por_bucket": {
+        "negativas": 40,
+        "medianas": 40,
+        "positivas": 40
+      },
+      "estado_piso": {
+        "negativas": "completa",
+        "medianas": "completa",
+        "positivas": "completa"
+      },
+      "requisicoes": 13
+    },
+    "shutter-island": {
+      "status": "falhou",
+      "atualizado_em": "2026-08-09T14:53:50.833650+00:00",
+      "motivo": "FetchError: https://letterboxd.com/film/shutter-island/reviews/rated/1/by/added/page/4/ -> HTTP 503"
+    },
+    "spider-man-across-the-spider-verse": {
+      "status": "concluido",
+      "atualizado_em": "2026-08-09T14:54:34.997912+00:00",
+      "n_por_bucket": {
+        "negativas": 40,
+        "medianas": 40,
+        "positivas": 40
+      },
+      "estado_piso": {
+        "negativas": "completa",
+        "medianas": "completa",
+        "positivas": "completa"
+      },
+      "requisicoes": 17
+    },
+    "talk-to-me-2022": {
+      "status": "falhou",
+      "atualizado_em": "2026-08-09T15:12:11.310841+00:00",
+      "motivo": "ConnectionError: ('Connection aborted.', ConnectionResetError(54, 'Connection reset by peer'))"
+    }
+  }
+}

@@ -1,6 +1,6 @@
 {
   "slug": "perfect-days-2023",
-  "coletado_em": "2026-08-08T08:21:53.897986+00:00",
+  "coletado_em": "2026-08-09T14:53:15.819813+00:00",
   "versao_coletor": "1.9.0",
   "ordenacao_usada": "by/added",
   "histograma_bruto": {
@@ -29,9 +29,9 @@
   },
   "paginas_gastas_por_nivel": {
     "0.5": 1,
-    "1.0": 3,
+    "1.0": 2,
     "1.5": 2,
-    "2.0": 10,
+    "2.0": 8,
     "2.5": 6,
     "3.0": 10,
     "3.5": 2,
@@ -53,10 +53,10 @@
   ],
   "contagem_bruta_por_nivel": {
     "0.5": 12,
-    "1.0": 36,
+    "1.0": 24,
     "1.5": 24,
-    "2.0": 120,
-    "2.5": 72,
+    "2.0": 96,
+    "2.5": 67,
     "3.0": 120,
     "3.5": 24,
     "4.0": 60,
@@ -65,15 +65,15 @@
   },
   "contagem_estimada_valida_por_nivel": {
     "0.5": 4,
-    "1.0": 15,
+    "1.0": 11,
     "1.5": 9,
-    "2.0": 31,
-    "2.5": 30,
-    "3.0": 37,
+    "2.0": 24,
+    "2.5": 25,
+    "3.0": 36,
     "3.5": 6,
-    "4.0": 16,
-    "4.5": 10,
-    "5.0": 25
+    "4.0": 18,
+    "4.5": 14,
+    "5.0": 22
   },
   "motivo_parada_por_nivel": {
     "0.5": "orcamento_esgotado",
@@ -87,13 +87,85 @@
     "4.5": "orcamento_esgotado",
     "5.0": "orcamento_esgotado"
   },
+  "paginas_base_por_nivel": {
+    "0.5": 1,
+    "1.0": 2,
+    "1.5": 2,
+    "2.0": 8,
+    "2.5": 6,
+    "3.0": 10,
+    "3.5": 2,
+    "4.0": 5,
+    "4.5": 3,
+    "5.0": 6
+  },
+  "paginas_extensao_por_nivel": {
+    "0.5": 0,
+    "1.0": 0,
+    "1.5": 0,
+    "2.0": 0,
+    "2.5": 0,
+    "3.0": 0,
+    "3.5": 0,
+    "4.0": 0,
+    "4.5": 0,
+    "5.0": 0
+  },
+  "extensao_por_bucket": {
+    "negativas": {
+      "paginas_base": 13,
+      "paginas_extensao": 0,
+      "extras_por_nivel": {},
+      "motivo_parada": "meta_atingida",
+      "n_validas_pos_base": 59,
+      "n_validas_pos_extensao": 59,
+      "meta": 50
+    },
+    "medianas": {
+      "paginas_base": 16,
+      "paginas_extensao": 0,
+      "extras_por_nivel": {},
+      "motivo_parada": "meta_atingida",
+      "n_validas_pos_base": 74,
+      "n_validas_pos_extensao": 74,
+      "meta": 50
+    },
+    "positivas": {
+      "paginas_base": 16,
+      "paginas_extensao": 0,
+      "extras_por_nivel": {},
+      "motivo_parada": "meta_atingida",
+      "n_validas_pos_base": 68,
+      "n_validas_pos_extensao": 68,
+      "meta": 50
+    }
+  },
+  "profundidade_sondagem": {
+    "nivel_sondado": 5.0,
+    "profundidade": 256,
+    "exata": false,
+    "requisicoes": 4,
+    "motivo": "teto_plataforma"
+  },
+  "profundidade_estimada_por_nivel": {
+    "0.5": 1,
+    "1.0": 2,
+    "1.5": 2,
+    "2.0": 8,
+    "2.5": 10,
+    "3.0": 43,
+    "3.5": 74,
+    "4.0": 222,
+    "4.5": 158,
+    "5.0": 256
+  },
   "janela_temporal": {
     "total": {
-      "n": 576,
-      "min": "2024-01-04",
+      "n": 649,
+      "min": "2023-12-24",
       "max": "2026-08-08",
-      "p5": "2026-06-18",
-      "p50": "2026-08-02",
+      "p5": "2026-06-19",
+      "p50": "2026-08-01",
       "p95": "2026-08-08"
     },
     "por_bucket": {
@@ -106,18 +178,18 @@
         "p95": "2026-08-06"
       },
       "medianas": {
-        "n": 192,
-        "min": "2024-09-23",
+        "n": 217,
+        "min": "2023-12-24",
         "max": "2026-08-08",
         "p5": "2026-07-14",
-        "p50": "2026-08-02",
+        "p50": "2026-08-01",
         "p95": "2026-08-07"
       },
       "positivas": {
-        "n": 192,
+        "n": 240,
         "min": "2024-08-07",
         "max": "2026-08-08",
-        "p5": "2026-07-24",
+        "p5": "2026-07-25",
         "p50": "2026-08-07",
         "p95": "2026-08-08"
       }

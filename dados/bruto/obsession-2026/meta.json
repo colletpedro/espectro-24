@@ -1,6 +1,6 @@
 {
   "slug": "obsession-2026",
-  "coletado_em": "2026-08-08T09:05:00.289608+00:00",
+  "coletado_em": "2026-08-09T13:12:28.669975+00:00",
   "versao_coletor": "1.9.0",
   "ordenacao_usada": "by/added",
   "histograma_bruto": {
@@ -39,9 +39,7 @@
     "4.5": 1,
     "5.0": 2
   },
-  "paradas_por_limite": [
-    "1.5"
-  ],
+  "paradas_por_limite": [],
   "contagem_bruta_por_nivel": {
     "0.5": 2,
     "1.0": 1,
@@ -69,7 +67,7 @@
   "motivo_parada_por_nivel": {
     "0.5": "material_esgotado",
     "1.0": "material_esgotado",
-    "1.5": "orcamento_esgotado",
+    "1.5": "material_esgotado",
     "2.0": "material_esgotado",
     "2.5": "material_esgotado",
     "3.0": "material_esgotado",
@@ -77,6 +75,80 @@
     "4.0": "material_esgotado",
     "4.5": "material_esgotado",
     "5.0": "material_esgotado"
+  },
+  "paginas_base_por_nivel": {
+    "0.5": 1,
+    "1.0": 1,
+    "1.5": 1,
+    "2.0": 1,
+    "2.5": 1,
+    "3.0": 2,
+    "3.5": 1,
+    "4.0": 1,
+    "4.5": 1,
+    "5.0": 2
+  },
+  "paginas_extensao_por_nivel": {
+    "0.5": 0,
+    "1.0": 0,
+    "1.5": 0,
+    "2.0": 0,
+    "2.5": 0,
+    "3.0": 0,
+    "3.5": 0,
+    "4.0": 0,
+    "4.5": 0,
+    "5.0": 0
+  },
+  "extensao_por_bucket": {
+    "negativas": {
+      "paginas_base": 4,
+      "paginas_extensao": 1,
+      "extras_por_nivel": {
+        "1.5": 1
+      },
+      "motivo_parada": "material_esgotado",
+      "n_validas_pos_base": 5,
+      "n_validas_pos_extensao": 5,
+      "meta": 50
+    },
+    "medianas": {
+      "paginas_base": 3,
+      "paginas_extensao": 0,
+      "extras_por_nivel": {},
+      "motivo_parada": "material_esgotado",
+      "n_validas_pos_base": 6,
+      "n_validas_pos_extensao": 6,
+      "meta": 50
+    },
+    "positivas": {
+      "paginas_base": 5,
+      "paginas_extensao": 0,
+      "extras_por_nivel": {},
+      "motivo_parada": "material_esgotado",
+      "n_validas_pos_base": 8,
+      "n_validas_pos_extensao": 8,
+      "meta": 50
+    }
+  },
+  "profundidade_sondagem": {
+    "nivel_sondado": 3.0,
+    "profundidade": 2,
+    "exata": true,
+    "requisicoes": 3,
+    "motivo": "encontrada"
+  },
+  "profundidade_estimada_por_nivel": {
+    "0.5": 1,
+    "1.0": 1,
+    "1.5": 1,
+    "2.0": 1,
+    "2.5": 1,
+    "3.0": 2,
+    "3.5": 1,
+    "4.0": 2,
+    "4.5": 1,
+    "5.0": 2
   },
   "janela_temporal": {
     "total": {

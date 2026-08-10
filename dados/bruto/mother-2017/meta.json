@@ -1,6 +1,6 @@
 {
   "slug": "mother-2017",
-  "coletado_em": "2026-08-08T07:52:40.641057+00:00",
+  "coletado_em": "2026-08-09T12:55:04.724189+00:00",
   "versao_coletor": "1.9.0",
   "ordenacao_usada": "by/added",
   "histograma_bruto": {
@@ -65,15 +65,15 @@
   },
   "contagem_estimada_valida_por_nivel": {
     "0.5": 8,
-    "1.0": 13,
+    "1.0": 15,
     "1.5": 6,
-    "2.0": 25,
-    "2.5": 21,
-    "3.0": 25,
-    "3.5": 10,
-    "4.0": 21,
+    "2.0": 23,
+    "2.5": 16,
+    "3.0": 22,
+    "3.5": 13,
+    "4.0": 23,
     "4.5": 4,
-    "5.0": 11
+    "5.0": 9
   },
   "motivo_parada_por_nivel": {
     "0.5": "orcamento_esgotado",
@@ -87,38 +87,110 @@
     "4.5": "orcamento_esgotado",
     "5.0": "orcamento_esgotado"
   },
+  "paginas_base_por_nivel": {
+    "0.5": 2,
+    "1.0": 4,
+    "1.5": 2,
+    "2.0": 8,
+    "2.5": 6,
+    "3.0": 10,
+    "3.5": 4,
+    "4.0": 6,
+    "4.5": 2,
+    "5.0": 4
+  },
+  "paginas_extensao_por_nivel": {
+    "0.5": 0,
+    "1.0": 0,
+    "1.5": 0,
+    "2.0": 0,
+    "2.5": 0,
+    "3.0": 0,
+    "3.5": 0,
+    "4.0": 0,
+    "4.5": 0,
+    "5.0": 0
+  },
+  "extensao_por_bucket": {
+    "negativas": {
+      "paginas_base": 16,
+      "paginas_extensao": 0,
+      "extras_por_nivel": {},
+      "motivo_parada": "meta_atingida",
+      "n_validas_pos_base": 60,
+      "n_validas_pos_extensao": 60,
+      "meta": 50
+    },
+    "medianas": {
+      "paginas_base": 16,
+      "paginas_extensao": 0,
+      "extras_por_nivel": {},
+      "motivo_parada": "meta_atingida",
+      "n_validas_pos_base": 51,
+      "n_validas_pos_extensao": 51,
+      "meta": 50
+    },
+    "positivas": {
+      "paginas_base": 16,
+      "paginas_extensao": 0,
+      "extras_por_nivel": {},
+      "motivo_parada": "meta_atingida",
+      "n_validas_pos_base": 62,
+      "n_validas_pos_extensao": 62,
+      "meta": 50
+    }
+  },
+  "profundidade_sondagem": {
+    "nivel_sondado": 4.0,
+    "profundidade": 256,
+    "exata": false,
+    "requisicoes": 4,
+    "motivo": "teto_plataforma"
+  },
+  "profundidade_estimada_por_nivel": {
+    "0.5": 20,
+    "1.0": 34,
+    "1.5": 20,
+    "2.0": 67,
+    "2.5": 59,
+    "3.0": 166,
+    "3.5": 158,
+    "4.0": 256,
+    "4.5": 91,
+    "5.0": 158
+  },
   "janela_temporal": {
     "total": {
-      "n": 576,
+      "n": 708,
       "min": "2017-08-01",
       "max": "2026-08-08",
-      "p5": "2026-07-18",
-      "p50": "2026-08-04",
+      "p5": "2026-05-09",
+      "p50": "2026-08-02",
       "p95": "2026-08-07"
     },
     "por_bucket": {
       "negativas": {
-        "n": 192,
+        "n": 228,
         "min": "2017-08-01",
         "max": "2026-08-08",
-        "p5": "2026-07-17",
-        "p50": "2026-07-31",
+        "p5": "2024-03-28",
+        "p50": "2026-07-30",
         "p95": "2026-08-07"
       },
       "medianas": {
-        "n": 192,
-        "min": "2021-08-04",
+        "n": 240,
+        "min": "2018-11-08",
         "max": "2026-08-08",
-        "p5": "2026-07-23",
-        "p50": "2026-08-03",
+        "p5": "2026-05-15",
+        "p50": "2026-08-02",
         "p95": "2026-08-07"
       },
       "positivas": {
-        "n": 192,
-        "min": "2017-10-01",
+        "n": 240,
+        "min": "2017-09-18",
         "max": "2026-08-08",
-        "p5": "2026-05-12",
-        "p50": "2026-08-06",
+        "p5": "2025-12-20",
+        "p50": "2026-08-05",
         "p95": "2026-08-08"
       }
     }

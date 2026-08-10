@@ -1,6 +1,6 @@
 {
   "slug": "cats-2019",
-  "coletado_em": "2026-08-08T07:43:07.963481+00:00",
+  "coletado_em": "2026-08-09T07:47:08.213842+00:00",
   "versao_coletor": "1.9.0",
   "ordenacao_usada": "by/added",
   "histograma_bruto": {
@@ -56,24 +56,24 @@
     "1.0": 60,
     "1.5": 12,
     "2.0": 24,
-    "2.5": 84,
-    "3.0": 108,
+    "2.5": 82,
+    "3.0": 105,
     "3.5": 36,
     "4.0": 48,
     "4.5": 12,
-    "5.0": 96
+    "5.0": 94
   },
   "contagem_estimada_valida_por_nivel": {
-    "0.5": 16,
-    "1.0": 13,
+    "0.5": 22,
+    "1.0": 15,
     "1.5": 7,
     "2.0": 6,
     "2.5": 30,
-    "3.0": 35,
-    "3.5": 8,
+    "3.0": 34,
+    "3.5": 5,
     "4.0": 15,
     "4.5": 5,
-    "5.0": 31
+    "5.0": 28
   },
   "motivo_parada_por_nivel": {
     "0.5": "orcamento_esgotado",
@@ -87,39 +87,111 @@
     "4.5": "orcamento_esgotado",
     "5.0": "orcamento_esgotado"
   },
+  "paginas_base_por_nivel": {
+    "0.5": 8,
+    "1.0": 5,
+    "1.5": 1,
+    "2.0": 2,
+    "2.5": 7,
+    "3.0": 9,
+    "3.5": 3,
+    "4.0": 4,
+    "4.5": 1,
+    "5.0": 8
+  },
+  "paginas_extensao_por_nivel": {
+    "0.5": 0,
+    "1.0": 0,
+    "1.5": 0,
+    "2.0": 0,
+    "2.5": 0,
+    "3.0": 0,
+    "3.5": 0,
+    "4.0": 0,
+    "4.5": 0,
+    "5.0": 0
+  },
+  "extensao_por_bucket": {
+    "negativas": {
+      "paginas_base": 16,
+      "paginas_extensao": 0,
+      "extras_por_nivel": {},
+      "motivo_parada": "meta_atingida",
+      "n_validas_pos_base": 52,
+      "n_validas_pos_extensao": 52,
+      "meta": 50
+    },
+    "medianas": {
+      "paginas_base": 16,
+      "paginas_extensao": 0,
+      "extras_por_nivel": {},
+      "motivo_parada": "meta_atingida",
+      "n_validas_pos_base": 80,
+      "n_validas_pos_extensao": 80,
+      "meta": 50
+    },
+    "positivas": {
+      "paginas_base": 16,
+      "paginas_extensao": 0,
+      "extras_por_nivel": {},
+      "motivo_parada": "meta_atingida",
+      "n_validas_pos_base": 67,
+      "n_validas_pos_extensao": 67,
+      "meta": 50
+    }
+  },
+  "profundidade_sondagem": {
+    "nivel_sondado": 0.5,
+    "profundidade": 256,
+    "exata": false,
+    "requisicoes": 4,
+    "motivo": "teto_plataforma"
+  },
+  "profundidade_estimada_por_nivel": {
+    "0.5": 256,
+    "1.0": 167,
+    "1.5": 53,
+    "2.0": 54,
+    "2.5": 21,
+    "3.0": 24,
+    "3.5": 8,
+    "4.0": 10,
+    "4.5": 2,
+    "5.0": 22
+  },
   "janela_temporal": {
     "total": {
-      "n": 576,
+      "n": 694,
       "min": "2019-01-08",
       "max": "2026-08-08",
-      "p5": "2020-10-19",
-      "p50": "2026-07-01",
+      "p5": "2020-08-27",
+      "p50": "2026-06-11",
       "p95": "2026-08-06"
     },
     "por_bucket": {
       "negativas": {
-        "n": 192,
+        "n": 228,
         "min": "2019-07-25",
         "max": "2026-08-08",
-        "p5": "2021-11-09",
-        "p50": "2026-08-02",
+        "p5": "2020-10-24",
+        "p50": "2026-07-31",
         "p95": "2026-08-07"
       },
       "medianas": {
-        "n": 192,
+        "n": 230,
         "min": "2019-11-19",
         "max": "2026-08-07",
         "p5": "2021-11-07",
-        "p50": "2026-05-17",
-        "p95": "2026-07-30"
+        "p50": "2026-04-27",
+        "p95": "2026-07-27"
       },
       "positivas": {
-        "n": 192,
+        "n": 236,
         "min": "2019-01-08",
         "max": "2026-08-08",
-        "p5": "2020-03-26",
-        "p50": "2026-06-25",
-        "p95": "2026-08-01"
+        "p5": "2020-01-20",
+        "p50": "2026-06-10",
+        "p95": "2026-07-28"
       }
     }
   }

@@ -1,6 +1,6 @@
 {
   "slug": "joker-folie-a-deux",
-  "coletado_em": "2026-08-08T07:39:24.641455+00:00",
+  "coletado_em": "2026-08-09T12:51:47.871534+00:00",
   "versao_coletor": "1.9.0",
   "ordenacao_usada": "by/added",
   "histograma_bruto": {
@@ -29,8 +29,8 @@
   },
   "paginas_gastas_por_nivel": {
     "0.5": 2,
-    "1.0": 4,
-    "1.5": 3,
+    "1.0": 7,
+    "1.5": 5,
     "2.0": 7,
     "2.5": 7,
     "3.0": 9,
@@ -53,8 +53,8 @@
   ],
   "contagem_bruta_por_nivel": {
     "0.5": 24,
-    "1.0": 48,
-    "1.5": 36,
+    "1.0": 60,
+    "1.5": 41,
     "2.0": 84,
     "2.5": 84,
     "3.0": 108,
@@ -65,8 +65,8 @@
   },
   "contagem_estimada_valida_por_nivel": {
     "0.5": 5,
-    "1.0": 10,
-    "1.5": 8,
+    "1.0": 14,
+    "1.5": 11,
     "2.0": 22,
     "2.5": 22,
     "3.0": 31,
@@ -87,22 +87,85 @@
     "4.5": "orcamento_esgotado",
     "5.0": "orcamento_esgotado"
   },
+  "paginas_base_por_nivel": {
+    "0.5": 2,
+    "1.0": 4,
+    "1.5": 3,
+    "2.0": 7,
+    "2.5": 7,
+    "3.0": 9,
+    "3.5": 7,
+    "4.0": 6,
+    "4.5": 1,
+    "5.0": 2
+  },
+  "paginas_extensao_por_nivel": {
+    "0.5": 0,
+    "1.0": 3,
+    "1.5": 2,
+    "2.0": 0,
+    "2.5": 0,
+    "3.0": 0,
+    "3.5": 0,
+    "4.0": 0,
+    "4.5": 0,
+    "5.0": 0
+  },
+  "extensao_por_bucket": {
+    "negativas": {
+      "paginas_base": 16,
+      "paginas_extensao": 5,
+      "extras_por_nivel": {
+        "1.0": 3,
+        "1.5": 2
+      },
+      "motivo_parada": "meta_atingida",
+      "n_validas_pos_base": 45,
+      "n_validas_pos_extensao": 52,
+      "meta": 50
+    },
+    "medianas": {
+      "paginas_base": 16,
+      "paginas_extensao": 0,
+      "extras_por_nivel": {},
+      "motivo_parada": "meta_atingida",
+      "n_validas_pos_base": 53,
+      "n_validas_pos_extensao": 53,
+      "meta": 50
+    },
+    "positivas": {
+      "paginas_base": 16,
+      "paginas_extensao": 0,
+      "extras_por_nivel": {},
+      "motivo_parada": "meta_atingida",
+      "n_validas_pos_base": 72,
+      "n_validas_pos_extensao": 72,
+      "meta": 50
+    }
+  },
+  "profundidade_sondagem": {
+    "nivel_sondado": 2.0,
+    "profundidade": null,
+    "exata": false,
+    "requisicoes": 3,
+    "motivo": "falha"
+  },
   "janela_temporal": {
     "total": {
-      "n": 576,
+      "n": 593,
       "min": "2024-05-16",
       "max": "2026-08-08",
-      "p5": "2024-12-15",
+      "p5": "2025-01-04",
       "p50": "2026-08-04",
       "p95": "2026-08-07"
     },
     "por_bucket": {
       "negativas": {
-        "n": 192,
+        "n": 209,
         "min": "2024-09-05",
         "max": "2026-08-08",
         "p5": "2025-01-09",
-        "p50": "2026-08-06",
+        "p50": "2026-08-05",
         "p95": "2026-08-07"
       },
       "medianas": {

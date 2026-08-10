@@ -1,0 +1,3849 @@
+{
+  "filmes": {
+    "aftersun": {
+      "n_bruto": 607,
+      "buckets": {
+        "negativas": {
+          "n_final": 40,
+          "estado_piso": "completa",
+          "bruto": {
+            "n": 192,
+            "pagina_min": 1,
+            "pagina_max": 12,
+            "pagina_p50": 4,
+            "pagina_p95": 12,
+            "n_profundas": 36,
+            "fracao_profunda": 0.1875,
+            "dias_p5_p95": 13,
+            "data_min": "2025-01-10",
+            "data_max": "2026-08-08"
+          },
+          "amostra": {
+            "n": 40,
+            "pagina_min": 1,
+            "pagina_max": 12,
+            "pagina_p50": 4,
+            "pagina_p95": 10,
+            "n_profundas": 8,
+            "fracao_profunda": 0.2,
+            "dias_p5_p95": 12,
+            "data_min": "2026-03-03",
+            "data_max": "2026-08-07"
+          }
+        },
+        "medianas": {
+          "n_final": 40,
+          "estado_piso": "completa",
+          "bruto": {
+            "n": 192,
+            "pagina_min": 1,
+            "pagina_max": 12,
+            "pagina_p50": 5,
+            "pagina_p95": 12,
+            "n_profundas": 48,
+            "fracao_profunda": 0.25,
+            "dias_p5_p95": 33,
+            "data_min": "2024-01-13",
+            "data_max": "2026-08-08"
+          },
+          "amostra": {
+            "n": 40,
+            "pagina_min": 1,
+            "pagina_max": 12,
+            "pagina_p50": 5,
+            "pagina_p95": 12,
+            "n_profundas": 8,
+            "fracao_profunda": 0.2,
+            "dias_p5_p95": 10,
+            "data_min": "2026-06-28",
+            "data_max": "2026-08-08"
+          }
+        },
+        "positivas": {
+          "n_final": 40,
+          "estado_piso": "completa",
+          "bruto": {
+            "n": 223,
+            "pagina_min": 1,
+            "pagina_max": 10,
+            "pagina_p50": 3,
+            "pagina_p95": 9,
+            "n_profundas": 80,
+            "fracao_profunda": 0.35874439461883406,
+            "dias_p5_p95": 208,
+            "data_min": "2023-02-06",
+            "data_max": "2026-08-08"
+          },
+          "amostra": {
+            "n": 40,
+            "pagina_min": 1,
+            "pagina_max": 9,
+            "pagina_p50": 3,
+            "pagina_p95": 8,
+            "n_profundas": 15,
+            "fracao_profunda": 0.375,
+            "dias_p5_p95": 256,
+            "data_min": "2023-02-06",
+            "data_max": "2026-08-08"
+          }
+        }
+      },
+      "gap": {
+        "gap_dias": 2,
+        "n_raso": 443,
+        "n_profundo": 164,
+        "mais_antiga_profunda": "2024-02-05",
+        "mais_antiga_rasa": "2023-02-06"
+      },
+      "profundidade_sondagem": null,
+      "profundidade_estimada_por_nivel": null,
+      "paginas_gastas_por_nivel": {
+        "0.5": 1,
+        "1.0": 3,
+        "1.5": 2,
+        "2.0": 10,
+        "2.5": 6,
+        "3.0": 10,
+        "3.5": 2,
+        "4.0": 10,
+        "4.5": 6,
+        "5.0": 6
+      }
+    },
+    "anatomy-of-a-fall": {
+      "n_bruto": 576,
+      "buckets": {
+        "negativas": {
+          "n_final": 40,
+          "estado_piso": "completa",
+          "bruto": {
+            "n": 192,
+            "pagina_min": 1,
+            "pagina_max": 12,
+            "pagina_p50": 4,
+            "pagina_p95": 12,
+            "n_profundas": 36,
+            "fracao_profunda": 0.1875,
+            "dias_p5_p95": 69,
+            "data_min": "2024-04-20",
+            "data_max": "2026-08-08"
+          },
+          "amostra": {
+            "n": 40,
+            "pagina_min": 1,
+            "pagina_max": 12,
+            "pagina_p50": 4,
+            "pagina_p95": 12,
+            "n_profundas": 10,
+            "fracao_profunda": 0.25,
+            "dias_p5_p95": 65,
+            "data_min": "2024-09-06",
+            "data_max": "2026-08-08"
+          }
+        },
+        "medianas": {
+          "n_final": 40,
+          "estado_piso": "completa",
+          "bruto": {
+            "n": 192,
+            "pagina_min": 1,
+            "pagina_max": 12,
+            "pagina_p50": 5,
+            "pagina_p95": 12,
+            "n_profundas": 48,
+            "fracao_profunda": 0.25,
+            "dias_p5_p95": 108,
+            "data_min": "2021-03-25",
+            "data_max": "2026-08-08"
+          },
+          "amostra": {
+            "n": 40,
+            "pagina_min": 1,
+            "pagina_max": 12,
+            "pagina_p50": 5,
+            "pagina_p95": 12,
+            "n_profundas": 9,
+            "fracao_profunda": 0.225,
+            "dias_p5_p95": 76,
+            "data_min": "2024-02-03",
+            "data_max": "2026-08-07"
+          }
+        },
+        "positivas": {
+          "n_final": 40,
+          "estado_piso": "completa",
+          "bruto": {
+            "n": 192,
+            "pagina_min": 1,
+            "pagina_max": 9,
+            "pagina_p50": 3,
+            "pagina_p95": 9,
+            "n_profundas": 48,
+            "fracao_profunda": 0.25,
+            "dias_p5_p95": 8,
+            "data_min": "2024-01-22",
+            "data_max": "2026-08-08"
+          },
+          "amostra": {
+            "n": 40,
+            "pagina_min": 1,
+            "pagina_max": 7,
+            "pagina_p50": 2,
+            "pagina_p95": 5,
+            "n_profundas": 8,
+            "fracao_profunda": 0.2,
+            "dias_p5_p95": 7,
+            "data_min": "2026-07-30",
+            "data_max": "2026-08-08"
+          }
+        }
+      },
+      "gap": {
+        "gap_dias": 7,
+        "n_raso": 444,
+        "n_profundo": 132,
+        "mais_antiga_profunda": "2023-10-22",
+        "mais_antiga_rasa": "2021-03-25"
+      },
+      "profundidade_sondagem": null,
+      "profundidade_estimada_por_nivel": null,
+      "paginas_gastas_por_nivel": {
+        "0.5": 1,
+        "1.0": 3,
+        "1.5": 2,
+        "2.0": 10,
+        "2.5": 6,
+        "3.0": 10,
+        "3.5": 2,
+        "4.0": 7,
+        "4.5": 4,
+        "5.0": 3
+      }
+    },
+    "avengers-endgame": {
+      "n_bruto": 717,
+      "buckets": {
+        "negativas": {
+          "n_final": 40,
+          "estado_piso": "completa",
+          "bruto": {
+            "n": 223,
+            "pagina_min": 1,
+            "pagina_max": 12,
+            "pagina_p50": 4,
+            "pagina_p95": 12,
+            "n_profundas": 67,
+            "fracao_profunda": 0.3004484304932735,
+            "dias_p5_p95": 71,
+            "data_min": "2019-04-26",
+            "data_max": "2026-08-08"
+          },
+          "amostra": {
+            "n": 40,
+            "pagina_min": 1,
+            "pagina_max": 12,
+            "pagina_p50": 4,
+            "pagina_p95": 12,
+            "n_profundas": 12,
+            "fracao_profunda": 0.3,
+            "dias_p5_p95": 854,
+            "data_min": "2019-04-27",
+            "data_max": "2026-08-08"
+          }
+        },
+        "medianas": {
+          "n_final": 40,
+          "estado_piso": "completa",
+          "bruto": {
+            "n": 206,
+            "pagina_min": 1,
+            "pagina_max": 13,
+            "pagina_p50": 5,
+            "pagina_p95": 12,
+            "n_profundas": 62,
+            "fracao_profunda": 0.30097087378640774,
+            "dias_p5_p95": 7,
+            "data_min": "2019-04-26",
+            "data_max": "2026-08-08"
+          },
+          "amostra": {
+            "n": 40,
+            "pagina_min": 1,
+            "pagina_max": 13,
+            "pagina_p50": 6,
+            "pagina_p95": 12,
+            "n_profundas": 10,
+            "fracao_profunda": 0.25,
+            "dias_p5_p95": 5,
+            "data_min": "2026-07-28",
+            "data_max": "2026-08-08"
+          }
+        },
+        "positivas": {
+          "n_final": 40,
+          "estado_piso": "completa",
+          "bruto": {
+            "n": 288,
+            "pagina_min": 1,
+            "pagina_max": 12,
+            "pagina_p50": 4,
+            "pagina_p95": 11,
+            "n_profundas": 144,
+            "fracao_profunda": 0.5,
+            "dias_p5_p95": 4,
+            "data_min": "2019-04-22",
+            "data_max": "2026-08-09"
+          },
+          "amostra": {
+            "n": 40,
+            "pagina_min": 1,
+            "pagina_max": 10,
+            "pagina_p50": 3,
+            "pagina_p95": 9,
+            "n_profundas": 17,
+            "fracao_profunda": 0.425,
+            "dias_p5_p95": 1,
+            "data_min": "2019-04-26",
+            "data_max": "2026-08-09"
+          }
+        }
+      },
+      "gap": {
+        "gap_dias": 0,
+        "n_raso": 444,
+        "n_profundo": 273,
+        "mais_antiga_profunda": "2019-04-22",
+        "mais_antiga_rasa": "2019-04-26"
+      },
+      "profundidade_sondagem": null,
+      "profundidade_estimada_por_nivel": null,
+      "paginas_gastas_por_nivel": {
+        "0.5": 1,
+        "1.0": 5,
+        "1.5": 2,
+        "2.0": 11,
+        "2.5": 6,
+        "3.0": 13,
+        "3.5": 3,
+        "4.0": 6,
+        "4.5": 3,
+        "5.0": 12
+      }
+    },
+    "barbie": {
+      "n_bruto": 576,
+      "buckets": {
+        "negativas": {
+          "n_final": 40,
+          "estado_piso": "completa",
+          "bruto": {
+            "n": 192,
+            "pagina_min": 1,
+            "pagina_max": 12,
+            "pagina_p50": 4,
+            "pagina_p95": 12,
+            "n_profundas": 36,
+            "fracao_profunda": 0.1875,
+            "dias_p5_p95": 1100,
+            "data_min": "2023-07-04",
+            "data_max": "2026-08-08"
+          },
+          "amostra": {
+            "n": 40,
+            "pagina_min": 1,
+            "pagina_max": 12,
+            "pagina_p50": 2,
+            "pagina_p95": 12,
+            "n_profundas": 8,
+            "fracao_profunda": 0.2,
+            "dias_p5_p95": 1099,
+            "data_min": "2023-07-19",
+            "data_max": "2026-08-08"
+          }
+        },
+        "medianas": {
+          "n_final": 35,
+          "estado_piso": "completa",
+          "bruto": {
+            "n": 192,
+            "pagina_min": 1,
+            "pagina_max": 12,
+            "pagina_p50": 5,
+            "pagina_p95": 12,
+            "n_profundas": 48,
+            "fracao_profunda": 0.25,
+            "dias_p5_p95": 1110,
+            "data_min": "2023-07-02",
+            "data_max": "2026-08-08"
+          },
+          "amostra": {
+            "n": 35,
+            "pagina_min": 1,
+            "pagina_max": 10,
+            "pagina_p50": 5,
+            "pagina_p95": 10,
+            "n_profundas": 6,
+            "fracao_profunda": 0.17142857142857143,
+            "dias_p5_p95": 1104,
+            "data_min": "2023-07-20",
+            "data_max": "2026-08-07"
+          }
+        },
+        "positivas": {
+          "n_final": 40,
+          "estado_piso": "completa",
+          "bruto": {
+            "n": 192,
+            "pagina_min": 1,
+            "pagina_max": 8,
+            "pagina_p50": 3,
+            "pagina_p95": 8,
+            "n_profundas": 48,
+            "fracao_profunda": 0.25,
+            "dias_p5_p95": 1108,
+            "data_min": "2023-06-15",
+            "data_max": "2026-08-08"
+          },
+          "amostra": {
+            "n": 40,
+            "pagina_min": 1,
+            "pagina_max": 8,
+            "pagina_p50": 3,
+            "pagina_p95": 8,
+            "n_profundas": 13,
+            "fracao_profunda": 0.325,
+            "dias_p5_p95": 1112,
+            "data_min": "2023-07-01",
+            "data_max": "2026-08-08"
+          }
+        }
+      },
+      "gap": {
+        "gap_dias": 1,
+        "n_raso": 444,
+        "n_profundo": 132,
+        "mais_antiga_profunda": "2023-07-04",
+        "mais_antiga_rasa": "2023-06-15"
+      },
+      "profundidade_sondagem": null,
+      "profundidade_estimada_por_nivel": null,
+      "paginas_gastas_por_nivel": {
+        "0.5": 1,
+        "1.0": 3,
+        "1.5": 2,
+        "2.0": 10,
+        "2.5": 6,
+        "3.0": 10,
+        "3.5": 3,
+        "4.0": 6,
+        "4.5": 2,
+        "5.0": 5
+      }
+    },
+    "bones-and-all": {
+      "n_bruto": 576,
+      "buckets": {
+        "negativas": {
+          "n_final": 30,
+          "estado_piso": "completa",
+          "bruto": {
+            "n": 192,
+            "pagina_min": 1,
+            "pagina_max": 11,
+            "pagina_p50": 3,
+            "pagina_p95": 11,
+            "n_profundas": 36,
+            "fracao_profunda": 0.1875,
+            "dias_p5_p95": 10,
+            "data_min": "2022-08-10",
+            "data_max": "2026-08-08"
+          },
+          "amostra": {
+            "n": 30,
+            "pagina_min": 1,
+            "pagina_max": 9,
+            "pagina_p50": 2,
+            "pagina_p95": 9,
+            "n_profundas": 5,
+            "fracao_profunda": 0.16666666666666666,
+            "dias_p5_p95": 7,
+            "data_min": "2026-07-30",
+            "data_max": "2026-08-06"
+          }
+        },
+        "medianas": {
+          "n_final": 34,
+          "estado_piso": "completa",
+          "bruto": {
+            "n": 192,
+            "pagina_min": 1,
+            "pagina_max": 12,
+            "pagina_p50": 5,
+            "pagina_p95": 12,
+            "n_profundas": 48,
+            "fracao_profunda": 0.25,
+            "dias_p5_p95": 6,
+            "data_min": "2024-05-04",
+            "data_max": "2026-08-08"
+          },
+          "amostra": {
+            "n": 34,
+            "pagina_min": 1,
+            "pagina_max": 12,
+            "pagina_p50": 5,
+            "pagina_p95": 12,
+            "n_profundas": 10,
+            "fracao_profunda": 0.29411764705882354,
+            "dias_p5_p95": 6,
+            "data_min": "2025-12-15",
+            "data_max": "2026-08-08"
+          }
+        },
+        "positivas": {
+          "n_final": 40,
+          "estado_piso": "completa",
+          "bruto": {
+            "n": 192,
+            "pagina_min": 1,
+            "pagina_max": 8,
+            "pagina_p50": 3,
+            "pagina_p95": 8,
+            "n_profundas": 48,
+            "fracao_profunda": 0.25,
+            "dias_p5_p95": 14,
+            "data_min": "2023-09-22",
+            "data_max": "2026-08-08"
+          },
+          "amostra": {
+            "n": 40,
+            "pagina_min": 1,
+            "pagina_max": 8,
+            "pagina_p50": 2,
+            "pagina_p95": 6,
+            "n_profundas": 7,
+            "fracao_profunda": 0.175,
+            "dias_p5_p95": 289,
+            "data_min": "2025-02-07",
+            "data_max": "2026-08-08"
+          }
+        }
+      },
+      "gap": {
+        "gap_dias": 3,
+        "n_raso": 444,
+        "n_profundo": 132,
+        "mais_antiga_profunda": "2025-08-31",
+        "mais_antiga_rasa": "2022-08-10"
+      },
+      "profundidade_sondagem": null,
+      "profundidade_estimada_por_nivel": null,
+      "paginas_gastas_por_nivel": {
+        "0.5": 2,
+        "1.0": 3,
+        "1.5": 2,
+        "2.0": 9,
+        "2.5": 6,
+        "3.0": 10,
+        "3.5": 3,
+        "4.0": 6,
+        "4.5": 2,
+        "5.0": 5
+      }
+    },
+    "cats-2019": {
+      "n_bruto": 576,
+      "buckets": {
+        "negativas": {
+          "n_final": 40,
+          "estado_piso": "completa",
+          "bruto": {
+            "n": 192,
+            "pagina_min": 1,
+            "pagina_max": 10,
+            "pagina_p50": 3,
+            "pagina_p95": 10,
+            "n_profundas": 36,
+            "fracao_profunda": 0.1875,
+            "dias_p5_p95": 1732,
+            "data_min": "2019-07-25",
+            "data_max": "2026-08-08"
+          },
+          "amostra": {
+            "n": 40,
+            "pagina_min": 1,
+            "pagina_max": 8,
+            "pagina_p50": 3,
+            "pagina_p95": 6,
+            "n_profundas": 2,
+            "fracao_profunda": 0.05,
+            "dias_p5_p95": 2171,
+            "data_min": "2019-12-24",
+            "data_max": "2026-08-08"
+          }
+        },
+        "medianas": {
+          "n_final": 40,
+          "estado_piso": "completa",
+          "bruto": {
+            "n": 192,
+            "pagina_min": 1,
+            "pagina_max": 11,
+            "pagina_p50": 5,
+            "pagina_p95": 11,
+            "n_profundas": 48,
+            "fracao_profunda": 0.25,
+            "dias_p5_p95": 1726,
+            "data_min": "2019-11-19",
+            "data_max": "2026-08-07"
+          },
+          "amostra": {
+            "n": 40,
+            "pagina_min": 1,
+            "pagina_max": 11,
+            "pagina_p50": 5,
+            "pagina_p95": 9,
+            "n_profundas": 13,
+            "fracao_profunda": 0.325,
+            "dias_p5_p95": 164,
+            "data_min": "2026-01-27",
+            "data_max": "2026-08-07"
+          }
+        },
+        "positivas": {
+          "n_final": 40,
+          "estado_piso": "completa",
+          "bruto": {
+            "n": 192,
+            "pagina_min": 1,
+            "pagina_max": 10,
+            "pagina_p50": 3,
+            "pagina_p95": 10,
+            "n_profundas": 48,
+            "fracao_profunda": 0.25,
+            "dias_p5_p95": 2319,
+            "data_min": "2019-01-08",
+            "data_max": "2026-08-08"
+          },
+          "amostra": {
+            "n": 40,
+            "pagina_min": 1,
+            "pagina_max": 10,
+            "pagina_p50": 4,
+            "pagina_p95": 10,
+            "n_profundas": 14,
+            "fracao_profunda": 0.35,
+            "dias_p5_p95": 1882,
+            "data_min": "2019-01-08",
+            "data_max": "2026-08-07"
+          }
+        }
+      },
+      "gap": {
+        "gap_dias": 97,
+        "n_raso": 444,
+        "n_profundo": 132,
+        "mais_antiga_profunda": "2019-01-08",
+        "mais_antiga_rasa": "2019-07-25"
+      },
+      "profundidade_sondagem": null,
+      "profundidade_estimada_por_nivel": null,
+      "paginas_gastas_por_nivel": {
+        "0.5": 8,
+        "1.0": 5,
+        "1.5": 1,
+        "2.0": 2,
+        "2.5": 7,
+        "3.0": 9,
+        "3.5": 3,
+        "4.0": 4,
+        "4.5": 1,
+        "5.0": 8
+      }
+    },
+    "cidade-de-deus": {
+      "n_bruto": 631,
+      "buckets": {
+        "negativas": {
+          "n_final": 40,
+          "estado_piso": "completa",
+          "bruto": {
+            "n": 228,
+            "pagina_min": 1,
+            "pagina_max": 12,
+            "pagina_p50": 3,
+            "pagina_p95": 12,
+            "n_profundas": 72,
+            "fracao_profunda": 0.3157894736842105,
+            "dias_p5_p95": 158,
+            "data_min": "2023-07-23",
+            "data_max": "2026-08-06"
+          },
+          "amostra": {
+            "n": 40,
+            "pagina_min": 1,
+            "pagina_max": 12,
+            "pagina_p50": 3,
+            "pagina_p95": 12,
+            "n_profundas": 16,
+            "fracao_profunda": 0.4,
+            "dias_p5_p95": 155,
+            "data_min": "2026-02-16",
+            "data_max": "2026-08-02"
+          }
+        },
+        "medianas": {
+          "n_final": 40,
+          "estado_piso": "completa",
+          "bruto": {
+            "n": 203,
+            "pagina_min": 1,
+            "pagina_max": 12,
+            "pagina_p50": 5,
+            "pagina_p95": 12,
+            "n_profundas": 60,
+            "fracao_profunda": 0.2955665024630542,
+            "dias_p5_p95": 66,
+            "data_min": "2026-01-01",
+            "data_max": "2026-08-07"
+          },
+          "amostra": {
+            "n": 40,
+            "pagina_min": 1,
+            "pagina_max": 12,
+            "pagina_p50": 5,
+            "pagina_p95": 12,
+            "n_profundas": 9,
+            "fracao_profunda": 0.225,
+            "dias_p5_p95": 44,
+            "data_min": "2026-06-21",
+            "data_max": "2026-08-06"
+          }
+        },
+        "positivas": {
+          "n_final": 40,
+          "estado_piso": "completa",
+          "bruto": {
+            "n": 200,
+            "pagina_min": 1,
+            "pagina_max": 9,
+            "pagina_p50": 3,
+            "pagina_p95": 9,
+            "n_profundas": 60,
+            "fracao_profunda": 0.3,
+            "dias_p5_p95": 52,
+            "data_min": "2022-03-01",
+            "data_max": "2026-08-07"
+          },
+          "amostra": {
+            "n": 40,
+            "pagina_min": 1,
+            "pagina_max": 9,
+            "pagina_p50": 2,
+            "pagina_p95": 8,
+            "n_profundas": 11,
+            "fracao_profunda": 0.275,
+            "dias_p5_p95": 234,
+            "data_min": "2025-07-11",
+            "data_max": "2026-08-07"
+          }
+        }
+      },
+      "gap": {
+        "gap_dias": 27,
+        "n_raso": 439,
+        "n_profundo": 192,
+        "mais_antiga_profunda": "2025-03-23",
+        "mais_antiga_rasa": "2022-03-01"
+      },
+      "profundidade_sondagem": null,
+      "profundidade_estimada_por_nivel": null,
+      "paginas_gastas_por_nivel": {
+        "0.5": 1,
+        "1.0": 3,
+        "1.5": 2,
+        "2.0": 10,
+        "2.5": 6,
+        "3.0": 10,
+        "3.5": 1,
+        "4.0": 3,
+        "4.5": 3,
+        "5.0": 9
+      }
+    },
+    "cure": {
+      "n_bruto": 600,
+      "buckets": {
+        "negativas": {
+          "n_final": 40,
+          "estado_piso": "completa",
+          "bruto": {
+            "n": 214,
+            "pagina_min": 1,
+            "pagina_max": 12,
+            "pagina_p50": 3,
+            "pagina_p95": 12,
+            "n_profundas": 58,
+            "fracao_profunda": 0.27102803738317754,
+            "dias_p5_p95": 65,
+            "data_min": "2024-05-27",
+            "data_max": "2026-08-07"
+          },
+          "amostra": {
+            "n": 40,
+            "pagina_min": 1,
+            "pagina_max": 12,
+            "pagina_p50": 3,
+            "pagina_p95": 10,
+            "n_profundas": 12,
+            "fracao_profunda": 0.3,
+            "dias_p5_p95": 68,
+            "data_min": "2024-05-27",
+            "data_max": "2026-08-07"
+          }
+        },
+        "medianas": {
+          "n_final": 40,
+          "estado_piso": "completa",
+          "bruto": {
+            "n": 204,
+            "pagina_min": 1,
+            "pagina_max": 12,
+            "pagina_p50": 5,
+            "pagina_p95": 12,
+            "n_profundas": 60,
+            "fracao_profunda": 0.29411764705882354,
+            "dias_p5_p95": 29,
+            "data_min": "2026-03-14",
+            "data_max": "2026-08-07"
+          },
+          "amostra": {
+            "n": 40,
+            "pagina_min": 1,
+            "pagina_max": 12,
+            "pagina_p50": 5,
+            "pagina_p95": 12,
+            "n_profundas": 12,
+            "fracao_profunda": 0.3,
+            "dias_p5_p95": 21,
+            "data_min": "2026-04-25",
+            "data_max": "2026-08-07"
+          }
+        },
+        "positivas": {
+          "n_final": 40,
+          "estado_piso": "completa",
+          "bruto": {
+            "n": 182,
+            "pagina_min": 1,
+            "pagina_max": 6,
+            "pagina_p50": 2,
+            "pagina_p95": 6,
+            "n_profundas": 26,
+            "fracao_profunda": 0.14285714285714285,
+            "dias_p5_p95": 4,
+            "data_min": "2023-12-06",
+            "data_max": "2026-08-07"
+          },
+          "amostra": {
+            "n": 40,
+            "pagina_min": 1,
+            "pagina_max": 6,
+            "pagina_p50": 3,
+            "pagina_p95": 6,
+            "n_profundas": 8,
+            "fracao_profunda": 0.2,
+            "dias_p5_p95": 5,
+            "data_min": "2026-07-30",
+            "data_max": "2026-08-07"
+          }
+        }
+      },
+      "gap": {
+        "gap_dias": 18,
+        "n_raso": 456,
+        "n_profundo": 144,
+        "mais_antiga_profunda": "2026-02-25",
+        "mais_antiga_rasa": "2023-12-06"
+      },
+      "profundidade_sondagem": null,
+      "profundidade_estimada_por_nivel": null,
+      "paginas_gastas_por_nivel": {
+        "0.5": 1,
+        "1.0": 3,
+        "1.5": 2,
+        "2.0": 10,
+        "2.5": 6,
+        "3.0": 10,
+        "3.5": 2,
+        "4.0": 5,
+        "4.5": 4,
+        "5.0": 5
+      }
+    },
+    "dune-2021": {
+      "n_bruto": 576,
+      "buckets": {
+        "negativas": {
+          "n_final": 33,
+          "estado_piso": "completa",
+          "bruto": {
+            "n": 192,
+            "pagina_min": 1,
+            "pagina_max": 12,
+            "pagina_p50": 4,
+            "pagina_p95": 12,
+            "n_profundas": 36,
+            "fracao_profunda": 0.1875,
+            "dias_p5_p95": 66,
+            "data_min": "2022-04-16",
+            "data_max": "2026-08-08"
+          },
+          "amostra": {
+            "n": 33,
+            "pagina_min": 1,
+            "pagina_max": 12,
+            "pagina_p50": 3,
+            "pagina_p95": 10,
+            "n_profundas": 3,
+            "fracao_profunda": 0.09090909090909091,
+            "dias_p5_p95": 5,
+            "data_min": "2026-05-25",
+            "data_max": "2026-08-08"
+          }
+        },
+        "medianas": {
+          "n_final": 40,
+          "estado_piso": "completa",
+          "bruto": {
+            "n": 192,
+            "pagina_min": 1,
+            "pagina_max": 12,
+            "pagina_p50": 5,
+            "pagina_p95": 12,
+            "n_profundas": 48,
+            "fracao_profunda": 0.25,
+            "dias_p5_p95": 141,
+            "data_min": "2021-09-01",
+            "data_max": "2026-08-08"
+          },
+          "amostra": {
+            "n": 40,
+            "pagina_min": 1,
+            "pagina_max": 12,
+            "pagina_p50": 6,
+            "pagina_p95": 12,
+            "n_profundas": 11,
+            "fracao_profunda": 0.275,
+            "dias_p5_p95": 22,
+            "data_min": "2025-12-30",
+            "data_max": "2026-08-08"
+          }
+        },
+        "positivas": {
+          "n_final": 40,
+          "estado_piso": "completa",
+          "bruto": {
+            "n": 192,
+            "pagina_min": 1,
+            "pagina_max": 9,
+            "pagina_p50": 3,
+            "pagina_p95": 9,
+            "n_profundas": 60,
+            "fracao_profunda": 0.3125,
+            "dias_p5_p95": 8,
+            "data_min": "2021-10-29",
+            "data_max": "2026-08-08"
+          },
+          "amostra": {
+            "n": 40,
+            "pagina_min": 1,
+            "pagina_max": 9,
+            "pagina_p50": 2,
+            "pagina_p95": 9,
+            "n_profundas": 14,
+            "fracao_profunda": 0.35,
+            "dias_p5_p95": 13,
+            "data_min": "2021-12-31",
+            "data_max": "2026-08-08"
+          }
+        }
+      },
+      "gap": {
+        "gap_dias": 1,
+        "n_raso": 432,
+        "n_profundo": 144,
+        "mais_antiga_profunda": "2022-08-10",
+        "mais_antiga_rasa": "2021-09-01"
+      },
+      "profundidade_sondagem": null,
+      "profundidade_estimada_por_nivel": null,
+      "paginas_gastas_por_nivel": {
+        "0.5": 1,
+        "1.0": 3,
+        "1.5": 2,
+        "2.0": 10,
+        "2.5": 6,
+        "3.0": 10,
+        "3.5": 3,
+        "4.0": 7,
+        "4.5": 3,
+        "5.0": 3
+      }
+    },
+    "dune-part-two": {
+      "n_bruto": 576,
+      "buckets": {
+        "negativas": {
+          "n_final": 40,
+          "estado_piso": "completa",
+          "bruto": {
+            "n": 192,
+            "pagina_min": 1,
+            "pagina_max": 12,
+            "pagina_p50": 4,
+            "pagina_p95": 12,
+            "n_profundas": 36,
+            "fracao_profunda": 0.1875,
+            "dias_p5_p95": 763,
+            "data_min": "2024-03-01",
+            "data_max": "2026-08-08"
+          },
+          "amostra": {
+            "n": 40,
+            "pagina_min": 1,
+            "pagina_max": 12,
+            "pagina_p50": 3,
+            "pagina_p95": 10,
+            "n_profundas": 8,
+            "fracao_profunda": 0.2,
+            "dias_p5_p95": 187,
+            "data_min": "2024-03-07",
+            "data_max": "2026-08-08"
+          }
+        },
+        "medianas": {
+          "n_final": 38,
+          "estado_piso": "completa",
+          "bruto": {
+            "n": 192,
+            "pagina_min": 1,
+            "pagina_max": 12,
+            "pagina_p50": 5,
+            "pagina_p95": 12,
+            "n_profundas": 48,
+            "fracao_profunda": 0.25,
+            "dias_p5_p95": 123,
+            "data_min": "2024-02-29",
+            "data_max": "2026-08-08"
+          },
+          "amostra": {
+            "n": 38,
+            "pagina_min": 1,
+            "pagina_max": 12,
+            "pagina_p50": 4,
+            "pagina_p95": 12,
+            "n_profundas": 8,
+            "fracao_profunda": 0.21052631578947367,
+            "dias_p5_p95": 12,
+            "data_min": "2024-02-29",
+            "data_max": "2026-08-07"
+          }
+        },
+        "positivas": {
+          "n_final": 40,
+          "estado_piso": "completa",
+          "bruto": {
+            "n": 192,
+            "pagina_min": 1,
+            "pagina_max": 9,
+            "pagina_p50": 3,
+            "pagina_p95": 9,
+            "n_profundas": 48,
+            "fracao_profunda": 0.25,
+            "dias_p5_p95": 5,
+            "data_min": "2024-03-03",
+            "data_max": "2026-08-08"
+          },
+          "amostra": {
+            "n": 40,
+            "pagina_min": 1,
+            "pagina_max": 9,
+            "pagina_p50": 3,
+            "pagina_p95": 9,
+            "n_profundas": 11,
+            "fracao_profunda": 0.275,
+            "dias_p5_p95": 1,
+            "data_min": "2026-07-24",
+            "data_max": "2026-08-08"
+          }
+        }
+      },
+      "gap": {
+        "gap_dias": 3,
+        "n_raso": 444,
+        "n_profundo": 132,
+        "mais_antiga_profunda": "2024-02-29",
+        "mais_antiga_rasa": "2024-03-01"
+      },
+      "profundidade_sondagem": null,
+      "profundidade_estimada_por_nivel": null,
+      "paginas_gastas_por_nivel": {
+        "0.5": 1,
+        "1.0": 3,
+        "1.5": 2,
+        "2.0": 10,
+        "2.5": 6,
+        "3.0": 10,
+        "3.5": 1,
+        "4.0": 4,
+        "4.5": 4,
+        "5.0": 7
+      }
+    },
+    "eighth-grade": {
+      "n_bruto": 576,
+      "buckets": {
+        "negativas": {
+          "n_final": 38,
+          "estado_piso": "completa",
+          "bruto": {
+            "n": 192,
+            "pagina_min": 1,
+            "pagina_max": 11,
+            "pagina_p50": 3,
+            "pagina_p95": 11,
+            "n_profundas": 36,
+            "fracao_profunda": 0.1875,
+            "dias_p5_p95": 75,
+            "data_min": "2018-05-20",
+            "data_max": "2026-08-07"
+          },
+          "amostra": {
+            "n": 38,
+            "pagina_min": 1,
+            "pagina_max": 11,
+            "pagina_p50": 2,
+            "pagina_p95": 11,
+            "n_profundas": 9,
+            "fracao_profunda": 0.23684210526315788,
+            "dias_p5_p95": 73,
+            "data_min": "2018-05-20",
+            "data_max": "2026-08-06"
+          }
+        },
+        "medianas": {
+          "n_final": 39,
+          "estado_piso": "completa",
+          "bruto": {
+            "n": 192,
+            "pagina_min": 1,
+            "pagina_max": 12,
+            "pagina_p50": 5,
+            "pagina_p95": 12,
+            "n_profundas": 48,
+            "fracao_profunda": 0.25,
+            "dias_p5_p95": 39,
+            "data_min": "2018-11-06",
+            "data_max": "2026-08-07"
+          },
+          "amostra": {
+            "n": 39,
+            "pagina_min": 2,
+            "pagina_max": 12,
+            "pagina_p50": 4,
+            "pagina_p95": 10,
+            "n_profundas": 9,
+            "fracao_profunda": 0.23076923076923078,
+            "dias_p5_p95": 26,
+            "data_min": "2026-06-26",
+            "data_max": "2026-08-06"
+          }
+        },
+        "positivas": {
+          "n_final": 40,
+          "estado_piso": "completa",
+          "bruto": {
+            "n": 192,
+            "pagina_min": 1,
+            "pagina_max": 9,
+            "pagina_p50": 3,
+            "pagina_p95": 9,
+            "n_profundas": 48,
+            "fracao_profunda": 0.25,
+            "dias_p5_p95": 3,
+            "data_min": "2026-07-29",
+            "data_max": "2026-08-07"
+          },
+          "amostra": {
+            "n": 40,
+            "pagina_min": 1,
+            "pagina_max": 9,
+            "pagina_p50": 4,
+            "pagina_p95": 7,
+            "n_profundas": 14,
+            "fracao_profunda": 0.35,
+            "dias_p5_p95": 3,
+            "data_min": "2026-08-04",
+            "data_max": "2026-08-07"
+          }
+        }
+      },
+      "gap": {
+        "gap_dias": 14,
+        "n_raso": 444,
+        "n_profundo": 132,
+        "mais_antiga_profunda": "2018-05-20",
+        "mais_antiga_rasa": "2023-09-27"
+      },
+      "profundidade_sondagem": null,
+      "profundidade_estimada_por_nivel": null,
+      "paginas_gastas_por_nivel": {
+        "0.5": 2,
+        "1.0": 3,
+        "1.5": 2,
+        "2.0": 9,
+        "2.5": 6,
+        "3.0": 10,
+        "3.5": 4,
+        "4.0": 7,
+        "4.5": 2,
+        "5.0": 3
+      }
+    },
+    "everything-everywhere-all-at-once": {
+      "n_bruto": 576,
+      "buckets": {
+        "negativas": {
+          "n_final": 40,
+          "estado_piso": "completa",
+          "bruto": {
+            "n": 192,
+            "pagina_min": 1,
+            "pagina_max": 11,
+            "pagina_p50": 3,
+            "pagina_p95": 11,
+            "n_profundas": 36,
+            "fracao_profunda": 0.1875,
+            "dias_p5_p95": 1238,
+            "data_min": "2022-03-28",
+            "data_max": "2026-08-07"
+          },
+          "amostra": {
+            "n": 40,
+            "pagina_min": 1,
+            "pagina_max": 11,
+            "pagina_p50": 3,
+            "pagina_p95": 11,
+            "n_profundas": 10,
+            "fracao_profunda": 0.25,
+            "dias_p5_p95": 488,
+            "data_min": "2023-01-03",
+            "data_max": "2026-08-07"
+          }
+        },
+        "medianas": {
+          "n_final": 40,
+          "estado_piso": "completa",
+          "bruto": {
+            "n": 192,
+            "pagina_min": 1,
+            "pagina_max": 12,
+            "pagina_p50": 5,
+            "pagina_p95": 12,
+            "n_profundas": 48,
+            "fracao_profunda": 0.25,
+            "dias_p5_p95": 272,
+            "data_min": "2022-07-01",
+            "data_max": "2026-08-07"
+          },
+          "amostra": {
+            "n": 40,
+            "pagina_min": 1,
+            "pagina_max": 12,
+            "pagina_p50": 5,
+            "pagina_p95": 12,
+            "n_profundas": 13,
+            "fracao_profunda": 0.325,
+            "dias_p5_p95": 11,
+            "data_min": "2022-07-30",
+            "data_max": "2026-08-07"
+          }
+        },
+        "positivas": {
+          "n_final": 40,
+          "estado_piso": "completa",
+          "bruto": {
+            "n": 192,
+            "pagina_min": 1,
+            "pagina_max": 10,
+            "pagina_p50": 3,
+            "pagina_p95": 10,
+            "n_profundas": 48,
+            "fracao_profunda": 0.25,
+            "dias_p5_p95": 81,
+            "data_min": "2022-04-28",
+            "data_max": "2026-08-08"
+          },
+          "amostra": {
+            "n": 40,
+            "pagina_min": 1,
+            "pagina_max": 10,
+            "pagina_p50": 3,
+            "pagina_p95": 10,
+            "n_profundas": 11,
+            "fracao_profunda": 0.275,
+            "dias_p5_p95": 2,
+            "data_min": "2022-06-16",
+            "data_max": "2026-08-08"
+          }
+        }
+      },
+      "gap": {
+        "gap_dias": 3,
+        "n_raso": 444,
+        "n_profundo": 132,
+        "mais_antiga_profunda": "2022-07-30",
+        "mais_antiga_rasa": "2022-03-28"
+      },
+      "profundidade_sondagem": null,
+      "profundidade_estimada_por_nivel": null,
+      "paginas_gastas_por_nivel": {
+        "0.5": 1,
+        "1.0": 4,
+        "1.5": 2,
+        "2.0": 9,
+        "2.5": 6,
+        "3.0": 10,
+        "3.5": 1,
+        "4.0": 4,
+        "4.5": 3,
+        "5.0": 8
+      }
+    },
+    "friday-the-13th-2009": {
+      "n_bruto": 576,
+      "buckets": {
+        "negativas": {
+          "n_final": 40,
+          "estado_piso": "completa",
+          "bruto": {
+            "n": 192,
+            "pagina_min": 1,
+            "pagina_max": 11,
+            "pagina_p50": 4,
+            "pagina_p95": 11,
+            "n_profundas": 48,
+            "fracao_profunda": 0.25,
+            "dias_p5_p95": 49,
+            "data_min": "2017-07-17",
+            "data_max": "2026-08-08"
+          },
+          "amostra": {
+            "n": 40,
+            "pagina_min": 1,
+            "pagina_max": 11,
+            "pagina_p50": 3,
+            "pagina_p95": 11,
+            "n_profundas": 12,
+            "fracao_profunda": 0.3,
+            "dias_p5_p95": 55,
+            "data_min": "2017-07-17",
+            "data_max": "2026-08-07"
+          }
+        },
+        "medianas": {
+          "n_final": 40,
+          "estado_piso": "completa",
+          "bruto": {
+            "n": 192,
+            "pagina_min": 1,
+            "pagina_max": 12,
+            "pagina_p50": 5,
+            "pagina_p95": 12,
+            "n_profundas": 48,
+            "fracao_profunda": 0.25,
+            "dias_p5_p95": 22,
+            "data_min": "2020-03-27",
+            "data_max": "2026-08-08"
+          },
+          "amostra": {
+            "n": 40,
+            "pagina_min": 1,
+            "pagina_max": 12,
+            "pagina_p50": 6,
+            "pagina_p95": 12,
+            "n_profundas": 17,
+            "fracao_profunda": 0.425,
+            "dias_p5_p95": 19,
+            "data_min": "2023-08-05",
+            "data_max": "2026-08-07"
+          }
+        },
+        "positivas": {
+          "n_final": 40,
+          "estado_piso": "completa",
+          "bruto": {
+            "n": 192,
+            "pagina_min": 1,
+            "pagina_max": 9,
+            "pagina_p50": 3,
+            "pagina_p95": 9,
+            "n_profundas": 48,
+            "fracao_profunda": 0.25,
+            "dias_p5_p95": 21,
+            "data_min": "2023-11-04",
+            "data_max": "2026-08-08"
+          },
+          "amostra": {
+            "n": 40,
+            "pagina_min": 1,
+            "pagina_max": 9,
+            "pagina_p50": 3,
+            "pagina_p95": 8,
+            "n_profundas": 11,
+            "fracao_profunda": 0.275,
+            "dias_p5_p95": 23,
+            "data_min": "2025-10-28",
+            "data_max": "2026-08-08"
+          }
+        }
+      },
+      "gap": {
+        "gap_dias": 12,
+        "n_raso": 432,
+        "n_profundo": 144,
+        "mais_antiga_profunda": "2017-07-17",
+        "mais_antiga_rasa": "2020-03-27"
+      },
+      "profundidade_sondagem": null,
+      "profundidade_estimada_por_nivel": null,
+      "paginas_gastas_por_nivel": {
+        "0.5": 1,
+        "1.0": 3,
+        "1.5": 3,
+        "2.0": 9,
+        "2.5": 6,
+        "3.0": 10,
+        "3.5": 7,
+        "4.0": 6,
+        "4.5": 1,
+        "5.0": 2
+      }
+    },
+    "hereditary": {
+      "n_bruto": 741,
+      "buckets": {
+        "negativas": {
+          "n_final": 36,
+          "estado_piso": "completa",
+          "bruto": {
+            "n": 263,
+            "pagina_min": 1,
+            "pagina_max": 16,
+            "pagina_p50": 4,
+            "pagina_p95": 15,
+            "n_profundas": 107,
+            "fracao_profunda": 0.4068441064638783,
+            "dias_p5_p95": 120,
+            "data_min": "2018-03-20",
+            "data_max": "2026-08-08"
+          },
+          "amostra": {
+            "n": 36,
+            "pagina_min": 1,
+            "pagina_max": 15,
+            "pagina_p50": 4,
+            "pagina_p95": 14,
+            "n_profundas": 14,
+            "fracao_profunda": 0.3888888888888889,
+            "dias_p5_p95": 781,
+            "data_min": "2023-07-28",
+            "data_max": "2026-08-08"
+          }
+        },
+        "medianas": {
+          "n_final": 40,
+          "estado_piso": "completa",
+          "bruto": {
+            "n": 257,
+            "pagina_min": 1,
+            "pagina_max": 18,
+            "pagina_p50": 6,
+            "pagina_p95": 17,
+            "n_profundas": 113,
+            "fracao_profunda": 0.4396887159533074,
+            "dias_p5_p95": 24,
+            "data_min": "2020-04-04",
+            "data_max": "2026-08-08"
+          },
+          "amostra": {
+            "n": 40,
+            "pagina_min": 1,
+            "pagina_max": 16,
+            "pagina_p50": 7,
+            "pagina_p95": 15,
+            "n_profundas": 16,
+            "fracao_profunda": 0.4,
+            "dias_p5_p95": 4,
+            "data_min": "2020-04-04",
+            "data_max": "2026-08-08"
+          }
+        },
+        "positivas": {
+          "n_final": 39,
+          "estado_piso": "completa",
+          "bruto": {
+            "n": 221,
+            "pagina_min": 1,
+            "pagina_max": 11,
+            "pagina_p50": 3,
+            "pagina_p95": 10,
+            "n_profundas": 77,
+            "fracao_profunda": 0.34841628959276016,
+            "dias_p5_p95": 7,
+            "data_min": "2018-06-12",
+            "data_max": "2026-08-08"
+          },
+          "amostra": {
+            "n": 39,
+            "pagina_min": 1,
+            "pagina_max": 11,
+            "pagina_p50": 3,
+            "pagina_p95": 9,
+            "n_profundas": 14,
+            "fracao_profunda": 0.358974358974359,
+            "dias_p5_p95": 1,
+            "data_min": "2026-07-26",
+            "data_max": "2026-08-08"
+          }
+        }
+      },
+      "gap": {
+        "gap_dias": 2,
+        "n_raso": 444,
+        "n_profundo": 297,
+        "mais_antiga_profunda": "2018-06-12",
+        "mais_antiga_rasa": "2018-03-20"
+      },
+      "profundidade_sondagem": null,
+      "profundidade_estimada_por_nivel": null,
+      "paginas_gastas_por_nivel": {
+        "0.5": 2,
+        "1.0": 4,
+        "1.5": 2,
+        "2.0": 16,
+        "2.5": 6,
+        "3.0": 18,
+        "3.5": 2,
+        "4.0": 11,
+        "4.5": 3,
+        "5.0": 8
+      }
+    },
+    "im-still-here-2024": {
+      "n_bruto": 576,
+      "buckets": {
+        "negativas": {
+          "n_final": 40,
+          "estado_piso": "completa",
+          "bruto": {
+            "n": 192,
+            "pagina_min": 1,
+            "pagina_max": 12,
+            "pagina_p50": 4,
+            "pagina_p95": 12,
+            "n_profundas": 36,
+            "fracao_profunda": 0.1875,
+            "dias_p5_p95": 264,
+            "data_min": "2024-01-20",
+            "data_max": "2026-08-07"
+          },
+          "amostra": {
+            "n": 40,
+            "pagina_min": 1,
+            "pagina_max": 12,
+            "pagina_p50": 4,
+            "pagina_p95": 12,
+            "n_profundas": 10,
+            "fracao_profunda": 0.25,
+            "dias_p5_p95": 253,
+            "data_min": "2025-02-09",
+            "data_max": "2026-08-07"
+          }
+        },
+        "medianas": {
+          "n_final": 40,
+          "estado_piso": "completa",
+          "bruto": {
+            "n": 192,
+            "pagina_min": 1,
+            "pagina_max": 12,
+            "pagina_p50": 5,
+            "pagina_p95": 12,
+            "n_profundas": 48,
+            "fracao_profunda": 0.25,
+            "dias_p5_p95": 453,
+            "data_min": "2024-11-16",
+            "data_max": "2026-08-07"
+          },
+          "amostra": {
+            "n": 40,
+            "pagina_min": 1,
+            "pagina_max": 12,
+            "pagina_p50": 5,
+            "pagina_p95": 12,
+            "n_profundas": 9,
+            "fracao_profunda": 0.225,
+            "dias_p5_p95": 513,
+            "data_min": "2024-11-19",
+            "data_max": "2026-08-07"
+          }
+        },
+        "positivas": {
+          "n_final": 40,
+          "estado_piso": "completa",
+          "bruto": {
+            "n": 192,
+            "pagina_min": 1,
+            "pagina_max": 11,
+            "pagina_p50": 4,
+            "pagina_p95": 11,
+            "n_profundas": 48,
+            "fracao_profunda": 0.25,
+            "dias_p5_p95": 608,
+            "data_min": "2024-07-14",
+            "data_max": "2026-08-08"
+          },
+          "amostra": {
+            "n": 40,
+            "pagina_min": 1,
+            "pagina_max": 11,
+            "pagina_p50": 4,
+            "pagina_p95": 9,
+            "n_profundas": 13,
+            "fracao_profunda": 0.325,
+            "dias_p5_p95": 619,
+            "data_min": "2024-08-15",
+            "data_max": "2026-08-08"
+          }
+        }
+      },
+      "gap": {
+        "gap_dias": 80,
+        "n_raso": 444,
+        "n_profundo": 132,
+        "mais_antiga_profunda": "2024-11-14",
+        "mais_antiga_rasa": "2024-01-20"
+      },
+      "profundidade_sondagem": null,
+      "profundidade_estimada_por_nivel": null,
+      "paginas_gastas_por_nivel": {
+        "0.5": 1,
+        "1.0": 3,
+        "1.5": 2,
+        "2.0": 10,
+        "2.5": 6,
+        "3.0": 10,
+        "3.5": 1,
+        "4.0": 3,
+        "4.5": 3,
+        "5.0": 9
+      }
+    },
+    "interstellar": {
+      "n_bruto": 576,
+      "buckets": {
+        "negativas": {
+          "n_final": 40,
+          "estado_piso": "completa",
+          "bruto": {
+            "n": 192,
+            "pagina_min": 1,
+            "pagina_max": 12,
+            "pagina_p50": 4,
+            "pagina_p95": 12,
+            "n_profundas": 36,
+            "fracao_profunda": 0.1875,
+            "dias_p5_p95": 300,
+            "data_min": "2014-11-18",
+            "data_max": "2026-08-08"
+          },
+          "amostra": {
+            "n": 40,
+            "pagina_min": 1,
+            "pagina_max": 12,
+            "pagina_p50": 2,
+            "pagina_p95": 10,
+            "n_profundas": 9,
+            "fracao_profunda": 0.225,
+            "dias_p5_p95": 5,
+            "data_min": "2025-03-23",
+            "data_max": "2026-08-08"
+          }
+        },
+        "medianas": {
+          "n_final": 40,
+          "estado_piso": "completa",
+          "bruto": {
+            "n": 192,
+            "pagina_min": 1,
+            "pagina_max": 12,
+            "pagina_p50": 5,
+            "pagina_p95": 12,
+            "n_profundas": 48,
+            "fracao_profunda": 0.25,
+            "dias_p5_p95": 87,
+            "data_min": "2019-06-30",
+            "data_max": "2026-08-08"
+          },
+          "amostra": {
+            "n": 40,
+            "pagina_min": 1,
+            "pagina_max": 12,
+            "pagina_p50": 5,
+            "pagina_p95": 12,
+            "n_profundas": 12,
+            "fracao_profunda": 0.3,
+            "dias_p5_p95": 7,
+            "data_min": "2026-02-08",
+            "data_max": "2026-08-08"
+          }
+        },
+        "positivas": {
+          "n_final": 40,
+          "estado_piso": "completa",
+          "bruto": {
+            "n": 192,
+            "pagina_min": 1,
+            "pagina_max": 11,
+            "pagina_p50": 4,
+            "pagina_p95": 11,
+            "n_profundas": 48,
+            "fracao_profunda": 0.25,
+            "dias_p5_p95": 23,
+            "data_min": "2020-10-10",
+            "data_max": "2026-08-08"
+          },
+          "amostra": {
+            "n": 40,
+            "pagina_min": 1,
+            "pagina_max": 11,
+            "pagina_p50": 4,
+            "pagina_p95": 9,
+            "n_profundas": 11,
+            "fracao_profunda": 0.275,
+            "dias_p5_p95": 23,
+            "data_min": "2020-10-10",
+            "data_max": "2026-08-08"
+          }
+        }
+      },
+      "gap": {
+        "gap_dias": 2,
+        "n_raso": 444,
+        "n_profundo": 132,
+        "mais_antiga_profunda": "2025-01-05",
+        "mais_antiga_rasa": "2014-11-18"
+      },
+      "profundidade_sondagem": null,
+      "profundidade_estimada_por_nivel": null,
+      "paginas_gastas_por_nivel": {
+        "0.5": 1,
+        "1.0": 3,
+        "1.5": 2,
+        "2.0": 10,
+        "2.5": 6,
+        "3.0": 10,
+        "3.5": 1,
+        "4.0": 3,
+        "4.5": 3,
+        "5.0": 9
+      }
+    },
+    "joker-folie-a-deux": {
+      "n_bruto": 576,
+      "buckets": {
+        "negativas": {
+          "n_final": 40,
+          "estado_piso": "completa",
+          "bruto": {
+            "n": 192,
+            "pagina_min": 1,
+            "pagina_max": 9,
+            "pagina_p50": 3,
+            "pagina_p95": 9,
+            "n_profundas": 48,
+            "fracao_profunda": 0.25,
+            "dias_p5_p95": 575,
+            "data_min": "2024-09-05",
+            "data_max": "2026-08-08"
+          },
+          "amostra": {
+            "n": 40,
+            "pagina_min": 1,
+            "pagina_max": 9,
+            "pagina_p50": 2,
+            "pagina_p95": 9,
+            "n_profundas": 9,
+            "fracao_profunda": 0.225,
+            "dias_p5_p95": 181,
+            "data_min": "2024-09-05",
+            "data_max": "2026-08-07"
+          }
+        },
+        "medianas": {
+          "n_final": 40,
+          "estado_piso": "completa",
+          "bruto": {
+            "n": 192,
+            "pagina_min": 1,
+            "pagina_max": 11,
+            "pagina_p50": 5,
+            "pagina_p95": 11,
+            "n_profundas": 48,
+            "fracao_profunda": 0.25,
+            "dias_p5_p95": 652,
+            "data_min": "2024-10-02",
+            "data_max": "2026-08-07"
+          },
+          "amostra": {
+            "n": 40,
+            "pagina_min": 1,
+            "pagina_max": 11,
+            "pagina_p50": 4,
+            "pagina_p95": 9,
+            "n_profundas": 7,
+            "fracao_profunda": 0.175,
+            "dias_p5_p95": 666,
+            "data_min": "2024-10-03",
+            "data_max": "2026-08-07"
+          }
+        },
+        "positivas": {
+          "n_final": 40,
+          "estado_piso": "completa",
+          "bruto": {
+            "n": 192,
+            "pagina_min": 1,
+            "pagina_max": 9,
+            "pagina_p50": 3,
+            "pagina_p95": 9,
+            "n_profundas": 48,
+            "fracao_profunda": 0.25,
+            "dias_p5_p95": 240,
+            "data_min": "2024-05-16",
+            "data_max": "2026-08-08"
+          },
+          "amostra": {
+            "n": 40,
+            "pagina_min": 1,
+            "pagina_max": 8,
+            "pagina_p50": 3,
+            "pagina_p95": 7,
+            "n_profundas": 10,
+            "fracao_profunda": 0.25,
+            "dias_p5_p95": 52,
+            "data_min": "2024-05-16",
+            "data_max": "2026-08-08"
+          }
+        }
+      },
+      "gap": {
+        "gap_dias": 6,
+        "n_raso": 432,
+        "n_profundo": 144,
+        "mais_antiga_profunda": "2024-09-05",
+        "mais_antiga_rasa": "2024-05-16"
+      },
+      "profundidade_sondagem": null,
+      "profundidade_estimada_por_nivel": null,
+      "paginas_gastas_por_nivel": {
+        "0.5": 2,
+        "1.0": 4,
+        "1.5": 3,
+        "2.0": 7,
+        "2.5": 7,
+        "3.0": 9,
+        "3.5": 7,
+        "4.0": 6,
+        "4.5": 1,
+        "5.0": 2
+      }
+    },
+    "longlegs": {
+      "n_bruto": 576,
+      "buckets": {
+        "negativas": {
+          "n_final": 40,
+          "estado_piso": "completa",
+          "bruto": {
+            "n": 192,
+            "pagina_min": 1,
+            "pagina_max": 12,
+            "pagina_p50": 4,
+            "pagina_p95": 12,
+            "n_profundas": 36,
+            "fracao_profunda": 0.1875,
+            "dias_p5_p95": 549,
+            "data_min": "2023-08-05",
+            "data_max": "2026-08-08"
+          },
+          "amostra": {
+            "n": 40,
+            "pagina_min": 1,
+            "pagina_max": 12,
+            "pagina_p50": 4,
+            "pagina_p95": 10,
+            "n_profundas": 8,
+            "fracao_profunda": 0.2,
+            "dias_p5_p95": 733,
+            "data_min": "2024-07-12",
+            "data_max": "2026-08-08"
+          }
+        },
+        "medianas": {
+          "n_final": 40,
+          "estado_piso": "completa",
+          "bruto": {
+            "n": 192,
+            "pagina_min": 1,
+            "pagina_max": 12,
+            "pagina_p50": 5,
+            "pagina_p95": 12,
+            "n_profundas": 48,
+            "fracao_profunda": 0.25,
+            "dias_p5_p95": 566,
+            "data_min": "2024-07-08",
+            "data_max": "2026-08-08"
+          },
+          "amostra": {
+            "n": 40,
+            "pagina_min": 1,
+            "pagina_max": 12,
+            "pagina_p50": 4,
+            "pagina_p95": 12,
+            "n_profundas": 11,
+            "fracao_profunda": 0.275,
+            "dias_p5_p95": 480,
+            "data_min": "2024-07-30",
+            "data_max": "2026-08-08"
+          }
+        },
+        "positivas": {
+          "n_final": 40,
+          "estado_piso": "completa",
+          "bruto": {
+            "n": 192,
+            "pagina_min": 1,
+            "pagina_max": 8,
+            "pagina_p50": 3,
+            "pagina_p95": 8,
+            "n_profundas": 48,
+            "fracao_profunda": 0.25,
+            "dias_p5_p95": 707,
+            "data_min": "2024-07-13",
+            "data_max": "2026-08-08"
+          },
+          "amostra": {
+            "n": 40,
+            "pagina_min": 1,
+            "pagina_max": 8,
+            "pagina_p50": 3,
+            "pagina_p95": 8,
+            "n_profundas": 15,
+            "fracao_profunda": 0.375,
+            "dias_p5_p95": 656,
+            "data_min": "2024-07-13",
+            "data_max": "2026-08-07"
+          }
+        }
+      },
+      "gap": {
+        "gap_dias": 2,
+        "n_raso": 444,
+        "n_profundo": 132,
+        "mais_antiga_profunda": "2024-07-13",
+        "mais_antiga_rasa": "2023-08-05"
+      },
+      "profundidade_sondagem": null,
+      "profundidade_estimada_por_nivel": null,
+      "paginas_gastas_por_nivel": {
+        "0.5": 1,
+        "1.0": 3,
+        "1.5": 2,
+        "2.0": 10,
+        "2.5": 6,
+        "3.0": 10,
+        "3.5": 6,
+        "4.0": 6,
+        "4.5": 2,
+        "5.0": 2
+      }
+    },
+    "mother-2017": {
+      "n_bruto": 576,
+      "buckets": {
+        "negativas": {
+          "n_final": 40,
+          "estado_piso": "completa",
+          "bruto": {
+            "n": 192,
+            "pagina_min": 1,
+            "pagina_max": 10,
+            "pagina_p50": 3,
+            "pagina_p95": 10,
+            "n_profundas": 36,
+            "fracao_profunda": 0.1875,
+            "dias_p5_p95": 21,
+            "data_min": "2017-08-01",
+            "data_max": "2026-08-08"
+          },
+          "amostra": {
+            "n": 40,
+            "pagina_min": 1,
+            "pagina_max": 10,
+            "pagina_p50": 2,
+            "pagina_p95": 10,
+            "n_profundas": 8,
+            "fracao_profunda": 0.2,
+            "dias_p5_p95": 19,
+            "data_min": "2021-05-20",
+            "data_max": "2026-08-07"
+          }
+        },
+        "medianas": {
+          "n_final": 40,
+          "estado_piso": "completa",
+          "bruto": {
+            "n": 192,
+            "pagina_min": 1,
+            "pagina_max": 12,
+            "pagina_p50": 5,
+            "pagina_p95": 12,
+            "n_profundas": 48,
+            "fracao_profunda": 0.25,
+            "dias_p5_p95": 15,
+            "data_min": "2021-08-04",
+            "data_max": "2026-08-08"
+          },
+          "amostra": {
+            "n": 40,
+            "pagina_min": 1,
+            "pagina_max": 12,
+            "pagina_p50": 5,
+            "pagina_p95": 12,
+            "n_profundas": 12,
+            "fracao_profunda": 0.3,
+            "dias_p5_p95": 13,
+            "data_min": "2024-10-18",
+            "data_max": "2026-08-07"
+          }
+        },
+        "positivas": {
+          "n_final": 40,
+          "estado_piso": "completa",
+          "bruto": {
+            "n": 192,
+            "pagina_min": 1,
+            "pagina_max": 8,
+            "pagina_p50": 3,
+            "pagina_p95": 8,
+            "n_profundas": 48,
+            "fracao_profunda": 0.25,
+            "dias_p5_p95": 88,
+            "data_min": "2017-10-01",
+            "data_max": "2026-08-08"
+          },
+          "amostra": {
+            "n": 40,
+            "pagina_min": 1,
+            "pagina_max": 8,
+            "pagina_p50": 3,
+            "pagina_p95": 8,
+            "n_profundas": 13,
+            "fracao_profunda": 0.325,
+            "dias_p5_p95": 4,
+            "data_min": "2024-12-04",
+            "data_max": "2026-08-08"
+          }
+        }
+      },
+      "gap": {
+        "gap_dias": 7,
+        "n_raso": 444,
+        "n_profundo": 132,
+        "mais_antiga_profunda": "2019-02-16",
+        "mais_antiga_rasa": "2017-08-01"
+      },
+      "profundidade_sondagem": null,
+      "profundidade_estimada_por_nivel": null,
+      "paginas_gastas_por_nivel": {
+        "0.5": 2,
+        "1.0": 4,
+        "1.5": 2,
+        "2.0": 8,
+        "2.5": 6,
+        "3.0": 10,
+        "3.5": 4,
+        "4.0": 6,
+        "4.5": 2,
+        "5.0": 4
+      }
+    },
+    "napoleon-2023": {
+      "n_bruto": 576,
+      "buckets": {
+        "negativas": {
+          "n_final": 40,
+          "estado_piso": "completa",
+          "bruto": {
+            "n": 192,
+            "pagina_min": 1,
+            "pagina_max": 12,
+            "pagina_p50": 4,
+            "pagina_p95": 12,
+            "n_profundas": 36,
+            "fracao_profunda": 0.1875,
+            "dias_p5_p95": 980,
+            "data_min": "2023-04-14",
+            "data_max": "2026-08-08"
+          },
+          "amostra": {
+            "n": 40,
+            "pagina_min": 1,
+            "pagina_max": 12,
+            "pagina_p50": 3,
+            "pagina_p95": 12,
+            "n_profundas": 10,
+            "fracao_profunda": 0.25,
+            "dias_p5_p95": 23,
+            "data_min": "2023-11-26",
+            "data_max": "2026-08-08"
+          }
+        },
+        "medianas": {
+          "n_final": 40,
+          "estado_piso": "completa",
+          "bruto": {
+            "n": 192,
+            "pagina_min": 1,
+            "pagina_max": 12,
+            "pagina_p50": 5,
+            "pagina_p95": 12,
+            "n_profundas": 48,
+            "fracao_profunda": 0.25,
+            "dias_p5_p95": 970,
+            "data_min": "2023-08-01",
+            "data_max": "2026-08-08"
+          },
+          "amostra": {
+            "n": 40,
+            "pagina_min": 1,
+            "pagina_max": 12,
+            "pagina_p50": 5,
+            "pagina_p95": 10,
+            "n_profundas": 14,
+            "fracao_profunda": 0.35,
+            "dias_p5_p95": 209,
+            "data_min": "2023-12-06",
+            "data_max": "2026-08-07"
+          }
+        },
+        "positivas": {
+          "n_final": 40,
+          "estado_piso": "completa",
+          "bruto": {
+            "n": 192,
+            "pagina_min": 1,
+            "pagina_max": 11,
+            "pagina_p50": 4,
+            "pagina_p95": 11,
+            "n_profundas": 36,
+            "fracao_profunda": 0.1875,
+            "dias_p5_p95": 706,
+            "data_min": "2023-11-23",
+            "data_max": "2026-08-08"
+          },
+          "amostra": {
+            "n": 40,
+            "pagina_min": 1,
+            "pagina_max": 11,
+            "pagina_p50": 4,
+            "pagina_p95": 9,
+            "n_profundas": 11,
+            "fracao_profunda": 0.275,
+            "dias_p5_p95": 579,
+            "data_min": "2023-11-24",
+            "data_max": "2026-08-07"
+          }
+        }
+      },
+      "gap": {
+        "gap_dias": 9,
+        "n_raso": 456,
+        "n_profundo": 120,
+        "mais_antiga_profunda": "2023-04-14",
+        "mais_antiga_rasa": "2023-08-01"
+      },
+      "profundidade_sondagem": null,
+      "profundidade_estimada_por_nivel": null,
+      "paginas_gastas_por_nivel": {
+        "0.5": 1,
+        "1.0": 2,
+        "1.5": 3,
+        "2.0": 10,
+        "2.5": 6,
+        "3.0": 10,
+        "3.5": 9,
+        "4.0": 5,
+        "4.5": 1,
+        "5.0": 1
+      }
+    },
+    "obsession-2026": {
+      "n_bruto": 69,
+      "buckets": {
+        "negativas": {
+          "n_final": 5,
+          "estado_piso": "sem_numero",
+          "bruto": {
+            "n": 13,
+            "pagina_min": 1,
+            "pagina_max": 1,
+            "pagina_p50": 1,
+            "pagina_p95": 1,
+            "n_profundas": 0,
+            "fracao_profunda": 0.0,
+            "dias_p5_p95": 101,
+            "data_min": "2026-01-23",
+            "data_max": "2026-07-21"
+          },
+          "amostra": {
+            "n": 5,
+            "pagina_min": 1,
+            "pagina_max": 1,
+            "pagina_p50": 1,
+            "pagina_p95": 1,
+            "n_profundas": 0,
+            "fracao_profunda": 0.0,
+            "dias_p5_p95": 179,
+            "data_min": "2026-01-23",
+            "data_max": "2026-07-21"
+          }
+        },
+        "medianas": {
+          "n_final": 6,
+          "estado_piso": "sem_numero",
+          "bruto": {
+            "n": 26,
+            "pagina_min": 1,
+            "pagina_max": 2,
+            "pagina_p50": 1,
+            "pagina_p95": 2,
+            "n_profundas": 0,
+            "fracao_profunda": 0.0,
+            "dias_p5_p95": 145,
+            "data_min": "2026-01-13",
+            "data_max": "2026-07-01"
+          },
+          "amostra": {
+            "n": 6,
+            "pagina_min": 1,
+            "pagina_max": 2,
+            "pagina_p50": 1,
+            "pagina_p95": 2,
+            "n_profundas": 0,
+            "fracao_profunda": 0.0,
+            "dias_p5_p95": 124,
+            "data_min": "2026-01-15",
+            "data_max": "2026-05-19"
+          }
+        },
+        "positivas": {
+          "n_final": 8,
+          "estado_piso": "sem_quantificador",
+          "bruto": {
+            "n": 30,
+            "pagina_min": 1,
+            "pagina_max": 2,
+            "pagina_p50": 1,
+            "pagina_p95": 1,
+            "n_profundas": 0,
+            "fracao_profunda": 0.0,
+            "dias_p5_p95": 174,
+            "data_min": "2026-01-15",
+            "data_max": "2026-08-08"
+          },
+          "amostra": {
+            "n": 8,
+            "pagina_min": 1,
+            "pagina_max": 1,
+            "pagina_p50": 1,
+            "pagina_p95": 1,
+            "n_profundas": 0,
+            "fracao_profunda": 0.0,
+            "dias_p5_p95": 130,
+            "data_min": "2026-02-14",
+            "data_max": "2026-06-24"
+          }
+        }
+      },
+      "gap": null,
+      "profundidade_sondagem": null,
+      "profundidade_estimada_por_nivel": null,
+      "paginas_gastas_por_nivel": {
+        "0.5": 1,
+        "1.0": 1,
+        "1.5": 1,
+        "2.0": 1,
+        "2.5": 1,
+        "3.0": 2,
+        "3.5": 1,
+        "4.0": 1,
+        "4.5": 1,
+        "5.0": 2
+      }
+    },
+    "oppenheimer-2023": {
+      "n_bruto": 576,
+      "buckets": {
+        "negativas": {
+          "n_final": 40,
+          "estado_piso": "completa",
+          "bruto": {
+            "n": 192,
+            "pagina_min": 1,
+            "pagina_max": 12,
+            "pagina_p50": 4,
+            "pagina_p95": 12,
+            "n_profundas": 36,
+            "fracao_profunda": 0.1875,
+            "dias_p5_p95": 1105,
+            "data_min": "2023-01-01",
+            "data_max": "2026-08-08"
+          },
+          "amostra": {
+            "n": 40,
+            "pagina_min": 1,
+            "pagina_max": 12,
+            "pagina_p50": 3,
+            "pagina_p95": 10,
+            "n_profundas": 7,
+            "fracao_profunda": 0.175,
+            "dias_p5_p95": 12,
+            "data_min": "2023-07-28",
+            "data_max": "2026-08-08"
+          }
+        },
+        "medianas": {
+          "n_final": 40,
+          "estado_piso": "completa",
+          "bruto": {
+            "n": 192,
+            "pagina_min": 1,
+            "pagina_max": 12,
+            "pagina_p50": 5,
+            "pagina_p95": 12,
+            "n_profundas": 48,
+            "fracao_profunda": 0.25,
+            "dias_p5_p95": 1096,
+            "data_min": "2023-07-16",
+            "data_max": "2026-08-08"
+          },
+          "amostra": {
+            "n": 40,
+            "pagina_min": 1,
+            "pagina_max": 12,
+            "pagina_p50": 5,
+            "pagina_p95": 12,
+            "n_profundas": 10,
+            "fracao_profunda": 0.25,
+            "dias_p5_p95": 640,
+            "data_min": "2023-07-21",
+            "data_max": "2026-08-08"
+          }
+        },
+        "positivas": {
+          "n_final": 40,
+          "estado_piso": "completa",
+          "bruto": {
+            "n": 192,
+            "pagina_min": 1,
+            "pagina_max": 6,
+            "pagina_p50": 3,
+            "pagina_p95": 6,
+            "n_profundas": 36,
+            "fracao_profunda": 0.1875,
+            "dias_p5_p95": 975,
+            "data_min": "2023-01-11",
+            "data_max": "2026-08-08"
+          },
+          "amostra": {
+            "n": 40,
+            "pagina_min": 1,
+            "pagina_max": 6,
+            "pagina_p50": 3,
+            "pagina_p95": 6,
+            "n_profundas": 9,
+            "fracao_profunda": 0.225,
+            "dias_p5_p95": 638,
+            "data_min": "2023-01-11",
+            "data_max": "2026-08-08"
+          }
+        }
+      },
+      "gap": {
+        "gap_dias": 2,
+        "n_raso": 456,
+        "n_profundo": 120,
+        "mais_antiga_profunda": "2023-06-01",
+        "mais_antiga_rasa": "2023-01-01"
+      },
+      "profundidade_sondagem": null,
+      "profundidade_estimada_por_nivel": null,
+      "paginas_gastas_por_nivel": {
+        "0.5": 1,
+        "1.0": 3,
+        "1.5": 2,
+        "2.0": 10,
+        "2.5": 6,
+        "3.0": 10,
+        "3.5": 2,
+        "4.0": 5,
+        "4.5": 4,
+        "5.0": 5
+      }
+    },
+    "parasite-2019": {
+      "n_bruto": 771,
+      "buckets": {
+        "negativas": {
+          "n_final": 40,
+          "estado_piso": "completa",
+          "bruto": {
+            "n": 252,
+            "pagina_min": 1,
+            "pagina_max": 17,
+            "pagina_p50": 5,
+            "pagina_p95": 16,
+            "n_profundas": 96,
+            "fracao_profunda": 0.38095238095238093,
+            "dias_p5_p95": 5038,
+            "data_min": "2012-03-14",
+            "data_max": "2026-08-07"
+          },
+          "amostra": {
+            "n": 40,
+            "pagina_min": 1,
+            "pagina_max": 17,
+            "pagina_p50": 7,
+            "pagina_p95": 17,
+            "n_profundas": 18,
+            "fracao_profunda": 0.45,
+            "dias_p5_p95": 60,
+            "data_min": "2020-07-13",
+            "data_max": "2026-08-07"
+          }
+        },
+        "medianas": {
+          "n_final": 40,
+          "estado_piso": "completa",
+          "bruto": {
+            "n": 231,
+            "pagina_min": 1,
+            "pagina_max": 17,
+            "pagina_p50": 6,
+            "pagina_p95": 16,
+            "n_profundas": 88,
+            "fracao_profunda": 0.38095238095238093,
+            "dias_p5_p95": 265,
+            "data_min": "2012-01-04",
+            "data_max": "2026-08-08"
+          },
+          "amostra": {
+            "n": 40,
+            "pagina_min": 1,
+            "pagina_max": 17,
+            "pagina_p50": 6,
+            "pagina_p95": 16,
+            "n_profundas": 14,
+            "fracao_profunda": 0.35,
+            "dias_p5_p95": 127,
+            "data_min": "2019-11-14",
+            "data_max": "2026-08-07"
+          }
+        },
+        "positivas": {
+          "n_final": 40,
+          "estado_piso": "completa",
+          "bruto": {
+            "n": 288,
+            "pagina_min": 1,
+            "pagina_max": 14,
+            "pagina_p50": 5,
+            "pagina_p95": 13,
+            "n_profundas": 144,
+            "fracao_profunda": 0.5,
+            "dias_p5_p95": 537,
+            "data_min": "2019-08-05",
+            "data_max": "2026-08-08"
+          },
+          "amostra": {
+            "n": 40,
+            "pagina_min": 1,
+            "pagina_max": 12,
+            "pagina_p50": 4,
+            "pagina_p95": 11,
+            "n_profundas": 22,
+            "fracao_profunda": 0.55,
+            "dias_p5_p95": 511,
+            "data_min": "2022-03-16",
+            "data_max": "2026-08-08"
+          }
+        }
+      },
+      "gap": {
+        "gap_dias": 2,
+        "n_raso": 443,
+        "n_profundo": 328,
+        "mais_antiga_profunda": "2012-01-04",
+        "mais_antiga_rasa": "2012-03-14"
+      },
+      "profundidade_sondagem": null,
+      "profundidade_estimada_por_nivel": null,
+      "paginas_gastas_por_nivel": {
+        "0.5": 1,
+        "1.0": 4,
+        "1.5": 2,
+        "2.0": 17,
+        "2.5": 6,
+        "3.0": 17,
+        "3.5": 1,
+        "4.0": 6,
+        "4.5": 3,
+        "5.0": 14
+      }
+    },
+    "pearl-2022": {
+      "n_bruto": 760,
+      "buckets": {
+        "negativas": {
+          "n_final": 26,
+          "estado_piso": "completa",
+          "bruto": {
+            "n": 270,
+            "pagina_min": 1,
+            "pagina_max": 18,
+            "pagina_p50": 6,
+            "pagina_p95": 17,
+            "n_profundas": 114,
+            "fracao_profunda": 0.4222222222222222,
+            "dias_p5_p95": 54,
+            "data_min": "2020-11-15",
+            "data_max": "2026-08-08"
+          },
+          "amostra": {
+            "n": 26,
+            "pagina_min": 1,
+            "pagina_max": 18,
+            "pagina_p50": 8,
+            "pagina_p95": 17,
+            "n_profundas": 16,
+            "fracao_profunda": 0.6153846153846154,
+            "dias_p5_p95": 13,
+            "data_min": "2026-07-24",
+            "data_max": "2026-08-08"
+          }
+        },
+        "medianas": {
+          "n_final": 33,
+          "estado_piso": "completa",
+          "bruto": {
+            "n": 257,
+            "pagina_min": 1,
+            "pagina_max": 18,
+            "pagina_p50": 6,
+            "pagina_p95": 17,
+            "n_profundas": 113,
+            "fracao_profunda": 0.4396887159533074,
+            "dias_p5_p95": 14,
+            "data_min": "2023-03-13",
+            "data_max": "2026-08-08"
+          },
+          "amostra": {
+            "n": 33,
+            "pagina_min": 2,
+            "pagina_max": 18,
+            "pagina_p50": 7,
+            "pagina_p95": 17,
+            "n_profundas": 14,
+            "fracao_profunda": 0.42424242424242425,
+            "dias_p5_p95": 7,
+            "data_min": "2025-05-31",
+            "data_max": "2026-08-07"
+          }
+        },
+        "positivas": {
+          "n_final": 35,
+          "estado_piso": "completa",
+          "bruto": {
+            "n": 233,
+            "pagina_min": 1,
+            "pagina_max": 14,
+            "pagina_p50": 3,
+            "pagina_p95": 13,
+            "n_profundas": 90,
+            "fracao_profunda": 0.38626609442060084,
+            "dias_p5_p95": 153,
+            "data_min": "2023-03-13",
+            "data_max": "2026-08-08"
+          },
+          "amostra": {
+            "n": 35,
+            "pagina_min": 1,
+            "pagina_max": 14,
+            "pagina_p50": 2,
+            "pagina_p95": 11,
+            "n_profundas": 9,
+            "fracao_profunda": 0.2571428571428571,
+            "dias_p5_p95": 96,
+            "data_min": "2025-10-13",
+            "data_max": "2026-08-08"
+          }
+        }
+      },
+      "gap": {
+        "gap_dias": 3,
+        "n_raso": 443,
+        "n_profundo": 317,
+        "mais_antiga_profunda": "2023-05-03",
+        "mais_antiga_rasa": "2020-11-15"
+      },
+      "profundidade_sondagem": null,
+      "profundidade_estimada_por_nivel": null,
+      "paginas_gastas_por_nivel": {
+        "0.5": 1,
+        "1.0": 3,
+        "1.5": 2,
+        "2.0": 18,
+        "2.5": 6,
+        "3.0": 18,
+        "3.5": 4,
+        "4.0": 14,
+        "4.5": 2,
+        "5.0": 4
+      }
+    },
+    "perfect-days-2023": {
+      "n_bruto": 576,
+      "buckets": {
+        "negativas": {
+          "n_final": 40,
+          "estado_piso": "completa",
+          "bruto": {
+            "n": 192,
+            "pagina_min": 1,
+            "pagina_max": 12,
+            "pagina_p50": 4,
+            "pagina_p95": 12,
+            "n_profundas": 36,
+            "fracao_profunda": 0.1875,
+            "dias_p5_p95": 54,
+            "data_min": "2024-01-04",
+            "data_max": "2026-08-08"
+          },
+          "amostra": {
+            "n": 40,
+            "pagina_min": 1,
+            "pagina_max": 12,
+            "pagina_p50": 3,
+            "pagina_p95": 12,
+            "n_profundas": 10,
+            "fracao_profunda": 0.25,
+            "dias_p5_p95": 48,
+            "data_min": "2025-04-07",
+            "data_max": "2026-08-08"
+          }
+        },
+        "medianas": {
+          "n_final": 40,
+          "estado_piso": "completa",
+          "bruto": {
+            "n": 192,
+            "pagina_min": 1,
+            "pagina_max": 12,
+            "pagina_p50": 5,
+            "pagina_p95": 12,
+            "n_profundas": 48,
+            "fracao_profunda": 0.25,
+            "dias_p5_p95": 24,
+            "data_min": "2024-09-23",
+            "data_max": "2026-08-08"
+          },
+          "amostra": {
+            "n": 40,
+            "pagina_min": 1,
+            "pagina_max": 12,
+            "pagina_p50": 5,
+            "pagina_p95": 12,
+            "n_profundas": 10,
+            "fracao_profunda": 0.25,
+            "dias_p5_p95": 14,
+            "data_min": "2026-07-09",
+            "data_max": "2026-08-07"
+          }
+        },
+        "positivas": {
+          "n_final": 40,
+          "estado_piso": "completa",
+          "bruto": {
+            "n": 192,
+            "pagina_min": 1,
+            "pagina_max": 8,
+            "pagina_p50": 3,
+            "pagina_p95": 8,
+            "n_profundas": 48,
+            "fracao_profunda": 0.25,
+            "dias_p5_p95": 15,
+            "data_min": "2024-08-07",
+            "data_max": "2026-08-08"
+          },
+          "amostra": {
+            "n": 40,
+            "pagina_min": 1,
+            "pagina_max": 8,
+            "pagina_p50": 2,
+            "pagina_p95": 6,
+            "n_profundas": 6,
+            "fracao_profunda": 0.15,
+            "dias_p5_p95": 105,
+            "data_min": "2025-11-13",
+            "data_max": "2026-08-08"
+          }
+        }
+      },
+      "gap": {
+        "gap_dias": 6,
+        "n_raso": 444,
+        "n_profundo": 132,
+        "mais_antiga_profunda": "2025-04-07",
+        "mais_antiga_rasa": "2024-01-04"
+      },
+      "profundidade_sondagem": null,
+      "profundidade_estimada_por_nivel": null,
+      "paginas_gastas_por_nivel": {
+        "0.5": 1,
+        "1.0": 3,
+        "1.5": 2,
+        "2.0": 10,
+        "2.5": 6,
+        "3.0": 10,
+        "3.5": 2,
+        "4.0": 5,
+        "4.5": 3,
+        "5.0": 6
+      }
+    },
+    "shutter-island": {
+      "n_bruto": 792,
+      "buckets": {
+        "negativas": {
+          "n_final": 40,
+          "estado_piso": "completa",
+          "bruto": {
+            "n": 279,
+            "pagina_min": 1,
+            "pagina_max": 18,
+            "pagina_p50": 6,
+            "pagina_p95": 17,
+            "n_profundas": 111,
+            "fracao_profunda": 0.3978494623655914,
+            "dias_p5_p95": 62,
+            "data_min": "2010-05-05",
+            "data_max": "2026-08-08"
+          },
+          "amostra": {
+            "n": 40,
+            "pagina_min": 1,
+            "pagina_max": 17,
+            "pagina_p50": 7,
+            "pagina_p95": 16,
+            "n_profundas": 16,
+            "fracao_profunda": 0.4,
+            "dias_p5_p95": 507,
+            "data_min": "2010-05-05",
+            "data_max": "2026-08-07"
+          }
+        },
+        "medianas": {
+          "n_final": 40,
+          "estado_piso": "completa",
+          "bruto": {
+            "n": 261,
+            "pagina_min": 1,
+            "pagina_max": 17,
+            "pagina_p50": 6,
+            "pagina_p95": 16,
+            "n_profundas": 117,
+            "fracao_profunda": 0.4482758620689655,
+            "dias_p5_p95": 22,
+            "data_min": "2020-06-19",
+            "data_max": "2026-08-08"
+          },
+          "amostra": {
+            "n": 40,
+            "pagina_min": 1,
+            "pagina_max": 17,
+            "pagina_p50": 8,
+            "pagina_p95": 17,
+            "n_profundas": 20,
+            "fracao_profunda": 0.5,
+            "dias_p5_p95": 7,
+            "data_min": "2026-07-20",
+            "data_max": "2026-08-07"
+          }
+        },
+        "positivas": {
+          "n_final": 40,
+          "estado_piso": "completa",
+          "bruto": {
+            "n": 252,
+            "pagina_min": 1,
+            "pagina_max": 11,
+            "pagina_p50": 4,
+            "pagina_p95": 8,
+            "n_profundas": 108,
+            "fracao_profunda": 0.42857142857142855,
+            "dias_p5_p95": 67,
+            "data_min": "2011-05-02",
+            "data_max": "2026-08-08"
+          },
+          "amostra": {
+            "n": 40,
+            "pagina_min": 1,
+            "pagina_max": 11,
+            "pagina_p50": 3,
+            "pagina_p95": 8,
+            "n_profundas": 14,
+            "fracao_profunda": 0.35,
+            "dias_p5_p95": 78,
+            "data_min": "2025-07-09",
+            "data_max": "2026-08-08"
+          }
+        }
+      },
+      "gap": {
+        "gap_dias": 5,
+        "n_raso": 456,
+        "n_profundo": 336,
+        "mais_antiga_profunda": "2010-05-05",
+        "mais_antiga_rasa": "2013-08-16"
+      },
+      "profundidade_sondagem": null,
+      "profundidade_estimada_por_nivel": null,
+      "paginas_gastas_por_nivel": {
+        "0.5": 2,
+        "1.0": 2,
+        "1.5": 2,
+        "2.0": 18,
+        "2.5": 6,
+        "3.0": 17,
+        "3.5": 2,
+        "4.0": 11,
+        "4.5": 3,
+        "5.0": 8
+      }
+    },
+    "spider-man-across-the-spider-verse": {
+      "n_bruto": 576,
+      "buckets": {
+        "negativas": {
+          "n_final": 40,
+          "estado_piso": "completa",
+          "bruto": {
+            "n": 192,
+            "pagina_min": 1,
+            "pagina_max": 12,
+            "pagina_p50": 4,
+            "pagina_p95": 12,
+            "n_profundas": 36,
+            "fracao_profunda": 0.1875,
+            "dias_p5_p95": 1092,
+            "data_min": "2023-03-19",
+            "data_max": "2026-08-08"
+          },
+          "amostra": {
+            "n": 40,
+            "pagina_min": 1,
+            "pagina_max": 12,
+            "pagina_p50": 3,
+            "pagina_p95": 10,
+            "n_profundas": 4,
+            "fracao_profunda": 0.1,
+            "dias_p5_p95": 1092,
+            "data_min": "2023-03-19",
+            "data_max": "2026-08-08"
+          }
+        },
+        "medianas": {
+          "n_final": 40,
+          "estado_piso": "completa",
+          "bruto": {
+            "n": 192,
+            "pagina_min": 1,
+            "pagina_max": 12,
+            "pagina_p50": 5,
+            "pagina_p95": 12,
+            "n_profundas": 48,
+            "fracao_profunda": 0.25,
+            "dias_p5_p95": 764,
+            "data_min": "2023-05-10",
+            "data_max": "2026-08-07"
+          },
+          "amostra": {
+            "n": 40,
+            "pagina_min": 1,
+            "pagina_max": 12,
+            "pagina_p50": 4,
+            "pagina_p95": 10,
+            "n_profundas": 8,
+            "fracao_profunda": 0.2,
+            "dias_p5_p95": 16,
+            "data_min": "2023-05-10",
+            "data_max": "2026-08-07"
+          }
+        },
+        "positivas": {
+          "n_final": 40,
+          "estado_piso": "completa",
+          "bruto": {
+            "n": 192,
+            "pagina_min": 1,
+            "pagina_max": 10,
+            "pagina_p50": 3,
+            "pagina_p95": 10,
+            "n_profundas": 48,
+            "fracao_profunda": 0.25,
+            "dias_p5_p95": 11,
+            "data_min": "2023-06-02",
+            "data_max": "2026-08-08"
+          },
+          "amostra": {
+            "n": 40,
+            "pagina_min": 1,
+            "pagina_max": 10,
+            "pagina_p50": 3,
+            "pagina_p95": 10,
+            "n_profundas": 12,
+            "fracao_profunda": 0.3,
+            "dias_p5_p95": 2,
+            "data_min": "2023-06-25",
+            "data_max": "2026-08-08"
+          }
+        }
+      },
+      "gap": {
+        "gap_dias": 3,
+        "n_raso": 444,
+        "n_profundo": 132,
+        "mais_antiga_profunda": "2023-03-19",
+        "mais_antiga_rasa": "2023-05-10"
+      },
+      "profundidade_sondagem": null,
+      "profundidade_estimada_por_nivel": null,
+      "paginas_gastas_por_nivel": {
+        "0.5": 1,
+        "1.0": 3,
+        "1.5": 2,
+        "2.0": 10,
+        "2.5": 6,
+        "3.0": 10,
+        "3.5": 1,
+        "4.0": 4,
+        "4.5": 3,
+        "5.0": 8
+      }
+    },
+    "talk-to-me-2022": {
+      "n_bruto": 769,
+      "buckets": {
+        "negativas": {
+          "n_final": 40,
+          "estado_piso": "completa",
+          "bruto": {
+            "n": 277,
+            "pagina_min": 1,
+            "pagina_max": 17,
+            "pagina_p50": 5,
+            "pagina_p95": 16,
+            "n_profundas": 121,
+            "fracao_profunda": 0.4368231046931408,
+            "dias_p5_p95": 27,
+            "data_min": "2022-12-01",
+            "data_max": "2026-08-08"
+          },
+          "amostra": {
+            "n": 40,
+            "pagina_min": 1,
+            "pagina_max": 17,
+            "pagina_p50": 6,
+            "pagina_p95": 17,
+            "n_profundas": 18,
+            "fracao_profunda": 0.45,
+            "dias_p5_p95": 14,
+            "data_min": "2023-08-27",
+            "data_max": "2026-08-07"
+          }
+        },
+        "medianas": {
+          "n_final": 31,
+          "estado_piso": "completa",
+          "bruto": {
+            "n": 261,
+            "pagina_min": 1,
+            "pagina_max": 18,
+            "pagina_p50": 6,
+            "pagina_p95": 17,
+            "n_profundas": 117,
+            "fracao_profunda": 0.4482758620689655,
+            "dias_p5_p95": 20,
+            "data_min": "2023-07-27",
+            "data_max": "2026-08-08"
+          },
+          "amostra": {
+            "n": 31,
+            "pagina_min": 1,
+            "pagina_max": 18,
+            "pagina_p50": 6,
+            "pagina_p95": 15,
+            "n_profundas": 13,
+            "fracao_profunda": 0.41935483870967744,
+            "dias_p5_p95": 5,
+            "data_min": "2026-07-31",
+            "data_max": "2026-08-07"
+          }
+        },
+        "positivas": {
+          "n_final": 34,
+          "estado_piso": "completa",
+          "bruto": {
+            "n": 231,
+            "pagina_min": 1,
+            "pagina_max": 9,
+            "pagina_p50": 3,
+            "pagina_p95": 9,
+            "n_profundas": 76,
+            "fracao_profunda": 0.329004329004329,
+            "dias_p5_p95": 190,
+            "data_min": "2022-08-05",
+            "data_max": "2026-08-08"
+          },
+          "amostra": {
+            "n": 34,
+            "pagina_min": 1,
+            "pagina_max": 9,
+            "pagina_p50": 5,
+            "pagina_p95": 9,
+            "n_profundas": 17,
+            "fracao_profunda": 0.5,
+            "dias_p5_p95": 497,
+            "data_min": "2022-08-05",
+            "data_max": "2026-08-08"
+          }
+        }
+      },
+      "gap": {
+        "gap_dias": 3,
+        "n_raso": 455,
+        "n_profundo": 314,
+        "mais_antiga_profunda": "2022-08-05",
+        "mais_antiga_rasa": "2023-03-21"
+      },
+      "profundidade_sondagem": null,
+      "profundidade_estimada_por_nivel": null,
+      "paginas_gastas_por_nivel": {
+        "0.5": 1,
+        "1.0": 3,
+        "1.5": 3,
+        "2.0": 17,
+        "2.5": 6,
+        "3.0": 18,
+        "3.5": 9,
+        "4.0": 9,
+        "4.5": 3,
+        "5.0": 3
+      }
+    },
+    "the-godfather": {
+      "n_bruto": 576,
+      "buckets": {
+        "negativas": {
+          "n_final": 25,
+          "estado_piso": "completa",
+          "bruto": {
+            "n": 192,
+            "pagina_min": 1,
+            "pagina_max": 10,
+            "pagina_p50": 3,
+            "pagina_p95": 10,
+            "n_profundas": 36,
+            "fracao_profunda": 0.1875,
+            "dias_p5_p95": 22,
+            "data_min": "2021-06-17",
+            "data_max": "2026-08-08"
+          },
+          "amostra": {
+            "n": 25,
+            "pagina_min": 1,
+            "pagina_max": 10,
+            "pagina_p50": 3,
+            "pagina_p95": 10,
+            "n_profundas": 7,
+            "fracao_profunda": 0.28,
+            "dias_p5_p95": 22,
+            "data_min": "2026-04-22",
+            "data_max": "2026-08-08"
+          }
+        },
+        "medianas": {
+          "n_final": 37,
+          "estado_piso": "completa",
+          "bruto": {
+            "n": 192,
+            "pagina_min": 1,
+            "pagina_max": 12,
+            "pagina_p50": 5,
+            "pagina_p95": 12,
+            "n_profundas": 48,
+            "fracao_profunda": 0.25,
+            "dias_p5_p95": 11,
+            "data_min": "2020-12-03",
+            "data_max": "2026-08-08"
+          },
+          "amostra": {
+            "n": 37,
+            "pagina_min": 1,
+            "pagina_max": 10,
+            "pagina_p50": 3,
+            "pagina_p95": 8,
+            "n_profundas": 9,
+            "fracao_profunda": 0.24324324324324326,
+            "dias_p5_p95": 11,
+            "data_min": "2023-08-02",
+            "data_max": "2026-08-07"
+          }
+        },
+        "positivas": {
+          "n_final": 40,
+          "estado_piso": "completa",
+          "bruto": {
+            "n": 192,
+            "pagina_min": 1,
+            "pagina_max": 11,
+            "pagina_p50": 4,
+            "pagina_p95": 11,
+            "n_profundas": 48,
+            "fracao_profunda": 0.25,
+            "dias_p5_p95": 26,
+            "data_min": "1972-01-01",
+            "data_max": "2026-08-08"
+          },
+          "amostra": {
+            "n": 40,
+            "pagina_min": 1,
+            "pagina_max": 11,
+            "pagina_p50": 2,
+            "pagina_p95": 11,
+            "n_profundas": 7,
+            "fracao_profunda": 0.175,
+            "dias_p5_p95": 3,
+            "data_min": "1972-01-01",
+            "data_max": "2026-08-08"
+          }
+        }
+      },
+      "gap": {
+        "gap_dias": 5,
+        "n_raso": 444,
+        "n_profundo": 132,
+        "mais_antiga_profunda": "2023-10-04",
+        "mais_antiga_rasa": "1972-01-01"
+      },
+      "profundidade_sondagem": null,
+      "profundidade_estimada_por_nivel": null,
+      "paginas_gastas_por_nivel": {
+        "0.5": 2,
+        "1.0": 4,
+        "1.5": 2,
+        "2.0": 8,
+        "2.5": 6,
+        "3.0": 10,
+        "3.5": 1,
+        "4.0": 3,
+        "4.5": 3,
+        "5.0": 9
+      }
+    },
+    "the-hateful-eight": {
+      "n_bruto": 576,
+      "buckets": {
+        "negativas": {
+          "n_final": 40,
+          "estado_piso": "completa",
+          "bruto": {
+            "n": 192,
+            "pagina_min": 1,
+            "pagina_max": 12,
+            "pagina_p50": 4,
+            "pagina_p95": 12,
+            "n_profundas": 36,
+            "fracao_profunda": 0.1875,
+            "dias_p5_p95": 112,
+            "data_min": "2017-12-20",
+            "data_max": "2026-08-08"
+          },
+          "amostra": {
+            "n": 40,
+            "pagina_min": 1,
+            "pagina_max": 12,
+            "pagina_p50": 4,
+            "pagina_p95": 12,
+            "n_profundas": 8,
+            "fracao_profunda": 0.2,
+            "dias_p5_p95": 113,
+            "data_min": "2022-01-29",
+            "data_max": "2026-08-06"
+          }
+        },
+        "medianas": {
+          "n_final": 40,
+          "estado_piso": "completa",
+          "bruto": {
+            "n": 192,
+            "pagina_min": 1,
+            "pagina_max": 12,
+            "pagina_p50": 5,
+            "pagina_p95": 12,
+            "n_profundas": 48,
+            "fracao_profunda": 0.25,
+            "dias_p5_p95": 191,
+            "data_min": "2016-01-01",
+            "data_max": "2026-08-08"
+          },
+          "amostra": {
+            "n": 40,
+            "pagina_min": 1,
+            "pagina_max": 12,
+            "pagina_p50": 6,
+            "pagina_p95": 12,
+            "n_profundas": 13,
+            "fracao_profunda": 0.325,
+            "dias_p5_p95": 31,
+            "data_min": "2026-06-13",
+            "data_max": "2026-08-06"
+          }
+        },
+        "positivas": {
+          "n_final": 40,
+          "estado_piso": "completa",
+          "bruto": {
+            "n": 192,
+            "pagina_min": 1,
+            "pagina_max": 9,
+            "pagina_p50": 3,
+            "pagina_p95": 9,
+            "n_profundas": 60,
+            "fracao_profunda": 0.3125,
+            "dias_p5_p95": 46,
+            "data_min": "2019-08-07",
+            "data_max": "2026-08-08"
+          },
+          "amostra": {
+            "n": 40,
+            "pagina_min": 1,
+            "pagina_max": 9,
+            "pagina_p50": 4,
+            "pagina_p95": 7,
+            "n_profundas": 20,
+            "fracao_profunda": 0.5,
+            "dias_p5_p95": 13,
+            "data_min": "2026-04-29",
+            "data_max": "2026-08-08"
+          }
+        }
+      },
+      "gap": {
+        "gap_dias": 11,
+        "n_raso": 432,
+        "n_profundo": 144,
+        "mais_antiga_profunda": "2017-12-20",
+        "mais_antiga_rasa": "2016-01-01"
+      },
+      "profundidade_sondagem": null,
+      "profundidade_estimada_por_nivel": null,
+      "paginas_gastas_por_nivel": {
+        "0.5": 1,
+        "1.0": 3,
+        "1.5": 2,
+        "2.0": 10,
+        "2.5": 6,
+        "3.0": 10,
+        "3.5": 3,
+        "4.0": 7,
+        "4.5": 3,
+        "5.0": 3
+      }
+    },
+    "the-invite-2026": {
+      "n_bruto": 636,
+      "buckets": {
+        "negativas": {
+          "n_final": 40,
+          "estado_piso": "completa",
+          "bruto": {
+            "n": 237,
+            "pagina_min": 1,
+            "pagina_max": 11,
+            "pagina_p50": 3,
+            "pagina_p95": 9,
+            "n_profundas": 93,
+            "fracao_profunda": 0.3924050632911392,
+            "dias_p5_p95": 8,
+            "data_min": "2026-06-28",
+            "data_max": "2026-08-07"
+          },
+          "amostra": {
+            "n": 40,
+            "pagina_min": 1,
+            "pagina_max": 11,
+            "pagina_p50": 3,
+            "pagina_p95": 9,
+            "n_profundas": 16,
+            "fracao_profunda": 0.4,
+            "dias_p5_p95": 9,
+            "data_min": "2026-07-13",
+            "data_max": "2026-08-06"
+          }
+        },
+        "medianas": {
+          "n_final": 40,
+          "estado_piso": "completa",
+          "bruto": {
+            "n": 189,
+            "pagina_min": 1,
+            "pagina_max": 12,
+            "pagina_p50": 4,
+            "pagina_p95": 12,
+            "n_profundas": 48,
+            "fracao_profunda": 0.25396825396825395,
+            "dias_p5_p95": 12,
+            "data_min": "2026-06-10",
+            "data_max": "2026-08-07"
+          },
+          "amostra": {
+            "n": 40,
+            "pagina_min": 1,
+            "pagina_max": 12,
+            "pagina_p50": 5,
+            "pagina_p95": 12,
+            "n_profundas": 11,
+            "fracao_profunda": 0.275,
+            "dias_p5_p95": 26,
+            "data_min": "2026-06-11",
+            "data_max": "2026-08-07"
+          }
+        },
+        "positivas": {
+          "n_final": 40,
+          "estado_piso": "completa",
+          "bruto": {
+            "n": 210,
+            "pagina_min": 1,
+            "pagina_max": 9,
+            "pagina_p50": 3,
+            "pagina_p95": 9,
+            "n_profundas": 78,
+            "fracao_profunda": 0.37142857142857144,
+            "dias_p5_p95": 14,
+            "data_min": "2026-07-08",
+            "data_max": "2026-08-07"
+          },
+          "amostra": {
+            "n": 40,
+            "pagina_min": 1,
+            "pagina_max": 9,
+            "pagina_p50": 3,
+            "pagina_p95": 6,
+            "n_profundas": 10,
+            "fracao_profunda": 0.25,
+            "dias_p5_p95": 4,
+            "data_min": "2026-07-25",
+            "data_max": "2026-08-07"
+          }
+        }
+      },
+      "gap": {
+        "gap_dias": 1,
+        "n_raso": 417,
+        "n_profundo": 219,
+        "mais_antiga_profunda": "2026-06-10",
+        "mais_antiga_rasa": "2026-06-28"
+      },
+      "profundidade_sondagem": null,
+      "profundidade_estimada_por_nivel": null,
+      "paginas_gastas_por_nivel": {
+        "0.5": 1,
+        "1.0": 3,
+        "1.5": 3,
+        "2.0": 9,
+        "2.5": 6,
+        "3.0": 10,
+        "3.5": 2,
+        "4.0": 7,
+        "4.5": 4,
+        "5.0": 3
+      }
+    },
+    "the-northman": {
+      "n_bruto": 576,
+      "buckets": {
+        "negativas": {
+          "n_final": 40,
+          "estado_piso": "completa",
+          "bruto": {
+            "n": 192,
+            "pagina_min": 1,
+            "pagina_max": 12,
+            "pagina_p50": 4,
+            "pagina_p95": 12,
+            "n_profundas": 36,
+            "fracao_profunda": 0.1875,
+            "dias_p5_p95": 29,
+            "data_min": "2022-05-09",
+            "data_max": "2026-08-08"
+          },
+          "amostra": {
+            "n": 40,
+            "pagina_min": 1,
+            "pagina_max": 12,
+            "pagina_p50": 3,
+            "pagina_p95": 10,
+            "n_profundas": 8,
+            "fracao_profunda": 0.2,
+            "dias_p5_p95": 29,
+            "data_min": "2026-07-02",
+            "data_max": "2026-08-06"
+          }
+        },
+        "medianas": {
+          "n_final": 40,
+          "estado_piso": "completa",
+          "bruto": {
+            "n": 192,
+            "pagina_min": 1,
+            "pagina_max": 12,
+            "pagina_p50": 5,
+            "pagina_p95": 12,
+            "n_profundas": 48,
+            "fracao_profunda": 0.25,
+            "dias_p5_p95": 25,
+            "data_min": "2022-04-08",
+            "data_max": "2026-08-08"
+          },
+          "amostra": {
+            "n": 40,
+            "pagina_min": 1,
+            "pagina_max": 12,
+            "pagina_p50": 5,
+            "pagina_p95": 10,
+            "n_profundas": 9,
+            "fracao_profunda": 0.225,
+            "dias_p5_p95": 8,
+            "data_min": "2026-05-09",
+            "data_max": "2026-08-08"
+          }
+        },
+        "positivas": {
+          "n_final": 40,
+          "estado_piso": "completa",
+          "bruto": {
+            "n": 192,
+            "pagina_min": 1,
+            "pagina_max": 9,
+            "pagina_p50": 3,
+            "pagina_p95": 9,
+            "n_profundas": 48,
+            "fracao_profunda": 0.25,
+            "dias_p5_p95": 5,
+            "data_min": "2022-04-22",
+            "data_max": "2026-08-08"
+          },
+          "amostra": {
+            "n": 40,
+            "pagina_min": 1,
+            "pagina_max": 9,
+            "pagina_p50": 3,
+            "pagina_p95": 7,
+            "n_profundas": 12,
+            "fracao_profunda": 0.3,
+            "dias_p5_p95": 5,
+            "data_min": "2026-02-07",
+            "data_max": "2026-08-08"
+          }
+        }
+      },
+      "gap": {
+        "gap_dias": 5,
+        "n_raso": 444,
+        "n_profundo": 132,
+        "mais_antiga_profunda": "2022-05-09",
+        "mais_antiga_rasa": "2022-04-08"
+      },
+      "profundidade_sondagem": null,
+      "profundidade_estimada_por_nivel": null,
+      "paginas_gastas_por_nivel": {
+        "0.5": 1,
+        "1.0": 3,
+        "1.5": 2,
+        "2.0": 10,
+        "2.5": 6,
+        "3.0": 10,
+        "3.5": 4,
+        "4.0": 7,
+        "4.5": 3,
+        "5.0": 2
+      }
+    },
+    "the-substance": {
+      "n_bruto": 576,
+      "buckets": {
+        "negativas": {
+          "n_final": 40,
+          "estado_piso": "completa",
+          "bruto": {
+            "n": 192,
+            "pagina_min": 1,
+            "pagina_max": 11,
+            "pagina_p50": 3,
+            "pagina_p95": 11,
+            "n_profundas": 36,
+            "fracao_profunda": 0.1875,
+            "dias_p5_p95": 220,
+            "data_min": "2024-10-06",
+            "data_max": "2026-08-08"
+          },
+          "amostra": {
+            "n": 40,
+            "pagina_min": 1,
+            "pagina_max": 9,
+            "pagina_p50": 3,
+            "pagina_p95": 9,
+            "n_profundas": 6,
+            "fracao_profunda": 0.15,
+            "dias_p5_p95": 467,
+            "data_min": "2024-10-07",
+            "data_max": "2026-08-08"
+          }
+        },
+        "medianas": {
+          "n_final": 31,
+          "estado_piso": "completa",
+          "bruto": {
+            "n": 192,
+            "pagina_min": 1,
+            "pagina_max": 12,
+            "pagina_p50": 5,
+            "pagina_p95": 12,
+            "n_profundas": 48,
+            "fracao_profunda": 0.25,
+            "dias_p5_p95": 20,
+            "data_min": "2024-06-21",
+            "data_max": "2026-08-08"
+          },
+          "amostra": {
+            "n": 31,
+            "pagina_min": 1,
+            "pagina_max": 12,
+            "pagina_p50": 4,
+            "pagina_p95": 10,
+            "n_profundas": 4,
+            "fracao_profunda": 0.12903225806451613,
+            "dias_p5_p95": 5,
+            "data_min": "2026-03-16",
+            "data_max": "2026-08-08"
+          }
+        },
+        "positivas": {
+          "n_final": 40,
+          "estado_piso": "completa",
+          "bruto": {
+            "n": 192,
+            "pagina_min": 1,
+            "pagina_max": 8,
+            "pagina_p50": 3,
+            "pagina_p95": 8,
+            "n_profundas": 60,
+            "fracao_profunda": 0.3125,
+            "dias_p5_p95": 302,
+            "data_min": "2024-05-12",
+            "data_max": "2026-08-08"
+          },
+          "amostra": {
+            "n": 40,
+            "pagina_min": 1,
+            "pagina_max": 8,
+            "pagina_p50": 3,
+            "pagina_p95": 8,
+            "n_profundas": 13,
+            "fracao_profunda": 0.325,
+            "dias_p5_p95": 10,
+            "data_min": "2026-05-07",
+            "data_max": "2026-08-08"
+          }
+        }
+      },
+      "gap": {
+        "gap_dias": 1,
+        "n_raso": 432,
+        "n_profundo": 144,
+        "mais_antiga_profunda": "2024-05-12",
+        "mais_antiga_rasa": "2024-06-21"
+      },
+      "profundidade_sondagem": null,
+      "profundidade_estimada_por_nivel": null,
+      "paginas_gastas_por_nivel": {
+        "0.5": 2,
+        "1.0": 3,
+        "1.5": 2,
+        "2.0": 9,
+        "2.5": 6,
+        "3.0": 10,
+        "3.5": 3,
+        "4.0": 6,
+        "4.5": 3,
+        "5.0": 4
+      }
+    },
+    "wicked-2024": {
+      "n_bruto": 736,
+      "buckets": {
+        "negativas": {
+          "n_final": 36,
+          "estado_piso": "completa",
+          "bruto": {
+            "n": 257,
+            "pagina_min": 1,
+            "pagina_max": 15,
+            "pagina_p50": 4,
+            "pagina_p95": 14,
+            "n_profundas": 101,
+            "fracao_profunda": 0.39299610894941633,
+            "dias_p5_p95": 517,
+            "data_min": "2024-08-07",
+            "data_max": "2026-08-08"
+          },
+          "amostra": {
+            "n": 36,
+            "pagina_min": 1,
+            "pagina_max": 14,
+            "pagina_p50": 3,
+            "pagina_p95": 9,
+            "n_profundas": 12,
+            "fracao_profunda": 0.3333333333333333,
+            "dias_p5_p95": 15,
+            "data_min": "2024-12-26",
+            "data_max": "2026-08-08"
+          }
+        },
+        "medianas": {
+          "n_final": 40,
+          "estado_piso": "completa",
+          "bruto": {
+            "n": 257,
+            "pagina_min": 1,
+            "pagina_max": 18,
+            "pagina_p50": 6,
+            "pagina_p95": 17,
+            "n_profundas": 113,
+            "fracao_profunda": 0.4396887159533074,
+            "dias_p5_p95": 607,
+            "data_min": "2024-08-03",
+            "data_max": "2026-08-08"
+          },
+          "amostra": {
+            "n": 40,
+            "pagina_min": 1,
+            "pagina_max": 18,
+            "pagina_p50": 6,
+            "pagina_p95": 17,
+            "n_profundas": 18,
+            "fracao_profunda": 0.45,
+            "dias_p5_p95": 611,
+            "data_min": "2024-11-24",
+            "data_max": "2026-08-08"
+          }
+        },
+        "positivas": {
+          "n_final": 24,
+          "estado_piso": "completa",
+          "bruto": {
+            "n": 222,
+            "pagina_min": 1,
+            "pagina_max": 10,
+            "pagina_p50": 3,
+            "pagina_p95": 9,
+            "n_profundas": 78,
+            "fracao_profunda": 0.35135135135135137,
+            "dias_p5_p95": 613,
+            "data_min": "2024-11-04",
+            "data_max": "2026-08-08"
+          },
+          "amostra": {
+            "n": 24,
+            "pagina_min": 1,
+            "pagina_max": 10,
+            "pagina_p50": 3,
+            "pagina_p95": 8,
+            "n_profundas": 8,
+            "fracao_profunda": 0.3333333333333333,
+            "dias_p5_p95": 609,
+            "data_min": "2024-12-07",
+            "data_max": "2026-08-08"
+          }
+        }
+      },
+      "gap": {
+        "gap_dias": 3,
+        "n_raso": 444,
+        "n_profundo": 292,
+        "mais_antiga_profunda": "2024-08-03",
+        "mais_antiga_rasa": "2024-08-07"
+      },
+      "profundidade_sondagem": null,
+      "profundidade_estimada_por_nivel": null,
+      "paginas_gastas_por_nivel": {
+        "0.5": 2,
+        "1.0": 5,
+        "1.5": 2,
+        "2.0": 15,
+        "2.5": 6,
+        "3.0": 18,
+        "3.5": 3,
+        "4.0": 9,
+        "4.5": 2,
+        "5.0": 10
+      }
+    },
+    "wonka": {
+      "n_bruto": 767,
+      "buckets": {
+        "negativas": {
+          "n_final": 32,
+          "estado_piso": "completa",
+          "bruto": {
+            "n": 285,
+            "pagina_min": 1,
+            "pagina_max": 17,
+            "pagina_p50": 5,
+            "pagina_p95": 16,
+            "n_profundas": 129,
+            "fracao_profunda": 0.45263157894736844,
+            "dias_p5_p95": 954,
+            "data_min": "2023-04-13",
+            "data_max": "2026-08-08"
+          },
+          "amostra": {
+            "n": 32,
+            "pagina_min": 1,
+            "pagina_max": 17,
+            "pagina_p50": 5,
+            "pagina_p95": 17,
+            "n_profundas": 16,
+            "fracao_profunda": 0.5,
+            "dias_p5_p95": 940,
+            "data_min": "2023-12-27",
+            "data_max": "2026-08-07"
+          }
+        },
+        "medianas": {
+          "n_final": 25,
+          "estado_piso": "completa",
+          "bruto": {
+            "n": 252,
+            "pagina_min": 1,
+            "pagina_max": 18,
+            "pagina_p50": 6,
+            "pagina_p95": 17,
+            "n_profundas": 108,
+            "fracao_profunda": 0.42857142857142855,
+            "dias_p5_p95": 966,
+            "data_min": "2023-04-02",
+            "data_max": "2026-08-08"
+          },
+          "amostra": {
+            "n": 25,
+            "pagina_min": 1,
+            "pagina_max": 17,
+            "pagina_p50": 3,
+            "pagina_p95": 14,
+            "n_profundas": 5,
+            "fracao_profunda": 0.2,
+            "dias_p5_p95": 969,
+            "data_min": "2023-12-09",
+            "data_max": "2026-08-07"
+          }
+        },
+        "positivas": {
+          "n_final": 38,
+          "estado_piso": "completa",
+          "bruto": {
+            "n": 230,
+            "pagina_min": 1,
+            "pagina_max": 9,
+            "pagina_p50": 4,
+            "pagina_p95": 9,
+            "n_profundas": 86,
+            "fracao_profunda": 0.3739130434782609,
+            "dias_p5_p95": 966,
+            "data_min": "2023-06-05",
+            "data_max": "2026-08-08"
+          },
+          "amostra": {
+            "n": 38,
+            "pagina_min": 1,
+            "pagina_max": 9,
+            "pagina_p50": 4,
+            "pagina_p95": 8,
+            "n_profundas": 15,
+            "fracao_profunda": 0.39473684210526316,
+            "dias_p5_p95": 970,
+            "data_min": "2023-12-07",
+            "data_max": "2026-08-08"
+          }
+        }
+      },
+      "gap": {
+        "gap_dias": 5,
+        "n_raso": 444,
+        "n_profundo": 323,
+        "mais_antiga_profunda": "2023-04-02",
+        "mais_antiga_rasa": "2023-08-01"
+      },
+      "profundidade_sondagem": null,
+      "profundidade_estimada_por_nivel": null,
+      "paginas_gastas_por_nivel": {
+        "0.5": 2,
+        "1.0": 3,
+        "1.5": 2,
+        "2.0": 17,
+        "2.5": 6,
+        "3.0": 18,
+        "3.5": 8,
+        "4.0": 10,
+        "4.5": 1,
+        "5.0": 5
+      }
+    }
+  },
+  "n_filmes": 35
+}

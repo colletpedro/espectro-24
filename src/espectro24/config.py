@@ -170,6 +170,39 @@ FOLGA_ALVO_COLETA = 1.25
 # que o calibre — mesma política dos limiares do piso escalonado (§3[C3]).
 RESERVA_PROFUNDIDADE = 0.25
 
+# --- Âncora de profundidade (v1.9.5, §3[B]) --------------------------------
+# ONDE as páginas da reserva profunda caem. `RESERVA_PROFUNDIDADE` (acima)
+# decide QUANTAS e não muda nesta versão.
+#
+# O defeito que isto corrige, medido: a progressão geométrica da v1.9.2
+# partia do FIM DO BLOCO RASO (`n_raso+2, +4, +8, +16`), o que com n_raso≈12
+# punha as posições "profundas" em 14-28 de níveis que vão a ~256. O bloco
+# comprava mediana de 3 DIAS sobre o raso (26 de 34 filmes abaixo de 7 dias)
+# — profundo em POSIÇÃO DE PÁGINA, raso em TEMPO.
+#
+# As frações são da PROFUNDIDADE REAL do nível. 0,95 em vez de 1,0
+# deliberadamente: a profundidade estimada por proxy do histograma erra, e
+# mirar no último ponto exato converteria todo erro para cima numa página
+# vazia. 5% de folga é barato e evita a maior parte desse desperdício.
+FRACOES_PROFUNDIDADE: tuple[float, ...] = (0.25, 0.50, 0.75, 0.95)
+
+# Escada da sondagem (§3[B]): degraus geométricos ×4. Filme popular responde
+# nos quatro (4 requisições, profundidade = teto de plataforma, zero
+# refinamento); filme obscuro cai cedo e o refinamento binário resolve o
+# resto. Custo máximo = len(SONDA_ESCADA) + SONDA_MAX_REFINAMENTO.
+SONDA_ESCADA: tuple[int, ...] = (4, 16, 64, 256)
+# Passos de refinamento binário depois da escada. 3 passos reduzem o
+# intervalo de incerteza a ~1/8 dele — precisão de sobra para ancorar
+# frações, e um teto de custo que a coleta de um lote pode planejar.
+SONDA_MAX_REFINAMENTO = 3
+
+# Teto de paginação do SITE para listagem populosa. Medido na v1.9.2 (§3[B]):
+# 3 filmes de volumes muito diferentes (120 mil a 1,2M de notas) bateram
+# exatamente no mesmo ponto, enquanto `the-room-1993` (890 notas) esgotou
+# organicamente em 4 páginas. Aqui ele é o TETO da profundidade estimada — a
+# sondagem nunca reporta mais que isto.
+TETO_PLATAFORMA_PAGINAS = 256
+
 # --- Ordenação da listagem: PARÂMETRO DE AMOSTRAGEM (§2.3, v1.9.0) ---
 # Só as primeiras N páginas de cada nível são lidas, então a ordenação decide
 # QUAIS reviews entram na amostra. Medido ao vivo em `cure`/4★ (datas das 6
