@@ -1,0 +1,850 @@
+{
+  "taxonomia_id": "11871105c0d3",
+  "n_consenso": 3990,
+  "entrega2_o_que_a_votacao_mudou": {
+    "n_antiga": 3948,
+    "n_passe1_atual": 3990,
+    "n_consenso": 3990,
+    "n_reviews_comuns_antiga_consenso": 3183,
+    "frequencia_por_eixo": [
+      {
+        "eixo": "ritmo",
+        "freq_antiga_corpus_menor": 0.32700101317122593,
+        "freq_passe1_corpus_atual": 0.35137844611528823,
+        "freq_consenso": 0.33709273182957394,
+        "diff_pp_antiga_para_consenso": 1.0091718658348015,
+        "diff_pp_corpus_isolado_antiga_para_passe1": 2.4377432944062303,
+        "diff_pp_votacao_isolada_passe1_para_consenso": -1.428571428571429
+      },
+      {
+        "eixo": "atuacao",
+        "freq_antiga_corpus_menor": 0.26063829787234044,
+        "freq_passe1_corpus_atual": 0.28972431077694233,
+        "freq_consenso": 0.2907268170426065,
+        "diff_pp_antiga_para_consenso": 3.0088519170266057,
+        "diff_pp_corpus_isolado_antiga_para_passe1": 2.908601290460189,
+        "diff_pp_votacao_isolada_passe1_para_consenso": 0.10025062656641714
+      },
+      {
+        "eixo": "direcao_imagem",
+        "freq_antiga_corpus_menor": 0.2981256332320162,
+        "freq_passe1_corpus_atual": 0.32857142857142857,
+        "freq_consenso": 0.324812030075188,
+        "diff_pp_antiga_para_consenso": 2.6686396843171813,
+        "diff_pp_corpus_isolado_antiga_para_passe1": 3.0445795339412385,
+        "diff_pp_votacao_isolada_passe1_para_consenso": -0.37593984962405735
+      },
+      {
+        "eixo": "roteiro_estrutura",
+        "freq_antiga_corpus_menor": 0.4321175278622087,
+        "freq_passe1_corpus_atual": 0.43759398496240604,
+        "freq_consenso": 0.44035087719298244,
+        "diff_pp_antiga_para_consenso": 0.8233349330773743,
+        "diff_pp_corpus_isolado_antiga_para_passe1": 0.547645710019734,
+        "diff_pp_votacao_isolada_passe1_para_consenso": 0.2756892230576402
+      },
+      {
+        "eixo": "som_trilha",
+        "freq_antiga_corpus_menor": 0.12563323201621074,
+        "freq_passe1_corpus_atual": 0.13759398496240602,
+        "freq_consenso": 0.13508771929824562,
+        "diff_pp_antiga_para_consenso": 0.9454487282034879,
+        "diff_pp_corpus_isolado_antiga_para_passe1": 1.1960752946195279,
+        "diff_pp_votacao_isolada_passe1_para_consenso": -0.2506265664160401
+      },
+      {
+        "eixo": "tom_atmosfera",
+        "freq_antiga_corpus_menor": 0.25329280648429586,
+        "freq_passe1_corpus_atual": 0.2756892230576441,
+        "freq_consenso": 0.26165413533834586,
+        "diff_pp_antiga_para_consenso": 0.8361328854049999,
+        "diff_pp_corpus_isolado_antiga_para_passe1": 2.2396416573348232,
+        "diff_pp_votacao_isolada_passe1_para_consenso": -1.4035087719298234
+      },
+      {
+        "eixo": "impacto_emocional",
+        "freq_antiga_corpus_menor": 0.4612462006079027,
+        "freq_passe1_corpus_atual": 0.4556390977443609,
+        "freq_consenso": 0.45939849624060153,
+        "diff_pp_antiga_para_consenso": -0.1847704367301195,
+        "diff_pp_corpus_isolado_antiga_para_passe1": -0.5607102863541824,
+        "diff_pp_votacao_isolada_passe1_para_consenso": 0.3759398496240629
+      },
+      {
+        "eixo": "comparacoes",
+        "freq_antiga_corpus_menor": 0.39209726443769,
+        "freq_passe1_corpus_atual": 0.44912280701754387,
+        "freq_consenso": 0.4343358395989975,
+        "diff_pp_antiga_para_consenso": 4.223857516130752,
+        "diff_pp_corpus_isolado_antiga_para_passe1": 5.702554257985387,
+        "diff_pp_votacao_isolada_passe1_para_consenso": -1.4786967418546348
+      },
+      {
+        "eixo": "expectativa",
+        "freq_antiga_corpus_menor": 0.2755825734549139,
+        "freq_passe1_corpus_atual": 0.28922305764411027,
+        "freq_consenso": 0.2764411027568922,
+        "diff_pp_antiga_para_consenso": 0.0858529301978328,
+        "diff_pp_corpus_isolado_antiga_para_passe1": 1.364048418919639,
+        "diff_pp_votacao_isolada_passe1_para_consenso": -1.278195488721806
+      },
+      {
+        "eixo": "critica_social",
+        "freq_antiga_corpus_menor": 0.25430597771023306,
+        "freq_passe1_corpus_atual": 0.2548872180451128,
+        "freq_consenso": 0.24461152882205514,
+        "diff_pp_antiga_para_consenso": -0.9694448888177915,
+        "diff_pp_corpus_isolado_antiga_para_passe1": 0.058124033487971793,
+        "diff_pp_votacao_isolada_passe1_para_consenso": -1.0275689223057634
+      },
+      {
+        "eixo": "livre",
+        "freq_antiga_corpus_menor": 0.1778115501519757,
+        "freq_passe1_corpus_atual": 0.17268170426065163,
+        "freq_consenso": 0.12355889724310777,
+        "diff_pp_antiga_para_consenso": -5.425265290886792,
+        "diff_pp_corpus_isolado_antiga_para_passe1": -0.5129845891324064,
+        "diff_pp_votacao_isolada_passe1_para_consenso": -4.912280701754386
+      }
+    ],
+    "eixos_por_review": {
+      "antiga": {
+        "media": 3.0800405268490376,
+        "mediana": 3.0
+      },
+      "passe1_atual": {
+        "media": 3.269423558897243,
+        "mediana": 3.0
+      },
+      "consenso": {
+        "media": 3.2045112781954885,
+        "mediana": 3.0
+      }
+    },
+    "fracao_livre": {
+      "antiga": {
+        "n": 3948,
+        "so_livre": 190,
+        "fracao": 0.04812563323201621,
+        "ic95": [
+          0.04187725678747183,
+          0.05525254720062323
+        ]
+      },
+      "passe1_atual": {
+        "n": 3990,
+        "so_livre": 167,
+        "fracao": 0.0418546365914787,
+        "ic95": [
+          0.03606889491604194,
+          0.04852174082674768
+        ]
+      },
+      "consenso": {
+        "n": 3990,
+        "so_livre": 150,
+        "fracao": 0.03759398496240601,
+        "ic95": [
+          0.032122741184656335,
+          0.043954787778936015
+        ]
+      }
+    },
+    "fracao_consenso_vazio": {
+      "n": 3990,
+      "vazio": 27,
+      "fracao": 0.006766917293233083,
+      "ic95": [
+        0.0046548437717707,
+        0.009827853789394471
+      ]
+    },
+    "mudanca_de_conjunto_reviews_comuns": {
+      "n_comuns": 3183,
+      "identico": 1294,
+      "ganhou_eixo": 583,
+      "perdeu_eixo": 752,
+      "ganhou_e_perdeu": 554
+    },
+    "fracao_voto_unico_por_eixo": [
+      {
+        "eixo": "tom_atmosfera",
+        "n_mencionado_em_ao_menos_1_passe": 1642,
+        "n_so_1_de_3": 598,
+        "fracao_da_mencao_que_e_voto_unico": 0.364190012180268
+      },
+      {
+        "eixo": "expectativa",
+        "n_mencionado_em_ao_menos_1_passe": 1614,
+        "n_so_1_de_3": 511,
+        "fracao_da_mencao_que_e_voto_unico": 0.31660470879801733
+      },
+      {
+        "eixo": "critica_social",
+        "n_mencionado_em_ao_menos_1_passe": 1394,
+        "n_so_1_de_3": 418,
+        "fracao_da_mencao_que_e_voto_unico": 0.2998565279770445
+      },
+      {
+        "eixo": "comparacoes",
+        "n_mencionado_em_ao_menos_1_passe": 2358,
+        "n_so_1_de_3": 625,
+        "fracao_da_mencao_que_e_voto_unico": 0.2650551314673452
+      },
+      {
+        "eixo": "ritmo",
+        "n_mencionado_em_ao_menos_1_passe": 1739,
+        "n_so_1_de_3": 394,
+        "fracao_da_mencao_que_e_voto_unico": 0.22656699252443932
+      },
+      {
+        "eixo": "impacto_emocional",
+        "n_mencionado_em_ao_menos_1_passe": 2364,
+        "n_so_1_de_3": 531,
+        "fracao_da_mencao_que_e_voto_unico": 0.22461928934010153
+      },
+      {
+        "eixo": "roteiro_estrutura",
+        "n_mencionado_em_ao_menos_1_passe": 2220,
+        "n_so_1_de_3": 463,
+        "fracao_da_mencao_que_e_voto_unico": 0.20855855855855857
+      },
+      {
+        "eixo": "direcao_imagem",
+        "n_mencionado_em_ao_menos_1_passe": 1504,
+        "n_so_1_de_3": 208,
+        "fracao_da_mencao_que_e_voto_unico": 0.13829787234042554
+      },
+      {
+        "eixo": "som_trilha",
+        "n_mencionado_em_ao_menos_1_passe": 615,
+        "n_so_1_de_3": 76,
+        "fracao_da_mencao_que_e_voto_unico": 0.12357723577235773
+      },
+      {
+        "eixo": "atuacao",
+        "n_mencionado_em_ao_menos_1_passe": 1310,
+        "n_so_1_de_3": 150,
+        "fracao_da_mencao_que_e_voto_unico": 0.11450381679389313
+      }
+    ],
+    "tom_atmosfera_voto_unico": {
+      "eixo": "tom_atmosfera",
+      "n_mencionado_em_ao_menos_1_passe": 1642,
+      "n_so_1_de_3": 598,
+      "fracao_da_mencao_que_e_voto_unico": 0.364190012180268
+    }
+  },
+  "entrega4_recalibracao_schema": {
+    "n_filmes_avaliados": 35,
+    "n_filmes_todos_buckets_40": 27,
+    "n_filmes_algum_sub40": 8,
+    "fracao_livre_global": {
+      "n": 3990,
+      "so_livre": 150,
+      "fracao": 0.03759398496240601,
+      "ic95": [
+        0.032122741184656335,
+        0.043954787778936015
+      ]
+    },
+    "fracao_livre_por_bucket": {
+      "negativas": {
+        "n": 1322,
+        "so_livre": 63,
+        "fracao": 0.047655068078668684,
+        "ic95": [
+          0.0374237504192705,
+          0.060507706852850104
+        ]
+      },
+      "medianas": {
+        "n": 1329,
+        "so_livre": 41,
+        "fracao": 0.030850263355906696,
+        "ic95": [
+          0.022821437398886965,
+          0.041583515147612174
+        ]
+      },
+      "positivas": {
+        "n": 1339,
+        "so_livre": 46,
+        "fracao": 0.03435399551904406,
+        "ic95": [
+          0.02585361220334729,
+          0.04551861814757422
+        ]
+      }
+    },
+    "fracao_consenso_vazio_global": {
+      "n": 3990,
+      "vazio": 27,
+      "fracao": 0.006766917293233083,
+      "ic95": [
+        0.0046548437717707,
+        0.009827853789394471
+      ]
+    },
+    "nulo_de_permutacao": {
+      "n_rodadas": 2000,
+      "n_filmes": 35,
+      "n_pares": 350,
+      "pares_acima": {
+        "0.1": {
+          "media": 70.4485,
+          "p5": 59,
+          "p95": 83,
+          "max": 100
+        },
+        "0.15": {
+          "media": 27.633,
+          "p5": 19,
+          "p95": 36,
+          "max": 45
+        },
+        "0.2": {
+          "media": 9.62,
+          "p5": 5,
+          "p95": 15,
+          "max": 21
+        },
+        "0.25": {
+          "media": 3.6625,
+          "p5": 1,
+          "p95": 7,
+          "max": 12
+        }
+      },
+      "filmes_sem_contraste": {
+        "0.1": {
+          "media": 4.251,
+          "p5": 1,
+          "p95": 7,
+          "max": 12
+        },
+        "0.15": {
+          "media": 16.8695,
+          "p5": 12,
+          "p95": 22,
+          "max": 28
+        },
+        "0.2": {
+          "media": 28.4375,
+          "p5": 25,
+          "p95": 32,
+          "max": 34
+        },
+        "0.25": {
+          "media": 32.6285,
+          "p5": 30,
+          "p95": 34,
+          "max": 35
+        }
+      },
+      "por_grupo": {
+        "todos": {
+          "n_filmes": 35,
+          "n_pares": 350,
+          "pares_acima": {
+            "0.1": {
+              "media": 70.4485,
+              "p5": 59,
+              "p95": 83,
+              "max": 100
+            },
+            "0.15": {
+              "media": 27.633,
+              "p5": 19,
+              "p95": 36,
+              "max": 45
+            },
+            "0.2": {
+              "media": 9.62,
+              "p5": 5,
+              "p95": 15,
+              "max": 21
+            },
+            "0.25": {
+              "media": 3.6625,
+              "p5": 1,
+              "p95": 7,
+              "max": 12
+            }
+          }
+        },
+        "todos_buckets_40": {
+          "n_filmes": 27,
+          "n_pares": 270,
+          "pares_acima": {
+            "0.1": {
+              "media": 51.0535,
+              "p5": 41,
+              "p95": 62,
+              "max": 77
+            },
+            "0.15": {
+              "media": 18.2385,
+              "p5": 12,
+              "p95": 25,
+              "max": 34
+            },
+            "0.2": {
+              "media": 4.558,
+              "p5": 1,
+              "p95": 8,
+              "max": 14
+            },
+            "0.25": {
+              "media": 1.1185,
+              "p5": 0,
+              "p95": 3,
+              "max": 7
+            }
+          }
+        },
+        "algum_bucket_sub40": {
+          "n_filmes": 8,
+          "n_pares": 80,
+          "pares_acima": {
+            "0.1": {
+              "media": 19.395,
+              "p5": 13,
+              "p95": 26,
+              "max": 33
+            },
+            "0.15": {
+              "media": 9.3945,
+              "p5": 5,
+              "p95": 14,
+              "max": 22
+            },
+            "0.2": {
+              "media": 5.062,
+              "p5": 2,
+              "p95": 9,
+              "max": 13
+            },
+            "0.25": {
+              "media": 2.544,
+              "p5": 0,
+              "p95": 5,
+              "max": 9
+            }
+          }
+        }
+      }
+    },
+    "por_margem": {
+      "0.1": {
+        "n_pares_acima": 111,
+        "n_filmes_com_ao_menos_um": 34,
+        "sem_contraste": {
+          "n": 1,
+          "filmes": [
+            "the-northman"
+          ]
+        },
+        "fracao_ruido_estimada": 0.6346711711711712
+      },
+      "0.15": {
+        "n_pares_acima": 61,
+        "n_filmes_com_ao_menos_um": 30,
+        "sem_contraste": {
+          "n": 5,
+          "filmes": [
+            "dune-part-two",
+            "friday-the-13th-2009",
+            "napoleon-2023",
+            "pearl-2022",
+            "the-northman"
+          ]
+        },
+        "fracao_ruido_estimada": 0.453
+      },
+      "0.2": {
+        "n_pares_acima": 28,
+        "n_filmes_com_ao_menos_um": 18,
+        "sem_contraste": {
+          "n": 17,
+          "filmes": [
+            "anatomy-of-a-fall",
+            "cidade-de-deus",
+            "dune-part-two",
+            "eighth-grade",
+            "friday-the-13th-2009",
+            "hereditary",
+            "im-still-here-2024",
+            "mother-2017",
+            "napoleon-2023",
+            "parasite-2019",
+            "pearl-2022",
+            "the-godfather",
+            "the-hateful-eight",
+            "the-northman",
+            "the-substance",
+            "wicked-2024",
+            "wonka"
+          ]
+        },
+        "fracao_ruido_estimada": 0.3435714285714285
+      },
+      "0.25": {
+        "n_pares_acima": 14,
+        "n_filmes_com_ao_menos_um": 9,
+        "sem_contraste": {
+          "n": 26,
+          "filmes": [
+            "anatomy-of-a-fall",
+            "avengers-endgame",
+            "barbie",
+            "bones-and-all",
+            "cats-2019",
+            "cidade-de-deus",
+            "dune-part-two",
+            "eighth-grade",
+            "friday-the-13th-2009",
+            "hereditary",
+            "im-still-here-2024",
+            "joker-folie-a-deux",
+            "longlegs",
+            "mother-2017",
+            "napoleon-2023",
+            "oppenheimer-2023",
+            "parasite-2019",
+            "pearl-2022",
+            "shutter-island",
+            "the-godfather",
+            "the-hateful-eight",
+            "the-invite-2026",
+            "the-northman",
+            "the-substance",
+            "wicked-2024",
+            "wonka"
+          ]
+        },
+        "fracao_ruido_estimada": 0.26160714285714287
+      }
+    },
+    "top_lifts": [
+      {
+        "slug": "obsession-2026",
+        "perfil": "obscuro",
+        "eixo": "tom_atmosfera",
+        "n_min_bucket": 5,
+        "todos_buckets_40": false,
+        "bucket": "positivas",
+        "freq": 0.75,
+        "lift": 0.55,
+        "freqs": {
+          "negativas": 0.2,
+          "medianas": 0.0,
+          "positivas": 0.75
+        }
+      },
+      {
+        "slug": "obsession-2026",
+        "perfil": "obscuro",
+        "eixo": "impacto_emocional",
+        "n_min_bucket": 5,
+        "todos_buckets_40": false,
+        "bucket": "positivas",
+        "freq": 0.75,
+        "lift": 0.55,
+        "freqs": {
+          "negativas": 0.2,
+          "medianas": 0.0,
+          "positivas": 0.75
+        }
+      },
+      {
+        "slug": "cure",
+        "perfil": "arthouse",
+        "eixo": "tom_atmosfera",
+        "n_min_bucket": 40,
+        "todos_buckets_40": true,
+        "bucket": "positivas",
+        "freq": 0.625,
+        "lift": 0.4,
+        "freqs": {
+          "negativas": 0.225,
+          "medianas": 0.15,
+          "positivas": 0.625
+        }
+      },
+      {
+        "slug": "obsession-2026",
+        "perfil": "obscuro",
+        "eixo": "atuacao",
+        "n_min_bucket": 5,
+        "todos_buckets_40": false,
+        "bucket": "positivas",
+        "freq": 0.375,
+        "lift": 0.375,
+        "freqs": {
+          "negativas": 0.0,
+          "medianas": 0.0,
+          "positivas": 0.375
+        }
+      },
+      {
+        "slug": "talk-to-me-2022",
+        "perfil": "divisivo",
+        "eixo": "impacto_emocional",
+        "n_min_bucket": 31,
+        "todos_buckets_40": false,
+        "bucket": "positivas",
+        "freq": 0.7352941176470589,
+        "lift": 0.3102941176470589,
+        "freqs": {
+          "negativas": 0.425,
+          "medianas": 0.2903225806451613,
+          "positivas": 0.7352941176470589
+        }
+      },
+      {
+        "slug": "obsession-2026",
+        "perfil": "obscuro",
+        "eixo": "direcao_imagem",
+        "n_min_bucket": 5,
+        "todos_buckets_40": false,
+        "bucket": "positivas",
+        "freq": 0.5,
+        "lift": 0.3,
+        "freqs": {
+          "negativas": 0.2,
+          "medianas": 0.16666666666666666,
+          "positivas": 0.5
+        }
+      },
+      {
+        "slug": "dune-2021",
+        "perfil": "aclamado",
+        "eixo": "som_trilha",
+        "n_min_bucket": 40,
+        "todos_buckets_40": true,
+        "bucket": "positivas",
+        "freq": 0.55,
+        "lift": 0.275,
+        "freqs": {
+          "negativas": 0.25,
+          "medianas": 0.275,
+          "positivas": 0.55
+        }
+      },
+      {
+        "slug": "everything-everywhere-all-at-once",
+        "perfil": "aclamado",
+        "eixo": "impacto_emocional",
+        "n_min_bucket": 40,
+        "todos_buckets_40": true,
+        "bucket": "positivas",
+        "freq": 0.8,
+        "lift": 0.275,
+        "freqs": {
+          "negativas": 0.475,
+          "medianas": 0.525,
+          "positivas": 0.8
+        }
+      },
+      {
+        "slug": "aftersun",
+        "perfil": "arthouse",
+        "eixo": "impacto_emocional",
+        "n_min_bucket": 40,
+        "todos_buckets_40": true,
+        "bucket": "positivas",
+        "freq": 0.9,
+        "lift": 0.25,
+        "freqs": {
+          "negativas": 0.65,
+          "medianas": 0.65,
+          "positivas": 0.9
+        }
+      },
+      {
+        "slug": "everything-everywhere-all-at-once",
+        "perfil": "aclamado",
+        "eixo": "direcao_imagem",
+        "n_min_bucket": 40,
+        "todos_buckets_40": true,
+        "bucket": "medianas",
+        "freq": 0.525,
+        "lift": 0.25,
+        "freqs": {
+          "negativas": 0.175,
+          "medianas": 0.525,
+          "positivas": 0.275
+        }
+      },
+      {
+        "slug": "interstellar",
+        "perfil": "aclamado",
+        "eixo": "atuacao",
+        "n_min_bucket": 40,
+        "todos_buckets_40": true,
+        "bucket": "negativas",
+        "freq": 0.4,
+        "lift": 0.25,
+        "freqs": {
+          "negativas": 0.4,
+          "medianas": 0.15,
+          "positivas": 0.1
+        }
+      },
+      {
+        "slug": "obsession-2026",
+        "perfil": "obscuro",
+        "eixo": "critica_social",
+        "n_min_bucket": 5,
+        "todos_buckets_40": false,
+        "bucket": "positivas",
+        "freq": 0.25,
+        "lift": 0.25,
+        "freqs": {
+          "negativas": 0.0,
+          "medianas": 0.0,
+          "positivas": 0.25
+        }
+      },
+      {
+        "slug": "perfect-days-2023",
+        "perfil": "arthouse",
+        "eixo": "impacto_emocional",
+        "n_min_bucket": 40,
+        "todos_buckets_40": true,
+        "bucket": "positivas",
+        "freq": 0.75,
+        "lift": 0.25,
+        "freqs": {
+          "negativas": 0.35,
+          "medianas": 0.5,
+          "positivas": 0.75
+        }
+      },
+      {
+        "slug": "spider-man-across-the-spider-verse",
+        "perfil": "aclamado",
+        "eixo": "comparacoes",
+        "n_min_bucket": 40,
+        "todos_buckets_40": true,
+        "bucket": "medianas",
+        "freq": 0.8,
+        "lift": 0.25,
+        "freqs": {
+          "negativas": 0.45,
+          "medianas": 0.8,
+          "positivas": 0.55
+        }
+      },
+      {
+        "slug": "oppenheimer-2023",
+        "perfil": "aclamado",
+        "eixo": "critica_social",
+        "n_min_bucket": 40,
+        "todos_buckets_40": true,
+        "bucket": "negativas",
+        "freq": 0.475,
+        "lift": 0.24999999999999997,
+        "freqs": {
+          "negativas": 0.475,
+          "medianas": 0.15,
+          "positivas": 0.225
+        }
+      },
+      {
+        "slug": "barbie",
+        "perfil": "divisivo",
+        "eixo": "impacto_emocional",
+        "n_min_bucket": 40,
+        "todos_buckets_40": true,
+        "bucket": "positivas",
+        "freq": 0.55,
+        "lift": 0.22500000000000003,
+        "freqs": {
+          "negativas": 0.275,
+          "medianas": 0.325,
+          "positivas": 0.55
+        }
+      },
+      {
+        "slug": "longlegs",
+        "perfil": "divisivo",
+        "eixo": "tom_atmosfera",
+        "n_min_bucket": 40,
+        "todos_buckets_40": true,
+        "bucket": "positivas",
+        "freq": 0.675,
+        "lift": 0.22500000000000003,
+        "freqs": {
+          "negativas": 0.375,
+          "medianas": 0.45,
+          "positivas": 0.675
+        }
+      },
+      {
+        "slug": "cats-2019",
+        "perfil": "invertido",
+        "eixo": "tom_atmosfera",
+        "n_min_bucket": 40,
+        "todos_buckets_40": true,
+        "bucket": "positivas",
+        "freq": 0.45,
+        "lift": 0.225,
+        "freqs": {
+          "negativas": 0.175,
+          "medianas": 0.225,
+          "positivas": 0.45
+        }
+      },
+      {
+        "slug": "the-invite-2026",
+        "perfil": "aclamado",
+        "eixo": "direcao_imagem",
+        "n_min_bucket": 40,
+        "todos_buckets_40": true,
+        "bucket": "positivas",
+        "freq": 0.5,
+        "lift": 0.22499999999999998,
+        "freqs": {
+          "negativas": 0.225,
+          "medianas": 0.275,
+          "positivas": 0.5
+        }
+      },
+      {
+        "slug": "obsession-2026",
+        "perfil": "obscuro",
+        "eixo": "comparacoes",
+        "n_min_bucket": 5,
+        "todos_buckets_40": false,
+        "bucket": "positivas",
+        "freq": 0.375,
+        "lift": 0.20833333333333334,
+        "freqs": {
+          "negativas": 0.0,
+          "medianas": 0.16666666666666666,
+          "positivas": 0.375
+        }
+      }
+    ]
+  },
+  "entrega5_tom_atmosfera": {
+    "freq_tom_atmosfera": 0.26165413533834586,
+    "freq_som_trilha": 0.13508771929824562,
+    "diff_pp_tom_atmosfera_menos_som_trilha": 12.656641604010025,
+    "n_filmes_onde_tom_atmosfera_encabeca_margem_20pp": 4,
+    "filmes": [
+      "cats-2019",
+      "cure",
+      "longlegs",
+      "obsession-2026"
+    ],
+    "distribuicao_votos_tom_atmosfera": {
+      "n_com_ao_menos_1_voto": 1044,
+      "3_de_3": 670,
+      "2_de_3": 374,
+      "fracao_3_de_3": 0.6417624521072797
+    }
+  }
+}
