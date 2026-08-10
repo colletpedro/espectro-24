@@ -1,0 +1,2324 @@
+{
+  "taxonomia_id": "11871105c0d3",
+  "taxonomia": [
+    "ritmo",
+    "atuacao",
+    "direcao_imagem",
+    "roteiro_estrutura",
+    "som_trilha",
+    "tom_atmosfera",
+    "impacto_emocional",
+    "comparacoes",
+    "expectativa",
+    "critica_social"
+  ],
+  "amostra": {
+    "n_filmes": 35,
+    "n_reviews": 3948,
+    "n_classificadas_ok": 3948,
+    "n_falhas": 0,
+    "criterio": "selecao.selecionar() com parâmetros de produção (cota 40 por bucket, min_chars 150, cascata, spoiler excluído). SEM sorteio: a amostra é a população que a síntese veria.",
+    "n_por_bucket_por_filme": {
+      "aftersun": {
+        "negativas": 40,
+        "medianas": 40,
+        "positivas": 40
+      },
+      "anatomy-of-a-fall": {
+        "negativas": 40,
+        "medianas": 40,
+        "positivas": 40
+      },
+      "avengers-endgame": {
+        "negativas": 40,
+        "medianas": 40,
+        "positivas": 40
+      },
+      "barbie": {
+        "negativas": 40,
+        "medianas": 35,
+        "positivas": 40
+      },
+      "bones-and-all": {
+        "negativas": 30,
+        "medianas": 34,
+        "positivas": 40
+      },
+      "cats-2019": {
+        "negativas": 40,
+        "medianas": 40,
+        "positivas": 40
+      },
+      "cidade-de-deus": {
+        "negativas": 40,
+        "medianas": 40,
+        "positivas": 40
+      },
+      "cure": {
+        "negativas": 40,
+        "medianas": 40,
+        "positivas": 40
+      },
+      "dune-2021": {
+        "negativas": 33,
+        "medianas": 40,
+        "positivas": 40
+      },
+      "dune-part-two": {
+        "negativas": 40,
+        "medianas": 38,
+        "positivas": 40
+      },
+      "eighth-grade": {
+        "negativas": 38,
+        "medianas": 39,
+        "positivas": 40
+      },
+      "everything-everywhere-all-at-once": {
+        "negativas": 40,
+        "medianas": 40,
+        "positivas": 40
+      },
+      "friday-the-13th-2009": {
+        "negativas": 40,
+        "medianas": 40,
+        "positivas": 40
+      },
+      "hereditary": {
+        "negativas": 36,
+        "medianas": 40,
+        "positivas": 39
+      },
+      "im-still-here-2024": {
+        "negativas": 40,
+        "medianas": 40,
+        "positivas": 40
+      },
+      "interstellar": {
+        "negativas": 40,
+        "medianas": 40,
+        "positivas": 40
+      },
+      "joker-folie-a-deux": {
+        "negativas": 40,
+        "medianas": 40,
+        "positivas": 40
+      },
+      "longlegs": {
+        "negativas": 40,
+        "medianas": 40,
+        "positivas": 40
+      },
+      "mother-2017": {
+        "negativas": 40,
+        "medianas": 40,
+        "positivas": 40
+      },
+      "napoleon-2023": {
+        "negativas": 40,
+        "medianas": 40,
+        "positivas": 40
+      },
+      "obsession-2026": {
+        "negativas": 5,
+        "medianas": 6,
+        "positivas": 8
+      },
+      "oppenheimer-2023": {
+        "negativas": 40,
+        "medianas": 40,
+        "positivas": 40
+      },
+      "parasite-2019": {
+        "negativas": 40,
+        "medianas": 40,
+        "positivas": 40
+      },
+      "pearl-2022": {
+        "negativas": 26,
+        "medianas": 33,
+        "positivas": 35
+      },
+      "perfect-days-2023": {
+        "negativas": 40,
+        "medianas": 40,
+        "positivas": 40
+      },
+      "shutter-island": {
+        "negativas": 40,
+        "medianas": 40,
+        "positivas": 40
+      },
+      "spider-man-across-the-spider-verse": {
+        "negativas": 40,
+        "medianas": 40,
+        "positivas": 40
+      },
+      "talk-to-me-2022": {
+        "negativas": 40,
+        "medianas": 31,
+        "positivas": 34
+      },
+      "the-godfather": {
+        "negativas": 25,
+        "medianas": 37,
+        "positivas": 40
+      },
+      "the-hateful-eight": {
+        "negativas": 40,
+        "medianas": 40,
+        "positivas": 40
+      },
+      "the-invite-2026": {
+        "negativas": 40,
+        "medianas": 40,
+        "positivas": 40
+      },
+      "the-northman": {
+        "negativas": 40,
+        "medianas": 40,
+        "positivas": 40
+      },
+      "the-substance": {
+        "negativas": 40,
+        "medianas": 31,
+        "positivas": 40
+      },
+      "wicked-2024": {
+        "negativas": 36,
+        "medianas": 40,
+        "positivas": 24
+      },
+      "wonka": {
+        "negativas": 32,
+        "medianas": 25,
+        "positivas": 38
+      }
+    }
+  },
+  "entrega2_fracao_livre": {
+    "global": {
+      "n": 3948,
+      "so_livre": 190,
+      "fracao": 0.04812563323201621,
+      "ic95": [
+        0.04187725678747183,
+        0.05525254720062323
+      ]
+    },
+    "por_bucket": {
+      "medianas": {
+        "n": 1309,
+        "so_livre": 58,
+        "fracao": 0.04430863254392666,
+        "ic95": [
+          0.03443100285116911,
+          0.05685312464753295
+        ]
+      },
+      "negativas": {
+        "n": 1301,
+        "so_livre": 73,
+        "fracao": 0.056110684089162186,
+        "ic95": [
+          0.044862275777990485,
+          0.06997281225108523
+        ]
+      },
+      "positivas": {
+        "n": 1338,
+        "so_livre": 59,
+        "fracao": 0.044095665171898356,
+        "ic95": [
+          0.03433835227504543,
+          0.05646342343380126
+        ]
+      }
+    },
+    "por_perfil": {
+      "aclamado": {
+        "n": 2054,
+        "so_livre": 95,
+        "fracao": 0.046251217137293084,
+        "ic95": [
+          0.037984206751392594,
+          0.05621235337257417
+        ]
+      },
+      "arthouse": {
+        "n": 840,
+        "so_livre": 39,
+        "fracao": 0.04642857142857143,
+        "ic95": [
+          0.03414713775393269,
+          0.06283978491022608
+        ]
+      },
+      "divisivo": {
+        "n": 555,
+        "so_livre": 28,
+        "fracao": 0.05045045045045045,
+        "ic95": [
+          0.035132579108189094,
+          0.07194892663511991
+        ]
+      },
+      "invertido": {
+        "n": 480,
+        "so_livre": 24,
+        "fracao": 0.05,
+        "ic95": [
+          0.0338268772604763,
+          0.07331893244253394
+        ]
+      },
+      "obscuro": {
+        "n": 19,
+        "so_livre": 4,
+        "fracao": 0.21052631578947367,
+        "ic95": [
+          0.08507538491591576,
+          0.43334714240266087
+        ]
+      }
+    },
+    "por_filme": {
+      "aftersun": {
+        "n": 120,
+        "so_livre": 5,
+        "fracao": 0.041666666666666664,
+        "ic95": [
+          0.017926452505837805,
+          0.0938421292954309
+        ]
+      },
+      "anatomy-of-a-fall": {
+        "n": 120,
+        "so_livre": 6,
+        "fracao": 0.05,
+        "ic95": [
+          0.023114049304474235,
+          0.10480419464586234
+        ]
+      },
+      "avengers-endgame": {
+        "n": 120,
+        "so_livre": 6,
+        "fracao": 0.05,
+        "ic95": [
+          0.023114049304474235,
+          0.10480419464586234
+        ]
+      },
+      "barbie": {
+        "n": 115,
+        "so_livre": 1,
+        "fracao": 0.008695652173913044,
+        "ic95": [
+          0.0015366093523631642,
+          0.047617895467497895
+        ]
+      },
+      "bones-and-all": {
+        "n": 104,
+        "so_livre": 1,
+        "fracao": 0.009615384615384616,
+        "ic95": [
+          0.0016993291044208915,
+          0.05246900667694733
+        ]
+      },
+      "cats-2019": {
+        "n": 120,
+        "so_livre": 11,
+        "fracao": 0.09166666666666666,
+        "ic95": [
+          0.0519566467894248,
+          0.15670990790625097
+        ]
+      },
+      "cidade-de-deus": {
+        "n": 120,
+        "so_livre": 5,
+        "fracao": 0.041666666666666664,
+        "ic95": [
+          0.017926452505837805,
+          0.0938421292954309
+        ]
+      },
+      "cure": {
+        "n": 120,
+        "so_livre": 3,
+        "fracao": 0.025,
+        "ic95": [
+          0.00853802009878548,
+          0.07093123740434756
+        ]
+      },
+      "dune-2021": {
+        "n": 113,
+        "so_livre": 7,
+        "fracao": 0.061946902654867256,
+        "ic95": [
+          0.030327788623800846,
+          0.12237125007474489
+        ]
+      },
+      "dune-part-two": {
+        "n": 118,
+        "so_livre": 11,
+        "fracao": 0.09322033898305085,
+        "ic95": [
+          0.05285105557398857,
+          0.1592407094717757
+        ]
+      },
+      "eighth-grade": {
+        "n": 117,
+        "so_livre": 9,
+        "fracao": 0.07692307692307693,
+        "ic95": [
+          0.04099470569997648,
+          0.13975099776637948
+        ]
+      },
+      "everything-everywhere-all-at-once": {
+        "n": 120,
+        "so_livre": 11,
+        "fracao": 0.09166666666666666,
+        "ic95": [
+          0.0519566467894248,
+          0.15670990790625097
+        ]
+      },
+      "friday-the-13th-2009": {
+        "n": 120,
+        "so_livre": 5,
+        "fracao": 0.041666666666666664,
+        "ic95": [
+          0.017926452505837805,
+          0.0938421292954309
+        ]
+      },
+      "hereditary": {
+        "n": 115,
+        "so_livre": 2,
+        "fracao": 0.017391304347826087,
+        "ic95": [
+          0.0047822521467075566,
+          0.06120137648165153
+        ]
+      },
+      "im-still-here-2024": {
+        "n": 120,
+        "so_livre": 4,
+        "fracao": 0.03333333333333333,
+        "ic95": [
+          0.013037340166920576,
+          0.0825815794852803
+        ]
+      },
+      "interstellar": {
+        "n": 120,
+        "so_livre": 9,
+        "fracao": 0.075,
+        "ic95": [
+          0.039956662006448734,
+          0.13641056839109136
+        ]
+      },
+      "joker-folie-a-deux": {
+        "n": 120,
+        "so_livre": 3,
+        "fracao": 0.025,
+        "ic95": [
+          0.00853802009878548,
+          0.07093123740434756
+        ]
+      },
+      "longlegs": {
+        "n": 120,
+        "so_livre": 2,
+        "fracao": 0.016666666666666666,
+        "ic95": [
+          0.004582468541151394,
+          0.058737126812913806
+        ]
+      },
+      "mother-2017": {
+        "n": 120,
+        "so_livre": 12,
+        "fracao": 0.1,
+        "ic95": [
+          0.058133016993107606,
+          0.16668319985163604
+        ]
+      },
+      "napoleon-2023": {
+        "n": 120,
+        "so_livre": 5,
+        "fracao": 0.041666666666666664,
+        "ic95": [
+          0.017926452505837805,
+          0.0938421292954309
+        ]
+      },
+      "obsession-2026": {
+        "n": 19,
+        "so_livre": 4,
+        "fracao": 0.21052631578947367,
+        "ic95": [
+          0.08507538491591576,
+          0.43334714240266087
+        ]
+      },
+      "oppenheimer-2023": {
+        "n": 120,
+        "so_livre": 4,
+        "fracao": 0.03333333333333333,
+        "ic95": [
+          0.013037340166920576,
+          0.0825815794852803
+        ]
+      },
+      "parasite-2019": {
+        "n": 120,
+        "so_livre": 9,
+        "fracao": 0.075,
+        "ic95": [
+          0.039956662006448734,
+          0.13641056839109136
+        ]
+      },
+      "pearl-2022": {
+        "n": 94,
+        "so_livre": 6,
+        "fracao": 0.06382978723404255,
+        "ic95": [
+          0.029579332197396002,
+          0.1323313479223077
+        ]
+      },
+      "perfect-days-2023": {
+        "n": 120,
+        "so_livre": 7,
+        "fracao": 0.058333333333333334,
+        "ic95": [
+          0.02854064663137293,
+          0.1155272594680315
+        ]
+      },
+      "shutter-island": {
+        "n": 120,
+        "so_livre": 4,
+        "fracao": 0.03333333333333333,
+        "ic95": [
+          0.013037340166920576,
+          0.0825815794852803
+        ]
+      },
+      "spider-man-across-the-spider-verse": {
+        "n": 120,
+        "so_livre": 6,
+        "fracao": 0.05,
+        "ic95": [
+          0.023114049304474235,
+          0.10480419464586234
+        ]
+      },
+      "talk-to-me-2022": {
+        "n": 105,
+        "so_livre": 5,
+        "fracao": 0.047619047619047616,
+        "ic95": [
+          0.020508863227294692,
+          0.10666310043365843
+        ]
+      },
+      "the-godfather": {
+        "n": 102,
+        "so_livre": 5,
+        "fracao": 0.049019607843137254,
+        "ic95": [
+          0.021117285132196968,
+          0.1096592715336131
+        ]
+      },
+      "the-hateful-eight": {
+        "n": 120,
+        "so_livre": 1,
+        "fracao": 0.008333333333333333,
+        "ic95": [
+          0.001472517830674952,
+          0.045697415374322405
+        ]
+      },
+      "the-invite-2026": {
+        "n": 120,
+        "so_livre": 3,
+        "fracao": 0.025,
+        "ic95": [
+          0.00853802009878548,
+          0.07093123740434756
+        ]
+      },
+      "the-northman": {
+        "n": 120,
+        "so_livre": 2,
+        "fracao": 0.016666666666666666,
+        "ic95": [
+          0.004582468541151394,
+          0.058737126812913806
+        ]
+      },
+      "the-substance": {
+        "n": 111,
+        "so_livre": 2,
+        "fracao": 0.018018018018018018,
+        "ic95": [
+          0.004955074866777286,
+          0.06332680208373542
+        ]
+      },
+      "wicked-2024": {
+        "n": 100,
+        "so_livre": 6,
+        "fracao": 0.06,
+        "ic95": [
+          0.02778574526665662,
+          0.12476968531222507
+        ]
+      },
+      "wonka": {
+        "n": 95,
+        "so_livre": 8,
+        "fracao": 0.08421052631578947,
+        "ic95": [
+          0.04328759724614253,
+          0.1574537909952457
+        ]
+      }
+    }
+  },
+  "entrega2_distribuicao": {
+    "eixos_por_review": {
+      "media": 3.0800405268490376,
+      "mediana": 3.0,
+      "histograma": {
+        "0": 206,
+        "1": 425,
+        "2": 943,
+        "3": 987,
+        "4": 637,
+        "5": 390,
+        "6": 200,
+        "7": 108,
+        "8": 38,
+        "9": 10,
+        "10": 4
+      }
+    },
+    "freq_global": {
+      "ritmo": 0.32700101317122593,
+      "atuacao": 0.26063829787234044,
+      "direcao_imagem": 0.2981256332320162,
+      "roteiro_estrutura": 0.4321175278622087,
+      "som_trilha": 0.12563323201621074,
+      "tom_atmosfera": 0.25329280648429586,
+      "impacto_emocional": 0.4612462006079027,
+      "comparacoes": 0.39209726443769,
+      "expectativa": 0.2755825734549139,
+      "critica_social": 0.25430597771023306
+    },
+    "freq_por_bucket": {
+      "negativas": {
+        "ritmo": 0.39815526518063027,
+        "atuacao": 0.22367409684857803,
+        "direcao_imagem": 0.25749423520368947,
+        "roteiro_estrutura": 0.45272867025365104,
+        "som_trilha": 0.09531129900076864,
+        "tom_atmosfera": 0.20368946963873943,
+        "impacto_emocional": 0.4012298232129131,
+        "comparacoes": 0.3920061491160646,
+        "expectativa": 0.31206764027671025,
+        "critica_social": 0.2905457340507302
+      },
+      "medianas": {
+        "ritmo": 0.3544690603514133,
+        "atuacao": 0.2727272727272727,
+        "direcao_imagem": 0.3155080213903743,
+        "roteiro_estrutura": 0.4514896867838044,
+        "som_trilha": 0.12605042016806722,
+        "tom_atmosfera": 0.24064171122994651,
+        "impacto_emocional": 0.4216959511077158,
+        "comparacoes": 0.3712757830404889,
+        "expectativa": 0.29717341482047366,
+        "critica_social": 0.2582123758594347
+      },
+      "positivas": {
+        "ritmo": 0.23094170403587444,
+        "atuacao": 0.28475336322869954,
+        "direcao_imagem": 0.32062780269058294,
+        "roteiro_estrutura": 0.3931240657698057,
+        "som_trilha": 0.1547085201793722,
+        "tom_atmosfera": 0.31390134529147984,
+        "impacto_emocional": 0.5582959641255605,
+        "comparacoes": 0.4125560538116592,
+        "expectativa": 0.21898355754857998,
+        "critica_social": 0.21524663677130046
+      }
+    }
+  },
+  "entrega3_lift": {
+    "todos": {
+      "n_pares": 350,
+      "n_filmes": 35,
+      "acima": {
+        "0.1": 117,
+        "0.15": 56,
+        "0.2": 32,
+        "0.25": 18
+      },
+      "filmes_com_ao_menos_um": {
+        "0.1": 34,
+        "0.15": 27,
+        "0.2": 21,
+        "0.25": 13
+      },
+      "por_eixo_15pp": {
+        "tom_atmosfera": 6,
+        "direcao_imagem": 8,
+        "impacto_emocional": 12,
+        "atuacao": 5,
+        "som_trilha": 3,
+        "expectativa": 3,
+        "roteiro_estrutura": 3,
+        "ritmo": 7,
+        "critica_social": 3,
+        "comparacoes": 6
+      },
+      "por_bucket_vencedor_15pp": {
+        "positivas": 33,
+        "negativas": 15,
+        "medianas": 8
+      }
+    },
+    "so_filmes_com_3_buckets_a_40": {
+      "n_pares": 220,
+      "n_filmes": 22,
+      "acima": {
+        "0.1": 74,
+        "0.15": 36,
+        "0.2": 20,
+        "0.25": 9
+      },
+      "filmes_com_ao_menos_um": {
+        "0.1": 22,
+        "0.15": 19,
+        "0.2": 15,
+        "0.25": 8
+      },
+      "por_eixo_15pp": {
+        "tom_atmosfera": 4,
+        "impacto_emocional": 8,
+        "roteiro_estrutura": 2,
+        "ritmo": 6,
+        "direcao_imagem": 4,
+        "critica_social": 2,
+        "atuacao": 3,
+        "comparacoes": 4,
+        "expectativa": 2,
+        "som_trilha": 1
+      },
+      "por_bucket_vencedor_15pp": {
+        "positivas": 19,
+        "medianas": 5,
+        "negativas": 12
+      }
+    },
+    "filmes_com_algum_bucket_sub40": {
+      "n_pares": 130,
+      "n_filmes": 13,
+      "acima": {
+        "0.1": 43,
+        "0.15": 20,
+        "0.2": 12,
+        "0.25": 9
+      },
+      "filmes_com_ao_menos_um": {
+        "0.1": 12,
+        "0.15": 8,
+        "0.2": 6,
+        "0.25": 5
+      },
+      "por_eixo_15pp": {
+        "tom_atmosfera": 2,
+        "direcao_imagem": 4,
+        "atuacao": 2,
+        "impacto_emocional": 4,
+        "som_trilha": 2,
+        "expectativa": 1,
+        "critica_social": 1,
+        "comparacoes": 2,
+        "roteiro_estrutura": 1,
+        "ritmo": 1
+      },
+      "por_bucket_vencedor_15pp": {
+        "positivas": 14,
+        "negativas": 3,
+        "medianas": 3
+      }
+    },
+    "nulo_de_permutacao": {
+      "n_rodadas": 2000,
+      "n_filmes": 35,
+      "n_pares": 350,
+      "pares_acima": {
+        "0.1": {
+          "media": 69.3265,
+          "p5": 57,
+          "p95": 82,
+          "max": 109
+        },
+        "0.15": {
+          "media": 28.0155,
+          "p5": 20,
+          "p95": 36,
+          "max": 46
+        },
+        "0.2": {
+          "media": 9.9295,
+          "p5": 5,
+          "p95": 15,
+          "max": 22
+        },
+        "0.25": {
+          "media": 4.083,
+          "p5": 1,
+          "p95": 7,
+          "max": 11
+        }
+      },
+      "filmes_sem_contraste": {
+        "0.1": {
+          "media": 4.2845,
+          "p5": 2,
+          "p95": 7,
+          "max": 12
+        },
+        "0.15": {
+          "media": 16.73,
+          "p5": 12,
+          "p95": 21,
+          "max": 27
+        },
+        "0.2": {
+          "media": 28.311,
+          "p5": 25,
+          "p95": 32,
+          "max": 33
+        },
+        "0.25": {
+          "media": 32.5645,
+          "p5": 30,
+          "p95": 34,
+          "max": 35
+        }
+      },
+      "por_grupo": {
+        "todos": {
+          "n_filmes": 35,
+          "n_pares": 350,
+          "pares_acima": {
+            "0.1": {
+              "media": 69.3265,
+              "p5": 57,
+              "p95": 82,
+              "max": 109
+            },
+            "0.15": {
+              "media": 28.0155,
+              "p5": 20,
+              "p95": 36,
+              "max": 46
+            },
+            "0.2": {
+              "media": 9.9295,
+              "p5": 5,
+              "p95": 15,
+              "max": 22
+            },
+            "0.25": {
+              "media": 4.083,
+              "p5": 1,
+              "p95": 7,
+              "max": 11
+            }
+          }
+        },
+        "todos_buckets_40": {
+          "n_filmes": 22,
+          "n_pares": 220,
+          "pares_acima": {
+            "0.1": {
+              "media": 40.175,
+              "p5": 31,
+              "p95": 50,
+              "max": 68
+            },
+            "0.15": {
+              "media": 14.804,
+              "p5": 9,
+              "p95": 21,
+              "max": 32
+            },
+            "0.2": {
+              "media": 3.715,
+              "p5": 1,
+              "p95": 7,
+              "max": 14
+            },
+            "0.25": {
+              "media": 0.874,
+              "p5": 0,
+              "p95": 3,
+              "max": 5
+            }
+          }
+        },
+        "algum_bucket_sub40": {
+          "n_filmes": 13,
+          "n_pares": 130,
+          "pares_acima": {
+            "0.1": {
+              "media": 29.1515,
+              "p5": 22,
+              "p95": 37,
+              "max": 46
+            },
+            "0.15": {
+              "media": 13.2115,
+              "p5": 8,
+              "p95": 19,
+              "max": 25
+            },
+            "0.2": {
+              "media": 6.2145,
+              "p5": 3,
+              "p95": 10,
+              "max": 15
+            },
+            "0.25": {
+              "media": 3.209,
+              "p5": 1,
+              "p95": 6,
+              "max": 10
+            }
+          }
+        }
+      }
+    },
+    "top": [
+      {
+        "slug": "obsession-2026",
+        "perfil": "obscuro",
+        "eixo": "tom_atmosfera",
+        "n_min_bucket": 5,
+        "todos_buckets_40": false,
+        "bucket": "positivas",
+        "freq": 0.75,
+        "lift": 0.55,
+        "freqs": {
+          "negativas": 0.2,
+          "medianas": 0.16666666666666666,
+          "positivas": 0.75
+        }
+      },
+      {
+        "slug": "cure",
+        "perfil": "arthouse",
+        "eixo": "tom_atmosfera",
+        "n_min_bucket": 40,
+        "todos_buckets_40": true,
+        "bucket": "positivas",
+        "freq": 0.65,
+        "lift": 0.45,
+        "freqs": {
+          "negativas": 0.2,
+          "medianas": 0.175,
+          "positivas": 0.65
+        }
+      },
+      {
+        "slug": "obsession-2026",
+        "perfil": "obscuro",
+        "eixo": "direcao_imagem",
+        "n_min_bucket": 5,
+        "todos_buckets_40": false,
+        "bucket": "positivas",
+        "freq": 0.625,
+        "lift": 0.425,
+        "freqs": {
+          "negativas": 0.2,
+          "medianas": 0.16666666666666666,
+          "positivas": 0.625
+        }
+      },
+      {
+        "slug": "everything-everywhere-all-at-once",
+        "perfil": "aclamado",
+        "eixo": "impacto_emocional",
+        "n_min_bucket": 40,
+        "todos_buckets_40": true,
+        "bucket": "positivas",
+        "freq": 0.875,
+        "lift": 0.375,
+        "freqs": {
+          "negativas": 0.5,
+          "medianas": 0.4,
+          "positivas": 0.875
+        }
+      },
+      {
+        "slug": "obsession-2026",
+        "perfil": "obscuro",
+        "eixo": "atuacao",
+        "n_min_bucket": 5,
+        "todos_buckets_40": false,
+        "bucket": "positivas",
+        "freq": 0.375,
+        "lift": 0.375,
+        "freqs": {
+          "negativas": 0.0,
+          "medianas": 0.0,
+          "positivas": 0.375
+        }
+      },
+      {
+        "slug": "perfect-days-2023",
+        "perfil": "arthouse",
+        "eixo": "tom_atmosfera",
+        "n_min_bucket": 40,
+        "todos_buckets_40": true,
+        "bucket": "positivas",
+        "freq": 0.575,
+        "lift": 0.35,
+        "freqs": {
+          "negativas": 0.175,
+          "medianas": 0.225,
+          "positivas": 0.575
+        }
+      },
+      {
+        "slug": "obsession-2026",
+        "perfil": "obscuro",
+        "eixo": "impacto_emocional",
+        "n_min_bucket": 5,
+        "todos_buckets_40": false,
+        "bucket": "positivas",
+        "freq": 0.5,
+        "lift": 0.3,
+        "freqs": {
+          "negativas": 0.2,
+          "medianas": 0.0,
+          "positivas": 0.5
+        }
+      },
+      {
+        "slug": "dune-2021",
+        "perfil": "aclamado",
+        "eixo": "som_trilha",
+        "n_min_bucket": 33,
+        "todos_buckets_40": false,
+        "bucket": "positivas",
+        "freq": 0.425,
+        "lift": 0.275,
+        "freqs": {
+          "negativas": 0.06060606060606061,
+          "medianas": 0.15,
+          "positivas": 0.425
+        }
+      },
+      {
+        "slug": "interstellar",
+        "perfil": "aclamado",
+        "eixo": "impacto_emocional",
+        "n_min_bucket": 40,
+        "todos_buckets_40": true,
+        "bucket": "positivas",
+        "freq": 0.675,
+        "lift": 0.275,
+        "freqs": {
+          "negativas": 0.4,
+          "medianas": 0.375,
+          "positivas": 0.675
+        }
+      },
+      {
+        "slug": "aftersun",
+        "perfil": "arthouse",
+        "eixo": "impacto_emocional",
+        "n_min_bucket": 40,
+        "todos_buckets_40": true,
+        "bucket": "positivas",
+        "freq": 0.95,
+        "lift": 0.2749999999999999,
+        "freqs": {
+          "negativas": 0.65,
+          "medianas": 0.675,
+          "positivas": 0.95
+        }
+      },
+      {
+        "slug": "talk-to-me-2022",
+        "perfil": "divisivo",
+        "eixo": "impacto_emocional",
+        "n_min_bucket": 31,
+        "todos_buckets_40": false,
+        "bucket": "positivas",
+        "freq": 0.7647058823529411,
+        "lift": 0.2647058823529411,
+        "freqs": {
+          "negativas": 0.5,
+          "medianas": 0.3548387096774194,
+          "positivas": 0.7647058823529411
+        }
+      },
+      {
+        "slug": "barbie",
+        "perfil": "divisivo",
+        "eixo": "impacto_emocional",
+        "n_min_bucket": 35,
+        "todos_buckets_40": false,
+        "bucket": "positivas",
+        "freq": 0.625,
+        "lift": 0.25357142857142856,
+        "freqs": {
+          "negativas": 0.15,
+          "medianas": 0.37142857142857144,
+          "positivas": 0.625
+        }
+      },
+      {
+        "slug": "hereditary",
+        "perfil": "aclamado",
+        "eixo": "expectativa",
+        "n_min_bucket": 36,
+        "todos_buckets_40": false,
+        "bucket": "negativas",
+        "freq": 0.5277777777777778,
+        "lift": 0.25277777777777777,
+        "freqs": {
+          "negativas": 0.5277777777777778,
+          "medianas": 0.275,
+          "positivas": 0.15384615384615385
+        }
+      },
+      {
+        "slug": "joker-folie-a-deux",
+        "perfil": "invertido",
+        "eixo": "roteiro_estrutura",
+        "n_min_bucket": 40,
+        "todos_buckets_40": true,
+        "bucket": "medianas",
+        "freq": 0.675,
+        "lift": 0.25000000000000006,
+        "freqs": {
+          "negativas": 0.4,
+          "medianas": 0.675,
+          "positivas": 0.425
+        }
+      },
+      {
+        "slug": "cure",
+        "perfil": "arthouse",
+        "eixo": "ritmo",
+        "n_min_bucket": 40,
+        "todos_buckets_40": true,
+        "bucket": "negativas",
+        "freq": 0.625,
+        "lift": 0.25,
+        "freqs": {
+          "negativas": 0.625,
+          "medianas": 0.375,
+          "positivas": 0.35
+        }
+      },
+      {
+        "slug": "im-still-here-2024",
+        "perfil": "arthouse",
+        "eixo": "impacto_emocional",
+        "n_min_bucket": 40,
+        "todos_buckets_40": true,
+        "bucket": "positivas",
+        "freq": 0.825,
+        "lift": 0.25,
+        "freqs": {
+          "negativas": 0.35,
+          "medianas": 0.575,
+          "positivas": 0.825
+        }
+      },
+      {
+        "slug": "obsession-2026",
+        "perfil": "obscuro",
+        "eixo": "critica_social",
+        "n_min_bucket": 5,
+        "todos_buckets_40": false,
+        "bucket": "positivas",
+        "freq": 0.25,
+        "lift": 0.25,
+        "freqs": {
+          "negativas": 0.0,
+          "medianas": 0.0,
+          "positivas": 0.25
+        }
+      },
+      {
+        "slug": "spider-man-across-the-spider-verse",
+        "perfil": "aclamado",
+        "eixo": "impacto_emocional",
+        "n_min_bucket": 40,
+        "todos_buckets_40": true,
+        "bucket": "positivas",
+        "freq": 0.525,
+        "lift": 0.25,
+        "freqs": {
+          "negativas": 0.275,
+          "medianas": 0.175,
+          "positivas": 0.525
+        }
+      },
+      {
+        "slug": "aftersun",
+        "perfil": "arthouse",
+        "eixo": "tom_atmosfera",
+        "n_min_bucket": 40,
+        "todos_buckets_40": true,
+        "bucket": "positivas",
+        "freq": 0.475,
+        "lift": 0.24999999999999997,
+        "freqs": {
+          "negativas": 0.2,
+          "medianas": 0.225,
+          "positivas": 0.475
+        }
+      },
+      {
+        "slug": "wonka",
+        "perfil": "divisivo",
+        "eixo": "direcao_imagem",
+        "n_min_bucket": 25,
+        "todos_buckets_40": false,
+        "bucket": "medianas",
+        "freq": 0.4,
+        "lift": 0.24210526315789477,
+        "freqs": {
+          "negativas": 0.125,
+          "medianas": 0.4,
+          "positivas": 0.15789473684210525
+        }
+      },
+      {
+        "slug": "perfect-days-2023",
+        "perfil": "arthouse",
+        "eixo": "ritmo",
+        "n_min_bucket": 40,
+        "todos_buckets_40": true,
+        "bucket": "negativas",
+        "freq": 0.65,
+        "lift": 0.22500000000000003,
+        "freqs": {
+          "negativas": 0.65,
+          "medianas": 0.425,
+          "positivas": 0.325
+        }
+      },
+      {
+        "slug": "the-invite-2026",
+        "perfil": "aclamado",
+        "eixo": "direcao_imagem",
+        "n_min_bucket": 40,
+        "todos_buckets_40": true,
+        "bucket": "positivas",
+        "freq": 0.525,
+        "lift": 0.22500000000000003,
+        "freqs": {
+          "negativas": 0.2,
+          "medianas": 0.3,
+          "positivas": 0.525
+        }
+      },
+      {
+        "slug": "oppenheimer-2023",
+        "perfil": "aclamado",
+        "eixo": "critica_social",
+        "n_min_bucket": 40,
+        "todos_buckets_40": true,
+        "bucket": "negativas",
+        "freq": 0.45,
+        "lift": 0.225,
+        "freqs": {
+          "negativas": 0.45,
+          "medianas": 0.15,
+          "positivas": 0.225
+        }
+      },
+      {
+        "slug": "shutter-island",
+        "perfil": "aclamado",
+        "eixo": "ritmo",
+        "n_min_bucket": 40,
+        "todos_buckets_40": true,
+        "bucket": "negativas",
+        "freq": 0.45,
+        "lift": 0.225,
+        "freqs": {
+          "negativas": 0.45,
+          "medianas": 0.225,
+          "positivas": 0.2
+        }
+      },
+      {
+        "slug": "obsession-2026",
+        "perfil": "obscuro",
+        "eixo": "som_trilha",
+        "n_min_bucket": 5,
+        "todos_buckets_40": false,
+        "bucket": "medianas",
+        "freq": 0.3333333333333333,
+        "lift": 0.20833333333333331,
+        "freqs": {
+          "negativas": 0.0,
+          "medianas": 0.3333333333333333,
+          "positivas": 0.125
+        }
+      },
+      {
+        "slug": "hereditary",
+        "perfil": "aclamado",
+        "eixo": "direcao_imagem",
+        "n_min_bucket": 36,
+        "todos_buckets_40": false,
+        "bucket": "positivas",
+        "freq": 0.3076923076923077,
+        "lift": 0.2076923076923077,
+        "freqs": {
+          "negativas": 0.08333333333333333,
+          "medianas": 0.1,
+          "positivas": 0.3076923076923077
+        }
+      },
+      {
+        "slug": "anatomy-of-a-fall",
+        "perfil": "arthouse",
+        "eixo": "atuacao",
+        "n_min_bucket": 40,
+        "todos_buckets_40": true,
+        "bucket": "positivas",
+        "freq": 0.55,
+        "lift": 0.20000000000000007,
+        "freqs": {
+          "negativas": 0.35,
+          "medianas": 0.275,
+          "positivas": 0.55
+        }
+      },
+      {
+        "slug": "perfect-days-2023",
+        "perfil": "arthouse",
+        "eixo": "impacto_emocional",
+        "n_min_bucket": 40,
+        "todos_buckets_40": true,
+        "bucket": "positivas",
+        "freq": 0.775,
+        "lift": 0.20000000000000007,
+        "freqs": {
+          "negativas": 0.575,
+          "medianas": 0.5,
+          "positivas": 0.775
+        }
+      },
+      {
+        "slug": "cidade-de-deus",
+        "perfil": "arthouse",
+        "eixo": "direcao_imagem",
+        "n_min_bucket": 40,
+        "todos_buckets_40": true,
+        "bucket": "positivas",
+        "freq": 0.5,
+        "lift": 0.2,
+        "freqs": {
+          "negativas": 0.3,
+          "medianas": 0.3,
+          "positivas": 0.5
+        }
+      },
+      {
+        "slug": "napoleon-2023",
+        "perfil": "invertido",
+        "eixo": "comparacoes",
+        "n_min_bucket": 40,
+        "todos_buckets_40": true,
+        "bucket": "medianas",
+        "freq": 0.65,
+        "lift": 0.2,
+        "freqs": {
+          "negativas": 0.45,
+          "medianas": 0.65,
+          "positivas": 0.425
+        }
+      },
+      {
+        "slug": "parasite-2019",
+        "perfil": "arthouse",
+        "eixo": "comparacoes",
+        "n_min_bucket": 40,
+        "todos_buckets_40": true,
+        "bucket": "positivas",
+        "freq": 0.45,
+        "lift": 0.2,
+        "freqs": {
+          "negativas": 0.15,
+          "medianas": 0.25,
+          "positivas": 0.45
+        }
+      },
+      {
+        "slug": "the-invite-2026",
+        "perfil": "aclamado",
+        "eixo": "comparacoes",
+        "n_min_bucket": 40,
+        "todos_buckets_40": true,
+        "bucket": "negativas",
+        "freq": 0.5,
+        "lift": 0.2,
+        "freqs": {
+          "negativas": 0.5,
+          "medianas": 0.275,
+          "positivas": 0.3
+        }
+      },
+      {
+        "slug": "aftersun",
+        "perfil": "arthouse",
+        "eixo": "ritmo",
+        "n_min_bucket": 40,
+        "todos_buckets_40": true,
+        "bucket": "negativas",
+        "freq": 0.6,
+        "lift": 0.19999999999999996,
+        "freqs": {
+          "negativas": 0.6,
+          "medianas": 0.4,
+          "positivas": 0.075
+        }
+      },
+      {
+        "slug": "dune-part-two",
+        "perfil": "aclamado",
+        "eixo": "comparacoes",
+        "n_min_bucket": 38,
+        "todos_buckets_40": false,
+        "bucket": "positivas",
+        "freq": 0.675,
+        "lift": 0.17500000000000004,
+        "freqs": {
+          "negativas": 0.475,
+          "medianas": 0.5,
+          "positivas": 0.675
+        }
+      },
+      {
+        "slug": "anatomy-of-a-fall",
+        "perfil": "arthouse",
+        "eixo": "direcao_imagem",
+        "n_min_bucket": 40,
+        "todos_buckets_40": true,
+        "bucket": "positivas",
+        "freq": 0.325,
+        "lift": 0.17500000000000002,
+        "freqs": {
+          "negativas": 0.15,
+          "medianas": 0.125,
+          "positivas": 0.325
+        }
+      },
+      {
+        "slug": "aftersun",
+        "perfil": "arthouse",
+        "eixo": "roteiro_estrutura",
+        "n_min_bucket": 40,
+        "todos_buckets_40": true,
+        "bucket": "medianas",
+        "freq": 0.6,
+        "lift": 0.175,
+        "freqs": {
+          "negativas": 0.425,
+          "medianas": 0.6,
+          "positivas": 0.35
+        }
+      },
+      {
+        "slug": "barbie",
+        "perfil": "divisivo",
+        "eixo": "roteiro_estrutura",
+        "n_min_bucket": 35,
+        "todos_buckets_40": false,
+        "bucket": "negativas",
+        "freq": 0.375,
+        "lift": 0.175,
+        "freqs": {
+          "negativas": 0.375,
+          "medianas": 0.2,
+          "positivas": 0.2
+        }
+      },
+      {
+        "slug": "dune-2021",
+        "perfil": "aclamado",
+        "eixo": "direcao_imagem",
+        "n_min_bucket": 33,
+        "todos_buckets_40": false,
+        "bucket": "positivas",
+        "freq": 0.6,
+        "lift": 0.175,
+        "freqs": {
+          "negativas": 0.36363636363636365,
+          "medianas": 0.425,
+          "positivas": 0.6
+        }
+      },
+      {
+        "slug": "interstellar",
+        "perfil": "aclamado",
+        "eixo": "comparacoes",
+        "n_min_bucket": 40,
+        "todos_buckets_40": true,
+        "bucket": "negativas",
+        "freq": 0.45,
+        "lift": 0.175,
+        "freqs": {
+          "negativas": 0.45,
+          "medianas": 0.275,
+          "positivas": 0.275
+        }
+      },
+      {
+        "slug": "napoleon-2023",
+        "perfil": "invertido",
+        "eixo": "expectativa",
+        "n_min_bucket": 40,
+        "todos_buckets_40": true,
+        "bucket": "negativas",
+        "freq": 0.5,
+        "lift": 0.175,
+        "freqs": {
+          "negativas": 0.5,
+          "medianas": 0.325,
+          "positivas": 0.3
+        }
+      }
+    ],
+    "por_filme": {
+      "aftersun": {
+        "perfil": "arthouse",
+        "n_por_bucket": {
+          "negativas": 40,
+          "medianas": 40,
+          "positivas": 40
+        },
+        "n_min_bucket": 40,
+        "todos_buckets_40": true,
+        "melhor_eixo": "impacto_emocional",
+        "melhor_lift": 0.2749999999999999,
+        "n_acima": {
+          "0.1": 7,
+          "0.15": 5,
+          "0.2": 2,
+          "0.25": 1
+        }
+      },
+      "anatomy-of-a-fall": {
+        "perfil": "arthouse",
+        "n_por_bucket": {
+          "negativas": 40,
+          "medianas": 40,
+          "positivas": 40
+        },
+        "n_min_bucket": 40,
+        "todos_buckets_40": true,
+        "melhor_eixo": "atuacao",
+        "melhor_lift": 0.20000000000000007,
+        "n_acima": {
+          "0.1": 3,
+          "0.15": 3,
+          "0.2": 1,
+          "0.25": 0
+        }
+      },
+      "avengers-endgame": {
+        "perfil": "aclamado",
+        "n_por_bucket": {
+          "negativas": 40,
+          "medianas": 40,
+          "positivas": 40
+        },
+        "n_min_bucket": 40,
+        "todos_buckets_40": true,
+        "melhor_eixo": "impacto_emocional",
+        "melhor_lift": 0.125,
+        "n_acima": {
+          "0.1": 2,
+          "0.15": 0,
+          "0.2": 0,
+          "0.25": 0
+        }
+      },
+      "barbie": {
+        "perfil": "divisivo",
+        "n_por_bucket": {
+          "negativas": 40,
+          "medianas": 35,
+          "positivas": 40
+        },
+        "n_min_bucket": 35,
+        "todos_buckets_40": false,
+        "melhor_eixo": "impacto_emocional",
+        "melhor_lift": 0.25357142857142856,
+        "n_acima": {
+          "0.1": 5,
+          "0.15": 2,
+          "0.2": 1,
+          "0.25": 1
+        }
+      },
+      "bones-and-all": {
+        "perfil": "aclamado",
+        "n_por_bucket": {
+          "negativas": 30,
+          "medianas": 34,
+          "positivas": 40
+        },
+        "n_min_bucket": 30,
+        "todos_buckets_40": false,
+        "melhor_eixo": "ritmo",
+        "melhor_lift": 0.12745098039215685,
+        "n_acima": {
+          "0.1": 4,
+          "0.15": 0,
+          "0.2": 0,
+          "0.25": 0
+        }
+      },
+      "cats-2019": {
+        "perfil": "invertido",
+        "n_por_bucket": {
+          "negativas": 40,
+          "medianas": 40,
+          "positivas": 40
+        },
+        "n_min_bucket": 40,
+        "todos_buckets_40": true,
+        "melhor_eixo": "tom_atmosfera",
+        "melhor_lift": 0.15000000000000002,
+        "n_acima": {
+          "0.1": 3,
+          "0.15": 2,
+          "0.2": 0,
+          "0.25": 0
+        }
+      },
+      "cidade-de-deus": {
+        "perfil": "arthouse",
+        "n_por_bucket": {
+          "negativas": 40,
+          "medianas": 40,
+          "positivas": 40
+        },
+        "n_min_bucket": 40,
+        "todos_buckets_40": true,
+        "melhor_eixo": "direcao_imagem",
+        "melhor_lift": 0.2,
+        "n_acima": {
+          "0.1": 3,
+          "0.15": 1,
+          "0.2": 1,
+          "0.25": 0
+        }
+      },
+      "cure": {
+        "perfil": "arthouse",
+        "n_por_bucket": {
+          "negativas": 40,
+          "medianas": 40,
+          "positivas": 40
+        },
+        "n_min_bucket": 40,
+        "todos_buckets_40": true,
+        "melhor_eixo": "tom_atmosfera",
+        "melhor_lift": 0.45,
+        "n_acima": {
+          "0.1": 4,
+          "0.15": 3,
+          "0.2": 2,
+          "0.25": 2
+        }
+      },
+      "dune-2021": {
+        "perfil": "aclamado",
+        "n_por_bucket": {
+          "negativas": 33,
+          "medianas": 40,
+          "positivas": 40
+        },
+        "n_min_bucket": 33,
+        "todos_buckets_40": false,
+        "melhor_eixo": "som_trilha",
+        "melhor_lift": 0.275,
+        "n_acima": {
+          "0.1": 3,
+          "0.15": 2,
+          "0.2": 1,
+          "0.25": 1
+        }
+      },
+      "dune-part-two": {
+        "perfil": "aclamado",
+        "n_por_bucket": {
+          "negativas": 40,
+          "medianas": 38,
+          "positivas": 40
+        },
+        "n_min_bucket": 38,
+        "todos_buckets_40": false,
+        "melhor_eixo": "comparacoes",
+        "melhor_lift": 0.17500000000000004,
+        "n_acima": {
+          "0.1": 2,
+          "0.15": 1,
+          "0.2": 0,
+          "0.25": 0
+        }
+      },
+      "eighth-grade": {
+        "perfil": "aclamado",
+        "n_por_bucket": {
+          "negativas": 38,
+          "medianas": 39,
+          "positivas": 40
+        },
+        "n_min_bucket": 38,
+        "todos_buckets_40": false,
+        "melhor_eixo": "tom_atmosfera",
+        "melhor_lift": 0.1192307692307692,
+        "n_acima": {
+          "0.1": 2,
+          "0.15": 0,
+          "0.2": 0,
+          "0.25": 0
+        }
+      },
+      "everything-everywhere-all-at-once": {
+        "perfil": "aclamado",
+        "n_por_bucket": {
+          "negativas": 40,
+          "medianas": 40,
+          "positivas": 40
+        },
+        "n_min_bucket": 40,
+        "todos_buckets_40": true,
+        "melhor_eixo": "impacto_emocional",
+        "melhor_lift": 0.375,
+        "n_acima": {
+          "0.1": 4,
+          "0.15": 1,
+          "0.2": 1,
+          "0.25": 1
+        }
+      },
+      "friday-the-13th-2009": {
+        "perfil": "invertido",
+        "n_por_bucket": {
+          "negativas": 40,
+          "medianas": 40,
+          "positivas": 40
+        },
+        "n_min_bucket": 40,
+        "todos_buckets_40": true,
+        "melhor_eixo": "ritmo",
+        "melhor_lift": 0.15000000000000002,
+        "n_acima": {
+          "0.1": 2,
+          "0.15": 1,
+          "0.2": 0,
+          "0.25": 0
+        }
+      },
+      "hereditary": {
+        "perfil": "aclamado",
+        "n_por_bucket": {
+          "negativas": 36,
+          "medianas": 40,
+          "positivas": 39
+        },
+        "n_min_bucket": 36,
+        "todos_buckets_40": false,
+        "melhor_eixo": "expectativa",
+        "melhor_lift": 0.25277777777777777,
+        "n_acima": {
+          "0.1": 5,
+          "0.15": 3,
+          "0.2": 2,
+          "0.25": 1
+        }
+      },
+      "im-still-here-2024": {
+        "perfil": "arthouse",
+        "n_por_bucket": {
+          "negativas": 40,
+          "medianas": 40,
+          "positivas": 40
+        },
+        "n_min_bucket": 40,
+        "todos_buckets_40": true,
+        "melhor_eixo": "impacto_emocional",
+        "melhor_lift": 0.25,
+        "n_acima": {
+          "0.1": 4,
+          "0.15": 1,
+          "0.2": 1,
+          "0.25": 1
+        }
+      },
+      "interstellar": {
+        "perfil": "aclamado",
+        "n_por_bucket": {
+          "negativas": 40,
+          "medianas": 40,
+          "positivas": 40
+        },
+        "n_min_bucket": 40,
+        "todos_buckets_40": true,
+        "melhor_eixo": "impacto_emocional",
+        "melhor_lift": 0.275,
+        "n_acima": {
+          "0.1": 3,
+          "0.15": 2,
+          "0.2": 1,
+          "0.25": 1
+        }
+      },
+      "joker-folie-a-deux": {
+        "perfil": "invertido",
+        "n_por_bucket": {
+          "negativas": 40,
+          "medianas": 40,
+          "positivas": 40
+        },
+        "n_min_bucket": 40,
+        "todos_buckets_40": true,
+        "melhor_eixo": "roteiro_estrutura",
+        "melhor_lift": 0.25000000000000006,
+        "n_acima": {
+          "0.1": 5,
+          "0.15": 1,
+          "0.2": 1,
+          "0.25": 1
+        }
+      },
+      "longlegs": {
+        "perfil": "divisivo",
+        "n_por_bucket": {
+          "negativas": 40,
+          "medianas": 40,
+          "positivas": 40
+        },
+        "n_min_bucket": 40,
+        "todos_buckets_40": true,
+        "melhor_eixo": "expectativa",
+        "melhor_lift": 0.14999999999999997,
+        "n_acima": {
+          "0.1": 4,
+          "0.15": 0,
+          "0.2": 0,
+          "0.25": 0
+        }
+      },
+      "mother-2017": {
+        "perfil": "divisivo",
+        "n_por_bucket": {
+          "negativas": 40,
+          "medianas": 40,
+          "positivas": 40
+        },
+        "n_min_bucket": 40,
+        "todos_buckets_40": true,
+        "melhor_eixo": "impacto_emocional",
+        "melhor_lift": 0.17499999999999993,
+        "n_acima": {
+          "0.1": 4,
+          "0.15": 3,
+          "0.2": 0,
+          "0.25": 0
+        }
+      },
+      "napoleon-2023": {
+        "perfil": "invertido",
+        "n_por_bucket": {
+          "negativas": 40,
+          "medianas": 40,
+          "positivas": 40
+        },
+        "n_min_bucket": 40,
+        "todos_buckets_40": true,
+        "melhor_eixo": "comparacoes",
+        "melhor_lift": 0.2,
+        "n_acima": {
+          "0.1": 3,
+          "0.15": 2,
+          "0.2": 1,
+          "0.25": 0
+        }
+      },
+      "obsession-2026": {
+        "perfil": "obscuro",
+        "n_por_bucket": {
+          "negativas": 5,
+          "medianas": 6,
+          "positivas": 8
+        },
+        "n_min_bucket": 5,
+        "todos_buckets_40": false,
+        "melhor_eixo": "tom_atmosfera",
+        "melhor_lift": 0.55,
+        "n_acima": {
+          "0.1": 7,
+          "0.15": 7,
+          "0.2": 6,
+          "0.25": 5
+        }
+      },
+      "oppenheimer-2023": {
+        "perfil": "aclamado",
+        "n_por_bucket": {
+          "negativas": 40,
+          "medianas": 40,
+          "positivas": 40
+        },
+        "n_min_bucket": 40,
+        "todos_buckets_40": true,
+        "melhor_eixo": "critica_social",
+        "melhor_lift": 0.225,
+        "n_acima": {
+          "0.1": 3,
+          "0.15": 1,
+          "0.2": 1,
+          "0.25": 0
+        }
+      },
+      "parasite-2019": {
+        "perfil": "arthouse",
+        "n_por_bucket": {
+          "negativas": 40,
+          "medianas": 40,
+          "positivas": 40
+        },
+        "n_min_bucket": 40,
+        "todos_buckets_40": true,
+        "melhor_eixo": "comparacoes",
+        "melhor_lift": 0.2,
+        "n_acima": {
+          "0.1": 2,
+          "0.15": 1,
+          "0.2": 1,
+          "0.25": 0
+        }
+      },
+      "pearl-2022": {
+        "perfil": "aclamado",
+        "n_por_bucket": {
+          "negativas": 26,
+          "medianas": 33,
+          "positivas": 35
+        },
+        "n_min_bucket": 26,
+        "todos_buckets_40": false,
+        "melhor_eixo": "impacto_emocional",
+        "melhor_lift": 0.15714285714285714,
+        "n_acima": {
+          "0.1": 3,
+          "0.15": 1,
+          "0.2": 0,
+          "0.25": 0
+        }
+      },
+      "perfect-days-2023": {
+        "perfil": "arthouse",
+        "n_por_bucket": {
+          "negativas": 40,
+          "medianas": 40,
+          "positivas": 40
+        },
+        "n_min_bucket": 40,
+        "todos_buckets_40": true,
+        "melhor_eixo": "tom_atmosfera",
+        "melhor_lift": 0.35,
+        "n_acima": {
+          "0.1": 5,
+          "0.15": 3,
+          "0.2": 3,
+          "0.25": 1
+        }
+      },
+      "shutter-island": {
+        "perfil": "aclamado",
+        "n_por_bucket": {
+          "negativas": 40,
+          "medianas": 40,
+          "positivas": 40
+        },
+        "n_min_bucket": 40,
+        "todos_buckets_40": true,
+        "melhor_eixo": "ritmo",
+        "melhor_lift": 0.225,
+        "n_acima": {
+          "0.1": 3,
+          "0.15": 2,
+          "0.2": 1,
+          "0.25": 0
+        }
+      },
+      "spider-man-across-the-spider-verse": {
+        "perfil": "aclamado",
+        "n_por_bucket": {
+          "negativas": 40,
+          "medianas": 40,
+          "positivas": 40
+        },
+        "n_min_bucket": 40,
+        "todos_buckets_40": true,
+        "melhor_eixo": "impacto_emocional",
+        "melhor_lift": 0.25,
+        "n_acima": {
+          "0.1": 2,
+          "0.15": 1,
+          "0.2": 1,
+          "0.25": 1
+        }
+      },
+      "talk-to-me-2022": {
+        "perfil": "divisivo",
+        "n_por_bucket": {
+          "negativas": 40,
+          "medianas": 31,
+          "positivas": 34
+        },
+        "n_min_bucket": 31,
+        "todos_buckets_40": false,
+        "melhor_eixo": "impacto_emocional",
+        "melhor_lift": 0.2647058823529411,
+        "n_acima": {
+          "0.1": 2,
+          "0.15": 1,
+          "0.2": 1,
+          "0.25": 1
+        }
+      },
+      "the-godfather": {
+        "perfil": "aclamado",
+        "n_por_bucket": {
+          "negativas": 25,
+          "medianas": 37,
+          "positivas": 40
+        },
+        "n_min_bucket": 25,
+        "todos_buckets_40": false,
+        "melhor_eixo": "critica_social",
+        "melhor_lift": 0.0972972972972973,
+        "n_acima": {
+          "0.1": 0,
+          "0.15": 0,
+          "0.2": 0,
+          "0.25": 0
+        }
+      },
+      "the-hateful-eight": {
+        "perfil": "aclamado",
+        "n_por_bucket": {
+          "negativas": 40,
+          "medianas": 40,
+          "positivas": 40
+        },
+        "n_min_bucket": 40,
+        "todos_buckets_40": true,
+        "melhor_eixo": "atuacao",
+        "melhor_lift": 0.15000000000000002,
+        "n_acima": {
+          "0.1": 3,
+          "0.15": 1,
+          "0.2": 0,
+          "0.25": 0
+        }
+      },
+      "the-invite-2026": {
+        "perfil": "aclamado",
+        "n_por_bucket": {
+          "negativas": 40,
+          "medianas": 40,
+          "positivas": 40
+        },
+        "n_min_bucket": 40,
+        "todos_buckets_40": true,
+        "melhor_eixo": "direcao_imagem",
+        "melhor_lift": 0.22500000000000003,
+        "n_acima": {
+          "0.1": 4,
+          "0.15": 2,
+          "0.2": 2,
+          "0.25": 0
+        }
+      },
+      "the-northman": {
+        "perfil": "aclamado",
+        "n_por_bucket": {
+          "negativas": 40,
+          "medianas": 40,
+          "positivas": 40
+        },
+        "n_min_bucket": 40,
+        "todos_buckets_40": true,
+        "melhor_eixo": "roteiro_estrutura",
+        "melhor_lift": 0.125,
+        "n_acima": {
+          "0.1": 1,
+          "0.15": 0,
+          "0.2": 0,
+          "0.25": 0
+        }
+      },
+      "the-substance": {
+        "perfil": "aclamado",
+        "n_por_bucket": {
+          "negativas": 40,
+          "medianas": 31,
+          "positivas": 40
+        },
+        "n_min_bucket": 31,
+        "todos_buckets_40": false,
+        "melhor_eixo": "comparacoes",
+        "melhor_lift": 0.11370967741935487,
+        "n_acima": {
+          "0.1": 2,
+          "0.15": 0,
+          "0.2": 0,
+          "0.25": 0
+        }
+      },
+      "wicked-2024": {
+        "perfil": "aclamado",
+        "n_por_bucket": {
+          "negativas": 36,
+          "medianas": 40,
+          "positivas": 24
+        },
+        "n_min_bucket": 24,
+        "todos_buckets_40": false,
+        "melhor_eixo": "ritmo",
+        "melhor_lift": 0.12222222222222223,
+        "n_acima": {
+          "0.1": 4,
+          "0.15": 0,
+          "0.2": 0,
+          "0.25": 0
+        }
+      },
+      "wonka": {
+        "perfil": "divisivo",
+        "n_por_bucket": {
+          "negativas": 32,
+          "medianas": 25,
+          "positivas": 38
+        },
+        "n_min_bucket": 25,
+        "todos_buckets_40": false,
+        "melhor_eixo": "direcao_imagem",
+        "melhor_lift": 0.24210526315789477,
+        "n_acima": {
+          "0.1": 4,
+          "0.15": 3,
+          "0.2": 1,
+          "0.25": 0
+        }
+      }
+    }
+  },
+  "entrega4_contraste": {
+    "sem_contraste_por_margem": {
+      "0.1": {
+        "n": 1,
+        "filmes": [
+          "the-godfather"
+        ]
+      },
+      "0.15": {
+        "n": 8,
+        "filmes": [
+          "avengers-endgame",
+          "bones-and-all",
+          "eighth-grade",
+          "longlegs",
+          "the-godfather",
+          "the-northman",
+          "the-substance",
+          "wicked-2024"
+        ]
+      },
+      "0.2": {
+        "n": 14,
+        "filmes": [
+          "avengers-endgame",
+          "bones-and-all",
+          "cats-2019",
+          "dune-part-two",
+          "eighth-grade",
+          "friday-the-13th-2009",
+          "longlegs",
+          "mother-2017",
+          "pearl-2022",
+          "the-godfather",
+          "the-hateful-eight",
+          "the-northman",
+          "the-substance",
+          "wicked-2024"
+        ]
+      },
+      "0.25": {
+        "n": 22,
+        "filmes": [
+          "anatomy-of-a-fall",
+          "avengers-endgame",
+          "bones-and-all",
+          "cats-2019",
+          "cidade-de-deus",
+          "dune-part-two",
+          "eighth-grade",
+          "friday-the-13th-2009",
+          "longlegs",
+          "mother-2017",
+          "napoleon-2023",
+          "oppenheimer-2023",
+          "parasite-2019",
+          "pearl-2022",
+          "shutter-island",
+          "the-godfather",
+          "the-hateful-eight",
+          "the-invite-2026",
+          "the-northman",
+          "the-substance",
+          "wicked-2024",
+          "wonka"
+        ]
+      }
+    },
+    "n_filmes_avaliados": 35,
+    "n_filmes_todos_buckets_40": 22
+  },
+  "entrega5_custo": {
+    "modelo": "deepseek-v4-flash",
+    "n_classificadas": 3948,
+    "uso_tokens": {
+      "prompt_tokens": 4039240,
+      "completion_tokens": 138662,
+      "cache_hit_tokens": 3523200,
+      "cache_miss_tokens": 516040
+    },
+    "taxa_cache_hit": 0.8722432932927977,
+    "custo_usd": 0.12093592,
+    "custo_usd_por_review": 3.063219858156028e-05
+  },
+  "nomes_de_eixo_reparados": {
+    "crítica_social → critica_social": 10,
+    "ton_atmosfera → tom_atmosfera": 6,
+    "rito → ritmo": 3,
+    "rotetro_estrutura → roteiro_estrutura": 3,
+    "atuação → atuacao": 3,
+    "rotiero_estrutura → roteiro_estrutura": 2,
+    "compareacoes → comparacoes": 2,
+    "rot_estrutura → roteiro_estrutura": 1,
+    "rosiero_estrutura → roteiro_estrutura": 1,
+    "impatto_emocional → impacto_emocional": 1,
+    "atuaacao → atuacao": 1,
+    "atucacao → atuacao": 1,
+    "atracao → atuacao": 1,
+    "roterio_estrutura → roteiro_estrutura": 1
+  },
+  "eixos_invalidos_remanescentes": {
+    "atores": 5,
+    "humor": 3,
+    "ator": 2,
+    "rol": 2,
+    "dialogos": 1,
+    "improviso": 1,
+    "memoria_afetiva": 1,
+    "rocot_estrutura": 1,
+    "atriacao": 1,
+    "elenco": 1,
+    "comentarios": 1,
+    "identificacao": 1,
+    "crítica": 1,
+    "atores_atuacao": 1,
+    "rt": 1,
+    "tema_livre": 1,
+    "imagem_direcao": 1,
+    "rolagem_estrutura": 1,
+    "animacao": 1,
+    "adaptacao": 1,
+    "rotulo_estrutura": 1,
+    "tom": 1,
+    "direcao_atores": 1,
+    "rotacao_estrutura": 1
+  },
+  "temas_livres_mais_comuns": {
+    "elogio genérico": 10,
+    "preferência pessoal": 9,
+    "identificação pessoal": 7,
+    "reação pessoal": 6,
+    "piada solta": 6,
+    "precisão histórica": 6,
+    "crítica ao diretor": 5,
+    "crítica negativa": 5,
+    "dificuldade de compreensão": 5,
+    "opinião negativa": 5,
+    "gosto pessoal": 5,
+    "reflexão pessoal": 4,
+    "experiência pessoal": 4,
+    "elogio entusiástico": 4,
+    "frustração": 3,
+    "nostalgia": 3,
+    "identificação com personagem": 3,
+    "crítica ao público": 3,
+    "revisão futura": 3,
+    "comentário pessoal": 3,
+    "expectativa": 3,
+    "reação de confusão": 3,
+    "adaptação de livro": 3,
+    "experiência de sessão": 3,
+    "confusão narrativa": 3,
+    "crítica negativa genérica": 3,
+    "crítica ao personagem": 3,
+    "estranheza": 3,
+    "crítica à indústria": 3,
+    "reação visceral": 3,
+    "violência gráfica": 3,
+    "reflexão filosófica": 3,
+    "crítica ao enredo": 3,
+    "reação da plateia": 3,
+    "fidelidade histórica": 3,
+    "xingamento": 3,
+    "filosofia de vida": 3,
+    "estilo pessoal": 2,
+    "idioma e legendas": 2,
+    "relação pai e filha": 2
+  }
+}

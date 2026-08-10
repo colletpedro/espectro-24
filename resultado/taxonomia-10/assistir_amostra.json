@@ -1,0 +1,472 @@
+{
+  "semente": 20260808,
+  "n_ocorrencias_totais": 39,
+  "n_so_livre_no_total": 20,
+  "n_filmes_no_total": 13,
+  "exemplos": [
+    {
+      "slug": "aftersun",
+      "perfil": "arthouse",
+      "bucket": "medianas",
+      "id": "viewing:1437007039",
+      "eixos_8": [
+        "direcao_imagem",
+        "impacto_emocional",
+        "livre",
+        "roteiro_estrutura"
+      ],
+      "rotulos": [
+        "dificuldade com sotaque britanico"
+      ],
+      "so_livre": false,
+      "texto": "Stupid British accent, couldn't understand every second sentence. As food this might be and as much i wanted to like it, i just couldn't. It was hard for me to sonehow feel connected to the story ... like it just wasn't for me in a way. Unique Cinematography tho, have to say that. The ending is hella strong - I wish i enjoyed the whole movie equally as good, but it sadly only was a 3/5 experience for me. I mean just because the movie is perfect in what it did, doesn't mean its automatically a 5/5. The way i am doing it is based on my opinion and enjoyment on watching the movie, not the other thing. Understandable right?"
+    },
+    {
+      "slug": "aftersun",
+      "perfil": "arthouse",
+      "bucket": "medianas",
+      "id": "viewing:1437612619",
+      "eixos_8": [
+        "comparacoes",
+        "direcao_imagem",
+        "impacto_emocional",
+        "livre",
+        "ritmo",
+        "tom_atmosfera"
+      ],
+      "rotulos": [
+        "experiencia pessoal de assistir"
+      ],
+      "so_livre": false,
+      "texto": "I understand this is an indie artistic movie therefore slow and abstract but i get so antsy watching these. The slow long lasting shots make me feel 답답해. I felt like I was holding my breath, and anxiety was stuck in my chest like a burp i couldn’t get out, which is perhaps what they wanted me to feel given that’s probably how the dad feels. Loved the color and appreciated the set design. Especially the color of the sea. I liked how it’s at a resort, a supposed escape where you’re supposed to be happy, but you really can’t escape from yourself can you I felt seen even now, every time she felt left out and behind as a little kid with the older teens. Honestly i still feel that way around couples and married folks - like a kid left behind… I don’t think i can fully understand this movie without going on Reddit so there i go… It was pretty. And artistic. But not my style. Too slow. Too… soft? Gentle? Nuanced? Too light of strokes perhaps. I like more dark and shadow and contrast, metaphorically speaking, in my plots. But this felt very abstract and infer-imagine-what-you-want. Glad i finally finally checked this off my watchlist."
+    },
+    {
+      "slug": "avengers-endgame",
+      "perfil": "aclamado",
+      "bucket": "negativas",
+      "id": "viewing:1435211717",
+      "eixos_8": [
+        "comparacoes",
+        "livre"
+      ],
+      "rotulos": [
+        "desistencia ao assistir"
+      ],
+      "so_livre": false,
+      "texto": "tentamos assistir eu e bazek e desistimos é tipo o pior filme do mundo KKKKKKKK pelo menos o guerra infinita tinha ragebait pra te manter assistindo, esse nem isso"
+    },
+    {
+      "slug": "avengers-endgame",
+      "perfil": "aclamado",
+      "bucket": "positivas",
+      "id": "viewing:1439401970",
+      "eixos_8": [
+        "livre"
+      ],
+      "rotulos": [
+        "assistir por tiktok"
+      ],
+      "so_livre": true,
+      "texto": "i lowkey watched half this movie on some tiktok account at 5 in the morning and decided to watch the rest on disney+ cause the tiktok’s ran out… RIP Tony Stark we’ll definitely not see you in theaters December 18th 🤷🏻‍♂️"
+    },
+    {
+      "slug": "barbie",
+      "perfil": "divisivo",
+      "bucket": "medianas",
+      "id": "viewing:1437875097",
+      "eixos_8": [
+        "impacto_emocional",
+        "livre"
+      ],
+      "rotulos": [
+        "circunstancia de assistir"
+      ],
+      "so_livre": false,
+      "texto": "That monologue got me balling and was defo the best bit of the movie! I liked it and it was done really well but idk didnt WOW me. I had to watch it again cos the first time I watched it was after a full day if working at a kids camp so I fell asleep..."
+    },
+    {
+      "slug": "barbie",
+      "perfil": "divisivo",
+      "bucket": "negativas",
+      "id": "viewing:1436676884",
+      "eixos_8": [
+        "livre",
+        "ritmo",
+        "tom_atmosfera"
+      ],
+      "rotulos": [
+        "experiencia de sala de cine"
+      ],
+      "so_livre": false,
+      "texto": "Moda. Fue una experiencia interesante con esta película. Estaba en Buenos Aires y era época de Barbenheimer, ya habíamos visto Oppenheimer en Bahía, nos quedaba Barbie y fuimos a una sala de cine TREMENDA, la mejor sala de cine que pisé. No se si la película era muy aburrida o los asientos muy cómodos, pero me dormí el 70% de la película y me desperté en el final... me dí cuenta que no me perdí de mucho. Pero bueno, la volví a ver en mi casa y... que se yo, se me hizo una pelicula tonta y artificial. Lo mejor de esta película fue la sala de cine donde la \"vi\"."
+    },
+    {
+      "slug": "barbie",
+      "perfil": "divisivo",
+      "bucket": "positivas",
+      "id": "viewing:1439234468",
+      "eixos_8": [
+        "livre"
+      ],
+      "rotulos": [
+        "experiencia no cinema"
+      ],
+      "so_livre": true,
+      "texto": "Whatever you thought this movie was gonna be, probably wrong. This was such a fun movie theater experience. She’s everything. “Hurry up the president’s here” “ I am. You’re welcome” Omg the heart being pink here? Incredible!"
+    },
+    {
+      "slug": "bones-and-all",
+      "perfil": "aclamado",
+      "bucket": "negativas",
+      "id": "viewing:1423457205",
+      "eixos_8": [
+        "livre",
+        "ritmo",
+        "roteiro_estrutura"
+      ],
+      "rotulos": [
+        "interrupcao por tempestade"
+      ],
+      "so_livre": false,
+      "texto": "The cinema had to close because of a severe thunderstorm, around what I think was the last act. Started off great and then hard-turned into a very generic YA romance. :(. Maybe we should have left a tape saying that we can't keep supporting this, that it's on its own now..."
+    },
+    {
+      "slug": "cats-2019",
+      "perfil": "invertido",
+      "bucket": "medianas",
+      "id": "viewing:1317185892",
+      "eixos_8": [
+        "direcao_imagem",
+        "livre",
+        "roteiro_estrutura",
+        "som_trilha"
+      ],
+      "rotulos": [
+        "experiencia de assistir"
+      ],
+      "so_livre": false,
+      "texto": "the reason I didn’t watch this before is because cats is so boring! the point still stands: there is no plot, and the whole thing is introducing the characters so with that given, it’s understandable this movie would be a lost cause. What I will say is that as a theatre girl, I do love the music and the Taylor swift feature and song was a cute addition. I had fun singing and once I accepted the horrible cgi, I did enjoy it. Three stars is probably too much but I can’t give it less🐈‍⬛"
+    },
+    {
+      "slug": "cats-2019",
+      "perfil": "invertido",
+      "bucket": "medianas",
+      "id": "viewing:1378985962",
+      "eixos_8": [
+        "livre"
+      ],
+      "rotulos": [
+        "experiencia em cinema"
+      ],
+      "so_livre": true,
+      "texto": "Made infinitely better when viewed in a raucous theater full of people in cat costumes and singing, clapping along to the absurdity. 5 star experience, 3 star film. 😸🎉✨"
+    },
+    {
+      "slug": "cats-2019",
+      "perfil": "invertido",
+      "bucket": "negativas",
+      "id": "viewing:1434249232",
+      "eixos_8": [
+        "livre"
+      ],
+      "rotulos": [
+        "experiencia no cinema"
+      ],
+      "so_livre": true,
+      "texto": "this movie is so awful that it’s funny and weirdly good. i saw this 7 years ago in the cinema when it came out and im still uncomfy by the thought of it. watching this film in the cinema and it being the last film i watched in that decade and before a world wide pandemic has to be criminal 😭"
+    },
+    {
+      "slug": "cats-2019",
+      "perfil": "invertido",
+      "bucket": "negativas",
+      "id": "viewing:1437563230",
+      "eixos_8": [
+        "livre"
+      ],
+      "rotulos": [
+        "abandono do filme"
+      ],
+      "so_livre": true,
+      "texto": "this one was a DNF for me. i made it through 10 minutes and thought - maybe i can get used to it - and then realized it’s actually terrifying and doesn’t make any sense at all, not a single redeeming quality"
+    },
+    {
+      "slug": "cats-2019",
+      "perfil": "invertido",
+      "bucket": "negativas",
+      "id": "viewing:1437830598",
+      "eixos_8": [
+        "livre"
+      ],
+      "rotulos": [
+        "experiencia de assistir"
+      ],
+      "so_livre": true,
+      "texto": "Wasted 2 hours of my life for the sake of nostalgia . icb i played one of these damn cats in elem . i forgot who, but i ate that shit down in leotards 🥀"
+    },
+    {
+      "slug": "cats-2019",
+      "perfil": "invertido",
+      "bucket": "positivas",
+      "id": "viewing:1378358412",
+      "eixos_8": [
+        "livre"
+      ],
+      "rotulos": [
+        "experiencia coletiva no cinema",
+        "cultura de cinema midnight"
+      ],
+      "so_livre": true,
+      "texto": "Covid and the rapid deterioration of the Alamo Drafthouse dealt a devastating blow to Cats' Midnight Movie potential, but we are so back! Classic bits (\"Get her a tissue!\", going absolutely nuts for Skimbleshanks), new bits (very funny performative shushing snaking through the entire crowd, chanting \"Kill him!\" at Corden)... I love the Los Angeles film community. I wasn't logging on Letterboxd in 2019 so I should note this is watch #9 in a theater? I think? How can a person lose track of how many times they've seen Cats in a theater? If you dream big enough, it is possible."
+    },
+    {
+      "slug": "cats-2019",
+      "perfil": "invertido",
+      "bucket": "positivas",
+      "id": "viewing:1403188954",
+      "eixos_8": [
+        "comparacoes",
+        "direcao_imagem",
+        "impacto_emocional",
+        "livre",
+        "ritmo",
+        "roteiro_estrutura",
+        "tom_atmosfera"
+      ],
+      "rotulos": [
+        "experiencia de assistir filme ruim"
+      ],
+      "so_livre": false,
+      "texto": "É, eu sei o que você está pensando... \"como assim???\" Apenas me escute Quando o trailer de Cats saiu, eu nao tive interesse nenhum nessa bomba, mas aí um dos meus melhores amigos disse que a gente ia ver no cinema. Eu disse a ele: \"-Por que você quer fazer isso??? Esse filme claramente vai ser uma chacota, uma vergonha ridícula\" \"-Eu sei, você não quer muito conferir esse desastre ao vivo???\" E de fato, eu não tive resposta pra essa fala, então, um dia depois do Natal fomos a uma vazia sala de cinema pra assistir um filme que já nasceu morto. E foi umas das experiências mais inesquecíveis de cinema na minha vida. Por ter ido sem nenhuma expectativa de que esse filme pudesse ser bom, eu fui capaz de me divertir bastante sem levar nada a sério. A lógica irrealista (e incoerente) de Cats faz com que literalmente qualquer coisa na cena possa ficar muito engraçada por simplesmente estar ali, é como estar vivenciando um delírio de alta definição. Eu ri absurdamente de várias cenas... mas o que é engraçado mesmo é que eu pude sentir um genuíno charme no meio de toda aquela esquisitice. Eu já reassisti Cats várias vezes e os primeiros 30 minutos realmente me entretém, porque são num ritmo muito dinâmico de música e dança que, se você puder desligar o senso crítico, vai só te carregando nessa gracinha de cenas que não tem absolutamente nenhuma história a não ser gatos cantando. Mais pro meio do filme, realmente começa a ficar enfadonho e cansativo, pois o filme começa a se levar a sério, e quando ele tenta se levar a sério aí é realmente só um desastre mesmo. Tecnicamente, é um filme que de fato merece todo o chapisco. O diretor foi um maníaco que quis fazer caprichos técnicos que dificultaram a vida de todos os profissionais que trabalharam na pós-produção do filme, então esse cara merece mesmo ser avacalhado e ter seu trabalho chamado de o pior filme de todos. E é realmente curioso pensar como nomes tao pesados toparam estar no elenco desse filme. Mas sendo muito sincero, assistir Cats no cinema me trouxe uma epifania de que eu me sentia tão envolvido por aquele filme que não importava de nada que ele fosse um desastre. A sua autenticidade ressoou em mim de uma forma que no final, eu quase me convenci de que era um filme bom. Estou frisando isso para que você entenda que eu não estou defendendo a qualidade de Cats. Estou apenas dizendo que não importa ele ser ruim Às vezes, nós deveríamos só assistir mais filmes ruins e nos entregar à liberdade de não esperar nada do que estamos assistindo. Praticar o exercício de apenas nos entregarmos na experiência de uma obra, e assim percebermos que talvez, um filme ruim também possa te oferecer uma coisa boa. Um filme ruim pode ser engraçado pra caralho. No pior dos casos você ainda vai treinar mais o seu senso crítico. Hoje em dia é tão fácil ser exigente e crítico com tudo, que eu sinto que a coisa mais saudável a se fazer seria realmente, não assistir todo filme do mundo esperando que ele seja bom, mas que seja pelo menos interessante. E isso vai de encontro a uma coisa que eu quero ressaltar: A MAIORIA DAS PESSOAS JULGA ESTE TIPO DE FILME SEM NEM TER SE DADO AO TRABALHO DE VER PRA FALAR MAL. A ESTAS PESSOAS O MEU DESPREZO QUER FALAR MAL???? ASSISTA E TENHA PROPRIEDADE PARA FALAR MAL Pois Cats é um filme horrível mesmo, mas se você se permitir aceitar que ele é horrível, pode talvez conseguir deixar ele te envolver numa experiência lúdica e engraçada, ao fim da qual você vai perceber que ele é um filme ruim de fato, mas nem tanto assim pra criar caso..... Assistam mais filmes ruins, e sejam mais felizes"
+    },
+    {
+      "slug": "cats-2019",
+      "perfil": "invertido",
+      "bucket": "positivas",
+      "id": "viewing:1416457627",
+      "eixos_8": [
+        "atuacao",
+        "comparacoes",
+        "direcao_imagem",
+        "livre",
+        "roteiro_estrutura",
+        "som_trilha",
+        "tom_atmosfera"
+      ],
+      "rotulos": [
+        "filme para assistir chapado"
+      ],
+      "so_livre": false,
+      "texto": "This movie is genuinely terrible. The uncanny cgi human cat morphs are nightmare fuel. For some reason they made Taylor swift a \"sexy\" cat secretary. The plot makes little to no sense. It has James corden. Most of the songs are eh. The only good things about this is Mr. Mistoffles and Jennifer Hudson. Even then however diary of a wimpy kid did her song better (jokes ofc). And somehow this is one of my favorites. At least top 10 stoner films."
+    },
+    {
+      "slug": "cure",
+      "perfil": "arthouse",
+      "bucket": "medianas",
+      "id": "viewing:1431475345",
+      "eixos_8": [
+        "livre",
+        "roteiro_estrutura",
+        "tom_atmosfera"
+      ],
+      "rotulos": [
+        "experiencia de assistir"
+      ],
+      "so_livre": false,
+      "texto": "Тащемта сматрэл ффильм с ру сабами тяжело. ГлавЗло не раскрыт как-то, но интерсная тема типо гипноз там да какойто бомже студент который ввглчдит буквально как любой чел с филфака я хз, концовка какая-то дебильная немного и бля тема с жинкой гг не раскрата какт-то. НА САМОМ ДЕЛЕ ПРОБЛЕМА С ПЛОХО ПРОПИСАНЫМ МИРОМ И ПЕРСАМИ И ТД ЭТО МИНУС ВСЕГО КИНЬЧА ХОТЯ ФИЛЬМА РЯЛ ГУД НУ РЯЛ НЕПЛОХО Я ДАЖЕ НИРАЗУ НЕ УСНУЛ, ЧТО ДЛЯ ЯПОНСКОГО КИНЬЧА РЯЛ ДОСТИЖЕНИЕ, ВОЗМОЖНО ЭТО КАКАЯ-ТО ЗАУМЬ ИЗЛЯШНЯЯ НО БЛЯ ТУПО НОРМА КИНЬЧ НА РАЗ ЕСЛИ БЫ Я БЫЛ ПЬЯНЫЙ МБ БЫ И ЧЁ ТО ДЛЯ МЕНЯ РАСКРЫЛОСЬ ЛУЧШЕ"
+    },
+    {
+      "slug": "cure",
+      "perfil": "arthouse",
+      "bucket": "negativas",
+      "id": "viewing:1376993585",
+      "eixos_8": [
+        "livre"
+      ],
+      "rotulos": [
+        "contexto de assistir no hospital"
+      ],
+      "so_livre": true,
+      "texto": "I watched it in a hospital, so that is probably the reason why I found it so boring. Did not have an energy for full focus. Have to give it a second watch."
+    },
+    {
+      "slug": "cure",
+      "perfil": "arthouse",
+      "bucket": "positivas",
+      "id": "viewing:1436046261",
+      "eixos_8": [
+        "direcao_imagem",
+        "livre",
+        "ritmo",
+        "roteiro_estrutura",
+        "som_trilha"
+      ],
+      "rotulos": [
+        "retorno ao cinema"
+      ],
+      "so_livre": false,
+      "texto": "Truly amazing cinematography and sound design. The level of filmmaking and editing really makes watching the movie feel like its own hypnotic experience, but I wasn't super wrapped up in the plot itself? Or at least didn't feel the need to think too much about it. I dont know. Very gewd. Havent watched a movie in a long while"
+    },
+    {
+      "slug": "friday-the-13th-2009",
+      "perfil": "invertido",
+      "bucket": "medianas",
+      "id": "viewing:1430244883",
+      "eixos_8": [
+        "livre"
+      ],
+      "rotulos": [
+        "motivacao para assistir"
+      ],
+      "so_livre": true,
+      "texto": "Only watched this for jared padalecki and im satisfied also why did jenna not care that her annoying ass bf was cracking that girl and told her to shut tf up"
+    },
+    {
+      "slug": "friday-the-13th-2009",
+      "perfil": "invertido",
+      "bucket": "negativas",
+      "id": "viewing:1403416388",
+      "eixos_8": [
+        "livre"
+      ],
+      "rotulos": [
+        "motivacao para assistir"
+      ],
+      "so_livre": true,
+      "texto": "And again a movie I watched because of Supernatural. Thank you Jared Padalecki for serving face, hair, looks, body, as always. This is also a teen horror movie so not for me"
+    },
+    {
+      "slug": "joker-folie-a-deux",
+      "perfil": "invertido",
+      "bucket": "negativas",
+      "id": "viewing:1436941727",
+      "eixos_8": [
+        "livre",
+        "ritmo"
+      ],
+      "rotulos": [
+        "reacao da plateia no cinema"
+      ],
+      "so_livre": false,
+      "texto": "Simplesmente HORRÍVEL. Nem cheguei à ver o filme por completo de tão entediante e parado que é 🫩. Metade das pessoas que estavam na sala saíram na metade do filme, se é que estava."
+    },
+    {
+      "slug": "longlegs",
+      "perfil": "divisivo",
+      "bucket": "negativas",
+      "id": "viewing:1439120695",
+      "eixos_8": [
+        "livre",
+        "tom_atmosfera"
+      ],
+      "rotulos": [
+        "reacao do grupo assistindo"
+      ],
+      "so_livre": false,
+      "texto": "watched at sleepover with the guys, not it personally not really scary more just overall really weird so if that’s the idea they did well. (Mates had same thoughts)"
+    },
+    {
+      "slug": "napoleon-2023",
+      "perfil": "invertido",
+      "bucket": "medianas",
+      "id": "viewing:1434773132",
+      "eixos_8": [
+        "atuacao",
+        "comparacoes",
+        "direcao_imagem",
+        "livre",
+        "ritmo",
+        "roteiro_estrutura"
+      ],
+      "rotulos": [
+        "recomendacao de assistir"
+      ],
+      "so_livre": false,
+      "texto": "Ожиданий не было, так как сразу был наслышан что фильм не о чем, но все таки из интереса решил посмотреть. Начну с плюсов. Очень красивая картинка, ну и конечно Хоакин Феликс как всегда прекрасен. Главная проблема - решили все уместить в один фильм, и то в два с половиной часа. Также очень много уделили отношениям Наполеона, а не ему. Грустно, так как у фильма был большой потенциала, у Наполеона очень большая и интересная история, где есть о чем рассказать, но продюсера просто поставили в двух с половиной часовые рамки. Если бы разделили фильм на несколько частей, был бы бэнгер. А так, местами было скучно и сложно смотреть, и это при том что я смотрел обычную, а не режисерскую версию которая еще длиннее. Скорее всего, не порекомендовал бы этот фильм к просмотру."
+    },
+    {
+      "slug": "shutter-island",
+      "perfil": "aclamado",
+      "bucket": "medianas",
+      "id": "viewing:1434670391",
+      "eixos_8": [
+        "livre"
+      ],
+      "rotulos": [
+        "experiencia no cinema"
+      ],
+      "so_livre": true,
+      "texto": "Probably would have enjoyed it more had I not had the ending spoiled for me years before. Can't imagine how much of a mind-fuck it must have been to see it in cinemas back in the day"
+    },
+    {
+      "slug": "shutter-island",
+      "perfil": "aclamado",
+      "bucket": "medianas",
+      "id": "viewing:1436251870",
+      "eixos_8": [
+        "livre"
+      ],
+      "rotulos": [
+        "assistir como plano de fundo"
+      ],
+      "so_livre": true,
+      "texto": "watched this movie twice and i still don’t really understand what’s happening. Maybe it’s because I never actually focus and play it as background. Third time is the charm though so I think I’ll watch it one more time"
+    },
+    {
+      "slug": "shutter-island",
+      "perfil": "aclamado",
+      "bucket": "negativas",
+      "id": "viewing:657918749",
+      "eixos_8": [
+        "livre"
+      ],
+      "rotulos": [
+        "experiencia de rewatch"
+      ],
+      "so_livre": true,
+      "texto": "( have since rewatched and give it 5 star but am leaving it at x2 stars for that fact that i didn’t get it and i guess that’s what the whole film is about??) foreshadow doesn’t exist until u watch it the second time #deep"
+    },
+    {
+      "slug": "shutter-island",
+      "perfil": "aclamado",
+      "bucket": "positivas",
+      "id": "viewing:1439062680",
+      "eixos_8": [
+        "comparacoes",
+        "livre"
+      ],
+      "rotulos": [
+        "reacao da plateia no cinema"
+      ],
+      "so_livre": false,
+      "texto": "Pensaba que me iba a gustar más. Como todo el mundo dice que es de los mejores plot twist, ya iba con esa idea. La culpa la tengo yo no la peli, aún asi muy buena, para entender del todo el final tuve q ver un vídeo, ese día estaba tonto."
+    },
+    {
+      "slug": "shutter-island",
+      "perfil": "aclamado",
+      "bucket": "positivas",
+      "id": "viewing:1439387644",
+      "eixos_8": [
+        "livre"
+      ],
+      "rotulos": [
+        "experiencia de rewatch"
+      ],
+      "so_livre": true,
+      "texto": "literally exercise for my brain!! and if i watched this again it would be an entirely different movie. btw i knew something was off when we started doubting mark ruffalo as a person.. like get real, he’s always a good guy."
+    },
+    {
+      "slug": "talk-to-me-2022",
+      "perfil": "divisivo",
+      "bucket": "negativas",
+      "id": "viewing:1433424675",
+      "eixos_8": [
+        "livre"
+      ],
+      "rotulos": [
+        "reacao da plateia no cinema"
+      ],
+      "so_livre": true,
+      "texto": "كان من ترشيح شاتgpt والله عرتني قدام البت يعني فين الرعب يحبيبي عايز تقولي ان الرعب انك تخبط راي الوات ف الحيطه ف كده اخاف لا يبني انا اتفىجت عل امر من كده ف كان عادي يعني انا شايفه لو حد متعود عل انه يتفرج عل افلام رعب وبتاع ودم كتير وكده ف هيبقي مش حلو بالنسباله انما لو انت متعرفش يعني ايه دم اتفرج عليه هتحبه شويه"
+    }
+  ]
+}
