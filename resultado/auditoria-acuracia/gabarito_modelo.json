@@ -1,0 +1,3243 @@
+{
+  "viewing:1402631415": {
+    "eixos": [
+      "impacto_emocional",
+      "ritmo"
+    ],
+    "votos": {
+      "impacto_emocional": 3,
+      "ritmo": 3
+    },
+    "confianca": "unanime",
+    "eixos_por_passe": [
+      [
+        "comparacoes",
+        "impacto_emocional",
+        "ritmo"
+      ],
+      [
+        "expectativa",
+        "impacto_emocional",
+        "ritmo"
+      ],
+      [
+        "impacto_emocional",
+        "ritmo"
+      ]
+    ]
+  },
+  "viewing:1433154456": {
+    "eixos": [],
+    "votos": {},
+    "confianca": "vazio",
+    "eixos_por_passe": [
+      [
+        "impacto_emocional"
+      ],
+      [
+        "critica_social"
+      ],
+      [
+        "livre"
+      ]
+    ]
+  },
+  "viewing:310070546": {
+    "eixos": [
+      "atuacao",
+      "comparacoes",
+      "critica_social",
+      "direcao_imagem",
+      "expectativa",
+      "impacto_emocional",
+      "roteiro_estrutura",
+      "tom_atmosfera"
+    ],
+    "votos": {
+      "atuacao": 2,
+      "comparacoes": 3,
+      "critica_social": 3,
+      "direcao_imagem": 2,
+      "expectativa": 3,
+      "impacto_emocional": 3,
+      "roteiro_estrutura": 3,
+      "tom_atmosfera": 3
+    },
+    "confianca": "maioria",
+    "eixos_por_passe": [
+      [
+        "atuacao",
+        "comparacoes",
+        "critica_social",
+        "expectativa",
+        "impacto_emocional",
+        "roteiro_estrutura",
+        "tom_atmosfera"
+      ],
+      [
+        "atuacao",
+        "comparacoes",
+        "critica_social",
+        "direcao_imagem",
+        "expectativa",
+        "impacto_emocional",
+        "roteiro_estrutura",
+        "tom_atmosfera"
+      ],
+      [
+        "comparacoes",
+        "critica_social",
+        "direcao_imagem",
+        "expectativa",
+        "impacto_emocional",
+        "roteiro_estrutura",
+        "som_trilha",
+        "tom_atmosfera"
+      ]
+    ]
+  },
+  "viewing:42045292": {
+    "eixos": [
+      "atuacao",
+      "comparacoes",
+      "direcao_imagem",
+      "expectativa",
+      "impacto_emocional",
+      "ritmo",
+      "roteiro_estrutura",
+      "som_trilha"
+    ],
+    "votos": {
+      "atuacao": 3,
+      "comparacoes": 3,
+      "direcao_imagem": 3,
+      "expectativa": 2,
+      "impacto_emocional": 3,
+      "ritmo": 2,
+      "roteiro_estrutura": 3,
+      "som_trilha": 3
+    },
+    "confianca": "maioria",
+    "eixos_por_passe": [
+      [
+        "atuacao",
+        "comparacoes",
+        "direcao_imagem",
+        "expectativa",
+        "impacto_emocional",
+        "ritmo",
+        "roteiro_estrutura",
+        "som_trilha"
+      ],
+      [
+        "atuacao",
+        "comparacoes",
+        "direcao_imagem",
+        "expectativa",
+        "impacto_emocional",
+        "roteiro_estrutura",
+        "som_trilha"
+      ],
+      [
+        "atuacao",
+        "comparacoes",
+        "direcao_imagem",
+        "impacto_emocional",
+        "ritmo",
+        "roteiro_estrutura",
+        "som_trilha"
+      ]
+    ]
+  },
+  "viewing:1439090163": {
+    "eixos": [
+      "livre"
+    ],
+    "votos": {
+      "livre": 3
+    },
+    "confianca": "unanime",
+    "eixos_por_passe": [
+      [
+        "atuacao",
+        "livre"
+      ],
+      [
+        "comparacoes",
+        "livre",
+        "som_trilha"
+      ],
+      [
+        "livre"
+      ]
+    ]
+  },
+  "viewing:1438891346": {
+    "eixos": [
+      "atuacao",
+      "comparacoes",
+      "critica_social",
+      "direcao_imagem",
+      "expectativa",
+      "ritmo",
+      "roteiro_estrutura"
+    ],
+    "votos": {
+      "atuacao": 3,
+      "comparacoes": 3,
+      "critica_social": 3,
+      "direcao_imagem": 3,
+      "expectativa": 2,
+      "ritmo": 3,
+      "roteiro_estrutura": 3
+    },
+    "confianca": "maioria",
+    "eixos_por_passe": [
+      [
+        "atuacao",
+        "comparacoes",
+        "critica_social",
+        "direcao_imagem",
+        "expectativa",
+        "ritmo",
+        "roteiro_estrutura",
+        "tom_atmosfera"
+      ],
+      [
+        "atuacao",
+        "comparacoes",
+        "critica_social",
+        "direcao_imagem",
+        "expectativa",
+        "ritmo",
+        "roteiro_estrutura"
+      ],
+      [
+        "atuacao",
+        "comparacoes",
+        "critica_social",
+        "direcao_imagem",
+        "ritmo",
+        "roteiro_estrutura"
+      ]
+    ]
+  },
+  "viewing:1436690663": {
+    "eixos": [
+      "comparacoes",
+      "direcao_imagem",
+      "impacto_emocional",
+      "roteiro_estrutura",
+      "tom_atmosfera"
+    ],
+    "votos": {
+      "comparacoes": 2,
+      "direcao_imagem": 3,
+      "impacto_emocional": 2,
+      "roteiro_estrutura": 2,
+      "tom_atmosfera": 2
+    },
+    "confianca": "maioria",
+    "eixos_por_passe": [
+      [
+        "direcao_imagem",
+        "tom_atmosfera"
+      ],
+      [
+        "comparacoes",
+        "direcao_imagem",
+        "impacto_emocional",
+        "ritmo",
+        "roteiro_estrutura",
+        "tom_atmosfera"
+      ],
+      [
+        "comparacoes",
+        "direcao_imagem",
+        "impacto_emocional",
+        "roteiro_estrutura"
+      ]
+    ]
+  },
+  "viewing:1436204229": {
+    "eixos": [
+      "livre"
+    ],
+    "votos": {
+      "livre": 3
+    },
+    "confianca": "unanime",
+    "eixos_por_passe": [
+      [
+        "impacto_emocional",
+        "livre",
+        "tom_atmosfera"
+      ],
+      [
+        "livre"
+      ],
+      [
+        "livre"
+      ]
+    ]
+  },
+  "viewing:1435722364": {
+    "eixos": [
+      "livre"
+    ],
+    "votos": {
+      "livre": 3
+    },
+    "confianca": "unanime",
+    "eixos_por_passe": [
+      [
+        "livre"
+      ],
+      [
+        "impacto_emocional",
+        "livre"
+      ],
+      [
+        "livre"
+      ]
+    ]
+  },
+  "viewing:1203929072": {
+    "eixos": [
+      "direcao_imagem",
+      "impacto_emocional",
+      "tom_atmosfera"
+    ],
+    "votos": {
+      "direcao_imagem": 3,
+      "impacto_emocional": 3,
+      "tom_atmosfera": 2
+    },
+    "confianca": "maioria",
+    "eixos_por_passe": [
+      [
+        "direcao_imagem",
+        "impacto_emocional",
+        "tom_atmosfera"
+      ],
+      [
+        "direcao_imagem",
+        "impacto_emocional",
+        "tom_atmosfera"
+      ],
+      [
+        "direcao_imagem",
+        "impacto_emocional",
+        "livre"
+      ]
+    ]
+  },
+  "viewing:412005651": {
+    "eixos": [
+      "atuacao",
+      "comparacoes",
+      "critica_social",
+      "direcao_imagem",
+      "expectativa",
+      "roteiro_estrutura",
+      "tom_atmosfera"
+    ],
+    "votos": {
+      "atuacao": 3,
+      "comparacoes": 3,
+      "critica_social": 2,
+      "direcao_imagem": 3,
+      "expectativa": 3,
+      "roteiro_estrutura": 3,
+      "tom_atmosfera": 3
+    },
+    "confianca": "maioria",
+    "eixos_por_passe": [
+      [
+        "atuacao",
+        "comparacoes",
+        "critica_social",
+        "direcao_imagem",
+        "expectativa",
+        "roteiro_estrutura",
+        "tom_atmosfera"
+      ],
+      [
+        "atuacao",
+        "comparacoes",
+        "direcao_imagem",
+        "expectativa",
+        "roteiro_estrutura",
+        "tom_atmosfera"
+      ],
+      [
+        "atuacao",
+        "comparacoes",
+        "critica_social",
+        "direcao_imagem",
+        "expectativa",
+        "impacto_emocional",
+        "roteiro_estrutura",
+        "tom_atmosfera"
+      ]
+    ]
+  },
+  "viewing:1435157409": {
+    "eixos": [
+      "livre"
+    ],
+    "votos": {
+      "livre": 2
+    },
+    "confianca": "maioria",
+    "eixos_por_passe": [
+      [
+        "livre"
+      ],
+      [
+        "livre"
+      ],
+      []
+    ]
+  },
+  "viewing:42705363": {
+    "eixos": [
+      "atuacao",
+      "comparacoes",
+      "critica_social",
+      "direcao_imagem",
+      "impacto_emocional",
+      "ritmo",
+      "roteiro_estrutura",
+      "som_trilha",
+      "tom_atmosfera"
+    ],
+    "votos": {
+      "atuacao": 2,
+      "comparacoes": 3,
+      "critica_social": 3,
+      "direcao_imagem": 3,
+      "impacto_emocional": 3,
+      "ritmo": 3,
+      "roteiro_estrutura": 3,
+      "som_trilha": 3,
+      "tom_atmosfera": 3
+    },
+    "confianca": "maioria",
+    "eixos_por_passe": [
+      [
+        "atuacao",
+        "comparacoes",
+        "critica_social",
+        "direcao_imagem",
+        "impacto_emocional",
+        "ritmo",
+        "roteiro_estrutura",
+        "som_trilha",
+        "tom_atmosfera"
+      ],
+      [
+        "atuacao",
+        "comparacoes",
+        "critica_social",
+        "direcao_imagem",
+        "expectativa",
+        "impacto_emocional",
+        "ritmo",
+        "roteiro_estrutura",
+        "som_trilha",
+        "tom_atmosfera"
+      ],
+      [
+        "comparacoes",
+        "critica_social",
+        "direcao_imagem",
+        "impacto_emocional",
+        "ritmo",
+        "roteiro_estrutura",
+        "som_trilha",
+        "tom_atmosfera"
+      ]
+    ]
+  },
+  "viewing:1202821278": {
+    "eixos": [
+      "direcao_imagem",
+      "livre",
+      "roteiro_estrutura"
+    ],
+    "votos": {
+      "direcao_imagem": 3,
+      "livre": 2,
+      "roteiro_estrutura": 3
+    },
+    "confianca": "maioria",
+    "eixos_por_passe": [
+      [
+        "direcao_imagem",
+        "roteiro_estrutura"
+      ],
+      [
+        "direcao_imagem",
+        "livre",
+        "roteiro_estrutura"
+      ],
+      [
+        "direcao_imagem",
+        "livre",
+        "roteiro_estrutura"
+      ]
+    ]
+  },
+  "viewing:1424202073": {
+    "eixos": [],
+    "votos": {},
+    "confianca": "vazio",
+    "eixos_por_passe": [
+      [],
+      [
+        "impacto_emocional",
+        "tom_atmosfera"
+      ],
+      [
+        "livre"
+      ]
+    ]
+  },
+  "viewing:1432641568": {
+    "eixos": [
+      "atuacao",
+      "comparacoes",
+      "direcao_imagem",
+      "ritmo",
+      "roteiro_estrutura",
+      "som_trilha",
+      "tom_atmosfera"
+    ],
+    "votos": {
+      "atuacao": 3,
+      "comparacoes": 2,
+      "direcao_imagem": 3,
+      "ritmo": 3,
+      "roteiro_estrutura": 3,
+      "som_trilha": 3,
+      "tom_atmosfera": 3
+    },
+    "confianca": "maioria",
+    "eixos_por_passe": [
+      [
+        "atuacao",
+        "direcao_imagem",
+        "ritmo",
+        "roteiro_estrutura",
+        "som_trilha",
+        "tom_atmosfera"
+      ],
+      [
+        "atuacao",
+        "comparacoes",
+        "direcao_imagem",
+        "ritmo",
+        "roteiro_estrutura",
+        "som_trilha",
+        "tom_atmosfera"
+      ],
+      [
+        "atuacao",
+        "comparacoes",
+        "direcao_imagem",
+        "ritmo",
+        "roteiro_estrutura",
+        "som_trilha",
+        "tom_atmosfera"
+      ]
+    ]
+  },
+  "viewing:395718669": {
+    "eixos": [
+      "critica_social",
+      "impacto_emocional",
+      "roteiro_estrutura"
+    ],
+    "votos": {
+      "critica_social": 3,
+      "impacto_emocional": 2,
+      "roteiro_estrutura": 2
+    },
+    "confianca": "maioria",
+    "eixos_por_passe": [
+      [
+        "atuacao",
+        "critica_social",
+        "roteiro_estrutura"
+      ],
+      [
+        "comparacoes",
+        "critica_social",
+        "impacto_emocional"
+      ],
+      [
+        "critica_social",
+        "impacto_emocional",
+        "roteiro_estrutura"
+      ]
+    ]
+  },
+  "viewing:1412470477": {
+    "eixos": [
+      "livre"
+    ],
+    "votos": {
+      "livre": 3
+    },
+    "confianca": "unanime",
+    "eixos_por_passe": [
+      [
+        "livre"
+      ],
+      [
+        "livre"
+      ],
+      [
+        "livre"
+      ]
+    ]
+  },
+  "viewing:416006623": {
+    "eixos": [
+      "comparacoes",
+      "critica_social",
+      "expectativa"
+    ],
+    "votos": {
+      "comparacoes": 3,
+      "critica_social": 3,
+      "expectativa": 2
+    },
+    "confianca": "maioria",
+    "eixos_por_passe": [
+      [
+        "comparacoes",
+        "critica_social"
+      ],
+      [
+        "comparacoes",
+        "critica_social",
+        "expectativa",
+        "tom_atmosfera"
+      ],
+      [
+        "comparacoes",
+        "critica_social",
+        "expectativa"
+      ]
+    ]
+  },
+  "viewing:1437439025": {
+    "eixos": [],
+    "votos": {},
+    "confianca": "vazio",
+    "eixos_por_passe": [
+      [
+        "livre"
+      ],
+      [
+        "roteiro_estrutura"
+      ],
+      []
+    ]
+  },
+  "viewing:193635331": {
+    "eixos": [
+      "comparacoes",
+      "direcao_imagem",
+      "expectativa",
+      "roteiro_estrutura",
+      "som_trilha",
+      "tom_atmosfera"
+    ],
+    "votos": {
+      "comparacoes": 3,
+      "direcao_imagem": 3,
+      "expectativa": 2,
+      "roteiro_estrutura": 3,
+      "som_trilha": 3,
+      "tom_atmosfera": 2
+    },
+    "confianca": "maioria",
+    "eixos_por_passe": [
+      [
+        "comparacoes",
+        "direcao_imagem",
+        "expectativa",
+        "roteiro_estrutura",
+        "som_trilha"
+      ],
+      [
+        "comparacoes",
+        "direcao_imagem",
+        "expectativa",
+        "roteiro_estrutura",
+        "som_trilha",
+        "tom_atmosfera"
+      ],
+      [
+        "comparacoes",
+        "direcao_imagem",
+        "roteiro_estrutura",
+        "som_trilha",
+        "tom_atmosfera"
+      ]
+    ]
+  },
+  "viewing:1436653103": {
+    "eixos": [
+      "livre"
+    ],
+    "votos": {
+      "livre": 2
+    },
+    "confianca": "maioria",
+    "eixos_por_passe": [
+      [],
+      [
+        "livre"
+      ],
+      [
+        "livre"
+      ]
+    ]
+  },
+  "viewing:1418805746": {
+    "eixos": [
+      "comparacoes",
+      "critica_social",
+      "direcao_imagem",
+      "ritmo"
+    ],
+    "votos": {
+      "comparacoes": 3,
+      "critica_social": 2,
+      "direcao_imagem": 3,
+      "ritmo": 3
+    },
+    "confianca": "maioria",
+    "eixos_por_passe": [
+      [
+        "comparacoes",
+        "critica_social",
+        "direcao_imagem",
+        "ritmo"
+      ],
+      [
+        "atuacao",
+        "comparacoes",
+        "direcao_imagem",
+        "expectativa",
+        "impacto_emocional",
+        "livre",
+        "ritmo"
+      ],
+      [
+        "comparacoes",
+        "critica_social",
+        "direcao_imagem",
+        "ritmo"
+      ]
+    ]
+  },
+  "viewing:1439459822": {
+    "eixos": [],
+    "votos": {},
+    "confianca": "vazio",
+    "eixos_por_passe": [
+      [],
+      [],
+      [
+        "comparacoes",
+        "critica_social"
+      ]
+    ]
+  },
+  "viewing:1420207250": {
+    "eixos": [
+      "critica_social",
+      "impacto_emocional",
+      "livre"
+    ],
+    "votos": {
+      "critica_social": 3,
+      "impacto_emocional": 3,
+      "livre": 2
+    },
+    "confianca": "maioria",
+    "eixos_por_passe": [
+      [
+        "critica_social",
+        "impacto_emocional",
+        "livre"
+      ],
+      [
+        "critica_social",
+        "impacto_emocional",
+        "livre"
+      ],
+      [
+        "critica_social",
+        "impacto_emocional"
+      ]
+    ]
+  },
+  "viewing:1429269629": {
+    "eixos": [
+      "atuacao",
+      "comparacoes",
+      "critica_social",
+      "direcao_imagem",
+      "expectativa",
+      "impacto_emocional",
+      "ritmo",
+      "roteiro_estrutura"
+    ],
+    "votos": {
+      "atuacao": 3,
+      "comparacoes": 3,
+      "critica_social": 2,
+      "direcao_imagem": 3,
+      "expectativa": 3,
+      "impacto_emocional": 3,
+      "ritmo": 3,
+      "roteiro_estrutura": 3
+    },
+    "confianca": "maioria",
+    "eixos_por_passe": [
+      [
+        "atuacao",
+        "comparacoes",
+        "critica_social",
+        "direcao_imagem",
+        "expectativa",
+        "impacto_emocional",
+        "ritmo",
+        "roteiro_estrutura"
+      ],
+      [
+        "atuacao",
+        "comparacoes",
+        "direcao_imagem",
+        "expectativa",
+        "impacto_emocional",
+        "ritmo",
+        "roteiro_estrutura"
+      ],
+      [
+        "atuacao",
+        "comparacoes",
+        "critica_social",
+        "direcao_imagem",
+        "expectativa",
+        "impacto_emocional",
+        "ritmo",
+        "roteiro_estrutura",
+        "tom_atmosfera"
+      ]
+    ]
+  },
+  "viewing:1432986303": {
+    "eixos": [
+      "comparacoes",
+      "roteiro_estrutura"
+    ],
+    "votos": {
+      "comparacoes": 3,
+      "roteiro_estrutura": 2
+    },
+    "confianca": "maioria",
+    "eixos_por_passe": [
+      [
+        "comparacoes",
+        "roteiro_estrutura"
+      ],
+      [
+        "comparacoes",
+        "ritmo",
+        "roteiro_estrutura"
+      ],
+      [
+        "comparacoes",
+        "livre"
+      ]
+    ]
+  },
+  "viewing:1423051393": {
+    "eixos": [
+      "critica_social"
+    ],
+    "votos": {
+      "critica_social": 3
+    },
+    "confianca": "unanime",
+    "eixos_por_passe": [
+      [
+        "critica_social"
+      ],
+      [
+        "critica_social"
+      ],
+      [
+        "critica_social"
+      ]
+    ]
+  },
+  "viewing:1229439522": {
+    "eixos": [
+      "livre"
+    ],
+    "votos": {
+      "livre": 2
+    },
+    "confianca": "maioria",
+    "eixos_por_passe": [
+      [
+        "livre"
+      ],
+      [],
+      [
+        "livre"
+      ]
+    ]
+  },
+  "viewing:1438669140": {
+    "eixos": [
+      "critica_social"
+    ],
+    "votos": {
+      "critica_social": 2
+    },
+    "confianca": "maioria",
+    "eixos_por_passe": [
+      [
+        "critica_social"
+      ],
+      [
+        "livre"
+      ],
+      [
+        "critica_social"
+      ]
+    ]
+  },
+  "viewing:1432407513": {
+    "eixos": [
+      "livre"
+    ],
+    "votos": {
+      "livre": 2
+    },
+    "confianca": "maioria",
+    "eixos_por_passe": [
+      [
+        "livre"
+      ],
+      [
+        "livre"
+      ],
+      []
+    ]
+  },
+  "viewing:1437104630": {
+    "eixos": [
+      "atuacao",
+      "comparacoes",
+      "critica_social",
+      "direcao_imagem",
+      "expectativa",
+      "ritmo",
+      "roteiro_estrutura"
+    ],
+    "votos": {
+      "atuacao": 3,
+      "comparacoes": 3,
+      "critica_social": 3,
+      "direcao_imagem": 3,
+      "expectativa": 3,
+      "ritmo": 3,
+      "roteiro_estrutura": 2
+    },
+    "confianca": "maioria",
+    "eixos_por_passe": [
+      [
+        "atuacao",
+        "comparacoes",
+        "critica_social",
+        "direcao_imagem",
+        "expectativa",
+        "ritmo",
+        "roteiro_estrutura"
+      ],
+      [
+        "atuacao",
+        "comparacoes",
+        "critica_social",
+        "direcao_imagem",
+        "expectativa",
+        "ritmo"
+      ],
+      [
+        "atuacao",
+        "comparacoes",
+        "critica_social",
+        "direcao_imagem",
+        "expectativa",
+        "ritmo",
+        "roteiro_estrutura"
+      ]
+    ]
+  },
+  "viewing:415968879": {
+    "eixos": [
+      "critica_social",
+      "impacto_emocional"
+    ],
+    "votos": {
+      "critica_social": 3,
+      "impacto_emocional": 3
+    },
+    "confianca": "unanime",
+    "eixos_por_passe": [
+      [
+        "critica_social",
+        "impacto_emocional"
+      ],
+      [
+        "critica_social",
+        "impacto_emocional"
+      ],
+      [
+        "critica_social",
+        "impacto_emocional"
+      ]
+    ]
+  },
+  "viewing:1428548313": {
+    "eixos": [],
+    "votos": {},
+    "confianca": "vazio",
+    "eixos_por_passe": [
+      [
+        "comparacoes"
+      ],
+      [
+        "expectativa",
+        "roteiro_estrutura",
+        "tom_atmosfera"
+      ],
+      [
+        "livre"
+      ]
+    ]
+  },
+  "viewing:1309135528": {
+    "eixos": [
+      "direcao_imagem",
+      "expectativa",
+      "roteiro_estrutura",
+      "tom_atmosfera"
+    ],
+    "votos": {
+      "direcao_imagem": 3,
+      "expectativa": 3,
+      "roteiro_estrutura": 3,
+      "tom_atmosfera": 3
+    },
+    "confianca": "unanime",
+    "eixos_por_passe": [
+      [
+        "direcao_imagem",
+        "expectativa",
+        "roteiro_estrutura",
+        "tom_atmosfera"
+      ],
+      [
+        "direcao_imagem",
+        "expectativa",
+        "roteiro_estrutura",
+        "tom_atmosfera"
+      ],
+      [
+        "direcao_imagem",
+        "expectativa",
+        "roteiro_estrutura",
+        "tom_atmosfera"
+      ]
+    ]
+  },
+  "viewing:63813984": {
+    "eixos": [
+      "comparacoes",
+      "direcao_imagem",
+      "expectativa",
+      "impacto_emocional",
+      "ritmo",
+      "roteiro_estrutura",
+      "tom_atmosfera"
+    ],
+    "votos": {
+      "comparacoes": 3,
+      "direcao_imagem": 3,
+      "expectativa": 2,
+      "impacto_emocional": 3,
+      "ritmo": 3,
+      "roteiro_estrutura": 3,
+      "tom_atmosfera": 3
+    },
+    "confianca": "maioria",
+    "eixos_por_passe": [
+      [
+        "atuacao",
+        "comparacoes",
+        "direcao_imagem",
+        "expectativa",
+        "impacto_emocional",
+        "ritmo",
+        "roteiro_estrutura",
+        "tom_atmosfera"
+      ],
+      [
+        "comparacoes",
+        "critica_social",
+        "direcao_imagem",
+        "expectativa",
+        "impacto_emocional",
+        "ritmo",
+        "roteiro_estrutura",
+        "tom_atmosfera"
+      ],
+      [
+        "comparacoes",
+        "direcao_imagem",
+        "impacto_emocional",
+        "ritmo",
+        "roteiro_estrutura",
+        "tom_atmosfera"
+      ]
+    ]
+  },
+  "viewing:415737961": {
+    "eixos": [
+      "atuacao",
+      "comparacoes",
+      "critica_social",
+      "expectativa",
+      "impacto_emocional",
+      "roteiro_estrutura",
+      "tom_atmosfera"
+    ],
+    "votos": {
+      "atuacao": 3,
+      "comparacoes": 3,
+      "critica_social": 3,
+      "expectativa": 3,
+      "impacto_emocional": 3,
+      "roteiro_estrutura": 3,
+      "tom_atmosfera": 3
+    },
+    "confianca": "unanime",
+    "eixos_por_passe": [
+      [
+        "atuacao",
+        "comparacoes",
+        "critica_social",
+        "expectativa",
+        "impacto_emocional",
+        "roteiro_estrutura",
+        "tom_atmosfera"
+      ],
+      [
+        "atuacao",
+        "comparacoes",
+        "critica_social",
+        "direcao_imagem",
+        "expectativa",
+        "impacto_emocional",
+        "ritmo",
+        "roteiro_estrutura",
+        "tom_atmosfera"
+      ],
+      [
+        "atuacao",
+        "comparacoes",
+        "critica_social",
+        "expectativa",
+        "impacto_emocional",
+        "roteiro_estrutura",
+        "tom_atmosfera"
+      ]
+    ]
+  },
+  "viewing:1438256609": {
+    "eixos": [
+      "livre"
+    ],
+    "votos": {
+      "livre": 3
+    },
+    "confianca": "unanime",
+    "eixos_por_passe": [
+      [
+        "livre"
+      ],
+      [
+        "livre"
+      ],
+      [
+        "livre"
+      ]
+    ]
+  },
+  "viewing:41873101": {
+    "eixos": [
+      "atuacao",
+      "direcao_imagem",
+      "impacto_emocional",
+      "ritmo",
+      "tom_atmosfera"
+    ],
+    "votos": {
+      "atuacao": 3,
+      "direcao_imagem": 3,
+      "impacto_emocional": 3,
+      "ritmo": 3,
+      "tom_atmosfera": 3
+    },
+    "confianca": "unanime",
+    "eixos_por_passe": [
+      [
+        "atuacao",
+        "direcao_imagem",
+        "expectativa",
+        "impacto_emocional",
+        "ritmo",
+        "tom_atmosfera"
+      ],
+      [
+        "atuacao",
+        "direcao_imagem",
+        "impacto_emocional",
+        "ritmo",
+        "tom_atmosfera"
+      ],
+      [
+        "atuacao",
+        "direcao_imagem",
+        "impacto_emocional",
+        "ritmo",
+        "tom_atmosfera"
+      ]
+    ]
+  },
+  "viewing:1405458158": {
+    "eixos": [
+      "atuacao",
+      "comparacoes",
+      "direcao_imagem",
+      "impacto_emocional",
+      "livre",
+      "ritmo",
+      "som_trilha",
+      "tom_atmosfera"
+    ],
+    "votos": {
+      "atuacao": 3,
+      "comparacoes": 2,
+      "direcao_imagem": 3,
+      "impacto_emocional": 2,
+      "livre": 2,
+      "ritmo": 3,
+      "som_trilha": 3,
+      "tom_atmosfera": 2
+    },
+    "confianca": "maioria",
+    "eixos_por_passe": [
+      [
+        "atuacao",
+        "comparacoes",
+        "direcao_imagem",
+        "impacto_emocional",
+        "ritmo",
+        "roteiro_estrutura",
+        "som_trilha",
+        "tom_atmosfera"
+      ],
+      [
+        "atuacao",
+        "direcao_imagem",
+        "expectativa",
+        "livre",
+        "ritmo",
+        "som_trilha",
+        "tom_atmosfera"
+      ],
+      [
+        "atuacao",
+        "comparacoes",
+        "direcao_imagem",
+        "impacto_emocional",
+        "livre",
+        "ritmo",
+        "som_trilha"
+      ]
+    ]
+  },
+  "viewing:1438287637": {
+    "eixos": [
+      "critica_social",
+      "roteiro_estrutura"
+    ],
+    "votos": {
+      "critica_social": 3,
+      "roteiro_estrutura": 2
+    },
+    "confianca": "maioria",
+    "eixos_por_passe": [
+      [
+        "critica_social"
+      ],
+      [
+        "comparacoes",
+        "critica_social",
+        "roteiro_estrutura"
+      ],
+      [
+        "critica_social",
+        "direcao_imagem",
+        "roteiro_estrutura"
+      ]
+    ]
+  },
+  "viewing:1433922444": {
+    "eixos": [
+      "livre"
+    ],
+    "votos": {
+      "livre": 3
+    },
+    "confianca": "unanime",
+    "eixos_por_passe": [
+      [
+        "livre"
+      ],
+      [
+        "livre"
+      ],
+      [
+        "livre"
+      ]
+    ]
+  },
+  "viewing:1184394929": {
+    "eixos": [
+      "atuacao",
+      "comparacoes",
+      "critica_social",
+      "direcao_imagem",
+      "ritmo",
+      "roteiro_estrutura",
+      "tom_atmosfera"
+    ],
+    "votos": {
+      "atuacao": 2,
+      "comparacoes": 3,
+      "critica_social": 3,
+      "direcao_imagem": 3,
+      "ritmo": 2,
+      "roteiro_estrutura": 2,
+      "tom_atmosfera": 2
+    },
+    "confianca": "maioria",
+    "eixos_por_passe": [
+      [
+        "atuacao",
+        "comparacoes",
+        "critica_social",
+        "direcao_imagem",
+        "impacto_emocional",
+        "ritmo",
+        "roteiro_estrutura"
+      ],
+      [
+        "comparacoes",
+        "critica_social",
+        "direcao_imagem",
+        "ritmo",
+        "tom_atmosfera"
+      ],
+      [
+        "atuacao",
+        "comparacoes",
+        "critica_social",
+        "direcao_imagem",
+        "expectativa",
+        "roteiro_estrutura",
+        "tom_atmosfera"
+      ]
+    ]
+  },
+  "viewing:1431368105": {
+    "eixos": [
+      "livre",
+      "roteiro_estrutura",
+      "tom_atmosfera"
+    ],
+    "votos": {
+      "livre": 2,
+      "roteiro_estrutura": 2,
+      "tom_atmosfera": 2
+    },
+    "confianca": "maioria",
+    "eixos_por_passe": [
+      [
+        "livre"
+      ],
+      [
+        "impacto_emocional",
+        "livre",
+        "roteiro_estrutura",
+        "tom_atmosfera"
+      ],
+      [
+        "ritmo",
+        "roteiro_estrutura",
+        "tom_atmosfera"
+      ]
+    ]
+  },
+  "viewing:1438776441": {
+    "eixos": [
+      "livre"
+    ],
+    "votos": {
+      "livre": 3
+    },
+    "confianca": "unanime",
+    "eixos_por_passe": [
+      [
+        "livre"
+      ],
+      [
+        "expectativa",
+        "livre"
+      ],
+      [
+        "comparacoes",
+        "livre"
+      ]
+    ]
+  },
+  "viewing:1436241577": {
+    "eixos": [
+      "critica_social",
+      "roteiro_estrutura"
+    ],
+    "votos": {
+      "critica_social": 3,
+      "roteiro_estrutura": 3
+    },
+    "confianca": "unanime",
+    "eixos_por_passe": [
+      [
+        "critica_social",
+        "roteiro_estrutura"
+      ],
+      [
+        "critica_social",
+        "roteiro_estrutura"
+      ],
+      [
+        "critica_social",
+        "roteiro_estrutura"
+      ]
+    ]
+  },
+  "viewing:1203540638": {
+    "eixos": [
+      "ritmo",
+      "som_trilha"
+    ],
+    "votos": {
+      "ritmo": 3,
+      "som_trilha": 3
+    },
+    "confianca": "unanime",
+    "eixos_por_passe": [
+      [
+        "ritmo",
+        "som_trilha",
+        "tom_atmosfera"
+      ],
+      [
+        "livre",
+        "ritmo",
+        "som_trilha"
+      ],
+      [
+        "direcao_imagem",
+        "ritmo",
+        "som_trilha"
+      ]
+    ]
+  },
+  "viewing:1434872395": {
+    "eixos": [
+      "atuacao",
+      "direcao_imagem",
+      "impacto_emocional",
+      "roteiro_estrutura"
+    ],
+    "votos": {
+      "atuacao": 3,
+      "direcao_imagem": 3,
+      "impacto_emocional": 3,
+      "roteiro_estrutura": 3
+    },
+    "confianca": "unanime",
+    "eixos_por_passe": [
+      [
+        "atuacao",
+        "direcao_imagem",
+        "impacto_emocional",
+        "roteiro_estrutura"
+      ],
+      [
+        "atuacao",
+        "direcao_imagem",
+        "impacto_emocional",
+        "roteiro_estrutura"
+      ],
+      [
+        "atuacao",
+        "direcao_imagem",
+        "impacto_emocional",
+        "ritmo",
+        "roteiro_estrutura"
+      ]
+    ]
+  },
+  "viewing:1437351834": {
+    "eixos": [
+      "expectativa"
+    ],
+    "votos": {
+      "expectativa": 3
+    },
+    "confianca": "unanime",
+    "eixos_por_passe": [
+      [
+        "expectativa"
+      ],
+      [
+        "expectativa"
+      ],
+      [
+        "expectativa"
+      ]
+    ]
+  },
+  "viewing:1433645153": {
+    "eixos": [
+      "livre"
+    ],
+    "votos": {
+      "livre": 3
+    },
+    "confianca": "unanime",
+    "eixos_por_passe": [
+      [
+        "livre"
+      ],
+      [
+        "livre"
+      ],
+      [
+        "critica_social",
+        "livre"
+      ]
+    ]
+  },
+  "viewing:63821426": {
+    "eixos": [],
+    "votos": {},
+    "confianca": "vazio",
+    "eixos_por_passe": [
+      [
+        "livre"
+      ],
+      [
+        "comparacoes",
+        "expectativa"
+      ],
+      [
+        "impacto_emocional"
+      ]
+    ]
+  },
+  "viewing:1439627998": {
+    "eixos": [
+      "atuacao",
+      "comparacoes",
+      "direcao_imagem",
+      "expectativa",
+      "impacto_emocional",
+      "ritmo",
+      "roteiro_estrutura",
+      "som_trilha"
+    ],
+    "votos": {
+      "atuacao": 3,
+      "comparacoes": 2,
+      "direcao_imagem": 3,
+      "expectativa": 3,
+      "impacto_emocional": 2,
+      "ritmo": 3,
+      "roteiro_estrutura": 3,
+      "som_trilha": 3
+    },
+    "confianca": "maioria",
+    "eixos_por_passe": [
+      [
+        "atuacao",
+        "comparacoes",
+        "direcao_imagem",
+        "expectativa",
+        "impacto_emocional",
+        "ritmo",
+        "roteiro_estrutura",
+        "som_trilha"
+      ],
+      [
+        "atuacao",
+        "direcao_imagem",
+        "expectativa",
+        "livre",
+        "ritmo",
+        "roteiro_estrutura",
+        "som_trilha"
+      ],
+      [
+        "atuacao",
+        "comparacoes",
+        "direcao_imagem",
+        "expectativa",
+        "impacto_emocional",
+        "ritmo",
+        "roteiro_estrutura",
+        "som_trilha"
+      ]
+    ]
+  },
+  "viewing:81820964": {
+    "eixos": [
+      "critica_social",
+      "direcao_imagem",
+      "ritmo"
+    ],
+    "votos": {
+      "critica_social": 3,
+      "direcao_imagem": 3,
+      "ritmo": 3
+    },
+    "confianca": "unanime",
+    "eixos_por_passe": [
+      [
+        "critica_social",
+        "direcao_imagem",
+        "ritmo"
+      ],
+      [
+        "comparacoes",
+        "critica_social",
+        "direcao_imagem",
+        "ritmo"
+      ],
+      [
+        "critica_social",
+        "direcao_imagem",
+        "ritmo"
+      ]
+    ]
+  },
+  "viewing:1421876073": {
+    "eixos": [
+      "atuacao",
+      "comparacoes",
+      "critica_social",
+      "direcao_imagem",
+      "impacto_emocional",
+      "ritmo",
+      "roteiro_estrutura",
+      "tom_atmosfera"
+    ],
+    "votos": {
+      "atuacao": 3,
+      "comparacoes": 2,
+      "critica_social": 2,
+      "direcao_imagem": 3,
+      "impacto_emocional": 3,
+      "ritmo": 3,
+      "roteiro_estrutura": 3,
+      "tom_atmosfera": 3
+    },
+    "confianca": "maioria",
+    "eixos_por_passe": [
+      [
+        "atuacao",
+        "comparacoes",
+        "direcao_imagem",
+        "expectativa",
+        "impacto_emocional",
+        "ritmo",
+        "roteiro_estrutura",
+        "tom_atmosfera"
+      ],
+      [
+        "atuacao",
+        "critica_social",
+        "direcao_imagem",
+        "impacto_emocional",
+        "livre",
+        "ritmo",
+        "roteiro_estrutura",
+        "tom_atmosfera"
+      ],
+      [
+        "atuacao",
+        "comparacoes",
+        "critica_social",
+        "direcao_imagem",
+        "impacto_emocional",
+        "ritmo",
+        "roteiro_estrutura",
+        "tom_atmosfera"
+      ]
+    ]
+  },
+  "viewing:196157421": {
+    "eixos": [
+      "comparacoes",
+      "direcao_imagem",
+      "roteiro_estrutura"
+    ],
+    "votos": {
+      "comparacoes": 3,
+      "direcao_imagem": 3,
+      "roteiro_estrutura": 3
+    },
+    "confianca": "unanime",
+    "eixos_por_passe": [
+      [
+        "comparacoes",
+        "direcao_imagem",
+        "roteiro_estrutura"
+      ],
+      [
+        "comparacoes",
+        "direcao_imagem",
+        "roteiro_estrutura"
+      ],
+      [
+        "comparacoes",
+        "direcao_imagem",
+        "ritmo",
+        "roteiro_estrutura"
+      ]
+    ]
+  },
+  "viewing:1173799572": {
+    "eixos": [
+      "comparacoes",
+      "direcao_imagem",
+      "roteiro_estrutura"
+    ],
+    "votos": {
+      "comparacoes": 3,
+      "direcao_imagem": 3,
+      "roteiro_estrutura": 3
+    },
+    "confianca": "unanime",
+    "eixos_por_passe": [
+      [
+        "comparacoes",
+        "direcao_imagem",
+        "ritmo",
+        "roteiro_estrutura"
+      ],
+      [
+        "comparacoes",
+        "direcao_imagem",
+        "roteiro_estrutura"
+      ],
+      [
+        "comparacoes",
+        "direcao_imagem",
+        "roteiro_estrutura"
+      ]
+    ]
+  },
+  "viewing:1432307936": {
+    "eixos": [],
+    "votos": {},
+    "confianca": "vazio",
+    "eixos_por_passe": [
+      [
+        "livre"
+      ],
+      [
+        "critica_social"
+      ],
+      [
+        "comparacoes"
+      ]
+    ]
+  },
+  "viewing:1439444410": {
+    "eixos": [
+      "comparacoes",
+      "direcao_imagem",
+      "expectativa",
+      "impacto_emocional",
+      "ritmo",
+      "som_trilha"
+    ],
+    "votos": {
+      "comparacoes": 3,
+      "direcao_imagem": 3,
+      "expectativa": 3,
+      "impacto_emocional": 2,
+      "ritmo": 3,
+      "som_trilha": 3
+    },
+    "confianca": "maioria",
+    "eixos_por_passe": [
+      [
+        "comparacoes",
+        "direcao_imagem",
+        "expectativa",
+        "livre",
+        "ritmo",
+        "som_trilha"
+      ],
+      [
+        "comparacoes",
+        "direcao_imagem",
+        "expectativa",
+        "impacto_emocional",
+        "ritmo",
+        "som_trilha"
+      ],
+      [
+        "comparacoes",
+        "direcao_imagem",
+        "expectativa",
+        "impacto_emocional",
+        "ritmo",
+        "som_trilha"
+      ]
+    ]
+  },
+  "viewing:1430973320": {
+    "eixos": [
+      "comparacoes",
+      "expectativa"
+    ],
+    "votos": {
+      "comparacoes": 3,
+      "expectativa": 3
+    },
+    "confianca": "unanime",
+    "eixos_por_passe": [
+      [
+        "comparacoes",
+        "expectativa",
+        "roteiro_estrutura",
+        "tom_atmosfera"
+      ],
+      [
+        "comparacoes",
+        "critica_social",
+        "expectativa"
+      ],
+      [
+        "comparacoes",
+        "expectativa",
+        "impacto_emocional",
+        "livre"
+      ]
+    ]
+  },
+  "viewing:394955539": {
+    "eixos": [
+      "comparacoes",
+      "critica_social",
+      "direcao_imagem",
+      "expectativa",
+      "impacto_emocional",
+      "ritmo",
+      "roteiro_estrutura",
+      "som_trilha",
+      "tom_atmosfera"
+    ],
+    "votos": {
+      "comparacoes": 3,
+      "critica_social": 2,
+      "direcao_imagem": 3,
+      "expectativa": 3,
+      "impacto_emocional": 3,
+      "ritmo": 3,
+      "roteiro_estrutura": 3,
+      "som_trilha": 2,
+      "tom_atmosfera": 3
+    },
+    "confianca": "maioria",
+    "eixos_por_passe": [
+      [
+        "comparacoes",
+        "direcao_imagem",
+        "expectativa",
+        "impacto_emocional",
+        "ritmo",
+        "roteiro_estrutura",
+        "som_trilha",
+        "tom_atmosfera"
+      ],
+      [
+        "comparacoes",
+        "critica_social",
+        "direcao_imagem",
+        "expectativa",
+        "impacto_emocional",
+        "ritmo",
+        "roteiro_estrutura",
+        "tom_atmosfera"
+      ],
+      [
+        "comparacoes",
+        "critica_social",
+        "direcao_imagem",
+        "expectativa",
+        "impacto_emocional",
+        "ritmo",
+        "roteiro_estrutura",
+        "som_trilha",
+        "tom_atmosfera"
+      ]
+    ]
+  },
+  "viewing:1437754006": {
+    "eixos": [
+      "comparacoes",
+      "expectativa",
+      "som_trilha"
+    ],
+    "votos": {
+      "comparacoes": 2,
+      "expectativa": 3,
+      "som_trilha": 3
+    },
+    "confianca": "maioria",
+    "eixos_por_passe": [
+      [
+        "expectativa",
+        "roteiro_estrutura",
+        "som_trilha"
+      ],
+      [
+        "comparacoes",
+        "expectativa",
+        "livre",
+        "som_trilha"
+      ],
+      [
+        "comparacoes",
+        "expectativa",
+        "som_trilha"
+      ]
+    ]
+  },
+  "viewing:1413530868": {
+    "eixos": [
+      "impacto_emocional",
+      "ritmo"
+    ],
+    "votos": {
+      "impacto_emocional": 3,
+      "ritmo": 3
+    },
+    "confianca": "unanime",
+    "eixos_por_passe": [
+      [
+        "impacto_emocional",
+        "ritmo"
+      ],
+      [
+        "impacto_emocional",
+        "ritmo",
+        "tom_atmosfera"
+      ],
+      [
+        "impacto_emocional",
+        "ritmo"
+      ]
+    ]
+  },
+  "viewing:1438567149": {
+    "eixos": [
+      "critica_social",
+      "impacto_emocional",
+      "roteiro_estrutura",
+      "tom_atmosfera"
+    ],
+    "votos": {
+      "critica_social": 2,
+      "impacto_emocional": 3,
+      "roteiro_estrutura": 2,
+      "tom_atmosfera": 3
+    },
+    "confianca": "maioria",
+    "eixos_por_passe": [
+      [
+        "critica_social",
+        "impacto_emocional",
+        "roteiro_estrutura",
+        "tom_atmosfera"
+      ],
+      [
+        "impacto_emocional",
+        "roteiro_estrutura",
+        "tom_atmosfera"
+      ],
+      [
+        "critica_social",
+        "impacto_emocional",
+        "tom_atmosfera"
+      ]
+    ]
+  },
+  "viewing:596684757": {
+    "eixos": [
+      "impacto_emocional",
+      "ritmo",
+      "roteiro_estrutura"
+    ],
+    "votos": {
+      "impacto_emocional": 3,
+      "ritmo": 3,
+      "roteiro_estrutura": 3
+    },
+    "confianca": "unanime",
+    "eixos_por_passe": [
+      [
+        "impacto_emocional",
+        "ritmo",
+        "roteiro_estrutura"
+      ],
+      [
+        "critica_social",
+        "impacto_emocional",
+        "ritmo",
+        "roteiro_estrutura"
+      ],
+      [
+        "comparacoes",
+        "impacto_emocional",
+        "ritmo",
+        "roteiro_estrutura"
+      ]
+    ]
+  },
+  "viewing:1438518572": {
+    "eixos": [
+      "livre"
+    ],
+    "votos": {
+      "livre": 3
+    },
+    "confianca": "unanime",
+    "eixos_por_passe": [
+      [
+        "livre"
+      ],
+      [
+        "livre"
+      ],
+      [
+        "livre"
+      ]
+    ]
+  },
+  "viewing:42666450": {
+    "eixos": [
+      "atuacao",
+      "comparacoes",
+      "critica_social",
+      "direcao_imagem",
+      "expectativa",
+      "impacto_emocional",
+      "ritmo",
+      "roteiro_estrutura",
+      "som_trilha",
+      "tom_atmosfera"
+    ],
+    "votos": {
+      "atuacao": 2,
+      "comparacoes": 3,
+      "critica_social": 3,
+      "direcao_imagem": 3,
+      "expectativa": 2,
+      "impacto_emocional": 3,
+      "ritmo": 2,
+      "roteiro_estrutura": 3,
+      "som_trilha": 2,
+      "tom_atmosfera": 3
+    },
+    "confianca": "maioria",
+    "eixos_por_passe": [
+      [
+        "comparacoes",
+        "critica_social",
+        "direcao_imagem",
+        "expectativa",
+        "impacto_emocional",
+        "ritmo",
+        "roteiro_estrutura",
+        "tom_atmosfera"
+      ],
+      [
+        "atuacao",
+        "comparacoes",
+        "critica_social",
+        "direcao_imagem",
+        "impacto_emocional",
+        "ritmo",
+        "roteiro_estrutura",
+        "som_trilha",
+        "tom_atmosfera"
+      ],
+      [
+        "atuacao",
+        "comparacoes",
+        "critica_social",
+        "direcao_imagem",
+        "expectativa",
+        "impacto_emocional",
+        "roteiro_estrutura",
+        "som_trilha",
+        "tom_atmosfera"
+      ]
+    ]
+  },
+  "viewing:1432174700": {
+    "eixos": [
+      "comparacoes",
+      "expectativa",
+      "livre",
+      "roteiro_estrutura",
+      "tom_atmosfera"
+    ],
+    "votos": {
+      "comparacoes": 3,
+      "expectativa": 3,
+      "livre": 2,
+      "roteiro_estrutura": 3,
+      "tom_atmosfera": 2
+    },
+    "confianca": "maioria",
+    "eixos_por_passe": [
+      [
+        "comparacoes",
+        "expectativa",
+        "livre",
+        "roteiro_estrutura",
+        "tom_atmosfera"
+      ],
+      [
+        "comparacoes",
+        "expectativa",
+        "roteiro_estrutura",
+        "tom_atmosfera"
+      ],
+      [
+        "comparacoes",
+        "expectativa",
+        "livre",
+        "ritmo",
+        "roteiro_estrutura"
+      ]
+    ]
+  },
+  "viewing:41870831": {
+    "eixos": [
+      "atuacao",
+      "comparacoes",
+      "direcao_imagem",
+      "expectativa",
+      "ritmo",
+      "roteiro_estrutura",
+      "som_trilha",
+      "tom_atmosfera"
+    ],
+    "votos": {
+      "atuacao": 3,
+      "comparacoes": 3,
+      "direcao_imagem": 3,
+      "expectativa": 3,
+      "ritmo": 2,
+      "roteiro_estrutura": 3,
+      "som_trilha": 2,
+      "tom_atmosfera": 3
+    },
+    "confianca": "maioria",
+    "eixos_por_passe": [
+      [
+        "atuacao",
+        "comparacoes",
+        "direcao_imagem",
+        "expectativa",
+        "ritmo",
+        "roteiro_estrutura",
+        "som_trilha",
+        "tom_atmosfera"
+      ],
+      [
+        "atuacao",
+        "comparacoes",
+        "direcao_imagem",
+        "expectativa",
+        "ritmo",
+        "roteiro_estrutura",
+        "tom_atmosfera"
+      ],
+      [
+        "atuacao",
+        "comparacoes",
+        "direcao_imagem",
+        "expectativa",
+        "roteiro_estrutura",
+        "som_trilha",
+        "tom_atmosfera"
+      ]
+    ]
+  },
+  "viewing:243271079": {
+    "eixos": [
+      "atuacao",
+      "comparacoes",
+      "direcao_imagem",
+      "expectativa",
+      "impacto_emocional",
+      "livre",
+      "ritmo",
+      "roteiro_estrutura",
+      "tom_atmosfera"
+    ],
+    "votos": {
+      "atuacao": 2,
+      "comparacoes": 3,
+      "direcao_imagem": 2,
+      "expectativa": 3,
+      "impacto_emocional": 3,
+      "livre": 2,
+      "ritmo": 2,
+      "roteiro_estrutura": 2,
+      "tom_atmosfera": 3
+    },
+    "confianca": "maioria",
+    "eixos_por_passe": [
+      [
+        "comparacoes",
+        "expectativa",
+        "impacto_emocional",
+        "livre",
+        "tom_atmosfera"
+      ],
+      [
+        "atuacao",
+        "comparacoes",
+        "direcao_imagem",
+        "expectativa",
+        "impacto_emocional",
+        "livre",
+        "ritmo",
+        "roteiro_estrutura",
+        "tom_atmosfera"
+      ],
+      [
+        "atuacao",
+        "comparacoes",
+        "critica_social",
+        "direcao_imagem",
+        "expectativa",
+        "impacto_emocional",
+        "ritmo",
+        "roteiro_estrutura",
+        "tom_atmosfera"
+      ]
+    ]
+  },
+  "viewing:1438999079": {
+    "eixos": [
+      "atuacao",
+      "comparacoes",
+      "impacto_emocional"
+    ],
+    "votos": {
+      "atuacao": 3,
+      "comparacoes": 3,
+      "impacto_emocional": 3
+    },
+    "confianca": "unanime",
+    "eixos_por_passe": [
+      [
+        "atuacao",
+        "comparacoes",
+        "impacto_emocional"
+      ],
+      [
+        "atuacao",
+        "comparacoes",
+        "impacto_emocional"
+      ],
+      [
+        "atuacao",
+        "comparacoes",
+        "impacto_emocional"
+      ]
+    ]
+  },
+  "viewing:1401811917": {
+    "eixos": [
+      "atuacao",
+      "comparacoes",
+      "critica_social",
+      "direcao_imagem",
+      "expectativa",
+      "impacto_emocional",
+      "roteiro_estrutura",
+      "som_trilha"
+    ],
+    "votos": {
+      "atuacao": 3,
+      "comparacoes": 3,
+      "critica_social": 3,
+      "direcao_imagem": 3,
+      "expectativa": 3,
+      "impacto_emocional": 3,
+      "roteiro_estrutura": 3,
+      "som_trilha": 3
+    },
+    "confianca": "unanime",
+    "eixos_por_passe": [
+      [
+        "atuacao",
+        "comparacoes",
+        "critica_social",
+        "direcao_imagem",
+        "expectativa",
+        "impacto_emocional",
+        "roteiro_estrutura",
+        "som_trilha"
+      ],
+      [
+        "atuacao",
+        "comparacoes",
+        "critica_social",
+        "direcao_imagem",
+        "expectativa",
+        "impacto_emocional",
+        "ritmo",
+        "roteiro_estrutura",
+        "som_trilha"
+      ],
+      [
+        "atuacao",
+        "comparacoes",
+        "critica_social",
+        "direcao_imagem",
+        "expectativa",
+        "impacto_emocional",
+        "roteiro_estrutura",
+        "som_trilha"
+      ]
+    ]
+  },
+  "viewing:1435947309": {
+    "eixos": [
+      "impacto_emocional",
+      "tom_atmosfera"
+    ],
+    "votos": {
+      "impacto_emocional": 3,
+      "tom_atmosfera": 3
+    },
+    "confianca": "unanime",
+    "eixos_por_passe": [
+      [
+        "impacto_emocional",
+        "tom_atmosfera"
+      ],
+      [
+        "impacto_emocional",
+        "tom_atmosfera"
+      ],
+      [
+        "impacto_emocional",
+        "tom_atmosfera"
+      ]
+    ]
+  },
+  "viewing:1202582075": {
+    "eixos": [
+      "direcao_imagem",
+      "som_trilha"
+    ],
+    "votos": {
+      "direcao_imagem": 3,
+      "som_trilha": 3
+    },
+    "confianca": "unanime",
+    "eixos_por_passe": [
+      [
+        "direcao_imagem",
+        "livre",
+        "som_trilha"
+      ],
+      [
+        "direcao_imagem",
+        "som_trilha"
+      ],
+      [
+        "direcao_imagem",
+        "som_trilha"
+      ]
+    ]
+  },
+  "viewing:1430730106": {
+    "eixos": [
+      "comparacoes",
+      "expectativa",
+      "impacto_emocional"
+    ],
+    "votos": {
+      "comparacoes": 3,
+      "expectativa": 3,
+      "impacto_emocional": 3
+    },
+    "confianca": "unanime",
+    "eixos_por_passe": [
+      [
+        "comparacoes",
+        "expectativa",
+        "impacto_emocional"
+      ],
+      [
+        "comparacoes",
+        "expectativa",
+        "impacto_emocional"
+      ],
+      [
+        "comparacoes",
+        "expectativa",
+        "impacto_emocional"
+      ]
+    ]
+  },
+  "viewing:1433890494": {
+    "eixos": [
+      "atuacao",
+      "comparacoes"
+    ],
+    "votos": {
+      "atuacao": 3,
+      "comparacoes": 2
+    },
+    "confianca": "maioria",
+    "eixos_por_passe": [
+      [
+        "atuacao",
+        "expectativa"
+      ],
+      [
+        "atuacao",
+        "comparacoes",
+        "critica_social"
+      ],
+      [
+        "atuacao",
+        "comparacoes"
+      ]
+    ]
+  },
+  "viewing:1438967239": {
+    "eixos": [
+      "livre"
+    ],
+    "votos": {
+      "livre": 2
+    },
+    "confianca": "maioria",
+    "eixos_por_passe": [
+      [
+        "impacto_emocional",
+        "roteiro_estrutura"
+      ],
+      [
+        "livre"
+      ],
+      [
+        "livre"
+      ]
+    ]
+  },
+  "viewing:1435302077": {
+    "eixos": [],
+    "votos": {},
+    "confianca": "vazio",
+    "eixos_por_passe": [
+      [
+        "livre",
+        "roteiro_estrutura"
+      ],
+      [
+        "direcao_imagem"
+      ],
+      [
+        "critica_social"
+      ]
+    ]
+  },
+  "viewing:1431404422": {
+    "eixos": [
+      "livre"
+    ],
+    "votos": {
+      "livre": 3
+    },
+    "confianca": "unanime",
+    "eixos_por_passe": [
+      [
+        "livre"
+      ],
+      [
+        "livre"
+      ],
+      [
+        "livre"
+      ]
+    ]
+  },
+  "viewing:4737762": {
+    "eixos": [
+      "atuacao",
+      "comparacoes",
+      "direcao_imagem",
+      "expectativa",
+      "impacto_emocional",
+      "ritmo",
+      "roteiro_estrutura",
+      "tom_atmosfera"
+    ],
+    "votos": {
+      "atuacao": 3,
+      "comparacoes": 2,
+      "direcao_imagem": 3,
+      "expectativa": 3,
+      "impacto_emocional": 3,
+      "ritmo": 3,
+      "roteiro_estrutura": 3,
+      "tom_atmosfera": 3
+    },
+    "confianca": "maioria",
+    "eixos_por_passe": [
+      [
+        "atuacao",
+        "comparacoes",
+        "direcao_imagem",
+        "expectativa",
+        "impacto_emocional",
+        "ritmo",
+        "roteiro_estrutura",
+        "tom_atmosfera"
+      ],
+      [
+        "atuacao",
+        "critica_social",
+        "direcao_imagem",
+        "expectativa",
+        "impacto_emocional",
+        "ritmo",
+        "roteiro_estrutura",
+        "tom_atmosfera"
+      ],
+      [
+        "atuacao",
+        "comparacoes",
+        "direcao_imagem",
+        "expectativa",
+        "impacto_emocional",
+        "ritmo",
+        "roteiro_estrutura",
+        "tom_atmosfera"
+      ]
+    ]
+  },
+  "viewing:1439145237": {
+    "eixos": [
+      "livre"
+    ],
+    "votos": {
+      "livre": 3
+    },
+    "confianca": "unanime",
+    "eixos_por_passe": [
+      [
+        "livre"
+      ],
+      [
+        "livre"
+      ],
+      [
+        "livre"
+      ]
+    ]
+  },
+  "viewing:1439470047": {
+    "eixos": [
+      "impacto_emocional"
+    ],
+    "votos": {
+      "impacto_emocional": 3
+    },
+    "confianca": "unanime",
+    "eixos_por_passe": [
+      [
+        "impacto_emocional",
+        "roteiro_estrutura"
+      ],
+      [
+        "impacto_emocional",
+        "tom_atmosfera"
+      ],
+      [
+        "impacto_emocional"
+      ]
+    ]
+  },
+  "viewing:1431008461": {
+    "eixos": [
+      "livre"
+    ],
+    "votos": {
+      "livre": 2
+    },
+    "confianca": "maioria",
+    "eixos_por_passe": [
+      [
+        "livre"
+      ],
+      [
+        "impacto_emocional"
+      ],
+      [
+        "livre"
+      ]
+    ]
+  },
+  "viewing:1202902192": {
+    "eixos": [
+      "livre"
+    ],
+    "votos": {
+      "livre": 3
+    },
+    "confianca": "unanime",
+    "eixos_por_passe": [
+      [
+        "comparacoes",
+        "expectativa",
+        "livre"
+      ],
+      [
+        "livre"
+      ],
+      [
+        "livre"
+      ]
+    ]
+  },
+  "viewing:1386291162": {
+    "eixos": [
+      "atuacao",
+      "critica_social",
+      "impacto_emocional",
+      "ritmo",
+      "roteiro_estrutura"
+    ],
+    "votos": {
+      "atuacao": 3,
+      "critica_social": 3,
+      "impacto_emocional": 2,
+      "ritmo": 3,
+      "roteiro_estrutura": 2
+    },
+    "confianca": "maioria",
+    "eixos_por_passe": [
+      [
+        "atuacao",
+        "critica_social",
+        "impacto_emocional",
+        "ritmo"
+      ],
+      [
+        "atuacao",
+        "critica_social",
+        "ritmo",
+        "roteiro_estrutura"
+      ],
+      [
+        "atuacao",
+        "critica_social",
+        "impacto_emocional",
+        "ritmo",
+        "roteiro_estrutura"
+      ]
+    ]
+  },
+  "viewing:423836149": {
+    "eixos": [
+      "livre"
+    ],
+    "votos": {
+      "livre": 2
+    },
+    "confianca": "maioria",
+    "eixos_por_passe": [
+      [
+        "impacto_emocional"
+      ],
+      [
+        "livre"
+      ],
+      [
+        "livre"
+      ]
+    ]
+  },
+  "viewing:247844011": {
+    "eixos": [
+      "atuacao",
+      "comparacoes",
+      "critica_social",
+      "direcao_imagem",
+      "expectativa",
+      "impacto_emocional",
+      "ritmo",
+      "roteiro_estrutura",
+      "tom_atmosfera"
+    ],
+    "votos": {
+      "atuacao": 3,
+      "comparacoes": 2,
+      "critica_social": 2,
+      "direcao_imagem": 3,
+      "expectativa": 2,
+      "impacto_emocional": 2,
+      "ritmo": 2,
+      "roteiro_estrutura": 3,
+      "tom_atmosfera": 3
+    },
+    "confianca": "maioria",
+    "eixos_por_passe": [
+      [
+        "atuacao",
+        "critica_social",
+        "direcao_imagem",
+        "impacto_emocional",
+        "livre",
+        "ritmo",
+        "roteiro_estrutura",
+        "tom_atmosfera"
+      ],
+      [
+        "atuacao",
+        "comparacoes",
+        "direcao_imagem",
+        "expectativa",
+        "impacto_emocional",
+        "roteiro_estrutura",
+        "tom_atmosfera"
+      ],
+      [
+        "atuacao",
+        "comparacoes",
+        "critica_social",
+        "direcao_imagem",
+        "expectativa",
+        "ritmo",
+        "roteiro_estrutura",
+        "tom_atmosfera"
+      ]
+    ]
+  },
+  "viewing:1437493072": {
+    "eixos": [
+      "livre"
+    ],
+    "votos": {
+      "livre": 3
+    },
+    "confianca": "unanime",
+    "eixos_por_passe": [
+      [
+        "livre"
+      ],
+      [
+        "livre"
+      ],
+      [
+        "livre"
+      ]
+    ]
+  },
+  "viewing:1439440601": {
+    "eixos": [
+      "critica_social",
+      "expectativa",
+      "livre"
+    ],
+    "votos": {
+      "critica_social": 2,
+      "expectativa": 3,
+      "livre": 3
+    },
+    "confianca": "maioria",
+    "eixos_por_passe": [
+      [
+        "critica_social",
+        "expectativa",
+        "livre"
+      ],
+      [
+        "expectativa",
+        "livre"
+      ],
+      [
+        "comparacoes",
+        "critica_social",
+        "expectativa",
+        "livre"
+      ]
+    ]
+  },
+  "viewing:1437820063": {
+    "eixos": [
+      "comparacoes",
+      "direcao_imagem",
+      "som_trilha",
+      "tom_atmosfera"
+    ],
+    "votos": {
+      "comparacoes": 3,
+      "direcao_imagem": 3,
+      "som_trilha": 3,
+      "tom_atmosfera": 3
+    },
+    "confianca": "unanime",
+    "eixos_por_passe": [
+      [
+        "comparacoes",
+        "critica_social",
+        "direcao_imagem",
+        "som_trilha",
+        "tom_atmosfera"
+      ],
+      [
+        "comparacoes",
+        "direcao_imagem",
+        "som_trilha",
+        "tom_atmosfera"
+      ],
+      [
+        "comparacoes",
+        "direcao_imagem",
+        "impacto_emocional",
+        "som_trilha",
+        "tom_atmosfera"
+      ]
+    ]
+  },
+  "viewing:1431782980": {
+    "eixos": [
+      "atuacao",
+      "critica_social"
+    ],
+    "votos": {
+      "atuacao": 3,
+      "critica_social": 2
+    },
+    "confianca": "maioria",
+    "eixos_por_passe": [
+      [
+        "atuacao",
+        "livre"
+      ],
+      [
+        "atuacao",
+        "critica_social"
+      ],
+      [
+        "atuacao",
+        "critica_social"
+      ]
+    ]
+  },
+  "viewing:1436412603": {
+    "eixos": [
+      "livre"
+    ],
+    "votos": {
+      "livre": 2
+    },
+    "confianca": "maioria",
+    "eixos_por_passe": [
+      [
+        "livre"
+      ],
+      [],
+      [
+        "livre"
+      ]
+    ]
+  },
+  "viewing:1416457627": {
+    "eixos": [
+      "atuacao",
+      "comparacoes",
+      "direcao_imagem",
+      "impacto_emocional",
+      "livre",
+      "roteiro_estrutura",
+      "som_trilha",
+      "tom_atmosfera"
+    ],
+    "votos": {
+      "atuacao": 3,
+      "comparacoes": 3,
+      "direcao_imagem": 3,
+      "impacto_emocional": 2,
+      "livre": 2,
+      "roteiro_estrutura": 3,
+      "som_trilha": 3,
+      "tom_atmosfera": 3
+    },
+    "confianca": "maioria",
+    "eixos_por_passe": [
+      [
+        "atuacao",
+        "comparacoes",
+        "direcao_imagem",
+        "roteiro_estrutura",
+        "som_trilha",
+        "tom_atmosfera"
+      ],
+      [
+        "atuacao",
+        "comparacoes",
+        "direcao_imagem",
+        "impacto_emocional",
+        "livre",
+        "roteiro_estrutura",
+        "som_trilha",
+        "tom_atmosfera"
+      ],
+      [
+        "atuacao",
+        "comparacoes",
+        "direcao_imagem",
+        "impacto_emocional",
+        "livre",
+        "roteiro_estrutura",
+        "som_trilha",
+        "tom_atmosfera"
+      ]
+    ]
+  },
+  "viewing:1435702177": {
+    "eixos": [
+      "atuacao",
+      "direcao_imagem",
+      "ritmo"
+    ],
+    "votos": {
+      "atuacao": 2,
+      "direcao_imagem": 3,
+      "ritmo": 3
+    },
+    "confianca": "maioria",
+    "eixos_por_passe": [
+      [
+        "atuacao",
+        "direcao_imagem",
+        "ritmo"
+      ],
+      [
+        "comparacoes",
+        "direcao_imagem",
+        "impacto_emocional",
+        "ritmo"
+      ],
+      [
+        "atuacao",
+        "direcao_imagem",
+        "ritmo"
+      ]
+    ]
+  },
+  "viewing:1436709433": {
+    "eixos": [
+      "atuacao",
+      "comparacoes",
+      "expectativa",
+      "impacto_emocional",
+      "roteiro_estrutura",
+      "som_trilha",
+      "tom_atmosfera"
+    ],
+    "votos": {
+      "atuacao": 3,
+      "comparacoes": 2,
+      "expectativa": 2,
+      "impacto_emocional": 3,
+      "roteiro_estrutura": 3,
+      "som_trilha": 3,
+      "tom_atmosfera": 3
+    },
+    "confianca": "maioria",
+    "eixos_por_passe": [
+      [
+        "atuacao",
+        "comparacoes",
+        "direcao_imagem",
+        "expectativa",
+        "impacto_emocional",
+        "roteiro_estrutura",
+        "som_trilha",
+        "tom_atmosfera"
+      ],
+      [
+        "atuacao",
+        "comparacoes",
+        "critica_social",
+        "impacto_emocional",
+        "roteiro_estrutura",
+        "som_trilha",
+        "tom_atmosfera"
+      ],
+      [
+        "atuacao",
+        "expectativa",
+        "impacto_emocional",
+        "livre",
+        "roteiro_estrutura",
+        "som_trilha",
+        "tom_atmosfera"
+      ]
+    ]
+  },
+  "viewing:247154699": {
+    "eixos": [
+      "impacto_emocional",
+      "ritmo",
+      "tom_atmosfera"
+    ],
+    "votos": {
+      "impacto_emocional": 3,
+      "ritmo": 3,
+      "tom_atmosfera": 3
+    },
+    "confianca": "unanime",
+    "eixos_por_passe": [
+      [
+        "impacto_emocional",
+        "ritmo",
+        "tom_atmosfera"
+      ],
+      [
+        "impacto_emocional",
+        "ritmo",
+        "tom_atmosfera"
+      ],
+      [
+        "comparacoes",
+        "expectativa",
+        "impacto_emocional",
+        "ritmo",
+        "tom_atmosfera"
+      ]
+    ]
+  },
+  "viewing:1418238265": {
+    "eixos": [
+      "livre"
+    ],
+    "votos": {
+      "livre": 3
+    },
+    "confianca": "unanime",
+    "eixos_por_passe": [
+      [
+        "livre"
+      ],
+      [
+        "livre"
+      ],
+      [
+        "livre",
+        "roteiro_estrutura"
+      ]
+    ]
+  },
+  "viewing:1300565429": {
+    "eixos": [
+      "livre"
+    ],
+    "votos": {
+      "livre": 2
+    },
+    "confianca": "maioria",
+    "eixos_por_passe": [
+      [],
+      [
+        "livre"
+      ],
+      [
+        "livre"
+      ]
+    ]
+  },
+  "viewing:1437855983": {
+    "eixos": [
+      "atuacao",
+      "comparacoes",
+      "direcao_imagem",
+      "expectativa",
+      "impacto_emocional",
+      "roteiro_estrutura",
+      "tom_atmosfera"
+    ],
+    "votos": {
+      "atuacao": 3,
+      "comparacoes": 3,
+      "direcao_imagem": 3,
+      "expectativa": 2,
+      "impacto_emocional": 3,
+      "roteiro_estrutura": 3,
+      "tom_atmosfera": 3
+    },
+    "confianca": "maioria",
+    "eixos_por_passe": [
+      [
+        "atuacao",
+        "comparacoes",
+        "direcao_imagem",
+        "expectativa",
+        "impacto_emocional",
+        "roteiro_estrutura",
+        "tom_atmosfera"
+      ],
+      [
+        "atuacao",
+        "comparacoes",
+        "direcao_imagem",
+        "expectativa",
+        "impacto_emocional",
+        "roteiro_estrutura",
+        "tom_atmosfera"
+      ],
+      [
+        "atuacao",
+        "comparacoes",
+        "direcao_imagem",
+        "impacto_emocional",
+        "roteiro_estrutura",
+        "tom_atmosfera"
+      ]
+    ]
+  },
+  "viewing:1435820955": {
+    "eixos": [
+      "livre"
+    ],
+    "votos": {
+      "livre": 3
+    },
+    "confianca": "unanime",
+    "eixos_por_passe": [
+      [
+        "livre"
+      ],
+      [
+        "livre"
+      ],
+      [
+        "livre"
+      ]
+    ]
+  },
+  "viewing:1424210362": {
+    "eixos": [
+      "atuacao",
+      "comparacoes",
+      "direcao_imagem",
+      "impacto_emocional",
+      "ritmo",
+      "roteiro_estrutura",
+      "tom_atmosfera"
+    ],
+    "votos": {
+      "atuacao": 3,
+      "comparacoes": 3,
+      "direcao_imagem": 3,
+      "impacto_emocional": 3,
+      "ritmo": 2,
+      "roteiro_estrutura": 3,
+      "tom_atmosfera": 2
+    },
+    "confianca": "maioria",
+    "eixos_por_passe": [
+      [
+        "atuacao",
+        "comparacoes",
+        "direcao_imagem",
+        "impacto_emocional",
+        "ritmo",
+        "roteiro_estrutura"
+      ],
+      [
+        "atuacao",
+        "comparacoes",
+        "direcao_imagem",
+        "impacto_emocional",
+        "ritmo",
+        "roteiro_estrutura",
+        "tom_atmosfera"
+      ],
+      [
+        "atuacao",
+        "comparacoes",
+        "direcao_imagem",
+        "impacto_emocional",
+        "roteiro_estrutura",
+        "tom_atmosfera"
+      ]
+    ]
+  }
+}

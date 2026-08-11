@@ -1,0 +1,507 @@
+{
+  "n_reviews": 200,
+  "entrega1_frequencia_agregada": {
+    "n": 200,
+    "por_eixo": [
+      {
+        "eixo": "impacto_emocional",
+        "freq_A": 0.485,
+        "freq_B": 0.43,
+        "diff_pp": -5.499999999999999
+      },
+      {
+        "eixo": "livre",
+        "freq_A": 0.145,
+        "freq_B": 0.195,
+        "diff_pp": 5.000000000000002
+      },
+      {
+        "eixo": "comparacoes",
+        "freq_A": 0.4,
+        "freq_B": 0.435,
+        "diff_pp": 3.4999999999999973
+      },
+      {
+        "eixo": "expectativa",
+        "freq_A": 0.26,
+        "freq_B": 0.295,
+        "diff_pp": 3.4999999999999973
+      },
+      {
+        "eixo": "atuacao",
+        "freq_A": 0.265,
+        "freq_B": 0.28,
+        "diff_pp": 1.5000000000000013
+      },
+      {
+        "eixo": "tom_atmosfera",
+        "freq_A": 0.285,
+        "freq_B": 0.3,
+        "diff_pp": 1.5000000000000013
+      },
+      {
+        "eixo": "roteiro_estrutura",
+        "freq_A": 0.47,
+        "freq_B": 0.455,
+        "diff_pp": -1.4999999999999958
+      },
+      {
+        "eixo": "ritmo",
+        "freq_A": 0.26,
+        "freq_B": 0.255,
+        "diff_pp": -0.5000000000000004
+      },
+      {
+        "eixo": "direcao_imagem",
+        "freq_A": 0.28,
+        "freq_B": 0.275,
+        "diff_pp": -0.5000000000000004
+      },
+      {
+        "eixo": "critica_social",
+        "freq_A": 0.23,
+        "freq_B": 0.225,
+        "diff_pp": -0.5000000000000004
+      },
+      {
+        "eixo": "som_trilha",
+        "freq_A": 0.14,
+        "freq_B": 0.145,
+        "diff_pp": 0.49999999999999767
+      }
+    ],
+    "diferenca_media_absoluta_pp": 2.181818181818181,
+    "eixo_maior_divergencia": "impacto_emocional",
+    "maior_divergencia_pp": -5.499999999999999,
+    "dentro_de_3pp": 7,
+    "acima_de_3pp": [
+      "impacto_emocional",
+      "livre",
+      "comparacoes",
+      "expectativa"
+    ]
+  },
+  "entrega2_efeito_no_lift": {
+    "margem": 0.2,
+    "n_por_bucket": {
+      "medianas": 57,
+      "positivas": 77,
+      "negativas": 66
+    },
+    "ressalva": "200 reviews é amostra pequena para lift — a média por bucket é 66-77, contra os até 40 por bucket/filme que calibraram a margem original. Direcional, não conclusivo.",
+    "por_eixo": [
+      {
+        "eixo": "ritmo",
+        "lift_A": 0.004784688995215336,
+        "vencedor_A": "negativas",
+        "lift_B": 0.019936204146730474,
+        "vencedor_B": "negativas",
+        "freqs_A": {
+          "negativas": 0.30303030303030304,
+          "medianas": 0.2982456140350877,
+          "positivas": 0.19480519480519481
+        },
+        "freqs_B": {
+          "negativas": 0.3181818181818182,
+          "medianas": 0.2982456140350877,
+          "positivas": 0.16883116883116883
+        },
+        "acima_da_margem_A": false,
+        "acima_da_margem_B": false,
+        "mudou_de_lado": false
+      },
+      {
+        "eixo": "atuacao",
+        "lift_A": 0.040669856459330134,
+        "vencedor_A": "medianas",
+        "lift_B": 0.004784688995215336,
+        "vencedor_B": "negativas",
+        "freqs_A": {
+          "negativas": 0.25757575757575757,
+          "medianas": 0.2982456140350877,
+          "positivas": 0.24675324675324675
+        },
+        "freqs_B": {
+          "negativas": 0.30303030303030304,
+          "medianas": 0.2982456140350877,
+          "positivas": 0.24675324675324675
+        },
+        "acima_da_margem_A": false,
+        "acima_da_margem_B": false,
+        "mudou_de_lado": false
+      },
+      {
+        "eixo": "direcao_imagem",
+        "lift_A": 0.09569377990430622,
+        "vencedor_A": "medianas",
+        "lift_B": 0.0735930735930736,
+        "vencedor_B": "medianas",
+        "freqs_A": {
+          "negativas": 0.21212121212121213,
+          "medianas": 0.3684210526315789,
+          "positivas": 0.2727272727272727
+        },
+        "freqs_B": {
+          "negativas": 0.24242424242424243,
+          "medianas": 0.3333333333333333,
+          "positivas": 0.2597402597402597
+        },
+        "acima_da_margem_A": false,
+        "acima_da_margem_B": false,
+        "mudou_de_lado": false
+      },
+      {
+        "eixo": "roteiro_estrutura",
+        "lift_A": 0.046251993620414655,
+        "vencedor_A": "medianas",
+        "lift_B": 0.011164274322169043,
+        "vencedor_B": "medianas",
+        "freqs_A": {
+          "negativas": 0.5151515151515151,
+          "medianas": 0.5614035087719298,
+          "positivas": 0.36363636363636365
+        },
+        "freqs_B": {
+          "negativas": 0.5151515151515151,
+          "medianas": 0.5263157894736842,
+          "positivas": 0.35064935064935066
+        },
+        "acima_da_margem_A": false,
+        "acima_da_margem_B": false,
+        "mudou_de_lado": false
+      },
+      {
+        "eixo": "som_trilha",
+        "lift_A": 0.00865800865800867,
+        "vencedor_A": "negativas",
+        "lift_B": 0.038961038961038974,
+        "vencedor_B": "negativas",
+        "freqs_A": {
+          "negativas": 0.15151515151515152,
+          "medianas": 0.12280701754385964,
+          "positivas": 0.14285714285714285
+        },
+        "freqs_B": {
+          "negativas": 0.18181818181818182,
+          "medianas": 0.10526315789473684,
+          "positivas": 0.14285714285714285
+        },
+        "acima_da_margem_A": false,
+        "acima_da_margem_B": false,
+        "mudou_de_lado": false
+      },
+      {
+        "eixo": "tom_atmosfera",
+        "lift_A": 0.02620186830713145,
+        "vencedor_A": "medianas",
+        "lift_B": 0.05240373661426295,
+        "vencedor_B": "positivas",
+        "freqs_A": {
+          "negativas": 0.18181818181818182,
+          "medianas": 0.3508771929824561,
+          "positivas": 0.3246753246753247
+        },
+        "freqs_B": {
+          "negativas": 0.24242424242424243,
+          "medianas": 0.2982456140350877,
+          "positivas": 0.35064935064935066
+        },
+        "acima_da_margem_A": false,
+        "acima_da_margem_B": false,
+        "mudou_de_lado": false
+      },
+      {
+        "eixo": "impacto_emocional",
+        "lift_A": 0.09956709956709953,
+        "vencedor_A": "positivas",
+        "lift_B": 0.09307359307359303,
+        "vencedor_B": "positivas",
+        "freqs_A": {
+          "negativas": 0.48484848484848486,
+          "medianas": 0.3508771929824561,
+          "positivas": 0.5844155844155844
+        },
+        "freqs_B": {
+          "negativas": 0.4393939393939394,
+          "medianas": 0.2807017543859649,
+          "positivas": 0.5324675324675324
+        },
+        "acima_da_margem_A": false,
+        "acima_da_margem_B": false,
+        "mudou_de_lado": false
+      },
+      {
+        "eixo": "comparacoes",
+        "lift_A": 0.006493506493506496,
+        "vencedor_A": "negativas",
+        "lift_B": 0.015151515151515138,
+        "vencedor_B": "positivas",
+        "freqs_A": {
+          "negativas": 0.4090909090909091,
+          "medianas": 0.38596491228070173,
+          "positivas": 0.4025974025974026
+        },
+        "freqs_B": {
+          "negativas": 0.4393939393939394,
+          "medianas": 0.40350877192982454,
+          "positivas": 0.45454545454545453
+        },
+        "acima_da_margem_A": false,
+        "acima_da_margem_B": false,
+        "mudou_de_lado": false
+      },
+      {
+        "eixo": "expectativa",
+        "lift_A": 0.019936204146730474,
+        "vencedor_A": "negativas",
+        "lift_B": 0.01993620414673042,
+        "vencedor_B": "medianas",
+        "freqs_A": {
+          "negativas": 0.3181818181818182,
+          "medianas": 0.2982456140350877,
+          "positivas": 0.18181818181818182
+        },
+        "freqs_B": {
+          "negativas": 0.3484848484848485,
+          "medianas": 0.3684210526315789,
+          "positivas": 0.19480519480519481
+        },
+        "acima_da_margem_A": false,
+        "acima_da_margem_B": false,
+        "mudou_de_lado": false
+      },
+      {
+        "eixo": "critica_social",
+        "lift_A": 0.0901116427432217,
+        "vencedor_A": "negativas",
+        "lift_B": 0.07496012759170656,
+        "vencedor_B": "negativas",
+        "freqs_A": {
+          "negativas": 0.3181818181818182,
+          "medianas": 0.22807017543859648,
+          "positivas": 0.15584415584415584
+        },
+        "freqs_B": {
+          "negativas": 0.30303030303030304,
+          "medianas": 0.22807017543859648,
+          "positivas": 0.15584415584415584
+        },
+        "acima_da_margem_A": false,
+        "acima_da_margem_B": false,
+        "mudou_de_lado": false
+      }
+    ],
+    "n_eixos_que_mudaram_de_lado": 0,
+    "eixos_que_mudaram_de_lado": []
+  },
+  "entrega3_nucleo_estavel": {
+    "n": 200,
+    "tamanho_medio_nucleo": 2.565,
+    "tamanho_medio_borda": 1.38,
+    "eixos_mais_na_borda_que_no_nucleo": [
+      {
+        "eixo": "tom_atmosfera",
+        "n_nucleo": 36,
+        "n_borda": 45,
+        "razao_borda_sobre_nucleo": 1.25
+      },
+      {
+        "eixo": "livre",
+        "n_nucleo": 13,
+        "n_borda": 42,
+        "razao_borda_sobre_nucleo": 3.230769230769231
+      }
+    ],
+    "razao_borda_nucleo_por_eixo": [
+      {
+        "eixo": "tom_atmosfera",
+        "n_nucleo": 36,
+        "n_borda": 45,
+        "razao_borda_sobre_nucleo": 1.25
+      },
+      {
+        "eixo": "livre",
+        "n_nucleo": 13,
+        "n_borda": 42,
+        "razao_borda_sobre_nucleo": 3.230769230769231
+      },
+      {
+        "eixo": "comparacoes",
+        "n_nucleo": 65,
+        "n_borda": 37,
+        "razao_borda_sobre_nucleo": 0.5692307692307692
+      },
+      {
+        "eixo": "impacto_emocional",
+        "n_nucleo": 75,
+        "n_borda": 33,
+        "razao_borda_sobre_nucleo": 0.44
+      },
+      {
+        "eixo": "expectativa",
+        "n_nucleo": 40,
+        "n_borda": 31,
+        "razao_borda_sobre_nucleo": 0.775
+      },
+      {
+        "eixo": "ritmo",
+        "n_nucleo": 40,
+        "n_borda": 23,
+        "razao_borda_sobre_nucleo": 0.575
+      },
+      {
+        "eixo": "roteiro_estrutura",
+        "n_nucleo": 81,
+        "n_borda": 23,
+        "razao_borda_sobre_nucleo": 0.2839506172839506
+      },
+      {
+        "eixo": "critica_social",
+        "n_nucleo": 36,
+        "n_borda": 19,
+        "razao_borda_sobre_nucleo": 0.5277777777777778
+      },
+      {
+        "eixo": "direcao_imagem",
+        "n_nucleo": 48,
+        "n_borda": 15,
+        "razao_borda_sobre_nucleo": 0.3125
+      },
+      {
+        "eixo": "atuacao",
+        "n_nucleo": 52,
+        "n_borda": 5,
+        "razao_borda_sobre_nucleo": 0.09615384615384616
+      },
+      {
+        "eixo": "som_trilha",
+        "n_nucleo": 27,
+        "n_borda": 3,
+        "razao_borda_sobre_nucleo": 0.1111111111111111
+      }
+    ],
+    "freq_nucleo_vs_execucao_completa": [
+      {
+        "eixo": "impacto_emocional",
+        "freq_completa_A": 0.485,
+        "freq_so_nucleo": 0.375,
+        "diff_pp": -10.999999999999998
+      },
+      {
+        "eixo": "tom_atmosfera",
+        "freq_completa_A": 0.285,
+        "freq_so_nucleo": 0.18,
+        "diff_pp": -10.499999999999998
+      },
+      {
+        "eixo": "livre",
+        "freq_completa_A": 0.145,
+        "freq_so_nucleo": 0.065,
+        "diff_pp": -7.999999999999999
+      },
+      {
+        "eixo": "comparacoes",
+        "freq_completa_A": 0.4,
+        "freq_so_nucleo": 0.325,
+        "diff_pp": -7.500000000000001
+      },
+      {
+        "eixo": "roteiro_estrutura",
+        "freq_completa_A": 0.47,
+        "freq_so_nucleo": 0.405,
+        "diff_pp": -6.499999999999995
+      },
+      {
+        "eixo": "ritmo",
+        "freq_completa_A": 0.26,
+        "freq_so_nucleo": 0.2,
+        "diff_pp": -6.0
+      },
+      {
+        "eixo": "expectativa",
+        "freq_completa_A": 0.26,
+        "freq_so_nucleo": 0.2,
+        "diff_pp": -6.0
+      },
+      {
+        "eixo": "critica_social",
+        "freq_completa_A": 0.23,
+        "freq_so_nucleo": 0.18,
+        "diff_pp": -5.000000000000002
+      },
+      {
+        "eixo": "direcao_imagem",
+        "freq_completa_A": 0.28,
+        "freq_so_nucleo": 0.24,
+        "diff_pp": -4.0000000000000036
+      },
+      {
+        "eixo": "atuacao",
+        "freq_completa_A": 0.265,
+        "freq_so_nucleo": 0.26,
+        "diff_pp": -0.5000000000000004
+      },
+      {
+        "eixo": "som_trilha",
+        "freq_completa_A": 0.14,
+        "freq_so_nucleo": 0.135,
+        "diff_pp": -0.5000000000000004
+      }
+    ],
+    "maior_queda_pp_ao_restringir_ao_nucleo": {
+      "eixo": "impacto_emocional",
+      "freq_completa_A": 0.485,
+      "freq_so_nucleo": 0.375,
+      "diff_pp": -10.999999999999998
+    }
+  },
+  "entrega4_tom_atmosfera_vs_impacto_emocional": {
+    "n_total": 200,
+    "n_nenhum_dos_dois_oscila": 126,
+    "n_ao_menos_um_oscila": 74,
+    "troca_sistematica": {
+      "n": 2,
+      "ids": [
+        "viewing:1439188214",
+        "viewing:1439397929"
+      ],
+      "fracao_dos_relevantes": 0.02702702702702703
+    },
+    "ambos_oscilam_mesma_direcao": {
+      "n": 2,
+      "ids": [
+        "viewing:1437691122",
+        "viewing:1370327414"
+      ]
+    },
+    "so_um_oscila_independente": {
+      "n": 70,
+      "fracao_dos_relevantes": 0.9459459459459459
+    },
+    "veredito": "oscilação majoritariamente independente — instabilidade geral, não fronteira específica"
+  },
+  "veredito": {
+    "fatos": {
+      "Entrega1_diferenca_media_pp": 2.181818181818181,
+      "Entrega1_eixos_acima_de_3pp": [
+        "impacto_emocional",
+        "livre",
+        "comparacoes",
+        "expectativa"
+      ],
+      "Entrega2_lift_maximo_observado_pp": 9.956709956709952,
+      "Entrega2_eixos_que_mudaram_de_lado_da_margem_20pp": [],
+      "Entrega2_teve_poder_para_testar_a_margem": false,
+      "Entrega3_maior_queda_ao_restringir_ao_nucleo_pp": 10.999999999999998
+    },
+    "eixos_com_instabilidade_concentrada": [
+      "comparacoes",
+      "expectativa",
+      "impacto_emocional",
+      "livre",
+      "tom_atmosfera"
+    ],
+    "instabilidade_concentrada_em_eixos_recem_alterados": false,
+    "leitura": "Frequências agregadas na maioria dos eixos ficam dentro de 1,5pp entre execuções — os 6 eixos herdados do gate de 8 (inalterados desde então) são estáveis. A instabilidade real se concentra nos eixos NOVOS/AFROUXADOS (impacto_emocional, livre, comparacoes, expectativa), consistente nas 3 entregas (frequência, núcleo, e a suspeita de troca refutada na Entrega 4). A margem de lift não foi estressada por esta medição — nenhum eixo chegou perto dela em nenhuma execução, então 'zero mudaram de lado' não confirma robustez, só não a refuta."
+  }
+}

@@ -1,0 +1,1038 @@
+{
+  "semente": 20260810,
+  "taxonomia_id": "11871105c0d3",
+  "n": 100,
+  "telemetria": {
+    "n_alvo": 100,
+    "n_obtido": 100,
+    "deficits_por_estrato": {},
+    "composicao_por_estrato": {
+      "comprimento<=200": 12,
+      "n_eixos>=7": 24,
+      "n_eixos=0": 24,
+      "resto_round_robin": 34,
+      "perfil=obscuro": 6
+    },
+    "composicao_por_bucket": {
+      "medianas": 34,
+      "positivas": 33,
+      "negativas": 33
+    },
+    "composicao_por_perfil": {
+      "arthouse": 23,
+      "aclamado": 32,
+      "invertido": 19,
+      "obscuro": 7,
+      "divisivo": 19
+    },
+    "composicao_por_n_eixos_grupo": {
+      "1-2": 16,
+      "7+": 30,
+      "0": 29,
+      "5-6": 7,
+      "3-4": 18
+    }
+  },
+  "reviews": [
+    {
+      "ordem": 1,
+      "id": "viewing:1436364426",
+      "slug": "parasite-2019",
+      "perfil": "arthouse",
+      "bucket": "medianas",
+      "nivel": 3.0,
+      "n_chars": 177,
+      "estrato": "comprimento<=200"
+    },
+    {
+      "ordem": 2,
+      "id": "viewing:1437164587",
+      "slug": "the-northman",
+      "perfil": "aclamado",
+      "bucket": "positivas",
+      "nivel": 4.0,
+      "n_chars": 717,
+      "estrato": "n_eixos>=7"
+    },
+    {
+      "ordem": 3,
+      "id": "viewing:1439565100",
+      "slug": "pearl-2022",
+      "perfil": "aclamado",
+      "bucket": "positivas",
+      "nivel": 4.0,
+      "n_chars": 502,
+      "estrato": "n_eixos>=7"
+    },
+    {
+      "ordem": 4,
+      "id": "viewing:1432858536",
+      "slug": "the-godfather",
+      "perfil": "aclamado",
+      "bucket": "medianas",
+      "nivel": 3.0,
+      "n_chars": 154,
+      "estrato": "comprimento<=200"
+    },
+    {
+      "ordem": 5,
+      "id": "viewing:1438355625",
+      "slug": "everything-everywhere-all-at-once",
+      "perfil": "aclamado",
+      "bucket": "negativas",
+      "nivel": 2.0,
+      "n_chars": 4675,
+      "estrato": "n_eixos>=7"
+    },
+    {
+      "ordem": 6,
+      "id": "viewing:1432253466",
+      "slug": "shutter-island",
+      "perfil": "aclamado",
+      "bucket": "negativas",
+      "nivel": 1.0,
+      "n_chars": 160,
+      "estrato": "n_eixos=0"
+    },
+    {
+      "ordem": 7,
+      "id": "viewing:1438218485",
+      "slug": "joker-folie-a-deux",
+      "perfil": "invertido",
+      "bucket": "negativas",
+      "nivel": 2.0,
+      "n_chars": 380,
+      "estrato": "resto_round_robin"
+    },
+    {
+      "ordem": 8,
+      "id": "viewing:1439316485",
+      "slug": "im-still-here-2024",
+      "perfil": "arthouse",
+      "bucket": "positivas",
+      "nivel": 5.0,
+      "n_chars": 1908,
+      "estrato": "n_eixos>=7"
+    },
+    {
+      "ordem": 9,
+      "id": "viewing:1282160073",
+      "slug": "obsession-2026",
+      "perfil": "obscuro",
+      "bucket": "negativas",
+      "nivel": 2.0,
+      "n_chars": 159,
+      "estrato": "perfil=obscuro"
+    },
+    {
+      "ordem": 10,
+      "id": "viewing:1435977578",
+      "slug": "aftersun",
+      "perfil": "arthouse",
+      "bucket": "negativas",
+      "nivel": 0.5,
+      "n_chars": 572,
+      "estrato": "n_eixos=0"
+    },
+    {
+      "ordem": 11,
+      "id": "viewing:1436444961",
+      "slug": "talk-to-me-2022",
+      "perfil": "divisivo",
+      "bucket": "positivas",
+      "nivel": 3.5,
+      "n_chars": 203,
+      "estrato": "resto_round_robin"
+    },
+    {
+      "ordem": 12,
+      "id": "viewing:1431201326",
+      "slug": "barbie",
+      "perfil": "divisivo",
+      "bucket": "negativas",
+      "nivel": 2.0,
+      "n_chars": 330,
+      "estrato": "resto_round_robin"
+    },
+    {
+      "ordem": 13,
+      "id": "viewing:1431008461",
+      "slug": "wonka",
+      "perfil": "divisivo",
+      "bucket": "negativas",
+      "nivel": 0.5,
+      "n_chars": 163,
+      "estrato": "n_eixos=0"
+    },
+    {
+      "ordem": 14,
+      "id": "viewing:1438309016",
+      "slug": "longlegs",
+      "perfil": "divisivo",
+      "bucket": "medianas",
+      "nivel": 3.0,
+      "n_chars": 197,
+      "estrato": "resto_round_robin"
+    },
+    {
+      "ordem": 15,
+      "id": "viewing:1433527421",
+      "slug": "everything-everywhere-all-at-once",
+      "perfil": "aclamado",
+      "bucket": "medianas",
+      "nivel": 2.5,
+      "n_chars": 176,
+      "estrato": "n_eixos=0"
+    },
+    {
+      "ordem": 16,
+      "id": "viewing:1439188586",
+      "slug": "longlegs",
+      "perfil": "divisivo",
+      "bucket": "positivas",
+      "nivel": 5.0,
+      "n_chars": 1427,
+      "estrato": "resto_round_robin"
+    },
+    {
+      "ordem": 17,
+      "id": "viewing:1437060738",
+      "slug": "the-invite-2026",
+      "perfil": "aclamado",
+      "bucket": "medianas",
+      "nivel": 2.5,
+      "n_chars": 175,
+      "estrato": "n_eixos=0"
+    },
+    {
+      "ordem": 18,
+      "id": "viewing:1439423226",
+      "slug": "spider-man-across-the-spider-verse",
+      "perfil": "aclamado",
+      "bucket": "positivas",
+      "nivel": 4.5,
+      "n_chars": 227,
+      "estrato": "resto_round_robin"
+    },
+    {
+      "ordem": 19,
+      "id": "viewing:1348238423",
+      "slug": "obsession-2026",
+      "perfil": "obscuro",
+      "bucket": "positivas",
+      "nivel": 5.0,
+      "n_chars": 410,
+      "estrato": "perfil=obscuro"
+    },
+    {
+      "ordem": 20,
+      "id": "viewing:1421876073",
+      "slug": "aftersun",
+      "perfil": "arthouse",
+      "bucket": "negativas",
+      "nivel": 1.5,
+      "n_chars": 2040,
+      "estrato": "n_eixos>=7"
+    },
+    {
+      "ordem": 21,
+      "id": "viewing:1437337843",
+      "slug": "hereditary",
+      "perfil": "aclamado",
+      "bucket": "medianas",
+      "nivel": 3.0,
+      "n_chars": 183,
+      "estrato": "comprimento<=200"
+    },
+    {
+      "ordem": 22,
+      "id": "viewing:1434670391",
+      "slug": "shutter-island",
+      "perfil": "aclamado",
+      "bucket": "medianas",
+      "nivel": 3.0,
+      "n_chars": 182,
+      "estrato": "resto_round_robin"
+    },
+    {
+      "ordem": 23,
+      "id": "viewing:1335258966",
+      "slug": "obsession-2026",
+      "perfil": "obscuro",
+      "bucket": "positivas",
+      "nivel": 4.0,
+      "n_chars": 1106,
+      "estrato": "perfil=obscuro"
+    },
+    {
+      "ordem": 24,
+      "id": "viewing:1278586751",
+      "slug": "obsession-2026",
+      "perfil": "obscuro",
+      "bucket": "medianas",
+      "nivel": 3.0,
+      "n_chars": 157,
+      "estrato": "perfil=obscuro"
+    },
+    {
+      "ordem": 25,
+      "id": "viewing:1438460812",
+      "slug": "wicked-2024",
+      "perfil": "aclamado",
+      "bucket": "positivas",
+      "nivel": 4.5,
+      "n_chars": 227,
+      "estrato": "n_eixos=0"
+    },
+    {
+      "ordem": 26,
+      "id": "viewing:1420951248",
+      "slug": "cure",
+      "perfil": "arthouse",
+      "bucket": "medianas",
+      "nivel": 2.5,
+      "n_chars": 966,
+      "estrato": "resto_round_robin"
+    },
+    {
+      "ordem": 27,
+      "id": "viewing:1438804888",
+      "slug": "dune-2021",
+      "perfil": "aclamado",
+      "bucket": "negativas",
+      "nivel": 2.0,
+      "n_chars": 821,
+      "estrato": "resto_round_robin"
+    },
+    {
+      "ordem": 28,
+      "id": "viewing:1435231724",
+      "slug": "longlegs",
+      "perfil": "divisivo",
+      "bucket": "positivas",
+      "nivel": 3.5,
+      "n_chars": 605,
+      "estrato": "n_eixos>=7"
+    },
+    {
+      "ordem": 29,
+      "id": "viewing:1407804179",
+      "slug": "cure",
+      "perfil": "arthouse",
+      "bucket": "negativas",
+      "nivel": 1.0,
+      "n_chars": 320,
+      "estrato": "resto_round_robin"
+    },
+    {
+      "ordem": 30,
+      "id": "viewing:1437721464",
+      "slug": "oppenheimer-2023",
+      "perfil": "aclamado",
+      "bucket": "medianas",
+      "nivel": 3.0,
+      "n_chars": 1755,
+      "estrato": "n_eixos>=7"
+    },
+    {
+      "ordem": 31,
+      "id": "viewing:1422329392",
+      "slug": "anatomy-of-a-fall",
+      "perfil": "arthouse",
+      "bucket": "medianas",
+      "nivel": 2.5,
+      "n_chars": 154,
+      "estrato": "n_eixos=0"
+    },
+    {
+      "ordem": 32,
+      "id": "viewing:1428491750",
+      "slug": "napoleon-2023",
+      "perfil": "invertido",
+      "bucket": "medianas",
+      "nivel": 2.5,
+      "n_chars": 3031,
+      "estrato": "n_eixos>=7"
+    },
+    {
+      "ordem": 33,
+      "id": "viewing:1435610123",
+      "slug": "longlegs",
+      "perfil": "divisivo",
+      "bucket": "medianas",
+      "nivel": 3.0,
+      "n_chars": 192,
+      "estrato": "n_eixos=0"
+    },
+    {
+      "ordem": 34,
+      "id": "viewing:1358774236",
+      "slug": "cidade-de-deus",
+      "perfil": "arthouse",
+      "bucket": "negativas",
+      "nivel": 2.0,
+      "n_chars": 192,
+      "estrato": "n_eixos=0"
+    },
+    {
+      "ordem": 35,
+      "id": "viewing:1439880547",
+      "slug": "parasite-2019",
+      "perfil": "arthouse",
+      "bucket": "positivas",
+      "nivel": 5.0,
+      "n_chars": 1391,
+      "estrato": "n_eixos>=7"
+    },
+    {
+      "ordem": 36,
+      "id": "viewing:1436213185",
+      "slug": "wicked-2024",
+      "perfil": "aclamado",
+      "bucket": "negativas",
+      "nivel": 2.0,
+      "n_chars": 4348,
+      "estrato": "n_eixos>=7"
+    },
+    {
+      "ordem": 37,
+      "id": "viewing:1437883787",
+      "slug": "parasite-2019",
+      "perfil": "arthouse",
+      "bucket": "negativas",
+      "nivel": 0.5,
+      "n_chars": 54,
+      "estrato": "comprimento<=200"
+    },
+    {
+      "ordem": 38,
+      "id": "viewing:1435157908",
+      "slug": "mother-2017",
+      "perfil": "divisivo",
+      "bucket": "positivas",
+      "nivel": 5.0,
+      "n_chars": 158,
+      "estrato": "comprimento<=200"
+    },
+    {
+      "ordem": 39,
+      "id": "viewing:1435511846",
+      "slug": "parasite-2019",
+      "perfil": "arthouse",
+      "bucket": "negativas",
+      "nivel": 0.5,
+      "n_chars": 51,
+      "estrato": "n_eixos=0"
+    },
+    {
+      "ordem": 40,
+      "id": "viewing:1436687222",
+      "slug": "barbie",
+      "perfil": "divisivo",
+      "bucket": "negativas",
+      "nivel": 1.0,
+      "n_chars": 155,
+      "estrato": "comprimento<=200"
+    },
+    {
+      "ordem": 41,
+      "id": "viewing:1429829818",
+      "slug": "longlegs",
+      "perfil": "divisivo",
+      "bucket": "negativas",
+      "nivel": 2.0,
+      "n_chars": 302,
+      "estrato": "resto_round_robin"
+    },
+    {
+      "ordem": 42,
+      "id": "viewing:1433222425",
+      "slug": "cats-2019",
+      "perfil": "invertido",
+      "bucket": "negativas",
+      "nivel": 0.5,
+      "n_chars": 200,
+      "estrato": "comprimento<=200"
+    },
+    {
+      "ordem": 43,
+      "id": "viewing:1439475465",
+      "slug": "dune-2021",
+      "perfil": "aclamado",
+      "bucket": "positivas",
+      "nivel": 5.0,
+      "n_chars": 166,
+      "estrato": "n_eixos=0"
+    },
+    {
+      "ordem": 44,
+      "id": "viewing:1423450144",
+      "slug": "friday-the-13th-2009",
+      "perfil": "invertido",
+      "bucket": "positivas",
+      "nivel": 3.5,
+      "n_chars": 568,
+      "estrato": "resto_round_robin"
+    },
+    {
+      "ordem": 45,
+      "id": "viewing:1433204995",
+      "slug": "napoleon-2023",
+      "perfil": "invertido",
+      "bucket": "medianas",
+      "nivel": 3.0,
+      "n_chars": 2914,
+      "estrato": "resto_round_robin"
+    },
+    {
+      "ordem": 46,
+      "id": "viewing:1438603705",
+      "slug": "perfect-days-2023",
+      "perfil": "arthouse",
+      "bucket": "medianas",
+      "nivel": 3.0,
+      "n_chars": 2024,
+      "estrato": "resto_round_robin"
+    },
+    {
+      "ordem": 47,
+      "id": "viewing:1328413789",
+      "slug": "cats-2019",
+      "perfil": "invertido",
+      "bucket": "medianas",
+      "nivel": 2.5,
+      "n_chars": 316,
+      "estrato": "n_eixos=0"
+    },
+    {
+      "ordem": 48,
+      "id": "viewing:1437675359",
+      "slug": "cidade-de-deus",
+      "perfil": "arthouse",
+      "bucket": "positivas",
+      "nivel": 5.0,
+      "n_chars": 1019,
+      "estrato": "n_eixos>=7"
+    },
+    {
+      "ordem": 49,
+      "id": "viewing:1424975192",
+      "slug": "friday-the-13th-2009",
+      "perfil": "invertido",
+      "bucket": "negativas",
+      "nivel": 2.0,
+      "n_chars": 700,
+      "estrato": "resto_round_robin"
+    },
+    {
+      "ordem": 50,
+      "id": "viewing:1432186537",
+      "slug": "napoleon-2023",
+      "perfil": "invertido",
+      "bucket": "negativas",
+      "nivel": 2.0,
+      "n_chars": 3619,
+      "estrato": "n_eixos>=7"
+    },
+    {
+      "ordem": 51,
+      "id": "viewing:1438518572",
+      "slug": "everything-everywhere-all-at-once",
+      "perfil": "aclamado",
+      "bucket": "positivas",
+      "nivel": 5.0,
+      "n_chars": 151,
+      "estrato": "n_eixos=0"
+    },
+    {
+      "ordem": 52,
+      "id": "viewing:1437261485",
+      "slug": "oppenheimer-2023",
+      "perfil": "aclamado",
+      "bucket": "medianas",
+      "nivel": 3.0,
+      "n_chars": 215,
+      "estrato": "resto_round_robin"
+    },
+    {
+      "ordem": 53,
+      "id": "viewing:1419590808",
+      "slug": "friday-the-13th-2009",
+      "perfil": "invertido",
+      "bucket": "negativas",
+      "nivel": 2.0,
+      "n_chars": 1081,
+      "estrato": "resto_round_robin"
+    },
+    {
+      "ordem": 54,
+      "id": "viewing:1433988702",
+      "slug": "dune-part-two",
+      "perfil": "aclamado",
+      "bucket": "medianas",
+      "nivel": 2.5,
+      "n_chars": 565,
+      "estrato": "resto_round_robin"
+    },
+    {
+      "ordem": 55,
+      "id": "viewing:1439188789",
+      "slug": "oppenheimer-2023",
+      "perfil": "aclamado",
+      "bucket": "positivas",
+      "nivel": 3.5,
+      "n_chars": 295,
+      "estrato": "resto_round_robin"
+    },
+    {
+      "ordem": 56,
+      "id": "viewing:1436970930",
+      "slug": "barbie",
+      "perfil": "divisivo",
+      "bucket": "negativas",
+      "nivel": 1.5,
+      "n_chars": 253,
+      "estrato": "n_eixos=0"
+    },
+    {
+      "ordem": 57,
+      "id": "viewing:1439512886",
+      "slug": "interstellar",
+      "perfil": "aclamado",
+      "bucket": "positivas",
+      "nivel": 5.0,
+      "n_chars": 2365,
+      "estrato": "n_eixos>=7"
+    },
+    {
+      "ordem": 58,
+      "id": "viewing:1391234803",
+      "slug": "cidade-de-deus",
+      "perfil": "arthouse",
+      "bucket": "negativas",
+      "nivel": 1.0,
+      "n_chars": 219,
+      "estrato": "resto_round_robin"
+    },
+    {
+      "ordem": 59,
+      "id": "viewing:1387762662",
+      "slug": "shutter-island",
+      "perfil": "aclamado",
+      "bucket": "negativas",
+      "nivel": 2.0,
+      "n_chars": 170,
+      "estrato": "resto_round_robin"
+    },
+    {
+      "ordem": 60,
+      "id": "viewing:1409171275",
+      "slug": "cure",
+      "perfil": "arthouse",
+      "bucket": "negativas",
+      "nivel": 2.0,
+      "n_chars": 1027,
+      "estrato": "n_eixos>=7"
+    },
+    {
+      "ordem": 61,
+      "id": "viewing:1436787766",
+      "slug": "cidade-de-deus",
+      "perfil": "arthouse",
+      "bucket": "positivas",
+      "nivel": 4.0,
+      "n_chars": 304,
+      "estrato": "resto_round_robin"
+    },
+    {
+      "ordem": 62,
+      "id": "viewing:1398563306",
+      "slug": "friday-the-13th-2009",
+      "perfil": "invertido",
+      "bucket": "positivas",
+      "nivel": 4.0,
+      "n_chars": 772,
+      "estrato": "resto_round_robin"
+    },
+    {
+      "ordem": 63,
+      "id": "viewing:1229439522",
+      "slug": "obsession-2026",
+      "perfil": "obscuro",
+      "bucket": "negativas",
+      "nivel": 0.5,
+      "n_chars": 144,
+      "estrato": "n_eixos=0"
+    },
+    {
+      "ordem": 64,
+      "id": "viewing:1439227612",
+      "slug": "talk-to-me-2022",
+      "perfil": "divisivo",
+      "bucket": "medianas",
+      "nivel": 3.0,
+      "n_chars": 314,
+      "estrato": "resto_round_robin"
+    },
+    {
+      "ordem": 65,
+      "id": "viewing:1437377835",
+      "slug": "mother-2017",
+      "perfil": "divisivo",
+      "bucket": "medianas",
+      "nivel": 3.0,
+      "n_chars": 2813,
+      "estrato": "n_eixos>=7"
+    },
+    {
+      "ordem": 66,
+      "id": "viewing:1436871512",
+      "slug": "joker-folie-a-deux",
+      "perfil": "invertido",
+      "bucket": "medianas",
+      "nivel": 3.0,
+      "n_chars": 928,
+      "estrato": "n_eixos>=7"
+    },
+    {
+      "ordem": 67,
+      "id": "viewing:1413613604",
+      "slug": "cidade-de-deus",
+      "perfil": "arthouse",
+      "bucket": "medianas",
+      "nivel": 3.0,
+      "n_chars": 1831,
+      "estrato": "resto_round_robin"
+    },
+    {
+      "ordem": 68,
+      "id": "viewing:1425062885",
+      "slug": "napoleon-2023",
+      "perfil": "invertido",
+      "bucket": "positivas",
+      "nivel": 4.0,
+      "n_chars": 1137,
+      "estrato": "n_eixos=0"
+    },
+    {
+      "ordem": 69,
+      "id": "viewing:1433307734",
+      "slug": "the-invite-2026",
+      "perfil": "aclamado",
+      "bucket": "negativas",
+      "nivel": 1.5,
+      "n_chars": 2306,
+      "estrato": "n_eixos>=7"
+    },
+    {
+      "ordem": 70,
+      "id": "viewing:1432641568",
+      "slug": "joker-folie-a-deux",
+      "perfil": "invertido",
+      "bucket": "medianas",
+      "nivel": 2.5,
+      "n_chars": 456,
+      "estrato": "n_eixos>=7"
+    },
+    {
+      "ordem": 71,
+      "id": "viewing:1415292559",
+      "slug": "oppenheimer-2023",
+      "perfil": "aclamado",
+      "bucket": "negativas",
+      "nivel": 1.5,
+      "n_chars": 1988,
+      "estrato": "n_eixos>=7"
+    },
+    {
+      "ordem": 72,
+      "id": "viewing:1403416388",
+      "slug": "friday-the-13th-2009",
+      "perfil": "invertido",
+      "bucket": "negativas",
+      "nivel": 2.0,
+      "n_chars": 173,
+      "estrato": "comprimento<=200"
+    },
+    {
+      "ordem": 73,
+      "id": "viewing:1434313879",
+      "slug": "mother-2017",
+      "perfil": "divisivo",
+      "bucket": "medianas",
+      "nivel": 2.5,
+      "n_chars": 196,
+      "estrato": "resto_round_robin"
+    },
+    {
+      "ordem": 74,
+      "id": "viewing:1437726741",
+      "slug": "barbie",
+      "perfil": "divisivo",
+      "bucket": "medianas",
+      "nivel": 3.0,
+      "n_chars": 281,
+      "estrato": "n_eixos>=7"
+    },
+    {
+      "ordem": 75,
+      "id": "viewing:1432589301",
+      "slug": "mother-2017",
+      "perfil": "divisivo",
+      "bucket": "positivas",
+      "nivel": 3.5,
+      "n_chars": 348,
+      "estrato": "resto_round_robin"
+    },
+    {
+      "ordem": 76,
+      "id": "viewing:1412383588",
+      "slug": "dune-part-two",
+      "perfil": "aclamado",
+      "bucket": "negativas",
+      "nivel": 2.0,
+      "n_chars": 1524,
+      "estrato": "resto_round_robin"
+    },
+    {
+      "ordem": 77,
+      "id": "viewing:1437843622",
+      "slug": "anatomy-of-a-fall",
+      "perfil": "arthouse",
+      "bucket": "positivas",
+      "nivel": 5.0,
+      "n_chars": 1332,
+      "estrato": "resto_round_robin"
+    },
+    {
+      "ordem": 78,
+      "id": "viewing:1439278994",
+      "slug": "spider-man-across-the-spider-verse",
+      "perfil": "aclamado",
+      "bucket": "positivas",
+      "nivel": 4.0,
+      "n_chars": 168,
+      "estrato": "comprimento<=200"
+    },
+    {
+      "ordem": 79,
+      "id": "viewing:1437581277",
+      "slug": "anatomy-of-a-fall",
+      "perfil": "arthouse",
+      "bucket": "medianas",
+      "nivel": 2.5,
+      "n_chars": 150,
+      "estrato": "comprimento<=200"
+    },
+    {
+      "ordem": 80,
+      "id": "viewing:1433922444",
+      "slug": "interstellar",
+      "perfil": "aclamado",
+      "bucket": "negativas",
+      "nivel": 2.0,
+      "n_chars": 151,
+      "estrato": "n_eixos=0"
+    },
+    {
+      "ordem": 81,
+      "id": "viewing:1436021499",
+      "slug": "interstellar",
+      "perfil": "aclamado",
+      "bucket": "medianas",
+      "nivel": 3.0,
+      "n_chars": 199,
+      "estrato": "n_eixos=0"
+    },
+    {
+      "ordem": 82,
+      "id": "viewing:1241474215",
+      "slug": "parasite-2019",
+      "perfil": "arthouse",
+      "bucket": "positivas",
+      "nivel": 5.0,
+      "n_chars": 821,
+      "estrato": "resto_round_robin"
+    },
+    {
+      "ordem": 83,
+      "id": "viewing:1438256609",
+      "slug": "anatomy-of-a-fall",
+      "perfil": "arthouse",
+      "bucket": "positivas",
+      "nivel": 3.5,
+      "n_chars": 151,
+      "estrato": "n_eixos=0"
+    },
+    {
+      "ordem": 84,
+      "id": "viewing:1321889071",
+      "slug": "obsession-2026",
+      "perfil": "obscuro",
+      "bucket": "medianas",
+      "nivel": 3.0,
+      "n_chars": 280,
+      "estrato": "perfil=obscuro"
+    },
+    {
+      "ordem": 85,
+      "id": "viewing:1434553942",
+      "slug": "aftersun",
+      "perfil": "arthouse",
+      "bucket": "medianas",
+      "nivel": 3.0,
+      "n_chars": 156,
+      "estrato": "n_eixos=0"
+    },
+    {
+      "ordem": 86,
+      "id": "viewing:1431231163",
+      "slug": "wonka",
+      "perfil": "divisivo",
+      "bucket": "negativas",
+      "nivel": 1.5,
+      "n_chars": 814,
+      "estrato": "resto_round_robin"
+    },
+    {
+      "ordem": 87,
+      "id": "viewing:1439468547",
+      "slug": "spider-man-across-the-spider-verse",
+      "perfil": "aclamado",
+      "bucket": "positivas",
+      "nivel": 5.0,
+      "n_chars": 1528,
+      "estrato": "resto_round_robin"
+    },
+    {
+      "ordem": 88,
+      "id": "viewing:1434955848",
+      "slug": "wonka",
+      "perfil": "divisivo",
+      "bucket": "positivas",
+      "nivel": 3.5,
+      "n_chars": 187,
+      "estrato": "n_eixos=0"
+    },
+    {
+      "ordem": 89,
+      "id": "viewing:1437330211",
+      "slug": "the-northman",
+      "perfil": "aclamado",
+      "bucket": "medianas",
+      "nivel": 2.5,
+      "n_chars": 1169,
+      "estrato": "n_eixos>=7"
+    },
+    {
+      "ordem": 90,
+      "id": "viewing:1436814902",
+      "slug": "mother-2017",
+      "perfil": "divisivo",
+      "bucket": "positivas",
+      "nivel": 4.0,
+      "n_chars": 207,
+      "estrato": "n_eixos=0"
+    },
+    {
+      "ordem": 91,
+      "id": "viewing:1431163801",
+      "slug": "joker-folie-a-deux",
+      "perfil": "invertido",
+      "bucket": "medianas",
+      "nivel": 3.0,
+      "n_chars": 278,
+      "estrato": "resto_round_robin"
+    },
+    {
+      "ordem": 92,
+      "id": "viewing:1171744052",
+      "slug": "obsession-2026",
+      "perfil": "obscuro",
+      "bucket": "negativas",
+      "nivel": 1.0,
+      "n_chars": 24,
+      "estrato": "perfil=obscuro"
+    },
+    {
+      "ordem": 93,
+      "id": "viewing:1437681130",
+      "slug": "the-invite-2026",
+      "perfil": "aclamado",
+      "bucket": "positivas",
+      "nivel": 4.5,
+      "n_chars": 167,
+      "estrato": "comprimento<=200"
+    },
+    {
+      "ordem": 94,
+      "id": "viewing:1435591140",
+      "slug": "oppenheimer-2023",
+      "perfil": "aclamado",
+      "bucket": "negativas",
+      "nivel": 2.0,
+      "n_chars": 1187,
+      "estrato": "n_eixos>=7"
+    },
+    {
+      "ordem": 95,
+      "id": "viewing:1405307063",
+      "slug": "cats-2019",
+      "perfil": "invertido",
+      "bucket": "positivas",
+      "nivel": 5.0,
+      "n_chars": 2275,
+      "estrato": "n_eixos>=7"
+    },
+    {
+      "ordem": 96,
+      "id": "viewing:1270062306",
+      "slug": "cats-2019",
+      "perfil": "invertido",
+      "bucket": "positivas",
+      "nivel": 3.5,
+      "n_chars": 197,
+      "estrato": "comprimento<=200"
+    },
+    {
+      "ordem": 97,
+      "id": "viewing:1435518283",
+      "slug": "aftersun",
+      "perfil": "arthouse",
+      "bucket": "medianas",
+      "nivel": 3.0,
+      "n_chars": 616,
+      "estrato": "n_eixos>=7"
+    },
+    {
+      "ordem": 98,
+      "id": "viewing:1433055510",
+      "slug": "joker-folie-a-deux",
+      "perfil": "invertido",
+      "bucket": "medianas",
+      "nivel": 3.0,
+      "n_chars": 415,
+      "estrato": "resto_round_robin"
+    },
+    {
+      "ordem": 99,
+      "id": "viewing:1437275324",
+      "slug": "the-godfather",
+      "perfil": "aclamado",
+      "bucket": "medianas",
+      "nivel": 3.0,
+      "n_chars": 249,
+      "estrato": "n_eixos=0"
+    },
+    {
+      "ordem": 100,
+      "id": "viewing:1429957590",
+      "slug": "napoleon-2023",
+      "perfil": "invertido",
+      "bucket": "positivas",
+      "nivel": 4.0,
+      "n_chars": 263,
+      "estrato": "n_eixos=0"
+    }
+  ]
+}

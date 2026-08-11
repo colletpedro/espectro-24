@@ -1,0 +1,66 @@
+{
+  "n_reclassificadas": 200,
+  "fracao_identica": 0.265,
+  "eixos_que_mais_oscilam": {
+    "tom_atmosfera": 45,
+    "livre": 42,
+    "comparacoes": 37,
+    "impacto_emocional": 33,
+    "expectativa": 31,
+    "ritmo": 23,
+    "roteiro_estrutura": 23,
+    "critica_social": 19,
+    "direcao_imagem": 15,
+    "atuacao": 5
+  },
+  "identica_por_faixa_n_chars": {
+    "201-400": {
+      "identicas": 30,
+      "n": 87,
+      "fracao": 0.3448275862068966
+    },
+    "401-800": {
+      "identicas": 6,
+      "n": 42,
+      "fracao": 0.14285714285714285
+    },
+    "801+": {
+      "identicas": 5,
+      "n": 30,
+      "fracao": 0.16666666666666666
+    },
+    "<=200 (piso)": {
+      "identicas": 12,
+      "n": 41,
+      "fracao": 0.2926829268292683
+    }
+  },
+  "identica_por_n_eixos_original": {
+    "0": {
+      "identicas": 5,
+      "n": 11,
+      "fracao": 0.45454545454545453
+    },
+    "1-2": {
+      "identicas": 18,
+      "n": 67,
+      "fracao": 0.26865671641791045
+    },
+    "3-4": {
+      "identicas": 24,
+      "n": 81,
+      "fracao": 0.2962962962962963
+    },
+    "5-6": {
+      "identicas": 5,
+      "n": 31,
+      "fracao": 0.16129032258064516
+    },
+    "7+": {
+      "identicas": 1,
+      "n": 10,
+      "fracao": 0.1
+    }
+  },
+  "custo_usd": 0.00461104
+}
