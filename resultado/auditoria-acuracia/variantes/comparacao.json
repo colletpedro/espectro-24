@@ -1,0 +1,381 @@
+{
+  "baseline": {
+    "n": 100,
+    "concordancia_exata": 0.18,
+    "micro_geral": {
+      "tp": 280,
+      "fp": 36,
+      "fn": 127,
+      "precisao": 0.8860759493670886,
+      "recall": 0.687960687960688
+    },
+    "por_faixa": {
+      "201-400": {
+        "tp": 39,
+        "fp": 6,
+        "fn": 31,
+        "precisao": 0.8666666666666667,
+        "recall": 0.5571428571428572
+      },
+      "<=200 (piso)": {
+        "tp": 37,
+        "fp": 3,
+        "fn": 69,
+        "precisao": 0.925,
+        "recall": 0.3490566037735849
+      },
+      "401-800": {
+        "tp": 87,
+        "fp": 11,
+        "fn": 11,
+        "precisao": 0.8877551020408163,
+        "recall": 0.8877551020408163
+      },
+      "801+": {
+        "tp": 117,
+        "fp": 16,
+        "fn": 16,
+        "precisao": 0.8796992481203008,
+        "recall": 0.8796992481203008
+      }
+    },
+    "eixos_criticos": {
+      "impacto_emocional": {
+        "precisao": 0.918918918918919,
+        "recall": 0.5151515151515151,
+        "tp": 34,
+        "fp": 3,
+        "fn": 32
+      },
+      "roteiro_estrutura": {
+        "precisao": 1.0,
+        "recall": 0.5797101449275363,
+        "tp": 40,
+        "fp": 0,
+        "fn": 29
+      }
+    },
+    "por_eixo": {
+      "ritmo": {
+        "precisao": 0.8275862068965517,
+        "recall": 0.8
+      },
+      "atuacao": {
+        "precisao": 1.0,
+        "recall": 0.9090909090909091
+      },
+      "direcao_imagem": {
+        "precisao": 0.9736842105263158,
+        "recall": 0.8809523809523809
+      },
+      "roteiro_estrutura": {
+        "precisao": 1.0,
+        "recall": 0.5797101449275363
+      },
+      "som_trilha": {
+        "precisao": 0.9411764705882353,
+        "recall": 0.8
+      },
+      "tom_atmosfera": {
+        "precisao": 0.9,
+        "recall": 0.7297297297297297
+      },
+      "impacto_emocional": {
+        "precisao": 0.918918918918919,
+        "recall": 0.5151515151515151
+      },
+      "comparacoes": {
+        "precisao": 0.85,
+        "recall": 0.723404255319149
+      },
+      "expectativa": {
+        "precisao": 0.75,
+        "recall": 0.525
+      },
+      "critica_social": {
+        "precisao": 0.6296296296296297,
+        "recall": 0.7391304347826086
+      }
+    },
+    "diagnostico": {
+      "reviews_com_recall_zero": 27,
+      "consensos_vazios": 8
+    }
+  },
+  "A_regra": {
+    "n": 100,
+    "concordancia_exata": 0.21,
+    "micro_geral": {
+      "tp": 311,
+      "fp": 41,
+      "fn": 96,
+      "precisao": 0.8835227272727273,
+      "recall": 0.7641277641277642
+    },
+    "por_faixa": {
+      "201-400": {
+        "tp": 48,
+        "fp": 7,
+        "fn": 22,
+        "precisao": 0.8727272727272727,
+        "recall": 0.6857142857142857
+      },
+      "801+": {
+        "tp": 117,
+        "fp": 12,
+        "fn": 16,
+        "precisao": 0.9069767441860465,
+        "recall": 0.8796992481203008
+      },
+      "<=200 (piso)": {
+        "tp": 65,
+        "fp": 11,
+        "fn": 41,
+        "precisao": 0.8552631578947368,
+        "recall": 0.6132075471698113
+      },
+      "401-800": {
+        "tp": 81,
+        "fp": 11,
+        "fn": 17,
+        "precisao": 0.8804347826086957,
+        "recall": 0.826530612244898
+      }
+    },
+    "eixos_criticos": {
+      "impacto_emocional": {
+        "precisao": 0.7916666666666666,
+        "recall": 0.8636363636363636,
+        "tp": 57,
+        "fp": 15,
+        "fn": 9
+      },
+      "roteiro_estrutura": {
+        "precisao": 0.9454545454545454,
+        "recall": 0.7536231884057971,
+        "tp": 52,
+        "fp": 3,
+        "fn": 17
+      }
+    },
+    "por_eixo": {
+      "ritmo": {
+        "precisao": 0.8620689655172413,
+        "recall": 0.8333333333333334
+      },
+      "atuacao": {
+        "precisao": 1.0,
+        "recall": 0.8181818181818182
+      },
+      "direcao_imagem": {
+        "precisao": 0.9736842105263158,
+        "recall": 0.8809523809523809
+      },
+      "roteiro_estrutura": {
+        "precisao": 0.9454545454545454,
+        "recall": 0.7536231884057971
+      },
+      "som_trilha": {
+        "precisao": 1.0,
+        "recall": 0.85
+      },
+      "tom_atmosfera": {
+        "precisao": 0.88,
+        "recall": 0.5945945945945946
+      },
+      "impacto_emocional": {
+        "precisao": 0.7916666666666666,
+        "recall": 0.8636363636363636
+      },
+      "comparacoes": {
+        "precisao": 0.8809523809523809,
+        "recall": 0.7872340425531915
+      },
+      "expectativa": {
+        "precisao": 0.9090909090909091,
+        "recall": 0.5
+      },
+      "critica_social": {
+        "precisao": 0.68,
+        "recall": 0.7391304347826086
+      }
+    },
+    "diagnostico": {
+      "reviews_com_recall_zero": 5,
+      "consensos_vazios": 0
+    }
+  },
+  "B_fewshot": {
+    "n": 100,
+    "concordancia_exata": 0.17,
+    "micro_geral": {
+      "tp": 298,
+      "fp": 38,
+      "fn": 109,
+      "precisao": 0.8869047619047619,
+      "recall": 0.7321867321867321
+    },
+    "por_faixa": {
+      "201-400": {
+        "tp": 50,
+        "fp": 8,
+        "fn": 20,
+        "precisao": 0.8620689655172413,
+        "recall": 0.7142857142857143
+      },
+      "801+": {
+        "tp": 107,
+        "fp": 11,
+        "fn": 26,
+        "precisao": 0.9067796610169492,
+        "recall": 0.8045112781954887
+      },
+      "<=200 (piso)": {
+        "tp": 58,
+        "fp": 10,
+        "fn": 48,
+        "precisao": 0.8529411764705882,
+        "recall": 0.5471698113207547
+      },
+      "401-800": {
+        "tp": 83,
+        "fp": 9,
+        "fn": 15,
+        "precisao": 0.9021739130434783,
+        "recall": 0.8469387755102041
+      }
+    },
+    "eixos_criticos": {
+      "impacto_emocional": {
+        "precisao": 0.8088235294117647,
+        "recall": 0.8333333333333334,
+        "tp": 55,
+        "fp": 13,
+        "fn": 11
+      },
+      "roteiro_estrutura": {
+        "precisao": 0.9354838709677419,
+        "recall": 0.8405797101449275,
+        "tp": 58,
+        "fp": 4,
+        "fn": 11
+      }
+    },
+    "por_eixo": {
+      "ritmo": {
+        "precisao": 0.8571428571428571,
+        "recall": 0.6
+      },
+      "atuacao": {
+        "precisao": 1.0,
+        "recall": 0.696969696969697
+      },
+      "direcao_imagem": {
+        "precisao": 0.9512195121951219,
+        "recall": 0.9285714285714286
+      },
+      "roteiro_estrutura": {
+        "precisao": 0.9354838709677419,
+        "recall": 0.8405797101449275
+      },
+      "som_trilha": {
+        "precisao": 0.9375,
+        "recall": 0.75
+      },
+      "tom_atmosfera": {
+        "precisao": 0.8571428571428571,
+        "recall": 0.4864864864864865
+      },
+      "impacto_emocional": {
+        "precisao": 0.8088235294117647,
+        "recall": 0.8333333333333334
+      },
+      "comparacoes": {
+        "precisao": 0.9117647058823529,
+        "recall": 0.6595744680851063
+      },
+      "expectativa": {
+        "precisao": 0.7837837837837838,
+        "recall": 0.725
+      },
+      "critica_social": {
+        "precisao": 0.9230769230769231,
+        "recall": 0.5217391304347826
+      }
+    },
+    "diagnostico": {
+      "reviews_com_recall_zero": 8,
+      "consensos_vazios": 0
+    }
+  },
+  "_bootstrap_vs_baseline": {
+    "A_regra": {
+      "recall_ate_200": {
+        "delta_mediano": 0.2653,
+        "ic95": [
+          0.1709,
+          0.3696
+        ],
+        "cruza_zero": false
+      },
+      "recall_geral": {
+        "delta_mediano": 0.0762,
+        "ic95": [
+          0.0296,
+          0.124
+        ],
+        "cruza_zero": false
+      },
+      "precisao_geral": {
+        "delta_mediano": -0.0027,
+        "ic95": [
+          -0.0347,
+          0.0297
+        ],
+        "cruza_zero": true
+      },
+      "f1_geral": {
+        "delta_mediano": 0.0451,
+        "ic95": [
+          0.0112,
+          0.0816
+        ],
+        "cruza_zero": false
+      }
+    },
+    "B_fewshot": {
+      "recall_ate_200": {
+        "delta_mediano": 0.1983,
+        "ic95": [
+          0.1059,
+          0.299
+        ],
+        "cruza_zero": false
+      },
+      "recall_geral": {
+        "delta_mediano": 0.0435,
+        "ic95": [
+          -0.0091,
+          0.0975
+        ],
+        "cruza_zero": true
+      },
+      "precisao_geral": {
+        "delta_mediano": 0.0005,
+        "ic95": [
+          -0.0302,
+          0.0313
+        ],
+        "cruza_zero": true
+      },
+      "f1_geral": {
+        "delta_mediano": 0.027,
+        "ic95": [
+          -0.0089,
+          0.0672
+        ],
+        "cruza_zero": true
+      }
+    }
+  }
+}
