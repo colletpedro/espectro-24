@@ -584,9 +584,19 @@ def cmd_relatorio() -> None:
 
     print(f"n_consenso={len(consenso)}")
     fl = e2["fracao_livre"]
-    print(f"fracao_livre: antiga {fl['antiga']['fracao']:.2%} → "
-          f"passe1(corpus atual) {fl['passe1_atual']['fracao']:.2%} → "
-          f"consenso {fl['consenso']['fracao']:.2%}")
+
+    def _pct(x):
+        # `antiga` vem de FONTE_PASSADA_UNICA filtrada pelo taxonomia_id
+        # ATUAL (§_ler_passada_unica_antiga) — muda a taxonomia (como a
+        # promoção de A_regra mudou), e essa fonte fica vazia por
+        # construção: nenhuma linha do arquivo single-pass antigo carrega o
+        # id novo. `fracao` sai `None`, não um bug de aritmética; formatar
+        # sem essa guarda derrubava o relatório DEPOIS do JSON já gravado.
+        return f"{x:.2%}" if x is not None else "n/a (antiga sob outra taxonomia)"
+
+    print(f"fracao_livre: antiga {_pct(fl['antiga']['fracao'])} → "
+          f"passe1(corpus atual) {_pct(fl['passe1_atual']['fracao'])} → "
+          f"consenso {_pct(fl['consenso']['fracao'])}")
     print(f"consenso vazio (abstenção coletiva, sem paralelo na passada "
           f"única): {e2['fracao_consenso_vazio']['fracao']:.2%}")
     print(f"tom_atmosfera: freq consenso {e5['freq_tom_atmosfera']:.2%} "

@@ -1,0 +1,1074 @@
+{
+  "taxonomia_antiga": "11871105c0d3",
+  "taxonomia_nova": "ebab2667de74",
+  "entrega2": {
+    "n_antigo": 3990,
+    "n_novo": 3990,
+    "n_comuns": 3990,
+    "frequencia_por_eixo": [
+      {
+        "eixo": "impacto_emocional",
+        "freq_antiga": 0.45939849624060153,
+        "freq_nova": 0.7551378446115288,
+        "diff_pp": 29.573934837092725
+      },
+      {
+        "eixo": "roteiro_estrutura",
+        "freq_antiga": 0.44035087719298244,
+        "freq_nova": 0.5593984962406015,
+        "diff_pp": 11.904761904761902
+      },
+      {
+        "eixo": "comparacoes",
+        "freq_antiga": 0.4343358395989975,
+        "freq_nova": 0.39724310776942356,
+        "diff_pp": -3.7092731829573955
+      },
+      {
+        "eixo": "direcao_imagem",
+        "freq_antiga": 0.324812030075188,
+        "freq_nova": 0.33383458646616543,
+        "diff_pp": 0.9022556390977432
+      },
+      {
+        "eixo": "ritmo",
+        "freq_antiga": 0.33709273182957394,
+        "freq_nova": 0.3140350877192982,
+        "diff_pp": -2.305764411027572
+      },
+      {
+        "eixo": "atuacao",
+        "freq_antiga": 0.2907268170426065,
+        "freq_nova": 0.2862155388471178,
+        "diff_pp": -0.4511278195488688
+      },
+      {
+        "eixo": "critica_social",
+        "freq_antiga": 0.24461152882205514,
+        "freq_nova": 0.23533834586466165,
+        "diff_pp": -0.9273182957393489
+      },
+      {
+        "eixo": "tom_atmosfera",
+        "freq_antiga": 0.26165413533834586,
+        "freq_nova": 0.23408521303258145,
+        "diff_pp": -2.756892230576441
+      },
+      {
+        "eixo": "expectativa",
+        "freq_antiga": 0.2764411027568922,
+        "freq_nova": 0.20651629072681704,
+        "diff_pp": -6.992481203007516
+      },
+      {
+        "eixo": "som_trilha",
+        "freq_antiga": 0.13508771929824562,
+        "freq_nova": 0.13909774436090225,
+        "diff_pp": 0.40100250626566303
+      },
+      {
+        "eixo": "livre",
+        "freq_antiga": 0.12355889724310777,
+        "freq_nova": 0.08721804511278196,
+        "diff_pp": -3.634085213032581
+      }
+    ],
+    "eixos_por_review": {
+      "antigo": {
+        "media": 3.2045112781954885,
+        "mediana": 3.0,
+        "histograma": {
+          "0": 177,
+          "1": 441,
+          "2": 926,
+          "3": 918,
+          "4": 663,
+          "5": 424,
+          "6": 235,
+          "7": 125,
+          "8": 52,
+          "9": 24,
+          "10": 5
+        }
+      },
+      "novo": {
+        "media": 3.460902255639098,
+        "mediana": 3.0,
+        "histograma": {
+          "0": 62,
+          "1": 344,
+          "2": 872,
+          "3": 940,
+          "4": 792,
+          "5": 470,
+          "6": 292,
+          "7": 139,
+          "8": 57,
+          "9": 18,
+          "10": 4
+        }
+      }
+    },
+    "fracao_livre": {
+      "antigo_global": {
+        "n": 3990,
+        "so_livre": 150,
+        "fracao": 0.03759398496240601,
+        "ic95": [
+          0.032122741184656335,
+          0.043954787778936015
+        ]
+      },
+      "novo_global": {
+        "n": 3990,
+        "so_livre": 53,
+        "fracao": 0.013283208020050126,
+        "ic95": [
+          0.010169985895890613,
+          0.01733275732757624
+        ]
+      },
+      "novo_por_bucket": {
+        "negativas": {
+          "n": 1322,
+          "so_livre": 11,
+          "fracao": 0.00832072617246596,
+          "ic95": [
+            0.0046524102536510065,
+            0.01483830417256703
+          ]
+        },
+        "medianas": {
+          "n": 1329,
+          "so_livre": 19,
+          "fracao": 0.014296463506395787,
+          "ic95": [
+            0.0091712945050442,
+            0.022221483151355484
+          ]
+        },
+        "positivas": {
+          "n": 1339,
+          "so_livre": 23,
+          "fracao": 0.01717699775952203,
+          "ic95": [
+            0.011472797549671766,
+            0.02564371716062616
+          ]
+        }
+      }
+    },
+    "fracao_consenso_vazio": {
+      "antigo_global": {
+        "n": 3990,
+        "vazio": 27,
+        "fracao": 0.006766917293233083,
+        "ic95": [
+          0.0046548437717707,
+          0.009827853789394471
+        ]
+      },
+      "novo_global": {
+        "n": 3990,
+        "vazio": 9,
+        "fracao": 0.002255639097744361,
+        "ic95": [
+          0.0011871595268240793,
+          0.004281660268132236
+        ]
+      }
+    },
+    "mudanca_de_conjunto": {
+      "n_comuns": 3990,
+      "identico": 1268,
+      "ganhou_eixo": 1336,
+      "perdeu_eixo": 580,
+      "ganhou_e_perdeu": 806
+    }
+  },
+  "entrega5": {
+    "ranking_frequencia": [
+      {
+        "eixo": "impacto_emocional",
+        "posicao_antiga": 1,
+        "posicao_nova": 1,
+        "movimento": 0,
+        "freq_antiga_pct": 45.9,
+        "freq_nova_pct": 75.5
+      },
+      {
+        "eixo": "roteiro_estrutura",
+        "posicao_antiga": 2,
+        "posicao_nova": 2,
+        "movimento": 0,
+        "freq_antiga_pct": 44.0,
+        "freq_nova_pct": 55.9
+      },
+      {
+        "eixo": "comparacoes",
+        "posicao_antiga": 3,
+        "posicao_nova": 3,
+        "movimento": 0,
+        "freq_antiga_pct": 43.4,
+        "freq_nova_pct": 39.7
+      },
+      {
+        "eixo": "direcao_imagem",
+        "posicao_antiga": 5,
+        "posicao_nova": 4,
+        "movimento": 1,
+        "freq_antiga_pct": 32.5,
+        "freq_nova_pct": 33.4
+      },
+      {
+        "eixo": "ritmo",
+        "posicao_antiga": 4,
+        "posicao_nova": 5,
+        "movimento": -1,
+        "freq_antiga_pct": 33.7,
+        "freq_nova_pct": 31.4
+      },
+      {
+        "eixo": "atuacao",
+        "posicao_antiga": 6,
+        "posicao_nova": 6,
+        "movimento": 0,
+        "freq_antiga_pct": 29.1,
+        "freq_nova_pct": 28.6
+      },
+      {
+        "eixo": "critica_social",
+        "posicao_antiga": 9,
+        "posicao_nova": 7,
+        "movimento": 2,
+        "freq_antiga_pct": 24.5,
+        "freq_nova_pct": 23.5
+      },
+      {
+        "eixo": "tom_atmosfera",
+        "posicao_antiga": 8,
+        "posicao_nova": 8,
+        "movimento": 0,
+        "freq_antiga_pct": 26.2,
+        "freq_nova_pct": 23.4
+      },
+      {
+        "eixo": "expectativa",
+        "posicao_antiga": 7,
+        "posicao_nova": 9,
+        "movimento": -2,
+        "freq_antiga_pct": 27.6,
+        "freq_nova_pct": 20.7
+      },
+      {
+        "eixo": "som_trilha",
+        "posicao_antiga": 10,
+        "posicao_nova": 10,
+        "movimento": 0,
+        "freq_antiga_pct": 13.5,
+        "freq_nova_pct": 13.9
+      }
+    ],
+    "n_filmes_comparados": 35,
+    "trocas_de_eixo_que_encabeca_por_margem": {
+      "0.1": {
+        "n_filmes_com_algum_eixo_acima": 35,
+        "manteve_o_mesmo_eixo_a_frente": 11,
+        "deixou_de_encabecar": [
+          {
+            "slug": "aftersun",
+            "eixo_antigo": "impacto_emocional",
+            "eixo_novo": "ritmo"
+          },
+          {
+            "slug": "avengers-endgame",
+            "eixo_antigo": "ritmo",
+            "eixo_novo": "critica_social"
+          },
+          {
+            "slug": "barbie",
+            "eixo_antigo": "impacto_emocional",
+            "eixo_novo": "critica_social"
+          },
+          {
+            "slug": "bones-and-all",
+            "eixo_antigo": "impacto_emocional",
+            "eixo_novo": "tom_atmosfera"
+          },
+          {
+            "slug": "eighth-grade",
+            "eixo_antigo": "comparacoes",
+            "eixo_novo": "impacto_emocional"
+          },
+          {
+            "slug": "everything-everywhere-all-at-once",
+            "eixo_antigo": "impacto_emocional",
+            "eixo_novo": "direcao_imagem"
+          },
+          {
+            "slug": "friday-the-13th-2009",
+            "eixo_antigo": "ritmo",
+            "eixo_novo": "direcao_imagem"
+          },
+          {
+            "slug": "hereditary",
+            "eixo_antigo": "impacto_emocional",
+            "eixo_novo": "atuacao"
+          },
+          {
+            "slug": "im-still-here-2024",
+            "eixo_antigo": "expectativa",
+            "eixo_novo": "impacto_emocional"
+          },
+          {
+            "slug": "longlegs",
+            "eixo_antigo": "tom_atmosfera",
+            "eixo_novo": "ritmo"
+          },
+          {
+            "slug": "mother-2017",
+            "eixo_antigo": "impacto_emocional",
+            "eixo_novo": null
+          },
+          {
+            "slug": "napoleon-2023",
+            "eixo_antigo": "ritmo",
+            "eixo_novo": "impacto_emocional"
+          },
+          {
+            "slug": "obsession-2026",
+            "eixo_antigo": "tom_atmosfera",
+            "eixo_novo": "direcao_imagem"
+          },
+          {
+            "slug": "parasite-2019",
+            "eixo_antigo": "direcao_imagem",
+            "eixo_novo": "impacto_emocional"
+          },
+          {
+            "slug": "perfect-days-2023",
+            "eixo_antigo": "impacto_emocional",
+            "eixo_novo": "tom_atmosfera"
+          },
+          {
+            "slug": "shutter-island",
+            "eixo_antigo": "impacto_emocional",
+            "eixo_novo": "som_trilha"
+          },
+          {
+            "slug": "talk-to-me-2022",
+            "eixo_antigo": "impacto_emocional",
+            "eixo_novo": "ritmo"
+          },
+          {
+            "slug": "the-godfather",
+            "eixo_antigo": "ritmo",
+            "eixo_novo": null
+          },
+          {
+            "slug": "the-hateful-eight",
+            "eixo_antigo": "comparacoes",
+            "eixo_novo": "tom_atmosfera"
+          },
+          {
+            "slug": "the-invite-2026",
+            "eixo_antigo": "direcao_imagem",
+            "eixo_novo": "tom_atmosfera"
+          },
+          {
+            "slug": "the-substance",
+            "eixo_antigo": "roteiro_estrutura",
+            "eixo_novo": "critica_social"
+          },
+          {
+            "slug": "wicked-2024",
+            "eixo_antigo": "impacto_emocional",
+            "eixo_novo": "ritmo"
+          },
+          {
+            "slug": "wonka",
+            "eixo_antigo": "direcao_imagem",
+            "eixo_novo": "atuacao"
+          }
+        ],
+        "passou_a_encabecar_eixo_diferente": [
+          {
+            "slug": "aftersun",
+            "eixo_novo": "ritmo",
+            "eixo_antigo": "impacto_emocional"
+          },
+          {
+            "slug": "avengers-endgame",
+            "eixo_novo": "critica_social",
+            "eixo_antigo": "ritmo"
+          },
+          {
+            "slug": "barbie",
+            "eixo_novo": "critica_social",
+            "eixo_antigo": "impacto_emocional"
+          },
+          {
+            "slug": "bones-and-all",
+            "eixo_novo": "tom_atmosfera",
+            "eixo_antigo": "impacto_emocional"
+          },
+          {
+            "slug": "eighth-grade",
+            "eixo_novo": "impacto_emocional",
+            "eixo_antigo": "comparacoes"
+          },
+          {
+            "slug": "everything-everywhere-all-at-once",
+            "eixo_novo": "direcao_imagem",
+            "eixo_antigo": "impacto_emocional"
+          },
+          {
+            "slug": "friday-the-13th-2009",
+            "eixo_novo": "direcao_imagem",
+            "eixo_antigo": "ritmo"
+          },
+          {
+            "slug": "hereditary",
+            "eixo_novo": "atuacao",
+            "eixo_antigo": "impacto_emocional"
+          },
+          {
+            "slug": "im-still-here-2024",
+            "eixo_novo": "impacto_emocional",
+            "eixo_antigo": "expectativa"
+          },
+          {
+            "slug": "longlegs",
+            "eixo_novo": "ritmo",
+            "eixo_antigo": "tom_atmosfera"
+          },
+          {
+            "slug": "napoleon-2023",
+            "eixo_novo": "impacto_emocional",
+            "eixo_antigo": "ritmo"
+          },
+          {
+            "slug": "obsession-2026",
+            "eixo_novo": "direcao_imagem",
+            "eixo_antigo": "tom_atmosfera"
+          },
+          {
+            "slug": "parasite-2019",
+            "eixo_novo": "impacto_emocional",
+            "eixo_antigo": "direcao_imagem"
+          },
+          {
+            "slug": "perfect-days-2023",
+            "eixo_novo": "tom_atmosfera",
+            "eixo_antigo": "impacto_emocional"
+          },
+          {
+            "slug": "shutter-island",
+            "eixo_novo": "som_trilha",
+            "eixo_antigo": "impacto_emocional"
+          },
+          {
+            "slug": "talk-to-me-2022",
+            "eixo_novo": "ritmo",
+            "eixo_antigo": "impacto_emocional"
+          },
+          {
+            "slug": "the-hateful-eight",
+            "eixo_novo": "tom_atmosfera",
+            "eixo_antigo": "comparacoes"
+          },
+          {
+            "slug": "the-invite-2026",
+            "eixo_novo": "tom_atmosfera",
+            "eixo_antigo": "direcao_imagem"
+          },
+          {
+            "slug": "the-northman",
+            "eixo_novo": "tom_atmosfera",
+            "eixo_antigo": null
+          },
+          {
+            "slug": "the-substance",
+            "eixo_novo": "critica_social",
+            "eixo_antigo": "roteiro_estrutura"
+          },
+          {
+            "slug": "wicked-2024",
+            "eixo_novo": "ritmo",
+            "eixo_antigo": "impacto_emocional"
+          },
+          {
+            "slug": "wonka",
+            "eixo_novo": "atuacao",
+            "eixo_antigo": "direcao_imagem"
+          }
+        ]
+      },
+      "0.15": {
+        "n_filmes_com_algum_eixo_acima": 32,
+        "manteve_o_mesmo_eixo_a_frente": 7,
+        "deixou_de_encabecar": [
+          {
+            "slug": "aftersun",
+            "eixo_antigo": "impacto_emocional",
+            "eixo_novo": null
+          },
+          {
+            "slug": "avengers-endgame",
+            "eixo_antigo": "ritmo",
+            "eixo_novo": null
+          },
+          {
+            "slug": "barbie",
+            "eixo_antigo": "impacto_emocional",
+            "eixo_novo": "critica_social"
+          },
+          {
+            "slug": "bones-and-all",
+            "eixo_antigo": "impacto_emocional",
+            "eixo_novo": "tom_atmosfera"
+          },
+          {
+            "slug": "cidade-de-deus",
+            "eixo_antigo": "ritmo",
+            "eixo_novo": null
+          },
+          {
+            "slug": "eighth-grade",
+            "eixo_antigo": "comparacoes",
+            "eixo_novo": null
+          },
+          {
+            "slug": "everything-everywhere-all-at-once",
+            "eixo_antigo": "impacto_emocional",
+            "eixo_novo": "direcao_imagem"
+          },
+          {
+            "slug": "hereditary",
+            "eixo_antigo": "impacto_emocional",
+            "eixo_novo": "atuacao"
+          },
+          {
+            "slug": "im-still-here-2024",
+            "eixo_antigo": "expectativa",
+            "eixo_novo": "impacto_emocional"
+          },
+          {
+            "slug": "interstellar",
+            "eixo_antigo": "atuacao",
+            "eixo_novo": null
+          },
+          {
+            "slug": "longlegs",
+            "eixo_antigo": "tom_atmosfera",
+            "eixo_novo": "ritmo"
+          },
+          {
+            "slug": "mother-2017",
+            "eixo_antigo": "impacto_emocional",
+            "eixo_novo": null
+          },
+          {
+            "slug": "obsession-2026",
+            "eixo_antigo": "tom_atmosfera",
+            "eixo_novo": "direcao_imagem"
+          },
+          {
+            "slug": "parasite-2019",
+            "eixo_antigo": "direcao_imagem",
+            "eixo_novo": "impacto_emocional"
+          },
+          {
+            "slug": "perfect-days-2023",
+            "eixo_antigo": "impacto_emocional",
+            "eixo_novo": "tom_atmosfera"
+          },
+          {
+            "slug": "shutter-island",
+            "eixo_antigo": "impacto_emocional",
+            "eixo_novo": "som_trilha"
+          },
+          {
+            "slug": "talk-to-me-2022",
+            "eixo_antigo": "impacto_emocional",
+            "eixo_novo": null
+          },
+          {
+            "slug": "the-godfather",
+            "eixo_antigo": "ritmo",
+            "eixo_novo": null
+          },
+          {
+            "slug": "the-hateful-eight",
+            "eixo_antigo": "comparacoes",
+            "eixo_novo": "tom_atmosfera"
+          },
+          {
+            "slug": "the-invite-2026",
+            "eixo_antigo": "direcao_imagem",
+            "eixo_novo": "tom_atmosfera"
+          },
+          {
+            "slug": "the-substance",
+            "eixo_antigo": "roteiro_estrutura",
+            "eixo_novo": null
+          },
+          {
+            "slug": "wicked-2024",
+            "eixo_antigo": "impacto_emocional",
+            "eixo_novo": null
+          },
+          {
+            "slug": "wonka",
+            "eixo_antigo": "direcao_imagem",
+            "eixo_novo": "atuacao"
+          }
+        ],
+        "passou_a_encabecar_eixo_diferente": [
+          {
+            "slug": "barbie",
+            "eixo_novo": "critica_social",
+            "eixo_antigo": "impacto_emocional"
+          },
+          {
+            "slug": "bones-and-all",
+            "eixo_novo": "tom_atmosfera",
+            "eixo_antigo": "impacto_emocional"
+          },
+          {
+            "slug": "everything-everywhere-all-at-once",
+            "eixo_novo": "direcao_imagem",
+            "eixo_antigo": "impacto_emocional"
+          },
+          {
+            "slug": "hereditary",
+            "eixo_novo": "atuacao",
+            "eixo_antigo": "impacto_emocional"
+          },
+          {
+            "slug": "im-still-here-2024",
+            "eixo_novo": "impacto_emocional",
+            "eixo_antigo": "expectativa"
+          },
+          {
+            "slug": "longlegs",
+            "eixo_novo": "ritmo",
+            "eixo_antigo": "tom_atmosfera"
+          },
+          {
+            "slug": "napoleon-2023",
+            "eixo_novo": "impacto_emocional",
+            "eixo_antigo": null
+          },
+          {
+            "slug": "obsession-2026",
+            "eixo_novo": "direcao_imagem",
+            "eixo_antigo": "tom_atmosfera"
+          },
+          {
+            "slug": "parasite-2019",
+            "eixo_novo": "impacto_emocional",
+            "eixo_antigo": "direcao_imagem"
+          },
+          {
+            "slug": "perfect-days-2023",
+            "eixo_novo": "tom_atmosfera",
+            "eixo_antigo": "impacto_emocional"
+          },
+          {
+            "slug": "shutter-island",
+            "eixo_novo": "som_trilha",
+            "eixo_antigo": "impacto_emocional"
+          },
+          {
+            "slug": "the-hateful-eight",
+            "eixo_novo": "tom_atmosfera",
+            "eixo_antigo": "comparacoes"
+          },
+          {
+            "slug": "the-invite-2026",
+            "eixo_novo": "tom_atmosfera",
+            "eixo_antigo": "direcao_imagem"
+          },
+          {
+            "slug": "the-northman",
+            "eixo_novo": "tom_atmosfera",
+            "eixo_antigo": null
+          },
+          {
+            "slug": "wonka",
+            "eixo_novo": "atuacao",
+            "eixo_antigo": "direcao_imagem"
+          }
+        ]
+      },
+      "0.2": {
+        "n_filmes_com_algum_eixo_acima": 22,
+        "manteve_o_mesmo_eixo_a_frente": 5,
+        "deixou_de_encabecar": [
+          {
+            "slug": "aftersun",
+            "eixo_antigo": "impacto_emocional",
+            "eixo_novo": null
+          },
+          {
+            "slug": "avengers-endgame",
+            "eixo_antigo": "ritmo",
+            "eixo_novo": null
+          },
+          {
+            "slug": "barbie",
+            "eixo_antigo": "impacto_emocional",
+            "eixo_novo": null
+          },
+          {
+            "slug": "bones-and-all",
+            "eixo_antigo": "impacto_emocional",
+            "eixo_novo": null
+          },
+          {
+            "slug": "everything-everywhere-all-at-once",
+            "eixo_antigo": "impacto_emocional",
+            "eixo_novo": "direcao_imagem"
+          },
+          {
+            "slug": "interstellar",
+            "eixo_antigo": "atuacao",
+            "eixo_novo": null
+          },
+          {
+            "slug": "longlegs",
+            "eixo_antigo": "tom_atmosfera",
+            "eixo_novo": null
+          },
+          {
+            "slug": "obsession-2026",
+            "eixo_antigo": "tom_atmosfera",
+            "eixo_novo": "direcao_imagem"
+          },
+          {
+            "slug": "perfect-days-2023",
+            "eixo_antigo": "impacto_emocional",
+            "eixo_novo": "tom_atmosfera"
+          },
+          {
+            "slug": "shutter-island",
+            "eixo_antigo": "impacto_emocional",
+            "eixo_novo": null
+          },
+          {
+            "slug": "spider-man-across-the-spider-verse",
+            "eixo_antigo": "comparacoes",
+            "eixo_novo": null
+          },
+          {
+            "slug": "talk-to-me-2022",
+            "eixo_antigo": "impacto_emocional",
+            "eixo_novo": null
+          },
+          {
+            "slug": "the-invite-2026",
+            "eixo_antigo": "direcao_imagem",
+            "eixo_novo": "tom_atmosfera"
+          }
+        ],
+        "passou_a_encabecar_eixo_diferente": [
+          {
+            "slug": "anatomy-of-a-fall",
+            "eixo_novo": "ritmo",
+            "eixo_antigo": null
+          },
+          {
+            "slug": "everything-everywhere-all-at-once",
+            "eixo_novo": "direcao_imagem",
+            "eixo_antigo": "impacto_emocional"
+          },
+          {
+            "slug": "napoleon-2023",
+            "eixo_novo": "impacto_emocional",
+            "eixo_antigo": null
+          },
+          {
+            "slug": "obsession-2026",
+            "eixo_novo": "direcao_imagem",
+            "eixo_antigo": "tom_atmosfera"
+          },
+          {
+            "slug": "perfect-days-2023",
+            "eixo_novo": "tom_atmosfera",
+            "eixo_antigo": "impacto_emocional"
+          },
+          {
+            "slug": "the-hateful-eight",
+            "eixo_novo": "tom_atmosfera",
+            "eixo_antigo": null
+          },
+          {
+            "slug": "the-invite-2026",
+            "eixo_novo": "tom_atmosfera",
+            "eixo_antigo": "direcao_imagem"
+          },
+          {
+            "slug": "wonka",
+            "eixo_novo": "atuacao",
+            "eixo_antigo": null
+          }
+        ]
+      },
+      "0.25": {
+        "n_filmes_com_algum_eixo_acima": 14,
+        "manteve_o_mesmo_eixo_a_frente": 2,
+        "deixou_de_encabecar": [
+          {
+            "slug": "aftersun",
+            "eixo_antigo": "impacto_emocional",
+            "eixo_novo": null
+          },
+          {
+            "slug": "everything-everywhere-all-at-once",
+            "eixo_antigo": "impacto_emocional",
+            "eixo_novo": "direcao_imagem"
+          },
+          {
+            "slug": "interstellar",
+            "eixo_antigo": "atuacao",
+            "eixo_novo": null
+          },
+          {
+            "slug": "obsession-2026",
+            "eixo_antigo": "tom_atmosfera",
+            "eixo_novo": "direcao_imagem"
+          },
+          {
+            "slug": "perfect-days-2023",
+            "eixo_antigo": "impacto_emocional",
+            "eixo_novo": null
+          },
+          {
+            "slug": "spider-man-across-the-spider-verse",
+            "eixo_antigo": "comparacoes",
+            "eixo_novo": null
+          },
+          {
+            "slug": "talk-to-me-2022",
+            "eixo_antigo": "impacto_emocional",
+            "eixo_novo": null
+          }
+        ],
+        "passou_a_encabecar_eixo_diferente": [
+          {
+            "slug": "anatomy-of-a-fall",
+            "eixo_novo": "ritmo",
+            "eixo_antigo": null
+          },
+          {
+            "slug": "cats-2019",
+            "eixo_novo": "tom_atmosfera",
+            "eixo_antigo": null
+          },
+          {
+            "slug": "everything-everywhere-all-at-once",
+            "eixo_novo": "direcao_imagem",
+            "eixo_antigo": "impacto_emocional"
+          },
+          {
+            "slug": "joker-folie-a-deux",
+            "eixo_novo": "roteiro_estrutura",
+            "eixo_antigo": null
+          },
+          {
+            "slug": "napoleon-2023",
+            "eixo_novo": "impacto_emocional",
+            "eixo_antigo": null
+          },
+          {
+            "slug": "obsession-2026",
+            "eixo_novo": "direcao_imagem",
+            "eixo_antigo": "tom_atmosfera"
+          },
+          {
+            "slug": "the-invite-2026",
+            "eixo_novo": "tom_atmosfera",
+            "eixo_antigo": null
+          }
+        ]
+      }
+    }
+  },
+  "entrega4": {
+    "n_filmes_avaliados": {
+      "antigo": 35,
+      "novo": 35
+    },
+    "n_filmes_todos_buckets_40": {
+      "antigo": 27,
+      "novo": 27
+    },
+    "n_filmes_algum_sub40": {
+      "antigo": 8,
+      "novo": 8
+    },
+    "fracao_livre_global": {
+      "antigo": 0.03759398496240601,
+      "novo": 0.013283208020050126
+    },
+    "fracao_consenso_vazio_global": {
+      "antigo": 0.006766917293233083,
+      "novo": 0.002255639097744361
+    },
+    "por_margem": {
+      "0.1": {
+        "n_pares_acima": {
+          "antigo": 111,
+          "novo": 86
+        },
+        "n_filmes_com_ao_menos_um": {
+          "antigo": 34,
+          "novo": 33
+        },
+        "sem_contraste_n": {
+          "antigo": 1,
+          "novo": 2
+        },
+        "sem_contraste_filmes_antigo_nao_novo": [
+          "the-northman"
+        ],
+        "sem_contraste_filmes_novo_nao_antigo": [
+          "mother-2017",
+          "the-godfather"
+        ],
+        "fracao_ruido_estimada": {
+          "antigo": 0.6346711711711712,
+          "novo": 0.7654360465116279
+        }
+      },
+      "0.15": {
+        "n_pares_acima": {
+          "antigo": 61,
+          "novo": 41
+        },
+        "n_filmes_com_ao_menos_um": {
+          "antigo": 30,
+          "novo": 22
+        },
+        "sem_contraste_n": {
+          "antigo": 5,
+          "novo": 13
+        },
+        "sem_contraste_filmes_antigo_nao_novo": [
+          "napoleon-2023",
+          "the-northman"
+        ],
+        "sem_contraste_filmes_novo_nao_antigo": [
+          "aftersun",
+          "avengers-endgame",
+          "cidade-de-deus",
+          "eighth-grade",
+          "interstellar",
+          "mother-2017",
+          "talk-to-me-2022",
+          "the-godfather",
+          "the-substance",
+          "wicked-2024"
+        ],
+        "fracao_ruido_estimada": {
+          "antigo": 0.453,
+          "novo": 0.6268170731707317
+        }
+      },
+      "0.2": {
+        "n_pares_acima": {
+          "antigo": 28,
+          "novo": 21
+        },
+        "n_filmes_com_ao_menos_um": {
+          "antigo": 18,
+          "novo": 13
+        },
+        "sem_contraste_n": {
+          "antigo": 17,
+          "novo": 22
+        },
+        "sem_contraste_filmes_antigo_nao_novo": [
+          "anatomy-of-a-fall",
+          "napoleon-2023",
+          "the-hateful-eight",
+          "wonka"
+        ],
+        "sem_contraste_filmes_novo_nao_antigo": [
+          "aftersun",
+          "avengers-endgame",
+          "barbie",
+          "bones-and-all",
+          "interstellar",
+          "longlegs",
+          "shutter-island",
+          "spider-man-across-the-spider-verse",
+          "talk-to-me-2022"
+        ],
+        "fracao_ruido_estimada": {
+          "antigo": 0.3435714285714285,
+          "novo": 0.40711904761904766
+        }
+      },
+      "0.25": {
+        "n_pares_acima": {
+          "antigo": 14,
+          "novo": 12
+        },
+        "n_filmes_com_ao_menos_um": {
+          "antigo": 9,
+          "novo": 9
+        },
+        "sem_contraste_n": {
+          "antigo": 26,
+          "novo": 26
+        },
+        "sem_contraste_filmes_antigo_nao_novo": [
+          "anatomy-of-a-fall",
+          "cats-2019",
+          "joker-folie-a-deux",
+          "napoleon-2023",
+          "the-invite-2026"
+        ],
+        "sem_contraste_filmes_novo_nao_antigo": [
+          "aftersun",
+          "interstellar",
+          "perfect-days-2023",
+          "spider-man-across-the-spider-verse",
+          "talk-to-me-2022"
+        ],
+        "fracao_ruido_estimada": {
+          "antigo": 0.26160714285714287,
+          "novo": 0.287
+        }
+      }
+    },
+    "nulo_de_permutacao_por_margem": {
+      "0.1": {
+        "pares_acima_media": {
+          "antigo": 70.4485,
+          "novo": 65.8275
+        }
+      },
+      "0.15": {
+        "pares_acima_media": {
+          "antigo": 27.633,
+          "novo": 25.6995
+        }
+      },
+      "0.2": {
+        "pares_acima_media": {
+          "antigo": 9.62,
+          "novo": 8.5495
+        }
+      },
+      "0.25": {
+        "pares_acima_media": {
+          "antigo": 3.6625,
+          "novo": 3.444
+        }
+      }
+    }
+  }
+}
