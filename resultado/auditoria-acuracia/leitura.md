@@ -1,27 +1,3 @@
-# Auditoria de acurácia — leitura e anotação
-
-**Gerado:** semente 20260810 · 100 reviews · taxonomia
-`11871105c0d3` (10 eixos, ver `TAXONOMIA_10.md`) · amostrado sobre o
-CONSENSO de votação de 3 passadas (`votacao-3/consenso.jsonl`), não sobre
-uma classificação de passada única.
-
-**Como anotar:** para cada review, marque `[x]` em todo eixo que VOCÊ
-atribuiria lendo o texto — sem olhar o veredito do modelo, que não está
-neste arquivo. Se algo não cabe em nenhum eixo, marque `livre` e descreva em
-`temas`. Salve o arquivo quando terminar; o script de métricas
-(`scripts/auditoria_acuracia.py metricas`) lê os `[x]` daqui.
-
-**Os 10 eixos, para referência rápida** (definição completa em
-`scripts/classificar_10.py`, bloco `SYSTEM`):
-ritmo · atuacao · direcao_imagem · roteiro_estrutura · som_trilha ·
-tom_atmosfera · impacto_emocional · comparacoes · expectativa ·
-critica_social.
-
-O veredito do modelo NÃO está neste arquivo — está em
-`gabarito_modelo.json`, separado de propósito, para que nada aqui enviese a
-leitura antes do julgamento.
-
----
 
 ### #001 · `viewing:1402631415` · anatomy-of-a-fall (arthouse) · negativas · 2.0★ · 244 chars
 
@@ -29,17 +5,17 @@ leitura antes do julgamento.
 
 **Meus eixos** (marque com `x` os que a review realmente menciona):
 
-- [ ] ritmo
+- [x] ritmo
 - [ ] atuacao
 - [ ] direcao_imagem
-- [ ] roteiro_estrutura
+- [x] roteiro_estrutura
 - [ ] som_trilha
 - [ ] tom_atmosfera
-- [ ] impacto_emocional
+- [x] impacto_emocional
 - [ ] comparacoes
 - [ ] expectativa
 - [ ] critica_social
-- [ ] livre — temas: ____________________
+- [x] livre — temas: experiência de visualização, ambiente (avião), gosto pessoal
 
 **Observação (opcional):** ____________________
 
@@ -57,11 +33,11 @@ leitura antes do julgamento.
 - [ ] roteiro_estrutura
 - [ ] som_trilha
 - [ ] tom_atmosfera
-- [ ] impacto_emocional
+- [x] impacto_emocional
 - [ ] comparacoes
 - [ ] expectativa
 - [ ] critica_social
-- [ ] livre — temas: ____________________
+- [x] livre — temas: impressão sobre a figura histórica / personalidade do protagonista
 
 **Observação (opcional):** ____________________
 
@@ -74,14 +50,14 @@ leitura antes do julgamento.
 **Meus eixos** (marque com `x` os que a review realmente menciona):
 
 - [ ] ritmo
-- [ ] atuacao
+- [x] atuacao
 - [ ] direcao_imagem
-- [ ] roteiro_estrutura
+- [x] roteiro_estrutura
 - [ ] som_trilha
-- [ ] tom_atmosfera
-- [ ] impacto_emocional
-- [ ] comparacoes
-- [ ] expectativa
+- [x] tom_atmosfera
+- [x] impacto_emocional
+- [x] comparacoes
+- [x] expectativa
 - [ ] critica_social
 - [ ] livre — temas: ____________________
 
@@ -96,16 +72,16 @@ leitura antes do julgamento.
 **Meus eixos** (marque com `x` os que a review realmente menciona):
 
 - [ ] ritmo
-- [ ] atuacao
-- [ ] direcao_imagem
-- [ ] roteiro_estrutura
-- [ ] som_trilha
-- [ ] tom_atmosfera
-- [ ] impacto_emocional
-- [ ] comparacoes
-- [ ] expectativa
+- [x] atuacao
+- [x] direcao_imagem
+- [x] roteiro_estrutura
+- [x] som_trilha
+- [x] tom_atmosfera
+- [x] impacto_emocional
+- [x] comparacoes
+- [x] expectativa
 - [ ] critica_social
-- [ ] livre — temas: ____________________
+- [x] livre — temas: experiência imersiva após sair do cinema, pretensão de reassistir
 
 **Observação (opcional):** ____________________
 
@@ -121,13 +97,13 @@ leitura antes do julgamento.
 - [ ] atuacao
 - [ ] direcao_imagem
 - [ ] roteiro_estrutura
-- [ ] som_trilha
+- [x] som_trilha
 - [ ] tom_atmosfera
-- [ ] impacto_emocional
+- [x] impacto_emocional
 - [ ] comparacoes
 - [ ] expectativa
-- [ ] critica_social
-- [ ] livre — temas: ____________________
+- [x] critica_social
+- [x] livre — temas: comentário cômico sobre ator (thirst)
 
 **Observação (opcional):** ____________________
 
@@ -140,15 +116,15 @@ leitura antes do julgamento.
 **Meus eixos** (marque com `x` os que a review realmente menciona):
 
 - [ ] ritmo
-- [ ] atuacao
-- [ ] direcao_imagem
-- [ ] roteiro_estrutura
+- [x] atuacao
+- [x] direcao_imagem
+- [x] roteiro_estrutura
 - [ ] som_trilha
-- [ ] tom_atmosfera
+- [x] tom_atmosfera
 - [ ] impacto_emocional
-- [ ] comparacoes
-- [ ] expectativa
-- [ ] critica_social
+- [x] comparacoes
+- [x] expectativa
+- [x] critica_social
 - [ ] livre — temas: ____________________
 
 **Observação (opcional):** ____________________
@@ -163,15 +139,15 @@ leitura antes do julgamento.
 
 - [ ] ritmo
 - [ ] atuacao
-- [ ] direcao_imagem
-- [ ] roteiro_estrutura
+- [x] direcao_imagem
+- [x] roteiro_estrutura
 - [ ] som_trilha
 - [ ] tom_atmosfera
 - [ ] impacto_emocional
-- [ ] comparacoes
+- [x] comparacoes
 - [ ] expectativa
 - [ ] critica_social
-- [ ] livre — temas: ____________________
+- [x] livre — temas: versão do filme (Arrow 4K)
 
 **Observação (opcional):** ____________________
 
@@ -186,14 +162,14 @@ leitura antes do julgamento.
 - [ ] ritmo
 - [ ] atuacao
 - [ ] direcao_imagem
-- [ ] roteiro_estrutura
+- [x] roteiro_estrutura
 - [ ] som_trilha
-- [ ] tom_atmosfera
+- [x] tom_atmosfera
 - [ ] impacto_emocional
 - [ ] comparacoes
-- [ ] expectativa
+- [x] expectativa
 - [ ] critica_social
-- [ ] livre — temas: ____________________
+- [x] livre — temas: pontuação real diferente da cadastrada
 
 **Observação (opcional):** ____________________
 
@@ -211,10 +187,10 @@ leitura antes do julgamento.
 - [ ] roteiro_estrutura
 - [ ] som_trilha
 - [ ] tom_atmosfera
-- [ ] impacto_emocional
-- [ ] comparacoes
-- [ ] expectativa
-- [ ] critica_social
+- [x] impacto_emocional
+- [x] comparacoes
+- [x] expectativa
+- [x] critica_social
 - [ ] livre — temas: ____________________
 
 **Observação (opcional):** ____________________
@@ -229,15 +205,15 @@ leitura antes do julgamento.
 
 - [ ] ritmo
 - [ ] atuacao
-- [ ] direcao_imagem
-- [ ] roteiro_estrutura
+- [x] direcao_imagem
+- [x] roteiro_estrutura
 - [ ] som_trilha
-- [ ] tom_atmosfera
-- [ ] impacto_emocional
+- [x] tom_atmosfera
+- [x] impacto_emocional
 - [ ] comparacoes
 - [ ] expectativa
 - [ ] critica_social
-- [ ] livre — temas: ____________________
+- [x] livre — temas: filme de curta-metragem, elogios diretos ao criador
 
 **Observação (opcional):** ____________________
 
@@ -250,16 +226,16 @@ leitura antes do julgamento.
 **Meus eixos** (marque com `x` os que a review realmente menciona):
 
 - [ ] ritmo
-- [ ] atuacao
-- [ ] direcao_imagem
-- [ ] roteiro_estrutura
+- [x] atuacao
+- [x] direcao_imagem
+- [x] roteiro_estrutura
 - [ ] som_trilha
-- [ ] tom_atmosfera
-- [ ] impacto_emocional
-- [ ] comparacoes
-- [ ] expectativa
-- [ ] critica_social
-- [ ] livre — temas: ____________________
+- [x] tom_atmosfera
+- [x] impacto_emocional
+- [x] comparacoes
+- [x] expectativa
+- [x] critica_social
+- [x] livre — temas: sessão de teste antecipada, campanha "Barbenheimer", meme
 
 **Observação (opcional):** ____________________
 
@@ -271,17 +247,17 @@ leitura antes do julgamento.
 
 **Meus eixos** (marque com `x` os que a review realmente menciona):
 
-- [ ] ritmo
+- [x] ritmo
 - [ ] atuacao
 - [ ] direcao_imagem
 - [ ] roteiro_estrutura
 - [ ] som_trilha
 - [ ] tom_atmosfera
-- [ ] impacto_emocional
+- [x] impacto_emocional
 - [ ] comparacoes
 - [ ] expectativa
 - [ ] critica_social
-- [ ] livre — temas: ____________________
+- [x] livre — temas: experiência em voo
 
 **Observação (opcional):** ____________________
 
@@ -289,19 +265,19 @@ leitura antes do julgamento.
 
 ### #013 · `viewing:42705363` · hereditary (aclamado) · negativas · 2.0★ · 3436 chars
 
-> Way too much going on at once here for it to work as much of anything. In this sense, it becomes obvious that Hereditary is from a first time director in Ari Aster, as he throws in just about every horror trope that has gained critical and financial success in the past five years. The film really does have it all: the slow, brooding pace, the ambient soundtrack that becomes unsettling from the eclectic percussion, the long takes with smooth camera movement, haunted house spooks and scares a la James Wan, occultism, a weird looking kid, exploration of grief/guilt through horror, etc. If that seems like a lot it is because it is, and the film is unable to really commit fully to what it wants to be, resulting in a jarring tone. It probably would have worked well had it fully committed to one of the multiple films going on here, but as it stands we have a story of grief and regret that goes completely off the rails. It is all an exercise in excess, a mishmash of what is "in" right now in horror. The camerawork in particular is somewhat infuriating, I'm all for clever camerawork but this film just felt gimmicky at times. Specifically, a shot where Collette's character returns to visit Jeanie, and as she walks down the hall the camera is upside down, only to smoothly flip when she passes to go right side up. Maybe trimming unnecessary shots like this will make it so your horror movie isn't two hours long, brutal when there's not many scares to be had. To be quite honest, I think I'm about sick of the A24 art house horror/thriller style that all feel about the same, relying heavily on the art house style. This is fine if you actually make a compelling film around it, but recent busts like It Comes at Night and now Hereditary make it clear that the style is stale and the film needs to be ACTUALLY SCARY if it wants to work. Hereditary is too complex for its own good. The real bummer about this is there are parts that are really great in the film, which makes me think that Aster one day will make a good horror movie if he learns to have a more focused vision. Toni Collette gives a wonderful performance, honestly the family as a whole is pretty solid at capturing what it feels like to struggle with loss. And a certain car scene is one of the more shocking moments I've seen in a film, an incredibly powerful (and, perhaps exploitative moment given where the film goes) moment that genuinely left me stunned for a good few minutes after. Hereditary could've been great if it decided to be a drama focused on grief, a haunted house movie (because boy does this at the end want to be The Conjuring so fucking badly), a weird pulpy occult film, a more straightforward ghost flick, or about family dynamics following a complicated loss, but not all at once. What we get is a bloated horror movie that is light on everything scary and compelling, instead bouncing around from theme to theme resulting in a climax that feels so out of left field it is almost laughable. Am I missing something here? The praise is baffling to me. This movie does literally nothing better than other movies recently have, the grief as horror is probably better in The Babadook, the spooky house moments pale to Wan's work, the occultism feels like a lazy way to end a film, and the family drama is much better in a film like A24's own Krisha. There's a good movie in here somewhere, it's just got way too much going on to really see.
+> Way too much going on at once here for it to work as much of anything. In this sense, it becomes obvious that Hereditary is from a first time director in Ari Aster, as he throws in just about every horror trope that has gained critical and financial success in the past five years. The film really does have it all: the slow, brooding pace, the ambient soundtrack that becomes unsettling from the eclectic percussion, the long takes with smooth camera movement, haunted house spooks and scares a la James Wan, occultism, a weird looking kid, exploration of grief/guilt through horror, etc. If that seems like a lot it is because it is, and the film is unable to really commit fully to what it wants to be, resulting in a jarring tone. It probably would have worked well had it fully committed to one of the multiple films going on here, but as it stands we have a story of grief and regret that goes completely off the rails. It is all an exercise in excess, a mishmash of what is "in" right now in horror. The camerawork in particular is somewhat infuriating, I'm all for clever camerawork but this film just felt gimmicky at times. Specifically, a shot where Collette's character returns to visit Jeanie, and as she walks down the hall the camera is upside down, only to smoothly flip when she passes to go right side up. Maybe trimming unnecessary shots like this will make it so your horror movie isn't two hours long, brutal when there's not many scares to be had. To be quite honest, I think I'm about sick of the A24 art house horror/thriller style that all feel about the same, relying heavily on the art house style. This is fine if you actually make a compelling film around it, but recent busts like It Comes at Night and now Hereditary make it clear that the style is stale and the film needs to be ACTUALLY SCARY if it wants to work. Hereditary is too complex for its own good. The real bummer about this is there are parts that are really great in the film, which makes me think that Aster one day will make a good horror movie if he learns to have a more focused vision. Toni Collette gives a wonderful performance, honestly the family as a whole is pretty solid at capturing what it feels like to struggle with loss. And a certain car scene is one of the more shocking moments I've seen in a film, an incredibly powerful (and, perhaps exploitative moment given where the film goes) moment that genuinely left me stunned for a good few minutes after. Hereditary could've been great if it decided to be a drama focused on grief, a haunted house movie (because boy does this at the end want to be The Conjuring so fucking badly), a weird pulpy occult film, a more straightforward ghost flick, or about family dynamics following a complicated loss, but not all at once. What we get is a bloated horror movie that is light on everything scary and compelling, instead bouncing around from theme to theme resulting in a climax that feels so out of left field it is almost laughable. Am I missing something here? The praise is baffling to me. This movie does literally nothing better than other movies recently have, the grief as horror is probably better in The Babadook, the spooky house moments pale to Wan's work, the occultism feels like a lazy way to end a film, and the family drama is much better in a film like A24's own Krisha. There's a good movie in here somewhere, it's got way too much going on to really see.
 
 **Meus eixos** (marque com `x` os que a review realmente menciona):
 
-- [ ] ritmo
-- [ ] atuacao
-- [ ] direcao_imagem
-- [ ] roteiro_estrutura
-- [ ] som_trilha
-- [ ] tom_atmosfera
-- [ ] impacto_emocional
-- [ ] comparacoes
-- [ ] expectativa
+- [x] ritmo
+- [x] atuacao
+- [x] direcao_imagem
+- [x] roteiro_estrutura
+- [x] som_trilha
+- [x] tom_atmosfera
+- [x] impacto_emocional
+- [x] comparacoes
+- [x] expectativa
 - [ ] critica_social
 - [ ] livre — temas: ____________________
 
@@ -317,11 +293,11 @@ leitura antes do julgamento.
 
 - [ ] ritmo
 - [ ] atuacao
-- [ ] direcao_imagem
-- [ ] roteiro_estrutura
+- [x] direcao_imagem
+- [x] roteiro_estrutura
 - [ ] som_trilha
 - [ ] tom_atmosfera
-- [ ] impacto_emocional
+- [x] impacto_emocional
 - [ ] comparacoes
 - [ ] expectativa
 - [ ] critica_social
@@ -342,12 +318,12 @@ leitura antes do julgamento.
 - [ ] direcao_imagem
 - [ ] roteiro_estrutura
 - [ ] som_trilha
-- [ ] tom_atmosfera
-- [ ] impacto_emocional
+- [x] tom_atmosfera
+- [x] impacto_emocional
 - [ ] comparacoes
-- [ ] expectativa
+- [x] expectativa
 - [ ] critica_social
-- [ ] livre — temas: ____________________
+- [x] livre — temas: reassistindo (fourth viewing)
 
 **Observação (opcional):** ____________________
 
@@ -359,12 +335,12 @@ leitura antes do julgamento.
 
 **Meus eixos** (marque com `x` os que a review realmente menciona):
 
-- [ ] ritmo
-- [ ] atuacao
-- [ ] direcao_imagem
-- [ ] roteiro_estrutura
-- [ ] som_trilha
-- [ ] tom_atmosfera
+- [x] ritmo
+- [x] atuacao
+- [x] direcao_imagem
+- [x] roteiro_estrutura
+- [x] som_trilha
+- [x] tom_atmosfera
 - [ ] impacto_emocional
 - [ ] comparacoes
 - [ ] expectativa
@@ -382,16 +358,16 @@ leitura antes do julgamento.
 **Meus eixos** (marque com `x` os que a review realmente menciona):
 
 - [ ] ritmo
-- [ ] atuacao
+- [x] atuacao
 - [ ] direcao_imagem
-- [ ] roteiro_estrutura
+- [x] roteiro_estrutura
 - [ ] som_trilha
 - [ ] tom_atmosfera
-- [ ] impacto_emocional
-- [ ] comparacoes
-- [ ] expectativa
+- [x] impacto_emocional
+- [x] comparacoes
+- [x] expectativa
 - [ ] critica_social
-- [ ] livre — temas: ____________________
+- [x] livre — temas: dinheiro gasto, insultos à decisão do filme
 
 **Observação (opcional):** ____________________
 
@@ -413,7 +389,7 @@ leitura antes do julgamento.
 - [ ] comparacoes
 - [ ] expectativa
 - [ ] critica_social
-- [ ] livre — temas: ____________________
+- [x] livre — temas: estudo de idiomas, assistir sem legendas
 
 **Observação (opcional):** ____________________
 
@@ -428,14 +404,14 @@ leitura antes do julgamento.
 - [ ] ritmo
 - [ ] atuacao
 - [ ] direcao_imagem
-- [ ] roteiro_estrutura
+- [x] roteiro_estrutura
 - [ ] som_trilha
-- [ ] tom_atmosfera
-- [ ] impacto_emocional
-- [ ] comparacoes
+- [x] tom_atmosfera
+- [x] impacto_emocional
+- [x] comparacoes
 - [ ] expectativa
-- [ ] critica_social
-- [ ] livre — temas: ____________________
+- [x] critica_social
+- [x] livre — temas: jogo de beber (drinking game)
 
 **Observação (opcional):** ____________________
 
@@ -450,12 +426,12 @@ leitura antes do julgamento.
 - [ ] ritmo
 - [ ] atuacao
 - [ ] direcao_imagem
-- [ ] roteiro_estrutura
+- [x] roteiro_estrutura
 - [ ] som_trilha
 - [ ] tom_atmosfera
-- [ ] impacto_emocional
+- [x] impacto_emocional
 - [ ] comparacoes
-- [ ] expectativa
+- [x] expectativa
 - [ ] critica_social
 - [ ] livre — temas: ____________________
 
@@ -471,15 +447,15 @@ leitura antes do julgamento.
 
 - [ ] ritmo
 - [ ] atuacao
-- [ ] direcao_imagem
-- [ ] roteiro_estrutura
-- [ ] som_trilha
-- [ ] tom_atmosfera
+- [x] direcao_imagem
+- [x] roteiro_estrutura
+- [x] som_trilha
+- [x] tom_atmosfera
 - [ ] impacto_emocional
-- [ ] comparacoes
+- [x] comparacoes
 - [ ] expectativa
 - [ ] critica_social
-- [ ] livre — temas: ____________________
+- [x] livre — temas: cobertura de festival, divulgação de Patreon
 
 **Observação (opcional):** ____________________
 
@@ -501,7 +477,7 @@ leitura antes do julgamento.
 - [ ] comparacoes
 - [ ] expectativa
 - [ ] critica_social
-- [ ] livre — temas: ____________________
+- [x] livre — temas: comida no cinema, avaliação de batata frita
 
 **Observação (opcional):** ____________________
 
@@ -509,21 +485,21 @@ leitura antes do julgamento.
 
 ### #023 · `viewing:1418805746` · napoleon-2023 (invertido) · negativas · 2.0★ · 960 chars
 
-> 3 straight hours of the directors cut loaded with historical inaccuracies. Sure there’s some really awesome scenes and the cinematography is fantastic. Napolean played by phoenix seems like a really great idea because his ego is well pompous. However it doesn’t seem to actually fill the void of the true historical story they wanted to. Most of it falls flat with some huge fighting scenes that seem like they should rival lord of the rings but these don’t work because it takes you out of it with the amount of cuts and changes in viewing. You ask yourself whose army is whose? Because of these shots. Again this movie deserves some serious props for the cinematography and stunning visuals. The lake scene where the ice is shattering from canon fire and men are drowning and freezing is incredible. Napolean would definitely destroy everyone involved in making this movie.  Also side note don’t watch the directors cut as your first watch it’s way too long.
+> 3 straight hours of the directors cut loaded with historical inaccuracies. Sure there’s some really awesome scenes and the cinematography is fantastic. Napolean played by phoenix seems like a really great idea because his ego is well pompous. However it doesn’t seem to actually fill the void of the true historical story they wanted to. Most of it falls flat with some huge fighting scenes that seem like they should rival lord of the rings but these don’t work because it takes you out of it with the amount of cuts and changes in viewing. You ask yourself whose army is whose? Because of these shots. Again this movie deserves some serious props for the cinematography and stunning visuals. The lake scene where the ice is shattering from canon fire and men are drowning and freezing is incredible. Napolean would definitely destroy everyone involved in making this movie.  Also side note don’t watch the directors cut as your first watch it’s way too long.
 
 **Meus eixos** (marque com `x` os que a review realmente menciona):
 
-- [ ] ritmo
-- [ ] atuacao
-- [ ] direcao_imagem
-- [ ] roteiro_estrutura
+- [x] ritmo
+- [x] atuacao
+- [x] direcao_imagem
+- [x] roteiro_estrutura
 - [ ] som_trilha
 - [ ] tom_atmosfera
-- [ ] impacto_emocional
-- [ ] comparacoes
-- [ ] expectativa
-- [ ] critica_social
-- [ ] livre — temas: ____________________
+- [x] impacto_emocional
+- [x] comparacoes
+- [x] expectativa
+- [x] critica_social
+- [x] livre — temas: recomendação sobre versões (director's cut)
 
 **Observação (opcional):** ____________________
 
@@ -541,8 +517,8 @@ leitura antes do julgamento.
 - [ ] roteiro_estrutura
 - [ ] som_trilha
 - [ ] tom_atmosfera
-- [ ] impacto_emocional
-- [ ] comparacoes
+- [x] impacto_emocional
+- [x] comparacoes
 - [ ] expectativa
 - [ ] critica_social
 - [ ] livre — temas: ____________________
@@ -560,13 +536,13 @@ leitura antes do julgamento.
 - [ ] ritmo
 - [ ] atuacao
 - [ ] direcao_imagem
-- [ ] roteiro_estrutura
+- [x] roteiro_estrutura
 - [ ] som_trilha
 - [ ] tom_atmosfera
-- [ ] impacto_emocional
-- [ ] comparacoes
+- [x] impacto_emocional
+- [x] comparacoes
 - [ ] expectativa
-- [ ] critica_social
+- [x] critica_social
 - [ ] livre — temas: ____________________
 
 **Observação (opcional):** ____________________
@@ -579,15 +555,15 @@ leitura antes do julgamento.
 
 **Meus eixos** (marque com `x` os que a review realmente menciona):
 
-- [ ] ritmo
-- [ ] atuacao
-- [ ] direcao_imagem
-- [ ] roteiro_estrutura
+- [x] ritmo
+- [x] atuacao
+- [x] direcao_imagem
+- [x] roteiro_estrutura
 - [ ] som_trilha
 - [ ] tom_atmosfera
-- [ ] impacto_emocional
-- [ ] comparacoes
-- [ ] expectativa
+- [x] impacto_emocional
+- [x] comparacoes
+- [x] expectativa
 - [ ] critica_social
 - [ ] livre — temas: ____________________
 
@@ -601,15 +577,15 @@ leitura antes do julgamento.
 
 **Meus eixos** (marque com `x` os que a review realmente menciona):
 
-- [ ] ritmo
+- [x] ritmo
 - [ ] atuacao
 - [ ] direcao_imagem
-- [ ] roteiro_estrutura
+- [x] roteiro_estrutura
 - [ ] som_trilha
 - [ ] tom_atmosfera
-- [ ] impacto_emocional
-- [ ] comparacoes
-- [ ] expectativa
+- [x] impacto_emocional
+- [x] comparacoes
+- [x] expectativa
 - [ ] critica_social
 - [ ] livre — temas: ____________________
 
@@ -625,14 +601,14 @@ leitura antes do julgamento.
 
 - [ ] ritmo
 - [ ] atuacao
-- [ ] direcao_imagem
+- [x] direcao_imagem
 - [ ] roteiro_estrutura
 - [ ] som_trilha
 - [ ] tom_atmosfera
 - [ ] impacto_emocional
-- [ ] comparacoes
+- [x] comparacoes
 - [ ] expectativa
-- [ ] critica_social
+- [x] critica_social
 - [ ] livre — temas: ____________________
 
 **Observação (opcional):** ____________________
@@ -651,11 +627,11 @@ leitura antes do julgamento.
 - [ ] roteiro_estrutura
 - [ ] som_trilha
 - [ ] tom_atmosfera
-- [ ] impacto_emocional
+- [x] impacto_emocional
 - [ ] comparacoes
 - [ ] expectativa
 - [ ] critica_social
-- [ ] livre — temas: ____________________
+- [x] livre — temas: comunidade do Letterboxd, criadores de conteúdo
 
 **Observação (opcional):** ____________________
 
@@ -672,11 +648,11 @@ leitura antes do julgamento.
 - [ ] direcao_imagem
 - [ ] roteiro_estrutura
 - [ ] som_trilha
-- [ ] tom_atmosfera
-- [ ] impacto_emocional
+- [x] tom_atmosfera
+- [x] impacto_emocional
 - [ ] comparacoes
 - [ ] expectativa
-- [ ] critica_social
+- [x] critica_social
 - [ ] livre — temas: ____________________
 
 **Observação (opcional):** ____________________
@@ -685,21 +661,21 @@ leitura antes do julgamento.
 
 ### #031 · `viewing:1432407513` · eighth-grade (aclamado) · medianas · 3.0★ · 170 chars
 
-> I genuinely cant tell if this was accurate or not cuz I just finished 8th grade, but i’m just glad that Kayla was relatively smart besides being mean to her dad. gucci 😊👌
+> I genuinely cant tell if this was accurate or not cuz I just finished 8th grade, but i’m just glad that Kayla was relatively smart besides being mean to her dad. gucci 😊👌
 
 **Meus eixos** (marque com `x` os que a review realmente menciona):
 
 - [ ] ritmo
 - [ ] atuacao
 - [ ] direcao_imagem
-- [ ] roteiro_estrutura
+- [x] roteiro_estrutura
 - [ ] som_trilha
 - [ ] tom_atmosfera
 - [ ] impacto_emocional
-- [ ] comparacoes
-- [ ] expectativa
+- [x] comparacoes
+- [x] expectativa
 - [ ] critica_social
-- [ ] livre — temas: ____________________
+- [x] livre — temas: vida pessoal (idade do autor)
 
 **Observação (opcional):** ____________________
 
@@ -711,15 +687,15 @@ leitura antes do julgamento.
 
 **Meus eixos** (marque com `x` os que a review realmente menciona):
 
-- [ ] ritmo
-- [ ] atuacao
-- [ ] direcao_imagem
-- [ ] roteiro_estrutura
+- [x] ritmo
+- [x] atuacao
+- [x] direcao_imagem
+- [x] roteiro_estrutura
 - [ ] som_trilha
 - [ ] tom_atmosfera
 - [ ] impacto_emocional
-- [ ] comparacoes
-- [ ] expectativa
+- [x] comparacoes
+- [x] expectativa
 - [ ] critica_social
 - [ ] livre — temas: ____________________
 
@@ -739,9 +715,9 @@ leitura antes do julgamento.
 - [ ] roteiro_estrutura
 - [ ] som_trilha
 - [ ] tom_atmosfera
-- [ ] impacto_emocional
+- [x] impacto_emocional
 - [ ] comparacoes
-- [ ] expectativa
+- [x] expectativa
 - [ ] critica_social
 - [ ] livre — temas: ____________________
 
@@ -756,16 +732,16 @@ leitura antes do julgamento.
 **Meus eixos** (marque com `x` os que a review realmente menciona):
 
 - [ ] ritmo
-- [ ] atuacao
+- [x] atuacao
 - [ ] direcao_imagem
-- [ ] roteiro_estrutura
+- [x] roteiro_estrutura
 - [ ] som_trilha
 - [ ] tom_atmosfera
-- [ ] impacto_emocional
+- [x] impacto_emocional
 - [ ] comparacoes
 - [ ] expectativa
 - [ ] critica_social
-- [ ] livre — temas: ____________________
+- [x] livre — temas: dublagem não desejada
 
 **Observação (opcional):** ____________________
 
@@ -779,13 +755,13 @@ leitura antes do julgamento.
 
 - [ ] ritmo
 - [ ] atuacao
-- [ ] direcao_imagem
-- [ ] roteiro_estrutura
-- [ ] som_trilha
-- [ ] tom_atmosfera
+- [x] direcao_imagem
+- [x] roteiro_estrutura
+- [x] som_trilha
+- [x] tom_atmosfera
 - [ ] impacto_emocional
 - [ ] comparacoes
-- [ ] expectativa
+- [x] expectativa
 - [ ] critica_social
 - [ ] livre — temas: ____________________
 
@@ -795,20 +771,20 @@ leitura antes do julgamento.
 
 ### #036 · `viewing:63813984` · avengers-endgame (aclamado) · positivas · 5.0★ · 2270 chars
 
-> As vésperas de completar 11 anos de seu primeiro lançamento, a Marvel Studios finaliza no dia 25 de abril, todos os arcos apresentados ao longo da última década. ‘That's the endgame' Tony Stark previu o título do filme lá em Era de Ultron, se referindo ao perigo que viria do espaço eventualmente. Vingadores Ultimato, título que foi dado no Brasil, vem para quebrar recordes, seja na bilheteria ou no número de pessoas chorando simultaneamente. Um filme que chega com status para se tornar maior de todos os tempos no seu gênero e permanecer nesse patamar por um bom tempo. Ao longo dos quase 11 anos de estúdio, foram 22 filmes, nem todos agradaram o público que é fanático, mas havia uma história maior sendo contada a cada filme. Em Vingadores Ultimato vemos tudo culminar em um filme grandioso, que amarra todas as pontas soltas e usa isso como alavanca para um roteiro excepcionalmente bem escrito. A direção mais uma vez impecável, é como se eu estivesse lendo um quadrinho realmente, a estética ,design de produção e até a fotografia, são retiradas diretamente das páginas. O filme tem um ritmo bom para o número enorme de personagens e para a história que os irmãos Russo querem passar. As cenas de ação são de tirar o folego e te deixar extremamente tenso na poltrona, principalmente a batalha final. As piadas e o clima leve da Marvel estão presentes e dão a quebra necessária de humor para o filme que carrega muita dramaticidade em cada um dos núcleos e personagens da história. Vemos personagens antes coadjuvantes ou que nem deram as caras em Guerra Infinita, agora ganhando seu protagonismo e mais tempo de tela, Scott Lang e Clint Barton são exemplos disso e tem papel fundamental na trama. Nebulosa é uma das estrelas do filme, a complexidade da personagem é mostrada de forma mais ampla e ela se torna o ponto chave para o enredo. Todo mundo tem seu protagonismo, seja ele de forma rápida ou não, todos tem seu tempo para brilhar, o que com certeza traz cenas que levarão os fãs a empolgação máxima na sala de cinema. (GRL PWR representadíssimo em uma cena maravilhosa) Mais uma vez os irmãos Russo entregaram o que prometeram e muito mais, então, melhor se prepararem para sentir um misto de emoções dentro de 3h00m57s que encerram uma era do cinema.
+> As vésperas de completar 11 anos de seu primeiro lançamento, a Marvel Studios finaliza no dia 25 de abril, todos os arcos apresentados ao longo da última década. ‘That's the endgame' Tony Stark previu o título do filme lá em Era de Ultron, se referindo ao perigo que viria do espaço eventualmente. Vingadores Ultimato, título que foi dado no Brasil, vem para quebrar recordes, seja na bilheteria ou no número de pessoas chorando simultaneamente. Um filme que chega com status para se tornar maior de todos os tempos no seu gênero e permanecer nesse patamar por um bom tempo. Ao longo dos quase 11 anos de estúdio, foram 22 filmes, nem todos agradaram o público que é fanático, mas havia uma história maior sendo contada a cada filme. Em Vingadores Ultimato vemos tudo culminar em um filme grandioso, que amarra todas as pontas soltas e usa isso como alavanca para um roteiro excepcionalmente bem escrito. A direção mais uma vez impecável, é como se eu estivesse lendo um quadrinho realmente, a estética ,design de produção e até a fotografia, são retiradas diretamente das páginas. O filme tem um ritmo bom para o número enorme de personagens e para a história que os irmãos Russo querem passar. As cenas de ação são de tirar o folego e te deixar extremamente tenso na poltrona, principalmente a batalha final. As piadas e o clima leve da Marvel estão presentes e dão a quebra necessária de humor para o filme que carrega muita dramaticidade em cada um dos núcleos e personagens da história. Vemos personagens antes coadjuvantes ou que nem deram as caras em Guerra Infinita, agora ganhando seu protagonismo e mais tempo de tela, Scott Lang e Clint Barton são exemplos disso e tem papel fundamental na trama. Nebulosa é uma das estrelas do filme, a complexidade da personagem é mostrada de forma mais ampla e ela se torna o ponto chave para o enredo. Todo mundo tem seu protagonismo, seja ele de forma rápida ou não, todos tem seu tempo para brilhar, o que com certeza traz cenas que levarão os fãs a empolgação máxima na sala de cinema. (GRL PWR representadíssimo em uma cena maravilhosa) Mais uma vez os irmãos Russo entregaram o que prometeram e muito mais, então, melhor se prepararem para sentir um misto de emoções dentro de 3h00m57s que encerram uma era do cinema.
 
 **Meus eixos** (marque com `x` os que a review realmente menciona):
 
-- [ ] ritmo
+- [x] ritmo
 - [ ] atuacao
-- [ ] direcao_imagem
-- [ ] roteiro_estrutura
+- [x] direcao_imagem
+- [x] roteiro_estrutura
 - [ ] som_trilha
-- [ ] tom_atmosfera
-- [ ] impacto_emocional
-- [ ] comparacoes
+- [x] tom_atmosfera
+- [x] impacto_emocional
+- [x] comparacoes
 - [ ] expectativa
-- [ ] critica_social
+- [x] critica_social
 - [ ] livre — temas: ____________________
 
 **Observação (opcional):** ____________________
@@ -822,16 +798,16 @@ leitura antes do julgamento.
 **Meus eixos** (marque com `x` os que a review realmente menciona):
 
 - [ ] ritmo
-- [ ] atuacao
+- [x] atuacao
 - [ ] direcao_imagem
-- [ ] roteiro_estrutura
+- [x] roteiro_estrutura
 - [ ] som_trilha
-- [ ] tom_atmosfera
-- [ ] impacto_emocional
-- [ ] comparacoes
-- [ ] expectativa
+- [x] tom_atmosfera
+- [x] impacto_emocional
+- [x] comparacoes
+- [x] expectativa
 - [ ] critica_social
-- [ ] livre — temas: ____________________
+- [x] livre — temas: cabine de imprensa/exibição prévia
 
 **Observação (opcional):** ____________________
 
@@ -846,10 +822,10 @@ leitura antes do julgamento.
 - [ ] ritmo
 - [ ] atuacao
 - [ ] direcao_imagem
-- [ ] roteiro_estrutura
+- [x] roteiro_estrutura
 - [ ] som_trilha
 - [ ] tom_atmosfera
-- [ ] impacto_emocional
+- [x] impacto_emocional
 - [ ] comparacoes
 - [ ] expectativa
 - [ ] critica_social
@@ -865,17 +841,17 @@ leitura antes do julgamento.
 
 **Meus eixos** (marque com `x` os que a review realmente menciona):
 
-- [ ] ritmo
-- [ ] atuacao
-- [ ] direcao_imagem
+- [x] ritmo
+- [x] atuacao
+- [x] direcao_imagem
 - [ ] roteiro_estrutura
 - [ ] som_trilha
-- [ ] tom_atmosfera
-- [ ] impacto_emocional
+- [x] tom_atmosfera
+- [x] impacto_emocional
 - [ ] comparacoes
 - [ ] expectativa
 - [ ] critica_social
-- [ ] livre — temas: ____________________
+- [x] livre — temas: pretensão de reassistir
 
 **Observação (opcional):** ____________________
 
@@ -888,14 +864,14 @@ leitura antes do julgamento.
 **Meus eixos** (marque com `x` os que a review realmente menciona):
 
 - [ ] ritmo
-- [ ] atuacao
-- [ ] direcao_imagem
+- [x] atuacao
+- [x] direcao_imagem
 - [ ] roteiro_estrutura
-- [ ] som_trilha
-- [ ] tom_atmosfera
-- [ ] impacto_emocional
+- [x] som_trilha
+- [x] tom_atmosfera
+- [x] impacto_emocional
 - [ ] comparacoes
-- [ ] expectativa
+- [x] expectativa
 - [ ] critica_social
 - [ ] livre — temas: ____________________
 
@@ -911,14 +887,14 @@ leitura antes do julgamento.
 
 - [ ] ritmo
 - [ ] atuacao
-- [ ] direcao_imagem
-- [ ] roteiro_estrutura
+- [x] direcao_imagem
+- [x] roteiro_estrutura
 - [ ] som_trilha
 - [ ] tom_atmosfera
 - [ ] impacto_emocional
-- [ ] comparacoes
+- [x] comparacoes
 - [ ] expectativa
-- [ ] critica_social
+- [x] critica_social
 - [ ] livre — temas: ____________________
 
 **Observação (opcional):** ____________________
@@ -937,11 +913,11 @@ leitura antes do julgamento.
 - [ ] roteiro_estrutura
 - [ ] som_trilha
 - [ ] tom_atmosfera
-- [ ] impacto_emocional
+- [x] impacto_emocional
 - [ ] comparacoes
 - [ ] expectativa
 - [ ] critica_social
-- [ ] livre — temas: ____________________
+- [x] livre — temas: marcação de amigos na rede
 
 **Observação (opcional):** ____________________
 
@@ -953,17 +929,17 @@ leitura antes do julgamento.
 
 **Meus eixos** (marque com `x` os que a review realmente menciona):
 
-- [ ] ritmo
-- [ ] atuacao
-- [ ] direcao_imagem
-- [ ] roteiro_estrutura
+- [x] ritmo
+- [x] atuacao
+- [x] direcao_imagem
+- [x] roteiro_estrutura
 - [ ] som_trilha
 - [ ] tom_atmosfera
 - [ ] impacto_emocional
-- [ ] comparacoes
+- [x] comparacoes
 - [ ] expectativa
-- [ ] critica_social
-- [ ] livre — temas: ____________________
+- [x] critica_social
+- [x] livre — temas: festival Sundance, link para review externa
 
 **Observação (opcional):** ____________________
 
@@ -978,12 +954,12 @@ leitura antes do julgamento.
 - [ ] ritmo
 - [ ] atuacao
 - [ ] direcao_imagem
-- [ ] roteiro_estrutura
+- [x] roteiro_estrutura
 - [ ] som_trilha
-- [ ] tom_atmosfera
-- [ ] impacto_emocional
+- [x] tom_atmosfera
+- [x] impacto_emocional
 - [ ] comparacoes
-- [ ] expectativa
+- [x] expectativa
 - [ ] critica_social
 - [ ] livre — temas: ____________________
 
@@ -1007,7 +983,7 @@ leitura antes do julgamento.
 - [ ] comparacoes
 - [ ] expectativa
 - [ ] critica_social
-- [ ] livre — temas: ____________________
+- [x] livre — temas: nostalgia, locadora (Blockbuster), pretensão de reassistir
 
 **Observação (opcional):** ____________________
 
@@ -1022,12 +998,12 @@ leitura antes do julgamento.
 - [ ] ritmo
 - [ ] atuacao
 - [ ] direcao_imagem
-- [ ] roteiro_estrutura
+- [x] roteiro_estrutura
 - [ ] som_trilha
 - [ ] tom_atmosfera
 - [ ] impacto_emocional
 - [ ] comparacoes
-- [ ] expectativa
+- [x] expectativa
 - [ ] critica_social
 - [ ] livre — temas: ____________________
 
@@ -1043,15 +1019,15 @@ leitura antes do julgamento.
 
 - [ ] ritmo
 - [ ] atuacao
-- [ ] direcao_imagem
-- [ ] roteiro_estrutura
-- [ ] som_trilha
-- [ ] tom_atmosfera
+- [x] direcao_imagem
+- [x] roteiro_estrutura
+- [x] som_trilha
+- [x] tom_atmosfera
 - [ ] impacto_emocional
 - [ ] comparacoes
 - [ ] expectativa
 - [ ] critica_social
-- [ ] livre — temas: ____________________
+- [x] livre — temas: mensagem direta de encorajamento ao criador
 
 **Observação (opcional):** ____________________
 
@@ -1064,16 +1040,16 @@ leitura antes do julgamento.
 **Meus eixos** (marque com `x` os que a review realmente menciona):
 
 - [ ] ritmo
-- [ ] atuacao
-- [ ] direcao_imagem
-- [ ] roteiro_estrutura
+- [x] atuacao
+- [x] direcao_imagem
+- [x] roteiro_estrutura
 - [ ] som_trilha
 - [ ] tom_atmosfera
-- [ ] impacto_emocional
+- [x] impacto_emocional
 - [ ] comparacoes
 - [ ] expectativa
 - [ ] critica_social
-- [ ] livre — temas: ____________________
+- [x] livre — temas: justificativa da nota dada
 
 **Observação (opcional):** ____________________
 
@@ -1093,9 +1069,9 @@ leitura antes do julgamento.
 - [ ] tom_atmosfera
 - [ ] impacto_emocional
 - [ ] comparacoes
-- [ ] expectativa
+- [x] expectativa
 - [ ] critica_social
-- [ ] livre — temas: ____________________
+- [x] livre — temas: relacionamento pessoal, indicação do namorado
 
 **Observação (opcional):** ____________________
 
@@ -1110,14 +1086,14 @@ leitura antes do julgamento.
 - [ ] ritmo
 - [ ] atuacao
 - [ ] direcao_imagem
-- [ ] roteiro_estrutura
+- [x] roteiro_estrutura
 - [ ] som_trilha
 - [ ] tom_atmosfera
-- [ ] impacto_emocional
+- [x] impacto_emocional
 - [ ] comparacoes
 - [ ] expectativa
-- [ ] critica_social
-- [ ] livre — temas: ____________________
+- [x] critica_social
+- [x] livre — temas: recomendação contra versão dublada (VF)
 
 **Observação (opcional):** ____________________
 
@@ -1132,14 +1108,14 @@ leitura antes do julgamento.
 - [ ] ritmo
 - [ ] atuacao
 - [ ] direcao_imagem
-- [ ] roteiro_estrutura
+- [x] roteiro_estrutura
 - [ ] som_trilha
 - [ ] tom_atmosfera
-- [ ] impacto_emocional
-- [ ] comparacoes
+- [x] impacto_emocional
+- [x] comparacoes
 - [ ] expectativa
 - [ ] critica_social
-- [ ] livre — temas: ____________________
+- [x] livre — temas: review pendente / coming soon
 
 **Observação (opcional):** ____________________
 
@@ -1151,15 +1127,15 @@ leitura antes do julgamento.
 
 **Meus eixos** (marque com `x` os que a review realmente menciona):
 
-- [ ] ritmo
-- [ ] atuacao
-- [ ] direcao_imagem
-- [ ] roteiro_estrutura
-- [ ] som_trilha
+- [x] ritmo
+- [x] atuacao
+- [x] direcao_imagem
+- [x] roteiro_estrutura
+- [x] som_trilha
 - [ ] tom_atmosfera
-- [ ] impacto_emocional
+- [x] impacto_emocional
 - [ ] comparacoes
-- [ ] expectativa
+- [x] expectativa
 - [ ] critica_social
 - [ ] livre — temas: ____________________
 
@@ -1173,17 +1149,17 @@ leitura antes do julgamento.
 
 **Meus eixos** (marque com `x` os que a review realmente menciona):
 
-- [ ] ritmo
+- [x] ritmo
 - [ ] atuacao
-- [ ] direcao_imagem
-- [ ] roteiro_estrutura
+- [x] direcao_imagem
+- [x] roteiro_estrutura
 - [ ] som_trilha
 - [ ] tom_atmosfera
-- [ ] impacto_emocional
+- [x] impacto_emocional
 - [ ] comparacoes
 - [ ] expectativa
-- [ ] critica_social
-- [ ] livre — temas: ____________________
+- [x] critica_social
+- [x] livre — temas: clube de cinema / ranking de filmes
 
 **Observação (opcional):** ____________________
 
@@ -1195,17 +1171,17 @@ leitura antes do julgamento.
 
 **Meus eixos** (marque com `x` os que a review realmente menciona):
 
-- [ ] ritmo
-- [ ] atuacao
-- [ ] direcao_imagem
-- [ ] roteiro_estrutura
+- [x] ritmo
+- [x] atuacao
+- [x] direcao_imagem
+- [x] roteiro_estrutura
 - [ ] som_trilha
-- [ ] tom_atmosfera
-- [ ] impacto_emocional
-- [ ] comparacoes
+- [x] tom_atmosfera
+- [x] impacto_emocional
+- [x] comparacoes
 - [ ] expectativa
-- [ ] critica_social
-- [ ] livre — temas: ____________________
+- [x] critica_social
+- [x] livre — temas: usuários do Letterboxd, vida familiar do próprio autor da crítica
 
 **Observação (opcional):** ____________________
 
@@ -1217,14 +1193,14 @@ leitura antes do julgamento.
 
 **Meus eixos** (marque com `x` os que a review realmente menciona):
 
-- [ ] ritmo
+- [x] ritmo
 - [ ] atuacao
-- [ ] direcao_imagem
-- [ ] roteiro_estrutura
+- [x] direcao_imagem
+- [x] roteiro_estrutura
 - [ ] som_trilha
 - [ ] tom_atmosfera
 - [ ] impacto_emocional
-- [ ] comparacoes
+- [x] comparacoes
 - [ ] expectativa
 - [ ] critica_social
 - [ ] livre — temas: ____________________
@@ -1241,15 +1217,15 @@ leitura antes do julgamento.
 
 - [ ] ritmo
 - [ ] atuacao
-- [ ] direcao_imagem
-- [ ] roteiro_estrutura
+- [x] direcao_imagem
+- [x] roteiro_estrutura
 - [ ] som_trilha
 - [ ] tom_atmosfera
-- [ ] impacto_emocional
-- [ ] comparacoes
+- [x] impacto_emocional
+- [x] comparacoes
 - [ ] expectativa
 - [ ] critica_social
-- [ ] livre — temas: ____________________
+- [x] livre — temas: piada de duplo sentido/swing
 
 **Observação (opcional):** ____________________
 
@@ -1267,11 +1243,11 @@ leitura antes do julgamento.
 - [ ] roteiro_estrutura
 - [ ] som_trilha
 - [ ] tom_atmosfera
-- [ ] impacto_emocional
+- [x] impacto_emocional
 - [ ] comparacoes
 - [ ] expectativa
 - [ ] critica_social
-- [ ] livre — temas: ____________________
+- [x] livre — temas: Reddit, brigas de cinéfilos na internet
 
 **Observação (opcional):** ____________________
 
@@ -1283,17 +1259,17 @@ leitura antes do julgamento.
 
 **Meus eixos** (marque com `x` os que a review realmente menciona):
 
-- [ ] ritmo
+- [x] ritmo
 - [ ] atuacao
-- [ ] direcao_imagem
-- [ ] roteiro_estrutura
-- [ ] som_trilha
+- [x] direcao_imagem
+- [x] roteiro_estrutura
+- [x] som_trilha
 - [ ] tom_atmosfera
-- [ ] impacto_emocional
-- [ ] comparacoes
+- [x] impacto_emocional
+- [x] comparacoes
 - [ ] expectativa
 - [ ] critica_social
-- [ ] livre — temas: ____________________
+- [x] livre — temas: experiência de assistir em um voo, no celular
 
 **Observação (opcional):** ____________________
 
@@ -1308,11 +1284,11 @@ leitura antes do julgamento.
 - [ ] ritmo
 - [ ] atuacao
 - [ ] direcao_imagem
-- [ ] roteiro_estrutura
-- [ ] som_trilha
+- [x] roteiro_estrutura
+- [x] som_trilha
 - [ ] tom_atmosfera
 - [ ] impacto_emocional
-- [ ] comparacoes
+- [x] comparacoes
 - [ ] expectativa
 - [ ] critica_social
 - [ ] livre — temas: ____________________
@@ -1327,17 +1303,17 @@ leitura antes do julgamento.
 
 **Meus eixos** (marque com `x` os que a review realmente menciona):
 
-- [ ] ritmo
+- [x] ritmo
 - [ ] atuacao
-- [ ] direcao_imagem
-- [ ] roteiro_estrutura
-- [ ] som_trilha
-- [ ] tom_atmosfera
-- [ ] impacto_emocional
-- [ ] comparacoes
-- [ ] expectativa
-- [ ] critica_social
-- [ ] livre — temas: ____________________
+- [x] direcao_imagem
+- [x] roteiro_estrutura
+- [x] som_trilha
+- [x] tom_atmosfera
+- [x] impacto_emocional
+- [x] comparacoes
+- [x] expectativa
+- [x] critica_social
+- [x] livre — temas: comentário sobre títulos em francês, reclamação sobre trilogias inacabadas
 
 **Observação (opcional):** ____________________
 
@@ -1352,11 +1328,11 @@ leitura antes do julgamento.
 - [ ] ritmo
 - [ ] atuacao
 - [ ] direcao_imagem
-- [ ] roteiro_estrutura
-- [ ] som_trilha
+- [x] roteiro_estrutura
+- [x] som_trilha
 - [ ] tom_atmosfera
-- [ ] impacto_emocional
-- [ ] comparacoes
+- [x] impacto_emocional
+- [x] comparacoes
 - [ ] expectativa
 - [ ] critica_social
 - [ ] livre — temas: ____________________
@@ -1371,13 +1347,13 @@ leitura antes do julgamento.
 
 **Meus eixos** (marque com `x` os que a review realmente menciona):
 
-- [ ] ritmo
+- [x] ritmo
 - [ ] atuacao
 - [ ] direcao_imagem
 - [ ] roteiro_estrutura
 - [ ] som_trilha
 - [ ] tom_atmosfera
-- [ ] impacto_emocional
+- [x] impacto_emocional
 - [ ] comparacoes
 - [ ] expectativa
 - [ ] critica_social
@@ -1395,14 +1371,14 @@ leitura antes do julgamento.
 
 - [ ] ritmo
 - [ ] atuacao
-- [ ] direcao_imagem
-- [ ] roteiro_estrutura
+- [x] direcao_imagem
+- [x] roteiro_estrutura
 - [ ] som_trilha
-- [ ] tom_atmosfera
-- [ ] impacto_emocional
+- [x] tom_atmosfera
+- [x] impacto_emocional
 - [ ] comparacoes
 - [ ] expectativa
-- [ ] critica_social
+- [x] critica_social
 - [ ] livre — temas: ____________________
 
 **Observação (opcional):** ____________________
@@ -1415,15 +1391,15 @@ leitura antes do julgamento.
 
 **Meus eixos** (marque com `x` os que a review realmente menciona):
 
-- [ ] ritmo
+- [x] ritmo
 - [ ] atuacao
 - [ ] direcao_imagem
-- [ ] roteiro_estrutura
+- [x] roteiro_estrutura
 - [ ] som_trilha
 - [ ] tom_atmosfera
-- [ ] impacto_emocional
-- [ ] comparacoes
-- [ ] expectativa
+- [x] impacto_emocional
+- [x] comparacoes
+- [x] expectativa
 - [ ] critica_social
 - [ ] livre — temas: ____________________
 
@@ -1440,10 +1416,10 @@ leitura antes do julgamento.
 - [ ] ritmo
 - [ ] atuacao
 - [ ] direcao_imagem
-- [ ] roteiro_estrutura
+- [x] roteiro_estrutura
 - [ ] som_trilha
 - [ ] tom_atmosfera
-- [ ] impacto_emocional
+- [x] impacto_emocional
 - [ ] comparacoes
 - [ ] expectativa
 - [ ] critica_social
@@ -1459,15 +1435,15 @@ leitura antes do julgamento.
 
 **Meus eixos** (marque com `x` os que a review realmente menciona):
 
-- [ ] ritmo
-- [ ] atuacao
-- [ ] direcao_imagem
-- [ ] roteiro_estrutura
-- [ ] som_trilha
-- [ ] tom_atmosfera
-- [ ] impacto_emocional
-- [ ] comparacoes
-- [ ] expectativa
+- [x] ritmo
+- [x] atuacao
+- [x] direcao_imagem
+- [x] roteiro_estrutura
+- [x] som_trilha
+- [x] tom_atmosfera
+- [x] impacto_emocional
+- [x] comparacoes
+- [x] expectativa
 - [ ] critica_social
 - [ ] livre — temas: ____________________
 
@@ -1481,17 +1457,17 @@ leitura antes do julgamento.
 
 **Meus eixos** (marque com `x` os que a review realmente menciona):
 
-- [ ] ritmo
+- [x] ritmo
 - [ ] atuacao
 - [ ] direcao_imagem
-- [ ] roteiro_estrutura
+- [x] roteiro_estrutura
 - [ ] som_trilha
 - [ ] tom_atmosfera
-- [ ] impacto_emocional
-- [ ] comparacoes
-- [ ] expectativa
+- [x] impacto_emocional
+- [x] comparacoes
+- [x] expectativa
 - [ ] critica_social
-- [ ] livre — temas: ____________________
+- [x] livre — temas: desejo (brincadeira) de entrar na família mafiosa
 
 **Observação (opcional):** ____________________
 
@@ -1504,14 +1480,14 @@ leitura antes do julgamento.
 **Meus eixos** (marque com `x` os que a review realmente menciona):
 
 - [ ] ritmo
-- [ ] atuacao
-- [ ] direcao_imagem
-- [ ] roteiro_estrutura
+- [x] atuacao
+- [x] direcao_imagem
+- [x] roteiro_estrutura
 - [ ] som_trilha
-- [ ] tom_atmosfera
+- [x] tom_atmosfera
 - [ ] impacto_emocional
-- [ ] comparacoes
-- [ ] expectativa
+- [x] comparacoes
+- [x] expectativa
 - [ ] critica_social
 - [ ] livre — temas: ____________________
 
@@ -1525,17 +1501,17 @@ leitura antes do julgamento.
 
 **Meus eixos** (marque com `x` os que a review realmente menciona):
 
-- [ ] ritmo
-- [ ] atuacao
-- [ ] direcao_imagem
-- [ ] roteiro_estrutura
+- [x] ritmo
+- [x] atuacao
+- [x] direcao_imagem
+- [x] roteiro_estrutura
 - [ ] som_trilha
-- [ ] tom_atmosfera
-- [ ] impacto_emocional
-- [ ] comparacoes
-- [ ] expectativa
-- [ ] critica_social
-- [ ] livre — temas: ____________________
+- [x] tom_atmosfera
+- [x] impacto_emocional
+- [x] comparacoes
+- [x] expectativa
+- [x] critica_social
+- [x] livre — temas: link para review completa em outro site (IndieWire)
 
 **Observação (opcional):** ____________________
 
@@ -1547,14 +1523,14 @@ leitura antes do julgamento.
 
 **Meus eixos** (marque com `x` os que a review realmente menciona):
 
-- [ ] ritmo
-- [ ] atuacao
+- [x] ritmo
+- [x] atuacao
 - [ ] direcao_imagem
 - [ ] roteiro_estrutura
 - [ ] som_trilha
 - [ ] tom_atmosfera
-- [ ] impacto_emocional
-- [ ] comparacoes
+- [x] impacto_emocional
+- [x] comparacoes
 - [ ] expectativa
 - [ ] critica_social
 - [ ] livre — temas: ____________________
@@ -1570,15 +1546,15 @@ leitura antes do julgamento.
 **Meus eixos** (marque com `x` os que a review realmente menciona):
 
 - [ ] ritmo
-- [ ] atuacao
-- [ ] direcao_imagem
-- [ ] roteiro_estrutura
-- [ ] som_trilha
-- [ ] tom_atmosfera
-- [ ] impacto_emocional
-- [ ] comparacoes
-- [ ] expectativa
-- [ ] critica_social
+- [x] atuacao
+- [x] direcao_imagem
+- [x] roteiro_estrutura
+- [x] som_trilha
+- [x] tom_atmosfera
+- [x] impacto_emocional
+- [x] comparacoes
+- [x] expectativa
+- [x] critica_social
 - [ ] livre — temas: ____________________
 
 **Observação (opcional):** ____________________
@@ -1594,10 +1570,10 @@ leitura antes do julgamento.
 - [ ] ritmo
 - [ ] atuacao
 - [ ] direcao_imagem
-- [ ] roteiro_estrutura
+- [x] roteiro_estrutura
 - [ ] som_trilha
-- [ ] tom_atmosfera
-- [ ] impacto_emocional
+- [x] tom_atmosfera
+- [x] impacto_emocional
 - [ ] comparacoes
 - [ ] expectativa
 - [ ] critica_social
@@ -1615,15 +1591,15 @@ leitura antes do julgamento.
 
 - [ ] ritmo
 - [ ] atuacao
-- [ ] direcao_imagem
+- [x] direcao_imagem
 - [ ] roteiro_estrutura
-- [ ] som_trilha
+- [x] som_trilha
 - [ ] tom_atmosfera
 - [ ] impacto_emocional
 - [ ] comparacoes
 - [ ] expectativa
 - [ ] critica_social
-- [ ] livre — temas: ____________________
+- [x] livre — temas: campanha para apoiar jovem artista
 
 **Observação (opcional):** ____________________
 
@@ -1643,9 +1619,9 @@ leitura antes do julgamento.
 - [ ] tom_atmosfera
 - [ ] impacto_emocional
 - [ ] comparacoes
-- [ ] expectativa
+- [x] expectativa
 - [ ] critica_social
-- [ ] livre — temas: ____________________
+- [x] livre — temas: sessão de filmes no Discord com amigos
 
 **Observação (opcional):** ____________________
 
@@ -1658,14 +1634,14 @@ leitura antes do julgamento.
 **Meus eixos** (marque com `x` os que a review realmente menciona):
 
 - [ ] ritmo
-- [ ] atuacao
+- [x] atuacao
 - [ ] direcao_imagem
 - [ ] roteiro_estrutura
 - [ ] som_trilha
 - [ ] tom_atmosfera
 - [ ] impacto_emocional
 - [ ] comparacoes
-- [ ] expectativa
+- [x] expectativa
 - [ ] critica_social
 - [ ] livre — temas: ____________________
 
@@ -1682,10 +1658,10 @@ leitura antes do julgamento.
 - [ ] ritmo
 - [ ] atuacao
 - [ ] direcao_imagem
-- [ ] roteiro_estrutura
+- [x] roteiro_estrutura
 - [ ] som_trilha
 - [ ] tom_atmosfera
-- [ ] impacto_emocional
+- [x] impacto_emocional
 - [ ] comparacoes
 - [ ] expectativa
 - [ ] critica_social
@@ -1704,12 +1680,12 @@ leitura antes do julgamento.
 - [ ] ritmo
 - [ ] atuacao
 - [ ] direcao_imagem
-- [ ] roteiro_estrutura
+- [x] roteiro_estrutura
 - [ ] som_trilha
 - [ ] tom_atmosfera
-- [ ] impacto_emocional
+- [x] impacto_emocional
 - [ ] comparacoes
-- [ ] expectativa
+- [x] expectativa
 - [ ] critica_social
 - [ ] livre — temas: ____________________
 
@@ -1726,11 +1702,11 @@ leitura antes do julgamento.
 - [ ] ritmo
 - [ ] atuacao
 - [ ] direcao_imagem
-- [ ] roteiro_estrutura
-- [ ] som_trilha
+- [x] roteiro_estrutura
+- [x] som_trilha
 - [ ] tom_atmosfera
-- [ ] impacto_emocional
-- [ ] comparacoes
+- [x] impacto_emocional
+- [x] comparacoes
 - [ ] expectativa
 - [ ] critica_social
 - [ ] livre — temas: ____________________
@@ -1745,17 +1721,17 @@ leitura antes do julgamento.
 
 **Meus eixos** (marque com `x` os que a review realmente menciona):
 
-- [ ] ritmo
-- [ ] atuacao
-- [ ] direcao_imagem
-- [ ] roteiro_estrutura
+- [x] ritmo
+- [x] atuacao
+- [x] direcao_imagem
+- [x] roteiro_estrutura
 - [ ] som_trilha
-- [ ] tom_atmosfera
-- [ ] impacto_emocional
-- [ ] comparacoes
-- [ ] expectativa
-- [ ] critica_social
-- [ ] livre — temas: ____________________
+- [x] tom_atmosfera
+- [x] impacto_emocional
+- [x] comparacoes
+- [x] expectativa
+- [x] critica_social
+- [x] livre — temas: desafio de filmes (Around the World in 30 Days)
 
 **Observação (opcional):** ____________________
 
@@ -1767,7 +1743,7 @@ leitura antes do julgamento.
 
 **Meus eixos** (marque com `x` os que a review realmente menciona):
 
-- [ ] ritmo
+- [x] ritmo
 - [ ] atuacao
 - [ ] direcao_imagem
 - [ ] roteiro_estrutura
@@ -1777,7 +1753,7 @@ leitura antes do julgamento.
 - [ ] comparacoes
 - [ ] expectativa
 - [ ] critica_social
-- [ ] livre — temas: ____________________
+- [x] livre — temas: passageiro folgado em voo, experiência de visualização
 
 **Observação (opcional):** ____________________
 
@@ -1792,10 +1768,10 @@ leitura antes do julgamento.
 - [ ] ritmo
 - [ ] atuacao
 - [ ] direcao_imagem
-- [ ] roteiro_estrutura
+- [x] roteiro_estrutura
 - [ ] som_trilha
 - [ ] tom_atmosfera
-- [ ] impacto_emocional
+- [x] impacto_emocional
 - [ ] comparacoes
 - [ ] expectativa
 - [ ] critica_social
@@ -1816,10 +1792,10 @@ leitura antes do julgamento.
 - [ ] direcao_imagem
 - [ ] roteiro_estrutura
 - [ ] som_trilha
-- [ ] tom_atmosfera
-- [ ] impacto_emocional
+- [x] tom_atmosfera
+- [x] impacto_emocional
 - [ ] comparacoes
-- [ ] expectativa
+- [x] expectativa
 - [ ] critica_social
 - [ ] livre — temas: ____________________
 
@@ -1835,15 +1811,15 @@ leitura antes do julgamento.
 
 - [ ] ritmo
 - [ ] atuacao
-- [ ] direcao_imagem
+- [x] direcao_imagem
 - [ ] roteiro_estrutura
 - [ ] som_trilha
 - [ ] tom_atmosfera
 - [ ] impacto_emocional
-- [ ] comparacoes
-- [ ] expectativa
+- [x] comparacoes
+- [x] expectativa
 - [ ] critica_social
-- [ ] livre — temas: ____________________
+- [x] livre — temas: dinâmica do Letterboxd (New From Friends), assistido no YouTube
 
 **Observação (opcional):** ____________________
 
@@ -1855,16 +1831,16 @@ leitura antes do julgamento.
 
 **Meus eixos** (marque com `x` os que a review realmente menciona):
 
-- [ ] ritmo
-- [ ] atuacao
+- [x] ritmo
+- [x] atuacao
 - [ ] direcao_imagem
-- [ ] roteiro_estrutura
+- [x] roteiro_estrutura
 - [ ] som_trilha
-- [ ] tom_atmosfera
-- [ ] impacto_emocional
+- [x] tom_atmosfera
+- [x] impacto_emocional
 - [ ] comparacoes
 - [ ] expectativa
-- [ ] critica_social
+- [x] critica_social
 - [ ] livre — temas: ____________________
 
 **Observação (opcional):** ____________________
@@ -1887,7 +1863,7 @@ leitura antes do julgamento.
 - [ ] comparacoes
 - [ ] expectativa
 - [ ] critica_social
-- [ ] livre — temas: ____________________
+- [x] livre — temas: entrar em sala errada no cinema, pegar o filme pela metade
 
 **Observação (opcional):** ____________________
 
@@ -1899,17 +1875,17 @@ leitura antes do julgamento.
 
 **Meus eixos** (marque com `x` os que a review realmente menciona):
 
-- [ ] ritmo
-- [ ] atuacao
-- [ ] direcao_imagem
-- [ ] roteiro_estrutura
+- [x] ritmo
+- [x] atuacao
+- [x] direcao_imagem
+- [x] roteiro_estrutura
 - [ ] som_trilha
-- [ ] tom_atmosfera
+- [x] tom_atmosfera
 - [ ] impacto_emocional
 - [ ] comparacoes
 - [ ] expectativa
 - [ ] critica_social
-- [ ] livre — temas: ____________________
+- [x] livre — temas: formato de exibição (IMAX)
 
 **Observação (opcional):** ____________________
 
@@ -1931,7 +1907,7 @@ leitura antes do julgamento.
 - [ ] comparacoes
 - [ ] expectativa
 - [ ] critica_social
-- [ ] livre — temas: ____________________
+- [x] livre — temas: maratona com episódios de podcast sobre o tema do filme
 
 **Observação (opcional):** ____________________
 
@@ -1951,8 +1927,8 @@ leitura antes do julgamento.
 - [ ] tom_atmosfera
 - [ ] impacto_emocional
 - [ ] comparacoes
-- [ ] expectativa
-- [ ] critica_social
+- [x] expectativa
+- [x] critica_social
 - [ ] livre — temas: ____________________
 
 **Observação (opcional):** ____________________
@@ -1967,12 +1943,12 @@ leitura antes do julgamento.
 
 - [ ] ritmo
 - [ ] atuacao
-- [ ] direcao_imagem
-- [ ] roteiro_estrutura
-- [ ] som_trilha
-- [ ] tom_atmosfera
-- [ ] impacto_emocional
-- [ ] comparacoes
+- [x] direcao_imagem
+- [x] roteiro_estrutura
+- [x] som_trilha
+- [x] tom_atmosfera
+- [x] impacto_emocional
+- [x] comparacoes
 - [ ] expectativa
 - [ ] critica_social
 - [ ] livre — temas: ____________________
@@ -1988,15 +1964,15 @@ leitura antes do julgamento.
 **Meus eixos** (marque com `x` os que a review realmente menciona):
 
 - [ ] ritmo
-- [ ] atuacao
+- [x] atuacao
 - [ ] direcao_imagem
-- [ ] roteiro_estrutura
+- [x] roteiro_estrutura
 - [ ] som_trilha
 - [ ] tom_atmosfera
 - [ ] impacto_emocional
 - [ ] comparacoes
 - [ ] expectativa
-- [ ] critica_social
+- [x] critica_social
 - [ ] livre — temas: ____________________
 
 **Observação (opcional):** ____________________
@@ -2012,14 +1988,14 @@ leitura antes do julgamento.
 - [ ] ritmo
 - [ ] atuacao
 - [ ] direcao_imagem
-- [ ] roteiro_estrutura
+- [x] roteiro_estrutura
 - [ ] som_trilha
 - [ ] tom_atmosfera
 - [ ] impacto_emocional
 - [ ] comparacoes
 - [ ] expectativa
 - [ ] critica_social
-- [ ] livre — temas: ____________________
+- [x] livre — temas: recordação, visto há 4 anos com um colega de classe
 
 **Observação (opcional):** ____________________
 
@@ -2032,16 +2008,16 @@ leitura antes do julgamento.
 **Meus eixos** (marque com `x` os que a review realmente menciona):
 
 - [ ] ritmo
-- [ ] atuacao
-- [ ] direcao_imagem
-- [ ] roteiro_estrutura
-- [ ] som_trilha
-- [ ] tom_atmosfera
-- [ ] impacto_emocional
-- [ ] comparacoes
+- [x] atuacao
+- [x] direcao_imagem
+- [x] roteiro_estrutura
+- [x] som_trilha
+- [x] tom_atmosfera
+- [x] impacto_emocional
+- [x] comparacoes
 - [ ] expectativa
 - [ ] critica_social
-- [ ] livre — temas: ____________________
+- [x] livre — temas: filme de maconheiro (stoner film)
 
 **Observação (opcional):** ____________________
 
@@ -2053,9 +2029,9 @@ leitura antes do julgamento.
 
 **Meus eixos** (marque com `x` os que a review realmente menciona):
 
-- [ ] ritmo
-- [ ] atuacao
-- [ ] direcao_imagem
+- [x] ritmo
+- [x] atuacao
+- [x] direcao_imagem
 - [ ] roteiro_estrutura
 - [ ] som_trilha
 - [ ] tom_atmosfera
@@ -2076,14 +2052,14 @@ leitura antes do julgamento.
 **Meus eixos** (marque com `x` os que a review realmente menciona):
 
 - [ ] ritmo
-- [ ] atuacao
+- [x] atuacao
 - [ ] direcao_imagem
-- [ ] roteiro_estrutura
-- [ ] som_trilha
-- [ ] tom_atmosfera
-- [ ] impacto_emocional
-- [ ] comparacoes
-- [ ] expectativa
+- [x] roteiro_estrutura
+- [x] som_trilha
+- [x] tom_atmosfera
+- [x] impacto_emocional
+- [x] comparacoes
+- [x] expectativa
 - [ ] critica_social
 - [ ] livre — temas: ____________________
 
@@ -2097,13 +2073,13 @@ leitura antes do julgamento.
 
 **Meus eixos** (marque com `x` os que a review realmente menciona):
 
-- [ ] ritmo
+- [x] ritmo
 - [ ] atuacao
 - [ ] direcao_imagem
-- [ ] roteiro_estrutura
+- [x] roteiro_estrutura
 - [ ] som_trilha
-- [ ] tom_atmosfera
-- [ ] impacto_emocional
+- [x] tom_atmosfera
+- [x] impacto_emocional
 - [ ] comparacoes
 - [ ] expectativa
 - [ ] critica_social
@@ -2122,12 +2098,12 @@ leitura antes do julgamento.
 - [ ] ritmo
 - [ ] atuacao
 - [ ] direcao_imagem
-- [ ] roteiro_estrutura
+- [x] roteiro_estrutura
 - [ ] som_trilha
 - [ ] tom_atmosfera
 - [ ] impacto_emocional
-- [ ] comparacoes
-- [ ] expectativa
+- [x] comparacoes
+- [x] expectativa
 - [ ] critica_social
 - [ ] livre — temas: ____________________
 
@@ -2148,10 +2124,10 @@ leitura antes do julgamento.
 - [ ] som_trilha
 - [ ] tom_atmosfera
 - [ ] impacto_emocional
-- [ ] comparacoes
+- [x] comparacoes
 - [ ] expectativa
 - [ ] critica_social
-- [ ] livre — temas: ____________________
+- [x] livre — temas: comentário pessoal direto para a diretora/atriz, entrevista
 
 **Observação (opcional):** ____________________
 
@@ -2159,19 +2135,19 @@ leitura antes do julgamento.
 
 ### #098 · `viewing:1437855983` · aftersun (arthouse) · medianas · 3.0★ · 521 chars
 
-> 3 نجوم ⭐️ على شان علاقة الاب و بنته الي حبيتهم و حبيت تمثيلهم و المتعة البصرية و اجواء الهدوء و المناظر و التصوير ممتع جدا و شكرا استديو A24 ولكن السلبيات مافهمت الفلم إلا بعد مابحثت عنه و ماقدر الفلم انه يخليني أتعلق بالشخصيات و اتأثر معهم و مافهمت سالفة الفلم و الهدف منه إلا بعد ما انتهى و ذا شي سئ جدا و أشوف مبالغ فيه التقيمات العاليه أبدا مايستاهل احب الافلام الي مثل الأجواء ذي ولكن الفلم ذا ينقص التقديم الممتاز و التعلق بالشخصيات و توصيل الرساله مثلا فلم Hamnet قدر يوصل لي الرساله و جعلني اتأثر اكثر من ذا الفلم
+> 3 نجوم ⭐️ على شان علاقة الاب و بنته الي حبيتهم و حبيت تمثيلهم و المتعة البصرية و اجواء الهدوء و المناظر و التصوير ممتع جدا و شكرا استديو A24 ولكن السلبيات مافهمت الفلم إلا بعد مابحثت عنه و ماقدر الفلم انه يخليني أتعلق بالشخصيات و اتأثر معهم و مافهمت سالفة الفلم و الهدف منه إلا بعد ما انتهى و ذا شي سئ جدا و أشوف مبالغ فيه التقيمات العاليه أبدا مايستاهل احب الافلام الي مثل الأجواء ذي ولكن الفلم ذا ينقص التقديم الممتاز و التعلق بالشخصيات و توصيل الرساله مثلا فلم Hamnet قدر يوصل لي الرساله و جعلني اتأثر اكثر من ذا الفلم
 
 **Meus eixos** (marque com `x` os que a review realmente menciona):
 
 - [ ] ritmo
-- [ ] atuacao
-- [ ] direcao_imagem
-- [ ] roteiro_estrutura
+- [x] atuacao
+- [x] direcao_imagem
+- [x] roteiro_estrutura
 - [ ] som_trilha
-- [ ] tom_atmosfera
-- [ ] impacto_emocional
-- [ ] comparacoes
-- [ ] expectativa
+- [x] tom_atmosfera
+- [x] impacto_emocional
+- [x] comparacoes
+- [x] expectativa
 - [ ] critica_social
 - [ ] livre — temas: ____________________
 
@@ -2188,10 +2164,10 @@ leitura antes do julgamento.
 - [ ] ritmo
 - [ ] atuacao
 - [ ] direcao_imagem
-- [ ] roteiro_estrutura
+- [x] roteiro_estrutura
 - [ ] som_trilha
 - [ ] tom_atmosfera
-- [ ] impacto_emocional
+- [x] impacto_emocional
 - [ ] comparacoes
 - [ ] expectativa
 - [ ] critica_social
@@ -2207,14 +2183,14 @@ leitura antes do julgamento.
 
 **Meus eixos** (marque com `x` os que a review realmente menciona):
 
-- [ ] ritmo
-- [ ] atuacao
-- [ ] direcao_imagem
-- [ ] roteiro_estrutura
+- [x] ritmo
+- [x] atuacao
+- [x] direcao_imagem
+- [x] roteiro_estrutura
 - [ ] som_trilha
-- [ ] tom_atmosfera
-- [ ] impacto_emocional
-- [ ] comparacoes
+- [x] tom_atmosfera
+- [x] impacto_emocional
+- [x] comparacoes
 - [ ] expectativa
 - [ ] critica_social
 - [ ] livre — temas: ____________________
