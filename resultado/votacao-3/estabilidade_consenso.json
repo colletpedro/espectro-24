@@ -1,9 +1,9 @@
 {
   "n_comparadas": 3990,
-  "fracao_identica": 0.650125313283208,
+  "fracao_identica": 0.6646616541353384,
   "fracao_identica_passada_unica_para_referencia": 0.265,
   "consenso_A": "maioria(passe1, passe2, passe3)",
   "consenso_B": "maioria(passe2, passe3, passe4)",
-  "custo_passe4_usd": 0.08878742319999999,
+  "custo_passe4_usd": 0.0884720984,
   "leitura": "consenso substancialmente mais reprodutível que passada única"
 }
