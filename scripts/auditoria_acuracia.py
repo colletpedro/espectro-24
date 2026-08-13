@@ -394,7 +394,10 @@ def cmd_amostra() -> None:
 
 _RE_BLOCO = re.compile(
     r"^### #(\d+) · `([^`]+)` · .+$", re.MULTILINE)
-_RE_CHECK = re.compile(r"^- \[([ xX])\] (\S+)(?: — temas: (.*))?$", re.MULTILINE)
+# Aceita os DOIS marcadores de lista do markdown (`-` e `*`): um reformatador
+# de markdown troca `-` por `*` sem avisar, e a v1 deste parser só reconhecia
+# `-` — as 1100 linhas de checkbox viravam "nenhum eixo marcado" em silêncio.
+_RE_CHECK = re.compile(r"^[-*] \[([ xX])\] (\S+)(?: — temas: (.*))?$", re.MULTILINE)
 
 
 def ler_anotacoes_humanas(caminho: Path = ARQ_LEITURA) -> dict[str, dict]:
@@ -441,6 +444,23 @@ def ler_anotacoes_humanas(caminho: Path = ARQ_LEITURA) -> dict[str, dict]:
             print(f"  - {a}")
         if len(avisos) > 20:
             print(f"  ... e mais {len(avisos) - 20}")
+
+    # GUARD-RAIL: um arquivo anotado em que NENHUMA review tem marcação não é
+    # um resultado ("o humano não viu eixo em nada"), é falha de parsing — o
+    # formato do checkbox mudou e o regex deixou de casar. A v1 degradava em
+    # silêncio para 100 × `eixos: []` e produzia um relatório inteiro sobre
+    # dado vazio. Falhar aqui é barato; analisar o vazio custou uma rodada.
+    if anotacoes and not any(a["eixos"] for a in anotacoes.values()):
+        n_check = len(_RE_CHECK.findall(texto))
+        raise SystemExit(
+            f"ERRO DE PARSING: {len(anotacoes)} bloco(s) de review lidos em "
+            f"{caminho.name}, e NENHUM tem eixo marcado.\n"
+            f"  linhas de checkbox reconhecidas pelo regex: {n_check}\n"
+            f"  esperado: linhas no formato `- [x] nome_do_eixo` (ou `* [x] ...`)\n"
+            f"Isso quase certamente é o formato do arquivo, não a anotação: um "
+            f"arquivo anotado de verdade tem ao menos uma marcação. Confira o "
+            f"marcador de lista e o caractere dentro dos colchetes antes de "
+            f"rodar as métricas.")
     return anotacoes
 
 
