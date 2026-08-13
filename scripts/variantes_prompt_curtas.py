@@ -1,4 +1,17 @@
-"""[Entregas 2-3] Duas variantes do prompt contra o gabarito humano das 100.
+"""[Entregas 2-3, arquivado após a promoção] Duas variantes do prompt contra o
+gabarito humano das 100.
+
+**ARQUIVADO (sessão 2026-08-13, promoção de A_regra):** A_regra venceu e foi
+promovida a `classificar_10.SYSTEM` — ver `TAXONOMIA_10.md`, seção "Correção
+de recall em review curta". Este módulo fica no repositório como REGISTRO DO
+EXPERIMENTO, não como ferramenta corrente: `SYSTEM_BASELINE` abaixo é uma
+CÓPIA LITERAL, CONGELADA, do prompt de produção de ANTES da promoção — não é
+mais importado de `classificar_10` de propósito, porque depois da promoção
+`classificar_10.SYSTEM` passou a SER o texto de `SYSTEM_A`, e um import ao
+vivo faria a variante "A_regra" deste arquivo colapsar silenciosamente sobre
+"baseline" a cada execução futura, destruindo o registro do que foi
+comparado contra o quê. Se uma sessão futura quiser rodar um novo A/B a
+partir do prompt atual, comece de um módulo novo — não reative este.
 
 O defeito que estas variantes atacam (auditoria de 2026-08-13, ver
 `resultado/auditoria-acuracia/metricas_relatorio.json`): em review de até 200
@@ -62,7 +75,6 @@ import auditoria_acuracia as aa  # noqa: E402
 from classificar_10 import (  # noqa: E402
     EIXOS,
     MODELO,
-    SYSTEM as SYSTEM_BASELINE,
     _normalizar,
     recuperar_eixo,
 )
@@ -73,6 +85,36 @@ from espectro24.synthesize import (  # noqa: E402
 )
 
 SAIDA = RAIZ / "resultado" / "auditoria-acuracia" / "variantes"
+
+# CONGELADO — cópia literal de `classificar_10.SYSTEM` de ANTES da promoção
+# de A_regra (sessão 2026-08-13). Ver nota no topo do módulo: propositalmente
+# NÃO importado ao vivo. O cabeçalho (título + definições dos 10 eixos) é
+# byte-idêntico ao de produção; o que muda depois disto é só o bloco REGRAS.
+SYSTEM_BASELINE = """Você classifica UMA review de cinema por vez segundo uma taxonomia fechada de EIXOS.
+
+Os eixos disponíveis são exatamente estes:
+
+- ritmo: velocidade, duração, arrasta/prende, edição no sentido de andamento, tédio ou tensão sustentada.
+- atuacao: desempenho do elenco, performance de um ator ou atriz, elenco, direção de atores.
+- direcao_imagem: fotografia, planos, cor, luz, composição, cenário, figurino, efeitos visuais, direção no sentido visual.
+- roteiro_estrutura: história, enredo, estrutura, diálogos, personagens, final, coerência, previsibilidade.
+- som_trilha: trilha sonora, música, som, mixagem, silêncio, canções.
+- tom_atmosfera: clima, atmosfera, humor, registro, se é sério ou cômico, sensação de estranheza, ambiência.
+- impacto_emocional: o efeito que o filme causou em quem escreveu, ou na plateia da sessão — chorou, riu, se arrepiou, sentiu nojo, saiu abalado, se identificou, teve pesadelo, desistiu no meio de tédio, ficou indiferente. Inclui reação FÍSICA e VISCERAL e a reação da PLATEIA.
+- comparacoes: comparação com outro filme, outra obra, outro diretor, com o livro, com a franquia, com o trabalho anterior do mesmo autor.
+- expectativa: o que a pessoa esperava ANTES de assistir e por quê — hype, recomendação de alguém, pressão de já ter ouvido falar, motivo de ter ido ver, expectativa frustrada ou superada.
+- critica_social: crítica ao que o filme REPRESENTA ou faz socialmente — a mensagem, a ideologia, a política, a representação, o estúdio ou a franquia, o que a indústria está fazendo. Distinta de crítica ao que o filme É (isso é roteiro, ritmo, etc.).
+
+REGRAS:
+1. Atribua TODOS os eixos que a review realmente menciona, e SÓ esses. Uma review pode ter vários eixos, ou um só.
+2. Seja ESTRITO. Só atribua um eixo se a review disser algo sobre ele. Nota alta ou entusiasmo genérico SEM descrever efeito nenhum ("obra-prima", "amei", "5 estrelas", "peak cinema") NÃO é impacto_emocional nem nenhum outro eixo — é elogio sem eixo. Mas se a review DESCREVE o efeito (chorei, ri alto, passei mal, dormi, saí do cinema), isso É impacto_emocional.
+3. Se a review fala de algo que não cabe em NENHUM eixo acima, inclua "livre" na lista.
+4. Sempre que incluir "livre", escreva em `temas_livres` de 1 a 2 rótulos curtos (2 a 4 palavras, em português, minúsculas) descrevendo o que não coube.
+5. Se a review não diz nada classificável em nenhum eixo (só xingamento, só piada solta, só emoji, só nota), devolva `["livre"]` com um tema livre que descreva o que ela é.
+6. NÃO conte nada. NÃO some. NÃO comente. Devolva só o JSON.
+
+Responda APENAS com um objeto JSON, sem cercas de código, exatamente neste formato:
+{"eixos": ["..."], "temas_livres": ["..."]}"""
 ARQ_COMPARACAO = SAIDA / "comparacao.json"
 
 CONCORRENCIA = 8

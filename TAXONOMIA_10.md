@@ -18,6 +18,67 @@ A taxonomia sob teste, e o que mudou desde o gate de 8 eixos:
 
 ---
 
+## Atualização (2026-08-13) — Correção de recall em review curta: promoção de A_regra
+
+**`taxonomia_id`: `11871105c0d3` → `ebab2667de74`.** Mudou só o bloco
+REGRAS do prompt — a lista de eixos e as 10 definições acima seguem
+byte-idênticas (travado em `tests/test_promocao_a_regra.py`). Isso invalida
+por construção toda classificação persistida sob o id antigo, incluindo os
+números de Entregas 2-5 deste documento (medidos sobre 3948 reviews, passada
+única) — eles ficam como registro histórico da decisão de taxonomia (8→10
+eixos), não como número de produção corrente. Os números correntes vivem em
+`resultado/votacao-3/relatorio.json`, reclassificado sob o id novo.
+
+### O defeito, medido
+
+Uma auditoria humana de 100 reviews (`resultado/auditoria-acuracia/`, sessão
+2026-08-13) anotou o gabarito à mão contra o consenso de votação de 3 e achou
+recall **0,35** em reviews ≤200 chars — **23,4% do corpus de produção**
+(932/3990) — contra **0,88** acima de 400 chars, com **precisão estável em
+0,87-0,93 em toda faixa**. O modelo não trocava de eixo em review curta: ele
+**omitia** eixo. 27 das 100 reviews auditadas tinham recall zero (23 delas
+≤200 chars); em 12 dessas 27 as três passadas foram **unânimes em `livre`**
+quando o humano via eixo real — unanimidade não protegia contra o defeito, e
+em alguns casos correlacionava com ele (consenso "confiante" e errado).
+
+Projeção de viés sobre o corpus de produção inteiro (`obs × precisão ÷
+recall`, por faixa de comprimento): o efeito é **não-uniforme entre eixos** —
+`expectativa` e `roteiro_estrutura` ~2,0×, `impacto_emocional` ~1,95×, contra
+`direcao_imagem` 1,12× e `critica_social` 0,85×. Viés uniforme preservaria o
+lift entre eixos; viés não-uniforme reordena o ranking — é por isso que a
+correção não é cosmética (ver reclassificação completa e Entrega 5 do
+relatório de promoção, que mede se a reordenação prevista se confirmou).
+
+### O que foi testado, e por quê A venceu
+
+Duas variantes de REGRAS testadas contra o gabarito humano (3 passadas cada,
+consenso 2/3, `scripts/variantes_prompt_curtas.py`, arquivado após esta
+promoção — resultado completo em `resultado/auditoria-acuracia/variantes/`):
+
+| | mudança | resultado (bootstrap pareado, B=5000, vs. baseline) |
+|---|---|---|
+| **A (`regra`) — PROMOVIDA** | brevidade não é ausência de conteúdo; `livre` redefinido por ASSUNTO (não fala do filme) em vez de por profundidade (fala pouco do filme) | recall ≤200 chars 0,35→0,61 (δ +0,265, IC95 [+0,171, +0,370]); recall geral 0,69→0,76 (δ +0,076, IC95 [+0,030, +0,124]); reviews com recall zero 27→5; consensos vazios 8→0; **precisão sem perda detectável** (δ IC95 [-0,035, +0,030], cruza zero) |
+| B (`fewshot`) — REJEITADA | mesmas regras de A + 6 exemplos resolvidos de review curta | os exemplos curtos ancoraram o modelo: degradou review longa (recall 401-800 0,888→0,847, 801+ 0,880→0,805) e a concordância exata caiu ABAIXO do baseline (0,180→0,170) |
+
+B repete o padrão que o experimento Ollama do projeto já tinha achado:
+instrução adicional pode degradar em vez de ajudar. **Resultado negativo
+registrado, não escondido** — B não foi promovida.
+
+### Reprodução
+
+```bash
+python scripts/variantes_prompt_curtas.py passes     # já rodado, em disco
+python scripts/variantes_prompt_curtas.py comparar    # resultado/auditoria-acuracia/variantes/comparacao.json
+python -m pytest tests/test_promocao_a_regra.py tests/test_variantes_prompt.py
+```
+
+Reclassificação completa do corpus de produção sob o id novo, estabilidade
+do consenso e recalibração do nulo de permutação / margem de lift / estado
+`contraste`: ver o relatório de promoção desta sessão (`git log`, commits
+"reclassificacao: promoção de A_regra") e `resultado/votacao-3/`.
+
+---
+
 ## Entrega 1 — Inspeção de `assistir`
 
 39 ocorrências no gate, em 13 filmes, 20 delas em reviews que caíram só em

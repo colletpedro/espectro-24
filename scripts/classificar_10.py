@@ -20,6 +20,38 @@ O que mudou na taxonomia, e por quê (decisão registrada após o gate):
                        de 30 exemplos já caem nos 10 eixos (14 em
                        `expectativa`, 14 em `impacto_emocional`).
 
+**Correção de recall em review curta (sessão 2026-08-13, `taxonomia_id`
+`11871105c0d3` → `ebab2667de74`).** Auditoria humana de 100 reviews contra o
+consenso de votação de 3 (`resultado/auditoria-acuracia/`) achou recall
+0,35 em reviews ≤200 chars (23,4% do corpus de produção) contra 0,88 acima
+de 400 — com precisão ESTÁVEL em 0,87-0,93 em toda faixa: o modelo não
+trocava de eixo em texto curto, ele OMITIA eixo. 27 de 100 reviews tinham
+recall zero (23 delas ≤200 chars); em 12 as três passadas foram unânimes em
+`livre`, quando o humano via eixo real — unanimidade não protegia contra o
+defeito.
+
+Duas variantes de REGRAS foram testadas contra o mesmo gabarito humano
+(`scripts/variantes_prompt_curtas.py`, arquivado após esta promoção,
+resultado completo em `resultado/auditoria-acuracia/variantes/`):
+
+  A (`regra`, PROMOVIDA) — brevidade não é ausência de conteúdo; `livre`
+      redefinido por ASSUNTO (a review não fala do filme) em vez de por
+      profundidade (fala pouco do filme). Bootstrap pareado (B=5000): recall
+      ≤200 chars 0,35→0,61 (δ +0,265, IC95 [+0,171, +0,370]), recall geral
+      0,69→0,76 (δ +0,076, IC95 [+0,030, +0,124]), reviews com recall zero
+      27→5, consensos vazios 8→0 — **sem perda de precisão detectável** (δ
+      precisão geral IC95 [-0,035, +0,030], cruza zero).
+  B (`fewshot`, REJEITADA) — as mesmas regras de A + 6 exemplos resolvidos
+      de review curta. Resultado NEGATIVO: os exemplos curtos ancoraram o
+      modelo e degradaram review longa (recall 401-800: 0,888→0,847;
+      801+: 0,880→0,805), com concordância exata caindo ABAIXO do baseline
+      (0,180→0,170). Mesmo padrão que o experimento Ollama do projeto já
+      tinha registrado: instrução adicional pode degradar em vez de ajudar.
+
+Só o bloco REGRAS mudou — lista de eixos e as 10 definições seguem
+byte-idênticas (testado em `tests/test_variantes_prompt.py` e
+`tests/test_promocao_a_regra.py`).
+
 Arquitetura, a de sempre: **o LLM classifica review a review, o CÓDIGO soma.**
 Uma chamada por review, a review sozinha no prompt, sem nenhuma contagem à
 vista. Toda frequência, fração e lift deste relatório é `Counter`.
@@ -111,11 +143,12 @@ Os eixos disponíveis são exatamente estes:
 
 REGRAS:
 1. Atribua TODOS os eixos que a review realmente menciona, e SÓ esses. Uma review pode ter vários eixos, ou um só.
-2. Seja ESTRITO. Só atribua um eixo se a review disser algo sobre ele. Nota alta ou entusiasmo genérico SEM descrever efeito nenhum ("obra-prima", "amei", "5 estrelas", "peak cinema") NÃO é impacto_emocional nem nenhum outro eixo — é elogio sem eixo. Mas se a review DESCREVE o efeito (chorei, ri alto, passei mal, dormi, saí do cinema), isso É impacto_emocional.
-3. Se a review fala de algo que não cabe em NENHUM eixo acima, inclua "livre" na lista.
+2. Só atribua um eixo se a review disser algo sobre ele. Nota alta ou entusiasmo genérico SEM descrever efeito nenhum ("obra-prima", "amei", "5 estrelas", "peak cinema") NÃO é impacto_emocional nem nenhum outro eixo — é elogio sem eixo. Mas um efeito DECLARADO é eixo mesmo dito em três palavras: "chorei", "não gostei", "odiei", "me deu sono", "passei mal", "ri alto" são impacto_emocional.
+3. "livre" é sobre ASSUNTO, não sobre tamanho. Use "livre" quando a review fala de outra coisa que não o filme: a logística da sessão (legenda, dublagem, cinema, streaming, avião), a vida de quem escreveu, uma piada sobre outro assunto, um recado para outra pessoa. NÃO use "livre" só porque a review é curta ou diz pouco.
 4. Sempre que incluir "livre", escreva em `temas_livres` de 1 a 2 rótulos curtos (2 a 4 palavras, em português, minúsculas) descrevendo o que não coube.
-5. Se a review não diz nada classificável em nenhum eixo (só xingamento, só piada solta, só emoji, só nota), devolva `["livre"]` com um tema livre que descreva o que ela é.
-6. NÃO conte nada. NÃO some. NÃO comente. Devolva só o JSON.
+5. Uma review pode ter "livre" JUNTO com eixos: a parte que fala do filme vira eixo, a parte que não fala vira "livre". Devolva `["livre"]` sozinho só quando NADA na review fala do filme.
+6. Review curta menciona POUCOS eixos, não ZERO eixos. Brevidade não é ausência de conteúdo. Uma frase seca sobre os personagens é roteiro_estrutura; um xingamento ao filme é impacto_emocional; uma piada cujo alvo é o enredo é roteiro_estrutura. Na dúvida entre atribuir o eixo que a review claramente toca e devolver "livre", atribua o eixo.
+7. NÃO conte nada. NÃO some. NÃO comente. Devolva só o JSON.
 
 Responda APENAS com um objeto JSON, sem cercas de código, exatamente neste formato:
 {"eixos": ["..."], "temas_livres": ["..."]}"""
