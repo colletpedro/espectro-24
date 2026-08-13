@@ -1,0 +1,688 @@
+{
+  "fonte": {
+    "amostra_producao": "resultado/votacao-3/amostra.json",
+    "consenso": "resultado/votacao-3/consenso.jsonl",
+    "metricas_auditoria": "resultado/auditoria-acuracia/metricas_relatorio.json",
+    "n_auditadas": 100
+  },
+  "distribuicao": {
+    "n_reviews": 3990,
+    "por_faixa": {
+      "150-200": {
+        "n": 932,
+        "fracao": 0.23358395989974937
+      },
+      "201-300": {
+        "n": 995,
+        "fracao": 0.24937343358395989
+      },
+      "301-400": {
+        "n": 590,
+        "fracao": 0.14786967418546365
+      },
+      "401+": {
+        "n": 1473,
+        "fracao": 0.36917293233082704
+      }
+    },
+    "ate_200_por_bucket": {
+      "medianas": {
+        "curtas": 314,
+        "total": 1329,
+        "fracao": 0.236267870579383
+      },
+      "negativas": {
+        "curtas": 314,
+        "total": 1322,
+        "fracao": 0.23751891074130105
+      },
+      "positivas": {
+        "curtas": 304,
+        "total": 1339,
+        "fracao": 0.2270351008215086
+      }
+    },
+    "abaixo_de_min_chars_150": {
+      "n": 9,
+      "fracao": 0.002255639097744361,
+      "nota": "cascata de fallback quando o bucket seca; min_chars=150 vale para o caminho normal da seleção"
+    }
+  },
+  "vies": {
+    "por_eixo": {
+      "ritmo": {
+        "observado": 1345,
+        "estimado": 1561.7,
+        "ic95_estimado": [
+          1209.0,
+          3314.4
+        ],
+        "fator": 1.161,
+        "por_faixa": {
+          "<=200 (piso)": {
+            "observado": 220,
+            "recall_auditado": 0.5,
+            "precisao_auditada": 1.0,
+            "auditoria_tp_fn": [
+              3,
+              3
+            ],
+            "estimado": 440.0,
+            "nao_vistas": 220.0
+          },
+          "201-400": {
+            "observado": 459,
+            "recall_auditado": 0.6666666666666666,
+            "precisao_auditada": 0.8,
+            "auditoria_tp_fn": [
+              4,
+              2
+            ],
+            "estimado": 550.8,
+            "nao_vistas": 91.8
+          },
+          "401-800": {
+            "observado": 325,
+            "recall_auditado": 0.8333333333333334,
+            "precisao_auditada": 0.7142857142857143,
+            "auditoria_tp_fn": [
+              5,
+              1
+            ],
+            "estimado": 278.6,
+            "nao_vistas": -46.4
+          },
+          "801+": {
+            "observado": 341,
+            "recall_auditado": 1.0,
+            "precisao_auditada": 0.8571428571428571,
+            "auditoria_tp_fn": [
+              12,
+              0
+            ],
+            "estimado": 292.3,
+            "nao_vistas": -48.7
+          }
+        }
+      },
+      "atuacao": {
+        "observado": 1160,
+        "estimado": 1622.8,
+        "ic95_estimado": [
+          1211.2,
+          5526.0
+        ],
+        "fator": 1.399,
+        "por_faixa": {
+          "<=200 (piso)": {
+            "observado": 131,
+            "recall_auditado": 0.8333333333333334,
+            "precisao_auditada": 1.0,
+            "auditoria_tp_fn": [
+              5,
+              1
+            ],
+            "estimado": 157.2,
+            "nao_vistas": 26.2
+          },
+          "201-400": {
+            "observado": 412,
+            "recall_auditado": 0.5,
+            "precisao_auditada": 1.0,
+            "auditoria_tp_fn": [
+              1,
+              1
+            ],
+            "estimado": 824.0,
+            "nao_vistas": 412.0
+          },
+          "401-800": {
+            "observado": 322,
+            "recall_auditado": 1.0,
+            "precisao_auditada": 1.0,
+            "auditoria_tp_fn": [
+              12,
+              0
+            ],
+            "estimado": 322.0,
+            "nao_vistas": 0.0
+          },
+          "801+": {
+            "observado": 295,
+            "recall_auditado": 0.9230769230769231,
+            "precisao_auditada": 1.0,
+            "auditoria_tp_fn": [
+              12,
+              1
+            ],
+            "estimado": 319.6,
+            "nao_vistas": 24.6
+          }
+        }
+      },
+      "direcao_imagem": {
+        "observado": 1296,
+        "estimado": 1450.1,
+        "ic95_estimado": [
+          1299.4,
+          2289.9
+        ],
+        "fator": 1.119,
+        "por_faixa": {
+          "<=200 (piso)": {
+            "observado": 143,
+            "recall_auditado": 0.8333333333333334,
+            "precisao_auditada": 1.0,
+            "auditoria_tp_fn": [
+              5,
+              1
+            ],
+            "estimado": 171.6,
+            "nao_vistas": 28.6
+          },
+          "201-400": {
+            "observado": 418,
+            "recall_auditado": 0.8571428571428571,
+            "precisao_auditada": 1.0,
+            "auditoria_tp_fn": [
+              6,
+              1
+            ],
+            "estimado": 487.7,
+            "nao_vistas": 69.7
+          },
+          "401-800": {
+            "observado": 350,
+            "recall_auditado": 0.8333333333333334,
+            "precisao_auditada": 0.9090909090909091,
+            "auditoria_tp_fn": [
+              10,
+              2
+            ],
+            "estimado": 381.8,
+            "nao_vistas": 31.8
+          },
+          "801+": {
+            "observado": 385,
+            "recall_auditado": 0.9411764705882353,
+            "precisao_auditada": 1.0,
+            "auditoria_tp_fn": [
+              16,
+              1
+            ],
+            "estimado": 409.1,
+            "nao_vistas": 24.1
+          }
+        }
+      },
+      "roteiro_estrutura": {
+        "observado": 1757,
+        "estimado": 3512.1,
+        "ic95_estimado": [
+          2412.6,
+          6635.4
+        ],
+        "fator": 1.999,
+        "por_faixa": {
+          "<=200 (piso)": {
+            "observado": 235,
+            "recall_auditado": 0.2916666666666667,
+            "precisao_auditada": 1.0,
+            "auditoria_tp_fn": [
+              7,
+              17
+            ],
+            "estimado": 805.7,
+            "nao_vistas": 570.7
+          },
+          "201-400": {
+            "observado": 607,
+            "recall_auditado": 0.35714285714285715,
+            "precisao_auditada": 1.0,
+            "auditoria_tp_fn": [
+              5,
+              9
+            ],
+            "estimado": 1699.6,
+            "nao_vistas": 1092.6
+          },
+          "401-800": {
+            "observado": 456,
+            "recall_auditado": 1.0,
+            "precisao_auditada": 1.0,
+            "auditoria_tp_fn": [
+              13,
+              0
+            ],
+            "estimado": 456.0,
+            "nao_vistas": 0.0
+          },
+          "801+": {
+            "observado": 459,
+            "recall_auditado": 0.8333333333333334,
+            "precisao_auditada": 1.0,
+            "auditoria_tp_fn": [
+              15,
+              3
+            ],
+            "estimado": 550.8,
+            "nao_vistas": 91.8
+          }
+        }
+      },
+      "som_trilha": {
+        "observado": 539,
+        "estimado": 762.2,
+        "ic95_estimado": [
+          555.4,
+          2269.1
+        ],
+        "fator": 1.414,
+        "por_faixa": {
+          "<=200 (piso)": {
+            "observado": 65,
+            "recall_auditado": 0.3333333333333333,
+            "precisao_auditada": 1.0,
+            "auditoria_tp_fn": [
+              1,
+              2
+            ],
+            "estimado": 195.0,
+            "nao_vistas": 130.0
+          },
+          "201-400": {
+            "observado": 176,
+            "recall_auditado": 0.6,
+            "precisao_auditada": 1.0,
+            "auditoria_tp_fn": [
+              3,
+              2
+            ],
+            "estimado": 293.3,
+            "nao_vistas": 117.3
+          },
+          "401-800": {
+            "observado": 129,
+            "recall_auditado": 1.0,
+            "precisao_auditada": 1.0,
+            "auditoria_tp_fn": [
+              6,
+              0
+            ],
+            "estimado": 129.0,
+            "nao_vistas": 0.0
+          },
+          "801+": {
+            "observado": 169,
+            "recall_auditado": 1.0,
+            "precisao_auditada": 0.8571428571428571,
+            "auditoria_tp_fn": [
+              6,
+              0
+            ],
+            "estimado": 144.9,
+            "nao_vistas": -24.1
+          }
+        }
+      },
+      "tom_atmosfera": {
+        "observado": 1044,
+        "estimado": 1382.3,
+        "ic95_estimado": [
+          992.5,
+          3246.8
+        ],
+        "fator": 1.324,
+        "por_faixa": {
+          "<=200 (piso)": {
+            "observado": 134,
+            "recall_auditado": 0.42857142857142855,
+            "precisao_auditada": 1.0,
+            "auditoria_tp_fn": [
+              3,
+              4
+            ],
+            "estimado": 312.7,
+            "nao_vistas": 178.7
+          },
+          "201-400": {
+            "observado": 333,
+            "recall_auditado": 0.5,
+            "precisao_auditada": 0.6666666666666666,
+            "auditoria_tp_fn": [
+              2,
+              2
+            ],
+            "estimado": 444.0,
+            "nao_vistas": 111.0
+          },
+          "401-800": {
+            "observado": 303,
+            "recall_auditado": 0.8333333333333334,
+            "precisao_auditada": 0.9090909090909091,
+            "auditoria_tp_fn": [
+              10,
+              2
+            ],
+            "estimado": 330.5,
+            "nao_vistas": 27.5
+          },
+          "801+": {
+            "observado": 274,
+            "recall_auditado": 0.8571428571428571,
+            "precisao_auditada": 0.9230769230769231,
+            "auditoria_tp_fn": [
+              12,
+              2
+            ],
+            "estimado": 295.1,
+            "nao_vistas": 21.1
+          }
+        }
+      },
+      "impacto_emocional": {
+        "observado": 1833,
+        "estimado": 3576.6,
+        "ic95_estimado": [
+          2410.7,
+          6682.6
+        ],
+        "fator": 1.951,
+        "por_faixa": {
+          "<=200 (piso)": {
+            "observado": 349,
+            "recall_auditado": 0.2222222222222222,
+            "precisao_auditada": 1.0,
+            "auditoria_tp_fn": [
+              6,
+              21
+            ],
+            "estimado": 1570.5,
+            "nao_vistas": 1221.5
+          },
+          "201-400": {
+            "observado": 671,
+            "recall_auditado": 0.5384615384615384,
+            "precisao_auditada": 0.875,
+            "auditoria_tp_fn": [
+              7,
+              6
+            ],
+            "estimado": 1090.4,
+            "nao_vistas": 419.4
+          },
+          "401-800": {
+            "observado": 433,
+            "recall_auditado": 0.8333333333333334,
+            "precisao_auditada": 0.9090909090909091,
+            "auditoria_tp_fn": [
+              10,
+              2
+            ],
+            "estimado": 472.4,
+            "nao_vistas": 39.4
+          },
+          "801+": {
+            "observado": 380,
+            "recall_auditado": 0.7857142857142857,
+            "precisao_auditada": 0.9166666666666666,
+            "auditoria_tp_fn": [
+              11,
+              3
+            ],
+            "estimado": 443.3,
+            "nao_vistas": 63.3
+          }
+        }
+      },
+      "comparacoes": {
+        "observado": 1733,
+        "estimado": 2463.4,
+        "ic95_estimado": [
+          1759.3,
+          5189.4
+        ],
+        "fator": 1.421,
+        "por_faixa": {
+          "<=200 (piso)": {
+            "observado": 210,
+            "recall_auditado": 0.25,
+            "precisao_auditada": 0.6666666666666666,
+            "auditoria_tp_fn": [
+              2,
+              6
+            ],
+            "estimado": 560.0,
+            "nao_vistas": 350.0
+          },
+          "201-400": {
+            "observado": 585,
+            "recall_auditado": 0.5454545454545454,
+            "precisao_auditada": 1.0,
+            "auditoria_tp_fn": [
+              6,
+              5
+            ],
+            "estimado": 1072.5,
+            "nao_vistas": 487.5
+          },
+          "401-800": {
+            "observado": 464,
+            "recall_auditado": 0.9,
+            "precisao_auditada": 0.6923076923076923,
+            "auditoria_tp_fn": [
+              9,
+              1
+            ],
+            "estimado": 356.9,
+            "nao_vistas": -107.1
+          },
+          "801+": {
+            "observado": 474,
+            "recall_auditado": 0.9444444444444444,
+            "precisao_auditada": 0.9444444444444444,
+            "auditoria_tp_fn": [
+              17,
+              1
+            ],
+            "estimado": 474.0,
+            "nao_vistas": 0.0
+          }
+        }
+      },
+      "expectativa": {
+        "observado": 1103,
+        "estimado": 2228.2,
+        "ic95_estimado": [
+          1106.6,
+          7446.8
+        ],
+        "fator": 2.02,
+        "por_faixa": {
+          "<=200 (piso)": {
+            "observado": 180,
+            "recall_auditado": 0.14285714285714285,
+            "precisao_auditada": 1.0,
+            "auditoria_tp_fn": [
+              2,
+              12
+            ],
+            "estimado": 1260.0,
+            "nao_vistas": 1080.0
+          },
+          "201-400": {
+            "observado": 370,
+            "recall_auditado": 0.3333333333333333,
+            "precisao_auditada": 0.3333333333333333,
+            "auditoria_tp_fn": [
+              1,
+              2
+            ],
+            "estimado": 370.0,
+            "nao_vistas": 0.0
+          },
+          "401-800": {
+            "observado": 299,
+            "recall_auditado": 0.75,
+            "precisao_auditada": 1.0,
+            "auditoria_tp_fn": [
+              9,
+              3
+            ],
+            "estimado": 398.7,
+            "nao_vistas": 99.7
+          },
+          "801+": {
+            "observado": 254,
+            "recall_auditado": 0.8181818181818182,
+            "precisao_auditada": 0.6428571428571429,
+            "auditoria_tp_fn": [
+              9,
+              2
+            ],
+            "estimado": 199.6,
+            "nao_vistas": -54.4
+          }
+        }
+      },
+      "critica_social": {
+        "observado": 976,
+        "estimado": 827.1,
+        "ic95_estimado": [
+          682.3,
+          1747.7
+        ],
+        "fator": 0.847,
+        "por_faixa": {
+          "<=200 (piso)": {
+            "observado": 119,
+            "recall_auditado": 0.6,
+            "precisao_auditada": 0.6,
+            "auditoria_tp_fn": [
+              3,
+              2
+            ],
+            "estimado": 119.0,
+            "nao_vistas": -0.0
+          },
+          "201-400": {
+            "observado": 308,
+            "recall_auditado": 0.8,
+            "precisao_auditada": 0.8,
+            "auditoria_tp_fn": [
+              4,
+              1
+            ],
+            "estimado": 308.0,
+            "nao_vistas": 0.0
+          },
+          "401-800": {
+            "observado": 246,
+            "recall_auditado": 1.0,
+            "precisao_auditada": 0.6,
+            "auditoria_tp_fn": [
+              3,
+              0
+            ],
+            "estimado": 147.6,
+            "nao_vistas": -98.4
+          },
+          "801+": {
+            "observado": 303,
+            "recall_auditado": 0.7,
+            "precisao_auditada": 0.5833333333333334,
+            "auditoria_tp_fn": [
+              7,
+              3
+            ],
+            "estimado": 252.5,
+            "nao_vistas": -50.5
+          }
+        }
+      }
+    },
+    "ranking": [
+      {
+        "eixo": "impacto_emocional",
+        "posicao_publicada": 1,
+        "posicao_corrigida": 1,
+        "movimento": 0,
+        "share_publicado": 14.3,
+        "share_corrigido": 18.4
+      },
+      {
+        "eixo": "roteiro_estrutura",
+        "posicao_publicada": 2,
+        "posicao_corrigida": 2,
+        "movimento": 0,
+        "share_publicado": 13.7,
+        "share_corrigido": 18.1
+      },
+      {
+        "eixo": "comparacoes",
+        "posicao_publicada": 3,
+        "posicao_corrigida": 3,
+        "movimento": 0,
+        "share_publicado": 13.6,
+        "share_corrigido": 12.7
+      },
+      {
+        "eixo": "expectativa",
+        "posicao_publicada": 7,
+        "posicao_corrigida": 4,
+        "movimento": 3,
+        "share_publicado": 8.6,
+        "share_corrigido": 11.5
+      },
+      {
+        "eixo": "atuacao",
+        "posicao_publicada": 6,
+        "posicao_corrigida": 5,
+        "movimento": 1,
+        "share_publicado": 9.1,
+        "share_corrigido": 8.4
+      },
+      {
+        "eixo": "ritmo",
+        "posicao_publicada": 4,
+        "posicao_corrigida": 6,
+        "movimento": -2,
+        "share_publicado": 10.5,
+        "share_corrigido": 8.1
+      },
+      {
+        "eixo": "direcao_imagem",
+        "posicao_publicada": 5,
+        "posicao_corrigida": 7,
+        "movimento": -2,
+        "share_publicado": 10.1,
+        "share_corrigido": 7.5
+      },
+      {
+        "eixo": "tom_atmosfera",
+        "posicao_publicada": 8,
+        "posicao_corrigida": 8,
+        "movimento": 0,
+        "share_publicado": 8.2,
+        "share_corrigido": 7.1
+      },
+      {
+        "eixo": "critica_social",
+        "posicao_publicada": 9,
+        "posicao_corrigida": 9,
+        "movimento": 0,
+        "share_publicado": 7.6,
+        "share_corrigido": 4.3
+      },
+      {
+        "eixo": "som_trilha",
+        "posicao_publicada": 10,
+        "posicao_corrigida": 10,
+        "movimento": 0,
+        "share_publicado": 4.2,
+        "share_corrigido": 3.9
+      }
+    ]
+  },
+  "ressalva": "IC95 largo: as celulas (faixa x eixo) da auditoria tem poucas dezenas de eventos e 1/recall explode em recall baixo. O achado defensavel e o fator NAO ser uniforme entre eixos, nao o valor absoluto de cada um."
+}
