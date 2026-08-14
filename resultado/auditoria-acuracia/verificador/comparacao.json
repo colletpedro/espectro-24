@@ -1,0 +1,389 @@
+{
+  "base_A_regra": {
+    "eixo": {
+      "tp": 35,
+      "fp": 37,
+      "fn": 3,
+      "precisao": 0.4861111111111111,
+      "recall": 0.9210526315789473,
+      "f1": 0.6363636363636364
+    },
+    "micro_geral": {
+      "tp": 289,
+      "fp": 63,
+      "fn": 90,
+      "precisao": 0.8210227272727273,
+      "recall": 0.762532981530343,
+      "f1": 0.7906976744186047
+    },
+    "n_marcadas": 72
+  },
+  "V1_regua": {
+    "reprodutibilidade": {
+      "n": 72,
+      "as_3_passadas_identicas": 55,
+      "fracao_identica": 0.7638888888888888,
+      "passe1_difere_do_consenso3": 4,
+      "fracao_passe1_difere": 0.05555555555555555
+    },
+    "custo_3_passadas": {
+      "n_chamadas": 216,
+      "uso": {
+        "prompt_tokens": 152967,
+        "completion_tokens": 6074,
+        "cache_hit_tokens": 121216,
+        "cache_miss_tokens": 31751
+      },
+      "custo_usd": 0.0064852648,
+      "custo_por_chamada": 3.0024374074074077e-05
+    },
+    "passe1": {
+      "eixo": {
+        "tp": 20,
+        "fp": 3,
+        "fn": 18,
+        "precisao": 0.8695652173913043,
+        "recall": 0.5263157894736842,
+        "f1": 0.6557377049180327
+      },
+      "micro_geral": {
+        "tp": 274,
+        "fp": 29,
+        "fn": 105,
+        "precisao": 0.9042904290429042,
+        "recall": 0.7229551451187335,
+        "f1": 0.8035190615835777
+      },
+      "n_marcadas": 23,
+      "remocoes": {
+        "n_removidas": 49,
+        "acerto_gabarito_tambem_remove": 34,
+        "dano_gabarito_mantinha": 15,
+        "taxa_de_acerto_das_remocoes": 0.6938775510204082,
+        "falsos_positivos_que_sobreviveram": 3,
+        "ids_dano": [
+          "viewing:1386291162",
+          "viewing:1405458158",
+          "viewing:1418805746",
+          "viewing:1421876073",
+          "viewing:1429269629",
+          "viewing:1431008461",
+          "viewing:1433154456",
+          "viewing:1436204229",
+          "viewing:1438567149",
+          "viewing:1438669140",
+          "viewing:1439470047",
+          "viewing:1439627998",
+          "viewing:247844011",
+          "viewing:412005651",
+          "viewing:415737961"
+        ]
+      },
+      "bootstrap_vs_base": {
+        "precisao_geral": {
+          "delta_mediano": 0.0832,
+          "ic95": [
+            0.0571,
+            0.1134
+          ],
+          "cruza_zero": false
+        },
+        "recall_geral": {
+          "delta_mediano": -0.0391,
+          "ic95": [
+            -0.0587,
+            -0.0225
+          ],
+          "cruza_zero": false
+        },
+        "precisao_eixo": {
+          "delta_mediano": 0.3833,
+          "ic95": [
+            0.235,
+            0.5312
+          ],
+          "cruza_zero": false
+        },
+        "recall_eixo": {
+          "delta_mediano": -0.3922,
+          "ic95": [
+            -0.5588,
+            -0.2432
+          ],
+          "cruza_zero": false
+        },
+        "f1_eixo": {
+          "delta_mediano": 0.0202,
+          "ic95": [
+            -0.1469,
+            0.1763
+          ],
+          "cruza_zero": true
+        }
+      }
+    },
+    "consenso3": {
+      "eixo": {
+        "tp": 19,
+        "fp": 4,
+        "fn": 19,
+        "precisao": 0.8260869565217391,
+        "recall": 0.5,
+        "f1": 0.6229508196721312
+      },
+      "micro_geral": {
+        "tp": 273,
+        "fp": 30,
+        "fn": 106,
+        "precisao": 0.900990099009901,
+        "recall": 0.7203166226912929,
+        "f1": 0.8005865102639296
+      },
+      "n_marcadas": 23,
+      "remocoes": {
+        "n_removidas": 49,
+        "acerto_gabarito_tambem_remove": 33,
+        "dano_gabarito_mantinha": 16,
+        "taxa_de_acerto_das_remocoes": 0.673469387755102,
+        "falsos_positivos_que_sobreviveram": 4,
+        "ids_dano": [
+          "viewing:1405458158",
+          "viewing:1418805746",
+          "viewing:1421876073",
+          "viewing:1424202073",
+          "viewing:1429269629",
+          "viewing:1431008461",
+          "viewing:1433154456",
+          "viewing:1436204229",
+          "viewing:1438567149",
+          "viewing:1438669140",
+          "viewing:1439470047",
+          "viewing:1439627998",
+          "viewing:247844011",
+          "viewing:412005651",
+          "viewing:415737961",
+          "viewing:4737762"
+        ]
+      },
+      "bootstrap_vs_base": {
+        "precisao_geral": {
+          "delta_mediano": 0.08,
+          "ic95": [
+            0.0542,
+            0.1094
+          ],
+          "cruza_zero": false
+        },
+        "recall_geral": {
+          "delta_mediano": -0.0418,
+          "ic95": [
+            -0.0612,
+            -0.0247
+          ],
+          "cruza_zero": false
+        },
+        "precisao_eixo": {
+          "delta_mediano": 0.34,
+          "ic95": [
+            0.1885,
+            0.4899
+          ],
+          "cruza_zero": false
+        },
+        "recall_eixo": {
+          "delta_mediano": -0.4211,
+          "ic95": [
+            -0.5882,
+            -0.2667
+          ],
+          "cruza_zero": false
+        },
+        "f1_eixo": {
+          "delta_mediano": -0.0119,
+          "ic95": [
+            -0.1767,
+            0.1433
+          ],
+          "cruza_zero": true
+        }
+      }
+    }
+  },
+  "V2_alvo": {
+    "reprodutibilidade": {
+      "n": 72,
+      "as_3_passadas_identicas": 64,
+      "fracao_identica": 0.8888888888888888,
+      "passe1_difere_do_consenso3": 2,
+      "fracao_passe1_difere": 0.027777777777777776
+    },
+    "custo_3_passadas": {
+      "n_chamadas": 216,
+      "uso": {
+        "prompt_tokens": 152535,
+        "completion_tokens": 7764,
+        "cache_hit_tokens": 121216,
+        "cache_miss_tokens": 31319
+      },
+      "custo_usd": 0.0068979848000000005,
+      "custo_por_chamada": 3.193511481481482e-05
+    },
+    "passe1": {
+      "eixo": {
+        "tp": 27,
+        "fp": 7,
+        "fn": 11,
+        "precisao": 0.7941176470588235,
+        "recall": 0.7105263157894737,
+        "f1": 0.75
+      },
+      "micro_geral": {
+        "tp": 281,
+        "fp": 33,
+        "fn": 98,
+        "precisao": 0.8949044585987261,
+        "recall": 0.741424802110818,
+        "f1": 0.8109668109668109
+      },
+      "n_marcadas": 34,
+      "remocoes": {
+        "n_removidas": 38,
+        "acerto_gabarito_tambem_remove": 30,
+        "dano_gabarito_mantinha": 8,
+        "taxa_de_acerto_das_remocoes": 0.7894736842105263,
+        "falsos_positivos_que_sobreviveram": 7,
+        "ids_dano": [
+          "viewing:1424202073",
+          "viewing:1429269629",
+          "viewing:1431008461",
+          "viewing:1433154456",
+          "viewing:1436204229",
+          "viewing:1438669140",
+          "viewing:1439627998",
+          "viewing:415737961"
+        ]
+      },
+      "bootstrap_vs_base": {
+        "precisao_geral": {
+          "delta_mediano": 0.0738,
+          "ic95": [
+            0.0493,
+            0.1026
+          ],
+          "cruza_zero": false
+        },
+        "recall_geral": {
+          "delta_mediano": -0.0206,
+          "ic95": [
+            -0.0365,
+            -0.0082
+          ],
+          "cruza_zero": false
+        },
+        "precisao_eixo": {
+          "delta_mediano": 0.3049,
+          "ic95": [
+            0.1923,
+            0.4362
+          ],
+          "cruza_zero": false
+        },
+        "recall_eixo": {
+          "delta_mediano": -0.2069,
+          "ic95": [
+            -0.3488,
+            -0.093
+          ],
+          "cruza_zero": false
+        },
+        "f1_eixo": {
+          "delta_mediano": 0.1135,
+          "ic95": [
+            -0.0053,
+            0.233
+          ],
+          "cruza_zero": true
+        }
+      }
+    },
+    "consenso3": {
+      "eixo": {
+        "tp": 26,
+        "fp": 6,
+        "fn": 12,
+        "precisao": 0.8125,
+        "recall": 0.6842105263157895,
+        "f1": 0.7428571428571429
+      },
+      "micro_geral": {
+        "tp": 280,
+        "fp": 32,
+        "fn": 99,
+        "precisao": 0.8974358974358975,
+        "recall": 0.7387862796833773,
+        "f1": 0.8104196816208393
+      },
+      "n_marcadas": 32,
+      "remocoes": {
+        "n_removidas": 40,
+        "acerto_gabarito_tambem_remove": 31,
+        "dano_gabarito_mantinha": 9,
+        "taxa_de_acerto_das_remocoes": 0.775,
+        "falsos_positivos_que_sobreviveram": 6,
+        "ids_dano": [
+          "viewing:1421876073",
+          "viewing:1424202073",
+          "viewing:1429269629",
+          "viewing:1431008461",
+          "viewing:1433154456",
+          "viewing:1436204229",
+          "viewing:1438669140",
+          "viewing:1439627998",
+          "viewing:415737961"
+        ]
+      },
+      "bootstrap_vs_base": {
+        "precisao_geral": {
+          "delta_mediano": 0.0763,
+          "ic95": [
+            0.0516,
+            0.1056
+          ],
+          "cruza_zero": false
+        },
+        "recall_geral": {
+          "delta_mediano": -0.0233,
+          "ic95": [
+            -0.0396,
+            -0.0104
+          ],
+          "cruza_zero": false
+        },
+        "precisao_eixo": {
+          "delta_mediano": 0.3221,
+          "ic95": [
+            0.2035,
+            0.4615
+          ],
+          "cruza_zero": false
+        },
+        "recall_eixo": {
+          "delta_mediano": -0.2353,
+          "ic95": [
+            -0.381,
+            -0.1111
+          ],
+          "cruza_zero": false
+        },
+        "f1_eixo": {
+          "delta_mediano": 0.1054,
+          "ic95": [
+            -0.0172,
+            0.2328
+          ],
+          "cruza_zero": true
+        }
+      }
+    }
+  }
+}

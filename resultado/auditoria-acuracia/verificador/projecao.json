@@ -1,0 +1,190 @@
+{
+  "natureza": "PROJECAO, nao medicao — a medicao exige rodar o verificador sobre o corpus inteiro",
+  "freq_atual": 0.7551,
+  "por_variante": {
+    "V1_regua/passe1": {
+      "fator": 0.319,
+      "freq_projetada": 0.2412,
+      "motivo_indefinido": null,
+      "lift": {
+        "modelo": "remocao aleatoria nao-seletiva de impacto_emocional com prob 1-0.319; suposicao conservadora",
+        "fator_aplicado": 0.3194444444444445,
+        "n_filmes": 35,
+        "por_margem": {
+          "0.1": {
+            "n_pares_acima": 84,
+            "nulo_media": 66.92,
+            "fracao_ruido": 0.7967,
+            "n_filmes_com_algum": 34
+          },
+          "0.15": {
+            "n_pares_acima": 42,
+            "nulo_media": 26.07,
+            "fracao_ruido": 0.6207,
+            "n_filmes_com_algum": 23
+          },
+          "0.2": {
+            "n_pares_acima": 21,
+            "nulo_media": 8.88,
+            "fracao_ruido": 0.4227,
+            "n_filmes_com_algum": 12
+          },
+          "0.25": {
+            "n_pares_acima": 12,
+            "nulo_media": 3.4,
+            "fracao_ruido": 0.2832,
+            "n_filmes_com_algum": 8
+          }
+        },
+        "barbie": {
+          "melhor_eixo": "critica_social",
+          "melhor_lift": 0.19999999999999996,
+          "impacto_emocional_lift": 0.024999999999999994,
+          "ie_freqs": {
+            "negativas": 0.25,
+            "medianas": 0.225,
+            "positivas": 0.225
+          }
+        }
+      }
+    },
+    "V1_regua/consenso3": {
+      "fator": 0.319,
+      "freq_projetada": 0.2412,
+      "motivo_indefinido": null,
+      "lift": {
+        "modelo": "remocao aleatoria nao-seletiva de impacto_emocional com prob 1-0.319; suposicao conservadora",
+        "fator_aplicado": 0.3194444444444445,
+        "n_filmes": 35,
+        "por_margem": {
+          "0.1": {
+            "n_pares_acima": 84,
+            "nulo_media": 66.92,
+            "fracao_ruido": 0.7967,
+            "n_filmes_com_algum": 34
+          },
+          "0.15": {
+            "n_pares_acima": 42,
+            "nulo_media": 26.07,
+            "fracao_ruido": 0.6207,
+            "n_filmes_com_algum": 23
+          },
+          "0.2": {
+            "n_pares_acima": 21,
+            "nulo_media": 8.88,
+            "fracao_ruido": 0.4227,
+            "n_filmes_com_algum": 12
+          },
+          "0.25": {
+            "n_pares_acima": 12,
+            "nulo_media": 3.4,
+            "fracao_ruido": 0.2832,
+            "n_filmes_com_algum": 8
+          }
+        },
+        "barbie": {
+          "melhor_eixo": "critica_social",
+          "melhor_lift": 0.19999999999999996,
+          "impacto_emocional_lift": 0.024999999999999994,
+          "ie_freqs": {
+            "negativas": 0.25,
+            "medianas": 0.225,
+            "positivas": 0.225
+          }
+        }
+      }
+    },
+    "V2_alvo/passe1": {
+      "fator": 0.472,
+      "freq_projetada": 0.3566,
+      "motivo_indefinido": null,
+      "lift": {
+        "modelo": "remocao aleatoria nao-seletiva de impacto_emocional com prob 1-0.472; suposicao conservadora",
+        "fator_aplicado": 0.47222222222222227,
+        "n_filmes": 35,
+        "por_margem": {
+          "0.1": {
+            "n_pares_acima": 88,
+            "nulo_media": 68.26,
+            "fracao_ruido": 0.7756,
+            "n_filmes_com_algum": 34
+          },
+          "0.15": {
+            "n_pares_acima": 43,
+            "nulo_media": 26.9,
+            "fracao_ruido": 0.6256,
+            "n_filmes_com_algum": 23
+          },
+          "0.2": {
+            "n_pares_acima": 24,
+            "nulo_media": 9.22,
+            "fracao_ruido": 0.3841,
+            "n_filmes_com_algum": 15
+          },
+          "0.25": {
+            "n_pares_acima": 15,
+            "nulo_media": 3.49,
+            "fracao_ruido": 0.2324,
+            "n_filmes_com_algum": 11
+          }
+        },
+        "barbie": {
+          "melhor_eixo": "critica_social",
+          "melhor_lift": 0.19999999999999996,
+          "impacto_emocional_lift": 0.025000000000000022,
+          "ie_freqs": {
+            "negativas": 0.3,
+            "medianas": 0.3,
+            "positivas": 0.325
+          }
+        }
+      }
+    },
+    "V2_alvo/consenso3": {
+      "fator": 0.444,
+      "freq_projetada": 0.3356,
+      "motivo_indefinido": null,
+      "lift": {
+        "modelo": "remocao aleatoria nao-seletiva de impacto_emocional com prob 1-0.444; suposicao conservadora",
+        "fator_aplicado": 0.44444444444444453,
+        "n_filmes": 35,
+        "por_margem": {
+          "0.1": {
+            "n_pares_acima": 87,
+            "nulo_media": 68.2,
+            "fracao_ruido": 0.784,
+            "n_filmes_com_algum": 34
+          },
+          "0.15": {
+            "n_pares_acima": 43,
+            "nulo_media": 26.68,
+            "fracao_ruido": 0.6206,
+            "n_filmes_com_algum": 23
+          },
+          "0.2": {
+            "n_pares_acima": 24,
+            "nulo_media": 9.12,
+            "fracao_ruido": 0.38,
+            "n_filmes_com_algum": 15
+          },
+          "0.25": {
+            "n_pares_acima": 12,
+            "nulo_media": 3.47,
+            "fracao_ruido": 0.2891,
+            "n_filmes_com_algum": 8
+          }
+        },
+        "barbie": {
+          "melhor_eixo": "critica_social",
+          "melhor_lift": 0.19999999999999996,
+          "impacto_emocional_lift": 0.025000000000000022,
+          "ie_freqs": {
+            "negativas": 0.275,
+            "medianas": 0.3,
+            "positivas": 0.325
+          }
+        }
+      }
+    }
+  }
+}
