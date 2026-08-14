@@ -173,10 +173,83 @@ sustentar, a saturação relatada nas três tentativas acima é em boa parte
 um artefato do MODELO over-marcando, não uma propriedade do corpus tão
 extrema quanto 75,5% sugere. O terceiro teste (definição apertada) já
 mostrou que o modelo não obedece a instrução textual para parar de
-over-marcar — o que resolveria isso é matéria aberta (Seção 8).
+over-marcar — **mas a Seção 5b abaixo resolve isso por arquitetura.**
 
 Fonte: `scripts/metricas_lift.py`, `scripts/variante_impacto_estrito.py`,
 `resultado/votacao-3/metricas_lift.json`.
+
+---
+
+## 5b. O passe de VERIFICAÇÃO — a correção que funcionou
+
+**Medido em 2026-08-14, depois das três refutações acima.** Um estágio
+separado, rodando APÓS o consenso, só sobre as reviews em que
+`impacto_emocional` está no conjunto consensual. Recebe o texto e a
+afirmação de que o eixo foi marcado; devolve confirma/remove mais a frase
+literal que justificou. Não reapresenta a taxonomia — verificar é pergunta
+mais fácil que classificar, e reapresentá-la recriaria a tarefa difícil.
+
+Por construção o passe **só remove**: recall só pode cair, precisão só pode
+subir, teto em P=1,000 / R=0,921.
+
+Duas variantes testadas. A diferença entre elas é o achado de desenho:
+
+| | | contra o gabarito fechado | remoções |
+|---|---|---|---|
+| base (`A_regra`) | — | P=0,486 R=0,921 F1=0,636 | — |
+| **V1 `regua`** | régua declarativa | P=0,870 R=0,526 F1=0,656 | 49: 34 acerto / 15 dano (69%) |
+| **V2 `alvo`** | a mesma régua como PROCEDIMENTO — identificar o ALVO da frase num campo estruturado ANTES de decidir | **P=0,794 R=0,711 F1=0,750** | 38: 30 acerto / **8 dano** (79%) |
+
+**V1 reprova** no critério (ganho de precisão +0,383 contra perda de recall
+−0,392 — corta demais e leva corretas junto). **V2 passa** (+0,305 contra
+−0,207). Forçar o compromisso com o alvo antes do veredito é o que separa
+as duas.
+
+**O número que decide a adoção** — micro geral, tudo contra o gabarito
+fechado:
+
+| | precisão | recall |
+|---|---:|---:|
+| prompt antigo | 0,858 | 0,715 |
+| `A_regra` (produção hoje) | 0,821 | 0,763 |
+| **`A_regra` + V2/passada única** | **0,895** | **0,741** |
+
+A perda de precisão que a promoção de `A_regra` custou (Seção 4) é
+**recuperada com folga, sem devolver o ganho de recall** — a combinação
+domina o prompt antigo nos dois eixos simultaneamente.
+
+**Votação no verificador NÃO é necessária.** Reprodutibilidade das 3
+passadas: V2 **88,9%** (V1 76,4%). Em V2 a passada única difere do consenso
+em 2 de 72 reviews e tem F1 ligeiramente melhor (0,750 vs 0,743) — passada
+única basta, e o custo cai a um terço. Isto contrasta com a CLASSIFICAÇÃO,
+que precisou de votação (26,5% de reprodutibilidade em passada única): é
+evidência direta de que verificar é de fato a tarefa mais estável.
+
+**Projeção no corpus** (declarada como projeção, via `fator_pareado`):
+`impacto_emocional` iria de 75,5% para **35,7%** — 3º lugar, entre
+`comparacoes` (39,7%) e `direcao_imagem` (33,4%), dentro da faixa dos
+outros eixos. **A de-saturação acontece.** Mas o lift se recupera pouco: a
+20pp seriam 15/35 filmes com 38,4% de ruído (hoje 13/35 e 41,1%) — melhor
+nos dois eixos, ainda longe de ≥18/35 com ≤35%. E `barbie` segue com
+`critica_social` (0,200) como eixo do contraste; `impacto_emocional` sai de
+0,000 para só 0,025. **A saturação não era a causa principal do problema de
+lift** — corrigi-la melhora pouco a margem.
+
+**Auditoria do verificador**, pela `frase` que ele é obrigado a citar: nos
+8 danos de V2 o modo de falha é único e nomeável — **ele cita UMA frase que
+justifica, não a MAIS FORTE**. Em 6 dos 8, a review contém veredicto seco E
+efeito genuíno, e ele ancora no veredicto (cita "I love it so much"
+ignorando "A stirring and baffling work"; cita o veredicto sueco ignorando
+"lugnar det mig"). O passo 1 do prompt não manda procurar exaustivamente a
+evidência mais forte — alvo concreto para uma V3, não corrigido aqui.
+
+**Custo:** 216 chamadas (3 passadas × 72) = US$ 0,0069. Extrapolado ao
+corpus com passada única: ~3013 chamadas ≈ **US$ 0,10** (cache hit de 79,5%
+na medição; numa corrida grande tende a subir, então a estimativa é
+conservadora por cima).
+
+Fonte: `scripts/verificador_impacto.py`,
+`resultado/auditoria-acuracia/verificador/`.
 
 ---
 
@@ -234,17 +307,19 @@ Fonte: `VOTACAO_3_A_REGRA.md` (Entrega 5).
 
 ## 8. O que NÃO foi medido — em aberto para o desenho do schema
 
-- **Por que o modelo over-marca `impacto_emocional` mesmo sob instrução
-  explícita contra isso, em dois pontos do prompt.** Três tentativas de
-  correção por prompt falharam (Seção 5). Se a frequência real for ~40% e
-  não 75,5% (Seção 4/5), vale investigar arquitetura em vez de wording —
-  ex.: um segundo passe de VERIFICAÇÃO que audite as marcações de
-  `impacto_emocional` de um primeiro passe contra a régua de
-  `REGRA_ANOTACAO.md`, em vez de pedir para o classificador original ser
-  mais rigoroso consigo mesmo.
+- **~~Por que o modelo over-marca `impacto_emocional`~~ — RESOLVIDO por
+  arquitetura, ver Seção 5b.** O passe de verificação separado leva a
+  precisão de 0,486 para 0,794 com passada única. Fica em aberto o modo de
+  falha DELE: cita uma frase que justifica em vez da mais forte, o que
+  causa 8 danos em 72. Uma V3 que mande varrer a review inteira antes de
+  escolher a frase é o próximo passo natural, não medido.
 - **A precisão de `impacto_emocional` medida (0,486) vem de n=100.** Não
   há intervalo de confiança propagado para a projeção de frequência real
-  da Seção 5; ela é direcional, não um número para citar com precisão.
+  da Seção 5; ela é direcional, não um número para citar com precisão. O
+  mesmo vale para a projeção de 35,7% pós-verificação (Seção 5b).
+- **O verificador foi validado só nas 100 auditadas.** Rodá-lo sobre o
+  corpus (3013 reviews, ~US$ 0,10) é decisão pendente do dono do projeto —
+  nada foi reclassificado.
 - **Os outros 9 eixos não passaram pela mesma auditoria de gabarito.** Só
   `impacto_emocional` teve inconsistência achada e corrigida — não porque
   os outros estejam confirmados limpos, mas porque a busca dirigida que os
@@ -256,8 +331,12 @@ Fonte: `VOTACAO_3_A_REGRA.md` (Entrega 5).
   recalculados sob o gabarito corrigido** — a correção rodou só sobre as
   100 auditadas. O corpus de 3990 continua classificado sob `A_regra` como
   estava; nenhuma reclassificação foi feita nesta fase.
-- **Nenhuma medição de custo de uma eventual arquitetura de verificação**
-  (segundo passe) foi feita — é especulação de próximo passo, não plano.
+- **O lift continua sendo o problema não resolvido.** Mesmo com a
+  de-saturação projetada (75,5%→35,7%), a margem de 20pp entrega 15/35
+  filmes com 38,4% de ruído — melhor que os 13/35 e 41,1% de hoje, longe
+  do alvo de ≥18/35 com ≤35%. A saturação de `impacto_emocional` não era a
+  causa principal da fraqueza do lift, e nenhuma das quatro intervenções
+  desta fase a resolveu.
 
 ---
 
@@ -268,6 +347,8 @@ python scripts/acuracia_final.py               # Seção 4
 python scripts/metricas_lift.py                 # Seções 5-6
 python scripts/comparacao_a_regra.py             # Seção 7 (dados)
 python scripts/variante_impacto_estrito.py comparar   # Seção 5, hipótese 3
+python scripts/verificador_impacto.py comparar    # Seção 5b
+python scripts/verificador_impacto.py projetar    # Seção 5b (projeção)
 ```
 
 Testes: `tests/test_promocao_a_regra.py`, `tests/test_variantes_prompt.py`,

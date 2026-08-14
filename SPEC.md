@@ -2278,7 +2278,7 @@ Custo estimado: no pior caso ~100 requisições extras por filme novo (uma por r
 > eixo isolado enxerga isso, e é a explicação de por que a magnitude erra
 > mais que a direção.
 
-> #### Instrução não remove o que a distribuição do material impõe (v1.9.7)
+> #### Instrução não remove o que a distribuição do material impõe — a saída é arquitetura (v1.9.7)
 >
 > **O padrão, com as ocorrências que o sustentam.** Quando um defeito vem do
 > MATERIAL (o que as reviews de fato dizem, na proporção em que dizem) e não
@@ -2337,8 +2337,33 @@ Custo estimado: no pior caso ~100 requisições extras por filme novo (uma por r
 > está em JULGAMENTO DE CONTEÚDO (esta frase é ou não é `impacto_emocional`)
 > — o código não tem como decidir isso sozinho, então a arquitetura que
 > resolveria não é "mover para o código", é um SEGUNDO PASSE que audite o
-> primeiro contra a régua (`REGRA_ANOTACAO.md`) — não tentado ainda, listado
-> em aberto em `CLASSIFICACAO_CONSOLIDADO.md` §8.
+> primeiro contra a régua (`REGRA_ANOTACAO.md`).
+>
+> **QUARTA OCORRÊNCIA, e a primeira que CONFIRMA a saída (2026-08-14).** O
+> segundo passe foi construído e medido (`scripts/verificador_impacto.py`,
+> `CLASSIFICACAO_CONSOLIDADO.md` §5b): estágio separado, rodando após o
+> consenso, pergunta binária e local, sem reapresentar a taxonomia. Levou a
+> precisão de `impacto_emocional` de **0,486 para 0,794** com queda de
+> recall de 0,921 para 0,711 — e a combinação `A_regra` + verificador
+> **domina o prompt antigo nos dois eixos** (micro geral P 0,895/R 0,741
+> contra P 0,858/R 0,715). O padrão se fecha: mudar QUEM DECIDE funcionou
+> onde três formulações de instrução ao mesmo decisor falharam.
+>
+> **Dois detalhes de desenho que a medição isolou, e que valem para o
+> próximo passe de verificação que este projeto escrever:**
+> - **Procedimento vence regra declarativa.** Duas variantes do verificador
+>   foram testadas com a MESMA régua. A que só declarava (confirma isto,
+>   remove aquilo) cortou demais — 49 remoções, 69% de acerto, perda de
+>   recall MAIOR que o ganho de precisão, reprovada. A que transformava a
+>   régua em PROCEDIMENTO — identificar o ALVO da frase num campo
+>   estruturado ANTES de decidir — fez 38 remoções com 79% de acerto e
+>   passou. Forçar o compromisso com o passo intermediário, em campo
+>   próprio da saída, é o que separou as duas.
+> - **Verificar é mais estável que classificar, medido.** A classificação
+>   precisou de votação de 3 (26,5% de reprodutibilidade em passada única).
+>   O verificador tem **88,9%** — passada única basta, e o custo cai a um
+>   terço. Não presumir: medir, porque a tarefa mais simples pode dispensar
+>   o mecanismo que a difícil exigiu.
 >
 > **O que este padrão NÃO diz.** Não diz que toda instrução falha — as 7
 > regras de `A_regra` (§ correção de recall em review curta) SÃO instrução,
