@@ -96,5 +96,115 @@
         "motivo": "#086 efeito declarado: 'want us to feel all of Evelyn's paralyzing overstimulation'"
       }
     ]
+  },
+  {
+    "descricao": "Segunda rodada da correcao de impacto_emocional: decisoes dos grupos B (10) e C (7 de 11) dos 28 pendentes da rodada anterior. Grupo A (7) fica marcado sem alteracao. Zero adicoes nesta rodada.",
+    "backup": "resultado/auditoria-acuracia/leitura.md.bak-1",
+    "checkboxes_antes": 444,
+    "checkboxes_depois": 427,
+    "alteracoes": [
+      {
+        "id": "viewing:1435157409",
+        "eixo": "impacto_emocional",
+        "acao": "remover",
+        "motivo": "#012 preferencia hiperbolica ('rather stare at a black screen'), nao efeito descrito"
+      },
+      {
+        "id": "viewing:1437439025",
+        "eixo": "impacto_emocional",
+        "acao": "remover",
+        "motivo": "#020 'decepcionou' = veredicto contra expectativa, nao efeito"
+      },
+      {
+        "id": "viewing:1438256609",
+        "eixo": "impacto_emocional",
+        "acao": "remover",
+        "motivo": "#038 reflexao poetica sobre o tema do filme, nao efeito sobre quem assistiu"
+      },
+      {
+        "id": "viewing:1438518572",
+        "eixo": "impacto_emocional",
+        "acao": "remover",
+        "motivo": "#065 reflexao poetica sobre o tema do filme, nao efeito sobre quem assistiu"
+      },
+      {
+        "id": "viewing:63821426",
+        "eixo": "impacto_emocional",
+        "acao": "remover",
+        "motivo": "#051 'hearts are broken' descreve os PERSONAGENS, nao o espectador"
+      },
+      {
+        "id": "viewing:42666450",
+        "eixo": "impacto_emocional",
+        "acao": "remover",
+        "motivo": "#066 'prevented a sense of dread from FORMING' = o filme nao entrega, nao efeito"
+      },
+      {
+        "id": "viewing:1401811917",
+        "eixo": "impacto_emocional",
+        "acao": "remover",
+        "motivo": "#071 'faltou emocao' = o filme nao entrega, nao efeito sobre o espectador"
+      },
+      {
+        "id": "viewing:1435302077",
+        "eixo": "impacto_emocional",
+        "acao": "remover",
+        "motivo": "#077 'deixa a desejar' = veredicto, nao efeito"
+      },
+      {
+        "id": "viewing:1435820955",
+        "eixo": "impacto_emocional",
+        "acao": "remover",
+        "motivo": "#099 piada sobre personagem idiota, sem efeito pessoal descrito"
+      },
+      {
+        "id": "viewing:1435947309",
+        "eixo": "impacto_emocional",
+        "acao": "remover",
+        "motivo": "#072 'no da NAAADAAAA de miedo' = o filme nao entrega (efeito ausente), nao efeito"
+      },
+      {
+        "id": "viewing:310070546",
+        "eixo": "impacto_emocional",
+        "acao": "remover",
+        "motivo": "#003 'no emotional bonding, no eroticism, zero intensity' descreve o que o FILME nao entrega"
+      },
+      {
+        "id": "viewing:1439459822",
+        "eixo": "impacto_emocional",
+        "acao": "remover",
+        "motivo": "#024 'wow moments' generico, sem efeito especifico descrito"
+      },
+      {
+        "id": "viewing:415968879",
+        "eixo": "impacto_emocional",
+        "acao": "remover",
+        "motivo": "#033 roleplay retorico dos Simpsons, nao efeito descrito"
+      },
+      {
+        "id": "viewing:1431368105",
+        "eixo": "impacto_emocional",
+        "acao": "remover",
+        "motivo": "#044 'a bit cringe' e veredicto sobre a cena, nao efeito"
+      },
+      {
+        "id": "viewing:1438967239",
+        "eixo": "impacto_emocional",
+        "acao": "remover",
+        "motivo": "#076 'detestar los personajes... odiooo' e sobre os PERSONAGENS (roteiro), nao efeito proprio"
+      },
+      {
+        "id": "viewing:1416457627",
+        "eixo": "impacto_emocional",
+        "acao": "remover",
+        "motivo": "#092 'nightmare fuel' qualifica a cena (visual), nao efeito declarado sobre quem assistiu"
+      },
+      {
+        "id": "viewing:1437855983",
+        "eixo": "impacto_emocional",
+        "acao": "remover",
+        "motivo": "#098 'nao conseguiu me fazer apegar as personagens' = o filme nao entrega, nao efeito"
+      }
+    ]
   }
 ]

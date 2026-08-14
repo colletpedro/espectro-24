@@ -1,0 +1,22 @@
+{
+  "descricao": "Segunda rodada da correcao de impacto_emocional: decisoes dos grupos B (10) e C (7 de 11) dos 28 pendentes da rodada anterior. Grupo A (7) fica marcado sem alteracao. Zero adicoes nesta rodada.",
+  "decisoes": [
+    {"id": "viewing:1435157409", "remover": ["impacto_emocional"], "motivo": "#012 preferencia hiperbolica ('rather stare at a black screen'), nao efeito descrito"},
+    {"id": "viewing:1437439025", "remover": ["impacto_emocional"], "motivo": "#020 'decepcionou' = veredicto contra expectativa, nao efeito"},
+    {"id": "viewing:1438256609", "remover": ["impacto_emocional"], "motivo": "#038 reflexao poetica sobre o tema do filme, nao efeito sobre quem assistiu"},
+    {"id": "viewing:1438518572", "remover": ["impacto_emocional"], "motivo": "#065 reflexao poetica sobre o tema do filme, nao efeito sobre quem assistiu"},
+    {"id": "viewing:63821426", "remover": ["impacto_emocional"], "motivo": "#051 'hearts are broken' descreve os PERSONAGENS, nao o espectador"},
+    {"id": "viewing:42666450", "remover": ["impacto_emocional"], "motivo": "#066 'prevented a sense of dread from FORMING' = o filme nao entrega, nao efeito"},
+    {"id": "viewing:1401811917", "remover": ["impacto_emocional"], "motivo": "#071 'faltou emocao' = o filme nao entrega, nao efeito sobre o espectador"},
+    {"id": "viewing:1435302077", "remover": ["impacto_emocional"], "motivo": "#077 'deixa a desejar' = veredicto, nao efeito"},
+    {"id": "viewing:1435820955", "remover": ["impacto_emocional"], "motivo": "#099 piada sobre personagem idiota, sem efeito pessoal descrito"},
+    {"id": "viewing:1435947309", "remover": ["impacto_emocional"], "motivo": "#072 'no da NAAADAAAA de miedo' = o filme nao entrega (efeito ausente), nao efeito"},
+    {"id": "viewing:310070546", "remover": ["impacto_emocional"], "motivo": "#003 'no emotional bonding, no eroticism, zero intensity' descreve o que o FILME nao entrega"},
+    {"id": "viewing:1439459822", "remover": ["impacto_emocional"], "motivo": "#024 'wow moments' generico, sem efeito especifico descrito"},
+    {"id": "viewing:415968879", "remover": ["impacto_emocional"], "motivo": "#033 roleplay retorico dos Simpsons, nao efeito descrito"},
+    {"id": "viewing:1431368105", "remover": ["impacto_emocional"], "motivo": "#044 'a bit cringe' e veredicto sobre a cena, nao efeito"},
+    {"id": "viewing:1438967239", "remover": ["impacto_emocional"], "motivo": "#076 'detestar los personajes... odiooo' e sobre os PERSONAGENS (roteiro), nao efeito proprio"},
+    {"id": "viewing:1416457627", "remover": ["impacto_emocional"], "motivo": "#092 'nightmare fuel' qualifica a cena (visual), nao efeito declarado sobre quem assistiu"},
+    {"id": "viewing:1437855983", "remover": ["impacto_emocional"], "motivo": "#098 'nao conseguiu me fazer apegar as personagens' = o filme nao entrega, nao efeito"}
+  ]
+}

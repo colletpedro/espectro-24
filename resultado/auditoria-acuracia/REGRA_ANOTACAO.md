@@ -66,6 +66,43 @@ outro lado.
 | "nightmare fuel", "cringe" | **caso a caso** | se descreve o que causou em quem assistiu, marca; se qualifica a cena, não |
 | review em língua que o anotador não domina | **anotar mesmo assim, e registrar a dúvida** | pular enviesa o gabarito para as línguas que o anotador lê |
 
+### Casos de fronteira difíceis — a rodada de 11 (2026-08-14)
+
+A correção do gabarito levantou 28 casos que não cabiam nas linhas acima.
+17 foram resolvidos por analogia direta às linhas existentes. Os 11 abaixo
+são os que exigiram a régua entrar em detalhe novo — o registro de cada um
+existe para que o próximo caso parecido não precise ser decidido de novo.
+
+**REMOVER — não é efeito, é outra coisa:**
+
+| id | frase que decidiu | por quê |
+|---|---|---|
+| `viewing:310070546` | "No emotional bonding, no eroticism, zero intensity" | descreve o que o FILME não entrega (a história não convence), não o que aconteceu com quem assistiu — mesma linha de "faltou emoção" |
+| `viewing:1439459822` | "there are too many wow moments" | "wow moments" sem dizer QUAL efeito (chorou? riu?) é intensificador genérico, primo de "obra-prima" — entusiasmo sem efeito descrito |
+| `viewing:415968879` | "…and all the kids cheered! but i didn't cheer. i stood right up and started shouting" | **caso limite decidido pela AUSÊNCIA de detalhe, não pela presença**: "started shouting" é comportamento, mas o gatilho é indignação com o roteiro (fim do filme), não uma reação visceral ao filme como obra — mais perto de `critica_social`/`roteiro_estrutura` que de efeito emocional puro |
+| `viewing:1431368105` | "The sex scene was a bit cringe i wont lie" | "cringe" aqui qualifica UMA CENA específica (avaliação de conteúdo), não descreve o que aconteceu com quem assistiu — companheiro do `nightmare fuel` do lado "não marca" |
+| `viewing:1438967239` | "que manera de detestar a los personajes... odiooo" | o alvo do ódio são os PERSONAGENS ("los personajes"), não o filme como experiência — isso é crítica de `roteiro_estrutura` com intensidade emocional na escrita, não `impacto_emocional` sobre quem assistiu |
+| `viewing:1416457627` | "The uncanny cgi human cat morphs are nightmare fuel" | resolve o caso "nightmare fuel" da linha acima: aqui qualifica a QUALIDADE VISUAL da cena (é sobre o CGI, `direcao_imagem`), não descreve pesadelo/medo que o espectador teve |
+| `viewing:1437855983` | "ماقدر الفلم انه يخليني أتعلق بالشخصيات و اتأثر معهم" ("o filme não conseguiu me fazer apegar aos personagens e me afetar") | mesma família de "faltou emoção" — descreve o que o filme NÃO conseguiu fazer, negação explícita de efeito, não efeito ocorrido |
+
+**MANTÉM — é efeito, mesmo sem vocabulário óbvio de emoção:**
+
+| id | frase que decidiu | por quê |
+|---|---|---|
+| `viewing:1424202073` | "A stirring and baffling work. I love it so much." | "stirring" (comovente) e "baffling" (intrigante/desconcertante) são adjetivos de EFEITO, não de qualidade — descrevem o que a obra fez com quem assistiu, distinto de "obra-prima" que não descreve nada |
+| `viewing:1418805746` | "it takes you out of it" | "tira você da experiência" é efeito descrito (quebra de imersão), ainda que dito de forma indireta — mantido apesar de o resto da review ser predominantemente técnico |
+| `viewing:1433154456` | "certain parts were difficult to watch" | "difícil de assistir" é reação declarada (desconforto), companheira direta de "uncomfortable the whole time" da lista principal — decide a favor de marcar mesmo sendo mais brando |
+| `viewing:1431008461` | "Am I losing my mind? Have I lost my whimsy? Or am I being gaslit…" | a sequência de perguntas retóricas É a descrição do efeito — confusão/desorientação genuína causada pelo filme, não avaliação fria; distinto de "is this movie just genuinely terrible" (a última frase, que sozinha NÃO marcaria) |
+
+A linha que separa REMOVER de MANTÉM nesta rodada, resumida: **o alvo da
+frase.** Se o alvo é o FILME, a CENA ou os PERSONAGENS ("essa cena é
+nightmare fuel", "os personagens são idiotas", "o filme não conseguiu me
+fazer sentir algo"), não marca — é avaliação de conteúdo, ainda que com
+palavras emocionais. Se o alvo é O QUE ACONTECEU COM QUEM ASSISTIU
+("fiquei com medo daquela cena", "aquilo me tirou da experiência", "fiquei
+confuso o filme todo"), marca — mesmo com vocabulário indireto ou frase em
+forma de pergunta.
+
 ---
 
 ## Regras gerais (valem para todos os eixos)
