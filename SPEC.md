@@ -2278,6 +2278,76 @@ Custo estimado: no pior caso ~100 requisições extras por filme novo (uma por r
 > eixo isolado enxerga isso, e é a explicação de por que a magnitude erra
 > mais que a direção.
 
+> #### Instrução não remove o que a distribuição do material impõe (v1.9.7)
+>
+> **O padrão, com as ocorrências que o sustentam.** Quando um defeito vem do
+> MATERIAL (o que as reviews de fato dizem, na proporção em que dizem) e não
+> do texto do prompt, adicionar ou apertar instrução no prompt tende a
+> falhar — porque não muda a distribuição, só pede ao modelo para lutar
+> contra ela numa única chamada. A correção que funciona é de ARQUITETURA
+> (mover a decisão para outro lugar — código, um estágio separado, um passe
+> de verificação) ou de ACEITAÇÃO DECLARADA (registrar o limite, não
+> escondê-lo atrás de mais uma regra).
+>
+> **Duas ocorrências anteriores no projeto, ambas já resolvidas por
+> arquitetura, não por instrução:**
+> 1. **Inflação de quantificador retórico, síntese §D2 (v1.2.2 → v1.2.3).**
+>    A v1.2.2 tentou calibrar por INSTRUÇÃO — pedir ao LLM que calculasse a
+>    fração e escolhesse o rótulo por uma tabela dada no prompt. Reduziu mas
+>    **reincidiu**: na primeira regeneração pós-fix, "quase todos" foi
+>    aplicado a frações de 65-70% duas vezes. A v1.2.3 moveu a decisão para
+>    o CÓDIGO — o rótulo é pré-computado e o LLM só o usa, não o escolhe —
+>    e o modo de falha fechou. Mesmo princípio da v1.1.1 (denominador
+>    `n_reviews_analisadas` sempre carimbado pelo código, nunca pelo LLM).
+> 2. **Empilhar honestidade e fluência num prompt só, narrador §D2 (v1.5.0
+>    → v1.6.0).** A v1.5.0 tentou prescrever ritmo e registro por instrução,
+>    em cima do acúmulo de invariantes de honestidade já presentes no prompt — as regras de
+>    ritmo não transferiram entre filmes e a configuração de produção chegou
+>    a publicar uma frase agramatical. A v1.6.0 separou em DOIS ESTÁGIOS: o
+>    narrador podado a UMA responsabilidade (dizer a verdade), e um editor
+>    novo (§E2) para ritmo, sem acesso a fato nenhum e sem poder alterar
+>    número/rótulo/atribuição — trechos protegidos + verificação mecânica.
+>
+> **Uma tentativa fora do projeto, abandonada:** o experimento local com
+> Ollama/Qwen3.5-9B (`experimentos-ollama-arquivado/`) tentou sustentar as
+> ~18 invariantes do narrador numa única chamada de modelo pequeno — não
+> sustentou, e o caminho foi abandonado em favor de API (Gemini/Anthropic/
+> DeepSeek), não de mais instrução sobre o modelo local.
+>
+> **Três ocorrências nesta sessão** (classificação de 10 eixos,
+> `CLASSIFICACAO_CONSOLIDADO.md` §5), todas atacando a saturação de
+> `impacto_emocional` (75,5% do corpus) por INSTRUÇÃO, todas refutadas por
+> medição:
+> - **`B_fewshot`** (exemplos de review curta resolvidos no prompt) —
+>   ancorou o modelo e degradou review longa (recall 401-800: 0,888→0,847).
+> - **Lift normalizado** (reponderar a métrica de contraste em vez de
+>   reponderar o que entra na contagem) — amplifica o quantum de ruído
+>   exatamente no regime saturado; nenhuma das três variantes testadas
+>   (L1/L2/L3) atinge cobertura ≥18/35 filmes com ruído ≤35%.
+> - **Definição apertada** (proibir veredicto seco em dois pontos do
+>   prompt) — nos 13 casos que o gabarito humano corrigido desmarcou, o
+>   modelo deixou de marcar em só 3, e adicionou marcação errada em 2 onde
+>   o prompt original acertava. Instrução explícita, repetida, ignorada na
+>   maioria dos casos.
+>
+> **O que diferencia as duas classes.** Nos dois casos resolvidos (1, 2), o
+> defeito estava em uma regra sobre FORMA DA SAÍDA (rótulo, ritmo) — algo
+> que o código PODE decidir sozinho, porque a resposta certa é computável a
+> partir do dado já disponível. Nas três tentativas desta sessão, o defeito
+> está em JULGAMENTO DE CONTEÚDO (esta frase é ou não é `impacto_emocional`)
+> — o código não tem como decidir isso sozinho, então a arquitetura que
+> resolveria não é "mover para o código", é um SEGUNDO PASSE que audite o
+> primeiro contra a régua (`REGRA_ANOTACAO.md`) — não tentado ainda, listado
+> em aberto em `CLASSIFICACAO_CONSOLIDADO.md` §8.
+>
+> **O que este padrão NÃO diz.** Não diz que toda instrução falha — as 7
+> regras de `A_regra` (§ correção de recall em review curta) SÃO instrução,
+> e funcionaram, medido. A diferença é que ali a instrução mudava um
+> CRITÉRIO DE DECISÃO bem definido (brevidade não é ausência), e aqui as
+> três tentativas pediam para o modelo SUPRIMIR um comportamento que parece
+> vir de um prior mais profundo do modelo pré-treinado (associar veredicto
+> a `impacto_emocional`) — instrução muda critério, não sempre suprime prior.
+
 - **Uma chamada por bucket** (máx. 3 por filme), modelo configurável.
 - **Provider-agnóstico (v1.1.1):** a interface de cliente injetável (`client_call(system, user, model) -> str`) é o **contrato formal**. Providers suportados: **Gemini** (chave `GEMINI_API_KEY`, modo JSON nativo) e **Anthropic** (chave `ANTHROPIC_API_KEY`). Seleção via `--provider {gemini,anthropic}`; sem a flag, auto-detecta pela chave presente no ambiente; se ambas as chaves estiverem presentes, ou nenhuma, é erro — exige decisão explícita.
 - **Default de modelo Gemini — `gemini-2.5-flash` (v1.1.2, ratificado com evidência):** a comparação de modelos (`resultado/comparacao/COMPARACAO.md`) rodou o MESMO prompt sobre o MESMO corpus (`oppenheimer-2023`) em `gemini-2.5-flash-lite` e `gemini-2.5-flash`. O flash-lite cometeu **3 violações de instrução** documentadas: (1) bucket `negativas` inteiro em inglês, violando "saída sempre em pt-BR"; (2)-(3) `observacao_geral` generalizando o recorte filtrado do bucket para "a maioria dos críticos considera o filme um fracasso" — o próprio erro de enquadramento que motivou o preâmbulo de papel abaixo. O `gemini-2.5-flash`, no mesmo teste, não repetiu nenhuma das três. Default Anthropic: `claude-sonnet-4-6`.
