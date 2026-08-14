@@ -1,0 +1,2525 @@
+{
+  "fonte": "resultado/votacao-3/consenso.jsonl",
+  "n_filmes": 35,
+  "n_pares": 350,
+  "alvo_ruido": 0.35,
+  "cobertura_alvo": 18,
+  "nulo": {
+    "n_rodadas": 2000,
+    "n_filmes": 35,
+    "n_pares": 350
+  },
+  "referencia_L1_a_20pp": {
+    "limiar": 0.2,
+    "n_pares_acima": 21,
+    "nulo_pares_acima_media": 8.62,
+    "fracao_ruido": 0.4107,
+    "n_filmes_com_algum": 13,
+    "nulo_filmes_com_algum_media": 5.75
+  },
+  "limiar_calibrado_por_metrica": {
+    "L1_absoluto": {
+      "limiar": 0.21,
+      "n_pares_acima": 19,
+      "nulo_pares_acima_media": 6.27,
+      "fracao_ruido": 0.3299,
+      "n_filmes_com_algum": 13,
+      "nulo_filmes_com_algum_media": 4.08
+    },
+    "L2_normalizado": null,
+    "L3_log_odds": null
+  },
+  "melhor_ruido_com_cobertura_alvo": {
+    "L1_absoluto": {
+      "limiar": 0.19,
+      "n_pares_acima": 28,
+      "nulo_pares_acima_media": 10.21,
+      "fracao_ruido": 0.3647,
+      "n_filmes_com_algum": 18,
+      "nulo_filmes_com_algum_media": 7.08
+    },
+    "L2_normalizado": {
+      "limiar": 0.39,
+      "n_pares_acima": 25,
+      "nulo_pares_acima_media": 10.43,
+      "fracao_ruido": 0.417,
+      "n_filmes_com_algum": 18,
+      "nulo_filmes_com_algum_media": 9.16
+    },
+    "L3_log_odds": {
+      "limiar": 1.0,
+      "n_pares_acima": 24,
+      "nulo_pares_acima_media": 10.89,
+      "fracao_ruido": 0.4537,
+      "n_filmes_com_algum": 19,
+      "nulo_filmes_com_algum_media": 8.65
+    }
+  },
+  "quantum_por_saturacao": [
+    {
+      "p_segundo_colocado": 0.25,
+      "quantum_L1": 0.025,
+      "quantum_L2": 0.0333,
+      "amplificacao_vs_p025": 1.0
+    },
+    {
+      "p_segundo_colocado": 0.5,
+      "quantum_L1": 0.025,
+      "quantum_L2": 0.05,
+      "amplificacao_vs_p025": 1.5
+    },
+    {
+      "p_segundo_colocado": 0.7,
+      "quantum_L1": 0.025,
+      "quantum_L2": 0.0833,
+      "amplificacao_vs_p025": 2.5
+    },
+    {
+      "p_segundo_colocado": 0.8,
+      "quantum_L1": 0.025,
+      "quantum_L2": 0.125,
+      "amplificacao_vs_p025": 3.75
+    },
+    {
+      "p_segundo_colocado": 0.9,
+      "quantum_L1": 0.025,
+      "quantum_L2": 0.25,
+      "amplificacao_vs_p025": 7.5
+    },
+    {
+      "p_segundo_colocado": 0.95,
+      "quantum_L1": 0.025,
+      "quantum_L2": 0.5,
+      "amplificacao_vs_p025": 15.0
+    }
+  ],
+  "procedencia_do_ruido": {
+    "L1_absoluto": {
+      "limiar": 0.19,
+      "pares_ruido_por_rodada": 10.17,
+      "por_eixo": {
+        "roteiro_estrutura": {
+          "por_rodada": 1.41,
+          "fracao_do_ruido": 0.1386
+        },
+        "atuacao": {
+          "por_rodada": 1.228,
+          "fracao_do_ruido": 0.1207
+        },
+        "direcao_imagem": {
+          "por_rodada": 1.198,
+          "fracao_do_ruido": 0.1178
+        },
+        "comparacoes": {
+          "por_rodada": 1.196,
+          "fracao_do_ruido": 0.1176
+        },
+        "ritmo": {
+          "por_rodada": 1.048,
+          "fracao_do_ruido": 0.103
+        },
+        "expectativa": {
+          "por_rodada": 0.908,
+          "fracao_do_ruido": 0.0892
+        },
+        "tom_atmosfera": {
+          "por_rodada": 0.906,
+          "fracao_do_ruido": 0.0891
+        },
+        "critica_social": {
+          "por_rodada": 0.832,
+          "fracao_do_ruido": 0.0818
+        },
+        "impacto_emocional": {
+          "por_rodada": 0.76,
+          "fracao_do_ruido": 0.0747
+        },
+        "som_trilha": {
+          "por_rodada": 0.688,
+          "fracao_do_ruido": 0.0676
+        }
+      }
+    },
+    "L2_normalizado": {
+      "limiar": 0.39,
+      "pares_ruido_por_rodada": 10.63,
+      "por_eixo": {
+        "impacto_emocional": {
+          "por_rodada": 6.66,
+          "fracao_do_ruido": 0.6264
+        },
+        "roteiro_estrutura": {
+          "por_rodada": 1.754,
+          "fracao_do_ruido": 0.165
+        },
+        "comparacoes": {
+          "por_rodada": 0.618,
+          "fracao_do_ruido": 0.0581
+        },
+        "direcao_imagem": {
+          "por_rodada": 0.506,
+          "fracao_do_ruido": 0.0476
+        },
+        "tom_atmosfera": {
+          "por_rodada": 0.326,
+          "fracao_do_ruido": 0.0307
+        },
+        "ritmo": {
+          "por_rodada": 0.246,
+          "fracao_do_ruido": 0.0231
+        },
+        "critica_social": {
+          "por_rodada": 0.204,
+          "fracao_do_ruido": 0.0192
+        },
+        "som_trilha": {
+          "por_rodada": 0.16,
+          "fracao_do_ruido": 0.015
+        },
+        "atuacao": {
+          "por_rodada": 0.122,
+          "fracao_do_ruido": 0.0115
+        },
+        "expectativa": {
+          "por_rodada": 0.036,
+          "fracao_do_ruido": 0.0034
+        }
+      }
+    },
+    "L3_log_odds": {
+      "limiar": 1.0,
+      "pares_ruido_por_rodada": 10.91,
+      "por_eixo": {
+        "som_trilha": {
+          "por_rodada": 2.9,
+          "fracao_do_ruido": 0.2659
+        },
+        "impacto_emocional": {
+          "por_rodada": 1.624,
+          "fracao_do_ruido": 0.1489
+        },
+        "expectativa": {
+          "por_rodada": 1.184,
+          "fracao_do_ruido": 0.1086
+        },
+        "critica_social": {
+          "por_rodada": 1.166,
+          "fracao_do_ruido": 0.1069
+        },
+        "tom_atmosfera": {
+          "por_rodada": 0.912,
+          "fracao_do_ruido": 0.0836
+        },
+        "atuacao": {
+          "por_rodada": 0.888,
+          "fracao_do_ruido": 0.0814
+        },
+        "roteiro_estrutura": {
+          "por_rodada": 0.602,
+          "fracao_do_ruido": 0.0552
+        },
+        "ritmo": {
+          "por_rodada": 0.594,
+          "fracao_do_ruido": 0.0545
+        },
+        "direcao_imagem": {
+          "por_rodada": 0.588,
+          "fracao_do_ruido": 0.0539
+        },
+        "comparacoes": {
+          "por_rodada": 0.448,
+          "fracao_do_ruido": 0.0411
+        }
+      }
+    }
+  },
+  "varredura": {
+    "L1_absoluto": [
+      {
+        "limiar": 0.01,
+        "n_pares_acima": 311,
+        "nulo_pares_acima_media": 299.27,
+        "fracao_ruido": 0.9623,
+        "n_filmes_com_algum": 35,
+        "nulo_filmes_com_algum_media": 35.0
+      },
+      {
+        "limiar": 0.02,
+        "n_pares_acima": 301,
+        "nulo_pares_acima_media": 291.21,
+        "fracao_ruido": 0.9675,
+        "n_filmes_com_algum": 35,
+        "nulo_filmes_com_algum_media": 35.0
+      },
+      {
+        "limiar": 0.03,
+        "n_pares_acima": 233,
+        "nulo_pares_acima_media": 210.78,
+        "fracao_ruido": 0.9047,
+        "n_filmes_com_algum": 35,
+        "nulo_filmes_com_algum_media": 35.0
+      },
+      {
+        "limiar": 0.04,
+        "n_pares_acima": 228,
+        "nulo_pares_acima_media": 204.42,
+        "fracao_ruido": 0.8966,
+        "n_filmes_com_algum": 35,
+        "nulo_filmes_com_algum_media": 34.99
+      },
+      {
+        "limiar": 0.05,
+        "n_pares_acima": 189,
+        "nulo_pares_acima_media": 167.26,
+        "fracao_ruido": 0.885,
+        "n_filmes_com_algum": 35,
+        "nulo_filmes_com_algum_media": 34.93
+      },
+      {
+        "limiar": 0.06,
+        "n_pares_acima": 162,
+        "nulo_pares_acima_media": 136.91,
+        "fracao_ruido": 0.8451,
+        "n_filmes_com_algum": 34,
+        "nulo_filmes_com_algum_media": 34.7
+      },
+      {
+        "limiar": 0.07,
+        "n_pares_acima": 155,
+        "nulo_pares_acima_media": 131.38,
+        "fracao_ruido": 0.8476,
+        "n_filmes_com_algum": 34,
+        "nulo_filmes_com_algum_media": 34.61
+      },
+      {
+        "limiar": 0.08,
+        "n_pares_acima": 118,
+        "nulo_pares_acima_media": 88.05,
+        "fracao_ruido": 0.7462,
+        "n_filmes_com_algum": 34,
+        "nulo_filmes_com_algum_media": 32.59
+      },
+      {
+        "limiar": 0.09,
+        "n_pares_acima": 114,
+        "nulo_pares_acima_media": 84.15,
+        "fracao_ruido": 0.7381,
+        "n_filmes_com_algum": 34,
+        "nulo_filmes_com_algum_media": 32.36
+      },
+      {
+        "limiar": 0.1,
+        "n_pares_acima": 86,
+        "nulo_pares_acima_media": 65.84,
+        "fracao_ruido": 0.7656,
+        "n_filmes_com_algum": 33,
+        "nulo_filmes_com_algum_media": 30.0
+      },
+      {
+        "limiar": 0.11,
+        "n_pares_acima": 69,
+        "nulo_pares_acima_media": 52.13,
+        "fracao_ruido": 0.7556,
+        "n_filmes_com_algum": 31,
+        "nulo_filmes_com_algum_media": 26.99
+      },
+      {
+        "limiar": 0.12,
+        "n_pares_acima": 67,
+        "nulo_pares_acima_media": 49.89,
+        "fracao_ruido": 0.7446,
+        "n_filmes_com_algum": 30,
+        "nulo_filmes_com_algum_media": 26.43
+      },
+      {
+        "limiar": 0.13,
+        "n_pares_acima": 48,
+        "nulo_pares_acima_media": 31.64,
+        "fracao_ruido": 0.6591,
+        "n_filmes_com_algum": 27,
+        "nulo_filmes_com_algum_media": 19.64
+      },
+      {
+        "limiar": 0.14,
+        "n_pares_acima": 47,
+        "nulo_pares_acima_media": 29.64,
+        "fracao_ruido": 0.6307,
+        "n_filmes_com_algum": 26,
+        "nulo_filmes_com_algum_media": 19.09
+      },
+      {
+        "limiar": 0.15,
+        "n_pares_acima": 41,
+        "nulo_pares_acima_media": 25.72,
+        "fracao_ruido": 0.6273,
+        "n_filmes_com_algum": 22,
+        "nulo_filmes_com_algum_media": 17.01
+      },
+      {
+        "limiar": 0.16,
+        "n_pares_acima": 32,
+        "nulo_pares_acima_media": 17.88,
+        "fracao_ruido": 0.5586,
+        "n_filmes_com_algum": 21,
+        "nulo_filmes_com_algum_media": 12.37
+      },
+      {
+        "limiar": 0.17,
+        "n_pares_acima": 32,
+        "nulo_pares_acima_media": 16.75,
+        "fracao_ruido": 0.5235,
+        "n_filmes_com_algum": 21,
+        "nulo_filmes_com_algum_media": 11.86
+      },
+      {
+        "limiar": 0.18,
+        "n_pares_acima": 28,
+        "nulo_pares_acima_media": 10.69,
+        "fracao_ruido": 0.3819,
+        "n_filmes_com_algum": 18,
+        "nulo_filmes_com_algum_media": 7.45
+      },
+      {
+        "limiar": 0.19,
+        "n_pares_acima": 28,
+        "nulo_pares_acima_media": 10.21,
+        "fracao_ruido": 0.3647,
+        "n_filmes_com_algum": 18,
+        "nulo_filmes_com_algum_media": 7.08
+      },
+      {
+        "limiar": 0.2,
+        "n_pares_acima": 21,
+        "nulo_pares_acima_media": 8.62,
+        "fracao_ruido": 0.4107,
+        "n_filmes_com_algum": 13,
+        "nulo_filmes_com_algum_media": 5.75
+      },
+      {
+        "limiar": 0.21,
+        "n_pares_acima": 19,
+        "nulo_pares_acima_media": 6.27,
+        "fracao_ruido": 0.3299,
+        "n_filmes_com_algum": 13,
+        "nulo_filmes_com_algum_media": 4.08
+      },
+      {
+        "limiar": 0.22,
+        "n_pares_acima": 18,
+        "nulo_pares_acima_media": 6.04,
+        "fracao_ruido": 0.3355,
+        "n_filmes_com_algum": 13,
+        "nulo_filmes_com_algum_media": 3.87
+      },
+      {
+        "limiar": 0.23,
+        "n_pares_acima": 13,
+        "nulo_pares_acima_media": 4.4,
+        "fracao_ruido": 0.3387,
+        "n_filmes_com_algum": 10,
+        "nulo_filmes_com_algum_media": 2.52
+      },
+      {
+        "limiar": 0.24,
+        "n_pares_acima": 13,
+        "nulo_pares_acima_media": 3.74,
+        "fracao_ruido": 0.2878,
+        "n_filmes_com_algum": 10,
+        "nulo_filmes_com_algum_media": 2.35
+      },
+      {
+        "limiar": 0.25,
+        "n_pares_acima": 12,
+        "nulo_pares_acima_media": 3.53,
+        "fracao_ruido": 0.2943,
+        "n_filmes_com_algum": 9,
+        "nulo_filmes_com_algum_media": 2.16
+      },
+      {
+        "limiar": 0.26,
+        "n_pares_acima": 7,
+        "nulo_pares_acima_media": 2.62,
+        "fracao_ruido": 0.3742,
+        "n_filmes_com_algum": 4,
+        "nulo_filmes_com_algum_media": 1.52
+      },
+      {
+        "limiar": 0.27,
+        "n_pares_acima": 7,
+        "nulo_pares_acima_media": 2.28,
+        "fracao_ruido": 0.326,
+        "n_filmes_com_algum": 4,
+        "nulo_filmes_com_algum_media": 1.42
+      },
+      {
+        "limiar": 0.28,
+        "n_pares_acima": 7,
+        "nulo_pares_acima_media": 1.79,
+        "fracao_ruido": 0.2554,
+        "n_filmes_com_algum": 4,
+        "nulo_filmes_com_algum_media": 1.07
+      },
+      {
+        "limiar": 0.29,
+        "n_pares_acima": 7,
+        "nulo_pares_acima_media": 1.75,
+        "fracao_ruido": 0.2502,
+        "n_filmes_com_algum": 4,
+        "nulo_filmes_com_algum_media": 1.04
+      },
+      {
+        "limiar": 0.3,
+        "n_pares_acima": 7,
+        "nulo_pares_acima_media": 1.64,
+        "fracao_ruido": 0.2345,
+        "n_filmes_com_algum": 4,
+        "nulo_filmes_com_algum_media": 0.98
+      },
+      {
+        "limiar": 0.31,
+        "n_pares_acima": 5,
+        "nulo_pares_acima_media": 1.24,
+        "fracao_ruido": 0.2481,
+        "n_filmes_com_algum": 2,
+        "nulo_filmes_com_algum_media": 0.78
+      },
+      {
+        "limiar": 0.32,
+        "n_pares_acima": 5,
+        "nulo_pares_acima_media": 1.23,
+        "fracao_ruido": 0.2452,
+        "n_filmes_com_algum": 2,
+        "nulo_filmes_com_algum_media": 0.77
+      },
+      {
+        "limiar": 0.33,
+        "n_pares_acima": 5,
+        "nulo_pares_acima_media": 1.18,
+        "fracao_ruido": 0.2362,
+        "n_filmes_com_algum": 2,
+        "nulo_filmes_com_algum_media": 0.72
+      },
+      {
+        "limiar": 0.34,
+        "n_pares_acima": 5,
+        "nulo_pares_acima_media": 1.07,
+        "fracao_ruido": 0.2147,
+        "n_filmes_com_algum": 2,
+        "nulo_filmes_com_algum_media": 0.67
+      },
+      {
+        "limiar": 0.35,
+        "n_pares_acima": 5,
+        "nulo_pares_acima_media": 1.07,
+        "fracao_ruido": 0.2136,
+        "n_filmes_com_algum": 2,
+        "nulo_filmes_com_algum_media": 0.66
+      },
+      {
+        "limiar": 0.36,
+        "n_pares_acima": 5,
+        "nulo_pares_acima_media": 0.95,
+        "fracao_ruido": 0.1898,
+        "n_filmes_com_algum": 2,
+        "nulo_filmes_com_algum_media": 0.6
+      },
+      {
+        "limiar": 0.37,
+        "n_pares_acima": 5,
+        "nulo_pares_acima_media": 0.95,
+        "fracao_ruido": 0.1893,
+        "n_filmes_com_algum": 2,
+        "nulo_filmes_com_algum_media": 0.6
+      },
+      {
+        "limiar": 0.38,
+        "n_pares_acima": 3,
+        "nulo_pares_acima_media": 0.71,
+        "fracao_ruido": 0.236,
+        "n_filmes_com_algum": 2,
+        "nulo_filmes_com_algum_media": 0.5
+      },
+      {
+        "limiar": 0.39,
+        "n_pares_acima": 3,
+        "nulo_pares_acima_media": 0.71,
+        "fracao_ruido": 0.2353,
+        "n_filmes_com_algum": 2,
+        "nulo_filmes_com_algum_media": 0.5
+      },
+      {
+        "limiar": 0.4,
+        "n_pares_acima": 3,
+        "nulo_pares_acima_media": 0.71,
+        "fracao_ruido": 0.2353,
+        "n_filmes_com_algum": 2,
+        "nulo_filmes_com_algum_media": 0.5
+      },
+      {
+        "limiar": 0.41,
+        "n_pares_acima": 2,
+        "nulo_pares_acima_media": 0.64,
+        "fracao_ruido": 0.322,
+        "n_filmes_com_algum": 1,
+        "nulo_filmes_com_algum_media": 0.46
+      },
+      {
+        "limiar": 0.42,
+        "n_pares_acima": 2,
+        "nulo_pares_acima_media": 0.53,
+        "fracao_ruido": 0.2662,
+        "n_filmes_com_algum": 1,
+        "nulo_filmes_com_algum_media": 0.39
+      },
+      {
+        "limiar": 0.43,
+        "n_pares_acima": 0,
+        "nulo_pares_acima_media": 0.45,
+        "fracao_ruido": null,
+        "n_filmes_com_algum": 0,
+        "nulo_filmes_com_algum_media": 0.34
+      },
+      {
+        "limiar": 0.44,
+        "n_pares_acima": 0,
+        "nulo_pares_acima_media": 0.37,
+        "fracao_ruido": null,
+        "n_filmes_com_algum": 0,
+        "nulo_filmes_com_algum_media": 0.3
+      },
+      {
+        "limiar": 0.45,
+        "n_pares_acima": 0,
+        "nulo_pares_acima_media": 0.37,
+        "fracao_ruido": null,
+        "n_filmes_com_algum": 0,
+        "nulo_filmes_com_algum_media": 0.3
+      },
+      {
+        "limiar": 0.46,
+        "n_pares_acima": 0,
+        "nulo_pares_acima_media": 0.36,
+        "fracao_ruido": null,
+        "n_filmes_com_algum": 0,
+        "nulo_filmes_com_algum_media": 0.29
+      },
+      {
+        "limiar": 0.47,
+        "n_pares_acima": 0,
+        "nulo_pares_acima_media": 0.31,
+        "fracao_ruido": null,
+        "n_filmes_com_algum": 0,
+        "nulo_filmes_com_algum_media": 0.25
+      },
+      {
+        "limiar": 0.48,
+        "n_pares_acima": 0,
+        "nulo_pares_acima_media": 0.24,
+        "fracao_ruido": null,
+        "n_filmes_com_algum": 0,
+        "nulo_filmes_com_algum_media": 0.21
+      },
+      {
+        "limiar": 0.49,
+        "n_pares_acima": 0,
+        "nulo_pares_acima_media": 0.24,
+        "fracao_ruido": null,
+        "n_filmes_com_algum": 0,
+        "nulo_filmes_com_algum_media": 0.21
+      },
+      {
+        "limiar": 0.5,
+        "n_pares_acima": 0,
+        "nulo_pares_acima_media": 0.24,
+        "fracao_ruido": null,
+        "n_filmes_com_algum": 0,
+        "nulo_filmes_com_algum_media": 0.21
+      },
+      {
+        "limiar": 0.51,
+        "n_pares_acima": 0,
+        "nulo_pares_acima_media": 0.14,
+        "fracao_ruido": null,
+        "n_filmes_com_algum": 0,
+        "nulo_filmes_com_algum_media": 0.13
+      },
+      {
+        "limiar": 0.52,
+        "n_pares_acima": 0,
+        "nulo_pares_acima_media": 0.14,
+        "fracao_ruido": null,
+        "n_filmes_com_algum": 0,
+        "nulo_filmes_com_algum_media": 0.13
+      },
+      {
+        "limiar": 0.53,
+        "n_pares_acima": 0,
+        "nulo_pares_acima_media": 0.14,
+        "fracao_ruido": null,
+        "n_filmes_com_algum": 0,
+        "nulo_filmes_com_algum_media": 0.13
+      },
+      {
+        "limiar": 0.54,
+        "n_pares_acima": 0,
+        "nulo_pares_acima_media": 0.14,
+        "fracao_ruido": null,
+        "n_filmes_com_algum": 0,
+        "nulo_filmes_com_algum_media": 0.13
+      },
+      {
+        "limiar": 0.55,
+        "n_pares_acima": 0,
+        "nulo_pares_acima_media": 0.13,
+        "fracao_ruido": null,
+        "n_filmes_com_algum": 0,
+        "nulo_filmes_com_algum_media": 0.12
+      },
+      {
+        "limiar": 0.56,
+        "n_pares_acima": 0,
+        "nulo_pares_acima_media": 0.09,
+        "fracao_ruido": null,
+        "n_filmes_com_algum": 0,
+        "nulo_filmes_com_algum_media": 0.08
+      },
+      {
+        "limiar": 0.57,
+        "n_pares_acima": 0,
+        "nulo_pares_acima_media": 0.09,
+        "fracao_ruido": null,
+        "n_filmes_com_algum": 0,
+        "nulo_filmes_com_algum_media": 0.08
+      },
+      {
+        "limiar": 0.58,
+        "n_pares_acima": 0,
+        "nulo_pares_acima_media": 0.09,
+        "fracao_ruido": null,
+        "n_filmes_com_algum": 0,
+        "nulo_filmes_com_algum_media": 0.08
+      },
+      {
+        "limiar": 0.59,
+        "n_pares_acima": 0,
+        "nulo_pares_acima_media": 0.07,
+        "fracao_ruido": null,
+        "n_filmes_com_algum": 0,
+        "nulo_filmes_com_algum_media": 0.07
+      },
+      {
+        "limiar": 0.6,
+        "n_pares_acima": 0,
+        "nulo_pares_acima_media": 0.07,
+        "fracao_ruido": null,
+        "n_filmes_com_algum": 0,
+        "nulo_filmes_com_algum_media": 0.07
+      }
+    ],
+    "L2_normalizado": [
+      {
+        "limiar": 0.01,
+        "n_pares_acima": 314,
+        "nulo_pares_acima_media": 301.75,
+        "fracao_ruido": 0.961,
+        "n_filmes_com_algum": 35,
+        "nulo_filmes_com_algum_media": 35.0
+      },
+      {
+        "limiar": 0.02,
+        "n_pares_acima": 307,
+        "nulo_pares_acima_media": 296.33,
+        "fracao_ruido": 0.9653,
+        "n_filmes_com_algum": 35,
+        "nulo_filmes_com_algum_media": 35.0
+      },
+      {
+        "limiar": 0.03,
+        "n_pares_acima": 283,
+        "nulo_pares_acima_media": 274.69,
+        "fracao_ruido": 0.9707,
+        "n_filmes_com_algum": 35,
+        "nulo_filmes_com_algum_media": 35.0
+      },
+      {
+        "limiar": 0.04,
+        "n_pares_acima": 260,
+        "nulo_pares_acima_media": 243.16,
+        "fracao_ruido": 0.9352,
+        "n_filmes_com_algum": 35,
+        "nulo_filmes_com_algum_media": 35.0
+      },
+      {
+        "limiar": 0.05,
+        "n_pares_acima": 247,
+        "nulo_pares_acima_media": 226.43,
+        "fracao_ruido": 0.9167,
+        "n_filmes_com_algum": 35,
+        "nulo_filmes_com_algum_media": 35.0
+      },
+      {
+        "limiar": 0.06,
+        "n_pares_acima": 226,
+        "nulo_pares_acima_media": 206.76,
+        "fracao_ruido": 0.9148,
+        "n_filmes_com_algum": 35,
+        "nulo_filmes_com_algum_media": 34.99
+      },
+      {
+        "limiar": 0.07,
+        "n_pares_acima": 202,
+        "nulo_pares_acima_media": 183.48,
+        "fracao_ruido": 0.9083,
+        "n_filmes_com_algum": 35,
+        "nulo_filmes_com_algum_media": 34.98
+      },
+      {
+        "limiar": 0.08,
+        "n_pares_acima": 189,
+        "nulo_pares_acima_media": 167.34,
+        "fracao_ruido": 0.8854,
+        "n_filmes_com_algum": 35,
+        "nulo_filmes_com_algum_media": 34.96
+      },
+      {
+        "limiar": 0.09,
+        "n_pares_acima": 177,
+        "nulo_pares_acima_media": 152.89,
+        "fracao_ruido": 0.8638,
+        "n_filmes_com_algum": 35,
+        "nulo_filmes_com_algum_media": 34.93
+      },
+      {
+        "limiar": 0.1,
+        "n_pares_acima": 167,
+        "nulo_pares_acima_media": 140.04,
+        "fracao_ruido": 0.8386,
+        "n_filmes_com_algum": 35,
+        "nulo_filmes_com_algum_media": 34.85
+      },
+      {
+        "limiar": 0.11,
+        "n_pares_acima": 152,
+        "nulo_pares_acima_media": 126.24,
+        "fracao_ruido": 0.8305,
+        "n_filmes_com_algum": 35,
+        "nulo_filmes_com_algum_media": 34.7
+      },
+      {
+        "limiar": 0.12,
+        "n_pares_acima": 139,
+        "nulo_pares_acima_media": 115.13,
+        "fracao_ruido": 0.8283,
+        "n_filmes_com_algum": 35,
+        "nulo_filmes_com_algum_media": 34.52
+      },
+      {
+        "limiar": 0.13,
+        "n_pares_acima": 129,
+        "nulo_pares_acima_media": 103.07,
+        "fracao_ruido": 0.799,
+        "n_filmes_com_algum": 35,
+        "nulo_filmes_com_algum_media": 34.15
+      },
+      {
+        "limiar": 0.14,
+        "n_pares_acima": 121,
+        "nulo_pares_acima_media": 94.24,
+        "fracao_ruido": 0.7788,
+        "n_filmes_com_algum": 35,
+        "nulo_filmes_com_algum_media": 33.76
+      },
+      {
+        "limiar": 0.15,
+        "n_pares_acima": 113,
+        "nulo_pares_acima_media": 85.52,
+        "fracao_ruido": 0.7568,
+        "n_filmes_com_algum": 35,
+        "nulo_filmes_com_algum_media": 33.16
+      },
+      {
+        "limiar": 0.16,
+        "n_pares_acima": 109,
+        "nulo_pares_acima_media": 78.42,
+        "fracao_ruido": 0.7194,
+        "n_filmes_com_algum": 35,
+        "nulo_filmes_com_algum_media": 32.62
+      },
+      {
+        "limiar": 0.17,
+        "n_pares_acima": 98,
+        "nulo_pares_acima_media": 69.57,
+        "fracao_ruido": 0.7099,
+        "n_filmes_com_algum": 34,
+        "nulo_filmes_com_algum_media": 31.73
+      },
+      {
+        "limiar": 0.18,
+        "n_pares_acima": 89,
+        "nulo_pares_acima_media": 64.49,
+        "fracao_ruido": 0.7246,
+        "n_filmes_com_algum": 34,
+        "nulo_filmes_com_algum_media": 31.03
+      },
+      {
+        "limiar": 0.19,
+        "n_pares_acima": 83,
+        "nulo_pares_acima_media": 58.89,
+        "fracao_ruido": 0.7095,
+        "n_filmes_com_algum": 33,
+        "nulo_filmes_com_algum_media": 29.99
+      },
+      {
+        "limiar": 0.2,
+        "n_pares_acima": 79,
+        "nulo_pares_acima_media": 53.92,
+        "fracao_ruido": 0.6825,
+        "n_filmes_com_algum": 33,
+        "nulo_filmes_com_algum_media": 29.04
+      },
+      {
+        "limiar": 0.21,
+        "n_pares_acima": 75,
+        "nulo_pares_acima_media": 48.83,
+        "fracao_ruido": 0.6511,
+        "n_filmes_com_algum": 33,
+        "nulo_filmes_com_algum_media": 27.87
+      },
+      {
+        "limiar": 0.22,
+        "n_pares_acima": 66,
+        "nulo_pares_acima_media": 44.94,
+        "fracao_ruido": 0.6809,
+        "n_filmes_com_algum": 33,
+        "nulo_filmes_com_algum_media": 26.91
+      },
+      {
+        "limiar": 0.23,
+        "n_pares_acima": 65,
+        "nulo_pares_acima_media": 41.42,
+        "fracao_ruido": 0.6373,
+        "n_filmes_com_algum": 33,
+        "nulo_filmes_com_algum_media": 25.71
+      },
+      {
+        "limiar": 0.24,
+        "n_pares_acima": 63,
+        "nulo_pares_acima_media": 37.71,
+        "fracao_ruido": 0.5985,
+        "n_filmes_com_algum": 32,
+        "nulo_filmes_com_algum_media": 24.48
+      },
+      {
+        "limiar": 0.25,
+        "n_pares_acima": 62,
+        "nulo_pares_acima_media": 34.84,
+        "fracao_ruido": 0.5619,
+        "n_filmes_com_algum": 32,
+        "nulo_filmes_com_algum_media": 23.24
+      },
+      {
+        "limiar": 0.26,
+        "n_pares_acima": 59,
+        "nulo_pares_acima_media": 30.8,
+        "fracao_ruido": 0.522,
+        "n_filmes_com_algum": 31,
+        "nulo_filmes_com_algum_media": 21.72
+      },
+      {
+        "limiar": 0.27,
+        "n_pares_acima": 55,
+        "nulo_pares_acima_media": 28.82,
+        "fracao_ruido": 0.5241,
+        "n_filmes_com_algum": 30,
+        "nulo_filmes_com_algum_media": 20.84
+      },
+      {
+        "limiar": 0.28,
+        "n_pares_acima": 50,
+        "nulo_pares_acima_media": 26.75,
+        "fracao_ruido": 0.535,
+        "n_filmes_com_algum": 28,
+        "nulo_filmes_com_algum_media": 19.72
+      },
+      {
+        "limiar": 0.29,
+        "n_pares_acima": 46,
+        "nulo_pares_acima_media": 24.02,
+        "fracao_ruido": 0.5221,
+        "n_filmes_com_algum": 27,
+        "nulo_filmes_com_algum_media": 18.36
+      },
+      {
+        "limiar": 0.3,
+        "n_pares_acima": 45,
+        "nulo_pares_acima_media": 21.74,
+        "fracao_ruido": 0.4832,
+        "n_filmes_com_algum": 27,
+        "nulo_filmes_com_algum_media": 16.94
+      },
+      {
+        "limiar": 0.31,
+        "n_pares_acima": 44,
+        "nulo_pares_acima_media": 20.33,
+        "fracao_ruido": 0.4621,
+        "n_filmes_com_algum": 27,
+        "nulo_filmes_com_algum_media": 16.1
+      },
+      {
+        "limiar": 0.32,
+        "n_pares_acima": 42,
+        "nulo_pares_acima_media": 18.8,
+        "fracao_ruido": 0.4475,
+        "n_filmes_com_algum": 27,
+        "nulo_filmes_com_algum_media": 15.22
+      },
+      {
+        "limiar": 0.33,
+        "n_pares_acima": 40,
+        "nulo_pares_acima_media": 18.38,
+        "fracao_ruido": 0.4595,
+        "n_filmes_com_algum": 26,
+        "nulo_filmes_com_algum_media": 14.96
+      },
+      {
+        "limiar": 0.34,
+        "n_pares_acima": 35,
+        "nulo_pares_acima_media": 15.18,
+        "fracao_ruido": 0.4337,
+        "n_filmes_com_algum": 24,
+        "nulo_filmes_com_algum_media": 12.68
+      },
+      {
+        "limiar": 0.35,
+        "n_pares_acima": 34,
+        "nulo_pares_acima_media": 14.79,
+        "fracao_ruido": 0.435,
+        "n_filmes_com_algum": 23,
+        "nulo_filmes_com_algum_media": 12.41
+      },
+      {
+        "limiar": 0.36,
+        "n_pares_acima": 32,
+        "nulo_pares_acima_media": 13.82,
+        "fracao_ruido": 0.432,
+        "n_filmes_com_algum": 21,
+        "nulo_filmes_com_algum_media": 11.7
+      },
+      {
+        "limiar": 0.37,
+        "n_pares_acima": 27,
+        "nulo_pares_acima_media": 12.63,
+        "fracao_ruido": 0.4679,
+        "n_filmes_com_algum": 18,
+        "nulo_filmes_com_algum_media": 10.82
+      },
+      {
+        "limiar": 0.38,
+        "n_pares_acima": 25,
+        "nulo_pares_acima_media": 11.26,
+        "fracao_ruido": 0.4506,
+        "n_filmes_com_algum": 18,
+        "nulo_filmes_com_algum_media": 9.86
+      },
+      {
+        "limiar": 0.39,
+        "n_pares_acima": 25,
+        "nulo_pares_acima_media": 10.43,
+        "fracao_ruido": 0.417,
+        "n_filmes_com_algum": 18,
+        "nulo_filmes_com_algum_media": 9.16
+      },
+      {
+        "limiar": 0.4,
+        "n_pares_acima": 22,
+        "nulo_pares_acima_media": 9.47,
+        "fracao_ruido": 0.4305,
+        "n_filmes_com_algum": 17,
+        "nulo_filmes_com_algum_media": 8.49
+      },
+      {
+        "limiar": 0.41,
+        "n_pares_acima": 21,
+        "nulo_pares_acima_media": 8.76,
+        "fracao_ruido": 0.417,
+        "n_filmes_com_algum": 17,
+        "nulo_filmes_com_algum_media": 7.9
+      },
+      {
+        "limiar": 0.42,
+        "n_pares_acima": 19,
+        "nulo_pares_acima_media": 8.14,
+        "fracao_ruido": 0.4284,
+        "n_filmes_com_algum": 15,
+        "nulo_filmes_com_algum_media": 7.34
+      },
+      {
+        "limiar": 0.43,
+        "n_pares_acima": 17,
+        "nulo_pares_acima_media": 7.32,
+        "fracao_ruido": 0.4307,
+        "n_filmes_com_algum": 15,
+        "nulo_filmes_com_algum_media": 6.67
+      },
+      {
+        "limiar": 0.44,
+        "n_pares_acima": 16,
+        "nulo_pares_acima_media": 7.03,
+        "fracao_ruido": 0.4394,
+        "n_filmes_com_algum": 14,
+        "nulo_filmes_com_algum_media": 6.43
+      },
+      {
+        "limiar": 0.45,
+        "n_pares_acima": 15,
+        "nulo_pares_acima_media": 6.38,
+        "fracao_ruido": 0.4252,
+        "n_filmes_com_algum": 13,
+        "nulo_filmes_com_algum_media": 5.86
+      },
+      {
+        "limiar": 0.46,
+        "n_pares_acima": 13,
+        "nulo_pares_acima_media": 5.95,
+        "fracao_ruido": 0.4578,
+        "n_filmes_com_algum": 11,
+        "nulo_filmes_com_algum_media": 5.47
+      },
+      {
+        "limiar": 0.47,
+        "n_pares_acima": 13,
+        "nulo_pares_acima_media": 5.45,
+        "fracao_ruido": 0.4193,
+        "n_filmes_com_algum": 11,
+        "nulo_filmes_com_algum_media": 5.06
+      },
+      {
+        "limiar": 0.48,
+        "n_pares_acima": 13,
+        "nulo_pares_acima_media": 5.22,
+        "fracao_ruido": 0.4014,
+        "n_filmes_com_algum": 11,
+        "nulo_filmes_com_algum_media": 4.84
+      },
+      {
+        "limiar": 0.49,
+        "n_pares_acima": 12,
+        "nulo_pares_acima_media": 5.09,
+        "fracao_ruido": 0.4241,
+        "n_filmes_com_algum": 10,
+        "nulo_filmes_com_algum_media": 4.72
+      },
+      {
+        "limiar": 0.5,
+        "n_pares_acima": 12,
+        "nulo_pares_acima_media": 4.84,
+        "fracao_ruido": 0.4035,
+        "n_filmes_com_algum": 10,
+        "nulo_filmes_com_algum_media": 4.48
+      },
+      {
+        "limiar": 0.51,
+        "n_pares_acima": 10,
+        "nulo_pares_acima_media": 3.66,
+        "fracao_ruido": 0.3658,
+        "n_filmes_com_algum": 8,
+        "nulo_filmes_com_algum_media": 3.4
+      },
+      {
+        "limiar": 0.52,
+        "n_pares_acima": 9,
+        "nulo_pares_acima_media": 3.59,
+        "fracao_ruido": 0.3989,
+        "n_filmes_com_algum": 7,
+        "nulo_filmes_com_algum_media": 3.33
+      },
+      {
+        "limiar": 0.53,
+        "n_pares_acima": 9,
+        "nulo_pares_acima_media": 3.4,
+        "fracao_ruido": 0.3773,
+        "n_filmes_com_algum": 7,
+        "nulo_filmes_com_algum_media": 3.18
+      },
+      {
+        "limiar": 0.54,
+        "n_pares_acima": 6,
+        "nulo_pares_acima_media": 3.13,
+        "fracao_ruido": 0.5223,
+        "n_filmes_com_algum": 5,
+        "nulo_filmes_com_algum_media": 2.95
+      },
+      {
+        "limiar": 0.55,
+        "n_pares_acima": 6,
+        "nulo_pares_acima_media": 2.86,
+        "fracao_ruido": 0.4764,
+        "n_filmes_com_algum": 5,
+        "nulo_filmes_com_algum_media": 2.72
+      },
+      {
+        "limiar": 0.56,
+        "n_pares_acima": 6,
+        "nulo_pares_acima_media": 2.52,
+        "fracao_ruido": 0.4198,
+        "n_filmes_com_algum": 5,
+        "nulo_filmes_com_algum_media": 2.43
+      },
+      {
+        "limiar": 0.57,
+        "n_pares_acima": 6,
+        "nulo_pares_acima_media": 2.47,
+        "fracao_ruido": 0.4112,
+        "n_filmes_com_algum": 5,
+        "nulo_filmes_com_algum_media": 2.38
+      },
+      {
+        "limiar": 0.58,
+        "n_pares_acima": 4,
+        "nulo_pares_acima_media": 2.15,
+        "fracao_ruido": 0.5384,
+        "n_filmes_com_algum": 4,
+        "nulo_filmes_com_algum_media": 2.07
+      },
+      {
+        "limiar": 0.59,
+        "n_pares_acima": 3,
+        "nulo_pares_acima_media": 1.95,
+        "fracao_ruido": 0.6512,
+        "n_filmes_com_algum": 3,
+        "nulo_filmes_com_algum_media": 1.89
+      },
+      {
+        "limiar": 0.6,
+        "n_pares_acima": 3,
+        "nulo_pares_acima_media": 1.79,
+        "fracao_ruido": 0.597,
+        "n_filmes_com_algum": 3,
+        "nulo_filmes_com_algum_media": 1.73
+      },
+      {
+        "limiar": 0.61,
+        "n_pares_acima": 3,
+        "nulo_pares_acima_media": 1.5,
+        "fracao_ruido": 0.5,
+        "n_filmes_com_algum": 3,
+        "nulo_filmes_com_algum_media": 1.47
+      },
+      {
+        "limiar": 0.62,
+        "n_pares_acima": 2,
+        "nulo_pares_acima_media": 1.4,
+        "fracao_ruido": 0.7023,
+        "n_filmes_com_algum": 2,
+        "nulo_filmes_com_algum_media": 1.38
+      },
+      {
+        "limiar": 0.63,
+        "n_pares_acima": 1,
+        "nulo_pares_acima_media": 1.23,
+        "fracao_ruido": 1.2345,
+        "n_filmes_com_algum": 1,
+        "nulo_filmes_com_algum_media": 1.21
+      },
+      {
+        "limiar": 0.64,
+        "n_pares_acima": 1,
+        "nulo_pares_acima_media": 1.14,
+        "fracao_ruido": 1.138,
+        "n_filmes_com_algum": 1,
+        "nulo_filmes_com_algum_media": 1.12
+      },
+      {
+        "limiar": 0.65,
+        "n_pares_acima": 1,
+        "nulo_pares_acima_media": 1.1,
+        "fracao_ruido": 1.0955,
+        "n_filmes_com_algum": 1,
+        "nulo_filmes_com_algum_media": 1.07
+      },
+      {
+        "limiar": 0.66,
+        "n_pares_acima": 1,
+        "nulo_pares_acima_media": 1.07,
+        "fracao_ruido": 1.07,
+        "n_filmes_com_algum": 1,
+        "nulo_filmes_com_algum_media": 1.05
+      },
+      {
+        "limiar": 0.67,
+        "n_pares_acima": 1,
+        "nulo_pares_acima_media": 0.82,
+        "fracao_ruido": 0.8205,
+        "n_filmes_com_algum": 1,
+        "nulo_filmes_com_algum_media": 0.8
+      },
+      {
+        "limiar": 0.68,
+        "n_pares_acima": 1,
+        "nulo_pares_acima_media": 0.78,
+        "fracao_ruido": 0.7805,
+        "n_filmes_com_algum": 1,
+        "nulo_filmes_com_algum_media": 0.76
+      },
+      {
+        "limiar": 0.69,
+        "n_pares_acima": 0,
+        "nulo_pares_acima_media": 0.74,
+        "fracao_ruido": null,
+        "n_filmes_com_algum": 0,
+        "nulo_filmes_com_algum_media": 0.72
+      },
+      {
+        "limiar": 0.7,
+        "n_pares_acima": 0,
+        "nulo_pares_acima_media": 0.7,
+        "fracao_ruido": null,
+        "n_filmes_com_algum": 0,
+        "nulo_filmes_com_algum_media": 0.68
+      },
+      {
+        "limiar": 0.71,
+        "n_pares_acima": 0,
+        "nulo_pares_acima_media": 0.62,
+        "fracao_ruido": null,
+        "n_filmes_com_algum": 0,
+        "nulo_filmes_com_algum_media": 0.61
+      },
+      {
+        "limiar": 0.72,
+        "n_pares_acima": 0,
+        "nulo_pares_acima_media": 0.52,
+        "fracao_ruido": null,
+        "n_filmes_com_algum": 0,
+        "nulo_filmes_com_algum_media": 0.51
+      },
+      {
+        "limiar": 0.73,
+        "n_pares_acima": 0,
+        "nulo_pares_acima_media": 0.47,
+        "fracao_ruido": null,
+        "n_filmes_com_algum": 0,
+        "nulo_filmes_com_algum_media": 0.46
+      },
+      {
+        "limiar": 0.74,
+        "n_pares_acima": 0,
+        "nulo_pares_acima_media": 0.41,
+        "fracao_ruido": null,
+        "n_filmes_com_algum": 0,
+        "nulo_filmes_com_algum_media": 0.4
+      },
+      {
+        "limiar": 0.75,
+        "n_pares_acima": 0,
+        "nulo_pares_acima_media": 0.35,
+        "fracao_ruido": null,
+        "n_filmes_com_algum": 0,
+        "nulo_filmes_com_algum_media": 0.35
+      },
+      {
+        "limiar": 0.76,
+        "n_pares_acima": 0,
+        "nulo_pares_acima_media": 0.33,
+        "fracao_ruido": null,
+        "n_filmes_com_algum": 0,
+        "nulo_filmes_com_algum_media": 0.33
+      },
+      {
+        "limiar": 0.77,
+        "n_pares_acima": 0,
+        "nulo_pares_acima_media": 0.32,
+        "fracao_ruido": null,
+        "n_filmes_com_algum": 0,
+        "nulo_filmes_com_algum_media": 0.31
+      },
+      {
+        "limiar": 0.78,
+        "n_pares_acima": 0,
+        "nulo_pares_acima_media": 0.28,
+        "fracao_ruido": null,
+        "n_filmes_com_algum": 0,
+        "nulo_filmes_com_algum_media": 0.28
+      },
+      {
+        "limiar": 0.79,
+        "n_pares_acima": 0,
+        "nulo_pares_acima_media": 0.27,
+        "fracao_ruido": null,
+        "n_filmes_com_algum": 0,
+        "nulo_filmes_com_algum_media": 0.26
+      },
+      {
+        "limiar": 0.8,
+        "n_pares_acima": 0,
+        "nulo_pares_acima_media": 0.19,
+        "fracao_ruido": null,
+        "n_filmes_com_algum": 0,
+        "nulo_filmes_com_algum_media": 0.19
+      },
+      {
+        "limiar": 0.81,
+        "n_pares_acima": 0,
+        "nulo_pares_acima_media": 0.18,
+        "fracao_ruido": null,
+        "n_filmes_com_algum": 0,
+        "nulo_filmes_com_algum_media": 0.18
+      },
+      {
+        "limiar": 0.82,
+        "n_pares_acima": 0,
+        "nulo_pares_acima_media": 0.16,
+        "fracao_ruido": null,
+        "n_filmes_com_algum": 0,
+        "nulo_filmes_com_algum_media": 0.15
+      },
+      {
+        "limiar": 0.83,
+        "n_pares_acima": 0,
+        "nulo_pares_acima_media": 0.15,
+        "fracao_ruido": null,
+        "n_filmes_com_algum": 0,
+        "nulo_filmes_com_algum_media": 0.15
+      },
+      {
+        "limiar": 0.84,
+        "n_pares_acima": 0,
+        "nulo_pares_acima_media": 0.11,
+        "fracao_ruido": null,
+        "n_filmes_com_algum": 0,
+        "nulo_filmes_com_algum_media": 0.11
+      },
+      {
+        "limiar": 0.85,
+        "n_pares_acima": 0,
+        "nulo_pares_acima_media": 0.1,
+        "fracao_ruido": null,
+        "n_filmes_com_algum": 0,
+        "nulo_filmes_com_algum_media": 0.1
+      },
+      {
+        "limiar": 0.86,
+        "n_pares_acima": 0,
+        "nulo_pares_acima_media": 0.08,
+        "fracao_ruido": null,
+        "n_filmes_com_algum": 0,
+        "nulo_filmes_com_algum_media": 0.08
+      },
+      {
+        "limiar": 0.87,
+        "n_pares_acima": 0,
+        "nulo_pares_acima_media": 0.07,
+        "fracao_ruido": null,
+        "n_filmes_com_algum": 0,
+        "nulo_filmes_com_algum_media": 0.07
+      },
+      {
+        "limiar": 0.88,
+        "n_pares_acima": 0,
+        "nulo_pares_acima_media": 0.06,
+        "fracao_ruido": null,
+        "n_filmes_com_algum": 0,
+        "nulo_filmes_com_algum_media": 0.06
+      },
+      {
+        "limiar": 0.89,
+        "n_pares_acima": 0,
+        "nulo_pares_acima_media": 0.06,
+        "fracao_ruido": null,
+        "n_filmes_com_algum": 0,
+        "nulo_filmes_com_algum_media": 0.06
+      },
+      {
+        "limiar": 0.9,
+        "n_pares_acima": 0,
+        "nulo_pares_acima_media": 0.05,
+        "fracao_ruido": null,
+        "n_filmes_com_algum": 0,
+        "nulo_filmes_com_algum_media": 0.05
+      },
+      {
+        "limiar": 0.91,
+        "n_pares_acima": 0,
+        "nulo_pares_acima_media": 0.05,
+        "fracao_ruido": null,
+        "n_filmes_com_algum": 0,
+        "nulo_filmes_com_algum_media": 0.05
+      },
+      {
+        "limiar": 0.92,
+        "n_pares_acima": 0,
+        "nulo_pares_acima_media": 0.05,
+        "fracao_ruido": null,
+        "n_filmes_com_algum": 0,
+        "nulo_filmes_com_algum_media": 0.05
+      },
+      {
+        "limiar": 0.93,
+        "n_pares_acima": 0,
+        "nulo_pares_acima_media": 0.05,
+        "fracao_ruido": null,
+        "n_filmes_com_algum": 0,
+        "nulo_filmes_com_algum_media": 0.05
+      },
+      {
+        "limiar": 0.94,
+        "n_pares_acima": 0,
+        "nulo_pares_acima_media": 0.05,
+        "fracao_ruido": null,
+        "n_filmes_com_algum": 0,
+        "nulo_filmes_com_algum_media": 0.05
+      },
+      {
+        "limiar": 0.95,
+        "n_pares_acima": 0,
+        "nulo_pares_acima_media": 0.05,
+        "fracao_ruido": null,
+        "n_filmes_com_algum": 0,
+        "nulo_filmes_com_algum_media": 0.05
+      }
+    ],
+    "L3_log_odds": [
+      {
+        "limiar": 0.05,
+        "n_pares_acima": 314,
+        "nulo_pares_acima_media": 300.65,
+        "fracao_ruido": 0.9575,
+        "n_filmes_com_algum": 35,
+        "nulo_filmes_com_algum_media": 35.0
+      },
+      {
+        "limiar": 0.1,
+        "n_pares_acima": 298,
+        "nulo_pares_acima_media": 284.19,
+        "fracao_ruido": 0.9537,
+        "n_filmes_com_algum": 35,
+        "nulo_filmes_com_algum_media": 35.0
+      },
+      {
+        "limiar": 0.15,
+        "n_pares_acima": 257,
+        "nulo_pares_acima_media": 236.35,
+        "fracao_ruido": 0.9197,
+        "n_filmes_com_algum": 35,
+        "nulo_filmes_com_algum_media": 35.0
+      },
+      {
+        "limiar": 0.2,
+        "n_pares_acima": 231,
+        "nulo_pares_acima_media": 209.26,
+        "fracao_ruido": 0.9059,
+        "n_filmes_com_algum": 35,
+        "nulo_filmes_com_algum_media": 34.99
+      },
+      {
+        "limiar": 0.25,
+        "n_pares_acima": 202,
+        "nulo_pares_acima_media": 177.06,
+        "fracao_ruido": 0.8765,
+        "n_filmes_com_algum": 35,
+        "nulo_filmes_com_algum_media": 34.96
+      },
+      {
+        "limiar": 0.3,
+        "n_pares_acima": 176,
+        "nulo_pares_acima_media": 150.0,
+        "fracao_ruido": 0.8523,
+        "n_filmes_com_algum": 35,
+        "nulo_filmes_com_algum_media": 34.83
+      },
+      {
+        "limiar": 0.35,
+        "n_pares_acima": 154,
+        "nulo_pares_acima_media": 129.41,
+        "fracao_ruido": 0.8403,
+        "n_filmes_com_algum": 35,
+        "nulo_filmes_com_algum_media": 34.59
+      },
+      {
+        "limiar": 0.4,
+        "n_pares_acima": 131,
+        "nulo_pares_acima_media": 108.3,
+        "fracao_ruido": 0.8267,
+        "n_filmes_com_algum": 34,
+        "nulo_filmes_com_algum_media": 34.01
+      },
+      {
+        "limiar": 0.45,
+        "n_pares_acima": 116,
+        "nulo_pares_acima_media": 90.93,
+        "fracao_ruido": 0.7839,
+        "n_filmes_com_algum": 34,
+        "nulo_filmes_com_algum_media": 32.97
+      },
+      {
+        "limiar": 0.5,
+        "n_pares_acima": 97,
+        "nulo_pares_acima_media": 77.33,
+        "fracao_ruido": 0.7972,
+        "n_filmes_com_algum": 33,
+        "nulo_filmes_com_algum_media": 31.75
+      },
+      {
+        "limiar": 0.55,
+        "n_pares_acima": 79,
+        "nulo_pares_acima_media": 60.31,
+        "fracao_ruido": 0.7634,
+        "n_filmes_com_algum": 32,
+        "nulo_filmes_com_algum_media": 29.14
+      },
+      {
+        "limiar": 0.6,
+        "n_pares_acima": 67,
+        "nulo_pares_acima_media": 50.26,
+        "fracao_ruido": 0.7502,
+        "n_filmes_com_algum": 32,
+        "nulo_filmes_com_algum_media": 26.92
+      },
+      {
+        "limiar": 0.65,
+        "n_pares_acima": 60,
+        "nulo_pares_acima_media": 40.52,
+        "fracao_ruido": 0.6754,
+        "n_filmes_com_algum": 29,
+        "nulo_filmes_com_algum_media": 24.04
+      },
+      {
+        "limiar": 0.7,
+        "n_pares_acima": 56,
+        "nulo_pares_acima_media": 35.16,
+        "fracao_ruido": 0.6279,
+        "n_filmes_com_algum": 29,
+        "nulo_filmes_com_algum_media": 22.06
+      },
+      {
+        "limiar": 0.75,
+        "n_pares_acima": 48,
+        "nulo_pares_acima_media": 27.27,
+        "fracao_ruido": 0.5681,
+        "n_filmes_com_algum": 28,
+        "nulo_filmes_com_algum_media": 18.4
+      },
+      {
+        "limiar": 0.8,
+        "n_pares_acima": 42,
+        "nulo_pares_acima_media": 22.98,
+        "fracao_ruido": 0.547,
+        "n_filmes_com_algum": 28,
+        "nulo_filmes_com_algum_media": 16.11
+      },
+      {
+        "limiar": 0.85,
+        "n_pares_acima": 36,
+        "nulo_pares_acima_media": 19.41,
+        "fracao_ruido": 0.5391,
+        "n_filmes_com_algum": 25,
+        "nulo_filmes_com_algum_media": 14.1
+      },
+      {
+        "limiar": 0.9,
+        "n_pares_acima": 28,
+        "nulo_pares_acima_media": 14.91,
+        "fracao_ruido": 0.5326,
+        "n_filmes_com_algum": 21,
+        "nulo_filmes_com_algum_media": 10.98
+      },
+      {
+        "limiar": 0.95,
+        "n_pares_acima": 26,
+        "nulo_pares_acima_media": 12.71,
+        "fracao_ruido": 0.4889,
+        "n_filmes_com_algum": 21,
+        "nulo_filmes_com_algum_media": 9.58
+      },
+      {
+        "limiar": 1.0,
+        "n_pares_acima": 24,
+        "nulo_pares_acima_media": 10.89,
+        "fracao_ruido": 0.4537,
+        "n_filmes_com_algum": 19,
+        "nulo_filmes_com_algum_media": 8.65
+      },
+      {
+        "limiar": 1.05,
+        "n_pares_acima": 17,
+        "nulo_pares_acima_media": 8.69,
+        "fracao_ruido": 0.5114,
+        "n_filmes_com_algum": 13,
+        "nulo_filmes_com_algum_media": 7.12
+      },
+      {
+        "limiar": 1.1,
+        "n_pares_acima": 15,
+        "nulo_pares_acima_media": 7.18,
+        "fracao_ruido": 0.4788,
+        "n_filmes_com_algum": 12,
+        "nulo_filmes_com_algum_media": 6.04
+      },
+      {
+        "limiar": 1.15,
+        "n_pares_acima": 13,
+        "nulo_pares_acima_media": 6.59,
+        "fracao_ruido": 0.5069,
+        "n_filmes_com_algum": 10,
+        "nulo_filmes_com_algum_media": 5.55
+      },
+      {
+        "limiar": 1.2,
+        "n_pares_acima": 11,
+        "nulo_pares_acima_media": 5.39,
+        "fracao_ruido": 0.49,
+        "n_filmes_com_algum": 8,
+        "nulo_filmes_com_algum_media": 4.49
+      },
+      {
+        "limiar": 1.25,
+        "n_pares_acima": 10,
+        "nulo_pares_acima_media": 4.73,
+        "fracao_ruido": 0.4727,
+        "n_filmes_com_algum": 7,
+        "nulo_filmes_com_algum_media": 3.91
+      },
+      {
+        "limiar": 1.3,
+        "n_pares_acima": 9,
+        "nulo_pares_acima_media": 4.09,
+        "fracao_ruido": 0.4549,
+        "n_filmes_com_algum": 6,
+        "nulo_filmes_com_algum_media": 3.53
+      },
+      {
+        "limiar": 1.35,
+        "n_pares_acima": 8,
+        "nulo_pares_acima_media": 3.89,
+        "fracao_ruido": 0.4861,
+        "n_filmes_com_algum": 5,
+        "nulo_filmes_com_algum_media": 3.33
+      },
+      {
+        "limiar": 1.4,
+        "n_pares_acima": 7,
+        "nulo_pares_acima_media": 3.41,
+        "fracao_ruido": 0.4876,
+        "n_filmes_com_algum": 4,
+        "nulo_filmes_com_algum_media": 2.89
+      },
+      {
+        "limiar": 1.45,
+        "n_pares_acima": 5,
+        "nulo_pares_acima_media": 2.81,
+        "fracao_ruido": 0.5615,
+        "n_filmes_com_algum": 2,
+        "nulo_filmes_com_algum_media": 2.39
+      },
+      {
+        "limiar": 1.5,
+        "n_pares_acima": 5,
+        "nulo_pares_acima_media": 2.71,
+        "fracao_ruido": 0.5426,
+        "n_filmes_com_algum": 2,
+        "nulo_filmes_com_algum_media": 2.3
+      },
+      {
+        "limiar": 1.55,
+        "n_pares_acima": 5,
+        "nulo_pares_acima_media": 2.47,
+        "fracao_ruido": 0.4935,
+        "n_filmes_com_algum": 2,
+        "nulo_filmes_com_algum_media": 2.12
+      },
+      {
+        "limiar": 1.6,
+        "n_pares_acima": 3,
+        "nulo_pares_acima_media": 2.32,
+        "fracao_ruido": 0.7725,
+        "n_filmes_com_algum": 2,
+        "nulo_filmes_com_algum_media": 2.02
+      },
+      {
+        "limiar": 1.65,
+        "n_pares_acima": 2,
+        "nulo_pares_acima_media": 2.01,
+        "fracao_ruido": 1.006,
+        "n_filmes_com_algum": 2,
+        "nulo_filmes_com_algum_media": 1.82
+      },
+      {
+        "limiar": 1.7,
+        "n_pares_acima": 1,
+        "nulo_pares_acima_media": 1.26,
+        "fracao_ruido": 1.2635,
+        "n_filmes_com_algum": 1,
+        "nulo_filmes_com_algum_media": 1.1
+      },
+      {
+        "limiar": 1.75,
+        "n_pares_acima": 1,
+        "nulo_pares_acima_media": 1.24,
+        "fracao_ruido": 1.2425,
+        "n_filmes_com_algum": 1,
+        "nulo_filmes_com_algum_media": 1.08
+      },
+      {
+        "limiar": 1.8,
+        "n_pares_acima": 1,
+        "nulo_pares_acima_media": 1.13,
+        "fracao_ruido": 1.1315,
+        "n_filmes_com_algum": 1,
+        "nulo_filmes_com_algum_media": 0.97
+      },
+      {
+        "limiar": 1.85,
+        "n_pares_acima": 1,
+        "nulo_pares_acima_media": 1.04,
+        "fracao_ruido": 1.045,
+        "n_filmes_com_algum": 1,
+        "nulo_filmes_com_algum_media": 0.91
+      },
+      {
+        "limiar": 1.9,
+        "n_pares_acima": 1,
+        "nulo_pares_acima_media": 1.03,
+        "fracao_ruido": 1.0305,
+        "n_filmes_com_algum": 1,
+        "nulo_filmes_com_algum_media": 0.9
+      },
+      {
+        "limiar": 1.95,
+        "n_pares_acima": 0,
+        "nulo_pares_acima_media": 0.74,
+        "fracao_ruido": null,
+        "n_filmes_com_algum": 0,
+        "nulo_filmes_com_algum_media": 0.69
+      },
+      {
+        "limiar": 2.0,
+        "n_pares_acima": 0,
+        "nulo_pares_acima_media": 0.74,
+        "fracao_ruido": null,
+        "n_filmes_com_algum": 0,
+        "nulo_filmes_com_algum_media": 0.68
+      },
+      {
+        "limiar": 2.05,
+        "n_pares_acima": 0,
+        "nulo_pares_acima_media": 0.4,
+        "fracao_ruido": null,
+        "n_filmes_com_algum": 0,
+        "nulo_filmes_com_algum_media": 0.35
+      },
+      {
+        "limiar": 2.1,
+        "n_pares_acima": 0,
+        "nulo_pares_acima_media": 0.35,
+        "fracao_ruido": null,
+        "n_filmes_com_algum": 0,
+        "nulo_filmes_com_algum_media": 0.3
+      },
+      {
+        "limiar": 2.15,
+        "n_pares_acima": 0,
+        "nulo_pares_acima_media": 0.34,
+        "fracao_ruido": null,
+        "n_filmes_com_algum": 0,
+        "nulo_filmes_com_algum_media": 0.3
+      },
+      {
+        "limiar": 2.2,
+        "n_pares_acima": 0,
+        "nulo_pares_acima_media": 0.33,
+        "fracao_ruido": null,
+        "n_filmes_com_algum": 0,
+        "nulo_filmes_com_algum_media": 0.29
+      },
+      {
+        "limiar": 2.25,
+        "n_pares_acima": 0,
+        "nulo_pares_acima_media": 0.27,
+        "fracao_ruido": null,
+        "n_filmes_com_algum": 0,
+        "nulo_filmes_com_algum_media": 0.24
+      },
+      {
+        "limiar": 2.3,
+        "n_pares_acima": 0,
+        "nulo_pares_acima_media": 0.26,
+        "fracao_ruido": null,
+        "n_filmes_com_algum": 0,
+        "nulo_filmes_com_algum_media": 0.23
+      },
+      {
+        "limiar": 2.35,
+        "n_pares_acima": 0,
+        "nulo_pares_acima_media": 0.25,
+        "fracao_ruido": null,
+        "n_filmes_com_algum": 0,
+        "nulo_filmes_com_algum_media": 0.23
+      },
+      {
+        "limiar": 2.4,
+        "n_pares_acima": 0,
+        "nulo_pares_acima_media": 0.13,
+        "fracao_ruido": null,
+        "n_filmes_com_algum": 0,
+        "nulo_filmes_com_algum_media": 0.12
+      },
+      {
+        "limiar": 2.45,
+        "n_pares_acima": 0,
+        "nulo_pares_acima_media": 0.13,
+        "fracao_ruido": null,
+        "n_filmes_com_algum": 0,
+        "nulo_filmes_com_algum_media": 0.12
+      },
+      {
+        "limiar": 2.5,
+        "n_pares_acima": 0,
+        "nulo_pares_acima_media": 0.11,
+        "fracao_ruido": null,
+        "n_filmes_com_algum": 0,
+        "nulo_filmes_com_algum_media": 0.11
+      },
+      {
+        "limiar": 2.55,
+        "n_pares_acima": 0,
+        "nulo_pares_acima_media": 0.09,
+        "fracao_ruido": null,
+        "n_filmes_com_algum": 0,
+        "nulo_filmes_com_algum_media": 0.09
+      },
+      {
+        "limiar": 2.6,
+        "n_pares_acima": 0,
+        "nulo_pares_acima_media": 0.08,
+        "fracao_ruido": null,
+        "n_filmes_com_algum": 0,
+        "nulo_filmes_com_algum_media": 0.07
+      },
+      {
+        "limiar": 2.65,
+        "n_pares_acima": 0,
+        "nulo_pares_acima_media": 0.08,
+        "fracao_ruido": null,
+        "n_filmes_com_algum": 0,
+        "nulo_filmes_com_algum_media": 0.07
+      },
+      {
+        "limiar": 2.7,
+        "n_pares_acima": 0,
+        "nulo_pares_acima_media": 0.08,
+        "fracao_ruido": null,
+        "n_filmes_com_algum": 0,
+        "nulo_filmes_com_algum_media": 0.07
+      },
+      {
+        "limiar": 2.75,
+        "n_pares_acima": 0,
+        "nulo_pares_acima_media": 0.07,
+        "fracao_ruido": null,
+        "n_filmes_com_algum": 0,
+        "nulo_filmes_com_algum_media": 0.06
+      },
+      {
+        "limiar": 2.8,
+        "n_pares_acima": 0,
+        "nulo_pares_acima_media": 0.06,
+        "fracao_ruido": null,
+        "n_filmes_com_algum": 0,
+        "nulo_filmes_com_algum_media": 0.06
+      },
+      {
+        "limiar": 2.85,
+        "n_pares_acima": 0,
+        "nulo_pares_acima_media": 0.06,
+        "fracao_ruido": null,
+        "n_filmes_com_algum": 0,
+        "nulo_filmes_com_algum_media": 0.06
+      },
+      {
+        "limiar": 2.9,
+        "n_pares_acima": 0,
+        "nulo_pares_acima_media": 0.05,
+        "fracao_ruido": null,
+        "n_filmes_com_algum": 0,
+        "nulo_filmes_com_algum_media": 0.05
+      },
+      {
+        "limiar": 2.95,
+        "n_pares_acima": 0,
+        "nulo_pares_acima_media": 0.03,
+        "fracao_ruido": null,
+        "n_filmes_com_algum": 0,
+        "nulo_filmes_com_algum_media": 0.03
+      },
+      {
+        "limiar": 3.0,
+        "n_pares_acima": 0,
+        "nulo_pares_acima_media": 0.02,
+        "fracao_ruido": null,
+        "n_filmes_com_algum": 0,
+        "nulo_filmes_com_algum_media": 0.02
+      },
+      {
+        "limiar": 3.05,
+        "n_pares_acima": 0,
+        "nulo_pares_acima_media": 0.01,
+        "fracao_ruido": null,
+        "n_filmes_com_algum": 0,
+        "nulo_filmes_com_algum_media": 0.01
+      },
+      {
+        "limiar": 3.1,
+        "n_pares_acima": 0,
+        "nulo_pares_acima_media": 0.01,
+        "fracao_ruido": null,
+        "n_filmes_com_algum": 0,
+        "nulo_filmes_com_algum_media": 0.01
+      },
+      {
+        "limiar": 3.15,
+        "n_pares_acima": 0,
+        "nulo_pares_acima_media": 0.01,
+        "fracao_ruido": null,
+        "n_filmes_com_algum": 0,
+        "nulo_filmes_com_algum_media": 0.01
+      },
+      {
+        "limiar": 3.2,
+        "n_pares_acima": 0,
+        "nulo_pares_acima_media": 0.01,
+        "fracao_ruido": null,
+        "n_filmes_com_algum": 0,
+        "nulo_filmes_com_algum_media": 0.01
+      },
+      {
+        "limiar": 3.25,
+        "n_pares_acima": 0,
+        "nulo_pares_acima_media": 0.01,
+        "fracao_ruido": null,
+        "n_filmes_com_algum": 0,
+        "nulo_filmes_com_algum_media": 0.01
+      },
+      {
+        "limiar": 3.3,
+        "n_pares_acima": 0,
+        "nulo_pares_acima_media": 0.01,
+        "fracao_ruido": null,
+        "n_filmes_com_algum": 0,
+        "nulo_filmes_com_algum_media": 0.01
+      },
+      {
+        "limiar": 3.35,
+        "n_pares_acima": 0,
+        "nulo_pares_acima_media": 0.01,
+        "fracao_ruido": null,
+        "n_filmes_com_algum": 0,
+        "nulo_filmes_com_algum_media": 0.01
+      },
+      {
+        "limiar": 3.4,
+        "n_pares_acima": 0,
+        "nulo_pares_acima_media": 0.01,
+        "fracao_ruido": null,
+        "n_filmes_com_algum": 0,
+        "nulo_filmes_com_algum_media": 0.01
+      },
+      {
+        "limiar": 3.45,
+        "n_pares_acima": 0,
+        "nulo_pares_acima_media": 0.01,
+        "fracao_ruido": null,
+        "n_filmes_com_algum": 0,
+        "nulo_filmes_com_algum_media": 0.01
+      },
+      {
+        "limiar": 3.5,
+        "n_pares_acima": 0,
+        "nulo_pares_acima_media": 0.01,
+        "fracao_ruido": null,
+        "n_filmes_com_algum": 0,
+        "nulo_filmes_com_algum_media": 0.01
+      },
+      {
+        "limiar": 3.55,
+        "n_pares_acima": 0,
+        "nulo_pares_acima_media": 0.01,
+        "fracao_ruido": null,
+        "n_filmes_com_algum": 0,
+        "nulo_filmes_com_algum_media": 0.01
+      },
+      {
+        "limiar": 3.6,
+        "n_pares_acima": 0,
+        "nulo_pares_acima_media": 0.01,
+        "fracao_ruido": null,
+        "n_filmes_com_algum": 0,
+        "nulo_filmes_com_algum_media": 0.01
+      },
+      {
+        "limiar": 3.65,
+        "n_pares_acima": 0,
+        "nulo_pares_acima_media": 0.01,
+        "fracao_ruido": null,
+        "n_filmes_com_algum": 0,
+        "nulo_filmes_com_algum_media": 0.01
+      },
+      {
+        "limiar": 3.7,
+        "n_pares_acima": 0,
+        "nulo_pares_acima_media": 0.0,
+        "fracao_ruido": null,
+        "n_filmes_com_algum": 0,
+        "nulo_filmes_com_algum_media": 0.0
+      },
+      {
+        "limiar": 3.75,
+        "n_pares_acima": 0,
+        "nulo_pares_acima_media": 0.0,
+        "fracao_ruido": null,
+        "n_filmes_com_algum": 0,
+        "nulo_filmes_com_algum_media": 0.0
+      },
+      {
+        "limiar": 3.8,
+        "n_pares_acima": 0,
+        "nulo_pares_acima_media": 0.0,
+        "fracao_ruido": null,
+        "n_filmes_com_algum": 0,
+        "nulo_filmes_com_algum_media": 0.0
+      },
+      {
+        "limiar": 3.85,
+        "n_pares_acima": 0,
+        "nulo_pares_acima_media": 0.0,
+        "fracao_ruido": null,
+        "n_filmes_com_algum": 0,
+        "nulo_filmes_com_algum_media": 0.0
+      },
+      {
+        "limiar": 3.9,
+        "n_pares_acima": 0,
+        "nulo_pares_acima_media": 0.0,
+        "fracao_ruido": null,
+        "n_filmes_com_algum": 0,
+        "nulo_filmes_com_algum_media": 0.0
+      },
+      {
+        "limiar": 3.95,
+        "n_pares_acima": 0,
+        "nulo_pares_acima_media": 0.0,
+        "fracao_ruido": null,
+        "n_filmes_com_algum": 0,
+        "nulo_filmes_com_algum_media": 0.0
+      },
+      {
+        "limiar": 4.0,
+        "n_pares_acima": 0,
+        "nulo_pares_acima_media": 0.0,
+        "fracao_ruido": null,
+        "n_filmes_com_algum": 0,
+        "nulo_filmes_com_algum_media": 0.0
+      }
+    ]
+  },
+  "detalhe_por_eixo_no_limiar_calibrado": {
+    "L1_absoluto": {
+      "pares_por_eixo": {
+        "tom_atmosfera": 6,
+        "direcao_imagem": 4,
+        "som_trilha": 2,
+        "critica_social": 2,
+        "atuacao": 2,
+        "ritmo": 1,
+        "roteiro_estrutura": 1,
+        "impacto_emocional": 1
+      },
+      "encabeca_por_eixo": {
+        "tom_atmosfera": 5,
+        "direcao_imagem": 2,
+        "ritmo": 1,
+        "som_trilha": 1,
+        "roteiro_estrutura": 1,
+        "impacto_emocional": 1,
+        "critica_social": 1,
+        "atuacao": 1
+      },
+      "eixo_que_encabeca_por_filme": {
+        "anatomy-of-a-fall": "ritmo",
+        "cats-2019": "tom_atmosfera",
+        "cure": "tom_atmosfera",
+        "dune-2021": "som_trilha",
+        "everything-everywhere-all-at-once": "direcao_imagem",
+        "joker-folie-a-deux": "roteiro_estrutura",
+        "napoleon-2023": "impacto_emocional",
+        "obsession-2026": "direcao_imagem",
+        "oppenheimer-2023": "critica_social",
+        "perfect-days-2023": "tom_atmosfera",
+        "the-hateful-eight": "tom_atmosfera",
+        "the-invite-2026": "tom_atmosfera",
+        "wonka": "atuacao"
+      }
+    }
+  },
+  "barbie": {
+    "L1_absoluto": {
+      "melhor_eixo": "critica_social",
+      "valor_melhor": 0.2,
+      "impacto_emocional": 0.0,
+      "impacto_emocional_freqs": {
+        "negativas": 0.65,
+        "medianas": 0.7,
+        "positivas": 0.7
+      },
+      "passa_no_limiar_calibrado": false
+    },
+    "L2_normalizado": {
+      "melhor_eixo": "critica_social",
+      "valor_melhor": 0.5333,
+      "impacto_emocional": 0.0,
+      "impacto_emocional_freqs": {
+        "negativas": 0.65,
+        "medianas": 0.7,
+        "positivas": 0.7
+      },
+      "passa_no_limiar_calibrado": null
+    },
+    "L3_log_odds": {
+      "melhor_eixo": "critica_social",
+      "valor_melhor": 0.9988,
+      "impacto_emocional": 0.0,
+      "impacto_emocional_freqs": {
+        "negativas": 0.65,
+        "medianas": 0.7,
+        "positivas": 0.7
+      },
+      "passa_no_limiar_calibrado": null
+    }
+  },
+  "entrega2_cobertura_vs_contraste": {
+    "0.19": {
+      "metrica_usada": "L1_absoluto",
+      "limiar_usado": 0.19,
+      "mediana_freq_global": 0.300125313283208,
+      "mediana_lift_medio": 0.07788868266095014,
+      "tabela_por_eixo": [
+        {
+          "eixo": "impacto_emocional",
+          "freq_global": 0.7551378446115288,
+          "freq_media_no_melhor_bucket": 0.8407894311570782,
+          "lift_medio": 0.08257368294133001
+        },
+        {
+          "eixo": "roteiro_estrutura",
+          "freq_global": 0.5593984962406015,
+          "freq_media_no_melhor_bucket": 0.6352299980721033,
+          "lift_medio": 0.07242864780226567
+        },
+        {
+          "eixo": "comparacoes",
+          "freq_global": 0.39724310776942356,
+          "freq_media_no_melhor_bucket": 0.46853229776759187,
+          "lift_medio": 0.07852235177535145
+        },
+        {
+          "eixo": "direcao_imagem",
+          "freq_global": 0.33383458646616543,
+          "freq_media_no_melhor_bucket": 0.40866511516887455,
+          "lift_medio": 0.07725501354654883
+        },
+        {
+          "eixo": "ritmo",
+          "freq_global": 0.3140350877192982,
+          "freq_media_no_melhor_bucket": 0.4024897002638938,
+          "lift_medio": 0.08427302836301138
+        },
+        {
+          "eixo": "atuacao",
+          "freq_global": 0.2862155388471178,
+          "freq_media_no_melhor_bucket": 0.36418881304644096,
+          "lift_medio": 0.07984855870618665
+        },
+        {
+          "eixo": "critica_social",
+          "freq_global": 0.23533834586466165,
+          "freq_media_no_melhor_bucket": 0.3061085889607561,
+          "lift_medio": 0.07493970521292502
+        },
+        {
+          "eixo": "tom_atmosfera",
+          "freq_global": 0.23408521303258145,
+          "freq_media_no_melhor_bucket": 0.3339547397906531,
+          "lift_medio": 0.1053583361942495
+        },
+        {
+          "eixo": "expectativa",
+          "freq_global": 0.20651629072681704,
+          "freq_media_no_melhor_bucket": 0.2617026752707867,
+          "lift_medio": 0.04293436152454429
+        },
+        {
+          "eixo": "som_trilha",
+          "freq_global": 0.13909774436090225,
+          "freq_media_no_melhor_bucket": 0.19122769122769123,
+          "lift_medio": 0.05562244828161637
+        }
+      ],
+      "candidatos_a_eixo_de_consenso_quadrante": [
+        "roteiro_estrutura",
+        "direcao_imagem"
+      ],
+      "top2_frequencia": [
+        "impacto_emocional",
+        "roteiro_estrutura"
+      ],
+      "filmes_sem_nenhum_bullet_de_contraste": {
+        "nenhum_excluido": {
+          "n": 17,
+          "filmes": [
+            "aftersun",
+            "avengers-endgame",
+            "cidade-de-deus",
+            "dune-part-two",
+            "eighth-grade",
+            "friday-the-13th-2009",
+            "interstellar",
+            "longlegs",
+            "mother-2017",
+            "parasite-2019",
+            "pearl-2022",
+            "shutter-island",
+            "talk-to-me-2022",
+            "the-godfather",
+            "the-northman",
+            "the-substance",
+            "wicked-2024"
+          ]
+        },
+        "excluindo_top2_frequencia": {
+          "n": 20,
+          "filmes": [
+            "aftersun",
+            "avengers-endgame",
+            "cidade-de-deus",
+            "dune-part-two",
+            "eighth-grade",
+            "friday-the-13th-2009",
+            "im-still-here-2024",
+            "interstellar",
+            "joker-folie-a-deux",
+            "longlegs",
+            "mother-2017",
+            "napoleon-2023",
+            "parasite-2019",
+            "pearl-2022",
+            "shutter-island",
+            "talk-to-me-2022",
+            "the-godfather",
+            "the-northman",
+            "the-substance",
+            "wicked-2024"
+          ]
+        },
+        "excluindo_quadrante_frequente_e_pouco_discriminante": {
+          "n": 18,
+          "filmes": [
+            "aftersun",
+            "avengers-endgame",
+            "cidade-de-deus",
+            "dune-part-two",
+            "eighth-grade",
+            "friday-the-13th-2009",
+            "interstellar",
+            "joker-folie-a-deux",
+            "longlegs",
+            "mother-2017",
+            "parasite-2019",
+            "pearl-2022",
+            "shutter-island",
+            "talk-to-me-2022",
+            "the-godfather",
+            "the-northman",
+            "the-substance",
+            "wicked-2024"
+          ]
+        }
+      },
+      "n_filmes_avaliados": 35
+    },
+    "0.25": {
+      "metrica_usada": "L1_absoluto",
+      "limiar_usado": 0.25,
+      "mediana_freq_global": 0.300125313283208,
+      "mediana_lift_medio": 0.07788868266095014,
+      "tabela_por_eixo": [
+        {
+          "eixo": "impacto_emocional",
+          "freq_global": 0.7551378446115288,
+          "freq_media_no_melhor_bucket": 0.8407894311570782,
+          "lift_medio": 0.08257368294133001
+        },
+        {
+          "eixo": "roteiro_estrutura",
+          "freq_global": 0.5593984962406015,
+          "freq_media_no_melhor_bucket": 0.6352299980721033,
+          "lift_medio": 0.07242864780226567
+        },
+        {
+          "eixo": "comparacoes",
+          "freq_global": 0.39724310776942356,
+          "freq_media_no_melhor_bucket": 0.46853229776759187,
+          "lift_medio": 0.07852235177535145
+        },
+        {
+          "eixo": "direcao_imagem",
+          "freq_global": 0.33383458646616543,
+          "freq_media_no_melhor_bucket": 0.40866511516887455,
+          "lift_medio": 0.07725501354654883
+        },
+        {
+          "eixo": "ritmo",
+          "freq_global": 0.3140350877192982,
+          "freq_media_no_melhor_bucket": 0.4024897002638938,
+          "lift_medio": 0.08427302836301138
+        },
+        {
+          "eixo": "atuacao",
+          "freq_global": 0.2862155388471178,
+          "freq_media_no_melhor_bucket": 0.36418881304644096,
+          "lift_medio": 0.07984855870618665
+        },
+        {
+          "eixo": "critica_social",
+          "freq_global": 0.23533834586466165,
+          "freq_media_no_melhor_bucket": 0.3061085889607561,
+          "lift_medio": 0.07493970521292502
+        },
+        {
+          "eixo": "tom_atmosfera",
+          "freq_global": 0.23408521303258145,
+          "freq_media_no_melhor_bucket": 0.3339547397906531,
+          "lift_medio": 0.1053583361942495
+        },
+        {
+          "eixo": "expectativa",
+          "freq_global": 0.20651629072681704,
+          "freq_media_no_melhor_bucket": 0.2617026752707867,
+          "lift_medio": 0.04293436152454429
+        },
+        {
+          "eixo": "som_trilha",
+          "freq_global": 0.13909774436090225,
+          "freq_media_no_melhor_bucket": 0.19122769122769123,
+          "lift_medio": 0.05562244828161637
+        }
+      ],
+      "candidatos_a_eixo_de_consenso_quadrante": [
+        "roteiro_estrutura",
+        "direcao_imagem"
+      ],
+      "top2_frequencia": [
+        "impacto_emocional",
+        "roteiro_estrutura"
+      ],
+      "filmes_sem_nenhum_bullet_de_contraste": {
+        "nenhum_excluido": {
+          "n": 26,
+          "filmes": [
+            "aftersun",
+            "avengers-endgame",
+            "barbie",
+            "bones-and-all",
+            "cidade-de-deus",
+            "dune-part-two",
+            "eighth-grade",
+            "friday-the-13th-2009",
+            "hereditary",
+            "im-still-here-2024",
+            "interstellar",
+            "longlegs",
+            "mother-2017",
+            "oppenheimer-2023",
+            "parasite-2019",
+            "pearl-2022",
+            "perfect-days-2023",
+            "shutter-island",
+            "spider-man-across-the-spider-verse",
+            "talk-to-me-2022",
+            "the-godfather",
+            "the-hateful-eight",
+            "the-northman",
+            "the-substance",
+            "wicked-2024",
+            "wonka"
+          ]
+        },
+        "excluindo_top2_frequencia": {
+          "n": 28,
+          "filmes": [
+            "aftersun",
+            "avengers-endgame",
+            "barbie",
+            "bones-and-all",
+            "cidade-de-deus",
+            "dune-part-two",
+            "eighth-grade",
+            "friday-the-13th-2009",
+            "hereditary",
+            "im-still-here-2024",
+            "interstellar",
+            "joker-folie-a-deux",
+            "longlegs",
+            "mother-2017",
+            "napoleon-2023",
+            "oppenheimer-2023",
+            "parasite-2019",
+            "pearl-2022",
+            "perfect-days-2023",
+            "shutter-island",
+            "spider-man-across-the-spider-verse",
+            "talk-to-me-2022",
+            "the-godfather",
+            "the-hateful-eight",
+            "the-northman",
+            "the-substance",
+            "wicked-2024",
+            "wonka"
+          ]
+        },
+        "excluindo_quadrante_frequente_e_pouco_discriminante": {
+          "n": 28,
+          "filmes": [
+            "aftersun",
+            "avengers-endgame",
+            "barbie",
+            "bones-and-all",
+            "cidade-de-deus",
+            "dune-part-two",
+            "eighth-grade",
+            "everything-everywhere-all-at-once",
+            "friday-the-13th-2009",
+            "hereditary",
+            "im-still-here-2024",
+            "interstellar",
+            "joker-folie-a-deux",
+            "longlegs",
+            "mother-2017",
+            "oppenheimer-2023",
+            "parasite-2019",
+            "pearl-2022",
+            "perfect-days-2023",
+            "shutter-island",
+            "spider-man-across-the-spider-verse",
+            "talk-to-me-2022",
+            "the-godfather",
+            "the-hateful-eight",
+            "the-northman",
+            "the-substance",
+            "wicked-2024",
+            "wonka"
+          ]
+        }
+      },
+      "n_filmes_avaliados": 35
+    }
+  }
+}
