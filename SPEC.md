@@ -2214,6 +2214,70 @@ Custo estimado: no pior caso ~100 requisições extras por filme novo (uma por r
 > classe de regressão, no mesmo estatuto das checagens mecânicas do §E2 — cobre
 > o modo de falha observado, não todo modo de falha concebível.
 
+> #### Prever o efeito de trocar o prompt de classificação: razão PAREADA, nunca extrapolação de teto (v1.9.7)
+>
+> **O erro que motiva.** Antes de reclassificar o corpus sob a variante
+> `A_regra` (2026-08-13), duas previsões foram feitas sobre como as
+> frequências por eixo mudariam. A que entrou no relatório da sessão
+> anterior era `observado × precisão_antiga / recall_antigo` — uma
+> extrapolação de TETO: "qual seria a frequência se o prompt ANTIGO tivesse
+> recall perfeito". Ela previu `expectativa` subindo **2,02×**. A
+> reclassificação real mediu **0,75×** — não só a magnitude, a DIREÇÃO
+> estava errada.
+>
+> **Por que ela não podia funcionar.** A extrapolação de teto estima a
+> frequência VERDADEIRA do corpus. É uma quantidade legítima, mas responde
+> outra pergunta: ela não sabe nada sobre o prompt NOVO, que tem erros
+> próprios e diferentes. Usá-la como previsão equivale a supor que o prompt
+> novo acerta tudo — o que nenhum prompt faz.
+>
+> **O preditor certo já existia na mesma sessão**, na validação pareada de
+> variantes (`resultado/auditoria-acuracia/variantes/comparacao.json`):
+>
+> ```
+> fator = (recall_novo / precisão_nova) / (recall_antigo / precisão_antiga)
+> ```
+>
+> A frequência observada sob um prompt é ≈ `freq_verdadeira × recall ÷
+> precisão`. A frequência verdadeira é propriedade das REVIEWS, não do
+> classificador — é a mesma sob os dois prompts, então **cancela na razão** e
+> sobra só a diferença de comportamento entre eles. É exatamente a
+> quantidade que se quer, e ela dispensa estimar a mais difícil.
+>
+> **O mecanismo:** `src/espectro24/previsao_frequencia.py`
+> (`fator_pareado`, `prever_frequencias`, `acuracia_da_previsao`), com
+> `tests/test_previsao_frequencia.py`. Não é nota escrita: é função, com as
+> bordas tratadas (precisão zero, recall antigo zero e medida ausente
+> devolvem `None` com motivo, nunca número inventado) e com o caso histórico
+> travado em teste.
+>
+> **Resultado medido do preditor, honesto:** sobre os 10 eixos, **10 de 10**
+> ficaram dentro de 25% do fator real e houve **1 erro direcional de
+> consequência** (`comparacoes`: previsto 1,05×, real 0,92×). Os dois
+> movimentos grandes foram acertados — `impacto_emocional` para cima
+> (1,95× previsto, 1,64× real) e `expectativa` para baixo (0,79× / 0,75×),
+> justamente o que a extrapolação de teto errava. *(Correção de registro: o
+> relatório da sessão da promoção afirmou "acerta o sinal em 9 dos 10
+> eixos". Sob a definição limpa de sinal que `acuracia_da_previsao` aplica —
+> com faixa morta de ±0,05 para não contar ruído como erro — o número é
+> **6 de 10**, porque 3 eixos tiveram fator previsto exatamente 1,00 contra
+> movimentos reais pequenos de 0,93–1,03. O "9 de 10" contava esses três
+> como acerto sem critério declarado. O que se sustenta é o par acima:
+> 10/10 em ordem de grandeza e 1 erro direcional real.)*
+>
+> **Pré-requisito, e é ele que decide a aplicabilidade.** Precisão e recall
+> dos DOIS prompts medidos contra o MESMO gabarito humano, no mesmo conjunto
+> de reviews. Sem esse par, o módulo não se aplica — e a saída NÃO é voltar
+> à extrapolação de teto, que já está registrada aqui como preditor errado:
+> é medir o par primeiro.
+>
+> **O que o preditor NÃO modela.** Competição entre eixos. Na promoção de
+> `A_regra`, **40% das reviews que perderam `expectativa` ganharam
+> `impacto_emocional` no mesmo texto** — o sinal migrou para um eixo mais
+> específico quando os dois disputavam a mesma frase. Nenhum preditor por
+> eixo isolado enxerga isso, e é a explicação de por que a magnitude erra
+> mais que a direção.
+
 - **Uma chamada por bucket** (máx. 3 por filme), modelo configurável.
 - **Provider-agnóstico (v1.1.1):** a interface de cliente injetável (`client_call(system, user, model) -> str`) é o **contrato formal**. Providers suportados: **Gemini** (chave `GEMINI_API_KEY`, modo JSON nativo) e **Anthropic** (chave `ANTHROPIC_API_KEY`). Seleção via `--provider {gemini,anthropic}`; sem a flag, auto-detecta pela chave presente no ambiente; se ambas as chaves estiverem presentes, ou nenhuma, é erro — exige decisão explícita.
 - **Default de modelo Gemini — `gemini-2.5-flash` (v1.1.2, ratificado com evidência):** a comparação de modelos (`resultado/comparacao/COMPARACAO.md`) rodou o MESMO prompt sobre o MESMO corpus (`oppenheimer-2023`) em `gemini-2.5-flash-lite` e `gemini-2.5-flash`. O flash-lite cometeu **3 violações de instrução** documentadas: (1) bucket `negativas` inteiro em inglês, violando "saída sempre em pt-BR"; (2)-(3) `observacao_geral` generalizando o recorte filtrado do bucket para "a maioria dos críticos considera o filme um fracasso" — o próprio erro de enquadramento que motivou o preâmbulo de papel abaixo. O `gemini-2.5-flash`, no mesmo teste, não repetiu nenhuma das três. Default Anthropic: `claude-sonnet-4-6`.
