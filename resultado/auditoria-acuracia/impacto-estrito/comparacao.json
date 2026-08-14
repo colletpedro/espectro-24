@@ -1,0 +1,342 @@
+{
+  "A_regra": {
+    "n": 100,
+    "concordancia_exata": 0.19,
+    "micro_geral": {
+      "tp": 303,
+      "fp": 49,
+      "fn": 93,
+      "precisao": 0.8607954545454546,
+      "recall": 0.7651515151515151
+    },
+    "por_faixa": {
+      "201-400": {
+        "tp": 45,
+        "fp": 10,
+        "fn": 22,
+        "precisao": 0.8181818181818182,
+        "recall": 0.6716417910447762
+      },
+      "801+": {
+        "tp": 117,
+        "fp": 12,
+        "fn": 16,
+        "precisao": 0.9069767441860465,
+        "recall": 0.8796992481203008
+      },
+      "<=200 (piso)": {
+        "tp": 61,
+        "fp": 15,
+        "fn": 38,
+        "precisao": 0.8026315789473685,
+        "recall": 0.6161616161616161
+      },
+      "401-800": {
+        "tp": 80,
+        "fp": 12,
+        "fn": 17,
+        "precisao": 0.8695652173913043,
+        "recall": 0.8247422680412371
+      }
+    },
+    "impacto_emocional": {
+      "tp": 49,
+      "fp": 23,
+      "fn": 6,
+      "precisao": 0.6805555555555556,
+      "recall": 0.8909090909090909,
+      "f1": 0.7716535433070867
+    },
+    "por_eixo": {
+      "ritmo": {
+        "precisao": 0.8620689655172413,
+        "recall": 0.8333333333333334
+      },
+      "atuacao": {
+        "precisao": 1.0,
+        "recall": 0.8181818181818182
+      },
+      "direcao_imagem": {
+        "precisao": 0.9736842105263158,
+        "recall": 0.8809523809523809
+      },
+      "roteiro_estrutura": {
+        "precisao": 0.9454545454545454,
+        "recall": 0.7536231884057971
+      },
+      "som_trilha": {
+        "precisao": 1.0,
+        "recall": 0.85
+      },
+      "tom_atmosfera": {
+        "precisao": 0.88,
+        "recall": 0.5945945945945946
+      },
+      "impacto_emocional": {
+        "precisao": 0.6805555555555556,
+        "recall": 0.8909090909090909
+      },
+      "comparacoes": {
+        "precisao": 0.8809523809523809,
+        "recall": 0.7872340425531915
+      },
+      "expectativa": {
+        "precisao": 0.9090909090909091,
+        "recall": 0.5
+      },
+      "critica_social": {
+        "precisao": 0.68,
+        "recall": 0.7391304347826086
+      }
+    },
+    "fracao_sem_eixo_por_faixa": {
+      "201-400": {
+        "com_eixo_tematico": {
+          "sem_eixo_do_modelo": 0,
+          "n": 20,
+          "fracao": 0.0
+        },
+        "sem_eixo_tematico": {
+          "sem_eixo_do_modelo": 2,
+          "n": 2,
+          "fracao": 1.0
+        }
+      },
+      "401-800": {
+        "com_eixo_tematico": {
+          "sem_eixo_do_modelo": 1,
+          "n": 17,
+          "fracao": 0.058823529411764705
+        },
+        "sem_eixo_tematico": {
+          "sem_eixo_do_modelo": 0,
+          "n": 0,
+          "fracao": null
+        }
+      },
+      "801+": {
+        "com_eixo_tematico": {
+          "sem_eixo_do_modelo": 0,
+          "n": 19,
+          "fracao": 0.0
+        },
+        "sem_eixo_tematico": {
+          "sem_eixo_do_modelo": 0,
+          "n": 0,
+          "fracao": null
+        }
+      },
+      "<=200": {
+        "com_eixo_tematico": {
+          "sem_eixo_do_modelo": 3,
+          "n": 36,
+          "fracao": 0.08333333333333333
+        },
+        "sem_eixo_tematico": {
+          "sem_eixo_do_modelo": 2,
+          "n": 6,
+          "fracao": 0.3333333333333333
+        }
+      }
+    },
+    "diagnostico": {
+      "reviews_com_recall_zero": 5,
+      "consensos_vazios": 0
+    }
+  },
+  "impacto_estrito": {
+    "n": 100,
+    "concordancia_exata": 0.18,
+    "micro_geral": {
+      "tp": 294,
+      "fp": 44,
+      "fn": 102,
+      "precisao": 0.8698224852071006,
+      "recall": 0.7424242424242424
+    },
+    "por_faixa": {
+      "201-400": {
+        "tp": 47,
+        "fp": 8,
+        "fn": 20,
+        "precisao": 0.8545454545454545,
+        "recall": 0.7014925373134329
+      },
+      "801+": {
+        "tp": 113,
+        "fp": 12,
+        "fn": 20,
+        "precisao": 0.904,
+        "recall": 0.849624060150376
+      },
+      "<=200 (piso)": {
+        "tp": 55,
+        "fp": 15,
+        "fn": 44,
+        "precisao": 0.7857142857142857,
+        "recall": 0.5555555555555556
+      },
+      "401-800": {
+        "tp": 79,
+        "fp": 9,
+        "fn": 18,
+        "precisao": 0.8977272727272727,
+        "recall": 0.8144329896907216
+      }
+    },
+    "impacto_emocional": {
+      "tp": 47,
+      "fp": 21,
+      "fn": 8,
+      "precisao": 0.6911764705882353,
+      "recall": 0.8545454545454545,
+      "f1": 0.7642276422764227
+    },
+    "por_eixo": {
+      "ritmo": {
+        "precisao": 0.896551724137931,
+        "recall": 0.8666666666666667
+      },
+      "atuacao": {
+        "precisao": 0.967741935483871,
+        "recall": 0.9090909090909091
+      },
+      "direcao_imagem": {
+        "precisao": 0.95,
+        "recall": 0.9047619047619048
+      },
+      "roteiro_estrutura": {
+        "precisao": 0.9464285714285714,
+        "recall": 0.7681159420289855
+      },
+      "som_trilha": {
+        "precisao": 0.9444444444444444,
+        "recall": 0.85
+      },
+      "tom_atmosfera": {
+        "precisao": 0.896551724137931,
+        "recall": 0.7027027027027027
+      },
+      "impacto_emocional": {
+        "precisao": 0.6911764705882353,
+        "recall": 0.8545454545454545
+      },
+      "comparacoes": {
+        "precisao": 0.90625,
+        "recall": 0.6170212765957447
+      },
+      "expectativa": {
+        "precisao": 0.8,
+        "recall": 0.4
+      },
+      "critica_social": {
+        "precisao": 0.8,
+        "recall": 0.5217391304347826
+      }
+    },
+    "fracao_sem_eixo_por_faixa": {
+      "201-400": {
+        "com_eixo_tematico": {
+          "sem_eixo_do_modelo": 1,
+          "n": 20,
+          "fracao": 0.05
+        },
+        "sem_eixo_tematico": {
+          "sem_eixo_do_modelo": 2,
+          "n": 2,
+          "fracao": 1.0
+        }
+      },
+      "401-800": {
+        "com_eixo_tematico": {
+          "sem_eixo_do_modelo": 1,
+          "n": 17,
+          "fracao": 0.058823529411764705
+        },
+        "sem_eixo_tematico": {
+          "sem_eixo_do_modelo": 0,
+          "n": 0,
+          "fracao": null
+        }
+      },
+      "801+": {
+        "com_eixo_tematico": {
+          "sem_eixo_do_modelo": 0,
+          "n": 19,
+          "fracao": 0.0
+        },
+        "sem_eixo_tematico": {
+          "sem_eixo_do_modelo": 0,
+          "n": 0,
+          "fracao": null
+        }
+      },
+      "<=200": {
+        "com_eixo_tematico": {
+          "sem_eixo_do_modelo": 3,
+          "n": 36,
+          "fracao": 0.08333333333333333
+        },
+        "sem_eixo_tematico": {
+          "sem_eixo_do_modelo": 4,
+          "n": 6,
+          "fracao": 0.6666666666666666
+        }
+      }
+    },
+    "diagnostico": {
+      "reviews_com_recall_zero": 8,
+      "consensos_vazios": 2
+    }
+  },
+  "_bootstrap_estrito_menos_a_regra": {
+    "precisao_geral": {
+      "delta_mediano": 0.0093,
+      "ic95": [
+        -0.0243,
+        0.0428
+      ],
+      "cruza_zero": true
+    },
+    "recall_geral": {
+      "delta_mediano": -0.0231,
+      "ic95": [
+        -0.0569,
+        0.0112
+      ],
+      "cruza_zero": true
+    },
+    "f1_geral": {
+      "delta_mediano": -0.0089,
+      "ic95": [
+        -0.0363,
+        0.017
+      ],
+      "cruza_zero": true
+    },
+    "recall_ate_200": {
+      "delta_mediano": -0.0614,
+      "ic95": [
+        -0.1304,
+        0.0079
+      ],
+      "cruza_zero": true
+    },
+    "precisao_impacto": {
+      "delta_mediano": 0.0107,
+      "ic95": [
+        -0.0643,
+        0.0867
+      ],
+      "cruza_zero": true
+    },
+    "recall_impacto": {
+      "delta_mediano": -0.0364,
+      "ic95": [
+        -0.129,
+        0.0517
+      ],
+      "cruza_zero": true
+    }
+  }
+}
