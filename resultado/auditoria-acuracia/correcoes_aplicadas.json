@@ -1,0 +1,100 @@
+[
+  {
+    "descricao": "Correcao da assimetria de impacto_emocional no gabarito, sob REGRA_ANOTACAO.md. Decisoes FIRMES do anotador (2026-08-14): 13 remocoes de ALTA confianca (veredicto seco explicito) + 2 adicoes. Os 28 casos de MODERADA/AMBIGUO ficam PENDENTES, para decisao caso a caso.",
+    "backup": "resultado/auditoria-acuracia/leitura.md.bak-0",
+    "checkboxes_antes": 455,
+    "checkboxes_depois": 444,
+    "alteracoes": [
+      {
+        "id": "viewing:1229439522",
+        "eixo": "impacto_emocional",
+        "acao": "remover",
+        "motivo": "#029 veredicto seco: 'i didn't like it'"
+      },
+      {
+        "id": "viewing:1433922444",
+        "eixo": "impacto_emocional",
+        "acao": "remover",
+        "motivo": "#042 veredicto seco: 'but I did not enjoy'"
+      },
+      {
+        "id": "viewing:1434872395",
+        "eixo": "impacto_emocional",
+        "acao": "remover",
+        "motivo": "#048 veredicto seco: 'i don't think i enjoyed a second of watching it'"
+      },
+      {
+        "id": "viewing:1433645153",
+        "eixo": "impacto_emocional",
+        "acao": "remover",
+        "motivo": "#050 veredicto seco: 'Film plutot mid'"
+      },
+      {
+        "id": "viewing:1439444410",
+        "eixo": "impacto_emocional",
+        "acao": "remover",
+        "motivo": "#058 veredicto seco duplo: 'I hated it' -> 'I loved every single part of it'"
+      },
+      {
+        "id": "viewing:395718669",
+        "eixo": "impacto_emocional",
+        "acao": "remover",
+        "motivo": "#017 veredicto seco: 'This was shit', 'Waste of my damn money'"
+      },
+      {
+        "id": "viewing:1428548313",
+        "eixo": "impacto_emocional",
+        "acao": "remover",
+        "motivo": "#034 veredicto seco: 'Just stupid ending and stupid movie'"
+      },
+      {
+        "id": "viewing:1437754006",
+        "eixo": "impacto_emocional",
+        "acao": "remover",
+        "motivo": "#061 veredicto seco: 'no la odio e incluso disfrute por momentos'"
+      },
+      {
+        "id": "viewing:1432174700",
+        "eixo": "impacto_emocional",
+        "acao": "remover",
+        "motivo": "#067 veredicto seco: 'this one didn't do it for me'"
+      },
+      {
+        "id": "viewing:1432986303",
+        "eixo": "impacto_emocional",
+        "acao": "remover",
+        "motivo": "#027 veredicto seco: 'Cuanto potencial desaprovechado'"
+      },
+      {
+        "id": "viewing:81820964",
+        "eixo": "impacto_emocional",
+        "acao": "remover",
+        "motivo": "#053 veredicto seco: 'is just not for me'"
+      },
+      {
+        "id": "viewing:1432307936",
+        "eixo": "impacto_emocional",
+        "acao": "remover",
+        "motivo": "#057 pergunta retorica sobre o gosto alheio, sem efeito proprio"
+      },
+      {
+        "id": "viewing:1431404422",
+        "eixo": "impacto_emocional",
+        "acao": "remover",
+        "motivo": "#078 odio ao GENERO ('ODEIO musical sem historia'), nao efeito deste filme"
+      },
+      {
+        "id": "viewing:1436204229",
+        "eixo": "impacto_emocional",
+        "acao": "adicionar",
+        "motivo": "#008 efeito declarado: 'lugnar det mig' (me acalma)"
+      },
+      {
+        "id": "viewing:247844011",
+        "eixo": "impacto_emocional",
+        "acao": "adicionar",
+        "motivo": "#086 efeito declarado: 'want us to feel all of Evelyn's paralyzing overstimulation'"
+      }
+    ]
+  }
+]

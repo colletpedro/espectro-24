@@ -1,0 +1,20 @@
+{
+  "descricao": "Correcao da assimetria de impacto_emocional no gabarito, sob REGRA_ANOTACAO.md. Decisoes FIRMES do anotador (2026-08-14): 13 remocoes de ALTA confianca (veredicto seco explicito) + 2 adicoes. Os 28 casos de MODERADA/AMBIGUO ficam PENDENTES, para decisao caso a caso.",
+  "decisoes": [
+    {"id": "viewing:1229439522", "remover": ["impacto_emocional"], "motivo": "#029 veredicto seco: 'i didn't like it'"},
+    {"id": "viewing:1433922444", "remover": ["impacto_emocional"], "motivo": "#042 veredicto seco: 'but I did not enjoy'"},
+    {"id": "viewing:1434872395", "remover": ["impacto_emocional"], "motivo": "#048 veredicto seco: 'i don't think i enjoyed a second of watching it'"},
+    {"id": "viewing:1433645153", "remover": ["impacto_emocional"], "motivo": "#050 veredicto seco: 'Film plutot mid'"},
+    {"id": "viewing:1439444410", "remover": ["impacto_emocional"], "motivo": "#058 veredicto seco duplo: 'I hated it' -> 'I loved every single part of it'"},
+    {"id": "viewing:395718669", "remover": ["impacto_emocional"], "motivo": "#017 veredicto seco: 'This was shit', 'Waste of my damn money'"},
+    {"id": "viewing:1428548313", "remover": ["impacto_emocional"], "motivo": "#034 veredicto seco: 'Just stupid ending and stupid movie'"},
+    {"id": "viewing:1437754006", "remover": ["impacto_emocional"], "motivo": "#061 veredicto seco: 'no la odio e incluso disfrute por momentos'"},
+    {"id": "viewing:1432174700", "remover": ["impacto_emocional"], "motivo": "#067 veredicto seco: 'this one didn't do it for me'"},
+    {"id": "viewing:1432986303", "remover": ["impacto_emocional"], "motivo": "#027 veredicto seco: 'Cuanto potencial desaprovechado'"},
+    {"id": "viewing:81820964", "remover": ["impacto_emocional"], "motivo": "#053 veredicto seco: 'is just not for me'"},
+    {"id": "viewing:1432307936", "remover": ["impacto_emocional"], "motivo": "#057 pergunta retorica sobre o gosto alheio, sem efeito proprio"},
+    {"id": "viewing:1431404422", "remover": ["impacto_emocional"], "motivo": "#078 odio ao GENERO ('ODEIO musical sem historia'), nao efeito deste filme"},
+    {"id": "viewing:1436204229", "adicionar": ["impacto_emocional"], "motivo": "#008 efeito declarado: 'lugnar det mig' (me acalma)"},
+    {"id": "viewing:247844011", "adicionar": ["impacto_emocional"], "motivo": "#086 efeito declarado: 'want us to feel all of Evelyn's paralyzing overstimulation'"}
+  ]
+}

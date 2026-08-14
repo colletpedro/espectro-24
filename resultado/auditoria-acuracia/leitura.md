@@ -165,7 +165,7 @@
 - [x] roteiro_estrutura
 - [ ] som_trilha
 - [x] tom_atmosfera
-- [ ] impacto_emocional
+- [x] impacto_emocional
 - [ ] comparacoes
 - [x] expectativa
 - [ ] critica_social
@@ -363,7 +363,7 @@
 - [x] roteiro_estrutura
 - [ ] som_trilha
 - [ ] tom_atmosfera
-- [x] impacto_emocional
+- [ ] impacto_emocional
 - [x] comparacoes
 - [x] expectativa
 - [ ] critica_social
@@ -583,7 +583,7 @@
 - [x] roteiro_estrutura
 - [ ] som_trilha
 - [ ] tom_atmosfera
-- [x] impacto_emocional
+- [ ] impacto_emocional
 - [x] comparacoes
 - [x] expectativa
 - [ ] critica_social
@@ -627,7 +627,7 @@
 - [ ] roteiro_estrutura
 - [ ] som_trilha
 - [ ] tom_atmosfera
-- [x] impacto_emocional
+- [ ] impacto_emocional
 - [ ] comparacoes
 - [ ] expectativa
 - [ ] critica_social
@@ -737,7 +737,7 @@
 - [x] roteiro_estrutura
 - [ ] som_trilha
 - [ ] tom_atmosfera
-- [x] impacto_emocional
+- [ ] impacto_emocional
 - [ ] comparacoes
 - [ ] expectativa
 - [ ] critica_social
@@ -913,7 +913,7 @@
 - [ ] roteiro_estrutura
 - [ ] som_trilha
 - [ ] tom_atmosfera
-- [x] impacto_emocional
+- [ ] impacto_emocional
 - [ ] comparacoes
 - [ ] expectativa
 - [ ] critica_social
@@ -1045,7 +1045,7 @@
 - [x] roteiro_estrutura
 - [ ] som_trilha
 - [ ] tom_atmosfera
-- [x] impacto_emocional
+- [ ] impacto_emocional
 - [ ] comparacoes
 - [ ] expectativa
 - [ ] critica_social
@@ -1089,7 +1089,7 @@
 - [x] roteiro_estrutura
 - [ ] som_trilha
 - [ ] tom_atmosfera
-- [x] impacto_emocional
+- [ ] impacto_emocional
 - [ ] comparacoes
 - [ ] expectativa
 - [x] critica_social
@@ -1155,7 +1155,7 @@
 - [x] roteiro_estrutura
 - [ ] som_trilha
 - [ ] tom_atmosfera
-- [x] impacto_emocional
+- [ ] impacto_emocional
 - [ ] comparacoes
 - [ ] expectativa
 - [x] critica_social
@@ -1243,7 +1243,7 @@
 - [ ] roteiro_estrutura
 - [ ] som_trilha
 - [ ] tom_atmosfera
-- [x] impacto_emocional
+- [ ] impacto_emocional
 - [ ] comparacoes
 - [ ] expectativa
 - [ ] critica_social
@@ -1265,7 +1265,7 @@
 - [x] roteiro_estrutura
 - [x] som_trilha
 - [ ] tom_atmosfera
-- [x] impacto_emocional
+- [ ] impacto_emocional
 - [x] comparacoes
 - [ ] expectativa
 - [ ] critica_social
@@ -1331,7 +1331,7 @@
 - [x] roteiro_estrutura
 - [x] som_trilha
 - [ ] tom_atmosfera
-- [x] impacto_emocional
+- [ ] impacto_emocional
 - [x] comparacoes
 - [ ] expectativa
 - [ ] critica_social
@@ -1463,7 +1463,7 @@
 - [x] roteiro_estrutura
 - [ ] som_trilha
 - [ ] tom_atmosfera
-- [x] impacto_emocional
+- [ ] impacto_emocional
 - [x] comparacoes
 - [x] expectativa
 - [ ] critica_social
@@ -1705,7 +1705,7 @@
 - [x] roteiro_estrutura
 - [x] som_trilha
 - [ ] tom_atmosfera
-- [x] impacto_emocional
+- [ ] impacto_emocional
 - [x] comparacoes
 - [ ] expectativa
 - [ ] critica_social
@@ -1881,7 +1881,7 @@
 - [x] roteiro_estrutura
 - [ ] som_trilha
 - [x] tom_atmosfera
-- [ ] impacto_emocional
+- [x] impacto_emocional
 - [ ] comparacoes
 - [ ] expectativa
 - [ ] critica_social

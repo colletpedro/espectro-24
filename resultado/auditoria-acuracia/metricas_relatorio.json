@@ -4,7 +4,7 @@
   "n_faltando_anotacao": 0,
   "geral": {
     "n": 100,
-    "concordancia_exata": 0.18,
+    "concordancia_exata": 0.2,
     "por_eixo": {
       "ritmo": {
         "tp": 24,
@@ -55,12 +55,12 @@
         "f1": 0.8059701492537312
       },
       "impacto_emocional": {
-        "tp": 34,
-        "fp": 3,
-        "fn": 32,
-        "precisao": 0.918918918918919,
-        "recall": 0.5151515151515151,
-        "f1": 0.6601941747572816
+        "tp": 32,
+        "fp": 5,
+        "fn": 23,
+        "precisao": 0.8648648648648649,
+        "recall": 0.5818181818181818,
+        "f1": 0.6956521739130435
       },
       "comparacoes": {
         "tp": 34,
@@ -91,7 +91,7 @@
   "por_bucket": {
     "negativas": {
       "n": 32,
-      "concordancia_exata": 0.1875,
+      "concordancia_exata": 0.25,
       "por_eixo": {
         "ritmo": {
           "tp": 10,
@@ -142,12 +142,12 @@
           "f1": 0.8
         },
         "impacto_emocional": {
-          "tp": 15,
-          "fp": 0,
-          "fn": 14,
-          "precisao": 1.0,
-          "recall": 0.5172413793103449,
-          "f1": 0.6818181818181819
+          "tp": 13,
+          "fp": 2,
+          "fn": 8,
+          "precisao": 0.8666666666666667,
+          "recall": 0.6190476190476191,
+          "f1": 0.7222222222222222
         },
         "comparacoes": {
           "tp": 10,
@@ -228,12 +228,12 @@
           "f1": 0.6956521739130435
         },
         "impacto_emocional": {
-          "tp": 8,
-          "fp": 3,
-          "fn": 6,
-          "precisao": 0.7272727272727273,
-          "recall": 0.5714285714285714,
-          "f1": 0.64
+          "tp": 9,
+          "fp": 2,
+          "fn": 4,
+          "precisao": 0.8181818181818182,
+          "recall": 0.6923076923076923,
+          "f1": 0.7500000000000001
         },
         "comparacoes": {
           "tp": 12,
@@ -314,12 +314,12 @@
           "f1": 0.9166666666666666
         },
         "impacto_emocional": {
-          "tp": 11,
-          "fp": 0,
-          "fn": 12,
-          "precisao": 1.0,
-          "recall": 0.4782608695652174,
-          "f1": 0.6470588235294118
+          "tp": 10,
+          "fp": 1,
+          "fn": 11,
+          "precisao": 0.9090909090909091,
+          "recall": 0.47619047619047616,
+          "f1": 0.6249999999999999
         },
         "comparacoes": {
           "tp": 12,
@@ -402,12 +402,12 @@
           "f1": 0.8
         },
         "impacto_emocional": {
-          "tp": 12,
-          "fp": 1,
-          "fn": 11,
-          "precisao": 0.9230769230769231,
-          "recall": 0.5217391304347826,
-          "f1": 0.6666666666666667
+          "tp": 11,
+          "fp": 2,
+          "fn": 8,
+          "precisao": 0.8461538461538461,
+          "recall": 0.5789473684210527,
+          "f1": 0.6875
         },
         "comparacoes": {
           "tp": 7,
@@ -437,7 +437,7 @@
     },
     "maioria": {
       "n": 53,
-      "concordancia_exata": 0.18867924528301888,
+      "concordancia_exata": 0.20754716981132076,
       "por_eixo": {
         "ritmo": {
           "tp": 18,
@@ -488,12 +488,12 @@
           "f1": 0.823529411764706
         },
         "impacto_emocional": {
-          "tp": 22,
-          "fp": 2,
-          "fn": 13,
-          "precisao": 0.9166666666666666,
-          "recall": 0.6285714285714286,
-          "f1": 0.7457627118644068
+          "tp": 21,
+          "fp": 3,
+          "fn": 9,
+          "precisao": 0.875,
+          "recall": 0.7,
+          "f1": 0.7777777777777777
         },
         "comparacoes": {
           "tp": 27,
@@ -523,7 +523,7 @@
     },
     "vazio": {
       "n": 8,
-      "concordancia_exata": 0.0,
+      "concordancia_exata": 0.125,
       "por_eixo": {
         "ritmo": {
           "tp": 0,
@@ -576,7 +576,7 @@
         "impacto_emocional": {
           "tp": 0,
           "fp": 0,
-          "fn": 8,
+          "fn": 6,
           "precisao": null,
           "recall": 0.0,
           "f1": null
@@ -662,12 +662,12 @@
           "f1": 0.5714285714285715
         },
         "impacto_emocional": {
-          "tp": 7,
-          "fp": 1,
-          "fn": 6,
-          "precisao": 0.875,
-          "recall": 0.5384615384615384,
-          "f1": 0.6666666666666667
+          "tp": 6,
+          "fp": 2,
+          "fn": 4,
+          "precisao": 0.75,
+          "recall": 0.6,
+          "f1": 0.6666666666666665
         },
         "comparacoes": {
           "tp": 6,
@@ -697,7 +697,7 @@
     },
     "<=200 (piso)": {
       "n": 42,
-      "concordancia_exata": 0.16666666666666666,
+      "concordancia_exata": 0.21428571428571427,
       "por_eixo": {
         "ritmo": {
           "tp": 3,
@@ -748,12 +748,12 @@
           "f1": 0.6
         },
         "impacto_emocional": {
-          "tp": 6,
-          "fp": 0,
-          "fn": 21,
-          "precisao": 1.0,
-          "recall": 0.2222222222222222,
-          "f1": 0.3636363636363636
+          "tp": 5,
+          "fp": 1,
+          "fn": 15,
+          "precisao": 0.8333333333333334,
+          "recall": 0.25,
+          "f1": 0.3846153846153846
         },
         "comparacoes": {
           "tp": 2,
@@ -836,10 +836,10 @@
         "impacto_emocional": {
           "tp": 10,
           "fp": 1,
-          "fn": 2,
+          "fn": 1,
           "precisao": 0.9090909090909091,
-          "recall": 0.8333333333333334,
-          "f1": 0.8695652173913043
+          "recall": 0.9090909090909091,
+          "f1": 0.9090909090909091
         },
         "comparacoes": {
           "tp": 9,
@@ -956,7 +956,7 @@
   },
   "por_n_eixos_atribuidos_pelo_humano": {
     "0": {
-      "n": 5,
+      "n": 8,
       "concordancia_exata": 1.0,
       "por_eixo": {
         "ritmo": {
@@ -1042,8 +1042,8 @@
       }
     },
     "1": {
-      "n": 9,
-      "concordancia_exata": 0.1111111111111111,
+      "n": 6,
+      "concordancia_exata": 0.16666666666666666,
       "por_eixo": {
         "ritmo": {
           "tp": 0,
@@ -1096,7 +1096,7 @@
         "impacto_emocional": {
           "tp": 0,
           "fp": 1,
-          "fn": 4,
+          "fn": 1,
           "precisao": 0.0,
           "recall": 0.0,
           "f1": null
@@ -1128,8 +1128,8 @@
       }
     },
     "2": {
-      "n": 13,
-      "concordancia_exata": 0.23076923076923078,
+      "n": 15,
+      "concordancia_exata": 0.2,
       "por_eixo": {
         "ritmo": {
           "tp": 1,
@@ -1142,10 +1142,10 @@
         "atuacao": {
           "tp": 1,
           "fp": 0,
-          "fn": 0,
+          "fn": 1,
           "precisao": 1.0,
-          "recall": 1.0,
-          "f1": 1.0
+          "recall": 0.5,
+          "f1": 0.6666666666666666
         },
         "direcao_imagem": {
           "tp": 1,
@@ -1158,10 +1158,10 @@
         "roteiro_estrutura": {
           "tp": 1,
           "fp": 0,
-          "fn": 5,
+          "fn": 7,
           "precisao": 1.0,
-          "recall": 0.16666666666666666,
-          "f1": 0.2857142857142857
+          "recall": 0.125,
+          "f1": 0.2222222222222222
         },
         "som_trilha": {
           "tp": 1,
@@ -1206,10 +1206,10 @@
         "critica_social": {
           "tp": 1,
           "fp": 2,
-          "fn": 0,
+          "fn": 1,
           "precisao": 0.3333333333333333,
-          "recall": 1.0,
-          "f1": 0.5
+          "recall": 0.5,
+          "f1": 0.4
         }
       }
     },
@@ -1226,93 +1226,7 @@
           "f1": 1.0
         },
         "atuacao": {
-          "tp": 2,
-          "fp": 0,
-          "fn": 1,
-          "precisao": 1.0,
-          "recall": 0.6666666666666666,
-          "f1": 0.8
-        },
-        "direcao_imagem": {
           "tp": 3,
-          "fp": 0,
-          "fn": 2,
-          "precisao": 1.0,
-          "recall": 0.6,
-          "f1": 0.7499999999999999
-        },
-        "roteiro_estrutura": {
-          "tp": 2,
-          "fp": 0,
-          "fn": 12,
-          "precisao": 1.0,
-          "recall": 0.14285714285714285,
-          "f1": 0.25
-        },
-        "som_trilha": {
-          "tp": 0,
-          "fp": 0,
-          "fn": 2,
-          "precisao": null,
-          "recall": 0.0,
-          "f1": null
-        },
-        "tom_atmosfera": {
-          "tp": 1,
-          "fp": 1,
-          "fn": 4,
-          "precisao": 0.5,
-          "recall": 0.2,
-          "f1": 0.28571428571428575
-        },
-        "impacto_emocional": {
-          "tp": 2,
-          "fp": 1,
-          "fn": 10,
-          "precisao": 0.6666666666666666,
-          "recall": 0.16666666666666666,
-          "f1": 0.26666666666666666
-        },
-        "comparacoes": {
-          "tp": 2,
-          "fp": 0,
-          "fn": 5,
-          "precisao": 1.0,
-          "recall": 0.2857142857142857,
-          "f1": 0.4444444444444445
-        },
-        "expectativa": {
-          "tp": 0,
-          "fp": 1,
-          "fn": 8,
-          "precisao": 0.0,
-          "recall": 0.0,
-          "f1": null
-        },
-        "critica_social": {
-          "tp": 3,
-          "fp": 0,
-          "fn": 2,
-          "precisao": 1.0,
-          "recall": 0.6,
-          "f1": 0.7499999999999999
-        }
-      }
-    },
-    "4": {
-      "n": 13,
-      "concordancia_exata": 0.07692307692307693,
-      "por_eixo": {
-        "ritmo": {
-          "tp": 1,
-          "fp": 1,
-          "fn": 2,
-          "precisao": 0.5,
-          "recall": 0.3333333333333333,
-          "f1": 0.4
-        },
-        "atuacao": {
-          "tp": 2,
           "fp": 0,
           "fn": 0,
           "precisao": 1.0,
@@ -1328,100 +1242,76 @@
           "f1": 0.8
         },
         "roteiro_estrutura": {
-          "tp": 5,
+          "tp": 3,
+          "fp": 0,
+          "fn": 11,
+          "precisao": 1.0,
+          "recall": 0.21428571428571427,
+          "f1": 0.35294117647058826
+        },
+        "som_trilha": {
+          "tp": 1,
+          "fp": 0,
+          "fn": 3,
+          "precisao": 1.0,
+          "recall": 0.25,
+          "f1": 0.4
+        },
+        "tom_atmosfera": {
+          "tp": 1,
+          "fp": 1,
+          "fn": 3,
+          "precisao": 0.5,
+          "recall": 0.25,
+          "f1": 0.3333333333333333
+        },
+        "impacto_emocional": {
+          "tp": 2,
+          "fp": 2,
+          "fn": 8,
+          "precisao": 0.5,
+          "recall": 0.2,
+          "f1": 0.28571428571428575
+        },
+        "comparacoes": {
+          "tp": 3,
           "fp": 0,
           "fn": 6,
           "precisao": 1.0,
-          "recall": 0.45454545454545453,
-          "f1": 0.625
+          "recall": 0.3333333333333333,
+          "f1": 0.5
         },
-        "som_trilha": {
-          "tp": 2,
-          "fp": 0,
-          "fn": 1,
-          "precisao": 1.0,
-          "recall": 0.6666666666666666,
-          "f1": 0.8
+        "expectativa": {
+          "tp": 0,
+          "fp": 2,
+          "fn": 7,
+          "precisao": 0.0,
+          "recall": 0.0,
+          "f1": null
         },
-        "tom_atmosfera": {
+        "critica_social": {
           "tp": 3,
           "fp": 0,
           "fn": 1,
           "precisao": 1.0,
           "recall": 0.75,
           "f1": 0.8571428571428571
-        },
-        "impacto_emocional": {
-          "tp": 5,
-          "fp": 0,
-          "fn": 5,
-          "precisao": 1.0,
-          "recall": 0.5,
-          "f1": 0.6666666666666666
-        },
-        "comparacoes": {
-          "tp": 4,
-          "fp": 0,
-          "fn": 4,
-          "precisao": 1.0,
-          "recall": 0.5,
-          "f1": 0.6666666666666666
-        },
-        "expectativa": {
-          "tp": 0,
-          "fp": 1,
-          "fn": 2,
-          "precisao": 0.0,
-          "recall": 0.0,
-          "f1": null
-        },
-        "critica_social": {
-          "tp": 2,
-          "fp": 0,
-          "fn": 1,
-          "precisao": 1.0,
-          "recall": 0.6666666666666666,
-          "f1": 0.8
         }
       }
     },
-    "5": {
-      "n": 11,
-      "concordancia_exata": 0.09090909090909091,
+    "4": {
+      "n": 15,
+      "concordancia_exata": 0.0,
       "por_eixo": {
         "ritmo": {
-          "tp": 4,
-          "fp": 0,
-          "fn": 2,
-          "precisao": 1.0,
-          "recall": 0.6666666666666666,
-          "f1": 0.8
+          "tp": 2,
+          "fp": 1,
+          "fn": 4,
+          "precisao": 0.6666666666666666,
+          "recall": 0.3333333333333333,
+          "f1": 0.4444444444444444
         },
         "atuacao": {
-          "tp": 2,
-          "fp": 0,
-          "fn": 1,
-          "precisao": 1.0,
-          "recall": 0.6666666666666666,
-          "f1": 0.8
-        },
-        "direcao_imagem": {
-          "tp": 5,
-          "fp": 0,
-          "fn": 1,
-          "precisao": 1.0,
-          "recall": 0.8333333333333334,
-          "f1": 0.9090909090909091
-        },
-        "roteiro_estrutura": {
-          "tp": 8,
-          "fp": 0,
-          "fn": 2,
-          "precisao": 1.0,
-          "recall": 0.8,
-          "f1": 0.888888888888889
-        },
-        "som_trilha": {
           "tp": 1,
           "fp": 0,
           "fn": 1,
@@ -1429,13 +1319,37 @@
           "recall": 0.5,
           "f1": 0.6666666666666666
         },
+        "direcao_imagem": {
+          "tp": 4,
+          "fp": 0,
+          "fn": 2,
+          "precisao": 1.0,
+          "recall": 0.6666666666666666,
+          "f1": 0.8
+        },
+        "roteiro_estrutura": {
+          "tp": 7,
+          "fp": 0,
+          "fn": 6,
+          "precisao": 1.0,
+          "recall": 0.5384615384615384,
+          "f1": 0.7000000000000001
+        },
+        "som_trilha": {
+          "tp": 1,
+          "fp": 0,
+          "fn": 0,
+          "precisao": 1.0,
+          "recall": 1.0,
+          "f1": 1.0
+        },
         "tom_atmosfera": {
-          "tp": 5,
+          "tp": 3,
           "fp": 1,
-          "fn": 1,
-          "precisao": 0.8333333333333334,
-          "recall": 0.8333333333333334,
-          "f1": 0.8333333333333334
+          "fn": 2,
+          "precisao": 0.75,
+          "recall": 0.6,
+          "f1": 0.6666666666666665
         },
         "impacto_emocional": {
           "tp": 4,
@@ -1446,28 +1360,114 @@
           "f1": 0.6153846153846154
         },
         "comparacoes": {
-          "tp": 4,
-          "fp": 1,
-          "fn": 2,
-          "precisao": 0.8,
-          "recall": 0.6666666666666666,
-          "f1": 0.7272727272727272
+          "tp": 5,
+          "fp": 0,
+          "fn": 4,
+          "precisao": 1.0,
+          "recall": 0.5555555555555556,
+          "f1": 0.7142857142857143
         },
         "expectativa": {
-          "tp": 2,
-          "fp": 3,
-          "fn": 3,
-          "precisao": 0.4,
-          "recall": 0.4,
-          "f1": 0.4000000000000001
+          "tp": 1,
+          "fp": 0,
+          "fn": 5,
+          "precisao": 1.0,
+          "recall": 0.16666666666666666,
+          "f1": 0.2857142857142857
         },
         "critica_social": {
           "tp": 3,
-          "fp": 2,
+          "fp": 1,
+          "fn": 1,
+          "precisao": 0.75,
+          "recall": 0.75,
+          "f1": 0.75
+        }
+      }
+    },
+    "5": {
+      "n": 7,
+      "concordancia_exata": 0.14285714285714285,
+      "por_eixo": {
+        "ritmo": {
+          "tp": 3,
+          "fp": 0,
           "fn": 0,
-          "precisao": 0.6,
+          "precisao": 1.0,
           "recall": 1.0,
-          "f1": 0.7499999999999999
+          "f1": 1.0
+        },
+        "atuacao": {
+          "tp": 1,
+          "fp": 0,
+          "fn": 0,
+          "precisao": 1.0,
+          "recall": 1.0,
+          "f1": 1.0
+        },
+        "direcao_imagem": {
+          "tp": 4,
+          "fp": 0,
+          "fn": 1,
+          "precisao": 1.0,
+          "recall": 0.8,
+          "f1": 0.888888888888889
+        },
+        "roteiro_estrutura": {
+          "tp": 4,
+          "fp": 0,
+          "fn": 2,
+          "precisao": 1.0,
+          "recall": 0.6666666666666666,
+          "f1": 0.8
+        },
+        "som_trilha": {
+          "tp": 2,
+          "fp": 0,
+          "fn": 1,
+          "precisao": 1.0,
+          "recall": 0.6666666666666666,
+          "f1": 0.8
+        },
+        "tom_atmosfera": {
+          "tp": 4,
+          "fp": 0,
+          "fn": 1,
+          "precisao": 1.0,
+          "recall": 0.8,
+          "f1": 0.888888888888889
+        },
+        "impacto_emocional": {
+          "tp": 3,
+          "fp": 1,
+          "fn": 1,
+          "precisao": 0.75,
+          "recall": 0.75,
+          "f1": 0.75
+        },
+        "comparacoes": {
+          "tp": 3,
+          "fp": 0,
+          "fn": 1,
+          "precisao": 1.0,
+          "recall": 0.75,
+          "f1": 0.8571428571428571
+        },
+        "expectativa": {
+          "tp": 1,
+          "fp": 3,
+          "fn": 1,
+          "precisao": 0.25,
+          "recall": 0.5,
+          "f1": 0.3333333333333333
+        },
+        "critica_social": {
+          "tp": 2,
+          "fp": 0,
+          "fn": 0,
+          "precisao": 1.0,
+          "recall": 1.0,
+          "f1": 1.0
         }
       }
     },
@@ -1484,7 +1484,7 @@
           "f1": 0.8333333333333333
         },
         "atuacao": {
-          "tp": 8,
+          "tp": 9,
           "fp": 0,
           "fn": 0,
           "precisao": 1.0,
@@ -1500,28 +1500,28 @@
           "f1": 0.9333333333333333
         },
         "roteiro_estrutura": {
-          "tp": 7,
+          "tp": 8,
           "fp": 0,
-          "fn": 2,
+          "fn": 1,
           "precisao": 1.0,
-          "recall": 0.7777777777777778,
-          "f1": 0.8750000000000001
+          "recall": 0.8888888888888888,
+          "f1": 0.9411764705882353
         },
         "som_trilha": {
-          "tp": 4,
+          "tp": 3,
           "fp": 1,
           "fn": 0,
-          "precisao": 0.8,
+          "precisao": 0.75,
           "recall": 1.0,
-          "f1": 0.888888888888889
+          "f1": 0.8571428571428571
         },
         "tom_atmosfera": {
-          "tp": 6,
+          "tp": 7,
           "fp": 1,
           "fn": 1,
-          "precisao": 0.8571428571428571,
-          "recall": 0.8571428571428571,
-          "f1": 0.8571428571428571
+          "precisao": 0.875,
+          "recall": 0.875,
+          "f1": 0.875
         },
         "impacto_emocional": {
           "tp": 5,
@@ -1532,12 +1532,12 @@
           "f1": 0.9090909090909091
         },
         "comparacoes": {
-          "tp": 7,
-          "fp": 2,
+          "tp": 6,
+          "fp": 3,
           "fn": 0,
-          "precisao": 0.7777777777777778,
+          "precisao": 0.6666666666666666,
           "recall": 1.0,
-          "f1": 0.8750000000000001
+          "f1": 0.8
         },
         "expectativa": {
           "tp": 4,
@@ -1549,11 +1549,11 @@
         },
         "critica_social": {
           "tp": 2,
-          "fp": 3,
+          "fp": 4,
           "fn": 0,
-          "precisao": 0.4,
+          "precisao": 0.3333333333333333,
           "recall": 1.0,
-          "f1": 0.5714285714285715
+          "f1": 0.5
         }
       }
     },
@@ -1833,17 +1833,22 @@
       "n": 3
     },
     {
-      "modelo_atribuiu": "expectativa",
-      "humano_atribuiu": "impacto_emocional",
-      "n": 2
-    },
-    {
       "modelo_atribuiu": "comparacoes",
       "humano_atribuiu": "expectativa",
       "n": 2
     },
     {
-      "modelo_atribuiu": "critica_social",
+      "modelo_atribuiu": "impacto_emocional",
+      "humano_atribuiu": "expectativa",
+      "n": 1
+    },
+    {
+      "modelo_atribuiu": "impacto_emocional",
+      "humano_atribuiu": "atuacao",
+      "n": 1
+    },
+    {
+      "modelo_atribuiu": "impacto_emocional",
       "humano_atribuiu": "comparacoes",
       "n": 1
     },
@@ -1853,8 +1858,18 @@
       "n": 1
     },
     {
+      "modelo_atribuiu": "critica_social",
+      "humano_atribuiu": "comparacoes",
+      "n": 1
+    },
+    {
       "modelo_atribuiu": "expectativa",
       "humano_atribuiu": "tom_atmosfera",
+      "n": 1
+    },
+    {
+      "modelo_atribuiu": "expectativa",
+      "humano_atribuiu": "impacto_emocional",
       "n": 1
     },
     {
@@ -1878,13 +1893,13 @@
       "n": 1
     },
     {
-      "modelo_atribuiu": "expectativa",
-      "humano_atribuiu": "som_trilha",
+      "modelo_atribuiu": "impacto_emocional",
+      "humano_atribuiu": "roteiro_estrutura",
       "n": 1
     },
     {
-      "modelo_atribuiu": "tom_atmosfera",
-      "humano_atribuiu": "impacto_emocional",
+      "modelo_atribuiu": "expectativa",
+      "humano_atribuiu": "som_trilha",
       "n": 1
     },
     {
@@ -1894,7 +1909,7 @@
     }
   ],
   "pares_suspeitos_registrados_a_priori": {
-    "impacto_emocional_vs_tom_atmosfera": 1,
+    "impacto_emocional_vs_tom_atmosfera": 0,
     "expectativa_vs_comparacoes": 2
   }
 }
