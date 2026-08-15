@@ -335,6 +335,38 @@ PROVIDER_DEFAULT_MODELS = {
 # a troca é só do que o CLI assume quando a flag é omitida.
 DEFAULT_PROVIDER = "deepseek"
 
+# --- Provider por ESTÁGIO (v1.9.8, §3[D]) ---
+# O provider deixa de ser global. A decisão, e o racional de cada metade:
+#
+# `classificacao` FICA em DeepSeek. Ela está calibrada e auditada contra um
+# gabarito humano de 100 reviews, com precisão e recall medidos por eixo
+# (CLASSIFICACAO_CONSOLIDADO.md). Trocar o modelo ali invalida oito sessões
+# de medição — e o faria em SILÊNCIO, porque `taxonomia_id` hasheia prompt +
+# eixos, não o modelo. É também onde capacidade de modelo rende menos:
+# tarefa estruturada, alto volume, saída JSON curta.
+#
+# `narrativa` vai para Gemini. É o oposto em todos os eixos: uma chamada por
+# filme (volume irrelevante), prosa longa, nada calibrado a invalidar — a
+# qualidade é julgada por leitura humana. O risco histórico do Gemini
+# (auditoria antiga o flagrou INFLANDO contagens) fica neutralizado POR
+# CONSTRUÇÃO, não por confiança: sob o briefing determinístico (§D2) o
+# narrador não computa número nenhum, e a checagem de conjunto de tokens
+# numéricos (§E2) reprova qualquer número inventado.
+#
+# `--provider` continua existindo e, quando passado, força TODOS os estágios.
+PROVIDER_POR_ESTAGIO = {
+    "classificacao": "deepseek",
+    "narrativa": "gemini",
+}
+
+# Modelo default de cada estágio. O da narrativa é decidido por medição na
+# sessão de comparação (Entrega 3/4); até lá, o flash mais recente é o
+# ponto de partida declarado.
+MODELO_POR_ESTAGIO = {
+    "classificacao": "deepseek-v4-flash",
+    "narrativa": "gemini-flash-latest",
+}
+
 # mantido por compatibilidade (era o único provider na v1.1.0); agora segue
 # o provider DEFAULT de produção (v1.8.0), não mais fixo em "anthropic".
 MODEL_DEFAULT = PROVIDER_DEFAULT_MODELS[DEFAULT_PROVIDER]

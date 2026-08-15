@@ -42,11 +42,13 @@ from .config import (
     LLM_MAX_TOKENS,
     LLM_TIMEOUT_MS,
     MAX_TEMAS,
+    MODELO_POR_ESTAGIO,
     MODEL_DEFAULT,
     PROSA_MAX_TOKENS,
     PROSA_THINKING_BUDGET,
     PROVIDER_DEFAULT_MODELS,
     PROVIDER_ENV_KEYS,
+    PROVIDER_POR_ESTAGIO,
     nota_para_url,
 )
 from .models import BucketResult, Tema
@@ -306,6 +308,35 @@ def gemini_client_call_prosa(system: str, user: str, model: str) -> str:
                         thinking_budget=PROSA_THINKING_BUDGET, json_mode=True)
 
 
+def _gemini_resposta(system: str, user: str, model: str, *,
+                     max_output_tokens: int, json_mode: bool,
+                     thinking_budget: int = PROSA_THINKING_BUDGET):
+    """Resposta INTEIRA do Gemini (com `usage_metadata`), não só o texto.
+
+    Espelho de `deepseek_resposta` — existe pela mesma razão registrada na
+    v1.9.4: sem acesso aos contadores, um chamador que precise de custo
+    reimplementa o transporte e perde os parâmetros que o adaptador fixa.
+    """
+    from google import genai
+    from google.genai import types
+
+    _exigir_chave("gemini")
+    client = genai.Client(
+        api_key=os.environ[PROVIDER_ENV_KEYS["gemini"]],
+        http_options=types.HttpOptions(timeout=LLM_TIMEOUT_MS),
+    )
+    config_kwargs = dict(system_instruction=system,
+                         max_output_tokens=max_output_tokens)
+    if json_mode:
+        config_kwargs["response_mime_type"] = "application/json"
+    if gemini_supports_thinking(model):
+        config_kwargs["thinking_config"] = types.ThinkingConfig(
+            thinking_budget=thinking_budget)
+    return client.models.generate_content(
+        model=model, contents=user,
+        config=types.GenerateContentConfig(**config_kwargs))
+
+
 def _gemini_call(system: str, user: str, model: str, *, max_output_tokens: int,
                  thinking_budget: int, json_mode: bool) -> str:
     """Transporte comum do Gemini. `thinking_budget` só é enviado quando o
@@ -453,6 +484,130 @@ def _deepseek_call(system: str, user: str, model: str, *, max_tokens: int,
     resp = deepseek_resposta(system, user, model, max_tokens=max_tokens,
                              json_mode=json_mode)
     return resp.choices[0].message.content or ""
+
+
+# ===========================================================================
+# Camada GENÉRICA de provider (v1.9.8, §3[D] "Provider por estágio")
+# ===========================================================================
+# `deepseek_resposta`/`deepseek_uso` foram criados na v1.9.4 para fechar o
+# buraco que empurrava cada script novo a reimplementar o transporte (e, no
+# caminho, perder `thinking: disabled`). Eram específicos de um provider —
+# então o mesmo buraco reabriria no Gemini na primeira vez que alguém
+# precisasse de `usage` dele. Estas funções fecham o buraco para os DOIS
+# antes que ele apareça: mesma assinatura, mesmas chaves de retorno.
+
+
+def cliente(provider: str, timeout_ms: int = LLM_TIMEOUT_MS):
+    """Fábrica de cliente reutilizável por provider — a ÚNICA autorizada.
+
+    Instanciar o SDK por conta própria é exatamente o caminho que o
+    guard-rail de §3[D] fecha. Gemini não expõe um cliente reaproveitável
+    da mesma forma (o SDK cria um por chamada dentro de `_gemini_call`), e
+    devolver `None` aqui é deliberado: o chamador passa isso adiante e
+    `resposta` trata, em vez de cada script inventar seu próprio caminho.
+    """
+    if provider == "deepseek":
+        return deepseek_client(timeout_ms)
+    if provider == "gemini":
+        _exigir_chave("gemini")
+        return None
+    if provider == "anthropic":
+        _exigir_chave("anthropic")
+        return None
+    raise ProviderError(f"provider {provider!r} desconhecido — use um de "
+                        f"{sorted(PROVIDER_CLIENTS)}.")
+
+
+def _exigir_chave(provider: str) -> None:
+    env = PROVIDER_ENV_KEYS[provider]
+    if not os.environ.get(env):
+        raise LLMError(f"{env} não definida no ambiente.")
+
+
+def resposta(system: str, user: str, model: str, *, provider: str,
+             max_tokens: int, json_mode: bool, client=None):
+    """A chamada crua, com a resposta INTEIRA — inclusive contadores de token.
+
+    Despacha por provider mantendo a assinatura de `deepseek_resposta`, para
+    que um chamador troque de provider mudando um argumento, não o caminho.
+    """
+    if provider == "deepseek":
+        return deepseek_resposta(system, user, model, max_tokens=max_tokens,
+                                 json_mode=json_mode, client=client)
+    if provider == "gemini":
+        return _gemini_resposta(system, user, model, max_output_tokens=max_tokens,
+                                json_mode=json_mode)
+    raise ProviderError(f"provider {provider!r} desconhecido — use um de "
+                        f"{sorted(PROVIDER_CLIENTS)}.")
+
+
+def uso(resp, provider: str) -> dict:
+    """Contadores de token no MESMO formato para todo provider.
+
+    As quatro chaves são as que os relatórios de custo do projeto já
+    consomem. `cache_miss` do Gemini é DERIVADO (prompt − cacheado) porque a
+    API expõe só o cacheado — derivar aqui evita que cada chamador invente a
+    própria conta e que dois relatórios discordem sobre o mesmo número.
+    Resposta sem contadores devolve zeros em vez de estourar: um provider
+    que não expõe `usage` não pode derrubar o pipeline.
+    """
+    vazio = {"prompt_tokens": 0, "completion_tokens": 0,
+             "cache_hit_tokens": 0, "cache_miss_tokens": 0}
+    if provider == "deepseek":
+        u = getattr(resp, "usage", None)
+        if u is None:
+            return vazio
+        return {
+            "prompt_tokens": int(getattr(u, "prompt_tokens", 0) or 0),
+            "completion_tokens": int(getattr(u, "completion_tokens", 0) or 0),
+            "cache_hit_tokens": int(getattr(u, "prompt_cache_hit_tokens", 0) or 0),
+            "cache_miss_tokens": int(getattr(u, "prompt_cache_miss_tokens", 0) or 0),
+        }
+    if provider == "gemini":
+        u = getattr(resp, "usage_metadata", None)
+        if u is None:
+            return vazio
+        entrada = int(getattr(u, "prompt_token_count", 0) or 0)
+        cacheado = int(getattr(u, "cached_content_token_count", 0) or 0)
+        return {
+            "prompt_tokens": entrada,
+            "completion_tokens": int(getattr(u, "candidates_token_count", 0) or 0),
+            "cache_hit_tokens": cacheado,
+            "cache_miss_tokens": max(0, entrada - cacheado),
+        }
+    return vazio
+
+
+def provider_do_estagio(estagio: str, explicit: str | None = None) -> str:
+    """Resolve o provider de um ESTÁGIO do pipeline (v1.9.8).
+
+    `explicit` (`--provider`) força todos os estágios — é o override manual.
+    Sem ele, vale `PROVIDER_POR_ESTAGIO`. A chave correspondente precisa
+    estar no ambiente, e o erro nomeia o ESTÁGIO junto da chave: saber que
+    falta `GEMINI_API_KEY` sem saber que é a narrativa que não vai rodar
+    manda o leitor caçar a resposta no código.
+    """
+    if estagio not in PROVIDER_POR_ESTAGIO:
+        raise ProviderError(
+            f"estágio {estagio!r} desconhecido — use um de "
+            f"{sorted(PROVIDER_POR_ESTAGIO)}.")
+    if explicit is not None:
+        return detect_provider(explicit)
+    provider = PROVIDER_POR_ESTAGIO[estagio]
+    env = PROVIDER_ENV_KEYS[provider]
+    if not os.environ.get(env):
+        raise ProviderError(
+            f"estágio {estagio!r} usa o provider {provider!r}, mas {env} não "
+            f"está definida no ambiente (ver PROVIDER_POR_ESTAGIO em "
+            f"config.py; --provider força outro).")
+    return provider
+
+
+def modelo_do_estagio(estagio: str, provider: str | None = None) -> str:
+    """Modelo default do estágio; com `provider` explícito, o default dele."""
+    if provider and provider != PROVIDER_POR_ESTAGIO.get(estagio):
+        return PROVIDER_DEFAULT_MODELS[provider]
+    return MODELO_POR_ESTAGIO[estagio]
 
 
 PROVIDER_CLIENTS = {
