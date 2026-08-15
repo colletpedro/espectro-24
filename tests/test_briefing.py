@@ -296,6 +296,47 @@ def test_invariantes_migradas_e_uma_contagem_declarada():
     assert total >= 15
 
 
+# ------------------------------------------------- extração da narrativa
+
+def test_extrai_json_bem_formado():
+    assert br.extrair_narrativa('{"narrativa": "Um texto."}') == "Um texto."
+
+
+def test_extrai_com_quebra_de_linha_escapada():
+    assert br.extrair_narrativa(r'{"narrativa": "A\nB"}') == "A\nB"
+
+
+def test_extrai_com_quebra_de_linha_CRUA_dentro_da_string():
+    """Regressão do defeito real de `cidade-de-deus`: o DeepSeek escapa a
+    quebra de linha de forma inconsistente na MESMA resposta, e json.loads
+    recusa o texto inteiro — que está perfeitamente bom."""
+    bruto = '{"narrativa": "Primeiro parágrafo.\nSegundo parágrafo."}'
+    assert br.extrair_narrativa(bruto) == "Primeiro parágrafo.\nSegundo parágrafo."
+
+
+def test_extrai_com_escape_misturado():
+    bruto = '{"narrativa": "A\\nB\nC"}'
+    assert br.extrair_narrativa(bruto) == "A\nB\nC"
+
+
+def test_extrai_removendo_cerca_de_codigo():
+    assert br.extrair_narrativa('```json\n{"narrativa": "X"}\n```') == "X"
+
+
+def test_extrai_preserva_aspas_escapadas():
+    assert br.extrair_narrativa(r'{"narrativa": "diz \"oi\" aqui"}') == 'diz "oi" aqui'
+
+
+def test_extrai_devolve_vazio_quando_nada_funciona():
+    """Prosa meio parseada e não percebida é pior que falha explícita."""
+    assert br.extrair_narrativa("isto não é json nem tem o campo") == ""
+    assert br.extrair_narrativa("") == ""
+
+
+def test_extrai_vazio_quando_o_campo_nao_existe():
+    assert br.extrair_narrativa('{"outra_coisa": "X"}') == ""
+
+
 # ------------------------------------------------------------------ bordas
 
 def test_bucket_ausente_do_output_nao_quebra():

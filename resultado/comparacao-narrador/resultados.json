@@ -1,0 +1,844 @@
+{
+  "cure": {
+    "briefing": {
+      "ficha": {
+        "titulo": "A Cura",
+        "sinopse_oficial": "Pessoas são encontradas mortas com um bizarro \"x\" cravado em seus corpos. Desesperado, um detetive chamado Takabe decide iniciar uma investigação à base de longos e intermináveis sessões de interrogatórios. Porém, sua investigação não resulta em nada. Até que um determinado dia um rapaz é preso por estar perto de mais uma pessoa assassinada. Tímido e de trejeitos estranhos, resta saber qual a ligação entre ele o os crimes (e quem sabe, com o assassino)",
+        "sinopse_fallback_en": false,
+        "generos": [
+          "Crime",
+          "Thriller",
+          "Terror",
+          "Mistério"
+        ],
+        "duracao_min": 111,
+        "diretor": "Kiyoshi Kurosawa",
+        "diretor_transliterado": true,
+        "ano": 1997,
+        "fonte": "tmdb",
+        "ano_fonte": "letterboxd"
+      },
+      "total_reviews_observadas": 252,
+      "distribuicao": {
+        "disponivel": true,
+        "n_notas_total": 375278
+      },
+      "grupos": {
+        "negativas": {
+          "n_reviews_analisadas": 50,
+          "estado_piso": "completa",
+          "permissoes": {
+            "pode_citar_temas": true,
+            "pode_citar_numero": true,
+            "pode_citar_quantificador": true
+          },
+          "observacao_geral": "As reviews negativas apontam que, apesar de uma premissa intrigante, o filme sofre de um ritmo excessivamente lento e uma execução que falha em construir tensão ou desenvolver personagens cativantes, resultando em uma experiência tediosa e decepcionante. Este grupo destaca a falta de engajamento com o mistério e o enredo, que consideram repetitivo e pouco substancial.",
+          "temas": [
+            {
+              "tema": "Ritmo lento e tedioso",
+              "fracao_pct": 70,
+              "exemplo": "Muitas reviews reclamam que o filme é insuportavelmente lento, arrastado e chato, sem tensão ou progressão narrativa, fazendo com que o espectador perca o interesse rapidamente.",
+              "mencoes": 35,
+              "de_n_reviews": 50,
+              "quantificador": "a maioria"
+            },
+            {
+              "tema": "Falta de tensão/mistério/terror",
+              "fracao_pct": 50,
+              "exemplo": "Apesar de ser categorizado como suspense ou terror, este grupo de reviews achou que o filme não consegue gerar medo, suspense ou uma atmosfera arrepiante, e o mistério se torna óbvio cedo demais.",
+              "mencoes": 25,
+              "de_n_reviews": 50,
+              "quantificador": "muitos"
+            },
+            {
+              "tema": "Enredo e roteiro fracos/repetitivos",
+              "fracao_pct": 36,
+              "exemplo": "Reviewers criticam a história por ser repetitiva, sem profundidade ou desenvolvimento, com um roteiro que não avança e diálogos vazios, levando a uma trama que poderia ser contada em muito menos tempo.",
+              "mencoes": 18,
+              "de_n_reviews": 50,
+              "quantificador": "muitos"
+            }
+          ],
+          "temas_omitidos": 3,
+          "share_pct": 3,
+          "rotulo_peso": "uma fração mínima das notas (~3%)",
+          "marcacao_perspectiva": "antecipada"
+        },
+        "medianas": {
+          "n_reviews_analisadas": 20,
+          "estado_piso": "completa",
+          "permissoes": {
+            "pode_citar_temas": true,
+            "pode_citar_numero": true,
+            "pode_citar_quantificador": true
+          },
+          "observacao_geral": "As reviews medianas apontam para um filme com ideias e atmosfera intrigantes, mas que peca em clareza narrativa e na profundidade com que desenvolve seus temas, deixando muitos espectadores confusos ou insatisfeitos com seu ritmo e conclusão. Este grupo frequentemente expressa a sensação de não ter se conectado plenamente com a obra, apesar de reconhecer seu valor artístico e a profundidade potencial de suas premissas.",
+          "temas": [
+            {
+              "tema": "Ritmo lento e confusão narrativa",
+              "fracao_pct": 50,
+              "exemplo": "Muitas reviews descrevem o filme como lento, arrastado e, por vezes, entediante, gerando confusão sobre a trama e suas intenções.",
+              "mencoes": 10,
+              "de_n_reviews": 20,
+              "quantificador": "muitos"
+            },
+            {
+              "tema": "Final insatisfatório/ambíguo",
+              "fracao_pct": 40,
+              "exemplo": "A resolução da narrativa é frequentemente criticada por ser vaga, deixar muitas pontas soltas ou por não oferecer um desfecho claro para os mistérios apresentados.",
+              "mencoes": 8,
+              "de_n_reviews": 20,
+              "quantificador": "muitos"
+            },
+            {
+              "tema": "Ideias intrigantes, mas execução falha",
+              "fracao_pct": 35,
+              "exemplo": "O grupo de reviews medianas reconhece que o filme explora conceitos interessantes sobre a natureza do mal, identidade e hipnose, mas sente que a execução do roteiro não os aprofunda adequadamente ou que as ideias não se conectam de forma convincente.",
+              "mencoes": 7,
+              "de_n_reviews": 20,
+              "quantificador": "muitos"
+            }
+          ],
+          "temas_omitidos": 2,
+          "share_pct": 17,
+          "rotulo_peso": "uma parcela das notas (~17%)",
+          "marcacao_perspectiva": "antecipada"
+        },
+        "positivas": {
+          "n_reviews_analisadas": 30,
+          "estado_piso": "completa",
+          "permissoes": {
+            "pode_citar_temas": true,
+            "pode_citar_numero": true,
+            "pode_citar_quantificador": true
+          },
+          "observacao_geral": "As reviews positivas enfatizam a maestria do filme em criar uma atmosfera de horror psicológico profundamente inquietante e hipnótica, utilizando um ritmo lento e deliberado para explorar temas complexos sobre a fragilidade da mente humana e a natureza inexplicável do mal. Este grupo destaca a atuação impactante do antagonista e a excelência técnica na cinematografia e design de som, que contribuem para a sensação de paranoia e a ambiguidade persistente.",
+          "temas": [
+            {
+              "tema": "Atmosfera e Tom Perturbador/Hipnótico",
+              "fracao_pct": 50,
+              "exemplo": "Muitas reviews descrevem o filme como hipnótico, perturbador e gerador de uma sensação constante de apreensão, com o mal se infiltrando de forma sutil e uma estética que cria desconforto sem depender de sustos óbvios.",
+              "mencoes": 15,
+              "de_n_reviews": 30,
+              "quantificador": "muitos"
+            },
+            {
+              "tema": "Pacing Lento e Deliberado",
+              "fracao_pct": 33,
+              "exemplo": "O ritmo do filme é frequentemente descrito como lento e metódico, o que intensifica o suspense e o horror psicológico, levando o espectador a um estado de transe que reflete a temática da manipulação mental.",
+              "mencoes": 10,
+              "de_n_reviews": 30,
+              "quantificador": "muitos"
+            },
+            {
+              "tema": "Temas Psicológicos e Existenciais",
+              "fracao_pct": 30,
+              "exemplo": "Este grupo de reviews ressalta a exploração de temas profundos como a fragilidade da identidade, a manipulação da mente, a natureza do mal e a busca por significado em atos inexplicáveis, questionando a existência do livre-arbítrio e as camadas ocultas da psique humana.",
+              "mencoes": 9,
+              "de_n_reviews": 30,
+              "quantificador": "muitos"
+            }
+          ],
+          "temas_omitidos": 3,
+          "share_pct": 79,
+          "rotulo_peso": "a grande maioria das notas (~79%)",
+          "marcacao_perspectiva": "nenhuma"
+        }
+      },
+      "movimento3": {
+        "ordem": [
+          "positivas",
+          "medianas",
+          "negativas"
+        ]
+      },
+      "orcamento_frases": {
+        "movimento1": [
+          2,
+          3
+        ],
+        "movimento2": [
+          0,
+          5
+        ],
+        "movimento3": [
+          4,
+          8
+        ]
+      }
+    },
+    "modelos": {
+      "deepseek-baseline": {
+        "ok": true,
+        "provider": "deepseek",
+        "modelo": "deepseek-v4-flash",
+        "latencia_s": 7.81,
+        "uso": {
+          "prompt_tokens": 2656,
+          "completion_tokens": 685,
+          "cache_hit_tokens": 2560,
+          "cache_miss_tokens": 96
+        },
+        "custo_usd": 0.00056364,
+        "narrativa": "A Cura (1997), dirigido por Kiyoshi Kurosawa, é um filme de crime, thriller, terror e mistério com duração de 111 minutos. A trama acompanha um detetive chamado Takabe, que investiga uma série de assassinatos nos quais as vítimas são encontradas com um estranho \"x\" cravado em seus corpos. Após longos e infrutíferos interrogatórios, um rapaz tímido e de trejeitos estranhos é preso por estar perto de outra vítima, levantando questões sobre sua ligação com os crimes.\n\nO filme se caracteriza por um ritmo lento e deliberado, que cria uma atmosfera densa e inquietante, permeada por um tom de paranoia constante. A ambientação é sóbria e opressiva, com uma estrutura narrativa que se desenrola de forma gradual, construindo uma sensação de desconforto que se mantém ao longo da projeção. A intensidade é crescente, mas nunca explosiva, mantendo o espectador em um estado de apreensão contínua.\n\nA grande maioria das notas (~79%) das reviews positivas destaca a maestria do filme em criar uma atmosfera de horror psicológico profundamente inquietante e hipnótica. Muitos descrevem o filme como hipnótico, perturbador e gerador de uma sensação constante de apreensão, com o mal se infiltrando de forma sutil e uma estética que cria desconforto sem depender de sustos óbvios. Muitos também elogiam o ritmo lento e metódico, que intensifica o suspense e o horror psicológico, levando o espectador a um estado de transe. Além disso, muitos ressaltam a exploração de temas profundos como a fragilidade da identidade, a manipulação da mente e a natureza do mal.\n\nUma parcela das notas (~17%) das reviews medianas reconhece o valor artístico do filme, mas aponta falhas. Para eles, muitos descrevem o filme como lento, arrastado e, por vezes, entediante, gerando confusão sobre a trama. Muitos também criticam a resolução da narrativa como vaga e insatisfatória, deixando pontas soltas. Apesar de reconhecerem ideias intrigantes sobre o mal e a identidade, muitos sentem que a execução do roteiro não as aprofunda adequadamente.\n\nUma fração mínima das notas (~3%) das reviews negativas é bastante crítica. Para eles, a maioria reclama que o filme é insuportavelmente lento, arrastado e chato, sem tensão ou progressão narrativa. Muitos acham que o filme não consegue gerar medo ou suspense, e o mistério se torna óbvio cedo demais. Além disso, muitos criticam a história por ser repetitiva, sem profundidade, com um roteiro que não avança.",
+        "n_palavras": 388,
+        "verificacao": {
+          "formato_invalido": false,
+          "numeros_inventados": [],
+          "rotulos_faltando": [
+            "a grande maioria das notas (~79%)",
+            "uma parcela das notas (~17%)",
+            "uma fração mínima das notas (~3%)"
+          ],
+          "ordem_incorreta": false,
+          "vocabulario_peso": true,
+          "resenha_speak": [],
+          "n_resenha_speak": 0,
+          "n_flags": 2
+        }
+      },
+      "gemini-3.7-flash": {
+        "ok": true,
+        "provider": "gemini",
+        "modelo": "gemini-3.7-flash",
+        "latencia_s": 21.34,
+        "uso": {
+          "prompt_tokens": 2422,
+          "completion_tokens": 376,
+          "cache_hit_tokens": 0,
+          "cache_miss_tokens": 2422
+        },
+        "custo_usd": 0.0032265,
+        "narrativa": "Lançado em 1997 e dirigido por Kiyoshi Kurosawa, A Cura é um thriller de crime, terror e mistério com 111 minutos de duração. A trama acompanha uma investigação policial motivada por assassinatos em que as vítimas apresentam uma marca em cruz gravada no corpo, processo que se intensifica após a detenção de um suspeito de comportamento estranho.\n\nA obra se desenvolve através de uma cadência deliberadamente pausada, estabelecendo uma ambientação densa focada no processo investigativo e na observação psicológica.\n\nRepresentando a grande maioria das notas (~79%), muitos enfatizam a atmosfera hipnótica e perturbadora que constrói um desconforto constante sem depender de sustos fáceis. Nesse segmento, muitos valorizam o ritmo lento e metódico por intensificar o suspense psicológico, e muitos ressaltam o aprofundamento em temas existenciais, como a fragilidade da mente, a manipulação e a natureza oculta do mal. Em uma perspectiva diferente, para uma parcela das notas (~17%), muitos apontam que o andamento lento resulta em confusão sobre a narrativa. Nessa faixa, muitos consideram a conclusão ambígua e insatisfatória pela presença de pontas soltas, enquanto muitos ponderam que o filme apresenta ideias conceituais intrigantes, mas falha em aprofundá-las na execução do roteiro. Já no olhar de uma fração mínima das notas (~3%), a maioria define a exibição como tediosa e arrastada, carente de progressão. Sob esse ponto de vista, muitos afirmam que a produção falha em produzir medo ou tensão, ao passo que muitos julgam a história repetitiva e sustentada por diálogos vazios.",
+        "n_palavras": 243,
+        "verificacao": {
+          "formato_invalido": false,
+          "numeros_inventados": [],
+          "rotulos_faltando": [],
+          "ordem_incorreta": false,
+          "vocabulario_peso": false,
+          "resenha_speak": [],
+          "n_resenha_speak": 0,
+          "n_flags": 0
+        }
+      },
+      "gemini-2.5-flash": {
+        "ok": true,
+        "provider": "gemini",
+        "modelo": "gemini-2.5-flash",
+        "latencia_s": 11.07,
+        "uso": {
+          "prompt_tokens": 2422,
+          "completion_tokens": 535,
+          "cache_hit_tokens": 0,
+          "cache_miss_tokens": 2422
+        },
+        "custo_usd": 0.0020641,
+        "narrativa": "Dirigido por Kiyoshi Kurosawa em 1997, \"A Cura\" é um filme de Crime, Thriller, Terror e Mistério que apresenta uma série de assassinatos marcados por um bizarro \"x\" nos corpos das vítimas. Um detetive inicia uma investigação exaustiva para desvendar a ligação entre um suspeito e os crimes.\n\nA grande maioria das notas (~79%) descreve o filme como uma obra de maestria em criar uma atmosfera de horror psicológico profundamente inquietante e hipnótica. Muitos destacam que o filme é perturbador e gerador de apreensão, com o mal se infiltrando de forma sutil, usando uma estética que cria desconforto sem depender de sustos óbvios. O ritmo do filme é frequentemente descrito por muitos como lento e metódico, intensificando o suspense e o horror psicológico e levando o espectador a um estado de transe que reflete a temática da manipulação mental. Este grupo de reviews ressalta que muitos abordam a exploração de temas profundos como a fragilidade da identidade, a manipulação da mente, a natureza do mal e a busca por significado em atos inexplicáveis, questionando o livre-arbítrio e as camadas ocultas da psique humana.\n\nPara uma parcela das notas (~17%), o filme exibe ideias e atmosfera intrigantes, mas a clareza narrativa e a profundidade no desenvolvimento dos temas são vistas como falhas. Muitos descrevem o ritmo como lento e, por vezes, entediante, o que gera confusão sobre a trama e suas intenções. A resolução da narrativa também é frequentemente criticada por ser vaga ou não oferecer um desfecho claro para os mistérios, apesar de muitos reconhecerem a exploração de conceitos interessantes sobre a natureza do mal e a hipnose, sem, no entanto, aprofundamento adequado.\n\nPara uma fração mínima das notas (~3%), o filme é decepcionante, com um ritmo excessivamente lento. A maioria reclama que o filme é insuportavelmente lento, arrastado e chato, sem tensão ou progressão narrativa, fazendo com que o espectador perca o interesse rapidamente. Muitos acharam que o filme não consegue gerar medo, suspense ou uma atmosfera arrepiante, e o mistério se torna óbvio cedo demais. Reviewers também criticam a história por muitos considerarem ser repetitiva, sem profundidade ou desenvolvimento, com um roteiro que não avança.",
+        "n_palavras": 357,
+        "verificacao": {
+          "formato_invalido": false,
+          "numeros_inventados": [],
+          "rotulos_faltando": [
+            "a grande maioria das notas (~79%)"
+          ],
+          "ordem_incorreta": false,
+          "vocabulario_peso": true,
+          "resenha_speak": [],
+          "n_resenha_speak": 0,
+          "n_flags": 2
+        }
+      },
+      "gemini-3.1-pro": {
+        "ok": true,
+        "provider": "gemini",
+        "modelo": "gemini-3.1-pro-preview",
+        "latencia_s": 24.74,
+        "uso": {
+          "prompt_tokens": 2422,
+          "completion_tokens": 474,
+          "cache_hit_tokens": 0,
+          "cache_miss_tokens": 2422
+        },
+        "custo_usd": 0.010532,
+        "narrativa": "Lançado em 1997 e dirigido por Kiyoshi Kurosawa, \"A Cura\" é um longa que transita pelos gêneros de crime, thriller, terror e mistério. A premissa acompanha uma complexa apuração sobre assassinatos bizarros, unidos por um padrão peculiar deixado nos corpos das vítimas. O processo investigativo conduz a intermináveis sessões de interrogatório na tentativa de encontrar as conexões ocultas por trás dos crimes. A experiência de assistir ao longa é definida fundamentalmente por um ritmo lento e metódico. Essa cadência dita a progressão da estrutura e funciona como o alicerce absoluto para a construção da ambientação da obra. A grande maioria das notas (~79%) destaca a atmosfera e o tom da produção, com muitos apontando um clima perturbador e hipnótico que gera uma constante apreensão. Esse grupo observa com atenção o pacing lento e deliberado do filme, e muitos ressaltam que essa escolha metódica serve para intensificar a proposta central. Como complemento, muitos celebram a exploração de temas psicológicos e existenciais, focando nas camadas da psique e na fragilidade da mente humana. Sob a perspectiva daqueles que compõem uma parcela das notas (~17%), a avaliação muda de figura, pois muitos associam o ritmo lento a uma confusão narrativa que prejudica a clareza da trama. Deste mesmo ponto de vista, muitos apontam um final insatisfatório e ambíguo, sentindo que a resolução deixa diversas pontas soltas. Apesar de validarem as premissas, muitos avaliam que a obra possui ideias intrigantes, mas uma execução falha em conectá-las e aprofundá-las. Já na leitura que justifica uma fração mínima das notas (~3%), a maioria descreve o ritmo lento pura e simplesmente como tedioso e arrastado. Para esse segmento menos convencido, muitos apontam a falta de tensão, mistério e terror, considerando que o clima arrepiante nunca se concretiza. Para encerrar as ressalvas, muitos criticam o enredo e o roteiro por serem fracos e repetitivos, julgando que a história estagna em diálogos sem progressão.",
+        "n_palavras": 315,
+        "verificacao": {
+          "formato_invalido": false,
+          "numeros_inventados": [],
+          "rotulos_faltando": [
+            "a grande maioria das notas (~79%)"
+          ],
+          "ordem_incorreta": false,
+          "vocabulario_peso": false,
+          "resenha_speak": [],
+          "n_resenha_speak": 0,
+          "n_flags": 1
+        }
+      }
+    }
+  },
+  "cidade-de-deus": {
+    "briefing": {
+      "ficha": {
+        "titulo": "Cidade de Deus",
+        "sinopse_oficial": "Buscapé é um jovem morador da Cidade de Deus que cresce em meio à violência. Com medo de se tornar um bandido, enxerga na fotografia uma oportunidade de ter uma vida digna.",
+        "sinopse_fallback_en": false,
+        "generos": [
+          "Drama",
+          "Crime"
+        ],
+        "duracao_min": 130,
+        "diretor": "Fernando Meirelles",
+        "diretor_transliterado": false,
+        "ano": 2002,
+        "fonte": "tmdb",
+        "ano_fonte": "letterboxd"
+      },
+      "total_reviews_observadas": 228,
+      "distribuicao": {
+        "disponivel": true,
+        "n_notas_total": 1216381
+      },
+      "grupos": {
+        "negativas": {
+          "n_reviews_analisadas": 50,
+          "estado_piso": "completa",
+          "permissoes": {
+            "pode_citar_temas": true,
+            "pode_citar_numero": true,
+            "pode_citar_quantificador": true
+          },
+          "observacao_geral": "As reviews negativas apontam que o filme, apesar de seus méritos técnicos, falha eticamente ao estetizar a violência e a miséria, oferecendo uma representação estereotipada da favela para consumo externo. Este grupo de espectadores sentiu-se incomodado com a excessiva violência e a superficialidade na construção dos personagens e da narrativa.",
+          "temas": [
+            {
+              "tema": "Estetização e espetacularização da violência/miséria",
+              "fracao_pct": 50,
+              "exemplo": "Muitos consideram que o filme transforma a violência e a miséria da favela em um espetáculo cinematográfico, utilizando-as como um recurso estilístico para chocar e impressionar, em vez de gerar uma reflexão profunda. A montagem acelerada e a fotografia vibrante são vistas como formas de glamorizar o sofrimento.",
+              "mencoes": 25,
+              "de_n_reviews": 50,
+              "quantificador": "muitos"
+            },
+            {
+              "tema": "Representação estereotipada e deturpada da favela",
+              "fracao_pct": 36,
+              "exemplo": "As reviews negativas criticam o filme por simplificar a complexidade da favela, retratando-a quase exclusivamente através da lente do crime e da violência, ignorando outras dimensões da vida da comunidade. Isso é percebido como um reforço de estereótipos prejudiciais, especialmente para os moradores.",
+              "mencoes": 18,
+              "de_n_reviews": 50,
+              "quantificador": "muitos"
+            },
+            {
+              "tema": "Violência excessiva e gratuita",
+              "fracao_pct": 30,
+              "exemplo": "Um número considerável de espectadores achou a violência do filme excessiva e difícil de suportar, sentindo que ela servia mais para chocar do que para comunicar uma mensagem significativa. Cenas de crianças envolvidas em violência ou crimes sexuais foram particularmente perturbadoras.",
+              "mencoes": 15,
+              "de_n_reviews": 50,
+              "quantificador": "muitos"
+            }
+          ],
+          "temas_omitidos": 3,
+          "share_pct": 1,
+          "rotulo_peso": "uma fração mínima das notas (~1%)",
+          "marcacao_perspectiva": "antecipada"
+        },
+        "medianas": {
+          "n_reviews_analisadas": 20,
+          "estado_piso": "completa",
+          "permissoes": {
+            "pode_citar_temas": true,
+            "pode_citar_numero": true,
+            "pode_citar_quantificador": true
+          },
+          "observacao_geral": "As reviews medianas de 3 a 3.5 estrelas apontam que o filme é tecnicamente impressionante e oferece um retrato realista e impactante da violência nas favelas, mas muitos sentem que, apesar do estilo visual marcante, ele falha em gerar uma conexão emocional profunda ou um fator 'uau' que justificaria uma nota mais alta.",
+          "temas": [
+            {
+              "tema": "Retrato da violência e realidade social",
+              "fracao_pct": 55,
+              "exemplo": "Este grupo de reviews destaca a representação honesta e impactante da violência, pobreza e condições de vida nas favelas, muitas vezes comparando a experiência a um documentário pela sua crueza e realismo.",
+              "mencoes": 11,
+              "de_n_reviews": 20,
+              "quantificador": "cerca de metade"
+            },
+            {
+              "tema": "Qualidade técnica e estilística",
+              "fracao_pct": 45,
+              "exemplo": "As reviews medianas frequentemente elogiam a cinematografia, a edição ágil, os movimentos de câmera dinâmicos e a direção estilizada, embora alguns considerem essa estilização excessiva ou fria em certos momentos.",
+              "mencoes": 9,
+              "de_n_reviews": 20,
+              "quantificador": "muitos"
+            },
+            {
+              "tema": "Entretenimento versus profundidade/conexão emocional",
+              "fracao_pct": 35,
+              "exemplo": "Muitas avaliações apontam que, apesar de ser um filme bem-feito e muitas vezes cativante na superfície, ele não conseguiu gerar uma conexão emocional profunda com os personagens ou com a tragédia retratada, sendo mais entretenimento do que uma experiência marcante.",
+              "mencoes": 7,
+              "de_n_reviews": 20,
+              "quantificador": "muitos"
+            }
+          ],
+          "temas_omitidos": 2,
+          "share_pct": 8,
+          "rotulo_peso": "uma fração mínima das notas (~8%)",
+          "marcacao_perspectiva": "antecipada"
+        },
+        "positivas": {
+          "n_reviews_analisadas": 30,
+          "estado_piso": "completa",
+          "permissoes": {
+            "pode_citar_temas": true,
+            "pode_citar_numero": true,
+            "pode_citar_quantificador": true
+          },
+          "observacao_geral": "As reviews positivas apontam o filme como uma obra-prima do cinema mundial, elogiando sua inovação técnica e a maneira visceral como aborda a realidade brasileira. Este grupo destaca a narrativa envolvente, o estilo visual dinâmico e as atuações autênticas como pontos altos que tornam o filme impactante e memorável.",
+          "temas": [
+            {
+              "tema": "Estilo visual e edição dinâmicos",
+              "fracao_pct": 70,
+              "exemplo": "As reviews frequentemente elogiam a edição, que confere um ritmo acelerado e energia contagiante ao filme, além da cinematografia estilizada e do uso inovador da câmera, que contribuem para a imersão e a intensidade da narrativa.",
+              "mencoes": 21,
+              "de_n_reviews": 30,
+              "quantificador": "a maioria"
+            },
+            {
+              "tema": "Narrativa envolvente e abrangente",
+              "fracao_pct": 50,
+              "exemplo": "Este grupo de reviews destaca a capacidade do filme de contar múltiplas histórias e apresentar diversos personagens ao longo de décadas, sem que a trama se torne confusa ou perca coesão, mantendo o espectador constantemente engajado.",
+              "mencoes": 15,
+              "de_n_reviews": 30,
+              "quantificador": "muitos"
+            },
+            {
+              "tema": "Brutalidade e realismo da violência",
+              "fracao_pct": 47,
+              "exemplo": "As reviews positivas ressaltam a representação crua e impactante da violência, que é mostrada de forma realista e não glamourizada, chocando os espectadores e enfatizando a seriedade do tema abordado.",
+              "mencoes": 14,
+              "de_n_reviews": 30,
+              "quantificador": "muitos"
+            }
+          ],
+          "temas_omitidos": 3,
+          "share_pct": 91,
+          "rotulo_peso": "a grande maioria das notas (~91%)",
+          "marcacao_perspectiva": "nenhuma"
+        }
+      },
+      "movimento3": {
+        "ordem": [
+          "positivas",
+          "medianas",
+          "negativas"
+        ]
+      },
+      "orcamento_frases": {
+        "movimento1": [
+          2,
+          3
+        ],
+        "movimento2": [
+          0,
+          5
+        ],
+        "movimento3": [
+          4,
+          8
+        ]
+      }
+    },
+    "modelos": {
+      "deepseek-baseline": {
+        "ok": true,
+        "provider": "deepseek",
+        "modelo": "deepseek-v4-flash",
+        "latencia_s": 10.91,
+        "uso": {
+          "prompt_tokens": 2613,
+          "completion_tokens": 906,
+          "cache_hit_tokens": 2560,
+          "cache_miss_tokens": 53
+        },
+        "custo_usd": 0.0006195,
+        "narrativa": "Lançado em 2002, 'Cidade de Deus', dirigido por Fernando Meirelles, é um drama policial que acompanha Buscapé, um jovem que cresce em meio à violência da favela e encontra na fotografia uma chance de escapar desse destino. Com 130 minutos de duração, o filme se tornou um marco do cinema nacional, sendo aclamado internacionalmente por sua abordagem crua e inovadora. A produção mergulha no universo do crime e da pobreza, apresentando uma narrativa que se estende por décadas e entrelaça múltiplas trajetórias dentro da comunidade.\n\nA experiência de assistir ao filme é marcada por uma intensidade constante, impulsionada por sua estrutura fragmentada e pela agilidade da montagem. A ambientação é densa, retratando a favela com uma urgência que acompanha o ritmo acelerado da narrativa. A atmosfera é palpável, alternando entre momentos de tensão e explosões de violência, o que confere à obra um tom quase documental. A cinematografia dinâmica e a edição frenética são características que definem a estética do longa, criando uma imersão que transborda energia, mas que, ao mesmo tempo, pode soar fria ou excessivamente estilizada em certos trechos.\n\nPara as avaliações que variam entre 3 e 3.5 estrelas, uma fração mínima das notas (~8%), o filme é tecnicamente admirável e oferece um retrato realista e impactante da violência nas favelas, mas não consegue ir além da superfície. Cerca de metade dos reviews desse grupo ressalta a representação honesta e brutal da pobreza e do crime, comparando a experiência a um documentário pela crueza das imagens. Muitos também reconhecem a qualidade técnica e estilística, elogiando a fotografia, a edição ágil e os movimentos de câmera dinâmicos, embora alguns achem essa estilização excessiva em momentos pontuais. Para eles, apesar de ser um filme bem construído e por vezes cativante, falta uma conexão emocional mais profunda com os personagens ou com a tragédia retratada, o que o torna mais um exercício de entretenimento do que uma obra verdadeiramente marcante.\n\nJá para outra fração mínima das notas (~1%), o incômodo é de outra ordem. Para esses espectadores, a fita falha eticamente ao transformar a violência e a miséria em espetáculo. A montagem acelerada e a fotografia vibrante são interpretadas como uma glamorização do sofrimento, que prioriza o impacto visual em detrimento da reflexão. Eles apontam que a complexidade da favela é reduzida a uma lente exclusiva de crime e violência, reforçando estereótipos prejudiciais sobre seus moradores. Além disso, muitos consideram a violência excessiva e gratuita, com cenas perturbadoras de crianças envolvidas em situações de extrema crueldade, o que acaba por alienar em vez de sensibilizar.\n\nPor fim, a grande maioria das notas (~91%) é proveniente daqueles que enxergam o filme como uma obra-prima do cinema mundial. A maioria deles destaca o estilo visual e a edição dinâmicos, que conferem um ritmo acelerado e uma energia contagiante, além da cinematografia estilizada e do uso inovador da câmera, elementos que intensificam a imersão. Muitos também elogiam a narrativa envolvente, que abrange múltiplas histórias e personagens ao longo de décadas sem perder a coesão. E, para muitos, a brutalidade e o realismo da violência são pontos altos, pois a representação crua e não glamourizada choca e enfatiza a seriedade do tema, tornando o filme impactante e memorável.",
+        "n_palavras": 533,
+        "verificacao": {
+          "formato_invalido": false,
+          "numeros_inventados": [
+            "3",
+            "5"
+          ],
+          "rotulos_faltando": [
+            "uma fração mínima das notas (~1%)"
+          ],
+          "ordem_incorreta": true,
+          "vocabulario_peso": true,
+          "resenha_speak": [
+            {
+              "expressao": "obra-prima",
+              "n": 1,
+              "trecho": "que enxergam o filme como uma obra-prima do cinema mundial. A maioria "
+            }
+          ],
+          "n_resenha_speak": 1,
+          "n_flags": 4
+        }
+      },
+      "gemini-3.7-flash": {
+        "ok": true,
+        "provider": "gemini",
+        "modelo": "gemini-3.7-flash",
+        "latencia_s": 21.05,
+        "uso": {
+          "prompt_tokens": 2380,
+          "completion_tokens": 372,
+          "cache_hit_tokens": 0,
+          "cache_miss_tokens": 2380
+        },
+        "custo_usd": 0.0031799999999999997,
+        "narrativa": "Lançado em 2002 e dirigido por Fernando Meirelles, Cidade de Deus é um drama policial brasileiro com 130 minutos de duração. A produção aborda a vivência da juventude em um ambiente marcado pela violência urbana e a busca por novos caminhos por meio da fotografia.\n\nA experiência é conduzida por um ritmo acelerado e uma montagem ágil, estruturando múltiplos relatos ao longo do tempo. A ambientação constrói uma atmosfera crua e dinâmica para retratar as tensões do espaço urbano.\n\nNa avaliação que reúne a grande maioria das notas (~91%), a maioria ressalta o estilo visual e a edição dinâmicos como elementos que imprimem vigor à obra. Nesse mesmo conjunto, muitos valorizam a narrativa envolvente e abrangente na articulação de diferentes histórias, enquanto muitos destacam a brutalidade e o realismo da violência apresentados de maneira crua.\n\nPara quem se posiciona nessa faixa intermediária, que representa uma fração mínima das notas (~8%), cerca de metade salienta o retrato da violência e da realidade social das comunidades. Contudo, embora muitos reconheçam a qualidade técnica e estilística da direção e da cinematografia, muitos consideram que o longa prioriza o entretenimento em vez de construir uma conexão emocional e uma profundidade mais duradouras.\n\nNessa perspectiva, que corresponde a uma fração mínima das notas (~1%), muitos condenam a estetização e a espetacularização da violência e da miséria como artifício de impacto. Nesse segmento, muitos também apontam uma representação estereotipada e deturpada da favela centrada no crime, enquanto muitos julgam a presença da violência excessiva e gratuita na condução do filme.",
+        "n_palavras": 254,
+        "verificacao": {
+          "formato_invalido": false,
+          "numeros_inventados": [],
+          "rotulos_faltando": [],
+          "ordem_incorreta": false,
+          "vocabulario_peso": false,
+          "resenha_speak": [],
+          "n_resenha_speak": 0,
+          "n_flags": 0
+        }
+      },
+      "gemini-2.5-flash": {
+        "ok": true,
+        "provider": "gemini",
+        "modelo": "gemini-2.5-flash",
+        "latencia_s": 15.21,
+        "uso": {
+          "prompt_tokens": 2380,
+          "completion_tokens": 642,
+          "cache_hit_tokens": 0,
+          "cache_miss_tokens": 2380
+        },
+        "custo_usd": 0.002319,
+        "narrativa": "Lançado em 2002, o drama policial 'Cidade de Deus', dirigido por Fernando Meirelles, narra a trajetória de um jovem que busca uma vida digna em um ambiente de violência, encontrando na fotografia um caminho para isso. O filme é marcado por um estilo visual distinto e uma montagem ágil, e a ambientação e a representação da violência são apresentadas com um realismo notável. \n\nA grande maioria das notas (~91%) considera 'Cidade de Deus' uma obra-prima do cinema mundial, elogiando sua inovação técnica e a maneira visceral como aborda a realidade brasileira. A maioria das reviews (cerca de 21 de 30) frequentemente elogia o estilo visual e a edição dinâmicos, que conferem um ritmo acelerado e energia contagiante ao filme, além da cinematografia estilizada e do uso inovador da câmera, contribuindo para a imersão e a intensidade da narrativa. Muitos também destacam a narrativa envolvente e abrangente (cerca de 15 de 30 reviews), que conta múltiplas histórias e apresenta diversos personagens ao longo de décadas sem perder coesão. Para este grupo, a representação crua e impactante da violência é realista e não glamourizada (cerca de 14 de 30 reviews), chocando e enfatizando a seriedade do tema. \n\nPara uma fração mínima das notas (~8%), o filme é tecnicamente impressionante e oferece um retrato realista e impactante da violência nas favelas. Este grupo de avaliações destaca a representação honesta e impactante da violência e condições de vida nas favelas, com cerca de metade das reviews (cerca de 11 de 20) comparando a experiência a um documentário pela sua crueza. Muitos também elogiam a qualidade técnica e estilística (cerca de 9 de 20 reviews), embora alguns considerem a estilização excessiva ou fria. Para muitos, o filme não gerou uma conexão emocional profunda com os personagens ou com a tragédia (cerca de 7 de 20 reviews), sendo percebido mais como entretenimento do que como uma experiência marcante. \n\nJá para uma fração mínima das notas (~1%), o filme, apesar de seus méritos técnicos, falha eticamente. Muitos (cerca de 25 de 50 reviews) consideram que o filme estetiza e espetaculariza a violência e a miséria, utilizando-as como um recurso estilístico para chocar e impressionar. As reviews negativas também criticam a representação estereotipada e deturpada da favela (cerca de 18 de 50 reviews), simplificando sua complexidade. Um número considerável de espectadores (cerca de 15 de 50 reviews) achou a violência do filme excessiva e difícil de suportar, sentindo que ela servia mais para chocar do que para comunicar uma mensagem.",
+        "n_palavras": 412,
+        "verificacao": {
+          "formato_invalido": false,
+          "numeros_inventados": [],
+          "rotulos_faltando": [
+            "a grande maioria das notas (~91%)"
+          ],
+          "ordem_incorreta": false,
+          "vocabulario_peso": true,
+          "resenha_speak": [
+            {
+              "expressao": "obra-prima",
+              "n": 1,
+              "trecho": "onsidera 'Cidade de Deus' uma obra-prima do cinema mundial, elogiando "
+            }
+          ],
+          "n_resenha_speak": 1,
+          "n_flags": 2
+        }
+      },
+      "gemini-3.1-pro": {
+        "ok": true,
+        "provider": "gemini",
+        "modelo": "gemini-3.1-pro-preview",
+        "latencia_s": 34.33,
+        "uso": {
+          "prompt_tokens": 2380,
+          "completion_tokens": 471,
+          "cache_hit_tokens": 0,
+          "cache_miss_tokens": 2380
+        },
+        "custo_usd": 0.010412000000000001,
+        "narrativa": "Lançado em 2002 sob a direção de Fernando Meirelles, o longa-metragem Cidade de Deus é uma obra que transita pelos gêneros drama e crime. A premissa principal do filme segue os passos de um jovem morador de uma região marginalizada que cresce diariamente cercado pela violência estrutural de sua comunidade. Com medo de acabar seguindo o mesmo destino de seus pares, o protagonista enxerga na prática da fotografia uma oportunidade concreta de alcançar uma vida digna. A experiência proporcionada pela obra é frequentemente caracterizada por um ritmo acelerado e por uma intensidade constante. Em termos de atmosfera, a produção consolida uma estrutura com edições dinâmicas e movimentos de câmera ágeis, compondo uma ambientação densa que expõe a criminalidade de maneira crua. No que se refere à recepção, a grande maioria das notas (~91%) estabelece as visões mais favoráveis sobre o título. Nesse segmento, a maioria destaca o estilo visual e a edição dinâmicos aplicados em cena. Somado a isso, muitos avaliadores ressaltam a narrativa envolvente e abrangente desenvolvida. Para completar os pontos centrais dessa faixa, muitos apontam a brutalidade e o realismo da violência na tela. Para aqueles que se posicionam no centro do espectro de recepção, compondo uma fração mínima das notas (~8%), as percepções tornam-se divididas. Cerca de metade debate o retrato da violência e da realidade social apresentado. Além disso, muitos observam a qualidade técnica e estilística do projeto. Contudo, muitos também questionam a dinâmica entre o entretenimento oferecido versus a profundidade e conexão emocional gerada. Por fim, para o segmento menos favorável da audiência, responsável por uma fração mínima das notas (~1%), a interpretação assume contornos de forte rejeição. Dentro desse recorte, muitos repudiam a estetização e a espetacularização da violência e da miséria. Ao avançar nessa leitura, muitos identificam uma representação estereotipada e deturpada da favela. Como fechamento estrutural de suas ressalvas, muitos consideram que o longa apresenta uma violência excessiva e gratuita.",
+        "n_palavras": 318,
+        "verificacao": {
+          "formato_invalido": false,
+          "numeros_inventados": [],
+          "rotulos_faltando": [],
+          "ordem_incorreta": false,
+          "vocabulario_peso": false,
+          "resenha_speak": [],
+          "n_resenha_speak": 0,
+          "n_flags": 0
+        }
+      }
+    }
+  },
+  "the-invite-2026": {
+    "briefing": {
+      "ficha": {
+        "titulo": "O Convite",
+        "sinopse_oficial": "O casamento de Joe e Angela está por um fio. Quando eles convidam seus enigmáticos vizinhos do andar de cima para um jantar, a noite toma rumos inesperados.",
+        "sinopse_fallback_en": false,
+        "generos": [
+          "Drama",
+          "Comédia"
+        ],
+        "duracao_min": 107,
+        "diretor": "Olivia Wilde",
+        "diretor_transliterado": false,
+        "ano": 2026,
+        "fonte": "tmdb",
+        "ano_fonte": "slug"
+      },
+      "total_reviews_observadas": 276,
+      "distribuicao": {
+        "disponivel": true,
+        "n_notas_total": 338448
+      },
+      "grupos": {
+        "negativas": {
+          "n_reviews_analisadas": 50,
+          "estado_piso": "completa",
+          "permissoes": {
+            "pode_citar_temas": true,
+            "pode_citar_numero": true,
+            "pode_citar_quantificador": true
+          },
+          "observacao_geral": "As reviews negativas apontam para um filme com humor ineficaz e personagens rasos, com muitos expressando desconforto ou tédio pela abordagem forçada da sexualidade e falta de profundidade temática. Este grupo destaca que a previsibilidade e a superficialidade do roteiro, aliadas a atuações e direção questionáveis, resultaram em uma experiência decepcionante.",
+          "temas": [
+            {
+              "tema": "Humor e roteiro fracos/entediantes",
+              "fracao_pct": 54,
+              "exemplo": "Muitas reviews classificaram o humor do filme como previsível, pouco engraçado ou inexistente, com piadas que não funcionam e um roteiro que se arrasta, tornando a experiência tediosa.",
+              "mencoes": 27,
+              "de_n_reviews": 50,
+              "quantificador": "cerca de metade"
+            },
+            {
+              "tema": "Personagens e diálogos superficiais/irritantes",
+              "fracao_pct": 40,
+              "exemplo": "Os personagens são frequentemente descritos como caricaturas, superficiais e unidimensionais, com diálogos que parecem forçados, repetitivos ou sem profundidade, especialmente no casal principal.",
+              "mencoes": 20,
+              "de_n_reviews": 50,
+              "quantificador": "muitos"
+            },
+            {
+              "tema": "Atuações e direção questionáveis",
+              "fracao_pct": 30,
+              "exemplo": "A atuação de alguns membros do elenco, em particular dos protagonistas, é vista como inautêntica ou exagerada, e a direção é criticada por ser pedante, forçada ou por não conseguir extrair o melhor dos atores.",
+              "mencoes": 15,
+              "de_n_reviews": 50,
+              "quantificador": "muitos"
+            }
+          ],
+          "temas_omitidos": 3,
+          "share_pct": 3,
+          "rotulo_peso": "uma fração mínima das notas (~3%)",
+          "marcacao_perspectiva": "antecipada"
+        },
+        "medianas": {
+          "n_reviews_analisadas": 20,
+          "estado_piso": "completa",
+          "permissoes": {
+            "pode_citar_temas": true,
+            "pode_citar_numero": true,
+            "pode_citar_quantificador": true
+          },
+          "observacao_geral": "As reviews medianas apontam que o filme é uma comédia bem atuada e dirigida, com um roteiro inteligente que, no entanto, pode se tornar repetitivo e previsível em seus temas, especialmente na segunda metade. Este grupo destaca o equilíbrio entre humor e drama, mas questiona a eficácia da transição tonal e do final.",
+          "temas": [
+            {
+              "tema": "Ritmo e duração",
+              "fracao_pct": 45,
+              "exemplo": "Muitos acharam o filme divertido na primeira metade, mas sentiram que a repetição das situações e a duração prolongada tornaram a experiência cansativa no final.",
+              "mencoes": 9,
+              "de_n_reviews": 20,
+              "quantificador": "muitos"
+            },
+            {
+              "tema": "Atuações do elenco",
+              "fracao_pct": 45,
+              "exemplo": "As performances foram amplamente elogiadas, com destaque para a química entre os atores e a habilidade de entregarem tanto o humor quanto o drama.",
+              "mencoes": 9,
+              "de_n_reviews": 20,
+              "quantificador": "muitos"
+            },
+            {
+              "tema": "Direção e estilo visual",
+              "fracao_pct": 40,
+              "exemplo": "A direção é vista como confiante e eficaz, especialmente na forma como capta a atmosfera íntima do apartamento e equilibra os tons conflitantes, embora alguns questionem a originalidade do estilo visual.",
+              "mencoes": 8,
+              "de_n_reviews": 20,
+              "quantificador": "muitos"
+            }
+          ],
+          "temas_omitidos": 3,
+          "share_pct": 18,
+          "rotulo_peso": "uma parcela das notas (~18%)",
+          "marcacao_perspectiva": "antecipada"
+        },
+        "positivas": {
+          "n_reviews_analisadas": 30,
+          "estado_piso": "completa",
+          "permissoes": {
+            "pode_citar_temas": true,
+            "pode_citar_numero": true,
+            "pode_citar_quantificador": true
+          },
+          "observacao_geral": "As reviews positivas destacam a direção e o roteiro como pontos fortes, elogiando a combinação eficaz de humor e drama. Este grupo ressalta, ainda, as atuações excelentes do elenco e a originalidade da narrativa ao explorar temas de relacionamento.",
+          "temas": [
+            {
+              "tema": "Direção e roteiro (geral)",
+              "fracao_pct": 83,
+              "exemplo": "As reviews elogiam intensamente a direção de Olivia Wilde e o roteiro, destacando a habilidade em equilibrar comédia e drama, criar tensão e explorar temas complexos de relacionamento.",
+              "mencoes": 25,
+              "de_n_reviews": 30,
+              "quantificador": "quase todos"
+            },
+            {
+              "tema": "Atuações e química do elenco",
+              "fracao_pct": 67,
+              "exemplo": "Este grupo de reviews salienta o desempenho excepcional do elenco, em particular Seth Rogen, Edward Norton, Penélope Cruz e Olivia Wilde, e a ótima química entre os atores.",
+              "mencoes": 20,
+              "de_n_reviews": 30,
+              "quantificador": "a maioria"
+            },
+            {
+              "tema": "Humor e drama",
+              "fracao_pct": 60,
+              "exemplo": "As reviews positivas consistentemente apontam a capacidade do filme de ser hilário e, ao mesmo tempo, profundamente triste ou tocante, com um equilíbrio perfeito entre comédia e drama.",
+              "mencoes": 18,
+              "de_n_reviews": 30,
+              "quantificador": "cerca de metade"
+            }
+          ],
+          "temas_omitidos": 3,
+          "share_pct": 79,
+          "rotulo_peso": "a grande maioria das notas (~79%)",
+          "marcacao_perspectiva": "nenhuma"
+        }
+      },
+      "movimento3": {
+        "ordem": [
+          "positivas",
+          "medianas",
+          "negativas"
+        ]
+      },
+      "orcamento_frases": {
+        "movimento1": [
+          2,
+          3
+        ],
+        "movimento2": [
+          0,
+          5
+        ],
+        "movimento3": [
+          4,
+          8
+        ]
+      }
+    },
+    "modelos": {
+      "deepseek-baseline": {
+        "ok": true,
+        "provider": "deepseek",
+        "modelo": "deepseek-v4-flash",
+        "latencia_s": 7.5,
+        "uso": {
+          "prompt_tokens": 2420,
+          "completion_tokens": 619,
+          "cache_hit_tokens": 2304,
+          "cache_miss_tokens": 116
+        },
+        "custo_usd": 0.00051212,
+        "narrativa": "Lançado em 2026, \"O Convite\" é um drama com nuances de comédia dirigido por Olivia Wilde. A trama acompanha Joe e Angela, cujo casamento está em crise, quando um jantar com os enigmáticos vizinhos do andar de cima toma rumos inesperados. Com duração de 107 minutos, o longa mescla gêneros para explorar as dinâmicas de um relacionamento à beira do colapso.\n\nA narrativa é conduzida em ritmo que alterna momentos de tensão e respiro, construindo uma atmosfera intimista que se concentra quase inteiramente no apartamento do casal. O tom oscila entre a leveza cômica e o peso dramático, criando uma densidade que se intensifica na segunda metade. A estrutura é centrada em encontros e diálogos, com uma progressão que acentua a sensação de confinamento e expectativa entre os quatro personagens.\n\nA grande maioria das notas (~79%) é formada por reviews positivas, que elogiam intensamente a direção de Olivia Wilde e o roteiro, destacando a habilidade em equilibrar comédia e drama, criar tensão e explorar temas complexos de relacionamento — esse é um ponto levantado por quase todos nesse grupo. A maioria das críticas favoráveis também salienta o desempenho excepcional do elenco, em particular Seth Rogen, Edward Norton, Penélope Cruz e Olivia Wilde, e a ótima química entre os atores. Cerca de metade dessas reviews aponta a capacidade do filme de ser hilário e, ao mesmo tempo, profundamente triste ou tocante.\n\nUma parcela das notas (~18%) ocupa a faixa mediana. Para essas reviews, o filme é uma comédia bem atuada e dirigida, com roteiro inteligente que se torna repetitivo e previsível, especialmente na segunda metade. Muitos acharam a primeira parte divertida, mas a repetição e a duração prolongada cansaram no final; muitos também elogiaram as performances e a química, enquanto a direção é vista como confiante, ainda que com estilo visual pouco original. A transição tonal e o desfecho são questionados.\n\nJá uma fração mínima das notas (~3%) reúne as avaliações negativas. Para essas, o humor é previsível e pouco eficaz — cerca de metade das resenhas desse grupo o descreve como entediante. Muitos criticam personagens caricatos e diálogos forçados, e muitos também apontam atuações inautênticas e direção pedante, resultando em uma experiência decepcionante.",
+        "n_palavras": 363,
+        "verificacao": {
+          "formato_invalido": false,
+          "numeros_inventados": [],
+          "rotulos_faltando": [
+            "a grande maioria das notas (~79%)",
+            "uma parcela das notas (~18%)"
+          ],
+          "ordem_incorreta": false,
+          "vocabulario_peso": false,
+          "resenha_speak": [],
+          "n_resenha_speak": 0,
+          "n_flags": 1
+        }
+      },
+      "gemini-3.7-flash": {
+        "ok": true,
+        "provider": "gemini",
+        "modelo": "gemini-3.7-flash",
+        "latencia_s": 16.4,
+        "uso": {
+          "prompt_tokens": 2208,
+          "completion_tokens": 424,
+          "cache_hit_tokens": 0,
+          "cache_miss_tokens": 2208
+        },
+        "custo_usd": 0.0032459999999999998,
+        "narrativa": "Dirigido por Olivia Wilde e lançado em 2026, o longa-metragem O Convite combina os gêneros de drama e comédia ao longo de seus 107 minutos de duração. A premissa acompanha a história de um casal cujo casamento se encontra em crise, até que ambos decidem convidar os enigmáticos vizinhos do andar de cima para um jantar. Esse encontro social logo assume rumos imprevistos e transforma a dinâmica estabelecida entre os presentes.\n\nA narrativa estrutura-se a partir da convivência em uma ambientação fechada e íntima. A experiência sustenta um ritmo centrado em interações verbais que alternam momentos de humor com uma gradual intensificação da densidade dramática.\n\nRepresentando a grande maioria das notas (~79%), quase todos destacam a direção e o roteiro pela habilidade em balancear a comédia com o drama e construir tensão ao explorar temas de relacionamento. Além disso, a maioria aponta as atuações e a química do elenco como pontos centrais da obra. Cerca de metade também ressalta o equilíbrio entre humor e drama, valorizando a capacidade de transitar entre passagens cômicas e momentos tocantes. Em uma leitura intermediária, que abrange uma parcela das notas (~18%), muitos avaliadores apontam que o ritmo e a duração prolongada tornam a experiência cansativa na segunda metade. Apesar disso, muitos reconhecem a qualidade nas atuações do elenco e a sintonia entre os atores. Da mesma forma, muitos destacam a direção e o estilo visual como eficientes na condução da atmosfera íntima. Por fim, na perspectiva de uma fração mínima das notas (~3%), cerca de metade considera o humor e o roteiro fracos ou entediantes, apontando que a história se torna previsível. Nesse recorte, muitos descrevem os personagens e os diálogos como superficiais ou repetitivos, enquanto muitos também classificam a direção e as atuações como questionáveis.",
+        "n_palavras": 292,
+        "verificacao": {
+          "formato_invalido": false,
+          "numeros_inventados": [],
+          "rotulos_faltando": [],
+          "ordem_incorreta": false,
+          "vocabulario_peso": false,
+          "resenha_speak": [],
+          "n_resenha_speak": 0,
+          "n_flags": 0
+        }
+      },
+      "gemini-2.5-flash": {
+        "ok": true,
+        "provider": "gemini",
+        "modelo": "gemini-2.5-flash",
+        "latencia_s": 14.75,
+        "uso": {
+          "prompt_tokens": 2208,
+          "completion_tokens": 541,
+          "cache_hit_tokens": 0,
+          "cache_miss_tokens": 2208
+        },
+        "custo_usd": 0.0020149,
+        "narrativa": "O Convite, dirigido por Olivia Wilde, é um drama com elementos de comédia lançado em 2026. O filme apresenta a história de Joe e Angela, cujo casamento está em crise, e como um jantar com seus enigmáticos vizinhos do andar de cima leva a noite a tomar rumos inesperados.\nA narrativa explora um constante equilíbrio entre humor e drama em seu tom. O filme possui um ritmo que, em certos momentos, pode parecer prolongado.\nA grande maioria das notas (~79%) elogia a direção de Olivia Wilde e o roteiro, com quase todos (~25 de 30 reviews, 83%) destacando a habilidade em equilibrar comédia e drama, criar tensão e explorar temas complexos de relacionamento. A maioria (~20 de 30 reviews, 67%) salienta o desempenho excepcional do elenco e a ótima química entre os atores. Cerca de metade (~18 de 30 reviews, 60%) das análises aponta a capacidade do filme de ser hilário e, ao mesmo tempo, profundamente triste ou tocante, com um equilíbrio perfeito entre comédia e drama.\nPara uma parcela das notas (~18%), o filme apresenta pontos mistos. Muitos (~9 de 20 reviews, 45%) acharam o filme divertido na primeira metade, mas sentiram que a repetição das situações e a duração prolongada tornaram a experiência cansativa no final. As performances foram amplamente elogiadas por muitos (~9 de 20 reviews, 45%), que destacaram a química e a habilidade em entregar tanto humor quanto drama, enquanto a direção é vista como confiante e eficaz por muitos (~8 de 20 reviews, 40%), embora com questionamentos sobre a originalidade do estilo visual.\nUma fração mínima das notas (~3%) apresenta uma visão crítica. Para quem está nessa faixa, cerca de metade (~27 de 50 reviews, 54%) classificou o humor do filme como previsível, pouco engraçado ou inexistente, com um roteiro que se arrasta, tornando a experiência tediosa. Muitos (~20 de 50 reviews, 40%) descrevem os personagens como caricaturas superficiais e unidimensionais, com diálogos forçados, e a atuação de alguns membros do elenco é vista como inautêntica ou exagerada por muitos (~15 de 50 reviews, 30%), com a direção criticada por ser pedante ou por não conseguir extrair o melhor dos atores.",
+        "n_palavras": 356,
+        "verificacao": {
+          "formato_invalido": false,
+          "numeros_inventados": [],
+          "rotulos_faltando": [
+            "a grande maioria das notas (~79%)",
+            "uma fração mínima das notas (~3%)"
+          ],
+          "ordem_incorreta": false,
+          "vocabulario_peso": false,
+          "resenha_speak": [],
+          "n_resenha_speak": 0,
+          "n_flags": 1
+        }
+      },
+      "gemini-3.1-pro": {
+        "ok": true,
+        "provider": "gemini",
+        "modelo": "gemini-3.1-pro-preview",
+        "latencia_s": 43.34,
+        "uso": {
+          "prompt_tokens": 2208,
+          "completion_tokens": 453,
+          "cache_hit_tokens": 0,
+          "cache_miss_tokens": 2208
+        },
+        "custo_usd": 0.009852,
+        "narrativa": "Lançado em 2026, O Convite é um longa que mescla gêneros de drama e comédia sob a direção de Olivia Wilde. A premissa central acompanha o casamento já por um fio de Joe e Angela, que decidem convidar os enigmáticos vizinhos do andar de cima para um jantar conjunto, fazendo com que a noite tome rumos inesperados. A obra de 107 minutos concentra-se no desdobramento das situações desencadeadas ao longo desse encontro. A experiência de assistir à narrativa envolve o espectador em uma atmosfera predominantemente íntima, focada nas dinâmicas que ocorrem no próprio apartamento. A estrutura do projeto apoia-se fortemente em um cruzamento tonal contínuo entre os aspectos do humor e a densidade das situações dramáticas. Representando a grande maioria das notas (~79%), quase todos destacam a direção e o roteiro pela habilidade em criar tensão e explorar temas complexos envolvendo relacionamentos. Nessa mesma percepção, a maioria elogia intensamente o desempenho e a química do elenco, enquanto cerca de metade aponta o perfeito equilíbrio entre os momentos hilários e aqueles tocantes. Sob uma perspectiva mais cautelosa, uma parcela das notas (~18%) faz ressalvas estruturais, com muitos sentindo que o ritmo sofre com a repetição de situações e que a duração prolongada torna a experiência cansativa. Mesmo assim, muitos desse segmento mediano valorizam o esforço nas atuações e muitos enxergam uma direção confiante na maneira como capta o ambiente, apesar das incertezas sobre o estilo visual. Por fim, numa leitura de forte insatisfação, uma fração mínima das notas (~3%) relata tédio com a abordagem oferecida. Cerca de metade dessa faixa restrita enxerga o roteiro como previsível e incapaz de estabelecer um humor eficaz. Fechando as divergências, muitos argumentam que os personagens e os diálogos soam superficiais, assim como muitos criticam abertamente as atuações e a direção, julgando a condução inautêntica e forçada.",
+        "n_palavras": 301,
+        "verificacao": {
+          "formato_invalido": false,
+          "numeros_inventados": [],
+          "rotulos_faltando": [],
+          "ordem_incorreta": false,
+          "vocabulario_peso": false,
+          "resenha_speak": [],
+          "n_resenha_speak": 0,
+          "n_flags": 0
+        }
+      }
+    }
+  }
+}

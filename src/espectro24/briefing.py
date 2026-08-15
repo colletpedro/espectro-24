@@ -96,6 +96,70 @@ INVARIANTES_REMANESCENTES = (
 )
 
 
+def extrair_narrativa(bruto: str) -> str:
+    """A narrativa da resposta do narrador, tolerante a escape inconsistente.
+
+    **Defeito real que motiva** (medido em `cidade-de-deus`, 2026-08-15):
+    o DeepSeek devolve prosa de vários parágrafos e escapa a quebra de linha
+    de forma INCONSISTENTE dentro da mesma resposta — parte como `\\n`
+    (válido) e parte como newline cru (JSON inválido). `json.loads` recusa a
+    resposta inteira, e o texto, que está perfeitamente bom, se perde.
+
+    A estratégia é escalonada, do mais estrito ao mais tolerante:
+      1. JSON estrito — o caminho normal, e o único que valida a estrutura;
+      2. JSON com as quebras de linha CRUAS escapadas — conserta o defeito
+         observado sem afrouxar mais nada;
+      3. extração direta do campo `narrativa` por regex — último recurso,
+         possível aqui só porque o schema deste estágio é UM campo de texto
+         (não vale para a síntese §D, cujo JSON tem estrutura aninhada).
+
+    Devolve `""` quando nada funciona — o chamador trata como falha, em vez
+    de receber prosa meio parseada e não perceber.
+    """
+    import json as _json
+    import re as _re
+
+    t = (bruto or "").strip()
+    if not t:
+        return ""
+    # remove cerca de código, se vier
+    if t.startswith("```"):
+        t = _re.sub(r"^```[a-z]*\s*|\s*```$", "", t, flags=_re.IGNORECASE)
+
+    try:
+        return (_json.loads(t) or {}).get("narrativa", "") or ""
+    except Exception:  # noqa: BLE001
+        pass
+
+    # (2) escapa newline/tab CRUS que estejam dentro de uma string JSON.
+    dentro, saida, i = False, [], 0
+    while i < len(t):
+        c = t[i]
+        if c == "\\" and i + 1 < len(t):
+            saida.append(t[i:i + 2]); i += 2; continue
+        if c == '"':
+            dentro = not dentro
+        if dentro and c == "\n":
+            saida.append("\\n")
+        elif dentro and c == "\t":
+            saida.append("\\t")
+        else:
+            saida.append(c)
+        i += 1
+    try:
+        return (_json.loads("".join(saida)) or {}).get("narrativa", "") or ""
+    except Exception:  # noqa: BLE001
+        pass
+
+    # (3) o campo, por regex — schema de UM campo torna isso seguro aqui.
+    m = _re.search(r'"narrativa"\s*:\s*"(.*)"\s*}\s*$', t, _re.DOTALL)
+    if not m:
+        return ""
+    bruto_campo = m.group(1)
+    return (bruto_campo.replace("\\n", "\n").replace('\\"', '"')
+            .replace("\\\\", "\\").strip())
+
+
 def _estado_piso(bucket: dict) -> str:
     """`estado_piso` do bucket, DERIVADO de `n_validas` quando ausente.
 
