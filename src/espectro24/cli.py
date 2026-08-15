@@ -45,14 +45,21 @@ def _parse_args(argv):
     p.add_argument("--cache-dir", default="resultado/cache",
                    help="raiz do cache em disco (default: resultado/cache)")
     p.add_argument("--out-dir", default="resultado")
+    # v1.9.11: default None — SEM a flag, cada estágio usa o provider da sua
+    # configuração (`PROVIDER_POR_ESTAGIO`: DeepSeek classifica, Gemini
+    # narra). Com a flag, ela FORÇA todos os estágios, que é a semântica
+    # documentada de `provider_do_estagio(explicit=...)`.
+    # O default anterior (`DEFAULT_PROVIDER`) nunca era None, então o
+    # explícito estava sempre presente e a configuração por estágio nunca
+    # era consultada — a narrativa rodava em DeepSeek mesmo com
+    # `gemini-3.7-flash` fixado. Medido ao rodar o pipeline de ponta a ponta.
     p.add_argument("--provider", choices=sorted(PROVIDER_ENV_KEYS),
-                   default=DEFAULT_PROVIDER,
-                   help="provider do LLM (gemini|anthropic|deepseek); "
-                       f"default (v1.8.0): {DEFAULT_PROVIDER!r} — ver "
-                       "DEFAULT_PROVIDER em config.py e VALIDACAO_DEEPSEEK.md "
-                       "para a decisão. anthropic/gemini seguem selecionáveis "
-                       "passando a flag explicitamente (requer "
-                       "ANTHROPIC_API_KEY / GEMINI_API_KEY no ambiente)")
+                   default=None,
+                   help="FORÇA o provider de TODOS os estágios "
+                       "(gemini|anthropic|deepseek). Omitido (default), cada "
+                       "estágio usa o seu: ver PROVIDER_POR_ESTAGIO em "
+                       "config.py — classificação em "
+                       f"{DEFAULT_PROVIDER!r}, narrativa em Gemini")
     p.add_argument("--model", default=None,
                    help="modelo do LLM; default depende do provider "
                        "resolvido (ver PROVIDER_DEFAULT_MODELS)")
@@ -143,16 +150,22 @@ def main(argv=None):
     vai_sintetizar = not args.no_synth and not args.reuse_synthesis
     vai_narrar = quer_narrar and (args.reuse_synthesis or not args.no_synth)
 
-    if vai_sintetizar or vai_narrar:
-        # Falha rápido (antes de gastar qualquer requisição/coleta) se o
-        # provider/chave não puder ser resolvido.
-        try:
-            from .synthesize import detect_provider
-            detect_provider(args.provider)
-        except ProviderError as e:
-            print(f"Provider LLM: {e}", file=sys.stderr)
-            print("(ou rode com --no-synth / --tom estruturado)", file=sys.stderr)
-            sys.exit(5)
+    # Falha rápido (antes de gastar qualquer requisição/coleta) se o
+    # provider/chave de algum estágio que VAI rodar não puder ser resolvido.
+    # v1.9.11: a checagem é POR ESTÁGIO — com `--provider` omitido, síntese e
+    # narrativa podem usar providers diferentes, e checar só um deixaria o
+    # outro estourar depois da coleta inteira.
+    provider_sintese = None
+    try:
+        from .synthesize import provider_do_estagio
+        if vai_sintetizar:
+            provider_sintese = provider_do_estagio("classificacao", args.provider)
+        if vai_narrar:
+            provider_do_estagio("narrativa", args.provider)
+    except ProviderError as e:
+        print(f"Provider LLM: {e}", file=sys.stderr)
+        print("(ou rode com --no-synth / --tom estruturado)", file=sys.stderr)
+        sys.exit(5)
 
     # --- Caminho A/B: reaproveita síntese de um JSON existente ---
     if args.reuse_synthesis:
@@ -195,7 +208,7 @@ def main(argv=None):
             buckets, superset, distrib = run_pipeline(
                 fetcher, slug,
                 data_coleta=datetime.now(timezone.utc).isoformat(),
-                model=args.model, provider=args.provider, synth=not args.no_synth,
+                model=args.model, provider=provider_sintese, synth=not args.no_synth,
                 cota_por_bucket=args.cota,
                 orcamento_paginas_bucket=args.orcamento_paginas,
                 on_level=_on_level, distribuicao=not args.no_distribuicao,

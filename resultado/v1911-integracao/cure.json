@@ -1,0 +1,906 @@
+{
+  "slug": "cure",
+  "data_coleta": "2026-08-15T21:33:39.904567+00:00",
+  "spec_version": "1.9.0",
+  "total_reviews_observadas": 559,
+  "reviews_url": "https://letterboxd.com/film/cure/reviews/",
+  "ficha": {
+    "titulo": "A Cura",
+    "sinopse_oficial": "Pessoas são encontradas mortas com um bizarro \"x\" cravado em seus corpos. Desesperado, um detetive chamado Takabe decide iniciar uma investigação à base de longos e intermináveis sessões de interrogatórios. Porém, sua investigação não resulta em nada. Até que um determinado dia um rapaz é preso por estar perto de mais uma pessoa assassinada. Tímido e de trejeitos estranhos, resta saber qual a ligação entre ele o os crimes (e quem sabe, com o assassino)",
+    "sinopse_fallback_en": false,
+    "generos": [
+      "Crime",
+      "Thriller",
+      "Terror",
+      "Mistério"
+    ],
+    "duracao_min": 111,
+    "diretor": "Kiyoshi Kurosawa",
+    "diretor_transliterado": true,
+    "ano": 1997,
+    "fonte": "tmdb",
+    "ano_fonte": "letterboxd"
+  },
+  "distribuicao": {
+    "n_notas_total": 375278,
+    "por_nivel": {
+      "0.5": 456,
+      "1.0": 1037,
+      "1.5": 989,
+      "2.0": 4251,
+      "2.5": 6214,
+      "3.0": 23371,
+      "3.5": 41371,
+      "4.0": 110990,
+      "4.5": 87357,
+      "5.0": 99242
+    },
+    "por_bucket": {
+      "negativas": 2,
+      "medianas": 8,
+      "positivas": 90
+    },
+    "fonte": "letterboxd_histograma"
+  },
+  "coleta": {
+    "slug": "cure",
+    "coletado_em": "2026-08-15T21:33:18.164360+00:00",
+    "versao_coletor": "1.9.6",
+    "ordenacao_usada": "by/added",
+    "histograma_bruto": {
+      "0.5": 456,
+      "1.0": 1037,
+      "1.5": 989,
+      "2.0": 4251,
+      "2.5": 6214,
+      "3.0": 23371,
+      "3.5": 41371,
+      "4.0": 110990,
+      "4.5": 87357,
+      "5.0": 99242
+    },
+    "orcamento_paginas_por_nivel": {
+      "0.5": 1,
+      "1.0": 3,
+      "1.5": 2,
+      "2.0": 10,
+      "2.5": 6,
+      "3.0": 10,
+      "3.5": 2,
+      "4.0": 5,
+      "4.5": 4,
+      "5.0": 5
+    },
+    "paginas_gastas_por_nivel": {
+      "0.5": 1,
+      "1.0": 2,
+      "1.5": 2,
+      "2.0": 10,
+      "2.5": 6,
+      "3.0": 10,
+      "3.5": 2,
+      "4.0": 5,
+      "4.5": 4,
+      "5.0": 5
+    },
+    "paradas_por_limite": [
+      "0.5",
+      "1.0",
+      "1.5",
+      "2.0",
+      "2.5",
+      "3.0",
+      "3.5",
+      "4.0",
+      "4.5",
+      "5.0"
+    ],
+    "contagem_bruta_por_nivel": {
+      "0.5": 12,
+      "1.0": 24,
+      "1.5": 24,
+      "2.0": 118,
+      "2.5": 69,
+      "3.0": 120,
+      "3.5": 24,
+      "4.0": 60,
+      "4.5": 48,
+      "5.0": 60
+    },
+    "contagem_estimada_valida_por_nivel": {
+      "0.5": 5,
+      "1.0": 5,
+      "1.5": 11,
+      "2.0": 38,
+      "2.5": 20,
+      "3.0": 38,
+      "3.5": 9,
+      "4.0": 19,
+      "4.5": 16,
+      "5.0": 24
+    },
+    "motivo_parada_por_nivel": {
+      "0.5": "orcamento_esgotado",
+      "1.0": "orcamento_esgotado",
+      "1.5": "orcamento_esgotado",
+      "2.0": "orcamento_esgotado",
+      "2.5": "orcamento_esgotado",
+      "3.0": "orcamento_esgotado",
+      "3.5": "orcamento_esgotado",
+      "4.0": "orcamento_esgotado",
+      "4.5": "orcamento_esgotado",
+      "5.0": "orcamento_esgotado"
+    },
+    "paginas_base_por_nivel": {
+      "0.5": 1,
+      "1.0": 2,
+      "1.5": 2,
+      "2.0": 10,
+      "2.5": 6,
+      "3.0": 10,
+      "3.5": 2,
+      "4.0": 5,
+      "4.5": 4,
+      "5.0": 5
+    },
+    "paginas_extensao_por_nivel": {
+      "0.5": 0,
+      "1.0": 0,
+      "1.5": 0,
+      "2.0": 0,
+      "2.5": 0,
+      "3.0": 0,
+      "3.5": 0,
+      "4.0": 0,
+      "4.5": 0,
+      "5.0": 0
+    },
+    "extensao_por_bucket": {
+      "negativas": {
+        "paginas_base": 15,
+        "paginas_extensao": 0,
+        "extras_por_nivel": {},
+        "motivo_parada": "meta_atingida",
+        "n_validas_pos_base": 67,
+        "n_validas_pos_extensao": 67,
+        "meta": 50
+      },
+      "medianas": {
+        "paginas_base": 16,
+        "paginas_extensao": 0,
+        "extras_por_nivel": {},
+        "motivo_parada": "meta_atingida",
+        "n_validas_pos_base": 73,
+        "n_validas_pos_extensao": 73,
+        "meta": 50
+      },
+      "positivas": {
+        "paginas_base": 16,
+        "paginas_extensao": 0,
+        "extras_por_nivel": {},
+        "motivo_parada": "meta_atingida",
+        "n_validas_pos_base": 79,
+        "n_validas_pos_extensao": 79,
+        "meta": 50
+      }
+    },
+    "profundidade_sondagem": {
+      "nivel_sondado": 4.0,
+      "profundidade": 256,
+      "exata": false,
+      "requisicoes": 4,
+      "motivo": "teto_plataforma"
+    },
+    "profundidade_estimada_por_nivel": {
+      "0.5": 1,
+      "1.0": 2,
+      "1.5": 2,
+      "2.0": 10,
+      "2.5": 14,
+      "3.0": 54,
+      "3.5": 95,
+      "4.0": 256,
+      "4.5": 201,
+      "5.0": 229
+    },
+    "janela_temporal": {
+      "total": {
+        "n": 678,
+        "min": "2023-12-06",
+        "max": "2026-08-07",
+        "p5": "2026-06-08",
+        "p50": "2026-07-27",
+        "p95": "2026-08-06"
+      },
+      "por_bucket": {
+        "negativas": {
+          "n": 214,
+          "min": "2024-05-27",
+          "max": "2026-08-07",
+          "p5": "2026-05-30",
+          "p50": "2026-07-10",
+          "p95": "2026-08-03"
+        },
+        "medianas": {
+          "n": 246,
+          "min": "2024-10-05",
+          "max": "2026-08-07",
+          "p5": "2026-07-06",
+          "p50": "2026-07-27",
+          "p95": "2026-08-05"
+        },
+        "positivas": {
+          "n": 218,
+          "min": "2023-12-06",
+          "max": "2026-08-07",
+          "p5": "2026-07-20",
+          "p50": "2026-08-06",
+          "p95": "2026-08-07"
+        }
+      }
+    },
+    "dias_por_100_paginas": {
+      "n_paginas": 16,
+      "pagina_min": 1,
+      "pagina_max": 64,
+      "dias": 16,
+      "dias_por_100_paginas": 25.396825396825395,
+      "paginas_para_1_ano": 1437
+    },
+    "n_reviews_bruto": 678
+  },
+  "origem_paginas": {
+    "_histograma/cure.html": "cache",
+    "cure/pages/by_added/rated_4_page_4.html": "cache",
+    "cure/pages/by_added/rated_4_page_16.html": "cache",
+    "cure/pages/by_added/rated_4_page_64.html": "cache",
+    "cure/pages/by_added/rated_4_page_256.html": "cache",
+    "cure/pages/by_added/rated_0_5_page_1.html": "cache",
+    "cure/fulltext/viewing_1431873651.html": "cache",
+    "cure/fulltext/viewing_1405188232.html": "cache",
+    "cure/pages/by_added/rated_1_page_1.html": "cache",
+    "cure/pages/by_added/rated_1_page_2.html": "cache",
+    "cure/pages/by_added/rated_1_5_page_1.html": "cache",
+    "cure/pages/by_added/rated_1_5_page_2.html": "cache",
+    "cure/fulltext/viewing_1428582436.html": "cache",
+    "cure/fulltext/viewing_1403457617.html": "cache",
+    "cure/pages/by_added/rated_2_page_1.html": "cache",
+    "cure/pages/by_added/rated_2_page_2.html": "cache",
+    "cure/pages/by_added/rated_2_page_3.html": "cache",
+    "cure/pages/by_added/rated_2_page_4.html": "cache",
+    "cure/pages/by_added/rated_2_page_5.html": "cache",
+    "cure/pages/by_added/rated_2_page_6.html": "cache",
+    "cure/pages/by_added/rated_2_page_7.html": "cache",
+    "cure/pages/by_added/rated_2_page_8.html": "cache",
+    "cure/pages/by_added/rated_2_page_9.html": "cache",
+    "cure/pages/by_added/rated_2_page_10.html": "cache",
+    "cure/fulltext/viewing_1434794191.html": "cache",
+    "cure/fulltext/viewing_1433087964.html": "cache",
+    "cure/fulltext/viewing_1409978725.html": "cache",
+    "cure/fulltext/viewing_1409171275.html": "cache",
+    "cure/fulltext/viewing_1407380666.html": "cache",
+    "cure/fulltext/viewing_1408180375.html": "cache",
+    "cure/fulltext/viewing_1402729466.html": "cache",
+    "cure/fulltext/viewing_1401127065.html": "cache",
+    "cure/fulltext/viewing_1390662610.html": "cache",
+    "cure/fulltext/viewing_1353018023.html": "cache",
+    "cure/fulltext/viewing_1349452552.html": "cache",
+    "cure/pages/by_added/rated_2_5_page_1.html": "cache",
+    "cure/pages/by_added/rated_2_5_page_2.html": "cache",
+    "cure/pages/by_added/rated_2_5_page_3.html": "cache",
+    "cure/pages/by_added/rated_2_5_page_4.html": "cache",
+    "cure/pages/by_added/rated_2_5_page_5.html": "cache",
+    "cure/pages/by_added/rated_2_5_page_7.html": "cache",
+    "cure/fulltext/viewing_1420951248.html": "cache",
+    "cure/fulltext/viewing_1411584439.html": "cache",
+    "cure/fulltext/viewing_1409104696.html": "cache",
+    "cure/fulltext/viewing_1403260285.html": "cache",
+    "cure/fulltext/viewing_1395285147.html": "cache",
+    "cure/fulltext/viewing_1395283858.html": "cache",
+    "cure/pages/by_added/rated_3_page_1.html": "cache",
+    "cure/pages/by_added/rated_3_page_2.html": "cache",
+    "cure/pages/by_added/rated_3_page_3.html": "cache",
+    "cure/pages/by_added/rated_3_page_4.html": "cache",
+    "cure/pages/by_added/rated_3_page_5.html": "cache",
+    "cure/pages/by_added/rated_3_page_6.html": "cache",
+    "cure/pages/by_added/rated_3_page_7.html": "cache",
+    "cure/pages/by_added/rated_3_page_8.html": "cache",
+    "cure/pages/by_added/rated_3_page_14.html": "cache",
+    "cure/pages/by_added/rated_3_page_27.html": "cache",
+    "cure/fulltext/viewing_1436394948.html": "cache",
+    "cure/fulltext/viewing_1431855194.html": "cache",
+    "cure/fulltext/viewing_1405736864.html": "cache",
+    "cure/fulltext/viewing_1428381928.html": "cache",
+    "cure/fulltext/viewing_1427166275.html": "cache",
+    "cure/fulltext/viewing_1385055580.html": "cache",
+    "cure/pages/by_added/rated_3_5_page_1.html": "cache",
+    "cure/pages/by_added/rated_3_5_page_2.html": "cache",
+    "cure/pages/by_added/rated_4_page_1.html": "cache",
+    "cure/pages/by_added/rated_4_page_2.html": "cache",
+    "cure/pages/by_added/rated_4_page_3.html": "cache",
+    "cure/fulltext/viewing_1437519053.html": "cache",
+    "cure/fulltext/viewing_1437452216.html": "cache",
+    "cure/fulltext/viewing_1437342433.html": "cache",
+    "cure/fulltext/viewing_1437124492.html": "cache",
+    "cure/pages/by_added/rated_4_5_page_1.html": "cache",
+    "cure/pages/by_added/rated_4_5_page_2.html": "cache",
+    "cure/pages/by_added/rated_4_5_page_3.html": "cache",
+    "cure/pages/by_added/rated_4_5_page_50.html": "cache",
+    "cure/fulltext/viewing_1436875385.html": "cache",
+    "cure/fulltext/viewing_1436322267.html": "cache",
+    "cure/fulltext/viewing_1436038070.html": "cache",
+    "cure/fulltext/viewing_1411760767.html": "cache",
+    "cure/pages/by_added/rated_5_page_1.html": "cache",
+    "cure/pages/by_added/rated_5_page_2.html": "cache",
+    "cure/pages/by_added/rated_5_page_3.html": "cache",
+    "cure/pages/by_added/rated_5_page_4.html": "cache",
+    "cure/pages/by_added/rated_5_page_57.html": "cache",
+    "cure/fulltext/viewing_1437666140.html": "cache",
+    "cure/fulltext/viewing_1437634944.html": "cache",
+    "cure/fulltext/viewing_1437486421.html": "cache",
+    "cure/fulltext/viewing_1437147529.html": "cache",
+    "cure/fulltext/viewing_1436453513.html": "cache",
+    "cure/fulltext/viewing_1436018893.html": "cache",
+    "cure/fulltext/viewing_1417510961.html": "cache",
+    "cure/film_page.html": "cache"
+  },
+  "buckets": [
+    {
+      "bucket": "negativas",
+      "alvo": 40,
+      "modo": "completo",
+      "estado_piso": "completa",
+      "n_validas": 40,
+      "share_real": 2,
+      "composicao_alvo": {
+        "0.5": 3,
+        "1.0": 6,
+        "1.5": 6,
+        "2.0": 25
+      },
+      "composicao_atingida": {
+        "0.5": 3,
+        "1.0": 6,
+        "1.5": 6,
+        "2.0": 25
+      },
+      "cascata_por_degrau": {
+        "150": 40
+      },
+      "deficit_redistribuido": 0,
+      "distribuicao_pagina_origem": {
+        "n": 40,
+        "min": 1,
+        "max": 12,
+        "p5": 1,
+        "p50": 3,
+        "p95": 10,
+        "fracao_profunda": 0.3
+      },
+      "niveis": [
+        {
+          "nivel": 0.5,
+          "n_validas": 3,
+          "n_alvo": 3,
+          "n_brutas": 12,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 1,
+          "n_descartadas_curtas": 5,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 1,
+          "motivos_descarte": {
+            "truncada_sem_texto": 1,
+            "spoiler": 1,
+            "abaixo_min_chars": 5,
+            "excedente_cota": 2,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 1
+        },
+        {
+          "nivel": 1.0,
+          "n_validas": 6,
+          "n_alvo": 6,
+          "n_brutas": 48,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 3,
+          "n_descartadas_curtas": 34,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 0,
+          "motivos_descarte": {
+            "truncada_sem_texto": 0,
+            "spoiler": 3,
+            "abaixo_min_chars": 34,
+            "excedente_cota": 5,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 2
+        },
+        {
+          "nivel": 1.5,
+          "n_validas": 6,
+          "n_alvo": 6,
+          "n_brutas": 24,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 1,
+          "n_descartadas_curtas": 12,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 0,
+          "motivos_descarte": {
+            "truncada_sem_texto": 0,
+            "spoiler": 1,
+            "abaixo_min_chars": 12,
+            "excedente_cota": 5,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 2
+        },
+        {
+          "nivel": 2.0,
+          "n_validas": 25,
+          "n_alvo": 25,
+          "n_brutas": 130,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 2,
+          "n_descartadas_curtas": 86,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 2,
+          "motivos_descarte": {
+            "truncada_sem_texto": 2,
+            "spoiler": 2,
+            "abaixo_min_chars": 86,
+            "excedente_cota": 15,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 10
+        }
+      ],
+      "temas": [
+        {
+          "tema": "Ritmo extremamente lento",
+          "mencoes_aproximadas": 20,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "O filme se arrasta de tal forma que duas horas parecem quatro, com cenas longas que não acrescentam nada e fazem o espectador perder a atenção.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Roteiro confuso e sem respostas",
+          "mencoes_aproximadas": 15,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "A trama é tão cheia de mistérios sem explicação que ao final o espectador não entende o que realmente aconteceu, e a sensação é de que o filme foi feito para parecer profundo sem de fato ser.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Expectativa frustrada",
+          "mencoes_aproximadas": 12,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "Muitos foram assistir influenciados pela alta nota e se decepcionaram, achando o filme supervalorizado e sem a genialidade que diziam ter.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Antagonista irritante",
+          "mencoes_aproximadas": 10,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "O personagem misterioso que faz perguntas existenciais se torna tão repetitivo e irritante que dá vontade de interrompê-lo de qualquer jeito.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Cinematografia elogiada, mas insuficiente",
+          "mencoes_aproximadas": 10,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "Embora a fotografia e o design de produção sejam belos e bem compostos, isso não compensa a narrativa fraca e o ritmo arrastado.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Atuações e personagens pouco cativantes",
+          "mencoes_aproximadas": 8,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "Os atores parecem apáticos e não geram empatia, e os personagens são tão distantes que ninguém se importa com o destino deles.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        }
+      ],
+      "observacao_geral": "As reviews negativas criticam principalmente o ritmo arrastado, a falta de respostas do roteiro e a decepção com a alta expectativa criada pela fama do filme. Alguns reconhecem qualidades técnicas, mas consideram o resultado pretensioso e entediante.",
+      "idioma_invalido": false,
+      "escopo_suspeito": false
+    },
+    {
+      "bucket": "medianas",
+      "alvo": 40,
+      "modo": "completo",
+      "estado_piso": "completa",
+      "n_validas": 40,
+      "share_real": 8,
+      "composicao_alvo": {
+        "2.5": 8,
+        "3.0": 32
+      },
+      "composicao_atingida": {
+        "2.5": 8,
+        "3.0": 32
+      },
+      "cascata_por_degrau": {
+        "150": 40
+      },
+      "deficit_redistribuido": 0,
+      "distribuicao_pagina_origem": {
+        "n": 40,
+        "min": 1,
+        "max": 14,
+        "p5": 1,
+        "p50": 5,
+        "p95": 12,
+        "fracao_profunda": 0.35
+      },
+      "niveis": [
+        {
+          "nivel": 2.5,
+          "n_validas": 8,
+          "n_alvo": 8,
+          "n_brutas": 91,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 7,
+          "n_descartadas_curtas": 57,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 1,
+          "motivos_descarte": {
+            "truncada_sem_texto": 1,
+            "spoiler": 7,
+            "abaixo_min_chars": 57,
+            "excedente_cota": 18,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 6
+        },
+        {
+          "nivel": 3.0,
+          "n_validas": 32,
+          "n_alvo": 32,
+          "n_brutas": 155,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 6,
+          "n_descartadas_curtas": 101,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 1,
+          "motivos_descarte": {
+            "truncada_sem_texto": 1,
+            "spoiler": 6,
+            "abaixo_min_chars": 101,
+            "excedente_cota": 15,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 10
+        }
+      ],
+      "temas": [
+        {
+          "tema": "Ritmo lento e tédio",
+          "mencoes_aproximadas": 17,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "O filme é excessivamente lento, com longos períodos sem eventos significativos, o que fez com que a atenção se dispersasse e o tédio predominasse durante a maior parte da projeção.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Qualidade técnica e estética reconhecida",
+          "mencoes_aproximadas": 15,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "A fotografia é primorosa, com composições que lembram quadros, e as atuações são competentes, evidenciando o cuidado visual e a direção de arte do filme.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Narrativa confusa e ambígua",
+          "mencoes_aproximadas": 13,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "A trama deixa muitas questões em aberto e depende de interpretações subjetivas, o que dificulta a compreensão completa e faz com que o espectador se sinta perdido em meio a tantas pistas soltas.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Conceito interessante com execução limitada",
+          "mencoes_aproximadas": 10,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "A premissa central é intrigante e promissora, mas o desenvolvimento ao longo da trama não conseguiu aproveitar todo o potencial, deixando uma impressão de que faltou profundidade.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Falta de conexão emocional",
+          "mencoes_aproximadas": 8,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "Apesar do esforço técnico, não houve envolvimento afetivo com os personagens nem com a história, o que impediu uma imersão mais profunda na narrativa.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Expectativas elevadas não correspondidas",
+          "mencoes_aproximadas": 7,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "Por causa da enorme repercussão e das recomendações entusiasmadas, a experiência ficou aquém do esperado, gerando uma sensação de decepção em relação ao que foi prometido.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        }
+      ],
+      "observacao_geral": "As reviews medianas apontam um filme tecnicamente bem feito, com direção de arte e atuações elogiadas, mas que sofre com ritmo excessivamente lento e uma narrativa ambígua que frustra a compreensão. O grupo destaca a desconexão emocional e a sensação de que as altas expectativas não foram atendidas, ainda que muitos reconheçam a proposta ousada.",
+      "idioma_invalido": false,
+      "escopo_suspeito": false
+    },
+    {
+      "bucket": "positivas",
+      "alvo": 40,
+      "modo": "completo",
+      "estado_piso": "completa",
+      "n_validas": 40,
+      "share_real": 90,
+      "composicao_alvo": {
+        "3.5": 5,
+        "4.0": 13,
+        "4.5": 10,
+        "5.0": 12
+      },
+      "composicao_atingida": {
+        "3.5": 5,
+        "4.0": 13,
+        "4.5": 10,
+        "5.0": 12
+      },
+      "cascata_por_degrau": {
+        "150": 40
+      },
+      "deficit_redistribuido": 0,
+      "distribuicao_pagina_origem": {
+        "n": 40,
+        "min": 1,
+        "max": 57,
+        "p5": 1,
+        "p50": 3,
+        "p95": 57,
+        "fracao_profunda": 0.325
+      },
+      "niveis": [
+        {
+          "nivel": 3.5,
+          "n_validas": 5,
+          "n_alvo": 5,
+          "n_brutas": 24,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 0,
+          "n_descartadas_curtas": 15,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 0,
+          "motivos_descarte": {
+            "truncada_sem_texto": 0,
+            "spoiler": 0,
+            "abaixo_min_chars": 15,
+            "excedente_cota": 4,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 2
+        },
+        {
+          "nivel": 4.0,
+          "n_validas": 13,
+          "n_alvo": 13,
+          "n_brutas": 74,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 5,
+          "n_descartadas_curtas": 40,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 2,
+          "motivos_descarte": {
+            "truncada_sem_texto": 2,
+            "spoiler": 5,
+            "abaixo_min_chars": 40,
+            "excedente_cota": 14,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 5
+        },
+        {
+          "nivel": 4.5,
+          "n_validas": 10,
+          "n_alvo": 10,
+          "n_brutas": 60,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 4,
+          "n_descartadas_curtas": 37,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 0,
+          "motivos_descarte": {
+            "truncada_sem_texto": 0,
+            "spoiler": 4,
+            "abaixo_min_chars": 37,
+            "excedente_cota": 9,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 4
+        },
+        {
+          "nivel": 5.0,
+          "n_validas": 12,
+          "n_alvo": 12,
+          "n_brutas": 60,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 2,
+          "n_descartadas_curtas": 33,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 1,
+          "motivos_descarte": {
+            "truncada_sem_texto": 1,
+            "spoiler": 2,
+            "abaixo_min_chars": 33,
+            "excedente_cota": 12,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 5
+        }
+      ],
+      "temas": [
+        {
+          "tema": "Atmosfera e suspense",
+          "mencoes_aproximadas": 14,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "Os fãs destacam que o clima de inquietação é construído de forma sutil, com silêncios e sons ambientes, criando uma sensação de desconforto que permanece após a sessão.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Atuações e personagens",
+          "mencoes_aproximadas": 10,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "Elogiam a performance dos atores, especialmente a do protagonista e a do antagonista, cuja postura calma e perturbadora contribui para o tom ameaçador do filme.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Trama psicológica e hipnose",
+          "mencoes_aproximadas": 9,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "Esse grupo valoriza a abordagem da hipnose como ferramenta para explorar a mente humana e a natureza do mal, gerando interpretações e reflexões profundas.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Direção e fotografia",
+          "mencoes_aproximadas": 8,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "Os planos longos e a composição cuidadosa dos enquadramentos são apontados como elementos que intensificam a imersão e o desconforto.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Originalidade e influência",
+          "mencoes_aproximadas": 7,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "Muitos notam que a obra se destaca dentro do gênero policial e de terror, servindo de referência para outros filmes, o que reforça sua importância.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Complexidade e rewatch",
+          "mencoes_aproximadas": 6,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "Há consenso de que a narrativa é densa e cheia de camadas, exigindo mais de uma assistida para ser completamente absorvida.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        }
+      ],
+      "observacao_geral": "As reviews positivas celebram principalmente a atmosfera opressiva, as atuações marcantes e a abordagem inovadora da hipnose e da psique humana, ainda que muitos admitam que a narrativa seja desafiadora e recompense revisões.",
+      "idioma_invalido": false,
+      "escopo_suspeito": false
+    }
+  ],
+  "narrativa": "Lançado em 1997 e dirigido por Kiyoshi Kurosawa, o longa-metragem A Cura transita entre o suspense, o crime e o terror ao acompanhar a investigação de misteriosos assassinatos marcados por uma incisão em cruz nos corpos das vítimas. Sem pistas conclusivas em seus interrogatórios, um detetive se debruça sobre o mistério quando um rapaz de comportamento singular é detido nas proximidades de um crime recente.\n\nA obra se desenvolve a partir de um ritmo compassado e de uma cadência paciente, apostando na lentidão para estruturar seus momentos. O tom é marcado pelo suspense psicológico contínuo e por uma atmosfera densa, construída sem sobressaltos e apoiada em composições visuais rigorosas.\n\nNa grande maioria das notas (~90%), boa parte exalta a atmosfera e a capacidade da produção de sustentar o suspense. Uma parte salienta a atuação do elenco e a construção das personagens, enquanto alguns enfatizam o interesse em torno da trama psicológica e da hipnose.\n\nSob o olhar de quem compõe uma fração mínima das notas (~8%), muitos sentem que o ritmo lento prejudica a experiência e gera tédio, ainda que vários enalteçam a qualidade técnica e a estética da produção. Além disso, uma parcela expressiva classifica o desenvolvimento narrativo como confuso e ambíguo.\n\nNa visão representada por uma fração mínima das notas (~2%), um número considerável rejeita o ritmo extremamente lento da projeção. Da mesma forma, boa parte se incomoda com um roteiro tido como confuso e desprovido de respostas, enquanto vários expressam decepção diante de expectativas que não foram correspondidas.",
+  "verificacao_narrativa": {
+    "quantificador_fora_de_faixa": [],
+    "quantificador_repetido": [],
+    "paragrafos": {
+      "n_paragrafos": 5,
+      "minimo": 3,
+      "insuficientes": false,
+      "longos": []
+    },
+    "n_paragrafos": 5,
+    "paragrafos_insuficientes": false,
+    "paragrafos_longos": [],
+    "grupos_sem_paragrafo_proprio": [],
+    "formato_invalido": false,
+    "numeros_inventados": [],
+    "rotulos_faltando": [],
+    "ordem_incorreta": false,
+    "vocabulario_peso": false,
+    "resenha_speak": [],
+    "n_resenha_speak": 0,
+    "n_flags": 0
+  },
+  "narrativa_selecao": {
+    "provider": "gemini",
+    "modelo": "gemini-3.7-flash",
+    "n_candidatos": 3,
+    "n_chamadas": 3,
+    "indice_escolhido": 2,
+    "motivo": "melhor_entre_limpos",
+    "criterio_decisivo": "unico",
+    "candidatos": [
+      {
+        "indice": 0,
+        "n_flags": 1,
+        "cliches": 0,
+        "repeticao_max": 2,
+        "ritmo": 12,
+        "cobertura": 1.0,
+        "eliminado": true
+      },
+      {
+        "indice": 1,
+        "n_flags": 1,
+        "cliches": 0,
+        "repeticao_max": 2,
+        "ritmo": 5,
+        "cobertura": 1.0,
+        "eliminado": true
+      },
+      {
+        "indice": 2,
+        "n_flags": 0,
+        "cliches": 0,
+        "repeticao_max": 2,
+        "ritmo": 7,
+        "cobertura": 1.0,
+        "eliminado": false
+      }
+    ],
+    "retry": null,
+    "uso": {
+      "prompt_tokens": 9456,
+      "completion_tokens": 1076,
+      "cache_hit_tokens": 0,
+      "cache_miss_tokens": 9456
+    },
+    "latencia_s": 27.18
+  }
+}

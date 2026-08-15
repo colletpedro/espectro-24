@@ -38,14 +38,15 @@ def _escreve_json(out_dir, slug="cure"):
 
 @pytest.fixture
 def _iso_env(monkeypatch):
-    # isola do .env real e fixa uma chave fake. v1.8.0: DEEPSEEK_API_KEY,
-    # não mais GEMINI_API_KEY — o provider default do CLI (sem --provider)
-    # passou a ser "deepseek" (DEFAULT_PROVIDER, config.py); narrate_output
-    # é mockado nestes testes, então só a PRESENÇA da chave do provider
-    # resolvido importa, não qual provider é.
+    # isola do .env real e fixa chaves fake. v1.9.11: AS DUAS, porque sem
+    # `--provider` cada estágio usa o seu (`PROVIDER_POR_ESTAGIO`) —
+    # classificação em DeepSeek, narrativa em Gemini — e o CLI agora checa a
+    # chave de CADA estágio que vai rodar, antes da coleta. Até a v1.9.10
+    # bastava a do DeepSeek porque o default do argparse forçava tudo nele
+    # (o defeito que esta versão corrige).
     monkeypatch.setattr(cli, "load_dotenv", lambda *a, **k: None)
     monkeypatch.setenv("DEEPSEEK_API_KEY", "fake-key")
-    monkeypatch.delenv("GEMINI_API_KEY", raising=False)
+    monkeypatch.setenv("GEMINI_API_KEY", "fake-key")
     monkeypatch.delenv("ANTHROPIC_API_KEY", raising=False)
 
 

@@ -1,0 +1,886 @@
+{
+  "slug": "the-invite-2026",
+  "data_coleta": "2026-08-15T21:36:31.770488+00:00",
+  "spec_version": "1.9.0",
+  "total_reviews_observadas": 513,
+  "reviews_url": "https://letterboxd.com/film/the-invite-2026/reviews/",
+  "ficha": {
+    "titulo": "O Convite",
+    "sinopse_oficial": "O casamento de Joe e Angela está por um fio. Quando eles convidam seus enigmáticos vizinhos do andar de cima para um jantar, a noite toma rumos inesperados.",
+    "sinopse_fallback_en": false,
+    "generos": [
+      "Drama",
+      "Comédia"
+    ],
+    "duracao_min": 107,
+    "diretor": "Olivia Wilde",
+    "diretor_transliterado": false,
+    "ano": 2026,
+    "fonte": "tmdb",
+    "ano_fonte": "slug"
+  },
+  "distribuicao": {
+    "n_notas_total": 338448,
+    "por_nivel": {
+      "0.5": 503,
+      "1.0": 909,
+      "1.5": 926,
+      "2.0": 3169,
+      "2.5": 4999,
+      "3.0": 18554,
+      "3.5": 41311,
+      "4.0": 125276,
+      "4.5": 86297,
+      "5.0": 56504
+    },
+    "por_bucket": {
+      "negativas": 2,
+      "medianas": 7,
+      "positivas": 91
+    },
+    "fonte": "letterboxd_histograma"
+  },
+  "coleta": {
+    "slug": "the-invite-2026",
+    "coletado_em": "2026-08-15T21:36:09.104460+00:00",
+    "versao_coletor": "1.9.6",
+    "ordenacao_usada": "by/added",
+    "histograma_bruto": {
+      "0.5": 503,
+      "1.0": 909,
+      "1.5": 926,
+      "2.0": 3169,
+      "2.5": 4999,
+      "3.0": 18554,
+      "3.5": 41311,
+      "4.0": 125276,
+      "4.5": 86297,
+      "5.0": 56504
+    },
+    "orcamento_paginas_por_nivel": {
+      "0.5": 1,
+      "1.0": 3,
+      "1.5": 3,
+      "2.0": 9,
+      "2.5": 6,
+      "3.0": 10,
+      "3.5": 2,
+      "4.0": 7,
+      "4.5": 4,
+      "5.0": 3
+    },
+    "paginas_gastas_por_nivel": {
+      "0.5": 1,
+      "1.0": 2,
+      "1.5": 2,
+      "2.0": 7,
+      "2.5": 6,
+      "3.0": 10,
+      "3.5": 2,
+      "4.0": 7,
+      "4.5": 4,
+      "5.0": 3
+    },
+    "paradas_por_limite": [
+      "0.5",
+      "1.0",
+      "1.5",
+      "2.0",
+      "2.5",
+      "3.0",
+      "3.5",
+      "4.0",
+      "4.5",
+      "5.0"
+    ],
+    "contagem_bruta_por_nivel": {
+      "0.5": 12,
+      "1.0": 24,
+      "1.5": 24,
+      "2.0": 84,
+      "2.5": 72,
+      "3.0": 117,
+      "3.5": 24,
+      "4.0": 72,
+      "4.5": 48,
+      "5.0": 36
+    },
+    "contagem_estimada_valida_por_nivel": {
+      "0.5": 2,
+      "1.0": 7,
+      "1.5": 4,
+      "2.0": 19,
+      "2.5": 23,
+      "3.0": 28,
+      "3.5": 10,
+      "4.0": 17,
+      "4.5": 15,
+      "5.0": 10
+    },
+    "motivo_parada_por_nivel": {
+      "0.5": "orcamento_esgotado",
+      "1.0": "orcamento_esgotado",
+      "1.5": "orcamento_esgotado",
+      "2.0": "orcamento_esgotado",
+      "2.5": "orcamento_esgotado",
+      "3.0": "orcamento_esgotado",
+      "3.5": "orcamento_esgotado",
+      "4.0": "orcamento_esgotado",
+      "4.5": "orcamento_esgotado",
+      "5.0": "orcamento_esgotado"
+    },
+    "paginas_base_por_nivel": {
+      "0.5": 1,
+      "1.0": 2,
+      "1.5": 2,
+      "2.0": 7,
+      "2.5": 6,
+      "3.0": 10,
+      "3.5": 2,
+      "4.0": 7,
+      "4.5": 4,
+      "5.0": 3
+    },
+    "paginas_extensao_por_nivel": {
+      "0.5": 0,
+      "1.0": 0,
+      "1.5": 0,
+      "2.0": 0,
+      "2.5": 0,
+      "3.0": 0,
+      "3.5": 0,
+      "4.0": 0,
+      "4.5": 0,
+      "5.0": 0
+    },
+    "extensao_por_bucket": {
+      "negativas": {
+        "paginas_base": 12,
+        "paginas_extensao": 0,
+        "extras_por_nivel": {},
+        "motivo_parada": "meta_atingida",
+        "n_validas_pos_base": 90,
+        "n_validas_pos_extensao": 90,
+        "meta": 50
+      },
+      "medianas": {
+        "paginas_base": 16,
+        "paginas_extensao": 0,
+        "extras_por_nivel": {},
+        "motivo_parada": "meta_atingida",
+        "n_validas_pos_base": 90,
+        "n_validas_pos_extensao": 90,
+        "meta": 50
+      },
+      "positivas": {
+        "paginas_base": 16,
+        "paginas_extensao": 0,
+        "extras_por_nivel": {},
+        "motivo_parada": "meta_atingida",
+        "n_validas_pos_base": 97,
+        "n_validas_pos_extensao": 97,
+        "meta": 50
+      }
+    },
+    "profundidade_sondagem": {
+      "nivel_sondado": 4.0,
+      "profundidade": 256,
+      "exata": false,
+      "requisicoes": 4,
+      "motivo": "teto_plataforma"
+    },
+    "profundidade_estimada_por_nivel": {
+      "0.5": 1,
+      "1.0": 2,
+      "1.5": 2,
+      "2.0": 6,
+      "2.5": 10,
+      "3.0": 38,
+      "3.5": 84,
+      "4.0": 256,
+      "4.5": 176,
+      "5.0": 115
+    },
+    "janela_temporal": {
+      "total": {
+        "n": 924,
+        "min": "2025-11-24",
+        "max": "2026-08-15",
+        "p5": "2026-01-25",
+        "p50": "2026-08-05",
+        "p95": "2026-08-07"
+      },
+      "por_bucket": {
+        "negativas": {
+          "n": 309,
+          "min": "2026-02-07",
+          "max": "2026-08-07",
+          "p5": "2026-06-18",
+          "p50": "2026-08-04",
+          "p95": "2026-08-06"
+        },
+        "medianas": {
+          "n": 285,
+          "min": "2025-11-24",
+          "max": "2026-08-15",
+          "p5": "2026-02-01",
+          "p50": "2026-08-06",
+          "p95": "2026-08-15"
+        },
+        "positivas": {
+          "n": 330,
+          "min": "2026-01-24",
+          "max": "2026-08-15",
+          "p5": "2026-01-24",
+          "p50": "2026-08-06",
+          "p95": "2026-08-15"
+        }
+      }
+    },
+    "dias_por_100_paginas": {
+      "n_paginas": 17,
+      "pagina_min": 1,
+      "pagina_max": 128,
+      "dias": 1,
+      "dias_por_100_paginas": 0.7874015748031497,
+      "paginas_para_1_ano": 46355
+    },
+    "n_reviews_bruto": 924
+  },
+  "origem_paginas": {
+    "_histograma/the-invite-2026.html": "cache",
+    "the-invite-2026/pages/by_added/rated_4_page_4.html": "cache",
+    "the-invite-2026/pages/by_added/rated_4_page_16.html": "cache",
+    "the-invite-2026/pages/by_added/rated_4_page_64.html": "cache",
+    "the-invite-2026/pages/by_added/rated_4_page_256.html": "cache",
+    "the-invite-2026/pages/by_added/rated_0_5_page_1.html": "cache",
+    "the-invite-2026/fulltext/viewing_1436462295.html": "cache",
+    "the-invite-2026/pages/by_added/rated_1_page_1.html": "cache",
+    "the-invite-2026/pages/by_added/rated_1_page_2.html": "cache",
+    "the-invite-2026/fulltext/viewing_1435311976.html": "cache",
+    "the-invite-2026/fulltext/viewing_1434274775.html": "cache",
+    "the-invite-2026/pages/by_added/rated_1_5_page_1.html": "cache",
+    "the-invite-2026/pages/by_added/rated_1_5_page_2.html": "cache",
+    "the-invite-2026/fulltext/viewing_1433307734.html": "cache",
+    "the-invite-2026/pages/by_added/rated_2_page_1.html": "cache",
+    "the-invite-2026/pages/by_added/rated_2_page_2.html": "cache",
+    "the-invite-2026/pages/by_added/rated_2_page_3.html": "cache",
+    "the-invite-2026/pages/by_added/rated_2_page_4.html": "cache",
+    "the-invite-2026/pages/by_added/rated_2_page_5.html": "cache",
+    "the-invite-2026/pages/by_added/rated_2_page_6.html": "cache",
+    "the-invite-2026/pages/by_added/rated_2_page_7.html": "cache",
+    "the-invite-2026/fulltext/viewing_1436629771.html": "cache",
+    "the-invite-2026/fulltext/viewing_1436208727.html": "cache",
+    "the-invite-2026/pages/by_added/rated_2_5_page_1.html": "cache",
+    "the-invite-2026/pages/by_added/rated_2_5_page_2.html": "cache",
+    "the-invite-2026/pages/by_added/rated_2_5_page_3.html": "cache",
+    "the-invite-2026/pages/by_added/rated_2_5_page_4.html": "cache",
+    "the-invite-2026/pages/by_added/rated_2_5_page_5.html": "network",
+    "the-invite-2026/pages/by_added/rated_2_5_page_8.html": "cache",
+    "the-invite-2026/fulltext/viewing_1437060738.html": "cache",
+    "the-invite-2026/fulltext/viewing_1436799190.html": "cache",
+    "the-invite-2026/fulltext/viewing_1435840912.html": "cache",
+    "the-invite-2026/fulltext/viewing_1435646529.html": "cache",
+    "the-invite-2026/fulltext/viewing_1451639281.html": "network",
+    "the-invite-2026/fulltext/viewing_1434941237.html": "cache",
+    "the-invite-2026/pages/by_added/rated_3_page_1.html": "cache",
+    "the-invite-2026/pages/by_added/rated_3_page_2.html": "cache",
+    "the-invite-2026/pages/by_added/rated_3_page_3.html": "cache",
+    "the-invite-2026/pages/by_added/rated_3_page_4.html": "cache",
+    "the-invite-2026/pages/by_added/rated_3_page_5.html": "cache",
+    "the-invite-2026/pages/by_added/rated_3_page_6.html": "cache",
+    "the-invite-2026/pages/by_added/rated_3_page_7.html": "cache",
+    "the-invite-2026/pages/by_added/rated_3_page_8.html": "cache",
+    "the-invite-2026/pages/by_added/rated_3_page_10.html": "cache",
+    "the-invite-2026/pages/by_added/rated_3_page_19.html": "network",
+    "the-invite-2026/fulltext/viewing_1436803746.html": "cache",
+    "the-invite-2026/fulltext/viewing_1436712233.html": "cache",
+    "the-invite-2026/fulltext/viewing_1436253606.html": "cache",
+    "the-invite-2026/fulltext/viewing_1451430317.html": "network",
+    "the-invite-2026/pages/by_added/rated_3_5_page_1.html": "cache",
+    "the-invite-2026/pages/by_added/rated_3_5_page_2.html": "cache",
+    "the-invite-2026/fulltext/viewing_1437691122.html": "cache",
+    "the-invite-2026/fulltext/viewing_1437464334.html": "cache",
+    "the-invite-2026/fulltext/viewing_1437644113.html": "cache",
+    "the-invite-2026/pages/by_added/rated_4_page_1.html": "cache",
+    "the-invite-2026/pages/by_added/rated_4_page_2.html": "cache",
+    "the-invite-2026/pages/by_added/rated_4_page_3.html": "cache",
+    "the-invite-2026/pages/by_added/rated_4_page_5.html": "cache",
+    "the-invite-2026/pages/by_added/rated_4_page_128.html": "cache",
+    "the-invite-2026/fulltext/viewing_1437699666.html": "cache",
+    "the-invite-2026/fulltext/viewing_1437697827.html": "cache",
+    "the-invite-2026/fulltext/viewing_1437691881.html": "cache",
+    "the-invite-2026/fulltext/viewing_1437665158.html": "cache",
+    "the-invite-2026/fulltext/viewing_1437664784.html": "cache",
+    "the-invite-2026/fulltext/viewing_1436132700.html": "network",
+    "the-invite-2026/fulltext/viewing_1434681947.html": "network",
+    "the-invite-2026/pages/by_added/rated_4_5_page_1.html": "cache",
+    "the-invite-2026/pages/by_added/rated_4_5_page_2.html": "cache",
+    "the-invite-2026/pages/by_added/rated_4_5_page_3.html": "cache",
+    "the-invite-2026/pages/by_added/rated_4_5_page_44.html": "network",
+    "the-invite-2026/fulltext/viewing_1437655605.html": "cache",
+    "the-invite-2026/pages/by_added/rated_5_page_1.html": "cache",
+    "the-invite-2026/pages/by_added/rated_5_page_2.html": "cache",
+    "the-invite-2026/pages/by_added/rated_5_page_29.html": "network",
+    "the-invite-2026/fulltext/viewing_1437650267.html": "cache"
+  },
+  "buckets": [
+    {
+      "bucket": "negativas",
+      "alvo": 40,
+      "modo": "completo",
+      "estado_piso": "completa",
+      "n_validas": 40,
+      "share_real": 2,
+      "composicao_alvo": {
+        "0.5": 4,
+        "1.0": 6,
+        "1.5": 7,
+        "2.0": 23
+      },
+      "composicao_atingida": {
+        "0.5": 4,
+        "1.0": 6,
+        "1.5": 7,
+        "2.0": 23
+      },
+      "cascata_por_degrau": {
+        "150": 40
+      },
+      "deficit_redistribuido": 0,
+      "distribuicao_pagina_origem": {
+        "n": 40,
+        "min": 1,
+        "max": 11,
+        "p5": 1,
+        "p50": 2,
+        "p95": 9,
+        "fracao_profunda": 0.375
+      },
+      "niveis": [
+        {
+          "nivel": 0.5,
+          "n_validas": 4,
+          "n_alvo": 4,
+          "n_brutas": 36,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 2,
+          "n_descartadas_curtas": 22,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 1,
+          "motivos_descarte": {
+            "truncada_sem_texto": 1,
+            "spoiler": 2,
+            "abaixo_min_chars": 22,
+            "excedente_cota": 7,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 1
+        },
+        {
+          "nivel": 1.0,
+          "n_validas": 6,
+          "n_alvo": 6,
+          "n_brutas": 57,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 2,
+          "n_descartadas_curtas": 33,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 0,
+          "motivos_descarte": {
+            "truncada_sem_texto": 0,
+            "spoiler": 2,
+            "abaixo_min_chars": 33,
+            "excedente_cota": 16,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 2
+        },
+        {
+          "nivel": 1.5,
+          "n_validas": 7,
+          "n_alvo": 7,
+          "n_brutas": 60,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 2,
+          "n_descartadas_curtas": 38,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 1,
+          "motivos_descarte": {
+            "truncada_sem_texto": 1,
+            "spoiler": 2,
+            "abaixo_min_chars": 38,
+            "excedente_cota": 12,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 2
+        },
+        {
+          "nivel": 2.0,
+          "n_validas": 23,
+          "n_alvo": 23,
+          "n_brutas": 156,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 3,
+          "n_descartadas_curtas": 115,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 0,
+          "motivos_descarte": {
+            "truncada_sem_texto": 0,
+            "spoiler": 3,
+            "abaixo_min_chars": 115,
+            "excedente_cota": 15,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 7
+        }
+      ],
+      "temas": [
+        {
+          "tema": "Atuação de Olivia Wilde criticada",
+          "mencoes_aproximadas": 10,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "Muitos espectadores consideram a atuação de Olivia Wilde exagerada e pouco natural, com expressões faciais forçadas e maneirismos que destoam do elenco.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Roteiro previsível e sem profundidade",
+          "mencoes_aproximadas": 9,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "O enredo é considerado raso e previsível, sem desenvolvimento dos personagens ou reviravoltas interessantes, deixando a história monótona.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Humor falho e falta de comédia eficaz",
+          "mencoes_aproximadas": 8,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "As piadas não funcionam e o tom cômico é forçado, resultando em poucos risos e muitas cenas constrangedoras.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Abordagem superficial de temas sexuais",
+          "mencoes_aproximadas": 7,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "O filme trata de liberdade sexual e não-monogamia de maneira rasa e até mesmo incômoda, sem explorar de fato a eroticidade ou apresentar uma visão crítica.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Ritmo lento e tédio",
+          "mencoes_aproximadas": 7,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "A narrativa se arrasta, com longos diálogos e pouca ação, fazendo o espectador sentir tédio e impaciência.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Trilha sonora irritante",
+          "mencoes_aproximadas": 4,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "A trilha sonora é intrusiva e repetitiva, contribuindo para a sensação de artificialidade e desconforto.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        }
+      ],
+      "observacao_geral": "As reviews negativas apontam, em sua maioria, para uma atuação exagerada de Olivia Wilde, um roteiro previsível e sem profundidade, e um humor que não funciona. O filme também é criticado por abordar temas sexuais de forma superficial e por ter um ritmo lento e entediante.",
+      "idioma_invalido": false,
+      "escopo_suspeito": false
+    },
+    {
+      "bucket": "medianas",
+      "alvo": 40,
+      "modo": "completo",
+      "estado_piso": "completa",
+      "n_validas": 40,
+      "share_real": 7,
+      "composicao_alvo": {
+        "2.5": 8,
+        "3.0": 32
+      },
+      "composicao_atingida": {
+        "2.5": 8,
+        "3.0": 32
+      },
+      "cascata_por_degrau": {
+        "150": 40
+      },
+      "deficit_redistribuido": 0,
+      "distribuicao_pagina_origem": {
+        "n": 40,
+        "min": 1,
+        "max": 19,
+        "p5": 1,
+        "p50": 5,
+        "p95": 19,
+        "fracao_profunda": 0.325
+      },
+      "niveis": [
+        {
+          "nivel": 2.5,
+          "n_validas": 8,
+          "n_alvo": 8,
+          "n_brutas": 96,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 0,
+          "n_descartadas_curtas": 65,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 0,
+          "motivos_descarte": {
+            "truncada_sem_texto": 0,
+            "spoiler": 0,
+            "abaixo_min_chars": 65,
+            "excedente_cota": 23,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 6
+        },
+        {
+          "nivel": 3.0,
+          "n_validas": 32,
+          "n_alvo": 32,
+          "n_brutas": 189,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 5,
+          "n_descartadas_curtas": 122,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 3,
+          "motivos_descarte": {
+            "truncada_sem_texto": 3,
+            "spoiler": 5,
+            "abaixo_min_chars": 122,
+            "excedente_cota": 27,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 10
+        }
+      ],
+      "temas": [
+        {
+          "tema": "Desempenho do elenco",
+          "mencoes_aproximadas": 20,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "Vários espectadores elogiaram as atuações, especialmente a de Penélope Cruz e Edward Norton, considerando-as convincentes e carismáticas, enquanto alguns acharam que Seth Rogen fez essencialmente seu papel de sempre.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Roteiro e diálogos",
+          "mencoes_aproximadas": 15,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "Opiniões divididas sobre o texto: uns acharam os diálogos afiados e bem escritos, outros consideraram o roteiro um tanto previsível, com excesso de clichês e dependência de improvisos.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Estrutura de peça de um só cenário",
+          "mencoes_aproximadas": 12,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "A ambientação em um único apartamento com apenas quatro atores foi elogiada por criar uma dinâmica tensa e intimista, remetendo a uma peça de teatro, embora alguns achassem que isso limitava a variedade visual.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Tom e ritmo",
+          "mencoes_aproximadas": 10,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "O filme alterna entre comédia e drama de forma irregular: enquanto alguns apreciaram os momentos de humor e a tensão crescente, outros sentiram que o tom pendia demais para o desconfortável ou que o início era arrastado.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Mensagem e temas sobre relacionamentos",
+          "mencoes_aproximadas": 8,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "O filme aborda questões profundas sobre comunicação, desejo e monogamia, o que rendeu reflexões interessantes, mas alguns consideraram a abordagem um tanto superficial ou clichê.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Comparação com outras obras",
+          "mencoes_aproximadas": 5,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "Vários espectadores notaram semelhanças com filmes como Quem Tem Medo de Virginia Woolf e Carnage, tanto na estrutura quanto nos temas, o que gerou comparações nem sempre favoráveis.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        }
+      ],
+      "observacao_geral": "As reviews medianas apontam para um filme tecnicamente competente e com boas atuações, mas que divide opiniões quanto ao roteiro e à execução. O grupo destaca a ambientação de peça de um só cenário e o desconforto gerado, embora alguns tenham se sentido entediados ou incomodados com o tom irregular.",
+      "idioma_invalido": false,
+      "escopo_suspeito": false
+    },
+    {
+      "bucket": "positivas",
+      "alvo": 40,
+      "modo": "completo",
+      "estado_piso": "completa",
+      "n_validas": 40,
+      "share_real": 91,
+      "composicao_alvo": {
+        "3.5": 6,
+        "4.0": 16,
+        "4.5": 11,
+        "5.0": 7
+      },
+      "composicao_atingida": {
+        "3.5": 6,
+        "4.0": 16,
+        "4.5": 11,
+        "5.0": 7
+      },
+      "cascata_por_degrau": {
+        "150": 40
+      },
+      "deficit_redistribuido": 0,
+      "distribuicao_pagina_origem": {
+        "n": 40,
+        "min": 1,
+        "max": 64,
+        "p5": 1,
+        "p50": 2,
+        "p95": 64,
+        "fracao_profunda": 0.325
+      },
+      "niveis": [
+        {
+          "nivel": 3.5,
+          "n_validas": 6,
+          "n_alvo": 6,
+          "n_brutas": 36,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 0,
+          "n_descartadas_curtas": 22,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 0,
+          "motivos_descarte": {
+            "truncada_sem_texto": 0,
+            "spoiler": 0,
+            "abaixo_min_chars": 22,
+            "excedente_cota": 8,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 2
+        },
+        {
+          "nivel": 4.0,
+          "n_validas": 16,
+          "n_alvo": 16,
+          "n_brutas": 126,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 5,
+          "n_descartadas_curtas": 86,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 2,
+          "motivos_descarte": {
+            "truncada_sem_texto": 2,
+            "spoiler": 5,
+            "abaixo_min_chars": 86,
+            "excedente_cota": 17,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 7
+        },
+        {
+          "nivel": 4.5,
+          "n_validas": 11,
+          "n_alvo": 11,
+          "n_brutas": 96,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 1,
+          "n_descartadas_curtas": 69,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 0,
+          "motivos_descarte": {
+            "truncada_sem_texto": 0,
+            "spoiler": 1,
+            "abaixo_min_chars": 69,
+            "excedente_cota": 15,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 4
+        },
+        {
+          "nivel": 5.0,
+          "n_validas": 7,
+          "n_alvo": 7,
+          "n_brutas": 72,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 2,
+          "n_descartadas_curtas": 46,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 0,
+          "motivos_descarte": {
+            "truncada_sem_texto": 0,
+            "spoiler": 2,
+            "abaixo_min_chars": 46,
+            "excedente_cota": 17,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 3
+        }
+      ],
+      "temas": [
+        {
+          "tema": "Atuações excepcionais",
+          "mencoes_aproximadas": 15,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "Os quatro protagonistas entregam performances notáveis, com destaque para a atuação de Seth Rogen, que equilibra humor e drama de forma impressionante, e para a intensidade de Olivia Wilde.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Roteiro e diálogos afiados",
+          "mencoes_aproximadas": 12,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "O filme se destaca pelo roteiro inteligente e pelos diálogos rápidos e bem escritos, que mantêm o ritmo e geram risadas constantes, além de momentos de tensão.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Direção de Olivia Wilde",
+          "mencoes_aproximadas": 10,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "A direção de Olivia Wilde é elogiada por sua precisão, especialmente na condução das cenas em um único cenário, criando uma atmosfera intimista e mantendo o equilíbrio entre comédia e drama.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Estética de peça teatral",
+          "mencoes_aproximadas": 9,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "A fotografia e a direção de arte lembram uma peça de teatro, com uso criativo de espelhos, janelas e enquadramentos que tornam o ambiente visualmente interessante apesar do cenário limitado.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Equilíbrio entre humor e desconforto",
+          "mencoes_aproximadas": 8,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "O filme consegue mesclar momentos de pura comédia com cenas de intenso constrangimento e tensão, criando uma experiência que provoca risadas e ao mesmo tempo deixa o espectador desconfortável.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Reflexão sobre relacionamentos",
+          "mencoes_aproximadas": 7,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "As reviews positivas destacam a abordagem honesta e tocante sobre as dificuldades de comunicação e a complexidade dos relacionamentos, especialmente no contexto de um casamento em crise.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        }
+      ],
+      "observacao_geral": "As reviews positivas celebram o filme como uma obra bem dirigida e atuada, com roteiro afiado e tom equilibrado entre riso e desconforto. Elas valorizam especialmente a estética de peça teatral e a forma como o longa retrata de maneira crua e verdadeira as dinâmicas de um relacionamento conturbado.",
+      "idioma_invalido": false,
+      "escopo_suspeito": false
+    }
+  ],
+  "narrativa": "Dirigido por Olivia Wilde e lançado em 2026, O Convite é uma comédia dramática que acompanha um casal em crise matrimonial. A trama se desenvolve a partir do momento em que eles convidam os enigmáticos vizinhos do andar de cima para um jantar que assume rumos imprevistos.\n\nO longa-metragem aposta em uma ambientação contida e intimista, estruturando sua narrativa em um único cenário que evoca a dinâmica espacial e cênica de uma peça de teatro.\n\nNa grande maioria das notas (~91%), o filme é amplamente elogiado. Uma parcela expressiva destaca as atuações excepcionais dos protagonistas, enquanto muitos ressaltam a qualidade do roteiro e a precisão dos diálogos rápidos. Além disso, uma parte valoriza o trabalho de direção de Olivia Wilde na condução do elenco e no aproveitamento do espaço restrito.\n\nPara quem se posiciona numa fração mínima das notas (~7%), a percepção é mais moderada. Nesse segmento, boa parte comenta o desempenho do elenco de maneira mista, vários analisam o roteiro e as escolhas de diálogos com ressalvas, e um número considerável aponta limitações ou particularidades na estrutura concentrada em apenas um cenário.\n\nJá na perspectiva de uma fração mínima das notas (~2%), as avaliações são desfavoráveis. Parte deles critica a atuação de Olivia Wilde, alguns consideram o roteiro previsível e sem profundidade, e uma parte aponta falhas no humor e na eficácia cômica da obra.",
+  "verificacao_narrativa": {
+    "quantificador_fora_de_faixa": [],
+    "quantificador_repetido": [],
+    "paragrafos": {
+      "n_paragrafos": 5,
+      "minimo": 3,
+      "insuficientes": false,
+      "longos": []
+    },
+    "n_paragrafos": 5,
+    "paragrafos_insuficientes": false,
+    "paragrafos_longos": [],
+    "grupos_sem_paragrafo_proprio": [],
+    "formato_invalido": false,
+    "numeros_inventados": [],
+    "rotulos_faltando": [],
+    "ordem_incorreta": false,
+    "vocabulario_peso": false,
+    "resenha_speak": [],
+    "n_resenha_speak": 0,
+    "n_flags": 0
+  },
+  "narrativa_selecao": {
+    "provider": "gemini",
+    "modelo": "gemini-3.7-flash",
+    "n_candidatos": 3,
+    "n_chamadas": 3,
+    "indice_escolhido": 1,
+    "motivo": "melhor_entre_limpos",
+    "criterio_decisivo": "ritmo",
+    "candidatos": [
+      {
+        "indice": 0,
+        "n_flags": 0,
+        "cliches": 0,
+        "repeticao_max": 2,
+        "ritmo": 4,
+        "cobertura": 1.0,
+        "eliminado": false
+      },
+      {
+        "indice": 1,
+        "n_flags": 0,
+        "cliches": 0,
+        "repeticao_max": 2,
+        "ritmo": 8,
+        "cobertura": 1.0,
+        "eliminado": false
+      },
+      {
+        "indice": 2,
+        "n_flags": 0,
+        "cliches": 0,
+        "repeticao_max": 2,
+        "ritmo": 6,
+        "cobertura": 1.0,
+        "eliminado": false
+      }
+    ],
+    "retry": null,
+    "uso": {
+      "prompt_tokens": 9312,
+      "completion_tokens": 1097,
+      "cache_hit_tokens": 0,
+      "cache_miss_tokens": 9312
+    },
+    "latencia_s": 29.83
+  }
+}

@@ -220,3 +220,39 @@ def test_modelo_do_estagio_segue_a_config():
 def test_modelo_do_estagio_com_provider_forcado_usa_o_default_dele():
     assert (S.modelo_do_estagio("narrativa", "anthropic")
             == config.PROVIDER_DEFAULT_MODELS["anthropic"])
+
+
+# ============================================================ v1.9.11
+# O CLI tem de RESPEITAR a configuração por estágio
+#
+# Defeito real, encontrado rodando o pipeline de ponta a ponta na v1.9.11:
+# `--provider` tinha default `DEFAULT_PROVIDER` no argparse — nunca `None` —
+# então `provider_do_estagio(estagio, explicit)` recebia sempre um explícito
+# e FORÇAVA todos os estágios. A narrativa rodou em `deepseek-v4-flash`
+# mesmo com `gemini-3.7-flash` fixado em `MODELO_POR_ESTAGIO`. É o MESMO
+# defeito que a v1.9.11 corrige (configuração escrita e inerte), uma camada
+# acima.
+# ============================================================
+
+def test_cli_sem_provider_explicito_deixa_o_estagio_decidir(monkeypatch):
+    """`--provider` omitido tem de chegar como None em `narrar`, senão a
+    configuração por estágio nunca é consultada."""
+    from espectro24 import cli
+    args = cli._parse_args(["--slug", "x"])
+    assert args.provider is None
+
+
+def test_cli_com_provider_explicito_continua_forcando(monkeypatch):
+    from espectro24 import cli
+    args = cli._parse_args(["--slug", "x", "--provider", "anthropic"])
+    assert args.provider == "anthropic"
+
+
+def test_narrar_sem_provider_usa_o_do_ESTAGIO(monkeypatch):
+    """Com as DUAS chaves no ambiente (o caso real do projeto), o estágio
+    da narrativa tem de resolver para gemini — `detect_provider(None)`
+    sozinho falharia com "múltiplas chaves presentes"."""
+    monkeypatch.setenv("DEEPSEEK_API_KEY", "k")
+    monkeypatch.setenv("GEMINI_API_KEY", "k")
+    assert S.provider_do_estagio("narrativa", None) == "gemini"
+    assert S.provider_do_estagio("classificacao", None) == "deepseek"

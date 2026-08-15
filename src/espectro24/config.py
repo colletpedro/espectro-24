@@ -4,7 +4,14 @@ Nenhum valor aqui deve divergir da SPEC.md sem bump de versão.
 """
 from __future__ import annotations
 
-SPEC_VERSION = "1.9.0"
+# v1.9.11: estava parada em "1.9.0" desde então, enquanto a SPEC.md
+# avançava até a v1.9.11 — todo `resultado/*.json` gerado de v1.9.1 a
+# v1.9.10 carimbou a versão errada. Achado ao rodar o pipeline de ponta a
+# ponta pela primeira vez desde a v1.8.2 (a comparação com o publicado
+# mostrou "1.6.0 → 1.9.0" quando deveria ser "1.6.0 → 1.9.11"). Os JSONs
+# já publicados NÃO foram reescritos: carimbo corrigido depois do fato não
+# é evidência de nada — mesma política de `VERSAO_COLETOR` abaixo.
+SPEC_VERSION = "1.9.11"
 
 BASE = "https://letterboxd.com"
 
