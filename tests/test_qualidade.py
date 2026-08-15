@@ -307,3 +307,93 @@ def test_verificar_soma_as_flags_novas():
     assert v2["quantificador_repetido"]
     assert v2["paragrafos_insuficientes"] is True
     assert v2["n_flags"] >= 2
+
+
+# ============================================================ v1.9.9
+# Fechamento — parágrafo por GRUPO no movimento 3
+#
+# Medido: `cidade-de-deus` saiu com 3 parágrafos (passa em
+# `problemas_de_paragrafo`), mas o movimento 3 inteiro — os três grupos —
+# ficou espremido num bloco único. Nenhuma flag existente via essa
+# diferença: `problemas_de_paragrafo` só conta o TOTAL de parágrafos do
+# texto, não a que grupo cada um pertence.
+# ============================================================
+
+def _briefing_3grupos(estados=("completa", "completa", "completa")):
+    nomes = ("positivas", "medianas", "negativas")
+    grupos = {}
+    for nome, pct, estado in zip(nomes, (80, 17, 3), estados):
+        permissoes = {"pode_citar_temas": estado != "sem_analise",
+                      "pode_citar_numero": estado in ("completa", "sem_quantificador"),
+                      "pode_citar_quantificador": estado == "completa"}
+        grupos[nome] = {"rotulo_peso": f"peso de {nome} (~{pct}%)",
+                        "permissoes": permissoes,
+                        "temas": [{"tema": "t"}] if permissoes["pode_citar_temas"] else []}
+    return {"movimento3": {"ordem": list(nomes)}, "grupos": grupos,
+            "orcamento_frases": {"movimento1": (2, 3), "movimento2": (0, 5),
+                                 "movimento3": (4, 8)}}
+
+
+def test_paragrafos_por_grupo_localiza_o_indice_do_paragrafo_de_cada_um():
+    b = _briefing_3grupos()
+    texto = ("Abertura.\n\n"
+             "peso de positivas (~80%) elogia.\n\n"
+             "peso de medianas (~17%) hesita.\n\n"
+             "peso de negativas (~3%) reclama.")
+    pares = q.paragrafos_por_grupo(texto, b)
+    assert pares == {"positivas": 1, "medianas": 2, "negativas": 3}
+
+
+def test_movimento3_num_bloco_unico_e_flag():
+    """O defeito medido: os 3 grupos, cada um com rótulo de peso próprio,
+    todos dentro do MESMO parágrafo."""
+    b = _briefing_3grupos()
+    texto = ("Abertura.\n\n"
+             "Experiência.\n\n"
+             "peso de positivas (~80%) elogia. peso de medianas (~17%) "
+             "hesita. peso de negativas (~3%) reclama.")
+    colisoes = q.grupos_sem_paragrafo_proprio(texto, b)
+    assert set(colisoes) == {"medianas", "negativas"}
+
+
+def test_um_paragrafo_por_grupo_apresentado_nao_e_flag():
+    b = _briefing_3grupos()
+    texto = ("Abertura.\n\n"
+             "Experiência.\n\n"
+             "peso de positivas (~80%) elogia.\n\n"
+             "peso de medianas (~17%) hesita.\n\n"
+             "peso de negativas (~3%) reclama.")
+    assert q.grupos_sem_paragrafo_proprio(texto, b) == []
+
+
+def test_grupo_sem_analise_nao_exige_paragrafo_proprio():
+    """'um filme com bucket em sem_analise tem menos [parágrafos], e a
+    regra acompanha o número real de grupos APRESENTADOS' — grupo sem
+    permissão de citar tema não entra na contagem."""
+    b = _briefing_3grupos(estados=("completa", "completa", "sem_analise"))
+    texto = ("Abertura.\n\n"
+             "Experiência.\n\n"
+             "peso de positivas (~80%) elogia.\n\n"
+             "peso de medianas (~17%) hesita. peso de negativas (~3%) tem poucas reviews.")
+    # negativas (sem_analise) divide parágrafo com medianas — não conta como
+    # colisão, porque negativas não é um grupo "apresentado".
+    assert q.grupos_sem_paragrafo_proprio(texto, b) == []
+
+
+def test_rotulo_ausente_nao_gera_falso_positivo_de_colisao():
+    """Rótulo que não aparece no texto já é reprovado por
+    `rotulos_peso_faltando` — não deve também aparecer aqui como colisão."""
+    b = _briefing_3grupos()
+    texto = "Abertura.\n\npeso de positivas (~80%) elogia."
+    assert q.grupos_sem_paragrafo_proprio(texto, b) == []
+
+
+def test_verificar_reporta_movimento3_em_bloco_unico():
+    b = _briefing_3grupos()
+    texto = ("Abertura.\n\n"
+             "Experiência.\n\n"
+             "peso de positivas (~80%) elogia. peso de medianas (~17%) "
+             "hesita. peso de negativas (~3%) reclama.")
+    v = q.verificar(texto, b)
+    assert v["grupos_sem_paragrafo_proprio"]
+    assert v["n_flags"] >= 1

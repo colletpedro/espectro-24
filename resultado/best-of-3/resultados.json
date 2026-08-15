@@ -358,7 +358,7 @@
           "cliches": 0,
           "repeticao_max": 2,
           "ritmo": 5,
-          "cobertura": 0.667,
+          "cobertura": 1.0,
           "eliminado": false
         },
         {
@@ -367,17 +367,17 @@
           "cliches": 0,
           "repeticao_max": 2,
           "ritmo": 8,
-          "cobertura": 0.444,
+          "cobertura": 1.0,
           "eliminado": false
         },
         {
           "indice": 2,
-          "n_flags": 0,
+          "n_flags": 1,
           "cliches": 0,
           "repeticao_max": 2,
           "ritmo": 5,
-          "cobertura": 0.778,
-          "eliminado": false
+          "cobertura": 1.0,
+          "eliminado": true
         }
       ],
       "verificacao": {
@@ -392,6 +392,7 @@
         "n_paragrafos": 5,
         "paragrafos_insuficientes": false,
         "paragrafos_longos": [],
+        "grupos_sem_paragrafo_proprio": [],
         "formato_invalido": false,
         "numeros_inventados": [],
         "rotulos_faltando": [],
@@ -749,11 +750,11 @@
       }
     ],
     "escolha": {
-      "indice": 1,
-      "narrativa": "Lançado em 2002 e dirigido por Fernando Meirelles, Cidade de Deus é um drama e filme policial ambientado em uma comunidade marcada pela violência urbana. A trama acompanha a trajetória de Buscapé, um jovem que cresce nesse contexto e busca na fotografia uma oportunidade para construir uma vida digna e se afastar do crime.\n\nA experiência do longa se apoia em uma montagem acelerada e em um estilo visual ágil, que constroem uma atmosfera enérgica e intensa. A narrativa combina uma estrutura episódica de múltiplos relatos interligados com um retrato direto e cru da realidade social e dos conflitos do ambiente.\n\nRepresentando a grande maioria das notas (~91%), a maior parcela destaca a edição dinâmica e a cinematografia estilizada como elementos essenciais para o ritmo da narrativa. Além disso, boa parte aponta a capacidade de articular múltiplas histórias ao longo de décadas, enquanto uma parcela expressiva ressalta o impacto e o realismo no retrato da violência. Para quem se situa na faixa intermediária, que reúne uma fração mínima das notas (~8%), cerca de metade nota a representação crua da pobreza e dos conflitos sociais, e vários reconhecem a agilidade técnica da direção, embora um número considerável sinta que a obra prioriza o entretenimento em detrimento de uma conexão emocional profunda. Já sob a perspectiva das avaliações desfavoráveis, responsáveis por uma fração mínima das notas (~1%), muitos criticam a estetização e a espetacularização do sofrimento social, boa parte aponta uma visão estereotipada da favela focada apenas no crime e um número considerável avalia a violência apresentada como excessiva.",
+      "indice": 0,
+      "narrativa": "Dirigido por Fernando Meirelles e lançado em 2002, o drama policial Cidade de Deus ambienta sua história em uma comunidade carioca marcada pela violência. Nesse cenário adverso, um jovem morador que teme ingressar na criminalidade enxerga na prática da fotografia uma oportunidade concreta de alcançar uma vida digna.\n\nA experiência do longa-metragem se apoia em uma estrutura de ritmo acelerado, impulsionada por uma montagem dinâmica e por movimentos ágeis de câmera. A ambientação constrói uma atmosfera densa sobre o cotidiano da favela, articulando múltiplos arcos narrativos com uma exposição crua da violência.\n\nEm a grande maioria das notas (~91%), a maior parte exalta o estilo visual e a edição dinâmica, ressaltando a energia contagiante impressa no ritmo. Boa parte desse grupo elogia a narrativa abrangente por conectar diferentes personagens ao longo do tempo de forma coesa, enquanto uma parcela expressiva destaca a brutalidade e o realismo com que a violência é apresentada.\n\nEntre os avaliadores de uma fração mínima das notas (~8%), cerca de metade salienta a força do retrato social e a representação impactante da realidade da favela. Nesse segmento, muitos reconhecem a qualidade técnica e os recursos visuais empregados, mas vários avaliam que a obra privilegia o entretenimento em vez de gerar uma conexão emocional mais profunda com a tragédia e os personagens.\n\nNa perspectiva de uma fração mínima das notas (~1%), um número considerável critica o que entende como uma estetização e espetacularização da miséria para fins de exibição estilística. Nesse mesmo grupo, boa parte desaprova o que considera uma representação estereotipada da comunidade voltada somente ao crime, ao passo que uma parcela expressiva manifesta forte incômodo com a violência excessiva e gratuita.",
       "motivo": "melhor_entre_limpos",
       "precisa_retry": false,
-      "criterio_decisivo": "ritmo",
+      "criterio_decisivo": "unico",
       "candidatos": [
         {
           "indice": 0,
@@ -766,35 +767,36 @@
         },
         {
           "indice": 1,
-          "n_flags": 0,
+          "n_flags": 1,
           "cliches": 0,
           "repeticao_max": 2,
           "ritmo": 11,
-          "cobertura": 0.778,
-          "eliminado": false
+          "cobertura": 0.889,
+          "eliminado": true
         },
         {
           "indice": 2,
-          "n_flags": 0,
+          "n_flags": 1,
           "cliches": 0,
           "repeticao_max": 2,
           "ritmo": 5,
           "cobertura": 1.0,
-          "eliminado": false
+          "eliminado": true
         }
       ],
       "verificacao": {
         "quantificador_fora_de_faixa": [],
         "quantificador_repetido": [],
         "paragrafos": {
-          "n_paragrafos": 3,
+          "n_paragrafos": 5,
           "minimo": 3,
           "insuficientes": false,
           "longos": []
         },
-        "n_paragrafos": 3,
+        "n_paragrafos": 5,
         "paragrafos_insuficientes": false,
         "paragrafos_longos": [],
+        "grupos_sem_paragrafo_proprio": [],
         "formato_invalido": false,
         "numeros_inventados": [],
         "rotulos_faltando": [],
@@ -1165,7 +1167,7 @@
           "cliches": 0,
           "repeticao_max": 1,
           "ritmo": 6,
-          "cobertura": 0.889,
+          "cobertura": 1.0,
           "eliminado": false
         },
         {
@@ -1199,6 +1201,7 @@
         "n_paragrafos": 5,
         "paragrafos_insuficientes": false,
         "paragrafos_longos": [],
+        "grupos_sem_paragrafo_proprio": [],
         "formato_invalido": false,
         "numeros_inventados": [],
         "rotulos_faltando": [],

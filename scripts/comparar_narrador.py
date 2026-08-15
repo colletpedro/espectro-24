@@ -142,7 +142,8 @@ def cmd_relatorio() -> None:
     print("TABELA MECÂNICA — quem passou nas verificações")
     print("=" * 78)
     print(f"{'filme':<18}{'modelo':<20}{'flags':>6}{'clichês':>8}"
-          f"{'rep':>5}{'fora':>6}{'par':>5}{'palavras':>10}{'lat(s)':>8}{'US$':>10}")
+          f"{'rep':>5}{'fora':>6}{'par':>5}{'colisão':>8}"
+          f"{'palavras':>10}{'lat(s)':>8}{'US$':>10}")
     tot = {r: {"flags": 0, "speak": 0, "custo": 0.0, "lat": 0.0, "n": 0}
            for r in rotulos}
     for slug, d in dados.items():
@@ -159,6 +160,7 @@ def cmd_relatorio() -> None:
             print(f"{slug:<18}{rot:<20}{v['n_flags']:>6}{v['n_resenha_speak']:>8}"
                   f"{rep:>5}{len(v.get('quantificador_fora_de_faixa', [])):>6}"
                   f"{v.get('n_paragrafos', 0):>5}"
+                  f"{len(v.get('grupos_sem_paragrafo_proprio', [])):>8}"
                   f"{m['n_palavras']:>10}{m['latencia_s']:>8.1f}"
                   f"{m['custo_usd']:>10.5f}")
             t = tot[rot]
@@ -209,6 +211,9 @@ def cmd_relatorio() -> None:
             if v.get("paragrafos_longos"):
                 problemas.append(f"parágrafo acima de 180 palavras: "
                                  f"{v['paragrafos_longos']}")
+            if v.get("grupos_sem_paragrafo_proprio"):
+                problemas.append("movimento 3 sem parágrafo por grupo: "
+                                 f"{v['grupos_sem_paragrafo_proprio']}")
             if v["resenha_speak"]:
                 exprs = ", ".join(f"{a['expressao']}×{a['n']}"
                                   for a in v["resenha_speak"])

@@ -10,6 +10,8 @@ from __future__ import annotations
 import sys
 from pathlib import Path
 
+import pytest
+
 RAIZ = Path(__file__).resolve().parent.parent
 sys.path.insert(0, str(RAIZ / "src"))
 
@@ -46,9 +48,10 @@ def _limpo(b, extra=""):
     neg = b["grupos"]["negativas"]["rotulo_peso"]
     return (f"Um filme de 1997 dirigido por D.\n\n"
             f"A experiência é de ritmo lento e atmosfera densa.\n\n"
-            f"{pos} elogia: a maioria cita a atmosfera perturbadora e "
-            f"boa parte aponta o ritmo lento. {neg} discorda, e "
-            f"vários citam o roteiro fraco. {extra}")
+            f"{pos} concentra as avaliações mais favoráveis. A maioria "
+            f"cita a atmosfera perturbadora, ao passo que boa parte "
+            f"aponta o ritmo lento.\n\n"
+            f"{neg} discorda, e vários citam o roteiro fraco. {extra}")
 
 
 # ------------------------------------------------------- eliminatório
@@ -94,11 +97,11 @@ def test_entre_limpos_a_menor_repeticao_vence():
                 b["grupos"]["negativas"]["rotulo_peso"])
     duas = (f"Um filme de 1997.\n\nRitmo lento e atmosfera densa.\n\n"
             f"{pos} elogia: a maioria cita a atmosfera perturbadora e "
-            f"a maioria aponta o ritmo lento. {neg} discorda, e vários "
+            f"a maioria aponta o ritmo lento.\n\n{neg} discorda, e vários "
             f"citam o roteiro fraco.")
     uma = (f"Um filme de 1997.\n\nRitmo lento e atmosfera densa.\n\n"
            f"{pos} elogia: a maioria cita a atmosfera perturbadora e "
-           f"boa parte aponta o ritmo lento. {neg} discorda, e vários "
+           f"boa parte aponta o ritmo lento.\n\n{neg} discorda, e vários "
            f"citam o roteiro fraco.")
     esc = sn.selecionar([duas, uma], b)
     assert [c["n_flags"] for c in esc["candidatos"]] == [0, 0]
@@ -120,8 +123,117 @@ def test_ritmo_e_proxy_DECLARADO_e_arredondado():
 def test_cobertura_conta_os_temas_do_briefing():
     b = _briefing()
     assert sn.cobertura(_limpo(b), b) == 1.0
-    parcial = "Um filme.\n\nRitmo lento.\n\nSó a atmosfera perturbadora aqui."
-    assert 0 < sn.cobertura(parcial, b) < 1.0
+
+
+# ============================================================ v1.9.9
+# Fechamento — cobertura ESTRUTURAL (ordem + grupo), não léxica
+#
+# Substitui o casamento de termos com o RÓTULO do tema, que tinha falso
+# negativo SISTEMÁTICO em paráfrase — medido na calibração: em `cure`, 5
+# dos 9 temas "ausentes" do candidato escolhido estavam no texto, só
+# reescritos ("Pacing Lento e Deliberado" → "o andamento metódico").
+# ============================================================
+
+def _briefing_dois_grupos():
+    return {
+        "movimento3": {"ordem": ["positivas", "negativas"]},
+        "grupos": {
+            "positivas": {"rotulo_peso": "a maioria das notas (~80%)",
+                          "temas": [{"tema": "atmosfera perturbadora"},
+                                    {"tema": "ritmo lento e deliberado"}]},
+            "negativas": {"rotulo_peso": "uma fração mínima das notas (~5%)",
+                          "temas": [{"tema": "roteiro fraco e repetitivo"}]},
+        },
+    }
+
+
+def test_cobertura_nao_pune_mais_a_parafrase_sem_overlap_lexical():
+    """O defeito medido: zero sobreposição de palavras com o rótulo do
+    tema, e o proxy antigo lia isso como ausência. A cobertura estrutural
+    não olha para as palavras do tema — só para o span do grupo certo."""
+    b = _briefing_dois_grupos()
+    texto = ("Um filme.\n\nCadência pausada.\n\n"
+             "a maioria das notas (~80%) concentra as leituras favoráveis. "
+             "O ambiente carregado surpreende o público, ao passo que a "
+             "cadência vagarosa intriga quem assiste com atenção. "
+             "uma fração mínima das notas (~5%) discorda: aponta "
+             "fragilidades sérias na condução do enredo escrito.")
+    assert sn.cobertura(texto, b) == 1.0
+
+
+def test_spans_por_grupo_ancoram_pelo_rotulo_de_peso_literal():
+    b = _briefing_dois_grupos()
+    pos, neg = (b["grupos"]["positivas"]["rotulo_peso"],
+                b["grupos"]["negativas"]["rotulo_peso"])
+    texto = f"Abertura. {pos} elogia. {neg} discorda."
+    spans = sn.spans_por_grupo(texto, b)
+    assert spans["positivas"].startswith(pos)
+    assert spans["negativas"].startswith(neg)
+    assert pos not in spans["negativas"] and neg not in spans["positivas"]
+
+
+def test_conteudo_do_grupo_errado_nao_conta_para_o_grupo_certo():
+    """GRUPO é garantido pelo span: um span longo e detalhado do grupo
+    errado não empresta cobertura para o grupo que ficou raso."""
+    b = _briefing_dois_grupos()
+    pos, neg = (b["grupos"]["positivas"]["rotulo_peso"],
+                b["grupos"]["negativas"]["rotulo_peso"])
+    texto = (f"{pos} elogia isso. "
+             f"{neg} discorda, aponta o roteiro fraco, critica a "
+             f"condução do enredo, questiona o ritmo e ainda reclama da "
+             f"atmosfera do longa inteiro.")
+    # positivas: só a frase de abertura (única cláusula, sem "corpo" a
+    # descartar) — 1 tema coberto de 2. negativas: várias cláusulas, mas
+    # elas NUNCA contam para positivas, mesmo sendo sobre os MESMOS termos.
+    spans = sn.spans_por_grupo(texto, b)
+    assert "atmosfera" not in spans["positivas"]
+
+
+def test_grupo_sem_rotulo_no_texto_conta_ZERO_nao_herda_de_outro():
+    """Rótulo ausente (§qualidade.rotulos_peso_faltando já reprova isso à
+    parte) não pode, aqui, virar cobertura emprestada de outro grupo."""
+    b = _briefing_dois_grupos()
+    neg = b["grupos"]["negativas"]["rotulo_peso"]
+    texto = f"Um filme muito longo sobre atmosfera e ritmo. {neg} discorda do roteiro visto."
+    spans = sn.spans_por_grupo(texto, b)
+    assert spans["positivas"] == ""
+    # positivas contribui 2 temas ao total e 0 cobertos, mesmo com
+    # "atmosfera"/"ritmo" escritos no texto ANTES do span de negativas.
+    cobertura = sn.cobertura(texto, b)
+    assert cobertura < 1.0
+
+
+def test_grupo_curto_de_uma_frase_nao_e_zerado_pelo_descarte_da_abertura():
+    """A primeira cláusula só é descartada quando há MAIS de uma — um grupo
+    com uma única frase não pode acabar sempre em zero por definição."""
+    b = {"movimento3": {"ordem": ["negativas"]},
+         "grupos": {"negativas": {"rotulo_peso": "a maioria das notas (~60%)",
+                                  "temas": [{"tema": "roteiro fraco"}]}}}
+    texto = "a maioria das notas (~60%) reclama do roteiro fraco e do final abrupto."
+    assert sn.cobertura(texto, b) == 1.0
+
+
+def test_cobertura_e_media_ponderada_por_numero_de_temas_do_grupo():
+    """Um grupo com 5 temas pesa 5× mais que um com 1 — soma total sobre
+    soma total, não média simples entre grupos (que daria 0,8, não 0,667)."""
+    b = {"movimento3": {"ordem": ["positivas", "negativas"]},
+         "grupos": {
+             "positivas": {"rotulo_peso": "a maioria das notas (~80%)",
+                          "temas": [{"tema": t} for t in "abcde"]},
+             "negativas": {"rotulo_peso": "uma fração mínima das notas (~5%)",
+                          "temas": [{"tema": "f"}]},
+         }}
+    pos, neg = (b["grupos"]["positivas"]["rotulo_peso"],
+                b["grupos"]["negativas"]["rotulo_peso"])
+    # positivas: abertura + 3 cláusulas de corpo — cobre 3 dos 5 temas
+    # (0,6). negativas: uma única cláusula, cobre o seu único tema (1,0).
+    # Média simples seria (0,6+1,0)/2=0,8; a ponderada é 4/6=0,667.
+    texto = (f"{pos} destaca isso com força total. "
+             f"Primeiro ponto relevante do filme todo. "
+             f"Segundo ponto relevante do filme todo. "
+             f"Terceiro ponto relevante do filme todo. "
+             f"{neg} apenas discorda.")
+    assert sn.cobertura(texto, b) == pytest.approx(4 / 6)
 
 
 def test_a_selecao_e_DETERMINISTICA():

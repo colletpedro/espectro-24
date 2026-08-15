@@ -13,7 +13,6 @@ from .config import (
     COTA_POR_BUCKET,
     DADOS_BRUTO_DIR,
     DEFAULT_PROVIDER,
-    EDITOR_ATIVO,
     ORCAMENTO_PAGINAS_POR_BUCKET,
     ORDENACAO_DEFAULT,
     ORDENACOES,
@@ -32,8 +31,6 @@ from .render import (
 )
 from .synthesize import (
     ProviderError,
-    editar_narrativa,
-    montar_protegidos,
     narrate_output,
 )
 
@@ -104,19 +101,6 @@ def _parse_args(argv):
                        "default: derivado do slug quando o slug tem sufixo -YYYY")
     p.add_argument("--no-ficha", action="store_true",
                    help="pula a busca da ficha TMDB (v1.3.0)")
-    p.add_argument("--no-edicao", action="store_true",
-                   help="pula o passe de edição [E2] (v1.6.0) e publica a "
-                       "narrativa crua do narrador; economiza 1 chamada LLM "
-                       "(o editor vem LIGADO por padrão desde a v1.8.1 — "
-                       "EDITOR_ATIVO=True em config.py —, então esta flag é "
-                       "o jeito de desligar pontualmente, ex. para debug ou "
-                       "economizar a chamada)")
-    p.add_argument("--com-editor", action="store_true",
-                   help="liga o passe de edição [E2] explicitamente — "
-                       "redundante desde a v1.8.1 (EDITOR_ATIVO=True já é "
-                       "o default; ver config.py e VALIDACAO_EDITOR_V18.md "
-                       "para a validação que motivou a reativação), mantida "
-                       "por compatibilidade")
     p.add_argument("--no-distribuicao", action="store_true",
                    help="pula a busca do histograma de notas do Letterboxd "
                        "(v1.4.0); sem ele o narrador volta às regras da "
@@ -308,66 +292,14 @@ def main(argv=None):
             "falhou": res.falhou,
         }
 
-        # --- [E2] passe de edição (v1.6.0) ---
-        # +1 chamada LLM. O editor recebe SÓ o texto e os trechos protegidos
-        # (montados em código a partir do que o narrador declarou) — nunca os
-        # buckets, as reviews ou a ficha. Se a edição quebrar qualquer
-        # checagem mecânica, ela é DESCARTADA e a narrativa do narrador
-        # prevalece: o editor pode não melhorar, mas não pode piorar.
-        #
-        # `editor_ativo` decide se o editor roda. `EDITOR_ATIVO` (config.py)
-        # é o default de produção — LIGADO desde a v1.8.1, ver o comentário
-        # lá — e `--no-edicao` sempre vence (desliga mesmo com
-        # --com-editor), para continuar existindo como "desligar
-        # explicitamente" sem depender do valor do default.
-        editor_ativo = (EDITOR_ATIVO or args.com_editor) and not args.no_edicao
-        if editor_ativo:
-            print("Editando narrativa (1 chamada LLM)...", file=sys.stderr)
-            protegidos = montar_protegidos(res, output)
-            ed = editar_narrativa(res, protegidos, output=output,
-                                  model=args.model, provider=args.provider)
-            output["narrativa_bruta"] = ed.texto_bruto   # auditoria
-            output["narrativa"] = ed.texto               # texto final
-            output["metricas_fluencia"] = ed.metricas_fluencia
-            output["edicao_flags"] = {
-                "edicao_descartada": ed.edicao_descartada,
-                "motivo_descarte": ed.motivo_descarte,
-                "protegidos_perdidos": ed.protegidos_perdidos,
-                "numeros_alterados": ed.numeros_alterados,
-                "houve_retentativa": ed.houve_retentativa,
-                "falhou": ed.falhou,
-                "n_protegidos": len(protegidos),
-                # v1.7.3: telemetria da política de retentativa — quantas
-                # chamadas foram feitas e o motivo de falha de cada uma.
-                "n_tentativas": ed.n_tentativas,
-                "motivos_por_tentativa": ed.motivos_por_tentativa,
-                # v1.7.4: similaridade bruta×editada (telemetria de edição
-                # nula) e se a capitalização residual foi corrigida.
-                "similaridade": ed.similaridade,
-                "capitalizacao_ajustada": ed.capitalizacao_ajustada,
-                # v1.8.0 (Tarefa 3.1): telemetria da checagem de conteúdo
-                # adicionado — persistida SEMPRE, aceita ou não a edição.
-                "frases_sem_origem": ed.frases_sem_origem,
-                "similaridade_minima_por_frase": ed.similaridade_minima_por_frase,
-                # v1.8.1 (Tarefa 1, diagnóstico): registro completo de TODA
-                # tentativa (aceita ou reprovada) — motivo, similaridade,
-                # frases_sem_origem com similaridade máxima e o texto
-                # inteiro produzido em cada uma. Ver EdicaoResult em
-                # models.py para o formato exato.
-                "tentativas_detalhe": ed.tentativas_detalhe,
-            }
-            if ed.edicao_descartada:
-                print(f"⚠️  Edição descartada ({ed.motivo_descarte}) — "
-                      f"mantida a narrativa do narrador.", file=sys.stderr)
-        else:
-            # editor DESLIGADO (v1.8.1: só via --no-edicao explícito, já que
-            # o default agora é LIGADO) — mesmo formato de saída que um
-            # descarte (narrativa == narrativa_bruta == texto do narrador),
-            # caminho já existente e testado, só que sem gastar a chamada
-            # LLM do editor. `editor_desativado` deixa o motivo explícito no
-            # JSON em vez de "edicao_flags" simplesmente sumir.
-            output["narrativa_bruta"] = res.texto
-            output["edicao_flags"] = {"editor_desativado": True}
+    # O editor [E2] foi APOSENTADO na v1.9.10 (SPEC.md, "Fechamento do
+    # narrador") — código arquivado em `experimentos-editor-e2-arquivado/`.
+    # A narrativa publicada é sempre a do narrador diretamente, o mesmo
+    # formato de saída que o antigo caminho "editor desligado" já tinha
+    # (era o mais testado e o mais conservador dos dois). `edicao_flags`/
+    # `narrativa_bruta` não são mais gravados aqui; `resultado/*.json`
+    # publicados ANTES desta versão continuam com o campo, e
+    # `render_terminal` continua sabendo lê-lo (compatibilidade histórica).
 
     path = write_json(output, args.out_dir)
     print(render_terminal(output, tom=args.tom))

@@ -343,6 +343,7 @@
           "n_paragrafos": 5,
           "paragrafos_insuficientes": false,
           "paragrafos_longos": [],
+          "grupos_sem_paragrafo_proprio": [],
           "formato_invalido": false,
           "numeros_inventados": [],
           "rotulos_faltando": [
@@ -381,6 +382,9 @@
           "n_paragrafos": 4,
           "paragrafos_insuficientes": false,
           "paragrafos_longos": [],
+          "grupos_sem_paragrafo_proprio": [
+            "negativas"
+          ],
           "formato_invalido": false,
           "numeros_inventados": [],
           "rotulos_faltando": [],
@@ -388,7 +392,7 @@
           "vocabulario_peso": false,
           "resenha_speak": [],
           "n_resenha_speak": 0,
-          "n_flags": 0
+          "n_flags": 1
         }
       },
       "gemini-2.5-flash": {
@@ -417,6 +421,7 @@
           "n_paragrafos": 5,
           "paragrafos_insuficientes": false,
           "paragrafos_longos": [],
+          "grupos_sem_paragrafo_proprio": [],
           "formato_invalido": false,
           "numeros_inventados": [],
           "rotulos_faltando": [
@@ -455,6 +460,7 @@
           "n_paragrafos": 5,
           "paragrafos_insuficientes": false,
           "paragrafos_longos": [],
+          "grupos_sem_paragrafo_proprio": [],
           "formato_invalido": false,
           "numeros_inventados": [],
           "rotulos_faltando": [
@@ -805,6 +811,7 @@
           "n_paragrafos": 5,
           "paragrafos_insuficientes": false,
           "paragrafos_longos": [],
+          "grupos_sem_paragrafo_proprio": [],
           "formato_invalido": false,
           "numeros_inventados": [],
           "rotulos_faltando": [
@@ -850,6 +857,7 @@
           "n_paragrafos": 5,
           "paragrafos_insuficientes": false,
           "paragrafos_longos": [],
+          "grupos_sem_paragrafo_proprio": [],
           "formato_invalido": false,
           "numeros_inventados": [],
           "rotulos_faltando": [],
@@ -886,6 +894,7 @@
           "n_paragrafos": 5,
           "paragrafos_insuficientes": false,
           "paragrafos_longos": [],
+          "grupos_sem_paragrafo_proprio": [],
           "formato_invalido": false,
           "numeros_inventados": [],
           "rotulos_faltando": [
@@ -924,6 +933,7 @@
           "n_paragrafos": 5,
           "paragrafos_insuficientes": false,
           "paragrafos_longos": [],
+          "grupos_sem_paragrafo_proprio": [],
           "formato_invalido": false,
           "numeros_inventados": [],
           "rotulos_faltando": [],
@@ -1281,6 +1291,7 @@
               "n_palavras": 218
             }
           ],
+          "grupos_sem_paragrafo_proprio": [],
           "formato_invalido": false,
           "numeros_inventados": [],
           "rotulos_faltando": [
@@ -1320,6 +1331,7 @@
           "n_paragrafos": 5,
           "paragrafos_insuficientes": false,
           "paragrafos_longos": [],
+          "grupos_sem_paragrafo_proprio": [],
           "formato_invalido": false,
           "numeros_inventados": [],
           "rotulos_faltando": [],
@@ -1356,6 +1368,7 @@
           "n_paragrafos": 5,
           "paragrafos_insuficientes": false,
           "paragrafos_longos": [],
+          "grupos_sem_paragrafo_proprio": [],
           "formato_invalido": false,
           "numeros_inventados": [],
           "rotulos_faltando": [],
@@ -1392,6 +1405,7 @@
           "n_paragrafos": 5,
           "paragrafos_insuficientes": false,
           "paragrafos_longos": [],
+          "grupos_sem_paragrafo_proprio": [],
           "formato_invalido": false,
           "numeros_inventados": [],
           "rotulos_faltando": [],

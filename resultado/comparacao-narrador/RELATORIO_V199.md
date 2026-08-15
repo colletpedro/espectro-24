@@ -1,23 +1,23 @@
 ==============================================================================
 TABELA MECÂNICA — quem passou nas verificações
 ==============================================================================
-filme             modelo               flags clichês  rep  fora  par  palavras  lat(s)       US$
-cure              deepseek-baseline        4       0    3     1    5       424     9.1   0.00068
-cure              gemini-3.7-flash         0       0    0     0    4       248    20.1   0.00381
-cure              gemini-2.5-flash         2       0    0     0    5       361    19.7   0.00227
-cure              gemini-3.1-pro           1       0    0     0    5       340    21.2   0.01262
-cidade-de-deus    deepseek-baseline        3       1    0     1    5       349     6.6   0.00064
-cidade-de-deus    gemini-3.7-flash         0       0    0     0    5       237    10.9   0.00361
-cidade-de-deus    gemini-2.5-flash         2       0    0     0    5       252    18.4   0.00195
-cidade-de-deus    gemini-3.1-pro           1       0    0     0    5       354    24.0   0.01267
-the-invite-2026   deepseek-baseline        3       0    0     0    3       335     6.2   0.00060
-the-invite-2026   gemini-3.7-flash         0       0    0     0    5       277    11.6   0.00373
-the-invite-2026   gemini-2.5-flash         0       0    0     0    5       262    13.8   0.00183
-the-invite-2026   gemini-3.1-pro           0       0    0     0    5       310    21.1   0.01120
+filme             modelo               flags clichês  rep  fora  par colisão  palavras  lat(s)       US$
+cure              deepseek-baseline        4       0    3     1    5       0       424     9.1   0.00068
+cure              gemini-3.7-flash         1       0    0     0    4       1       248    20.1   0.00381
+cure              gemini-2.5-flash         2       0    0     0    5       0       361    19.7   0.00227
+cure              gemini-3.1-pro           1       0    0     0    5       0       340    21.2   0.01262
+cidade-de-deus    deepseek-baseline        3       1    0     1    5       0       349     6.6   0.00064
+cidade-de-deus    gemini-3.7-flash         0       0    0     0    5       0       237    10.9   0.00361
+cidade-de-deus    gemini-2.5-flash         2       0    0     0    5       0       252    18.4   0.00195
+cidade-de-deus    gemini-3.1-pro           1       0    0     0    5       0       354    24.0   0.01267
+the-invite-2026   deepseek-baseline        3       0    0     0    3       0       335     6.2   0.00060
+the-invite-2026   gemini-3.7-flash         0       0    0     0    5       0       277    11.6   0.00373
+the-invite-2026   gemini-2.5-flash         0       0    0     0    5       0       262    13.8   0.00183
+the-invite-2026   gemini-3.1-pro           0       0    0     0    5       0       310    21.1   0.01120
 ------------------------------------------------------------------------------
 TOTAL                                  flags clichês           lat.méd     US$/3
                   deepseek-baseline       10       1               7.3   0.00193
-                  gemini-3.7-flash         0       0              14.2   0.01115
+                  gemini-3.7-flash         1       0              14.2   0.01115
                   gemini-2.5-flash         4       0              17.3   0.00605
                   gemini-3.1-pro           2       0              22.1   0.03649
 
@@ -30,6 +30,9 @@ cure / deepseek-baseline:
   - vocabulário do peso (reviews/público)
   - quantificador fora da faixa medida: ['alguns']
   - construção repetida (teto 2): vários×3
+
+cure / gemini-3.7-flash:
+  - movimento 3 sem parágrafo por grupo: ['negativas']
 
 cure / gemini-2.5-flash:
   - rótulo de peso ausente: ['a grande maioria das notas (~79%)']
@@ -75,7 +78,7 @@ Em uma parcela das notas (~17%), essa perspectiva antecipa uma experiência marc
 Já uma fração mínima das notas (~3%) — e aqui a antecipação se dá antes de qualquer afirmação — descreve o filme como uma experiência tediosa, em que a maioria das críticas negativas concentra-se no ritmo excessivamente lento e arrastado, sem tensão ou progressão. Boa parte desse grupo também lamenta a falta de mistério ou terror, com uma trama que se torna óbvia cedo demais, e vários criticam o roteiro repetitivo, sem desenvolvimento, que poderia ser contado em muito menos tempo.
 
 ──────────────────────────────────────────────────────────────────────────────
-### cure · gemini-3.7-flash · 248 palavras · 0 flags · 0 clichês
+### cure · gemini-3.7-flash · 248 palavras · 1 flags · 0 clichês
 
 Lançado em 1997 e dirigido por Kiyoshi Kurosawa, o filme A Cura transita pelos gêneros de crime, thriller, terror e mistério. A premissa acompanha a investigação de uma série de assassinatos marcados por incisões corporais, concentrando-se nos esforços de um detetive diante de um suspeito de comportamento enigmático detido nas proximidades de um dos crimes.
 

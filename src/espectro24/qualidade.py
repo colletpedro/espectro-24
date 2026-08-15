@@ -174,6 +174,64 @@ def problemas_de_paragrafo(texto: str, briefing: dict) -> dict:
             "insuficientes": len(ps) < minimo, "longos": longos}
 
 
+def paragrafos_por_grupo(texto: str, briefing: dict) -> dict[str, int | None]:
+    """Índice (0-based) do parágrafo em que o `rotulo_peso` de cada grupo
+    do MOVIMENTO 3 aparece pela primeira vez — `None` se o rótulo não
+    aparecer (já reprovado à parte por `rotulos_peso_faltando`).
+
+    Mesma âncora literal usada por `ordem_dos_grupos_ok`, aplicada a
+    parágrafo em vez de posição bruta de caractere.
+    """
+    ps = _paragrafos(texto)
+    limites, cursor = [], 0
+    for p in ps:
+        pos = texto.find(p, cursor)
+        limites.append((pos, pos + len(p)) if pos != -1 else (-1, -1))
+        cursor = limites[-1][1] if pos != -1 else cursor
+
+    resultado: dict[str, int | None] = {}
+    for nome in briefing.get("movimento3", {}).get("ordem", []):
+        rot = (briefing.get("grupos", {}).get(nome) or {}).get("rotulo_peso")
+        idx_char = texto.find(rot) if rot else -1
+        if idx_char == -1:
+            resultado[nome] = None
+            continue
+        resultado[nome] = next(
+            (i for i, (ini, fim) in enumerate(limites) if ini <= idx_char <= fim),
+            None)
+    return resultado
+
+
+def grupos_sem_paragrafo_proprio(texto: str, briefing: dict) -> list[str]:
+    """Grupos APRESENTADOS (permissão de citar tema — fora de
+    `sem_analise`) que dividem parágrafo com outro grupo apresentado.
+
+    [v1.9.9] Medido: `cidade-de-deus` saiu com 3 parágrafos no total —
+    passa em `problemas_de_paragrafo` — mas o MOVIMENTO 3 inteiro, os 3
+    grupos, ficou espremido num bloco único. `problemas_de_paragrafo` só
+    conta o total de parágrafos do texto; esta checagem confere que cada
+    grupo apresentado tem o SEU. Um grupo em `sem_analise` não entra na
+    contagem — a regra acompanha o número real de grupos apresentados, não
+    um total fixo de 3.
+    """
+    apresentados = [
+        nome for nome in briefing.get("movimento3", {}).get("ordem", [])
+        if (briefing.get("grupos", {}).get(nome) or {})
+           .get("permissoes", {}).get("pode_citar_temas")]
+    pares = paragrafos_por_grupo(texto, briefing)
+    vistos: dict[int, str] = {}
+    colisoes = []
+    for nome in apresentados:
+        idx = pares.get(nome)
+        if idx is None:
+            continue
+        if idx in vistos:
+            colisoes.append(nome)
+        else:
+            vistos[idx] = nome
+    return colisoes
+
+
 def _normalizar(s: str) -> str:
     """Minúsculo e sem acento — para a blocklist casar 'fôlego' com
     'folego' sem precisar de duas entradas."""
@@ -318,6 +376,7 @@ def verificar(texto: str, briefing: dict) -> dict:
     fora_faixa = quantificadores_fora_de_faixa(texto, briefing)
     repetidos = quantificadores_repetidos(texto, briefing)
     par = problemas_de_paragrafo(texto, briefing)
+    sem_paragrafo_proprio = grupos_sem_paragrafo_proprio(texto, briefing)
     return {
         "quantificador_fora_de_faixa": fora_faixa,
         "quantificador_repetido": repetidos,
@@ -325,6 +384,7 @@ def verificar(texto: str, briefing: dict) -> dict:
         "n_paragrafos": par["n_paragrafos"],
         "paragrafos_insuficientes": par["insuficientes"],
         "paragrafos_longos": par["longos"],
+        "grupos_sem_paragrafo_proprio": sem_paragrafo_proprio,
         "formato_invalido": formato,
         "numeros_inventados": sorted(inventados),
         "rotulos_faltando": faltando,
@@ -335,5 +395,6 @@ def verificar(texto: str, briefing: dict) -> dict:
         "n_flags": (int(formato) + int(bool(inventados)) + int(bool(faltando))
                     + int(ordem_ruim) + int(vocab)
                     + int(bool(fora_faixa)) + int(bool(repetidos))
-                    + int(par["insuficientes"]) + int(bool(par["longos"]))),
+                    + int(par["insuficientes"]) + int(bool(par["longos"]))
+                    + int(bool(sem_paragrafo_proprio))),
     }

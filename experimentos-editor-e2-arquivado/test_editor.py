@@ -6,12 +6,27 @@ impedido de alterar número, rótulo ou atribuição (trechos protegidos +
 conjunto numérico + revalidação de honestidade). Quando ele quebra qualquer
 uma dessas garantias, a edição é DESCARTADA e a narrativa do narrador
 prevalece — o editor pode não melhorar, mas nunca piorar.
+
+ARQUIVADO na v1.9.10 junto com o estágio [E2] (ver SPEC.md, "Fechamento do
+narrador") — movido de `tests/` para cá; não roda mais em `pytest tests/`.
+Continua executável isoladamente (`pytest experimentos-editor-e2-arquivado/`
+a partir da raiz do repo, com `tests/` também no PYTHONPATH — ver bootstrap
+abaixo), preservado para leitura e para não perder a cobertura histórica do
+estágio, não como parte da suíte de produção.
 """
+import sys
+from pathlib import Path
+
 import pytest
 
-from conftest import fx
+RAIZ = Path(__file__).resolve().parent.parent
+sys.path.insert(0, str(RAIZ / "src"))
+sys.path.insert(0, str(RAIZ / "tests"))          # `conftest.fx` e afins
+sys.path.insert(0, str(Path(__file__).resolve().parent))  # `editor` local
 
-from espectro24.models import (
+from conftest import fx  # noqa: E402
+
+from espectro24.models import (  # noqa: E402
     BucketResult,
     Distribuicao,
     LevelResult,
@@ -19,14 +34,14 @@ from espectro24.models import (
     Review,
     Tema,
 )
-from espectro24.parser import parse_rating_histogram
-from espectro24.render import build_output, render_terminal
-from espectro24.config import EDITOR_LIMIAR_FRASE_SEM_ORIGEM
-from espectro24.synthesize import (
+from espectro24.parser import parse_rating_histogram  # noqa: E402
+from espectro24.render import build_output, render_terminal  # noqa: E402
+from espectro24.synthesize import _dividir_frases  # noqa: E402
+from editor import (  # noqa: E402
+    EDITOR_LIMIAR_FRASE_SEM_ORIGEM,
     _EDITOR_SYSTEM_PROMPT,
     _conteudo_adicionado_ok,
     _corrigir_capitalizacao_residual,
-    _dividir_frases,
     _formato_invalido,
     _frases_sem_origem,
     _melhor_cobertura_palavras,
@@ -1469,3 +1484,38 @@ def test_calibracao_paragrafo_inventado_fica_abaixo_do_limiar():
         f"frase(s) inventada(s) ficaram no ou acima do limiar "
         f"({EDITOR_LIMIAR_FRASE_SEM_ORIGEM}), a correção enfraqueceu a "
         f"detecção: {falhas}")
+
+
+# =====================================================================
+# Movidos de tests/test_fluencia.py na v1.9.10 (editor aposentado) — o
+# few-shot de ritmo é exclusivo de `_EDITOR_SYSTEM_PROMPT`.
+# =====================================================================
+
+def test_v160_few_shot_migrou_para_o_editor():
+    """Tarefa 3.5: o par ANTES/DEPOIS descontaminado foi MOVIDO para o editor
+    (não duplicado) — ele é exemplo de RITMO, e ritmo era do editor."""
+    E = _EDITOR_SYSTEM_PROMPT
+    assert "ANTES (ritmo monótono)" in E
+    assert "DEPOIS (ritmo desejado" in E
+    assert ("elogia intensamente a condução do filme e o trabalho de câmera, "
+            "destacando a habilidade de sustentar o clima em cena") in E
+    assert ("o elogio se concentra num ponto só: o filme não tem pressa e usa "
+            "isso a favor, porque cada silêncio entre os dois protagonistas "
+            "pesa mais que a cena anterior") in E
+    assert "Para eles a lentidão nunca vira método" in E
+
+
+def test_v160_few_shot_do_editor_segue_descontaminado():
+    """A descontaminação (filme fictício) tem de sobreviver à migração: um
+    exemplo com dados de um filme do catálogo faz o modelo COPIAR em vez de
+    aprender a forma — foi o que aconteceu na v1.5.0 (58 8-gramas)."""
+    E = _EDITOR_SYSTEM_PROMPT
+    inicio = E.index("EXEMPLO DE RITMO COM FILME FICTÍCIO")
+    few_shot = E[inicio:]
+    for termo in ("Olivia Wilde", "Buscapé", "Cidade de Deus", "Meirelles",
+                  "O Convite", "A Cura", "Kurosawa"):
+        assert termo not in few_shot, f"few-shot contaminado: {termo}"
+    for share in ("~79%", "~18%", "~17%", "~91%", "~8%", "~3%", "~1%"):
+        assert share not in few_shot, f"share de catálogo no few-shot: {share}"
+    assert "~74%" in few_shot and "~19%" in few_shot and "~7%" in few_shot
+    assert "NÃO EXISTE" in few_shot and "INVENTADOS" in few_shot

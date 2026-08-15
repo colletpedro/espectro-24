@@ -35,13 +35,6 @@ from . import qualidade as q
 # ruído aceito — o número entra num desvio-padrão, não numa afirmação.
 _FIM_FRASE = re.compile(r"(?<=[.!?])\s+")
 
-# Palavras curtas e de ligação não identificam um tema; exigir que casem
-# tornaria a cobertura uma medida de gramática.
-_VAZIAS = {"de", "da", "do", "das", "dos", "e", "ou", "a", "o", "as", "os",
-           "em", "no", "na", "um", "uma", "para", "com", "sem", "que", "por",
-           "mais", "menos", "geral"}
-
-
 def _normalizar(s: str) -> str:
     s = unicodedata.normalize("NFKD", (s or "").lower())
     return "".join(c for c in s if not unicodedata.combining(c))
@@ -64,34 +57,99 @@ def ritmo(texto: str) -> int:
     return round(statistics.pstdev(tamanhos))
 
 
-def _termos_do_tema(tema: str) -> list[str]:
-    return [p for p in re.findall(r"\w+", _normalizar(tema))
-            if len(p) > 3 and p not in _VAZIAS]
+def spans_por_grupo(texto: str, briefing: dict) -> dict[str, str]:
+    """O trecho de `texto` atribuído a cada grupo do MOVIMENTO 3.
+
+    Mesma âncora que `qualidade.ordem_dos_grupos_ok` já usa para checar
+    ordem: a primeira ocorrência LITERAL do `rotulo_peso` do grupo. De onde
+    o grupo começa até onde o PRÓXIMO grupo ancorado começa (ou o fim do
+    texto). Grupo cujo rótulo não aparece tem span vazio — a ausência já é
+    reprovada à parte por `qualidade.rotulos_peso_faltando`; aqui ela só
+    significa "nada a contar para este grupo".
+    """
+    ordem = briefing.get("movimento3", {}).get("ordem", [])
+    grupos = briefing.get("grupos", {})
+    achados = []
+    for nome in ordem:
+        rot = (grupos.get(nome) or {}).get("rotulo_peso")
+        pos = texto.find(rot) if rot else -1
+        if pos != -1:
+            achados.append((pos, nome))
+    achados.sort()
+    spans = {nome: "" for nome in ordem}
+    for i, (pos, nome) in enumerate(achados):
+        fim = achados[i + 1][0] if i + 1 < len(achados) else len(texto)
+        spans[nome] = texto[pos:fim]
+    return spans
+
+
+# Conectivos que introduzem uma afirmação nova dentro do MESMO período —
+# "muitos apontam X, ENQUANTO vários valorizam Y" são dois pontos, não um.
+# Lista pequena e literal de propósito: um conectivo perdido subconta (o que
+# só torna a checagem mais conservadora); um conectivo comum tratado como
+# separador por engano superconta, que é o erro que importa evitar aqui.
+_CONECTIVOS_CLAUSULA = ("ao passo que", "enquanto", "além disso",
+                        "por sua vez", "embora")
+_QUEBRA_CLAUSULA = re.compile(
+    r"[.;!?]+|,(?=\s)|(?:%s)" % "|".join(re.escape(c) for c in _CONECTIVOS_CLAUSULA),
+    re.IGNORECASE)
+
+
+def _clausulas(span: str) -> list[str]:
+    """Fragmentos do `span` com pelo menos 4 palavras — proxy de "afirmação
+    distinta", sem exigir identificar QUAL afirmação é. Fragmentos curtos
+    ("Nesse segmento", "e vários") são resíduo de pontuação, não conteúdo."""
+    return [p.strip() for p in _QUEBRA_CLAUSULA.split(span) if len(p.split()) >= 4]
 
 
 def cobertura(texto: str, briefing: dict) -> float:
-    """Fração dos temas do MOVIMENTO 3 que o texto realmente menciona.
+    """Fração dos temas do MOVIMENTO 3 cobertos — por ESTRUTURA, não léxico.
 
-    PROXY, e declarado como tal: um tema conta como coberto quando METADE
-    ou mais dos seus termos de conteúdo aparecem no texto. Casamento
-    semântico exato exigiria um segundo LLM julgando — que é justamente o
-    que este módulo não faz.
+    [v1.9.9, Entrega 1 da sessão de fechamento] Substitui o casamento de
+    termos de conteúdo com o RÓTULO do tema, que tinha falso negativo
+    SISTEMÁTICO em paráfrase — medido na calibração: em `cure`, 5 dos 9
+    temas "ausentes" do candidato escolhido estavam no texto, só reescritos
+    sem sobreposição lexical ("Pacing Lento e Deliberado" → "o andamento
+    metódico"); a cobertura real era 1,00, a medida 0,44. O proxy antigo
+    punia exatamente o texto que evita copiar o rótulo — a prosa melhor.
+
+    A pergunta muda de "este tema específico foi mencionado" (exige
+    semântica — casamento por SIGNIFICADO, que só um segundo LLM faz) para
+    algo mais fraco e puramente ESTRUTURAL: "o span do GRUPO CERTO (ancorado
+    pelo `rotulo_peso` literal, `spans_por_grupo`) tem tantas afirmações
+    distintas quanto o briefing atribuiu a ele, na ORDEM em que os grupos
+    aparecem?" GRUPO é garantido pelo span; ORDEM, por `spans_por_grupo`
+    percorrer os grupos na ordem do briefing e nunca misturar conteúdo de
+    um grupo no span de outro.
+
+    A primeira cláusula de cada span é descartada da contagem: é tipicamente
+    a frase de abertura que retoma o rótulo de peso ("a grande maioria das
+    notas... concentra as avaliações mais favoráveis") e não corresponde a
+    um tema específico — contá-la infla a cobertura de qualquer grupo com
+    ao menos uma frase escrita.
+
+    **O que isto DECLARADAMENTE não verifica:** que a cláusula N seja
+    REALMENTE sobre o tema N — só que existem cláusulas suficientes. Uma
+    mesma ideia repetida três vezes com sinônimos conta como três. É uma
+    troca deliberada, no mesmo espírito de todo proxy deste módulo: extinguir
+    o falso negativo sistemático (grave e medido) custa a capacidade de
+    pegar a omissão de UM tema específico dentro de um grupo bem escrito em
+    volume (mais rara, e sem exemplo medido até agora).
+
+    Grupo sem span (rótulo ausente do texto) conta 0 cláusulas — não herda
+    nem empresta cobertura de outro grupo.
     """
-    alvo = _normalizar(texto)
-    temas = [t.get("tema", "") for nome in briefing.get("movimento3", {}).get("ordem", [])
-             for t in (briefing.get("grupos", {}).get(nome) or {}).get("temas") or []]
-    temas = [t for t in temas if t]
-    if not temas:
-        return 1.0
-    cobertos = 0
-    for tema in temas:
-        termos = _termos_do_tema(tema)
-        if not termos:
+    spans = spans_por_grupo(texto, briefing)
+    total_temas = total_cobertos = 0
+    for nome, span in spans.items():
+        n_temas = len((briefing.get("grupos", {}).get(nome) or {}).get("temas") or [])
+        if not n_temas:
             continue
-        casados = sum(1 for termo in termos if termo in alvo)
-        if casados * 2 >= len(termos):
-            cobertos += 1
-    return cobertos / len(temas)
+        total_temas += n_temas
+        clausulas = _clausulas(span)
+        corpo = clausulas[1:] if len(clausulas) > 1 else clausulas
+        total_cobertos += min(len(corpo), n_temas)
+    return total_cobertos / total_temas if total_temas else 1.0
 
 
 def medir(texto: str, briefing: dict) -> dict:

@@ -180,74 +180,10 @@ class NarrativaResult:
     metricas_fluencia: dict = field(default_factory=dict)
 
 
-@dataclass
-class EdicaoResult:
-    """[v1.6.0] Saída da etapa [E2] — passe de EDIÇÃO sobre a narrativa.
-
-    Separa as duas responsabilidades que a v1.5.0 tentou (e falhou) empilhar
-    num prompt só: o narrador (§D2) diz a verdade com a estrutura certa; o
-    editor (§E2) cuida de ritmo e leitura SEM poder tocar em número, rótulo
-    ou atribuição. O editor não recebe os buckets, nem as reviews, nem a
-    ficha — não tem fonte de fato, logo não tem como inventar fato.
-
-    A assinatura da spec `editar_narrativa(...) -> str` refere-se ao campo
-    `.texto` (mesma convenção de `narrate_output`/`NarrativaResult`); as
-    flags acompanham para telemetria.
-    """
-    texto: str                    # texto FINAL (editado, ou o bruto se descartado)
-    texto_bruto: str = ""         # saída do narrador, preservada p/ auditoria
-    # True quando a edição foi rejeitada pelas checagens mecânicas (trecho
-    # protegido perdido, número alterado, ou regressão de honestidade) e o
-    # pipeline manteve a narrativa ORIGINAL. Não é erro fatal: é a garantia
-    # de que o editor nunca degrada o que o narrador validou.
-    edicao_descartada: bool = False
-    motivo_descarte: str = ""     # qual checagem falhou (auditoria)
-    protegidos_perdidos: list = field(default_factory=list)
-    numeros_alterados: bool = False
-    houve_retentativa: bool = False
-    falhou: bool = False          # editor não devolveu texto utilizável
-    metricas_fluencia: dict = field(default_factory=dict)  # do texto FINAL
-    # v1.7.3: quantas chamadas foram feitas (1 = aceita/descartada de
-    # primeira, até 1 + EDITOR_MAX_TENTATIVAS no pior caso) e o motivo de
-    # cada falha ao longo do caminho — telemetria para saber qual checagem
-    # mais reprova o editor, não critério de aprovação.
-    n_tentativas: int = 1
-    motivos_por_tentativa: list = field(default_factory=list)
-    # v1.7.4: similaridade (0-1) entre `texto_bruto` e o último texto
-    # editado avaliado — telemetria persistida SEMPRE, mesmo quando a
-    # edição é aceita, para calibração humana do limiar de edição nula
-    # (`EDITOR_LIMIAR_EDICAO_NULA`). `None` só quando nenhuma tentativa
-    # chegou a devolver texto avaliável.
-    similaridade: float | None = None
-    # True quando o pós-processamento determinístico baixou a caixa de
-    # algum rótulo de peso capitalizado no meio de um período.
-    capitalizacao_ajustada: bool = False
-    # v1.8.0 (Tarefa 3.1): frases do texto EDITADO (última tentativa
-    # avaliada) sem correspondência razoável em nenhuma frase do texto
-    # BRUTO — candidatas a conteúdo inventado pelo editor. Persistidas
-    # SEMPRE (aceita ou não), telemetria para calibrar
-    # `EDITOR_LIMIAR_FRASE_SEM_ORIGEM` (config.py). Lista vazia é o caso
-    # normal — toda frase do editado rastreia até alguma frase do bruto.
-    frases_sem_origem: list = field(default_factory=list)
-    # v1.8.0 (Tarefa 3.1): {frase do editado: melhor similaridade contra
-    # alguma frase do bruto} — mesma telemetria acima, mas para TODAS as
-    # frases (não só as candidatas), para ver a distribuição completa e
-    # calibrar o limiar com contexto.
-    similaridade_minima_por_frase: dict = field(default_factory=dict)
-    # v1.8.1 (Tarefa 1, DIAGNOSTICO_CONTEUDO_ADICIONADO.md): registro
-    # COMPLETO de TODA tentativa do editor (aceita ou reprovada, na ordem),
-    # não só a última. Cada item: {tentativa (int, 1-based), motivo (""
-    # para a aceita), similaridade (None se a chamada não devolveu texto),
-    # frases_sem_origem (lista de {frase, similaridade}, a mesma
-    # similaridade MÁXIMA contra o bruto usada na checagem), texto (a
-    # saída completa daquela tentativa)}. Motivação: antes desta versão,
-    # uma tentativa REPROVADA desaparecia sem rastro — só o estado da
-    # ÚLTIMA tentativa avaliada sobrevivia em `frases_sem_origem`/
-    # `similaridade_minima_por_frase` acima. Telemetria de DIAGNÓSTICO, no
-    # mesmo espírito de `consensos_usados`/`metricas_fluencia`: não muda
-    # nenhum comportamento do editor, só torna auditável POR QUE cada
-    # tentativa foi reprovada.
-    tentativas_detalhe: list = field(default_factory=list)
+# `EdicaoResult` (saída da etapa [E2]) foi removida daqui na v1.9.10 — o
+# editor foi APOSENTADO (ver SPEC.md, "Fechamento do narrador"). A classe
+# vive agora em `experimentos-editor-e2-arquivado/editor.py`, junto com o
+# resto do estágio.
 
 
 @dataclass

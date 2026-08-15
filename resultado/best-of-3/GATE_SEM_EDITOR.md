@@ -21,13 +21,17 @@ Sob a ótica de quem compõe uma parcela das notas (~17%), boa parte relata que 
 Por fim, a partir da perspectiva de uma fração mínima das notas (~3%), a maioria descreve a experiência como excessivamente tediosa e desprovida de progressão dramática. Nessa faixa, uma parcela expressiva aponta a falta de tensão e de medo genuíno, enquanto boa parte avalia que a trama se torna repetitiva e apoia-se em um roteiro pouco substancial.
 
 ──────────────────────────────────────────────────────────────────────────────
-### cidade-de-deus · gemini-3.7-flash · 257 palavras · 0 flags · 0 clichês · 3 parágrafos · editor: NÃO
+### cidade-de-deus · gemini-3.7-flash · 276 palavras · 0 flags · 0 clichês · 5 parágrafos · editor: NÃO
 
-Lançado em 2002 e dirigido por Fernando Meirelles, Cidade de Deus é um drama e filme policial ambientado em uma comunidade marcada pela violência urbana. A trama acompanha a trajetória de Buscapé, um jovem que cresce nesse contexto e busca na fotografia uma oportunidade para construir uma vida digna e se afastar do crime.
+Dirigido por Fernando Meirelles e lançado em 2002, o drama policial Cidade de Deus ambienta sua história em uma comunidade carioca marcada pela violência. Nesse cenário adverso, um jovem morador que teme ingressar na criminalidade enxerga na prática da fotografia uma oportunidade concreta de alcançar uma vida digna.
 
-A experiência do longa se apoia em uma montagem acelerada e em um estilo visual ágil, que constroem uma atmosfera enérgica e intensa. A narrativa combina uma estrutura episódica de múltiplos relatos interligados com um retrato direto e cru da realidade social e dos conflitos do ambiente.
+A experiência do longa-metragem se apoia em uma estrutura de ritmo acelerado, impulsionada por uma montagem dinâmica e por movimentos ágeis de câmera. A ambientação constrói uma atmosfera densa sobre o cotidiano da favela, articulando múltiplos arcos narrativos com uma exposição crua da violência.
 
-Representando a grande maioria das notas (~91%), a maior parcela destaca a edição dinâmica e a cinematografia estilizada como elementos essenciais para o ritmo da narrativa. Além disso, boa parte aponta a capacidade de articular múltiplas histórias ao longo de décadas, enquanto uma parcela expressiva ressalta o impacto e o realismo no retrato da violência. Para quem se situa na faixa intermediária, que reúne uma fração mínima das notas (~8%), cerca de metade nota a representação crua da pobreza e dos conflitos sociais, e vários reconhecem a agilidade técnica da direção, embora um número considerável sinta que a obra prioriza o entretenimento em detrimento de uma conexão emocional profunda. Já sob a perspectiva das avaliações desfavoráveis, responsáveis por uma fração mínima das notas (~1%), muitos criticam a estetização e a espetacularização do sofrimento social, boa parte aponta uma visão estereotipada da favela focada apenas no crime e um número considerável avalia a violência apresentada como excessiva.
+Em a grande maioria das notas (~91%), a maior parte exalta o estilo visual e a edição dinâmica, ressaltando a energia contagiante impressa no ritmo. Boa parte desse grupo elogia a narrativa abrangente por conectar diferentes personagens ao longo do tempo de forma coesa, enquanto uma parcela expressiva destaca a brutalidade e o realismo com que a violência é apresentada.
+
+Entre os avaliadores de uma fração mínima das notas (~8%), cerca de metade salienta a força do retrato social e a representação impactante da realidade da favela. Nesse segmento, muitos reconhecem a qualidade técnica e os recursos visuais empregados, mas vários avaliam que a obra privilegia o entretenimento em vez de gerar uma conexão emocional mais profunda com a tragédia e os personagens.
+
+Na perspectiva de uma fração mínima das notas (~1%), um número considerável critica o que entende como uma estetização e espetacularização da miséria para fins de exibição estilística. Nesse mesmo grupo, boa parte desaprova o que considera uma representação estereotipada da comunidade voltada somente ao crime, ao passo que uma parcela expressiva manifesta forte incômodo com a violência excessiva e gratuita.
 
 ──────────────────────────────────────────────────────────────────────────────
 ### the-invite-2026 · gemini-3.7-flash · 257 palavras · 0 flags · 0 clichês · 5 parágrafos · editor: NÃO

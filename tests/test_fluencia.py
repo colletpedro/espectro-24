@@ -504,36 +504,11 @@ def test_prompt_sem_distribuicao_nao_contem_marcacao_de_perspectiva():
     assert "MARCAÇÃO DE PERSPECTIVA" not in p
 
 
-def test_v160_few_shot_migrou_para_o_editor():
-    """Tarefa 3.5: o par ANTES/DEPOIS descontaminado foi MOVIDO para o editor
-    (não duplicado) — ele é exemplo de RITMO, e ritmo agora é do editor."""
-    from espectro24.synthesize import _EDITOR_SYSTEM_PROMPT as E
-    assert "ANTES (ritmo monótono)" in E
-    assert "DEPOIS (ritmo desejado" in E
-    assert ("elogia intensamente a condução do filme e o trabalho de câmera, "
-            "destacando a habilidade de sustentar o clima em cena") in E
-    assert ("o elogio se concentra num ponto só: o filme não tem pressa e usa "
-            "isso a favor, porque cada silêncio entre os dois protagonistas "
-            "pesa mais que a cena anterior") in E
-    assert "Para eles a lentidão nunca vira método" in E
-    # e NÃO ficou para trás no narrador
-    assert "ANTES (evite este ritmo)" not in build_narrator_prompt(True)
-
-
-def test_v160_few_shot_do_editor_segue_descontaminado():
-    """A descontaminação (filme fictício) tem de sobreviver à migração: um
-    exemplo com dados de um filme do catálogo faz o modelo COPIAR em vez de
-    aprender a forma — foi o que aconteceu na v1.5.0 (58 8-gramas)."""
-    from espectro24.synthesize import _EDITOR_SYSTEM_PROMPT as E
-    inicio = E.index("EXEMPLO DE RITMO COM FILME FICTÍCIO")
-    few_shot = E[inicio:]
-    for termo in ("Olivia Wilde", "Buscapé", "Cidade de Deus", "Meirelles",
-                  "O Convite", "A Cura", "Kurosawa"):
-        assert termo not in few_shot, f"few-shot contaminado: {termo}"
-    for share in ("~79%", "~18%", "~17%", "~91%", "~8%", "~3%", "~1%"):
-        assert share not in few_shot, f"share de catálogo no few-shot: {share}"
-    assert "~74%" in few_shot and "~19%" in few_shot and "~7%" in few_shot
-    assert "NÃO EXISTE" in few_shot and "INVENTADOS" in few_shot
+# [v1.9.10] `test_v160_few_shot_migrou_para_o_editor` e
+# `test_v160_few_shot_do_editor_segue_descontaminado` foram MOVIDOS para
+# `experimentos-editor-e2-arquivado/test_editor.py` junto com o editor [E2],
+# que elas testam diretamente (`_EDITOR_SYSTEM_PROMPT`) — o editor foi
+# APOSENTADO nesta versão (ver SPEC.md, "Fechamento do narrador").
 
 
 def test_formato_de_saida_pede_marcadores_perspectiva():
