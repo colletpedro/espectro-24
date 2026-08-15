@@ -32,16 +32,23 @@ sys.path.insert(0, str(RAIZ / "src"))
 from espectro24 import briefing as br  # noqa: E402
 from espectro24 import selecao_narrativa as sn  # noqa: E402
 from espectro24 import synthesize as S  # noqa: E402
-from espectro24.config import BEST_OF_N, PROSA_MAX_TOKENS  # noqa: E402
+from espectro24.config import (  # noqa: E402
+    BEST_OF_N,
+    MODELO_POR_ESTAGIO,
+    PROSA_MAX_TOKENS,
+    PROVIDER_POR_ESTAGIO,
+)
 
 SAIDA = RAIZ / "resultado" / "best-of-3"
 ARQ = SAIDA / "resultados.json"
 FILMES = ("cure", "cidade-de-deus", "the-invite-2026")
 
-# O candidato que fechou 0 flags nos 3 filmes na rodada v1.9.9. A escolha
-# FINAL de modelo é do dono do projeto, por leitura — `--modelo` existe
-# exatamente para que este script não a congele.
-MODELO_PADRAO = ("gemini", "gemini-3.7-flash")
+# FECHADO (v1.9.10, ver SPEC.md "Fechamento do narrador"): o mesmo valor de
+# `MODELO_POR_ESTAGIO["narrativa"]` (config.py) — não duplicado por acaso,
+# lido de lá, para que uma mudança futura do modelo de produção não exija
+# lembrar de atualizar os dois lugares. `--modelo` continua existindo para
+# comparação pontual, sem mexer no default de produção.
+MODELO_PADRAO = (PROVIDER_POR_ESTAGIO["narrativa"], MODELO_POR_ESTAGIO["narrativa"])
 
 
 def _gerar(system: str, user: str, provider: str, modelo: str) -> tuple[str, dict, float]:
@@ -144,15 +151,19 @@ def cmd_veredito(args) -> None:
 
 
 def cmd_gate(args) -> None:
-    """As narrativas finais, SEM editor — material da decisão do gate [E2]."""
+    """As narrativas finais de PRODUÇÃO — briefing determinístico +
+    best-of-3, modelo fixado, sem editor (aposentado na v1.9.10)."""
     dados = json.loads(ARQ.read_text(encoding="utf-8"))
     print("=" * 78)
-    print("GATE DO EDITOR [E2] — narrativas finais SEM passar pelo editor")
+    print("NARRATIVAS DE PRODUÇÃO — briefing determinístico + best-of-3, "
+          "editor [E2] aposentado")
     print("=" * 78)
-    print("Briefing determinístico (v1.9.8) + best-of-3 (v1.9.9), editor NÃO\n"
-          "executado. A decisão de aposentar o E2 é do dono do projeto,\n"
-          "depois de ler. Se o ritmo faltar, a alternativa já decidida é\n"
-          "reescopar o editor por MOVIMENTO — não implementada aqui.\n")
+    print("Briefing determinístico (v1.9.8) + correções de prosa (v1.9.9) +\n"
+          "cobertura estrutural/parágrafo por grupo (v1.9.10) + best-of-3\n"
+          "(seleção por código). Modelo FIXADO em `gemini-3.7-flash`\n"
+          "(config.py, MODELO_POR_ESTAGIO). O editor [E2] está APOSENTADO —\n"
+          "não roda em nenhum caminho (código em "
+          "experimentos-editor-e2-arquivado/).\n")
     for slug, d in dados.items():
         e, v = d["escolha"], d["escolha"]["verificacao"]
         print(f"\n{'─' * 78}\n### {slug} · {d['modelo']} · "

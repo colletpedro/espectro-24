@@ -1,10 +1,11 @@
 ==============================================================================
-GATE DO EDITOR [E2] — narrativas finais SEM passar pelo editor
+NARRATIVAS DE PRODUÇÃO — briefing determinístico + best-of-3, editor [E2] aposentado
 ==============================================================================
-Briefing determinístico (v1.9.8) + best-of-3 (v1.9.9), editor NÃO
-executado. A decisão de aposentar o E2 é do dono do projeto,
-depois de ler. Se o ritmo faltar, a alternativa já decidida é
-reescopar o editor por MOVIMENTO — não implementada aqui.
+Briefing determinístico (v1.9.8) + correções de prosa (v1.9.9) +
+cobertura estrutural/parágrafo por grupo (v1.9.10) + best-of-3
+(seleção por código). Modelo FIXADO em `gemini-3.7-flash`
+(config.py, MODELO_POR_ESTAGIO). O editor [E2] está APOSENTADO —
+não roda em nenhum caminho (código em experimentos-editor-e2-arquivado/).
 
 
 ──────────────────────────────────────────────────────────────────────────────
