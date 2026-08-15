@@ -555,3 +555,23 @@ def bucket_de_nota(n: float) -> str | None:
 # agora vem de `NIVEIS`, porque a coleta não sabe nada de bucket — varre a
 # escala do Letterboxd (v1.9.0, §3).
 NIVEIS_ORDENADOS = list(NIVEIS)
+
+
+# --- [v1.9.9] Tiques de prosa do narrador (§D2) ---------------------------
+# Achados pela LEITURA HUMANA dos 12 textos da comparação de modelos da
+# v1.9.8 — nenhuma verificação mecânica de então os via.
+#
+# `QUANT_MAX_REPETICOES`: quantas vezes a MESMA construção quantificadora
+# pode aparecer numa narrativa. Medido: em `cure`, os 4 modelos escreveram
+# "muitos" 8 vezes no mesmo texto. Duas ocorrências é prosa normal; três já
+# é tique — o 2 é arbitrário e está declarado como tal.
+QUANT_MAX_REPETICOES = 2
+
+# `MAX_PALAVRAS_PARAGRAFO`: teto por parágrafo. Medido: `gemini-3.1-pro`
+# entregou 3 de 3 filmes em bloco único, de até 318 palavras, com ZERO
+# flags — `formato_invalido` (v1.7.2) checa invólucro, não legibilidade.
+MAX_PALAVRAS_PARAGRAFO = 180
+
+# `BEST_OF_N`: narrativas independentes geradas por filme antes da seleção
+# POR CÓDIGO (§D2, Entrega 5). 3 é o número da tarefa; o custo é linear.
+BEST_OF_N = 3

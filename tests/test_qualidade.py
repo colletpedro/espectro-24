@@ -177,3 +177,133 @@ def test_verificar_soma_as_flags_disparadas():
     r = q.verificar('{"narrativa": "a maioria das reviews adorou, uma jornada"}',
                     _briefing_min())
     assert r["n_flags"] >= 3      # formato + vocabulário + resenha-speak
+
+
+# ============================================================ v1.9.9
+# Entrega 1 — pertencimento à faixa e repetição de construção
+# ============================================================
+
+def _briefing_de_faixas(*faixas):
+    """Briefing mínimo com uma faixa atribuída por tema — é o que a checagem
+    de pertencimento consulta."""
+    return {"movimento3": {"ordem": ["positivas"]},
+            "grupos": {"positivas": {"rotulo_peso": "a maioria das notas (~60%)",
+                                     "temas": [{"tema": f"t{i}", "faixa": f}
+                                               for i, f in enumerate(faixas)]}}}
+
+
+def test_construcao_da_faixa_certa_passa_mesmo_sem_ser_a_canonica():
+    """O ponto da Entrega 1: a verificação deixa de exigir a string literal
+    e passa a exigir PERTENCIMENTO ao conjunto da faixa."""
+    b = _briefing_de_faixas("muitos")
+    assert q.quantificadores_fora_de_faixa(
+        "Uma parcela expressiva aponta o ritmo.", b) == []
+
+
+def test_construcao_de_outra_faixa_e_flag():
+    """'quase todos' num texto cuja única faixa é 'muitos' inflaria o dado —
+    é o modo de falha que a verificação literal pegava por acidente e este
+    desenho tem de continuar pegando."""
+    b = _briefing_de_faixas("muitos")
+    assert q.quantificadores_fora_de_faixa(
+        "Quase todos apontam o ritmo.", b) == ["quase todos"]
+
+
+def test_repeticao_da_mesma_construcao_e_flag():
+    """O defeito medido em `cure`: 8 'muitos' no mesmo texto, nos 4
+    modelos."""
+    texto = ("muitos enfatizam. muitos valorizam. muitos ressaltam. "
+             "muitos apontam.")
+    rep = q.quantificadores_repetidos(texto)
+    assert rep == [{"construcao": "muitos", "n": 4}]
+
+
+def test_duas_ocorrencias_ainda_passam():
+    """O limite é `QUANT_MAX_REPETICOES`; duas usos da mesma palavra é
+    prosa normal, não tique."""
+    assert q.quantificadores_repetidos("muitos apontam. muitos valorizam.") == []
+
+
+def test_o_rotulo_de_peso_nao_conta_como_repeticao_de_construcao():
+    """`rotulo_peso` compartilha vocabulário com as construções e é literal
+    OBRIGATÓRIO — punir sua presença seria punir a obediência ao briefing."""
+    b = {"movimento3": {"ordem": ["positivas", "negativas"]},
+         "grupos": {"positivas": {"rotulo_peso": "a maioria das notas (~60%)",
+                                  "temas": [{"tema": "t", "faixa": "a maioria"}]},
+                    "negativas": {"rotulo_peso": "boa parte das notas (~40%)",
+                                  "temas": [{"tema": "u", "faixa": "muitos"}]}}}
+    texto = ("A maioria das notas (~60%) elogia; a maioria destaca o ritmo. "
+             "Boa parte das notas (~40%) discorda, e boa parte cita o roteiro.")
+    assert q.quantificadores_repetidos(texto, briefing=b) == []
+
+
+def test_faixa_ausente_no_briefing_nao_gera_falso_positivo():
+    """Grupo sem permissão de quantificador (§3[C3]) não tem faixa; o texto
+    correto simplesmente não usa construção nenhuma."""
+    b = {"movimento3": {"ordem": ["positivas"]},
+         "grupos": {"positivas": {"temas": [{"tema": "t"}]}}}
+    assert q.quantificadores_fora_de_faixa("O grupo aponta o ritmo.", b) == []
+
+
+# ============================================================ v1.9.9
+# Entrega 2 — estrutura de parágrafo
+# ============================================================
+
+def _briefing_com_ficha(ficha=True):
+    return {"movimento3": {"ordem": []}, "grupos": {},
+            "orcamento_frases": {"movimento1": (2, 3) if ficha else (0, 0),
+                                 "movimento2": (0, 5), "movimento3": (4, 8)}}
+
+
+def test_bloco_unico_e_flag():
+    """`gemini-3.1-pro` entregou os 3 filmes num bloco único de até 318
+    palavras e NENHUMA flag disparou — `formato_invalido` (v1.7.2) checa
+    invólucro, não legibilidade."""
+    texto = " ".join(["palavra"] * 200)
+    p = q.problemas_de_paragrafo(texto, _briefing_com_ficha())
+    assert p["n_paragrafos"] == 1
+    assert p["insuficientes"] is True
+    assert p["longos"]
+
+
+def test_um_paragrafo_por_movimento_passa():
+    texto = "Um filme de 1997.\n\nA experiência é lenta.\n\nOs grupos divergem."
+    p = q.problemas_de_paragrafo(texto, _briefing_com_ficha())
+    assert p["n_paragrafos"] == 3 and p["insuficientes"] is False
+
+
+def test_o_minimo_vem_do_ORCAMENTO_nao_de_uma_constante():
+    """Sem ficha o movimento 1 não existe — exigir 3 parágrafos reprovaria
+    o narrador por obedecer à instrução de pular o movimento."""
+    texto = "A experiência é lenta.\n\nOs grupos divergem."
+    assert q.problemas_de_paragrafo(
+        texto, _briefing_com_ficha(ficha=False))["insuficientes"] is False
+    assert q.problemas_de_paragrafo(
+        texto, _briefing_com_ficha(ficha=True))["insuficientes"] is True
+
+
+def test_paragrafo_acima_do_teto_e_reportado_com_o_tamanho():
+    texto = "Curto.\n\n" + " ".join(["p"] * (q.MAX_PALAVRAS_PARAGRAFO + 1)) + "\n\nFim."
+    longos = q.problemas_de_paragrafo(texto, _briefing_com_ficha())["longos"]
+    assert longos == [{"indice": 1, "n_palavras": q.MAX_PALAVRAS_PARAGRAFO + 1}]
+
+
+def test_verificar_soma_as_flags_novas():
+    """As flags novas entram em `n_flags` no mesmo padrão das antigas — é o
+    que faz a tabela da Entrega 4 mudar de veredito."""
+    b = _briefing_de_faixas("muitos")
+    b["orcamento_frases"] = {"movimento1": (2, 3), "movimento2": (0, 5),
+                             "movimento3": (4, 8)}
+    limpo = ("A maioria das notas (~60%) elogia o ritmo.\n\n"
+             "Boa parte aponta a atmosfera.\n\n"
+             "Uma parcela expressiva cita o roteiro.")
+    v = q.verificar(limpo, b)
+    assert v["quantificador_fora_de_faixa"] == [] and v["quantificador_repetido"] == []
+    assert v["paragrafos_insuficientes"] is False
+
+    tique = ("A maioria das notas (~60%) elogia. muitos apontam. muitos citam. "
+             "muitos ressaltam. muitos julgam.")
+    v2 = q.verificar(tique, b)
+    assert v2["quantificador_repetido"]
+    assert v2["paragrafos_insuficientes"] is True
+    assert v2["n_flags"] >= 2

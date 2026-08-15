@@ -29,7 +29,7 @@ desde a v1.1.1 (denominador) e a v1.2.3 (quantificador).
 from __future__ import annotations
 
 from .buckets import FRONTEIRAS
-from .config import PISO_ESCALONADO
+from .config import PISO_ESCALONADO, QUANT_MAX_REPETICOES
 
 # Ordem canônica dos buckets — usada como desempate estável e como ordem de
 # fallback quando não há distribuição. Sem ela, dois filmes com o mesmo
@@ -184,6 +184,46 @@ def _fracao_pct(mencoes: int, n: int) -> int:
     return round(100 * mencoes / n) if n else 0
 
 
+# [v1.9.9] CONSTRUÇÕES POR FAIXA — a faixa é do código, a palavra é do
+# narrador.
+#
+# Defeito medido na leitura humana da v1.9.8: em `cure`, os QUATRO modelos
+# escrevem "muitos" 8 vezes no mesmo texto. A causa não é o modelo — o
+# briefing entregava a faixa como STRING ÚNICA ("escreva a frequência
+# assim: muitos"), tema a tema, e o modelo obedecia literalmente. A
+# repetição era o comportamento correto diante de um briefing que mandava
+# repetir.
+#
+# A fronteira que isto preserva: a FAIXA é afirmação sobre o dado (fica no
+# código, calibração intocada desde a v1.2.3); a CONSTRUÇÃO é escolha de
+# palavra (vai para quem escreve as palavras).
+#
+# **Invariante crítica:** os conjuntos são DISJUNTOS e nenhuma construção é
+# substring de uma construção de outra faixa — se fossem sobrepostos, a
+# checagem de pertencimento (`qualidade.quantificadores_fora_de_faixa`) não
+# decidiria nada e a faixa deixaria de ser verdade sobre o dado. Há teste
+# para as duas coisas. A construção CANÔNICA (a da v1.2.3) abre cada lista,
+# para que o valor histórico continue exprimível.
+FAIXAS_QUANTIFICADOR: dict[str, tuple[str, ...]] = {
+    "poucos": ("poucos", "uma minoria", "um pequeno número", "raros"),
+    "alguns": ("alguns", "uma parte", "parte deles"),
+    "muitos": ("muitos", "boa parte", "uma parcela expressiva", "vários",
+               "um número considerável"),
+    "cerca de metade": ("cerca de metade", "aproximadamente metade",
+                        "perto da metade", "metade deles"),
+    "a maioria": ("a maioria", "a maior parte", "a maior parcela"),
+    "quase todos": ("quase todos", "praticamente todos", "a quase totalidade"),
+}
+
+
+def faixa_quantificador(pct: int) -> str:
+    """A faixa de `pct` — mesma escala e mesma resolução de empate da
+    v1.2.3. Nome público porque a faixa passou a ser DADO do briefing (é
+    ela que a verificação mecânica consulta), não mais um detalhe interno
+    que só existia para virar string."""
+    return _quantificador(pct)
+
+
 def _quantificador(pct: int) -> str:
     """Mesma escala e mesma resolução de empate da v1.2.3 (`synthesize.
     _rotulo_quantificador`) — reimportada por valor, não por import, para
@@ -251,9 +291,51 @@ def _temas_do_grupo(bucket: dict, permissoes: dict,
             item["mencoes"] = t.get("mencoes_aproximadas")
             item["de_n_reviews"] = t.get("n_reviews_analisadas")
         if permissoes["pode_citar_quantificador"]:
-            item["quantificador"] = _quantificador(pct)
+            faixa = _quantificador(pct)
+            item["faixa"] = faixa
+            item["quantificadores"] = list(FAIXAS_QUANTIFICADOR[faixa])
+            # a canônica continua exposta: é o valor que a v1.2.3 publicava
+            # e o que a telemetria histórica compara.
+            item["quantificador"] = faixa
         saida.append(item)
     return saida, omitidos
+
+
+def _material_movimento2(output: dict) -> list[dict]:
+    """TODOS os temas de TODOS os grupos, sem número e sem quantificador.
+
+    **Por que existir separado (diagnóstico da Entrega 3, v1.9.9).** O
+    movimento 2 encolheu em todos os modelos — em `gemini-3.7-flash`/`cure`,
+    para UMA frase. A causa não é o orçamento `(0,5)`, que nenhum modelo
+    encostou, nem o prompt, cuja regra o modelo estava obedecendo: é a
+    TRUNCAGEM. O único material do movimento 2 era a lista de temas, e ela
+    chegava cortada em `MAX_TEMAS_POR_GRUPO = 3` — corte definido para o
+    movimento 3. O movimento 2 precisa de propriedade DESCRITIVA presente em
+    mais de um grupo, e é nos postos médios que ela mora: em `cure`, dentro
+    do top-3 só o RITMO é comum aos três grupos (uma propriedade → a regra
+    de uma frase dispara), enquanto ATMOSFERA (`medianas` #4, `positivas`
+    #1) e AMBIGUIDADE DO FINAL (`medianas` #2, `positivas` #6) caem no corte.
+
+    Sem número e sem quantificador de propósito: frequência aqui seria
+    convite a escrever contagem fora do movimento 3, que é o único lugar
+    onde ela é atribuída a um grupo. E respeita a mesma permissão de piso —
+    grupo que não pode citar tema não entrega tema aqui tampouco.
+    """
+    material: list[dict] = []
+    for b in output.get("buckets", []):
+        nome = b.get("bucket")
+        if not nome:
+            continue
+        permissoes = PERMISSOES_POR_ESTADO.get(
+            _estado_piso(b), PERMISSOES_POR_ESTADO["sem_analise"])
+        if not permissoes["pode_citar_temas"]:
+            continue
+        brutos = sorted(b.get("temas") or [],
+                        key=lambda t: -(t.get("mencoes_aproximadas") or 0))
+        for t in brutos:
+            if t.get("tema"):
+                material.append({"tema": t["tema"], "grupo": nome})
+    return material
 
 
 def montar_briefing(output: dict, max_temas_por_grupo: int = MAX_TEMAS_POR_GRUPO
@@ -313,6 +395,7 @@ def montar_briefing(output: dict, max_temas_por_grupo: int = MAX_TEMAS_POR_GRUPO
                 "n_notas_total", 0),
         },
         "grupos": grupos,
+        "movimento2": {"material": _material_movimento2(output)},
         "movimento3": {"ordem": ordem},
         "orcamento_frases": orcamento,
     }
@@ -334,6 +417,14 @@ def serializar_briefing(b: dict) -> str:
         L.append(f"  {mov}: {lo} a {hi} frases"
                  + ("  (NÃO escreva este movimento)" if hi == 0 else ""))
     L.append("")
+    L.append("SOBRE AS FREQUÊNCIAS: cada tema abaixo vem com um CONJUNTO de "
+             "construções equivalentes — todas dizem a mesma faixa, e "
+             "qualquer uma delas é correta. Escolha uma e VARIE entre os "
+             f"temas: não repita a mesma construção mais de "
+             f"{QUANT_MAX_REPETICOES} vezes no texto inteiro. É PROIBIDO "
+             "usar uma construção que não esteja no conjunto do tema — "
+             "ela diria uma faixa diferente da medida.")
+    L.append("")
 
     ficha = b.get("ficha")
     if ficha:
@@ -342,6 +433,19 @@ def serializar_briefing(b: dict) -> str:
             L.append(f"  {k}: {ficha.get(k)}")
         L.append(f"  generos: {', '.join(ficha.get('generos') or [])}")
         L.append(f"  sinopse_oficial: {ficha.get('sinopse_oficial')}")
+        L.append("")
+
+    material = (b.get("movimento2") or {}).get("material") or []
+    if material:
+        L.append("MATERIAL DO MOVIMENTO 2 (todos os temas de todos os "
+                 "grupos, SEM frequência):")
+        for m in material:
+            L.append(f"    - [{m['grupo']}] {m['tema']}")
+        L.append("  Use esta lista SÓ para localizar propriedade DESCRITIVA "
+                 "que apareça em mais de um grupo com o mesmo núcleo "
+                 "factual. É PROIBIDO citar frequência aqui e é PROIBIDO "
+                 "usar esta lista para acrescentar tema ao movimento 3 — o "
+                 "movimento 3 usa apenas os temas listados por grupo abaixo.")
         L.append("")
 
     L.append("ORDEM OBRIGATÓRIA DO MOVIMENTO 3 (nesta sequência): "
@@ -369,8 +473,12 @@ def serializar_briefing(b: dict) -> str:
             L.append("  temas (use estes, nesta ordem; não acrescente outros):")
             for t in g["temas"]:
                 linha = f"    - {t['tema']}"
-                if "quantificador" in t:
-                    linha += f" · escreva a frequência como: \"{t['quantificador']}\""
+                if "quantificadores" in t:
+                    # [v1.9.9] o conjunto, não a ordem literal — ver
+                    # FAIXAS_QUANTIFICADOR. Mandar a string única produziu 8
+                    # "muitos" no mesmo texto, nos 4 modelos medidos.
+                    opcoes = " | ".join(t["quantificadores"])
+                    linha += f" · frequência (escolha UMA destas): {opcoes}"
                 if "mencoes" in t:
                     linha += (f" · ~{t['mencoes']} de {t['de_n_reviews']} "
                               f"reviews ({t['fracao_pct']}%)")
@@ -404,8 +512,9 @@ MOVIMENTO 1 — O FILME: a premissa, a partir da sinopse do briefing, mais \
 diretor, gênero e ano. Se o orçamento deste movimento for 0, pule-o e comece \
 direto no movimento 2.
 
-MOVIMENTO 2 — A EXPERIÊNCIA: como é assistir ao filme, usando só \
-propriedades DESCRITIVAS (ritmo, tom, atmosfera, intensidade, estrutura, \
+MOVIMENTO 2 — A EXPERIÊNCIA: como é assistir ao filme. Use o MATERIAL DO \
+MOVIMENTO 2 do briefing (a lista com todos os temas de todos os grupos) \
+para achar o que serve aqui, usando só propriedades DESCRITIVAS (ritmo, tom, atmosfera, intensidade, estrutura, \
 ambientação, densidade) que apareçam em MAIS DE UM grupo com o mesmo núcleo \
 factual. Tom NEUTRO, sem valência: aqui se descreve, não se julga. É \
 PROIBIDO juízo de qualidade (atuações boas/ruins, roteiro \
@@ -425,9 +534,13 @@ opinião própria ou qualquer contexto externo sobre o filme, elenco, direção 
 ou produção. Se não está no briefing, não existe.
 2. ANTI-SPOILER: em QUALQUER movimento, é PROIBIDO citar eventos de trama, \
 personagens específicos ou desfecho — inclusive a partir da sinopse.
-3. NÚMEROS: use exatamente os números e as palavras de frequência que o \
-briefing dá. É PROIBIDO calcular, arredondar, somar ou inventar qualquer \
-número — inclusive nota média, score ou "X de 10".
+3. NÚMEROS: use exatamente os números do briefing. É PROIBIDO calcular, \
+arredondar, somar ou inventar qualquer número — inclusive nota média, score \
+ou "X de 10". Para a FREQUÊNCIA de cada tema, o briefing dá um CONJUNTO de \
+construções equivalentes: escolha uma delas e VARIE entre os temas — \
+repetir a mesma construção em tema após tema é o defeito que esta regra \
+existe para evitar. Usar construção fora do conjunto do tema é PROIBIDO: \
+diria uma faixa diferente da medida.
 4. VOCABULÁRIO DO PESO: o rótulo de peso vem do histograma de NOTAS. \
 Escreva sempre "das notas"; é PROIBIDO escrever "das reviews", "dos \
 espectadores" ou "do público" ao falar de peso.
@@ -441,7 +554,9 @@ seriedade — sem ironia e sem insinuar que quem pensa assim está errado.
 7. ESCOPO: cada afirmação é atribuída ao SEU grupo. É PROIBIDO generalizar \
 para "os críticos", "o público" ou "o consenso".
 8. FORMA: português do Brasil, sem aspas de citação, sem subtítulos, entre \
-250 e 400 palavras.
+250 e 400 palavras. Separe os movimentos em PARÁGRAFOS — pelo menos um \
+parágrafo por movimento escrito, separados por linha em branco, e nenhum \
+parágrafo com mais de 180 palavras. Um bloco corrido único não é aceitável.
 
 Não se preocupe com ritmo ou elegância — um estágio seguinte de edição \
 cuida disso e não pode alterar nenhum número ou atribuição seus.

@@ -358,3 +358,131 @@ def test_output_vazio_devolve_briefing_vazio_sem_erro():
     b = br.montar_briefing({"buckets": []})
     assert b["grupos"] == {}
     assert b["movimento3"]["ordem"] == []
+
+
+# ============================================================ v1.9.9
+# Entrega 1 — o tique do quantificador: FAIXA (código) × CONSTRUÇÃO (modelo)
+# ============================================================
+
+def test_toda_faixa_tem_conjunto_de_construcoes():
+    """A faixa continua sendo decisão do CÓDIGO; o que o modelo ganha é a
+    escolha da palavra dentro da faixa que o código fixou."""
+    for faixa, construcoes in br.FAIXAS_QUANTIFICADOR.items():
+        assert len(construcoes) >= 3, faixa
+        assert construcoes[0] == faixa, "a construção canônica abre a lista"
+
+
+def test_conjuntos_de_faixas_sao_DISJUNTOS():
+    """A invariante crítica: nenhuma construção pode pertencer a duas
+    faixas. Se pertencesse, a checagem de pertencimento não decidiria nada
+    e a faixa deixaria de ser verdade sobre o dado."""
+    vistas: dict[str, str] = {}
+    for faixa, construcoes in br.FAIXAS_QUANTIFICADOR.items():
+        for c in construcoes:
+            assert c not in vistas, f"{c!r} em {faixa} e em {vistas.get(c)}"
+            vistas[c] = faixa
+
+
+def test_nenhuma_construcao_e_substring_de_outra_faixa():
+    """'cerca de metade' não pode estar contida numa construção de 'quase
+    todos' — a detecção é textual, e substring cruzada faria a faixa errada
+    casar."""
+    for faixa_a, cons_a in br.FAIXAS_QUANTIFICADOR.items():
+        for faixa_b, cons_b in br.FAIXAS_QUANTIFICADOR.items():
+            if faixa_a == faixa_b:
+                continue
+            for a in cons_a:
+                for b in cons_b:
+                    assert a not in b, f"{a!r} ({faixa_a}) dentro de {b!r} ({faixa_b})"
+
+
+@pytest.mark.parametrize("pct,faixa", [
+    (0, "poucos"), (9, "poucos"), (10, "alguns"), (25, "alguns"),
+    (26, "muitos"), (40, "muitos"), (50, "muitos"),
+    (55, "cerca de metade"), (60, "cerca de metade"),
+    (70, "a maioria"), (80, "a maioria"), (90, "quase todos"), (100, "quase todos"),
+])
+def test_faixa_resolve_nas_mesmas_bordas_da_v123(pct, faixa):
+    """A escala não muda — só o que se entrega dela. Regressão contra
+    afrouxar a calibração por acidente ao introduzir os conjuntos."""
+    assert br.faixa_quantificador(pct) == faixa
+
+
+def test_tema_carrega_faixa_e_construcoes_em_vez_de_string_unica():
+    b = br.montar_briefing(_output())
+    t = b["grupos"]["negativas"]["temas"][0]          # 30/40 = 75%
+    assert t["faixa"] == "a maioria"
+    assert t["quantificadores"] == list(br.FAIXAS_QUANTIFICADOR["a maioria"])
+    assert t["quantificador"] == "a maioria", "a canônica continua exposta"
+
+
+def test_serializacao_oferece_o_conjunto_nao_uma_ordem_literal():
+    """O defeito medido: 'escreva a frequência como: \"muitos\"' produziu 8
+    'muitos' no mesmo texto, nos QUATRO modelos. O briefing deixa de mandar
+    repetir."""
+    ser = br.serializar_briefing(br.montar_briefing(_output()))
+    assert 'escreva a frequência como: "' not in ser
+    assert "a maioria" in ser and "a maior parte" in ser
+    assert "varie" in ser.lower() or "não repita" in ser.lower()
+
+
+def test_sem_permissao_de_quantificador_nao_vem_nem_faixa_nem_conjunto():
+    """`sem_quantificador` (§3[C3]) continua significando o que sempre
+    significou — o campo simplesmente não existe, para não ser copiado."""
+    out = _output(buckets=[_bucket("negativas", 9,
+                                   [_tema("ritmo lento", 5, 9)],
+                                   estado="sem_quantificador")])
+    t = br.montar_briefing(out)["grupos"]["negativas"]["temas"][0]
+    assert "faixa" not in t and "quantificadores" not in t
+
+
+# ============================================================ v1.9.9
+# Entrega 3 — material do MOVIMENTO 2, separado do corte do MOVIMENTO 3
+# ============================================================
+
+def test_material_do_movimento2_ignora_o_corte_do_movimento3():
+    """O diagnóstico medido: o corte `MAX_TEMAS_POR_GRUPO=3` é do movimento
+    3, e come justamente os postos médios onde mora a propriedade descritiva
+    compartilhada (em `cure`: atmosfera é #4 em medianas)."""
+    out = _output(buckets=[
+        _bucket("negativas", 40, [_tema(f"n{i}", 30 - i, 40) for i in range(6)]),
+        _bucket("positivas", 40, [_tema(f"p{i}", 30 - i, 40) for i in range(5)]),
+    ])
+    b = br.montar_briefing(out)
+    assert len(b["grupos"]["negativas"]["temas"]) == 3      # movimento 3, cortado
+    material = b["movimento2"]["material"]
+    nomes = [m["tema"] for m in material]
+    assert "n5" in nomes and "p4" in nomes                  # movimento 2, inteiro
+    assert len(material) == 11
+
+
+def test_material_do_movimento2_nao_carrega_frequencia_nem_quantificador():
+    """Movimento 2 é DESCRITIVO e sem valência — número ali seria convite a
+    escrever frequência fora do movimento 3."""
+    b = br.montar_briefing(_output())
+    for m in b["movimento2"]["material"]:
+        assert set(m) == {"tema", "grupo"}
+
+
+def test_material_do_movimento2_respeita_a_permissao_do_piso():
+    """Grupo em `sem_analise` não entrega tema em lugar nenhum — nem como
+    material do movimento 2."""
+    out = _output(buckets=[
+        _bucket("negativas", 2, [_tema("invisível", 1, 2)], estado="sem_analise"),
+        _bucket("positivas", 40, [_tema("atmosfera", 30, 40)]),
+    ])
+    material = br.montar_briefing(out)["movimento2"]["material"]
+    assert [m["tema"] for m in material] == ["atmosfera"]
+
+
+def test_o_orcamento_do_movimento2_NAO_mudou():
+    """Registrado no delta: o teto (0,5) nunca foi encostado por nenhum
+    modelo. Aumentá-lo produziria enchimento, não movimento 2."""
+    b = br.montar_briefing(_output())
+    assert b["orcamento_frases"]["movimento2"] == (0, 5)
+
+
+def test_material_do_movimento2_e_escopado_na_serializacao():
+    ser = br.serializar_briefing(br.montar_briefing(_output()))
+    assert "MOVIMENTO 2" in ser
+    assert "movimento 3" in ser.lower()

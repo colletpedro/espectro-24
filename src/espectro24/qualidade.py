@@ -25,6 +25,8 @@ import re
 import unicodedata
 from pathlib import Path
 
+from .config import MAX_PALAVRAS_PARAGRAFO, QUANT_MAX_REPETICOES
+
 RAIZ = Path(__file__).resolve().parent.parent.parent
 ARQ_BLOCKLIST = RAIZ / "dados" / "blocklist_resenha.txt"
 
@@ -37,6 +39,139 @@ _PESO_PROIBIDO = re.compile(
     re.IGNORECASE)
 
 _NUMERO = re.compile(r"\d+")
+
+
+def _padrao_construcao(c: str) -> re.Pattern:
+    """Regex de uma construção quantificadora, tolerante ao GÊNERO.
+
+    O briefing entrega a forma masculina ("muitos", "poucos", "vários"), e o
+    narrador escreve o que a frase pedir ("muitas notas", "várias"). Contar
+    só a forma do briefing produziria falso negativo exatamente no defeito
+    que esta checagem existe para pegar. A tolerância é estritamente de
+    flexão final — nunca casa palavra diferente.
+    """
+    corpo = re.escape(_normalizar(c))
+    corpo = re.sub(r"os\\b|os$", "(?:os|as)", corpo)
+    corpo = re.sub(r"eles\\b|eles$", "(?:eles|elas)", corpo)
+    return re.compile(rf"(?<!\w){corpo}(?!\w)")
+
+
+def _texto_sem_rotulos_de_peso(texto: str, briefing: dict | None) -> str:
+    """O texto com os `rotulo_peso` do briefing removidos.
+
+    **Necessário, e o motivo é o desenho.** O rótulo de peso (§3[G])
+    compartilha vocabulário com as construções quantificadoras ("a maioria",
+    "boa parte") e é literal OBRIGATÓRIO — `rotulos_peso_faltando` reprova
+    quem não o escreve. Contar suas ocorrências como repetição puniria o
+    texto por obedecer exatamente ao que o briefing mandou.
+    """
+    if not briefing:
+        return texto
+    for g in (briefing.get("grupos") or {}).values():
+        rot = g.get("rotulo_peso")
+        if rot:
+            texto = re.sub(re.escape(rot), " ", texto, flags=re.IGNORECASE)
+    return texto
+
+
+def construcoes_no_texto(texto: str, briefing: dict | None = None
+                         ) -> list[dict]:
+    """`[{construcao, faixa, n}]` de cada construção quantificadora usada.
+
+    Faixa mais longa primeiro: sem isso, "a maioria" seria contada dentro de
+    uma eventual construção maior que a contivesse. Os conjuntos são
+    disjuntos e livres de substring cruzada por invariante testada
+    (`briefing.FAIXAS_QUANTIFICADOR`), então a ordem só protege contra
+    regressão futura.
+    """
+    from .briefing import FAIXAS_QUANTIFICADOR
+
+    alvo = _normalizar(_texto_sem_rotulos_de_peso(texto or "", briefing))
+    pares = [(c, faixa) for faixa, cs in FAIXAS_QUANTIFICADOR.items()
+             for c in cs]
+    pares.sort(key=lambda par: -len(par[0]))
+    achados, consumido = [], alvo
+    for c, faixa in pares:
+        n = len(_padrao_construcao(c).findall(consumido))
+        if n:
+            achados.append({"construcao": c, "faixa": faixa, "n": n})
+            consumido = _padrao_construcao(c).sub(" ", consumido)
+    return achados
+
+
+def faixas_do_briefing(briefing: dict) -> set[str]:
+    """As faixas que o briefing REALMENTE atribuiu a algum tema."""
+    faixas = set()
+    for g in (briefing.get("grupos") or {}).values():
+        for t in g.get("temas") or []:
+            if t.get("faixa"):
+                faixas.add(t["faixa"])
+    return faixas
+
+
+def quantificadores_fora_de_faixa(texto: str, briefing: dict) -> list[str]:
+    """Construções cuja FAIXA o briefing não atribuiu a tema nenhum.
+
+    [v1.9.9] Substitui a comparação com a string literal por comparação de
+    PERTENCIMENTO — que é o que a invariante sempre quis dizer. O código
+    continua sendo a autoridade sobre a faixa; o narrador escolhe a palavra
+    dentro dela. Uma construção de faixa não atribuída afirma uma
+    frequência que ninguém mediu.
+
+    Sem faixa nenhuma no briefing (grupo em `sem_quantificador`, §3[C3]) a
+    checagem se cala: não há o que violar.
+    """
+    permitidas = faixas_do_briefing(briefing)
+    if not permitidas:
+        return []
+    return sorted({a["construcao"] for a in construcoes_no_texto(texto, briefing)
+                   if a["faixa"] not in permitidas})
+
+
+def quantificadores_repetidos(texto: str, briefing: dict | None = None,
+                              maximo: int = QUANT_MAX_REPETICOES
+                              ) -> list[dict]:
+    """Construções usadas mais de `maximo` vezes — o TIQUE, medido.
+
+    A razão de esta checagem não existir antes é que a repetição não violava
+    regra nenhuma: o briefing entregava a faixa como string única e mandava
+    escrevê-la em cada tema. O texto obedecia.
+    """
+    return [{"construcao": a["construcao"], "n": a["n"]}
+            for a in construcoes_no_texto(texto, briefing) if a["n"] > maximo]
+
+
+def _paragrafos(texto: str) -> list[str]:
+    return [p.strip() for p in re.split(r"\n+", texto or "") if p.strip()]
+
+
+def _min_paragrafos(briefing: dict) -> int:
+    """O mínimo é o número de movimentos com orçamento maior que zero.
+
+    Deliberadamente NÃO é constante: sem ficha o movimento 1 não existe
+    (`ORCAMENTO_SEM_FICHA`), e um mínimo fixo de 3 reprovaria o narrador por
+    obedecer à instrução de pulá-lo.
+    """
+    orc = briefing.get("orcamento_frases")
+    if orc is None:
+        return 3 if briefing.get("ficha") else 2
+    return sum(1 for mov in ("movimento1", "movimento2", "movimento3")
+               if (orc.get(mov) or (0, 0))[1] > 0)
+
+
+def problemas_de_paragrafo(texto: str, briefing: dict) -> dict:
+    """Estrutura de parágrafo: `{n_paragrafos, minimo, insuficientes, longos}`.
+
+    [v1.9.9] `gemini-3.1-pro` entregou os 3 filmes num bloco único de até
+    318 palavras e NENHUMA flag disparou — `formato_invalido` (v1.7.2) checa
+    se a prosa veio embrulhada em JSON ou markdown, não se ela é legível.
+    """
+    ps = _paragrafos(texto)
+    minimo = _min_paragrafos(briefing)
+    longos = [{"indice": i, "n_palavras": len(p.split())}
+              for i, p in enumerate(ps) if len(p.split()) > MAX_PALAVRAS_PARAGRAFO]
+    return {"n_paragrafos": len(ps), "minimo": minimo,
+            "insuficientes": len(ps) < minimo, "longos": longos}
 
 
 def _normalizar(s: str) -> str:
@@ -180,7 +315,16 @@ def verificar(texto: str, briefing: dict) -> dict:
     formato = formato_invalido(texto)
     vocab = vocabulario_peso_violado(texto)
     speak = achar_resenha_speak(texto)
+    fora_faixa = quantificadores_fora_de_faixa(texto, briefing)
+    repetidos = quantificadores_repetidos(texto, briefing)
+    par = problemas_de_paragrafo(texto, briefing)
     return {
+        "quantificador_fora_de_faixa": fora_faixa,
+        "quantificador_repetido": repetidos,
+        "paragrafos": par,
+        "n_paragrafos": par["n_paragrafos"],
+        "paragrafos_insuficientes": par["insuficientes"],
+        "paragrafos_longos": par["longos"],
         "formato_invalido": formato,
         "numeros_inventados": sorted(inventados),
         "rotulos_faltando": faltando,
@@ -189,5 +333,7 @@ def verificar(texto: str, briefing: dict) -> dict:
         "resenha_speak": speak,
         "n_resenha_speak": sum(a["n"] for a in speak),
         "n_flags": (int(formato) + int(bool(inventados)) + int(bool(faltando))
-                    + int(ordem_ruim) + int(vocab)),
+                    + int(ordem_ruim) + int(vocab)
+                    + int(bool(fora_faixa)) + int(bool(repetidos))
+                    + int(par["insuficientes"]) + int(bool(par["longos"]))),
     }
