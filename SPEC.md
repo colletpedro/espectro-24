@@ -2278,6 +2278,44 @@ Custo estimado: no pior caso ~100 requisições extras por filme novo (uma por r
 > eixo isolado enxerga isso, e é a explicação de por que a magnitude erra
 > mais que a direção.
 
+> #### Provider por ESTÁGIO — DeepSeek classifica, Gemini narra (v1.9.8)
+>
+> **A decisão.** O provider deixa de ser global e passa a ser configuração
+> **por estágio do pipeline**: `PROVIDER_POR_ESTAGIO` em `config.py`, com
+> `classificacao` e `narrativa` resolvidos independentemente. `--provider`
+> continua existindo e, quando passado, força TODOS os estágios — é o
+> override manual, não o caminho normal.
+>
+> **Por que a classificação NÃO migra.** Ela está calibrada e auditada
+> contra um gabarito humano de 100 reviews, com precisão e recall medidos
+> por eixo (`CLASSIFICACAO_CONSOLIDADO.md`). Trocar o modelo ali invalida
+> oito sessões de medição de uma vez: o `taxonomia_id` não muda (ele
+> hasheia prompt + eixos, não o modelo), então a troca seria **silenciosa**
+> — o pior tipo. É tarefa estruturada, alto volume, saída JSON curta: o
+> lugar onde capacidade de modelo rende menos.
+>
+> **Por que a narrativa migra.** É o oposto em todos os eixos: uma chamada
+> por filme (volume irrelevante), saída em prosa longa, e nada calibrado a
+> invalidar — a qualidade é julgada por leitura humana, não por métrica
+> contra gabarito. É exatamente onde capacidade de modelo vira qualidade
+> percebida.
+>
+> **O risco histórico, e por que ele está neutralizado.** O Gemini foi o
+> provider original do projeto e saiu por duas razões: teto de 20
+> requisições/dia no free tier (resolvido — a chave atual tem billing) e
+> uma auditoria que o flagrou **inflando contagens** (dizia 35 onde a
+> contagem humana era ~30). Esse segundo risco é neutralizado **por
+> construção, não por confiança**: sob o briefing determinístico (§D2) o
+> narrador não computa nenhum número — todos vêm prontos — e a checagem de
+> conjunto de tokens numéricos (§E2) já reprova qualquer número que ele
+> invente. A defesa não depende do provider ser bem-comportado.
+>
+> **Consequência para o adaptador.** `deepseek_resposta`/`deepseek_uso`
+> eram específicos e foi essa lacuna que fez um script reimplementar o
+> transporte e reintroduzir um bug conhecido (v1.9.4). A generalização
+> (`resposta`/`uso`, despachadas por provider) fecha o mesmo buraco para o
+> Gemini ANTES que ele apareça. O guard-rail do CI cobre os dois SDKs.
+
 > #### Instrução não remove o que a distribuição do material impõe — a saída é arquitetura (v1.9.7)
 >
 > **O padrão, com as ocorrências que o sustentam.** Quando um defeito vem do
@@ -2451,7 +2489,58 @@ c. **Escopo:** checagem barata na `observacao_geral` por marcadores literais de 
 
 ### [D2] Narrador — saída narrativa, em TRÊS MOVIMENTOS (v1.2.0, reescrito v1.3.0/v1.3.1/v1.4.0)
 
-Etapa **PÓS-síntese**, opcional, controlada pela flag `--tom` (ver abaixo). Uma **única chamada LLM para o filme inteiro** (não por bucket), mesmo provider/modelo da síntese.
+> #### BRIEFING DETERMINÍSTICO — o código decide O QUE dizer, o narrador só VERBALIZA (v1.9.8)
+>
+> **O que muda.** Até a v1.9.7 o narrador fazia duas coisas ao mesmo tempo:
+> SELECIONAR o que dizer (quais temas, em que ordem, com que ênfase) e
+> ESCREVER, segurando ~18 invariantes de instrução simultaneamente. A
+> v1.9.8 separa as duas: `briefing.montar_briefing(output)` produz, em
+> CÓDIGO, um documento com todas as decisões já tomadas, e o narrador
+> recebe um prompt que só pede prosa.
+>
+> **Por que, e por que agora.** É a terceira aplicação do padrão registrado
+> em §3[D] ("Instrução não remove o que a distribuição do material impõe —
+> a saída é arquitetura"). As duas anteriores: v1.2.3 (rótulo de
+> quantificador movido para o código, depois de a calibração por instrução
+> reincidir) e v1.6.0 (narrador e editor separados em dois estágios, depois
+> de empilhar honestidade e fluência num prompt só falhar). A v1.9.7 fechou
+> o padrão com uma quarta ocorrência e a primeira confirmação de saída (o
+> passe de verificação de `impacto_emocional`). Aqui o mesmo princípio se
+> aplica ao narrador: **toda invariante que pode ser resolvida por código
+> deixa de ser instrução.**
+>
+> **O que o briefing carrega, tudo pré-computado:**
+> - ficha do filme (TMDB: premissa, diretor, gênero, ano, duração);
+> - temas por bucket com contagem e fração, **já ordenados** e **já
+>   cortados** no número que o movimento 3 deve usar;
+> - `rotulo_peso` por bucket, derivado do histograma;
+> - **a ordem de apresentação do movimento 3**, como lista explícita —
+>   antes era a instrução "comece pela perspectiva de MAIOR peso";
+> - o `quantificador` verbal de cada tema, por faixa percentual;
+> - o **orçamento de frases** de cada movimento;
+> - o `estado_piso` de cada bucket **traduzido em permissão** — o que pode e
+>   o que não pode ser dito sobre aquele grupo, em vez de o narrador ter de
+>   inferir isso de `modo=sem_analise`;
+> - a `marcacao_perspectiva` exigida por grupo.
+>
+> **O que continua sendo instrução, e por quê.** Nem toda invariante é
+> computável. Continuam no prompt: anti-spoiler, proibição de importar fato
+> externo, tom neutro do movimento 2, respeito à minoria, e o vocabulário
+> "notas, nunca reviews". Essas são regras sobre COMO ESCREVER uma frase
+> que o código não tem como pré-decidir sem escrever a frase ele mesmo. A
+> medida de sucesso da entrega é quantas SAÍRAM, não zero.
+>
+> **O que o narrador continua NÃO podendo fazer:** escolher tema, computar
+> número, decidir ordem. Toda quantificação que aparece na prosa vem do
+> briefing — mesma autoridade do código sobre número que vale desde a
+> v1.1.1 (denominador) e v1.2.3 (quantificador).
+>
+> **Compatibilidade.** O caminho antigo (`_serialize_output_for_narrator` +
+> `build_narrator_prompt`) permanece no módulo e continua testado: a
+> comparação entre os dois é o que justifica a troca, e apagar o anterior
+> tornaria a regressão impossível de medir.
+
+Etapa **PÓS-síntese**, opcional, controlada pela flag `--tom` (ver abaixo). Uma **única chamada LLM para o filme inteiro** (não por bucket); **o provider é escolhido por ESTÁGIO desde a v1.9.8** (ver §3[D], "Provider por estágio") — não mais forçosamente o mesmo da síntese.
 
 **Decisão de arquitetura (invariante, inalterada desde v1.2.0):** o narrador recebe **EXCLUSIVAMENTE o JSON validado** — os temas, `mencoes_aproximadas`, `n_reviews_analisadas` e `observacao_geral` dos 3 buckets, o total de reviews, e (v1.3.0) a **ficha técnica** do filme quando existir (§3a). **NUNCA as reviews brutas.** Ele reescreve informação **já validada** como prosa; não tem acesso a nada que as validações (§D) não tenham aprovado, nem a nada que não venha da ficha oficial do TMDB. Isso é garantido **por construção**: a entrada do narrador é o dict de saída de `build_output` (que não serializa texto de review) mais o campo `ficha` (que vem só do TMDB, nunca de reviews).
 
