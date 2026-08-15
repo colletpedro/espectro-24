@@ -1,0 +1,49 @@
+# Blocklist de RESENHA-SPEAK (§D2, v1.9.8) — dados versionados, FORA do prompt.
+#
+# Expressões de crítica genérica que não dizem nada sobre ESTE filme e que
+# poderiam ser coladas em qualquer outro. Ficam aqui, e não no prompt, por
+# duas razões:
+#   1. o padrão de §3[D]: verificação mecânica em código é mais confiável que
+#      instrução — pedir "não escreva clichê" é exatamente o tipo de regra
+#      que o modelo concorda e desobedece;
+#   2. listar as expressões DENTRO do prompt as introduz no contexto, o que
+#      em vários modelos aumenta a chance de aparecerem na saída.
+#
+# Uma ocorrência não invalida a narrativa por si só — é um INDICADOR objetivo
+# de prosa genérica, contado e reportado por modelo (ver `qualidade.py`).
+#
+# Formato: uma expressão por linha, minúscula, sem acento removido.
+# Comparação é feita sobre o texto normalizado (minúsculo, sem acentos), então
+# "de tirar o folego" casa "de tirar o fôlego".
+
+# --- semente: as que a tarefa nomeou ---
+uma jornada
+nao deixa ninguem indiferente
+vale a pena conferir
+prende do inicio ao fim
+de tirar o folego
+
+# --- clichê de recepção ---
+divide opinioes
+agrada em cheio
+nao agrada a todos
+unanimidade entre
+conquista o publico
+cativa o espectador
+
+# --- clichê de qualidade vaga ---
+obra-prima
+verdadeira aula de
+uma experiencia unica
+imperdivel
+um must
+nao pode ser perdido
+
+# --- clichê de fecho de resenha ---
+em suma
+no fim das contas
+ao fim e ao cabo
+resta saber se
+uma coisa e certa
+para os amantes de
+para os fas do genero
