@@ -359,12 +359,39 @@ PROVIDER_POR_ESTAGIO = {
     "narrativa": "gemini",
 }
 
-# Modelo default de cada estágio. O da narrativa é decidido por medição na
-# sessão de comparação (Entrega 3/4); até lá, o flash mais recente é o
-# ponto de partida declarado.
+# Modelo default de cada estágio.
+#
+# `narrativa` = `gemini-3.7-flash`, FIXADO por decisão do dono do projeto
+# (v1.9.10) — versão explícita, nunca o alias `gemini-flash-latest` (alvo
+# móvel: comparação não reproduzível e preço não ancorável, ver
+# `scripts/comparar_narrador.py`). Base da decisão — 4 candidatos × 3
+# filmes, briefing determinístico (v1.9.8) + correções de prosa (v1.9.9) +
+# cobertura estrutural/parágrafo por grupo (v1.9.10),
+# `resultado/comparacao-narrador/RELATORIO_V199.md`:
+#
+#   candidato            flags totais (3 filmes)   custo/filme   latência
+#   gemini-3.7-flash               1                 US$0,0037     ~14s
+#   gemini-3.1-pro-preview          2                 US$0,0365     ~22s
+#   gemini-2.5-flash                4                 US$0,0061     ~17s
+#   deepseek-baseline               10                US$0,0006      ~7s
+#
+# A escolha é por CONFORMIDADE, não por custo. A única flag do 3.7-flash
+# nos 3 filmes é colisão de parágrafo (defeito de FORMA, já coberto por
+# `qualidade.grupos_sem_paragrafo_proprio`); as dos concorrentes incluem
+# defeito de CONTEÚDO — rótulo de peso ausente, vocabulário do peso
+# misturando "notas" com "reviews"/"público" — que é a invariante central
+# do produto (§0, §D2). A diferença de custo entre os quatro (~1 centavo
+# por filme no pior caso) não pesou na decisão.
+#
+# RESSALVA REGISTRADA: o 3.7-flash é o mais conciso dos quatro candidatos, e
+# o movimento 2 de `cure` segue com uma única frase mesmo com o material do
+# briefing completo (a Entrega 3 da v1.9.9 já tinha descartado orçamento e
+# prompt como causa — é escolha de concisão do modelo). Não muda a decisão;
+# é o primeiro sintoma a observar se o texto parecer raso quando o catálogo
+# crescer.
 MODELO_POR_ESTAGIO = {
     "classificacao": "deepseek-v4-flash",
-    "narrativa": "gemini-flash-latest",
+    "narrativa": "gemini-3.7-flash",
 }
 
 # mantido por compatibilidade (era o único provider na v1.1.0); agora segue

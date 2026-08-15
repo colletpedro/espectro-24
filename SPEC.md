@@ -2809,9 +2809,37 @@ c. **Escopo:** checagem barata na `observacao_geral` por marcadores literais de 
 > versão continuam com o campo, e o renderizador de terminal continua
 > sabendo lê-lo (compatibilidade histórica, não vestígio morto).
 >
-> **(4) Escolha de modelo de narrativa — PENDENTE.** Aguardando a
-> calibração do best-of-3 que o dono do projeto vai rodar
-> (`resultado/best-of-3/CALIBRACAO.md`). Não fechada nesta sessão.
+> **(4) Escolha de modelo de narrativa — FECHADA: `gemini-3.7-flash`,
+> FIXADO em `MODELO_POR_ESTAGIO["narrativa"]` (`config.py`) com versão
+> explícita — nunca o alias `gemini-flash-latest` que o campo carregava
+> como placeholder desde a v1.9.8 (alvo móvel: comparação não reproduzível
+> e preço não ancorável).**
+>
+> Base da decisão — 4 candidatos × 3 filmes sob briefing determinístico
+> (v1.9.8) + correções de prosa (v1.9.9) + cobertura estrutural/parágrafo
+> por grupo (v1.9.10), `resultado/comparacao-narrador/RELATORIO_V199.md`:
+>
+> | candidato | flags totais (3 filmes) | custo/filme | latência |
+> |---|---|---|---|
+> | **gemini-3.7-flash (escolhido)** | **1** | US$0,0037 | ~14s |
+> | gemini-3.1-pro-preview | 2 | US$0,0365 | ~22s |
+> | gemini-2.5-flash | 4 | US$0,0061 | ~17s |
+> | deepseek-baseline | 10 | US$0,0006 | ~7s |
+>
+> **A escolha é por CONFORMIDADE, não por custo** (palavras do dono do
+> projeto). A única flag do 3.7-flash nos 3 filmes é colisão de parágrafo
+> — defeito de FORMA, já coberto por `grupos_sem_paragrafo_proprio`; as dos
+> concorrentes incluem defeito de CONTEÚDO (rótulo de peso ausente,
+> vocabulário do peso misturando "notas" com "reviews"/"público") — a
+> invariante central do produto (§0, §D2). A diferença de custo entre os
+> quatro (~1 centavo por filme no pior caso) não pesou.
+>
+> **Ressalva registrada, não resolvida:** o 3.7-flash é o mais conciso dos
+> quatro, e o movimento 2 de `cure` segue com uma única frase mesmo com o
+> material do briefing completo — a Entrega 3 da v1.9.9 já tinha descartado
+> orçamento e prompt como causa; é escolha de concisão do próprio modelo.
+> Não muda a decisão desta sessão; é o primeiro sintoma a observar se o
+> texto parecer raso quando o catálogo crescer.
 
 
 Etapa **PÓS-síntese**, opcional, controlada pela flag `--tom` (ver abaixo). Uma **única chamada LLM para o filme inteiro** (não por bucket); **o provider é escolhido por ESTÁGIO desde a v1.9.8** (ver §3[D], "Provider por estágio") — não mais forçosamente o mesmo da síntese.
