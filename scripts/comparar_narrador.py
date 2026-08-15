@@ -37,7 +37,9 @@ from espectro24 import synthesize as S  # noqa: E402
 from espectro24.config import PROSA_MAX_TOKENS  # noqa: E402
 
 SAIDA = RAIZ / "resultado" / "comparacao-narrador"
-ARQ = SAIDA / "resultados.json"
+# [v1.9.9] Arquivo NOVO: a rodada da v1.9.8 fica em `resultados.json` e é o
+# ponto de comparação — sobrescrevê-la apagaria o antes das correções.
+ARQ = SAIDA / "resultados-v199.json"
 
 MAX_TENTATIVAS = 3
 
@@ -140,7 +142,7 @@ def cmd_relatorio() -> None:
     print("TABELA MECÂNICA — quem passou nas verificações")
     print("=" * 78)
     print(f"{'filme':<18}{'modelo':<20}{'flags':>6}{'clichês':>8}"
-          f"{'palavras':>10}{'lat(s)':>8}{'US$':>10}")
+          f"{'rep':>5}{'fora':>6}{'par':>5}{'palavras':>10}{'lat(s)':>8}{'US$':>10}")
     tot = {r: {"flags": 0, "speak": 0, "custo": 0.0, "lat": 0.0, "n": 0}
            for r in rotulos}
     for slug, d in dados.items():
@@ -152,7 +154,11 @@ def cmd_relatorio() -> None:
                 print(f"{slug:<18}{rot:<20}{'ERRO':>6}  {m['erro'][:40]}")
                 continue
             v = m["verificacao"]
+            rep = max([r["n"] for r in v.get("quantificador_repetido", [])]
+                      or [0])
             print(f"{slug:<18}{rot:<20}{v['n_flags']:>6}{v['n_resenha_speak']:>8}"
+                  f"{rep:>5}{len(v.get('quantificador_fora_de_faixa', [])):>6}"
+                  f"{v.get('n_paragrafos', 0):>5}"
                   f"{m['n_palavras']:>10}{m['latencia_s']:>8.1f}"
                   f"{m['custo_usd']:>10.5f}")
             t = tot[rot]
@@ -189,6 +195,20 @@ def cmd_relatorio() -> None:
                 problemas.append("ordem dos grupos fora do briefing")
             if v["vocabulario_peso"]:
                 problemas.append("vocabulário do peso (reviews/público)")
+            if v.get("quantificador_fora_de_faixa"):
+                problemas.append("quantificador fora da faixa medida: "
+                                 f"{v['quantificador_fora_de_faixa']}")
+            if v.get("quantificador_repetido"):
+                exprs = ", ".join(f"{r['construcao']}×{r['n']}"
+                                  for r in v["quantificador_repetido"])
+                problemas.append(f"construção repetida (teto 2): {exprs}")
+            if v.get("paragrafos_insuficientes"):
+                problemas.append(
+                    f"parágrafos: {v['paragrafos']['n_paragrafos']} "
+                    f"(mínimo {v['paragrafos']['minimo']}, um por movimento)")
+            if v.get("paragrafos_longos"):
+                problemas.append(f"parágrafo acima de 180 palavras: "
+                                 f"{v['paragrafos_longos']}")
             if v["resenha_speak"]:
                 exprs = ", ".join(f"{a['expressao']}×{a['n']}"
                                   for a in v["resenha_speak"])
