@@ -19,12 +19,23 @@ from espectro24.render import (
     build_output,
     render_terminal,
 )
+# [v1.9.11] O narrador PRÉ-BRIEFING foi arquivado
+# (`experimentos-narrador-antigo-arquivado/narrador_antigo.py`, ver SPEC.md
+# "Integração"). Os testes deste arquivo que o exercitam continuam aqui —
+# eles cobrem a maquinaria de honestidade COMPARTILHADA, que segue viva em
+# `synthesize.py` — e importam o narrador antigo de onde ele está agora.
+import sys as _sys
+from pathlib import Path as _Path
+_sys.path.insert(0, str(_Path(__file__).resolve().parent.parent
+                        / "experimentos-narrador-antigo-arquivado"))
 from espectro24.synthesize import (
-    NARRATOR_SYSTEM_PROMPT,
     _rotulo_peso,
     _rotulo_peso_completo,
-    _serialize_output_for_narrator,
     _vocabulario_peso_ok,
+)
+from narrador_antigo import (  # noqa: E402
+    NARRATOR_SYSTEM_PROMPT,
+    _serialize_output_for_narrator,
     build_narrator_prompt,
     narrate_output,
 )

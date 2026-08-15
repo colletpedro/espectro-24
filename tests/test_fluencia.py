@@ -15,9 +15,16 @@ from conftest import fx
 from espectro24.models import BucketResult, Distribuicao, LevelResult, Review, Tema
 from espectro24.parser import parse_rating_histogram
 from espectro24.render import build_output, render_terminal
+# [v1.9.11] O narrador PRÉ-BRIEFING foi arquivado
+# (`experimentos-narrador-antigo-arquivado/narrador_antigo.py`, ver SPEC.md
+# "Integração"). Os testes deste arquivo que o exercitam continuam aqui —
+# eles cobrem a maquinaria de honestidade COMPARTILHADA, que segue viva em
+# `synthesize.py` — e importam o narrador antigo de onde ele está agora.
+import sys as _sys
+from pathlib import Path as _Path
+_sys.path.insert(0, str(_Path(__file__).resolve().parent.parent
+                        / "experimentos-narrador-antigo-arquivado"))
 from espectro24.synthesize import (
-    NARRATOR_SYSTEM_PROMPT,
-    NARRATOR_SYSTEM_PROMPT_COM_DISTRIBUICAO,
     _ancora_de_grupo,
     _ancoragem_de_peso_ok,
     _dominante_share,
@@ -25,6 +32,10 @@ from espectro24.synthesize import (
     _marcacoes_por_bucket,
     _marcadores_validos,
     _metricas_fluencia,
+)
+from narrador_antigo import (  # noqa: E402
+    NARRATOR_SYSTEM_PROMPT,
+    NARRATOR_SYSTEM_PROMPT_COM_DISTRIBUICAO,
     build_narrator_prompt,
     narrate_output,
 )
@@ -314,7 +325,7 @@ def _output_com_distribuicao():
 
 
 def test_narrador_recebe_marcacao_perspectiva_na_serializacao():
-    from espectro24.synthesize import _serialize_output_for_narrator
+    from narrador_antigo import _serialize_output_for_narrator
     ser = _serialize_output_for_narrator(_output_com_distribuicao())
     assert 'marcacao_perspectiva: "antecipada"' in ser  # negativas, 3%
     assert 'marcacao_perspectiva: "simples"' in ser      # medianas, 17%

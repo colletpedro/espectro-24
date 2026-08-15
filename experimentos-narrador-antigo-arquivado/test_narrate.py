@@ -4,20 +4,36 @@ Garante que: (1) o narrador recebe SÓ o JSON validado (reviews brutas nunca
 entram no prompt); (2) as validações de prosa (idioma/aspas/escopo) funcionam
 com as mesmas flags; (3) modo degradado (sem_analise) narra a escassez sem
 inventar temas.
+
+ARQUIVADO na v1.9.11 junto com o narrador pré-briefing que ele testa (ver
+`narrador_antigo.py` e SPEC.md, "Integração"). Movido de `tests/` para cá;
+não roda mais em `pytest tests/`. Continua executável isoladamente
+(`pytest experimentos-narrador-antigo-arquivado/`), preservado para leitura
+e para não perder a cobertura histórica do estágio.
 """
+import sys
+from pathlib import Path
+
 import pytest
 
-from espectro24.models import BucketResult, LevelResult, Review, Tema
-from espectro24.render import build_output
-from espectro24.synthesize import (
+RAIZ = Path(__file__).resolve().parent.parent
+sys.path.insert(0, str(RAIZ / "src"))
+sys.path.insert(0, str(RAIZ / "tests"))                    # conftest compartilhado
+sys.path.insert(0, str(Path(__file__).resolve().parent))   # `narrador_antigo`
+
+from espectro24.models import BucketResult, LevelResult, Review, Tema  # noqa: E402
+from espectro24.render import build_output  # noqa: E402
+from espectro24.synthesize import (  # noqa: E402
+    _fracao_e_rotulo,
+    _rotulo_quantificador,
+    conferencia_quantificador,
+)
+from narrador_antigo import (  # noqa: E402
     NARRATOR_SYSTEM_PROMPT,
     _forca_declarada,
-    _fracao_e_rotulo,
     _fracao_percentual,
     _quantificadores_validos,
-    _rotulo_quantificador,
     _serialize_output_for_narrator,
-    conferencia_quantificador,
     narrate_output,
 )
 
@@ -731,7 +747,7 @@ def test_regressao_the_invite_quase_todos_com_lastro_de_outro_tema():
     out = build_output("the-invite-2026", buckets, "2026-01-01", {}, 100)
 
     # a rede de bucket sozinha não flagga (há tema >= 80% no filme)
-    from espectro24.synthesize import _algum_tema_tem_fracao_forte
+    from narrador_antigo import _algum_tema_tem_fracao_forte
     assert _algum_tema_tem_fracao_forte(out) is True
 
     systems = []
@@ -786,7 +802,7 @@ def test_prompt_autoriza_explicitamente_a_omissao_do_movimento_2():
 
 
 def test_prompt_autoriza_omissao_nas_duas_variantes_da_regra_c():
-    from espectro24.synthesize import build_narrator_prompt
+    from narrador_antigo import build_narrator_prompt
     for com_dist in (False, True):
         assert "OMISSÃO AUTORIZADA" in build_narrator_prompt(com_dist)
 

@@ -67,12 +67,14 @@ from compare_models import (  # noqa: E402  (harness existente — REUSO)
 )
 from diagnostico_fluencia import checar_contaminacao  # noqa: E402  (REUSO)
 
-from espectro24.synthesize import (  # noqa: E402
-    LLMError,
-    _parse_llm_json,
-    build_narrator_prompt,
-    narrate_output,
-)
+# [v1.9.11] `build_narrator_prompt`/`narrate_output` são do narrador
+# PRÉ-BRIEFING, arquivado nesta versão (SPEC.md, "Integração"). Este script é
+# um diagnóstico HISTÓRICO — o objeto de estudo dele É aquele narrador —,
+# então ele continua apontando para o código arquivado, e não para o
+# narrador de produção (`espectro24.narrador`), que tem outro desenho.
+sys.path.insert(0, str(ROOT / "experimentos-narrador-antigo-arquivado"))
+from espectro24.synthesize import LLMError, _parse_llm_json  # noqa: E402
+from narrador_antigo import build_narrator_prompt, narrate_output  # noqa: E402
 
 OUT_DIR = ROOT / "resultado" / "diagnostico_fluencia" / "v2"
 FILMES = ["the-invite-2026", "cure"]
