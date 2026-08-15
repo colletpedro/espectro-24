@@ -180,6 +180,39 @@ class NarrativaResult:
     metricas_fluencia: dict = field(default_factory=dict)
 
 
+@dataclass
+class NarrativaBriefingResult:
+    """[v1.9.11] Saída do narrador de PRODUÇÃO (briefing + best-of-3).
+
+    Substitui `NarrativaResult` no caminho de produção. A diferença de
+    conteúdo é a diferença de ARQUITETURA entre os dois narradores: o antigo
+    pedia ao LLM que DECLARASSE o que tinha feito (`consensos_usados`,
+    `quantificadores_usados`, `marcadores_perspectiva`) e validava a
+    declaração; o novo não pede declaração nenhuma — o código já decidiu
+    tudo no briefing, e a verificação roda sobre o TEXTO
+    (`qualidade.verificar`).
+
+    `candidatos` guarda as N narrativas geradas (as perdedoras inclusive) —
+    é o que torna a escolha auditável em memória. O que vai para o JSON de
+    resultado é só a MÉTRICA de cada uma (ver `narrador.telemetria_para_json`).
+    """
+    texto: str                     # a narrativa ESCOLHIDA (ou "" se falhou)
+    falhou: bool = False           # nenhuma das N amostras devolveu texto
+    briefing: dict = field(default_factory=dict)
+    candidatos: list = field(default_factory=list)
+    escolha: dict | None = None    # saída de `selecao_narrativa.selecionar`
+    retry: dict | None = None      # retry direcionado, quando houve
+    verificacao: dict = field(default_factory=dict)  # `qualidade.verificar`
+    provider: str = ""
+    modelo: str = ""
+    # Custo do estágio INTEIRO, não da chamada vencedora: `BEST_OF_N`
+    # chamadas por filme (mais uma no pior caso, com o retry). Somar é o que
+    # impede o custo real do best-of-3 de ficar invisível no JSON.
+    n_chamadas: int = 0
+    uso: dict = field(default_factory=dict)
+    latencia_s: float = 0.0
+
+
 # `EdicaoResult` (saída da etapa [E2]) foi removida daqui na v1.9.10 — o
 # editor foi APOSENTADO (ver SPEC.md, "Fechamento do narrador"). A classe
 # vive agora em `experimentos-editor-e2-arquivado/editor.py`, junto com o

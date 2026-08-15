@@ -10,6 +10,7 @@ from pathlib import Path
 from dotenv import load_dotenv
 
 from .config import (
+    BEST_OF_N,
     COTA_POR_BUCKET,
     DADOS_BRUTO_DIR,
     DEFAULT_PROVIDER,
@@ -29,10 +30,8 @@ from .render import (
     render_terminal,
     write_json,
 )
-from .synthesize import (
-    ProviderError,
-    narrate_output,
-)
+from .narrador import narrar, telemetria_para_json
+from .synthesize import ProviderError
 
 
 def _parse_args(argv):
@@ -264,33 +263,33 @@ def main(argv=None):
                 print(f"⚠️  Ficha TMDB: {aviso_ficha}", file=sys.stderr)
 
     # --- [D2] narração (etapa pós-síntese) ---
+    # v1.9.11: o caminho de produção passa a ser o BRIEFING DETERMINÍSTICO +
+    # BEST-OF-3 (`narrador.narrar`). Até a v1.9.10 aqui vivia
+    # `narrate_output`, o narrador pré-briefing — e todo o trabalho das três
+    # versões anteriores rodava só em `scripts/best_of_3.py`, fora do
+    # produto. Custo declarado: `BEST_OF_N` chamadas por filme (4 no pior
+    # caso, com o retry direcionado) contra 1 de antes.
     if vai_narrar:
-        print("Gerando narrativa (1 chamada LLM)...", file=sys.stderr)
-        res = narrate_output(output, model=args.model, provider=args.provider)
+        print(f"Gerando narrativa ({BEST_OF_N} chamadas LLM — best-of-"
+              f"{BEST_OF_N})...", file=sys.stderr)
+        res = narrar(output, provider=args.provider, model=args.model)
         output["narrativa"] = res.texto
-        # v1.3.1: consensos_usados fica junto de narrativa (mesmo bloco
-        # lógico) — artefato de revisão humana do MOVIMENTO 2.
-        output["consensos_usados"] = res.consensos_usados
-        # v1.4.1: quantificadores_usados segue o mesmo padrão — telemetria
-        # par a par do MOVIMENTO 3, conferível contra a fração real.
-        output["quantificadores_usados"] = res.quantificadores_usados
-        # v1.5.0: marcadores_perspectiva e metricas_fluencia seguem o mesmo
-        # padrão — telemetria persistida como campo global, ao lado da
-        # narrativa que ela descreve.
-        output["marcadores_perspectiva"] = res.marcadores_perspectiva
-        output["metricas_fluencia"] = res.metricas_fluencia
-        output["narrativa_flags"] = {
-            "idioma_invalido": res.idioma_invalido,
-            "escopo_suspeito": res.escopo_suspeito,
-            "prevalencia_suspeita": res.prevalencia_suspeita,
-            "quantificador_suspeito": res.quantificador_suspeito,
-            "consenso_suspeito": res.consenso_suspeito,
-            "peso_nao_ancorado": res.peso_nao_ancorado,
-            "vocabulario_peso_suspeito": res.vocabulario_peso_suspeito,
-            "perspectiva_nao_marcada": res.perspectiva_nao_marcada,
-            "aspas_removidas": res.aspas_removidas,
-            "falhou": res.falhou,
-        }
+        # As flags MECÂNICAS, computadas sobre o texto (não declaradas pelo
+        # LLM, como eram as do narrador antigo — sob briefing ele não
+        # declara nada, só escreve prosa).
+        output["verificacao_narrativa"] = res.verificacao
+        # O registro da escolha do best-of-3 — sem o briefing (função
+        # determinística do próprio output) e sem os textos perdedores.
+        output["narrativa_selecao"] = telemetria_para_json(res)
+        if res.falhou:
+            print("⚠️  Narrativa: nenhuma das amostras devolveu texto.",
+                  file=sys.stderr)
+        else:
+            v = res.verificacao
+            print(f"  narrativa: candidato #{res.escolha['indice']} "
+                  f"({res.escolha['motivo']}/{res.escolha['criterio_decisivo']}) "
+                  f"· {v['n_flags']} flags · {v['n_resenha_speak']} clichês",
+                  file=sys.stderr)
 
     # O editor [E2] foi APOSENTADO na v1.9.10 (SPEC.md, "Fechamento do
     # narrador") — código arquivado em `experimentos-editor-e2-arquivado/`.

@@ -486,3 +486,26 @@ def test_material_do_movimento2_e_escopado_na_serializacao():
     ser = br.serializar_briefing(br.montar_briefing(_output()))
     assert "MOVIMENTO 2" in ser
     assert "movimento 3" in ser.lower()
+
+
+# ============================================================ v1.9.11
+# Entrega 3 — o briefing AUTORIZA a contração da preposição
+#
+# Defeito real (`cidade-de-deus`, v1.9.10): "Em a grande maioria das notas
+# (~91%)". O modelo obedeceu à instrução de escrever o rótulo LITERALMENTE
+# e produziu português agramatical. A correção primária é aqui: dizer a ele
+# que pode contrair.
+# ============================================================
+
+def test_serializacao_autoriza_a_contracao_do_artigo():
+    ser = br.serializar_briefing(br.montar_briefing(_output()))
+    assert "contra" in ser.lower()
+    # cita ao menos uma contração concreta, para não ser regra abstrata
+    assert "na " in ser or "da " in ser
+
+
+def test_prompt_autoriza_contrair_sem_afrouxar_numero_nem_notas():
+    p = br.PROMPT_NARRADOR_BRIEFING
+    assert "contra" in p.lower()
+    # a invariante segue escrita: número e "das notas" continuam intocáveis
+    assert "das notas" in p

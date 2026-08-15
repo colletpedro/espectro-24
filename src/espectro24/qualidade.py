@@ -69,8 +69,14 @@ def _texto_sem_rotulos_de_peso(texto: str, briefing: dict | None) -> str:
         return texto
     for g in (briefing.get("grupos") or {}).values():
         rot = g.get("rotulo_peso")
-        if rot:
-            texto = re.sub(re.escape(rot), " ", texto, flags=re.IGNORECASE)
+        if not rot:
+            continue
+        # v1.9.11: remove também as CONTRAÇÕES pré-aprovadas — senão o
+        # "a maioria" dentro de "na maioria das notas (~80%)" volta a ser
+        # contado como construção quantificadora, e o texto é punido por
+        # ter escrito exatamente o que o briefing autorizou.
+        for forma in variantes_rotulo(rot):
+            texto = re.sub(re.escape(forma), " ", texto, flags=re.IGNORECASE)
     return texto
 
 
@@ -192,10 +198,11 @@ def paragrafos_por_grupo(texto: str, briefing: dict) -> dict[str, int | None]:
     resultado: dict[str, int | None] = {}
     for nome in briefing.get("movimento3", {}).get("ordem", []):
         rot = (briefing.get("grupos", {}).get(nome) or {}).get("rotulo_peso")
-        idx_char = texto.find(rot) if rot else -1
-        if idx_char == -1:
+        occ = ocorrencia_rotulo(texto, rot) if rot else None
+        if occ is None:
             resultado[nome] = None
             continue
+        idx_char = occ[0]
         resultado[nome] = next(
             (i for i, (ini, fim) in enumerate(limites) if ini <= idx_char <= fim),
             None)
@@ -326,16 +333,87 @@ def numeros_inventados(texto: str, permitidos: set[str]) -> set[str]:
     return tokens_numericos(texto) - set(permitidos)
 
 
+# [v1.9.11] Contrações PRÉ-APROVADAS do artigo inicial do rótulo de peso.
+#
+# Defeito real, narrativa final de `cidade-de-deus` (v1.9.10): "Em a grande
+# maioria das notas (~91%)". Colisão entre duas regras CORRETAS — o rótulo é
+# preservado LITERALMENTE (invariante desde a v1.6.0, é o que impede o peso
+# de virar retórica solta) e o português contrai "em + a" → "na". O modelo
+# obedeceu à invariante e escreveu agramatical.
+#
+# A invariante NÃO é afrouxada: o número e a palavra "notas" seguem
+# intocáveis, e só o ARTIGO INICIAL varia, só para estas formas. Um rótulo
+# que não começa com artigo ("boa parte das notas…") não ganha variante
+# nenhuma — "em boa parte" já é a forma correta.
+_CONTRACOES_ARTIGO = {
+    "a": ("na", "da", "à", "pela"),        # em/de/a/por + a
+    "uma": ("numa", "duma"),               # em/de + uma
+}
+
+
+def variantes_rotulo(rotulo: str) -> list[str]:
+    """O rótulo e suas contrações pré-aprovadas, na ordem (literal primeiro).
+
+    Só o PRIMEIRO token é trocado, e só quando ele é um artigo com contração
+    listada — nunca um prefixo qualquer.
+    """
+    if not rotulo:
+        return []
+    primeira, _, resto = rotulo.partition(" ")
+    contracoes = _CONTRACOES_ARTIGO.get(primeira.lower(), ())
+    return [rotulo] + [f"{c} {resto}" for c in contracoes]
+
+
+def _variante_primeira_letra(s: str) -> str:
+    """Mesma tolerância que o editor tinha (§E2, v1.7.1): a INICIAL pode
+    mudar de caixa (rótulo em início de período), nenhuma outra letra pode."""
+    return (s[:1].upper() + s[1:]) if s and s[:1].islower() else (
+        s[:1].lower() + s[1:])
+
+
+def _formas_do_rotulo(rotulo: str) -> list[str]:
+    """Toda forma aceita como PRESERVAÇÃO do rótulo: as contrações
+    pré-aprovadas, cada uma também com a inicial na outra caixa."""
+    formas = []
+    for v in variantes_rotulo(rotulo):
+        formas.append(v)
+        alt = _variante_primeira_letra(v)
+        if alt != v:
+            formas.append(alt)
+    return formas
+
+
+def ocorrencia_rotulo(texto: str, rotulo: str) -> tuple[int, int] | None:
+    """`(início, fim)` da primeira forma aceita do rótulo em `texto`.
+
+    Ponto ÚNICO de âncora do rótulo de peso — usado por `rotulos_peso_faltando`,
+    `ordem_dos_grupos_ok`, `paragrafos_por_grupo`, `_texto_sem_rotulos_de_peso`
+    e por `selecao_narrativa.spans_por_grupo`. Se cada um procurasse à sua
+    maneira, uma contração aceita por um seria invisível para outro — e um
+    grupo escrito como "na maioria das notas (~80%)" sumiria da verificação
+    de ordem enquanto passava na de presença.
+    """
+    melhor = None
+    for forma in _formas_do_rotulo(rotulo):
+        i = texto.find(forma)
+        if i != -1 and (melhor is None or i < melhor[0]):
+            melhor = (i, i + len(forma))
+    return melhor
+
+
 def rotulos_peso_faltando(texto: str, briefing: dict) -> list[str]:
     """Rótulos de peso que o briefing manda escrever e não estão no texto.
 
     Comparação literal — é o mesmo estatuto dos "trechos protegidos" de §E2:
     o rótulo COM o percentual é o que impede o peso de virar retórica solta.
+    v1.9.11: "literal" passa a incluir as contrações pré-aprovadas do artigo
+    inicial (ver `variantes_rotulo`) e a inicial em qualquer caixa — número e
+    a palavra "notas" continuam intocáveis.
     """
     faltando = []
     for nome in briefing.get("movimento3", {}).get("ordem", []):
         rot = (briefing.get("grupos", {}).get(nome) or {}).get("rotulo_peso")
-        if rot and rot not in texto:
+        if rot and ocorrencia_rotulo(texto, rot) is None:
             faltando.append(rot)
     return faltando
 
@@ -351,8 +429,9 @@ def ordem_dos_grupos_ok(texto: str, briefing: dict) -> bool:
     posicoes = []
     for nome in briefing.get("movimento3", {}).get("ordem", []):
         rot = (briefing.get("grupos", {}).get(nome) or {}).get("rotulo_peso")
-        if rot and rot in texto:
-            posicoes.append(texto.index(rot))
+        occ = ocorrencia_rotulo(texto, rot) if rot else None
+        if occ:
+            posicoes.append(occ[0])
     return posicoes == sorted(posicoes)
 
 

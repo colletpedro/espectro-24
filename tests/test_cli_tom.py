@@ -13,7 +13,13 @@ import json
 import pytest
 
 from espectro24 import cli
-from espectro24.models import BucketResult, LevelResult, NarrativaResult, Review, Tema
+from espectro24.models import (
+    BucketResult,
+    LevelResult,
+    NarrativaBriefingResult,
+    Review,
+    Tema,
+)
 from espectro24.render import build_output
 
 
@@ -43,15 +49,22 @@ def _iso_env(monkeypatch):
     monkeypatch.delenv("ANTHROPIC_API_KEY", raising=False)
 
 
-def _mock_narrate(monkeypatch, consensos_usados=None):
+def _mock_narrate(monkeypatch, verificacao=None):
+    """v1.9.11: o CLI chama `narrador.narrar` (briefing + best-of-3), não
+    mais `narrate_output`. O dublê devolve o mesmo formato de resultado."""
     calls = []
 
-    def fake(output, model=None, provider=None):
+    def fake(output, provider=None, model=None):
         calls.append(output)
-        return NarrativaResult(texto="PROSA_MOCK", idioma_invalido=False,
-                               escopo_suspeito=False, aspas_removidas=False,
-                               consensos_usados=consensos_usados or [])
-    monkeypatch.setattr(cli, "narrate_output", fake)
+        return NarrativaBriefingResult(
+            texto="PROSA_MOCK",
+            escolha={"indice": 0, "motivo": "melhor_entre_limpos",
+                     "criterio_decisivo": "ritmo", "candidatos": []},
+            verificacao=verificacao or {"n_flags": 0, "n_resenha_speak": 0},
+            candidatos=["PROSA_MOCK"], provider="gemini", modelo="m",
+            n_chamadas=3, uso={"prompt_tokens": 1, "completion_tokens": 2},
+            latencia_s=1.0)
+    monkeypatch.setattr(cli, "narrar", fake)
     return calls
 
 
@@ -88,7 +101,12 @@ def test_tom_ambos_chama_narrador_e_persiste_no_json(tmp_path, monkeypatch, _iso
     # narrativa persistida no JSON
     salvo = json.loads((tmp_path / "cure.json").read_text(encoding="utf-8"))
     assert salvo["narrativa"] == "PROSA_MOCK"
-    assert salvo["narrativa_flags"]["falhou"] is False
+    # v1.9.11: `narrativa_flags` (as flags DECLARADAS pelo narrador antigo)
+    # dá lugar às flags MECÂNICAS + ao registro da escolha do best-of-3.
+    assert "narrativa_flags" not in salvo
+    assert salvo["verificacao_narrativa"]["n_flags"] == 0
+    assert salvo["narrativa_selecao"]["motivo"] == "melhor_entre_limpos"
+    assert salvo["narrativa_selecao"]["n_chamadas"] == 3
 
 
 def test_reuse_sem_json_existente_falha(tmp_path, monkeypatch, _iso_env):
@@ -127,20 +145,23 @@ def test_ficha_falha_da_api_nao_quebra_pipeline(tmp_path, monkeypatch, _iso_env,
 
 # --- v1.3.1: consensos_usados persiste no JSON e aparece no render ---
 
-def test_consensos_usados_persiste_no_json_e_renderiza(tmp_path, monkeypatch, _iso_env, capsys):
+def test_telemetria_do_best_of_3_persiste_e_renderiza(tmp_path, monkeypatch,
+                                                     _iso_env, capsys):
+    """v1.9.11: `consensos_usados` era DECLARADO pelo narrador antigo (o
+    teste correspondente foi para o arquivo dele). Sob briefing o narrador
+    não declara nada — a telemetria que importa é a da ESCOLHA."""
     _escreve_json(tmp_path)
-    consensos = [{"propriedade": "ritmo lento", "grupos_de_origem": ["negativas", "positivas"],
-                 "temas_de_origem": ["ritmo"]}]
-    _mock_narrate(monkeypatch, consensos_usados=consensos)
+    _mock_narrate(monkeypatch, verificacao={"n_flags": 0, "n_resenha_speak": 0,
+                                            "n_paragrafos": 5})
     monkeypatch.setattr(cli, "buscar_ficha", lambda *a, **k: (None, None, None))
     cli.main(["--slug", "cure", "--reuse-synthesis", "--out-dir", str(tmp_path),
               "--tom", "narrativo"])
     salvo = json.loads((tmp_path / "cure.json").read_text(encoding="utf-8"))
-    assert salvo["consensos_usados"] == consensos
-    assert salvo["narrativa_flags"]["consenso_suspeito"] is False
+    assert salvo["narrativa_selecao"]["indice_escolhido"] == 0
+    assert salvo["narrativa_selecao"]["criterio_decisivo"] == "ritmo"
+    assert salvo["verificacao_narrativa"]["n_paragrafos"] == 5
     out = capsys.readouterr().out
-    assert "Consensos do movimento 2:" in out
-    assert "ritmo lento" in out
+    assert "best-of" in out.lower() or "candidato" in out.lower()
 
 
 def test_no_ficha_pula_a_busca(tmp_path, monkeypatch, _iso_env, capsys):

@@ -397,3 +397,136 @@ def test_verificar_reporta_movimento3_em_bloco_unico():
     v = q.verificar(texto, b)
     assert v["grupos_sem_paragrafo_proprio"]
     assert v["n_flags"] >= 1
+
+
+# ============================================================ v1.9.11
+# Entrega 3 — a preposição do rótulo de peso
+#
+# Defeito real na narrativa final de `cidade-de-deus` (v1.9.10): "Em a
+# grande maioria das notas (~91%)". Colisão entre duas regras CORRETAS: o
+# rótulo é preservado LITERALMENTE (invariante desde a v1.6.0) e o
+# português contrai "em + a" → "na". O modelo obedeceu e escreveu
+# agramatical.
+# ============================================================
+
+def _briefing_rotulo(rotulo="a grande maioria das notas (~91%)"):
+    return {"movimento3": {"ordem": ["positivas"]},
+            "grupos": {"positivas": {"rotulo_peso": rotulo,
+                                     "permissoes": {"pode_citar_temas": True},
+                                     "temas": [{"tema": "t", "faixa": "muitos"}]}},
+            "orcamento_frases": {"movimento1": (2, 3), "movimento2": (0, 5),
+                                 "movimento3": (4, 8)}}
+
+
+@pytest.mark.parametrize("escrito", [
+    "a grande maioria das notas (~91%)",      # literal
+    "na grande maioria das notas (~91%)",     # em + a
+    "da grande maioria das notas (~91%)",     # de + a
+    "à grande maioria das notas (~91%)",      # a + a  (crase: NÃO é substring)
+    "pela grande maioria das notas (~91%)",   # por + a
+])
+def test_contracao_pre_aprovada_conta_como_rotulo_presente(escrito):
+    """A correção: o modelo não precisa escolher entre obedecer à
+    invariante e escrever português.
+
+    Nota de medição: `na`/`da`/`pela` já passavam ANTES desta versão, por
+    ACIDENTE — a checagem é `rotulo in texto`, e "na grande maioria…"
+    contém "a grande maioria…" como substring. Só a CRASE ("à") quebrava,
+    porque "à" ≠ "a". O acidente não é garantia, e é o que este teste
+    transforma em contrato.
+    """
+    b = _briefing_rotulo()
+    assert q.rotulos_peso_faltando(f"Texto. {escrito} elogia o filme.", b) == []
+
+
+def test_variantes_listam_so_contracoes_do_artigo_que_existe():
+    """O conjunto é PRÉ-APROVADO, não "qualquer prefixo": um rótulo que
+    começa com artigo definido ganha as contrações dele; um que não começa
+    com artigo nenhum não ganha variante inventada."""
+    com_artigo = q.variantes_rotulo("a grande maioria das notas (~91%)")
+    assert "à grande maioria das notas (~91%)" in com_artigo
+    assert "na grande maioria das notas (~91%)" in com_artigo
+
+    sem_artigo = q.variantes_rotulo("boa parte das notas (~40%)")
+    assert sem_artigo == ["boa parte das notas (~40%)"]
+
+    # e toda variante preserva número e a palavra "notas"
+    for v in com_artigo:
+        assert "notas (~91%)" in v
+
+
+def test_primeira_letra_em_qualquer_caixa_continua_valendo():
+    """Mesma regra que o editor tinha (v1.7.1): a INICIAL pode mudar de
+    caixa (início de período), nenhuma outra letra pode."""
+    b = _briefing_rotulo()
+    assert q.rotulos_peso_faltando("A grande maioria das notas (~91%) elogia.", b) == []
+    assert q.rotulos_peso_faltando("Na grande maioria das notas (~91%) elogia.", b) == []
+
+
+def test_o_NUMERO_continua_intocavel():
+    """Só o artigo inicial varia. Trocar o percentual é violação, com ou
+    sem contração."""
+    b = _briefing_rotulo()
+    assert q.rotulos_peso_faltando("na grande maioria das notas (~90%) elogia.", b)
+    assert q.rotulos_peso_faltando("a grande maioria das notas (~90%) elogia.", b)
+
+
+def test_a_palavra_notas_continua_intocavel():
+    """A invariante de vocabulário do peso (v1.4.1) não é afrouxada pela
+    contração."""
+    b = _briefing_rotulo()
+    assert q.rotulos_peso_faltando("na grande maioria das reviews (~91%) elogia.", b)
+
+
+def test_contracao_de_artigo_indefinido():
+    """`uma parcela` / `uma fração mínima` contraem com em/de: numa, duma."""
+    b = _briefing_rotulo("uma parcela das notas (~17%)")
+    for escrito in ("uma parcela das notas (~17%)",
+                    "numa parcela das notas (~17%)",
+                    "duma parcela das notas (~17%)"):
+        assert q.rotulos_peso_faltando(f"Texto. {escrito} discorda.", b) == [], escrito
+
+
+def test_rotulo_sem_artigo_passa_com_preposicao_solta():
+    """`boa parte` não contrai — "em boa parte" já é a forma correta, e o
+    rótulo aparece literal. Nada a fazer aqui, e o teste existe para travar
+    que a mudança não introduziu exigência nova nesse caso."""
+    b = _briefing_rotulo("boa parte das notas (~40%)")
+    assert q.rotulos_peso_faltando("Em boa parte das notas (~40%) há elogio.", b) == []
+
+
+def test_a_contracao_nao_quebra_a_ordem_dos_grupos():
+    """Todo consumidor da âncora do rótulo tem de enxergar a contração —
+    senão um grupo escrito com "na…" some da verificação de ORDEM."""
+    b = {"movimento3": {"ordem": ["positivas", "negativas"]},
+         "grupos": {"positivas": {"rotulo_peso": "a maioria das notas (~80%)"},
+                    "negativas": {"rotulo_peso": "uma fração mínima das notas (~5%)"}}}
+    bom = "Na maioria das notas (~80%) há elogio. Numa fração mínima das notas (~5%), crítica."
+    ruim = "Numa fração mínima das notas (~5%), crítica. Na maioria das notas (~80%) há elogio."
+    assert q.ordem_dos_grupos_ok(bom, b)
+    assert not q.ordem_dos_grupos_ok(ruim, b)
+
+
+def test_a_contracao_nao_quebra_o_paragrafo_por_grupo():
+    b = {"movimento3": {"ordem": ["positivas", "negativas"]},
+         "grupos": {
+             "positivas": {"rotulo_peso": "a maioria das notas (~80%)",
+                           "permissoes": {"pode_citar_temas": True}, "temas": [{"tema": "t"}]},
+             "negativas": {"rotulo_peso": "uma fração mínima das notas (~5%)",
+                           "permissoes": {"pode_citar_temas": True}, "temas": [{"tema": "u"}]}}}
+    texto = ("Abertura.\n\nNa maioria das notas (~80%) há elogio.\n\n"
+             "Numa fração mínima das notas (~5%), crítica.")
+    assert q.paragrafos_por_grupo(texto, b) == {"positivas": 1, "negativas": 2}
+    assert q.grupos_sem_paragrafo_proprio(texto, b) == []
+
+
+def test_a_contracao_nao_vira_repeticao_de_quantificador():
+    """`_texto_sem_rotulos_de_peso` tem de remover a forma CONTRAÍDA também
+    — senão o "a maioria" dentro de "na maioria das notas (~80%)" é contado
+    como construção quantificadora e o texto é punido por obedecer."""
+    b = {"movimento3": {"ordem": ["positivas"]},
+         "grupos": {"positivas": {"rotulo_peso": "a maioria das notas (~80%)",
+                                  "temas": [{"tema": "t", "faixa": "a maioria"}]}}}
+    texto = ("Na maioria das notas (~80%) há elogio. A maioria cita o ritmo, "
+             "e a maioria destaca a fotografia.")
+    assert q.quantificadores_repetidos(texto, briefing=b) == []

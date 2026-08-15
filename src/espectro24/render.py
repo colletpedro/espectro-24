@@ -236,6 +236,65 @@ def render_terminal(output: dict, tom: str = "estruturado") -> str:
             L.append(narrativa)
         else:
             L.append("(narrativa não gerada)")
+
+        # v1.9.11: telemetria do narrador SOB BRIEFING (best-of-N + flags
+        # mecânicas). Os blocos antigos abaixo (`narrativa_flags`,
+        # `consensos_usados`, `quantificadores_usados`,
+        # `marcadores_perspectiva`) continuam vivos porque
+        # `resultado/*.json` publicados ANTES desta versão os têm — não é
+        # vestígio morto, é compatibilidade histórica.
+        verif = output.get("verificacao_narrativa") or {}
+        selecao = output.get("narrativa_selecao") or {}
+        if verif or selecao:
+            L.append("")
+            if selecao:
+                idx, motivo = (selecao.get("indice_escolhido"),
+                               selecao.get("motivo"))
+                L.append(f"Narrativa [D2]: best-of-{selecao.get('n_candidatos')} "
+                         f"· candidato #{idx} escolhido por código "
+                         f"({motivo} / {selecao.get('criterio_decisivo')}) "
+                         f"· {selecao.get('n_chamadas')} chamada(s) "
+                         f"· {selecao.get('modelo')}")
+                for c in selecao.get("candidatos") or []:
+                    marca = "→" if c.get("indice") == idx else " "
+                    L.append(f"    {marca} #{c.get('indice')}: "
+                             f"{c.get('n_flags')} flags · "
+                             f"{c.get('cliches')} clichês · "
+                             f"rep.máx {c.get('repeticao_max')} · "
+                             f"ritmo {c.get('ritmo')} · "
+                             f"cobertura {c.get('cobertura')}"
+                             + ("  (eliminado)" if c.get("eliminado") else ""))
+                r = selecao.get("retry")
+                if r:
+                    L.append(f"    retry direcionado em "
+                             f"{r.get('n_frases_infratoras')} frase(s) "
+                             f"{r.get('motivos')} — "
+                             + ("APLICADO" if r.get("aplicado")
+                                else "descartado (não melhorou)"))
+            if verif:
+                L.append(f"  verificação mecânica: {verif.get('n_flags')} flags · "
+                         f"{verif.get('n_resenha_speak')} clichês · "
+                         f"{verif.get('n_paragrafos')} parágrafos")
+                for rotulo, chave in (
+                        ("formato embrulhado (JSON/markdown)", "formato_invalido"),
+                        ("ordem dos grupos fora do briefing", "ordem_incorreta"),
+                        ("vocabulário do peso (reviews/público)", "vocabulario_peso")):
+                    if verif.get(chave):
+                        L.append(f"    ⚠️  {rotulo}")
+                for rotulo, chave in (
+                        ("números inventados", "numeros_inventados"),
+                        ("rótulo de peso ausente", "rotulos_faltando"),
+                        ("quantificador fora da faixa", "quantificador_fora_de_faixa"),
+                        ("construção repetida (teto 2)", "quantificador_repetido"),
+                        ("parágrafo acima do teto", "paragrafos_longos"),
+                        ("movimento 3 sem parágrafo por grupo",
+                         "grupos_sem_paragrafo_proprio")):
+                    if verif.get(chave):
+                        L.append(f"    ⚠️  {rotulo}: {verif[chave]}")
+                if verif.get("paragrafos_insuficientes"):
+                    par = verif.get("paragrafos") or {}
+                    L.append(f"    ⚠️  parágrafos: {par.get('n_paragrafos')} "
+                             f"(mínimo {par.get('minimo')}, um por movimento)")
         if flags.get("falhou"):
             L.append("  ⚠️  narrativa: falha ao obter texto válido do LLM.")
         if flags.get("idioma_invalido"):

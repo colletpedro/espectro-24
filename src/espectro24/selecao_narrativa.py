@@ -72,9 +72,13 @@ def spans_por_grupo(texto: str, briefing: dict) -> dict[str, str]:
     achados = []
     for nome in ordem:
         rot = (grupos.get(nome) or {}).get("rotulo_peso")
-        pos = texto.find(rot) if rot else -1
-        if pos != -1:
-            achados.append((pos, nome))
+        # v1.9.11: mesma âncora de `qualidade` — enxerga as contrações
+        # pré-aprovadas ("na maioria das notas (~80%)"). Buscar o literal
+        # aqui deixaria o span do grupo VAZIO justamente no texto que
+        # escreveu português correto.
+        occ = q.ocorrencia_rotulo(texto, rot) if rot else None
+        if occ is not None:
+            achados.append((occ[0], nome))
     achados.sort()
     spans = {nome: "" for nome in ordem}
     for i, (pos, nome) in enumerate(achados):

@@ -28,6 +28,7 @@ desde a v1.1.1 (denominador) e a v1.2.3 (quantificador).
 """
 from __future__ import annotations
 
+from . import qualidade as q
 from .buckets import FRONTEIRAS
 from .config import PISO_ESCALONADO, QUANT_MAX_REPETICOES
 
@@ -460,6 +461,13 @@ def serializar_briefing(b: dict) -> str:
               f"{g['n_reviews_analisadas']} reviews analisadas"
         if "rotulo_peso" in g:
             cab += f' · escreva o peso assim: "{g["rotulo_peso"]}"'
+            # [v1.9.11] as contrações vêm JUNTO do rótulo, não numa regra
+            # distante: o defeito real ("Em a grande maioria das notas
+            # (~91%)") nasceu de o modelo ler "literalmente" e obedecer.
+            outras = q.variantes_rotulo(g["rotulo_peso"])[1:]
+            if outras:
+                cab += (" (pode contrair a preposição: "
+                        + ", ".join(f'"{o}"' for o in outras) + ")")
         L.append(cab + ":")
         L.append(f"  marcacao_perspectiva exigida: {g['marcacao_perspectiva']}")
         p = g["permissoes"]
@@ -543,7 +551,12 @@ existe para evitar. Usar construção fora do conjunto do tema é PROIBIDO: \
 diria uma faixa diferente da medida.
 4. VOCABULÁRIO DO PESO: o rótulo de peso vem do histograma de NOTAS. \
 Escreva sempre "das notas"; é PROIBIDO escrever "das reviews", "dos \
-espectadores" ou "do público" ao falar de peso.
+espectadores" ou "do público" ao falar de peso. O rótulo é para ser escrito \
+como o briefing dá, com UMA liberdade: você PODE contrair a preposição com \
+o artigo inicial quando a frase pedir ("em a" vira "na", "de a" vira "da", \
+"a a" vira "à", "por a" vira "pela") — o briefing lista as formas aceitas \
+ao lado de cada grupo. Nunca escreva "em a"/"de a": é agramatical. O \
+NÚMERO e a palavra "notas" não mudam em hipótese alguma.
 5. PERSPECTIVA: quando o briefing pedir marcacao_perspectiva "simples", \
 inclua ao menos um marcador dentro do trecho do grupo ("para eles", "nessa \
 leitura", "para quem está nessa faixa"); quando pedir "antecipada", o \

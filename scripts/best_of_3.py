@@ -1,10 +1,17 @@
-"""[§D2, v1.9.9] Best-of-3 executado — geração, seleção por código e gate do editor.
+"""[§D2, v1.9.9] Best-of-3 — INVÓLUCRO sobre o narrador de produção.
 
-Três etapas, uma por entrega:
+**v1.9.11: este script não tem mais lógica própria.** Ele delega a
+`espectro24.narrador.narrar` — a mesma função que `cli.py` chama em
+produção — e existe só pelos comandos de LEITURA (calibração às cegas,
+veredito, gate), que não fazem sentido dentro do pipeline. Até a v1.9.10 a
+geração e a seleção eram implementadas AQUI, e o pipeline ficou três
+versões atrás sem ninguém notar: é esse o defeito que a v1.9.11 corrige, e
+manter duas implementações seria repetir a causa.
 
-    rodar       gera N narrativas independentes por filme e seleciona POR
-                CÓDIGO (`espectro24.selecao_narrativa`), com retry
-                DIRECIONADO quando nenhuma passa limpa (Entrega 5);
+Quatro etapas:
+
+    rodar       delega ao narrador de produção e grava o resultado dos 3
+                filmes (as N narrativas, a escolha e a telemetria);
     calibracao  imprime as N narrativas de um filme SEM dizer qual o código
                 escolheu — a leitura humana vem primeiro, e só depois o
                 veredito automático é revelado (Entrega 5);
@@ -29,13 +36,9 @@ from pathlib import Path
 RAIZ = Path(__file__).resolve().parent.parent
 sys.path.insert(0, str(RAIZ / "src"))
 
-from espectro24 import briefing as br  # noqa: E402
-from espectro24 import selecao_narrativa as sn  # noqa: E402
-from espectro24 import synthesize as S  # noqa: E402
+from espectro24 import narrador  # noqa: E402
 from espectro24.config import (  # noqa: E402
-    BEST_OF_N,
     MODELO_POR_ESTAGIO,
-    PROSA_MAX_TOKENS,
     PROVIDER_POR_ESTAGIO,
 )
 
@@ -51,64 +54,40 @@ FILMES = ("cure", "cidade-de-deus", "the-invite-2026")
 MODELO_PADRAO = (PROVIDER_POR_ESTAGIO["narrativa"], MODELO_POR_ESTAGIO["narrativa"])
 
 
-def _gerar(system: str, user: str, provider: str, modelo: str) -> tuple[str, dict, float]:
-    t0 = time.time()
-    resp = S.resposta(system, user, modelo, provider=provider,
-                      max_tokens=PROSA_MAX_TOKENS, json_mode=True)
-    bruto = (resp.text if provider == "gemini"
-             else resp.choices[0].message.content)
-    return br.extrair_narrativa(bruto or ""), S.uso(resp, provider), time.time() - t0
-
-
 def cmd_rodar(args) -> None:
+    """Gera e seleciona — chamando o MESMO código do pipeline.
+
+    v1.9.11: este comando não tem mais lógica própria. Ele monta o `output`
+    a partir do JSON em disco e delega a `narrador.narrar` — a função que
+    `cli.py` usa em produção. Duas implementações do mesmo estágio foi
+    exatamente o que produziu o defeito que a v1.9.11 corrige (o pipeline
+    ficou três versões atrás do que o script fazia); manter as duas seria
+    repetir a causa enquanto se corrige o efeito.
+    """
     from dotenv import load_dotenv
     load_dotenv(RAIZ / ".env")
     SAIDA.mkdir(parents=True, exist_ok=True)
-    provider, modelo = args.provider, args.modelo
     dados = json.loads(ARQ.read_text(encoding="utf-8")) if ARQ.exists() else {}
 
     for slug in FILMES:
         output = json.loads((RAIZ / "resultado" / f"{slug}.json").read_text("utf-8"))
-        briefing = br.montar_briefing(output)
-        user = br.serializar_briefing(briefing)
-
-        candidatos, telemetria = [], []
-        for i in range(BEST_OF_N):
-            texto, uso, dt = _gerar(br.PROMPT_NARRADOR_BRIEFING, user, provider, modelo)
-            candidatos.append(texto)
-            telemetria.append({"uso": uso, "latencia_s": round(dt, 2)})
-            print(f"  {slug} #{i}: {dt:.1f}s · {len(texto.split())} palavras")
-
-        escolha = sn.selecionar(candidatos, briefing)
-        print(f"  {slug}: escolhido #{escolha['indice']} "
-              f"({escolha['motivo']} / {escolha['criterio_decisivo']})")
-
-        # Fallback: nenhuma limpa → retry DIRECIONADO só nas frases
-        # infratoras. Descartar as 3 seria jogar fora prosa boa por causa de
-        # uma frase.
-        retry = None
-        if escolha["precisa_retry"]:
-            infratoras = sn.frases_infratoras(escolha["narrativa"], briefing)
-            print(f"  {slug}: retry direcionado em {len(infratoras)} frase(s)")
-            texto, uso, dt = _gerar(br.PROMPT_NARRADOR_BRIEFING,
-                                    sn.prompt_retry(escolha["narrativa"], infratoras),
-                                    provider, modelo)
-            if texto:
-                medida = sn.medir(texto, briefing)
-                retry = {"frases_infratoras": infratoras, "narrativa": texto,
-                         "uso": uso, "latencia_s": round(dt, 2),
-                         "n_flags": medida["n_flags"],
-                         # a corrigida só entra se REALMENTE melhorar — um
-                         # retry que piora não é conserto.
-                         "aplicado": medida["n_flags"] < escolha["verificacao"]["n_flags"]}
-                if retry["aplicado"]:
-                    escolha["narrativa"] = texto
-                    escolha["verificacao"] = medida["verificacao"]
-
-        dados[slug] = {"provider": provider, "modelo": modelo,
-                       "briefing": briefing, "candidatos": candidatos,
-                       "telemetria": telemetria, "escolha": escolha,
-                       "retry": retry, "editor_aplicado": False}
+        res = narrador.narrar(output, provider=args.provider, model=args.modelo)
+        if res.falhou:
+            print(f"  {slug}: ERRO — nenhuma amostra devolveu texto")
+            continue
+        e = res.escolha
+        print(f"  {slug}: {res.n_chamadas} chamada(s) · {res.latencia_s:.1f}s "
+              f"· escolhido #{e['indice']} ({e['motivo']}/{e['criterio_decisivo']})"
+              + (f" · retry {'aplicado' if res.retry['aplicado'] else 'descartado'}"
+                 if res.retry else ""))
+        dados[slug] = {
+            "provider": res.provider, "modelo": res.modelo,
+            "briefing": res.briefing, "candidatos": res.candidatos,
+            "escolha": res.escolha, "retry": res.retry,
+            "telemetria": {"uso": res.uso, "latencia_s": res.latencia_s,
+                           "n_chamadas": res.n_chamadas},
+            "editor_aplicado": False,
+        }
         ARQ.write_text(json.dumps(dados, ensure_ascii=False, indent=2), "utf-8")
     print(f"\n→ {ARQ.relative_to(RAIZ)}")
 
