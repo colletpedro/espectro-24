@@ -10,339 +10,10 @@ window.ESPECTRO_DATA = {
   "filmes": {
     "the-invite-2026": {
       "slug": "the-invite-2026",
-      "data_coleta": "2026-07-19T17:34:04.490686+00:00",
-      "spec_version": "1.6.0",
-      "total_reviews_observadas": 276,
+      "data_coleta": "2026-08-16T02:38:03.214914+00:00",
+      "spec_version": "1.9.11",
+      "total_reviews_observadas": 513,
       "reviews_url": "https://letterboxd.com/film/the-invite-2026/reviews/",
-      "buckets": [
-        {
-          "bucket": "negativas",
-          "alvo": 50,
-          "modo": "completo",
-          "n_validas": 50,
-          "niveis": [
-            {
-              "nivel": 0.5,
-              "n_validas": 10,
-              "n_brutas": 12,
-              "filtro_aplicado": 150,
-              "n_sem_nota": 0,
-              "n_descartadas_spoiler": 0,
-              "n_descartadas_curtas": 2,
-              "n_descartadas_truncamento": 0,
-              "paginas_buscadas": 1
-            },
-            {
-              "nivel": 1.0,
-              "n_validas": 10,
-              "n_brutas": 36,
-              "filtro_aplicado": 150,
-              "n_sem_nota": 0,
-              "n_descartadas_spoiler": 1,
-              "n_descartadas_curtas": 20,
-              "n_descartadas_truncamento": 0,
-              "paginas_buscadas": 3
-            },
-            {
-              "nivel": 1.5,
-              "n_validas": 10,
-              "n_brutas": 24,
-              "filtro_aplicado": 150,
-              "n_sem_nota": 0,
-              "n_descartadas_spoiler": 2,
-              "n_descartadas_curtas": 12,
-              "n_descartadas_truncamento": 0,
-              "paginas_buscadas": 2
-            },
-            {
-              "nivel": 2.0,
-              "n_validas": 10,
-              "n_brutas": 24,
-              "filtro_aplicado": 150,
-              "n_sem_nota": 0,
-              "n_descartadas_spoiler": 0,
-              "n_descartadas_curtas": 10,
-              "n_descartadas_truncamento": 0,
-              "paginas_buscadas": 2
-            },
-            {
-              "nivel": 2.5,
-              "n_validas": 10,
-              "n_brutas": 24,
-              "filtro_aplicado": 150,
-              "n_sem_nota": 0,
-              "n_descartadas_spoiler": 0,
-              "n_descartadas_curtas": 8,
-              "n_descartadas_truncamento": 0,
-              "paginas_buscadas": 2
-            }
-          ],
-          "temas": [
-            {
-              "tema": "Humor e roteiro fracos/entediantes",
-              "mencoes_aproximadas": 27,
-              "n_reviews_analisadas": 50,
-              "exemplo_parafraseado": "Muitas reviews classificaram o humor do filme como previsível, pouco engraçado ou inexistente, com piadas que não funcionam e um roteiro que se arrasta, tornando a experiência tediosa.",
-              "mencoes_clampadas": false,
-              "mencoes_valor_original": null,
-              "aspas_removidas": false
-            },
-            {
-              "tema": "Personagens e diálogos superficiais/irritantes",
-              "mencoes_aproximadas": 20,
-              "n_reviews_analisadas": 50,
-              "exemplo_parafraseado": "Os personagens são frequentemente descritos como caricaturas, superficiais e unidimensionais, com diálogos que parecem forçados, repetitivos ou sem profundidade, especialmente no casal principal.",
-              "mencoes_clampadas": false,
-              "mencoes_valor_original": null,
-              "aspas_removidas": false
-            },
-            {
-              "tema": "Atuações e direção questionáveis",
-              "mencoes_aproximadas": 15,
-              "n_reviews_analisadas": 50,
-              "exemplo_parafraseado": "A atuação de alguns membros do elenco, em particular dos protagonistas, é vista como inautêntica ou exagerada, e a direção é criticada por ser pedante, forçada ou por não conseguir extrair o melhor dos atores.",
-              "mencoes_clampadas": false,
-              "mencoes_valor_original": null,
-              "aspas_removidas": false
-            },
-            {
-              "tema": "Foco excessivo/explícito na sexualidade",
-              "mencoes_aproximadas": 14,
-              "n_reviews_analisadas": 50,
-              "exemplo_parafraseado": "A representação da sexualidade, especialmente a poliamoria e fetiches, é percebida como constrangedora, exagerada, forçada ou gratuita, servindo mais como choque do que como elemento narrativo profundo.",
-              "mencoes_clampadas": false,
-              "mencoes_valor_original": null,
-              "aspas_removidas": false
-            },
-            {
-              "tema": "Previsibilidade e falta de originalidade",
-              "mencoes_aproximadas": 10,
-              "n_reviews_analisadas": 50,
-              "exemplo_parafraseado": "Muitos usuários acharam a trama e o desenvolvimento previsíveis, sem surpresas e derivativos de outros filmes que abordam relações desmoronadas, sem oferecer nada de novo ou impactante.",
-              "mencoes_clampadas": false,
-              "mencoes_valor_original": null,
-              "aspas_removidas": false
-            },
-            {
-              "tema": "Adaptação/remake inferior ao original",
-              "mencoes_aproximadas": 7,
-              "n_reviews_analisadas": 50,
-              "exemplo_parafraseado": "Algumas reviews mencionam que o filme é um remake ou adaptação que falha em capturar a essência ou a qualidade do material de origem espanhol, sendo uma versão americanizada e inferior.",
-              "mencoes_clampadas": false,
-              "mencoes_valor_original": null,
-              "aspas_removidas": false
-            }
-          ],
-          "observacao_geral": "As reviews negativas apontam para um filme com humor ineficaz e personagens rasos, com muitos expressando desconforto ou tédio pela abordagem forçada da sexualidade e falta de profundidade temática. Este grupo destaca que a previsibilidade e a superficialidade do roteiro, aliadas a atuações e direção questionáveis, resultaram em uma experiência decepcionante.",
-          "idioma_invalido": false,
-          "escopo_suspeito": false,
-          "share_real": 3
-        },
-        {
-          "bucket": "medianas",
-          "alvo": 20,
-          "modo": "completo",
-          "n_validas": 20,
-          "niveis": [
-            {
-              "nivel": 3.0,
-              "n_validas": 10,
-              "n_brutas": 24,
-              "filtro_aplicado": 150,
-              "n_sem_nota": 0,
-              "n_descartadas_spoiler": 0,
-              "n_descartadas_curtas": 9,
-              "n_descartadas_truncamento": 0,
-              "paginas_buscadas": 2
-            },
-            {
-              "nivel": 3.5,
-              "n_validas": 10,
-              "n_brutas": 24,
-              "filtro_aplicado": 150,
-              "n_sem_nota": 0,
-              "n_descartadas_spoiler": 0,
-              "n_descartadas_curtas": 5,
-              "n_descartadas_truncamento": 0,
-              "paginas_buscadas": 2
-            }
-          ],
-          "temas": [
-            {
-              "tema": "Ritmo e duração",
-              "mencoes_aproximadas": 9,
-              "n_reviews_analisadas": 20,
-              "exemplo_parafraseado": "Muitos acharam o filme divertido na primeira metade, mas sentiram que a repetição das situações e a duração prolongada tornaram a experiência cansativa no final.",
-              "mencoes_clampadas": false,
-              "mencoes_valor_original": null,
-              "aspas_removidas": false
-            },
-            {
-              "tema": "Atuações do elenco",
-              "mencoes_aproximadas": 9,
-              "n_reviews_analisadas": 20,
-              "exemplo_parafraseado": "As performances foram amplamente elogiadas, com destaque para a química entre os atores e a habilidade de entregarem tanto o humor quanto o drama.",
-              "mencoes_clampadas": false,
-              "mencoes_valor_original": null,
-              "aspas_removidas": false
-            },
-            {
-              "tema": "Direção e estilo visual",
-              "mencoes_aproximadas": 8,
-              "n_reviews_analisadas": 20,
-              "exemplo_parafraseado": "A direção é vista como confiante e eficaz, especialmente na forma como capta a atmosfera íntima do apartamento e equilibra os tons conflitantes, embora alguns questionem a originalidade do estilo visual.",
-              "mencoes_clampadas": false,
-              "mencoes_valor_original": null,
-              "aspas_removidas": false
-            },
-            {
-              "tema": "Roteiro e temas abordados",
-              "mencoes_aproximadas": 7,
-              "n_reviews_analisadas": 20,
-              "exemplo_parafraseado": "O roteiro é elogiado por sua inteligência e diálogos afiados, abordando temas de relacionamentos e casamentos em crise com um toque de humor, mas alguns acharam as motivações dos personagens e a exploração desses temas um tanto previsíveis ou superficiais.",
-              "mencoes_clampadas": false,
-              "mencoes_valor_original": null,
-              "aspas_removidas": false
-            },
-            {
-              "tema": "Humor e tom",
-              "mencoes_aproximadas": 7,
-              "n_reviews_analisadas": 20,
-              "exemplo_parafraseado": "Muitos riram bastante com o filme, considerando-o uma comédia eficaz, mas alguns criticaram o humor por ser muito cômico, por vezes forçado, ou por se inclinar para um cringe comedy que nem sempre funcionou.",
-              "mencoes_clampadas": false,
-              "mencoes_valor_original": null,
-              "aspas_removidas": true
-            },
-            {
-              "tema": "Mudança de tom e final",
-              "mencoes_aproximadas": 6,
-              "n_reviews_analisadas": 20,
-              "exemplo_parafraseado": "A transição do humor para o drama na parte final do filme dividiu opiniões; enquanto alguns acharam o desfecho impactante, outros sentiram que a mudança de tom foi abrupta e que o final não foi totalmente merecido ou bem desenvolvido.",
-              "mencoes_clampadas": false,
-              "mencoes_valor_original": null,
-              "aspas_removidas": false
-            }
-          ],
-          "observacao_geral": "As reviews medianas apontam que o filme é uma comédia bem atuada e dirigida, com um roteiro inteligente que, no entanto, pode se tornar repetitivo e previsível em seus temas, especialmente na segunda metade. Este grupo destaca o equilíbrio entre humor e drama, mas questiona a eficácia da transição tonal e do final.",
-          "idioma_invalido": false,
-          "escopo_suspeito": false,
-          "share_real": 18
-        },
-        {
-          "bucket": "positivas",
-          "alvo": 30,
-          "modo": "completo",
-          "n_validas": 30,
-          "niveis": [
-            {
-              "nivel": 4.0,
-              "n_validas": 10,
-              "n_brutas": 36,
-              "filtro_aplicado": 150,
-              "n_sem_nota": 0,
-              "n_descartadas_spoiler": 2,
-              "n_descartadas_curtas": 19,
-              "n_descartadas_truncamento": 0,
-              "paginas_buscadas": 3
-            },
-            {
-              "nivel": 4.5,
-              "n_validas": 10,
-              "n_brutas": 36,
-              "filtro_aplicado": 150,
-              "n_sem_nota": 0,
-              "n_descartadas_spoiler": 1,
-              "n_descartadas_curtas": 21,
-              "n_descartadas_truncamento": 0,
-              "paginas_buscadas": 3
-            },
-            {
-              "nivel": 5.0,
-              "n_validas": 10,
-              "n_brutas": 36,
-              "filtro_aplicado": 150,
-              "n_sem_nota": 0,
-              "n_descartadas_spoiler": 4,
-              "n_descartadas_curtas": 17,
-              "n_descartadas_truncamento": 0,
-              "paginas_buscadas": 3
-            }
-          ],
-          "temas": [
-            {
-              "tema": "Direção e roteiro (geral)",
-              "mencoes_aproximadas": 25,
-              "n_reviews_analisadas": 30,
-              "exemplo_parafraseado": "As reviews elogiam intensamente a direção de Olivia Wilde e o roteiro, destacando a habilidade em equilibrar comédia e drama, criar tensão e explorar temas complexos de relacionamento.",
-              "mencoes_clampadas": false,
-              "mencoes_valor_original": null,
-              "aspas_removidas": false
-            },
-            {
-              "tema": "Atuações e química do elenco",
-              "mencoes_aproximadas": 20,
-              "n_reviews_analisadas": 30,
-              "exemplo_parafraseado": "Este grupo de reviews salienta o desempenho excepcional do elenco, em particular Seth Rogen, Edward Norton, Penélope Cruz e Olivia Wilde, e a ótima química entre os atores.",
-              "mencoes_clampadas": false,
-              "mencoes_valor_original": null,
-              "aspas_removidas": false
-            },
-            {
-              "tema": "Humor e drama",
-              "mencoes_aproximadas": 18,
-              "n_reviews_analisadas": 30,
-              "exemplo_parafraseado": "As reviews positivas consistentemente apontam a capacidade do filme de ser hilário e, ao mesmo tempo, profundamente triste ou tocante, com um equilíbrio perfeito entre comédia e drama.",
-              "mencoes_clampadas": false,
-              "mencoes_valor_original": null,
-              "aspas_removidas": false
-            },
-            {
-              "tema": "Originalidade e frescor",
-              "mencoes_aproximadas": 8,
-              "n_reviews_analisadas": 30,
-              "exemplo_parafraseado": "Muitas reviews destacam a sensação de frescor e originalidade, mesmo reconhecendo influências ou adaptações, elogiando o conceito único e a abordagem inovadora.",
-              "mencoes_clampadas": false,
-              "mencoes_valor_original": null,
-              "aspas_removidas": false
-            },
-            {
-              "tema": "Cinematografia e design de produção",
-              "mencoes_aproximadas": 7,
-              "n_reviews_analisadas": 30,
-              "exemplo_parafraseado": "As críticas elogiam a cinematografia e o design de produção, notando como o filme se mantém visualmente dinâmico e envolvente, apesar de se passar em um único ambiente.",
-              "mencoes_clampadas": false,
-              "mencoes_valor_original": null,
-              "aspas_removidas": false
-            },
-            {
-              "tema": "Temas de relacionamento e casamento",
-              "mencoes_aproximadas": 6,
-              "n_reviews_analisadas": 30,
-              "exemplo_parafraseado": "Este grupo valoriza a maneira como o filme aborda questões de relacionamento, casamento, intimidade e os desafios da vida a dois, sendo provocador e gerando reflexão.",
-              "mencoes_clampadas": false,
-              "mencoes_valor_original": null,
-              "aspas_removidas": false
-            }
-          ],
-          "observacao_geral": "As reviews positivas destacam a direção e o roteiro como pontos fortes, elogiando a combinação eficaz de humor e drama. Este grupo ressalta, ainda, as atuações excelentes do elenco e a originalidade da narrativa ao explorar temas de relacionamento.",
-          "idioma_invalido": false,
-          "escopo_suspeito": false,
-          "share_real": 79
-        }
-      ],
-      "narrativa": "O Convite (2026), dirigido por Olivia Wilde, é um drama com toques de comédia que acompanha um casal à beira do divórcio quando um jantar com vizinhos enigmáticos toma rumos inesperados. Ambientado quase inteiramente em um apartamento, o filme sustenta um tom de comédia que transita para o drama, com ritmo que alguns acham arrastado e outros enxuto.\n\nA grande maioria das notas (~79%) é positiva, e quem gostou destaca a direção e o roteiro como pontos fortes. Quase todos elogiam o equilíbrio entre humor e drama, e a maioria também exalta as atuações e a química do elenco. Cerca de metade ainda aponta a originalidade da narrativa.\n\nPara a minoria que ficou no meio (~18%), o filme é bem atuado e dirigido. Só que muitos sentem que a repetição e a duração tornam a experiência cansativa, e a mudança de tom no final divide opiniões.\n\nJá a fração mínima das notas (~3%) acha a experiência decepcionante. Cerca de metade das reviews aponta humor e roteiro fracos, muitos criticam personagens superficiais e atuações questionáveis, e a abordagem da sexualidade é vista como forçada.",
-      "narrativa_flags": {
-        "idioma_invalido": false,
-        "escopo_suspeito": false,
-        "prevalencia_suspeita": false,
-        "quantificador_suspeito": false,
-        "consenso_suspeito": false,
-        "peso_nao_ancorado": false,
-        "vocabulario_peso_suspeito": false,
-        "perspectiva_nao_marcada": true,
-        "aspas_removidas": false,
-        "falhou": false
-      },
       "ficha": {
         "titulo": "O Convite",
         "sinopse_oficial": "O casamento de Joe e Angela está por um fio. Quando eles convidam seus enigmáticos vizinhos do andar de cima para um jantar, a noite toma rumos inesperados.",
@@ -358,30 +29,6 @@ window.ESPECTRO_DATA = {
         "fonte": "tmdb",
         "ano_fonte": "slug"
       },
-      "consensos_usados": [
-        {
-          "propriedade": "tom de comédia que transita para drama",
-          "grupos_de_origem": [
-            "medianas",
-            "positivas"
-          ],
-          "temas_de_origem": [
-            "Mudança de tom e final",
-            "Humor e drama"
-          ]
-        },
-        {
-          "propriedade": "ritmo arrastado/ cansativo",
-          "grupos_de_origem": [
-            "negativas",
-            "medianas"
-          ],
-          "temas_de_origem": [
-            "Humor e roteiro fracos/entediantes",
-            "Ritmo e duração"
-          ]
-        }
-      ],
       "distribuicao": {
         "n_notas_total": 338448,
         "por_nivel": {
@@ -397,436 +44,788 @@ window.ESPECTRO_DATA = {
           "5.0": 56504
         },
         "por_bucket": {
-          "negativas": 3,
-          "medianas": 18,
-          "positivas": 79
+          "negativas": 2,
+          "medianas": 7,
+          "positivas": 91
         },
         "fonte": "letterboxd_histograma"
       },
-      "quantificadores_usados": [
-        {
-          "quantificador": "quase todos",
-          "tema": "Direção e roteiro (geral)"
+      "coleta": {
+        "slug": "the-invite-2026",
+        "coletado_em": "2026-08-15T21:36:09.104460+00:00",
+        "versao_coletor": "1.9.6",
+        "ordenacao_usada": "by/added",
+        "histograma_bruto": {
+          "0.5": 503,
+          "1.0": 909,
+          "1.5": 926,
+          "2.0": 3169,
+          "2.5": 4999,
+          "3.0": 18554,
+          "3.5": 41311,
+          "4.0": 125276,
+          "4.5": 86297,
+          "5.0": 56504
         },
-        {
-          "quantificador": "a maioria",
-          "tema": "Atuações e química do elenco"
+        "orcamento_paginas_por_nivel": {
+          "0.5": 1,
+          "1.0": 3,
+          "1.5": 3,
+          "2.0": 9,
+          "2.5": 6,
+          "3.0": 10,
+          "3.5": 2,
+          "4.0": 7,
+          "4.5": 4,
+          "5.0": 3
         },
-        {
-          "quantificador": "cerca de metade",
-          "tema": "Humor e drama"
+        "paginas_gastas_por_nivel": {
+          "0.5": 1,
+          "1.0": 2,
+          "1.5": 2,
+          "2.0": 7,
+          "2.5": 6,
+          "3.0": 10,
+          "3.5": 2,
+          "4.0": 7,
+          "4.5": 4,
+          "5.0": 3
         },
-        {
-          "quantificador": "muitos",
-          "tema": "Ritmo e duração"
-        },
-        {
-          "quantificador": "cerca de metade",
-          "tema": "Humor e roteiro fracos/entediantes"
-        },
-        {
-          "quantificador": "muitos",
-          "tema": "Personagens e diálogos superficiais/irritantes"
-        },
-        {
-          "quantificador": "muitos",
-          "tema": "Atuações e direção questionáveis"
-        }
-      ],
-      "marcadores_perspectiva": [
-        {
-          "grupo": "medianas",
-          "trecho": "Para a minoria que ficou no meio (~18%), o filme é bem atuado e dirigido, mas muitos sentem que a repetição e a duração tornam a experiência cansativa, e a mudança de tom no final divide opiniões."
-        },
-        {
-          "grupo": "negativas",
-          "trecho": "Já para a fração mínima das notas (~3%), a experiência é decepcionante: cerca de metade das reviews aponta humor e roteiro fracos, muitos criticam personagens superficiais e atuações questionáveis, e a abordagem da sexualidade é vista como forçada."
-        }
-      ],
-      "metricas_fluencia": {
-        "n_frases": 9,
-        "media_palavras": 19.9,
-        "cv_comprimento": 0.36,
-        "frase_mais_curta": 9,
-        "aberturas_repetidas": 0,
-        "verbos_reporte": 4,
-        "adverbios_mente": 0
-      },
-      "narrativa_bruta": "O Convite (2026), dirigido por Olivia Wilde, é um drama com toques de comédia que acompanha um casal à beira do divórcio quando um jantar com vizinhos enigmáticos toma rumos inesperados. Ambientado quase inteiramente em um apartamento, o filme sustenta um tom de comédia que transita para o drama, com ritmo que alguns acham arrastado e outros enxuto. A grande maioria das notas (~79%) é positiva, e quem gostou destaca a direção e o roteiro como pontos fortes, quase todos elogiando o equilíbrio entre humor e drama, além da maioria exaltar as atuações e a química do elenco, com cerca de metade apontando a originalidade da narrativa. Para a minoria que ficou no meio (~18%), o filme é bem atuado e dirigido, mas muitos sentem que a repetição e a duração tornam a experiência cansativa, e a mudança de tom no final divide opiniões. Já para a fração mínima das notas (~3%), a experiência é decepcionante: cerca de metade das reviews aponta humor e roteiro fracos, muitos criticam personagens superficiais e atuações questionáveis, e a abordagem da sexualidade é vista como forçada.",
-      "edicao_flags": {
-        "edicao_descartada": false,
-        "motivo_descarte": "",
-        "protegidos_perdidos": [],
-        "numeros_alterados": false,
-        "houve_retentativa": true,
-        "falhou": false,
-        "n_protegidos": 5,
-        "n_tentativas": 2,
-        "motivos_por_tentativa": [
-          "ordem_alterada"
+        "paradas_por_limite": [
+          "0.5",
+          "1.0",
+          "1.5",
+          "2.0",
+          "2.5",
+          "3.0",
+          "3.5",
+          "4.0",
+          "4.5",
+          "5.0"
         ],
-        "similaridade": 0.926490984743412,
-        "capitalizacao_ajustada": false,
-        "frases_sem_origem": [],
-        "similaridade_minima_por_frase": {
-          "O Convite (2026), dirigido por Olivia Wilde, é um drama com toques de comédia que acompanha um casal à beira do divórcio quando um jantar com vizinhos enigmáticos toma rumos inesperados.": 1.0,
-          "Ambientado quase inteiramente em um apartamento, o filme sustenta um tom de comédia que transita para o drama, com ritmo que alguns acham arrastado e outros enxuto.": 1.0,
-          "A grande maioria das notas (~79%) é positiva, e quem gostou destaca a direção e o roteiro como pontos fortes.": 1.0,
-          "Quase todos elogiam o equilíbrio entre humor e drama, e a maioria também exalta as atuações e a química do elenco.": 0.8571428571428571,
-          "Cerca de metade ainda aponta a originalidade da narrativa.": 0.7777777777777778,
-          "Para a minoria que ficou no meio (~18%), o filme é bem atuado e dirigido.": 1.0,
-          "Só que muitos sentem que a repetição e a duração tornam a experiência cansativa, e a mudança de tom no final divide opiniões.": 0.9565217391304348,
-          "Já a fração mínima das notas (~3%) acha a experiência decepcionante.": 0.9,
-          "Cerca de metade das reviews aponta humor e roteiro fracos, muitos criticam personagens superficiais e atuações questionáveis, e a abordagem da sexualidade é vista como forçada.": 1.0
+        "contagem_bruta_por_nivel": {
+          "0.5": 12,
+          "1.0": 24,
+          "1.5": 24,
+          "2.0": 84,
+          "2.5": 72,
+          "3.0": 117,
+          "3.5": 24,
+          "4.0": 72,
+          "4.5": 48,
+          "5.0": 36
         },
-        "tentativas_detalhe": [
-          {
-            "tentativa": 1,
-            "motivo": "ordem_alterada",
-            "similaridade": 0.5631244323342416,
-            "frases_sem_origem": [
-              {
-                "frase": "As opiniões sobre o ritmo se dividem: uns acham arrastado, outros enxuto.",
-                "similaridade": 0.5
-              }
-            ],
-            "texto": "O Convite, de 2026, traz Olivia Wilde na direção e mistura drama com comédia. A história acompanha um casal à beira do divórcio quando um jantar com vizinhos enigmáticos toma rumos inesperados. Quase tudo se passa em um apartamento, e o filme sustenta um tom que começa leve e vai escorregando para o drama. As opiniões sobre o ritmo se dividem: uns acham arrastado, outros enxuto.\n\nA grande maioria das notas (~79%) é positiva, e quem gostou aponta a direção e o roteiro como pontos fortes. Quase todos elogiam o equilíbrio entre humor e drama, e a maioria exalta as atuações e a química do elenco. Cerca de metade dessas reviews ainda destaca a originalidade da narrativa.\n\nJá a minoria que ficou no meio (~18%) reconhece o trabalho de atuação e direção, mas muitos sentem que a repetição e a duração pesam. A experiência cansa, e a mudança de tom no final divide opiniões.\n\nPara a fração mínima das notas (~3%), a decepção é total. Cerca de metade dessas críticas aponta humor e roteiro fracos, muitos reclamam de personagens superficiais e atuações questionáveis. A abordagem da sexualidade também aparece como forçada."
+        "contagem_estimada_valida_por_nivel": {
+          "0.5": 2,
+          "1.0": 7,
+          "1.5": 4,
+          "2.0": 19,
+          "2.5": 23,
+          "3.0": 28,
+          "3.5": 10,
+          "4.0": 17,
+          "4.5": 15,
+          "5.0": 10
+        },
+        "motivo_parada_por_nivel": {
+          "0.5": "orcamento_esgotado",
+          "1.0": "orcamento_esgotado",
+          "1.5": "orcamento_esgotado",
+          "2.0": "orcamento_esgotado",
+          "2.5": "orcamento_esgotado",
+          "3.0": "orcamento_esgotado",
+          "3.5": "orcamento_esgotado",
+          "4.0": "orcamento_esgotado",
+          "4.5": "orcamento_esgotado",
+          "5.0": "orcamento_esgotado"
+        },
+        "paginas_base_por_nivel": {
+          "0.5": 1,
+          "1.0": 2,
+          "1.5": 2,
+          "2.0": 7,
+          "2.5": 6,
+          "3.0": 10,
+          "3.5": 2,
+          "4.0": 7,
+          "4.5": 4,
+          "5.0": 3
+        },
+        "paginas_extensao_por_nivel": {
+          "0.5": 0,
+          "1.0": 0,
+          "1.5": 0,
+          "2.0": 0,
+          "2.5": 0,
+          "3.0": 0,
+          "3.5": 0,
+          "4.0": 0,
+          "4.5": 0,
+          "5.0": 0
+        },
+        "extensao_por_bucket": {
+          "negativas": {
+            "paginas_base": 12,
+            "paginas_extensao": 0,
+            "extras_por_nivel": {},
+            "motivo_parada": "meta_atingida",
+            "n_validas_pos_base": 90,
+            "n_validas_pos_extensao": 90,
+            "meta": 50
           },
-          {
-            "tentativa": 2,
-            "motivo": "",
-            "similaridade": 0.926490984743412,
-            "frases_sem_origem": [],
-            "texto": "O Convite (2026), dirigido por Olivia Wilde, é um drama com toques de comédia que acompanha um casal à beira do divórcio quando um jantar com vizinhos enigmáticos toma rumos inesperados. Ambientado quase inteiramente em um apartamento, o filme sustenta um tom de comédia que transita para o drama, com ritmo que alguns acham arrastado e outros enxuto.\n\nA grande maioria das notas (~79%) é positiva, e quem gostou destaca a direção e o roteiro como pontos fortes. Quase todos elogiam o equilíbrio entre humor e drama, e a maioria também exalta as atuações e a química do elenco. Cerca de metade ainda aponta a originalidade da narrativa.\n\nPara a minoria que ficou no meio (~18%), o filme é bem atuado e dirigido. Só que muitos sentem que a repetição e a duração tornam a experiência cansativa, e a mudança de tom no final divide opiniões.\n\nJá a fração mínima das notas (~3%) acha a experiência decepcionante. Cerca de metade das reviews aponta humor e roteiro fracos, muitos criticam personagens superficiais e atuações questionáveis, e a abordagem da sexualidade é vista como forçada."
+          "medianas": {
+            "paginas_base": 16,
+            "paginas_extensao": 0,
+            "extras_por_nivel": {},
+            "motivo_parada": "meta_atingida",
+            "n_validas_pos_base": 90,
+            "n_validas_pos_extensao": 90,
+            "meta": 50
+          },
+          "positivas": {
+            "paginas_base": 16,
+            "paginas_extensao": 0,
+            "extras_por_nivel": {},
+            "motivo_parada": "meta_atingida",
+            "n_validas_pos_base": 97,
+            "n_validas_pos_extensao": 97,
+            "meta": 50
           }
-        ]
-      }
-    },
-    "cure": {
-      "slug": "cure",
-      "data_coleta": "2026-07-19T08:09:00.011723+00:00",
-      "spec_version": "1.6.0",
-      "total_reviews_observadas": 252,
+        },
+        "profundidade_sondagem": {
+          "nivel_sondado": 4.0,
+          "profundidade": 256,
+          "exata": false,
+          "requisicoes": 4,
+          "motivo": "teto_plataforma"
+        },
+        "profundidade_estimada_por_nivel": {
+          "0.5": 1,
+          "1.0": 2,
+          "1.5": 2,
+          "2.0": 6,
+          "2.5": 10,
+          "3.0": 38,
+          "3.5": 84,
+          "4.0": 256,
+          "4.5": 176,
+          "5.0": 115
+        },
+        "janela_temporal": {
+          "total": {
+            "n": 924,
+            "min": "2025-11-24",
+            "max": "2026-08-15",
+            "p5": "2026-01-25",
+            "p50": "2026-08-05",
+            "p95": "2026-08-07"
+          },
+          "por_bucket": {
+            "negativas": {
+              "n": 309,
+              "min": "2026-02-07",
+              "max": "2026-08-07",
+              "p5": "2026-06-18",
+              "p50": "2026-08-04",
+              "p95": "2026-08-06"
+            },
+            "medianas": {
+              "n": 285,
+              "min": "2025-11-24",
+              "max": "2026-08-15",
+              "p5": "2026-02-01",
+              "p50": "2026-08-06",
+              "p95": "2026-08-15"
+            },
+            "positivas": {
+              "n": 330,
+              "min": "2026-01-24",
+              "max": "2026-08-15",
+              "p5": "2026-01-24",
+              "p50": "2026-08-06",
+              "p95": "2026-08-15"
+            }
+          }
+        },
+        "dias_por_100_paginas": {
+          "n_paginas": 17,
+          "pagina_min": 1,
+          "pagina_max": 128,
+          "dias": 1,
+          "dias_por_100_paginas": 0.7874015748031497,
+          "paginas_para_1_ano": 46355
+        },
+        "ano_lancamento": 2026,
+        "ano_fonte": "slug",
+        "n_reviews_bruto": 924
+      },
       "buckets": [
         {
           "bucket": "negativas",
-          "alvo": 50,
+          "alvo": 40,
           "modo": "completo",
-          "n_validas": 50,
+          "estado_piso": "completa",
+          "n_validas": 40,
+          "share_real": 2,
+          "composicao_alvo": {
+            "0.5": 4,
+            "1.0": 6,
+            "1.5": 7,
+            "2.0": 23
+          },
+          "composicao_atingida": {
+            "0.5": 4,
+            "1.0": 6,
+            "1.5": 7,
+            "2.0": 23
+          },
+          "cascata_por_degrau": {
+            "150": 40
+          },
+          "deficit_redistribuido": 0,
+          "distribuicao_pagina_origem": {
+            "n": 40,
+            "min": 1,
+            "max": 11,
+            "p5": 1,
+            "p50": 2,
+            "p95": 9,
+            "fracao_profunda": 0.375
+          },
           "niveis": [
             {
               "nivel": 0.5,
-              "n_validas": 10,
-              "n_brutas": 24,
-              "filtro_aplicado": 150,
-              "n_sem_nota": 0,
-              "n_descartadas_spoiler": 1,
-              "n_descartadas_curtas": 13,
-              "n_descartadas_truncamento": 0,
-              "paginas_buscadas": 2
-            },
-            {
-              "nivel": 1.0,
-              "n_validas": 10,
+              "n_validas": 4,
+              "n_alvo": 4,
               "n_brutas": 36,
               "filtro_aplicado": 150,
               "n_sem_nota": 0,
               "n_descartadas_spoiler": 2,
               "n_descartadas_curtas": 22,
               "n_descartadas_truncamento": 0,
-              "paginas_buscadas": 3
+              "n_indisponivel_truncamento": 1,
+              "motivos_descarte": {
+                "truncada_sem_texto": 1,
+                "spoiler": 2,
+                "abaixo_min_chars": 22,
+                "excedente_cota": 7,
+                "duplicata": 0,
+                "outros": 0
+              },
+              "paginas_buscadas": 1
+            },
+            {
+              "nivel": 1.0,
+              "n_validas": 6,
+              "n_alvo": 6,
+              "n_brutas": 57,
+              "filtro_aplicado": 150,
+              "n_sem_nota": 0,
+              "n_descartadas_spoiler": 2,
+              "n_descartadas_curtas": 33,
+              "n_descartadas_truncamento": 0,
+              "n_indisponivel_truncamento": 0,
+              "motivos_descarte": {
+                "truncada_sem_texto": 0,
+                "spoiler": 2,
+                "abaixo_min_chars": 33,
+                "excedente_cota": 16,
+                "duplicata": 0,
+                "outros": 0
+              },
+              "paginas_buscadas": 2
             },
             {
               "nivel": 1.5,
-              "n_validas": 10,
-              "n_brutas": 24,
+              "n_validas": 7,
+              "n_alvo": 7,
+              "n_brutas": 60,
               "filtro_aplicado": 150,
               "n_sem_nota": 0,
-              "n_descartadas_spoiler": 0,
-              "n_descartadas_curtas": 10,
+              "n_descartadas_spoiler": 2,
+              "n_descartadas_curtas": 38,
               "n_descartadas_truncamento": 0,
+              "n_indisponivel_truncamento": 1,
+              "motivos_descarte": {
+                "truncada_sem_texto": 1,
+                "spoiler": 2,
+                "abaixo_min_chars": 38,
+                "excedente_cota": 12,
+                "duplicata": 0,
+                "outros": 0
+              },
               "paginas_buscadas": 2
             },
             {
               "nivel": 2.0,
-              "n_validas": 10,
-              "n_brutas": 24,
+              "n_validas": 23,
+              "n_alvo": 23,
+              "n_brutas": 156,
               "filtro_aplicado": 150,
               "n_sem_nota": 0,
-              "n_descartadas_spoiler": 1,
-              "n_descartadas_curtas": 7,
+              "n_descartadas_spoiler": 3,
+              "n_descartadas_curtas": 115,
               "n_descartadas_truncamento": 0,
-              "paginas_buscadas": 2
-            },
-            {
-              "nivel": 2.5,
-              "n_validas": 10,
-              "n_brutas": 24,
-              "filtro_aplicado": 150,
-              "n_sem_nota": 0,
-              "n_descartadas_spoiler": 1,
-              "n_descartadas_curtas": 11,
-              "n_descartadas_truncamento": 0,
-              "paginas_buscadas": 2
+              "n_indisponivel_truncamento": 0,
+              "motivos_descarte": {
+                "truncada_sem_texto": 0,
+                "spoiler": 3,
+                "abaixo_min_chars": 115,
+                "excedente_cota": 15,
+                "duplicata": 0,
+                "outros": 0
+              },
+              "paginas_buscadas": 7
             }
           ],
           "temas": [
             {
-              "tema": "Ritmo lento e tedioso",
-              "mencoes_aproximadas": 35,
-              "n_reviews_analisadas": 50,
-              "exemplo_parafraseado": "Muitas reviews reclamam que o filme é insuportavelmente lento, arrastado e chato, sem tensão ou progressão narrativa, fazendo com que o espectador perca o interesse rapidamente.",
-              "mencoes_clampadas": false,
-              "mencoes_valor_original": null,
-              "aspas_removidas": false
-            },
-            {
-              "tema": "Falta de tensão/mistério/terror",
-              "mencoes_aproximadas": 25,
-              "n_reviews_analisadas": 50,
-              "exemplo_parafraseado": "Apesar de ser categorizado como suspense ou terror, este grupo de reviews achou que o filme não consegue gerar medo, suspense ou uma atmosfera arrepiante, e o mistério se torna óbvio cedo demais.",
-              "mencoes_clampadas": false,
-              "mencoes_valor_original": null,
-              "aspas_removidas": false
-            },
-            {
-              "tema": "Enredo e roteiro fracos/repetitivos",
-              "mencoes_aproximadas": 18,
-              "n_reviews_analisadas": 50,
-              "exemplo_parafraseado": "Reviewers criticam a história por ser repetitiva, sem profundidade ou desenvolvimento, com um roteiro que não avança e diálogos vazios, levando a uma trama que poderia ser contada em muito menos tempo.",
-              "mencoes_clampadas": false,
-              "mencoes_valor_original": null,
-              "aspas_removidas": false
-            },
-            {
-              "tema": "Personagens desinteressantes/planos",
+              "tema": "Roteiro superficial e sem profundidade",
               "mencoes_aproximadas": 15,
-              "n_reviews_analisadas": 50,
-              "exemplo_parafraseado": "Os personagens são descritos como desinteressantes, sem carisma ou profundidade, o que dificulta a conexão do espectador com a narrativa ou o desenvolvimento de qualquer empatia por eles.",
+              "n_reviews_analisadas": 40,
+              "exemplo_parafraseado": "O filme é criticado por ter um roteiro raso, que não desenvolve bem os conflitos e aposta em clichês, resultando em uma trama previsível e sem sustância.",
               "mencoes_clampadas": false,
               "mencoes_valor_original": null,
               "aspas_removidas": false
             },
             {
-              "tema": "Filme superestimado/pretensioso",
+              "tema": "Atuação exagerada de Olivia Wilde",
               "mencoes_aproximadas": 12,
-              "n_reviews_analisadas": 50,
-              "exemplo_parafraseado": "Vários usuários expressam confusão com a alta classificação do filme, considerando-o superestimado e pretensioso, e que não cumpre as expectativas geradas pelo hype.",
+              "n_reviews_analisadas": 40,
+              "exemplo_parafraseado": "Muitos reviewers apontam que a performance de Olivia Wilde é forçada, com expressões e gestos exagerados que destoam do elenco mais contido.",
               "mencoes_clampadas": false,
               "mencoes_valor_original": null,
               "aspas_removidas": false
             },
             {
-              "tema": "Final insatisfatório/abrupto",
-              "mencoes_aproximadas": 8,
-              "n_reviews_analisadas": 50,
-              "exemplo_parafraseado": "Alguns comentários apontam que o final é anticlimático, abrupto ou que não oferece uma conclusão satisfatória, deixando o espectador com a sensação de que o filme atingiu uma parede de tijolos.",
+              "tema": "Falta de humor e ritmo arrastado",
+              "mencoes_aproximadas": 10,
+              "n_reviews_analisadas": 40,
+              "exemplo_parafraseado": "As piadas não funcionam e o longa se arrasta, com cenas que se estendem sem gerar risos ou tensão, tornando a experiência entediante.",
               "mencoes_clampadas": false,
               "mencoes_valor_original": null,
-              "aspas_removidas": true
+              "aspas_removidas": false
+            },
+            {
+              "tema": "Abordagem do sexo e relacionamentos soa forçada e moralista",
+              "mencoes_aproximadas": 8,
+              "n_reviews_analisadas": 40,
+              "exemplo_parafraseado": "O tratamento dado ao tema do sexo e das relações abertas é visto como artificial, mais focado em chocar do que em explorar com sinceridade, além de terminar em um discurso conservador.",
+              "mencoes_clampadas": false,
+              "mencoes_valor_original": null,
+              "aspas_removidas": false
+            },
+            {
+              "tema": "Personagens irritantes e pouco carismáticos",
+              "mencoes_aproximadas": 7,
+              "n_reviews_analisadas": 40,
+              "exemplo_parafraseado": "Os protagonistas são descritos como desagradáveis, com comportamentos imaturos e relacionamentos sem química, dificultando a identificação ou torcida por eles.",
+              "mencoes_clampadas": false,
+              "mencoes_valor_original": null,
+              "aspas_removidas": false
+            },
+            {
+              "tema": "Trilha sonora irritante e excessiva",
+              "mencoes_aproximadas": 5,
+              "n_reviews_analisadas": 40,
+              "exemplo_parafraseado": "A trilha sonora é constantemente criticada por ser invasiva e exagerada, sublinhando cada emoção de forma superficial e cansativa.",
+              "mencoes_clampadas": false,
+              "mencoes_valor_original": null,
+              "aspas_removidas": false
             }
           ],
-          "observacao_geral": "As reviews negativas apontam que, apesar de uma premissa intrigante, o filme sofre de um ritmo excessivamente lento e uma execução que falha em construir tensão ou desenvolver personagens cativantes, resultando em uma experiência tediosa e decepcionante. Este grupo destaca a falta de engajamento com o mistério e o enredo, que consideram repetitivo e pouco substancial.",
+          "observacao_geral": "As reviews negativas concentram-se em apontar o roteiro fraco, a atuação exagerada da diretora e protagonista, e a falta de humor e ritmo. O grupo também critica a trilha sonora intrusiva e a abordagem artificial e moralista das relações, além de personagens pouco cativantes.",
           "idioma_invalido": false,
-          "escopo_suspeito": false,
-          "share_real": 3
+          "escopo_suspeito": false
         },
         {
           "bucket": "medianas",
-          "alvo": 20,
+          "alvo": 40,
           "modo": "completo",
-          "n_validas": 20,
+          "estado_piso": "completa",
+          "n_validas": 40,
+          "share_real": 7,
+          "composicao_alvo": {
+            "2.5": 8,
+            "3.0": 32
+          },
+          "composicao_atingida": {
+            "2.5": 8,
+            "3.0": 32
+          },
+          "cascata_por_degrau": {
+            "150": 40
+          },
+          "deficit_redistribuido": 0,
+          "distribuicao_pagina_origem": {
+            "n": 40,
+            "min": 1,
+            "max": 19,
+            "p5": 1,
+            "p50": 5,
+            "p95": 19,
+            "fracao_profunda": 0.325
+          },
           "niveis": [
             {
-              "nivel": 3.0,
-              "n_validas": 10,
-              "n_brutas": 24,
-              "filtro_aplicado": 150,
-              "n_sem_nota": 0,
-              "n_descartadas_spoiler": 2,
-              "n_descartadas_curtas": 7,
-              "n_descartadas_truncamento": 0,
-              "paginas_buscadas": 2
-            },
-            {
-              "nivel": 3.5,
-              "n_validas": 10,
-              "n_brutas": 24,
-              "filtro_aplicado": 150,
-              "n_sem_nota": 0,
-              "n_descartadas_spoiler": 1,
-              "n_descartadas_curtas": 6,
-              "n_descartadas_truncamento": 0,
-              "paginas_buscadas": 2
-            }
-          ],
-          "temas": [
-            {
-              "tema": "Ritmo lento e confusão narrativa",
-              "mencoes_aproximadas": 10,
-              "n_reviews_analisadas": 20,
-              "exemplo_parafraseado": "Muitas reviews descrevem o filme como lento, arrastado e, por vezes, entediante, gerando confusão sobre a trama e suas intenções.",
-              "mencoes_clampadas": false,
-              "mencoes_valor_original": null,
-              "aspas_removidas": false
-            },
-            {
-              "tema": "Final insatisfatório/ambíguo",
-              "mencoes_aproximadas": 8,
-              "n_reviews_analisadas": 20,
-              "exemplo_parafraseado": "A resolução da narrativa é frequentemente criticada por ser vaga, deixar muitas pontas soltas ou por não oferecer um desfecho claro para os mistérios apresentados.",
-              "mencoes_clampadas": false,
-              "mencoes_valor_original": null,
-              "aspas_removidas": false
-            },
-            {
-              "tema": "Ideias intrigantes, mas execução falha",
-              "mencoes_aproximadas": 7,
-              "n_reviews_analisadas": 20,
-              "exemplo_parafraseado": "O grupo de reviews medianas reconhece que o filme explora conceitos interessantes sobre a natureza do mal, identidade e hipnose, mas sente que a execução do roteiro não os aprofunda adequadamente ou que as ideias não se conectam de forma convincente.",
-              "mencoes_clampadas": false,
-              "mencoes_valor_original": null,
-              "aspas_removidas": false
-            },
-            {
-              "tema": "Atmosfera e estilo visual eficazes",
-              "mencoes_aproximadas": 6,
-              "n_reviews_analisadas": 20,
-              "exemplo_parafraseado": "Apesar das ressalvas, a ambientação sombria, a cinematografia precisa e o uso de longos planos para criar uma sensação de desconforto são aspectos elogiados por este grupo.",
-              "mencoes_clampadas": false,
-              "mencoes_valor_original": null,
-              "aspas_removidas": false
-            },
-            {
-              "tema": "Necessidade de revisitação para compreensão",
-              "mencoes_aproximadas": 6,
-              "n_reviews_analisadas": 20,
-              "exemplo_parafraseado": "Muitos espectadores sugerem que uma segunda visualização seria benéfica para captar nuances perdidas e para melhor apreciar as camadas temáticas do filme.",
-              "mencoes_clampadas": false,
-              "mencoes_valor_original": null,
-              "aspas_removidas": false
-            }
-          ],
-          "observacao_geral": "As reviews medianas apontam para um filme com ideias e atmosfera intrigantes, mas que peca em clareza narrativa e na profundidade com que desenvolve seus temas, deixando muitos espectadores confusos ou insatisfeitos com seu ritmo e conclusão. Este grupo frequentemente expressa a sensação de não ter se conectado plenamente com a obra, apesar de reconhecer seu valor artístico e a profundidade potencial de suas premissas.",
-          "idioma_invalido": false,
-          "escopo_suspeito": false,
-          "share_real": 17
-        },
-        {
-          "bucket": "positivas",
-          "alvo": 30,
-          "modo": "completo",
-          "n_validas": 30,
-          "niveis": [
-            {
-              "nivel": 4.0,
-              "n_validas": 10,
-              "n_brutas": 24,
+              "nivel": 2.5,
+              "n_validas": 8,
+              "n_alvo": 8,
+              "n_brutas": 96,
               "filtro_aplicado": 150,
               "n_sem_nota": 0,
               "n_descartadas_spoiler": 0,
-              "n_descartadas_curtas": 7,
+              "n_descartadas_curtas": 65,
               "n_descartadas_truncamento": 0,
-              "paginas_buscadas": 2
+              "n_indisponivel_truncamento": 0,
+              "motivos_descarte": {
+                "truncada_sem_texto": 0,
+                "spoiler": 0,
+                "abaixo_min_chars": 65,
+                "excedente_cota": 23,
+                "duplicata": 0,
+                "outros": 0
+              },
+              "paginas_buscadas": 6
             },
             {
-              "nivel": 4.5,
-              "n_validas": 10,
-              "n_brutas": 24,
+              "nivel": 3.0,
+              "n_validas": 32,
+              "n_alvo": 32,
+              "n_brutas": 189,
               "filtro_aplicado": 150,
               "n_sem_nota": 0,
-              "n_descartadas_spoiler": 1,
-              "n_descartadas_curtas": 7,
+              "n_descartadas_spoiler": 5,
+              "n_descartadas_curtas": 122,
               "n_descartadas_truncamento": 0,
-              "paginas_buscadas": 2
-            },
-            {
-              "nivel": 5.0,
-              "n_validas": 10,
-              "n_brutas": 24,
-              "filtro_aplicado": 150,
-              "n_sem_nota": 0,
-              "n_descartadas_spoiler": 2,
-              "n_descartadas_curtas": 4,
-              "n_descartadas_truncamento": 0,
-              "paginas_buscadas": 2
+              "n_indisponivel_truncamento": 3,
+              "motivos_descarte": {
+                "truncada_sem_texto": 3,
+                "spoiler": 5,
+                "abaixo_min_chars": 122,
+                "excedente_cota": 27,
+                "duplicata": 0,
+                "outros": 0
+              },
+              "paginas_buscadas": 10
             }
           ],
           "temas": [
             {
-              "tema": "Atmosfera e Tom Perturbador/Hipnótico",
-              "mencoes_aproximadas": 15,
-              "n_reviews_analisadas": 30,
-              "exemplo_parafraseado": "Muitas reviews descrevem o filme como hipnótico, perturbador e gerador de uma sensação constante de apreensão, com o mal se infiltrando de forma sutil e uma estética que cria desconforto sem depender de sustos óbvios.",
+              "tema": "Ritmo e estrutura narrativa",
+              "mencoes_aproximadas": 12,
+              "n_reviews_analisadas": 40,
+              "exemplo_parafraseado": "O filme começa de forma arrastada e só ganha força na parte final, com reviravoltas inesperadas que mudam o rumo da história, mas o desfecho acaba sendo previsível e pouco satisfatório.",
               "mencoes_clampadas": false,
               "mencoes_valor_original": null,
               "aspas_removidas": false
             },
             {
-              "tema": "Pacing Lento e Deliberado",
+              "tema": "Atuações do elenco principal",
               "mencoes_aproximadas": 10,
-              "n_reviews_analisadas": 30,
-              "exemplo_parafraseado": "O ritmo do filme é frequentemente descrito como lento e metódico, o que intensifica o suspense e o horror psicológico, levando o espectador a um estado de transe que reflete a temática da manipulação mental.",
+              "n_reviews_analisadas": 40,
+              "exemplo_parafraseado": "O elenco entrega performances convincentes, com destaque para a química entre os quatro atores, embora alguns personagens sejam unidimensionais e o estilo de Seth Rogen canse em certos momentos.",
               "mencoes_clampadas": false,
               "mencoes_valor_original": null,
               "aspas_removidas": false
             },
             {
-              "tema": "Temas Psicológicos e Existenciais",
-              "mencoes_aproximadas": 9,
-              "n_reviews_analisadas": 30,
-              "exemplo_parafraseado": "Este grupo de reviews ressalta a exploração de temas profundos como a fragilidade da identidade, a manipulação da mente, a natureza do mal e a busca por significado em atos inexplicáveis, questionando a existência do livre-arbítrio e as camadas ocultas da psique humana.",
+              "tema": "Conflitos de relacionamento e comunicação",
+              "mencoes_aproximadas": 8,
+              "n_reviews_analisadas": 40,
+              "exemplo_parafraseado": "A trama expõe as dificuldades de comunicação e os ressentimentos acumulados em um casamento de longa data, abordando temas como desejo e intimidade de forma crua e desconfortável.",
               "mencoes_clampadas": false,
               "mencoes_valor_original": null,
               "aspas_removidas": false
             },
             {
-              "tema": "Atuação do Antagonista",
+              "tema": "Abordagem da não-monogamia e sexualidade",
               "mencoes_aproximadas": 6,
-              "n_reviews_analisadas": 30,
-              "exemplo_parafraseado": "A performance do ator que interpreta o antagonista é muito elogiada por sua calma, comportamento monótono e a capacidade de transmitir uma presença assustadora e manipuladora, causando arrepios com sua mera voz e expressão vazia.",
+              "n_reviews_analisadas": 40,
+              "exemplo_parafraseado": "A introdução de um casal liberal que propõe uma experiência aberta funciona como um espelho para o casal protagonista, levantando questões sobre monogamia e liberdade sexual sem julgamentos fáceis.",
               "mencoes_clampadas": false,
               "mencoes_valor_original": null,
               "aspas_removidas": false
             },
             {
-              "tema": "Design de Som e Cinematografia",
-              "mencoes_aproximadas": 6,
-              "n_reviews_analisadas": 30,
-              "exemplo_parafraseado": "As reviews positivas destacam o excelente design de som, que mistura músicas mínimas com ruídos ambientes estranhos, e a cinematografia, que utiliza longas tomadas, iluminação sutil e posicionamento de câmera para criar uma atmosfera de desorientação e inquietação.",
-              "mencoes_clampadas": false,
-              "mencoes_valor_original": null,
-              "aspas_removidas": false
-            },
-            {
-              "tema": "Ausência de Respostas e Ambiguidade",
+              "tema": "Direção e ambientação",
               "mencoes_aproximadas": 5,
-              "n_reviews_analisadas": 30,
-              "exemplo_parafraseado": "O filme é apreciado por não fornecer respostas definitivas, deixando muitas perguntas sem solução e mantendo uma ambiguidade que força o espectador a refletir sobre o mistério, o que contribui para o seu impacto duradouro.",
+              "n_reviews_analisadas": 40,
+              "exemplo_parafraseado": "A direção conduz bem o formato de peça de teatro, com a ação concentrada em um único cenário, mas a fotografia e a mise-en-scène se repetem ao longo do filme, limitando o impacto visual.",
+              "mencoes_clampadas": false,
+              "mencoes_valor_original": null,
+              "aspas_removidas": false
+            },
+            {
+              "tema": "Trilha sonora e tom",
+              "mencoes_aproximadas": 5,
+              "n_reviews_analisadas": 40,
+              "exemplo_parafraseado": "A trilha sonora, com destaque para o violoncelo, aumenta a tensão, mas o excesso de ruídos e a montagem frenética tornam a experiência estressante para alguns espectadores.",
               "mencoes_clampadas": false,
               "mencoes_valor_original": null,
               "aspas_removidas": false
             }
           ],
-          "observacao_geral": "As reviews positivas enfatizam a maestria do filme em criar uma atmosfera de horror psicológico profundamente inquietante e hipnótica, utilizando um ritmo lento e deliberado para explorar temas complexos sobre a fragilidade da mente humana e a natureza inexplicável do mal. Este grupo destaca a atuação impactante do antagonista e a excelência técnica na cinematografia e design de som, que contribuem para a sensação de paranoia e a ambiguidade persistente.",
+          "observacao_geral": "As reviews medianas reconhecem o esforço da diretora e o talento do elenco, mas apontam problemas de ritmo, previsibilidade e falta de profundidade nos personagens. É um filme que divide opiniões: alguns o consideram uma comédia eficaz, outros o acham superficial e redundante.",
           "idioma_invalido": false,
-          "escopo_suspeito": false,
-          "share_real": 79
+          "escopo_suspeito": false
+        },
+        {
+          "bucket": "positivas",
+          "alvo": 40,
+          "modo": "completo",
+          "estado_piso": "completa",
+          "n_validas": 40,
+          "share_real": 91,
+          "composicao_alvo": {
+            "3.5": 6,
+            "4.0": 16,
+            "4.5": 11,
+            "5.0": 7
+          },
+          "composicao_atingida": {
+            "3.5": 6,
+            "4.0": 16,
+            "4.5": 11,
+            "5.0": 7
+          },
+          "cascata_por_degrau": {
+            "150": 40
+          },
+          "deficit_redistribuido": 0,
+          "distribuicao_pagina_origem": {
+            "n": 40,
+            "min": 1,
+            "max": 64,
+            "p5": 1,
+            "p50": 2,
+            "p95": 64,
+            "fracao_profunda": 0.325
+          },
+          "niveis": [
+            {
+              "nivel": 3.5,
+              "n_validas": 6,
+              "n_alvo": 6,
+              "n_brutas": 36,
+              "filtro_aplicado": 150,
+              "n_sem_nota": 0,
+              "n_descartadas_spoiler": 0,
+              "n_descartadas_curtas": 22,
+              "n_descartadas_truncamento": 0,
+              "n_indisponivel_truncamento": 0,
+              "motivos_descarte": {
+                "truncada_sem_texto": 0,
+                "spoiler": 0,
+                "abaixo_min_chars": 22,
+                "excedente_cota": 8,
+                "duplicata": 0,
+                "outros": 0
+              },
+              "paginas_buscadas": 2
+            },
+            {
+              "nivel": 4.0,
+              "n_validas": 16,
+              "n_alvo": 16,
+              "n_brutas": 126,
+              "filtro_aplicado": 150,
+              "n_sem_nota": 0,
+              "n_descartadas_spoiler": 5,
+              "n_descartadas_curtas": 86,
+              "n_descartadas_truncamento": 0,
+              "n_indisponivel_truncamento": 2,
+              "motivos_descarte": {
+                "truncada_sem_texto": 2,
+                "spoiler": 5,
+                "abaixo_min_chars": 86,
+                "excedente_cota": 17,
+                "duplicata": 0,
+                "outros": 0
+              },
+              "paginas_buscadas": 7
+            },
+            {
+              "nivel": 4.5,
+              "n_validas": 11,
+              "n_alvo": 11,
+              "n_brutas": 96,
+              "filtro_aplicado": 150,
+              "n_sem_nota": 0,
+              "n_descartadas_spoiler": 1,
+              "n_descartadas_curtas": 69,
+              "n_descartadas_truncamento": 0,
+              "n_indisponivel_truncamento": 0,
+              "motivos_descarte": {
+                "truncada_sem_texto": 0,
+                "spoiler": 1,
+                "abaixo_min_chars": 69,
+                "excedente_cota": 15,
+                "duplicata": 0,
+                "outros": 0
+              },
+              "paginas_buscadas": 4
+            },
+            {
+              "nivel": 5.0,
+              "n_validas": 7,
+              "n_alvo": 7,
+              "n_brutas": 72,
+              "filtro_aplicado": 150,
+              "n_sem_nota": 0,
+              "n_descartadas_spoiler": 2,
+              "n_descartadas_curtas": 46,
+              "n_descartadas_truncamento": 0,
+              "n_indisponivel_truncamento": 0,
+              "motivos_descarte": {
+                "truncada_sem_texto": 0,
+                "spoiler": 2,
+                "abaixo_min_chars": 46,
+                "excedente_cota": 17,
+                "duplicata": 0,
+                "outros": 0
+              },
+              "paginas_buscadas": 3
+            }
+          ],
+          "temas": [
+            {
+              "tema": "Atuações excepcionais do elenco principal",
+              "mencoes_aproximadas": 25,
+              "n_reviews_analisadas": 40,
+              "exemplo_parafraseado": "As reviews positivas destacam que os quatro atores principais estão em perfeita sintonia, entregando performances cômicas e dramáticas convincentes, sendo frequentemente citados como o ponto alto do filme.",
+              "mencoes_clampadas": false,
+              "mencoes_valor_original": null,
+              "aspas_removidas": false
+            },
+            {
+              "tema": "Humor ácido e situações constrangedoras",
+              "mencoes_aproximadas": 20,
+              "n_reviews_analisadas": 40,
+              "exemplo_parafraseado": "Muitas reviews mencionam que o filme provoca risadas genuínas através de diálogos afiados e situações embaraçosas, equilibrando comédia e desconforto.",
+              "mencoes_clampadas": false,
+              "mencoes_valor_original": null,
+              "aspas_removidas": false
+            },
+            {
+              "tema": "Direção precisa e estilo visual de peça teatral",
+              "mencoes_aproximadas": 18,
+              "n_reviews_analisadas": 40,
+              "exemplo_parafraseado": "As reviews elogiam a direção de Olivia Wilde por sua habilidade em contar a história em um único cenário, com enquadramentos e uso de espelhos que enriquecem a narrativa.",
+              "mencoes_clampadas": false,
+              "mencoes_valor_original": null,
+              "aspas_removidas": false
+            },
+            {
+              "tema": "Tensão e desconforto bem construídos",
+              "mencoes_aproximadas": 15,
+              "n_reviews_analisadas": 40,
+              "exemplo_parafraseado": "Os espectadores positivos destacam a atmosfera tensa e ansiosa criada pelos conflitos e segredos revelados, mantendo o público envolvido do início ao fim.",
+              "mencoes_clampadas": false,
+              "mencoes_valor_original": null,
+              "aspas_removidas": false
+            },
+            {
+              "tema": "Roteiro inteligente e diálogos naturais",
+              "mencoes_aproximadas": 12,
+              "n_reviews_analisadas": 40,
+              "exemplo_parafraseado": "As reviews ressaltam que o roteiro é bem escrito, com diálogos realistas e perspicazes que exploram relacionamentos e revelam vulnerabilidades.",
+              "mencoes_clampadas": false,
+              "mencoes_valor_original": null,
+              "aspas_removidas": false
+            },
+            {
+              "tema": "Exploração profunda de relacionamentos e emoções",
+              "mencoes_aproximadas": 10,
+              "n_reviews_analisadas": 40,
+              "exemplo_parafraseado": "Muitas reviews positivas mencionam que o filme apresenta uma visão honesta e comovente sobre casamentos em crise, tocando em temas como comunicação, ressentimento e esperança de redenção.",
+              "mencoes_clampadas": false,
+              "mencoes_valor_original": null,
+              "aspas_removidas": false
+            }
+          ],
+          "observacao_geral": "As reviews positivas celebram o filme como uma comédia dramática bem dirigida e atuada, destacando o equilíbrio entre humor e tensão, além da abordagem sincera sobre relacionamentos. O grupo valoriza especialmente a ambientação intimista e as performances do elenco principal.",
+          "idioma_invalido": false,
+          "escopo_suspeito": false
         }
       ],
-      "narrativa": "Em A Cura (1997), do diretor Kiyoshi Kurosawa, um detetive investiga mortes marcadas por um x estranho, levando-o a um suspeito tímido e enigmático — um thriller de crime e mistério que mergulha no horror psicológico. A experiência é marcada por um ritmo lento que domina a narrativa, com uma atmosfera sombria e perturbadora, mas que se desdobra de forma ambígua e sem respostas definitivas. A grande maioria das notas (~79%) é positiva, e essas reviews celebram o trabalho como hipnótico e perturbador: para esse grupo, o ritmo lento e deliberado intensifica o suspense, e a ausência de respostas é vista como um trunfo, forçando a reflexão sobre temas psicológicos profundos. Uma minoria das notas (~17%) fica no meio-termo — nessa leitura, o mesmo ritmo lento gera confusão narrativa, e o final ambíguo deixa pontas soltas, embora reconheçam ideias intrigantes e uma atmosfera eficaz. Para a fração mínima das notas (~3%), que não gostou, o filme é tedioso e arrastado, sem tensão, com personagens planos e um enredo repetitivo — uma experiência que, para eles, não cumpre o potencial da premissa.",
-      "narrativa_flags": {
-        "idioma_invalido": false,
-        "escopo_suspeito": false,
-        "prevalencia_suspeita": false,
-        "quantificador_suspeito": false,
-        "consenso_suspeito": false,
-        "peso_nao_ancorado": false,
-        "vocabulario_peso_suspeito": false,
-        "perspectiva_nao_marcada": false,
-        "aspas_removidas": true,
-        "falhou": false
+      "narrativa": "Dirigido por Olivia Wilde e lançado em 2026, O Convite é uma comédia dramática focada em Joe e Angela, um casal que vive uma crise conjugal. Quando decidem convidar os enigmáticos vizinhos do andar de cima para um jantar, a noite toma rumos inesperados.\n\nA experiência estrutura-se a partir de um encontro em ambientação intimista, com características que remetem ao formato de peça teatral centrado em quatro personagens. A condução apoia-se no desenvolvimento dos diálogos e na exposição de tensões e conflitos de relacionamento ao longo da reunião.\n\nNa grande maioria das notas (~91%), a maior parte exalta as atuações excepcionais do elenco principal durante as interações. Além disso, boa parte destaca a presença de humor ácido e situações constrangedoras, enquanto uma parcela expressiva elogia a direção precisa e a escolha pelo estilo visual de peça teatral.\n\nNuma fração mínima das notas (~7%), para quem está nessa faixa, muitos apontam oscilações no ritmo e na estrutura narrativa. Nesse mesmo grupo, alguns reconhecem aspectos positivos nas atuações do elenco principal, e uma parte reflete sobre a abordagem dos conflitos de relacionamento e comunicação.\n\nPor fim, numa fração ainda menor das notas (~2%), sob a ótica desse segmento, vários apontam que a produção traz um roteiro superficial e sem profundidade. Além dessa queixa, um número considerável critica a atuação exagerada de Olivia Wilde, enquanto parte deles lamenta a falta de humor e o ritmo arrastado da obra.",
+      "verificacao_narrativa": {
+        "quantificador_fora_de_faixa": [],
+        "quantificador_repetido": [],
+        "paragrafos": {
+          "n_paragrafos": 5,
+          "minimo": 3,
+          "insuficientes": false,
+          "longos": []
+        },
+        "n_paragrafos": 5,
+        "paragrafos_insuficientes": false,
+        "paragrafos_longos": [],
+        "grupos_sem_paragrafo_proprio": [],
+        "movimento1_e_movimento2_no_mesmo_paragrafo": false,
+        "formato_invalido": false,
+        "numeros_inventados": [],
+        "rotulos_faltando": [],
+        "ordem_incorreta": false,
+        "vocabulario_peso": false,
+        "resenha_speak": [],
+        "n_resenha_speak": 0,
+        "n_flags": 0
       },
+      "narrativa_selecao": {
+        "provider": "gemini",
+        "modelo": "gemini-3.7-flash",
+        "n_candidatos": 3,
+        "n_chamadas": 3,
+        "indice_escolhido": 2,
+        "motivo": "melhor_entre_limpos",
+        "criterio_decisivo": "unico",
+        "candidatos": [
+          {
+            "indice": 0,
+            "n_flags": 1,
+            "cliches": 0,
+            "repeticao_max": 1,
+            "ritmo": 11,
+            "cobertura": 0.778,
+            "eliminado": true
+          },
+          {
+            "indice": 1,
+            "n_flags": 1,
+            "cliches": 0,
+            "repeticao_max": 1,
+            "ritmo": 5,
+            "cobertura": 1.0,
+            "eliminado": true
+          },
+          {
+            "indice": 2,
+            "n_flags": 0,
+            "cliches": 0,
+            "repeticao_max": 1,
+            "ritmo": 4,
+            "cobertura": 1.0,
+            "eliminado": false
+          }
+        ],
+        "retry": null,
+        "uso": {
+          "prompt_tokens": 9330,
+          "completion_tokens": 1063,
+          "cache_hit_tokens": 0,
+          "cache_miss_tokens": 9330
+        },
+        "latencia_s": 28.62
+      }
+    },
+    "cure": {
+      "slug": "cure",
+      "data_coleta": "2026-08-16T02:36:34.819902+00:00",
+      "spec_version": "1.9.11",
+      "total_reviews_observadas": 559,
+      "reviews_url": "https://letterboxd.com/film/cure/reviews/",
       "ficha": {
         "titulo": "A Cura",
         "sinopse_oficial": "Pessoas são encontradas mortas com um bizarro \"x\" cravado em seus corpos. Desesperado, um detetive chamado Takabe decide iniciar uma investigação à base de longos e intermináveis sessões de interrogatórios. Porém, sua investigação não resulta em nada. Até que um determinado dia um rapaz é preso por estar perto de mais uma pessoa assassinada. Tímido e de trejeitos estranhos, resta saber qual a ligação entre ele o os crimes (e quem sabe, com o assassino)",
@@ -844,7 +843,6 @@ window.ESPECTRO_DATA = {
         "fonte": "tmdb",
         "ano_fonte": "letterboxd"
       },
-      "consensos_usados": [],
       "distribuicao": {
         "n_notas_total": 375278,
         "por_nivel": {
@@ -860,434 +858,788 @@ window.ESPECTRO_DATA = {
           "5.0": 99242
         },
         "por_bucket": {
-          "negativas": 3,
-          "medianas": 17,
-          "positivas": 79
+          "negativas": 2,
+          "medianas": 8,
+          "positivas": 90
         },
         "fonte": "letterboxd_histograma"
       },
-      "quantificadores_usados": [],
-      "marcadores_perspectiva": [],
-      "metricas_fluencia": {
-        "n_frases": 5,
-        "media_palavras": 35.2,
-        "cv_comprimento": 0.15,
-        "frase_mais_curta": 29,
-        "aberturas_repetidas": 1,
-        "verbos_reporte": 0,
-        "adverbios_mente": 0
-      },
-      "narrativa_bruta": "Em A Cura (1997), do diretor Kiyoshi Kurosawa, um detetive investiga mortes marcadas por um x estranho, levando-o a um suspeito tímido e enigmático — um thriller de crime e mistério que mergulha no horror psicológico. A experiência é marcada por um ritmo lento que domina a narrativa, com uma atmosfera sombria e perturbadora, mas que se desdobra de forma ambígua e sem respostas definitivas. A grande maioria das notas (~79%) é positiva, e essas reviews celebram o trabalho como hipnótico e perturbador: para esse grupo, o ritmo lento e deliberado intensifica o suspense, e a ausência de respostas é vista como um trunfo, forçando a reflexão sobre temas psicológicos profundos. Uma minoria das notas (~17%) fica no meio-termo — nessa leitura, o mesmo ritmo lento gera confusão narrativa, e o final ambíguo deixa pontas soltas, embora reconheçam ideias intrigantes e uma atmosfera eficaz. Para a fração mínima das notas (~3%), que não gostou, o filme é tedioso e arrastado, sem tensão, com personagens planos e um enredo repetitivo — uma experiência que, para eles, não cumpre o potencial da premissa.",
-      "edicao_flags": {
-        "edicao_descartada": true,
-        "motivo_descarte": "edicao_nula",
-        "protegidos_perdidos": [],
-        "numeros_alterados": false,
-        "houve_retentativa": true,
-        "falhou": false,
-        "n_protegidos": 6,
-        "n_tentativas": 4,
-        "motivos_por_tentativa": [
-          "ordem_alterada",
-          "regressão de honestidade: perspectiva_nao_marcada",
-          "regressão de honestidade: perspectiva_nao_marcada",
-          "edicao_nula"
-        ],
-        "similaridade": 0.9715575620767495,
-        "capitalizacao_ajustada": false,
-        "frases_sem_origem": [],
-        "similaridade_minima_por_frase": {
-          "Em A Cura (1997), do diretor Kiyoshi Kurosawa, um detetive investiga mortes marcadas por um x estranho, levando-o a um suspeito tímido e enigmático.": 1.0,
-          "É um thriller de crime e mistério que mergulha no horror psicológico.": 0.9166666666666666,
-          "A experiência é marcada por um ritmo lento que domina a narrativa, com uma atmosfera sombria e perturbadora.": 1.0,
-          "Só que tudo se desdobra de forma ambígua e sem respostas definitivas.": 0.8333333333333334,
-          "A grande maioria das notas (~79%) é positiva, e essas reviews celebram o trabalho como hipnótico e perturbador.": 1.0,
-          "Para esse grupo, o ritmo lento e deliberado intensifica o suspense, e a ausência de respostas é vista como um trunfo, forçando a reflexão sobre temas psicológicos profundos.": 1.0,
-          "Uma minoria das notas (~17%) fica no meio-termo — nessa leitura, o mesmo ritmo lento gera confusão narrativa, e o final ambíguo deixa pontas soltas.": 1.0,
-          "Mesmo assim, reconhecem ideias intrigantes e uma atmosfera eficaz.": 0.7777777777777778,
-          "Já para a fração mínima das notas (~3%), que não gostou, o filme é tedioso e arrastado, sem tensão, com personagens planos e um enredo repetitivo.": 0.96,
-          "Uma experiência que, para eles, não cumpre o potencial da premissa.": 1.0
+      "coleta": {
+        "slug": "cure",
+        "coletado_em": "2026-08-15T21:33:18.164360+00:00",
+        "versao_coletor": "1.9.6",
+        "ordenacao_usada": "by/added",
+        "histograma_bruto": {
+          "0.5": 456,
+          "1.0": 1037,
+          "1.5": 989,
+          "2.0": 4251,
+          "2.5": 6214,
+          "3.0": 23371,
+          "3.5": 41371,
+          "4.0": 110990,
+          "4.5": 87357,
+          "5.0": 99242
         },
-        "tentativas_detalhe": [
-          {
-            "tentativa": 1,
-            "motivo": "ordem_alterada",
-            "similaridade": 0.768976897689769,
-            "frases_sem_origem": [
-              {
-                "frase": "O conjunto é exatamente isso: um trabalho que divide opiniões, e cada grupo tira uma leitura diferente da mesma lentidão.",
-                "similaridade": 0.35
-              },
-              {
-                "frase": "A obra de Kurosawa incomoda não pelo que mostra, mas pelo que deixa em aberto.",
-                "similaridade": 0.3333333333333333
-              },
-              {
-                "frase": "Uns se perdem nesse vazio; outros, se encontram.",
-                "similaridade": 0.125
-              }
-            ],
-            "texto": "A Cura (1997), do diretor Kiyoshi Kurosawa, acompanha um detetive que investiga mortes marcadas por um x estranho. O caso o leva até um suspeito tímido e enigmático, num thriller de crime e mistério que mergulha no horror psicológico. O ritmo lento domina a narrativa, e a atmosfera é sombria e perturbadora, mas o filme se desdobra de forma ambígua, sem respostas definitivas. A grande maioria das notas (~79%) é positiva. Essas reviews celebram o trabalho como hipnótico e perturbador: para esse grupo, o ritmo lento e deliberado intensifica o suspense, e a ausência de respostas vira um trunfo, forçando a reflexão sobre temas psicológicos profundos. Já uma minoria das notas (~17%) fica no meio-termo. Nessa leitura, o mesmo ritmo lento gera confusão narrativa, e o final ambíguo deixa pontas soltas, embora reconheçam ideias intrigantes e uma atmosfera eficaz. Para a fração mínima das notas (~3%), que não gostou, o filme é tedioso e arrastado, sem tensão, com personagens planos e um enredo repetitivo. Para eles, essa experiência não cumpre o potencial da premissa. O conjunto é exatamente isso: um trabalho que divide opiniões, e cada grupo tira uma leitura diferente da mesma lentidão. A obra de Kurosawa incomoda não pelo que mostra, mas pelo que deixa em aberto. Uns se perdem nesse vazio; outros, se encontram."
+        "orcamento_paginas_por_nivel": {
+          "0.5": 1,
+          "1.0": 3,
+          "1.5": 2,
+          "2.0": 10,
+          "2.5": 6,
+          "3.0": 10,
+          "3.5": 2,
+          "4.0": 5,
+          "4.5": 4,
+          "5.0": 5
+        },
+        "paginas_gastas_por_nivel": {
+          "0.5": 1,
+          "1.0": 2,
+          "1.5": 2,
+          "2.0": 10,
+          "2.5": 6,
+          "3.0": 10,
+          "3.5": 2,
+          "4.0": 5,
+          "4.5": 4,
+          "5.0": 5
+        },
+        "paradas_por_limite": [
+          "0.5",
+          "1.0",
+          "1.5",
+          "2.0",
+          "2.5",
+          "3.0",
+          "3.5",
+          "4.0",
+          "4.5",
+          "5.0"
+        ],
+        "contagem_bruta_por_nivel": {
+          "0.5": 12,
+          "1.0": 24,
+          "1.5": 24,
+          "2.0": 118,
+          "2.5": 69,
+          "3.0": 120,
+          "3.5": 24,
+          "4.0": 60,
+          "4.5": 48,
+          "5.0": 60
+        },
+        "contagem_estimada_valida_por_nivel": {
+          "0.5": 5,
+          "1.0": 5,
+          "1.5": 11,
+          "2.0": 38,
+          "2.5": 20,
+          "3.0": 38,
+          "3.5": 9,
+          "4.0": 19,
+          "4.5": 16,
+          "5.0": 24
+        },
+        "motivo_parada_por_nivel": {
+          "0.5": "orcamento_esgotado",
+          "1.0": "orcamento_esgotado",
+          "1.5": "orcamento_esgotado",
+          "2.0": "orcamento_esgotado",
+          "2.5": "orcamento_esgotado",
+          "3.0": "orcamento_esgotado",
+          "3.5": "orcamento_esgotado",
+          "4.0": "orcamento_esgotado",
+          "4.5": "orcamento_esgotado",
+          "5.0": "orcamento_esgotado"
+        },
+        "paginas_base_por_nivel": {
+          "0.5": 1,
+          "1.0": 2,
+          "1.5": 2,
+          "2.0": 10,
+          "2.5": 6,
+          "3.0": 10,
+          "3.5": 2,
+          "4.0": 5,
+          "4.5": 4,
+          "5.0": 5
+        },
+        "paginas_extensao_por_nivel": {
+          "0.5": 0,
+          "1.0": 0,
+          "1.5": 0,
+          "2.0": 0,
+          "2.5": 0,
+          "3.0": 0,
+          "3.5": 0,
+          "4.0": 0,
+          "4.5": 0,
+          "5.0": 0
+        },
+        "extensao_por_bucket": {
+          "negativas": {
+            "paginas_base": 15,
+            "paginas_extensao": 0,
+            "extras_por_nivel": {},
+            "motivo_parada": "meta_atingida",
+            "n_validas_pos_base": 67,
+            "n_validas_pos_extensao": 67,
+            "meta": 50
           },
-          {
-            "tentativa": 2,
-            "motivo": "regressão de honestidade: perspectiva_nao_marcada",
-            "similaridade": 0.8825112107623319,
-            "frases_sem_origem": [
-              {
-                "frase": "É um equilíbrio entre críticas e elogios.",
-                "similaridade": 0.42857142857142855
-              }
-            ],
-            "texto": "Em A Cura (1997), do diretor Kiyoshi Kurosawa, um detetive investiga mortes marcadas por um x estranho, levando-o a um suspeito tímido e enigmático. É um thriller de crime e mistério que mergulha no horror psicológico. A experiência é dominada por um ritmo lento, com uma atmosfera sombria e perturbadora, mas que se desdobra de forma ambígua e sem respostas definitivas.\n\nA grande maioria das notas (~79%) é positiva, e essas reviews celebram o trabalho como hipnótico e perturbador. Para esse grupo, o ritmo lento e deliberado intensifica o suspense, e a ausência de respostas é vista como um trunfo, forçando a reflexão sobre temas psicológicos profundos.\n\nJá uma minoria das notas (~17%) fica no meio-termo. Nessa leitura, o mesmo ritmo lento gera confusão narrativa, e o final ambíguo deixa pontas soltas — embora reconheçam ideias intrigantes e uma atmosfera eficaz. É um equilíbrio entre críticas e elogios.\n\nPara a fração mínima das notas (~3%), que não gostou, o filme é tedioso e arrastado, sem tensão. Os personagens são planos, e o enredo se torna repetitivo. Para eles, a experiência não cumpre o potencial da premissa."
+          "medianas": {
+            "paginas_base": 16,
+            "paginas_extensao": 0,
+            "extras_por_nivel": {},
+            "motivo_parada": "meta_atingida",
+            "n_validas_pos_base": 73,
+            "n_validas_pos_extensao": 73,
+            "meta": 50
           },
-          {
-            "tentativa": 3,
-            "motivo": "regressão de honestidade: perspectiva_nao_marcada",
-            "similaridade": 0.7642427049559981,
-            "frases_sem_origem": [
-              {
-                "frase": "Não há tensão, os personagens são planos e o enredo se repete.",
-                "similaridade": 0.5833333333333334
-              }
-            ],
-            "texto": "Em A Cura (1997), do diretor Kiyoshi Kurosawa, um detetive investiga mortes marcadas por um x estranho, e isso o leva a um suspeito tímido e enigmático. É um thriller de crime e mistério que mergulha no horror psicológico. O ritmo lento domina a narrativa, com uma atmosfera sombria e perturbadora, mas o desdobrar é ambíguo e sem respostas definitivas.\n\nA grande maioria das notas (~79%) é positiva, e essas reviews celebram o trabalho como hipnótico e perturbador. Para esse grupo, o ritmo lento e deliberado intensifica o suspense. A ausência de respostas é vista como um trunfo, forçando a reflexão sobre temas psicológicos profundos.\n\nUma minoria das notas (~17%) fica no meio-termo. Nessa leitura, o mesmo ritmo lento gera confusão narrativa, e o final ambíguo deixa pontas soltas. Mas eles reconhecem ideias intrigantes e uma atmosfera eficaz. Já a fração mínima das notas (~3%), que não gostou, acha o filme tedioso e arrastado. Não há tensão, os personagens são planos e o enredo se repete. Para eles, a experiência não cumpre o potencial da premissa."
-          },
-          {
-            "tentativa": 4,
-            "motivo": "edicao_nula",
-            "similaridade": 0.9715575620767495,
-            "frases_sem_origem": [],
-            "texto": "Em A Cura (1997), do diretor Kiyoshi Kurosawa, um detetive investiga mortes marcadas por um x estranho, levando-o a um suspeito tímido e enigmático. É um thriller de crime e mistério que mergulha no horror psicológico. A experiência é marcada por um ritmo lento que domina a narrativa, com uma atmosfera sombria e perturbadora. Só que tudo se desdobra de forma ambígua e sem respostas definitivas.\n\nA grande maioria das notas (~79%) é positiva, e essas reviews celebram o trabalho como hipnótico e perturbador. Para esse grupo, o ritmo lento e deliberado intensifica o suspense, e a ausência de respostas é vista como um trunfo, forçando a reflexão sobre temas psicológicos profundos. Uma minoria das notas (~17%) fica no meio-termo — nessa leitura, o mesmo ritmo lento gera confusão narrativa, e o final ambíguo deixa pontas soltas. Mesmo assim, reconhecem ideias intrigantes e uma atmosfera eficaz. Já para a fração mínima das notas (~3%), que não gostou, o filme é tedioso e arrastado, sem tensão, com personagens planos e um enredo repetitivo. Uma experiência que, para eles, não cumpre o potencial da premissa."
+          "positivas": {
+            "paginas_base": 16,
+            "paginas_extensao": 0,
+            "extras_por_nivel": {},
+            "motivo_parada": "meta_atingida",
+            "n_validas_pos_base": 79,
+            "n_validas_pos_extensao": 79,
+            "meta": 50
           }
-        ]
-      }
-    },
-    "cidade-de-deus": {
-      "slug": "cidade-de-deus",
-      "data_coleta": "2026-07-19T08:27:41.045688+00:00",
-      "spec_version": "1.6.0",
-      "total_reviews_observadas": 228,
+        },
+        "profundidade_sondagem": {
+          "nivel_sondado": 4.0,
+          "profundidade": 256,
+          "exata": false,
+          "requisicoes": 4,
+          "motivo": "teto_plataforma"
+        },
+        "profundidade_estimada_por_nivel": {
+          "0.5": 1,
+          "1.0": 2,
+          "1.5": 2,
+          "2.0": 10,
+          "2.5": 14,
+          "3.0": 54,
+          "3.5": 95,
+          "4.0": 256,
+          "4.5": 201,
+          "5.0": 229
+        },
+        "janela_temporal": {
+          "total": {
+            "n": 678,
+            "min": "2023-12-06",
+            "max": "2026-08-07",
+            "p5": "2026-06-08",
+            "p50": "2026-07-27",
+            "p95": "2026-08-06"
+          },
+          "por_bucket": {
+            "negativas": {
+              "n": 214,
+              "min": "2024-05-27",
+              "max": "2026-08-07",
+              "p5": "2026-05-30",
+              "p50": "2026-07-10",
+              "p95": "2026-08-03"
+            },
+            "medianas": {
+              "n": 246,
+              "min": "2024-10-05",
+              "max": "2026-08-07",
+              "p5": "2026-07-06",
+              "p50": "2026-07-27",
+              "p95": "2026-08-05"
+            },
+            "positivas": {
+              "n": 218,
+              "min": "2023-12-06",
+              "max": "2026-08-07",
+              "p5": "2026-07-20",
+              "p50": "2026-08-06",
+              "p95": "2026-08-07"
+            }
+          }
+        },
+        "dias_por_100_paginas": {
+          "n_paginas": 16,
+          "pagina_min": 1,
+          "pagina_max": 64,
+          "dias": 16,
+          "dias_por_100_paginas": 25.396825396825395,
+          "paginas_para_1_ano": 1437
+        },
+        "ano_lancamento": 1997,
+        "ano_fonte": "letterboxd",
+        "n_reviews_bruto": 678
+      },
       "buckets": [
         {
           "bucket": "negativas",
-          "alvo": 50,
+          "alvo": 40,
           "modo": "completo",
-          "n_validas": 50,
+          "estado_piso": "completa",
+          "n_validas": 40,
+          "share_real": 2,
+          "composicao_alvo": {
+            "0.5": 3,
+            "1.0": 6,
+            "1.5": 6,
+            "2.0": 25
+          },
+          "composicao_atingida": {
+            "0.5": 3,
+            "1.0": 6,
+            "1.5": 6,
+            "2.0": 25
+          },
+          "cascata_por_degrau": {
+            "150": 40
+          },
+          "deficit_redistribuido": 0,
+          "distribuicao_pagina_origem": {
+            "n": 40,
+            "min": 1,
+            "max": 12,
+            "p5": 1,
+            "p50": 3,
+            "p95": 10,
+            "fracao_profunda": 0.3
+          },
           "niveis": [
             {
               "nivel": 0.5,
-              "n_validas": 10,
-              "n_brutas": 24,
-              "filtro_aplicado": 150,
-              "n_sem_nota": 0,
-              "n_descartadas_spoiler": 1,
-              "n_descartadas_curtas": 10,
-              "n_descartadas_truncamento": 0,
-              "paginas_buscadas": 2
-            },
-            {
-              "nivel": 1.0,
-              "n_validas": 10,
+              "n_validas": 3,
+              "n_alvo": 3,
               "n_brutas": 12,
-              "filtro_aplicado": 150,
-              "n_sem_nota": 0,
-              "n_descartadas_spoiler": 0,
-              "n_descartadas_curtas": 0,
-              "n_descartadas_truncamento": 0,
-              "paginas_buscadas": 1
-            },
-            {
-              "nivel": 1.5,
-              "n_validas": 10,
-              "n_brutas": 24,
-              "filtro_aplicado": 150,
-              "n_sem_nota": 0,
-              "n_descartadas_spoiler": 0,
-              "n_descartadas_curtas": 10,
-              "n_descartadas_truncamento": 0,
-              "paginas_buscadas": 2
-            },
-            {
-              "nivel": 2.0,
-              "n_validas": 10,
-              "n_brutas": 24,
               "filtro_aplicado": 150,
               "n_sem_nota": 0,
               "n_descartadas_spoiler": 1,
               "n_descartadas_curtas": 5,
               "n_descartadas_truncamento": 0,
+              "n_indisponivel_truncamento": 1,
+              "motivos_descarte": {
+                "truncada_sem_texto": 1,
+                "spoiler": 1,
+                "abaixo_min_chars": 5,
+                "excedente_cota": 2,
+                "duplicata": 0,
+                "outros": 0
+              },
+              "paginas_buscadas": 1
+            },
+            {
+              "nivel": 1.0,
+              "n_validas": 6,
+              "n_alvo": 6,
+              "n_brutas": 48,
+              "filtro_aplicado": 150,
+              "n_sem_nota": 0,
+              "n_descartadas_spoiler": 3,
+              "n_descartadas_curtas": 34,
+              "n_descartadas_truncamento": 0,
+              "n_indisponivel_truncamento": 0,
+              "motivos_descarte": {
+                "truncada_sem_texto": 0,
+                "spoiler": 3,
+                "abaixo_min_chars": 34,
+                "excedente_cota": 5,
+                "duplicata": 0,
+                "outros": 0
+              },
               "paginas_buscadas": 2
             },
             {
-              "nivel": 2.5,
-              "n_validas": 10,
+              "nivel": 1.5,
+              "n_validas": 6,
+              "n_alvo": 6,
               "n_brutas": 24,
               "filtro_aplicado": 150,
               "n_sem_nota": 0,
-              "n_descartadas_spoiler": 0,
-              "n_descartadas_curtas": 7,
+              "n_descartadas_spoiler": 1,
+              "n_descartadas_curtas": 12,
               "n_descartadas_truncamento": 0,
-              "paginas_buscadas": 2
-            }
-          ],
-          "temas": [
-            {
-              "tema": "Estetização e espetacularização da violência/miséria",
-              "mencoes_aproximadas": 25,
-              "n_reviews_analisadas": 50,
-              "exemplo_parafraseado": "Muitos consideram que o filme transforma a violência e a miséria da favela em um espetáculo cinematográfico, utilizando-as como um recurso estilístico para chocar e impressionar, em vez de gerar uma reflexão profunda. A montagem acelerada e a fotografia vibrante são vistas como formas de glamorizar o sofrimento.",
-              "mencoes_clampadas": false,
-              "mencoes_valor_original": null,
-              "aspas_removidas": false
-            },
-            {
-              "tema": "Representação estereotipada e deturpada da favela",
-              "mencoes_aproximadas": 18,
-              "n_reviews_analisadas": 50,
-              "exemplo_parafraseado": "As reviews negativas criticam o filme por simplificar a complexidade da favela, retratando-a quase exclusivamente através da lente do crime e da violência, ignorando outras dimensões da vida da comunidade. Isso é percebido como um reforço de estereótipos prejudiciais, especialmente para os moradores.",
-              "mencoes_clampadas": false,
-              "mencoes_valor_original": null,
-              "aspas_removidas": false
-            },
-            {
-              "tema": "Violência excessiva e gratuita",
-              "mencoes_aproximadas": 15,
-              "n_reviews_analisadas": 50,
-              "exemplo_parafraseado": "Um número considerável de espectadores achou a violência do filme excessiva e difícil de suportar, sentindo que ela servia mais para chocar do que para comunicar uma mensagem significativa. Cenas de crianças envolvidas em violência ou crimes sexuais foram particularmente perturbadoras.",
-              "mencoes_clampadas": false,
-              "mencoes_valor_original": null,
-              "aspas_removidas": false
-            },
-            {
-              "tema": "Falta de autenticidade/Crítica à perspectiva dos diretores",
-              "mencoes_aproximadas": 10,
-              "n_reviews_analisadas": 50,
-              "exemplo_parafraseado": "Este grupo questiona a autenticidade da narrativa, argumentando que os diretores, por não serem da comunidade retratada, oferecem uma visão superficial e turística da realidade da favela. Também há menções à apropriação cultural e à falta de benefício para os moradores reais.",
-              "mencoes_clampadas": false,
-              "mencoes_valor_original": null,
-              "aspas_removidas": false
-            },
-            {
-              "tema": "Personagens pouco desenvolvidos e falta de conexão emocional",
-              "mencoes_aproximadas": 8,
-              "n_reviews_analisadas": 50,
-              "exemplo_parafraseado": "Alguns críticos sentiram que os personagens, incluindo o protagonista, eram unidimensionais ou serviam apenas como ferramentas narrativas, dificultando a conexão emocional com a história. A multiplicidade de personagens e a narrativa episódica são vistas como fatores que impedem o aprofundamento.",
-              "mencoes_clampadas": false,
-              "mencoes_valor_original": null,
-              "aspas_removidas": false
-            },
-            {
-              "tema": "Roteiro confuso/repetitivo e montagem frenética",
-              "mencoes_aproximadas": 7,
-              "n_reviews_analisadas": 50,
-              "exemplo_parafraseado": "A montagem rápida e a estrutura narrativa não linear são descritas como confusas e sem propósito, resultando em uma experiência de visualização entediante ou frustrante. Alguns consideram que o filme se torna repetitivo, mostrando os mesmos eventos sem evolução.",
-              "mencoes_clampadas": false,
-              "mencoes_valor_original": null,
-              "aspas_removidas": false
-            }
-          ],
-          "observacao_geral": "As reviews negativas apontam que o filme, apesar de seus méritos técnicos, falha eticamente ao estetizar a violência e a miséria, oferecendo uma representação estereotipada da favela para consumo externo. Este grupo de espectadores sentiu-se incomodado com a excessiva violência e a superficialidade na construção dos personagens e da narrativa.",
-          "idioma_invalido": false,
-          "escopo_suspeito": false,
-          "share_real": 1
-        },
-        {
-          "bucket": "medianas",
-          "alvo": 20,
-          "modo": "completo",
-          "n_validas": 20,
-          "niveis": [
-            {
-              "nivel": 3.0,
-              "n_validas": 10,
-              "n_brutas": 24,
-              "filtro_aplicado": 150,
-              "n_sem_nota": 0,
-              "n_descartadas_spoiler": 0,
-              "n_descartadas_curtas": 11,
-              "n_descartadas_truncamento": 0,
+              "n_indisponivel_truncamento": 0,
+              "motivos_descarte": {
+                "truncada_sem_texto": 0,
+                "spoiler": 1,
+                "abaixo_min_chars": 12,
+                "excedente_cota": 5,
+                "duplicata": 0,
+                "outros": 0
+              },
               "paginas_buscadas": 2
             },
             {
-              "nivel": 3.5,
-              "n_validas": 10,
-              "n_brutas": 24,
-              "filtro_aplicado": 150,
-              "n_sem_nota": 0,
-              "n_descartadas_spoiler": 0,
-              "n_descartadas_curtas": 7,
-              "n_descartadas_truncamento": 0,
-              "paginas_buscadas": 2
-            }
-          ],
-          "temas": [
-            {
-              "tema": "Retrato da violência e realidade social",
-              "mencoes_aproximadas": 11,
-              "n_reviews_analisadas": 20,
-              "exemplo_parafraseado": "Este grupo de reviews destaca a representação honesta e impactante da violência, pobreza e condições de vida nas favelas, muitas vezes comparando a experiência a um documentário pela sua crueza e realismo.",
-              "mencoes_clampadas": false,
-              "mencoes_valor_original": null,
-              "aspas_removidas": false
-            },
-            {
-              "tema": "Qualidade técnica e estilística",
-              "mencoes_aproximadas": 9,
-              "n_reviews_analisadas": 20,
-              "exemplo_parafraseado": "As reviews medianas frequentemente elogiam a cinematografia, a edição ágil, os movimentos de câmera dinâmicos e a direção estilizada, embora alguns considerem essa estilização excessiva ou fria em certos momentos.",
-              "mencoes_clampadas": false,
-              "mencoes_valor_original": null,
-              "aspas_removidas": false
-            },
-            {
-              "tema": "Entretenimento versus profundidade/conexão emocional",
-              "mencoes_aproximadas": 7,
-              "n_reviews_analisadas": 20,
-              "exemplo_parafraseado": "Muitas avaliações apontam que, apesar de ser um filme bem-feito e muitas vezes cativante na superfície, ele não conseguiu gerar uma conexão emocional profunda com os personagens ou com a tragédia retratada, sendo mais entretenimento do que uma experiência marcante.",
-              "mencoes_clampadas": false,
-              "mencoes_valor_original": null,
-              "aspas_removidas": false
-            },
-            {
-              "tema": "Ritmo e engajamento",
-              "mencoes_aproximadas": 4,
-              "n_reviews_analisadas": 20,
-              "exemplo_parafraseado": "Alguns espectadores acharam o filme monótono ou entediante em certas partes, com um ritmo inconstante, o que dificultou o engajamento completo com a narrativa.",
-              "mencoes_clampadas": false,
-              "mencoes_valor_original": null,
-              "aspas_removidas": false
-            },
-            {
-              "tema": "Caracterização dos personagens",
-              "mencoes_aproximadas": 3,
-              "n_reviews_analisadas": 20,
-              "exemplo_parafraseado": "Existe uma percepção mista sobre os personagens; enquanto alguns os consideram carismáticos e bem caracterizados, outros sentiram que eram pouco memoráveis ou serviam apenas a funções dramáticas, sem maior profundidade.",
-              "mencoes_clampadas": false,
-              "mencoes_valor_original": null,
-              "aspas_removidas": false
-            }
-          ],
-          "observacao_geral": "As reviews medianas de 3 a 3.5 estrelas apontam que o filme é tecnicamente impressionante e oferece um retrato realista e impactante da violência nas favelas, mas muitos sentem que, apesar do estilo visual marcante, ele falha em gerar uma conexão emocional profunda ou um fator 'uau' que justificaria uma nota mais alta.",
-          "idioma_invalido": false,
-          "escopo_suspeito": false,
-          "share_real": 8
-        },
-        {
-          "bucket": "positivas",
-          "alvo": 30,
-          "modo": "completo",
-          "n_validas": 30,
-          "niveis": [
-            {
-              "nivel": 4.0,
-              "n_validas": 10,
-              "n_brutas": 24,
+              "nivel": 2.0,
+              "n_validas": 25,
+              "n_alvo": 25,
+              "n_brutas": 130,
               "filtro_aplicado": 150,
               "n_sem_nota": 0,
               "n_descartadas_spoiler": 2,
-              "n_descartadas_curtas": 11,
+              "n_descartadas_curtas": 86,
               "n_descartadas_truncamento": 0,
+              "n_indisponivel_truncamento": 2,
+              "motivos_descarte": {
+                "truncada_sem_texto": 2,
+                "spoiler": 2,
+                "abaixo_min_chars": 86,
+                "excedente_cota": 15,
+                "duplicata": 0,
+                "outros": 0
+              },
+              "paginas_buscadas": 10
+            }
+          ],
+          "temas": [
+            {
+              "tema": "Ritmo lento e arrastado",
+              "mencoes_aproximadas": 25,
+              "n_reviews_analisadas": 40,
+              "exemplo_parafraseado": "O filme se arrasta demais, com cenas longas e monótonas que fazem o tempo passar muito devagar, levando ao tédio e à sonolência.",
+              "mencoes_clampadas": false,
+              "mencoes_valor_original": null,
+              "aspas_removidas": false
+            },
+            {
+              "tema": "Falta de clímax ou recompensa",
+              "mencoes_aproximadas": 15,
+              "n_reviews_analisadas": 40,
+              "exemplo_parafraseado": "A história constrói muita expectativa, mas termina sem respostas satisfatórias, deixando a sensação de que nada foi resolvido.",
+              "mencoes_clampadas": false,
+              "mencoes_valor_original": null,
+              "aspas_removidas": false
+            },
+            {
+              "tema": "Personagens pouco cativantes",
+              "mencoes_aproximadas": 12,
+              "n_reviews_analisadas": 40,
+              "exemplo_parafraseado": "Os personagens são distantes e não despertam empatia, e o antagonista é repetitivo e irritante em suas falas e atitudes.",
+              "mencoes_clampadas": false,
+              "mencoes_valor_original": null,
+              "aspas_removidas": false
+            },
+            {
+              "tema": "Enredo confuso e sem objetividade",
+              "mencoes_aproximadas": 10,
+              "n_reviews_analisadas": 40,
+              "exemplo_parafraseado": "A narrativa é confusa, com informações insuficientes e uma abordagem pretensiosa que complica desnecessariamente a trama.",
+              "mencoes_clampadas": false,
+              "mencoes_valor_original": null,
+              "aspas_removidas": false
+            },
+            {
+              "tema": "Fotografia bonita, mas insuficiente",
+              "mencoes_aproximadas": 10,
+              "n_reviews_analisadas": 40,
+              "exemplo_parafraseado": "A parte visual é elogiada, com belos enquadramentos e boa iluminação, mas isso não compensa os problemas de narrativa e ritmo.",
+              "mencoes_clampadas": false,
+              "mencoes_valor_original": null,
+              "aspas_removidas": false
+            },
+            {
+              "tema": "Diálogos fracos e repetitivos",
+              "mencoes_aproximadas": 7,
+              "n_reviews_analisadas": 40,
+              "exemplo_parafraseado": "As conversas são vazias e se repetem à exaustão, sem acrescentar profundidade ou avançar na história.",
+              "mencoes_clampadas": false,
+              "mencoes_valor_original": null,
+              "aspas_removidas": false
+            }
+          ],
+          "observacao_geral": "As reviews negativas apontam que o filme é extremamente lento e entediante, com uma trama que promete muito mas entrega pouco, terminando de forma insatisfatória. Muitos espectadores se sentiram confusos e desconectados dos personagens, embora reconheçam a qualidade visual da obra.",
+          "idioma_invalido": false,
+          "escopo_suspeito": false
+        },
+        {
+          "bucket": "medianas",
+          "alvo": 40,
+          "modo": "completo",
+          "estado_piso": "completa",
+          "n_validas": 40,
+          "share_real": 8,
+          "composicao_alvo": {
+            "2.5": 8,
+            "3.0": 32
+          },
+          "composicao_atingida": {
+            "2.5": 8,
+            "3.0": 32
+          },
+          "cascata_por_degrau": {
+            "150": 40
+          },
+          "deficit_redistribuido": 0,
+          "distribuicao_pagina_origem": {
+            "n": 40,
+            "min": 1,
+            "max": 14,
+            "p5": 1,
+            "p50": 5,
+            "p95": 12,
+            "fracao_profunda": 0.35
+          },
+          "niveis": [
+            {
+              "nivel": 2.5,
+              "n_validas": 8,
+              "n_alvo": 8,
+              "n_brutas": 91,
+              "filtro_aplicado": 150,
+              "n_sem_nota": 0,
+              "n_descartadas_spoiler": 7,
+              "n_descartadas_curtas": 57,
+              "n_descartadas_truncamento": 0,
+              "n_indisponivel_truncamento": 1,
+              "motivos_descarte": {
+                "truncada_sem_texto": 1,
+                "spoiler": 7,
+                "abaixo_min_chars": 57,
+                "excedente_cota": 18,
+                "duplicata": 0,
+                "outros": 0
+              },
+              "paginas_buscadas": 6
+            },
+            {
+              "nivel": 3.0,
+              "n_validas": 32,
+              "n_alvo": 32,
+              "n_brutas": 155,
+              "filtro_aplicado": 150,
+              "n_sem_nota": 0,
+              "n_descartadas_spoiler": 6,
+              "n_descartadas_curtas": 101,
+              "n_descartadas_truncamento": 0,
+              "n_indisponivel_truncamento": 1,
+              "motivos_descarte": {
+                "truncada_sem_texto": 1,
+                "spoiler": 6,
+                "abaixo_min_chars": 101,
+                "excedente_cota": 15,
+                "duplicata": 0,
+                "outros": 0
+              },
+              "paginas_buscadas": 10
+            }
+          ],
+          "temas": [
+            {
+              "tema": "Ritmo lento",
+              "mencoes_aproximadas": 12,
+              "n_reviews_analisadas": 40,
+              "exemplo_parafraseado": "Várias pessoas comentaram que o filme tem um ritmo muito lento, com longas cenas sem diálogo, o que chegou a provocar sono durante a exibição.",
+              "mencoes_clampadas": false,
+              "mencoes_valor_original": null,
+              "aspas_removidas": false
+            },
+            {
+              "tema": "Expectativa alta frustrada",
+              "mencoes_aproximadas": 8,
+              "n_reviews_analisadas": 40,
+              "exemplo_parafraseado": "Muitos espectadores criaram muita expectativa devido à fama do filme e às recomendações, mas acabaram se decepcionando, pois não corresponderam ao que imaginavam.",
+              "mencoes_clampadas": false,
+              "mencoes_valor_original": null,
+              "aspas_removidas": false
+            },
+            {
+              "tema": "Ambiguidade e final aberto",
+              "mencoes_aproximadas": 7,
+              "n_reviews_analisadas": 40,
+              "exemplo_parafraseado": "A história deixa muitas perguntas sem resposta e o final é ambíguo, o que gera opiniões divididas: alguns apreciam, outros se sentem frustrados pela falta de explicações claras.",
+              "mencoes_clampadas": false,
+              "mencoes_valor_original": null,
+              "aspas_removidas": false
+            },
+            {
+              "tema": "Atmosfera e fotografia elogiadas",
+              "mencoes_aproximadas": 7,
+              "n_reviews_analisadas": 40,
+              "exemplo_parafraseado": "A direção de arte e a fotografia são frequentemente elogiadas, com cenas que parecem quadros, e a atmosfera de inquietação é bem construída através do uso do silêncio e dos sons ambientes.",
+              "mencoes_clampadas": false,
+              "mencoes_valor_original": null,
+              "aspas_removidas": false
+            },
+            {
+              "tema": "Atuações boas, mas personagens sem profundidade",
+              "mencoes_aproximadas": 5,
+              "n_reviews_analisadas": 40,
+              "exemplo_parafraseado": "As atuações são consideradas boas, especialmente a do antagonista, porém alguns personagens, como a esposa do protagonista, são vistos como pouco desenvolvidos e usados apenas como recurso narrativo.",
+              "mencoes_clampadas": false,
+              "mencoes_valor_original": null,
+              "aspas_removidas": false
+            },
+            {
+              "tema": "História previsível ou sem inovação",
+              "mencoes_aproximadas": 4,
+              "n_reviews_analisadas": 40,
+              "exemplo_parafraseado": "Alguns espectadores acharam a trama simples e não inovadora, comparando-a a outros filmes do gênero que teriam sido executados de forma mais eficaz.",
+              "mencoes_clampadas": false,
+              "mencoes_valor_original": null,
+              "aspas_removidas": false
+            }
+          ],
+          "observacao_geral": "As reviews medianas apontam uma recepção mista: há reconhecimento da qualidade técnica e da atmosfera, mas o ritmo lento e a ambiguidade geram frustração. Muitos espectadores sentem que o filme não atendeu às altas expectativas criadas pela sua reputação.",
+          "idioma_invalido": false,
+          "escopo_suspeito": false
+        },
+        {
+          "bucket": "positivas",
+          "alvo": 40,
+          "modo": "completo",
+          "estado_piso": "completa",
+          "n_validas": 40,
+          "share_real": 90,
+          "composicao_alvo": {
+            "3.5": 5,
+            "4.0": 13,
+            "4.5": 10,
+            "5.0": 12
+          },
+          "composicao_atingida": {
+            "3.5": 5,
+            "4.0": 13,
+            "4.5": 10,
+            "5.0": 12
+          },
+          "cascata_por_degrau": {
+            "150": 40
+          },
+          "deficit_redistribuido": 0,
+          "distribuicao_pagina_origem": {
+            "n": 40,
+            "min": 1,
+            "max": 57,
+            "p5": 1,
+            "p50": 3,
+            "p95": 57,
+            "fracao_profunda": 0.325
+          },
+          "niveis": [
+            {
+              "nivel": 3.5,
+              "n_validas": 5,
+              "n_alvo": 5,
+              "n_brutas": 24,
+              "filtro_aplicado": 150,
+              "n_sem_nota": 0,
+              "n_descartadas_spoiler": 0,
+              "n_descartadas_curtas": 15,
+              "n_descartadas_truncamento": 0,
+              "n_indisponivel_truncamento": 0,
+              "motivos_descarte": {
+                "truncada_sem_texto": 0,
+                "spoiler": 0,
+                "abaixo_min_chars": 15,
+                "excedente_cota": 4,
+                "duplicata": 0,
+                "outros": 0
+              },
               "paginas_buscadas": 2
+            },
+            {
+              "nivel": 4.0,
+              "n_validas": 13,
+              "n_alvo": 13,
+              "n_brutas": 74,
+              "filtro_aplicado": 150,
+              "n_sem_nota": 0,
+              "n_descartadas_spoiler": 5,
+              "n_descartadas_curtas": 40,
+              "n_descartadas_truncamento": 0,
+              "n_indisponivel_truncamento": 2,
+              "motivos_descarte": {
+                "truncada_sem_texto": 2,
+                "spoiler": 5,
+                "abaixo_min_chars": 40,
+                "excedente_cota": 14,
+                "duplicata": 0,
+                "outros": 0
+              },
+              "paginas_buscadas": 5
             },
             {
               "nivel": 4.5,
               "n_validas": 10,
-              "n_brutas": 24,
+              "n_alvo": 10,
+              "n_brutas": 60,
               "filtro_aplicado": 150,
               "n_sem_nota": 0,
-              "n_descartadas_spoiler": 0,
-              "n_descartadas_curtas": 4,
+              "n_descartadas_spoiler": 4,
+              "n_descartadas_curtas": 37,
               "n_descartadas_truncamento": 0,
-              "paginas_buscadas": 2
+              "n_indisponivel_truncamento": 0,
+              "motivos_descarte": {
+                "truncada_sem_texto": 0,
+                "spoiler": 4,
+                "abaixo_min_chars": 37,
+                "excedente_cota": 9,
+                "duplicata": 0,
+                "outros": 0
+              },
+              "paginas_buscadas": 4
             },
             {
               "nivel": 5.0,
-              "n_validas": 10,
-              "n_brutas": 24,
+              "n_validas": 12,
+              "n_alvo": 12,
+              "n_brutas": 60,
               "filtro_aplicado": 150,
               "n_sem_nota": 0,
               "n_descartadas_spoiler": 2,
-              "n_descartadas_curtas": 11,
+              "n_descartadas_curtas": 33,
               "n_descartadas_truncamento": 0,
-              "paginas_buscadas": 2
+              "n_indisponivel_truncamento": 1,
+              "motivos_descarte": {
+                "truncada_sem_texto": 1,
+                "spoiler": 2,
+                "abaixo_min_chars": 33,
+                "excedente_cota": 12,
+                "duplicata": 0,
+                "outros": 0
+              },
+              "paginas_buscadas": 5
             }
           ],
           "temas": [
             {
-              "tema": "Estilo visual e edição dinâmicos",
-              "mencoes_aproximadas": 21,
-              "n_reviews_analisadas": 30,
-              "exemplo_parafraseado": "As reviews frequentemente elogiam a edição, que confere um ritmo acelerado e energia contagiante ao filme, além da cinematografia estilizada e do uso inovador da câmera, que contribuem para a imersão e a intensidade da narrativa.",
+              "tema": "Atmosfera e direção",
+              "mencoes_aproximadas": 25,
+              "n_reviews_analisadas": 40,
+              "exemplo_parafraseado": "A atmosfera opressiva e o uso de silêncio e planos longos criam uma sensação constante de desconforto, sem depender de sustos.",
               "mencoes_clampadas": false,
               "mencoes_valor_original": null,
               "aspas_removidas": false
             },
             {
-              "tema": "Narrativa envolvente e abrangente",
-              "mencoes_aproximadas": 15,
-              "n_reviews_analisadas": 30,
-              "exemplo_parafraseado": "Este grupo de reviews destaca a capacidade do filme de contar múltiplas histórias e apresentar diversos personagens ao longo de décadas, sem que a trama se torne confusa ou perca coesão, mantendo o espectador constantemente engajado.",
+              "tema": "Vilão e performance",
+              "mencoes_aproximadas": 18,
+              "n_reviews_analisadas": 40,
+              "exemplo_parafraseado": "O antagonista é fascinante e inquietante, com uma atuação que transmite uma calma perturbadora, elevando o filme.",
               "mencoes_clampadas": false,
               "mencoes_valor_original": null,
               "aspas_removidas": false
             },
             {
-              "tema": "Brutalidade e realismo da violência",
+              "tema": "Temas psicológicos e filosóficos",
+              "mencoes_aproximadas": 16,
+              "n_reviews_analisadas": 40,
+              "exemplo_parafraseado": "O filme explora a natureza do mal e os impulsos reprimidos, sugerindo que qualquer pessoa pode ser levada a cometer atos terríveis.",
+              "mencoes_clampadas": false,
+              "mencoes_valor_original": null,
+              "aspas_removidas": false
+            },
+            {
+              "tema": "Ritmo e construção lenta",
               "mencoes_aproximadas": 14,
-              "n_reviews_analisadas": 30,
-              "exemplo_parafraseado": "As reviews positivas ressaltam a representação crua e impactante da violência, que é mostrada de forma realista e não glamourizada, chocando os espectadores e enfatizando a seriedade do tema abordado.",
+              "n_reviews_analisadas": 40,
+              "exemplo_parafraseado": "A narrativa se desenvolve de forma lenta e meticulosa, exigindo paciência, mas recompensando com uma imersão profunda.",
               "mencoes_clampadas": false,
               "mencoes_valor_original": null,
               "aspas_removidas": false
             },
             {
-              "tema": "Atuações marcantes",
+              "tema": "Roteiro e mistério",
+              "mencoes_aproximadas": 12,
+              "n_reviews_analisadas": 40,
+              "exemplo_parafraseado": "O roteiro é cheio de camadas e ambiguidades, estimulando múltiplas interpretações e reflexões.",
+              "mencoes_clampadas": false,
+              "mencoes_valor_original": null,
+              "aspas_removidas": false
+            },
+            {
+              "tema": "Fotografia e composição",
               "mencoes_aproximadas": 10,
-              "n_reviews_analisadas": 30,
-              "exemplo_parafraseado": "Muitas reviews elogiam as performances do elenco, especialmente as das crianças e de Zé Pequeno, que transmitem autenticidade e profundidade aos personagens, tornando-os inesquecíveis.",
-              "mencoes_clampadas": false,
-              "mencoes_valor_original": null,
-              "aspas_removidas": false
-            },
-            {
-              "tema": "Contexto social e histórico",
-              "mencoes_aproximadas": 9,
-              "n_reviews_analisadas": 30,
-              "exemplo_parafraseado": "Os comentários positivos apreciam como o filme explora o ciclo de violência e a falta de oportunidades em um ambiente de extrema pobreza, oferecendo um retrato fiel de uma realidade social complexa e baseada em eventos reais.",
-              "mencoes_clampadas": false,
-              "mencoes_valor_original": null,
-              "aspas_removidas": false
-            },
-            {
-              "tema": "Mistura de gêneros",
-              "mencoes_aproximadas": 3,
-              "n_reviews_analisadas": 30,
-              "exemplo_parafraseado": "As reviews positivas notam a habilidade do filme em incorporar elementos de diferentes gêneros, como drama, romance, comédia e thriller policial, de maneira consistente e sem perder a identidade.",
+              "n_reviews_analisadas": 40,
+              "exemplo_parafraseado": "A fotografia é cuidadosamente composta, com enquadramentos que acentuam a distância e o isolamento dos personagens.",
               "mencoes_clampadas": false,
               "mencoes_valor_original": null,
               "aspas_removidas": false
             }
           ],
-          "observacao_geral": "As reviews positivas apontam o filme como uma obra-prima do cinema mundial, elogiando sua inovação técnica e a maneira visceral como aborda a realidade brasileira. Este grupo destaca a narrativa envolvente, o estilo visual dinâmico e as atuações autênticas como pontos altos que tornam o filme impactante e memorável.",
+          "observacao_geral": "As reviews positivas destacam o filme como uma obra-prima do terror psicológico, elogiando sua atmosfera única, a atuação do antagonista e a profundidade temática. Muitos mencionam a necessidade de revisões para captar todas as camadas, mas consideram a experiência hipnótica e perturbadora.",
           "idioma_invalido": false,
-          "escopo_suspeito": false,
-          "share_real": 91
+          "escopo_suspeito": false
         }
       ],
-      "narrativa": "Em Cidade de Deus (2002), o diretor Fernando Meirelles conduz um drama criminal que acompanha Buscapé, um jovem da Cidade de Deus que, temendo tornar-se um bandido, vê na fotografia uma chance de vida digna. O filme tem 130 minutos de duração e apresenta uma narrativa fragmentada, que alterna linhas do tempo e múltiplos personagens, numa favela carioca marcada pela violência e pela pobreza. A edição é ágil e a câmera é dinâmica, criando um ritmo acelerado e uma atmosfera intensa, enquanto a violência surge crua e realista, sem suavização. As notas são dominadas pela aprovação: a grande maioria das notas (~91%) é positiva. Quem gostou celebra o estilo visual e a edição dinâmicos, que a maioria das reviews positivas aponta como fonte de energia e imersão. Também entram na conta a narrativa envolvente e a brutalidade realista, que muitos destacam como impactante e não glamourizada. Uma pequena minoria das notas (~8%) fica no meio-termo. Para esse grupo, o filme é tecnicamente impressionante e retrata a violência e a realidade social de forma realista — cerca de metade das reviews medianas menciona esse retrato —, mas muitos sentem falta de conexão emocional, o que impede uma nota mais alta. Por fim, uma fração mínima das notas (~1%) rejeita o filme. Nessa leitura, muitos veem a estetização e a espetacularização da violência e da miséria como um problema ético. Muitos também apontam representação estereotipada da favela, e muitos consideram a violência excessiva e gratuita, o que compromete a experiência.",
-      "narrativa_flags": {
-        "idioma_invalido": false,
-        "escopo_suspeito": false,
-        "prevalencia_suspeita": false,
-        "quantificador_suspeito": false,
-        "consenso_suspeito": false,
-        "peso_nao_ancorado": false,
-        "vocabulario_peso_suspeito": false,
-        "perspectiva_nao_marcada": false,
-        "aspas_removidas": true,
-        "falhou": false
+      "narrativa": "Lançado em 1997 e dirigido por Kiyoshi Kurosawa, A Cura é uma produção que combina elementos de suspense policial, terror psicológico e mistério. A narrativa acompanha um detetive envolvido na apuração de uma série de mortes enigmáticas marcadas por incisões peculiares, cujos desdobramentos ganham novos contornos a partir do interrogatório de uma figura ligada aos acontecimentos.\n\nA estrutura da obra se desenvolve através de uma progressão lenta e calculada, ancorada em silêncios prolongados e em uma ambientação densa e contínua. A composição visual prioriza planos longos e uma atmosfera sóbria ao longo das sequências.\n\nNa grande maioria das notas (~90%), a maior parte valoriza a atmosfera opressiva e a condução da direção ao construir tensão constante. Uma parcela expressiva ressalta o magnetismo inquietante da atuação do antagonista, enquanto vários apontam a densidade das reflexões psicológicas e filosóficas suscitadas pela obra.\n\nPara a leitura presente numa fração mínima das notas (~8%), muitos apontam que o andamento cadenciado da narrativa torna a exibição cansativa. Nesse mesmo grupo, parte deles relata frustração diante das elevadas expectativas prévias sobre o longa-metragem, e uma fatia menor manifesta incômodo com a ambiguidade e a indefinição do final aberto.\n\nJá sob a perspectiva adotada numa fração ainda menor das notas (~2%), a maior parcela reclama de um ritmo excessivamente arrastado que prejudica o envolvimento. Além disso, um número considerável critica a falta de um clímax recompensador para a trama, ao passo que boa parte observa que os personagens são pouco cativantes e geram distanciamento emocional.",
+      "verificacao_narrativa": {
+        "quantificador_fora_de_faixa": [],
+        "quantificador_repetido": [],
+        "paragrafos": {
+          "n_paragrafos": 5,
+          "minimo": 3,
+          "insuficientes": false,
+          "longos": []
+        },
+        "n_paragrafos": 5,
+        "paragrafos_insuficientes": false,
+        "paragrafos_longos": [],
+        "grupos_sem_paragrafo_proprio": [],
+        "movimento1_e_movimento2_no_mesmo_paragrafo": false,
+        "formato_invalido": false,
+        "numeros_inventados": [],
+        "rotulos_faltando": [],
+        "ordem_incorreta": false,
+        "vocabulario_peso": false,
+        "resenha_speak": [],
+        "n_resenha_speak": 0,
+        "n_flags": 0
       },
+      "narrativa_selecao": {
+        "provider": "gemini",
+        "modelo": "gemini-3.7-flash",
+        "n_candidatos": 3,
+        "n_chamadas": 3,
+        "indice_escolhido": 1,
+        "motivo": "melhor_entre_limpos",
+        "criterio_decisivo": "unico",
+        "candidatos": [
+          {
+            "indice": 0,
+            "n_flags": 2,
+            "cliches": 0,
+            "repeticao_max": 1,
+            "ritmo": 8,
+            "cobertura": 0.889,
+            "eliminado": true
+          },
+          {
+            "indice": 1,
+            "n_flags": 0,
+            "cliches": 0,
+            "repeticao_max": 1,
+            "ritmo": 5,
+            "cobertura": 1.0,
+            "eliminado": false
+          },
+          {
+            "indice": 2,
+            "n_flags": 2,
+            "cliches": 0,
+            "repeticao_max": 1,
+            "ritmo": 11,
+            "cobertura": 1.0,
+            "eliminado": true
+          }
+        ],
+        "retry": null,
+        "uso": {
+          "prompt_tokens": 9246,
+          "completion_tokens": 1074,
+          "cache_hit_tokens": 0,
+          "cache_miss_tokens": 9246
+        },
+        "latencia_s": 21.47
+      }
+    },
+    "cidade-de-deus": {
+      "slug": "cidade-de-deus",
+      "data_coleta": "2026-08-16T02:37:19.821505+00:00",
+      "spec_version": "1.9.11",
+      "total_reviews_observadas": 505,
+      "reviews_url": "https://letterboxd.com/film/cidade-de-deus/reviews/",
       "ficha": {
         "titulo": "Cidade de Deus",
         "sinopse_oficial": "Buscapé é um jovem morador da Cidade de Deus que cresce em meio à violência. Com medo de se tornar um bandido, enxerga na fotografia uma oportunidade de ter uma vida digna.",
@@ -1303,28 +1655,6 @@ window.ESPECTRO_DATA = {
         "fonte": "tmdb",
         "ano_fonte": "letterboxd"
       },
-      "consensos_usados": [
-        {
-          "propriedade": "ritmo acelerado",
-          "grupos_de_origem": [
-            "positivas"
-          ],
-          "temas_de_origem": [
-            "Estilo visual e edição dinâmicos"
-          ]
-        },
-        {
-          "propriedade": "violência crua e realista",
-          "grupos_de_origem": [
-            "medianas",
-            "positivas"
-          ],
-          "temas_de_origem": [
-            "Retrato da violência e realidade social",
-            "Brutalidade e realismo da violência"
-          ]
-        }
-      ],
       "distribuicao": {
         "n_notas_total": 1216381,
         "por_nivel": {
@@ -1341,92 +1671,779 @@ window.ESPECTRO_DATA = {
         },
         "por_bucket": {
           "negativas": 1,
-          "medianas": 8,
-          "positivas": 91
+          "medianas": 3,
+          "positivas": 96
         },
         "fonte": "letterboxd_histograma"
       },
-      "quantificadores_usados": [
-        {
-          "quantificador": "a maioria",
-          "tema": "Estilo visual e edição dinâmicos"
+      "coleta": {
+        "slug": "cidade-de-deus",
+        "coletado_em": "2026-08-15T21:34:12.522522+00:00",
+        "versao_coletor": "1.9.6",
+        "ordenacao_usada": "by/added",
+        "histograma_bruto": {
+          "0.5": 893,
+          "1.0": 1645,
+          "1.5": 1143,
+          "2.0": 5503,
+          "2.5": 6324,
+          "3.0": 35847,
+          "3.5": 58393,
+          "4.0": 245630,
+          "4.5": 241463,
+          "5.0": 619540
         },
-        {
-          "quantificador": "muitos",
-          "tema": "Brutalidade e realismo da violência"
+        "orcamento_paginas_por_nivel": {
+          "0.5": 1,
+          "1.0": 3,
+          "1.5": 2,
+          "2.0": 10,
+          "2.5": 6,
+          "3.0": 10,
+          "3.5": 1,
+          "4.0": 3,
+          "4.5": 3,
+          "5.0": 9
         },
-        {
-          "quantificador": "cerca de metade",
-          "tema": "Retrato da violência e realidade social"
+        "paginas_gastas_por_nivel": {
+          "0.5": 1,
+          "1.0": 2,
+          "1.5": 2,
+          "2.0": 8,
+          "2.5": 4,
+          "3.0": 10,
+          "3.5": 1,
+          "4.0": 3,
+          "4.5": 3,
+          "5.0": 9
         },
-        {
-          "quantificador": "muitos",
-          "tema": "Estetização e espetacularização da violência/miséria"
+        "paradas_por_limite": [
+          "0.5",
+          "1.0",
+          "1.5",
+          "2.0",
+          "2.5",
+          "3.0",
+          "3.5",
+          "4.0",
+          "4.5",
+          "5.0"
+        ],
+        "contagem_bruta_por_nivel": {
+          "0.5": 12,
+          "1.0": 24,
+          "1.5": 24,
+          "2.0": 96,
+          "2.5": 48,
+          "3.0": 113,
+          "3.5": 12,
+          "4.0": 36,
+          "4.5": 36,
+          "5.0": 104
         },
-        {
-          "quantificador": "muitos",
-          "tema": "Representação estereotipada e deturpada da favela"
+        "contagem_estimada_valida_por_nivel": {
+          "0.5": 3,
+          "1.0": 6,
+          "1.5": 3,
+          "2.0": 35,
+          "2.5": 13,
+          "3.0": 28,
+          "3.5": 6,
+          "4.0": 8,
+          "4.5": 12,
+          "5.0": 27
         },
-        {
-          "quantificador": "muitos",
-          "tema": "Violência excessiva e gratuita"
-        }
-      ],
-      "marcadores_perspectiva": [
-        {
-          "grupo": "medianas",
-          "trecho": "Uma pequena minoria das notas (~8%) fica no meio-termo: para esse grupo, o filme é tecnicamente impressionante"
+        "motivo_parada_por_nivel": {
+          "0.5": "orcamento_esgotado",
+          "1.0": "orcamento_esgotado",
+          "1.5": "orcamento_esgotado",
+          "2.0": "orcamento_esgotado",
+          "2.5": "orcamento_esgotado",
+          "3.0": "orcamento_esgotado",
+          "3.5": "orcamento_esgotado",
+          "4.0": "orcamento_esgotado",
+          "4.5": "orcamento_esgotado",
+          "5.0": "orcamento_esgotado"
         },
-        {
-          "grupo": "negativas",
-          "trecho": "uma fração mínima das notas (~1%) rejeita o filme: nessa leitura, muitos veem"
-        }
-      ],
-      "metricas_fluencia": {
-        "n_frases": 11,
-        "media_palavras": 22.1,
-        "cv_comprimento": 0.44,
-        "frase_mais_curta": 9,
-        "aberturas_repetidas": 0,
-        "verbos_reporte": 5,
-        "adverbios_mente": 0
-      },
-      "narrativa_bruta": "Em Cidade de Deus (2002), o diretor Fernando Meirelles conduz um drama criminal que acompanha Buscapé, um jovem da Cidade de Deus que, temendo tornar-se um bandido, vê na fotografia uma chance de vida digna. O filme, com 130 minutos de duração, apresenta uma narrativa fragmentada que alterna linhas do tempo e múltiplos personagens, ambientada em uma favela carioca marcada pela violência e pela pobreza. A edição é ágil e a câmera, dinâmica, criando um ritmo acelerado e uma atmosfera intensa, enquanto a violência é retratada de forma crua e realista, sem suavização. As notas são dominadas pela aprovação: a grande maioria das notas (~91%) é positiva. Quem gostou celebra o estilo visual e a edição dinâmicos, apontados pela maioria das reviews positivas como fonte de energia e imersão, além da narrativa envolvente e da brutalidade realista da violência, que muitos destacam como impactante e não glamourizada. Uma pequena minoria das notas (~8%) fica no meio-termo: para esse grupo, o filme é tecnicamente impressionante e retrata a violência e a realidade social de forma realista — cerca de metade das reviews medianas menciona esse retrato —, mas muitos sentem que falta conexão emocional, o que impede uma nota mais alta. Por fim, uma fração mínima das notas (~1%) rejeita o filme: nessa leitura, muitos veem a estetização e a espetacularização da violência e da miséria como um problema ético, muitos apontam representação estereotipada da favela e muitos consideram a violência excessiva e gratuita, o que compromete a experiência.",
-      "edicao_flags": {
-        "edicao_descartada": false,
-        "motivo_descarte": "",
-        "protegidos_perdidos": [],
-        "numeros_alterados": false,
-        "houve_retentativa": false,
-        "falhou": false,
-        "n_protegidos": 8,
-        "n_tentativas": 1,
-        "motivos_por_tentativa": [],
-        "similaridade": 0.9309446254071662,
-        "capitalizacao_ajustada": false,
-        "frases_sem_origem": [],
-        "similaridade_minima_por_frase": {
-          "Em Cidade de Deus (2002), o diretor Fernando Meirelles conduz um drama criminal que acompanha Buscapé, um jovem da Cidade de Deus que, temendo tornar-se um bandido, vê na fotografia uma chance de vida digna.": 1.0,
-          "O filme tem 130 minutos de duração e apresenta uma narrativa fragmentada, que alterna linhas do tempo e múltiplos personagens, numa favela carioca marcada pela violência e pela pobreza.": 0.8928571428571429,
-          "A edição é ágil e a câmera é dinâmica, criando um ritmo acelerado e uma atmosfera intensa, enquanto a violência surge crua e realista, sem suavização.": 0.9615384615384616,
-          "As notas são dominadas pela aprovação: a grande maioria das notas (~91%) é positiva.": 1.0,
-          "Quem gostou celebra o estilo visual e a edição dinâmicos, que a maioria das reviews positivas aponta como fonte de energia e imersão.": 0.9130434782608695,
-          "Também entram na conta a narrativa envolvente e a brutalidade realista, que muitos destacam como impactante e não glamourizada.": 0.7368421052631579,
-          "Uma pequena minoria das notas (~8%) fica no meio-termo.": 1.0,
-          "Para esse grupo, o filme é tecnicamente impressionante e retrata a violência e a realidade social de forma realista — cerca de metade das reviews medianas menciona esse retrato —, mas muitos sentem falta de conexão emocional, o que impede uma nota mais alta.": 0.9761904761904762,
-          "Por fim, uma fração mínima das notas (~1%) rejeita o filme.": 1.0,
-          "Nessa leitura, muitos veem a estetização e a espetacularização da violência e da miséria como um problema ético.": 1.0,
-          "Muitos também apontam representação estereotipada da favela, e muitos consideram a violência excessiva e gratuita, o que compromete a experiência.": 0.95
+        "paginas_base_por_nivel": {
+          "0.5": 1,
+          "1.0": 2,
+          "1.5": 2,
+          "2.0": 8,
+          "2.5": 4,
+          "3.0": 10,
+          "3.5": 1,
+          "4.0": 3,
+          "4.5": 3,
+          "5.0": 9
         },
-        "tentativas_detalhe": [
-          {
-            "tentativa": 1,
-            "motivo": "",
-            "similaridade": 0.9309446254071662,
-            "frases_sem_origem": [],
-            "texto": "Em Cidade de Deus (2002), o diretor Fernando Meirelles conduz um drama criminal que acompanha Buscapé, um jovem da Cidade de Deus que, temendo tornar-se um bandido, vê na fotografia uma chance de vida digna. O filme tem 130 minutos de duração e apresenta uma narrativa fragmentada, que alterna linhas do tempo e múltiplos personagens, numa favela carioca marcada pela violência e pela pobreza. A edição é ágil e a câmera é dinâmica, criando um ritmo acelerado e uma atmosfera intensa, enquanto a violência surge crua e realista, sem suavização. As notas são dominadas pela aprovação: a grande maioria das notas (~91%) é positiva. Quem gostou celebra o estilo visual e a edição dinâmicos, que a maioria das reviews positivas aponta como fonte de energia e imersão. Também entram na conta a narrativa envolvente e a brutalidade realista, que muitos destacam como impactante e não glamourizada. Uma pequena minoria das notas (~8%) fica no meio-termo. Para esse grupo, o filme é tecnicamente impressionante e retrata a violência e a realidade social de forma realista — cerca de metade das reviews medianas menciona esse retrato —, mas muitos sentem falta de conexão emocional, o que impede uma nota mais alta. Por fim, uma fração mínima das notas (~1%) rejeita o filme. Nessa leitura, muitos veem a estetização e a espetacularização da violência e da miséria como um problema ético. Muitos também apontam representação estereotipada da favela, e muitos consideram a violência excessiva e gratuita, o que compromete a experiência."
+        "paginas_extensao_por_nivel": {
+          "0.5": 0,
+          "1.0": 0,
+          "1.5": 0,
+          "2.0": 0,
+          "2.5": 0,
+          "3.0": 0,
+          "3.5": 0,
+          "4.0": 0,
+          "4.5": 0,
+          "5.0": 0
+        },
+        "extensao_por_bucket": {
+          "negativas": {
+            "paginas_base": 13,
+            "paginas_extensao": 0,
+            "extras_por_nivel": {},
+            "motivo_parada": "meta_atingida",
+            "n_validas_pos_base": 71,
+            "n_validas_pos_extensao": 71,
+            "meta": 50
+          },
+          "medianas": {
+            "paginas_base": 14,
+            "paginas_extensao": 0,
+            "extras_por_nivel": {},
+            "motivo_parada": "meta_atingida",
+            "n_validas_pos_base": 54,
+            "n_validas_pos_extensao": 54,
+            "meta": 50
+          },
+          "positivas": {
+            "paginas_base": 16,
+            "paginas_extensao": 0,
+            "extras_por_nivel": {},
+            "motivo_parada": "meta_atingida",
+            "n_validas_pos_base": 65,
+            "n_validas_pos_extensao": 65,
+            "meta": 50
           }
-        ]
+        },
+        "profundidade_sondagem": {
+          "nivel_sondado": 5.0,
+          "profundidade": 256,
+          "exata": false,
+          "requisicoes": 4,
+          "motivo": "teto_plataforma"
+        },
+        "profundidade_estimada_por_nivel": {
+          "0.5": 1,
+          "1.0": 1,
+          "1.5": 1,
+          "2.0": 2,
+          "2.5": 3,
+          "3.0": 15,
+          "3.5": 24,
+          "4.0": 101,
+          "4.5": 100,
+          "5.0": 256
+        },
+        "janela_temporal": {
+          "total": {
+            "n": 895,
+            "min": "2003-04-01",
+            "max": "2026-08-07",
+            "p5": "2012-08-30",
+            "p50": "2026-07-13",
+            "p95": "2026-08-06"
+          },
+          "por_bucket": {
+            "negativas": {
+              "n": 300,
+              "min": "2004-10-14",
+              "max": "2026-08-06",
+              "p5": "2018-07-13",
+              "p50": "2026-05-23",
+              "p95": "2026-07-31"
+            },
+            "medianas": {
+              "n": 275,
+              "min": "2003-04-01",
+              "max": "2026-08-07",
+              "p5": "2014-11-28",
+              "p50": "2026-07-19",
+              "p95": "2026-08-05"
+            },
+            "positivas": {
+              "n": 320,
+              "min": "2004-02-28",
+              "max": "2026-08-07",
+              "p5": "2012-03-06",
+              "p50": "2026-08-06",
+              "p95": "2026-08-07"
+            }
+          }
+        },
+        "dias_por_100_paginas": {
+          "n_paginas": 15,
+          "pagina_min": 1,
+          "pagina_max": 128,
+          "dias": 3,
+          "dias_por_100_paginas": 2.3622047244094486,
+          "paginas_para_1_ano": 15452
+        },
+        "ano_lancamento": 2002,
+        "ano_fonte": "letterboxd",
+        "n_reviews_bruto": 895
+      },
+      "buckets": [
+        {
+          "bucket": "negativas",
+          "alvo": 40,
+          "modo": "completo",
+          "estado_piso": "completa",
+          "n_validas": 40,
+          "share_real": 1,
+          "composicao_alvo": {
+            "0.5": 4,
+            "1.0": 7,
+            "1.5": 5,
+            "2.0": 24
+          },
+          "composicao_atingida": {
+            "0.5": 4,
+            "1.0": 7,
+            "1.5": 5,
+            "2.0": 24
+          },
+          "cascata_por_degrau": {
+            "150": 40
+          },
+          "deficit_redistribuido": 0,
+          "distribuicao_pagina_origem": {
+            "n": 40,
+            "min": 1,
+            "max": 12,
+            "p5": 1,
+            "p50": 3,
+            "p95": 12,
+            "fracao_profunda": 0.375
+          },
+          "niveis": [
+            {
+              "nivel": 0.5,
+              "n_validas": 4,
+              "n_alvo": 4,
+              "n_brutas": 36,
+              "filtro_aplicado": 150,
+              "n_sem_nota": 0,
+              "n_descartadas_spoiler": 1,
+              "n_descartadas_curtas": 22,
+              "n_descartadas_truncamento": 0,
+              "n_indisponivel_truncamento": 0,
+              "motivos_descarte": {
+                "truncada_sem_texto": 0,
+                "spoiler": 1,
+                "abaixo_min_chars": 22,
+                "excedente_cota": 9,
+                "duplicata": 0,
+                "outros": 0
+              },
+              "paginas_buscadas": 1
+            },
+            {
+              "nivel": 1.0,
+              "n_validas": 7,
+              "n_alvo": 7,
+              "n_brutas": 60,
+              "filtro_aplicado": 150,
+              "n_sem_nota": 0,
+              "n_descartadas_spoiler": 2,
+              "n_descartadas_curtas": 39,
+              "n_descartadas_truncamento": 0,
+              "n_indisponivel_truncamento": 0,
+              "motivos_descarte": {
+                "truncada_sem_texto": 0,
+                "spoiler": 2,
+                "abaixo_min_chars": 39,
+                "excedente_cota": 12,
+                "duplicata": 0,
+                "outros": 0
+              },
+              "paginas_buscadas": 2
+            },
+            {
+              "nivel": 1.5,
+              "n_validas": 5,
+              "n_alvo": 5,
+              "n_brutas": 48,
+              "filtro_aplicado": 150,
+              "n_sem_nota": 0,
+              "n_descartadas_spoiler": 2,
+              "n_descartadas_curtas": 31,
+              "n_descartadas_truncamento": 0,
+              "n_indisponivel_truncamento": 0,
+              "motivos_descarte": {
+                "truncada_sem_texto": 0,
+                "spoiler": 2,
+                "abaixo_min_chars": 31,
+                "excedente_cota": 10,
+                "duplicata": 0,
+                "outros": 0
+              },
+              "paginas_buscadas": 2
+            },
+            {
+              "nivel": 2.0,
+              "n_validas": 24,
+              "n_alvo": 24,
+              "n_brutas": 156,
+              "filtro_aplicado": 150,
+              "n_sem_nota": 0,
+              "n_descartadas_spoiler": 2,
+              "n_descartadas_curtas": 89,
+              "n_descartadas_truncamento": 0,
+              "n_indisponivel_truncamento": 0,
+              "motivos_descarte": {
+                "truncada_sem_texto": 0,
+                "spoiler": 2,
+                "abaixo_min_chars": 89,
+                "excedente_cota": 41,
+                "duplicata": 0,
+                "outros": 0
+              },
+              "paginas_buscadas": 8
+            }
+          ],
+          "temas": [
+            {
+              "tema": "Retrato explorador e sensacionalista da pobreza",
+              "mencoes_aproximadas": 15,
+              "n_reviews_analisadas": 40,
+              "exemplo_parafraseado": "O filme é visto como uma exploração da miséria, usando a violência e o sofrimento como espetáculo para o público estrangeiro, sem se aprofundar nas causas sociais ou dar dignidade aos personagens.",
+              "mencoes_clampadas": false,
+              "mencoes_valor_original": null,
+              "aspas_removidas": false
+            },
+            {
+              "tema": "Excesso de violência e ritmo exaustivo",
+              "mencoes_aproximadas": 12,
+              "n_reviews_analisadas": 40,
+              "exemplo_parafraseado": "A violência constante e a edição frenética são criticadas por tornarem a experiência cansativa e por reduzirem o impacto emocional, fazendo com que as mortes pareçam banais e sem peso.",
+              "mencoes_clampadas": false,
+              "mencoes_valor_original": null,
+              "aspas_removidas": false
+            },
+            {
+              "tema": "Falta de desenvolvimento dos personagens",
+              "mencoes_aproximadas": 10,
+              "n_reviews_analisadas": 40,
+              "exemplo_parafraseado": "Os personagens são considerados rasos, servindo mais como tipos do que como pessoas reais, o que impede a conexão emocional do público e enfraquece o drama.",
+              "mencoes_clampadas": false,
+              "mencoes_valor_original": null,
+              "aspas_removidas": false
+            },
+            {
+              "tema": "Narrativa fragmentada e excesso de narração",
+              "mencoes_aproximadas": 8,
+              "n_reviews_analisadas": 40,
+              "exemplo_parafraseado": "A estrutura não linear e o uso constante de voz off são apontados como confusos e didáticos, dificultando o envolvimento com a história e entregando informações de forma artificial.",
+              "mencoes_clampadas": false,
+              "mencoes_valor_original": null,
+              "aspas_removidas": false
+            },
+            {
+              "tema": "Estética e estilo vazios, tecnicamente chamativos",
+              "mencoes_aproximadas": 7,
+              "n_reviews_analisadas": 40,
+              "exemplo_parafraseado": "Embora a direção de arte e a fotografia chamem atenção, o estilo é visto como superficial e mais preocupado em impressionar do que em servir à narrativa.",
+              "mencoes_clampadas": false,
+              "mencoes_valor_original": null,
+              "aspas_removidas": false
+            },
+            {
+              "tema": "Filme superestimado em relação à sua recepção",
+              "mencoes_aproximadas": 6,
+              "n_reviews_analisadas": 40,
+              "exemplo_parafraseado": "Muitos que não gostaram mencionam que não entendem a alta avaliação do filme, considerando-o superestimado e aquém das expectativas criadas pela fama.",
+              "mencoes_clampadas": false,
+              "mencoes_valor_original": null,
+              "aspas_removidas": false
+            }
+          ],
+          "observacao_geral": "Este grupo de reviews negativas critica o filme por retratar a pobreza de forma exploradora e sensacionalista, pelo excesso de violência e pela falta de profundidade dos personagens. Também há queixas sobre a narrativa confusa e a estética vazia, além de considerarem a obra superestimada.",
+          "idioma_invalido": false,
+          "escopo_suspeito": false
+        },
+        {
+          "bucket": "medianas",
+          "alvo": 40,
+          "modo": "completo",
+          "estado_piso": "completa",
+          "n_validas": 40,
+          "share_real": 3,
+          "composicao_alvo": {
+            "2.5": 6,
+            "3.0": 34
+          },
+          "composicao_atingida": {
+            "2.5": 6,
+            "3.0": 34
+          },
+          "cascata_por_degrau": {
+            "150": 40
+          },
+          "deficit_redistribuido": 0,
+          "distribuicao_pagina_origem": {
+            "n": 40,
+            "min": 1,
+            "max": 12,
+            "p5": 1,
+            "p50": 3,
+            "p95": 12,
+            "fracao_profunda": 0.2
+          },
+          "niveis": [
+            {
+              "nivel": 2.5,
+              "n_validas": 6,
+              "n_alvo": 6,
+              "n_brutas": 84,
+              "filtro_aplicado": 150,
+              "n_sem_nota": 0,
+              "n_descartadas_spoiler": 0,
+              "n_descartadas_curtas": 51,
+              "n_descartadas_truncamento": 0,
+              "n_indisponivel_truncamento": 1,
+              "motivos_descarte": {
+                "truncada_sem_texto": 1,
+                "spoiler": 0,
+                "abaixo_min_chars": 51,
+                "excedente_cota": 26,
+                "duplicata": 0,
+                "outros": 0
+              },
+              "paginas_buscadas": 4
+            },
+            {
+              "nivel": 3.0,
+              "n_validas": 34,
+              "n_alvo": 34,
+              "n_brutas": 191,
+              "filtro_aplicado": 150,
+              "n_sem_nota": 0,
+              "n_descartadas_spoiler": 7,
+              "n_descartadas_curtas": 113,
+              "n_descartadas_truncamento": 0,
+              "n_indisponivel_truncamento": 2,
+              "motivos_descarte": {
+                "truncada_sem_texto": 2,
+                "spoiler": 7,
+                "abaixo_min_chars": 113,
+                "excedente_cota": 35,
+                "duplicata": 0,
+                "outros": 0
+              },
+              "paginas_buscadas": 10
+            }
+          ],
+          "temas": [
+            {
+              "tema": "Excesso de violência",
+              "mencoes_aproximadas": 12,
+              "n_reviews_analisadas": 40,
+              "exemplo_parafraseado": "A violência é tão constante e intensa que acaba se tornando entorpecente, com mortes demais que perdem o impacto.",
+              "mencoes_clampadas": false,
+              "mencoes_valor_original": null,
+              "aspas_removidas": false
+            },
+            {
+              "tema": "Técnica impressionante, mas distanciamento emocional",
+              "mencoes_aproximadas": 11,
+              "n_reviews_analisadas": 40,
+              "exemplo_parafraseado": "A direção, a fotografia e a edição são brilhantes, mas o estilo visual tão chamativo cria uma barreira que impede uma conexão mais profunda com a história.",
+              "mencoes_clampadas": false,
+              "mencoes_valor_original": null,
+              "aspas_removidas": false
+            },
+            {
+              "tema": "Narrativa episódica e difícil de seguir",
+              "mencoes_aproximadas": 8,
+              "n_reviews_analisadas": 40,
+              "exemplo_parafraseado": "A história é contada em fragmentos que não se conectam bem, tornando difícil acompanhar a trama e os muitos personagens.",
+              "mencoes_clampadas": false,
+              "mencoes_valor_original": null,
+              "aspas_removidas": false
+            },
+            {
+              "tema": "Falta de personagens cativantes",
+              "mencoes_aproximadas": 8,
+              "n_reviews_analisadas": 40,
+              "exemplo_parafraseado": "Embora os atores sejam competentes, os personagens não despertam empatia, deixando o espectador indiferente ao destino deles.",
+              "mencoes_clampadas": false,
+              "mencoes_valor_original": null,
+              "aspas_removidas": false
+            },
+            {
+              "tema": "Retrato realista da vida na favela",
+              "mencoes_aproximadas": 8,
+              "n_reviews_analisadas": 40,
+              "exemplo_parafraseado": "O filme mostra com crueza a pobreza e a falta de oportunidades nas comunidades carentes, o que dá um peso documental à obra.",
+              "mencoes_clampadas": false,
+              "mencoes_valor_original": null,
+              "aspas_removidas": false
+            },
+            {
+              "tema": "Comparações com outros filmes de gangster",
+              "mencoes_aproximadas": 6,
+              "n_reviews_analisadas": 40,
+              "exemplo_parafraseado": "A obra remete a outros clássicos do gênero, mas muitos acham que ela não alcança a mesma profundidade ou complexidade desses filmes.",
+              "mencoes_clampadas": false,
+              "mencoes_valor_original": null,
+              "aspas_removidas": false
+            }
+          ],
+          "observacao_geral": "As reviews medianas reconhecem a qualidade técnica e o realismo do filme, mas apontam falhas na narrativa e no desenvolvimento dos personagens, além do excesso de violência que prejudica a experiência. Para este grupo, a obra é bem-feita porém superestimada.",
+          "idioma_invalido": false,
+          "escopo_suspeito": false
+        },
+        {
+          "bucket": "positivas",
+          "alvo": 40,
+          "modo": "completo",
+          "estado_piso": "completa",
+          "n_validas": 40,
+          "share_real": 96,
+          "composicao_alvo": {
+            "3.5": 2,
+            "4.0": 9,
+            "4.5": 8,
+            "5.0": 21
+          },
+          "composicao_atingida": {
+            "3.5": 2,
+            "4.0": 9,
+            "4.5": 8,
+            "5.0": 21
+          },
+          "cascata_por_degrau": {
+            "150": 40
+          },
+          "deficit_redistribuido": 0,
+          "distribuicao_pagina_origem": {
+            "n": 40,
+            "min": 1,
+            "max": 128,
+            "p5": 1,
+            "p50": 3,
+            "p95": 9,
+            "fracao_profunda": 0.325
+          },
+          "niveis": [
+            {
+              "nivel": 3.5,
+              "n_validas": 2,
+              "n_alvo": 2,
+              "n_brutas": 24,
+              "filtro_aplicado": 150,
+              "n_sem_nota": 0,
+              "n_descartadas_spoiler": 1,
+              "n_descartadas_curtas": 10,
+              "n_descartadas_truncamento": 0,
+              "n_indisponivel_truncamento": 1,
+              "motivos_descarte": {
+                "truncada_sem_texto": 1,
+                "spoiler": 1,
+                "abaixo_min_chars": 10,
+                "excedente_cota": 10,
+                "duplicata": 0,
+                "outros": 0
+              },
+              "paginas_buscadas": 1
+            },
+            {
+              "nivel": 4.0,
+              "n_validas": 9,
+              "n_alvo": 9,
+              "n_brutas": 72,
+              "filtro_aplicado": 150,
+              "n_sem_nota": 0,
+              "n_descartadas_spoiler": 2,
+              "n_descartadas_curtas": 51,
+              "n_descartadas_truncamento": 0,
+              "n_indisponivel_truncamento": 0,
+              "motivos_descarte": {
+                "truncada_sem_texto": 0,
+                "spoiler": 2,
+                "abaixo_min_chars": 51,
+                "excedente_cota": 10,
+                "duplicata": 0,
+                "outros": 0
+              },
+              "paginas_buscadas": 3
+            },
+            {
+              "nivel": 4.5,
+              "n_validas": 8,
+              "n_alvo": 8,
+              "n_brutas": 60,
+              "filtro_aplicado": 150,
+              "n_sem_nota": 0,
+              "n_descartadas_spoiler": 2,
+              "n_descartadas_curtas": 38,
+              "n_descartadas_truncamento": 0,
+              "n_indisponivel_truncamento": 1,
+              "motivos_descarte": {
+                "truncada_sem_texto": 1,
+                "spoiler": 2,
+                "abaixo_min_chars": 38,
+                "excedente_cota": 11,
+                "duplicata": 0,
+                "outros": 0
+              },
+              "paginas_buscadas": 3
+            },
+            {
+              "nivel": 5.0,
+              "n_validas": 21,
+              "n_alvo": 21,
+              "n_brutas": 164,
+              "filtro_aplicado": 150,
+              "n_sem_nota": 0,
+              "n_descartadas_spoiler": 2,
+              "n_descartadas_curtas": 108,
+              "n_descartadas_truncamento": 0,
+              "n_indisponivel_truncamento": 3,
+              "motivos_descarte": {
+                "truncada_sem_texto": 3,
+                "spoiler": 2,
+                "abaixo_min_chars": 108,
+                "excedente_cota": 30,
+                "duplicata": 0,
+                "outros": 0
+              },
+              "paginas_buscadas": 9
+            }
+          ],
+          "temas": [
+            {
+              "tema": "Realismo e brutalidade",
+              "mencoes_aproximadas": 15,
+              "n_reviews_analisadas": 40,
+              "exemplo_parafraseado": "As reviews positivas frequentemente destacam como o filme retrata de forma crua e realista a violência e a pobreza nas favelas, transmitindo uma sensação de autenticidade que impacta o espectador.",
+              "mencoes_clampadas": false,
+              "mencoes_valor_original": null,
+              "aspas_removidas": false
+            },
+            {
+              "tema": "Cinematografia e direção",
+              "mencoes_aproximadas": 12,
+              "n_reviews_analisadas": 40,
+              "exemplo_parafraseado": "Os elogios se concentram na fotografia marcante, nos ângulos de câmera dinâmicos e na direção segura, que criam uma experiência visual imersiva e estilisticamente impressionante.",
+              "mencoes_clampadas": false,
+              "mencoes_valor_original": null,
+              "aspas_removidas": false
+            },
+            {
+              "tema": "Roteiro e narrativa",
+              "mencoes_aproximadas": 10,
+              "n_reviews_analisadas": 40,
+              "exemplo_parafraseado": "Muitas reviews positivas mencionam a estrutura não linear e a forma como as histórias se entrelaçam, mantendo o interesse e proporcionando uma narrativa coesa e envolvente.",
+              "mencoes_clampadas": false,
+              "mencoes_valor_original": null,
+              "aspas_removidas": false
+            },
+            {
+              "tema": "Atuações e elenco",
+              "mencoes_aproximadas": 8,
+              "n_reviews_analisadas": 40,
+              "exemplo_parafraseado": "As reviews elogiam as atuações convincentes, especialmente de atores não profissionais, que adicionam autenticidade e profundidade aos personagens.",
+              "mencoes_clampadas": false,
+              "mencoes_valor_original": null,
+              "aspas_removidas": false
+            },
+            {
+              "tema": "Impacto emocional",
+              "mencoes_aproximadas": 6,
+              "n_reviews_analisadas": 40,
+              "exemplo_parafraseado": "Os espectadores relatam que o filme provoca fortes emoções, variando de choque e tristeza à admiração, e que a história permanece na mente muito depois do fim.",
+              "mencoes_clampadas": false,
+              "mencoes_valor_original": null,
+              "aspas_removidas": false
+            },
+            {
+              "tema": "Trilha sonora e ritmo",
+              "mencoes_aproximadas": 5,
+              "n_reviews_analisadas": 40,
+              "exemplo_parafraseado": "Algumas reviews destacam a trilha sonora marcante e o ritmo acelerado, que contribuem para a energia e a fluidez do filme, mantendo o espectador preso à tela.",
+              "mencoes_clampadas": false,
+              "mencoes_valor_original": null,
+              "aspas_removidas": false
+            }
+          ],
+          "observacao_geral": "As reviews positivas celebram o filme como uma obra-prima do cinema, destacando sua abordagem crua e realista, sua estética visual impressionante e sua narrativa complexa. Este grupo vê o filme como uma experiência intensa e impactante que retrata a realidade das favelas de forma autêntica e artística.",
+          "idioma_invalido": false,
+          "escopo_suspeito": false
+        }
+      ],
+      "narrativa": "Dirigido por Fernando Meirelles e lançado em 2002, Cidade de Deus é um drama policial brasileiro com 130 minutos de duração. A trama acompanha Buscapé, um jovem que cresce em um contexto marcado pela criminalidade urbana e busca na fotografia um caminho para construir uma trajetória diferente.\n\nA obra se estrutura por meio de uma narrativa fragmentada e não linear, acompanhada por um ritmo acelerado de montagem e uma ambientação crua centrada na violência e no cotidiano da comunidade.\n\nNa grande maioria das notas (~96%), boa parte destaca a representação realista e direta da brutalidade como um dos pontos centrais da obra. Além disso, vários apontam a cinematografia e o estilo de direção como elementos marcantes na condução visual, enquanto uma parte valoriza a estrutura do roteiro e o entrelaçamento das histórias apresentadas.\n\nEm contrapartida, para quem se posiciona numa fração mínima das notas (~3%), um número considerável considera que a intensidade constante da violência atenua o peso dramático das situações. Nessa perspectiva, uma parcela expressiva pondera que o apuro técnico da produção gera um distanciamento afetivo em relação aos acontecimentos, e alguns relatam dificuldades em acompanhar o encadeamento episódico da trama.\n\nPor fim, segundo a visão expressa numa fração ainda menor das notas (~1%), muitos veem na abordagem do cenário social um tom explorador e sensacionalista. Para esse grupo, boa parte também critica o ritmo exaustivo gerado pela sucessão ininterrupta de violência, ao passo que parte deles aponta uma falta de desenvolvimento aprofundado na caracterização dos personagens.",
+      "verificacao_narrativa": {
+        "quantificador_fora_de_faixa": [],
+        "quantificador_repetido": [],
+        "paragrafos": {
+          "n_paragrafos": 5,
+          "minimo": 3,
+          "insuficientes": false,
+          "longos": []
+        },
+        "n_paragrafos": 5,
+        "paragrafos_insuficientes": false,
+        "paragrafos_longos": [],
+        "grupos_sem_paragrafo_proprio": [],
+        "movimento1_e_movimento2_no_mesmo_paragrafo": false,
+        "formato_invalido": false,
+        "numeros_inventados": [],
+        "rotulos_faltando": [],
+        "ordem_incorreta": false,
+        "vocabulario_peso": false,
+        "resenha_speak": [],
+        "n_resenha_speak": 0,
+        "n_flags": 0
+      },
+      "narrativa_selecao": {
+        "provider": "gemini",
+        "modelo": "gemini-3.7-flash",
+        "n_candidatos": 3,
+        "n_chamadas": 3,
+        "indice_escolhido": 0,
+        "motivo": "melhor_entre_limpos",
+        "criterio_decisivo": "empate",
+        "candidatos": [
+          {
+            "indice": 0,
+            "n_flags": 0,
+            "cliches": 0,
+            "repeticao_max": 2,
+            "ritmo": 4,
+            "cobertura": 1.0,
+            "eliminado": false
+          },
+          {
+            "indice": 1,
+            "n_flags": 0,
+            "cliches": 0,
+            "repeticao_max": 2,
+            "ritmo": 1,
+            "cobertura": 1.0,
+            "eliminado": false
+          },
+          {
+            "indice": 2,
+            "n_flags": 0,
+            "cliches": 0,
+            "repeticao_max": 2,
+            "ritmo": 4,
+            "cobertura": 1.0,
+            "eliminado": false
+          }
+        ],
+        "retry": null,
+        "uso": {
+          "prompt_tokens": 9246,
+          "completion_tokens": 1045,
+          "cache_hit_tokens": 0,
+          "cache_miss_tokens": 9246
+        },
+        "latencia_s": 17.99
       }
     },
     "teste-degradado": {

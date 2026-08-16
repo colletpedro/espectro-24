@@ -1,338 +1,9 @@
 {
   "slug": "the-invite-2026",
-  "data_coleta": "2026-07-19T17:34:04.490686+00:00",
-  "spec_version": "1.6.0",
-  "total_reviews_observadas": 276,
+  "data_coleta": "2026-08-16T02:38:03.214914+00:00",
+  "spec_version": "1.9.11",
+  "total_reviews_observadas": 513,
   "reviews_url": "https://letterboxd.com/film/the-invite-2026/reviews/",
-  "buckets": [
-    {
-      "bucket": "negativas",
-      "alvo": 50,
-      "modo": "completo",
-      "n_validas": 50,
-      "niveis": [
-        {
-          "nivel": 0.5,
-          "n_validas": 10,
-          "n_brutas": 12,
-          "filtro_aplicado": 150,
-          "n_sem_nota": 0,
-          "n_descartadas_spoiler": 0,
-          "n_descartadas_curtas": 2,
-          "n_descartadas_truncamento": 0,
-          "paginas_buscadas": 1
-        },
-        {
-          "nivel": 1.0,
-          "n_validas": 10,
-          "n_brutas": 36,
-          "filtro_aplicado": 150,
-          "n_sem_nota": 0,
-          "n_descartadas_spoiler": 1,
-          "n_descartadas_curtas": 20,
-          "n_descartadas_truncamento": 0,
-          "paginas_buscadas": 3
-        },
-        {
-          "nivel": 1.5,
-          "n_validas": 10,
-          "n_brutas": 24,
-          "filtro_aplicado": 150,
-          "n_sem_nota": 0,
-          "n_descartadas_spoiler": 2,
-          "n_descartadas_curtas": 12,
-          "n_descartadas_truncamento": 0,
-          "paginas_buscadas": 2
-        },
-        {
-          "nivel": 2.0,
-          "n_validas": 10,
-          "n_brutas": 24,
-          "filtro_aplicado": 150,
-          "n_sem_nota": 0,
-          "n_descartadas_spoiler": 0,
-          "n_descartadas_curtas": 10,
-          "n_descartadas_truncamento": 0,
-          "paginas_buscadas": 2
-        },
-        {
-          "nivel": 2.5,
-          "n_validas": 10,
-          "n_brutas": 24,
-          "filtro_aplicado": 150,
-          "n_sem_nota": 0,
-          "n_descartadas_spoiler": 0,
-          "n_descartadas_curtas": 8,
-          "n_descartadas_truncamento": 0,
-          "paginas_buscadas": 2
-        }
-      ],
-      "temas": [
-        {
-          "tema": "Humor e roteiro fracos/entediantes",
-          "mencoes_aproximadas": 27,
-          "n_reviews_analisadas": 50,
-          "exemplo_parafraseado": "Muitas reviews classificaram o humor do filme como previsível, pouco engraçado ou inexistente, com piadas que não funcionam e um roteiro que se arrasta, tornando a experiência tediosa.",
-          "mencoes_clampadas": false,
-          "mencoes_valor_original": null,
-          "aspas_removidas": false
-        },
-        {
-          "tema": "Personagens e diálogos superficiais/irritantes",
-          "mencoes_aproximadas": 20,
-          "n_reviews_analisadas": 50,
-          "exemplo_parafraseado": "Os personagens são frequentemente descritos como caricaturas, superficiais e unidimensionais, com diálogos que parecem forçados, repetitivos ou sem profundidade, especialmente no casal principal.",
-          "mencoes_clampadas": false,
-          "mencoes_valor_original": null,
-          "aspas_removidas": false
-        },
-        {
-          "tema": "Atuações e direção questionáveis",
-          "mencoes_aproximadas": 15,
-          "n_reviews_analisadas": 50,
-          "exemplo_parafraseado": "A atuação de alguns membros do elenco, em particular dos protagonistas, é vista como inautêntica ou exagerada, e a direção é criticada por ser pedante, forçada ou por não conseguir extrair o melhor dos atores.",
-          "mencoes_clampadas": false,
-          "mencoes_valor_original": null,
-          "aspas_removidas": false
-        },
-        {
-          "tema": "Foco excessivo/explícito na sexualidade",
-          "mencoes_aproximadas": 14,
-          "n_reviews_analisadas": 50,
-          "exemplo_parafraseado": "A representação da sexualidade, especialmente a poliamoria e fetiches, é percebida como constrangedora, exagerada, forçada ou gratuita, servindo mais como choque do que como elemento narrativo profundo.",
-          "mencoes_clampadas": false,
-          "mencoes_valor_original": null,
-          "aspas_removidas": false
-        },
-        {
-          "tema": "Previsibilidade e falta de originalidade",
-          "mencoes_aproximadas": 10,
-          "n_reviews_analisadas": 50,
-          "exemplo_parafraseado": "Muitos usuários acharam a trama e o desenvolvimento previsíveis, sem surpresas e derivativos de outros filmes que abordam relações desmoronadas, sem oferecer nada de novo ou impactante.",
-          "mencoes_clampadas": false,
-          "mencoes_valor_original": null,
-          "aspas_removidas": false
-        },
-        {
-          "tema": "Adaptação/remake inferior ao original",
-          "mencoes_aproximadas": 7,
-          "n_reviews_analisadas": 50,
-          "exemplo_parafraseado": "Algumas reviews mencionam que o filme é um remake ou adaptação que falha em capturar a essência ou a qualidade do material de origem espanhol, sendo uma versão americanizada e inferior.",
-          "mencoes_clampadas": false,
-          "mencoes_valor_original": null,
-          "aspas_removidas": false
-        }
-      ],
-      "observacao_geral": "As reviews negativas apontam para um filme com humor ineficaz e personagens rasos, com muitos expressando desconforto ou tédio pela abordagem forçada da sexualidade e falta de profundidade temática. Este grupo destaca que a previsibilidade e a superficialidade do roteiro, aliadas a atuações e direção questionáveis, resultaram em uma experiência decepcionante.",
-      "idioma_invalido": false,
-      "escopo_suspeito": false,
-      "share_real": 3
-    },
-    {
-      "bucket": "medianas",
-      "alvo": 20,
-      "modo": "completo",
-      "n_validas": 20,
-      "niveis": [
-        {
-          "nivel": 3.0,
-          "n_validas": 10,
-          "n_brutas": 24,
-          "filtro_aplicado": 150,
-          "n_sem_nota": 0,
-          "n_descartadas_spoiler": 0,
-          "n_descartadas_curtas": 9,
-          "n_descartadas_truncamento": 0,
-          "paginas_buscadas": 2
-        },
-        {
-          "nivel": 3.5,
-          "n_validas": 10,
-          "n_brutas": 24,
-          "filtro_aplicado": 150,
-          "n_sem_nota": 0,
-          "n_descartadas_spoiler": 0,
-          "n_descartadas_curtas": 5,
-          "n_descartadas_truncamento": 0,
-          "paginas_buscadas": 2
-        }
-      ],
-      "temas": [
-        {
-          "tema": "Ritmo e duração",
-          "mencoes_aproximadas": 9,
-          "n_reviews_analisadas": 20,
-          "exemplo_parafraseado": "Muitos acharam o filme divertido na primeira metade, mas sentiram que a repetição das situações e a duração prolongada tornaram a experiência cansativa no final.",
-          "mencoes_clampadas": false,
-          "mencoes_valor_original": null,
-          "aspas_removidas": false
-        },
-        {
-          "tema": "Atuações do elenco",
-          "mencoes_aproximadas": 9,
-          "n_reviews_analisadas": 20,
-          "exemplo_parafraseado": "As performances foram amplamente elogiadas, com destaque para a química entre os atores e a habilidade de entregarem tanto o humor quanto o drama.",
-          "mencoes_clampadas": false,
-          "mencoes_valor_original": null,
-          "aspas_removidas": false
-        },
-        {
-          "tema": "Direção e estilo visual",
-          "mencoes_aproximadas": 8,
-          "n_reviews_analisadas": 20,
-          "exemplo_parafraseado": "A direção é vista como confiante e eficaz, especialmente na forma como capta a atmosfera íntima do apartamento e equilibra os tons conflitantes, embora alguns questionem a originalidade do estilo visual.",
-          "mencoes_clampadas": false,
-          "mencoes_valor_original": null,
-          "aspas_removidas": false
-        },
-        {
-          "tema": "Roteiro e temas abordados",
-          "mencoes_aproximadas": 7,
-          "n_reviews_analisadas": 20,
-          "exemplo_parafraseado": "O roteiro é elogiado por sua inteligência e diálogos afiados, abordando temas de relacionamentos e casamentos em crise com um toque de humor, mas alguns acharam as motivações dos personagens e a exploração desses temas um tanto previsíveis ou superficiais.",
-          "mencoes_clampadas": false,
-          "mencoes_valor_original": null,
-          "aspas_removidas": false
-        },
-        {
-          "tema": "Humor e tom",
-          "mencoes_aproximadas": 7,
-          "n_reviews_analisadas": 20,
-          "exemplo_parafraseado": "Muitos riram bastante com o filme, considerando-o uma comédia eficaz, mas alguns criticaram o humor por ser muito cômico, por vezes forçado, ou por se inclinar para um cringe comedy que nem sempre funcionou.",
-          "mencoes_clampadas": false,
-          "mencoes_valor_original": null,
-          "aspas_removidas": true
-        },
-        {
-          "tema": "Mudança de tom e final",
-          "mencoes_aproximadas": 6,
-          "n_reviews_analisadas": 20,
-          "exemplo_parafraseado": "A transição do humor para o drama na parte final do filme dividiu opiniões; enquanto alguns acharam o desfecho impactante, outros sentiram que a mudança de tom foi abrupta e que o final não foi totalmente merecido ou bem desenvolvido.",
-          "mencoes_clampadas": false,
-          "mencoes_valor_original": null,
-          "aspas_removidas": false
-        }
-      ],
-      "observacao_geral": "As reviews medianas apontam que o filme é uma comédia bem atuada e dirigida, com um roteiro inteligente que, no entanto, pode se tornar repetitivo e previsível em seus temas, especialmente na segunda metade. Este grupo destaca o equilíbrio entre humor e drama, mas questiona a eficácia da transição tonal e do final.",
-      "idioma_invalido": false,
-      "escopo_suspeito": false,
-      "share_real": 18
-    },
-    {
-      "bucket": "positivas",
-      "alvo": 30,
-      "modo": "completo",
-      "n_validas": 30,
-      "niveis": [
-        {
-          "nivel": 4.0,
-          "n_validas": 10,
-          "n_brutas": 36,
-          "filtro_aplicado": 150,
-          "n_sem_nota": 0,
-          "n_descartadas_spoiler": 2,
-          "n_descartadas_curtas": 19,
-          "n_descartadas_truncamento": 0,
-          "paginas_buscadas": 3
-        },
-        {
-          "nivel": 4.5,
-          "n_validas": 10,
-          "n_brutas": 36,
-          "filtro_aplicado": 150,
-          "n_sem_nota": 0,
-          "n_descartadas_spoiler": 1,
-          "n_descartadas_curtas": 21,
-          "n_descartadas_truncamento": 0,
-          "paginas_buscadas": 3
-        },
-        {
-          "nivel": 5.0,
-          "n_validas": 10,
-          "n_brutas": 36,
-          "filtro_aplicado": 150,
-          "n_sem_nota": 0,
-          "n_descartadas_spoiler": 4,
-          "n_descartadas_curtas": 17,
-          "n_descartadas_truncamento": 0,
-          "paginas_buscadas": 3
-        }
-      ],
-      "temas": [
-        {
-          "tema": "Direção e roteiro (geral)",
-          "mencoes_aproximadas": 25,
-          "n_reviews_analisadas": 30,
-          "exemplo_parafraseado": "As reviews elogiam intensamente a direção de Olivia Wilde e o roteiro, destacando a habilidade em equilibrar comédia e drama, criar tensão e explorar temas complexos de relacionamento.",
-          "mencoes_clampadas": false,
-          "mencoes_valor_original": null,
-          "aspas_removidas": false
-        },
-        {
-          "tema": "Atuações e química do elenco",
-          "mencoes_aproximadas": 20,
-          "n_reviews_analisadas": 30,
-          "exemplo_parafraseado": "Este grupo de reviews salienta o desempenho excepcional do elenco, em particular Seth Rogen, Edward Norton, Penélope Cruz e Olivia Wilde, e a ótima química entre os atores.",
-          "mencoes_clampadas": false,
-          "mencoes_valor_original": null,
-          "aspas_removidas": false
-        },
-        {
-          "tema": "Humor e drama",
-          "mencoes_aproximadas": 18,
-          "n_reviews_analisadas": 30,
-          "exemplo_parafraseado": "As reviews positivas consistentemente apontam a capacidade do filme de ser hilário e, ao mesmo tempo, profundamente triste ou tocante, com um equilíbrio perfeito entre comédia e drama.",
-          "mencoes_clampadas": false,
-          "mencoes_valor_original": null,
-          "aspas_removidas": false
-        },
-        {
-          "tema": "Originalidade e frescor",
-          "mencoes_aproximadas": 8,
-          "n_reviews_analisadas": 30,
-          "exemplo_parafraseado": "Muitas reviews destacam a sensação de frescor e originalidade, mesmo reconhecendo influências ou adaptações, elogiando o conceito único e a abordagem inovadora.",
-          "mencoes_clampadas": false,
-          "mencoes_valor_original": null,
-          "aspas_removidas": false
-        },
-        {
-          "tema": "Cinematografia e design de produção",
-          "mencoes_aproximadas": 7,
-          "n_reviews_analisadas": 30,
-          "exemplo_parafraseado": "As críticas elogiam a cinematografia e o design de produção, notando como o filme se mantém visualmente dinâmico e envolvente, apesar de se passar em um único ambiente.",
-          "mencoes_clampadas": false,
-          "mencoes_valor_original": null,
-          "aspas_removidas": false
-        },
-        {
-          "tema": "Temas de relacionamento e casamento",
-          "mencoes_aproximadas": 6,
-          "n_reviews_analisadas": 30,
-          "exemplo_parafraseado": "Este grupo valoriza a maneira como o filme aborda questões de relacionamento, casamento, intimidade e os desafios da vida a dois, sendo provocador e gerando reflexão.",
-          "mencoes_clampadas": false,
-          "mencoes_valor_original": null,
-          "aspas_removidas": false
-        }
-      ],
-      "observacao_geral": "As reviews positivas destacam a direção e o roteiro como pontos fortes, elogiando a combinação eficaz de humor e drama. Este grupo ressalta, ainda, as atuações excelentes do elenco e a originalidade da narrativa ao explorar temas de relacionamento.",
-      "idioma_invalido": false,
-      "escopo_suspeito": false,
-      "share_real": 79
-    }
-  ],
-  "narrativa": "O Convite (2026), dirigido por Olivia Wilde, é um drama com toques de comédia que acompanha um casal à beira do divórcio quando um jantar com vizinhos enigmáticos toma rumos inesperados. Ambientado quase inteiramente em um apartamento, o filme sustenta um tom de comédia que transita para o drama, com ritmo que alguns acham arrastado e outros enxuto.\n\nA grande maioria das notas (~79%) é positiva, e quem gostou destaca a direção e o roteiro como pontos fortes. Quase todos elogiam o equilíbrio entre humor e drama, e a maioria também exalta as atuações e a química do elenco. Cerca de metade ainda aponta a originalidade da narrativa.\n\nPara a minoria que ficou no meio (~18%), o filme é bem atuado e dirigido. Só que muitos sentem que a repetição e a duração tornam a experiência cansativa, e a mudança de tom no final divide opiniões.\n\nJá a fração mínima das notas (~3%) acha a experiência decepcionante. Cerca de metade das reviews aponta humor e roteiro fracos, muitos criticam personagens superficiais e atuações questionáveis, e a abordagem da sexualidade é vista como forçada.",
-  "narrativa_flags": {
-    "idioma_invalido": false,
-    "escopo_suspeito": false,
-    "prevalencia_suspeita": false,
-    "quantificador_suspeito": false,
-    "consenso_suspeito": false,
-    "peso_nao_ancorado": false,
-    "vocabulario_peso_suspeito": false,
-    "perspectiva_nao_marcada": true,
-    "aspas_removidas": false,
-    "falhou": false
-  },
   "ficha": {
     "titulo": "O Convite",
     "sinopse_oficial": "O casamento de Joe e Angela está por um fio. Quando eles convidam seus enigmáticos vizinhos do andar de cima para um jantar, a noite toma rumos inesperados.",
@@ -348,30 +19,6 @@
     "fonte": "tmdb",
     "ano_fonte": "slug"
   },
-  "consensos_usados": [
-    {
-      "propriedade": "tom de comédia que transita para drama",
-      "grupos_de_origem": [
-        "medianas",
-        "positivas"
-      ],
-      "temas_de_origem": [
-        "Mudança de tom e final",
-        "Humor e drama"
-      ]
-    },
-    {
-      "propriedade": "ritmo arrastado/ cansativo",
-      "grupos_de_origem": [
-        "negativas",
-        "medianas"
-      ],
-      "temas_de_origem": [
-        "Humor e roteiro fracos/entediantes",
-        "Ritmo e duração"
-      ]
-    }
-  ],
   "distribuicao": {
     "n_notas_total": 338448,
     "por_nivel": {
@@ -387,108 +34,779 @@
       "5.0": 56504
     },
     "por_bucket": {
-      "negativas": 3,
-      "medianas": 18,
-      "positivas": 79
+      "negativas": 2,
+      "medianas": 7,
+      "positivas": 91
     },
     "fonte": "letterboxd_histograma"
   },
-  "quantificadores_usados": [
-    {
-      "quantificador": "quase todos",
-      "tema": "Direção e roteiro (geral)"
+  "coleta": {
+    "slug": "the-invite-2026",
+    "coletado_em": "2026-08-15T21:36:09.104460+00:00",
+    "versao_coletor": "1.9.6",
+    "ordenacao_usada": "by/added",
+    "histograma_bruto": {
+      "0.5": 503,
+      "1.0": 909,
+      "1.5": 926,
+      "2.0": 3169,
+      "2.5": 4999,
+      "3.0": 18554,
+      "3.5": 41311,
+      "4.0": 125276,
+      "4.5": 86297,
+      "5.0": 56504
     },
-    {
-      "quantificador": "a maioria",
-      "tema": "Atuações e química do elenco"
+    "orcamento_paginas_por_nivel": {
+      "0.5": 1,
+      "1.0": 3,
+      "1.5": 3,
+      "2.0": 9,
+      "2.5": 6,
+      "3.0": 10,
+      "3.5": 2,
+      "4.0": 7,
+      "4.5": 4,
+      "5.0": 3
     },
-    {
-      "quantificador": "cerca de metade",
-      "tema": "Humor e drama"
+    "paginas_gastas_por_nivel": {
+      "0.5": 1,
+      "1.0": 2,
+      "1.5": 2,
+      "2.0": 7,
+      "2.5": 6,
+      "3.0": 10,
+      "3.5": 2,
+      "4.0": 7,
+      "4.5": 4,
+      "5.0": 3
     },
-    {
-      "quantificador": "muitos",
-      "tema": "Ritmo e duração"
-    },
-    {
-      "quantificador": "cerca de metade",
-      "tema": "Humor e roteiro fracos/entediantes"
-    },
-    {
-      "quantificador": "muitos",
-      "tema": "Personagens e diálogos superficiais/irritantes"
-    },
-    {
-      "quantificador": "muitos",
-      "tema": "Atuações e direção questionáveis"
-    }
-  ],
-  "marcadores_perspectiva": [
-    {
-      "grupo": "medianas",
-      "trecho": "Para a minoria que ficou no meio (~18%), o filme é bem atuado e dirigido, mas muitos sentem que a repetição e a duração tornam a experiência cansativa, e a mudança de tom no final divide opiniões."
-    },
-    {
-      "grupo": "negativas",
-      "trecho": "Já para a fração mínima das notas (~3%), a experiência é decepcionante: cerca de metade das reviews aponta humor e roteiro fracos, muitos criticam personagens superficiais e atuações questionáveis, e a abordagem da sexualidade é vista como forçada."
-    }
-  ],
-  "metricas_fluencia": {
-    "n_frases": 9,
-    "media_palavras": 19.9,
-    "cv_comprimento": 0.36,
-    "frase_mais_curta": 9,
-    "aberturas_repetidas": 0,
-    "verbos_reporte": 4,
-    "adverbios_mente": 0
-  },
-  "narrativa_bruta": "O Convite (2026), dirigido por Olivia Wilde, é um drama com toques de comédia que acompanha um casal à beira do divórcio quando um jantar com vizinhos enigmáticos toma rumos inesperados. Ambientado quase inteiramente em um apartamento, o filme sustenta um tom de comédia que transita para o drama, com ritmo que alguns acham arrastado e outros enxuto. A grande maioria das notas (~79%) é positiva, e quem gostou destaca a direção e o roteiro como pontos fortes, quase todos elogiando o equilíbrio entre humor e drama, além da maioria exaltar as atuações e a química do elenco, com cerca de metade apontando a originalidade da narrativa. Para a minoria que ficou no meio (~18%), o filme é bem atuado e dirigido, mas muitos sentem que a repetição e a duração tornam a experiência cansativa, e a mudança de tom no final divide opiniões. Já para a fração mínima das notas (~3%), a experiência é decepcionante: cerca de metade das reviews aponta humor e roteiro fracos, muitos criticam personagens superficiais e atuações questionáveis, e a abordagem da sexualidade é vista como forçada.",
-  "edicao_flags": {
-    "edicao_descartada": false,
-    "motivo_descarte": "",
-    "protegidos_perdidos": [],
-    "numeros_alterados": false,
-    "houve_retentativa": true,
-    "falhou": false,
-    "n_protegidos": 5,
-    "n_tentativas": 2,
-    "motivos_por_tentativa": [
-      "ordem_alterada"
+    "paradas_por_limite": [
+      "0.5",
+      "1.0",
+      "1.5",
+      "2.0",
+      "2.5",
+      "3.0",
+      "3.5",
+      "4.0",
+      "4.5",
+      "5.0"
     ],
-    "similaridade": 0.926490984743412,
-    "capitalizacao_ajustada": false,
-    "frases_sem_origem": [],
-    "similaridade_minima_por_frase": {
-      "O Convite (2026), dirigido por Olivia Wilde, é um drama com toques de comédia que acompanha um casal à beira do divórcio quando um jantar com vizinhos enigmáticos toma rumos inesperados.": 1.0,
-      "Ambientado quase inteiramente em um apartamento, o filme sustenta um tom de comédia que transita para o drama, com ritmo que alguns acham arrastado e outros enxuto.": 1.0,
-      "A grande maioria das notas (~79%) é positiva, e quem gostou destaca a direção e o roteiro como pontos fortes.": 1.0,
-      "Quase todos elogiam o equilíbrio entre humor e drama, e a maioria também exalta as atuações e a química do elenco.": 0.8571428571428571,
-      "Cerca de metade ainda aponta a originalidade da narrativa.": 0.7777777777777778,
-      "Para a minoria que ficou no meio (~18%), o filme é bem atuado e dirigido.": 1.0,
-      "Só que muitos sentem que a repetição e a duração tornam a experiência cansativa, e a mudança de tom no final divide opiniões.": 0.9565217391304348,
-      "Já a fração mínima das notas (~3%) acha a experiência decepcionante.": 0.9,
-      "Cerca de metade das reviews aponta humor e roteiro fracos, muitos criticam personagens superficiais e atuações questionáveis, e a abordagem da sexualidade é vista como forçada.": 1.0
+    "contagem_bruta_por_nivel": {
+      "0.5": 12,
+      "1.0": 24,
+      "1.5": 24,
+      "2.0": 84,
+      "2.5": 72,
+      "3.0": 117,
+      "3.5": 24,
+      "4.0": 72,
+      "4.5": 48,
+      "5.0": 36
     },
-    "tentativas_detalhe": [
+    "contagem_estimada_valida_por_nivel": {
+      "0.5": 2,
+      "1.0": 7,
+      "1.5": 4,
+      "2.0": 19,
+      "2.5": 23,
+      "3.0": 28,
+      "3.5": 10,
+      "4.0": 17,
+      "4.5": 15,
+      "5.0": 10
+    },
+    "motivo_parada_por_nivel": {
+      "0.5": "orcamento_esgotado",
+      "1.0": "orcamento_esgotado",
+      "1.5": "orcamento_esgotado",
+      "2.0": "orcamento_esgotado",
+      "2.5": "orcamento_esgotado",
+      "3.0": "orcamento_esgotado",
+      "3.5": "orcamento_esgotado",
+      "4.0": "orcamento_esgotado",
+      "4.5": "orcamento_esgotado",
+      "5.0": "orcamento_esgotado"
+    },
+    "paginas_base_por_nivel": {
+      "0.5": 1,
+      "1.0": 2,
+      "1.5": 2,
+      "2.0": 7,
+      "2.5": 6,
+      "3.0": 10,
+      "3.5": 2,
+      "4.0": 7,
+      "4.5": 4,
+      "5.0": 3
+    },
+    "paginas_extensao_por_nivel": {
+      "0.5": 0,
+      "1.0": 0,
+      "1.5": 0,
+      "2.0": 0,
+      "2.5": 0,
+      "3.0": 0,
+      "3.5": 0,
+      "4.0": 0,
+      "4.5": 0,
+      "5.0": 0
+    },
+    "extensao_por_bucket": {
+      "negativas": {
+        "paginas_base": 12,
+        "paginas_extensao": 0,
+        "extras_por_nivel": {},
+        "motivo_parada": "meta_atingida",
+        "n_validas_pos_base": 90,
+        "n_validas_pos_extensao": 90,
+        "meta": 50
+      },
+      "medianas": {
+        "paginas_base": 16,
+        "paginas_extensao": 0,
+        "extras_por_nivel": {},
+        "motivo_parada": "meta_atingida",
+        "n_validas_pos_base": 90,
+        "n_validas_pos_extensao": 90,
+        "meta": 50
+      },
+      "positivas": {
+        "paginas_base": 16,
+        "paginas_extensao": 0,
+        "extras_por_nivel": {},
+        "motivo_parada": "meta_atingida",
+        "n_validas_pos_base": 97,
+        "n_validas_pos_extensao": 97,
+        "meta": 50
+      }
+    },
+    "profundidade_sondagem": {
+      "nivel_sondado": 4.0,
+      "profundidade": 256,
+      "exata": false,
+      "requisicoes": 4,
+      "motivo": "teto_plataforma"
+    },
+    "profundidade_estimada_por_nivel": {
+      "0.5": 1,
+      "1.0": 2,
+      "1.5": 2,
+      "2.0": 6,
+      "2.5": 10,
+      "3.0": 38,
+      "3.5": 84,
+      "4.0": 256,
+      "4.5": 176,
+      "5.0": 115
+    },
+    "janela_temporal": {
+      "total": {
+        "n": 924,
+        "min": "2025-11-24",
+        "max": "2026-08-15",
+        "p5": "2026-01-25",
+        "p50": "2026-08-05",
+        "p95": "2026-08-07"
+      },
+      "por_bucket": {
+        "negativas": {
+          "n": 309,
+          "min": "2026-02-07",
+          "max": "2026-08-07",
+          "p5": "2026-06-18",
+          "p50": "2026-08-04",
+          "p95": "2026-08-06"
+        },
+        "medianas": {
+          "n": 285,
+          "min": "2025-11-24",
+          "max": "2026-08-15",
+          "p5": "2026-02-01",
+          "p50": "2026-08-06",
+          "p95": "2026-08-15"
+        },
+        "positivas": {
+          "n": 330,
+          "min": "2026-01-24",
+          "max": "2026-08-15",
+          "p5": "2026-01-24",
+          "p50": "2026-08-06",
+          "p95": "2026-08-15"
+        }
+      }
+    },
+    "dias_por_100_paginas": {
+      "n_paginas": 17,
+      "pagina_min": 1,
+      "pagina_max": 128,
+      "dias": 1,
+      "dias_por_100_paginas": 0.7874015748031497,
+      "paginas_para_1_ano": 46355
+    },
+    "ano_lancamento": 2026,
+    "ano_fonte": "slug",
+    "n_reviews_bruto": 924
+  },
+  "buckets": [
+    {
+      "bucket": "negativas",
+      "alvo": 40,
+      "modo": "completo",
+      "estado_piso": "completa",
+      "n_validas": 40,
+      "share_real": 2,
+      "composicao_alvo": {
+        "0.5": 4,
+        "1.0": 6,
+        "1.5": 7,
+        "2.0": 23
+      },
+      "composicao_atingida": {
+        "0.5": 4,
+        "1.0": 6,
+        "1.5": 7,
+        "2.0": 23
+      },
+      "cascata_por_degrau": {
+        "150": 40
+      },
+      "deficit_redistribuido": 0,
+      "distribuicao_pagina_origem": {
+        "n": 40,
+        "min": 1,
+        "max": 11,
+        "p5": 1,
+        "p50": 2,
+        "p95": 9,
+        "fracao_profunda": 0.375
+      },
+      "niveis": [
+        {
+          "nivel": 0.5,
+          "n_validas": 4,
+          "n_alvo": 4,
+          "n_brutas": 36,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 2,
+          "n_descartadas_curtas": 22,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 1,
+          "motivos_descarte": {
+            "truncada_sem_texto": 1,
+            "spoiler": 2,
+            "abaixo_min_chars": 22,
+            "excedente_cota": 7,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 1
+        },
+        {
+          "nivel": 1.0,
+          "n_validas": 6,
+          "n_alvo": 6,
+          "n_brutas": 57,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 2,
+          "n_descartadas_curtas": 33,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 0,
+          "motivos_descarte": {
+            "truncada_sem_texto": 0,
+            "spoiler": 2,
+            "abaixo_min_chars": 33,
+            "excedente_cota": 16,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 2
+        },
+        {
+          "nivel": 1.5,
+          "n_validas": 7,
+          "n_alvo": 7,
+          "n_brutas": 60,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 2,
+          "n_descartadas_curtas": 38,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 1,
+          "motivos_descarte": {
+            "truncada_sem_texto": 1,
+            "spoiler": 2,
+            "abaixo_min_chars": 38,
+            "excedente_cota": 12,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 2
+        },
+        {
+          "nivel": 2.0,
+          "n_validas": 23,
+          "n_alvo": 23,
+          "n_brutas": 156,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 3,
+          "n_descartadas_curtas": 115,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 0,
+          "motivos_descarte": {
+            "truncada_sem_texto": 0,
+            "spoiler": 3,
+            "abaixo_min_chars": 115,
+            "excedente_cota": 15,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 7
+        }
+      ],
+      "temas": [
+        {
+          "tema": "Roteiro superficial e sem profundidade",
+          "mencoes_aproximadas": 15,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "O filme é criticado por ter um roteiro raso, que não desenvolve bem os conflitos e aposta em clichês, resultando em uma trama previsível e sem sustância.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Atuação exagerada de Olivia Wilde",
+          "mencoes_aproximadas": 12,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "Muitos reviewers apontam que a performance de Olivia Wilde é forçada, com expressões e gestos exagerados que destoam do elenco mais contido.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Falta de humor e ritmo arrastado",
+          "mencoes_aproximadas": 10,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "As piadas não funcionam e o longa se arrasta, com cenas que se estendem sem gerar risos ou tensão, tornando a experiência entediante.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Abordagem do sexo e relacionamentos soa forçada e moralista",
+          "mencoes_aproximadas": 8,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "O tratamento dado ao tema do sexo e das relações abertas é visto como artificial, mais focado em chocar do que em explorar com sinceridade, além de terminar em um discurso conservador.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Personagens irritantes e pouco carismáticos",
+          "mencoes_aproximadas": 7,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "Os protagonistas são descritos como desagradáveis, com comportamentos imaturos e relacionamentos sem química, dificultando a identificação ou torcida por eles.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Trilha sonora irritante e excessiva",
+          "mencoes_aproximadas": 5,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "A trilha sonora é constantemente criticada por ser invasiva e exagerada, sublinhando cada emoção de forma superficial e cansativa.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        }
+      ],
+      "observacao_geral": "As reviews negativas concentram-se em apontar o roteiro fraco, a atuação exagerada da diretora e protagonista, e a falta de humor e ritmo. O grupo também critica a trilha sonora intrusiva e a abordagem artificial e moralista das relações, além de personagens pouco cativantes.",
+      "idioma_invalido": false,
+      "escopo_suspeito": false
+    },
+    {
+      "bucket": "medianas",
+      "alvo": 40,
+      "modo": "completo",
+      "estado_piso": "completa",
+      "n_validas": 40,
+      "share_real": 7,
+      "composicao_alvo": {
+        "2.5": 8,
+        "3.0": 32
+      },
+      "composicao_atingida": {
+        "2.5": 8,
+        "3.0": 32
+      },
+      "cascata_por_degrau": {
+        "150": 40
+      },
+      "deficit_redistribuido": 0,
+      "distribuicao_pagina_origem": {
+        "n": 40,
+        "min": 1,
+        "max": 19,
+        "p5": 1,
+        "p50": 5,
+        "p95": 19,
+        "fracao_profunda": 0.325
+      },
+      "niveis": [
+        {
+          "nivel": 2.5,
+          "n_validas": 8,
+          "n_alvo": 8,
+          "n_brutas": 96,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 0,
+          "n_descartadas_curtas": 65,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 0,
+          "motivos_descarte": {
+            "truncada_sem_texto": 0,
+            "spoiler": 0,
+            "abaixo_min_chars": 65,
+            "excedente_cota": 23,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 6
+        },
+        {
+          "nivel": 3.0,
+          "n_validas": 32,
+          "n_alvo": 32,
+          "n_brutas": 189,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 5,
+          "n_descartadas_curtas": 122,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 3,
+          "motivos_descarte": {
+            "truncada_sem_texto": 3,
+            "spoiler": 5,
+            "abaixo_min_chars": 122,
+            "excedente_cota": 27,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 10
+        }
+      ],
+      "temas": [
+        {
+          "tema": "Ritmo e estrutura narrativa",
+          "mencoes_aproximadas": 12,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "O filme começa de forma arrastada e só ganha força na parte final, com reviravoltas inesperadas que mudam o rumo da história, mas o desfecho acaba sendo previsível e pouco satisfatório.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Atuações do elenco principal",
+          "mencoes_aproximadas": 10,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "O elenco entrega performances convincentes, com destaque para a química entre os quatro atores, embora alguns personagens sejam unidimensionais e o estilo de Seth Rogen canse em certos momentos.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Conflitos de relacionamento e comunicação",
+          "mencoes_aproximadas": 8,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "A trama expõe as dificuldades de comunicação e os ressentimentos acumulados em um casamento de longa data, abordando temas como desejo e intimidade de forma crua e desconfortável.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Abordagem da não-monogamia e sexualidade",
+          "mencoes_aproximadas": 6,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "A introdução de um casal liberal que propõe uma experiência aberta funciona como um espelho para o casal protagonista, levantando questões sobre monogamia e liberdade sexual sem julgamentos fáceis.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Direção e ambientação",
+          "mencoes_aproximadas": 5,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "A direção conduz bem o formato de peça de teatro, com a ação concentrada em um único cenário, mas a fotografia e a mise-en-scène se repetem ao longo do filme, limitando o impacto visual.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Trilha sonora e tom",
+          "mencoes_aproximadas": 5,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "A trilha sonora, com destaque para o violoncelo, aumenta a tensão, mas o excesso de ruídos e a montagem frenética tornam a experiência estressante para alguns espectadores.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        }
+      ],
+      "observacao_geral": "As reviews medianas reconhecem o esforço da diretora e o talento do elenco, mas apontam problemas de ritmo, previsibilidade e falta de profundidade nos personagens. É um filme que divide opiniões: alguns o consideram uma comédia eficaz, outros o acham superficial e redundante.",
+      "idioma_invalido": false,
+      "escopo_suspeito": false
+    },
+    {
+      "bucket": "positivas",
+      "alvo": 40,
+      "modo": "completo",
+      "estado_piso": "completa",
+      "n_validas": 40,
+      "share_real": 91,
+      "composicao_alvo": {
+        "3.5": 6,
+        "4.0": 16,
+        "4.5": 11,
+        "5.0": 7
+      },
+      "composicao_atingida": {
+        "3.5": 6,
+        "4.0": 16,
+        "4.5": 11,
+        "5.0": 7
+      },
+      "cascata_por_degrau": {
+        "150": 40
+      },
+      "deficit_redistribuido": 0,
+      "distribuicao_pagina_origem": {
+        "n": 40,
+        "min": 1,
+        "max": 64,
+        "p5": 1,
+        "p50": 2,
+        "p95": 64,
+        "fracao_profunda": 0.325
+      },
+      "niveis": [
+        {
+          "nivel": 3.5,
+          "n_validas": 6,
+          "n_alvo": 6,
+          "n_brutas": 36,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 0,
+          "n_descartadas_curtas": 22,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 0,
+          "motivos_descarte": {
+            "truncada_sem_texto": 0,
+            "spoiler": 0,
+            "abaixo_min_chars": 22,
+            "excedente_cota": 8,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 2
+        },
+        {
+          "nivel": 4.0,
+          "n_validas": 16,
+          "n_alvo": 16,
+          "n_brutas": 126,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 5,
+          "n_descartadas_curtas": 86,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 2,
+          "motivos_descarte": {
+            "truncada_sem_texto": 2,
+            "spoiler": 5,
+            "abaixo_min_chars": 86,
+            "excedente_cota": 17,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 7
+        },
+        {
+          "nivel": 4.5,
+          "n_validas": 11,
+          "n_alvo": 11,
+          "n_brutas": 96,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 1,
+          "n_descartadas_curtas": 69,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 0,
+          "motivos_descarte": {
+            "truncada_sem_texto": 0,
+            "spoiler": 1,
+            "abaixo_min_chars": 69,
+            "excedente_cota": 15,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 4
+        },
+        {
+          "nivel": 5.0,
+          "n_validas": 7,
+          "n_alvo": 7,
+          "n_brutas": 72,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 2,
+          "n_descartadas_curtas": 46,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 0,
+          "motivos_descarte": {
+            "truncada_sem_texto": 0,
+            "spoiler": 2,
+            "abaixo_min_chars": 46,
+            "excedente_cota": 17,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 3
+        }
+      ],
+      "temas": [
+        {
+          "tema": "Atuações excepcionais do elenco principal",
+          "mencoes_aproximadas": 25,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "As reviews positivas destacam que os quatro atores principais estão em perfeita sintonia, entregando performances cômicas e dramáticas convincentes, sendo frequentemente citados como o ponto alto do filme.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Humor ácido e situações constrangedoras",
+          "mencoes_aproximadas": 20,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "Muitas reviews mencionam que o filme provoca risadas genuínas através de diálogos afiados e situações embaraçosas, equilibrando comédia e desconforto.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Direção precisa e estilo visual de peça teatral",
+          "mencoes_aproximadas": 18,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "As reviews elogiam a direção de Olivia Wilde por sua habilidade em contar a história em um único cenário, com enquadramentos e uso de espelhos que enriquecem a narrativa.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Tensão e desconforto bem construídos",
+          "mencoes_aproximadas": 15,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "Os espectadores positivos destacam a atmosfera tensa e ansiosa criada pelos conflitos e segredos revelados, mantendo o público envolvido do início ao fim.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Roteiro inteligente e diálogos naturais",
+          "mencoes_aproximadas": 12,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "As reviews ressaltam que o roteiro é bem escrito, com diálogos realistas e perspicazes que exploram relacionamentos e revelam vulnerabilidades.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Exploração profunda de relacionamentos e emoções",
+          "mencoes_aproximadas": 10,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "Muitas reviews positivas mencionam que o filme apresenta uma visão honesta e comovente sobre casamentos em crise, tocando em temas como comunicação, ressentimento e esperança de redenção.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        }
+      ],
+      "observacao_geral": "As reviews positivas celebram o filme como uma comédia dramática bem dirigida e atuada, destacando o equilíbrio entre humor e tensão, além da abordagem sincera sobre relacionamentos. O grupo valoriza especialmente a ambientação intimista e as performances do elenco principal.",
+      "idioma_invalido": false,
+      "escopo_suspeito": false
+    }
+  ],
+  "narrativa": "Dirigido por Olivia Wilde e lançado em 2026, O Convite é uma comédia dramática focada em Joe e Angela, um casal que vive uma crise conjugal. Quando decidem convidar os enigmáticos vizinhos do andar de cima para um jantar, a noite toma rumos inesperados.\n\nA experiência estrutura-se a partir de um encontro em ambientação intimista, com características que remetem ao formato de peça teatral centrado em quatro personagens. A condução apoia-se no desenvolvimento dos diálogos e na exposição de tensões e conflitos de relacionamento ao longo da reunião.\n\nNa grande maioria das notas (~91%), a maior parte exalta as atuações excepcionais do elenco principal durante as interações. Além disso, boa parte destaca a presença de humor ácido e situações constrangedoras, enquanto uma parcela expressiva elogia a direção precisa e a escolha pelo estilo visual de peça teatral.\n\nNuma fração mínima das notas (~7%), para quem está nessa faixa, muitos apontam oscilações no ritmo e na estrutura narrativa. Nesse mesmo grupo, alguns reconhecem aspectos positivos nas atuações do elenco principal, e uma parte reflete sobre a abordagem dos conflitos de relacionamento e comunicação.\n\nPor fim, numa fração ainda menor das notas (~2%), sob a ótica desse segmento, vários apontam que a produção traz um roteiro superficial e sem profundidade. Além dessa queixa, um número considerável critica a atuação exagerada de Olivia Wilde, enquanto parte deles lamenta a falta de humor e o ritmo arrastado da obra.",
+  "verificacao_narrativa": {
+    "quantificador_fora_de_faixa": [],
+    "quantificador_repetido": [],
+    "paragrafos": {
+      "n_paragrafos": 5,
+      "minimo": 3,
+      "insuficientes": false,
+      "longos": []
+    },
+    "n_paragrafos": 5,
+    "paragrafos_insuficientes": false,
+    "paragrafos_longos": [],
+    "grupos_sem_paragrafo_proprio": [],
+    "movimento1_e_movimento2_no_mesmo_paragrafo": false,
+    "formato_invalido": false,
+    "numeros_inventados": [],
+    "rotulos_faltando": [],
+    "ordem_incorreta": false,
+    "vocabulario_peso": false,
+    "resenha_speak": [],
+    "n_resenha_speak": 0,
+    "n_flags": 0
+  },
+  "narrativa_selecao": {
+    "provider": "gemini",
+    "modelo": "gemini-3.7-flash",
+    "n_candidatos": 3,
+    "n_chamadas": 3,
+    "indice_escolhido": 2,
+    "motivo": "melhor_entre_limpos",
+    "criterio_decisivo": "unico",
+    "candidatos": [
       {
-        "tentativa": 1,
-        "motivo": "ordem_alterada",
-        "similaridade": 0.5631244323342416,
-        "frases_sem_origem": [
-          {
-            "frase": "As opiniões sobre o ritmo se dividem: uns acham arrastado, outros enxuto.",
-            "similaridade": 0.5
-          }
-        ],
-        "texto": "O Convite, de 2026, traz Olivia Wilde na direção e mistura drama com comédia. A história acompanha um casal à beira do divórcio quando um jantar com vizinhos enigmáticos toma rumos inesperados. Quase tudo se passa em um apartamento, e o filme sustenta um tom que começa leve e vai escorregando para o drama. As opiniões sobre o ritmo se dividem: uns acham arrastado, outros enxuto.\n\nA grande maioria das notas (~79%) é positiva, e quem gostou aponta a direção e o roteiro como pontos fortes. Quase todos elogiam o equilíbrio entre humor e drama, e a maioria exalta as atuações e a química do elenco. Cerca de metade dessas reviews ainda destaca a originalidade da narrativa.\n\nJá a minoria que ficou no meio (~18%) reconhece o trabalho de atuação e direção, mas muitos sentem que a repetição e a duração pesam. A experiência cansa, e a mudança de tom no final divide opiniões.\n\nPara a fração mínima das notas (~3%), a decepção é total. Cerca de metade dessas críticas aponta humor e roteiro fracos, muitos reclamam de personagens superficiais e atuações questionáveis. A abordagem da sexualidade também aparece como forçada."
+        "indice": 0,
+        "n_flags": 1,
+        "cliches": 0,
+        "repeticao_max": 1,
+        "ritmo": 11,
+        "cobertura": 0.778,
+        "eliminado": true
       },
       {
-        "tentativa": 2,
-        "motivo": "",
-        "similaridade": 0.926490984743412,
-        "frases_sem_origem": [],
-        "texto": "O Convite (2026), dirigido por Olivia Wilde, é um drama com toques de comédia que acompanha um casal à beira do divórcio quando um jantar com vizinhos enigmáticos toma rumos inesperados. Ambientado quase inteiramente em um apartamento, o filme sustenta um tom de comédia que transita para o drama, com ritmo que alguns acham arrastado e outros enxuto.\n\nA grande maioria das notas (~79%) é positiva, e quem gostou destaca a direção e o roteiro como pontos fortes. Quase todos elogiam o equilíbrio entre humor e drama, e a maioria também exalta as atuações e a química do elenco. Cerca de metade ainda aponta a originalidade da narrativa.\n\nPara a minoria que ficou no meio (~18%), o filme é bem atuado e dirigido. Só que muitos sentem que a repetição e a duração tornam a experiência cansativa, e a mudança de tom no final divide opiniões.\n\nJá a fração mínima das notas (~3%) acha a experiência decepcionante. Cerca de metade das reviews aponta humor e roteiro fracos, muitos criticam personagens superficiais e atuações questionáveis, e a abordagem da sexualidade é vista como forçada."
+        "indice": 1,
+        "n_flags": 1,
+        "cliches": 0,
+        "repeticao_max": 1,
+        "ritmo": 5,
+        "cobertura": 1.0,
+        "eliminado": true
+      },
+      {
+        "indice": 2,
+        "n_flags": 0,
+        "cliches": 0,
+        "repeticao_max": 1,
+        "ritmo": 4,
+        "cobertura": 1.0,
+        "eliminado": false
       }
-    ]
+    ],
+    "retry": null,
+    "uso": {
+      "prompt_tokens": 9330,
+      "completion_tokens": 1063,
+      "cache_hit_tokens": 0,
+      "cache_miss_tokens": 9330
+    },
+    "latencia_s": 28.62
   }
 }

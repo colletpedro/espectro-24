@@ -1,4 +1,39 @@
-# Estado para republicação (Entrega 5, v1.9.12)
+# Estado da republicação (Entrega 1, v1.9.14) — **FEITA em 2026-08-16**
+
+Este documento nasceu na v1.9.12 dizendo "não republicado nesta sessão".
+**Deixou de ser verdade.** O que segue é o registro do evento, com o
+histórico preservado abaixo da linha.
+
+## O que aconteceu
+
+`resultado/{cure,cidade-de-deus,the-invite-2026}.json` foram sobrescritos
+pelos artefatos da v1.9.13 (`resultado/v1913/`), e o site regerado.
+
+| item | estado |
+|---|---|
+| leitura humana dos textos | **feita** — `resultado/v1913/NARRATIVAS_GATE_LEITURA.md` |
+| escopo: 3 filmes ou 35 | **3** — decidido; o schema de eixos da mesma sessão muda o JSON, e publicar 35 agora seria republicar 35 depois |
+| frontend aguenta os campos novos | **verificado em navegador** — 3 filmes + home + degradado, zero erro de console |
+| `frontend/js/data.js` + `frontend/data/*.json` | regerados por `frontend/build_data.py` |
+
+As quatro mudanças visíveis ao leitor (shares, cota, narrativa, carimbo de
+versão) estão no changelog da v1.9.14, não repetidas aqui.
+
+## O que ficou de fora, e por quê
+
+- **Os 31 filmes restantes do bruto.** Decisão de escopo, não impedimento
+  técnico. Continua valendo o custo estimado (~35 × 6 chamadas LLM).
+- **`spec_version` publicado diz `1.9.11`.** Os artefatos foram gerados com
+  a constante ainda atrasada. Não reescrito à mão — ver changelog v1.9.14,
+  item (2), e o mecanismo que fecha a classe em `tests/test_spec_version.py`.
+- **`--offline` não reproduzível** para filme coletado sob outra estratégia
+  de posicionamento — segue diagnosticado em `DIAGNOSTICO_OFFLINE.md`, e
+  não bloqueou nada aqui.
+
+---
+
+# Histórico — o documento como estava na v1.9.12
+
 
 **Não republicado nesta sessão** — por decisão explícita. Este documento diz
 o que falta e o que muda para quem já viu o site.

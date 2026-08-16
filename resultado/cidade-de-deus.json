@@ -1,398 +1,9 @@
 {
   "slug": "cidade-de-deus",
-  "data_coleta": "2026-07-19T08:27:41.045688+00:00",
-  "spec_version": "1.6.0",
-  "total_reviews_observadas": 228,
-  "origem_paginas": {
-    "cidade-de-deus/pages/rated_0_5_page_1.html": "network",
-    "cidade-de-deus/pages/rated_0_5_page_2.html": "network",
-    "cidade-de-deus/fulltext/viewing_1263787543.html": "network",
-    "cidade-de-deus/fulltext/viewing_2288074.html": "network",
-    "cidade-de-deus/fulltext/viewing_927224781.html": "network",
-    "cidade-de-deus/fulltext/viewing_1218163598.html": "network",
-    "cidade-de-deus/pages/rated_1_page_1.html": "network",
-    "cidade-de-deus/fulltext/viewing_279894550.html": "network",
-    "cidade-de-deus/fulltext/viewing_362703553.html": "network",
-    "cidade-de-deus/fulltext/viewing_966468008.html": "network",
-    "cidade-de-deus/fulltext/viewing_937322977.html": "network",
-    "cidade-de-deus/fulltext/viewing_792038726.html": "network",
-    "cidade-de-deus/fulltext/viewing_633795873.html": "network",
-    "cidade-de-deus/fulltext/viewing_427763426.html": "network",
-    "cidade-de-deus/fulltext/viewing_1067404602.html": "network",
-    "cidade-de-deus/pages/rated_1_5_page_1.html": "network",
-    "cidade-de-deus/pages/rated_1_5_page_2.html": "network",
-    "cidade-de-deus/fulltext/viewing_81821448.html": "network",
-    "cidade-de-deus/fulltext/viewing_513693705.html": "network",
-    "cidade-de-deus/fulltext/viewing_682338989.html": "network",
-    "cidade-de-deus/fulltext/viewing_796944.html": "network",
-    "cidade-de-deus/fulltext/viewing_377180647.html": "network",
-    "cidade-de-deus/fulltext/viewing_470893512.html": "network",
-    "cidade-de-deus/pages/rated_2_page_1.html": "network",
-    "cidade-de-deus/pages/rated_2_page_2.html": "network",
-    "cidade-de-deus/fulltext/viewing_895066236.html": "network",
-    "cidade-de-deus/fulltext/viewing_251783551.html": "network",
-    "cidade-de-deus/fulltext/viewing_359429534.html": "network",
-    "cidade-de-deus/fulltext/viewing_765786659.html": "network",
-    "cidade-de-deus/fulltext/viewing_30995054.html": "network",
-    "cidade-de-deus/fulltext/viewing_481871292.html": "network",
-    "cidade-de-deus/fulltext/viewing_433077677.html": "network",
-    "cidade-de-deus/fulltext/viewing_935190708.html": "network",
-    "cidade-de-deus/pages/rated_2_5_page_1.html": "network",
-    "cidade-de-deus/pages/rated_2_5_page_2.html": "network",
-    "cidade-de-deus/fulltext/viewing_529290901.html": "network",
-    "cidade-de-deus/fulltext/viewing_42465371.html": "network",
-    "cidade-de-deus/fulltext/viewing_250340098.html": "network",
-    "cidade-de-deus/fulltext/viewing_512581003.html": "network",
-    "cidade-de-deus/fulltext/viewing_202426571.html": "network",
-    "cidade-de-deus/fulltext/viewing_14704009.html": "network",
-    "cidade-de-deus/pages/rated_3_page_1.html": "network",
-    "cidade-de-deus/pages/rated_3_page_2.html": "network",
-    "cidade-de-deus/fulltext/viewing_81791131.html": "network",
-    "cidade-de-deus/fulltext/viewing_1398049611.html": "network",
-    "cidade-de-deus/pages/rated_3_5_page_1.html": "network",
-    "cidade-de-deus/pages/rated_3_5_page_2.html": "network",
-    "cidade-de-deus/fulltext/viewing_617643331.html": "network",
-    "cidade-de-deus/fulltext/viewing_213649845.html": "network",
-    "cidade-de-deus/fulltext/viewing_1321898389.html": "network",
-    "cidade-de-deus/pages/rated_4_page_1.html": "network",
-    "cidade-de-deus/pages/rated_4_page_2.html": "network",
-    "cidade-de-deus/fulltext/viewing_1880886.html": "network",
-    "cidade-de-deus/fulltext/viewing_41471448.html": "network",
-    "cidade-de-deus/fulltext/viewing_679115030.html": "network",
-    "cidade-de-deus/fulltext/viewing_712846402.html": "network",
-    "cidade-de-deus/pages/rated_4_5_page_1.html": "network",
-    "cidade-de-deus/pages/rated_4_5_page_2.html": "network",
-    "cidade-de-deus/fulltext/viewing_231443579.html": "network",
-    "cidade-de-deus/fulltext/viewing_323069074.html": "network",
-    "cidade-de-deus/fulltext/viewing_153919713.html": "network",
-    "cidade-de-deus/fulltext/viewing_970573226.html": "network",
-    "cidade-de-deus/pages/rated_5_page_1.html": "network",
-    "cidade-de-deus/pages/rated_5_page_2.html": "network",
-    "cidade-de-deus/fulltext/viewing_4959482.html": "network",
-    "cidade-de-deus/fulltext/viewing_275680399.html": "network",
-    "cidade-de-deus/fulltext/viewing_138869096.html": "network",
-    "cidade-de-deus/fulltext/viewing_171606831.html": "network"
-  },
-  "buckets": [
-    {
-      "bucket": "negativas",
-      "alvo": 50,
-      "modo": "completo",
-      "n_validas": 50,
-      "niveis": [
-        {
-          "nivel": 0.5,
-          "n_validas": 10,
-          "n_brutas": 24,
-          "filtro_aplicado": 150,
-          "n_sem_nota": 0,
-          "n_descartadas_spoiler": 1,
-          "n_descartadas_curtas": 10,
-          "n_descartadas_truncamento": 0,
-          "paginas_buscadas": 2
-        },
-        {
-          "nivel": 1.0,
-          "n_validas": 10,
-          "n_brutas": 12,
-          "filtro_aplicado": 150,
-          "n_sem_nota": 0,
-          "n_descartadas_spoiler": 0,
-          "n_descartadas_curtas": 0,
-          "n_descartadas_truncamento": 0,
-          "paginas_buscadas": 1
-        },
-        {
-          "nivel": 1.5,
-          "n_validas": 10,
-          "n_brutas": 24,
-          "filtro_aplicado": 150,
-          "n_sem_nota": 0,
-          "n_descartadas_spoiler": 0,
-          "n_descartadas_curtas": 10,
-          "n_descartadas_truncamento": 0,
-          "paginas_buscadas": 2
-        },
-        {
-          "nivel": 2.0,
-          "n_validas": 10,
-          "n_brutas": 24,
-          "filtro_aplicado": 150,
-          "n_sem_nota": 0,
-          "n_descartadas_spoiler": 1,
-          "n_descartadas_curtas": 5,
-          "n_descartadas_truncamento": 0,
-          "paginas_buscadas": 2
-        },
-        {
-          "nivel": 2.5,
-          "n_validas": 10,
-          "n_brutas": 24,
-          "filtro_aplicado": 150,
-          "n_sem_nota": 0,
-          "n_descartadas_spoiler": 0,
-          "n_descartadas_curtas": 7,
-          "n_descartadas_truncamento": 0,
-          "paginas_buscadas": 2
-        }
-      ],
-      "temas": [
-        {
-          "tema": "Estetização e espetacularização da violência/miséria",
-          "mencoes_aproximadas": 25,
-          "n_reviews_analisadas": 50,
-          "exemplo_parafraseado": "Muitos consideram que o filme transforma a violência e a miséria da favela em um espetáculo cinematográfico, utilizando-as como um recurso estilístico para chocar e impressionar, em vez de gerar uma reflexão profunda. A montagem acelerada e a fotografia vibrante são vistas como formas de glamorizar o sofrimento.",
-          "mencoes_clampadas": false,
-          "mencoes_valor_original": null,
-          "aspas_removidas": false
-        },
-        {
-          "tema": "Representação estereotipada e deturpada da favela",
-          "mencoes_aproximadas": 18,
-          "n_reviews_analisadas": 50,
-          "exemplo_parafraseado": "As reviews negativas criticam o filme por simplificar a complexidade da favela, retratando-a quase exclusivamente através da lente do crime e da violência, ignorando outras dimensões da vida da comunidade. Isso é percebido como um reforço de estereótipos prejudiciais, especialmente para os moradores.",
-          "mencoes_clampadas": false,
-          "mencoes_valor_original": null,
-          "aspas_removidas": false
-        },
-        {
-          "tema": "Violência excessiva e gratuita",
-          "mencoes_aproximadas": 15,
-          "n_reviews_analisadas": 50,
-          "exemplo_parafraseado": "Um número considerável de espectadores achou a violência do filme excessiva e difícil de suportar, sentindo que ela servia mais para chocar do que para comunicar uma mensagem significativa. Cenas de crianças envolvidas em violência ou crimes sexuais foram particularmente perturbadoras.",
-          "mencoes_clampadas": false,
-          "mencoes_valor_original": null,
-          "aspas_removidas": false
-        },
-        {
-          "tema": "Falta de autenticidade/Crítica à perspectiva dos diretores",
-          "mencoes_aproximadas": 10,
-          "n_reviews_analisadas": 50,
-          "exemplo_parafraseado": "Este grupo questiona a autenticidade da narrativa, argumentando que os diretores, por não serem da comunidade retratada, oferecem uma visão superficial e turística da realidade da favela. Também há menções à apropriação cultural e à falta de benefício para os moradores reais.",
-          "mencoes_clampadas": false,
-          "mencoes_valor_original": null,
-          "aspas_removidas": false
-        },
-        {
-          "tema": "Personagens pouco desenvolvidos e falta de conexão emocional",
-          "mencoes_aproximadas": 8,
-          "n_reviews_analisadas": 50,
-          "exemplo_parafraseado": "Alguns críticos sentiram que os personagens, incluindo o protagonista, eram unidimensionais ou serviam apenas como ferramentas narrativas, dificultando a conexão emocional com a história. A multiplicidade de personagens e a narrativa episódica são vistas como fatores que impedem o aprofundamento.",
-          "mencoes_clampadas": false,
-          "mencoes_valor_original": null,
-          "aspas_removidas": false
-        },
-        {
-          "tema": "Roteiro confuso/repetitivo e montagem frenética",
-          "mencoes_aproximadas": 7,
-          "n_reviews_analisadas": 50,
-          "exemplo_parafraseado": "A montagem rápida e a estrutura narrativa não linear são descritas como confusas e sem propósito, resultando em uma experiência de visualização entediante ou frustrante. Alguns consideram que o filme se torna repetitivo, mostrando os mesmos eventos sem evolução.",
-          "mencoes_clampadas": false,
-          "mencoes_valor_original": null,
-          "aspas_removidas": false
-        }
-      ],
-      "observacao_geral": "As reviews negativas apontam que o filme, apesar de seus méritos técnicos, falha eticamente ao estetizar a violência e a miséria, oferecendo uma representação estereotipada da favela para consumo externo. Este grupo de espectadores sentiu-se incomodado com a excessiva violência e a superficialidade na construção dos personagens e da narrativa.",
-      "idioma_invalido": false,
-      "escopo_suspeito": false,
-      "share_real": 1
-    },
-    {
-      "bucket": "medianas",
-      "alvo": 20,
-      "modo": "completo",
-      "n_validas": 20,
-      "niveis": [
-        {
-          "nivel": 3.0,
-          "n_validas": 10,
-          "n_brutas": 24,
-          "filtro_aplicado": 150,
-          "n_sem_nota": 0,
-          "n_descartadas_spoiler": 0,
-          "n_descartadas_curtas": 11,
-          "n_descartadas_truncamento": 0,
-          "paginas_buscadas": 2
-        },
-        {
-          "nivel": 3.5,
-          "n_validas": 10,
-          "n_brutas": 24,
-          "filtro_aplicado": 150,
-          "n_sem_nota": 0,
-          "n_descartadas_spoiler": 0,
-          "n_descartadas_curtas": 7,
-          "n_descartadas_truncamento": 0,
-          "paginas_buscadas": 2
-        }
-      ],
-      "temas": [
-        {
-          "tema": "Retrato da violência e realidade social",
-          "mencoes_aproximadas": 11,
-          "n_reviews_analisadas": 20,
-          "exemplo_parafraseado": "Este grupo de reviews destaca a representação honesta e impactante da violência, pobreza e condições de vida nas favelas, muitas vezes comparando a experiência a um documentário pela sua crueza e realismo.",
-          "mencoes_clampadas": false,
-          "mencoes_valor_original": null,
-          "aspas_removidas": false
-        },
-        {
-          "tema": "Qualidade técnica e estilística",
-          "mencoes_aproximadas": 9,
-          "n_reviews_analisadas": 20,
-          "exemplo_parafraseado": "As reviews medianas frequentemente elogiam a cinematografia, a edição ágil, os movimentos de câmera dinâmicos e a direção estilizada, embora alguns considerem essa estilização excessiva ou fria em certos momentos.",
-          "mencoes_clampadas": false,
-          "mencoes_valor_original": null,
-          "aspas_removidas": false
-        },
-        {
-          "tema": "Entretenimento versus profundidade/conexão emocional",
-          "mencoes_aproximadas": 7,
-          "n_reviews_analisadas": 20,
-          "exemplo_parafraseado": "Muitas avaliações apontam que, apesar de ser um filme bem-feito e muitas vezes cativante na superfície, ele não conseguiu gerar uma conexão emocional profunda com os personagens ou com a tragédia retratada, sendo mais entretenimento do que uma experiência marcante.",
-          "mencoes_clampadas": false,
-          "mencoes_valor_original": null,
-          "aspas_removidas": false
-        },
-        {
-          "tema": "Ritmo e engajamento",
-          "mencoes_aproximadas": 4,
-          "n_reviews_analisadas": 20,
-          "exemplo_parafraseado": "Alguns espectadores acharam o filme monótono ou entediante em certas partes, com um ritmo inconstante, o que dificultou o engajamento completo com a narrativa.",
-          "mencoes_clampadas": false,
-          "mencoes_valor_original": null,
-          "aspas_removidas": false
-        },
-        {
-          "tema": "Caracterização dos personagens",
-          "mencoes_aproximadas": 3,
-          "n_reviews_analisadas": 20,
-          "exemplo_parafraseado": "Existe uma percepção mista sobre os personagens; enquanto alguns os consideram carismáticos e bem caracterizados, outros sentiram que eram pouco memoráveis ou serviam apenas a funções dramáticas, sem maior profundidade.",
-          "mencoes_clampadas": false,
-          "mencoes_valor_original": null,
-          "aspas_removidas": false
-        }
-      ],
-      "observacao_geral": "As reviews medianas de 3 a 3.5 estrelas apontam que o filme é tecnicamente impressionante e oferece um retrato realista e impactante da violência nas favelas, mas muitos sentem que, apesar do estilo visual marcante, ele falha em gerar uma conexão emocional profunda ou um fator 'uau' que justificaria uma nota mais alta.",
-      "idioma_invalido": false,
-      "escopo_suspeito": false,
-      "share_real": 8
-    },
-    {
-      "bucket": "positivas",
-      "alvo": 30,
-      "modo": "completo",
-      "n_validas": 30,
-      "niveis": [
-        {
-          "nivel": 4.0,
-          "n_validas": 10,
-          "n_brutas": 24,
-          "filtro_aplicado": 150,
-          "n_sem_nota": 0,
-          "n_descartadas_spoiler": 2,
-          "n_descartadas_curtas": 11,
-          "n_descartadas_truncamento": 0,
-          "paginas_buscadas": 2
-        },
-        {
-          "nivel": 4.5,
-          "n_validas": 10,
-          "n_brutas": 24,
-          "filtro_aplicado": 150,
-          "n_sem_nota": 0,
-          "n_descartadas_spoiler": 0,
-          "n_descartadas_curtas": 4,
-          "n_descartadas_truncamento": 0,
-          "paginas_buscadas": 2
-        },
-        {
-          "nivel": 5.0,
-          "n_validas": 10,
-          "n_brutas": 24,
-          "filtro_aplicado": 150,
-          "n_sem_nota": 0,
-          "n_descartadas_spoiler": 2,
-          "n_descartadas_curtas": 11,
-          "n_descartadas_truncamento": 0,
-          "paginas_buscadas": 2
-        }
-      ],
-      "temas": [
-        {
-          "tema": "Estilo visual e edição dinâmicos",
-          "mencoes_aproximadas": 21,
-          "n_reviews_analisadas": 30,
-          "exemplo_parafraseado": "As reviews frequentemente elogiam a edição, que confere um ritmo acelerado e energia contagiante ao filme, além da cinematografia estilizada e do uso inovador da câmera, que contribuem para a imersão e a intensidade da narrativa.",
-          "mencoes_clampadas": false,
-          "mencoes_valor_original": null,
-          "aspas_removidas": false
-        },
-        {
-          "tema": "Narrativa envolvente e abrangente",
-          "mencoes_aproximadas": 15,
-          "n_reviews_analisadas": 30,
-          "exemplo_parafraseado": "Este grupo de reviews destaca a capacidade do filme de contar múltiplas histórias e apresentar diversos personagens ao longo de décadas, sem que a trama se torne confusa ou perca coesão, mantendo o espectador constantemente engajado.",
-          "mencoes_clampadas": false,
-          "mencoes_valor_original": null,
-          "aspas_removidas": false
-        },
-        {
-          "tema": "Brutalidade e realismo da violência",
-          "mencoes_aproximadas": 14,
-          "n_reviews_analisadas": 30,
-          "exemplo_parafraseado": "As reviews positivas ressaltam a representação crua e impactante da violência, que é mostrada de forma realista e não glamourizada, chocando os espectadores e enfatizando a seriedade do tema abordado.",
-          "mencoes_clampadas": false,
-          "mencoes_valor_original": null,
-          "aspas_removidas": false
-        },
-        {
-          "tema": "Atuações marcantes",
-          "mencoes_aproximadas": 10,
-          "n_reviews_analisadas": 30,
-          "exemplo_parafraseado": "Muitas reviews elogiam as performances do elenco, especialmente as das crianças e de Zé Pequeno, que transmitem autenticidade e profundidade aos personagens, tornando-os inesquecíveis.",
-          "mencoes_clampadas": false,
-          "mencoes_valor_original": null,
-          "aspas_removidas": false
-        },
-        {
-          "tema": "Contexto social e histórico",
-          "mencoes_aproximadas": 9,
-          "n_reviews_analisadas": 30,
-          "exemplo_parafraseado": "Os comentários positivos apreciam como o filme explora o ciclo de violência e a falta de oportunidades em um ambiente de extrema pobreza, oferecendo um retrato fiel de uma realidade social complexa e baseada em eventos reais.",
-          "mencoes_clampadas": false,
-          "mencoes_valor_original": null,
-          "aspas_removidas": false
-        },
-        {
-          "tema": "Mistura de gêneros",
-          "mencoes_aproximadas": 3,
-          "n_reviews_analisadas": 30,
-          "exemplo_parafraseado": "As reviews positivas notam a habilidade do filme em incorporar elementos de diferentes gêneros, como drama, romance, comédia e thriller policial, de maneira consistente e sem perder a identidade.",
-          "mencoes_clampadas": false,
-          "mencoes_valor_original": null,
-          "aspas_removidas": false
-        }
-      ],
-      "observacao_geral": "As reviews positivas apontam o filme como uma obra-prima do cinema mundial, elogiando sua inovação técnica e a maneira visceral como aborda a realidade brasileira. Este grupo destaca a narrativa envolvente, o estilo visual dinâmico e as atuações autênticas como pontos altos que tornam o filme impactante e memorável.",
-      "idioma_invalido": false,
-      "escopo_suspeito": false,
-      "share_real": 91
-    }
-  ],
-  "narrativa": "Em Cidade de Deus (2002), o diretor Fernando Meirelles conduz um drama criminal que acompanha Buscapé, um jovem da Cidade de Deus que, temendo tornar-se um bandido, vê na fotografia uma chance de vida digna. O filme tem 130 minutos de duração e apresenta uma narrativa fragmentada, que alterna linhas do tempo e múltiplos personagens, numa favela carioca marcada pela violência e pela pobreza. A edição é ágil e a câmera é dinâmica, criando um ritmo acelerado e uma atmosfera intensa, enquanto a violência surge crua e realista, sem suavização. As notas são dominadas pela aprovação: a grande maioria das notas (~91%) é positiva. Quem gostou celebra o estilo visual e a edição dinâmicos, que a maioria das reviews positivas aponta como fonte de energia e imersão. Também entram na conta a narrativa envolvente e a brutalidade realista, que muitos destacam como impactante e não glamourizada. Uma pequena minoria das notas (~8%) fica no meio-termo. Para esse grupo, o filme é tecnicamente impressionante e retrata a violência e a realidade social de forma realista — cerca de metade das reviews medianas menciona esse retrato —, mas muitos sentem falta de conexão emocional, o que impede uma nota mais alta. Por fim, uma fração mínima das notas (~1%) rejeita o filme. Nessa leitura, muitos veem a estetização e a espetacularização da violência e da miséria como um problema ético. Muitos também apontam representação estereotipada da favela, e muitos consideram a violência excessiva e gratuita, o que compromete a experiência.",
-  "narrativa_flags": {
-    "idioma_invalido": false,
-    "escopo_suspeito": false,
-    "prevalencia_suspeita": false,
-    "quantificador_suspeito": false,
-    "consenso_suspeito": false,
-    "peso_nao_ancorado": false,
-    "vocabulario_peso_suspeito": false,
-    "perspectiva_nao_marcada": false,
-    "aspas_removidas": true,
-    "falhou": false
-  },
+  "data_coleta": "2026-08-16T02:37:19.821505+00:00",
+  "spec_version": "1.9.11",
+  "total_reviews_observadas": 505,
+  "reviews_url": "https://letterboxd.com/film/cidade-de-deus/reviews/",
   "ficha": {
     "titulo": "Cidade de Deus",
     "sinopse_oficial": "Buscapé é um jovem morador da Cidade de Deus que cresce em meio à violência. Com medo de se tornar um bandido, enxerga na fotografia uma oportunidade de ter uma vida digna.",
@@ -408,28 +19,6 @@
     "fonte": "tmdb",
     "ano_fonte": "letterboxd"
   },
-  "consensos_usados": [
-    {
-      "propriedade": "ritmo acelerado",
-      "grupos_de_origem": [
-        "positivas"
-      ],
-      "temas_de_origem": [
-        "Estilo visual e edição dinâmicos"
-      ]
-    },
-    {
-      "propriedade": "violência crua e realista",
-      "grupos_de_origem": [
-        "medianas",
-        "positivas"
-      ],
-      "temas_de_origem": [
-        "Retrato da violência e realidade social",
-        "Brutalidade e realismo da violência"
-      ]
-    }
-  ],
   "distribuicao": {
     "n_notas_total": 1216381,
     "por_nivel": {
@@ -446,91 +35,869 @@
     },
     "por_bucket": {
       "negativas": 1,
-      "medianas": 8,
-      "positivas": 91
+      "medianas": 3,
+      "positivas": 96
     },
     "fonte": "letterboxd_histograma"
   },
-  "quantificadores_usados": [
-    {
-      "quantificador": "a maioria",
-      "tema": "Estilo visual e edição dinâmicos"
+  "coleta": {
+    "slug": "cidade-de-deus",
+    "coletado_em": "2026-08-15T21:34:12.522522+00:00",
+    "versao_coletor": "1.9.6",
+    "ordenacao_usada": "by/added",
+    "histograma_bruto": {
+      "0.5": 893,
+      "1.0": 1645,
+      "1.5": 1143,
+      "2.0": 5503,
+      "2.5": 6324,
+      "3.0": 35847,
+      "3.5": 58393,
+      "4.0": 245630,
+      "4.5": 241463,
+      "5.0": 619540
     },
-    {
-      "quantificador": "muitos",
-      "tema": "Brutalidade e realismo da violência"
+    "orcamento_paginas_por_nivel": {
+      "0.5": 1,
+      "1.0": 3,
+      "1.5": 2,
+      "2.0": 10,
+      "2.5": 6,
+      "3.0": 10,
+      "3.5": 1,
+      "4.0": 3,
+      "4.5": 3,
+      "5.0": 9
     },
-    {
-      "quantificador": "cerca de metade",
-      "tema": "Retrato da violência e realidade social"
+    "paginas_gastas_por_nivel": {
+      "0.5": 1,
+      "1.0": 2,
+      "1.5": 2,
+      "2.0": 8,
+      "2.5": 4,
+      "3.0": 10,
+      "3.5": 1,
+      "4.0": 3,
+      "4.5": 3,
+      "5.0": 9
     },
-    {
-      "quantificador": "muitos",
-      "tema": "Estetização e espetacularização da violência/miséria"
+    "paradas_por_limite": [
+      "0.5",
+      "1.0",
+      "1.5",
+      "2.0",
+      "2.5",
+      "3.0",
+      "3.5",
+      "4.0",
+      "4.5",
+      "5.0"
+    ],
+    "contagem_bruta_por_nivel": {
+      "0.5": 12,
+      "1.0": 24,
+      "1.5": 24,
+      "2.0": 96,
+      "2.5": 48,
+      "3.0": 113,
+      "3.5": 12,
+      "4.0": 36,
+      "4.5": 36,
+      "5.0": 104
     },
-    {
-      "quantificador": "muitos",
-      "tema": "Representação estereotipada e deturpada da favela"
+    "contagem_estimada_valida_por_nivel": {
+      "0.5": 3,
+      "1.0": 6,
+      "1.5": 3,
+      "2.0": 35,
+      "2.5": 13,
+      "3.0": 28,
+      "3.5": 6,
+      "4.0": 8,
+      "4.5": 12,
+      "5.0": 27
     },
-    {
-      "quantificador": "muitos",
-      "tema": "Violência excessiva e gratuita"
-    }
-  ],
-  "marcadores_perspectiva": [
-    {
-      "grupo": "medianas",
-      "trecho": "Uma pequena minoria das notas (~8%) fica no meio-termo: para esse grupo, o filme é tecnicamente impressionante"
+    "motivo_parada_por_nivel": {
+      "0.5": "orcamento_esgotado",
+      "1.0": "orcamento_esgotado",
+      "1.5": "orcamento_esgotado",
+      "2.0": "orcamento_esgotado",
+      "2.5": "orcamento_esgotado",
+      "3.0": "orcamento_esgotado",
+      "3.5": "orcamento_esgotado",
+      "4.0": "orcamento_esgotado",
+      "4.5": "orcamento_esgotado",
+      "5.0": "orcamento_esgotado"
     },
-    {
-      "grupo": "negativas",
-      "trecho": "uma fração mínima das notas (~1%) rejeita o filme: nessa leitura, muitos veem"
-    }
-  ],
-  "metricas_fluencia": {
-    "n_frases": 11,
-    "media_palavras": 22.1,
-    "cv_comprimento": 0.44,
-    "frase_mais_curta": 9,
-    "aberturas_repetidas": 0,
-    "verbos_reporte": 5,
-    "adverbios_mente": 0
-  },
-  "narrativa_bruta": "Em Cidade de Deus (2002), o diretor Fernando Meirelles conduz um drama criminal que acompanha Buscapé, um jovem da Cidade de Deus que, temendo tornar-se um bandido, vê na fotografia uma chance de vida digna. O filme, com 130 minutos de duração, apresenta uma narrativa fragmentada que alterna linhas do tempo e múltiplos personagens, ambientada em uma favela carioca marcada pela violência e pela pobreza. A edição é ágil e a câmera, dinâmica, criando um ritmo acelerado e uma atmosfera intensa, enquanto a violência é retratada de forma crua e realista, sem suavização. As notas são dominadas pela aprovação: a grande maioria das notas (~91%) é positiva. Quem gostou celebra o estilo visual e a edição dinâmicos, apontados pela maioria das reviews positivas como fonte de energia e imersão, além da narrativa envolvente e da brutalidade realista da violência, que muitos destacam como impactante e não glamourizada. Uma pequena minoria das notas (~8%) fica no meio-termo: para esse grupo, o filme é tecnicamente impressionante e retrata a violência e a realidade social de forma realista — cerca de metade das reviews medianas menciona esse retrato —, mas muitos sentem que falta conexão emocional, o que impede uma nota mais alta. Por fim, uma fração mínima das notas (~1%) rejeita o filme: nessa leitura, muitos veem a estetização e a espetacularização da violência e da miséria como um problema ético, muitos apontam representação estereotipada da favela e muitos consideram a violência excessiva e gratuita, o que compromete a experiência.",
-  "edicao_flags": {
-    "edicao_descartada": false,
-    "motivo_descarte": "",
-    "protegidos_perdidos": [],
-    "numeros_alterados": false,
-    "houve_retentativa": false,
-    "falhou": false,
-    "n_protegidos": 8,
-    "n_tentativas": 1,
-    "motivos_por_tentativa": [],
-    "similaridade": 0.9309446254071662,
-    "capitalizacao_ajustada": false,
-    "frases_sem_origem": [],
-    "similaridade_minima_por_frase": {
-      "Em Cidade de Deus (2002), o diretor Fernando Meirelles conduz um drama criminal que acompanha Buscapé, um jovem da Cidade de Deus que, temendo tornar-se um bandido, vê na fotografia uma chance de vida digna.": 1.0,
-      "O filme tem 130 minutos de duração e apresenta uma narrativa fragmentada, que alterna linhas do tempo e múltiplos personagens, numa favela carioca marcada pela violência e pela pobreza.": 0.8928571428571429,
-      "A edição é ágil e a câmera é dinâmica, criando um ritmo acelerado e uma atmosfera intensa, enquanto a violência surge crua e realista, sem suavização.": 0.9615384615384616,
-      "As notas são dominadas pela aprovação: a grande maioria das notas (~91%) é positiva.": 1.0,
-      "Quem gostou celebra o estilo visual e a edição dinâmicos, que a maioria das reviews positivas aponta como fonte de energia e imersão.": 0.9130434782608695,
-      "Também entram na conta a narrativa envolvente e a brutalidade realista, que muitos destacam como impactante e não glamourizada.": 0.7368421052631579,
-      "Uma pequena minoria das notas (~8%) fica no meio-termo.": 1.0,
-      "Para esse grupo, o filme é tecnicamente impressionante e retrata a violência e a realidade social de forma realista — cerca de metade das reviews medianas menciona esse retrato —, mas muitos sentem falta de conexão emocional, o que impede uma nota mais alta.": 0.9761904761904762,
-      "Por fim, uma fração mínima das notas (~1%) rejeita o filme.": 1.0,
-      "Nessa leitura, muitos veem a estetização e a espetacularização da violência e da miséria como um problema ético.": 1.0,
-      "Muitos também apontam representação estereotipada da favela, e muitos consideram a violência excessiva e gratuita, o que compromete a experiência.": 0.95
+    "paginas_base_por_nivel": {
+      "0.5": 1,
+      "1.0": 2,
+      "1.5": 2,
+      "2.0": 8,
+      "2.5": 4,
+      "3.0": 10,
+      "3.5": 1,
+      "4.0": 3,
+      "4.5": 3,
+      "5.0": 9
     },
-    "tentativas_detalhe": [
-      {
-        "tentativa": 1,
-        "motivo": "",
-        "similaridade": 0.9309446254071662,
-        "frases_sem_origem": [],
-        "texto": "Em Cidade de Deus (2002), o diretor Fernando Meirelles conduz um drama criminal que acompanha Buscapé, um jovem da Cidade de Deus que, temendo tornar-se um bandido, vê na fotografia uma chance de vida digna. O filme tem 130 minutos de duração e apresenta uma narrativa fragmentada, que alterna linhas do tempo e múltiplos personagens, numa favela carioca marcada pela violência e pela pobreza. A edição é ágil e a câmera é dinâmica, criando um ritmo acelerado e uma atmosfera intensa, enquanto a violência surge crua e realista, sem suavização. As notas são dominadas pela aprovação: a grande maioria das notas (~91%) é positiva. Quem gostou celebra o estilo visual e a edição dinâmicos, que a maioria das reviews positivas aponta como fonte de energia e imersão. Também entram na conta a narrativa envolvente e a brutalidade realista, que muitos destacam como impactante e não glamourizada. Uma pequena minoria das notas (~8%) fica no meio-termo. Para esse grupo, o filme é tecnicamente impressionante e retrata a violência e a realidade social de forma realista — cerca de metade das reviews medianas menciona esse retrato —, mas muitos sentem falta de conexão emocional, o que impede uma nota mais alta. Por fim, uma fração mínima das notas (~1%) rejeita o filme. Nessa leitura, muitos veem a estetização e a espetacularização da violência e da miséria como um problema ético. Muitos também apontam representação estereotipada da favela, e muitos consideram a violência excessiva e gratuita, o que compromete a experiência."
+    "paginas_extensao_por_nivel": {
+      "0.5": 0,
+      "1.0": 0,
+      "1.5": 0,
+      "2.0": 0,
+      "2.5": 0,
+      "3.0": 0,
+      "3.5": 0,
+      "4.0": 0,
+      "4.5": 0,
+      "5.0": 0
+    },
+    "extensao_por_bucket": {
+      "negativas": {
+        "paginas_base": 13,
+        "paginas_extensao": 0,
+        "extras_por_nivel": {},
+        "motivo_parada": "meta_atingida",
+        "n_validas_pos_base": 71,
+        "n_validas_pos_extensao": 71,
+        "meta": 50
+      },
+      "medianas": {
+        "paginas_base": 14,
+        "paginas_extensao": 0,
+        "extras_por_nivel": {},
+        "motivo_parada": "meta_atingida",
+        "n_validas_pos_base": 54,
+        "n_validas_pos_extensao": 54,
+        "meta": 50
+      },
+      "positivas": {
+        "paginas_base": 16,
+        "paginas_extensao": 0,
+        "extras_por_nivel": {},
+        "motivo_parada": "meta_atingida",
+        "n_validas_pos_base": 65,
+        "n_validas_pos_extensao": 65,
+        "meta": 50
       }
-    ]
+    },
+    "profundidade_sondagem": {
+      "nivel_sondado": 5.0,
+      "profundidade": 256,
+      "exata": false,
+      "requisicoes": 4,
+      "motivo": "teto_plataforma"
+    },
+    "profundidade_estimada_por_nivel": {
+      "0.5": 1,
+      "1.0": 1,
+      "1.5": 1,
+      "2.0": 2,
+      "2.5": 3,
+      "3.0": 15,
+      "3.5": 24,
+      "4.0": 101,
+      "4.5": 100,
+      "5.0": 256
+    },
+    "janela_temporal": {
+      "total": {
+        "n": 895,
+        "min": "2003-04-01",
+        "max": "2026-08-07",
+        "p5": "2012-08-30",
+        "p50": "2026-07-13",
+        "p95": "2026-08-06"
+      },
+      "por_bucket": {
+        "negativas": {
+          "n": 300,
+          "min": "2004-10-14",
+          "max": "2026-08-06",
+          "p5": "2018-07-13",
+          "p50": "2026-05-23",
+          "p95": "2026-07-31"
+        },
+        "medianas": {
+          "n": 275,
+          "min": "2003-04-01",
+          "max": "2026-08-07",
+          "p5": "2014-11-28",
+          "p50": "2026-07-19",
+          "p95": "2026-08-05"
+        },
+        "positivas": {
+          "n": 320,
+          "min": "2004-02-28",
+          "max": "2026-08-07",
+          "p5": "2012-03-06",
+          "p50": "2026-08-06",
+          "p95": "2026-08-07"
+        }
+      }
+    },
+    "dias_por_100_paginas": {
+      "n_paginas": 15,
+      "pagina_min": 1,
+      "pagina_max": 128,
+      "dias": 3,
+      "dias_por_100_paginas": 2.3622047244094486,
+      "paginas_para_1_ano": 15452
+    },
+    "ano_lancamento": 2002,
+    "ano_fonte": "letterboxd",
+    "n_reviews_bruto": 895
+  },
+  "origem_paginas": {
+    "_histograma/cidade-de-deus.html": "cache",
+    "cidade-de-deus/pages/by_added/rated_5_page_4.html": "cache",
+    "cidade-de-deus/pages/by_added/rated_5_page_16.html": "cache",
+    "cidade-de-deus/pages/by_added/rated_5_page_64.html": "cache",
+    "cidade-de-deus/pages/by_added/rated_5_page_256.html": "cache",
+    "cidade-de-deus/pages/by_added/rated_0_5_page_1.html": "cache",
+    "cidade-de-deus/pages/by_added/rated_1_page_1.html": "cache",
+    "cidade-de-deus/pages/by_added/rated_1_page_2.html": "cache",
+    "cidade-de-deus/fulltext/viewing_1411309818.html": "cache",
+    "cidade-de-deus/fulltext/viewing_1411048735.html": "cache",
+    "cidade-de-deus/fulltext/viewing_1386263310.html": "cache",
+    "cidade-de-deus/pages/by_added/rated_1_5_page_1.html": "cache",
+    "cidade-de-deus/pages/by_added/rated_1_5_page_2.html": "cache",
+    "cidade-de-deus/fulltext/viewing_1371642233.html": "cache",
+    "cidade-de-deus/pages/by_added/rated_2_page_1.html": "cache",
+    "cidade-de-deus/pages/by_added/rated_2_page_2.html": "cache",
+    "cidade-de-deus/pages/by_added/rated_2_page_3.html": "cache",
+    "cidade-de-deus/pages/by_added/rated_2_page_4.html": "cache",
+    "cidade-de-deus/pages/by_added/rated_2_page_5.html": "cache",
+    "cidade-de-deus/pages/by_added/rated_2_page_6.html": "cache",
+    "cidade-de-deus/pages/by_added/rated_2_page_7.html": "cache",
+    "cidade-de-deus/pages/by_added/rated_2_page_8.html": "cache",
+    "cidade-de-deus/fulltext/viewing_1409240723.html": "cache",
+    "cidade-de-deus/fulltext/viewing_1394480628.html": "cache",
+    "cidade-de-deus/fulltext/viewing_1383416378.html": "cache",
+    "cidade-de-deus/fulltext/viewing_1342164099.html": "cache",
+    "cidade-de-deus/fulltext/viewing_1341815991.html": "cache",
+    "cidade-de-deus/fulltext/viewing_1340464697.html": "cache",
+    "cidade-de-deus/fulltext/viewing_1305751458.html": "cache",
+    "cidade-de-deus/fulltext/viewing_1298799432.html": "cache",
+    "cidade-de-deus/fulltext/viewing_1293861403.html": "cache",
+    "cidade-de-deus/pages/by_added/rated_2_5_page_1.html": "cache",
+    "cidade-de-deus/pages/by_added/rated_2_5_page_2.html": "cache",
+    "cidade-de-deus/pages/by_added/rated_2_5_page_3.html": "cache",
+    "cidade-de-deus/pages/by_added/rated_2_5_page_4.html": "cache",
+    "cidade-de-deus/fulltext/viewing_1429047632.html": "cache",
+    "cidade-de-deus/fulltext/viewing_1425937181.html": "cache",
+    "cidade-de-deus/fulltext/viewing_1413038340.html": "cache",
+    "cidade-de-deus/fulltext/viewing_1395489678.html": "cache",
+    "cidade-de-deus/fulltext/viewing_1392072671.html": "cache",
+    "cidade-de-deus/fulltext/viewing_1390919379.html": "cache",
+    "cidade-de-deus/fulltext/viewing_1386632629.html": "cache",
+    "cidade-de-deus/pages/by_added/rated_3_page_1.html": "cache",
+    "cidade-de-deus/pages/by_added/rated_3_page_2.html": "cache",
+    "cidade-de-deus/pages/by_added/rated_3_page_3.html": "cache",
+    "cidade-de-deus/pages/by_added/rated_3_page_4.html": "cache",
+    "cidade-de-deus/pages/by_added/rated_3_page_5.html": "cache",
+    "cidade-de-deus/pages/by_added/rated_3_page_6.html": "cache",
+    "cidade-de-deus/pages/by_added/rated_3_page_7.html": "cache",
+    "cidade-de-deus/pages/by_added/rated_3_page_8.html": "cache",
+    "cidade-de-deus/pages/by_added/rated_3_page_9.html": "cache",
+    "cidade-de-deus/pages/by_added/rated_3_page_11.html": "cache",
+    "cidade-de-deus/fulltext/viewing_1428934262.html": "cache",
+    "cidade-de-deus/fulltext/viewing_1426980142.html": "cache",
+    "cidade-de-deus/fulltext/viewing_1420618214.html": "cache",
+    "cidade-de-deus/fulltext/viewing_1418501162.html": "cache",
+    "cidade-de-deus/fulltext/viewing_1413613604.html": "cache",
+    "cidade-de-deus/fulltext/viewing_1413441371.html": "cache",
+    "cidade-de-deus/fulltext/viewing_1409503042.html": "cache",
+    "cidade-de-deus/fulltext/viewing_1407385317.html": "cache",
+    "cidade-de-deus/fulltext/viewing_1406539130.html": "cache",
+    "cidade-de-deus/pages/by_added/rated_3_5_page_1.html": "cache",
+    "cidade-de-deus/pages/by_added/rated_4_page_1.html": "cache",
+    "cidade-de-deus/pages/by_added/rated_4_page_2.html": "cache",
+    "cidade-de-deus/pages/by_added/rated_4_page_25.html": "cache",
+    "cidade-de-deus/fulltext/viewing_1436931957.html": "cache",
+    "cidade-de-deus/pages/by_added/rated_4_5_page_1.html": "cache",
+    "cidade-de-deus/pages/by_added/rated_4_5_page_2.html": "cache",
+    "cidade-de-deus/pages/by_added/rated_4_5_page_25.html": "cache",
+    "cidade-de-deus/fulltext/viewing_1437525312.html": "cache",
+    "cidade-de-deus/fulltext/viewing_1437387537.html": "cache",
+    "cidade-de-deus/fulltext/viewing_1433986581.html": "cache",
+    "cidade-de-deus/pages/by_added/rated_5_page_1.html": "cache",
+    "cidade-de-deus/pages/by_added/rated_5_page_2.html": "cache",
+    "cidade-de-deus/pages/by_added/rated_5_page_3.html": "cache",
+    "cidade-de-deus/pages/by_added/rated_5_page_5.html": "cache",
+    "cidade-de-deus/pages/by_added/rated_5_page_6.html": "cache",
+    "cidade-de-deus/pages/by_added/rated_5_page_7.html": "cache",
+    "cidade-de-deus/pages/by_added/rated_5_page_128.html": "cache",
+    "cidade-de-deus/fulltext/viewing_1437689044.html": "cache",
+    "cidade-de-deus/fulltext/viewing_1437675359.html": "cache",
+    "cidade-de-deus/fulltext/viewing_1437635354.html": "cache",
+    "cidade-de-deus/fulltext/viewing_1437617841.html": "cache",
+    "cidade-de-deus/fulltext/viewing_1437580949.html": "cache",
+    "cidade-de-deus/fulltext/viewing_1437507961.html": "cache",
+    "cidade-de-deus/fulltext/viewing_1437464702.html": "cache",
+    "cidade-de-deus/fulltext/viewing_1437422771.html": "cache",
+    "cidade-de-deus/fulltext/viewing_1429438344.html": "cache",
+    "cidade-de-deus/film_page.html": "cache"
+  },
+  "buckets": [
+    {
+      "bucket": "negativas",
+      "alvo": 40,
+      "modo": "completo",
+      "estado_piso": "completa",
+      "n_validas": 40,
+      "share_real": 1,
+      "composicao_alvo": {
+        "0.5": 4,
+        "1.0": 7,
+        "1.5": 5,
+        "2.0": 24
+      },
+      "composicao_atingida": {
+        "0.5": 4,
+        "1.0": 7,
+        "1.5": 5,
+        "2.0": 24
+      },
+      "cascata_por_degrau": {
+        "150": 40
+      },
+      "deficit_redistribuido": 0,
+      "distribuicao_pagina_origem": {
+        "n": 40,
+        "min": 1,
+        "max": 12,
+        "p5": 1,
+        "p50": 3,
+        "p95": 12,
+        "fracao_profunda": 0.375
+      },
+      "niveis": [
+        {
+          "nivel": 0.5,
+          "n_validas": 4,
+          "n_alvo": 4,
+          "n_brutas": 36,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 1,
+          "n_descartadas_curtas": 22,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 0,
+          "motivos_descarte": {
+            "truncada_sem_texto": 0,
+            "spoiler": 1,
+            "abaixo_min_chars": 22,
+            "excedente_cota": 9,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 1
+        },
+        {
+          "nivel": 1.0,
+          "n_validas": 7,
+          "n_alvo": 7,
+          "n_brutas": 60,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 2,
+          "n_descartadas_curtas": 39,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 0,
+          "motivos_descarte": {
+            "truncada_sem_texto": 0,
+            "spoiler": 2,
+            "abaixo_min_chars": 39,
+            "excedente_cota": 12,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 2
+        },
+        {
+          "nivel": 1.5,
+          "n_validas": 5,
+          "n_alvo": 5,
+          "n_brutas": 48,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 2,
+          "n_descartadas_curtas": 31,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 0,
+          "motivos_descarte": {
+            "truncada_sem_texto": 0,
+            "spoiler": 2,
+            "abaixo_min_chars": 31,
+            "excedente_cota": 10,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 2
+        },
+        {
+          "nivel": 2.0,
+          "n_validas": 24,
+          "n_alvo": 24,
+          "n_brutas": 156,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 2,
+          "n_descartadas_curtas": 89,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 0,
+          "motivos_descarte": {
+            "truncada_sem_texto": 0,
+            "spoiler": 2,
+            "abaixo_min_chars": 89,
+            "excedente_cota": 41,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 8
+        }
+      ],
+      "temas": [
+        {
+          "tema": "Retrato explorador e sensacionalista da pobreza",
+          "mencoes_aproximadas": 15,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "O filme é visto como uma exploração da miséria, usando a violência e o sofrimento como espetáculo para o público estrangeiro, sem se aprofundar nas causas sociais ou dar dignidade aos personagens.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Excesso de violência e ritmo exaustivo",
+          "mencoes_aproximadas": 12,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "A violência constante e a edição frenética são criticadas por tornarem a experiência cansativa e por reduzirem o impacto emocional, fazendo com que as mortes pareçam banais e sem peso.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Falta de desenvolvimento dos personagens",
+          "mencoes_aproximadas": 10,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "Os personagens são considerados rasos, servindo mais como tipos do que como pessoas reais, o que impede a conexão emocional do público e enfraquece o drama.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Narrativa fragmentada e excesso de narração",
+          "mencoes_aproximadas": 8,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "A estrutura não linear e o uso constante de voz off são apontados como confusos e didáticos, dificultando o envolvimento com a história e entregando informações de forma artificial.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Estética e estilo vazios, tecnicamente chamativos",
+          "mencoes_aproximadas": 7,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "Embora a direção de arte e a fotografia chamem atenção, o estilo é visto como superficial e mais preocupado em impressionar do que em servir à narrativa.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Filme superestimado em relação à sua recepção",
+          "mencoes_aproximadas": 6,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "Muitos que não gostaram mencionam que não entendem a alta avaliação do filme, considerando-o superestimado e aquém das expectativas criadas pela fama.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        }
+      ],
+      "observacao_geral": "Este grupo de reviews negativas critica o filme por retratar a pobreza de forma exploradora e sensacionalista, pelo excesso de violência e pela falta de profundidade dos personagens. Também há queixas sobre a narrativa confusa e a estética vazia, além de considerarem a obra superestimada.",
+      "idioma_invalido": false,
+      "escopo_suspeito": false
+    },
+    {
+      "bucket": "medianas",
+      "alvo": 40,
+      "modo": "completo",
+      "estado_piso": "completa",
+      "n_validas": 40,
+      "share_real": 3,
+      "composicao_alvo": {
+        "2.5": 6,
+        "3.0": 34
+      },
+      "composicao_atingida": {
+        "2.5": 6,
+        "3.0": 34
+      },
+      "cascata_por_degrau": {
+        "150": 40
+      },
+      "deficit_redistribuido": 0,
+      "distribuicao_pagina_origem": {
+        "n": 40,
+        "min": 1,
+        "max": 12,
+        "p5": 1,
+        "p50": 3,
+        "p95": 12,
+        "fracao_profunda": 0.2
+      },
+      "niveis": [
+        {
+          "nivel": 2.5,
+          "n_validas": 6,
+          "n_alvo": 6,
+          "n_brutas": 84,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 0,
+          "n_descartadas_curtas": 51,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 1,
+          "motivos_descarte": {
+            "truncada_sem_texto": 1,
+            "spoiler": 0,
+            "abaixo_min_chars": 51,
+            "excedente_cota": 26,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 4
+        },
+        {
+          "nivel": 3.0,
+          "n_validas": 34,
+          "n_alvo": 34,
+          "n_brutas": 191,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 7,
+          "n_descartadas_curtas": 113,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 2,
+          "motivos_descarte": {
+            "truncada_sem_texto": 2,
+            "spoiler": 7,
+            "abaixo_min_chars": 113,
+            "excedente_cota": 35,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 10
+        }
+      ],
+      "temas": [
+        {
+          "tema": "Excesso de violência",
+          "mencoes_aproximadas": 12,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "A violência é tão constante e intensa que acaba se tornando entorpecente, com mortes demais que perdem o impacto.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Técnica impressionante, mas distanciamento emocional",
+          "mencoes_aproximadas": 11,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "A direção, a fotografia e a edição são brilhantes, mas o estilo visual tão chamativo cria uma barreira que impede uma conexão mais profunda com a história.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Narrativa episódica e difícil de seguir",
+          "mencoes_aproximadas": 8,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "A história é contada em fragmentos que não se conectam bem, tornando difícil acompanhar a trama e os muitos personagens.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Falta de personagens cativantes",
+          "mencoes_aproximadas": 8,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "Embora os atores sejam competentes, os personagens não despertam empatia, deixando o espectador indiferente ao destino deles.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Retrato realista da vida na favela",
+          "mencoes_aproximadas": 8,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "O filme mostra com crueza a pobreza e a falta de oportunidades nas comunidades carentes, o que dá um peso documental à obra.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Comparações com outros filmes de gangster",
+          "mencoes_aproximadas": 6,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "A obra remete a outros clássicos do gênero, mas muitos acham que ela não alcança a mesma profundidade ou complexidade desses filmes.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        }
+      ],
+      "observacao_geral": "As reviews medianas reconhecem a qualidade técnica e o realismo do filme, mas apontam falhas na narrativa e no desenvolvimento dos personagens, além do excesso de violência que prejudica a experiência. Para este grupo, a obra é bem-feita porém superestimada.",
+      "idioma_invalido": false,
+      "escopo_suspeito": false
+    },
+    {
+      "bucket": "positivas",
+      "alvo": 40,
+      "modo": "completo",
+      "estado_piso": "completa",
+      "n_validas": 40,
+      "share_real": 96,
+      "composicao_alvo": {
+        "3.5": 2,
+        "4.0": 9,
+        "4.5": 8,
+        "5.0": 21
+      },
+      "composicao_atingida": {
+        "3.5": 2,
+        "4.0": 9,
+        "4.5": 8,
+        "5.0": 21
+      },
+      "cascata_por_degrau": {
+        "150": 40
+      },
+      "deficit_redistribuido": 0,
+      "distribuicao_pagina_origem": {
+        "n": 40,
+        "min": 1,
+        "max": 128,
+        "p5": 1,
+        "p50": 3,
+        "p95": 9,
+        "fracao_profunda": 0.325
+      },
+      "niveis": [
+        {
+          "nivel": 3.5,
+          "n_validas": 2,
+          "n_alvo": 2,
+          "n_brutas": 24,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 1,
+          "n_descartadas_curtas": 10,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 1,
+          "motivos_descarte": {
+            "truncada_sem_texto": 1,
+            "spoiler": 1,
+            "abaixo_min_chars": 10,
+            "excedente_cota": 10,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 1
+        },
+        {
+          "nivel": 4.0,
+          "n_validas": 9,
+          "n_alvo": 9,
+          "n_brutas": 72,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 2,
+          "n_descartadas_curtas": 51,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 0,
+          "motivos_descarte": {
+            "truncada_sem_texto": 0,
+            "spoiler": 2,
+            "abaixo_min_chars": 51,
+            "excedente_cota": 10,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 3
+        },
+        {
+          "nivel": 4.5,
+          "n_validas": 8,
+          "n_alvo": 8,
+          "n_brutas": 60,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 2,
+          "n_descartadas_curtas": 38,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 1,
+          "motivos_descarte": {
+            "truncada_sem_texto": 1,
+            "spoiler": 2,
+            "abaixo_min_chars": 38,
+            "excedente_cota": 11,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 3
+        },
+        {
+          "nivel": 5.0,
+          "n_validas": 21,
+          "n_alvo": 21,
+          "n_brutas": 164,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 2,
+          "n_descartadas_curtas": 108,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 3,
+          "motivos_descarte": {
+            "truncada_sem_texto": 3,
+            "spoiler": 2,
+            "abaixo_min_chars": 108,
+            "excedente_cota": 30,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 9
+        }
+      ],
+      "temas": [
+        {
+          "tema": "Realismo e brutalidade",
+          "mencoes_aproximadas": 15,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "As reviews positivas frequentemente destacam como o filme retrata de forma crua e realista a violência e a pobreza nas favelas, transmitindo uma sensação de autenticidade que impacta o espectador.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Cinematografia e direção",
+          "mencoes_aproximadas": 12,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "Os elogios se concentram na fotografia marcante, nos ângulos de câmera dinâmicos e na direção segura, que criam uma experiência visual imersiva e estilisticamente impressionante.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Roteiro e narrativa",
+          "mencoes_aproximadas": 10,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "Muitas reviews positivas mencionam a estrutura não linear e a forma como as histórias se entrelaçam, mantendo o interesse e proporcionando uma narrativa coesa e envolvente.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Atuações e elenco",
+          "mencoes_aproximadas": 8,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "As reviews elogiam as atuações convincentes, especialmente de atores não profissionais, que adicionam autenticidade e profundidade aos personagens.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Impacto emocional",
+          "mencoes_aproximadas": 6,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "Os espectadores relatam que o filme provoca fortes emoções, variando de choque e tristeza à admiração, e que a história permanece na mente muito depois do fim.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Trilha sonora e ritmo",
+          "mencoes_aproximadas": 5,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "Algumas reviews destacam a trilha sonora marcante e o ritmo acelerado, que contribuem para a energia e a fluidez do filme, mantendo o espectador preso à tela.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        }
+      ],
+      "observacao_geral": "As reviews positivas celebram o filme como uma obra-prima do cinema, destacando sua abordagem crua e realista, sua estética visual impressionante e sua narrativa complexa. Este grupo vê o filme como uma experiência intensa e impactante que retrata a realidade das favelas de forma autêntica e artística.",
+      "idioma_invalido": false,
+      "escopo_suspeito": false
+    }
+  ],
+  "narrativa": "Dirigido por Fernando Meirelles e lançado em 2002, Cidade de Deus é um drama policial brasileiro com 130 minutos de duração. A trama acompanha Buscapé, um jovem que cresce em um contexto marcado pela criminalidade urbana e busca na fotografia um caminho para construir uma trajetória diferente.\n\nA obra se estrutura por meio de uma narrativa fragmentada e não linear, acompanhada por um ritmo acelerado de montagem e uma ambientação crua centrada na violência e no cotidiano da comunidade.\n\nNa grande maioria das notas (~96%), boa parte destaca a representação realista e direta da brutalidade como um dos pontos centrais da obra. Além disso, vários apontam a cinematografia e o estilo de direção como elementos marcantes na condução visual, enquanto uma parte valoriza a estrutura do roteiro e o entrelaçamento das histórias apresentadas.\n\nEm contrapartida, para quem se posiciona numa fração mínima das notas (~3%), um número considerável considera que a intensidade constante da violência atenua o peso dramático das situações. Nessa perspectiva, uma parcela expressiva pondera que o apuro técnico da produção gera um distanciamento afetivo em relação aos acontecimentos, e alguns relatam dificuldades em acompanhar o encadeamento episódico da trama.\n\nPor fim, segundo a visão expressa numa fração ainda menor das notas (~1%), muitos veem na abordagem do cenário social um tom explorador e sensacionalista. Para esse grupo, boa parte também critica o ritmo exaustivo gerado pela sucessão ininterrupta de violência, ao passo que parte deles aponta uma falta de desenvolvimento aprofundado na caracterização dos personagens.",
+  "verificacao_narrativa": {
+    "quantificador_fora_de_faixa": [],
+    "quantificador_repetido": [],
+    "paragrafos": {
+      "n_paragrafos": 5,
+      "minimo": 3,
+      "insuficientes": false,
+      "longos": []
+    },
+    "n_paragrafos": 5,
+    "paragrafos_insuficientes": false,
+    "paragrafos_longos": [],
+    "grupos_sem_paragrafo_proprio": [],
+    "movimento1_e_movimento2_no_mesmo_paragrafo": false,
+    "formato_invalido": false,
+    "numeros_inventados": [],
+    "rotulos_faltando": [],
+    "ordem_incorreta": false,
+    "vocabulario_peso": false,
+    "resenha_speak": [],
+    "n_resenha_speak": 0,
+    "n_flags": 0
+  },
+  "narrativa_selecao": {
+    "provider": "gemini",
+    "modelo": "gemini-3.7-flash",
+    "n_candidatos": 3,
+    "n_chamadas": 3,
+    "indice_escolhido": 0,
+    "motivo": "melhor_entre_limpos",
+    "criterio_decisivo": "empate",
+    "candidatos": [
+      {
+        "indice": 0,
+        "n_flags": 0,
+        "cliches": 0,
+        "repeticao_max": 2,
+        "ritmo": 4,
+        "cobertura": 1.0,
+        "eliminado": false
+      },
+      {
+        "indice": 1,
+        "n_flags": 0,
+        "cliches": 0,
+        "repeticao_max": 2,
+        "ritmo": 1,
+        "cobertura": 1.0,
+        "eliminado": false
+      },
+      {
+        "indice": 2,
+        "n_flags": 0,
+        "cliches": 0,
+        "repeticao_max": 2,
+        "ritmo": 4,
+        "cobertura": 1.0,
+        "eliminado": false
+      }
+    ],
+    "retry": null,
+    "uso": {
+      "prompt_tokens": 9246,
+      "completion_tokens": 1045,
+      "cache_hit_tokens": 0,
+      "cache_miss_tokens": 9246
+    },
+    "latencia_s": 17.99
   }
 }
