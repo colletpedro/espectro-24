@@ -364,6 +364,13 @@ DEFAULT_PROVIDER = "deepseek"
 PROVIDER_POR_ESTAGIO = {
     "classificacao": "deepseek",
     "narrativa": "gemini",
+    # v1.9.14 (§D3): rotulagem de tema por eixo. Fica em DeepSeek pelo mesmo
+    # critério que manteve a classificação lá — tarefa estruturada, saída
+    # JSON curta, escolha dentro de lista fechada: o lugar onde capacidade de
+    # modelo rende menos. Não é a mesma etapa que a classificação (esta não
+    # entra no `taxonomia_id`, e não é calibrada contra gabarito), mas é a
+    # mesma NATUREZA de tarefa.
+    "rotulagem": "deepseek",
 }
 
 # Modelo default de cada estágio.
@@ -399,6 +406,7 @@ PROVIDER_POR_ESTAGIO = {
 MODELO_POR_ESTAGIO = {
     "classificacao": "deepseek-v4-flash",
     "narrativa": "gemini-3.7-flash",
+    "rotulagem": "deepseek-v4-flash",
 }
 
 # mantido por compatibilidade (era o único provider na v1.1.0); agora segue
@@ -414,6 +422,19 @@ MODEL_DEFAULT = PROVIDER_DEFAULT_MODELS[DEFAULT_PROVIDER]
 # pior caso medido; 3000 dá margem folgada para ambos os providers.
 LLM_MAX_TOKENS = 3000
 MAX_TEMAS = 6                # §D.3
+
+# --- Margem de LIFT (§2.5, v1.9.14) ---------------------------------------
+# Em PONTOS PERCENTUAIS, inteiros: a comparação é feita em `Fraction` contra
+# `MARGEM_LIFT_PP/100`, nunca em float (5 dos 35 filmes do catálogo têm o
+# melhor lift em exatamente 20,0pp, e `0.2` binário decidiria o estado deles
+# por erro de representação — ver `eixos.acima_da_margem`).
+#
+# 20 é DECISÃO DE PRODUTO entre pureza de lista e cobertura, medida por nulo
+# de permutação (2000 rodadas): a 15pp, 63% dos pares que cruzam a margem
+# cruzariam por acaso; a 20pp, 41%; a 25pp, 29% — mas só 9 de 35 filmes
+# teriam algum contraste. Não existe margem correta; existe esta, escolhida
+# com os três números à vista.
+MARGEM_LIFT_PP = 20
 
 # --- Configuração de produção da PROSA (narrador §D2 + editor §E2) — v1.6.0 ---
 # A síntese por bucket (§D) NÃO usa estes valores: continua com

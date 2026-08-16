@@ -26,9 +26,21 @@ from espectro24 import config, synthesize as S  # noqa: E402
 # ------------------------------------------------------------- configuração
 
 def test_existe_provider_para_cada_estagio():
-    assert set(config.PROVIDER_POR_ESTAGIO) == {"classificacao", "narrativa"}
+    # v1.9.14: `rotulagem` (§D3) entra como terceiro estágio. A lista é
+    # LITERAL de propósito — um estágio novo aparecendo aqui sem decisão
+    # registrada é exatamente o que este teste existe para expor.
+    assert set(config.PROVIDER_POR_ESTAGIO) == {"classificacao", "narrativa",
+                                                "rotulagem"}
     for p in config.PROVIDER_POR_ESTAGIO.values():
         assert p in config.PROVIDER_ENV_KEYS
+
+
+def test_a_rotulagem_fica_em_deepseek():
+    """§D3: tarefa estruturada, saída JSON curta, escolha em lista fechada —
+    o mesmo critério que manteve a classificação em DeepSeek. Note que são
+    etapas DISTINTAS: a rotulagem não entra no `taxonomia_id` e não é
+    calibrada contra gabarito (a assimetria está declarada na spec)."""
+    assert config.PROVIDER_POR_ESTAGIO["rotulagem"] == "deepseek"
 
 
 def test_a_classificacao_continua_em_deepseek():

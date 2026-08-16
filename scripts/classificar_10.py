@@ -107,63 +107,24 @@ MAX_TENTATIVAS = 3
 MARGENS = (0.10, 0.15, 0.20, 0.25)
 N_RODADAS_NULO = 2000
 
-EIXOS = (
-    "ritmo",
-    "atuacao",
-    "direcao_imagem",
-    "roteiro_estrutura",
-    "som_trilha",
-    "tom_atmosfera",
-    "impacto_emocional",
-    "comparacoes",
-    "expectativa",
-    "critica_social",
+# --- Taxonomia: definida em `src/espectro24/taxonomia.py` (v1.9.14) -------
+# EIXOS, SYSTEM e `taxonomia_id()` SAÍRAM daqui e viraram módulo de produção,
+# porque a rotulagem de temas por eixo (§[D3]) precisa das MESMAS definições.
+# Mudança de lugar, não de conteúdo: `taxonomia_id()` segue `ebab2667de74`, e
+# `tests/test_promocao_a_regra.py` trava esse valor. Reexportados aqui porque
+# este script (e os de medição ao lado) os consomem por este nome.
+from espectro24.taxonomia import (  # noqa: E402
+    EIXOS,
+    EIXOS_VALIDOS,
+    SYSTEM,
+    taxonomia_id,
 )
-EIXOS_VALIDOS = set(EIXOS) | {"livre"}
 
 # Preços DeepSeek, USD por 1M de tokens (config.py, v1.8.0).
 PRECO_ENTRADA_MISS = 0.14 / 1_000_000
 PRECO_ENTRADA_HIT = 0.0028 / 1_000_000
 PRECO_SAIDA = 0.28 / 1_000_000
 
-SYSTEM = """Você classifica UMA review de cinema por vez segundo uma taxonomia fechada de EIXOS.
-
-Os eixos disponíveis são exatamente estes:
-
-- ritmo: velocidade, duração, arrasta/prende, edição no sentido de andamento, tédio ou tensão sustentada.
-- atuacao: desempenho do elenco, performance de um ator ou atriz, elenco, direção de atores.
-- direcao_imagem: fotografia, planos, cor, luz, composição, cenário, figurino, efeitos visuais, direção no sentido visual.
-- roteiro_estrutura: história, enredo, estrutura, diálogos, personagens, final, coerência, previsibilidade.
-- som_trilha: trilha sonora, música, som, mixagem, silêncio, canções.
-- tom_atmosfera: clima, atmosfera, humor, registro, se é sério ou cômico, sensação de estranheza, ambiência.
-- impacto_emocional: o efeito que o filme causou em quem escreveu, ou na plateia da sessão — chorou, riu, se arrepiou, sentiu nojo, saiu abalado, se identificou, teve pesadelo, desistiu no meio de tédio, ficou indiferente. Inclui reação FÍSICA e VISCERAL e a reação da PLATEIA.
-- comparacoes: comparação com outro filme, outra obra, outro diretor, com o livro, com a franquia, com o trabalho anterior do mesmo autor.
-- expectativa: o que a pessoa esperava ANTES de assistir e por quê — hype, recomendação de alguém, pressão de já ter ouvido falar, motivo de ter ido ver, expectativa frustrada ou superada.
-- critica_social: crítica ao que o filme REPRESENTA ou faz socialmente — a mensagem, a ideologia, a política, a representação, o estúdio ou a franquia, o que a indústria está fazendo. Distinta de crítica ao que o filme É (isso é roteiro, ritmo, etc.).
-
-REGRAS:
-1. Atribua TODOS os eixos que a review realmente menciona, e SÓ esses. Uma review pode ter vários eixos, ou um só.
-2. Só atribua um eixo se a review disser algo sobre ele. Nota alta ou entusiasmo genérico SEM descrever efeito nenhum ("obra-prima", "amei", "5 estrelas", "peak cinema") NÃO é impacto_emocional nem nenhum outro eixo — é elogio sem eixo. Mas um efeito DECLARADO é eixo mesmo dito em três palavras: "chorei", "não gostei", "odiei", "me deu sono", "passei mal", "ri alto" são impacto_emocional.
-3. "livre" é sobre ASSUNTO, não sobre tamanho. Use "livre" quando a review fala de outra coisa que não o filme: a logística da sessão (legenda, dublagem, cinema, streaming, avião), a vida de quem escreveu, uma piada sobre outro assunto, um recado para outra pessoa. NÃO use "livre" só porque a review é curta ou diz pouco.
-4. Sempre que incluir "livre", escreva em `temas_livres` de 1 a 2 rótulos curtos (2 a 4 palavras, em português, minúsculas) descrevendo o que não coube.
-5. Uma review pode ter "livre" JUNTO com eixos: a parte que fala do filme vira eixo, a parte que não fala vira "livre". Devolva `["livre"]` sozinho só quando NADA na review fala do filme.
-6. Review curta menciona POUCOS eixos, não ZERO eixos. Brevidade não é ausência de conteúdo. Uma frase seca sobre os personagens é roteiro_estrutura; um xingamento ao filme é impacto_emocional; uma piada cujo alvo é o enredo é roteiro_estrutura. Na dúvida entre atribuir o eixo que a review claramente toca e devolver "livre", atribua o eixo.
-7. NÃO conte nada. NÃO some. NÃO comente. Devolva só o JSON.
-
-Responda APENAS com um objeto JSON, sem cercas de código, exatamente neste formato:
-{"eixos": ["..."], "temas_livres": ["..."]}"""
-
-
-def taxonomia_id() -> str:
-    """Identidade da taxonomia = hash do prompt + da lista de eixos.
-
-    É o que impede uma sessão futura de reaproveitar, em silêncio,
-    classificação feita sob outra definição de eixo. Mudou o prompt, mudou o
-    id, e o arquivo de classificação antigo deixa de casar."""
-    h = hashlib.sha256()
-    h.update(SYSTEM.encode("utf-8"))
-    h.update("|".join(EIXOS).encode("utf-8"))
-    return h.hexdigest()[:12]
 
 
 # ===========================================================================
