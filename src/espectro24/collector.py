@@ -19,7 +19,7 @@ from pathlib import Path
 
 from .alocacao import dividir_raso_profundo, redistribuir_deficit
 from .profundidade import posicoes_profundas
-from .bruto import ReviewBruta, autor_hash, id_estavel, persistir
+from .bruto import ReviewBruta, autor_hash, carregar, id_estavel, persistir
 from .config import (
     DADOS_BRUTO_DIR,
     FOLGA_ALVO_COLETA,
@@ -376,6 +376,28 @@ def _completar_truncadas(fetcher: Fetcher, slug: str, res: NivelBruto,
                                      reg.ordenacao_origem)
 
 
+def _coletado_em(anterior_meta: dict | None, fetcher, agora: str) -> str:
+    """[v1.9.13, §3[B']] `coletado_em` só avança quando ESTA execução tocou
+    a rede.
+
+    Achado ao regenerar 4 filmes da v1.9.12 `--offline`: o campo avançou
+    ~5h com ZERO requisições — `coletar_superset` sempre carimbava "agora",
+    independente de ter coletado algo. Segundo sintoma da mesma raiz de
+    "Reprodutibilidade offline" (§3[B']): `meta.json` não separava O QUE A
+    COLETA FEZ de QUANDO ALGUÉM RODOU O PIPELINE.
+
+    Corrige só o sintoma imediato: sem meta anterior (primeira coleta), ou
+    sem contador de rede no fetcher (dublê de teste, tratado como se
+    tivesse tocado a rede — mais conservador que arriscar um carimbo
+    preso), usa `agora`. Com meta anterior e ZERO requisições, preserva o
+    carimbo existente. A correção ESTRUTURAL (posições gravadas) continua
+    diagnosticada, não implementada — ver SPEC.md.
+    """
+    if not anterior_meta or getattr(fetcher, "n_network", 1) > 0:
+        return agora
+    return anterior_meta.get("coletado_em") or agora
+
+
 def coletar_superset(fetcher: Fetcher, slug: str,
                      alvo_por_nivel: dict[float, int],
                      histograma: dict[float, int] | None,
@@ -431,9 +453,11 @@ def coletar_superset(fetcher: Fetcher, slug: str,
     base_por_nivel = {n: r.paginas_gastas for n, r in res.niveis.items()}
     telemetria_extensao = extensao(res) if extensao else None
 
+    anterior, _ = carregar(slug, raiz=raiz)
     res.meta = {
         "slug": slug,
-        "coletado_em": datetime.now(timezone.utc).isoformat(),
+        "coletado_em": _coletado_em(anterior, fetcher,
+                                    datetime.now(timezone.utc).isoformat()),
         "versao_coletor": VERSAO_COLETOR,
         "ordenacao_usada": ordenacao,
         "histograma_bruto": {str(k): v for k, v in sorted((histograma or {}).items())},

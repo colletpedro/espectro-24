@@ -490,3 +490,12 @@ MAX_PALAVRAS_PARAGRAFO = 180
 # `BEST_OF_N`: narrativas independentes geradas por filme antes da seleção
 # POR CÓDIGO (§D2, Entrega 5). 3 é o número da tarefa; o custo é linear.
 BEST_OF_N = 3
+
+# [v1.9.13] `MAX_FRASES_MOVIMENTO1`: teto de frases no parágrafo ancorado
+# pelo ANO da ficha, PROXY de "movimento 1 e movimento 2 no mesmo
+# parágrafo". Medido: `cure` tem 3 frases nesse parágrafo (a terceira é
+# claramente movimento 2 — "A experiência do filme é conduzida por um
+# ritmo..."); os outros 3 filmes da v1.9.12 têm 2, e nenhum deles dispara.
+# Declaradamente imperfeito: um filme cuja premissa genuinamente precise de
+# 3 frases seria falso positivo — mesma troca de todo proxy do projeto.
+MAX_FRASES_MOVIMENTO1 = 2

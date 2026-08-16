@@ -603,8 +603,9 @@ def test_o_briefing_usa_o_rotulo_resolvido_em_conjunto():
 
 def test_contracoes_continuam_valendo_sobre_a_forma_comparativa():
     """`variantes_rotulo` opera sobre o PRIMEIRO token — a autorização de
-    contração da v1.9.11 tem de sobreviver ao rótulo comparativo."""
+    contração da v1.9.11 tem de sobreviver ao rótulo comparativo. `duma`
+    foi removida na v1.9.13 (soa arcaica) — `numa` continua."""
     from espectro24 import qualidade as q
     vs = q.variantes_rotulo("uma parte menor das notas (~33%)")
     assert "numa parte menor das notas (~33%)" in vs
-    assert "duma parte menor das notas (~33%)" in vs
+    assert "duma parte menor das notas (~33%)" not in vs

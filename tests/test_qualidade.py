@@ -479,12 +479,31 @@ def test_a_palavra_notas_continua_intocavel():
 
 
 def test_contracao_de_artigo_indefinido():
-    """`uma parcela` / `uma fração mínima` contraem com em/de: numa, duma."""
+    """`uma parcela`/`uma fração mínima` contraem com em: numa. `de uma`
+    (não contraído) sempre valeu — nunca precisou de autorização."""
     b = _briefing_rotulo("uma parcela das notas (~17%)")
     for escrito in ("uma parcela das notas (~17%)",
                     "numa parcela das notas (~17%)",
-                    "duma parcela das notas (~17%)"):
+                    "de uma parcela das notas (~17%)"):
         assert q.rotulos_peso_faltando(f"Texto. {escrito} discorda.", b) == [], escrito
+
+
+def test_duma_NAO_e_mais_uma_contracao_pre_aprovada():
+    """[v1.9.13] Decisão do dono do projeto: `duma` é gramaticalmente
+    correta mas soa arcaica em prosa escrita. Removida do conjunto
+    AUTORIZADO — o briefing deixa de oferecê-la ao narrador.
+
+    Nota de medição: `rotulos_peso_faltando` continua aceitando um rótulo
+    escrito com "duma" por ACIDENTE de substring ("duma X" contém "uma X"
+    dentro) — o mesmo acidente que já valia para "na"/"da"/"pela" antes da
+    v1.9.11. Não é regressão: a correção desta entrega é o que o briefing
+    OFERECE, não uma proibição nova na checagem de presença."""
+    vs = q.variantes_rotulo("uma parcela das notas (~17%)")
+    assert not any(v.startswith("duma ") for v in vs), vs
+    # "de uma" (não contraída) nunca precisou de autorização — continua.
+    b = _briefing_rotulo("uma parcela das notas (~17%)")
+    assert q.rotulos_peso_faltando(
+        "Texto. de uma parcela das notas (~17%) discorda.", b) == []
 
 
 def test_rotulo_sem_artigo_passa_com_preposicao_solta():
@@ -530,3 +549,149 @@ def test_a_contracao_nao_vira_repeticao_de_quantificador():
     texto = ("Na maioria das notas (~80%) há elogio. A maioria cita o ritmo, "
              "e a maioria destaca a fotografia.")
     assert q.quantificadores_repetidos(texto, briefing=b) == []
+
+
+# ============================================================ v1.9.13
+# Entrega 1 — movimento 1 e movimento 2 no MESMO parágrafo
+#
+# Medido em `cure`: "A experiência do filme é conduzida por um ritmo
+# desacelerado..." (claramente movimento 2) colado ao fim do parágrafo de
+# apresentação. O TOTAL de parágrafos (4) já passava no mínimo (3) — a
+# checagem existente conta quantidade, não POSIÇÃO.
+#
+# PROXY DECLARADO (mesmo espírito de `selecao_narrativa.cobertura`): a
+# distinção entre "movimento 2 omitido" (autorizado) e "movimento 2
+# fundido no parágrafo errado" não é computável por posição — as duas
+# produzem a MESMA contagem de parágrafos entre a âncora do movimento 1 e
+# o início do movimento 3. O proxy conta FRASES do parágrafo ancorado pelo
+# ANO da ficha: mais de duas é sinal de que ele carrega mais do que
+# "diretor, gênero, ano, premissa".
+# ============================================================
+
+def _briefing_com_ano(ano=1997):
+    return {"ficha": {"ano": ano}, "movimento3": {"ordem": ["positivas"]},
+            "grupos": {"positivas": {"rotulo_peso": "a maioria das notas (~80%)",
+                                     "permissoes": {"pode_citar_temas": True},
+                                     "temas": [{"tema": "t"}]}}}
+
+
+def test_paragrafo_do_ano_com_mais_de_duas_frases_e_flag():
+    """O caso medido em `cure`: 3 frases no parágrafo de abertura, a
+    terceira sendo claramente movimento 2."""
+    b = _briefing_com_ano()
+    texto = ("Lançado em 1997, o filme é um suspense. A trama acompanha "
+             "uma investigação complexa. A experiência é conduzida por um "
+             "ritmo lento e denso.\n\n"
+             "a maioria das notas (~80%) elogia o filme.")
+    assert q.movimento1_e_movimento2_no_mesmo_paragrafo(texto, b) is True
+
+
+def test_paragrafo_do_ano_com_duas_frases_passa():
+    """`cidade-de-deus`/`the-invite-2026`/`joker-folie-a-deux`: 2 frases,
+    ambas movimento 1 — não dispara."""
+    b = _briefing_com_ano()
+    texto = ("Lançado em 1997, o filme é um suspense. A trama acompanha "
+             "uma investigação complexa.\n\n"
+             "a maioria das notas (~80%) elogia o filme.")
+    assert q.movimento1_e_movimento2_no_mesmo_paragrafo(texto, b) is False
+
+
+def test_sem_ficha_nao_ha_o_que_checar():
+    b = {"ficha": None, "movimento3": {"ordem": []}, "grupos": {}}
+    texto = "Frase um. Frase dois. Frase três. Frase quatro."
+    assert q.movimento1_e_movimento2_no_mesmo_paragrafo(texto, b) is False
+
+
+def test_ano_ausente_do_texto_nao_e_punido_aqui():
+    """Ano que não aparece é outro defeito (número inventado/faltando) —
+    esta checagem não dobra a reprovação."""
+    b = _briefing_com_ano()
+    texto = "Um suspense atmosférico. Muito bem dirigido. Ótima atuação."
+    assert q.movimento1_e_movimento2_no_mesmo_paragrafo(texto, b) is False
+
+
+def test_verificar_soma_a_flag_de_movimento1_e_2():
+    b = _briefing_com_ano()
+    b["orcamento_frases"] = {"movimento1": (2, 3), "movimento2": (0, 5),
+                             "movimento3": (4, 8)}
+    ruim = ("Lançado em 1997, um suspense. A trama é complexa. O ritmo é "
+            "lento e denso.\n\na maioria das notas (~80%) elogia.")
+    v = q.verificar(ruim, b)
+    assert v["movimento1_e_movimento2_no_mesmo_paragrafo"] is True
+    assert v["n_flags"] >= 1
+
+
+# ============================================================ v1.9.13
+# Entrega 2 — repetição por RAIZ, não por string literal
+#
+# Medido em `joker-folie-a-deux`: "a maior parcela" e "a maior parte" em
+# parágrafos vizinhos — duas construções DIFERENTES da mesma faixa, então
+# a checagem por string não via nada, mas o efeito no leitor é o tique de
+# novo, em forma mais sutil.
+# ============================================================
+
+def _briefing_faixa_a_maioria():
+    return {"movimento3": {"ordem": ["positivas"]},
+            "grupos": {"positivas": {"rotulo_peso": "a maioria das notas (~60%)",
+                                     "temas": [{"tema": "t", "faixa": "a maioria"}]}}}
+
+
+def test_duas_construcoes_da_MESMA_raiz_disparam_a_flag():
+    b = _briefing_faixa_a_maioria()
+    texto = ("A maioria das notas (~60%) elogia. A maior parcela cita o "
+             "ritmo, a maior parte destaca a atuação, e a maior parcela "
+             "também elogia a fotografia.")
+    rep = q.quantificadores_repetidos(texto, briefing=b)
+    assert rep, "três ocorrências da raiz 'maior' deviam contar juntas"
+    assert rep[0]["n"] == 3
+
+
+def test_construcoes_de_RAIZES_diferentes_na_mesma_faixa_nao_disparam():
+    """'a maioria' e 'grande parte' são raízes distintas dentro da mesma
+    faixa — usar as duas não é tique, é variação."""
+    b = _briefing_faixa_a_maioria()
+    texto = ("A maioria das notas (~60%) elogia. A maioria cita o ritmo, "
+             "e grande parte destaca a atuação.")
+    assert q.quantificadores_repetidos(texto, briefing=b) == []
+
+
+def test_raiz_nao_agrupa_ENTRE_faixas_diferentes():
+    """'boa parte' (faixa muitos) e 'uma parte' (faixa alguns) compartilham
+    a palavra 'parte', mas medem frequências DIFERENTES — agrupar entre
+    faixas apagaria a distinção que a faixa existe para preservar."""
+    b = {"movimento3": {"ordem": ["positivas", "negativas"]},
+         "grupos": {"positivas": {"rotulo_peso": "a maioria das notas (~60%)",
+                                  "temas": [{"tema": "t", "faixa": "muitos"}]},
+                    "negativas": {"rotulo_peso": "uma fração mínima das notas (~10%)",
+                                  "temas": [{"tema": "u", "faixa": "alguns"}]}}}
+    texto = ("A maioria das notas (~60%) elogia: boa parte cita o ritmo. "
+             "Uma fração mínima das notas (~10%) discorda: uma parte "
+             "reclama do roteiro.")
+    assert q.quantificadores_repetidos(texto, briefing=b) == []
+
+
+def test_todas_as_faixas_tem_pelo_menos_3_raizes_OU_estao_documentadas():
+    """O crítico da Entrega 2: agrupar por raiz não pode reduzir uma faixa
+    a ponto de o narrador ficar sem variação, sem que isso seja EXPLÍCITO.
+    `cerca de metade` é a exceção conhecida (limite estrutural do
+    português) — todas as outras têm de alcançar 3."""
+    from espectro24.briefing import FAIXAS_QUANTIFICADOR
+    excecoes = {"cerca de metade"}
+    for faixa, construcoes in FAIXAS_QUANTIFICADOR.items():
+        raizes = {q.RAIZ_POR_CONSTRUCAO.get(c, c) for c in construcoes}
+        if faixa in excecoes:
+            continue
+        assert len(raizes) >= 3, f"{faixa}: só {len(raizes)} raízes — {raizes}"
+
+
+def test_construcoes_novas_nao_colidem_com_nada_existente():
+    """As construções acrescentadas para resolver o crítico não podem
+    quebrar a invariante de disjunção da v1.9.9 (nenhuma é substring de
+    outra, em faixa nenhuma)."""
+    from espectro24.briefing import FAIXAS_QUANTIFICADOR
+    todas = [c for cs in FAIXAS_QUANTIFICADOR.values() for c in cs]
+    for a in todas:
+        for b in todas:
+            if a == b:
+                continue
+            assert a not in b, f"{a!r} é substring de {b!r}"

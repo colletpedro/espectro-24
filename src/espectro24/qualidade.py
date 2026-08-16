@@ -25,7 +25,7 @@ import re
 import unicodedata
 from pathlib import Path
 
-from .config import MAX_PALAVRAS_PARAGRAFO, QUANT_MAX_REPETICOES
+from .config import MAX_FRASES_MOVIMENTO1, MAX_PALAVRAS_PARAGRAFO, QUANT_MAX_REPETICOES
 
 RAIZ = Path(__file__).resolve().parent.parent.parent
 ARQ_BLOCKLIST = RAIZ / "dados" / "blocklist_resenha.txt"
@@ -134,17 +134,70 @@ def quantificadores_fora_de_faixa(texto: str, briefing: dict) -> list[str]:
                    if a["faixa"] not in permitidas})
 
 
+# [v1.9.13] Raiz de cada construção quantificadora, para agrupar a
+# repetição por SIGNIFICADO em vez de por string literal.
+#
+# Defeito medido em `joker-folie-a-deux`: "a maior parcela" e "a maior
+# parte" em parágrafos vizinhos — duas construções DIFERENTES da mesma
+# faixa (`a maioria`), então a checagem por string não via nada, mas o
+# efeito no leitor é o mesmo tique do quantificador, só que mais sutil.
+#
+# É TABELA explícita, não stemming algorítmico — mesma política de
+# `briefing.COMPARATIVOS_PESO`: a raiz é decisão de vocabulário, não
+# operação de string, e um stemmer genérico juntaria palavras que não
+# deveriam colidir (ex. "totalidade" e "todos" não são a mesma raiz aqui).
+#
+# **O agrupamento é sempre DENTRO da mesma faixa — nunca entre faixas.**
+# "boa parte" (`muitos`) e "uma parte" (`alguns`) compartilham a palavra
+# "parte", mas medem frequências DIFERENTES; agrupá-las apagaria a
+# distinção que a faixa existe para preservar. `quantificadores_repetidos`
+# usa `(faixa, raiz)` como chave, nunca só `raiz`.
+#
+# Construção sem entrada aqui usa A SI MESMA como raiz (nenhuma colisão) —
+# é o caso de toda construção que já é sozinha na própria faixa.
+RAIZ_POR_CONSTRUCAO = {
+    "a maior parte": "maior",
+    "a maior parcela": "maior",
+    "uma parte": "parte",
+    "parte deles": "parte",
+    "boa parte": "parte",
+    "cerca de metade": "metade",
+    "aproximadamente metade": "metade",
+    "perto da metade": "metade",
+    "metade deles": "metade",
+    "quase todos": "todos",
+    "praticamente todos": "todos",
+}
+
+
 def quantificadores_repetidos(texto: str, briefing: dict | None = None,
                               maximo: int = QUANT_MAX_REPETICOES
                               ) -> list[dict]:
-    """Construções usadas mais de `maximo` vezes — o TIQUE, medido.
+    """Construções usadas mais de `maximo` vezes, agrupadas por RAIZ dentro
+    da mesma faixa — o TIQUE, medido.
 
     A razão de esta checagem não existir antes é que a repetição não violava
     regra nenhuma: o briefing entregava a faixa como string única e mandava
     escrevê-la em cada tema. O texto obedecia.
+
+    [v1.9.13] Agrupar por RAIZ (não por string) pega o caso mais sutil:
+    duas construções DIFERENTES da mesma faixa, que juntas ainda são o
+    mesmo tique. `construcao` no retorno é a mais FREQUENTE do grupo — a
+    que o relatório mostra primeiro é a que mais se repetiu de fato.
     """
-    return [{"construcao": a["construcao"], "n": a["n"]}
-            for a in construcoes_no_texto(texto, briefing) if a["n"] > maximo]
+    achados = construcoes_no_texto(texto, briefing)
+    por_grupo: dict[tuple[str, str], list[dict]] = {}
+    for a in achados:
+        raiz = RAIZ_POR_CONSTRUCAO.get(a["construcao"], a["construcao"])
+        por_grupo.setdefault((a["faixa"], raiz), []).append(a)
+
+    saida = []
+    for (_, _), itens in por_grupo.items():
+        total = sum(item["n"] for item in itens)
+        if total > maximo:
+            principal = max(itens, key=lambda item: item["n"])
+            saida.append({"construcao": principal["construcao"], "n": total})
+    return saida
 
 
 def _paragrafos(texto: str) -> list[str]:
@@ -178,6 +231,51 @@ def problemas_de_paragrafo(texto: str, briefing: dict) -> dict:
               for i, p in enumerate(ps) if len(p.split()) > MAX_PALAVRAS_PARAGRAFO]
     return {"n_paragrafos": len(ps), "minimo": minimo,
             "insuficientes": len(ps) < minimo, "longos": longos}
+
+
+def _paragrafo_do_ano(texto: str, briefing: dict) -> int | None:
+    """Índice do parágrafo em que o `ano` da ficha aparece pela primeira
+    vez — a âncora do movimento 1, o número mais literal e garantido que a
+    ficha entrega."""
+    ficha = briefing.get("ficha")
+    if not ficha or not ficha.get("ano"):
+        return None
+    ano = str(ficha["ano"])
+    for i, p in enumerate(_paragrafos(texto)):
+        if re.search(rf"(?<!\d){re.escape(ano)}(?!\d)", p):
+            return i
+    return None
+
+
+def movimento1_e_movimento2_no_mesmo_paragrafo(texto: str, briefing: dict) -> bool:
+    """[v1.9.13] PROXY declarado: o parágrafo do movimento 1 (ancorado pelo
+    ano da ficha) carrega mais frases do que "diretor, gênero, ano,
+    premissa" costuma precisar — sinal de que o movimento 2 foi fundido
+    nele em vez de ganhar parágrafo próprio.
+
+    Medido em `cure` (v1.9.12): "A experiência do filme é conduzida por um
+    ritmo desacelerado..." — claramente movimento 2 — colada ao fim do
+    parágrafo de apresentação. O TOTAL de parágrafos do texto já passava no
+    mínimo (`problemas_de_paragrafo`); só a POSIÇÃO estava errada.
+
+    **Por que é proxy, não certeza.** Distinguir "movimento 2 omitido"
+    (autorizado desde a v1.4.1) de "movimento 2 escrito no parágrafo
+    errado" não é computável por posição — as duas produzem a MESMA
+    contagem de parágrafos entre a âncora do movimento 1 e o início do
+    movimento 3. A diferença só existe no CONTEÚDO da frase, e decidir se
+    uma frase é "sobre a experiência de assistir" é o mesmo casamento
+    semântico que a v1.9.9 já registrou fora do alcance do código. Contar
+    frases é o substituto mecânico: mais que `MAX_FRASES_MOVIMENTO1` é
+    sinal, não prova.
+    """
+    if not briefing.get("ficha"):
+        return False
+    par = _paragrafo_do_ano(texto, briefing)
+    if par is None:
+        return False
+    ps = _paragrafos(texto)
+    n_frases = len(re.split(r"(?<=[.!?])\s+", ps[par].strip()))
+    return n_frases > MAX_FRASES_MOVIMENTO1
 
 
 def paragrafos_por_grupo(texto: str, briefing: dict) -> dict[str, int | None]:
@@ -347,7 +445,12 @@ def numeros_inventados(texto: str, permitidos: set[str]) -> set[str]:
 # nenhuma — "em boa parte" já é a forma correta.
 _CONTRACOES_ARTIGO = {
     "a": ("na", "da", "à", "pela"),        # em/de/a/por + a
-    "uma": ("numa", "duma"),               # em/de + uma
+    # [v1.9.13] `duma` (em/de + uma) foi REMOVIDA — decisão do dono do
+    # projeto: gramaticalmente correta, mas soa arcaica em prosa escrita.
+    # Medido: apareceu em `the-invite-2026` (v1.9.12) como "duma fração
+    # ainda menor das notas (~2%)". `de uma` (não contraída) continua
+    # valendo — nunca precisou de autorização, é a forma-base.
+    "uma": ("numa",),                      # em + uma
 }
 
 
@@ -456,6 +559,7 @@ def verificar(texto: str, briefing: dict) -> dict:
     repetidos = quantificadores_repetidos(texto, briefing)
     par = problemas_de_paragrafo(texto, briefing)
     sem_paragrafo_proprio = grupos_sem_paragrafo_proprio(texto, briefing)
+    mov1_e_2_juntos = movimento1_e_movimento2_no_mesmo_paragrafo(texto, briefing)
     return {
         "quantificador_fora_de_faixa": fora_faixa,
         "quantificador_repetido": repetidos,
@@ -464,6 +568,7 @@ def verificar(texto: str, briefing: dict) -> dict:
         "paragrafos_insuficientes": par["insuficientes"],
         "paragrafos_longos": par["longos"],
         "grupos_sem_paragrafo_proprio": sem_paragrafo_proprio,
+        "movimento1_e_movimento2_no_mesmo_paragrafo": mov1_e_2_juntos,
         "formato_invalido": formato,
         "numeros_inventados": sorted(inventados),
         "rotulos_faltando": faltando,
@@ -475,5 +580,6 @@ def verificar(texto: str, briefing: dict) -> dict:
                     + int(ordem_ruim) + int(vocab)
                     + int(bool(fora_faixa)) + int(bool(repetidos))
                     + int(par["insuficientes"]) + int(bool(par["longos"]))
-                    + int(bool(sem_paragrafo_proprio))),
+                    + int(bool(sem_paragrafo_proprio))
+                    + int(mov1_e_2_juntos)),
     }

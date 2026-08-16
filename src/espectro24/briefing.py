@@ -207,13 +207,33 @@ def _fracao_pct(mencoes: int, n: int) -> int:
 # para que o valor histórico continue exprimível.
 FAIXAS_QUANTIFICADOR: dict[str, tuple[str, ...]] = {
     "poucos": ("poucos", "uma minoria", "um pequeno número", "raros"),
-    "alguns": ("alguns", "uma parte", "parte deles"),
+    # [v1.9.13] "uma fatia menor" acrescentada — sem ela, "uma parte" e
+    # "parte deles" colapsam na MESMA raiz ("parte") e a faixa fica com só
+    # 2 raízes distintas sob `qualidade.quantificadores_repetidos`, que
+    # passou a agrupar por raiz (ver o módulo). Raiz nova: "fatia".
+    "alguns": ("alguns", "uma parte", "parte deles", "uma fatia menor"),
     "muitos": ("muitos", "boa parte", "uma parcela expressiva", "vários",
                "um número considerável"),
+    # [v1.9.13] Nenhuma construção nova coube aqui sem reusar a raiz
+    # "metade" — é a única forma natural de dizer "~50%" em português.
+    # "meio a meio" foi acrescentada (raiz "meio") mas a faixa continua
+    # com só 2 raízes distintas — limite estrutural, registrado, não
+    # resolvido por engenharia (ver SPEC.md, "Fechamento de prosa").
     "cerca de metade": ("cerca de metade", "aproximadamente metade",
-                        "perto da metade", "metade deles"),
-    "a maioria": ("a maioria", "a maior parte", "a maior parcela"),
-    "quase todos": ("quase todos", "praticamente todos", "a quase totalidade"),
+                        "perto da metade", "metade deles", "meio a meio"),
+    # [v1.9.13] "grande parte" acrescentada — sem ela, "a maior parte" e
+    # "a maior parcela" colapsam na raiz "maior" e a faixa fica com 2
+    # raízes. Medido em `joker-folie-a-deux`: as duas construções antigas
+    # apareceram em parágrafos vizinhos, mesmo tique do quantificador em
+    # forma mais sutil. Raiz nova: "parte" (não colide com "a maior
+    # parte"/"boa parte" — string distinta, cada uma é uma unidade).
+    "a maioria": ("a maioria", "a maior parte", "a maior parcela",
+                 "grande parte"),
+    # [v1.9.13] "praticamente sem exceção" acrescentada — sem ela, "quase
+    # todos" e "praticamente todos" colapsam na raiz "todos" e a faixa
+    # fica com 2 raízes. Raiz nova: "exceção".
+    "quase todos": ("quase todos", "praticamente todos", "a quase totalidade",
+                    "praticamente sem exceção"),
 }
 
 
