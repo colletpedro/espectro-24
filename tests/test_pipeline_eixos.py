@@ -73,12 +73,16 @@ def test_bloco_carrega_a_telemetria_da_rotulagem(output):
 
 
 def test_sobreposicao_com_as_analisadas_entra_no_bloco(output):
+    """[v1.9.15] `n_classificadas` é a INTERSECÇÃO com `analisadas`, não o
+    total de linhas classificadas naquele bucket — do contrário, reviews
+    classificadas fora da seleção de produção inflariam o denominador (o bug
+    real achado ao unificar as duas populações, Entrega 1)."""
     analisadas = {"negativas": {f"v{i}" for i in range(20, 60)}}
     bloco = P.montar_eixos("filme-x", output, analisadas, consenso=_consenso(),
                            client_call=_cliente())
     fonte = bloco["fonte_classificacao"]["por_bucket"]["negativas"]
     assert (fonte["n_classificadas"], fonte["n_analisadas"],
-            fonte["sobreposicao_com_analisadas"]) == (40, 40, 20)
+            fonte["sobreposicao_com_analisadas"]) == (20, 40, 20)
 
 
 def test_ids_analisados_do_bruto_reproduz_a_selecao_de_producao():
