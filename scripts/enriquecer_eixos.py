@@ -32,7 +32,8 @@ sys.path.insert(0, str(RAIZ / "src"))
 from dotenv import load_dotenv  # noqa: E402
 
 from espectro24 import eixos as E  # noqa: E402
-from espectro24.pipeline import ids_analisados_do_bruto, montar_eixos  # noqa: E402
+from espectro24.bruto import janela_temporal  # noqa: E402
+from espectro24.pipeline import amostra_do_bruto, montar_eixos  # noqa: E402
 
 CATALOGO = ["the-invite-2026", "cure", "cidade-de-deus"]
 SAIDA = RAIZ / "resultado" / "v1914"
@@ -43,8 +44,18 @@ def enriquecer(slug: str, dry_run: bool = False) -> dict:
     caminho = RAIZ / "resultado" / f"{slug}.json"
     output = json.loads(caminho.read_text(encoding="utf-8"))
 
-    analisadas = ids_analisados_do_bruto(
-        slug, coleta=output.get("coleta"), raiz=str(RAIZ / "dados" / "bruto"))
+    amostra = amostra_do_bruto(slug, coleta=output.get("coleta"),
+                               raiz=str(RAIZ / "dados" / "bruto"))
+    analisadas = {b: {r.id for r in rs} for b, rs in amostra.items()}
+
+    # Entrega 6: a janela temporal da AMOSTRA ANALISADA, por bucket. Calculada
+    # aqui pela mesma função pura do pipeline, sobre as mesmas reviews que a
+    # seleção devolve — não é dado novo de coleta, é leitura do bruto.
+    for b in output.get("buckets", []):
+        rs = amostra.get(b.get("bucket"))
+        if rs is not None:
+            b["janela_amostra"] = janela_temporal(rs)
+
     bloco = montar_eixos(slug, output, analisadas)
     if bloco is None:
         print(f"  {slug}: SEM classificação sob a taxonomia corrente — pulado.")

@@ -100,6 +100,12 @@ def build_output(slug: str, buckets: list[BucketResult], data_coleta: str,
                 # `janela_temporal` (bloco global `coleta`) para o proxy
                 # SECUNDÁRIO por `data`, contaminado por data assistida.
                 "distribuicao_pagina_origem": b.distribuicao_pagina_origem,
+                # v1.9.14 (Entrega 6): a janela das reviews ANALISADAS deste
+                # bucket. Vai ao lado do DENOMINADOR DA AMOSTRA na interface,
+                # nunca ao lado do rótulo de peso — o peso vem do histograma
+                # de NOTAS, que acumula desde 2012, e carimbar nele uma janela
+                # de semanas inverteria o sentido (§[E]).
+                "janela_amostra": b.janela_amostra,
                 "niveis": [lvl.metadata() for lvl in b.niveis],
                 "temas": [
                     {

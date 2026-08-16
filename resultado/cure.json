@@ -523,7 +523,15 @@
       ],
       "observacao_geral": "As reviews negativas apontam que o filme é extremamente lento e entediante, com uma trama que promete muito mas entrega pouco, terminando de forma insatisfatória. Muitos espectadores se sentiram confusos e desconectados dos personagens, embora reconheçam a qualidade visual da obra.",
       "idioma_invalido": false,
-      "escopo_suspeito": false
+      "escopo_suspeito": false,
+      "janela_amostra": {
+        "n": 40,
+        "min": "2024-05-27",
+        "max": "2026-08-07",
+        "p5": "2026-05-29",
+        "p50": "2026-07-10",
+        "p95": "2026-08-05"
+      }
     },
     {
       "bucket": "medianas",
@@ -655,7 +663,15 @@
       ],
       "observacao_geral": "As reviews medianas apontam uma recepção mista: há reconhecimento da qualidade técnica e da atmosfera, mas o ritmo lento e a ambiguidade geram frustração. Muitos espectadores sentem que o filme não atendeu às altas expectativas criadas pela sua reputação.",
       "idioma_invalido": false,
-      "escopo_suspeito": false
+      "escopo_suspeito": false,
+      "janela_amostra": {
+        "n": 40,
+        "min": "2026-04-25",
+        "max": "2026-08-07",
+        "p5": "2026-07-16",
+        "p50": "2026-07-31",
+        "p95": "2026-08-06"
+      }
     },
     {
       "bucket": "positivas",
@@ -833,7 +849,15 @@
       ],
       "observacao_geral": "As reviews positivas destacam o filme como uma obra-prima do terror psicológico, elogiando sua atmosfera única, a atuação do antagonista e a profundidade temática. Muitos mencionam a necessidade de revisões para captar todas as camadas, mas consideram a experiência hipnótica e perturbadora.",
       "idioma_invalido": false,
-      "escopo_suspeito": false
+      "escopo_suspeito": false,
+      "janela_amostra": {
+        "n": 40,
+        "min": "2026-07-25",
+        "max": "2026-08-07",
+        "p5": "2026-07-27",
+        "p50": "2026-08-06",
+        "p95": "2026-08-07"
+      }
     }
   ],
   "narrativa": "Lançado em 1997 e dirigido por Kiyoshi Kurosawa, A Cura é uma produção que combina elementos de suspense policial, terror psicológico e mistério. A narrativa acompanha um detetive envolvido na apuração de uma série de mortes enigmáticas marcadas por incisões peculiares, cujos desdobramentos ganham novos contornos a partir do interrogatório de uma figura ligada aos acontecimentos.\n\nA estrutura da obra se desenvolve através de uma progressão lenta e calculada, ancorada em silêncios prolongados e em uma ambientação densa e contínua. A composição visual prioriza planos longos e uma atmosfera sóbria ao longo das sequências.\n\nNa grande maioria das notas (~90%), a maior parte valoriza a atmosfera opressiva e a condução da direção ao construir tensão constante. Uma parcela expressiva ressalta o magnetismo inquietante da atuação do antagonista, enquanto vários apontam a densidade das reflexões psicológicas e filosóficas suscitadas pela obra.\n\nPara a leitura presente numa fração mínima das notas (~8%), muitos apontam que o andamento cadenciado da narrativa torna a exibição cansativa. Nesse mesmo grupo, parte deles relata frustração diante das elevadas expectativas prévias sobre o longa-metragem, e uma fatia menor manifesta incômodo com a ambiguidade e a indefinição do final aberto.\n\nJá sob a perspectiva adotada numa fração ainda menor das notas (~2%), a maior parcela reclama de um ritmo excessivamente arrastado que prejudica o envolvimento. Além disso, um número considerável critica a falta de um clímax recompensador para a trama, ao passo que boa parte observa que os personagens são pouco cativantes e geram distanciamento emocional.",

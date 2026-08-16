@@ -428,7 +428,15 @@
       ],
       "observacao_geral": "As reviews negativas apontam que o filme é extremamente lento e entediante, com uma trama que promete muito mas entrega pouco, terminando de forma insatisfatória. Muitos espectadores se sentiram confusos e desconectados dos personagens, embora reconheçam a qualidade visual da obra.",
       "idioma_invalido": false,
-      "escopo_suspeito": false
+      "escopo_suspeito": false,
+      "janela_amostra": {
+        "n": 40,
+        "min": "2024-05-27",
+        "max": "2026-08-07",
+        "p5": "2026-05-29",
+        "p50": "2026-07-10",
+        "p95": "2026-08-05"
+      }
     },
     {
       "bucket": "medianas",
@@ -560,7 +568,15 @@
       ],
       "observacao_geral": "As reviews medianas apontam uma recepção mista: há reconhecimento da qualidade técnica e da atmosfera, mas o ritmo lento e a ambiguidade geram frustração. Muitos espectadores sentem que o filme não atendeu às altas expectativas criadas pela sua reputação.",
       "idioma_invalido": false,
-      "escopo_suspeito": false
+      "escopo_suspeito": false,
+      "janela_amostra": {
+        "n": 40,
+        "min": "2026-04-25",
+        "max": "2026-08-07",
+        "p5": "2026-07-16",
+        "p50": "2026-07-31",
+        "p95": "2026-08-06"
+      }
     },
     {
       "bucket": "positivas",
@@ -738,7 +754,15 @@
       ],
       "observacao_geral": "As reviews positivas destacam o filme como uma obra-prima do terror psicológico, elogiando sua atmosfera única, a atuação do antagonista e a profundidade temática. Muitos mencionam a necessidade de revisões para captar todas as camadas, mas consideram a experiência hipnótica e perturbadora.",
       "idioma_invalido": false,
-      "escopo_suspeito": false
+      "escopo_suspeito": false,
+      "janela_amostra": {
+        "n": 40,
+        "min": "2026-07-25",
+        "max": "2026-08-07",
+        "p5": "2026-07-27",
+        "p50": "2026-08-06",
+        "p95": "2026-08-07"
+      }
     }
   ],
   "narrativa": "Lançado em 1997 e dirigido por Kiyoshi Kurosawa, A Cura é uma produção que combina elementos de suspense policial, terror psicológico e mistério. A narrativa acompanha um detetive envolvido na apuração de uma série de mortes enigmáticas marcadas por incisões peculiares, cujos desdobramentos ganham novos contornos a partir do interrogatório de uma figura ligada aos acontecimentos.\n\nA estrutura da obra se desenvolve através de uma progressão lenta e calculada, ancorada em silêncios prolongados e em uma ambientação densa e contínua. A composição visual prioriza planos longos e uma atmosfera sóbria ao longo das sequências.\n\nNa grande maioria das notas (~90%), a maior parte valoriza a atmosfera opressiva e a condução da direção ao construir tensão constante. Uma parcela expressiva ressalta o magnetismo inquietante da atuação do antagonista, enquanto vários apontam a densidade das reflexões psicológicas e filosóficas suscitadas pela obra.\n\nPara a leitura presente numa fração mínima das notas (~8%), muitos apontam que o andamento cadenciado da narrativa torna a exibição cansativa. Nesse mesmo grupo, parte deles relata frustração diante das elevadas expectativas prévias sobre o longa-metragem, e uma fatia menor manifesta incômodo com a ambiguidade e a indefinição do final aberto.\n\nJá sob a perspectiva adotada numa fração ainda menor das notas (~2%), a maior parcela reclama de um ritmo excessivamente arrastado que prejudica o envolvimento. Além disso, um número considerável critica a falta de um clímax recompensador para a trama, ao passo que boa parte observa que os personagens são pouco cativantes e geram distanciamento emocional.",
@@ -810,5 +834,416 @@
       "cache_miss_tokens": 9246
     },
     "latencia_s": 21.47
+  },
+  "eixos": {
+    "taxonomia_id": "ebab2667de74",
+    "margem_lift_pp": 20,
+    "contraste": "tematico",
+    "fonte_classificacao": {
+      "arquivo": "resultado/votacao-3/consenso.jsonl",
+      "criterio": "votacao_3_consenso_2_de_3",
+      "por_bucket": {
+        "negativas": {
+          "n_classificadas": 40,
+          "n_analisadas": 40,
+          "sobreposicao_com_analisadas": 27
+        },
+        "medianas": {
+          "n_classificadas": 40,
+          "n_analisadas": 40,
+          "sobreposicao_com_analisadas": 25
+        },
+        "positivas": {
+          "n_classificadas": 40,
+          "n_analisadas": 40,
+          "sobreposicao_com_analisadas": 23
+        }
+      }
+    },
+    "linhas": [
+      {
+        "eixo": "ritmo",
+        "por_bucket": {
+          "negativas": {
+            "mencoes": 23,
+            "de_n": 40,
+            "freq_pct": 57.5,
+            "lift_pp": 20.0,
+            "tema": "Ritmo lento e arrastado",
+            "exemplo_parafraseado": "O filme se arrasta demais, com cenas longas e monótonas que fazem o tempo passar muito devagar, levando ao tédio e à sonolência.",
+            "temas_no_mesmo_eixo": []
+          },
+          "medianas": {
+            "mencoes": 15,
+            "de_n": 40,
+            "freq_pct": 37.5,
+            "lift_pp": -20.0,
+            "tema": "Ritmo lento",
+            "exemplo_parafraseado": "Várias pessoas comentaram que o filme tem um ritmo muito lento, com longas cenas sem diálogo, o que chegou a provocar sono durante a exibição.",
+            "temas_no_mesmo_eixo": []
+          },
+          "positivas": {
+            "mencoes": 11,
+            "de_n": 40,
+            "freq_pct": 27.5,
+            "lift_pp": -30.0,
+            "tema": "Ritmo e construção lenta",
+            "exemplo_parafraseado": "A narrativa se desenvolve de forma lenta e meticulosa, exigindo paciência, mas recompensando com uma imersão profunda.",
+            "temas_no_mesmo_eixo": []
+          }
+        },
+        "bullet_de": {
+          "negativas": null,
+          "medianas": null,
+          "positivas": null
+        }
+      },
+      {
+        "eixo": "atuacao",
+        "por_bucket": {
+          "negativas": {
+            "mencoes": 4,
+            "de_n": 40,
+            "freq_pct": 10.0,
+            "lift_pp": -10.0,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "medianas": {
+            "mencoes": 6,
+            "de_n": 40,
+            "freq_pct": 15.0,
+            "lift_pp": -5.0,
+            "tema": "Atuações boas, mas personagens sem profundidade",
+            "exemplo_parafraseado": "As atuações são consideradas boas, especialmente a do antagonista, porém alguns personagens, como a esposa do protagonista, são vistos como pouco desenvolvidos e usados apenas como recurso narrativo.",
+            "temas_no_mesmo_eixo": []
+          },
+          "positivas": {
+            "mencoes": 8,
+            "de_n": 40,
+            "freq_pct": 20.0,
+            "lift_pp": 5.0,
+            "tema": "Vilão e performance",
+            "exemplo_parafraseado": "O antagonista é fascinante e inquietante, com uma atuação que transmite uma calma perturbadora, elevando o filme.",
+            "temas_no_mesmo_eixo": []
+          }
+        },
+        "bullet_de": {
+          "negativas": null,
+          "medianas": null,
+          "positivas": null
+        }
+      },
+      {
+        "eixo": "direcao_imagem",
+        "por_bucket": {
+          "negativas": {
+            "mencoes": 10,
+            "de_n": 40,
+            "freq_pct": 25.0,
+            "lift_pp": -15.0,
+            "tema": "Fotografia bonita, mas insuficiente",
+            "exemplo_parafraseado": "A parte visual é elogiada, com belos enquadramentos e boa iluminação, mas isso não compensa os problemas de narrativa e ritmo.",
+            "temas_no_mesmo_eixo": []
+          },
+          "medianas": {
+            "mencoes": 16,
+            "de_n": 40,
+            "freq_pct": 40.0,
+            "lift_pp": 5.0,
+            "tema": "Atmosfera e fotografia elogiadas",
+            "exemplo_parafraseado": "A direção de arte e a fotografia são frequentemente elogiadas, com cenas que parecem quadros, e a atmosfera de inquietação é bem construída através do uso do silêncio e dos sons ambientes.",
+            "temas_no_mesmo_eixo": []
+          },
+          "positivas": {
+            "mencoes": 14,
+            "de_n": 40,
+            "freq_pct": 35.0,
+            "lift_pp": -5.0,
+            "tema": "Fotografia e composição",
+            "exemplo_parafraseado": "A fotografia é cuidadosamente composta, com enquadramentos que acentuam a distância e o isolamento dos personagens.",
+            "temas_no_mesmo_eixo": []
+          }
+        },
+        "bullet_de": {
+          "negativas": null,
+          "medianas": null,
+          "positivas": null
+        }
+      },
+      {
+        "eixo": "roteiro_estrutura",
+        "por_bucket": {
+          "negativas": {
+            "mencoes": 26,
+            "de_n": 40,
+            "freq_pct": 65.0,
+            "lift_pp": 7.5,
+            "tema": "Falta de clímax ou recompensa",
+            "exemplo_parafraseado": "A história constrói muita expectativa, mas termina sem respostas satisfatórias, deixando a sensação de que nada foi resolvido.",
+            "temas_no_mesmo_eixo": [
+              "Personagens pouco cativantes",
+              "Enredo confuso e sem objetividade",
+              "Diálogos fracos e repetitivos"
+            ]
+          },
+          "medianas": {
+            "mencoes": 23,
+            "de_n": 40,
+            "freq_pct": 57.5,
+            "lift_pp": -7.5,
+            "tema": "Ambiguidade e final aberto",
+            "exemplo_parafraseado": "A história deixa muitas perguntas sem resposta e o final é ambíguo, o que gera opiniões divididas: alguns apreciam, outros se sentem frustrados pela falta de explicações claras.",
+            "temas_no_mesmo_eixo": [
+              "História previsível ou sem inovação"
+            ]
+          },
+          "positivas": {
+            "mencoes": 23,
+            "de_n": 40,
+            "freq_pct": 57.5,
+            "lift_pp": -7.5,
+            "tema": "Roteiro e mistério",
+            "exemplo_parafraseado": "O roteiro é cheio de camadas e ambiguidades, estimulando múltiplas interpretações e reflexões.",
+            "temas_no_mesmo_eixo": []
+          }
+        },
+        "bullet_de": {
+          "negativas": "frequencia",
+          "medianas": "frequencia",
+          "positivas": null
+        }
+      },
+      {
+        "eixo": "som_trilha",
+        "por_bucket": {
+          "negativas": {
+            "mencoes": 6,
+            "de_n": 40,
+            "freq_pct": 15.0,
+            "lift_pp": 5.0,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "medianas": {
+            "mencoes": 4,
+            "de_n": 40,
+            "freq_pct": 10.0,
+            "lift_pp": -5.0,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "positivas": {
+            "mencoes": 3,
+            "de_n": 40,
+            "freq_pct": 7.5,
+            "lift_pp": -7.5,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          }
+        },
+        "bullet_de": {
+          "negativas": null,
+          "medianas": null,
+          "positivas": null
+        }
+      },
+      {
+        "eixo": "tom_atmosfera",
+        "por_bucket": {
+          "negativas": {
+            "mencoes": 6,
+            "de_n": 40,
+            "freq_pct": 15.0,
+            "lift_pp": -47.5,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "medianas": {
+            "mencoes": 9,
+            "de_n": 40,
+            "freq_pct": 22.5,
+            "lift_pp": -40.0,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "positivas": {
+            "mencoes": 25,
+            "de_n": 40,
+            "freq_pct": 62.5,
+            "lift_pp": 40.0,
+            "tema": "Atmosfera e direção",
+            "exemplo_parafraseado": "A atmosfera opressiva e o uso de silêncio e planos longos criam uma sensação constante de desconforto, sem depender de sustos.",
+            "temas_no_mesmo_eixo": []
+          }
+        },
+        "bullet_de": {
+          "negativas": null,
+          "medianas": null,
+          "positivas": "frequencia_e_contraste"
+        }
+      },
+      {
+        "eixo": "impacto_emocional",
+        "por_bucket": {
+          "negativas": {
+            "mencoes": 31,
+            "de_n": 40,
+            "freq_pct": 77.5,
+            "lift_pp": 0.0,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "medianas": {
+            "mencoes": 31,
+            "de_n": 40,
+            "freq_pct": 77.5,
+            "lift_pp": 0.0,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "positivas": {
+            "mencoes": 25,
+            "de_n": 40,
+            "freq_pct": 62.5,
+            "lift_pp": -15.0,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          }
+        },
+        "bullet_de": {
+          "negativas": "frequencia",
+          "medianas": "frequencia",
+          "positivas": "frequencia"
+        }
+      },
+      {
+        "eixo": "comparacoes",
+        "por_bucket": {
+          "negativas": {
+            "mencoes": 13,
+            "de_n": 40,
+            "freq_pct": 32.5,
+            "lift_pp": 2.5,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "medianas": {
+            "mencoes": 6,
+            "de_n": 40,
+            "freq_pct": 15.0,
+            "lift_pp": -17.5,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "positivas": {
+            "mencoes": 12,
+            "de_n": 40,
+            "freq_pct": 30.0,
+            "lift_pp": -2.5,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          }
+        },
+        "bullet_de": {
+          "negativas": null,
+          "medianas": null,
+          "positivas": null
+        }
+      },
+      {
+        "eixo": "expectativa",
+        "por_bucket": {
+          "negativas": {
+            "mencoes": 11,
+            "de_n": 40,
+            "freq_pct": 27.5,
+            "lift_pp": 5.0,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "medianas": {
+            "mencoes": 9,
+            "de_n": 40,
+            "freq_pct": 22.5,
+            "lift_pp": -5.0,
+            "tema": "Expectativa alta frustrada",
+            "exemplo_parafraseado": "Muitos espectadores criaram muita expectativa devido à fama do filme e às recomendações, mas acabaram se decepcionando, pois não corresponderam ao que imaginavam.",
+            "temas_no_mesmo_eixo": []
+          },
+          "positivas": {
+            "mencoes": 3,
+            "de_n": 40,
+            "freq_pct": 7.5,
+            "lift_pp": -20.0,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          }
+        },
+        "bullet_de": {
+          "negativas": null,
+          "medianas": null,
+          "positivas": null
+        }
+      },
+      {
+        "eixo": "critica_social",
+        "por_bucket": {
+          "negativas": {
+            "mencoes": 12,
+            "de_n": 40,
+            "freq_pct": 30.0,
+            "lift_pp": 7.5,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "medianas": {
+            "mencoes": 5,
+            "de_n": 40,
+            "freq_pct": 12.5,
+            "lift_pp": -17.5,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "positivas": {
+            "mencoes": 9,
+            "de_n": 40,
+            "freq_pct": 22.5,
+            "lift_pp": -7.5,
+            "tema": "Temas psicológicos e filosóficos",
+            "exemplo_parafraseado": "O filme explora a natureza do mal e os impulsos reprimidos, sugerindo que qualquer pessoa pode ser levada a cometer atos terríveis.",
+            "temas_no_mesmo_eixo": []
+          }
+        },
+        "bullet_de": {
+          "negativas": null,
+          "medianas": null,
+          "positivas": null
+        }
+      }
+    ],
+    "rotulagem": {
+      "n_chamadas": 3,
+      "falharam": [],
+      "fora_da_taxonomia": {},
+      "houve_retentativa": []
+    },
+    "spec_version": "1.9.14"
   }
 }

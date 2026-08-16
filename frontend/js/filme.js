@@ -12,6 +12,29 @@
   var DATA = window.ESPECTRO_DATA || { filmes: {} };
   var app = document.getElementById("app");
 
+  // v1.9.14: rótulos dos 10 eixos (§2.5). O JSON carrega o identificador
+  // técnico; a tela mostra português. Lista FECHADA — eixo desconhecido cai
+  // no próprio identificador em vez de sumir da tabela.
+  var EIXO_LABEL = {
+    ritmo: "Ritmo", atuacao: "Atuação", direcao_imagem: "Direção e imagem",
+    roteiro_estrutura: "Roteiro e estrutura", som_trilha: "Som e trilha",
+    tom_atmosfera: "Tom e atmosfera", impacto_emocional: "Impacto emocional",
+    comparacoes: "Comparações", expectativa: "Expectativa",
+    critica_social: "Crítica social",
+  };
+
+  // Permissões do piso escalonado (§3[C3]) — as MESMAS quatro do backend.
+  // A linha do eixo acompanha o que cada bucket pode dizer, célula a célula.
+  var PISO = {
+    completa:          { temas: true,  numero: true },
+    sem_quantificador: { temas: true,  numero: true },
+    sem_numero:        { temas: true,  numero: false },
+    sem_analise:       { temas: false, numero: false },
+  };
+
+  var MESES = ["janeiro", "fevereiro", "março", "abril", "maio", "junho",
+               "julho", "agosto", "setembro", "outubro", "novembro", "dezembro"];
+
   var GRUPO_META = {
     negativas: { label: "Negativas", color: "var(--neg)", cap: "quem não gostou" },
     medianas:  { label: "Medianas",  color: "var(--med)", cap: "quem ficou no meio" },
@@ -41,6 +64,11 @@
     if (f.ficha) app.appendChild(fichaBlock(f.ficha));
     if (f.narrativa) app.appendChild(narrativaBlock(f.narrativa));
     app.appendChild(detailDivider(f));
+    // v1.9.14: os três grupos ALINHADOS POR EIXO — a promessa estrutural do
+    // produto. Vem antes das listas por grupo: é a leitura comparativa, e as
+    // listas abaixo seguem servindo o detalhe (exemplo, avisos, observação).
+    var eixos = eixosBlock(f);
+    if (eixos) app.appendChild(eixos);
     (f.buckets || []).forEach(function (b) { app.appendChild(groupBlock(b, f)); });
     // micro-pesquisa (A/B) — módulo separado
     if (window.mountSurvey) window.mountSurvey(app, f);
@@ -157,6 +185,222 @@
     return el;
   }
 
+
+  // =====================================================================
+  // v1.9.14 — OS TRÊS GRUPOS ALINHADOS POR EIXO (§[E])
+  //
+  // A promessa estrutural do produto: com eixo fixo, os três buckets ficam
+  // comparáveis célula a célula, em vez de três listas soltas que o leitor
+  // precisa reconciliar de cabeça.
+  //
+  // Quatro estados, e NENHUM deles é ausência de conteúdo:
+  //   1. eixo que um grupo não menciona → célula marcada como vazia;
+  //   2. `contraste: valorativo` → o alinhamento existe, nenhuma linha tem
+  //      contraste, e a área ganha enunciado próprio (22 dos 35 filmes do
+  //      catálogo caem aqui — se parecer bug, o estado não está desenhado);
+  //   3. piso escalonado → a linha acompanha o que AQUELE grupo pode dizer;
+  //   4. filme sem bloco `eixos` → esta seção não existe e a página cai na
+  //      lista de temas de sempre.
+  // =====================================================================
+  function eixosBlock(f) {
+    var e = f.eixos;
+    if (!e || !e.linhas || !e.linhas.length) return null;   // estado 4
+
+    var buckets = (f.buckets || []).map(function (b) { return b.bucket; });
+    var piso = {};
+    (f.buckets || []).forEach(function (b) {
+      piso[b.bucket] = PISO[b.estado_piso] || PISO.completa;
+    });
+
+    var valorativo = e.contraste === "valorativo";
+    var el = document.createElement("section");
+    el.className = "section eixos";
+    el.setAttribute("data-contraste", e.contraste || "");
+    el.setAttribute("aria-labelledby", "eixosLabel");
+    el.innerHTML =
+      '<h2 class="section-label" id="eixosLabel">Eixo a eixo · os três grupos lado a lado</h2>';
+
+    el.appendChild(contrasteBox(e, valorativo));
+
+    // As linhas exibidas são as que viraram BULLET em algum grupo (§2.5:
+    // 2 de frequência + 3 de contraste, por grupo). As demais ficam atrás
+    // do "ver todos os eixos" — presentes, não escondidas.
+    var destaque = e.linhas.filter(function (l) { return temBullet(l); });
+    var resto = e.linhas.filter(function (l) { return !temBullet(l); });
+
+    el.appendChild(gradeCabecalho(buckets));
+    destaque.forEach(function (l) { el.appendChild(linhaEixo(l, buckets, piso)); });
+
+    if (resto.length) {
+      var det = document.createElement("details");
+      det.className = "eixos__resto";
+      var sum = document.createElement("summary");
+      sum.textContent = "ver os outros " + resto.length + " eixos";
+      det.appendChild(sum);
+      resto.forEach(function (l) { det.appendChild(linhaEixo(l, buckets, piso)); });
+      el.appendChild(det);
+    }
+
+    el.appendChild(denominadorNota(e));
+    return el;
+  }
+
+  function temBullet(linha) {
+    var b = linha.bullet_de || {};
+    return Object.keys(b).some(function (k) { return !!b[k]; });
+  }
+
+  // O enunciado do estado `contraste` — PRIMEIRA CLASSE, nunca uma ausência.
+  function contrasteBox(e, valorativo) {
+    var el = document.createElement("p");
+    el.className = "eixos__contraste";
+    el.textContent = valorativo
+      ? "Os três grupos falam das mesmas coisas — e discordam sobre se elas "
+        + "funcionam. Nenhum assunto separa os grupos aqui: a divergência é "
+        + "de veredito, não de tema."
+      : "Há assunto que separa os grupos: as linhas marcadas como contraste "
+        + "são faladas por um grupo muito mais que pelos outros.";
+    return el;
+  }
+
+  function gradeCabecalho(buckets) {
+    var el = document.createElement("div");
+    el.className = "eixos__head";
+    el.setAttribute("aria-hidden", "true");
+    el.appendChild(document.createElement("span"));   // coluna do rótulo
+    buckets.forEach(function (nome) {
+      var meta = GRUPO_META[nome] || { label: nome, color: "var(--text)" };
+      var c = document.createElement("span");
+      c.className = "eixos__head-cell";
+      c.style.color = meta.color;
+      c.textContent = meta.label.toUpperCase();
+      el.appendChild(c);
+    });
+    return el;
+  }
+
+  function linhaEixo(linha, buckets, piso) {
+    var el = document.createElement("div");
+    el.className = "eixos__row";
+    el.setAttribute("data-eixo", linha.eixo);
+
+    var nome = document.createElement("div");
+    nome.className = "eixos__axis";
+    nome.textContent = EIXO_LABEL[linha.eixo] || linha.eixo;
+
+    // O selo de contraste é por GRUPO, e vai na célula daquele grupo — pôr
+    // no rótulo da linha diria que a linha inteira é contraste, quando o
+    // contraste é sempre de UM grupo contra os outros dois.
+    el.appendChild(nome);
+
+    buckets.forEach(function (bucket) {
+      el.appendChild(celula(linha, bucket, piso[bucket] || PISO.completa));
+    });
+    return el;
+  }
+
+  function celula(linha, bucket, permissao) {
+    var cel = document.createElement("div");
+    cel.className = "eixos__cell";
+    cel.setAttribute("data-group", bucket);
+
+    var dados = (linha.por_bucket || {})[bucket];
+
+    // Estado 3 — piso escalonado: grupo sem análise temática não tem célula.
+    if (!dados || !permissao.temas) {
+      cel.classList.add("is-empty");
+      cel.innerHTML = '<span class="eixos__none">sem análise</span>';
+      return cel;
+    }
+    // Estado 1 — o grupo simplesmente não fala deste eixo.
+    if (!dados.mencoes) {
+      cel.classList.add("is-empty");
+      cel.innerHTML = '<span class="eixos__none">não menciona</span>';
+      return cel;
+    }
+
+    var papel = (linha.bullet_de || {})[bucket];
+    if (papel && papel !== "frequencia") {
+      var selo = document.createElement("span");
+      selo.className = "eixos__badge";
+      selo.textContent = "só este grupo";
+      selo.title = "Lift de " + fmtPP(dados.lift_pp) + " sobre o grupo "
+                 + "seguinte — acima da margem de contraste.";
+      cel.appendChild(selo);
+    }
+
+    if (dados.tema) {
+      var t = document.createElement("span");
+      t.className = "eixos__tema";
+      t.textContent = dados.tema;
+      cel.appendChild(t);
+    }
+
+    // O NÚMERO: sempre "X de N", nunca percentual solto — e omitido quando
+    // o piso do grupo não permite citar número (§3[C3]).
+    if (permissao.numero) {
+      var freq = document.createElement("span");
+      freq.className = "eixos__freq";
+      freq.textContent = dados.mencoes + " de " + dados.de_n;
+      cel.appendChild(freq);
+      var bar = document.createElement("span");
+      bar.className = "eixos__bar";
+      bar.setAttribute("role", "img");
+      bar.setAttribute("aria-label",
+        "Mencionado em " + dados.mencoes + " de " + dados.de_n
+        + " reviews classificadas");
+      var fill = document.createElement("span");
+      fill.style.width = (dados.de_n
+        ? Math.max(0, Math.min(100, (dados.mencoes / dados.de_n) * 100)) : 0)
+        .toFixed(1) + "%";
+      bar.appendChild(fill);
+      cel.appendChild(bar);
+    } else {
+      var av = document.createElement("span");
+      av.className = "eixos__freq is-muted";
+      av.textContent = "amostra pequena demais para número";
+      cel.appendChild(av);
+    }
+
+    // Temas do MESMO grupo que caíram neste eixo e não ficaram com a célula
+    // (§D3). Aparecem porque a alternativa é o leitor perder tema: com 6
+    // temas e 10 eixos a colisão é frequente.
+    var outros = dados.temas_no_mesmo_eixo || [];
+    if (outros.length) {
+      var mais = document.createElement("span");
+      mais.className = "eixos__mais";
+      mais.textContent = "+ " + outros.join(" · ");
+      cel.appendChild(mais);
+    }
+    return cel;
+  }
+
+  // O denominador desta tabela NÃO é o do cabeçalho do grupo. São duas
+  // amostras de 40 diferentes (§[D3], "Duas populações de 40"), e apresentá-las
+  // com o mesmo rótulo repetiria o defeito que a declaração da janela
+  // temporal fecha do outro lado.
+  function denominadorNota(e) {
+    var el = document.createElement("p");
+    el.className = "disclaimer eixos__nota";
+    var fonte = (e.fonte_classificacao || {}).por_bucket || {};
+    var sobre = Object.keys(fonte).map(function (b) {
+      return (GRUPO_META[b] ? GRUPO_META[b].label.toLowerCase() : b) + " "
+        + fonte[b].sobreposicao_com_analisadas + "/" + fonte[b].n_classificadas;
+    });
+    el.textContent =
+      "Os números desta tabela contam reviews CLASSIFICADAS por eixo — uma "
+      + "amostra do mesmo grupo, do mesmo tamanho, mas não exatamente as "
+      + "mesmas reviews que a lista abaixo resume"
+      + (sobre.length ? " (em comum: " + sobre.join(", ") + ")" : "")
+      + ". Contraste com margem de " + (e.margem_lift_pp || 20)
+      + " pontos percentuais.";
+    return el;
+  }
+
+  function fmtPP(v) {
+    return (typeof v === "number" ? v.toFixed(1).replace(".", ",") : "?") + "pp";
+  }
+
   // --- grupo ---
   function groupBlock(b, f) {
     var meta = GRUPO_META[b.bucket] || { label: b.bucket, color: "var(--text)" };
@@ -195,6 +439,19 @@
     }
     head.appendChild(count);
     el.appendChild(head);
+
+    // v1.9.14 (Entrega 6): a JANELA da amostra vem logo abaixo do
+    // DENOMINADOR ("40 de 40 analisadas"), nunca ao lado do "~X% das notas".
+    // O peso vem do histograma de NOTAS, que acumula desde 2012; carimbar
+    // nele uma janela de semanas diria que as notas todas são recentes. São
+    // duas populações, e a linha separada é o que impede a leitura errada.
+    var janela = janelaTexto(b.janela_amostra);
+    if (janela) {
+      var jl = document.createElement("p");
+      jl.className = "group__janela";
+      jl.textContent = janela;
+      el.appendChild(jl);
+    }
 
     // avisos de modo degradado — SEMPRE visíveis
     if (b.modo === "reduzido") {
@@ -239,6 +496,33 @@
 
     if (b.observacao_geral) el.appendChild(obsBlock(b.observacao_geral));
     return el;
+  }
+
+  // A janela sai dos QUANTIS (p5-p95), nunca de min/max nem de média: `data`
+  // é a data ASSISTIDA (diário de quem escreveu), e um único registro
+  // atrasado domina os extremos — em `cure`/negativas o `min` é 2024 contra
+  // uma p5 de maio de 2026, e há review datada de 1442 no catálogo. A média
+  // seria mais lisonjeira (janela "mais ampla") e menos verdadeira.
+  function mesAno(iso) {
+    var p = String(iso || "").split("-");
+    if (p.length < 2) return null;
+    var m = MESES[parseInt(p[1], 10) - 1];
+    return m ? { mes: m, ano: p[0] } : null;
+  }
+
+  function janelaTexto(j) {
+    if (!j || !j.p5 || !j.p95) return null;
+    var a = mesAno(j.p5), b = mesAno(j.p95);
+    if (!a || !b) return null;
+    var quando;
+    if (a.mes === b.mes && a.ano === b.ano) {
+      quando = "em " + a.mes + " de " + a.ano;
+    } else if (a.ano === b.ano) {
+      quando = "entre " + a.mes + " e " + b.mes + " de " + a.ano;
+    } else {
+      quando = "entre " + a.mes + " de " + a.ano + " e " + b.mes + " de " + b.ano;
+    }
+    return "escritas majoritariamente " + quando;
   }
 
   function themeRow(t, bucket, idx) {

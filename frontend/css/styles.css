@@ -608,3 +608,145 @@ a { color: inherit; }
 @media (prefers-reduced-motion: reduce) {
   * { transition: none !important; animation: none !important; }
 }
+
+/* ===================================================================
+   v1.9.14 — EIXO A EIXO: os três grupos ALINHADOS POR LINHA (§[E])
+   A promessa estrutural do produto. Em telas largas, três colunas
+   comparáveis; abaixo de 640px as células empilham COM o rótulo do
+   grupo, porque sem ele o alinhamento por linha perde o sentido.
+   =================================================================== */
+.eixos { margin-top: 26px; }
+
+.eixos__contraste {
+  font-size: 0.95rem;
+  line-height: 1.55;
+  color: var(--text-dim);
+  border-left: 2px solid var(--border);
+  padding-left: 14px;
+  margin: 0 0 20px;
+}
+/* `contraste: valorativo` é 63% do catálogo — estado de PRIMEIRA CLASSE,
+   com marca própria, nunca a ausência de linhas de contraste. */
+.eixos[data-contraste="valorativo"] .eixos__contraste {
+  border-left-color: var(--med);
+  color: var(--text);
+}
+
+.eixos__head,
+.eixos__row {
+  display: grid;
+  grid-template-columns: 128px repeat(3, 1fr);
+  gap: 14px;
+  align-items: start;
+}
+.eixos__head {
+  padding-bottom: 8px;
+  border-bottom: 1px solid var(--border-soft);
+  margin-bottom: 4px;
+}
+.eixos__head-cell {
+  font-family: var(--mono);
+  font-size: 0.64rem;
+  letter-spacing: 0.14em;
+}
+.eixos__row { padding: 14px 0; border-bottom: 1px solid var(--border-soft); }
+.eixos__row:last-child { border-bottom: none; }
+
+.eixos__axis {
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: var(--text);
+  padding-top: 2px;
+}
+
+.eixos__cell { display: flex; flex-direction: column; gap: 5px; min-width: 0; }
+.eixos__cell.is-empty { justify-content: center; }
+
+.eixos__none {
+  font-family: var(--mono);
+  font-size: 0.68rem;
+  color: var(--text-mute);
+  opacity: 0.65;
+}
+.eixos__tema { font-size: 0.88rem; line-height: 1.35; color: var(--text-dim); }
+.eixos__freq {
+  font-family: var(--mono);
+  font-size: 0.7rem;
+  color: var(--text-mute);
+}
+.eixos__freq.is-muted { font-style: italic; }
+.eixos__mais { font-size: 0.72rem; color: var(--text-mute); line-height: 1.3; }
+
+.eixos__bar {
+  display: block; height: 3px; border-radius: 2px;
+  background: var(--border); overflow: hidden;
+}
+.eixos__bar span { display: block; height: 100%; border-radius: 2px; }
+.eixos__cell[data-group="negativas"] .eixos__bar span { background: var(--neg); }
+.eixos__cell[data-group="medianas"]  .eixos__bar span { background: var(--med); }
+.eixos__cell[data-group="positivas"] .eixos__bar span { background: var(--pos); }
+
+/* selo de contraste — por CÉLULA, não por linha: o contraste é sempre de UM
+   grupo contra os outros dois. */
+.eixos__badge {
+  align-self: flex-start;
+  font-family: var(--mono);
+  font-size: 0.6rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  padding: 2px 7px;
+  border-radius: 999px;
+  border: 1px solid var(--border);
+  color: var(--text-dim);
+}
+.eixos__cell[data-group="negativas"] .eixos__badge { border-color: var(--neg); color: var(--neg); }
+.eixos__cell[data-group="medianas"]  .eixos__badge { border-color: var(--med); color: var(--med); }
+.eixos__cell[data-group="positivas"] .eixos__badge { border-color: var(--pos); color: var(--pos); }
+
+.eixos__resto { margin-top: 6px; }
+.eixos__resto summary {
+  font-family: var(--mono);
+  font-size: 0.7rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--text-mute);
+  cursor: pointer;
+  padding: 12px 0;
+}
+.eixos__resto summary:hover { color: var(--text-dim); }
+.eixos__nota { margin-top: 16px; }
+
+@media (max-width: 640px) {
+  .eixos__head { display: none; }
+  .eixos__row { grid-template-columns: 1fr; gap: 10px; }
+  .eixos__axis {
+    font-family: var(--mono);
+    font-size: 0.7rem;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--text-dim);
+  }
+  /* empilhado, cada célula precisa dizer de QUEM ela é */
+  .eixos__cell::before {
+    content: attr(data-group);
+    font-family: var(--mono);
+    font-size: 0.6rem;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--text-mute);
+  }
+  .eixos__cell[data-group="negativas"]::before { color: var(--neg); }
+  .eixos__cell[data-group="medianas"]::before  { color: var(--med); }
+  .eixos__cell[data-group="positivas"]::before { color: var(--pos); }
+}
+
+/* v1.9.14 — janela temporal da amostra: linha PRÓPRIA, logo abaixo do
+   denominador do grupo. Fora do header de propósito — colada ao "~X% das
+   notas" ela seria lida como se descrevesse o histograma, que acumula desde
+   2012 (§[E], "Janela temporal declarada"). */
+.group__janela {
+  font-family: var(--mono);
+  font-size: 0.68rem;
+  color: var(--text-mute);
+  margin: 2px 0 0;
+}

@@ -503,7 +503,15 @@
       ],
       "observacao_geral": "As reviews negativas concentram-se em apontar o roteiro fraco, a atuação exagerada da diretora e protagonista, e a falta de humor e ritmo. O grupo também critica a trilha sonora intrusiva e a abordagem artificial e moralista das relações, além de personagens pouco cativantes.",
       "idioma_invalido": false,
-      "escopo_suspeito": false
+      "escopo_suspeito": false,
+      "janela_amostra": {
+        "n": 40,
+        "min": "2026-06-05",
+        "max": "2026-08-06",
+        "p5": "2026-06-18",
+        "p50": "2026-08-04",
+        "p95": "2026-08-06"
+      }
     },
     {
       "bucket": "medianas",
@@ -635,7 +643,15 @@
       ],
       "observacao_geral": "As reviews medianas reconhecem o esforço da diretora e o talento do elenco, mas apontam problemas de ritmo, previsibilidade e falta de profundidade nos personagens. É um filme que divide opiniões: alguns o consideram uma comédia eficaz, outros o acham superficial e redundante.",
       "idioma_invalido": false,
-      "escopo_suspeito": false
+      "escopo_suspeito": false,
+      "janela_amostra": {
+        "n": 40,
+        "min": "2026-01-24",
+        "max": "2026-08-15",
+        "p5": "2026-01-30",
+        "p50": "2026-08-06",
+        "p95": "2026-08-15"
+      }
     },
     {
       "bucket": "positivas",
@@ -813,7 +829,15 @@
       ],
       "observacao_geral": "As reviews positivas celebram o filme como uma comédia dramática bem dirigida e atuada, destacando o equilíbrio entre humor e tensão, além da abordagem sincera sobre relacionamentos. O grupo valoriza especialmente a ambientação intimista e as performances do elenco principal.",
       "idioma_invalido": false,
-      "escopo_suspeito": false
+      "escopo_suspeito": false,
+      "janela_amostra": {
+        "n": 40,
+        "min": "2026-01-24",
+        "max": "2026-08-07",
+        "p5": "2026-01-24",
+        "p50": "2026-08-06",
+        "p95": "2026-08-07"
+      }
     }
   ],
   "narrativa": "Dirigido por Olivia Wilde e lançado em 2026, O Convite é uma comédia dramática focada em Joe e Angela, um casal que vive uma crise conjugal. Quando decidem convidar os enigmáticos vizinhos do andar de cima para um jantar, a noite toma rumos inesperados.\n\nA experiência estrutura-se a partir de um encontro em ambientação intimista, com características que remetem ao formato de peça teatral centrado em quatro personagens. A condução apoia-se no desenvolvimento dos diálogos e na exposição de tensões e conflitos de relacionamento ao longo da reunião.\n\nNa grande maioria das notas (~91%), a maior parte exalta as atuações excepcionais do elenco principal durante as interações. Além disso, boa parte destaca a presença de humor ácido e situações constrangedoras, enquanto uma parcela expressiva elogia a direção precisa e a escolha pelo estilo visual de peça teatral.\n\nNuma fração mínima das notas (~7%), para quem está nessa faixa, muitos apontam oscilações no ritmo e na estrutura narrativa. Nesse mesmo grupo, alguns reconhecem aspectos positivos nas atuações do elenco principal, e uma parte reflete sobre a abordagem dos conflitos de relacionamento e comunicação.\n\nPor fim, numa fração ainda menor das notas (~2%), sob a ótica desse segmento, vários apontam que a produção traz um roteiro superficial e sem profundidade. Além dessa queixa, um número considerável critica a atuação exagerada de Olivia Wilde, enquanto parte deles lamenta a falta de humor e o ritmo arrastado da obra.",

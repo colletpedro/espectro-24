@@ -173,6 +173,10 @@ def montar_buckets(selecao, superset=None) -> list[BucketResult]:
             deficit_redistribuido=sel.deficit_redistribuido,
             distribuicao_pagina_origem=distribuicao_pagina_origem(
                 amostra, orcamento_por_nivel),
+            # v1.9.14 (Entrega 6): a MESMA função pura que já calcula a janela
+            # do bruto (§3[B']), aplicada à amostra SELECIONADA. Uma função,
+            # duas populações declaradas — nunca duas fórmulas de janela.
+            janela_amostra=janela_temporal(amostra),
         ))
     return buckets
 
@@ -430,6 +434,21 @@ def ids_analisados_do_bruto(slug: str, coleta: dict | None = None,
 
     Zero rede: lê o bruto persistido, como toda re-seleção offline.
     """
+    return {nome: {r.id for r in reviews}
+            for nome, reviews in amostra_do_bruto(
+                slug, coleta=coleta, raiz=raiz,
+                cota_por_bucket=cota_por_bucket).items()}
+
+
+def amostra_do_bruto(slug: str, coleta: dict | None = None,
+                     raiz: str | Path = DADOS_BRUTO_DIR,
+                     cota_por_bucket: int = COTA_POR_BUCKET
+                     ) -> dict[str, list]:
+    """`{bucket: [ReviewBruta]}` — a amostra que a síntese leria, do disco.
+
+    Reusa `selecionar` com os MESMOS parâmetros do pipeline, `orcamento_
+    paginas_por_nivel` incluído. Zero rede.
+    """
     meta, todas = carregar(slug, raiz=raiz)
     meta = meta or {}
     coleta = coleta or meta
@@ -438,7 +457,7 @@ def ids_analisados_do_bruto(slug: str, coleta: dict | None = None,
            for k, v in (coleta.get("orcamento_paginas_por_nivel") or {}).items()}
     sel = selecionar(todas, hist or None, cota_por_bucket=cota_por_bucket,
                      orcamento_paginas_por_nivel=orc)
-    return {nome: {r.id for ns in b.niveis.values() for r in ns.validas}
+    return {nome: [r for ns in b.niveis.values() for r in ns.validas]
             for nome, b in sel.items()}
 
 

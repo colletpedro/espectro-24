@@ -45,8 +45,8 @@ def _filme_degradado():
         "ficha": None,  # exercita o caminho sem ficha
         "buckets": [
             {
-                "bucket": "negativas", "alvo": 50, "modo": "reduzido",
-                "n_validas": 7,
+                "bucket": "negativas", "alvo": 40, "modo": "reduzido",
+                "estado_piso": "sem_numero", "n_validas": 7,
                 "niveis": [
                     _nivel(0.5, 2, 5, 50), _nivel(1.0, 2, 6, 150),
                     _nivel(1.5, 1, 3, 0), _nivel(2.0, 1, 2, 150),
@@ -68,16 +68,16 @@ def _filme_degradado():
                 "idioma_invalido": False, "escopo_suspeito": False,
             },
             {
-                "bucket": "medianas", "alvo": 20, "modo": "sem_analise",
-                "n_validas": 2,
+                "bucket": "medianas", "alvo": 40, "modo": "sem_analise",
+                "estado_piso": "sem_analise", "n_validas": 2,
                 "niveis": [_nivel(3.0, 1, 2, 150), _nivel(3.5, 1, 1, 0)],
                 "temas": [],
                 "observacao_geral": "Bucket sem análise temática: apenas 2 review(s) válida(s) (piso é 3).",
                 "idioma_invalido": False, "escopo_suspeito": False,
             },
             {
-                "bucket": "positivas", "alvo": 30, "modo": "completo",
-                "n_validas": 30,
+                "bucket": "positivas", "alvo": 40, "modo": "completo",
+                "estado_piso": "completa", "n_validas": 30,
                 "niveis": [_nivel(4.0, 10, 14, 150), _nivel(4.5, 10, 13, 150),
                            _nivel(5.0, 10, 12, 150)],
                 "temas": [
@@ -109,6 +109,45 @@ def _filme_degradado():
             "consenso_suspeito": False, "aspas_removidas": False, "falhou": False,
         },
         "consensos_usados": [],
+        # v1.9.14: o bloco de eixos do filme sintético existe para exercitar
+        # os estados que os 3 filmes REAIS não têm. É o único lugar onde
+        # `sem_numero` (célula com tema e sem número), `sem_analise` (coluna
+        # indisponível) e célula VAZIA (eixo que o grupo não menciona)
+        # aparecem lado a lado com uma célula normal.
+        "eixos": {
+            "taxonomia_id": "ebab2667de74", "margem_lift_pp": 20,
+            "contraste": "tematico", "spec_version": "1.9.14",
+            "fonte_classificacao": {
+                "arquivo": "resultado/votacao-3/consenso.jsonl",
+                "criterio": "votacao_3_consenso_2_de_3",
+                "por_bucket": {
+                    "negativas": {"n_classificadas": 7, "n_analisadas": 7,
+                                  "sobreposicao_com_analisadas": 5},
+                    "medianas": {"n_classificadas": 2, "n_analisadas": 2,
+                                 "sobreposicao_com_analisadas": 2},
+                    "positivas": {"n_classificadas": 30, "n_analisadas": 30,
+                                  "sobreposicao_com_analisadas": 22}}},
+            "linhas": [
+                {"eixo": "ritmo", "por_bucket": {
+                    "negativas": {"mencoes": 5, "de_n": 7, "freq_pct": 71.4, "lift_pp": 51.4, "tema": "Ritmo arrastado", "exemplo_parafraseado": "", "temas_no_mesmo_eixo": []},
+                    "medianas": {"mencoes": 1, "de_n": 2, "freq_pct": 50.0, "lift_pp": 30.0, "tema": None, "exemplo_parafraseado": None, "temas_no_mesmo_eixo": []},
+                    "positivas": {"mencoes": 6, "de_n": 30, "freq_pct": 20.0, "lift_pp": -51.4, "tema": None, "exemplo_parafraseado": None, "temas_no_mesmo_eixo": []}},
+                 "bullet_de": {"negativas": "frequencia_e_contraste",
+                               "medianas": None, "positivas": None}},
+                {"eixo": "som_trilha", "por_bucket": {
+                    "negativas": {"mencoes": 0, "de_n": 7, "freq_pct": 0.0, "lift_pp": -30.0, "tema": None, "exemplo_parafraseado": None, "temas_no_mesmo_eixo": []},
+                    "medianas": {"mencoes": 0, "de_n": 2, "freq_pct": 0.0, "lift_pp": -30.0, "tema": None, "exemplo_parafraseado": None, "temas_no_mesmo_eixo": []},
+                    "positivas": {"mencoes": 9, "de_n": 30, "freq_pct": 30.0, "lift_pp": 30.0, "tema": "Trilha marcante", "exemplo_parafraseado": "", "temas_no_mesmo_eixo": []}},
+                 "bullet_de": {"negativas": None, "medianas": None,
+                               "positivas": "frequencia_e_contraste"}},
+                {"eixo": "tom_atmosfera", "por_bucket": {
+                    "negativas": {"mencoes": 3, "de_n": 7, "freq_pct": 42.9, "lift_pp": -17.1, "tema": "Roteiro raso", "exemplo_parafraseado": "", "temas_no_mesmo_eixo": []},
+                    "medianas": {"mencoes": 1, "de_n": 2, "freq_pct": 50.0, "lift_pp": -10.0, "tema": None, "exemplo_parafraseado": None, "temas_no_mesmo_eixo": []},
+                    "positivas": {"mencoes": 18, "de_n": 30, "freq_pct": 60.0, "lift_pp": 10.0, "tema": "Atmosfera envolvente", "exemplo_parafraseado": "", "temas_no_mesmo_eixo": []}},
+                 "bullet_de": {"negativas": "frequencia", "medianas": None,
+                               "positivas": "frequencia"}}],
+            "rotulagem": {"n_chamadas": 2, "falharam": [],
+                          "fora_da_taxonomia": {}, "houve_retentativa": []}},
         "_oculto_do_catalogo": True,
     }
 

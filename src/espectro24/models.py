@@ -300,6 +300,13 @@ class BucketResult:
     # data ASSISTIDA) sobre a amostra SELECIONADA deste bucket.
     # `{n, min, max, p5, p50, p95, fracao_profunda}` ou `None`.
     distribuicao_pagina_origem: dict | None = None
+    # v1.9.14 (Entrega 6): janela temporal DA AMOSTRA ANALISADA deste bucket
+    # — `{n, min, max, p5, p50, p95}` sobre as reviews que a síntese leu.
+    # Distinta de `coleta.janela_temporal`, que cobre o BRUTO (678 reviews em
+    # `cure` contra 40 aqui): exibir aquela ao lado de "40 de 40 analisadas"
+    # trocaria uma confusão de populações por outra. `None` quando nenhuma
+    # review selecionada tem data.
+    janela_amostra: dict | None = None
     temas: list[Tema] = field(default_factory=list)
     observacao_geral: str = ""
     # v1.1.2: rede de segurança pós-parsing (§D) — telemetria, não correção

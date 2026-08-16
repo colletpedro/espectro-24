@@ -1,6 +1,12 @@
 /* Espectro 24 — home.js
-   Monta os cards do catálogo a partir de window.ESPECTRO_DATA e liga o
-   comportamento da busca estética (mensagem suave, sem lógica de filtro). */
+   Monta os cards do catálogo a partir de window.ESPECTRO_DATA e liga a BUSCA.
+
+   v1.9.14: a busca deixou de ser decorativa. Até aqui ela exibia "Busca em
+   breve" e o catálogo inteiro seguia abaixo, sem filtrar nada — não havia
+   critério de filtro que não fosse o título. Com a taxonomia fechada de 10
+   eixos (§2.5) passa a haver: o leitor procura "ritmo" e recebe os filmes
+   cujos grupos falam de ritmo. Filtra por TÍTULO e por EIXO, sobre o dado já
+   embutido, sem uma requisição de rede. */
 (function () {
   "use strict";
 
@@ -15,6 +21,41 @@
       s.style.background = c;
       brand.appendChild(s);
     });
+  }
+
+  // Rótulos dos eixos — a mesma lista fechada de filme.js. Duplicada aqui
+  // (e não importada) porque os dois scripts são independentes e carregados
+  // em páginas diferentes; a lista é FECHADA e versionada pelo taxonomia_id,
+  // então a divergência seria visível no primeiro filme classificado.
+  var EIXO_LABEL = {
+    ritmo: "ritmo", atuacao: "atuação", direcao_imagem: "direção e imagem",
+    roteiro_estrutura: "roteiro e estrutura", som_trilha: "som e trilha",
+    tom_atmosfera: "tom e atmosfera", impacto_emocional: "impacto emocional",
+    comparacoes: "comparações", expectativa: "expectativa",
+    critica_social: "crítica social",
+  };
+
+  // O que cada filme responde na busca: título + os eixos EM DESTAQUE, com
+  // acento removido para que "atuacao" e "atuação" achem a mesma coisa.
+  //
+  // Só os eixos que viraram BULLET (§2.5: 2 de frequência + 3 de contraste
+  // por grupo), nunca os 10. Medido nos 3 filmes do catálogo: todos os 10
+  // eixos aparecem em todos os 3, então casar com a linha inteira devolveria
+  // o catálogo completo para qualquer eixo — um filtro que não filtra é o
+  // mesmo defeito da busca decorativa, com outra roupa.
+  function chavesDe(f) {
+    var termos = [(f.ficha && f.ficha.titulo) || "", f.slug];
+    ((f.eixos && f.eixos.linhas) || []).forEach(function (l) {
+      var papeis = l.bullet_de || {};
+      var destaque = Object.keys(papeis).some(function (b) { return !!papeis[b]; });
+      if (destaque) termos.push(l.eixo, EIXO_LABEL[l.eixo] || "");
+    });
+    return termos.map(norm).filter(Boolean);
+  }
+
+  function norm(s) {
+    return String(s).toLowerCase()
+      .normalize("NFD").replace(/[\u0300-\u036f]/g, "");
   }
 
   // --- cards do catálogo ---
@@ -56,25 +97,40 @@
 
     a.appendChild(body);
     a.appendChild(arrow);
+    a.dataset.busca = chavesDe(f).join(" | ");
     cards.appendChild(a);
   });
 
-  // --- busca estética: nunca parece quebrada ---
+  // --- busca REAL: título ou eixo ---
   var input = document.getElementById("search");
   var hint = document.getElementById("searchHint");
-  var MSG = "Busca em breve — 3 análises disponíveis abaixo";
-  function showHint() {
-    hint.textContent = MSG;
+  var todos = [].slice.call(cards.children);
+
+  function filtrar() {
+    var q = norm(input.value.trim());
+    if (!q) {
+      todos.forEach(function (el) { el.hidden = false; });
+      hint.classList.remove("is-visible");
+      hint.textContent = "";
+      return;
+    }
+    var n = 0;
+    todos.forEach(function (el) {
+      var casa = el.dataset.busca.indexOf(q) !== -1;
+      el.hidden = !casa;
+      if (casa) n++;
+    });
+    // A mensagem diz o que NÃO casou, em vez de fingir que a funcionalidade
+    // não existe — era esse o defeito do "Busca em breve".
+    hint.textContent = n
+      ? n + (n === 1 ? " filme encontrado" : " filmes encontrados")
+      : "Nada com \u201C" + input.value.trim() + "\u201D — a busca cobre o "
+        + "título e os eixos em destaque de cada análise.";
     hint.classList.add("is-visible");
   }
-  function maybeHide() {
-    if (!input.value) {
-      hint.classList.remove("is-visible");
-    }
-  }
-  input.addEventListener("focus", showHint);
-  input.addEventListener("input", showHint);
-  input.addEventListener("blur", maybeHide);
+
+  input.addEventListener("input", filtrar);
+  input.addEventListener("focus", function () { if (input.value) filtrar(); });
 
   function esc(s) {
     return String(s).replace(/[&<>"]/g, function (c) {

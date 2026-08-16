@@ -91,9 +91,9 @@ que publicar sem validação nenhuma.
 
 | tema (o que a síntese escreveu) | eixo atribuído | freq. do eixo |
 |---|---|---|
+| Técnica impressionante, mas distanciamento emocional | `direcao_imagem` | 15/40 |
 | Narrativa episódica e difícil de seguir | `roteiro_estrutura` | 26/40 |
-| Excesso de violência | `tom_atmosfera` | 8/40 |
-| Técnica impressionante, mas distanciamento emocional | `impacto_emocional` | 33/40 |
+| Excesso de violência | `impacto_emocional` | 33/40 |
 | Comparações com outros filmes de gangster | `comparacoes` | 14/40 |
 | Retrato realista da vida na favela | `critica_social` | 19/40 |
 
