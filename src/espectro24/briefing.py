@@ -239,17 +239,99 @@ def _quantificador(pct: int) -> str:
     return "poucos"
 
 
-def _rotulo_peso(pct: int) -> str:
-    for rotulo, lo in (("a grande maioria", 70), ("a maioria", 50),
-                       ("boa parte", 30), ("uma parcela", 15),
-                       ("uma fração mínima", 0)):
+_FAIXAS_PESO = (("a grande maioria", 70), ("a maioria", 50),
+                ("boa parte", 30), ("uma parcela", 15),
+                ("uma fração mínima", 0))
+
+# [v1.9.12] Formas COMPARATIVAS por faixa, para quando dois ou três grupos
+# caem na mesma. Índice 0 é a forma base (quem tem o maior percentual da
+# faixa); 1 e 2 são para o segundo e o terceiro.
+#
+# Defeito medido em `joker-folie-a-deux` (46/33/21): dois parágrafos
+# seguidos do movimento 3 abrindo com "Em boa parte das notas", e o leitor
+# tendo de comparar os percentuais entre parênteses para saber que são
+# grupos diferentes — exatamente a aritmética que o rótulo verbal existe
+# para poupar. Varrido o catálogo: 23 de 35 filmes (66%) têm ao menos dois
+# grupos com rótulo idêntico.
+#
+# É TABELA, não operação de string, pela mesma razão de todo vocabulário
+# deste projeto: a forma de cada faixa é escolha de língua, e uma regra
+# genérica produziria "uma fração mínima menor", que não é português.
+#
+# Três formas por faixa porque três grupos CABEM numa faixa só (34/33/33
+# em `boa parte`, ou 14/13/13 em `uma fração mínima`) — com duas, dois
+# deles voltariam a colidir.
+COMPARATIVOS_PESO = {
+    "a grande maioria": ("a grande maioria", "uma maioria menor",
+                         "uma maioria ainda menor"),
+    "a maioria": ("a maioria", "uma maioria menor", "uma maioria ainda menor"),
+    "boa parte": ("boa parte", "uma parte menor", "uma parte ainda menor"),
+    "uma parcela": ("uma parcela", "uma parcela menor",
+                    "uma parcela ainda menor"),
+    "uma fração mínima": ("uma fração mínima", "uma fração ainda menor",
+                          "uma fração ainda mais discreta"),
+}
+
+
+def _faixa_peso(pct: int) -> str:
+    for rotulo, lo in _FAIXAS_PESO:
         if pct >= lo:
             return rotulo
     return "uma fração mínima"
 
 
+def _rotulo_peso(pct: int) -> str:
+    """A faixa de `pct`, sem olhar vizinho. Continua existindo porque é a
+    escala publicada — mas o BRIEFING usa `rotulos_peso`, que resolve
+    colisão. Usar esta função para carimbar um grupo reintroduz o defeito."""
+    return _faixa_peso(pct)
+
+
 def _rotulo_peso_completo(pct: int) -> str:
-    return f"{_rotulo_peso(pct)} das notas (~{pct}%)"
+    return f"{_faixa_peso(pct)} das notas (~{pct}%)"
+
+
+def rotulos_peso(shares: dict[str, int]) -> dict[str, str]:
+    """O rótulo de peso de CADA grupo, resolvido em conjunto.
+
+    Substitui `_rotulo_peso_completo(pct)` no briefing (v1.9.12). Um rótulo
+    calculado a partir de um percentual só não tem como saber que o vizinho
+    caiu na mesma faixa — e é exatamente isso que acontece em 66% do
+    catálogo.
+
+    Regra: dentro de cada faixa, o grupo de MAIOR percentual mantém a forma
+    base; os demais recebem a forma comparativa da faixa, na ordem
+    decrescente. Como a ordem de apresentação do movimento 3 também é
+    decrescente, o comparativo sempre lê contra o grupo imediatamente
+    anterior no texto.
+
+    **A verdade do comparativo é condição, não estilo.** Grupos com
+    percentual IGUAL na mesma faixa mantêm o MESMO rótulo: dizer "menor"
+    para quem tem o mesmo peso seria falso, e a coincidência de rótulo é
+    honesta quando os pesos coincidem de verdade.
+
+    Se uma faixa reunir mais grupos do que há formas na tabela (impossível
+    com 3 buckets, mas o código não depende disso), os excedentes repetem a
+    última forma — nunca inventam uma.
+    """
+    por_faixa: dict[str, list[str]] = {}
+    for grupo, pct in shares.items():
+        por_faixa.setdefault(_faixa_peso(pct), []).append(grupo)
+
+    saida: dict[str, str] = {}
+    for faixa, grupos in por_faixa.items():
+        formas = COMPARATIVOS_PESO[faixa]
+        # decrescente por percentual; empate pelo nome, para ser estável
+        ordenados = sorted(grupos, key=lambda g: (-shares[g], g))
+        posicao = 0
+        for i, grupo in enumerate(ordenados):
+            # empate de percentual NÃO avança a posição: a forma comparativa
+            # afirmaria algo falso.
+            if i > 0 and shares[grupo] < shares[ordenados[i - 1]]:
+                posicao += 1
+            forma = formas[min(posicao, len(formas) - 1)]
+            saida[grupo] = f"{forma} das notas (~{shares[grupo]}%)"
+    return saida
 
 
 def _marcacao_perspectiva(pct: int, dominante: int | None) -> str:
@@ -349,6 +431,10 @@ def montar_briefing(output: dict, max_temas_por_grupo: int = MAX_TEMAS_POR_GRUPO
     """
     shares = _shares(output)
     dominante = max(shares.values()) if shares else None
+    # v1.9.12: os três rótulos são resolvidos EM CONJUNTO — um rótulo
+    # calculado a partir de um percentual só não enxerga que o vizinho caiu
+    # na mesma faixa (66% do catálogo).
+    rotulos = rotulos_peso(shares)
 
     grupos: dict[str, dict] = {}
     for b in output.get("buckets", []):
@@ -370,7 +456,7 @@ def montar_briefing(output: dict, max_temas_por_grupo: int = MAX_TEMAS_POR_GRUPO
         if nome in shares:
             pct = shares[nome]
             g["share_pct"] = pct
-            g["rotulo_peso"] = _rotulo_peso_completo(pct)
+            g["rotulo_peso"] = rotulos[nome]
             g["marcacao_perspectiva"] = _marcacao_perspectiva(pct, dominante)
         else:
             g["marcacao_perspectiva"] = "nenhuma"

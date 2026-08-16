@@ -258,5 +258,7 @@
       "dias_por_100_paginas": 400.0,
       "paginas_para_1_ano": 91
     }
-  }
+  },
+  "ano_lancamento": 2009,
+  "ano_fonte": "slug"
 }

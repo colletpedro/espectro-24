@@ -287,5 +287,7 @@
       "dias_por_100_paginas": 100.0,
       "paginas_para_1_ano": 365
     }
-  }
+  },
+  "ano_lancamento": 2024,
+  "ano_fonte": "letterboxd"
 }

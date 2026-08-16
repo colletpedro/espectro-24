@@ -211,5 +211,7 @@
       "dias_por_100_paginas": 13800.0,
       "paginas_para_1_ano": 3
     }
-  }
+  },
+  "ano_lancamento": 2026,
+  "ano_fonte": "slug"
 }

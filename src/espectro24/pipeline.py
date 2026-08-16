@@ -46,6 +46,7 @@ from .profundidade import (
     sondar_profundidade,
 )
 from .fetcher import Fetcher
+from .ficha import meta_com_ano
 from .models import BucketResult, LevelResult, SearchResult
 from .parser import parse_search_results
 from .selecao import selecionar
@@ -338,6 +339,19 @@ def collect_all_levels(fetcher: Fetcher, slug: str,
     # precisa (§2.3) passa a ser calculado NA COLETA, não em análise ad-hoc.
     superset.meta["dias_por_100_paginas"] = atualizar_dias_por_100_paginas(
         slug, raiz=dados_dir)
+    # v1.9.12 (§3[B']): o ANO do filme passa a ser dado do superset. Sem
+    # ele, um slug sem sufixo de ano só resolve a ficha COM REDE — e uma
+    # execução offline perde o movimento 1 em silêncio (medido em
+    # `joker-folie-a-deux`; 21 dos 35 slugs do catálogo estão nessa
+    # situação). Idempotente: já gravado, não custa requisição.
+    superset.meta = meta_com_ano(superset.meta, fetcher, slug)
+    # `atualizar_meta` (e não `persistir`) pelo mesmo motivo de
+    # `janela_temporal` logo acima: isto é um passo POSTERIOR à persistência
+    # do lote e não tem por que reescrever `reviews.jsonl`.
+    if superset.meta.get("ano_lancamento"):
+        atualizar_meta(slug, {
+            "ano_lancamento": superset.meta["ano_lancamento"],
+            "ano_fonte": superset.meta["ano_fonte"]}, raiz=dados_dir)
     return superset, distrib
 
 

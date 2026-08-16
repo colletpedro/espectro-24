@@ -77,6 +77,73 @@ def resolver_ano_letterboxd(fetcher, slug: str) -> int | None:
     return None
 
 
+def _ano_do_bruto(meta_bruto: dict | None) -> int | None:
+    """O ano gravado no `meta.json` do superset, se houver e for utilizável.
+
+    Tolerante de propósito: bruto coletado ANTES da v1.9.12 não tem a chave,
+    e um valor inválido (0, "", None, texto) tem de degradar para o caminho
+    antigo em vez de estourar — o ano é aditivo, como toda a ficha.
+    """
+    if not meta_bruto:
+        return None
+    try:
+        ano = int(meta_bruto.get("ano_lancamento") or 0)
+    except (TypeError, ValueError):
+        return None
+    return ano or None
+
+
+def resolver_ano(fetcher, slug: str, *, ano_explicito: int | None = None,
+                 meta_bruto: dict | None = None) -> tuple[int | None, str | None]:
+    """`(ano, fonte)` do filme, na ordem de precedência da v1.9.12.
+
+    `--ano` explícito → **bruto** → sufixo do slug → Letterboxd (rede) →
+    `(None, None)`.
+
+    **O degrau do BRUTO é a correção desta versão.** Defeito medido em
+    `joker-folie-a-deux`: slug sem ano + `--offline` ⇒ o fallback de rede
+    não roda ⇒ a guarda da v1.7.0 recusa a ficha sem ano (corretamente) ⇒ o
+    movimento 1 é omitido e a narrativa nunca diz que filme é — em
+    silêncio. 21 dos 35 slugs do catálogo não têm ano no nome.
+
+    O ano é dado ESTÁVEL, buscado uma vez; guardá-lo no superset é a mesma
+    lógica que já vale para o histograma (§3[B']: "qualquer reprocessamento
+    custa zero rede"). `fetcher=None` é aceito — a rede é o ÚLTIMO recurso,
+    não um pré-requisito para os degraus anteriores.
+    """
+    if ano_explicito is not None:
+        return ano_explicito, "argumento"
+    do_bruto = _ano_do_bruto(meta_bruto)
+    if do_bruto is not None:
+        return do_bruto, "bruto"
+    _, do_slug = titulo_ano_de_slug(slug)
+    if do_slug is not None:
+        return do_slug, "slug"
+    if fetcher is None:
+        return None, None
+    da_rede = resolver_ano_letterboxd(fetcher, slug)
+    return (da_rede, "letterboxd") if da_rede is not None else (None, None)
+
+
+def meta_com_ano(meta: dict, fetcher, slug: str) -> dict:
+    """`meta` do superset com `ano_lancamento`/`ano_fonte` gravados.
+
+    Gancho de coleta (§3[B']). IDEMPOTENTE: recoletar um filme que já tem o
+    ano não gasta requisição nenhuma.
+
+    **Ausência não é gravada.** Um `ano_lancamento: null` no meta seria lido
+    pela próxima execução como "já tentei, não existe", e ela não tentaria
+    de novo — a chave simplesmente não entra quando não resolve, e a
+    execução seguinte COM rede completa o dado.
+    """
+    if _ano_do_bruto(meta) is not None:
+        return meta
+    ano, fonte = resolver_ano(fetcher, slug, meta_bruto=meta)
+    if ano is None:
+        return meta
+    return {**meta, "ano_lancamento": ano, "ano_fonte": fonte}
+
+
 def _cache_key(titulo: str, ano: int | None) -> str:
     chave = re.sub(r"[^a-z0-9]+", "_", titulo.lower()).strip("_")
     return f"{chave}_{ano}" if ano else chave

@@ -509,3 +509,102 @@ def test_prompt_autoriza_contrair_sem_afrouxar_numero_nem_notas():
     assert "contra" in p.lower()
     # a invariante segue escrita: número e "das notas" continuam intocáveis
     assert "das notas" in p
+
+
+# ============================================================ v1.9.12
+# Entrega 2 — rótulo de peso COMPARATIVO quando dois grupos colidem
+#
+# Medido em `joker-folie-a-deux` (46/33/21): dois parágrafos seguidos do
+# movimento 3 abrindo com "Em boa parte das notas". Varrido o catálogo: 23
+# de 35 filmes (66%) têm ao menos dois grupos com rótulo IDÊNTICO. O
+# problema não é a largura das faixas (2% e 8% caem juntos em qualquer
+# granularidade razoável) — é o rótulo ser calculado sem olhar os vizinhos.
+# ============================================================
+
+def test_sem_colisao_os_rotulos_sao_os_de_sempre():
+    """Regressão: onde não há colisão, nada muda."""
+    r = br.rotulos_peso({"positivas": 80, "medianas": 15, "negativas": 5})
+    assert r == {"positivas": "a grande maioria das notas (~80%)",
+                 "medianas": "uma parcela das notas (~15%)",
+                 "negativas": "uma fração mínima das notas (~5%)"}
+
+
+def test_colisao_o_maior_mantem_a_base_e_o_menor_recebe_comparativo():
+    """O caso medido em `joker-folie-a-deux`."""
+    r = br.rotulos_peso({"negativas": 46, "medianas": 33, "positivas": 21})
+    assert r["negativas"] == "boa parte das notas (~46%)"
+    assert r["medianas"] == "uma parte menor das notas (~33%)"
+    assert r["positivas"] == "uma parcela das notas (~21%)"
+
+
+def test_colisao_do_filme_aclamado_o_caso_dominante_do_catalogo():
+    """21 dos 23 filmes em colisão são deste formato: `positivas` acima de
+    80% empurra os outros dois para baixo de 15%."""
+    r = br.rotulos_peso({"positivas": 90, "medianas": 8, "negativas": 2})
+    assert r["positivas"] == "a grande maioria das notas (~90%)"
+    assert r["medianas"] == "uma fração mínima das notas (~8%)"
+    assert r["negativas"] == "uma fração ainda menor das notas (~2%)"
+
+
+def test_tres_grupos_na_MESMA_faixa():
+    """36+34+30 cabe numa faixa só (30-49) — a tabela tem de ter forma para
+    o terceiro, senão dois deles voltam a colidir."""
+    r = br.rotulos_peso({"a": 36, "b": 34, "c": 30})
+    assert len(set(r.values())) == 3, r
+    assert r["a"].startswith("boa parte")
+    assert r["b"].startswith("uma parte menor")
+    assert r["c"].startswith("uma parte ainda menor")
+
+
+def test_percentual_IGUAL_nao_ganha_comparativo():
+    """A verdade do comparativo é condição, não estilo: dizer "menor" para
+    quem tem o MESMO peso seria falso. Rótulo coincidente é honesto quando
+    o peso coincide de verdade."""
+    r = br.rotulos_peso({"a": 40, "b": 40, "c": 20})
+    assert r["a"] == r["b"] == "boa parte das notas (~40%)"
+
+
+def test_todo_comparativo_e_verdadeiro_sobre_o_dado():
+    """Varre todas as combinações que somam 100: sempre que um grupo recebe
+    forma comparativa, ele é DE FATO menor que quem ficou com a base."""
+    for neg in range(0, 101, 3):
+        for med in range(0, 101 - neg, 3):
+            shares = {"negativas": neg, "medianas": med,
+                      "positivas": 100 - neg - med}
+            rot = br.rotulos_peso(shares)
+            base_de = {}
+            for g, r in rot.items():
+                faixa = br._faixa_peso(shares[g])
+                base_de.setdefault(faixa, []).append((shares[g], r))
+            for faixa, itens in base_de.items():
+                base = [p for p, r in itens if r.startswith(faixa)]
+                comp = [p for p, r in itens if not r.startswith(faixa)]
+                for pc in comp:
+                    assert all(pc <= pb for pb in base), (shares, rot)
+
+
+def test_o_numero_entre_parenteses_nunca_muda():
+    r = br.rotulos_peso({"negativas": 46, "medianas": 33, "positivas": 21})
+    for g, pct in (("negativas", 46), ("medianas", 33), ("positivas", 21)):
+        assert f"(~{pct}%)" in r[g]
+        assert "das notas" in r[g]
+
+
+def test_o_briefing_usa_o_rotulo_resolvido_em_conjunto():
+    out = _output(distribuicao={"n_notas_total": 100,
+                                "por_bucket": {"negativas": 46, "medianas": 33,
+                                               "positivas": 21}})
+    b = br.montar_briefing(out)
+    rotulos = [b["grupos"][n]["rotulo_peso"] for n in b["movimento3"]["ordem"]]
+    assert len(set(rotulos)) == 3, rotulos
+    assert rotulos[0].startswith("boa parte")
+    assert rotulos[1].startswith("uma parte menor")
+
+
+def test_contracoes_continuam_valendo_sobre_a_forma_comparativa():
+    """`variantes_rotulo` opera sobre o PRIMEIRO token — a autorização de
+    contração da v1.9.11 tem de sobreviver ao rótulo comparativo."""
+    from espectro24 import qualidade as q
+    vs = q.variantes_rotulo("uma parte menor das notas (~33%)")
+    assert "numa parte menor das notas (~33%)" in vs
+    assert "duma parte menor das notas (~33%)" in vs

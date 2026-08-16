@@ -204,5 +204,7 @@
       "dias_por_100_paginas": 20.0,
       "paginas_para_1_ano": 1825
     }
-  }
+  },
+  "ano_lancamento": 2023,
+  "ano_fonte": "slug"
 }

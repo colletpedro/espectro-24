@@ -21,7 +21,7 @@ from .config import (
     SPEC_VERSION,
 )
 from .fetcher import AntiBotError, Fetcher
-from .ficha import buscar_ficha, resolver_ano_letterboxd, titulo_ano_de_slug
+from .ficha import buscar_ficha, resolver_ano, titulo_ano_de_slug
 from .collector import collect_distribuicao
 from .pipeline import resolve_slug, run_pipeline, total_observado
 from .render import (
@@ -238,33 +238,36 @@ def main(argv=None):
         output["ficha"] = None
     else:
         titulo = args.titulo
-        ano = args.ano
-        ano_fonte = "argumento" if args.ano is not None else None
         if titulo is None:
-            titulo_derivado, ano_derivado = titulo_ano_de_slug(slug)
-            titulo = titulo_derivado
-            if ano is None:
-                ano = ano_derivado
-                if ano is not None:
-                    ano_fonte = "slug"
+            titulo, _ = titulo_ano_de_slug(slug)
+        # v1.9.12: a precedência inteira num lugar só (`ficha.resolver_ano`),
+        # com o BRUTO como degrau novo antes da rede — é ele que faz uma
+        # execução offline ter ficha. Em --reuse-synthesis não existe um
+        # `fetcher` da coleta; cria um dedicado, mesmo padrão da distribuição.
+        f_ano = fetcher if not args.reuse_synthesis else Fetcher(
+            cache_dir=args.cache_dir, offline=args.offline)
+        ano, ano_fonte = resolver_ano(
+            f_ano, slug, ano_explicito=args.ano,
+            meta_bruto=(output.get("coleta") or {}))
         if ano is None:
-            # v1.7.0 (Tarefa 1.1b) — sem ano no slug: 1 requisição à página
-            # do filme no Letterboxd, cacheada, mesmo fetcher/headers/delay
-            # já validados pelo resto do pipeline. Em --reuse-synthesis não
-            # existe um `fetcher` da coleta (não recoleta nada) — cria um
-            # dedicado, mesmo padrão já usado para a distribuição reaproveitada.
-            f_ano = fetcher if not args.reuse_synthesis else Fetcher(
-                cache_dir=args.cache_dir, offline=args.offline)
-            ano = resolver_ano_letterboxd(f_ano, slug)
-            if ano is not None:
-                ano_fonte = "letterboxd"
-        if ano is None:
-            # v1.7.0 (Tarefa 1.1c) — ano segue indisponível: NÃO busca a
-            # ficha (a desambiguação por só o título já causou o defeito real
-            # do `cure`, resolvido para "The Cure" 2026 em vez de 1997).
-            # Melhor nenhuma ficha do que arriscar a do filme errado.
+            # v1.7.0 (Tarefa 1.1c) — ano indisponível: NÃO busca a ficha (a
+            # desambiguação por só o título já causou o defeito real do
+            # `cure`, resolvido para "The Cure" 2026 em vez de 1997). Melhor
+            # nenhuma ficha do que arriscar a do filme errado.
             output["ficha"] = None
             output["ficha_indisponivel"] = "ano_desconhecido"
+            # v1.9.12 — REDE DE SEGURANÇA (não a correção): o defeito de
+            # `joker-folie-a-deux` passou uma sessão inteira despercebido
+            # por ser SILENCIOSO. O campo no JSON continua, mas deixa de ser
+            # a única evidência, e o aviso diz a CONSEQUÊNCIA, não só a
+            # causa.
+            print("⚠️  Ficha do filme indisponível (ano não resolvido: o slug "
+                  "não traz o ano, o bruto não tem `ano_lancamento` e a "
+                  "página do Letterboxd não foi alcançada).\n"
+                  "    Consequência: o MOVIMENTO 1 será OMITIDO — a "
+                  "narrativa não vai apresentar o filme.\n"
+                  "    Saídas: rodar uma vez com rede (grava o ano no bruto) "
+                  "ou passar --ano.", file=sys.stderr)
         else:
             ficha, aviso_ficha, ficha_descartada = buscar_ficha(
                 titulo, ano, cache_dir=Path(args.cache_dir) / "_tmdb",

@@ -204,5 +204,7 @@
       "dias_por_100_paginas": 33.333333333333336,
       "paginas_para_1_ano": 1095
     }
-  }
+  },
+  "ano_lancamento": 2015,
+  "ano_fonte": "letterboxd"
 }

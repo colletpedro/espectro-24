@@ -1,7 +1,7 @@
 {
   "slug": "joker-folie-a-deux",
-  "coletado_em": "2026-08-09T12:51:47.871534+00:00",
-  "versao_coletor": "1.9.0",
+  "coletado_em": "2026-08-15T21:38:01.192644+00:00",
+  "versao_coletor": "1.9.6",
   "ordenacao_usada": "by/added",
   "histograma_bruto": {
     "0.5": 53623,
@@ -29,8 +29,8 @@
   },
   "paginas_gastas_por_nivel": {
     "0.5": 2,
-    "1.0": 7,
-    "1.5": 5,
+    "1.0": 4,
+    "1.5": 3,
     "2.0": 7,
     "2.5": 7,
     "3.0": 9,
@@ -53,8 +53,8 @@
   ],
   "contagem_bruta_por_nivel": {
     "0.5": 24,
-    "1.0": 60,
-    "1.5": 41,
+    "1.0": 48,
+    "1.5": 36,
     "2.0": 84,
     "2.5": 84,
     "3.0": 108,
@@ -65,8 +65,8 @@
   },
   "contagem_estimada_valida_por_nivel": {
     "0.5": 5,
-    "1.0": 14,
-    "1.5": 11,
+    "1.0": 10,
+    "1.5": 8,
     "2.0": 22,
     "2.5": 22,
     "3.0": 31,
@@ -101,8 +101,8 @@
   },
   "paginas_extensao_por_nivel": {
     "0.5": 0,
-    "1.0": 3,
-    "1.5": 2,
+    "1.0": 0,
+    "1.5": 0,
     "2.0": 0,
     "2.5": 0,
     "3.0": 0,
@@ -267,5 +267,7 @@
       "dias_por_100_paginas": 300.0,
       "paginas_para_1_ano": 122
     }
-  }
+  },
+  "ano_lancamento": 2024,
+  "ano_fonte": "letterboxd"
 }

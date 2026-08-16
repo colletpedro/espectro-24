@@ -13,6 +13,7 @@ import json
 import pytest
 
 from espectro24 import cli
+from espectro24 import ficha as F
 from espectro24.models import (
     BucketResult,
     LevelResult,
@@ -190,7 +191,7 @@ def test_ano_do_slug_e_usado_direto_sem_letterboxd(tmp_path, monkeypatch, _iso_e
     _escreve_json(tmp_path, slug="the-invite-2026")
     _mock_narrate(monkeypatch)
     chamado = []
-    monkeypatch.setattr(cli, "resolver_ano_letterboxd",
+    monkeypatch.setattr(F, "resolver_ano_letterboxd",
                         lambda *a, **k: chamado.append(1))
     recebido = {}
 
@@ -211,7 +212,7 @@ def test_ano_ausente_no_slug_cai_para_letterboxd(tmp_path, monkeypatch, _iso_env
     real: sem isso, a busca ia sem ano e resolvia para o filme errado)."""
     _escreve_json(tmp_path, slug="cure")
     _mock_narrate(monkeypatch)
-    monkeypatch.setattr(cli, "resolver_ano_letterboxd", lambda fetcher, slug: 1997)
+    monkeypatch.setattr(F, "resolver_ano_letterboxd", lambda fetcher, slug: 1997)
     recebido = {}
 
     def fake_buscar(titulo, ano, cache_dir, ano_fonte=None, **k):
@@ -234,7 +235,7 @@ def test_ano_indisponivel_em_lugar_nenhum_pula_a_busca_com_flag(tmp_path, monkey
     (melhor nenhuma do que a do filme errado) — e o motivo fica registrado."""
     _escreve_json(tmp_path, slug="cure")
     _mock_narrate(monkeypatch)
-    monkeypatch.setattr(cli, "resolver_ano_letterboxd", lambda fetcher, slug: None)
+    monkeypatch.setattr(F, "resolver_ano_letterboxd", lambda fetcher, slug: None)
     chamou = []
     monkeypatch.setattr(cli, "buscar_ficha", lambda *a, **k: chamou.append(1))
     cli.main(["--slug", "cure", "--reuse-synthesis", "--out-dir", str(tmp_path),
@@ -250,7 +251,7 @@ def test_ficha_descartada_por_ano_divergente_fica_registrada_no_json(tmp_path, m
     CLI persiste `ficha_descartada` no JSON (não só imprime o aviso)."""
     _escreve_json(tmp_path, slug="cure")
     _mock_narrate(monkeypatch)
-    monkeypatch.setattr(cli, "resolver_ano_letterboxd", lambda fetcher, slug: 1997)
+    monkeypatch.setattr(F, "resolver_ano_letterboxd", lambda fetcher, slug: 1997)
     descarte = {"motivo": "ano_divergente", "esperado": 1997, "recebido": 2026}
     monkeypatch.setattr(cli, "buscar_ficha",
                         lambda *a, **k: (None, "TMDB: ficha descartada — ano divergente.", descarte))
@@ -292,3 +293,47 @@ def test_flags_de_edicao_nao_existem_mais(tmp_path, monkeypatch, _iso_env):
     with pytest.raises(SystemExit):
         cli.main(["--slug", "cure", "--reuse-synthesis", "--out-dir", str(tmp_path),
                   "--tom", "ambos", "--com-editor"])
+
+
+# =====================================================================
+# v1.9.12 — o ANO vem do BRUTO antes de tentar rede, e a falha AVISA
+# =====================================================================
+
+def test_ano_do_bruto_evita_a_rede(tmp_path, monkeypatch, _iso_env):
+    """O degrau novo: com `ano_lancamento` no `coleta` (espelho do
+    meta.json), a execução offline resolve a ficha SEM tocar a rede — é
+    isso que devolve o movimento 1 a `joker-folie-a-deux`."""
+    _escreve_json(tmp_path, slug="cure")
+    caminho = tmp_path / "cure.json"
+    d = json.loads(caminho.read_text(encoding="utf-8"))
+    d["coleta"] = {"ano_lancamento": 1997, "ano_fonte": "letterboxd"}
+    caminho.write_text(json.dumps(d, ensure_ascii=False), encoding="utf-8")
+
+    _mock_narrate(monkeypatch)
+    chamado = []
+    monkeypatch.setattr(F, "resolver_ano_letterboxd",
+                        lambda *a, **k: chamado.append(1))
+    recebido = {}
+
+    def fake_buscar(titulo, ano, cache_dir, ano_fonte=None, **k):
+        recebido.update(ano=ano, ano_fonte=ano_fonte)
+        return {"titulo": "Cure", "ano": 1997, "fonte": "tmdb"}, None, None
+    monkeypatch.setattr(cli, "buscar_ficha", fake_buscar)
+    cli.main(["--slug", "cure", "--reuse-synthesis", "--out-dir", str(tmp_path),
+              "--tom", "estruturado"])
+    assert chamado == [], "o bruto tinha o ano — a rede não devia ser tocada"
+    assert recebido == {"ano": 1997, "ano_fonte": "bruto"}
+
+
+def test_ficha_indisponivel_AVISA_a_consequencia(tmp_path, monkeypatch,
+                                                 _iso_env, capsys):
+    """Rede de segurança da v1.9.12: o defeito passou uma sessão inteira
+    despercebido por ser silencioso. O aviso diz a CONSEQUÊNCIA."""
+    _escreve_json(tmp_path, slug="cure")
+    _mock_narrate(monkeypatch)
+    monkeypatch.setattr(F, "resolver_ano_letterboxd", lambda *a, **k: None)
+    cli.main(["--slug", "cure", "--reuse-synthesis", "--out-dir", str(tmp_path),
+              "--tom", "estruturado"])
+    err = capsys.readouterr().err
+    assert "MOVIMENTO 1" in err and "OMITIDO" in err
+    assert "--ano" in err

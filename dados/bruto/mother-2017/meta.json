@@ -284,5 +284,7 @@
       "dias_por_100_paginas": 51.282051282051285,
       "paginas_para_1_ano": 712
     }
-  }
+  },
+  "ano_lancamento": 2017,
+  "ano_fonte": "slug"
 }

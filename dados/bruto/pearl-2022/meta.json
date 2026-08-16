@@ -263,5 +263,7 @@
       "dias_por_100_paginas": 0.0,
       "paginas_para_1_ano": null
     }
-  }
+  },
+  "ano_lancamento": 2022,
+  "ano_fonte": "slug"
 }

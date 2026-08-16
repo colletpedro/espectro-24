@@ -278,5 +278,7 @@
       "dias_por_100_paginas": 30.303030303030305,
       "paginas_para_1_ano": 1204
     }
-  }
+  },
+  "ano_lancamento": 2023,
+  "ano_fonte": "letterboxd"
 }

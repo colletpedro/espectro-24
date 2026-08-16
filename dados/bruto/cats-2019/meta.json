@@ -268,5 +268,7 @@
       "dias_por_100_paginas": 910.0,
       "paginas_para_1_ano": 40
     }
-  }
+  },
+  "ano_lancamento": 2019,
+  "ano_fonte": "slug"
 }
