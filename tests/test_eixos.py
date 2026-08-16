@@ -88,44 +88,50 @@ def test_lift_com_um_bucket_so_nao_tem_com_quem_comparar():
 
 # --- a margem, e a fronteira exata dos 5 filmes ---------------------------
 
-def test_lift_exatamente_na_margem_NAO_esta_acima_dela():
-    """O caso dos 5 filmes do catálogo (§2.5). 8 reviews de diferença em 40
-    são exatamente 20,0pp; a decisão registrada é comparação ESTRITA."""
+def test_lift_exatamente_na_margem_ESTA_acima_dela():
+    """[v1.9.15] O caso dos 5 filmes do catálogo (§2.5). 8 reviews de
+    diferença em 40 são exatamente 20,0pp; a decisão registrada é `>=`
+    EXATO — "margem MÍNIMA" é a semântica natural, e é o que a medição de
+    referência sempre pretendeu produzir (13/35 vinha de um bug de ponto
+    flutuante fazendo `0.2 >= 0.2` avaliar falso, não de uma escolha de
+    comparação estrita)."""
     cls = _uniforme({"negativas": [("critica_social", 33)],
                      "medianas": [("critica_social", 25)],
                      "positivas": [("critica_social", 19)]}, n=40)
     lifts = E.lifts(E.frequencias(cls))
     assert lifts["negativas"]["critica_social"] == Fraction(1, 5)  # 20,0pp
-    assert not E.acima_da_margem(lifts["negativas"]["critica_social"])
-    assert E.contraste(lifts) == "valorativo"
-
-
-def test_um_quantum_acima_da_margem_ja_conta():
-    """Com cota 40 o quantum é 1/40 = 2,5pp — o menor passo exprimível."""
-    cls = _uniforme({"negativas": [("critica_social", 34)],
-                     "medianas": [("critica_social", 25)],
-                     "positivas": [("critica_social", 19)]}, n=40)
-    lifts = E.lifts(E.frequencias(cls))
-    assert lifts["negativas"]["critica_social"] == Fraction(9, 40)  # 22,5pp
     assert E.acima_da_margem(lifts["negativas"]["critica_social"])
     assert E.contraste(lifts) == "tematico"
 
 
+def test_um_quantum_abaixo_da_margem_fica_fora():
+    """Com cota 40 o quantum é 1/40 = 2,5pp — o menor passo exprimível."""
+    cls = _uniforme({"negativas": [("critica_social", 32)],
+                     "medianas": [("critica_social", 25)],
+                     "positivas": [("critica_social", 19)]}, n=40)
+    lifts = E.lifts(E.frequencias(cls))
+    assert lifts["negativas"]["critica_social"] == Fraction(7, 40)  # 17,5pp
+    assert not E.acima_da_margem(lifts["negativas"]["critica_social"])
+    assert E.contraste(lifts) == "valorativo"
+
+
 def test_a_comparacao_nao_passa_por_ponto_flutuante():
     """A regressão que motivou o teste: `0.2 >= 0.2` em binário é FALSO para
-    a fração exata 1/5 construída por subtração de floats. Se algum dia a
-    implementação converter para float antes de comparar, este teste cai."""
+    a fração exata 1/5 construída por subtração de floats — foi essa
+    conversão silenciosa que produziu o 13/35 errado na medição de
+    referência. Se algum dia a implementação converter para float antes de
+    comparar, este teste cai."""
     exato = Fraction(33, 40) - Fraction(25, 40)
     assert exato == Fraction(1, 5)
-    assert not E.acima_da_margem(exato)
-    # e o vizinho de baixo continua fora, sem depender de arredondamento
-    assert not E.acima_da_margem(Fraction(199, 1000))
+    assert E.acima_da_margem(exato)          # 1/5 EXATO atinge a margem
+    assert not E.acima_da_margem(Fraction(199, 1000))  # o vizinho de baixo, não
 
 
 def test_margem_e_parametro_e_nao_constante_enterrada():
     lift = Fraction(1, 5)
-    assert not E.acima_da_margem(lift)
-    assert E.acima_da_margem(lift, margem_pp=15)
+    assert E.acima_da_margem(lift)                    # atinge 20pp
+    assert not E.acima_da_margem(lift, margem_pp=25)   # não atinge 25pp
+    assert E.acima_da_margem(lift, margem_pp=15)       # supera 15pp
 
 
 # --- contraste -------------------------------------------------------------
@@ -237,16 +243,63 @@ def test_bloco_carrega_as_contagens_inteiras_e_os_derivados():
     assert cel["lift_pp"] == 12.5
 
 
-def test_bloco_declara_a_sobreposicao_com_a_amostra_analisada():
-    """§[D3]: são duas amostras de 40 diferentes, e o JSON tem de dizer o
-    tamanho da divergência sem que ninguém precise remedi-la."""
+def test_classificacao_orfa_da_selecao_antiga_nao_infla_o_denominador():
+    """[v1.9.15, Entrega 1] A REGRESSÃO REAL achada ao estender a
+    classificação de `cure`: `consenso.jsonl` acumula — 27 reviews da
+    seleção antiga (errada) continuam classificadas depois que as 13 que
+    faltavam à seleção de produção são adicionadas, e `n` saltava de 40 para
+    53 sem este filtro. `analisadas` (as 40 da produção) tem de FILTRAR a
+    classificação, não só somar-se a ela."""
+    # 27 "boas" (na produção) + 13 "órfãs" (só na seleção antiga, fora da
+    # produção) — o cenário exato medido em `cure`/negativas.
+    boas = {f"boa:{i}": ["ritmo"] if i < 20 else [] for i in range(27)}
+    orfas = {f"orfa:{i}": ["ritmo"] for i in range(13)}
+    cls = {"negativas": {**boas, **orfas}}
+    analisadas = {"negativas": set(boas)}  # só as 27 pertencem à produção
+    bloco = E.montar_bloco(cls, analisadas=analisadas, temas_por_eixo={})
+    linha = next(l for l in bloco["linhas"] if l["eixo"] == "ritmo")
+    assert linha["por_bucket"]["negativas"]["de_n"] == 27  # NÃO 40
+    assert linha["por_bucket"]["negativas"]["mencoes"] == 20  # NÃO 33
+
+
+def test_bloco_declara_a_sobreposicao_quando_ha_divergencia():
+    """§[D3]: quando as duas amostras (classificada e analisada) DIVERGEM, o
+    JSON tem de dizer o tamanho da divergência sem que ninguém precise
+    remedi-la à mão. [v1.9.15] E a frequência é calculada só sobre a
+    INTERSECÇÃO — `n_classificadas` é o filtrado (10), nunca o total bruto
+    (40): é o que impede o denominador de inflar com classificação órfã, o
+    bug real achado ao rodar a extensão (`cure` saltando de 40 para 53)."""
     cls = _uniforme({"negativas": [("ritmo", 24)]}, n=40)
     analisadas = {"negativas": {f"negativas:{i}" for i in range(30, 70)}}
     bloco = E.montar_bloco(cls, analisadas=analisadas, temas_por_eixo={})
     fonte = bloco["fonte_classificacao"]["por_bucket"]["negativas"]
-    assert fonte["n_classificadas"] == 40
+    assert fonte["n_classificadas"] == 10   # intersecção: ids 30-39 (10 de 40)
     assert fonte["n_analisadas"] == 40
     assert fonte["sobreposicao_com_analisadas"] == 10
+
+
+def test_fonte_classificacao_e_omitida_quando_as_populacoes_sao_iguais():
+    """[v1.9.15, Entrega 1] Com a unificação, `fonte_classificacao` deixa de
+    ter objeto para os filmes já estendidos: declarar uma divergência que não
+    existe mais é pior que não declarar nada — texto morto que engana. A
+    chave some do bloco quando TODO bucket tem sobreposição completa."""
+    cls = _uniforme({"negativas": [("ritmo", 24)], "positivas": [("ritmo", 10)]},
+                    n=40)
+    analisadas = {"negativas": {f"negativas:{i}" for i in range(40)},
+                  "positivas": {f"positivas:{i}" for i in range(40)}}
+    bloco = E.montar_bloco(cls, analisadas=analisadas, temas_por_eixo={})
+    assert "fonte_classificacao" not in bloco
+
+
+def test_fonte_classificacao_aparece_se_qualquer_bucket_divergir():
+    """Um bucket unificado e outro não: a chave PRECISA aparecer, porque
+    ainda há divergência a declarar em algum lugar do filme."""
+    cls = _uniforme({"negativas": [("ritmo", 24)], "positivas": [("ritmo", 10)]},
+                    n=40)
+    analisadas = {"negativas": {f"negativas:{i}" for i in range(40)},
+                  "positivas": {f"positivas:{i}" for i in range(30, 70)}}
+    bloco = E.montar_bloco(cls, analisadas=analisadas, temas_por_eixo={})
+    assert "fonte_classificacao" in bloco
 
 
 def test_bloco_sem_classificacao_nenhuma_e_None():
@@ -296,25 +349,27 @@ def test_catalogo_tem_os_35_filmes_classificados(catalogo):
     assert len(catalogo) == 35
 
 
-def test_catalogo_reproduz_13_tematicos_e_22_valorativos(catalogo):
-    """O número decidido em §2.5. Se a margem, a métrica ou a comparação
-    mudarem, é aqui que o catálogo inteiro reclama."""
+def test_catalogo_reproduz_18_tematicos_e_17_valorativos(catalogo):
+    """[v1.9.15] O número decidido em §2.5, sob `>=` exato. Era 13/22 na
+    v1.9.14, sob a comparação estrita que reproduzia por acidente o mesmo
+    bug de ponto flutuante que a medição de referência tinha. Se a margem, a
+    métrica ou a comparação mudarem, é aqui que o catálogo inteiro reclama."""
     estados = {slug: E.contraste(E.lifts(E.frequencias(cls)))
                for slug, cls in catalogo.items()}
     tematicos = [s for s, e in estados.items() if e == "tematico"]
-    assert (len(tematicos), len(estados) - len(tematicos)) == (13, 22)
+    assert (len(tematicos), len(estados) - len(tematicos)) == (18, 17)
 
 
-def test_os_5_filmes_na_linha_dos_20pp_ficam_valorativos(catalogo):
-    """Documenta quem depende da comparação estrita — sob `>=` exato estes 5
-    virariam `tematico` e o catálogo iria a 18/35 (§2.5)."""
+def test_os_5_filmes_na_linha_dos_20pp_agora_sao_tematicos(catalogo):
+    """[v1.9.15] Os 5 filmes que caíam de fora sob `>` estrito (§2.5) agora
+    ATINGEM a margem sob `>=`: exatamente o efeito que motivou a correção."""
     na_linha = {"barbie", "bones-and-all", "hereditary", "im-still-here-2024",
                 "spider-man-across-the-spider-verse"}
     for slug in na_linha:
         lifts = E.lifts(E.frequencias(catalogo[slug]))
         melhor = max(v for por_eixo in lifts.values() for v in por_eixo.values())
         assert melhor == Fraction(1, 5), slug
-        assert E.contraste(lifts) == "valorativo", slug
+        assert E.contraste(lifts) == "tematico", slug
 
 
 def test_estado_dos_3_filmes_publicados(catalogo):

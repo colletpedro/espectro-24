@@ -1,0 +1,20 @@
+{
+  "15": {
+    "n_pares_acima": 44,
+    "n_filmes_com_ao_menos_um": 24,
+    "media_nulo": 27.0295,
+    "fracao_ruido_estimada": 0.6143068181818181
+  },
+  "20": {
+    "n_pares_acima": 27,
+    "n_filmes_com_ao_menos_um": 18,
+    "media_nulo": 9.3055,
+    "fracao_ruido_estimada": 0.3446481481481482
+  },
+  "25": {
+    "n_pares_acima": 13,
+    "n_filmes_com_ao_menos_um": 10,
+    "media_nulo": 3.5325,
+    "fracao_ruido_estimada": 0.2717307692307692
+  }
+}

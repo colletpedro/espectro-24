@@ -1,4 +1,5 @@
-"""[v1.9.14, §2.5] Eixos, lift, margem e estado `contraste`.
+"""[v1.9.14, §2.5; margem corrigida na v1.9.15] Eixos, lift, margem e estado
+`contraste`.
 
 **O código soma; ninguém mais.** Toda frequência aqui é `Counter` sobre a
 classificação já persistida (`resultado/votacao-3/consenso.jsonl`, votação de
@@ -10,19 +11,22 @@ passa por LLM — o que um LLM faz nesta fase é só escolher a FRASE da célula
 têm o melhor lift em EXATAMENTE 20,0pp. A medição de referência
 (`scripts/metricas_lift.py`) comparou com `>=` em ponto flutuante e os cinco
 caíram fora, porque `0.2` binário é ligeiramente menor que a fração exata —
-é daí que vem o número publicado de 13/35 filmes com contraste temático (sob
-`>=` exato seriam 18/35). Aqui frequência e lift são `Fraction` sobre
-contagens inteiras, e a comparação com a margem é ESTRITA por decisão
-declarada em §2.5, não por acidente de representação. Float só aparece no
-fim, nos campos DERIVADOS que existem para exibição (`freq_pct`, `lift_pp`),
-e nenhuma decisão os lê.
+é daí que veio o número publicado de 13/35 filmes com contraste temático na
+v1.9.14. **Correção da v1.9.15:** a comparação é `>=` EXATA (`Fraction`), a
+semântica que a medição de referência sempre pretendeu — 18/35 filmes têm
+contraste temático. Float só aparece no fim, nos campos DERIVADOS que
+existem para exibição (`freq_pct`, `lift_pp`), e nenhuma decisão os lê.
 
-**O denominador é o da amostra CLASSIFICADA — que não é a analisada.**
-Medido nesta versão e declarado em §[D3]: `amostra.json` foi montada sem a
-estratificação por profundidade da v1.9.5, então as 40 reviews classificadas
-de um bucket não são as 40 que a síntese leu (sobreposição mediana de 75% no
-catálogo, mínimo de 30%). O bloco carrega `fonte_classificacao` com os três
-números por bucket para que a divergência seja visível no dado, não só aqui.
+**O denominador é o da amostra CLASSIFICADA.** Até a v1.9.14 essa amostra
+NÃO era a mesma que a síntese analisava (`amostra.json` sem a estratificação
+por profundidade da v1.9.5) — achado medido e declarado, com sobreposição
+mediana de 75% no catálogo. **A v1.9.15 unifica as duas populações** para os
+filmes cuja classificação foi estendida (ver `pipeline.amostra_do_bruto` e
+`scripts/estender_classificacao_producao.py`): para eles, "classificada" e
+"analisada" voltam a ser a mesma coisa, e `fonte_classificacao` reporta
+`sobreposicao_com_analisadas == n_classificadas == n_analisadas`. Filmes que
+ainda não passaram pela extensão continuam com a divergência antiga,
+declarada como sempre.
 """
 from __future__ import annotations
 
@@ -146,22 +150,29 @@ def lifts(freqs: dict[str, dict[str, Any]]
 
 
 def acima_da_margem(lift: Fraction, margem_pp: int = MARGEM_LIFT_PP) -> bool:
-    """Comparação ESTRITA e exata (§2.5).
+    """Comparação `>=`, EXATA (§2.5, corrigida na v1.9.15).
 
-    "Acima da margem" é `>`, não `>=`: 20,0pp não está acima de 20pp, e é
-    disso que dependem 5 dos 35 filmes do catálogo.
+    "Atinge a margem" é `>=`: um eixo com exatamente 20,0pp de lift ATINGE a
+    margem mínima de 20pp — é a semântica natural de "margem mínima", e é o
+    que a medição de referência sempre pretendeu produzir. A v1.9.14 usava
+    `>` estrito, o que reproduzia por acidente o MESMO bug de ponto
+    flutuante da medição de referência (`0.2 >= 0.2` avaliando falso em
+    binário) em vez de corrigi-lo — 5 dos 35 filmes do catálogo têm o
+    melhor lift em exatamente 20,0pp e viravam `valorativo` por essa
+    coincidência. Sob `>=` exato eles atingem a margem, como sempre
+    deveriam.
     """
-    return Fraction(lift) > Fraction(margem_pp, 100)
+    return Fraction(lift) >= Fraction(margem_pp, 100)
 
 
 def contraste(lifts_do_filme: dict[str, dict[str, Fraction]],
               margem_pp: int = MARGEM_LIFT_PP) -> str:
     """`"tematico"` | `"valorativo"` (§2.5).
 
-    `valorativo` = nenhum eixo acima da margem em nenhum grupo: os três falam
-    das mesmas coisas e discordam só no veredito. É o estado de 22 dos 35
-    filmes do catálogo — o mais comum, e por isso tratado como primeira
-    classe em toda a cadeia, do briefing à tela.
+    `valorativo` = nenhum eixo ATINGE a margem em nenhum grupo: os três falam
+    das mesmas coisas e discordam só no veredito. É o estado de 17 dos 35
+    filmes do catálogo (v1.9.15, sob `>=` exato) — quase metade, e por isso
+    tratado como primeira classe em toda a cadeia, do briefing à tela.
     """
     for por_eixo in lifts_do_filme.values():
         for eixo, lift in por_eixo.items():
@@ -243,14 +254,49 @@ def _pp(valor: Fraction) -> float:
     return round(float(valor) * 100, 1)
 
 
+def _filtrar_pela_analisada(
+    classificacao: dict[str, dict[str, list[str]]],
+    analisadas: dict[str, Iterable[str]],
+) -> dict[str, dict[str, list[str]]]:
+    """[v1.9.15, Entrega 1] O denominador da frequência é a amostra ANALISADA,
+    não "tudo que já foi classificado alguma vez" para aquele bucket.
+
+    Achado ao rodar a extensão real: `consenso.jsonl` ACUMULA classificação
+    — reviews da seleção antiga (a errada, sem `orcamento_paginas_por_nivel`)
+    continuam lá depois que a seleção de produção é estendida, porque
+    estender é ADITIVO (§[D3]). Sem este filtro, o denominador de `cure`
+    saltava de 40 para 53 (40 antigas + 13 novas), quebrando a promessa da
+    unificação — "n=40 continua sendo n=40, só com as 40 certas" — e
+    inflando `n` com reviews que a síntese nunca leu.
+
+    Bucket cujo `analisadas` está vazio/ausente NÃO é filtrado: significa que
+    quem chamou não tem essa informação (compatibilidade com chamadas que
+    não passam `analisadas`, e com filmes fora dos 3 estendidos onde a
+    intersecção ainda é o melhor dado disponível).
+    """
+    fora: dict[str, dict[str, list[str]]] = {}
+    for bucket, reviews in classificacao.items():
+        ids_analisadas = set(analisadas.get(bucket) or ())
+        if ids_analisadas:
+            fora[bucket] = {rid: ex for rid, ex in reviews.items()
+                            if rid in ids_analisadas}
+        else:
+            fora[bucket] = reviews
+    return fora
+
+
 def montar_bloco(classificacao: dict[str, dict[str, list[str]]],
                  analisadas: dict[str, Iterable[str]],
                  temas_por_eixo: dict[str, dict[str, dict[str, str]]],
                  margem_pp: int = MARGEM_LIFT_PP) -> dict[str, Any] | None:
     """O bloco global `eixos` do JSON de resultado (§4).
 
-    `analisadas` são os ids da amostra que a SÍNTESE leu, por bucket — usados
-    só para medir a sobreposição com a amostra classificada (§[D3]).
+    `analisadas` são os ids da amostra que a SÍNTESE leu, por bucket. Desde a
+    v1.9.15 eles também FILTRAM a classificação usada no cálculo — a
+    frequência só conta reviews que estão nos dois lados (classificadas E
+    analisadas), para que o denominador seja sempre a amostra que a síntese
+    de fato leu, nunca "tudo que o consenso acumulou até hoje" (§[D3],
+    "Duas populações de 40", corrigido nesta versão).
     `temas_por_eixo` é a saída de §[D3]: `{bucket: {eixo: {tema, exemplo}}}`.
 
     Devolve `None` quando não há classificação nenhuma — chave ausente no
@@ -259,6 +305,7 @@ def montar_bloco(classificacao: dict[str, dict[str, list[str]]],
     if not classificacao:
         return None
 
+    classificacao = _filtrar_pela_analisada(classificacao, analisadas)
     freqs = frequencias(classificacao)
     lifts_do_filme = lifts(freqs)
     papeis = bullets(freqs, lifts_do_filme, margem_pp)
@@ -298,23 +345,38 @@ def montar_bloco(classificacao: dict[str, dict[str, list[str]]],
         })
 
     fonte = {}
+    diverge = False
     for b in ordem_buckets:
         ids_analisadas = set(analisadas.get(b) or ())
+        n_cls = freqs[b]["n"]
+        n_ana = len(ids_analisadas)
+        sobreposicao = len(ids_analisadas & set(classificacao.get(b, {})))
         fonte[b] = {
-            "n_classificadas": freqs[b]["n"],
-            "n_analisadas": len(ids_analisadas),
-            "sobreposicao_com_analisadas": len(
-                ids_analisadas & set(classificacao.get(b, {}))),
+            "n_classificadas": n_cls,
+            "n_analisadas": n_ana,
+            "sobreposicao_com_analisadas": sobreposicao,
         }
+        if not (sobreposicao == n_cls == n_ana):
+            diverge = True
 
-    return {
+    bloco = {
         "taxonomia_id": TAXONOMIA_ID,
         "margem_lift_pp": margem_pp,
         "contraste": contraste(lifts_do_filme, margem_pp),
-        "fonte_classificacao": {
+        "linhas": linhas,
+    }
+    # v1.9.15 (Entrega 1): a chave só existe quando há algo a declarar. Depois
+    # da unificação (§[D3]) a amostra classificada e a analisada são a MESMA
+    # em todo bucket para os filmes já estendidos — manter o bloco ali seria
+    # texto morto (na melhor hipótese) ou uma divergência que não existe mais
+    # apresentada como se existisse (na pior). Ausência da chave É a
+    # declaração "estas duas populações são a mesma", no mesmo espírito de
+    # `share_real` (omitido sem distribuição) e do próprio bloco `eixos`
+    # (omitido sem classificação).
+    if diverge:
+        bloco["fonte_classificacao"] = {
             "arquivo": CONSENSO_PADRAO,
             "criterio": "votacao_3_consenso_2_de_3",
             "por_bucket": fonte,
-        },
-        "linhas": linhas,
-    }
+        }
+    return bloco
