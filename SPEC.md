@@ -403,6 +403,178 @@ v1.9.5 conseguiu ver justamente porque o `Fetcher` quebrava.
 
 ---
 
+## 2.5 Eixos, lift e margem de contraste — a régua do Ponto 2 (v1.9.14)
+
+Fecha o Ponto 2 do projeto: os bullets de cada grupo deixam de ser três
+listas livres, independentes entre si, e passam a ser organizados por uma
+**taxonomia FECHADA de 10 eixos**. A promessa estrutural é o alinhamento POR
+LINHA — com eixo fixo, os três grupos ficam comparáveis célula a célula, em
+vez de exigir do leitor a reconciliação mental de três listas soltas.
+
+`ritmo` · `atuacao` · `direcao_imagem` · `roteiro_estrutura` · `som_trilha` ·
+`tom_atmosfera` · `impacto_emocional` · `comparacoes` · `expectativa` ·
+`critica_social`, mais `livre` para o que não couber.
+
+`taxonomia_id` corrente: **`ebab2667de74`** (hash do prompt de classificação
++ da lista de eixos). A classificação dos 35 filmes está em
+`resultado/votacao-3/consenso.jsonl`, por votação de 3 passadas
+independentes (eixo entra no consenso se aparece em ≥2 de 3). A fase inteira
+de medição que produziu essa régua está consolidada em
+`CLASSIFICACAO_CONSOLIDADO.md`; esta seção registra só o que virou
+PARÂMETRO.
+
+### `taxonomia_id` no veredito não é burocracia
+
+Todo veredito de contraste carrega o `taxonomia_id` sob o qual foi
+calculado. **Um filme classificado como sem contraste sob uma taxonomia pode
+deixar de sê-lo sob a seguinte** — aconteceu com `barbie`: sob a taxonomia
+anterior o contraste vinha de `impacto_emocional` (22,5pp); sob
+`ebab2667de74` esse eixo saturou (0,0pp, 65/70/70% nos três grupos) e o
+contraste MIGROU para `critica_social` (20,0pp, gradiente limpo 82,5%→47,5%
+do bucket negativo ao positivo).
+
+O estado descreve **o que a régua atual enxerga**, não uma propriedade do
+filme. Sem o `taxonomia_id` ao lado, `contraste: valorativo` seria lido como
+afirmação sobre a obra, e a próxima régua o desmentiria em silêncio.
+
+### Lift — a definição, e por que ABSOLUTO
+
+```
+lift(eixo, bucket) = freq(eixo, bucket) − max( freq(eixo, outros dois buckets) )
+```
+
+Frequência é sempre `n_reviews_do_bucket_com_o_eixo / n_reviews_classificadas_do_bucket`
+— fração com denominador visível, como toda frequência deste projeto.
+
+**Lift NORMALIZADO foi testado e REFUTADO** (`scripts/metricas_lift.py`).
+`(freq_top − freq_2o)/(1 − freq_2o)` e log-odds amplificam o quantum de
+discretização (1 review de diferença) exatamente no regime saturado: 15×
+mais sensível a ruído com o segundo colocado em 95% do que em 25%. Sob o
+nulo de permutação, a normalização faz `impacto_emocional` sozinho responder
+por **62,6%** do ruído, contra 13,9% do maior contribuinte sob o lift
+absoluto. Nenhuma das três métricas atinge cobertura ≥18/35 filmes com ruído
+≤35%; **a métrica atual é a menos ruim das três**, e é assim que ela deve
+ser lida.
+
+### A margem: 20pp — escolha entre pureza de lista e cobertura
+
+Medida por **nulo de permutação** (2000 rodadas, embaralhando o rótulo de
+bucket DENTRO de cada filme — preserva a frequência global de cada eixo e
+destrói só a associação com o grupo):
+
+| margem | pares acima | **fração que cruzaria por acaso** | filmes com ≥1 eixo acima |
+|---|---:|---:|---:|
+| 15pp | 41 | **63%** | 22/35 |
+| **20pp** | **21** | **41%** | **13/35** |
+| 25pp | 12 | **29%** | 9/35 |
+
+**Decisão do dono do projeto: 20pp.** Não há margem correta — é pureza de
+lista contra cobertura, e o trade-off ficou mais caro depois da correção de
+recall em review curta, porque a frequência média por eixo subiu. A 25pp a
+lista fica quase limpa e **só 9 de 35 filmes teriam algum contraste**; a
+15pp quase dois terços dos pares publicados seriam ruído. 20pp é o ponto
+escolhido entre os dois, com os três números registrados aqui para que a
+escolha seja revisável com dado, não com memória.
+
+### A comparação é ESTRITA (`> margem`), e 5 filmes dependem disso
+
+Cinco dos 35 filmes têm o melhor lift em **exatamente 20,0pp**: `barbie`,
+`bones-and-all`, `hereditary`, `im-still-here-2024` e
+`spider-man-across-the-spider-verse` (com cota 40, o quantum do lift é
+2,5pp, e 20,0pp = 8 reviews de diferença — cair na linha não é raro, é
+esperado).
+
+A medição de referência (`resultado/votacao-3/metricas_lift.json`) comparou
+com `>=` em ponto flutuante, e `0,2` binário é ligeiramente MENOR que a
+fração exata: os cinco caíram fora, e é daí que vem o número publicado de
+**13/35**. Sob `>=` com aritmética exata seriam **18/35** — 5 filmes (14% do
+catálogo) mudam de estado conforme a escolha.
+
+**Decisão registrada: comparação ESTRITA (`lift > margem`)**, por duas
+razões. (1) É o que reproduz os números decididos (13 com contraste, 22 sem)
+— o número não pode mudar por acidente de representação binária. (2) É o que
+a linguagem da decisão diz: "filme sem NENHUM eixo **acima** da margem", e
+20,0pp não está acima de 20pp.
+
+**O cálculo NÃO usa ponto flutuante.** Frequência e lift são frações exatas
+(`Fraction`) sobre contagens inteiras, e a margem é `Fraction(20, 100)`.
+Ponto flutuante decidindo o estado de 5 filmes por erro de representação é
+precisamente o defeito acima, e ele fica fechado por construção, não por
+cuidado.
+
+### Seleção de bullets — 2 de FREQUÊNCIA + 3 de LIFT
+
+Os bullets de cada bucket deixam de ser "os 6 temas que o LLM devolveu,
+ordenados por menção" e passam a ser escolhidos em CÓDIGO, sobre os eixos:
+
+- **2 bullets de maior FREQUÊNCIA** — o que o grupo mais fala. É o eixo de
+  CONSENSO, e ele entra mesmo quando os outros grupos falam tanto quanto:
+  frequência alta sem lift não é ruído, é o assunto do filme.
+- **3 bullets de maior LIFT** — o que **só** esse grupo fala. É o eixo de
+  CONTRASTE, e aqui a margem de 20pp vale: eixo com lift abaixo dela **não
+  entra**, e a lista fica mais curta em vez de completada com ruído.
+
+Um eixo já escolhido por frequência não é escolhido de novo por lift — a
+lista tem no máximo 5 entradas e no mínimo 2, e o número de entradas é
+informação, não defeito de preenchimento. Empate é desfeito pela ordem
+canônica dos eixos, para que dois filmes com o mesmo perfil não saiam em
+ordens diferentes por acidente de iteração.
+
+**Por que os dois critérios, e não só o lift.** Uma lista só de contraste
+seria vazia em 22 dos 35 filmes (§2.5) e, nos outros 13, esconderia do
+leitor o assunto principal do grupo. Uma lista só de frequência é o que
+existia antes, e não responde a pergunta que o produto faz — *no que estes
+grupos discordam?*. Os dois lados vêm rotulados como o que são, nunca
+misturados numa lista única sem etiqueta.
+
+### Estado `contraste`: `tematico` | `valorativo`
+
+Filme sem NENHUM eixo acima da margem recebe `contraste: valorativo`. **São
+22 de 35 filmes (63%) — quase dois terços do catálogo.** O estado não é caso
+de borda; é o mais comum.
+
+Isso **não é falha do produto**. Significa que os três grupos falam das
+mesmas coisas e discordam apenas no veredito — informação honesta e
+interessante sobre o filme. A consequência de desenho é obrigatória: o
+estado precisa de tratamento de **primeira classe** (campo explícito no
+JSON, o movimento 3 sabendo dizê-lo, e área visual própria na interface). Se
+ficar como AUSÊNCIA de bullets de contraste, vai parecer bug ao leitor.
+
+*(Nota de registro: a tabela da seção 7 de `CLASSIFICACAO_CONSOLIDADO.md`
+rotula a coluna de 13/9/22 como `contraste: valorativo`; a coluna é, na
+verdade, a de filmes COM contraste temático. A leitura correta é a desta
+seção: a 20pp, 13 com contraste temático e 22 valorativos.)*
+
+### `impacto_emocional` entra no schema COM a limitação registrada
+
+O eixo aparece em **75,5%** do corpus — o mais frequente por larga margem —
+e tem **precisão medida de 0,486** contra o gabarito humano fechado de 100
+reviews: **51% das marcações de produção são falsas**. Recall 0,921.
+
+**Três tentativas de corrigir a saturação foram testadas e REFUTADAS por
+medição** (detalhe em `CLASSIFICACAO_CONSOLIDADO.md` §5): lift normalizado
+(amplifica o ruído, acima); separar eixo de cobertura de eixo de contraste
+(move o problema — filmes sem nenhum bullet de contraste sobem de 17 para
+20 de 35); e definição apertada no prompt (75,5%→71,3% projetado, segue
+saturado; nos 13 veredictos secos que o gabarito humano desmarcou, a
+variante deixou de marcar em só 3, e ADICIONOU marcação errada em 2 onde o
+prompt original acertava).
+
+O eixo **entra assim mesmo**, com esta limitação declarada, e não escondido:
+removê-lo do schema apagaria um eixo que o público de fato usa, e as três
+tentativas de conserto estão medidas e registradas como refutadas — não como
+pendências.
+
+Existe uma correção que **funcionou** e que NÃO foi aplicada: o passe de
+verificação separado (V2 `alvo`), que leva a precisão de 0,486 para 0,794 em
+passada única, com projeção de de-saturação de 75,5% para 35,7% no corpus. Ele
+está medido, não adotado — rodá-lo sobre o corpus (~3013 chamadas, ~US$0,10)
+é decisão pendente do dono do projeto, e mesmo ele melhora pouco a margem
+(15/35 filmes a 20pp, contra 13/35 hoje). Registrado aqui para que "a
+limitação é conhecida" não seja confundido com "não há saída conhecida".
+
+---
+
 ## 3. Pipeline
 
 ```
@@ -3409,6 +3581,125 @@ A passada (2) existe porque **"a maioria" é ambígua**: é rótulo de peso E r�
 
 **Flag `--tom {estruturado,narrativo,ambos}` — MECANISMO DE DESENVOLVIMENTO (não é feature final):** existe para o **teste A/B humano** entre a saída estruturada (atual) e a narrativa durante o desenvolvimento. `estruturado` (default) mantém o comportamento histórico intacto; `narrativo` imprime só a prosa **mas os metadados de coleta e os avisos NUNCA somem** — modo degradado (sem_analise/reduzido) e flags continuam visíveis nos dois tons; `ambos` imprime os dois lado a lado. `narrativo`/`ambos` gastam **+1 chamada LLM** (o narrador). **A v2 consolidará um tom único** após a avaliação humana do A/B; até lá, `--tom` é dev-only. (Atalho de A/B: `--reuse-synthesis` reaproveita a síntese de um JSON já gerado, gastando só a chamada do narrador — para comparar tons sobre a MESMA síntese.)
 
+### [D3] Rotulagem de temas por EIXO — a metade qualitativa da linha (v1.9.14)
+
+O alinhamento por linha precisa de duas metades que vivem em lugares
+diferentes do pipeline:
+
+```
+Ritmo — arrasta (24/40) | lento mas justificado (11/40) | hipnótico (19/40)
+        └── FRASE:  vem dos `temas` de §[D]        └── NÚMERO: vem da
+            (o que ESTE grupo diz do eixo)             classificação por
+                                                       review (§2.5), somado
+                                                       em CÓDIGO
+```
+
+Elas não estavam ligadas: os `temas` são texto livre por bucket, a
+classificação é por review, e nada dizia que "Ritmo lento e arrastado" é o
+eixo `ritmo`. **[D3] é essa ligação, e só ela.**
+
+**Uma chamada por bucket.** Entrada: a lista FECHADA dos 10 eixos com as
+definições byte-idênticas às de `scripts/classificar_10.py`, mais os ≤6
+temas daquele bucket. Saída: um eixo por tema. Nenhum número entra no
+prompt e nenhum número sai dele — [D3] não vê frequência, não vê
+denominador e não vê os outros grupos.
+
+**Validação mecânica, não confiança.** O código confere cada rótulo contra a
+lista fechada; **o que não estiver nela vira `livre`**. Um eixo inventado
+nunca entra no schema — mesmo padrão de verificação em vez de instrução que
+a spec aplica desde a v1.2.3.
+
+#### A assimetria de validação, declarada
+
+A classificação de produção (§2.5) passou por auditoria humana de 100
+reviews, votação de 3 passadas, precisão e recall medidos **por eixo**, e
+duas variantes de prompt comparadas contra o mesmo gabarito com bootstrap
+pareado. **[D3] não passou por nada disso.** É um segundo uso da mesma
+taxonomia por um prompt que nunca foi medido contra gabarito humano.
+
+Isto está aqui como **ressalva de primeira classe, não nota de rodapé**: o
+número da célula tem oito sessões de medição atrás dele; o rótulo que decide
+em qual LINHA a célula aparece não tem nenhuma. As duas coisas convivem no
+mesmo pixel e não têm o mesmo estatuto.
+
+**A mitigação adotada** é proporcional ao risco e ao tamanho do problema:
+são ~50 células nos 3 filmes publicados, e a tabela `tema → eixo atribuído`
+é **conferida à mão pelo dono do projeto** antes de publicar
+(`resultado/v1914/ROTULAGEM_CONFERENCIA.md`). Não é a auditoria de 100
+reviews — é muito melhor que publicar sem validação nenhuma, e o que ela
+cobrir fica registrado como conferido, não como presumido.
+
+**O que [D3] NÃO pode fazer:** mudar o número. Se o rótulo põe um tema na
+linha errada, a linha erra a FRASE; a frequência daquele eixo continua sendo
+a contagem de reviews classificadas, alheia ao que [D3] decidiu. O modo de
+falha é de legenda, nunca de aritmética — e é por isso que uma etapa não
+calibrada é tolerável aqui e não seria na classificação.
+
+#### DUAS POPULAÇÕES DE 40 — a amostra classificada NÃO é a amostra analisada
+
+**Achado desta sessão, medido, e a limitação mais importante do schema.**
+
+`resultado/votacao-3/amostra.json` se declara "a população que a síntese
+veria". **Não é.** Ela foi montada com `selecao.selecionar(todas, hist)` —
+sem o argumento `orcamento_paginas_por_nivel`, que é o que liga a
+**estratificação por profundidade** da v1.9.5 (§3[C2]). O pipeline de
+produção passa esse argumento. Resultado: os dois lados selecionam 40
+reviews do mesmo bucket, sob os mesmos filtros, e **não são as mesmas 40**.
+
+Sobreposição medida (seleção de produção ∩ amostra classificada), 105
+buckets do catálogo: **mediana 75%, mínimo 30%, máximo 100%**. Os 3 filmes
+publicados estão entre os PIORES casos, e por um motivo estrutural — são os
+que mais recoletas acumularam, logo os de bruto mais profundo, e é
+exatamente onde a estratificação mais desloca a escolha:
+
+| filme | negativas | medianas | positivas |
+|---|---:|---:|---:|
+| `cure` | 27/40 | 25/40 | 23/40 |
+| `cidade-de-deus` | **13/40** | 19/40 | 15/40 |
+| `the-invite-2026` | 17/40 | 13/40 | 17/40 |
+
+**Por que isto importa tanto neste projeto.** É a mesma classe de defeito
+que a spec já protege entre NOTAS e REVIEWS COM TEXTO (§D2, invariante de
+vocabulário) e que a Entrega 6 desta versão fecha entre a janela da amostra
+e a janela do histograma: duas populações diferentes que o texto não pode
+apresentar como se fossem as mesmas pessoas. "40 de 40 analisadas" no
+cabeçalho do grupo e "24 de 40" na linha do eixo são **dois quarentas
+diferentes**.
+
+**O que foi feito, e por quê.**
+
+1. **A frequência por eixo é calculada sobre a amostra CLASSIFICADA, não
+   sobre a intersecção.** Calcular sobre a intersecção daria denominador
+   verdadeiro (13 a 27 por bucket), mas invalidaria a calibração inteira: a
+   margem de 20pp e o número de 13/35 filmes com contraste foram medidos com
+   `n=40` por bucket, e o quantum do lift saltaria de 2,5pp para 3,7-7,7pp —
+   trocaria uma limitação declarada por uma régua nova e não medida.
+2. **A divergência é DECLARADA no dado, não escondida.** Cada bloco de eixos
+   carrega `fonte_classificacao` com `n_classificadas`, `n_analisadas` e
+   `sobreposicao_com_analisadas` por bucket. Quem consome o JSON consegue ver
+   o tamanho do problema sem reproduzir esta medição.
+3. **A interface nunca apresenta os dois quarentas como o mesmo.** O
+   denominador do eixo é rotulado como *reviews classificadas* (§[E]),
+   distinto de *analisadas* no cabeçalho do grupo.
+
+**A correção estrutural, NÃO aplicada e recomendada.** Classificar as
+reviews da seleção de produção que ainda não têm classificação — ~191
+reviews nos 3 filmes publicados, ~573 chamadas com a votação de 3, sob o
+MESMO `taxonomia_id` e o MESMO prompt. Não é reclassificar o corpus (o que
+está classificado é reusado, como o versionamento por `taxonomia_id` foi
+desenhado para permitir): é ESTENDER a classificação às reviews que nunca
+passaram por ela. Fica fora do escopo desta sessão por decisão de escopo, e
+com uma consequência a considerar antes de fazê-lo: os 3 filmes passariam a
+ser medidos sobre uma amostra diferente da dos outros 32, e o lift de cada
+um pode mudar — inclusive o estado `contraste` de `cidade-de-deus`.
+
+**Correção de registro:** o campo `criterio` de `amostra.json` afirma
+"`selecao.selecionar()` com parâmetros de produção […] a amostra é a
+população que a síntese veria". A afirmação era verdadeira sob a v1.9.4 e
+deixou de ser na v1.9.5, quando a estratificação entrou e o script não foi
+atualizado junto. O arquivo não foi reescrito — a correção fica aqui, ao
+lado do número que a mede.
+
 ### [F] Ficha do filme (TMDB) — v1.3.0
 
 Etapa **aditiva e independente** do resto do pipeline (`ficha.py`): dado o título/ano do filme (derivados do slug por default — `titulo_ano_de_slug`, com override via `--titulo`/`--ano` no CLI para os casos em que o slug não carrega ano, ex. `cure`), busca a ficha técnica na API pública do TMDB (`api.themoviedb.org/3`).
@@ -3630,6 +3921,81 @@ Falha em qualquer uma → **1 retentativa** com reforço (listando os trechos pe
 
    O frontend (`frontend/`) aplica exatamente o mesmo tratamento e **tolera JSONs sem `distribuicao`** (filmes antigos/fallback) sem quebrar: omite os shares e usa o disclaimer antigo. Ordem visual dos grupos permanece negativas → medianas → positivas em qualquer caso — **a ordem não é reordenada por peso**; quem muda de ordem é só a prosa do MOVIMENTO 3.
 
+#### As TRÊS COLUNAS ALINHADAS POR EIXO (v1.9.14) — a promessa estrutural do produto
+
+Até aqui o frontend exibia três listas de temas empilhadas, cada uma na sua
+ordem, e a comparação entre grupos era trabalho mental do leitor. Com eixo
+fixo, a mesma informação vira **uma linha por eixo, três células**:
+
+```
+Ritmo   |  arrasta (24/40)  |  lento mas justificado (11/40)  |  hipnótico (19/40)
+```
+
+A ordem das colunas é **sempre** negativas → medianas → positivas, nunca
+reordenada por peso (regra inalterada desde a v1.4.0), e o formato das três
+células é idêntico (§0: a assimetria vem do dado, não da apresentação).
+
+**Os quatro estados que a renderização tem de tratar, e nenhum deles é
+ausência de conteúdo:**
+
+1. **Eixo presente em só um ou dois buckets.** A célula do bucket que não
+   fala daquele eixo fica VAZIA, marcada como vazia — não é zero, não é
+   traço solto: é "este grupo não fala disso", que é a informação.
+2. **`contraste: valorativo`.** O alinhamento existe e é exibido
+   normalmente; o que não existe é linha de contraste. A área ganha
+   **enunciado próprio** — os grupos concordam sobre o que o filme é e
+   discordam sobre se funciona —, nunca uma lista mais curta sem explicação.
+   `cidade-de-deus` (melhor lift 10pp) é o **caso de referência** deste
+   estado: se a interface parecer vazia ou quebrada nele, o estado não está
+   desenhado como primeira classe.
+3. **Bucket em estado reduzido do piso escalonado** (`sem_quantificador`,
+   `sem_numero`, `sem_analise`). A linha acompanha o que AQUELE bucket pode
+   dizer, célula a célula: sem número quando o piso proíbe número, sem
+   célula nenhuma quando proíbe análise. A permissão já existe em código
+   (`PERMISSOES_POR_ESTADO`, §D2) e é a mesma consultada aqui — não uma
+   segunda regra que possa divergir dela.
+4. **Filme sem bloco de eixos** (classificação ausente para aquele slug). O
+   frontend cai na lista de temas anterior, sem quebrar. É o caminho de todo
+   filme fora dos 35 classificados.
+
+**Denominador: `X de N reviews classificadas`.** Distinto de "N de N
+analisadas" no cabeçalho do grupo, e por um motivo medido, não por
+preciosismo de vocabulário — são duas amostras de 40 diferentes (§[D3],
+"Duas populações de 40"), e apresentá-las com o mesmo rótulo seria repetir
+exatamente o defeito que a Entrega 6 desta versão fecha do outro lado.
+
+#### Busca — de decorativa a filtro real (v1.9.14)
+
+A busca da home nunca filtrou nada: exibia "Busca em breve" e o catálogo
+inteiro seguia abaixo. Com eixos, ela passa a ter um critério real —
+**filtra por título e por eixo**, sobre o dado já embutido, sem rede. Digitar
+`ritmo` devolve os filmes cujo bloco de eixos tem `ritmo`; digitar um título
+segue funcionando como se espera. Sem resultado, a mensagem diz o que não
+casou, em vez de fingir que a funcionalidade não existe.
+
+#### Janela temporal declarada AO LADO DO DENOMINADOR (v1.9.14)
+
+O defeito: a amostra de reviews cobre uma janela estreita (mediana ~26 dias)
+enquanto o histograma de notas acumula desde 2012, e as duas frases apareciam
+no mesmo parágrafo como se descrevessem as mesmas pessoas.
+
+**Onde a declaração entra, e onde ela NÃO entra.** Ao lado do **denominador
+da amostra** — *"entre as 40 reviews analisadas, escritas majoritariamente
+em ⟨janela⟩"* —, **nunca** ao lado do rótulo de peso. O rótulo de peso fala
+do histograma de NOTAS, que é a população acumulada da vida do filme;
+carimbar nele uma janela de 26 dias inverteria o sentido e diria que 96% das
+notas são recentes. É a mesma invariante de vocabulário notas × reviews da
+v1.4.1, aplicada ao eixo do tempo.
+
+**O número vem da MEDIANA, nunca da média.** Em `data` a média é ~10× a
+mediana, por contaminação conhecida (`data` é a data ASSISTIDA, campo livre
+de diário — há review datada de 1442 no catálogo). A média seria mais
+lisonjeira (janela "mais ampla") e menos verdadeira; a mediana é robusta ao
+outlier que a contaminação produz. Fonte: `janela_temporal` e
+`distribuicao_pagina_origem`, ambos já calculados e persistidos desde as
+v1.9.1/v1.9.2 — nenhuma coleta nova, nenhum parâmetro de coleta tocado.
+
+
 ---
 
 ## 4. Metadados obrigatórios no output
@@ -3640,6 +4006,42 @@ Por bucket: agregados dos níveis + `modo` (completo/reduzido/sem_analise) + **(
 Por tema: **(v1.1.2)** `aspas_removidas`, além de `mencoes_clampadas`/`mencoes_valor_original` (v1.1.1).
 Globais: `slug`, `data_coleta`, `origem` (cache/rede por página), versão da spec, **(v1.1.4)** `reviews_url`, **(v1.2.0)** `narrativa` + `narrativa_flags` (só quando `--tom narrativo|ambos`), **(v1.3.0)** `ficha` (objeto TMDB ou `null` — §3a), **(v1.3.1)** `consensos_usados` (lista de `{propriedade, grupos_de_origem, temas_de_origem}` do MOVIMENTO 2 — só quando `--tom narrativo|ambos`) + `narrativa_flags.consenso_suspeito`, **(v1.4.0)** `distribuicao` (bloco do histograma ou `null` — §3[G]) + `narrativa_flags.peso_nao_ancorado`, **(v1.4.1)** `quantificadores_usados` (lista de `{quantificador, tema}` do MOVIMENTO 3 — só quando `--tom narrativo|ambos`) + `narrativa_flags.vocabulario_peso_suspeito`, **(v1.5.0)** `marcadores_perspectiva` (lista de `{grupo, trecho}` do MOVIMENTO 3 — só quando `--tom narrativo|ambos`) + `narrativa_flags.perspectiva_nao_marcada`, `metricas_fluencia` (`{n_frases, media_palavras, cv_comprimento, frase_mais_curta, aberturas_repetidas, verbos_reporte, adverbios_mente}` — só quando `--tom narrativo|ambos`), **(v1.6.0)** `narrativa_bruta` (saída do narrador antes da edição, para auditoria) + `edicao_flags` (`{edicao_descartada, motivo_descarte, protegidos_perdidos, numeros_alterados, houve_retentativa, falhou, n_protegidos}` — só quando `--tom narrativo|ambos` e sem `--no-edicao`; **(v1.7.3)** `n_tentativas` (quantas chamadas o editor fez, 1 a `1 + EDITOR_MAX_TENTATIVAS`) e `motivos_por_tentativa` (lista do motivo de cada falha, na ordem — telemetria de qual checagem mais reprova, não critério de aprovação); **(v1.7.4)** `similaridade` (float 0-1, SEMPRE presente, aceita ou não a edição) e `capitalizacao_ajustada` (bool)). **A flag `narrativa_flags.fluencia_baixa` foi REMOVIDA na v1.6.0** (ver §D2, "Telemetria de fluência"). Na ficha: **(v1.6.0)** `diretor_transliterado` (bool), **(v1.7.0)** `ano_fonte` (`"slug" | "letterboxd" | "argumento"`). Globais **(v1.7.0)**: `ficha_indisponivel` (`"ano_desconhecido"` — presente só quando a ficha não foi buscada por falta de ano confiável, §3[F]) e `ficha_descartada` (`{motivo, esperado, recebido}` — presente só quando o TMDB resolveu para um filme de ano divergente e a ficha inteira foi rejeitada, §3[F]); ambos ausentes do JSON no caminho normal (ficha resolvida com sucesso ou `--no-ficha`).
 Por bucket: **(v1.4.0)** `share_real` (percentual inteiro), **omitido** quando não há distribuição.
+
+**(v1.9.14) Bloco global `eixos`** — o schema do Ponto 2 (§2.5). Presente só quando existe classificação para o slug sob o `taxonomia_id` corrente; **ausente por completo** (chave não emitida) quando não existe, para que o consumidor distinga "não classificado" de "classificado e sem eixo". Estrutura:
+
+```json
+{
+  "eixos": {
+    "taxonomia_id": "ebab2667de74",
+    "margem_lift_pp": 20,
+    "contraste": "valorativo",
+    "fonte_classificacao": {
+      "arquivo": "resultado/votacao-3/consenso.jsonl",
+      "criterio": "votacao_3_consenso_2_de_3",
+      "por_bucket": {
+        "negativas": {"n_classificadas": 40, "n_analisadas": 40,
+                      "sobreposicao_com_analisadas": 13}
+      }
+    },
+    "linhas": [
+      {
+        "eixo": "ritmo",
+        "por_bucket": {
+          "negativas": {"mencoes": 24, "de_n": 40, "freq_pct": 60,
+                        "lift_pp": 27.5, "tema": "Ritmo lento e arrastado",
+                        "exemplo_parafraseado": "…"},
+          "medianas":  {"mencoes": 11, "de_n": 40, "freq_pct": 27.5,
+                        "lift_pp": -32.5, "tema": null,
+                        "exemplo_parafraseado": null}
+        },
+        "bullet_de": {"negativas": "contraste", "medianas": null}
+      }
+    ]
+  }
+}
+```
+
+`mencoes`/`de_n` são as contagens INTEIRAS — a fonte da verdade; `freq_pct` e `lift_pp` são derivados e arredondados **para exibição**, e nenhuma decisão do código lê os derivados (a comparação com a margem é exata, §2.5). `tema`/`exemplo_parafraseado` vêm de §[D3] e são `null` quando aquele bucket não tem tema naquele eixo — célula vazia é estado, não falta de dado. `bullet_de` é `"frequencia"` | `"contraste"` | `null` por bucket, e é o que a interface lê para saber o que exibir como bullet daquele grupo. `contraste` é `"tematico"` | `"valorativo"` (§2.5), sempre acompanhado do `taxonomia_id` sob o qual foi decidido — o veredito descreve a régua atual, não o filme.
 
 ---
 
