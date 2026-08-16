@@ -182,29 +182,50 @@ def bullets(freqs: dict[str, dict[str, Any]],
             ) -> dict[str, list[dict[str, Any]]]:
     """2 bullets de maior FREQUÊNCIA + 3 de maior LIFT, por bucket (§2.5).
 
-    Um eixo escolhido por frequência não reaparece por lift. Eixo com lift
-    abaixo (ou em cima) da margem não entra como contraste — a lista fica
-    mais curta, e a lista curta é a informação `contraste: valorativo`, não
-    um preenchimento que falhou. Empate sai pela ordem canônica dos eixos,
-    para que dois filmes com o mesmo perfil não saiam em ordens diferentes
-    por acidente de iteração.
+    **Os dois critérios são INDEPENDENTES, e um eixo pode ganhar os dois.**
+    A primeira versão deste código descontava do contraste os eixos já
+    escolhidos por frequência, e o efeito apareceu no dado real: em `cure`,
+    `tom_atmosfera` tem lift de 40pp nas positivas — o maior contraste do
+    filme — e, por ser também o mais falado do grupo, saía rotulado apenas
+    como consenso. O leitor perdia exatamente a informação mais rara. Agora o
+    eixo aparece UMA vez, com papel `frequencia_e_contraste`: a linha não
+    duplica, e nenhum dos dois sinais some.
+
+    Consequência aceita: a lista tem de 0 a 5 linhas, e menos de 5 é
+    informação — ou o grupo tem poucos eixos, ou o que ele mais fala é também
+    o que só ele fala. Eixo com lift abaixo (ou em cima) da margem não entra
+    como contraste; a lista encurta em vez de ser completada com ruído.
+    Empate sai pela ordem canônica dos eixos, para que dois filmes com o
+    mesmo perfil não saiam em ordens diferentes por acidente de iteração.
     """
     fora: dict[str, list[dict[str, Any]]] = {}
     for bucket, f in freqs.items():
         candidatos = [e for e in EIXOS if f["por_eixo"].get(e, 0) > 0]
-        por_freq = sorted(candidatos,
-                          key=lambda e: (-fracao(f, e), _ordem(e)))
-        escolhidos = por_freq[:N_BULLETS_FREQUENCIA]
-        linhas = [{"eixo": e, "papel": "frequencia"} for e in escolhidos]
-
         lift_do = lifts_do_filme.get(bucket, {})
-        contrastes = [e for e in candidatos
-                      if e not in escolhidos
-                      and acima_da_margem(lift_do.get(e, Fraction(0)),
-                                          margem_pp)]
-        contrastes.sort(key=lambda e: (-lift_do[e], _ordem(e)))
-        linhas += [{"eixo": e, "papel": "contraste"}
-                   for e in contrastes[:N_BULLETS_CONTRASTE]]
+
+        por_freq = sorted(candidatos, key=lambda e: (-fracao(f, e), _ordem(e)))
+        de_frequencia = por_freq[:N_BULLETS_FREQUENCIA]
+
+        acima = [e for e in candidatos
+                 if acima_da_margem(lift_do.get(e, Fraction(0)), margem_pp)]
+        acima.sort(key=lambda e: (-lift_do[e], _ordem(e)))
+        de_contraste = acima[:N_BULLETS_CONTRASTE]
+
+        linhas = []
+        for eixo in candidatos:
+            f_ok, c_ok = eixo in de_frequencia, eixo in de_contraste
+            if not (f_ok or c_ok):
+                continue
+            papel = ("frequencia_e_contraste" if f_ok and c_ok
+                     else "frequencia" if f_ok else "contraste")
+            linhas.append({"eixo": eixo, "papel": papel})
+        # ordem de exibição: contraste primeiro (é o que só este grupo diz),
+        # depois consenso; dentro de cada papel, pela força do critério.
+        linhas.sort(key=lambda l: (
+            0 if l["papel"] != "frequencia" else 1,
+            -lift_do.get(l["eixo"], Fraction(0)) if l["papel"] != "frequencia"
+            else -fracao(f, l["eixo"]),
+            _ordem(l["eixo"])))
         fora[bucket] = linhas
     return fora
 
@@ -261,6 +282,13 @@ def montar_bloco(classificacao: dict[str, dict[str, list[str]]],
                 "lift_pp": _pp(lifts_do_filme[b][eixo]),
                 "tema": tema.get("tema"),
                 "exemplo_parafraseado": tema.get("exemplo_parafraseado"),
+                # Os temas do MESMO grupo que caíram neste eixo e não ficaram
+                # com a célula (§D3, `celulas_por_eixo`). Viajam junto porque
+                # a alternativa é o leitor perder tema: com 6 temas e 10
+                # eixos a colisão é frequente — em `cure`/negativas, 6 temas
+                # ocupam 3 células. O que não vira legenda continua visível.
+                "temas_no_mesmo_eixo": list(tema.get("temas_no_mesmo_eixo")
+                                            or []),
             }
         linhas.append({
             "eixo": eixo,

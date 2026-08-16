@@ -99,3 +99,14 @@ def test_ids_analisados_do_bruto_reproduz_a_selecao_de_producao():
     esperado = {n: {r.id for ns in b.niveis.values() for r in ns.validas}
                 for n, b in sel.items()}
     assert P.ids_analisados_do_bruto("cure") == esperado
+
+
+def test_o_bloco_carrega_a_propria_versao(output):
+    """Enriquecer um JSON já publicado deixa DOIS carimbos no arquivo: o da
+    narrativa e o do schema. A divergência é a verdade sobre o artefato — a
+    alternativa seria reescrever o carimbo do arquivo inteiro depois do fato,
+    que é o que a política de `VERSAO_COLETOR` já recusa."""
+    from espectro24.config import SPEC_VERSION
+    bloco = P.montar_eixos("filme-x", output, {}, consenso=_consenso(),
+                           client_call=_cliente())
+    assert bloco["spec_version"] == SPEC_VERSION

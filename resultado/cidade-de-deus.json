@@ -899,5 +899,414 @@
       "cache_miss_tokens": 9246
     },
     "latencia_s": 17.99
+  },
+  "eixos": {
+    "taxonomia_id": "ebab2667de74",
+    "margem_lift_pp": 20,
+    "contraste": "valorativo",
+    "fonte_classificacao": {
+      "arquivo": "resultado/votacao-3/consenso.jsonl",
+      "criterio": "votacao_3_consenso_2_de_3",
+      "por_bucket": {
+        "negativas": {
+          "n_classificadas": 40,
+          "n_analisadas": 40,
+          "sobreposicao_com_analisadas": 13
+        },
+        "medianas": {
+          "n_classificadas": 40,
+          "n_analisadas": 40,
+          "sobreposicao_com_analisadas": 19
+        },
+        "positivas": {
+          "n_classificadas": 40,
+          "n_analisadas": 40,
+          "sobreposicao_com_analisadas": 15
+        }
+      }
+    },
+    "linhas": [
+      {
+        "eixo": "ritmo",
+        "por_bucket": {
+          "negativas": {
+            "mencoes": 17,
+            "de_n": 40,
+            "freq_pct": 42.5,
+            "lift_pp": -10.0,
+            "tema": "Excesso de violência e ritmo exaustivo",
+            "exemplo_parafraseado": "A violência constante e a edição frenética são criticadas por tornarem a experiência cansativa e por reduzirem o impacto emocional, fazendo com que as mortes pareçam banais e sem peso.",
+            "temas_no_mesmo_eixo": []
+          },
+          "medianas": {
+            "mencoes": 21,
+            "de_n": 40,
+            "freq_pct": 52.5,
+            "lift_pp": 10.0,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "positivas": {
+            "mencoes": 13,
+            "de_n": 40,
+            "freq_pct": 32.5,
+            "lift_pp": -20.0,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          }
+        },
+        "bullet_de": {
+          "negativas": null,
+          "medianas": null,
+          "positivas": null
+        }
+      },
+      {
+        "eixo": "atuacao",
+        "por_bucket": {
+          "negativas": {
+            "mencoes": 3,
+            "de_n": 40,
+            "freq_pct": 7.5,
+            "lift_pp": -5.0,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "medianas": {
+            "mencoes": 5,
+            "de_n": 40,
+            "freq_pct": 12.5,
+            "lift_pp": 2.5,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "positivas": {
+            "mencoes": 4,
+            "de_n": 40,
+            "freq_pct": 10.0,
+            "lift_pp": -2.5,
+            "tema": "Atuações e elenco",
+            "exemplo_parafraseado": "As reviews elogiam as atuações convincentes, especialmente de atores não profissionais, que adicionam autenticidade e profundidade aos personagens.",
+            "temas_no_mesmo_eixo": []
+          }
+        },
+        "bullet_de": {
+          "negativas": null,
+          "medianas": null,
+          "positivas": null
+        }
+      },
+      {
+        "eixo": "direcao_imagem",
+        "por_bucket": {
+          "negativas": {
+            "mencoes": 21,
+            "de_n": 40,
+            "freq_pct": 52.5,
+            "lift_pp": 2.5,
+            "tema": "Estética e estilo vazios, tecnicamente chamativos",
+            "exemplo_parafraseado": "Embora a direção de arte e a fotografia chamem atenção, o estilo é visto como superficial e mais preocupado em impressionar do que em servir à narrativa.",
+            "temas_no_mesmo_eixo": []
+          },
+          "medianas": {
+            "mencoes": 15,
+            "de_n": 40,
+            "freq_pct": 37.5,
+            "lift_pp": -15.0,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "positivas": {
+            "mencoes": 20,
+            "de_n": 40,
+            "freq_pct": 50.0,
+            "lift_pp": -2.5,
+            "tema": "Cinematografia e direção",
+            "exemplo_parafraseado": "Os elogios se concentram na fotografia marcante, nos ângulos de câmera dinâmicos e na direção segura, que criam uma experiência visual imersiva e estilisticamente impressionante.",
+            "temas_no_mesmo_eixo": []
+          }
+        },
+        "bullet_de": {
+          "negativas": "frequencia",
+          "medianas": null,
+          "positivas": null
+        }
+      },
+      {
+        "eixo": "roteiro_estrutura",
+        "por_bucket": {
+          "negativas": {
+            "mencoes": 15,
+            "de_n": 40,
+            "freq_pct": 37.5,
+            "lift_pp": -27.5,
+            "tema": "Falta de desenvolvimento dos personagens",
+            "exemplo_parafraseado": "Os personagens são considerados rasos, servindo mais como tipos do que como pessoas reais, o que impede a conexão emocional do público e enfraquece o drama.",
+            "temas_no_mesmo_eixo": [
+              "Narrativa fragmentada e excesso de narração"
+            ]
+          },
+          "medianas": {
+            "mencoes": 26,
+            "de_n": 40,
+            "freq_pct": 65.0,
+            "lift_pp": 7.5,
+            "tema": "Narrativa episódica e difícil de seguir",
+            "exemplo_parafraseado": "A história é contada em fragmentos que não se conectam bem, tornando difícil acompanhar a trama e os muitos personagens.",
+            "temas_no_mesmo_eixo": [
+              "Falta de personagens cativantes"
+            ]
+          },
+          "positivas": {
+            "mencoes": 23,
+            "de_n": 40,
+            "freq_pct": 57.5,
+            "lift_pp": -7.5,
+            "tema": "Roteiro e narrativa",
+            "exemplo_parafraseado": "Muitas reviews positivas mencionam a estrutura não linear e a forma como as histórias se entrelaçam, mantendo o interesse e proporcionando uma narrativa coesa e envolvente.",
+            "temas_no_mesmo_eixo": []
+          }
+        },
+        "bullet_de": {
+          "negativas": null,
+          "medianas": "frequencia",
+          "positivas": "frequencia"
+        }
+      },
+      {
+        "eixo": "som_trilha",
+        "por_bucket": {
+          "negativas": {
+            "mencoes": 3,
+            "de_n": 40,
+            "freq_pct": 7.5,
+            "lift_pp": -2.5,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "medianas": {
+            "mencoes": 4,
+            "de_n": 40,
+            "freq_pct": 10.0,
+            "lift_pp": 2.5,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "positivas": {
+            "mencoes": 2,
+            "de_n": 40,
+            "freq_pct": 5.0,
+            "lift_pp": -5.0,
+            "tema": "Trilha sonora e ritmo",
+            "exemplo_parafraseado": "Algumas reviews destacam a trilha sonora marcante e o ritmo acelerado, que contribuem para a energia e a fluidez do filme, mantendo o espectador preso à tela.",
+            "temas_no_mesmo_eixo": []
+          }
+        },
+        "bullet_de": {
+          "negativas": null,
+          "medianas": null,
+          "positivas": null
+        }
+      },
+      {
+        "eixo": "tom_atmosfera",
+        "por_bucket": {
+          "negativas": {
+            "mencoes": 3,
+            "de_n": 40,
+            "freq_pct": 7.5,
+            "lift_pp": -12.5,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "medianas": {
+            "mencoes": 8,
+            "de_n": 40,
+            "freq_pct": 20.0,
+            "lift_pp": 0.0,
+            "tema": "Excesso de violência",
+            "exemplo_parafraseado": "A violência é tão constante e intensa que acaba se tornando entorpecente, com mortes demais que perdem o impacto.",
+            "temas_no_mesmo_eixo": []
+          },
+          "positivas": {
+            "mencoes": 8,
+            "de_n": 40,
+            "freq_pct": 20.0,
+            "lift_pp": 0.0,
+            "tema": "Realismo e brutalidade",
+            "exemplo_parafraseado": "As reviews positivas frequentemente destacam como o filme retrata de forma crua e realista a violência e a pobreza nas favelas, transmitindo uma sensação de autenticidade que impacta o espectador.",
+            "temas_no_mesmo_eixo": []
+          }
+        },
+        "bullet_de": {
+          "negativas": null,
+          "medianas": null,
+          "positivas": null
+        }
+      },
+      {
+        "eixo": "impacto_emocional",
+        "por_bucket": {
+          "negativas": {
+            "mencoes": 35,
+            "de_n": 40,
+            "freq_pct": 87.5,
+            "lift_pp": 5.0,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "medianas": {
+            "mencoes": 33,
+            "de_n": 40,
+            "freq_pct": 82.5,
+            "lift_pp": -5.0,
+            "tema": "Técnica impressionante, mas distanciamento emocional",
+            "exemplo_parafraseado": "A direção, a fotografia e a edição são brilhantes, mas o estilo visual tão chamativo cria uma barreira que impede uma conexão mais profunda com a história.",
+            "temas_no_mesmo_eixo": []
+          },
+          "positivas": {
+            "mencoes": 28,
+            "de_n": 40,
+            "freq_pct": 70.0,
+            "lift_pp": -17.5,
+            "tema": "Impacto emocional",
+            "exemplo_parafraseado": "Os espectadores relatam que o filme provoca fortes emoções, variando de choque e tristeza à admiração, e que a história permanece na mente muito depois do fim.",
+            "temas_no_mesmo_eixo": []
+          }
+        },
+        "bullet_de": {
+          "negativas": "frequencia",
+          "medianas": "frequencia",
+          "positivas": "frequencia"
+        }
+      },
+      {
+        "eixo": "comparacoes",
+        "por_bucket": {
+          "negativas": {
+            "mencoes": 14,
+            "de_n": 40,
+            "freq_pct": 35.0,
+            "lift_pp": -7.5,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "medianas": {
+            "mencoes": 14,
+            "de_n": 40,
+            "freq_pct": 35.0,
+            "lift_pp": -7.5,
+            "tema": "Comparações com outros filmes de gangster",
+            "exemplo_parafraseado": "A obra remete a outros clássicos do gênero, mas muitos acham que ela não alcança a mesma profundidade ou complexidade desses filmes.",
+            "temas_no_mesmo_eixo": []
+          },
+          "positivas": {
+            "mencoes": 17,
+            "de_n": 40,
+            "freq_pct": 42.5,
+            "lift_pp": 7.5,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          }
+        },
+        "bullet_de": {
+          "negativas": null,
+          "medianas": null,
+          "positivas": null
+        }
+      },
+      {
+        "eixo": "expectativa",
+        "por_bucket": {
+          "negativas": {
+            "mencoes": 4,
+            "de_n": 40,
+            "freq_pct": 10.0,
+            "lift_pp": -7.5,
+            "tema": "Filme superestimado em relação à sua recepção",
+            "exemplo_parafraseado": "Muitos que não gostaram mencionam que não entendem a alta avaliação do filme, considerando-o superestimado e aquém das expectativas criadas pela fama.",
+            "temas_no_mesmo_eixo": []
+          },
+          "medianas": {
+            "mencoes": 7,
+            "de_n": 40,
+            "freq_pct": 17.5,
+            "lift_pp": 2.5,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "positivas": {
+            "mencoes": 6,
+            "de_n": 40,
+            "freq_pct": 15.0,
+            "lift_pp": -2.5,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          }
+        },
+        "bullet_de": {
+          "negativas": null,
+          "medianas": null,
+          "positivas": null
+        }
+      },
+      {
+        "eixo": "critica_social",
+        "por_bucket": {
+          "negativas": {
+            "mencoes": 18,
+            "de_n": 40,
+            "freq_pct": 45.0,
+            "lift_pp": -2.5,
+            "tema": "Retrato explorador e sensacionalista da pobreza",
+            "exemplo_parafraseado": "O filme é visto como uma exploração da miséria, usando a violência e o sofrimento como espetáculo para o público estrangeiro, sem se aprofundar nas causas sociais ou dar dignidade aos personagens.",
+            "temas_no_mesmo_eixo": []
+          },
+          "medianas": {
+            "mencoes": 19,
+            "de_n": 40,
+            "freq_pct": 47.5,
+            "lift_pp": 2.5,
+            "tema": "Retrato realista da vida na favela",
+            "exemplo_parafraseado": "O filme mostra com crueza a pobreza e a falta de oportunidades nas comunidades carentes, o que dá um peso documental à obra.",
+            "temas_no_mesmo_eixo": []
+          },
+          "positivas": {
+            "mencoes": 14,
+            "de_n": 40,
+            "freq_pct": 35.0,
+            "lift_pp": -12.5,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          }
+        },
+        "bullet_de": {
+          "negativas": null,
+          "medianas": null,
+          "positivas": null
+        }
+      }
+    ],
+    "rotulagem": {
+      "n_chamadas": 3,
+      "falharam": [],
+      "fora_da_taxonomia": {},
+      "houve_retentativa": []
+    },
+    "spec_version": "1.9.14"
   }
 }

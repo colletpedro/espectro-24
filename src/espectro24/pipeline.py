@@ -30,6 +30,7 @@ from .buckets import FRONTEIRAS, mapa_de_niveis
 from .collector import coletar_superset, collect_distribuicao, estender_nivel
 from .config import (
     BUCKETS,
+    SPEC_VERSION,
     CASCATA_CHARS,
     COTA_POR_BUCKET,
     DADOS_BRUTO_DIR,
@@ -478,4 +479,11 @@ def montar_eixos(slug: str, output: dict, analisadas: dict[str, set[str]],
     bloco = E.montar_bloco(do_filme, analisadas, tabela)
     if bloco is not None:
         bloco["rotulagem"] = telemetria
+        # v1.9.14: o bloco carrega a PRÓPRIA versão, e não a do arquivo que o
+        # hospeda. Numa execução completa os dois carimbos coincidem; num
+        # enriquecimento de JSON já publicado eles DIVERGEM — a narrativa veio
+        # de uma versão, o schema de eixos de outra —, e essa divergência é a
+        # verdade sobre o artefato, não um defeito a esconder atrás de um
+        # carimbo único reescrito depois do fato (política de `VERSAO_COLETOR`).
+        bloco["spec_version"] = SPEC_VERSION
     return bloco

@@ -154,22 +154,26 @@ def test_bullets_sao_2_de_frequencia_e_3_de_lift():
     }, n=40)
     f, l = E.frequencias(cls), E.lifts(E.frequencias(cls))
     bullets = E.bullets(f, l)["negativas"]
+    # CONTRASTE primeiro — é o que só este grupo diz; consenso depois.
     assert [b["papel"] for b in bullets] == (
-        ["frequencia", "frequencia", "contraste", "contraste", "contraste"])
-    # os 2 de frequência são os mais falados; os 3 de contraste, os de maior
-    # lift — e nenhum eixo aparece nos dois papéis.
-    assert [b["eixo"] for b in bullets[:2]] == ["ritmo", "roteiro_estrutura"]
+        ["contraste", "contraste", "contraste", "frequencia", "frequencia"])
+    assert [b["eixo"] for b in bullets[3:]] == ["ritmo", "roteiro_estrutura"]
     assert len({b["eixo"] for b in bullets}) == 5
 
 
-def test_eixo_de_frequencia_nao_reaparece_como_contraste():
-    """`ritmo` é o mais falado E o de maior lift: entra uma vez só."""
+def test_eixo_que_e_consenso_E_contraste_entra_uma_vez_com_os_dois_papeis():
+    """Achado no dado real (`cure`/positivas, `tom_atmosfera` com 40pp de
+    lift): descontar do contraste o que já foi escolhido por frequência
+    escondia o maior contraste do filme atrás do rótulo de consenso. Uma
+    linha, os dois papéis."""
     cls = _uniforme({"negativas": [("ritmo", 36), ("atuacao", 20)],
                      "medianas": [("ritmo", 4), ("atuacao", 18)],
                      "positivas": [("ritmo", 2), ("atuacao", 19)]}, n=40)
     bullets = E.bullets(E.frequencias(cls), E.lifts(E.frequencias(cls)))
     eixos = [b["eixo"] for b in bullets["negativas"]]
     assert eixos.count("ritmo") == 1
+    papel = next(b["papel"] for b in bullets["negativas"] if b["eixo"] == "ritmo")
+    assert papel == "frequencia_e_contraste"
 
 
 def test_lista_encurta_em_vez_de_completar_com_ruido():
@@ -354,3 +358,18 @@ def test_carregar_exige_o_manifesto_da_taxonomia(tmp_path):
                     "eixos": []}) + "\n", encoding="utf-8")
     with pytest.raises(ValueError, match="taxonomia"):
         E.carregar_classificacao(tmp_path / "consenso.jsonl")
+
+
+def test_tema_que_perde_a_celula_por_colisao_nao_some_do_bloco():
+    """Com 6 temas e 10 eixos a colisão é frequente (medido: `cure`/negativas
+    tem 6 temas em 3 células). O tema que não vira legenda da linha continua
+    no dado — perder tema em silêncio seria a interface escondendo material
+    que a síntese produziu."""
+    cls = _uniforme({"negativas": [("roteiro_estrutura", 26)]}, n=40)
+    bloco = E.montar_bloco(cls, analisadas={}, temas_por_eixo={
+        "negativas": {"roteiro_estrutura": {
+            "tema": "Personagens pouco cativantes",
+            "exemplo_parafraseado": "x",
+            "temas_no_mesmo_eixo": ["Enredo confuso", "Diálogos fracos"]}}})
+    cel = bloco["linhas"][0]["por_bucket"]["negativas"]
+    assert cel["temas_no_mesmo_eixo"] == ["Enredo confuso", "Diálogos fracos"]
