@@ -609,3 +609,80 @@ def test_contracoes_continuam_valendo_sobre_a_forma_comparativa():
     vs = q.variantes_rotulo("uma parte menor das notas (~33%)")
     assert "numa parte menor das notas (~33%)" in vs
     assert "duma parte menor das notas (~33%)" not in vs
+
+
+# ===========================================================================
+# [v1.9.14, Entrega 4] O estado `contraste` chega ao MOVIMENTO 3
+# ===========================================================================
+#
+# 22 dos 35 filmes do catálogo são `valorativo` — os três grupos falam das
+# MESMAS coisas e discordam só no veredito. Sem dizer isso ao narrador, o
+# movimento 3 de dois terços do catálogo vira uma busca por contraste que a
+# medição não encontrou, e o texto ou inventa diferença ou soa truncado.
+
+def _eixos(contraste="valorativo", linhas=None):
+    return {"taxonomia_id": "ebab2667de74", "margem_lift_pp": 20,
+            "contraste": contraste,
+            "fonte_classificacao": {"por_bucket": {}},
+            "linhas": linhas or []}
+
+
+def _linha_de_contraste(eixo, bucket):
+    return {"eixo": eixo,
+            "por_bucket": {bucket: {"mencoes": 30, "de_n": 40}},
+            "bullet_de": {bucket: "contraste"}}
+
+
+def test_briefing_sem_bloco_de_eixos_nao_inventa_contraste():
+    """Filme fora dos 35 classificados: o campo não existe, e o briefing
+    segue byte-idêntico ao da v1.9.13 nessa parte."""
+    b = br.montar_briefing(_output())
+    assert "contraste" not in b
+
+
+def test_briefing_carrega_o_estado_e_a_taxonomia_que_o_decidiu():
+    """§2.5: o veredito descreve a régua atual, não o filme — e por isso não
+    viaja sem o `taxonomia_id` ao lado."""
+    b = br.montar_briefing(_output(eixos=_eixos("valorativo")))
+    assert b["contraste"]["estado"] == "valorativo"
+    assert b["contraste"]["taxonomia_id"] == "ebab2667de74"
+
+
+def test_contraste_tematico_lista_o_eixo_que_distingue_cada_grupo():
+    eixos = _eixos("tematico", [_linha_de_contraste("ritmo", "negativas"),
+                                _linha_de_contraste("tom_atmosfera", "positivas")])
+    b = br.montar_briefing(_output(eixos=eixos))
+    assert b["contraste"]["eixos_por_grupo"] == {
+        "negativas": ["ritmo"], "positivas": ["tom_atmosfera"]}
+
+
+def test_valorativo_manda_dizer_que_a_discordancia_e_de_veredito():
+    texto = br.serializar_briefing(
+        br.montar_briefing(_output(eixos=_eixos("valorativo"))))
+    assert "CONTRASTE ENTRE OS GRUPOS" in texto
+    assert "mesmas coisas" in texto.lower()
+    assert "veredito" in texto.lower()
+
+
+def test_valorativo_proibe_inventar_contraste_que_a_medicao_nao_achou():
+    texto = br.serializar_briefing(
+        br.montar_briefing(_output(eixos=_eixos("valorativo"))))
+    assert "PROIBIDO" in texto.split("CONTRASTE ENTRE OS GRUPOS")[1]
+
+
+def test_tematico_nomeia_os_eixos_na_serializacao():
+    eixos = _eixos("tematico", [_linha_de_contraste("ritmo", "negativas")])
+    texto = br.serializar_briefing(br.montar_briefing(_output(eixos=eixos)))
+    bloco = texto.split("CONTRASTE ENTRE OS GRUPOS")[1]
+    assert "ritmo" in bloco and "negativas" in bloco
+
+
+def test_sem_eixos_a_serializacao_nao_ganha_secao_nenhuma():
+    texto = br.serializar_briefing(br.montar_briefing(_output()))
+    assert "CONTRASTE ENTRE OS GRUPOS" not in texto
+
+
+def test_o_prompt_ensina_o_que_fazer_com_o_estado():
+    """A instrução tem de existir no prompt, senão o campo do briefing chega
+    e o narrador não sabe que ele é obrigatório."""
+    assert "CONTRASTE" in br.PROMPT_NARRADOR_BRIEFING

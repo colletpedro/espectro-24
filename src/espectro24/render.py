@@ -44,7 +44,8 @@ def disclaimer_de(output: dict) -> str:
 def build_output(slug: str, buckets: list[BucketResult], data_coleta: str,
                  origens: dict[str, str], total_observado: int,
                  ficha: dict[str, Any] | None = None,
-                 distribuicao=None, coleta: dict[str, Any] | None = None) -> dict[str, Any]:
+                 distribuicao=None, coleta: dict[str, Any] | None = None,
+                 eixos: dict[str, Any] | None = None) -> dict[str, Any]:
     # v1.4.0: share real por bucket, quando a distribuição existe. Ausente
     # (chave não emitida) quando não existe — o consumidor distingue
     # "não coletado" de "coletado e deu 0%". A aplicação é delegada a
@@ -70,6 +71,12 @@ def build_output(slug: str, buckets: list[BucketResult], data_coleta: str,
         # ordenação, qual coletor, quantas páginas por nível, quais níveis
         # pararam no teto — sem precisar abrir `dados/`.
         "coleta": coleta,
+        # v1.9.14 (§2.5, §4): schema de eixos — frequência por eixo em cada
+        # bucket, lift, estado `contraste` e o `taxonomia_id` que o decidiu.
+        # A chave é OMITIDA quando não há classificação para o slug (mesma
+        # política de `share_real`): ausência distingue "não classificado" de
+        # "classificado e sem eixo", e um bloco vazio diria a segunda coisa.
+        **({"eixos": eixos} if eixos else {}),
         "origem_paginas": origens,  # cache | network por chave
         "buckets": [
             {

@@ -441,6 +441,34 @@ def _material_movimento2(output: dict) -> list[dict]:
     return material
 
 
+def _contraste_do_output(output: dict) -> dict | None:
+    """[v1.9.14, Entrega 4] O estado `contraste` (§2.5) traduzido para o
+    briefing — ou `None` quando o filme não tem bloco de eixos.
+
+    **Por que é obrigatório e não decorativo.** 22 dos 35 filmes do catálogo
+    são `valorativo`: os três grupos falam das mesmas coisas e discordam só
+    no veredito. Um narrador que não sabe disso escreve o movimento 3 de dois
+    terços do catálogo procurando uma diferença temática que a medição não
+    encontrou — e ou inventa, ou o texto sai truncado. O estado é dado, como
+    o rótulo de peso e a marcação de perspectiva já são desde a v1.4.0.
+
+    Viaja SEMPRE com o `taxonomia_id` que o decidiu: o veredito descreve o
+    que a régua atual enxerga, não uma propriedade do filme (§2.5).
+    """
+    eixos = output.get("eixos")
+    if not eixos:
+        return None
+    por_grupo: dict[str, list[str]] = {}
+    for linha in eixos.get("linhas") or []:
+        for bucket, papel in (linha.get("bullet_de") or {}).items():
+            if papel == "contraste":
+                por_grupo.setdefault(bucket, []).append(linha["eixo"])
+    return {"estado": eixos.get("contraste"),
+            "taxonomia_id": eixos.get("taxonomia_id"),
+            "margem_lift_pp": eixos.get("margem_lift_pp"),
+            "eixos_por_grupo": por_grupo}
+
+
 def montar_briefing(output: dict, max_temas_por_grupo: int = MAX_TEMAS_POR_GRUPO
                     ) -> dict:
     """O documento de decisões, pronto para virar prosa.
@@ -493,7 +521,10 @@ def montar_briefing(output: dict, max_temas_por_grupo: int = MAX_TEMAS_POR_GRUPO
     ficha = output.get("ficha")
     orcamento = dict(ORCAMENTO_COM_FICHA if ficha else ORCAMENTO_SEM_FICHA)
 
+    contraste = _contraste_do_output(output)
+
     return {
+        **({"contraste": contraste} if contraste else {}),
         "ficha": ficha,
         "total_reviews_observadas": output.get("total_reviews_observadas", 0),
         "distribuicao": {
@@ -553,6 +584,25 @@ def serializar_briefing(b: dict) -> str:
                  "factual. É PROIBIDO citar frequência aqui e é PROIBIDO "
                  "usar esta lista para acrescentar tema ao movimento 3 — o "
                  "movimento 3 usa apenas os temas listados por grupo abaixo.")
+        L.append("")
+
+    c = b.get("contraste")
+    if c:
+        L.append("CONTRASTE ENTRE OS GRUPOS (medido, não opinião):")
+        if c["estado"] == "valorativo":
+            L.append("  Os três grupos falam das MESMAS coisas e discordam "
+                     "no VEREDITO, não no assunto. Diga isso UMA vez, com "
+                     "suas palavras, no movimento 3 — algo como: os grupos "
+                     "concordam sobre o que o filme é e discordam sobre se "
+                     "ele funciona. É PROIBIDO apresentar como diferença de "
+                     "assunto o que a medição mostrou ser diferença de "
+                     "juízo: nenhum tema separa os grupos aqui.")
+        else:
+            L.append("  Há assunto que separa os grupos. Cada eixo abaixo é "
+                     "falado por aquele grupo MUITO mais que pelos outros — "
+                     "dê a ele o peso do parágrafo do grupo:")
+            for grupo, eixos in c["eixos_por_grupo"].items():
+                L.append(f"    - {grupo}: {', '.join(eixos)}")
         L.append("")
 
     L.append("ORDEM OBRIGATÓRIA DO MOVIMENTO 3 (nesta sequência): "
@@ -672,6 +722,12 @@ com carga depreciativa ("apenas para eles", "só para esses poucos").
 seriedade — sem ironia e sem insinuar que quem pensa assim está errado.
 7. ESCOPO: cada afirmação é atribuída ao SEU grupo. É PROIBIDO generalizar \
 para "os críticos", "o público" ou "o consenso".
+7b. CONTRASTE: quando o briefing trouxer a seção CONTRASTE ENTRE OS GRUPOS, \
+ela é obrigatória e vale sobre a sua intuição. Se ela disser que a \
+discordância é de VEREDITO, o movimento 3 precisa dizer isso explicitamente \
+uma vez — e é PROIBIDO fabricar diferença de assunto entre os grupos para \
+preencher o movimento. Concordar sobre o que o filme é e discordar sobre se \
+ele funciona é um resultado, não uma falta de resultado.
 8. FORMA: português do Brasil, sem aspas de citação, sem subtítulos, entre \
 250 e 400 palavras. Separe os movimentos em PARÁGRAFOS — pelo menos um \
 parágrafo por movimento escrito, separados por linha em branco, e nenhum \

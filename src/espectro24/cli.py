@@ -23,7 +23,14 @@ from .config import (
 from .fetcher import AntiBotError, Fetcher
 from .ficha import buscar_ficha, resolver_ano, titulo_ano_de_slug
 from .collector import collect_distribuicao
-from .pipeline import resolve_slug, run_pipeline, total_observado
+from .pipeline import (
+    ids_analisados,
+    ids_analisados_do_bruto,
+    montar_eixos,
+    resolve_slug,
+    run_pipeline,
+    total_observado,
+)
 from .render import (
     aplicar_distribuicao,
     build_output,
@@ -107,6 +114,11 @@ def _parse_args(argv):
                        "default: derivado do slug quando o slug tem sufixo -YYYY")
     p.add_argument("--no-ficha", action="store_true",
                    help="pula a busca da ficha TMDB (v1.3.0)")
+    p.add_argument("--no-eixos", action="store_true",
+                   help="pula o schema de eixos (v1.9.14, §2.5) e a rotulagem "
+                       "[D3]. Sem ele o JSON sai sem o bloco `eixos`, o "
+                       "frontend cai na lista de temas anterior e o briefing "
+                       "não recebe o estado `contraste`")
     p.add_argument("--no-distribuicao", action="store_true",
                    help="pula a busca do histograma de notas do Letterboxd "
                        "(v1.4.0); sem ele o narrador volta às regras da "
@@ -162,6 +174,8 @@ def main(argv=None):
             provider_sintese = provider_do_estagio("classificacao", args.provider)
         if vai_narrar:
             provider_do_estagio("narrativa", args.provider)
+        if not args.no_eixos:
+            provider_do_estagio("rotulagem", args.provider)
     except ProviderError as e:
         print(f"Provider LLM: {e}", file=sys.stderr)
         print("(ou rode com --no-synth / --tom estruturado)", file=sys.stderr)
@@ -277,6 +291,37 @@ def main(argv=None):
                 output["ficha_descartada"] = ficha_descartada
             if aviso_ficha:
                 print(f"⚠️  Ficha TMDB: {aviso_ficha}", file=sys.stderr)
+
+    # --- [D3] + schema de eixos (v1.9.14, §2.5) ---
+    # ANTES da narrativa, e a ordem é obrigatória: o briefing lê `contraste`
+    # daqui (Entrega 4), e 22 dos 35 filmes do catálogo dependem disso para o
+    # movimento 3 não sair procurando um contraste que a medição não achou.
+    # ADITIVO: qualquer falha devolve `None`, a chave não é emitida, e o
+    # frontend cai na lista de temas anterior — mesmo estatuto de ficha (§3[F])
+    # e distribuição (§3[G]).
+    if not args.no_eixos:
+        analisadas = (ids_analisados(buckets) if not args.reuse_synthesis
+                      else ids_analisados_do_bruto(
+                          slug, coleta=output.get("coleta"),
+                          raiz=args.dados_dir, cota_por_bucket=args.cota))
+        bloco = montar_eixos(slug, output, analisadas, provider=args.provider,
+                             model=args.model)
+        if bloco is None:
+            output.pop("eixos", None)
+            print("ℹ️  Sem bloco de eixos: este slug não tem classificação sob "
+                  "a taxonomia corrente.", file=sys.stderr)
+        else:
+            output["eixos"] = bloco
+            rot = bloco["rotulagem"]
+            print(f"  eixos: contraste={bloco['contraste']} · "
+                  f"{len(bloco['linhas'])} linhas · rotulagem em "
+                  f"{rot['n_chamadas']} chamada(s)"
+                  + (f" · FALHOU em {', '.join(rot['falharam'])}"
+                     if rot["falharam"] else ""), file=sys.stderr)
+            if rot["fora_da_taxonomia"]:
+                print(f"⚠️  Rotulagem devolveu eixo fora da taxonomia "
+                      f"(virou `livre`): {rot['fora_da_taxonomia']}",
+                      file=sys.stderr)
 
     # --- [D2] narração (etapa pós-síntese) ---
     # v1.9.11: o caminho de produção passa a ser o BRIEFING DETERMINÍSTICO +

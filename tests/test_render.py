@@ -1,5 +1,8 @@
 """Render (§E) — foco na mudança v1.1.4: bucket sem_analise aponta para a
 URL de reviews em vez de exibir texto bruto."""
+import json
+
+from espectro24 import render
 from espectro24.models import BucketResult, LevelResult, Review, Tema
 from espectro24.render import build_output, render_terminal, reviews_url_de
 
@@ -158,3 +161,36 @@ def test_consenso_suspeito_mostra_aviso():
     out["narrativa_flags"]["consenso_suspeito"] = True
     render = render_terminal(out, tom="narrativo")
     assert "consensos_usados citou grupo/tema inexistente" in render
+
+
+# ===========================================================================
+# [v1.9.14, Entrega 2] O bloco global `eixos` no JSON de resultado (§4)
+# ===========================================================================
+
+def _bloco_eixos():
+    return {"taxonomia_id": "ebab2667de74", "margem_lift_pp": 20,
+            "contraste": "valorativo",
+            "fonte_classificacao": {"arquivo": "x", "criterio": "y",
+                                    "por_bucket": {}},
+            "linhas": []}
+
+
+def test_output_sem_classificacao_NAO_emite_a_chave_eixos():
+    """Chave ausente distingue 'filme não classificado' de 'classificado e
+    sem eixo' — a mesma política de `share_real` desde a v1.4.0."""
+    out = render.build_output("cure", [], "2026-01-01", {}, 100)
+    assert "eixos" not in out
+
+
+def test_output_com_classificacao_carrega_o_bloco_inteiro():
+    out = render.build_output("cure", [], "2026-01-01", {}, 100,
+                              eixos=_bloco_eixos())
+    assert out["eixos"]["contraste"] == "valorativo"
+    assert out["eixos"]["taxonomia_id"] == "ebab2667de74"
+
+
+def test_o_bloco_de_eixos_e_serializavel(tmp_path):
+    out = render.build_output("cure", [], "2026-01-01", {}, 100,
+                              eixos=_bloco_eixos())
+    caminho = render.write_json(out, out_dir=tmp_path)
+    assert json.loads(caminho.read_text(encoding="utf-8"))["eixos"]["margem_lift_pp"] == 20

@@ -401,3 +401,81 @@ def run_pipeline(fetcher: Fetcher, slug: str, data_coleta: str,
 def total_observado(superset) -> int:
     """Total de reviews BRUTAS observadas na coleta (§E, rodapé)."""
     return sum(nb.n_bruta for nb in superset.niveis.values())
+
+
+def ids_analisados(buckets) -> dict[str, set[str]]:
+    """[v1.9.14] Os ids das reviews que a SÍNTESE leu, por bucket.
+
+    Existe para medir a sobreposição com a amostra CLASSIFICADA, que não é a
+    mesma (§[D3], "Duas populações de 40"). Sem este número o JSON diria "24
+    de 40" sem que ninguém pudesse saber que aquele 40 não é o 40 do
+    cabeçalho do grupo.
+    """
+    return {b.nome: {r.id for r in b.reviews_analisadas} for b in buckets}
+
+
+def ids_analisados_do_bruto(slug: str, coleta: dict | None = None,
+                            raiz: str | Path = DADOS_BRUTO_DIR,
+                            cota_por_bucket: int = COTA_POR_BUCKET
+                            ) -> dict[str, set[str]]:
+    """O mesmo conjunto, re-derivado do bruto — para quem não tem os
+    `BucketResult` em mãos (enriquecimento de um JSON já publicado).
+
+    **Reusa `selecionar` com os MESMOS parâmetros do pipeline**, incluindo o
+    `orcamento_paginas_por_nivel` que liga a estratificação por profundidade
+    (v1.9.5). Omiti-lo é exatamente o defeito que produziu as duas amostras
+    divergentes (§[D3]) — aqui ele é passado, e é por isso que este caminho
+    reproduz a seleção de produção em vez de uma parecida com ela.
+
+    Zero rede: lê o bruto persistido, como toda re-seleção offline.
+    """
+    meta, todas = carregar(slug, raiz=raiz)
+    meta = meta or {}
+    coleta = coleta or meta
+    hist = {float(k): v for k, v in (coleta.get("histograma_bruto") or {}).items()}
+    orc = {float(k): v
+           for k, v in (coleta.get("orcamento_paginas_por_nivel") or {}).items()}
+    sel = selecionar(todas, hist or None, cota_por_bucket=cota_por_bucket,
+                     orcamento_paginas_por_nivel=orc)
+    return {nome: {r.id for ns in b.niveis.values() for r in ns.validas}
+            for nome, b in sel.items()}
+
+
+def montar_eixos(slug: str, output: dict, analisadas: dict[str, set[str]],
+                 consenso=None, client_call=None, provider=None,
+                 model=None) -> dict | None:
+    """[v1.9.14, §2.5 + §D3] O bloco `eixos` de um filme — ou `None`.
+
+    ADITIVO por construção, no mesmo estatuto da ficha (§3[F]) e da
+    distribuição (§3[G]): filme sem classificação, arquivo ausente ou
+    taxonomia divergente devolvem `None` e o pipeline segue. O que NUNCA
+    acontece é o bloco sair pela metade — sem classificação não há
+    denominador, e sem denominador não há frequência que se possa publicar.
+
+    A ordem importa: [D3] roda ANTES de `montar_bloco` porque é ele que dá a
+    FRASE de cada célula; e o bloco inteiro roda antes da narrativa, porque o
+    briefing lê `contraste` daqui (Entrega 4).
+    """
+    from . import eixos as E
+    from .rotulagem import rotular_output
+
+    if consenso is None:
+        caminho = Path(E.CONSENSO_PADRAO)
+        if not caminho.exists():
+            return None
+        try:
+            catalogo = E.carregar_classificacao(caminho)
+        except (ValueError, OSError):
+            return None
+    else:
+        catalogo = consenso
+    do_filme = catalogo.get(slug)
+    if not do_filme:
+        return None
+
+    tabela, telemetria = rotular_output(output, client_call=client_call,
+                                        provider=provider, model=model)
+    bloco = E.montar_bloco(do_filme, analisadas, tabela)
+    if bloco is not None:
+        bloco["rotulagem"] = telemetria
+    return bloco
