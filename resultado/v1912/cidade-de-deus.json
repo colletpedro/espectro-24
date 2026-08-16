@@ -1,0 +1,902 @@
+{
+  "slug": "cidade-de-deus",
+  "data_coleta": "2026-08-16T02:12:21.385492+00:00",
+  "spec_version": "1.9.11",
+  "total_reviews_observadas": 505,
+  "reviews_url": "https://letterboxd.com/film/cidade-de-deus/reviews/",
+  "ficha": {
+    "titulo": "Cidade de Deus",
+    "sinopse_oficial": "Buscapé é um jovem morador da Cidade de Deus que cresce em meio à violência. Com medo de se tornar um bandido, enxerga na fotografia uma oportunidade de ter uma vida digna.",
+    "sinopse_fallback_en": false,
+    "generos": [
+      "Drama",
+      "Crime"
+    ],
+    "duracao_min": 130,
+    "diretor": "Fernando Meirelles",
+    "diretor_transliterado": false,
+    "ano": 2002,
+    "fonte": "tmdb",
+    "ano_fonte": "letterboxd"
+  },
+  "distribuicao": {
+    "n_notas_total": 1216381,
+    "por_nivel": {
+      "0.5": 893,
+      "1.0": 1645,
+      "1.5": 1143,
+      "2.0": 5503,
+      "2.5": 6324,
+      "3.0": 35847,
+      "3.5": 58393,
+      "4.0": 245630,
+      "4.5": 241463,
+      "5.0": 619540
+    },
+    "por_bucket": {
+      "negativas": 1,
+      "medianas": 3,
+      "positivas": 96
+    },
+    "fonte": "letterboxd_histograma"
+  },
+  "coleta": {
+    "slug": "cidade-de-deus",
+    "coletado_em": "2026-08-16T02:11:59.184069+00:00",
+    "versao_coletor": "1.9.6",
+    "ordenacao_usada": "by/added",
+    "histograma_bruto": {
+      "0.5": 893,
+      "1.0": 1645,
+      "1.5": 1143,
+      "2.0": 5503,
+      "2.5": 6324,
+      "3.0": 35847,
+      "3.5": 58393,
+      "4.0": 245630,
+      "4.5": 241463,
+      "5.0": 619540
+    },
+    "orcamento_paginas_por_nivel": {
+      "0.5": 1,
+      "1.0": 3,
+      "1.5": 2,
+      "2.0": 10,
+      "2.5": 6,
+      "3.0": 10,
+      "3.5": 1,
+      "4.0": 3,
+      "4.5": 3,
+      "5.0": 9
+    },
+    "paginas_gastas_por_nivel": {
+      "0.5": 1,
+      "1.0": 2,
+      "1.5": 2,
+      "2.0": 8,
+      "2.5": 4,
+      "3.0": 10,
+      "3.5": 1,
+      "4.0": 3,
+      "4.5": 3,
+      "5.0": 9
+    },
+    "paradas_por_limite": [
+      "0.5",
+      "1.0",
+      "1.5",
+      "2.0",
+      "2.5",
+      "3.0",
+      "3.5",
+      "4.0",
+      "4.5",
+      "5.0"
+    ],
+    "contagem_bruta_por_nivel": {
+      "0.5": 12,
+      "1.0": 24,
+      "1.5": 24,
+      "2.0": 96,
+      "2.5": 48,
+      "3.0": 113,
+      "3.5": 12,
+      "4.0": 36,
+      "4.5": 36,
+      "5.0": 104
+    },
+    "contagem_estimada_valida_por_nivel": {
+      "0.5": 3,
+      "1.0": 6,
+      "1.5": 3,
+      "2.0": 35,
+      "2.5": 13,
+      "3.0": 28,
+      "3.5": 6,
+      "4.0": 8,
+      "4.5": 12,
+      "5.0": 27
+    },
+    "motivo_parada_por_nivel": {
+      "0.5": "orcamento_esgotado",
+      "1.0": "orcamento_esgotado",
+      "1.5": "orcamento_esgotado",
+      "2.0": "orcamento_esgotado",
+      "2.5": "orcamento_esgotado",
+      "3.0": "orcamento_esgotado",
+      "3.5": "orcamento_esgotado",
+      "4.0": "orcamento_esgotado",
+      "4.5": "orcamento_esgotado",
+      "5.0": "orcamento_esgotado"
+    },
+    "paginas_base_por_nivel": {
+      "0.5": 1,
+      "1.0": 2,
+      "1.5": 2,
+      "2.0": 8,
+      "2.5": 4,
+      "3.0": 10,
+      "3.5": 1,
+      "4.0": 3,
+      "4.5": 3,
+      "5.0": 9
+    },
+    "paginas_extensao_por_nivel": {
+      "0.5": 0,
+      "1.0": 0,
+      "1.5": 0,
+      "2.0": 0,
+      "2.5": 0,
+      "3.0": 0,
+      "3.5": 0,
+      "4.0": 0,
+      "4.5": 0,
+      "5.0": 0
+    },
+    "extensao_por_bucket": {
+      "negativas": {
+        "paginas_base": 13,
+        "paginas_extensao": 0,
+        "extras_por_nivel": {},
+        "motivo_parada": "meta_atingida",
+        "n_validas_pos_base": 71,
+        "n_validas_pos_extensao": 71,
+        "meta": 50
+      },
+      "medianas": {
+        "paginas_base": 14,
+        "paginas_extensao": 0,
+        "extras_por_nivel": {},
+        "motivo_parada": "meta_atingida",
+        "n_validas_pos_base": 54,
+        "n_validas_pos_extensao": 54,
+        "meta": 50
+      },
+      "positivas": {
+        "paginas_base": 16,
+        "paginas_extensao": 0,
+        "extras_por_nivel": {},
+        "motivo_parada": "meta_atingida",
+        "n_validas_pos_base": 65,
+        "n_validas_pos_extensao": 65,
+        "meta": 50
+      }
+    },
+    "profundidade_sondagem": {
+      "nivel_sondado": 5.0,
+      "profundidade": 256,
+      "exata": false,
+      "requisicoes": 4,
+      "motivo": "teto_plataforma"
+    },
+    "profundidade_estimada_por_nivel": {
+      "0.5": 1,
+      "1.0": 1,
+      "1.5": 1,
+      "2.0": 2,
+      "2.5": 3,
+      "3.0": 15,
+      "3.5": 24,
+      "4.0": 101,
+      "4.5": 100,
+      "5.0": 256
+    },
+    "janela_temporal": {
+      "total": {
+        "n": 895,
+        "min": "2003-04-01",
+        "max": "2026-08-07",
+        "p5": "2012-08-30",
+        "p50": "2026-07-13",
+        "p95": "2026-08-06"
+      },
+      "por_bucket": {
+        "negativas": {
+          "n": 300,
+          "min": "2004-10-14",
+          "max": "2026-08-06",
+          "p5": "2018-07-13",
+          "p50": "2026-05-23",
+          "p95": "2026-07-31"
+        },
+        "medianas": {
+          "n": 275,
+          "min": "2003-04-01",
+          "max": "2026-08-07",
+          "p5": "2014-11-28",
+          "p50": "2026-07-19",
+          "p95": "2026-08-05"
+        },
+        "positivas": {
+          "n": 320,
+          "min": "2004-02-28",
+          "max": "2026-08-07",
+          "p5": "2012-03-06",
+          "p50": "2026-08-06",
+          "p95": "2026-08-07"
+        }
+      }
+    },
+    "dias_por_100_paginas": {
+      "n_paginas": 15,
+      "pagina_min": 1,
+      "pagina_max": 128,
+      "dias": 3,
+      "dias_por_100_paginas": 2.3622047244094486,
+      "paginas_para_1_ano": 15452
+    },
+    "ano_lancamento": 2002,
+    "ano_fonte": "letterboxd",
+    "n_reviews_bruto": 895
+  },
+  "origem_paginas": {
+    "_histograma/cidade-de-deus.html": "cache",
+    "cidade-de-deus/pages/by_added/rated_5_page_4.html": "cache",
+    "cidade-de-deus/pages/by_added/rated_5_page_16.html": "cache",
+    "cidade-de-deus/pages/by_added/rated_5_page_64.html": "cache",
+    "cidade-de-deus/pages/by_added/rated_5_page_256.html": "cache",
+    "cidade-de-deus/pages/by_added/rated_0_5_page_1.html": "cache",
+    "cidade-de-deus/pages/by_added/rated_1_page_1.html": "cache",
+    "cidade-de-deus/pages/by_added/rated_1_page_2.html": "cache",
+    "cidade-de-deus/fulltext/viewing_1411309818.html": "cache",
+    "cidade-de-deus/fulltext/viewing_1411048735.html": "cache",
+    "cidade-de-deus/fulltext/viewing_1386263310.html": "cache",
+    "cidade-de-deus/pages/by_added/rated_1_5_page_1.html": "cache",
+    "cidade-de-deus/pages/by_added/rated_1_5_page_2.html": "cache",
+    "cidade-de-deus/fulltext/viewing_1371642233.html": "cache",
+    "cidade-de-deus/pages/by_added/rated_2_page_1.html": "cache",
+    "cidade-de-deus/pages/by_added/rated_2_page_2.html": "cache",
+    "cidade-de-deus/pages/by_added/rated_2_page_3.html": "cache",
+    "cidade-de-deus/pages/by_added/rated_2_page_4.html": "cache",
+    "cidade-de-deus/pages/by_added/rated_2_page_5.html": "cache",
+    "cidade-de-deus/pages/by_added/rated_2_page_6.html": "cache",
+    "cidade-de-deus/pages/by_added/rated_2_page_7.html": "cache",
+    "cidade-de-deus/pages/by_added/rated_2_page_8.html": "cache",
+    "cidade-de-deus/fulltext/viewing_1409240723.html": "cache",
+    "cidade-de-deus/fulltext/viewing_1394480628.html": "cache",
+    "cidade-de-deus/fulltext/viewing_1383416378.html": "cache",
+    "cidade-de-deus/fulltext/viewing_1342164099.html": "cache",
+    "cidade-de-deus/fulltext/viewing_1341815991.html": "cache",
+    "cidade-de-deus/fulltext/viewing_1340464697.html": "cache",
+    "cidade-de-deus/fulltext/viewing_1305751458.html": "cache",
+    "cidade-de-deus/fulltext/viewing_1298799432.html": "cache",
+    "cidade-de-deus/fulltext/viewing_1293861403.html": "cache",
+    "cidade-de-deus/pages/by_added/rated_2_5_page_1.html": "cache",
+    "cidade-de-deus/pages/by_added/rated_2_5_page_2.html": "cache",
+    "cidade-de-deus/pages/by_added/rated_2_5_page_3.html": "cache",
+    "cidade-de-deus/pages/by_added/rated_2_5_page_4.html": "cache",
+    "cidade-de-deus/fulltext/viewing_1429047632.html": "cache",
+    "cidade-de-deus/fulltext/viewing_1425937181.html": "cache",
+    "cidade-de-deus/fulltext/viewing_1413038340.html": "cache",
+    "cidade-de-deus/fulltext/viewing_1395489678.html": "cache",
+    "cidade-de-deus/fulltext/viewing_1392072671.html": "cache",
+    "cidade-de-deus/fulltext/viewing_1390919379.html": "cache",
+    "cidade-de-deus/fulltext/viewing_1386632629.html": "cache",
+    "cidade-de-deus/pages/by_added/rated_3_page_1.html": "cache",
+    "cidade-de-deus/pages/by_added/rated_3_page_2.html": "cache",
+    "cidade-de-deus/pages/by_added/rated_3_page_3.html": "cache",
+    "cidade-de-deus/pages/by_added/rated_3_page_4.html": "cache",
+    "cidade-de-deus/pages/by_added/rated_3_page_5.html": "cache",
+    "cidade-de-deus/pages/by_added/rated_3_page_6.html": "cache",
+    "cidade-de-deus/pages/by_added/rated_3_page_7.html": "cache",
+    "cidade-de-deus/pages/by_added/rated_3_page_8.html": "cache",
+    "cidade-de-deus/pages/by_added/rated_3_page_9.html": "cache",
+    "cidade-de-deus/pages/by_added/rated_3_page_11.html": "cache",
+    "cidade-de-deus/fulltext/viewing_1428934262.html": "cache",
+    "cidade-de-deus/fulltext/viewing_1426980142.html": "cache",
+    "cidade-de-deus/fulltext/viewing_1420618214.html": "cache",
+    "cidade-de-deus/fulltext/viewing_1418501162.html": "cache",
+    "cidade-de-deus/fulltext/viewing_1413613604.html": "cache",
+    "cidade-de-deus/fulltext/viewing_1413441371.html": "cache",
+    "cidade-de-deus/fulltext/viewing_1409503042.html": "cache",
+    "cidade-de-deus/fulltext/viewing_1407385317.html": "cache",
+    "cidade-de-deus/fulltext/viewing_1406539130.html": "cache",
+    "cidade-de-deus/pages/by_added/rated_3_5_page_1.html": "cache",
+    "cidade-de-deus/pages/by_added/rated_4_page_1.html": "cache",
+    "cidade-de-deus/pages/by_added/rated_4_page_2.html": "cache",
+    "cidade-de-deus/pages/by_added/rated_4_page_25.html": "cache",
+    "cidade-de-deus/fulltext/viewing_1436931957.html": "cache",
+    "cidade-de-deus/pages/by_added/rated_4_5_page_1.html": "cache",
+    "cidade-de-deus/pages/by_added/rated_4_5_page_2.html": "cache",
+    "cidade-de-deus/pages/by_added/rated_4_5_page_25.html": "cache",
+    "cidade-de-deus/fulltext/viewing_1437525312.html": "cache",
+    "cidade-de-deus/fulltext/viewing_1437387537.html": "cache",
+    "cidade-de-deus/fulltext/viewing_1433986581.html": "cache",
+    "cidade-de-deus/pages/by_added/rated_5_page_1.html": "cache",
+    "cidade-de-deus/pages/by_added/rated_5_page_2.html": "cache",
+    "cidade-de-deus/pages/by_added/rated_5_page_3.html": "cache",
+    "cidade-de-deus/pages/by_added/rated_5_page_5.html": "cache",
+    "cidade-de-deus/pages/by_added/rated_5_page_6.html": "cache",
+    "cidade-de-deus/pages/by_added/rated_5_page_7.html": "cache",
+    "cidade-de-deus/pages/by_added/rated_5_page_128.html": "cache",
+    "cidade-de-deus/fulltext/viewing_1437689044.html": "cache",
+    "cidade-de-deus/fulltext/viewing_1437675359.html": "cache",
+    "cidade-de-deus/fulltext/viewing_1437635354.html": "cache",
+    "cidade-de-deus/fulltext/viewing_1437617841.html": "cache",
+    "cidade-de-deus/fulltext/viewing_1437580949.html": "cache",
+    "cidade-de-deus/fulltext/viewing_1437507961.html": "cache",
+    "cidade-de-deus/fulltext/viewing_1437464702.html": "cache",
+    "cidade-de-deus/fulltext/viewing_1437422771.html": "cache",
+    "cidade-de-deus/fulltext/viewing_1429438344.html": "cache",
+    "cidade-de-deus/film_page.html": "cache"
+  },
+  "buckets": [
+    {
+      "bucket": "negativas",
+      "alvo": 40,
+      "modo": "completo",
+      "estado_piso": "completa",
+      "n_validas": 40,
+      "share_real": 1,
+      "composicao_alvo": {
+        "0.5": 4,
+        "1.0": 7,
+        "1.5": 5,
+        "2.0": 24
+      },
+      "composicao_atingida": {
+        "0.5": 4,
+        "1.0": 7,
+        "1.5": 5,
+        "2.0": 24
+      },
+      "cascata_por_degrau": {
+        "150": 40
+      },
+      "deficit_redistribuido": 0,
+      "distribuicao_pagina_origem": {
+        "n": 40,
+        "min": 1,
+        "max": 12,
+        "p5": 1,
+        "p50": 3,
+        "p95": 12,
+        "fracao_profunda": 0.375
+      },
+      "niveis": [
+        {
+          "nivel": 0.5,
+          "n_validas": 4,
+          "n_alvo": 4,
+          "n_brutas": 36,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 1,
+          "n_descartadas_curtas": 22,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 0,
+          "motivos_descarte": {
+            "truncada_sem_texto": 0,
+            "spoiler": 1,
+            "abaixo_min_chars": 22,
+            "excedente_cota": 9,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 1
+        },
+        {
+          "nivel": 1.0,
+          "n_validas": 7,
+          "n_alvo": 7,
+          "n_brutas": 60,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 2,
+          "n_descartadas_curtas": 39,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 0,
+          "motivos_descarte": {
+            "truncada_sem_texto": 0,
+            "spoiler": 2,
+            "abaixo_min_chars": 39,
+            "excedente_cota": 12,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 2
+        },
+        {
+          "nivel": 1.5,
+          "n_validas": 5,
+          "n_alvo": 5,
+          "n_brutas": 48,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 2,
+          "n_descartadas_curtas": 31,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 0,
+          "motivos_descarte": {
+            "truncada_sem_texto": 0,
+            "spoiler": 2,
+            "abaixo_min_chars": 31,
+            "excedente_cota": 10,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 2
+        },
+        {
+          "nivel": 2.0,
+          "n_validas": 24,
+          "n_alvo": 24,
+          "n_brutas": 156,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 2,
+          "n_descartadas_curtas": 89,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 0,
+          "motivos_descarte": {
+            "truncada_sem_texto": 0,
+            "spoiler": 2,
+            "abaixo_min_chars": 89,
+            "excedente_cota": 41,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 8
+        }
+      ],
+      "temas": [
+        {
+          "tema": "Violência excessiva e exploração",
+          "mencoes_aproximadas": 15,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "O crítico aponta que o filme abusa de cenas chocantes e violentas, incluindo mortes e estupros, sem aprofundar as causas sociais, resultando em uma experiência cansativa e que parece explorar o sofrimento alheio como espetáculo.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Superestimado",
+          "mencoes_aproximadas": 12,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "O espectador afirma que não entende a alta nota do filme, pois apesar de reconhecer alguns méritos técnicos, a história não o envolveu e ele não vê motivo para tanto elogio.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Roteiro fraco e desenvolvimento de personagens",
+          "mencoes_aproximadas": 10,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "O comentarista critica o roteiro por ser previsível e cheio de clichês, e os personagens por serem superficiais, o que impede que o público crie conexão emocional com eles.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Narração e estrutura confusa",
+          "mencoes_aproximadas": 8,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "O usuário reclama que a narração constante e os cortes rápidos tornam o filme cansativo e difícil de acompanhar, além de atrapalharem o desenvolvimento da história.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Estilo visual e direção artificiais",
+          "mencoes_aproximadas": 6,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "O crítico acha a fotografia e a edição exageradas, com câmera tremida e filtros feios, dando um aspecto de comercial e afastando qualquer sensação de realismo.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Irrelevante ou desconectado da realidade",
+          "mencoes_aproximadas": 5,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "O espectador considera o filme alienígena e glamorizado, mostrando uma visão estereotipada da favela que não corresponde à realidade, e acha que a história poderia se passar em qualquer lugar.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        }
+      ],
+      "observacao_geral": "As reviews negativas apontam, em geral, que o filme é tecnicamente competente, mas falha em criar conexão emocional, sendo considerado superestimado e excessivamente violento. Muitos criticam a estética estilizada e a falta de aprofundamento social, sentindo-se mais impactados pelo desconforto do que pela reflexão.",
+      "idioma_invalido": false,
+      "escopo_suspeito": false
+    },
+    {
+      "bucket": "medianas",
+      "alvo": 40,
+      "modo": "completo",
+      "estado_piso": "completa",
+      "n_validas": 40,
+      "share_real": 3,
+      "composicao_alvo": {
+        "2.5": 6,
+        "3.0": 34
+      },
+      "composicao_atingida": {
+        "2.5": 6,
+        "3.0": 34
+      },
+      "cascata_por_degrau": {
+        "150": 40
+      },
+      "deficit_redistribuido": 0,
+      "distribuicao_pagina_origem": {
+        "n": 40,
+        "min": 1,
+        "max": 12,
+        "p5": 1,
+        "p50": 3,
+        "p95": 12,
+        "fracao_profunda": 0.2
+      },
+      "niveis": [
+        {
+          "nivel": 2.5,
+          "n_validas": 6,
+          "n_alvo": 6,
+          "n_brutas": 84,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 0,
+          "n_descartadas_curtas": 51,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 1,
+          "motivos_descarte": {
+            "truncada_sem_texto": 1,
+            "spoiler": 0,
+            "abaixo_min_chars": 51,
+            "excedente_cota": 26,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 4
+        },
+        {
+          "nivel": 3.0,
+          "n_validas": 34,
+          "n_alvo": 34,
+          "n_brutas": 191,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 7,
+          "n_descartadas_curtas": 113,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 2,
+          "motivos_descarte": {
+            "truncada_sem_texto": 2,
+            "spoiler": 7,
+            "abaixo_min_chars": 113,
+            "excedente_cota": 35,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 10
+        }
+      ],
+      "temas": [
+        {
+          "tema": "Excesso de violência e ritmo cansativo",
+          "mencoes_aproximadas": 12,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "Muitas reviews medianas apontam que a violência é excessiva e acaba se tornando repetitiva, tornando o filme cansativo e difícil de assistir.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Estilo visual impressionante, mas com falta de profundidade",
+          "mencoes_aproximadas": 10,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "A fotografia e a edição são frequentemente elogiadas como tecnicamente brilhantes, mas vários espectadores sentem que o estilo é tão dominante que compromete uma exploração mais profunda dos temas sociais.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Roteiro e narrativa fragmentados",
+          "mencoes_aproximadas": 8,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "Diversas reviews mencionam que a estrutura episódica e os muitos personagens dificultam uma conexão mais forte com a história, que parece mais uma sequência de cenas soltas do que um todo coeso.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Atuações convincentes e autenticidade",
+          "mencoes_aproximadas": 7,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "Espectadores destacam que o uso de atores locais e a atuação dos jovens conferem autenticidade à representação da favela, embora alguns personagens principais não tenham despertado empatia.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Expectativa versus realidade",
+          "mencoes_aproximadas": 6,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "Muitos entraram com altas expectativas devido à reputação do filme, mas saíram desapontados por não se sentirem impactados como esperavam, apesar de reconhecerem suas qualidades técnicas.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Representação realista da pobreza e da violência",
+          "mencoes_aproximadas": 5,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "Embora seja elogiado por retratar a dura realidade das favelas e a falta de oportunidades, alguns consideram que a abordagem é superficial, focando mais no espetáculo da violência do que em uma crítica social substancial.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        }
+      ],
+      "observacao_geral": "As reviews medianas reconhecem a qualidade técnica e a autenticidade do filme, mas apontam um excesso de violência que se torna cansativo, uma narrativa fragmentada e uma falta de profundidade emocional ou intelectual. Muitos o consideram superestimado, apesar de apreciar sua energia visual e as atuações.",
+      "idioma_invalido": false,
+      "escopo_suspeito": false
+    },
+    {
+      "bucket": "positivas",
+      "alvo": 40,
+      "modo": "completo",
+      "estado_piso": "completa",
+      "n_validas": 40,
+      "share_real": 96,
+      "composicao_alvo": {
+        "3.5": 2,
+        "4.0": 9,
+        "4.5": 8,
+        "5.0": 21
+      },
+      "composicao_atingida": {
+        "3.5": 2,
+        "4.0": 9,
+        "4.5": 8,
+        "5.0": 21
+      },
+      "cascata_por_degrau": {
+        "150": 40
+      },
+      "deficit_redistribuido": 0,
+      "distribuicao_pagina_origem": {
+        "n": 40,
+        "min": 1,
+        "max": 128,
+        "p5": 1,
+        "p50": 3,
+        "p95": 9,
+        "fracao_profunda": 0.325
+      },
+      "niveis": [
+        {
+          "nivel": 3.5,
+          "n_validas": 2,
+          "n_alvo": 2,
+          "n_brutas": 24,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 1,
+          "n_descartadas_curtas": 10,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 1,
+          "motivos_descarte": {
+            "truncada_sem_texto": 1,
+            "spoiler": 1,
+            "abaixo_min_chars": 10,
+            "excedente_cota": 10,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 1
+        },
+        {
+          "nivel": 4.0,
+          "n_validas": 9,
+          "n_alvo": 9,
+          "n_brutas": 72,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 2,
+          "n_descartadas_curtas": 51,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 0,
+          "motivos_descarte": {
+            "truncada_sem_texto": 0,
+            "spoiler": 2,
+            "abaixo_min_chars": 51,
+            "excedente_cota": 10,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 3
+        },
+        {
+          "nivel": 4.5,
+          "n_validas": 8,
+          "n_alvo": 8,
+          "n_brutas": 60,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 2,
+          "n_descartadas_curtas": 38,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 1,
+          "motivos_descarte": {
+            "truncada_sem_texto": 1,
+            "spoiler": 2,
+            "abaixo_min_chars": 38,
+            "excedente_cota": 11,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 3
+        },
+        {
+          "nivel": 5.0,
+          "n_validas": 21,
+          "n_alvo": 21,
+          "n_brutas": 164,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 2,
+          "n_descartadas_curtas": 108,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 3,
+          "motivos_descarte": {
+            "truncada_sem_texto": 3,
+            "spoiler": 2,
+            "abaixo_min_chars": 108,
+            "excedente_cota": 30,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 9
+        }
+      ],
+      "temas": [
+        {
+          "tema": "Maestria cinematográfica e direção",
+          "mencoes_aproximadas": 15,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "Um usuário destaca que a direção e a montagem são tão precisas que cada cena parece intencional, elevando o filme a um nível de perfeição raramente visto.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Realismo e retrato da violência",
+          "mencoes_aproximadas": 14,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "O filme é elogiado por expor a brutalidade das favelas de forma crua e autêntica, sem glamorizar a violência, o que torna a experiência ainda mais impactante.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Narrativa não linear e ritmo",
+          "mencoes_aproximadas": 12,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "A estrutura não linear é apontada como um ponto alto, pois integra múltiplas histórias de maneira coesa e mantém o espectador imerso do início ao fim.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Elenco e atuações",
+          "mencoes_aproximadas": 10,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "As atuações são consideradas excepcionais, com destaque para a autenticidade trazida por atores locais, o que intensifica a sensação de realidade.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Fotografia e direção de arte",
+          "mencoes_aproximadas": 9,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "A cinematografia é descrita como inovadora e visualmente deslumbrante, contribuindo para a imersão na atmosfera do filme.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Impacto emocional e reflexão social",
+          "mencoes_aproximadas": 8,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "A obra provoca uma reflexão profunda sobre a desigualdade e o ciclo de violência, deixando uma marca duradoura em quem a assiste.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        }
+      ],
+      "observacao_geral": "As reviews positivas celebram a obra como uma obra-prima do cinema, destacando sua direção impecável, realismo brutal e narrativa envolvente. O grupo reconhece o impacto emocional e social do filme, embora alguns mencionem que o ritmo pode ser irregular em certos momentos.",
+      "idioma_invalido": false,
+      "escopo_suspeito": false
+    }
+  ],
+  "narrativa": "Lançado em 2002 e dirigido por Fernando Meirelles, o filme Cidade de Deus é uma produção dos gêneros drama e crime. A premissa acompanha a trajetória de Buscapé, um jovem morador da Cidade de Deus que cresce em meio à violência cotidiana e, com medo de se tornar um bandido, enxerga na fotografia uma oportunidade concreta de alcançar uma vida digna.\n\nA experiência de assistir ao longa-metragem apoia-se em uma narrativa não linear e de estrutura fragmentada, sustentada por um ritmo dinâmico e pela constante representação da violência. A ambientação desenvolve-se através de uma estética visual marcante e crua, que permeia a construção do cenário social.\n\nNa grande maioria das notas (~96%), uma parcela expressiva destaca a maestria cinematográfica e o trabalho de direção. Paralelamente, boa parte desse conjunto enaltece o realismo e o retrato da violência como elementos centrais, enquanto muitos ressaltam a narrativa não linear e a condução envolvente do ritmo ao longo da história.\n\nPara quem se posiciona numa fração mínima das notas (~3%), vários relatam que o excesso de violência e o ritmo acabam se tornando cansativos. Além disso, alguns sustentam que a obra exibe um estilo visual impressionante, mas com falta de profundidade, enquanto uma parte critica o roteiro e a narrativa por sua estrutura fragmentada.\n\nSob a perspectiva de quem compõe uma fração ainda menor das notas (~1%), um número considerável condena a presença de violência excessiva e o tom de exploração. Nesse segmento, muitos julgam o filme superestimado, ao mesmo tempo em que parte deles reclama de um roteiro fraco e do desenvolvimento limitado dos personagens.",
+  "verificacao_narrativa": {
+    "quantificador_fora_de_faixa": [],
+    "quantificador_repetido": [],
+    "paragrafos": {
+      "n_paragrafos": 5,
+      "minimo": 3,
+      "insuficientes": false,
+      "longos": []
+    },
+    "n_paragrafos": 5,
+    "paragrafos_insuficientes": false,
+    "paragrafos_longos": [],
+    "grupos_sem_paragrafo_proprio": [],
+    "formato_invalido": false,
+    "numeros_inventados": [],
+    "rotulos_faltando": [],
+    "ordem_incorreta": false,
+    "vocabulario_peso": false,
+    "resenha_speak": [],
+    "n_resenha_speak": 0,
+    "n_flags": 0
+  },
+  "narrativa_selecao": {
+    "provider": "gemini",
+    "modelo": "gemini-3.7-flash",
+    "n_candidatos": 3,
+    "n_chamadas": 3,
+    "indice_escolhido": 1,
+    "motivo": "melhor_entre_limpos",
+    "criterio_decisivo": "ritmo",
+    "candidatos": [
+      {
+        "indice": 0,
+        "n_flags": 0,
+        "cliches": 0,
+        "repeticao_max": 2,
+        "ritmo": 5,
+        "cobertura": 1.0,
+        "eliminado": false
+      },
+      {
+        "indice": 1,
+        "n_flags": 0,
+        "cliches": 0,
+        "repeticao_max": 2,
+        "ritmo": 6,
+        "cobertura": 1.0,
+        "eliminado": false
+      },
+      {
+        "indice": 2,
+        "n_flags": 0,
+        "cliches": 0,
+        "repeticao_max": 2,
+        "ritmo": 4,
+        "cobertura": 1.0,
+        "eliminado": false
+      }
+    ],
+    "retry": null,
+    "uso": {
+      "prompt_tokens": 9408,
+      "completion_tokens": 1114,
+      "cache_hit_tokens": 0,
+      "cache_miss_tokens": 9408
+    },
+    "latencia_s": 30.74
+  }
+}
