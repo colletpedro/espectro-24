@@ -1,5 +1,6 @@
-"""[v1.9.14, Entregas 2-4] Acrescenta o bloco `eixos` a um `resultado/*.json`
-JÁ PUBLICADO, sem re-rodar síntese nem narrativa.
+"""[v1.9.14, Entregas 2-4; reexecutado na v1.9.15 pós-unificação] Acrescenta
+o bloco `eixos` a um `resultado/*.json` JÁ PUBLICADO, sem re-rodar síntese
+nem narrativa.
 
 **Por que existe, em vez de simplesmente rodar o pipeline de novo.** As
 narrativas dos 3 filmes do catálogo passaram no gate de leitura humana do
@@ -36,7 +37,7 @@ from espectro24.bruto import janela_temporal  # noqa: E402
 from espectro24.pipeline import amostra_do_bruto, montar_eixos  # noqa: E402
 
 CATALOGO = ["the-invite-2026", "cure", "cidade-de-deus"]
-SAIDA = RAIZ / "resultado" / "v1914"
+SAIDA = RAIZ / "resultado" / "v1915"
 CONFERENCIA = SAIDA / "ROTULAGEM_CONFERENCIA.md"
 
 

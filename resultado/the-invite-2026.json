@@ -914,27 +914,6 @@
     "taxonomia_id": "ebab2667de74",
     "margem_lift_pp": 20,
     "contraste": "tematico",
-    "fonte_classificacao": {
-      "arquivo": "resultado/votacao-3/consenso.jsonl",
-      "criterio": "votacao_3_consenso_2_de_3",
-      "por_bucket": {
-        "negativas": {
-          "n_classificadas": 40,
-          "n_analisadas": 40,
-          "sobreposicao_com_analisadas": 17
-        },
-        "medianas": {
-          "n_classificadas": 40,
-          "n_analisadas": 40,
-          "sobreposicao_com_analisadas": 13
-        },
-        "positivas": {
-          "n_classificadas": 40,
-          "n_analisadas": 40,
-          "sobreposicao_com_analisadas": 17
-        }
-      }
-    },
     "linhas": [
       {
         "eixo": "ritmo",
@@ -943,25 +922,25 @@
             "mencoes": 12,
             "de_n": 40,
             "freq_pct": 30.0,
-            "lift_pp": 2.5,
+            "lift_pp": 10.0,
             "tema": "Falta de humor e ritmo arrastado",
             "exemplo_parafraseado": "As piadas não funcionam e o longa se arrasta, com cenas que se estendem sem gerar risos ou tensão, tornando a experiência entediante.",
             "temas_no_mesmo_eixo": []
           },
           "medianas": {
-            "mencoes": 11,
+            "mencoes": 8,
             "de_n": 40,
-            "freq_pct": 27.5,
-            "lift_pp": -2.5,
+            "freq_pct": 20.0,
+            "lift_pp": -10.0,
             "tema": "Ritmo e estrutura narrativa",
             "exemplo_parafraseado": "O filme começa de forma arrastada e só ganha força na parte final, com reviravoltas inesperadas que mudam o rumo da história, mas o desfecho acaba sendo previsível e pouco satisfatório.",
             "temas_no_mesmo_eixo": []
           },
           "positivas": {
-            "mencoes": 11,
+            "mencoes": 5,
             "de_n": 40,
-            "freq_pct": 27.5,
-            "lift_pp": -2.5,
+            "freq_pct": 12.5,
+            "lift_pp": -17.5,
             "tema": "Tensão e desconforto bem construídos",
             "exemplo_parafraseado": "Os espectadores positivos destacam a atmosfera tensa e ansiosa criada pelos conflitos e segredos revelados, mantendo o público envolvido do início ao fim.",
             "temas_no_mesmo_eixo": []
@@ -977,28 +956,28 @@
         "eixo": "atuacao",
         "por_bucket": {
           "negativas": {
-            "mencoes": 16,
+            "mencoes": 19,
             "de_n": 40,
-            "freq_pct": 40.0,
-            "lift_pp": -22.5,
+            "freq_pct": 47.5,
+            "lift_pp": -2.5,
             "tema": "Atuação exagerada de Olivia Wilde",
             "exemplo_parafraseado": "Muitos reviewers apontam que a performance de Olivia Wilde é forçada, com expressões e gestos exagerados que destoam do elenco mais contido.",
             "temas_no_mesmo_eixo": []
           },
           "medianas": {
-            "mencoes": 25,
+            "mencoes": 20,
             "de_n": 40,
-            "freq_pct": 62.5,
-            "lift_pp": 2.5,
+            "freq_pct": 50.0,
+            "lift_pp": 0.0,
             "tema": "Atuações do elenco principal",
             "exemplo_parafraseado": "O elenco entrega performances convincentes, com destaque para a química entre os quatro atores, embora alguns personagens sejam unidimensionais e o estilo de Seth Rogen canse em certos momentos.",
             "temas_no_mesmo_eixo": []
           },
           "positivas": {
-            "mencoes": 24,
+            "mencoes": 20,
             "de_n": 40,
-            "freq_pct": 60.0,
-            "lift_pp": -2.5,
+            "freq_pct": 50.0,
+            "lift_pp": 0.0,
             "tema": "Atuações excepcionais do elenco principal",
             "exemplo_parafraseado": "As reviews positivas destacam que os quatro atores principais estão em perfeita sintonia, entregando performances cômicas e dramáticas convincentes, sendo frequentemente citados como o ponto alto do filme.",
             "temas_no_mesmo_eixo": []
@@ -1014,28 +993,28 @@
         "eixo": "direcao_imagem",
         "por_bucket": {
           "negativas": {
-            "mencoes": 9,
+            "mencoes": 7,
             "de_n": 40,
-            "freq_pct": 22.5,
-            "lift_pp": -27.5,
+            "freq_pct": 17.5,
+            "lift_pp": -25.0,
             "tema": null,
             "exemplo_parafraseado": null,
             "temas_no_mesmo_eixo": []
           },
           "medianas": {
-            "mencoes": 11,
+            "mencoes": 10,
             "de_n": 40,
-            "freq_pct": 27.5,
-            "lift_pp": -22.5,
+            "freq_pct": 25.0,
+            "lift_pp": -17.5,
             "tema": "Direção e ambientação",
             "exemplo_parafraseado": "A direção conduz bem o formato de peça de teatro, com a ação concentrada em um único cenário, mas a fotografia e a mise-en-scène se repetem ao longo do filme, limitando o impacto visual.",
             "temas_no_mesmo_eixo": []
           },
           "positivas": {
-            "mencoes": 20,
+            "mencoes": 17,
             "de_n": 40,
-            "freq_pct": 50.0,
-            "lift_pp": 22.5,
+            "freq_pct": 42.5,
+            "lift_pp": 17.5,
             "tema": "Direção precisa e estilo visual de peça teatral",
             "exemplo_parafraseado": "As reviews elogiam a direção de Olivia Wilde por sua habilidade em contar a história em um único cenário, com enquadramentos e uso de espelhos que enriquecem a narrativa.",
             "temas_no_mesmo_eixo": []
@@ -1044,17 +1023,17 @@
         "bullet_de": {
           "negativas": null,
           "medianas": null,
-          "positivas": "contraste"
+          "positivas": null
         }
       },
       {
         "eixo": "roteiro_estrutura",
         "por_bucket": {
           "negativas": {
-            "mencoes": 19,
+            "mencoes": 21,
             "de_n": 40,
-            "freq_pct": 47.5,
-            "lift_pp": -17.5,
+            "freq_pct": 52.5,
+            "lift_pp": -2.5,
             "tema": "Roteiro superficial e sem profundidade",
             "exemplo_parafraseado": "O filme é criticado por ter um roteiro raso, que não desenvolve bem os conflitos e aposta em clichês, resultando em uma trama previsível e sem sustância.",
             "temas_no_mesmo_eixo": [
@@ -1062,18 +1041,18 @@
             ]
           },
           "medianas": {
-            "mencoes": 25,
+            "mencoes": 20,
             "de_n": 40,
-            "freq_pct": 62.5,
-            "lift_pp": -2.5,
+            "freq_pct": 50.0,
+            "lift_pp": -5.0,
             "tema": "Conflitos de relacionamento e comunicação",
             "exemplo_parafraseado": "A trama expõe as dificuldades de comunicação e os ressentimentos acumulados em um casamento de longa data, abordando temas como desejo e intimidade de forma crua e desconfortável.",
             "temas_no_mesmo_eixo": []
           },
           "positivas": {
-            "mencoes": 26,
+            "mencoes": 22,
             "de_n": 40,
-            "freq_pct": 65.0,
+            "freq_pct": 55.0,
             "lift_pp": 2.5,
             "tema": "Roteiro inteligente e diálogos naturais",
             "exemplo_parafraseado": "As reviews ressaltam que o roteiro é bem escrito, com diálogos realistas e perspicazes que exploram relacionamentos e revelam vulnerabilidades.",
@@ -1090,28 +1069,28 @@
         "eixo": "som_trilha",
         "por_bucket": {
           "negativas": {
-            "mencoes": 5,
+            "mencoes": 7,
             "de_n": 40,
-            "freq_pct": 12.5,
-            "lift_pp": -5.0,
+            "freq_pct": 17.5,
+            "lift_pp": 5.0,
             "tema": "Trilha sonora irritante e excessiva",
             "exemplo_parafraseado": "A trilha sonora é constantemente criticada por ser invasiva e exagerada, sublinhando cada emoção de forma superficial e cansativa.",
             "temas_no_mesmo_eixo": []
           },
           "medianas": {
-            "mencoes": 5,
+            "mencoes": 3,
             "de_n": 40,
-            "freq_pct": 12.5,
-            "lift_pp": -5.0,
+            "freq_pct": 7.5,
+            "lift_pp": -10.0,
             "tema": "Trilha sonora e tom",
             "exemplo_parafraseado": "A trilha sonora, com destaque para o violoncelo, aumenta a tensão, mas o excesso de ruídos e a montagem frenética tornam a experiência estressante para alguns espectadores.",
             "temas_no_mesmo_eixo": []
           },
           "positivas": {
-            "mencoes": 7,
+            "mencoes": 5,
             "de_n": 40,
-            "freq_pct": 17.5,
-            "lift_pp": 5.0,
+            "freq_pct": 12.5,
+            "lift_pp": -5.0,
             "tema": null,
             "exemplo_parafraseado": null,
             "temas_no_mesmo_eixo": []
@@ -1127,10 +1106,10 @@
         "eixo": "tom_atmosfera",
         "por_bucket": {
           "negativas": {
-            "mencoes": 12,
+            "mencoes": 15,
             "de_n": 40,
-            "freq_pct": 30.0,
-            "lift_pp": -37.5,
+            "freq_pct": 37.5,
+            "lift_pp": -22.5,
             "tema": null,
             "exemplo_parafraseado": null,
             "temas_no_mesmo_eixo": []
@@ -1139,16 +1118,16 @@
             "mencoes": 15,
             "de_n": 40,
             "freq_pct": 37.5,
-            "lift_pp": -30.0,
+            "lift_pp": -22.5,
             "tema": null,
             "exemplo_parafraseado": null,
             "temas_no_mesmo_eixo": []
           },
           "positivas": {
-            "mencoes": 27,
+            "mencoes": 24,
             "de_n": 40,
-            "freq_pct": 67.5,
-            "lift_pp": 30.0,
+            "freq_pct": 60.0,
+            "lift_pp": 22.5,
             "tema": "Humor ácido e situações constrangedoras",
             "exemplo_parafraseado": "Muitas reviews mencionam que o filme provoca risadas genuínas através de diálogos afiados e situações embaraçosas, equilibrando comédia e desconforto.",
             "temas_no_mesmo_eixo": []
@@ -1164,10 +1143,10 @@
         "eixo": "impacto_emocional",
         "por_bucket": {
           "negativas": {
-            "mencoes": 28,
+            "mencoes": 32,
             "de_n": 40,
-            "freq_pct": 70.0,
-            "lift_pp": -7.5,
+            "freq_pct": 80.0,
+            "lift_pp": -5.0,
             "tema": null,
             "exemplo_parafraseado": null,
             "temas_no_mesmo_eixo": []
@@ -1176,15 +1155,15 @@
             "mencoes": 29,
             "de_n": 40,
             "freq_pct": 72.5,
-            "lift_pp": -5.0,
+            "lift_pp": -12.5,
             "tema": null,
             "exemplo_parafraseado": null,
             "temas_no_mesmo_eixo": []
           },
           "positivas": {
-            "mencoes": 31,
+            "mencoes": 34,
             "de_n": 40,
-            "freq_pct": 77.5,
+            "freq_pct": 85.0,
             "lift_pp": 5.0,
             "tema": "Exploração profunda de relacionamentos e emoções",
             "exemplo_parafraseado": "Muitas reviews positivas mencionam que o filme apresenta uma visão honesta e comovente sobre casamentos em crise, tocando em temas como comunicação, ressentimento e esperança de redenção.",
@@ -1204,25 +1183,25 @@
             "mencoes": 15,
             "de_n": 40,
             "freq_pct": 37.5,
-            "lift_pp": -2.5,
+            "lift_pp": 5.0,
             "tema": null,
             "exemplo_parafraseado": null,
             "temas_no_mesmo_eixo": []
           },
           "medianas": {
-            "mencoes": 13,
+            "mencoes": 10,
             "de_n": 40,
-            "freq_pct": 32.5,
-            "lift_pp": -7.5,
+            "freq_pct": 25.0,
+            "lift_pp": -12.5,
             "tema": null,
             "exemplo_parafraseado": null,
             "temas_no_mesmo_eixo": []
           },
           "positivas": {
-            "mencoes": 16,
+            "mencoes": 13,
             "de_n": 40,
-            "freq_pct": 40.0,
-            "lift_pp": 2.5,
+            "freq_pct": 32.5,
+            "lift_pp": -5.0,
             "tema": null,
             "exemplo_parafraseado": null,
             "temas_no_mesmo_eixo": []
@@ -1238,28 +1217,28 @@
         "eixo": "expectativa",
         "por_bucket": {
           "negativas": {
-            "mencoes": 8,
+            "mencoes": 9,
             "de_n": 40,
-            "freq_pct": 20.0,
-            "lift_pp": 0.0,
+            "freq_pct": 22.5,
+            "lift_pp": 5.0,
             "tema": null,
             "exemplo_parafraseado": null,
             "temas_no_mesmo_eixo": []
           },
           "medianas": {
-            "mencoes": 8,
+            "mencoes": 7,
             "de_n": 40,
-            "freq_pct": 20.0,
-            "lift_pp": 0.0,
+            "freq_pct": 17.5,
+            "lift_pp": -5.0,
             "tema": null,
             "exemplo_parafraseado": null,
             "temas_no_mesmo_eixo": []
           },
           "positivas": {
-            "mencoes": 5,
+            "mencoes": 4,
             "de_n": 40,
-            "freq_pct": 12.5,
-            "lift_pp": -7.5,
+            "freq_pct": 10.0,
+            "lift_pp": -12.5,
             "tema": null,
             "exemplo_parafraseado": null,
             "temas_no_mesmo_eixo": []
@@ -1275,28 +1254,28 @@
         "eixo": "critica_social",
         "por_bucket": {
           "negativas": {
-            "mencoes": 11,
+            "mencoes": 14,
             "de_n": 40,
-            "freq_pct": 27.5,
-            "lift_pp": 5.0,
+            "freq_pct": 35.0,
+            "lift_pp": 7.5,
             "tema": "Abordagem do sexo e relacionamentos soa forçada e moralista",
             "exemplo_parafraseado": "O tratamento dado ao tema do sexo e das relações abertas é visto como artificial, mais focado em chocar do que em explorar com sinceridade, além de terminar em um discurso conservador.",
             "temas_no_mesmo_eixo": []
           },
           "medianas": {
-            "mencoes": 9,
+            "mencoes": 11,
             "de_n": 40,
-            "freq_pct": 22.5,
-            "lift_pp": -5.0,
+            "freq_pct": 27.5,
+            "lift_pp": -7.5,
             "tema": "Abordagem da não-monogamia e sexualidade",
             "exemplo_parafraseado": "A introdução de um casal liberal que propõe uma experiência aberta funciona como um espelho para o casal protagonista, levantando questões sobre monogamia e liberdade sexual sem julgamentos fáceis.",
             "temas_no_mesmo_eixo": []
           },
           "positivas": {
-            "mencoes": 2,
+            "mencoes": 3,
             "de_n": 40,
-            "freq_pct": 5.0,
-            "lift_pp": -22.5,
+            "freq_pct": 7.5,
+            "lift_pp": -27.5,
             "tema": null,
             "exemplo_parafraseado": null,
             "temas_no_mesmo_eixo": []
@@ -1315,6 +1294,6 @@
       "fora_da_taxonomia": {},
       "houve_retentativa": []
     },
-    "spec_version": "1.9.14"
+    "spec_version": "1.9.15"
   }
 }

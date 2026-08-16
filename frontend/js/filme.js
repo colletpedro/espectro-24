@@ -375,25 +375,36 @@
     return cel;
   }
 
-  // O denominador desta tabela NÃO é o do cabeçalho do grupo. São duas
-  // amostras de 40 diferentes (§[D3], "Duas populações de 40"), e apresentá-las
-  // com o mesmo rótulo repetiria o defeito que a declaração da janela
-  // temporal fecha do outro lado.
+  // v1.9.15 (Entrega 1): o caveat de "duas populações diferentes" só é
+  // verdadeiro quando `fonte_classificacao` está no bloco — e ela SÓ existe
+  // quando alguma sobreposição é incompleta (§2.5, `eixos.montar_bloco`).
+  // Mostrar o caveat quando a chave está ausente diria uma divergência que
+  // foi corrigida (a unificação de [D3]/Entrega 1): pior que texto morto, é
+  // texto FALSO. A ausência da chave é a própria informação — "estas
+  // populações são a mesma" —, e é assim que este texto a lê.
   function denominadorNota(e) {
     var el = document.createElement("p");
     el.className = "disclaimer eixos__nota";
-    var fonte = (e.fonte_classificacao || {}).por_bucket || {};
-    var sobre = Object.keys(fonte).map(function (b) {
-      return (GRUPO_META[b] ? GRUPO_META[b].label.toLowerCase() : b) + " "
-        + fonte[b].sobreposicao_com_analisadas + "/" + fonte[b].n_classificadas;
-    });
-    el.textContent =
-      "Os números desta tabela contam reviews CLASSIFICADAS por eixo — uma "
-      + "amostra do mesmo grupo, do mesmo tamanho, mas não exatamente as "
-      + "mesmas reviews que a lista abaixo resume"
-      + (sobre.length ? " (em comum: " + sobre.join(", ") + ")" : "")
-      + ". Contraste com margem de " + (e.margem_lift_pp || 20)
-      + " pontos percentuais.";
+    var fonte = (e.fonte_classificacao || {}).por_bucket;
+    var texto;
+    if (fonte) {
+      var sobre = Object.keys(fonte).map(function (b) {
+        return (GRUPO_META[b] ? GRUPO_META[b].label.toLowerCase() : b) + " "
+          + fonte[b].sobreposicao_com_analisadas + "/" + fonte[b].n_classificadas;
+      });
+      texto =
+        "Os números desta tabela contam reviews CLASSIFICADAS por eixo — uma "
+        + "amostra do mesmo grupo, do mesmo tamanho, mas não exatamente as "
+        + "mesmas reviews que a lista abaixo resume"
+        + (sobre.length ? " (em comum: " + sobre.join(", ") + ")" : "")
+        + ".";
+    } else {
+      texto = "Os números desta tabela contam as mesmas reviews que a lista "
+        + "abaixo resume — a amostra classificada por eixo foi unificada com "
+        + "a analisada (v1.9.15).";
+    }
+    el.textContent = texto + " Contraste com margem de "
+      + (e.margem_lift_pp || 20) + " pontos percentuais.";
     return el;
   }
 

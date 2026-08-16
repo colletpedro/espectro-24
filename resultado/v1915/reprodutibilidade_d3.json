@@ -1,0 +1,15 @@
+{
+  "total_temas": 54,
+  "n_mudou": 1,
+  "fracao_mudou": 0.018518518518518517,
+  "divergencias": [
+    {
+      "slug": "cidade-de-deus",
+      "bucket": "medianas",
+      "tema": "Excesso de violência",
+      "rodada_1": "livre",
+      "rodada_2": "tom_atmosfera"
+    }
+  ],
+  "leitura": "Reprodutibilidade razoável — divergência pontual, não padrão sistemático. Não indica necessidade de votação."
+}
