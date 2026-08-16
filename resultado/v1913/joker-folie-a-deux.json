@@ -1,0 +1,904 @@
+{
+  "slug": "joker-folie-a-deux",
+  "data_coleta": "2026-08-16T02:38:54.438538+00:00",
+  "spec_version": "1.9.11",
+  "total_reviews_observadas": 576,
+  "reviews_url": "https://letterboxd.com/film/joker-folie-a-deux/reviews/",
+  "ficha": {
+    "titulo": "Coringa: Delírio a Dois",
+    "sinopse_oficial": "Arthur Fleck está institucionalizado em Arkham à espera do julgamento por seus crimes como Coringa. Enquanto luta com sua dupla identidade, Arthur não apenas se depara com o amor verdadeiro, como encontra a música que sempre esteve dentro dele.",
+    "sinopse_fallback_en": false,
+    "generos": [
+      "Drama",
+      "Crime",
+      "Thriller"
+    ],
+    "duracao_min": 138,
+    "diretor": "Todd Phillips",
+    "diretor_transliterado": false,
+    "ano": 2024,
+    "fonte": "tmdb",
+    "ano_fonte": "bruto"
+  },
+  "distribuicao": {
+    "n_notas_total": 951241,
+    "por_nivel": {
+      "0.5": 53623,
+      "1.0": 101498,
+      "1.5": 89453,
+      "2.0": 195323,
+      "2.5": 141987,
+      "3.0": 168839,
+      "3.5": 88065,
+      "4.0": 73664,
+      "4.5": 16035,
+      "5.0": 22754
+    },
+    "por_bucket": {
+      "negativas": 46,
+      "medianas": 33,
+      "positivas": 21
+    },
+    "fonte": "letterboxd_histograma"
+  },
+  "coleta": {
+    "slug": "joker-folie-a-deux",
+    "coletado_em": "2026-08-15T21:38:01.192644+00:00",
+    "versao_coletor": "1.9.6",
+    "ordenacao_usada": "by/added",
+    "histograma_bruto": {
+      "0.5": 53623,
+      "1.0": 101498,
+      "1.5": 89453,
+      "2.0": 195323,
+      "2.5": 141987,
+      "3.0": 168839,
+      "3.5": 88065,
+      "4.0": 73664,
+      "4.5": 16035,
+      "5.0": 22754
+    },
+    "orcamento_paginas_por_nivel": {
+      "0.5": 2,
+      "1.0": 4,
+      "1.5": 3,
+      "2.0": 7,
+      "2.5": 7,
+      "3.0": 9,
+      "3.5": 7,
+      "4.0": 6,
+      "4.5": 1,
+      "5.0": 2
+    },
+    "paginas_gastas_por_nivel": {
+      "0.5": 2,
+      "1.0": 4,
+      "1.5": 3,
+      "2.0": 7,
+      "2.5": 7,
+      "3.0": 9,
+      "3.5": 7,
+      "4.0": 6,
+      "4.5": 1,
+      "5.0": 2
+    },
+    "paradas_por_limite": [
+      "0.5",
+      "1.0",
+      "1.5",
+      "2.0",
+      "2.5",
+      "3.0",
+      "3.5",
+      "4.0",
+      "4.5",
+      "5.0"
+    ],
+    "contagem_bruta_por_nivel": {
+      "0.5": 24,
+      "1.0": 48,
+      "1.5": 36,
+      "2.0": 84,
+      "2.5": 84,
+      "3.0": 108,
+      "3.5": 84,
+      "4.0": 72,
+      "4.5": 12,
+      "5.0": 24
+    },
+    "contagem_estimada_valida_por_nivel": {
+      "0.5": 5,
+      "1.0": 10,
+      "1.5": 8,
+      "2.0": 22,
+      "2.5": 22,
+      "3.0": 31,
+      "3.5": 37,
+      "4.0": 25,
+      "4.5": 5,
+      "5.0": 5
+    },
+    "motivo_parada_por_nivel": {
+      "0.5": "orcamento_esgotado",
+      "1.0": "orcamento_esgotado",
+      "1.5": "orcamento_esgotado",
+      "2.0": "orcamento_esgotado",
+      "2.5": "orcamento_esgotado",
+      "3.0": "orcamento_esgotado",
+      "3.5": "orcamento_esgotado",
+      "4.0": "orcamento_esgotado",
+      "4.5": "orcamento_esgotado",
+      "5.0": "orcamento_esgotado"
+    },
+    "paginas_base_por_nivel": {
+      "0.5": 2,
+      "1.0": 4,
+      "1.5": 3,
+      "2.0": 7,
+      "2.5": 7,
+      "3.0": 9,
+      "3.5": 7,
+      "4.0": 6,
+      "4.5": 1,
+      "5.0": 2
+    },
+    "paginas_extensao_por_nivel": {
+      "0.5": 0,
+      "1.0": 0,
+      "1.5": 0,
+      "2.0": 0,
+      "2.5": 0,
+      "3.0": 0,
+      "3.5": 0,
+      "4.0": 0,
+      "4.5": 0,
+      "5.0": 0
+    },
+    "extensao_por_bucket": {
+      "negativas": {
+        "paginas_base": 16,
+        "paginas_extensao": 5,
+        "extras_por_nivel": {
+          "1.0": 3,
+          "1.5": 2
+        },
+        "motivo_parada": "meta_atingida",
+        "n_validas_pos_base": 45,
+        "n_validas_pos_extensao": 52,
+        "meta": 50
+      },
+      "medianas": {
+        "paginas_base": 16,
+        "paginas_extensao": 0,
+        "extras_por_nivel": {},
+        "motivo_parada": "meta_atingida",
+        "n_validas_pos_base": 53,
+        "n_validas_pos_extensao": 53,
+        "meta": 50
+      },
+      "positivas": {
+        "paginas_base": 16,
+        "paginas_extensao": 0,
+        "extras_por_nivel": {},
+        "motivo_parada": "meta_atingida",
+        "n_validas_pos_base": 72,
+        "n_validas_pos_extensao": 72,
+        "meta": 50
+      }
+    },
+    "profundidade_sondagem": {
+      "nivel_sondado": 2.0,
+      "profundidade": null,
+      "exata": false,
+      "requisicoes": 3,
+      "motivo": "falha"
+    },
+    "janela_temporal": {
+      "total": {
+        "n": 593,
+        "min": "2024-05-16",
+        "max": "2026-08-08",
+        "p5": "2025-01-04",
+        "p50": "2026-08-04",
+        "p95": "2026-08-07"
+      },
+      "por_bucket": {
+        "negativas": {
+          "n": 209,
+          "min": "2024-09-05",
+          "max": "2026-08-08",
+          "p5": "2025-01-09",
+          "p50": "2026-08-05",
+          "p95": "2026-08-07"
+        },
+        "medianas": {
+          "n": 192,
+          "min": "2024-10-02",
+          "max": "2026-08-07",
+          "p5": "2024-10-24",
+          "p50": "2026-08-03",
+          "p95": "2026-08-07"
+        },
+        "positivas": {
+          "n": 192,
+          "min": "2024-05-16",
+          "max": "2026-08-08",
+          "p5": "2025-12-10",
+          "p50": "2026-08-03",
+          "p95": "2026-08-07"
+        }
+      }
+    },
+    "dias_por_100_paginas": {
+      "n_paginas": 10,
+      "pagina_min": 1,
+      "pagina_max": 11,
+      "dias": 9,
+      "dias_por_100_paginas": 90.0,
+      "paginas_para_1_ano": 406
+    },
+    "ano_lancamento": 2024,
+    "ano_fonte": "letterboxd",
+    "n_reviews_bruto": 593
+  },
+  "origem_paginas": {
+    "_histograma/joker-folie-a-deux.html": "cache",
+    "joker-folie-a-deux/pages/by_added/rated_2_page_4.html": "cache",
+    "joker-folie-a-deux/pages/by_added/rated_2_page_16.html": "cache",
+    "joker-folie-a-deux/pages/by_added/rated_0_5_page_1.html": "cache",
+    "joker-folie-a-deux/pages/by_added/rated_0_5_page_2.html": "cache",
+    "joker-folie-a-deux/pages/by_added/rated_1_page_1.html": "cache",
+    "joker-folie-a-deux/pages/by_added/rated_1_page_2.html": "cache",
+    "joker-folie-a-deux/pages/by_added/rated_1_page_3.html": "cache",
+    "joker-folie-a-deux/pages/by_added/rated_1_page_5.html": "cache",
+    "joker-folie-a-deux/fulltext/viewing_1436636829.html": "cache",
+    "joker-folie-a-deux/pages/by_added/rated_1_5_page_1.html": "cache",
+    "joker-folie-a-deux/pages/by_added/rated_1_5_page_2.html": "cache",
+    "joker-folie-a-deux/pages/by_added/rated_1_5_page_4.html": "cache",
+    "joker-folie-a-deux/fulltext/viewing_1438175686.html": "cache",
+    "joker-folie-a-deux/pages/by_added/rated_2_page_1.html": "cache",
+    "joker-folie-a-deux/pages/by_added/rated_2_page_2.html": "cache",
+    "joker-folie-a-deux/pages/by_added/rated_2_page_3.html": "cache",
+    "joker-folie-a-deux/pages/by_added/rated_2_page_5.html": "cache",
+    "joker-folie-a-deux/pages/by_added/rated_2_page_7.html": "cache",
+    "joker-folie-a-deux/pages/by_added/rated_2_page_9.html": "cache",
+    "joker-folie-a-deux/fulltext/viewing_1439268703.html": "cache",
+    "joker-folie-a-deux/fulltext/viewing_1438284733.html": "cache",
+    "joker-folie-a-deux/fulltext/viewing_1436983108.html": "cache",
+    "joker-folie-a-deux/fulltext/viewing_1435886360.html": "cache",
+    "joker-folie-a-deux/fulltext/viewing_1435570622.html": "cache",
+    "joker-folie-a-deux/pages/by_added/rated_2_5_page_1.html": "cache",
+    "joker-folie-a-deux/pages/by_added/rated_2_5_page_2.html": "cache",
+    "joker-folie-a-deux/pages/by_added/rated_2_5_page_3.html": "cache",
+    "joker-folie-a-deux/pages/by_added/rated_2_5_page_4.html": "cache",
+    "joker-folie-a-deux/pages/by_added/rated_2_5_page_5.html": "cache",
+    "joker-folie-a-deux/pages/by_added/rated_2_5_page_7.html": "cache",
+    "joker-folie-a-deux/pages/by_added/rated_2_5_page_9.html": "cache",
+    "joker-folie-a-deux/fulltext/viewing_1438453050.html": "cache",
+    "joker-folie-a-deux/fulltext/viewing_1437002380.html": "cache",
+    "joker-folie-a-deux/fulltext/viewing_1436861877.html": "cache",
+    "joker-folie-a-deux/fulltext/viewing_1435052277.html": "cache",
+    "joker-folie-a-deux/fulltext/viewing_1434946626.html": "cache",
+    "joker-folie-a-deux/fulltext/viewing_1434140302.html": "cache",
+    "joker-folie-a-deux/fulltext/viewing_1427391022.html": "cache",
+    "joker-folie-a-deux/pages/by_added/rated_3_page_1.html": "cache",
+    "joker-folie-a-deux/pages/by_added/rated_3_page_2.html": "cache",
+    "joker-folie-a-deux/pages/by_added/rated_3_page_3.html": "cache",
+    "joker-folie-a-deux/pages/by_added/rated_3_page_4.html": "cache",
+    "joker-folie-a-deux/pages/by_added/rated_3_page_5.html": "cache",
+    "joker-folie-a-deux/pages/by_added/rated_3_page_6.html": "cache",
+    "joker-folie-a-deux/pages/by_added/rated_3_page_7.html": "cache",
+    "joker-folie-a-deux/pages/by_added/rated_3_page_9.html": "cache",
+    "joker-folie-a-deux/pages/by_added/rated_3_page_11.html": "cache",
+    "joker-folie-a-deux/fulltext/viewing_1436871512.html": "cache",
+    "joker-folie-a-deux/fulltext/viewing_1436229957.html": "cache",
+    "joker-folie-a-deux/fulltext/viewing_1434310932.html": "cache",
+    "joker-folie-a-deux/fulltext/viewing_1434161345.html": "cache",
+    "joker-folie-a-deux/fulltext/viewing_1433719457.html": "cache",
+    "joker-folie-a-deux/fulltext/viewing_1432036035.html": "cache",
+    "joker-folie-a-deux/fulltext/viewing_1431151944.html": "cache",
+    "joker-folie-a-deux/pages/by_added/rated_3_5_page_1.html": "cache",
+    "joker-folie-a-deux/pages/by_added/rated_3_5_page_2.html": "cache",
+    "joker-folie-a-deux/pages/by_added/rated_3_5_page_3.html": "cache",
+    "joker-folie-a-deux/pages/by_added/rated_3_5_page_4.html": "cache",
+    "joker-folie-a-deux/pages/by_added/rated_3_5_page_5.html": "cache",
+    "joker-folie-a-deux/pages/by_added/rated_3_5_page_7.html": "cache",
+    "joker-folie-a-deux/pages/by_added/rated_3_5_page_9.html": "cache",
+    "joker-folie-a-deux/fulltext/viewing_1439493810.html": "cache",
+    "joker-folie-a-deux/fulltext/viewing_1439002916.html": "cache",
+    "joker-folie-a-deux/fulltext/viewing_1437498405.html": "cache",
+    "joker-folie-a-deux/fulltext/viewing_1437455891.html": "cache",
+    "joker-folie-a-deux/fulltext/viewing_1436592923.html": "cache",
+    "joker-folie-a-deux/fulltext/viewing_1435869654.html": "cache",
+    "joker-folie-a-deux/fulltext/viewing_1431944968.html": "cache",
+    "joker-folie-a-deux/fulltext/viewing_1428078580.html": "cache",
+    "joker-folie-a-deux/fulltext/viewing_1424564025.html": "cache",
+    "joker-folie-a-deux/fulltext/viewing_1419827909.html": "cache",
+    "joker-folie-a-deux/fulltext/viewing_1416756316.html": "cache",
+    "joker-folie-a-deux/fulltext/viewing_1412004351.html": "cache",
+    "joker-folie-a-deux/fulltext/viewing_1410852845.html": "cache",
+    "joker-folie-a-deux/fulltext/viewing_1410649241.html": "cache",
+    "joker-folie-a-deux/pages/by_added/rated_4_page_1.html": "cache",
+    "joker-folie-a-deux/pages/by_added/rated_4_page_2.html": "cache",
+    "joker-folie-a-deux/pages/by_added/rated_4_page_3.html": "cache",
+    "joker-folie-a-deux/pages/by_added/rated_4_page_4.html": "cache",
+    "joker-folie-a-deux/pages/by_added/rated_4_page_6.html": "cache",
+    "joker-folie-a-deux/pages/by_added/rated_4_page_8.html": "cache",
+    "joker-folie-a-deux/fulltext/viewing_1437871570.html": "cache",
+    "joker-folie-a-deux/fulltext/viewing_1434880511.html": "cache",
+    "joker-folie-a-deux/fulltext/viewing_1432160752.html": "cache",
+    "joker-folie-a-deux/fulltext/viewing_1430237422.html": "cache",
+    "joker-folie-a-deux/fulltext/viewing_1428932273.html": "cache",
+    "joker-folie-a-deux/fulltext/viewing_1428779157.html": "cache",
+    "joker-folie-a-deux/fulltext/viewing_1424838658.html": "cache",
+    "joker-folie-a-deux/pages/by_added/rated_4_5_page_1.html": "cache",
+    "joker-folie-a-deux/fulltext/viewing_1439165909.html": "cache",
+    "joker-folie-a-deux/fulltext/viewing_1436221575.html": "cache",
+    "joker-folie-a-deux/pages/by_added/rated_5_page_1.html": "cache",
+    "joker-folie-a-deux/pages/by_added/rated_5_page_2.html": "cache",
+    "joker-folie-a-deux/fulltext/viewing_1437754518.html": "cache",
+    "joker-folie-a-deux/fulltext/viewing_1437007069.html": "cache",
+    "joker-folie-a-deux/fulltext/viewing_1436166859.html": "cache",
+    "joker-folie-a-deux/film_page.html": "cache"
+  },
+  "buckets": [
+    {
+      "bucket": "negativas",
+      "alvo": 40,
+      "modo": "completo",
+      "estado_piso": "completa",
+      "n_validas": 40,
+      "share_real": 46,
+      "composicao_alvo": {
+        "0.5": 5,
+        "1.0": 9,
+        "1.5": 8,
+        "2.0": 18
+      },
+      "composicao_atingida": {
+        "0.5": 5,
+        "1.0": 9,
+        "1.5": 8,
+        "2.0": 18
+      },
+      "cascata_por_degrau": {
+        "150": 40
+      },
+      "deficit_redistribuido": 0,
+      "distribuicao_pagina_origem": {
+        "n": 40,
+        "min": 1,
+        "max": 9,
+        "p5": 1,
+        "p50": 2,
+        "p95": 9,
+        "fracao_profunda": 0.25
+      },
+      "niveis": [
+        {
+          "nivel": 0.5,
+          "n_validas": 5,
+          "n_alvo": 5,
+          "n_brutas": 24,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 2,
+          "n_descartadas_curtas": 17,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 0,
+          "motivos_descarte": {
+            "truncada_sem_texto": 0,
+            "spoiler": 2,
+            "abaixo_min_chars": 17,
+            "excedente_cota": 0,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 2
+        },
+        {
+          "nivel": 1.0,
+          "n_validas": 9,
+          "n_alvo": 9,
+          "n_brutas": 60,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 1,
+          "n_descartadas_curtas": 44,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 1,
+          "motivos_descarte": {
+            "truncada_sem_texto": 1,
+            "spoiler": 1,
+            "abaixo_min_chars": 44,
+            "excedente_cota": 5,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 4
+        },
+        {
+          "nivel": 1.5,
+          "n_validas": 8,
+          "n_alvo": 8,
+          "n_brutas": 41,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 2,
+          "n_descartadas_curtas": 26,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 2,
+          "motivos_descarte": {
+            "truncada_sem_texto": 2,
+            "spoiler": 2,
+            "abaixo_min_chars": 26,
+            "excedente_cota": 3,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 3
+        },
+        {
+          "nivel": 2.0,
+          "n_validas": 18,
+          "n_alvo": 18,
+          "n_brutas": 84,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 2,
+          "n_descartadas_curtas": 59,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 1,
+          "motivos_descarte": {
+            "truncada_sem_texto": 1,
+            "spoiler": 2,
+            "abaixo_min_chars": 59,
+            "excedente_cota": 4,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 7
+        }
+      ],
+      "temas": [
+        {
+          "tema": "Números musicais deslocados",
+          "mencoes_aproximadas": 28,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "A maioria reclama que as músicas não têm relação com a cena e quebram o ritmo",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Ritmo lento e tédio",
+          "mencoes_aproximadas": 20,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "Muitos descrevem a experiência como cansativa e parada, com pouco avanço na história",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Roteiro fraco e sem desenvolvimento",
+          "mencoes_aproximadas": 15,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "Há quem critique a falta de desenvolvimento dos personagens e a trama que não sai do lugar",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Descaracterização do personagem Coringa",
+          "mencoes_aproximadas": 12,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "Vários fãs do primeiro filme se decepcionam por verem um Arthur fraco e sem a essência do vilão",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Desrespeito à construção do primeiro filme",
+          "mencoes_aproximadas": 10,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "Muitos veem a sequência como um desmonte do impacto do longa original, tornando a franquia pior",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Atuações e fotografia elogiadas",
+          "mencoes_aproximadas": 8,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "Apesar das críticas, há quem destaque o trabalho de Joaquin Phoenix e a qualidade visual",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        }
+      ],
+      "observacao_geral": "As reviews negativas apontam principalmente o excesso de números musicais fora de contexto e o ritmo lento, além de considerarem a sequência um desserviço à construção do Coringa. Alguns até reconhecem o esforço técnico e as atuações, mas isso não compensa a decepção geral com a trama.",
+      "idioma_invalido": false,
+      "escopo_suspeito": false
+    },
+    {
+      "bucket": "medianas",
+      "alvo": 40,
+      "modo": "completo",
+      "estado_piso": "completa",
+      "n_validas": 40,
+      "share_real": 33,
+      "composicao_alvo": {
+        "2.5": 18,
+        "3.0": 22
+      },
+      "composicao_atingida": {
+        "2.5": 18,
+        "3.0": 22
+      },
+      "cascata_por_degrau": {
+        "150": 40
+      },
+      "deficit_redistribuido": 0,
+      "distribuicao_pagina_origem": {
+        "n": 40,
+        "min": 1,
+        "max": 11,
+        "p5": 1,
+        "p50": 4,
+        "p95": 9,
+        "fracao_profunda": 0.175
+      },
+      "niveis": [
+        {
+          "nivel": 2.5,
+          "n_validas": 18,
+          "n_alvo": 18,
+          "n_brutas": 84,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 3,
+          "n_descartadas_curtas": 58,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 1,
+          "motivos_descarte": {
+            "truncada_sem_texto": 1,
+            "spoiler": 3,
+            "abaixo_min_chars": 58,
+            "excedente_cota": 4,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 7
+        },
+        {
+          "nivel": 3.0,
+          "n_validas": 22,
+          "n_alvo": 22,
+          "n_brutas": 108,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 4,
+          "n_descartadas_curtas": 70,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 3,
+          "motivos_descarte": {
+            "truncada_sem_texto": 3,
+            "spoiler": 4,
+            "abaixo_min_chars": 70,
+            "excedente_cota": 9,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 9
+        }
+      ],
+      "temas": [
+        {
+          "tema": "Execução musical deslocada",
+          "mencoes_aproximadas": 15,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "Muitas reviews do grupo apontam que as canções não se integram bem à narrativa, parecendo forçadas e atrapalhando o ritmo do filme.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Comparação desfavorável com o primeiro filme",
+          "mencoes_aproximadas": 12,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "Diversas análises mencionam que a sequência não alcança o impacto do longa original, que era visto como superior em construção de personagem e crítica social.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Atuações destacadas",
+          "mencoes_aproximadas": 8,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "O grupo elogia o desempenho de Joaquin Phoenix e Lady Gaga, considerando-os competentes mesmo quando o material oferecido é considerado fraco.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Fotografia e visual elogiados",
+          "mencoes_aproximadas": 7,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "A direção de arte e a cinematografia são pontos positivos citados, com muitos dizendo que o filme é bonito de se ver, mesmo que falte substância.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Roteiro e narrativa confusos",
+          "mencoes_aproximadas": 6,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "Algumas críticas afirmam que a trama se perde em meio a subtramas e divagações, sem conseguir construir uma direção clara ou um desfecho satisfatório.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Sequência considerada desnecessária",
+          "mencoes_aproximadas": 5,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "Parte do grupo considera que o filme não precisava existir, pois o encerramento do anterior já era completo e esta continuação acaba por diluir o impacto da história.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        }
+      ],
+      "observacao_geral": "As reviews medianas formam um grupo dividido: reconhecem qualidades técnicas (atuações, fotografia) e compreendem a intenção artística da sequência, mas apontam falhas na execução, sobretudo na integração dos números musicais e na narrativa arrastada. A comparação com o primeiro filme pesa muito nas avaliações, e a sensação de potencial desperdiçado é recorrente, ainda que alguns defendam a proposta e o final.",
+      "idioma_invalido": false,
+      "escopo_suspeito": false
+    },
+    {
+      "bucket": "positivas",
+      "alvo": 40,
+      "modo": "completo",
+      "estado_piso": "completa",
+      "n_validas": 40,
+      "share_real": 21,
+      "composicao_alvo": {
+        "3.5": 18,
+        "4.0": 15,
+        "4.5": 3,
+        "5.0": 4
+      },
+      "composicao_atingida": {
+        "3.5": 18,
+        "4.0": 15,
+        "4.5": 3,
+        "5.0": 4
+      },
+      "cascata_por_degrau": {
+        "150": 40
+      },
+      "deficit_redistribuido": 0,
+      "distribuicao_pagina_origem": {
+        "n": 40,
+        "min": 1,
+        "max": 8,
+        "p5": 1,
+        "p50": 3,
+        "p95": 7,
+        "fracao_profunda": 0.25
+      },
+      "niveis": [
+        {
+          "nivel": 3.5,
+          "n_validas": 18,
+          "n_alvo": 18,
+          "n_brutas": 84,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 3,
+          "n_descartadas_curtas": 43,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 1,
+          "motivos_descarte": {
+            "truncada_sem_texto": 1,
+            "spoiler": 3,
+            "abaixo_min_chars": 43,
+            "excedente_cota": 19,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 7
+        },
+        {
+          "nivel": 4.0,
+          "n_validas": 15,
+          "n_alvo": 15,
+          "n_brutas": 72,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 1,
+          "n_descartadas_curtas": 46,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 0,
+          "motivos_descarte": {
+            "truncada_sem_texto": 0,
+            "spoiler": 1,
+            "abaixo_min_chars": 46,
+            "excedente_cota": 10,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 6
+        },
+        {
+          "nivel": 4.5,
+          "n_validas": 3,
+          "n_alvo": 3,
+          "n_brutas": 12,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 0,
+          "n_descartadas_curtas": 7,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 0,
+          "motivos_descarte": {
+            "truncada_sem_texto": 0,
+            "spoiler": 0,
+            "abaixo_min_chars": 7,
+            "excedente_cota": 2,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 1
+        },
+        {
+          "nivel": 5.0,
+          "n_validas": 4,
+          "n_alvo": 4,
+          "n_brutas": 24,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 1,
+          "n_descartadas_curtas": 18,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 0,
+          "motivos_descarte": {
+            "truncada_sem_texto": 0,
+            "spoiler": 1,
+            "abaixo_min_chars": 18,
+            "excedente_cota": 1,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 2
+        }
+      ],
+      "temas": [
+        {
+          "tema": "Crítica à idolatria do personagem",
+          "mencoes_aproximadas": 8,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "O grupo afirma que o filme evidencia como o público romantiza o Coringa, ignorando o homem problemático por trás da fantasia.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Musical como recurso narrativo",
+          "mencoes_aproximadas": 7,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "Os números musicais são vistos como uma forma de expressar os delírios e o estado mental de Arthur, funcionando como fuga da realidade.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Atuação de Joaquin Phoenix e Lady Gaga",
+          "mencoes_aproximadas": 6,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "O elenco é elogiado pela intensidade e carisma, com destaque para a entrega de Phoenix na complexidade do personagem e a presença de Gaga.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Originalidade e ousadia",
+          "mencoes_aproximadas": 6,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "O filme é apontado como uma sequência corajosa e experimental, que evita a repetição do primeiro longa e toma riscos artísticos.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Visual e fotografia marcantes",
+          "mencoes_aproximadas": 5,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "A direção de arte e a fotografia gótica e sombria são realçadas como pontos fortes que sustentam a atmosfera do filme.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Subversão de expectativas",
+          "mencoes_aproximadas": 5,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "O desfecho e as escolhas narrativas que contrariam o esperado pelos fãs da obra original são vistos como uma jogada inteligente.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        }
+      ],
+      "observacao_geral": "As reviews positivas destacam a ousadia da sequência em subverter as expectativas, utilizando o musical como ferramenta para explorar a psique de Arthur, e enxergam a obra como uma crítica à idolatria do personagem, valorizando performances e estética visual.",
+      "idioma_invalido": false,
+      "escopo_suspeito": false
+    }
+  ],
+  "narrativa": "Lançado em 2024 e dirigido por Todd Phillips, Coringa: Delírio a Dois é um drama policial e suspense que acompanha Arthur Fleck institucionalizado em Arkham enquanto aguarda o julgamento por seus crimes. Em meio ao conflito com sua identidade dividida, o protagonista vivencia um encontro amoroso e a manifestação da música que carrega em seu íntimo.\n\nA produção adota uma estrutura que intercala momentos de drama institucional com sequências cantadas. A condução desenvolve-se sob um andamento cadenciado, sustentada por uma ambientação centrada no isolamento e na projeção visual dos estados mentais do personagem.\n\nEm boa parte das notas (~46%), grande parte aponta que os números musicais surgem de forma deslocada e interferem no andamento das cenas. Uma parcela expressiva relata uma experiência marcada por ritmo lento, enquanto um número considerável critica a falta de desenvolvimento da narrativa.\n\nNuma parte menor das notas (~33%), nessa leitura, muitos avaliam que as canções não se integram de modo coeso à trama. Vários traçam comparações desfavoráveis com a produção anterior, embora alguns destaquem positivamente o trabalho das atuações.\n\nPara os que se situam nessa perspectiva, numa parcela das notas (~21%), uma parte enxerga na obra uma crítica à idolatria construída em torno do protagonista. Parte deles compreende os números musicais como um recurso de expressão de seus delírios, e uma fatia menor ressalta a entrega das atuações de Joaquin Phoenix e Lady Gaga.",
+  "verificacao_narrativa": {
+    "quantificador_fora_de_faixa": [],
+    "quantificador_repetido": [],
+    "paragrafos": {
+      "n_paragrafos": 5,
+      "minimo": 3,
+      "insuficientes": false,
+      "longos": []
+    },
+    "n_paragrafos": 5,
+    "paragrafos_insuficientes": false,
+    "paragrafos_longos": [],
+    "grupos_sem_paragrafo_proprio": [],
+    "movimento1_e_movimento2_no_mesmo_paragrafo": false,
+    "formato_invalido": false,
+    "numeros_inventados": [],
+    "rotulos_faltando": [],
+    "ordem_incorreta": false,
+    "vocabulario_peso": false,
+    "resenha_speak": [],
+    "n_resenha_speak": 0,
+    "n_flags": 0
+  },
+  "narrativa_selecao": {
+    "provider": "gemini",
+    "modelo": "gemini-3.7-flash",
+    "n_candidatos": 3,
+    "n_chamadas": 3,
+    "indice_escolhido": 0,
+    "motivo": "melhor_entre_limpos",
+    "criterio_decisivo": "unico",
+    "candidatos": [
+      {
+        "indice": 0,
+        "n_flags": 0,
+        "cliches": 0,
+        "repeticao_max": 1,
+        "ritmo": 5,
+        "cobertura": 1.0,
+        "eliminado": false
+      },
+      {
+        "indice": 1,
+        "n_flags": 1,
+        "cliches": 0,
+        "repeticao_max": 1,
+        "ritmo": 7,
+        "cobertura": 1.0,
+        "eliminado": true
+      },
+      {
+        "indice": 2,
+        "n_flags": 1,
+        "cliches": 0,
+        "repeticao_max": 1,
+        "ritmo": 5,
+        "cobertura": 1.0,
+        "eliminado": true
+      }
+    ],
+    "retry": null,
+    "uso": {
+      "prompt_tokens": 8862,
+      "completion_tokens": 1127,
+      "cache_hit_tokens": 0,
+      "cache_miss_tokens": 8862
+    },
+    "latencia_s": 34.64
+  }
+}
