@@ -2625,6 +2625,54 @@ Custo estimado: no pior caso ~100 requisições extras por filme novo (uma por r
 > vir de um prior mais profundo do modelo pré-treinado (associar veredicto
 > a `impacto_emocional`) — instrução muda critério, não sempre suprime prior.
 
+> **CORREÇÃO DA PROJEÇÃO DE LIFT (Entrega 4 do verificador, 2026-08-22).** A
+> projeção de lift que acompanhou a medição de 2026-08-14
+> (`verificador/projecao.json`) foi calculada ANTES da correção de margem da
+> v1.9.15, e herdou os dois defeitos que aquela versão consertou no caminho
+> de produção:
+>
+> 1. **Comparação em float.** `variante_impacto_estrito._projetar_lift`
+>    compara `lift >= m` sobre `float`, reproduzindo o mesmo `0.2 >= 0.2`
+>    falso em binário que fez 5 filmes caírem fora da margem por engano. A
+>    base contra a qual a projeção se comparava era **13/35**; sob `>=`
+>    exato sempre foram **18/35**. A projeção anunciava "de 13/35 para
+>    15/35" — um ganho medido contra uma régua torta.
+> 2. **Uma única amostra.** O modelo de remoção é estocástico (cada
+>    marcação cai com probabilidade `1 - fator`), mas a projeção sorteava
+>    UMA vez. Para uma pergunta binária por filme ("o veredito de contraste
+>    vira?") um sorteio só não tem incerteza declarada.
+>
+> A projeção corrigida (`verificador_impacto.py projetar-exato`) usa
+> `espectro24.eixos.acima_da_margem`/`contraste` — a mesma fonte de verdade
+> do caminho de produção, `Fraction` do começo ao fim — e roda 2000
+> sorteios, reportando a FRAÇÃO de sorteios em que cada veredito vira, em
+> vez de um ponto. A projeção antiga fica no disco como registro do que foi
+> medido quando; ela não é reescrita.
+>
+> **O achado material da correção (medido, 2000 sorteios).** A projeção
+> antiga anunciava um GANHO de cobertura de contraste ("13/35 → 15/35").
+> Contra a base certa não há ganho: **18/35 → mediana 17/35, IC95 [16, 19]**
+> sob `V2_alvo/passe1` — o intervalo contém a base, então a leitura honesta
+> é **nenhuma mudança detectável**, com estimativa pontual levemente para
+> baixo. Sob `V1_regua` a mediana cai a 16/35 (IC95 [16, 18]), encostando na
+> base pelo topo. O "ganho" registrado em 2026-08-14 era artefato da régua
+> torta, nas duas pontas: base errada E direção errada.
+>
+> Isso REFORÇA a conclusão que a sessão anterior já tinha registrado — a
+> saturação de `impacto_emocional` não era a causa da fraqueza do lift. E
+> acrescenta o sinal que faltava: o eixo saturado estava, se algo,
+> CARREGANDO cobertura de contraste, não a suprimindo. O caso para adotar o
+> verificador é de PRECISÃO, e ele se paga com (no máximo) um filme de
+> cobertura — trade-off explícito, não um ganho em duas frentes.
+>
+> **A de-saturação em si funciona como previsto:** `impacto_emocional` sai
+> de **75,6%** para **35,7%** projetados (V2/passe1), entrando na faixa dos
+> outros nove eixos (13,7% a 55,9%, mediana 28,5%) — deixa de ser o outlier
+> saturado. E o veredito de contraste dos três filmes no ar é **estável**:
+> `cure` e `the-invite-2026` não viram em nenhum dos 2000 sorteios,
+> `cidade-de-deus` vira em 0,6%. Adotar o verificador não obriga a
+> republicar os três por mudança de veredito.
+
 - **Uma chamada por bucket** (máx. 3 por filme), modelo configurável.
 - **Provider-agnóstico (v1.1.1):** a interface de cliente injetável (`client_call(system, user, model) -> str`) é o **contrato formal**. Providers suportados: **Gemini** (chave `GEMINI_API_KEY`, modo JSON nativo) e **Anthropic** (chave `ANTHROPIC_API_KEY`). Seleção via `--provider {gemini,anthropic}`; sem a flag, auto-detecta pela chave presente no ambiente; se ambas as chaves estiverem presentes, ou nenhuma, é erro — exige decisão explícita.
 - **Default de modelo Gemini — `gemini-2.5-flash` (v1.1.2, ratificado com evidência):** a comparação de modelos (`resultado/comparacao/COMPARACAO.md`) rodou o MESMO prompt sobre o MESMO corpus (`oppenheimer-2023`) em `gemini-2.5-flash-lite` e `gemini-2.5-flash`. O flash-lite cometeu **3 violações de instrução** documentadas: (1) bucket `negativas` inteiro em inglês, violando "saída sempre em pt-BR"; (2)-(3) `observacao_geral` generalizando o recorte filtrado do bucket para "a maioria dos críticos considera o filme um fracasso" — o próprio erro de enquadramento que motivou o preâmbulo de papel abaixo. O `gemini-2.5-flash`, no mesmo teste, não repetiu nenhuma das três. Default Anthropic: `claude-sonnet-4-6`.

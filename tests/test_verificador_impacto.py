@@ -158,3 +158,67 @@ def test_apenas_v2_pede_o_alvo(vi):
 
 def test_o_eixo_verificado_e_apenas_impacto_emocional(vi):
     assert vi.EIXO == "impacto_emocional"
+
+
+# ============================================================ projeção exata
+# [2026-08-22] A projeção de lift da Entrega 4 foi medida ANTES da correção
+# de margem da v1.9.15 e herdou os dois defeitos que aquela versão consertou:
+# comparação `>=` em float (o mesmo `0.2 >= 0.2` falso em binário) e um único
+# sorteio de um modelo estocástico. Estes testes travam a versão corrigida
+# contra a fonte de verdade do caminho de produção.
+
+
+@pytest.fixture(scope="module")
+def corpus(vi):
+    return vi._corpus_consenso()
+
+
+def test_projecao_usa_a_margem_exata_e_nao_float(vi):
+    """O bug de v1.9.14/float: 20,0pp EXATOS atingem a margem mínima.
+
+    Se a projeção voltar a comparar em float, este caso — 8/40 contra 0/40,
+    exatamente 20,0pp — deixa de contar e o teste cai.
+    """
+    from fractions import Fraction
+    assert vi._atinge(Fraction(8, 40) - Fraction(0, 40))
+    assert not vi._atinge(Fraction(199, 1000))
+
+
+def test_base_da_projecao_reproduz_18_de_35(vi, corpus):
+    """A base correta é 18/35, não os 13/35 que a projeção antiga usava.
+
+    Este é o número que a v1.9.15 estabeleceu sob `>=` exato, e é a régua
+    contra a qual qualquer ganho projetado tem de ser lido.
+    """
+    base = vi._cobertura_exata(corpus)
+    assert base["n_filmes_com_algum"] == 18
+    assert base["n_filmes"] == 35
+
+
+def test_base_da_projecao_reproduz_o_contraste_publicado(vi, corpus):
+    """Fator 1,0 (nenhuma remoção) tem de devolver o estado que está no ar."""
+    base = vi._cobertura_exata(corpus)
+    assert base["contraste"]["cure"] == "tematico"
+    assert base["contraste"]["cidade-de-deus"] == "valorativo"
+    assert base["contraste"]["the-invite-2026"] == "tematico"
+
+
+def test_projecao_so_remove_nunca_acrescenta(vi, corpus):
+    """A assimetria do verificador tem de sobreviver à projeção."""
+    sorteado = vi._sortear_remocoes(corpus, 0.5, semente=1)
+    for antes, depois in zip(corpus, sorteado):
+        assert set(depois["eixos"]) <= set(antes["eixos"])
+        assert set(antes["eixos"]) - set(depois["eixos"]) <= {vi.EIXO}
+
+
+def test_projecao_e_deterministica_por_semente(vi, corpus):
+    a = vi._sortear_remocoes(corpus, 0.5, semente=7)
+    b = vi._sortear_remocoes(corpus, 0.5, semente=7)
+    c = vi._sortear_remocoes(corpus, 0.5, semente=8)
+    assert [r["eixos"] for r in a] == [r["eixos"] for r in b]
+    assert [r["eixos"] for r in a] != [r["eixos"] for r in c]
+
+
+def test_fator_1_nao_remove_nada(vi, corpus):
+    igual = vi._sortear_remocoes(corpus, 1.0, semente=3)
+    assert [r["eixos"] for r in igual] == [list(r["eixos"]) for r in corpus]

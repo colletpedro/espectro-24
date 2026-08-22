@@ -566,12 +566,202 @@ def _projetar_lift(consenso_corpus: list[dict], fator: float) -> dict:
     return vie._projetar_lift(consenso_corpus, fator)
 
 
+# ===========================================================================
+# Entrega 4 (corrigida em 2026-08-22) — projeção sob margem EXATA
+# ===========================================================================
+#
+# A projeção acima foi medida em 2026-08-14, ANTES da correção de margem da
+# v1.9.15, e herda os dois defeitos que aquela versão consertou no caminho de
+# produção (SPEC §3[D]):
+#
+#   1. compara `lift >= m` em FLOAT — o mesmo `0.2 >= 0.2` avaliando falso em
+#      binário que fazia 5 filmes cair fora da margem por engano. A base que
+#      ela usava era 13/35; sob `>=` exato sempre foram 18/35.
+#   2. sorteia UMA vez um modelo estocástico, sem incerteza declarada.
+#
+# Esta versão usa a MESMA fonte de verdade do caminho de produção
+# (`espectro24.eixos`), `Fraction` do começo ao fim, e roda N sorteios
+# reportando a FRAÇÃO em que cada veredito vira. A projeção antiga fica no
+# disco como registro do que foi medido quando — não é reescrita.
+
+from fractions import Fraction  # noqa: E402
+
+from espectro24 import eixos as EX  # noqa: E402
+
+ARQ_PROJECAO_EXATA = SAIDA / "projecao_exata.json"
+PUBLICADOS = ("cure", "cidade-de-deus", "the-invite-2026")
+N_SORTEIOS = 2000
+SEMENTE_PROJECAO = 20260822
+
+
+def _atinge(lift: Fraction) -> bool:
+    """A margem do projeto, EXATA. Fonte única: `eixos.acima_da_margem`."""
+    return EX.acima_da_margem(lift)
+
+
+def _corpus_consenso() -> list[dict]:
+    caminho = RAIZ / "resultado" / "votacao-3" / "consenso.jsonl"
+    return [json.loads(l) for l in
+            caminho.read_text(encoding="utf-8").splitlines() if l.strip()]
+
+
+def _sortear_remocoes(corpus: list[dict], fator: float,
+                      semente: int) -> list[dict]:
+    """Cada marcação de `EIXO` cai com probabilidade `1 - fator`.
+
+    Remoção NÃO-SELETIVA entre buckets — a mesma suposição conservadora já
+    declarada no modelo original. `fator >= 1` não remove nada.
+    """
+    rng = random.Random(semente)
+    fora = []
+    for r in corpus:
+        eixos = list(r["eixos"])
+        if EIXO in eixos and rng.random() > fator:
+            eixos.remove(EIXO)
+        fora.append({**r, "eixos": eixos})
+    return fora
+
+
+def _por_filme(corpus: list[dict]) -> dict[str, dict[str, dict[str, list[str]]]]:
+    """`{slug: {bucket: {id: eixos}}}` — a forma que `eixos.frequencias` come."""
+    fora: dict = defaultdict(lambda: defaultdict(dict))
+    for r in corpus:
+        fora[r["slug"]][r["bucket"]][r["id"]] = r["eixos"]
+    return {s: dict(b) for s, b in fora.items()}
+
+
+def _cobertura_exata(corpus: list[dict]) -> dict:
+    """Cobertura de contraste e veredito por filme, sob `>=` exato."""
+    filmes = _por_filme(corpus)
+    com_algum, contraste, freq_ie = 0, {}, {}
+    for slug, buckets in filmes.items():
+        freqs = EX.frequencias(buckets)
+        lf = EX.lifts(freqs)
+        est = EX.contraste(lf)
+        contraste[slug] = est
+        com_algum += est == "tematico"
+        n = sum(f["n"] for f in freqs.values())
+        marcadas = sum(f["por_eixo"].get(EIXO, 0) for f in freqs.values())
+        freq_ie[slug] = Fraction(marcadas, n) if n else Fraction(0)
+    return {"n_filmes": len(filmes), "n_filmes_com_algum": com_algum,
+            "contraste": contraste, "freq_ie": freq_ie}
+
+
+def _freq_media_por_eixo(corpus: list[dict]) -> dict[str, float]:
+    n = len(corpus)
+    c = Counter()
+    for r in corpus:
+        for e in set(r["eixos"]):
+            c[e] += 1
+    return {e: c.get(e, 0) / n for e in EIXOS}
+
+
+def cmd_projetar_exato() -> None:
+    rel = json.loads(ARQ_COMPARACAO.read_text(encoding="utf-8"))
+    corpus = _corpus_consenso()
+    base = _cobertura_exata(corpus)
+    freqs_base = _freq_media_por_eixo(corpus)
+    outros = sorted(v for e, v in freqs_base.items() if e != EIXO)
+
+    saida = {
+        "natureza": "PROJECAO, nao medicao — a medicao exige rodar o "
+                    "verificador sobre o corpus inteiro",
+        "corrige": "projecao.json (2026-08-14), medida em float e com 1 sorteio",
+        "margem_pp": EX.MARGEM_LIFT_PP,
+        "n_sorteios": N_SORTEIOS,
+        "base": {
+            "n_filmes": base["n_filmes"],
+            "n_filmes_com_algum": base["n_filmes_com_algum"],
+            "contraste_publicados": {s: base["contraste"][s] for s in PUBLICADOS},
+            "freq_ie": round(freqs_base[EIXO], 4),
+            "freq_outros_eixos": {"min": round(outros[0], 4),
+                                  "mediana": round(outros[len(outros) // 2], 4),
+                                  "max": round(outros[-1], 4)},
+        },
+        "por_variante": {},
+    }
+
+    b = rel["base_A_regra"]["eixo"]
+    for variante in VARIANTES:
+        for modo in ("passe1", "consenso3"):
+            m = rel.get(variante, {}).get(modo)
+            if not m:
+                continue
+            e = m["eixo"]
+            fator, motivo = fator_pareado(b["precisao"], b["recall"],
+                                          e["precisao"], e["recall"])
+            if fator is None:
+                saida["por_variante"][f"{variante}/{modo}"] = {
+                    "fator": None, "motivo_indefinido": motivo}
+                continue
+
+            cob, virou, freq_ie_proj = [], Counter(), []
+            for i in range(N_SORTEIOS):
+                amostra = _sortear_remocoes(corpus, fator, SEMENTE_PROJECAO + i)
+                c = _cobertura_exata(amostra)
+                cob.append(c["n_filmes_com_algum"])
+                freq_ie_proj.append(_freq_media_por_eixo(amostra)[EIXO])
+                for s in PUBLICADOS:
+                    if c["contraste"][s] != base["contraste"][s]:
+                        virou[s] += 1
+            cob.sort()
+            saida["por_variante"][f"{variante}/{modo}"] = {
+                "fator": round(fator, 3),
+                "freq_ie_projetada": round(sum(freq_ie_proj) / len(freq_ie_proj), 4),
+                "cobertura_contraste": {
+                    "base": base["n_filmes_com_algum"],
+                    "mediana": cob[len(cob) // 2],
+                    "ic95": [cob[int(0.025 * len(cob))],
+                             cob[int(0.975 * len(cob))]],
+                    "delta_mediano": cob[len(cob) // 2] - base["n_filmes_com_algum"],
+                },
+                "veredito_publicados": {
+                    s: {"base": base["contraste"][s],
+                        "fracao_de_sorteios_que_vira": round(virou[s] / N_SORTEIOS, 4)}
+                    for s in PUBLICADOS},
+            }
+
+    SAIDA.mkdir(parents=True, exist_ok=True)
+    ARQ_PROJECAO_EXATA.write_text(json.dumps(saida, ensure_ascii=False, indent=2),
+                                  encoding="utf-8")
+    _imprimir_projecao_exata(saida)
+    print(f"\n→ {ARQ_PROJECAO_EXATA.relative_to(RAIZ)}")
+
+
+def _imprimir_projecao_exata(saida: dict) -> None:
+    b = saida["base"]
+    fo = b["freq_outros_eixos"]
+    print(f"=== PROJECAO EXATA (margem {saida['margem_pp']}pp, `>=` Fraction, "
+          f"{saida['n_sorteios']} sorteios) ===")
+    print(f"  BASE: {EIXO} em {b['freq_ie']:.1%} · outros eixos "
+          f"[{fo['min']:.1%} .. mediana {fo['mediana']:.1%} .. {fo['max']:.1%}]")
+    print(f"  BASE: cobertura de contraste {b['n_filmes_com_algum']}/"
+          f"{b['n_filmes']} filmes")
+    for s, v in b["contraste_publicados"].items():
+        print(f"        {s:<18} {v}")
+    for nome, d in saida["por_variante"].items():
+        if d.get("fator") is None:
+            print(f"\n  {nome:<22} indefinido: {d['motivo_indefinido']}")
+            continue
+        c = d["cobertura_contraste"]
+        print(f"\n  {nome:<22} fator {d['fator']:.2f}x → {EIXO} em "
+              f"{d['freq_ie_projetada']:.1%}")
+        print(f"      cobertura: {c['base']} → mediana {c['mediana']} "
+              f"IC95 [{c['ic95'][0]}, {c['ic95'][1]}]  "
+              f"({c['delta_mediano']:+d} filmes)")
+        for s, vv in d["veredito_publicados"].items():
+            print(f"      {s:<18} {vv['base']:<11} vira em "
+                  f"{vv['fracao_de_sorteios_que_vira']:.1%} dos sorteios")
+
+
 def main() -> None:
     ap = argparse.ArgumentParser(description=__doc__)
-    ap.add_argument("etapa", choices=["passes", "comparar", "projetar"])
+    ap.add_argument("etapa", choices=["passes", "comparar", "projetar",
+                                      "projetar-exato"])
     args = ap.parse_args()
     {"passes": cmd_passes, "comparar": cmd_comparar,
-     "projetar": cmd_projetar}[args.etapa]()
+     "projetar": cmd_projetar,
+     "projetar-exato": cmd_projetar_exato}[args.etapa]()
 
 
 if __name__ == "__main__":

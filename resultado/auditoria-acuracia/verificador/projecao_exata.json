@@ -1,0 +1,131 @@
+{
+  "natureza": "PROJECAO, nao medicao — a medicao exige rodar o verificador sobre o corpus inteiro",
+  "corrige": "projecao.json (2026-08-14), medida em float e com 1 sorteio",
+  "margem_pp": 20,
+  "n_sorteios": 2000,
+  "base": {
+    "n_filmes": 35,
+    "n_filmes_com_algum": 18,
+    "contraste_publicados": {
+      "cure": "tematico",
+      "cidade-de-deus": "valorativo",
+      "the-invite-2026": "tematico"
+    },
+    "freq_ie": 0.7563,
+    "freq_outros_eixos": {
+      "min": 0.1368,
+      "mediana": 0.2849,
+      "max": 0.559
+    }
+  },
+  "por_variante": {
+    "V1_regua/passe1": {
+      "fator": 0.319,
+      "freq_ie_projetada": 0.2417,
+      "cobertura_contraste": {
+        "base": 18,
+        "mediana": 16,
+        "ic95": [
+          16,
+          18
+        ],
+        "delta_mediano": -2
+      },
+      "veredito_publicados": {
+        "cure": {
+          "base": "tematico",
+          "fracao_de_sorteios_que_vira": 0.0
+        },
+        "cidade-de-deus": {
+          "base": "valorativo",
+          "fracao_de_sorteios_que_vira": 0.0025
+        },
+        "the-invite-2026": {
+          "base": "tematico",
+          "fracao_de_sorteios_que_vira": 0.0
+        }
+      }
+    },
+    "V1_regua/consenso3": {
+      "fator": 0.319,
+      "freq_ie_projetada": 0.2417,
+      "cobertura_contraste": {
+        "base": 18,
+        "mediana": 16,
+        "ic95": [
+          16,
+          18
+        ],
+        "delta_mediano": -2
+      },
+      "veredito_publicados": {
+        "cure": {
+          "base": "tematico",
+          "fracao_de_sorteios_que_vira": 0.0
+        },
+        "cidade-de-deus": {
+          "base": "valorativo",
+          "fracao_de_sorteios_que_vira": 0.0025
+        },
+        "the-invite-2026": {
+          "base": "tematico",
+          "fracao_de_sorteios_que_vira": 0.0
+        }
+      }
+    },
+    "V2_alvo/passe1": {
+      "fator": 0.472,
+      "freq_ie_projetada": 0.3573,
+      "cobertura_contraste": {
+        "base": 18,
+        "mediana": 17,
+        "ic95": [
+          16,
+          19
+        ],
+        "delta_mediano": -1
+      },
+      "veredito_publicados": {
+        "cure": {
+          "base": "tematico",
+          "fracao_de_sorteios_que_vira": 0.0
+        },
+        "cidade-de-deus": {
+          "base": "valorativo",
+          "fracao_de_sorteios_que_vira": 0.006
+        },
+        "the-invite-2026": {
+          "base": "tematico",
+          "fracao_de_sorteios_que_vira": 0.0
+        }
+      }
+    },
+    "V2_alvo/consenso3": {
+      "fator": 0.444,
+      "freq_ie_projetada": 0.3363,
+      "cobertura_contraste": {
+        "base": 18,
+        "mediana": 17,
+        "ic95": [
+          16,
+          19
+        ],
+        "delta_mediano": -1
+      },
+      "veredito_publicados": {
+        "cure": {
+          "base": "tematico",
+          "fracao_de_sorteios_que_vira": 0.0
+        },
+        "cidade-de-deus": {
+          "base": "valorativo",
+          "fracao_de_sorteios_que_vira": 0.0065
+        },
+        "the-invite-2026": {
+          "base": "tematico",
+          "fracao_de_sorteios_que_vira": 0.0
+        }
+      }
+    }
+  }
+}
