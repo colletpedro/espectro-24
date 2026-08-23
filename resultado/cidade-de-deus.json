@@ -1076,7 +1076,7 @@
           }
         },
         "bullet_de": {
-          "negativas": null,
+          "negativas": "frequencia",
           "medianas": "frequencia",
           "positivas": "frequencia"
         }
@@ -1159,36 +1159,36 @@
         "eixo": "impacto_emocional",
         "por_bucket": {
           "negativas": {
-            "mencoes": 32,
+            "mencoes": 15,
             "de_n": 40,
-            "freq_pct": 80.0,
-            "lift_pp": -5.0,
+            "freq_pct": 37.5,
+            "lift_pp": -7.5,
             "tema": null,
             "exemplo_parafraseado": null,
             "temas_no_mesmo_eixo": []
           },
           "medianas": {
-            "mencoes": 34,
+            "mencoes": 12,
             "de_n": 40,
-            "freq_pct": 85.0,
-            "lift_pp": 5.0,
+            "freq_pct": 30.0,
+            "lift_pp": -15.0,
             "tema": "Técnica impressionante, mas distanciamento emocional",
             "exemplo_parafraseado": "A direção, a fotografia e a edição são brilhantes, mas o estilo visual tão chamativo cria uma barreira que impede uma conexão mais profunda com a história.",
             "temas_no_mesmo_eixo": []
           },
           "positivas": {
-            "mencoes": 32,
+            "mencoes": 18,
             "de_n": 40,
-            "freq_pct": 80.0,
-            "lift_pp": -5.0,
+            "freq_pct": 45.0,
+            "lift_pp": 7.5,
             "tema": "Impacto emocional",
             "exemplo_parafraseado": "Os espectadores relatam que o filme provoca fortes emoções, variando de choque e tristeza à admiração, e que a história permanece na mente muito depois do fim.",
             "temas_no_mesmo_eixo": []
           }
         },
         "bullet_de": {
-          "negativas": "frequencia",
-          "medianas": "frequencia",
+          "negativas": null,
+          "medianas": null,
           "positivas": "frequencia"
         }
       },
@@ -1299,7 +1299,7 @@
         },
         "bullet_de": {
           "negativas": "frequencia",
-          "medianas": null,
+          "medianas": "frequencia",
           "positivas": null
         }
       }
@@ -1310,6 +1310,13 @@
       "fora_da_taxonomia": {},
       "houve_retentativa": []
     },
-    "spec_version": "1.9.15"
+    "spec_version": "1.9.16",
+    "verificador": {
+      "aplicado": true,
+      "variante": "V2_alvo",
+      "passada": 1,
+      "eixo": "impacto_emocional",
+      "n_removidas_no_corpus": 1654
+    }
   }
 }

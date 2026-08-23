@@ -2698,7 +2698,10 @@ Custo estimado: no pior caso ~100 requisições extras por filme novo (uma por r
 > `montar_eixos` sem `consenso=` explícito passa a preferir o verificado
 > quando ele existe — é a adoção, não uma alternativa que o código escolhe
 > às cegas — e GRAVA a declaração no bloco publicado (`bloco["verificador"]`:
-> variante, passada, `n_removidas`), no mesmo estatuto aditivo de
+> variante, passada, `n_removidas_no_corpus` — nome que deixa explícito
+> o escopo GLOBAL do número, depois de um susto ao publicar: o campo
+> chamado só `n_removidas` no bloco de `cure.json` levaria um leitor a
+> pensar que 1654 marcações saíram só de `cure`), no mesmo estatuto aditivo de
 > `fonte_classificacao`: a chave só existe quando o passe rodou, e sua
 > ausência num JSON antigo é a verdade sobre aquele artefato, não um default
 > silencioso. **Guarda de atualidade, não fallback silencioso:** se

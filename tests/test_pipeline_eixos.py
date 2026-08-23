@@ -200,4 +200,4 @@ def test_verificador_meta_entra_no_bloco_quando_aplicado(output, diretorio_conse
     bloco = P.montar_eixos("filme-x", output, {}, client_call=_cliente())
     assert bloco["verificador"] == {"aplicado": True, "variante": "V2_alvo",
                                     "passada": 1, "eixo": "impacto_emocional",
-                                    "n_removidas": 7}
+                                    "n_removidas_no_corpus": 7}

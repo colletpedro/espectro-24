@@ -548,9 +548,15 @@ def _carregar_consenso_producao(E) -> tuple[dict | None, dict | None]:
             catalogo = E.carregar_classificacao(caminho_verificado)
         except (ValueError, OSError):
             return None, None
+        # `n_removidas_no_corpus`, não `n_removidas`: o manifesto é uma
+        # medição GLOBAL de uma execução única do passe sobre os 35 filmes —
+        # nomear o campo sem o escopo faria um leitor de `cure.json` pensar
+        # que 1654 marcações foram removidas SÓ de `cure` (achado ao publicar
+        # os 3, corrigido antes do commit). A contagem por filme vive em
+        # `resultado/votacao-3/relatorio_aplicacao.json`.
         meta = {"aplicado": True, "variante": manifesto.get("variante"),
                "passada": manifesto.get("passada"), "eixo": manifesto.get("eixo"),
-               "n_removidas": manifesto.get("n_removidas")}
+               "n_removidas_no_corpus": manifesto.get("n_removidas")}
         return catalogo, meta
 
     caminho_raw = Path(E.CONSENSO_PADRAO)

@@ -917,7 +917,7 @@ window.ESPECTRO_DATA = {
               }
             },
             "bullet_de": {
-              "negativas": null,
+              "negativas": "frequencia",
               "medianas": "frequencia",
               "positivas": null
             }
@@ -994,8 +994,8 @@ window.ESPECTRO_DATA = {
             },
             "bullet_de": {
               "negativas": "frequencia",
-              "medianas": null,
-              "positivas": null
+              "medianas": "frequencia",
+              "positivas": "frequencia"
             }
           },
           {
@@ -1076,27 +1076,27 @@ window.ESPECTRO_DATA = {
             "eixo": "impacto_emocional",
             "por_bucket": {
               "negativas": {
-                "mencoes": 32,
+                "mencoes": 12,
                 "de_n": 40,
-                "freq_pct": 80.0,
-                "lift_pp": -5.0,
+                "freq_pct": 30.0,
+                "lift_pp": -15.0,
                 "tema": null,
                 "exemplo_parafraseado": null,
                 "temas_no_mesmo_eixo": []
               },
               "medianas": {
-                "mencoes": 29,
+                "mencoes": 16,
                 "de_n": 40,
-                "freq_pct": 72.5,
-                "lift_pp": -12.5,
+                "freq_pct": 40.0,
+                "lift_pp": -5.0,
                 "tema": null,
                 "exemplo_parafraseado": null,
                 "temas_no_mesmo_eixo": []
               },
               "positivas": {
-                "mencoes": 34,
+                "mencoes": 18,
                 "de_n": 40,
-                "freq_pct": 85.0,
+                "freq_pct": 45.0,
                 "lift_pp": 5.0,
                 "tema": "Exploração profunda de relacionamentos e emoções",
                 "exemplo_parafraseado": "Muitas reviews positivas mencionam que o filme apresenta uma visão honesta e comovente sobre casamentos em crise, tocando em temas como comunicação, ressentimento e esperança de redenção.",
@@ -1104,9 +1104,9 @@ window.ESPECTRO_DATA = {
               }
             },
             "bullet_de": {
-              "negativas": "frequencia",
-              "medianas": "frequencia",
-              "positivas": "frequencia"
+              "negativas": null,
+              "medianas": null,
+              "positivas": null
             }
           },
           {
@@ -1227,7 +1227,14 @@ window.ESPECTRO_DATA = {
           "fora_da_taxonomia": {},
           "houve_retentativa": []
         },
-        "spec_version": "1.9.15"
+        "spec_version": "1.9.16",
+        "verificador": {
+          "aplicado": true,
+          "variante": "V2_alvo",
+          "passada": 1,
+          "eixo": "impacto_emocional",
+          "n_removidas_no_corpus": 1654
+        }
       }
     },
     "cure": {
@@ -2082,9 +2089,7 @@ window.ESPECTRO_DATA = {
                 "lift_pp": 5.0,
                 "tema": "Ritmo lento e arrastado",
                 "exemplo_parafraseado": "O filme se arrasta demais, com cenas longas e monótonas que fazem o tempo passar muito devagar, levando ao tédio e à sonolência.",
-                "temas_no_mesmo_eixo": [
-                  "Falta de clímax ou recompensa"
-                ]
+                "temas_no_mesmo_eixo": []
               },
               "medianas": {
                 "mencoes": 17,
@@ -2106,8 +2111,8 @@ window.ESPECTRO_DATA = {
               }
             },
             "bullet_de": {
-              "negativas": null,
-              "medianas": null,
+              "negativas": "frequencia",
+              "medianas": "frequencia",
               "positivas": null
             }
           },
@@ -2193,9 +2198,10 @@ window.ESPECTRO_DATA = {
                 "de_n": 40,
                 "freq_pct": 67.5,
                 "lift_pp": 7.5,
-                "tema": "Personagens pouco cativantes",
-                "exemplo_parafraseado": "Os personagens são distantes e não despertam empatia, e o antagonista é repetitivo e irritante em suas falas e atitudes.",
+                "tema": "Falta de clímax ou recompensa",
+                "exemplo_parafraseado": "A história constrói muita expectativa, mas termina sem respostas satisfatórias, deixando a sensação de que nada foi resolvido.",
                 "temas_no_mesmo_eixo": [
+                  "Personagens pouco cativantes",
                   "Enredo confuso e sem objetividade",
                   "Diálogos fracos e repetitivos"
                 ]
@@ -2298,44 +2304,44 @@ window.ESPECTRO_DATA = {
             "bullet_de": {
               "negativas": null,
               "medianas": null,
-              "positivas": "contraste"
+              "positivas": "frequencia_e_contraste"
             }
           },
           {
             "eixo": "impacto_emocional",
             "por_bucket": {
               "negativas": {
-                "mencoes": 33,
+                "mencoes": 15,
                 "de_n": 40,
-                "freq_pct": 82.5,
-                "lift_pp": 0.0,
+                "freq_pct": 37.5,
+                "lift_pp": -5.0,
                 "tema": null,
                 "exemplo_parafraseado": null,
                 "temas_no_mesmo_eixo": []
               },
               "medianas": {
-                "mencoes": 33,
+                "mencoes": 17,
                 "de_n": 40,
-                "freq_pct": 82.5,
-                "lift_pp": 0.0,
+                "freq_pct": 42.5,
+                "lift_pp": 2.5,
                 "tema": null,
                 "exemplo_parafraseado": null,
                 "temas_no_mesmo_eixo": []
               },
               "positivas": {
-                "mencoes": 26,
+                "mencoes": 16,
                 "de_n": 40,
-                "freq_pct": 65.0,
-                "lift_pp": -17.5,
+                "freq_pct": 40.0,
+                "lift_pp": -2.5,
                 "tema": null,
                 "exemplo_parafraseado": null,
                 "temas_no_mesmo_eixo": []
               }
             },
             "bullet_de": {
-              "negativas": "frequencia",
-              "medianas": "frequencia",
-              "positivas": "frequencia"
+              "negativas": null,
+              "medianas": null,
+              "positivas": null
             }
           },
           {
@@ -2456,7 +2462,14 @@ window.ESPECTRO_DATA = {
           "fora_da_taxonomia": {},
           "houve_retentativa": []
         },
-        "spec_version": "1.9.15"
+        "spec_version": "1.9.16",
+        "verificador": {
+          "aplicado": true,
+          "variante": "V2_alvo",
+          "passada": 1,
+          "eixo": "impacto_emocional",
+          "n_removidas_no_corpus": 1654
+        }
       }
     },
     "cidade-de-deus": {
@@ -3446,7 +3459,7 @@ window.ESPECTRO_DATA = {
               }
             },
             "bullet_de": {
-              "negativas": null,
+              "negativas": "frequencia",
               "medianas": "frequencia",
               "positivas": "frequencia"
             }
@@ -3529,36 +3542,36 @@ window.ESPECTRO_DATA = {
             "eixo": "impacto_emocional",
             "por_bucket": {
               "negativas": {
-                "mencoes": 32,
+                "mencoes": 15,
                 "de_n": 40,
-                "freq_pct": 80.0,
-                "lift_pp": -5.0,
+                "freq_pct": 37.5,
+                "lift_pp": -7.5,
                 "tema": null,
                 "exemplo_parafraseado": null,
                 "temas_no_mesmo_eixo": []
               },
               "medianas": {
-                "mencoes": 34,
+                "mencoes": 12,
                 "de_n": 40,
-                "freq_pct": 85.0,
-                "lift_pp": 5.0,
+                "freq_pct": 30.0,
+                "lift_pp": -15.0,
                 "tema": "Técnica impressionante, mas distanciamento emocional",
                 "exemplo_parafraseado": "A direção, a fotografia e a edição são brilhantes, mas o estilo visual tão chamativo cria uma barreira que impede uma conexão mais profunda com a história.",
                 "temas_no_mesmo_eixo": []
               },
               "positivas": {
-                "mencoes": 32,
+                "mencoes": 18,
                 "de_n": 40,
-                "freq_pct": 80.0,
-                "lift_pp": -5.0,
+                "freq_pct": 45.0,
+                "lift_pp": 7.5,
                 "tema": "Impacto emocional",
                 "exemplo_parafraseado": "Os espectadores relatam que o filme provoca fortes emoções, variando de choque e tristeza à admiração, e que a história permanece na mente muito depois do fim.",
                 "temas_no_mesmo_eixo": []
               }
             },
             "bullet_de": {
-              "negativas": "frequencia",
-              "medianas": "frequencia",
+              "negativas": null,
+              "medianas": null,
               "positivas": "frequencia"
             }
           },
@@ -3669,7 +3682,7 @@ window.ESPECTRO_DATA = {
             },
             "bullet_de": {
               "negativas": "frequencia",
-              "medianas": null,
+              "medianas": "frequencia",
               "positivas": null
             }
           }
@@ -3680,7 +3693,14 @@ window.ESPECTRO_DATA = {
           "fora_da_taxonomia": {},
           "houve_retentativa": []
         },
-        "spec_version": "1.9.15"
+        "spec_version": "1.9.16",
+        "verificador": {
+          "aplicado": true,
+          "variante": "V2_alvo",
+          "passada": 1,
+          "eixo": "impacto_emocional",
+          "n_removidas_no_corpus": 1654
+        }
       }
     },
     "teste-degradado": {

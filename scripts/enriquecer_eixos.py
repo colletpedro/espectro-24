@@ -37,7 +37,11 @@ from espectro24.bruto import janela_temporal  # noqa: E402
 from espectro24.pipeline import amostra_do_bruto, montar_eixos  # noqa: E402
 
 CATALOGO = ["the-invite-2026", "cure", "cidade-de-deus"]
-SAIDA = RAIZ / "resultado" / "v1915"
+# [v1.9.16] Cada reexecução ganha o PRÓPRIO diretório — nunca sobrescreve a
+# tabela de conferência de uma versão anterior (mesma disciplina de
+# `VERSAO_COLETOR`/`SPEC_VERSION`: um artefato de sessão anterior não é
+# reescrito). A v1.9.15 tem a dela em `resultado/v1915/`.
+SAIDA = RAIZ / "resultado" / "v1916"
 CONFERENCIA = SAIDA / "ROTULAGEM_CONFERENCIA.md"
 
 
