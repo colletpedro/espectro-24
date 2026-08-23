@@ -1,0 +1,1254 @@
+{
+  "slug": "perfect-days-2023",
+  "data_coleta": "2026-08-23T01:07:05.567721+00:00",
+  "spec_version": "1.9.16",
+  "total_reviews_observadas": 535,
+  "reviews_url": "https://letterboxd.com/film/perfect-days-2023/reviews/",
+  "ficha": {
+    "titulo": "Dias Perfeitos",
+    "sinopse_oficial": "A história de Hirayama, um homem de meia idade reflexivo que vive sua vida de forma modesta como zelador e limpando banheiros em Tóquio. Sua vida é revelada ao espectador através da música que ouve, dos livros que lê e das fotos que tira das árvores, uma vez que são suas três paixões. À medida que a vida de Hirayama avança, encontros inesperados começam a surgir revelando um passado sombrio e não tão metódico do zelador.",
+    "sinopse_fallback_en": false,
+    "generos": [
+      "Drama"
+    ],
+    "duracao_min": 124,
+    "diretor": "Wim Wenders",
+    "diretor_transliterado": false,
+    "ano": 2023,
+    "fonte": "tmdb",
+    "ano_fonte": "bruto"
+  },
+  "distribuicao": {
+    "n_notas_total": 874872,
+    "por_nivel": {
+      "0.5": 999,
+      "1.0": 2391,
+      "1.5": 1977,
+      "2.0": 8678,
+      "2.5": 11410,
+      "3.0": 48465,
+      "3.5": 83986,
+      "4.0": 250328,
+      "4.5": 177982,
+      "5.0": 288656
+    },
+    "por_bucket": {
+      "negativas": 2,
+      "medianas": 7,
+      "positivas": 92
+    },
+    "fonte": "letterboxd_histograma"
+  },
+  "coleta": {
+    "slug": "perfect-days-2023",
+    "coletado_em": "2026-08-09T14:53:15.819813+00:00",
+    "versao_coletor": "1.9.6",
+    "ordenacao_usada": "by/added",
+    "histograma_bruto": {
+      "0.5": 999,
+      "1.0": 2391,
+      "1.5": 1977,
+      "2.0": 8678,
+      "2.5": 11410,
+      "3.0": 48465,
+      "3.5": 83986,
+      "4.0": 250328,
+      "4.5": 177982,
+      "5.0": 288656
+    },
+    "orcamento_paginas_por_nivel": {
+      "0.5": 1,
+      "1.0": 3,
+      "1.5": 2,
+      "2.0": 10,
+      "2.5": 6,
+      "3.0": 10,
+      "3.5": 2,
+      "4.0": 5,
+      "4.5": 3,
+      "5.0": 6
+    },
+    "paginas_gastas_por_nivel": {
+      "0.5": 1,
+      "1.0": 2,
+      "1.5": 2,
+      "2.0": 8,
+      "2.5": 6,
+      "3.0": 10,
+      "3.5": 2,
+      "4.0": 5,
+      "4.5": 3,
+      "5.0": 6
+    },
+    "paradas_por_limite": [
+      "0.5",
+      "1.0",
+      "1.5",
+      "2.0",
+      "2.5",
+      "3.0",
+      "3.5",
+      "4.0",
+      "4.5",
+      "5.0"
+    ],
+    "contagem_bruta_por_nivel": {
+      "0.5": 12,
+      "1.0": 24,
+      "1.5": 24,
+      "2.0": 96,
+      "2.5": 67,
+      "3.0": 120,
+      "3.5": 24,
+      "4.0": 60,
+      "4.5": 36,
+      "5.0": 72
+    },
+    "contagem_estimada_valida_por_nivel": {
+      "0.5": 4,
+      "1.0": 11,
+      "1.5": 9,
+      "2.0": 24,
+      "2.5": 25,
+      "3.0": 36,
+      "3.5": 6,
+      "4.0": 18,
+      "4.5": 14,
+      "5.0": 22
+    },
+    "motivo_parada_por_nivel": {
+      "0.5": "orcamento_esgotado",
+      "1.0": "orcamento_esgotado",
+      "1.5": "orcamento_esgotado",
+      "2.0": "orcamento_esgotado",
+      "2.5": "orcamento_esgotado",
+      "3.0": "orcamento_esgotado",
+      "3.5": "orcamento_esgotado",
+      "4.0": "orcamento_esgotado",
+      "4.5": "orcamento_esgotado",
+      "5.0": "orcamento_esgotado"
+    },
+    "paginas_base_por_nivel": {
+      "0.5": 1,
+      "1.0": 2,
+      "1.5": 2,
+      "2.0": 8,
+      "2.5": 6,
+      "3.0": 10,
+      "3.5": 2,
+      "4.0": 5,
+      "4.5": 3,
+      "5.0": 6
+    },
+    "paginas_extensao_por_nivel": {
+      "0.5": 0,
+      "1.0": 0,
+      "1.5": 0,
+      "2.0": 0,
+      "2.5": 0,
+      "3.0": 0,
+      "3.5": 0,
+      "4.0": 0,
+      "4.5": 0,
+      "5.0": 0
+    },
+    "extensao_por_bucket": {
+      "negativas": {
+        "paginas_base": 13,
+        "paginas_extensao": 0,
+        "extras_por_nivel": {},
+        "motivo_parada": "meta_atingida",
+        "n_validas_pos_base": 97,
+        "n_validas_pos_extensao": 97,
+        "meta": 50
+      },
+      "medianas": {
+        "paginas_base": 16,
+        "paginas_extensao": 0,
+        "extras_por_nivel": {},
+        "motivo_parada": "meta_atingida",
+        "n_validas_pos_base": 99,
+        "n_validas_pos_extensao": 99,
+        "meta": 50
+      },
+      "positivas": {
+        "paginas_base": 16,
+        "paginas_extensao": 0,
+        "extras_por_nivel": {},
+        "motivo_parada": "meta_atingida",
+        "n_validas_pos_base": 96,
+        "n_validas_pos_extensao": 96,
+        "meta": 50
+      }
+    },
+    "profundidade_sondagem": {
+      "nivel_sondado": 5.0,
+      "profundidade": 256,
+      "exata": false,
+      "requisicoes": 4,
+      "motivo": "teto_plataforma"
+    },
+    "profundidade_estimada_por_nivel": {
+      "0.5": 1,
+      "1.0": 2,
+      "1.5": 2,
+      "2.0": 8,
+      "2.5": 10,
+      "3.0": 43,
+      "3.5": 74,
+      "4.0": 222,
+      "4.5": 158,
+      "5.0": 256
+    },
+    "janela_temporal": {
+      "total": {
+        "n": 865,
+        "min": "2023-05-25",
+        "max": "2026-08-08",
+        "p5": "2023-05-25",
+        "p50": "2026-07-28",
+        "p95": "2026-08-07"
+      },
+      "por_bucket": {
+        "negativas": {
+          "n": 264,
+          "min": "2023-05-25",
+          "max": "2026-08-08",
+          "p5": "2023-06-12",
+          "p50": "2026-07-15",
+          "p95": "2026-08-05"
+        },
+        "medianas": {
+          "n": 289,
+          "min": "2023-05-25",
+          "max": "2026-08-08",
+          "p5": "2023-05-26",
+          "p50": "2026-07-29",
+          "p95": "2026-08-07"
+        },
+        "positivas": {
+          "n": 312,
+          "min": "2023-05-25",
+          "max": "2026-08-08",
+          "p5": "2023-05-25",
+          "p50": "2026-08-07",
+          "p95": "2026-08-08"
+        }
+      }
+    },
+    "dias_por_100_paginas": {
+      "n_paginas": 16,
+      "pagina_min": 1,
+      "pagina_max": 128,
+      "dias": 13,
+      "dias_por_100_paginas": 10.236220472440944,
+      "paginas_para_1_ano": 3566
+    },
+    "ano_lancamento": 2023,
+    "ano_fonte": "slug",
+    "n_reviews_bruto": 865
+  },
+  "buckets": [
+    {
+      "bucket": "negativas",
+      "alvo": 40,
+      "modo": "completo",
+      "estado_piso": "completa",
+      "n_validas": 40,
+      "share_real": 2,
+      "composicao_alvo": {
+        "0.5": 3,
+        "1.0": 7,
+        "1.5": 5,
+        "2.0": 25
+      },
+      "composicao_atingida": {
+        "0.5": 3,
+        "1.0": 7,
+        "1.5": 5,
+        "2.0": 25
+      },
+      "cascata_por_degrau": {
+        "150": 40
+      },
+      "deficit_redistribuido": 0,
+      "distribuicao_pagina_origem": {
+        "n": 40,
+        "min": 1,
+        "max": 12,
+        "p5": 1,
+        "p50": 2,
+        "p95": 12,
+        "fracao_profunda": 0.25
+      },
+      "janela_amostra": {
+        "n": 40,
+        "min": "2023-05-25",
+        "max": "2026-08-08",
+        "p5": "2023-05-26",
+        "p50": "2026-07-20",
+        "p95": "2026-08-06"
+      },
+      "niveis": [
+        {
+          "nivel": 0.5,
+          "n_validas": 3,
+          "n_alvo": 3,
+          "n_brutas": 24,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 0,
+          "n_descartadas_curtas": 13,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 0,
+          "motivos_descarte": {
+            "truncada_sem_texto": 0,
+            "spoiler": 0,
+            "abaixo_min_chars": 13,
+            "excedente_cota": 8,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 1
+        },
+        {
+          "nivel": 1.0,
+          "n_validas": 7,
+          "n_alvo": 7,
+          "n_brutas": 48,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 0,
+          "n_descartadas_curtas": 27,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 0,
+          "motivos_descarte": {
+            "truncada_sem_texto": 0,
+            "spoiler": 0,
+            "abaixo_min_chars": 27,
+            "excedente_cota": 14,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 2
+        },
+        {
+          "nivel": 1.5,
+          "n_validas": 5,
+          "n_alvo": 5,
+          "n_brutas": 36,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 0,
+          "n_descartadas_curtas": 17,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 1,
+          "motivos_descarte": {
+            "truncada_sem_texto": 1,
+            "spoiler": 0,
+            "abaixo_min_chars": 17,
+            "excedente_cota": 13,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 2
+        },
+        {
+          "nivel": 2.0,
+          "n_validas": 25,
+          "n_alvo": 25,
+          "n_brutas": 156,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 3,
+          "n_descartadas_curtas": 103,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 3,
+          "motivos_descarte": {
+            "truncada_sem_texto": 3,
+            "spoiler": 3,
+            "abaixo_min_chars": 103,
+            "excedente_cota": 22,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 8
+        }
+      ],
+      "temas": [
+        {
+          "tema": "Ritmo lento e tédio",
+          "mencoes_aproximadas": 20,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "A lentidão e a ausência de eventos relevantes tornam a experiência entediante, fazendo o espectador lutar para manter a atenção.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Romantização do trabalho e da rotina",
+          "mencoes_aproximadas": 12,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "Há uma crítica incisiva à forma como a obra enobrece a vida de um faxineiro, ignorando as condições estruturais e o desgaste do trabalho, sendo comparada a uma propaganda de gentrificação.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Falta de profundidade narrativa e personagens rasos",
+          "mencoes_aproximadas": 8,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "O filme falha em desenvolver o protagonista ou qualquer arco dramático, contentando-se com situações superficiais que não geram envolvimento.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Elogios a fotografia e trilha sonora",
+          "mencoes_aproximadas": 8,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "Apesar das críticas, muitos reconhecem a beleza das imagens e a boa seleção musical, que ajudam a criar uma atmosfera agradável.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Mensagem clichê e pouco original",
+          "mencoes_aproximadas": 7,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "A ideia de encontrar felicidade nas pequenas coisas é vista como batida e repetitiva, sem trazer uma nova perspectiva ou profundidade filosófica.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Final decepcionante ou confuso",
+          "mencoes_aproximadas": 4,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "A reta final é apontada como um dos piores momentos, seja por ser mal construída, por um simbolismo forçado ou por não trazer conclusão satisfatória.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        }
+      ],
+      "observacao_geral": "As reviews negativas criticam principalmente o ritmo lento e a falta de eventos, além de apontarem uma romantização problemática do trabalho e da rotina. Alguns avaliam a fotografia e a trilha sonora positivamente, mas sentem que a mensagem é superficial e clichê, resultando em uma experiência monótona.",
+      "idioma_invalido": false,
+      "escopo_suspeito": false
+    },
+    {
+      "bucket": "medianas",
+      "alvo": 40,
+      "modo": "completo",
+      "estado_piso": "completa",
+      "n_validas": 40,
+      "share_real": 7,
+      "composicao_alvo": {
+        "2.5": 8,
+        "3.0": 32
+      },
+      "composicao_atingida": {
+        "2.5": 8,
+        "3.0": 32
+      },
+      "cascata_por_degrau": {
+        "150": 40
+      },
+      "deficit_redistribuido": 0,
+      "distribuicao_pagina_origem": {
+        "n": 40,
+        "min": 1,
+        "max": 22,
+        "p5": 1,
+        "p50": 5,
+        "p95": 22,
+        "fracao_profunda": 0.35
+      },
+      "janela_amostra": {
+        "n": 40,
+        "min": "2023-05-25",
+        "max": "2026-08-07",
+        "p5": "2023-10-07",
+        "p50": "2026-08-02",
+        "p95": "2026-08-07"
+      },
+      "niveis": [
+        {
+          "nivel": 2.5,
+          "n_validas": 8,
+          "n_alvo": 8,
+          "n_brutas": 91,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 1,
+          "n_descartadas_curtas": 55,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 1,
+          "motivos_descarte": {
+            "truncada_sem_texto": 1,
+            "spoiler": 1,
+            "abaixo_min_chars": 55,
+            "excedente_cota": 26,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 6
+        },
+        {
+          "nivel": 3.0,
+          "n_validas": 32,
+          "n_alvo": 32,
+          "n_brutas": 198,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 2,
+          "n_descartadas_curtas": 127,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 4,
+          "motivos_descarte": {
+            "truncada_sem_texto": 4,
+            "spoiler": 2,
+            "abaixo_min_chars": 127,
+            "excedente_cota": 33,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 10
+        }
+      ],
+      "temas": [
+        {
+          "tema": "Ritmo lento e repetitivo",
+          "mencoes_aproximadas": 18,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "Muitos espectadores consideraram a rotina do protagonista excessivamente repetitiva, o que tornou a experiência cansativa e até entediante, embora alguns tenham reconhecido que essa repetição servia ao propósito narrativo.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Mensagem de apreciar as pequenas coisas",
+          "mencoes_aproximadas": 16,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "O filme transmite uma mensagem edificante sobre encontrar beleza e contentamento nos detalhes simples do cotidiano, uma filosofia de vida que muitos espectadores acharam tocante e inspiradora.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Visual e fotografia bonitos",
+          "mencoes_aproximadas": 9,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "A direção de arte e a fotografia foram amplamente elogiadas, com destaque para a iluminação, a arquitetura japonesa e a composição dos planos, que criaram uma atmosfera visualmente agradável e contemplativa.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Falta de desenvolvimento e profundidade",
+          "mencoes_aproximadas": 8,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "Alguns espectadores sentiram que o filme não explorou adequadamente o passado ou a psicologia do protagonista, deixando questões em aberto e impedindo uma conexão mais profunda com o personagem.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Representação idealizada do trabalho e da solidão",
+          "mencoes_aproximadas": 7,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "Houve críticas quanto à romantização do trabalho de limpeza e da vida solitária, com alguns apontando que a realidade dessas situações é bem mais difícil, o que tornou a abordagem do filme pouco realista ou problemática.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Atuação do protagonista (Koji Yakusho)",
+          "mencoes_aproximadas": 6,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "A performance do ator principal foi destacada como excepcional, transmitindo uma gama de emoções através de gestos sutis e expressões faciais, especialmente nas cenas mais silenciosas e na conclusão do filme.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        }
+      ],
+      "observacao_geral": "As reviews medianas reconhecem a beleza visual e a mensagem contemplativa do filme, mas muitos espectadores destacaram problemas de ritmo, repetição e falta de profundidade. O grupo está dividido entre apreciar a filosofia do cotidiano e sentir tédio devido à lentidão da narrativa.",
+      "idioma_invalido": false,
+      "escopo_suspeito": false
+    },
+    {
+      "bucket": "positivas",
+      "alvo": 40,
+      "modo": "completo",
+      "estado_piso": "completa",
+      "n_validas": 40,
+      "share_real": 92,
+      "composicao_alvo": {
+        "3.5": 4,
+        "4.0": 13,
+        "4.5": 9,
+        "5.0": 14
+      },
+      "composicao_atingida": {
+        "3.5": 4,
+        "4.0": 13,
+        "4.5": 9,
+        "5.0": 14
+      },
+      "cascata_por_degrau": {
+        "150": 40
+      },
+      "deficit_redistribuido": 0,
+      "distribuicao_pagina_origem": {
+        "n": 40,
+        "min": 1,
+        "max": 56,
+        "p5": 1,
+        "p50": 3,
+        "p95": 56,
+        "fracao_profunda": 0.3
+      },
+      "janela_amostra": {
+        "n": 40,
+        "min": "2023-05-25",
+        "max": "2026-08-08",
+        "p5": "2023-05-25",
+        "p50": "2026-08-07",
+        "p95": "2026-08-08"
+      },
+      "niveis": [
+        {
+          "nivel": 3.5,
+          "n_validas": 4,
+          "n_alvo": 4,
+          "n_brutas": 36,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 1,
+          "n_descartadas_curtas": 26,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 0,
+          "motivos_descarte": {
+            "truncada_sem_texto": 0,
+            "spoiler": 1,
+            "abaixo_min_chars": 26,
+            "excedente_cota": 5,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 2
+        },
+        {
+          "nivel": 4.0,
+          "n_validas": 13,
+          "n_alvo": 13,
+          "n_brutas": 96,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 1,
+          "n_descartadas_curtas": 61,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 1,
+          "motivos_descarte": {
+            "truncada_sem_texto": 1,
+            "spoiler": 1,
+            "abaixo_min_chars": 61,
+            "excedente_cota": 20,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 5
+        },
+        {
+          "nivel": 4.5,
+          "n_validas": 9,
+          "n_alvo": 9,
+          "n_brutas": 60,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 1,
+          "n_descartadas_curtas": 41,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 2,
+          "motivos_descarte": {
+            "truncada_sem_texto": 2,
+            "spoiler": 1,
+            "abaixo_min_chars": 41,
+            "excedente_cota": 7,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 3
+        },
+        {
+          "nivel": 5.0,
+          "n_validas": 14,
+          "n_alvo": 14,
+          "n_brutas": 120,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 3,
+          "n_descartadas_curtas": 78,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 1,
+          "motivos_descarte": {
+            "truncada_sem_texto": 1,
+            "spoiler": 3,
+            "abaixo_min_chars": 78,
+            "excedente_cota": 24,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 6
+        }
+      ],
+      "temas": [
+        {
+          "tema": "Beleza na rotina e nas pequenas coisas",
+          "mencoes_aproximadas": 28,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "As reviews positivas destacam que o filme encontra poesia e significado na repetição diária, valorizando pequenos gestos, a luz através das folhas, a música, os livros e a simplicidade do cotidiano.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Fotografia e estética visual",
+          "mencoes_aproximadas": 12,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "Muitas reviews elogiam a fotografia, com cores bonitas, cenas de Tóquio, o jogo de luz e sombras, e o uso de imagens em preto e branco.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Atuação de Koji Yakusho e minimalismo",
+          "mencoes_aproximadas": 10,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "As reviews ressaltam que a atuação do protagonista é marcante mesmo com pouquíssimos diálogos, transmitindo emoção através de expressões e gestos sutis.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Ritmo lento e contemplativo",
+          "mencoes_aproximadas": 9,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "Algumas reviews mencionam que o ritmo vagaroso pode ser desafiador, mas que a imersão na vida do personagem compensa, tornando a experiência quase meditativa.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Felicidade encontrada na solitude e introspecção",
+          "mencoes_aproximadas": 8,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "As reviews positivas apontam que o filme celebra a solidão como um espaço de paz e autoconhecimento, mostrando que é possível ser feliz sem grandes conquistas externas.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Emoções ambivalentes: alegria e melancolia",
+          "mencoes_aproximadas": 7,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "As reviews destacam a capacidade do filme de equilibrar felicidade e tristeza, lembrando que a vida boa pode conter ambos, como na cena final que mistura lágrimas e sorriso.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        }
+      ],
+      "observacao_geral": "As reviews positivas convergem para a ideia de que o filme é uma celebração da vida simples, encontrando beleza e significado na rotina e nos pequenos prazeres. Elas valorizam a fotografia, a atuação contida de Koji Yakusho e o ritmo contemplativo, descrevendo a experiência como pacífica e introspectiva, mesmo quando reconhecem certa melancolia e a falta de grandes acontecimentos.",
+      "idioma_invalido": false,
+      "escopo_suspeito": false
+    }
+  ],
+  "eixos": {
+    "taxonomia_id": "ebab2667de74",
+    "margem_lift_pp": 20,
+    "contraste": "tematico",
+    "linhas": [
+      {
+        "eixo": "ritmo",
+        "por_bucket": {
+          "negativas": {
+            "mencoes": 11,
+            "de_n": 18,
+            "freq_pct": 61.1,
+            "lift_pp": 19.4,
+            "tema": "Ritmo lento e tédio",
+            "exemplo_parafraseado": "A lentidão e a ausência de eventos relevantes tornam a experiência entediante, fazendo o espectador lutar para manter a atenção.",
+            "temas_no_mesmo_eixo": []
+          },
+          "medianas": {
+            "mencoes": 5,
+            "de_n": 12,
+            "freq_pct": 41.7,
+            "lift_pp": -19.4,
+            "tema": "Ritmo lento e repetitivo",
+            "exemplo_parafraseado": "Muitos espectadores consideraram a rotina do protagonista excessivamente repetitiva, o que tornou a experiência cansativa e até entediante, embora alguns tenham reconhecido que essa repetição servia ao propósito narrativo.",
+            "temas_no_mesmo_eixo": []
+          },
+          "positivas": {
+            "mencoes": 7,
+            "de_n": 17,
+            "freq_pct": 41.2,
+            "lift_pp": -19.9,
+            "tema": "Ritmo lento e contemplativo",
+            "exemplo_parafraseado": "Algumas reviews mencionam que o ritmo vagaroso pode ser desafiador, mas que a imersão na vida do personagem compensa, tornando a experiência quase meditativa.",
+            "temas_no_mesmo_eixo": []
+          }
+        },
+        "bullet_de": {
+          "negativas": "frequencia",
+          "medianas": null,
+          "positivas": null
+        }
+      },
+      {
+        "eixo": "atuacao",
+        "por_bucket": {
+          "negativas": {
+            "mencoes": 2,
+            "de_n": 18,
+            "freq_pct": 11.1,
+            "lift_pp": -12.4,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "medianas": {
+            "mencoes": 2,
+            "de_n": 12,
+            "freq_pct": 16.7,
+            "lift_pp": -6.9,
+            "tema": "Atuação do protagonista (Koji Yakusho)",
+            "exemplo_parafraseado": "A performance do ator principal foi destacada como excepcional, transmitindo uma gama de emoções através de gestos sutis e expressões faciais, especialmente nas cenas mais silenciosas e na conclusão do filme.",
+            "temas_no_mesmo_eixo": []
+          },
+          "positivas": {
+            "mencoes": 4,
+            "de_n": 17,
+            "freq_pct": 23.5,
+            "lift_pp": 6.9,
+            "tema": "Atuação de Koji Yakusho e minimalismo",
+            "exemplo_parafraseado": "As reviews ressaltam que a atuação do protagonista é marcante mesmo com pouquíssimos diálogos, transmitindo emoção através de expressões e gestos sutis.",
+            "temas_no_mesmo_eixo": []
+          }
+        },
+        "bullet_de": {
+          "negativas": null,
+          "medianas": null,
+          "positivas": null
+        }
+      },
+      {
+        "eixo": "direcao_imagem",
+        "por_bucket": {
+          "negativas": {
+            "mencoes": 7,
+            "de_n": 18,
+            "freq_pct": 38.9,
+            "lift_pp": 5.6,
+            "tema": "Elogios a fotografia e trilha sonora",
+            "exemplo_parafraseado": "Apesar das críticas, muitos reconhecem a beleza das imagens e a boa seleção musical, que ajudam a criar uma atmosfera agradável.",
+            "temas_no_mesmo_eixo": []
+          },
+          "medianas": {
+            "mencoes": 4,
+            "de_n": 12,
+            "freq_pct": 33.3,
+            "lift_pp": -5.6,
+            "tema": "Visual e fotografia bonitos",
+            "exemplo_parafraseado": "A direção de arte e a fotografia foram amplamente elogiadas, com destaque para a iluminação, a arquitetura japonesa e a composição dos planos, que criaram uma atmosfera visualmente agradável e contemplativa.",
+            "temas_no_mesmo_eixo": []
+          },
+          "positivas": {
+            "mencoes": 2,
+            "de_n": 17,
+            "freq_pct": 11.8,
+            "lift_pp": -27.1,
+            "tema": "Fotografia e estética visual",
+            "exemplo_parafraseado": "Muitas reviews elogiam a fotografia, com cores bonitas, cenas de Tóquio, o jogo de luz e sombras, e o uso de imagens em preto e branco.",
+            "temas_no_mesmo_eixo": []
+          }
+        },
+        "bullet_de": {
+          "negativas": null,
+          "medianas": null,
+          "positivas": null
+        }
+      },
+      {
+        "eixo": "roteiro_estrutura",
+        "por_bucket": {
+          "negativas": {
+            "mencoes": 8,
+            "de_n": 18,
+            "freq_pct": 44.4,
+            "lift_pp": -13.9,
+            "tema": "Falta de profundidade narrativa e personagens rasos",
+            "exemplo_parafraseado": "O filme falha em desenvolver o protagonista ou qualquer arco dramático, contentando-se com situações superficiais que não geram envolvimento.",
+            "temas_no_mesmo_eixo": [
+              "Mensagem clichê e pouco original",
+              "Final decepcionante ou confuso"
+            ]
+          },
+          "medianas": {
+            "mencoes": 7,
+            "de_n": 12,
+            "freq_pct": 58.3,
+            "lift_pp": 13.9,
+            "tema": "Falta de desenvolvimento e profundidade",
+            "exemplo_parafraseado": "Alguns espectadores sentiram que o filme não explorou adequadamente o passado ou a psicologia do protagonista, deixando questões em aberto e impedindo uma conexão mais profunda com o personagem.",
+            "temas_no_mesmo_eixo": []
+          },
+          "positivas": {
+            "mencoes": 6,
+            "de_n": 17,
+            "freq_pct": 35.3,
+            "lift_pp": -23.0,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          }
+        },
+        "bullet_de": {
+          "negativas": "frequencia",
+          "medianas": "frequencia",
+          "positivas": null
+        }
+      },
+      {
+        "eixo": "som_trilha",
+        "por_bucket": {
+          "negativas": {
+            "mencoes": 3,
+            "de_n": 18,
+            "freq_pct": 16.7,
+            "lift_pp": -1.0,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "medianas": {
+            "mencoes": 2,
+            "de_n": 12,
+            "freq_pct": 16.7,
+            "lift_pp": -1.0,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "positivas": {
+            "mencoes": 3,
+            "de_n": 17,
+            "freq_pct": 17.6,
+            "lift_pp": 1.0,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          }
+        },
+        "bullet_de": {
+          "negativas": null,
+          "medianas": null,
+          "positivas": null
+        }
+      },
+      {
+        "eixo": "tom_atmosfera",
+        "por_bucket": {
+          "negativas": {
+            "mencoes": 5,
+            "de_n": 18,
+            "freq_pct": 27.8,
+            "lift_pp": -42.8,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "medianas": {
+            "mencoes": 5,
+            "de_n": 12,
+            "freq_pct": 41.7,
+            "lift_pp": -28.9,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "positivas": {
+            "mencoes": 12,
+            "de_n": 17,
+            "freq_pct": 70.6,
+            "lift_pp": 28.9,
+            "tema": "Beleza na rotina e nas pequenas coisas",
+            "exemplo_parafraseado": "As reviews positivas destacam que o filme encontra poesia e significado na repetição diária, valorizando pequenos gestos, a luz através das folhas, a música, os livros e a simplicidade do cotidiano.",
+            "temas_no_mesmo_eixo": [
+              "Felicidade encontrada na solitude e introspecção"
+            ]
+          }
+        },
+        "bullet_de": {
+          "negativas": null,
+          "medianas": null,
+          "positivas": "frequencia_e_contraste"
+        }
+      },
+      {
+        "eixo": "impacto_emocional",
+        "por_bucket": {
+          "negativas": {
+            "mencoes": 7,
+            "de_n": 18,
+            "freq_pct": 38.9,
+            "lift_pp": -25.8,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "medianas": {
+            "mencoes": 4,
+            "de_n": 12,
+            "freq_pct": 33.3,
+            "lift_pp": -31.4,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "positivas": {
+            "mencoes": 11,
+            "de_n": 17,
+            "freq_pct": 64.7,
+            "lift_pp": 25.8,
+            "tema": "Emoções ambivalentes: alegria e melancolia",
+            "exemplo_parafraseado": "As reviews destacam a capacidade do filme de equilibrar felicidade e tristeza, lembrando que a vida boa pode conter ambos, como na cena final que mistura lágrimas e sorriso.",
+            "temas_no_mesmo_eixo": []
+          }
+        },
+        "bullet_de": {
+          "negativas": null,
+          "medianas": null,
+          "positivas": "frequencia_e_contraste"
+        }
+      },
+      {
+        "eixo": "comparacoes",
+        "por_bucket": {
+          "negativas": {
+            "mencoes": 6,
+            "de_n": 18,
+            "freq_pct": 33.3,
+            "lift_pp": 0.0,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "medianas": {
+            "mencoes": 4,
+            "de_n": 12,
+            "freq_pct": 33.3,
+            "lift_pp": 0.0,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "positivas": {
+            "mencoes": 3,
+            "de_n": 17,
+            "freq_pct": 17.6,
+            "lift_pp": -15.7,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          }
+        },
+        "bullet_de": {
+          "negativas": null,
+          "medianas": null,
+          "positivas": null
+        }
+      },
+      {
+        "eixo": "expectativa",
+        "por_bucket": {
+          "negativas": {
+            "mencoes": 1,
+            "de_n": 18,
+            "freq_pct": 5.6,
+            "lift_pp": 5.6,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "medianas": {
+            "mencoes": 0,
+            "de_n": 12,
+            "freq_pct": 0.0,
+            "lift_pp": -5.6,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "positivas": {
+            "mencoes": 0,
+            "de_n": 17,
+            "freq_pct": 0.0,
+            "lift_pp": -5.6,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          }
+        },
+        "bullet_de": {
+          "negativas": null,
+          "medianas": null,
+          "positivas": null
+        }
+      },
+      {
+        "eixo": "critica_social",
+        "por_bucket": {
+          "negativas": {
+            "mencoes": 8,
+            "de_n": 18,
+            "freq_pct": 44.4,
+            "lift_pp": -13.9,
+            "tema": "Romantização do trabalho e da rotina",
+            "exemplo_parafraseado": "Há uma crítica incisiva à forma como a obra enobrece a vida de um faxineiro, ignorando as condições estruturais e o desgaste do trabalho, sendo comparada a uma propaganda de gentrificação.",
+            "temas_no_mesmo_eixo": []
+          },
+          "medianas": {
+            "mencoes": 7,
+            "de_n": 12,
+            "freq_pct": 58.3,
+            "lift_pp": 13.9,
+            "tema": "Mensagem de apreciar as pequenas coisas",
+            "exemplo_parafraseado": "O filme transmite uma mensagem edificante sobre encontrar beleza e contentamento nos detalhes simples do cotidiano, uma filosofia de vida que muitos espectadores acharam tocante e inspiradora.",
+            "temas_no_mesmo_eixo": [
+              "Representação idealizada do trabalho e da solidão"
+            ]
+          },
+          "positivas": {
+            "mencoes": 4,
+            "de_n": 17,
+            "freq_pct": 23.5,
+            "lift_pp": -34.8,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          }
+        },
+        "bullet_de": {
+          "negativas": null,
+          "medianas": "frequencia",
+          "positivas": null
+        }
+      }
+    ],
+    "fonte_classificacao": {
+      "arquivo": "resultado/votacao-3/consenso.jsonl",
+      "criterio": "votacao_3_consenso_2_de_3",
+      "por_bucket": {
+        "negativas": {
+          "n_classificadas": 18,
+          "n_analisadas": 40,
+          "sobreposicao_com_analisadas": 18
+        },
+        "medianas": {
+          "n_classificadas": 12,
+          "n_analisadas": 40,
+          "sobreposicao_com_analisadas": 12
+        },
+        "positivas": {
+          "n_classificadas": 17,
+          "n_analisadas": 40,
+          "sobreposicao_com_analisadas": 17
+        }
+      }
+    },
+    "rotulagem": {
+      "n_chamadas": 3,
+      "falharam": [],
+      "fora_da_taxonomia": {},
+      "houve_retentativa": []
+    },
+    "spec_version": "1.9.16",
+    "verificador": {
+      "aplicado": true,
+      "variante": "V2_alvo",
+      "passada": 1,
+      "eixo": "impacto_emocional",
+      "n_removidas_no_corpus": 1654
+    }
+  },
+  "narrativa": "Dirigido por Wim Wenders, o drama Dias Perfeitos (2023) acompanha a história de Hirayama, um homem de meia-idade reflexivo que vive de maneira modesta como zelador, limpando banheiros públicos em Tóquio. O cotidiano do protagonista é revelado por meio de suas três paixões — a música que ouve, os livros que lê e as fotos que tira das árvores —, até que encontros inesperados começam a surgir e sugerem dimensões de um passado não tão metódico.\n\nA narrativa adota um ritmo lento e cadenciado, estruturando-se em torno da repetição dos afazeres diários e da ambientação urbana constante nos espaços públicos da cidade.\n\nNa grande maioria das notas (~92%), a maior parte destaca que o filme encontra poesia e beleza na rotina e nas pequenas coisas da vida. Nesse mesmo conjunto, uma parcela expressiva elogia a fotografia e a estética visual, enquanto uma fatia menor ressalta a atuação minimalista de Koji Yakusho, conduzida por expressões sutis e quase sem diálogos.\n\nPara quem está situado numa fração mínima das notas (~7%), a percepção é dividida: um número considerável aponta que o ritmo lento e a repetição tornam a experiência cansativa, ao mesmo tempo em que vários consideram tocante a mensagem de valorizar a simplicidade, e uma parte salienta a beleza visual e a fotografia.\n\nNa perspectiva de quem compõe uma fração ainda menor das notas (~2%), surgem objeções mais enfáticas: para boa parte, o ritmo lento e a ausência de acontecimentos geram tédio, muitos criticam a romantização do trabalho e da rotina, e alguns apontam falta de profundidade narrativa aliada a personagens rasos.",
+  "verificacao_narrativa": {
+    "quantificador_fora_de_faixa": [],
+    "quantificador_repetido": [],
+    "paragrafos": {
+      "n_paragrafos": 5,
+      "minimo": 3,
+      "insuficientes": false,
+      "longos": []
+    },
+    "n_paragrafos": 5,
+    "paragrafos_insuficientes": false,
+    "paragrafos_longos": [],
+    "grupos_sem_paragrafo_proprio": [],
+    "movimento1_e_movimento2_no_mesmo_paragrafo": false,
+    "formato_invalido": false,
+    "numeros_inventados": [],
+    "rotulos_faltando": [],
+    "ordem_incorreta": false,
+    "vocabulario_peso": false,
+    "resenha_speak": [],
+    "n_resenha_speak": 0,
+    "n_flags": 0
+  },
+  "narrativa_selecao": {
+    "provider": "gemini",
+    "modelo": "gemini-3.7-flash",
+    "n_candidatos": 3,
+    "n_chamadas": 3,
+    "indice_escolhido": 0,
+    "motivo": "melhor_entre_limpos",
+    "criterio_decisivo": "ritmo",
+    "candidatos": [
+      {
+        "indice": 0,
+        "n_flags": 0,
+        "cliches": 0,
+        "repeticao_max": 1,
+        "ritmo": 11,
+        "cobertura": 1.0,
+        "eliminado": false
+      },
+      {
+        "indice": 1,
+        "n_flags": 2,
+        "cliches": 0,
+        "repeticao_max": 1,
+        "ritmo": 10,
+        "cobertura": 1.0,
+        "eliminado": true
+      },
+      {
+        "indice": 2,
+        "n_flags": 0,
+        "cliches": 0,
+        "repeticao_max": 1,
+        "ritmo": 3,
+        "cobertura": 1.0,
+        "eliminado": false
+      }
+    ],
+    "retry": null,
+    "uso": {
+      "prompt_tokens": 10101,
+      "completion_tokens": 1091,
+      "cache_hit_tokens": 0,
+      "cache_miss_tokens": 10101
+    },
+    "latencia_s": 26.97
+  }
+}

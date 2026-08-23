@@ -58,6 +58,17 @@
       .normalize("NFD").replace(/[\u0300-\u036f]/g, "");
   }
 
+  // [v1.9.16] A contagem vem do próprio dado embutido, não de um literal —
+  // mesmo princípio de v1.9.1 (§3[B1], "50·20·30 remanescente... passa a
+  // derivar do próprio JSON"): um catálogo que cresce de 3 para 35 não pode
+  // deixar a home dizendo "3" até alguém lembrar de editar o HTML à mão.
+  var microcopy = document.getElementById("homeMicrocopy");
+  if (microcopy) {
+    var n = DATA.catalogo.length;
+    microcopy.textContent = n + (n === 1 ? " análise pronta" : " análises prontas")
+      + " · busca por título ou eixo";
+  }
+
   // --- cards do catálogo ---
   var cards = document.getElementById("filmCards");
   DATA.catalogo.forEach(function (slug) {

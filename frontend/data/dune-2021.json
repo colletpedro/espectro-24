@@ -1,0 +1,1257 @@
+{
+  "slug": "dune-2021",
+  "data_coleta": "2026-08-23T00:45:38.041856+00:00",
+  "spec_version": "1.9.16",
+  "total_reviews_observadas": 542,
+  "reviews_url": "https://letterboxd.com/film/dune-2021/reviews/",
+  "ficha": {
+    "titulo": "Duna",
+    "sinopse_oficial": "Em um futuro distante, planetas são comandados por casas nobres que fazem parte de um império feudal intergalático. Paul Atreides é um jovem cuja família toma o controle do planeta deserto Arrakis, também conhecido como Duna. A única fonte da especiaria Melange, a substância mais importante do cosmos, Arrakis se mostra ser um planeta nem um pouco fácil de governar.",
+    "sinopse_fallback_en": false,
+    "generos": [
+      "Ficção científica",
+      "Aventura"
+    ],
+    "duracao_min": 155,
+    "diretor": "Denis Villeneuve",
+    "diretor_transliterado": false,
+    "ano": 2021,
+    "fonte": "tmdb",
+    "ano_fonte": "bruto"
+  },
+  "distribuicao": {
+    "n_notas_total": 4323089,
+    "por_nivel": {
+      "0.5": 15345,
+      "1.0": 46862,
+      "1.5": 22450,
+      "2.0": 140448,
+      "2.5": 116565,
+      "3.0": 554396,
+      "3.5": 587434,
+      "4.0": 1448793,
+      "4.5": 591976,
+      "5.0": 798820
+    },
+    "por_bucket": {
+      "negativas": 5,
+      "medianas": 16,
+      "positivas": 79
+    },
+    "fonte": "letterboxd_histograma"
+  },
+  "coleta": {
+    "slug": "dune-2021",
+    "coletado_em": "2026-08-23T00:45:17.338427+00:00",
+    "versao_coletor": "1.9.6",
+    "ordenacao_usada": "by/added",
+    "histograma_bruto": {
+      "0.5": 15345,
+      "1.0": 46862,
+      "1.5": 22450,
+      "2.0": 140448,
+      "2.5": 116565,
+      "3.0": 554396,
+      "3.5": 587434,
+      "4.0": 1448793,
+      "4.5": 591976,
+      "5.0": 798820
+    },
+    "orcamento_paginas_por_nivel": {
+      "0.5": 1,
+      "1.0": 3,
+      "1.5": 2,
+      "2.0": 10,
+      "2.5": 6,
+      "3.0": 10,
+      "3.5": 3,
+      "4.0": 7,
+      "4.5": 3,
+      "5.0": 3
+    },
+    "paginas_gastas_por_nivel": {
+      "0.5": 1,
+      "1.0": 3,
+      "1.5": 2,
+      "2.0": 10,
+      "2.5": 6,
+      "3.0": 10,
+      "3.5": 3,
+      "4.0": 7,
+      "4.5": 3,
+      "5.0": 3
+    },
+    "paradas_por_limite": [
+      "0.5",
+      "1.0",
+      "1.5",
+      "2.0",
+      "2.5",
+      "3.0",
+      "3.5",
+      "4.0",
+      "4.5",
+      "5.0"
+    ],
+    "contagem_bruta_por_nivel": {
+      "0.5": 12,
+      "1.0": 26,
+      "1.5": 24,
+      "2.0": 108,
+      "2.5": 60,
+      "3.0": 120,
+      "3.5": 36,
+      "4.0": 84,
+      "4.5": 36,
+      "5.0": 36
+    },
+    "contagem_estimada_valida_por_nivel": {
+      "0.5": 4,
+      "1.0": 7,
+      "1.5": 1,
+      "2.0": 20,
+      "2.5": 14,
+      "3.0": 31,
+      "3.5": 8,
+      "4.0": 14,
+      "4.5": 13,
+      "5.0": 9
+    },
+    "motivo_parada_por_nivel": {
+      "0.5": "orcamento_esgotado",
+      "1.0": "orcamento_esgotado",
+      "1.5": "orcamento_esgotado",
+      "2.0": "orcamento_esgotado",
+      "2.5": "orcamento_esgotado",
+      "3.0": "orcamento_esgotado",
+      "3.5": "orcamento_esgotado",
+      "4.0": "orcamento_esgotado",
+      "4.5": "orcamento_esgotado",
+      "5.0": "orcamento_esgotado"
+    },
+    "paginas_base_por_nivel": {
+      "0.5": 1,
+      "1.0": 3,
+      "1.5": 2,
+      "2.0": 10,
+      "2.5": 6,
+      "3.0": 10,
+      "3.5": 3,
+      "4.0": 7,
+      "4.5": 3,
+      "5.0": 3
+    },
+    "paginas_extensao_por_nivel": {
+      "0.5": 0,
+      "1.0": 0,
+      "1.5": 0,
+      "2.0": 0,
+      "2.5": 0,
+      "3.0": 0,
+      "3.5": 0,
+      "4.0": 0,
+      "4.5": 0,
+      "5.0": 0
+    },
+    "extensao_por_bucket": {
+      "negativas": {
+        "paginas_base": 16,
+        "paginas_extensao": 0,
+        "extras_por_nivel": {},
+        "motivo_parada": "meta_atingida",
+        "n_validas_pos_base": 76,
+        "n_validas_pos_extensao": 76,
+        "meta": 50
+      },
+      "medianas": {
+        "paginas_base": 16,
+        "paginas_extensao": 0,
+        "extras_por_nivel": {},
+        "motivo_parada": "meta_atingida",
+        "n_validas_pos_base": 99,
+        "n_validas_pos_extensao": 99,
+        "meta": 50
+      },
+      "positivas": {
+        "paginas_base": 16,
+        "paginas_extensao": 0,
+        "extras_por_nivel": {},
+        "motivo_parada": "meta_atingida",
+        "n_validas_pos_base": 94,
+        "n_validas_pos_extensao": 94,
+        "meta": 50
+      }
+    },
+    "profundidade_sondagem": {
+      "nivel_sondado": 4.0,
+      "profundidade": 256,
+      "exata": false,
+      "requisicoes": 4,
+      "motivo": "teto_plataforma"
+    },
+    "profundidade_estimada_por_nivel": {
+      "0.5": 3,
+      "1.0": 8,
+      "1.5": 4,
+      "2.0": 25,
+      "2.5": 21,
+      "3.0": 98,
+      "3.5": 104,
+      "4.0": 256,
+      "4.5": 105,
+      "5.0": 141
+    },
+    "janela_temporal": {
+      "total": {
+        "n": 882,
+        "min": "2021-06-01",
+        "max": "2026-08-20",
+        "p5": "2021-09-03",
+        "p50": "2026-08-06",
+        "p95": "2026-08-15"
+      },
+      "por_bucket": {
+        "negativas": {
+          "n": 266,
+          "min": "2021-06-01",
+          "max": "2026-08-08",
+          "p5": "2021-09-12",
+          "p50": "2026-08-04",
+          "p95": "2026-08-07"
+        },
+        "medianas": {
+          "n": 292,
+          "min": "2021-09-01",
+          "max": "2026-08-14",
+          "p5": "2021-09-04",
+          "p50": "2026-08-06",
+          "p95": "2026-08-08"
+        },
+        "positivas": {
+          "n": 324,
+          "min": "2021-06-09",
+          "max": "2026-08-20",
+          "p5": "2021-09-03",
+          "p50": "2026-08-07",
+          "p95": "2026-08-19"
+        }
+      }
+    },
+    "dias_por_100_paginas": {
+      "n_paginas": 17,
+      "pagina_min": 1,
+      "pagina_max": 128,
+      "dias": -8,
+      "dias_por_100_paginas": -6.299212598425197,
+      "paginas_para_1_ano": null
+    },
+    "ano_lancamento": 2021,
+    "ano_fonte": "slug",
+    "n_reviews_bruto": 882
+  },
+  "buckets": [
+    {
+      "bucket": "negativas",
+      "alvo": 40,
+      "modo": "completo",
+      "estado_piso": "completa",
+      "n_validas": 40,
+      "share_real": 5,
+      "composicao_alvo": {
+        "0.5": 3,
+        "1.0": 8,
+        "1.5": 4,
+        "2.0": 25
+      },
+      "composicao_atingida": {
+        "0.5": 3,
+        "1.0": 8,
+        "1.5": 4,
+        "2.0": 25
+      },
+      "cascata_por_degrau": {
+        "150": 40
+      },
+      "deficit_redistribuido": 0,
+      "distribuicao_pagina_origem": {
+        "n": 40,
+        "min": 1,
+        "max": 12,
+        "p5": 1,
+        "p50": 1,
+        "p95": 10,
+        "fracao_profunda": 0.075
+      },
+      "janela_amostra": {
+        "n": 40,
+        "min": "2021-06-01",
+        "max": "2026-08-08",
+        "p5": "2021-09-03",
+        "p50": "2026-08-03",
+        "p95": "2026-08-07"
+      },
+      "niveis": [
+        {
+          "nivel": 0.5,
+          "n_validas": 3,
+          "n_alvo": 3,
+          "n_brutas": 24,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 1,
+          "n_descartadas_curtas": 16,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 0,
+          "motivos_descarte": {
+            "truncada_sem_texto": 0,
+            "spoiler": 1,
+            "abaixo_min_chars": 16,
+            "excedente_cota": 4,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 1
+        },
+        {
+          "nivel": 1.0,
+          "n_validas": 8,
+          "n_alvo": 8,
+          "n_brutas": 50,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 0,
+          "n_descartadas_curtas": 35,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 0,
+          "motivos_descarte": {
+            "truncada_sem_texto": 0,
+            "spoiler": 0,
+            "abaixo_min_chars": 35,
+            "excedente_cota": 7,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 3
+        },
+        {
+          "nivel": 1.5,
+          "n_validas": 4,
+          "n_alvo": 4,
+          "n_brutas": 36,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 0,
+          "n_descartadas_curtas": 30,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 0,
+          "motivos_descarte": {
+            "truncada_sem_texto": 0,
+            "spoiler": 0,
+            "abaixo_min_chars": 30,
+            "excedente_cota": 2,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 2
+        },
+        {
+          "nivel": 2.0,
+          "n_validas": 25,
+          "n_alvo": 25,
+          "n_brutas": 156,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 1,
+          "n_descartadas_curtas": 104,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 3,
+          "motivos_descarte": {
+            "truncada_sem_texto": 3,
+            "spoiler": 1,
+            "abaixo_min_chars": 104,
+            "excedente_cota": 23,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 10
+        }
+      ],
+      "temas": [
+        {
+          "tema": "Ritmo lento e tédio",
+          "mencoes_aproximadas": 18,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "Vários espectadores relataram que o filme se arrasta, com cenas longas e monótonas que tornam a experiência cansativa e difícil de assistir até o fim.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Falta de profundidade emocional e personagens vazios",
+          "mencoes_aproximadas": 12,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "As críticas destacam que os personagens soam ocos e sem carisma, não despertando empatia ou interesse no público.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "História confusa e exposição excessiva",
+          "mencoes_aproximadas": 10,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "Muitos reclamaram que o filme prioriza a construção de mundo e o excesso de explicações em vez de contar uma narrativa coesa, resultando em uma trama fragmentada e difícil de acompanhar.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Atuações de Timothée Chalamet e Zendaya",
+          "mencoes_aproximadas": 8,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "Parte do público criticou a atuação de Timothée Chalamet, considerando-a sem intensidade, e apontou que Zendaya tem pouquíssimo tempo de tela, quase como uma participação especial.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Filme como mera introdução e dependente de sequência",
+          "mencoes_aproximadas": 7,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "A sensação de que o longa é apenas um prólogo estendido, sem conclusão própria, deixou muitos espectadores frustrados, pois ele termina abruptamente para dar lugar a uma continuação.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Trilha sonora e design de som excessivos",
+          "mencoes_aproximadas": 5,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "Houve queixas de que a trilha sonora de Hans Zimmer é ensurdecedora e onipresente, dominando as cenas e contribuindo para a sensação de exaustão.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        }
+      ],
+      "observacao_geral": "As reviews negativas concentram-se majoritariamente na lentidão e na falta de emoção, além de considerarem o filme um longo prelúdio que não se sustenta sozinho. Mesmo reconhecendo a qualidade técnica, este grupo não se conecta com a narrativa nem com os personagens.",
+      "idioma_invalido": false,
+      "escopo_suspeito": false
+    },
+    {
+      "bucket": "medianas",
+      "alvo": 40,
+      "modo": "completo",
+      "estado_piso": "completa",
+      "n_validas": 40,
+      "share_real": 16,
+      "composicao_alvo": {
+        "2.5": 7,
+        "3.0": 33
+      },
+      "composicao_atingida": {
+        "2.5": 7,
+        "3.0": 33
+      },
+      "cascata_por_degrau": {
+        "150": 40
+      },
+      "deficit_redistribuido": 0,
+      "distribuicao_pagina_origem": {
+        "n": 40,
+        "min": 1,
+        "max": 49,
+        "p5": 1,
+        "p50": 6,
+        "p95": 24,
+        "fracao_profunda": 0.35
+      },
+      "janela_amostra": {
+        "n": 40,
+        "min": "2021-09-03",
+        "max": "2026-08-14",
+        "p5": "2021-09-03",
+        "p50": "2026-08-06",
+        "p95": "2026-08-07"
+      },
+      "niveis": [
+        {
+          "nivel": 2.5,
+          "n_validas": 7,
+          "n_alvo": 7,
+          "n_brutas": 88,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 1,
+          "n_descartadas_curtas": 64,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 0,
+          "motivos_descarte": {
+            "truncada_sem_texto": 0,
+            "spoiler": 1,
+            "abaixo_min_chars": 64,
+            "excedente_cota": 16,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 6
+        },
+        {
+          "nivel": 3.0,
+          "n_validas": 33,
+          "n_alvo": 33,
+          "n_brutas": 204,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 2,
+          "n_descartadas_curtas": 125,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 1,
+          "motivos_descarte": {
+            "truncada_sem_texto": 1,
+            "spoiler": 2,
+            "abaixo_min_chars": 125,
+            "excedente_cota": 43,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 10
+        }
+      ],
+      "temas": [
+        {
+          "tema": "Ritmo lento e falta de ação",
+          "mencoes_aproximadas": 15,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "O filme se alonga demais e demora para engrenar, deixando a sessão cansativa e até sonolenta em vários momentos.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Construção de mundo e cenários impressionantes",
+          "mencoes_aproximadas": 12,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "Os efeitos visuais, a fotografia e os cenários são deslumbrantes e criam um universo fascinante, ainda que a história não acompanhe o mesmo brilho.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Falta de conexão emocional com personagens",
+          "mencoes_aproximadas": 10,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "Os personagens parecem distantes e pouco cativantes, dificultando a imersão e o envolvimento com a trama.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Excesso de exposição e sensação de prólogo",
+          "mencoes_aproximadas": 9,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "Grande parte do filme é dedicada a apresentar o universo e deixar tudo pronto para a continuação, o que dá a impressão de que ele é apenas um longo prefácio.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Trilha sonora marcante, porém intrusiva",
+          "mencoes_aproximadas": 7,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "A música de Hans Zimmer é grandiosa e memorável, mas em alguns momentos é tão intensa que acaba abafando as cenas em vez de complementá-las.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Atuações competentes, especialmente de alguns coadjuvantes",
+          "mencoes_aproximadas": 6,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "O elenco entrega boas performances, com destaques para alguns personagens secundários que conseguem roubar a atenção em suas cenas.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        }
+      ],
+      "observacao_geral": "As reviews medianas reconhecem os méritos técnicos e a grandiosidade visual do filme, mas apontam problemas de ritmo, excesso de exposição e falta de envolvimento emocional. A maioria vê a obra como um longo e belo prelúdio, que não se sustenta por conta própria.",
+      "idioma_invalido": false,
+      "escopo_suspeito": false
+    },
+    {
+      "bucket": "positivas",
+      "alvo": 40,
+      "modo": "completo",
+      "estado_piso": "completa",
+      "n_validas": 40,
+      "share_real": 79,
+      "composicao_alvo": {
+        "3.5": 7,
+        "4.0": 17,
+        "4.5": 7,
+        "5.0": 9
+      },
+      "composicao_atingida": {
+        "3.5": 7,
+        "4.0": 17,
+        "4.5": 7,
+        "5.0": 9
+      },
+      "cascata_por_degrau": {
+        "150": 40
+      },
+      "deficit_redistribuido": 0,
+      "distribuicao_pagina_origem": {
+        "n": 40,
+        "min": 1,
+        "max": 128,
+        "p5": 1,
+        "p50": 4,
+        "p95": 64,
+        "fracao_profunda": 0.375
+      },
+      "janela_amostra": {
+        "n": 40,
+        "min": "2021-09-03",
+        "max": "2026-08-19",
+        "p5": "2021-09-03",
+        "p50": "2026-08-07",
+        "p95": "2026-08-08"
+      },
+      "niveis": [
+        {
+          "nivel": 3.5,
+          "n_validas": 7,
+          "n_alvo": 7,
+          "n_brutas": 60,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 0,
+          "n_descartadas_curtas": 39,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 2,
+          "motivos_descarte": {
+            "truncada_sem_texto": 2,
+            "spoiler": 0,
+            "abaixo_min_chars": 39,
+            "excedente_cota": 12,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 3
+        },
+        {
+          "nivel": 4.0,
+          "n_validas": 17,
+          "n_alvo": 17,
+          "n_brutas": 144,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 3,
+          "n_descartadas_curtas": 108,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 1,
+          "motivos_descarte": {
+            "truncada_sem_texto": 1,
+            "spoiler": 3,
+            "abaixo_min_chars": 108,
+            "excedente_cota": 15,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 7
+        },
+        {
+          "nivel": 4.5,
+          "n_validas": 7,
+          "n_alvo": 7,
+          "n_brutas": 60,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 2,
+          "n_descartadas_curtas": 34,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 0,
+          "motivos_descarte": {
+            "truncada_sem_texto": 0,
+            "spoiler": 2,
+            "abaixo_min_chars": 34,
+            "excedente_cota": 17,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 3
+        },
+        {
+          "nivel": 5.0,
+          "n_validas": 9,
+          "n_alvo": 9,
+          "n_brutas": 60,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 1,
+          "n_descartadas_curtas": 40,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 0,
+          "motivos_descarte": {
+            "truncada_sem_texto": 0,
+            "spoiler": 1,
+            "abaixo_min_chars": 40,
+            "excedente_cota": 10,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 3
+        }
+      ],
+      "temas": [
+        {
+          "tema": "Fotografia deslumbrante",
+          "mencoes_aproximadas": 28,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "As imagens do deserto e as sequências com os vermes gigantes foram descritas como visualmente impressionantes e de tirar o fôlego, com muitos considerando que cada quadro poderia ser uma obra de arte.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Trilha sonora marcante",
+          "mencoes_aproximadas": 22,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "A trilha sonora de Hans Zimmer foi amplamente elogiada por seu uso inovador de instrumentos não convencionais e vozes distorcidas, criando uma atmosfera imersiva e intensa que elevou a experiência do filme.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Construção de mundo imersiva",
+          "mencoes_aproximadas": 20,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "O filme foi elogiado por criar um universo vasto e detalhado, com diferentes planetas, culturas e facções, que prendeu a atenção do espectador e despertou curiosidade sobre o lore.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Atuações do elenco",
+          "mencoes_aproximadas": 16,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "O desempenho de Timothée Chalamet como Paul foi destacado por sua intensidade e evolução, e outros atores como Rebecca Ferguson, Oscar Isaac e Zendaya também receberam elogios por seus papéis.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Ritmo lento, mas com construção",
+          "mencoes_aproximadas": 14,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "Muitos notaram que o filme é lento e focado em estabelecer o cenário, com algumas partes arrastadas, mas consideram que isso é necessário para a construção do mundo e da história maior.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Satisfatório como introdução",
+          "mencoes_aproximadas": 13,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "As reviews veem o filme como uma preparação eficaz para os próximos capítulos, deixando o espectador ansioso pela continuação, mesmo que não funcione tão bem como um filme independente.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        }
+      ],
+      "observacao_geral": "As reviews positivas destacam a grandiosidade visual e sonora, a imersão no universo de Duna e as atuações, especialmente de Chalamet. Embora notem o ritmo lento e o caráter introdutório, consideram que isso serve à construção da saga e deixam a expectativa alta para os próximos filmes.",
+      "idioma_invalido": false,
+      "escopo_suspeito": false
+    }
+  ],
+  "eixos": {
+    "taxonomia_id": "ebab2667de74",
+    "margem_lift_pp": 20,
+    "contraste": "valorativo",
+    "linhas": [
+      {
+        "eixo": "ritmo",
+        "por_bucket": {
+          "negativas": {
+            "mencoes": 14,
+            "de_n": 26,
+            "freq_pct": 53.8,
+            "lift_pp": 0.0,
+            "tema": "Ritmo lento e tédio",
+            "exemplo_parafraseado": "Vários espectadores relataram que o filme se arrasta, com cenas longas e monótonas que tornam a experiência cansativa e difícil de assistir até o fim.",
+            "temas_no_mesmo_eixo": []
+          },
+          "medianas": {
+            "mencoes": 7,
+            "de_n": 13,
+            "freq_pct": 53.8,
+            "lift_pp": 0.0,
+            "tema": "Ritmo lento e falta de ação",
+            "exemplo_parafraseado": "O filme se alonga demais e demora para engrenar, deixando a sessão cansativa e até sonolenta em vários momentos.",
+            "temas_no_mesmo_eixo": []
+          },
+          "positivas": {
+            "mencoes": 5,
+            "de_n": 14,
+            "freq_pct": 35.7,
+            "lift_pp": -18.1,
+            "tema": "Ritmo lento, mas com construção",
+            "exemplo_parafraseado": "Muitos notaram que o filme é lento e focado em estabelecer o cenário, com algumas partes arrastadas, mas consideram que isso é necessário para a construção do mundo e da história maior.",
+            "temas_no_mesmo_eixo": []
+          }
+        },
+        "bullet_de": {
+          "negativas": null,
+          "medianas": null,
+          "positivas": null
+        }
+      },
+      {
+        "eixo": "atuacao",
+        "por_bucket": {
+          "negativas": {
+            "mencoes": 7,
+            "de_n": 26,
+            "freq_pct": 26.9,
+            "lift_pp": -11.5,
+            "tema": "Atuações de Timothée Chalamet e Zendaya",
+            "exemplo_parafraseado": "Parte do público criticou a atuação de Timothée Chalamet, considerando-a sem intensidade, e apontou que Zendaya tem pouquíssimo tempo de tela, quase como uma participação especial.",
+            "temas_no_mesmo_eixo": []
+          },
+          "medianas": {
+            "mencoes": 5,
+            "de_n": 13,
+            "freq_pct": 38.5,
+            "lift_pp": 9.9,
+            "tema": "Atuações competentes, especialmente de alguns coadjuvantes",
+            "exemplo_parafraseado": "O elenco entrega boas performances, com destaques para alguns personagens secundários que conseguem roubar a atenção em suas cenas.",
+            "temas_no_mesmo_eixo": []
+          },
+          "positivas": {
+            "mencoes": 4,
+            "de_n": 14,
+            "freq_pct": 28.6,
+            "lift_pp": -9.9,
+            "tema": "Atuações do elenco",
+            "exemplo_parafraseado": "O desempenho de Timothée Chalamet como Paul foi destacado por sua intensidade e evolução, e outros atores como Rebecca Ferguson, Oscar Isaac e Zendaya também receberam elogios por seus papéis.",
+            "temas_no_mesmo_eixo": []
+          }
+        },
+        "bullet_de": {
+          "negativas": null,
+          "medianas": null,
+          "positivas": null
+        }
+      },
+      {
+        "eixo": "direcao_imagem",
+        "por_bucket": {
+          "negativas": {
+            "mencoes": 15,
+            "de_n": 26,
+            "freq_pct": 57.7,
+            "lift_pp": -3.8,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "medianas": {
+            "mencoes": 8,
+            "de_n": 13,
+            "freq_pct": 61.5,
+            "lift_pp": 3.8,
+            "tema": "Construção de mundo e cenários impressionantes",
+            "exemplo_parafraseado": "Os efeitos visuais, a fotografia e os cenários são deslumbrantes e criam um universo fascinante, ainda que a história não acompanhe o mesmo brilho.",
+            "temas_no_mesmo_eixo": []
+          },
+          "positivas": {
+            "mencoes": 8,
+            "de_n": 14,
+            "freq_pct": 57.1,
+            "lift_pp": -4.4,
+            "tema": "Fotografia deslumbrante",
+            "exemplo_parafraseado": "As imagens do deserto e as sequências com os vermes gigantes foram descritas como visualmente impressionantes e de tirar o fôlego, com muitos considerando que cada quadro poderia ser uma obra de arte.",
+            "temas_no_mesmo_eixo": []
+          }
+        },
+        "bullet_de": {
+          "negativas": "frequencia",
+          "medianas": "frequencia",
+          "positivas": "frequencia"
+        }
+      },
+      {
+        "eixo": "roteiro_estrutura",
+        "por_bucket": {
+          "negativas": {
+            "mencoes": 15,
+            "de_n": 26,
+            "freq_pct": 57.7,
+            "lift_pp": -11.5,
+            "tema": "História confusa e exposição excessiva",
+            "exemplo_parafraseado": "Muitos reclamaram que o filme prioriza a construção de mundo e o excesso de explicações em vez de contar uma narrativa coesa, resultando em uma trama fragmentada e difícil de acompanhar.",
+            "temas_no_mesmo_eixo": [
+              "Filme como mera introdução e dependente de sequência"
+            ]
+          },
+          "medianas": {
+            "mencoes": 9,
+            "de_n": 13,
+            "freq_pct": 69.2,
+            "lift_pp": 11.5,
+            "tema": "Excesso de exposição e sensação de prólogo",
+            "exemplo_parafraseado": "Grande parte do filme é dedicada a apresentar o universo e deixar tudo pronto para a continuação, o que dá a impressão de que ele é apenas um longo prefácio.",
+            "temas_no_mesmo_eixo": []
+          },
+          "positivas": {
+            "mencoes": 7,
+            "de_n": 14,
+            "freq_pct": 50.0,
+            "lift_pp": -19.2,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          }
+        },
+        "bullet_de": {
+          "negativas": null,
+          "medianas": "frequencia",
+          "positivas": null
+        }
+      },
+      {
+        "eixo": "som_trilha",
+        "por_bucket": {
+          "negativas": {
+            "mencoes": 7,
+            "de_n": 26,
+            "freq_pct": 26.9,
+            "lift_pp": -23.1,
+            "tema": "Trilha sonora e design de som excessivos",
+            "exemplo_parafraseado": "Houve queixas de que a trilha sonora de Hans Zimmer é ensurdecedora e onipresente, dominando as cenas e contribuindo para a sensação de exaustão.",
+            "temas_no_mesmo_eixo": []
+          },
+          "medianas": {
+            "mencoes": 4,
+            "de_n": 13,
+            "freq_pct": 30.8,
+            "lift_pp": -19.2,
+            "tema": "Trilha sonora marcante, porém intrusiva",
+            "exemplo_parafraseado": "A música de Hans Zimmer é grandiosa e memorável, mas em alguns momentos é tão intensa que acaba abafando as cenas em vez de complementá-las.",
+            "temas_no_mesmo_eixo": []
+          },
+          "positivas": {
+            "mencoes": 7,
+            "de_n": 14,
+            "freq_pct": 50.0,
+            "lift_pp": 19.2,
+            "tema": "Trilha sonora marcante",
+            "exemplo_parafraseado": "A trilha sonora de Hans Zimmer foi amplamente elogiada por seu uso inovador de instrumentos não convencionais e vozes distorcidas, criando uma atmosfera imersiva e intensa que elevou a experiência do filme.",
+            "temas_no_mesmo_eixo": []
+          }
+        },
+        "bullet_de": {
+          "negativas": null,
+          "medianas": null,
+          "positivas": null
+        }
+      },
+      {
+        "eixo": "tom_atmosfera",
+        "por_bucket": {
+          "negativas": {
+            "mencoes": 4,
+            "de_n": 26,
+            "freq_pct": 15.4,
+            "lift_pp": 7.7,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "medianas": {
+            "mencoes": 1,
+            "de_n": 13,
+            "freq_pct": 7.7,
+            "lift_pp": -7.7,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "positivas": {
+            "mencoes": 1,
+            "de_n": 14,
+            "freq_pct": 7.1,
+            "lift_pp": -8.2,
+            "tema": "Construção de mundo imersiva",
+            "exemplo_parafraseado": "O filme foi elogiado por criar um universo vasto e detalhado, com diferentes planetas, culturas e facções, que prendeu a atenção do espectador e despertou curiosidade sobre o lore.",
+            "temas_no_mesmo_eixo": []
+          }
+        },
+        "bullet_de": {
+          "negativas": null,
+          "medianas": null,
+          "positivas": null
+        }
+      },
+      {
+        "eixo": "impacto_emocional",
+        "por_bucket": {
+          "negativas": {
+            "mencoes": 7,
+            "de_n": 26,
+            "freq_pct": 26.9,
+            "lift_pp": -11.5,
+            "tema": "Falta de profundidade emocional e personagens vazios",
+            "exemplo_parafraseado": "As críticas destacam que os personagens soam ocos e sem carisma, não despertando empatia ou interesse no público.",
+            "temas_no_mesmo_eixo": []
+          },
+          "medianas": {
+            "mencoes": 5,
+            "de_n": 13,
+            "freq_pct": 38.5,
+            "lift_pp": 9.9,
+            "tema": "Falta de conexão emocional com personagens",
+            "exemplo_parafraseado": "Os personagens parecem distantes e pouco cativantes, dificultando a imersão e o envolvimento com a trama.",
+            "temas_no_mesmo_eixo": []
+          },
+          "positivas": {
+            "mencoes": 4,
+            "de_n": 14,
+            "freq_pct": 28.6,
+            "lift_pp": -9.9,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          }
+        },
+        "bullet_de": {
+          "negativas": null,
+          "medianas": null,
+          "positivas": null
+        }
+      },
+      {
+        "eixo": "comparacoes",
+        "por_bucket": {
+          "negativas": {
+            "mencoes": 16,
+            "de_n": 26,
+            "freq_pct": 61.5,
+            "lift_pp": 0.0,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "medianas": {
+            "mencoes": 8,
+            "de_n": 13,
+            "freq_pct": 61.5,
+            "lift_pp": 0.0,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "positivas": {
+            "mencoes": 8,
+            "de_n": 14,
+            "freq_pct": 57.1,
+            "lift_pp": -4.4,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          }
+        },
+        "bullet_de": {
+          "negativas": "frequencia",
+          "medianas": null,
+          "positivas": "frequencia"
+        }
+      },
+      {
+        "eixo": "expectativa",
+        "por_bucket": {
+          "negativas": {
+            "mencoes": 7,
+            "de_n": 26,
+            "freq_pct": 26.9,
+            "lift_pp": -1.6,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "medianas": {
+            "mencoes": 3,
+            "de_n": 13,
+            "freq_pct": 23.1,
+            "lift_pp": -5.5,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "positivas": {
+            "mencoes": 4,
+            "de_n": 14,
+            "freq_pct": 28.6,
+            "lift_pp": 1.6,
+            "tema": "Satisfatório como introdução",
+            "exemplo_parafraseado": "As reviews veem o filme como uma preparação eficaz para os próximos capítulos, deixando o espectador ansioso pela continuação, mesmo que não funcione tão bem como um filme independente.",
+            "temas_no_mesmo_eixo": []
+          }
+        },
+        "bullet_de": {
+          "negativas": null,
+          "medianas": null,
+          "positivas": null
+        }
+      },
+      {
+        "eixo": "critica_social",
+        "por_bucket": {
+          "negativas": {
+            "mencoes": 5,
+            "de_n": 26,
+            "freq_pct": 19.2,
+            "lift_pp": 3.8,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "medianas": {
+            "mencoes": 2,
+            "de_n": 13,
+            "freq_pct": 15.4,
+            "lift_pp": -3.8,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "positivas": {
+            "mencoes": 0,
+            "de_n": 14,
+            "freq_pct": 0.0,
+            "lift_pp": -19.2,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          }
+        },
+        "bullet_de": {
+          "negativas": null,
+          "medianas": null,
+          "positivas": null
+        }
+      }
+    ],
+    "fonte_classificacao": {
+      "arquivo": "resultado/votacao-3/consenso.jsonl",
+      "criterio": "votacao_3_consenso_2_de_3",
+      "por_bucket": {
+        "negativas": {
+          "n_classificadas": 26,
+          "n_analisadas": 40,
+          "sobreposicao_com_analisadas": 26
+        },
+        "medianas": {
+          "n_classificadas": 13,
+          "n_analisadas": 40,
+          "sobreposicao_com_analisadas": 13
+        },
+        "positivas": {
+          "n_classificadas": 14,
+          "n_analisadas": 40,
+          "sobreposicao_com_analisadas": 14
+        }
+      }
+    },
+    "rotulagem": {
+      "n_chamadas": 3,
+      "falharam": [],
+      "fora_da_taxonomia": {},
+      "houve_retentativa": []
+    },
+    "spec_version": "1.9.16",
+    "verificador": {
+      "aplicado": true,
+      "variante": "V2_alvo",
+      "passada": 1,
+      "eixo": "impacto_emocional",
+      "n_removidas_no_corpus": 1654
+    }
+  },
+  "narrativa": "Dirigido por Denis Villeneuve e lançado em 2021, Duna é uma ficção científica e aventura ambientada em um futuro distante regido por um império feudal intergalático. A trama acompanha a família do jovem Paul Atreides ao assumir o controle do hostil planeta deserto Arrakis, a única fonte da valiosa especiaria Melange.\n\nA experiência do filme é marcada por uma cadência lenta e por uma ambientação focada na escala grandiosa do universo desértico. A narrativa aposta em uma atmosfera densa, estruturada com um desenho sonoro proeminente e com função predominantemente introdutória.\n\nOs três grupos concentram seus comentários nos mesmos aspectos da produção, divergindo no veredito e não nos assuntos abordados. Na grande maioria das notas (~79%), a maior parte destaca a fotografia deslumbrante, enquanto aproximadamente metade ressalta a presença de uma trilha sonora marcante. Além disso, uma parcela expressiva dessa faixa elogia a construção de mundo imersiva.\n\nPara quem se situa numa parcela das notas (~16%), muitos apontam o ritmo lento e a falta de ação, ainda que boa parte reconheça a construção de mundo e os cenários impressionantes. Nesse mesmo segmento, uma parte relata a falta de conexão emocional com os personagens. Já sob a ótica de uma fração mínima das notas (~5%), vários apontam o ritmo lento e o tédio durante a exibição, um número considerável critica a falta de profundidade emocional e personagens vazios, e alguns apontam uma história confusa com exposição excessiva.",
+  "verificacao_narrativa": {
+    "quantificador_fora_de_faixa": [],
+    "quantificador_repetido": [],
+    "paragrafos": {
+      "n_paragrafos": 4,
+      "minimo": 3,
+      "insuficientes": false,
+      "longos": []
+    },
+    "n_paragrafos": 4,
+    "paragrafos_insuficientes": false,
+    "paragrafos_longos": [],
+    "grupos_sem_paragrafo_proprio": [
+      "negativas"
+    ],
+    "movimento1_e_movimento2_no_mesmo_paragrafo": false,
+    "formato_invalido": false,
+    "numeros_inventados": [],
+    "rotulos_faltando": [],
+    "ordem_incorreta": false,
+    "vocabulario_peso": false,
+    "resenha_speak": [],
+    "n_resenha_speak": 0,
+    "n_flags": 1
+  },
+  "narrativa_selecao": {
+    "provider": "gemini",
+    "modelo": "gemini-3.7-flash",
+    "n_candidatos": 3,
+    "n_chamadas": 4,
+    "indice_escolhido": 1,
+    "motivo": "menor_severidade",
+    "criterio_decisivo": "empate",
+    "candidatos": [
+      {
+        "indice": 0,
+        "n_flags": 2,
+        "cliches": 0,
+        "repeticao_max": 1,
+        "ritmo": 11,
+        "cobertura": 1.0,
+        "eliminado": true
+      },
+      {
+        "indice": 1,
+        "n_flags": 1,
+        "cliches": 0,
+        "repeticao_max": 1,
+        "ritmo": 8,
+        "cobertura": 1.0,
+        "eliminado": true
+      },
+      {
+        "indice": 2,
+        "n_flags": 2,
+        "cliches": 0,
+        "repeticao_max": 1,
+        "ritmo": 10,
+        "cobertura": 1.0,
+        "eliminado": true
+      }
+    ],
+    "retry": {
+      "n_frases_infratoras": 0,
+      "motivos": [],
+      "n_flags_depois": 1,
+      "aplicado": false
+    },
+    "uso": {
+      "prompt_tokens": 11740,
+      "completion_tokens": 1477,
+      "cache_hit_tokens": 0,
+      "cache_miss_tokens": 11740
+    },
+    "latencia_s": 30.26
+  }
+}

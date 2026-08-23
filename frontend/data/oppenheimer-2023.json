@@ -1,0 +1,1264 @@
+{
+  "slug": "oppenheimer-2023",
+  "data_coleta": "2026-08-23T01:03:33.178039+00:00",
+  "spec_version": "1.9.16",
+  "total_reviews_observadas": 600,
+  "reviews_url": "https://letterboxd.com/film/oppenheimer-2023/reviews/",
+  "ficha": {
+    "titulo": "Oppenheimer",
+    "sinopse_oficial": "A história do físico americano J. Robert Oppenheimer, seu papel no Projeto Manhattan e no desenvolvimento da bomba atômica durante a Segunda Guerra Mundial, e o quanto isso mudaria a história do mundo para sempre.",
+    "sinopse_fallback_en": false,
+    "generos": [
+      "Drama",
+      "História"
+    ],
+    "duracao_min": 181,
+    "diretor": "Christopher Nolan",
+    "diretor_transliterado": false,
+    "ano": 2023,
+    "fonte": "tmdb",
+    "ano_fonte": "bruto"
+  },
+  "distribuicao": {
+    "n_notas_total": 4484625,
+    "por_nivel": {
+      "0.5": 10847,
+      "1.0": 28301,
+      "1.5": 15030,
+      "2.0": 95683,
+      "2.5": 83160,
+      "3.0": 421028,
+      "3.5": 441523,
+      "4.0": 1289783,
+      "4.5": 817816,
+      "5.0": 1281454
+    },
+    "por_bucket": {
+      "negativas": 3,
+      "medianas": 11,
+      "positivas": 85
+    },
+    "fonte": "letterboxd_histograma"
+  },
+  "coleta": {
+    "slug": "oppenheimer-2023",
+    "coletado_em": "2026-08-23T01:03:12.262059+00:00",
+    "versao_coletor": "1.9.6",
+    "ordenacao_usada": "by/added",
+    "histograma_bruto": {
+      "0.5": 10847,
+      "1.0": 28301,
+      "1.5": 15030,
+      "2.0": 95683,
+      "2.5": 83160,
+      "3.0": 421028,
+      "3.5": 441523,
+      "4.0": 1289783,
+      "4.5": 817816,
+      "5.0": 1281454
+    },
+    "orcamento_paginas_por_nivel": {
+      "0.5": 1,
+      "1.0": 3,
+      "1.5": 2,
+      "2.0": 10,
+      "2.5": 6,
+      "3.0": 10,
+      "3.5": 2,
+      "4.0": 5,
+      "4.5": 4,
+      "5.0": 5
+    },
+    "paginas_gastas_por_nivel": {
+      "0.5": 1,
+      "1.0": 4,
+      "1.5": 2,
+      "2.0": 15,
+      "2.5": 6,
+      "3.0": 10,
+      "3.5": 2,
+      "4.0": 5,
+      "4.5": 4,
+      "5.0": 5
+    },
+    "paradas_por_limite": [
+      "0.5",
+      "1.0",
+      "1.5",
+      "2.0",
+      "2.5",
+      "3.0",
+      "3.5",
+      "4.0",
+      "4.5",
+      "5.0"
+    ],
+    "contagem_bruta_por_nivel": {
+      "0.5": 12,
+      "1.0": 39,
+      "1.5": 24,
+      "2.0": 153,
+      "2.5": 60,
+      "3.0": 120,
+      "3.5": 24,
+      "4.0": 60,
+      "4.5": 48,
+      "5.0": 60
+    },
+    "contagem_estimada_valida_por_nivel": {
+      "0.5": 3,
+      "1.0": 7,
+      "1.5": 8,
+      "2.0": 34,
+      "2.5": 14,
+      "3.0": 26,
+      "3.5": 6,
+      "4.0": 16,
+      "4.5": 12,
+      "5.0": 20
+    },
+    "motivo_parada_por_nivel": {
+      "0.5": "orcamento_esgotado",
+      "1.0": "orcamento_esgotado",
+      "1.5": "orcamento_esgotado",
+      "2.0": "orcamento_esgotado",
+      "2.5": "orcamento_esgotado",
+      "3.0": "orcamento_esgotado",
+      "3.5": "orcamento_esgotado",
+      "4.0": "orcamento_esgotado",
+      "4.5": "orcamento_esgotado",
+      "5.0": "orcamento_esgotado"
+    },
+    "paginas_base_por_nivel": {
+      "0.5": 1,
+      "1.0": 3,
+      "1.5": 2,
+      "2.0": 10,
+      "2.5": 6,
+      "3.0": 10,
+      "3.5": 2,
+      "4.0": 5,
+      "4.5": 4,
+      "5.0": 5
+    },
+    "paginas_extensao_por_nivel": {
+      "0.5": 0,
+      "1.0": 1,
+      "1.5": 0,
+      "2.0": 5,
+      "2.5": 0,
+      "3.0": 0,
+      "3.5": 0,
+      "4.0": 0,
+      "4.5": 0,
+      "5.0": 0
+    },
+    "extensao_por_bucket": {
+      "negativas": {
+        "paginas_base": 16,
+        "paginas_extensao": 6,
+        "extras_por_nivel": {
+          "1.0": 1,
+          "2.0": 5
+        },
+        "motivo_parada": "meta_atingida",
+        "n_validas_pos_base": 44,
+        "n_validas_pos_extensao": 52,
+        "meta": 50
+      },
+      "medianas": {
+        "paginas_base": 16,
+        "paginas_extensao": 0,
+        "extras_por_nivel": {},
+        "motivo_parada": "meta_atingida",
+        "n_validas_pos_base": 50,
+        "n_validas_pos_extensao": 50,
+        "meta": 50
+      },
+      "positivas": {
+        "paginas_base": 16,
+        "paginas_extensao": 0,
+        "extras_por_nivel": {},
+        "motivo_parada": "meta_atingida",
+        "n_validas_pos_base": 63,
+        "n_validas_pos_extensao": 63,
+        "meta": 50
+      }
+    },
+    "profundidade_sondagem": {
+      "nivel_sondado": 4.0,
+      "profundidade": 256,
+      "exata": false,
+      "requisicoes": 4,
+      "motivo": "teto_plataforma"
+    },
+    "profundidade_estimada_por_nivel": {
+      "0.5": 2,
+      "1.0": 6,
+      "1.5": 3,
+      "2.0": 19,
+      "2.5": 17,
+      "3.0": 84,
+      "3.5": 88,
+      "4.0": 256,
+      "4.5": 162,
+      "5.0": 254
+    },
+    "janela_temporal": {
+      "total": {
+        "n": 672,
+        "min": "1945-08-06",
+        "max": "2026-08-11",
+        "p5": "2023-08-01",
+        "p50": "2026-08-06",
+        "p95": "2026-08-08"
+      },
+      "por_bucket": {
+        "negativas": {
+          "n": 228,
+          "min": "1945-08-06",
+          "max": "2026-08-11",
+          "p5": "2023-07-25",
+          "p50": "2026-08-04",
+          "p95": "2026-08-08"
+        },
+        "medianas": {
+          "n": 216,
+          "min": "2023-07-16",
+          "max": "2026-08-08",
+          "p5": "2023-08-07",
+          "p50": "2026-08-06",
+          "p95": "2026-08-07"
+        },
+        "positivas": {
+          "n": 228,
+          "min": "2023-01-11",
+          "max": "2026-08-08",
+          "p5": "2023-12-07",
+          "p50": "2026-08-07",
+          "p95": "2026-08-08"
+        }
+      }
+    },
+    "dias_por_100_paginas": {
+      "n_paginas": 18,
+      "pagina_min": 1,
+      "pagina_max": 64,
+      "dias": 3,
+      "dias_por_100_paginas": 4.761904761904762,
+      "paginas_para_1_ano": 7665
+    },
+    "ano_lancamento": 2023,
+    "ano_fonte": "slug",
+    "n_reviews_bruto": 672
+  },
+  "buckets": [
+    {
+      "bucket": "negativas",
+      "alvo": 40,
+      "modo": "completo",
+      "estado_piso": "completa",
+      "n_validas": 40,
+      "share_real": 3,
+      "composicao_alvo": {
+        "0.5": 3,
+        "1.0": 8,
+        "1.5": 4,
+        "2.0": 25
+      },
+      "composicao_atingida": {
+        "0.5": 3,
+        "1.0": 7,
+        "1.5": 4,
+        "2.0": 26
+      },
+      "cascata_por_degrau": {
+        "150": 40
+      },
+      "deficit_redistribuido": 1,
+      "distribuicao_pagina_origem": {
+        "n": 40,
+        "min": 1,
+        "max": 13,
+        "p5": 1,
+        "p50": 3,
+        "p95": 12,
+        "fracao_profunda": 0.275
+      },
+      "janela_amostra": {
+        "n": 40,
+        "min": "2023-07-28",
+        "max": "2026-08-08",
+        "p5": "2026-07-26",
+        "p50": "2026-08-05",
+        "p95": "2026-08-07"
+      },
+      "niveis": [
+        {
+          "nivel": 0.5,
+          "n_validas": 3,
+          "n_alvo": 3,
+          "n_brutas": 12,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 0,
+          "n_descartadas_curtas": 9,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 0,
+          "motivos_descarte": {
+            "truncada_sem_texto": 0,
+            "spoiler": 0,
+            "abaixo_min_chars": 9,
+            "excedente_cota": 0,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 1
+        },
+        {
+          "nivel": 1.0,
+          "n_validas": 7,
+          "n_alvo": 8,
+          "n_brutas": 39,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 0,
+          "n_descartadas_curtas": 32,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 0,
+          "motivos_descarte": {
+            "truncada_sem_texto": 0,
+            "spoiler": 0,
+            "abaixo_min_chars": 32,
+            "excedente_cota": 0,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 4
+        },
+        {
+          "nivel": 1.5,
+          "n_validas": 4,
+          "n_alvo": 4,
+          "n_brutas": 24,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 0,
+          "n_descartadas_curtas": 16,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 0,
+          "motivos_descarte": {
+            "truncada_sem_texto": 0,
+            "spoiler": 0,
+            "abaixo_min_chars": 16,
+            "excedente_cota": 4,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 2
+        },
+        {
+          "nivel": 2.0,
+          "n_validas": 26,
+          "n_alvo": 25,
+          "n_brutas": 153,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 2,
+          "n_descartadas_curtas": 115,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 2,
+          "motivos_descarte": {
+            "truncada_sem_texto": 2,
+            "spoiler": 2,
+            "abaixo_min_chars": 115,
+            "excedente_cota": 8,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 15
+        }
+      ],
+      "temas": [
+        {
+          "tema": "Ritmo lento e duração excessiva",
+          "mencoes_aproximadas": 30,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "O filme é longo demais, com muitas conversas e pouca ação, o que o torna cansativo e entediante.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Roteiro pretensioso e confuso",
+          "mencoes_aproximadas": 12,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "A narrativa é complexa artificialmente, com cortes temporais que dificultam o entendimento e parecem mais uma tentativa de parecer inteligente.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Personagens femininas mal desenvolvidas",
+          "mencoes_aproximadas": 10,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "As mulheres são reduzidas a estereótipos, aparecendo principalmente para cenas de nudez e sexo sem relevância para a trama.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Falta de consequências humanas da bomba",
+          "mencoes_aproximadas": 8,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "O filme quase não mostra o impacto real dos bombardeios, concentrando-se apenas no dilema interno de Oppenheimer.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Excesso de foco em Oppenheimer como grande homem",
+          "mencoes_aproximadas": 6,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "A história gira excessivamente em torno do gênio individual, ignorando o contexto coletivo e as vítimas.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Trilha sonora e técnica superestimadas",
+          "mencoes_aproximadas": 5,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "A música e a edição são boas, mas não salvam o filme da monotonia visual e da falta de profundidade.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        }
+      ],
+      "observacao_geral": "As reviews negativas criticam principalmente o ritmo lento, a duração excessiva e a narrativa pretensiosa e confusa, além da má caracterização feminina e da falta de foco nas consequências humanas da bomba.",
+      "idioma_invalido": false,
+      "escopo_suspeito": false
+    },
+    {
+      "bucket": "medianas",
+      "alvo": 40,
+      "modo": "completo",
+      "estado_piso": "completa",
+      "n_validas": 40,
+      "share_real": 11,
+      "composicao_alvo": {
+        "2.5": 7,
+        "3.0": 33
+      },
+      "composicao_atingida": {
+        "2.5": 7,
+        "3.0": 33
+      },
+      "cascata_por_degrau": {
+        "150": 40
+      },
+      "deficit_redistribuido": 0,
+      "distribuicao_pagina_origem": {
+        "n": 40,
+        "min": 1,
+        "max": 42,
+        "p5": 1,
+        "p50": 6,
+        "p95": 12,
+        "fracao_profunda": 0.3
+      },
+      "janela_amostra": {
+        "n": 40,
+        "min": "2023-07-21",
+        "max": "2026-08-08",
+        "p5": "2024-11-05",
+        "p50": "2026-08-06",
+        "p95": "2026-08-07"
+      },
+      "niveis": [
+        {
+          "nivel": 2.5,
+          "n_validas": 7,
+          "n_alvo": 7,
+          "n_brutas": 72,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 1,
+          "n_descartadas_curtas": 51,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 3,
+          "motivos_descarte": {
+            "truncada_sem_texto": 3,
+            "spoiler": 1,
+            "abaixo_min_chars": 51,
+            "excedente_cota": 10,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 6
+        },
+        {
+          "nivel": 3.0,
+          "n_validas": 33,
+          "n_alvo": 33,
+          "n_brutas": 144,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 0,
+          "n_descartadas_curtas": 110,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 1,
+          "motivos_descarte": {
+            "truncada_sem_texto": 1,
+            "spoiler": 0,
+            "abaixo_min_chars": 110,
+            "excedente_cota": 0,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 10
+        }
+      ],
+      "temas": [
+        {
+          "tema": "Ritmo arrastado e duração excessiva",
+          "mencoes_aproximadas": 15,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "O filme se estende demais, com muitas cenas de diálogo e pouca ação, fazendo com que a experiência se torne cansativa e até entediante em vários momentos.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Atuações elogiadas",
+          "mencoes_aproximadas": 12,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "O elenco é um dos pontos altos, com destaque para as atuações de Cillian Murphy e Robert Downey Jr., que elevam o material.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Qualidade visual e técnica",
+          "mencoes_aproximadas": 9,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "A fotografia, a direção de arte e o uso do formato IMAX impressionam, embora os efeitos práticos da explosão deixem a desejar para alguns.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Narrativa fragmentada e confusa",
+          "mencoes_aproximadas": 7,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "A estrutura não linear com muitos cortes e saltos temporais dificulta o acompanhamento da história, deixando a trama cansativa e pouco fluida.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Falta de profundidade psicológica",
+          "mencoes_aproximadas": 5,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "O filme não aprofunda a psicologia do protagonista, deixando suas motivações e conflitos internos superficiais, o que impede uma conexão emocional maior.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Trilha sonora marcante",
+          "mencoes_aproximadas": 5,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "A trilha sonora é um dos destaques, contribuindo para a atmosfera intensa do filme, embora em alguns momentos possa soar dominante demais.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        }
+      ],
+      "observacao_geral": "As reviews medianas reconhecem qualidades técnicas e interpretações fortes, mas apontam problemas de ritmo, duração e narrativa fragmentada, resultando em uma experiência que oscila entre o interesse e o tédio.",
+      "idioma_invalido": false,
+      "escopo_suspeito": false
+    },
+    {
+      "bucket": "positivas",
+      "alvo": 40,
+      "modo": "completo",
+      "estado_piso": "completa",
+      "n_validas": 40,
+      "share_real": 85,
+      "composicao_alvo": {
+        "3.5": 5,
+        "4.0": 13,
+        "4.5": 9,
+        "5.0": 13
+      },
+      "composicao_atingida": {
+        "3.5": 5,
+        "4.0": 13,
+        "4.5": 9,
+        "5.0": 13
+      },
+      "cascata_por_degrau": {
+        "150": 40
+      },
+      "deficit_redistribuido": 0,
+      "distribuicao_pagina_origem": {
+        "n": 40,
+        "min": 1,
+        "max": 64,
+        "p5": 1,
+        "p50": 3,
+        "p95": 40,
+        "fracao_profunda": 0.3
+      },
+      "janela_amostra": {
+        "n": 40,
+        "min": "2023-01-11",
+        "max": "2026-08-08",
+        "p5": "2024-11-08",
+        "p50": "2026-08-07",
+        "p95": "2026-08-08"
+      },
+      "niveis": [
+        {
+          "nivel": 3.5,
+          "n_validas": 5,
+          "n_alvo": 5,
+          "n_brutas": 24,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 1,
+          "n_descartadas_curtas": 17,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 0,
+          "motivos_descarte": {
+            "truncada_sem_texto": 0,
+            "spoiler": 1,
+            "abaixo_min_chars": 17,
+            "excedente_cota": 1,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 2
+        },
+        {
+          "nivel": 4.0,
+          "n_validas": 13,
+          "n_alvo": 13,
+          "n_brutas": 72,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 4,
+          "n_descartadas_curtas": 50,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 0,
+          "motivos_descarte": {
+            "truncada_sem_texto": 0,
+            "spoiler": 4,
+            "abaixo_min_chars": 50,
+            "excedente_cota": 5,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 5
+        },
+        {
+          "nivel": 4.5,
+          "n_validas": 9,
+          "n_alvo": 9,
+          "n_brutas": 60,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 0,
+          "n_descartadas_curtas": 45,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 1,
+          "motivos_descarte": {
+            "truncada_sem_texto": 1,
+            "spoiler": 0,
+            "abaixo_min_chars": 45,
+            "excedente_cota": 5,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 4
+        },
+        {
+          "nivel": 5.0,
+          "n_validas": 13,
+          "n_alvo": 13,
+          "n_brutas": 72,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 0,
+          "n_descartadas_curtas": 46,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 1,
+          "motivos_descarte": {
+            "truncada_sem_texto": 1,
+            "spoiler": 0,
+            "abaixo_min_chars": 46,
+            "excedente_cota": 12,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 5
+        }
+      ],
+      "temas": [
+        {
+          "tema": "Atuações marcantes",
+          "mencoes_aproximadas": 20,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "O desempenho de Cillian Murphy no papel principal é frequentemente elogiado como digno de prêmios, transmitindo a complexidade e o peso emocional do personagem; Robert Downey Jr. também é destacado por sua atuação intensa e transformadora.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Trilha sonora e som impactantes",
+          "mencoes_aproximadas": 15,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "A música de Ludwig Göransson é considerada excepcional, elevando a tensão e a atmosfera do filme, embora alguns achem o volume alto demais em certos momentos.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Fotografia e efeitos visuais impressionantes",
+          "mencoes_aproximadas": 12,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "A direção de fotografia e os efeitos práticos criam imagens marcantes, especialmente nas sequências que ilustram a escala e a intensidade do projeto.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Narrativa complexa e não linear",
+          "mencoes_aproximadas": 10,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "A estrutura temporal fragmentada é desafiadora de acompanhar, com múltiplas linhas do tempo, mas muitos apreciam como isso reflete a mente do protagonista.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Ritmo e duração prolongados",
+          "mencoes_aproximadas": 10,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "Embora a duração de três horas seja considerada justificável para a profundidade da história, alguns espectadores sentem que o ritmo se arrasta em certas partes, especialmente no início.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Exploração de culpa e consequências morais",
+          "mencoes_aproximadas": 9,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "O filme aborda a responsabilidade e o peso moral de criar uma arma de destruição em massa, gerando reflexões profundas sobre ciência e política.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        }
+      ],
+      "observacao_geral": "As reviews positivas destacam a excelência técnica, as atuações e a profundidade temática, mas reconhecem que a complexidade e a longa duração podem tornar a experiência desafiadora. Em geral, o grupo considera a obra uma realização cinematográfica impressionante, capaz de provocar fortes emoções e questionamentos.",
+      "idioma_invalido": false,
+      "escopo_suspeito": false
+    }
+  ],
+  "eixos": {
+    "taxonomia_id": "ebab2667de74",
+    "margem_lift_pp": 20,
+    "contraste": "valorativo",
+    "linhas": [
+      {
+        "eixo": "ritmo",
+        "por_bucket": {
+          "negativas": {
+            "mencoes": 18,
+            "de_n": 34,
+            "freq_pct": 52.9,
+            "lift_pp": 4.4,
+            "tema": "Ritmo lento e duração excessiva",
+            "exemplo_parafraseado": "O filme é longo demais, com muitas conversas e pouca ação, o que o torna cansativo e entediante.",
+            "temas_no_mesmo_eixo": []
+          },
+          "medianas": {
+            "mencoes": 17,
+            "de_n": 35,
+            "freq_pct": 48.6,
+            "lift_pp": -4.4,
+            "tema": "Ritmo arrastado e duração excessiva",
+            "exemplo_parafraseado": "O filme se estende demais, com muitas cenas de diálogo e pouca ação, fazendo com que a experiência se torne cansativa e até entediante em vários momentos.",
+            "temas_no_mesmo_eixo": []
+          },
+          "positivas": {
+            "mencoes": 12,
+            "de_n": 27,
+            "freq_pct": 44.4,
+            "lift_pp": -8.5,
+            "tema": "Ritmo e duração prolongados",
+            "exemplo_parafraseado": "Embora a duração de três horas seja considerada justificável para a profundidade da história, alguns espectadores sentem que o ritmo se arrasta em certas partes, especialmente no início.",
+            "temas_no_mesmo_eixo": []
+          }
+        },
+        "bullet_de": {
+          "negativas": "frequencia",
+          "medianas": "frequencia",
+          "positivas": "frequencia"
+        }
+      },
+      {
+        "eixo": "atuacao",
+        "por_bucket": {
+          "negativas": {
+            "mencoes": 8,
+            "de_n": 34,
+            "freq_pct": 23.5,
+            "lift_pp": -13.6,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "medianas": {
+            "mencoes": 13,
+            "de_n": 35,
+            "freq_pct": 37.1,
+            "lift_pp": 11.2,
+            "tema": "Atuações elogiadas",
+            "exemplo_parafraseado": "O elenco é um dos pontos altos, com destaque para as atuações de Cillian Murphy e Robert Downey Jr., que elevam o material.",
+            "temas_no_mesmo_eixo": []
+          },
+          "positivas": {
+            "mencoes": 7,
+            "de_n": 27,
+            "freq_pct": 25.9,
+            "lift_pp": -11.2,
+            "tema": "Atuações marcantes",
+            "exemplo_parafraseado": "O desempenho de Cillian Murphy no papel principal é frequentemente elogiado como digno de prêmios, transmitindo a complexidade e o peso emocional do personagem; Robert Downey Jr. também é destacado por sua atuação intensa e transformadora.",
+            "temas_no_mesmo_eixo": []
+          }
+        },
+        "bullet_de": {
+          "negativas": null,
+          "medianas": null,
+          "positivas": null
+        }
+      },
+      {
+        "eixo": "direcao_imagem",
+        "por_bucket": {
+          "negativas": {
+            "mencoes": 10,
+            "de_n": 34,
+            "freq_pct": 29.4,
+            "lift_pp": -10.6,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "medianas": {
+            "mencoes": 14,
+            "de_n": 35,
+            "freq_pct": 40.0,
+            "lift_pp": 3.0,
+            "tema": "Qualidade visual e técnica",
+            "exemplo_parafraseado": "A fotografia, a direção de arte e o uso do formato IMAX impressionam, embora os efeitos práticos da explosão deixem a desejar para alguns.",
+            "temas_no_mesmo_eixo": []
+          },
+          "positivas": {
+            "mencoes": 10,
+            "de_n": 27,
+            "freq_pct": 37.0,
+            "lift_pp": -3.0,
+            "tema": "Fotografia e efeitos visuais impressionantes",
+            "exemplo_parafraseado": "A direção de fotografia e os efeitos práticos criam imagens marcantes, especialmente nas sequências que ilustram a escala e a intensidade do projeto.",
+            "temas_no_mesmo_eixo": []
+          }
+        },
+        "bullet_de": {
+          "negativas": null,
+          "medianas": null,
+          "positivas": null
+        }
+      },
+      {
+        "eixo": "roteiro_estrutura",
+        "por_bucket": {
+          "negativas": {
+            "mencoes": 17,
+            "de_n": 34,
+            "freq_pct": 50.0,
+            "lift_pp": -1.9,
+            "tema": "Roteiro pretensioso e confuso",
+            "exemplo_parafraseado": "A narrativa é complexa artificialmente, com cortes temporais que dificultam o entendimento e parecem mais uma tentativa de parecer inteligente.",
+            "temas_no_mesmo_eixo": [
+              "Personagens femininas mal desenvolvidas"
+            ]
+          },
+          "medianas": {
+            "mencoes": 16,
+            "de_n": 35,
+            "freq_pct": 45.7,
+            "lift_pp": -6.1,
+            "tema": "Narrativa fragmentada e confusa",
+            "exemplo_parafraseado": "A estrutura não linear com muitos cortes e saltos temporais dificulta o acompanhamento da história, deixando a trama cansativa e pouco fluida.",
+            "temas_no_mesmo_eixo": [
+              "Falta de profundidade psicológica"
+            ]
+          },
+          "positivas": {
+            "mencoes": 14,
+            "de_n": 27,
+            "freq_pct": 51.9,
+            "lift_pp": 1.9,
+            "tema": "Narrativa complexa e não linear",
+            "exemplo_parafraseado": "A estrutura temporal fragmentada é desafiadora de acompanhar, com múltiplas linhas do tempo, mas muitos apreciam como isso reflete a mente do protagonista.",
+            "temas_no_mesmo_eixo": []
+          }
+        },
+        "bullet_de": {
+          "negativas": "frequencia",
+          "medianas": "frequencia",
+          "positivas": "frequencia"
+        }
+      },
+      {
+        "eixo": "som_trilha",
+        "por_bucket": {
+          "negativas": {
+            "mencoes": 6,
+            "de_n": 34,
+            "freq_pct": 17.6,
+            "lift_pp": -8.3,
+            "tema": "Trilha sonora e técnica superestimadas",
+            "exemplo_parafraseado": "A música e a edição são boas, mas não salvam o filme da monotonia visual e da falta de profundidade.",
+            "temas_no_mesmo_eixo": []
+          },
+          "medianas": {
+            "mencoes": 6,
+            "de_n": 35,
+            "freq_pct": 17.1,
+            "lift_pp": -8.8,
+            "tema": "Trilha sonora marcante",
+            "exemplo_parafraseado": "A trilha sonora é um dos destaques, contribuindo para a atmosfera intensa do filme, embora em alguns momentos possa soar dominante demais.",
+            "temas_no_mesmo_eixo": []
+          },
+          "positivas": {
+            "mencoes": 7,
+            "de_n": 27,
+            "freq_pct": 25.9,
+            "lift_pp": 8.3,
+            "tema": "Trilha sonora e som impactantes",
+            "exemplo_parafraseado": "A música de Ludwig Göransson é considerada excepcional, elevando a tensão e a atmosfera do filme, embora alguns achem o volume alto demais em certos momentos.",
+            "temas_no_mesmo_eixo": []
+          }
+        },
+        "bullet_de": {
+          "negativas": null,
+          "medianas": null,
+          "positivas": null
+        }
+      },
+      {
+        "eixo": "tom_atmosfera",
+        "por_bucket": {
+          "negativas": {
+            "mencoes": 1,
+            "de_n": 34,
+            "freq_pct": 2.9,
+            "lift_pp": -15.6,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "medianas": {
+            "mencoes": 0,
+            "de_n": 35,
+            "freq_pct": 0.0,
+            "lift_pp": -18.5,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "positivas": {
+            "mencoes": 5,
+            "de_n": 27,
+            "freq_pct": 18.5,
+            "lift_pp": 15.6,
+            "tema": "Exploração de culpa e consequências morais",
+            "exemplo_parafraseado": "O filme aborda a responsabilidade e o peso moral de criar uma arma de destruição em massa, gerando reflexões profundas sobre ciência e política.",
+            "temas_no_mesmo_eixo": []
+          }
+        },
+        "bullet_de": {
+          "negativas": null,
+          "medianas": null,
+          "positivas": null
+        }
+      },
+      {
+        "eixo": "impacto_emocional",
+        "por_bucket": {
+          "negativas": {
+            "mencoes": 9,
+            "de_n": 34,
+            "freq_pct": 26.5,
+            "lift_pp": -2.1,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "medianas": {
+            "mencoes": 10,
+            "de_n": 35,
+            "freq_pct": 28.6,
+            "lift_pp": 2.1,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "positivas": {
+            "mencoes": 6,
+            "de_n": 27,
+            "freq_pct": 22.2,
+            "lift_pp": -6.3,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          }
+        },
+        "bullet_de": {
+          "negativas": null,
+          "medianas": null,
+          "positivas": null
+        }
+      },
+      {
+        "eixo": "comparacoes",
+        "por_bucket": {
+          "negativas": {
+            "mencoes": 12,
+            "de_n": 34,
+            "freq_pct": 35.3,
+            "lift_pp": -1.7,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "medianas": {
+            "mencoes": 7,
+            "de_n": 35,
+            "freq_pct": 20.0,
+            "lift_pp": -17.0,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "positivas": {
+            "mencoes": 10,
+            "de_n": 27,
+            "freq_pct": 37.0,
+            "lift_pp": 1.7,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          }
+        },
+        "bullet_de": {
+          "negativas": null,
+          "medianas": null,
+          "positivas": null
+        }
+      },
+      {
+        "eixo": "expectativa",
+        "por_bucket": {
+          "negativas": {
+            "mencoes": 8,
+            "de_n": 34,
+            "freq_pct": 23.5,
+            "lift_pp": 0.7,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "medianas": {
+            "mencoes": 8,
+            "de_n": 35,
+            "freq_pct": 22.9,
+            "lift_pp": -0.7,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "positivas": {
+            "mencoes": 4,
+            "de_n": 27,
+            "freq_pct": 14.8,
+            "lift_pp": -8.7,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          }
+        },
+        "bullet_de": {
+          "negativas": null,
+          "medianas": null,
+          "positivas": null
+        }
+      },
+      {
+        "eixo": "critica_social",
+        "por_bucket": {
+          "negativas": {
+            "mencoes": 16,
+            "de_n": 34,
+            "freq_pct": 47.1,
+            "lift_pp": 17.4,
+            "tema": "Falta de consequências humanas da bomba",
+            "exemplo_parafraseado": "O filme quase não mostra o impacto real dos bombardeios, concentrando-se apenas no dilema interno de Oppenheimer.",
+            "temas_no_mesmo_eixo": [
+              "Excesso de foco em Oppenheimer como grande homem"
+            ]
+          },
+          "medianas": {
+            "mencoes": 4,
+            "de_n": 35,
+            "freq_pct": 11.4,
+            "lift_pp": -35.6,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "positivas": {
+            "mencoes": 8,
+            "de_n": 27,
+            "freq_pct": 29.6,
+            "lift_pp": -17.4,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          }
+        },
+        "bullet_de": {
+          "negativas": null,
+          "medianas": null,
+          "positivas": null
+        }
+      }
+    ],
+    "fonte_classificacao": {
+      "arquivo": "resultado/votacao-3/consenso.jsonl",
+      "criterio": "votacao_3_consenso_2_de_3",
+      "por_bucket": {
+        "negativas": {
+          "n_classificadas": 34,
+          "n_analisadas": 40,
+          "sobreposicao_com_analisadas": 34
+        },
+        "medianas": {
+          "n_classificadas": 35,
+          "n_analisadas": 40,
+          "sobreposicao_com_analisadas": 35
+        },
+        "positivas": {
+          "n_classificadas": 27,
+          "n_analisadas": 40,
+          "sobreposicao_com_analisadas": 27
+        }
+      }
+    },
+    "rotulagem": {
+      "n_chamadas": 3,
+      "falharam": [],
+      "fora_da_taxonomia": {},
+      "houve_retentativa": []
+    },
+    "spec_version": "1.9.16",
+    "verificador": {
+      "aplicado": true,
+      "variante": "V2_alvo",
+      "passada": 1,
+      "eixo": "impacto_emocional",
+      "n_removidas_no_corpus": 1654
+    }
+  },
+  "narrativa": "Lançado em 2023 sob a direção de Christopher Nolan, Oppenheimer é um longa-metragem dos gêneros drama e história. A obra acompanha a biografia do físico norte-americano J. Robert Oppenheimer, explorando detalhadamente a sua participação fundamental na liderança do Projeto Manhattan e na criação da bomba atômica no decorrer da Segunda Guerra Mundial, bem como a forma como esses eventos modificaram a história mundial para sempre.\n\nA experiência de exibição estrutura-se por meio de uma narrativa fragmentada, complexa e não linear, conduzindo os acontecimentos ao longo de uma duração marcadamente extensa e com um ritmo prolongado.\n\nEm termos de recepção, os grupos concentram suas análises sobre os mesmos aspectos factuais da produção, discordando principalmente no veredito sobre a sua eficácia geral. Na grande maioria das notas (~85%), uma parcela expressiva destaca as atuações marcantes do elenco, enquanto boa parte exalta o impacto técnico da trilha sonora e do som, e vários ressaltam o vigor demonstrado pela fotografia e pelos efeitos visuais impressionantes.\n\nPara a perspectiva expressa numa fração mínima das notas (~11%), muitos apontam incômodo com o ritmo arrastado e a duração excessiva, embora um número considerável sustente atuações elogiadas e uma parte mencione a qualidade visual e técnica. Em contrapartida, sob o ponto de vista de quem se situa numa fração ainda menor das notas (~3%), a maioria condena o ritmo lento e a duração excessiva, acompanhada por uma parcela expressiva que rejeita o roteiro como pretensioso e confuso, além de alguns que criticam personagens femininas mal desenvolvidas.",
+  "verificacao_narrativa": {
+    "quantificador_fora_de_faixa": [],
+    "quantificador_repetido": [],
+    "paragrafos": {
+      "n_paragrafos": 4,
+      "minimo": 3,
+      "insuficientes": false,
+      "longos": []
+    },
+    "n_paragrafos": 4,
+    "paragrafos_insuficientes": false,
+    "paragrafos_longos": [],
+    "grupos_sem_paragrafo_proprio": [
+      "negativas"
+    ],
+    "movimento1_e_movimento2_no_mesmo_paragrafo": true,
+    "formato_invalido": false,
+    "numeros_inventados": [],
+    "rotulos_faltando": [],
+    "ordem_incorreta": false,
+    "vocabulario_peso": false,
+    "resenha_speak": [],
+    "n_resenha_speak": 0,
+    "n_flags": 2
+  },
+  "narrativa_selecao": {
+    "provider": "gemini",
+    "modelo": "gemini-3.7-flash",
+    "n_candidatos": 3,
+    "n_chamadas": 4,
+    "indice_escolhido": 2,
+    "motivo": "menor_severidade",
+    "criterio_decisivo": "ritmo",
+    "candidatos": [
+      {
+        "indice": 0,
+        "n_flags": 2,
+        "cliches": 0,
+        "repeticao_max": 2,
+        "ritmo": 10,
+        "cobertura": 1.0,
+        "eliminado": true
+      },
+      {
+        "indice": 1,
+        "n_flags": 2,
+        "cliches": 0,
+        "repeticao_max": 2,
+        "ritmo": 10,
+        "cobertura": 1.0,
+        "eliminado": true
+      },
+      {
+        "indice": 2,
+        "n_flags": 2,
+        "cliches": 0,
+        "repeticao_max": 2,
+        "ritmo": 12,
+        "cobertura": 1.0,
+        "eliminado": true
+      }
+    ],
+    "retry": {
+      "n_frases_infratoras": 0,
+      "motivos": [],
+      "n_flags_depois": 2,
+      "aplicado": false
+    },
+    "uso": {
+      "prompt_tokens": 11359,
+      "completion_tokens": 1462,
+      "cache_hit_tokens": 0,
+      "cache_miss_tokens": 11359
+    },
+    "latencia_s": 36.45
+  }
+}

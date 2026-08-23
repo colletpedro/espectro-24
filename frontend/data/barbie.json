@@ -1,0 +1,1263 @@
+{
+  "slug": "barbie",
+  "data_coleta": "2026-08-23T00:42:33.396080+00:00",
+  "spec_version": "1.9.16",
+  "total_reviews_observadas": 576,
+  "reviews_url": "https://letterboxd.com/film/barbie/reviews/",
+  "ficha": {
+    "titulo": "Barbie",
+    "sinopse_oficial": "No mundo mágico das Barbies, \"Barbieland\", uma das bonecas começa a perceber que não se encaixa como as outras. Depois de ser expulsa, ela parte para uma aventura no \"mundo real\", onde descobre que a beleza está no interior de cada um.",
+    "sinopse_fallback_en": false,
+    "generos": [
+      "Comédia",
+      "Aventura",
+      "Fantasia"
+    ],
+    "duracao_min": 114,
+    "diretor": "Greta Gerwig",
+    "diretor_transliterado": false,
+    "ano": 2023,
+    "fonte": "tmdb",
+    "ano_fonte": "bruto"
+  },
+  "distribuicao": {
+    "n_notas_total": 5967139,
+    "por_nivel": {
+      "0.5": 33933,
+      "1.0": 87269,
+      "1.5": 54328,
+      "2.0": 295090,
+      "2.5": 263024,
+      "3.0": 1077648,
+      "3.5": 833300,
+      "4.0": 1629288,
+      "4.5": 504459,
+      "5.0": 1188800
+    },
+    "por_bucket": {
+      "negativas": 8,
+      "medianas": 22,
+      "positivas": 70
+    },
+    "fonte": "letterboxd_histograma"
+  },
+  "coleta": {
+    "slug": "barbie",
+    "coletado_em": "2026-08-09T07:44:52.548753+00:00",
+    "versao_coletor": "1.9.6",
+    "ordenacao_usada": "by/added",
+    "histograma_bruto": {
+      "0.5": 33933,
+      "1.0": 87269,
+      "1.5": 54328,
+      "2.0": 295090,
+      "2.5": 263024,
+      "3.0": 1077648,
+      "3.5": 833300,
+      "4.0": 1629288,
+      "4.5": 504459,
+      "5.0": 1188800
+    },
+    "orcamento_paginas_por_nivel": {
+      "0.5": 1,
+      "1.0": 3,
+      "1.5": 2,
+      "2.0": 10,
+      "2.5": 6,
+      "3.0": 10,
+      "3.5": 3,
+      "4.0": 6,
+      "4.5": 2,
+      "5.0": 5
+    },
+    "paginas_gastas_por_nivel": {
+      "0.5": 1,
+      "1.0": 3,
+      "1.5": 2,
+      "2.0": 10,
+      "2.5": 6,
+      "3.0": 10,
+      "3.5": 3,
+      "4.0": 6,
+      "4.5": 2,
+      "5.0": 5
+    },
+    "paradas_por_limite": [
+      "0.5",
+      "1.0",
+      "1.5",
+      "2.0",
+      "2.5",
+      "3.0",
+      "3.5",
+      "4.0",
+      "4.5",
+      "5.0"
+    ],
+    "contagem_bruta_por_nivel": {
+      "0.5": 12,
+      "1.0": 36,
+      "1.5": 24,
+      "2.0": 120,
+      "2.5": 72,
+      "3.0": 120,
+      "3.5": 36,
+      "4.0": 72,
+      "4.5": 24,
+      "5.0": 60
+    },
+    "contagem_estimada_valida_por_nivel": {
+      "0.5": 1,
+      "1.0": 9,
+      "1.5": 7,
+      "2.0": 22,
+      "2.5": 15,
+      "3.0": 19,
+      "3.5": 8,
+      "4.0": 12,
+      "4.5": 3,
+      "5.0": 12
+    },
+    "motivo_parada_por_nivel": {
+      "0.5": "orcamento_esgotado",
+      "1.0": "orcamento_esgotado",
+      "1.5": "orcamento_esgotado",
+      "2.0": "orcamento_esgotado",
+      "2.5": "orcamento_esgotado",
+      "3.0": "orcamento_esgotado",
+      "3.5": "orcamento_esgotado",
+      "4.0": "orcamento_esgotado",
+      "4.5": "orcamento_esgotado",
+      "5.0": "orcamento_esgotado"
+    },
+    "paginas_base_por_nivel": {
+      "0.5": 1,
+      "1.0": 3,
+      "1.5": 2,
+      "2.0": 10,
+      "2.5": 6,
+      "3.0": 10,
+      "3.5": 3,
+      "4.0": 6,
+      "4.5": 2,
+      "5.0": 5
+    },
+    "paginas_extensao_por_nivel": {
+      "0.5": 0,
+      "1.0": 0,
+      "1.5": 0,
+      "2.0": 0,
+      "2.5": 0,
+      "3.0": 0,
+      "3.5": 0,
+      "4.0": 0,
+      "4.5": 0,
+      "5.0": 0
+    },
+    "extensao_por_bucket": {
+      "negativas": {
+        "paginas_base": 16,
+        "paginas_extensao": 0,
+        "extras_por_nivel": {},
+        "motivo_parada": "meta_atingida",
+        "n_validas_pos_base": 78,
+        "n_validas_pos_extensao": 78,
+        "meta": 50
+      },
+      "medianas": {
+        "paginas_base": 16,
+        "paginas_extensao": 0,
+        "extras_por_nivel": {},
+        "motivo_parada": "meta_atingida",
+        "n_validas_pos_base": 69,
+        "n_validas_pos_extensao": 69,
+        "meta": 50
+      },
+      "positivas": {
+        "paginas_base": 16,
+        "paginas_extensao": 0,
+        "extras_por_nivel": {},
+        "motivo_parada": "meta_atingida",
+        "n_validas_pos_base": 79,
+        "n_validas_pos_extensao": 79,
+        "meta": 50
+      }
+    },
+    "profundidade_sondagem": {
+      "nivel_sondado": 4.0,
+      "profundidade": 256,
+      "exata": false,
+      "requisicoes": 4,
+      "motivo": "teto_plataforma"
+    },
+    "profundidade_estimada_por_nivel": {
+      "0.5": 5,
+      "1.0": 14,
+      "1.5": 9,
+      "2.0": 46,
+      "2.5": 41,
+      "3.0": 169,
+      "3.5": 131,
+      "4.0": 256,
+      "4.5": 79,
+      "5.0": 187
+    },
+    "janela_temporal": {
+      "total": {
+        "n": 975,
+        "min": "1442-07-09",
+        "max": "2026-08-09",
+        "p5": "2023-07-09",
+        "p50": "2026-08-05",
+        "p95": "2026-08-08"
+      },
+      "por_bucket": {
+        "negativas": {
+          "n": 330,
+          "min": "1442-07-09",
+          "max": "2026-08-08",
+          "p5": "2023-07-18",
+          "p50": "2026-08-04",
+          "p95": "2026-08-07"
+        },
+        "medianas": {
+          "n": 321,
+          "min": "2023-02-09",
+          "max": "2026-08-08",
+          "p5": "2023-07-15",
+          "p50": "2026-08-05",
+          "p95": "2026-08-08"
+        },
+        "positivas": {
+          "n": 324,
+          "min": "2023-02-06",
+          "max": "2026-08-09",
+          "p5": "2023-07-09",
+          "p50": "2026-08-07",
+          "p95": "2026-08-08"
+        }
+      }
+    },
+    "dias_por_100_paginas": {
+      "n_paginas": 24,
+      "pagina_min": 1,
+      "pagina_max": 128,
+      "dias": 7,
+      "dias_por_100_paginas": 5.511811023622047,
+      "paginas_para_1_ano": 6622
+    },
+    "ano_lancamento": 2023,
+    "ano_fonte": "letterboxd",
+    "n_reviews_bruto": 975
+  },
+  "buckets": [
+    {
+      "bucket": "negativas",
+      "alvo": 40,
+      "modo": "completo",
+      "estado_piso": "completa",
+      "n_validas": 40,
+      "share_real": 8,
+      "composicao_alvo": {
+        "0.5": 3,
+        "1.0": 7,
+        "1.5": 5,
+        "2.0": 25
+      },
+      "composicao_atingida": {
+        "0.5": 3,
+        "1.0": 7,
+        "1.5": 5,
+        "2.0": 25
+      },
+      "cascata_por_degrau": {
+        "150": 40
+      },
+      "deficit_redistribuido": 0,
+      "distribuicao_pagina_origem": {
+        "n": 40,
+        "min": 1,
+        "max": 13,
+        "p5": 1,
+        "p50": 2,
+        "p95": 12,
+        "fracao_profunda": 0.3
+      },
+      "janela_amostra": {
+        "n": 40,
+        "min": "2023-07-10",
+        "max": "2026-08-08",
+        "p5": "2023-07-18",
+        "p50": "2026-08-04",
+        "p95": "2026-08-08"
+      },
+      "niveis": [
+        {
+          "nivel": 0.5,
+          "n_validas": 3,
+          "n_alvo": 3,
+          "n_brutas": 31,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 1,
+          "n_descartadas_curtas": 20,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 1,
+          "motivos_descarte": {
+            "truncada_sem_texto": 1,
+            "spoiler": 1,
+            "abaixo_min_chars": 20,
+            "excedente_cota": 6,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 1
+        },
+        {
+          "nivel": 1.0,
+          "n_validas": 7,
+          "n_alvo": 7,
+          "n_brutas": 48,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 1,
+          "n_descartadas_curtas": 36,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 0,
+          "motivos_descarte": {
+            "truncada_sem_texto": 0,
+            "spoiler": 1,
+            "abaixo_min_chars": 36,
+            "excedente_cota": 4,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 3
+        },
+        {
+          "nivel": 1.5,
+          "n_validas": 5,
+          "n_alvo": 5,
+          "n_brutas": 36,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 0,
+          "n_descartadas_curtas": 26,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 0,
+          "motivos_descarte": {
+            "truncada_sem_texto": 0,
+            "spoiler": 0,
+            "abaixo_min_chars": 26,
+            "excedente_cota": 5,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 2
+        },
+        {
+          "nivel": 2.0,
+          "n_validas": 25,
+          "n_alvo": 25,
+          "n_brutas": 215,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 7,
+          "n_descartadas_curtas": 156,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 4,
+          "motivos_descarte": {
+            "truncada_sem_texto": 4,
+            "spoiler": 7,
+            "abaixo_min_chars": 156,
+            "excedente_cota": 23,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 10
+        }
+      ],
+      "temas": [
+        {
+          "tema": "Discurso feminista forçado e sem sutileza",
+          "mencoes_aproximadas": 16,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "As críticas apontam que o filme martela sua mensagem feminista de forma exagerada, sem deixar espaço para interpretação, tratando o público como se não fosse capaz de entender subtextos.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Roteiro confuso e sem direção clara",
+          "mencoes_aproximadas": 12,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "Muitos espectadores reclamam que o filme não parece saber o que quer transmitir, misturando tantas ideias que o resultado final fica confuso e sem um propósito definido.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Ritmo arrastado e tédio",
+          "mencoes_aproximadas": 8,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "Várias pessoas relatam que se entediaram em alguns momentos, especialmente na parte do mundo real, chegando a abandonar a sala ou a pausar o filme.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Publicidade e comercialismo excessivo",
+          "mencoes_aproximadas": 7,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "O filme é criticado por parecer um grande comercial, recheado de menções a marcas e produtos, o que o torna artificial e voltado apenas para o lucro.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Personagens superficiais e subdesenvolvidos",
+          "mencoes_aproximadas": 6,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "As reviews apontam que diversos personagens, especialmente os humanos, não têm profundidade, sendo meros adereços para impulsionar o enredo.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Atuações desequilibradas",
+          "mencoes_aproximadas": 5,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "Embora muitos elogiem o desempenho de Ryan Gosling como Ken, outros atores, incluindo Margot Robbie e Will Ferrell, recebem críticas por atuações consideradas forçadas ou irritantes.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        }
+      ],
+      "observacao_geral": "As reviews negativas concentram-se na falta de sutileza do discurso feminista, no roteiro confuso e no aspecto comercial excessivo, embora reconheçam alguns méritos visuais e a atuação de Ryan Gosling. No geral, este grupo demonstra grande decepção, especialmente vindo de uma produção tão aguardada.",
+      "idioma_invalido": false,
+      "escopo_suspeito": false
+    },
+    {
+      "bucket": "medianas",
+      "alvo": 40,
+      "modo": "completo",
+      "estado_piso": "completa",
+      "n_validas": 40,
+      "share_real": 22,
+      "composicao_alvo": {
+        "2.5": 8,
+        "3.0": 32
+      },
+      "composicao_atingida": {
+        "2.5": 8,
+        "3.0": 32
+      },
+      "cascata_por_degrau": {
+        "150": 40
+      },
+      "deficit_redistribuido": 0,
+      "distribuicao_pagina_origem": {
+        "n": 40,
+        "min": 1,
+        "max": 84,
+        "p5": 1,
+        "p50": 5,
+        "p95": 14,
+        "fracao_profunda": 0.25
+      },
+      "janela_amostra": {
+        "n": 40,
+        "min": "2023-02-09",
+        "max": "2026-08-07",
+        "p5": "2023-07-09",
+        "p50": "2024-02-07",
+        "p95": "2026-08-07"
+      },
+      "niveis": [
+        {
+          "nivel": 2.5,
+          "n_validas": 8,
+          "n_alvo": 8,
+          "n_brutas": 106,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 2,
+          "n_descartadas_curtas": 83,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 1,
+          "motivos_descarte": {
+            "truncada_sem_texto": 1,
+            "spoiler": 2,
+            "abaixo_min_chars": 83,
+            "excedente_cota": 12,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 6
+        },
+        {
+          "nivel": 3.0,
+          "n_validas": 32,
+          "n_alvo": 32,
+          "n_brutas": 215,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 7,
+          "n_descartadas_curtas": 158,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 1,
+          "motivos_descarte": {
+            "truncada_sem_texto": 1,
+            "spoiler": 7,
+            "abaixo_min_chars": 158,
+            "excedente_cota": 17,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 10
+        }
+      ],
+      "temas": [
+        {
+          "tema": "Mensagem feminista superficial ou forçada",
+          "mencoes_aproximadas": 15,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "O filme tenta passar uma mensagem feminista, mas acaba soando superficial e pouco aprofundada, deixando a impressão de que a crítica social é apenas um verniz.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Visual e design de produção elogiados",
+          "mencoes_aproximadas": 12,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "Os cenários, figurinos e a direção de arte são impressionantes e dão ao filme uma identidade visual marcante, sendo um dos pontos mais fortes da produção.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Atuações de Margot Robbie e Ryan Gosling",
+          "mencoes_aproximadas": 11,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "O elenco se destaca, especialmente Ryan Gosling, que rouba a cena com seu humor, e Margot Robbie, que transmite carisma e energia.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Divertido, mas com ritmo irregular",
+          "mencoes_aproximadas": 9,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "O filme tem momentos divertidos e engraçados, mas em alguns trechos a narrativa perde o ritmo e se torna arrastada, fazendo o espectador perder o interesse.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Crítica ao capitalismo e a Mattel",
+          "mencoes_aproximadas": 8,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "Alguns espectadores notam a contradição de um filme que critica o sistema e o consumo, mas é produzido pela própria Mattel, o que enfraquece a mensagem.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Expectativa não atendida",
+          "mencoes_aproximadas": 7,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "Muitos foram ao cinema esperando uma história nostálgica e leve sobre a boneca, mas encontraram uma abordagem mais séria e com discurso social, o que decepcionou parte do público.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        }
+      ],
+      "observacao_geral": "As reviews medianas apresentam uma recepção mista: há elogios à estética e às atuações, mas críticas à superficialidade da mensagem feminista e ao ritmo irregular. O grupo reconhece o valor de entretenimento, porém sente que o filme não se aprofunda nas questões que propõe.",
+      "idioma_invalido": false,
+      "escopo_suspeito": false
+    },
+    {
+      "bucket": "positivas",
+      "alvo": 40,
+      "modo": "completo",
+      "estado_piso": "completa",
+      "n_validas": 40,
+      "share_real": 70,
+      "composicao_alvo": {
+        "3.5": 8,
+        "4.0": 16,
+        "4.5": 5,
+        "5.0": 11
+      },
+      "composicao_atingida": {
+        "3.5": 8,
+        "4.0": 16,
+        "4.5": 5,
+        "5.0": 11
+      },
+      "cascata_por_degrau": {
+        "150": 40
+      },
+      "deficit_redistribuido": 0,
+      "distribuicao_pagina_origem": {
+        "n": 40,
+        "min": 1,
+        "max": 47,
+        "p5": 1,
+        "p50": 3,
+        "p95": 8,
+        "fracao_profunda": 0.375
+      },
+      "janela_amostra": {
+        "n": 40,
+        "min": "2023-07-01",
+        "max": "2026-08-08",
+        "p5": "2023-07-09",
+        "p50": "2026-08-07",
+        "p95": "2026-08-08"
+      },
+      "niveis": [
+        {
+          "nivel": 3.5,
+          "n_validas": 8,
+          "n_alvo": 8,
+          "n_brutas": 60,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 2,
+          "n_descartadas_curtas": 43,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 0,
+          "motivos_descarte": {
+            "truncada_sem_texto": 0,
+            "spoiler": 2,
+            "abaixo_min_chars": 43,
+            "excedente_cota": 7,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 3
+        },
+        {
+          "nivel": 4.0,
+          "n_validas": 16,
+          "n_alvo": 16,
+          "n_brutas": 120,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 4,
+          "n_descartadas_curtas": 85,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 2,
+          "motivos_descarte": {
+            "truncada_sem_texto": 2,
+            "spoiler": 4,
+            "abaixo_min_chars": 85,
+            "excedente_cota": 13,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 6
+        },
+        {
+          "nivel": 4.5,
+          "n_validas": 5,
+          "n_alvo": 5,
+          "n_brutas": 48,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 0,
+          "n_descartadas_curtas": 37,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 0,
+          "motivos_descarte": {
+            "truncada_sem_texto": 0,
+            "spoiler": 0,
+            "abaixo_min_chars": 37,
+            "excedente_cota": 6,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 2
+        },
+        {
+          "nivel": 5.0,
+          "n_validas": 11,
+          "n_alvo": 11,
+          "n_brutas": 96,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 1,
+          "n_descartadas_curtas": 70,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 1,
+          "motivos_descarte": {
+            "truncada_sem_texto": 1,
+            "spoiler": 1,
+            "abaixo_min_chars": 70,
+            "excedente_cota": 13,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 5
+        }
+      ],
+      "temas": [
+        {
+          "tema": "Crítica ao patriarcado e às expectativas femininas",
+          "mencoes_aproximadas": 15,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "A review destaca o monólogo de America Ferrera como um retrato poderoso das contradições e cobranças enfrentadas pelas mulheres na sociedade, como a exigência de ser bonita, mas não exibida, e bem-sucedida sem parecer ambiciosa.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Atuações de Margot Robbie e Ryan Gosling",
+          "mencoes_aproximadas": 10,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "Uma review elogia a versatilidade de Ryan Gosling, destacando sua atuação como Ken como um dos grandes destaques do filme.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Impacto emocional e reflexão pessoal",
+          "mencoes_aproximadas": 8,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "A pessoa relata ter saído da sessão às lágrimas, pois o filme a fez refletir sobre as dificuldades de ser mulher e a falta de liberdade diante das expectativas sociais.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Estética, cenários e figurinos",
+          "mencoes_aproximadas": 6,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "Uma review descreve o filme como um espetáculo visual, elogiando os cenários, figurinos e a direção de arte, que remetem a um mundo de brinquedo bem realizado.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Humor e entretenimento",
+          "mencoes_aproximadas": 5,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "O autor menciona que o filme é divertido e engraçado, proporcionando uma ótima experiência no cinema.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Mensagem feminista e representação",
+          "mencoes_aproximadas": 5,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "Uma análise aponta que a abordagem feminista é válida e importante para iniciar discussões, embora reconheça que já existem obras com perspectivas mais profundas sobre o tema.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        }
+      ],
+      "observacao_geral": "As reviews positivas celebram o filme como uma obra visualmente marcante, com atuações fortes e um impacto emocional significativo, especialmente para mulheres. Embora a maioria reconheça a intenção feminista, algumas apontam limitações na profundidade da crítica social, mas ainda assim recomendam a experiência.",
+      "idioma_invalido": false,
+      "escopo_suspeito": false
+    }
+  ],
+  "eixos": {
+    "taxonomia_id": "ebab2667de74",
+    "margem_lift_pp": 20,
+    "contraste": "tematico",
+    "linhas": [
+      {
+        "eixo": "ritmo",
+        "por_bucket": {
+          "negativas": {
+            "mencoes": 1,
+            "de_n": 18,
+            "freq_pct": 5.6,
+            "lift_pp": -13.7,
+            "tema": "Ritmo arrastado e tédio",
+            "exemplo_parafraseado": "Várias pessoas relatam que se entediaram em alguns momentos, especialmente na parte do mundo real, chegando a abandonar a sala ou a pausar o filme.",
+            "temas_no_mesmo_eixo": []
+          },
+          "medianas": {
+            "mencoes": 5,
+            "de_n": 26,
+            "freq_pct": 19.2,
+            "lift_pp": 13.3,
+            "tema": "Divertido, mas com ritmo irregular",
+            "exemplo_parafraseado": "O filme tem momentos divertidos e engraçados, mas em alguns trechos a narrativa perde o ritmo e se torna arrastada, fazendo o espectador perder o interesse.",
+            "temas_no_mesmo_eixo": []
+          },
+          "positivas": {
+            "mencoes": 1,
+            "de_n": 17,
+            "freq_pct": 5.9,
+            "lift_pp": -13.3,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          }
+        },
+        "bullet_de": {
+          "negativas": null,
+          "medianas": null,
+          "positivas": null
+        }
+      },
+      {
+        "eixo": "atuacao",
+        "por_bucket": {
+          "negativas": {
+            "mencoes": 3,
+            "de_n": 18,
+            "freq_pct": 16.7,
+            "lift_pp": -14.1,
+            "tema": "Atuações desequilibradas",
+            "exemplo_parafraseado": "Embora muitos elogiem o desempenho de Ryan Gosling como Ken, outros atores, incluindo Margot Robbie e Will Ferrell, recebem críticas por atuações consideradas forçadas ou irritantes.",
+            "temas_no_mesmo_eixo": []
+          },
+          "medianas": {
+            "mencoes": 8,
+            "de_n": 26,
+            "freq_pct": 30.8,
+            "lift_pp": 13.1,
+            "tema": "Atuações de Margot Robbie e Ryan Gosling",
+            "exemplo_parafraseado": "O elenco se destaca, especialmente Ryan Gosling, que rouba a cena com seu humor, e Margot Robbie, que transmite carisma e energia.",
+            "temas_no_mesmo_eixo": []
+          },
+          "positivas": {
+            "mencoes": 3,
+            "de_n": 17,
+            "freq_pct": 17.6,
+            "lift_pp": -13.1,
+            "tema": "Atuações de Margot Robbie e Ryan Gosling",
+            "exemplo_parafraseado": "Uma review elogia a versatilidade de Ryan Gosling, destacando sua atuação como Ken como um dos grandes destaques do filme.",
+            "temas_no_mesmo_eixo": []
+          }
+        },
+        "bullet_de": {
+          "negativas": null,
+          "medianas": null,
+          "positivas": null
+        }
+      },
+      {
+        "eixo": "direcao_imagem",
+        "por_bucket": {
+          "negativas": {
+            "mencoes": 2,
+            "de_n": 18,
+            "freq_pct": 11.1,
+            "lift_pp": -23.5,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "medianas": {
+            "mencoes": 9,
+            "de_n": 26,
+            "freq_pct": 34.6,
+            "lift_pp": 5.2,
+            "tema": "Visual e design de produção elogiados",
+            "exemplo_parafraseado": "Os cenários, figurinos e a direção de arte são impressionantes e dão ao filme uma identidade visual marcante, sendo um dos pontos mais fortes da produção.",
+            "temas_no_mesmo_eixo": []
+          },
+          "positivas": {
+            "mencoes": 5,
+            "de_n": 17,
+            "freq_pct": 29.4,
+            "lift_pp": -5.2,
+            "tema": "Estética, cenários e figurinos",
+            "exemplo_parafraseado": "Uma review descreve o filme como um espetáculo visual, elogiando os cenários, figurinos e a direção de arte, que remetem a um mundo de brinquedo bem realizado.",
+            "temas_no_mesmo_eixo": []
+          }
+        },
+        "bullet_de": {
+          "negativas": null,
+          "medianas": null,
+          "positivas": null
+        }
+      },
+      {
+        "eixo": "roteiro_estrutura",
+        "por_bucket": {
+          "negativas": {
+            "mencoes": 9,
+            "de_n": 18,
+            "freq_pct": 50.0,
+            "lift_pp": 14.7,
+            "tema": "Roteiro confuso e sem direção clara",
+            "exemplo_parafraseado": "Muitos espectadores reclamam que o filme não parece saber o que quer transmitir, misturando tantas ideias que o resultado final fica confuso e sem um propósito definido.",
+            "temas_no_mesmo_eixo": [
+              "Personagens superficiais e subdesenvolvidos"
+            ]
+          },
+          "medianas": {
+            "mencoes": 9,
+            "de_n": 26,
+            "freq_pct": 34.6,
+            "lift_pp": -15.4,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "positivas": {
+            "mencoes": 6,
+            "de_n": 17,
+            "freq_pct": 35.3,
+            "lift_pp": -14.7,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          }
+        },
+        "bullet_de": {
+          "negativas": "frequencia",
+          "medianas": null,
+          "positivas": "frequencia"
+        }
+      },
+      {
+        "eixo": "som_trilha",
+        "por_bucket": {
+          "negativas": {
+            "mencoes": 3,
+            "de_n": 18,
+            "freq_pct": 16.7,
+            "lift_pp": 4.9,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "medianas": {
+            "mencoes": 1,
+            "de_n": 26,
+            "freq_pct": 3.8,
+            "lift_pp": -12.8,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "positivas": {
+            "mencoes": 2,
+            "de_n": 17,
+            "freq_pct": 11.8,
+            "lift_pp": -4.9,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          }
+        },
+        "bullet_de": {
+          "negativas": null,
+          "medianas": null,
+          "positivas": null
+        }
+      },
+      {
+        "eixo": "tom_atmosfera",
+        "por_bucket": {
+          "negativas": {
+            "mencoes": 2,
+            "de_n": 18,
+            "freq_pct": 11.1,
+            "lift_pp": -27.4,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "medianas": {
+            "mencoes": 10,
+            "de_n": 26,
+            "freq_pct": 38.5,
+            "lift_pp": 3.2,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "positivas": {
+            "mencoes": 6,
+            "de_n": 17,
+            "freq_pct": 35.3,
+            "lift_pp": -3.2,
+            "tema": "Humor e entretenimento",
+            "exemplo_parafraseado": "O autor menciona que o filme é divertido e engraçado, proporcionando uma ótima experiência no cinema.",
+            "temas_no_mesmo_eixo": []
+          }
+        },
+        "bullet_de": {
+          "negativas": null,
+          "medianas": "frequencia",
+          "positivas": null
+        }
+      },
+      {
+        "eixo": "impacto_emocional",
+        "por_bucket": {
+          "negativas": {
+            "mencoes": 4,
+            "de_n": 18,
+            "freq_pct": 22.2,
+            "lift_pp": -13.1,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "medianas": {
+            "mencoes": 7,
+            "de_n": 26,
+            "freq_pct": 26.9,
+            "lift_pp": -8.4,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "positivas": {
+            "mencoes": 6,
+            "de_n": 17,
+            "freq_pct": 35.3,
+            "lift_pp": 8.4,
+            "tema": "Impacto emocional e reflexão pessoal",
+            "exemplo_parafraseado": "A pessoa relata ter saído da sessão às lágrimas, pois o filme a fez refletir sobre as dificuldades de ser mulher e a falta de liberdade diante das expectativas sociais.",
+            "temas_no_mesmo_eixo": []
+          }
+        },
+        "bullet_de": {
+          "negativas": null,
+          "medianas": null,
+          "positivas": null
+        }
+      },
+      {
+        "eixo": "comparacoes",
+        "por_bucket": {
+          "negativas": {
+            "mencoes": 9,
+            "de_n": 18,
+            "freq_pct": 50.0,
+            "lift_pp": 23.1,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "medianas": {
+            "mencoes": 7,
+            "de_n": 26,
+            "freq_pct": 26.9,
+            "lift_pp": -23.1,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "positivas": {
+            "mencoes": 3,
+            "de_n": 17,
+            "freq_pct": 17.6,
+            "lift_pp": -32.4,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          }
+        },
+        "bullet_de": {
+          "negativas": "contraste",
+          "medianas": null,
+          "positivas": null
+        }
+      },
+      {
+        "eixo": "expectativa",
+        "por_bucket": {
+          "negativas": {
+            "mencoes": 3,
+            "de_n": 18,
+            "freq_pct": 16.7,
+            "lift_pp": -10.3,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "medianas": {
+            "mencoes": 7,
+            "de_n": 26,
+            "freq_pct": 26.9,
+            "lift_pp": 10.3,
+            "tema": "Expectativa não atendida",
+            "exemplo_parafraseado": "Muitos foram ao cinema esperando uma história nostálgica e leve sobre a boneca, mas encontraram uma abordagem mais séria e com discurso social, o que decepcionou parte do público.",
+            "temas_no_mesmo_eixo": []
+          },
+          "positivas": {
+            "mencoes": 1,
+            "de_n": 17,
+            "freq_pct": 5.9,
+            "lift_pp": -21.0,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          }
+        },
+        "bullet_de": {
+          "negativas": null,
+          "medianas": null,
+          "positivas": null
+        }
+      },
+      {
+        "eixo": "critica_social",
+        "por_bucket": {
+          "negativas": {
+            "mencoes": 14,
+            "de_n": 18,
+            "freq_pct": 77.8,
+            "lift_pp": 8.5,
+            "tema": "Discurso feminista forçado e sem sutileza",
+            "exemplo_parafraseado": "As críticas apontam que o filme martela sua mensagem feminista de forma exagerada, sem deixar espaço para interpretação, tratando o público como se não fosse capaz de entender subtextos.",
+            "temas_no_mesmo_eixo": [
+              "Publicidade e comercialismo excessivo"
+            ]
+          },
+          "medianas": {
+            "mencoes": 18,
+            "de_n": 26,
+            "freq_pct": 69.2,
+            "lift_pp": -8.5,
+            "tema": "Mensagem feminista superficial ou forçada",
+            "exemplo_parafraseado": "O filme tenta passar uma mensagem feminista, mas acaba soando superficial e pouco aprofundada, deixando a impressão de que a crítica social é apenas um verniz.",
+            "temas_no_mesmo_eixo": [
+              "Crítica ao capitalismo e a Mattel"
+            ]
+          },
+          "positivas": {
+            "mencoes": 11,
+            "de_n": 17,
+            "freq_pct": 64.7,
+            "lift_pp": -13.1,
+            "tema": "Crítica ao patriarcado e às expectativas femininas",
+            "exemplo_parafraseado": "A review destaca o monólogo de America Ferrera como um retrato poderoso das contradições e cobranças enfrentadas pelas mulheres na sociedade, como a exigência de ser bonita, mas não exibida, e bem-sucedida sem parecer ambiciosa.",
+            "temas_no_mesmo_eixo": [
+              "Mensagem feminista e representação"
+            ]
+          }
+        },
+        "bullet_de": {
+          "negativas": "frequencia",
+          "medianas": "frequencia",
+          "positivas": "frequencia"
+        }
+      }
+    ],
+    "fonte_classificacao": {
+      "arquivo": "resultado/votacao-3/consenso.jsonl",
+      "criterio": "votacao_3_consenso_2_de_3",
+      "por_bucket": {
+        "negativas": {
+          "n_classificadas": 18,
+          "n_analisadas": 40,
+          "sobreposicao_com_analisadas": 18
+        },
+        "medianas": {
+          "n_classificadas": 26,
+          "n_analisadas": 40,
+          "sobreposicao_com_analisadas": 26
+        },
+        "positivas": {
+          "n_classificadas": 17,
+          "n_analisadas": 40,
+          "sobreposicao_com_analisadas": 17
+        }
+      }
+    },
+    "rotulagem": {
+      "n_chamadas": 3,
+      "falharam": [],
+      "fora_da_taxonomia": {},
+      "houve_retentativa": []
+    },
+    "spec_version": "1.9.16",
+    "verificador": {
+      "aplicado": true,
+      "variante": "V2_alvo",
+      "passada": 1,
+      "eixo": "impacto_emocional",
+      "n_removidas_no_corpus": 1654
+    }
+  },
+  "narrativa": "Dirigido por Greta Gerwig e lançado em 2023, o filme Barbie mescla elementos de comédia, aventura e fantasia ao longo de seus 114 minutos. A premissa acompanha a vida no mundo mágico de Barbieland, cenário em que uma das bonecas começa a notar que não se encaixa nos padrões das demais; expulsa desse ambiente, ela embarca em uma jornada pelo mundo real e aprende que a verdadeira beleza reside no interior.\n\nA experiência cinematográfica articula uma ambientação que contrasta a estética estilizada de um universo lúdico com as dinâmicas do espaço urbano.\n\nNa grande maioria das notas (~70%), boa parte das manifestações enfatiza a crítica ao patriarcado e o retrato das pressões e expectativas femininas na sociedade. Em complemento a essa visão, alguns elogiam as atuações de Margot Robbie e Ryan Gosling, enquanto uma fatia menor expressa um forte impacto emocional e experiências de reflexão pessoal ao longo da sessão.\n\nPara a perspectiva situada numa parcela das notas (~22%), uma parcela expressiva avalia que a mensagem feminista se apresenta de forma superficial ou forçada. Ainda assim, vários chamam a atenção para o apuro visual e o design de produção do filme, enquanto um número considerável ressalta com apreço as atuações de Margot Robbie e Ryan Gosling.\n\nAntecipando um tom de forte descontentamento em uma fração mínima das notas (~8%), muitos criticam a condução de um discurso feminista considerado forçado e sem sutileza, trazendo frequentes comparações para embasar a análise. Nessa mesma faixa, boa parte argumenta que o filme sofre com um roteiro confuso e sem direção clara, ao passo que uma parte relata momentos de tédio diante de um ritmo arrastado.",
+  "verificacao_narrativa": {
+    "quantificador_fora_de_faixa": [],
+    "quantificador_repetido": [],
+    "paragrafos": {
+      "n_paragrafos": 5,
+      "minimo": 3,
+      "insuficientes": false,
+      "longos": []
+    },
+    "n_paragrafos": 5,
+    "paragrafos_insuficientes": false,
+    "paragrafos_longos": [],
+    "grupos_sem_paragrafo_proprio": [],
+    "movimento1_e_movimento2_no_mesmo_paragrafo": false,
+    "formato_invalido": false,
+    "numeros_inventados": [],
+    "rotulos_faltando": [],
+    "ordem_incorreta": false,
+    "vocabulario_peso": false,
+    "resenha_speak": [
+      {
+        "expressao": "uma jornada",
+        "n": 1,
+        "trecho": "esse ambiente, ela embarca em uma jornada pelo mundo real e aprende que"
+      }
+    ],
+    "n_resenha_speak": 1,
+    "n_flags": 0
+  },
+  "narrativa_selecao": {
+    "provider": "gemini",
+    "modelo": "gemini-3.7-flash",
+    "n_candidatos": 3,
+    "n_chamadas": 3,
+    "indice_escolhido": 0,
+    "motivo": "melhor_entre_limpos",
+    "criterio_decisivo": "unico",
+    "candidatos": [
+      {
+        "indice": 0,
+        "n_flags": 0,
+        "cliches": 1,
+        "repeticao_max": 2,
+        "ritmo": 7,
+        "cobertura": 1.0,
+        "eliminado": false
+      },
+      {
+        "indice": 1,
+        "n_flags": 1,
+        "cliches": 1,
+        "repeticao_max": 2,
+        "ritmo": 7,
+        "cobertura": 1.0,
+        "eliminado": true
+      },
+      {
+        "indice": 2,
+        "n_flags": 1,
+        "cliches": 0,
+        "repeticao_max": 2,
+        "ritmo": 5,
+        "cobertura": 1.0,
+        "eliminado": true
+      }
+    ],
+    "retry": null,
+    "uso": {
+      "prompt_tokens": 9933,
+      "completion_tokens": 1119,
+      "cache_hit_tokens": 0,
+      "cache_miss_tokens": 9933
+    },
+    "latencia_s": 25.11
+  }
+}

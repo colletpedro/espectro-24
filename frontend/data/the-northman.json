@@ -1,0 +1,1265 @@
+{
+  "slug": "the-northman",
+  "data_coleta": "2026-08-23T01:15:41.280021+00:00",
+  "spec_version": "1.9.16",
+  "total_reviews_observadas": 595,
+  "reviews_url": "https://letterboxd.com/film/the-northman/reviews/",
+  "ficha": {
+    "titulo": "O Homem do Norte",
+    "sinopse_oficial": "No ano de 914, o príncipe Amleth testemunha o brutal assassinato de seu pai, Horvendill, por seu tio, Fjölnir, que também sequestra sua mãe. O menino foge, mas jura que voltará para vingar seu pai, salvar sua mãe e matar seu tio. Vinte anos depois, Amleth, agora um Viking, conhece uma vidente que o lembra que é chegada a hora de cumprir sua promessa.",
+    "sinopse_fallback_en": false,
+    "generos": [
+      "Ação",
+      "Aventura",
+      "Fantasia"
+    ],
+    "duracao_min": 137,
+    "diretor": "Robert Eggers",
+    "diretor_transliterado": false,
+    "ano": 2022,
+    "fonte": "tmdb",
+    "ano_fonte": "bruto"
+  },
+  "distribuicao": {
+    "n_notas_total": 946031,
+    "por_nivel": {
+      "0.5": 3994,
+      "1.0": 9896,
+      "1.5": 7929,
+      "2.0": 33809,
+      "2.5": 41277,
+      "3.0": 132963,
+      "3.5": 182831,
+      "4.0": 310776,
+      "4.5": 127671,
+      "5.0": 94885
+    },
+    "por_bucket": {
+      "negativas": 6,
+      "medianas": 18,
+      "positivas": 76
+    },
+    "fonte": "letterboxd_histograma"
+  },
+  "coleta": {
+    "slug": "the-northman",
+    "coletado_em": "2026-08-23T01:15:21.768012+00:00",
+    "versao_coletor": "1.9.6",
+    "ordenacao_usada": "by/added",
+    "histograma_bruto": {
+      "0.5": 3994,
+      "1.0": 9896,
+      "1.5": 7929,
+      "2.0": 33809,
+      "2.5": 41277,
+      "3.0": 132963,
+      "3.5": 182831,
+      "4.0": 310776,
+      "4.5": 127671,
+      "5.0": 94885
+    },
+    "orcamento_paginas_por_nivel": {
+      "0.5": 1,
+      "1.0": 3,
+      "1.5": 2,
+      "2.0": 10,
+      "2.5": 6,
+      "3.0": 10,
+      "3.5": 4,
+      "4.0": 7,
+      "4.5": 3,
+      "5.0": 2
+    },
+    "paginas_gastas_por_nivel": {
+      "0.5": 3,
+      "1.0": 4,
+      "1.5": 2,
+      "2.0": 15,
+      "2.5": 6,
+      "3.0": 10,
+      "3.5": 4,
+      "4.0": 7,
+      "4.5": 3,
+      "5.0": 2
+    },
+    "paradas_por_limite": [
+      "0.5",
+      "1.0",
+      "1.5",
+      "2.0",
+      "2.5",
+      "3.0",
+      "3.5",
+      "4.0",
+      "4.5",
+      "5.0"
+    ],
+    "contagem_bruta_por_nivel": {
+      "0.5": 27,
+      "1.0": 36,
+      "1.5": 24,
+      "2.0": 135,
+      "2.5": 72,
+      "3.0": 109,
+      "3.5": 48,
+      "4.0": 84,
+      "4.5": 36,
+      "5.0": 24
+    },
+    "contagem_estimada_valida_por_nivel": {
+      "0.5": 4,
+      "1.0": 8,
+      "1.5": 7,
+      "2.0": 30,
+      "2.5": 20,
+      "3.0": 30,
+      "3.5": 17,
+      "4.0": 24,
+      "4.5": 6,
+      "5.0": 7
+    },
+    "motivo_parada_por_nivel": {
+      "0.5": "orcamento_esgotado",
+      "1.0": "orcamento_esgotado",
+      "1.5": "orcamento_esgotado",
+      "2.0": "orcamento_esgotado",
+      "2.5": "orcamento_esgotado",
+      "3.0": "orcamento_esgotado",
+      "3.5": "orcamento_esgotado",
+      "4.0": "orcamento_esgotado",
+      "4.5": "orcamento_esgotado",
+      "5.0": "orcamento_esgotado"
+    },
+    "paginas_base_por_nivel": {
+      "0.5": 1,
+      "1.0": 3,
+      "1.5": 2,
+      "2.0": 10,
+      "2.5": 6,
+      "3.0": 10,
+      "3.5": 4,
+      "4.0": 7,
+      "4.5": 3,
+      "5.0": 2
+    },
+    "paginas_extensao_por_nivel": {
+      "0.5": 2,
+      "1.0": 1,
+      "1.5": 0,
+      "2.0": 5,
+      "2.5": 0,
+      "3.0": 0,
+      "3.5": 0,
+      "4.0": 0,
+      "4.5": 0,
+      "5.0": 0
+    },
+    "extensao_por_bucket": {
+      "negativas": {
+        "paginas_base": 16,
+        "paginas_extensao": 8,
+        "extras_por_nivel": {
+          "0.5": 2,
+          "1.0": 1,
+          "2.0": 5
+        },
+        "motivo_parada": "teto_extensao",
+        "n_validas_pos_base": 44,
+        "n_validas_pos_extensao": 49,
+        "meta": 50
+      },
+      "medianas": {
+        "paginas_base": 16,
+        "paginas_extensao": 0,
+        "extras_por_nivel": {},
+        "motivo_parada": "meta_atingida",
+        "n_validas_pos_base": 59,
+        "n_validas_pos_extensao": 59,
+        "meta": 50
+      },
+      "positivas": {
+        "paginas_base": 16,
+        "paginas_extensao": 0,
+        "extras_por_nivel": {},
+        "motivo_parada": "meta_atingida",
+        "n_validas_pos_base": 70,
+        "n_validas_pos_extensao": 70,
+        "meta": 50
+      }
+    },
+    "profundidade_sondagem": {
+      "nivel_sondado": 4.0,
+      "profundidade": 256,
+      "exata": false,
+      "requisicoes": 4,
+      "motivo": "teto_plataforma"
+    },
+    "profundidade_estimada_por_nivel": {
+      "0.5": 3,
+      "1.0": 8,
+      "1.5": 7,
+      "2.0": 28,
+      "2.5": 34,
+      "3.0": 110,
+      "3.5": 151,
+      "4.0": 256,
+      "4.5": 105,
+      "5.0": 78
+    },
+    "janela_temporal": {
+      "total": {
+        "n": 674,
+        "min": "2022-04-08",
+        "max": "2026-08-09",
+        "p5": "2026-06-27",
+        "p50": "2026-08-03",
+        "p95": "2026-08-07"
+      },
+      "por_bucket": {
+        "negativas": {
+          "n": 222,
+          "min": "2022-05-09",
+          "max": "2026-08-08",
+          "p5": "2026-06-19",
+          "p50": "2026-07-24",
+          "p95": "2026-08-05"
+        },
+        "medianas": {
+          "n": 217,
+          "min": "2022-04-08",
+          "max": "2026-08-08",
+          "p5": "2026-05-21",
+          "p50": "2026-08-03",
+          "p95": "2026-08-07"
+        },
+        "positivas": {
+          "n": 235,
+          "min": "2022-04-22",
+          "max": "2026-08-09",
+          "p5": "2026-07-22",
+          "p50": "2026-08-07",
+          "p95": "2026-08-08"
+        }
+      }
+    },
+    "dias_por_100_paginas": {
+      "n_paginas": 21,
+      "pagina_min": 1,
+      "pagina_max": 128,
+      "dias": 16,
+      "dias_por_100_paginas": 12.598425196850394,
+      "paginas_para_1_ano": 2897
+    },
+    "ano_lancamento": 2022,
+    "ano_fonte": "letterboxd",
+    "n_reviews_bruto": 674
+  },
+  "buckets": [
+    {
+      "bucket": "negativas",
+      "alvo": 40,
+      "modo": "completo",
+      "estado_piso": "completa",
+      "n_validas": 40,
+      "share_real": 6,
+      "composicao_alvo": {
+        "0.5": 3,
+        "1.0": 7,
+        "1.5": 6,
+        "2.0": 24
+      },
+      "composicao_atingida": {
+        "0.5": 3,
+        "1.0": 7,
+        "1.5": 6,
+        "2.0": 24
+      },
+      "cascata_por_degrau": {
+        "150": 40
+      },
+      "deficit_redistribuido": 0,
+      "distribuicao_pagina_origem": {
+        "n": 40,
+        "min": 1,
+        "max": 14,
+        "p5": 1,
+        "p50": 3,
+        "p95": 14,
+        "fracao_profunda": 0.3
+      },
+      "janela_amostra": {
+        "n": 40,
+        "min": "2026-06-20",
+        "max": "2026-08-06",
+        "p5": "2026-07-02",
+        "p50": "2026-07-25",
+        "p95": "2026-08-05"
+      },
+      "niveis": [
+        {
+          "nivel": 0.5,
+          "n_validas": 3,
+          "n_alvo": 3,
+          "n_brutas": 27,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 0,
+          "n_descartadas_curtas": 21,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 2,
+          "motivos_descarte": {
+            "truncada_sem_texto": 2,
+            "spoiler": 0,
+            "abaixo_min_chars": 21,
+            "excedente_cota": 1,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 3
+        },
+        {
+          "nivel": 1.0,
+          "n_validas": 7,
+          "n_alvo": 7,
+          "n_brutas": 36,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 2,
+          "n_descartadas_curtas": 25,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 1,
+          "motivos_descarte": {
+            "truncada_sem_texto": 1,
+            "spoiler": 2,
+            "abaixo_min_chars": 25,
+            "excedente_cota": 1,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 4
+        },
+        {
+          "nivel": 1.5,
+          "n_validas": 6,
+          "n_alvo": 6,
+          "n_brutas": 24,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 0,
+          "n_descartadas_curtas": 17,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 0,
+          "motivos_descarte": {
+            "truncada_sem_texto": 0,
+            "spoiler": 0,
+            "abaixo_min_chars": 17,
+            "excedente_cota": 1,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 2
+        },
+        {
+          "nivel": 2.0,
+          "n_validas": 24,
+          "n_alvo": 24,
+          "n_brutas": 135,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 2,
+          "n_descartadas_curtas": 101,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 2,
+          "motivos_descarte": {
+            "truncada_sem_texto": 2,
+            "spoiler": 2,
+            "abaixo_min_chars": 101,
+            "excedente_cota": 6,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 15
+        }
+      ],
+      "temas": [
+        {
+          "tema": "Roteiro fraco e previsível",
+          "mencoes_aproximadas": 21,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "A trama é uma repetição de clichês de vingança, sem surpresas ou desenvolvimento, tornando o desfecho óbvio desde o início.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Atuações ruins",
+          "mencoes_aproximadas": 15,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "As atuações são artificiais e sem emoção, com destaque negativo para Nicole Kidman, que parece deslocada e com uma interpretação exagerada.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Ritmo lento e arrastado",
+          "mencoes_aproximadas": 12,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "O filme se arrasta com uma duração excessiva e cenas desnecessárias, tornando a experiência cansativa e difícil de manter o interesse.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Diálogos artificiais e exagerados",
+          "mencoes_aproximadas": 8,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "As falas são pomposas e grandiosas, com frases de efeito que soam forçadas e não condizem com conversas naturais.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Excesso de misticismo e ocultismo",
+          "mencoes_aproximadas": 7,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "As referências a rituais e elementos sobrenaturais são vistas como exageradas e desconexas, prejudicando a imersão na história.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Desenvolvimento de personagens superficial",
+          "mencoes_aproximadas": 7,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "Os personagens são unidimensionais, com motivações pouco exploradas, especialmente o protagonista, cuja sede de vingança não gera empatia.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        }
+      ],
+      "observacao_geral": "As reviews negativas criticam principalmente a narrativa previsível e sem profundidade, as atuações artificiais e o ritmo arrastado, embora reconheçam a beleza visual e a fotografia. Esse grupo demonstra uma forte decepção, especialmente dos fãs do diretor, e muitos abandonaram o filme antes do final.",
+      "idioma_invalido": false,
+      "escopo_suspeito": false
+    },
+    {
+      "bucket": "medianas",
+      "alvo": 40,
+      "modo": "completo",
+      "estado_piso": "completa",
+      "n_validas": 40,
+      "share_real": 18,
+      "composicao_alvo": {
+        "2.5": 9,
+        "3.0": 31
+      },
+      "composicao_atingida": {
+        "2.5": 9,
+        "3.0": 31
+      },
+      "cascata_por_degrau": {
+        "150": 40
+      },
+      "deficit_redistribuido": 0,
+      "distribuicao_pagina_origem": {
+        "n": 40,
+        "min": 1,
+        "max": 55,
+        "p5": 1,
+        "p50": 5,
+        "p95": 55,
+        "fracao_profunda": 0.325
+      },
+      "janela_amostra": {
+        "n": 40,
+        "min": "2023-03-31",
+        "max": "2026-08-08",
+        "p5": "2026-07-11",
+        "p50": "2026-08-04",
+        "p95": "2026-08-07"
+      },
+      "niveis": [
+        {
+          "nivel": 2.5,
+          "n_validas": 9,
+          "n_alvo": 9,
+          "n_brutas": 84,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 2,
+          "n_descartadas_curtas": 58,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 0,
+          "motivos_descarte": {
+            "truncada_sem_texto": 0,
+            "spoiler": 2,
+            "abaixo_min_chars": 58,
+            "excedente_cota": 15,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 6
+        },
+        {
+          "nivel": 3.0,
+          "n_validas": 31,
+          "n_alvo": 31,
+          "n_brutas": 133,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 7,
+          "n_descartadas_curtas": 91,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 0,
+          "motivos_descarte": {
+            "truncada_sem_texto": 0,
+            "spoiler": 7,
+            "abaixo_min_chars": 91,
+            "excedente_cota": 4,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 10
+        }
+      ],
+      "temas": [
+        {
+          "tema": "Falta de envolvimento emocional com os personagens",
+          "mencoes_aproximadas": 15,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "Vários espectadores destacaram que não conseguiram se conectar com o protagonista nem com os demais personagens, o que comprometeu a imersão na trama de vingança.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Narrativa previsível e clichê",
+          "mencoes_aproximadas": 12,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "A história foi considerada uma repetição de velhos tropos de vingança e honra, sem trazer novidades que surpreendessem o público.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Fotografia e direção de arte impressionantes",
+          "mencoes_aproximadas": 11,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "Muitos elogiaram a beleza visual do filme, citando a fotografia, os cenários e o cuidado com os detalhes históricos como os pontos mais fortes.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Ritmo lento e arrastado",
+          "mencoes_aproximadas": 10,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "Parte do público sentiu que o filme se arrasta em diversos momentos, alternando cenas de violência com longos trechos que não avançam a trama.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Atuações sólidas, mas subaproveitadas",
+          "mencoes_aproximadas": 8,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "O elenco foi considerado competente, porém alguns atores, como Anya Taylor-Joy, não tiveram espaço para desenvolver personagens mais complexos.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Mistura estranha de realismo e elementos sobrenaturais",
+          "mencoes_aproximadas": 6,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "A tentativa de unir a brutalidade realista do período com elementos místicos e fantásticos não agradou a todos, sendo apontada como desarmônica.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        }
+      ],
+      "observacao_geral": "As reviews medianas reconhecem o esforço técnico e visual do filme, mas apontam uma desconexão emocional e uma narrativa pouco inovadora. Para este grupo, a experiência foi visualmente rica, porém com pouco impacto narrativo ou envolvimento com os personagens.",
+      "idioma_invalido": false,
+      "escopo_suspeito": false
+    },
+    {
+      "bucket": "positivas",
+      "alvo": 40,
+      "modo": "completo",
+      "estado_piso": "completa",
+      "n_validas": 40,
+      "share_real": 76,
+      "composicao_alvo": {
+        "3.5": 10,
+        "4.0": 18,
+        "4.5": 7,
+        "5.0": 5
+      },
+      "composicao_atingida": {
+        "3.5": 10,
+        "4.0": 18,
+        "4.5": 7,
+        "5.0": 5
+      },
+      "cascata_por_degrau": {
+        "150": 40
+      },
+      "deficit_redistribuido": 0,
+      "distribuicao_pagina_origem": {
+        "n": 40,
+        "min": 1,
+        "max": 26,
+        "p5": 1,
+        "p50": 3,
+        "p95": 9,
+        "fracao_profunda": 0.325
+      },
+      "janela_amostra": {
+        "n": 40,
+        "min": "2026-07-16",
+        "max": "2026-08-08",
+        "p5": "2026-08-03",
+        "p50": "2026-08-07",
+        "p95": "2026-08-08"
+      },
+      "niveis": [
+        {
+          "nivel": 3.5,
+          "n_validas": 10,
+          "n_alvo": 10,
+          "n_brutas": 60,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 2,
+          "n_descartadas_curtas": 33,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 0,
+          "motivos_descarte": {
+            "truncada_sem_texto": 0,
+            "spoiler": 2,
+            "abaixo_min_chars": 33,
+            "excedente_cota": 15,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 4
+        },
+        {
+          "nivel": 4.0,
+          "n_validas": 18,
+          "n_alvo": 18,
+          "n_brutas": 103,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 3,
+          "n_descartadas_curtas": 70,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 0,
+          "motivos_descarte": {
+            "truncada_sem_texto": 0,
+            "spoiler": 3,
+            "abaixo_min_chars": 70,
+            "excedente_cota": 12,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 7
+        },
+        {
+          "nivel": 4.5,
+          "n_validas": 7,
+          "n_alvo": 7,
+          "n_brutas": 48,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 2,
+          "n_descartadas_curtas": 38,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 0,
+          "motivos_descarte": {
+            "truncada_sem_texto": 0,
+            "spoiler": 2,
+            "abaixo_min_chars": 38,
+            "excedente_cota": 1,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 3
+        },
+        {
+          "nivel": 5.0,
+          "n_validas": 5,
+          "n_alvo": 5,
+          "n_brutas": 24,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 1,
+          "n_descartadas_curtas": 16,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 0,
+          "motivos_descarte": {
+            "truncada_sem_texto": 0,
+            "spoiler": 1,
+            "abaixo_min_chars": 16,
+            "excedente_cota": 2,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 2
+        }
+      ],
+      "temas": [
+        {
+          "tema": "Direção e estilo de Robert Eggers",
+          "mencoes_aproximadas": 25,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "As reviews positivas frequentemente elogiam a direção de Robert Eggers, destacando sua abordagem única e a atmosfera imersiva que ele cria em seus filmes.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Fotografia e ambientação",
+          "mencoes_aproximadas": 20,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "Muitos comentam que a fotografia e a ambientação são impressionantes, com cenários naturais, paleta de cores rústica e planos sequência memoráveis que transportam o espectador para a era viking.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Revenge e masculinidade animal",
+          "mencoes_aproximadas": 15,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "Há um reconhecimento da temática de vingança e da representação da masculinidade bruta e animal do protagonista, que é descrito como um lobo em pele de homem.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Atuações intensas",
+          "mencoes_aproximadas": 12,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "As atuações, especialmente a de Alexander Skarsgård como Amleth, são descritas como animais, viscerais e perfeitas para o tom do filme.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Autenticidade histórica e mitologia nórdica",
+          "mencoes_aproximadas": 10,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "O grupo valoriza como o filme retrata a crueldade e as crenças da era viking de forma fiel, sem suavizar, misturando elementos mitológicos com uma realidade brutal.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Trilha sonora e ritmo",
+          "mencoes_aproximadas": 8,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "A trilha sonora é mencionada como cativante, com uso de percussão, embora alguns apontem que o ritmo do filme tem momentos lentos ou que o clímax poderia ser mais desenvolvido.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        }
+      ],
+      "observacao_geral": "As reviews positivas celebram o filme como uma obra visualmente deslumbrante e visceral, com direção magistral de Eggers e atuações poderosas. Embora alguns apontem pequenos defeitos de ritmo ou desenvolvimento de personagens, o grupo enxerga o filme como uma experiência épica e imersiva que honra a mitologia e a brutalidade viking.",
+      "idioma_invalido": false,
+      "escopo_suspeito": false
+    }
+  ],
+  "eixos": {
+    "taxonomia_id": "ebab2667de74",
+    "margem_lift_pp": 20,
+    "contraste": "valorativo",
+    "linhas": [
+      {
+        "eixo": "ritmo",
+        "por_bucket": {
+          "negativas": {
+            "mencoes": 11,
+            "de_n": 34,
+            "freq_pct": 32.4,
+            "lift_pp": 7.4,
+            "tema": "Ritmo lento e arrastado",
+            "exemplo_parafraseado": "O filme se arrasta com uma duração excessiva e cenas desnecessárias, tornando a experiência cansativa e difícil de manter o interesse.",
+            "temas_no_mesmo_eixo": []
+          },
+          "medianas": {
+            "mencoes": 8,
+            "de_n": 32,
+            "freq_pct": 25.0,
+            "lift_pp": -7.4,
+            "tema": "Ritmo lento e arrastado",
+            "exemplo_parafraseado": "Parte do público sentiu que o filme se arrasta em diversos momentos, alternando cenas de violência com longos trechos que não avançam a trama.",
+            "temas_no_mesmo_eixo": []
+          },
+          "positivas": {
+            "mencoes": 4,
+            "de_n": 30,
+            "freq_pct": 13.3,
+            "lift_pp": -19.0,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          }
+        },
+        "bullet_de": {
+          "negativas": null,
+          "medianas": null,
+          "positivas": null
+        }
+      },
+      {
+        "eixo": "atuacao",
+        "por_bucket": {
+          "negativas": {
+            "mencoes": 16,
+            "de_n": 34,
+            "freq_pct": 47.1,
+            "lift_pp": 0.4,
+            "tema": "Atuações ruins",
+            "exemplo_parafraseado": "As atuações são artificiais e sem emoção, com destaque negativo para Nicole Kidman, que parece deslocada e com uma interpretação exagerada.",
+            "temas_no_mesmo_eixo": []
+          },
+          "medianas": {
+            "mencoes": 7,
+            "de_n": 32,
+            "freq_pct": 21.9,
+            "lift_pp": -25.2,
+            "tema": "Atuações sólidas, mas subaproveitadas",
+            "exemplo_parafraseado": "O elenco foi considerado competente, porém alguns atores, como Anya Taylor-Joy, não tiveram espaço para desenvolver personagens mais complexos.",
+            "temas_no_mesmo_eixo": []
+          },
+          "positivas": {
+            "mencoes": 14,
+            "de_n": 30,
+            "freq_pct": 46.7,
+            "lift_pp": -0.4,
+            "tema": "Atuações intensas",
+            "exemplo_parafraseado": "As atuações, especialmente a de Alexander Skarsgård como Amleth, são descritas como animais, viscerais e perfeitas para o tom do filme.",
+            "temas_no_mesmo_eixo": []
+          }
+        },
+        "bullet_de": {
+          "negativas": null,
+          "medianas": null,
+          "positivas": null
+        }
+      },
+      {
+        "eixo": "direcao_imagem",
+        "por_bucket": {
+          "negativas": {
+            "mencoes": 20,
+            "de_n": 34,
+            "freq_pct": 58.8,
+            "lift_pp": 2.2,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "medianas": {
+            "mencoes": 18,
+            "de_n": 32,
+            "freq_pct": 56.2,
+            "lift_pp": -2.6,
+            "tema": "Fotografia e direção de arte impressionantes",
+            "exemplo_parafraseado": "Muitos elogiaram a beleza visual do filme, citando a fotografia, os cenários e o cuidado com os detalhes históricos como os pontos mais fortes.",
+            "temas_no_mesmo_eixo": []
+          },
+          "positivas": {
+            "mencoes": 17,
+            "de_n": 30,
+            "freq_pct": 56.7,
+            "lift_pp": -2.2,
+            "tema": "Direção e estilo de Robert Eggers",
+            "exemplo_parafraseado": "As reviews positivas frequentemente elogiam a direção de Robert Eggers, destacando sua abordagem única e a atmosfera imersiva que ele cria em seus filmes.",
+            "temas_no_mesmo_eixo": [
+              "Fotografia e ambientação"
+            ]
+          }
+        },
+        "bullet_de": {
+          "negativas": "frequencia",
+          "medianas": "frequencia",
+          "positivas": "frequencia"
+        }
+      },
+      {
+        "eixo": "roteiro_estrutura",
+        "por_bucket": {
+          "negativas": {
+            "mencoes": 24,
+            "de_n": 34,
+            "freq_pct": 70.6,
+            "lift_pp": -1.3,
+            "tema": "Roteiro fraco e previsível",
+            "exemplo_parafraseado": "A trama é uma repetição de clichês de vingança, sem surpresas ou desenvolvimento, tornando o desfecho óbvio desde o início.",
+            "temas_no_mesmo_eixo": [
+              "Diálogos artificiais e exagerados",
+              "Desenvolvimento de personagens superficial"
+            ]
+          },
+          "medianas": {
+            "mencoes": 23,
+            "de_n": 32,
+            "freq_pct": 71.9,
+            "lift_pp": 1.3,
+            "tema": "Narrativa previsível e clichê",
+            "exemplo_parafraseado": "A história foi considerada uma repetição de velhos tropos de vingança e honra, sem trazer novidades que surpreendessem o público.",
+            "temas_no_mesmo_eixo": []
+          },
+          "positivas": {
+            "mencoes": 12,
+            "de_n": 30,
+            "freq_pct": 40.0,
+            "lift_pp": -31.9,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          }
+        },
+        "bullet_de": {
+          "negativas": "frequencia",
+          "medianas": "frequencia",
+          "positivas": null
+        }
+      },
+      {
+        "eixo": "som_trilha",
+        "por_bucket": {
+          "negativas": {
+            "mencoes": 2,
+            "de_n": 34,
+            "freq_pct": 5.9,
+            "lift_pp": -10.8,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "medianas": {
+            "mencoes": 3,
+            "de_n": 32,
+            "freq_pct": 9.4,
+            "lift_pp": -7.3,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "positivas": {
+            "mencoes": 5,
+            "de_n": 30,
+            "freq_pct": 16.7,
+            "lift_pp": 7.3,
+            "tema": "Trilha sonora e ritmo",
+            "exemplo_parafraseado": "A trilha sonora é mencionada como cativante, com uso de percussão, embora alguns apontem que o ritmo do filme tem momentos lentos ou que o clímax poderia ser mais desenvolvido.",
+            "temas_no_mesmo_eixo": []
+          }
+        },
+        "bullet_de": {
+          "negativas": null,
+          "medianas": null,
+          "positivas": null
+        }
+      },
+      {
+        "eixo": "tom_atmosfera",
+        "por_bucket": {
+          "negativas": {
+            "mencoes": 6,
+            "de_n": 34,
+            "freq_pct": 17.6,
+            "lift_pp": -19.0,
+            "tema": "Excesso de misticismo e ocultismo",
+            "exemplo_parafraseado": "As referências a rituais e elementos sobrenaturais são vistas como exageradas e desconexas, prejudicando a imersão na história.",
+            "temas_no_mesmo_eixo": []
+          },
+          "medianas": {
+            "mencoes": 6,
+            "de_n": 32,
+            "freq_pct": 18.8,
+            "lift_pp": -17.9,
+            "tema": "Mistura estranha de realismo e elementos sobrenaturais",
+            "exemplo_parafraseado": "A tentativa de unir a brutalidade realista do período com elementos místicos e fantásticos não agradou a todos, sendo apontada como desarmônica.",
+            "temas_no_mesmo_eixo": []
+          },
+          "positivas": {
+            "mencoes": 11,
+            "de_n": 30,
+            "freq_pct": 36.7,
+            "lift_pp": 17.9,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          }
+        },
+        "bullet_de": {
+          "negativas": null,
+          "medianas": null,
+          "positivas": null
+        }
+      },
+      {
+        "eixo": "impacto_emocional",
+        "por_bucket": {
+          "negativas": {
+            "mencoes": 5,
+            "de_n": 34,
+            "freq_pct": 14.7,
+            "lift_pp": -15.3,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "medianas": {
+            "mencoes": 8,
+            "de_n": 32,
+            "freq_pct": 25.0,
+            "lift_pp": -5.0,
+            "tema": "Falta de envolvimento emocional com os personagens",
+            "exemplo_parafraseado": "Vários espectadores destacaram que não conseguiram se conectar com o protagonista nem com os demais personagens, o que comprometeu a imersão na trama de vingança.",
+            "temas_no_mesmo_eixo": []
+          },
+          "positivas": {
+            "mencoes": 9,
+            "de_n": 30,
+            "freq_pct": 30.0,
+            "lift_pp": 5.0,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          }
+        },
+        "bullet_de": {
+          "negativas": null,
+          "medianas": null,
+          "positivas": null
+        }
+      },
+      {
+        "eixo": "comparacoes",
+        "por_bucket": {
+          "negativas": {
+            "mencoes": 17,
+            "de_n": 34,
+            "freq_pct": 50.0,
+            "lift_pp": -10.0,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "medianas": {
+            "mencoes": 15,
+            "de_n": 32,
+            "freq_pct": 46.9,
+            "lift_pp": -13.1,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "positivas": {
+            "mencoes": 18,
+            "de_n": 30,
+            "freq_pct": 60.0,
+            "lift_pp": 10.0,
+            "tema": "Autenticidade histórica e mitologia nórdica",
+            "exemplo_parafraseado": "O grupo valoriza como o filme retrata a crueldade e as crenças da era viking de forma fiel, sem suavizar, misturando elementos mitológicos com uma realidade brutal.",
+            "temas_no_mesmo_eixo": []
+          }
+        },
+        "bullet_de": {
+          "negativas": null,
+          "medianas": null,
+          "positivas": "frequencia"
+        }
+      },
+      {
+        "eixo": "expectativa",
+        "por_bucket": {
+          "negativas": {
+            "mencoes": 5,
+            "de_n": 34,
+            "freq_pct": 14.7,
+            "lift_pp": -15.3,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "medianas": {
+            "mencoes": 6,
+            "de_n": 32,
+            "freq_pct": 18.8,
+            "lift_pp": -11.2,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "positivas": {
+            "mencoes": 9,
+            "de_n": 30,
+            "freq_pct": 30.0,
+            "lift_pp": 11.2,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          }
+        },
+        "bullet_de": {
+          "negativas": null,
+          "medianas": null,
+          "positivas": null
+        }
+      },
+      {
+        "eixo": "critica_social",
+        "por_bucket": {
+          "negativas": {
+            "mencoes": 4,
+            "de_n": 34,
+            "freq_pct": 11.8,
+            "lift_pp": -7.0,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "medianas": {
+            "mencoes": 6,
+            "de_n": 32,
+            "freq_pct": 18.8,
+            "lift_pp": 2.1,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "positivas": {
+            "mencoes": 5,
+            "de_n": 30,
+            "freq_pct": 16.7,
+            "lift_pp": -2.1,
+            "tema": "Revenge e masculinidade animal",
+            "exemplo_parafraseado": "Há um reconhecimento da temática de vingança e da representação da masculinidade bruta e animal do protagonista, que é descrito como um lobo em pele de homem.",
+            "temas_no_mesmo_eixo": []
+          }
+        },
+        "bullet_de": {
+          "negativas": null,
+          "medianas": null,
+          "positivas": null
+        }
+      }
+    ],
+    "fonte_classificacao": {
+      "arquivo": "resultado/votacao-3/consenso.jsonl",
+      "criterio": "votacao_3_consenso_2_de_3",
+      "por_bucket": {
+        "negativas": {
+          "n_classificadas": 34,
+          "n_analisadas": 40,
+          "sobreposicao_com_analisadas": 34
+        },
+        "medianas": {
+          "n_classificadas": 32,
+          "n_analisadas": 40,
+          "sobreposicao_com_analisadas": 32
+        },
+        "positivas": {
+          "n_classificadas": 30,
+          "n_analisadas": 40,
+          "sobreposicao_com_analisadas": 30
+        }
+      }
+    },
+    "rotulagem": {
+      "n_chamadas": 3,
+      "falharam": [],
+      "fora_da_taxonomia": {},
+      "houve_retentativa": []
+    },
+    "spec_version": "1.9.16",
+    "verificador": {
+      "aplicado": true,
+      "variante": "V2_alvo",
+      "passada": 1,
+      "eixo": "impacto_emocional",
+      "n_removidas_no_corpus": 1654
+    }
+  },
+  "narrativa": "Lançado em 2022 e dirigido por Robert Eggers, O Homem do Norte é uma produção de ação, aventura e fantasia com 137 minutos de duração. A história acompanha um jovem príncipe que testemunha o assassinato de seu pai e o sequestro de sua mãe por seu próprio tio. Décadas mais tarde, já como guerreiro viking, ele decide cumprir a promessa de resgatar sua mãe e vingar sua família.\n\nA obra constrói sua narrativa a partir de uma cadência pausada e densa, pontuada por rituais e símbolos da mitologia nórdica. A atmosfera aposta em uma ambientação crua, integrando cenários naturais rústicos com elementos sobrenaturais ao longo de sua execução.\n\nOs três grupos concordam sobre o que o filme é e discordam sobre se ele funciona. Na grande maioria das notas (~76%), a maioria exalta a direção autoral e o estilo característico de Robert Eggers. Da mesma forma, boa parte enaltece a fotografia e a recriação da ambientação de época, ao passo que uma parcela expressiva enfatiza a temática de vingança e a representação de uma masculinidade animal.\n\nPara quem se posiciona numa parcela das notas (~18%), muitos relatam uma evidente falta de envolvimento emocional com os personagens. Nessa faixa, vários consideram a narrativa previsível e repleta de clichês, ainda que um número considerável faça questão de elogiar a fotografia e a impressionante direção de arte.\n\nPara quem avalia numa fração mínima das notas (~6%), cerca de metade aponta um roteiro fraco e previsível como o principal problema da obra. Dentro dessa leitura, muitos criticam as atuações por soarem artificiais, enquanto uma parcela expressiva manifesta incômodo com o ritmo lento e arrastado da produção.",
+  "verificacao_narrativa": {
+    "quantificador_fora_de_faixa": [],
+    "quantificador_repetido": [],
+    "paragrafos": {
+      "n_paragrafos": 5,
+      "minimo": 3,
+      "insuficientes": false,
+      "longos": []
+    },
+    "n_paragrafos": 5,
+    "paragrafos_insuficientes": false,
+    "paragrafos_longos": [],
+    "grupos_sem_paragrafo_proprio": [],
+    "movimento1_e_movimento2_no_mesmo_paragrafo": true,
+    "formato_invalido": false,
+    "numeros_inventados": [],
+    "rotulos_faltando": [],
+    "ordem_incorreta": false,
+    "vocabulario_peso": false,
+    "resenha_speak": [],
+    "n_resenha_speak": 0,
+    "n_flags": 1
+  },
+  "narrativa_selecao": {
+    "provider": "gemini",
+    "modelo": "gemini-3.7-flash",
+    "n_candidatos": 3,
+    "n_chamadas": 4,
+    "indice_escolhido": 1,
+    "motivo": "menor_severidade",
+    "criterio_decisivo": "empate",
+    "candidatos": [
+      {
+        "indice": 0,
+        "n_flags": 3,
+        "cliches": 0,
+        "repeticao_max": 2,
+        "ritmo": 8,
+        "cobertura": 1.0,
+        "eliminado": true
+      },
+      {
+        "indice": 1,
+        "n_flags": 2,
+        "cliches": 0,
+        "repeticao_max": 2,
+        "ritmo": 5,
+        "cobertura": 1.0,
+        "eliminado": true
+      },
+      {
+        "indice": 2,
+        "n_flags": 3,
+        "cliches": 0,
+        "repeticao_max": 2,
+        "ritmo": 11,
+        "cobertura": 0.889,
+        "eliminado": true
+      }
+    ],
+    "retry": {
+      "n_frases_infratoras": 1,
+      "motivos": [
+        "numero_inventado"
+      ],
+      "n_flags_depois": 1,
+      "aplicado": true
+    },
+    "uso": {
+      "prompt_tokens": 11827,
+      "completion_tokens": 1633,
+      "cache_hit_tokens": 0,
+      "cache_miss_tokens": 11827
+    },
+    "latencia_s": 35.56
+  }
+}

@@ -1,0 +1,1255 @@
+{
+  "slug": "avengers-endgame",
+  "data_coleta": "2026-08-23T00:41:29.695628+00:00",
+  "spec_version": "1.9.16",
+  "total_reviews_observadas": 572,
+  "reviews_url": "https://letterboxd.com/film/avengers-endgame/reviews/",
+  "ficha": {
+    "titulo": "Vingadores: Ultimato",
+    "sinopse_oficial": "Após os eventos devastadores de \"Vingadores: Guerra Infinita\", o universo está em ruínas devido aos esforços do Titã Louco, Thanos. Com a ajuda de aliados remanescentes, os Vingadores devem se reunir mais uma vez a fim de desfazer as ações de Thanos e restaurar a ordem no universo de uma vez por todas, não importando as consequências.",
+    "sinopse_fallback_en": false,
+    "generos": [
+      "Aventura",
+      "Ficção científica",
+      "Ação"
+    ],
+    "duracao_min": 181,
+    "diretor": "Anthony Russo",
+    "diretor_transliterado": false,
+    "ano": 2019,
+    "fonte": "tmdb",
+    "ano_fonte": "bruto"
+  },
+  "distribuicao": {
+    "n_notas_total": 3753819,
+    "por_nivel": {
+      "0.5": 14618,
+      "1.0": 33168,
+      "1.5": 19312,
+      "2.0": 98469,
+      "2.5": 98544,
+      "3.0": 436633,
+      "3.5": 429852,
+      "4.0": 1046396,
+      "4.5": 464216,
+      "5.0": 1112611
+    },
+    "por_bucket": {
+      "negativas": 4,
+      "medianas": 14,
+      "positivas": 81
+    },
+    "fonte": "letterboxd_histograma"
+  },
+  "coleta": {
+    "slug": "avengers-endgame",
+    "coletado_em": "2026-08-09T07:43:38.719964+00:00",
+    "versao_coletor": "1.9.6",
+    "ordenacao_usada": "by/added",
+    "histograma_bruto": {
+      "0.5": 14618,
+      "1.0": 33168,
+      "1.5": 19312,
+      "2.0": 98469,
+      "2.5": 98544,
+      "3.0": 436633,
+      "3.5": 429852,
+      "4.0": 1046396,
+      "4.5": 464216,
+      "5.0": 1112611
+    },
+    "orcamento_paginas_por_nivel": {
+      "0.5": 1,
+      "1.0": 3,
+      "1.5": 2,
+      "2.0": 10,
+      "2.5": 6,
+      "3.0": 10,
+      "3.5": 2,
+      "4.0": 6,
+      "4.5": 2,
+      "5.0": 6
+    },
+    "paginas_gastas_por_nivel": {
+      "0.5": 1,
+      "1.0": 3,
+      "1.5": 2,
+      "2.0": 10,
+      "2.5": 6,
+      "3.0": 10,
+      "3.5": 2,
+      "4.0": 6,
+      "4.5": 2,
+      "5.0": 6
+    },
+    "paradas_por_limite": [
+      "0.5",
+      "1.0",
+      "1.5",
+      "2.0",
+      "2.5",
+      "3.0",
+      "3.5",
+      "4.0",
+      "4.5",
+      "5.0"
+    ],
+    "contagem_bruta_por_nivel": {
+      "0.5": 12,
+      "1.0": 35,
+      "1.5": 24,
+      "2.0": 117,
+      "2.5": 72,
+      "3.0": 120,
+      "3.5": 24,
+      "4.0": 72,
+      "4.5": 24,
+      "5.0": 72
+    },
+    "contagem_estimada_valida_por_nivel": {
+      "0.5": 4,
+      "1.0": 3,
+      "1.5": 9,
+      "2.0": 27,
+      "2.5": 18,
+      "3.0": 27,
+      "3.5": 3,
+      "4.0": 16,
+      "4.5": 6,
+      "5.0": 7
+    },
+    "motivo_parada_por_nivel": {
+      "0.5": "orcamento_esgotado",
+      "1.0": "orcamento_esgotado",
+      "1.5": "orcamento_esgotado",
+      "2.0": "orcamento_esgotado",
+      "2.5": "orcamento_esgotado",
+      "3.0": "orcamento_esgotado",
+      "3.5": "orcamento_esgotado",
+      "4.0": "orcamento_esgotado",
+      "4.5": "orcamento_esgotado",
+      "5.0": "orcamento_esgotado"
+    },
+    "paginas_base_por_nivel": {
+      "0.5": 1,
+      "1.0": 3,
+      "1.5": 2,
+      "2.0": 10,
+      "2.5": 6,
+      "3.0": 10,
+      "3.5": 2,
+      "4.0": 6,
+      "4.5": 2,
+      "5.0": 6
+    },
+    "paginas_extensao_por_nivel": {
+      "0.5": 0,
+      "1.0": 0,
+      "1.5": 0,
+      "2.0": 0,
+      "2.5": 0,
+      "3.0": 0,
+      "3.5": 0,
+      "4.0": 0,
+      "4.5": 0,
+      "5.0": 0
+    },
+    "extensao_por_bucket": {
+      "negativas": {
+        "paginas_base": 16,
+        "paginas_extensao": 0,
+        "extras_por_nivel": {},
+        "motivo_parada": "meta_atingida",
+        "n_validas_pos_base": 66,
+        "n_validas_pos_extensao": 66,
+        "meta": 50
+      },
+      "medianas": {
+        "paginas_base": 16,
+        "paginas_extensao": 0,
+        "extras_por_nivel": {},
+        "motivo_parada": "meta_atingida",
+        "n_validas_pos_base": 88,
+        "n_validas_pos_extensao": 88,
+        "meta": 50
+      },
+      "positivas": {
+        "paginas_base": 16,
+        "paginas_extensao": 0,
+        "extras_por_nivel": {},
+        "motivo_parada": "meta_atingida",
+        "n_validas_pos_base": 89,
+        "n_validas_pos_extensao": 89,
+        "meta": 50
+      }
+    },
+    "profundidade_sondagem": {
+      "nivel_sondado": 5.0,
+      "profundidade": 256,
+      "exata": false,
+      "requisicoes": 4,
+      "motivo": "teto_plataforma"
+    },
+    "profundidade_estimada_por_nivel": {
+      "0.5": 3,
+      "1.0": 8,
+      "1.5": 4,
+      "2.0": 23,
+      "2.5": 23,
+      "3.0": 100,
+      "3.5": 99,
+      "4.0": 241,
+      "4.5": 107,
+      "5.0": 256
+    },
+    "janela_temporal": {
+      "total": {
+        "n": 1007,
+        "min": "2019-04-17",
+        "max": "2026-08-09",
+        "p5": "2019-04-23",
+        "p50": "2026-08-05",
+        "p95": "2026-08-08"
+      },
+      "por_bucket": {
+        "negativas": {
+          "n": 295,
+          "min": "2019-04-21",
+          "max": "2026-08-08",
+          "p5": "2019-04-24",
+          "p50": "2026-07-30",
+          "p95": "2026-08-06"
+        },
+        "medianas": {
+          "n": 314,
+          "min": "2019-04-23",
+          "max": "2026-08-08",
+          "p5": "2019-04-23",
+          "p50": "2026-08-05",
+          "p95": "2026-08-07"
+        },
+        "positivas": {
+          "n": 398,
+          "min": "2019-04-17",
+          "max": "2026-08-09",
+          "p5": "2019-04-23",
+          "p50": "2026-08-07",
+          "p95": "2026-08-08"
+        }
+      }
+    },
+    "dias_por_100_paginas": {
+      "n_paginas": 19,
+      "pagina_min": 1,
+      "pagina_max": 128,
+      "dias": 1,
+      "dias_por_100_paginas": 0.7874015748031497,
+      "paginas_para_1_ano": 46355
+    },
+    "ano_lancamento": 2019,
+    "ano_fonte": "letterboxd",
+    "n_reviews_bruto": 1007
+  },
+  "buckets": [
+    {
+      "bucket": "negativas",
+      "alvo": 40,
+      "modo": "completo",
+      "estado_piso": "completa",
+      "n_validas": 40,
+      "share_real": 4,
+      "composicao_alvo": {
+        "0.5": 3,
+        "1.0": 8,
+        "1.5": 5,
+        "2.0": 24
+      },
+      "composicao_atingida": {
+        "0.5": 3,
+        "1.0": 8,
+        "1.5": 5,
+        "2.0": 24
+      },
+      "cascata_por_degrau": {
+        "150": 40
+      },
+      "deficit_redistribuido": 0,
+      "distribuicao_pagina_origem": {
+        "n": 40,
+        "min": 1,
+        "max": 12,
+        "p5": 1,
+        "p50": 2,
+        "p95": 12,
+        "fracao_profunda": 0.25
+      },
+      "janela_amostra": {
+        "n": 40,
+        "min": "2019-04-23",
+        "max": "2026-08-08",
+        "p5": "2019-04-23",
+        "p50": "2026-07-31",
+        "p95": "2026-08-07"
+      },
+      "niveis": [
+        {
+          "nivel": 0.5,
+          "n_validas": 3,
+          "n_alvo": 3,
+          "n_brutas": 24,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 4,
+          "n_descartadas_curtas": 15,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 0,
+          "motivos_descarte": {
+            "truncada_sem_texto": 0,
+            "spoiler": 4,
+            "abaixo_min_chars": 15,
+            "excedente_cota": 2,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 1
+        },
+        {
+          "nivel": 1.0,
+          "n_validas": 8,
+          "n_alvo": 8,
+          "n_brutas": 70,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 6,
+          "n_descartadas_curtas": 51,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 1,
+          "motivos_descarte": {
+            "truncada_sem_texto": 1,
+            "spoiler": 6,
+            "abaixo_min_chars": 51,
+            "excedente_cota": 4,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 3
+        },
+        {
+          "nivel": 1.5,
+          "n_validas": 5,
+          "n_alvo": 5,
+          "n_brutas": 36,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 7,
+          "n_descartadas_curtas": 19,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 0,
+          "motivos_descarte": {
+            "truncada_sem_texto": 0,
+            "spoiler": 7,
+            "abaixo_min_chars": 19,
+            "excedente_cota": 5,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 2
+        },
+        {
+          "nivel": 2.0,
+          "n_validas": 24,
+          "n_alvo": 24,
+          "n_brutas": 165,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 13,
+          "n_descartadas_curtas": 112,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 1,
+          "motivos_descarte": {
+            "truncada_sem_texto": 1,
+            "spoiler": 13,
+            "abaixo_min_chars": 112,
+            "excedente_cota": 15,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 10
+        }
+      ],
+      "temas": [
+        {
+          "tema": "Roteiro preguiçoso e incoerente",
+          "mencoes_aproximadas": 15,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "O roteiro parece uma colcha de retalhos, com diálogos fracos e situações forçadas apenas para mover a trama.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Favoritismo e nostalgia forçada",
+          "mencoes_aproximadas": 12,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "O filme apela descaradamente à nostalgia, relembrando cenas e personagens do passado em vez de criar algo novo.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Problemas de ritmo e duração",
+          "mencoes_aproximadas": 11,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "A duração é excessiva e o ritmo é arrastado, especialmente na primeira metade, tornando a experiência entediante.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Desenvolvimento de personagens decepcionante",
+          "mencoes_aproximadas": 10,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "Personagens como Thor e Hulk são reduzidos a piadas, e suas jornadas emocionais são tratadas de forma superficial.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Tratamento injusto de personagens femininas",
+          "mencoes_aproximadas": 8,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "A morte de uma personagem feminina central é usada apenas como motivação para o sofrimento masculino, e sua importância é diminuída.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Efeitos visuais e estética comprometidos",
+          "mencoes_aproximadas": 6,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "A direção de arte e o CGI são criticados por serem visualmente feios e pouco inspirados, especialmente na batalha final.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        }
+      ],
+      "observacao_geral": "As críticas negativas apontam para uma produção que falha em honrar sua própria mitologia, priorizando fan service e momentos de hype em detrimento de uma narrativa coesa e personagens bem desenvolvidos. Ainda assim, reconhecem que o filme pode agradar aos fãs mais dedicados da franquia, embora isso não justifique seus defeitos estruturais.",
+      "idioma_invalido": false,
+      "escopo_suspeito": false
+    },
+    {
+      "bucket": "medianas",
+      "alvo": 40,
+      "modo": "completo",
+      "estado_piso": "completa",
+      "n_validas": 40,
+      "share_real": 14,
+      "composicao_alvo": {
+        "2.5": 7,
+        "3.0": 33
+      },
+      "composicao_atingida": {
+        "2.5": 7,
+        "3.0": 33
+      },
+      "cascata_por_degrau": {
+        "150": 40
+      },
+      "deficit_redistribuido": 0,
+      "distribuicao_pagina_origem": {
+        "n": 40,
+        "min": 1,
+        "max": 50,
+        "p5": 1,
+        "p50": 5,
+        "p95": 25,
+        "fracao_profunda": 0.3
+      },
+      "janela_amostra": {
+        "n": 40,
+        "min": "2019-04-23",
+        "max": "2026-08-08",
+        "p5": "2019-04-23",
+        "p50": "2026-08-06",
+        "p95": "2026-08-08"
+      },
+      "niveis": [
+        {
+          "nivel": 2.5,
+          "n_validas": 7,
+          "n_alvo": 7,
+          "n_brutas": 96,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 5,
+          "n_descartadas_curtas": 58,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 3,
+          "motivos_descarte": {
+            "truncada_sem_texto": 3,
+            "spoiler": 5,
+            "abaixo_min_chars": 58,
+            "excedente_cota": 23,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 6
+        },
+        {
+          "nivel": 3.0,
+          "n_validas": 33,
+          "n_alvo": 33,
+          "n_brutas": 218,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 20,
+          "n_descartadas_curtas": 140,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 0,
+          "motivos_descarte": {
+            "truncada_sem_texto": 0,
+            "spoiler": 20,
+            "abaixo_min_chars": 140,
+            "excedente_cota": 25,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 10
+        }
+      ],
+      "temas": [
+        {
+          "tema": "Viagem no tempo e lógica",
+          "mencoes_aproximadas": 16,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "Vários espectadores consideram que a solução da viagem no tempo é frágil e cheia de inconsistências, funcionando mais como um artifício para juntar o elenco do que como uma narrativa coesa, além de gerar dúvidas sobre as consequências e paradoxos temporais.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Final épico, porém arrastado",
+          "mencoes_aproximadas": 14,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "Muitos destacam que a última hora tem cenas memoráveis e uma batalha grandiosa, mas reclamam que o filme se estende demais, com um segundo ato lento e uma conclusão que demora a engrenar, resultando em ritmo irregular.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Fã serviço e nostalgia",
+          "mencoes_aproximadas": 12,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "Assistentes apontam que o longa abusa de referências a filmes anteriores e momentos pensados para agradar os fãs, o que pode ser emocionante para quem acompanha a saga, mas também cansa e enfraquece a narrativa como um todo.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Desenvolvimento de personagens",
+          "mencoes_aproximadas": 11,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "O tratamento dado a alguns heróis, especialmente as piadas com o Thor em depressão e a abordagem do trauma, é criticado por soar insensível e fora de tom, além de algumas conclusões de arcos serem apressadas ou sem sentido.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Emoção e momentos catárticos",
+          "mencoes_aproximadas": 10,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "Apesar das ressalvas, muitos admitem que o filme consegue arrancar lágrimas e construir uma despedida impactante, especialmente na reta final, com sequências que unem o elenco e geram comoção no público.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Atuações e elenco",
+          "mencoes_aproximadas": 8,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "O desempenho de alguns atores, como Robert Downey Jr. e Paul Rudd, é elogiado, enquanto outros são criticados por falta de naturalidade em cenas dramáticas, o que quebra a imersão em momentos-chave.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        }
+      ],
+      "observacao_geral": "As reviews medianas apresentam uma recepção mista: reconhecem a grandiosidade e os momentos emocionantes, mas apontam problemas de ritmo, lógica da viagem no tempo e excesso de fã serviço, resultando em uma experiência que agrada, mas frustra em vários aspectos.",
+      "idioma_invalido": false,
+      "escopo_suspeito": false
+    },
+    {
+      "bucket": "positivas",
+      "alvo": 40,
+      "modo": "completo",
+      "estado_piso": "completa",
+      "n_validas": 40,
+      "share_real": 81,
+      "composicao_alvo": {
+        "3.5": 6,
+        "4.0": 14,
+        "4.5": 6,
+        "5.0": 14
+      },
+      "composicao_atingida": {
+        "3.5": 6,
+        "4.0": 14,
+        "4.5": 6,
+        "5.0": 14
+      },
+      "cascata_por_degrau": {
+        "150": 40
+      },
+      "deficit_redistribuido": 0,
+      "distribuicao_pagina_origem": {
+        "n": 40,
+        "min": 1,
+        "max": 60,
+        "p5": 1,
+        "p50": 3,
+        "p95": 8,
+        "fracao_profunda": 0.325
+      },
+      "janela_amostra": {
+        "n": 40,
+        "min": "2019-04-22",
+        "max": "2026-08-09",
+        "p5": "2019-04-23",
+        "p50": "2026-08-07",
+        "p95": "2026-08-08"
+      },
+      "niveis": [
+        {
+          "nivel": 3.5,
+          "n_validas": 6,
+          "n_alvo": 6,
+          "n_brutas": 48,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 3,
+          "n_descartadas_curtas": 34,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 0,
+          "motivos_descarte": {
+            "truncada_sem_texto": 0,
+            "spoiler": 3,
+            "abaixo_min_chars": 34,
+            "excedente_cota": 5,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 2
+        },
+        {
+          "nivel": 4.0,
+          "n_validas": 14,
+          "n_alvo": 14,
+          "n_brutas": 120,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 10,
+          "n_descartadas_curtas": 75,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 2,
+          "motivos_descarte": {
+            "truncada_sem_texto": 2,
+            "spoiler": 10,
+            "abaixo_min_chars": 75,
+            "excedente_cota": 19,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 6
+        },
+        {
+          "nivel": 4.5,
+          "n_validas": 6,
+          "n_alvo": 6,
+          "n_brutas": 48,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 6,
+          "n_descartadas_curtas": 31,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 0,
+          "motivos_descarte": {
+            "truncada_sem_texto": 0,
+            "spoiler": 6,
+            "abaixo_min_chars": 31,
+            "excedente_cota": 5,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 2
+        },
+        {
+          "nivel": 5.0,
+          "n_validas": 14,
+          "n_alvo": 14,
+          "n_brutas": 182,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 7,
+          "n_descartadas_curtas": 140,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 1,
+          "motivos_descarte": {
+            "truncada_sem_texto": 1,
+            "spoiler": 7,
+            "abaixo_min_chars": 140,
+            "excedente_cota": 20,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 6
+        }
+      ],
+      "temas": [
+        {
+          "tema": "Carga emocional e despedidas",
+          "mencoes_aproximadas": 25,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "Muitas pessoas mencionaram que choraram em várias cenas, especialmente nas despedidas de personagens queridos, e que a parte final do filme é extremamente emocionante e marcante, trazendo um sentimento de encerramento para uma era.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Batalha final épica e fan service",
+          "mencoes_aproximadas": 18,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "Vários espectadores destacaram a sequência final de batalha como a melhor parte do filme, elogiando a reunião dos heróis e a sensação de recompensa para os fãs de longa data, descrevendo-a como um espetáculo visual e emocionante.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Viagem no tempo e lógica interna",
+          "mencoes_aproximadas": 7,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "Alguns comentários mencionaram que a viagem no tempo é um recurso ousado e com inconsistências, mas que funciona bem para revisitar momentos icônicos da franquia e aprofundar o drama, apesar de algumas decisões questionáveis na trama.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Performance do elenco e momentos dos personagens",
+          "mencoes_aproximadas": 6,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "Houve elogios às atuações, especialmente de Robert Downey Jr., e a momentos específicos como a redenção do Capitão América e o sacrifício da Viúva Negra, que foram considerados fortes e bem executados.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Comparação com Infinity War",
+          "mencoes_aproximadas": 5,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "Parte dos fãs debateram se este filme é superior ou inferior ao anterior, com alguns preferindo a abordagem mais focada nos heróis e outros achando que a narrativa do filme anterior era mais coesa, mas muitos concordam que ambos são marcos do cinema.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Ritmo e duração",
+          "mencoes_aproximadas": 4,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "Alguns comentários apontaram que o filme tem um ritmo irregular, com uma primeira metade mais lenta, mas que a conclusão compensa, e que as três horas de duração parecem passar rápido devido ao envolvimento emocional.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        }
+      ],
+      "observacao_geral": "As reviews positivas destacam o enorme apelo emocional e o impacto cultural do filme, considerando-o um encerramento épico e nostálgico da saga. Apesar de algumas ressalvas pontuais sobre ritmo e lógica da viagem no tempo, o grupo valoriza a experiência coletiva e os momentos de fan service como recompensa para os fãs.",
+      "idioma_invalido": false,
+      "escopo_suspeito": false
+    }
+  ],
+  "eixos": {
+    "taxonomia_id": "ebab2667de74",
+    "margem_lift_pp": 20,
+    "contraste": "valorativo",
+    "linhas": [
+      {
+        "eixo": "ritmo",
+        "por_bucket": {
+          "negativas": {
+            "mencoes": 9,
+            "de_n": 23,
+            "freq_pct": 39.1,
+            "lift_pp": 9.7,
+            "tema": "Problemas de ritmo e duração",
+            "exemplo_parafraseado": "A duração é excessiva e o ritmo é arrastado, especialmente na primeira metade, tornando a experiência entediante.",
+            "temas_no_mesmo_eixo": []
+          },
+          "medianas": {
+            "mencoes": 5,
+            "de_n": 17,
+            "freq_pct": 29.4,
+            "lift_pp": -9.7,
+            "tema": "Final épico, porém arrastado",
+            "exemplo_parafraseado": "Muitos destacam que a última hora tem cenas memoráveis e uma batalha grandiosa, mas reclamam que o filme se estende demais, com um segundo ato lento e uma conclusão que demora a engrenar, resultando em ritmo irregular.",
+            "temas_no_mesmo_eixo": []
+          },
+          "positivas": {
+            "mencoes": 5,
+            "de_n": 18,
+            "freq_pct": 27.8,
+            "lift_pp": -11.4,
+            "tema": "Ritmo e duração",
+            "exemplo_parafraseado": "Alguns comentários apontaram que o filme tem um ritmo irregular, com uma primeira metade mais lenta, mas que a conclusão compensa, e que as três horas de duração parecem passar rápido devido ao envolvimento emocional.",
+            "temas_no_mesmo_eixo": []
+          }
+        },
+        "bullet_de": {
+          "negativas": null,
+          "medianas": null,
+          "positivas": null
+        }
+      },
+      {
+        "eixo": "atuacao",
+        "por_bucket": {
+          "negativas": {
+            "mencoes": 2,
+            "de_n": 23,
+            "freq_pct": 8.7,
+            "lift_pp": -9.0,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "medianas": {
+            "mencoes": 3,
+            "de_n": 17,
+            "freq_pct": 17.6,
+            "lift_pp": 9.0,
+            "tema": "Atuações e elenco",
+            "exemplo_parafraseado": "O desempenho de alguns atores, como Robert Downey Jr. e Paul Rudd, é elogiado, enquanto outros são criticados por falta de naturalidade em cenas dramáticas, o que quebra a imersão em momentos-chave.",
+            "temas_no_mesmo_eixo": []
+          },
+          "positivas": {
+            "mencoes": 1,
+            "de_n": 18,
+            "freq_pct": 5.6,
+            "lift_pp": -12.1,
+            "tema": "Performance do elenco e momentos dos personagens",
+            "exemplo_parafraseado": "Houve elogios às atuações, especialmente de Robert Downey Jr., e a momentos específicos como a redenção do Capitão América e o sacrifício da Viúva Negra, que foram considerados fortes e bem executados.",
+            "temas_no_mesmo_eixo": []
+          }
+        },
+        "bullet_de": {
+          "negativas": null,
+          "medianas": null,
+          "positivas": null
+        }
+      },
+      {
+        "eixo": "direcao_imagem",
+        "por_bucket": {
+          "negativas": {
+            "mencoes": 5,
+            "de_n": 23,
+            "freq_pct": 21.7,
+            "lift_pp": -1.8,
+            "tema": "Efeitos visuais e estética comprometidos",
+            "exemplo_parafraseado": "A direção de arte e o CGI são criticados por serem visualmente feios e pouco inspirados, especialmente na batalha final.",
+            "temas_no_mesmo_eixo": []
+          },
+          "medianas": {
+            "mencoes": 4,
+            "de_n": 17,
+            "freq_pct": 23.5,
+            "lift_pp": 1.8,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "positivas": {
+            "mencoes": 0,
+            "de_n": 18,
+            "freq_pct": 0.0,
+            "lift_pp": -23.5,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          }
+        },
+        "bullet_de": {
+          "negativas": null,
+          "medianas": null,
+          "positivas": null
+        }
+      },
+      {
+        "eixo": "roteiro_estrutura",
+        "por_bucket": {
+          "negativas": {
+            "mencoes": 15,
+            "de_n": 23,
+            "freq_pct": 65.2,
+            "lift_pp": -5.4,
+            "tema": "Roteiro preguiçoso e incoerente",
+            "exemplo_parafraseado": "O roteiro parece uma colcha de retalhos, com diálogos fracos e situações forçadas apenas para mover a trama.",
+            "temas_no_mesmo_eixo": [
+              "Desenvolvimento de personagens decepcionante"
+            ]
+          },
+          "medianas": {
+            "mencoes": 12,
+            "de_n": 17,
+            "freq_pct": 70.6,
+            "lift_pp": 5.4,
+            "tema": "Viagem no tempo e lógica",
+            "exemplo_parafraseado": "Vários espectadores consideram que a solução da viagem no tempo é frágil e cheia de inconsistências, funcionando mais como um artifício para juntar o elenco do que como uma narrativa coesa, além de gerar dúvidas sobre as consequências e paradoxos temporais.",
+            "temas_no_mesmo_eixo": [
+              "Desenvolvimento de personagens"
+            ]
+          },
+          "positivas": {
+            "mencoes": 3,
+            "de_n": 18,
+            "freq_pct": 16.7,
+            "lift_pp": -53.9,
+            "tema": "Viagem no tempo e lógica interna",
+            "exemplo_parafraseado": "Alguns comentários mencionaram que a viagem no tempo é um recurso ousado e com inconsistências, mas que funciona bem para revisitar momentos icônicos da franquia e aprofundar o drama, apesar de algumas decisões questionáveis na trama.",
+            "temas_no_mesmo_eixo": []
+          }
+        },
+        "bullet_de": {
+          "negativas": "frequencia",
+          "medianas": "frequencia",
+          "positivas": null
+        }
+      },
+      {
+        "eixo": "som_trilha",
+        "por_bucket": {
+          "negativas": {
+            "mencoes": 2,
+            "de_n": 23,
+            "freq_pct": 8.7,
+            "lift_pp": 2.8,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "medianas": {
+            "mencoes": 1,
+            "de_n": 17,
+            "freq_pct": 5.9,
+            "lift_pp": -2.8,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "positivas": {
+            "mencoes": 1,
+            "de_n": 18,
+            "freq_pct": 5.6,
+            "lift_pp": -3.1,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          }
+        },
+        "bullet_de": {
+          "negativas": null,
+          "medianas": null,
+          "positivas": null
+        }
+      },
+      {
+        "eixo": "tom_atmosfera",
+        "por_bucket": {
+          "negativas": {
+            "mencoes": 4,
+            "de_n": 23,
+            "freq_pct": 17.4,
+            "lift_pp": -0.3,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "medianas": {
+            "mencoes": 3,
+            "de_n": 17,
+            "freq_pct": 17.6,
+            "lift_pp": 0.3,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "positivas": {
+            "mencoes": 0,
+            "de_n": 18,
+            "freq_pct": 0.0,
+            "lift_pp": -17.6,
+            "tema": "Batalha final épica e fan service",
+            "exemplo_parafraseado": "Vários espectadores destacaram a sequência final de batalha como a melhor parte do filme, elogiando a reunião dos heróis e a sensação de recompensa para os fãs de longa data, descrevendo-a como um espetáculo visual e emocionante.",
+            "temas_no_mesmo_eixo": []
+          }
+        },
+        "bullet_de": {
+          "negativas": null,
+          "medianas": null,
+          "positivas": null
+        }
+      },
+      {
+        "eixo": "impacto_emocional",
+        "por_bucket": {
+          "negativas": {
+            "mencoes": 9,
+            "de_n": 23,
+            "freq_pct": 39.1,
+            "lift_pp": -10.9,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "medianas": {
+            "mencoes": 5,
+            "de_n": 17,
+            "freq_pct": 29.4,
+            "lift_pp": -20.6,
+            "tema": "Emoção e momentos catárticos",
+            "exemplo_parafraseado": "Apesar das ressalvas, muitos admitem que o filme consegue arrancar lágrimas e construir uma despedida impactante, especialmente na reta final, com sequências que unem o elenco e geram comoção no público.",
+            "temas_no_mesmo_eixo": []
+          },
+          "positivas": {
+            "mencoes": 9,
+            "de_n": 18,
+            "freq_pct": 50.0,
+            "lift_pp": 10.9,
+            "tema": "Carga emocional e despedidas",
+            "exemplo_parafraseado": "Muitas pessoas mencionaram que choraram em várias cenas, especialmente nas despedidas de personagens queridos, e que a parte final do filme é extremamente emocionante e marcante, trazendo um sentimento de encerramento para uma era.",
+            "temas_no_mesmo_eixo": []
+          }
+        },
+        "bullet_de": {
+          "negativas": null,
+          "medianas": null,
+          "positivas": "frequencia"
+        }
+      },
+      {
+        "eixo": "comparacoes",
+        "por_bucket": {
+          "negativas": {
+            "mencoes": 17,
+            "de_n": 23,
+            "freq_pct": 73.9,
+            "lift_pp": 9.2,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "medianas": {
+            "mencoes": 11,
+            "de_n": 17,
+            "freq_pct": 64.7,
+            "lift_pp": -9.2,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "positivas": {
+            "mencoes": 11,
+            "de_n": 18,
+            "freq_pct": 61.1,
+            "lift_pp": -12.8,
+            "tema": "Comparação com Infinity War",
+            "exemplo_parafraseado": "Parte dos fãs debateram se este filme é superior ou inferior ao anterior, com alguns preferindo a abordagem mais focada nos heróis e outros achando que a narrativa do filme anterior era mais coesa, mas muitos concordam que ambos são marcos do cinema.",
+            "temas_no_mesmo_eixo": []
+          }
+        },
+        "bullet_de": {
+          "negativas": "frequencia",
+          "medianas": "frequencia",
+          "positivas": "frequencia"
+        }
+      },
+      {
+        "eixo": "expectativa",
+        "por_bucket": {
+          "negativas": {
+            "mencoes": 6,
+            "de_n": 23,
+            "freq_pct": 26.1,
+            "lift_pp": 3.9,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "medianas": {
+            "mencoes": 2,
+            "de_n": 17,
+            "freq_pct": 11.8,
+            "lift_pp": -14.3,
+            "tema": "Fã serviço e nostalgia",
+            "exemplo_parafraseado": "Assistentes apontam que o longa abusa de referências a filmes anteriores e momentos pensados para agradar os fãs, o que pode ser emocionante para quem acompanha a saga, mas também cansa e enfraquece a narrativa como um todo.",
+            "temas_no_mesmo_eixo": []
+          },
+          "positivas": {
+            "mencoes": 4,
+            "de_n": 18,
+            "freq_pct": 22.2,
+            "lift_pp": -3.9,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          }
+        },
+        "bullet_de": {
+          "negativas": null,
+          "medianas": null,
+          "positivas": null
+        }
+      },
+      {
+        "eixo": "critica_social",
+        "por_bucket": {
+          "negativas": {
+            "mencoes": 9,
+            "de_n": 23,
+            "freq_pct": 39.1,
+            "lift_pp": 9.7,
+            "tema": "Favoritismo e nostalgia forçada",
+            "exemplo_parafraseado": "O filme apela descaradamente à nostalgia, relembrando cenas e personagens do passado em vez de criar algo novo.",
+            "temas_no_mesmo_eixo": [
+              "Tratamento injusto de personagens femininas"
+            ]
+          },
+          "medianas": {
+            "mencoes": 5,
+            "de_n": 17,
+            "freq_pct": 29.4,
+            "lift_pp": -9.7,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "positivas": {
+            "mencoes": 0,
+            "de_n": 18,
+            "freq_pct": 0.0,
+            "lift_pp": -39.1,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          }
+        },
+        "bullet_de": {
+          "negativas": null,
+          "medianas": null,
+          "positivas": null
+        }
+      }
+    ],
+    "fonte_classificacao": {
+      "arquivo": "resultado/votacao-3/consenso.jsonl",
+      "criterio": "votacao_3_consenso_2_de_3",
+      "por_bucket": {
+        "negativas": {
+          "n_classificadas": 23,
+          "n_analisadas": 40,
+          "sobreposicao_com_analisadas": 23
+        },
+        "medianas": {
+          "n_classificadas": 17,
+          "n_analisadas": 40,
+          "sobreposicao_com_analisadas": 17
+        },
+        "positivas": {
+          "n_classificadas": 18,
+          "n_analisadas": 40,
+          "sobreposicao_com_analisadas": 18
+        }
+      }
+    },
+    "rotulagem": {
+      "n_chamadas": 3,
+      "falharam": [],
+      "fora_da_taxonomia": {},
+      "houve_retentativa": []
+    },
+    "spec_version": "1.9.16",
+    "verificador": {
+      "aplicado": true,
+      "variante": "V2_alvo",
+      "passada": 1,
+      "eixo": "impacto_emocional",
+      "n_removidas_no_corpus": 1654
+    }
+  },
+  "narrativa": "Lançado em 2019 sob a direção de Anthony Russo, \"Vingadores: Ultimato\" é um longa-metragem que mescla aventura, ficção científica e ação ao longo de seus 181 minutos de duração. Na narrativa, após acontecimentos devastadores que deixaram o universo em ruínas, os aliados restantes precisam se reunir mais uma vez com o objetivo de reverter essa situação e restaurar a ordem cósmica.\n\nA experiência de acompanhar a obra é estruturada em uma narrativa de longa duração, que combina passagens de forte carga dramática com sequências de ação em grande escala. A condução do filme apoia-se no recurso de viagem no tempo e na constante evocação nostálgica de acontecimentos prévios da franquia.\n\nOs três grupos analisados concordam quanto aos elementos centrais que compõem o longa-metragem e discordam no veredito sobre o seu funcionamento. Na grande maioria das notas (~81%), a maior parte destaca a intensidade da carga emocional e o peso das despedidas, enquanto uma parcela expressiva celebra a grandiosidade da batalha final e os momentos voltados aos fãs. Além disso, parte deles comenta a presença da viagem no tempo e a sua lógica interna no desenvolvimento da trama.\n\nNuma fração mínima das notas (~14%), para quem se situa nessa faixa intermediária, muitos apontam inconsistências e fragilidades na lógica da viagem no tempo. Nesse mesmo grupo, boa parte avalia o desfecho como marcante, porém com um ritmo arrastado, e vários consideram que o excesso de fã-serviço e apelo à nostalgia prejudica a coesão da história.\n\nPor fim, numa fração ainda menor das notas (~4%), na perspectiva desse segmento, um número considerável critica o roteiro por considerá-lo preguiçoso e incoerente, muitos apontam favoritismo e nostalgia forçada, e uma parcela expressiva ressalta problemas no ritmo e na duração excessiva da obra.",
+  "verificacao_narrativa": {
+    "quantificador_fora_de_faixa": [],
+    "quantificador_repetido": [],
+    "paragrafos": {
+      "n_paragrafos": 5,
+      "minimo": 3,
+      "insuficientes": false,
+      "longos": []
+    },
+    "n_paragrafos": 5,
+    "paragrafos_insuficientes": false,
+    "paragrafos_longos": [],
+    "grupos_sem_paragrafo_proprio": [],
+    "movimento1_e_movimento2_no_mesmo_paragrafo": false,
+    "formato_invalido": false,
+    "numeros_inventados": [],
+    "rotulos_faltando": [],
+    "ordem_incorreta": false,
+    "vocabulario_peso": false,
+    "resenha_speak": [],
+    "n_resenha_speak": 0,
+    "n_flags": 0
+  },
+  "narrativa_selecao": {
+    "provider": "gemini",
+    "modelo": "gemini-3.7-flash",
+    "n_candidatos": 3,
+    "n_chamadas": 3,
+    "indice_escolhido": 1,
+    "motivo": "melhor_entre_limpos",
+    "criterio_decisivo": "unico",
+    "candidatos": [
+      {
+        "indice": 0,
+        "n_flags": 2,
+        "cliches": 0,
+        "repeticao_max": 2,
+        "ritmo": 12,
+        "cobertura": 1.0,
+        "eliminado": true
+      },
+      {
+        "indice": 1,
+        "n_flags": 0,
+        "cliches": 0,
+        "repeticao_max": 2,
+        "ritmo": 7,
+        "cobertura": 1.0,
+        "eliminado": false
+      },
+      {
+        "indice": 2,
+        "n_flags": 1,
+        "cliches": 0,
+        "repeticao_max": 2,
+        "ritmo": 9,
+        "cobertura": 0.889,
+        "eliminado": true
+      }
+    ],
+    "retry": null,
+    "uso": {
+      "prompt_tokens": 10239,
+      "completion_tokens": 1262,
+      "cache_hit_tokens": 0,
+      "cache_miss_tokens": 10239
+    },
+    "latencia_s": 37.26
+  }
+}

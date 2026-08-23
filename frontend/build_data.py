@@ -20,8 +20,25 @@ ROOT = Path(__file__).resolve().parent.parent
 RESULTADO = ROOT / "resultado"
 FRONTEND = ROOT / "frontend"
 
-# Ordem no catálogo da home (curadoria: o filme novo primeiro).
-CATALOGO = ["the-invite-2026", "cure", "cidade-de-deus"]
+def _catalogo() -> list[str]:
+    """[v1.9.16] Os 35 slugs de `votacao-3/consenso.jsonl` — a mesma fonte
+    única que decide o catálogo em `scripts/publicar_catalogo.py` — em vez
+    de uma lista redigitada que podia divergir dele (era só os 3 primeiros
+    filmes publicados). `the-invite-2026` continua primeiro por curadoria
+    (era o filme novo quando só 3 existiam); os outros 34, alfabético.
+    """
+    slugs = set()
+    for linha in (RESULTADO / "votacao-3" / "consenso.jsonl").read_text(
+            encoding="utf-8").splitlines():
+        if linha.strip():
+            slugs.add(json.loads(linha)["slug"])
+    destaque = "the-invite-2026"
+    resto = sorted(slugs - {destaque})
+    return ([destaque] if destaque in slugs else []) + resto
+
+
+# Ordem no catálogo da home (curadoria: o filme em destaque primeiro).
+CATALOGO = _catalogo()
 
 
 def _nivel(nivel, n_validas, n_brutas, filtro, spoiler=0, curtas=0):
@@ -154,8 +171,14 @@ def _filme_degradado():
 
 def main():
     filmes = {}
+    catalogo_presente = []
     for slug in CATALOGO:
-        data = json.loads((RESULTADO / f"{slug}.json").read_text(encoding="utf-8"))
+        caminho = RESULTADO / f"{slug}.json"
+        if not caminho.exists():
+            print(f"  ⚠️  {slug}: sem resultado/{slug}.json — pulado do catálogo")
+            continue
+        catalogo_presente.append(slug)
+        data = json.loads(caminho.read_text(encoding="utf-8"))
         # aliviar o peso: origem_paginas não é usado no frontend
         data.pop("origem_paginas", None)
         filmes[slug] = data
@@ -168,7 +191,7 @@ def main():
     (FRONTEND / "data" / f"{deg['slug']}.json").write_text(
         json.dumps(deg, ensure_ascii=False, indent=2), encoding="utf-8")
 
-    payload = {"catalogo": CATALOGO, "filmes": filmes}
+    payload = {"catalogo": catalogo_presente, "filmes": filmes}
     js = (
         "// GERADO por frontend/build_data.py — NÃO editar à mão.\n"
         "// Fonte: resultado/*.json (pipeline Espectro 24). Dados embutidos\n"
@@ -179,7 +202,7 @@ def main():
     )
     (FRONTEND / "js" / "data.js").write_text(js, encoding="utf-8")
     print(f"OK: {len(filmes)} filmes embutidos em frontend/js/data.js")
-    print(f"    catálogo (home): {CATALOGO}")
+    print(f"    catálogo (home): {len(catalogo_presente)} filmes")
     print(f"    + filme oculto de teste: {deg['slug']}")
 
 

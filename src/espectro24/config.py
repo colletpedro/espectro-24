@@ -403,6 +403,20 @@ PROVIDER_POR_ESTAGIO = {
 # prompt como causa — é escolha de concisão do modelo). Não muda a decisão;
 # é o primeiro sintoma a observar se o texto parecer raso quando o catálogo
 # crescer.
+#
+# CONFIRMADO na v1.9.16, ao publicar os 32 filmes restantes: 15 de 35
+# filmes do catálogo (43%) carregam `n_flags >= 1` em `verificacao_narrativa`
+# — quase todos a MESMA colisão de forma (movimento 1 e 2 no mesmo parágrafo,
+# ou grupo sem parágrafo próprio), nunca defeito de CONTEÚDO. A taxa de 43%
+# é bem acima do 1/3 medido na comparação de modelos que decidiu o 3.7-flash
+# — a amostra de 3 filmes não previu a taxa real. O fallback de
+# `narrativa_selecao` (`menor_severidade`, escolher o candidato com menos
+# flags quando os 3 são flagrados) absorveu todos os casos — nenhuma
+# narrativa saiu sem candidato, nenhum flag de CONTEÚDO apareceu. Não muda a
+# decisão de modelo (é o sintoma já previsto, não um defeito novo), mas eleva
+# a prioridade de investigar: o próximo passo natural seria medir se ajustar
+# o orçamento do briefing ou o prompt do movimento 2 reduz a taxa — ainda não
+# feito, fora do escopo desta sessão (só publicação, não tocou o narrador).
 MODELO_POR_ESTAGIO = {
     "classificacao": "deepseek-v4-flash",
     "narrativa": "gemini-3.7-flash",
