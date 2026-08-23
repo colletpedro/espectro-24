@@ -1,0 +1,19 @@
+{
+  "variante": "V2_alvo",
+  "passada": 1,
+  "eixo": "impacto_emocional",
+  "fonte": "resultado/votacao-3/consenso.jsonl",
+  "fonte_n_linhas": 4181,
+  "n_candidatas": 3162,
+  "n_verificadas": 3162,
+  "n_falharam": 0,
+  "n_removidas": 1654,
+  "n_chamadas": 3162,
+  "uso": {
+    "prompt_tokens": 2068863,
+    "completion_tokens": 116929,
+    "cache_hit_tokens": 1214208,
+    "cache_miss_tokens": 854655
+  },
+  "custo_usd": 0.1557916024
+}

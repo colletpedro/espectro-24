@@ -2707,6 +2707,31 @@ Custo estimado: no pior caso ~100 requisições extras por filme novo (uma por r
 > sob um verificado que ficou para trás — a mistura silenciosa entre
 > classificação com e sem V2 é exatamente o que esta guarda existe para
 > impedir.
+>
+> **APLICADO ao corpus inteiro (Entrega 2, medido, não projetado).** 3162
+> das 4181 reviews classificadas dos 35 filmes (75,6%), passada única,
+> `scripts/verificador_impacto.py aplicar-producao`: **1654 removidas
+> (52,3%)** — quase o mesmo número que a amostra de 100 do gabarito previa
+> (V2/passe1: 38/72, 52,8%), o sinal de que a amostra generalizou. Frequência
+> de `impacto_emocional` no corpus: **75,6% → 36,1%** (a projeção da Entrega
+> 4 anterior tinha estimado 35,7% — a 0,4pp de diferença). Custo real **US$
+> 0,1558** (a projeção tinha estimado US$ 0,10 — 56% acima, ainda
+> irrelevante em termos absolutos).
+>
+> **Cobertura de contraste: 18/35 → 18/35, TOTAL INALTERADO** — dentro do
+> IC95 [16, 19] que a projeção previu, e melhor que a mediana projetada
+> (17/35). Mas o total esconde dois vereditos que MUDARAM em sentidos
+> opostos e se cancelam: `eighth-grade` (valorativo → tematico, 38
+> removidas) e `napoleon-2023` (tematico → valorativo, 43 removidas) — nenhum
+> dos dois no catálogo dos 3 publicados, então nenhum republica por este
+> achado; ambos entram sob a classificação verificada quando publicados
+> (Entrega 4).
+>
+> **Os 3 filmes publicados: vereditos estáveis**, como a projeção previa —
+> `cure` (tematico, 56 removidas), `cidade-de-deus` (valorativo, 82
+> removidas), `the-invite-2026` (tematico, 76 removidas). Republicar muda os
+> BULLETS (frequências menores em `impacto_emocional` reordenam a seleção de
+> consenso e de contraste), não o estado.
 
 - **Uma chamada por bucket** (máx. 3 por filme), modelo configurável.
 - **Provider-agnóstico (v1.1.1):** a interface de cliente injetável (`client_call(system, user, model) -> str`) é o **contrato formal**. Providers suportados: **Gemini** (chave `GEMINI_API_KEY`, modo JSON nativo) e **Anthropic** (chave `ANTHROPIC_API_KEY`). Seleção via `--provider {gemini,anthropic}`; sem a flag, auto-detecta pela chave presente no ambiente; se ambas as chaves estiverem presentes, ou nenhuma, é erro — exige decisão explícita.

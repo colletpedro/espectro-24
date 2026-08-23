@@ -299,3 +299,61 @@ def test_gerar_consenso_verificado_so_pode_reduzir_o_total_de_eixos(vi):
     for antes, depois in zip(linhas, saida):
         assert set(depois["eixos"]) <= set(antes["eixos"])
         assert set(antes["eixos"]) - set(depois["eixos"]) <= {vi.EIXO}
+
+
+# ================================================ v1.9.16 relatório real (E2)
+# `relatorio_aplicacao` compara consenso CRU x VERIFICADO por filme/bucket —
+# a base do relatório medido (não projetado) da Entrega 2.
+
+
+def _linha(slug, bucket, rid, eixos):
+    return {"slug": slug, "bucket": bucket, "id": rid, "eixos": eixos}
+
+
+def test_relatorio_aplicacao_conta_remocoes_por_filme_e_bucket(vi):
+    cru = ([_linha("a", "negativas", f"n{i}",
+                   ["impacto_emocional", "ritmo"] if i < 5 else ["ritmo"])
+           for i in range(10)]
+          + [_linha("a", "positivas", f"p{i}", ["impacto_emocional"])
+             for i in range(4)])
+    ver = ([_linha("a", "negativas", f"n{i}",
+                   ["ritmo"] if i < 5 else ["ritmo"])  # as 5 primeiras: removidas
+           for i in range(10)]
+          + [_linha("a", "positivas", f"p{i}", ["impacto_emocional"] if i < 2 else [])
+             for i in range(4)])  # 2 removidas
+
+    rel = vi.relatorio_aplicacao(cru, ver)
+    d = rel["por_filme"]["a"]
+    assert d["removidas"] == 7
+    assert d["removidas_por_bucket"] == {"negativas": 5, "positivas": 2}
+
+
+def test_relatorio_aplicacao_detecta_mudanca_de_veredito(vi):
+    """Filme sintético: `impacto_emocional` é o ÚNICO eixo acima da margem
+    (tematico); removê-lo por completo em todos os buckets derruba pra
+    valorativo — cenário construído para travar a detecção, não medido."""
+    cru = ([_linha("b", "negativas", f"n{i}", ["impacto_emocional"])
+           for i in range(20)]
+          + [_linha("b", "negativas", f"n{i}", []) for i in range(20, 40)]
+          + [_linha("b", "positivas", f"p{i}", []) for i in range(40)])
+    ver = ([_linha("b", "negativas", f"n{i}", []) for i in range(40)]
+          + [_linha("b", "positivas", f"p{i}", []) for i in range(40)])
+
+    rel = vi.relatorio_aplicacao(cru, ver)
+    d = rel["por_filme"]["b"]
+    assert d["contraste_antes"] == "tematico"
+    assert d["contraste_depois"] == "valorativo"
+    assert d["veredito_mudou"] is True
+    assert rel["vereditos_mudaram"] == ["b"]
+
+
+def test_relatorio_aplicacao_agrega_cobertura(vi):
+    cru = [_linha("a", "negativas", "n0", ["impacto_emocional"]),
+          _linha("a", "positivas", "p0", [])]
+    ver = [_linha("a", "negativas", "n0", []),
+          _linha("a", "positivas", "p0", [])]
+    rel = vi.relatorio_aplicacao(cru, ver)
+    assert rel["n_filmes"] == 1
+    assert rel["total_removidas"] == 1
+    assert rel["cobertura_antes"] in (0, 1)
+    assert rel["cobertura_depois"] in (0, 1)

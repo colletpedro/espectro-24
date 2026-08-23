@@ -892,15 +892,126 @@ def cmd_aplicar_producao() -> None:
     print(f"→ {ARQ_MANIFESTO_VERIFICADOR.relative_to(RAIZ)}")
 
 
+# ===========================================================================
+# v1.9.16 — Entrega 2: relatório MEDIDO (não projetado) da aplicação real
+# ===========================================================================
+
+ARQ_RELATORIO_PRODUCAO = SAIDA.parent.parent / "votacao-3" / "relatorio_aplicacao.json"
+
+
+def _por_filme_bucket(linhas: list[dict]
+                      ) -> dict[str, dict[str, dict[str, list[str]]]]:
+    fora: dict = defaultdict(lambda: defaultdict(dict))
+    for r in linhas:
+        fora[r["slug"]][r["bucket"]][r["id"]] = r["eixos"]
+    return {s: dict(b) for s, b in fora.items()}
+
+
+def relatorio_aplicacao(linhas_cru: list[dict],
+                        linhas_verificado: list[dict]) -> dict:
+    """Compara o consenso CRU com o VERIFICADO, por filme e por bucket —
+    remoções, frequência e o veredito de `contraste` antes/depois. Puro:
+    só `eixos.py` (Counter/Fraction), nenhuma chamada de LLM aqui — é a
+    MEDIÇÃO real, contra a qual a projeção da Entrega 4 anterior se compara.
+    """
+    from espectro24 import eixos as EX
+
+    cru = _por_filme_bucket(linhas_cru)
+    ver = _por_filme_bucket(linhas_verificado)
+    slugs = sorted(set(cru) | set(ver))
+
+    por_filme = {}
+    total_removidas = 0
+    for slug in slugs:
+        bc, bv = cru.get(slug, {}), ver.get(slug, {})
+        contraste_c = EX.contraste(EX.lifts(EX.frequencias(bc))) if bc else None
+        contraste_v = EX.contraste(EX.lifts(EX.frequencias(bv))) if bv else None
+
+        removidas_bucket = {}
+        for b in sorted(set(bc) | set(bv)):
+            n = sum(1 for rid, ex in bc.get(b, {}).items()
+                    if EIXO in ex and EIXO not in bv.get(b, {}).get(rid, ex))
+            if n:
+                removidas_bucket[b] = n
+        n_removidas = sum(removidas_bucket.values())
+        total_removidas += n_removidas
+
+        por_filme[slug] = {
+            "removidas": n_removidas,
+            "removidas_por_bucket": removidas_bucket,
+            "contraste_antes": contraste_c,
+            "contraste_depois": contraste_v,
+            "veredito_mudou": contraste_c is not None and contraste_v is not None
+                              and contraste_c != contraste_v,
+        }
+
+    tematicos_antes = [s for s, d in por_filme.items()
+                       if d["contraste_antes"] == "tematico"]
+    tematicos_depois = [s for s, d in por_filme.items()
+                        if d["contraste_depois"] == "tematico"]
+    return {
+        "n_filmes": len(slugs),
+        "total_removidas": total_removidas,
+        "por_filme": por_filme,
+        "cobertura_antes": len(tematicos_antes),
+        "cobertura_depois": len(tematicos_depois),
+        "vereditos_mudaram": sorted(s for s, d in por_filme.items()
+                                    if d["veredito_mudou"]),
+    }
+
+
+def cmd_relatorio_producao() -> None:
+    linhas_cru = _linhas_consenso_producao()
+    if not ARQ_CONSENSO_VERIFICADO.exists():
+        raise SystemExit(
+            f"{ARQ_CONSENSO_VERIFICADO} não existe — rode "
+            "`python scripts/verificador_impacto.py aplicar-producao` antes.")
+    linhas_ver = [json.loads(l) for l in
+                 ARQ_CONSENSO_VERIFICADO.read_text(encoding="utf-8").splitlines()
+                 if l.strip()]
+    manifesto = json.loads(ARQ_MANIFESTO_VERIFICADOR.read_text(encoding="utf-8"))
+
+    rel = relatorio_aplicacao(linhas_cru, linhas_ver)
+    n_ie_antes = sum(1 for r in linhas_cru if EIXO in r["eixos"])
+    n_ie_depois = sum(1 for r in linhas_ver if EIXO in r["eixos"])
+    saida = {
+        "manifesto": manifesto,
+        "freq_impacto_emocional": {
+            "antes": round(n_ie_antes / len(linhas_cru), 4),
+            "depois": round(n_ie_depois / len(linhas_ver), 4),
+        },
+        **rel,
+    }
+    ARQ_RELATORIO_PRODUCAO.write_text(json.dumps(saida, ensure_ascii=False, indent=2),
+                                      encoding="utf-8")
+
+    print(f"=== APLICAÇÃO MEDIDA (não projetada) — {manifesto['n_candidatas']} "
+          f"candidatas, {manifesto['n_removidas']} removidas "
+          f"({manifesto['n_removidas'] / manifesto['n_candidatas']:.1%}) ===")
+    print(f"  {EIXO}: {saida['freq_impacto_emocional']['antes']:.1%} → "
+          f"{saida['freq_impacto_emocional']['depois']:.1%}")
+    print(f"  custo real: US$ {manifesto['custo_usd']:.4f} "
+          f"({manifesto['n_chamadas']} chamadas)")
+    print(f"  cobertura de contraste: {rel['cobertura_antes']}/{rel['n_filmes']} "
+          f"→ {rel['cobertura_depois']}/{rel['n_filmes']}")
+    if rel["vereditos_mudaram"]:
+        print(f"  VEREDITOS QUE MUDARAM: {', '.join(rel['vereditos_mudaram'])}")
+    else:
+        print("  nenhum veredito de contraste mudou")
+    print(f"\n→ {ARQ_RELATORIO_PRODUCAO.relative_to(RAIZ)}")
+
+
 def main() -> None:
     ap = argparse.ArgumentParser(description=__doc__)
     ap.add_argument("etapa", choices=["passes", "comparar", "projetar",
-                                      "projetar-exato", "aplicar-producao"])
+                                      "projetar-exato", "aplicar-producao",
+                                      "relatorio-producao"])
     args = ap.parse_args()
     {"passes": cmd_passes, "comparar": cmd_comparar,
      "projetar": cmd_projetar,
      "projetar-exato": cmd_projetar_exato,
-     "aplicar-producao": cmd_aplicar_producao}[args.etapa]()
+     "aplicar-producao": cmd_aplicar_producao,
+     "relatorio-producao": cmd_relatorio_producao}[args.etapa]()
 
 
 if __name__ == "__main__":

@@ -1,0 +1,419 @@
+{
+  "manifesto": {
+    "variante": "V2_alvo",
+    "passada": 1,
+    "eixo": "impacto_emocional",
+    "fonte": "resultado/votacao-3/consenso.jsonl",
+    "fonte_n_linhas": 4181,
+    "n_candidatas": 3162,
+    "n_verificadas": 3162,
+    "n_falharam": 0,
+    "n_removidas": 1654,
+    "n_chamadas": 3162,
+    "uso": {
+      "prompt_tokens": 2068863,
+      "completion_tokens": 116929,
+      "cache_hit_tokens": 1214208,
+      "cache_miss_tokens": 854655
+    },
+    "custo_usd": 0.1557916024
+  },
+  "freq_impacto_emocional": {
+    "antes": 0.7563,
+    "depois": 0.3607
+  },
+  "n_filmes": 35,
+  "total_removidas": 1654,
+  "por_filme": {
+    "aftersun": {
+      "removidas": 39,
+      "removidas_por_bucket": {
+        "medianas": 10,
+        "negativas": 21,
+        "positivas": 8
+      },
+      "contraste_antes": "valorativo",
+      "contraste_depois": "valorativo",
+      "veredito_mudou": false
+    },
+    "anatomy-of-a-fall": {
+      "removidas": 42,
+      "removidas_por_bucket": {
+        "medianas": 15,
+        "negativas": 15,
+        "positivas": 12
+      },
+      "contraste_antes": "tematico",
+      "contraste_depois": "tematico",
+      "veredito_mudou": false
+    },
+    "avengers-endgame": {
+      "removidas": 57,
+      "removidas_por_bucket": {
+        "medianas": 22,
+        "negativas": 18,
+        "positivas": 17
+      },
+      "contraste_antes": "valorativo",
+      "contraste_depois": "valorativo",
+      "veredito_mudou": false
+    },
+    "barbie": {
+      "removidas": 41,
+      "removidas_por_bucket": {
+        "medianas": 16,
+        "negativas": 16,
+        "positivas": 9
+      },
+      "contraste_antes": "tematico",
+      "contraste_depois": "tematico",
+      "veredito_mudou": false
+    },
+    "bones-and-all": {
+      "removidas": 53,
+      "removidas_por_bucket": {
+        "medianas": 13,
+        "negativas": 19,
+        "positivas": 21
+      },
+      "contraste_antes": "tematico",
+      "contraste_depois": "tematico",
+      "veredito_mudou": false
+    },
+    "cats-2019": {
+      "removidas": 49,
+      "removidas_por_bucket": {
+        "medianas": 18,
+        "negativas": 18,
+        "positivas": 13
+      },
+      "contraste_antes": "tematico",
+      "contraste_depois": "tematico",
+      "veredito_mudou": false
+    },
+    "cidade-de-deus": {
+      "removidas": 82,
+      "removidas_por_bucket": {
+        "medianas": 32,
+        "negativas": 29,
+        "positivas": 21
+      },
+      "contraste_antes": "valorativo",
+      "contraste_depois": "valorativo",
+      "veredito_mudou": false
+    },
+    "cure": {
+      "removidas": 56,
+      "removidas_por_bucket": {
+        "medianas": 20,
+        "negativas": 25,
+        "positivas": 11
+      },
+      "contraste_antes": "tematico",
+      "contraste_depois": "tematico",
+      "veredito_mudou": false
+    },
+    "dune-2021": {
+      "removidas": 44,
+      "removidas_por_bucket": {
+        "medianas": 14,
+        "negativas": 19,
+        "positivas": 11
+      },
+      "contraste_antes": "tematico",
+      "contraste_depois": "tematico",
+      "veredito_mudou": false
+    },
+    "dune-part-two": {
+      "removidas": 45,
+      "removidas_por_bucket": {
+        "medianas": 17,
+        "negativas": 13,
+        "positivas": 15
+      },
+      "contraste_antes": "valorativo",
+      "contraste_depois": "valorativo",
+      "veredito_mudou": false
+    },
+    "eighth-grade": {
+      "removidas": 38,
+      "removidas_por_bucket": {
+        "medianas": 13,
+        "negativas": 19,
+        "positivas": 6
+      },
+      "contraste_antes": "valorativo",
+      "contraste_depois": "tematico",
+      "veredito_mudou": true
+    },
+    "everything-everywhere-all-at-once": {
+      "removidas": 47,
+      "removidas_por_bucket": {
+        "medianas": 19,
+        "negativas": 16,
+        "positivas": 12
+      },
+      "contraste_antes": "tematico",
+      "contraste_depois": "tematico",
+      "veredito_mudou": false
+    },
+    "friday-the-13th-2009": {
+      "removidas": 70,
+      "removidas_por_bucket": {
+        "medianas": 25,
+        "negativas": 23,
+        "positivas": 22
+      },
+      "contraste_antes": "valorativo",
+      "contraste_depois": "valorativo",
+      "veredito_mudou": false
+    },
+    "hereditary": {
+      "removidas": 43,
+      "removidas_por_bucket": {
+        "medianas": 12,
+        "negativas": 15,
+        "positivas": 16
+      },
+      "contraste_antes": "tematico",
+      "contraste_depois": "tematico",
+      "veredito_mudou": false
+    },
+    "im-still-here-2024": {
+      "removidas": 42,
+      "removidas_por_bucket": {
+        "medianas": 11,
+        "negativas": 20,
+        "positivas": 11
+      },
+      "contraste_antes": "tematico",
+      "contraste_depois": "tematico",
+      "veredito_mudou": false
+    },
+    "interstellar": {
+      "removidas": 52,
+      "removidas_por_bucket": {
+        "medianas": 15,
+        "negativas": 24,
+        "positivas": 13
+      },
+      "contraste_antes": "valorativo",
+      "contraste_depois": "valorativo",
+      "veredito_mudou": false
+    },
+    "joker-folie-a-deux": {
+      "removidas": 68,
+      "removidas_por_bucket": {
+        "medianas": 28,
+        "negativas": 23,
+        "positivas": 17
+      },
+      "contraste_antes": "tematico",
+      "contraste_depois": "tematico",
+      "veredito_mudou": false
+    },
+    "longlegs": {
+      "removidas": 47,
+      "removidas_por_bucket": {
+        "medianas": 16,
+        "negativas": 17,
+        "positivas": 14
+      },
+      "contraste_antes": "valorativo",
+      "contraste_depois": "valorativo",
+      "veredito_mudou": false
+    },
+    "mother-2017": {
+      "removidas": 36,
+      "removidas_por_bucket": {
+        "medianas": 10,
+        "negativas": 15,
+        "positivas": 11
+      },
+      "contraste_antes": "valorativo",
+      "contraste_depois": "valorativo",
+      "veredito_mudou": false
+    },
+    "napoleon-2023": {
+      "removidas": 43,
+      "removidas_por_bucket": {
+        "medianas": 14,
+        "negativas": 17,
+        "positivas": 12
+      },
+      "contraste_antes": "tematico",
+      "contraste_depois": "valorativo",
+      "veredito_mudou": true
+    },
+    "obsession-2026": {
+      "removidas": 5,
+      "removidas_por_bucket": {
+        "negativas": 3,
+        "positivas": 2
+      },
+      "contraste_antes": "tematico",
+      "contraste_depois": "tematico",
+      "veredito_mudou": false
+    },
+    "oppenheimer-2023": {
+      "removidas": 50,
+      "removidas_por_bucket": {
+        "medianas": 15,
+        "negativas": 21,
+        "positivas": 14
+      },
+      "contraste_antes": "tematico",
+      "contraste_depois": "tematico",
+      "veredito_mudou": false
+    },
+    "parasite-2019": {
+      "removidas": 47,
+      "removidas_por_bucket": {
+        "medianas": 12,
+        "negativas": 19,
+        "positivas": 16
+      },
+      "contraste_antes": "valorativo",
+      "contraste_depois": "valorativo",
+      "veredito_mudou": false
+    },
+    "pearl-2022": {
+      "removidas": 57,
+      "removidas_por_bucket": {
+        "medianas": 19,
+        "negativas": 19,
+        "positivas": 19
+      },
+      "contraste_antes": "valorativo",
+      "contraste_depois": "valorativo",
+      "veredito_mudou": false
+    },
+    "perfect-days-2023": {
+      "removidas": 33,
+      "removidas_por_bucket": {
+        "medianas": 12,
+        "negativas": 15,
+        "positivas": 6
+      },
+      "contraste_antes": "tematico",
+      "contraste_depois": "tematico",
+      "veredito_mudou": false
+    },
+    "shutter-island": {
+      "removidas": 37,
+      "removidas_por_bucket": {
+        "medianas": 10,
+        "negativas": 16,
+        "positivas": 11
+      },
+      "contraste_antes": "valorativo",
+      "contraste_depois": "valorativo",
+      "veredito_mudou": false
+    },
+    "spider-man-across-the-spider-verse": {
+      "removidas": 42,
+      "removidas_por_bucket": {
+        "medianas": 15,
+        "negativas": 19,
+        "positivas": 8
+      },
+      "contraste_antes": "tematico",
+      "contraste_depois": "tematico",
+      "veredito_mudou": false
+    },
+    "talk-to-me-2022": {
+      "removidas": 47,
+      "removidas_por_bucket": {
+        "medianas": 14,
+        "negativas": 18,
+        "positivas": 15
+      },
+      "contraste_antes": "valorativo",
+      "contraste_depois": "valorativo",
+      "veredito_mudou": false
+    },
+    "the-godfather": {
+      "removidas": 41,
+      "removidas_por_bucket": {
+        "medianas": 17,
+        "negativas": 10,
+        "positivas": 14
+      },
+      "contraste_antes": "valorativo",
+      "contraste_depois": "valorativo",
+      "veredito_mudou": false
+    },
+    "the-hateful-eight": {
+      "removidas": 55,
+      "removidas_por_bucket": {
+        "medianas": 19,
+        "negativas": 20,
+        "positivas": 16
+      },
+      "contraste_antes": "tematico",
+      "contraste_depois": "tematico",
+      "veredito_mudou": false
+    },
+    "the-invite-2026": {
+      "removidas": 76,
+      "removidas_por_bucket": {
+        "medianas": 23,
+        "negativas": 28,
+        "positivas": 25
+      },
+      "contraste_antes": "tematico",
+      "contraste_depois": "tematico",
+      "veredito_mudou": false
+    },
+    "the-northman": {
+      "removidas": 56,
+      "removidas_por_bucket": {
+        "medianas": 21,
+        "negativas": 21,
+        "positivas": 14
+      },
+      "contraste_antes": "valorativo",
+      "contraste_depois": "valorativo",
+      "veredito_mudou": false
+    },
+    "the-substance": {
+      "removidas": 43,
+      "removidas_por_bucket": {
+        "medianas": 14,
+        "negativas": 16,
+        "positivas": 13
+      },
+      "contraste_antes": "valorativo",
+      "contraste_depois": "valorativo",
+      "veredito_mudou": false
+    },
+    "wicked-2024": {
+      "removidas": 37,
+      "removidas_por_bucket": {
+        "medianas": 12,
+        "negativas": 16,
+        "positivas": 9
+      },
+      "contraste_antes": "valorativo",
+      "contraste_depois": "valorativo",
+      "veredito_mudou": false
+    },
+    "wonka": {
+      "removidas": 34,
+      "removidas_por_bucket": {
+        "medianas": 8,
+        "negativas": 15,
+        "positivas": 11
+      },
+      "contraste_antes": "tematico",
+      "contraste_depois": "tematico",
+      "veredito_mudou": false
+    }
+  },
+  "cobertura_antes": 18,
+  "cobertura_depois": 18,
+  "vereditos_mudaram": [
+    "eighth-grade",
+    "napoleon-2023"
+  ]
+}
