@@ -1,0 +1,1351 @@
+{
+  "slug": "spider-man-across-the-spider-verse",
+  "data_coleta": "2026-08-23T01:09:17.256965+00:00",
+  "spec_version": "1.9.16",
+  "total_reviews_observadas": 509,
+  "reviews_url": "https://letterboxd.com/film/spider-man-across-the-spider-verse/reviews/",
+  "ficha": {
+    "titulo": "Homem-Aranha: Através do Aranhaverso",
+    "sinopse_oficial": "Miles Morales retorna para o próximo capítulo da saga do Aranhaverso, uma aventura épica que transportará o Homem-Aranha em tempo integral e amigável do bairro do Brooklyn através do Multiverso para unir forças com Gwen Stacy e uma nova equipe de Homens-Aranha para enfrentar com um vilão mais poderoso do que qualquer coisa que eles já encontraram.",
+    "sinopse_fallback_en": false,
+    "generos": [
+      "Animação",
+      "Ação",
+      "Aventura",
+      "Ficção científica"
+    ],
+    "duracao_min": 140,
+    "diretor": "Justin K. Thompson",
+    "diretor_transliterado": false,
+    "ano": 2023,
+    "fonte": "tmdb",
+    "ano_fonte": "bruto"
+  },
+  "distribuicao": {
+    "n_notas_total": 3912952,
+    "por_nivel": {
+      "0.5": 3865,
+      "1.0": 8337,
+      "1.5": 4946,
+      "2.0": 31736,
+      "2.5": 34956,
+      "3.0": 205589,
+      "3.5": 263114,
+      "4.0": 917780,
+      "4.5": 730200,
+      "5.0": 1712429
+    },
+    "por_bucket": {
+      "negativas": 1,
+      "medianas": 6,
+      "positivas": 93
+    },
+    "fonte": "letterboxd_histograma"
+  },
+  "coleta": {
+    "slug": "spider-man-across-the-spider-verse",
+    "coletado_em": "2026-08-09T14:54:34.968664+00:00",
+    "versao_coletor": "1.9.6",
+    "ordenacao_usada": "by/added",
+    "histograma_bruto": {
+      "0.5": 3865,
+      "1.0": 8337,
+      "1.5": 4946,
+      "2.0": 31736,
+      "2.5": 34956,
+      "3.0": 205589,
+      "3.5": 263114,
+      "4.0": 917780,
+      "4.5": 730200,
+      "5.0": 1712429
+    },
+    "orcamento_paginas_por_nivel": {
+      "0.5": 1,
+      "1.0": 3,
+      "1.5": 2,
+      "2.0": 10,
+      "2.5": 6,
+      "3.0": 10,
+      "3.5": 1,
+      "4.0": 4,
+      "4.5": 3,
+      "5.0": 8
+    },
+    "paginas_gastas_por_nivel": {
+      "0.5": 1,
+      "1.0": 2,
+      "1.5": 2,
+      "2.0": 8,
+      "2.5": 5,
+      "3.0": 10,
+      "3.5": 1,
+      "4.0": 4,
+      "4.5": 3,
+      "5.0": 8
+    },
+    "paradas_por_limite": [
+      "0.5",
+      "1.0",
+      "1.5",
+      "2.0",
+      "2.5",
+      "3.0",
+      "3.5",
+      "4.0",
+      "4.5",
+      "5.0"
+    ],
+    "contagem_bruta_por_nivel": {
+      "0.5": 12,
+      "1.0": 24,
+      "1.5": 24,
+      "2.0": 96,
+      "2.5": 53,
+      "3.0": 108,
+      "3.5": 12,
+      "4.0": 48,
+      "4.5": 36,
+      "5.0": 96
+    },
+    "contagem_estimada_valida_por_nivel": {
+      "0.5": 3,
+      "1.0": 9,
+      "1.5": 7,
+      "2.0": 24,
+      "2.5": 19,
+      "3.0": 28,
+      "3.5": 4,
+      "4.0": 11,
+      "4.5": 11,
+      "5.0": 15
+    },
+    "motivo_parada_por_nivel": {
+      "0.5": "orcamento_esgotado",
+      "1.0": "orcamento_esgotado",
+      "1.5": "orcamento_esgotado",
+      "2.0": "orcamento_esgotado",
+      "2.5": "orcamento_esgotado",
+      "3.0": "orcamento_esgotado",
+      "3.5": "orcamento_esgotado",
+      "4.0": "orcamento_esgotado",
+      "4.5": "orcamento_esgotado",
+      "5.0": "orcamento_esgotado"
+    },
+    "paginas_base_por_nivel": {
+      "0.5": 1,
+      "1.0": 2,
+      "1.5": 2,
+      "2.0": 8,
+      "2.5": 5,
+      "3.0": 10,
+      "3.5": 1,
+      "4.0": 4,
+      "4.5": 3,
+      "5.0": 8
+    },
+    "paginas_extensao_por_nivel": {
+      "0.5": 0,
+      "1.0": 0,
+      "1.5": 0,
+      "2.0": 0,
+      "2.5": 0,
+      "3.0": 0,
+      "3.5": 0,
+      "4.0": 0,
+      "4.5": 0,
+      "5.0": 0
+    },
+    "extensao_por_bucket": {
+      "negativas": {
+        "paginas_base": 13,
+        "paginas_extensao": 0,
+        "extras_por_nivel": {},
+        "motivo_parada": "meta_atingida",
+        "n_validas_pos_base": 70,
+        "n_validas_pos_extensao": 70,
+        "meta": 50
+      },
+      "medianas": {
+        "paginas_base": 15,
+        "paginas_extensao": 0,
+        "extras_por_nivel": {},
+        "motivo_parada": "meta_atingida",
+        "n_validas_pos_base": 90,
+        "n_validas_pos_extensao": 90,
+        "meta": 50
+      },
+      "positivas": {
+        "paginas_base": 16,
+        "paginas_extensao": 0,
+        "extras_por_nivel": {},
+        "motivo_parada": "meta_atingida",
+        "n_validas_pos_base": 90,
+        "n_validas_pos_extensao": 90,
+        "meta": 50
+      }
+    },
+    "profundidade_sondagem": {
+      "nivel_sondado": 5.0,
+      "profundidade": 256,
+      "exata": false,
+      "requisicoes": 4,
+      "motivo": "teto_plataforma"
+    },
+    "profundidade_estimada_por_nivel": {
+      "0.5": 1,
+      "1.0": 1,
+      "1.5": 1,
+      "2.0": 5,
+      "2.5": 5,
+      "3.0": 31,
+      "3.5": 39,
+      "4.0": 137,
+      "4.5": 109,
+      "5.0": 256
+    },
+    "janela_temporal": {
+      "total": {
+        "n": 865,
+        "min": "2023-03-19",
+        "max": "2566-05-31",
+        "p5": "2023-05-29",
+        "p50": "2026-08-04",
+        "p95": "2026-08-08"
+      },
+      "por_bucket": {
+        "negativas": {
+          "n": 276,
+          "min": "2023-03-19",
+          "max": "2026-08-08",
+          "p5": "2023-05-31",
+          "p50": "2026-07-21",
+          "p95": "2026-08-07"
+        },
+        "medianas": {
+          "n": 277,
+          "min": "2023-05-10",
+          "max": "2566-05-31",
+          "p5": "2023-05-30",
+          "p50": "2026-08-04",
+          "p95": "2026-08-07"
+        },
+        "positivas": {
+          "n": 312,
+          "min": "2023-05-19",
+          "max": "2026-08-08",
+          "p5": "2023-05-24",
+          "p50": "2026-08-07",
+          "p95": "2026-08-08"
+        }
+      }
+    },
+    "dias_por_100_paginas": {
+      "n_paginas": 16,
+      "pagina_min": 1,
+      "pagina_max": 128,
+      "dias": 0,
+      "dias_por_100_paginas": 0.0,
+      "paginas_para_1_ano": null
+    },
+    "ano_lancamento": 2023,
+    "ano_fonte": "letterboxd",
+    "n_reviews_bruto": 865
+  },
+  "origem_paginas": {
+    "_histograma/spider-man-across-the-spider-verse.html": "cache",
+    "spider-man-across-the-spider-verse/pages/by_added/rated_5_page_4.html": "cache",
+    "spider-man-across-the-spider-verse/pages/by_added/rated_5_page_16.html": "cache",
+    "spider-man-across-the-spider-verse/pages/by_added/rated_5_page_64.html": "cache",
+    "spider-man-across-the-spider-verse/pages/by_added/rated_5_page_256.html": "cache",
+    "spider-man-across-the-spider-verse/pages/by_added/rated_0_5_page_1.html": "cache",
+    "spider-man-across-the-spider-verse/pages/by_added/rated_1_page_1.html": "cache",
+    "spider-man-across-the-spider-verse/pages/by_added/rated_1_page_2.html": "cache",
+    "spider-man-across-the-spider-verse/fulltext/viewing_1438808650.html": "cache",
+    "spider-man-across-the-spider-verse/fulltext/viewing_1428490673.html": "cache",
+    "spider-man-across-the-spider-verse/fulltext/viewing_1423213462.html": "cache",
+    "spider-man-across-the-spider-verse/fulltext/viewing_1422749688.html": "cache",
+    "spider-man-across-the-spider-verse/pages/by_added/rated_1_5_page_1.html": "cache",
+    "spider-man-across-the-spider-verse/pages/by_added/rated_1_5_page_2.html": "cache",
+    "spider-man-across-the-spider-verse/fulltext/viewing_1438369988.html": "cache",
+    "spider-man-across-the-spider-verse/pages/by_added/rated_2_page_1.html": "cache",
+    "spider-man-across-the-spider-verse/pages/by_added/rated_2_page_2.html": "cache",
+    "spider-man-across-the-spider-verse/pages/by_added/rated_2_page_3.html": "cache",
+    "spider-man-across-the-spider-verse/pages/by_added/rated_2_page_4.html": "cache",
+    "spider-man-across-the-spider-verse/pages/by_added/rated_2_page_5.html": "cache",
+    "spider-man-across-the-spider-verse/pages/by_added/rated_2_page_6.html": "cache",
+    "spider-man-across-the-spider-verse/pages/by_added/rated_2_page_7.html": "cache",
+    "spider-man-across-the-spider-verse/pages/by_added/rated_2_page_8.html": "cache",
+    "spider-man-across-the-spider-verse/fulltext/viewing_1436734653.html": "cache",
+    "spider-man-across-the-spider-verse/fulltext/viewing_1433128355.html": "cache",
+    "spider-man-across-the-spider-verse/fulltext/viewing_1430992229.html": "cache",
+    "spider-man-across-the-spider-verse/fulltext/viewing_1422747029.html": "cache",
+    "spider-man-across-the-spider-verse/fulltext/viewing_1422515930.html": "cache",
+    "spider-man-across-the-spider-verse/fulltext/viewing_1410079125.html": "cache",
+    "spider-man-across-the-spider-verse/fulltext/viewing_1407411448.html": "cache",
+    "spider-man-across-the-spider-verse/pages/by_added/rated_2_5_page_1.html": "cache",
+    "spider-man-across-the-spider-verse/pages/by_added/rated_2_5_page_2.html": "cache",
+    "spider-man-across-the-spider-verse/pages/by_added/rated_2_5_page_3.html": "cache",
+    "spider-man-across-the-spider-verse/pages/by_added/rated_2_5_page_4.html": "cache",
+    "spider-man-across-the-spider-verse/pages/by_added/rated_2_5_page_5.html": "cache",
+    "spider-man-across-the-spider-verse/fulltext/viewing_1437628713.html": "cache",
+    "spider-man-across-the-spider-verse/fulltext/viewing_1436465198.html": "cache",
+    "spider-man-across-the-spider-verse/fulltext/viewing_1433880620.html": "cache",
+    "spider-man-across-the-spider-verse/fulltext/viewing_1433123005.html": "cache",
+    "spider-man-across-the-spider-verse/pages/by_added/rated_3_page_1.html": "cache",
+    "spider-man-across-the-spider-verse/pages/by_added/rated_3_page_2.html": "cache",
+    "spider-man-across-the-spider-verse/pages/by_added/rated_3_page_3.html": "cache",
+    "spider-man-across-the-spider-verse/pages/by_added/rated_3_page_4.html": "cache",
+    "spider-man-across-the-spider-verse/pages/by_added/rated_3_page_5.html": "cache",
+    "spider-man-across-the-spider-verse/pages/by_added/rated_3_page_6.html": "cache",
+    "spider-man-across-the-spider-verse/pages/by_added/rated_3_page_7.html": "cache",
+    "spider-man-across-the-spider-verse/pages/by_added/rated_3_page_8.html": "cache",
+    "spider-man-across-the-spider-verse/pages/by_added/rated_3_page_9.html": "cache",
+    "spider-man-across-the-spider-verse/pages/by_added/rated_3_page_16.html": "cache",
+    "spider-man-across-the-spider-verse/fulltext/viewing_1438670443.html": "cache",
+    "spider-man-across-the-spider-verse/fulltext/viewing_1438655424.html": "cache",
+    "spider-man-across-the-spider-verse/fulltext/viewing_1438330372.html": "cache",
+    "spider-man-across-the-spider-verse/fulltext/viewing_1437743944.html": "cache",
+    "spider-man-across-the-spider-verse/fulltext/viewing_1437538076.html": "cache",
+    "spider-man-across-the-spider-verse/fulltext/viewing_1436315694.html": "cache",
+    "spider-man-across-the-spider-verse/fulltext/viewing_1432389570.html": "cache",
+    "spider-man-across-the-spider-verse/fulltext/viewing_1432275396.html": "cache",
+    "spider-man-across-the-spider-verse/pages/by_added/rated_3_5_page_1.html": "cache",
+    "spider-man-across-the-spider-verse/fulltext/viewing_1439541764.html": "cache",
+    "spider-man-across-the-spider-verse/fulltext/viewing_1439507419.html": "cache",
+    "spider-man-across-the-spider-verse/pages/by_added/rated_4_page_1.html": "cache",
+    "spider-man-across-the-spider-verse/pages/by_added/rated_4_page_2.html": "cache",
+    "spider-man-across-the-spider-verse/pages/by_added/rated_4_page_3.html": "cache",
+    "spider-man-across-the-spider-verse/pages/by_added/rated_4_page_34.html": "cache",
+    "spider-man-across-the-spider-verse/fulltext/viewing_1439445378.html": "cache",
+    "spider-man-across-the-spider-verse/fulltext/viewing_1439417692.html": "cache",
+    "spider-man-across-the-spider-verse/fulltext/viewing_1439275907.html": "cache",
+    "spider-man-across-the-spider-verse/fulltext/viewing_1438273440.html": "cache",
+    "spider-man-across-the-spider-verse/fulltext/viewing_1438174942.html": "cache",
+    "spider-man-across-the-spider-verse/pages/by_added/rated_4_5_page_1.html": "cache",
+    "spider-man-across-the-spider-verse/pages/by_added/rated_4_5_page_2.html": "cache",
+    "spider-man-across-the-spider-verse/pages/by_added/rated_4_5_page_27.html": "cache",
+    "spider-man-across-the-spider-verse/fulltext/viewing_1439487160.html": "cache",
+    "spider-man-across-the-spider-verse/fulltext/viewing_1439906540.html": "cache",
+    "spider-man-across-the-spider-verse/pages/by_added/rated_5_page_1.html": "cache",
+    "spider-man-across-the-spider-verse/pages/by_added/rated_5_page_2.html": "cache",
+    "spider-man-across-the-spider-verse/pages/by_added/rated_5_page_3.html": "cache",
+    "spider-man-across-the-spider-verse/pages/by_added/rated_5_page_5.html": "cache",
+    "spider-man-across-the-spider-verse/pages/by_added/rated_5_page_6.html": "cache",
+    "spider-man-across-the-spider-verse/pages/by_added/rated_5_page_128.html": "cache",
+    "spider-man-across-the-spider-verse/fulltext/viewing_1439540281.html": "cache",
+    "spider-man-across-the-spider-verse/fulltext/viewing_1439537666.html": "cache",
+    "spider-man-across-the-spider-verse/fulltext/viewing_1439468547.html": "cache",
+    "spider-man-across-the-spider-verse/film_page.html": "cache"
+  },
+  "buckets": [
+    {
+      "bucket": "negativas",
+      "alvo": 40,
+      "modo": "completo",
+      "estado_piso": "completa",
+      "n_validas": 40,
+      "share_real": 1,
+      "composicao_alvo": {
+        "0.5": 3,
+        "1.0": 7,
+        "1.5": 4,
+        "2.0": 26
+      },
+      "composicao_atingida": {
+        "0.5": 3,
+        "1.0": 7,
+        "1.5": 4,
+        "2.0": 26
+      },
+      "cascata_por_degrau": {
+        "150": 40
+      },
+      "deficit_redistribuido": 0,
+      "distribuicao_pagina_origem": {
+        "n": 40,
+        "min": 1,
+        "max": 12,
+        "p5": 1,
+        "p50": 2,
+        "p95": 10,
+        "fracao_profunda": 0.2
+      },
+      "janela_amostra": {
+        "n": 40,
+        "min": "2023-03-19",
+        "max": "2026-08-08",
+        "p5": "2023-06-01",
+        "p50": "2026-07-30",
+        "p95": "2026-08-07"
+      },
+      "niveis": [
+        {
+          "nivel": 0.5,
+          "n_validas": 3,
+          "n_alvo": 3,
+          "n_brutas": 24,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 3,
+          "n_descartadas_curtas": 18,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 0,
+          "motivos_descarte": {
+            "truncada_sem_texto": 0,
+            "spoiler": 3,
+            "abaixo_min_chars": 18,
+            "excedente_cota": 0,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 1
+        },
+        {
+          "nivel": 1.0,
+          "n_validas": 7,
+          "n_alvo": 7,
+          "n_brutas": 48,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 1,
+          "n_descartadas_curtas": 36,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 1,
+          "motivos_descarte": {
+            "truncada_sem_texto": 1,
+            "spoiler": 1,
+            "abaixo_min_chars": 36,
+            "excedente_cota": 3,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 2
+        },
+        {
+          "nivel": 1.5,
+          "n_validas": 4,
+          "n_alvo": 4,
+          "n_brutas": 36,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 2,
+          "n_descartadas_curtas": 21,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 0,
+          "motivos_descarte": {
+            "truncada_sem_texto": 0,
+            "spoiler": 2,
+            "abaixo_min_chars": 21,
+            "excedente_cota": 9,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 2
+        },
+        {
+          "nivel": 2.0,
+          "n_validas": 26,
+          "n_alvo": 26,
+          "n_brutas": 168,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 7,
+          "n_descartadas_curtas": 114,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 3,
+          "motivos_descarte": {
+            "truncada_sem_texto": 3,
+            "spoiler": 7,
+            "abaixo_min_chars": 114,
+            "excedente_cota": 18,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 8
+        }
+      ],
+      "temas": [
+        {
+          "tema": "Narrativa fragmentada e sem conclusão satisfatória",
+          "mencoes_aproximadas": 20,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "O filme é apenas uma preparação para o próximo, deixando a história sem um desfecho real, o que causa frustração.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Enredo apressado e desordenado",
+          "mencoes_aproximadas": 15,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "A trama se desenvolve de forma confusa e acelerada, com eventos que se sucedem sem uma coesão clara.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Desenvolvimento de personagens fraco ou irritante",
+          "mencoes_aproximadas": 12,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "Os personagens principais são pouco desenvolvidos e o protagonista se comporta de maneira imatura e insuportável.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Duração excessiva e ritmo irregular",
+          "mencoes_aproximadas": 10,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "O filme se arrasta por muito tempo, com uma primeira parte lenta e depois um final apressado, causando tédio.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Excesso de metalinguagem e referências autorreferenciais",
+          "mencoes_aproximadas": 8,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "As constantes piadas, comentários metalinguísticos e referências a outros filmes de super-heróis minam a seriedade da trama.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Vilão insatisfatório e subutilizado",
+          "mencoes_aproximadas": 7,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "O antagonista principal é introduzido de forma cômica e nunca desperta uma ameaça convincente, além de sua participação ser menor do que o esperado.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        }
+      ],
+      "observacao_geral": "As reviews negativas criticam principalmente a estrutura narrativa, que é considerada um longo prelúdio sem conclusão, e o desenvolvimento fraco dos personagens, enquanto reconhecem a qualidade da animação. Muitos espectadores sentem que o filme é visualmente impressionante, mas carece de substância e foco na história.",
+      "idioma_invalido": false,
+      "escopo_suspeito": false
+    },
+    {
+      "bucket": "medianas",
+      "alvo": 40,
+      "modo": "completo",
+      "estado_piso": "completa",
+      "n_validas": 40,
+      "share_real": 6,
+      "composicao_alvo": {
+        "2.5": 6,
+        "3.0": 34
+      },
+      "composicao_atingida": {
+        "2.5": 6,
+        "3.0": 34
+      },
+      "cascata_por_degrau": {
+        "150": 40
+      },
+      "deficit_redistribuido": 0,
+      "distribuicao_pagina_origem": {
+        "n": 40,
+        "min": 1,
+        "max": 16,
+        "p5": 1,
+        "p50": 3,
+        "p95": 12,
+        "fracao_profunda": 0.175
+      },
+      "janela_amostra": {
+        "n": 40,
+        "min": "2023-05-10",
+        "max": "2566-05-31",
+        "p5": "2023-05-30",
+        "p50": "2026-08-03",
+        "p95": "2026-08-07"
+      },
+      "niveis": [
+        {
+          "nivel": 2.5,
+          "n_validas": 6,
+          "n_alvo": 6,
+          "n_brutas": 89,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 5,
+          "n_descartadas_curtas": 52,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 1,
+          "motivos_descarte": {
+            "truncada_sem_texto": 1,
+            "spoiler": 5,
+            "abaixo_min_chars": 52,
+            "excedente_cota": 25,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 5
+        },
+        {
+          "nivel": 3.0,
+          "n_validas": 34,
+          "n_alvo": 34,
+          "n_brutas": 188,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 5,
+          "n_descartadas_curtas": 123,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 1,
+          "motivos_descarte": {
+            "truncada_sem_texto": 1,
+            "spoiler": 5,
+            "abaixo_min_chars": 123,
+            "excedente_cota": 25,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 10
+        }
+      ],
+      "temas": [
+        {
+          "tema": "Animação",
+          "mencoes_aproximadas": 28,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "A animação é frequentemente elogiada como impressionante e inovadora, com muitos destacando a beleza visual e a criatividade dos diferentes estilos de cada universo, embora alguns achem o excesso de estilos visualmente cansativo.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "História",
+          "mencoes_aproximadas": 26,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "A trama é considerada por muitos como um mero preparativo para o terceiro filme, sem um arco completo, resultando em uma sensação de que a história principal não avança de forma satisfatória.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Ritmo",
+          "mencoes_aproximadas": 15,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "O ritmo é apontado como irregular, com longos trechos considerados arrastados ou entediantes, embora a ação e o clímax final sejam frequentemente elogiados como empolgantes.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Trilha sonora",
+          "mencoes_aproximadas": 10,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "A trilha sonora é geralmente elogiada, com muitos destacando que as músicas ajudam a estabelecer a atmosfera e combinam bem com as cenas, embora alguns achem que não é tão marcante quanto a do primeiro filme.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Vilão",
+          "mencoes_aproximadas": 9,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "O vilão é visto de forma mista, com alguns considerando-o interessante e bem desenvolvido, enquanto outros acham que ele não é ameaçador o suficiente ou que sua motivação é confusa.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Desenvolvimento de personagem",
+          "mencoes_aproximadas": 8,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "O desenvolvimento dos personagens é visto como inconsistente, com alguns personagens recebendo atenção insuficiente e o protagonista sendo criticado por agir de forma irracional em certos momentos.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        }
+      ],
+      "observacao_geral": "As reviews medianas destacam a animação excepcional e a trilha sonora envolvente, mas concordam que a trama é essencialmente um prólogo para o próximo filme, resultando em um ritmo irregular e uma sensação de história incompleta. Muitos expressam frustração com a estrutura de duas partes, o que impede que o filme seja totalmente satisfatório como uma obra individual.",
+      "idioma_invalido": false,
+      "escopo_suspeito": false
+    },
+    {
+      "bucket": "positivas",
+      "alvo": 40,
+      "modo": "completo",
+      "estado_piso": "completa",
+      "n_validas": 40,
+      "share_real": 93,
+      "composicao_alvo": {
+        "3.5": 3,
+        "4.0": 10,
+        "4.5": 8,
+        "5.0": 19
+      },
+      "composicao_atingida": {
+        "3.5": 3,
+        "4.0": 10,
+        "4.5": 8,
+        "5.0": 19
+      },
+      "cascata_por_degrau": {
+        "150": 40
+      },
+      "deficit_redistribuido": 0,
+      "distribuicao_pagina_origem": {
+        "n": 40,
+        "min": 1,
+        "max": 34,
+        "p5": 1,
+        "p50": 3,
+        "p95": 10,
+        "fracao_profunda": 0.325
+      },
+      "janela_amostra": {
+        "n": 40,
+        "min": "2023-05-19",
+        "max": "2026-08-08",
+        "p5": "2023-05-24",
+        "p50": "2026-08-07",
+        "p95": "2026-08-08"
+      },
+      "niveis": [
+        {
+          "nivel": 3.5,
+          "n_validas": 3,
+          "n_alvo": 3,
+          "n_brutas": 24,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 4,
+          "n_descartadas_curtas": 9,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 0,
+          "motivos_descarte": {
+            "truncada_sem_texto": 0,
+            "spoiler": 4,
+            "abaixo_min_chars": 9,
+            "excedente_cota": 8,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 1
+        },
+        {
+          "nivel": 4.0,
+          "n_validas": 10,
+          "n_alvo": 10,
+          "n_brutas": 84,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 1,
+          "n_descartadas_curtas": 60,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 0,
+          "motivos_descarte": {
+            "truncada_sem_texto": 0,
+            "spoiler": 1,
+            "abaixo_min_chars": 60,
+            "excedente_cota": 13,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 4
+        },
+        {
+          "nivel": 4.5,
+          "n_validas": 8,
+          "n_alvo": 8,
+          "n_brutas": 60,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 1,
+          "n_descartadas_curtas": 36,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 1,
+          "motivos_descarte": {
+            "truncada_sem_texto": 1,
+            "spoiler": 1,
+            "abaixo_min_chars": 36,
+            "excedente_cota": 14,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 3
+        },
+        {
+          "nivel": 5.0,
+          "n_validas": 19,
+          "n_alvo": 19,
+          "n_brutas": 144,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 6,
+          "n_descartadas_curtas": 102,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 2,
+          "motivos_descarte": {
+            "truncada_sem_texto": 2,
+            "spoiler": 6,
+            "abaixo_min_chars": 102,
+            "excedente_cota": 15,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 8
+        }
+      ],
+      "temas": [
+        {
+          "tema": "Animação inovadora e impressionante",
+          "mencoes_aproximadas": 32,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "A animação é considerada um marco histórico, com cada quadro parecendo uma obra de arte e uma combinação única de estilos visuais.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Trilha sonora marcante",
+          "mencoes_aproximadas": 9,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "A música, especialmente a de Metro Boomin, é elogiada por aumentar a intensidade das cenas e complementar perfeitamente a narrativa.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Desenvolvimento de personagens",
+          "mencoes_aproximadas": 8,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "Os arcos de Miles e Gwen são destacados como emocionantes e bem construídos, com destaque para a relação entre Gwen e seu pai.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "História envolvente e amadurecida",
+          "mencoes_aproximadas": 7,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "A trama é considerada mais séria e madura que a anterior, explorando temas como identidade e destino, e sendo uma das melhores histórias do Homem-Aranha.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Cliffhanger e expectativa pela continuação",
+          "mencoes_aproximadas": 7,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "O final deixa muitas pontas soltas, o que gera frustração, mas também muita expectativa pelo próximo filme, sendo um dos pontos mais comentados.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Ritmo frenético e excesso de informações",
+          "mencoes_aproximadas": 5,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "Alguns acham o filme visualmente cansativo e com excesso de estímulos, embora isso não diminua o prazer geral.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        }
+      ],
+      "observacao_geral": "As reviews positivas celebram o filme como um marco da animação, destacando a inovação visual, a trilha sonora e o amadurecimento da história, embora alguns mencionem a exaustão visual e o final abrupto como pontos negativos dentro do contexto geral de admiração.",
+      "idioma_invalido": false,
+      "escopo_suspeito": false
+    }
+  ],
+  "eixos": {
+    "taxonomia_id": "ebab2667de74",
+    "margem_lift_pp": 20,
+    "contraste": "tematico",
+    "linhas": [
+      {
+        "eixo": "ritmo",
+        "por_bucket": {
+          "negativas": {
+            "mencoes": 9,
+            "de_n": 22,
+            "freq_pct": 40.9,
+            "lift_pp": -9.1,
+            "tema": "Enredo apressado e desordenado",
+            "exemplo_parafraseado": "A trama se desenvolve de forma confusa e acelerada, com eventos que se sucedem sem uma coesão clara.",
+            "temas_no_mesmo_eixo": [
+              "Duração excessiva e ritmo irregular"
+            ]
+          },
+          "medianas": {
+            "mencoes": 10,
+            "de_n": 20,
+            "freq_pct": 50.0,
+            "lift_pp": 9.1,
+            "tema": "Ritmo",
+            "exemplo_parafraseado": "O ritmo é apontado como irregular, com longos trechos considerados arrastados ou entediantes, embora a ação e o clímax final sejam frequentemente elogiados como empolgantes.",
+            "temas_no_mesmo_eixo": []
+          },
+          "positivas": {
+            "mencoes": 5,
+            "de_n": 20,
+            "freq_pct": 25.0,
+            "lift_pp": -25.0,
+            "tema": "Ritmo frenético e excesso de informações",
+            "exemplo_parafraseado": "Alguns acham o filme visualmente cansativo e com excesso de estímulos, embora isso não diminua o prazer geral.",
+            "temas_no_mesmo_eixo": []
+          }
+        },
+        "bullet_de": {
+          "negativas": null,
+          "medianas": null,
+          "positivas": null
+        }
+      },
+      {
+        "eixo": "atuacao",
+        "por_bucket": {
+          "negativas": {
+            "mencoes": 0,
+            "de_n": 22,
+            "freq_pct": 0.0,
+            "lift_pp": -10.0,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "medianas": {
+            "mencoes": 2,
+            "de_n": 20,
+            "freq_pct": 10.0,
+            "lift_pp": 10.0,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "positivas": {
+            "mencoes": 0,
+            "de_n": 20,
+            "freq_pct": 0.0,
+            "lift_pp": -10.0,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          }
+        },
+        "bullet_de": {
+          "negativas": null,
+          "medianas": null,
+          "positivas": null
+        }
+      },
+      {
+        "eixo": "direcao_imagem",
+        "por_bucket": {
+          "negativas": {
+            "mencoes": 11,
+            "de_n": 22,
+            "freq_pct": 50.0,
+            "lift_pp": -20.0,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "medianas": {
+            "mencoes": 14,
+            "de_n": 20,
+            "freq_pct": 70.0,
+            "lift_pp": 20.0,
+            "tema": "Animação",
+            "exemplo_parafraseado": "A animação é frequentemente elogiada como impressionante e inovadora, com muitos destacando a beleza visual e a criatividade dos diferentes estilos de cada universo, embora alguns achem o excesso de estilos visualmente cansativo.",
+            "temas_no_mesmo_eixo": []
+          },
+          "positivas": {
+            "mencoes": 10,
+            "de_n": 20,
+            "freq_pct": 50.0,
+            "lift_pp": -20.0,
+            "tema": "Animação inovadora e impressionante",
+            "exemplo_parafraseado": "A animação é considerada um marco histórico, com cada quadro parecendo uma obra de arte e uma combinação única de estilos visuais.",
+            "temas_no_mesmo_eixo": []
+          }
+        },
+        "bullet_de": {
+          "negativas": "frequencia",
+          "medianas": "contraste",
+          "positivas": null
+        }
+      },
+      {
+        "eixo": "roteiro_estrutura",
+        "por_bucket": {
+          "negativas": {
+            "mencoes": 14,
+            "de_n": 22,
+            "freq_pct": 63.6,
+            "lift_pp": -11.4,
+            "tema": "Narrativa fragmentada e sem conclusão satisfatória",
+            "exemplo_parafraseado": "O filme é apenas uma preparação para o próximo, deixando a história sem um desfecho real, o que causa frustração.",
+            "temas_no_mesmo_eixo": [
+              "Desenvolvimento de personagens fraco ou irritante",
+              "Vilão insatisfatório e subutilizado"
+            ]
+          },
+          "medianas": {
+            "mencoes": 15,
+            "de_n": 20,
+            "freq_pct": 75.0,
+            "lift_pp": 11.4,
+            "tema": "História",
+            "exemplo_parafraseado": "A trama é considerada por muitos como um mero preparativo para o terceiro filme, sem um arco completo, resultando em uma sensação de que a história principal não avança de forma satisfatória.",
+            "temas_no_mesmo_eixo": [
+              "Vilão",
+              "Desenvolvimento de personagem"
+            ]
+          },
+          "positivas": {
+            "mencoes": 11,
+            "de_n": 20,
+            "freq_pct": 55.0,
+            "lift_pp": -20.0,
+            "tema": "Desenvolvimento de personagens",
+            "exemplo_parafraseado": "Os arcos de Miles e Gwen são destacados como emocionantes e bem construídos, com destaque para a relação entre Gwen e seu pai.",
+            "temas_no_mesmo_eixo": [
+              "História envolvente e amadurecida"
+            ]
+          }
+        },
+        "bullet_de": {
+          "negativas": "frequencia",
+          "medianas": "frequencia",
+          "positivas": "frequencia"
+        }
+      },
+      {
+        "eixo": "som_trilha",
+        "por_bucket": {
+          "negativas": {
+            "mencoes": 5,
+            "de_n": 22,
+            "freq_pct": 22.7,
+            "lift_pp": 2.7,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "medianas": {
+            "mencoes": 4,
+            "de_n": 20,
+            "freq_pct": 20.0,
+            "lift_pp": -2.7,
+            "tema": "Trilha sonora",
+            "exemplo_parafraseado": "A trilha sonora é geralmente elogiada, com muitos destacando que as músicas ajudam a estabelecer a atmosfera e combinam bem com as cenas, embora alguns achem que não é tão marcante quanto a do primeiro filme.",
+            "temas_no_mesmo_eixo": []
+          },
+          "positivas": {
+            "mencoes": 4,
+            "de_n": 20,
+            "freq_pct": 20.0,
+            "lift_pp": -2.7,
+            "tema": "Trilha sonora marcante",
+            "exemplo_parafraseado": "A música, especialmente a de Metro Boomin, é elogiada por aumentar a intensidade das cenas e complementar perfeitamente a narrativa.",
+            "temas_no_mesmo_eixo": []
+          }
+        },
+        "bullet_de": {
+          "negativas": null,
+          "medianas": null,
+          "positivas": null
+        }
+      },
+      {
+        "eixo": "tom_atmosfera",
+        "por_bucket": {
+          "negativas": {
+            "mencoes": 1,
+            "de_n": 22,
+            "freq_pct": 4.5,
+            "lift_pp": -10.5,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "medianas": {
+            "mencoes": 1,
+            "de_n": 20,
+            "freq_pct": 5.0,
+            "lift_pp": -10.0,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "positivas": {
+            "mencoes": 3,
+            "de_n": 20,
+            "freq_pct": 15.0,
+            "lift_pp": 10.0,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          }
+        },
+        "bullet_de": {
+          "negativas": null,
+          "medianas": null,
+          "positivas": null
+        }
+      },
+      {
+        "eixo": "impacto_emocional",
+        "por_bucket": {
+          "negativas": {
+            "mencoes": 9,
+            "de_n": 22,
+            "freq_pct": 40.9,
+            "lift_pp": -9.1,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "medianas": {
+            "mencoes": 4,
+            "de_n": 20,
+            "freq_pct": 20.0,
+            "lift_pp": -30.0,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "positivas": {
+            "mencoes": 10,
+            "de_n": 20,
+            "freq_pct": 50.0,
+            "lift_pp": 9.1,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          }
+        },
+        "bullet_de": {
+          "negativas": null,
+          "medianas": null,
+          "positivas": null
+        }
+      },
+      {
+        "eixo": "comparacoes",
+        "por_bucket": {
+          "negativas": {
+            "mencoes": 10,
+            "de_n": 22,
+            "freq_pct": 45.5,
+            "lift_pp": -34.5,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "medianas": {
+            "mencoes": 16,
+            "de_n": 20,
+            "freq_pct": 80.0,
+            "lift_pp": 25.0,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "positivas": {
+            "mencoes": 11,
+            "de_n": 20,
+            "freq_pct": 55.0,
+            "lift_pp": -25.0,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          }
+        },
+        "bullet_de": {
+          "negativas": null,
+          "medianas": "frequencia_e_contraste",
+          "positivas": "frequencia"
+        }
+      },
+      {
+        "eixo": "expectativa",
+        "por_bucket": {
+          "negativas": {
+            "mencoes": 3,
+            "de_n": 22,
+            "freq_pct": 13.6,
+            "lift_pp": -31.4,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "medianas": {
+            "mencoes": 9,
+            "de_n": 20,
+            "freq_pct": 45.0,
+            "lift_pp": 5.0,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "positivas": {
+            "mencoes": 8,
+            "de_n": 20,
+            "freq_pct": 40.0,
+            "lift_pp": -5.0,
+            "tema": "Cliffhanger e expectativa pela continuação",
+            "exemplo_parafraseado": "O final deixa muitas pontas soltas, o que gera frustração, mas também muita expectativa pelo próximo filme, sendo um dos pontos mais comentados.",
+            "temas_no_mesmo_eixo": []
+          }
+        },
+        "bullet_de": {
+          "negativas": null,
+          "medianas": null,
+          "positivas": null
+        }
+      },
+      {
+        "eixo": "critica_social",
+        "por_bucket": {
+          "negativas": {
+            "mencoes": 5,
+            "de_n": 22,
+            "freq_pct": 22.7,
+            "lift_pp": -2.3,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "medianas": {
+            "mencoes": 5,
+            "de_n": 20,
+            "freq_pct": 25.0,
+            "lift_pp": 2.3,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "positivas": {
+            "mencoes": 2,
+            "de_n": 20,
+            "freq_pct": 10.0,
+            "lift_pp": -15.0,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          }
+        },
+        "bullet_de": {
+          "negativas": null,
+          "medianas": null,
+          "positivas": null
+        }
+      }
+    ],
+    "fonte_classificacao": {
+      "arquivo": "resultado/votacao-3/consenso.jsonl",
+      "criterio": "votacao_3_consenso_2_de_3",
+      "por_bucket": {
+        "negativas": {
+          "n_classificadas": 22,
+          "n_analisadas": 40,
+          "sobreposicao_com_analisadas": 22
+        },
+        "medianas": {
+          "n_classificadas": 20,
+          "n_analisadas": 40,
+          "sobreposicao_com_analisadas": 20
+        },
+        "positivas": {
+          "n_classificadas": 20,
+          "n_analisadas": 40,
+          "sobreposicao_com_analisadas": 20
+        }
+      }
+    },
+    "rotulagem": {
+      "n_chamadas": 3,
+      "falharam": [],
+      "fora_da_taxonomia": {},
+      "houve_retentativa": []
+    },
+    "spec_version": "1.9.16",
+    "verificador": {
+      "aplicado": true,
+      "variante": "V2_alvo",
+      "passada": 1,
+      "eixo": "impacto_emocional",
+      "n_removidas_no_corpus": 1654
+    }
+  },
+  "narrativa": "Lançado em 2023 e dirigido por Justin K. Thompson, Homem-Aranha: Através do Aranhaverso é uma animação de ação, aventura e ficção científica. Na trama, Miles Morales viaja através do Multiverso e une forças com Gwen Stacy e uma nova equipe de Homens-Aranha para enfrentar uma perigosa ameaça.\n\nA experiência do longa é marcada por um ritmo acelerado e por uma densa sobreposição de estilos visuais dinâmicos ao longo de toda a sua exibição.\n\nNa grande maioria das notas (~93%), a maior parte exalta a animação inovadora e impressionante da obra. Além disso, uma parte desse grupo elogia a trilha sonora marcante, enquanto uma fatia menor destaca o desenvolvimento de personagens na narrativa.\n\nPara quem está nessa faixa, numa fração mínima das notas (~6%), o foco recai intensamente sobre a direção de imagem: grande parte analisa a animação e seus diferentes estilos visuais, a maioria debate o desenrolar da história em relação à sua estrutura e uma parcela expressiva aponta oscilações no ritmo.\n\nJá na perspectiva de quem avalia numa fração ainda menor das notas (~1%), muitos criticam a narrativa fragmentada e sem conclusão satisfatória. Nesse mesmo grupo, vários consideram o enredo apressado e desordenado, e um número considerável aponta um desenvolvimento de personagens fraco ou irritante.",
+  "verificacao_narrativa": {
+    "quantificador_fora_de_faixa": [],
+    "quantificador_repetido": [],
+    "paragrafos": {
+      "n_paragrafos": 5,
+      "minimo": 3,
+      "insuficientes": false,
+      "longos": []
+    },
+    "n_paragrafos": 5,
+    "paragrafos_insuficientes": false,
+    "paragrafos_longos": [],
+    "grupos_sem_paragrafo_proprio": [],
+    "movimento1_e_movimento2_no_mesmo_paragrafo": true,
+    "formato_invalido": false,
+    "numeros_inventados": [],
+    "rotulos_faltando": [],
+    "ordem_incorreta": false,
+    "vocabulario_peso": false,
+    "resenha_speak": [],
+    "n_resenha_speak": 0,
+    "n_flags": 1
+  },
+  "narrativa_selecao": {
+    "provider": "gemini",
+    "modelo": "gemini-3.7-flash",
+    "n_candidatos": 3,
+    "n_chamadas": 4,
+    "indice_escolhido": 2,
+    "motivo": "menor_severidade",
+    "criterio_decisivo": "empate",
+    "candidatos": [
+      {
+        "indice": 0,
+        "n_flags": 1,
+        "cliches": 1,
+        "repeticao_max": 1,
+        "ritmo": 12,
+        "cobertura": 1.0,
+        "eliminado": true
+      },
+      {
+        "indice": 1,
+        "n_flags": 1,
+        "cliches": 0,
+        "repeticao_max": 1,
+        "ritmo": 9,
+        "cobertura": 1.0,
+        "eliminado": true
+      },
+      {
+        "indice": 2,
+        "n_flags": 1,
+        "cliches": 0,
+        "repeticao_max": 1,
+        "ritmo": 11,
+        "cobertura": 1.0,
+        "eliminado": true
+      }
+    ],
+    "retry": {
+      "n_frases_infratoras": 0,
+      "motivos": [],
+      "n_flags_depois": 1,
+      "aplicado": false
+    },
+    "uso": {
+      "prompt_tokens": 11346,
+      "completion_tokens": 1336,
+      "cache_hit_tokens": 0,
+      "cache_miss_tokens": 11346
+    },
+    "latencia_s": 24.91
+  }
+}

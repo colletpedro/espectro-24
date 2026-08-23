@@ -1,0 +1,1348 @@
+{
+  "slug": "the-godfather",
+  "data_coleta": "2026-08-23T01:12:05.901387+00:00",
+  "spec_version": "1.9.16",
+  "total_reviews_observadas": 616,
+  "reviews_url": "https://letterboxd.com/film/the-godfather/reviews/",
+  "ficha": {
+    "titulo": "O Poderoso Chefão",
+    "sinopse_oficial": "Em 1945, Don Corleone é o chefe de uma mafiosa família italiana de Nova York. Ele costuma apadrinhar várias pessoas, realizando importantes favores para elas, em troca de favores futuros. Com a chegada das drogas, as famílias começam uma disputa pelo promissor mercado. Quando Corleone se recusa a facilitar a entrada dos narcóticos na cidade, não oferecendo ajuda política e policial, sua família começa a sofrer atentados para que mudem de posição. É nessa complicada época que Michael, um herói de guerra nunca envolvido nos negócios da família, vê a necessidade de proteger o seu pai e tudo o que ele construiu ao longo dos anos.",
+    "sinopse_fallback_en": false,
+    "generos": [
+      "Drama",
+      "Crime"
+    ],
+    "duracao_min": 175,
+    "diretor": "Francis Ford Coppola",
+    "diretor_transliterado": false,
+    "ano": 1972,
+    "fonte": "tmdb",
+    "ano_fonte": "bruto"
+  },
+  "distribuicao": {
+    "n_notas_total": 2842603,
+    "por_nivel": {
+      "0.5": 8647,
+      "1.0": 13480,
+      "1.5": 5638,
+      "2.0": 29282,
+      "2.5": 22859,
+      "3.0": 127677,
+      "3.5": 135774,
+      "4.0": 555145,
+      "4.5": 466961,
+      "5.0": 1477140
+    },
+    "por_bucket": {
+      "negativas": 2,
+      "medianas": 5,
+      "positivas": 93
+    },
+    "fonte": "letterboxd_histograma"
+  },
+  "coleta": {
+    "slug": "the-godfather",
+    "coletado_em": "2026-08-23T01:11:43.536492+00:00",
+    "versao_coletor": "1.9.6",
+    "ordenacao_usada": "by/added",
+    "histograma_bruto": {
+      "0.5": 8647,
+      "1.0": 13480,
+      "1.5": 5638,
+      "2.0": 29282,
+      "2.5": 22859,
+      "3.0": 127677,
+      "3.5": 135774,
+      "4.0": 555145,
+      "4.5": 466961,
+      "5.0": 1477140
+    },
+    "orcamento_paginas_por_nivel": {
+      "0.5": 2,
+      "1.0": 4,
+      "1.5": 2,
+      "2.0": 8,
+      "2.5": 6,
+      "3.0": 10,
+      "3.5": 1,
+      "4.0": 3,
+      "4.5": 3,
+      "5.0": 9
+    },
+    "paginas_gastas_por_nivel": {
+      "0.5": 2,
+      "1.0": 4,
+      "1.5": 2,
+      "2.0": 13,
+      "2.5": 4,
+      "3.0": 14,
+      "3.5": 1,
+      "4.0": 3,
+      "4.5": 3,
+      "5.0": 9
+    },
+    "paradas_por_limite": [
+      "0.5",
+      "1.0",
+      "1.5",
+      "2.0",
+      "2.5",
+      "3.0",
+      "3.5",
+      "4.0",
+      "4.5",
+      "5.0"
+    ],
+    "contagem_bruta_por_nivel": {
+      "0.5": 24,
+      "1.0": 39,
+      "1.5": 24,
+      "2.0": 133,
+      "2.5": 48,
+      "3.0": 156,
+      "3.5": 12,
+      "4.0": 36,
+      "4.5": 36,
+      "5.0": 108
+    },
+    "contagem_estimada_valida_por_nivel": {
+      "0.5": 3,
+      "1.0": 3,
+      "1.5": 4,
+      "2.0": 19,
+      "2.5": 12,
+      "3.0": 31,
+      "3.5": 4,
+      "4.0": 13,
+      "4.5": 10,
+      "5.0": 23
+    },
+    "motivo_parada_por_nivel": {
+      "0.5": "orcamento_esgotado",
+      "1.0": "orcamento_esgotado",
+      "1.5": "orcamento_esgotado",
+      "2.0": "orcamento_esgotado",
+      "2.5": "orcamento_esgotado",
+      "3.0": "orcamento_esgotado",
+      "3.5": "orcamento_esgotado",
+      "4.0": "orcamento_esgotado",
+      "4.5": "orcamento_esgotado",
+      "5.0": "orcamento_esgotado"
+    },
+    "paginas_base_por_nivel": {
+      "0.5": 2,
+      "1.0": 3,
+      "1.5": 2,
+      "2.0": 6,
+      "2.5": 4,
+      "3.0": 10,
+      "3.5": 1,
+      "4.0": 3,
+      "4.5": 3,
+      "5.0": 9
+    },
+    "paginas_extensao_por_nivel": {
+      "0.5": 0,
+      "1.0": 1,
+      "1.5": 0,
+      "2.0": 7,
+      "2.5": 0,
+      "3.0": 4,
+      "3.5": 0,
+      "4.0": 0,
+      "4.5": 0,
+      "5.0": 0
+    },
+    "extensao_por_bucket": {
+      "negativas": {
+        "paginas_base": 13,
+        "paginas_extensao": 8,
+        "extras_por_nivel": {
+          "1.0": 1,
+          "2.0": 7
+        },
+        "motivo_parada": "teto_extensao",
+        "n_validas_pos_base": 25,
+        "n_validas_pos_extensao": 30,
+        "meta": 50
+      },
+      "medianas": {
+        "paginas_base": 14,
+        "paginas_extensao": 4,
+        "extras_por_nivel": {
+          "3.0": 4
+        },
+        "motivo_parada": "meta_atingida",
+        "n_validas_pos_base": 43,
+        "n_validas_pos_extensao": 50,
+        "meta": 50
+      },
+      "positivas": {
+        "paginas_base": 16,
+        "paginas_extensao": 0,
+        "extras_por_nivel": {},
+        "motivo_parada": "meta_atingida",
+        "n_validas_pos_base": 57,
+        "n_validas_pos_extensao": 57,
+        "meta": 50
+      }
+    },
+    "profundidade_sondagem": {
+      "nivel_sondado": 5.0,
+      "profundidade": 256,
+      "exata": false,
+      "requisicoes": 4,
+      "motivo": "teto_plataforma"
+    },
+    "profundidade_estimada_por_nivel": {
+      "0.5": 1,
+      "1.0": 2,
+      "1.5": 1,
+      "2.0": 5,
+      "2.5": 4,
+      "3.0": 22,
+      "3.5": 24,
+      "4.0": 96,
+      "4.5": 81,
+      "5.0": 256
+    },
+    "janela_temporal": {
+      "total": {
+        "n": 700,
+        "min": "1972-01-01",
+        "max": "2026-08-20",
+        "p5": "2026-06-28",
+        "p50": "2026-08-06",
+        "p95": "2026-08-17"
+      },
+      "por_bucket": {
+        "negativas": {
+          "n": 232,
+          "min": "2021-02-28",
+          "max": "2026-08-08",
+          "p5": "2026-07-16",
+          "p50": "2026-08-03",
+          "p95": "2026-08-07"
+        },
+        "medianas": {
+          "n": 228,
+          "min": "2020-12-03",
+          "max": "2026-08-17",
+          "p5": "2026-07-20",
+          "p50": "2026-08-04",
+          "p95": "2026-08-16"
+        },
+        "positivas": {
+          "n": 240,
+          "min": "1972-01-01",
+          "max": "2026-08-20",
+          "p5": "2026-06-28",
+          "p50": "2026-08-07",
+          "p95": "2026-08-19"
+        }
+      }
+    },
+    "dias_por_100_paginas": {
+      "n_paginas": 18,
+      "pagina_min": 1,
+      "pagina_max": 128,
+      "dias": -8,
+      "dias_por_100_paginas": -6.299212598425197,
+      "paginas_para_1_ano": null
+    },
+    "ano_lancamento": 1972,
+    "ano_fonte": "letterboxd",
+    "n_reviews_bruto": 700
+  },
+  "origem_paginas": {
+    "_histograma/the-godfather.html": "cache",
+    "the-godfather/pages/by_added/rated_5_page_4.html": "cache",
+    "the-godfather/pages/by_added/rated_5_page_16.html": "cache",
+    "the-godfather/pages/by_added/rated_5_page_64.html": "cache",
+    "the-godfather/pages/by_added/rated_5_page_256.html": "network",
+    "the-godfather/pages/by_added/rated_0_5_page_1.html": "cache",
+    "the-godfather/pages/by_added/rated_0_5_page_2.html": "cache",
+    "the-godfather/fulltext/viewing_1438806897.html": "cache",
+    "the-godfather/pages/by_added/rated_1_page_1.html": "cache",
+    "the-godfather/pages/by_added/rated_1_page_2.html": "cache",
+    "the-godfather/pages/by_added/rated_1_page_3.html": "cache",
+    "the-godfather/fulltext/viewing_1433107018.html": "cache",
+    "the-godfather/pages/by_added/rated_1_5_page_1.html": "cache",
+    "the-godfather/pages/by_added/rated_1_5_page_2.html": "cache",
+    "the-godfather/pages/by_added/rated_2_page_1.html": "cache",
+    "the-godfather/pages/by_added/rated_2_page_2.html": "cache",
+    "the-godfather/pages/by_added/rated_2_page_3.html": "cache",
+    "the-godfather/pages/by_added/rated_2_page_4.html": "cache",
+    "the-godfather/pages/by_added/rated_2_page_5.html": "cache",
+    "the-godfather/pages/by_added/rated_2_page_6.html": "cache",
+    "the-godfather/fulltext/viewing_1438995404.html": "cache",
+    "the-godfather/fulltext/viewing_1426052902.html": "cache",
+    "the-godfather/pages/by_added/rated_2_5_page_1.html": "cache",
+    "the-godfather/pages/by_added/rated_2_5_page_2.html": "cache",
+    "the-godfather/pages/by_added/rated_2_5_page_3.html": "cache",
+    "the-godfather/pages/by_added/rated_2_5_page_4.html": "cache",
+    "the-godfather/fulltext/viewing_1435994757.html": "cache",
+    "the-godfather/fulltext/viewing_1434832002.html": "cache",
+    "the-godfather/pages/by_added/rated_3_page_1.html": "cache",
+    "the-godfather/pages/by_added/rated_3_page_2.html": "cache",
+    "the-godfather/pages/by_added/rated_3_page_3.html": "cache",
+    "the-godfather/pages/by_added/rated_3_page_4.html": "cache",
+    "the-godfather/pages/by_added/rated_3_page_5.html": "cache",
+    "the-godfather/pages/by_added/rated_3_page_6.html": "cache",
+    "the-godfather/pages/by_added/rated_3_page_7.html": "cache",
+    "the-godfather/pages/by_added/rated_3_page_8.html": "cache",
+    "the-godfather/pages/by_added/rated_3_page_9.html": "cache",
+    "the-godfather/pages/by_added/rated_3_page_11.html": "network",
+    "the-godfather/fulltext/viewing_1433257735.html": "cache",
+    "the-godfather/fulltext/viewing_1454639897.html": "network",
+    "the-godfather/pages/by_added/rated_3_5_page_1.html": "cache",
+    "the-godfather/fulltext/viewing_1439501539.html": "cache",
+    "the-godfather/fulltext/viewing_1439210522.html": "cache",
+    "the-godfather/fulltext/viewing_1438627719.html": "cache",
+    "the-godfather/pages/by_added/rated_4_page_1.html": "cache",
+    "the-godfather/pages/by_added/rated_4_page_2.html": "cache",
+    "the-godfather/pages/by_added/rated_4_page_24.html": "network",
+    "the-godfather/fulltext/viewing_1457445311.html": "network",
+    "the-godfather/fulltext/viewing_1457187375.html": "network",
+    "the-godfather/pages/by_added/rated_4_5_page_1.html": "cache",
+    "the-godfather/pages/by_added/rated_4_5_page_2.html": "cache",
+    "the-godfather/pages/by_added/rated_4_5_page_20.html": "network",
+    "the-godfather/fulltext/viewing_1439294423.html": "cache",
+    "the-godfather/fulltext/viewing_1439164253.html": "cache",
+    "the-godfather/pages/by_added/rated_5_page_1.html": "cache",
+    "the-godfather/pages/by_added/rated_5_page_2.html": "cache",
+    "the-godfather/pages/by_added/rated_5_page_3.html": "cache",
+    "the-godfather/pages/by_added/rated_5_page_5.html": "cache",
+    "the-godfather/pages/by_added/rated_5_page_6.html": "cache",
+    "the-godfather/pages/by_added/rated_5_page_7.html": "cache",
+    "the-godfather/pages/by_added/rated_5_page_128.html": "network",
+    "the-godfather/fulltext/viewing_1439309385.html": "cache",
+    "the-godfather/fulltext/viewing_1439211732.html": "cache",
+    "the-godfather/fulltext/viewing_1439195002.html": "cache",
+    "the-godfather/fulltext/viewing_1458281687.html": "network",
+    "the-godfather/pages/by_added/rated_2_page_7.html": "cache",
+    "the-godfather/pages/by_added/rated_2_page_8.html": "cache",
+    "the-godfather/fulltext/viewing_1420097318.html": "cache",
+    "the-godfather/pages/by_added/rated_2_page_9.html": "cache",
+    "the-godfather/pages/by_added/rated_2_page_10.html": "cache",
+    "the-godfather/fulltext/viewing_1417660254.html": "cache",
+    "the-godfather/pages/by_added/rated_2_page_11.html": "cache",
+    "the-godfather/pages/by_added/rated_2_page_12.html": "cache",
+    "the-godfather/pages/by_added/rated_2_page_13.html": "cache",
+    "the-godfather/fulltext/viewing_1408513459.html": "cache",
+    "the-godfather/pages/by_added/rated_1_page_4.html": "cache",
+    "the-godfather/pages/by_added/rated_3_page_10.html": "cache",
+    "the-godfather/pages/by_added/rated_3_page_12.html": "cache",
+    "the-godfather/pages/by_added/rated_3_page_13.html": "network",
+    "the-godfather/fulltext/viewing_1453399751.html": "network",
+    "the-godfather/pages/by_added/rated_3_page_14.html": "network",
+    "the-godfather/film_page.html": "cache"
+  },
+  "buckets": [
+    {
+      "bucket": "negativas",
+      "alvo": 40,
+      "modo": "reduzido",
+      "estado_piso": "completa",
+      "n_validas": 30,
+      "share_real": 2,
+      "composicao_alvo": {
+        "0.5": 6,
+        "1.0": 9,
+        "1.5": 4,
+        "2.0": 21
+      },
+      "composicao_atingida": {
+        "0.5": 3,
+        "1.0": 4,
+        "1.5": 4,
+        "2.0": 19
+      },
+      "cascata_por_degrau": {
+        "150": 30
+      },
+      "deficit_redistribuido": 0,
+      "distribuicao_pagina_origem": {
+        "n": 30,
+        "min": 1,
+        "max": 13,
+        "p5": 1,
+        "p50": 5,
+        "p95": 13,
+        "fracao_profunda": 0.4
+      },
+      "janela_amostra": {
+        "n": 30,
+        "min": "2026-04-22",
+        "max": "2026-08-08",
+        "p5": "2026-07-16",
+        "p50": "2026-07-31",
+        "p95": "2026-08-07"
+      },
+      "niveis": [
+        {
+          "nivel": 0.5,
+          "n_validas": 3,
+          "n_alvo": 6,
+          "n_brutas": 24,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 0,
+          "n_descartadas_curtas": 21,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 0,
+          "motivos_descarte": {
+            "truncada_sem_texto": 0,
+            "spoiler": 0,
+            "abaixo_min_chars": 21,
+            "excedente_cota": 0,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 2
+        },
+        {
+          "nivel": 1.0,
+          "n_validas": 4,
+          "n_alvo": 9,
+          "n_brutas": 51,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 0,
+          "n_descartadas_curtas": 47,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 0,
+          "motivos_descarte": {
+            "truncada_sem_texto": 0,
+            "spoiler": 0,
+            "abaixo_min_chars": 47,
+            "excedente_cota": 0,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 4
+        },
+        {
+          "nivel": 1.5,
+          "n_validas": 4,
+          "n_alvo": 4,
+          "n_brutas": 24,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 0,
+          "n_descartadas_curtas": 20,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 0,
+          "motivos_descarte": {
+            "truncada_sem_texto": 0,
+            "spoiler": 0,
+            "abaixo_min_chars": 20,
+            "excedente_cota": 0,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 2
+        },
+        {
+          "nivel": 2.0,
+          "n_validas": 19,
+          "n_alvo": 21,
+          "n_brutas": 133,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 2,
+          "n_descartadas_curtas": 107,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 5,
+          "motivos_descarte": {
+            "truncada_sem_texto": 5,
+            "spoiler": 2,
+            "abaixo_min_chars": 107,
+            "excedente_cota": 0,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 13
+        }
+      ],
+      "temas": [
+        {
+          "tema": "Ritmo lento e tédio",
+          "mencoes_aproximadas": 18,
+          "n_reviews_analisadas": 30,
+          "exemplo_parafraseado": "Muitos espectadores relataram que a duração longa e o ritmo arrastado tornaram a experiência cansativa, com alguns confessando que pegaram no sono ou tiveram dificuldade para manter a atenção do início ao fim.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Filme superestimado",
+          "mencoes_aproximadas": 12,
+          "n_reviews_analisadas": 30,
+          "exemplo_parafraseado": "Uma parcela significativa do grupo considerou que a alta reputação do filme não condiz com o que assistiram, afirmando que ele é muito elogiado sem merecer tanto, o que gerou expectativas altas e resultou em decepção.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Dificuldade de conexão com a trama",
+          "mencoes_aproximadas": 8,
+          "n_reviews_analisadas": 30,
+          "exemplo_parafraseado": "Alguns espectadores mencionaram que a história não conseguiu prendê-los, com uma narrativa que parecia desconexa ou difícil de acompanhar, fazendo com que se sentissem perdidos ou desinteressados nos acontecimentos.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Apreço pela atuação de Al Pacino",
+          "mencoes_aproximadas": 8,
+          "n_reviews_analisadas": 30,
+          "exemplo_parafraseado": "Apesar das críticas negativas, um ponto positivo recorrente foi a atuação de Al Pacino, que recebeu elogios por sua atuação jovem e carisma, sendo apontado como um dos poucos aspectos que prenderam a atenção dos espectadores.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Excesso de diálogos e falta de ação",
+          "mencoes_aproximadas": 6,
+          "n_reviews_analisadas": 30,
+          "exemplo_parafraseado": "O grupo comentou que há muita conversa e pouco acontecimento, com longas cenas de diálogos que se arrastam sem avançar na história, contribuindo para a sensação de marasmo.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Preferência por outros filmes ou gêneros",
+          "mencoes_aproximadas": 6,
+          "n_reviews_analisadas": 30,
+          "exemplo_parafraseado": "Alguns espectadores afirmaram que a temática de máfia não é atraente para eles, ou que preferem obras de outros diretores ou mesmo de outros gêneros, o que fez com que o filme não os agradasse.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        }
+      ],
+      "observacao_geral": "As reviews negativas concentram-se principalmente no ritmo lento e na sensação de tédio, além de considerarem o filme superestimado. Embora alguns reconheçam qualidades técnicas e a atuação de Al Pacino, a falta de envolvimento com a trama e o excesso de diálogos sem ação são pontos que afastam esse público.",
+      "idioma_invalido": false,
+      "escopo_suspeito": false
+    },
+    {
+      "bucket": "medianas",
+      "alvo": 40,
+      "modo": "completo",
+      "estado_piso": "completa",
+      "n_validas": 40,
+      "share_real": 5,
+      "composicao_alvo": {
+        "2.5": 6,
+        "3.0": 34
+      },
+      "composicao_atingida": {
+        "2.5": 9,
+        "3.0": 31
+      },
+      "cascata_por_degrau": {
+        "150": 40
+      },
+      "deficit_redistribuido": 3,
+      "distribuicao_pagina_origem": {
+        "n": 40,
+        "min": 1,
+        "max": 14,
+        "p5": 1,
+        "p50": 6,
+        "p95": 14,
+        "fracao_profunda": 0.45
+      },
+      "janela_amostra": {
+        "n": 40,
+        "min": "2023-08-02",
+        "max": "2026-08-17",
+        "p5": "2026-07-30",
+        "p50": "2026-08-06",
+        "p95": "2026-08-16"
+      },
+      "niveis": [
+        {
+          "nivel": 2.5,
+          "n_validas": 9,
+          "n_alvo": 6,
+          "n_brutas": 72,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 1,
+          "n_descartadas_curtas": 52,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 0,
+          "motivos_descarte": {
+            "truncada_sem_texto": 0,
+            "spoiler": 1,
+            "abaixo_min_chars": 52,
+            "excedente_cota": 10,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 4
+        },
+        {
+          "nivel": 3.0,
+          "n_validas": 31,
+          "n_alvo": 34,
+          "n_brutas": 156,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 2,
+          "n_descartadas_curtas": 122,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 1,
+          "motivos_descarte": {
+            "truncada_sem_texto": 1,
+            "spoiler": 2,
+            "abaixo_min_chars": 122,
+            "excedente_cota": 0,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 14
+        }
+      ],
+      "temas": [
+        {
+          "tema": "Ritmo lento e longa duração",
+          "mencoes_aproximadas": 18,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "Muitas reviews medianas apontam que o filme é arrastado e excessivamente longo, com cenas que poderiam ser cortadas sem prejuízo.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Expectativas altas não correspondidas",
+          "mencoes_aproximadas": 11,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "Um grupo considerável menciona que, por ser considerado um dos melhores filmes de todos os tempos, esperavam mais e acabaram se decepcionando, achando superestimado.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Atuações de destaque (Al Pacino, Marlon Brando)",
+          "mencoes_aproximadas": 10,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "Várias reviews elogiam as atuações, especialmente as de Al Pacino e Marlon Brando, dizendo que eles elevam o filme, embora alguns achem a performance de Brando exagerada.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Tratamento das personagens femininas",
+          "mencoes_aproximadas": 8,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "Algumas reviews criticam a forma como as mulheres são retratadas, sendo superficiais ou deixadas em segundo plano, o que incomoda especialmente em uma perspectiva feminista.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Qualidade técnica e cinematografia",
+          "mencoes_aproximadas": 7,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "A fotografia e a direção de arte são frequentemente elogiadas, com muitos reconhecendo a beleza visual e a competência técnica, mesmo quando a narrativa não agrada totalmente.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Importância histórica e influência",
+          "mencoes_aproximadas": 6,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "Algumas reviews reconhecem o impacto do filme no gênero de máfia e no cinema como um todo, mas questionam se isso justifica sua alta avaliação nos dias de hoje.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        }
+      ],
+      "observacao_geral": "As reviews medianas revelam um grupo que reconhece a importância histórica e a qualidade técnica do filme, mas que se sente frustrado com o ritmo lento, as altas expectativas e a abordagem das personagens femininas. Há um consenso de que é um filme bom, mas superestimado, que não conseguiu cativar totalmente.",
+      "idioma_invalido": false,
+      "escopo_suspeito": false
+    },
+    {
+      "bucket": "positivas",
+      "alvo": 40,
+      "modo": "completo",
+      "estado_piso": "completa",
+      "n_validas": 40,
+      "share_real": 93,
+      "composicao_alvo": {
+        "3.5": 2,
+        "4.0": 9,
+        "4.5": 7,
+        "5.0": 22
+      },
+      "composicao_atingida": {
+        "3.5": 2,
+        "4.0": 9,
+        "4.5": 7,
+        "5.0": 22
+      },
+      "cascata_por_degrau": {
+        "150": 40
+      },
+      "deficit_redistribuido": 0,
+      "distribuicao_pagina_origem": {
+        "n": 40,
+        "min": 1,
+        "max": 64,
+        "p5": 1,
+        "p50": 4,
+        "p95": 64,
+        "fracao_profunda": 0.375
+      },
+      "janela_amostra": {
+        "n": 40,
+        "min": "2026-08-05",
+        "max": "2026-08-19",
+        "p5": "2026-08-07",
+        "p50": "2026-08-07",
+        "p95": "2026-08-19"
+      },
+      "niveis": [
+        {
+          "nivel": 3.5,
+          "n_validas": 2,
+          "n_alvo": 2,
+          "n_brutas": 12,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 0,
+          "n_descartadas_curtas": 8,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 0,
+          "motivos_descarte": {
+            "truncada_sem_texto": 0,
+            "spoiler": 0,
+            "abaixo_min_chars": 8,
+            "excedente_cota": 2,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 1
+        },
+        {
+          "nivel": 4.0,
+          "n_validas": 9,
+          "n_alvo": 9,
+          "n_brutas": 48,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 1,
+          "n_descartadas_curtas": 32,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 0,
+          "motivos_descarte": {
+            "truncada_sem_texto": 0,
+            "spoiler": 1,
+            "abaixo_min_chars": 32,
+            "excedente_cota": 6,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 3
+        },
+        {
+          "nivel": 4.5,
+          "n_validas": 7,
+          "n_alvo": 7,
+          "n_brutas": 48,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 2,
+          "n_descartadas_curtas": 34,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 1,
+          "motivos_descarte": {
+            "truncada_sem_texto": 1,
+            "spoiler": 2,
+            "abaixo_min_chars": 34,
+            "excedente_cota": 4,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 3
+        },
+        {
+          "nivel": 5.0,
+          "n_validas": 22,
+          "n_alvo": 22,
+          "n_brutas": 132,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 7,
+          "n_descartadas_curtas": 97,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 1,
+          "motivos_descarte": {
+            "truncada_sem_texto": 1,
+            "spoiler": 7,
+            "abaixo_min_chars": 97,
+            "excedente_cota": 5,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 9
+        }
+      ],
+      "temas": [
+        {
+          "tema": "Atuações marcantes",
+          "mencoes_aproximadas": 28,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "As performances são amplamente elogiadas, com destaque para Marlon Brando e Al Pacino, cuja atuação transmite a complexidade e a transformação de seus personagens.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Transformação de Michael Corleone",
+          "mencoes_aproximadas": 22,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "Muitas reviews destacam a jornada de Michael, de um jovem relutante a um líder frio e implacável, como o coração do filme, com uma evolução convincente e bem construída.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Maestria técnica e visual",
+          "mencoes_aproximadas": 18,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "A direção, fotografia, design de produção e música são considerados impecáveis, criando uma atmosfera densa e envolvente que transporta o espectador para o mundo da máfia.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Exploração de temas familiares e de poder",
+          "mencoes_aproximadas": 15,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "As reviews positivas valorizam a abordagem do filme sobre lealdade, família, poder e corrupção, mostrando como o crime se entrelaça com as relações pessoais.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Ritmo lento e longa duração",
+          "mencoes_aproximadas": 12,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "Embora alguns achem o ritmo arrastado, a maioria considera a duração justificada, com um desenvolvimento cuidadoso que mantém o interesse e torna o filme uma experiência imersiva.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Cenas icônicas e memoráveis",
+          "mencoes_aproximadas": 10,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "Diversas cenas são citadas como inesquecíveis, como a do batismo e a abertura do casamento, destacando o simbolismo e a força narrativa que se tornaram marcos do cinema.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        }
+      ],
+      "observacao_geral": "Este grupo de reviews positivas considera O Poderoso Chefão uma obra-prima, elogiando principalmente as atuações, a profundidade temática e a excelência técnica. Embora alguns apontem um ritmo mais lento, a maioria vê isso como parte do charme do filme, que permanece envolvente e impactante.",
+      "idioma_invalido": false,
+      "escopo_suspeito": false
+    }
+  ],
+  "eixos": {
+    "taxonomia_id": "ebab2667de74",
+    "margem_lift_pp": 20,
+    "contraste": "valorativo",
+    "linhas": [
+      {
+        "eixo": "ritmo",
+        "por_bucket": {
+          "negativas": {
+            "mencoes": 16,
+            "de_n": 25,
+            "freq_pct": 64.0,
+            "lift_pp": 19.6,
+            "tema": "Ritmo lento e tédio",
+            "exemplo_parafraseado": "Muitos espectadores relataram que a duração longa e o ritmo arrastado tornaram a experiência cansativa, com alguns confessando que pegaram no sono ou tiveram dificuldade para manter a atenção do início ao fim.",
+            "temas_no_mesmo_eixo": []
+          },
+          "medianas": {
+            "mencoes": 12,
+            "de_n": 27,
+            "freq_pct": 44.4,
+            "lift_pp": -19.6,
+            "tema": "Ritmo lento e longa duração",
+            "exemplo_parafraseado": "Muitas reviews medianas apontam que o filme é arrastado e excessivamente longo, com cenas que poderiam ser cortadas sem prejuízo.",
+            "temas_no_mesmo_eixo": []
+          },
+          "positivas": {
+            "mencoes": 8,
+            "de_n": 31,
+            "freq_pct": 25.8,
+            "lift_pp": -38.2,
+            "tema": "Ritmo lento e longa duração",
+            "exemplo_parafraseado": "Embora alguns achem o ritmo arrastado, a maioria considera a duração justificada, com um desenvolvimento cuidadoso que mantém o interesse e torna o filme uma experiência imersiva.",
+            "temas_no_mesmo_eixo": []
+          }
+        },
+        "bullet_de": {
+          "negativas": "frequencia",
+          "medianas": "frequencia",
+          "positivas": null
+        }
+      },
+      {
+        "eixo": "atuacao",
+        "por_bucket": {
+          "negativas": {
+            "mencoes": 3,
+            "de_n": 25,
+            "freq_pct": 12.0,
+            "lift_pp": -33.2,
+            "tema": "Apreço pela atuação de Al Pacino",
+            "exemplo_parafraseado": "Apesar das críticas negativas, um ponto positivo recorrente foi a atuação de Al Pacino, que recebeu elogios por sua atuação jovem e carisma, sendo apontado como um dos poucos aspectos que prenderam a atenção dos espectadores.",
+            "temas_no_mesmo_eixo": []
+          },
+          "medianas": {
+            "mencoes": 11,
+            "de_n": 27,
+            "freq_pct": 40.7,
+            "lift_pp": -4.4,
+            "tema": "Atuações de destaque (Al Pacino, Marlon Brando)",
+            "exemplo_parafraseado": "Várias reviews elogiam as atuações, especialmente as de Al Pacino e Marlon Brando, dizendo que eles elevam o filme, embora alguns achem a performance de Brando exagerada.",
+            "temas_no_mesmo_eixo": []
+          },
+          "positivas": {
+            "mencoes": 14,
+            "de_n": 31,
+            "freq_pct": 45.2,
+            "lift_pp": 4.4,
+            "tema": "Atuações marcantes",
+            "exemplo_parafraseado": "As performances são amplamente elogiadas, com destaque para Marlon Brando e Al Pacino, cuja atuação transmite a complexidade e a transformação de seus personagens.",
+            "temas_no_mesmo_eixo": []
+          }
+        },
+        "bullet_de": {
+          "negativas": null,
+          "medianas": null,
+          "positivas": "frequencia"
+        }
+      },
+      {
+        "eixo": "direcao_imagem",
+        "por_bucket": {
+          "negativas": {
+            "mencoes": 1,
+            "de_n": 25,
+            "freq_pct": 4.0,
+            "lift_pp": -18.6,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "medianas": {
+            "mencoes": 3,
+            "de_n": 27,
+            "freq_pct": 11.1,
+            "lift_pp": -11.5,
+            "tema": "Qualidade técnica e cinematografia",
+            "exemplo_parafraseado": "A fotografia e a direção de arte são frequentemente elogiadas, com muitos reconhecendo a beleza visual e a competência técnica, mesmo quando a narrativa não agrada totalmente.",
+            "temas_no_mesmo_eixo": []
+          },
+          "positivas": {
+            "mencoes": 7,
+            "de_n": 31,
+            "freq_pct": 22.6,
+            "lift_pp": 11.5,
+            "tema": "Maestria técnica e visual",
+            "exemplo_parafraseado": "A direção, fotografia, design de produção e música são considerados impecáveis, criando uma atmosfera densa e envolvente que transporta o espectador para o mundo da máfia.",
+            "temas_no_mesmo_eixo": []
+          }
+        },
+        "bullet_de": {
+          "negativas": null,
+          "medianas": null,
+          "positivas": null
+        }
+      },
+      {
+        "eixo": "roteiro_estrutura",
+        "por_bucket": {
+          "negativas": {
+            "mencoes": 8,
+            "de_n": 25,
+            "freq_pct": 32.0,
+            "lift_pp": -26.1,
+            "tema": "Excesso de diálogos e falta de ação",
+            "exemplo_parafraseado": "O grupo comentou que há muita conversa e pouco acontecimento, com longas cenas de diálogos que se arrastam sem avançar na história, contribuindo para a sensação de marasmo.",
+            "temas_no_mesmo_eixo": []
+          },
+          "medianas": {
+            "mencoes": 14,
+            "de_n": 27,
+            "freq_pct": 51.9,
+            "lift_pp": -6.2,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "positivas": {
+            "mencoes": 18,
+            "de_n": 31,
+            "freq_pct": 58.1,
+            "lift_pp": 6.2,
+            "tema": "Transformação de Michael Corleone",
+            "exemplo_parafraseado": "Muitas reviews destacam a jornada de Michael, de um jovem relutante a um líder frio e implacável, como o coração do filme, com uma evolução convincente e bem construída.",
+            "temas_no_mesmo_eixo": [
+              "Exploração de temas familiares e de poder"
+            ]
+          }
+        },
+        "bullet_de": {
+          "negativas": null,
+          "medianas": "frequencia",
+          "positivas": "frequencia"
+        }
+      },
+      {
+        "eixo": "som_trilha",
+        "por_bucket": {
+          "negativas": {
+            "mencoes": 1,
+            "de_n": 25,
+            "freq_pct": 4.0,
+            "lift_pp": -3.4,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "medianas": {
+            "mencoes": 2,
+            "de_n": 27,
+            "freq_pct": 7.4,
+            "lift_pp": 1.0,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "positivas": {
+            "mencoes": 2,
+            "de_n": 31,
+            "freq_pct": 6.5,
+            "lift_pp": -1.0,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          }
+        },
+        "bullet_de": {
+          "negativas": null,
+          "medianas": null,
+          "positivas": null
+        }
+      },
+      {
+        "eixo": "tom_atmosfera",
+        "por_bucket": {
+          "negativas": {
+            "mencoes": 2,
+            "de_n": 25,
+            "freq_pct": 8.0,
+            "lift_pp": -11.4,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "medianas": {
+            "mencoes": 1,
+            "de_n": 27,
+            "freq_pct": 3.7,
+            "lift_pp": -15.7,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "positivas": {
+            "mencoes": 6,
+            "de_n": 31,
+            "freq_pct": 19.4,
+            "lift_pp": 11.4,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          }
+        },
+        "bullet_de": {
+          "negativas": null,
+          "medianas": null,
+          "positivas": null
+        }
+      },
+      {
+        "eixo": "impacto_emocional",
+        "por_bucket": {
+          "negativas": {
+            "mencoes": 10,
+            "de_n": 25,
+            "freq_pct": 40.0,
+            "lift_pp": 17.4,
+            "tema": "Dificuldade de conexão com a trama",
+            "exemplo_parafraseado": "Alguns espectadores mencionaram que a história não conseguiu prendê-los, com uma narrativa que parecia desconexa ou difícil de acompanhar, fazendo com que se sentissem perdidos ou desinteressados nos acontecimentos.",
+            "temas_no_mesmo_eixo": []
+          },
+          "medianas": {
+            "mencoes": 5,
+            "de_n": 27,
+            "freq_pct": 18.5,
+            "lift_pp": -21.5,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "positivas": {
+            "mencoes": 7,
+            "de_n": 31,
+            "freq_pct": 22.6,
+            "lift_pp": -17.4,
+            "tema": "Cenas icônicas e memoráveis",
+            "exemplo_parafraseado": "Diversas cenas são citadas como inesquecíveis, como a do batismo e a abertura do casamento, destacando o simbolismo e a força narrativa que se tornaram marcos do cinema.",
+            "temas_no_mesmo_eixo": []
+          }
+        },
+        "bullet_de": {
+          "negativas": null,
+          "medianas": null,
+          "positivas": null
+        }
+      },
+      {
+        "eixo": "comparacoes",
+        "por_bucket": {
+          "negativas": {
+            "mencoes": 12,
+            "de_n": 25,
+            "freq_pct": 48.0,
+            "lift_pp": 2.8,
+            "tema": "Preferência por outros filmes ou gêneros",
+            "exemplo_parafraseado": "Alguns espectadores afirmaram que a temática de máfia não é atraente para eles, ou que preferem obras de outros diretores ou mesmo de outros gêneros, o que fez com que o filme não os agradasse.",
+            "temas_no_mesmo_eixo": []
+          },
+          "medianas": {
+            "mencoes": 9,
+            "de_n": 27,
+            "freq_pct": 33.3,
+            "lift_pp": -14.7,
+            "tema": "Importância histórica e influência",
+            "exemplo_parafraseado": "Algumas reviews reconhecem o impacto do filme no gênero de máfia e no cinema como um todo, mas questionam se isso justifica sua alta avaliação nos dias de hoje.",
+            "temas_no_mesmo_eixo": []
+          },
+          "positivas": {
+            "mencoes": 14,
+            "de_n": 31,
+            "freq_pct": 45.2,
+            "lift_pp": -2.8,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          }
+        },
+        "bullet_de": {
+          "negativas": "frequencia",
+          "medianas": null,
+          "positivas": null
+        }
+      },
+      {
+        "eixo": "expectativa",
+        "por_bucket": {
+          "negativas": {
+            "mencoes": 8,
+            "de_n": 25,
+            "freq_pct": 32.0,
+            "lift_pp": 6.1,
+            "tema": "Filme superestimado",
+            "exemplo_parafraseado": "Uma parcela significativa do grupo considerou que a alta reputação do filme não condiz com o que assistiram, afirmando que ele é muito elogiado sem merecer tanto, o que gerou expectativas altas e resultou em decepção.",
+            "temas_no_mesmo_eixo": []
+          },
+          "medianas": {
+            "mencoes": 7,
+            "de_n": 27,
+            "freq_pct": 25.9,
+            "lift_pp": -6.1,
+            "tema": "Expectativas altas não correspondidas",
+            "exemplo_parafraseado": "Um grupo considerável menciona que, por ser considerado um dos melhores filmes de todos os tempos, esperavam mais e acabaram se decepcionando, achando superestimado.",
+            "temas_no_mesmo_eixo": []
+          },
+          "positivas": {
+            "mencoes": 4,
+            "de_n": 31,
+            "freq_pct": 12.9,
+            "lift_pp": -19.1,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          }
+        },
+        "bullet_de": {
+          "negativas": null,
+          "medianas": null,
+          "positivas": null
+        }
+      },
+      {
+        "eixo": "critica_social",
+        "por_bucket": {
+          "negativas": {
+            "mencoes": 4,
+            "de_n": 25,
+            "freq_pct": 16.0,
+            "lift_pp": -9.9,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "medianas": {
+            "mencoes": 7,
+            "de_n": 27,
+            "freq_pct": 25.9,
+            "lift_pp": 9.9,
+            "tema": "Tratamento das personagens femininas",
+            "exemplo_parafraseado": "Algumas reviews criticam a forma como as mulheres são retratadas, sendo superficiais ou deixadas em segundo plano, o que incomoda especialmente em uma perspectiva feminista.",
+            "temas_no_mesmo_eixo": []
+          },
+          "positivas": {
+            "mencoes": 4,
+            "de_n": 31,
+            "freq_pct": 12.9,
+            "lift_pp": -13.0,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          }
+        },
+        "bullet_de": {
+          "negativas": null,
+          "medianas": null,
+          "positivas": null
+        }
+      }
+    ],
+    "fonte_classificacao": {
+      "arquivo": "resultado/votacao-3/consenso.jsonl",
+      "criterio": "votacao_3_consenso_2_de_3",
+      "por_bucket": {
+        "negativas": {
+          "n_classificadas": 25,
+          "n_analisadas": 30,
+          "sobreposicao_com_analisadas": 25
+        },
+        "medianas": {
+          "n_classificadas": 27,
+          "n_analisadas": 40,
+          "sobreposicao_com_analisadas": 27
+        },
+        "positivas": {
+          "n_classificadas": 31,
+          "n_analisadas": 40,
+          "sobreposicao_com_analisadas": 31
+        }
+      }
+    },
+    "rotulagem": {
+      "n_chamadas": 3,
+      "falharam": [],
+      "fora_da_taxonomia": {},
+      "houve_retentativa": []
+    },
+    "spec_version": "1.9.16",
+    "verificador": {
+      "aplicado": true,
+      "variante": "V2_alvo",
+      "passada": 1,
+      "eixo": "impacto_emocional",
+      "n_removidas_no_corpus": 1654
+    }
+  },
+  "narrativa": "Lançado em 1972 e dirigido por Francis Ford Coppola, O Poderoso Chefão é um drama policial ambientado em Nova York. A trama acompanha a influente família mafiosa chefiada por Don Corleone em meio a disputas de poder e atentados que levam seu filho Michael, até então afastado dos negócios da família, a assumir a proteção do pai e de seu legado.\n\nA experiência do longa-metragem se apoia em uma narrativa de ritmo cadenciado, estrutura extensa e forte densidade dramática.\n\nOs diferentes grupos avaliam os mesmos aspectos da obra e concordam sobre o que o filme é, divergindo essencialmente no veredito sobre o seu funcionamento. Na grande maioria das notas (~93%), a recepção é consagradora: a maior parcela destaca as atuações marcantes, cerca de metade enfatiza a transformação de Michael Corleone e boa parte ressalta a maestria técnica e visual da produção.\n\nNuma fração mínima das notas (~5%), sob a perspectiva desse grupo intermediário, uma parcela expressiva aponta o ritmo lento e a longa duração como fatores de cansaço, um número considerável menciona expectativas altas não correspondidas, enquanto alguns valorizam as atuações de destaque de Marlon Brando e Al Pacino. Já numa fração ainda menor das notas (~2%), para quem avaliou negativamente, metade deles se queixa do ritmo lento e da sensação de tédio, vários consideram o filme superestimado e muitos relatam dificuldade de conexão com a trama.",
+  "verificacao_narrativa": {
+    "quantificador_fora_de_faixa": [],
+    "quantificador_repetido": [],
+    "paragrafos": {
+      "n_paragrafos": 4,
+      "minimo": 3,
+      "insuficientes": false,
+      "longos": []
+    },
+    "n_paragrafos": 4,
+    "paragrafos_insuficientes": false,
+    "paragrafos_longos": [],
+    "grupos_sem_paragrafo_proprio": [
+      "negativas"
+    ],
+    "movimento1_e_movimento2_no_mesmo_paragrafo": false,
+    "formato_invalido": false,
+    "numeros_inventados": [],
+    "rotulos_faltando": [],
+    "ordem_incorreta": false,
+    "vocabulario_peso": false,
+    "resenha_speak": [],
+    "n_resenha_speak": 0,
+    "n_flags": 1
+  },
+  "narrativa_selecao": {
+    "provider": "gemini",
+    "modelo": "gemini-3.7-flash",
+    "n_candidatos": 3,
+    "n_chamadas": 4,
+    "indice_escolhido": 2,
+    "motivo": "menor_severidade",
+    "criterio_decisivo": "ritmo",
+    "candidatos": [
+      {
+        "indice": 0,
+        "n_flags": 3,
+        "cliches": 0,
+        "repeticao_max": 1,
+        "ritmo": 9,
+        "cobertura": 0.889,
+        "eliminado": true
+      },
+      {
+        "indice": 1,
+        "n_flags": 3,
+        "cliches": 0,
+        "repeticao_max": 1,
+        "ritmo": 8,
+        "cobertura": 0.889,
+        "eliminado": true
+      },
+      {
+        "indice": 2,
+        "n_flags": 2,
+        "cliches": 0,
+        "repeticao_max": 1,
+        "ritmo": 10,
+        "cobertura": 0.889,
+        "eliminado": true
+      }
+    ],
+    "retry": {
+      "n_frases_infratoras": 1,
+      "motivos": [
+        "numero_inventado"
+      ],
+      "n_flags_depois": 1,
+      "aplicado": true
+    },
+    "uso": {
+      "prompt_tokens": 12055,
+      "completion_tokens": 1433,
+      "cache_hit_tokens": 0,
+      "cache_miss_tokens": 12055
+    },
+    "latencia_s": 36.81
+  }
+}

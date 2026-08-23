@@ -1,7 +1,7 @@
 {
   "slug": "mother-2017",
   "coletado_em": "2026-08-09T12:55:04.724189+00:00",
-  "versao_coletor": "1.9.0",
+  "versao_coletor": "1.9.6",
   "ordenacao_usada": "by/added",
   "histograma_bruto": {
     "0.5": 17325,

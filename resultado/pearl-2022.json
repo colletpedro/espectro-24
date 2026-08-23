@@ -1,0 +1,1358 @@
+{
+  "slug": "pearl-2022",
+  "data_coleta": "2026-08-23T01:06:00.235552+00:00",
+  "spec_version": "1.9.16",
+  "total_reviews_observadas": 773,
+  "reviews_url": "https://letterboxd.com/film/pearl-2022/reviews/",
+  "ficha": {
+    "titulo": "Pearl: Uma História de Origem 'X'",
+    "sinopse_oficial": "Presa na fazenda isolada de sua família, Pearl deve cuidar de seu pai doente sob o olhar amargo e autoritário de sua mãe devota. Desejando uma vida glamourosa como ela viu nos filmes, as ambições, tentações e repressões de Pearl colidem, na impressionante história de origem inspirada em technicolor da icônica vilã de X.",
+    "sinopse_fallback_en": false,
+    "generos": [
+      "Terror"
+    ],
+    "duracao_min": 103,
+    "diretor": "Ti West",
+    "diretor_transliterado": false,
+    "ano": 2022,
+    "fonte": "tmdb",
+    "ano_fonte": "bruto"
+  },
+  "distribuicao": {
+    "n_notas_total": 2096463,
+    "por_nivel": {
+      "0.5": 6204,
+      "1.0": 15666,
+      "1.5": 13569,
+      "2.0": 64489,
+      "2.5": 81167,
+      "3.0": 329814,
+      "3.5": 367115,
+      "4.0": 647549,
+      "4.5": 190297,
+      "5.0": 380593
+    },
+    "por_bucket": {
+      "negativas": 5,
+      "medianas": 20,
+      "positivas": 76
+    },
+    "fonte": "letterboxd_histograma"
+  },
+  "coleta": {
+    "slug": "pearl-2022",
+    "coletado_em": "2026-08-23T01:05:40.429557+00:00",
+    "versao_coletor": "1.9.6",
+    "ordenacao_usada": "by/added",
+    "histograma_bruto": {
+      "0.5": 6204,
+      "1.0": 15666,
+      "1.5": 13569,
+      "2.0": 64489,
+      "2.5": 81167,
+      "3.0": 329814,
+      "3.5": 367115,
+      "4.0": 647549,
+      "4.5": 190297,
+      "5.0": 380593
+    },
+    "orcamento_paginas_por_nivel": {
+      "0.5": 1,
+      "1.0": 3,
+      "1.5": 2,
+      "2.0": 10,
+      "2.5": 6,
+      "3.0": 10,
+      "3.5": 4,
+      "4.0": 6,
+      "4.5": 2,
+      "5.0": 4
+    },
+    "paginas_gastas_por_nivel": {
+      "0.5": 1,
+      "1.0": 3,
+      "1.5": 2,
+      "2.0": 18,
+      "2.5": 6,
+      "3.0": 18,
+      "3.5": 4,
+      "4.0": 13,
+      "4.5": 3,
+      "5.0": 4
+    },
+    "paradas_por_limite": [
+      "0.5",
+      "1.0",
+      "1.5",
+      "2.0",
+      "2.5",
+      "3.0",
+      "3.5",
+      "4.0",
+      "4.5",
+      "5.0"
+    ],
+    "contagem_bruta_por_nivel": {
+      "0.5": 12,
+      "1.0": 30,
+      "1.5": 24,
+      "2.0": 198,
+      "2.5": 72,
+      "3.0": 185,
+      "3.5": 48,
+      "4.0": 120,
+      "4.5": 36,
+      "5.0": 48
+    },
+    "contagem_estimada_valida_por_nivel": {
+      "0.5": 1,
+      "1.0": 3,
+      "1.5": 2,
+      "2.0": 18,
+      "2.5": 10,
+      "3.0": 27,
+      "3.5": 7,
+      "4.0": 15,
+      "4.5": 6,
+      "5.0": 12
+    },
+    "motivo_parada_por_nivel": {
+      "0.5": "orcamento_esgotado",
+      "1.0": "orcamento_esgotado",
+      "1.5": "orcamento_esgotado",
+      "2.0": "orcamento_esgotado",
+      "2.5": "orcamento_esgotado",
+      "3.0": "orcamento_esgotado",
+      "3.5": "orcamento_esgotado",
+      "4.0": "orcamento_esgotado",
+      "4.5": "orcamento_esgotado",
+      "5.0": "orcamento_esgotado"
+    },
+    "paginas_base_por_nivel": {
+      "0.5": 1,
+      "1.0": 3,
+      "1.5": 2,
+      "2.0": 10,
+      "2.5": 6,
+      "3.0": 10,
+      "3.5": 4,
+      "4.0": 6,
+      "4.5": 2,
+      "5.0": 4
+    },
+    "paginas_extensao_por_nivel": {
+      "0.5": 0,
+      "1.0": 0,
+      "1.5": 0,
+      "2.0": 8,
+      "2.5": 0,
+      "3.0": 8,
+      "3.5": 0,
+      "4.0": 7,
+      "4.5": 1,
+      "5.0": 0
+    },
+    "extensao_por_bucket": {
+      "negativas": {
+        "paginas_base": 16,
+        "paginas_extensao": 8,
+        "extras_por_nivel": {
+          "2.0": 8
+        },
+        "motivo_parada": "teto_extensao",
+        "n_validas_pos_base": 27,
+        "n_validas_pos_extensao": 27,
+        "meta": 50
+      },
+      "medianas": {
+        "paginas_base": 16,
+        "paginas_extensao": 8,
+        "extras_por_nivel": {
+          "3.0": 8
+        },
+        "motivo_parada": "teto_extensao",
+        "n_validas_pos_base": 41,
+        "n_validas_pos_extensao": 41,
+        "meta": 50
+      },
+      "positivas": {
+        "paginas_base": 16,
+        "paginas_extensao": 8,
+        "extras_por_nivel": {
+          "4.0": 7,
+          "4.5": 1
+        },
+        "motivo_parada": "teto_extensao",
+        "n_validas_pos_base": 44,
+        "n_validas_pos_extensao": 46,
+        "meta": 50
+      }
+    },
+    "profundidade_sondagem": {
+      "nivel_sondado": 4.0,
+      "profundidade": 256,
+      "exata": false,
+      "requisicoes": 4,
+      "motivo": "teto_plataforma"
+    },
+    "profundidade_estimada_por_nivel": {
+      "0.5": 2,
+      "1.0": 6,
+      "1.5": 5,
+      "2.0": 25,
+      "2.5": 32,
+      "3.0": 130,
+      "3.5": 145,
+      "4.0": 256,
+      "4.5": 75,
+      "5.0": 150
+    },
+    "janela_temporal": {
+      "total": {
+        "n": 862,
+        "min": "2020-11-15",
+        "max": "2026-08-22",
+        "p5": "2026-05-08",
+        "p50": "2026-08-05",
+        "p95": "2026-08-08"
+      },
+      "por_bucket": {
+        "negativas": {
+          "n": 276,
+          "min": "2020-11-15",
+          "max": "2026-08-08",
+          "p5": "2026-06-14",
+          "p50": "2026-08-02",
+          "p95": "2026-08-07"
+        },
+        "medianas": {
+          "n": 293,
+          "min": "2023-03-13",
+          "max": "2026-08-08",
+          "p5": "2026-07-24",
+          "p50": "2026-08-05",
+          "p95": "2026-08-07"
+        },
+        "positivas": {
+          "n": 293,
+          "min": "2023-03-13",
+          "max": "2026-08-22",
+          "p5": "2026-03-08",
+          "p50": "2026-08-07",
+          "p95": "2026-08-08"
+        }
+      }
+    },
+    "dias_por_100_paginas": {
+      "n_paginas": 24,
+      "pagina_min": 1,
+      "pagina_max": 128,
+      "dias": 10,
+      "dias_por_100_paginas": 7.874015748031496,
+      "paginas_para_1_ano": 4636
+    },
+    "ano_lancamento": 2022,
+    "ano_fonte": "slug",
+    "n_reviews_bruto": 862
+  },
+  "origem_paginas": {
+    "_histograma/pearl-2022.html": "cache",
+    "pearl-2022/pages/by_added/rated_4_page_4.html": "cache",
+    "pearl-2022/pages/by_added/rated_4_page_16.html": "cache",
+    "pearl-2022/pages/by_added/rated_4_page_64.html": "cache",
+    "pearl-2022/pages/by_added/rated_4_page_256.html": "cache",
+    "pearl-2022/pages/by_added/rated_0_5_page_1.html": "cache",
+    "pearl-2022/pages/by_added/rated_1_page_1.html": "cache",
+    "pearl-2022/pages/by_added/rated_1_page_2.html": "cache",
+    "pearl-2022/pages/by_added/rated_1_page_3.html": "cache",
+    "pearl-2022/pages/by_added/rated_1_5_page_1.html": "cache",
+    "pearl-2022/pages/by_added/rated_1_5_page_2.html": "cache",
+    "pearl-2022/pages/by_added/rated_2_page_1.html": "cache",
+    "pearl-2022/pages/by_added/rated_2_page_2.html": "cache",
+    "pearl-2022/pages/by_added/rated_2_page_3.html": "cache",
+    "pearl-2022/pages/by_added/rated_2_page_4.html": "cache",
+    "pearl-2022/pages/by_added/rated_2_page_5.html": "cache",
+    "pearl-2022/pages/by_added/rated_2_page_6.html": "cache",
+    "pearl-2022/pages/by_added/rated_2_page_7.html": "cache",
+    "pearl-2022/pages/by_added/rated_2_page_8.html": "cache",
+    "pearl-2022/pages/by_added/rated_2_page_9.html": "cache",
+    "pearl-2022/pages/by_added/rated_2_page_12.html": "cache",
+    "pearl-2022/pages/by_added/rated_2_5_page_1.html": "cache",
+    "pearl-2022/pages/by_added/rated_2_5_page_2.html": "cache",
+    "pearl-2022/pages/by_added/rated_2_5_page_3.html": "cache",
+    "pearl-2022/pages/by_added/rated_2_5_page_4.html": "cache",
+    "pearl-2022/pages/by_added/rated_2_5_page_8.html": "cache",
+    "pearl-2022/pages/by_added/rated_2_5_page_16.html": "cache",
+    "pearl-2022/fulltext/viewing_1435237029.html": "cache",
+    "pearl-2022/fulltext/viewing_1435028776.html": "cache",
+    "pearl-2022/fulltext/viewing_1431459781.html": "cache",
+    "pearl-2022/pages/by_added/rated_3_page_1.html": "cache",
+    "pearl-2022/pages/by_added/rated_3_page_2.html": "cache",
+    "pearl-2022/pages/by_added/rated_3_page_3.html": "cache",
+    "pearl-2022/pages/by_added/rated_3_page_4.html": "cache",
+    "pearl-2022/pages/by_added/rated_3_page_5.html": "cache",
+    "pearl-2022/pages/by_added/rated_3_page_6.html": "cache",
+    "pearl-2022/pages/by_added/rated_3_page_7.html": "cache",
+    "pearl-2022/pages/by_added/rated_3_page_8.html": "cache",
+    "pearl-2022/pages/by_added/rated_3_page_32.html": "cache",
+    "pearl-2022/pages/by_added/rated_3_page_65.html": "cache",
+    "pearl-2022/fulltext/viewing_1437799844.html": "cache",
+    "pearl-2022/fulltext/viewing_1437102805.html": "cache",
+    "pearl-2022/fulltext/viewing_1430193323.html": "cache",
+    "pearl-2022/pages/by_added/rated_3_5_page_1.html": "cache",
+    "pearl-2022/pages/by_added/rated_3_5_page_2.html": "cache",
+    "pearl-2022/pages/by_added/rated_3_5_page_3.html": "cache",
+    "pearl-2022/pages/by_added/rated_3_5_page_36.html": "cache",
+    "pearl-2022/fulltext/viewing_1439276210.html": "cache",
+    "pearl-2022/pages/by_added/rated_4_page_1.html": "cache",
+    "pearl-2022/pages/by_added/rated_4_page_2.html": "cache",
+    "pearl-2022/pages/by_added/rated_4_page_3.html": "cache",
+    "pearl-2022/pages/by_added/rated_4_page_128.html": "cache",
+    "pearl-2022/fulltext/viewing_1439491946.html": "cache",
+    "pearl-2022/fulltext/viewing_1438989083.html": "cache",
+    "pearl-2022/fulltext/viewing_1431672751.html": "cache",
+    "pearl-2022/fulltext/viewing_1419076506.html": "cache",
+    "pearl-2022/fulltext/viewing_1418955314.html": "cache",
+    "pearl-2022/pages/by_added/rated_4_5_page_1.html": "cache",
+    "pearl-2022/pages/by_added/rated_4_5_page_2.html": "cache",
+    "pearl-2022/pages/by_added/rated_5_page_1.html": "cache",
+    "pearl-2022/pages/by_added/rated_5_page_2.html": "cache",
+    "pearl-2022/pages/by_added/rated_5_page_3.html": "cache",
+    "pearl-2022/pages/by_added/rated_5_page_38.html": "cache",
+    "pearl-2022/pages/by_added/rated_2_page_10.html": "cache",
+    "pearl-2022/pages/by_added/rated_2_page_11.html": "cache",
+    "pearl-2022/pages/by_added/rated_2_page_13.html": "cache",
+    "pearl-2022/pages/by_added/rated_2_page_14.html": "cache",
+    "pearl-2022/pages/by_added/rated_2_page_15.html": "cache",
+    "pearl-2022/pages/by_added/rated_2_page_16.html": "cache",
+    "pearl-2022/pages/by_added/rated_2_page_17.html": "cache",
+    "pearl-2022/fulltext/viewing_1413530868.html": "cache",
+    "pearl-2022/pages/by_added/rated_2_page_18.html": "cache",
+    "pearl-2022/pages/by_added/rated_3_page_9.html": "cache",
+    "pearl-2022/pages/by_added/rated_3_page_10.html": "cache",
+    "pearl-2022/pages/by_added/rated_3_page_11.html": "cache",
+    "pearl-2022/pages/by_added/rated_3_page_12.html": "cache",
+    "pearl-2022/pages/by_added/rated_3_page_13.html": "cache",
+    "pearl-2022/pages/by_added/rated_3_page_14.html": "cache",
+    "pearl-2022/pages/by_added/rated_3_page_15.html": "cache",
+    "pearl-2022/pages/by_added/rated_3_page_16.html": "cache",
+    "pearl-2022/fulltext/viewing_1434833985.html": "cache",
+    "pearl-2022/pages/by_added/rated_4_page_5.html": "cache",
+    "pearl-2022/pages/by_added/rated_4_page_6.html": "cache",
+    "pearl-2022/pages/by_added/rated_4_page_7.html": "cache",
+    "pearl-2022/pages/by_added/rated_4_5_page_3.html": "network",
+    "pearl-2022/pages/by_added/rated_4_page_8.html": "cache",
+    "pearl-2022/pages/by_added/rated_4_page_9.html": "cache",
+    "pearl-2022/pages/by_added/rated_4_page_10.html": "cache",
+    "pearl-2022/pages/by_added/rated_4_page_11.html": "cache"
+  },
+  "buckets": [
+    {
+      "bucket": "negativas",
+      "alvo": 40,
+      "modo": "reduzido",
+      "estado_piso": "completa",
+      "n_validas": 27,
+      "share_real": 5,
+      "composicao_alvo": {
+        "0.5": 3,
+        "1.0": 6,
+        "1.5": 5,
+        "2.0": 26
+      },
+      "composicao_atingida": {
+        "0.5": 1,
+        "1.0": 6,
+        "1.5": 2,
+        "2.0": 18
+      },
+      "cascata_por_degrau": {
+        "150": 27
+      },
+      "deficit_redistribuido": 0,
+      "distribuicao_pagina_origem": {
+        "n": 27,
+        "min": 1,
+        "max": 18,
+        "p5": 1,
+        "p50": 8,
+        "p95": 17,
+        "fracao_profunda": 0.6296296296296297
+      },
+      "janela_amostra": {
+        "n": 27,
+        "min": "2026-07-24",
+        "max": "2026-08-08",
+        "p5": "2026-07-25",
+        "p50": "2026-08-01",
+        "p95": "2026-08-07"
+      },
+      "niveis": [
+        {
+          "nivel": 0.5,
+          "n_validas": 1,
+          "n_alvo": 3,
+          "n_brutas": 12,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 0,
+          "n_descartadas_curtas": 11,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 0,
+          "motivos_descarte": {
+            "truncada_sem_texto": 0,
+            "spoiler": 0,
+            "abaixo_min_chars": 11,
+            "excedente_cota": 0,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 1
+        },
+        {
+          "nivel": 1.0,
+          "n_validas": 6,
+          "n_alvo": 6,
+          "n_brutas": 42,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 1,
+          "n_descartadas_curtas": 35,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 0,
+          "motivos_descarte": {
+            "truncada_sem_texto": 0,
+            "spoiler": 1,
+            "abaixo_min_chars": 35,
+            "excedente_cota": 0,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 3
+        },
+        {
+          "nivel": 1.5,
+          "n_validas": 2,
+          "n_alvo": 5,
+          "n_brutas": 24,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 0,
+          "n_descartadas_curtas": 22,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 0,
+          "motivos_descarte": {
+            "truncada_sem_texto": 0,
+            "spoiler": 0,
+            "abaixo_min_chars": 22,
+            "excedente_cota": 0,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 2
+        },
+        {
+          "nivel": 2.0,
+          "n_validas": 18,
+          "n_alvo": 26,
+          "n_brutas": 198,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 5,
+          "n_descartadas_curtas": 174,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 1,
+          "motivos_descarte": {
+            "truncada_sem_texto": 1,
+            "spoiler": 5,
+            "abaixo_min_chars": 174,
+            "excedente_cota": 0,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 18
+        }
+      ],
+      "temas": [
+        {
+          "tema": "Tédio e ritmo arrastado",
+          "mencoes_aproximadas": 8,
+          "n_reviews_analisadas": 27,
+          "exemplo_parafraseado": "O filme se arrasta e não consegue manter o interesse, sendo monótono e cansativo.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Personagem principal irritante",
+          "mencoes_aproximadas": 7,
+          "n_reviews_analisadas": 27,
+          "exemplo_parafraseado": "A protagonista é tão desagradável e egocêntrica que se torna difícil torcer por ela ou mesmo suportar sua presença em cena.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Falta de desenvolvimento dos personagens",
+          "mencoes_aproximadas": 5,
+          "n_reviews_analisadas": 27,
+          "exemplo_parafraseado": "Os personagens secundários são superficiais e a motivação da protagonista não é explorada o suficiente.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Expectativa de terror não atendida",
+          "mencoes_aproximadas": 4,
+          "n_reviews_analisadas": 27,
+          "exemplo_parafraseado": "O filme promete sustos e momentos de tensão, mas entrega pouco horror, decepcionando quem esperava mais do gênero.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Atuação boa apesar dos problemas",
+          "mencoes_aproximadas": 4,
+          "n_reviews_analisadas": 27,
+          "exemplo_parafraseado": "Mesmo com todos os defeitos do filme, a atuação da atriz principal foi elogiada por transmitir bem as emoções da personagem.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Fotografia e estética visual marcante",
+          "mencoes_aproximadas": 4,
+          "n_reviews_analisadas": 27,
+          "exemplo_parafraseado": "A direção de arte e a fotografia são visualmente impressionantes, mas isso não compensa as falhas na história e no desenvolvimento.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        }
+      ],
+      "observacao_geral": "As reviews negativas apontam que o filme, apesar de ter uma estética visual bonita e boas atuações, especialmente de Mia Goth, é prejudicado pelo ritmo lento, personagens pouco desenvolvidos e falta de sustos. A protagonista é vista como irritante e a trama não consegue capturar o interesse de grande parte deste grupo.",
+      "idioma_invalido": false,
+      "escopo_suspeito": false
+    },
+    {
+      "bucket": "medianas",
+      "alvo": 40,
+      "modo": "completo",
+      "estado_piso": "completa",
+      "n_validas": 40,
+      "share_real": 20,
+      "composicao_alvo": {
+        "2.5": 8,
+        "3.0": 32
+      },
+      "composicao_atingida": {
+        "2.5": 10,
+        "3.0": 30
+      },
+      "cascata_por_degrau": {
+        "150": 40
+      },
+      "deficit_redistribuido": 2,
+      "distribuicao_pagina_origem": {
+        "n": 40,
+        "min": 2,
+        "max": 65,
+        "p5": 2,
+        "p50": 8,
+        "p95": 32,
+        "fracao_profunda": 0.525
+      },
+      "janela_amostra": {
+        "n": 40,
+        "min": "2025-05-31",
+        "max": "2026-08-07",
+        "p5": "2026-07-26",
+        "p50": "2026-08-05",
+        "p95": "2026-08-07"
+      },
+      "niveis": [
+        {
+          "nivel": 2.5,
+          "n_validas": 10,
+          "n_alvo": 8,
+          "n_brutas": 84,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 1,
+          "n_descartadas_curtas": 70,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 2,
+          "motivos_descarte": {
+            "truncada_sem_texto": 2,
+            "spoiler": 1,
+            "abaixo_min_chars": 70,
+            "excedente_cota": 1,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 6
+        },
+        {
+          "nivel": 3.0,
+          "n_validas": 30,
+          "n_alvo": 32,
+          "n_brutas": 209,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 3,
+          "n_descartadas_curtas": 174,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 2,
+          "motivos_descarte": {
+            "truncada_sem_texto": 2,
+            "spoiler": 3,
+            "abaixo_min_chars": 174,
+            "excedente_cota": 0,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 18
+        }
+      ],
+      "temas": [
+        {
+          "tema": "Atuação de Mia Goth",
+          "mencoes_aproximadas": 19,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "A atuação de Mia Goth é considerada o ponto alto do filme, com muitos destacando sua habilidade em alternar entre inocência e fúria intensa, além de sua presença marcante em cena.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Estética visual e fotografia",
+          "mencoes_aproximadas": 13,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "A direção de arte e a fotografia em cores vibrantes, que remetem a filmes clássicos, são amplamente elogiadas por contrastar com o tom sombrio da história.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Ritmo e narrativa",
+          "mencoes_aproximadas": 10,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "Muitos espectadores consideram o filme lento em alguns trechos, com a trama se desenvolvendo de forma arrastada, apesar de manter o interesse até o final.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Personagem de Pearl e sua complexidade",
+          "mencoes_aproximadas": 9,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "A construção da personagem Pearl é vista como um dos pontos fortes, com sua loucura e motivações gerando sentimentos ambivalentes de empatia e repulsa.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Trilha sonora",
+          "mencoes_aproximadas": 4,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "A música é elogiada por sua beleza e por carregar um tom sinistro que complementa a atmosfera do filme.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Comparação com outros filmes da trilogia",
+          "mencoes_aproximadas": 4,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "Alguns espectadores notam que este filme se distingue dos demais da trilogia por focar mais no aspecto psicológico, ao mesmo tempo que aprofunda a compreensão do primeiro filme.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        }
+      ],
+      "observacao_geral": "As reviews medianas apontam para um filme tecnicamente belo e com excelente atuação de Mia Goth, mas que peca pelo ritmo irregular e por uma trama que não empolga totalmente. Apesar disso, a complexidade da personagem e a estética visual são frequentemente destacadas como pontos positivos.",
+      "idioma_invalido": false,
+      "escopo_suspeito": false
+    },
+    {
+      "bucket": "positivas",
+      "alvo": 40,
+      "modo": "completo",
+      "estado_piso": "completa",
+      "n_validas": 40,
+      "share_real": 76,
+      "composicao_alvo": {
+        "3.5": 9,
+        "4.0": 16,
+        "4.5": 5,
+        "5.0": 10
+      },
+      "composicao_atingida": {
+        "3.5": 9,
+        "4.0": 16,
+        "4.5": 5,
+        "5.0": 10
+      },
+      "cascata_por_degrau": {
+        "150": 40
+      },
+      "deficit_redistribuido": 0,
+      "distribuicao_pagina_origem": {
+        "n": 40,
+        "min": 1,
+        "max": 128,
+        "p5": 1,
+        "p50": 3,
+        "p95": 128,
+        "fracao_profunda": 0.425
+      },
+      "janela_amostra": {
+        "n": 40,
+        "min": "2025-10-13",
+        "max": "2026-08-22",
+        "p5": "2026-05-08",
+        "p50": "2026-08-07",
+        "p95": "2026-08-08"
+      },
+      "niveis": [
+        {
+          "nivel": 3.5,
+          "n_validas": 9,
+          "n_alvo": 9,
+          "n_brutas": 59,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 1,
+          "n_descartadas_curtas": 45,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 2,
+          "motivos_descarte": {
+            "truncada_sem_texto": 2,
+            "spoiler": 1,
+            "abaixo_min_chars": 45,
+            "excedente_cota": 2,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 4
+        },
+        {
+          "nivel": 4.0,
+          "n_validas": 16,
+          "n_alvo": 16,
+          "n_brutas": 138,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 3,
+          "n_descartadas_curtas": 118,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 0,
+          "motivos_descarte": {
+            "truncada_sem_texto": 0,
+            "spoiler": 3,
+            "abaixo_min_chars": 118,
+            "excedente_cota": 1,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 13
+        },
+        {
+          "nivel": 4.5,
+          "n_validas": 5,
+          "n_alvo": 5,
+          "n_brutas": 36,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 2,
+          "n_descartadas_curtas": 27,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 1,
+          "motivos_descarte": {
+            "truncada_sem_texto": 1,
+            "spoiler": 2,
+            "abaixo_min_chars": 27,
+            "excedente_cota": 1,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 3
+        },
+        {
+          "nivel": 5.0,
+          "n_validas": 10,
+          "n_alvo": 10,
+          "n_brutas": 60,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 3,
+          "n_descartadas_curtas": 44,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 1,
+          "motivos_descarte": {
+            "truncada_sem_texto": 1,
+            "spoiler": 3,
+            "abaixo_min_chars": 44,
+            "excedente_cota": 2,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 4
+        }
+      ],
+      "temas": [
+        {
+          "tema": "Atuação de Mia Goth",
+          "mencoes_aproximadas": 30,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "A atuação de Mia Goth é fenomenal, transmitindo a deterioração psicológica da personagem de forma visceral.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Monólogo final",
+          "mencoes_aproximadas": 15,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "Destacam o monólogo final devastador que expõe a vulnerabilidade e a fúria da protagonista.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Estética e direção de arte",
+          "mencoes_aproximadas": 12,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "A estética vintage e a fotografia são elogiadas por criar uma atmosfera nostálgica e perturbadora.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Retrato da raiva feminina",
+          "mencoes_aproximadas": 10,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "As reviews positivas celebram a representação intensa da fúria feminina e do desejo de libertação.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Estudo de personagem",
+          "mencoes_aproximadas": 9,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "O filme é apreciado por seu foco no desenvolvimento psicológico da protagonista, gerando empatia e desconforto.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Crítica à repressão social",
+          "mencoes_aproximadas": 7,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "Aborda a opressão familiar e as limitações impostas às mulheres, levando à obsessão e à loucura.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        }
+      ],
+      "observacao_geral": "As reviews positivas destacam a atuação magistral de Mia Goth, a estética visual marcante e o retrato visceral da raiva feminina, considerando o filme um estudo de personagem perturbador e cativante.",
+      "idioma_invalido": false,
+      "escopo_suspeito": false
+    }
+  ],
+  "eixos": {
+    "taxonomia_id": "ebab2667de74",
+    "margem_lift_pp": 20,
+    "contraste": "valorativo",
+    "linhas": [
+      {
+        "eixo": "ritmo",
+        "por_bucket": {
+          "negativas": {
+            "mencoes": 8,
+            "de_n": 26,
+            "freq_pct": 30.8,
+            "lift_pp": 9.6,
+            "tema": "Tédio e ritmo arrastado",
+            "exemplo_parafraseado": "O filme se arrasta e não consegue manter o interesse, sendo monótono e cansativo.",
+            "temas_no_mesmo_eixo": []
+          },
+          "medianas": {
+            "mencoes": 7,
+            "de_n": 33,
+            "freq_pct": 21.2,
+            "lift_pp": -9.6,
+            "tema": "Ritmo e narrativa",
+            "exemplo_parafraseado": "Muitos espectadores consideram o filme lento em alguns trechos, com a trama se desenvolvendo de forma arrastada, apesar de manter o interesse até o final.",
+            "temas_no_mesmo_eixo": []
+          },
+          "positivas": {
+            "mencoes": 2,
+            "de_n": 31,
+            "freq_pct": 6.5,
+            "lift_pp": -24.3,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          }
+        },
+        "bullet_de": {
+          "negativas": null,
+          "medianas": null,
+          "positivas": null
+        }
+      },
+      {
+        "eixo": "atuacao",
+        "por_bucket": {
+          "negativas": {
+            "mencoes": 9,
+            "de_n": 26,
+            "freq_pct": 34.6,
+            "lift_pp": -20.2,
+            "tema": "Atuação boa apesar dos problemas",
+            "exemplo_parafraseado": "Mesmo com todos os defeitos do filme, a atuação da atriz principal foi elogiada por transmitir bem as emoções da personagem.",
+            "temas_no_mesmo_eixo": []
+          },
+          "medianas": {
+            "mencoes": 13,
+            "de_n": 33,
+            "freq_pct": 39.4,
+            "lift_pp": -15.4,
+            "tema": "Atuação de Mia Goth",
+            "exemplo_parafraseado": "A atuação de Mia Goth é considerada o ponto alto do filme, com muitos destacando sua habilidade em alternar entre inocência e fúria intensa, além de sua presença marcante em cena.",
+            "temas_no_mesmo_eixo": []
+          },
+          "positivas": {
+            "mencoes": 17,
+            "de_n": 31,
+            "freq_pct": 54.8,
+            "lift_pp": 15.4,
+            "tema": "Atuação de Mia Goth",
+            "exemplo_parafraseado": "A atuação de Mia Goth é fenomenal, transmitindo a deterioração psicológica da personagem de forma visceral.",
+            "temas_no_mesmo_eixo": []
+          }
+        },
+        "bullet_de": {
+          "negativas": "frequencia",
+          "medianas": null,
+          "positivas": "frequencia"
+        }
+      },
+      {
+        "eixo": "direcao_imagem",
+        "por_bucket": {
+          "negativas": {
+            "mencoes": 5,
+            "de_n": 26,
+            "freq_pct": 19.2,
+            "lift_pp": -6.6,
+            "tema": "Fotografia e estética visual marcante",
+            "exemplo_parafraseado": "A direção de arte e a fotografia são visualmente impressionantes, mas isso não compensa as falhas na história e no desenvolvimento.",
+            "temas_no_mesmo_eixo": []
+          },
+          "medianas": {
+            "mencoes": 7,
+            "de_n": 33,
+            "freq_pct": 21.2,
+            "lift_pp": -4.6,
+            "tema": "Estética visual e fotografia",
+            "exemplo_parafraseado": "A direção de arte e a fotografia em cores vibrantes, que remetem a filmes clássicos, são amplamente elogiadas por contrastar com o tom sombrio da história.",
+            "temas_no_mesmo_eixo": []
+          },
+          "positivas": {
+            "mencoes": 8,
+            "de_n": 31,
+            "freq_pct": 25.8,
+            "lift_pp": 4.6,
+            "tema": "Estética e direção de arte",
+            "exemplo_parafraseado": "A estética vintage e a fotografia são elogiadas por criar uma atmosfera nostálgica e perturbadora.",
+            "temas_no_mesmo_eixo": []
+          }
+        },
+        "bullet_de": {
+          "negativas": null,
+          "medianas": null,
+          "positivas": null
+        }
+      },
+      {
+        "eixo": "roteiro_estrutura",
+        "por_bucket": {
+          "negativas": {
+            "mencoes": 15,
+            "de_n": 26,
+            "freq_pct": 57.7,
+            "lift_pp": -0.4,
+            "tema": "Personagem principal irritante",
+            "exemplo_parafraseado": "A protagonista é tão desagradável e egocêntrica que se torna difícil torcer por ela ou mesmo suportar sua presença em cena.",
+            "temas_no_mesmo_eixo": [
+              "Falta de desenvolvimento dos personagens"
+            ]
+          },
+          "medianas": {
+            "mencoes": 15,
+            "de_n": 33,
+            "freq_pct": 45.5,
+            "lift_pp": -12.6,
+            "tema": "Personagem de Pearl e sua complexidade",
+            "exemplo_parafraseado": "A construção da personagem Pearl é vista como um dos pontos fortes, com sua loucura e motivações gerando sentimentos ambivalentes de empatia e repulsa.",
+            "temas_no_mesmo_eixo": []
+          },
+          "positivas": {
+            "mencoes": 18,
+            "de_n": 31,
+            "freq_pct": 58.1,
+            "lift_pp": 0.4,
+            "tema": "Monólogo final",
+            "exemplo_parafraseado": "Destacam o monólogo final devastador que expõe a vulnerabilidade e a fúria da protagonista.",
+            "temas_no_mesmo_eixo": [
+              "Estudo de personagem"
+            ]
+          }
+        },
+        "bullet_de": {
+          "negativas": "frequencia",
+          "medianas": "frequencia",
+          "positivas": "frequencia"
+        }
+      },
+      {
+        "eixo": "som_trilha",
+        "por_bucket": {
+          "negativas": {
+            "mencoes": 0,
+            "de_n": 26,
+            "freq_pct": 0.0,
+            "lift_pp": -6.1,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "medianas": {
+            "mencoes": 2,
+            "de_n": 33,
+            "freq_pct": 6.1,
+            "lift_pp": 6.1,
+            "tema": "Trilha sonora",
+            "exemplo_parafraseado": "A música é elogiada por sua beleza e por carregar um tom sinistro que complementa a atmosfera do filme.",
+            "temas_no_mesmo_eixo": []
+          },
+          "positivas": {
+            "mencoes": 0,
+            "de_n": 31,
+            "freq_pct": 0.0,
+            "lift_pp": -6.1,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          }
+        },
+        "bullet_de": {
+          "negativas": null,
+          "medianas": null,
+          "positivas": null
+        }
+      },
+      {
+        "eixo": "tom_atmosfera",
+        "por_bucket": {
+          "negativas": {
+            "mencoes": 3,
+            "de_n": 26,
+            "freq_pct": 11.5,
+            "lift_pp": -11.0,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "medianas": {
+            "mencoes": 5,
+            "de_n": 33,
+            "freq_pct": 15.2,
+            "lift_pp": -7.4,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "positivas": {
+            "mencoes": 7,
+            "de_n": 31,
+            "freq_pct": 22.6,
+            "lift_pp": 7.4,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          }
+        },
+        "bullet_de": {
+          "negativas": null,
+          "medianas": null,
+          "positivas": null
+        }
+      },
+      {
+        "eixo": "impacto_emocional",
+        "por_bucket": {
+          "negativas": {
+            "mencoes": 4,
+            "de_n": 26,
+            "freq_pct": 15.4,
+            "lift_pp": -8.9,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "medianas": {
+            "mencoes": 8,
+            "de_n": 33,
+            "freq_pct": 24.2,
+            "lift_pp": 1.7,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "positivas": {
+            "mencoes": 7,
+            "de_n": 31,
+            "freq_pct": 22.6,
+            "lift_pp": -1.7,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          }
+        },
+        "bullet_de": {
+          "negativas": null,
+          "medianas": null,
+          "positivas": null
+        }
+      },
+      {
+        "eixo": "comparacoes",
+        "por_bucket": {
+          "negativas": {
+            "mencoes": 4,
+            "de_n": 26,
+            "freq_pct": 15.4,
+            "lift_pp": -30.1,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "medianas": {
+            "mencoes": 15,
+            "de_n": 33,
+            "freq_pct": 45.5,
+            "lift_pp": 10.0,
+            "tema": "Comparação com outros filmes da trilogia",
+            "exemplo_parafraseado": "Alguns espectadores notam que este filme se distingue dos demais da trilogia por focar mais no aspecto psicológico, ao mesmo tempo que aprofunda a compreensão do primeiro filme.",
+            "temas_no_mesmo_eixo": []
+          },
+          "positivas": {
+            "mencoes": 11,
+            "de_n": 31,
+            "freq_pct": 35.5,
+            "lift_pp": -10.0,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          }
+        },
+        "bullet_de": {
+          "negativas": null,
+          "medianas": "frequencia",
+          "positivas": null
+        }
+      },
+      {
+        "eixo": "expectativa",
+        "por_bucket": {
+          "negativas": {
+            "mencoes": 3,
+            "de_n": 26,
+            "freq_pct": 11.5,
+            "lift_pp": 2.4,
+            "tema": "Expectativa de terror não atendida",
+            "exemplo_parafraseado": "O filme promete sustos e momentos de tensão, mas entrega pouco horror, decepcionando quem esperava mais do gênero.",
+            "temas_no_mesmo_eixo": []
+          },
+          "medianas": {
+            "mencoes": 3,
+            "de_n": 33,
+            "freq_pct": 9.1,
+            "lift_pp": -2.4,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "positivas": {
+            "mencoes": 2,
+            "de_n": 31,
+            "freq_pct": 6.5,
+            "lift_pp": -5.1,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          }
+        },
+        "bullet_de": {
+          "negativas": null,
+          "medianas": null,
+          "positivas": null
+        }
+      },
+      {
+        "eixo": "critica_social",
+        "por_bucket": {
+          "negativas": {
+            "mencoes": 3,
+            "de_n": 26,
+            "freq_pct": 11.5,
+            "lift_pp": -3.6,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "medianas": {
+            "mencoes": 5,
+            "de_n": 33,
+            "freq_pct": 15.2,
+            "lift_pp": 2.2,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "positivas": {
+            "mencoes": 4,
+            "de_n": 31,
+            "freq_pct": 12.9,
+            "lift_pp": -2.2,
+            "tema": "Retrato da raiva feminina",
+            "exemplo_parafraseado": "As reviews positivas celebram a representação intensa da fúria feminina e do desejo de libertação.",
+            "temas_no_mesmo_eixo": [
+              "Crítica à repressão social"
+            ]
+          }
+        },
+        "bullet_de": {
+          "negativas": null,
+          "medianas": null,
+          "positivas": null
+        }
+      }
+    ],
+    "fonte_classificacao": {
+      "arquivo": "resultado/votacao-3/consenso.jsonl",
+      "criterio": "votacao_3_consenso_2_de_3",
+      "por_bucket": {
+        "negativas": {
+          "n_classificadas": 26,
+          "n_analisadas": 27,
+          "sobreposicao_com_analisadas": 26
+        },
+        "medianas": {
+          "n_classificadas": 33,
+          "n_analisadas": 40,
+          "sobreposicao_com_analisadas": 33
+        },
+        "positivas": {
+          "n_classificadas": 31,
+          "n_analisadas": 40,
+          "sobreposicao_com_analisadas": 31
+        }
+      }
+    },
+    "rotulagem": {
+      "n_chamadas": 3,
+      "falharam": [],
+      "fora_da_taxonomia": {},
+      "houve_retentativa": []
+    },
+    "spec_version": "1.9.16",
+    "verificador": {
+      "aplicado": true,
+      "variante": "V2_alvo",
+      "passada": 1,
+      "eixo": "impacto_emocional",
+      "n_removidas_no_corpus": 1654
+    }
+  },
+  "narrativa": "Lançado em 2022 e dirigido por Ti West, o longa-metragem de terror Pearl: Uma História de Origem 'X' situa a narrativa na fazenda isolada onde a protagonista cuida do pai doente sob o olhar amargo e autoritário de sua mãe devota. Em meio ao confinamento, suas ambições por uma vida glamourosa como as do cinema colidem com repressões profundas, apresentando a história de origem em estética technicolor da vilã de X.\n\nA experiência cinematográfica apoia-se em uma ambientação de época com estética visual marcante e cores vivas, articulada a uma cadência estruturada em torno do acompanhamento psicológico de sua figura central.\n\nOs grupos concordam sobre o que o filme é e discordam no veredito sobre se a produção funciona. Na grande maioria das notas (~76%), a maior parte exalta a atuação de Mia Goth, enquanto boa parte destaca a entrega no monólogo final e uma parcela expressiva elogia a estética e a direção de arte da obra.\n\nPara quem se situa numa parcela das notas (~20%), muitos reconhecem as qualidades da atuação de Mia Goth e um número considerável valoriza a estética visual e a fotografia, embora uma parte aponte ressalvas em relação ao ritmo e à narrativa. Já sob a ótica de quem integra uma fração mínima das notas (~5%), vários manifestam tédio perante o ritmo arrastado, muitos consideram a personagem principal irritante e parte deles aponta a falta de desenvolvimento dos personagens.",
+  "verificacao_narrativa": {
+    "quantificador_fora_de_faixa": [],
+    "quantificador_repetido": [],
+    "paragrafos": {
+      "n_paragrafos": 4,
+      "minimo": 3,
+      "insuficientes": false,
+      "longos": []
+    },
+    "n_paragrafos": 4,
+    "paragrafos_insuficientes": false,
+    "paragrafos_longos": [],
+    "grupos_sem_paragrafo_proprio": [
+      "negativas"
+    ],
+    "movimento1_e_movimento2_no_mesmo_paragrafo": false,
+    "formato_invalido": false,
+    "numeros_inventados": [],
+    "rotulos_faltando": [],
+    "ordem_incorreta": false,
+    "vocabulario_peso": false,
+    "resenha_speak": [],
+    "n_resenha_speak": 0,
+    "n_flags": 1
+  },
+  "narrativa_selecao": {
+    "provider": "gemini",
+    "modelo": "gemini-3.7-flash",
+    "n_candidatos": 3,
+    "n_chamadas": 4,
+    "indice_escolhido": 0,
+    "motivo": "menor_severidade",
+    "criterio_decisivo": "empate",
+    "candidatos": [
+      {
+        "indice": 0,
+        "n_flags": 1,
+        "cliches": 0,
+        "repeticao_max": 2,
+        "ritmo": 8,
+        "cobertura": 0.889,
+        "eliminado": true
+      },
+      {
+        "indice": 1,
+        "n_flags": 2,
+        "cliches": 0,
+        "repeticao_max": 2,
+        "ritmo": 11,
+        "cobertura": 0.889,
+        "eliminado": true
+      },
+      {
+        "indice": 2,
+        "n_flags": 1,
+        "cliches": 0,
+        "repeticao_max": 2,
+        "ritmo": 8,
+        "cobertura": 0.889,
+        "eliminado": true
+      }
+    ],
+    "retry": {
+      "n_frases_infratoras": 0,
+      "motivos": [],
+      "n_flags_depois": 1,
+      "aplicado": false
+    },
+    "uso": {
+      "prompt_tokens": 11266,
+      "completion_tokens": 1458,
+      "cache_hit_tokens": 0,
+      "cache_miss_tokens": 11266
+    },
+    "latencia_s": 34.66
+  }
+}

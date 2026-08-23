@@ -1,7 +1,7 @@
 {
   "slug": "parasite-2019",
-  "coletado_em": "2026-08-09T13:51:51.695677+00:00",
-  "versao_coletor": "1.9.0",
+  "coletado_em": "2026-08-23T01:04:35.319465+00:00",
+  "versao_coletor": "1.9.6",
   "ordenacao_usada": "by/added",
   "histograma_bruto": {
     "0.5": 5343,
@@ -29,14 +29,14 @@
   },
   "paginas_gastas_por_nivel": {
     "0.5": 1,
-    "1.0": 6,
+    "1.0": 2,
     "1.5": 2,
-    "2.0": 15,
-    "2.5": 6,
+    "2.0": 16,
+    "2.5": 4,
     "3.0": 10,
     "3.5": 1,
-    "4.0": 7,
-    "4.5": 4,
+    "4.0": 4,
+    "4.5": 3,
     "5.0": 8
   },
   "paradas_por_limite": [
@@ -53,27 +53,27 @@
   ],
   "contagem_bruta_por_nivel": {
     "0.5": 12,
-    "1.0": 59,
+    "1.0": 24,
     "1.5": 24,
-    "2.0": 150,
-    "2.5": 72,
-    "3.0": 120,
+    "2.0": 162,
+    "2.5": 48,
+    "3.0": 108,
     "3.5": 12,
-    "4.0": 84,
-    "4.5": 48,
+    "4.0": 48,
+    "4.5": 36,
     "5.0": 96
   },
   "contagem_estimada_valida_por_nivel": {
     "0.5": 0,
-    "1.0": 7,
+    "1.0": 2,
     "1.5": 3,
-    "2.0": 21,
-    "2.5": 12,
-    "3.0": 31,
+    "2.0": 23,
+    "2.5": 9,
+    "3.0": 26,
     "3.5": 2,
-    "4.0": 12,
-    "4.5": 12,
-    "5.0": 16
+    "4.0": 6,
+    "4.5": 4,
+    "5.0": 17
   },
   "motivo_parada_por_nivel": {
     "0.5": "orcamento_esgotado",
@@ -89,10 +89,10 @@
   },
   "paginas_base_por_nivel": {
     "0.5": 1,
-    "1.0": 3,
+    "1.0": 2,
     "1.5": 2,
-    "2.0": 10,
-    "2.5": 6,
+    "2.0": 8,
+    "2.5": 4,
     "3.0": 10,
     "3.5": 1,
     "4.0": 4,
@@ -101,31 +101,30 @@
   },
   "paginas_extensao_por_nivel": {
     "0.5": 0,
-    "1.0": 3,
+    "1.0": 0,
     "1.5": 0,
-    "2.0": 5,
+    "2.0": 8,
     "2.5": 0,
     "3.0": 0,
     "3.5": 0,
-    "4.0": 3,
-    "4.5": 1,
+    "4.0": 0,
+    "4.5": 0,
     "5.0": 0
   },
   "extensao_por_bucket": {
     "negativas": {
-      "paginas_base": 16,
+      "paginas_base": 13,
       "paginas_extensao": 8,
       "extras_por_nivel": {
-        "1.0": 3,
-        "2.0": 5
+        "2.0": 8
       },
       "motivo_parada": "teto_extensao",
-      "n_validas_pos_base": 41,
+      "n_validas_pos_base": 44,
       "n_validas_pos_extensao": 44,
       "meta": 50
     },
     "medianas": {
-      "paginas_base": 16,
+      "paginas_base": 14,
       "paginas_extensao": 0,
       "extras_por_nivel": {},
       "motivo_parada": "meta_atingida",
@@ -135,32 +134,41 @@
     },
     "positivas": {
       "paginas_base": 16,
-      "paginas_extensao": 4,
-      "extras_por_nivel": {
-        "4.0": 3,
-        "4.5": 1
-      },
+      "paginas_extensao": 0,
+      "extras_por_nivel": {},
       "motivo_parada": "meta_atingida",
-      "n_validas_pos_base": 46,
-      "n_validas_pos_extensao": 53,
+      "n_validas_pos_base": 62,
+      "n_validas_pos_extensao": 62,
       "meta": 50
     }
   },
   "profundidade_sondagem": {
     "nivel_sondado": 5.0,
-    "profundidade": null,
+    "profundidade": 256,
     "exata": false,
-    "requisicoes": 3,
-    "motivo": "falha"
+    "requisicoes": 4,
+    "motivo": "teto_plataforma"
+  },
+  "profundidade_estimada_por_nivel": {
+    "0.5": 1,
+    "1.0": 1,
+    "1.5": 1,
+    "2.0": 4,
+    "2.5": 3,
+    "3.0": 21,
+    "3.5": 24,
+    "4.0": 114,
+    "4.5": 89,
+    "5.0": 256
   },
   "janela_temporal": {
     "total": {
-      "n": 812,
+      "n": 860,
       "min": "2012-01-04",
-      "max": "2026-08-09",
-      "p5": "2014-07-12",
+      "max": "2026-08-21",
+      "p5": "2019-06-05",
       "p50": "2026-08-05",
-      "p95": "2026-08-08"
+      "p95": "2026-08-18"
     },
     "por_bucket": {
       "negativas": {
@@ -180,22 +188,22 @@
         "p95": "2026-08-07"
       },
       "positivas": {
-        "n": 312,
-        "min": "2019-08-05",
-        "max": "2026-08-09",
+        "n": 360,
+        "min": "2019-06-05",
+        "max": "2026-08-21",
         "p5": "2025-03-15",
         "p50": "2026-08-07",
-        "p95": "2026-08-08"
+        "p95": "2026-08-20"
       }
     }
   },
   "dias_por_100_paginas": {
-    "n_paginas": 17,
+    "n_paginas": 21,
     "pagina_min": 1,
-    "pagina_max": 17,
-    "dias": 15,
-    "dias_por_100_paginas": 93.75,
-    "paginas_para_1_ano": 389
+    "pagina_max": 128,
+    "dias": -11,
+    "dias_por_100_paginas": -8.661417322834646,
+    "paginas_para_1_ano": null
   },
   "dias_por_100_paginas_por_nivel": {
     "1.0": {
@@ -239,27 +247,27 @@
       "paginas_para_1_ano": 1460
     },
     "4.0": {
-      "n_paginas": 7,
+      "n_paginas": 8,
       "pagina_min": 1,
-      "pagina_max": 7,
-      "dias": -1,
-      "dias_por_100_paginas": -16.666666666666668,
+      "pagina_max": 28,
+      "dias": -13,
+      "dias_por_100_paginas": -48.148148148148145,
       "paginas_para_1_ano": null
     },
     "4.5": {
-      "n_paginas": 4,
+      "n_paginas": 5,
       "pagina_min": 1,
-      "pagina_max": 4,
-      "dias": 0,
-      "dias_por_100_paginas": 0.0,
+      "pagina_max": 22,
+      "dias": -13,
+      "dias_por_100_paginas": -61.904761904761905,
       "paginas_para_1_ano": null
     },
     "5.0": {
-      "n_paginas": 14,
+      "n_paginas": 16,
       "pagina_min": 1,
-      "pagina_max": 14,
-      "dias": -1,
-      "dias_por_100_paginas": -7.6923076923076925,
+      "pagina_max": 128,
+      "dias": -11,
+      "dias_por_100_paginas": -8.661417322834646,
       "paginas_para_1_ano": null
     }
   },

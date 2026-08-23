@@ -1,7 +1,7 @@
 {
   "slug": "the-hateful-eight",
-  "coletado_em": "2026-08-08T09:04:02.153917+00:00",
-  "versao_coletor": "1.9.0",
+  "coletado_em": "2026-08-23T01:13:31.292159+00:00",
+  "versao_coletor": "1.9.6",
   "ordenacao_usada": "by/added",
   "histograma_bruto": {
     "0.5": 2714,
@@ -53,27 +53,27 @@
   ],
   "contagem_bruta_por_nivel": {
     "0.5": 12,
-    "1.0": 36,
+    "1.0": 26,
     "1.5": 24,
-    "2.0": 120,
-    "2.5": 72,
+    "2.0": 108,
+    "2.5": 60,
     "3.0": 120,
     "3.5": 36,
     "4.0": 84,
-    "4.5": 36,
+    "4.5": 24,
     "5.0": 36
   },
   "contagem_estimada_valida_por_nivel": {
     "0.5": 6,
-    "1.0": 12,
+    "1.0": 9,
     "1.5": 10,
-    "2.0": 31,
-    "2.5": 29,
-    "3.0": 34,
+    "2.0": 29,
+    "2.5": 23,
+    "3.0": 29,
     "3.5": 10,
-    "4.0": 32,
-    "4.5": 6,
-    "5.0": 5
+    "4.0": 29,
+    "4.5": 1,
+    "5.0": 6
   },
   "motivo_parada_por_nivel": {
     "0.5": "orcamento_esgotado",
@@ -87,18 +87,90 @@
     "4.5": "orcamento_esgotado",
     "5.0": "orcamento_esgotado"
   },
+  "paginas_base_por_nivel": {
+    "0.5": 1,
+    "1.0": 3,
+    "1.5": 2,
+    "2.0": 10,
+    "2.5": 6,
+    "3.0": 10,
+    "3.5": 3,
+    "4.0": 7,
+    "4.5": 3,
+    "5.0": 3
+  },
+  "paginas_extensao_por_nivel": {
+    "0.5": 0,
+    "1.0": 0,
+    "1.5": 0,
+    "2.0": 0,
+    "2.5": 0,
+    "3.0": 0,
+    "3.5": 0,
+    "4.0": 0,
+    "4.5": 0,
+    "5.0": 0
+  },
+  "extensao_por_bucket": {
+    "negativas": {
+      "paginas_base": 16,
+      "paginas_extensao": 0,
+      "extras_por_nivel": {},
+      "motivo_parada": "meta_atingida",
+      "n_validas_pos_base": 61,
+      "n_validas_pos_extensao": 61,
+      "meta": 50
+    },
+    "medianas": {
+      "paginas_base": 16,
+      "paginas_extensao": 0,
+      "extras_por_nivel": {},
+      "motivo_parada": "meta_atingida",
+      "n_validas_pos_base": 68,
+      "n_validas_pos_extensao": 68,
+      "meta": 50
+    },
+    "positivas": {
+      "paginas_base": 16,
+      "paginas_extensao": 0,
+      "extras_por_nivel": {},
+      "motivo_parada": "meta_atingida",
+      "n_validas_pos_base": 68,
+      "n_validas_pos_extensao": 68,
+      "meta": 50
+    }
+  },
+  "profundidade_sondagem": {
+    "nivel_sondado": 4.0,
+    "profundidade": 256,
+    "exata": false,
+    "requisicoes": 4,
+    "motivo": "teto_plataforma"
+  },
+  "profundidade_estimada_por_nivel": {
+    "0.5": 2,
+    "1.0": 4,
+    "1.5": 3,
+    "2.0": 16,
+    "2.5": 17,
+    "3.0": 78,
+    "3.5": 113,
+    "4.0": 256,
+    "4.5": 125,
+    "5.0": 124
+  },
   "janela_temporal": {
     "total": {
-      "n": 576,
-      "min": "2016-01-01",
-      "max": "2026-08-08",
+      "n": 648,
+      "min": "2015-12-24",
+      "max": "2026-08-09",
       "p5": "2026-04-13",
-      "p50": "2026-07-26",
+      "p50": "2026-07-25",
       "p95": "2026-08-07"
     },
     "por_bucket": {
       "negativas": {
-        "n": 192,
+        "n": 194,
         "min": "2017-12-20",
         "max": "2026-08-08",
         "p5": "2026-04-12",
@@ -106,17 +178,17 @@
         "p95": "2026-08-02"
       },
       "medianas": {
-        "n": 192,
+        "n": 214,
         "min": "2016-01-01",
         "max": "2026-08-08",
-        "p5": "2026-01-27",
-        "p50": "2026-07-24",
-        "p95": "2026-08-06"
+        "p5": "2026-01-23",
+        "p50": "2026-07-23",
+        "p95": "2026-08-05"
       },
       "positivas": {
-        "n": 192,
-        "min": "2019-08-07",
-        "max": "2026-08-08",
+        "n": 240,
+        "min": "2015-12-24",
+        "max": "2026-08-09",
         "p5": "2026-06-23",
         "p50": "2026-08-06",
         "p95": "2026-08-08"
@@ -124,16 +196,16 @@
     }
   },
   "dias_por_100_paginas": {
-    "n_paginas": 11,
+    "n_paginas": 17,
     "pagina_min": 1,
-    "pagina_max": 12,
-    "dias": 23,
-    "dias_por_100_paginas": 209.0909090909091,
-    "paginas_para_1_ano": 175
+    "pagina_max": 128,
+    "dias": 33,
+    "dias_por_100_paginas": 25.984251968503937,
+    "paginas_para_1_ano": 1405
   },
   "dias_por_100_paginas_por_nivel": {
     "1.0": {
-      "n_paginas": 3,
+      "n_paginas": 4,
       "pagina_min": 1,
       "pagina_max": 4,
       "dias": 77,
@@ -165,28 +237,28 @@
       "paginas_para_1_ano": 54
     },
     "3.0": {
-      "n_paginas": 10,
+      "n_paginas": 12,
       "pagina_min": 1,
-      "pagina_max": 12,
-      "dias": 21,
-      "dias_por_100_paginas": 190.9090909090909,
-      "paginas_para_1_ano": 191
+      "pagina_max": 39,
+      "dias": 63,
+      "dias_por_100_paginas": 165.78947368421052,
+      "paginas_para_1_ano": 220
     },
     "3.5": {
-      "n_paginas": 3,
+      "n_paginas": 4,
       "pagina_min": 1,
-      "pagina_max": 4,
-      "dias": 3,
-      "dias_por_100_paginas": 100.0,
-      "paginas_para_1_ano": 365
+      "pagina_max": 28,
+      "dias": 12,
+      "dias_por_100_paginas": 44.44444444444444,
+      "paginas_para_1_ano": 821
     },
     "4.0": {
-      "n_paginas": 7,
+      "n_paginas": 9,
       "pagina_min": 1,
-      "pagina_max": 9,
-      "dias": 3,
-      "dias_por_100_paginas": 37.5,
-      "paginas_para_1_ano": 973
+      "pagina_max": 128,
+      "dias": 35,
+      "dias_por_100_paginas": 27.559055118110237,
+      "paginas_para_1_ano": 1324
     },
     "4.5": {
       "n_paginas": 3,
@@ -197,12 +269,12 @@
       "paginas_para_1_ano": 1095
     },
     "5.0": {
-      "n_paginas": 3,
+      "n_paginas": 4,
       "pagina_min": 1,
-      "pagina_max": 4,
-      "dias": 1,
-      "dias_por_100_paginas": 33.333333333333336,
-      "paginas_para_1_ano": 1095
+      "pagina_max": 31,
+      "dias": -1,
+      "dias_por_100_paginas": -3.3333333333333335,
+      "paginas_para_1_ano": null
     }
   },
   "ano_lancamento": 2015,

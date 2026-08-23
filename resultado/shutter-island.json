@@ -1,0 +1,1341 @@
+{
+  "slug": "shutter-island",
+  "data_coleta": "2026-08-23T01:08:09.647844+00:00",
+  "spec_version": "1.9.16",
+  "total_reviews_observadas": 640,
+  "reviews_url": "https://letterboxd.com/film/shutter-island/reviews/",
+  "ficha": {
+    "titulo": "Ilha do Medo",
+    "sinopse_oficial": "No verão de 1954, os agentes judiciais Teddy Daniels (DiCaprio) e Chuck Aule (Ruffalo) foram designados para uma ilha remota do porto de Boston para investigar o desaparecimento de uma perigosa assassina (Mortimer) que estava reclusa no hospital psiquiátrico Ashecliffe, um centro penitenciário para criminosos perturbados dirigido pelo sinistro médico John Cawley. (Kingsley). Logo eles descobrem que o centro guarda muitos segredos e que a ilha esconde algo mais perigoso que os pacientes.",
+    "sinopse_fallback_en": false,
+    "generos": [
+      "Drama",
+      "Thriller",
+      "Mistério"
+    ],
+    "duracao_min": 138,
+    "diretor": "Martin Scorsese",
+    "diretor_transliterado": false,
+    "ano": 2010,
+    "fonte": "tmdb",
+    "ano_fonte": "bruto"
+  },
+  "distribuicao": {
+    "n_notas_total": 3640785,
+    "por_nivel": {
+      "0.5": 2795,
+      "1.0": 9378,
+      "1.5": 6252,
+      "2.0": 44865,
+      "2.5": 47165,
+      "3.0": 286405,
+      "3.5": 376023,
+      "4.0": 1135830,
+      "4.5": 646775,
+      "5.0": 1085297
+    },
+    "por_bucket": {
+      "negativas": 2,
+      "medianas": 9,
+      "positivas": 89
+    },
+    "fonte": "letterboxd_histograma"
+  },
+  "coleta": {
+    "slug": "shutter-island",
+    "coletado_em": "2026-08-23T01:07:49.533532+00:00",
+    "versao_coletor": "1.9.6",
+    "ordenacao_usada": "by/added",
+    "histograma_bruto": {
+      "0.5": 2795,
+      "1.0": 9378,
+      "1.5": 6252,
+      "2.0": 44865,
+      "2.5": 47165,
+      "3.0": 286405,
+      "3.5": 376023,
+      "4.0": 1135830,
+      "4.5": 646775,
+      "5.0": 1085297
+    },
+    "orcamento_paginas_por_nivel": {
+      "0.5": 2,
+      "1.0": 2,
+      "1.5": 2,
+      "2.0": 10,
+      "2.5": 6,
+      "3.0": 10,
+      "3.5": 2,
+      "4.0": 6,
+      "4.5": 3,
+      "5.0": 5
+    },
+    "paginas_gastas_por_nivel": {
+      "0.5": 2,
+      "1.0": 5,
+      "1.5": 2,
+      "2.0": 15,
+      "2.5": 6,
+      "3.0": 10,
+      "3.5": 2,
+      "4.0": 6,
+      "4.5": 3,
+      "5.0": 5
+    },
+    "paradas_por_limite": [
+      "0.5",
+      "1.0",
+      "1.5",
+      "2.0",
+      "2.5",
+      "3.0",
+      "3.5",
+      "4.0",
+      "4.5",
+      "5.0"
+    ],
+    "contagem_bruta_por_nivel": {
+      "0.5": 24,
+      "1.0": 42,
+      "1.5": 24,
+      "2.0": 171,
+      "2.5": 67,
+      "3.0": 120,
+      "3.5": 24,
+      "4.0": 72,
+      "4.5": 36,
+      "5.0": 60
+    },
+    "contagem_estimada_valida_por_nivel": {
+      "0.5": 6,
+      "1.0": 3,
+      "1.5": 4,
+      "2.0": 27,
+      "2.5": 14,
+      "3.0": 21,
+      "3.5": 3,
+      "4.0": 12,
+      "4.5": 11,
+      "5.0": 10
+    },
+    "motivo_parada_por_nivel": {
+      "0.5": "orcamento_esgotado",
+      "1.0": "orcamento_esgotado",
+      "1.5": "orcamento_esgotado",
+      "2.0": "orcamento_esgotado",
+      "2.5": "orcamento_esgotado",
+      "3.0": "orcamento_esgotado",
+      "3.5": "orcamento_esgotado",
+      "4.0": "orcamento_esgotado",
+      "4.5": "orcamento_esgotado",
+      "5.0": "orcamento_esgotado"
+    },
+    "paginas_base_por_nivel": {
+      "0.5": 2,
+      "1.0": 2,
+      "1.5": 2,
+      "2.0": 10,
+      "2.5": 6,
+      "3.0": 10,
+      "3.5": 2,
+      "4.0": 6,
+      "4.5": 3,
+      "5.0": 5
+    },
+    "paginas_extensao_por_nivel": {
+      "0.5": 0,
+      "1.0": 3,
+      "1.5": 0,
+      "2.0": 5,
+      "2.5": 0,
+      "3.0": 0,
+      "3.5": 0,
+      "4.0": 0,
+      "4.5": 0,
+      "5.0": 0
+    },
+    "extensao_por_bucket": {
+      "negativas": {
+        "paginas_base": 16,
+        "paginas_extensao": 8,
+        "extras_por_nivel": {
+          "1.0": 3,
+          "2.0": 5
+        },
+        "motivo_parada": "teto_extensao",
+        "n_validas_pos_base": 42,
+        "n_validas_pos_extensao": 44,
+        "meta": 50
+      },
+      "medianas": {
+        "paginas_base": 16,
+        "paginas_extensao": 0,
+        "extras_por_nivel": {},
+        "motivo_parada": "meta_atingida",
+        "n_validas_pos_base": 52,
+        "n_validas_pos_extensao": 52,
+        "meta": 50
+      },
+      "positivas": {
+        "paginas_base": 16,
+        "paginas_extensao": 0,
+        "extras_por_nivel": {},
+        "motivo_parada": "meta_atingida",
+        "n_validas_pos_base": 50,
+        "n_validas_pos_extensao": 50,
+        "meta": 50
+      }
+    },
+    "profundidade_sondagem": {
+      "nivel_sondado": 4.0,
+      "profundidade": 256,
+      "exata": false,
+      "requisicoes": 4,
+      "motivo": "teto_plataforma"
+    },
+    "profundidade_estimada_por_nivel": {
+      "0.5": 1,
+      "1.0": 2,
+      "1.5": 1,
+      "2.0": 10,
+      "2.5": 11,
+      "3.0": 65,
+      "3.5": 85,
+      "4.0": 256,
+      "4.5": 146,
+      "5.0": 245
+    },
+    "janela_temporal": {
+      "total": {
+        "n": 877,
+        "min": "2010-05-05",
+        "max": "2026-08-08",
+        "p5": "2026-06-02",
+        "p50": "2026-08-03",
+        "p95": "2026-08-08"
+      },
+      "por_bucket": {
+        "negativas": {
+          "n": 297,
+          "min": "2010-05-05",
+          "max": "2026-08-08",
+          "p5": "2026-06-02",
+          "p50": "2026-07-18",
+          "p95": "2026-08-06"
+        },
+        "medianas": {
+          "n": 280,
+          "min": "2020-06-19",
+          "max": "2026-08-08",
+          "p5": "2026-07-13",
+          "p50": "2026-08-03",
+          "p95": "2026-08-07"
+        },
+        "positivas": {
+          "n": 300,
+          "min": "2011-05-02",
+          "max": "2026-08-08",
+          "p5": "2026-06-02",
+          "p50": "2026-08-07",
+          "p95": "2026-08-08"
+        }
+      }
+    },
+    "dias_por_100_paginas": {
+      "n_paginas": 23,
+      "pagina_min": 1,
+      "pagina_max": 128,
+      "dias": 7,
+      "dias_por_100_paginas": 5.511811023622047,
+      "paginas_para_1_ano": 6622
+    },
+    "ano_lancamento": 2010,
+    "ano_fonte": "letterboxd",
+    "n_reviews_bruto": 877
+  },
+  "origem_paginas": {
+    "_histograma/shutter-island.html": "cache",
+    "shutter-island/pages/by_added/rated_4_page_4.html": "cache",
+    "shutter-island/pages/by_added/rated_4_page_16.html": "cache",
+    "shutter-island/pages/by_added/rated_4_page_64.html": "cache",
+    "shutter-island/pages/by_added/rated_4_page_256.html": "cache",
+    "shutter-island/pages/by_added/rated_0_5_page_1.html": "cache",
+    "shutter-island/pages/by_added/rated_0_5_page_2.html": "cache",
+    "shutter-island/fulltext/viewing_1376087001.html": "cache",
+    "shutter-island/fulltext/viewing_1364083465.html": "cache",
+    "shutter-island/pages/by_added/rated_1_page_1.html": "cache",
+    "shutter-island/pages/by_added/rated_1_page_2.html": "cache",
+    "shutter-island/pages/by_added/rated_1_5_page_1.html": "cache",
+    "shutter-island/pages/by_added/rated_1_5_page_2.html": "cache",
+    "shutter-island/fulltext/viewing_1410909873.html": "cache",
+    "shutter-island/pages/by_added/rated_2_page_1.html": "cache",
+    "shutter-island/pages/by_added/rated_2_page_2.html": "cache",
+    "shutter-island/pages/by_added/rated_2_page_3.html": "cache",
+    "shutter-island/pages/by_added/rated_2_page_4.html": "cache",
+    "shutter-island/pages/by_added/rated_2_page_5.html": "cache",
+    "shutter-island/pages/by_added/rated_2_page_6.html": "cache",
+    "shutter-island/pages/by_added/rated_2_page_7.html": "cache",
+    "shutter-island/pages/by_added/rated_2_page_8.html": "cache",
+    "shutter-island/pages/by_added/rated_2_page_9.html": "cache",
+    "shutter-island/pages/by_added/rated_2_page_10.html": "cache",
+    "shutter-island/fulltext/viewing_1436795887.html": "cache",
+    "shutter-island/fulltext/viewing_1409032905.html": "cache",
+    "shutter-island/pages/by_added/rated_2_5_page_1.html": "cache",
+    "shutter-island/pages/by_added/rated_2_5_page_2.html": "cache",
+    "shutter-island/pages/by_added/rated_2_5_page_3.html": "cache",
+    "shutter-island/pages/by_added/rated_2_5_page_4.html": "cache",
+    "shutter-island/pages/by_added/rated_2_5_page_5.html": "cache",
+    "shutter-island/pages/by_added/rated_2_5_page_6.html": "cache",
+    "shutter-island/fulltext/viewing_1426462048.html": "cache",
+    "shutter-island/pages/by_added/rated_3_page_1.html": "cache",
+    "shutter-island/pages/by_added/rated_3_page_2.html": "cache",
+    "shutter-island/pages/by_added/rated_3_page_3.html": "cache",
+    "shutter-island/pages/by_added/rated_3_page_4.html": "cache",
+    "shutter-island/pages/by_added/rated_3_page_5.html": "cache",
+    "shutter-island/pages/by_added/rated_3_page_6.html": "cache",
+    "shutter-island/pages/by_added/rated_3_page_7.html": "cache",
+    "shutter-island/pages/by_added/rated_3_page_8.html": "cache",
+    "shutter-island/pages/by_added/rated_3_page_16.html": "cache",
+    "shutter-island/pages/by_added/rated_3_page_32.html": "cache",
+    "shutter-island/fulltext/viewing_1438636805.html": "cache",
+    "shutter-island/pages/by_added/rated_3_5_page_1.html": "cache",
+    "shutter-island/pages/by_added/rated_3_5_page_2.html": "cache",
+    "shutter-island/fulltext/viewing_1439269912.html": "cache",
+    "shutter-island/fulltext/viewing_1438928733.html": "cache",
+    "shutter-island/pages/by_added/rated_4_page_1.html": "cache",
+    "shutter-island/pages/by_added/rated_4_page_2.html": "cache",
+    "shutter-island/pages/by_added/rated_4_page_3.html": "cache",
+    "shutter-island/pages/by_added/rated_4_page_128.html": "cache",
+    "shutter-island/fulltext/viewing_1423903025.html": "cache",
+    "shutter-island/pages/by_added/rated_4_5_page_1.html": "cache",
+    "shutter-island/pages/by_added/rated_4_5_page_2.html": "cache",
+    "shutter-island/pages/by_added/rated_4_5_page_36.html": "cache",
+    "shutter-island/fulltext/viewing_1439493325.html": "cache",
+    "shutter-island/fulltext/viewing_1439438804.html": "cache",
+    "shutter-island/pages/by_added/rated_5_page_1.html": "cache",
+    "shutter-island/pages/by_added/rated_5_page_2.html": "cache",
+    "shutter-island/pages/by_added/rated_5_page_3.html": "cache",
+    "shutter-island/pages/by_added/rated_5_page_4.html": "cache",
+    "shutter-island/pages/by_added/rated_5_page_61.html": "cache",
+    "shutter-island/fulltext/viewing_1439390767.html": "cache",
+    "shutter-island/pages/by_added/rated_1_page_3.html": "cache",
+    "shutter-island/pages/by_added/rated_2_page_11.html": "cache",
+    "shutter-island/pages/by_added/rated_2_page_12.html": "cache",
+    "shutter-island/fulltext/viewing_1388929321.html": "cache",
+    "shutter-island/pages/by_added/rated_1_page_4.html": "network",
+    "shutter-island/pages/by_added/rated_2_page_13.html": "cache",
+    "shutter-island/pages/by_added/rated_1_page_5.html": "network",
+    "shutter-island/pages/by_added/rated_2_page_14.html": "cache",
+    "shutter-island/pages/by_added/rated_2_page_15.html": "cache",
+    "shutter-island/fulltext/viewing_1381939461.html": "cache",
+    "shutter-island/film_page.html": "cache"
+  },
+  "buckets": [
+    {
+      "bucket": "negativas",
+      "alvo": 40,
+      "modo": "completo",
+      "estado_piso": "completa",
+      "n_validas": 40,
+      "share_real": 2,
+      "composicao_alvo": {
+        "0.5": 2,
+        "1.0": 6,
+        "1.5": 4,
+        "2.0": 28
+      },
+      "composicao_atingida": {
+        "0.5": 4,
+        "1.0": 3,
+        "1.5": 4,
+        "2.0": 29
+      },
+      "cascata_por_degrau": {
+        "150": 40
+      },
+      "deficit_redistribuido": 3,
+      "distribuicao_pagina_origem": {
+        "n": 40,
+        "min": 1,
+        "max": 16,
+        "p5": 1,
+        "p50": 7,
+        "p95": 15,
+        "fracao_profunda": 0.425
+      },
+      "janela_amostra": {
+        "n": 40,
+        "min": "2010-05-05",
+        "max": "2026-08-07",
+        "p5": "2025-03-16",
+        "p50": "2026-07-17",
+        "p95": "2026-08-05"
+      },
+      "niveis": [
+        {
+          "nivel": 0.5,
+          "n_validas": 4,
+          "n_alvo": 2,
+          "n_brutas": 24,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 1,
+          "n_descartadas_curtas": 17,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 0,
+          "motivos_descarte": {
+            "truncada_sem_texto": 0,
+            "spoiler": 1,
+            "abaixo_min_chars": 17,
+            "excedente_cota": 2,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 2
+        },
+        {
+          "nivel": 1.0,
+          "n_validas": 3,
+          "n_alvo": 6,
+          "n_brutas": 42,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 3,
+          "n_descartadas_curtas": 36,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 0,
+          "motivos_descarte": {
+            "truncada_sem_texto": 0,
+            "spoiler": 3,
+            "abaixo_min_chars": 36,
+            "excedente_cota": 0,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 5
+        },
+        {
+          "nivel": 1.5,
+          "n_validas": 4,
+          "n_alvo": 4,
+          "n_brutas": 24,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 0,
+          "n_descartadas_curtas": 20,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 0,
+          "motivos_descarte": {
+            "truncada_sem_texto": 0,
+            "spoiler": 0,
+            "abaixo_min_chars": 20,
+            "excedente_cota": 0,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 2
+        },
+        {
+          "nivel": 2.0,
+          "n_validas": 29,
+          "n_alvo": 28,
+          "n_brutas": 207,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 9,
+          "n_descartadas_curtas": 164,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 3,
+          "motivos_descarte": {
+            "truncada_sem_texto": 3,
+            "spoiler": 9,
+            "abaixo_min_chars": 164,
+            "excedente_cota": 2,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 15
+        }
+      ],
+      "temas": [
+        {
+          "tema": "Ritmo lento e arrastado",
+          "mencoes_aproximadas": 20,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "O filme se desenvolve de forma muito lenta, com longas sequências que não prendem a atenção e fazem o espectador perder o interesse antes da metade.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Plot twist previsível ou decepcionante",
+          "mencoes_aproximadas": 18,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "A reviravolta final foi facilmente adivinhada logo no início, o que tirou todo o impacto e fez a espera parecer desnecessária.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Representação problemática de saúde mental",
+          "mencoes_aproximadas": 8,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "A forma como o filme retrata pacientes psiquiátricos reforça estereótipos prejudiciais e trata condições complexas de maneira simplista e ofensiva.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Confuso e difícil de acompanhar",
+          "mencoes_aproximadas": 7,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "A narrativa é tão embaralhada que o espectador se sente perdido, com várias tramas paralelas que não se conectam de forma clara.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Atuações mornas ou decepcionantes",
+          "mencoes_aproximadas": 6,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "Apesar do elenco estrelado, as atuações parecem contidas e não alcançam a profundidade esperada desses atores.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Excesso de flashbacks e simbolismo",
+          "mencoes_aproximadas": 5,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "O uso excessivo de flashbacks e elementos simbólicos acaba cansando e tirando o foco da história principal.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        }
+      ],
+      "observacao_geral": "As reviews negativas apontam que o filme falha em prender a atenção, com ritmo arrastado e reviravolta previsível. Também criticam a representação da saúde mental e a confusão narrativa, embora alguns reconheçam qualidades técnicas isoladas.",
+      "idioma_invalido": false,
+      "escopo_suspeito": false
+    },
+    {
+      "bucket": "medianas",
+      "alvo": 40,
+      "modo": "completo",
+      "estado_piso": "completa",
+      "n_validas": 40,
+      "share_real": 9,
+      "composicao_alvo": {
+        "2.5": 6,
+        "3.0": 34
+      },
+      "composicao_atingida": {
+        "2.5": 6,
+        "3.0": 34
+      },
+      "cascata_por_degrau": {
+        "150": 40
+      },
+      "deficit_redistribuido": 0,
+      "distribuicao_pagina_origem": {
+        "n": 40,
+        "min": 1,
+        "max": 17,
+        "p5": 1,
+        "p50": 8,
+        "p95": 17,
+        "fracao_profunda": 0.5
+      },
+      "janela_amostra": {
+        "n": 40,
+        "min": "2026-07-20",
+        "max": "2026-08-07",
+        "p5": "2026-08-01",
+        "p50": "2026-08-04",
+        "p95": "2026-08-07"
+      },
+      "niveis": [
+        {
+          "nivel": 2.5,
+          "n_validas": 6,
+          "n_alvo": 6,
+          "n_brutas": 79,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 2,
+          "n_descartadas_curtas": 61,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 0,
+          "motivos_descarte": {
+            "truncada_sem_texto": 0,
+            "spoiler": 2,
+            "abaixo_min_chars": 61,
+            "excedente_cota": 10,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 6
+        },
+        {
+          "nivel": 3.0,
+          "n_validas": 34,
+          "n_alvo": 34,
+          "n_brutas": 201,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 13,
+          "n_descartadas_curtas": 152,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 0,
+          "motivos_descarte": {
+            "truncada_sem_texto": 0,
+            "spoiler": 13,
+            "abaixo_min_chars": 152,
+            "excedente_cota": 2,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 10
+        }
+      ],
+      "temas": [
+        {
+          "tema": "Previsibilidade da reviravolta",
+          "mencoes_aproximadas": 12,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "Muitas reviews mencionam que conseguiram adivinhar a reviravolta logo no início ou no meio do filme, o que reduziu o impacto da experiência.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Ritmo lento e partes arrastadas",
+          "mencoes_aproximadas": 8,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "Alguns espectadores consideraram o filme longo e com ritmo arrastado, tendo dificuldade de se manter engajados durante toda a projeção.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Atuações fortes",
+          "mencoes_aproximadas": 7,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "As atuações, especialmente de Leonardo DiCaprio e de Mark Ruffalo, foram bastante elogiadas, sendo consideradas um dos pontos altos do filme.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Expectativa alta não correspondida",
+          "mencoes_aproximadas": 6,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "Parte do grupo chegou com expectativas muito altas devido à fama da reviravolta e acabou se decepcionando, pois o resultado não foi tão impactante quanto o esperado.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Recompensa em rever o filme",
+          "mencoes_aproximadas": 5,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "Alguns espectadores comentaram que um segundo visionamento permite perceber detalhes e pistas que passaram despercebidos na primeira vez, tornando a experiência mais rica.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Tom psicológico exagerado ou clichê",
+          "mencoes_aproximadas": 4,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "Houve quem considerasse a abordagem psicológica do filme pouco realista e exagerada, com estereótipos que atrapalharam a imersão.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        }
+      ],
+      "observacao_geral": "As reviews medianas apontam um filme com atuações fortes e uma reviravolta interessante, mas que sofre com ritmo lento e previsibilidade para muitos espectadores. O grupo frequentemente menciona a alta expectativa gerada pela fama da trama e a sensação de que o filme não a supera, embora alguns reconheçam que um segundo visionamento pode mudar a percepção.",
+      "idioma_invalido": false,
+      "escopo_suspeito": false
+    },
+    {
+      "bucket": "positivas",
+      "alvo": 40,
+      "modo": "completo",
+      "estado_piso": "completa",
+      "n_validas": 40,
+      "share_real": 89,
+      "composicao_alvo": {
+        "3.5": 5,
+        "4.0": 14,
+        "4.5": 8,
+        "5.0": 13
+      },
+      "composicao_atingida": {
+        "3.5": 3,
+        "4.0": 14,
+        "4.5": 9,
+        "5.0": 14
+      },
+      "cascata_por_degrau": {
+        "150": 40
+      },
+      "deficit_redistribuido": 2,
+      "distribuicao_pagina_origem": {
+        "n": 40,
+        "min": 1,
+        "max": 64,
+        "p5": 1,
+        "p50": 3,
+        "p95": 36,
+        "fracao_profunda": 0.4
+      },
+      "janela_amostra": {
+        "n": 40,
+        "min": "2025-07-09",
+        "max": "2026-08-08",
+        "p5": "2026-05-22",
+        "p50": "2026-08-07",
+        "p95": "2026-08-08"
+      },
+      "niveis": [
+        {
+          "nivel": 3.5,
+          "n_validas": 3,
+          "n_alvo": 5,
+          "n_brutas": 24,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 3,
+          "n_descartadas_curtas": 18,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 0,
+          "motivos_descarte": {
+            "truncada_sem_texto": 0,
+            "spoiler": 3,
+            "abaixo_min_chars": 18,
+            "excedente_cota": 0,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 2
+        },
+        {
+          "nivel": 4.0,
+          "n_validas": 14,
+          "n_alvo": 14,
+          "n_brutas": 120,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 9,
+          "n_descartadas_curtas": 91,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 3,
+          "motivos_descarte": {
+            "truncada_sem_texto": 3,
+            "spoiler": 9,
+            "abaixo_min_chars": 91,
+            "excedente_cota": 3,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 6
+        },
+        {
+          "nivel": 4.5,
+          "n_validas": 9,
+          "n_alvo": 8,
+          "n_brutas": 48,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 2,
+          "n_descartadas_curtas": 32,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 1,
+          "motivos_descarte": {
+            "truncada_sem_texto": 1,
+            "spoiler": 2,
+            "abaixo_min_chars": 32,
+            "excedente_cota": 4,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 3
+        },
+        {
+          "nivel": 5.0,
+          "n_validas": 14,
+          "n_alvo": 13,
+          "n_brutas": 108,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 3,
+          "n_descartadas_curtas": 86,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 2,
+          "motivos_descarte": {
+            "truncada_sem_texto": 2,
+            "spoiler": 3,
+            "abaixo_min_chars": 86,
+            "excedente_cota": 3,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 5
+        }
+      ],
+      "temas": [
+        {
+          "tema": "Atmosfera imersiva",
+          "mencoes_aproximadas": 28,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "A construção do clima de isolamento e paranoia na ilha é citada como um dos pontos mais fortes, com a fotografia, a trilha sonora e o uso do clima contribuindo para uma sensação constante de desconforto.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Plot twist impactante",
+          "mencoes_aproximadas": 15,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "A reviravolta final é considerada memorável e muda a perspectiva de todo o filme, embora alguns revelem que já suspeitavam dela desde o início.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Atuação de Leonardo DiCaprio",
+          "mencoes_aproximadas": 12,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "A performance de DiCaprio é descrita como intensa e convincente, retratando a progressão da angústia e da instabilidade mental do personagem de forma notável.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Direção de Scorsese",
+          "mencoes_aproximadas": 8,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "O filme é elogiado como uma demonstração da versatilidade de Scorsese, que consegue imprimir sua marca em um thriller psicológico com maestria.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Roteiro e construção do mistério",
+          "mencoes_aproximadas": 7,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "O roteiro é apontado como bem estruturado, mantendo o espectador envolvido e confuso, com pistas e detalhes que se encaixam de forma satisfatória.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Experiência de rewatch",
+          "mencoes_aproximadas": 6,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "Assistir novamente revela novas camadas e detalhes que passam despercebidos na primeira vez, enriquecendo a experiência.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        }
+      ],
+      "observacao_geral": "As reviews positivas destacam a atmosfera envolvente e a atuação de DiCaprio como pontos altos, além de considerarem o plot twist marcante, embora alguns o tenham previsto. O filme é visto como uma experiência imersiva e que recompensa revisões.",
+      "idioma_invalido": false,
+      "escopo_suspeito": false
+    }
+  ],
+  "eixos": {
+    "taxonomia_id": "ebab2667de74",
+    "margem_lift_pp": 20,
+    "contraste": "valorativo",
+    "linhas": [
+      {
+        "eixo": "ritmo",
+        "por_bucket": {
+          "negativas": {
+            "mencoes": 15,
+            "de_n": 38,
+            "freq_pct": 39.5,
+            "lift_pp": 15.8,
+            "tema": "Ritmo lento e arrastado",
+            "exemplo_parafraseado": "O filme se desenvolve de forma muito lenta, com longas sequências que não prendem a atenção e fazem o espectador perder o interesse antes da metade.",
+            "temas_no_mesmo_eixo": []
+          },
+          "medianas": {
+            "mencoes": 9,
+            "de_n": 38,
+            "freq_pct": 23.7,
+            "lift_pp": -15.8,
+            "tema": "Ritmo lento e partes arrastadas",
+            "exemplo_parafraseado": "Alguns espectadores consideraram o filme longo e com ritmo arrastado, tendo dificuldade de se manter engajados durante toda a projeção.",
+            "temas_no_mesmo_eixo": []
+          },
+          "positivas": {
+            "mencoes": 5,
+            "de_n": 35,
+            "freq_pct": 14.3,
+            "lift_pp": -25.2,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          }
+        },
+        "bullet_de": {
+          "negativas": null,
+          "medianas": null,
+          "positivas": null
+        }
+      },
+      {
+        "eixo": "atuacao",
+        "por_bucket": {
+          "negativas": {
+            "mencoes": 13,
+            "de_n": 38,
+            "freq_pct": 34.2,
+            "lift_pp": 7.9,
+            "tema": "Atuações mornas ou decepcionantes",
+            "exemplo_parafraseado": "Apesar do elenco estrelado, as atuações parecem contidas e não alcançam a profundidade esperada desses atores.",
+            "temas_no_mesmo_eixo": []
+          },
+          "medianas": {
+            "mencoes": 10,
+            "de_n": 38,
+            "freq_pct": 26.3,
+            "lift_pp": -7.9,
+            "tema": "Atuações fortes",
+            "exemplo_parafraseado": "As atuações, especialmente de Leonardo DiCaprio e de Mark Ruffalo, foram bastante elogiadas, sendo consideradas um dos pontos altos do filme.",
+            "temas_no_mesmo_eixo": []
+          },
+          "positivas": {
+            "mencoes": 9,
+            "de_n": 35,
+            "freq_pct": 25.7,
+            "lift_pp": -8.5,
+            "tema": "Atuação de Leonardo DiCaprio",
+            "exemplo_parafraseado": "A performance de DiCaprio é descrita como intensa e convincente, retratando a progressão da angústia e da instabilidade mental do personagem de forma notável.",
+            "temas_no_mesmo_eixo": []
+          }
+        },
+        "bullet_de": {
+          "negativas": null,
+          "medianas": null,
+          "positivas": null
+        }
+      },
+      {
+        "eixo": "direcao_imagem",
+        "por_bucket": {
+          "negativas": {
+            "mencoes": 9,
+            "de_n": 38,
+            "freq_pct": 23.7,
+            "lift_pp": -2.0,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "medianas": {
+            "mencoes": 3,
+            "de_n": 38,
+            "freq_pct": 7.9,
+            "lift_pp": -17.8,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "positivas": {
+            "mencoes": 9,
+            "de_n": 35,
+            "freq_pct": 25.7,
+            "lift_pp": 2.0,
+            "tema": "Direção de Scorsese",
+            "exemplo_parafraseado": "O filme é elogiado como uma demonstração da versatilidade de Scorsese, que consegue imprimir sua marca em um thriller psicológico com maestria.",
+            "temas_no_mesmo_eixo": []
+          }
+        },
+        "bullet_de": {
+          "negativas": null,
+          "medianas": null,
+          "positivas": null
+        }
+      },
+      {
+        "eixo": "roteiro_estrutura",
+        "por_bucket": {
+          "negativas": {
+            "mencoes": 32,
+            "de_n": 38,
+            "freq_pct": 84.2,
+            "lift_pp": 4.2,
+            "tema": "Plot twist previsível ou decepcionante",
+            "exemplo_parafraseado": "A reviravolta final foi facilmente adivinhada logo no início, o que tirou todo o impacto e fez a espera parecer desnecessária.",
+            "temas_no_mesmo_eixo": [
+              "Confuso e difícil de acompanhar",
+              "Excesso de flashbacks e simbolismo"
+            ]
+          },
+          "medianas": {
+            "mencoes": 29,
+            "de_n": 38,
+            "freq_pct": 76.3,
+            "lift_pp": -7.9,
+            "tema": "Previsibilidade da reviravolta",
+            "exemplo_parafraseado": "Muitas reviews mencionam que conseguiram adivinhar a reviravolta logo no início ou no meio do filme, o que reduziu o impacto da experiência.",
+            "temas_no_mesmo_eixo": []
+          },
+          "positivas": {
+            "mencoes": 28,
+            "de_n": 35,
+            "freq_pct": 80.0,
+            "lift_pp": -4.2,
+            "tema": "Roteiro e construção do mistério",
+            "exemplo_parafraseado": "O roteiro é apontado como bem estruturado, mantendo o espectador envolvido e confuso, com pistas e detalhes que se encaixam de forma satisfatória.",
+            "temas_no_mesmo_eixo": []
+          }
+        },
+        "bullet_de": {
+          "negativas": "frequencia",
+          "medianas": "frequencia",
+          "positivas": "frequencia"
+        }
+      },
+      {
+        "eixo": "som_trilha",
+        "por_bucket": {
+          "negativas": {
+            "mencoes": 2,
+            "de_n": 38,
+            "freq_pct": 5.3,
+            "lift_pp": -14.7,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "medianas": {
+            "mencoes": 1,
+            "de_n": 38,
+            "freq_pct": 2.6,
+            "lift_pp": -17.4,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "positivas": {
+            "mencoes": 7,
+            "de_n": 35,
+            "freq_pct": 20.0,
+            "lift_pp": 14.7,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          }
+        },
+        "bullet_de": {
+          "negativas": null,
+          "medianas": null,
+          "positivas": null
+        }
+      },
+      {
+        "eixo": "tom_atmosfera",
+        "por_bucket": {
+          "negativas": {
+            "mencoes": 5,
+            "de_n": 38,
+            "freq_pct": 13.2,
+            "lift_pp": -12.6,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "medianas": {
+            "mencoes": 7,
+            "de_n": 38,
+            "freq_pct": 18.4,
+            "lift_pp": -7.3,
+            "tema": "Tom psicológico exagerado ou clichê",
+            "exemplo_parafraseado": "Houve quem considerasse a abordagem psicológica do filme pouco realista e exagerada, com estereótipos que atrapalharam a imersão.",
+            "temas_no_mesmo_eixo": []
+          },
+          "positivas": {
+            "mencoes": 9,
+            "de_n": 35,
+            "freq_pct": 25.7,
+            "lift_pp": 7.3,
+            "tema": "Atmosfera imersiva",
+            "exemplo_parafraseado": "A construção do clima de isolamento e paranoia na ilha é citada como um dos pontos mais fortes, com a fotografia, a trilha sonora e o uso do clima contribuindo para uma sensação constante de desconforto.",
+            "temas_no_mesmo_eixo": []
+          }
+        },
+        "bullet_de": {
+          "negativas": null,
+          "medianas": null,
+          "positivas": null
+        }
+      },
+      {
+        "eixo": "impacto_emocional",
+        "por_bucket": {
+          "negativas": {
+            "mencoes": 17,
+            "de_n": 38,
+            "freq_pct": 44.7,
+            "lift_pp": -3.8,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "medianas": {
+            "mencoes": 16,
+            "de_n": 38,
+            "freq_pct": 42.1,
+            "lift_pp": -6.5,
+            "tema": "Recompensa em rever o filme",
+            "exemplo_parafraseado": "Alguns espectadores comentaram que um segundo visionamento permite perceber detalhes e pistas que passaram despercebidos na primeira vez, tornando a experiência mais rica.",
+            "temas_no_mesmo_eixo": []
+          },
+          "positivas": {
+            "mencoes": 17,
+            "de_n": 35,
+            "freq_pct": 48.6,
+            "lift_pp": 3.8,
+            "tema": "Plot twist impactante",
+            "exemplo_parafraseado": "A reviravolta final é considerada memorável e muda a perspectiva de todo o filme, embora alguns revelem que já suspeitavam dela desde o início.",
+            "temas_no_mesmo_eixo": [
+              "Experiência de rewatch"
+            ]
+          }
+        },
+        "bullet_de": {
+          "negativas": "frequencia",
+          "medianas": "frequencia",
+          "positivas": "frequencia"
+        }
+      },
+      {
+        "eixo": "comparacoes",
+        "por_bucket": {
+          "negativas": {
+            "mencoes": 10,
+            "de_n": 38,
+            "freq_pct": 26.3,
+            "lift_pp": -2.3,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "medianas": {
+            "mencoes": 9,
+            "de_n": 38,
+            "freq_pct": 23.7,
+            "lift_pp": -4.9,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "positivas": {
+            "mencoes": 10,
+            "de_n": 35,
+            "freq_pct": 28.6,
+            "lift_pp": 2.3,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          }
+        },
+        "bullet_de": {
+          "negativas": null,
+          "medianas": null,
+          "positivas": null
+        }
+      },
+      {
+        "eixo": "expectativa",
+        "por_bucket": {
+          "negativas": {
+            "mencoes": 11,
+            "de_n": 38,
+            "freq_pct": 28.9,
+            "lift_pp": -7.9,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "medianas": {
+            "mencoes": 14,
+            "de_n": 38,
+            "freq_pct": 36.8,
+            "lift_pp": 7.9,
+            "tema": "Expectativa alta não correspondida",
+            "exemplo_parafraseado": "Parte do grupo chegou com expectativas muito altas devido à fama da reviravolta e acabou se decepcionando, pois o resultado não foi tão impactante quanto o esperado.",
+            "temas_no_mesmo_eixo": []
+          },
+          "positivas": {
+            "mencoes": 5,
+            "de_n": 35,
+            "freq_pct": 14.3,
+            "lift_pp": -22.6,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          }
+        },
+        "bullet_de": {
+          "negativas": null,
+          "medianas": null,
+          "positivas": null
+        }
+      },
+      {
+        "eixo": "critica_social",
+        "por_bucket": {
+          "negativas": {
+            "mencoes": 6,
+            "de_n": 38,
+            "freq_pct": 15.8,
+            "lift_pp": 10.5,
+            "tema": "Representação problemática de saúde mental",
+            "exemplo_parafraseado": "A forma como o filme retrata pacientes psiquiátricos reforça estereótipos prejudiciais e trata condições complexas de maneira simplista e ofensiva.",
+            "temas_no_mesmo_eixo": []
+          },
+          "medianas": {
+            "mencoes": 2,
+            "de_n": 38,
+            "freq_pct": 5.3,
+            "lift_pp": -10.5,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "positivas": {
+            "mencoes": 1,
+            "de_n": 35,
+            "freq_pct": 2.9,
+            "lift_pp": -12.9,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          }
+        },
+        "bullet_de": {
+          "negativas": null,
+          "medianas": null,
+          "positivas": null
+        }
+      }
+    ],
+    "fonte_classificacao": {
+      "arquivo": "resultado/votacao-3/consenso.jsonl",
+      "criterio": "votacao_3_consenso_2_de_3",
+      "por_bucket": {
+        "negativas": {
+          "n_classificadas": 38,
+          "n_analisadas": 40,
+          "sobreposicao_com_analisadas": 38
+        },
+        "medianas": {
+          "n_classificadas": 38,
+          "n_analisadas": 40,
+          "sobreposicao_com_analisadas": 38
+        },
+        "positivas": {
+          "n_classificadas": 35,
+          "n_analisadas": 40,
+          "sobreposicao_com_analisadas": 35
+        }
+      }
+    },
+    "rotulagem": {
+      "n_chamadas": 3,
+      "falharam": [],
+      "fora_da_taxonomia": {},
+      "houve_retentativa": []
+    },
+    "spec_version": "1.9.16",
+    "verificador": {
+      "aplicado": true,
+      "variante": "V2_alvo",
+      "passada": 1,
+      "eixo": "impacto_emocional",
+      "n_removidas_no_corpus": 1654
+    }
+  },
+  "narrativa": "Dirigido por Martin Scorsese e lançado em 2010, Ilha do Medo é uma produção de drama, mistério e suspense que se desenvolve ao longo de 138 minutos. A história acompanha dois agentes judiciais que viajam até uma ilha isolada no porto de Boston com a missão de investigar o desaparecimento de uma perigosa assassina internada em um hospital psiquiátrico de segurança máxima. Ao iniciarem as buscas na instituição penitenciária, os investigadores logo constatam que o local oculta segredos profundos e que o território reserva ameaças ainda mais perigosas do que os pacientes sob custódia.\n\nAo analisar a recepção, nota-se que as avaliações compartilham o foco nos mesmos aspectos centrais da obra, divergindo substancialmente no veredito a respeito de seu funcionamento. Na grande maioria das notas (~89%), a maior parte valoriza a construção de uma atmosfera imersiva marcada pelo isolamento e pelo desconforto constante, enquanto boa parte considera a reviravolta final marcante por transformar o sentido de toda a narrativa. Nessa mesma faixa predominante, uma parcela expressiva também destaca a atuação de Leonardo DiCaprio como um ponto alto, retratando a intensidade e a instabilidade de seu personagem de forma convincente.\n\nPara os avaliadores situados em uma posição intermediária, numa fração mínima das notas (~9%), muitos afirmam que a previsibilidade da reviravolta enfraquece a experiência, enquanto uma fatia menor ressalta que o ritmo lento dificulta o engajamento contínuo ao longo da projeção. Ainda nesse segmento, parte deles pondera que o trabalho do elenco entrega atuações fortes, capazes de se destacar positivamente.\n\nPara os espectadores com visão desfavorável, numa fração ainda menor das notas (~2%), vários apontam que o andamento arrastado torna a narrativa cansativa, um número considerável relata decepção com uma conclusão previsível e alguns criticam o que consideram uma representação problemática da saúde mental.",
+  "verificacao_narrativa": {
+    "quantificador_fora_de_faixa": [],
+    "quantificador_repetido": [],
+    "paragrafos": {
+      "n_paragrafos": 4,
+      "minimo": 3,
+      "insuficientes": false,
+      "longos": []
+    },
+    "n_paragrafos": 4,
+    "paragrafos_insuficientes": false,
+    "paragrafos_longos": [],
+    "grupos_sem_paragrafo_proprio": [],
+    "movimento1_e_movimento2_no_mesmo_paragrafo": true,
+    "formato_invalido": false,
+    "numeros_inventados": [],
+    "rotulos_faltando": [],
+    "ordem_incorreta": false,
+    "vocabulario_peso": false,
+    "resenha_speak": [],
+    "n_resenha_speak": 0,
+    "n_flags": 1
+  },
+  "narrativa_selecao": {
+    "provider": "gemini",
+    "modelo": "gemini-3.7-flash",
+    "n_candidatos": 3,
+    "n_chamadas": 4,
+    "indice_escolhido": 1,
+    "motivo": "menor_severidade",
+    "criterio_decisivo": "empate",
+    "candidatos": [
+      {
+        "indice": 0,
+        "n_flags": 3,
+        "cliches": 0,
+        "repeticao_max": 1,
+        "ritmo": 8,
+        "cobertura": 0.889,
+        "eliminado": true
+      },
+      {
+        "indice": 1,
+        "n_flags": 2,
+        "cliches": 0,
+        "repeticao_max": 1,
+        "ritmo": 8,
+        "cobertura": 0.889,
+        "eliminado": true
+      },
+      {
+        "indice": 2,
+        "n_flags": 2,
+        "cliches": 1,
+        "repeticao_max": 1,
+        "ritmo": 9,
+        "cobertura": 1.0,
+        "eliminado": true
+      }
+    ],
+    "retry": {
+      "n_frases_infratoras": 1,
+      "motivos": [
+        "numero_inventado"
+      ],
+      "n_flags_depois": 1,
+      "aplicado": true
+    },
+    "uso": {
+      "prompt_tokens": 11823,
+      "completion_tokens": 1711,
+      "cache_hit_tokens": 0,
+      "cache_miss_tokens": 11823
+    },
+    "latencia_s": 40.56
+  }
+}

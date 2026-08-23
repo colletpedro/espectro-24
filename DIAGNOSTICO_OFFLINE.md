@@ -117,3 +117,40 @@ precisam de nomes diferentes na CLI, e essa é a decisão de desenho que falta.
 **Não implementado nesta sessão.** (ii) muda o que a coleta grava e como o
 modo offline se comporta; (i) acrescenta um modo de execução. Ambos são
 mudança de comportamento.
+
+---
+
+## Achado adicional (v1.9.16, publicação dos 35): `meta.json` perde `passadas`
+
+Registrado ao publicar os 32 filmes restantes do catálogo — não investigado
+a fundo, não corrigido, mesma política desta nota (diagnosticar e parar).
+
+`persistir()` (`bruto.py`) documenta explicitamente: *"`meta` é
+**sobrescrito** pela execução mais recente, enquanto as reviews
+ACUMULAM"*. Isso inclui a chave `passadas` — a lista de coletas
+SUPLEMENTARES (`by/added-earliest`, v1.9.6, §2.3) que um filme pode ter
+recebido além da coleta base. Rodar o pipeline completo (`espectro24 --slug
+X`) sobre um filme que já tinha `passadas` gravadas **apaga o array
+inteiro**, porque a execução base reconstrói `meta` do zero e nunca
+reincorpora o histórico.
+
+**10 dos 32 filmes publicados nesta sessão perderam a telemetria de
+`passadas`** ao serem republicados sob o pipeline fresco: `aftersun`,
+`avengers-endgame`, `barbie`, `bones-and-all`, `dune-2021`,
+`everything-everywhere-all-at-once`, `hereditary`, `perfect-days-2023`,
+`spider-man-across-the-spider-verse`, `the-substance`.
+
+**Sem dano funcional medido:** `orcamento_paginas_por_nivel` (o que a
+seleção realmente lê) vive na raiz de `meta`, não em `passadas`, e não foi
+tocado — a classificação e a síntese destes 10 filmes leem exatamente a
+amostra que deveriam. O que se perde é só o REGISTRO histórico de que uma
+passada seletiva aconteceu (quando, quantas páginas, sob qual motivo) — a
+mesma classe de informação que este documento já descreve como não fixada
+pelo bruto (acima: posições de página). Reviews.jsonl não perde nada — só
+ACUMULA, como sempre.
+
+Fora de escopo desta sessão consertar (coleta não foi tocada por decisão
+explícita do dono do projeto). Fica registrado para quando este documento
+for reaberto: a correção provável é a mesma dos dois itens acima —
+`persistir()`/`atualizar_meta` passarem a MESCLAR `passadas` em vez de
+descartá-la ao reconstruir `meta` do zero.

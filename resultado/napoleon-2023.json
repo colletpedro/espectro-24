@@ -1,0 +1,1324 @@
+{
+  "slug": "napoleon-2023",
+  "data_coleta": "2026-08-23T01:01:27.128140+00:00",
+  "spec_version": "1.9.16",
+  "total_reviews_observadas": 576,
+  "reviews_url": "https://letterboxd.com/film/napoleon-2023/reviews/",
+  "ficha": {
+    "titulo": "Napoleão",
+    "sinopse_oficial": "Um olhar pessoal sobre as origens do líder militar francês e sua rápida e implacável ascensão a imperador. A história é vista através do prisma do relacionamento dependente e volátil de Napoleão com sua esposa e amor verdadeiro, Josefina.",
+    "sinopse_fallback_en": false,
+    "generos": [
+      "História",
+      "Guerra",
+      "Drama"
+    ],
+    "duracao_min": 158,
+    "diretor": "Ridley Scott",
+    "diretor_transliterado": false,
+    "ano": 2023,
+    "fonte": "tmdb",
+    "ano_fonte": "bruto"
+  },
+  "distribuicao": {
+    "n_notas_total": 598710,
+    "por_nivel": {
+      "0.5": 9574,
+      "1.0": 21303,
+      "1.5": 22824,
+      "2.0": 80232,
+      "2.5": 94774,
+      "3.0": 173264,
+      "3.5": 108090,
+      "4.0": 65478,
+      "4.5": 11196,
+      "5.0": 11975
+    },
+    "por_bucket": {
+      "negativas": 22,
+      "medianas": 45,
+      "positivas": 33
+    },
+    "fonte": "letterboxd_histograma"
+  },
+  "coleta": {
+    "slug": "napoleon-2023",
+    "coletado_em": "2026-08-23T01:01:03.148326+00:00",
+    "versao_coletor": "1.9.6",
+    "ordenacao_usada": "by/added",
+    "histograma_bruto": {
+      "0.5": 9574,
+      "1.0": 21303,
+      "1.5": 22824,
+      "2.0": 80232,
+      "2.5": 94774,
+      "3.0": 173264,
+      "3.5": 108090,
+      "4.0": 65478,
+      "4.5": 11196,
+      "5.0": 11975
+    },
+    "orcamento_paginas_por_nivel": {
+      "0.5": 1,
+      "1.0": 2,
+      "1.5": 3,
+      "2.0": 10,
+      "2.5": 6,
+      "3.0": 10,
+      "3.5": 9,
+      "4.0": 5,
+      "4.5": 1,
+      "5.0": 1
+    },
+    "paginas_gastas_por_nivel": {
+      "0.5": 1,
+      "1.0": 2,
+      "1.5": 3,
+      "2.0": 10,
+      "2.5": 6,
+      "3.0": 10,
+      "3.5": 9,
+      "4.0": 5,
+      "4.5": 1,
+      "5.0": 1
+    },
+    "paradas_por_limite": [
+      "0.5",
+      "1.0",
+      "1.5",
+      "2.0",
+      "2.5",
+      "3.0",
+      "3.5",
+      "4.0",
+      "4.5",
+      "5.0"
+    ],
+    "contagem_bruta_por_nivel": {
+      "0.5": 12,
+      "1.0": 24,
+      "1.5": 36,
+      "2.0": 120,
+      "2.5": 72,
+      "3.0": 120,
+      "3.5": 108,
+      "4.0": 60,
+      "4.5": 12,
+      "5.0": 12
+    },
+    "contagem_estimada_valida_por_nivel": {
+      "0.5": 6,
+      "1.0": 9,
+      "1.5": 8,
+      "2.0": 40,
+      "2.5": 25,
+      "3.0": 36,
+      "3.5": 43,
+      "4.0": 15,
+      "4.5": 7,
+      "5.0": 1
+    },
+    "motivo_parada_por_nivel": {
+      "0.5": "orcamento_esgotado",
+      "1.0": "orcamento_esgotado",
+      "1.5": "orcamento_esgotado",
+      "2.0": "orcamento_esgotado",
+      "2.5": "orcamento_esgotado",
+      "3.0": "orcamento_esgotado",
+      "3.5": "orcamento_esgotado",
+      "4.0": "orcamento_esgotado",
+      "4.5": "orcamento_esgotado",
+      "5.0": "orcamento_esgotado"
+    },
+    "paginas_base_por_nivel": {
+      "0.5": 1,
+      "1.0": 2,
+      "1.5": 3,
+      "2.0": 10,
+      "2.5": 6,
+      "3.0": 10,
+      "3.5": 9,
+      "4.0": 5,
+      "4.5": 1,
+      "5.0": 1
+    },
+    "paginas_extensao_por_nivel": {
+      "0.5": 0,
+      "1.0": 0,
+      "1.5": 0,
+      "2.0": 0,
+      "2.5": 0,
+      "3.0": 0,
+      "3.5": 0,
+      "4.0": 0,
+      "4.5": 0,
+      "5.0": 0
+    },
+    "extensao_por_bucket": {
+      "negativas": {
+        "paginas_base": 16,
+        "paginas_extensao": 0,
+        "extras_por_nivel": {},
+        "motivo_parada": "meta_atingida",
+        "n_validas_pos_base": 75,
+        "n_validas_pos_extensao": 75,
+        "meta": 50
+      },
+      "medianas": {
+        "paginas_base": 16,
+        "paginas_extensao": 0,
+        "extras_por_nivel": {},
+        "motivo_parada": "meta_atingida",
+        "n_validas_pos_base": 77,
+        "n_validas_pos_extensao": 77,
+        "meta": 50
+      },
+      "positivas": {
+        "paginas_base": 16,
+        "paginas_extensao": 0,
+        "extras_por_nivel": {},
+        "motivo_parada": "meta_atingida",
+        "n_validas_pos_base": 80,
+        "n_validas_pos_extensao": 80,
+        "meta": 50
+      }
+    },
+    "profundidade_sondagem": {
+      "nivel_sondado": 3.0,
+      "profundidade": 256,
+      "exata": false,
+      "requisicoes": 4,
+      "motivo": "teto_plataforma"
+    },
+    "profundidade_estimada_por_nivel": {
+      "0.5": 14,
+      "1.0": 31,
+      "1.5": 34,
+      "2.0": 119,
+      "2.5": 140,
+      "3.0": 256,
+      "3.5": 160,
+      "4.0": 97,
+      "4.5": 17,
+      "5.0": 18
+    },
+    "janela_temporal": {
+      "total": {
+        "n": 694,
+        "min": "2023-04-14",
+        "max": "2026-08-08",
+        "p5": "2023-12-14",
+        "p50": "2026-07-29",
+        "p95": "2026-08-07"
+      },
+      "por_bucket": {
+        "negativas": {
+          "n": 226,
+          "min": "2023-04-14",
+          "max": "2026-08-08",
+          "p5": "2023-11-27",
+          "p50": "2026-07-26",
+          "p95": "2026-08-07"
+        },
+        "medianas": {
+          "n": 240,
+          "min": "2023-06-10",
+          "max": "2026-08-08",
+          "p5": "2023-12-06",
+          "p50": "2026-07-30",
+          "p95": "2026-08-07"
+        },
+        "positivas": {
+          "n": 228,
+          "min": "2023-11-23",
+          "max": "2026-08-08",
+          "p5": "2024-02-15",
+          "p50": "2026-07-29",
+          "p95": "2026-08-07"
+        }
+      }
+    },
+    "dias_por_100_paginas": {
+      "n_paginas": 21,
+      "pagina_min": 1,
+      "pagina_max": 128,
+      "dias": 180,
+      "dias_por_100_paginas": 141.73228346456693,
+      "paginas_para_1_ano": 258
+    },
+    "ano_lancamento": 2023,
+    "ano_fonte": "slug",
+    "n_reviews_bruto": 694
+  },
+  "origem_paginas": {
+    "_histograma/napoleon-2023.html": "cache",
+    "napoleon-2023/pages/by_added/rated_3_page_4.html": "cache",
+    "napoleon-2023/pages/by_added/rated_3_page_16.html": "cache",
+    "napoleon-2023/pages/by_added/rated_3_page_64.html": "cache",
+    "napoleon-2023/pages/by_added/rated_3_page_256.html": "cache",
+    "napoleon-2023/pages/by_added/rated_0_5_page_1.html": "cache",
+    "napoleon-2023/fulltext/viewing_1435812570.html": "cache",
+    "napoleon-2023/fulltext/viewing_1433672666.html": "cache",
+    "napoleon-2023/fulltext/viewing_1430167645.html": "cache",
+    "napoleon-2023/pages/by_added/rated_1_page_1.html": "cache",
+    "napoleon-2023/pages/by_added/rated_1_page_2.html": "cache",
+    "napoleon-2023/fulltext/viewing_1435262609.html": "cache",
+    "napoleon-2023/fulltext/viewing_1428886879.html": "cache",
+    "napoleon-2023/fulltext/viewing_1426677737.html": "cache",
+    "napoleon-2023/pages/by_added/rated_1_5_page_1.html": "cache",
+    "napoleon-2023/pages/by_added/rated_1_5_page_2.html": "cache",
+    "napoleon-2023/pages/by_added/rated_1_5_page_8.html": "network",
+    "napoleon-2023/fulltext/viewing_1439204742.html": "cache",
+    "napoleon-2023/fulltext/viewing_1409611908.html": "network",
+    "napoleon-2023/fulltext/viewing_1403278421.html": "network",
+    "napoleon-2023/pages/by_added/rated_2_page_1.html": "cache",
+    "napoleon-2023/pages/by_added/rated_2_page_2.html": "cache",
+    "napoleon-2023/pages/by_added/rated_2_page_3.html": "cache",
+    "napoleon-2023/pages/by_added/rated_2_page_4.html": "cache",
+    "napoleon-2023/pages/by_added/rated_2_page_5.html": "cache",
+    "napoleon-2023/pages/by_added/rated_2_page_6.html": "cache",
+    "napoleon-2023/pages/by_added/rated_2_page_7.html": "cache",
+    "napoleon-2023/pages/by_added/rated_2_page_8.html": "cache",
+    "napoleon-2023/pages/by_added/rated_2_page_30.html": "network",
+    "napoleon-2023/pages/by_added/rated_2_page_60.html": "network",
+    "napoleon-2023/fulltext/viewing_1437027938.html": "cache",
+    "napoleon-2023/fulltext/viewing_1432186537.html": "cache",
+    "napoleon-2023/fulltext/viewing_1429533133.html": "cache",
+    "napoleon-2023/fulltext/viewing_1420248768.html": "cache",
+    "napoleon-2023/fulltext/viewing_1419819624.html": "cache",
+    "napoleon-2023/fulltext/viewing_1418805746.html": "cache",
+    "napoleon-2023/fulltext/viewing_1415095794.html": "cache",
+    "napoleon-2023/fulltext/viewing_1411734378.html": "cache",
+    "napoleon-2023/fulltext/viewing_1373885511.html": "network",
+    "napoleon-2023/fulltext/viewing_1257824792.html": "network",
+    "napoleon-2023/pages/by_added/rated_2_5_page_1.html": "cache",
+    "napoleon-2023/pages/by_added/rated_2_5_page_2.html": "cache",
+    "napoleon-2023/pages/by_added/rated_2_5_page_3.html": "cache",
+    "napoleon-2023/pages/by_added/rated_2_5_page_4.html": "cache",
+    "napoleon-2023/pages/by_added/rated_2_5_page_35.html": "network",
+    "napoleon-2023/pages/by_added/rated_2_5_page_70.html": "network",
+    "napoleon-2023/fulltext/viewing_1434995015.html": "cache",
+    "napoleon-2023/fulltext/viewing_1433716251.html": "cache",
+    "napoleon-2023/fulltext/viewing_1404125836.html": "cache",
+    "napoleon-2023/fulltext/viewing_1428491750.html": "cache",
+    "napoleon-2023/fulltext/viewing_1427697469.html": "cache",
+    "napoleon-2023/fulltext/viewing_1351302496.html": "network",
+    "napoleon-2023/fulltext/viewing_1351295816.html": "network",
+    "napoleon-2023/fulltext/viewing_1241537021.html": "network",
+    "napoleon-2023/pages/by_added/rated_3_page_1.html": "cache",
+    "napoleon-2023/pages/by_added/rated_3_page_2.html": "cache",
+    "napoleon-2023/pages/by_added/rated_3_page_3.html": "cache",
+    "napoleon-2023/pages/by_added/rated_3_page_5.html": "cache",
+    "napoleon-2023/pages/by_added/rated_3_page_6.html": "cache",
+    "napoleon-2023/pages/by_added/rated_3_page_7.html": "cache",
+    "napoleon-2023/pages/by_added/rated_3_page_8.html": "cache",
+    "napoleon-2023/pages/by_added/rated_3_page_128.html": "network",
+    "napoleon-2023/fulltext/viewing_1437974491.html": "cache",
+    "napoleon-2023/fulltext/viewing_1436650058.html": "cache",
+    "napoleon-2023/fulltext/viewing_1436498843.html": "cache",
+    "napoleon-2023/fulltext/viewing_476847366.html": "cache",
+    "napoleon-2023/fulltext/viewing_1434773132.html": "cache",
+    "napoleon-2023/fulltext/viewing_1433204995.html": "cache",
+    "napoleon-2023/fulltext/viewing_1429398371.html": "cache",
+    "napoleon-2023/fulltext/viewing_1428755927.html": "cache",
+    "napoleon-2023/fulltext/viewing_1300058586.html": "network",
+    "napoleon-2023/pages/by_added/rated_3_5_page_1.html": "cache",
+    "napoleon-2023/pages/by_added/rated_3_5_page_2.html": "cache",
+    "napoleon-2023/pages/by_added/rated_3_5_page_3.html": "cache",
+    "napoleon-2023/pages/by_added/rated_3_5_page_4.html": "cache",
+    "napoleon-2023/pages/by_added/rated_3_5_page_5.html": "cache",
+    "napoleon-2023/pages/by_added/rated_3_5_page_6.html": "cache",
+    "napoleon-2023/pages/by_added/rated_3_5_page_7.html": "cache",
+    "napoleon-2023/pages/by_added/rated_3_5_page_40.html": "network",
+    "napoleon-2023/pages/by_added/rated_3_5_page_80.html": "network",
+    "napoleon-2023/fulltext/viewing_1437299069.html": "cache",
+    "napoleon-2023/fulltext/viewing_1437104630.html": "cache",
+    "napoleon-2023/fulltext/viewing_1436928633.html": "cache",
+    "napoleon-2023/fulltext/viewing_1433037419.html": "cache",
+    "napoleon-2023/fulltext/viewing_1431071638.html": "cache",
+    "napoleon-2023/fulltext/viewing_1430465376.html": "cache",
+    "napoleon-2023/fulltext/viewing_1425337066.html": "cache",
+    "napoleon-2023/fulltext/viewing_1423918146.html": "cache",
+    "napoleon-2023/fulltext/viewing_1418227208.html": "cache",
+    "napoleon-2023/fulltext/viewing_1181523943.html": "network",
+    "napoleon-2023/fulltext/viewing_1181461314.html": "network",
+    "napoleon-2023/pages/by_added/rated_4_page_1.html": "cache",
+    "napoleon-2023/pages/by_added/rated_4_page_2.html": "cache",
+    "napoleon-2023/pages/by_added/rated_4_page_3.html": "cache",
+    "napoleon-2023/pages/by_added/rated_4_page_4.html": "cache",
+    "napoleon-2023/pages/by_added/rated_4_page_24.html": "network",
+    "napoleon-2023/fulltext/viewing_1433106662.html": "cache",
+    "napoleon-2023/fulltext/viewing_1426715668.html": "cache",
+    "napoleon-2023/fulltext/viewing_1425062885.html": "cache",
+    "napoleon-2023/fulltext/viewing_1366933027.html": "network",
+    "napoleon-2023/pages/by_added/rated_4_5_page_1.html": "cache",
+    "napoleon-2023/fulltext/viewing_1432715218.html": "cache",
+    "napoleon-2023/fulltext/viewing_1430899050.html": "cache",
+    "napoleon-2023/pages/by_added/rated_5_page_1.html": "cache"
+  },
+  "buckets": [
+    {
+      "bucket": "negativas",
+      "alvo": 40,
+      "modo": "completo",
+      "estado_piso": "completa",
+      "n_validas": 40,
+      "share_real": 22,
+      "composicao_alvo": {
+        "0.5": 3,
+        "1.0": 6,
+        "1.5": 7,
+        "2.0": 24
+      },
+      "composicao_atingida": {
+        "0.5": 3,
+        "1.0": 6,
+        "1.5": 7,
+        "2.0": 24
+      },
+      "cascata_por_degrau": {
+        "150": 40
+      },
+      "deficit_redistribuido": 0,
+      "distribuicao_pagina_origem": {
+        "n": 40,
+        "min": 1,
+        "max": 12,
+        "p5": 1,
+        "p50": 4,
+        "p95": 12,
+        "fracao_profunda": 0.3
+      },
+      "janela_amostra": {
+        "n": 40,
+        "min": "2023-11-26",
+        "max": "2026-08-08",
+        "p5": "2026-07-17",
+        "p50": "2026-07-29",
+        "p95": "2026-08-07"
+      },
+      "niveis": [
+        {
+          "nivel": 0.5,
+          "n_validas": 3,
+          "n_alvo": 3,
+          "n_brutas": 12,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 0,
+          "n_descartadas_curtas": 6,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 0,
+          "motivos_descarte": {
+            "truncada_sem_texto": 0,
+            "spoiler": 0,
+            "abaixo_min_chars": 6,
+            "excedente_cota": 3,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 1
+        },
+        {
+          "nivel": 1.0,
+          "n_validas": 6,
+          "n_alvo": 6,
+          "n_brutas": 24,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 1,
+          "n_descartadas_curtas": 14,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 0,
+          "motivos_descarte": {
+            "truncada_sem_texto": 0,
+            "spoiler": 1,
+            "abaixo_min_chars": 14,
+            "excedente_cota": 3,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 2
+        },
+        {
+          "nivel": 1.5,
+          "n_validas": 7,
+          "n_alvo": 7,
+          "n_brutas": 46,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 0,
+          "n_descartadas_curtas": 35,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 2,
+          "motivos_descarte": {
+            "truncada_sem_texto": 2,
+            "spoiler": 0,
+            "abaixo_min_chars": 35,
+            "excedente_cota": 2,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 3
+        },
+        {
+          "nivel": 2.0,
+          "n_validas": 24,
+          "n_alvo": 24,
+          "n_brutas": 144,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 0,
+          "n_descartadas_curtas": 91,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 2,
+          "motivos_descarte": {
+            "truncada_sem_texto": 2,
+            "spoiler": 0,
+            "abaixo_min_chars": 91,
+            "excedente_cota": 27,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 10
+        }
+      ],
+      "temas": [
+        {
+          "tema": "Retrato de Napoleão",
+          "mencoes_aproximadas": 20,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "As reviews negativas criticam a representação de Napoleão como um personagem fraco, submisso e infantilizado, reduzindo sua figura histórica a uma caricatura, o que é considerado uma afronta ao verdadeiro estrategista e líder.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Imprecisões históricas",
+          "mencoes_aproximadas": 15,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "Muitos espectadores apontam que o filme contém inúmeros erros de datas, eventos e batalhas, o que compromete a fidelidade histórica e desaponta aqueles que conhecem a trajetória real de Napoleão.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Ritmo e edição",
+          "mencoes_aproximadas": 10,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "O filme é descrito como lento, cansativo e mal estruturado, com uma narrativa fragmentada que pula eventos sem dar contexto, dificultando o envolvimento do público.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Foco excessivo no romance",
+          "mencoes_aproximadas": 9,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "Críticas negativas apontam que a relação com Josefina recebeu mais atenção do que as conquistas militares e políticas, deixando de lado o que realmente tornou Napoleão uma figura histórica relevante.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Atuações e elenco",
+          "mencoes_aproximadas": 7,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "Embora alguns reconheçam o talento dos atores, muitos consideram a escalação de Joaquin Phoenix inadequada para o papel, criticando sua idade e a falta de carisma, enquanto Vanessa Kirby é elogiada por sua atuação.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Batalhas decepcionantes",
+          "mencoes_aproximadas": 6,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "As cenas de batalha são apontadas como visualmente impressionantes, mas carecem de estratégia e tática, sendo muitas vezes confusas e sem o brilhantismo militar que caracterizou Napoleão.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        }
+      ],
+      "observacao_geral": "As reviews negativas pintam o filme como um retrato falho e desonroso de Napoleão, com ênfase em sua vida pessoal em detrimento de suas conquistas, resultando em uma narrativa arrastada e decepcionante para os entusiastas da história.",
+      "idioma_invalido": false,
+      "escopo_suspeito": false
+    },
+    {
+      "bucket": "medianas",
+      "alvo": 40,
+      "modo": "completo",
+      "estado_piso": "completa",
+      "n_validas": 40,
+      "share_real": 45,
+      "composicao_alvo": {
+        "2.5": 14,
+        "3.0": 26
+      },
+      "composicao_atingida": {
+        "2.5": 14,
+        "3.0": 26
+      },
+      "cascata_por_degrau": {
+        "150": 40
+      },
+      "deficit_redistribuido": 0,
+      "distribuicao_pagina_origem": {
+        "n": 40,
+        "min": 1,
+        "max": 12,
+        "p5": 1,
+        "p50": 5,
+        "p95": 10,
+        "fracao_profunda": 0.35
+      },
+      "janela_amostra": {
+        "n": 40,
+        "min": "2023-12-06",
+        "max": "2026-08-07",
+        "p5": "2026-01-10",
+        "p50": "2026-08-02",
+        "p95": "2026-08-07"
+      },
+      "niveis": [
+        {
+          "nivel": 2.5,
+          "n_validas": 14,
+          "n_alvo": 14,
+          "n_brutas": 96,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 0,
+          "n_descartadas_curtas": 61,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 3,
+          "motivos_descarte": {
+            "truncada_sem_texto": 3,
+            "spoiler": 0,
+            "abaixo_min_chars": 61,
+            "excedente_cota": 18,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 6
+        },
+        {
+          "nivel": 3.0,
+          "n_validas": 26,
+          "n_alvo": 26,
+          "n_brutas": 144,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 0,
+          "n_descartadas_curtas": 99,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 0,
+          "motivos_descarte": {
+            "truncada_sem_texto": 0,
+            "spoiler": 0,
+            "abaixo_min_chars": 99,
+            "excedente_cota": 19,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 10
+        }
+      ],
+      "temas": [
+        {
+          "tema": "Batalhas visualmente impressionantes",
+          "mencoes_aproximadas": 15,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "As sequências de batalha são amplamente elogiadas por sua grandiosidade e direção competente, sendo o ponto alto do filme para a maioria dos espectadores deste grupo.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Ritmo irregular e excesso de duração",
+          "mencoes_aproximadas": 12,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "O filme se arrasta em várias partes, com uma barriga no meio e uma sensação de que o tempo de tela é mal aproveitado; muitos consideram a versão estendida ainda mais cansativa, apesar de algumas melhorias.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Foco excessivo no relacionamento com Josefina",
+          "mencoes_aproximadas": 10,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "O filme dedica uma parcela desproporcional do tempo ao romance entre Napoleão e Josefina, em detrimento de sua carreira militar e política, o que desagrada os espectadores que esperavam um retrato mais abrangente.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Imprecisões históricas e licenças poéticas",
+          "mencoes_aproximadas": 9,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "Várias pessoas apontam que o longa distorce acontecimentos reais, omite eventos importantes e toma liberdades criativas que comprometem a veracidade histórica, o que é decepcionante para quem conhece a trajetória do personagem.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Atuações de destaque, especialmente de Phoenix e Kirby",
+          "mencoes_aproximadas": 8,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "Joaquin Phoenix e Vanessa Kirby recebem elogios por suas performances, mesmo que alguns achem que Phoenix não convence totalmente como Napoleão ou que a construção dos personagens seja superficial.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Construção de personagem fraca e falta de profundidade política",
+          "mencoes_aproximadas": 7,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "O filme não consegue transmitir a complexidade de Napoleão como estrategista e líder, reduzindo-o a um homem obcecado por sua esposa, enquanto aspectos políticos e militares relevantes são tratados de forma superficial.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        }
+      ],
+      "observacao_geral": "As reviews medianas indicam uma recepção mista: reconhecem a qualidade visual e as cenas de batalha, mas apontam falhas em ritmo, precisão histórica e no foco excessivo no relacionamento com Josefina. Apesar das críticas, há quem aprecie a abordagem intimista e as atuações de Phoenix e Kirby.",
+      "idioma_invalido": false,
+      "escopo_suspeito": false
+    },
+    {
+      "bucket": "positivas",
+      "alvo": 40,
+      "modo": "completo",
+      "estado_piso": "completa",
+      "n_validas": 40,
+      "share_real": 33,
+      "composicao_alvo": {
+        "3.5": 22,
+        "4.0": 13,
+        "4.5": 2,
+        "5.0": 3
+      },
+      "composicao_atingida": {
+        "3.5": 24,
+        "4.0": 13,
+        "4.5": 2,
+        "5.0": 1
+      },
+      "cascata_por_degrau": {
+        "150": 40
+      },
+      "deficit_redistribuido": 2,
+      "distribuicao_pagina_origem": {
+        "n": 40,
+        "min": 1,
+        "max": 24,
+        "p5": 1,
+        "p50": 5,
+        "p95": 11,
+        "fracao_profunda": 0.325
+      },
+      "janela_amostra": {
+        "n": 40,
+        "min": "2023-11-24",
+        "max": "2026-08-07",
+        "p5": "2025-01-05",
+        "p50": "2026-07-28",
+        "p95": "2026-08-07"
+      },
+      "niveis": [
+        {
+          "nivel": 3.5,
+          "n_validas": 24,
+          "n_alvo": 22,
+          "n_brutas": 132,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 2,
+          "n_descartadas_curtas": 74,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 2,
+          "motivos_descarte": {
+            "truncada_sem_texto": 2,
+            "spoiler": 2,
+            "abaixo_min_chars": 74,
+            "excedente_cota": 30,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 9
+        },
+        {
+          "nivel": 4.0,
+          "n_validas": 13,
+          "n_alvo": 13,
+          "n_brutas": 72,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 1,
+          "n_descartadas_curtas": 53,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 0,
+          "motivos_descarte": {
+            "truncada_sem_texto": 0,
+            "spoiler": 1,
+            "abaixo_min_chars": 53,
+            "excedente_cota": 5,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 5
+        },
+        {
+          "nivel": 4.5,
+          "n_validas": 2,
+          "n_alvo": 2,
+          "n_brutas": 12,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 0,
+          "n_descartadas_curtas": 5,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 0,
+          "motivos_descarte": {
+            "truncada_sem_texto": 0,
+            "spoiler": 0,
+            "abaixo_min_chars": 5,
+            "excedente_cota": 5,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 1
+        },
+        {
+          "nivel": 5.0,
+          "n_validas": 1,
+          "n_alvo": 3,
+          "n_brutas": 12,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 0,
+          "n_descartadas_curtas": 11,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 0,
+          "motivos_descarte": {
+            "truncada_sem_texto": 0,
+            "spoiler": 0,
+            "abaixo_min_chars": 11,
+            "excedente_cota": 0,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 1
+        }
+      ],
+      "temas": [
+        {
+          "tema": "Atuações e carisma de Joaquin Phoenix e Vanessa Kirby",
+          "mencoes_aproximadas": 8,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "A performance de Joaquin Phoenix foi elogiada por capturar a dualidade do personagem, transitando entre a vulnerabilidade e a autoridade, enquanto Vanessa Kirby se destacou ao dar profundidade à Josefina.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Impacto visual e direção de arte",
+          "mencoes_aproximadas": 8,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "A fotografia, os figurinos e os cenários foram descritos como deslumbrantes, criando uma imersão na França do século XIX e elevando a experiência visual do filme.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Qualidade das cenas de batalha",
+          "mencoes_aproximadas": 7,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "As sequências de batalha foram consideradas espetaculares e brutais, com coreografias autênticas que mostram o melhor de Ridley Scott em grandes combates.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Abordagem pessoal e íntima do personagem",
+          "mencoes_aproximadas": 6,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "O filme foi apreciado por focar nas inseguranças e na vida pessoal de Napoleão, apresentando-o como um homem comum com defeitos, em vez de um herói mitológico.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Ritmo e edição",
+          "mencoes_aproximadas": 5,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "A versão estendida foi elogiada por melhorar o ritmo, dando mais profundidade aos eventos, enquanto a versão original parecia correr por alguns marcos históricos.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Incentivo à pesquisa histórica",
+          "mencoes_aproximadas": 5,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "O filme despertou a curiosidade dos espectadores, levando-os a pesquisar sobre Napoleão e o contexto histórico por conta própria, o que foi um ponto positivo para eles.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        }
+      ],
+      "observacao_geral": "As reviews positivas destacam a grandiosidade visual e as atuações, especialmente de Joaquin Phoenix, e valorizam a abordagem humana e íntima do personagem. Apesar de reconhecerem imprecisões históricas, elas as veem como aceitáveis em prol da experiência cinematográfica, e a versão estendida é frequentemente preferida.",
+      "idioma_invalido": false,
+      "escopo_suspeito": false
+    }
+  ],
+  "eixos": {
+    "taxonomia_id": "ebab2667de74",
+    "margem_lift_pp": 20,
+    "contraste": "tematico",
+    "linhas": [
+      {
+        "eixo": "ritmo",
+        "por_bucket": {
+          "negativas": {
+            "mencoes": 6,
+            "de_n": 27,
+            "freq_pct": 22.2,
+            "lift_pp": -27.8,
+            "tema": "Ritmo e edição",
+            "exemplo_parafraseado": "O filme é descrito como lento, cansativo e mal estruturado, com uma narrativa fragmentada que pula eventos sem dar contexto, dificultando o envolvimento do público.",
+            "temas_no_mesmo_eixo": []
+          },
+          "medianas": {
+            "mencoes": 13,
+            "de_n": 26,
+            "freq_pct": 50.0,
+            "lift_pp": 25.0,
+            "tema": "Ritmo irregular e excesso de duração",
+            "exemplo_parafraseado": "O filme se arrasta em várias partes, com uma barriga no meio e uma sensação de que o tempo de tela é mal aproveitado; muitos consideram a versão estendida ainda mais cansativa, apesar de algumas melhorias.",
+            "temas_no_mesmo_eixo": []
+          },
+          "positivas": {
+            "mencoes": 5,
+            "de_n": 20,
+            "freq_pct": 25.0,
+            "lift_pp": -25.0,
+            "tema": "Ritmo e edição",
+            "exemplo_parafraseado": "A versão estendida foi elogiada por melhorar o ritmo, dando mais profundidade aos eventos, enquanto a versão original parecia correr por alguns marcos históricos.",
+            "temas_no_mesmo_eixo": []
+          }
+        },
+        "bullet_de": {
+          "negativas": null,
+          "medianas": "frequencia_e_contraste",
+          "positivas": null
+        }
+      },
+      {
+        "eixo": "atuacao",
+        "por_bucket": {
+          "negativas": {
+            "mencoes": 10,
+            "de_n": 27,
+            "freq_pct": 37.0,
+            "lift_pp": 2.4,
+            "tema": "Atuações e elenco",
+            "exemplo_parafraseado": "Embora alguns reconheçam o talento dos atores, muitos consideram a escalação de Joaquin Phoenix inadequada para o papel, criticando sua idade e a falta de carisma, enquanto Vanessa Kirby é elogiada por sua atuação.",
+            "temas_no_mesmo_eixo": []
+          },
+          "medianas": {
+            "mencoes": 9,
+            "de_n": 26,
+            "freq_pct": 34.6,
+            "lift_pp": -2.4,
+            "tema": "Atuações de destaque, especialmente de Phoenix e Kirby",
+            "exemplo_parafraseado": "Joaquin Phoenix e Vanessa Kirby recebem elogios por suas performances, mesmo que alguns achem que Phoenix não convence totalmente como Napoleão ou que a construção dos personagens seja superficial.",
+            "temas_no_mesmo_eixo": []
+          },
+          "positivas": {
+            "mencoes": 4,
+            "de_n": 20,
+            "freq_pct": 20.0,
+            "lift_pp": -17.0,
+            "tema": "Atuações e carisma de Joaquin Phoenix e Vanessa Kirby",
+            "exemplo_parafraseado": "A performance de Joaquin Phoenix foi elogiada por capturar a dualidade do personagem, transitando entre a vulnerabilidade e a autoridade, enquanto Vanessa Kirby se destacou ao dar profundidade à Josefina.",
+            "temas_no_mesmo_eixo": []
+          }
+        },
+        "bullet_de": {
+          "negativas": null,
+          "medianas": null,
+          "positivas": null
+        }
+      },
+      {
+        "eixo": "direcao_imagem",
+        "por_bucket": {
+          "negativas": {
+            "mencoes": 12,
+            "de_n": 27,
+            "freq_pct": 44.4,
+            "lift_pp": -5.6,
+            "tema": "Batalhas decepcionantes",
+            "exemplo_parafraseado": "As cenas de batalha são apontadas como visualmente impressionantes, mas carecem de estratégia e tática, sendo muitas vezes confusas e sem o brilhantismo militar que caracterizou Napoleão.",
+            "temas_no_mesmo_eixo": []
+          },
+          "medianas": {
+            "mencoes": 13,
+            "de_n": 26,
+            "freq_pct": 50.0,
+            "lift_pp": 5.6,
+            "tema": "Batalhas visualmente impressionantes",
+            "exemplo_parafraseado": "As sequências de batalha são amplamente elogiadas por sua grandiosidade e direção competente, sendo o ponto alto do filme para a maioria dos espectadores deste grupo.",
+            "temas_no_mesmo_eixo": []
+          },
+          "positivas": {
+            "mencoes": 8,
+            "de_n": 20,
+            "freq_pct": 40.0,
+            "lift_pp": -10.0,
+            "tema": "Impacto visual e direção de arte",
+            "exemplo_parafraseado": "A fotografia, os figurinos e os cenários foram descritos como deslumbrantes, criando uma imersão na França do século XIX e elevando a experiência visual do filme.",
+            "temas_no_mesmo_eixo": [
+              "Qualidade das cenas de batalha"
+            ]
+          }
+        },
+        "bullet_de": {
+          "negativas": null,
+          "medianas": null,
+          "positivas": "frequencia"
+        }
+      },
+      {
+        "eixo": "roteiro_estrutura",
+        "por_bucket": {
+          "negativas": {
+            "mencoes": 20,
+            "de_n": 27,
+            "freq_pct": 74.1,
+            "lift_pp": 16.4,
+            "tema": "Retrato de Napoleão",
+            "exemplo_parafraseado": "As reviews negativas criticam a representação de Napoleão como um personagem fraco, submisso e infantilizado, reduzindo sua figura histórica a uma caricatura, o que é considerado uma afronta ao verdadeiro estrategista e líder.",
+            "temas_no_mesmo_eixo": [
+              "Foco excessivo no romance"
+            ]
+          },
+          "medianas": {
+            "mencoes": 15,
+            "de_n": 26,
+            "freq_pct": 57.7,
+            "lift_pp": -16.4,
+            "tema": "Foco excessivo no relacionamento com Josefina",
+            "exemplo_parafraseado": "O filme dedica uma parcela desproporcional do tempo ao romance entre Napoleão e Josefina, em detrimento de sua carreira militar e política, o que desagrada os espectadores que esperavam um retrato mais abrangente.",
+            "temas_no_mesmo_eixo": [
+              "Construção de personagem fraca e falta de profundidade política"
+            ]
+          },
+          "positivas": {
+            "mencoes": 7,
+            "de_n": 20,
+            "freq_pct": 35.0,
+            "lift_pp": -39.1,
+            "tema": "Abordagem pessoal e íntima do personagem",
+            "exemplo_parafraseado": "O filme foi apreciado por focar nas inseguranças e na vida pessoal de Napoleão, apresentando-o como um homem comum com defeitos, em vez de um herói mitológico.",
+            "temas_no_mesmo_eixo": []
+          }
+        },
+        "bullet_de": {
+          "negativas": "frequencia",
+          "medianas": "frequencia",
+          "positivas": null
+        }
+      },
+      {
+        "eixo": "tom_atmosfera",
+        "por_bucket": {
+          "negativas": {
+            "mencoes": 1,
+            "de_n": 27,
+            "freq_pct": 3.7,
+            "lift_pp": -11.7,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "medianas": {
+            "mencoes": 4,
+            "de_n": 26,
+            "freq_pct": 15.4,
+            "lift_pp": 5.4,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "positivas": {
+            "mencoes": 2,
+            "de_n": 20,
+            "freq_pct": 10.0,
+            "lift_pp": -5.4,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          }
+        },
+        "bullet_de": {
+          "negativas": null,
+          "medianas": null,
+          "positivas": null
+        }
+      },
+      {
+        "eixo": "impacto_emocional",
+        "por_bucket": {
+          "negativas": {
+            "mencoes": 7,
+            "de_n": 27,
+            "freq_pct": 25.9,
+            "lift_pp": 20.9,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "medianas": {
+            "mencoes": 0,
+            "de_n": 26,
+            "freq_pct": 0.0,
+            "lift_pp": -25.9,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "positivas": {
+            "mencoes": 1,
+            "de_n": 20,
+            "freq_pct": 5.0,
+            "lift_pp": -20.9,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          }
+        },
+        "bullet_de": {
+          "negativas": "contraste",
+          "medianas": null,
+          "positivas": null
+        }
+      },
+      {
+        "eixo": "comparacoes",
+        "por_bucket": {
+          "negativas": {
+            "mencoes": 16,
+            "de_n": 27,
+            "freq_pct": 59.3,
+            "lift_pp": 9.3,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "medianas": {
+            "mencoes": 13,
+            "de_n": 26,
+            "freq_pct": 50.0,
+            "lift_pp": -9.3,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "positivas": {
+            "mencoes": 10,
+            "de_n": 20,
+            "freq_pct": 50.0,
+            "lift_pp": -9.3,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          }
+        },
+        "bullet_de": {
+          "negativas": "frequencia",
+          "medianas": null,
+          "positivas": "frequencia"
+        }
+      },
+      {
+        "eixo": "expectativa",
+        "por_bucket": {
+          "negativas": {
+            "mencoes": 10,
+            "de_n": 27,
+            "freq_pct": 37.0,
+            "lift_pp": 12.0,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "medianas": {
+            "mencoes": 5,
+            "de_n": 26,
+            "freq_pct": 19.2,
+            "lift_pp": -17.8,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "positivas": {
+            "mencoes": 5,
+            "de_n": 20,
+            "freq_pct": 25.0,
+            "lift_pp": -12.0,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          }
+        },
+        "bullet_de": {
+          "negativas": null,
+          "medianas": null,
+          "positivas": null
+        }
+      },
+      {
+        "eixo": "critica_social",
+        "por_bucket": {
+          "negativas": {
+            "mencoes": 9,
+            "de_n": 27,
+            "freq_pct": 33.3,
+            "lift_pp": -5.1,
+            "tema": "Imprecisões históricas",
+            "exemplo_parafraseado": "Muitos espectadores apontam que o filme contém inúmeros erros de datas, eventos e batalhas, o que compromete a fidelidade histórica e desaponta aqueles que conhecem a trajetória real de Napoleão.",
+            "temas_no_mesmo_eixo": []
+          },
+          "medianas": {
+            "mencoes": 10,
+            "de_n": 26,
+            "freq_pct": 38.5,
+            "lift_pp": 5.1,
+            "tema": "Imprecisões históricas e licenças poéticas",
+            "exemplo_parafraseado": "Várias pessoas apontam que o longa distorce acontecimentos reais, omite eventos importantes e toma liberdades criativas que comprometem a veracidade histórica, o que é decepcionante para quem conhece a trajetória do personagem.",
+            "temas_no_mesmo_eixo": []
+          },
+          "positivas": {
+            "mencoes": 5,
+            "de_n": 20,
+            "freq_pct": 25.0,
+            "lift_pp": -13.5,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          }
+        },
+        "bullet_de": {
+          "negativas": null,
+          "medianas": null,
+          "positivas": null
+        }
+      }
+    ],
+    "fonte_classificacao": {
+      "arquivo": "resultado/votacao-3/consenso.jsonl",
+      "criterio": "votacao_3_consenso_2_de_3",
+      "por_bucket": {
+        "negativas": {
+          "n_classificadas": 27,
+          "n_analisadas": 40,
+          "sobreposicao_com_analisadas": 27
+        },
+        "medianas": {
+          "n_classificadas": 26,
+          "n_analisadas": 40,
+          "sobreposicao_com_analisadas": 26
+        },
+        "positivas": {
+          "n_classificadas": 20,
+          "n_analisadas": 40,
+          "sobreposicao_com_analisadas": 20
+        }
+      }
+    },
+    "rotulagem": {
+      "n_chamadas": 3,
+      "falharam": [],
+      "fora_da_taxonomia": {},
+      "houve_retentativa": []
+    },
+    "spec_version": "1.9.16",
+    "verificador": {
+      "aplicado": true,
+      "variante": "V2_alvo",
+      "passada": 1,
+      "eixo": "impacto_emocional",
+      "n_removidas_no_corpus": 1654
+    }
+  },
+  "narrativa": "Dirigido por Ridley Scott e lançado em 2023, Napoleão é um drama histórico de guerra que apresenta as origens do líder militar francês e sua rápida e implacável ascensão a imperador. A narrativa explora essa trajetória sob o prisma do relacionamento dependente e volátil entre Napoleão e sua esposa, Josefina.\n\nA experiência do longa é estruturada pela alternância constante entre grandiosas encenações de confrontos militares e passagens voltadas à intimidade do casal protagonista. A ambientação reconstitui a época do Império Francês, estendendo-se por décadas de acontecimentos em uma narrativa de longa duração.\n\nEm boa parte das notas (~45%), uma parcela expressiva elogia a grandiosidade e a execução técnica das cenas de batalha como momentos marcantes da obra. Contudo, vários apontam um ritmo irregular e uma sensação de excesso na duração total da narrativa, enquanto uma parte lamenta o que considera um foco excessivo no romance com Josefina em detrimento das complexidades políticas e militares do período.\n\nNuma parte menor das notas (~33%), alguns destacam positivamente as atuações e o carisma de Joaquin Phoenix e Vanessa Kirby nos papéis principais. Para eles, parte deles ressalta o impacto visual construído por meio da direção de arte, dos cenários e dos figurinos de época, enquanto uma fatia menor celebra o vigor e a qualidade das grandes sequências de combate.\n\nPara a visão expressa numa parcela das notas (~22%), onde o impacto emocional negativo predomina, muitos criticam a forma como Napoleão é retratado na trama, considerando o personagem enfraquecido ou caricatural. Além disso, um número considerável condena as imprecisões e licenças históricas presentes na obra, ao passo que alguns apontam falhas no ritmo e na edição como fatores que fragmentam a narrativa.",
+  "verificacao_narrativa": {
+    "quantificador_fora_de_faixa": [],
+    "quantificador_repetido": [],
+    "paragrafos": {
+      "n_paragrafos": 5,
+      "minimo": 3,
+      "insuficientes": false,
+      "longos": []
+    },
+    "n_paragrafos": 5,
+    "paragrafos_insuficientes": false,
+    "paragrafos_longos": [],
+    "grupos_sem_paragrafo_proprio": [],
+    "movimento1_e_movimento2_no_mesmo_paragrafo": false,
+    "formato_invalido": false,
+    "numeros_inventados": [],
+    "rotulos_faltando": [],
+    "ordem_incorreta": false,
+    "vocabulario_peso": false,
+    "resenha_speak": [],
+    "n_resenha_speak": 0,
+    "n_flags": 0
+  },
+  "narrativa_selecao": {
+    "provider": "gemini",
+    "modelo": "gemini-3.7-flash",
+    "n_candidatos": 3,
+    "n_chamadas": 3,
+    "indice_escolhido": 1,
+    "motivo": "melhor_entre_limpos",
+    "criterio_decisivo": "unico",
+    "candidatos": [
+      {
+        "indice": 0,
+        "n_flags": 1,
+        "cliches": 0,
+        "repeticao_max": 2,
+        "ritmo": 4,
+        "cobertura": 1.0,
+        "eliminado": true
+      },
+      {
+        "indice": 1,
+        "n_flags": 0,
+        "cliches": 0,
+        "repeticao_max": 2,
+        "ritmo": 7,
+        "cobertura": 1.0,
+        "eliminado": false
+      },
+      {
+        "indice": 2,
+        "n_flags": 1,
+        "cliches": 0,
+        "repeticao_max": 2,
+        "ritmo": 6,
+        "cobertura": 1.0,
+        "eliminado": true
+      }
+    ],
+    "retry": null,
+    "uso": {
+      "prompt_tokens": 9771,
+      "completion_tokens": 1207,
+      "cache_hit_tokens": 0,
+      "cache_miss_tokens": 9771
+    },
+    "latencia_s": 32.81
+  }
+}

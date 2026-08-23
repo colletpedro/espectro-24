@@ -1,6 +1,6 @@
 {
   "slug": "joker-folie-a-deux",
-  "coletado_em": "2026-08-15T21:38:01.192644+00:00",
+  "coletado_em": "2026-08-23T00:57:09.004135+00:00",
   "versao_coletor": "1.9.6",
   "ordenacao_usada": "by/added",
   "histograma_bruto": {
@@ -65,11 +65,11 @@
   },
   "contagem_estimada_valida_por_nivel": {
     "0.5": 5,
-    "1.0": 10,
-    "1.5": 8,
-    "2.0": 22,
-    "2.5": 22,
-    "3.0": 31,
+    "1.0": 11,
+    "1.5": 7,
+    "2.0": 25,
+    "2.5": 26,
+    "3.0": 39,
     "3.5": 37,
     "4.0": 25,
     "4.5": 5,
@@ -114,14 +114,11 @@
   "extensao_por_bucket": {
     "negativas": {
       "paginas_base": 16,
-      "paginas_extensao": 5,
-      "extras_por_nivel": {
-        "1.0": 3,
-        "1.5": 2
-      },
+      "paginas_extensao": 0,
+      "extras_por_nivel": {},
       "motivo_parada": "meta_atingida",
-      "n_validas_pos_base": 45,
-      "n_validas_pos_extensao": 52,
+      "n_validas_pos_base": 64,
+      "n_validas_pos_extensao": 64,
       "meta": 50
     },
     "medianas": {
@@ -129,8 +126,8 @@
       "paginas_extensao": 0,
       "extras_por_nivel": {},
       "motivo_parada": "meta_atingida",
-      "n_validas_pos_base": 53,
-      "n_validas_pos_extensao": 53,
+      "n_validas_pos_base": 72,
+      "n_validas_pos_extensao": 72,
       "meta": 50
     },
     "positivas": {
@@ -138,61 +135,73 @@
       "paginas_extensao": 0,
       "extras_por_nivel": {},
       "motivo_parada": "meta_atingida",
-      "n_validas_pos_base": 72,
-      "n_validas_pos_extensao": 72,
+      "n_validas_pos_base": 87,
+      "n_validas_pos_extensao": 87,
       "meta": 50
     }
   },
   "profundidade_sondagem": {
     "nivel_sondado": 2.0,
-    "profundidade": null,
+    "profundidade": 256,
     "exata": false,
-    "requisicoes": 3,
-    "motivo": "falha"
+    "requisicoes": 4,
+    "motivo": "teto_plataforma"
+  },
+  "profundidade_estimada_por_nivel": {
+    "0.5": 70,
+    "1.0": 133,
+    "1.5": 117,
+    "2.0": 256,
+    "2.5": 186,
+    "3.0": 221,
+    "3.5": 115,
+    "4.0": 97,
+    "4.5": 21,
+    "5.0": 30
   },
   "janela_temporal": {
     "total": {
-      "n": 593,
+      "n": 737,
       "min": "2024-05-16",
       "max": "2026-08-08",
       "p5": "2025-01-04",
-      "p50": "2026-08-04",
+      "p50": "2026-08-03",
       "p95": "2026-08-07"
     },
     "por_bucket": {
       "negativas": {
-        "n": 209,
+        "n": 257,
         "min": "2024-09-05",
         "max": "2026-08-08",
-        "p5": "2025-01-09",
+        "p5": "2025-06-11",
         "p50": "2026-08-05",
         "p95": "2026-08-07"
       },
       "medianas": {
-        "n": 192,
+        "n": 240,
         "min": "2024-10-02",
         "max": "2026-08-07",
-        "p5": "2024-10-24",
-        "p50": "2026-08-03",
+        "p5": "2024-10-25",
+        "p50": "2026-08-01",
         "p95": "2026-08-07"
       },
       "positivas": {
-        "n": 192,
+        "n": 240,
         "min": "2024-05-16",
         "max": "2026-08-08",
-        "p5": "2025-12-10",
-        "p50": "2026-08-03",
+        "p5": "2025-01-04",
+        "p50": "2026-07-31",
         "p95": "2026-08-07"
       }
     }
   },
   "dias_por_100_paginas": {
-    "n_paginas": 10,
+    "n_paginas": 21,
     "pagina_min": 1,
-    "pagina_max": 11,
-    "dias": 9,
-    "dias_por_100_paginas": 90.0,
-    "paginas_para_1_ano": 406
+    "pagina_max": 128,
+    "dias": 75,
+    "dias_por_100_paginas": 59.05511811023622,
+    "paginas_para_1_ano": 618
   },
   "dias_por_100_paginas_por_nivel": {
     "0.5": {
@@ -204,60 +213,60 @@
       "paginas_para_1_ano": 365
     },
     "1.0": {
-      "n_paginas": 5,
+      "n_paginas": 6,
       "pagina_min": 1,
-      "pagina_max": 7,
-      "dias": 4,
-      "dias_por_100_paginas": 66.66666666666667,
-      "paginas_para_1_ano": 548
+      "pagina_max": 33,
+      "dias": 10,
+      "dias_por_100_paginas": 31.25,
+      "paginas_para_1_ano": 1168
     },
     "1.5": {
-      "n_paginas": 4,
+      "n_paginas": 5,
       "pagina_min": 1,
-      "pagina_max": 5,
-      "dias": 2,
+      "pagina_max": 29,
+      "dias": 14,
       "dias_por_100_paginas": 50.0,
       "paginas_para_1_ano": 730
     },
     "2.0": {
-      "n_paginas": 7,
+      "n_paginas": 9,
       "pagina_min": 1,
-      "pagina_max": 9,
-      "dias": 4,
-      "dias_por_100_paginas": 50.0,
-      "paginas_para_1_ano": 730
+      "pagina_max": 128,
+      "dias": 75,
+      "dias_por_100_paginas": 59.05511811023622,
+      "paginas_para_1_ano": 618
     },
     "2.5": {
-      "n_paginas": 7,
+      "n_paginas": 9,
       "pagina_min": 1,
-      "pagina_max": 9,
-      "dias": 8,
+      "pagina_max": 93,
+      "dias": 92,
       "dias_por_100_paginas": 100.0,
       "paginas_para_1_ano": 365
     },
     "3.0": {
-      "n_paginas": 9,
+      "n_paginas": 11,
       "pagina_min": 1,
-      "pagina_max": 11,
-      "dias": 8,
-      "dias_por_100_paginas": 80.0,
-      "paginas_para_1_ano": 456
+      "pagina_max": 110,
+      "dias": 98,
+      "dias_por_100_paginas": 89.90825688073394,
+      "paginas_para_1_ano": 406
     },
     "3.5": {
-      "n_paginas": 7,
+      "n_paginas": 9,
       "pagina_min": 1,
-      "pagina_max": 9,
-      "dias": 15,
-      "dias_por_100_paginas": 187.5,
-      "paginas_para_1_ano": 195
+      "pagina_max": 58,
+      "dias": 90,
+      "dias_por_100_paginas": 157.89473684210526,
+      "paginas_para_1_ano": 231
     },
     "4.0": {
-      "n_paginas": 6,
+      "n_paginas": 8,
       "pagina_min": 1,
-      "pagina_max": 8,
-      "dias": 9,
-      "dias_por_100_paginas": 128.57142857142858,
-      "paginas_para_1_ano": 284
+      "pagina_max": 48,
+      "dias": 74,
+      "dias_por_100_paginas": 157.4468085106383,
+      "paginas_para_1_ano": 232
     },
     "5.0": {
       "n_paginas": 2,

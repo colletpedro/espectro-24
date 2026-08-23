@@ -1,0 +1,1342 @@
+{
+  "slug": "wonka",
+  "data_coleta": "2026-08-23T00:33:41.861530+00:00",
+  "spec_version": "1.9.16",
+  "total_reviews_observadas": 705,
+  "reviews_url": "https://letterboxd.com/film/wonka/reviews/",
+  "ficha": {
+    "titulo": "Wonka",
+    "sinopse_oficial": "Antes de se tornar a mente brilhante por trás da maior fábrica de chocolate do mundo, Willy precisou enfrentar vários obstáculos. Cheio de ideias e determinado a mudar o mundo, o jovem Wonka embarca em uma aventura para espalhar alegria através de seu delecioso chocolate.",
+    "sinopse_fallback_en": false,
+    "generos": [
+      "Comédia",
+      "Família",
+      "Fantasia"
+    ],
+    "duracao_min": 120,
+    "diretor": "Paul King",
+    "diretor_transliterado": false,
+    "ano": 2023,
+    "fonte": "tmdb",
+    "ano_fonte": "bruto"
+  },
+  "distribuicao": {
+    "n_notas_total": 1712913,
+    "por_nivel": {
+      "0.5": 21381,
+      "1.0": 52544,
+      "1.5": 37761,
+      "2.0": 152537,
+      "2.5": 155748,
+      "3.0": 432311,
+      "3.5": 321957,
+      "4.0": 343346,
+      "4.5": 73668,
+      "5.0": 121660
+    },
+    "por_bucket": {
+      "negativas": 15,
+      "medianas": 34,
+      "positivas": 50
+    },
+    "fonte": "letterboxd_histograma"
+  },
+  "coleta": {
+    "slug": "wonka",
+    "coletado_em": "2026-08-23T00:32:35.310109+00:00",
+    "versao_coletor": "1.9.6",
+    "ordenacao_usada": "by/added",
+    "histograma_bruto": {
+      "0.5": 21381,
+      "1.0": 52544,
+      "1.5": 37761,
+      "2.0": 152537,
+      "2.5": 155748,
+      "3.0": 432311,
+      "3.5": 321957,
+      "4.0": 343346,
+      "4.5": 73668,
+      "5.0": 121660
+    },
+    "orcamento_paginas_por_nivel": {
+      "0.5": 2,
+      "1.0": 3,
+      "1.5": 2,
+      "2.0": 9,
+      "2.5": 6,
+      "3.0": 10,
+      "3.5": 6,
+      "4.0": 7,
+      "4.5": 1,
+      "5.0": 2
+    },
+    "paginas_gastas_por_nivel": {
+      "0.5": 2,
+      "1.0": 3,
+      "1.5": 2,
+      "2.0": 17,
+      "2.5": 6,
+      "3.0": 18,
+      "3.5": 6,
+      "4.0": 7,
+      "4.5": 1,
+      "5.0": 2
+    },
+    "paradas_por_limite": [
+      "0.5",
+      "1.0",
+      "1.5",
+      "2.0",
+      "2.5",
+      "3.0",
+      "3.5",
+      "4.0",
+      "4.5",
+      "5.0"
+    ],
+    "contagem_bruta_por_nivel": {
+      "0.5": 24,
+      "1.0": 24,
+      "1.5": 24,
+      "2.0": 189,
+      "2.5": 72,
+      "3.0": 180,
+      "3.5": 72,
+      "4.0": 84,
+      "4.5": 12,
+      "5.0": 24
+    },
+    "contagem_estimada_valida_por_nivel": {
+      "0.5": 5,
+      "1.0": 1,
+      "1.5": 5,
+      "2.0": 15,
+      "2.5": 9,
+      "3.0": 22,
+      "3.5": 9,
+      "4.0": 14,
+      "4.5": 3,
+      "5.0": 2
+    },
+    "motivo_parada_por_nivel": {
+      "0.5": "orcamento_esgotado",
+      "1.0": "orcamento_esgotado",
+      "1.5": "orcamento_esgotado",
+      "2.0": "orcamento_esgotado",
+      "2.5": "orcamento_esgotado",
+      "3.0": "orcamento_esgotado",
+      "3.5": "orcamento_esgotado",
+      "4.0": "orcamento_esgotado",
+      "4.5": "orcamento_esgotado",
+      "5.0": "orcamento_esgotado"
+    },
+    "paginas_base_por_nivel": {
+      "0.5": 2,
+      "1.0": 3,
+      "1.5": 2,
+      "2.0": 9,
+      "2.5": 6,
+      "3.0": 10,
+      "3.5": 6,
+      "4.0": 7,
+      "4.5": 1,
+      "5.0": 2
+    },
+    "paginas_extensao_por_nivel": {
+      "0.5": 0,
+      "1.0": 0,
+      "1.5": 0,
+      "2.0": 8,
+      "2.5": 0,
+      "3.0": 8,
+      "3.5": 0,
+      "4.0": 0,
+      "4.5": 0,
+      "5.0": 0
+    },
+    "extensao_por_bucket": {
+      "negativas": {
+        "paginas_base": 16,
+        "paginas_extensao": 8,
+        "extras_por_nivel": {
+          "2.0": 8
+        },
+        "motivo_parada": "teto_extensao",
+        "n_validas_pos_base": 32,
+        "n_validas_pos_extensao": 32,
+        "meta": 50
+      },
+      "medianas": {
+        "paginas_base": 16,
+        "paginas_extensao": 8,
+        "extras_por_nivel": {
+          "3.0": 8
+        },
+        "motivo_parada": "teto_extensao",
+        "n_validas_pos_base": 34,
+        "n_validas_pos_extensao": 34,
+        "meta": 50
+      },
+      "positivas": {
+        "paginas_base": 16,
+        "paginas_extensao": 0,
+        "extras_por_nivel": {},
+        "motivo_parada": "meta_atingida",
+        "n_validas_pos_base": 53,
+        "n_validas_pos_extensao": 53,
+        "meta": 50
+      }
+    },
+    "profundidade_sondagem": {
+      "nivel_sondado": 3.0,
+      "profundidade": 256,
+      "exata": false,
+      "requisicoes": 4,
+      "motivo": "teto_plataforma"
+    },
+    "profundidade_estimada_por_nivel": {
+      "0.5": 13,
+      "1.0": 31,
+      "1.5": 22,
+      "2.0": 90,
+      "2.5": 92,
+      "3.0": 256,
+      "3.5": 191,
+      "4.0": 203,
+      "4.5": 44,
+      "5.0": 72
+    },
+    "janela_temporal": {
+      "total": {
+        "n": 913,
+        "min": "2023-03-27",
+        "max": "2026-08-21",
+        "p5": "2023-12-17",
+        "p50": "2026-08-04",
+        "p95": "2026-08-08"
+      },
+      "por_bucket": {
+        "negativas": {
+          "n": 297,
+          "min": "2023-04-13",
+          "max": "2026-08-08",
+          "p5": "2024-01-01",
+          "p50": "2026-08-01",
+          "p95": "2026-08-07"
+        },
+        "medianas": {
+          "n": 290,
+          "min": "2023-03-27",
+          "max": "2026-08-08",
+          "p5": "2023-12-15",
+          "p50": "2026-08-03",
+          "p95": "2026-08-07"
+        },
+        "positivas": {
+          "n": 326,
+          "min": "2023-06-05",
+          "max": "2026-08-21",
+          "p5": "2023-12-16",
+          "p50": "2026-08-06",
+          "p95": "2026-08-20"
+        }
+      }
+    },
+    "dias_por_100_paginas": {
+      "n_paginas": 28,
+      "pagina_min": 1,
+      "pagina_max": 128,
+      "dias": 37,
+      "dias_por_100_paginas": 29.133858267716537,
+      "paginas_para_1_ano": 1253
+    },
+    "ano_lancamento": 2023,
+    "ano_fonte": "letterboxd",
+    "n_reviews_bruto": 913
+  },
+  "origem_paginas": {
+    "_histograma/wonka.html": "cache",
+    "wonka/pages/by_added/rated_3_page_4.html": "cache",
+    "wonka/pages/by_added/rated_3_page_16.html": "cache",
+    "wonka/pages/by_added/rated_3_page_64.html": "cache",
+    "wonka/pages/by_added/rated_3_page_256.html": "cache",
+    "wonka/pages/by_added/rated_0_5_page_1.html": "cache",
+    "wonka/pages/by_added/rated_0_5_page_2.html": "cache",
+    "wonka/pages/by_added/rated_1_page_1.html": "cache",
+    "wonka/pages/by_added/rated_1_page_2.html": "cache",
+    "wonka/pages/by_added/rated_1_page_8.html": "cache",
+    "wonka/pages/by_added/rated_1_5_page_1.html": "cache",
+    "wonka/pages/by_added/rated_1_5_page_2.html": "cache",
+    "wonka/fulltext/viewing_1431231163.html": "cache",
+    "wonka/pages/by_added/rated_2_page_1.html": "cache",
+    "wonka/pages/by_added/rated_2_page_2.html": "cache",
+    "wonka/pages/by_added/rated_2_page_3.html": "cache",
+    "wonka/pages/by_added/rated_2_page_4.html": "cache",
+    "wonka/pages/by_added/rated_2_page_5.html": "cache",
+    "wonka/pages/by_added/rated_2_page_6.html": "cache",
+    "wonka/pages/by_added/rated_2_page_7.html": "cache",
+    "wonka/pages/by_added/rated_2_page_22.html": "cache",
+    "wonka/pages/by_added/rated_2_page_45.html": "cache",
+    "wonka/fulltext/viewing_1437710312.html": "cache",
+    "wonka/pages/by_added/rated_2_5_page_1.html": "cache",
+    "wonka/pages/by_added/rated_2_5_page_2.html": "cache",
+    "wonka/pages/by_added/rated_2_5_page_3.html": "cache",
+    "wonka/pages/by_added/rated_2_5_page_4.html": "cache",
+    "wonka/pages/by_added/rated_2_5_page_23.html": "cache",
+    "wonka/pages/by_added/rated_2_5_page_46.html": "cache",
+    "wonka/fulltext/viewing_1434857340.html": "cache",
+    "wonka/pages/by_added/rated_3_page_1.html": "cache",
+    "wonka/pages/by_added/rated_3_page_2.html": "cache",
+    "wonka/pages/by_added/rated_3_page_3.html": "cache",
+    "wonka/pages/by_added/rated_3_page_5.html": "cache",
+    "wonka/pages/by_added/rated_3_page_6.html": "cache",
+    "wonka/pages/by_added/rated_3_page_7.html": "cache",
+    "wonka/pages/by_added/rated_3_page_8.html": "cache",
+    "wonka/pages/by_added/rated_3_page_128.html": "cache",
+    "wonka/fulltext/viewing_1308972327.html": "cache",
+    "wonka/fulltext/viewing_1420083461.html": "cache",
+    "wonka/fulltext/viewing_1377143058.html": "cache",
+    "wonka/pages/by_added/rated_3_5_page_1.html": "cache",
+    "wonka/pages/by_added/rated_3_5_page_2.html": "cache",
+    "wonka/pages/by_added/rated_3_5_page_3.html": "cache",
+    "wonka/pages/by_added/rated_3_5_page_4.html": "cache",
+    "wonka/pages/by_added/rated_3_5_page_48.html": "cache",
+    "wonka/pages/by_added/rated_3_5_page_96.html": "cache",
+    "wonka/fulltext/viewing_1437402182.html": "cache",
+    "wonka/fulltext/viewing_1422034833.html": "cache",
+    "wonka/fulltext/viewing_1379564482.html": "cache",
+    "wonka/pages/by_added/rated_4_page_1.html": "cache",
+    "wonka/pages/by_added/rated_4_page_2.html": "cache",
+    "wonka/pages/by_added/rated_4_page_3.html": "cache",
+    "wonka/pages/by_added/rated_4_page_4.html": "cache",
+    "wonka/pages/by_added/rated_4_page_5.html": "cache",
+    "wonka/pages/by_added/rated_4_page_51.html": "cache",
+    "wonka/pages/by_added/rated_4_page_102.html": "cache",
+    "wonka/fulltext/viewing_1439446837.html": "cache",
+    "wonka/fulltext/viewing_486602468.html": "cache",
+    "wonka/pages/by_added/rated_4_5_page_1.html": "cache",
+    "wonka/pages/by_added/rated_5_page_1.html": "cache",
+    "wonka/pages/by_added/rated_5_page_2.html": "cache",
+    "wonka/pages/by_added/rated_2_page_8.html": "cache",
+    "wonka/fulltext/viewing_1428198859.html": "cache",
+    "wonka/pages/by_added/rated_2_page_9.html": "cache",
+    "wonka/pages/by_added/rated_2_page_10.html": "cache",
+    "wonka/pages/by_added/rated_2_page_11.html": "cache",
+    "wonka/pages/by_added/rated_2_page_12.html": "cache",
+    "wonka/pages/by_added/rated_2_page_13.html": "cache",
+    "wonka/pages/by_added/rated_2_page_14.html": "cache",
+    "wonka/pages/by_added/rated_2_page_15.html": "cache",
+    "wonka/pages/by_added/rated_3_page_9.html": "cache",
+    "wonka/pages/by_added/rated_3_page_10.html": "cache",
+    "wonka/pages/by_added/rated_3_page_11.html": "cache",
+    "wonka/pages/by_added/rated_3_page_12.html": "cache",
+    "wonka/pages/by_added/rated_3_page_13.html": "cache",
+    "wonka/pages/by_added/rated_3_page_14.html": "cache",
+    "wonka/pages/by_added/rated_3_page_15.html": "cache",
+    "wonka/film_page.html": "cache"
+  },
+  "buckets": [
+    {
+      "bucket": "negativas",
+      "alvo": 40,
+      "modo": "reduzido",
+      "estado_piso": "completa",
+      "n_validas": 32,
+      "share_real": 15,
+      "composicao_alvo": {
+        "0.5": 3,
+        "1.0": 8,
+        "1.5": 6,
+        "2.0": 23
+      },
+      "composicao_atingida": {
+        "0.5": 5,
+        "1.0": 2,
+        "1.5": 5,
+        "2.0": 20
+      },
+      "cascata_por_degrau": {
+        "150": 32
+      },
+      "deficit_redistribuido": 2,
+      "distribuicao_pagina_origem": {
+        "n": 32,
+        "min": 1,
+        "max": 17,
+        "p5": 1,
+        "p50": 5,
+        "p95": 17,
+        "fracao_profunda": 0.5
+      },
+      "janela_amostra": {
+        "n": 32,
+        "min": "2023-12-27",
+        "max": "2026-08-07",
+        "p5": "2024-01-08",
+        "p50": "2026-07-29",
+        "p95": "2026-08-05"
+      },
+      "niveis": [
+        {
+          "nivel": 0.5,
+          "n_validas": 5,
+          "n_alvo": 3,
+          "n_brutas": 24,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 0,
+          "n_descartadas_curtas": 19,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 0,
+          "motivos_descarte": {
+            "truncada_sem_texto": 0,
+            "spoiler": 0,
+            "abaixo_min_chars": 19,
+            "excedente_cota": 0,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 2
+        },
+        {
+          "nivel": 1.0,
+          "n_validas": 2,
+          "n_alvo": 8,
+          "n_brutas": 36,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 1,
+          "n_descartadas_curtas": 31,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 2,
+          "motivos_descarte": {
+            "truncada_sem_texto": 2,
+            "spoiler": 1,
+            "abaixo_min_chars": 31,
+            "excedente_cota": 0,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 3
+        },
+        {
+          "nivel": 1.5,
+          "n_validas": 5,
+          "n_alvo": 6,
+          "n_brutas": 24,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 0,
+          "n_descartadas_curtas": 19,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 0,
+          "motivos_descarte": {
+            "truncada_sem_texto": 0,
+            "spoiler": 0,
+            "abaixo_min_chars": 19,
+            "excedente_cota": 0,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 2
+        },
+        {
+          "nivel": 2.0,
+          "n_validas": 20,
+          "n_alvo": 23,
+          "n_brutas": 213,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 0,
+          "n_descartadas_curtas": 191,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 2,
+          "motivos_descarte": {
+            "truncada_sem_texto": 2,
+            "spoiler": 0,
+            "abaixo_min_chars": 191,
+            "excedente_cota": 0,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 17
+        }
+      ],
+      "temas": [
+        {
+          "tema": "Músicas e números musicais criticados",
+          "mencoes_aproximadas": 10,
+          "n_reviews_analisadas": 32,
+          "exemplo_parafraseado": "As canções irritavam e faziam querer sair da sala, sendo consideradas chatas e sem talento vocal, com alguns números desnecessariamente longos.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Falta de conexão com o personagem original",
+          "mencoes_aproximadas": 9,
+          "n_reviews_analisadas": 32,
+          "exemplo_parafraseado": "O Wonka de Chalamet foi considerado muito doce e sem a complexidade ou o lado sombrio característico, decepcionando quem esperava algo mais próximo das versões anteriores.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Roteiro fraco e previsível",
+          "mencoes_aproximadas": 8,
+          "n_reviews_analisadas": 32,
+          "exemplo_parafraseado": "A história foi vista como básica, sem sustentação, com desenvolvimento arrastado e desconexo entre cenas, além de não justificar a necessidade de um prequel.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Fotografia e efeitos visuais criticados",
+          "mencoes_aproximadas": 6,
+          "n_reviews_analisadas": 32,
+          "exemplo_parafraseado": "A estética visual foi duramente criticada, com uso excessivo de CGI, cenários artificiais e uma paleta de cores desbotada, tornando o filme feio aos olhos.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Atuações medianas e elenco subutilizado",
+          "mencoes_aproximadas": 5,
+          "n_reviews_analisadas": 32,
+          "exemplo_parafraseado": "Apesar do carisma de Chalamet, sua atuação foi considerada sem brilho, e o elenco de apoio não conseguiu elevar o material, com destaque apenas para Hugh Grant.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Público-alvo indefinido e humor sem graça",
+          "mencoes_aproximadas": 4,
+          "n_reviews_analisadas": 32,
+          "exemplo_parafraseado": "O filme não parecia saber para quem foi feito, com tom infantil demais para adultos e piadas que raramente funcionavam, resultando em tédio.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        }
+      ],
+      "observacao_geral": "As reviews negativas apontam para um filme que, na visão desse grupo, falha em capturar a essência do personagem original, com números musicais irritantes, roteiro previsível e estética visual desagradável. Apesar de reconhecerem o carisma de Chalamet, consideram a execução geral sem brilho e desnecessária.",
+      "idioma_invalido": false,
+      "escopo_suspeito": false
+    },
+    {
+      "bucket": "medianas",
+      "alvo": 40,
+      "modo": "reduzido",
+      "estado_piso": "completa",
+      "n_validas": 34,
+      "share_real": 34,
+      "composicao_alvo": {
+        "2.5": 11,
+        "3.0": 29
+      },
+      "composicao_atingida": {
+        "2.5": 11,
+        "3.0": 23
+      },
+      "cascata_por_degrau": {
+        "150": 34
+      },
+      "deficit_redistribuido": 0,
+      "distribuicao_pagina_origem": {
+        "n": 34,
+        "min": 1,
+        "max": 128,
+        "p5": 1,
+        "p50": 5,
+        "p95": 64,
+        "fracao_profunda": 0.4117647058823529
+      },
+      "janela_amostra": {
+        "n": 34,
+        "min": "2023-03-27",
+        "max": "2026-08-07",
+        "p5": "2023-12-12",
+        "p50": "2026-08-02",
+        "p95": "2026-08-07"
+      },
+      "niveis": [
+        {
+          "nivel": 2.5,
+          "n_validas": 11,
+          "n_alvo": 11,
+          "n_brutas": 86,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 1,
+          "n_descartadas_curtas": 74,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 0,
+          "motivos_descarte": {
+            "truncada_sem_texto": 0,
+            "spoiler": 1,
+            "abaixo_min_chars": 74,
+            "excedente_cota": 0,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 6
+        },
+        {
+          "nivel": 3.0,
+          "n_validas": 23,
+          "n_alvo": 29,
+          "n_brutas": 204,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 0,
+          "n_descartadas_curtas": 179,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 2,
+          "motivos_descarte": {
+            "truncada_sem_texto": 2,
+            "spoiler": 0,
+            "abaixo_min_chars": 179,
+            "excedente_cota": 0,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 18
+        }
+      ],
+      "temas": [
+        {
+          "tema": "Canções medianas ou esquecíveis",
+          "mencoes_aproximadas": 12,
+          "n_reviews_analisadas": 34,
+          "exemplo_parafraseado": "As músicas não são marcantes e algumas são consideradas fracas, com letras pouco inspiradas, apesar de haver algumas exceções agradáveis.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Atuação de Timothée Chalamet divide opiniões",
+          "mencoes_aproximadas": 10,
+          "n_reviews_analisadas": 34,
+          "exemplo_parafraseado": "O protagonista é carismático e encanta em alguns momentos, mas falta intensidade e presença vocal para sustentar o papel de um Willy Wonka mais excêntrico.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Visual encantador e cenários bonitos",
+          "mencoes_aproximadas": 8,
+          "n_reviews_analisadas": 34,
+          "exemplo_parafraseado": "Os cenários coloridos e a fotografia caprichada criam uma atmosfera mágica de conto de fadas, embora alguns efeitos especiais deixem a desejar.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Comparação com versões anteriores do personagem",
+          "mencoes_aproximadas": 7,
+          "n_reviews_analisadas": 34,
+          "exemplo_parafraseado": "Esta versão de Wonka é mais doce e sonhadora, carecendo do lado excêntrico e misterioso presente em adaptações anteriores, o que gera estranhamento em alguns fãs.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Roteiro previsível e sem profundidade",
+          "mencoes_aproximadas": 7,
+          "n_reviews_analisadas": 34,
+          "exemplo_parafraseado": "A história segue uma fórmula conhecida e não surpreende, sendo considerada simples e um tanto esquecível, embora agradável para o público infantil.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Tom leve e agradável para a família",
+          "mencoes_aproximadas": 6,
+          "n_reviews_analisadas": 34,
+          "exemplo_parafraseado": "O filme é divertido, aconchegante e adequado para assistir em família, proporcionando uma experiência agradável sem grandes pretensões.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        }
+      ],
+      "observacao_geral": "As reviews medianas apontam para um filme visualmente bonito e agradável, mas que peca pela falta de profundidade e por canções e atuações que não empolgam. O grupo destaca o carisma de Chalamet, embora muitos sintam falta do lado mais sombrio e excêntrico do personagem.",
+      "idioma_invalido": false,
+      "escopo_suspeito": false
+    },
+    {
+      "bucket": "positivas",
+      "alvo": 40,
+      "modo": "completo",
+      "estado_piso": "completa",
+      "n_validas": 40,
+      "share_real": 50,
+      "composicao_alvo": {
+        "3.5": 15,
+        "4.0": 16,
+        "4.5": 3,
+        "5.0": 6
+      },
+      "composicao_atingida": {
+        "3.5": 15,
+        "4.0": 16,
+        "4.5": 3,
+        "5.0": 6
+      },
+      "cascata_por_degrau": {
+        "150": 40
+      },
+      "deficit_redistribuido": 0,
+      "distribuicao_pagina_origem": {
+        "n": 40,
+        "min": 1,
+        "max": 102,
+        "p5": 1,
+        "p50": 5,
+        "p95": 11,
+        "fracao_profunda": 0.55
+      },
+      "janela_amostra": {
+        "n": 40,
+        "min": "2023-12-09",
+        "max": "2026-08-21",
+        "p5": "2024-01-06",
+        "p50": "2026-08-06",
+        "p95": "2026-08-19"
+      },
+      "niveis": [
+        {
+          "nivel": 3.5,
+          "n_validas": 15,
+          "n_alvo": 15,
+          "n_brutas": 104,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 1,
+          "n_descartadas_curtas": 83,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 1,
+          "motivos_descarte": {
+            "truncada_sem_texto": 1,
+            "spoiler": 1,
+            "abaixo_min_chars": 83,
+            "excedente_cota": 4,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 6
+        },
+        {
+          "nivel": 4.0,
+          "n_validas": 16,
+          "n_alvo": 16,
+          "n_brutas": 120,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 1,
+          "n_descartadas_curtas": 100,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 0,
+          "motivos_descarte": {
+            "truncada_sem_texto": 0,
+            "spoiler": 1,
+            "abaixo_min_chars": 100,
+            "excedente_cota": 3,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 7
+        },
+        {
+          "nivel": 4.5,
+          "n_validas": 3,
+          "n_alvo": 3,
+          "n_brutas": 24,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 0,
+          "n_descartadas_curtas": 16,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 0,
+          "motivos_descarte": {
+            "truncada_sem_texto": 0,
+            "spoiler": 0,
+            "abaixo_min_chars": 16,
+            "excedente_cota": 5,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 1
+        },
+        {
+          "nivel": 5.0,
+          "n_validas": 6,
+          "n_alvo": 6,
+          "n_brutas": 78,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 1,
+          "n_descartadas_curtas": 70,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 0,
+          "motivos_descarte": {
+            "truncada_sem_texto": 0,
+            "spoiler": 1,
+            "abaixo_min_chars": 70,
+            "excedente_cota": 1,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 2
+        }
+      ],
+      "temas": [
+        {
+          "tema": "Atuação de Timothée Chalamet",
+          "mencoes_aproximadas": 14,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "Diversas reviews positivas elogiam a atuação de Timothée Chalamet, destacando seu carisma, energia e habilidade de carregar o filme, sendo considerado um dos pontos altos da produção.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Música e números musicais",
+          "mencoes_aproximadas": 12,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "As reviews elogiam as canções originais e os números musicais, considerando-os cativantes e essenciais para o clima alegre do filme, embora alguns mencionem que nem todas as músicas têm o mesmo impacto.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Magia, diversão e clima acolhedor",
+          "mencoes_aproximadas": 10,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "Os comentários descrevem o filme como mágico, encantador e divertido, com uma atmosfera que remete à infância e proporciona conforto, sendo um filme ideal para assistir em família.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Visual e direção de arte",
+          "mencoes_aproximadas": 8,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "Muitos elogiam a fotografia e os cenários, considerando o filme visualmente deslumbrante, com cores vibrantes e uma estética que reforça o tom fantasioso da história.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Elenco de apoio e personagens",
+          "mencoes_aproximadas": 7,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "As reviews positivas destacam o elenco de apoio, incluindo atores famosos e a presença de Hugh Grant como o Oompa-Loompa, que, embora divida opiniões, é mencionado como um ponto de interesse.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Roteiro e mensagem",
+          "mencoes_aproximadas": 6,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "Alguns comentários elogiam a história como uma origin story envolvente, com uma mensagem positiva sobre compartilhar e sobre a importância das relações humanas, alinhada ao espírito dos livros de Roald Dahl.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        }
+      ],
+      "observacao_geral": "As reviews positivas pintam Wonka como uma experiência encantadora, mágica e divertida, destacando a performance carismática de Timothée Chalamet e as músicas cativantes, embora alguns apontem pequenos defeitos como o excesso de personagens ou a falta de estranheza do protagonista.",
+      "idioma_invalido": false,
+      "escopo_suspeito": false
+    }
+  ],
+  "eixos": {
+    "taxonomia_id": "ebab2667de74",
+    "margem_lift_pp": 20,
+    "contraste": "tematico",
+    "linhas": [
+      {
+        "eixo": "ritmo",
+        "por_bucket": {
+          "negativas": {
+            "mencoes": 4,
+            "de_n": 32,
+            "freq_pct": 12.5,
+            "lift_pp": 3.4,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "medianas": {
+            "mencoes": 1,
+            "de_n": 25,
+            "freq_pct": 4.0,
+            "lift_pp": -8.5,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "positivas": {
+            "mencoes": 3,
+            "de_n": 33,
+            "freq_pct": 9.1,
+            "lift_pp": -3.4,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          }
+        },
+        "bullet_de": {
+          "negativas": null,
+          "medianas": null,
+          "positivas": null
+        }
+      },
+      {
+        "eixo": "atuacao",
+        "por_bucket": {
+          "negativas": {
+            "mencoes": 12,
+            "de_n": 32,
+            "freq_pct": 37.5,
+            "lift_pp": -22.5,
+            "tema": "Atuações medianas e elenco subutilizado",
+            "exemplo_parafraseado": "Apesar do carisma de Chalamet, sua atuação foi considerada sem brilho, e o elenco de apoio não conseguiu elevar o material, com destaque apenas para Hugh Grant.",
+            "temas_no_mesmo_eixo": []
+          },
+          "medianas": {
+            "mencoes": 15,
+            "de_n": 25,
+            "freq_pct": 60.0,
+            "lift_pp": 20.6,
+            "tema": "Atuação de Timothée Chalamet divide opiniões",
+            "exemplo_parafraseado": "O protagonista é carismático e encanta em alguns momentos, mas falta intensidade e presença vocal para sustentar o papel de um Willy Wonka mais excêntrico.",
+            "temas_no_mesmo_eixo": []
+          },
+          "positivas": {
+            "mencoes": 13,
+            "de_n": 33,
+            "freq_pct": 39.4,
+            "lift_pp": -20.6,
+            "tema": "Atuação de Timothée Chalamet",
+            "exemplo_parafraseado": "Diversas reviews positivas elogiam a atuação de Timothée Chalamet, destacando seu carisma, energia e habilidade de carregar o filme, sendo considerado um dos pontos altos da produção.",
+            "temas_no_mesmo_eixo": [
+              "Elenco de apoio e personagens"
+            ]
+          }
+        },
+        "bullet_de": {
+          "negativas": "frequencia",
+          "medianas": "frequencia_e_contraste",
+          "positivas": null
+        }
+      },
+      {
+        "eixo": "direcao_imagem",
+        "por_bucket": {
+          "negativas": {
+            "mencoes": 3,
+            "de_n": 32,
+            "freq_pct": 9.4,
+            "lift_pp": -30.6,
+            "tema": "Fotografia e efeitos visuais criticados",
+            "exemplo_parafraseado": "A estética visual foi duramente criticada, com uso excessivo de CGI, cenários artificiais e uma paleta de cores desbotada, tornando o filme feio aos olhos.",
+            "temas_no_mesmo_eixo": []
+          },
+          "medianas": {
+            "mencoes": 10,
+            "de_n": 25,
+            "freq_pct": 40.0,
+            "lift_pp": 24.8,
+            "tema": "Visual encantador e cenários bonitos",
+            "exemplo_parafraseado": "Os cenários coloridos e a fotografia caprichada criam uma atmosfera mágica de conto de fadas, embora alguns efeitos especiais deixem a desejar.",
+            "temas_no_mesmo_eixo": []
+          },
+          "positivas": {
+            "mencoes": 5,
+            "de_n": 33,
+            "freq_pct": 15.2,
+            "lift_pp": -24.8,
+            "tema": "Visual e direção de arte",
+            "exemplo_parafraseado": "Muitos elogiam a fotografia e os cenários, considerando o filme visualmente deslumbrante, com cores vibrantes e uma estética que reforça o tom fantasioso da história.",
+            "temas_no_mesmo_eixo": []
+          }
+        },
+        "bullet_de": {
+          "negativas": null,
+          "medianas": "contraste",
+          "positivas": null
+        }
+      },
+      {
+        "eixo": "roteiro_estrutura",
+        "por_bucket": {
+          "negativas": {
+            "mencoes": 9,
+            "de_n": 32,
+            "freq_pct": 28.1,
+            "lift_pp": -15.9,
+            "tema": "Roteiro fraco e previsível",
+            "exemplo_parafraseado": "A história foi vista como básica, sem sustentação, com desenvolvimento arrastado e desconexo entre cenas, além de não justificar a necessidade de um prequel.",
+            "temas_no_mesmo_eixo": []
+          },
+          "medianas": {
+            "mencoes": 11,
+            "de_n": 25,
+            "freq_pct": 44.0,
+            "lift_pp": 13.7,
+            "tema": "Roteiro previsível e sem profundidade",
+            "exemplo_parafraseado": "A história segue uma fórmula conhecida e não surpreende, sendo considerada simples e um tanto esquecível, embora agradável para o público infantil.",
+            "temas_no_mesmo_eixo": []
+          },
+          "positivas": {
+            "mencoes": 10,
+            "de_n": 33,
+            "freq_pct": 30.3,
+            "lift_pp": -13.7,
+            "tema": "Roteiro e mensagem",
+            "exemplo_parafraseado": "Alguns comentários elogiam a história como uma origin story envolvente, com uma mensagem positiva sobre compartilhar e sobre a importância das relações humanas, alinhada ao espírito dos livros de Roald Dahl.",
+            "temas_no_mesmo_eixo": []
+          }
+        },
+        "bullet_de": {
+          "negativas": null,
+          "medianas": null,
+          "positivas": null
+        }
+      },
+      {
+        "eixo": "som_trilha",
+        "por_bucket": {
+          "negativas": {
+            "mencoes": 11,
+            "de_n": 32,
+            "freq_pct": 34.4,
+            "lift_pp": -5.6,
+            "tema": "Músicas e números musicais criticados",
+            "exemplo_parafraseado": "As canções irritavam e faziam querer sair da sala, sendo consideradas chatas e sem talento vocal, com alguns números desnecessariamente longos.",
+            "temas_no_mesmo_eixo": []
+          },
+          "medianas": {
+            "mencoes": 10,
+            "de_n": 25,
+            "freq_pct": 40.0,
+            "lift_pp": 5.6,
+            "tema": "Canções medianas ou esquecíveis",
+            "exemplo_parafraseado": "As músicas não são marcantes e algumas são consideradas fracas, com letras pouco inspiradas, apesar de haver algumas exceções agradáveis.",
+            "temas_no_mesmo_eixo": []
+          },
+          "positivas": {
+            "mencoes": 11,
+            "de_n": 33,
+            "freq_pct": 33.3,
+            "lift_pp": -6.7,
+            "tema": "Música e números musicais",
+            "exemplo_parafraseado": "As reviews elogiam as canções originais e os números musicais, considerando-os cativantes e essenciais para o clima alegre do filme, embora alguns mencionem que nem todas as músicas têm o mesmo impacto.",
+            "temas_no_mesmo_eixo": []
+          }
+        },
+        "bullet_de": {
+          "negativas": null,
+          "medianas": null,
+          "positivas": null
+        }
+      },
+      {
+        "eixo": "tom_atmosfera",
+        "por_bucket": {
+          "negativas": {
+            "mencoes": 4,
+            "de_n": 32,
+            "freq_pct": 12.5,
+            "lift_pp": -29.9,
+            "tema": "Público-alvo indefinido e humor sem graça",
+            "exemplo_parafraseado": "O filme não parecia saber para quem foi feito, com tom infantil demais para adultos e piadas que raramente funcionavam, resultando em tédio.",
+            "temas_no_mesmo_eixo": []
+          },
+          "medianas": {
+            "mencoes": 8,
+            "de_n": 25,
+            "freq_pct": 32.0,
+            "lift_pp": -10.4,
+            "tema": "Tom leve e agradável para a família",
+            "exemplo_parafraseado": "O filme é divertido, aconchegante e adequado para assistir em família, proporcionando uma experiência agradável sem grandes pretensões.",
+            "temas_no_mesmo_eixo": []
+          },
+          "positivas": {
+            "mencoes": 14,
+            "de_n": 33,
+            "freq_pct": 42.4,
+            "lift_pp": 10.4,
+            "tema": "Magia, diversão e clima acolhedor",
+            "exemplo_parafraseado": "Os comentários descrevem o filme como mágico, encantador e divertido, com uma atmosfera que remete à infância e proporciona conforto, sendo um filme ideal para assistir em família.",
+            "temas_no_mesmo_eixo": []
+          }
+        },
+        "bullet_de": {
+          "negativas": null,
+          "medianas": null,
+          "positivas": "frequencia"
+        }
+      },
+      {
+        "eixo": "impacto_emocional",
+        "por_bucket": {
+          "negativas": {
+            "mencoes": 10,
+            "de_n": 32,
+            "freq_pct": 31.2,
+            "lift_pp": -2.1,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "medianas": {
+            "mencoes": 8,
+            "de_n": 25,
+            "freq_pct": 32.0,
+            "lift_pp": -1.3,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "positivas": {
+            "mencoes": 11,
+            "de_n": 33,
+            "freq_pct": 33.3,
+            "lift_pp": 1.3,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          }
+        },
+        "bullet_de": {
+          "negativas": null,
+          "medianas": null,
+          "positivas": null
+        }
+      },
+      {
+        "eixo": "comparacoes",
+        "por_bucket": {
+          "negativas": {
+            "mencoes": 15,
+            "de_n": 32,
+            "freq_pct": 46.9,
+            "lift_pp": -9.1,
+            "tema": "Falta de conexão com o personagem original",
+            "exemplo_parafraseado": "O Wonka de Chalamet foi considerado muito doce e sem a complexidade ou o lado sombrio característico, decepcionando quem esperava algo mais próximo das versões anteriores.",
+            "temas_no_mesmo_eixo": []
+          },
+          "medianas": {
+            "mencoes": 14,
+            "de_n": 25,
+            "freq_pct": 56.0,
+            "lift_pp": 7.5,
+            "tema": "Comparação com versões anteriores do personagem",
+            "exemplo_parafraseado": "Esta versão de Wonka é mais doce e sonhadora, carecendo do lado excêntrico e misterioso presente em adaptações anteriores, o que gera estranhamento em alguns fãs.",
+            "temas_no_mesmo_eixo": []
+          },
+          "positivas": {
+            "mencoes": 16,
+            "de_n": 33,
+            "freq_pct": 48.5,
+            "lift_pp": -7.5,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          }
+        },
+        "bullet_de": {
+          "negativas": "frequencia",
+          "medianas": "frequencia",
+          "positivas": "frequencia"
+        }
+      },
+      {
+        "eixo": "expectativa",
+        "por_bucket": {
+          "negativas": {
+            "mencoes": 6,
+            "de_n": 32,
+            "freq_pct": 18.8,
+            "lift_pp": 0.6,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "medianas": {
+            "mencoes": 3,
+            "de_n": 25,
+            "freq_pct": 12.0,
+            "lift_pp": -6.8,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "positivas": {
+            "mencoes": 6,
+            "de_n": 33,
+            "freq_pct": 18.2,
+            "lift_pp": -0.6,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          }
+        },
+        "bullet_de": {
+          "negativas": null,
+          "medianas": null,
+          "positivas": null
+        }
+      },
+      {
+        "eixo": "critica_social",
+        "por_bucket": {
+          "negativas": {
+            "mencoes": 3,
+            "de_n": 32,
+            "freq_pct": 9.4,
+            "lift_pp": 0.3,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "medianas": {
+            "mencoes": 2,
+            "de_n": 25,
+            "freq_pct": 8.0,
+            "lift_pp": -1.4,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "positivas": {
+            "mencoes": 3,
+            "de_n": 33,
+            "freq_pct": 9.1,
+            "lift_pp": -0.3,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          }
+        },
+        "bullet_de": {
+          "negativas": null,
+          "medianas": null,
+          "positivas": null
+        }
+      }
+    ],
+    "fonte_classificacao": {
+      "arquivo": "resultado/votacao-3/consenso.jsonl",
+      "criterio": "votacao_3_consenso_2_de_3",
+      "por_bucket": {
+        "negativas": {
+          "n_classificadas": 32,
+          "n_analisadas": 32,
+          "sobreposicao_com_analisadas": 32
+        },
+        "medianas": {
+          "n_classificadas": 25,
+          "n_analisadas": 34,
+          "sobreposicao_com_analisadas": 25
+        },
+        "positivas": {
+          "n_classificadas": 33,
+          "n_analisadas": 40,
+          "sobreposicao_com_analisadas": 33
+        }
+      }
+    },
+    "rotulagem": {
+      "n_chamadas": 3,
+      "falharam": [],
+      "fora_da_taxonomia": {},
+      "houve_retentativa": []
+    },
+    "spec_version": "1.9.16",
+    "verificador": {
+      "aplicado": true,
+      "variante": "V2_alvo",
+      "passada": 1,
+      "eixo": "impacto_emocional",
+      "n_removidas_no_corpus": 1654
+    }
+  },
+  "narrativa": "Dirigido por Paul King e lançado em 2023, Wonka é um longa-metragem de 120 minutos que mescla comédia, fantasia e aventura para toda a família. A narrativa retrata o jovem Willy antes de se tornar a mente por trás da maior fábrica de chocolate do mundo, mostrando seus passos enquanto enfrenta obstáculos para espalhar alegria com suas criações.\n\nA experiência do filme é construída por meio de uma atmosfera fantástica e lúdica, com uma estrutura que combina sequências cômicas e constantes números musicais.\n\nNa maioria das notas (~50%), a recepção é calorosa: boa parte exalta a atuação de Timothée Chalamet pelo carisma que conduz a produção, enquanto vários elogiam a presença das músicas e dos números musicais na construção da narrativa. Além disso, uma parte salienta a sensação de magia, a diversão e o clima acolhedor transmitidos pela obra.\n\nEm boa parte das notas (~34%), as discussões enfatizam a direção de imagem e a parte estética do filme. Nessa perspectiva, alguns sublinham o visual encantador e os cenários bonitos, mas um número considerável descreve as canções como medianas ou esquecíveis. Complementando esse quadro intermediário, uma parcela expressiva relata que a atuação de Timothée Chalamet divide opiniões.\n\nPara quem se posiciona nessa faixa, numa parcela das notas (~15%), muitos direcionam queixas severas às músicas e aos números musicais apresentados. Além desse aspecto, vários sentem uma evidente falta de conexão com o personagem original estabelecido anteriormente, enquanto parte deles aponta um roteiro fraco e previsível no desenvolvimento da história.",
+  "verificacao_narrativa": {
+    "quantificador_fora_de_faixa": [],
+    "quantificador_repetido": [],
+    "paragrafos": {
+      "n_paragrafos": 5,
+      "minimo": 3,
+      "insuficientes": false,
+      "longos": []
+    },
+    "n_paragrafos": 5,
+    "paragrafos_insuficientes": false,
+    "paragrafos_longos": [],
+    "grupos_sem_paragrafo_proprio": [],
+    "movimento1_e_movimento2_no_mesmo_paragrafo": false,
+    "formato_invalido": false,
+    "numeros_inventados": [],
+    "rotulos_faltando": [],
+    "ordem_incorreta": false,
+    "vocabulario_peso": false,
+    "resenha_speak": [
+      {
+        "expressao": "divide opinioes",
+        "n": 1,
+        "trecho": " atuação de Timothée Chalamet divide opiniões.\n\nPara quem se posiciona ness"
+      }
+    ],
+    "n_resenha_speak": 1,
+    "n_flags": 0
+  },
+  "narrativa_selecao": {
+    "provider": "gemini",
+    "modelo": "gemini-3.7-flash",
+    "n_candidatos": 3,
+    "n_chamadas": 3,
+    "indice_escolhido": 2,
+    "motivo": "melhor_entre_limpos",
+    "criterio_decisivo": "ritmo",
+    "candidatos": [
+      {
+        "indice": 0,
+        "n_flags": 0,
+        "cliches": 1,
+        "repeticao_max": 2,
+        "ritmo": 5,
+        "cobertura": 1.0,
+        "eliminado": false
+      },
+      {
+        "indice": 1,
+        "n_flags": 0,
+        "cliches": 1,
+        "repeticao_max": 2,
+        "ritmo": 5,
+        "cobertura": 1.0,
+        "eliminado": false
+      },
+      {
+        "indice": 2,
+        "n_flags": 0,
+        "cliches": 1,
+        "repeticao_max": 2,
+        "ritmo": 7,
+        "cobertura": 1.0,
+        "eliminado": false
+      }
+    ],
+    "retry": null,
+    "uso": {
+      "prompt_tokens": 9858,
+      "completion_tokens": 1100,
+      "cache_hit_tokens": 0,
+      "cache_miss_tokens": 9858
+    },
+    "latencia_s": 29.04
+  }
+}

@@ -1,7 +1,7 @@
 {
   "slug": "anatomy-of-a-fall",
   "coletado_em": "2026-08-09T07:43:04.749441+00:00",
-  "versao_coletor": "1.9.0",
+  "versao_coletor": "1.9.6",
   "ordenacao_usada": "by/added",
   "histograma_bruto": {
     "0.5": 2380,
@@ -31,7 +31,7 @@
     "0.5": 1,
     "1.0": 3,
     "1.5": 2,
-    "2.0": 13,
+    "2.0": 10,
     "2.5": 6,
     "3.0": 10,
     "3.5": 2,
@@ -55,7 +55,7 @@
     "0.5": 12,
     "1.0": 36,
     "1.5": 24,
-    "2.0": 138,
+    "2.0": 114,
     "2.5": 66,
     "3.0": 120,
     "3.5": 24,
@@ -67,7 +67,7 @@
     "0.5": 4,
     "1.0": 3,
     "1.5": 11,
-    "2.0": 28,
+    "2.0": 22,
     "2.5": 19,
     "3.0": 29,
     "3.5": 6,
@@ -103,7 +103,7 @@
     "0.5": 0,
     "1.0": 0,
     "1.5": 0,
-    "2.0": 3,
+    "2.0": 0,
     "2.5": 0,
     "3.0": 0,
     "3.5": 0,
@@ -114,12 +114,10 @@
   "extensao_por_bucket": {
     "negativas": {
       "paginas_base": 16,
-      "paginas_extensao": 3,
-      "extras_por_nivel": {
-        "2.0": 3
-      },
+      "paginas_extensao": 0,
+      "extras_por_nivel": {},
       "motivo_parada": "meta_atingida",
-      "n_validas_pos_base": 49,
+      "n_validas_pos_base": 50,
       "n_validas_pos_extensao": 50,
       "meta": 50
     },

@@ -1,7 +1,7 @@
 {
   "slug": "the-godfather",
-  "coletado_em": "2026-08-08T08:38:44.215157+00:00",
-  "versao_coletor": "1.9.0",
+  "coletado_em": "2026-08-23T01:11:43.536492+00:00",
+  "versao_coletor": "1.9.6",
   "ordenacao_usada": "by/added",
   "histograma_bruto": {
     "0.5": 8647,
@@ -31,9 +31,9 @@
     "0.5": 2,
     "1.0": 4,
     "1.5": 2,
-    "2.0": 8,
-    "2.5": 6,
-    "3.0": 10,
+    "2.0": 13,
+    "2.5": 4,
+    "3.0": 14,
     "3.5": 1,
     "4.0": 3,
     "4.5": 3,
@@ -53,11 +53,11 @@
   ],
   "contagem_bruta_por_nivel": {
     "0.5": 24,
-    "1.0": 48,
+    "1.0": 39,
     "1.5": 24,
-    "2.0": 96,
-    "2.5": 72,
-    "3.0": 120,
+    "2.0": 133,
+    "2.5": 48,
+    "3.0": 156,
     "3.5": 12,
     "4.0": 36,
     "4.5": 36,
@@ -65,15 +65,15 @@
   },
   "contagem_estimada_valida_por_nivel": {
     "0.5": 3,
-    "1.0": 4,
+    "1.0": 3,
     "1.5": 4,
-    "2.0": 14,
-    "2.5": 19,
-    "3.0": 18,
+    "2.0": 19,
+    "2.5": 12,
+    "3.0": 31,
     "3.5": 4,
-    "4.0": 9,
-    "4.5": 9,
-    "5.0": 20
+    "4.0": 13,
+    "4.5": 10,
+    "5.0": 23
   },
   "motivo_parada_por_nivel": {
     "0.5": "orcamento_esgotado",
@@ -87,49 +87,126 @@
     "4.5": "orcamento_esgotado",
     "5.0": "orcamento_esgotado"
   },
+  "paginas_base_por_nivel": {
+    "0.5": 2,
+    "1.0": 3,
+    "1.5": 2,
+    "2.0": 6,
+    "2.5": 4,
+    "3.0": 10,
+    "3.5": 1,
+    "4.0": 3,
+    "4.5": 3,
+    "5.0": 9
+  },
+  "paginas_extensao_por_nivel": {
+    "0.5": 0,
+    "1.0": 1,
+    "1.5": 0,
+    "2.0": 7,
+    "2.5": 0,
+    "3.0": 4,
+    "3.5": 0,
+    "4.0": 0,
+    "4.5": 0,
+    "5.0": 0
+  },
+  "extensao_por_bucket": {
+    "negativas": {
+      "paginas_base": 13,
+      "paginas_extensao": 8,
+      "extras_por_nivel": {
+        "1.0": 1,
+        "2.0": 7
+      },
+      "motivo_parada": "teto_extensao",
+      "n_validas_pos_base": 25,
+      "n_validas_pos_extensao": 30,
+      "meta": 50
+    },
+    "medianas": {
+      "paginas_base": 14,
+      "paginas_extensao": 4,
+      "extras_por_nivel": {
+        "3.0": 4
+      },
+      "motivo_parada": "meta_atingida",
+      "n_validas_pos_base": 43,
+      "n_validas_pos_extensao": 50,
+      "meta": 50
+    },
+    "positivas": {
+      "paginas_base": 16,
+      "paginas_extensao": 0,
+      "extras_por_nivel": {},
+      "motivo_parada": "meta_atingida",
+      "n_validas_pos_base": 57,
+      "n_validas_pos_extensao": 57,
+      "meta": 50
+    }
+  },
+  "profundidade_sondagem": {
+    "nivel_sondado": 5.0,
+    "profundidade": 256,
+    "exata": false,
+    "requisicoes": 4,
+    "motivo": "teto_plataforma"
+  },
+  "profundidade_estimada_por_nivel": {
+    "0.5": 1,
+    "1.0": 2,
+    "1.5": 1,
+    "2.0": 5,
+    "2.5": 4,
+    "3.0": 22,
+    "3.5": 24,
+    "4.0": 96,
+    "4.5": 81,
+    "5.0": 256
+  },
   "janela_temporal": {
     "total": {
-      "n": 576,
+      "n": 700,
       "min": "1972-01-01",
-      "max": "2026-08-08",
-      "p5": "2026-07-16",
-      "p50": "2026-08-05",
-      "p95": "2026-08-08"
+      "max": "2026-08-20",
+      "p5": "2026-06-28",
+      "p50": "2026-08-06",
+      "p95": "2026-08-17"
     },
     "por_bucket": {
       "negativas": {
-        "n": 192,
-        "min": "2021-06-17",
+        "n": 232,
+        "min": "2021-02-28",
         "max": "2026-08-08",
         "p5": "2026-07-16",
-        "p50": "2026-08-04",
-        "p95": "2026-08-07"
-      },
-      "medianas": {
-        "n": 192,
-        "min": "2020-12-03",
-        "max": "2026-08-08",
-        "p5": "2026-07-27",
         "p50": "2026-08-03",
         "p95": "2026-08-07"
       },
+      "medianas": {
+        "n": 228,
+        "min": "2020-12-03",
+        "max": "2026-08-17",
+        "p5": "2026-07-20",
+        "p50": "2026-08-04",
+        "p95": "2026-08-16"
+      },
       "positivas": {
-        "n": 192,
+        "n": 240,
         "min": "1972-01-01",
-        "max": "2026-08-08",
-        "p5": "2026-07-13",
+        "max": "2026-08-20",
+        "p5": "2026-06-28",
         "p50": "2026-08-07",
-        "p95": "2026-08-08"
+        "p95": "2026-08-19"
       }
     }
   },
   "dias_por_100_paginas": {
-    "n_paginas": 12,
+    "n_paginas": 18,
     "pagina_min": 1,
-    "pagina_max": 12,
-    "dias": 6,
-    "dias_por_100_paginas": 54.54545454545455,
-    "paginas_para_1_ano": 669
+    "pagina_max": 128,
+    "dias": -8,
+    "dias_por_100_paginas": -6.299212598425197,
+    "paginas_para_1_ano": null
   },
   "dias_por_100_paginas_por_nivel": {
     "0.5": {
@@ -141,7 +218,7 @@
       "paginas_para_1_ano": 182
     },
     "1.0": {
-      "n_paginas": 4,
+      "n_paginas": 5,
       "pagina_min": 1,
       "pagina_max": 5,
       "dias": 6,
@@ -157,10 +234,10 @@
       "paginas_para_1_ano": 122
     },
     "2.0": {
-      "n_paginas": 8,
+      "n_paginas": 13,
       "pagina_min": 1,
-      "pagina_max": 10,
-      "dias": 12,
+      "pagina_max": 13,
+      "dias": 16,
       "dias_por_100_paginas": 133.33333333333334,
       "paginas_para_1_ano": 274
     },
@@ -173,36 +250,36 @@
       "paginas_para_1_ano": 256
     },
     "3.0": {
-      "n_paginas": 10,
+      "n_paginas": 13,
       "pagina_min": 1,
-      "pagina_max": 12,
-      "dias": 6,
-      "dias_por_100_paginas": 54.54545454545455,
-      "paginas_para_1_ano": 669
+      "pagina_max": 14,
+      "dias": -8,
+      "dias_por_100_paginas": -61.53846153846154,
+      "paginas_para_1_ano": null
     },
     "4.0": {
-      "n_paginas": 3,
+      "n_paginas": 4,
       "pagina_min": 1,
-      "pagina_max": 4,
-      "dias": 1,
-      "dias_por_100_paginas": 33.333333333333336,
-      "paginas_para_1_ano": 1095
+      "pagina_max": 24,
+      "dias": -10,
+      "dias_por_100_paginas": -43.47826086956522,
+      "paginas_para_1_ano": null
     },
     "4.5": {
-      "n_paginas": 3,
+      "n_paginas": 4,
       "pagina_min": 1,
-      "pagina_max": 4,
-      "dias": 0,
-      "dias_por_100_paginas": 0.0,
+      "pagina_max": 20,
+      "dias": -12,
+      "dias_por_100_paginas": -63.1578947368421,
       "paginas_para_1_ano": null
     },
     "5.0": {
-      "n_paginas": 9,
+      "n_paginas": 11,
       "pagina_min": 1,
-      "pagina_max": 11,
-      "dias": 1,
-      "dias_por_100_paginas": 10.0,
-      "paginas_para_1_ano": 3650
+      "pagina_max": 128,
+      "dias": -7,
+      "dias_por_100_paginas": -5.511811023622047,
+      "paginas_para_1_ano": null
     }
   },
   "ano_lancamento": 1972,

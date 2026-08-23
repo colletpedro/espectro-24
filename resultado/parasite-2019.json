@@ -1,0 +1,1336 @@
+{
+  "slug": "parasite-2019",
+  "data_coleta": "2026-08-23T01:04:58.898014+00:00",
+  "spec_version": "1.9.16",
+  "total_reviews_observadas": 570,
+  "reviews_url": "https://letterboxd.com/film/parasite-2019/reviews/",
+  "ficha": {
+    "titulo": "Parasita",
+    "sinopse_oficial": "Toda a família de Ki-taek está desempregada, vivendo num porão sujo e apertado. Uma obra do acaso faz com que o filho adolescente da família comece a dar aulas de inglês à garota de uma família rica. Fascinados com a vida luxuosa destas pessoas, pai, mãe, filho e filha bolam um plano para se infiltrarem também na família glamorosa, um a um. No entanto, os segredos e mentiras necessários à ascensão social custarão caro a todos.",
+    "sinopse_fallback_en": false,
+    "generos": [
+      "Comédia",
+      "Thriller",
+      "Drama"
+    ],
+    "duracao_min": 132,
+    "diretor": "Bong Joon-ho",
+    "diretor_transliterado": false,
+    "ano": 2019,
+    "fonte": "tmdb",
+    "ano_fonte": "bruto"
+  },
+  "distribuicao": {
+    "n_notas_total": 5686550,
+    "por_nivel": {
+      "0.5": 5343,
+      "1.0": 13180,
+      "1.5": 6158,
+      "2.0": 39839,
+      "2.5": 35178,
+      "3.0": 228378,
+      "3.5": 268775,
+      "4.0": 1265158,
+      "4.5": 985037,
+      "5.0": 2839504
+    },
+    "por_bucket": {
+      "negativas": 1,
+      "medianas": 5,
+      "positivas": 94
+    },
+    "fonte": "letterboxd_histograma"
+  },
+  "coleta": {
+    "slug": "parasite-2019",
+    "coletado_em": "2026-08-23T01:04:35.319465+00:00",
+    "versao_coletor": "1.9.6",
+    "ordenacao_usada": "by/added",
+    "histograma_bruto": {
+      "0.5": 5343,
+      "1.0": 13180,
+      "1.5": 6158,
+      "2.0": 39839,
+      "2.5": 35178,
+      "3.0": 228378,
+      "3.5": 268775,
+      "4.0": 1265158,
+      "4.5": 985037,
+      "5.0": 2839504
+    },
+    "orcamento_paginas_por_nivel": {
+      "0.5": 1,
+      "1.0": 3,
+      "1.5": 2,
+      "2.0": 10,
+      "2.5": 6,
+      "3.0": 10,
+      "3.5": 1,
+      "4.0": 4,
+      "4.5": 3,
+      "5.0": 8
+    },
+    "paginas_gastas_por_nivel": {
+      "0.5": 1,
+      "1.0": 2,
+      "1.5": 2,
+      "2.0": 16,
+      "2.5": 4,
+      "3.0": 10,
+      "3.5": 1,
+      "4.0": 4,
+      "4.5": 3,
+      "5.0": 8
+    },
+    "paradas_por_limite": [
+      "0.5",
+      "1.0",
+      "1.5",
+      "2.0",
+      "2.5",
+      "3.0",
+      "3.5",
+      "4.0",
+      "4.5",
+      "5.0"
+    ],
+    "contagem_bruta_por_nivel": {
+      "0.5": 12,
+      "1.0": 24,
+      "1.5": 24,
+      "2.0": 162,
+      "2.5": 48,
+      "3.0": 108,
+      "3.5": 12,
+      "4.0": 48,
+      "4.5": 36,
+      "5.0": 96
+    },
+    "contagem_estimada_valida_por_nivel": {
+      "0.5": 0,
+      "1.0": 2,
+      "1.5": 3,
+      "2.0": 23,
+      "2.5": 9,
+      "3.0": 26,
+      "3.5": 2,
+      "4.0": 6,
+      "4.5": 4,
+      "5.0": 17
+    },
+    "motivo_parada_por_nivel": {
+      "0.5": "orcamento_esgotado",
+      "1.0": "orcamento_esgotado",
+      "1.5": "orcamento_esgotado",
+      "2.0": "orcamento_esgotado",
+      "2.5": "orcamento_esgotado",
+      "3.0": "orcamento_esgotado",
+      "3.5": "orcamento_esgotado",
+      "4.0": "orcamento_esgotado",
+      "4.5": "orcamento_esgotado",
+      "5.0": "orcamento_esgotado"
+    },
+    "paginas_base_por_nivel": {
+      "0.5": 1,
+      "1.0": 2,
+      "1.5": 2,
+      "2.0": 8,
+      "2.5": 4,
+      "3.0": 10,
+      "3.5": 1,
+      "4.0": 4,
+      "4.5": 3,
+      "5.0": 8
+    },
+    "paginas_extensao_por_nivel": {
+      "0.5": 0,
+      "1.0": 0,
+      "1.5": 0,
+      "2.0": 8,
+      "2.5": 0,
+      "3.0": 0,
+      "3.5": 0,
+      "4.0": 0,
+      "4.5": 0,
+      "5.0": 0
+    },
+    "extensao_por_bucket": {
+      "negativas": {
+        "paginas_base": 13,
+        "paginas_extensao": 8,
+        "extras_por_nivel": {
+          "2.0": 8
+        },
+        "motivo_parada": "teto_extensao",
+        "n_validas_pos_base": 44,
+        "n_validas_pos_extensao": 44,
+        "meta": 50
+      },
+      "medianas": {
+        "paginas_base": 14,
+        "paginas_extensao": 0,
+        "extras_por_nivel": {},
+        "motivo_parada": "meta_atingida",
+        "n_validas_pos_base": 51,
+        "n_validas_pos_extensao": 51,
+        "meta": 50
+      },
+      "positivas": {
+        "paginas_base": 16,
+        "paginas_extensao": 0,
+        "extras_por_nivel": {},
+        "motivo_parada": "meta_atingida",
+        "n_validas_pos_base": 62,
+        "n_validas_pos_extensao": 62,
+        "meta": 50
+      }
+    },
+    "profundidade_sondagem": {
+      "nivel_sondado": 5.0,
+      "profundidade": 256,
+      "exata": false,
+      "requisicoes": 4,
+      "motivo": "teto_plataforma"
+    },
+    "profundidade_estimada_por_nivel": {
+      "0.5": 1,
+      "1.0": 1,
+      "1.5": 1,
+      "2.0": 4,
+      "2.5": 3,
+      "3.0": 21,
+      "3.5": 24,
+      "4.0": 114,
+      "4.5": 89,
+      "5.0": 256
+    },
+    "janela_temporal": {
+      "total": {
+        "n": 860,
+        "min": "2012-01-04",
+        "max": "2026-08-21",
+        "p5": "2019-06-05",
+        "p50": "2026-08-05",
+        "p95": "2026-08-18"
+      },
+      "por_bucket": {
+        "negativas": {
+          "n": 269,
+          "min": "2012-03-14",
+          "max": "2026-08-07",
+          "p5": "2012-10-20",
+          "p50": "2026-07-28",
+          "p95": "2026-08-06"
+        },
+        "medianas": {
+          "n": 231,
+          "min": "2012-01-04",
+          "max": "2026-08-08",
+          "p5": "2025-11-15",
+          "p50": "2026-08-05",
+          "p95": "2026-08-07"
+        },
+        "positivas": {
+          "n": 360,
+          "min": "2019-06-05",
+          "max": "2026-08-21",
+          "p5": "2025-03-15",
+          "p50": "2026-08-07",
+          "p95": "2026-08-20"
+        }
+      }
+    },
+    "dias_por_100_paginas": {
+      "n_paginas": 21,
+      "pagina_min": 1,
+      "pagina_max": 128,
+      "dias": -11,
+      "dias_por_100_paginas": -8.661417322834646,
+      "paginas_para_1_ano": null
+    },
+    "ano_lancamento": 2019,
+    "ano_fonte": "slug",
+    "n_reviews_bruto": 860
+  },
+  "origem_paginas": {
+    "_histograma/parasite-2019.html": "cache",
+    "parasite-2019/pages/by_added/rated_5_page_4.html": "cache",
+    "parasite-2019/pages/by_added/rated_5_page_16.html": "cache",
+    "parasite-2019/pages/by_added/rated_5_page_64.html": "cache",
+    "parasite-2019/pages/by_added/rated_5_page_256.html": "network",
+    "parasite-2019/pages/by_added/rated_0_5_page_1.html": "cache",
+    "parasite-2019/pages/by_added/rated_1_page_1.html": "cache",
+    "parasite-2019/pages/by_added/rated_1_page_2.html": "cache",
+    "parasite-2019/pages/by_added/rated_1_5_page_1.html": "cache",
+    "parasite-2019/pages/by_added/rated_1_5_page_2.html": "cache",
+    "parasite-2019/pages/by_added/rated_2_page_1.html": "cache",
+    "parasite-2019/pages/by_added/rated_2_page_2.html": "cache",
+    "parasite-2019/pages/by_added/rated_2_page_3.html": "cache",
+    "parasite-2019/pages/by_added/rated_2_page_4.html": "cache",
+    "parasite-2019/pages/by_added/rated_2_page_5.html": "cache",
+    "parasite-2019/pages/by_added/rated_2_page_6.html": "cache",
+    "parasite-2019/pages/by_added/rated_2_page_7.html": "cache",
+    "parasite-2019/pages/by_added/rated_2_page_8.html": "cache",
+    "parasite-2019/fulltext/viewing_1428459139.html": "cache",
+    "parasite-2019/pages/by_added/rated_2_5_page_1.html": "cache",
+    "parasite-2019/pages/by_added/rated_2_5_page_2.html": "cache",
+    "parasite-2019/pages/by_added/rated_2_5_page_3.html": "cache",
+    "parasite-2019/pages/by_added/rated_2_5_page_4.html": "cache",
+    "parasite-2019/pages/by_added/rated_3_page_1.html": "cache",
+    "parasite-2019/pages/by_added/rated_3_page_2.html": "cache",
+    "parasite-2019/pages/by_added/rated_3_page_3.html": "cache",
+    "parasite-2019/pages/by_added/rated_3_page_4.html": "cache",
+    "parasite-2019/pages/by_added/rated_3_page_5.html": "cache",
+    "parasite-2019/pages/by_added/rated_3_page_6.html": "cache",
+    "parasite-2019/pages/by_added/rated_3_page_7.html": "cache",
+    "parasite-2019/pages/by_added/rated_3_page_8.html": "cache",
+    "parasite-2019/pages/by_added/rated_3_page_9.html": "cache",
+    "parasite-2019/pages/by_added/rated_3_page_10.html": "cache",
+    "parasite-2019/fulltext/viewing_1435504749.html": "cache",
+    "parasite-2019/fulltext/viewing_1435271954.html": "cache",
+    "parasite-2019/fulltext/viewing_1432905392.html": "cache",
+    "parasite-2019/fulltext/viewing_1432903946.html": "cache",
+    "parasite-2019/pages/by_added/rated_3_5_page_1.html": "cache",
+    "parasite-2019/fulltext/viewing_1438495190.html": "cache",
+    "parasite-2019/pages/by_added/rated_4_page_1.html": "cache",
+    "parasite-2019/pages/by_added/rated_4_page_2.html": "cache",
+    "parasite-2019/pages/by_added/rated_4_page_3.html": "cache",
+    "parasite-2019/pages/by_added/rated_4_page_28.html": "network",
+    "parasite-2019/fulltext/viewing_1438353592.html": "cache",
+    "parasite-2019/fulltext/viewing_1460189293.html": "network",
+    "parasite-2019/pages/by_added/rated_4_5_page_1.html": "cache",
+    "parasite-2019/pages/by_added/rated_4_5_page_2.html": "cache",
+    "parasite-2019/pages/by_added/rated_4_5_page_22.html": "network",
+    "parasite-2019/fulltext/viewing_1438527216.html": "cache",
+    "parasite-2019/pages/by_added/rated_5_page_1.html": "cache",
+    "parasite-2019/pages/by_added/rated_5_page_2.html": "cache",
+    "parasite-2019/pages/by_added/rated_5_page_3.html": "cache",
+    "parasite-2019/pages/by_added/rated_5_page_5.html": "cache",
+    "parasite-2019/pages/by_added/rated_5_page_6.html": "cache",
+    "parasite-2019/pages/by_added/rated_5_page_128.html": "network",
+    "parasite-2019/fulltext/viewing_1438366241.html": "cache",
+    "parasite-2019/fulltext/viewing_1460446415.html": "network",
+    "parasite-2019/pages/by_added/rated_2_page_9.html": "cache",
+    "parasite-2019/pages/by_added/rated_2_page_10.html": "cache",
+    "parasite-2019/fulltext/viewing_1420298773.html": "cache",
+    "parasite-2019/pages/by_added/rated_2_page_11.html": "cache",
+    "parasite-2019/pages/by_added/rated_2_page_12.html": "cache",
+    "parasite-2019/pages/by_added/rated_2_page_13.html": "cache",
+    "parasite-2019/pages/by_added/rated_2_page_14.html": "cache",
+    "parasite-2019/pages/by_added/rated_2_page_15.html": "cache",
+    "parasite-2019/fulltext/viewing_1413844107.html": "cache",
+    "parasite-2019/pages/by_added/rated_2_page_16.html": "cache"
+  },
+  "buckets": [
+    {
+      "bucket": "negativas",
+      "alvo": 40,
+      "modo": "completo",
+      "estado_piso": "completa",
+      "n_validas": 40,
+      "share_real": 1,
+      "composicao_alvo": {
+        "0.5": 3,
+        "1.0": 8,
+        "1.5": 4,
+        "2.0": 25
+      },
+      "composicao_atingida": {
+        "0.5": 5,
+        "1.0": 7,
+        "1.5": 3,
+        "2.0": 25
+      },
+      "cascata_por_degrau": {
+        "50": 5,
+        "150": 35
+      },
+      "deficit_redistribuido": 2,
+      "distribuicao_pagina_origem": {
+        "n": 40,
+        "min": 1,
+        "max": 17,
+        "p5": 1,
+        "p50": 6,
+        "p95": 16,
+        "fracao_profunda": 0.475
+      },
+      "janela_amostra": {
+        "n": 40,
+        "min": "2020-07-13",
+        "max": "2026-08-07",
+        "p5": "2026-06-07",
+        "p50": "2026-07-29",
+        "p95": "2026-08-06"
+      },
+      "niveis": [
+        {
+          "nivel": 0.5,
+          "n_validas": 5,
+          "n_alvo": 3,
+          "n_brutas": 12,
+          "filtro_aplicado": 50,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 0,
+          "n_descartadas_curtas": 5,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 0,
+          "motivos_descarte": {
+            "truncada_sem_texto": 0,
+            "spoiler": 0,
+            "abaixo_min_chars": 5,
+            "excedente_cota": 2,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 1
+        },
+        {
+          "nivel": 1.0,
+          "n_validas": 7,
+          "n_alvo": 8,
+          "n_brutas": 59,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 0,
+          "n_descartadas_curtas": 52,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 0,
+          "motivos_descarte": {
+            "truncada_sem_texto": 0,
+            "spoiler": 0,
+            "abaixo_min_chars": 52,
+            "excedente_cota": 0,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 2
+        },
+        {
+          "nivel": 1.5,
+          "n_validas": 3,
+          "n_alvo": 4,
+          "n_brutas": 24,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 0,
+          "n_descartadas_curtas": 21,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 0,
+          "motivos_descarte": {
+            "truncada_sem_texto": 0,
+            "spoiler": 0,
+            "abaixo_min_chars": 21,
+            "excedente_cota": 0,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 2
+        },
+        {
+          "nivel": 2.0,
+          "n_validas": 25,
+          "n_alvo": 25,
+          "n_brutas": 174,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 5,
+          "n_descartadas_curtas": 140,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 2,
+          "motivos_descarte": {
+            "truncada_sem_texto": 2,
+            "spoiler": 5,
+            "abaixo_min_chars": 140,
+            "excedente_cota": 2,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 16
+        }
+      ],
+      "temas": [
+        {
+          "tema": "Ritmo lento e arrastado",
+          "mencoes_aproximadas": 12,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "O filme se arrasta de tal forma que chega a dar sono, e muitas cenas parecem desnecessárias, tornando a experiência entediante.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Roteiro sem sentido ou exagerado",
+          "mencoes_aproximadas": 10,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "A trama começa interessante, mas depois se perde em reviravoltas absurdas e situações inverossímeis, deixando a impressão de que o roteirista perdeu o controle.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Expectativa não correspondida",
+          "mencoes_aproximadas": 8,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "Cheguei com uma expectativa enorme por causa do Oscar e do hype, mas o filme não me entregou nada disso, sendo bem decepcionante.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Crítica social superficial ou mal desenvolvida",
+          "mencoes_aproximadas": 7,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "A mensagem sobre desigualdade social é interessante, mas é apresentada de forma tão óbvia e forçada que acaba perdendo a profundidade.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Personagens desagradáveis ou sem conexão",
+          "mencoes_aproximadas": 6,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "Não consegui me importar com nenhum dos personagens, todos me causaram estranheza ou repulsa, e a história não me envolveu.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Atuações ruins ou pouco convincentes",
+          "mencoes_aproximadas": 5,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "Achei as atuações forçadas e sem naturalidade, o que contribuiu para eu não acreditar na história.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        }
+      ],
+      "observacao_geral": "As reviews negativas destacam principalmente o ritmo lento, o excesso de reviravoltas inverossímeis e a sensação de que o filme não correspondeu à enorme expectativa gerada pelo Oscar e pelo hype. Muitos também criticam a abordagem da crítica social, considerando-a superficial ou mal executada, além de mencionarem personagens pouco cativantes e atuações que não convenceram.",
+      "idioma_invalido": false,
+      "escopo_suspeito": false
+    },
+    {
+      "bucket": "medianas",
+      "alvo": 40,
+      "modo": "completo",
+      "estado_piso": "completa",
+      "n_validas": 40,
+      "share_real": 5,
+      "composicao_alvo": {
+        "2.5": 5,
+        "3.0": 35
+      },
+      "composicao_atingida": {
+        "2.5": 5,
+        "3.0": 35
+      },
+      "cascata_por_degrau": {
+        "150": 40
+      },
+      "deficit_redistribuido": 0,
+      "distribuicao_pagina_origem": {
+        "n": 40,
+        "min": 1,
+        "max": 17,
+        "p5": 1,
+        "p50": 6,
+        "p95": 16,
+        "fracao_profunda": 0.35
+      },
+      "janela_amostra": {
+        "n": 40,
+        "min": "2019-11-14",
+        "max": "2026-08-07",
+        "p5": "2026-04-02",
+        "p50": "2026-08-05",
+        "p95": "2026-08-07"
+      },
+      "niveis": [
+        {
+          "nivel": 2.5,
+          "n_validas": 5,
+          "n_alvo": 5,
+          "n_brutas": 72,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 2,
+          "n_descartadas_curtas": 57,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 1,
+          "motivos_descarte": {
+            "truncada_sem_texto": 1,
+            "spoiler": 2,
+            "abaixo_min_chars": 57,
+            "excedente_cota": 7,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 4
+        },
+        {
+          "nivel": 3.0,
+          "n_validas": 35,
+          "n_alvo": 35,
+          "n_brutas": 159,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 2,
+          "n_descartadas_curtas": 117,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 1,
+          "motivos_descarte": {
+            "truncada_sem_texto": 1,
+            "spoiler": 2,
+            "abaixo_min_chars": 117,
+            "excedente_cota": 4,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 10
+        }
+      ],
+      "temas": [
+        {
+          "tema": "Expectativas altas e hype",
+          "mencoes_aproximadas": 15,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "Muitas pessoas disseram que o filme foi superestimado, pois a fama criou expectativas que não se confirmaram, resultando em uma experiência apenas boa, não marcante.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Personagens superficiais ou caricatos",
+          "mencoes_aproximadas": 9,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "As figuras são mais símbolos de suas classes do que pessoas complexas, com profundidade psicológica insuficiente, o que enfraquece a conexão emocional.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Furos de roteiro e falta de realismo",
+          "mencoes_aproximadas": 8,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "Algumas situações foram consideradas ilógicas ou forçadas, com decisões questionáveis e reviravoltas que pareceram pouco críveis, prejudicando a imersão.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Simbolismo e direção de arte elogiados",
+          "mencoes_aproximadas": 7,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "A fotografia, os cenários e a direção de arte foram bastante elogiados, especialmente o uso de escadas e alturas para representar a hierarquia social.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Final decepcionante ou estranho",
+          "mencoes_aproximadas": 6,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "O desfecho foi considerado bizarro, anticlimático ou insatisfatório, com escolhas que não agradaram ou que pareceram pouco coerentes com o resto.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Ritmo irregular (primeira parte lenta)",
+          "mencoes_aproximadas": 6,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "O início foi descrito como lento e monótono, mas o filme ganha intensidade no meio, embora haja altos e baixos que quebram o fluxo.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        }
+      ],
+      "observacao_geral": "As reviews medianas reconhecem a qualidade técnica e a crítica social do filme, mas apontam que o hype elevado gerou expectativas que não foram totalmente atendidas. Predominam críticas à superficialidade dos personagens, a alguns furos de roteiro e a um final considerado decepcionante, embora a fotografia e o simbolismo sejam amplamente elogiados.",
+      "idioma_invalido": false,
+      "escopo_suspeito": false
+    },
+    {
+      "bucket": "positivas",
+      "alvo": 40,
+      "modo": "completo",
+      "estado_piso": "completa",
+      "n_validas": 40,
+      "share_real": 94,
+      "composicao_alvo": {
+        "3.5": 2,
+        "4.0": 10,
+        "4.5": 7,
+        "5.0": 21
+      },
+      "composicao_atingida": {
+        "3.5": 2,
+        "4.0": 10,
+        "4.5": 7,
+        "5.0": 21
+      },
+      "cascata_por_degrau": {
+        "150": 40
+      },
+      "deficit_redistribuido": 0,
+      "distribuicao_pagina_origem": {
+        "n": 40,
+        "min": 1,
+        "max": 11,
+        "p5": 1,
+        "p50": 4,
+        "p95": 10,
+        "fracao_profunda": 0.55
+      },
+      "janela_amostra": {
+        "n": 40,
+        "min": "2022-03-16",
+        "max": "2026-08-08",
+        "p5": "2025-03-15",
+        "p50": "2026-08-07",
+        "p95": "2026-08-08"
+      },
+      "niveis": [
+        {
+          "nivel": 3.5,
+          "n_validas": 2,
+          "n_alvo": 2,
+          "n_brutas": 12,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 0,
+          "n_descartadas_curtas": 10,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 0,
+          "motivos_descarte": {
+            "truncada_sem_texto": 0,
+            "spoiler": 0,
+            "abaixo_min_chars": 10,
+            "excedente_cota": 0,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 1
+        },
+        {
+          "nivel": 4.0,
+          "n_validas": 10,
+          "n_alvo": 10,
+          "n_brutas": 96,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 4,
+          "n_descartadas_curtas": 76,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 1,
+          "motivos_descarte": {
+            "truncada_sem_texto": 1,
+            "spoiler": 4,
+            "abaixo_min_chars": 76,
+            "excedente_cota": 5,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 4
+        },
+        {
+          "nivel": 4.5,
+          "n_validas": 7,
+          "n_alvo": 7,
+          "n_brutas": 60,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 4,
+          "n_descartadas_curtas": 43,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 0,
+          "motivos_descarte": {
+            "truncada_sem_texto": 0,
+            "spoiler": 4,
+            "abaixo_min_chars": 43,
+            "excedente_cota": 6,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 3
+        },
+        {
+          "nivel": 5.0,
+          "n_validas": 21,
+          "n_alvo": 21,
+          "n_brutas": 192,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 4,
+          "n_descartadas_curtas": 153,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 3,
+          "motivos_descarte": {
+            "truncada_sem_texto": 3,
+            "spoiler": 4,
+            "abaixo_min_chars": 153,
+            "excedente_cota": 11,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 8
+        }
+      ],
+      "temas": [
+        {
+          "tema": "Crítica social e desigualdade de classes",
+          "mencoes_aproximadas": 35,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "Este grupo destaca como a obra expõe o abismo entre classes, mostrando que um mesmo acontecimento pode ser visto como bênção ou desgraça dependendo da posição social, e que os mais pobres são sempre os mais prejudicados.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Roteiro e reviravoltas",
+          "mencoes_aproximadas": 18,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "Muitos elogiam a construção narrativa e as reviravoltas inesperadas, que transformam a história de forma surpreendente e mantêm a tensão até o fim.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Direção e simbolismo visual",
+          "mencoes_aproximadas": 15,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "O grupo ressalta a maestria do diretor em usar a linguagem visual para reforçar os temas, como as escadas e os espaços verticais que simbolizam a hierarquia social, além das composições repletas de metáforas.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Atuações do elenco",
+          "mencoes_aproximadas": 10,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "As atuações são amplamente elogiadas, com destaque para a capacidade dos atores de transmitirem emoções complexas apenas com o olhar.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Mudança de tom e gênero",
+          "mencoes_aproximadas": 9,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "Muitos comentam sobre a brusca transição do humor para o suspense e terror, que pode ser chocante, mas contribui para a força do filme.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Fotografia e direção de arte",
+          "mencoes_aproximadas": 8,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "O grupo admira a fotografia e o design de produção, especialmente o contraste entre a casa moderna e luminosa dos ricos e o porão escuro e apertado dos pobres.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        }
+      ],
+      "observacao_geral": "As reviews positivas celebram Parasita como uma obra-prima, destacando sua crítica social incisiva, a direção genial e as atuações marcantes, embora alguns apontem ressalvas quanto à mudança brusca de tom e a plausibilidade de certos eventos.",
+      "idioma_invalido": false,
+      "escopo_suspeito": false
+    }
+  ],
+  "eixos": {
+    "taxonomia_id": "ebab2667de74",
+    "margem_lift_pp": 20,
+    "contraste": "valorativo",
+    "linhas": [
+      {
+        "eixo": "ritmo",
+        "por_bucket": {
+          "negativas": {
+            "mencoes": 13,
+            "de_n": 40,
+            "freq_pct": 32.5,
+            "lift_pp": 6.2,
+            "tema": "Ritmo lento e arrastado",
+            "exemplo_parafraseado": "O filme se arrasta de tal forma que chega a dar sono, e muitas cenas parecem desnecessárias, tornando a experiência entediante.",
+            "temas_no_mesmo_eixo": []
+          },
+          "medianas": {
+            "mencoes": 7,
+            "de_n": 36,
+            "freq_pct": 19.4,
+            "lift_pp": -13.1,
+            "tema": "Ritmo irregular (primeira parte lenta)",
+            "exemplo_parafraseado": "O início foi descrito como lento e monótono, mas o filme ganha intensidade no meio, embora haja altos e baixos que quebram o fluxo.",
+            "temas_no_mesmo_eixo": []
+          },
+          "positivas": {
+            "mencoes": 10,
+            "de_n": 38,
+            "freq_pct": 26.3,
+            "lift_pp": -6.2,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          }
+        },
+        "bullet_de": {
+          "negativas": null,
+          "medianas": null,
+          "positivas": null
+        }
+      },
+      {
+        "eixo": "atuacao",
+        "por_bucket": {
+          "negativas": {
+            "mencoes": 4,
+            "de_n": 40,
+            "freq_pct": 10.0,
+            "lift_pp": -5.8,
+            "tema": "Atuações ruins ou pouco convincentes",
+            "exemplo_parafraseado": "Achei as atuações forçadas e sem naturalidade, o que contribuiu para eu não acreditar na história.",
+            "temas_no_mesmo_eixo": []
+          },
+          "medianas": {
+            "mencoes": 4,
+            "de_n": 36,
+            "freq_pct": 11.1,
+            "lift_pp": -4.7,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "positivas": {
+            "mencoes": 6,
+            "de_n": 38,
+            "freq_pct": 15.8,
+            "lift_pp": 4.7,
+            "tema": "Atuações do elenco",
+            "exemplo_parafraseado": "As atuações são amplamente elogiadas, com destaque para a capacidade dos atores de transmitirem emoções complexas apenas com o olhar.",
+            "temas_no_mesmo_eixo": []
+          }
+        },
+        "bullet_de": {
+          "negativas": null,
+          "medianas": null,
+          "positivas": null
+        }
+      },
+      {
+        "eixo": "direcao_imagem",
+        "por_bucket": {
+          "negativas": {
+            "mencoes": 5,
+            "de_n": 40,
+            "freq_pct": 12.5,
+            "lift_pp": -27.0,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "medianas": {
+            "mencoes": 10,
+            "de_n": 36,
+            "freq_pct": 27.8,
+            "lift_pp": -11.7,
+            "tema": "Simbolismo e direção de arte elogiados",
+            "exemplo_parafraseado": "A fotografia, os cenários e a direção de arte foram bastante elogiados, especialmente o uso de escadas e alturas para representar a hierarquia social.",
+            "temas_no_mesmo_eixo": []
+          },
+          "positivas": {
+            "mencoes": 15,
+            "de_n": 38,
+            "freq_pct": 39.5,
+            "lift_pp": 11.7,
+            "tema": "Direção e simbolismo visual",
+            "exemplo_parafraseado": "O grupo ressalta a maestria do diretor em usar a linguagem visual para reforçar os temas, como as escadas e os espaços verticais que simbolizam a hierarquia social, além das composições repletas de metáforas.",
+            "temas_no_mesmo_eixo": [
+              "Fotografia e direção de arte"
+            ]
+          }
+        },
+        "bullet_de": {
+          "negativas": null,
+          "medianas": null,
+          "positivas": null
+        }
+      },
+      {
+        "eixo": "roteiro_estrutura",
+        "por_bucket": {
+          "negativas": {
+            "mencoes": 18,
+            "de_n": 40,
+            "freq_pct": 45.0,
+            "lift_pp": -24.4,
+            "tema": "Roteiro sem sentido ou exagerado",
+            "exemplo_parafraseado": "A trama começa interessante, mas depois se perde em reviravoltas absurdas e situações inverossímeis, deixando a impressão de que o roteirista perdeu o controle.",
+            "temas_no_mesmo_eixo": [
+              "Personagens desagradáveis ou sem conexão"
+            ]
+          },
+          "medianas": {
+            "mencoes": 25,
+            "de_n": 36,
+            "freq_pct": 69.4,
+            "lift_pp": 1.0,
+            "tema": "Personagens superficiais ou caricatos",
+            "exemplo_parafraseado": "As figuras são mais símbolos de suas classes do que pessoas complexas, com profundidade psicológica insuficiente, o que enfraquece a conexão emocional.",
+            "temas_no_mesmo_eixo": [
+              "Furos de roteiro e falta de realismo",
+              "Final decepcionante ou estranho"
+            ]
+          },
+          "positivas": {
+            "mencoes": 26,
+            "de_n": 38,
+            "freq_pct": 68.4,
+            "lift_pp": -1.0,
+            "tema": "Roteiro e reviravoltas",
+            "exemplo_parafraseado": "Muitos elogiam a construção narrativa e as reviravoltas inesperadas, que transformam a história de forma surpreendente e mantêm a tensão até o fim.",
+            "temas_no_mesmo_eixo": []
+          }
+        },
+        "bullet_de": {
+          "negativas": "frequencia",
+          "medianas": "frequencia",
+          "positivas": "frequencia"
+        }
+      },
+      {
+        "eixo": "som_trilha",
+        "por_bucket": {
+          "negativas": {
+            "mencoes": 0,
+            "de_n": 40,
+            "freq_pct": 0.0,
+            "lift_pp": -5.6,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "medianas": {
+            "mencoes": 2,
+            "de_n": 36,
+            "freq_pct": 5.6,
+            "lift_pp": 2.9,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "positivas": {
+            "mencoes": 1,
+            "de_n": 38,
+            "freq_pct": 2.6,
+            "lift_pp": -2.9,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          }
+        },
+        "bullet_de": {
+          "negativas": null,
+          "medianas": null,
+          "positivas": null
+        }
+      },
+      {
+        "eixo": "tom_atmosfera",
+        "por_bucket": {
+          "negativas": {
+            "mencoes": 4,
+            "de_n": 40,
+            "freq_pct": 10.0,
+            "lift_pp": -17.8,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "medianas": {
+            "mencoes": 10,
+            "de_n": 36,
+            "freq_pct": 27.8,
+            "lift_pp": 6.7,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "positivas": {
+            "mencoes": 8,
+            "de_n": 38,
+            "freq_pct": 21.1,
+            "lift_pp": -6.7,
+            "tema": "Mudança de tom e gênero",
+            "exemplo_parafraseado": "Muitos comentam sobre a brusca transição do humor para o suspense e terror, que pode ser chocante, mas contribui para a força do filme.",
+            "temas_no_mesmo_eixo": []
+          }
+        },
+        "bullet_de": {
+          "negativas": null,
+          "medianas": null,
+          "positivas": null
+        }
+      },
+      {
+        "eixo": "impacto_emocional",
+        "por_bucket": {
+          "negativas": {
+            "mencoes": 16,
+            "de_n": 40,
+            "freq_pct": 40.0,
+            "lift_pp": 8.4,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "medianas": {
+            "mencoes": 10,
+            "de_n": 36,
+            "freq_pct": 27.8,
+            "lift_pp": -12.2,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "positivas": {
+            "mencoes": 12,
+            "de_n": 38,
+            "freq_pct": 31.6,
+            "lift_pp": -8.4,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          }
+        },
+        "bullet_de": {
+          "negativas": "frequencia",
+          "medianas": null,
+          "positivas": null
+        }
+      },
+      {
+        "eixo": "comparacoes",
+        "por_bucket": {
+          "negativas": {
+            "mencoes": 2,
+            "de_n": 40,
+            "freq_pct": 5.0,
+            "lift_pp": -21.3,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "medianas": {
+            "mencoes": 5,
+            "de_n": 36,
+            "freq_pct": 13.9,
+            "lift_pp": -12.4,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "positivas": {
+            "mencoes": 10,
+            "de_n": 38,
+            "freq_pct": 26.3,
+            "lift_pp": 12.4,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          }
+        },
+        "bullet_de": {
+          "negativas": null,
+          "medianas": null,
+          "positivas": null
+        }
+      },
+      {
+        "eixo": "expectativa",
+        "por_bucket": {
+          "negativas": {
+            "mencoes": 12,
+            "de_n": 40,
+            "freq_pct": 30.0,
+            "lift_pp": -0.6,
+            "tema": "Expectativa não correspondida",
+            "exemplo_parafraseado": "Cheguei com uma expectativa enorme por causa do Oscar e do hype, mas o filme não me entregou nada disso, sendo bem decepcionante.",
+            "temas_no_mesmo_eixo": []
+          },
+          "medianas": {
+            "mencoes": 11,
+            "de_n": 36,
+            "freq_pct": 30.6,
+            "lift_pp": 0.6,
+            "tema": "Expectativas altas e hype",
+            "exemplo_parafraseado": "Muitas pessoas disseram que o filme foi superestimado, pois a fama criou expectativas que não se confirmaram, resultando em uma experiência apenas boa, não marcante.",
+            "temas_no_mesmo_eixo": []
+          },
+          "positivas": {
+            "mencoes": 6,
+            "de_n": 38,
+            "freq_pct": 15.8,
+            "lift_pp": -14.8,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          }
+        },
+        "bullet_de": {
+          "negativas": null,
+          "medianas": null,
+          "positivas": null
+        }
+      },
+      {
+        "eixo": "critica_social",
+        "por_bucket": {
+          "negativas": {
+            "mencoes": 13,
+            "de_n": 40,
+            "freq_pct": 32.5,
+            "lift_pp": -22.8,
+            "tema": "Crítica social superficial ou mal desenvolvida",
+            "exemplo_parafraseado": "A mensagem sobre desigualdade social é interessante, mas é apresentada de forma tão óbvia e forçada que acaba perdendo a profundidade.",
+            "temas_no_mesmo_eixo": []
+          },
+          "medianas": {
+            "mencoes": 15,
+            "de_n": 36,
+            "freq_pct": 41.7,
+            "lift_pp": -13.6,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "positivas": {
+            "mencoes": 21,
+            "de_n": 38,
+            "freq_pct": 55.3,
+            "lift_pp": 13.6,
+            "tema": "Crítica social e desigualdade de classes",
+            "exemplo_parafraseado": "Este grupo destaca como a obra expõe o abismo entre classes, mostrando que um mesmo acontecimento pode ser visto como bênção ou desgraça dependendo da posição social, e que os mais pobres são sempre os mais prejudicados.",
+            "temas_no_mesmo_eixo": []
+          }
+        },
+        "bullet_de": {
+          "negativas": null,
+          "medianas": "frequencia",
+          "positivas": "frequencia"
+        }
+      }
+    ],
+    "fonte_classificacao": {
+      "arquivo": "resultado/votacao-3/consenso.jsonl",
+      "criterio": "votacao_3_consenso_2_de_3",
+      "por_bucket": {
+        "negativas": {
+          "n_classificadas": 40,
+          "n_analisadas": 40,
+          "sobreposicao_com_analisadas": 40
+        },
+        "medianas": {
+          "n_classificadas": 36,
+          "n_analisadas": 40,
+          "sobreposicao_com_analisadas": 36
+        },
+        "positivas": {
+          "n_classificadas": 38,
+          "n_analisadas": 40,
+          "sobreposicao_com_analisadas": 38
+        }
+      }
+    },
+    "rotulagem": {
+      "n_chamadas": 3,
+      "falharam": [],
+      "fora_da_taxonomia": {},
+      "houve_retentativa": []
+    },
+    "spec_version": "1.9.16",
+    "verificador": {
+      "aplicado": true,
+      "variante": "V2_alvo",
+      "passada": 1,
+      "eixo": "impacto_emocional",
+      "n_removidas_no_corpus": 1654
+    }
+  },
+  "narrativa": "Dirigido por Bong Joon-ho e lançado em 2019, o longa-metragem Parasita combina comédia, drama e suspense ao retratar o cotidiano de uma família desempregada que vive em condições precárias num porão apertado. Ao vislumbrarem uma oportunidade, eles elaboram um plano cuidadoso para se infiltrar gradualmente na rotina de um lar abastado, descobrindo que os segredos e mentiras cobram consequências severas.\n\nA experiência cinematográfica estrutura-se sobre uma cadência inicial cadenciada, apoiando-se em composições visuais repletas de simbolismos espaciais e em uma alternância tonal que articula humor, drama e tensão.\n\nNo que tange à recepção, os três grupos abordam essencialmente os mesmos elementos da produção, discordando apenas no veredito sobre a sua efetividade. Na grande maioria das notas (~94%), quase todos destacam o impacto da crítica social voltada à desigualdade de classes, enquanto muitos elogiam o roteiro e suas reviravoltas surpreendentes, e uma parcela expressiva exalta a direção pelo uso engenhoso do simbolismo visual. Em contrapartida, numa fração mínima das notas (~5%), para quem avalia dessa perspectiva intermediária, um número considerável afirma que a alta expectativa gerada reduziu o entusiasmo, com alguns apontando personagens superficiais ou caricatos e uma parte ressaltando furos de roteiro e falta de realismo. Por fim, numa fração ainda menor das notas (~1%), sob essa ótica negativa, vários criticam o ritmo excessivamente lento e arrastado, ao passo que uma fatia menor classifica a trama como exagerada ou sem sentido e parte deles manifesta frustração diante da expectativa não correspondida.",
+  "verificacao_narrativa": {
+    "quantificador_fora_de_faixa": [],
+    "quantificador_repetido": [],
+    "paragrafos": {
+      "n_paragrafos": 3,
+      "minimo": 3,
+      "insuficientes": false,
+      "longos": []
+    },
+    "n_paragrafos": 3,
+    "paragrafos_insuficientes": false,
+    "paragrafos_longos": [],
+    "grupos_sem_paragrafo_proprio": [
+      "medianas",
+      "negativas"
+    ],
+    "movimento1_e_movimento2_no_mesmo_paragrafo": false,
+    "formato_invalido": false,
+    "numeros_inventados": [],
+    "rotulos_faltando": [],
+    "ordem_incorreta": false,
+    "vocabulario_peso": false,
+    "resenha_speak": [],
+    "n_resenha_speak": 0,
+    "n_flags": 1
+  },
+  "narrativa_selecao": {
+    "provider": "gemini",
+    "modelo": "gemini-3.7-flash",
+    "n_candidatos": 3,
+    "n_chamadas": 4,
+    "indice_escolhido": 1,
+    "motivo": "menor_severidade",
+    "criterio_decisivo": "empate",
+    "candidatos": [
+      {
+        "indice": 0,
+        "n_flags": 2,
+        "cliches": 0,
+        "repeticao_max": 1,
+        "ritmo": 10,
+        "cobertura": 0.889,
+        "eliminado": true
+      },
+      {
+        "indice": 1,
+        "n_flags": 1,
+        "cliches": 0,
+        "repeticao_max": 1,
+        "ritmo": 8,
+        "cobertura": 1.0,
+        "eliminado": true
+      },
+      {
+        "indice": 2,
+        "n_flags": 2,
+        "cliches": 0,
+        "repeticao_max": 1,
+        "ritmo": 12,
+        "cobertura": 1.0,
+        "eliminado": true
+      }
+    ],
+    "retry": {
+      "n_frases_infratoras": 0,
+      "motivos": [],
+      "n_flags_depois": 1,
+      "aplicado": false
+    },
+    "uso": {
+      "prompt_tokens": 11915,
+      "completion_tokens": 1535,
+      "cache_hit_tokens": 0,
+      "cache_miss_tokens": 11915
+    },
+    "latencia_s": 30.77
+  }
+}

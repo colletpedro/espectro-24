@@ -1,7 +1,7 @@
 {
   "slug": "the-substance",
-  "coletado_em": "2026-08-08T08:03:47.166281+00:00",
-  "versao_coletor": "1.9.0",
+  "coletado_em": "2026-08-23T01:17:09.086793+00:00",
+  "versao_coletor": "1.9.6",
   "ordenacao_usada": "by/added",
   "histograma_bruto": {
     "0.5": 27451,
@@ -65,15 +65,15 @@
   },
   "contagem_estimada_valida_por_nivel": {
     "0.5": 9,
-    "1.0": 3,
+    "1.0": 6,
     "1.5": 5,
-    "2.0": 27,
-    "2.5": 11,
-    "3.0": 20,
-    "3.5": 16,
+    "2.0": 29,
+    "2.5": 14,
+    "3.0": 22,
+    "3.5": 14,
     "4.0": 17,
-    "4.5": 9,
-    "5.0": 10
+    "4.5": 5,
+    "5.0": 9
   },
   "motivo_parada_por_nivel": {
     "0.5": "orcamento_esgotado",
@@ -87,49 +87,121 @@
     "4.5": "orcamento_esgotado",
     "5.0": "orcamento_esgotado"
   },
+  "paginas_base_por_nivel": {
+    "0.5": 2,
+    "1.0": 3,
+    "1.5": 2,
+    "2.0": 9,
+    "2.5": 6,
+    "3.0": 10,
+    "3.5": 3,
+    "4.0": 6,
+    "4.5": 3,
+    "5.0": 4
+  },
+  "paginas_extensao_por_nivel": {
+    "0.5": 0,
+    "1.0": 0,
+    "1.5": 0,
+    "2.0": 0,
+    "2.5": 0,
+    "3.0": 0,
+    "3.5": 0,
+    "4.0": 0,
+    "4.5": 0,
+    "5.0": 0
+  },
+  "extensao_por_bucket": {
+    "negativas": {
+      "paginas_base": 16,
+      "paginas_extensao": 0,
+      "extras_por_nivel": {},
+      "motivo_parada": "meta_atingida",
+      "n_validas_pos_base": 81,
+      "n_validas_pos_extensao": 81,
+      "meta": 50
+    },
+    "medianas": {
+      "paginas_base": 16,
+      "paginas_extensao": 0,
+      "extras_por_nivel": {},
+      "motivo_parada": "meta_atingida",
+      "n_validas_pos_base": 70,
+      "n_validas_pos_extensao": 70,
+      "meta": 50
+    },
+    "positivas": {
+      "paginas_base": 16,
+      "paginas_extensao": 0,
+      "extras_por_nivel": {},
+      "motivo_parada": "meta_atingida",
+      "n_validas_pos_base": 90,
+      "n_validas_pos_extensao": 90,
+      "meta": 50
+    }
+  },
+  "profundidade_sondagem": {
+    "nivel_sondado": 4.0,
+    "profundidade": 256,
+    "exata": false,
+    "requisicoes": 4,
+    "motivo": "teto_plataforma"
+  },
+  "profundidade_estimada_por_nivel": {
+    "0.5": 6,
+    "1.0": 12,
+    "1.5": 9,
+    "2.0": 35,
+    "2.5": 36,
+    "3.0": 120,
+    "3.5": 129,
+    "4.0": 256,
+    "4.5": 106,
+    "5.0": 147
+  },
   "janela_temporal": {
     "total": {
-      "n": 791,
-      "min": "2024-05-12",
-      "max": "2026-08-08",
+      "n": 923,
+      "min": "2024-04-17",
+      "max": "2026-08-20",
       "p5": "2024-05-19",
-      "p50": "2026-08-06",
-      "p95": "2026-08-08"
+      "p50": "2026-08-07",
+      "p95": "2026-08-18"
     },
     "por_bucket": {
       "negativas": {
-        "n": 264,
+        "n": 288,
         "min": "2024-05-19",
-        "max": "2026-08-08",
+        "max": "2026-08-20",
         "p5": "2024-05-20",
         "p50": "2026-08-06",
-        "p95": "2026-08-07"
+        "p95": "2026-08-16"
       },
       "medianas": {
-        "n": 263,
+        "n": 311,
         "min": "2024-05-19",
-        "max": "2026-08-08",
+        "max": "2026-08-19",
         "p5": "2024-05-20",
-        "p50": "2026-08-06",
-        "p95": "2026-08-08"
+        "p50": "2026-08-07",
+        "p95": "2026-08-18"
       },
       "positivas": {
-        "n": 264,
-        "min": "2024-05-12",
-        "max": "2026-08-08",
+        "n": 324,
+        "min": "2024-04-17",
+        "max": "2026-08-19",
         "p5": "2024-05-19",
         "p50": "2026-08-07",
-        "p95": "2026-08-08"
+        "p95": "2026-08-17"
       }
     }
   },
   "dias_por_100_paginas": {
-    "n_paginas": 12,
+    "n_paginas": 20,
     "pagina_min": 1,
-    "pagina_max": 12,
-    "dias": 1,
-    "dias_por_100_paginas": 9.090909090909092,
-    "paginas_para_1_ano": 4015
+    "pagina_max": 128,
+    "dias": -5,
+    "dias_por_100_paginas": -3.937007874015748,
+    "paginas_para_1_ano": null
   },
   "dias_por_100_paginas_por_nivel": {
     "0.5": {
@@ -141,7 +213,7 @@
       "paginas_para_1_ano": 365
     },
     "1.0": {
-      "n_paginas": 3,
+      "n_paginas": 4,
       "pagina_min": 1,
       "pagina_max": 4,
       "dias": 2,
@@ -157,129 +229,62 @@
       "paginas_para_1_ano": 365
     },
     "2.0": {
-      "n_paginas": 9,
-      "pagina_min": 1,
-      "pagina_max": 11,
-      "dias": 3,
-      "dias_por_100_paginas": 30.0,
-      "paginas_para_1_ano": 1217
-    },
-    "2.5": {
-      "n_paginas": 6,
-      "pagina_min": 1,
-      "pagina_max": 8,
-      "dias": 2,
-      "dias_por_100_paginas": 28.571428571428573,
-      "paginas_para_1_ano": 1278
-    },
-    "3.0": {
       "n_paginas": 10,
       "pagina_min": 1,
-      "pagina_max": 12,
-      "dias": 1,
-      "dias_por_100_paginas": 9.090909090909092,
-      "paginas_para_1_ano": 4015
+      "pagina_max": 18,
+      "dias": -8,
+      "dias_por_100_paginas": -47.05882352941177,
+      "paginas_para_1_ano": null
+    },
+    "2.5": {
+      "n_paginas": 8,
+      "pagina_min": 1,
+      "pagina_max": 18,
+      "dias": -9,
+      "dias_por_100_paginas": -52.94117647058823,
+      "paginas_para_1_ano": null
+    },
+    "3.0": {
+      "n_paginas": 12,
+      "pagina_min": 1,
+      "pagina_max": 60,
+      "dias": -7,
+      "dias_por_100_paginas": -11.864406779661017,
+      "paginas_para_1_ano": null
     },
     "3.5": {
-      "n_paginas": 3,
+      "n_paginas": 4,
       "pagina_min": 1,
-      "pagina_max": 4,
-      "dias": -1,
-      "dias_por_100_paginas": -33.333333333333336,
+      "pagina_max": 32,
+      "dias": -11,
+      "dias_por_100_paginas": -35.483870967741936,
       "paginas_para_1_ano": null
     },
     "4.0": {
-      "n_paginas": 6,
+      "n_paginas": 8,
       "pagina_min": 1,
-      "pagina_max": 8,
-      "dias": 1,
-      "dias_por_100_paginas": 14.285714285714286,
-      "paginas_para_1_ano": 2555
+      "pagina_max": 128,
+      "dias": -4,
+      "dias_por_100_paginas": -3.1496062992125986,
+      "paginas_para_1_ano": null
     },
     "4.5": {
-      "n_paginas": 3,
+      "n_paginas": 4,
       "pagina_min": 1,
-      "pagina_max": 4,
-      "dias": 0,
-      "dias_por_100_paginas": 0.0,
+      "pagina_max": 26,
+      "dias": -10,
+      "dias_por_100_paginas": -40.0,
       "paginas_para_1_ano": null
     },
     "5.0": {
-      "n_paginas": 4,
+      "n_paginas": 5,
       "pagina_min": 1,
-      "pagina_max": 5,
-      "dias": 0,
-      "dias_por_100_paginas": 0.0,
+      "pagina_max": 37,
+      "dias": -10,
+      "dias_por_100_paginas": -27.77777777777778,
       "paginas_para_1_ano": null
     }
   },
-  "passadas": [
-    {
-      "ordenacao": "by/added-earliest",
-      "coletado_em": "2026-08-09T22:52:15.174476+00:00",
-      "versao_coletor": "1.9.0",
-      "motivo": "dias_por_100_paginas=9.1 < 20",
-      "orcamento_paginas_por_bucket": 6,
-      "orcamento_paginas_por_nivel": {
-        "0.5": 1,
-        "1.0": 1,
-        "1.5": 1,
-        "2.0": 3,
-        "2.5": 1,
-        "3.0": 5,
-        "3.5": 1,
-        "4.0": 3,
-        "4.5": 1,
-        "5.0": 1
-      },
-      "paginas_gastas_por_nivel": {
-        "0.5": 1,
-        "1.0": 1,
-        "1.5": 1,
-        "2.0": 3,
-        "2.5": 1,
-        "3.0": 5,
-        "3.5": 1,
-        "4.0": 3,
-        "4.5": 1,
-        "5.0": 1
-      },
-      "motivo_parada_por_nivel": {
-        "0.5": "orcamento_esgotado",
-        "1.0": "orcamento_esgotado",
-        "1.5": "orcamento_esgotado",
-        "2.0": "orcamento_esgotado",
-        "2.5": "orcamento_esgotado",
-        "3.0": "orcamento_esgotado",
-        "3.5": "orcamento_esgotado",
-        "4.0": "orcamento_esgotado",
-        "4.5": "orcamento_esgotado",
-        "5.0": "orcamento_esgotado"
-      },
-      "contagem_bruta_por_nivel": {
-        "0.5": 12,
-        "1.0": 12,
-        "1.5": 12,
-        "2.0": 36,
-        "2.5": 12,
-        "3.0": 60,
-        "3.5": 12,
-        "4.0": 36,
-        "4.5": 12,
-        "5.0": 12
-      },
-      "requisicoes": 45,
-      "retentativa": {
-        "n_retentativas": 0,
-        "por_tipo": {},
-        "n_503": 0,
-        "n_network": 45
-      },
-      "n_novas": 216,
-      "n_atualizadas": 0,
-      "n_total_no_bruto": 792
-    }
-  ],
   "ano_lancamento": 2024,
   "ano_fonte": "letterboxd"
 }

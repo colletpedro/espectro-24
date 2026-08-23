@@ -1,0 +1,1339 @@
+{
+  "slug": "the-hateful-eight",
+  "data_coleta": "2026-08-23T01:13:50.355014+00:00",
+  "spec_version": "1.9.16",
+  "total_reviews_observadas": 530,
+  "reviews_url": "https://letterboxd.com/film/the-hateful-eight/reviews/",
+  "ficha": {
+    "titulo": "Os Oito Odiados",
+    "sinopse_oficial": "Durante uma nevasca, um carrasco, uma prisioneira, um caçador de recompensas e um homem que alega ser xerife buscam abrigo no Armazém da Minnie, onde quatro outros desconhecidos estão abrigados. Aos poucos, os oito viajantes no local começam a descobrir os segredos sangrentos uns dos outros, levando a um inevitável confronto entre eles.",
+    "sinopse_fallback_en": false,
+    "generos": [
+      "Drama",
+      "Mistério",
+      "Faroeste"
+    ],
+    "duracao_min": 167,
+    "diretor": "Quentin Tarantino",
+    "diretor_transliterado": false,
+    "ano": 2015,
+    "fonte": "tmdb",
+    "ano_fonte": "bruto"
+  },
+  "distribuicao": {
+    "n_notas_total": 1307441,
+    "por_nivel": {
+      "0.5": 2714,
+      "1.0": 7883,
+      "1.5": 5120,
+      "2.0": 28441,
+      "2.5": 30690,
+      "3.0": 137536,
+      "3.5": 200401,
+      "4.0": 453838,
+      "4.5": 221557,
+      "5.0": 219261
+    },
+    "por_bucket": {
+      "negativas": 3,
+      "medianas": 13,
+      "positivas": 84
+    },
+    "fonte": "letterboxd_histograma"
+  },
+  "coleta": {
+    "slug": "the-hateful-eight",
+    "coletado_em": "2026-08-23T01:13:31.292159+00:00",
+    "versao_coletor": "1.9.6",
+    "ordenacao_usada": "by/added",
+    "histograma_bruto": {
+      "0.5": 2714,
+      "1.0": 7883,
+      "1.5": 5120,
+      "2.0": 28441,
+      "2.5": 30690,
+      "3.0": 137536,
+      "3.5": 200401,
+      "4.0": 453838,
+      "4.5": 221557,
+      "5.0": 219261
+    },
+    "orcamento_paginas_por_nivel": {
+      "0.5": 1,
+      "1.0": 3,
+      "1.5": 2,
+      "2.0": 10,
+      "2.5": 6,
+      "3.0": 10,
+      "3.5": 3,
+      "4.0": 7,
+      "4.5": 3,
+      "5.0": 3
+    },
+    "paginas_gastas_por_nivel": {
+      "0.5": 1,
+      "1.0": 3,
+      "1.5": 2,
+      "2.0": 10,
+      "2.5": 6,
+      "3.0": 10,
+      "3.5": 3,
+      "4.0": 7,
+      "4.5": 3,
+      "5.0": 3
+    },
+    "paradas_por_limite": [
+      "0.5",
+      "1.0",
+      "1.5",
+      "2.0",
+      "2.5",
+      "3.0",
+      "3.5",
+      "4.0",
+      "4.5",
+      "5.0"
+    ],
+    "contagem_bruta_por_nivel": {
+      "0.5": 12,
+      "1.0": 26,
+      "1.5": 24,
+      "2.0": 108,
+      "2.5": 60,
+      "3.0": 120,
+      "3.5": 36,
+      "4.0": 84,
+      "4.5": 24,
+      "5.0": 36
+    },
+    "contagem_estimada_valida_por_nivel": {
+      "0.5": 6,
+      "1.0": 9,
+      "1.5": 10,
+      "2.0": 29,
+      "2.5": 23,
+      "3.0": 29,
+      "3.5": 10,
+      "4.0": 29,
+      "4.5": 1,
+      "5.0": 6
+    },
+    "motivo_parada_por_nivel": {
+      "0.5": "orcamento_esgotado",
+      "1.0": "orcamento_esgotado",
+      "1.5": "orcamento_esgotado",
+      "2.0": "orcamento_esgotado",
+      "2.5": "orcamento_esgotado",
+      "3.0": "orcamento_esgotado",
+      "3.5": "orcamento_esgotado",
+      "4.0": "orcamento_esgotado",
+      "4.5": "orcamento_esgotado",
+      "5.0": "orcamento_esgotado"
+    },
+    "paginas_base_por_nivel": {
+      "0.5": 1,
+      "1.0": 3,
+      "1.5": 2,
+      "2.0": 10,
+      "2.5": 6,
+      "3.0": 10,
+      "3.5": 3,
+      "4.0": 7,
+      "4.5": 3,
+      "5.0": 3
+    },
+    "paginas_extensao_por_nivel": {
+      "0.5": 0,
+      "1.0": 0,
+      "1.5": 0,
+      "2.0": 0,
+      "2.5": 0,
+      "3.0": 0,
+      "3.5": 0,
+      "4.0": 0,
+      "4.5": 0,
+      "5.0": 0
+    },
+    "extensao_por_bucket": {
+      "negativas": {
+        "paginas_base": 16,
+        "paginas_extensao": 0,
+        "extras_por_nivel": {},
+        "motivo_parada": "meta_atingida",
+        "n_validas_pos_base": 61,
+        "n_validas_pos_extensao": 61,
+        "meta": 50
+      },
+      "medianas": {
+        "paginas_base": 16,
+        "paginas_extensao": 0,
+        "extras_por_nivel": {},
+        "motivo_parada": "meta_atingida",
+        "n_validas_pos_base": 68,
+        "n_validas_pos_extensao": 68,
+        "meta": 50
+      },
+      "positivas": {
+        "paginas_base": 16,
+        "paginas_extensao": 0,
+        "extras_por_nivel": {},
+        "motivo_parada": "meta_atingida",
+        "n_validas_pos_base": 68,
+        "n_validas_pos_extensao": 68,
+        "meta": 50
+      }
+    },
+    "profundidade_sondagem": {
+      "nivel_sondado": 4.0,
+      "profundidade": 256,
+      "exata": false,
+      "requisicoes": 4,
+      "motivo": "teto_plataforma"
+    },
+    "profundidade_estimada_por_nivel": {
+      "0.5": 2,
+      "1.0": 4,
+      "1.5": 3,
+      "2.0": 16,
+      "2.5": 17,
+      "3.0": 78,
+      "3.5": 113,
+      "4.0": 256,
+      "4.5": 125,
+      "5.0": 124
+    },
+    "janela_temporal": {
+      "total": {
+        "n": 648,
+        "min": "2015-12-24",
+        "max": "2026-08-09",
+        "p5": "2026-04-13",
+        "p50": "2026-07-25",
+        "p95": "2026-08-07"
+      },
+      "por_bucket": {
+        "negativas": {
+          "n": 194,
+          "min": "2017-12-20",
+          "max": "2026-08-08",
+          "p5": "2026-04-12",
+          "p50": "2026-06-27",
+          "p95": "2026-08-02"
+        },
+        "medianas": {
+          "n": 214,
+          "min": "2016-01-01",
+          "max": "2026-08-08",
+          "p5": "2026-01-23",
+          "p50": "2026-07-23",
+          "p95": "2026-08-05"
+        },
+        "positivas": {
+          "n": 240,
+          "min": "2015-12-24",
+          "max": "2026-08-09",
+          "p5": "2026-06-23",
+          "p50": "2026-08-06",
+          "p95": "2026-08-08"
+        }
+      }
+    },
+    "dias_por_100_paginas": {
+      "n_paginas": 17,
+      "pagina_min": 1,
+      "pagina_max": 128,
+      "dias": 33,
+      "dias_por_100_paginas": 25.984251968503937,
+      "paginas_para_1_ano": 1405
+    },
+    "ano_lancamento": 2015,
+    "ano_fonte": "letterboxd",
+    "n_reviews_bruto": 648
+  },
+  "origem_paginas": {
+    "_histograma/the-hateful-eight.html": "cache",
+    "the-hateful-eight/pages/by_added/rated_4_page_4.html": "cache",
+    "the-hateful-eight/pages/by_added/rated_4_page_16.html": "network",
+    "the-hateful-eight/pages/by_added/rated_4_page_64.html": "cache",
+    "the-hateful-eight/pages/by_added/rated_4_page_256.html": "network",
+    "the-hateful-eight/pages/by_added/rated_0_5_page_1.html": "cache",
+    "the-hateful-eight/fulltext/viewing_1415169171.html": "cache",
+    "the-hateful-eight/pages/by_added/rated_1_page_1.html": "cache",
+    "the-hateful-eight/pages/by_added/rated_1_page_2.html": "cache",
+    "the-hateful-eight/pages/by_added/rated_1_page_3.html": "network",
+    "the-hateful-eight/fulltext/viewing_1422086871.html": "cache",
+    "the-hateful-eight/fulltext/viewing_1379363644.html": "cache",
+    "the-hateful-eight/pages/by_added/rated_1_5_page_1.html": "cache",
+    "the-hateful-eight/pages/by_added/rated_1_5_page_2.html": "cache",
+    "the-hateful-eight/fulltext/viewing_1343603580.html": "cache",
+    "the-hateful-eight/fulltext/viewing_1338389264.html": "cache",
+    "the-hateful-eight/fulltext/viewing_1336860590.html": "cache",
+    "the-hateful-eight/fulltext/viewing_1334446488.html": "cache",
+    "the-hateful-eight/pages/by_added/rated_2_page_1.html": "cache",
+    "the-hateful-eight/pages/by_added/rated_2_page_2.html": "cache",
+    "the-hateful-eight/pages/by_added/rated_2_page_3.html": "cache",
+    "the-hateful-eight/pages/by_added/rated_2_page_4.html": "cache",
+    "the-hateful-eight/pages/by_added/rated_2_page_5.html": "cache",
+    "the-hateful-eight/pages/by_added/rated_2_page_6.html": "cache",
+    "the-hateful-eight/pages/by_added/rated_2_page_7.html": "cache",
+    "the-hateful-eight/pages/by_added/rated_2_page_8.html": "cache",
+    "the-hateful-eight/pages/by_added/rated_2_page_9.html": "network",
+    "the-hateful-eight/pages/by_added/rated_2_page_12.html": "cache",
+    "the-hateful-eight/fulltext/viewing_1399907112.html": "cache",
+    "the-hateful-eight/fulltext/viewing_1396916224.html": "cache",
+    "the-hateful-eight/fulltext/viewing_1388165868.html": "cache",
+    "the-hateful-eight/fulltext/viewing_1385174799.html": "cache",
+    "the-hateful-eight/fulltext/viewing_1368365167.html": "cache",
+    "the-hateful-eight/fulltext/viewing_1341133513.html": "cache",
+    "the-hateful-eight/fulltext/viewing_1341008278.html": "cache",
+    "the-hateful-eight/pages/by_added/rated_2_5_page_1.html": "cache",
+    "the-hateful-eight/pages/by_added/rated_2_5_page_2.html": "cache",
+    "the-hateful-eight/pages/by_added/rated_2_5_page_3.html": "cache",
+    "the-hateful-eight/pages/by_added/rated_2_5_page_4.html": "cache",
+    "the-hateful-eight/pages/by_added/rated_2_5_page_5.html": "network",
+    "the-hateful-eight/pages/by_added/rated_2_5_page_8.html": "cache",
+    "the-hateful-eight/fulltext/viewing_1420352041.html": "cache",
+    "the-hateful-eight/fulltext/viewing_1413612418.html": "cache",
+    "the-hateful-eight/fulltext/viewing_1360297787.html": "cache",
+    "the-hateful-eight/fulltext/viewing_1359093807.html": "cache",
+    "the-hateful-eight/pages/by_added/rated_3_page_1.html": "cache",
+    "the-hateful-eight/pages/by_added/rated_3_page_2.html": "cache",
+    "the-hateful-eight/pages/by_added/rated_3_page_3.html": "cache",
+    "the-hateful-eight/pages/by_added/rated_3_page_4.html": "cache",
+    "the-hateful-eight/pages/by_added/rated_3_page_5.html": "cache",
+    "the-hateful-eight/pages/by_added/rated_3_page_6.html": "cache",
+    "the-hateful-eight/pages/by_added/rated_3_page_7.html": "cache",
+    "the-hateful-eight/pages/by_added/rated_3_page_8.html": "cache",
+    "the-hateful-eight/pages/by_added/rated_3_page_20.html": "network",
+    "the-hateful-eight/pages/by_added/rated_3_page_39.html": "network",
+    "the-hateful-eight/fulltext/viewing_1435372914.html": "cache",
+    "the-hateful-eight/fulltext/viewing_1432014757.html": "cache",
+    "the-hateful-eight/fulltext/viewing_1431658918.html": "cache",
+    "the-hateful-eight/fulltext/viewing_1429838350.html": "cache",
+    "the-hateful-eight/fulltext/viewing_1429776610.html": "cache",
+    "the-hateful-eight/fulltext/viewing_1418765461.html": "cache",
+    "the-hateful-eight/fulltext/viewing_1417806321.html": "cache",
+    "the-hateful-eight/fulltext/viewing_1412241346.html": "cache",
+    "the-hateful-eight/pages/by_added/rated_3_5_page_1.html": "cache",
+    "the-hateful-eight/pages/by_added/rated_3_5_page_2.html": "cache",
+    "the-hateful-eight/pages/by_added/rated_3_5_page_28.html": "network",
+    "the-hateful-eight/fulltext/viewing_1415266276.html": "network",
+    "the-hateful-eight/fulltext/viewing_1414631633.html": "network",
+    "the-hateful-eight/pages/by_added/rated_4_page_1.html": "cache",
+    "the-hateful-eight/pages/by_added/rated_4_page_2.html": "cache",
+    "the-hateful-eight/pages/by_added/rated_4_page_3.html": "cache",
+    "the-hateful-eight/pages/by_added/rated_4_page_5.html": "cache",
+    "the-hateful-eight/pages/by_added/rated_4_page_128.html": "network",
+    "the-hateful-eight/fulltext/viewing_1439288012.html": "cache",
+    "the-hateful-eight/fulltext/viewing_1439030077.html": "cache",
+    "the-hateful-eight/fulltext/viewing_1439004746.html": "cache",
+    "the-hateful-eight/fulltext/viewing_1438640974.html": "cache",
+    "the-hateful-eight/fulltext/viewing_1438468098.html": "cache",
+    "the-hateful-eight/fulltext/viewing_1438277567.html": "cache",
+    "the-hateful-eight/fulltext/viewing_1437647251.html": "cache",
+    "the-hateful-eight/fulltext/viewing_1436932909.html": "cache",
+    "the-hateful-eight/fulltext/viewing_1436924979.html": "cache",
+    "the-hateful-eight/fulltext/viewing_1420315110.html": "network",
+    "the-hateful-eight/pages/by_added/rated_4_5_page_1.html": "cache",
+    "the-hateful-eight/pages/by_added/rated_4_5_page_2.html": "cache",
+    "the-hateful-eight/pages/by_added/rated_4_5_page_31.html": "network",
+    "the-hateful-eight/pages/by_added/rated_5_page_1.html": "cache",
+    "the-hateful-eight/pages/by_added/rated_5_page_2.html": "cache",
+    "the-hateful-eight/pages/by_added/rated_5_page_31.html": "network",
+    "the-hateful-eight/fulltext/viewing_1438926170.html": "cache",
+    "the-hateful-eight/fulltext/viewing_1440502150.html": "network",
+    "the-hateful-eight/film_page.html": "cache"
+  },
+  "buckets": [
+    {
+      "bucket": "negativas",
+      "alvo": 40,
+      "modo": "completo",
+      "estado_piso": "completa",
+      "n_validas": 40,
+      "share_real": 3,
+      "composicao_alvo": {
+        "0.5": 2,
+        "1.0": 7,
+        "1.5": 5,
+        "2.0": 26
+      },
+      "composicao_atingida": {
+        "0.5": 2,
+        "1.0": 7,
+        "1.5": 5,
+        "2.0": 26
+      },
+      "cascata_por_degrau": {
+        "150": 40
+      },
+      "deficit_redistribuido": 0,
+      "distribuicao_pagina_origem": {
+        "n": 40,
+        "min": 1,
+        "max": 12,
+        "p5": 1,
+        "p50": 4,
+        "p95": 12,
+        "fracao_profunda": 0.2
+      },
+      "janela_amostra": {
+        "n": 40,
+        "min": "2022-01-29",
+        "max": "2026-08-06",
+        "p5": "2026-04-13",
+        "p50": "2026-06-26",
+        "p95": "2026-08-04"
+      },
+      "niveis": [
+        {
+          "nivel": 0.5,
+          "n_validas": 2,
+          "n_alvo": 2,
+          "n_brutas": 12,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 0,
+          "n_descartadas_curtas": 6,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 0,
+          "motivos_descarte": {
+            "truncada_sem_texto": 0,
+            "spoiler": 0,
+            "abaixo_min_chars": 6,
+            "excedente_cota": 4,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 1
+        },
+        {
+          "nivel": 1.0,
+          "n_validas": 7,
+          "n_alvo": 7,
+          "n_brutas": 38,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 1,
+          "n_descartadas_curtas": 23,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 0,
+          "motivos_descarte": {
+            "truncada_sem_texto": 0,
+            "spoiler": 1,
+            "abaixo_min_chars": 23,
+            "excedente_cota": 7,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 3
+        },
+        {
+          "nivel": 1.5,
+          "n_validas": 5,
+          "n_alvo": 5,
+          "n_brutas": 24,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 1,
+          "n_descartadas_curtas": 13,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 0,
+          "motivos_descarte": {
+            "truncada_sem_texto": 0,
+            "spoiler": 1,
+            "abaixo_min_chars": 13,
+            "excedente_cota": 5,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 2
+        },
+        {
+          "nivel": 2.0,
+          "n_validas": 26,
+          "n_alvo": 26,
+          "n_brutas": 120,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 5,
+          "n_descartadas_curtas": 81,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 3,
+          "motivos_descarte": {
+            "truncada_sem_texto": 3,
+            "spoiler": 5,
+            "abaixo_min_chars": 81,
+            "excedente_cota": 5,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 10
+        }
+      ],
+      "temas": [
+        {
+          "tema": "Ritmo arrastado e duração excessiva",
+          "mencoes_aproximadas": 20,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "O filme se estende por três horas com um ritmo muito lento, tornando a experiência cansativa e entediante.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Diálogos excessivos e exposição",
+          "mencoes_aproximadas": 15,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "As conversas são intermináveis e repetitivas, com muitas informações sendo despejadas sem avançar a história.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Uso excessivo de insultos raciais",
+          "mencoes_aproximadas": 15,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "A quantidade de termos raciais é tão alta que parece gratuita, em vez de servir à narrativa ou aos personagens.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Violência gratuita e misoginia",
+          "mencoes_aproximadas": 12,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "A violência é exagerada e constante, e o tratamento dispensado às personagens femininas é particularmente cruel e degradante.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Personagens pouco interessantes",
+          "mencoes_aproximadas": 10,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "Os personagens são caricatos e desagradáveis, sem profundidade ou motivações que despertem empatia.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Autocomplacência de Tarantino",
+          "mencoes_aproximadas": 8,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "O diretor se entrega a maneirismos e referências, tornando o filme pretensioso e sem substância.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        }
+      ],
+      "observacao_geral": "As reviews negativas apontam um filme excessivamente longo e monótono, com diálogos e violência que consideram gratuitos, além de uso exagerado de termos raciais e misoginia. Para este grupo, os pontos positivos ficam restritos à fotografia, à trilha sonora e a algumas atuações, que não compensam os defeitos.",
+      "idioma_invalido": false,
+      "escopo_suspeito": false
+    },
+    {
+      "bucket": "medianas",
+      "alvo": 40,
+      "modo": "completo",
+      "estado_piso": "completa",
+      "n_validas": 40,
+      "share_real": 13,
+      "composicao_alvo": {
+        "2.5": 7,
+        "3.0": 33
+      },
+      "composicao_atingida": {
+        "2.5": 7,
+        "3.0": 33
+      },
+      "cascata_por_degrau": {
+        "150": 40
+      },
+      "deficit_redistribuido": 0,
+      "distribuicao_pagina_origem": {
+        "n": 40,
+        "min": 1,
+        "max": 20,
+        "p5": 1,
+        "p50": 6,
+        "p95": 12,
+        "fracao_profunda": 0.35
+      },
+      "janela_amostra": {
+        "n": 40,
+        "min": "2026-06-13",
+        "max": "2026-08-06",
+        "p5": "2026-07-05",
+        "p50": "2026-07-25",
+        "p95": "2026-08-05"
+      },
+      "niveis": [
+        {
+          "nivel": 2.5,
+          "n_validas": 7,
+          "n_alvo": 7,
+          "n_brutas": 72,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 3,
+          "n_descartadas_curtas": 40,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 0,
+          "motivos_descarte": {
+            "truncada_sem_texto": 0,
+            "spoiler": 3,
+            "abaixo_min_chars": 40,
+            "excedente_cota": 22,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 6
+        },
+        {
+          "nivel": 3.0,
+          "n_validas": 33,
+          "n_alvo": 33,
+          "n_brutas": 142,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 4,
+          "n_descartadas_curtas": 97,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 2,
+          "motivos_descarte": {
+            "truncada_sem_texto": 2,
+            "spoiler": 4,
+            "abaixo_min_chars": 97,
+            "excedente_cota": 6,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 10
+        }
+      ],
+      "temas": [
+        {
+          "tema": "Ritmo lento e duração excessiva",
+          "mencoes_aproximadas": 15,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "O filme se arrasta e é longo demais, com cenas que poderiam ser cortadas, embora o final seja recompensador.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Atuações fortes",
+          "mencoes_aproximadas": 12,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "As performances, especialmente de Samuel L. Jackson e de outros membros do elenco, são um dos pontos altos, com uma química palpável.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Fotografia e direção de arte",
+          "mencoes_aproximadas": 10,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "A fotografia e a ambientação são belíssimas, com cenários nevados e uma reconstituição de época impecável.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Diálogos característicos de Tarantino",
+          "mencoes_aproximadas": 8,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "Os diálogos são muito no estilo do diretor, com humor ácido e reviravoltas, mas em alguns momentos parecem não levar a lugar nenhum.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Violência excessiva e desnecessária",
+          "mencoes_aproximadas": 7,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "A violência é extrema e muitas vezes gratuita, o que pode afastar o espectador e tirar o foco da trama.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        }
+      ],
+      "observacao_geral": "As reviews medianas apontam para um filme tecnicamente belo e com boas atuações, mas que sofre com ritmo arrastado, duração excessiva e violência que consideram exagerada. Este grupo mostra uma recepção mista: apreciam os elementos de estilo, mas criticam o desenvolvimento e o excesso de autoindulgência do diretor.",
+      "idioma_invalido": false,
+      "escopo_suspeito": false
+    },
+    {
+      "bucket": "positivas",
+      "alvo": 40,
+      "modo": "completo",
+      "estado_piso": "completa",
+      "n_validas": 40,
+      "share_real": 84,
+      "composicao_alvo": {
+        "3.5": 7,
+        "4.0": 17,
+        "4.5": 8,
+        "5.0": 8
+      },
+      "composicao_atingida": {
+        "3.5": 7,
+        "4.0": 19,
+        "4.5": 6,
+        "5.0": 8
+      },
+      "cascata_por_degrau": {
+        "150": 40
+      },
+      "deficit_redistribuido": 2,
+      "distribuicao_pagina_origem": {
+        "n": 40,
+        "min": 1,
+        "max": 31,
+        "p5": 1,
+        "p50": 4,
+        "p95": 31,
+        "fracao_profunda": 0.55
+      },
+      "janela_amostra": {
+        "n": 40,
+        "min": "2026-04-29",
+        "max": "2026-08-09",
+        "p5": "2026-07-25",
+        "p50": "2026-08-06",
+        "p95": "2026-08-08"
+      },
+      "niveis": [
+        {
+          "nivel": 3.5,
+          "n_validas": 7,
+          "n_alvo": 7,
+          "n_brutas": 48,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 2,
+          "n_descartadas_curtas": 31,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 0,
+          "motivos_descarte": {
+            "truncada_sem_texto": 0,
+            "spoiler": 2,
+            "abaixo_min_chars": 31,
+            "excedente_cota": 8,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 3
+        },
+        {
+          "nivel": 4.0,
+          "n_validas": 19,
+          "n_alvo": 17,
+          "n_brutas": 108,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 2,
+          "n_descartadas_curtas": 68,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 0,
+          "motivos_descarte": {
+            "truncada_sem_texto": 0,
+            "spoiler": 2,
+            "abaixo_min_chars": 68,
+            "excedente_cota": 19,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 7
+        },
+        {
+          "nivel": 4.5,
+          "n_validas": 6,
+          "n_alvo": 8,
+          "n_brutas": 36,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 1,
+          "n_descartadas_curtas": 29,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 0,
+          "motivos_descarte": {
+            "truncada_sem_texto": 0,
+            "spoiler": 1,
+            "abaixo_min_chars": 29,
+            "excedente_cota": 0,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 3
+        },
+        {
+          "nivel": 5.0,
+          "n_validas": 8,
+          "n_alvo": 8,
+          "n_brutas": 48,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 3,
+          "n_descartadas_curtas": 36,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 0,
+          "motivos_descarte": {
+            "truncada_sem_texto": 0,
+            "spoiler": 3,
+            "abaixo_min_chars": 36,
+            "excedente_cota": 1,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 3
+        }
+      ],
+      "temas": [
+        {
+          "tema": "Diálogos e roteiro afiados",
+          "mencoes_aproximadas": 25,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "As conversas entre os personagens são tão interessantes que seguram a atenção mesmo sem muita ação, e o texto tem um humor seco e provocativo que se encaixa bem no clima do filme.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Atuações memoráveis do elenco",
+          "mencoes_aproximadas": 20,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "O elenco inteiro se destaca, mas Samuel L. Jackson e Walton Goggins roubam a cena com uma química impressionante, enquanto Jennifer Jason Leigh entrega uma performance marcante e cheia de nuances.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Fotografia e ambientação de inverno",
+          "mencoes_aproximadas": 15,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "A neve e o isolamento criam uma atmosfera sufocante e bela ao mesmo tempo, e a direção de arte caprichada faz o cenário parecer um personagem à parte.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Suspense e mistério envolventes",
+          "mencoes_aproximadas": 15,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "A trama prende do início ao fim, com reviravoltas bem dosadas e uma tensão que só aumenta a cada cena, deixando o espectador desconfiado de todos os personagens.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Ritmo lento no início, mas que compensa",
+          "mencoes_aproximadas": 15,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "O começo é arrastado e exige paciência, mas a construção gradual da história e a escalada do conflito fazem valer a pena, com um desfecho explosivo.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Estilo tarantinesco e homenagem ao western",
+          "mencoes_aproximadas": 10,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "O filme é uma celebração do western clássico, com muita violência estilizada, diálogos afiados e referências nostálgicas que só Tarantino sabe fazer.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        }
+      ],
+      "observacao_geral": "As reviews positivas destacam os diálogos afiados, as atuações memoráveis e a fotografia deslumbrante, criando uma tensão que prende do início ao fim. Apesar do ritmo lento no começo, a maioria considera uma obra-prima do western e um dos melhores trabalhos de Tarantino.",
+      "idioma_invalido": false,
+      "escopo_suspeito": false
+    }
+  ],
+  "eixos": {
+    "taxonomia_id": "ebab2667de74",
+    "margem_lift_pp": 20,
+    "contraste": "tematico",
+    "linhas": [
+      {
+        "eixo": "ritmo",
+        "por_bucket": {
+          "negativas": {
+            "mencoes": 20,
+            "de_n": 29,
+            "freq_pct": 69.0,
+            "lift_pp": 15.4,
+            "tema": "Ritmo arrastado e duração excessiva",
+            "exemplo_parafraseado": "O filme se estende por três horas com um ritmo muito lento, tornando a experiência cansativa e entediante.",
+            "temas_no_mesmo_eixo": []
+          },
+          "medianas": {
+            "mencoes": 17,
+            "de_n": 33,
+            "freq_pct": 51.5,
+            "lift_pp": -17.5,
+            "tema": "Ritmo lento e duração excessiva",
+            "exemplo_parafraseado": "O filme se arrasta e é longo demais, com cenas que poderiam ser cortadas, embora o final seja recompensador.",
+            "temas_no_mesmo_eixo": []
+          },
+          "positivas": {
+            "mencoes": 15,
+            "de_n": 28,
+            "freq_pct": 53.6,
+            "lift_pp": -15.4,
+            "tema": "Ritmo lento no início, mas que compensa",
+            "exemplo_parafraseado": "O começo é arrastado e exige paciência, mas a construção gradual da história e a escalada do conflito fazem valer a pena, com um desfecho explosivo.",
+            "temas_no_mesmo_eixo": []
+          }
+        },
+        "bullet_de": {
+          "negativas": "frequencia",
+          "medianas": null,
+          "positivas": null
+        }
+      },
+      {
+        "eixo": "atuacao",
+        "por_bucket": {
+          "negativas": {
+            "mencoes": 5,
+            "de_n": 29,
+            "freq_pct": 17.2,
+            "lift_pp": -22.0,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "medianas": {
+            "mencoes": 9,
+            "de_n": 33,
+            "freq_pct": 27.3,
+            "lift_pp": -12.0,
+            "tema": "Atuações fortes",
+            "exemplo_parafraseado": "As performances, especialmente de Samuel L. Jackson e de outros membros do elenco, são um dos pontos altos, com uma química palpável.",
+            "temas_no_mesmo_eixo": []
+          },
+          "positivas": {
+            "mencoes": 11,
+            "de_n": 28,
+            "freq_pct": 39.3,
+            "lift_pp": 12.0,
+            "tema": "Atuações memoráveis do elenco",
+            "exemplo_parafraseado": "O elenco inteiro se destaca, mas Samuel L. Jackson e Walton Goggins roubam a cena com uma química impressionante, enquanto Jennifer Jason Leigh entrega uma performance marcante e cheia de nuances.",
+            "temas_no_mesmo_eixo": []
+          }
+        },
+        "bullet_de": {
+          "negativas": null,
+          "medianas": null,
+          "positivas": null
+        }
+      },
+      {
+        "eixo": "direcao_imagem",
+        "por_bucket": {
+          "negativas": {
+            "mencoes": 10,
+            "de_n": 29,
+            "freq_pct": 34.5,
+            "lift_pp": -7.9,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "medianas": {
+            "mencoes": 14,
+            "de_n": 33,
+            "freq_pct": 42.4,
+            "lift_pp": 7.9,
+            "tema": "Fotografia e direção de arte",
+            "exemplo_parafraseado": "A fotografia e a ambientação são belíssimas, com cenários nevados e uma reconstituição de época impecável.",
+            "temas_no_mesmo_eixo": []
+          },
+          "positivas": {
+            "mencoes": 8,
+            "de_n": 28,
+            "freq_pct": 28.6,
+            "lift_pp": -13.9,
+            "tema": "Fotografia e ambientação de inverno",
+            "exemplo_parafraseado": "A neve e o isolamento criam uma atmosfera sufocante e bela ao mesmo tempo, e a direção de arte caprichada faz o cenário parecer um personagem à parte.",
+            "temas_no_mesmo_eixo": []
+          }
+        },
+        "bullet_de": {
+          "negativas": null,
+          "medianas": null,
+          "positivas": null
+        }
+      },
+      {
+        "eixo": "roteiro_estrutura",
+        "por_bucket": {
+          "negativas": {
+            "mencoes": 18,
+            "de_n": 29,
+            "freq_pct": 62.1,
+            "lift_pp": -9.4,
+            "tema": "Diálogos excessivos e exposição",
+            "exemplo_parafraseado": "As conversas são intermináveis e repetitivas, com muitas informações sendo despejadas sem avançar a história.",
+            "temas_no_mesmo_eixo": [
+              "Personagens pouco interessantes"
+            ]
+          },
+          "medianas": {
+            "mencoes": 19,
+            "de_n": 33,
+            "freq_pct": 57.6,
+            "lift_pp": -13.9,
+            "tema": "Diálogos característicos de Tarantino",
+            "exemplo_parafraseado": "Os diálogos são muito no estilo do diretor, com humor ácido e reviravoltas, mas em alguns momentos parecem não levar a lugar nenhum.",
+            "temas_no_mesmo_eixo": []
+          },
+          "positivas": {
+            "mencoes": 20,
+            "de_n": 28,
+            "freq_pct": 71.4,
+            "lift_pp": 9.4,
+            "tema": "Diálogos e roteiro afiados",
+            "exemplo_parafraseado": "As conversas entre os personagens são tão interessantes que seguram a atenção mesmo sem muita ação, e o texto tem um humor seco e provocativo que se encaixa bem no clima do filme.",
+            "temas_no_mesmo_eixo": []
+          }
+        },
+        "bullet_de": {
+          "negativas": "frequencia",
+          "medianas": "frequencia",
+          "positivas": "frequencia"
+        }
+      },
+      {
+        "eixo": "som_trilha",
+        "por_bucket": {
+          "negativas": {
+            "mencoes": 4,
+            "de_n": 29,
+            "freq_pct": 13.8,
+            "lift_pp": 1.7,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "medianas": {
+            "mencoes": 4,
+            "de_n": 33,
+            "freq_pct": 12.1,
+            "lift_pp": -1.7,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "positivas": {
+            "mencoes": 2,
+            "de_n": 28,
+            "freq_pct": 7.1,
+            "lift_pp": -6.7,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          }
+        },
+        "bullet_de": {
+          "negativas": null,
+          "medianas": null,
+          "positivas": null
+        }
+      },
+      {
+        "eixo": "tom_atmosfera",
+        "por_bucket": {
+          "negativas": {
+            "mencoes": 2,
+            "de_n": 29,
+            "freq_pct": 6.9,
+            "lift_pp": -36.0,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "medianas": {
+            "mencoes": 7,
+            "de_n": 33,
+            "freq_pct": 21.2,
+            "lift_pp": -21.6,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "positivas": {
+            "mencoes": 12,
+            "de_n": 28,
+            "freq_pct": 42.9,
+            "lift_pp": 21.6,
+            "tema": "Suspense e mistério envolventes",
+            "exemplo_parafraseado": "A trama prende do início ao fim, com reviravoltas bem dosadas e uma tensão que só aumenta a cada cena, deixando o espectador desconfiado de todos os personagens.",
+            "temas_no_mesmo_eixo": []
+          }
+        },
+        "bullet_de": {
+          "negativas": null,
+          "medianas": null,
+          "positivas": "contraste"
+        }
+      },
+      {
+        "eixo": "impacto_emocional",
+        "por_bucket": {
+          "negativas": {
+            "mencoes": 6,
+            "de_n": 29,
+            "freq_pct": 20.7,
+            "lift_pp": -4.3,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "medianas": {
+            "mencoes": 8,
+            "de_n": 33,
+            "freq_pct": 24.2,
+            "lift_pp": -0.8,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "positivas": {
+            "mencoes": 7,
+            "de_n": 28,
+            "freq_pct": 25.0,
+            "lift_pp": 0.8,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          }
+        },
+        "bullet_de": {
+          "negativas": null,
+          "medianas": null,
+          "positivas": null
+        }
+      },
+      {
+        "eixo": "comparacoes",
+        "por_bucket": {
+          "negativas": {
+            "mencoes": 14,
+            "de_n": 29,
+            "freq_pct": 48.3,
+            "lift_pp": -23.2,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "medianas": {
+            "mencoes": 19,
+            "de_n": 33,
+            "freq_pct": 57.6,
+            "lift_pp": -13.9,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "positivas": {
+            "mencoes": 20,
+            "de_n": 28,
+            "freq_pct": 71.4,
+            "lift_pp": 13.9,
+            "tema": "Estilo tarantinesco e homenagem ao western",
+            "exemplo_parafraseado": "O filme é uma celebração do western clássico, com muita violência estilizada, diálogos afiados e referências nostálgicas que só Tarantino sabe fazer.",
+            "temas_no_mesmo_eixo": []
+          }
+        },
+        "bullet_de": {
+          "negativas": null,
+          "medianas": "frequencia",
+          "positivas": "frequencia"
+        }
+      },
+      {
+        "eixo": "expectativa",
+        "por_bucket": {
+          "negativas": {
+            "mencoes": 5,
+            "de_n": 29,
+            "freq_pct": 17.2,
+            "lift_pp": -7.8,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "medianas": {
+            "mencoes": 3,
+            "de_n": 33,
+            "freq_pct": 9.1,
+            "lift_pp": -15.9,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "positivas": {
+            "mencoes": 7,
+            "de_n": 28,
+            "freq_pct": 25.0,
+            "lift_pp": 7.8,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          }
+        },
+        "bullet_de": {
+          "negativas": null,
+          "medianas": null,
+          "positivas": null
+        }
+      },
+      {
+        "eixo": "critica_social",
+        "por_bucket": {
+          "negativas": {
+            "mencoes": 14,
+            "de_n": 29,
+            "freq_pct": 48.3,
+            "lift_pp": 11.9,
+            "tema": "Uso excessivo de insultos raciais",
+            "exemplo_parafraseado": "A quantidade de termos raciais é tão alta que parece gratuita, em vez de servir à narrativa ou aos personagens.",
+            "temas_no_mesmo_eixo": [
+              "Violência gratuita e misoginia",
+              "Autocomplacência de Tarantino"
+            ]
+          },
+          "medianas": {
+            "mencoes": 12,
+            "de_n": 33,
+            "freq_pct": 36.4,
+            "lift_pp": -11.9,
+            "tema": "Violência excessiva e desnecessária",
+            "exemplo_parafraseado": "A violência é extrema e muitas vezes gratuita, o que pode afastar o espectador e tirar o foco da trama.",
+            "temas_no_mesmo_eixo": []
+          },
+          "positivas": {
+            "mencoes": 0,
+            "de_n": 28,
+            "freq_pct": 0.0,
+            "lift_pp": -48.3,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          }
+        },
+        "bullet_de": {
+          "negativas": null,
+          "medianas": null,
+          "positivas": null
+        }
+      }
+    ],
+    "fonte_classificacao": {
+      "arquivo": "resultado/votacao-3/consenso.jsonl",
+      "criterio": "votacao_3_consenso_2_de_3",
+      "por_bucket": {
+        "negativas": {
+          "n_classificadas": 29,
+          "n_analisadas": 40,
+          "sobreposicao_com_analisadas": 29
+        },
+        "medianas": {
+          "n_classificadas": 33,
+          "n_analisadas": 40,
+          "sobreposicao_com_analisadas": 33
+        },
+        "positivas": {
+          "n_classificadas": 28,
+          "n_analisadas": 40,
+          "sobreposicao_com_analisadas": 28
+        }
+      }
+    },
+    "rotulagem": {
+      "n_chamadas": 3,
+      "falharam": [],
+      "fora_da_taxonomia": {},
+      "houve_retentativa": []
+    },
+    "spec_version": "1.9.16",
+    "verificador": {
+      "aplicado": true,
+      "variante": "V2_alvo",
+      "passada": 1,
+      "eixo": "impacto_emocional",
+      "n_removidas_no_corpus": 1654
+    }
+  },
+  "narrativa": "Lançado em 2015 e dirigido por Quentin Tarantino, Os Oito Odiados é uma produção que combina drama, mistério e faroeste ao longo de seus 167 minutos. Em meio a uma intensa nevasca, viajantes que buscam refúgio em um armazém isolado precisam conviver enquanto segredos sangrentos vêm à tona, conduzindo a um inevitável confronto entre eles.\n\nA experiência é pautada por uma ambientação de inverno fechada e rigorosa, estruturada a partir de longas sequências de diálogo entre os ocupantes do espaço. O andamento transcorre em um ritmo lento e contínuo, estabelecendo uma sensação constante de isolamento e confinamento.\n\nNa grande maioria das notas (~84%), o tom e a atmosfera recebem foco primordial: a maioria enfatiza os diálogos e o roteiro afiados como elementos centrais, enquanto muitos ressaltam as atuações memoráveis do elenco. Complementarmente, boa parte valoriza a fotografia e a ambientação de inverno na composição do cenário.\n\nSob a ótica de quem está numa fração mínima das notas (~13%), a experiência se mostra mista: uma parcela expressiva aponta ressalvas quanto ao ritmo lento e à duração excessiva da obra, ainda que vários reconheçam o peso de atuações fortes. Além disso, alguns destacam positivamente a fotografia e a direção de arte.\n\nJá na avaliação de quem integra uma fração ainda menor das notas (~3%), a leitura é marcadamente desfavorável: um número considerável critica o ritmo arrastado e a duração excessiva, ao passo que muitos desaprovam os diálogos excessivos e a exposição. Por fim, boa parte contesta o uso excessivo de insultos raciais na narrativa.",
+  "verificacao_narrativa": {
+    "quantificador_fora_de_faixa": [],
+    "quantificador_repetido": [],
+    "paragrafos": {
+      "n_paragrafos": 5,
+      "minimo": 3,
+      "insuficientes": false,
+      "longos": []
+    },
+    "n_paragrafos": 5,
+    "paragrafos_insuficientes": false,
+    "paragrafos_longos": [],
+    "grupos_sem_paragrafo_proprio": [],
+    "movimento1_e_movimento2_no_mesmo_paragrafo": false,
+    "formato_invalido": false,
+    "numeros_inventados": [],
+    "rotulos_faltando": [],
+    "ordem_incorreta": false,
+    "vocabulario_peso": false,
+    "resenha_speak": [],
+    "n_resenha_speak": 0,
+    "n_flags": 0
+  },
+  "narrativa_selecao": {
+    "provider": "gemini",
+    "modelo": "gemini-3.7-flash",
+    "n_candidatos": 3,
+    "n_chamadas": 3,
+    "indice_escolhido": 2,
+    "motivo": "melhor_entre_limpos",
+    "criterio_decisivo": "ritmo",
+    "candidatos": [
+      {
+        "indice": 0,
+        "n_flags": 0,
+        "cliches": 0,
+        "repeticao_max": 2,
+        "ritmo": 8,
+        "cobertura": 1.0,
+        "eliminado": false
+      },
+      {
+        "indice": 1,
+        "n_flags": 0,
+        "cliches": 0,
+        "repeticao_max": 2,
+        "ritmo": 5,
+        "cobertura": 1.0,
+        "eliminado": false
+      },
+      {
+        "indice": 2,
+        "n_flags": 0,
+        "cliches": 0,
+        "repeticao_max": 2,
+        "ritmo": 10,
+        "cobertura": 1.0,
+        "eliminado": false
+      }
+    ],
+    "retry": null,
+    "uso": {
+      "prompt_tokens": 9792,
+      "completion_tokens": 1153,
+      "cache_hit_tokens": 0,
+      "cache_miss_tokens": 9792
+    },
+    "latencia_s": 27.16
+  }
+}

@@ -1,0 +1,1362 @@
+{
+  "slug": "talk-to-me-2022",
+  "data_coleta": "2026-08-23T01:10:42.495418+00:00",
+  "spec_version": "1.9.16",
+  "total_reviews_observadas": 756,
+  "reviews_url": "https://letterboxd.com/film/talk-to-me-2022/reviews/",
+  "ficha": {
+    "titulo": "The Elms Estate: You Can Talk To Me",
+    "sinopse_oficial": "An unstable man attempts to recover from the aftermath of a suffering relationship, his psyche split into three.",
+    "sinopse_fallback_en": true,
+    "generos": [
+      "Drama"
+    ],
+    "duracao_min": 3,
+    "diretor": "George Williams",
+    "diretor_transliterado": false,
+    "ano": 2022,
+    "fonte": "tmdb",
+    "ano_fonte": "bruto"
+  },
+  "distribuicao": {
+    "n_notas_total": 1484316,
+    "por_nivel": {
+      "0.5": 8853,
+      "1.0": 19773,
+      "1.5": 18434,
+      "2.0": 72157,
+      "2.5": 89502,
+      "3.0": 281029,
+      "3.5": 325983,
+      "4.0": 430120,
+      "4.5": 114481,
+      "5.0": 123984
+    },
+    "por_bucket": {
+      "negativas": 8,
+      "medianas": 25,
+      "positivas": 67
+    },
+    "fonte": "letterboxd_histograma"
+  },
+  "coleta": {
+    "slug": "talk-to-me-2022",
+    "coletado_em": "2026-08-23T01:10:19.818796+00:00",
+    "versao_coletor": "1.9.6",
+    "ordenacao_usada": "by/added",
+    "histograma_bruto": {
+      "0.5": 8853,
+      "1.0": 19773,
+      "1.5": 18434,
+      "2.0": 72157,
+      "2.5": 89502,
+      "3.0": 281029,
+      "3.5": 325983,
+      "4.0": 430120,
+      "4.5": 114481,
+      "5.0": 123984
+    },
+    "orcamento_paginas_por_nivel": {
+      "0.5": 1,
+      "1.0": 3,
+      "1.5": 2,
+      "2.0": 10,
+      "2.5": 6,
+      "3.0": 10,
+      "3.5": 5,
+      "4.0": 7,
+      "4.5": 2,
+      "5.0": 2
+    },
+    "paginas_gastas_por_nivel": {
+      "0.5": 3,
+      "1.0": 5,
+      "1.5": 5,
+      "2.0": 11,
+      "2.5": 6,
+      "3.0": 18,
+      "3.5": 5,
+      "4.0": 10,
+      "4.5": 5,
+      "5.0": 4
+    },
+    "paradas_por_limite": [
+      "0.5",
+      "1.0",
+      "1.5",
+      "2.0",
+      "2.5",
+      "3.0",
+      "3.5",
+      "4.0",
+      "4.5",
+      "5.0"
+    ],
+    "contagem_bruta_por_nivel": {
+      "0.5": 33,
+      "1.0": 46,
+      "1.5": 56,
+      "2.0": 117,
+      "2.5": 72,
+      "3.0": 187,
+      "3.5": 59,
+      "4.0": 101,
+      "4.5": 39,
+      "5.0": 46
+    },
+    "contagem_estimada_valida_por_nivel": {
+      "0.5": 3,
+      "1.0": 7,
+      "1.5": 11,
+      "2.0": 16,
+      "2.5": 14,
+      "3.0": 21,
+      "3.5": 7,
+      "4.0": 18,
+      "4.5": 7,
+      "5.0": 7
+    },
+    "motivo_parada_por_nivel": {
+      "0.5": "orcamento_esgotado",
+      "1.0": "orcamento_esgotado",
+      "1.5": "orcamento_esgotado",
+      "2.0": "orcamento_esgotado",
+      "2.5": "orcamento_esgotado",
+      "3.0": "orcamento_esgotado",
+      "3.5": "orcamento_esgotado",
+      "4.0": "orcamento_esgotado",
+      "4.5": "orcamento_esgotado",
+      "5.0": "orcamento_esgotado"
+    },
+    "paginas_base_por_nivel": {
+      "0.5": 1,
+      "1.0": 3,
+      "1.5": 2,
+      "2.0": 10,
+      "2.5": 6,
+      "3.0": 10,
+      "3.5": 5,
+      "4.0": 7,
+      "4.5": 2,
+      "5.0": 2
+    },
+    "paginas_extensao_por_nivel": {
+      "0.5": 2,
+      "1.0": 2,
+      "1.5": 3,
+      "2.0": 1,
+      "2.5": 0,
+      "3.0": 8,
+      "3.5": 0,
+      "4.0": 3,
+      "4.5": 3,
+      "5.0": 2
+    },
+    "extensao_por_bucket": {
+      "negativas": {
+        "paginas_base": 16,
+        "paginas_extensao": 8,
+        "extras_por_nivel": {
+          "0.5": 2,
+          "1.0": 2,
+          "1.5": 3,
+          "2.0": 1
+        },
+        "motivo_parada": "meta_atingida",
+        "n_validas_pos_base": 41,
+        "n_validas_pos_extensao": 50,
+        "meta": 50
+      },
+      "medianas": {
+        "paginas_base": 16,
+        "paginas_extensao": 8,
+        "extras_por_nivel": {
+          "3.0": 8
+        },
+        "motivo_parada": "teto_extensao",
+        "n_validas_pos_base": 39,
+        "n_validas_pos_extensao": 39,
+        "meta": 50
+      },
+      "positivas": {
+        "paginas_base": 16,
+        "paginas_extensao": 8,
+        "extras_por_nivel": {
+          "4.0": 3,
+          "4.5": 3,
+          "5.0": 2
+        },
+        "motivo_parada": "teto_extensao",
+        "n_validas_pos_base": 41,
+        "n_validas_pos_extensao": 49,
+        "meta": 50
+      }
+    },
+    "profundidade_sondagem": {
+      "nivel_sondado": 4.0,
+      "profundidade": 256,
+      "exata": false,
+      "requisicoes": 4,
+      "motivo": "teto_plataforma"
+    },
+    "profundidade_estimada_por_nivel": {
+      "0.5": 5,
+      "1.0": 12,
+      "1.5": 11,
+      "2.0": 43,
+      "2.5": 53,
+      "3.0": 167,
+      "3.5": 194,
+      "4.0": 256,
+      "4.5": 68,
+      "5.0": 74
+    },
+    "janela_temporal": {
+      "total": {
+        "n": 919,
+        "min": "2022-08-05",
+        "max": "2026-08-20",
+        "p5": "2026-06-06",
+        "p50": "2026-08-05",
+        "p95": "2026-08-08"
+      },
+      "por_bucket": {
+        "negativas": {
+          "n": 330,
+          "min": "2022-12-01",
+          "max": "2026-08-08",
+          "p5": "2026-06-22",
+          "p50": "2026-08-01",
+          "p95": "2026-08-07"
+        },
+        "medianas": {
+          "n": 299,
+          "min": "2022-11-04",
+          "max": "2026-08-12",
+          "p5": "2026-07-18",
+          "p50": "2026-08-05",
+          "p95": "2026-08-08"
+        },
+        "positivas": {
+          "n": 290,
+          "min": "2022-08-05",
+          "max": "2026-08-20",
+          "p5": "2026-01-30",
+          "p50": "2026-08-06",
+          "p95": "2026-08-08"
+        }
+      }
+    },
+    "dias_por_100_paginas": {
+      "n_paginas": 24,
+      "pagina_min": 1,
+      "pagina_max": 128,
+      "dias": 17,
+      "dias_por_100_paginas": 13.385826771653543,
+      "paginas_para_1_ano": 2727
+    },
+    "ano_lancamento": 2022,
+    "ano_fonte": "slug",
+    "n_reviews_bruto": 920
+  },
+  "origem_paginas": {
+    "_histograma/talk-to-me-2022.html": "cache",
+    "talk-to-me-2022/pages/by_added/rated_4_page_4.html": "cache",
+    "talk-to-me-2022/pages/by_added/rated_4_page_16.html": "cache",
+    "talk-to-me-2022/pages/by_added/rated_4_page_64.html": "cache",
+    "talk-to-me-2022/pages/by_added/rated_4_page_256.html": "network",
+    "talk-to-me-2022/pages/by_added/rated_0_5_page_1.html": "cache",
+    "talk-to-me-2022/pages/by_added/rated_1_page_1.html": "cache",
+    "talk-to-me-2022/pages/by_added/rated_1_page_2.html": "cache",
+    "talk-to-me-2022/pages/by_added/rated_1_page_3.html": "cache",
+    "talk-to-me-2022/pages/by_added/rated_1_5_page_1.html": "cache",
+    "talk-to-me-2022/pages/by_added/rated_1_5_page_2.html": "cache",
+    "talk-to-me-2022/fulltext/viewing_1436709433.html": "cache",
+    "talk-to-me-2022/fulltext/viewing_1432121039.html": "cache",
+    "talk-to-me-2022/pages/by_added/rated_2_page_1.html": "cache",
+    "talk-to-me-2022/pages/by_added/rated_2_page_2.html": "cache",
+    "talk-to-me-2022/pages/by_added/rated_2_page_3.html": "cache",
+    "talk-to-me-2022/pages/by_added/rated_2_page_4.html": "cache",
+    "talk-to-me-2022/pages/by_added/rated_2_page_5.html": "cache",
+    "talk-to-me-2022/pages/by_added/rated_2_page_6.html": "cache",
+    "talk-to-me-2022/pages/by_added/rated_2_page_7.html": "cache",
+    "talk-to-me-2022/pages/by_added/rated_2_page_8.html": "cache",
+    "talk-to-me-2022/pages/by_added/rated_2_page_11.html": "cache",
+    "talk-to-me-2022/pages/by_added/rated_2_page_22.html": "network",
+    "talk-to-me-2022/fulltext/viewing_1435696532.html": "cache",
+    "talk-to-me-2022/fulltext/viewing_1435393449.html": "cache",
+    "talk-to-me-2022/fulltext/viewing_1429269629.html": "cache",
+    "talk-to-me-2022/pages/by_added/rated_2_5_page_1.html": "cache",
+    "talk-to-me-2022/pages/by_added/rated_2_5_page_2.html": "cache",
+    "talk-to-me-2022/pages/by_added/rated_2_5_page_3.html": "cache",
+    "talk-to-me-2022/pages/by_added/rated_2_5_page_4.html": "cache",
+    "talk-to-me-2022/pages/by_added/rated_2_5_page_13.html": "network",
+    "talk-to-me-2022/pages/by_added/rated_2_5_page_26.html": "network",
+    "talk-to-me-2022/fulltext/viewing_1439222123.html": "cache",
+    "talk-to-me-2022/fulltext/viewing_1426125512.html": "cache",
+    "talk-to-me-2022/pages/by_added/rated_3_page_1.html": "cache",
+    "talk-to-me-2022/pages/by_added/rated_3_page_2.html": "cache",
+    "talk-to-me-2022/pages/by_added/rated_3_page_3.html": "cache",
+    "talk-to-me-2022/pages/by_added/rated_3_page_4.html": "cache",
+    "talk-to-me-2022/pages/by_added/rated_3_page_5.html": "cache",
+    "talk-to-me-2022/pages/by_added/rated_3_page_6.html": "cache",
+    "talk-to-me-2022/pages/by_added/rated_3_page_7.html": "cache",
+    "talk-to-me-2022/pages/by_added/rated_3_page_8.html": "cache",
+    "talk-to-me-2022/pages/by_added/rated_3_page_42.html": "network",
+    "talk-to-me-2022/pages/by_added/rated_3_page_84.html": "network",
+    "talk-to-me-2022/fulltext/viewing_1436100848.html": "cache",
+    "talk-to-me-2022/fulltext/viewing_1435465360.html": "cache",
+    "talk-to-me-2022/fulltext/viewing_1417506870.html": "network",
+    "talk-to-me-2022/pages/by_added/rated_3_5_page_1.html": "cache",
+    "talk-to-me-2022/pages/by_added/rated_3_5_page_2.html": "cache",
+    "talk-to-me-2022/pages/by_added/rated_3_5_page_3.html": "cache",
+    "talk-to-me-2022/pages/by_added/rated_3_5_page_4.html": "cache",
+    "talk-to-me-2022/pages/by_added/rated_3_5_page_48.html": "network",
+    "talk-to-me-2022/pages/by_added/rated_4_page_1.html": "cache",
+    "talk-to-me-2022/pages/by_added/rated_4_page_2.html": "cache",
+    "talk-to-me-2022/pages/by_added/rated_4_page_3.html": "cache",
+    "talk-to-me-2022/pages/by_added/rated_4_page_5.html": "cache",
+    "talk-to-me-2022/pages/by_added/rated_4_page_128.html": "network",
+    "talk-to-me-2022/fulltext/viewing_1438944296.html": "cache",
+    "talk-to-me-2022/fulltext/viewing_1437728020.html": "cache",
+    "talk-to-me-2022/pages/by_added/rated_4_5_page_1.html": "cache",
+    "talk-to-me-2022/pages/by_added/rated_4_5_page_2.html": "cache",
+    "talk-to-me-2022/pages/by_added/rated_5_page_1.html": "cache",
+    "talk-to-me-2022/pages/by_added/rated_5_page_2.html": "cache",
+    "talk-to-me-2022/pages/by_added/rated_1_5_page_3.html": "cache",
+    "talk-to-me-2022/pages/by_added/rated_1_5_page_4.html": "cache",
+    "talk-to-me-2022/pages/by_added/rated_1_5_page_5.html": "cache",
+    "talk-to-me-2022/fulltext/viewing_1421460960.html": "cache",
+    "talk-to-me-2022/pages/by_added/rated_1_page_4.html": "cache",
+    "talk-to-me-2022/fulltext/viewing_1421734451.html": "cache",
+    "talk-to-me-2022/pages/by_added/rated_0_5_page_2.html": "cache",
+    "talk-to-me-2022/pages/by_added/rated_2_page_9.html": "cache",
+    "talk-to-me-2022/pages/by_added/rated_1_page_5.html": "cache",
+    "talk-to-me-2022/pages/by_added/rated_0_5_page_3.html": "cache",
+    "talk-to-me-2022/pages/by_added/rated_3_page_9.html": "cache",
+    "talk-to-me-2022/fulltext/viewing_1435009320.html": "cache",
+    "talk-to-me-2022/pages/by_added/rated_3_page_10.html": "cache",
+    "talk-to-me-2022/pages/by_added/rated_3_page_11.html": "cache",
+    "talk-to-me-2022/pages/by_added/rated_3_page_12.html": "cache",
+    "talk-to-me-2022/pages/by_added/rated_3_page_13.html": "cache",
+    "talk-to-me-2022/pages/by_added/rated_3_page_14.html": "cache",
+    "talk-to-me-2022/fulltext/viewing_1432408751.html": "cache",
+    "talk-to-me-2022/pages/by_added/rated_3_page_15.html": "cache",
+    "talk-to-me-2022/fulltext/viewing_1432016380.html": "cache",
+    "talk-to-me-2022/pages/by_added/rated_3_page_16.html": "cache",
+    "talk-to-me-2022/pages/by_added/rated_4_5_page_3.html": "cache",
+    "talk-to-me-2022/pages/by_added/rated_4_5_page_4.html": "cache",
+    "talk-to-me-2022/pages/by_added/rated_5_page_3.html": "cache",
+    "talk-to-me-2022/pages/by_added/rated_4_5_page_5.html": "cache",
+    "talk-to-me-2022/pages/by_added/rated_5_page_4.html": "network",
+    "talk-to-me-2022/fulltext/viewing_1459408964.html": "network",
+    "talk-to-me-2022/pages/by_added/rated_4_page_6.html": "cache",
+    "talk-to-me-2022/pages/by_added/rated_4_page_7.html": "cache",
+    "talk-to-me-2022/fulltext/viewing_1436612743.html": "cache",
+    "talk-to-me-2022/pages/by_added/rated_4_page_8.html": "cache",
+    "talk-to-me-2022/fulltext/viewing_1437238381.html": "cache"
+  },
+  "buckets": [
+    {
+      "bucket": "negativas",
+      "alvo": 40,
+      "modo": "completo",
+      "estado_piso": "completa",
+      "n_validas": 40,
+      "share_real": 8,
+      "composicao_alvo": {
+        "0.5": 3,
+        "1.0": 7,
+        "1.5": 6,
+        "2.0": 24
+      },
+      "composicao_atingida": {
+        "0.5": 3,
+        "1.0": 7,
+        "1.5": 6,
+        "2.0": 24
+      },
+      "cascata_por_degrau": {
+        "150": 40
+      },
+      "deficit_redistribuido": 0,
+      "distribuicao_pagina_origem": {
+        "n": 40,
+        "min": 1,
+        "max": 15,
+        "p5": 1,
+        "p50": 5,
+        "p95": 15,
+        "fracao_profunda": 0.5
+      },
+      "janela_amostra": {
+        "n": 40,
+        "min": "2023-08-26",
+        "max": "2026-08-07",
+        "p5": "2026-07-18",
+        "p50": "2026-08-01",
+        "p95": "2026-08-07"
+      },
+      "niveis": [
+        {
+          "nivel": 0.5,
+          "n_validas": 3,
+          "n_alvo": 3,
+          "n_brutas": 33,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 0,
+          "n_descartadas_curtas": 30,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 0,
+          "motivos_descarte": {
+            "truncada_sem_texto": 0,
+            "spoiler": 0,
+            "abaixo_min_chars": 30,
+            "excedente_cota": 0,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 3
+        },
+        {
+          "nivel": 1.0,
+          "n_validas": 7,
+          "n_alvo": 7,
+          "n_brutas": 46,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 1,
+          "n_descartadas_curtas": 37,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 1,
+          "motivos_descarte": {
+            "truncada_sem_texto": 1,
+            "spoiler": 1,
+            "abaixo_min_chars": 37,
+            "excedente_cota": 0,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 5
+        },
+        {
+          "nivel": 1.5,
+          "n_validas": 6,
+          "n_alvo": 6,
+          "n_brutas": 56,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 3,
+          "n_descartadas_curtas": 41,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 1,
+          "motivos_descarte": {
+            "truncada_sem_texto": 1,
+            "spoiler": 3,
+            "abaixo_min_chars": 41,
+            "excedente_cota": 5,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 5
+        },
+        {
+          "nivel": 2.0,
+          "n_validas": 24,
+          "n_alvo": 24,
+          "n_brutas": 195,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 5,
+          "n_descartadas_curtas": 161,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 0,
+          "motivos_descarte": {
+            "truncada_sem_texto": 0,
+            "spoiler": 5,
+            "abaixo_min_chars": 161,
+            "excedente_cota": 5,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 11
+        }
+      ],
+      "temas": [
+        {
+          "tema": "Protagonista irritante e decisões idiotas",
+          "mencoes_aproximadas": 15,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "A protagonista é insuportável e age de forma egoísta, colocando a vida dos amigos em risco apenas para satisfazer seus desejos, o que torna a experiência frustrante.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Roteiro fraco e previsível",
+          "mencoes_aproximadas": 12,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "A trama tem ideias interessantes, mas não são desenvolvidas, deixando pontas soltas e um desfecho que parece improvisado.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Subaproveitamento do potencial da premissa",
+          "mencoes_aproximadas": 10,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "A premissa da mão possuída oferecia um grande potencial para explorar temas como luto e vício, mas o filme não aproveita e se perde em subtramas.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Falta de terror e ritmo irregular",
+          "mencoes_aproximadas": 8,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "O filme não assusta como deveria, aposta em sustos baratos e tem momentos tediosos, não funcionando como terror.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Diálogos e tom juvenil artificiais",
+          "mencoes_aproximadas": 5,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "As piadas e gírias usadas parecem forçadas, como se o roteirista tentasse imitar a linguagem jovem sem naturalidade.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Atuações medianas",
+          "mencoes_aproximadas": 5,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "Além da protagonista, o elenco não convence e falta carisma, deixando as cenas mornas.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        }
+      ],
+      "observacao_geral": "As reviews negativas apontam uma premissa promissora, mas criticam a execução, especialmente a protagonista irritante e o roteiro mal desenvolvido. Para este grupo, o filme falha como terror e se perde em subtramas.",
+      "idioma_invalido": false,
+      "escopo_suspeito": false
+    },
+    {
+      "bucket": "medianas",
+      "alvo": 40,
+      "modo": "reduzido",
+      "estado_piso": "completa",
+      "n_validas": 39,
+      "share_real": 25,
+      "composicao_alvo": {
+        "2.5": 10,
+        "3.0": 30
+      },
+      "composicao_atingida": {
+        "2.5": 16,
+        "3.0": 23
+      },
+      "cascata_por_degrau": {
+        "150": 39
+      },
+      "deficit_redistribuido": 6,
+      "distribuicao_pagina_origem": {
+        "n": 39,
+        "min": 1,
+        "max": 84,
+        "p5": 1,
+        "p50": 8,
+        "p95": 42,
+        "fracao_profunda": 0.5384615384615384
+      },
+      "janela_amostra": {
+        "n": 39,
+        "min": "2024-09-19",
+        "max": "2026-08-12",
+        "p5": "2026-07-31",
+        "p50": "2026-08-05",
+        "p95": "2026-08-11"
+      },
+      "niveis": [
+        {
+          "nivel": 2.5,
+          "n_validas": 16,
+          "n_alvo": 10,
+          "n_brutas": 88,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 0,
+          "n_descartadas_curtas": 67,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 5,
+          "motivos_descarte": {
+            "truncada_sem_texto": 5,
+            "spoiler": 0,
+            "abaixo_min_chars": 67,
+            "excedente_cota": 0,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 6
+        },
+        {
+          "nivel": 3.0,
+          "n_validas": 23,
+          "n_alvo": 30,
+          "n_brutas": 211,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 3,
+          "n_descartadas_curtas": 182,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 3,
+          "motivos_descarte": {
+            "truncada_sem_texto": 3,
+            "spoiler": 3,
+            "abaixo_min_chars": 182,
+            "excedente_cota": 0,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 18
+        }
+      ],
+      "temas": [
+        {
+          "tema": "Premissa criativa, execução irregular",
+          "mencoes_aproximadas": 15,
+          "n_reviews_analisadas": 39,
+          "exemplo_parafraseado": "Vários espectadores elogiaram a ideia original da mão embalsamada e do jogo de possessão, mas acharam que o desenvolvimento e a execução não corresponderam ao potencial, resultando em uma experiência apenas mediana.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Ritmo lento e arrastado",
+          "mencoes_aproximadas": 10,
+          "n_reviews_analisadas": 39,
+          "exemplo_parafraseado": "Muitos comentaram que o filme demora a engrenar, especialmente na primeira metade, e que isso prejudica o ritmo e o envolvimento com a história.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Atuações elogiadas, personagens irritantes",
+          "mencoes_aproximadas": 9,
+          "n_reviews_analisadas": 39,
+          "exemplo_parafraseado": "A atuação da protagonista foi amplamente elogiada, mas boa parte dos espectadores achou os personagens, especialmente os amigos, imaturos e irritantes, o que gerou frustração.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Sustos e atmosfera: mais perturbador que assustador",
+          "mencoes_aproximadas": 8,
+          "n_reviews_analisadas": 39,
+          "exemplo_parafraseado": "Apesar de não ser considerado um filme muito assustador, muitos notaram que ele cria uma atmosfera perturbadora e desconfortável, com cenas de possessão e body horror bem executadas.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Trama sobre luto e solidão",
+          "mencoes_aproximadas": 7,
+          "n_reviews_analisadas": 39,
+          "exemplo_parafraseado": "O filme aborda temas como luto, solidão e dependência, e alguns espectadores gostaram dessa profundidade, embora achem que não foi bem integrada à trama principal.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Final ambíguo e insatisfatório",
+          "mencoes_aproximadas": 7,
+          "n_reviews_analisadas": 39,
+          "exemplo_parafraseado": "O final dividiu opiniões: alguns acharam inteligente e bem amarrado, enquanto outros ficaram confusos e frustrados com a falta de respostas, achando o desfecho anticlimático.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        }
+      ],
+      "observacao_geral": "As reviews medianas apontam que o filme tem uma premissa criativa e boa atuação, mas a execução irregular, com ritmo lento e personagens irritantes, impede que alcance todo o seu potencial. O final é um ponto de controvérsia, dividindo opiniões entre os que apreciam sua ambiguidade e os que o consideram insatisfatório.",
+      "idioma_invalido": false,
+      "escopo_suspeito": false
+    },
+    {
+      "bucket": "positivas",
+      "alvo": 40,
+      "modo": "completo",
+      "estado_piso": "completa",
+      "n_validas": 40,
+      "share_real": 67,
+      "composicao_alvo": {
+        "3.5": 13,
+        "4.0": 17,
+        "4.5": 5,
+        "5.0": 5
+      },
+      "composicao_atingida": {
+        "3.5": 13,
+        "4.0": 17,
+        "4.5": 5,
+        "5.0": 5
+      },
+      "cascata_por_degrau": {
+        "150": 40
+      },
+      "deficit_redistribuido": 0,
+      "distribuicao_pagina_origem": {
+        "n": 40,
+        "min": 1,
+        "max": 64,
+        "p5": 1,
+        "p50": 5,
+        "p95": 48,
+        "fracao_profunda": 0.6
+      },
+      "janela_amostra": {
+        "n": 40,
+        "min": "2022-08-05",
+        "max": "2026-08-20",
+        "p5": "2025-03-29",
+        "p50": "2026-08-06",
+        "p95": "2026-08-08"
+      },
+      "niveis": [
+        {
+          "nivel": 3.5,
+          "n_validas": 13,
+          "n_alvo": 13,
+          "n_brutas": 93,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 6,
+          "n_descartadas_curtas": 72,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 0,
+          "motivos_descarte": {
+            "truncada_sem_texto": 0,
+            "spoiler": 6,
+            "abaixo_min_chars": 72,
+            "excedente_cota": 2,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 5
+        },
+        {
+          "nivel": 4.0,
+          "n_validas": 17,
+          "n_alvo": 17,
+          "n_brutas": 112,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 3,
+          "n_descartadas_curtas": 89,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 1,
+          "motivos_descarte": {
+            "truncada_sem_texto": 1,
+            "spoiler": 3,
+            "abaixo_min_chars": 89,
+            "excedente_cota": 2,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 10
+        },
+        {
+          "nivel": 4.5,
+          "n_validas": 5,
+          "n_alvo": 5,
+          "n_brutas": 39,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 1,
+          "n_descartadas_curtas": 31,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 0,
+          "motivos_descarte": {
+            "truncada_sem_texto": 0,
+            "spoiler": 1,
+            "abaixo_min_chars": 31,
+            "excedente_cota": 2,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 5
+        },
+        {
+          "nivel": 5.0,
+          "n_validas": 5,
+          "n_alvo": 5,
+          "n_brutas": 46,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 3,
+          "n_descartadas_curtas": 36,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 0,
+          "motivos_descarte": {
+            "truncada_sem_texto": 0,
+            "spoiler": 3,
+            "abaixo_min_chars": 36,
+            "excedente_cota": 2,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 4
+        }
+      ],
+      "temas": [
+        {
+          "tema": "Metáfora do vício e autodestruição",
+          "mencoes_aproximadas": 15,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "Várias análises interpretam a trama como uma alegoria clara para o uso de drogas, destacando como o ritual da mão representa a sedução e as consequências devastadoras da dependência, consumindo aqueles que buscam uma fuga da dor.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Atuação de Sophie Wilde",
+          "mencoes_aproximadas": 12,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "A performance de Sophie Wilde é amplamente elogiada por transmitir vulnerabilidade e deterioração emocional de forma convincente, elevando o filme com sua presença intensa e subtil.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Efeitos práticos e maquiagem",
+          "mencoes_aproximadas": 10,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "O trabalho de maquiagem e os efeitos práticos são destacados como excepcionais, com cenas grotescas e perturbadoras que deixam uma impressão duradoura.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Personagens exasperantes e decisões irracionais",
+          "mencoes_aproximadas": 9,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "Muitos comentam que os protagonistas tomam decisões tão estúpidas que chegam a irritar, mas isso também gera um entretenimento mórbido enquanto a audiência julga cada escolha errada.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Terror genuíno e atmosfera opressiva",
+          "mencoes_aproximadas": 8,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "O filme é elogiado por criar uma sensação constante de desconforto e medo que não depende de sustos fáceis, mas de uma tensão lenta e opressiva que permanece após o término.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Final redondo e simbólico",
+          "mencoes_aproximadas": 6,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "O desfecho é mencionado como satisfatório e bem amarrado, com algumas análises apontando para um paralelo com uma cena anterior que adiciona profundidade à conclusão.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        }
+      ],
+      "observacao_geral": "As reviews positivas destacam a abordagem original do terror, equilibrada com uma alegoria sobre luto e dependência, e a atuação marcante de Sophie Wilde, apesar das críticas recorrentes ao comportamento irracional das personagens.",
+      "idioma_invalido": false,
+      "escopo_suspeito": false
+    }
+  ],
+  "eixos": {
+    "taxonomia_id": "ebab2667de74",
+    "margem_lift_pp": 20,
+    "contraste": "valorativo",
+    "linhas": [
+      {
+        "eixo": "ritmo",
+        "por_bucket": {
+          "negativas": {
+            "mencoes": 8,
+            "de_n": 33,
+            "freq_pct": 24.2,
+            "lift_pp": -14.5,
+            "tema": "Falta de terror e ritmo irregular",
+            "exemplo_parafraseado": "O filme não assusta como deveria, aposta em sustos baratos e tem momentos tediosos, não funcionando como terror.",
+            "temas_no_mesmo_eixo": []
+          },
+          "medianas": {
+            "mencoes": 12,
+            "de_n": 31,
+            "freq_pct": 38.7,
+            "lift_pp": 14.5,
+            "tema": "Ritmo lento e arrastado",
+            "exemplo_parafraseado": "Muitos comentaram que o filme demora a engrenar, especialmente na primeira metade, e que isso prejudica o ritmo e o envolvimento com a história.",
+            "temas_no_mesmo_eixo": []
+          },
+          "positivas": {
+            "mencoes": 3,
+            "de_n": 33,
+            "freq_pct": 9.1,
+            "lift_pp": -29.6,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          }
+        },
+        "bullet_de": {
+          "negativas": null,
+          "medianas": "frequencia",
+          "positivas": null
+        }
+      },
+      {
+        "eixo": "atuacao",
+        "por_bucket": {
+          "negativas": {
+            "mencoes": 8,
+            "de_n": 33,
+            "freq_pct": 24.2,
+            "lift_pp": 1.7,
+            "tema": "Atuações medianas",
+            "exemplo_parafraseado": "Além da protagonista, o elenco não convence e falta carisma, deixando as cenas mornas.",
+            "temas_no_mesmo_eixo": []
+          },
+          "medianas": {
+            "mencoes": 7,
+            "de_n": 31,
+            "freq_pct": 22.6,
+            "lift_pp": -1.7,
+            "tema": "Atuações elogiadas, personagens irritantes",
+            "exemplo_parafraseado": "A atuação da protagonista foi amplamente elogiada, mas boa parte dos espectadores achou os personagens, especialmente os amigos, imaturos e irritantes, o que gerou frustração.",
+            "temas_no_mesmo_eixo": []
+          },
+          "positivas": {
+            "mencoes": 5,
+            "de_n": 33,
+            "freq_pct": 15.2,
+            "lift_pp": -9.1,
+            "tema": "Atuação de Sophie Wilde",
+            "exemplo_parafraseado": "A performance de Sophie Wilde é amplamente elogiada por transmitir vulnerabilidade e deterioração emocional de forma convincente, elevando o filme com sua presença intensa e subtil.",
+            "temas_no_mesmo_eixo": []
+          }
+        },
+        "bullet_de": {
+          "negativas": null,
+          "medianas": null,
+          "positivas": null
+        }
+      },
+      {
+        "eixo": "direcao_imagem",
+        "por_bucket": {
+          "negativas": {
+            "mencoes": 10,
+            "de_n": 33,
+            "freq_pct": 30.3,
+            "lift_pp": 1.3,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "medianas": {
+            "mencoes": 9,
+            "de_n": 31,
+            "freq_pct": 29.0,
+            "lift_pp": -1.3,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "positivas": {
+            "mencoes": 6,
+            "de_n": 33,
+            "freq_pct": 18.2,
+            "lift_pp": -12.1,
+            "tema": "Efeitos práticos e maquiagem",
+            "exemplo_parafraseado": "O trabalho de maquiagem e os efeitos práticos são destacados como excepcionais, com cenas grotescas e perturbadoras que deixam uma impressão duradoura.",
+            "temas_no_mesmo_eixo": []
+          }
+        },
+        "bullet_de": {
+          "negativas": null,
+          "medianas": null,
+          "positivas": null
+        }
+      },
+      {
+        "eixo": "roteiro_estrutura",
+        "por_bucket": {
+          "negativas": {
+            "mencoes": 25,
+            "de_n": 33,
+            "freq_pct": 75.8,
+            "lift_pp": 0.0,
+            "tema": "Protagonista irritante e decisões idiotas",
+            "exemplo_parafraseado": "A protagonista é insuportável e age de forma egoísta, colocando a vida dos amigos em risco apenas para satisfazer seus desejos, o que torna a experiência frustrante.",
+            "temas_no_mesmo_eixo": [
+              "Roteiro fraco e previsível"
+            ]
+          },
+          "medianas": {
+            "mencoes": 22,
+            "de_n": 31,
+            "freq_pct": 71.0,
+            "lift_pp": -4.8,
+            "tema": "Premissa criativa, execução irregular",
+            "exemplo_parafraseado": "Vários espectadores elogiaram a ideia original da mão embalsamada e do jogo de possessão, mas acharam que o desenvolvimento e a execução não corresponderam ao potencial, resultando em uma experiência apenas mediana.",
+            "temas_no_mesmo_eixo": [
+              "Trama sobre luto e solidão",
+              "Final ambíguo e insatisfatório"
+            ]
+          },
+          "positivas": {
+            "mencoes": 25,
+            "de_n": 33,
+            "freq_pct": 75.8,
+            "lift_pp": 0.0,
+            "tema": "Personagens exasperantes e decisões irracionais",
+            "exemplo_parafraseado": "Muitos comentam que os protagonistas tomam decisões tão estúpidas que chegam a irritar, mas isso também gera um entretenimento mórbido enquanto a audiência julga cada escolha errada.",
+            "temas_no_mesmo_eixo": [
+              "Final redondo e simbólico"
+            ]
+          }
+        },
+        "bullet_de": {
+          "negativas": "frequencia",
+          "medianas": "frequencia",
+          "positivas": "frequencia"
+        }
+      },
+      {
+        "eixo": "som_trilha",
+        "por_bucket": {
+          "negativas": {
+            "mencoes": 1,
+            "de_n": 33,
+            "freq_pct": 3.0,
+            "lift_pp": -0.2,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "medianas": {
+            "mencoes": 1,
+            "de_n": 31,
+            "freq_pct": 3.2,
+            "lift_pp": 0.2,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "positivas": {
+            "mencoes": 1,
+            "de_n": 33,
+            "freq_pct": 3.0,
+            "lift_pp": -0.2,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          }
+        },
+        "bullet_de": {
+          "negativas": null,
+          "medianas": null,
+          "positivas": null
+        }
+      },
+      {
+        "eixo": "tom_atmosfera",
+        "por_bucket": {
+          "negativas": {
+            "mencoes": 8,
+            "de_n": 33,
+            "freq_pct": 24.2,
+            "lift_pp": -6.1,
+            "tema": "Diálogos e tom juvenil artificiais",
+            "exemplo_parafraseado": "As piadas e gírias usadas parecem forçadas, como se o roteirista tentasse imitar a linguagem jovem sem naturalidade.",
+            "temas_no_mesmo_eixo": []
+          },
+          "medianas": {
+            "mencoes": 7,
+            "de_n": 31,
+            "freq_pct": 22.6,
+            "lift_pp": -7.7,
+            "tema": "Sustos e atmosfera: mais perturbador que assustador",
+            "exemplo_parafraseado": "Apesar de não ser considerado um filme muito assustador, muitos notaram que ele cria uma atmosfera perturbadora e desconfortável, com cenas de possessão e body horror bem executadas.",
+            "temas_no_mesmo_eixo": []
+          },
+          "positivas": {
+            "mencoes": 10,
+            "de_n": 33,
+            "freq_pct": 30.3,
+            "lift_pp": 6.1,
+            "tema": "Terror genuíno e atmosfera opressiva",
+            "exemplo_parafraseado": "O filme é elogiado por criar uma sensação constante de desconforto e medo que não depende de sustos fáceis, mas de uma tensão lenta e opressiva que permanece após o término.",
+            "temas_no_mesmo_eixo": []
+          }
+        },
+        "bullet_de": {
+          "negativas": null,
+          "medianas": null,
+          "positivas": null
+        }
+      },
+      {
+        "eixo": "impacto_emocional",
+        "por_bucket": {
+          "negativas": {
+            "mencoes": 11,
+            "de_n": 33,
+            "freq_pct": 33.3,
+            "lift_pp": -15.2,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "medianas": {
+            "mencoes": 9,
+            "de_n": 31,
+            "freq_pct": 29.0,
+            "lift_pp": -19.5,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "positivas": {
+            "mencoes": 16,
+            "de_n": 33,
+            "freq_pct": 48.5,
+            "lift_pp": 15.2,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          }
+        },
+        "bullet_de": {
+          "negativas": "frequencia",
+          "medianas": null,
+          "positivas": "frequencia"
+        }
+      },
+      {
+        "eixo": "comparacoes",
+        "por_bucket": {
+          "negativas": {
+            "mencoes": 8,
+            "de_n": 33,
+            "freq_pct": 24.2,
+            "lift_pp": -9.1,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "medianas": {
+            "mencoes": 8,
+            "de_n": 31,
+            "freq_pct": 25.8,
+            "lift_pp": -7.5,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "positivas": {
+            "mencoes": 11,
+            "de_n": 33,
+            "freq_pct": 33.3,
+            "lift_pp": 7.5,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          }
+        },
+        "bullet_de": {
+          "negativas": null,
+          "medianas": null,
+          "positivas": null
+        }
+      },
+      {
+        "eixo": "expectativa",
+        "por_bucket": {
+          "negativas": {
+            "mencoes": 5,
+            "de_n": 33,
+            "freq_pct": 15.2,
+            "lift_pp": -12.1,
+            "tema": "Subaproveitamento do potencial da premissa",
+            "exemplo_parafraseado": "A premissa da mão possuída oferecia um grande potencial para explorar temas como luto e vício, mas o filme não aproveita e se perde em subtramas.",
+            "temas_no_mesmo_eixo": []
+          },
+          "medianas": {
+            "mencoes": 7,
+            "de_n": 31,
+            "freq_pct": 22.6,
+            "lift_pp": -4.7,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "positivas": {
+            "mencoes": 9,
+            "de_n": 33,
+            "freq_pct": 27.3,
+            "lift_pp": 4.7,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          }
+        },
+        "bullet_de": {
+          "negativas": null,
+          "medianas": null,
+          "positivas": null
+        }
+      },
+      {
+        "eixo": "critica_social",
+        "por_bucket": {
+          "negativas": {
+            "mencoes": 3,
+            "de_n": 33,
+            "freq_pct": 9.1,
+            "lift_pp": -6.1,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "medianas": {
+            "mencoes": 1,
+            "de_n": 31,
+            "freq_pct": 3.2,
+            "lift_pp": -11.9,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "positivas": {
+            "mencoes": 5,
+            "de_n": 33,
+            "freq_pct": 15.2,
+            "lift_pp": 6.1,
+            "tema": "Metáfora do vício e autodestruição",
+            "exemplo_parafraseado": "Várias análises interpretam a trama como uma alegoria clara para o uso de drogas, destacando como o ritual da mão representa a sedução e as consequências devastadoras da dependência, consumindo aqueles que buscam uma fuga da dor.",
+            "temas_no_mesmo_eixo": []
+          }
+        },
+        "bullet_de": {
+          "negativas": null,
+          "medianas": null,
+          "positivas": null
+        }
+      }
+    ],
+    "fonte_classificacao": {
+      "arquivo": "resultado/votacao-3/consenso.jsonl",
+      "criterio": "votacao_3_consenso_2_de_3",
+      "por_bucket": {
+        "negativas": {
+          "n_classificadas": 33,
+          "n_analisadas": 40,
+          "sobreposicao_com_analisadas": 33
+        },
+        "medianas": {
+          "n_classificadas": 31,
+          "n_analisadas": 39,
+          "sobreposicao_com_analisadas": 31
+        },
+        "positivas": {
+          "n_classificadas": 33,
+          "n_analisadas": 40,
+          "sobreposicao_com_analisadas": 33
+        }
+      }
+    },
+    "rotulagem": {
+      "n_chamadas": 3,
+      "falharam": [],
+      "fora_da_taxonomia": {},
+      "houve_retentativa": []
+    },
+    "spec_version": "1.9.16",
+    "verificador": {
+      "aplicado": true,
+      "variante": "V2_alvo",
+      "passada": 1,
+      "eixo": "impacto_emocional",
+      "n_removidas_no_corpus": 1654
+    }
+  },
+  "narrativa": "Dirigido por George Williams e lançado em 2022, o drama The Elms Estate: You Can Talk To Me acompanha a trajetória de um homem emocionalmente instável. Em meio às sequelas deixadas pelo término de um relacionamento doloroso, ele tenta se restabelecer enquanto lida com sua psique fragmentada em três partes.\n\nA experiência é conduzida por uma atmosfera perturbadora e de forte teor psicológico. A estrutura apoia-se em um ritmo que oscila entre a introspecção e momentos de maior tensão dramática.\n\nOs grupos debatem essencialmente os mesmos elementos e concordam sobre o que o filme é, divergindo apenas no veredito sobre a sua eficácia. Na maioria das notas (~67%), boa parte destaca a metáfora do vício e da autodestruição, enquanto uma parcela expressiva ressalta a atuação de Sophie Wilde. Além disso, alguns elogiam o trabalho de maquiagem e os efeitos práticos.\n\nEm uma perspectiva intermediária, presente em uma parcela das notas (~25%), muitos apontam que a premissa é criativa, mas a execução se mostra irregular. Para esse segmento, vários apontam um ritmo lento e arrastado, e uma fatia menor reconhece o valor das atuações, embora critique atitudes irritantes das personagens.\n\nSob uma ótica desfavorável, expressa em uma fração mínima das notas (~8%), um número considerável critica as decisões tolas da protagonista. Nesse mesmo grupo, muitos qualificam o roteiro como fraco e previsível, enquanto parte deles aponta um subaproveitamento do potencial da premissa.",
+  "verificacao_narrativa": {
+    "quantificador_fora_de_faixa": [],
+    "quantificador_repetido": [],
+    "paragrafos": {
+      "n_paragrafos": 5,
+      "minimo": 3,
+      "insuficientes": false,
+      "longos": []
+    },
+    "n_paragrafos": 5,
+    "paragrafos_insuficientes": false,
+    "paragrafos_longos": [],
+    "grupos_sem_paragrafo_proprio": [],
+    "movimento1_e_movimento2_no_mesmo_paragrafo": false,
+    "formato_invalido": false,
+    "numeros_inventados": [],
+    "rotulos_faltando": [],
+    "ordem_incorreta": false,
+    "vocabulario_peso": false,
+    "resenha_speak": [],
+    "n_resenha_speak": 0,
+    "n_flags": 0
+  },
+  "narrativa_selecao": {
+    "provider": "gemini",
+    "modelo": "gemini-3.7-flash",
+    "n_candidatos": 3,
+    "n_chamadas": 3,
+    "indice_escolhido": 0,
+    "motivo": "melhor_entre_limpos",
+    "criterio_decisivo": "empate",
+    "candidatos": [
+      {
+        "indice": 0,
+        "n_flags": 0,
+        "cliches": 0,
+        "repeticao_max": 2,
+        "ritmo": 5,
+        "cobertura": 1.0,
+        "eliminado": false
+      },
+      {
+        "indice": 1,
+        "n_flags": 0,
+        "cliches": 0,
+        "repeticao_max": 2,
+        "ritmo": 4,
+        "cobertura": 1.0,
+        "eliminado": false
+      },
+      {
+        "indice": 2,
+        "n_flags": 0,
+        "cliches": 0,
+        "repeticao_max": 2,
+        "ritmo": 5,
+        "cobertura": 1.0,
+        "eliminado": false
+      }
+    ],
+    "retry": null,
+    "uso": {
+      "prompt_tokens": 9888,
+      "completion_tokens": 1059,
+      "cache_hit_tokens": 0,
+      "cache_miss_tokens": 9888
+    },
+    "latencia_s": 20.06
+  }
+}

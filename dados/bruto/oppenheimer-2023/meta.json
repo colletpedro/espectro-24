@@ -1,7 +1,7 @@
 {
   "slug": "oppenheimer-2023",
-  "coletado_em": "2026-08-08T08:51:58.126635+00:00",
-  "versao_coletor": "1.9.0",
+  "coletado_em": "2026-08-23T01:03:12.262059+00:00",
+  "versao_coletor": "1.9.6",
   "ordenacao_usada": "by/added",
   "histograma_bruto": {
     "0.5": 10847,
@@ -29,9 +29,9 @@
   },
   "paginas_gastas_por_nivel": {
     "0.5": 1,
-    "1.0": 3,
+    "1.0": 4,
     "1.5": 2,
-    "2.0": 10,
+    "2.0": 15,
     "2.5": 6,
     "3.0": 10,
     "3.5": 2,
@@ -53,10 +53,10 @@
   ],
   "contagem_bruta_por_nivel": {
     "0.5": 12,
-    "1.0": 36,
+    "1.0": 39,
     "1.5": 24,
-    "2.0": 120,
-    "2.5": 72,
+    "2.0": 153,
+    "2.5": 60,
     "3.0": 120,
     "3.5": 24,
     "4.0": 60,
@@ -67,13 +67,13 @@
     "0.5": 3,
     "1.0": 7,
     "1.5": 8,
-    "2.0": 26,
-    "2.5": 17,
-    "3.0": 31,
+    "2.0": 34,
+    "2.5": 14,
+    "3.0": 26,
     "3.5": 6,
     "4.0": 16,
-    "4.5": 11,
-    "5.0": 23
+    "4.5": 12,
+    "5.0": 20
   },
   "motivo_parada_por_nivel": {
     "0.5": "orcamento_esgotado",
@@ -87,26 +87,101 @@
     "4.5": "orcamento_esgotado",
     "5.0": "orcamento_esgotado"
   },
+  "paginas_base_por_nivel": {
+    "0.5": 1,
+    "1.0": 3,
+    "1.5": 2,
+    "2.0": 10,
+    "2.5": 6,
+    "3.0": 10,
+    "3.5": 2,
+    "4.0": 5,
+    "4.5": 4,
+    "5.0": 5
+  },
+  "paginas_extensao_por_nivel": {
+    "0.5": 0,
+    "1.0": 1,
+    "1.5": 0,
+    "2.0": 5,
+    "2.5": 0,
+    "3.0": 0,
+    "3.5": 0,
+    "4.0": 0,
+    "4.5": 0,
+    "5.0": 0
+  },
+  "extensao_por_bucket": {
+    "negativas": {
+      "paginas_base": 16,
+      "paginas_extensao": 6,
+      "extras_por_nivel": {
+        "1.0": 1,
+        "2.0": 5
+      },
+      "motivo_parada": "meta_atingida",
+      "n_validas_pos_base": 44,
+      "n_validas_pos_extensao": 52,
+      "meta": 50
+    },
+    "medianas": {
+      "paginas_base": 16,
+      "paginas_extensao": 0,
+      "extras_por_nivel": {},
+      "motivo_parada": "meta_atingida",
+      "n_validas_pos_base": 50,
+      "n_validas_pos_extensao": 50,
+      "meta": 50
+    },
+    "positivas": {
+      "paginas_base": 16,
+      "paginas_extensao": 0,
+      "extras_por_nivel": {},
+      "motivo_parada": "meta_atingida",
+      "n_validas_pos_base": 63,
+      "n_validas_pos_extensao": 63,
+      "meta": 50
+    }
+  },
+  "profundidade_sondagem": {
+    "nivel_sondado": 4.0,
+    "profundidade": 256,
+    "exata": false,
+    "requisicoes": 4,
+    "motivo": "teto_plataforma"
+  },
+  "profundidade_estimada_por_nivel": {
+    "0.5": 2,
+    "1.0": 6,
+    "1.5": 3,
+    "2.0": 19,
+    "2.5": 17,
+    "3.0": 84,
+    "3.5": 88,
+    "4.0": 256,
+    "4.5": 162,
+    "5.0": 254
+  },
   "janela_temporal": {
     "total": {
-      "n": 576,
-      "min": "2023-01-01",
-      "max": "2026-08-08",
-      "p5": "2023-08-03",
+      "n": 672,
+      "min": "1945-08-06",
+      "max": "2026-08-11",
+      "p5": "2023-08-01",
       "p50": "2026-08-06",
       "p95": "2026-08-08"
     },
     "por_bucket": {
       "negativas": {
-        "n": 192,
-        "min": "2023-01-01",
-        "max": "2026-08-08",
-        "p5": "2023-07-29",
-        "p50": "2026-08-05",
-        "p95": "2026-08-07"
+        "n": 228,
+        "min": "1945-08-06",
+        "max": "2026-08-11",
+        "p5": "2023-07-25",
+        "p50": "2026-08-04",
+        "p95": "2026-08-08"
       },
       "medianas": {
-        "n": 192,
+        "n": 216,
         "min": "2023-07-16",
         "max": "2026-08-08",
         "p5": "2023-08-07",
@@ -114,7 +189,7 @@
         "p95": "2026-08-07"
       },
       "positivas": {
-        "n": 192,
+        "n": 228,
         "min": "2023-01-11",
         "max": "2026-08-08",
         "p5": "2023-12-07",
@@ -124,16 +199,16 @@
     }
   },
   "dias_por_100_paginas": {
-    "n_paginas": 10,
+    "n_paginas": 18,
     "pagina_min": 1,
-    "pagina_max": 12,
-    "dias": 5,
-    "dias_por_100_paginas": 45.45454545454545,
-    "paginas_para_1_ano": 803
+    "pagina_max": 64,
+    "dias": 3,
+    "dias_por_100_paginas": 4.761904761904762,
+    "paginas_para_1_ano": 7665
   },
   "dias_por_100_paginas_por_nivel": {
     "1.0": {
-      "n_paginas": 3,
+      "n_paginas": 4,
       "pagina_min": 1,
       "pagina_max": 4,
       "dias": 4,
@@ -149,12 +224,12 @@
       "paginas_para_1_ano": 182
     },
     "2.0": {
-      "n_paginas": 10,
+      "n_paginas": 14,
       "pagina_min": 1,
-      "pagina_max": 12,
-      "dias": 6,
-      "dias_por_100_paginas": 54.54545454545455,
-      "paginas_para_1_ano": 669
+      "pagina_max": 15,
+      "dias": -3,
+      "dias_por_100_paginas": -21.428571428571427,
+      "paginas_para_1_ano": null
     },
     "2.5": {
       "n_paginas": 6,
@@ -165,12 +240,12 @@
       "paginas_para_1_ano": 639
     },
     "3.0": {
-      "n_paginas": 10,
+      "n_paginas": 12,
       "pagina_min": 1,
-      "pagina_max": 12,
-      "dias": 2,
-      "dias_por_100_paginas": 18.181818181818183,
-      "paginas_para_1_ano": 2008
+      "pagina_max": 42,
+      "dias": 7,
+      "dias_por_100_paginas": 17.073170731707318,
+      "paginas_para_1_ano": 2138
     },
     "3.5": {
       "n_paginas": 2,
@@ -181,28 +256,28 @@
       "paginas_para_1_ano": null
     },
     "4.0": {
-      "n_paginas": 5,
+      "n_paginas": 6,
       "pagina_min": 1,
-      "pagina_max": 6,
-      "dias": 1,
-      "dias_por_100_paginas": 20.0,
-      "paginas_para_1_ano": 1825
+      "pagina_max": 64,
+      "dias": 5,
+      "dias_por_100_paginas": 7.936507936507937,
+      "paginas_para_1_ano": 4599
     },
     "4.5": {
-      "n_paginas": 4,
-      "pagina_min": 1,
-      "pagina_max": 5,
-      "dias": 0,
-      "dias_por_100_paginas": 0.0,
-      "paginas_para_1_ano": null
-    },
-    "5.0": {
       "n_paginas": 5,
       "pagina_min": 1,
-      "pagina_max": 6,
+      "pagina_max": 40,
       "dias": 1,
-      "dias_por_100_paginas": 20.0,
-      "paginas_para_1_ano": 1825
+      "dias_por_100_paginas": 2.5641025641025643,
+      "paginas_para_1_ano": 14235
+    },
+    "5.0": {
+      "n_paginas": 6,
+      "pagina_min": 1,
+      "pagina_max": 64,
+      "dias": 2,
+      "dias_por_100_paginas": 3.1746031746031744,
+      "paginas_para_1_ano": 11498
     }
   },
   "ano_lancamento": 2023,

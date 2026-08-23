@@ -1,0 +1,1347 @@
+{
+  "slug": "aftersun",
+  "data_coleta": "2026-08-23T00:39:26.569358+00:00",
+  "spec_version": "1.9.16",
+  "total_reviews_observadas": 563,
+  "reviews_url": "https://letterboxd.com/film/aftersun/reviews/",
+  "ficha": {
+    "titulo": "Aftersun",
+    "sinopse_oficial": "Em um resort decadente, Sophie, de 11 anos, aproveita o raro tempo com seu pai amoroso e idealista, Calum. Vinte anos depois, as lembranças de Sophie de suas últimas férias se tornam um retrato poderoso e doloroso do relacionamento deles.",
+    "sinopse_fallback_en": false,
+    "generos": [
+      "Drama"
+    ],
+    "duracao_min": 102,
+    "diretor": "Charlotte Wells",
+    "diretor_transliterado": false,
+    "ano": 2022,
+    "fonte": "tmdb",
+    "ano_fonte": "bruto"
+  },
+  "distribuicao": {
+    "n_notas_total": 1657928,
+    "por_nivel": {
+      "0.5": 3279,
+      "1.0": 7907,
+      "1.5": 5841,
+      "2.0": 27617,
+      "2.5": 32384,
+      "3.0": 126222,
+      "3.5": 167121,
+      "4.0": 443512,
+      "4.5": 291656,
+      "5.0": 552389
+    },
+    "por_bucket": {
+      "negativas": 3,
+      "medianas": 10,
+      "positivas": 88
+    },
+    "fonte": "letterboxd_histograma"
+  },
+  "coleta": {
+    "slug": "aftersun",
+    "coletado_em": "2026-08-09T07:42:09.921200+00:00",
+    "versao_coletor": "1.9.6",
+    "ordenacao_usada": "by/added",
+    "histograma_bruto": {
+      "0.5": 3279,
+      "1.0": 7907,
+      "1.5": 5841,
+      "2.0": 27617,
+      "2.5": 32384,
+      "3.0": 126222,
+      "3.5": 167121,
+      "4.0": 443512,
+      "4.5": 291656,
+      "5.0": 552389
+    },
+    "orcamento_paginas_por_nivel": {
+      "0.5": 1,
+      "1.0": 3,
+      "1.5": 2,
+      "2.0": 10,
+      "2.5": 6,
+      "3.0": 10,
+      "3.5": 2,
+      "4.0": 5,
+      "4.5": 3,
+      "5.0": 6
+    },
+    "paginas_gastas_por_nivel": {
+      "0.5": 1,
+      "1.0": 3,
+      "1.5": 2,
+      "2.0": 10,
+      "2.5": 6,
+      "3.0": 10,
+      "3.5": 2,
+      "4.0": 5,
+      "4.5": 3,
+      "5.0": 6
+    },
+    "paradas_por_limite": [
+      "0.5",
+      "1.0",
+      "1.5",
+      "2.0",
+      "2.5",
+      "3.0",
+      "3.5",
+      "4.0",
+      "4.5",
+      "5.0"
+    ],
+    "contagem_bruta_por_nivel": {
+      "0.5": 12,
+      "1.0": 34,
+      "1.5": 24,
+      "2.0": 117,
+      "2.5": 64,
+      "3.0": 120,
+      "3.5": 24,
+      "4.0": 60,
+      "4.5": 36,
+      "5.0": 72
+    },
+    "contagem_estimada_valida_por_nivel": {
+      "0.5": 4,
+      "1.0": 5,
+      "1.5": 3,
+      "2.0": 42,
+      "2.5": 25,
+      "3.0": 36,
+      "3.5": 5,
+      "4.0": 12,
+      "4.5": 9,
+      "5.0": 15
+    },
+    "motivo_parada_por_nivel": {
+      "0.5": "orcamento_esgotado",
+      "1.0": "orcamento_esgotado",
+      "1.5": "orcamento_esgotado",
+      "2.0": "orcamento_esgotado",
+      "2.5": "orcamento_esgotado",
+      "3.0": "orcamento_esgotado",
+      "3.5": "orcamento_esgotado",
+      "4.0": "orcamento_esgotado",
+      "4.5": "orcamento_esgotado",
+      "5.0": "orcamento_esgotado"
+    },
+    "paginas_base_por_nivel": {
+      "0.5": 1,
+      "1.0": 3,
+      "1.5": 2,
+      "2.0": 10,
+      "2.5": 6,
+      "3.0": 10,
+      "3.5": 2,
+      "4.0": 5,
+      "4.5": 3,
+      "5.0": 6
+    },
+    "paginas_extensao_por_nivel": {
+      "0.5": 0,
+      "1.0": 0,
+      "1.5": 0,
+      "2.0": 0,
+      "2.5": 0,
+      "3.0": 0,
+      "3.5": 0,
+      "4.0": 0,
+      "4.5": 0,
+      "5.0": 0
+    },
+    "extensao_por_bucket": {
+      "negativas": {
+        "paginas_base": 16,
+        "paginas_extensao": 0,
+        "extras_por_nivel": {},
+        "motivo_parada": "meta_atingida",
+        "n_validas_pos_base": 95,
+        "n_validas_pos_extensao": 95,
+        "meta": 50
+      },
+      "medianas": {
+        "paginas_base": 16,
+        "paginas_extensao": 0,
+        "extras_por_nivel": {},
+        "motivo_parada": "meta_atingida",
+        "n_validas_pos_base": 107,
+        "n_validas_pos_extensao": 107,
+        "meta": 50
+      },
+      "positivas": {
+        "paginas_base": 16,
+        "paginas_extensao": 0,
+        "extras_por_nivel": {},
+        "motivo_parada": "meta_atingida",
+        "n_validas_pos_base": 84,
+        "n_validas_pos_extensao": 84,
+        "meta": 50
+      }
+    },
+    "profundidade_sondagem": {
+      "nivel_sondado": 5.0,
+      "profundidade": 256,
+      "exata": false,
+      "requisicoes": 4,
+      "motivo": "teto_plataforma"
+    },
+    "profundidade_estimada_por_nivel": {
+      "0.5": 2,
+      "1.0": 4,
+      "1.5": 3,
+      "2.0": 13,
+      "2.5": 15,
+      "3.0": 58,
+      "3.5": 77,
+      "4.0": 206,
+      "4.5": 135,
+      "5.0": 256
+    },
+    "janela_temporal": {
+      "total": {
+        "n": 908,
+        "min": "2022-05-21",
+        "max": "2026-08-08",
+        "p5": "2022-05-22",
+        "p50": "2026-08-03",
+        "p95": "2026-08-08"
+      },
+      "por_bucket": {
+        "negativas": {
+          "n": 283,
+          "min": "2022-07-17",
+          "max": "2026-08-08",
+          "p5": "2022-09-24",
+          "p50": "2026-07-31",
+          "p95": "2026-08-06"
+        },
+        "medianas": {
+          "n": 282,
+          "min": "2022-05-22",
+          "max": "2026-08-08",
+          "p5": "2022-08-14",
+          "p50": "2026-08-04",
+          "p95": "2026-08-07"
+        },
+        "positivas": {
+          "n": 343,
+          "min": "2022-05-21",
+          "max": "2026-08-08",
+          "p5": "2022-05-21",
+          "p50": "2026-08-07",
+          "p95": "2026-08-08"
+        }
+      }
+    },
+    "dias_por_100_paginas": {
+      "n_paginas": 17,
+      "pagina_min": 1,
+      "pagina_max": 128,
+      "dias": 8,
+      "dias_por_100_paginas": 6.299212598425197,
+      "paginas_para_1_ano": 5794
+    },
+    "ano_lancamento": 2022,
+    "ano_fonte": "letterboxd",
+    "n_reviews_bruto": 908
+  },
+  "origem_paginas": {
+    "_histograma/aftersun.html": "cache",
+    "aftersun/pages/by_added/rated_5_page_4.html": "cache",
+    "aftersun/pages/by_added/rated_5_page_16.html": "cache",
+    "aftersun/pages/by_added/rated_5_page_64.html": "cache",
+    "aftersun/pages/by_added/rated_5_page_256.html": "cache",
+    "aftersun/pages/by_added/rated_0_5_page_1.html": "cache",
+    "aftersun/fulltext/viewing_1435977578.html": "cache",
+    "aftersun/fulltext/viewing_1428788440.html": "cache",
+    "aftersun/pages/by_added/rated_1_page_1.html": "cache",
+    "aftersun/pages/by_added/rated_1_page_2.html": "cache",
+    "aftersun/pages/by_added/rated_1_page_3.html": "cache",
+    "aftersun/fulltext/viewing_1426801524.html": "cache",
+    "aftersun/pages/by_added/rated_1_5_page_1.html": "cache",
+    "aftersun/pages/by_added/rated_1_5_page_2.html": "cache",
+    "aftersun/fulltext/viewing_1421876073.html": "cache",
+    "aftersun/pages/by_added/rated_2_page_1.html": "cache",
+    "aftersun/pages/by_added/rated_2_page_2.html": "cache",
+    "aftersun/pages/by_added/rated_2_page_3.html": "cache",
+    "aftersun/pages/by_added/rated_2_page_4.html": "cache",
+    "aftersun/pages/by_added/rated_2_page_5.html": "cache",
+    "aftersun/pages/by_added/rated_2_page_6.html": "cache",
+    "aftersun/pages/by_added/rated_2_page_7.html": "cache",
+    "aftersun/pages/by_added/rated_2_page_8.html": "cache",
+    "aftersun/pages/by_added/rated_2_page_9.html": "cache",
+    "aftersun/pages/by_added/rated_2_page_10.html": "cache",
+    "aftersun/fulltext/viewing_1438895202.html": "cache",
+    "aftersun/fulltext/viewing_1435470728.html": "cache",
+    "aftersun/fulltext/viewing_1434884785.html": "cache",
+    "aftersun/fulltext/viewing_1433565684.html": "cache",
+    "aftersun/fulltext/viewing_1430732280.html": "cache",
+    "aftersun/fulltext/viewing_1430318006.html": "cache",
+    "aftersun/fulltext/viewing_1430020594.html": "cache",
+    "aftersun/fulltext/viewing_1426632661.html": "cache",
+    "aftersun/fulltext/viewing_1425915593.html": "cache",
+    "aftersun/fulltext/viewing_1425689008.html": "cache",
+    "aftersun/fulltext/viewing_1418189165.html": "cache",
+    "aftersun/pages/by_added/rated_2_5_page_1.html": "cache",
+    "aftersun/pages/by_added/rated_2_5_page_2.html": "cache",
+    "aftersun/pages/by_added/rated_2_5_page_3.html": "cache",
+    "aftersun/pages/by_added/rated_2_5_page_4.html": "cache",
+    "aftersun/pages/by_added/rated_2_5_page_5.html": "cache",
+    "aftersun/pages/by_added/rated_2_5_page_8.html": "cache",
+    "aftersun/fulltext/viewing_1435132951.html": "cache",
+    "aftersun/pages/by_added/rated_3_page_1.html": "cache",
+    "aftersun/pages/by_added/rated_3_page_2.html": "cache",
+    "aftersun/pages/by_added/rated_3_page_3.html": "cache",
+    "aftersun/pages/by_added/rated_3_page_4.html": "cache",
+    "aftersun/pages/by_added/rated_3_page_5.html": "cache",
+    "aftersun/pages/by_added/rated_3_page_6.html": "cache",
+    "aftersun/pages/by_added/rated_3_page_7.html": "cache",
+    "aftersun/pages/by_added/rated_3_page_8.html": "cache",
+    "aftersun/pages/by_added/rated_3_page_14.html": "cache",
+    "aftersun/pages/by_added/rated_3_page_29.html": "cache",
+    "aftersun/fulltext/viewing_1439144030.html": "cache",
+    "aftersun/fulltext/viewing_1438399936.html": "cache",
+    "aftersun/fulltext/viewing_1437612619.html": "cache",
+    "aftersun/fulltext/viewing_1437424881.html": "cache",
+    "aftersun/fulltext/viewing_1437024198.html": "cache",
+    "aftersun/fulltext/viewing_1437007039.html": "cache",
+    "aftersun/fulltext/viewing_1436931603.html": "cache",
+    "aftersun/fulltext/viewing_1435518283.html": "cache",
+    "aftersun/pages/by_added/rated_3_5_page_1.html": "cache",
+    "aftersun/pages/by_added/rated_3_5_page_2.html": "cache",
+    "aftersun/fulltext/viewing_1438983759.html": "cache",
+    "aftersun/fulltext/viewing_1438762875.html": "cache",
+    "aftersun/pages/by_added/rated_4_page_1.html": "cache",
+    "aftersun/pages/by_added/rated_4_page_2.html": "cache",
+    "aftersun/pages/by_added/rated_4_page_3.html": "cache",
+    "aftersun/pages/by_added/rated_4_page_4.html": "cache",
+    "aftersun/pages/by_added/rated_4_page_52.html": "cache",
+    "aftersun/fulltext/viewing_1438726058.html": "cache",
+    "aftersun/fulltext/viewing_1429659873.html": "cache",
+    "aftersun/pages/by_added/rated_4_5_page_1.html": "cache",
+    "aftersun/pages/by_added/rated_4_5_page_2.html": "cache",
+    "aftersun/pages/by_added/rated_4_5_page_34.html": "cache",
+    "aftersun/fulltext/viewing_1439163889.html": "cache",
+    "aftersun/fulltext/viewing_1439137293.html": "cache",
+    "aftersun/pages/by_added/rated_5_page_1.html": "cache",
+    "aftersun/pages/by_added/rated_5_page_2.html": "cache",
+    "aftersun/pages/by_added/rated_5_page_3.html": "cache",
+    "aftersun/pages/by_added/rated_5_page_128.html": "cache",
+    "aftersun/fulltext/viewing_1439518536.html": "cache",
+    "aftersun/fulltext/viewing_1439413500.html": "cache",
+    "aftersun/fulltext/viewing_1439398260.html": "cache",
+    "aftersun/fulltext/viewing_1439389905.html": "cache",
+    "aftersun/fulltext/viewing_1439335485.html": "cache",
+    "aftersun/fulltext/viewing_1439248688.html": "cache",
+    "aftersun/fulltext/viewing_1439197813.html": "cache",
+    "aftersun/film_page.html": "cache"
+  },
+  "buckets": [
+    {
+      "bucket": "negativas",
+      "alvo": 40,
+      "modo": "completo",
+      "estado_piso": "completa",
+      "n_validas": 40,
+      "share_real": 3,
+      "composicao_alvo": {
+        "0.5": 3,
+        "1.0": 7,
+        "1.5": 5,
+        "2.0": 25
+      },
+      "composicao_atingida": {
+        "0.5": 3,
+        "1.0": 7,
+        "1.5": 5,
+        "2.0": 25
+      },
+      "cascata_por_degrau": {
+        "150": 40
+      },
+      "deficit_redistribuido": 0,
+      "distribuicao_pagina_origem": {
+        "n": 40,
+        "min": 1,
+        "max": 12,
+        "p5": 1,
+        "p50": 2,
+        "p95": 10,
+        "fracao_profunda": 0.275
+      },
+      "janela_amostra": {
+        "n": 40,
+        "min": "2022-07-17",
+        "max": "2026-08-07",
+        "p5": "2022-08-07",
+        "p50": "2026-08-01",
+        "p95": "2026-08-07"
+      },
+      "niveis": [
+        {
+          "nivel": 0.5,
+          "n_validas": 3,
+          "n_alvo": 3,
+          "n_brutas": 24,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 0,
+          "n_descartadas_curtas": 13,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 0,
+          "motivos_descarte": {
+            "truncada_sem_texto": 0,
+            "spoiler": 0,
+            "abaixo_min_chars": 13,
+            "excedente_cota": 8,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 1
+        },
+        {
+          "nivel": 1.0,
+          "n_validas": 7,
+          "n_alvo": 7,
+          "n_brutas": 58,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 1,
+          "n_descartadas_curtas": 41,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 0,
+          "motivos_descarte": {
+            "truncada_sem_texto": 0,
+            "spoiler": 1,
+            "abaixo_min_chars": 41,
+            "excedente_cota": 9,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 3
+        },
+        {
+          "nivel": 1.5,
+          "n_validas": 5,
+          "n_alvo": 5,
+          "n_brutas": 36,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 1,
+          "n_descartadas_curtas": 29,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 1,
+          "motivos_descarte": {
+            "truncada_sem_texto": 1,
+            "spoiler": 1,
+            "abaixo_min_chars": 29,
+            "excedente_cota": 0,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 2
+        },
+        {
+          "nivel": 2.0,
+          "n_validas": 25,
+          "n_alvo": 25,
+          "n_brutas": 165,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 3,
+          "n_descartadas_curtas": 98,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 1,
+          "motivos_descarte": {
+            "truncada_sem_texto": 1,
+            "spoiler": 3,
+            "abaixo_min_chars": 98,
+            "excedente_cota": 38,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 10
+        }
+      ],
+      "temas": [
+        {
+          "tema": "Ritmo lento e tédio",
+          "mencoes_aproximadas": 18,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "Muitos reclamam que o filme é arrastado e monótono, difícil de manter atenção, sendo comparado a uma experiência entediante.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Narrativa vaga e sem desenvolvimento",
+          "mencoes_aproximadas": 15,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "Diversos espectadores apontam que a trama é confusa, sem propósito claro, e que as intenções do diretor ficam implícitas demais, prejudicando a conexão.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Atuação de Paul Mescal não convence",
+          "mencoes_aproximadas": 8,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "Uma parcela significativa considerou a atuação do protagonista masculino pouco crível, especialmente no papel de pai, o que enfraqueceu o filme para eles.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Fotografia bonita, mas execução fraca",
+          "mencoes_aproximadas": 7,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "Embora reconheçam a beleza visual e a direção de arte, muitos sentem que isso não compensa a falta de substância e o ritmo problemático.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Expectativa versus realidade",
+          "mencoes_aproximadas": 6,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "Vários mencionam que chegaram com grandes expectativas devido ao hype e ficaram desapontados, pois o filme não entregou a emoção esperada.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Falta de conexão emocional",
+          "mencoes_aproximadas": 5,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "Alguns espectadores não conseguiram se envolver com a história ou com os personagens, sentindo que faltou algo que os fizesse se importar.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        }
+      ],
+      "observacao_geral": "As reviews negativas apontam predominantemente para um ritmo lento e uma narrativa vaga, com muitos espectadores destacando a desconexão emocional e a falta de desenvolvimento. A fotografia é frequentemente elogiada, mas não suficiente para salvar a experiência para este grupo.",
+      "idioma_invalido": false,
+      "escopo_suspeito": false
+    },
+    {
+      "bucket": "medianas",
+      "alvo": 40,
+      "modo": "completo",
+      "estado_piso": "completa",
+      "n_validas": 40,
+      "share_real": 10,
+      "composicao_alvo": {
+        "2.5": 8,
+        "3.0": 32
+      },
+      "composicao_atingida": {
+        "2.5": 8,
+        "3.0": 32
+      },
+      "cascata_por_degrau": {
+        "150": 40
+      },
+      "deficit_redistribuido": 0,
+      "distribuicao_pagina_origem": {
+        "n": 40,
+        "min": 1,
+        "max": 29,
+        "p5": 1,
+        "p50": 6,
+        "p95": 29,
+        "fracao_profunda": 0.3
+      },
+      "janela_amostra": {
+        "n": 40,
+        "min": "2022-06-01",
+        "max": "2026-08-08",
+        "p5": "2022-08-13",
+        "p50": "2026-08-03",
+        "p95": "2026-08-08"
+      },
+      "niveis": [
+        {
+          "nivel": 2.5,
+          "n_validas": 8,
+          "n_alvo": 8,
+          "n_brutas": 88,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 1,
+          "n_descartadas_curtas": 51,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 1,
+          "motivos_descarte": {
+            "truncada_sem_texto": 1,
+            "spoiler": 1,
+            "abaixo_min_chars": 51,
+            "excedente_cota": 27,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 6
+        },
+        {
+          "nivel": 3.0,
+          "n_validas": 32,
+          "n_alvo": 32,
+          "n_brutas": 194,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 6,
+          "n_descartadas_curtas": 114,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 2,
+          "motivos_descarte": {
+            "truncada_sem_texto": 2,
+            "spoiler": 6,
+            "abaixo_min_chars": 114,
+            "excedente_cota": 40,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 10
+        }
+      ],
+      "temas": [
+        {
+          "tema": "Ritmo lento e falta de dinamismo",
+          "mencoes_aproximadas": 15,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "O filme é visualmente bonito, mas a narrativa se arrasta em vários momentos, dificultando o engajamento, com longas cenas que poderiam ser cortadas.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Bela fotografia e direção de arte",
+          "mencoes_aproximadas": 10,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "A cinematografia é deslumbrante, com quadros memoráveis e uma estética nostálgica que transmite a atmosfera das férias de verão.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Atuações convincentes",
+          "mencoes_aproximadas": 8,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "A química entre o pai e a filha é natural e comovente, com uma atuação notável de Paul Mescal.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Temas profundos sobre memória e luto",
+          "mencoes_aproximadas": 7,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "O filme aborda a complexidade das memórias e como os filhos percebem as dores ocultas dos pais, deixando uma reflexão forte.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Final emocionante e impactante",
+          "mencoes_aproximadas": 6,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "Apesar do ritmo lento, a conclusão é extremamente tocante e dá novo sentido a toda a história, compensando em parte a espera.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Narrativa confusa e subentendidos",
+          "mencoes_aproximadas": 5,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "A história é ambígua e deixa muitas lacunas, sendo necessário buscar explicações externas para compreender totalmente o enredo.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        }
+      ],
+      "observacao_geral": "As reviews medianas reconhecem os méritos técnicos e emocionais do filme, mas apontam um ritmo lento que dificulta o envolvimento. Muitos espectadores tiveram que refletir ou rever o filme para apreciar sua profundidade.",
+      "idioma_invalido": false,
+      "escopo_suspeito": false
+    },
+    {
+      "bucket": "positivas",
+      "alvo": 40,
+      "modo": "completo",
+      "estado_piso": "completa",
+      "n_validas": 40,
+      "share_real": 88,
+      "composicao_alvo": {
+        "3.5": 5,
+        "4.0": 12,
+        "4.5": 8,
+        "5.0": 15
+      },
+      "composicao_atingida": {
+        "3.5": 5,
+        "4.0": 12,
+        "4.5": 8,
+        "5.0": 15
+      },
+      "cascata_por_degrau": {
+        "150": 40
+      },
+      "deficit_redistribuido": 0,
+      "distribuicao_pagina_origem": {
+        "n": 40,
+        "min": 1,
+        "max": 9,
+        "p5": 1,
+        "p50": 3,
+        "p95": 8,
+        "fracao_profunda": 0.325
+      },
+      "janela_amostra": {
+        "n": 40,
+        "min": "2022-05-21",
+        "max": "2026-08-08",
+        "p5": "2022-05-21",
+        "p50": "2026-08-07",
+        "p95": "2026-08-08"
+      },
+      "niveis": [
+        {
+          "nivel": 3.5,
+          "n_validas": 5,
+          "n_alvo": 5,
+          "n_brutas": 36,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 1,
+          "n_descartadas_curtas": 23,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 0,
+          "motivos_descarte": {
+            "truncada_sem_texto": 0,
+            "spoiler": 1,
+            "abaixo_min_chars": 23,
+            "excedente_cota": 7,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 2
+        },
+        {
+          "nivel": 4.0,
+          "n_validas": 12,
+          "n_alvo": 12,
+          "n_brutas": 112,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 7,
+          "n_descartadas_curtas": 79,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 1,
+          "motivos_descarte": {
+            "truncada_sem_texto": 1,
+            "spoiler": 7,
+            "abaixo_min_chars": 79,
+            "excedente_cota": 13,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 5
+        },
+        {
+          "nivel": 4.5,
+          "n_validas": 8,
+          "n_alvo": 8,
+          "n_brutas": 75,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 1,
+          "n_descartadas_curtas": 55,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 0,
+          "motivos_descarte": {
+            "truncada_sem_texto": 0,
+            "spoiler": 1,
+            "abaixo_min_chars": 55,
+            "excedente_cota": 11,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 3
+        },
+        {
+          "nivel": 5.0,
+          "n_validas": 15,
+          "n_alvo": 15,
+          "n_brutas": 120,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 8,
+          "n_descartadas_curtas": 84,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 0,
+          "motivos_descarte": {
+            "truncada_sem_texto": 0,
+            "spoiler": 8,
+            "abaixo_min_chars": 84,
+            "excedente_cota": 13,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 6
+        }
+      ],
+      "temas": [
+        {
+          "tema": "Atuações naturais e cativantes",
+          "mencoes_aproximadas": 15,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "As atuações de Paul Mescal e Frankie Corio são tão autênticas que parecem registrar pessoas reais, não personagens, e a química entre eles torna a relação pai e filha profundamente tocante e verossímil.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Depressão e sofrimento oculto",
+          "mencoes_aproximadas": 14,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "O filme aborda a depressão de forma sutil e poderosa, mostrando um pai que tenta esconder sua tristeza e angústia para proporcionar momentos felizes à filha, com a carga emocional transmitida por silêncios e olhares.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Nostalgia e memória",
+          "mencoes_aproximadas": 12,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "A obra desperta forte nostalgia ao recriar lembranças de infância e férias em família, fazendo o espectador revisitar suas próprias memórias e perceber como o tempo e a maturidade mudam a compreensão desses momentos.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Estética e cinematografia",
+          "mencoes_aproximadas": 10,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "A fotografia é um dos pontos altos, com enquadramentos belíssimos e o uso de câmeras antigas e imagens granuladas que reforçam a sensação de recordação e a atmosfera poética e melancólica.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Impacto emocional intenso",
+          "mencoes_aproximadas": 10,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "Muitos espectadores relatam terem sido profundamente afetados, com lágrimas após o término ou uma sensação de vazio e reflexão que permanece por dias, evidenciando a força emocional do longa.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Relação pai-filha autêntica",
+          "mencoes_aproximadas": 10,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "A dinâmica entre pai e filha é retratada de forma genuína e comovente, mostrando o esforço dele para criar uma conexão e a inocência dela, que não percebe os problemas dele na época, mas que mais tarde passa a entender.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        }
+      ],
+      "observacao_geral": "As reviews positivas destacam a beleza e a profundidade emocional do filme, valorizando as atuações naturais, a fotografia nostálgica e a forma sutil com que a depressão é retratada. O grupo é unânime em considerar a obra uma experiência marcante e poética, capaz de mexer com o espectador e provocar reflexões sobre memória e relações familiares.",
+      "idioma_invalido": false,
+      "escopo_suspeito": false
+    }
+  ],
+  "eixos": {
+    "taxonomia_id": "ebab2667de74",
+    "margem_lift_pp": 20,
+    "contraste": "valorativo",
+    "linhas": [
+      {
+        "eixo": "ritmo",
+        "por_bucket": {
+          "negativas": {
+            "mencoes": 10,
+            "de_n": 20,
+            "freq_pct": 50.0,
+            "lift_pp": 0.0,
+            "tema": "Ritmo lento e tédio",
+            "exemplo_parafraseado": "Muitos reclamam que o filme é arrastado e monótono, difícil de manter atenção, sendo comparado a uma experiência entediante.",
+            "temas_no_mesmo_eixo": []
+          },
+          "medianas": {
+            "mencoes": 7,
+            "de_n": 14,
+            "freq_pct": 50.0,
+            "lift_pp": 0.0,
+            "tema": "Ritmo lento e falta de dinamismo",
+            "exemplo_parafraseado": "O filme é visualmente bonito, mas a narrativa se arrasta em vários momentos, dificultando o engajamento, com longas cenas que poderiam ser cortadas.",
+            "temas_no_mesmo_eixo": []
+          },
+          "positivas": {
+            "mencoes": 0,
+            "de_n": 19,
+            "freq_pct": 0.0,
+            "lift_pp": -50.0,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          }
+        },
+        "bullet_de": {
+          "negativas": "frequencia",
+          "medianas": "frequencia",
+          "positivas": null
+        }
+      },
+      {
+        "eixo": "atuacao",
+        "por_bucket": {
+          "negativas": {
+            "mencoes": 8,
+            "de_n": 20,
+            "freq_pct": 40.0,
+            "lift_pp": 11.4,
+            "tema": "Atuação de Paul Mescal não convence",
+            "exemplo_parafraseado": "Uma parcela significativa considerou a atuação do protagonista masculino pouco crível, especialmente no papel de pai, o que enfraqueceu o filme para eles.",
+            "temas_no_mesmo_eixo": []
+          },
+          "medianas": {
+            "mencoes": 4,
+            "de_n": 14,
+            "freq_pct": 28.6,
+            "lift_pp": -11.4,
+            "tema": "Atuações convincentes",
+            "exemplo_parafraseado": "A química entre o pai e a filha é natural e comovente, com uma atuação notável de Paul Mescal.",
+            "temas_no_mesmo_eixo": []
+          },
+          "positivas": {
+            "mencoes": 3,
+            "de_n": 19,
+            "freq_pct": 15.8,
+            "lift_pp": -24.2,
+            "tema": "Atuações naturais e cativantes",
+            "exemplo_parafraseado": "As atuações de Paul Mescal e Frankie Corio são tão autênticas que parecem registrar pessoas reais, não personagens, e a química entre eles torna a relação pai e filha profundamente tocante e verossímil.",
+            "temas_no_mesmo_eixo": []
+          }
+        },
+        "bullet_de": {
+          "negativas": null,
+          "medianas": null,
+          "positivas": null
+        }
+      },
+      {
+        "eixo": "direcao_imagem",
+        "por_bucket": {
+          "negativas": {
+            "mencoes": 7,
+            "de_n": 20,
+            "freq_pct": 35.0,
+            "lift_pp": -7.9,
+            "tema": "Fotografia bonita, mas execução fraca",
+            "exemplo_parafraseado": "Embora reconheçam a beleza visual e a direção de arte, muitos sentem que isso não compensa a falta de substância e o ritmo problemático.",
+            "temas_no_mesmo_eixo": []
+          },
+          "medianas": {
+            "mencoes": 6,
+            "de_n": 14,
+            "freq_pct": 42.9,
+            "lift_pp": 6.0,
+            "tema": "Bela fotografia e direção de arte",
+            "exemplo_parafraseado": "A cinematografia é deslumbrante, com quadros memoráveis e uma estética nostálgica que transmite a atmosfera das férias de verão.",
+            "temas_no_mesmo_eixo": []
+          },
+          "positivas": {
+            "mencoes": 7,
+            "de_n": 19,
+            "freq_pct": 36.8,
+            "lift_pp": -6.0,
+            "tema": "Estética e cinematografia",
+            "exemplo_parafraseado": "A fotografia é um dos pontos altos, com enquadramentos belíssimos e o uso de câmeras antigas e imagens granuladas que reforçam a sensação de recordação e a atmosfera poética e melancólica.",
+            "temas_no_mesmo_eixo": []
+          }
+        },
+        "bullet_de": {
+          "negativas": null,
+          "medianas": null,
+          "positivas": null
+        }
+      },
+      {
+        "eixo": "roteiro_estrutura",
+        "por_bucket": {
+          "negativas": {
+            "mencoes": 13,
+            "de_n": 20,
+            "freq_pct": 65.0,
+            "lift_pp": -6.4,
+            "tema": "Narrativa vaga e sem desenvolvimento",
+            "exemplo_parafraseado": "Diversos espectadores apontam que a trama é confusa, sem propósito claro, e que as intenções do diretor ficam implícitas demais, prejudicando a conexão.",
+            "temas_no_mesmo_eixo": []
+          },
+          "medianas": {
+            "mencoes": 10,
+            "de_n": 14,
+            "freq_pct": 71.4,
+            "lift_pp": 6.4,
+            "tema": "Temas profundos sobre memória e luto",
+            "exemplo_parafraseado": "O filme aborda a complexidade das memórias e como os filhos percebem as dores ocultas dos pais, deixando uma reflexão forte.",
+            "temas_no_mesmo_eixo": [
+              "Narrativa confusa e subentendidos"
+            ]
+          },
+          "positivas": {
+            "mencoes": 10,
+            "de_n": 19,
+            "freq_pct": 52.6,
+            "lift_pp": -18.8,
+            "tema": "Relação pai-filha autêntica",
+            "exemplo_parafraseado": "A dinâmica entre pai e filha é retratada de forma genuína e comovente, mostrando o esforço dele para criar uma conexão e a inocência dela, que não percebe os problemas dele na época, mas que mais tarde passa a entender.",
+            "temas_no_mesmo_eixo": []
+          }
+        },
+        "bullet_de": {
+          "negativas": "frequencia",
+          "medianas": "frequencia",
+          "positivas": "frequencia"
+        }
+      },
+      {
+        "eixo": "som_trilha",
+        "por_bucket": {
+          "negativas": {
+            "mencoes": 1,
+            "de_n": 20,
+            "freq_pct": 5.0,
+            "lift_pp": -16.4,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "medianas": {
+            "mencoes": 3,
+            "de_n": 14,
+            "freq_pct": 21.4,
+            "lift_pp": 16.2,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "positivas": {
+            "mencoes": 1,
+            "de_n": 19,
+            "freq_pct": 5.3,
+            "lift_pp": -16.2,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          }
+        },
+        "bullet_de": {
+          "negativas": null,
+          "medianas": null,
+          "positivas": null
+        }
+      },
+      {
+        "eixo": "tom_atmosfera",
+        "por_bucket": {
+          "negativas": {
+            "mencoes": 2,
+            "de_n": 20,
+            "freq_pct": 10.0,
+            "lift_pp": -5.8,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "medianas": {
+            "mencoes": 2,
+            "de_n": 14,
+            "freq_pct": 14.3,
+            "lift_pp": -1.5,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "positivas": {
+            "mencoes": 3,
+            "de_n": 19,
+            "freq_pct": 15.8,
+            "lift_pp": 1.5,
+            "tema": "Depressão e sofrimento oculto",
+            "exemplo_parafraseado": "O filme aborda a depressão de forma sutil e poderosa, mostrando um pai que tenta esconder sua tristeza e angústia para proporcionar momentos felizes à filha, com a carga emocional transmitida por silêncios e olhares.",
+            "temas_no_mesmo_eixo": [
+              "Nostalgia e memória"
+            ]
+          }
+        },
+        "bullet_de": {
+          "negativas": null,
+          "medianas": null,
+          "positivas": null
+        }
+      },
+      {
+        "eixo": "impacto_emocional",
+        "por_bucket": {
+          "negativas": {
+            "mencoes": 8,
+            "de_n": 20,
+            "freq_pct": 40.0,
+            "lift_pp": -28.4,
+            "tema": "Falta de conexão emocional",
+            "exemplo_parafraseado": "Alguns espectadores não conseguiram se envolver com a história ou com os personagens, sentindo que faltou algo que os fizesse se importar.",
+            "temas_no_mesmo_eixo": []
+          },
+          "medianas": {
+            "mencoes": 7,
+            "de_n": 14,
+            "freq_pct": 50.0,
+            "lift_pp": -18.4,
+            "tema": "Final emocionante e impactante",
+            "exemplo_parafraseado": "Apesar do ritmo lento, a conclusão é extremamente tocante e dá novo sentido a toda a história, compensando em parte a espera.",
+            "temas_no_mesmo_eixo": []
+          },
+          "positivas": {
+            "mencoes": 13,
+            "de_n": 19,
+            "freq_pct": 68.4,
+            "lift_pp": 18.4,
+            "tema": "Impacto emocional intenso",
+            "exemplo_parafraseado": "Muitos espectadores relatam terem sido profundamente afetados, com lágrimas após o término ou uma sensação de vazio e reflexão que permanece por dias, evidenciando a força emocional do longa.",
+            "temas_no_mesmo_eixo": []
+          }
+        },
+        "bullet_de": {
+          "negativas": null,
+          "medianas": null,
+          "positivas": "frequencia"
+        }
+      },
+      {
+        "eixo": "comparacoes",
+        "por_bucket": {
+          "negativas": {
+            "mencoes": 4,
+            "de_n": 20,
+            "freq_pct": 20.0,
+            "lift_pp": -1.4,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "medianas": {
+            "mencoes": 3,
+            "de_n": 14,
+            "freq_pct": 21.4,
+            "lift_pp": 1.4,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "positivas": {
+            "mencoes": 3,
+            "de_n": 19,
+            "freq_pct": 15.8,
+            "lift_pp": -5.6,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          }
+        },
+        "bullet_de": {
+          "negativas": null,
+          "medianas": null,
+          "positivas": null
+        }
+      },
+      {
+        "eixo": "expectativa",
+        "por_bucket": {
+          "negativas": {
+            "mencoes": 7,
+            "de_n": 20,
+            "freq_pct": 35.0,
+            "lift_pp": 6.4,
+            "tema": "Expectativa versus realidade",
+            "exemplo_parafraseado": "Vários mencionam que chegaram com grandes expectativas devido ao hype e ficaram desapontados, pois o filme não entregou a emoção esperada.",
+            "temas_no_mesmo_eixo": []
+          },
+          "medianas": {
+            "mencoes": 4,
+            "de_n": 14,
+            "freq_pct": 28.6,
+            "lift_pp": -6.4,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "positivas": {
+            "mencoes": 1,
+            "de_n": 19,
+            "freq_pct": 5.3,
+            "lift_pp": -29.7,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          }
+        },
+        "bullet_de": {
+          "negativas": null,
+          "medianas": null,
+          "positivas": null
+        }
+      },
+      {
+        "eixo": "critica_social",
+        "por_bucket": {
+          "negativas": {
+            "mencoes": 1,
+            "de_n": 20,
+            "freq_pct": 5.0,
+            "lift_pp": -0.3,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "medianas": {
+            "mencoes": 0,
+            "de_n": 14,
+            "freq_pct": 0.0,
+            "lift_pp": -5.3,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "positivas": {
+            "mencoes": 1,
+            "de_n": 19,
+            "freq_pct": 5.3,
+            "lift_pp": 0.3,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          }
+        },
+        "bullet_de": {
+          "negativas": null,
+          "medianas": null,
+          "positivas": null
+        }
+      }
+    ],
+    "fonte_classificacao": {
+      "arquivo": "resultado/votacao-3/consenso.jsonl",
+      "criterio": "votacao_3_consenso_2_de_3",
+      "por_bucket": {
+        "negativas": {
+          "n_classificadas": 20,
+          "n_analisadas": 40,
+          "sobreposicao_com_analisadas": 20
+        },
+        "medianas": {
+          "n_classificadas": 14,
+          "n_analisadas": 40,
+          "sobreposicao_com_analisadas": 14
+        },
+        "positivas": {
+          "n_classificadas": 19,
+          "n_analisadas": 40,
+          "sobreposicao_com_analisadas": 19
+        }
+      }
+    },
+    "rotulagem": {
+      "n_chamadas": 3,
+      "falharam": [],
+      "fora_da_taxonomia": {},
+      "houve_retentativa": []
+    },
+    "spec_version": "1.9.16",
+    "verificador": {
+      "aplicado": true,
+      "variante": "V2_alvo",
+      "passada": 1,
+      "eixo": "impacto_emocional",
+      "n_removidas_no_corpus": 1654
+    }
+  },
+  "narrativa": "Dirigido por Charlotte Wells e lançado em 2022, o drama Aftersun acompanha a jovem Sophie, de onze anos, enquanto ela aproveita um período de férias ao lado de seu pai amoroso e idealista, Calum, em um resort decadente. Vinte anos depois, as lembranças desse período ganham novos contornos na memória da protagonista. Essas recordações de suas últimas férias compartilhadas tornam-se um retrato poderoso e doloroso do relacionamento entre os dois.\n\nA narrativa adota uma cadência deliberadamente lenta e contemplativa, construindo sua atmosfera a partir da reconstituição de memórias e de momentos cotidianos. A estrutura apoia-se em silêncios e observações sutis, registrando a convivência íntima durante o período de veraneio. A condução prioriza a sensibilidade dos instantes em vez de acontecimentos dramáticos acelerados.\n\nOs três grupos concordam sobre o que o filme é e discordam sobre se ele funciona, dividindo-se na avaliação dos mesmos elementos centrais da obra. Na grande maioria das notas (~88%), muitos ressaltam a presença de atuações naturais e cativantes no centro da experiência. Ao mesmo tempo, uma parcela expressiva destaca a representação da depressão e do sofrimento oculto sob a superfície dos acontecimentos, enquanto vários enfatizam a força dos sentimentos de nostalgia e memória despertados ao longo da narrativa.\n\nPara quem se posiciona numa fração mínima das notas (~10%), boa parte enfatiza o ritmo lento e a falta de dinamismo como obstáculos ao engajamento contínuo. Ainda assim, alguns tecem elogios à bela fotografia e direção de arte, e parte deles também pontua a existência de atuações convincentes.\n\nPor outro lado, sob a perspectiva expressa por uma fração ainda menor das notas (~3%), um número considerável critica o ritmo lento e o tédio gerado pela condução da trama. De maneira semelhante, muitos apontam uma narrativa vaga e sem desenvolvimento, ao passo que uma fatia menor registra que a atuação de Paul Mescal não convence.",
+  "verificacao_narrativa": {
+    "quantificador_fora_de_faixa": [],
+    "quantificador_repetido": [],
+    "paragrafos": {
+      "n_paragrafos": 5,
+      "minimo": 3,
+      "insuficientes": false,
+      "longos": []
+    },
+    "n_paragrafos": 5,
+    "paragrafos_insuficientes": false,
+    "paragrafos_longos": [],
+    "grupos_sem_paragrafo_proprio": [],
+    "movimento1_e_movimento2_no_mesmo_paragrafo": true,
+    "formato_invalido": false,
+    "numeros_inventados": [],
+    "rotulos_faltando": [],
+    "ordem_incorreta": false,
+    "vocabulario_peso": false,
+    "resenha_speak": [],
+    "n_resenha_speak": 0,
+    "n_flags": 1
+  },
+  "narrativa_selecao": {
+    "provider": "gemini",
+    "modelo": "gemini-3.7-flash",
+    "n_candidatos": 3,
+    "n_chamadas": 4,
+    "indice_escolhido": 0,
+    "motivo": "menor_severidade",
+    "criterio_decisivo": "empate",
+    "candidatos": [
+      {
+        "indice": 0,
+        "n_flags": 1,
+        "cliches": 0,
+        "repeticao_max": 2,
+        "ritmo": 7,
+        "cobertura": 1.0,
+        "eliminado": true
+      },
+      {
+        "indice": 1,
+        "n_flags": 3,
+        "cliches": 0,
+        "repeticao_max": 2,
+        "ritmo": 10,
+        "cobertura": 1.0,
+        "eliminado": true
+      },
+      {
+        "indice": 2,
+        "n_flags": 3,
+        "cliches": 0,
+        "repeticao_max": 2,
+        "ritmo": 9,
+        "cobertura": 1.0,
+        "eliminado": true
+      }
+    ],
+    "retry": {
+      "n_frases_infratoras": 0,
+      "motivos": [],
+      "n_flags_depois": 1,
+      "aplicado": false
+    },
+    "uso": {
+      "prompt_tokens": 11637,
+      "completion_tokens": 1606,
+      "cache_hit_tokens": 0,
+      "cache_miss_tokens": 11637
+    },
+    "latencia_s": 43.69
+  }
+}
