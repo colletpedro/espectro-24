@@ -15,6 +15,7 @@ a alocação cai para uniforme).
 """
 from __future__ import annotations
 
+import json
 from pathlib import Path
 
 from .alocacao import alocar, alocar_bucket, orcamento_paginas
@@ -479,13 +480,10 @@ def montar_eixos(slug: str, output: dict, analisadas: dict[str, set[str]],
     from . import eixos as E
     from .rotulagem import rotular_output
 
+    verificador_meta = None
     if consenso is None:
-        caminho = Path(E.CONSENSO_PADRAO)
-        if not caminho.exists():
-            return None
-        try:
-            catalogo = E.carregar_classificacao(caminho)
-        except (ValueError, OSError):
+        catalogo, verificador_meta = _carregar_consenso_producao(E)
+        if catalogo is None:
             return None
     else:
         catalogo = consenso
@@ -505,4 +503,61 @@ def montar_eixos(slug: str, output: dict, analisadas: dict[str, set[str]],
         # verdade sobre o artefato, não um defeito a esconder atrás de um
         # carimbo único reescrito depois do fato (política de `VERSAO_COLETOR`).
         bloco["spec_version"] = SPEC_VERSION
+        if verificador_meta is not None:
+            # [v1.9.16] Declara que a classificação passou pelo passe de
+            # verificação de `impacto_emocional` — a chave só existe quando
+            # passou, no mesmo estatuto aditivo de `fonte_classificacao`
+            # (§[D3]): ausência é a declaração "não passou", nunca um
+            # default silencioso.
+            bloco["verificador"] = verificador_meta
     return bloco
+
+
+def _carregar_consenso_producao(E) -> tuple[dict | None, dict | None]:
+    """[v1.9.16] Resolve qual consenso `montar_eixos` usa quando não recebe
+    um explícito: o VERIFICADO se existir e estiver em dia, senão o cru.
+
+    **Preferir o verificado é a adoção** (SPEC §3[D], "a saída é
+    arquitetura"): uma vez que `consenso_verificado.jsonl` existe, ele É a
+    classificação de produção — não uma alternativa que o código escolhe às
+    cegas. A guarda de atualidade é o que impede a mistura silenciosa que a
+    sessão da adoção pediu para evitar: se `consenso.jsonl` cresceu depois da
+    verificação (nova votação rodou, novo filme foi classificado), o
+    verificado ficou para trás e usá-lo dali em diante omitiria reviews
+    inteiras do passe — por isso é ERRO, não fallback silencioso para o cru.
+    """
+    caminho_verificado = Path(E.CONSENSO_VERIFICADO)
+    caminho_manifesto = caminho_verificado.parent / "verificador_manifesto.json"
+    if caminho_verificado.exists() and caminho_manifesto.exists():
+        manifesto = json.loads(caminho_manifesto.read_text(encoding="utf-8"))
+        caminho_raw = Path(E.CONSENSO_PADRAO)
+        if caminho_raw.exists():
+            n_linhas_raw = sum(
+                1 for l in caminho_raw.read_text(encoding="utf-8").splitlines()
+                if l.strip())
+            n_linhas_manifesto = manifesto.get("fonte_n_linhas")
+            if n_linhas_manifesto != n_linhas_raw:
+                raise ValueError(
+                    f"{caminho_verificado} está desatualizado: o manifesto "
+                    f"registra {n_linhas_manifesto} linhas de "
+                    f"{E.CONSENSO_PADRAO} na hora da verificação, e o arquivo "
+                    f"tem {n_linhas_raw} agora. Rode "
+                    "`python scripts/verificador_impacto.py aplicar-producao` "
+                    "de novo antes de montar o bloco de eixos.")
+        try:
+            catalogo = E.carregar_classificacao(caminho_verificado)
+        except (ValueError, OSError):
+            return None, None
+        meta = {"aplicado": True, "variante": manifesto.get("variante"),
+               "passada": manifesto.get("passada"), "eixo": manifesto.get("eixo"),
+               "n_removidas": manifesto.get("n_removidas")}
+        return catalogo, meta
+
+    caminho_raw = Path(E.CONSENSO_PADRAO)
+    if not caminho_raw.exists():
+        return None, None
+    try:
+        catalogo = E.carregar_classificacao(caminho_raw)
+    except (ValueError, OSError):
+        return None, None
+    return catalogo, None

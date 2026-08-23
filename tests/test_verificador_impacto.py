@@ -222,3 +222,80 @@ def test_projecao_e_deterministica_por_semente(vi, corpus):
 def test_fator_1_nao_remove_nada(vi, corpus):
     igual = vi._sortear_remocoes(corpus, 1.0, semente=3)
     assert [r["eixos"] for r in igual] == [list(r["eixos"]) for r in corpus]
+
+
+# ================================================== v1.9.16 aplicação real
+# `gerar_consenso_verificado` é o transform PURO que produz
+# `consenso_verificado.jsonl` a partir do `consenso.jsonl` de produção e dos
+# vereditos do passe — sem rede, sem I/O, testável direto.
+
+
+def test_gerar_consenso_verificado_so_remove_o_eixo_alvo(vi):
+    linhas = [
+        {"slug": "x", "bucket": "negativas", "id": "a",
+         "eixos": ["impacto_emocional", "ritmo"]},
+        {"slug": "x", "bucket": "negativas", "id": "b",
+         "eixos": ["impacto_emocional"]},
+    ]
+    vereditos_ = {"a": False, "b": True}
+    saida = vi.gerar_consenso_verificado(linhas, vereditos_)
+    por_id = {r["id"]: r for r in saida}
+    assert por_id["a"]["eixos"] == ["ritmo"]          # removeu SÓ o eixo alvo
+    assert por_id["b"]["eixos"] == ["impacto_emocional"]  # confirmado, intacto
+
+
+def test_gerar_consenso_verificado_ignora_outros_eixos(vi):
+    """Nunca mexe em linha sem `impacto_emocional`, mesmo com veredito."""
+    linhas = [{"slug": "x", "bucket": "negativas", "id": "c", "eixos": ["ritmo"]}]
+    saida = vi.gerar_consenso_verificado(linhas, {"c": False})
+    assert saida[0]["eixos"] == ["ritmo"]
+
+
+def test_gerar_consenso_verificado_sem_veredito_fica_intacto(vi):
+    """Review candidata cuja chamada falhou (sem entrada no dict de
+    vereditos) não pode perder a marcação — política conservadora, mesma do
+    parsing (`_normalizar_veredito`)."""
+    linhas = [{"slug": "x", "bucket": "negativas", "id": "d",
+              "eixos": ["impacto_emocional"]}]
+    saida = vi.gerar_consenso_verificado(linhas, {})
+    assert saida[0]["eixos"] == ["impacto_emocional"]
+
+
+def test_gerar_consenso_verificado_preserva_campos_da_linha(vi):
+    """`votos`, `eixos_por_passe` e qualquer outro campo sobrevivem
+    intactos — o transform só toca `eixos`."""
+    linhas = [{"slug": "x", "bucket": "negativas", "id": "e",
+              "eixos": ["impacto_emocional"], "votos": {"impacto_emocional": 3},
+              "eixos_por_passe": [["impacto_emocional"]] * 3, "nivel": 1.5}]
+    saida = vi.gerar_consenso_verificado(linhas, {"e": False})
+    assert saida[0]["votos"] == {"impacto_emocional": 3}
+    assert saida[0]["eixos_por_passe"] == [["impacto_emocional"]] * 3
+    assert saida[0]["nivel"] == 1.5
+
+
+def test_gerar_consenso_verificado_preserva_a_ordem_e_o_total(vi):
+    linhas = [{"slug": "x", "bucket": "negativas", "id": str(i),
+              "eixos": ["impacto_emocional"] if i % 2 else ["ritmo"]}
+             for i in range(10)]
+    saida = vi.gerar_consenso_verificado(linhas, {})
+    assert [r["id"] for r in saida] == [r["id"] for r in linhas]
+    assert len(saida) == 10
+
+
+def test_gerar_consenso_verificado_so_pode_reduzir_o_total_de_eixos(vi):
+    """A assimetria estrutural (§ Entrega 1) travada no caminho de produção:
+    para toda review, o conjunto de eixos depois é subconjunto do de antes,
+    e a única diferença possível é `impacto_emocional`."""
+    import random
+    rng = random.Random(42)
+    todos = ["impacto_emocional", "ritmo", "roteiro_estrutura", "livre"]
+    linhas = [{"slug": "x", "bucket": "negativas", "id": str(i),
+              "eixos": rng.sample(todos, k=rng.randint(0, len(todos)))}
+             for i in range(50)]
+    vereditos_ = {str(i): rng.choice([True, False, None]) for i in range(50)}
+    vereditos_ = {k: v for k, v in vereditos_.items() if v is not None}
+
+    saida = vi.gerar_consenso_verificado(linhas, vereditos_)
+    for antes, depois in zip(linhas, saida):
+        assert set(depois["eixos"]) <= set(antes["eixos"])
+        assert set(antes["eixos"]) - set(depois["eixos"]) <= {vi.EIXO}

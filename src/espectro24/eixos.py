@@ -44,6 +44,18 @@ from .taxonomia import EIXOS, LIVRE, TAXONOMIA_ID
 # outro diretório e é recusado no carregamento.
 CONSENSO_PADRAO = "resultado/votacao-3/consenso.jsonl"
 
+# [v1.9.16] O consenso DEPOIS do passe de verificação de `impacto_emocional`
+# (`scripts/verificador_impacto.py aplicar-producao`) — mesmo diretório (o
+# manifesto `amostra.json` é compartilhado, a taxonomia não muda), arquivo
+# À PARTE. `CONSENSO_PADRAO` continua sendo a saída CRUA da votação de 3 —
+# `estender_classificacao_producao.py` e as ferramentas de auditoria da
+# classificação (recálculo de margem, relatório de unificação) leem ele, não
+# este. `pipeline.montar_eixos` prefere este arquivo quando ele existe E o
+# manifesto ao lado (`verificador_manifesto.json`) confere com o `consenso.jsonl`
+# atual — divergência é erro, não fallback silencioso, porque um `consenso.jsonl`
+# que cresceu depois da verificação teria reviews novas sem passar pelo passe.
+CONSENSO_VERIFICADO = "resultado/votacao-3/consenso_verificado.jsonl"
+
 # Quantos bullets de cada papel (§2.5). Dois de consenso, três de contraste —
 # e a lista ENCURTA quando não há eixo acima da margem, em vez de ser
 # completada com o próximo colocado.
@@ -51,7 +63,8 @@ N_BULLETS_FREQUENCIA = 2
 N_BULLETS_CONTRASTE = 3
 
 __all__ = ["EIXOS", "LIVRE", "TAXONOMIA_ID", "MARGEM_LIFT_PP",
-           "CONSENSO_PADRAO", "carregar_classificacao", "frequencias",
+           "CONSENSO_PADRAO", "CONSENSO_VERIFICADO",
+           "carregar_classificacao", "frequencias",
            "fracao", "lifts", "acima_da_margem", "contraste", "bullets",
            "montar_bloco"]
 

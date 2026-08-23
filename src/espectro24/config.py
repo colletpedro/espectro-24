@@ -11,7 +11,7 @@ from __future__ import annotations
 # mostrou "1.6.0 → 1.9.0" quando deveria ser "1.6.0 → 1.9.11"). Os JSONs
 # já publicados NÃO foram reescritos: carimbo corrigido depois do fato não
 # é evidência de nada — mesma política de `VERSAO_COLETOR` abaixo.
-SPEC_VERSION = "1.9.15"
+SPEC_VERSION = "1.9.16"
 
 BASE = "https://letterboxd.com"
 

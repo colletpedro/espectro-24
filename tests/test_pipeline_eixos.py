@@ -114,3 +114,90 @@ def test_o_bloco_carrega_a_propria_versao(output):
     bloco = P.montar_eixos("filme-x", output, {}, consenso=_consenso(),
                            client_call=_cliente())
     assert bloco["spec_version"] == SPEC_VERSION
+
+
+# ======================================================== v1.9.16 verificador
+# `montar_eixos` sem `consenso=` explícito prefere `CONSENSO_VERIFICADO`
+# quando existe e está em dia; cai para `CONSENSO_PADRAO` quando não existe;
+# recusa (erro, não fallback silencioso) quando o verificado ficou para trás.
+
+
+@pytest.fixture
+def diretorio_consenso(tmp_path, monkeypatch):
+    """Um diretório `votacao-3/` isolado, com o manifesto que
+    `carregar_classificacao` exige ao lado dos dois arquivos de consenso."""
+    from espectro24 import eixos as E
+    from espectro24.taxonomia import TAXONOMIA_ID
+
+    (tmp_path / "amostra.json").write_text(
+        json.dumps({"taxonomia_id": TAXONOMIA_ID}), encoding="utf-8")
+    linha = {"slug": "filme-x", "bucket": "negativas", "id": "v0",
+             "eixos": ["ritmo"]}
+    (tmp_path / "consenso.jsonl").write_text(
+        json.dumps(linha) + "\n", encoding="utf-8")
+
+    monkeypatch.setattr(E, "CONSENSO_PADRAO", str(tmp_path / "consenso.jsonl"))
+    monkeypatch.setattr(E, "CONSENSO_VERIFICADO",
+                        str(tmp_path / "consenso_verificado.jsonl"))
+    return tmp_path
+
+
+def test_sem_verificado_usa_o_cru_sem_marcar_verificador(output, diretorio_consenso):
+    bloco = P.montar_eixos("filme-x", output, {}, client_call=_cliente())
+    assert "verificador" not in bloco
+
+
+def test_verificado_em_dia_e_preferido_e_marcado(output, diretorio_consenso):
+    linha_v = {"slug": "filme-x", "bucket": "negativas", "id": "v0",
+               "eixos": []}  # o verificador removeu o único eixo
+    (diretorio_consenso / "consenso_verificado.jsonl").write_text(
+        json.dumps(linha_v) + "\n", encoding="utf-8")
+    (diretorio_consenso / "verificador_manifesto.json").write_text(
+        json.dumps({"variante": "V2_alvo", "passada": 1,
+                    "eixo": "impacto_emocional", "n_removidas": 1,
+                    "fonte_n_linhas": 1}), encoding="utf-8")
+
+    bloco = P.montar_eixos("filme-x", output, {}, client_call=_cliente())
+    # a linha verificada não tem `ritmo` — a linha CRUA teria; provar que o
+    # verificado foi de fato usado (nenhuma linha de eixo), não só que a
+    # chave `verificador` apareceu.
+    assert bloco["linhas"] == []
+    assert bloco["verificador"]["aplicado"] is True
+
+
+def test_verificado_desatualizado_e_erro_nao_fallback(output, diretorio_consenso):
+    (diretorio_consenso / "consenso_verificado.jsonl").write_text(
+        json.dumps({"slug": "filme-x", "bucket": "negativas", "id": "v0",
+                    "eixos": ["ritmo"]}) + "\n", encoding="utf-8")
+    (diretorio_consenso / "verificador_manifesto.json").write_text(
+        json.dumps({"variante": "V2_alvo", "passada": 1,
+                    "eixo": "impacto_emocional", "n_removidas": 0,
+                    "fonte_n_linhas": 999}),  # não bate com as linhas reais
+        encoding="utf-8")
+
+    with pytest.raises(ValueError, match="desatualizado"):
+        P.montar_eixos("filme-x", output, {}, client_call=_cliente())
+
+
+def test_verificador_meta_entra_no_bloco_quando_aplicado(output, diretorio_consenso):
+    (diretorio_consenso / "consenso.jsonl").write_text(
+        json.dumps({"slug": "filme-x", "bucket": "negativas", "id": "v0",
+                    "eixos": ["ritmo"]}) + "\n"
+        + json.dumps({"slug": "filme-x", "bucket": "positivas", "id": "p0",
+                     "eixos": ["ritmo"]}) + "\n",
+        encoding="utf-8")
+    (diretorio_consenso / "consenso_verificado.jsonl").write_text(
+        json.dumps({"slug": "filme-x", "bucket": "negativas", "id": "v0",
+                    "eixos": ["ritmo"]}) + "\n"
+        + json.dumps({"slug": "filme-x", "bucket": "positivas", "id": "p0",
+                     "eixos": ["ritmo"]}) + "\n",
+        encoding="utf-8")
+    (diretorio_consenso / "verificador_manifesto.json").write_text(
+        json.dumps({"variante": "V2_alvo", "passada": 1,
+                    "eixo": "impacto_emocional", "n_removidas": 7,
+                    "fonte_n_linhas": 2}), encoding="utf-8")
+
+    bloco = P.montar_eixos("filme-x", output, {}, client_call=_cliente())
+    assert bloco["verificador"] == {"aplicado": True, "variante": "V2_alvo",
+                                    "passada": 1, "eixo": "impacto_emocional",
+                                    "n_removidas": 7}

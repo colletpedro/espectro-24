@@ -196,8 +196,9 @@ def _normalizar_veredito(data: dict) -> tuple[bool, str, str | None]:
     return confirma, frase, (str(alvo).strip().lower() if alvo else None)
 
 
-def rodar_passe(variante: str, n_passe: int, reviews: list[dict]) -> None:
-    arq = _arq(variante, n_passe)
+def rodar_passe(variante: str, n_passe: int, reviews: list[dict],
+                arq: Path | None = None) -> None:
+    arq = arq if arq is not None else _arq(variante, n_passe)
     feitos = set()
     if arq.exists():
         for linha in arq.read_text(encoding="utf-8").splitlines():
@@ -214,6 +215,7 @@ def rodar_passe(variante: str, n_passe: int, reviews: list[dict]) -> None:
     system = VARIANTES[variante]
     client = deepseek_client()
     lock, contador, t0 = Lock(), [0], time.time()
+    arq.parent.mkdir(parents=True, exist_ok=True)
     saida = arq.open("a", encoding="utf-8")
 
     def tarefa(review: dict) -> None:
@@ -754,14 +756,151 @@ def _imprimir_projecao_exata(saida: dict) -> None:
                   f"{vv['fracao_de_sorteios_que_vira']:.1%} dos sorteios")
 
 
+# ===========================================================================
+# v1.9.16 — aplicação ao consenso de PRODUÇÃO (adoção)
+# ===========================================================================
+#
+# DECISÃO DO DONO DO PROJETO (2026-08-22): adotar `V2_alvo`, passada única,
+# sem votação (88,9% de reprodutibilidade medida na Entrega 3 justifica).
+#
+# O passe roda sobre `resultado/votacao-3/consenso.jsonl` inteiro — as 4181
+# reviews classificadas dos 35 filmes, não a amostra de 100 do gabarito —
+# filtrado às ~3162 reviews em que `impacto_emocional` está no consenso.
+# Escreve TRÊS arquivos, todos em `resultado/votacao-3/`, ao lado do
+# `consenso.jsonl` cru (que nunca é sobrescrito):
+#
+#   verificador_producao.jsonl   telemetria por review (veredito + frase +
+#                                 alvo) — checkpoint/resume, no mesmo padrão
+#                                 de `rodar_passe`.
+#   consenso_verificado.jsonl    o consenso de produção com `impacto_emocional`
+#                                 removido onde o passe reprovou — MESMO
+#                                 schema de `consenso.jsonl`, só `eixos` muda.
+#   verificador_manifesto.json   variante, passada, contagens, custo e
+#                                 `fonte_n_linhas` — o número que
+#                                 `pipeline._carregar_consenso_producao` usa
+#                                 para recusar um verificado desatualizado.
+
+ARQ_PRODUCAO = SAIDA.parent.parent / "votacao-3" / "verificador_producao.jsonl"
+ARQ_CONSENSO_PRODUCAO = SAIDA.parent.parent / "votacao-3" / "consenso.jsonl"
+ARQ_AMOSTRA_PRODUCAO = SAIDA.parent.parent / "votacao-3" / "amostra.json"
+ARQ_CONSENSO_VERIFICADO = SAIDA.parent.parent / "votacao-3" / "consenso_verificado.jsonl"
+ARQ_MANIFESTO_VERIFICADOR = SAIDA.parent.parent / "votacao-3" / "verificador_manifesto.json"
+VARIANTE_PRODUCAO = "V2_alvo"
+
+
+def _linhas_consenso_producao() -> list[dict]:
+    return [json.loads(l) for l in
+            ARQ_CONSENSO_PRODUCAO.read_text(encoding="utf-8").splitlines()
+            if l.strip()]
+
+
+def _reviews_producao_a_verificar(linhas: list[dict]) -> list[dict]:
+    """As reviews do CORPUS INTEIRO com `impacto_emocional` no consenso —
+    ~3162 das 4181, ~75,6% (a saturação medida). Texto vem de
+    `votacao-3/amostra.json`, o manifesto da classificação de produção."""
+    amostra = json.loads(ARQ_AMOSTRA_PRODUCAO.read_text(encoding="utf-8"))
+    por_id = {r["id"]: r for r in amostra["reviews"]}
+    saida = []
+    for r in linhas:
+        if EIXO in r["eixos"]:
+            t = por_id.get(r["id"])
+            if t is not None:
+                saida.append({"id": r["id"], "nivel": t["nivel"],
+                              "n_chars": t["n_chars"], "texto": t["texto"]})
+    return saida
+
+
+def gerar_consenso_verificado(linhas: list[dict],
+                              vereditos_: dict[str, bool]) -> list[dict]:
+    """O transform PURO: aplica os vereditos às linhas do consenso de
+    produção. Só remove `EIXO`, e só quando há veredito EXPLÍCITO de
+    remoção — linha sem `impacto_emocional`, sem veredito (chamada que
+    falhou) ou com veredito de confirmação sai IDÊNTICA à de entrada. Mesma
+    política conservadora de `_normalizar_veredito`: na dúvida, não mexe.
+    """
+    saida = []
+    for r in linhas:
+        eixos = list(r["eixos"])
+        if EIXO in eixos and vereditos_.get(r["id"]) is False:
+            eixos.remove(EIXO)
+        saida.append({**r, "eixos": eixos})
+    return saida
+
+
+def cmd_aplicar_producao() -> None:
+    from dotenv import load_dotenv
+    load_dotenv(RAIZ / ".env")
+
+    linhas = _linhas_consenso_producao()
+    candidatas = _reviews_producao_a_verificar(linhas)
+    print(f"consenso de produção: {len(linhas)} linhas · "
+          f"{len(candidatas)} com {EIXO} no consenso "
+          f"({len(candidatas) / len(linhas):.1%}) · variante "
+          f"{VARIANTE_PRODUCAO} · passada única")
+
+    rodar_passe(VARIANTE_PRODUCAO, 1, candidatas, arq=ARQ_PRODUCAO)
+
+    resultados = {}
+    for l in ARQ_PRODUCAO.read_text(encoding="utf-8").splitlines():
+        if l.strip():
+            r = json.loads(l)
+            if r.get("ok"):
+                resultados[r["id"]] = r
+    faltando = [c["id"] for c in candidatas if c["id"] not in resultados]
+    if faltando:
+        print(f"  AVISO: {len(faltando)} review(s) sem resultado ok (falha "
+              "persistente) — ficam com a marcação original, política "
+              "conservadora.")
+    vereditos_ = {rid: r["confirma"] for rid, r in resultados.items()}
+
+    saida = gerar_consenso_verificado(linhas, vereditos_)
+    n_removidas = sum(1 for antes, depois in zip(linhas, saida)
+                      if EIXO in antes["eixos"] and EIXO not in depois["eixos"])
+
+    ARQ_CONSENSO_VERIFICADO.parent.mkdir(parents=True, exist_ok=True)
+    with ARQ_CONSENSO_VERIFICADO.open("w", encoding="utf-8") as fh:
+        for r in saida:
+            fh.write(json.dumps(r, ensure_ascii=False) + "\n")
+
+    uso = Counter()
+    for r in resultados.values():
+        for k, v in (r.get("uso") or {}).items():
+            uso[k] += v
+    custo = (uso["cache_miss_tokens"] * PRECO_ENTRADA_MISS
+            + uso["cache_hit_tokens"] * PRECO_ENTRADA_HIT
+            + uso["completion_tokens"] * PRECO_SAIDA)
+
+    manifesto = {
+        "variante": VARIANTE_PRODUCAO, "passada": 1, "eixo": EIXO,
+        "fonte": str(ARQ_CONSENSO_PRODUCAO.relative_to(RAIZ)),
+        "fonte_n_linhas": len(linhas),
+        "n_candidatas": len(candidatas),
+        "n_verificadas": len(resultados),
+        "n_falharam": len(faltando),
+        "n_removidas": n_removidas,
+        "n_chamadas": len(resultados),
+        "uso": dict(uso),
+        "custo_usd": custo,
+    }
+    ARQ_MANIFESTO_VERIFICADOR.write_text(
+        json.dumps(manifesto, ensure_ascii=False, indent=2), encoding="utf-8")
+
+    print(f"\n  removidas: {n_removidas}/{len(candidatas)} "
+          f"({n_removidas / len(candidatas):.1%})")
+    print(f"  custo: US$ {custo:.4f} ({len(resultados)} chamadas)")
+    print(f"→ {ARQ_CONSENSO_VERIFICADO.relative_to(RAIZ)}")
+    print(f"→ {ARQ_MANIFESTO_VERIFICADOR.relative_to(RAIZ)}")
+
+
 def main() -> None:
     ap = argparse.ArgumentParser(description=__doc__)
     ap.add_argument("etapa", choices=["passes", "comparar", "projetar",
-                                      "projetar-exato"])
+                                      "projetar-exato", "aplicar-producao"])
     args = ap.parse_args()
     {"passes": cmd_passes, "comparar": cmd_comparar,
      "projetar": cmd_projetar,
-     "projetar-exato": cmd_projetar_exato}[args.etapa]()
+     "projetar-exato": cmd_projetar_exato,
+     "aplicar-producao": cmd_aplicar_producao}[args.etapa]()
 
 
 if __name__ == "__main__":
