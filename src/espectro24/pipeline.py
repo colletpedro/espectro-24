@@ -417,7 +417,13 @@ def ids_analisados(buckets) -> dict[str, set[str]]:
     de 40" sem que ninguém pudesse saber que aquele 40 não é o 40 do
     cabeçalho do grupo.
     """
-    return {b.nome: {r.id for r in b.reviews_analisadas} for b in buckets}
+    # [v1.9.16] `r.id`, não `r.viewing_id`, quebrava aqui: `reviews_analisadas`
+    # devolve `models.Review` (fetched fresco), campo `viewing_id` — só
+    # `bruto.ReviewBruta` (lido do disco) tem `.id`. Nunca exercitado em
+    # produção: os 3 filmes publicados usaram sempre o caminho de
+    # enriquecimento (`ids_analisados_do_bruto`, sobre `ReviewBruta`), nunca
+    # o pipeline fresco do CLI. Achado ao publicar o primeiro filme novo.
+    return {b.nome: {r.viewing_id for r in b.reviews_analisadas} for b in buckets}
 
 
 def ids_analisados_do_bruto(slug: str, coleta: dict | None = None,

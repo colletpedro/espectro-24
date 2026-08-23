@@ -201,3 +201,28 @@ def test_verificador_meta_entra_no_bloco_quando_aplicado(output, diretorio_conse
     assert bloco["verificador"] == {"aplicado": True, "variante": "V2_alvo",
                                     "passada": 1, "eixo": "impacto_emocional",
                                     "n_removidas_no_corpus": 7}
+
+
+# ==================================== v1.9.16 bug real achado ao publicar
+# `ids_analisados` lia `r.id` de um `models.Review` — que não tem esse
+# atributo (é `viewing_id`). Nunca exercitado em produção: os 3 filmes
+# publicados usaram `ids_analisados_do_bruto` (que opera sobre
+# `ReviewBruta`, essa sim com `.id`), não o caminho fresco do CLI. Achado
+# ao rodar o pipeline completo pela primeira vez num filme novo (Entrega 4).
+
+
+def test_ids_analisados_le_o_atributo_certo_do_review():
+    from espectro24.models import BucketResult, LevelResult, Review
+
+    r1 = Review(viewing_id="viewing:1", rating=4.0, text="x", truncated=False,
+               full_text_url=None, spoiler=False)
+    r2 = Review(viewing_id="viewing:2", rating=3.5, text="y", truncated=False,
+               full_text_url=None, spoiler=False)
+    nivel = LevelResult(nivel=3.5, filtro_aplicado=0, paginas_buscadas=1,
+                        n_brutas=2, n_sem_nota=0, n_descartadas_spoiler=0,
+                        n_descartadas_curtas=0, n_descartadas_truncamento=0,
+                        validas=[r1, r2])
+    bucket = BucketResult(nome="positivas", alvo=40, modo="completo",
+                          niveis=[nivel])
+
+    assert P.ids_analisados([bucket]) == {"positivas": {"viewing:1", "viewing:2"}}
