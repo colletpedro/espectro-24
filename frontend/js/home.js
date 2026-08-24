@@ -69,7 +69,29 @@
       + " · busca por título ou eixo";
   }
 
-  // --- cards do catálogo ---
+  // --- mosaico do catálogo (v1.9.17) ---
+  // Ordem de leitura igual à do resto do site: quem não gostou primeiro,
+  // quem gostou por último (mesma ordem de `GRUPO_META` em filme.js).
+  var GRUPOS = ["negativas", "medianas", "positivas"];
+  var COR_GRUPO = {
+    negativas: "var(--neg)", medianas: "var(--med)", positivas: "var(--pos)",
+  };
+
+  // A barra é a distribuição REAL do histograma (`distribuicao.por_bucket`,
+  // já em percentual, soma ~100) — não a cota de análise, que é sempre
+  // 40/40/40 e não diria nada sobre a recepção real. RESTRIÇÃO DE PRODUTO:
+  // isto é o único "número" da célula, e ele nunca vira nota, score ou
+  // média — é proporção de TRÊS grupos, nunca um valor único agregado.
+  function barraDe(f) {
+    var pb = f.distribuicao && f.distribuicao.por_bucket;
+    if (!pb) return null;
+    var total = GRUPOS.reduce(function (s, g) { return s + (pb[g] || 0); }, 0);
+    if (!total) return null;
+    return GRUPOS.map(function (g) {
+      return { grupo: g, pct: ((pb[g] || 0) / total) * 100 };
+    });
+  }
+
   var cards = document.getElementById("filmCards");
   DATA.catalogo.forEach(function (slug) {
     var f = DATA.filmes[slug];
@@ -78,36 +100,45 @@
     var ano = (f.ficha && f.ficha.ano) || "";
 
     var a = document.createElement("a");
-    a.className = "film-card";
+    a.className = "mosaic-cell";
     a.href = "filme.html?slug=" + encodeURIComponent(slug);
     a.setAttribute("aria-label", titulo + (ano ? " (" + ano + ")" : "") + " — ver análise");
 
-    var body = document.createElement("div");
-    body.className = "film-card__body";
+    var spectrum = document.createElement("span");
+    spectrum.className = "mosaic-cell__spectrum";
+    spectrum.setAttribute("aria-hidden", "true");
+    var partes = barraDe(f);
+    if (partes) {
+      partes.forEach(function (p) {
+        if (p.pct <= 0) return;
+        var seg = document.createElement("span");
+        seg.className = "mosaic-cell__seg";
+        seg.style.background = COR_GRUPO[p.grupo];
+        seg.style.height = p.pct + "%";
+        spectrum.appendChild(seg);
+      });
+    } else {
+      // sem distribuição real (não deveria acontecer no catálogo de
+      // produção — todo filme publicado tem histograma; fallback neutro
+      // para não deixar a célula vazia se algum dia acontecer).
+      spectrum.style.background = "var(--bg-elev-2)";
+    }
 
-    var h = document.createElement("h3");
-    h.className = "film-card__title";
+    var info = document.createElement("span");
+    info.className = "mosaic-cell__info";
+    var h = document.createElement("span");
+    h.className = "mosaic-cell__title";
     h.textContent = titulo;
+    info.appendChild(h);
+    if (ano) {
+      var y = document.createElement("span");
+      y.className = "mosaic-cell__year";
+      y.textContent = "(" + ano + ")";
+      info.appendChild(y);
+    }
 
-    var meta = document.createElement("p");
-    meta.className = "film-card__meta";
-    var anoTxt = ano ? String(ano) : "—";
-    meta.innerHTML =
-      esc(anoTxt) +
-      '<span class="dot">·</span>' +
-      fmt(f.total_reviews_observadas) + " reviews observadas";
-
-    body.appendChild(h);
-    body.appendChild(meta);
-
-    var arrow = document.createElement("span");
-    arrow.className = "film-card__arrow";
-    arrow.setAttribute("aria-hidden", "true");
-    arrow.innerHTML =
-      '<svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>';
-
-    a.appendChild(body);
-    a.appendChild(arrow);
+    a.appendChild(spectrum);
+    a.appendChild(info);
     a.dataset.busca = chavesDe(f).join(" | ");
     cards.appendChild(a);
   });
@@ -142,13 +173,4 @@
 
   input.addEventListener("input", filtrar);
   input.addEventListener("focus", function () { if (input.value) filtrar(); });
-
-  function esc(s) {
-    return String(s).replace(/[&<>"]/g, function (c) {
-      return { "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c];
-    });
-  }
-  function fmt(n) {
-    return typeof n === "number" ? n.toLocaleString("pt-BR") : "—";
-  }
 })();

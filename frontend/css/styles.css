@@ -108,21 +108,27 @@ a { color: inherit; }
 /* =======================================================
    HOME
    ======================================================= */
-.home-hero { padding: 44px 0 8px; text-align: center; }
+/* [v1.9.17] Compactado — a home é agora hero + mosaico, e o mosaico é o
+   protagonista. Cada margem aqui foi encolhida deliberadamente para que o
+   mosaico caiba o mais perto possível de uma tela sem exigir scroll; nada
+   foi removido de conteúdo, só de respiro (a única exceção é `.home-sub`,
+   cuja regra fica no arquivo mas o parágrafo saiu do HTML — a tagline +
+   o rótulo da busca já cobrem a mesma mensagem em menos altura). */
+.home-hero { padding: 20px 0 4px; text-align: center; }
 .tagline {
   font-family: var(--mono);
-  font-size: 0.7rem;
-  letter-spacing: 0.28em;
+  font-size: 0.68rem;
+  letter-spacing: 0.26em;
   text-transform: uppercase;
   color: var(--text-mute);
-  margin: 0 0 22px;
+  margin: 0 0 10px;
 }
 .home-title {
   font-family: var(--serif);
   font-weight: 700;
-  font-size: clamp(3rem, 12vw, 5.2rem);
+  font-size: clamp(2.2rem, 7vw, 3.4rem);
   line-height: 0.98;
-  margin: 0 0 20px;
+  margin: 0 0 14px;
   letter-spacing: -0.01em;
 }
 .home-title .num {
@@ -144,8 +150,8 @@ a { color: inherit; }
 
 /* busca estética */
 .search {
-  margin: 34px auto 8px;
-  max-width: 30rem;
+  margin: 0 auto 6px;
+  max-width: 26rem;
   position: relative;
 }
 .search input {
@@ -190,11 +196,11 @@ a { color: inherit; }
 .home-microcopy {
   text-align: center;
   font-family: var(--mono);
-  font-size: 0.68rem;
+  font-size: 0.66rem;
   letter-spacing: 0.14em;
   text-transform: uppercase;
   color: var(--text-mute);
-  margin: 6px 0 40px;
+  margin: 4px 0 4px;
 }
 
 .section-label {
@@ -206,45 +212,153 @@ a { color: inherit; }
   margin: 0 0 16px;
 }
 
-/* cards do catálogo */
-.film-cards { display: flex; flex-direction: column; gap: 14px; }
-.film-card {
-  display: flex;
-  align-items: center;
-  gap: 16px;
-  background: var(--bg-elev);
-  border: 1px solid var(--border);
-  border-radius: var(--radius);
-  padding: 20px 22px;
+/* =======================================================
+   MOSAICO (Entrega 1-4, v1.9.17)
+   ======================================================= */
+/* Mais largo que a coluna de leitura (`--maxw`, 720/760px) de propósito —
+   o mosaico é a peça visual da home, e confiná-lo à largura de um parágrafo
+   desperdiçaria a tela em telas largas. `filme.html` não usa esta classe. */
+.mosaic-wrap {
+  max-width: 935px;
+  margin: 0 auto;
+  padding: 4px 14px 12px;
+}
+.mosaic {
+  display: grid;
+  /* auto-fill (não auto-fit): a contagem de colunas nasce da LARGURA
+     disponível dividida pelo tamanho mínimo da célula — nunca de um número
+     de filmes fixo. Um catálogo de 20 vira menos LINHAS, um de 60 vira
+     mais linhas; a contagem de colunas por breakpoint não muda com N
+     (Entrega 4). Em ~1200px de container, 150px de mínimo dá 7 colunas. */
+  grid-template-columns: repeat(auto-fill, minmax(122px, 1fr));
+  gap: 5px;
+  /* dá espaço para a célula em hover crescer (scale) por cima das vizinhas
+     sem cortar nas bordas do grid. */
+  padding: 6px;
+}
+.mosaic-cell {
+  position: relative;
+  aspect-ratio: 1 / 1;
+  display: block;
+  border-radius: 8px;
+  overflow: hidden;
   text-decoration: none;
   color: inherit;
-  transition: border-color 0.18s, transform 0.18s, background 0.18s;
+  cursor: pointer;
+  transform: scale(1);
+  transition: transform 0.28s cubic-bezier(.2,.8,.2,1), opacity 0.22s, filter 0.22s;
+  will-change: transform;
 }
-.film-card:hover, .film-card:focus-visible {
-  border-color: #3a4152;
-  background: var(--bg-elev-2);
-  transform: translateY(-1px);
+/* `.mosaic-cell { display: block }` acima tem a MESMA especificidade do
+   `[hidden] { display: none }` do UA stylesheet — sem esta regra, a busca
+   (`home.js`, `el.hidden = true`) esconde o elemento do fluxo de
+   acessibilidade mas ele continua VISÍVEL na tela, porque a regra da
+   classe (que vem depois no cascade) vence o empate. Achado ao testar a
+   busca com o mosaico — o card antigo em lista tinha o mesmo risco, nunca
+   verificado visualmente. */
+.mosaic-cell[hidden] { display: none; }
+/* o quadrado É a distribuição — três blocos empilhados, altura = a
+   proporção real do bucket (negativas em cima, positivas embaixo, mesma
+   ordem de leitura do resto do site: quem não gostou → quem gostou).
+   Cor calculada inline por filme (home.js), reusando --neg/--med/--pos —
+   nenhuma paleta nova. */
+.mosaic-cell__spectrum {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+}
+.mosaic-cell__seg { width: 100%; }
+/* dimming: qualquer hover dentro do grid escurece TODAS as células; a
+   célula sob o cursor se restaura e cresce por cima das vizinhas — puro
+   CSS, sem JS para a interação. */
+.mosaic:hover .mosaic-cell { filter: brightness(0.55) saturate(0.7); }
+.mosaic-cell:hover,
+.mosaic-cell:focus-visible {
+  filter: none;
+  transform: scale(1.32);
+  z-index: 5;
   outline: none;
+  box-shadow: 0 12px 34px -6px #000000b3, 0 0 0 1px #ffffff1a;
 }
-.film-card:focus-visible { box-shadow: 0 0 0 3px #3b82f61f; }
-.film-card__body { flex: 1; min-width: 0; }
-.film-card__title {
+.mosaic-cell:focus-visible { box-shadow: 0 0 0 3px #3b82f6cc, 0 12px 34px -6px #000000b3; }
+
+.mosaic-cell__info {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 8px;
+  opacity: 0;
+  transition: opacity 0.22s;
+  background: radial-gradient(ellipse at center, #000000b3 0%, #00000066 55%, transparent 78%);
+}
+.mosaic-cell:hover .mosaic-cell__info,
+.mosaic-cell:focus-visible .mosaic-cell__info { opacity: 1; }
+.mosaic-cell__title {
   font-family: var(--serif);
-  font-size: 1.5rem;
   font-weight: 700;
+  font-size: 1.05rem;
   line-height: 1.15;
-  margin: 0 0 4px;
+  color: #fff;
+  text-shadow: 0 2px 10px #000000e6, 0 0 22px #ffffff66, 0 0 3px #000;
+  margin: 0;
 }
-.film-card__meta {
+.mosaic-cell__year {
   font-family: var(--mono);
-  font-size: 0.7rem;
-  letter-spacing: 0.1em;
-  text-transform: uppercase;
-  color: var(--text-mute);
+  font-size: 0.66rem;
+  letter-spacing: 0.12em;
+  color: #ffffffcc;
+  text-shadow: 0 1px 6px #000000e6;
+  margin-top: 4px;
+  opacity: 0;
+  transition: opacity 0.22s 0.05s;
 }
-.film-card__meta .dot { opacity: 0.5; margin: 0 6px; }
-.film-card__arrow { color: var(--text-mute); flex-shrink: 0; transition: transform 0.18s, color 0.18s; }
-.film-card:hover .film-card__arrow { transform: translateX(3px); color: var(--text-dim); }
+.mosaic-cell:hover .mosaic-cell__year,
+.mosaic-cell:focus-visible .mosaic-cell__year { opacity: 1; }
+
+/* Touch não tem hover — sem ele a célula ficaria muda até o toque navegar
+   embora (`hover: none` cobre a maioria dos celulares/tablets reais; a
+   contagem de colunas cai para 3 no mesmo breakpoint, ver abaixo). Título
+   sempre visível, discreto, sem o glow do desktop — a interação é o toque
+   em si, que já abre o filme direto, não um segundo passo antes disso. */
+@media (hover: none) {
+  .mosaic-cell__info {
+    opacity: 1;
+    justify-content: flex-end;
+    background: linear-gradient(180deg, transparent 55%, #000000d9 100%);
+  }
+  .mosaic-cell__title { font-size: 0.82rem; text-shadow: 0 1px 6px #000; }
+  .mosaic-cell__year { opacity: 0.85; font-size: 0.6rem; }
+  .mosaic:hover .mosaic-cell { filter: none; }
+  .mosaic-cell:active { transform: scale(0.97); }
+}
+
+.mosaic-hint {
+  text-align: center;
+  font-family: var(--mono);
+  font-size: 0.64rem;
+  letter-spacing: 0.04em;
+  color: var(--text-mute);
+  margin: 10px 10px 0;
+  line-height: 1.6;
+}
+.mosaic-hint__neg { color: var(--neg); }
+.mosaic-hint__med { color: var(--med); }
+.mosaic-hint__pos { color: var(--pos); }
+
+.mosaic-cell.is-hidden { display: none; }
+
+@media (max-width: 900px) {
+  .mosaic { grid-template-columns: repeat(auto-fill, minmax(120px, 1fr)); }
+}
+@media (max-width: 640px) {
+  .mosaic { grid-template-columns: repeat(3, 1fr); gap: 4px; }
+  .mosaic-cell:hover { transform: scale(1); z-index: 0; }
+}
 
 /* =======================================================
    TELA DO FILME
@@ -602,7 +716,7 @@ a { color: inherit; }
 
 @media (min-width: 600px) {
   :root { --maxw: 760px; }
-  .home-hero { padding: 64px 0 8px; }
+  .home-hero { padding: 28px 0 4px; }
 }
 
 @media (prefers-reduced-motion: reduce) {

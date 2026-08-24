@@ -19,11 +19,10 @@
 <body>
   <div class="spectrum-bar spectrum-bar--segmented" aria-hidden="true" id="brandBar"></div>
 
-  <main class="wrap">
-    <section class="home-hero">
+  <main class="home-main">
+    <section class="home-hero wrap">
       <p class="tagline">24 quadros · 3 grupos · 0 spoilers</p>
       <h1 class="home-title">Espectro <span class="num">24</span></h1>
-      <p class="home-sub">A recepção completa de um filme — o que quem odiou, quem amou e quem ficou no meio diz — sem nota média e sem spoilers.</p>
 
       <form class="search" role="search" autocomplete="off" onsubmit="return false;">
         <span class="search__icon" aria-hidden="true">
@@ -36,9 +35,12 @@
       <p class="home-microcopy" id="homeMicrocopy">busca por título ou eixo</p>
     </section>
 
-    <section aria-labelledby="availLabel">
-      <h2 class="section-label" id="availLabel">Disponíveis agora</h2>
-      <div class="film-cards" id="filmCards"></div>
+    <section class="mosaic-wrap" aria-labelledby="availLabel">
+      <h2 class="visually-hidden" id="availLabel">Disponíveis agora</h2>
+      <div class="mosaic" id="filmCards"></div>
+      <p class="mosaic-hint">passe o mouse (ou toque) para ver título e ano — sem nota, sem spoiler.
+        cada quadro mostra a distribuição real do filme: <span class="mosaic-hint__neg">quem não gostou</span>,
+        <span class="mosaic-hint__med">quem ficou no meio</span>, <span class="mosaic-hint__pos">quem gostou</span>.</p>
     </section>
   </main>
 
