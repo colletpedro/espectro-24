@@ -41,7 +41,13 @@
     positivas: { label: "Positivas", color: "var(--pos)", cap: "quem gostou" },
   };
 
-  var slug = new URLSearchParams(location.search).get("slug") || "";
+  var params = new URLSearchParams(location.search);
+  var slug = params.get("slug") || "";
+  // [v1.9.19, Entrega 7] tint de fundo por sentimento — atrás de FLAG,
+  // nunca ligado por padrão. `?tint=1` na URL liga só nesta visita, pra o
+  // dono do projeto comparar com/sem sem precisar de deploy. Ver `.is-tinted`
+  // em styles.css — 2-3% de opacidade, mesmos tokens de cor de sempre.
+  var TINT = params.get("tint") === "1";
   var film = DATA.filmes[slug];
 
   if (!film) {
@@ -59,17 +65,39 @@
   render(film);
 
   // =====================================================================
+  // [v1.9.19] REORDENAÇÃO DA PÁGINA — dados primeiro.
+  //
+  // Ordem anterior (até v1.9.16): header → ficha → narrativa completa →
+  // "eixo a eixo" (tabela de 3 colunas) → listas por grupo → pesquisa.
+  // Feedback de usuários reais: a parede de texto aparecia ANTES dos
+  // bullets e ninguém lia; havia redundância entre o resumo narrativo no
+  // topo e a observação por grupo no fim; a tabela "eixo a eixo" não
+  // funcionava na prática.
+  //
+  // Ordem nova: header → ficha → VEREDITO (código, zero LLM, Entrega 2) →
+  // bullets agrupados por SENTIMENTO (Entrega 3) → narrativa completa
+  // COLAPSADA (existe, só deixa de ser a primeira coisa) → pesquisa.
+  //
+  // A tabela "eixo a eixo" SAI da tela (Entrega 5) — decisão de produto,
+  // não técnica. O bloco `eixos` do JSON continua existindo, continua
+  // sendo calculado do mesmo jeito, e passa a alimentar DUAS coisas que
+  // não existiam antes: o veredito (Entrega 2) e a ORDEM dos bullets
+  // dentro de cada grupo (temas com papel de contraste sobem — ver
+  // `ordenarTemasPorEixo`). Ver `veredictoBlock`/`sentimentGroupsBlock`
+  // para onde `f.eixos` é lido agora.
+  // =====================================================================
   function render(f) {
     app.appendChild(header(f));
     if (f.ficha) app.appendChild(fichaBlock(f.ficha));
-    if (f.narrativa) app.appendChild(narrativaBlock(f.narrativa));
+
+    var veredito = veredictoBlock(f);
+    if (veredito) app.appendChild(veredito);
+
     app.appendChild(detailDivider(f));
-    // v1.9.14: os três grupos ALINHADOS POR EIXO — a promessa estrutural do
-    // produto. Vem antes das listas por grupo: é a leitura comparativa, e as
-    // listas abaixo seguem servindo o detalhe (exemplo, avisos, observação).
-    var eixos = eixosBlock(f);
-    if (eixos) app.appendChild(eixos);
-    (f.buckets || []).forEach(function (b) { app.appendChild(groupBlock(b, f)); });
+    app.appendChild(sentimentGroupsBlock(f));
+
+    if (f.narrativa) app.appendChild(narrativaCollapsedBlock(f.narrativa));
+
     // micro-pesquisa (A/B) — módulo separado
     if (window.mountSurvey) window.mountSurvey(app, f);
   }
@@ -138,20 +166,38 @@
     return el;
   }
 
-  // --- narrativa (A RECEPÇÃO, EM RESUMO) ---
-  function narrativaBlock(texto) {
-    var el = document.createElement("section");
-    el.className = "section narrativa";
-    el.setAttribute("aria-labelledby", "resumoLabel");
-    el.innerHTML = '<h2 class="section-label" id="resumoLabel">A recepção, em resumo</h2>';
+  // --- narrativa completa (v1.9.19: COLAPSADA, no fim da página — Entrega 1) ---
+  // A narrativa continua existindo e continua no produto — só deixa de ser a
+  // primeira coisa. Fechada por padrão (`<details>` sem `open`), com um
+  // controle claro pra expandir (`.disclosure`, mesmo padrão visual do
+  // grupo-do-meio recolhido, ver `meioColapsadoBlock`).
+  function narrativaCollapsedBlock(texto) {
+    var det = document.createElement("details");
+    det.className = "disclosure disclosure--narrativa";
+
+    var sum = document.createElement("summary");
+    sum.innerHTML =
+      '<span class="disclosure__label">Ler a análise completa</span>' + chevronSvg();
+    det.appendChild(sum);
+
+    var body = document.createElement("div");
+    body.className = "disclosure__body narrativa";
     texto.split(/\n{2,}/).forEach(function (par) {
       var p = par.trim();
       if (!p) return;
       var node = document.createElement("p");
       node.textContent = p;
-      el.appendChild(node);
+      body.appendChild(node);
     });
-    return el;
+    det.appendChild(body);
+    return det;
+  }
+
+  function chevronSvg() {
+    return '<span class="chevron" aria-hidden="true">' +
+      '<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" ' +
+      'stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">' +
+      '<path d="m6 9 6 6 6-6"/></svg></span>';
   }
 
   // --- divisor EM DETALHE + disclaimer ---
@@ -187,236 +233,218 @@
 
 
   // =====================================================================
-  // v1.9.14 — OS TRÊS GRUPOS ALINHADOS POR EIXO (§[E])
-  //
-  // A promessa estrutural do produto: com eixo fixo, os três buckets ficam
-  // comparáveis célula a célula, em vez de três listas soltas que o leitor
-  // precisa reconciliar de cabeça.
-  //
-  // Quatro estados, e NENHUM deles é ausência de conteúdo:
-  //   1. eixo que um grupo não menciona → célula marcada como vazia;
-  //   2. `contraste: valorativo` → o alinhamento existe, nenhuma linha tem
-  //      contraste, e a área ganha enunciado próprio (22 dos 35 filmes do
-  //      catálogo caem aqui — se parecer bug, o estado não está desenhado);
-  //   3. piso escalonado → a linha acompanha o que AQUELE grupo pode dizer;
-  //   4. filme sem bloco `eixos` → esta seção não existe e a página cai na
-  //      lista de temas de sempre.
+  // v1.9.19 — a tabela "EIXO A EIXO" SAI DA TELA (Entrega 5, decisão de
+  // produto — feedback de uso: "não funciona na prática"). O que existia
+  // em `eixosBlock`/`contrasteBox`/`gradeCabecalho`/`linhaEixo`/`celula`/
+  // `denominadorNota` foi REMOVIDO daqui — não escondido atrás de um flag,
+  // removido mesmo. O bloco `eixos` do JSON não muda em nada: continua
+  // sendo calculado pelo mesmo código de sempre (`eixos.py`, zero LLM), e
+  // passa a alimentar DUAS coisas que a view antiga não fazia:
+  //   1. o VEREDITO (`veredito`, abaixo) — a leitura de UMA frase que a
+  //      tabela de 3 colunas pedia ao leitor pra fazer de cabeça;
+  //   2. a ORDEM dos temas dentro de cada grupo (`ordenarTemasPorEixo`,
+  //      perto de `groupBlock`) — o tema cujo eixo é "só este grupo" sobe
+  //      pro topo, porque é exatamente o que o veredito está apontando.
+  // Se um dia a tabela precisar voltar, o dado que ela lia está intacto.
   // =====================================================================
-  function eixosBlock(f) {
+
+  // --- VEREDITO (Entrega 2) — TEMPLATE sobre lift já computado. ZERO
+  // chamada de LLM: é derivação, não geração. A regra: o eixo de maior
+  // lift em cada bucket é o que aquele grupo tem de PRÓPRIO; o veredito
+  // contrasta os dois extremos (negativas/positivas — o meio nunca é um
+  // dos dois lados do contraste, só ganha menção quando é o grupo
+  // DOMINANTE da recepção, Entrega 4).
+  //
+  // RESTRIÇÃO DE PRODUTO: nenhuma nota média/score/estrela agregada aqui —
+  // só nomes de eixo e `share_real` (uma PROPORÇÃO, a mesma métrica que
+  // "~90% das notas" já usa em todo o resto da tela, nunca um número-síntese
+  // único do filme). E o veredito não afirma o que o dado não sustenta: um
+  // bucket sem eixo acima da margem de contraste não empresta seu "melhor"
+  // eixo pro veredito — cai no ramo "os grupos falam das mesmas coisas".
+  function veredictoBlock(f) {
+    var texto = veredito(f);
+    if (!texto) return null;
+    var el = document.createElement("p");
+    el.className = "verdict";
+    el.textContent = texto;
+    return el;
+  }
+
+  function veredito(f) {
     var e = f.eixos;
-    if (!e || !e.linhas || !e.linhas.length) return null;   // estado 4
+    if (!e || !e.linhas || !e.linhas.length) return null;
+    var buckets = f.buckets || [];
+    var margem = e.margem_lift_pp || 20;
 
-    var buckets = (f.buckets || []).map(function (b) { return b.bucket; });
-    var piso = {};
-    (f.buckets || []).forEach(function (b) {
-      piso[b.bucket] = PISO[b.estado_piso] || PISO.completa;
-    });
+    var dominante = bucketDominante(buckets);
+    var meioDominante = !!(dominante && dominante.bucket === "medianas");
 
-    var valorativo = e.contraste === "valorativo";
-    var el = document.createElement("section");
-    el.className = "section eixos";
-    el.setAttribute("data-contraste", e.contraste || "");
-    el.setAttribute("aria-labelledby", "eixosLabel");
-    el.innerHTML =
-      '<h2 class="section-label" id="eixosLabel">Eixo a eixo · os três grupos lado a lado</h2>';
+    var pos = eixoDeMaiorLift(e, "positivas", buckets);
+    var neg = eixoDeMaiorLift(e, "negativas", buckets);
+    var posOk = !!pos && pos.lift_pp >= margem;
+    var negOk = !!neg && neg.lift_pp >= margem;
 
-    el.appendChild(contrasteBox(e, valorativo));
-
-    // As linhas exibidas são as que viraram BULLET em algum grupo (§2.5:
-    // 2 de frequência + 3 de contraste, por grupo). As demais ficam atrás
-    // do "ver todos os eixos" — presentes, não escondidas.
-    var destaque = e.linhas.filter(function (l) { return temBullet(l); });
-    var resto = e.linhas.filter(function (l) { return !temBullet(l); });
-
-    el.appendChild(gradeCabecalho(buckets));
-    destaque.forEach(function (l) { el.appendChild(linhaEixo(l, buckets, piso)); });
-
-    if (resto.length) {
-      var det = document.createElement("details");
-      det.className = "eixos__resto";
-      var sum = document.createElement("summary");
-      sum.textContent = "ver os outros " + resto.length + " eixos";
-      det.appendChild(sum);
-      resto.forEach(function (l) { det.appendChild(linhaEixo(l, buckets, piso)); });
-      el.appendChild(det);
-    }
-
-    el.appendChild(denominadorNota(e));
-    return el;
-  }
-
-  function temBullet(linha) {
-    var b = linha.bullet_de || {};
-    return Object.keys(b).some(function (k) { return !!b[k]; });
-  }
-
-  // O enunciado do estado `contraste` — PRIMEIRA CLASSE, nunca uma ausência.
-  function contrasteBox(e, valorativo) {
-    var el = document.createElement("p");
-    el.className = "eixos__contraste";
-    el.textContent = valorativo
-      ? "Os três grupos falam das mesmas coisas — e discordam sobre se elas "
-        + "funcionam. Nenhum assunto separa os grupos aqui: a divergência é "
-        + "de veredito, não de tema."
-      : "Há assunto que separa os grupos: as linhas marcadas como contraste "
-        + "são faladas por um grupo muito mais que pelos outros.";
-    return el;
-  }
-
-  function gradeCabecalho(buckets) {
-    var el = document.createElement("div");
-    el.className = "eixos__head";
-    el.setAttribute("aria-hidden", "true");
-    el.appendChild(document.createElement("span"));   // coluna do rótulo
-    buckets.forEach(function (nome) {
-      var meta = GRUPO_META[nome] || { label: nome, color: "var(--text)" };
-      var c = document.createElement("span");
-      c.className = "eixos__head-cell";
-      c.style.color = meta.color;
-      c.textContent = meta.label.toUpperCase();
-      el.appendChild(c);
-    });
-    return el;
-  }
-
-  function linhaEixo(linha, buckets, piso) {
-    var el = document.createElement("div");
-    el.className = "eixos__row";
-    el.setAttribute("data-eixo", linha.eixo);
-
-    var nome = document.createElement("div");
-    nome.className = "eixos__axis";
-    nome.textContent = EIXO_LABEL[linha.eixo] || linha.eixo;
-
-    // O selo de contraste é por GRUPO, e vai na célula daquele grupo — pôr
-    // no rótulo da linha diria que a linha inteira é contraste, quando o
-    // contraste é sempre de UM grupo contra os outros dois.
-    el.appendChild(nome);
-
-    buckets.forEach(function (bucket) {
-      el.appendChild(celula(linha, bucket, piso[bucket] || PISO.completa));
-    });
-    return el;
-  }
-
-  function celula(linha, bucket, permissao) {
-    var cel = document.createElement("div");
-    cel.className = "eixos__cell";
-    cel.setAttribute("data-group", bucket);
-
-    var dados = (linha.por_bucket || {})[bucket];
-
-    // Estado 3 — piso escalonado: grupo sem análise temática não tem célula.
-    if (!dados || !permissao.temas) {
-      cel.classList.add("is-empty");
-      cel.innerHTML = '<span class="eixos__none">sem análise</span>';
-      return cel;
-    }
-    // Estado 1 — o grupo simplesmente não fala deste eixo.
-    if (!dados.mencoes) {
-      cel.classList.add("is-empty");
-      cel.innerHTML = '<span class="eixos__none">não menciona</span>';
-      return cel;
-    }
-
-    var papel = (linha.bullet_de || {})[bucket];
-    if (papel && papel !== "frequencia") {
-      var selo = document.createElement("span");
-      selo.className = "eixos__badge";
-      selo.textContent = "só este grupo";
-      selo.title = "Lift de " + fmtPP(dados.lift_pp) + " sobre o grupo "
-                 + "seguinte — acima da margem de contraste.";
-      cel.appendChild(selo);
-    }
-
-    if (dados.tema) {
-      var t = document.createElement("span");
-      t.className = "eixos__tema";
-      t.textContent = dados.tema;
-      cel.appendChild(t);
-    }
-
-    // O NÚMERO: sempre "X de N", nunca percentual solto — e omitido quando
-    // o piso do grupo não permite citar número (§3[C3]).
-    if (permissao.numero) {
-      var freq = document.createElement("span");
-      freq.className = "eixos__freq";
-      freq.textContent = dados.mencoes + " de " + dados.de_n;
-      cel.appendChild(freq);
-      var bar = document.createElement("span");
-      bar.className = "eixos__bar";
-      bar.setAttribute("role", "img");
-      bar.setAttribute("aria-label",
-        "Mencionado em " + dados.mencoes + " de " + dados.de_n
-        + " reviews classificadas");
-      var fill = document.createElement("span");
-      fill.style.width = (dados.de_n
-        ? Math.max(0, Math.min(100, (dados.mencoes / dados.de_n) * 100)) : 0)
-        .toFixed(1) + "%";
-      bar.appendChild(fill);
-      cel.appendChild(bar);
+    var frase;
+    if (posOk && negOk) {
+      frase = "Quem recomenda destaca " + eixoEmFrase(pos.eixo) + "; quem não "
+        + "recomenda aponta " + eixoEmFrase(neg.eixo) + ".";
+    } else if (posOk) {
+      frase = "Quem recomenda destaca " + eixoEmFrase(pos.eixo) + " — do "
+        + "outro lado, nenhum assunto se destaca tanto assim.";
+    } else if (negOk) {
+      frase = "Quem não recomenda aponta " + eixoEmFrase(neg.eixo) + " — do "
+        + "outro lado, nenhum assunto se destaca tanto assim.";
     } else {
-      var av = document.createElement("span");
-      av.className = "eixos__freq is-muted";
-      av.textContent = "amostra pequena demais para número";
-      cel.appendChild(av);
+      // `contraste: valorativo` (nenhum bucket acima da margem) cai aqui —
+      // mas também qualquer `tematico` em que o contraste mora só no meio,
+      // caso em que negativas/positivas de fato não têm nada de próprio.
+      frase = "Os grupos falam das mesmas coisas — discordam sobre se elas "
+        + "funcionam.";
     }
 
-    // Temas do MESMO grupo que caíram neste eixo e não ficaram com a célula
-    // (§D3). Aparecem porque a alternativa é o leitor perder tema: com 6
-    // temas e 10 eixos a colisão é frequente.
-    var outros = dados.temas_no_mesmo_eixo || [];
-    if (outros.length) {
-      var mais = document.createElement("span");
-      mais.className = "eixos__mais";
-      mais.textContent = "+ " + outros.join(" · ");
-      cel.appendChild(mais);
+    // Entrega 4: quando o meio é o MAIOR grupo, a frase original mentiria
+    // por omissão (descreveria o filme só pelos dois grupos minoritários).
+    // A menção vem ANTES, como contexto que muda a leitura do resto.
+    if (meioDominante && typeof dominante.share_real === "number") {
+      frase = "O meio-termo é o maior grupo da recepção (~"
+        + dominante.share_real + "% das notas). " + frase;
     }
-    return cel;
+    return frase;
   }
 
-  // v1.9.15 (Entrega 1): o caveat de "duas populações diferentes" só é
-  // verdadeiro quando `fonte_classificacao` está no bloco — e ela SÓ existe
-  // quando alguma sobreposição é incompleta (§2.5, `eixos.montar_bloco`).
-  // Mostrar o caveat quando a chave está ausente diria uma divergência que
-  // foi corrigida (a unificação de [D3]/Entrega 1): pior que texto morto, é
-  // texto FALSO. A ausência da chave é a própria informação — "estas
-  // populações são a mesma" —, e é assim que este texto a lê.
-  function denominadorNota(e) {
-    var el = document.createElement("p");
-    el.className = "disclaimer eixos__nota";
-    var fonte = (e.fonte_classificacao || {}).por_bucket;
-    var texto;
-    if (fonte) {
-      var sobre = Object.keys(fonte).map(function (b) {
-        return (GRUPO_META[b] ? GRUPO_META[b].label.toLowerCase() : b) + " "
-          + fonte[b].sobreposicao_com_analisadas + "/" + fonte[b].n_classificadas;
-      });
-      texto =
-        "Os números desta tabela contam reviews CLASSIFICADAS por eixo — uma "
-        + "amostra do mesmo grupo, do mesmo tamanho, mas não exatamente as "
-        + "mesmas reviews que a lista abaixo resume"
-        + (sobre.length ? " (em comum: " + sobre.join(", ") + ")" : "")
-        + ".";
-    } else {
-      texto = "Os números desta tabela contam as mesmas reviews que a lista "
-        + "abaixo resume — a amostra classificada por eixo foi unificada com "
-        + "a analisada (v1.9.15).";
-    }
-    el.textContent = texto + " Contraste com margem de "
-      + (e.margem_lift_pp || 20) + " pontos percentuais.";
-    return el;
+  // O grupo com maior `share_real` — usado tanto no veredito quanto na
+  // decisão de promover o meio a destaque (Entrega 4). `null` sem
+  // distribuição real (nenhum `share_real` no JSON).
+  function bucketDominante(buckets) {
+    var comShare = (buckets || []).filter(function (b) {
+      return typeof b.share_real === "number";
+    });
+    if (!comShare.length) return null;
+    return comShare.reduce(function (a, b) {
+      return b.share_real > a.share_real ? b : a;
+    });
   }
 
-  function fmtPP(v) {
-    return (typeof v === "number" ? v.toFixed(1).replace(".", ",") : "?") + "pp";
+  // O eixo de maior lift de UM bucket — "o que aquele grupo tem de
+  // próprio". `null` quando o bucket não sustenta nada: piso `sem_analise`
+  // (não há análise temática pra esse grupo, então não há lift confiável
+  // pra citar) ou nenhum eixo mencionado.
+  function eixoDeMaiorLift(e, bucket, buckets) {
+    var b = (buckets || []).filter(function (x) { return x.bucket === bucket; })[0];
+    if (b && b.estado_piso === "sem_analise") return null;
+    var candidatos = (e.linhas || []).filter(function (l) {
+      var d = (l.por_bucket || {})[bucket];
+      return d && d.mencoes > 0 && typeof d.lift_pp === "number";
+    });
+    if (!candidatos.length) return null;
+    var melhor = candidatos.reduce(function (a, l) {
+      return l.por_bucket[bucket].lift_pp > a.por_bucket[bucket].lift_pp ? l : a;
+    });
+    return { eixo: melhor.eixo, lift_pp: melhor.por_bucket[bucket].lift_pp };
+  }
+
+  // Rótulo do eixo em minúscula, pra encaixar em "destaca <eixo>" — os
+  // valores de `EIXO_LABEL` são pensados pra cabeçalho (inicial maiúscula).
+  function eixoEmFrase(id) {
+    var label = EIXO_LABEL[id] || id;
+    return label.charAt(0).toLowerCase() + label.slice(1);
+  }
+
+  // =====================================================================
+  // BULLETS AGRUPADOS POR SENTIMENTO (Entrega 3) + O MEIO REBAIXADO
+  // (Entrega 4, decisão do dono do projeto).
+  //
+  // Formato: dois blocos em destaque, negativas e positivas, MESMO leiaute
+  // entre os dois (a neutralidade de TRATAMENTO do §0 da SPEC continua
+  // valendo AQUI — é só o meio que sai do meio-a-meio). O grupo medianas
+  // vira uma linha discreta e colapsada abaixo dos dois, com controle pra
+  // expandir — ele é minoritário em 33 dos 35 filmes do catálogo, e o
+  // feedback de uso apontou que em destaque ele "polui sem informar".
+  //
+  // EXCEÇÃO AUTOMÁTICA, e é o que impede a decisão virar distorção: quando
+  // medianas é o grupo DOMINANTE (maior `share_real` dos três — 45% em
+  // `napoleon-2023`, 41% em `friday-the-13th-2009`), ele sobe pro destaque
+  // junto dos outros dois. Descrever esses dois filmes só pelos grupos que,
+  // somados, são METADE da recepção seria mentir sobre a distribuição —
+  // exatamente o defeito que o §0 (neutralidade de tratamento) existe pra
+  // evitar. Isto quebra a promessa de "três grupos, formato idêntico"
+  // DELIBERADAMENTE; a razão está registrada em SPEC.md §0.
+  // =====================================================================
+  function sentimentGroupsBlock(f) {
+    var porNome = {};
+    (f.buckets || []).forEach(function (b) { porNome[b.bucket] = b; });
+    var dominante = bucketDominante(f.buckets || []);
+    var meioDominante = !!(dominante && dominante.bucket === "medianas");
+
+    var wrap = document.createElement("div");
+    wrap.className = "sentiment-wrap";
+
+    var destaque = document.createElement("div");
+    destaque.className = "sentiment-groups"
+      + (meioDominante ? " sentiment-groups--3" : " sentiment-groups--2");
+    var ordem = meioDominante
+      ? ["negativas", "medianas", "positivas"]
+      : ["negativas", "positivas"];
+    ordem.forEach(function (nome) {
+      if (porNome[nome]) destaque.appendChild(groupBlock(porNome[nome], f));
+    });
+    wrap.appendChild(destaque);
+
+    if (!meioDominante && porNome.medianas) {
+      wrap.appendChild(meioColapsadoBlock(porNome.medianas, f));
+    }
+    return wrap;
+  }
+
+  function meioColapsadoBlock(b, f) {
+    var det = document.createElement("details");
+    det.className = "disclosure disclosure--meio";
+
+    var rotuloPct = typeof b.share_real === "number"
+      ? "~" + b.share_real + "% ficaram no meio-termo"
+      : "uma parte ficou no meio-termo";
+    var sum = document.createElement("summary");
+    sum.innerHTML = '<span class="disclosure__label">' + esc(rotuloPct)
+      + "</span>" + chevronSvg();
+    det.appendChild(sum);
+
+    var body = document.createElement("div");
+    body.className = "disclosure__body";
+    body.appendChild(groupBlock(b, f));
+    det.appendChild(body);
+    return det;
+  }
+
+  // O bloco `eixos` alimenta a ORDEM dos temas dentro do grupo (Entrega 5):
+  // o tema cujo eixo tem papel de bullet "não-frequência" (contraste ou
+  // frequência+contraste) sobe pro topo — é o mesmo eixo que o veredito, lá
+  // em cima, está apontando como o que aquele grupo tem de próprio.
+  function papelPorTema(e, bucket) {
+    var mapa = {};
+    if (!e) return mapa;
+    (e.linhas || []).forEach(function (l) {
+      var d = (l.por_bucket || {})[bucket];
+      if (d && d.tema) mapa[d.tema] = (l.bullet_de || {})[bucket] || null;
+    });
+    return mapa;
+  }
+  function ordenarTemasPorEixo(temas, papelMap) {
+    return temas
+      .map(function (t, i) { return { t: t, i: i }; })
+      .sort(function (a, b) {
+        var pa = papelMap[a.t.tema], pb = papelMap[b.t.tema];
+        var wa = pa && pa !== "frequencia" ? 0 : 1;
+        var wb = pb && pb !== "frequencia" ? 0 : 1;
+        return wa !== wb ? wa - wb : a.i - b.i;   // estável no empate
+      })
+      .map(function (x) { return x.t; });
   }
 
   // --- grupo ---
   function groupBlock(b, f) {
     var meta = GRUPO_META[b.bucket] || { label: b.bucket, color: "var(--text)" };
     var el = document.createElement("section");
-    el.className = "group";
+    el.className = "group" + (TINT ? " is-tinted" : "");
     el.setAttribute("data-group", b.bucket);
     el.setAttribute("aria-label", "Grupo " + meta.label);
 
@@ -495,11 +523,12 @@
       el.appendChild(warnBox("Escopo: a observação pode generalizar este recorte — revisão manual pendente."));
     }
 
-    // temas
+    // temas — ordenados pelo papel de bullet do eixo (ver `ordenarTemasPorEixo`)
     if (b.temas && b.temas.length) {
       var themes = document.createElement("div");
       themes.className = "themes";
-      b.temas.forEach(function (t, i) {
+      var ordenados = ordenarTemasPorEixo(b.temas, papelPorTema(f.eixos, b.bucket));
+      ordenados.forEach(function (t, i) {
         themes.appendChild(themeRow(t, b.bucket, i));
       });
       el.appendChild(themes);
@@ -564,7 +593,12 @@
     bar.appendChild(fill);
     row.appendChild(bar);
 
-    // exemplo parafraseado expansível
+    // exemplo parafraseado expansível — [Entrega 6, v1.9.19] o "+" parecia
+    // rótulo estático (achado de uso: ninguém percebia que era clicável).
+    // Chevron no padrão de ícone do resto do site (mesmo stroke/round-cap
+    // do back-link e da narrativa colapsada), dentro de um pill na cor do
+    // grupo com opacidade baixa (`--neg-soft`/`--med-soft`/`--pos-soft`,
+    // já usadas — nenhuma cor nova) em vez de texto solto.
     if (t.exemplo_parafraseado) {
       var id = "ex-" + bucket + "-" + idx;
       var btn = document.createElement("button");
@@ -572,7 +606,7 @@
       btn.type = "button";
       btn.setAttribute("aria-expanded", "false");
       btn.setAttribute("aria-controls", id);
-      btn.innerHTML = 'Exemplo parafraseado <span class="plus" aria-hidden="true">+</span>';
+      btn.innerHTML = '<span class="theme__toggle-label">Exemplo parafraseado</span>' + chevronSvg();
 
       var ex = document.createElement("div");
       ex.className = "theme__example";

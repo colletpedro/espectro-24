@@ -463,19 +463,21 @@ a { color: inherit; }
   color: var(--warn);
 }
 
-/* seções */
-.section { padding: 30px 0 6px; }
-.section > .section-label { margin-bottom: 14px; }
-.narrativa p {
-  font-size: 1.06rem;
-  line-height: 1.68;
-  color: var(--text-dim);
-  margin: 0 0 16px;
+/* [v1.9.19] VEREDITO — Entrega 2. Uma frase, montada por TEMPLATE sobre o
+   lift já computado (ver `veredito()` em filme.js) — zero LLM. Vem logo
+   depois da ficha, antes de qualquer bullet: é a primeira coisa que o
+   dado diz, no lugar que a parede de texto narrativo ocupava até aqui. */
+.verdict {
+  font-family: var(--serif);
+  font-size: 1.22rem;
+  line-height: 1.5;
+  color: var(--text);
+  margin: 4px 0 8px;
+  max-width: 40rem;
 }
-.narrativa p:first-of-type { color: var(--text); }
 
 /* divisor "EM DETALHE" */
-.detail-divider { margin: 40px 0 8px; }
+.detail-divider { margin: 34px 0 4px; }
 .detail-divider .spectrum-line { margin-bottom: 16px; }
 .detail-divider__label {
   font-family: var(--mono);
@@ -494,9 +496,26 @@ a { color: inherit; }
   margin: 0 0 8px;
 }
 
-/* grupos */
-.group { padding: 30px 0 12px; border-top: 1px solid var(--border-soft); margin-top: 22px; }
-.group:first-of-type { border-top: none; }
+/* [v1.9.19] BULLETS AGRUPADOS POR SENTIMENTO — Entrega 3/4. Dois blocos
+   (três quando o meio é dominante — `--sentiment-groups--3`), MESMO
+   leiaute entre negativas e positivas (a neutralidade de TRATAMENTO do §0
+   continua valendo entre esses dois). RESPIRO em vez de linha (Entrega 7):
+   nenhuma borda entre colunas — o espaço em branco do `gap` já separa. */
+.sentiment-wrap { margin-top: 12px; }
+.sentiment-groups {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 8px 40px;
+}
+@media (min-width: 720px) {
+  .sentiment-groups.sentiment-groups--2 { grid-template-columns: 1fr 1fr; }
+  .sentiment-groups.sentiment-groups--3 { grid-template-columns: 1fr 1fr 1fr; }
+}
+
+/* grupo — agora um item de grid (ou o conteúdo de um `.disclosure`
+   colapsado), nunca mais uma faixa full-width com `border-top`; a
+   separação vem do `gap` do grid, ou do próprio `<details>`. */
+.group { padding: 0; }
 .group__header { display: flex; align-items: baseline; flex-wrap: wrap; gap: 10px; margin-bottom: 4px; }
 .group__dot { width: 11px; height: 11px; border-radius: 50%; align-self: center; }
 .group__name {
@@ -534,6 +553,16 @@ a { color: inherit; }
 .group[data-group="medianas"]  .group__name { color: var(--med); }
 .group[data-group="positivas"] .group__name { color: var(--pos); }
 
+/* [v1.9.19] tint de fundo por sentimento — atrás de FLAG (Entrega 7),
+   NUNCA ligado por padrão. Ativa com `?tint=1` na URL (ver filme.js) —
+   ainda não decidido se acentua demais a assimetria entre os dois blocos
+   agora que o meio saiu do meio-a-meio; existe pra o dono do projeto
+   comparar com e sem, olhando, antes de decidir. 2-3% de opacidade, os
+   MESMOS tokens `--neg/--med/--pos` de sempre (nenhuma cor nova). */
+.group.is-tinted[data-group="negativas"] { background: #e0673f08; border-radius: var(--radius); padding: 14px 16px; }
+.group.is-tinted[data-group="medianas"]  { background: #e3b23c08; border-radius: var(--radius); padding: 14px 16px; }
+.group.is-tinted[data-group="positivas"] { background: #4d90e508; border-radius: var(--radius); padding: 14px 16px; }
+
 /* aviso de modo degradado — NUNCA escondido (regra de produto) */
 .mode-warning {
   display: flex;
@@ -546,7 +575,7 @@ a { color: inherit; }
   padding: 12px 14px;
   margin: 14px 0 6px;
   font-size: 0.9rem;
-  line-height: 1.45;
+  line-height: 1.5;
   color: var(--text-dim);
 }
 .mode-warning strong { color: var(--warn); font-weight: 600; }
@@ -561,54 +590,68 @@ a { color: inherit; }
   color: var(--text-dim);
 }
 
-/* temas */
-.themes { margin-top: 16px; display: flex; flex-direction: column; gap: 18px; }
+/* temas — hierarquia (Entrega 7): o olho vai no QUE (nome, cor principal)
+   antes do QUANTO (frequência, --text-mute — era --text-dim, um degrau
+   mais claro que o resto do texto secundário da tela). */
+.themes { margin-top: 16px; display: flex; flex-direction: column; gap: 20px; }
 .theme__top { display: flex; align-items: baseline; gap: 12px; }
 .theme__name { font-size: 1rem; font-weight: 500; color: var(--text); flex: 1; }
 .theme__freq {
   font-family: var(--mono);
-  font-size: 0.74rem;
+  font-size: 0.72rem;
   letter-spacing: 0.04em;
-  color: var(--text-dim);
+  color: var(--text-mute);
   white-space: nowrap;
 }
+/* TRACK visível (Entrega 7) — a trilha vazia precisa se ler de relance, não
+   só a parte preenchida. Um tom mais claro que --bg-elev-2 (que já é usado
+   noutro contexto) + borda sutil, pra não desaparecer contra o fundo. */
 .theme__bar {
   height: 6px;
-  background: var(--bg-elev-2);
-  border-radius: 3px;
+  background: #242832;
+  border: 1px solid var(--border-soft);
+  border-radius: 4px;
   margin: 8px 0 8px;
   overflow: hidden;
 }
 .theme__bar span {
   display: block;
   height: 100%;
-  border-radius: 3px;
+  border-radius: 4px;
   transition: width 0.6s cubic-bezier(0.2, 0.7, 0.2, 1);
 }
 .group[data-group="negativas"] .theme__bar span { background: var(--neg); }
 .group[data-group="medianas"]  .theme__bar span { background: var(--med); }
 .group[data-group="positivas"] .theme__bar span { background: var(--pos); }
 
-/* exemplo parafraseado expansível */
+/* [v1.9.19, Entrega 6] exemplo parafraseado — o "+" parecia rótulo
+   estático (achado de uso: ninguém percebia que era clicável). Chevron no
+   padrão de ícone do site (mesmo stroke/round-cap do back-link e das
+   `.disclosure`), dentro de um PILL na cor do grupo com opacidade baixa —
+   afordance visível mesmo em repouso, sem esperar o hover. */
 .theme__toggle {
-  background: none;
-  border: none;
-  padding: 0;
+  background: var(--bg-elev-2);
+  border: 1px solid transparent;
+  border-radius: 999px;
+  padding: 6px 12px 6px 14px;
   cursor: pointer;
   font-family: var(--mono);
   font-size: 0.66rem;
   letter-spacing: 0.1em;
   text-transform: uppercase;
-  color: var(--text-mute);
+  color: var(--text-dim);
   display: inline-flex;
   align-items: center;
-  gap: 7px;
-  transition: color 0.15s;
+  gap: 8px;
+  transition: color 0.15s, background 0.15s, border-color 0.15s;
 }
-.theme__toggle:hover { color: var(--text-dim); }
-.theme__toggle:focus-visible { outline: 2px solid #3b82f6aa; outline-offset: 3px; border-radius: 3px; }
-.theme__toggle .plus { transition: transform 0.2s; display: inline-block; }
-.theme__toggle[aria-expanded="true"] .plus { transform: rotate(45deg); }
+.group[data-group="negativas"] .theme__toggle { background: var(--neg-soft); }
+.group[data-group="medianas"]  .theme__toggle { background: var(--med-soft); }
+.group[data-group="positivas"] .theme__toggle { background: var(--pos-soft); }
+.theme__toggle:hover { color: var(--text); border-color: currentColor; }
+.theme__toggle:focus-visible { outline: 2px solid #3b82f6aa; outline-offset: 3px; }
+.theme__toggle .chevron { transition: transform 0.2s; display: inline-flex; }
+.theme__toggle[aria-expanded="true"] .chevron { transform: rotate(180deg); }
 .theme__example {
   display: none;
   margin-top: 10px;
@@ -629,10 +672,11 @@ a { color: inherit; }
   color: var(--text-mute);
 }
 
-/* observação geral do grupo */
+/* observação geral do grupo — itálico REMOVIDO (Entrega 7): num bloco
+   longo, itálico cansa a leitura em vez de destacar. Serif regular, o
+   mesmo peso do resto da prosa. */
 .group__obs {
   font-family: var(--serif);
-  font-style: italic;
   font-size: 1.05rem;
   line-height: 1.55;
   color: var(--text-dim);
@@ -640,6 +684,47 @@ a { color: inherit; }
   padding-left: 14px;
   border-left: 2px solid var(--border);
 }
+
+/* [v1.9.19] DISCLOSURE genérico — narrativa completa colapsada (Entrega 1)
+   e o grupo-do-meio recolhido (Entrega 4). RESPIRO em vez de linha
+   (Entrega 7): a separação da seção anterior é margem, não borda pesada. */
+.disclosure { margin: 36px 0 8px; }
+.disclosure > summary {
+  cursor: pointer;
+  list-style: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  font-family: var(--mono);
+  font-size: 0.74rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--text-dim);
+  padding: 10px 16px;
+  background: var(--bg-elev);
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  transition: border-color 0.15s, color 0.15s, background 0.15s;
+}
+.disclosure > summary::-webkit-details-marker { display: none; }
+.disclosure > summary:hover { border-color: #3a4152; color: var(--text); }
+.disclosure > summary:focus-visible { outline: 2px solid #3b82f6aa; outline-offset: 3px; }
+.disclosure .chevron { transition: transform 0.2s; display: inline-flex; }
+.disclosure[open] > summary .chevron { transform: rotate(180deg); }
+.disclosure[open] > summary { background: var(--bg-elev-2); }
+.disclosure__body { margin-top: 22px; }
+.disclosure__body.narrativa p {
+  font-size: 1.06rem;
+  line-height: 1.68;
+  color: var(--text-dim);
+  margin: 0 0 16px;
+}
+.disclosure__body.narrativa p:first-of-type { color: var(--text); }
+/* meio-termo recolhido: o pill some (o `<details>` inteiro já é o
+   controle), o rótulo fica na cor do meio. */
+.disclosure--meio > summary { color: var(--med); }
+.disclosure--meio > summary:hover { color: var(--text); }
+.disclosure--meio .disclosure__body { margin-top: 26px; }
 
 /* =======================================================
    MICRO-PESQUISA (A/B)
@@ -741,135 +826,15 @@ a { color: inherit; }
 }
 
 /* ===================================================================
-   v1.9.14 — EIXO A EIXO: os três grupos ALINHADOS POR LINHA (§[E])
-   A promessa estrutural do produto. Em telas largas, três colunas
-   comparáveis; abaixo de 640px as células empilham COM o rótulo do
-   grupo, porque sem ele o alinhamento por linha perde o sentido.
+   v1.9.14 — EIXO A EIXO: REMOVIDA na v1.9.19 (Entrega 5, decisão de
+   produto — feedback de uso: a tabela de 3 colunas "não funciona na
+   prática"). Removida mesmo, não escondida atrás de flag: as classes
+   `.eixos*` que existiam aqui (grade de cabeçalho, linha por eixo, célula,
+   selo, nota de denominador) saíram do CSS junto com o JS que as usava.
+   O DADO que a tabela lia (bloco `eixos` do JSON) não muda em nada — ele
+   agora alimenta `.verdict` (abaixo) e a ordem dos `.theme` dentro de
+   `.group`. Se a tabela precisar voltar, ver o histórico do git.
    =================================================================== */
-.eixos { margin-top: 26px; }
-
-.eixos__contraste {
-  font-size: 0.95rem;
-  line-height: 1.55;
-  color: var(--text-dim);
-  border-left: 2px solid var(--border);
-  padding-left: 14px;
-  margin: 0 0 20px;
-}
-/* `contraste: valorativo` é 63% do catálogo — estado de PRIMEIRA CLASSE,
-   com marca própria, nunca a ausência de linhas de contraste. */
-.eixos[data-contraste="valorativo"] .eixos__contraste {
-  border-left-color: var(--med);
-  color: var(--text);
-}
-
-.eixos__head,
-.eixos__row {
-  display: grid;
-  grid-template-columns: 128px repeat(3, 1fr);
-  gap: 14px;
-  align-items: start;
-}
-.eixos__head {
-  padding-bottom: 8px;
-  border-bottom: 1px solid var(--border-soft);
-  margin-bottom: 4px;
-}
-.eixos__head-cell {
-  font-family: var(--mono);
-  font-size: 0.64rem;
-  letter-spacing: 0.14em;
-}
-.eixos__row { padding: 14px 0; border-bottom: 1px solid var(--border-soft); }
-.eixos__row:last-child { border-bottom: none; }
-
-.eixos__axis {
-  font-size: 0.9rem;
-  font-weight: 500;
-  color: var(--text);
-  padding-top: 2px;
-}
-
-.eixos__cell { display: flex; flex-direction: column; gap: 5px; min-width: 0; }
-.eixos__cell.is-empty { justify-content: center; }
-
-.eixos__none {
-  font-family: var(--mono);
-  font-size: 0.68rem;
-  color: var(--text-mute);
-  opacity: 0.65;
-}
-.eixos__tema { font-size: 0.88rem; line-height: 1.35; color: var(--text-dim); }
-.eixos__freq {
-  font-family: var(--mono);
-  font-size: 0.7rem;
-  color: var(--text-mute);
-}
-.eixos__freq.is-muted { font-style: italic; }
-.eixos__mais { font-size: 0.72rem; color: var(--text-mute); line-height: 1.3; }
-
-.eixos__bar {
-  display: block; height: 3px; border-radius: 2px;
-  background: var(--border); overflow: hidden;
-}
-.eixos__bar span { display: block; height: 100%; border-radius: 2px; }
-.eixos__cell[data-group="negativas"] .eixos__bar span { background: var(--neg); }
-.eixos__cell[data-group="medianas"]  .eixos__bar span { background: var(--med); }
-.eixos__cell[data-group="positivas"] .eixos__bar span { background: var(--pos); }
-
-/* selo de contraste — por CÉLULA, não por linha: o contraste é sempre de UM
-   grupo contra os outros dois. */
-.eixos__badge {
-  align-self: flex-start;
-  font-family: var(--mono);
-  font-size: 0.6rem;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-  padding: 2px 7px;
-  border-radius: 999px;
-  border: 1px solid var(--border);
-  color: var(--text-dim);
-}
-.eixos__cell[data-group="negativas"] .eixos__badge { border-color: var(--neg); color: var(--neg); }
-.eixos__cell[data-group="medianas"]  .eixos__badge { border-color: var(--med); color: var(--med); }
-.eixos__cell[data-group="positivas"] .eixos__badge { border-color: var(--pos); color: var(--pos); }
-
-.eixos__resto { margin-top: 6px; }
-.eixos__resto summary {
-  font-family: var(--mono);
-  font-size: 0.7rem;
-  letter-spacing: 0.1em;
-  text-transform: uppercase;
-  color: var(--text-mute);
-  cursor: pointer;
-  padding: 12px 0;
-}
-.eixos__resto summary:hover { color: var(--text-dim); }
-.eixos__nota { margin-top: 16px; }
-
-@media (max-width: 640px) {
-  .eixos__head { display: none; }
-  .eixos__row { grid-template-columns: 1fr; gap: 10px; }
-  .eixos__axis {
-    font-family: var(--mono);
-    font-size: 0.7rem;
-    letter-spacing: 0.12em;
-    text-transform: uppercase;
-    color: var(--text-dim);
-  }
-  /* empilhado, cada célula precisa dizer de QUEM ela é */
-  .eixos__cell::before {
-    content: attr(data-group);
-    font-family: var(--mono);
-    font-size: 0.6rem;
-    letter-spacing: 0.1em;
-    text-transform: uppercase;
-    color: var(--text-mute);
-  }
-  .eixos__cell[data-group="negativas"]::before { color: var(--neg); }
-  .eixos__cell[data-group="medianas"]::before  { color: var(--med); }
-  .eixos__cell[data-group="positivas"]::before { color: var(--pos); }
-}
 
 /* v1.9.14 — janela temporal da amostra: linha PRÓPRIA, logo abaixo do
    denominador do grupo. Fora do header de propósito — colada ao "~X% das

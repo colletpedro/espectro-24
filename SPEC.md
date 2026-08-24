@@ -50,6 +50,34 @@ faltava chegando.
    entender o que incomodou aquela parcela — e um grupo de 1% mantém seus 6
    temas, suas barras e suas paráfrases na interface.
 
+> **EXCEÇÃO DELIBERADA na INTERFACE (frontend, sessão "dados primeiro",
+> código de UI ~v1.9.19) — o meio sai do meio-a-meio, com uma volta
+> automática.** Feedback de uso apontou que o grupo `medianas` — minoritário
+> em **33 dos 35** filmes do catálogo — "polui sem informar" quando recebe o
+> MESMO destaque visual que negativas/positivas: o leitor decide entre
+> recomendar e não recomendar, e o meio raramente é onde a decisão mora.
+> `filme.html` passa a mostrar **dois** blocos em destaque (negativas,
+> positivas, mesmo formato entre os dois — a neutralidade de TRATAMENTO
+> continua valendo AÍ) e recolhe `medianas` numa linha discreta e
+> expansível abaixo.
+>
+> Isto quebra, de propósito, a promessa deste §0 ("três grupos, formato
+> idêntico"). **A exceção automática que impede a decisão virar
+> distorção:** quando `medianas` é o grupo DOMINANTE (maior `share_real`
+> dos três), ele SOBE de volta pro destaque, junto dos outros dois —
+> `napoleon-2023` (45% no meio) e `friday-the-13th-2009` (41% no meio) caem
+> aqui. Descrever esses dois filmes só pelos dois grupos que, somados, são
+> METADE da recepção seria exatamente a infidelidade por omissão que este
+> §0 foi escrito para proibir — só que pelo lado oposto do que motivou a
+> v1.4.0 (lá, o filme aclamado parecia dividido; aqui, sem a exceção, o
+> filme dividido pareceria bipolar quando na verdade é tripolar).
+>
+> **O que NÃO muda:** o DADO — coleta, classificação, lift, o bloco `eixos`
+> do JSON — continua com os três buckets, sem distinção nenhuma. A exceção
+> é só de onde o CSS/JS decide desenhar `medianas` em destaque; o grupo
+> recolhido mantém os mesmos temas, barras e paráfrases de sempre (a
+> invariante 2 acima), só atrás de um `<details>` fechado por padrão.
+
 ---
 **Objetivo:** dado o nome de um filme, agregar reviews de usuários do Letterboxd em três buckets por nota e produzir, via LLM, uma síntese temática de cada bucket — pontos recorrentes com frequência — permitindo entender a recepção do filme sem viés de leitura seletiva e sem spoilers.
 
