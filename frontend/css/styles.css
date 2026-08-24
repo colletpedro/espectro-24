@@ -31,6 +31,21 @@
 
   --warn:     #f5c518;
 
+  /* [v1.9.18] paleta PARALELA, só para a faixa fina do mosaico da home.
+     --neg/--med/--pos (acima) continuam a paleta oficial dos 3 grupos —
+     usada em `filme.html` inteiro (grupos, gráficos, legendas) — e não
+     mudam. A v1.9.17 tentou reusar essas mesmas cores em BLOCO CHEIO
+     preenchendo a célula inteira do mosaico: saturadas e em área grande,
+     ficaram agressivas, e como a maioria do catálogo é majoritariamente
+     positiva, a home virava ~30 retângulos azuis quase idênticos — o
+     visual não distinguia nada. Decisão do dono do projeto: uma paleta
+     mais apagada (terracota/ocre/azul-ardósia), só para a faixa fina de
+     5px na base da célula — mesma semântica, mesma ordem, tom sóbrio.
+     Divergência DELIBERADA, registrada aqui para não parecer acidente. */
+  --neg-home: #9c5f4e;
+  --med-home: #a8874f;
+  --pos-home: #5b7a99;
+
   /* tipografia */
   --serif: Georgia, "Iowan Old Style", "Times New Roman", "Noto Serif", serif;
   --mono:  ui-monospace, "SF Mono", "JetBrains Mono", Menlo, Consolas, monospace;
@@ -213,15 +228,15 @@ a { color: inherit; }
 }
 
 /* =======================================================
-   MOSAICO (Entrega 1-4, v1.9.17)
+   MOSAICO (Entrega 1-4 v1.9.17; refeito na v1.9.18)
    ======================================================= */
 /* Mais largo que a coluna de leitura (`--maxw`, 720/760px) de propósito —
    o mosaico é a peça visual da home, e confiná-lo à largura de um parágrafo
    desperdiçaria a tela em telas largas. `filme.html` não usa esta classe. */
 .mosaic-wrap {
-  max-width: 935px;
+  max-width: 1080px;
   margin: 0 auto;
-  padding: 4px 14px 12px;
+  padding: 4px 14px 24px;
 }
 .mosaic {
   display: grid;
@@ -229,112 +244,113 @@ a { color: inherit; }
      disponível dividida pelo tamanho mínimo da célula — nunca de um número
      de filmes fixo. Um catálogo de 20 vira menos LINHAS, um de 60 vira
      mais linhas; a contagem de colunas por breakpoint não muda com N
-     (Entrega 4). Em ~1200px de container, 150px de mínimo dá 7 colunas. */
-  grid-template-columns: repeat(auto-fill, minmax(122px, 1fr));
-  gap: 5px;
-  /* dá espaço para a célula em hover crescer (scale) por cima das vizinhas
-     sem cortar nas bordas do grid. */
-  padding: 6px;
+     (Entrega 4). */
+  grid-template-columns: repeat(auto-fill, minmax(132px, 1fr));
+  gap: 8px;
+  /* dá espaço para a célula em hover crescer (scale) sem cortar nas bordas
+     do grid — bem menor que antes porque o scale agora é sutil (1.06). */
+  padding: 4px;
 }
+/* [v1.9.18] A célula era um bloco de cor sólida (a distribuição inteira
+   preenchendo o quadrado) — com ~30 dos 35 filmes majoritariamente
+   positivos, a home virava dezenas de retângulos azuis quase idênticos, e
+   o título só aparecia num hover que escurecia a TELA TODA (inclusive o
+   alvo do próprio hover). Virou um card escuro comum, com o TEXTO como
+   protagonista — a distribuição vira uma faixa fina de 5px colada na base,
+   não a célula inteira. Mais alta que quadrada (4/5, não 1/1): títulos de
+   até ~37 caracteres ("Homem-Aranha: Através do Aranhaverso") precisam de
+   2-3 linhas, e um quadrado apertava demais. */
 .mosaic-cell {
   position: relative;
-  aspect-ratio: 1 / 1;
+  aspect-ratio: 4 / 5;
   display: block;
-  border-radius: 8px;
+  background: var(--bg-elev);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
   overflow: hidden;
   text-decoration: none;
   color: inherit;
   cursor: pointer;
   transform: scale(1);
-  transition: transform 0.28s cubic-bezier(.2,.8,.2,1), opacity 0.22s, filter 0.22s;
-  will-change: transform;
+  transition: transform 0.18s ease, background-color 0.18s ease,
+              border-color 0.18s ease, box-shadow 0.18s ease;
 }
 /* `.mosaic-cell { display: block }` acima tem a MESMA especificidade do
    `[hidden] { display: none }` do UA stylesheet — sem esta regra, a busca
    (`home.js`, `el.hidden = true`) esconde o elemento do fluxo de
    acessibilidade mas ele continua VISÍVEL na tela, porque a regra da
    classe (que vem depois no cascade) vence o empate. Achado ao testar a
-   busca com o mosaico — o card antigo em lista tinha o mesmo risco, nunca
-   verificado visualmente. */
+   busca com a primeira versão do mosaico. */
 .mosaic-cell[hidden] { display: none; }
-/* o quadrado É a distribuição — três blocos empilhados, altura = a
-   proporção real do bucket (negativas em cima, positivas embaixo, mesma
-   ordem de leitura do resto do site: quem não gostou → quem gostou).
-   Cor calculada inline por filme (home.js), reusando --neg/--med/--pos —
-   nenhuma paleta nova. */
-.mosaic-cell__spectrum {
-  position: absolute;
-  inset: 0;
-  display: flex;
-  flex-direction: column;
-}
-.mosaic-cell__seg { width: 100%; }
-/* dimming: qualquer hover dentro do grid escurece TODAS as células; a
-   célula sob o cursor se restaura e cresce por cima das vizinhas — puro
-   CSS, sem JS para a interação. */
-.mosaic:hover .mosaic-cell { filter: brightness(0.55) saturate(0.7); }
+
+/* HOVER, v1.9.18: nada escurece — nem os vizinhos, nem a própria célula.
+   Scale sutil (a v1.9.17 usava 1.32, agressivo o bastante pra cobrir
+   vizinhos inteiros; aqui é 1.06, só um destaque), fundo um tom mais claro,
+   borda mais definida, sombra. `z-index` sobe só o suficiente pra sombra
+   não ficar atrás do vizinho. */
 .mosaic-cell:hover,
 .mosaic-cell:focus-visible {
-  filter: none;
-  transform: scale(1.32);
-  z-index: 5;
+  transform: scale(1.06);
+  background: var(--bg-elev-2);
+  border-color: #3a4152;
+  box-shadow: 0 10px 26px -10px #000000b3;
+  z-index: 2;
   outline: none;
-  box-shadow: 0 12px 34px -6px #000000b3, 0 0 0 1px #ffffff1a;
 }
-.mosaic-cell:focus-visible { box-shadow: 0 0 0 3px #3b82f6cc, 0 12px 34px -6px #000000b3; }
+.mosaic-cell:focus-visible {
+  box-shadow: 0 0 0 3px #3b82f680, 0 10px 26px -10px #000000b3;
+}
 
-.mosaic-cell__info {
+.mosaic-cell__body {
   position: absolute;
   inset: 0;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  padding: 8px;
-  opacity: 0;
-  transition: opacity 0.22s;
-  background: radial-gradient(ellipse at center, #000000b3 0%, #00000066 55%, transparent 78%);
+  justify-content: flex-end;
+  /* padding-bottom maior que o topo: dá respiro pra faixa de 5px (abaixo)
+     sem o texto colar nela. */
+  padding: 10px 10px 16px;
 }
-.mosaic-cell:hover .mosaic-cell__info,
-.mosaic-cell:focus-visible .mosaic-cell__info { opacity: 1; }
 .mosaic-cell__title {
   font-family: var(--serif);
   font-weight: 700;
-  font-size: 1.05rem;
-  line-height: 1.15;
-  color: #fff;
-  text-shadow: 0 2px 10px #000000e6, 0 0 22px #ffffff66, 0 0 3px #000;
+  font-size: 0.92rem;      /* nunca abaixo de 13px (Entrega 4) — ver @media */
+  line-height: 1.22;
+  color: var(--text-dim);
   margin: 0;
+  /* título sempre visível (Entrega 1) — a instrução de revelar só no hover
+     da v1.9.17 fica revogada; só a COR muda no hover (clareia). */
+  transition: color 0.18s ease;
 }
+.mosaic-cell:hover .mosaic-cell__title,
+.mosaic-cell:focus-visible .mosaic-cell__title { color: var(--text); }
 .mosaic-cell__year {
   font-family: var(--mono);
   font-size: 0.66rem;
-  letter-spacing: 0.12em;
-  color: #ffffffcc;
-  text-shadow: 0 1px 6px #000000e6;
+  letter-spacing: 0.1em;
+  color: var(--text-mute);
   margin-top: 4px;
-  opacity: 0;
-  transition: opacity 0.22s 0.05s;
 }
-.mosaic-cell:hover .mosaic-cell__year,
-.mosaic-cell:focus-visible .mosaic-cell__year { opacity: 1; }
 
-/* Touch não tem hover — sem ele a célula ficaria muda até o toque navegar
-   embora (`hover: none` cobre a maioria dos celulares/tablets reais; a
-   contagem de colunas cai para 3 no mesmo breakpoint, ver abaixo). Título
-   sempre visível, discreto, sem o glow do desktop — a interação é o toque
-   em si, que já abre o filme direto, não um segundo passo antes disso. */
+/* a faixa: 3 segmentos horizontais, largura = proporção real do bucket
+   (negativas → mornos → positivas, mesma ordem de leitura do resto do
+   site). Sangra até as bordas do card — fica com o arredondamento inferior
+   porque `.mosaic-cell` já tem `overflow: hidden` + `border-radius`. Cores
+   da paleta PARALELA `--neg-home/--med-home/--pos-home` (ver `:root`) —
+   nunca as do resto do site. */
+.mosaic-cell__strip {
+  position: absolute;
+  left: 0; right: 0; bottom: 0;
+  height: 5px;
+  display: flex;
+}
+.mosaic-cell__seg { height: 100%; }
+
+/* Touch não tem hover — mas aqui isso importa MUITO menos que na v1.9.17,
+   porque o título já é sempre visível por padrão (Entrega 1). Só o
+   feedback de toque muda. */
 @media (hover: none) {
-  .mosaic-cell__info {
-    opacity: 1;
-    justify-content: flex-end;
-    background: linear-gradient(180deg, transparent 55%, #000000d9 100%);
-  }
-  .mosaic-cell__title { font-size: 0.82rem; text-shadow: 0 1px 6px #000; }
-  .mosaic-cell__year { opacity: 0.85; font-size: 0.6rem; }
-  .mosaic:hover .mosaic-cell { filter: none; }
-  .mosaic-cell:active { transform: scale(0.97); }
+  .mosaic-cell:active { transform: scale(0.97); background: var(--bg-elev-2); }
 }
 
 .mosaic-hint {
@@ -343,20 +359,21 @@ a { color: inherit; }
   font-size: 0.64rem;
   letter-spacing: 0.04em;
   color: var(--text-mute);
-  margin: 10px 10px 0;
+  margin: 14px 10px 0;
   line-height: 1.6;
 }
-.mosaic-hint__neg { color: var(--neg); }
-.mosaic-hint__med { color: var(--med); }
-.mosaic-hint__pos { color: var(--pos); }
-
-.mosaic-cell.is-hidden { display: none; }
+.mosaic-hint__neg { color: var(--neg-home); }
+.mosaic-hint__med { color: var(--med-home); }
+.mosaic-hint__pos { color: var(--pos-home); }
 
 @media (max-width: 900px) {
-  .mosaic { grid-template-columns: repeat(auto-fill, minmax(120px, 1fr)); }
+  .mosaic { grid-template-columns: repeat(auto-fill, minmax(118px, 1fr)); }
+  .mosaic-cell__title { font-size: 0.85rem; }
 }
 @media (max-width: 640px) {
-  .mosaic { grid-template-columns: repeat(3, 1fr); gap: 4px; }
+  .mosaic { grid-template-columns: repeat(3, 1fr); gap: 6px; }
+  .mosaic-cell__body { padding: 8px 8px 13px; }
+  .mosaic-cell__title { font-size: 0.82rem; }  /* 13.1px — nunca abaixo de 13px */
   .mosaic-cell:hover { transform: scale(1); z-index: 0; }
 }
 

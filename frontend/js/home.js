@@ -69,15 +69,18 @@
       + " · busca por título ou eixo";
   }
 
-  // --- mosaico do catálogo (v1.9.17) ---
+  // --- mosaico do catálogo (v1.9.17; célula refeita na v1.9.18) ---
   // Ordem de leitura igual à do resto do site: quem não gostou primeiro,
   // quem gostou por último (mesma ordem de `GRUPO_META` em filme.js).
   var GRUPOS = ["negativas", "medianas", "positivas"];
-  var COR_GRUPO = {
-    negativas: "var(--neg)", medianas: "var(--med)", positivas: "var(--pos)",
+  // [v1.9.18] paleta PARALELA, só para a faixa da home — ver `:root` em
+  // styles.css para o porquê (as cores oficiais dos grupos, --neg/--med/
+  // --pos, continuam intactas e são as que `filme.html` usa).
+  var COR_GRUPO_HOME = {
+    negativas: "var(--neg-home)", medianas: "var(--med-home)", positivas: "var(--pos-home)",
   };
 
-  // A barra é a distribuição REAL do histograma (`distribuicao.por_bucket`,
+  // A faixa é a distribuição REAL do histograma (`distribuicao.por_bucket`,
   // já em percentual, soma ~100) — não a cota de análise, que é sempre
   // 40/40/40 e não diria nada sobre a recepção real. RESTRIÇÃO DE PRODUTO:
   // isto é o único "número" da célula, e ele nunca vira nota, score ou
@@ -104,41 +107,44 @@
     a.href = "filme.html?slug=" + encodeURIComponent(slug);
     a.setAttribute("aria-label", titulo + (ano ? " (" + ano + ")" : "") + " — ver análise");
 
-    var spectrum = document.createElement("span");
-    spectrum.className = "mosaic-cell__spectrum";
-    spectrum.setAttribute("aria-hidden", "true");
+    // corpo: título sempre visível (Entrega 1, v1.9.18 — revoga o "só no
+    // hover" da v1.9.17), ano abaixo, alinhados na base da célula.
+    var body = document.createElement("span");
+    body.className = "mosaic-cell__body";
+    var h = document.createElement("span");
+    h.className = "mosaic-cell__title";
+    h.textContent = titulo;
+    body.appendChild(h);
+    if (ano) {
+      var y = document.createElement("span");
+      y.className = "mosaic-cell__year";
+      y.textContent = String(ano);
+      body.appendChild(y);
+    }
+
+    // faixa fina colada na base — não mais a célula inteira.
+    var strip = document.createElement("span");
+    strip.className = "mosaic-cell__strip";
+    strip.setAttribute("aria-hidden", "true");
     var partes = barraDe(f);
     if (partes) {
       partes.forEach(function (p) {
         if (p.pct <= 0) return;
         var seg = document.createElement("span");
         seg.className = "mosaic-cell__seg";
-        seg.style.background = COR_GRUPO[p.grupo];
-        seg.style.height = p.pct + "%";
-        spectrum.appendChild(seg);
+        seg.style.background = COR_GRUPO_HOME[p.grupo];
+        seg.style.width = p.pct + "%";
+        strip.appendChild(seg);
       });
     } else {
       // sem distribuição real (não deveria acontecer no catálogo de
       // produção — todo filme publicado tem histograma; fallback neutro
-      // para não deixar a célula vazia se algum dia acontecer).
-      spectrum.style.background = "var(--bg-elev-2)";
+      // para não deixar a faixa vazia se algum dia acontecer).
+      strip.style.background = "var(--border)";
     }
 
-    var info = document.createElement("span");
-    info.className = "mosaic-cell__info";
-    var h = document.createElement("span");
-    h.className = "mosaic-cell__title";
-    h.textContent = titulo;
-    info.appendChild(h);
-    if (ano) {
-      var y = document.createElement("span");
-      y.className = "mosaic-cell__year";
-      y.textContent = "(" + ano + ")";
-      info.appendChild(y);
-    }
-
-    a.appendChild(spectrum);
-    a.appendChild(info);
+    a.appendChild(body);
+    a.appendChild(strip);
     a.dataset.busca = chavesDe(f).join(" | ");
     cards.appendChild(a);
   });
