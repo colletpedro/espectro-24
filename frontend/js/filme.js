@@ -107,18 +107,23 @@
     var el = document.createElement("header");
     el.className = "film-header";
 
-    var meta = document.createElement("p");
-    meta.className = "film-header__meta";
+    // [v1.9.20, Entrega 2] "N reviews observadas" saiu — nenhuma contagem
+    // de review no texto. O ano sozinho já cumpria o papel de metadado
+    // rápido; sem contagem ao lado, o `<span class="dot">` (que separava
+    // os dois) também sai.
     var ano = f.ficha && f.ficha.ano ? String(f.ficha.ano) : "";
-    meta.innerHTML =
-      (ano ? esc(ano) + '<span class="dot">·</span>' : "") +
-      fmt(f.total_reviews_observadas) + " reviews observadas";
+    var meta = null;
+    if (ano) {
+      meta = document.createElement("p");
+      meta.className = "film-header__meta";
+      meta.textContent = ano;
+    }
 
     var h1 = document.createElement("h1");
     h1.className = "film-header__title";
     h1.textContent = titleOf(f);
 
-    el.appendChild(meta);
+    if (meta) el.appendChild(meta);
     el.appendChild(h1);
 
     if (f.reviews_url) {
@@ -205,23 +210,16 @@
   // avisa que os tamanhos NÃO são prevalência (regra v1.2.1). Com ela, o peso
   // real está exibido em cada grupo e o texto passa a explicar o método.
   // Mantidos em sincronia com render.py (DISCLAIMER_*).
-  // v1.9.1: as cotas vêm do PRÓPRIO JSON (f.buckets[i].alvo), não de um
-  // literal — o frontend não importa config.py, então deriva do dado (mesmo
-  // princípio do des-hardcoding já feito em render.py/synthesize.py na
-  // v1.9.0). A cota mudou de 50/20/30 para 40/40/40 nessa versão; um
-  // literal aqui teria ficado desatualizado sem nenhum erro visível.
-  function cotasTexto(f) {
-    return (f.buckets || []).map(function (b) { return b.alvo; }).join(" · ");
-  }
-
+  // [v1.9.20, Entrega 2] A cota ("40 · 40 · 40 reviews") saiu do texto —
+  // decisão do dono do projeto, nenhuma contagem de review em texto. As
+  // cotas continuam iguais entre os grupos (`f.buckets[i].alvo` no JSON,
+  // intacto) — só deixaram de ser citadas em algarismo aqui.
   function detailDivider(f) {
     var temDistribuicao = !!f.distribuicao;
-    var cotas = cotasTexto(f);
     var texto = temDistribuicao
-      ? "Análise em profundidade igual por grupo (" + cotas + " reviews); " +
-        "o peso real de cada faixa está indicado em cada grupo."
-      : "Grupos de " + cotas + " reviews são cotas de coleta — " +
-        "não a proporção real das opiniões.";
+      ? "Análise em profundidade igual por grupo; o peso real de cada "
+        + "faixa está indicado em cada grupo."
+      : "Os grupos são cotas de coleta — não a proporção real das opiniões.";
     var el = document.createElement("div");
     el.className = "detail-divider";
     el.innerHTML =
@@ -288,12 +286,29 @@
     if (posOk && negOk) {
       frase = "Quem recomenda destaca " + eixoEmFrase(pos.eixo) + "; quem não "
         + "recomenda aponta " + eixoEmFrase(neg.eixo) + ".";
-    } else if (posOk) {
-      frase = "Quem recomenda destaca " + eixoEmFrase(pos.eixo) + " — do "
-        + "outro lado, nenhum assunto se destaca tanto assim.";
-    } else if (negOk) {
-      frase = "Quem não recomenda aponta " + eixoEmFrase(neg.eixo) + " — do "
-        + "outro lado, nenhum assunto se destaca tanto assim.";
+    } else if (posOk || negOk) {
+      // [v1.9.20, Entrega 1] Achado real em `anatomy-of-a-fall` (88%
+      // positivas): "nenhum assunto se destaca" mentia por omissão — o lado
+      // sem lift não estava mudo, estava falando de um tema MUITO citado
+      // que também aparece nos outros grupos (então o CONTRASTE é baixo
+      // mesmo com a FREQUÊNCIA alta). O leitor lia "os positivos não
+      // elogiaram nada"; o dado dizia "elogiaram o que todo mundo cita".
+      // Cai pro eixo de maior FREQUÊNCIA do lado sem lift — nunca fingindo
+      // que é exclusivo (a redação distingue "aponta/destaca" de "fala
+      // sobretudo de... um assunto que todos os grupos citam").
+      var comLift = posOk ? pos : neg;
+      var ladoSemLift = posOk ? "negativas" : "positivas";
+      var freqDoOutro = eixoDeMaiorFrequencia(e, ladoSemLift, buckets);
+      var verbo = posOk ? "Quem recomenda destaca " : "Quem não recomenda aponta ";
+      var verboOutro = ladoSemLift === "positivas"
+        ? "quem recomenda fala sobretudo de "
+        : "quem não recomenda fala sobretudo de ";
+      frase = freqDoOutro
+        ? verbo + eixoEmFrase(comLift.eixo) + "; " + verboOutro
+          + eixoEmFrase(freqDoOutro.eixo) + " — um assunto que todos os "
+          + "grupos citam."
+        : verbo + eixoEmFrase(comLift.eixo) + " — do outro lado, nenhum "
+          + "assunto se destaca tanto assim.";
     } else {
       // `contraste: valorativo` (nenhum bucket acima da margem) cai aqui —
       // mas também qualquer `tematico` em que o contraste mora só no meio,
@@ -341,6 +356,26 @@
       return l.por_bucket[bucket].lift_pp > a.por_bucket[bucket].lift_pp ? l : a;
     });
     return { eixo: melhor.eixo, lift_pp: melhor.por_bucket[bucket].lift_pp };
+  }
+
+  // [v1.9.20] O eixo de maior FREQUÊNCIA de um bucket — "do que aquele
+  // grupo mais fala", sem exigir que seja EXCLUSIVO dele (ao contrário de
+  // `eixoDeMaiorLift`, aqui um lift negativo não desqualifica: o tema pode
+  // ser ainda mais comum nos outros grupos e mesmo assim ser o que este
+  // grupo mais cita). Mesma guarda de piso `sem_analise` que `eixoDeMaiorLift`.
+  function eixoDeMaiorFrequencia(e, bucket, buckets) {
+    var b = (buckets || []).filter(function (x) { return x.bucket === bucket; })[0];
+    if (b && b.estado_piso === "sem_analise") return null;
+    var candidatos = (e.linhas || []).filter(function (l) {
+      var d = (l.por_bucket || {})[bucket];
+      return d && d.mencoes > 0 && d.de_n > 0;
+    });
+    if (!candidatos.length) return null;
+    var melhor = candidatos.reduce(function (a, l) {
+      var da = a.por_bucket[bucket], dl = l.por_bucket[bucket];
+      return (dl.mencoes / dl.de_n) > (da.mencoes / da.de_n) ? l : a;
+    });
+    return { eixo: melhor.eixo };
   }
 
   // Rótulo do eixo em minúscula, pra encaixar em "destaca <eixo>" — os
@@ -461,29 +496,31 @@
     var stars = document.createElement("span");
     stars.className = "group__stars";
     stars.textContent = starBand(b.niveis);
-    var count = document.createElement("span");
-    count.className = "group__count";
-    count.textContent = b.n_validas + " de " + b.alvo + " analisadas";
     head.appendChild(dot);
     head.appendChild(name);
     head.appendChild(stars);
     // v1.4.0: share real do grupo — mono, discreto, MESMO estilo e MESMO
     // formato nos três (neutralidade de TRATAMENTO; a assimetria vem do
     // dado). Omitido por completo quando o filme não tem distribuição.
+    // [v1.9.20, Entrega 2] É o ÚNICO número que fica no header — "N de M
+    // analisadas" saiu (decisão do dono do projeto: nenhuma contagem de
+    // review em texto). O percentual de peso continua porque é a única
+    // forma que o produto tem de dizer qual grupo domina a recepção.
     if (typeof b.share_real === "number") {
       var share = document.createElement("span");
       share.className = "group__share";
       share.textContent = "~" + b.share_real + "% das notas";
       head.appendChild(share);
     }
-    head.appendChild(count);
     el.appendChild(head);
 
-    // v1.9.14 (Entrega 6): a JANELA da amostra vem logo abaixo do
-    // DENOMINADOR ("40 de 40 analisadas"), nunca ao lado do "~X% das notas".
-    // O peso vem do histograma de NOTAS, que acumula desde 2012; carimbar
-    // nele uma janela de semanas diria que as notas todas são recentes. São
-    // duas populações, e a linha separada é o que impede a leitura errada.
+    // v1.9.14 (Entrega 6): a JANELA da amostra vem logo abaixo do header —
+    // até a v1.9.19 vinha colada ao denominador ("40 de 40 analisadas"),
+    // que saiu na v1.9.20; a janela continua tendo linha própria, nunca ao
+    // lado do "~X% das notas". O peso vem do histograma de NOTAS, que
+    // acumula desde 2012; carimbar nele uma janela de semanas diria que as
+    // notas todas são recentes. São duas populações, e a linha separada é
+    // o que impede a leitura errada.
     var janela = janelaTexto(b.janela_amostra);
     if (janela) {
       var jl = document.createElement("p");
@@ -492,22 +529,24 @@
       el.appendChild(jl);
     }
 
-    // avisos de modo degradado — SEMPRE visíveis
+    // avisos de modo degradado — SEMPRE visíveis. [v1.9.20, Entrega 3] Sem
+    // a contagem no bullet, um grupo de amostra pequena não pode mais
+    // apoiar essa cautela num número visível na barra — o aviso é onde ela
+    // mora agora, e por isso continua sem nenhum algarismo de review
+    // (`n_validas`/`alvo` seguem no JSON, só não em texto).
     if (b.modo === "reduzido") {
       el.appendChild(warnBox(
-        "Modo reduzido: análise baseada em apenas <strong>" + b.n_validas +
-        " de " + b.alvo + "</strong> reviews-alvo. Interprete com cautela."));
+        "Modo reduzido: amostra pequena para este grupo. "
+        + "Interprete com cautela."));
     }
     if (b.modo === "sem_analise") {
-      var w = warnBox(
-        "Sem análise temática: apenas <strong>" + b.n_validas +
-        "</strong> review(s) válida(s) neste grupo (o piso é 3).");
+      var w = warnBox("Sem análise temática: amostra insuficiente neste grupo.");
       var link = document.createElement("a");
       link.className = "sem-analise-link";
       link.href = f.reviews_url;
       link.target = "_blank";
       link.rel = "noopener noreferrer";
-      link.innerHTML = "→ " + b.n_validas + " review(s) disponíveis no Letterboxd&nbsp;↗";
+      link.innerHTML = "→ reviews disponíveis no Letterboxd&nbsp;↗";
       w.appendChild(link);
       el.appendChild(w);
       // sem_analise não lista temas
@@ -572,16 +611,18 @@
     var x = t.mencoes_aproximadas, n = t.n_reviews_analisadas;
     var pct = n > 0 ? Math.max(0, Math.min(100, (x / n) * 100)) : 0;
 
+    // [v1.9.20, Entrega 2] Decisão do dono do projeto: nenhum algarismo de
+    // contagem de review no TEXTO — a BARRA (abaixo) continua proporcional
+    // e é quem comunica visualmente o peso do tema; o "~X de N" ao lado do
+    // nome saiu. O `aria-label` da barra mantém o número (não é texto
+    // visível, é a alternativa textual da barra pra leitor de tela — sem
+    // ele a barra vira um `role="img"` mudo).
     var top = document.createElement("div");
     top.className = "theme__top";
     var nm = document.createElement("span");
     nm.className = "theme__name";
     nm.textContent = t.tema;
-    var freq = document.createElement("span");
-    freq.className = "theme__freq";
-    freq.textContent = "~" + x + " de " + n;           // regra: sempre ~X de N
     top.appendChild(nm);
-    top.appendChild(freq);
     row.appendChild(top);
 
     var bar = document.createElement("div");
@@ -666,8 +707,5 @@
     return String(s).replace(/[&<>"]/g, function (c) {
       return { "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c];
     });
-  }
-  function fmt(n) {
-    return typeof n === "number" ? n.toLocaleString("pt-BR") : "—";
   }
 })();

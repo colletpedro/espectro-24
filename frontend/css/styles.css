@@ -403,7 +403,6 @@ a { color: inherit; }
   color: var(--text-mute);
   margin-bottom: 12px;
 }
-.film-header__meta .dot { opacity: 0.5; margin: 0 8px; }
 .film-header__title {
   font-family: var(--serif);
   font-weight: 700;
@@ -531,14 +530,6 @@ a { color: inherit; }
   letter-spacing: 0.06em;
   color: var(--text-mute);
 }
-.group__count {
-  font-family: var(--mono);
-  font-size: 0.68rem;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-  color: var(--text-mute);
-  margin-left: auto;
-}
 /* v1.4.0 — share real da faixa. Mesmo estilo nos três grupos por decisão de
    produto (neutralidade de TRATAMENTO): a diferença entre 3% e 79% deve vir
    do número, nunca de destaque tipográfico dado a um dos lados. */
@@ -548,6 +539,10 @@ a { color: inherit; }
   letter-spacing: 0.08em;
   text-transform: uppercase;
   color: var(--text-dim);
+  /* [v1.9.20] herda o `margin-left: auto` que "N de M analisadas" tinha —
+     é o último número do header agora que a contagem saiu, e continua
+     empurrado pra direita, mesmo lugar de sempre. */
+  margin-left: auto;
 }
 .group[data-group="negativas"] .group__name { color: var(--neg); }
 .group[data-group="medianas"]  .group__name { color: var(--med); }
@@ -590,19 +585,13 @@ a { color: inherit; }
   color: var(--text-dim);
 }
 
-/* temas — hierarquia (Entrega 7): o olho vai no QUE (nome, cor principal)
-   antes do QUANTO (frequência, --text-mute — era --text-dim, um degrau
-   mais claro que o resto do texto secundário da tela). */
+/* temas — hierarquia (Entrega 7): o olho vai no QUE (nome, cor principal).
+   [v1.9.20, Entrega 2] `.theme__freq` ("~X de N" ao lado do nome) saiu do
+   JS — nenhuma contagem de review em texto — e a regra sai daqui junto;
+   a BARRA abaixo é quem comunica o peso agora, sozinha. */
 .themes { margin-top: 16px; display: flex; flex-direction: column; gap: 20px; }
 .theme__top { display: flex; align-items: baseline; gap: 12px; }
 .theme__name { font-size: 1rem; font-weight: 500; color: var(--text); flex: 1; }
-.theme__freq {
-  font-family: var(--mono);
-  font-size: 0.72rem;
-  letter-spacing: 0.04em;
-  color: var(--text-mute);
-  white-space: nowrap;
-}
 /* TRACK visível (Entrega 7) — a trilha vazia precisa se ler de relance, não
    só a parte preenchida. Um tom mais claro que --bg-elev-2 (que já é usado
    noutro contexto) + borda sutil, pra não desaparecer contra o fundo. */
