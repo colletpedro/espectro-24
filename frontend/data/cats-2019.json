@@ -1256,5 +1256,54 @@
       "cache_miss_tokens": 11359
     },
     "latencia_s": 24.42
+  },
+  "veredito": {
+    "provider": "gemini",
+    "modelo": "gemini-3.7-flash",
+    "n_candidatos": 3,
+    "n_chamadas": 3,
+    "prefixo_codigo": "",
+    "retry": null,
+    "spec_version": "1.9.21",
+    "texto": "Muitos dos que não recomendam relatam uma sensação de incômodo ao assistir. Já entre quem recomenda, cerca de metade recorre a comparações com outras obras, valorizando o tom cult e a estética exagerada como fontes de diversão descompromissada.",
+    "texto_modelo": "Muitos dos que não recomendam relatam uma sensação de incômodo ao assistir. Já entre quem recomenda, cerca de metade recorre a comparações com outras obras, valorizando o tom cult e a estética exagerada como fontes de diversão descompromissada.",
+    "origem": "llm",
+    "motivo": "melhor_entre_limpos",
+    "criterio_decisivo": "brevidade",
+    "indice_escolhido": 0,
+    "flags": [],
+    "candidatos": [
+      {
+        "indice": 0,
+        "n_flags": 0,
+        "flags": [],
+        "n_palavras": 38,
+        "n_ancoras": 2,
+        "eliminado": false
+      },
+      {
+        "indice": 1,
+        "n_flags": 0,
+        "flags": [],
+        "n_palavras": 50,
+        "n_ancoras": 1,
+        "eliminado": false
+      },
+      {
+        "indice": 2,
+        "n_flags": 0,
+        "flags": [],
+        "n_palavras": 39,
+        "n_ancoras": 3,
+        "eliminado": false
+      }
+    ],
+    "uso": {
+      "prompt_tokens": 2667,
+      "completion_tokens": 201,
+      "cache_hit_tokens": 0,
+      "cache_miss_tokens": 2667
+    },
+    "latencia_s": 13.26
   }
 }

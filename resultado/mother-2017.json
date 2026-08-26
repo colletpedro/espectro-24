@@ -1346,5 +1346,56 @@
       "cache_miss_tokens": 11887
     },
     "latencia_s": 34.29
+  },
+  "veredito": {
+    "provider": "gemini",
+    "modelo": "gemini-3.7-flash",
+    "n_candidatos": 3,
+    "n_chamadas": 3,
+    "prefixo_codigo": "",
+    "retry": null,
+    "spec_version": "1.9.21",
+    "texto": "As opiniões divergem sobre a eficácia da narrativa e da condução da trama. Enquanto a maioria dos que recomendam destaca a intensidade do texto e seu impacto emocional, a maior parte dos que discordam concentra seus apontamentos exatamente nos problemas de roteiro e estruturação.",
+    "texto_modelo": "As opiniões divergem sobre a eficácia da narrativa e da condução da trama. Enquanto a maioria dos que recomendam destaca a intensidade do texto e seu impacto emocional, a maior parte dos que discordam concentra seus apontamentos exatamente nos problemas de roteiro e estruturação.",
+    "origem": "llm",
+    "motivo": "melhor_entre_limpos",
+    "criterio_decisivo": "ancoras",
+    "indice_escolhido": 1,
+    "flags": [],
+    "candidatos": [
+      {
+        "indice": 0,
+        "n_flags": 0,
+        "flags": [],
+        "n_palavras": 45,
+        "n_ancoras": 1,
+        "eliminado": false
+      },
+      {
+        "indice": 1,
+        "n_flags": 0,
+        "flags": [],
+        "n_palavras": 44,
+        "n_ancoras": 2,
+        "eliminado": false
+      },
+      {
+        "indice": 2,
+        "n_flags": 1,
+        "flags": [
+          "tema_ausente"
+        ],
+        "n_palavras": 44,
+        "n_ancoras": 1,
+        "eliminado": true
+      }
+    ],
+    "uso": {
+      "prompt_tokens": 2649,
+      "completion_tokens": 189,
+      "cache_hit_tokens": 0,
+      "cache_miss_tokens": 2649
+    },
+    "latencia_s": 8.92
   }
 }

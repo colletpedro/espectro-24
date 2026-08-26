@@ -259,8 +259,24 @@
   // único do filme). E o veredito não afirma o que o dado não sustenta: um
   // bucket sem eixo acima da margem de contraste não empresta seu "melhor"
   // eixo pro veredito — cai no ramo "os grupos falam das mesmas coisas".
+  // [v1.9.21] O veredito passa a ser GERADO NA PUBLICAÇÃO (§3[V]) e vem
+  // pronto no JSON, em `f.veredito.texto`. O render aqui é render: não
+  // decide nada, não calcula nada, não formata número nenhum — inclusive o
+  // percentual do meio dominante já vem concatenado pelo código Python.
+  //
+  // `veredito()` abaixo NÃO foi deletada: ela é o FALLBACK DE RENDER para
+  // JSON publicado antes desta versão (compatibilidade), e é a mesma lógica
+  // que `veredito.veredito_template` reproduz em Python como rede do
+  // estágio. As duas precisam concordar; se divergirem, o sintoma é um
+  // filme antigo e um filme novo em `template_fallback` dizendo coisas
+  // diferentes sobre dados equivalentes.
+  //
+  // A TELEMETRIA do bloco (`origem`, `modelo`, `flags`, `candidatos`) é
+  // diagnóstico de produção e NÃO aparece na tela — mesma decisão já tomada
+  // para `verificacao_narrativa` e `narrativa_selecao`.
   function veredictoBlock(f) {
-    var texto = veredito(f);
+    var pronto = f.veredito && f.veredito.texto;
+    var texto = pronto ? f.veredito.texto : veredito(f);
     if (!texto) return null;
     var el = document.createElement("p");
     el.className = "verdict";
@@ -295,20 +311,47 @@
       // elogiaram nada"; o dado dizia "elogiaram o que todo mundo cita".
       // Cai pro eixo de maior FREQUÊNCIA do lado sem lift — nunca fingindo
       // que é exclusivo (a redação distingue "aponta/destaca" de "fala
-      // sobretudo de... um assunto que todos os grupos citam").
+      // sobretudo de..."). [v1.9.21] O fecho dessa segunda oração era uma
+      // frase FIXA que afirmava "todos"; ver a Entrega 6 logo abaixo.
       var comLift = posOk ? pos : neg;
       var ladoSemLift = posOk ? "negativas" : "positivas";
       var freqDoOutro = eixoDeMaiorFrequencia(e, ladoSemLift, buckets);
+      var bucketSemLift = (buckets || []).filter(function (x) {
+        return x.bucket === ladoSemLift;
+      })[0] || {};
       var verbo = posOk ? "Quem recomenda destaca " : "Quem não recomenda aponta ";
       var verboOutro = ladoSemLift === "positivas"
         ? "quem recomenda fala sobretudo de "
         : "quem não recomenda fala sobretudo de ";
-      frase = freqDoOutro
-        ? verbo + eixoEmFrase(comLift.eixo) + "; " + verboOutro
-          + eixoEmFrase(freqDoOutro.eixo) + " — um assunto que todos os "
-          + "grupos citam."
-        : verbo + eixoEmFrase(comLift.eixo) + " — do outro lado, nenhum "
+
+      // [v1.9.21, Entrega 6] BUG REAL, medido em produção e corrigido aqui.
+      //
+      // Este ramo terminava com a frase FIXA "— um assunto que todos os
+      // grupos citam", disparada sempre que existisse qualquer eixo com
+      // `mencoes > 0`, SEM checar se a frequência sustenta "todos":
+      //   · `obsession-2026` afirmava isso a partir de 2 de 5 reviews (40%),
+      //     num grupo que o próprio site rotula "modo reduzido";
+      //   · `eighth-grade`, com amostra completa, a partir de 13 de 34 (38%).
+      // É a mesma classe de inflação retórica que as v1.2.2/v1.2.3 já tinham
+      // resolvido para a narrativa, reintroduzida num lugar novo.
+      //
+      // O quantificador agora vem do MESMO mapa determinístico do pipeline
+      // (`src/espectro24/quantificador.py`, faixas da v1.2.3), e amostra
+      // reduzida é caso à parte: cautela explícita, nunca generalização.
+      if (!freqDoOutro) {
+        frase = verbo + eixoEmFrase(comLift.eixo) + " — do outro lado, nenhum "
           + "assunto se destaca tanto assim.";
+      } else if (amostraReduzida(bucketSemLift)) {
+        frase = verbo + eixoEmFrase(comLift.eixo) + "; " + verboOutro
+          + eixoEmFrase(freqDoOutro.eixo)
+          + " — amostra pequena demais para dizer mais que isso.";
+      } else {
+        var rot = rotuloQuantificador(freqDoOutro.freqPct);
+        frase = verbo + eixoEmFrase(comLift.eixo) + "; " + verboOutro
+          + eixoEmFrase(freqDoOutro.eixo) + " — um assunto que " + rot
+          + " naquele grupo também " + (PLURAL[rot] ? "mencionam" : "menciona")
+          + ".";
+      }
     } else {
       // `contraste: valorativo` (nenhum bucket acima da margem) cai aqui —
       // mas também qualquer `tematico` em que o contraste mora só no meio,
@@ -375,7 +418,43 @@
       var da = a.por_bucket[bucket], dl = l.por_bucket[bucket];
       return (dl.mencoes / dl.de_n) > (da.mencoes / da.de_n) ? l : a;
     });
-    return { eixo: melhor.eixo };
+    var d = melhor.por_bucket[bucket];
+    // [v1.9.21] A FREQUÊNCIA volta junto com o eixo — sem ela, quem chama
+    // não tem como escolher o quantificador honesto, que foi exatamente o
+    // buraco por onde entrou o "todos os grupos citam" a partir de 38%.
+    return { eixo: melhor.eixo, freqPct: Math.round(100 * d.mencoes / d.de_n) };
+  }
+
+  // [v1.9.21] O mapa fração→palavra da v1.2.3, PORTADO de
+  // `src/espectro24/quantificador.py`. Duplicação ENTRE LINGUAGENS, que
+  // nenhuma extração resolve: o Python é a autoridade e é onde vive o
+  // racional; esta cópia existe só para o fallback de render de JSON
+  // publicado antes da v1.9.21. Ordem do mais FRACO ao mais FORTE, primeiro
+  // match vence — é isso que resolve toda fronteira compartilhada para o
+  // rótulo mais fraco ("50%" vira "muitos", não "a maioria").
+  var BANDAS_QUANTIFICADOR = [
+    ["poucos", 0, 10, false], ["alguns", 10, 25, true],
+    ["muitos", 25, 50, true], ["cerca de metade", 40, 60, true],
+    ["a maioria", 50, 80, true], ["quase todos", 80, 100, true],
+  ];
+  var PLURAL = { "poucos": 1, "alguns": 1, "muitos": 1, "quase todos": 1 };
+
+  function rotuloQuantificador(pct) {
+    pct = Math.max(0, Math.min(100, pct));
+    for (var i = 0; i < BANDAS_QUANTIFICADOR.length; i++) {
+      var b = BANDAS_QUANTIFICADOR[i];
+      if (pct < b[1]) continue;
+      if (b[3] ? pct <= b[2] : pct < b[2]) return b[0];
+    }
+    return "quase todos";
+  }
+
+  // Amostra pequena: o site já rotula esses grupos como degradados na tela;
+  // um veredito que generalize a partir deles contradiria o próprio aviso
+  // que aparece dois blocos abaixo.
+  function amostraReduzida(b) {
+    return !!b && (b.modo === "reduzido" || (b.estado_piso
+      && b.estado_piso !== "completa"));
   }
 
   // Rótulo do eixo em minúscula, pra encaixar em "destaca <eixo>" — os

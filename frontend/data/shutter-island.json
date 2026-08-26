@@ -1260,5 +1260,56 @@
       "cache_miss_tokens": 11823
     },
     "latencia_s": 40.56
+  },
+  "veredito": {
+    "provider": "gemini",
+    "modelo": "gemini-3.7-flash",
+    "n_candidatos": 3,
+    "n_chamadas": 3,
+    "prefixo_codigo": "",
+    "retry": null,
+    "spec_version": "1.9.21",
+    "texto": "A divergência se concentra no roteiro e na sua estrutura: enquanto a maioria dos que recomendam elogia a condução do mistério, quase todos os que não recomendam consideram as revelações da trama previsíveis e frustrantes.",
+    "texto_modelo": "A divergência se concentra no roteiro e na sua estrutura: enquanto a maioria dos que recomendam elogia a condução do mistério, quase todos os que não recomendam consideram as revelações da trama previsíveis e frustrantes.",
+    "origem": "llm",
+    "motivo": "melhor_entre_limpos",
+    "criterio_decisivo": "brevidade",
+    "indice_escolhido": 2,
+    "flags": [],
+    "candidatos": [
+      {
+        "indice": 0,
+        "n_flags": 1,
+        "flags": [
+          "tema_ausente"
+        ],
+        "n_palavras": 40,
+        "n_ancoras": 1,
+        "eliminado": true
+      },
+      {
+        "indice": 1,
+        "n_flags": 0,
+        "flags": [],
+        "n_palavras": 45,
+        "n_ancoras": 1,
+        "eliminado": false
+      },
+      {
+        "indice": 2,
+        "n_flags": 0,
+        "flags": [],
+        "n_palavras": 35,
+        "n_ancoras": 1,
+        "eliminado": false
+      }
+    ],
+    "uso": {
+      "prompt_tokens": 2781,
+      "completion_tokens": 187,
+      "cache_hit_tokens": 0,
+      "cache_miss_tokens": 2781
+    },
+    "latencia_s": 9.72
   }
 }

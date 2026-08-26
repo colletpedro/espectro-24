@@ -1260,5 +1260,57 @@
       "cache_miss_tokens": 12055
     },
     "latencia_s": 36.81
+  },
+  "veredito": {
+    "provider": "gemini",
+    "modelo": "gemini-3.7-flash",
+    "n_candidatos": 3,
+    "n_chamadas": 3,
+    "prefixo_codigo": "",
+    "retry": null,
+    "spec_version": "1.9.21",
+    "texto": "Enquanto cerca de metade dos que recomendam destaca a evolução de Michael Corleone no roteiro, relatos pontuais apontam que a maioria dos que desaprovam considera a cadência arrastada e tediosa, divergindo sobre o ritmo e preferindo outros filmes ao traçar comparações.",
+    "texto_modelo": "Enquanto cerca de metade dos que recomendam destaca a evolução de Michael Corleone no roteiro, relatos pontuais apontam que a maioria dos que desaprovam considera a cadência arrastada e tediosa, divergindo sobre o ritmo e preferindo outros filmes ao traçar comparações.",
+    "origem": "llm",
+    "motivo": "melhor_entre_limpos",
+    "criterio_decisivo": "ancoras",
+    "indice_escolhido": 0,
+    "flags": [],
+    "candidatos": [
+      {
+        "indice": 0,
+        "n_flags": 0,
+        "flags": [],
+        "n_palavras": 41,
+        "n_ancoras": 3,
+        "eliminado": false
+      },
+      {
+        "indice": 1,
+        "n_flags": 2,
+        "flags": [
+          "escopo_generalizado",
+          "tema_verbatim"
+        ],
+        "n_palavras": 44,
+        "n_ancoras": 1,
+        "eliminado": true
+      },
+      {
+        "indice": 2,
+        "n_flags": 0,
+        "flags": [],
+        "n_palavras": 47,
+        "n_ancoras": 0,
+        "eliminado": false
+      }
+    ],
+    "uso": {
+      "prompt_tokens": 2787,
+      "completion_tokens": 209,
+      "cache_hit_tokens": 0,
+      "cache_miss_tokens": 2787
+    },
+    "latencia_s": 12.77
   }
 }

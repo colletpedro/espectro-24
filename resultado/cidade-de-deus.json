@@ -1318,5 +1318,54 @@
       "eixo": "impacto_emocional",
       "n_removidas_no_corpus": 1654
     }
+  },
+  "veredito": {
+    "provider": "gemini",
+    "modelo": "gemini-3.7-flash",
+    "n_candidatos": 3,
+    "n_chamadas": 3,
+    "prefixo_codigo": "",
+    "retry": null,
+    "spec_version": "1.9.21",
+    "texto": "A divergência central está em avaliar se a construção da história funciona. Enquanto cerca de metade dos que recomendam valoriza o roteiro, muitos dos que não recomendam criticam o pouco desenvolvimento dos personagens e apontam sensacionalismo no retrato da pobreza.",
+    "texto_modelo": "A divergência central está em avaliar se a construção da história funciona. Enquanto cerca de metade dos que recomendam valoriza o roteiro, muitos dos que não recomendam criticam o pouco desenvolvimento dos personagens e apontam sensacionalismo no retrato da pobreza.",
+    "origem": "llm",
+    "motivo": "melhor_entre_limpos",
+    "criterio_decisivo": "ancoras",
+    "indice_escolhido": 0,
+    "flags": [],
+    "candidatos": [
+      {
+        "indice": 0,
+        "n_flags": 0,
+        "flags": [],
+        "n_palavras": 40,
+        "n_ancoras": 2,
+        "eliminado": false
+      },
+      {
+        "indice": 1,
+        "n_flags": 0,
+        "flags": [],
+        "n_palavras": 40,
+        "n_ancoras": 0,
+        "eliminado": false
+      },
+      {
+        "indice": 2,
+        "n_flags": 0,
+        "flags": [],
+        "n_palavras": 45,
+        "n_ancoras": 1,
+        "eliminado": false
+      }
+    ],
+    "uso": {
+      "prompt_tokens": 2757,
+      "completion_tokens": 185,
+      "cache_hit_tokens": 0,
+      "cache_miss_tokens": 2757
+    },
+    "latencia_s": 12.61
   }
 }

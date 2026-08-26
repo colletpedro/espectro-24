@@ -1252,5 +1252,54 @@
       "cache_miss_tokens": 9957
     },
     "latencia_s": 27.55
+  },
+  "veredito": {
+    "provider": "gemini",
+    "modelo": "gemini-3.7-flash",
+    "n_candidatos": 3,
+    "n_chamadas": 3,
+    "prefixo_codigo": "",
+    "retry": null,
+    "spec_version": "1.9.21",
+    "texto": "A divergência central está na construção da história: enquanto a maioria dos que recomendam valoriza o desenvolvimento da trama e o clima de tensão, a maioria dos que não recomendam aponta que a narrativa se torna confusa e sem coerência.",
+    "texto_modelo": "A divergência central está na construção da história: enquanto a maioria dos que recomendam valoriza o desenvolvimento da trama e o clima de tensão, a maioria dos que não recomendam aponta que a narrativa se torna confusa e sem coerência.",
+    "origem": "llm",
+    "motivo": "melhor_entre_limpos",
+    "criterio_decisivo": "brevidade",
+    "indice_escolhido": 0,
+    "flags": [],
+    "candidatos": [
+      {
+        "indice": 0,
+        "n_flags": 0,
+        "flags": [],
+        "n_palavras": 40,
+        "n_ancoras": 1,
+        "eliminado": false
+      },
+      {
+        "indice": 1,
+        "n_flags": 0,
+        "flags": [],
+        "n_palavras": 45,
+        "n_ancoras": 1,
+        "eliminado": false
+      },
+      {
+        "indice": 2,
+        "n_flags": 0,
+        "flags": [],
+        "n_palavras": 43,
+        "n_ancoras": 1,
+        "eliminado": false
+      }
+    ],
+    "uso": {
+      "prompt_tokens": 2757,
+      "completion_tokens": 186,
+      "cache_hit_tokens": 0,
+      "cache_miss_tokens": 2757
+    },
+    "latencia_s": 10.83
   }
 }

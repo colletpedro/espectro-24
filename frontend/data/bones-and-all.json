@@ -1247,5 +1247,54 @@
       "cache_miss_tokens": 10389
     },
     "latencia_s": 31.06
+  },
+  "veredito": {
+    "provider": "gemini",
+    "modelo": "gemini-3.7-flash",
+    "n_candidatos": 3,
+    "n_chamadas": 3,
+    "prefixo_codigo": "",
+    "retry": null,
+    "spec_version": "1.9.21",
+    "texto": "Cerca de metade de quem recomenda destaca a trajetória de autodescoberta e reconhecimento da própria identidade. Por outro lado, cerca de metade de quem desaprova se incomoda com a violência gráfica excessiva e aponta previsibilidade na condução da trama.",
+    "texto_modelo": "Cerca de metade de quem recomenda destaca a trajetória de autodescoberta e reconhecimento da própria identidade. Por outro lado, cerca de metade de quem desaprova se incomoda com a violência gráfica excessiva e aponta previsibilidade na condução da trama.",
+    "origem": "llm",
+    "motivo": "melhor_entre_limpos",
+    "criterio_decisivo": "brevidade",
+    "indice_escolhido": 1,
+    "flags": [],
+    "candidatos": [
+      {
+        "indice": 0,
+        "n_flags": 0,
+        "flags": [],
+        "n_palavras": 40,
+        "n_ancoras": 1,
+        "eliminado": false
+      },
+      {
+        "indice": 1,
+        "n_flags": 0,
+        "flags": [],
+        "n_palavras": 39,
+        "n_ancoras": 1,
+        "eliminado": false
+      },
+      {
+        "indice": 2,
+        "n_flags": 0,
+        "flags": [],
+        "n_palavras": 40,
+        "n_ancoras": 1,
+        "eliminado": false
+      }
+    ],
+    "uso": {
+      "prompt_tokens": 2766,
+      "completion_tokens": 192,
+      "cache_hit_tokens": 0,
+      "cache_miss_tokens": 2766
+    },
+    "latencia_s": 8.22
   }
 }

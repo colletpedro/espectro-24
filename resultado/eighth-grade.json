@@ -1358,5 +1358,54 @@
       "cache_miss_tokens": 11573
     },
     "latencia_s": 33.23
+  },
+  "veredito": {
+    "provider": "gemini",
+    "modelo": "gemini-3.7-flash",
+    "n_candidatos": 3,
+    "n_chamadas": 3,
+    "prefixo_codigo": "",
+    "retry": null,
+    "spec_version": "1.9.21",
+    "texto": "Quase todos os que recomendam destacam o impacto emocional gerado pela sensação de desconforto e constrangimento da experiência. Em contrapartida, muitos dos que não aprovam criticam a estrutura do roteiro, apontando falas artificiais e repetitivas.",
+    "texto_modelo": "Quase todos os que recomendam destacam o impacto emocional gerado pela sensação de desconforto e constrangimento da experiência. Em contrapartida, muitos dos que não aprovam criticam a estrutura do roteiro, apontando falas artificiais e repetitivas.",
+    "origem": "llm",
+    "motivo": "melhor_entre_limpos",
+    "criterio_decisivo": "ancoras",
+    "indice_escolhido": 0,
+    "flags": [],
+    "candidatos": [
+      {
+        "indice": 0,
+        "n_flags": 0,
+        "flags": [],
+        "n_palavras": 35,
+        "n_ancoras": 2,
+        "eliminado": false
+      },
+      {
+        "indice": 1,
+        "n_flags": 0,
+        "flags": [],
+        "n_palavras": 45,
+        "n_ancoras": 0,
+        "eliminado": false
+      },
+      {
+        "indice": 2,
+        "n_flags": 0,
+        "flags": [],
+        "n_palavras": 34,
+        "n_ancoras": 0,
+        "eliminado": false
+      }
+    ],
+    "uso": {
+      "prompt_tokens": 2733,
+      "completion_tokens": 198,
+      "cache_hit_tokens": 0,
+      "cache_miss_tokens": 2733
+    },
+    "latencia_s": 7.99
   }
 }

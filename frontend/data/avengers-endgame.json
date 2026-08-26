@@ -1251,5 +1251,56 @@
       "cache_miss_tokens": 10239
     },
     "latencia_s": 37.26
+  },
+  "veredito": {
+    "provider": "gemini",
+    "modelo": "gemini-3.7-flash",
+    "n_candidatos": 3,
+    "n_chamadas": 3,
+    "prefixo_codigo": "",
+    "retry": null,
+    "spec_version": "1.9.21",
+    "texto": "A maioria em ambos os lados concentra suas avaliações nas comparações com o predecessor, Guerra Infinita. A divergência está em determinar se esse paralelo funciona: quem recomenda valoriza o resultado frente ao filme anterior, enquanto a maioria dos que rejeitam conclui que o longa não se sustenta nessa relação.",
+    "texto_modelo": "A maioria em ambos os lados concentra suas avaliações nas comparações com o predecessor, Guerra Infinita. A divergência está em determinar se esse paralelo funciona: quem recomenda valoriza o resultado frente ao filme anterior, enquanto a maioria dos que rejeitam conclui que o longa não se sustenta nessa relação.",
+    "origem": "llm",
+    "motivo": "melhor_entre_limpos",
+    "criterio_decisivo": "ancoras",
+    "indice_escolhido": 0,
+    "flags": [],
+    "candidatos": [
+      {
+        "indice": 0,
+        "n_flags": 0,
+        "flags": [],
+        "n_palavras": 49,
+        "n_ancoras": 1,
+        "eliminado": false
+      },
+      {
+        "indice": 1,
+        "n_flags": 1,
+        "flags": [
+          "escopo_generalizado"
+        ],
+        "n_palavras": 47,
+        "n_ancoras": 0,
+        "eliminado": true
+      },
+      {
+        "indice": 2,
+        "n_flags": 0,
+        "flags": [],
+        "n_palavras": 45,
+        "n_ancoras": 0,
+        "eliminado": false
+      }
+    ],
+    "uso": {
+      "prompt_tokens": 2658,
+      "completion_tokens": 200,
+      "cache_hit_tokens": 0,
+      "cache_miss_tokens": 2658
+    },
+    "latencia_s": 8.71
   }
 }

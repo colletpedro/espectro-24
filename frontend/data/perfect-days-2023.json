@@ -1250,5 +1250,54 @@
       "cache_miss_tokens": 10101
     },
     "latencia_s": 26.97
+  },
+  "veredito": {
+    "provider": "gemini",
+    "modelo": "gemini-3.7-flash",
+    "n_candidatos": 3,
+    "n_chamadas": 3,
+    "prefixo_codigo": "",
+    "retry": null,
+    "spec_version": "1.9.21",
+    "texto": "A maioria dos que não recomendam aponta que o andamento arrastado torna a experiência entediante. Já a maioria dos que recomendam valoriza esse ritmo contemplativo e destaca a sensibilidade ao retratar a beleza da rotina e das coisas simples.",
+    "texto_modelo": "A maioria dos que não recomendam aponta que o andamento arrastado torna a experiência entediante. Já a maioria dos que recomendam valoriza esse ritmo contemplativo e destaca a sensibilidade ao retratar a beleza da rotina e das coisas simples.",
+    "origem": "llm",
+    "motivo": "melhor_entre_limpos",
+    "criterio_decisivo": "ancoras",
+    "indice_escolhido": 2,
+    "flags": [],
+    "candidatos": [
+      {
+        "indice": 0,
+        "n_flags": 0,
+        "flags": [],
+        "n_palavras": 45,
+        "n_ancoras": 0,
+        "eliminado": false
+      },
+      {
+        "indice": 1,
+        "n_flags": 0,
+        "flags": [],
+        "n_palavras": 38,
+        "n_ancoras": 0,
+        "eliminado": false
+      },
+      {
+        "indice": 2,
+        "n_flags": 0,
+        "flags": [],
+        "n_palavras": 39,
+        "n_ancoras": 2,
+        "eliminado": false
+      }
+    ],
+    "uso": {
+      "prompt_tokens": 2694,
+      "completion_tokens": 197,
+      "cache_hit_tokens": 0,
+      "cache_miss_tokens": 2694
+    },
+    "latencia_s": 7.79
   }
 }

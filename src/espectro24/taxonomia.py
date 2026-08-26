@@ -40,6 +40,34 @@ EIXOS = (
 )
 EIXOS_VALIDOS = set(EIXOS) | {"livre"}
 
+# [v1.9.21] Rótulo humano de cada eixo, para PROSA (o veredito, §3[V]) e para
+# cabeçalho. O identificador (`roteiro_estrutura`) é o que viaja no JSON e no
+# `taxonomia_id`; o rótulo é como um leitor lê.
+#
+# Existe uma segunda cópia desta tabela, em `frontend/js/filme.js`
+# (`EIXO_LABEL`) — duplicação ENTRE LINGUAGENS, que nenhuma extração resolve.
+# Ela continua sendo usada lá pelo fallback de render e pela ordenação dos
+# bullets. Mudar um rótulo exige mudar os dois; se um dia a lista divergir, o
+# sintoma é um filme com JSON antigo exibindo um nome de eixo diferente do de
+# um filme com JSON novo.
+ROTULOS = {
+    "ritmo": "Ritmo",
+    "atuacao": "Atuação",
+    "direcao_imagem": "Direção e imagem",
+    "roteiro_estrutura": "Roteiro e estrutura",
+    "som_trilha": "Som e trilha",
+    "tom_atmosfera": "Tom e atmosfera",
+    "impacto_emocional": "Impacto emocional",
+    "comparacoes": "Comparações",
+    "expectativa": "Expectativa",
+    "critica_social": "Crítica social",
+    LIVRE: "Outros",
+}
+
+
+def rotulo_do_eixo(eixo: str) -> str:
+    return ROTULOS.get(eixo, eixo)
+
 SYSTEM = """Você classifica UMA review de cinema por vez segundo uma taxonomia fechada de EIXOS.
 
 Os eixos disponíveis são exatamente estes:

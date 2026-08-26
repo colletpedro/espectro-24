@@ -26,11 +26,14 @@ from espectro24 import config, synthesize as S  # noqa: E402
 # ------------------------------------------------------------- configuração
 
 def test_existe_provider_para_cada_estagio():
-    # v1.9.14: `rotulagem` (§D3) entra como terceiro estágio. A lista é
-    # LITERAL de propósito — um estágio novo aparecendo aqui sem decisão
-    # registrada é exatamente o que este teste existe para expor.
+    # v1.9.14: `rotulagem` (§D3) entra como terceiro estágio. v1.9.21:
+    # `veredito` (§3[V]) entra como quarto, em Gemini, com a decisão e o
+    # racional registrados em `config.PROVIDER_POR_ESTAGIO` e na spec. A
+    # lista é LITERAL de propósito — um estágio novo aparecendo aqui sem
+    # decisão registrada é exatamente o que este teste existe para expor, e
+    # foi o que ele fez quando o veredito chegou.
     assert set(config.PROVIDER_POR_ESTAGIO) == {"classificacao", "narrativa",
-                                                "rotulagem"}
+                                                "rotulagem", "veredito"}
     for p in config.PROVIDER_POR_ESTAGIO.values():
         assert p in config.PROVIDER_ENV_KEYS
 
@@ -268,3 +271,17 @@ def test_narrar_sem_provider_usa_o_do_ESTAGIO(monkeypatch):
     monkeypatch.setenv("GEMINI_API_KEY", "k")
     assert S.provider_do_estagio("narrativa", None) == "gemini"
     assert S.provider_do_estagio("classificacao", None) == "deepseek"
+
+
+def test_o_veredito_fica_em_gemini_com_modelo_explicito():
+    """[v1.9.21, §3[V]] Mesmo critério que levou a narrativa para o Gemini:
+    uma chamada por filme, prosa, nada calibrado a invalidar. O risco
+    histórico do Gemini (inflar contagem) é neutralizado por CONSTRUÇÃO — a
+    serialização do briefing do veredito não tem algarismo nenhum, então não
+    há número para inflar."""
+    assert config.PROVIDER_POR_ESTAGIO["veredito"] == "gemini"
+    modelo = config.MODELO_POR_ESTAGIO["veredito"]
+    # Nunca um alias: alvo móvel torna a comparação irreproduzível e o preço
+    # não ancorável (política da v1.9.10).
+    assert "latest" not in modelo
+    assert modelo.startswith("gemini-")

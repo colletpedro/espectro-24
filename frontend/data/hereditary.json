@@ -1252,5 +1252,54 @@
       "cache_miss_tokens": 11674
     },
     "latencia_s": 37.54
+  },
+  "veredito": {
+    "provider": "gemini",
+    "modelo": "gemini-3.7-flash",
+    "n_candidatos": 3,
+    "n_chamadas": 3,
+    "prefixo_codigo": "",
+    "retry": null,
+    "spec_version": "1.9.21",
+    "texto": "Enquanto muitos dos que recomendam o filme baseiam suas impressões em comparações, cerca de metade dos que não recomendam aponta o andamento excessivamente lento e a sensação de tédio como o principal incômodo.",
+    "texto_modelo": "Enquanto muitos dos que recomendam o filme baseiam suas impressões em comparações, cerca de metade dos que não recomendam aponta o andamento excessivamente lento e a sensação de tédio como o principal incômodo.",
+    "origem": "llm",
+    "motivo": "melhor_entre_limpos",
+    "criterio_decisivo": "ancoras",
+    "indice_escolhido": 0,
+    "flags": [],
+    "candidatos": [
+      {
+        "indice": 0,
+        "n_flags": 0,
+        "flags": [],
+        "n_palavras": 33,
+        "n_ancoras": 2,
+        "eliminado": false
+      },
+      {
+        "indice": 1,
+        "n_flags": 0,
+        "flags": [],
+        "n_palavras": 47,
+        "n_ancoras": 1,
+        "eliminado": false
+      },
+      {
+        "indice": 2,
+        "n_flags": 0,
+        "flags": [],
+        "n_palavras": 34,
+        "n_ancoras": 1,
+        "eliminado": false
+      }
+    ],
+    "uso": {
+      "prompt_tokens": 2634,
+      "completion_tokens": 180,
+      "cache_hit_tokens": 0,
+      "cache_miss_tokens": 2634
+    },
+    "latencia_s": 8.73
   }
 }

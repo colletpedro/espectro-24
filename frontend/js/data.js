@@ -1267,6 +1267,55 @@ window.ESPECTRO_DATA = {
           "eixo": "impacto_emocional",
           "n_removidas_no_corpus": 1654
         }
+      },
+      "veredito": {
+        "provider": "gemini",
+        "modelo": "gemini-3.7-flash",
+        "n_candidatos": 3,
+        "n_chamadas": 3,
+        "prefixo_codigo": "",
+        "retry": null,
+        "spec_version": "1.9.21",
+        "texto": "Cerca de metade dos que recomendam destaca o humor sarcástico e as situações desconfortáveis, elogiando a inteligência do texto. Por outro lado, cerca de metade dos que desaprovam foca na estrutura da história, apontando que a trama é rasa e carece de maior profundidade.",
+        "texto_modelo": "Cerca de metade dos que recomendam destaca o humor sarcástico e as situações desconfortáveis, elogiando a inteligência do texto. Por outro lado, cerca de metade dos que desaprovam foca na estrutura da história, apontando que a trama é rasa e carece de maior profundidade.",
+        "origem": "llm",
+        "motivo": "melhor_entre_limpos",
+        "criterio_decisivo": "ancoras",
+        "indice_escolhido": 1,
+        "flags": [],
+        "candidatos": [
+          {
+            "indice": 0,
+            "n_flags": 0,
+            "flags": [],
+            "n_palavras": 42,
+            "n_ancoras": 1,
+            "eliminado": false
+          },
+          {
+            "indice": 1,
+            "n_flags": 0,
+            "flags": [],
+            "n_palavras": 44,
+            "n_ancoras": 2,
+            "eliminado": false
+          },
+          {
+            "indice": 2,
+            "n_flags": 0,
+            "flags": [],
+            "n_palavras": 43,
+            "n_ancoras": 0,
+            "eliminado": false
+          }
+        ],
+        "uso": {
+          "prompt_tokens": 2724,
+          "completion_tokens": 204,
+          "cache_hit_tokens": 0,
+          "cache_miss_tokens": 2724
+        },
+        "latencia_s": 8.45
       }
     },
     "aftersun": {
@@ -2523,6 +2572,57 @@ window.ESPECTRO_DATA = {
           "cache_miss_tokens": 11637
         },
         "latencia_s": 43.69
+      },
+      "veredito": {
+        "provider": "gemini",
+        "modelo": "gemini-3.7-flash",
+        "n_candidatos": 3,
+        "n_chamadas": 3,
+        "prefixo_codigo": "",
+        "retry": null,
+        "spec_version": "1.9.21",
+        "texto": "A divergência central está na condução da história: enquanto a maioria dos que não recomendam aponta uma trama indefinida e pouco desenvolvida, a maioria dos que recomendam se apega à autenticidade do laço entre pai e filha, destacando a força de sua carga sentimental.",
+        "texto_modelo": "A divergência central está na condução da história: enquanto a maioria dos que não recomendam aponta uma trama indefinida e pouco desenvolvida, a maioria dos que recomendam se apega à autenticidade do laço entre pai e filha, destacando a força de sua carga sentimental.",
+        "origem": "llm",
+        "motivo": "melhor_entre_limpos",
+        "criterio_decisivo": "ancoras",
+        "indice_escolhido": 1,
+        "flags": [],
+        "candidatos": [
+          {
+            "indice": 0,
+            "n_flags": 0,
+            "flags": [],
+            "n_palavras": 44,
+            "n_ancoras": 0,
+            "eliminado": false
+          },
+          {
+            "indice": 1,
+            "n_flags": 0,
+            "flags": [],
+            "n_palavras": 44,
+            "n_ancoras": 1,
+            "eliminado": false
+          },
+          {
+            "indice": 2,
+            "n_flags": 1,
+            "flags": [
+              "formato_invalido"
+            ],
+            "n_palavras": 41,
+            "n_ancoras": 1,
+            "eliminado": true
+          }
+        ],
+        "uso": {
+          "prompt_tokens": 2757,
+          "completion_tokens": 200,
+          "cache_hit_tokens": 0,
+          "cache_miss_tokens": 2757
+        },
+        "latencia_s": 9.52
       }
     },
     "anatomy-of-a-fall": {
@@ -3779,6 +3879,55 @@ window.ESPECTRO_DATA = {
           "cache_miss_tokens": 9453
         },
         "latencia_s": 16.71
+      },
+      "veredito": {
+        "provider": "gemini",
+        "modelo": "gemini-3.7-flash",
+        "n_candidatos": 3,
+        "n_chamadas": 3,
+        "prefixo_codigo": "",
+        "retry": null,
+        "spec_version": "1.9.21",
+        "texto": "A maioria dos que recomendam destaca a complexidade do término de uma relação no roteiro. Em contrapartida, quase todos os que não recomendam se frustram com o desfecho inconclusivo da trama e apontam a lentidão no desenvolvimento da narrativa como um incômodo particular.",
+        "texto_modelo": "A maioria dos que recomendam destaca a complexidade do término de uma relação no roteiro. Em contrapartida, quase todos os que não recomendam se frustram com o desfecho inconclusivo da trama e apontam a lentidão no desenvolvimento da narrativa como um incômodo particular.",
+        "origem": "llm",
+        "motivo": "melhor_entre_limpos",
+        "criterio_decisivo": "empate",
+        "indice_escolhido": 2,
+        "flags": [],
+        "candidatos": [
+          {
+            "indice": 0,
+            "n_flags": 0,
+            "flags": [],
+            "n_palavras": 40,
+            "n_ancoras": 0,
+            "eliminado": false
+          },
+          {
+            "indice": 1,
+            "n_flags": 0,
+            "flags": [],
+            "n_palavras": 47,
+            "n_ancoras": 1,
+            "eliminado": false
+          },
+          {
+            "indice": 2,
+            "n_flags": 0,
+            "flags": [],
+            "n_palavras": 43,
+            "n_ancoras": 1,
+            "eliminado": false
+          }
+        ],
+        "uso": {
+          "prompt_tokens": 2694,
+          "completion_tokens": 210,
+          "cache_hit_tokens": 0,
+          "cache_miss_tokens": 2694
+        },
+        "latencia_s": 9.64
       }
     },
     "avengers-endgame": {
@@ -5034,6 +5183,57 @@ window.ESPECTRO_DATA = {
           "cache_miss_tokens": 10239
         },
         "latencia_s": 37.26
+      },
+      "veredito": {
+        "provider": "gemini",
+        "modelo": "gemini-3.7-flash",
+        "n_candidatos": 3,
+        "n_chamadas": 3,
+        "prefixo_codigo": "",
+        "retry": null,
+        "spec_version": "1.9.21",
+        "texto": "A maioria em ambos os lados concentra suas avaliações nas comparações com o predecessor, Guerra Infinita. A divergência está em determinar se esse paralelo funciona: quem recomenda valoriza o resultado frente ao filme anterior, enquanto a maioria dos que rejeitam conclui que o longa não se sustenta nessa relação.",
+        "texto_modelo": "A maioria em ambos os lados concentra suas avaliações nas comparações com o predecessor, Guerra Infinita. A divergência está em determinar se esse paralelo funciona: quem recomenda valoriza o resultado frente ao filme anterior, enquanto a maioria dos que rejeitam conclui que o longa não se sustenta nessa relação.",
+        "origem": "llm",
+        "motivo": "melhor_entre_limpos",
+        "criterio_decisivo": "ancoras",
+        "indice_escolhido": 0,
+        "flags": [],
+        "candidatos": [
+          {
+            "indice": 0,
+            "n_flags": 0,
+            "flags": [],
+            "n_palavras": 49,
+            "n_ancoras": 1,
+            "eliminado": false
+          },
+          {
+            "indice": 1,
+            "n_flags": 1,
+            "flags": [
+              "escopo_generalizado"
+            ],
+            "n_palavras": 47,
+            "n_ancoras": 0,
+            "eliminado": true
+          },
+          {
+            "indice": 2,
+            "n_flags": 0,
+            "flags": [],
+            "n_palavras": 45,
+            "n_ancoras": 0,
+            "eliminado": false
+          }
+        ],
+        "uso": {
+          "prompt_tokens": 2658,
+          "completion_tokens": 200,
+          "cache_hit_tokens": 0,
+          "cache_miss_tokens": 2658
+        },
+        "latencia_s": 8.71
       }
     },
     "barbie": {
@@ -6297,6 +6497,55 @@ window.ESPECTRO_DATA = {
           "cache_miss_tokens": 9933
         },
         "latencia_s": 25.11
+      },
+      "veredito": {
+        "provider": "gemini",
+        "modelo": "gemini-3.7-flash",
+        "n_candidatos": 3,
+        "n_chamadas": 3,
+        "prefixo_codigo": "",
+        "retry": null,
+        "spec_version": "1.9.21",
+        "texto": "A maioria dos que recomendam valoriza o comentário sobre o patriarcado e as pressões enfrentadas pelas mulheres. Por outro lado, a maioria dos que desaprovam considera a mensagem feminista exagerada e sem nuances, além de trazer comparações com outras produções para embasar a rejeição.",
+        "texto_modelo": "A maioria dos que recomendam valoriza o comentário sobre o patriarcado e as pressões enfrentadas pelas mulheres. Por outro lado, a maioria dos que desaprovam considera a mensagem feminista exagerada e sem nuances, além de trazer comparações com outras produções para embasar a rejeição.",
+        "origem": "llm",
+        "motivo": "melhor_entre_limpos",
+        "criterio_decisivo": "brevidade",
+        "indice_escolhido": 0,
+        "flags": [],
+        "candidatos": [
+          {
+            "indice": 0,
+            "n_flags": 0,
+            "flags": [],
+            "n_palavras": 44,
+            "n_ancoras": 2,
+            "eliminado": false
+          },
+          {
+            "indice": 1,
+            "n_flags": 0,
+            "flags": [],
+            "n_palavras": 46,
+            "n_ancoras": 2,
+            "eliminado": false
+          },
+          {
+            "indice": 2,
+            "n_flags": 0,
+            "flags": [],
+            "n_palavras": 46,
+            "n_ancoras": 2,
+            "eliminado": false
+          }
+        ],
+        "uso": {
+          "prompt_tokens": 2706,
+          "completion_tokens": 213,
+          "cache_hit_tokens": 0,
+          "cache_miss_tokens": 2706
+        },
+        "latencia_s": 9.15
       }
     },
     "bones-and-all": {
@@ -7548,6 +7797,55 @@ window.ESPECTRO_DATA = {
           "cache_miss_tokens": 10389
         },
         "latencia_s": 31.06
+      },
+      "veredito": {
+        "provider": "gemini",
+        "modelo": "gemini-3.7-flash",
+        "n_candidatos": 3,
+        "n_chamadas": 3,
+        "prefixo_codigo": "",
+        "retry": null,
+        "spec_version": "1.9.21",
+        "texto": "Cerca de metade de quem recomenda destaca a trajetória de autodescoberta e reconhecimento da própria identidade. Por outro lado, cerca de metade de quem desaprova se incomoda com a violência gráfica excessiva e aponta previsibilidade na condução da trama.",
+        "texto_modelo": "Cerca de metade de quem recomenda destaca a trajetória de autodescoberta e reconhecimento da própria identidade. Por outro lado, cerca de metade de quem desaprova se incomoda com a violência gráfica excessiva e aponta previsibilidade na condução da trama.",
+        "origem": "llm",
+        "motivo": "melhor_entre_limpos",
+        "criterio_decisivo": "brevidade",
+        "indice_escolhido": 1,
+        "flags": [],
+        "candidatos": [
+          {
+            "indice": 0,
+            "n_flags": 0,
+            "flags": [],
+            "n_palavras": 40,
+            "n_ancoras": 1,
+            "eliminado": false
+          },
+          {
+            "indice": 1,
+            "n_flags": 0,
+            "flags": [],
+            "n_palavras": 39,
+            "n_ancoras": 1,
+            "eliminado": false
+          },
+          {
+            "indice": 2,
+            "n_flags": 0,
+            "flags": [],
+            "n_palavras": 40,
+            "n_ancoras": 1,
+            "eliminado": false
+          }
+        ],
+        "uso": {
+          "prompt_tokens": 2766,
+          "completion_tokens": 192,
+          "cache_hit_tokens": 0,
+          "cache_miss_tokens": 2766
+        },
+        "latencia_s": 8.22
       }
     },
     "cats-2019": {
@@ -8808,6 +9106,55 @@ window.ESPECTRO_DATA = {
           "cache_miss_tokens": 11359
         },
         "latencia_s": 24.42
+      },
+      "veredito": {
+        "provider": "gemini",
+        "modelo": "gemini-3.7-flash",
+        "n_candidatos": 3,
+        "n_chamadas": 3,
+        "prefixo_codigo": "",
+        "retry": null,
+        "spec_version": "1.9.21",
+        "texto": "Muitos dos que não recomendam relatam uma sensação de incômodo ao assistir. Já entre quem recomenda, cerca de metade recorre a comparações com outras obras, valorizando o tom cult e a estética exagerada como fontes de diversão descompromissada.",
+        "texto_modelo": "Muitos dos que não recomendam relatam uma sensação de incômodo ao assistir. Já entre quem recomenda, cerca de metade recorre a comparações com outras obras, valorizando o tom cult e a estética exagerada como fontes de diversão descompromissada.",
+        "origem": "llm",
+        "motivo": "melhor_entre_limpos",
+        "criterio_decisivo": "brevidade",
+        "indice_escolhido": 0,
+        "flags": [],
+        "candidatos": [
+          {
+            "indice": 0,
+            "n_flags": 0,
+            "flags": [],
+            "n_palavras": 38,
+            "n_ancoras": 2,
+            "eliminado": false
+          },
+          {
+            "indice": 1,
+            "n_flags": 0,
+            "flags": [],
+            "n_palavras": 50,
+            "n_ancoras": 1,
+            "eliminado": false
+          },
+          {
+            "indice": 2,
+            "n_flags": 0,
+            "flags": [],
+            "n_palavras": 39,
+            "n_ancoras": 3,
+            "eliminado": false
+          }
+        ],
+        "uso": {
+          "prompt_tokens": 2667,
+          "completion_tokens": 201,
+          "cache_hit_tokens": 0,
+          "cache_miss_tokens": 2667
+        },
+        "latencia_s": 13.26
       }
     },
     "cidade-de-deus": {
@@ -10039,6 +10386,55 @@ window.ESPECTRO_DATA = {
           "eixo": "impacto_emocional",
           "n_removidas_no_corpus": 1654
         }
+      },
+      "veredito": {
+        "provider": "gemini",
+        "modelo": "gemini-3.7-flash",
+        "n_candidatos": 3,
+        "n_chamadas": 3,
+        "prefixo_codigo": "",
+        "retry": null,
+        "spec_version": "1.9.21",
+        "texto": "A divergência central está em avaliar se a construção da história funciona. Enquanto cerca de metade dos que recomendam valoriza o roteiro, muitos dos que não recomendam criticam o pouco desenvolvimento dos personagens e apontam sensacionalismo no retrato da pobreza.",
+        "texto_modelo": "A divergência central está em avaliar se a construção da história funciona. Enquanto cerca de metade dos que recomendam valoriza o roteiro, muitos dos que não recomendam criticam o pouco desenvolvimento dos personagens e apontam sensacionalismo no retrato da pobreza.",
+        "origem": "llm",
+        "motivo": "melhor_entre_limpos",
+        "criterio_decisivo": "ancoras",
+        "indice_escolhido": 0,
+        "flags": [],
+        "candidatos": [
+          {
+            "indice": 0,
+            "n_flags": 0,
+            "flags": [],
+            "n_palavras": 40,
+            "n_ancoras": 2,
+            "eliminado": false
+          },
+          {
+            "indice": 1,
+            "n_flags": 0,
+            "flags": [],
+            "n_palavras": 40,
+            "n_ancoras": 0,
+            "eliminado": false
+          },
+          {
+            "indice": 2,
+            "n_flags": 0,
+            "flags": [],
+            "n_palavras": 45,
+            "n_ancoras": 1,
+            "eliminado": false
+          }
+        ],
+        "uso": {
+          "prompt_tokens": 2757,
+          "completion_tokens": 185,
+          "cache_hit_tokens": 0,
+          "cache_miss_tokens": 2757
+        },
+        "latencia_s": 12.61
       }
     },
     "cure": {
@@ -11274,6 +11670,57 @@ window.ESPECTRO_DATA = {
           "eixo": "impacto_emocional",
           "n_removidas_no_corpus": 1654
         }
+      },
+      "veredito": {
+        "provider": "gemini",
+        "modelo": "gemini-3.7-flash",
+        "n_candidatos": 3,
+        "n_chamadas": 3,
+        "prefixo_codigo": "",
+        "retry": null,
+        "spec_version": "1.9.21",
+        "texto": "A maioria dos que não recomendam critica o desenvolvimento da trama pela falta de um desfecho compensador ou ápice marcante. Já cerca de metade dos que recomendam elogia o mistério da narrativa, destacando também a construção da ambientação e a condução da cena como aspectos próprios desse grupo.",
+        "texto_modelo": "A maioria dos que não recomendam critica o desenvolvimento da trama pela falta de um desfecho compensador ou ápice marcante. Já cerca de metade dos que recomendam elogia o mistério da narrativa, destacando também a construção da ambientação e a condução da cena como aspectos próprios desse grupo.",
+        "origem": "llm",
+        "motivo": "melhor_entre_limpos",
+        "criterio_decisivo": "ancoras",
+        "indice_escolhido": 2,
+        "flags": [],
+        "candidatos": [
+          {
+            "indice": 0,
+            "n_flags": 1,
+            "flags": [
+              "tema_ausente"
+            ],
+            "n_palavras": 39,
+            "n_ancoras": 0,
+            "eliminado": true
+          },
+          {
+            "indice": 1,
+            "n_flags": 0,
+            "flags": [],
+            "n_palavras": 45,
+            "n_ancoras": 0,
+            "eliminado": false
+          },
+          {
+            "indice": 2,
+            "n_flags": 0,
+            "flags": [],
+            "n_palavras": 48,
+            "n_ancoras": 1,
+            "eliminado": false
+          }
+        ],
+        "uso": {
+          "prompt_tokens": 2712,
+          "completion_tokens": 195,
+          "cache_hit_tokens": 0,
+          "cache_miss_tokens": 2712
+        },
+        "latencia_s": 14.94
       }
     },
     "dune-2021": {
@@ -12531,6 +12978,55 @@ window.ESPECTRO_DATA = {
           "cache_miss_tokens": 11740
         },
         "latencia_s": 30.26
+      },
+      "veredito": {
+        "provider": "gemini",
+        "modelo": "gemini-3.7-flash",
+        "n_candidatos": 3,
+        "n_chamadas": 3,
+        "prefixo_codigo": "",
+        "retry": null,
+        "spec_version": "1.9.21",
+        "texto": "A divergência gira em torno do julgamento dos mesmos aspectos, principalmente nas comparações apontadas pela maioria dos que reprovam o filme. Por outro lado, cerca de metade dos que recomendam exalta o trabalho de direção e o visual marcante.",
+        "texto_modelo": "A divergência gira em torno do julgamento dos mesmos aspectos, principalmente nas comparações apontadas pela maioria dos que reprovam o filme. Por outro lado, cerca de metade dos que recomendam exalta o trabalho de direção e o visual marcante.",
+        "origem": "llm",
+        "motivo": "melhor_entre_limpos",
+        "criterio_decisivo": "brevidade",
+        "indice_escolhido": 1,
+        "flags": [],
+        "candidatos": [
+          {
+            "indice": 0,
+            "n_flags": 0,
+            "flags": [],
+            "n_palavras": 43,
+            "n_ancoras": 1,
+            "eliminado": false
+          },
+          {
+            "indice": 1,
+            "n_flags": 0,
+            "flags": [],
+            "n_palavras": 39,
+            "n_ancoras": 1,
+            "eliminado": false
+          },
+          {
+            "indice": 2,
+            "n_flags": 0,
+            "flags": [],
+            "n_palavras": 44,
+            "n_ancoras": 1,
+            "eliminado": false
+          }
+        ],
+        "uso": {
+          "prompt_tokens": 2703,
+          "completion_tokens": 183,
+          "cache_hit_tokens": 0,
+          "cache_miss_tokens": 2703
+        },
+        "latencia_s": 15.96
       }
     },
     "dune-part-two": {
@@ -13788,6 +14284,59 @@ window.ESPECTRO_DATA = {
           "cache_miss_tokens": 9948
         },
         "latencia_s": 34.76
+      },
+      "veredito": {
+        "provider": "gemini",
+        "modelo": "gemini-3.7-flash",
+        "n_candidatos": 3,
+        "n_chamadas": 3,
+        "prefixo_codigo": "",
+        "retry": null,
+        "spec_version": "1.9.21",
+        "texto": "A maioria de quem recomenda centra suas análises em comparações. Por outro lado, cerca de metade de quem não recomenda discute o impacto emocional da obra, trazendo ainda queixas exclusivas sobre a cadência excessivamente vagarosa e momentos de monotonia.",
+        "texto_modelo": "A maioria de quem recomenda centra suas análises em comparações. Por outro lado, cerca de metade de quem não recomenda discute o impacto emocional da obra, trazendo ainda queixas exclusivas sobre a cadência excessivamente vagarosa e momentos de monotonia.",
+        "origem": "llm",
+        "motivo": "melhor_entre_limpos",
+        "criterio_decisivo": "unico",
+        "indice_escolhido": 2,
+        "flags": [],
+        "candidatos": [
+          {
+            "indice": 0,
+            "n_flags": 1,
+            "flags": [
+              "escopo_generalizado"
+            ],
+            "n_palavras": 46,
+            "n_ancoras": 2,
+            "eliminado": true
+          },
+          {
+            "indice": 1,
+            "n_flags": 1,
+            "flags": [
+              "tema_ausente"
+            ],
+            "n_palavras": 42,
+            "n_ancoras": 2,
+            "eliminado": true
+          },
+          {
+            "indice": 2,
+            "n_flags": 0,
+            "flags": [],
+            "n_palavras": 39,
+            "n_ancoras": 2,
+            "eliminado": false
+          }
+        ],
+        "uso": {
+          "prompt_tokens": 2607,
+          "completion_tokens": 190,
+          "cache_hit_tokens": 0,
+          "cache_miss_tokens": 2607
+        },
+        "latencia_s": 9.71
       }
     },
     "eighth-grade": {
@@ -15054,6 +15603,55 @@ window.ESPECTRO_DATA = {
           "cache_miss_tokens": 11573
         },
         "latencia_s": 33.23
+      },
+      "veredito": {
+        "provider": "gemini",
+        "modelo": "gemini-3.7-flash",
+        "n_candidatos": 3,
+        "n_chamadas": 3,
+        "prefixo_codigo": "",
+        "retry": null,
+        "spec_version": "1.9.21",
+        "texto": "Quase todos os que recomendam destacam o impacto emocional gerado pela sensação de desconforto e constrangimento da experiência. Em contrapartida, muitos dos que não aprovam criticam a estrutura do roteiro, apontando falas artificiais e repetitivas.",
+        "texto_modelo": "Quase todos os que recomendam destacam o impacto emocional gerado pela sensação de desconforto e constrangimento da experiência. Em contrapartida, muitos dos que não aprovam criticam a estrutura do roteiro, apontando falas artificiais e repetitivas.",
+        "origem": "llm",
+        "motivo": "melhor_entre_limpos",
+        "criterio_decisivo": "ancoras",
+        "indice_escolhido": 0,
+        "flags": [],
+        "candidatos": [
+          {
+            "indice": 0,
+            "n_flags": 0,
+            "flags": [],
+            "n_palavras": 35,
+            "n_ancoras": 2,
+            "eliminado": false
+          },
+          {
+            "indice": 1,
+            "n_flags": 0,
+            "flags": [],
+            "n_palavras": 45,
+            "n_ancoras": 0,
+            "eliminado": false
+          },
+          {
+            "indice": 2,
+            "n_flags": 0,
+            "flags": [],
+            "n_palavras": 34,
+            "n_ancoras": 0,
+            "eliminado": false
+          }
+        ],
+        "uso": {
+          "prompt_tokens": 2733,
+          "completion_tokens": 198,
+          "cache_hit_tokens": 0,
+          "cache_miss_tokens": 2733
+        },
+        "latencia_s": 7.99
       }
     },
     "everything-everywhere-all-at-once": {
@@ -16305,6 +16903,55 @@ window.ESPECTRO_DATA = {
           "cache_miss_tokens": 10218
         },
         "latencia_s": 35.48
+      },
+      "veredito": {
+        "provider": "gemini",
+        "modelo": "gemini-3.7-flash",
+        "n_candidatos": 3,
+        "n_chamadas": 3,
+        "prefixo_codigo": "",
+        "retry": null,
+        "spec_version": "1.9.21",
+        "texto": "Cerca de metade dos que recomendam destaca o impacto emocional voltado à esperança e aos laços familiares. Em contrapartida, a maioria dos que não recomendam considera essa dinâmica familiar forçada no roteiro, apontando ainda superficialidade na crítica social e previsibilidade no desfecho.",
+        "texto_modelo": "Cerca de metade dos que recomendam destaca o impacto emocional voltado à esperança e aos laços familiares. Em contrapartida, a maioria dos que não recomendam considera essa dinâmica familiar forçada no roteiro, apontando ainda superficialidade na crítica social e previsibilidade no desfecho.",
+        "origem": "llm",
+        "motivo": "melhor_entre_limpos",
+        "criterio_decisivo": "brevidade",
+        "indice_escolhido": 2,
+        "flags": [],
+        "candidatos": [
+          {
+            "indice": 0,
+            "n_flags": 0,
+            "flags": [],
+            "n_palavras": 47,
+            "n_ancoras": 3,
+            "eliminado": false
+          },
+          {
+            "indice": 1,
+            "n_flags": 0,
+            "flags": [],
+            "n_palavras": 46,
+            "n_ancoras": 3,
+            "eliminado": false
+          },
+          {
+            "indice": 2,
+            "n_flags": 0,
+            "flags": [],
+            "n_palavras": 42,
+            "n_ancoras": 3,
+            "eliminado": false
+          }
+        ],
+        "uso": {
+          "prompt_tokens": 2724,
+          "completion_tokens": 209,
+          "cache_hit_tokens": 0,
+          "cache_miss_tokens": 2724
+        },
+        "latencia_s": 10.03
       }
     },
     "friday-the-13th-2009": {
@@ -17561,6 +18208,55 @@ window.ESPECTRO_DATA = {
           "cache_miss_tokens": 10173
         },
         "latencia_s": 26.41
+      },
+      "veredito": {
+        "provider": "gemini",
+        "modelo": "gemini-3.7-flash",
+        "n_candidatos": 3,
+        "n_chamadas": 3,
+        "prefixo_codigo": "O meio-termo é o maior grupo da recepção (~41% das notas). ",
+        "retry": null,
+        "spec_version": "1.9.21",
+        "texto": "O meio-termo é o maior grupo da recepção (~41% das notas). As opiniões divergem sobre o funcionamento do roteiro e o resgate da franquia: a maioria dos que recomendam vê a produção como uma releitura eficiente das obras originais, enquanto cerca de metade dos que reprovam aponta figuras sem personalidade e atitudes sem sentido ao longo da narrativa.",
+        "texto_modelo": "As opiniões divergem sobre o funcionamento do roteiro e o resgate da franquia: a maioria dos que recomendam vê a produção como uma releitura eficiente das obras originais, enquanto cerca de metade dos que reprovam aponta figuras sem personalidade e atitudes sem sentido ao longo da narrativa.",
+        "origem": "llm",
+        "motivo": "melhor_entre_limpos",
+        "criterio_decisivo": "brevidade",
+        "indice_escolhido": 2,
+        "flags": [],
+        "candidatos": [
+          {
+            "indice": 0,
+            "n_flags": 0,
+            "flags": [],
+            "n_palavras": 49,
+            "n_ancoras": 1,
+            "eliminado": false
+          },
+          {
+            "indice": 1,
+            "n_flags": 0,
+            "flags": [],
+            "n_palavras": 50,
+            "n_ancoras": 1,
+            "eliminado": false
+          },
+          {
+            "indice": 2,
+            "n_flags": 0,
+            "flags": [],
+            "n_palavras": 47,
+            "n_ancoras": 1,
+            "eliminado": false
+          }
+        ],
+        "uso": {
+          "prompt_tokens": 3132,
+          "completion_tokens": 209,
+          "cache_hit_tokens": 0,
+          "cache_miss_tokens": 3132
+        },
+        "latencia_s": 15.37
       }
     },
     "hereditary": {
@@ -18817,6 +19513,55 @@ window.ESPECTRO_DATA = {
           "cache_miss_tokens": 11674
         },
         "latencia_s": 37.54
+      },
+      "veredito": {
+        "provider": "gemini",
+        "modelo": "gemini-3.7-flash",
+        "n_candidatos": 3,
+        "n_chamadas": 3,
+        "prefixo_codigo": "",
+        "retry": null,
+        "spec_version": "1.9.21",
+        "texto": "Enquanto muitos dos que recomendam o filme baseiam suas impressões em comparações, cerca de metade dos que não recomendam aponta o andamento excessivamente lento e a sensação de tédio como o principal incômodo.",
+        "texto_modelo": "Enquanto muitos dos que recomendam o filme baseiam suas impressões em comparações, cerca de metade dos que não recomendam aponta o andamento excessivamente lento e a sensação de tédio como o principal incômodo.",
+        "origem": "llm",
+        "motivo": "melhor_entre_limpos",
+        "criterio_decisivo": "ancoras",
+        "indice_escolhido": 0,
+        "flags": [],
+        "candidatos": [
+          {
+            "indice": 0,
+            "n_flags": 0,
+            "flags": [],
+            "n_palavras": 33,
+            "n_ancoras": 2,
+            "eliminado": false
+          },
+          {
+            "indice": 1,
+            "n_flags": 0,
+            "flags": [],
+            "n_palavras": 47,
+            "n_ancoras": 1,
+            "eliminado": false
+          },
+          {
+            "indice": 2,
+            "n_flags": 0,
+            "flags": [],
+            "n_palavras": 34,
+            "n_ancoras": 1,
+            "eliminado": false
+          }
+        ],
+        "uso": {
+          "prompt_tokens": 2634,
+          "completion_tokens": 180,
+          "cache_hit_tokens": 0,
+          "cache_miss_tokens": 2634
+        },
+        "latencia_s": 8.73
       }
     },
     "im-still-here-2024": {
@@ -20080,6 +20825,57 @@ window.ESPECTRO_DATA = {
           "cache_miss_tokens": 11583
         },
         "latencia_s": 26.31
+      },
+      "veredito": {
+        "provider": "gemini",
+        "modelo": "gemini-3.7-flash",
+        "n_candidatos": 3,
+        "n_chamadas": 3,
+        "prefixo_codigo": "",
+        "retry": null,
+        "spec_version": "1.9.21",
+        "texto": "A divergência sobre o filme concentra-se na eficácia de seu comentário social. Enquanto a maioria dos que recomendam valoriza a representação do regime militar, cerca de metade dos que não indicam a produção aponta pouca densidade nas questões políticas abordadas.",
+        "texto_modelo": "A divergência sobre o filme concentra-se na eficácia de seu comentário social. Enquanto a maioria dos que recomendam valoriza a representação do regime militar, cerca de metade dos que não indicam a produção aponta pouca densidade nas questões políticas abordadas.",
+        "origem": "llm",
+        "motivo": "melhor_entre_limpos",
+        "criterio_decisivo": "brevidade",
+        "indice_escolhido": 2,
+        "flags": [],
+        "candidatos": [
+          {
+            "indice": 0,
+            "n_flags": 0,
+            "flags": [],
+            "n_palavras": 41,
+            "n_ancoras": 1,
+            "eliminado": false
+          },
+          {
+            "indice": 1,
+            "n_flags": 1,
+            "flags": [
+              "tema_ausente"
+            ],
+            "n_palavras": 41,
+            "n_ancoras": 1,
+            "eliminado": true
+          },
+          {
+            "indice": 2,
+            "n_flags": 0,
+            "flags": [],
+            "n_palavras": 40,
+            "n_ancoras": 1,
+            "eliminado": false
+          }
+        ],
+        "uso": {
+          "prompt_tokens": 2742,
+          "completion_tokens": 185,
+          "cache_hit_tokens": 0,
+          "cache_miss_tokens": 2742
+        },
+        "latencia_s": 14.96
       }
     },
     "interstellar": {
@@ -21337,6 +22133,55 @@ window.ESPECTRO_DATA = {
           "cache_miss_tokens": 9735
         },
         "latencia_s": 40.67
+      },
+      "veredito": {
+        "provider": "gemini",
+        "modelo": "gemini-3.7-flash",
+        "n_candidatos": 3,
+        "n_chamadas": 3,
+        "prefixo_codigo": "",
+        "retry": null,
+        "spec_version": "1.9.21",
+        "texto": "A maioria dos que recomendam destaca a ambição e a complexidade do texto. Por outro lado, cerca de metade dos que não recomendam aponta fragilidades na trama e falas artificiais, trazendo também queixas exclusivas sobre o fraco desempenho do elenco e a construção dos personagens.",
+        "texto_modelo": "A maioria dos que recomendam destaca a ambição e a complexidade do texto. Por outro lado, cerca de metade dos que não recomendam aponta fragilidades na trama e falas artificiais, trazendo também queixas exclusivas sobre o fraco desempenho do elenco e a construção dos personagens.",
+        "origem": "llm",
+        "motivo": "melhor_entre_limpos",
+        "criterio_decisivo": "empate",
+        "indice_escolhido": 0,
+        "flags": [],
+        "candidatos": [
+          {
+            "indice": 0,
+            "n_flags": 0,
+            "flags": [],
+            "n_palavras": 45,
+            "n_ancoras": 2,
+            "eliminado": false
+          },
+          {
+            "indice": 1,
+            "n_flags": 0,
+            "flags": [],
+            "n_palavras": 41,
+            "n_ancoras": 1,
+            "eliminado": false
+          },
+          {
+            "indice": 2,
+            "n_flags": 0,
+            "flags": [],
+            "n_palavras": 45,
+            "n_ancoras": 2,
+            "eliminado": false
+          }
+        ],
+        "uso": {
+          "prompt_tokens": 2733,
+          "completion_tokens": 201,
+          "cache_hit_tokens": 0,
+          "cache_miss_tokens": 2733
+        },
+        "latencia_s": 7.55
       }
     },
     "joker-folie-a-deux": {
@@ -22590,6 +23435,55 @@ window.ESPECTRO_DATA = {
           "cache_miss_tokens": 9780
         },
         "latencia_s": 34.38
+      },
+      "veredito": {
+        "provider": "gemini",
+        "modelo": "gemini-3.7-flash",
+        "n_candidatos": 3,
+        "n_chamadas": 3,
+        "prefixo_codigo": "",
+        "retry": null,
+        "spec_version": "1.9.21",
+        "texto": "A maioria dos que recomendam a obra destaca comparações com outros títulos e valoriza o impacto do desfecho narrativo. Por outro lado, cerca de metade dos que não recomendam aponta fragilidades estruturais no roteiro e falta de desenvolvimento da história.",
+        "texto_modelo": "A maioria dos que recomendam a obra destaca comparações com outros títulos e valoriza o impacto do desfecho narrativo. Por outro lado, cerca de metade dos que não recomendam aponta fragilidades estruturais no roteiro e falta de desenvolvimento da história.",
+        "origem": "llm",
+        "motivo": "melhor_entre_limpos",
+        "criterio_decisivo": "empate",
+        "indice_escolhido": 0,
+        "flags": [],
+        "candidatos": [
+          {
+            "indice": 0,
+            "n_flags": 0,
+            "flags": [],
+            "n_palavras": 40,
+            "n_ancoras": 2,
+            "eliminado": false
+          },
+          {
+            "indice": 1,
+            "n_flags": 0,
+            "flags": [],
+            "n_palavras": 36,
+            "n_ancoras": 0,
+            "eliminado": false
+          },
+          {
+            "indice": 2,
+            "n_flags": 0,
+            "flags": [],
+            "n_palavras": 44,
+            "n_ancoras": 2,
+            "eliminado": false
+          }
+        ],
+        "uso": {
+          "prompt_tokens": 2673,
+          "completion_tokens": 185,
+          "cache_hit_tokens": 0,
+          "cache_miss_tokens": 2673
+        },
+        "latencia_s": 10.86
       }
     },
     "longlegs": {
@@ -23846,6 +24740,55 @@ window.ESPECTRO_DATA = {
           "cache_miss_tokens": 9957
         },
         "latencia_s": 27.55
+      },
+      "veredito": {
+        "provider": "gemini",
+        "modelo": "gemini-3.7-flash",
+        "n_candidatos": 3,
+        "n_chamadas": 3,
+        "prefixo_codigo": "",
+        "retry": null,
+        "spec_version": "1.9.21",
+        "texto": "A divergência central está na construção da história: enquanto a maioria dos que recomendam valoriza o desenvolvimento da trama e o clima de tensão, a maioria dos que não recomendam aponta que a narrativa se torna confusa e sem coerência.",
+        "texto_modelo": "A divergência central está na construção da história: enquanto a maioria dos que recomendam valoriza o desenvolvimento da trama e o clima de tensão, a maioria dos que não recomendam aponta que a narrativa se torna confusa e sem coerência.",
+        "origem": "llm",
+        "motivo": "melhor_entre_limpos",
+        "criterio_decisivo": "brevidade",
+        "indice_escolhido": 0,
+        "flags": [],
+        "candidatos": [
+          {
+            "indice": 0,
+            "n_flags": 0,
+            "flags": [],
+            "n_palavras": 40,
+            "n_ancoras": 1,
+            "eliminado": false
+          },
+          {
+            "indice": 1,
+            "n_flags": 0,
+            "flags": [],
+            "n_palavras": 45,
+            "n_ancoras": 1,
+            "eliminado": false
+          },
+          {
+            "indice": 2,
+            "n_flags": 0,
+            "flags": [],
+            "n_palavras": 43,
+            "n_ancoras": 1,
+            "eliminado": false
+          }
+        ],
+        "uso": {
+          "prompt_tokens": 2757,
+          "completion_tokens": 186,
+          "cache_hit_tokens": 0,
+          "cache_miss_tokens": 2757
+        },
+        "latencia_s": 10.83
       }
     },
     "mother-2017": {
@@ -25107,6 +26050,57 @@ window.ESPECTRO_DATA = {
           "cache_miss_tokens": 11887
         },
         "latencia_s": 34.29
+      },
+      "veredito": {
+        "provider": "gemini",
+        "modelo": "gemini-3.7-flash",
+        "n_candidatos": 3,
+        "n_chamadas": 3,
+        "prefixo_codigo": "",
+        "retry": null,
+        "spec_version": "1.9.21",
+        "texto": "As opiniões divergem sobre a eficácia da narrativa e da condução da trama. Enquanto a maioria dos que recomendam destaca a intensidade do texto e seu impacto emocional, a maior parte dos que discordam concentra seus apontamentos exatamente nos problemas de roteiro e estruturação.",
+        "texto_modelo": "As opiniões divergem sobre a eficácia da narrativa e da condução da trama. Enquanto a maioria dos que recomendam destaca a intensidade do texto e seu impacto emocional, a maior parte dos que discordam concentra seus apontamentos exatamente nos problemas de roteiro e estruturação.",
+        "origem": "llm",
+        "motivo": "melhor_entre_limpos",
+        "criterio_decisivo": "ancoras",
+        "indice_escolhido": 1,
+        "flags": [],
+        "candidatos": [
+          {
+            "indice": 0,
+            "n_flags": 0,
+            "flags": [],
+            "n_palavras": 45,
+            "n_ancoras": 1,
+            "eliminado": false
+          },
+          {
+            "indice": 1,
+            "n_flags": 0,
+            "flags": [],
+            "n_palavras": 44,
+            "n_ancoras": 2,
+            "eliminado": false
+          },
+          {
+            "indice": 2,
+            "n_flags": 1,
+            "flags": [
+              "tema_ausente"
+            ],
+            "n_palavras": 44,
+            "n_ancoras": 1,
+            "eliminado": true
+          }
+        ],
+        "uso": {
+          "prompt_tokens": 2649,
+          "completion_tokens": 189,
+          "cache_hit_tokens": 0,
+          "cache_miss_tokens": 2649
+        },
+        "latencia_s": 8.92
       }
     },
     "napoleon-2023": {
@@ -26325,6 +27319,55 @@ window.ESPECTRO_DATA = {
           "cache_miss_tokens": 9771
         },
         "latencia_s": 32.81
+      },
+      "veredito": {
+        "provider": "gemini",
+        "modelo": "gemini-3.7-flash",
+        "n_candidatos": 3,
+        "n_chamadas": 3,
+        "prefixo_codigo": "O meio-termo é o maior grupo da recepção (~45% das notas). ",
+        "retry": null,
+        "spec_version": "1.9.21",
+        "texto": "O meio-termo é o maior grupo da recepção (~45% das notas). Enquanto muitos dos que recomendam centram suas avaliações em comparações, a maioria dos que rejeitam a obra questiona a caracterização de Napoleão e o impacto emocional. Já as opiniões intermediárias destacam a duração arrastada e a atenção dedicada à relação com Josefina.",
+        "texto_modelo": "Enquanto muitos dos que recomendam centram suas avaliações em comparações, a maioria dos que rejeitam a obra questiona a caracterização de Napoleão e o impacto emocional. Já as opiniões intermediárias destacam a duração arrastada e a atenção dedicada à relação com Josefina.",
+        "origem": "llm",
+        "motivo": "melhor_entre_limpos",
+        "criterio_decisivo": "brevidade",
+        "indice_escolhido": 1,
+        "flags": [],
+        "candidatos": [
+          {
+            "indice": 0,
+            "n_flags": 0,
+            "flags": [],
+            "n_palavras": 46,
+            "n_ancoras": 4,
+            "eliminado": false
+          },
+          {
+            "indice": 1,
+            "n_flags": 0,
+            "flags": [],
+            "n_palavras": 42,
+            "n_ancoras": 3,
+            "eliminado": false
+          },
+          {
+            "indice": 2,
+            "n_flags": 0,
+            "flags": [],
+            "n_palavras": 46,
+            "n_ancoras": 4,
+            "eliminado": false
+          }
+        ],
+        "uso": {
+          "prompt_tokens": 2979,
+          "completion_tokens": 222,
+          "cache_hit_tokens": 0,
+          "cache_miss_tokens": 2979
+        },
+        "latencia_s": 12.39
       }
     },
     "obsession-2026": {
@@ -27554,6 +28597,55 @@ window.ESPECTRO_DATA = {
           "cache_miss_tokens": 10510
         },
         "latencia_s": 30.73
+      },
+      "veredito": {
+        "provider": "gemini",
+        "modelo": "gemini-3.7-flash",
+        "n_candidatos": 3,
+        "n_chamadas": 3,
+        "prefixo_codigo": "",
+        "retry": null,
+        "spec_version": "1.9.21",
+        "texto": "Relatos favoráveis tendem a valorizar a estética visual e a fotografia, apontando também uma trama inteligente e bem construída. Em contrapartida, avaliações negativas costumam apontar fragilidades e confusão no roteiro, indicando percepções divididas sobre o desenvolvimento da narrativa.",
+        "texto_modelo": "Relatos favoráveis tendem a valorizar a estética visual e a fotografia, apontando também uma trama inteligente e bem construída. Em contrapartida, avaliações negativas costumam apontar fragilidades e confusão no roteiro, indicando percepções divididas sobre o desenvolvimento da narrativa.",
+        "origem": "llm",
+        "motivo": "melhor_entre_limpos",
+        "criterio_decisivo": "brevidade",
+        "indice_escolhido": 0,
+        "flags": [],
+        "candidatos": [
+          {
+            "indice": 0,
+            "n_flags": 0,
+            "flags": [],
+            "n_palavras": 38,
+            "n_ancoras": 2,
+            "eliminado": false
+          },
+          {
+            "indice": 1,
+            "n_flags": 0,
+            "flags": [],
+            "n_palavras": 40,
+            "n_ancoras": 0,
+            "eliminado": false
+          },
+          {
+            "indice": 2,
+            "n_flags": 0,
+            "flags": [],
+            "n_palavras": 43,
+            "n_ancoras": 2,
+            "eliminado": false
+          }
+        ],
+        "uso": {
+          "prompt_tokens": 2859,
+          "completion_tokens": 208,
+          "cache_hit_tokens": 0,
+          "cache_miss_tokens": 2859
+        },
+        "latencia_s": 35.21
       }
     },
     "oppenheimer-2023": {
@@ -28818,6 +29910,57 @@ window.ESPECTRO_DATA = {
           "cache_miss_tokens": 11359
         },
         "latencia_s": 36.45
+      },
+      "veredito": {
+        "provider": "gemini",
+        "modelo": "gemini-3.7-flash",
+        "n_candidatos": 3,
+        "n_chamadas": 3,
+        "prefixo_codigo": "",
+        "retry": null,
+        "spec_version": "1.9.21",
+        "texto": "A divergência central está na avaliação da mesma estrutura e andamento. Cerca de metade dos que recomendam aprecia a trama complexa e não linear, enquanto cerca de metade dos que desaprovam vê a condução como confusa, arrastada e excessivamente longa.",
+        "texto_modelo": "A divergência central está na avaliação da mesma estrutura e andamento. Cerca de metade dos que recomendam aprecia a trama complexa e não linear, enquanto cerca de metade dos que desaprovam vê a condução como confusa, arrastada e excessivamente longa.",
+        "origem": "llm",
+        "motivo": "melhor_entre_limpos",
+        "criterio_decisivo": "brevidade",
+        "indice_escolhido": 0,
+        "flags": [],
+        "candidatos": [
+          {
+            "indice": 0,
+            "n_flags": 0,
+            "flags": [],
+            "n_palavras": 40,
+            "n_ancoras": 1,
+            "eliminado": false
+          },
+          {
+            "indice": 1,
+            "n_flags": 0,
+            "flags": [],
+            "n_palavras": 46,
+            "n_ancoras": 1,
+            "eliminado": false
+          },
+          {
+            "indice": 2,
+            "n_flags": 1,
+            "flags": [
+              "formato_invalido"
+            ],
+            "n_palavras": 48,
+            "n_ancoras": 2,
+            "eliminado": true
+          }
+        ],
+        "uso": {
+          "prompt_tokens": 2772,
+          "completion_tokens": 211,
+          "cache_hit_tokens": 0,
+          "cache_miss_tokens": 2772
+        },
+        "latencia_s": 10.75
       }
     },
     "parasite-2019": {
@@ -30085,6 +31228,55 @@ window.ESPECTRO_DATA = {
           "cache_miss_tokens": 11915
         },
         "latencia_s": 30.77
+      },
+      "veredito": {
+        "provider": "gemini",
+        "modelo": "gemini-3.7-flash",
+        "n_candidatos": 3,
+        "n_chamadas": 3,
+        "prefixo_codigo": "",
+        "retry": null,
+        "spec_version": "1.9.21",
+        "texto": "As opiniões divergem diretamente sobre a estrutura do roteiro. A maioria dos que recomendam aprecia as viradas e o desenrolar da trama, enquanto muitos dos que não recomendam consideram a história sem lógica e desmedida.",
+        "texto_modelo": "As opiniões divergem diretamente sobre a estrutura do roteiro. A maioria dos que recomendam aprecia as viradas e o desenrolar da trama, enquanto muitos dos que não recomendam consideram a história sem lógica e desmedida.",
+        "origem": "llm",
+        "motivo": "melhor_entre_limpos",
+        "criterio_decisivo": "ancoras",
+        "indice_escolhido": 0,
+        "flags": [],
+        "candidatos": [
+          {
+            "indice": 0,
+            "n_flags": 0,
+            "flags": [],
+            "n_palavras": 35,
+            "n_ancoras": 1,
+            "eliminado": false
+          },
+          {
+            "indice": 1,
+            "n_flags": 0,
+            "flags": [],
+            "n_palavras": 38,
+            "n_ancoras": 0,
+            "eliminado": false
+          },
+          {
+            "indice": 2,
+            "n_flags": 0,
+            "flags": [],
+            "n_palavras": 39,
+            "n_ancoras": 0,
+            "eliminado": false
+          }
+        ],
+        "uso": {
+          "prompt_tokens": 2784,
+          "completion_tokens": 176,
+          "cache_hit_tokens": 0,
+          "cache_miss_tokens": 2784
+        },
+        "latencia_s": 10.89
       }
     },
     "pearl-2022": {
@@ -31352,6 +32544,57 @@ window.ESPECTRO_DATA = {
           "cache_miss_tokens": 11266
         },
         "latencia_s": 34.66
+      },
+      "veredito": {
+        "provider": "gemini",
+        "modelo": "gemini-3.7-flash",
+        "n_candidatos": 3,
+        "n_chamadas": 3,
+        "prefixo_codigo": "",
+        "retry": null,
+        "spec_version": "1.9.21",
+        "texto": "As opiniões divergem sobre a eficácia do roteiro e de sua estrutura. Enquanto cerca de metade das avaliações favoráveis destaca o impacto do discurso de encerramento, impressões negativas pontuais apontam desconforto com a postura da figura central da trama.",
+        "texto_modelo": "As opiniões divergem sobre a eficácia do roteiro e de sua estrutura. Enquanto cerca de metade das avaliações favoráveis destaca o impacto do discurso de encerramento, impressões negativas pontuais apontam desconforto com a postura da figura central da trama.",
+        "origem": "llm",
+        "motivo": "melhor_entre_limpos",
+        "criterio_decisivo": "brevidade",
+        "indice_escolhido": 1,
+        "flags": [],
+        "candidatos": [
+          {
+            "indice": 0,
+            "n_flags": 1,
+            "flags": [
+              "tema_ausente"
+            ],
+            "n_palavras": 40,
+            "n_ancoras": 1,
+            "eliminado": true
+          },
+          {
+            "indice": 1,
+            "n_flags": 0,
+            "flags": [],
+            "n_palavras": 39,
+            "n_ancoras": 1,
+            "eliminado": false
+          },
+          {
+            "indice": 2,
+            "n_flags": 0,
+            "flags": [],
+            "n_palavras": 41,
+            "n_ancoras": 1,
+            "eliminado": false
+          }
+        ],
+        "uso": {
+          "prompt_tokens": 2811,
+          "completion_tokens": 203,
+          "cache_hit_tokens": 0,
+          "cache_miss_tokens": 2811
+        },
+        "latencia_s": 12.11
       }
     },
     "perfect-days-2023": {
@@ -32606,6 +33849,55 @@ window.ESPECTRO_DATA = {
           "cache_miss_tokens": 10101
         },
         "latencia_s": 26.97
+      },
+      "veredito": {
+        "provider": "gemini",
+        "modelo": "gemini-3.7-flash",
+        "n_candidatos": 3,
+        "n_chamadas": 3,
+        "prefixo_codigo": "",
+        "retry": null,
+        "spec_version": "1.9.21",
+        "texto": "A maioria dos que não recomendam aponta que o andamento arrastado torna a experiência entediante. Já a maioria dos que recomendam valoriza esse ritmo contemplativo e destaca a sensibilidade ao retratar a beleza da rotina e das coisas simples.",
+        "texto_modelo": "A maioria dos que não recomendam aponta que o andamento arrastado torna a experiência entediante. Já a maioria dos que recomendam valoriza esse ritmo contemplativo e destaca a sensibilidade ao retratar a beleza da rotina e das coisas simples.",
+        "origem": "llm",
+        "motivo": "melhor_entre_limpos",
+        "criterio_decisivo": "ancoras",
+        "indice_escolhido": 2,
+        "flags": [],
+        "candidatos": [
+          {
+            "indice": 0,
+            "n_flags": 0,
+            "flags": [],
+            "n_palavras": 45,
+            "n_ancoras": 0,
+            "eliminado": false
+          },
+          {
+            "indice": 1,
+            "n_flags": 0,
+            "flags": [],
+            "n_palavras": 38,
+            "n_ancoras": 0,
+            "eliminado": false
+          },
+          {
+            "indice": 2,
+            "n_flags": 0,
+            "flags": [],
+            "n_palavras": 39,
+            "n_ancoras": 2,
+            "eliminado": false
+          }
+        ],
+        "uso": {
+          "prompt_tokens": 2694,
+          "completion_tokens": 197,
+          "cache_hit_tokens": 0,
+          "cache_miss_tokens": 2694
+        },
+        "latencia_s": 7.79
       }
     },
     "shutter-island": {
@@ -33870,6 +35162,57 @@ window.ESPECTRO_DATA = {
           "cache_miss_tokens": 11823
         },
         "latencia_s": 40.56
+      },
+      "veredito": {
+        "provider": "gemini",
+        "modelo": "gemini-3.7-flash",
+        "n_candidatos": 3,
+        "n_chamadas": 3,
+        "prefixo_codigo": "",
+        "retry": null,
+        "spec_version": "1.9.21",
+        "texto": "A divergência se concentra no roteiro e na sua estrutura: enquanto a maioria dos que recomendam elogia a condução do mistério, quase todos os que não recomendam consideram as revelações da trama previsíveis e frustrantes.",
+        "texto_modelo": "A divergência se concentra no roteiro e na sua estrutura: enquanto a maioria dos que recomendam elogia a condução do mistério, quase todos os que não recomendam consideram as revelações da trama previsíveis e frustrantes.",
+        "origem": "llm",
+        "motivo": "melhor_entre_limpos",
+        "criterio_decisivo": "brevidade",
+        "indice_escolhido": 2,
+        "flags": [],
+        "candidatos": [
+          {
+            "indice": 0,
+            "n_flags": 1,
+            "flags": [
+              "tema_ausente"
+            ],
+            "n_palavras": 40,
+            "n_ancoras": 1,
+            "eliminado": true
+          },
+          {
+            "indice": 1,
+            "n_flags": 0,
+            "flags": [],
+            "n_palavras": 45,
+            "n_ancoras": 1,
+            "eliminado": false
+          },
+          {
+            "indice": 2,
+            "n_flags": 0,
+            "flags": [],
+            "n_palavras": 35,
+            "n_ancoras": 1,
+            "eliminado": false
+          }
+        ],
+        "uso": {
+          "prompt_tokens": 2781,
+          "completion_tokens": 187,
+          "cache_hit_tokens": 0,
+          "cache_miss_tokens": 2781
+        },
+        "latencia_s": 9.72
       }
     },
     "spider-man-across-the-spider-verse": {
@@ -35135,6 +36478,55 @@ window.ESPECTRO_DATA = {
           "cache_miss_tokens": 11346
         },
         "latencia_s": 24.91
+      },
+      "veredito": {
+        "provider": "gemini",
+        "modelo": "gemini-3.7-flash",
+        "n_candidatos": 3,
+        "n_chamadas": 3,
+        "prefixo_codigo": "",
+        "retry": null,
+        "spec_version": "1.9.21",
+        "texto": "A maioria dos que desaprovam o filme se incomoda com a estrutura fragmentada da história e o desfecho pouco conclusivo. Em contrapartida, cerca de metade dos que o defendem valoriza a maneira como a trama desenvolve seus personagens.",
+        "texto_modelo": "A maioria dos que desaprovam o filme se incomoda com a estrutura fragmentada da história e o desfecho pouco conclusivo. Em contrapartida, cerca de metade dos que o defendem valoriza a maneira como a trama desenvolve seus personagens.",
+        "origem": "llm",
+        "motivo": "melhor_entre_limpos",
+        "criterio_decisivo": "brevidade",
+        "indice_escolhido": 1,
+        "flags": [],
+        "candidatos": [
+          {
+            "indice": 0,
+            "n_flags": 0,
+            "flags": [],
+            "n_palavras": 44,
+            "n_ancoras": 0,
+            "eliminado": false
+          },
+          {
+            "indice": 1,
+            "n_flags": 0,
+            "flags": [],
+            "n_palavras": 38,
+            "n_ancoras": 1,
+            "eliminado": false
+          },
+          {
+            "indice": 2,
+            "n_flags": 0,
+            "flags": [],
+            "n_palavras": 39,
+            "n_ancoras": 1,
+            "eliminado": false
+          }
+        ],
+        "uso": {
+          "prompt_tokens": 2700,
+          "completion_tokens": 189,
+          "cache_hit_tokens": 0,
+          "cache_miss_tokens": 2700
+        },
+        "latencia_s": 7.67
       }
     },
     "talk-to-me-2022": {
@@ -36400,6 +37792,55 @@ window.ESPECTRO_DATA = {
           "cache_miss_tokens": 9888
         },
         "latencia_s": 20.06
+      },
+      "veredito": {
+        "provider": "gemini",
+        "modelo": "gemini-3.7-flash",
+        "n_candidatos": 3,
+        "n_chamadas": 3,
+        "prefixo_codigo": "",
+        "retry": null,
+        "spec_version": "1.9.21",
+        "texto": "A divergência central sobre o roteiro está no impacto das escolhas dos personagens. Enquanto a maioria dos que não recomendam se irrita com as atitudes insensatas do protagonista, a maior parte dos que recomendam considera que essa mesma irracionalidade funciona a favor da trama.",
+        "texto_modelo": "A divergência central sobre o roteiro está no impacto das escolhas dos personagens. Enquanto a maioria dos que não recomendam se irrita com as atitudes insensatas do protagonista, a maior parte dos que recomendam considera que essa mesma irracionalidade funciona a favor da trama.",
+        "origem": "llm",
+        "motivo": "melhor_entre_limpos",
+        "criterio_decisivo": "brevidade",
+        "indice_escolhido": 0,
+        "flags": [],
+        "candidatos": [
+          {
+            "indice": 0,
+            "n_flags": 0,
+            "flags": [],
+            "n_palavras": 44,
+            "n_ancoras": 1,
+            "eliminado": false
+          },
+          {
+            "indice": 1,
+            "n_flags": 0,
+            "flags": [],
+            "n_palavras": 52,
+            "n_ancoras": 1,
+            "eliminado": false
+          },
+          {
+            "indice": 2,
+            "n_flags": 0,
+            "flags": [],
+            "n_palavras": 47,
+            "n_ancoras": 1,
+            "eliminado": false
+          }
+        ],
+        "uso": {
+          "prompt_tokens": 2787,
+          "completion_tokens": 222,
+          "cache_hit_tokens": 0,
+          "cache_miss_tokens": 2787
+        },
+        "latencia_s": 7.58
       }
     },
     "the-godfather": {
@@ -37664,6 +39105,58 @@ window.ESPECTRO_DATA = {
           "cache_miss_tokens": 12055
         },
         "latencia_s": 36.81
+      },
+      "veredito": {
+        "provider": "gemini",
+        "modelo": "gemini-3.7-flash",
+        "n_candidatos": 3,
+        "n_chamadas": 3,
+        "prefixo_codigo": "",
+        "retry": null,
+        "spec_version": "1.9.21",
+        "texto": "Enquanto cerca de metade dos que recomendam destaca a evolução de Michael Corleone no roteiro, relatos pontuais apontam que a maioria dos que desaprovam considera a cadência arrastada e tediosa, divergindo sobre o ritmo e preferindo outros filmes ao traçar comparações.",
+        "texto_modelo": "Enquanto cerca de metade dos que recomendam destaca a evolução de Michael Corleone no roteiro, relatos pontuais apontam que a maioria dos que desaprovam considera a cadência arrastada e tediosa, divergindo sobre o ritmo e preferindo outros filmes ao traçar comparações.",
+        "origem": "llm",
+        "motivo": "melhor_entre_limpos",
+        "criterio_decisivo": "ancoras",
+        "indice_escolhido": 0,
+        "flags": [],
+        "candidatos": [
+          {
+            "indice": 0,
+            "n_flags": 0,
+            "flags": [],
+            "n_palavras": 41,
+            "n_ancoras": 3,
+            "eliminado": false
+          },
+          {
+            "indice": 1,
+            "n_flags": 2,
+            "flags": [
+              "escopo_generalizado",
+              "tema_verbatim"
+            ],
+            "n_palavras": 44,
+            "n_ancoras": 1,
+            "eliminado": true
+          },
+          {
+            "indice": 2,
+            "n_flags": 0,
+            "flags": [],
+            "n_palavras": 47,
+            "n_ancoras": 0,
+            "eliminado": false
+          }
+        ],
+        "uso": {
+          "prompt_tokens": 2787,
+          "completion_tokens": 209,
+          "cache_hit_tokens": 0,
+          "cache_miss_tokens": 2787
+        },
+        "latencia_s": 12.77
       }
     },
     "the-hateful-eight": {
@@ -38909,6 +40402,55 @@ window.ESPECTRO_DATA = {
           "cache_miss_tokens": 9792
         },
         "latencia_s": 27.16
+      },
+      "veredito": {
+        "provider": "gemini",
+        "modelo": "gemini-3.7-flash",
+        "n_candidatos": 3,
+        "n_chamadas": 3,
+        "prefixo_codigo": "",
+        "retry": null,
+        "spec_version": "1.9.21",
+        "texto": "Enquanto quem recomenda destaca o suspense envolvente da atmosfera e elogia o texto afiado, a maioria dos que desaprovam critica a cadência lenta e a duração exagerada, apontando excesso de exposição nas falas.",
+        "texto_modelo": "Enquanto quem recomenda destaca o suspense envolvente da atmosfera e elogia o texto afiado, a maioria dos que desaprovam critica a cadência lenta e a duração exagerada, apontando excesso de exposição nas falas.",
+        "origem": "llm",
+        "motivo": "melhor_entre_limpos",
+        "criterio_decisivo": "brevidade",
+        "indice_escolhido": 0,
+        "flags": [],
+        "candidatos": [
+          {
+            "indice": 0,
+            "n_flags": 0,
+            "flags": [],
+            "n_palavras": 33,
+            "n_ancoras": 3,
+            "eliminado": false
+          },
+          {
+            "indice": 1,
+            "n_flags": 0,
+            "flags": [],
+            "n_palavras": 44,
+            "n_ancoras": 3,
+            "eliminado": false
+          },
+          {
+            "indice": 2,
+            "n_flags": 0,
+            "flags": [],
+            "n_palavras": 44,
+            "n_ancoras": 2,
+            "eliminado": false
+          }
+        ],
+        "uso": {
+          "prompt_tokens": 2718,
+          "completion_tokens": 196,
+          "cache_hit_tokens": 0,
+          "cache_miss_tokens": 2718
+        },
+        "latencia_s": 14.28
       }
     },
     "the-northman": {
@@ -40174,6 +41716,57 @@ window.ESPECTRO_DATA = {
           "cache_miss_tokens": 11827
         },
         "latencia_s": 35.56
+      },
+      "veredito": {
+        "provider": "gemini",
+        "modelo": "gemini-3.7-flash",
+        "n_candidatos": 3,
+        "n_chamadas": 3,
+        "prefixo_codigo": "",
+        "retry": null,
+        "spec_version": "1.9.21",
+        "texto": "As opiniões avaliam os mesmos aspectos da produção e divergem sobre a eficácia do resultado. Enquanto cerca de metade de quem recomenda exalta a fidelidade mitológica nórdica e a condução visual de Robert Eggers, a maioria de quem não recomenda aponta fragilidades e previsibilidade no desenvolvimento da narrativa.",
+        "texto_modelo": "As opiniões avaliam os mesmos aspectos da produção e divergem sobre a eficácia do resultado. Enquanto cerca de metade de quem recomenda exalta a fidelidade mitológica nórdica e a condução visual de Robert Eggers, a maioria de quem não recomenda aponta fragilidades e previsibilidade no desenvolvimento da narrativa.",
+        "origem": "llm",
+        "motivo": "melhor_entre_limpos",
+        "criterio_decisivo": "brevidade",
+        "indice_escolhido": 1,
+        "flags": [],
+        "candidatos": [
+          {
+            "indice": 0,
+            "n_flags": 0,
+            "flags": [],
+            "n_palavras": 50,
+            "n_ancoras": 3,
+            "eliminado": false
+          },
+          {
+            "indice": 1,
+            "n_flags": 0,
+            "flags": [],
+            "n_palavras": 48,
+            "n_ancoras": 2,
+            "eliminado": false
+          },
+          {
+            "indice": 2,
+            "n_flags": 1,
+            "flags": [
+              "escopo_generalizado"
+            ],
+            "n_palavras": 48,
+            "n_ancoras": 3,
+            "eliminado": true
+          }
+        ],
+        "uso": {
+          "prompt_tokens": 2730,
+          "completion_tokens": 220,
+          "cache_hit_tokens": 0,
+          "cache_miss_tokens": 2730
+        },
+        "latencia_s": 11.04
       }
     },
     "the-substance": {
@@ -41437,6 +43030,55 @@ window.ESPECTRO_DATA = {
           "cache_miss_tokens": 11642
         },
         "latencia_s": 30.63
+      },
+      "veredito": {
+        "provider": "gemini",
+        "modelo": "gemini-3.7-flash",
+        "n_candidatos": 3,
+        "n_chamadas": 3,
+        "prefixo_codigo": "",
+        "retry": null,
+        "spec_version": "1.9.21",
+        "texto": "As avaliações concentram-se nos mesmos pontos e divergem sobre o seu resultado: enquanto cerca de metade dos que recomendam destaca a força do impacto emocional, a maioria dos que não recomendam aponta que a construção do roteiro sofre com a falta de desenvolvimento.",
+        "texto_modelo": "As avaliações concentram-se nos mesmos pontos e divergem sobre o seu resultado: enquanto cerca de metade dos que recomendam destaca a força do impacto emocional, a maioria dos que não recomendam aponta que a construção do roteiro sofre com a falta de desenvolvimento.",
+        "origem": "llm",
+        "motivo": "melhor_entre_limpos",
+        "criterio_decisivo": "brevidade",
+        "indice_escolhido": 1,
+        "flags": [],
+        "candidatos": [
+          {
+            "indice": 0,
+            "n_flags": 0,
+            "flags": [],
+            "n_palavras": 44,
+            "n_ancoras": 2,
+            "eliminado": false
+          },
+          {
+            "indice": 1,
+            "n_flags": 0,
+            "flags": [],
+            "n_palavras": 43,
+            "n_ancoras": 2,
+            "eliminado": false
+          },
+          {
+            "indice": 2,
+            "n_flags": 0,
+            "flags": [],
+            "n_palavras": 45,
+            "n_ancoras": 1,
+            "eliminado": false
+          }
+        ],
+        "uso": {
+          "prompt_tokens": 2703,
+          "completion_tokens": 188,
+          "cache_hit_tokens": 0,
+          "cache_miss_tokens": 2703
+        },
+        "latencia_s": 9.87
       }
     },
     "wicked-2024": {
@@ -42702,6 +44344,55 @@ window.ESPECTRO_DATA = {
           "cache_miss_tokens": 11990
         },
         "latencia_s": 31.27
+      },
+      "veredito": {
+        "provider": "gemini",
+        "modelo": "gemini-3.7-flash",
+        "n_candidatos": 3,
+        "n_chamadas": 3,
+        "prefixo_codigo": "",
+        "retry": null,
+        "spec_version": "1.9.21",
+        "texto": "As opiniões divergem no julgamento da trilha sonora: muitos que recomendam destacam faixas memoráveis e bem encaixadas, enquanto avaliações contrárias tendem a considerar as composições genéricas. Entre os relatos desfavoráveis, muitos também apontam um ritmo excessivamente lento e arrastado ao longo da exibição.",
+        "texto_modelo": "As opiniões divergem no julgamento da trilha sonora: muitos que recomendam destacam faixas memoráveis e bem encaixadas, enquanto avaliações contrárias tendem a considerar as composições genéricas. Entre os relatos desfavoráveis, muitos também apontam um ritmo excessivamente lento e arrastado ao longo da exibição.",
+        "origem": "llm",
+        "motivo": "melhor_entre_limpos",
+        "criterio_decisivo": "brevidade",
+        "indice_escolhido": 0,
+        "flags": [],
+        "candidatos": [
+          {
+            "indice": 0,
+            "n_flags": 0,
+            "flags": [],
+            "n_palavras": 43,
+            "n_ancoras": 2,
+            "eliminado": false
+          },
+          {
+            "indice": 1,
+            "n_flags": 0,
+            "flags": [],
+            "n_palavras": 45,
+            "n_ancoras": 2,
+            "eliminado": false
+          },
+          {
+            "indice": 2,
+            "n_flags": 0,
+            "flags": [],
+            "n_palavras": 45,
+            "n_ancoras": 1,
+            "eliminado": false
+          }
+        ],
+        "uso": {
+          "prompt_tokens": 2922,
+          "completion_tokens": 227,
+          "cache_hit_tokens": 0,
+          "cache_miss_tokens": 2922
+        },
+        "latencia_s": 9.47
       }
     },
     "wonka": {
@@ -43963,6 +45654,57 @@ window.ESPECTRO_DATA = {
           "cache_miss_tokens": 9858
         },
         "latencia_s": 29.04
+      },
+      "veredito": {
+        "provider": "gemini",
+        "modelo": "gemini-3.7-flash",
+        "n_candidatos": 3,
+        "n_chamadas": 3,
+        "prefixo_codigo": "",
+        "retry": null,
+        "spec_version": "1.9.21",
+        "texto": "Muitos dos relatos que recomendam o filme baseiam suas impressões em comparações diretas. Por outro lado, entre as poucas manifestações desfavoráveis analisadas, surgem queixas sobre um distanciamento perceptível em relação à figura original do protagonista.",
+        "texto_modelo": "Muitos dos relatos que recomendam o filme baseiam suas impressões em comparações diretas. Por outro lado, entre as poucas manifestações desfavoráveis analisadas, surgem queixas sobre um distanciamento perceptível em relação à figura original do protagonista.",
+        "origem": "llm",
+        "motivo": "melhor_entre_limpos",
+        "criterio_decisivo": "ancoras",
+        "indice_escolhido": 1,
+        "flags": [],
+        "candidatos": [
+          {
+            "indice": 0,
+            "n_flags": 1,
+            "flags": [
+              "tema_ausente"
+            ],
+            "n_palavras": 37,
+            "n_ancoras": 1,
+            "eliminado": true
+          },
+          {
+            "indice": 1,
+            "n_flags": 0,
+            "flags": [],
+            "n_palavras": 35,
+            "n_ancoras": 1,
+            "eliminado": false
+          },
+          {
+            "indice": 2,
+            "n_flags": 0,
+            "flags": [],
+            "n_palavras": 33,
+            "n_ancoras": 0,
+            "eliminado": false
+          }
+        ],
+        "uso": {
+          "prompt_tokens": 2685,
+          "completion_tokens": 182,
+          "cache_hit_tokens": 0,
+          "cache_miss_tokens": 2685
+        },
+        "latencia_s": 10.2
       }
     },
     "teste-degradado": {

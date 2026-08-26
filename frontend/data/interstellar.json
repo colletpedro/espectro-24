@@ -1253,5 +1253,54 @@
       "cache_miss_tokens": 9735
     },
     "latencia_s": 40.67
+  },
+  "veredito": {
+    "provider": "gemini",
+    "modelo": "gemini-3.7-flash",
+    "n_candidatos": 3,
+    "n_chamadas": 3,
+    "prefixo_codigo": "",
+    "retry": null,
+    "spec_version": "1.9.21",
+    "texto": "A maioria dos que recomendam destaca a ambição e a complexidade do texto. Por outro lado, cerca de metade dos que não recomendam aponta fragilidades na trama e falas artificiais, trazendo também queixas exclusivas sobre o fraco desempenho do elenco e a construção dos personagens.",
+    "texto_modelo": "A maioria dos que recomendam destaca a ambição e a complexidade do texto. Por outro lado, cerca de metade dos que não recomendam aponta fragilidades na trama e falas artificiais, trazendo também queixas exclusivas sobre o fraco desempenho do elenco e a construção dos personagens.",
+    "origem": "llm",
+    "motivo": "melhor_entre_limpos",
+    "criterio_decisivo": "empate",
+    "indice_escolhido": 0,
+    "flags": [],
+    "candidatos": [
+      {
+        "indice": 0,
+        "n_flags": 0,
+        "flags": [],
+        "n_palavras": 45,
+        "n_ancoras": 2,
+        "eliminado": false
+      },
+      {
+        "indice": 1,
+        "n_flags": 0,
+        "flags": [],
+        "n_palavras": 41,
+        "n_ancoras": 1,
+        "eliminado": false
+      },
+      {
+        "indice": 2,
+        "n_flags": 0,
+        "flags": [],
+        "n_palavras": 45,
+        "n_ancoras": 2,
+        "eliminado": false
+      }
+    ],
+    "uso": {
+      "prompt_tokens": 2733,
+      "completion_tokens": 201,
+      "cache_hit_tokens": 0,
+      "cache_miss_tokens": 2733
+    },
+    "latencia_s": 7.55
   }
 }

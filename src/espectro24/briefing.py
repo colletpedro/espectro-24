@@ -28,6 +28,7 @@ desde a v1.1.1 (denominador) e a v1.2.3 (quantificador).
 """
 from __future__ import annotations
 
+from . import quantificador as _q
 from . import qualidade as q
 from .buckets import FRONTEIRAS
 from .config import PISO_ESCALONADO, QUANT_MAX_REPETICOES
@@ -181,8 +182,13 @@ def _estado_piso(bucket: dict) -> str:
     return "sem_analise"
 
 
-def _fracao_pct(mencoes: int, n: int) -> int:
-    return round(100 * mencoes / n) if n else 0
+# [v1.9.21] Fração e rótulo vêm do módulo COMUM (`quantificador.py`). Até
+# aqui este arquivo mantinha a própria cópia do mapa da v1.2.3, "reimportada
+# por valor, não por import, para que este módulo não dependa de
+# `synthesize` (que importa SDKs)" — motivo correto enquanto eram duas
+# cópias. O estágio [V] (§3[V]) seria a terceira, e `quantificador.py` não
+# importa nada, então o motivo original desaparece em vez de ser contornado.
+_fracao_pct = _q.fracao_percentual
 
 
 # [v1.9.9] CONSTRUÇÕES POR FAIXA — a faixa é do código, a palavra é do
@@ -245,18 +251,10 @@ def faixa_quantificador(pct: int) -> str:
     return _quantificador(pct)
 
 
-def _quantificador(pct: int) -> str:
-    """Mesma escala e mesma resolução de empate da v1.2.3 (`synthesize.
-    _rotulo_quantificador`) — reimportada por valor, não por import, para
-    que este módulo não dependa de `synthesize` (que importa SDKs)."""
-    for rotulo, lo, hi, hi_incl in (
-        ("poucos", 0, 10, False), ("alguns", 10, 25, True),
-        ("muitos", 25, 50, True), ("cerca de metade", 40, 60, True),
-        ("a maioria", 50, 80, True), ("quase todos", 80, 100, True),
-    ):
-        if pct >= lo and (pct <= hi if hi_incl else pct < hi):
-            return rotulo
-    return "poucos"
+# Mesma escala e mesma resolução de empate da v1.2.3 — agora em UM lugar só.
+# `faixa_quantificador` (público desde a v1.9.9, porque a faixa passou a ser
+# DADO do briefing) continua sendo o nome que a verificação mecânica chama.
+_quantificador = _q.rotulo
 
 
 _FAIXAS_PESO = (("a grande maioria", 70), ("a maioria", 50),

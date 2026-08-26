@@ -1320,5 +1320,54 @@
       "cache_miss_tokens": 9771
     },
     "latencia_s": 32.81
+  },
+  "veredito": {
+    "provider": "gemini",
+    "modelo": "gemini-3.7-flash",
+    "n_candidatos": 3,
+    "n_chamadas": 3,
+    "prefixo_codigo": "O meio-termo é o maior grupo da recepção (~45% das notas). ",
+    "retry": null,
+    "spec_version": "1.9.21",
+    "texto": "O meio-termo é o maior grupo da recepção (~45% das notas). Enquanto muitos dos que recomendam centram suas avaliações em comparações, a maioria dos que rejeitam a obra questiona a caracterização de Napoleão e o impacto emocional. Já as opiniões intermediárias destacam a duração arrastada e a atenção dedicada à relação com Josefina.",
+    "texto_modelo": "Enquanto muitos dos que recomendam centram suas avaliações em comparações, a maioria dos que rejeitam a obra questiona a caracterização de Napoleão e o impacto emocional. Já as opiniões intermediárias destacam a duração arrastada e a atenção dedicada à relação com Josefina.",
+    "origem": "llm",
+    "motivo": "melhor_entre_limpos",
+    "criterio_decisivo": "brevidade",
+    "indice_escolhido": 1,
+    "flags": [],
+    "candidatos": [
+      {
+        "indice": 0,
+        "n_flags": 0,
+        "flags": [],
+        "n_palavras": 46,
+        "n_ancoras": 4,
+        "eliminado": false
+      },
+      {
+        "indice": 1,
+        "n_flags": 0,
+        "flags": [],
+        "n_palavras": 42,
+        "n_ancoras": 3,
+        "eliminado": false
+      },
+      {
+        "indice": 2,
+        "n_flags": 0,
+        "flags": [],
+        "n_palavras": 46,
+        "n_ancoras": 4,
+        "eliminado": false
+      }
+    ],
+    "uso": {
+      "prompt_tokens": 2979,
+      "completion_tokens": 222,
+      "cache_hit_tokens": 0,
+      "cache_miss_tokens": 2979
+    },
+    "latencia_s": 12.39
   }
 }

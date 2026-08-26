@@ -1358,5 +1358,54 @@
       "cache_miss_tokens": 9888
     },
     "latencia_s": 20.06
+  },
+  "veredito": {
+    "provider": "gemini",
+    "modelo": "gemini-3.7-flash",
+    "n_candidatos": 3,
+    "n_chamadas": 3,
+    "prefixo_codigo": "",
+    "retry": null,
+    "spec_version": "1.9.21",
+    "texto": "A divergência central sobre o roteiro está no impacto das escolhas dos personagens. Enquanto a maioria dos que não recomendam se irrita com as atitudes insensatas do protagonista, a maior parte dos que recomendam considera que essa mesma irracionalidade funciona a favor da trama.",
+    "texto_modelo": "A divergência central sobre o roteiro está no impacto das escolhas dos personagens. Enquanto a maioria dos que não recomendam se irrita com as atitudes insensatas do protagonista, a maior parte dos que recomendam considera que essa mesma irracionalidade funciona a favor da trama.",
+    "origem": "llm",
+    "motivo": "melhor_entre_limpos",
+    "criterio_decisivo": "brevidade",
+    "indice_escolhido": 0,
+    "flags": [],
+    "candidatos": [
+      {
+        "indice": 0,
+        "n_flags": 0,
+        "flags": [],
+        "n_palavras": 44,
+        "n_ancoras": 1,
+        "eliminado": false
+      },
+      {
+        "indice": 1,
+        "n_flags": 0,
+        "flags": [],
+        "n_palavras": 52,
+        "n_ancoras": 1,
+        "eliminado": false
+      },
+      {
+        "indice": 2,
+        "n_flags": 0,
+        "flags": [],
+        "n_palavras": 47,
+        "n_ancoras": 1,
+        "eliminado": false
+      }
+    ],
+    "uso": {
+      "prompt_tokens": 2787,
+      "completion_tokens": 222,
+      "cache_hit_tokens": 0,
+      "cache_miss_tokens": 2787
+    },
+    "latencia_s": 7.58
   }
 }

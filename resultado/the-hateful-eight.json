@@ -1335,5 +1335,54 @@
       "cache_miss_tokens": 9792
     },
     "latencia_s": 27.16
+  },
+  "veredito": {
+    "provider": "gemini",
+    "modelo": "gemini-3.7-flash",
+    "n_candidatos": 3,
+    "n_chamadas": 3,
+    "prefixo_codigo": "",
+    "retry": null,
+    "spec_version": "1.9.21",
+    "texto": "Enquanto quem recomenda destaca o suspense envolvente da atmosfera e elogia o texto afiado, a maioria dos que desaprovam critica a cadência lenta e a duração exagerada, apontando excesso de exposição nas falas.",
+    "texto_modelo": "Enquanto quem recomenda destaca o suspense envolvente da atmosfera e elogia o texto afiado, a maioria dos que desaprovam critica a cadência lenta e a duração exagerada, apontando excesso de exposição nas falas.",
+    "origem": "llm",
+    "motivo": "melhor_entre_limpos",
+    "criterio_decisivo": "brevidade",
+    "indice_escolhido": 0,
+    "flags": [],
+    "candidatos": [
+      {
+        "indice": 0,
+        "n_flags": 0,
+        "flags": [],
+        "n_palavras": 33,
+        "n_ancoras": 3,
+        "eliminado": false
+      },
+      {
+        "indice": 1,
+        "n_flags": 0,
+        "flags": [],
+        "n_palavras": 44,
+        "n_ancoras": 3,
+        "eliminado": false
+      },
+      {
+        "indice": 2,
+        "n_flags": 0,
+        "flags": [],
+        "n_palavras": 44,
+        "n_ancoras": 2,
+        "eliminado": false
+      }
+    ],
+    "uso": {
+      "prompt_tokens": 2718,
+      "completion_tokens": 196,
+      "cache_hit_tokens": 0,
+      "cache_miss_tokens": 2718
+    },
+    "latencia_s": 14.28
   }
 }

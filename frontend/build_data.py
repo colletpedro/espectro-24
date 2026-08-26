@@ -52,7 +52,22 @@ def _nivel(nivel, n_validas, n_brutas, filtro, spoiler=0, curtas=0):
 
 def _filme_degradado():
     """Filme fictício exercitando os 3 modos: reduzido, sem_analise, completo.
-    Fica FORA do catálogo — acessível só por filme.html?slug=teste-degradado."""
+    Fica FORA do catálogo — acessível só por filme.html?slug=teste-degradado.
+
+    [v1.9.21] **Ele NÃO tem o bloco `veredito`, e isso é DELIBERADO — não é
+    esquecimento.** A partir da v1.9.21 o veredito é gerado na publicação
+    (§3[V]) e vem pronto em `f.veredito.texto`; `veredito()` em `filme.js`
+    passa a ser o FALLBACK DE RENDER para JSON publicado antes disso. Esse
+    caminho de compatibilidade precisa de alguém que o exercite, e os 35
+    filmes reais deixam de exercitá-lo assim que forem regerados. É o mesmo
+    papel que este filme já cumpre para `sem_numero`/`sem_analise`: ser o
+    único lugar onde o estado que o mundo real não tem continua sendo
+    testado.
+
+    Se você veio até aqui para "consertar" a ausência do campo, o conserto
+    apaga a cobertura. Para testar o caminho NOVO de render, use qualquer
+    filme real.
+    """
     return {
         "slug": "teste-degradado",
         "data_coleta": "2026-07-20T00:00:00Z",

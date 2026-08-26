@@ -1259,5 +1259,54 @@
       "cache_miss_tokens": 11642
     },
     "latencia_s": 30.63
+  },
+  "veredito": {
+    "provider": "gemini",
+    "modelo": "gemini-3.7-flash",
+    "n_candidatos": 3,
+    "n_chamadas": 3,
+    "prefixo_codigo": "",
+    "retry": null,
+    "spec_version": "1.9.21",
+    "texto": "As avaliações concentram-se nos mesmos pontos e divergem sobre o seu resultado: enquanto cerca de metade dos que recomendam destaca a força do impacto emocional, a maioria dos que não recomendam aponta que a construção do roteiro sofre com a falta de desenvolvimento.",
+    "texto_modelo": "As avaliações concentram-se nos mesmos pontos e divergem sobre o seu resultado: enquanto cerca de metade dos que recomendam destaca a força do impacto emocional, a maioria dos que não recomendam aponta que a construção do roteiro sofre com a falta de desenvolvimento.",
+    "origem": "llm",
+    "motivo": "melhor_entre_limpos",
+    "criterio_decisivo": "brevidade",
+    "indice_escolhido": 1,
+    "flags": [],
+    "candidatos": [
+      {
+        "indice": 0,
+        "n_flags": 0,
+        "flags": [],
+        "n_palavras": 44,
+        "n_ancoras": 2,
+        "eliminado": false
+      },
+      {
+        "indice": 1,
+        "n_flags": 0,
+        "flags": [],
+        "n_palavras": 43,
+        "n_ancoras": 2,
+        "eliminado": false
+      },
+      {
+        "indice": 2,
+        "n_flags": 0,
+        "flags": [],
+        "n_palavras": 45,
+        "n_ancoras": 1,
+        "eliminado": false
+      }
+    ],
+    "uso": {
+      "prompt_tokens": 2703,
+      "completion_tokens": 188,
+      "cache_hit_tokens": 0,
+      "cache_miss_tokens": 2703
+    },
+    "latencia_s": 9.87
   }
 }

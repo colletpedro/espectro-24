@@ -1247,5 +1247,54 @@
       "cache_miss_tokens": 10218
     },
     "latencia_s": 35.48
+  },
+  "veredito": {
+    "provider": "gemini",
+    "modelo": "gemini-3.7-flash",
+    "n_candidatos": 3,
+    "n_chamadas": 3,
+    "prefixo_codigo": "",
+    "retry": null,
+    "spec_version": "1.9.21",
+    "texto": "Cerca de metade dos que recomendam destaca o impacto emocional voltado à esperança e aos laços familiares. Em contrapartida, a maioria dos que não recomendam considera essa dinâmica familiar forçada no roteiro, apontando ainda superficialidade na crítica social e previsibilidade no desfecho.",
+    "texto_modelo": "Cerca de metade dos que recomendam destaca o impacto emocional voltado à esperança e aos laços familiares. Em contrapartida, a maioria dos que não recomendam considera essa dinâmica familiar forçada no roteiro, apontando ainda superficialidade na crítica social e previsibilidade no desfecho.",
+    "origem": "llm",
+    "motivo": "melhor_entre_limpos",
+    "criterio_decisivo": "brevidade",
+    "indice_escolhido": 2,
+    "flags": [],
+    "candidatos": [
+      {
+        "indice": 0,
+        "n_flags": 0,
+        "flags": [],
+        "n_palavras": 47,
+        "n_ancoras": 3,
+        "eliminado": false
+      },
+      {
+        "indice": 1,
+        "n_flags": 0,
+        "flags": [],
+        "n_palavras": 46,
+        "n_ancoras": 3,
+        "eliminado": false
+      },
+      {
+        "indice": 2,
+        "n_flags": 0,
+        "flags": [],
+        "n_palavras": 42,
+        "n_ancoras": 3,
+        "eliminado": false
+      }
+    ],
+    "uso": {
+      "prompt_tokens": 2724,
+      "completion_tokens": 209,
+      "cache_hit_tokens": 0,
+      "cache_miss_tokens": 2724
+    },
+    "latencia_s": 10.03
   }
 }

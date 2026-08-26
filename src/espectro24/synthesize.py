@@ -45,6 +45,7 @@ from .config import (
     PROVIDER_POR_ESTAGIO,
     nota_para_url,
 )
+from . import quantificador as _q
 from .models import BucketResult, Tema
 
 
@@ -864,56 +865,18 @@ def synthesize_bucket(bucket: BucketResult, client_call=None,
 
 
 
-# --- Quantificador pré-computado (v1.2.3) ---
-# Correção pela raiz do mesmo tipo da v1.1.1 (denominador): o LLM não decide
-# mais número nem rótulo numérico — o código é a autoridade. Motivação: a
-# calibração por INSTRUÇÃO (v1.2.2, o LLM calculava a fração e escolhia o
-# quantificador sozinho) reduziu mas não eliminou o modo de falha "quase
-# todos"/"praticamente todos" aplicado a frações de 65-70% — reincidiu 2x na
-# primeira regeneração pós-fix (ver changelog v1.2.3).
-#
-# Faixas idênticas às da v1.2.2, na ordem do mais FRACO ao mais FORTE.
-# Cada faixa é (rótulo, limite_inferior_inclusive, limite_superior,
-# superior_inclusive). "poucos" é a ÚNICA faixa com superior EXCLUSIVO
-# ("abaixo de 10%", i.e. pct < 10); todas as demais são inclusivas nos dois
-# extremos, exatamente como escritas na v1.2.2 ("25%-50%" inclui 25 e 50).
-#
-# Resolução determinística de sobreposição (regra: "sempre o rótulo mais
-# fraco"): iterando as faixas do mais fraco pro mais forte e retornando o
-# PRIMEIRO match, cada fronteira compartilhada resolve assim:
-#   pct == 10  -> só "alguns" bate ("poucos" exige pct < 10, exclusivo)
-#   pct == 25  -> "alguns" (10-25) e "muitos" (25-50) empatam -> "alguns"
-#   pct == 50  -> "muitos" (25-50), "cerca de metade" (40-60) e "a maioria"
-#                 (50-80) empatam -> "muitos" (o mais fraco dos três)
-#   pct == 80  -> "a maioria" (50-80) e "quase todos" (≥80) empatam -> "a maioria"
-_BANDAS_QUANTIFICADOR_FRACA_PARA_FORTE = [
-    ("poucos", 0, 10, False),
-    ("alguns", 10, 25, True),
-    ("muitos", 25, 50, True),
-    ("cerca de metade", 40, 60, True),
-    ("a maioria", 50, 80, True),
-    ("quase todos", 80, 100, True),
-]
-
-
-def _fracao_percentual(mencoes: int, n_analisadas: int) -> int:
-    """Fração mencoes/n_analisadas do grupo, em percentual arredondado
-    (inteiro 0-100). n_analisadas <= 0 -> 0 (sem denominador válido)."""
-    if not n_analisadas or n_analisadas <= 0:
-        return 0
-    return round(100 * mencoes / n_analisadas)
-
-
-def _rotulo_quantificador(pct: int) -> str:
-    """Resolve o rótulo determinístico para uma fração percentual (0-100).
-    Ver bloco de comentário acima para a tabela de faixas e a resolução
-    exata das fronteiras compartilhadas (sempre o rótulo mais fraco)."""
-    for rotulo, lo, hi, hi_inclusive in _BANDAS_QUANTIFICADOR_FRACA_PARA_FORTE:
-        if pct < lo:
-            continue
-        if (hi_inclusive and pct <= hi) or (not hi_inclusive and pct < hi):
-            return rotulo
-    return "quase todos"  # pct > 100 não deveria ocorrer; fallback seguro
+# --- Quantificador pré-computado (v1.2.3; extraído na v1.9.21) ---
+# A tabela de faixas, a resolução de empate e o racional inteiro mudaram de
+# ENDEREÇO, não de conteúdo: vivem em `quantificador.py`, um módulo sem
+# nenhuma dependência, porque `briefing.py` já mantinha uma cópia por valor
+# só para não importar este arquivo (que importa SDKs) e o estágio [V]
+# (§3[V]) seria a terceira cópia. Os nomes abaixo continuam existindo como
+# os pontos de entrada históricos deste módulo — `conferencia_quantificador`
+# e `render.py` os consomem — mas apontam para a implementação única.
+# Portão de equivalência da extração: `tests/test_quantificador.py`.
+_BANDAS_QUANTIFICADOR_FRACA_PARA_FORTE = _q.BANDAS_FRACA_PARA_FORTE
+_fracao_percentual = _q.fracao_percentual
+_rotulo_quantificador = _q.rotulo
 
 
 def _fracao_e_rotulo(tema: dict) -> tuple[int, str]:

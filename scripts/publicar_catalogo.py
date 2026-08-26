@@ -74,6 +74,49 @@ def _ja_publicado(slug: str) -> bool:
     return verificador.get("aplicado") is True
 
 
+# [v1.9.21] TETO DE LOTE — a guarda que fecha o footgun que a v1.9.21 abriu.
+#
+# `cmd_publicar` pula quem `_ja_publicado`, e `_ja_publicado` exige
+# `spec_version == SPEC_VERSION`. Enquanto a constante ficou em `1.9.16`, os
+# 32 slugs default eram todos pulados e rodar este script sem argumento era
+# inócuo. Com `SPEC_VERSION` em `1.9.21` e os 35 JSONs em `1.9.16`, NENHUM é
+# pulado: um comando de uma linha dispara re-scrape de 32 filmes a 2s por
+# requisição sem paralelismo, e apaga o histórico `passadas` do `meta.json`
+# (dívida conhecida, `DIAGNOSTICO_OFFLINE.md`). Caro, demorado e irreversível
+# para o histórico.
+#
+# 5 é DECISÃO DE PRODUTO, não número mágico: acima de um punhado, o comando
+# deixa de ser "conserta um caso" e vira "republica o catálogo", e a diferença
+# entre os dois é de horas de rede.
+#
+# ESCOPO ESTRITO: isto não muda o checkpoint (`_ja_publicado`), não muda a
+# lista default e não toca a dívida do `passadas`.
+LIMITE_LOTE_SEM_CONFIRMACAO = 5
+
+
+def checar_tamanho_do_lote(slugs: list[str], republicar_tudo: bool) -> None:
+    """Recusa um lote grande sem confirmação explícita.
+
+    Conta quem SERIA republicado, não o tamanho da lista: passar os 35 slugs
+    com 32 já em dia é um lote de 3, e passa.
+    """
+    if republicar_tudo:
+        return
+    alvos = [s for s in slugs if not _ja_publicado(s)]
+    if len(alvos) <= LIMITE_LOTE_SEM_CONFIRMACAO:
+        return
+    raise SystemExit(
+        f"RECUSADO: isto republicaria {len(alvos)} filmes (teto sem "
+        f"confirmação: {LIMITE_LOTE_SEM_CONFIRMACAO}).\n"
+        f"Motivo: nenhum deles tem `spec_version` igual a {SPEC_VERSION}, "
+        f"então o checkpoint os trata como pendentes.\n"
+        f"Cada um refaz coleta de rede (~2s por requisição, sem paralelismo) "
+        f"e sobrescreve o histórico `passadas` do meta.json do bruto.\n"
+        f"Se é isso mesmo que você quer, repita com --republicar-tudo.\n"
+        f"Para regerar SÓ o veredito (§3[V]), sem tocar em rede nem em "
+        f"nenhum estágio a montante, use scripts/gerar_veredito.py.")
+
+
 def publicar_um(slug: str) -> dict:
     t0 = time.time()
     try:
@@ -94,7 +137,8 @@ def publicar_um(slug: str) -> dict:
             "stdout_tail": stdout[-3000:], "stderr_tail": stderr[-6000:]}
 
 
-def cmd_publicar(slugs: list[str]) -> None:
+def cmd_publicar(slugs: list[str], republicar_tudo: bool = False) -> None:
+    checar_tamanho_do_lote(slugs, republicar_tudo)
     LOG_DIR.mkdir(parents=True, exist_ok=True)
     pulados = feitos = falhas = 0
     for slug in slugs:
@@ -161,11 +205,16 @@ def main() -> None:
                     help="slug a publicar (repetível); default: os pendentes")
     ap.add_argument("--relatorio", action="store_true",
                     help="só agrega o que já está publicado, sem rodar nada")
+    ap.add_argument("--republicar-tudo", action="store_true",
+                    help=f"autoriza um lote acima de "
+                         f"{LIMITE_LOTE_SEM_CONFIRMACAO} filmes (re-scrape "
+                         f"completo; ver checar_tamanho_do_lote)")
     args = ap.parse_args()
     if args.relatorio:
         cmd_relatorio()
         return
-    cmd_publicar(args.slug or filmes_pendentes())
+    cmd_publicar(args.slug or filmes_pendentes(),
+                 republicar_tudo=args.republicar_tudo)
 
 
 if __name__ == "__main__":

@@ -1259,5 +1259,54 @@
       "cache_miss_tokens": 9933
     },
     "latencia_s": 25.11
+  },
+  "veredito": {
+    "provider": "gemini",
+    "modelo": "gemini-3.7-flash",
+    "n_candidatos": 3,
+    "n_chamadas": 3,
+    "prefixo_codigo": "",
+    "retry": null,
+    "spec_version": "1.9.21",
+    "texto": "A maioria dos que recomendam valoriza o comentário sobre o patriarcado e as pressões enfrentadas pelas mulheres. Por outro lado, a maioria dos que desaprovam considera a mensagem feminista exagerada e sem nuances, além de trazer comparações com outras produções para embasar a rejeição.",
+    "texto_modelo": "A maioria dos que recomendam valoriza o comentário sobre o patriarcado e as pressões enfrentadas pelas mulheres. Por outro lado, a maioria dos que desaprovam considera a mensagem feminista exagerada e sem nuances, além de trazer comparações com outras produções para embasar a rejeição.",
+    "origem": "llm",
+    "motivo": "melhor_entre_limpos",
+    "criterio_decisivo": "brevidade",
+    "indice_escolhido": 0,
+    "flags": [],
+    "candidatos": [
+      {
+        "indice": 0,
+        "n_flags": 0,
+        "flags": [],
+        "n_palavras": 44,
+        "n_ancoras": 2,
+        "eliminado": false
+      },
+      {
+        "indice": 1,
+        "n_flags": 0,
+        "flags": [],
+        "n_palavras": 46,
+        "n_ancoras": 2,
+        "eliminado": false
+      },
+      {
+        "indice": 2,
+        "n_flags": 0,
+        "flags": [],
+        "n_palavras": 46,
+        "n_ancoras": 2,
+        "eliminado": false
+      }
+    ],
+    "uso": {
+      "prompt_tokens": 2706,
+      "completion_tokens": 213,
+      "cache_hit_tokens": 0,
+      "cache_miss_tokens": 2706
+    },
+    "latencia_s": 9.15
   }
 }

@@ -1354,5 +1354,56 @@
       "cache_miss_tokens": 11359
     },
     "latencia_s": 36.45
+  },
+  "veredito": {
+    "provider": "gemini",
+    "modelo": "gemini-3.7-flash",
+    "n_candidatos": 3,
+    "n_chamadas": 3,
+    "prefixo_codigo": "",
+    "retry": null,
+    "spec_version": "1.9.21",
+    "texto": "A divergência central está na avaliação da mesma estrutura e andamento. Cerca de metade dos que recomendam aprecia a trama complexa e não linear, enquanto cerca de metade dos que desaprovam vê a condução como confusa, arrastada e excessivamente longa.",
+    "texto_modelo": "A divergência central está na avaliação da mesma estrutura e andamento. Cerca de metade dos que recomendam aprecia a trama complexa e não linear, enquanto cerca de metade dos que desaprovam vê a condução como confusa, arrastada e excessivamente longa.",
+    "origem": "llm",
+    "motivo": "melhor_entre_limpos",
+    "criterio_decisivo": "brevidade",
+    "indice_escolhido": 0,
+    "flags": [],
+    "candidatos": [
+      {
+        "indice": 0,
+        "n_flags": 0,
+        "flags": [],
+        "n_palavras": 40,
+        "n_ancoras": 1,
+        "eliminado": false
+      },
+      {
+        "indice": 1,
+        "n_flags": 0,
+        "flags": [],
+        "n_palavras": 46,
+        "n_ancoras": 1,
+        "eliminado": false
+      },
+      {
+        "indice": 2,
+        "n_flags": 1,
+        "flags": [
+          "formato_invalido"
+        ],
+        "n_palavras": 48,
+        "n_ancoras": 2,
+        "eliminado": true
+      }
+    ],
+    "uso": {
+      "prompt_tokens": 2772,
+      "completion_tokens": 211,
+      "cache_hit_tokens": 0,
+      "cache_miss_tokens": 2772
+    },
+    "latencia_s": 10.75
   }
 }

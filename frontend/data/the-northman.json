@@ -1261,5 +1261,56 @@
       "cache_miss_tokens": 11827
     },
     "latencia_s": 35.56
+  },
+  "veredito": {
+    "provider": "gemini",
+    "modelo": "gemini-3.7-flash",
+    "n_candidatos": 3,
+    "n_chamadas": 3,
+    "prefixo_codigo": "",
+    "retry": null,
+    "spec_version": "1.9.21",
+    "texto": "As opiniões avaliam os mesmos aspectos da produção e divergem sobre a eficácia do resultado. Enquanto cerca de metade de quem recomenda exalta a fidelidade mitológica nórdica e a condução visual de Robert Eggers, a maioria de quem não recomenda aponta fragilidades e previsibilidade no desenvolvimento da narrativa.",
+    "texto_modelo": "As opiniões avaliam os mesmos aspectos da produção e divergem sobre a eficácia do resultado. Enquanto cerca de metade de quem recomenda exalta a fidelidade mitológica nórdica e a condução visual de Robert Eggers, a maioria de quem não recomenda aponta fragilidades e previsibilidade no desenvolvimento da narrativa.",
+    "origem": "llm",
+    "motivo": "melhor_entre_limpos",
+    "criterio_decisivo": "brevidade",
+    "indice_escolhido": 1,
+    "flags": [],
+    "candidatos": [
+      {
+        "indice": 0,
+        "n_flags": 0,
+        "flags": [],
+        "n_palavras": 50,
+        "n_ancoras": 3,
+        "eliminado": false
+      },
+      {
+        "indice": 1,
+        "n_flags": 0,
+        "flags": [],
+        "n_palavras": 48,
+        "n_ancoras": 2,
+        "eliminado": false
+      },
+      {
+        "indice": 2,
+        "n_flags": 1,
+        "flags": [
+          "escopo_generalizado"
+        ],
+        "n_palavras": 48,
+        "n_ancoras": 3,
+        "eliminado": true
+      }
+    ],
+    "uso": {
+      "prompt_tokens": 2730,
+      "completion_tokens": 220,
+      "cache_hit_tokens": 0,
+      "cache_miss_tokens": 2730
+    },
+    "latencia_s": 11.04
   }
 }

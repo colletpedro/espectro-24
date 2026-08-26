@@ -11,7 +11,7 @@ from __future__ import annotations
 # mostrou "1.6.0 → 1.9.0" quando deveria ser "1.6.0 → 1.9.11"). Os JSONs
 # já publicados NÃO foram reescritos: carimbo corrigido depois do fato não
 # é evidência de nada — mesma política de `VERSAO_COLETOR` abaixo.
-SPEC_VERSION = "1.9.16"
+SPEC_VERSION = "1.9.21"
 
 BASE = "https://letterboxd.com"
 
@@ -371,6 +371,13 @@ PROVIDER_POR_ESTAGIO = {
     # entra no `taxonomia_id`, e não é calibrada contra gabarito), mas é a
     # mesma NATUREZA de tarefa.
     "rotulagem": "deepseek",
+    # [v1.9.21] §3[V] veredito. Fica em Gemini pelo mesmo critério que levou a
+    # narrativa para lá: uma chamada por filme (volume irrelevante), prosa, e
+    # nada calibrado a invalidar — a qualidade é julgada por leitura humana.
+    # O risco histórico do Gemini (inflar contagem) é neutralizado por
+    # CONSTRUÇÃO e não por confiança: a serialização do briefing do veredito
+    # não contém nenhum algarismo, então não há número para inflar.
+    "veredito": "gemini",
 }
 
 # Modelo default de cada estágio.
@@ -417,10 +424,48 @@ PROVIDER_POR_ESTAGIO = {
 # a prioridade de investigar: o próximo passo natural seria medir se ajustar
 # o orçamento do briefing ou o prompt do movimento 2 reduz a taxa — ainda não
 # feito, fora do escopo desta sessão (só publicação, não tocou o narrador).
+# [v1.9.21] `veredito` = `gemini-3.7-flash`, DECIDIDO PELO A/B (decisão do
+# dono do projeto, lendo os 35 textos de cada braço). O default entrou na
+# sessão como `gemini-3.1-pro-preview` — o único tier `pro` disponível — e
+# saiu trocado pela MEDIÇÃO, não por argumento:
+#
+#   braço                     origem        flags   retries  latência  jaccard
+#   gemini-3.7-flash          35/35 llm       0        0        454s    0,0583
+#   gemini-3.1-pro-preview    34/35 llm       1        2       1564s    0,0526
+#
+# O pro perde `cure` para o `template_fallback` (escreveu "a ambientação
+# criada pela direção", e `direcao_imagem` não está no briefing daquele
+# filme) — regressão de produto concreta: aquele filme volta a exibir a
+# frase genérica. Em repetição os dois empatam tecnicamente; em prosa o pro
+# varia um pouco mais a construção sintática, e é a ÚNICA dimensão em que
+# ganha. Flash é 3,4x mais rápido e ~10x mais barato por token.
+#
+# **O achado que importa mais que a escolha:** a diferença entre os dois
+# modelos é MUITO menor que a diferença que o briefing fez — os dois saíram
+# de 14 textos distintos para 35. O trabalho estava no briefing, não no
+# modelo, e por isso esta linha é reversível sem consequência estrutural.
+#
+# INVENTÁRIO CONSULTADO NA
+# API (não de memória, 2026-08-25): é o único tier `pro` de texto disponível
+# na chave (`version: 3.1-pro-preview-01-2026`) e não existe tier acima dele.
+# `gemini-pro-latest` existe e é REJEITADO por política (v1.9.10): alias é
+# alvo móvel — comparação não reproduzível e preço não ancorável.
+#
+# TENSÃO REGISTRADA, e resolvida por medição em vez de por argumento: o flash
+# mais recente (`gemini-3.7-flash`, `3.7-flash-08-2026`) é SETE MESES mais
+# novo que o único pro disponível, e a comparação da v1.9.10 mediu o 3.1-pro
+# PIOR que o 3.7-flash no narrador (2 flags contra 1, ~10x o custo) — em
+# amostra de 3 filmes, evidência fraca, mas é a que existe. O A/B da v1.9.21
+# roda o critério de aceite INTEIRO nos dois braços, com briefing, prompt,
+# best-of-3, validadores e ordem de filmes idênticos: a única variável é o
+# modelo. Conformidade NÃO decide sozinha — um modelo pode passar limpo em
+# todas as validações e ainda produzir 35 vereditos corretos, insossos e
+# intercambiáveis, que é a falha exata que esta versão existe para evitar.
 MODELO_POR_ESTAGIO = {
     "classificacao": "deepseek-v4-flash",
     "narrativa": "gemini-3.7-flash",
     "rotulagem": "deepseek-v4-flash",
+    "veredito": "gemini-3.7-flash",
 }
 
 # mantido por compatibilidade (era o único provider na v1.1.0); agora segue

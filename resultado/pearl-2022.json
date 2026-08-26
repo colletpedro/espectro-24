@@ -1354,5 +1354,56 @@
       "cache_miss_tokens": 11266
     },
     "latencia_s": 34.66
+  },
+  "veredito": {
+    "provider": "gemini",
+    "modelo": "gemini-3.7-flash",
+    "n_candidatos": 3,
+    "n_chamadas": 3,
+    "prefixo_codigo": "",
+    "retry": null,
+    "spec_version": "1.9.21",
+    "texto": "As opiniões divergem sobre a eficácia do roteiro e de sua estrutura. Enquanto cerca de metade das avaliações favoráveis destaca o impacto do discurso de encerramento, impressões negativas pontuais apontam desconforto com a postura da figura central da trama.",
+    "texto_modelo": "As opiniões divergem sobre a eficácia do roteiro e de sua estrutura. Enquanto cerca de metade das avaliações favoráveis destaca o impacto do discurso de encerramento, impressões negativas pontuais apontam desconforto com a postura da figura central da trama.",
+    "origem": "llm",
+    "motivo": "melhor_entre_limpos",
+    "criterio_decisivo": "brevidade",
+    "indice_escolhido": 1,
+    "flags": [],
+    "candidatos": [
+      {
+        "indice": 0,
+        "n_flags": 1,
+        "flags": [
+          "tema_ausente"
+        ],
+        "n_palavras": 40,
+        "n_ancoras": 1,
+        "eliminado": true
+      },
+      {
+        "indice": 1,
+        "n_flags": 0,
+        "flags": [],
+        "n_palavras": 39,
+        "n_ancoras": 1,
+        "eliminado": false
+      },
+      {
+        "indice": 2,
+        "n_flags": 0,
+        "flags": [],
+        "n_palavras": 41,
+        "n_ancoras": 1,
+        "eliminado": false
+      }
+    ],
+    "uso": {
+      "prompt_tokens": 2811,
+      "completion_tokens": 203,
+      "cache_hit_tokens": 0,
+      "cache_miss_tokens": 2811
+    },
+    "latencia_s": 12.11
   }
 }

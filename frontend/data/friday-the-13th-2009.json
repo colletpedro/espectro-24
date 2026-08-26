@@ -1252,5 +1252,54 @@
       "cache_miss_tokens": 10173
     },
     "latencia_s": 26.41
+  },
+  "veredito": {
+    "provider": "gemini",
+    "modelo": "gemini-3.7-flash",
+    "n_candidatos": 3,
+    "n_chamadas": 3,
+    "prefixo_codigo": "O meio-termo é o maior grupo da recepção (~41% das notas). ",
+    "retry": null,
+    "spec_version": "1.9.21",
+    "texto": "O meio-termo é o maior grupo da recepção (~41% das notas). As opiniões divergem sobre o funcionamento do roteiro e o resgate da franquia: a maioria dos que recomendam vê a produção como uma releitura eficiente das obras originais, enquanto cerca de metade dos que reprovam aponta figuras sem personalidade e atitudes sem sentido ao longo da narrativa.",
+    "texto_modelo": "As opiniões divergem sobre o funcionamento do roteiro e o resgate da franquia: a maioria dos que recomendam vê a produção como uma releitura eficiente das obras originais, enquanto cerca de metade dos que reprovam aponta figuras sem personalidade e atitudes sem sentido ao longo da narrativa.",
+    "origem": "llm",
+    "motivo": "melhor_entre_limpos",
+    "criterio_decisivo": "brevidade",
+    "indice_escolhido": 2,
+    "flags": [],
+    "candidatos": [
+      {
+        "indice": 0,
+        "n_flags": 0,
+        "flags": [],
+        "n_palavras": 49,
+        "n_ancoras": 1,
+        "eliminado": false
+      },
+      {
+        "indice": 1,
+        "n_flags": 0,
+        "flags": [],
+        "n_palavras": 50,
+        "n_ancoras": 1,
+        "eliminado": false
+      },
+      {
+        "indice": 2,
+        "n_flags": 0,
+        "flags": [],
+        "n_palavras": 47,
+        "n_ancoras": 1,
+        "eliminado": false
+      }
+    ],
+    "uso": {
+      "prompt_tokens": 3132,
+      "completion_tokens": 209,
+      "cache_hit_tokens": 0,
+      "cache_miss_tokens": 3132
+    },
+    "latencia_s": 15.37
   }
 }

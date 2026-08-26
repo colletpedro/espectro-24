@@ -1225,5 +1225,54 @@
       "cache_miss_tokens": 10510
     },
     "latencia_s": 30.73
+  },
+  "veredito": {
+    "provider": "gemini",
+    "modelo": "gemini-3.7-flash",
+    "n_candidatos": 3,
+    "n_chamadas": 3,
+    "prefixo_codigo": "",
+    "retry": null,
+    "spec_version": "1.9.21",
+    "texto": "Relatos favoráveis tendem a valorizar a estética visual e a fotografia, apontando também uma trama inteligente e bem construída. Em contrapartida, avaliações negativas costumam apontar fragilidades e confusão no roteiro, indicando percepções divididas sobre o desenvolvimento da narrativa.",
+    "texto_modelo": "Relatos favoráveis tendem a valorizar a estética visual e a fotografia, apontando também uma trama inteligente e bem construída. Em contrapartida, avaliações negativas costumam apontar fragilidades e confusão no roteiro, indicando percepções divididas sobre o desenvolvimento da narrativa.",
+    "origem": "llm",
+    "motivo": "melhor_entre_limpos",
+    "criterio_decisivo": "brevidade",
+    "indice_escolhido": 0,
+    "flags": [],
+    "candidatos": [
+      {
+        "indice": 0,
+        "n_flags": 0,
+        "flags": [],
+        "n_palavras": 38,
+        "n_ancoras": 2,
+        "eliminado": false
+      },
+      {
+        "indice": 1,
+        "n_flags": 0,
+        "flags": [],
+        "n_palavras": 40,
+        "n_ancoras": 0,
+        "eliminado": false
+      },
+      {
+        "indice": 2,
+        "n_flags": 0,
+        "flags": [],
+        "n_palavras": 43,
+        "n_ancoras": 2,
+        "eliminado": false
+      }
+    ],
+    "uso": {
+      "prompt_tokens": 2859,
+      "completion_tokens": 208,
+      "cache_hit_tokens": 0,
+      "cache_miss_tokens": 2859
+    },
+    "latencia_s": 35.21
   }
 }

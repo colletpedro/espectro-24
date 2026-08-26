@@ -1,7 +1,9 @@
-# Espectro 24 — Especificação v1.9.16
+# Espectro 24 — Especificação v1.9.21
 
-**Data:** 2026-08-09
+**Data:** 2026-08-25
 **Status:** v1 fechada (aceite em "Status de aceite da v1", fim do documento). **v1.9.6 puxa o único lever que a v1.9.5 mediu como capaz de mover a cobertura temporal: a ORDENAÇÃO (§2.3).** A v1.9.5 provou, com número, que profundidade de PÁGINA não compra tempo — a mediana do catálogo é de 1783 páginas para cobrir um ano contra um teto de plataforma de 256, e as 256 páginas expostas sob `by/added` são as ~3000 adições mais recentes. Esta versão (1) dá ao `Fetcher` **retentativa com backoff para erro de TRANSPORTE** — e só de transporte: 403, `AntiBotError` e o SEGUNDO 503 do lote continuam parando imediatamente, porque retentar bloqueio é evasão (§2.4); (2) promove `dias_por_100_paginas` a **métrica de primeira classe**, calculada na coleta e gravada em `meta.json` — é ela que separa as duas populações de filme e decide quem precisa de quê (§3[B']); e (3) coleta uma **passada SELETIVA sob `by/added-earliest`** só nos filmes abaixo do limiar dessa métrica, somando material genuinamente antigo ao bruto por incrementalidade (§2.3), sem tocar em quem já é bem servido pela profundidade sob `by/added`. Executada em 12 de 35 filmes por 610 requisições, a passada leva a janela `p5-p95` do bruto de **47 para 1487 dias** de mediana e revela que o material antigo é **2,4× mais longo** que o recente (55% abaixo de `min_chars` contra 77%) — achado que interage direto com o filtro e com a estratificação. A mudança de SELEÇÃO que as duas pontas agora tornam possível é **medida e proposta, não aplicada** (§3[C2], "Proposta temporal"). **CORREÇÃO DE REGISTRO:** a v1.9.5 se declarou "a última sessão da camada de COLETA"; a declaração não sobreviveu à medição da própria v1.9.5, que apontou a ORDENAÇÃO como o parâmetro de coleta ainda por decidir. A frase original fica abaixo, com esta correção ao lado. **v1.9.5 é a ÚLTIMA sessão da camada de COLETA.** Ela corrige a ÂNCORA do posicionamento profundo (§3[B]) e estratifica a SELEÇÃO por profundidade (§3[C2]). O defeito medido: o bloco profundo da v1.9.2 comprava mediana de 3 DIAS sobre o raso, porque a progressão geométrica partia do fim do bloco raso e punha as posições "profundas" em 14-28 de níveis que vão a ~256 — profundo em POSIÇÃO DE PÁGINA, raso em TEMPO. As posições passam a ser frações da profundidade REAL, descoberta por uma sondagem por filme de ~4 requisições; `RESERVA_PROFUNDIDADE` e o orçamento por bucket não mudam — muda ONDE as páginas caem, não QUANTAS. A alternativa (declarar a recência como escolha) foi rejeitada com razão registrada: o histograma NÃO é recortável no tempo, então declarar não alinharia os canais, apenas confessaria o desalinhamento para sempre. Na análise, a seleção adota E1 (três faixas de profundidade), medida antes de adotar com custo ZERO em buckets fechados. Depois desta versão, todo parâmetro restante do projeto é de ANÁLISE. **v1.9.4 corrige o déficit do bucket DOMINANTE com uma extensão de orçamento por DÉFICIT (§3[B]) e transforma numa verificação mecânica a lição sobre o adaptador de LLM (§3[D]).** A extensão é OBSERVACIONAL por decisão explícita — nenhum rendimento é estimado: o bucket gasta a base de 16 páginas exatamente como antes e, só se fechar abaixo da meta com folga, recebe páginas extras uma a uma até o teto de 24, alocadas aos níveis em déficit MEDIDO pelo quarto uso de `redistribuir_deficit`. O desenho preditivo foi rejeitado com racional registrado (as páginas são log-espaçadas desde a v1.9.2 e não amostram o mesmo regime; e a parada por ALVO, removida na v1.9.2, já era uma heurística otimista decidindo orçamento). Registra também que correção e declaração são CAMADAS: a extensão encolhe a classe de buckets sub-40, o piso escalonado absorve o resíduo, e a declaração honesta segue sendo o mecanismo final. Nada de `min_chars`, cascata, fronteira, cota, alocação proporcional, orçamento BASE, ordenação ou reserva de profundidade é tocado. **v1.9.3 não muda a camada de coleta — constrói o harness de LOTE (§3[H]) sobre ela e roda a coleta de um conjunto maior de filmes.** Checkpoint em arquivo (resume sem refazer filme completo), validação de slug por 1 requisição antes de gastar orçamento de páginas, falha isolada por filme (um slug ruim nunca derruba o lote), e `material_esgotado` tratado explicitamente como caso esperado — os 3 filmes do catálogo, sendo populares, nunca tinham exercitado esse caminho em produção. Estimativa de custo medida ANTES do lote (§5.6), com veto explícito se a projeção para 50 filmes passar de ~4h. **v1.9.2 fechou o gate de profundidade que a v1.9.1 deixou em aberto e resolve o déficit residual de `medianas`.** É a última sessão de coleta antes do lote de 30-50 filmes, e o reenquadramento que a motiva é este: a profundidade de paginação é o ÚNICO parâmetro da camada de coleta que o superset NÃO torna reversível — página não baixada não está em disco, e coletar o lote sem resolver isso é aceitar recoleta total se a janela temporal se provar um problema. Quatro entregas: (a) a **parada por ALVO é removida** — era um vestígio de quando o teto era por nível e o custo por bucket não tinha limite; sob o orçamento por bucket da v1.9.1 ela só introduzia não-determinismo (foi a causa exata do 37/40 residual de `cidade-de-deus`), e o orçamento passa a ser sempre gasto integralmente, com única parada antecipada por esgotamento real de material — custo aceito e medido: ~32→48 páginas/filme; (b) **posicionamento estratificado por profundidade** substitui a paginação puramente consecutiva — uma reserva de 25% do orçamento de cada nível (`RESERVA_PROFUNDIDADE`) é posicionada em progressão geométrica a partir do fim do bloco raso, com descoberta de profundidade real e redistribuição do orçamento restante **reaproveitando `redistribuir_deficit`** — MESMO número de requisições que a paginação consecutiva, cobertura temporal muito maior; (c) o **teto de 256 páginas** suspeitado na v1.9.1 é medido num filme obscuro — resultado em §3[B]; (d) `pagina_origem` (rank de adição sob ordenação cronológica, sem a contaminação de `data`, que é a data ASSISTIDA) vira o **instrumento temporal PRIMÁRIO**; `janela_temporal` por `data` (v1.9.1) fica como secundária, rotulada como proxy contaminado. Nada de fronteira, cota, piso escalonado, `min_chars`, ordenação ou síntese é tocado. **v1.9.1 corrigiu dois defeitos que a telemetria MEDIDA da v1.9.0 revelou na camada de coleta**, sem tocar fronteira, cota, piso escalonado ou qualquer etapa de síntese/narrativa: (a) o **orçamento de páginas por BUCKET** (§3[B]) substitui o teto por NÍVEL, corrigindo o defeito estrutural registrado na v1.9.0 (o bucket `medianas`, com metade dos níveis dos outros dois, nunca conseguia o mesmo teto agregado de páginas — 8 contra 16 — e por isso nunca fechava a cota) — **medido: fecha 40/40 em 2 dos 3 filmes (era 35 e 26) e melhora para 37/40 no terceiro (era 23)**, um achado residual e distinto, com causa identificada, registrado em §3[B]; (b) os **motivos de descarte** na seleção passam a ser discriminados (`abaixo_min_chars`/`spoiler`/`truncada_sem_texto`/`duplicata`/`excedente_cota`/`outros`), telemetria pura, sem mudança de comportamento. Duas entregas adicionais: (c) a **janela temporal** (mín./máx./p5/p50/p95 das datas do bruto, por bucket e total) passa a ser gravada em `meta.json`, não exposta ao frontend; (d) o literal `50 · 20 · 30` remanescente em `frontend/js/filme.js` (pendência registrada na v1.9.0) passa a derivar do próprio JSON de resultado. Uma quinta questão — **paginação de passo largo**, candidata a resolver o viés de recência medido na v1.9.0 (79-100% da amostra em ~7 semanas) — foi **só MEDIDA nesta versão, não implementada**: o gate de decisão está em §3[B], "Medição de profundidade (v1.9.1, gate)", com um achado que contraria a expectativa registrada no briefing (o custo de descobrir a profundidade via sonda de rede NÃO é neutro — é uma sonda de ~10 requisições por nível — mas há evidência forte, ainda que de amostra pequena, de um TETO FIXO do site em 256 páginas que, se confirmado mais amplamente, eliminaria essa sonda por completo). **v1.9.0 reestruturou a camada de COLETA e desacoplou COLETA de ANÁLISE** — a maior mudança de arquitetura de dados desde a v1. Até a v1.8.2, a coleta usava cota fixa de 10 reviews por nível de estrela e gravava, no material coletado, as decisões de **fronteira de bucket**, **cota** e **filtro**: mudar qualquer uma delas custava recoletar tudo. A v1.9.0 (a) move as **fronteiras de bucket** para configuração lida de um único lugar, com o mapeamento nível→bucket como função pura (§2.2), e adota a **opção C** (`0,5–2,0` / `2,5–3,0` / `3,5–5,0`, semântica "não recomendam / mornos / recomendam"); (b) faz a coleta raspar um **superset por nível** e **persistir tudo em disco** (`dados/bruto/<slug>/`, §3[B']), com condição de parada em três degraus de precedência (piso de 1 página por nível com material > alvo com folga de 25% > teto de 4 páginas); (c) torna a **ordenação de listagem** um parâmetro de amostragem explícito, gravado no material coletado, com default trocado de `by/activity` (ordenada por ENGAJAMENTO) para `by/added` (**cronológica**, mais recentes primeiro) — ver §2.3; (d) substitui a cota igual por nível por **alocação proporcional ao histograma** dentro de cada bucket, com piso por nível e redistribuição de déficit restrita ao mesmo bucket (§3[C1]); (e) aplica a **cota de análise 40/40/40 downstream**, sobre o bruto persistido, com min_chars/spoiler/cascata como parâmetros (§3[C2]); e (f) troca o piso binário de 3 por um **piso escalonado de 4 estados** (`completa`/`sem_quantificador`/`sem_numero`/`sem_analise`), exposto como campo no JSON (§3[C3]). **Consequência publicada:** sob as fronteiras C os shares dos 3 filmes do catálogo MUDAM — `cure` 3/17/79 → 2/8/90, `the-invite-2026` 3/18/79 → 2/7/91, `cidade-de-deus` 1/8/91 → 1/3/96. **Risco aceito e mitigações** em §2.2. v1.2.0 adiciona a etapa **[D2] narrador** (§D2) e a flag `--tom` como **mecanismo de desenvolvimento** para A/B de saída. v1.2.1 corrige uma classe de infidelidade do narrador (cota de amostragem apresentada como distribuição da recepção) — invariante nova no §D2 + telemetria. v1.2.2 adiciona calibração numérica dos quantificadores da narrativa (mapa fração→palavra, faixa mais fraca em caso de dúvida) — verificação por instrução ao LLM. v1.2.3 move a calibração do prompt para o CÓDIGO: os rótulos de quantificador passam a ser pré-computados e o LLM só os usa, não os escolhe (mesmo princípio da v1.1.1 — código como autoridade de número/rótulo). v1.3.0 adiciona uma **ficha técnica do filme via TMDB** (§3a, aditiva — nunca bloqueia o pipeline) e reestrutura §D2 para uma narrativa em **três movimentos** (filme → experiência consensual → contraste entre grupos), com uma emenda pontual à regra de "zero conteúdo de trama" para permitir a sinopse OFICIAL curta como fonte do primeiro movimento (ver §3[D] "Anti-spoiler"). **v1.3.1** corrige um defeito real observado na primeira execução do MOVIMENTO 2 (a narrativa de `the-invite-2026` importou um juízo de QUALIDADE — "atuações marcantes"/"roteiro inteligente" — como se fosse um consenso DESCRITIVO, contradizendo diretamente os temas do grupo negativas): a regra do MOVIMENTO 2 ganha três critérios explícitos (categoria/presença/não-contradição) e telemetria de `consensos_usados` para revisão humana de cada execução (ver §D2). **v1.4.0** é a maior mudança desde a v1: o pipeline passa a coletar a **distribuição real de notas** (histograma público do Letterboxd, §3b) e, com ela, **inverte** a regra de prevalência do §D2 — o que a v1.2.1 proibiu por falta do dado, a v1.4.0 torna obrigatório e ancorado (ver "Princípio norteador" abaixo). **v1.4.1** corrige três defeitos pontuais observados na entrega da v1.4.0, todos no §D2: (1) telemetria de quantificadores **por par declarado** (`quantificadores_usados`), depois da 3ª reincidência do mesmo modo de falha, que a rede de nível de bucket não pega; (2) **omissão autorizada** do MOVIMENTO 2, contra a pressão de preenchimento que produz juízo de qualidade hedgeado; (3) **invariante de vocabulário do peso** — rótulos de peso dizem "das notas", nunca "das reviews"/"do público"/"dos espectadores". **v1.5.0** ataca um defeito de **fluência**, não de honestidade: as narrativas entregues até a v1.4.1 são factualmente corretas, mas soam mecânicas — forma sintática repetida (rótulo de peso + verbo de reporte + complemento, três vezes seguidas), frases quase todas do mesmo comprimento, excesso de verbos de reporte e nominalizações no lugar de verbos. O diagnóstico (registrado no changelog) é que o acúmulo de invariantes de honestidade das versões anteriores empurrou o modelo à única forma que satisfaz todas simultaneamente. A correção prescreve **ritmo** e **registro** com a mesma precisão de código com que já se prescrevem números, adiciona uma **marcação de perspectiva** pré-computada (para que a redução de verbos de reporte não deixe a fala de um grupo minoritário soar como fato do narrador) e duas telemetrias novas (`marcadores_perspectiva`, `metricas_fluencia`) — **sem afrouxar nenhuma invariante de honestidade** das versões anteriores. **v1.6.0** conclui que a v1.5.0 errou no MÉTODO, não no objetivo: empilhar honestidade e fluência num prompt só não funcionou (as regras de ritmo não transferiram entre filmes, as métricas que as fiscalizavam não acompanhavam qualidade, e a configuração de produção chegou a publicar uma frase agramatical). A correção é **separar responsabilidades**: o narrador (§D2) é podado de volta a UMA responsabilidade — dizer a verdade com a estrutura certa — e um estágio novo, o **editor [E2]** (§E2), assume ritmo e leitura sem ter acesso a nenhuma fonte de fato e sem poder alterar número, rótulo ou atribuição (trechos protegidos + verificação mecânica + descarte da edição em caso de violação). **v1.6.1** corrige o defeito 5.2 que a v1.6.0 deixou em aberto: em vez de normalizar a COMPARAÇÃO entre o trecho declarado e o texto (caixa/acento/demonstrativo), passa a verificar a EXISTÊNCIA de uma expressão de atribuição reconhecida no texto realmente escrito — o que fecha também o caso de reordenação de palavras que a normalização não alcançava, e reduz `marcadores_perspectiva` a telemetria pura (auditoria humana, não fonte de validação). **v1.6.2** corrige um bug de substring solta descoberto ao vivo na regeneração de `cidade-de-deus` (shares 1%/8%/91%): `_ancora_de_grupo` e `_ancoragem_de_peso_ok` buscavam o percentual de um grupo com `f"{pct}%" in texto`/`texto.find(...)`, que casa **dentro** de outro número — `"1%"` combinava com o "1" final de `"(~91%)"`, ancorando o grupo `negativas` (1%) numa posição muito anterior à sua menção real, corrompendo o cálculo do span de movimento e produzindo falso positivo em `perspectiva_nao_marcada` mesmo com o texto correto e bem marcado. A busca agora usa `re.search(rf"(?<!\d){pct}%", texto)` (nega dígito imediatamente anterior), então `"1%"` só casa como número isolado, nunca como sufixo de `"91%"`/`"21%"`/etc. Mesmo defeito corrigido nos dois pontos que faziam a busca (âncora de grupo e checagem de ancoragem de peso), com testes de regressão cobrindo o caso real. Nenhuma invariante de honestidade foi afrouxada — o fix é estritamente sobre a CHECAGEM, não sobre o que é permitido no texto. **v1.7.0** corrige dois defeitos reais observados na regeneração das narrativas: (1) **resolução de ficha do filme errado** — `espectro24 --slug cure` sem `--ano` resolvia no TMDB para "The Cure" (2026, dir. Nancy Leopardi) em vez de Cure (1997, Kiyoshi Kurosawa), porque a desambiguação por popularidade sem ano escolhe o candidato errado quando o título é comum; a resolução de ano ganha uma cadeia de fallback confiável (slug → página do Letterboxd → sem ficha) e uma guarda de sanidade que descarta a ficha inteira se o ano devolvido pelo TMDB divergir do esperado em mais de 1 ano (ver §3[A]); (2) **lista de protegidos do editor §E2 enxugada** — protegia até 16 trechos por filme, incluindo quantificadores soltos ("muitos") e expressões de atribuição, o que descartava o editor com frequência (`cure`) ou o levava a inventar frases só para reencaixar um protegido movido ("Essa é a opinião de uma fração mínima das notas.", `cidade-de-deus`), e ainda deixava sobreviver um defeito gramatical real ("destacando a a maioria o estilo visual") porque a frase continha um rótulo protegido; a proteção literal agora cobre só rótulo de peso COM percentual e tokens numéricos — quantificador e atribuição passam a valer SÓ pela checagem semântica que já existia e era mais forte (`conferencia_quantificador` v1.4.1, `_marcadores_validos` v1.6.1), revalidada dentro do próprio `editar_narrativa` (ver §E2). **v1.7.1** corrige três defeitos de acabamento observados no texto PUBLICADO da v1.7.0, nenhum deles de honestidade: (1) **contrabarra residual** — `_remover_aspas` trocava só o caractere de aspas por "", então uma citação escapada (`\"A Cura\"`) virava `\A Cura\` (publicado em `cure` e `the-invite-2026`); a remoção agora consome a contrabarra que precede a aspas junto, como uma unidade. (2) **capitalização de rótulo protegido movido** — o rótulo de peso guarda a caixa de onde apareceu a primeira vez (início de frase, capitalizado); quando o editor o move para o meio de um período, a checagem 100% literal não deixava ajustar só a inicial, e o defeito ("Para A grande maioria...", `cidade-de-deus`) sobrevivia porque corrigir quebraria o protegido; a checagem de trecho perdido agora aceita a primeira letra em qualquer caixa — e SÓ ela, nenhuma outra letra, palavra ou número do trecho. (3) **família "quem gostou/não gostou" ausente do vocabulário de atribuição** — o `cure` escreveu "quem não gostou considerou o ritmo lento e tedioso" para o grupo de 3%, uma atribuição real, mas fora da lista de expressões reconhecidas (`_EXPRESSOES_DE_PERSPECTIVA`), produzindo falso positivo em `perspectiva_nao_marcada`; a família foi acrescentada ("quem gostou", "quem não gostou", "quem amou", "quem ficou no meio", e as formas com "para" na frente), mantendo de fora o "para quem" ISOLADO (pronome relativo comum, motivo do falso negativo original da v1.6.0). Nenhuma invariante de honestidade foi afrouxada nas três correções — são fixes de CHECAGEM e de limpeza mecânica, não mudança do que é permitido no texto. **v1.7.2** corrige um defeito real observado na regeneração do `cidade-de-deus` sob a v1.7.1: o editor devolveu a prosa embrulhada num invólucro `{ text: "..." }`, ignorando a instrução de responder só texto puro — e TODAS as checagens mecânicas de então (protegidos, conjunto numérico, honestidade) passaram, porque rodam sobre SUBSTRING e o protegido/os números continuavam achados DENTRO do invólucro. A edição foi marcada "aplicada"; só a leitura humana antes de publicar pegou o defeito. A correção acrescenta uma **checagem ESTRUTURAL** (`_formato_invalido`, §E2), aplicada ANTES de todas as outras: rejeita o texto se ele começar com `{`/`[`, contiver cerca de código (```), tiver uma das primeiras linhas com cara de campo JSON (`"text":`, `text:`, `"narrativa":`), ou tiver chaves desbalanceadas — mesma política das demais checagens (1 retentativa com reforço explicando o formato exigido; se persistir, descarta com `motivo_descarte: "formato_invalido"` e publica a bruta). Deliberadamente NÃO rejeita uma chave/colchete equilibrado no MEIO da prosa — só o formato de invólucro, não qualquer ocorrência do caractere. **v1.7.3** corrige um defeito de POLÍTICA, não de checagem: na regeneração da v1.7.1, a edição foi DESCARTADA em 2 dos 3 filmes (`cure` — número alterado; `cidade-de-deus` — regressão de `perspectiva_nao_marcada`), publicando a bruta nos dois, enquanto a MESMA combinação de código e dados tinha sido ACEITA nos 3 filmes sob a v1.7.0 — nada mudou no código nesse sentido entre as duas rodadas; é VARIÂNCIA do modelo entre chamadas, e a política de então (1 chamada + 1 retentativa, 2 no total) dava pouca margem para a variância favorecer numa etapa cujo descarte já é fail-safe (a bruta do narrador sempre prevalece). A correção eleva o teto para até `1 + EDITOR_MAX_TENTATIVAS` chamadas (`EDITOR_MAX_TENTATIVAS = 3` em `config.py`, 4 no total no pior caso) e muda o reforço de SUBSTITUÍDO para ACUMULADO entre tentativas — se a 1ª falha por número e a 2ª por atribuição, a 3ª recebe os dois reforços juntos, para o modelo não consertar um problema criando outro. Nova telemetria em `edicao_flags`: `n_tentativas` (quantas chamadas foram feitas) e `motivos_por_tentativa` (o motivo de cada falha, na ordem) — visibilidade de qual checagem mais reprova o editor, não critério de aprovação. Nenhuma invariante de honestidade foi afrouxada: o fail-safe de descarte após esgotar as tentativas continua idêntico, só o número de chances antes dele mudou. **v1.7.4** corrige dois defeitos: um buraco de arquitetura e um resíduo cosmético recorrente. (1) **checagem de EDIÇÃO NULA** — nenhuma checagem até a v1.7.3 verificava que a edição FEZ algo, só que ela não QUEBROU nada; um editor que devolva a entrada praticamente intacta passa em protegidos (nunca saíram), números (nada mudou) e honestidade (é o mesmo texto), e era marcado "aplicada" sem nenhum sinal de que não houve edição de verdade. A correção calcula a similaridade (`difflib.SequenceMatcher.ratio`, textos normalizados só por espaço em branco) entre `narrativa_bruta` e o texto editado; se as demais checagens TERIAM passado mas a similaridade é `>= EDITOR_LIMIAR_EDICAO_NULA` (0.97, deliberadamente conservador — só pega devolução literal ou trivial, não uma edição legítima que preserve vocabulário protegido), trata como falha de tentativa com motivo `"edicao_nula"`, no mesmo ciclo de retentativa/descarte já existente. `edicao_flags.similaridade` é persistido SEMPRE (aceita ou não), telemetria para calibrar o limiar. (2) **capitalização residual, correção determinística** — a v1.7.1 AUTORIZOU o editor a ajustar a caixa de um rótulo de peso movido para o meio da frase, mas não o OBRIGA, e ele frequentemente não ajusta ("Já Uma fração mínima...", "Para A grande maioria..."). Em vez de depender do LLM, um pós-processamento em CÓDIGO (`_corrigir_capitalizacao_residual`) roda sobre toda edição ACEITA: baixa a inicial de qualquer rótulo de peso canônico que apareça capitalizado fora de início de período (mesmo princípio de toda pré-computação do pipeline — o determinístico é decidido pelo código, não pelo LLM). `edicao_flags.capitalizacao_ajustada` registra se algo mudou. **v1.8.1** REATIVA o editor [E2] por padrão (`EDITOR_ATIVO=True`) — a v1.8.0 tinha desligado por precaução após um defeito de conteúdo inventado, mas a MESMA versão já corrigira a causa raiz (checagem de conteúdo adicionado + ordem dos movimentos); a validação pós-correção (`VALIDACAO_EDITOR_V18.md`, 3 filmes reais) mostrou a checagem disparando de verdade em produção e o modelo se autocorrigindo na retentativa, com os limiares bem separados do ruído normal de uma edição legítima — evidência suficiente para reativar. **v1.8.0** troca o provider DEFAULT de produção para **DeepSeek** (`deepseek-v4-flash`, ver Changelog) e, na mesma versão, DESLIGA o editor [E2] por padrão como medida de contenção — a validação que justificou a troca de provider também descobriu um defeito real e mais sério: o editor pode ACRESCENTAR conteúdo (opinião, frase de fechamento, reordenar movimentos) sem que nenhuma checagem mecânica até a v1.7.4 detecte, porque todas checavam PERDA, nenhuma ADIÇÃO. Duas checagens novas (conteúdo adicionado por similaridade de frase, ordem dos movimentos) mitigam o defeito e o editor volta a ser ligável via `--com-editor`, mas o default de produção segue conservador até mais evidência.
+
+**v1.9.21 (esta versão) — o VEREDITO passa a ser escrito por LLM sobre briefing determinístico (§3[V], estágio NOVO), e a dívida de registro das v1.9.17–v1.9.20 é paga.** O defeito medido antes de qualquer código: **19 dos 35 filmes recebiam veredito byte-idêntico**, 20 caíam no ramo que o produz, e o catálogo inteiro tinha **14 textos distintos para 35 filmes**. A causa não é o template ser burro — é o briefing ser pobre: a frase relata a AUSÊNCIA de contraste e nunca a PRESENÇA de assunto, enquanto o campo `tema` de cada célula de `eixos` (a única fonte de variedade real, já rotulada por [D3] e já filtrada de spoiler) era descartado. O estágio novo roda na PUBLICAÇÃO, monta em código puro um briefing cuja **serialização não contém nenhum algarismo** — o modelo recebe rótulos prontos e nomes de tema prontos, nunca números —, gera best-of-3, valida por dez checagens em código, e cai no TEMPLATE determinístico da v1.9.19/v1.9.20 quando nada sai limpo. **O risco central, e o motivo de a proibição de fabricar contraste ser o coração da entrega:** 17 dos 35 filmes são `contraste: valorativo` e são EXATAMENTE os 17 do ramo — um modelo solto sobre um briefing pobre produziria 20 maneiras diferentes de dizer a mesma coisa vazia, o que é PIOR que a repetição atual, porque disfarça um achado real de homogeneidade como se cada filme fosse diferente. Por isso o briefing carrega `assunto_compartilhado` (o eixo que maximiza `min(freq_negativas, freq_positivas)`, piso de 25% nos dois lados; medido: todos os 35 têm, e nos 17 `valorativo` o min fica entre 40% e 84%). **Registro honesto:** o veredito deixa de ser 100% determinístico — e isso NÃO viola "código é autoridade sobre números", porque o modelo não vê algarismo nenhum, não escolhe eixo/tema/grupo/rótulo/estado de contraste, e o único número que sobrevive no texto renderizado (o peso do meio dominante) é prefixado pelo CÓDIGO, fora da saída dele. Na mesma versão: correção da inflação retórica no fallback (`obsession-2026` afirmava "um assunto que todos os grupos citam" a partir de 2 de 5 reviews, `eighth-grade` a partir de 13 de 34 — mesma classe das v1.2.2/v1.2.3, reintroduzida num lugar novo), unificação do mapa de quantificador que existia em duplicata (`quantificador.py`), e o changelog retroativo das quatro versões de frontend que rodaram carimbadas no código e ausentes da spec.
 
 ---
 
@@ -606,6 +608,21 @@ ficar como AUSÊNCIA de bullets de contraste, vai parecer bug ao leitor.
 rotula a coluna de 13/9/22 como `contraste: valorativo`; a coluna é, na
 verdade, a de filmes COM contraste temático. A leitura correta é a desta
 seção: a 20pp, 13 com contraste temático e 22 valorativos.)*
+
+**Atualização da contagem (v1.9.15, `>=` exato; confirmada na v1.9.21):** sob
+a comparação exata o catálogo é **18 `tematico` / 17 `valorativo`** de 35 — o
+"22 de 35" acima é a contagem da v1.9.14, sob o `>` estrito que reproduzia o
+bug de ponto flutuante. Fica no texto porque o raciocínio de desenho que ele
+sustenta não muda: o estado não é caso de borda, é quase metade do catálogo.
+
+**Achado da v1.9.21 — os 17 `valorativo` são EXATAMENTE os 17 filmes que
+caem no ramo "os grupos falam das mesmas coisas" do veredito (§3[V]).**
+Nenhum filme `valorativo` escapa do ramo. Os outros 3 filmes do ramo
+(`joker-folie-a-deux`, `spider-man-across-the-spider-verse`, `wonka`) são
+`tematico` com o contraste morando SÓ no bucket do meio — que nunca é um dos
+dois lados do veredito. A consequência prática é de método, não de produto: a
+verificação anti-fabricação de contraste do §3[V] é uma varredura de
+**população inteira**, não de amostra.
 
 ### `impacto_emocional` entra no schema COM a limitação registrada
 
@@ -3914,6 +3931,550 @@ do bloco (`sobreposicao_com_analisadas == n_classificadas == n_analisadas`
 em todo bucket). Continua valendo para o resto do catálogo até a mesma
 extensão ser aplicada lá.
 
+### [V] Veredito — a linha de contraste, escrita por LLM sobre briefing determinístico (v1.9.21)
+
+O **veredito** é a linha de 1–2 frases no topo de `filme.html`, entre a ficha
+e os bullets: a leitura de UMA frase que a tabela "eixo a eixo" (removida na
+v1.9.19) pedia ao leitor para fazer de cabeça. Ele nasceu na v1.9.19 como
+TEMPLATE determinístico sobre o lift já computado, zero LLM, e foi corrigido
+na v1.9.20 para não mentir por omissão (`eixoDeMaiorFrequencia`). Esta versão
+troca o gerador do texto — **o briefing continua sendo código; a redação passa
+a ser LLM** — e mantém o template como rede.
+
+#### O defeito medido, e por que ele não é do template
+
+**19 dos 35 filmes recebiam texto BYTE-IDÊNTICO** — `"Os grupos falam das
+mesmas coisas — discordam sobre se elas funcionam."` — e **20 caíam no ramo
+que a produz** (o vigésimo, `friday-the-13th-2009`, difere só pelo prefixo de
+meio dominante). O catálogo inteiro tinha **14 textos distintos para 35
+filmes**. Repetido assim, o veredito não acrescenta nada à experiência.
+
+A causa não é o template ser burro — é o **briefing ser pobre**. A frase
+relata a AUSÊNCIA de contraste e nunca a PRESENÇA de assunto. O dado para
+dizer *do que cada grupo fala* já existe em `eixos.linhas[].por_bucket[]`
+(`tema`, `mencoes`, `de_n`) e era descartado.
+
+**Medição que fecha a porta do conserto barato:** se o template passasse
+apenas a NOMEAR o eixo dominante de cada lado, a repetição não seria
+resolvida — são 10 combinações distintas para os 20 filmes, com
+`roteiro_estrutura / roteiro_estrutura` saindo 5 vezes. Os 10 eixos são lista
+fechada (§2.5) e `roteiro_estrutura` domina o catálogo. **A variedade real
+está no campo `tema`**, string por filme, já rotulada por [D3], já exibida
+nos bullets, já passada pelo filtro anti-spoiler da síntese. É esse dado que
+o briefing precisa carregar.
+
+#### Posição no pipeline, insumo e saída
+
+O estágio roda **na PUBLICAÇÃO, não a cada pageview** — ~35 chamadas por
+regeneração de catálogo, não uma por leitor.
+
+```
+[D3]/eixos  ──►  [V] veredito  ──►  resultado/<slug>.json
+                      ▲                        │
+                      │                        ▼
+             buckets + ficha        build_data.py ──► frontend/js/data.js
+                                                              │
+                                                              ▼
+                                                     filme.js (render puro)
+```
+
+- **Consome:** o dict `output` já montado — `eixos` (obrigatório: sem ele o
+  estágio devolve `None` e a chave não é emitida), `buckets`, `ficha`.
+  **Nunca reviews brutas** — mesma fronteira de §D2 desde a v1.2.0.
+- **Depende de** [D3] ter rodado antes, pela mesma razão que o briefing do
+  narrador depende: `contraste` vem de lá.
+- **Independe de** [D2]: veredito e narrativa não se leem. Regenerar um não
+  obriga a regenerar o outro.
+- **Grava:** a chave de topo `veredito` (schema abaixo).
+
+**`veredito.spec_version`, e por que o carimbo do FILME não sobe.** O bloco
+carrega a própria versão, como `eixos` já faz desde a v1.9.14. Regenerar só o
+veredito sobre um JSON existente **não** re-roda coleta, seleção, síntese,
+[D3] nem narrativa — e escrever `1.9.21` no `spec_version` de topo afirmaria
+que rodou. Mesma política de `VERSAO_COLETOR` (§3[B']): um carimbo que não
+corresponde ao que foi executado não é evidência de nada.
+
+> **Consequência registrada, não corrigida nesta versão:** o checkpoint de
+> `scripts/publicar_catalogo.py` considera um filme "publicado sob o pipeline
+> corrente" quando `spec_version == SPEC_VERSION`. Com `SPEC_VERSION` em
+> `1.9.21` e os 35 JSONs em `1.9.16`, aquele script passa a enxergar os 35
+> como pendentes. **Isto é correto** — eles de fato não passaram pelo
+> pipeline completo da v1.9.21 — mas significa que rodar
+> `publicar_catalogo.py` sem `--slug` republicaria o catálogo inteiro. O
+> estágio [V] tem harness PRÓPRIO (`scripts/gerar_veredito.py`), que não usa
+> aquele checkpoint e não chama coleta/síntese/narrativa.
+>
+> **O footgun é FECHADO, não apenas registrado (v1.9.21).** Antes desta
+> versão, rodar `publicar_catalogo.py` sem argumento era inócuo: os 32 slugs
+> default eram todos pulados por `_ja_publicado`. Com a constante em
+> `1.9.21`, nenhum é pulado — um comando de uma linha dispara re-scrape de 32
+> filmes a 2s por requisição sem paralelismo, e apaga o histórico `passadas`
+> do `meta.json` (dívida conhecida, `DIAGNOSTICO_OFFLINE.md`). Caro e
+> irreversível para o histórico. `cmd_publicar` passa a **recusar execução**
+> quando mais de `LIMITE_LOTE_SEM_CONFIRMACAO = 5` filmes seriam de fato
+> republicados, exigindo `--republicar-tudo`, com mensagem que diz **quantos
+> e por quê**. O limiar é decisão de produto: acima de um punhado, o comando
+> deixa de ser "conserta um caso" e vira "republica o catálogo", e a
+> diferença entre os dois é de horas de rede. A guarda conta quem SERIA
+> republicado, não o tamanho da lista — passar os 35 com 32 em dia é um lote
+> de 3, e passa. **Escopo estritamente este:** o checkpoint em si não muda, e
+> a dívida do `passadas` continua aberta.
+
+#### Schema do bloco `veredito`
+
+```json
+"veredito": {
+  "texto": "<1–2 frases, pt-BR, sem algarismos>",
+  "origem": "llm" | "template_fallback",
+  "prefixo_codigo": "<string ou null>",
+  "provider": "gemini",
+  "modelo": "gemini-3.1-pro-preview",
+  "n_candidatos": 3,
+  "n_chamadas": 3,
+  "indice_escolhido": 0,
+  "motivo": "melhor_entre_limpos" | "menor_severidade" | "template_fallback",
+  "criterio_decisivo": "flags" | "comprimento" | "unico" | "empate",
+  "candidatos": [
+    {"indice": 0, "n_flags": 0, "flags": [], "n_palavras": 31, "eliminado": false}
+  ],
+  "flags": [],
+  "uso": {"prompt_tokens": 0, "completion_tokens": 0,
+          "cache_hit_tokens": 0, "cache_miss_tokens": 0},
+  "latencia_s": 0.0,
+  "spec_version": "1.9.21"
+}
+```
+
+`texto` é o texto FINAL, já com `prefixo_codigo` concatenado quando existe —
+o frontend renderiza `texto` e nada mais. `prefixo_codigo` fica ao lado como
+telemetria de qual parte não veio do modelo.
+
+**Telemetria é DIAGNÓSTICO DE PRODUÇÃO, não informação de leitor.** Nenhum
+campo além de `texto` chega à tela — mesma decisão já tomada para
+`verificacao_narrativa` e `narrativa_selecao`.
+
+#### O contrato do briefing (`veredito.py`, código puro, zero LLM)
+
+**Regra dura: todo número e todo rótulo quantificador que aparece no briefing
+é calculado aqui.** O modelo recebe rótulos prontos e nomes de tema prontos;
+nunca calcula, nunca arredonda, nunca escolhe intensidade. Mesmo princípio da
+v1.1.1 (denominador), v1.2.3 (quantificador) e v1.4.0 (peso).
+
+**Nível do filme:**
+
+| Campo | Origem | Quem calcula |
+|---|---|---|
+| `titulo`, `ano` | `ficha` (com fallback para o slug) | código |
+| `contraste` | `eixos.contraste` | [D3]/`eixos.py` |
+| `margem_lift_pp` | `eixos.margem_lift_pp` | `config.MARGEM_LIFT_PP` |
+| `bucket_dominante` | maior `share_real` dos `buckets` | código |
+| `assunto_compartilhado` | ver critério abaixo | código |
+| `grupos` | por bucket, tabela seguinte | código |
+
+**Por bucket** (`negativas` e `positivas` sempre; `medianas` **só quando é o
+bucket dominante** — o meio nunca é um dos dois lados do contraste):
+
+| Campo | Origem | Quem calcula |
+|---|---|---|
+| `eixo_maior_lift` + `lift_pp` + `acima_da_margem` | `eixos.linhas[].por_bucket[].lift_pp` | código |
+| `eixo_maior_frequencia` + `tema` + `freq_pct` | `mencoes`/`de_n` e `tema` da mesma linha | código |
+| `rotulo_quantificador` | `freq_pct` → mapa de faixas | código (`quantificador.py`) |
+| `share_pct` | `buckets[].share_real` | histograma (§3[G]) |
+| `modo`, `estado_piso` | `buckets[]` | §3[C3] |
+
+Bucket com `estado_piso: "sem_analise"` não empresta eixo nenhum ao briefing
+— mesma guarda que `eixoDeMaiorLift`/`eixoDeMaiorFrequencia` já aplicavam.
+
+#### `assunto_compartilhado` — o critério, o piso e a medição
+
+**Critério:** entre os eixos que os DOIS extremos mencionam, o que maximiza
+`min(freq_negativas, freq_positivas)`. Desempate por `freq_negativas +
+freq_positivas`; persistindo, pela ordem canônica de `taxonomia.EIXOS`.
+**Piso: 25% nos dois lados** — abaixo disso o eixo não é "assunto de ambos os
+grupos", é ruído que os dois tocaram de passagem. 25% é a fronteira inferior
+da faixa `muitos` do mapa de quantificador (§D2 v1.2.3), reusada aqui em vez
+de um número novo.
+
+É esse campo que dá substância ao caso `valorativo`: quando nenhum lado tem
+assunto PRÓPRIO, o veredito precisa nomear o assunto COMPARTILHADO e dizer
+que a divergência é de julgamento.
+
+**Medição sobre os 35 do catálogo (v1.9.21):** todos os 35 têm assunto
+compartilhado sob esse critério; nos 17 filmes `valorativo` o `min` fica
+entre **40% e 84%**. Exemplos do que o campo produz:
+
+| Filme | Eixo | Tema nas negativas | Tema nas positivas |
+|---|---|---|---|
+| `talk-to-me-2022` | `roteiro_estrutura` | Protagonista irritante e decisões idiotas | Personagens exasperantes e decisões irracionais |
+| `wicked-2024` | `som_trilha` | Músicas genéricas e esquecíveis | Músicas marcantes e bem integradas |
+| `shutter-island` | `roteiro_estrutura` | Plot twist previsível ou decepcionante | Roteiro e construção do mistério |
+
+> **LIMITAÇÃO REGISTRADA, não contornada.** O campo `tema` de uma célula só
+> existe quando aquele eixo virou BULLET daquele grupo (§2.5, seleção 2+3).
+> Em **2 dos 17** filmes `valorativo` — `dune-2021` (`comparacoes`) e
+> `the-substance` (`impacto_emocional`) — o eixo compartilhado não tem tema
+> nomeado em NENHUM dos dois lados. Nesses casos o briefing carrega o rótulo
+> do eixo sem tema, e a substância vem do top-frequência de cada lado. **Não
+> se inventa texto para tapar o buraco** — é a mesma política de omissão
+> autorizada da v1.4.1: preencher com genérico é pior do que não preencher.
+
+#### A serialização não contém NENHUM algarismo
+
+`serializar_briefing_veredito()` — o texto que efetivamente vai na mensagem
+do usuário — emite **rótulos, nunca números**. O dict do briefing carrega
+`freq_pct`, `lift_pp` e `share_pct` (para os testes, para a telemetria e para
+o template de fallback); a serialização carrega `rotulo_quantificador` e o
+booleano `acima_da_margem`.
+
+Duas coisas caem disso, e as duas são deliberadas:
+
+1. **A invariante "zero dígitos na saída" (§ prompt, regra 5) passa a ser
+   garantida por CONSTRUÇÃO.** O modelo não pode copiar um número que nunca
+   viu.
+
+   > **As duas defesas são independentes, e é preciso saber disso ao mexer
+   > em qualquer uma.** A validação `digito` em código continua existindo
+   > como **redundância DELIBERADA** — não é sobra da defesa antiga, e não
+   > é a defesa primária. Afrouxar a serialização (deixar um número
+   > escapar para a mensagem) **não** fica coberto pela validação, porque
+   > um número plausível copiado do briefing passaria a existir na saída
+   > exatamente onde ela não sabe distinguir invenção de cópia; e remover
+   > a validação achando que a serialização cobre **não** fica coberto
+   > pela serialização, porque nada impede o modelo de INVENTAR um
+   > algarismo que ninguém lhe deu. Remover qualquer uma das duas é
+   > mudança de política, não limpeza.
+2. **`lift_pp` não chega ao prompt, então "chegou perto" não existe para o
+   modelo.** Ver a invariante do limiar binário, abaixo.
+3. **O TÍTULO DO FILME também não entra.** Duas razões, e a segunda é a
+   forte: (a) `friday-the-13th-2009` se chama "Sexta-Feira 13" — o título
+   CARREGA algarismo, e emiti-lo abriria na serialização exatamente o buraco
+   que ela existe para fechar (o mesmo falso positivo que a varredura da
+   v1.9.20 já tinha investigado no frontend); (b) nomear o filme CONVIDA o
+   modelo a usar o que ele sabe sobre o filme, e a invariante 2 proíbe
+   contexto externo — **um briefing anônimo torna a fidelidade mais fácil de
+   obedecer do que de violar**. O veredito nunca precisou dizer de que filme
+   se trata: é renderizado logo abaixo do título na página.
+
+#### O limiar é BINÁRIO — nenhuma noção de "quase passou"
+
+`the-godfather` tem o melhor lift das negativas em **19,6pp** contra a margem
+de 20 (eixo `ritmo`, 16 de 25 = 64%, tema "Ritmo lento e tédio"). Falha por
+0,4pp e o filme é `valorativo`.
+
+Isto é **observação registrada, e nada mais**. Explicitamente NÃO autoriza:
+
+- **alterar `MARGEM_LIFT_PP`**, aqui ou em lugar nenhum. É parâmetro a
+  montante que alimenta a seleção de bullets inteira (§2.5), escolhido por
+  nulo de permutação com os três números à vista; mexer nele por esta porta
+  mudaria o produto sem decisão de produto;
+- **tratar quase-passou como contraste** no briefing ou no prompt. Se o lift
+  não atinge a margem, aquele lado **não tem assunto próprio**, e ponto. O
+  briefing pode carregar `lift_pp` como número; o prompt não recebe nenhuma
+  noção de proximidade e o modelo não pode insinuar contraste a partir dela.
+
+#### As invariantes do prompt
+
+O projeto documenta prompts por extenso. O texto integral de
+`PROMPT_VEREDITO` está em `src/espectro24/veredito.py`; as invariantes que
+ele codifica, na íntegra:
+
+1. **Papel e público.** Escreve para quem **ainda não assistiu** ao filme e
+   está decidindo se assiste. Não é crítica, não é resenha, não é
+   recomendação — é o mapa de ONDE as opiniões divergem.
+2. **Fidelidade absoluta ao briefing.** Só pode citar assuntos e temas
+   presentes no briefing. É PROIBIDO introduzir tema, adjetivo avaliativo
+   sobre o filme, ou informação de enredo que não esteja ali.
+3. **Anti-fabricação de contraste.** Quando o briefing marca `valorativo`, é
+   PROIBIDO afirmar que os grupos falam de assuntos DIFERENTES. A tarefa é
+   nomear o assunto COMPARTILHADO e dizer que a divergência é sobre se ele
+   funciona. Concordar sobre o que o filme é e discordar sobre se ele
+   funciona é um RESULTADO, não uma falta de resultado. *(Mesma invariante
+   7b de §D2, aplicada a um estágio novo.)*
+4. **Quantificadores.** Use o `rotulo_quantificador` fornecido. Rótulo mais
+   FORTE é PROIBIDO; mais FRACO é permitido.
+5. **Zero dígitos.** Nenhum algarismo na saída. Nenhuma contagem de review,
+   nenhum percentual, nenhuma nota, score ou estrela. Quando o filme tem o
+   meio como grupo dominante, o percentual de peso é **prefixado pelo
+   CÓDIGO**, fora do texto do modelo.
+6. **Anti-spoiler.** Nada de reviravolta, final, morte de personagem ou
+   mecanismo central da trama. Os temas do briefing já passaram por esse
+   filtro (§3[D]); não os expanda nem os detalhe.
+7. **Escopo.** PROIBIDO generalizar para "os críticos", "o consenso", "a
+   recepção do filme". Cada grupo é uma perspectiva, nunca uma fatia
+   quantificada do público.
+8. **Forma.** 1–2 frases, pt-BR, alvo de ~45 palavras, **teto de 55
+   palavras**. Sem aspas de citação. Tom seco e informativo, não
+   publicitário.
+9. **Cautela com amostra pequena.** Quando o briefing indica
+   `modo: "reduzido"`, a redação não pode apresentar o achado como sólido.
+10. **Limiar binário.** O prompt não recebe `lift_pp` e não tem nenhuma
+    noção de "quase atingiu a margem"; um lado sem assunto próprio é um lado
+    sem assunto próprio.
+
+#### Best-of-3, validações e seleção
+
+Mesmo padrão de `narrador.narrar()` (§D2, v1.9.11), **reproduzido, não
+reusado**. `selecao_narrativa.selecionar()` está acoplado ao formato de três
+movimentos — `spans_por_grupo()` ancora no `rotulo_peso` literal, `cobertura()`
+conta cláusulas por span de grupo, `ritmo()` exige ≥2 frases. Num texto de
+1–2 frases sem rótulo de peso ancorado, esses três critérios nunca desempatam
+nada: seria auditoria de aparência, não de fato. `qualidade.py` é reusado no
+que se aplica (`tokens_numericos`, `formato_invalido`, `achar_resenha_speak`
++ `carregar_blocklist`, `_normalizar`).
+
+**Validações pós-parsing — em CÓDIGO, nunca só no prompt:**
+
+| Flag | O que reprova |
+|---|---|
+| `formato_invalido` | invólucro JSON, cerca de código, chaves desbalanceadas (§E2 v1.7.2) |
+| `digito` | qualquer algarismo na saída |
+| `quantificador_mais_forte` | rótulo acima do fornecido para aquele grupo |
+| `tema_ausente` | tema/eixo que não está no briefing |
+| `idioma` | saída fora de pt-BR |
+| `comprimento` | acima do teto de palavras, ou mais de 2 frases |
+| `escopo_generalizado` | "os críticos", "o consenso", "a recepção do filme", "o público" |
+| `nota_ou_score` | marcadores de nota/estrela/score |
+| `contraste_fabricado` | em filme `valorativo`, afirmação de que os grupos falam de coisas DIFERENTES |
+| `cliche` | blocklist de resenha (`dados/blocklist_resenha.txt`) |
+
+**Seleção:** candidato com `n_flags > 0` é eliminado — validação vem antes
+de qualquer critério de qualidade, porque um texto que mente com riqueza
+continua mentindo. Entre os limpos, **nenhum LLM julga prosa**, como em todo
+o projeto: todo critério é contagem.
+
+**Seleção entre candidatos limpos — chave DUPLA.** A primeira proposta desta
+sessão foi "o mais curto", e foi **reprovada**: ela otimiza na direção exata
+do defeito que a versão veio corrigir. Os 19 vereditos idênticos não eram
+longos, eram **vazios** — entre candidatos que passam em todas as validações,
+o mais curto tende a ser o mais genérico. A chave é:
+
+1. **PRIMÁRIA — informatividade ancorada.** Quantas **âncoras substantivas
+   distintas** do briefing o texto efetivamente nomeia. Mais âncoras vence.
+2. **SECUNDÁRIA — brevidade.** Empate na primária desempata por menos
+   palavras; empate total, pelo primeiro índice (arbitrário, determinístico).
+
+**Âncora substantiva** = o `assunto_compartilhado` e o eixo de top-frequência
+de cada lado, cada um com o conjunto de palavras de conteúdo do seu `tema` e
+do rótulo do seu eixo.
+
+Três guarda-corpos, todos obrigatórios:
+
+- **TETO de 2 na chave primária.** Sem teto, o critério premiaria empilhar
+  tema atrás de tema até estourar o limite de palavras — trocaria o defeito
+  "vazio" pelo defeito "lista". Duas âncoras é o que um veredito de 1–2
+  frases comporta.
+- **Casamento por PALAVRAS DE CONTEÚDO, nunca por substring do `tema`.**
+  Substring exata recompensaria copiar a string verbatim e a saída
+  degeneraria em citação empilhada. A regra: normaliza (NFKD sem
+  diacríticos, minúsculas, quebra em não-letras), descarta stopwords e
+  tokens com menos de 4 caracteres, e compara por **prefixo de 5
+  caracteres** — proxy declarado que absorve flexão (`ritmos`→`ritmo`) e
+  **subconta** o que não absorve (`lentidão` não casa com `lento`).
+  Subcontar é a direção certa: torna a chave primária mais difícil de
+  satisfazer, nunca mais fácil. Uma âncora conta como nomeada quando
+  `min(2, |palavras da âncora|)` das suas palavras aparecem no texto.
+- **A cópia literal é REPROVADA, não premiada.** A validação
+  `tema_verbatim` reprova o candidato cujo texto contenha a sequência
+  completa de palavras de conteúdo de um `tema` do briefing (só para temas
+  com 3+ palavras de conteúdo — um tema de uma ou duas palavras não é
+  copiável, é a única forma de nomeá-lo). O modelo tem de dizer o assunto
+  com as palavras dele.
+
+**Verificado nos 35 antes de implementar:** nenhum filme fica com menos de 2
+âncoras disponíveis, inclusive os dois sem `tema` no eixo compartilhado
+(`dune-2021`, `the-substance`) — cada um deles tem, no top-frequência de
+algum lado, uma âncora com tema nomeado de verdade. Se algum ficasse com zero
+ou uma, a chave primária seria CONSTANTE naquele filme e a escolha cairia
+inteira na brevidade — exatamente o critério reprovado.
+
+> **Se a medição da Entrega 7 mostrar que este critério seleciona texto
+> EMPILHADO em vez de fluente, ele é o primeiro parâmetro a revisar.** A
+> hipótese sob teste é a informatividade ancorada, não a brevidade.
+
+#### O que estas validações DECLARADAMENTE não pegam
+
+Duas delas são proxies, e registrar o alcance é o que impede que "passou nas
+validações" seja lido como "está correto":
+
+> **Três falsos positivos MEDIDOS na primeira geração dos 35, e corrigidos
+> antes do A/B valer.** O custo de um falso positivo aqui é caro e concreto:
+> ele elimina candidatos bons e empurra o filme para `template_fallback` — ou
+> seja, **devolve ao leitor exatamente a frase genérica que esta versão veio
+> eliminar**. (1) O marcador `tom` casava como SUBSTRING dentro de "tomam",
+> "sintoma" e "átomo", reprovando por `tom_atmosfera` um texto que só dizia
+> "decisões que eles tomam" — mesma família do bug de substring da v1.6.2
+> (`"1%"` casando dentro de `"91%"`), e mesma correção: fronteira de token
+> explícita. Marcadores passam a casar TOKEN INTEIRO por padrão, e por
+> PREFIXO só quando escritos com `*` (`arrastad*`). (2) `desenvolvimento` saiu
+> de `roteiro_estrutura`: "desenvolvimento arrastado" é RITMO,
+> "desenvolvimento dos personagens" é ROTEIRO, e um marcador que casa nos
+> dois não discrimina nada — custou `hereditary`. (3) `incomod*` saiu de
+> `impacto_emocional`: incômodo é como se descreve qualquer coisa de que não
+> se gostou, inclusive uma personagem irritante, que é `roteiro_estrutura` —
+> custou `pearl-2022`. Os três viraram teste de regressão.
+
+- **`tema_ausente` detecta EIXO, não tema.** O eixo tem vocabulário fechado
+  (10 itens, §2.5) e um `tema` não tem; checar tema a tema exigiria casamento
+  por SIGNIFICADO, que só um segundo LLM faz — e este projeto não põe LLM
+  para julgar saída de LLM. Consequência: um texto que invente um detalhe
+  DENTRO de um eixo que o briefing cita passa. A rede que resta contra isso é
+  a fidelidade pedida no prompt e a leitura humana do aceite.
+- **`contraste_fabricado` é por MARCADOR DE FRASE.** Ela pega a afirmação
+  explícita ("falam de coisas diferentes", "discordam sobre qual é o
+  assunto"); não pega uma insinuação construída só pela estrutura da frase.
+  O que fecha boa parte da folga é indireto e vale registrar: num filme
+  `valorativo` o briefing costuma ter pouquíssimos eixos, então nomear um
+  segundo assunto normalmente já trip `tema_ausente`. **A verificação de
+  aceite dos 17 `valorativo` NÃO usa esta validação** — usaria a mesma
+  checagem para se auto-aprovar. Ela usa uma lista de marcadores
+  independente e mais larga, mais leitura humana dos 17 textos.
+
+**Fallback obrigatório, em dois degraus:**
+
+1. Nenhum candidato limpo → o de **menor severidade** entra num retry
+   direcionado, com as flags disparadas explicadas (mesma mecânica do retry
+   de §D2).
+2. Esgotadas as tentativas sem candidato limpo → o filme cai no **TEMPLATE
+   DETERMINÍSTICO** da v1.9.19/v1.9.20, que permanece no código, e
+   `origem` grava `template_fallback`.
+
+**Nunca fica sem veredito; nunca publica veredito inválido.** O template é a
+rede, e é a mesma rede que o frontend usa para JSON antigo (abaixo).
+
+#### Persistência e render
+
+`build_data.py` copia o JSON de resultado inteiro e verbatim (menos
+`origem_paginas`), então a chave nova viaja para `frontend/js/data.js` sem
+nenhuma edição naquele arquivo.
+
+Em `filme.js`, `veredictoBlock()` passa a preferir `f.veredito.texto` quando
+existe. **A função `veredito()` NÃO é deletada** — vira o fallback de render
+para filme sem o campo novo (compatibilidade com JSON publicado antes desta
+versão) e continua sendo a rede que o estágio [V] usa em `template_fallback`.
+
+> **`teste-degradado` fica DELIBERADAMENTE sem o campo `veredito`.** O filme
+> sintético de `build_data.py` existe para exercitar os caminhos que os 35
+> reais não têm; a partir desta versão ele exercita também o **fallback de
+> render por compatibilidade**. Não é esquecimento — está registrado aqui e
+> no comentário do próprio `_filme_degradado()`, porque sem isso a próxima
+> pessoa a mexer no arquivo "conserta" a ausência e apaga a cobertura.
+
+#### O veredito deixa de ser 100% determinístico — o registro honesto
+
+Até a v1.9.20 o veredito era função pura do JSON: mesma entrada, mesma saída,
+byte a byte, para sempre. **Não é mais.** Duas execuções do estágio sobre o
+mesmo filme podem produzir textos diferentes, pela mesma variância entre
+chamadas que a v1.7.3 já mediu e registrou.
+
+**Por que isso NÃO viola "código é autoridade sobre números" (§0, v1.1.1):**
+
+- O modelo não vê número nenhum — a serialização do briefing não tem
+  algarismo (acima). Ele não pode calcular, arredondar ou inflar o que nunca
+  recebeu.
+- O modelo não escolhe **qual** eixo, **qual** tema, **qual** grupo, **qual**
+  rótulo de intensidade nem **qual** estado de contraste. Todos são resolvidos
+  em `veredito.py`, em código puro, antes de qualquer chamada.
+- O percentual de peso do meio dominante — o único número que sobrevive no
+  texto renderizado — é **prefixado pelo código**, fora da saída do modelo.
+- Validação em código reprova o que o prompt proíbe, e o fallback determinístico
+  é o piso.
+
+O que o modelo decide é **como escrever**: exatamente a fronteira já
+estabelecida e validada em §D2 desde a v1.9.8. O estágio novo não é exceção
+ao princípio; é a quarta aplicação dele.
+
+**O que se PERDE, dito sem maquiagem:** reprodutibilidade byte a byte do
+texto publicado, e a garantia trivial de que dois filmes com o mesmo formato
+de dado recebem a mesma frase. A primeira é custo aceito (a telemetria grava
+modelo, candidatos e flags, então a escolha é auditável mesmo sem ser
+reproduzível). A segunda é precisamente o que esta versão quer perder.
+
+#### O risco central desta mudança
+
+**17 dos 35 filmes são `contraste: valorativo`, e são EXATAMENTE os 17 que
+caem no ramo sem contraste** (medido na v1.9.21: nenhum filme `valorativo`
+escapa do ramo; os outros 3 filmes do ramo são `tematico` com o contraste
+morando só no bucket do meio). Isso torna a verificação anti-fabricação uma
+varredura de POPULAÇÃO INTEIRA, não de amostra.
+
+O risco: um modelo solto sobre um briefing pobre ("nenhum eixo passa a
+margem") produz **20 maneiras diferentes de dizer a mesma coisa vazia** —
+variedade de redação sem variedade de informação. Isso é **pior que a
+repetição atual**, porque disfarça um achado real de homogeneidade como se
+cada filme fosse diferente. A proibição de fabricar diferença de assunto
+(invariante 3) e o campo `assunto_compartilhado` são a resposta a esse risco,
+e o critério de aceite da versão os mede diretamente.
+
+#### Critério de aceite (v1.9.21)
+
+Medido ANTES e DEPOIS com a MESMA implementação de contagem:
+
+| Métrica | Antes (v1.9.20) | **Publicado** (flash) | pro (braço B do A/B) |
+|---|---|---|---|
+| Vereditos byte-idênticos entre si (maior grupo) | **19** | **0** | 0 |
+| Filmes em algum grupo duplicado | 25 | **0** | 0 |
+| Textos distintos / 35 | **14** | **35** | 35 |
+| Abertura compartilhada (5 primeiros tokens) | 29 | **15** | 13 |
+| Aberturas distintas | 10 | **26** | 27 |
+| Sobreposição lexical média entre pares (Jaccard sobre palavras de conteúdo) | **0,3744** | **0,0601** | 0,0526 |
+| Jaccard máximo entre pares | 1,0 | 0,3333 | 0,2593 |
+| Palavras (média / máximo) | 16,6 / 31 | 41,4 / 58 | 45,5 / 59 |
+| Origem | — | **35 llm / 0 fallback** | 34 llm / 1 fallback |
+| Flags disparadas | — | **nenhuma** | `tema_ausente`: 1 |
+
+**A sobreposição lexical média caiu 6,2×** e a repetição byte-idêntica foi a
+zero. A métrica é Jaccard sobre `palavras_de_conteudo` normalizadas, média
+sobre os 595 pares — mesma implementação nos dois lados da comparação.
+
+**O critério de âncoras NÃO produziu texto empilhado**, que era a hipótese
+sob teste e o risco de troca-de-defeito: a chave primária decidiu 11 de 35
+(brevidade decidiu 15, "único" 3, empate 6), e a média de palavras ficou em
+41,4 contra um teto de 55 — se ela estivesse premiando empilhamento, a média
+estaria colada no teto. O teto de 2 âncoras cumpriu o papel.
+
+**Verificação anti-fabricação nos 17 `valorativo` — ZERO ocorrências, nos
+dois braços do A/B.** Duas checagens independentes, e a independência é o
+ponto: (a) uma lista de 32 marcadores que é SUPERSET da validação
+`contraste_fabricado` — usar a própria validação devolveria "limpo" por
+construção, já que todo texto publicado passou nela; (b) leitura dos 17, em
+que **17/17** nomeiam o assunto compartilhado e enquadram a divergência como
+de julgamento. *(A checagem automática contou 16/17 em cada braço; os dois
+"faltantes" fazem o enquadramento com palavras fora da lista de marcadores —
+"A avaliação do roteiro divide as opiniões", "O ponto de discórdia está no
+julgamento". A régua subcontou; os textos estão corretos.)* **Qualquer
+ocorrência de contraste fabricado é falha de aceite, não detalhe de
+redação.**
+
+#### Modelo — configurável, nunca hardcoded, nunca alias
+
+Chave `"veredito"` em `PROVIDER_POR_ESTAGIO` e `MODELO_POR_ESTAGIO`
+(`config.py`) — único ponto de configuração, resolvido por
+`synthesize.provider_do_estagio`/`modelo_do_estagio`, passando pelo adaptador
+e pelo guard-rail de §3[D].
+
+**Inventário da chave, consultado na API (não de memória), 2026-08-25:** o
+tier `pro` disponível é **`gemini-3.1-pro-preview`** (`version:
+3.1-pro-preview-01-2026`) e não existe tier acima dele. O flash mais recente
+é `gemini-3.7-flash` (`3.7-flash-08-2026`), **sete meses mais novo que o
+único pro disponível**. `gemini-pro-latest` existe e é REJEITADO por política
+(v1.9.10: alias é alvo móvel — comparação não reproduzível, preço não
+ancorável).
+
+Tensão registrada: a comparação de modelos da v1.9.10 mediu
+`gemini-3.1-pro-preview` PIOR que `gemini-3.7-flash` no narrador (2 flags
+contra 1, ~10× o custo), em amostra de 3 filmes. Resolvida do jeito que este
+projeto resolve as coisas — **por medição**: o A/B da v1.9.21 roda o critério
+de aceite INTEIRO nos dois braços (as três métricas de repetição, taxa de
+flag, taxa de `template_fallback`, os 20 textos do ramo na íntegra por
+modelo, e a verificação anti-fabricação nos 17 por modelo), com briefing,
+prompt, best-of-3, validadores e ordem de filmes IDÊNTICOS — a única variável
+é o modelo. **Conformidade não decide sozinha:** um modelo pode passar limpo
+em todas as validações e ainda produzir 35 vereditos corretos, insossos e
+intercambiáveis, que é exatamente a falha que esta versão existe para evitar.
+Empate em qualidade legível desempata por custo, e aí o flash vence. O
+default efetivo é decisão do dono do projeto lendo os textos, registrada no
+changelog.
+
 ### [F] Ficha do filme (TMDB) — v1.3.0
 
 Etapa **aditiva e independente** do resto do pipeline (`ficha.py`): dado o título/ano do filme (derivados do slug por default — `titulo_ano_de_slug`, com override via `--titulo`/`--ano` no CLI para os casos em que o slug não carrega ano, ex. `cure`), busca a ficha técnica na API pública do TMDB (`api.themoviedb.org/3`).
@@ -4288,6 +4849,43 @@ As três incógnitas abaixo foram resolvidas na Fase 1; os achados já estão in
 ---
 
 ## Changelog
+- **v1.9.21** (2026-08-25) — **O VEREDITO passa a ser escrito por LLM sobre briefing determinístico (§3[V], NOVO).**
+  - **(0) O defeito, medido antes de tocar em código.** 19 dos 35 filmes recebiam veredito BYTE-IDÊNTICO ("Os grupos falam das mesmas coisas — discordam sobre se elas funcionam"), 20 caíam no ramo que a produz (o vigésimo, `friday-the-13th-2009`, difere só pelo prefixo de meio dominante), e o catálogo inteiro tinha **14 textos distintos para 35 filmes**. A causa não é o template — é o BRIEFING: a frase relata a AUSÊNCIA de contraste e nunca a PRESENÇA de assunto, enquanto o campo `tema` de cada célula de `eixos` (a única fonte de variedade real, já rotulada por [D3] e já filtrada de spoiler) era descartado. Medição que fecha o conserto barato: nomear só o EIXO dominante de cada lado dá 10 combinações para 20 filmes, com `roteiro_estrutura/roteiro_estrutura` saindo 5 vezes — os 10 eixos são lista fechada e um deles domina o catálogo.
+  - **(1) Estágio [V] (§3[V]).** Roda na PUBLICAÇÃO (~35 chamadas por regeneração), não por pageview. Consome `eixos` + `buckets` + `ficha` do JSON já montado, nunca reviews brutas; grava a chave de topo `veredito`. Depende de [D3] ter rodado (o `contraste` vem de lá); independe de [D2] — veredito e narrativa não se leem.
+  - **(2) Briefing determinístico (`veredito.py`), e a serialização SEM ALGARISMO.** Todo número e todo rótulo do briefing é calculado em código puro: eixo de maior lift + `acima_da_margem`, eixo de maior frequência + `tema` + `freq_pct` + `rotulo_quantificador`, `share_pct`, `modo`, `estado_piso`, `contraste`, `bucket_dominante`, `assunto_compartilhado`. **A serialização que vai ao modelo emite RÓTULOS, nunca números** — com isso a invariante "zero dígitos na saída" deixa de depender de obediência (o modelo não copia um número que nunca viu) e `lift_pp` não chega ao prompt, então "quase passou" não existe para ele.
+  - **(3) `assunto_compartilhado` — o critério, com a medição.** Entre os eixos que os DOIS extremos mencionam, o que maximiza `min(freq_negativas, freq_positivas)`; desempate por soma, depois ordem canônica de `EIXOS`. Piso de **25% nos dois lados**, reusando a fronteira inferior da faixa `muitos` (v1.2.3) em vez de inventar número novo. Medido nos 35: **todos** têm assunto compartilhado; nos 17 `valorativo` o `min` fica entre **40% e 84%**. É o campo que dá substância ao caso `valorativo` — quando nenhum lado tem assunto PRÓPRIO, o veredito nomeia o assunto COMPARTILHADO e diz que a divergência é de julgamento.
+  - **(4) Limitação registrada, não contornada.** Em 2 dos 17 `valorativo` (`dune-2021`/`comparacoes`, `the-substance`/`impacto_emocional`) o eixo compartilhado não tem `tema` nomeado em nenhum dos dois lados — o campo só existe quando aquele eixo virou BULLET daquele grupo (§2.5). Briefing carrega o rótulo do eixo sem tema; a substância vem do top-frequência de cada lado. Nada é inventado para tapar o buraco (mesma política de omissão autorizada da v1.4.1).
+  - **(5) Best-of-3 REPRODUZIDO, não reusado, e o motivo.** `selecao_narrativa.selecionar()` está acoplado ao formato de três movimentos (`spans_por_grupo` ancora no `rotulo_peso` literal; `cobertura` conta cláusulas por span; `ritmo` exige ≥2 frases). Num texto de 1–2 frases sem rótulo ancorado, os três critérios nunca desempatam nada — seria auditoria de aparência. O padrão de `narrador.narrar()` é reproduzido com critérios próprios; `qualidade.py` é reusado no que se aplica. **Nenhum LLM julga prosa**, como em todo o projeto.
+  - **(6) Dez validações em CÓDIGO** (`formato_invalido`, `digito`, `quantificador_mais_forte`, `tema_ausente`, `idioma`, `comprimento`, `escopo_generalizado`, `nota_ou_score`, `contraste_fabricado`, `cliche`), retry direcionado quando nenhum candidato sai limpo, e **fallback obrigatório para o TEMPLATE determinístico da v1.9.19/v1.9.20**, que permanece no código. Nunca fica sem veredito; nunca publica veredito inválido. `veredito.origem` grava `llm` | `template_fallback`; telemetria completa no JSON, **nada na interface** (mesma decisão de `verificacao_narrativa`).
+  - **(7) O limiar continua BINÁRIO.** `the-godfather` tem o melhor lift das negativas em 19,6pp contra margem de 20 (eixo `ritmo`, 16 de 25 = 64%, tema "Ritmo lento e tédio") — falha por 0,4pp e o filme é `valorativo`. Registrado como observação e **nada mais**: não autoriza mexer em `MARGEM_LIFT_PP` (parâmetro a montante que alimenta a seleção de bullets inteira, escolhido por nulo de permutação) nem tratar quase-passou como contraste no briefing ou no prompt.
+  - **(8) Registro honesto: o veredito deixa de ser 100% determinístico.** Duas execuções sobre o mesmo filme podem produzir textos diferentes (mesma variância entre chamadas medida na v1.7.3). **Não viola "código é autoridade sobre números"** — o modelo não vê algarismo nenhum, não escolhe eixo/tema/grupo/rótulo/estado de contraste, e o único número que sobrevive no texto renderizado (o peso do meio dominante) é prefixado pelo CÓDIGO, fora da saída dele. O que se perde, dito sem maquiagem: reprodutibilidade byte a byte do texto publicado — custo aceito, com a escolha auditável pela telemetria mesmo sem ser reproduzível.
+  - **(9) Correção de inflação retórica no FALLBACK (a mesma classe das v1.2.2/v1.2.3, reintroduzida num lugar novo).** O ramo de fallback do template terminava com a frase fixa "— um assunto que todos os grupos citam", disparada sempre que existia qualquer eixo com `mencoes > 0`, sem checar se a frequência sustenta "todos". Casos medidos em produção: `obsession-2026` afirmava isso a partir de **2 de 5 reviews (40%)** num bucket que o próprio site rotula `modo: reduzido`; `eighth-grade`, com amostra completa, a partir de **13 de 34 (38%)**. Corrigido com o MESMO mapa de quantificador do briefing, e `modo: "reduzido"` tratado como caso à parte (cautela explícita, nunca generalização).
+  - **(9b) Paridade Python/JS travada por teste.** O veredito determinístico existe DUAS vezes de propósito — `veredito.veredito_template` (a rede do estágio) e `veredito()` em `filme.js` (o fallback de render para JSON anterior à v1.9.21) — e duas implementações da mesma regra em linguagens diferentes é uma divergência esperando acontecer, com sintoma silencioso: um filme antigo e um filme novo em `template_fallback` dizendo coisas diferentes sobre dados equivalentes. `tests/test_veredito_paridade_js.py` roda o JS REAL (o arquivo, via `node`, não um port) sobre os 35 e exige igualdade byte a byte. **Medido: 35/35 idênticos.** Pula quando `node` não existe — é rede a mais, não bloqueio de ambiente.
+  - **(6b) Três falsos positivos de `tema_ausente`, medidos na primeira geração dos 35 e corrigidos antes de o A/B valer.** O custo de um falso positivo neste estágio é concreto: elimina candidatos bons e empurra o filme para `template_fallback`, devolvendo ao leitor a frase genérica que a versão veio eliminar. **(a)** O marcador `tom` casava como SUBSTRING dentro de "tomam"/"sintoma"/"átomo" — mesma família do bug da v1.6.2 (`"1%"` dentro de `"91%"`), e mesma correção: marcador passa a casar TOKEN INTEIRO por padrão e por PREFIXO só quando escrito com `*` (`arrastad*`). **(b)** `desenvolvimento` saiu de `roteiro_estrutura` ("arrastado" é ritmo, "dos personagens" é roteiro) — custava `hereditary`. **(c)** `incomod*` saiu de `impacto_emocional` (incômodo descreve qualquer desagrado, inclusive personagem irritante) — custava `pearl-2022`. Os três viraram teste de regressão, e o A/B foi **inteiramente regerado** depois da correção: mudar o validador entre os braços invalidaria a comparação.
+  - **(10) Mapa de quantificador unificado (`quantificador.py`, NOVO).** A tabela de faixas da v1.2.3 existia DUAS vezes — `synthesize._rotulo_quantificador` e `briefing._quantificador`, esta última reimportada por valor de propósito, para não depender de um módulo que importa SDKs. Uma terceira cópia em `veredito.py` seria o erro real, então as duas viram uma: módulo novo sem nenhuma dependência, importado pelos três. Comportamento preservado para todo `pct` em 0–100; o `pct` fora de faixa (inalcançável, e com fallbacks que DIVERGIAM entre as duas cópias) passa a ser clampado a [0,100], tornando as duas caudas mortas e o comportamento determinístico. **O portão da extração tem duas metades, e a distinção importa para quem ler depois:** (a) um GATE DE SESSÃO, executado uma vez — montar os briefings de narrativa dos 35 filmes antes e depois da extração e comparar byte a byte: **35/35 idênticos, mesmo SHA-256 do dump agregado (`6083b84c…`)**; (b) um TESTE PERMANENTE (`tests/test_quantificador.py`) que congela as DUAS implementações antigas como oráculo e mede equivalência sobre toda a faixa 0–100 e sobre todo `pct` que os 35 filmes realmente produzem. A comparação byte a byte **não foi esquecida — foi executada e reportada**; ela não virou fixture permanente porque um golden file de 336 KB quebraria por motivo LEGÍTIMO na próxima republicação de qualquer filme, e um teste que falha por motivo certo em contexto errado é um teste que se aprende a ignorar.
+  - **(11) Modelo — inventário consultado na API, não de memória.** O tier `pro` disponível na chave é `gemini-3.1-pro-preview` (`3.1-pro-preview-01-2026`) e não existe tier acima; o flash mais recente é `gemini-3.7-flash` (`3.7-flash-08-2026`), sete meses mais novo que o único pro. `gemini-pro-latest` rejeitado por política (alias é alvo móvel, v1.9.10). Tensão registrada: a comparação da v1.9.10 mediu o 3.1-pro PIOR que o 3.7-flash no narrador (2 flags contra 1, ~10× o custo, amostra de 3 filmes). Resolvida por MEDIÇÃO — o A/B roda o critério de aceite inteiro nos dois braços, com tudo idêntico menos o modelo. Conformidade não decide sozinha: um modelo pode passar limpo em todas as validações e ainda produzir 35 vereditos corretos, insossos e intercambiáveis — a falha exata que esta versão existe para evitar.
+  - **(11b) Footgun de republicação em massa, FECHADO na mesma versão.** Subir `SPEC_VERSION` faz `publicar_catalogo.py` deixar de pular os 32 slugs default — um comando de uma linha passaria a disparar re-scrape de 32 filmes a 2s por requisição, apagando de quebra o histórico `passadas` do `meta.json` (dívida conhecida, `DIAGNOSTICO_OFFLINE.md`). `cmd_publicar` passa a RECUSAR acima de `LIMITE_LOTE_SEM_CONFIRMACAO = 5` filmes efetivamente republicáveis, exigindo `--republicar-tudo`, com mensagem dizendo quantos e por quê. A guarda conta quem SERIA republicado, não o tamanho da lista. Escopo estritamente este: o checkpoint não muda e a dívida do `passadas` continua aberta.
+  - **(11c) Critério de seleção entre candidatos limpos: informatividade ancorada, NÃO brevidade.** A proposta inicial ("o mais curto") foi reprovada dentro da própria sessão, com razão: os 19 vereditos idênticos não eram longos, eram VAZIOS — otimizar para brevidade otimiza na direção do defeito. Chave primária: número de âncoras substantivas distintas do briefing que o texto nomeia, com **teto de 2** (sem teto, premiaria empilhar tema atrás de tema); secundária: menos palavras. Casamento por palavras de conteúdo com prefixo de 5 caracteres, nunca por substring do `tema` — e a cópia literal do tema é REPROVADA por validação (`tema_verbatim`), não premiada. Verificado nos 35 antes de implementar: nenhum filme fica com menos de 2 âncoras disponíveis, inclusive `dune-2021` e `the-substance`.
+  - **(11d) RESULTADO MEDIDO do A/B, e a decisão de modelo.** Mesma régua nos dois braços, com briefing, prompt, best-of-3, validadores e ordem de filmes idênticos. **Antes: 19 vereditos byte-idênticos, 20 filmes no ramo sem contraste, 14 textos distintos em 35, Jaccard médio 0,3744. Depois (os dois braços): 35 textos distintos, ZERO byte-idênticos.** Jaccard médio 0,0583 (flash) e 0,0526 (pro) — queda de ~6-7x. Conformidade: flash **35/35 por LLM, zero flags, zero retries**; pro 34/35, com `cure` caindo em `template_fallback` (escreveu "a ambientação criada pela direção", e `direcao_imagem` não está no briefing daquele filme) — regressão de produto concreta, porque aquele filme volta a exibir a frase genérica. Latência total 454s (flash) contra 1564s (pro). **Decisão do dono do projeto, lendo os 35 textos de cada braço: `gemini-3.7-flash`.** Registro honesto do que o pro ganha: varia um pouco mais a construção sintática (o flash recai com mais frequência em "A divergência está em..."), e é a ÚNICA dimensão em que ele vence. **O achado que importa mais que a escolha: a diferença entre os dois MODELOS é muito menor que a diferença que o BRIEFING fez** — os dois saíram de 14 para 35 textos distintos. O trabalho estava no briefing, e por isso a linha de modelo é reversível sem consequência estrutural.
+  - **(11e) Publicação dos 35 (Entrega 5), com o diff auditado campo a campo.** `scripts/gerar_veredito.py --todos`: **35/35 por LLM, zero `template_fallback`**. Conferido programaticamente nos 35 documentos, contra `HEAD`: **nenhum campo fora de `veredito` mudou**, a ordem das chaves de topo foi preservada e `veredito` entrou como última chave em todos. `spec_version` de topo de cada filme continua no valor original — o bloco carrega a própria versão. Verificado em navegador (servidor local): os 6 filmes do aceite renderizam o texto do JSON, na posição certa (depois da ficha, antes dos bullets), com zero contagem bruta de review no texto; `napoleon-2023` e `friday-the-13th-2009` trazem o prefixo de meio dominante vindo do código; `obsession-2026` sai com cautela de amostra pequena; `teste-degradado` exercita o FALLBACK DE RENDER como planejado; home com 35 cards; **zero erro de console em toda a bateria**.
+  - **(12) Dívida de registro paga: v1.9.17 a v1.9.20 entram no changelog** (abaixo). Quatro versões de frontend rodaram carimbadas no código e ausentes da spec — a mesma deriva silenciosa que `test_spec_version.py` (v1.9.14) existe para impedir, agora fechada nos dois sentidos: a constante e o título sobem juntos para `1.9.21`.
+
+- **v1.9.20** (2026-08-24, `8d457a3`) — **REGISTRO RETROATIVO (frontend, escrito na v1.9.21).** *Não teve entrada de changelog na época; o carimbo vivia só nos comentários de `frontend/js/filme.js`.*
+  - **(1) O veredito deixa de mentir por omissão.** Defeito real em `anatomy-of-a-fall` (88% positivas): quando um bucket não tinha eixo acima da margem, a frase "nenhum assunto se destaca" comunicava "esse grupo não falou de nada", enquanto o dado dizia "esse grupo falou do que todo mundo cita" — contraste BAIXO com frequência ALTA são coisas diferentes. O lado sem lift passa a cair no eixo de maior FREQUÊNCIA (`eixoDeMaiorFrequencia`, nova), com redação que distingue os dois casos ("destaca X" contra "fala sobretudo de Y — um assunto que todos os grupos citam"). Ainda zero LLM, ainda sem inventar contraste que o dado não sustenta. *(A segunda metade dessa frase é o defeito corrigido na v1.9.21, item 9 — o quantificador "todos" não era conferido contra a frequência.)*
+  - **(2) Nenhum algarismo de contagem de review no TEXTO** (decisão do dono do projeto). Saem: "~X de N" ao lado de cada bullet, "N de M analisadas" no header do grupo, "(40 · 40 · 40 reviews)" no disclaimer, "N reviews observadas" no header do filme. **Ficam:** a BARRA de proporção (inclusive o `aria-label` — não é texto visível, é a alternativa da barra para leitor de tela), o PERCENTUAL de peso ("~79% das notas"), a janela temporal, e todos os números do JSON (pipeline intocado).
+  - **(3) Avisos de piso reduzido reescritos sem algarismo** — "Modo reduzido: amostra pequena para este grupo" (era "apenas N de M reviews-alvo"); "Sem análise temática: amostra insuficiente neste grupo" (era "apenas N review(s)... o piso é 3").
+  - **(4) Varredura automatizada nos 35** (iframe + regex `\d+\s+de\s+\d+` / `\d+\s+reviews?`): zero ocorrência real. Dois falsos positivos investigados e descartados — "Sexta-Feira 13" (o número está no TÍTULO, concatenado ao rótulo estático no `innerText` plano) e um artefato de cache de iframe em `obsession-2026`.
+
+- **v1.9.19** (2026-08-24, `38fb204`) — **REGISTRO RETROATIVO (frontend, escrito na v1.9.21).**
+  - **(1) `filme.html` reordenada — dados primeiro.** Feedback de usuários reais: a parede de texto narrativo aparecia ANTES dos bullets e ninguém lia; havia redundância entre o resumo no topo e a observação por grupo no fim. Ordem nova: header → ficha → **VEREDITO** → bullets por sentimento → narrativa completa **COLAPSADA** → pesquisa.
+  - **(2) O VEREDITO nasce, como TEMPLATE sobre o lift já computado, zero LLM** (`veredito()`/`eixoDeMaiorLift()`/`bucketDominante()`). Casos tratados: nenhum bucket acima da margem, só um lado qualifica, piso `sem_analise` (bucket não empresta eixo), meio dominante (prefixo dedicado). Testado nos 35: 0 falhas, 0 sem veredito, 0 com texto de nota/score. *(É este template que a v1.9.21 substitui como gerador e preserva como fallback.)*
+  - **(3) A tabela "eixo a eixo" SAI DA TELA** (decisão de produto — "não funciona na prática"), removida do CSS e do JS, não escondida atrás de flag. O bloco `eixos` do JSON não muda em nada: continua calculado pelo mesmo `eixos.py`, e passa a alimentar duas coisas que a view antiga não fazia — o veredito, e a ORDEM dos temas dentro de cada grupo (`ordenarTemasPorEixo`: tema com papel de contraste sobe ao topo).
+  - **(4) O meio rebaixado, com EXCEÇÃO AUTOMÁTICA.** Dois blocos em destaque (negativas/positivas, mesmo formato entre os dois); `medianas` vira `<details>` colapsado — **exceto** quando é o grupo DOMINANTE, e aí os três sobem ao destaque: `napoleon-2023` (45%) e `friday-the-13th-2009` (41%), verificados. Quebra deliberada da neutralidade de tratamento do §0, com a simetria explícita: lá o problema era filme aclamado parecendo dividido; aqui seria filme tripolar parecendo bipolar sem a exceção. O dado (coleta, classificação, lift, JSON) não muda. **Registrado em §0 na época; só o changelog faltava.**
+  - **(5) Acabamento:** "+" vira chevron dentro de pill na cor do grupo; hierarquia tipográfica dos bullets; tint de fundo por sentimento atrás de flag `?tint=1`, nunca ligado por padrão.
+
+- **v1.9.18** (2026-08-23, `b1dccea`) — **REGISTRO RETROATIVO (frontend, escrito na v1.9.21).** A célula do mosaico refeita. A v1.9.17 preenchia a célula INTEIRA com a distribuição em cor saturada; com ~30 dos 35 filmes majoritariamente positivos, a home virava dezenas de retângulos quase idênticos, e o título só aparecia num hover que escurecia a tela toda. A célula vira um card escuro com título SEMPRE visível (revoga a v1.9.17) e a distribuição reduzida a uma faixa de 5px na base; paleta PARALELA só para essa faixa (`--neg-home`/`--med-home`/`--pos-home`), com as originais intactas (divergência deliberada, comentada em `:root`); hover sutil (scale 1.06, nada escurece); `aspect-ratio` 4/5 para o título mais longo do catálogo caber em 3 linhas. Trade-off aceito e reportado: com a célula maior, o mosaico não cabe mais inteiro em 1440×900 sem scroll (~270px) — legibilidade vinha antes no pedido.
+
+- **v1.9.17** (2026-08-23, `f66eb5e`) — **REGISTRO RETROATIVO (frontend, escrito na v1.9.21).** A home vira mosaico. A lista vertical de 35 cards vira uma grade de quadrados cujo repouso mostra **só a distribuição real** do filme (`distribuicao.por_bucket`, as cores já existentes) — **nenhuma nota, score ou estrela**, a restrição de produto não-negociável do §1. Responsivo por LARGURA, não por N (7 colunas em desktop, 5 em tablet, 3 em mobile): um catálogo de 20 vira menos LINHAS, um de 60 vira mais. A busca continua sobre o mesmo `dataset.busca` e REORGANIZA a grade em vez de esmaecer células vazias. Bug real achado ao testar: `.mosaic-cell { display: block }` e o `[hidden]` do UA stylesheet têm a MESMA especificidade — sem regra explícita, células "escondidas" pela busca ficavam invisíveis ao teste por atributo e continuavam ocupando espaço na tela.
 - **v1.9.16** (2026-08-22/23) — **Verificador de `impacto_emocional` adotado em produção e os 35 filmes do catálogo publicados.**
   - **(1) Verificador integrado ao pipeline (Entrega 1).** Decisão do dono do projeto: adotar `V2_alvo`, passada única, sem votação (88,9% de reprodutibilidade medida na fase de classificação justifica). Roda como estágio à parte após o consenso de votação: `scripts/verificador_impacto.py aplicar-producao` gera `resultado/votacao-3/consenso_verificado.jsonl` + manifesto (telemetria declarada — veredito, frase, alvo por review). `pipeline._carregar_consenso_producao` passa a PREFERIR o verificado quando existe, com guarda de atualidade (erro explícito, não fallback silencioso, se `consenso.jsonl` cresceu depois da verificação) e declara a aplicação no bloco publicado (`eixos.verificador`). Racional registrado: é precisão comprada com recall — falso positivo quebra "o código soma, ninguém inventa"; falso negativo é perda silenciosa e conservadora. Para este produto, precisão vale mais.
   - **(2) Aplicado ao corpus inteiro (Entrega 2, medido).** 3162 das 4181 reviews classificadas (75,6%): **1654 removidas (52,3%)**, quase idêntico ao 52,8% medido na amostra de 100 do gabarito — sinal de que ela generalizou. `impacto_emocional`: 75,6% → 36,1% (projeção anterior: 35,7%). Custo real US$ 0,1558. Cobertura de contraste: **18/35 → 18/35, total inalterado** (dentro do IC95 [16,19] projetado) — mas dois vereditos mudam em sentidos opostos e se cancelam: `eighth-grade` (valorativo→tematico) e `napoleon-2023` (tematico→valorativo). Os 3 publicados (`cure`, `cidade-de-deus`, `the-invite-2026`) têm veredito estável.

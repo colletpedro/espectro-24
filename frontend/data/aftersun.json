@@ -1252,5 +1252,56 @@
       "cache_miss_tokens": 11637
     },
     "latencia_s": 43.69
+  },
+  "veredito": {
+    "provider": "gemini",
+    "modelo": "gemini-3.7-flash",
+    "n_candidatos": 3,
+    "n_chamadas": 3,
+    "prefixo_codigo": "",
+    "retry": null,
+    "spec_version": "1.9.21",
+    "texto": "A divergência central está na condução da história: enquanto a maioria dos que não recomendam aponta uma trama indefinida e pouco desenvolvida, a maioria dos que recomendam se apega à autenticidade do laço entre pai e filha, destacando a força de sua carga sentimental.",
+    "texto_modelo": "A divergência central está na condução da história: enquanto a maioria dos que não recomendam aponta uma trama indefinida e pouco desenvolvida, a maioria dos que recomendam se apega à autenticidade do laço entre pai e filha, destacando a força de sua carga sentimental.",
+    "origem": "llm",
+    "motivo": "melhor_entre_limpos",
+    "criterio_decisivo": "ancoras",
+    "indice_escolhido": 1,
+    "flags": [],
+    "candidatos": [
+      {
+        "indice": 0,
+        "n_flags": 0,
+        "flags": [],
+        "n_palavras": 44,
+        "n_ancoras": 0,
+        "eliminado": false
+      },
+      {
+        "indice": 1,
+        "n_flags": 0,
+        "flags": [],
+        "n_palavras": 44,
+        "n_ancoras": 1,
+        "eliminado": false
+      },
+      {
+        "indice": 2,
+        "n_flags": 1,
+        "flags": [
+          "formato_invalido"
+        ],
+        "n_palavras": 41,
+        "n_ancoras": 1,
+        "eliminado": true
+      }
+    ],
+    "uso": {
+      "prompt_tokens": 2757,
+      "completion_tokens": 200,
+      "cache_hit_tokens": 0,
+      "cache_miss_tokens": 2757
+    },
+    "latencia_s": 9.52
   }
 }

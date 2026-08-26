@@ -1257,5 +1257,56 @@
       "cache_miss_tokens": 9858
     },
     "latencia_s": 29.04
+  },
+  "veredito": {
+    "provider": "gemini",
+    "modelo": "gemini-3.7-flash",
+    "n_candidatos": 3,
+    "n_chamadas": 3,
+    "prefixo_codigo": "",
+    "retry": null,
+    "spec_version": "1.9.21",
+    "texto": "Muitos dos relatos que recomendam o filme baseiam suas impressões em comparações diretas. Por outro lado, entre as poucas manifestações desfavoráveis analisadas, surgem queixas sobre um distanciamento perceptível em relação à figura original do protagonista.",
+    "texto_modelo": "Muitos dos relatos que recomendam o filme baseiam suas impressões em comparações diretas. Por outro lado, entre as poucas manifestações desfavoráveis analisadas, surgem queixas sobre um distanciamento perceptível em relação à figura original do protagonista.",
+    "origem": "llm",
+    "motivo": "melhor_entre_limpos",
+    "criterio_decisivo": "ancoras",
+    "indice_escolhido": 1,
+    "flags": [],
+    "candidatos": [
+      {
+        "indice": 0,
+        "n_flags": 1,
+        "flags": [
+          "tema_ausente"
+        ],
+        "n_palavras": 37,
+        "n_ancoras": 1,
+        "eliminado": true
+      },
+      {
+        "indice": 1,
+        "n_flags": 0,
+        "flags": [],
+        "n_palavras": 35,
+        "n_ancoras": 1,
+        "eliminado": false
+      },
+      {
+        "indice": 2,
+        "n_flags": 0,
+        "flags": [],
+        "n_palavras": 33,
+        "n_ancoras": 0,
+        "eliminado": false
+      }
+    ],
+    "uso": {
+      "prompt_tokens": 2685,
+      "completion_tokens": 182,
+      "cache_hit_tokens": 0,
+      "cache_miss_tokens": 2685
+    },
+    "latencia_s": 10.2
   }
 }
