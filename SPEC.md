@@ -2682,6 +2682,80 @@ Custo estimado: no pior caso ~100 requisições extras por filme novo (uma por r
 > item seguinte, não refaz o mesmo); só o laço sobre `range()` em volta da
 > mesma chamada é retentativa. Com fixture que injeta o laço removido e
 > confirma que a varredura o detecta.
+>
+> **A remoção do laço foi provada por COMPORTAMENTO em 3 dos 8 scripts, e
+> por `import` nos outros 5 — a assimetria é DECIDIDA, não descoberta por
+> acidente.** `classificar_10.py`, `votacao_3.py` e `gate_taxonomia.py` têm
+> teste de ponta a ponta com SDK falso (`tests/test_contrato_falha_lote_
+> classificacao.py`) exercitando as quatro propriedades do contrato de
+> falha JUNTAS, no mesmo lote: erro de conteúdo custa 1 chamada; o item vira
+> `ok: False`; o lote não aborta; o resume retenta o item falho. São os TRÊS
+> que rodam sobre a AMOSTRA DE PRODUÇÃO real (a classificação que alimenta
+> `taxonomia_id`, calibrada contra gabarito humano) — o risco de um defeito
+> silencioso ali é alto e o custo de prová-lo é baixo.
+>
+> `auditoria_acuracia.py`, `inspecao_assistir.py`,
+> `variante_impacto_estrito.py`, `variantes_prompt_curtas.py` e
+> `verificador_impacto.py` têm só a prova estrutural do guard-rail acima
+> (a varredura AST) mais `import` bem-sucedido depois da transformação —
+> prova de PARSE, não de contrato. São scripts de ANÁLISE e EXPERIMENTO,
+> arquivados ou usados uma vez para uma medição já registrada em outra
+> parte da spec (`variante_impacto_estrito.py`/`variantes_prompt_curtas.py`
+> alimentaram a promoção da regra `A_regra`, §3[D] "razão PAREADA"), fora
+> do caminho que roda de novo a cada expansão de catálogo — o mesmo
+> critério de proporcionalidade que já rege o resto do projeto (ex.: os três
+> scripts na ALLOWLIST do guard-rail de SDK, isentos por serem objeto de
+> estudo, não caminho de produção). `import` é a prova PROPORCIONAL ao risco
+> deles; escrever o mesmo harness de ponta a ponta para os 5 gastaria tempo
+> de sessão num lugar que não paga por si.
+
+> #### `load_dotenv` como efeito colateral de produção — dívida conhecida, não corrigida (v1.9.25)
+>
+> **O que é.** Os oito scripts que a Entrega 2 tocou chamam `from dotenv
+> import load_dotenv; load_dotenv(RAIZ / ".env")` de DENTRO da função de
+> classificação — não uma vez no import do módulo, mas TODA VEZ que a
+> função roda. `load_dotenv` escreve direto em `os.environ`, fora do
+> controle de qualquer coisa que não seja o próprio processo. Pontos de
+> chamada (linha da chamada, não do `import`):
+>
+> | script | linha(s) |
+> |---|---|
+> | `classificar_10.py` | 266 (`classificar`) |
+> | `votacao_3.py` | 117 (`classificar_passe`) |
+> | `gate_taxonomia.py` | 312, 427, 504 (`classificar`, e as duas etapas de famílias/triagem) |
+> | `auditoria_acuracia.py` | 615 |
+> | `inspecao_assistir.py` | 124 |
+> | `variante_impacto_estrito.py` | 245 |
+> | `variantes_prompt_curtas.py` | 326 |
+> | `verificador_impacto.py` | 261, 833 |
+>
+> **Por que é propriedade de PRODUÇÃO, não só ruído de teste.** Qualquer
+> processo Python que importe um destes módulos e chame a função de
+> classificação ganha, como efeito colateral não pedido, todo par
+> chave=valor do `.env` local injetado no próprio ambiente — inclusive um
+> processo que já tinha decidido explicitamente NÃO usar aquela chave (ex.:
+> `--provider` explícito, ou um teste com SDK falso que não deveria
+> precisar de credencial nenhuma). Foi assim que a suíte vazou
+> `DEEPSEEK_API_KEY`/`GEMINI_API_KEY` reais para `test_provider.py` ao
+> escrever o teste de contrato de falha desta sessão — o sintoma apareceu
+> num arquivo SEM relação nenhuma com classificação, porque `os.environ` é
+> global ao processo.
+>
+> **Por que NÃO foi corrigido nesta sessão.** É comportamento PRÉ-EXISTENTE
+> — nenhuma das mudanças de v1.9.24/v1.9.25 o introduziu — e mexer nele
+> (mover o `load_dotenv` para fora da função, ou trocar por injeção
+> explícita de configuração) é uma decisão sobre como scripts de linha de
+> comando carregam credencial, ortogonal ao objeto desta sessão
+> (retentativa de transporte). Está fora do escopo declarado.
+>
+> **A contenção que existe é NO TESTE, não no código de produção.**
+> `tests/test_contrato_falha_lote_classificacao.py` tem um fixture autouse
+> (`_conter_o_efeito_colateral_de_producao_do_load_dotenv`) que bloqueia
+> `dotenv.load_dotenv` antes de qualquer chamada às funções de
+> classificação — nomeado e documentado explicitamente como contenção de um
+> efeito colateral de PRODUÇÃO, não como configuração do teste, para que
+> não seja removido "por limpeza" numa sessão futura sem que quem remove
+> entenda que o vazamento volta em silêncio.
 
 > #### Telemetria de retentativa do LLM: atravessa o PROCESSO e chega ao relatório de lote (v1.9.25)
 >
@@ -5356,6 +5430,8 @@ As três incógnitas abaixo foram resolvidas na Fase 1; os achados já estão in
   - **(11) Dois testes existentes foram reescritos, não deletados,** com a premissa invertida de propósito: `..._continua_sem_retentativa` (afirmava que o caminho direto NÃO retentava — verdade só enquanto a retentativa estava em `resposta()`) e `test_gemini_resposta_devolve_o_objeto_nao_o_texto`, que casava a linha literal do fonte e passou a asserir COMPORTAMENTO (mais forte, e imune ao próximo refactor).
   - **(12) Contrato de falha do LOTE, provado por comportamento, não só por `import`.** A remoção do laço (item 7) foi uma transformação automatizada com dois bugs de indentação corrigidos no processo — `import` prova que o arquivo parseia, não que o comportamento sobreviveu. Um teste de ponta a ponta com SDK falso, sobre os três caminhos de produção (`classificar_10`, `votacao_3`, `gate_taxonomia`), prova as QUATRO propriedades JUNTAS no MESMO lote: erro de conteúdo custa 1 chamada; o item vira `ok: False`; o lote não aborta (os itens seguintes são processados); e o resume retenta o item falho na execução seguinte, sem retocar os que já sucederam. **Achado no processo:** `classificar()`/`classificar_passe()` chamam `load_dotenv(RAIZ / ".env")`, e o `.env` real deste repo tem chaves — sem bloquear isso, os testes vazariam `DEEPSEEK_API_KEY`/`GEMINI_API_KEY` de verdade para o resto da suíte (`os.environ` não é revertido pelo `monkeypatch` quando quem escreve é `load_dotenv`), quebrando `detect_provider` em testes não relacionados. Corrigido com `monkeypatch.setattr("dotenv.load_dotenv", ...)` nos novos testes.
   - **(13) Tripwire para o `anthropic_client_call`.** A lacuna do item 5 (sem retentativa) não fica só em prosa: um teste afirma `"anthropic" not in PROVIDER_POR_ESTAGIO.values()`. Se um dia anthropic virar provider de ALGUM estágio de produção, o teste falha com uma mensagem que diz o porquê — a retentativa é pré-requisito para essa promoção — em vez da lacuna entrar em produção em silêncio.
+  - **(14) Assimetria de prova entre os 8 scripts, DECIDIDA e registrada.** `classificar_10`/`votacao_3`/`gate_taxonomia` — os três que rodam sobre a amostra de PRODUÇÃO real — têm teste de comportamento de ponta a ponta; os outros 5 (`auditoria_acuracia`, `inspecao_assistir`, `variante_impacto_estrito`, `variantes_prompt_curtas`, `verificador_impacto`), scripts de análise/experimento fora do caminho que roda a cada expansão, têm só a prova estrutural do guard-rail AST + `import` — prova de parse, proporcional ao risco, não lacuna descoberta por acidente.
+  - **(15) `load_dotenv` como efeito colateral de PRODUÇÃO, registrado como dívida — NÃO corrigido.** Os 8 scripts chamam `load_dotenv(RAIZ / ".env")` de DENTRO da função de classificação (não uma vez no import), escrevendo direto em `os.environ` a cada chamada — qualquer processo que importe e chame a função ganha as chaves do `.env` local como efeito colateral não pedido. Foi assim que a suíte vazou chaves reais para `test_provider.py` ao escrever os testes desta sessão. Comportamento PRÉ-EXISTENTE (nenhuma mudança de v1.9.24/25 o introduziu) e ortogonal ao objeto da sessão — fica fora de escopo. A contenção fica só no TESTE: um fixture autouse nomeado e documentado como contenção de efeito colateral de produção, não como configuração de teste, para não ser removido "por limpeza" sem que o vazamento seja entendido.
   - Suíte: 1455 → **1492**, todos passando; guard-rail do adaptador intacto; nenhum arquivo de `resultado/` tocado.
 - **v1.9.24** (2026-08-26) — **Pré-requisito de expansão de catálogo: `synthesize.resposta()` ganha a retentativa de transporte que o `Fetcher` já tinha desde a v1.9.6. Nenhum veredito regerado; nenhum `resultado/*.json` mudou.**
   - **(1) O gatilho.** A v1.9.23 registrou como observação fora de escopo: um `ServerError` transitório do Gemini abortou um lote de 35 filmes no primeiro item. Com o plano de expansão para ~300 filmes, um 5xx no filme 12 descartaria o lote inteiro, e refazer é caro em HORAS — o scraping roda a 2s por requisição sem paralelismo (§2).

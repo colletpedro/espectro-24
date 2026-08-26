@@ -50,14 +50,31 @@ def _sem_espera_real(monkeypatch):
 
 
 @pytest.fixture(autouse=True)
-def _sem_vazamento_de_env(monkeypatch):
-    """`classificar()`/`classificar_passe()` chamam `load_dotenv(RAIZ /
-    ".env")` — e o `.env` real deste repo TEM chaves. `load_dotenv` escreve
-    direto em `os.environ`, fora do controle do `monkeypatch`: sem este
-    bloqueio, cada chamada aqui vazaria `DEEPSEEK_API_KEY`/`GEMINI_API_KEY`
-    de verdade para o resto da suíte, quebrando testes não relacionados
-    (`detect_provider` passa a ver "múltiplas chaves presentes"). Os testes
-    deste arquivo não precisam de chave nenhuma — o SDK é falso."""
+def _conter_o_efeito_colateral_de_producao_do_load_dotenv(monkeypatch):
+    """NÃO é configuração de teste — é CONTENÇÃO de um efeito colateral que
+    já existe no código de PRODUÇÃO, e que só aparece aqui porque este
+    arquivo é o primeiro a chamar `classificar()`/`classificar_passe()`/
+    `gate_taxonomia.classificar()` de dentro da suíte.
+
+    Os oito scripts que a Entrega 2 (v1.9.25) tocou chamam
+    `load_dotenv(RAIZ / ".env")` de DENTRO da função de classificação — não
+    no import do módulo, no CORPO da função que este arquivo invoca. É
+    dívida de produção registrada em SPEC.md (§3[D], "`load_dotenv` como
+    efeito colateral de produção"), não corrigida nesta sessão por escopo.
+    `load_dotenv` escreve direto em `os.environ`, fora do alcance do
+    `monkeypatch` (que só reverte o que ELE mudou) — e o `.env` real deste
+    repositório TEM chaves. Sem este bloqueio, cada chamada aqui vazaria
+    `DEEPSEEK_API_KEY`/`GEMINI_API_KEY` de verdade para o RESTO da suíte,
+    quebrando testes não relacionados (`detect_provider` passa a ver
+    "múltiplas chaves presentes") — foi exatamente o que aconteceu antes
+    deste fixture existir.
+
+    **Se remover este fixture "por limpeza", o vazamento volta em
+    silêncio** — nenhum teste NESTE arquivo falharia por causa disso; a
+    falha apareceria em `test_provider.py`, sem nada apontando para a causa
+    aqui. Os testes deste arquivo não precisam de chave nenhuma — o SDK é
+    falso — então bloquear `load_dotenv` não muda o que está sob teste.
+    """
     monkeypatch.setattr("dotenv.load_dotenv", lambda *a, **kw: False)
 
 
