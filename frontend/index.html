@@ -38,10 +38,23 @@
     <section class="mosaic-wrap" aria-labelledby="availLabel">
       <h2 class="visually-hidden" id="availLabel">Disponíveis agora</h2>
       <div class="mosaic" id="filmCards"></div>
+      <!-- [v1.9.26] A legenda vira GLOSSÁRIO — decisão de produto, e o caso
+           de fronteira que fechou o critério "rótulo troca, prosa mantém"
+           da Entrega 3 (ver SPEC.md §0, "SEGUNDA EXCEÇÃO DELIBERADA").
+           Ela não cai limpo dos dois lados: é a legenda da faixa (função de
+           RÓTULO, que trocaria) escrita como enumeração dentro de uma frase
+           corrida (forma de PROSA, que manteria). As duas saídas puras eram
+           ruins — trocar seco ("...do filme: HATERS, MIXED, FANS") destrói a
+           única função que a legenda tem, que é EXPLICAR a faixa a quem
+           acabou de chegar; manter como estava cria descompasso com todas as
+           páginas de filme, onde os grupos já se chamam outra coisa.
+           A legenda é justamente onde o vocabulário novo se ENSINA: o rótulo
+           vem primeiro, a glosa entre parênteses logo atrás, e o leitor sai
+           daqui sabendo ler as páginas de filme. As cores de grupo ficam. -->
       <p class="mosaic-hint">sem nota, sem spoiler — a faixa na base de cada quadro é a distribuição real do filme:
-        <span class="mosaic-hint__neg">quem não gostou</span>,
-        <span class="mosaic-hint__med">quem ficou no meio</span>,
-        <span class="mosaic-hint__pos">quem gostou</span>.</p>
+        <span class="mosaic-hint__neg">HATERS</span> (quem não gostou),
+        <span class="mosaic-hint__med">MIXED</span> (quem ficou no meio),
+        <span class="mosaic-hint__pos">FANS</span> (quem gostou).</p>
     </section>
   </main>
 

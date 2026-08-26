@@ -362,6 +362,17 @@ a { color: inherit; }
   margin: 14px 10px 0;
   line-height: 1.6;
 }
+/* [v1.9.26] Os três viraram RÓTULO dentro de um glossário (ver o
+   comentário em index.html). Ganham o peso e o tracking que rótulo tem no
+   resto do site, para se lerem como NOME e não como palavra colorida no
+   meio da frase — a glosa entre parênteses ao lado fica na cor da frase.
+   As cores de grupo são as mesmas de antes (paleta paralela da home). */
+.mosaic-hint__neg,
+.mosaic-hint__med,
+.mosaic-hint__pos {
+  font-weight: 600;
+  letter-spacing: 0.1em;
+}
 .mosaic-hint__neg { color: var(--neg-home); }
 .mosaic-hint__med { color: var(--med-home); }
 .mosaic-hint__pos { color: var(--pos-home); }
@@ -444,120 +455,113 @@ a { color: inherit; }
   color: var(--text);
   margin: 0 0 14px;
 }
-/* [v1.9.26, Entrega 5] TIPOGRAFIA DA LINHA DE METADADOS — três OPÇÕES
-   ativas ao mesmo tempo, alternáveis por `?ficha=1|2|3` (ver
-   `FICHA_VARIANTE` em filme.js). São PROPOSTAS: o dono do projeto escolhe
-   uma olhando, e as outras duas saem do JS e do CSS na passada seguinte.
+/* [v1.9.26, Entrega 3] TIPOGRAFIA DA LINHA DE METADADOS — duas variantes
+   ATIVAS (`?ficha=sistema|inter`, ou o seletor no canto). São PROPOSTAS: o
+   dono escolhe uma olhando, e a outra sai do JS e do CSS na passada
+   seguinte. Só a linha de metadados; `.ficha__synopsis` não é tocada.
 
-   RESTRIÇÃO: nenhuma família nova. O site tem duas — serifada (--serif:
-   título, veredito, sinopse, observação de grupo) e monoespaçada (--mono:
-   rótulos, chips, micro-copy) — e uma terceira seria linguagem visual
-   nova, não um ajuste. As três opções trabalham dentro dessas duas, com
-   peso, tamanho, tracking, caixa e cor. Só a LINHA DE METADADOS muda; a
-   sinopse (`.ficha__synopsis`, serifada 1.08rem) não é tocada por nenhuma.
+   O PEDIDO ERA "a fonte que a Apple usa" — a San Francisco (SF Pro).
 
-   A regra base abaixo é a v1 (mono 0.68rem, caixa alta, tracking 0.08em,
-   --text-mute) e continua sendo o que qualquer variante herda; cada
-   `[data-ficha]` sobrescreve só o que muda. */
+   POR QUE NÃO EXISTE ARQUIVO DE SF PRO AQUI, e não é negociável: a licença
+   da Apple restringe o uso da SF Pro a mock-ups de interface para
+   iOS/OS X/tvOS. Ela não autoriza redistribuição nem uso como webfont em
+   site próprio. Baixar, auto-hospedar ou referenciar um arquivo de SF Pro
+   seria violação de licença, então nenhuma das duas variantes faz isso.
+   As duas saídas legais estão abaixo.
+
+   REGISTRO DE ESCOPO, para a spec não guardar uma frase falsa: sans NÃO é
+   família nova no projeto — `--sans` (pilha de sistema) já existe desde a
+   v1 e é o que `body` e os campos de busca usam. O que é novo é (a) usar
+   sans na linha EDITORIAL da ficha, que era monoespaçada, e (b) na
+   variante Inter, a primeira família NÃO-de-sistema, auto-hospedada, que o
+   projeto carrega. */
+
+/* [v1.9.26] Inter — SIL Open Font License 1.1, subconjunto latin,
+   variável 400–700, 85 KB. AUTO-HOSPEDADA em `frontend/fonts/`, com o
+   texto da licença ao lado (`fonts/OFL.txt`), como a OFL exige.
+
+   Caminho relativo, e não `<link>` para o Google Fonts, porque o
+   cabeçalho deste arquivo registra offline-first: o site funciona por
+   `file://`, sem CORS e sem requisição de rede. Um CDN de terceiro
+   quebraria as três coisas e ainda entregaria o IP do leitor a um
+   terceiro. O custo é 85 KB versionados.
+
+   `font-display: swap` — a linha de metadados aparece na hora com a
+   fallback e troca quando a fonte chega. `block` esconderia texto real
+   por até 3s por causa de uma linha secundária; `optional` poderia nunca
+   exibir a Inter, o que num teste de comparação de fontes derrota o
+   objetivo. */
+@font-face {
+  font-family: "Inter var";
+  src: url("../fonts/inter-latin-var.woff2") format("woff2");
+  font-weight: 400 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+:root {
+  /* Pilha de SISTEMA (variante 1). Entrega a San Francisco REAL em Mac e
+     iPhone — instalada no aparelho, nada distribuído pelo site —, Segoe UI
+     no Windows e Roboto no Android. Custo zero de carregamento; em troca,
+     a página muda de aparência conforme o aparelho. Distinta de `--sans`
+     (que começa em `system-ui`): aqui `-apple-system` vem primeiro, que é
+     o que garante a SF em Safari/WebKit mais antigo. */
+  --sans-ui: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+             Helvetica, Arial, sans-serif;
+  --sans-inter: "Inter var", -apple-system, BlinkMacSystemFont, "Segoe UI",
+                Roboto, Helvetica, Arial, sans-serif;
+}
+
+/* Base comum às duas variantes: o que muda entre elas é SÓ a família. O
+   resto do ajuste (corpo, peso, tracking, caixa, cor) é o mesmo, e é o que
+   tira a linha do ar de terminal — a monoespaçada em caixa alta com
+   tracking largo era o que fazia ela ler como log em vez de legenda. */
 .ficha__line {
-  font-family: var(--mono);
-  font-size: 0.68rem;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-  color: var(--text-mute);
-  line-height: 1.7;
-}
-.ficha__line .dot { opacity: 0.5; margin: 0 7px; }
-
-/* OPÇÃO 1 — "mono limpa". Mesma família, CAIXA ALTA FORA. É a caixa alta
-   que dá o ar de terminal: ela iguala a altura de todo caractere e apaga a
-   silhueta das palavras, que é o que o olho usa para ler nomes próprios
-   ("Bo Burnham" em versalete lê pior que "BO BURNHAM" sugere). Sem ela dá
-   para subir o corpo e afrouxar o tracking, e a linha vira legenda em vez
-   de log. */
-.ficha__line[data-ficha="1"] {
+  font-size: 0.86rem;
+  font-weight: 400;
+  letter-spacing: 0.005em;
   text-transform: none;
-  font-size: 0.78rem;
-  letter-spacing: 0.01em;
   color: var(--text-dim);
-  line-height: 1.65;
+  line-height: 1.6;
+  font-feature-settings: "kern" 1, "liga" 1;
 }
-.ficha__line[data-ficha="1"] .dot { margin: 0 8px; }
+.ficha__line .dot { opacity: 0.45; margin: 0 8px; }
 
-/* OPÇÃO 2 — "serifada". A linha migra para a MESMA serifada do título e do
-   veredito, em corpo pequeno. Vira continuação editorial da sinopse logo
-   acima (mesma família, mesmo ritmo, corpo menor e cor mais baixa marcando
-   a hierarquia) em vez de um bloco de outra natureza colado embaixo dela.
-   É a opção que mais se afasta do visual atual — e a mais "limpa" no
-   sentido do pedido. */
-.ficha__line[data-ficha="2"] {
-  font-family: var(--serif);
-  text-transform: none;
-  font-size: 0.95rem;
-  letter-spacing: 0;
-  color: var(--text-dim);
-  line-height: 1.55;
-}
-.ficha__line[data-ficha="2"] .dot { margin: 0 9px; opacity: 0.42; }
-
-/* OPÇÃO 3 — "crédito". Mantém mono e caixa alta, mas trata a linha como
-   crédito de rodapé de cartaz: corpo bem menor, tracking bem maior, peso e
-   cor recuados. Não fica mais "limpa" no sentido de legível — fica mais
-   limpa no sentido de sair da frente, deixando sinopse e barra dominarem o
-   topo. É a opção conservadora: nada de novo, só menos presença. */
-.ficha__line[data-ficha="3"] {
-  font-size: 0.6rem;
-  letter-spacing: 0.2em;
-  color: var(--text-mute);
-  opacity: 0.82;
-  line-height: 1.9;
-}
-.ficha__line[data-ficha="3"] .dot { margin: 0 6px; opacity: 0.4; }
-.ficha__fallback {
-  margin-top: 10px;
-  font-family: var(--mono);
-  font-size: 0.64rem;
-  letter-spacing: 0.06em;
-  text-transform: uppercase;
-  color: var(--warn);
+.ficha__line[data-ficha="sistema"] { font-family: var(--sans-ui); }
+.ficha__line[data-ficha="inter"] {
+  font-family: var(--sans-inter);
+  /* A Inter tem altura-x maior que a SF e que a Segoe: no mesmo corpo ela
+     lê maior e mais apertada. Compensado aqui, para a comparação entre as
+     duas ser de DESENHO e não de tamanho. */
+  font-size: 0.83rem;
+  letter-spacing: 0.008em;
 }
 
 /* =======================================================================
-   [v1.9.26, Entrega 2] BARRA DE PROPORÇÃO — o sinal do topo da página.
+   [v1.9.26] BARRA DE PROPORÇÃO — duas variantes, ambas CONTÍNUAS.
 
-   MESMA LINGUAGEM da faixa da base do card do mosaico da home
-   (`.mosaic-cell__strip`, v1.9.18): faixa contínua, flex horizontal, uma
-   fatia por grupo, largura proporcional ao peso real, mesma ordem de
-   leitura. Aqui ela é maior e nomeada por legenda, porque na home é uma
-   pista de relance dentro de um card e aqui é o principal sinal da página.
+   O DEFEITO DA RODADA 1, que define esta: a variante "sólida" separava as
+   faixas com 3px de respiro escuro, e leu como "três barras separadas,
+   cortadas com vão no meio". O erro era conceitual: a recepção de um filme
+   é UMA população particionada em três, não três medições independentes —
+   um vão desenha três objetos onde o dado tem um. As duas variantes abaixo
+   têm ZERO gap, ZERO fio separador, ZERO respiro escuro.
 
-   TRÊS VARIANTES DE COR, todas ATIVAS (`?barra=a|b|c`). São PROPOSTAS: o
-   dono do projeto escolhe uma, e as outras duas saem daqui e do JS.
-
-   O QUE AS TRÊS RESPEITAM, e não é negociável em nenhuma delas:
-   · NADA de verde/vermelho. Semáforo codifica certo/errado, e este produto
-     se recusa a julgar os grupos. A identidade que já existe (laranja para
-     negativas, dourado para o meio, azul para positivas — `:root`) é o
-     PONTO DE PARTIDA; as variantes exploram DENTRO dela.
-   · Fundo escuro, e as três fatias distinguíveis mesmo quando uma é muito
-     estreita — `the-godfather` tem 2% em negativas, que é a pior fatia do
-     catálogo. Daí o respiro/fio entre faixas em todas as três: com faixas
-     coladas, 2% de laranja ao lado de dourado vira uma borda de dourado.
-   · NÃO DEPENDER SÓ DE COR: em todas há separação geométrica visível entre
-     faixas adjacentes (respiro escuro, fio claro ou trama), então a
-     partição continua legível em escala de cinza e para daltonismo.
+   O QUE VALE NAS DUAS: paleta oficial dos grupos (nada de verde/vermelho —
+   semáforo codifica certo/errado, e o produto se recusa a julgar os
+   grupos); largura em percentual exato somando 100; nenhum número dentro
+   da barra.
    ======================================================================= */
 .proportion { margin: 18px 0 6px; }
 .proportion__bar {
+  position: relative;
   display: flex;
   width: 100%;
-  overflow: hidden;                 /* arredonda as pontas da faixa toda */
+  height: 14px;
+  overflow: hidden;             /* arredonda as pontas da faixa inteira */
   border-radius: 3px;
-  background: #1a1d25;              /* trilha, para o caso de fatia nenhuma */
+  background: #1a1d25;          /* trilha, caso não haja fatia nenhuma */
 }
-/* As fatias recebem `flex: <pct> 0 0%` inline (ver `proporcaoBlock`), então
-   o respiro sai do espaço livre e a proporção entre elas fica exata. */
-.proportion__seg { display: block; min-width: 0; }
 
 .proportion__legend {
   list-style: none;
@@ -576,14 +580,16 @@ a { color: inherit; }
   font-weight: 600;
 }
 .proportion__swatch { width: 10px; height: 10px; border-radius: 2px; flex: none; }
+.proportion__swatch[data-group="negativas"] { background: var(--neg); }
+.proportion__swatch[data-group="medianas"]  { background: var(--med); }
+.proportion__swatch[data-group="positivas"] { background: var(--pos); }
+.proportion__legend li[data-group="negativas"] .proportion__legend-label { color: var(--neg); }
+.proportion__legend li[data-group="medianas"]  .proportion__legend-label { color: var(--med); }
+.proportion__legend li[data-group="positivas"] .proportion__legend-label { color: var(--pos); }
 
-/* [v1.9.26, Entrega 1] O DISCLAIMER DA COTA, preservado. Migrou de baixo
-   do cabeçalho "EM DETALHE" (que saiu) para cá — a informação que ele
-   carrega ("profundidade igual por grupo ≠ peso igual") fica ancorada no
-   objeto que mostra o peso. Discreto, mas nunca escondido: é ele que
-   impede o leitor de concluir que listas do mesmo tamanho significam
-   grupos do mesmo peso. Reusa a linguagem do antigo `.disclaimer` (filete
-   à esquerda, corpo menor, cor recuada), em corpo ainda menor. */
+/* [v1.9.26, Entrega 1] O DISCLAIMER DA COTA, preservado. A informação que
+   ele carrega ("profundidade igual por grupo ≠ peso igual") fica ancorada
+   no objeto que mostra o peso. Discreto, nunca escondido. */
 .proportion__note {
   font-size: 0.82rem;
   line-height: 1.5;
@@ -594,72 +600,179 @@ a { color: inherit; }
   max-width: 44rem;
 }
 
-/* --- VARIANTE A — "sólida" -------------------------------------------
-   A paleta OFICIAL dos grupos (--neg/--med/--pos), em cheio, com respiro
-   escuro entre as faixas. É a leitura mais direta: a mesma cor que o
-   cabeçalho de cada grupo usa lá embaixo, então a faixa laranja do topo e
-   o rótulo laranja do bloco são visivelmente o mesmo grupo. O respiro de
-   3px é a separação que não depende de cor. */
-.proportion[data-variante="a"] .proportion__bar { height: 10px; gap: 3px; }
-.proportion[data-variante="a"] .proportion__seg[data-group="negativas"],
-.proportion[data-variante="a"] .proportion__swatch[data-group="negativas"] { background: var(--neg); }
-.proportion[data-variante="a"] .proportion__seg[data-group="medianas"],
-.proportion[data-variante="a"] .proportion__swatch[data-group="medianas"]  { background: var(--med); }
-.proportion[data-variante="a"] .proportion__seg[data-group="positivas"],
-.proportion[data-variante="a"] .proportion__swatch[data-group="positivas"] { background: var(--pos); }
-.proportion[data-variante="a"] li[data-group="negativas"] .proportion__legend-label { color: var(--neg); }
-.proportion[data-variante="a"] li[data-group="medianas"]  .proportion__legend-label { color: var(--med); }
-.proportion[data-variante="a"] li[data-group="positivas"] .proportion__legend-label { color: var(--pos); }
+/* --- VARIANTE "CONTÍNUA" ----------------------------------------------
+   Camadas empilhadas, cada uma começando na borda esquerda e terminando
+   na sua fronteira com uma aresta DIAGONAL; a de baixo (positivas)
+   preenche a barra toda. Ver `barraContinua` em filme.js para a geometria
+   e para o cálculo adaptativo de `--diag`.
 
-/* --- VARIANTE B — "sóbria" -------------------------------------------
-   A paleta PARALELA do mosaico da home (--neg-home/--med-home/--pos-home:
-   terracota, ocre, azul-ardósia). O argumento a favor: esta barra e a
-   faixa da home mostram O MESMO DADO (a distribuição real), e com as
-   mesmas cores a página do filme lê como o zoom da célula que trouxe o
-   leitor até ela. O argumento contra: diverge da cor dos cabeçalhos de
-   grupo logo abaixo. Separação por FIO CLARO em vez de respiro escuro —
-   com as cores apagadas, um vão preto pesaria mais que as faixas. */
-.proportion[data-variante="b"] .proportion__bar { height: 12px; gap: 0; }
-.proportion[data-variante="b"] .proportion__seg + .proportion__seg {
-  box-shadow: inset 1px 0 0 #f2f0ea59;
+   `--diag` é a projeção horizontal da diagonal. O JS grava só
+   `--menor-pct` (o percentual da menor fatia, um número sem unidade — que
+   é DADO e nunca muda); a conversão para pixel acontece aqui, com `cqw`
+   (1cqw = 1% da largura do contêiner). Assim a diagonal acompanha resize
+   sozinha, sem `ResizeObserver` e sem um recálculo em JS. */
+.proportion { container-type: inline-size; }
+.proportion[data-variante="continua"] .proportion__bar {
+  --menor-pct: 10;                      /* substituído pelo JS, por filme */
+  --diag: clamp(3px, calc(var(--menor-pct) * 0.55 * 1cqw), 12px);
 }
-.proportion[data-variante="b"] .proportion__seg[data-group="negativas"],
-.proportion[data-variante="b"] .proportion__swatch[data-group="negativas"] { background: var(--neg-home); }
-.proportion[data-variante="b"] .proportion__seg[data-group="medianas"],
-.proportion[data-variante="b"] .proportion__swatch[data-group="medianas"]  { background: var(--med-home); }
-.proportion[data-variante="b"] .proportion__seg[data-group="positivas"],
-.proportion[data-variante="b"] .proportion__swatch[data-group="positivas"] { background: var(--pos-home); }
-.proportion[data-variante="b"] li[data-group="negativas"] .proportion__legend-label { color: var(--neg-home); }
-.proportion[data-variante="b"] li[data-group="medianas"]  .proportion__legend-label { color: var(--med-home); }
-.proportion[data-variante="b"] li[data-group="positivas"] .proportion__legend-label { color: var(--pos-home); }
+/* Navegador sem unidade de contêiner: diagonal fixa e conservadora —
+   menor que o teto, para não comer a fatia estreita de um filme como
+   `the-godfather` onde não dá para medir o contêiner. */
+@supports not (container-type: inline-size) {
+  .proportion[data-variante="continua"] .proportion__bar { --diag: 5px; }
+}
+.proportion__layer {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  display: block;
+  /* A aresta diagonal precisa de uma marca própria para não depender só
+     do contraste entre as duas cores adjacentes — sem ela, quem não
+     distingue laranja de dourado perde a fronteira. `drop-shadow`
+     acompanha o recorte do `clip-path`, então a sombra traça EXATAMENTE a
+     diagonal, e só ela: nas outras arestas o deslocamento de 1px cai
+     dentro da própria camada e não aparece. É a menor marca possível que
+     resolve — uma dobra, não um corte: as cores continuam encostadas. */
+  filter: drop-shadow(1px 0 0 #0b0c1088);
+}
+.proportion__layer[data-group="negativas"] { background: var(--neg); }
+.proportion__layer[data-group="medianas"]  { background: var(--med); }
+.proportion__layer[data-group="positivas"] { background: var(--pos); }
 
-/* --- VARIANTE C — "angular" ------------------------------------------
-   Paleta oficial + TRAMA DIRECIONAL: cada grupo ganha um ângulo próprio, e
-   os dois extremos ganham ângulos ESPELHADOS (negativas ↘ 45°, positivas
-   ↗ -45°), com o meio na horizontal. Espelhado e não arbitrário de
-   propósito: dar a um dos lados uma textura mais densa que a do outro
-   seria dizer algo sobre ele, e §0 proíbe. É a variante que menos depende
-   de cor — em escala de cinza, ou com daltonismo severo, as três continuam
-   se distinguindo pela DIREÇÃO da trama e não só pelo tom. O respiro cai
-   para 2px porque a trama já separa sozinha. */
-.proportion[data-variante="c"] .proportion__bar { height: 12px; gap: 2px; }
-.proportion[data-variante="c"] .proportion__seg[data-group="negativas"] {
-  background: repeating-linear-gradient(45deg, var(--neg) 0 3px, #0b0c1059 3px 6px);
+/* --- VARIANTE "DIVERGENTE" --------------------------------------------
+   Diverging stacked bar (Heiberger & Robbins 2014, JSS 57(5)). O meio é
+   partido ao meio e montado a cavaleiro sobre o zero; negativas crescem
+   para a esquerda dali, positivas para a direita. As duas metades do meio
+   são adjacentes e da mesma cor, então leem como um bloco só atravessado
+   pela marca do zero — que é o desenho do artigo. Ver `barraDivergente`.
+
+   Aqui as fatias são lado a lado (sem camadas) e sem diagonal: a marca do
+   zero é o elemento visual que ancora a leitura, e uma diagonal por cima
+   dela competiria. Consequência boa e vale registrar: sem diagonal, a
+   fatia estreita não perde nada — ela ocupa a largura cheia do seu
+   percentual. */
+.proportion__seg { display: block; height: 100%; flex: none; }
+.proportion__seg[data-group="negativas"] { background: var(--neg); }
+.proportion__seg[data-group="medianas"]  { background: var(--med); }
+.proportion__seg[data-group="positivas"] { background: var(--pos); }
+
+/* A marca do ponto de divergência — discreta, como pedido: um fio claro
+   atravessando a barra inteira, sem rótulo e sem número. `translateX(-50%)`
+   para o fio ficar CENTRADO no zero e não começar nele (meio pixel de cada
+   lado importa quando a fatia vizinha tem 6px). */
+.proportion__zero {
+  position: absolute;
+  top: -1px;
+  bottom: -1px;
+  width: 2px;
+  transform: translateX(-50%);
+  background: var(--text);
+  opacity: 0.85;
+  z-index: 4;
+  pointer-events: none;
 }
-.proportion[data-variante="c"] .proportion__seg[data-group="medianas"] {
-  background: repeating-linear-gradient(0deg, var(--med) 0 3px, #0b0c1059 3px 6px);
+
+/* =======================================================================
+   [v1.9.26] SELETOR DE VARIANTES — TEMPORÁRIO, sai com as variantes.
+
+   Ferramenta de comparação para o dono do projeto escolher entre as duas
+   barras e as duas tipografias vendo as quatro alternarem em tempo real,
+   no mesmo filme e na mesma rolagem. NÃO é recurso do produto: quando a
+   escolha for feita, este bloco, `montarSeletor()` em filme.js e as
+   alternativas perdedoras saem na mesma passada.
+
+   Ele se ANUNCIA como teste ("teste visual", em caixa alta e cor recuada)
+   em vez de se disfarçar de painel de configuração — um controle de
+   desenvolvimento que parece produto é o tipo de coisa que sobrevive por
+   engano. Discreto e canto superior direito, para não disputar com o
+   título nem cobrir a barra que ele existe para comparar.
+   ======================================================================= */
+.vswitch {
+  position: fixed;
+  top: 12px;
+  right: 12px;
+  z-index: 90;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  padding: 10px 12px 11px;
+  background: #14161df2;
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  backdrop-filter: blur(6px);
+  box-shadow: 0 6px 22px #00000059;
 }
-.proportion[data-variante="c"] .proportion__seg[data-group="positivas"] {
-  background: repeating-linear-gradient(-45deg, var(--pos) 0 3px, #0b0c1059 3px 6px);
+.vswitch__head {
+  font-family: var(--mono);
+  font-size: 0.54rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--text-mute);
+  margin: 0;
 }
-/* A amostra da legenda é pequena demais para uma trama de 3px se ler; nela
-   a variante C mostra a cor cheia, que é o que a trama modula. */
-.proportion[data-variante="c"] .proportion__swatch[data-group="negativas"] { background: var(--neg); }
-.proportion[data-variante="c"] .proportion__swatch[data-group="medianas"]  { background: var(--med); }
-.proportion[data-variante="c"] .proportion__swatch[data-group="positivas"] { background: var(--pos); }
-.proportion[data-variante="c"] li[data-group="negativas"] .proportion__legend-label { color: var(--neg); }
-.proportion[data-variante="c"] li[data-group="medianas"]  .proportion__legend-label { color: var(--med); }
-.proportion[data-variante="c"] li[data-group="positivas"] .proportion__legend-label { color: var(--pos); }
+.vswitch__group {
+  border: 0;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+.vswitch__group legend {
+  float: left;                 /* legend não participa de flex; float tira
+                                  ela do fluxo sem virar position:absolute */
+  width: 42px;
+  font-family: var(--mono);
+  font-size: 0.56rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--text-mute);
+  padding: 0;
+}
+.vswitch__opt {
+  font-family: var(--mono);
+  font-size: 0.58rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--text-dim);
+  background: var(--bg-elev-2);
+  border: 1px solid transparent;
+  border-radius: 5px;
+  padding: 5px 8px;
+  min-height: 26px;
+  cursor: pointer;
+  transition: color 0.14s, background 0.14s, border-color 0.14s;
+}
+.vswitch__opt:hover { color: var(--text); border-color: #3a4152; }
+.vswitch__opt:focus-visible { outline: 2px solid #3b82f6aa; outline-offset: 2px; }
+/* Estado LIGADO pelo mesmo atributo que o leitor de tela lê — sem classe
+   paralela que possa dessincronizar do `aria-pressed`. */
+.vswitch__opt[aria-pressed="true"] {
+  color: var(--bg);
+  background: var(--text-dim);
+  border-color: var(--text-dim);
+}
+@media (max-width: 640px) {
+  /* No mobile o painel desce para o rodapé: no topo ele cobriria o
+     back-link e o ano do filme, que ficam exatamente ali. */
+  .vswitch {
+    top: auto;
+    bottom: 10px;
+    right: 10px;
+    left: 10px;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 6px 10px;
+  }
+  .vswitch__head { width: 100%; }
+  /* 40px: é um controle que o dono vai tocar muitas vezes seguidas no
+     telefone, comparando as variantes. 26px de desktop é apertado demais
+     para isso. */
+  .vswitch__opt { min-height: 40px; padding: 10px 12px; }
+}
 
 /* [v1.9.19] VEREDITO — Entrega 2. Uma frase, montada por TEMPLATE sobre o
    lift já computado (ver `veredito()` em filme.js) — zero LLM.

@@ -14,3 +14,7 @@ resultado/cache/
 # de UMA rodada, não um artefato a versionar (ao contrário de dados/bruto/,
 # que É versionado: é o superset reusável, §3[B']).
 dados/lote/
+
+# Config local do Claude Code (launch.json do servidor de preview, etc.).
+# Ferramenta de quem está editando, não do projeto — nunca entra no repo.
+.claude/
