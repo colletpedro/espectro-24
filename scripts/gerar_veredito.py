@@ -155,7 +155,7 @@ def _campos_fora_da_chave(d: dict) -> dict:
 def gerar_um(slug: str, *, modelo: str | None = None,
              provider: str | None = None, saida: Path | None = None,
              so_veredito: bool = False, usar_aberturas: bool = True,
-             aberturas: dict | None = None) -> dict:
+             aberturas: dict | None = None, best_of: int | None = None) -> dict:
     """Regera o veredito de UM filme e grava. Devolve a telemetria.
 
     `saida` grava noutro diretório (é o que o A/B de modelo usa, para os dois
@@ -173,8 +173,9 @@ def gerar_um(slug: str, *, modelo: str | None = None,
         # chamada isolada: o histórico é o disco AGORA, menos este filme —
         # o mesmo que a regeneração completa veria para ele.
         aberturas = historico_para(snapshot_de_aberturas(), slug)
+    kw = {} if best_of is None else {"n": best_of}
     bloco = V.gerar(documento, model=modelo, provider=provider,
-                    aberturas=aberturas)
+                    aberturas=aberturas, **kw)
     if bloco is None:
         return {"slug": slug, "ok": False, "motivo": "sem_bloco_eixos"}
 
@@ -198,6 +199,9 @@ def gerar_um(slug: str, *, modelo: str | None = None,
 
     return {"slug": slug, "ok": True, "origem": bloco["origem"],
             "abertura": bloco.get("abertura"),
+            "n_chamadas": bloco.get("n_chamadas"),
+            "uso": bloco.get("uso"), "latencia_s": bloco.get("latencia_s"),
+            "criterio": bloco.get("criterio_decisivo"),
             "modelo": bloco["modelo"], "flags": bloco["flags"],
             "motivo": bloco["motivo"], "n_palavras": len(bloco["texto"].split()),
             "texto": bloco["texto"], "elapsed_s": round(time.time() - t0, 1)}
@@ -215,6 +219,9 @@ def main() -> None:
     ap.add_argument("--so-veredito", action="store_true",
                     help="grava só slug + bloco (comparação, não publicação)")
     ap.add_argument("--log", help="jsonl com a telemetria de cada filme")
+    ap.add_argument("--best-of", type=int,
+                    help="override de BEST_OF_N para este estágio — existe "
+                         "para MEDIR o efeito de N, não para uso corrente")
     ap.add_argument("--sem-desempate-de-abertura", action="store_true",
                     help="desliga o desempate por padrão de abertura "
                          "(v1.9.22) — existe para medir o efeito dele")
@@ -238,7 +245,8 @@ def main() -> None:
                      saida=Path(args.saida) if args.saida else None,
                      so_veredito=args.so_veredito,
                      usar_aberturas=not args.sem_desempate_de_abertura,
-                     aberturas=historico_para(snapshot, slug))
+                     aberturas=historico_para(snapshot, slug),
+                     best_of=args.best_of)
         if log:
             with log.open("a", encoding="utf-8") as fh:
                 fh.write(json.dumps(r, ensure_ascii=False) + "\n")

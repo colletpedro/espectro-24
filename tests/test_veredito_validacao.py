@@ -647,3 +647,57 @@ def test_sem_historico_a_selecao_e_a_da_v1921(bf_tematico):
     escolha = V.selecionar([longo, curto], bf_tematico)
     assert escolha["texto"] == curto
     assert escolha["criterio_decisivo"] == "brevidade"
+
+
+# ===========================================================================
+# [v1.9.23] CONECTIVO CONTRASTIVO — a segunda dimensão da métrica de forma
+# ===========================================================================
+# A métrica NÃO reprova nada e nada no código reage a ela. Ela existe para
+# que a decisão sobre o molde contrastivo seja tomada com número à vista —
+# e para que a próxima dimensão que a repetição ocupar não fique sem medida.
+
+def test_conectivo_identifica_o_PRIMEIRO_do_texto():
+    assert V.conectivo_contrastivo(
+        "A maioria elogia o roteiro, enquanto a maioria critica o ritmo."
+    ) == "enquanto"
+    assert V.conectivo_contrastivo(
+        "A maioria elogia o roteiro. Em contrapartida, a maioria critica."
+    ) == "em contrapartida"
+
+
+def test_locucao_vence_a_palavra_solta_que_ela_contem():
+    """"ao passo que" tem de ser identificado inteiro, e "no entanto" não
+    pode ser lido como "entanto" — a lista é varrida por POSIÇÃO no texto,
+    e a locução começa antes."""
+    assert V.conectivo_contrastivo(
+        "A maioria elogia, ao passo que a maioria critica.") == "ao passo que"
+    assert V.conectivo_contrastivo(
+        "A maioria elogia. No entanto, a maioria critica.") == "no entanto"
+
+
+def test_texto_sem_conectivo_e_declarado_e_nao_inventado():
+    """O contraste pode estar só na pontuação ou na oposição semântica. A
+    métrica declara a ausência em vez de forçar uma categoria — inventar
+    conectivo onde não há tornaria a distribuição uma ficção."""
+    assert V.conectivo_contrastivo(
+        "A maioria elogia o roteiro; a maioria critica o ritmo."
+    ) == V.CONECTIVO_AUSENTE
+
+
+def test_o_conectivo_nao_casa_dentro_de_outra_palavra():
+    """Mesma família do bug de substring da v1.6.2 e do marcador `tom` da
+    v1.9.21: fronteira de palavra explícita, sempre."""
+    assert V.conectivo_contrastivo(
+        "A trama enquadrada pela câmera agrada a maioria."
+    ) == V.CONECTIVO_AUSENTE
+
+
+def test_a_metrica_de_conectivo_NAO_reprova_nada(bf_tematico):
+    """17 de 17 no mesmo molde pode ser o PISO DO GÊNERO — não existe forma
+    neutra de dizer "A acha X, B acha o contrário" em português que não seja
+    contrastiva. A métrica mede; quem decide se é defeito é o dono do
+    projeto."""
+    texto = ("A maioria de quem não recomenda aponta o ritmo arrastado, "
+             "enquanto a maioria de quem recomenda destaca a atmosfera densa.")
+    assert V.conectivo_contrastivo(texto) == "enquanto"
+    assert V.validar(texto, bf_tematico) == []

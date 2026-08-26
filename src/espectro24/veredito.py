@@ -539,6 +539,62 @@ def padrao_de_abertura(texto: str) -> str:
 
 
 # ===========================================================================
+# [v1.9.23] CONECTIVO CONTRASTIVO — a segunda dimensão da métrica de forma
+# ===========================================================================
+# **A observação de MÉTODO que este bloco existe para registrar, e que vale
+# mais que a métrica em si:** a cada correção, a repetição MIGRA de dimensão,
+# e a métrica vigente captura exatamente a dimensão que acabou de ser
+# consertada — ficando cega para aquela que a repetição passou a ocupar.
+#
+#   v1.9.21 consertou o TEXTO IDÊNTICO.        Métrica: Jaccard.
+#           A repetição migrou para a ABERTURA — e o Jaccard não via.
+#   v1.9.22 consertou a ABERTURA.              Métrica: padrão de abertura.
+#           A repetição migrou para o MOLDE CONTRASTIVO — 17 de 17 filmes
+#           `valorativo` construindo o contraste com "Enquanto…, …" ou
+#           equivalente direto, variando só o substantivo de abertura.
+#
+# **A regra que fica:** estender a métrica ANTES de declarar vitória, não
+# depois. Uma dimensão não medida não é uma dimensão sem defeito — é uma
+# dimensão sem número.
+#
+# **E o que este número NÃO é.** 17/17 no mesmo molde pode ser o PISO DO
+# GÊNERO: um produto cujo conteúdo é a divergência entre dois grupos tende
+# ao período contrastivo, e não existe forma neutra de dizer "A acha X, B
+# acha o contrário" em português que não seja contrastiva. A métrica existe
+# para que a decisão seja tomada com o número à vista — ela não decide que
+# há defeito, e nada no código reage a ela.
+
+# Ordem importa: a lista é varrida na ordem em que está escrita e o PRIMEIRO
+# a casar no texto é o principal. As locuções vêm antes das palavras soltas
+# que elas contêm ("ao passo que" antes de "que" não é problema porque "que"
+# não está na lista; "no entanto" antes de "entanto" sim).
+_CONECTIVOS_CONTRASTIVOS = (
+    "ao passo que", "em contrapartida", "por outro lado", "em contraste",
+    "por sua vez", "no entanto", "entretanto", "todavia", "contudo",
+    "enquanto", "porem", "embora", "ainda que", "apesar de", "ja entre",
+    "ja os", "ja as", "ja a ", "ja o ", "mas ",
+)
+
+_RE_CONECTIVO = [(c, re.compile(rf"(?<![a-z]){re.escape(c)}"))
+                 for c in _CONECTIVOS_CONTRASTIVOS]
+
+CONECTIVO_AUSENTE = "nenhum"
+
+
+def conectivo_contrastivo(texto: str) -> str:
+    """O conectivo contrastivo PRINCIPAL — o primeiro que aparece no texto.
+
+    `CONECTIVO_AUSENTE` quando não há nenhum: o contraste pode estar só na
+    pontuação (ponto e vírgula, dois pontos) ou na oposição semântica sem
+    marcador, e essas são formas legítimas que a lista não deve inventar.
+    """
+    plano = _normalizar(texto)
+    achados = [(m.start(), c) for c, rx in _RE_CONECTIVO
+               for m in [rx.search(plano)] if m]
+    return min(achados)[1] if achados else CONECTIVO_AUSENTE
+
+
+# ===========================================================================
 # Validações pós-parsing — em CÓDIGO, nunca só no prompt
 # ===========================================================================
 
