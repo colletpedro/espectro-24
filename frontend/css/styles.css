@@ -444,6 +444,21 @@ a { color: inherit; }
   color: var(--text);
   margin: 0 0 14px;
 }
+/* [v1.9.26, Entrega 5] TIPOGRAFIA DA LINHA DE METADADOS — três OPÇÕES
+   ativas ao mesmo tempo, alternáveis por `?ficha=1|2|3` (ver
+   `FICHA_VARIANTE` em filme.js). São PROPOSTAS: o dono do projeto escolhe
+   uma olhando, e as outras duas saem do JS e do CSS na passada seguinte.
+
+   RESTRIÇÃO: nenhuma família nova. O site tem duas — serifada (--serif:
+   título, veredito, sinopse, observação de grupo) e monoespaçada (--mono:
+   rótulos, chips, micro-copy) — e uma terceira seria linguagem visual
+   nova, não um ajuste. As três opções trabalham dentro dessas duas, com
+   peso, tamanho, tracking, caixa e cor. Só a LINHA DE METADADOS muda; a
+   sinopse (`.ficha__synopsis`, serifada 1.08rem) não é tocada por nenhuma.
+
+   A regra base abaixo é a v1 (mono 0.68rem, caixa alta, tracking 0.08em,
+   --text-mute) e continua sendo o que qualquer variante herda; cada
+   `[data-ficha]` sobrescreve só o que muda. */
 .ficha__line {
   font-family: var(--mono);
   font-size: 0.68rem;
@@ -453,6 +468,51 @@ a { color: inherit; }
   line-height: 1.7;
 }
 .ficha__line .dot { opacity: 0.5; margin: 0 7px; }
+
+/* OPÇÃO 1 — "mono limpa". Mesma família, CAIXA ALTA FORA. É a caixa alta
+   que dá o ar de terminal: ela iguala a altura de todo caractere e apaga a
+   silhueta das palavras, que é o que o olho usa para ler nomes próprios
+   ("Bo Burnham" em versalete lê pior que "BO BURNHAM" sugere). Sem ela dá
+   para subir o corpo e afrouxar o tracking, e a linha vira legenda em vez
+   de log. */
+.ficha__line[data-ficha="1"] {
+  text-transform: none;
+  font-size: 0.78rem;
+  letter-spacing: 0.01em;
+  color: var(--text-dim);
+  line-height: 1.65;
+}
+.ficha__line[data-ficha="1"] .dot { margin: 0 8px; }
+
+/* OPÇÃO 2 — "serifada". A linha migra para a MESMA serifada do título e do
+   veredito, em corpo pequeno. Vira continuação editorial da sinopse logo
+   acima (mesma família, mesmo ritmo, corpo menor e cor mais baixa marcando
+   a hierarquia) em vez de um bloco de outra natureza colado embaixo dela.
+   É a opção que mais se afasta do visual atual — e a mais "limpa" no
+   sentido do pedido. */
+.ficha__line[data-ficha="2"] {
+  font-family: var(--serif);
+  text-transform: none;
+  font-size: 0.95rem;
+  letter-spacing: 0;
+  color: var(--text-dim);
+  line-height: 1.55;
+}
+.ficha__line[data-ficha="2"] .dot { margin: 0 9px; opacity: 0.42; }
+
+/* OPÇÃO 3 — "crédito". Mantém mono e caixa alta, mas trata a linha como
+   crédito de rodapé de cartaz: corpo bem menor, tracking bem maior, peso e
+   cor recuados. Não fica mais "limpa" no sentido de legível — fica mais
+   limpa no sentido de sair da frente, deixando sinopse e barra dominarem o
+   topo. É a opção conservadora: nada de novo, só menos presença. */
+.ficha__line[data-ficha="3"] {
+  font-size: 0.6rem;
+  letter-spacing: 0.2em;
+  color: var(--text-mute);
+  opacity: 0.82;
+  line-height: 1.9;
+}
+.ficha__line[data-ficha="3"] .dot { margin: 0 6px; opacity: 0.4; }
 .ficha__fallback {
   margin-top: 10px;
   font-family: var(--mono);
@@ -462,30 +522,171 @@ a { color: inherit; }
   color: var(--warn);
 }
 
+/* =======================================================================
+   [v1.9.26, Entrega 2] BARRA DE PROPORÇÃO — o sinal do topo da página.
+
+   MESMA LINGUAGEM da faixa da base do card do mosaico da home
+   (`.mosaic-cell__strip`, v1.9.18): faixa contínua, flex horizontal, uma
+   fatia por grupo, largura proporcional ao peso real, mesma ordem de
+   leitura. Aqui ela é maior e nomeada por legenda, porque na home é uma
+   pista de relance dentro de um card e aqui é o principal sinal da página.
+
+   TRÊS VARIANTES DE COR, todas ATIVAS (`?barra=a|b|c`). São PROPOSTAS: o
+   dono do projeto escolhe uma, e as outras duas saem daqui e do JS.
+
+   O QUE AS TRÊS RESPEITAM, e não é negociável em nenhuma delas:
+   · NADA de verde/vermelho. Semáforo codifica certo/errado, e este produto
+     se recusa a julgar os grupos. A identidade que já existe (laranja para
+     negativas, dourado para o meio, azul para positivas — `:root`) é o
+     PONTO DE PARTIDA; as variantes exploram DENTRO dela.
+   · Fundo escuro, e as três fatias distinguíveis mesmo quando uma é muito
+     estreita — `the-godfather` tem 2% em negativas, que é a pior fatia do
+     catálogo. Daí o respiro/fio entre faixas em todas as três: com faixas
+     coladas, 2% de laranja ao lado de dourado vira uma borda de dourado.
+   · NÃO DEPENDER SÓ DE COR: em todas há separação geométrica visível entre
+     faixas adjacentes (respiro escuro, fio claro ou trama), então a
+     partição continua legível em escala de cinza e para daltonismo.
+   ======================================================================= */
+.proportion { margin: 18px 0 6px; }
+.proportion__bar {
+  display: flex;
+  width: 100%;
+  overflow: hidden;                 /* arredonda as pontas da faixa toda */
+  border-radius: 3px;
+  background: #1a1d25;              /* trilha, para o caso de fatia nenhuma */
+}
+/* As fatias recebem `flex: <pct> 0 0%` inline (ver `proporcaoBlock`), então
+   o respiro sai do espaço livre e a proporção entre elas fica exata. */
+.proportion__seg { display: block; min-width: 0; }
+
+.proportion__legend {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px 18px;
+  margin: 9px 0 0;
+  padding: 0;
+}
+.proportion__legend li { display: inline-flex; align-items: center; gap: 7px; }
+.proportion__legend-label {
+  font-family: var(--mono);
+  font-size: 0.68rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  font-weight: 600;
+}
+.proportion__swatch { width: 10px; height: 10px; border-radius: 2px; flex: none; }
+
+/* [v1.9.26, Entrega 1] O DISCLAIMER DA COTA, preservado. Migrou de baixo
+   do cabeçalho "EM DETALHE" (que saiu) para cá — a informação que ele
+   carrega ("profundidade igual por grupo ≠ peso igual") fica ancorada no
+   objeto que mostra o peso. Discreto, mas nunca escondido: é ele que
+   impede o leitor de concluir que listas do mesmo tamanho significam
+   grupos do mesmo peso. Reusa a linguagem do antigo `.disclaimer` (filete
+   à esquerda, corpo menor, cor recuada), em corpo ainda menor. */
+.proportion__note {
+  font-size: 0.82rem;
+  line-height: 1.5;
+  color: var(--text-mute);
+  border-left: 2px solid var(--border);
+  padding-left: 12px;
+  margin: 14px 0 0;
+  max-width: 44rem;
+}
+
+/* --- VARIANTE A — "sólida" -------------------------------------------
+   A paleta OFICIAL dos grupos (--neg/--med/--pos), em cheio, com respiro
+   escuro entre as faixas. É a leitura mais direta: a mesma cor que o
+   cabeçalho de cada grupo usa lá embaixo, então a faixa laranja do topo e
+   o rótulo laranja do bloco são visivelmente o mesmo grupo. O respiro de
+   3px é a separação que não depende de cor. */
+.proportion[data-variante="a"] .proportion__bar { height: 10px; gap: 3px; }
+.proportion[data-variante="a"] .proportion__seg[data-group="negativas"],
+.proportion[data-variante="a"] .proportion__swatch[data-group="negativas"] { background: var(--neg); }
+.proportion[data-variante="a"] .proportion__seg[data-group="medianas"],
+.proportion[data-variante="a"] .proportion__swatch[data-group="medianas"]  { background: var(--med); }
+.proportion[data-variante="a"] .proportion__seg[data-group="positivas"],
+.proportion[data-variante="a"] .proportion__swatch[data-group="positivas"] { background: var(--pos); }
+.proportion[data-variante="a"] li[data-group="negativas"] .proportion__legend-label { color: var(--neg); }
+.proportion[data-variante="a"] li[data-group="medianas"]  .proportion__legend-label { color: var(--med); }
+.proportion[data-variante="a"] li[data-group="positivas"] .proportion__legend-label { color: var(--pos); }
+
+/* --- VARIANTE B — "sóbria" -------------------------------------------
+   A paleta PARALELA do mosaico da home (--neg-home/--med-home/--pos-home:
+   terracota, ocre, azul-ardósia). O argumento a favor: esta barra e a
+   faixa da home mostram O MESMO DADO (a distribuição real), e com as
+   mesmas cores a página do filme lê como o zoom da célula que trouxe o
+   leitor até ela. O argumento contra: diverge da cor dos cabeçalhos de
+   grupo logo abaixo. Separação por FIO CLARO em vez de respiro escuro —
+   com as cores apagadas, um vão preto pesaria mais que as faixas. */
+.proportion[data-variante="b"] .proportion__bar { height: 12px; gap: 0; }
+.proportion[data-variante="b"] .proportion__seg + .proportion__seg {
+  box-shadow: inset 1px 0 0 #f2f0ea59;
+}
+.proportion[data-variante="b"] .proportion__seg[data-group="negativas"],
+.proportion[data-variante="b"] .proportion__swatch[data-group="negativas"] { background: var(--neg-home); }
+.proportion[data-variante="b"] .proportion__seg[data-group="medianas"],
+.proportion[data-variante="b"] .proportion__swatch[data-group="medianas"]  { background: var(--med-home); }
+.proportion[data-variante="b"] .proportion__seg[data-group="positivas"],
+.proportion[data-variante="b"] .proportion__swatch[data-group="positivas"] { background: var(--pos-home); }
+.proportion[data-variante="b"] li[data-group="negativas"] .proportion__legend-label { color: var(--neg-home); }
+.proportion[data-variante="b"] li[data-group="medianas"]  .proportion__legend-label { color: var(--med-home); }
+.proportion[data-variante="b"] li[data-group="positivas"] .proportion__legend-label { color: var(--pos-home); }
+
+/* --- VARIANTE C — "angular" ------------------------------------------
+   Paleta oficial + TRAMA DIRECIONAL: cada grupo ganha um ângulo próprio, e
+   os dois extremos ganham ângulos ESPELHADOS (negativas ↘ 45°, positivas
+   ↗ -45°), com o meio na horizontal. Espelhado e não arbitrário de
+   propósito: dar a um dos lados uma textura mais densa que a do outro
+   seria dizer algo sobre ele, e §0 proíbe. É a variante que menos depende
+   de cor — em escala de cinza, ou com daltonismo severo, as três continuam
+   se distinguindo pela DIREÇÃO da trama e não só pelo tom. O respiro cai
+   para 2px porque a trama já separa sozinha. */
+.proportion[data-variante="c"] .proportion__bar { height: 12px; gap: 2px; }
+.proportion[data-variante="c"] .proportion__seg[data-group="negativas"] {
+  background: repeating-linear-gradient(45deg, var(--neg) 0 3px, #0b0c1059 3px 6px);
+}
+.proportion[data-variante="c"] .proportion__seg[data-group="medianas"] {
+  background: repeating-linear-gradient(0deg, var(--med) 0 3px, #0b0c1059 3px 6px);
+}
+.proportion[data-variante="c"] .proportion__seg[data-group="positivas"] {
+  background: repeating-linear-gradient(-45deg, var(--pos) 0 3px, #0b0c1059 3px 6px);
+}
+/* A amostra da legenda é pequena demais para uma trama de 3px se ler; nela
+   a variante C mostra a cor cheia, que é o que a trama modula. */
+.proportion[data-variante="c"] .proportion__swatch[data-group="negativas"] { background: var(--neg); }
+.proportion[data-variante="c"] .proportion__swatch[data-group="medianas"]  { background: var(--med); }
+.proportion[data-variante="c"] .proportion__swatch[data-group="positivas"] { background: var(--pos); }
+.proportion[data-variante="c"] li[data-group="negativas"] .proportion__legend-label { color: var(--neg); }
+.proportion[data-variante="c"] li[data-group="medianas"]  .proportion__legend-label { color: var(--med); }
+.proportion[data-variante="c"] li[data-group="positivas"] .proportion__legend-label { color: var(--pos); }
+
 /* [v1.9.19] VEREDITO — Entrega 2. Uma frase, montada por TEMPLATE sobre o
-   lift já computado (ver `veredito()` em filme.js) — zero LLM. Vem logo
-   depois da ficha, antes de qualquer bullet: é a primeira coisa que o
-   dado diz, no lugar que a parede de texto narrativo ocupava até aqui. */
+   lift já computado (ver `veredito()` em filme.js) — zero LLM.
+   [v1.9.26, Entrega 1] MUDOU DE POSIÇÃO, não de conteúdo: era a primeira
+   coisa depois da ficha, passa a fechar a análise, depois dos bullets e
+   antes da narrativa colapsada. Conclusão lida ANTES da evidência é
+   asserção; lida DEPOIS é fecho — e o topo agora tem a barra, que diz
+   "quanta gente de cada lado" sem precisar de leitura. Só a margem
+   superior muda (respiro de seção nova, no lugar do respiro de "colado na
+   ficha"); família, corpo, cor e largura são os mesmos de sempre. */
 .verdict {
   font-family: var(--serif);
   font-size: 1.22rem;
   line-height: 1.5;
   color: var(--text);
-  margin: 4px 0 8px;
+  margin: 40px 0 8px;
   max-width: 40rem;
 }
 
-/* divisor "EM DETALHE" */
-.detail-divider { margin: 34px 0 4px; }
+/* divisor — [v1.9.26] só a linha arco-íris. O rótulo "EM DETALHE · TEMA A
+   TEMA" saiu da tela (Entrega 1: não há mais um resumo antes dele do qual
+   separar "o detalhe"; os bullets vêm direto), e o `.disclaimer` que vinha
+   embaixo virou `.proportion__note`, sob a barra. A classe
+   `.detail-divider__label` fica no arquivo sem uso? Não — foi removida
+   junto, como a v1.9.19 fez com a tabela: remoção é remoção. */
+.detail-divider { margin: 30px 0 4px; }
 .detail-divider .spectrum-line { margin-bottom: 16px; }
-.detail-divider__label {
-  font-family: var(--mono);
-  font-size: 0.72rem;
-  letter-spacing: 0.2em;
-  text-transform: uppercase;
-  color: var(--text-dim);
-  margin-bottom: 10px;
-}
 .disclaimer {
   font-size: 0.9rem;
   color: var(--text-mute);
@@ -613,44 +814,168 @@ a { color: inherit; }
 .group[data-group="medianas"]  .theme__bar span { background: var(--med); }
 .group[data-group="positivas"] .theme__bar span { background: var(--pos); }
 
-/* [v1.9.19, Entrega 6] exemplo parafraseado — o "+" parecia rótulo
-   estático (achado de uso: ninguém percebia que era clicável). Chevron no
-   padrão de ícone do site (mesmo stroke/round-cap do back-link e das
-   `.disclosure`), dentro de um PILL na cor do grupo com opacidade baixa —
-   afordance visível mesmo em repouso, sem esperar o hover. */
+/* =======================================================================
+   [v1.9.26, Entrega 4] O DISCLOSURE "APROFUNDAR".
+
+   O QUE SAIU E POR QUÊ. A v1.9.19 (Entrega 6) trocou um "+" que ninguém
+   percebia ser clicável por um PILL na cor do grupo — fundo preenchido,
+   `border-radius: 999px`, padding de CTA. Resolveu a afordance e criou
+   outro problema: dentro de um bullet cujo elemento principal é o NOME do
+   tema, o pill virava a coisa mais chamativa da linha. A referência agora
+   é disclosure editorial minimalista (GOV.UK Details e os disclosures
+   "flush" de design systems modernos): fundo transparente, sem borda, sem
+   cápsula, sem raio grande — o controle pertence ao bloco editorial, não é
+   um componente colado nele.
+
+   NENHUMA LINGUAGEM VISUAL NOVA: a família é a monoespaçada que já rotula
+   tudo no site, o chevron é o mesmo ícone (mesmo stroke, mesmo round-cap)
+   do back-link e das `.disclosure`, e a cor é a do próprio grupo — só que
+   com intensidade MENOR que o nome do tema e que a barra de frequência,
+   que continuam sendo o que o olho pega primeiro.
+
+   O que NÃO mudou: a posição do controle dentro do bullet, as barras de
+   frequência, a hierarquia tipográfica, as cores dos grupos, o conteúdo
+   expandido e a lógica de expansão/colapso (botão + `aria-expanded` +
+   classe no alvo). É redesenho de aparência e de animação, e só. */
 .theme__toggle {
-  background: var(--bg-elev-2);
-  border: 1px solid transparent;
-  border-radius: 999px;
-  padding: 6px 12px 6px 14px;
+  background: none;
+  border: 0;
+  border-radius: 3px;              /* só para o anel de foco não ficar duro */
+  padding: 9px 2px 9px 0;
+  min-height: 40px;                /* área de toque; ver @media (hover:none) */
+  margin-top: 2px;
   cursor: pointer;
   font-family: var(--mono);
-  font-size: 0.66rem;
-  letter-spacing: 0.1em;
+  font-size: 0.64rem;
+  font-weight: 500;
+  letter-spacing: 0.14em;
   text-transform: uppercase;
   color: var(--text-dim);
+  opacity: 0.78;                   /* o degrau de peso contra nome e barra */
   display: inline-flex;
   align-items: center;
   gap: 8px;
-  transition: color 0.15s, background 0.15s, border-color 0.15s;
+  transition: color 0.16s, opacity 0.16s;
 }
-.group[data-group="negativas"] .theme__toggle { background: var(--neg-soft); }
-.group[data-group="medianas"]  .theme__toggle { background: var(--med-soft); }
-.group[data-group="positivas"] .theme__toggle { background: var(--pos-soft); }
-.theme__toggle:hover { color: var(--text); border-color: currentColor; }
-.theme__toggle:focus-visible { outline: 2px solid #3b82f6aa; outline-offset: 3px; }
-.theme__toggle .chevron { transition: transform 0.2s; display: inline-flex; }
+/* Cor do grupo, e nada além dela. Sem fundo, os tokens `--neg-soft`/
+   `--med-soft`/`--pos-soft` (que eram o preenchimento do pill) ficam sem
+   NENHUM uso na folha. Registrados aqui e mantidos em `:root` de
+   propósito: apagar cor da paleta é decisão de paleta, não efeito colateral
+   de um redesenho de controle. */
+.group[data-group="negativas"] .theme__toggle { color: var(--neg); }
+.group[data-group="medianas"]  .theme__toggle { color: var(--med); }
+.group[data-group="positivas"] .theme__toggle { color: var(--pos); }
+
+/* ESTADOS: repouso (acima), hover, foco, aberto. Todos pela mesma via —
+   opacidade —, para que nenhum deles reintroduza caixa ou borda. */
+.theme__toggle:hover { opacity: 1; }
+.theme__toggle[aria-expanded="true"] { opacity: 1; }
+.theme__toggle:focus-visible {
+  outline: 2px solid #3b82f6aa;
+  outline-offset: 2px;
+  opacity: 1;
+}
+/* Chevron menor que o das `.disclosure` — mesmo desenho, peso menor, como
+   o resto do controle. Gira acompanhando a abertura, na MESMA curva e na
+   MESMA duração da área, para os dois lerem como um movimento só. */
+.theme__toggle .chevron {
+  display: inline-flex;
+  transition: transform 0.32s cubic-bezier(0, 0, 0.58, 1);
+}
+.theme__toggle .chevron svg { width: 12px; height: 12px; }
 .theme__toggle[aria-expanded="true"] .chevron { transform: rotate(180deg); }
+
+/* -----------------------------------------------------------------------
+   A ANIMAÇÃO — o requisito principal da entrega, acima do visual.
+
+   A sensação pedida: o conteúdo estava ESCONDIDO EMBAIXO do bullet e
+   desliza para fora dele até a posição final. Espacial e vertical, não
+   fade. Três camadas fazem isso, e cada uma tem um trabalho:
+
+     .theme__example        a caixa que ABRE — `grid-template-rows` de
+                            `0fr` para `1fr`. É o jeito de animar altura
+                            "até o conteúdo" sem altura fixa e sem medir
+                            nada em JS (o `max-height` chutado é o hack
+                            que esta estrutura existe para evitar).
+     .theme__example-clip   RECORTA. É o que faz o texto parecer estar
+                            atrás da borda de cima, e não simplesmente
+                            aparecendo.
+     .theme__example-inner  DESLIZA. Começa 10px ACIMA da posição final —
+                            portanto, no instante zero, atrás da borda
+                            superior do recorte — e desce enquanto a caixa
+                            cresce. A opacidade COMPLEMENTA (sobe mais
+                            rápido que o deslize), nunca substitui.
+
+   A CURVA foi escolhida por medição, não por gosto — a altura da caixa
+   amostrada a 0/80/160/240/320ms, abrindo e fechando, em três candidatas:
+
+     0.22,0.61,0.36,1   abrir 0 35 76 95 100   fechar 100 16  2  0 0
+     0.4,0,0.2,1        abrir 0  6 60 92 100   fechar 100 58  5  0 0
+     0,0,0.58,1  ←      abrir 0 14 47 82 100   fechar 100 39 10  1 0
+
+   A primeira (uma ease-out agressiva) responde bem ao abrir mas colapsa
+   84% da altura nos primeiros 80ms ao fechar — lê como corte, não como
+   recolher. A segunda (ease-in-out) tem a metade do movimento espremida
+   entre 80 e 160ms nos dois sentidos, e ainda dá 80ms de nada no começo
+   da abertura, o que num controle de manipulação direta lê como atraso.
+   `cubic-bezier(0, 0, 0.58, 1)` — a `ease-out` clássica — é a única em
+   que nenhum quarto da duração carrega mais que ~40% do movimento nos
+   DOIS sentidos: responde no instante do clique e chega devagar.
+
+   SEM spring e SEM bounce: os dois pontos de controle ficam dentro de
+   [0,1], então nem a altura nem o deslize ultrapassam o valor final em
+   instante nenhum — as duas séries acima são monotônicas.
+
+   320ms: curto o bastante para não ficar entre o clique e a leitura,
+   longo o bastante para o olho ver a DIREÇÃO do movimento, que é o efeito
+   todo. O fechamento é a MESMA declaração ao contrário: nada de duração
+   nem de curva assimétrica.
+
+   TODA a caixa fica no `-inner` (margem, filete, padding): se a margem
+   ficasse no elemento externo, o estado fechado teria 10px de sobra.
+
+   `visibility` no `-clip` é o que impede a regressão de acessibilidade que
+   esta técnica traz de brinde: ao contrário de `display: none`, uma linha
+   de grid de altura zero NÃO tira o conteúdo da árvore de acessibilidade,
+   e um leitor de tela leria a paráfrase de todo bullet fechado da página.
+   `visibility: hidden` tira; o `transition-delay` de 0.32s segura a
+   visibilidade até o fim da animação de fechar, para o texto não sumir de
+   uma vez no meio dela.
+   ----------------------------------------------------------------------- */
 .theme__example {
-  display: none;
+  display: grid;
+  grid-template-rows: 0fr;
+  transition: grid-template-rows 0.32s cubic-bezier(0, 0, 0.58, 1);
+}
+.theme__example.is-open { grid-template-rows: 1fr; }
+
+.theme__example-clip {
+  overflow: hidden;
+  min-height: 0;                   /* sem isto o item de grid não encolhe */
+  visibility: hidden;
+  transition: visibility 0s linear 0.32s;
+}
+.theme__example.is-open .theme__example-clip {
+  visibility: visible;
+  transition-delay: 0s;
+}
+
+.theme__example-inner {
   margin-top: 10px;
   font-size: 0.94rem;
   line-height: 1.55;
   color: var(--text-dim);
   border-left: 2px solid var(--border);
   padding-left: 14px;
+  transform: translateY(-10px);
+  opacity: 0;
+  transition: transform 0.32s cubic-bezier(0, 0, 0.58, 1),
+              opacity 0.22s cubic-bezier(0, 0, 0.58, 1);
 }
-.theme__example.is-open { display: block; }
+.theme__example.is-open .theme__example-inner {
+  transform: translateY(0);
+  opacity: 1;
+}
 .theme__flag {
   display: block;
   margin-top: 8px;
@@ -812,6 +1137,25 @@ a { color: inherit; }
 
 @media (prefers-reduced-motion: reduce) {
   * { transition: none !important; animation: none !important; }
+
+  /* [v1.9.26, Entrega 4] O disclosure "APROFUNDAR" cai para troca de
+     estado instantânea, e é o comportamento CERTO, não uma degradação: a
+     regra genérica acima já mata as três transições (linha de grid,
+     transform, opacidade), e o estado final de cada uma é o correto em
+     aberto e em fechado. As duas declarações abaixo são explícitas de
+     propósito — a de `transform` porque um `translateY(-10px)` congelado
+     seria um texto deslocado para sempre se a regra genérica algum dia
+     mudar, e a de `visibility` porque o atraso de 0.32s que segura o
+     fechamento não tem mais nada a segurar sem animação. */
+  .theme__example.is-open .theme__example-inner { transform: none; }
+  .theme__example-clip { transition-delay: 0s; }
+}
+
+/* Área de toque: onde não há hover (toque), o controle sobe para 44px, o
+   mínimo confortável. No desktop 40px já basta e mantém o ritmo vertical
+   entre os bullets (`.themes` tem `gap: 20px`). */
+@media (hover: none) {
+  .theme__toggle { min-height: 44px; padding: 11px 2px 11px 0; }
 }
 
 /* ===================================================================

@@ -82,6 +82,78 @@ faltava chegando.
 > recolhido mantém os mesmos temas, barras e paráfrases de sempre (a
 > invariante 2 acima), só atrás de um `<details>` fechado por padrão.
 
+> **SEGUNDA EXCEÇÃO DELIBERADA na INTERFACE (frontend, v1.9.26) — o
+> VOCABULÁRIO DE RÓTULO dos três grupos, e SÓ ele.** Decisão do dono do
+> projeto, tomada com objetivo de **conexão geracional e uso em campanha
+> de marketing**: onde a tela nomeia um grupo como RÓTULO, ela passa a
+> escrever `negativas` → **HATERS**, `medianas` → **MIXED**, `positivas`
+> → **FANS**.
+>
+> **O trade-off, escrito por extenso, porque é ele que a exceção custa.**
+> Este §0 exige neutralidade de tratamento entre o grupo negativo e o
+> positivo, e **"Fans/Haters" não é um par simétrico**: "hater" imputa
+> MÁ-FÉ a quem não gostou — descreve alguém movido por hostilidade, não
+> alguém que assistiu e achou ruim —, enquanto "fã" imputa entusiasmo,
+> que é uma disposição favorável e não uma acusação. O produto passa,
+> portanto, a nomear um dos dois lados com uma palavra que carrega juízo
+> sobre a MOTIVAÇÃO de quem escreveu, e o outro não. Isso contradiz a
+> invariante 2 ("a perspectiva minoritária continua analisada com o mesmo
+> rigor... sem desdém, sem ironia, sem sugerir que quem pensa assim está
+> errado") no plano do vocabulário. Não há como registrar isto de outro
+> jeito: é uma perda de neutralidade, aceita conscientemente em troca de
+> alcance, e não uma equivalência que o documento possa fingir.
+>
+> **O ESCOPO é o que delimita a perda, e é a metade obrigatória da
+> decisão.** A exceção é de VOCABULÁRIO DE RÓTULO, restrita a onde o nome
+> do grupo aparece ISOLADO, identificando a coluna:
+>
+> - o cabeçalho de cada bloco de bullets;
+> - a legenda e a alternativa textual (`aria-label`) da barra de
+>   proporção (§3[E], v1.9.26);
+> - qualquer `aria-label` cuja função é dizer de qual grupo é o elemento;
+> - qualquer lugar da home onde o grupo seja nomeado como rótulo (hoje:
+>   nenhum — a home não nomeia grupo nenhum).
+>
+> **A PROSA do produto permanece NEUTRA, e pelo mesmo motivo.** Quando a
+> palavra aparece como adjetivo dentro de uma frase corrida, ela carrega
+> o contexto da sentença e não funciona como nome próprio do grupo — e é
+> na prosa que mora a afirmação sobre pessoas. Continuam em
+> `positivas`/`medianas`/`negativas`, ou em redação neutra:
+>
+> - o texto do VEREDITO (§3[V]), inclusive o prefixo de bucket dominante
+>   montado em CÓDIGO ("O meio-termo é o maior grupo da recepção (~45%
+>   das notas)") — este é prosa determinística e é **proibido trocar**;
+> - o texto da NARRATIVA e a `observacao_geral` de cada grupo;
+> - os avisos curtos dentro do bloco do grupo ("modo reduzido", "sem
+>   análise temática") — são frase, não rótulo, e o cabeçalho logo acima
+>   já identificou o grupo;
+> - o disclaimer da cota.
+>
+> **A NEUTRALIDADE ESTRUTURAL DESTE §0 NÃO É AFETADA e continua
+> integralmente em vigor.** A exceção não toca em nada do que este
+> parágrafo governa de verdade: a **cota 40/40/40** continua literal, a
+> **mesma margem de lift** (§2.5) vale para os dois lados, e negativas e
+> positivas continuam com **o mesmo leiaute, o mesmo espaço estrutural e
+> a mesma quantidade de bullets** — 6 e 6 nos 35 filmes do catálogo,
+> conferido depois da mudança. Trocar a etiqueta de uma coluna não move
+> um único número, um único bullet nem um único pixel de estrutura.
+>
+> **O DADO não muda em nada.** `negativas`/`medianas`/`positivas`
+> continuam sendo as chaves do JSON, do briefing, dos prompts, dos
+> validadores, desta spec e dos testes. Nenhum arquivo de `resultado/`
+> foi tocado; nenhum filme foi regerado. A troca vive num mapa do
+> frontend (`GRUPO_LABEL`, `frontend/js/filme.js`) e em nenhum outro
+> lugar.
+>
+> **REVERSÃO BARATA, DE PROPÓSITO.** O rename é de UM PONTO SÓ porque a
+> hipótese ainda não foi testada em público: se o ganho de conexão não se
+> confirmar, voltar aos rótulos antigos é **uma edição de uma linha**, e
+> não uma varredura por um produto inteiro. O custo de errar foi
+> desenhado para ser baixo antes de a aposta ser feita.
+>
+> **ANOTADO, NÃO IMPLEMENTADO:** "MID" é mais idiomático que "MIXED" em
+> português brasileiro, e era o termo da versão originalmente arquivada.
+
 ---
 **Objetivo:** dado o nome de um filme, agregar reviews de usuários do Letterboxd em três buckets por nota e produzir, via LLM, uma síntese temática de cada bucket — pontos recorrentes com frequência — permitindo entender a recepção do filme sem viés de leitura seletiva e sem spoilers.
 
@@ -5263,6 +5335,46 @@ Falha em qualquer uma → **1 retentativa** com reforço (listando os trechos pe
 
    O frontend (`frontend/`) aplica exatamente o mesmo tratamento e **tolera JSONs sem `distribuicao`** (filmes antigos/fallback) sem quebrar: omite os shares e usa o disclaimer antigo. Ordem visual dos grupos permanece negativas → medianas → positivas em qualquer caso — **a ordem não é reordenada por peso**; quem muda de ordem é só a prosa do MOVIMENTO 3.
 
+   **(v1.9.26) A PÁGINA DO FILME, ordem publicada.** O frontend divergiu do
+   render de terminal em ORDEM e em ÊNFASE — o terminal continua como
+   descrito acima; `filme.html` é o que o leitor vê, e nele a ordem é:
+
+   1. ano + título
+   2. botão "reviews no Letterboxd"
+   3. ficha (sinopse + linha de metadados)
+   4. **BARRA DE PROPORÇÃO** + o disclaimer da cota logo abaixo dela
+   5. linha arco-íris
+   6. bullets por sentimento (dois blocos, ou três sob a exceção do §0)
+   7. **VEREDITO** (§3[V])
+   8. narrativa completa, colapsada
+   9. micro-pesquisa
+
+   **A BARRA DE PROPORÇÃO** é a divisão dos três grupos numa faixa contínua,
+   largura proporcional ao peso real, mesma linguagem visual da faixa da base
+   do card do mosaico da home (v1.9.18). Ela lê `share_real` — a MESMA fonte
+   que os cabeçalhos de grupo imprimem, e não `distribuicao.por_bucket`, que
+   carrega os mesmos valores: uma fonte só por fato é o que impede a barra e
+   os cabeçalhos de divergirem em silêncio. **Nenhum número dentro da barra**
+   (os percentuais continuam nos cabeçalhos), e a alternativa textual é o
+   `aria-label` com rótulo e peso dos três — número permitido pela v1.9.20,
+   que proibiu contagem bruta de review e não proporção.
+
+   **O DISCLAIMER DA COTA continua obrigatório e mudou só de lugar.** Ele
+   impede a leitura errada mais provável da página — listas de bullets do
+   mesmo tamanho não são grupos do mesmo peso — e por isso mora agora
+   **debaixo da barra**, ancorado no objeto que mostra o peso. As duas
+   variantes da v1.4.0 continuam existindo, escolhidas pela presença do dado;
+   sem distribuição não há barra, e o texto volta a ser o da v1.2.1 inteiro.
+
+   **O cabeçalho "EM DETALHE · TEMA A TEMA" foi REMOVIDO** — com o veredito
+   no rodapé, não há mais um resumo antes dele do qual separar "o detalhe".
+
+   **Os RÓTULOS dos três grupos na tela são HATERS/MIXED/FANS** desde a
+   v1.9.26, onde o nome aparece isolado; a prosa continua em
+   negativas/medianas/positivas, e as chaves do dado não mudam. Escopo,
+   trade-off e política de reversão em **§0, "SEGUNDA EXCEÇÃO DELIBERADA na
+   INTERFACE"**.
+
 #### As TRÊS COLUNAS ALINHADAS POR EIXO (v1.9.14) — a promessa estrutural do produto
 
 Até aqui o frontend exibia três listas de temas empilhadas, cada uma na sua
@@ -5416,6 +5528,30 @@ As três incógnitas abaixo foram resolvidas na Fase 1; os achados já estão in
 ---
 
 ## Changelog
+- **v1.9.26** (2026-08-26) — **FRONTEND: a página do filme é reordenada em torno de uma BARRA DE PROPORÇÃO no topo, o veredito desce para o fecho, os três grupos ganham NOME DE RÓTULO (HATERS/MIXED/FANS) e o disclosure do bullet deixa de parecer botão.** Sessão de interface: os únicos arquivos alterados são `frontend/js/filme.js` e `frontend/css/styles.css`. **Nenhum filme regenerado, nenhum `resultado/*.json` tocado, nenhum estágio do pipeline alterado** — nada de §3[D], §3[D2], §3[D3], §3[V], seleção, coleta, classificação, verificação, briefing, prompt, validadores ou adaptador de LLM. Conferido no diff antes do commit. Suíte Python: **1492 passando, intacta**.
+  - **NUMERAÇÃO, registro honesto.** `SPEC_VERSION` (config.py) e o título deste documento **continuam em 1.9.25**, e o teste que amarra os dois (`test_spec_version.py`) segue verde. A constante carimba `resultado/*.json` e existe para dizer sob qual versão do PIPELINE um artefato foi gerado; esta sessão não mudou pipeline nenhum, e subi-la faria o próximo filme gerado carimbar uma versão que não descreve nada do que ele contém. É o mesmo tratamento que as v1.9.17–v1.9.20 receberam (quatro versões de frontend numeradas no changelog enquanto a constante ficou parada) — com a diferença de que aqui a entrada é escrita NA SESSÃO, e não como dívida paga quatro versões depois. **Decisão em aberto para o dono do projeto:** se a numeração de frontend passar a subir o título, esta entrada e a constante sobem juntas.
+  - **(1) A página reordenada (Entrega 1).** Ordem nova, de cima para baixo: ano + título → botão de reviews → ficha (sinopse + metadados) → **BARRA DE PROPORÇÃO** (nova) → linha arco-íris → bullets por sentimento, direto → **VEREDITO** (movido) → narrativa colapsada → pesquisa. O topo passa a ser ocupado pelo sinal DIMENSIONAL ("quanta gente de cada lado", legível de relance, sem leitura) em vez do VERBAL; o veredito é uma CONCLUSÃO, e conclusão lida antes da evidência é asserção, lida depois é fecho. O cabeçalho **"EM DETALHE · TEMA A TEMA" SAI** — não há mais um resumo antes dele do qual separar "o detalhe". O veredito muda de POSIÇÃO e **não de conteúdo**: mesmo texto, mesma origem, mesma geração, §3[V] intocado.
+  - **(2) O DISCLAIMER DA COTA foi preservado, em forma mínima, e reancorado.** Ele é o que impede a leitura errada mais provável da página — listas de bullets do mesmo tamanho NÃO significam grupos do mesmo peso — e migra de baixo do cabeçalho removido para uma linha discreta **debaixo da barra**, onde a substância fica ancorada no objeto que mostra o peso: *"A barra é o peso real de cada grupo. A análise abaixo tem profundidade igual nos três — o tamanho das listas não indica peso."* O ramo sem distribuição real (o filme sintético degradado) mantém o texto da v1.2.1 inteiro, porque sem barra a regra volta a valer sozinha. Nenhum algarismo de contagem de review (v1.9.20 preservada).
+  - **(3) A EXCEÇÃO AUTOMÁTICA DO MEIO (§0, v1.9.19) NÃO foi quebrada pela reordenação, e isso foi verificado e não presumido.** Quem decide se `medianas` sobe ao destaque é `sentimentGroupsBlock`, lendo `bucketDominante(f.buckets)` — função do DADO, não da posição do bloco na página; `veredictoBlock` não lê nem escreve esse estado (o prefixo do meio dominante já vem concatenado do Python dentro de `f.veredito.texto`). Varredura nos **35 filmes + o degradado**: os únicos com os três grupos em destaque são `napoleon-2023` (45% no meio) e `friday-the-13th-2009` (41%), exatamente os dois que a v1.9.19 registrou; os outros 33 mantêm o meio recolhido. O prefixo do dominante continua neutro nos dois.
+  - **(4) BARRA DE PROPORÇÃO (Entrega 2), com TRÊS variantes de cor ainda ABERTAS.** Faixa contínua fatiada em três, largura proporcional ao peso real, na mesma ordem de leitura de sempre — a **mesma linguagem** da faixa da base do card do mosaico da home (`.mosaic-cell__strip`, v1.9.18), reusada em forma e em ideia, não um segundo componente com outra gramática. **Sem número dentro da barra**: os percentuais de peso continuam nos cabeçalhos de grupo, um lugar só. A FONTE do número é `b.share_real` — a MESMA que os cabeçalhos imprimem —, não `distribuicao.por_bucket`, que carrega os mesmos valores: ler duas fontes para o mesmo fato é como se cria divergência silenciosa. As larguras usam `flex-grow` proporcional com base 0, para que o respiro entre faixas saia do espaço livre e a proporção entre elas fique exata. **Verificado nos 35: a barra e os cabeçalhos nunca discordam.**
+    - **Alternativa textual:** a barra é `role="img"` com `aria-label` completo (rótulo e peso dos três). Mesma decisão da v1.9.20 item 2 — o `aria-label` da barra não é texto visível, é a alternativa dela para leitor de tela, e o PERCENTUAL de peso é número permitido (o que saiu do produto foi contagem bruta de review, que não aparece aqui). Sem ele a barra seria decoração muda, e ela é agora o principal sinal do topo.
+    - **Restrições que valem nas três variantes:** nada de verde/vermelho (semáforo codifica certo/errado, e o produto se recusa a julgar os grupos — a paleta laranja/dourado/azul já existente é o ponto de partida, não algo a substituir); legível em fundo escuro; separação **geométrica** entre faixas adjacentes em todas, para a partição não depender só de cor. A pior fatia do catálogo — `the-godfather`, 2% em negativas — mede 14,3px em desktop e 6,6px em 375px, e continua visível nas três.
+    - **As três (`?barra=a|b|c`, ATIVAS, o dono escolhe):** **A "sólida"** — paleta oficial dos grupos, respiro escuro de 3px, casa com a cor dos cabeçalhos logo abaixo; **B "sóbria"** — paleta paralela do mosaico da home, fio claro entre faixas, faz a página ler como o zoom da célula que trouxe o leitor até ela, ao custo de divergir dos cabeçalhos; **C "angular"** — paleta oficial + trama direcional com ângulos **espelhados** entre os dois extremos (negativas ↘, positivas ↗, meio horizontal), a que menos depende de cor. O espelhamento é deliberado: dar a um lado uma textura mais densa que a do outro seria dizer algo sobre ele, e §0 proíbe.
+  - **(5) NOMENCLATURA DOS GRUPOS: `negativas` → HATERS, `medianas` → MIXED, `positivas` → FANS (Entrega 3).** Decisão de produto do dono, com objetivo de conexão geracional e campanha de marketing. **O trade-off, o escopo, a preservação da neutralidade ESTRUTURAL e a política de reversão estão escritos por extenso em §0** ("SEGUNDA EXCEÇÃO DELIBERADA na INTERFACE") — inclusive o reconhecimento de que "Fans/Haters" não é um par simétrico, e por quê. Resumo operacional:
+    - **Troca onde o nome é RÓTULO ISOLADO** (cabeçalho do bloco de bullets, legenda e `aria-label` da barra, `aria-label` que identifica o grupo de um elemento), com o **mesmo destaque visual de antes**: mesmo peso, mesma cor de grupo, mesma posição.
+    - **Mantém em PROSA** (veredito, narrativa, `observacao_geral`, prefixo do meio dominante gerado em código, avisos curtos de piso, disclaimer da cota). Verificado nos 35: **zero** veredito, aviso ou resumo de grupo colapsado contém rótulo novo.
+    - **AS CHAVES INTERNAS NÃO MUDAM.** `negativas`/`medianas`/`positivas` seguem em JSON, briefing, prompts, validadores, spec, testes e nos atributos `data-group` que o CSS casa. Nenhum arquivo de `resultado/` tocado, nenhum filme regerado.
+    - **UM PONTO SÓ.** O mapa vive em `GRUPO_LABEL` (`frontend/js/filme.js`) e em nenhum outro lugar; reverter os três rótulos é **uma edição de uma linha**. Isso é requisito, não conveniência: a aposta vai ser testada em público e o custo de errar foi desenhado antes de ela ser feita.
+    - **ANOTADO, NÃO IMPLEMENTADO:** "MID" é mais idiomático que "MIXED" em pt-BR, e era o termo da versão originalmente arquivada.
+  - **(6) O disclosure do bullet: "EXEMPLO PARAFRASEADO" → "APROFUNDAR", e deixa de parecer botão (Entrega 4).** UM rótulo só, igual nos dois estados — o indicador de estado é o chevron, e dois labels para a mesma coisa é ruído que o `aria-expanded` já cobre. **O pill da v1.9.19 sai inteiro** (fundo preenchido, borda, `border-radius: 999px`, padding de CTA): ele resolveu a afordance do "+" que ninguém percebia ser clicável, mas resolveu demais e virou o elemento mais chamativo de um bullet cujo protagonista é o NOME do tema. A referência agora é disclosure editorial minimalista (GOV.UK Details e afins) — fundo transparente, sem borda, sem cápsula, monoespaçada já existente, cor do próprio grupo com intensidade menor que o título e a barra. **Nenhuma linguagem visual nova.** Preservados: posição do controle no bullet, barras de frequência, hierarquia tipográfica, cores dos grupos, conteúdo expandido e a lógica de expansão/colapso.
+  - **(7) A ANIMAÇÃO do disclosure — o requisito principal da entrega, acima do visual.** O conteúdo deve parecer que estava ESCONDIDO EMBAIXO do bullet e desliza para fora dele: efeito espacial e vertical, não fade. Três camadas, cada uma com um trabalho: a caixa externa ABRE (`grid-template-rows` de `0fr` para `1fr` — altura "até o conteúdo" sem altura fixa e sem medir nada em JS, evitando o hack de `max-height` chutado); a camada do meio RECORTA (`overflow: hidden`), que é o que faz o texto parecer estar atrás da borda de cima; a interna DESLIZA de 10px acima da posição final enquanto a caixa cresce, com a opacidade COMPLEMENTANDO (220ms contra 320ms), nunca substituindo. Fechamento pela mesma declaração ao contrário; chevron na mesma curva e na mesma duração.
+    - **A curva foi escolhida por MEDIÇÃO, não por gosto** — altura da caixa amostrada a 0/80/160/240/320ms, nos dois sentidos, em três candidatas. Uma ease-out agressiva (`0.22,0.61,0.36,1`) colapsava **84% da altura nos primeiros 80ms** ao fechar, o que lê como corte e não como recolher; uma ease-in-out (`0.4,0,0.2,1`) espremia metade do movimento entre 80 e 160ms e dava 80ms de nada no começo da abertura, que num controle de manipulação direta lê como atraso. **`cubic-bezier(0, 0, 0.58, 1)`** é a única em que nenhum quarto da duração carrega mais que ~40% do movimento nos DOIS sentidos. **Sem spring e sem bounce**, e não por promessa: os dois pontos de controle ficam dentro de [0,1] e as séries medidas são monotônicas.
+    - **A regressão de acessibilidade que a técnica traz de brinde, e a correção.** Ao contrário de `display: none`, uma linha de grid de altura zero **não** tira o conteúdo da árvore de acessibilidade — sem tratamento, um leitor de tela leria a paráfrase de todo bullet fechado da página. `visibility: hidden` no recorte resolve, com `transition-delay` igual à duração para o texto não sumir de uma vez no meio do fechamento. Conferido com `checkVisibility()`: o conteúdo colapsado dá `false`, o mesmo que o `<details>` da narrativa dá nativamente.
+    - **Acessibilidade e responsividade:** continua `<button type="button">` nativo (Enter e Space são comportamento do agente, sem handler de tecla concorrente que pudesse cancelá-los), `aria-expanded` + `aria-controls` apontando para o elemento certo, anel de foco visível, área de toque de 44px sob `@media (hover: none)` e 40px no desktop, texto e chevron alinhados, integrado às duas colunas do desktop. **`prefers-reduced-motion` conferido**: as três transições morrem, o estado final é correto em aberto e em fechado, e a visibilidade deixa de ter atraso.
+  - **(8) Tipografia da linha de metadados da ficha (Entrega 5) — TRÊS opções ainda ABERTAS (`?ficha=1|2|3`).** **Nenhuma família nova**: o site tem serifada e monoespaçada, e uma terceira seria linguagem visual nova em vez de ajuste. As três trabalham dentro dessas duas — **1 "mono limpa"** (mesma família, caixa alta fora, corpo maior, tracking frouxo: é a caixa alta que iguala a altura de todo caractere e apaga a silhueta das palavras, que é o que o olho usa para ler nome próprio); **2 "serifada"** (a serifada do título/veredito em corpo pequeno, virando continuação editorial da sinopse acima); **3 "crédito"** (mono e caixa alta mantidas, corpo bem menor e tracking bem maior — não mais legível, e sim mais fora do caminho). Só a linha de metadados; a sinopse não é tocada por nenhuma.
+  - **(9) O mecanismo de escolha é TEMPORÁRIO e sai na passada seguinte.** As seis alternativas (três de barra, três de ficha) ficam ATIVAS e alternáveis por query param — mesmo padrão do `?tint=1` da v1.9.19 —, para o dono do projeto escolher OLHANDO, sem deploy. Os defaults (`?barra=a`, `?ficha=1`) são só o que abre sem query param e **não são uma escolha feita por conta própria**. Escolhida uma de cada, as outras saem do JS e do CSS — removidas, não escondidas atrás de flag (a v1.9.19 já registrou que remoção é remoção).
+  - **(10) Verificação — MANUAL e ENUMERADA, porque o frontend tem ZERO teste automatizado.** Varredura por iframe sobre os **35 filmes do catálogo + o degradado sintético**, conferindo por página: ordem dos blocos, posição do veredito, barra proporcional coerente com os percentuais dos cabeçalhos, rótulo certo para cada chave, prosa preservada neutra, rótulo antigo ausente, cabeçalho "EM DETALHE" ausente, "Exemplo parafraseado" ausente, disclosure fechado por padrão, e simetria estrutural entre negativas e positivas (**6 e 6 bullets em todos**). **Zero divergência.** Inspeção dirigida em desktop (1280×900) e mobile (375×812) nos casos de referência: `eighth-grade` (base), `napoleon-2023` (meio dominante), `obsession-2026` (amostra reduzida, avisos curtos), `the-godfather` e `talk-to-me-2022` (valorativos, veredito longo agora no rodapé), e a home. **Zero erro de console.** Alternativa textual da barra inspecionada na árvore de acessibilidade, não presumida.
+    - **Limitação declarada da verificação:** o painel de navegador usado roda com `document.visibilityState === "hidden"`, o que congela a linha do tempo de animação e não entrega evento de teclado à página. As transições foram medidas pela **Web Animations API**, fixando `currentTime` e lendo o estilo computado quadro a quadro — mais preciso que cronometrar, mas não é o mesmo que ver rodar. O acionamento por Enter/Space foi verificado por PROPRIEDADE (elemento `<button>` nativo, na ordem de tabulação, sem handler de tecla que cancele o padrão), não por injeção de tecla de ponta a ponta. Registrado como o que é: uma rede a menos.
 - **v1.9.25** (2026-08-26) — **A retentativa de transporte desce para o TRANSPORTE e passa a valer para as DUAS portas de entrada do adaptador; o retry que engolia erro de conteúdo sai dos scripts; a telemetria atravessa o processo e chega ao relatório de lote.** Nenhum filme regenerado; nenhum `resultado/*.json` alterado.
   - **(1) O defeito da v1.9.24, verificado.** A retentativa entrou em `resposta()`, mas o adaptador tem DUAS portas de entrada: `resposta()` (narrador §D2, veredito §V) e `client_call` (síntese de bucket §D). A síntese entra pela segunda e **não estava coberta** — um 5xx nela continuava descartando o lote. A instrução da sessão anterior presumia um ponto de estrangulamento único que não existia; a lacuna foi reportada, não contornada por conta própria.
   - **(2) Eram QUATRO pontos de contato com o SDK, não dois.** `deepseek_resposta` (alcançado pelas duas portas), `_gemini_resposta` (só `resposta()`), `_gemini_call` (só `client_call`, com transporte PRÓPRIO duplicado) e `anthropic_client_call`. A retentativa desce para `deepseek_resposta`/`_gemini_resposta` numa implementação única (`_com_retentativa`), e as camadas de cima herdam. Classificação de erro, teto, backoff, jitter e telemetria são os da v1.9.24 — só mudaram de lugar.

@@ -35,11 +35,55 @@
   var MESES = ["janeiro", "fevereiro", "março", "abril", "maio", "junho",
                "julho", "agosto", "setembro", "outubro", "novembro", "dezembro"];
 
+  // =====================================================================
+  // [v1.9.26, Entrega 3] O NOME DE EXIBIÇÃO DOS TRÊS GRUPOS — decisão de
+  // produto do dono do projeto (conexão geracional / campanha). Registrada
+  // em SPEC.md §0 como EXCEÇÃO DE VOCABULÁRIO DE RÓTULO, com o trade-off
+  // escrito por extenso: "Fans/Haters" não é um par simétrico ("hater"
+  // imputa má-fé, "fã" não), e §0 pede neutralidade de TRATAMENTO.
+  //
+  // O ESCOPO da exceção, e é ele que a torna aceitável: ela vale só onde o
+  // nome do grupo aparece ISOLADO, como rótulo que identifica a coluna —
+  // cabeçalho do bloco de bullets, legenda e alternativa textual da barra
+  // de proporção, `aria-label` que diz de qual grupo é um elemento. A
+  // PROSA do produto (veredito, narrativa, o prefixo do meio dominante
+  // gerado em Python, os avisos curtos de piso, o disclaimer da cota)
+  // continua neutra, e a neutralidade ESTRUTURAL do §0 continua INTEGRAL:
+  // cota 40/40/40, mesma margem de lift dos dois lados, mesmo leiaute e
+  // mesma quantidade de bullets entre negativas e positivas.
+  //
+  // AS CHAVES INTERNAS NÃO MUDAM. `negativas`/`medianas`/`positivas`
+  // seguem sendo o vocabulário do JSON, do briefing, dos prompts, dos
+  // validadores, da spec e dos testes — nada em `resultado/` foi tocado,
+  // nenhum filme foi regerado. Este mapa é a ÚNICA fronteira entre a
+  // chave e o nome na tela.
+  //
+  // REVERSÃO = ESTA LINHA. É de propósito: a mudança vai ser testada em
+  // público, e se o ganho não se confirmar o custo de voltar é uma edição
+  // de uma linha, não uma varredura. Para reverter:
+  //   { negativas: "Negativas", medianas: "Medianas", positivas: "Positivas" }
+  //
+  // ANOTADO, NÃO IMPLEMENTADO: "MID" é mais idiomático que "MIXED" em
+  // português brasileiro, e era o termo da versão originalmente arquivada.
+  var GRUPO_LABEL = { negativas: "HATERS", medianas: "MIXED", positivas: "FANS" };
+
   var GRUPO_META = {
-    negativas: { label: "Negativas", color: "var(--neg)", cap: "quem não gostou" },
-    medianas:  { label: "Medianas",  color: "var(--med)", cap: "quem ficou no meio" },
-    positivas: { label: "Positivas", color: "var(--pos)", cap: "quem gostou" },
+    negativas: { label: GRUPO_LABEL.negativas, color: "var(--neg)", cap: "quem não gostou" },
+    medianas:  { label: GRUPO_LABEL.medianas,  color: "var(--med)", cap: "quem ficou no meio" },
+    positivas: { label: GRUPO_LABEL.positivas, color: "var(--pos)", cap: "quem gostou" },
   };
+
+  // Ordem de leitura dos três grupos — a mesma do resto do site (quem não
+  // gostou primeiro, quem gostou por último) e a mesma da faixa do mosaico
+  // da home (`GRUPOS` em home.js).
+  var GRUPOS_ORDEM = ["negativas", "medianas", "positivas"];
+
+  // O rótulo de exibição de um grupo. Toda a tela passa por aqui — é o
+  // ponto único do rename (ver `GRUPO_LABEL`). Chave desconhecida cai na
+  // própria chave, mesma política de lista fechada de `EIXO_LABEL`.
+  function rotuloDoGrupo(bucket) {
+    return GRUPO_LABEL[bucket] || bucket;
+  }
 
   var params = new URLSearchParams(location.search);
   var slug = params.get("slug") || "";
@@ -48,6 +92,33 @@
   // dono do projeto comparar com/sem sem precisar de deploy. Ver `.is-tinted`
   // em styles.css — 2-3% de opacidade, mesmos tokens de cor de sempre.
   var TINT = params.get("tint") === "1";
+
+  // =====================================================================
+  // [v1.9.26] MECANISMO TEMPORÁRIO DE ESCOLHA — sai na passada seguinte.
+  //
+  // Duas entregas desta sessão são propostas, não decisões: as três
+  // variantes de COR da barra de proporção (Entrega 2) e as três opções de
+  // TIPOGRAFIA da linha de metadados da ficha (Entrega 5). As seis ficam
+  // ATIVAS e alternáveis por query param para o dono do projeto escolher
+  // olhando, sem deploy — mesmo padrão do `?tint=1` da v1.9.19 logo acima.
+  // Escolhida uma de cada, as outras SAEM do JS e do CSS (não ficam atrás
+  // de flag; a v1.9.19 já registrou que remoção é remoção).
+  //
+  //   ?barra=a  sólida     — paleta oficial dos grupos, respiro escuro entre faixas
+  //   ?barra=b  sóbria     — paleta apagada do mosaico da home, fio claro entre faixas
+  //   ?barra=c  angular    — paleta oficial + trama direcional (não depende só de cor)
+  //
+  //   ?ficha=1  mono limpa — monoespaçada sem caixa alta, respiro menor
+  //   ?ficha=2  serifada   — a serifada do título/veredito em corpo pequeno
+  //   ?ficha=3  crédito    — monoespaçada em caixa alta, bem mais leve e espaçada
+  //
+  // Os defaults (`a` / `1`) são só o que abre sem query param; NÃO são uma
+  // escolha feita por conta própria.
+  var BARRA_VARIANTE = ({ a: 1, b: 1, c: 1 }[params.get("barra")]
+    ? params.get("barra") : "a");
+  var FICHA_VARIANTE = ({ "1": 1, "2": 1, "3": 1 }[params.get("ficha")]
+    ? params.get("ficha") : "1");
+
   var film = DATA.filmes[slug];
 
   if (!film) {
@@ -85,18 +156,47 @@
   // dentro de cada grupo (temas com papel de contraste sobem — ver
   // `ordenarTemasPorEixo`). Ver `veredictoBlock`/`sentimentGroupsBlock`
   // para onde `f.eixos` é lido agora.
-  // =====================================================================
+  //
+  // ---------------------------------------------------------------------
+  // [v1.9.26, Entrega 1] REORDENAÇÃO — a BARRA assume o topo, o VEREDITO
+  // desce para o rodapé da análise.
+  //
+  // O que mudou de lugar e por quê: o topo da página passa a ser ocupado
+  // pelo sinal DIMENSIONAL da recepção (a barra de proporção, Entrega 2)
+  // em vez do sinal VERBAL (o veredito). A barra responde "quanta gente,
+  // de cada lado" de relance e sem leitura; o veredito responde "sobre o
+  // quê eles discordam", que é uma conclusão — e conclusão lida ANTES da
+  // evidência é asserção, lida DEPOIS é fecho. Ele desce para depois dos
+  // bullets, intacto: mesmo texto, mesma origem, mesma geração. Nada de
+  // §3[V] foi tocado — nem `veredito.py`, nem o briefing, nem o prompt.
+  //
+  // O cabeçalho "EM DETALHE · TEMA A TEMA" sai (a página não tem mais uma
+  // seção "resumo" antes dele — os bullets vêm direto), e o divisor fica
+  // sendo só a linha arco-íris. O disclaimer da cota migra para baixo da
+  // barra, onde a informação que ele carrega ("profundidade igual ≠ peso
+  // igual") fica ancorada no objeto que mostra o peso — ver
+  // `proporcaoBlock`.
+  //
+  // A LÓGICA DO MEIO REBAIXADO (§0, exceção da v1.9.19) NÃO É AFETADA por
+  // nada disto: quem decide se `medianas` sobe ao destaque é
+  // `sentimentGroupsBlock`, lendo `bucketDominante(f.buckets)` — uma
+  // função do DADO, não da posição do bloco na página. `veredictoBlock`
+  // não lê nem escreve esse estado (o prefixo do meio dominante já vem
+  // concatenado do Python dentro de `f.veredito.texto`). Mover a chamada
+  // de `veredictoBlock` de antes para depois de `sentimentGroupsBlock`
+  // não passa informação nenhuma entre as duas.
+  // ---------------------------------------------------------------------
   function render(f) {
-    app.appendChild(header(f));
-    if (f.ficha) app.appendChild(fichaBlock(f.ficha));
+    app.appendChild(header(f));                       // 1 ano+título, 2 chip
+    if (f.ficha) app.appendChild(fichaBlock(f.ficha));// 3 ficha
+    app.appendChild(proporcaoBlock(f));               // 4 barra + nota da cota
+    app.appendChild(detailDivider());                 // 5 linha arco-íris
+    app.appendChild(sentimentGroupsBlock(f));         // 6 bullets por grupo
 
-    var veredito = veredictoBlock(f);
+    var veredito = veredictoBlock(f);                 // 7 veredito (movido)
     if (veredito) app.appendChild(veredito);
 
-    app.appendChild(detailDivider(f));
-    app.appendChild(sentimentGroupsBlock(f));
-
-    if (f.narrativa) app.appendChild(narrativaCollapsedBlock(f.narrativa));
+    if (f.narrativa) app.appendChild(narrativaCollapsedBlock(f.narrativa)); // 8
 
     // micro-pesquisa (A/B) — módulo separado
     if (window.mountSurvey) window.mountSurvey(app, f);
@@ -157,8 +257,17 @@
     if (ficha.duracao_min) parts.push(ficha.duracao_min + " min");
     parts.push("fonte TMDB");
 
+    // [v1.9.26, Entrega 5] A linha de metadados ganha VARIANTES de
+    // tipografia — três, alternáveis por `?ficha=1|2|3` (ver
+    // `FICHA_VARIANTE` no topo), para o dono do projeto escolher olhando.
+    // Nenhuma FAMÍLIA nova: o site tem serifada (título, veredito) e
+    // monoespaçada (rótulos), e uma terceira seria linguagem visual nova.
+    // As três opções trabalham dentro dessas duas — peso, tamanho,
+    // tracking, caixa e opacidade. O CONTEÚDO da linha não muda em
+    // nenhuma delas, e a sinopse acima não é tocada por nenhuma.
     var line = document.createElement("p");
     line.className = "ficha__line";
+    line.setAttribute("data-ficha", FICHA_VARIANTE);
     line.innerHTML = parts.map(esc).join('<span class="dot">·</span>');
     el.appendChild(line);
 
@@ -205,27 +314,153 @@
       '<path d="m6 9 6 6 6-6"/></svg></span>';
   }
 
-  // --- divisor EM DETALHE + disclaimer ---
-  // v1.4.0: o disclaimer depende do dado disponível. Sem distribuição real,
-  // avisa que os tamanhos NÃO são prevalência (regra v1.2.1). Com ela, o peso
-  // real está exibido em cada grupo e o texto passa a explicar o método.
-  // Mantidos em sincronia com render.py (DISCLAIMER_*).
-  // [v1.9.20, Entrega 2] A cota ("40 · 40 · 40 reviews") saiu do texto —
-  // decisão do dono do projeto, nenhuma contagem de review em texto. As
-  // cotas continuam iguais entre os grupos (`f.buckets[i].alvo` no JSON,
-  // intacto) — só deixaram de ser citadas em algarismo aqui.
-  function detailDivider(f) {
-    var temDistribuicao = !!f.distribuicao;
-    var texto = temDistribuicao
-      ? "Análise em profundidade igual por grupo; o peso real de cada "
-        + "faixa está indicado em cada grupo."
+  // =====================================================================
+  // [v1.9.26, Entrega 2] BARRA DE PROPORÇÃO — o novo sinal do topo.
+  //
+  // MESMA LINGUAGEM da faixa que já existe na base de cada card do mosaico
+  // da home (`.mosaic-cell__strip`, v1.9.18): uma faixa contínua fatiada
+  // em três, largura de cada fatia proporcional ao peso REAL do grupo, na
+  // mesma ordem de leitura de sempre. A implementação de lá é reusada em
+  // ideia e em forma (flex horizontal, um `<span>` por grupo, cor por
+  // grupo) — não é um segundo componente com outra gramática.
+  //
+  // A FONTE DO NÚMERO é `b.share_real`, a MESMA que os cabeçalhos de grupo
+  // já imprimem ("~75% das notas"). Isto não é detalhe: é o que garante
+  // que a barra e os cabeçalhos nunca discordem. `distribuicao.por_bucket`
+  // carrega os mesmos valores, mas ler duas fontes para o mesmo fato é
+  // como se cria divergência silenciosa. A largura normaliza pela soma
+  // porque os três são inteiros ARREDONDADOS e somam 99–101 no catálogo.
+  //
+  // SEM NÚMERO DENTRO DA BARRA — decisão da entrega: os percentuais de
+  // peso continuam nos cabeçalhos de grupo, um lugar só. A barra comunica
+  // proporção por PROPORÇÃO. A legenda nomeia as cores, sem algarismo.
+  //
+  // ALTERNATIVA TEXTUAL: a barra é `role="img"` com `aria-label` completo
+  // — rótulo e peso dos três grupos. É a mesma decisão já registrada na
+  // v1.9.20 (item 2): o `aria-label` da barra NÃO é texto visível, é a
+  // alternativa da barra para leitor de tela, e o PERCENTUAL de peso é
+  // número permitido (o que saiu do produto foi contagem bruta de review,
+  // que não aparece aqui). Sem ele a barra seria decoração muda — e ela é
+  // agora o principal sinal do topo da página.
+  //
+  // A legenda visível NÃO é `aria-hidden`: esconder texto visível de quem
+  // usa leitor de tela troca um problema por outro. A redundância com o
+  // `aria-label` é conhecida e aceita; nada se perde nem se inventa.
+  // =====================================================================
+  function proporcaoBlock(f) {
+    var el = document.createElement("section");
+    el.className = "proportion";
+    el.setAttribute("data-variante", BARRA_VARIANTE);
+
+    var fatias = fatiasDeProporcao(f);
+    if (fatias) {
+      var bar = document.createElement("div");
+      bar.className = "proportion__bar";
+      bar.setAttribute("role", "img");
+      bar.setAttribute("aria-label", alternativaTextualDaBarra(fatias));
+      fatias.forEach(function (s) {
+        var seg = document.createElement("span");
+        seg.className = "proportion__seg";
+        seg.setAttribute("data-group", s.grupo);
+        // `flex-grow` proporcional com `flex-basis: 0` — assim o respiro
+        // entre as faixas sai do espaço LIVRE e as três continuam
+        // exatamente proporcionais entre si. Com `width: X%` o respiro
+        // roubaria largura das faixas e distorceria a proporção; num
+        // produto que se recusa a arredondar a favor de um lado, isso
+        // importa mesmo em 3px.
+        seg.style.flex = s.pct + " 0 0%";
+        bar.appendChild(seg);
+      });
+      el.appendChild(bar);
+
+      var leg = document.createElement("ul");
+      leg.className = "proportion__legend";
+      fatias.forEach(function (s) {
+        var li = document.createElement("li");
+        // CHAVE INTERNA no atributo (é o que o CSS casa), rótulo novo no
+        // texto — a mesma separação de `.group[data-group]`.
+        li.setAttribute("data-group", s.grupo);
+        var sw = document.createElement("span");
+        sw.className = "proportion__swatch";
+        sw.setAttribute("data-group", s.grupo);
+        sw.setAttribute("aria-hidden", "true");
+        var nm = document.createElement("span");
+        nm.className = "proportion__legend-label";
+        // RÓTULO ISOLADO — identifica a faixa. Entrega 3 troca aqui.
+        nm.textContent = rotuloDoGrupo(s.grupo);
+        li.appendChild(sw);
+        li.appendChild(nm);
+        leg.appendChild(li);
+      });
+      el.appendChild(leg);
+    }
+
+    el.appendChild(notaDaCota(f, !!fatias));
+    return el;
+  }
+
+  // As três fatias, na ordem de leitura do site, já normalizadas. `null`
+  // quando o filme não tem distribuição real (o degradado sintético) — aí
+  // não há barra, e a nota abaixo troca de texto (ver `notaDaCota`).
+  function fatiasDeProporcao(f) {
+    var porNome = {};
+    (f.buckets || []).forEach(function (b) { porNome[b.bucket] = b; });
+    var total = 0;
+    GRUPOS_ORDEM.forEach(function (g) {
+      var b = porNome[g];
+      if (b && typeof b.share_real === "number") total += b.share_real;
+    });
+    if (!total) return null;
+    return GRUPOS_ORDEM.map(function (g) {
+      var b = porNome[g] || {};
+      var share = typeof b.share_real === "number" ? b.share_real : 0;
+      return { grupo: g, share: share, pct: (share / total) * 100 };
+    }).filter(function (s) { return s.share > 0; });
+  }
+
+  // A alternativa textual da barra. Usa o RÓTULO do grupo (é aqui que a
+  // barra diz de qual grupo é cada faixa) e o MESMO inteiro que o
+  // cabeçalho daquele grupo imprime — nunca um valor recalculado.
+  function alternativaTextualDaBarra(fatias) {
+    return "Peso real de cada grupo na recepção: "
+      + fatias.map(function (s) {
+        return rotuloDoGrupo(s.grupo) + ", cerca de " + s.share + "% das notas";
+      }).join("; ") + ".";
+  }
+
+  // [v1.9.26, Entrega 1] O DISCLAIMER DA COTA, preservado em forma mínima
+  // e reancorado. Ele é o que impede a leitura errada mais provável desta
+  // página: listas de bullets do mesmo tamanho NÃO significam grupos do
+  // mesmo peso — a cota de análise é 40/40/40 por decisão (§0), o peso é
+  // o que a barra acima mostra. Até a v1.9.25 a frase morava sob o
+  // cabeçalho "EM DETALHE"; ela desce para debaixo da barra porque é ali
+  // que a substância dela fica ancorada no objeto que mostra o peso.
+  //
+  // v1.4.0 (preservado): o texto depende do dado disponível. SEM
+  // distribuição real não há barra, e a regra da v1.2.1 volta a valer
+  // inteira — os tamanhos não são prevalência de nada. Mantido em
+  // sincronia com render.py (DISCLAIMER_*).
+  // [v1.9.20] Sem algarismo de contagem de review ("40 · 40 · 40" saiu).
+  function notaDaCota(f, temBarra) {
+    var p = document.createElement("p");
+    p.className = "proportion__note";
+    p.textContent = temBarra
+      ? "A barra é o peso real de cada grupo. A análise abaixo tem "
+        + "profundidade igual nos três — o tamanho das listas não indica peso."
       : "Os grupos são cotas de coleta — não a proporção real das opiniões.";
+    return p;
+  }
+
+  // --- divisor ---
+  // [v1.9.26, Entrega 1] O cabeçalho "EM DETALHE · TEMA A TEMA" SAI (não
+  // há mais nada antes dele que precise ser separado de "o detalhe"; os
+  // bullets vêm direto), e o disclaimer migrou para `notaDaCota`, embaixo
+  // da barra. Sobra a linha arco-íris, que continua marcando a passagem do
+  // topo para a análise — só mudou de posição na página.
+  function detailDivider() {
     var el = document.createElement("div");
     el.className = "detail-divider";
-    el.innerHTML =
-      '<div class="spectrum-line" aria-hidden="true"></div>' +
-      '<p class="detail-divider__label">Em detalhe · tema a tema</p>' +
-      '<p class="disclaimer">' + texto + "</p>";
+    el.innerHTML = '<div class="spectrum-line" aria-hidden="true"></div>';
     return el;
   }
 
@@ -560,6 +795,10 @@
     var el = document.createElement("section");
     el.className = "group" + (TINT ? " is-tinted" : "");
     el.setAttribute("data-group", b.bucket);
+    // RÓTULO ISOLADO — este `aria-label` existe exatamente para dizer de
+    // qual grupo é a seção. Entrega 3 troca aqui (`meta.label` vem de
+    // `GRUPO_LABEL`). `data-group` continua com a CHAVE INTERNA, que é o
+    // que o CSS casa e o que o JSON usa — a chave nunca muda.
     el.setAttribute("aria-label", "Grupo " + meta.label);
 
     // header
@@ -571,6 +810,11 @@
     dot.setAttribute("aria-hidden", "true");
     var name = document.createElement("span");
     name.className = "group__name";
+    // RÓTULO ISOLADO — o cabeçalho do bloco de bullets. Entrega 3 troca
+    // aqui, e com o MESMO destaque visual de antes: mesmo peso, mesma cor
+    // de grupo (`.group[data-group=…] .group__name`), mesma posição.
+    // `.toUpperCase()` fica: os rótulos novos já são caixa alta, mas a
+    // função não pode depender disso para o caso de reversão.
     name.textContent = meta.label.toUpperCase();
     var stars = document.createElement("span");
     stars.className = "group__stars";
@@ -713,12 +957,31 @@
     bar.appendChild(fill);
     row.appendChild(bar);
 
-    // exemplo parafraseado expansível — [Entrega 6, v1.9.19] o "+" parecia
-    // rótulo estático (achado de uso: ninguém percebia que era clicável).
-    // Chevron no padrão de ícone do resto do site (mesmo stroke/round-cap
-    // do back-link e da narrativa colapsada), dentro de um pill na cor do
-    // grupo com opacidade baixa (`--neg-soft`/`--med-soft`/`--pos-soft`,
-    // já usadas — nenhuma cor nova) em vez de texto solto.
+    // =================================================================
+    // [v1.9.26, Entrega 4] O DISCLOSURE "APROFUNDAR".
+    //
+    // TEXTO: "Exemplo parafraseado" → "Aprofundar". UM rótulo só, igual
+    // nos dois estados — o indicador de estado é o chevron, e dois labels
+    // para a mesma coisa é ruído que o `aria-expanded` já cobre.
+    //
+    // VISUAL: deixa de parecer botão. O pill da v1.9.19 (fundo preenchido
+    // na cor do grupo, `border-radius: 999px`, padding de CTA) resolvia um
+    // problema real — o "+" da versão anterior não parecia clicável — mas
+    // resolveu demais: virou o elemento mais chamativo do bullet,
+    // competindo com o próprio tema. A referência agora é disclosure
+    // editorial minimalista (GOV.UK Details e afins): fundo transparente,
+    // sem borda, sem cápsula, tipografia da monoespaçada que já existe, na
+    // cor do grupo com peso visual MENOR que o título e a barra. Ver
+    // `.theme__toggle` em styles.css — nenhuma linguagem visual nova.
+    //
+    // ESTRUTURA (é a animação que a pede): três camadas em vez de uma.
+    // O `<div id>` externo é a caixa que ABRE (grid `0fr`→`1fr`), o
+    // `-clip` recorta, e o `-inner` é o que DESLIZA de trás do bullet até
+    // a posição final. `aria-controls` continua apontando para o elemento
+    // externo, o mesmo de sempre. A arquitetura de expansão (botão +
+    // `aria-expanded` + classe `is-open` no alvo) é a da v1.9.19, reusada
+    // como está — só o alvo tem filhos agora.
+    // =================================================================
     if (t.exemplo_parafraseado) {
       var id = "ex-" + bucket + "-" + idx;
       var btn = document.createElement("button");
@@ -726,18 +989,26 @@
       btn.type = "button";
       btn.setAttribute("aria-expanded", "false");
       btn.setAttribute("aria-controls", id);
-      btn.innerHTML = '<span class="theme__toggle-label">Exemplo parafraseado</span>' + chevronSvg();
+      btn.innerHTML = '<span class="theme__toggle-label">Aprofundar</span>'
+        + chevronSvg();
 
       var ex = document.createElement("div");
       ex.className = "theme__example";
       ex.id = id;
-      ex.textContent = t.exemplo_parafraseado;
+
+      var clip = document.createElement("div");
+      clip.className = "theme__example-clip";
+      var inner = document.createElement("div");
+      inner.className = "theme__example-inner";
+      inner.textContent = t.exemplo_parafraseado;
       if (t.aspas_removidas) {
         var fl = document.createElement("span");
         fl.className = "theme__flag";
         fl.textContent = "aspas de citação removidas mecanicamente";
-        ex.appendChild(fl);
+        inner.appendChild(fl);
       }
+      clip.appendChild(inner);
+      ex.appendChild(clip);
 
       btn.addEventListener("click", function () {
         var open = btn.getAttribute("aria-expanded") === "true";
