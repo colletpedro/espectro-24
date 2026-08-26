@@ -455,68 +455,37 @@ a { color: inherit; }
   color: var(--text);
   margin: 0 0 14px;
 }
-/* [v1.9.26, Entrega 3] TIPOGRAFIA DA LINHA DE METADADOS — duas variantes
-   ATIVAS (`?ficha=sistema|inter`, ou o seletor no canto). São PROPOSTAS: o
-   dono escolhe uma olhando, e a outra sai do JS e do CSS na passada
-   seguinte. Só a linha de metadados; `.ficha__synopsis` não é tocada.
+/* [v1.9.26] TIPOGRAFIA DA LINHA DE METADADOS — decisão FINAL do dono do
+   projeto, depois de comparar com uma variante Inter auto-hospedada. Só a
+   linha de metadados; `.ficha__synopsis` não é tocada.
 
    O PEDIDO ERA "a fonte que a Apple usa" — a San Francisco (SF Pro).
 
    POR QUE NÃO EXISTE ARQUIVO DE SF PRO AQUI, e não é negociável: a licença
    da Apple restringe o uso da SF Pro a mock-ups de interface para
    iOS/OS X/tvOS. Ela não autoriza redistribuição nem uso como webfont em
-   site próprio. Baixar, auto-hospedar ou referenciar um arquivo de SF Pro
-   seria violação de licença, então nenhuma das duas variantes faz isso.
-   As duas saídas legais estão abaixo.
+   site próprio. A pilha de fontes de SISTEMA abaixo é a saída legal: ela
+   entrega a San Francisco REAL em Mac e iPhone porque usa a fonte JÁ
+   INSTALADA no aparelho — o site não distribui nada —, Segoe UI no
+   Windows e Roboto no Android. Custo zero de carregamento; em troca, a
+   página muda de aparência conforme o aparelho. `-apple-system` vem
+   primeiro (diferente de `--sans`, que começa em `system-ui`) porque é o
+   que garante a SF em Safari/WebKit mais antigo.
 
    REGISTRO DE ESCOPO, para a spec não guardar uma frase falsa: sans NÃO é
    família nova no projeto — `--sans` (pilha de sistema) já existe desde a
-   v1 e é o que `body` e os campos de busca usam. O que é novo é (a) usar
-   sans na linha EDITORIAL da ficha, que era monoespaçada, e (b) na
-   variante Inter, a primeira família NÃO-de-sistema, auto-hospedada, que o
-   projeto carrega. */
-
-/* [v1.9.26] Inter — SIL Open Font License 1.1, subconjunto latin,
-   variável 400–700, 85 KB. AUTO-HOSPEDADA em `frontend/fonts/`, com o
-   texto da licença ao lado (`fonts/OFL.txt`), como a OFL exige.
-
-   Caminho relativo, e não `<link>` para o Google Fonts, porque o
-   cabeçalho deste arquivo registra offline-first: o site funciona por
-   `file://`, sem CORS e sem requisição de rede. Um CDN de terceiro
-   quebraria as três coisas e ainda entregaria o IP do leitor a um
-   terceiro. O custo é 85 KB versionados.
-
-   `font-display: swap` — a linha de metadados aparece na hora com a
-   fallback e troca quando a fonte chega. `block` esconderia texto real
-   por até 3s por causa de uma linha secundária; `optional` poderia nunca
-   exibir a Inter, o que num teste de comparação de fontes derrota o
-   objetivo. */
-@font-face {
-  font-family: "Inter var";
-  src: url("../fonts/inter-latin-var.woff2") format("woff2");
-  font-weight: 400 700;
-  font-style: normal;
-  font-display: swap;
-}
-
+   v1 e é o que `body` e os campos de busca usam. O que é novo é usar sans
+   na linha EDITORIAL da ficha, que era monoespaçada. */
 :root {
-  /* Pilha de SISTEMA (variante 1). Entrega a San Francisco REAL em Mac e
-     iPhone — instalada no aparelho, nada distribuído pelo site —, Segoe UI
-     no Windows e Roboto no Android. Custo zero de carregamento; em troca,
-     a página muda de aparência conforme o aparelho. Distinta de `--sans`
-     (que começa em `system-ui`): aqui `-apple-system` vem primeiro, que é
-     o que garante a SF em Safari/WebKit mais antigo. */
   --sans-ui: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
              Helvetica, Arial, sans-serif;
-  --sans-inter: "Inter var", -apple-system, BlinkMacSystemFont, "Segoe UI",
-                Roboto, Helvetica, Arial, sans-serif;
 }
 
-/* Base comum às duas variantes: o que muda entre elas é SÓ a família. O
-   resto do ajuste (corpo, peso, tracking, caixa, cor) é o mesmo, e é o que
-   tira a linha do ar de terminal — a monoespaçada em caixa alta com
-   tracking largo era o que fazia ela ler como log em vez de legenda. */
+/* Peso, tamanho, tracking, caixa e cor: o que tira a linha do ar de
+   terminal — a monoespaçada em caixa alta com tracking largo era o que
+   fazia ela ler como log em vez de legenda. */
 .ficha__line {
+  font-family: var(--sans-ui);
   font-size: 0.86rem;
   font-weight: 400;
   letter-spacing: 0.005em;
@@ -527,30 +496,20 @@ a { color: inherit; }
 }
 .ficha__line .dot { opacity: 0.45; margin: 0 8px; }
 
-.ficha__line[data-ficha="sistema"] { font-family: var(--sans-ui); }
-.ficha__line[data-ficha="inter"] {
-  font-family: var(--sans-inter);
-  /* A Inter tem altura-x maior que a SF e que a Segoe: no mesmo corpo ela
-     lê maior e mais apertada. Compensado aqui, para a comparação entre as
-     duas ser de DESENHO e não de tamanho. */
-  font-size: 0.83rem;
-  letter-spacing: 0.008em;
-}
-
 /* =======================================================================
-   [v1.9.26] BARRA DE PROPORÇÃO — duas variantes, ambas CONTÍNUAS.
+   [v1.9.26] BARRA DE PROPORÇÃO — decisão FINAL do dono do projeto, depois
+   de duas rodadas de comparação (três variantes com respiro escuro entre
+   faixas, depois duas contínuas). O veredito sobre a mais forte da
+   primeira rodada ("sólida"): "tem umas coisas interessantes, mas não dá
+   ideia de continuidade — parece que são três barras separadas, cortadas
+   com vão no meio". O erro era conceitual: a recepção de um filme é UMA
+   população particionada em três, não três medições independentes — um
+   vão desenha três objetos onde o dado tem um. Esta barra tem ZERO gap,
+   ZERO fio separador, ZERO respiro escuro.
 
-   O DEFEITO DA RODADA 1, que define esta: a variante "sólida" separava as
-   faixas com 3px de respiro escuro, e leu como "três barras separadas,
-   cortadas com vão no meio". O erro era conceitual: a recepção de um filme
-   é UMA população particionada em três, não três medições independentes —
-   um vão desenha três objetos onde o dado tem um. As duas variantes abaixo
-   têm ZERO gap, ZERO fio separador, ZERO respiro escuro.
-
-   O QUE VALE NAS DUAS: paleta oficial dos grupos (nada de verde/vermelho —
-   semáforo codifica certo/errado, e o produto se recusa a julgar os
-   grupos); largura em percentual exato somando 100; nenhum número dentro
-   da barra.
+   Paleta oficial dos grupos (nada de verde/vermelho — semáforo codifica
+   certo/errado, e o produto se recusa a julgar os grupos); largura em
+   percentual exato somando 100; nenhum número dentro da barra.
    ======================================================================= */
 .proportion { margin: 18px 0 6px; }
 .proportion__bar {
@@ -600,8 +559,7 @@ a { color: inherit; }
   max-width: 44rem;
 }
 
-/* --- VARIANTE "CONTÍNUA" ----------------------------------------------
-   Camadas empilhadas, cada uma começando na borda esquerda e terminando
+/* Camadas empilhadas, cada uma começando na borda esquerda e terminando
    na sua fronteira com uma aresta DIAGONAL; a de baixo (positivas)
    preenche a barra toda. Ver `barraContinua` em filme.js para a geometria
    e para o cálculo adaptativo de `--diag`.
@@ -612,7 +570,7 @@ a { color: inherit; }
    (1cqw = 1% da largura do contêiner). Assim a diagonal acompanha resize
    sozinha, sem `ResizeObserver` e sem um recálculo em JS. */
 .proportion { container-type: inline-size; }
-.proportion[data-variante="continua"] .proportion__bar {
+.proportion .proportion__bar {
   --menor-pct: 10;                      /* substituído pelo JS, por filme */
   --diag: clamp(3px, calc(var(--menor-pct) * 0.55 * 1cqw), 12px);
 }
@@ -620,7 +578,7 @@ a { color: inherit; }
    menor que o teto, para não comer a fatia estreita de um filme como
    `the-godfather` onde não dá para medir o contêiner. */
 @supports not (container-type: inline-size) {
-  .proportion[data-variante="continua"] .proportion__bar { --diag: 5px; }
+  .proportion .proportion__bar { --diag: 5px; }
 }
 .proportion__layer {
   position: absolute;
@@ -640,139 +598,6 @@ a { color: inherit; }
 .proportion__layer[data-group="negativas"] { background: var(--neg); }
 .proportion__layer[data-group="medianas"]  { background: var(--med); }
 .proportion__layer[data-group="positivas"] { background: var(--pos); }
-
-/* --- VARIANTE "DIVERGENTE" --------------------------------------------
-   Diverging stacked bar (Heiberger & Robbins 2014, JSS 57(5)). O meio é
-   partido ao meio e montado a cavaleiro sobre o zero; negativas crescem
-   para a esquerda dali, positivas para a direita. As duas metades do meio
-   são adjacentes e da mesma cor, então leem como um bloco só atravessado
-   pela marca do zero — que é o desenho do artigo. Ver `barraDivergente`.
-
-   Aqui as fatias são lado a lado (sem camadas) e sem diagonal: a marca do
-   zero é o elemento visual que ancora a leitura, e uma diagonal por cima
-   dela competiria. Consequência boa e vale registrar: sem diagonal, a
-   fatia estreita não perde nada — ela ocupa a largura cheia do seu
-   percentual. */
-.proportion__seg { display: block; height: 100%; flex: none; }
-.proportion__seg[data-group="negativas"] { background: var(--neg); }
-.proportion__seg[data-group="medianas"]  { background: var(--med); }
-.proportion__seg[data-group="positivas"] { background: var(--pos); }
-
-/* A marca do ponto de divergência — discreta, como pedido: um fio claro
-   atravessando a barra inteira, sem rótulo e sem número. `translateX(-50%)`
-   para o fio ficar CENTRADO no zero e não começar nele (meio pixel de cada
-   lado importa quando a fatia vizinha tem 6px). */
-.proportion__zero {
-  position: absolute;
-  top: -1px;
-  bottom: -1px;
-  width: 2px;
-  transform: translateX(-50%);
-  background: var(--text);
-  opacity: 0.85;
-  z-index: 4;
-  pointer-events: none;
-}
-
-/* =======================================================================
-   [v1.9.26] SELETOR DE VARIANTES — TEMPORÁRIO, sai com as variantes.
-
-   Ferramenta de comparação para o dono do projeto escolher entre as duas
-   barras e as duas tipografias vendo as quatro alternarem em tempo real,
-   no mesmo filme e na mesma rolagem. NÃO é recurso do produto: quando a
-   escolha for feita, este bloco, `montarSeletor()` em filme.js e as
-   alternativas perdedoras saem na mesma passada.
-
-   Ele se ANUNCIA como teste ("teste visual", em caixa alta e cor recuada)
-   em vez de se disfarçar de painel de configuração — um controle de
-   desenvolvimento que parece produto é o tipo de coisa que sobrevive por
-   engano. Discreto e canto superior direito, para não disputar com o
-   título nem cobrir a barra que ele existe para comparar.
-   ======================================================================= */
-.vswitch {
-  position: fixed;
-  top: 12px;
-  right: 12px;
-  z-index: 90;
-  display: flex;
-  flex-direction: column;
-  gap: 8px;
-  padding: 10px 12px 11px;
-  background: #14161df2;
-  border: 1px solid var(--border);
-  border-radius: 10px;
-  backdrop-filter: blur(6px);
-  box-shadow: 0 6px 22px #00000059;
-}
-.vswitch__head {
-  font-family: var(--mono);
-  font-size: 0.54rem;
-  letter-spacing: 0.2em;
-  text-transform: uppercase;
-  color: var(--text-mute);
-  margin: 0;
-}
-.vswitch__group {
-  border: 0;
-  margin: 0;
-  padding: 0;
-  display: flex;
-  align-items: center;
-  gap: 4px;
-}
-.vswitch__group legend {
-  float: left;                 /* legend não participa de flex; float tira
-                                  ela do fluxo sem virar position:absolute */
-  width: 42px;
-  font-family: var(--mono);
-  font-size: 0.56rem;
-  letter-spacing: 0.1em;
-  text-transform: uppercase;
-  color: var(--text-mute);
-  padding: 0;
-}
-.vswitch__opt {
-  font-family: var(--mono);
-  font-size: 0.58rem;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-  color: var(--text-dim);
-  background: var(--bg-elev-2);
-  border: 1px solid transparent;
-  border-radius: 5px;
-  padding: 5px 8px;
-  min-height: 26px;
-  cursor: pointer;
-  transition: color 0.14s, background 0.14s, border-color 0.14s;
-}
-.vswitch__opt:hover { color: var(--text); border-color: #3a4152; }
-.vswitch__opt:focus-visible { outline: 2px solid #3b82f6aa; outline-offset: 2px; }
-/* Estado LIGADO pelo mesmo atributo que o leitor de tela lê — sem classe
-   paralela que possa dessincronizar do `aria-pressed`. */
-.vswitch__opt[aria-pressed="true"] {
-  color: var(--bg);
-  background: var(--text-dim);
-  border-color: var(--text-dim);
-}
-@media (max-width: 640px) {
-  /* No mobile o painel desce para o rodapé: no topo ele cobriria o
-     back-link e o ano do filme, que ficam exatamente ali. */
-  .vswitch {
-    top: auto;
-    bottom: 10px;
-    right: 10px;
-    left: 10px;
-    flex-direction: row;
-    flex-wrap: wrap;
-    align-items: center;
-    gap: 6px 10px;
-  }
-  .vswitch__head { width: 100%; }
-  /* 40px: é um controle que o dono vai tocar muitas vezes seguidas no
-     telefone, comparando as variantes. 26px de desktop é apertado demais
-     para isso. */
-  .vswitch__opt { min-height: 40px; padding: 10px 12px; }
-}
 
 /* [v1.9.19] VEREDITO — Entrega 2. Uma frase, montada por TEMPLATE sobre o
    lift já computado (ver `veredito()` em filme.js) — zero LLM.

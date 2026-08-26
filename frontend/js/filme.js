@@ -93,49 +93,6 @@
   // em styles.css — 2-3% de opacidade, mesmos tokens de cor de sempre.
   var TINT = params.get("tint") === "1";
 
-  // =====================================================================
-  // [v1.9.26] MECANISMO TEMPORÁRIO DE ESCOLHA — sai na passada seguinte.
-  //
-  // Duas entregas continuam sendo PROPOSTA, não decisão: a barra de
-  // proporção (Entrega 1/2) e a tipografia da linha de metadados da ficha
-  // (Entrega 3). As quatro alternativas ficam ATIVAS e alternáveis, para o
-  // dono do projeto escolher OLHANDO — pelo seletor no canto superior
-  // direito (`switcherBlock`, que troca em tempo real) ou por query param,
-  // que continua funcionando e é o que torna um estado compartilhável por
-  // link. Escolhida uma de cada, as outras SAEM do JS e do CSS junto com o
-  // seletor — removidas, não escondidas atrás de flag.
-  //
-  // RODADA 1 REJEITADA (v1.9.26, primeira passada) — as seis variantes
-  // anteriores foram removidas, e o motivo fica registrado porque ele é
-  // que define o que a rodada 2 tinha de resolver:
-  //   · barra "sóbria"   → "extremamente dessaturada";
-  //   · barra "angular"  → "os formatos terríveis";
-  //   · barra "sólida"   → "tem umas coisas interessantes, mas não dá
-  //     ideia de continuidade — parece que são três barras separadas,
-  //     cortadas com vão no meio".
-  // O VÃO é o defeito central, e as duas variantes novas partem dele: as
-  // duas são UMA barra contínua, com as cores se encostando, zero gap,
-  // zero fio separador, zero respiro escuro.
-  //
-  //   ?barra=continua    fronteira em DIAGONAL, uma cor terminando e a
-  //                      outra começando (Entrega 1)
-  //   ?barra=divergente  meio ancorado no CENTRO, a cavaleiro sobre o
-  //                      zero; negativas crescem para a esquerda,
-  //                      positivas para a direita (Entrega 2)
-  //
-  //   ?ficha=sistema     pilha de fontes do SISTEMA — SF real no Mac e no
-  //                      iPhone, Segoe UI no Windows, Roboto no Android
-  //   ?ficha=inter       Inter auto-hospedada, idêntica em todo aparelho
-  //
-  // O default sem query param é `continua` / `sistema`. É DEFAULT, não
-  // escolha minha: é só o que abre quando ninguém disse nada.
-  var BARRA_VARIANTES = ["continua", "divergente"];
-  var FICHA_VARIANTES = ["sistema", "inter"];
-  var BARRA_VARIANTE = BARRA_VARIANTES.indexOf(params.get("barra")) > -1
-    ? params.get("barra") : BARRA_VARIANTES[0];
-  var FICHA_VARIANTE = FICHA_VARIANTES.indexOf(params.get("ficha")) > -1
-    ? params.get("ficha") : FICHA_VARIANTES[0];
-
   var film = DATA.filmes[slug];
 
   if (!film) {
@@ -217,92 +174,6 @@
 
     // micro-pesquisa (A/B) — módulo separado
     if (window.mountSurvey) window.mountSurvey(app, f);
-
-    // [v1.9.26] seletor TEMPORÁRIO de variantes — sai com as variantes.
-    montarSeletor(f);
-  }
-
-  // =====================================================================
-  // [v1.9.26] SELETOR DE VARIANTES — ferramenta de comparação, TEMPORÁRIA.
-  //
-  // Existe por um motivo só: escolher entre duas barras e duas
-  // tipografias exige ver as quatro alternando rápido, no mesmo filme e na
-  // mesma rolagem, e trocar query param na URL a cada olhada perde o
-  // ponto de comparação junto com o scroll. O seletor troca EM TEMPO REAL.
-  //
-  // SAI JUNTO COM AS VARIANTES, e não vira "painel de configuração": no
-  // momento em que o dono escolher uma de cada, esta função, o CSS de
-  // `.vswitch` e as alternativas perdedoras são removidos na mesma
-  // passada. Por isso ele se anuncia como teste, em vez de se disfarçar
-  // de recurso do produto.
-  //
-  // A URL é mantida em sincronia por `replaceState` — sem recarregar (o
-  // que anularia a comparação) e sem empilhar histórico (o botão voltar
-  // continua saindo da página, não desfazendo cliques de teste).
-  function montarSeletor(f) {
-    var box = document.createElement("aside");
-    box.className = "vswitch";
-    box.setAttribute("aria-label", "Comparador de variantes (teste)");
-
-    var head = document.createElement("p");
-    head.className = "vswitch__head";
-    head.textContent = "teste visual";
-    box.appendChild(head);
-
-    box.appendChild(grupoDeOpcoes("Barra", [
-      { valor: "continua",   rotulo: "Contínua" },
-      { valor: "divergente", rotulo: "Divergente" },
-    ], BARRA_VARIANTE, function (v) {
-      BARRA_VARIANTE = v;
-      var antigo = app.querySelector(".proportion");
-      if (antigo) antigo.replaceWith(proporcaoBlock(f));
-      sincronizarURL();
-    }));
-
-    box.appendChild(grupoDeOpcoes("Ficha", [
-      { valor: "sistema", rotulo: "Sistema" },
-      { valor: "inter",   rotulo: "Inter" },
-    ], FICHA_VARIANTE, function (v) {
-      FICHA_VARIANTE = v;
-      var linha = app.querySelector(".ficha__line");
-      if (linha) linha.setAttribute("data-ficha", v);
-      sincronizarURL();
-    }));
-
-    document.body.appendChild(box);
-  }
-
-  function grupoDeOpcoes(titulo, opcoes, atual, aoTrocar) {
-    var fs = document.createElement("fieldset");
-    fs.className = "vswitch__group";
-    var lg = document.createElement("legend");
-    lg.textContent = titulo;
-    fs.appendChild(lg);
-
-    opcoes.forEach(function (o) {
-      var b = document.createElement("button");
-      b.type = "button";
-      b.className = "vswitch__opt";
-      b.textContent = o.rotulo;
-      // `aria-pressed` em vez de classe só visual: é um botão de estado,
-      // e o leitor de tela precisa saber qual está ligado.
-      b.setAttribute("aria-pressed", String(o.valor === atual));
-      b.addEventListener("click", function () {
-        [].forEach.call(fs.querySelectorAll(".vswitch__opt"), function (x) {
-          x.setAttribute("aria-pressed", String(x === b));
-        });
-        aoTrocar(o.valor);
-      });
-      fs.appendChild(b);
-    });
-    return fs;
-  }
-
-  function sincronizarURL() {
-    var q = new URLSearchParams(location.search);
-    q.set("barra", BARRA_VARIANTE);
-    q.set("ficha", FICHA_VARIANTE);
-    history.replaceState(null, "", location.pathname + "?" + q.toString());
   }
 
   // --- header ---
@@ -360,16 +231,16 @@
     if (ficha.duracao_min) parts.push(ficha.duracao_min + " min");
     parts.push("fonte TMDB");
 
-    // [v1.9.26, Entrega 3] A linha de metadados ganha DUAS variantes de
-    // tipografia, alternáveis pelo seletor ou por `?ficha=sistema|inter`.
-    // As duas são SANS — o pedido do dono era "a fonte que a Apple usa",
-    // e o motivo de a San Francisco não poder ser embutida está em
-    // `@font-face`/`--sans-ui` em styles.css e em fonts/LEIA-ME.md.
-    // O CONTEÚDO da linha não muda em nenhuma delas, e a sinopse acima
-    // não é tocada por nenhuma.
+    // [v1.9.26] A linha de metadados passou de monoespaçada em caixa alta
+    // para SANS, caixa normal — decisão FINAL do dono do projeto, depois
+    // de comparar com a variante "Inter" auto-hospedada. O pedido original
+    // era "a fonte que a Apple usa": a pilha de sistema (`--sans-ui`)
+    // entrega a San Francisco de verdade em Mac e iPhone porque usa a
+    // fonte JÁ INSTALADA no aparelho — o motivo de a SF Pro não poder ser
+    // embutida como arquivo está em `fonts/LEIA-ME.md`. O CONTEÚDO da
+    // linha não muda; a sinopse acima não é tocada.
     var line = document.createElement("p");
     line.className = "ficha__line";
-    line.setAttribute("data-ficha", FICHA_VARIANTE);
     line.innerHTML = parts.map(esc).join('<span class="dot">·</span>');
     el.appendChild(line);
 
@@ -417,26 +288,27 @@
   }
 
   // =====================================================================
-  // [v1.9.26] BARRA DE PROPORÇÃO — o sinal do topo. DUAS variantes, ambas
-  // ATIVAS, ambas CONTÍNUAS.
+  // [v1.9.26] BARRA DE PROPORÇÃO — o sinal do topo, decisão FINAL do dono
+  // do projeto depois de duas rodadas de comparação. A primeira propôs
+  // três variantes com respiro escuro entre as faixas ("sólida", "sóbria",
+  // "angular"); o veredito sobre a mais forte delas ("sólida"): "tem umas
+  // coisas interessantes, mas não dá ideia de continuidade — parece que
+  // são três barras separadas, cortadas com vão no meio". O diagnóstico é
+  // conceitual, não de ajuste: a recepção de um filme é UMA população
+  // particionada em três, não três medições independentes — um vão entre
+  // as faixas desenha três objetos onde o dado tem um só. A segunda rodada
+  // propôs duas variantes CONTÍNUAS (esta, "contínua", e "divergente", um
+  // diverging stacked bar); a escolhida foi a contínua.
   //
-  // O QUE A RODADA 1 ERROU, e é o que define esta: a variante "sólida"
-  // separava as três faixas com um respiro escuro de 3px, e o veredito do
-  // dono foi que ela "não dá ideia de continuidade — parece que são três
-  // barras separadas, cortadas com vão no meio". Estava certo, e o defeito
-  // era conceitual, não de ajuste: a recepção de um filme é UMA população
-  // particionada em três, não três medições independentes. Um vão entre as
-  // faixas desenha três objetos onde o dado tem um só. As duas variantes
-  // abaixo têm ZERO gap, ZERO fio separador e ZERO respiro escuro.
+  // A BARRA TEM ZERO gap, ZERO fio separador, ZERO respiro escuro.
   //
-  // O QUE AS DUAS COMPARTILHAM:
   //  · A FONTE DO NÚMERO é `b.share_real`, a MESMA que os cabeçalhos de
   //    grupo imprimem ("~75% das notas"). Ler duas fontes para o mesmo
   //    fato é como se cria divergência silenciosa.
-  //  · PROPORÇÃO EXATA. Sem vão, não há mais espaço livre a distribuir: as
-  //    larguras voltam a ser percentuais que somam exatamente 100 (a
-  //    normalização pela soma continua necessária porque os três
-  //    `share_real` são inteiros ARREDONDADOS e somam 99–101 no catálogo).
+  //  · PROPORÇÃO EXATA. Sem vão, não há espaço livre a distribuir: as
+  //    larguras são percentuais que somam exatamente 100 (a normalização
+  //    pela soma continua necessária porque os três `share_real` são
+  //    inteiros ARREDONDADOS e somam 99–101 no catálogo).
   //  · SEM NÚMERO DENTRO DA BARRA — os percentuais continuam nos
   //    cabeçalhos de grupo, um lugar só.
   //  · Paleta OFICIAL (laranja negativo, dourado meio, azul positivo).
@@ -454,14 +326,10 @@
   function proporcaoBlock(f) {
     var el = document.createElement("section");
     el.className = "proportion";
-    el.setAttribute("data-variante", BARRA_VARIANTE);
 
     var fatias = fatiasDeProporcao(f);
     if (fatias) {
-      var bar = BARRA_VARIANTE === "divergente"
-        ? barraDivergente(fatias)
-        : barraContinua(fatias);
-      el.appendChild(bar);
+      el.appendChild(barraContinua(fatias));
       el.appendChild(legendaDaBarra(fatias));
     }
 
@@ -470,7 +338,7 @@
   }
 
   // ---------------------------------------------------------------------
-  // VARIANTE "CONTÍNUA" (Entrega 1) — uma barra só, fronteira em DIAGONAL.
+  // A barra: uma faixa só, fronteira em DIAGONAL.
   //
   // A COMPOSIÇÃO, e por que ela é em CAMADAS e não em fatias lado a lado:
   // fatias lado a lado com aresta diagonal deixariam um triângulo vazio em
@@ -550,79 +418,6 @@
       return Math.min(m, x.pct);
     }, 100);
     bar.style.setProperty("--menor-pct", menorPct.toFixed(3));
-    return bar;
-  }
-
-  // ---------------------------------------------------------------------
-  // VARIANTE "DIVERGENTE" (Entrega 2) — diverging stacked bar.
-  //
-  // O PADRÃO, e a fonte: Heiberger & Robbins, "Design of Diverging Stacked
-  // Bar Charts for Likert Scales and Other Applications", Journal of
-  // Statistical Software 57(5), 2014. É a técnica que os autores
-  // recomendam como PRIMÁRIA para escalas ordenadas de opinião com centro
-  // neutro — que é exatamente a forma deste dado (negativas / medianas /
-  // positivas é uma escala de três pontos com neutro no meio).
-  //
-  // A CONSTRUÇÃO, conforme o artigo. A regra central, na descrição dos
-  // próprios autores da função `as.likert`: *"The 'No Opinion' column is
-  // split into two. Columns on the 'Disagree' side are given negative
-  // values."* A saída que eles publicam confirma a metade exata — uma
-  // linha com 8 em "No Opinion" vira `-4.0 ... +4.0`. Aqui:
-  //
-  //   [ negativas ][ med/2 ]│[ med/2 ][ positivas ]
-  //                          ↑ zero, em (negativas + medianas/2)
-  //
-  // O meio fica montado A CAVALEIRO sobre a linha zero, metade de cada
-  // lado; negativas crescem para a ESQUERDA a partir dali e positivas para
-  // a DIREITA. As duas metades do meio são da mesma cor e adjacentes,
-  // então elas leem como um bloco só com o zero no seu centro — que é o
-  // desenho do artigo, não um efeito colateral.
-  //
-  // O QUE A POSIÇÃO DO ZERO SIGNIFICA: ela é o único lugar onde este
-  // desenho difere da variante contínua. Quanto mais à esquerda o zero,
-  // mais a recepção pende para o positivo. `the-godfather` (2/5/93) põe o
-  // zero em 4,5% — quase toda a barra à direita. `napoleon-2023`
-  // (22/45/33) põe em 44,5%: o meio é o maior grupo, e o zero cai quase no
-  // centro, dizendo "dividido, com leve inclinação positiva" — que é
-  // verdade, e é uma leitura que a barra contínua não entrega de relance.
-  //
-  // Também CONTÍNUA: zero gap entre as fatias, mesma paleta.
-  function barraDivergente(fatias) {
-    var porNome = {};
-    fatias.forEach(function (s) { porNome[s.grupo] = s; });
-    var neg = porNome.negativas ? porNome.negativas.pct : 0;
-    var med = porNome.medianas ? porNome.medianas.pct : 0;
-    var pos = porNome.positivas ? porNome.positivas.pct : 0;
-    var zero = neg + med / 2;
-
-    var bar = document.createElement("div");
-    bar.className = "proportion__bar";
-    bar.setAttribute("role", "img");
-    bar.setAttribute("aria-label", alternativaTextualDaBarra(fatias)
-      + " O grupo do meio aparece dividido em duas metades em torno do "
-      + "ponto central da barra; o que está à esquerda dele pende para o "
-      + "negativo, e o que está à direita, para o positivo.");
-
-    // As quatro fatias, na ordem de leitura. As duas metades do meio
-    // carregam o MESMO `data-group`, então recebem a mesma cor e leem
-    // como um bloco só atravessado pelo zero.
-    [["negativas", neg], ["medianas", med / 2],
-     ["medianas", med / 2], ["positivas", pos]].forEach(function (par) {
-      if (par[1] <= 0) return;
-      var seg = document.createElement("span");
-      seg.className = "proportion__seg";
-      seg.setAttribute("data-group", par[0]);
-      seg.style.width = par[1] + "%";
-      bar.appendChild(seg);
-    });
-
-    // A marca do ponto de divergência — discreta, como pedido: um fio
-    // claro atravessando a barra, sem rótulo e sem número.
-    var marca = document.createElement("span");
-    marca.className = "proportion__zero";
-    marca.setAttribute("aria-hidden", "true");
-    marca.style.left = zero + "%";
-    bar.appendChild(marca);
     return bar;
   }
 

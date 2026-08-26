@@ -5395,22 +5395,17 @@ Falha em qualquer uma → **1 retentativa** com reforço (listando os trechos pe
    separadas, cortadas com vão no meio". O erro era conceitual. A recepção
    de um filme é **uma população particionada em três**, não três medições
    independentes; um vão entre as faixas desenha três objetos onde o dado
-   tem um só. Qualquer variante desta barra tem zero gap, zero fio
-   separador e zero respiro escuro entre faixas.
+   tem um só. A barra publicada tem zero gap, zero fio separador e zero
+   respiro escuro entre faixas.
 
-   **Duas variantes, e a diferença entre elas é de LEITURA, não de estilo:**
-
-   - **`continua`** — as três cores se encostam, e a fronteira é uma
-     **diagonal**: uma cor terminando e a outra começando. Responde "que
-     fatia é maior". A diagonal é desenhada por camadas empilhadas (cada
-     cor começa na borda esquerda e termina na sua fronteira, a última
-     preenchendo a barra), porque fatias lado a lado com aresta inclinada
-     deixariam um triângulo vazio em cada fronteira — o vão de novo. A
-     diagonal fica **centrada** na fronteira verdadeira, então ela empresta
-     área de um lado e devolve do outro: a meia altura da barra, o limite
-     está exatamente no percentual.
-   - **`divergente`** — **diverging stacked bar**, ver abaixo. Responde
-     "quanto pende para cada lado".
+   **A fronteira é uma DIAGONAL**: uma cor terminando e a outra começando.
+   Desenhada por camadas empilhadas (cada cor começa na borda esquerda e
+   termina na sua fronteira, a última preenchendo a barra), porque fatias
+   lado a lado com aresta inclinada deixariam um triângulo vazio em cada
+   fronteira — o vão de novo. A diagonal fica **centrada** na fronteira
+   verdadeira, então ela empresta área de um lado e devolve do outro: na
+   meia altura da barra, o limite está exatamente no percentual (medido em
+   `napoleon-2023`: 22,000% contra um cabeçalho de 22%).
 
    **A DIAGONAL É ADAPTATIVA, porque senão ela come a fatia estreita.** A
    pior do catálogo é `the-godfather`, com 2% em negativas. A projeção
@@ -5420,7 +5415,10 @@ Falha em qualquer uma → **1 retentativa** com reforço (listando os trechos pe
    que reage a resize sozinha. A primeira implementação usou
    `ResizeObserver` e foi trocada — media em JS uma coisa que o CSS já
    sabe, e um observador que não dispara deixaria o ângulo errado sem
-   sintoma visível.
+   sintoma visível. Medido: a fatia de 2% mede 14,40px de média em desktop
+   (720px de barra) e 6,70px em mobile (335px); no ponto mais fino da
+   diagonal, 10,91px e 5,07px — a diagonal encolhe sozinha no mobile
+   (7,9px → 3,7px) exatamente para a fatia sobreviver.
 
    **A marca da fronteira, e por que ela não é um vão.** Sem respiro, a
    distinção entre faixas adjacentes passaria a depender só do contraste
@@ -5428,54 +5426,19 @@ Falha em qualquer uma → **1 retentativa** com reforço (listando os trechos pe
    acompanhar o `clip-path`, traça **exatamente a diagonal e só ela**. É
    uma dobra, não um corte: as cores continuam encostadas.
 
-   #### A variante `divergente` — diverging stacked bar
-
-   Padrão com literatura revisada por pares: **Heiberger & Robbins, "Design
-   of Diverging Stacked Bar Charts for Likert Scales and Other
-   Applications", *Journal of Statistical Software* 57(5), 2014**. É a
-   técnica que os autores recomendam como PRIMÁRIA para escalas ordenadas
-   de opinião com centro neutro — que é a forma exata deste dado
-   (negativas / medianas / positivas é uma escala de três pontos com neutro
-   no meio).
-
-   **A construção, na regra dos próprios autores:** *"The 'No Opinion'
-   column is split into two. Columns on the 'Disagree' side are given
-   negative values."* A saída publicada do `as.likert` confirma a metade
-   exata — uma linha com 8 em "No Opinion" vira `−4,0 … +4,0`. Aqui:
-
-   ```
-   [ negativas ][ med/2 ]│[ med/2 ][ positivas ]
-                          ↑ zero, em (negativas + medianas/2)
-   ```
-
-   O meio fica **a cavaleiro sobre a linha zero**, metade de cada lado;
-   negativas crescem para a **esquerda** dali, positivas para a
-   **direita**. As duas metades do meio são adjacentes e da mesma cor,
-   então leem como um bloco só atravessado pela marca do zero — que é o
-   desenho do artigo, não efeito colateral. Também contínua, sem vão.
-
-   **RESSALVA REGISTRADA, e ela é a metade honesta da escolha.** Parte
-   substancial do valor do padrão vem de **comparar várias linhas contra a
-   mesma linha-base** — é assim que ele aparece no artigo, e é de lá que
-   vem a força de "esta categoria pende mais que aquela". A página do filme
-   tem **uma linha só**. O padrão foi escolhido aqui por duas razões que
-   não dependem disso: (a) o alinhamento com o **formato do dado**, que é
-   literalmente uma escala ordenada com neutro central; e (b) o alinhamento
-   com a recusa do produto a uma **régua única** — a posição do zero diz
-   para que lado a recepção pende sem nunca produzir um número-síntese,
-   que é o que §1 proíbe. **Não** foi escolhido por herdar todas as
-   vantagens que o artigo demonstra. Vale registrar também que os próprios
-   autores concedem que o gráfico de barras agrupadas é *"clear, accurate
-   and easy to read"* e o rejeitam por **enfatizar a comparação errada**,
-   não por ser menos legível: o argumento do padrão é sobre o que ele
-   destaca, não sobre acurácia de leitura.
-
-   **A honestidade quando o meio é grande, verificada:** em
-   `napoleon-2023` (22/45/33, meio dominante) o zero cai em 44,5% — quase
-   no centro, dizendo "dividido, com leve inclinação positiva", que é
-   verdade e é uma leitura que a variante contínua não entrega de relance.
-   Em `the-godfather` (2/5/93) o zero cai em 4,5%, com quase toda a barra à
-   direita.
+   **A VARIANTE ALTERNATIVA, e por que não foi a escolhida.** Uma segunda
+   proposta desta rodada foi um **diverging stacked bar** (Heiberger &
+   Robbins, *Journal of Statistical Software* 57(5), 2014) — o meio
+   ancorado no centro, a cavaleiro sobre um zero, com negativas crescendo
+   para a esquerda e positivas para a direita. É a técnica que a
+   literatura recomenda como primária para escalas ordenadas de opinião
+   com centro neutro, e a ressalva honesta era que parte do valor do
+   padrão vem de comparar VÁRIAS linhas contra a mesma linha-base — a
+   página do filme tem uma só. **O dono do projeto comparou as duas e
+   escolheu a contínua.** A implementação da divergente foi removida do
+   JS e do CSS junto com a escolha; se precisar voltar, o histórico do git
+   tem a construção completa (fórmula do zero, marca de divergência,
+   verificação de honestidade em `napoleon-2023` e `the-godfather`).
 
    **O DISCLAIMER DA COTA continua obrigatório e mudou só de lugar.** Ele
    impede a leitura errada mais provável da página — listas de bullets do
@@ -5505,31 +5468,31 @@ Falha em qualquer uma → **1 retentativa** com reforço (listando os trechos pe
    Pro a mock-ups de interface para iOS/OS X/tvOS; não autoriza
    redistribuição nem uso como webfont em site próprio. **Nenhum arquivo de
    SF Pro é baixado, hospedado ou referenciado neste projeto**, e isso não
-   é negociável. As duas saídas legais viraram as duas variantes:
+   é negociável. A saída legal é a **pilha de fontes de SISTEMA**:
 
-   - **`sistema`** — pilha `-apple-system, BlinkMacSystemFont, "Segoe UI",
-     Roboto, Helvetica, Arial, sans-serif`. Entrega a **SF real** em Mac e
-     iPhone porque usa a fonte **já instalada no aparelho do leitor** — o
-     site não distribui nada. Segoe UI no Windows, Roboto no Android.
-     Custo zero de carregamento; em troca, a página muda de aparência
-     conforme o aparelho.
-   - **`inter`** — **Inter**, desenhada como equivalente aberta da SF,
-     idêntica em todo aparelho. SIL Open Font License 1.1,
-     **auto-hospedada** em `frontend/fonts/` (subconjunto latin, variável
-     400–700, 85 KB), com o texto da licença ao lado como a OFL exige, e
-     `font-display: swap`. Não é puxada de CDN: o cabeçalho de
-     `styles.css` registra offline-first (funciona por `file://`, sem CORS,
-     sem requisição de rede), e um CDN de terceiro quebraria isso e ainda
-     entregaria o IP do leitor a um terceiro.
+   `-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica,
+   Arial, sans-serif` — entrega a **SF real** em Mac e iPhone porque usa a
+   fonte **já instalada no aparelho do leitor** (o site não distribui
+   nada), Segoe UI no Windows, Roboto no Android. Custo zero de
+   carregamento; em troca, a página muda de aparência conforme o
+   aparelho.
+
+   **A alternativa comparada, e por que não foi a escolhida.** Uma segunda
+   variante rodou lado a lado desta: **Inter**, desenhada como equivalente
+   aberta da SF, auto-hospedada (SIL Open Font License 1.1, subconjunto
+   latin, variável 400–700, 85 KB), idêntica em todo aparelho ao custo de
+   85 KB de rede. **O dono do projeto comparou as duas e escolheu a pilha
+   de sistema.** O arquivo da fonte, sua licença e o `@font-face` foram
+   removidos do repositório junto com a escolha — não ficam sem uso
+   ocupando espaço; se precisar voltar, o histórico do git tem o arquivo,
+   a licença e a regra completos.
 
    **CORREÇÃO DE REGISTRO, para a spec não guardar uma frase falsa:** sans
    **não** é família nova no projeto. `--sans` (pilha de sistema) existe
    desde a v1 e é o que `body` e os campos de busca já usam — a paleta
    tipográfica sempre foi serifada + monoespaçada + sans de interface. O
-   que é novo é (a) usar **sans na linha editorial da ficha**, que era
-   monoespaçada, e (b) na variante `inter`, a primeira família
-   **não-de-sistema, auto-hospedada** que o projeto carrega — e essa sim é
-   uma estreia, com custo de rede associado.
+   que é novo é usar **sans na linha editorial da ficha**, que era
+   monoespaçada.
 
 #### As TRÊS COLUNAS ALINHADAS POR EIXO (v1.9.14) — a promessa estrutural do produto
 
@@ -5689,7 +5652,7 @@ As três incógnitas abaixo foram resolvidas na Fase 1; os achados já estão in
   - **(1) A página reordenada (Entrega 1).** Ordem nova, de cima para baixo: ano + título → botão de reviews → ficha (sinopse + metadados) → **BARRA DE PROPORÇÃO** (nova) → linha arco-íris → bullets por sentimento, direto → **VEREDITO** (movido) → narrativa colapsada → pesquisa. O topo passa a ser ocupado pelo sinal DIMENSIONAL ("quanta gente de cada lado", legível de relance, sem leitura) em vez do VERBAL; o veredito é uma CONCLUSÃO, e conclusão lida antes da evidência é asserção, lida depois é fecho. O cabeçalho **"EM DETALHE · TEMA A TEMA" SAI** — não há mais um resumo antes dele do qual separar "o detalhe". O veredito muda de POSIÇÃO e **não de conteúdo**: mesmo texto, mesma origem, mesma geração, §3[V] intocado.
   - **(2) O DISCLAIMER DA COTA foi preservado, em forma mínima, e reancorado.** Ele é o que impede a leitura errada mais provável da página — listas de bullets do mesmo tamanho NÃO significam grupos do mesmo peso — e migra de baixo do cabeçalho removido para uma linha discreta **debaixo da barra**, onde a substância fica ancorada no objeto que mostra o peso: *"A barra é o peso real de cada grupo. A análise abaixo tem profundidade igual nos três — o tamanho das listas não indica peso."* O ramo sem distribuição real (o filme sintético degradado) mantém o texto da v1.2.1 inteiro, porque sem barra a regra volta a valer sozinha. Nenhum algarismo de contagem de review (v1.9.20 preservada).
   - **(3) A EXCEÇÃO AUTOMÁTICA DO MEIO (§0, v1.9.19) NÃO foi quebrada pela reordenação, e isso foi verificado e não presumido.** Quem decide se `medianas` sobe ao destaque é `sentimentGroupsBlock`, lendo `bucketDominante(f.buckets)` — função do DADO, não da posição do bloco na página; `veredictoBlock` não lê nem escreve esse estado (o prefixo do meio dominante já vem concatenado do Python dentro de `f.veredito.texto`). Varredura nos **35 filmes + o degradado**: os únicos com os três grupos em destaque são `napoleon-2023` (45% no meio) e `friday-the-13th-2009` (41%), exatamente os dois que a v1.9.19 registrou; os outros 33 mantêm o meio recolhido. O prefixo do dominante continua neutro nos dois.
-  - **(4) BARRA DE PROPORÇÃO (Entrega 2) — DUAS variantes, ambas CONTÍNUAS, ainda ABERTAS.** *A primeira rodada propôs três variantes com respiro escuro entre as faixas e foi REJEITADA inteira pelo dono do projeto; ver o item (11) para o diagnóstico e o que ele mudou.* Faixa contínua fatiada em três, largura proporcional ao peso real, na ordem de leitura de sempre. A FONTE do número é `b.share_real` — a MESMA que os cabeçalhos imprimem —, não `distribuicao.por_bucket`, que carrega os mesmos valores: ler duas fontes para o mesmo fato é como se cria divergência silenciosa. **Sem número dentro da barra**; `role="img"` com `aria-label` completo (percentual de peso é número permitido pela v1.9.20, que proibiu contagem BRUTA de review). Paleta oficial, nada de verde/vermelho. Descrição completa das duas variantes, da diagonal adaptativa e da ressalva do padrão divergente em **§3[E]**.
+  - **(4) BARRA DE PROPORÇÃO (Entrega 2) — FECHADA na variante `continua`.** *Duas rodadas de comparação até aqui: a primeira propôs três variantes com respiro escuro entre as faixas e foi REJEITADA inteira; a segunda propôs duas contínuas ("contínua" e "divergente"), e o dono escolheu a contínua — ver o item (11) para o diagnóstico da rodada 1 e o item (12) para a decisão final.* Faixa contínua fatiada em três, largura proporcional ao peso real, na ordem de leitura de sempre. A FONTE do número é `b.share_real` — a MESMA que os cabeçalhos imprimem —, não `distribuicao.por_bucket`, que carrega os mesmos valores: ler duas fontes para o mesmo fato é como se cria divergência silenciosa. **Sem número dentro da barra**; `role="img"` com `aria-label` completo (percentual de peso é número permitido pela v1.9.20, que proibiu contagem BRUTA de review). Paleta oficial, nada de verde/vermelho, fronteira em diagonal adaptativa. Descrição completa em **§3[E]**.
   - **(5) NOMENCLATURA DOS GRUPOS: `negativas` → HATERS, `medianas` → MIXED, `positivas` → FANS (Entrega 3).** Decisão de produto do dono, com objetivo de conexão geracional e campanha de marketing. **O trade-off, o escopo, a preservação da neutralidade ESTRUTURAL e a política de reversão estão escritos por extenso em §0** ("SEGUNDA EXCEÇÃO DELIBERADA na INTERFACE") — inclusive o reconhecimento de que "Fans/Haters" não é um par simétrico, e por quê. Resumo operacional:
     - **Troca onde o nome é RÓTULO ISOLADO** (cabeçalho do bloco de bullets, legenda e `aria-label` da barra, `aria-label` que identifica o grupo de um elemento), com o **mesmo destaque visual de antes**: mesmo peso, mesma cor de grupo, mesma posição.
     - **Mantém em PROSA** (veredito, narrativa, `observacao_geral`, prefixo do meio dominante gerado em código, avisos curtos de piso, disclaimer da cota). Verificado nos 35: **zero** veredito, aviso ou resumo de grupo colapsado contém rótulo novo.
@@ -5701,8 +5664,7 @@ As três incógnitas abaixo foram resolvidas na Fase 1; os achados já estão in
     - **A curva foi escolhida por MEDIÇÃO, não por gosto** — altura da caixa amostrada a 0/80/160/240/320ms, nos dois sentidos, em três candidatas. Uma ease-out agressiva (`0.22,0.61,0.36,1`) colapsava **84% da altura nos primeiros 80ms** ao fechar, o que lê como corte e não como recolher; uma ease-in-out (`0.4,0,0.2,1`) espremia metade do movimento entre 80 e 160ms e dava 80ms de nada no começo da abertura, que num controle de manipulação direta lê como atraso. **`cubic-bezier(0, 0, 0.58, 1)`** é a única em que nenhum quarto da duração carrega mais que ~40% do movimento nos DOIS sentidos. **Sem spring e sem bounce**, e não por promessa: os dois pontos de controle ficam dentro de [0,1] e as séries medidas são monotônicas.
     - **A regressão de acessibilidade que a técnica traz de brinde, e a correção.** Ao contrário de `display: none`, uma linha de grid de altura zero **não** tira o conteúdo da árvore de acessibilidade — sem tratamento, um leitor de tela leria a paráfrase de todo bullet fechado da página. `visibility: hidden` no recorte resolve, com `transition-delay` igual à duração para o texto não sumir de uma vez no meio do fechamento. Conferido com `checkVisibility()`: o conteúdo colapsado dá `false`, o mesmo que o `<details>` da narrativa dá nativamente.
     - **Acessibilidade e responsividade:** continua `<button type="button">` nativo (Enter e Space são comportamento do agente, sem handler de tecla concorrente que pudesse cancelá-los), `aria-expanded` + `aria-controls` apontando para o elemento certo, anel de foco visível, área de toque de 44px sob `@media (hover: none)` e 40px no desktop, texto e chevron alinhados, integrado às duas colunas do desktop. **`prefers-reduced-motion` conferido**: as três transições morrem, o estado final é correto em aberto e em fechado, e a visibilidade deixa de ter atraso.
-  - **(8) Tipografia da linha de metadados da ficha — DUAS opções ainda ABERTAS (`?ficha=sistema|inter`).** *As três da primeira rodada foram descartadas junto com as da barra.* A linha era monoespaçada em caixa alta com tracking largo e lia como log de terminal; passa a ser **sans**, caixa normal, corpo maior, tracking quase nulo. **O pedido era "a fonte que a Apple usa" — a San Francisco —, e ela NÃO PODE ser embutida:** a licença da Apple restringe a SF Pro a mock-ups de interface para iOS/OS X/tvOS e não autoriza redistribuição nem uso como webfont. Nenhum arquivo de SF Pro é baixado, hospedado ou referenciado. As duas saídas legais: **`sistema`** (pilha `-apple-system, …` — usa a SF **já instalada no aparelho**, o site não distribui nada; Segoe UI no Windows, Roboto no Android; custo zero, aparência variável por aparelho) e **`inter`** (Inter, OFL 1.1, **auto-hospedada** em `frontend/fonts/`, latin variável 400–700, **85 KB**, licença ao lado, `font-display: swap`; não vem de CDN porque o offline-first do projeto proíbe requisição de rede e um CDN ainda entregaria o IP do leitor a um terceiro). Detalhes e a correção de registro sobre "sans não é família nova" em **§3[E]**.
-  - **(9) O mecanismo de escolha é TEMPORÁRIO e sai na passada seguinte, agora com SELETOR NA TELA.** As quatro alternativas ficam ATIVAS. Além do query param (que continua funcionando e é o que torna um estado compartilhável por link), há um **seletor no canto superior direito** que troca **em tempo real**, sem recarregar — escolher entre duas barras exige vê-las alternando no mesmo filme e na mesma rolagem, e trocar URL a cada olhada perde o ponto de comparação junto com o scroll. Ele se **anuncia como teste** ("TESTE VISUAL") em vez de se disfarçar de painel de configuração: um controle de desenvolvimento que parece produto é o tipo de coisa que sobrevive por engano. A URL é mantida em sincronia por `replaceState` (sem recarregar, sem empilhar histórico). Os defaults (`continua`, `sistema`) são só o que abre sem query param e **não são escolha feita por conta própria**. Escolhida uma de cada, as outras e o seletor saem do JS e do CSS.
+  - **(8) Tipografia da linha de metadados da ficha — FECHADA na pilha de SISTEMA.** *A variante Inter auto-hospedada rodou lado a lado desta para comparação e foi descartada pelo dono; ver o item (12).* A linha era monoespaçada em caixa alta com tracking largo e lia como log de terminal; passa a ser **sans**, caixa normal, corpo maior, tracking quase nulo. **O pedido era "a fonte que a Apple usa" — a San Francisco —, e ela NÃO PODE ser embutida:** a licença da Apple restringe a SF Pro a mock-ups de interface para iOS/OS X/tvOS e não autoriza redistribuição nem uso como webfont. Nenhum arquivo de SF Pro é baixado, hospedado ou referenciado. A pilha `-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif` usa a SF **já instalada no aparelho** — o site não distribui nada; Segoe UI no Windows, Roboto no Android; custo zero de carregamento, aparência variável por aparelho. Correção de registro sobre "sans não é família nova" em **§3[E]**.
   - **(10) Verificação — MANUAL e ENUMERADA, porque o frontend tem ZERO teste automatizado.** Varredura por iframe sobre os **35 filmes do catálogo + o degradado sintético**, conferindo por página: ordem dos blocos, posição do veredito, barra proporcional coerente com os percentuais dos cabeçalhos, rótulo certo para cada chave, prosa preservada neutra, rótulo antigo ausente, cabeçalho "EM DETALHE" ausente, "Exemplo parafraseado" ausente, disclosure fechado por padrão, e simetria estrutural entre negativas e positivas (**6 e 6 bullets em todos**). **Zero divergência.** Inspeção dirigida em desktop (1280×900) e mobile (375×812) nos casos de referência: `eighth-grade` (base), `napoleon-2023` (meio dominante), `obsession-2026` (amostra reduzida, avisos curtos), `the-godfather` e `talk-to-me-2022` (valorativos, veredito longo agora no rodapé), e a home. **Zero erro de console.** Alternativa textual da barra inspecionada na árvore de acessibilidade, não presumida.
     - **Limitação declarada da verificação:** o painel de navegador usado roda com `document.visibilityState === "hidden"`, o que congela a linha do tempo de animação e não entrega evento de teclado à página. As transições foram medidas pela **Web Animations API**, fixando `currentTime` e lendo o estilo computado quadro a quadro — mais preciso que cronometrar, mas não é o mesmo que ver rodar. O acionamento por Enter/Space foi verificado por PROPRIEDADE (elemento `<button>` nativo, na ordem de tabulação, sem handler de tecla que cancele o padrão), não por injeção de tecla de ponta a ponta. Registrado como o que é: uma rede a menos.
   - **(11) RODADA 2 do desenho da barra e da tipografia — as SEIS variantes da rodada 1 foram REJEITADAS e removidas.** O veredito do dono, na íntegra: a variante "sóbria" era *"extremamente dessaturada"*; a "angular", *"os formatos terríveis"*; e a "sólida" — a que ele considerou mais promissora — *"tem umas coisas interessantes, mas não dá ideia de continuidade: parece que são três barras separadas, cortadas com vão no meio"*.
@@ -5713,6 +5675,12 @@ As três incógnitas abaixo foram resolvidas na Fase 1; os achados já estão in
     - **A `divergente` segue Heiberger & Robbins (2014), lido antes de implementar.** A regra central, na descrição dos próprios autores: *"The 'No Opinion' column is split into two. Columns on the 'Disagree' side are given negative values."* A ressalva obrigatória — parte do valor do padrão vem de comparar VÁRIAS linhas contra a mesma linha-base, e a página do filme tem uma só — está registrada em **§3[E]**, junto com a razão pela qual ele foi escolhido mesmo assim, e com a concessão dos próprios autores de que o gráfico de barras agrupadas é *"clear, accurate and easy to read"* e é rejeitado por enfatizar a comparação errada, não por ser menos legível.
     - **A LEGENDA DO MOSAICO DA HOME vira GLOSSÁRIO** — o caso de fronteira nº 1 da Entrega 3, escalado na rodada 1 e decidido pelo dono agora: nem manter, nem trocar. Passa a ser "**HATERS** (quem não gostou), **MIXED** (quem ficou no meio), **FANS** (quem gostou)", com as cores de grupo preservadas. Raciocínio completo em **§0** — a legenda é o único lugar do produto onde os dois vocabulários convivem de propósito, porque é onde o novo se ensina.
     - **BUG DE MEDIÇÃO achado na própria verificação, e vale registrar porque quase virou um falso positivo publicado.** A primeira varredura acusou 45 divergências entre a barra e os cabeçalhos na variante `continua`. Nenhuma era real: a sonda lia `--diag` com `getComputedStyle().getPropertyValue()`, que devolve a **cadeia `clamp(...)` não resolvida** (propriedade customizada não vira comprimento sem `@property`), o `parseFloat` dava `NaN`, e o fallback `|| 0` fazia a sonda esquecer de descontar meia diagonal da largura de caixa de cada camada. O erro batia exatamente com D/2 em todos os 45 casos. A varredura foi refeita medindo a **geometria realmente desenhada**, por hit-testing com `elementFromPoint` (que respeita `clip-path`) na meia-altura da barra, com bisseção para achar cada fronteira — método que não depende de ler valor de CSS nenhum.
+  - **(12) DECISÃO FINAL DO DONO — barra `continua`, ficha `sistema`. O seletor, a variante `divergente` e a Inter foram REMOVIDOS.** Depois de comparar as quatro alternativas da rodada 2 no seletor em tempo real, o veredito: "gostei da barra contínua com ficha sistema, pode publicar ela como versão oficial". Nesta mesma sessão:
+    - **O seletor `.vswitch` e `montarSeletor()`/`grupoDeOpcoes()`/`sincronizarURL()` saíram do JS e do CSS** — ele se anunciava como ferramenta de teste (item 9, rodada anterior) e cumpriu o papel: comparar em tempo real. Não sobrevive à escolha.
+    - **`barraDivergente()` e as classes `.proportion__seg`/`.proportion__zero` saíram do JS e do CSS.** A construção completa (fórmula do zero, marca de divergência, a ressalva de Heiberger & Robbins) fica só no histórico do git e resumida em **§3[E]** — não apagada da spec, porque a leitura ("dividido, com leve inclinação positiva" em `napoleon-2023`) é um raciocínio de produto que pode voltar a ser relevante, mesmo sem o código.
+    - **A variante `inter` de tipografia, o `@font-face`, `--sans-inter` e o diretório `frontend/fonts/` inteiro (arquivo woff2 + `OFL.txt` + `LEIA-ME.md`) foram REMOVIDOS do repositório.** Nenhuma fonte auto-hospedada sobrevive nesta versão — o produto usa só fontes de SISTEMA (serifada, monoespaçada, sans) mais a `--spectrum` da marca. Se a Inter precisar voltar, o histórico do git tem o arquivo e a licença completos; não é reconstruída de memória.
+    - **`?barra=` e `?ficha=` deixam de existir como query param** — a página não lê mais `URLSearchParams` para nenhuma das duas escolhas. `?tint=1` e `?slug=` continuam (nada relacionado a eles foi tocado).
+    - **Verificado depois da remoção:** suíte Python 1492 passando; `resultado/` intacto; a página renderiza a barra contínua e a ficha em sans-sistema em todos os 35 filmes + degradado, sem nenhuma referência residual a `divergente`/`inter`/`vswitch`/`data-variante`/`data-ficha` em JS ou CSS; zero erro de console.
 - **v1.9.25** (2026-08-26) — **A retentativa de transporte desce para o TRANSPORTE e passa a valer para as DUAS portas de entrada do adaptador; o retry que engolia erro de conteúdo sai dos scripts; a telemetria atravessa o processo e chega ao relatório de lote.** Nenhum filme regenerado; nenhum `resultado/*.json` alterado.
   - **(1) O defeito da v1.9.24, verificado.** A retentativa entrou em `resposta()`, mas o adaptador tem DUAS portas de entrada: `resposta()` (narrador §D2, veredito §V) e `client_call` (síntese de bucket §D). A síntese entra pela segunda e **não estava coberta** — um 5xx nela continuava descartando o lote. A instrução da sessão anterior presumia um ponto de estrangulamento único que não existia; a lacuna foi reportada, não contornada por conta própria.
   - **(2) Eram QUATRO pontos de contato com o SDK, não dois.** `deepseek_resposta` (alcançado pelas duas portas), `_gemini_resposta` (só `resposta()`), `_gemini_call` (só `client_call`, com transporte PRÓPRIO duplicado) e `anthropic_client_call`. A retentativa desce para `deepseek_resposta`/`_gemini_resposta` numa implementação única (`_com_retentativa`), e as camadas de cima herdam. Classificação de erro, teto, backoff, jitter e telemetria são os da v1.9.24 — só mudaram de lugar.
