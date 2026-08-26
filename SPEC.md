@@ -1,6 +1,6 @@
-# Espectro 24 — Especificação v1.9.23
+# Espectro 24 — Especificação v1.9.25
 
-**Data:** 2026-08-25
+**Data:** 2026-08-26
 **Status:** v1 fechada (aceite em "Status de aceite da v1", fim do documento). **v1.9.6 puxa o único lever que a v1.9.5 mediu como capaz de mover a cobertura temporal: a ORDENAÇÃO (§2.3).** A v1.9.5 provou, com número, que profundidade de PÁGINA não compra tempo — a mediana do catálogo é de 1783 páginas para cobrir um ano contra um teto de plataforma de 256, e as 256 páginas expostas sob `by/added` são as ~3000 adições mais recentes. Esta versão (1) dá ao `Fetcher` **retentativa com backoff para erro de TRANSPORTE** — e só de transporte: 403, `AntiBotError` e o SEGUNDO 503 do lote continuam parando imediatamente, porque retentar bloqueio é evasão (§2.4); (2) promove `dias_por_100_paginas` a **métrica de primeira classe**, calculada na coleta e gravada em `meta.json` — é ela que separa as duas populações de filme e decide quem precisa de quê (§3[B']); e (3) coleta uma **passada SELETIVA sob `by/added-earliest`** só nos filmes abaixo do limiar dessa métrica, somando material genuinamente antigo ao bruto por incrementalidade (§2.3), sem tocar em quem já é bem servido pela profundidade sob `by/added`. Executada em 12 de 35 filmes por 610 requisições, a passada leva a janela `p5-p95` do bruto de **47 para 1487 dias** de mediana e revela que o material antigo é **2,4× mais longo** que o recente (55% abaixo de `min_chars` contra 77%) — achado que interage direto com o filtro e com a estratificação. A mudança de SELEÇÃO que as duas pontas agora tornam possível é **medida e proposta, não aplicada** (§3[C2], "Proposta temporal"). **CORREÇÃO DE REGISTRO:** a v1.9.5 se declarou "a última sessão da camada de COLETA"; a declaração não sobreviveu à medição da própria v1.9.5, que apontou a ORDENAÇÃO como o parâmetro de coleta ainda por decidir. A frase original fica abaixo, com esta correção ao lado. **v1.9.5 é a ÚLTIMA sessão da camada de COLETA.** Ela corrige a ÂNCORA do posicionamento profundo (§3[B]) e estratifica a SELEÇÃO por profundidade (§3[C2]). O defeito medido: o bloco profundo da v1.9.2 comprava mediana de 3 DIAS sobre o raso, porque a progressão geométrica partia do fim do bloco raso e punha as posições "profundas" em 14-28 de níveis que vão a ~256 — profundo em POSIÇÃO DE PÁGINA, raso em TEMPO. As posições passam a ser frações da profundidade REAL, descoberta por uma sondagem por filme de ~4 requisições; `RESERVA_PROFUNDIDADE` e o orçamento por bucket não mudam — muda ONDE as páginas caem, não QUANTAS. A alternativa (declarar a recência como escolha) foi rejeitada com razão registrada: o histograma NÃO é recortável no tempo, então declarar não alinharia os canais, apenas confessaria o desalinhamento para sempre. Na análise, a seleção adota E1 (três faixas de profundidade), medida antes de adotar com custo ZERO em buckets fechados. Depois desta versão, todo parâmetro restante do projeto é de ANÁLISE. **v1.9.4 corrige o déficit do bucket DOMINANTE com uma extensão de orçamento por DÉFICIT (§3[B]) e transforma numa verificação mecânica a lição sobre o adaptador de LLM (§3[D]).** A extensão é OBSERVACIONAL por decisão explícita — nenhum rendimento é estimado: o bucket gasta a base de 16 páginas exatamente como antes e, só se fechar abaixo da meta com folga, recebe páginas extras uma a uma até o teto de 24, alocadas aos níveis em déficit MEDIDO pelo quarto uso de `redistribuir_deficit`. O desenho preditivo foi rejeitado com racional registrado (as páginas são log-espaçadas desde a v1.9.2 e não amostram o mesmo regime; e a parada por ALVO, removida na v1.9.2, já era uma heurística otimista decidindo orçamento). Registra também que correção e declaração são CAMADAS: a extensão encolhe a classe de buckets sub-40, o piso escalonado absorve o resíduo, e a declaração honesta segue sendo o mecanismo final. Nada de `min_chars`, cascata, fronteira, cota, alocação proporcional, orçamento BASE, ordenação ou reserva de profundidade é tocado. **v1.9.3 não muda a camada de coleta — constrói o harness de LOTE (§3[H]) sobre ela e roda a coleta de um conjunto maior de filmes.** Checkpoint em arquivo (resume sem refazer filme completo), validação de slug por 1 requisição antes de gastar orçamento de páginas, falha isolada por filme (um slug ruim nunca derruba o lote), e `material_esgotado` tratado explicitamente como caso esperado — os 3 filmes do catálogo, sendo populares, nunca tinham exercitado esse caminho em produção. Estimativa de custo medida ANTES do lote (§5.6), com veto explícito se a projeção para 50 filmes passar de ~4h. **v1.9.2 fechou o gate de profundidade que a v1.9.1 deixou em aberto e resolve o déficit residual de `medianas`.** É a última sessão de coleta antes do lote de 30-50 filmes, e o reenquadramento que a motiva é este: a profundidade de paginação é o ÚNICO parâmetro da camada de coleta que o superset NÃO torna reversível — página não baixada não está em disco, e coletar o lote sem resolver isso é aceitar recoleta total se a janela temporal se provar um problema. Quatro entregas: (a) a **parada por ALVO é removida** — era um vestígio de quando o teto era por nível e o custo por bucket não tinha limite; sob o orçamento por bucket da v1.9.1 ela só introduzia não-determinismo (foi a causa exata do 37/40 residual de `cidade-de-deus`), e o orçamento passa a ser sempre gasto integralmente, com única parada antecipada por esgotamento real de material — custo aceito e medido: ~32→48 páginas/filme; (b) **posicionamento estratificado por profundidade** substitui a paginação puramente consecutiva — uma reserva de 25% do orçamento de cada nível (`RESERVA_PROFUNDIDADE`) é posicionada em progressão geométrica a partir do fim do bloco raso, com descoberta de profundidade real e redistribuição do orçamento restante **reaproveitando `redistribuir_deficit`** — MESMO número de requisições que a paginação consecutiva, cobertura temporal muito maior; (c) o **teto de 256 páginas** suspeitado na v1.9.1 é medido num filme obscuro — resultado em §3[B]; (d) `pagina_origem` (rank de adição sob ordenação cronológica, sem a contaminação de `data`, que é a data ASSISTIDA) vira o **instrumento temporal PRIMÁRIO**; `janela_temporal` por `data` (v1.9.1) fica como secundária, rotulada como proxy contaminado. Nada de fronteira, cota, piso escalonado, `min_chars`, ordenação ou síntese é tocado. **v1.9.1 corrigiu dois defeitos que a telemetria MEDIDA da v1.9.0 revelou na camada de coleta**, sem tocar fronteira, cota, piso escalonado ou qualquer etapa de síntese/narrativa: (a) o **orçamento de páginas por BUCKET** (§3[B]) substitui o teto por NÍVEL, corrigindo o defeito estrutural registrado na v1.9.0 (o bucket `medianas`, com metade dos níveis dos outros dois, nunca conseguia o mesmo teto agregado de páginas — 8 contra 16 — e por isso nunca fechava a cota) — **medido: fecha 40/40 em 2 dos 3 filmes (era 35 e 26) e melhora para 37/40 no terceiro (era 23)**, um achado residual e distinto, com causa identificada, registrado em §3[B]; (b) os **motivos de descarte** na seleção passam a ser discriminados (`abaixo_min_chars`/`spoiler`/`truncada_sem_texto`/`duplicata`/`excedente_cota`/`outros`), telemetria pura, sem mudança de comportamento. Duas entregas adicionais: (c) a **janela temporal** (mín./máx./p5/p50/p95 das datas do bruto, por bucket e total) passa a ser gravada em `meta.json`, não exposta ao frontend; (d) o literal `50 · 20 · 30` remanescente em `frontend/js/filme.js` (pendência registrada na v1.9.0) passa a derivar do próprio JSON de resultado. Uma quinta questão — **paginação de passo largo**, candidata a resolver o viés de recência medido na v1.9.0 (79-100% da amostra em ~7 semanas) — foi **só MEDIDA nesta versão, não implementada**: o gate de decisão está em §3[B], "Medição de profundidade (v1.9.1, gate)", com um achado que contraria a expectativa registrada no briefing (o custo de descobrir a profundidade via sonda de rede NÃO é neutro — é uma sonda de ~10 requisições por nível — mas há evidência forte, ainda que de amostra pequena, de um TETO FIXO do site em 256 páginas que, se confirmado mais amplamente, eliminaria essa sonda por completo). **v1.9.0 reestruturou a camada de COLETA e desacoplou COLETA de ANÁLISE** — a maior mudança de arquitetura de dados desde a v1. Até a v1.8.2, a coleta usava cota fixa de 10 reviews por nível de estrela e gravava, no material coletado, as decisões de **fronteira de bucket**, **cota** e **filtro**: mudar qualquer uma delas custava recoletar tudo. A v1.9.0 (a) move as **fronteiras de bucket** para configuração lida de um único lugar, com o mapeamento nível→bucket como função pura (§2.2), e adota a **opção C** (`0,5–2,0` / `2,5–3,0` / `3,5–5,0`, semântica "não recomendam / mornos / recomendam"); (b) faz a coleta raspar um **superset por nível** e **persistir tudo em disco** (`dados/bruto/<slug>/`, §3[B']), com condição de parada em três degraus de precedência (piso de 1 página por nível com material > alvo com folga de 25% > teto de 4 páginas); (c) torna a **ordenação de listagem** um parâmetro de amostragem explícito, gravado no material coletado, com default trocado de `by/activity` (ordenada por ENGAJAMENTO) para `by/added` (**cronológica**, mais recentes primeiro) — ver §2.3; (d) substitui a cota igual por nível por **alocação proporcional ao histograma** dentro de cada bucket, com piso por nível e redistribuição de déficit restrita ao mesmo bucket (§3[C1]); (e) aplica a **cota de análise 40/40/40 downstream**, sobre o bruto persistido, com min_chars/spoiler/cascata como parâmetros (§3[C2]); e (f) troca o piso binário de 3 por um **piso escalonado de 4 estados** (`completa`/`sem_quantificador`/`sem_numero`/`sem_analise`), exposto como campo no JSON (§3[C3]). **Consequência publicada:** sob as fronteiras C os shares dos 3 filmes do catálogo MUDAM — `cure` 3/17/79 → 2/8/90, `the-invite-2026` 3/18/79 → 2/7/91, `cidade-de-deus` 1/8/91 → 1/3/96. **Risco aceito e mitigações** em §2.2. v1.2.0 adiciona a etapa **[D2] narrador** (§D2) e a flag `--tom` como **mecanismo de desenvolvimento** para A/B de saída. v1.2.1 corrige uma classe de infidelidade do narrador (cota de amostragem apresentada como distribuição da recepção) — invariante nova no §D2 + telemetria. v1.2.2 adiciona calibração numérica dos quantificadores da narrativa (mapa fração→palavra, faixa mais fraca em caso de dúvida) — verificação por instrução ao LLM. v1.2.3 move a calibração do prompt para o CÓDIGO: os rótulos de quantificador passam a ser pré-computados e o LLM só os usa, não os escolhe (mesmo princípio da v1.1.1 — código como autoridade de número/rótulo). v1.3.0 adiciona uma **ficha técnica do filme via TMDB** (§3a, aditiva — nunca bloqueia o pipeline) e reestrutura §D2 para uma narrativa em **três movimentos** (filme → experiência consensual → contraste entre grupos), com uma emenda pontual à regra de "zero conteúdo de trama" para permitir a sinopse OFICIAL curta como fonte do primeiro movimento (ver §3[D] "Anti-spoiler"). **v1.3.1** corrige um defeito real observado na primeira execução do MOVIMENTO 2 (a narrativa de `the-invite-2026` importou um juízo de QUALIDADE — "atuações marcantes"/"roteiro inteligente" — como se fosse um consenso DESCRITIVO, contradizendo diretamente os temas do grupo negativas): a regra do MOVIMENTO 2 ganha três critérios explícitos (categoria/presença/não-contradição) e telemetria de `consensos_usados` para revisão humana de cada execução (ver §D2). **v1.4.0** é a maior mudança desde a v1: o pipeline passa a coletar a **distribuição real de notas** (histograma público do Letterboxd, §3b) e, com ela, **inverte** a regra de prevalência do §D2 — o que a v1.2.1 proibiu por falta do dado, a v1.4.0 torna obrigatório e ancorado (ver "Princípio norteador" abaixo). **v1.4.1** corrige três defeitos pontuais observados na entrega da v1.4.0, todos no §D2: (1) telemetria de quantificadores **por par declarado** (`quantificadores_usados`), depois da 3ª reincidência do mesmo modo de falha, que a rede de nível de bucket não pega; (2) **omissão autorizada** do MOVIMENTO 2, contra a pressão de preenchimento que produz juízo de qualidade hedgeado; (3) **invariante de vocabulário do peso** — rótulos de peso dizem "das notas", nunca "das reviews"/"do público"/"dos espectadores". **v1.5.0** ataca um defeito de **fluência**, não de honestidade: as narrativas entregues até a v1.4.1 são factualmente corretas, mas soam mecânicas — forma sintática repetida (rótulo de peso + verbo de reporte + complemento, três vezes seguidas), frases quase todas do mesmo comprimento, excesso de verbos de reporte e nominalizações no lugar de verbos. O diagnóstico (registrado no changelog) é que o acúmulo de invariantes de honestidade das versões anteriores empurrou o modelo à única forma que satisfaz todas simultaneamente. A correção prescreve **ritmo** e **registro** com a mesma precisão de código com que já se prescrevem números, adiciona uma **marcação de perspectiva** pré-computada (para que a redução de verbos de reporte não deixe a fala de um grupo minoritário soar como fato do narrador) e duas telemetrias novas (`marcadores_perspectiva`, `metricas_fluencia`) — **sem afrouxar nenhuma invariante de honestidade** das versões anteriores. **v1.6.0** conclui que a v1.5.0 errou no MÉTODO, não no objetivo: empilhar honestidade e fluência num prompt só não funcionou (as regras de ritmo não transferiram entre filmes, as métricas que as fiscalizavam não acompanhavam qualidade, e a configuração de produção chegou a publicar uma frase agramatical). A correção é **separar responsabilidades**: o narrador (§D2) é podado de volta a UMA responsabilidade — dizer a verdade com a estrutura certa — e um estágio novo, o **editor [E2]** (§E2), assume ritmo e leitura sem ter acesso a nenhuma fonte de fato e sem poder alterar número, rótulo ou atribuição (trechos protegidos + verificação mecânica + descarte da edição em caso de violação). **v1.6.1** corrige o defeito 5.2 que a v1.6.0 deixou em aberto: em vez de normalizar a COMPARAÇÃO entre o trecho declarado e o texto (caixa/acento/demonstrativo), passa a verificar a EXISTÊNCIA de uma expressão de atribuição reconhecida no texto realmente escrito — o que fecha também o caso de reordenação de palavras que a normalização não alcançava, e reduz `marcadores_perspectiva` a telemetria pura (auditoria humana, não fonte de validação). **v1.6.2** corrige um bug de substring solta descoberto ao vivo na regeneração de `cidade-de-deus` (shares 1%/8%/91%): `_ancora_de_grupo` e `_ancoragem_de_peso_ok` buscavam o percentual de um grupo com `f"{pct}%" in texto`/`texto.find(...)`, que casa **dentro** de outro número — `"1%"` combinava com o "1" final de `"(~91%)"`, ancorando o grupo `negativas` (1%) numa posição muito anterior à sua menção real, corrompendo o cálculo do span de movimento e produzindo falso positivo em `perspectiva_nao_marcada` mesmo com o texto correto e bem marcado. A busca agora usa `re.search(rf"(?<!\d){pct}%", texto)` (nega dígito imediatamente anterior), então `"1%"` só casa como número isolado, nunca como sufixo de `"91%"`/`"21%"`/etc. Mesmo defeito corrigido nos dois pontos que faziam a busca (âncora de grupo e checagem de ancoragem de peso), com testes de regressão cobrindo o caso real. Nenhuma invariante de honestidade foi afrouxada — o fix é estritamente sobre a CHECAGEM, não sobre o que é permitido no texto. **v1.7.0** corrige dois defeitos reais observados na regeneração das narrativas: (1) **resolução de ficha do filme errado** — `espectro24 --slug cure` sem `--ano` resolvia no TMDB para "The Cure" (2026, dir. Nancy Leopardi) em vez de Cure (1997, Kiyoshi Kurosawa), porque a desambiguação por popularidade sem ano escolhe o candidato errado quando o título é comum; a resolução de ano ganha uma cadeia de fallback confiável (slug → página do Letterboxd → sem ficha) e uma guarda de sanidade que descarta a ficha inteira se o ano devolvido pelo TMDB divergir do esperado em mais de 1 ano (ver §3[A]); (2) **lista de protegidos do editor §E2 enxugada** — protegia até 16 trechos por filme, incluindo quantificadores soltos ("muitos") e expressões de atribuição, o que descartava o editor com frequência (`cure`) ou o levava a inventar frases só para reencaixar um protegido movido ("Essa é a opinião de uma fração mínima das notas.", `cidade-de-deus`), e ainda deixava sobreviver um defeito gramatical real ("destacando a a maioria o estilo visual") porque a frase continha um rótulo protegido; a proteção literal agora cobre só rótulo de peso COM percentual e tokens numéricos — quantificador e atribuição passam a valer SÓ pela checagem semântica que já existia e era mais forte (`conferencia_quantificador` v1.4.1, `_marcadores_validos` v1.6.1), revalidada dentro do próprio `editar_narrativa` (ver §E2). **v1.7.1** corrige três defeitos de acabamento observados no texto PUBLICADO da v1.7.0, nenhum deles de honestidade: (1) **contrabarra residual** — `_remover_aspas` trocava só o caractere de aspas por "", então uma citação escapada (`\"A Cura\"`) virava `\A Cura\` (publicado em `cure` e `the-invite-2026`); a remoção agora consome a contrabarra que precede a aspas junto, como uma unidade. (2) **capitalização de rótulo protegido movido** — o rótulo de peso guarda a caixa de onde apareceu a primeira vez (início de frase, capitalizado); quando o editor o move para o meio de um período, a checagem 100% literal não deixava ajustar só a inicial, e o defeito ("Para A grande maioria...", `cidade-de-deus`) sobrevivia porque corrigir quebraria o protegido; a checagem de trecho perdido agora aceita a primeira letra em qualquer caixa — e SÓ ela, nenhuma outra letra, palavra ou número do trecho. (3) **família "quem gostou/não gostou" ausente do vocabulário de atribuição** — o `cure` escreveu "quem não gostou considerou o ritmo lento e tedioso" para o grupo de 3%, uma atribuição real, mas fora da lista de expressões reconhecidas (`_EXPRESSOES_DE_PERSPECTIVA`), produzindo falso positivo em `perspectiva_nao_marcada`; a família foi acrescentada ("quem gostou", "quem não gostou", "quem amou", "quem ficou no meio", e as formas com "para" na frente), mantendo de fora o "para quem" ISOLADO (pronome relativo comum, motivo do falso negativo original da v1.6.0). Nenhuma invariante de honestidade foi afrouxada nas três correções — são fixes de CHECAGEM e de limpeza mecânica, não mudança do que é permitido no texto. **v1.7.2** corrige um defeito real observado na regeneração do `cidade-de-deus` sob a v1.7.1: o editor devolveu a prosa embrulhada num invólucro `{ text: "..." }`, ignorando a instrução de responder só texto puro — e TODAS as checagens mecânicas de então (protegidos, conjunto numérico, honestidade) passaram, porque rodam sobre SUBSTRING e o protegido/os números continuavam achados DENTRO do invólucro. A edição foi marcada "aplicada"; só a leitura humana antes de publicar pegou o defeito. A correção acrescenta uma **checagem ESTRUTURAL** (`_formato_invalido`, §E2), aplicada ANTES de todas as outras: rejeita o texto se ele começar com `{`/`[`, contiver cerca de código (```), tiver uma das primeiras linhas com cara de campo JSON (`"text":`, `text:`, `"narrativa":`), ou tiver chaves desbalanceadas — mesma política das demais checagens (1 retentativa com reforço explicando o formato exigido; se persistir, descarta com `motivo_descarte: "formato_invalido"` e publica a bruta). Deliberadamente NÃO rejeita uma chave/colchete equilibrado no MEIO da prosa — só o formato de invólucro, não qualquer ocorrência do caractere. **v1.7.3** corrige um defeito de POLÍTICA, não de checagem: na regeneração da v1.7.1, a edição foi DESCARTADA em 2 dos 3 filmes (`cure` — número alterado; `cidade-de-deus` — regressão de `perspectiva_nao_marcada`), publicando a bruta nos dois, enquanto a MESMA combinação de código e dados tinha sido ACEITA nos 3 filmes sob a v1.7.0 — nada mudou no código nesse sentido entre as duas rodadas; é VARIÂNCIA do modelo entre chamadas, e a política de então (1 chamada + 1 retentativa, 2 no total) dava pouca margem para a variância favorecer numa etapa cujo descarte já é fail-safe (a bruta do narrador sempre prevalece). A correção eleva o teto para até `1 + EDITOR_MAX_TENTATIVAS` chamadas (`EDITOR_MAX_TENTATIVAS = 3` em `config.py`, 4 no total no pior caso) e muda o reforço de SUBSTITUÍDO para ACUMULADO entre tentativas — se a 1ª falha por número e a 2ª por atribuição, a 3ª recebe os dois reforços juntos, para o modelo não consertar um problema criando outro. Nova telemetria em `edicao_flags`: `n_tentativas` (quantas chamadas foram feitas) e `motivos_por_tentativa` (o motivo de cada falha, na ordem) — visibilidade de qual checagem mais reprova o editor, não critério de aprovação. Nenhuma invariante de honestidade foi afrouxada: o fail-safe de descarte após esgotar as tentativas continua idêntico, só o número de chances antes dele mudou. **v1.7.4** corrige dois defeitos: um buraco de arquitetura e um resíduo cosmético recorrente. (1) **checagem de EDIÇÃO NULA** — nenhuma checagem até a v1.7.3 verificava que a edição FEZ algo, só que ela não QUEBROU nada; um editor que devolva a entrada praticamente intacta passa em protegidos (nunca saíram), números (nada mudou) e honestidade (é o mesmo texto), e era marcado "aplicada" sem nenhum sinal de que não houve edição de verdade. A correção calcula a similaridade (`difflib.SequenceMatcher.ratio`, textos normalizados só por espaço em branco) entre `narrativa_bruta` e o texto editado; se as demais checagens TERIAM passado mas a similaridade é `>= EDITOR_LIMIAR_EDICAO_NULA` (0.97, deliberadamente conservador — só pega devolução literal ou trivial, não uma edição legítima que preserve vocabulário protegido), trata como falha de tentativa com motivo `"edicao_nula"`, no mesmo ciclo de retentativa/descarte já existente. `edicao_flags.similaridade` é persistido SEMPRE (aceita ou não), telemetria para calibrar o limiar. (2) **capitalização residual, correção determinística** — a v1.7.1 AUTORIZOU o editor a ajustar a caixa de um rótulo de peso movido para o meio da frase, mas não o OBRIGA, e ele frequentemente não ajusta ("Já Uma fração mínima...", "Para A grande maioria..."). Em vez de depender do LLM, um pós-processamento em CÓDIGO (`_corrigir_capitalizacao_residual`) roda sobre toda edição ACEITA: baixa a inicial de qualquer rótulo de peso canônico que apareça capitalizado fora de início de período (mesmo princípio de toda pré-computação do pipeline — o determinístico é decidido pelo código, não pelo LLM). `edicao_flags.capitalizacao_ajustada` registra se algo mudou. **v1.8.1** REATIVA o editor [E2] por padrão (`EDITOR_ATIVO=True`) — a v1.8.0 tinha desligado por precaução após um defeito de conteúdo inventado, mas a MESMA versão já corrigira a causa raiz (checagem de conteúdo adicionado + ordem dos movimentos); a validação pós-correção (`VALIDACAO_EDITOR_V18.md`, 3 filmes reais) mostrou a checagem disparando de verdade em produção e o modelo se autocorrigindo na retentativa, com os limiares bem separados do ruído normal de uma edição legítima — evidência suficiente para reativar. **v1.8.0** troca o provider DEFAULT de produção para **DeepSeek** (`deepseek-v4-flash`, ver Changelog) e, na mesma versão, DESLIGA o editor [E2] por padrão como medida de contenção — a validação que justificou a troca de provider também descobriu um defeito real e mais sério: o editor pode ACRESCENTAR conteúdo (opinião, frase de fechamento, reordenar movimentos) sem que nenhuma checagem mecânica até a v1.7.4 detecte, porque todas checavam PERDA, nenhuma ADIÇÃO. Duas checagens novas (conteúdo adicionado por similaridade de frase, ordem dos movimentos) mitigam o defeito e o editor volta a ser ligável via `--com-editor`, mas o default de produção segue conservador até mais evidência.
 
 **v1.9.21 — o VEREDITO passa a ser escrito por LLM sobre briefing determinístico (§3[V], estágio NOVO), e a dívida de registro das v1.9.17–v1.9.20 é paga.** O defeito medido antes de qualquer código: **19 dos 35 filmes recebiam veredito byte-idêntico**, 20 caíam no ramo que o produz, e o catálogo inteiro tinha **14 textos distintos para 35 filmes**. A causa não é o template ser burro — é o briefing ser pobre: a frase relata a AUSÊNCIA de contraste e nunca a PRESENÇA de assunto, enquanto o campo `tema` de cada célula de `eixos` (a única fonte de variedade real, já rotulada por [D3] e já filtrada de spoiler) era descartado. O estágio novo roda na PUBLICAÇÃO, monta em código puro um briefing cuja **serialização não contém nenhum algarismo** — o modelo recebe rótulos prontos e nomes de tema prontos, nunca números —, gera best-of-3, valida por dez checagens em código, e cai no TEMPLATE determinístico da v1.9.19/v1.9.20 quando nada sai limpo. **O risco central, e o motivo de a proibição de fabricar contraste ser o coração da entrega:** 17 dos 35 filmes são `contraste: valorativo` e são EXATAMENTE os 17 do ramo — um modelo solto sobre um briefing pobre produziria 20 maneiras diferentes de dizer a mesma coisa vazia, o que é PIOR que a repetição atual, porque disfarça um achado real de homogeneidade como se cada filme fosse diferente. Por isso o briefing carrega `assunto_compartilhado` (o eixo que maximiza `min(freq_negativas, freq_positivas)`, piso de 25% nos dois lados; medido: todos os 35 têm, e nos 17 `valorativo` o min fica entre 40% e 84%). **Registro honesto:** o veredito deixa de ser 100% determinístico — e isso NÃO viola "código é autoridade sobre números", porque o modelo não vê algarismo nenhum, não escolhe eixo/tema/grupo/rótulo/estado de contraste, e o único número que sobrevive no texto renderizado (o peso do meio dominante) é prefixado pelo CÓDIGO, fora da saída dele. Na mesma versão: correção da inflação retórica no fallback (`obsession-2026` afirmava "um assunto que todos os grupos citam" a partir de 2 de 5 reviews, `eighth-grade` a partir de 13 de 34 — mesma classe das v1.2.2/v1.2.3, reintroduzida num lugar novo), unificação do mapa de quantificador que existia em duplicata (`quantificador.py`), e o changelog retroativo das quatro versões de frontend que rodaram carimbadas no código e ausentes da spec.
@@ -2474,6 +2474,242 @@ Custo estimado: no pior caso ~100 requisições extras por filme novo (uma por r
 > com outro nome de variável pode escapar da varredura textual. É uma rede de
 > classe de regressão, no mesmo estatuto das checagens mecânicas do §E2 — cobre
 > o modo de falha observado, não todo modo de falha concebível.
+
+> #### Retentativa de TRANSPORTE em `resposta()` — o mesmo desenho do `Fetcher`, trazido do scraping para o LLM (v1.9.24)
+>
+> **O achado que motiva.** A v1.9.23 registrou, como observação fora de
+> escopo: um `ServerError` transitório do Gemini abortou um lote de 35 filmes
+> **no primeiro item**, obrigando a refazer a execução inteira. `synthesize.
+> resposta()` — a função por onde passam as chamadas de LLM de narrador
+> (§D2, produção) e veredito (§V, produção) — não tinha nenhuma retentativa
+> de transporte, ao contrário do `Fetcher` (§2.4, desde a v1.9.6). Com 35
+> filmes um 5xx custa uma reexecução; com os ~300 do plano de expansão de
+> catálogo, um 5xx no filme 12 descartaria o lote inteiro — e o scraping roda
+> a 2s por requisição sem paralelismo (§2), então refazer é caro em HORAS.
+>
+> **O desenho é o do Fetcher, deliberadamente, não um novo.** Só erro de
+> TRANSPORTE retenta — a chamada não produziu resposta da API (timeout,
+> falha de conexão), ou a API respondeu 5xx (o SERVIDOR sinalizando
+> sobrecarga). Até `LLM_MAX_TENTATIVAS` (3) tentativas, com o MESMO backoff
+> exponencial `2s · 4s` e jitter de ±25% do §2.4 — constantes SEPARADAS
+> (`LLM_MAX_TENTATIVAS`/`LLM_BACKOFF_*` em `config.py`, mesmo valor hoje),
+> porque scraping de HTML e API de LLM têm perfis de confiabilidade
+> diferentes e acoplar as duas configs impediria ajustar uma sem a outra.
+> **O que NUNCA retenta:** erro de conteúdo, autenticação, cota ou parâmetro
+> inválido (4xx no DeepSeek: `RateLimitError`, `AuthenticationError`,
+> `PermissionDeniedError`, `BadRequestError`, `NotFoundError`,
+> `UnprocessableEntityError`; `ClientError` no Gemini, que cobre 400/401/403
+> **e** 429 de cota) — esses são decisão do serviço sobre o pedido, retentar
+> seria pressão, não recuperação de rede, e a spec proíbe pressão sobre
+> serviço em qualquer camada (mesmo princípio do 403/`AntiBotError` do
+> Fetcher). Exceção genérica (ex.: bug de parsing local) também não retenta.
+>
+> **Ponto ambíguo do SDK do Gemini, investigado e resolvido.** `google-genai`
+> não embrulha erro de transporte cru quando chamado sem `HttpRetryOptions`
+> (o caso deste projeto): sem essa opção, `retry_args` (`_api_client.py` do
+> SDK) usa `stop_after_attempt(1)` e deixa `httpx.TimeoutException`/
+> `httpx.ConnectError` subirem intactos, ao lado de `errors.ServerError`
+> (5xx, tipado). Os dois entram na lista de transporte do Gemini; o
+> `errors.ClientError` (4xx) fica de fora.
+>
+> **Divergência DELIBERADA do precedente — registrada, não escondida.** O
+> Fetcher tem `PressaoDoSite`: um teto de 503 ABSORVIDOS **por lote** (acima
+> do teto por-requisição), porque insistir além dele é pressão sobre o site
+> (§2.4). Esse mecanismo depende de um objeto compartilhado passado a CADA
+> chamada; nenhum chamador de `resposta()` hoje (narrador, veredito, scripts)
+> recebe ou repassa um objeto assim, e criar um exigiria plumbing por todos
+> eles — fora do escopo desta sessão. O teto por-chamada é o único freio
+> aqui; um teto por-lote fica registrado como candidato de sessão futura, se
+> a telemetria justificar.
+>
+> **Onde vive, e por que não é contornável.** Dentro de `resposta()`, no
+> mesmo lugar que despacha por provider — não num invólucro por fora que um
+> chamador (ou um script futuro) possa contornar chamando `deepseek_resposta`
+> /`_gemini_resposta` direto. Esgotadas as tentativas, levanta
+> `LLMTransportError` (subclasse de `LLMError`) encadeando o erro original.
+> Testado com a mesma técnica de `tests/test_publicar_catalogo.py`
+> (`test_a_guarda_roda_dentro_de_cmd_publicar`): chamar `resposta()` — o
+> caminho real de produção — e confirmar que o transporte é invocado mais de
+> uma vez pela MESMA chamada.
+>
+> **O que este item NÃO cobria, e a v1.9.25 corrigiu.** `resposta()` é só
+> UMA das duas portas de entrada do adaptador. A síntese por bucket (§D,
+> `synthesize_bucket`) entra pela outra — `client_call` — e nunca passa por
+> `resposta()`, então a v1.9.24 **não a cobria**: um 5xx na síntese continuava
+> descartando o lote inteiro, e o pré-requisito de expansão seguia aberto. A
+> instrução daquela sessão ("a retentativa vive dentro de `resposta()`,
+> valendo para todo estágio de uma vez") presumia um ponto de estrangulamento
+> único que não existia; a lacuna foi reportada em vez de o escopo ser
+> estendido por conta própria. Ver a subseção seguinte.
+
+> #### A retentativa desce para o TRANSPORTE, e o Gemini para de ter dois (v1.9.25)
+>
+> **O mapa que a v1.9.24 não tinha.** O adaptador tinha **quatro** pontos de
+> contato com o SDK, não dois:
+>
+> | função | alcançada por | coberta pela v1.9.24? |
+> |---|---|---|
+> | `deepseek_resposta` | `resposta()` **e** `_deepseek_call` | só via `resposta()` |
+> | `_gemini_resposta` | só `resposta()` | sim |
+> | `_gemini_call` | só `gemini_client_call*` | **não** — transporte PRÓPRIO |
+> | `anthropic_client_call` | só `anthropic_client_call*` | não (fora de `resposta()`) |
+>
+> **A correção: a retentativa desce um nível.** Sai de `resposta()` e passa a
+> viver em `deepseek_resposta` e `_gemini_resposta` — as duas funções que
+> efetivamente falam com o SDK —, numa implementação única
+> (`_com_retentativa`). As camadas de cima HERDAM. Colocá-la no ponto mais
+> baixo é o que torna "uma implementação, todas as camadas" verdadeiro em vez
+> de aspiracional: ninguém pode contorná-la sem falar com o SDK direto, que é
+> exatamente o que o guard-rail de §3[D] já proíbe. **Classificação de erro,
+> teto, backoff, jitter e telemetria são os da v1.9.24, sem redecisão — só
+> mudaram de lugar.**
+>
+> **`_gemini_call` passa a DELEGAR.** Ele duplicava o transporte inteiro
+> (`genai.Client` próprio + `generate_content` próprio) em vez de delegar,
+> como `_deepseek_call` sempre fez. A duplicata era EXATA: verificado por
+> diff de AST que os corpos só diferiam em devolver `resp.text` em vez da
+> resposta inteira, e em grafar a checagem de chave inline em vez de chamar
+> `_exigir_chave` — e verificado **em runtime** que as duas levantam
+> `LLMError` com mensagem byte-idêntica (`GEMINI_API_KEY não definida no
+> ambiente.`), de modo que a delegação não troca comportamento nenhum, nem no
+> caminho de chave ausente, que tem teste próprio. `thinking_budget` é
+> repassado EXPLICITAMENTE, sem cair no default de `_gemini_resposta`, com
+> teste que confirma o valor chegando inalterado ao SDK. **Pontos de contato
+> com o SDK: 4 → 3**, travado por teste.
+>
+> **Razão de uniformizar em vez de retentar em três lugares** (decisão do
+> dono do projeto, registrada): manter três implementações contraria o "uma
+> implementação" da entrega e repete a dívida que a v1.9.4 (transporte
+> reimplementado por script novo) e a extração de `quantificador.py` (mapa em
+> duas cópias) já pagaram. Cobrir só o DeepSeek fecharia o pré-requisito
+> apenas enquanto ninguém rodasse `--provider gemini` — é fechar por acidente
+> de configuração, não por desenho.
+>
+> **Ausência de aninhamento é testada, não presumida.** Retentativa nos dois
+> níveis produziria `LLM_MAX_TENTATIVAS²` chamadas. Os testes atravessam as
+> duas portas de entrada e contam o SDK FALSO — o único lugar onde o
+> aninhamento apareceria — exigindo exatamente `LLM_MAX_TENTATIVAS`.
+>
+> **O terceiro ponto de contato, registrado e NÃO consertado:**
+> `anthropic_client_call` continua sem retentativa. Não é código morto — é
+> alcançável por `--provider anthropic` e por ter só `ANTHROPIC_API_KEY` no
+> ambiente (via `detect_provider`), incluindo a variante de prosa —, mas não
+> está em nenhum default de produção (`PROVIDER_POR_ESTAGIO` só tem
+> `deepseek`/`gemini`) e `resposta()` o rejeita. Lacuna conhecida, deixada
+> deliberadamente para uma sessão futura.
+
+> #### A retentativa dos scripts de classificação: MEDIDA, depois removida (v1.9.25)
+>
+> **Medição ANTES de mexer, sobre 37.300 chamadas reais** (os JSONL de
+> `resultado/taxonomia-10/` e `resultado/votacao-3/`):
+>
+> | | |
+> |---|---|
+> | falhas permanentes (`ok: False`) | **0** |
+> | retentativas (`tentativas > 1`) | **8** (0,021%), todas resolvidas na 2ª |
+> | classes de exceção absorvidas | **irrecuperáveis** |
+>
+> A terceira linha é achado por si: o campo `erro` só era gravado quando o
+> laço ESGOTAVA; no sucesso a classe da exceção era descartada. O laço
+> absorvia sem deixar rastro do QUE absorvia — 8 eventos de classe
+> desconhecida por construção.
+>
+> **O ALCANCE exato do que foi medido — para não ser mal lido depois.** As
+> 37.300 chamadas são **100% DeepSeek**, do estágio de CLASSIFICAÇÃO
+> (`classificar_10`/`gate_taxonomia`/`votacao_3`), que já rodava com o laço
+> local há sessões. **Não existe histórico equivalente para o Gemini** — o
+> provider do incidente que abriu esta sessão (§ anterior, "o achado que
+> motiva") nunca teve um script de medição de massa como este. **0,021% de
+> retentativa não é uma medida da taxa de falha do Gemini, nem da síntese
+> de bucket, nem de nada fora da classificação DeepSeek** — é a taxa de UM
+> transporte, sob UM provider, medida por um script que já absorvia a
+> falha antes de qualquer coisa nesta sessão existir.
+>
+> **A retentativa NÃO é conserto de falha frequente — é seguro contra
+> evento raro e caro.** Uma taxa de 0,021% não torna a retentativa
+> desnecessária: o que a motiva não é a frequência, é o CUSTO de perder o
+> evento raro. Com 35 filmes, um 5xx no primeiro item custa refazer a
+> execução inteira; com os ~300 do plano de expansão, um 5xx no filme 12
+> descarta o lote inteiro — e o scraping roda a 2s por requisição sem
+> paralelismo (§2), então refazer é caro em HORAS, não em centavos. Um
+> evento que acontece 1 vez em 5000 e custa horas quando acontece vale a
+> retentativa mesmo que a medição disponível (de um provider e um estágio
+> diferentes do incidente) mostre uma taxa baixíssima. Ler "0,021%" daqui a
+> algumas versões como "a retentativa era desnecessária" seria comparar a
+> taxa medida no lugar ERRADO com o risco que motivou a sessão.
+>
+> **O anti-padrão, e onde estava.** `for tentativa in range(MAX_TENTATIVAS):
+> try: ... except Exception: time.sleep(2*(tentativa+1))`, com `json.loads` e
+> `_normalizar` DENTRO do `try` — então conteúdo malformado repetia a chamada
+> de API. Estava em **oito** scripts, não nos três reportados na v1.9.24:
+> `classificar_10`, `gate_taxonomia`, `votacao_3`, `auditoria_acuracia`,
+> `inspecao_assistir`, `variante_impacto_estrito`, `variantes_prompt_curtas`,
+> `verificador_impacto`.
+>
+> **A interação que forçou a decisão:** com a retentativa descendo para
+> `deepseek_resposta`, esses laços passariam a envolver um transporte que já
+> retenta — **3 × 3 = 9 chamadas** por review, com backoffs somados (~30s
+> contra 6s), em 37 mil chamadas sob concorrência 8.
+>
+> **O que foi feito: laço removido, REGISTRO mantido.** O `except` que grava
+> `ok: False` fica — sem ele, `list(pool.map(tarefa, ...))` re-levantaria e
+> uma única review malformada em 8.171 abortaria o lote. O que sai é a
+> repetição. Consequências: erro de conteúdo passa a custar **1 chamada em
+> vez de 3**; o transporte é retentado uma vez só, com backoff exponencial e
+> jitter em vez de linear; e a taxa passa a ser IMPRESSA no fim de cada lote
+> (falhas `ok: False` + retentativas do adaptador), porque todo consumidor faz
+> `if not r.get("ok"): continue` e uma taxa alta somiria entre milhares de
+> registros. O campo `tentativas` foi removido dos registros — ninguém o lia
+> (verificado), e depois desta versão ele seria uma meia-verdade.
+>
+> **Dependência de absorção, verificada:** os consumidores pulam `ok: False`
+> e o resume só marca `ok: True` como feito, então um registro falho é
+> retentado na EXECUÇÃO seguinte. É por isso que o `except` de registro não
+> pôde simplesmente sumir — a absorção sustenta o lote longo; o que não se
+> sustentava era a REPETIÇÃO silenciosa.
+>
+> **`comparar_narrador.py` é exceção deliberada e MANTÉM seu laço.** Ele não
+> é o anti-padrão: não tem `except` nenhum dentro do laço (transporte propaga
+> na hora, para o `try` de fora, que registra e passa ao PRÓXIMO candidato) e
+> retenta por EXTRAÇÃO VAZIA, que é qualidade de conteúdo, não transporte.
+> Congelado por teste, para não ser "consertado" por engano nem copiado como
+> padrão.
+>
+> **Guard-rail estrutural:** um teste varre os oito scripts procurando
+> chamada de LLM dentro de um laço de CONTAGEM (`for _ in range(...)`) cujo
+> `except` não re-levanta. O discriminador é deliberado — um laço sobre
+> COLEÇÃO com `try` por item é o padrão normal de lote (a exceção passa ao
+> item seguinte, não refaz o mesmo); só o laço sobre `range()` em volta da
+> mesma chamada é retentativa. Com fixture que injeta o laço removido e
+> confirma que a varredura o detecta.
+
+> #### Telemetria de retentativa do LLM: atravessa o PROCESSO e chega ao relatório de lote (v1.9.25)
+>
+> **O obstáculo real, que não era onde parecia.** A v1.9.24 deixou
+> `telemetria_retentativa_llm()` sem consumidor. Conectá-la não é escolher um
+> relatório: o harness de lote (§3[H]) roda o CLI como **SUBPROCESSO**
+> (`subprocess.run([... "-m", "espectro24.cli" ...])`), então o contador de
+> módulo vive no processo FILHO e morre com ele. Nenhum import resolve isso.
+>
+> **O menor canal que já existe: `stderr`.** O log de publicação já captura
+> `stderr_tail`. O CLI passa a imprimir uma linha ao lado da que já existia
+> (`Requisições de rede nesta execução: N`); `publicar_um` a extrai para um
+> campo próprio (`retentativa_llm`) no `publicacao_log.jsonl`; e
+> `--relatorio` agrega o LOTE. Nada por filme (a esmagadora maioria é zero,
+> seria ruído), nada em `render.py`, nada na interface, nenhum JSON de filme
+> tocado.
+>
+> **Formato e parser vivem JUNTOS** (`linha_telemetria_llm` /
+> `parse_linha_telemetria_llm`, ambos em `synthesize`), pela mesma razão que
+> levou o mapa de quantificador a virar `quantificador.py` na v1.9.21: duas
+> metades do mesmo contrato em arquivos diferentes divergem. Teste de ida e
+> volta cobre o contrato.
+>
+> **`None` é "não sei", e não vira zero.** Filme publicado antes da v1.9.25,
+> ou execução que morreu antes do fim, não tem a linha. O relatório conta
+> esses à parte (`N sem telemetria`) em vez de somá-los como zero
+> retentativas — somar maquiaria a taxa exatamente no caso em que ela
+> importa.
 
 > #### Prever o efeito de trocar o prompt de classificação: razão PAREADA, nunca extrapolação de teto (v1.9.7)
 >
@@ -5106,6 +5342,30 @@ As três incógnitas abaixo foram resolvidas na Fase 1; os achados já estão in
 ---
 
 ## Changelog
+- **v1.9.25** (2026-08-26) — **A retentativa de transporte desce para o TRANSPORTE e passa a valer para as DUAS portas de entrada do adaptador; o retry que engolia erro de conteúdo sai dos scripts; a telemetria atravessa o processo e chega ao relatório de lote.** Nenhum filme regenerado; nenhum `resultado/*.json` alterado.
+  - **(1) O defeito da v1.9.24, verificado.** A retentativa entrou em `resposta()`, mas o adaptador tem DUAS portas de entrada: `resposta()` (narrador §D2, veredito §V) e `client_call` (síntese de bucket §D). A síntese entra pela segunda e **não estava coberta** — um 5xx nela continuava descartando o lote. A instrução da sessão anterior presumia um ponto de estrangulamento único que não existia; a lacuna foi reportada, não contornada por conta própria.
+  - **(2) Eram QUATRO pontos de contato com o SDK, não dois.** `deepseek_resposta` (alcançado pelas duas portas), `_gemini_resposta` (só `resposta()`), `_gemini_call` (só `client_call`, com transporte PRÓPRIO duplicado) e `anthropic_client_call`. A retentativa desce para `deepseek_resposta`/`_gemini_resposta` numa implementação única (`_com_retentativa`), e as camadas de cima herdam. Classificação de erro, teto, backoff, jitter e telemetria são os da v1.9.24 — só mudaram de lugar.
+  - **(3) `_gemini_call` passa a DELEGAR a `_gemini_resposta`,** espelhando `_deepseek_call`. A duplicata era exata: diff de AST mostrou que os corpos só diferiam em `resp.text` vs. resposta inteira e na grafia da checagem de chave; verificação em RUNTIME confirmou que as duas levantam `LLMError` com mensagem byte-idêntica, com teste congelando o caminho de chave ausente. `thinking_budget` repassado explicitamente, com teste de que chega inalterado ao SDK. **Pontos de contato com o SDK: 4 → 3**, travado por teste.
+  - **(4) Ausência de aninhamento, testada.** Retentativa nos dois níveis daria `LLM_MAX_TENTATIVAS²`. Os testes atravessam as duas portas e contam o SDK falso, exigindo exatamente 3.
+  - **(5) Lacuna registrada e NÃO consertada:** `anthropic_client_call` segue sem retentativa. Não é código morto — alcançável por `--provider anthropic` e por ter só `ANTHROPIC_API_KEY` no ambiente —, mas não está em nenhum default de produção e `resposta()` o rejeita.
+  - **(6) O retry dos scripts: MEDIDO antes de tocar — e o ALCANCE da medição registrado.** 37.300 chamadas reais: **0 falhas permanentes, 8 retentativas (0,021%)**, todas resolvidas na 2ª. E um achado por si — **a classe das exceções absorvidas é irrecuperável**: `erro` só era gravado quando o laço esgotava, então no sucesso a classe era descartada. O anti-padrão estava em **oito** scripts, não nos três reportados. **As 37.300 chamadas são 100% DeepSeek, do estágio de classificação — não existe histórico equivalente para o Gemini**, o provider do incidente que abriu a v1.9.24. A retentativa não é conserto de falha frequente: é seguro contra evento RARO e CARO (perder um lote de ~300 filmes num pipeline limitado por scraping a 2s/requisição), e 0,021% medido no lugar errado não é evidência de que ela seja desnecessária.
+  - **(7) Laço removido, REGISTRO mantido.** O `except` que grava `ok: False` fica — sem ele, `list(pool.map(...))` re-levantaria e uma review malformada em 8.171 abortaria o lote. Sai a repetição: erro de conteúdo passa a custar **1 chamada em vez de 3**, o transporte é retentado uma vez só (exponencial + jitter, não linear), e a taxa passa a ser IMPRESSA no fim de cada lote, porque todo consumidor pula `ok: False` em silêncio. Campo `tentativas` removido — ninguém o lia (verificado) e viraria meia-verdade.
+  - **(8) `comparar_narrador.py` mantém o laço, deliberadamente:** não tem `except` dentro dele (transporte propaga na hora) e retenta por EXTRAÇÃO VAZIA, que é conteúdo, não transporte. Congelado por teste para não ser "consertado" nem copiado.
+  - **(9) Guard-rail com discriminador explícito:** a varredura procura chamada de LLM dentro de laço de CONTAGEM (`for _ in range(...)`) cujo `except` não re-levanta. Laço sobre COLEÇÃO com `try` por item é o padrão normal de lote e NÃO é acusado — distinção necessária, achada por falso positivo em `comparar_narrador` durante a implementação.
+  - **(10) Telemetria conectada, com o obstáculo real nomeado:** o harness roda o CLI como SUBPROCESSO, então o contador de módulo morre no filho. A travessia é uma linha em `stderr` (canal que o log já capturava), com formato e parser JUNTOS em `synthesize` — mesma lição de `quantificador.py`. `publicar_um` extrai para campo próprio; `--relatorio` agrega o LOTE. **`None` é "não sei" e conta à parte, nunca como zero** — somar maquiaria a taxa no caso em que ela importa.
+  - **(11) Dois testes existentes foram reescritos, não deletados,** com a premissa invertida de propósito: `..._continua_sem_retentativa` (afirmava que o caminho direto NÃO retentava — verdade só enquanto a retentativa estava em `resposta()`) e `test_gemini_resposta_devolve_o_objeto_nao_o_texto`, que casava a linha literal do fonte e passou a asserir COMPORTAMENTO (mais forte, e imune ao próximo refactor).
+  - **(12) Contrato de falha do LOTE, provado por comportamento, não só por `import`.** A remoção do laço (item 7) foi uma transformação automatizada com dois bugs de indentação corrigidos no processo — `import` prova que o arquivo parseia, não que o comportamento sobreviveu. Um teste de ponta a ponta com SDK falso, sobre os três caminhos de produção (`classificar_10`, `votacao_3`, `gate_taxonomia`), prova as QUATRO propriedades JUNTAS no MESMO lote: erro de conteúdo custa 1 chamada; o item vira `ok: False`; o lote não aborta (os itens seguintes são processados); e o resume retenta o item falho na execução seguinte, sem retocar os que já sucederam. **Achado no processo:** `classificar()`/`classificar_passe()` chamam `load_dotenv(RAIZ / ".env")`, e o `.env` real deste repo tem chaves — sem bloquear isso, os testes vazariam `DEEPSEEK_API_KEY`/`GEMINI_API_KEY` de verdade para o resto da suíte (`os.environ` não é revertido pelo `monkeypatch` quando quem escreve é `load_dotenv`), quebrando `detect_provider` em testes não relacionados. Corrigido com `monkeypatch.setattr("dotenv.load_dotenv", ...)` nos novos testes.
+  - **(13) Tripwire para o `anthropic_client_call`.** A lacuna do item 5 (sem retentativa) não fica só em prosa: um teste afirma `"anthropic" not in PROVIDER_POR_ESTAGIO.values()`. Se um dia anthropic virar provider de ALGUM estágio de produção, o teste falha com uma mensagem que diz o porquê — a retentativa é pré-requisito para essa promoção — em vez da lacuna entrar em produção em silêncio.
+  - Suíte: 1455 → **1492**, todos passando; guard-rail do adaptador intacto; nenhum arquivo de `resultado/` tocado.
+- **v1.9.24** (2026-08-26) — **Pré-requisito de expansão de catálogo: `synthesize.resposta()` ganha a retentativa de transporte que o `Fetcher` já tinha desde a v1.9.6. Nenhum veredito regerado; nenhum `resultado/*.json` mudou.**
+  - **(1) O gatilho.** A v1.9.23 registrou como observação fora de escopo: um `ServerError` transitório do Gemini abortou um lote de 35 filmes no primeiro item. Com o plano de expansão para ~300 filmes, um 5xx no filme 12 descartaria o lote inteiro, e refazer é caro em HORAS — o scraping roda a 2s por requisição sem paralelismo (§2).
+  - **(2) Mesmo desenho do Fetcher (§2.4), não um novo.** Só erro de TRANSPORTE retenta (timeout/falha de conexão/5xx), até `LLM_MAX_TENTATIVAS` (3) com backoff `2s · 4s` + jitter ±25%. Nunca erro de conteúdo/autenticação/cota/parâmetro inválido — esses continuam subindo na hora. Ponto ambíguo do SDK do Gemini investigado e resolvido: `httpx.TimeoutException`/`ConnectError` sobem crus (sem `HttpRetryOptions`, o SDK não os embrulha) e entram na lista de transporte ao lado de `errors.ServerError`.
+  - **(3) Divergência deliberada do precedente, registrada.** O Fetcher tem `PressaoDoSite` — teto de 503 absorvidos POR LOTE, via objeto compartilhado passado a cada chamada. `resposta()` não tem hoje esse canal (narrador/veredito/scripts não repassam um objeto assim), e criá-lo exigiria plumbing fora de escopo. Só o teto por-chamada existe; teto por-lote fica candidato de sessão futura.
+  - **(4) Onde vive, e por quê.** Dentro de `resposta()`, no mesmo lugar que despacha por provider — não num invólucro contornável. Esgotado o teto, levanta `LLMTransportError(LLMError)` encadeando o erro original. Teste com a técnica de `test_a_guarda_roda_dentro_de_cmd_publicar`: chama `resposta()` (o caminho real) e confirma retentativa real do transporte.
+  - **(5) Gap registrado, não corrigido:** a síntese por bucket (§D, `synthesize_bucket`) usa um caminho de transporte separado (`client_call`/`_deepseek_call`) que nunca passa por `resposta()` — hoje em DeepSeek por padrão, não o Gemini do incidente. Estender a retentativa até lá tocaria código de síntese, fora de escopo aqui.
+  - **(6) DeepSeek já tinha retentativa própria, em outro lugar e mais frouxa:** `scripts/classificar_10.py`/`gate_taxonomia.py`/`votacao_3.py` (classificação e votação de 3 passadas) já envolvem `deepseek_resposta` num catch genérico (retenta CONTEÚDO também) com backoff linear sem jitter. Não migrado nem removido — chamam o adaptador, não o SDK cru, então não violam o guard-rail; consolidação fica para quem mantém esses scripts.
+  - **(7) Telemetria module-level:** `synthesize.telemetria_retentativa_llm()` acumula `n_retentativas`/`por_tipo` por PROCESSO (não por-objeto, como o Fetcher — `resposta()` não tem um objeto por-filme). Ainda não gravada em nenhum relatório (tocar `passada.py`/`render.py` está fora de escopo) — decisão registrada.
+  - **(8) 17 testes novos** (`tests/test_retentativa_transporte_llm.py`): retenta 5xx/timeout e sucede na 2ª tentativa (DeepSeek e Gemini); nunca retenta 4xx de conteúdo/auth/cota nem exceção genérica; teto respeitado com telemetria correta; backoff exponencial verificado sem depender de tempo real (`time.sleep` espionado); a retentativa roda DENTRO de `resposta()`, provado chamando só esse caminho e espiando o transporte por baixo — e o contraste de que chamar `deepseek_resposta` direto (como os scripts) continua sem retentativa, documentando o limite exato da mudança. Suíte completa: 1438 + 17 = 1455, todos passando; guard-rail intacto.
 - **v1.9.23** (2026-08-25) — **Medição, não correção: o molde contrastivo ganha número, `BEST_OF_N` maior é rejeitado, e a tautologia é diagnosticada.** Nenhum veredito foi regerado; o catálogo publicado continua sendo o da v1.9.22.
   - **(1) Observação de MÉTODO, e é o item mais importante desta versão.** A repetição MIGRA de dimensão a cada correção, e a métrica vigente captura exatamente a dimensão que acabou de ser consertada: a v1.9.21 consertou o texto idêntico e mediu por Jaccard, e a repetição foi para a ABERTURA (invisível ao Jaccard); a v1.9.22 consertou a abertura e mediu por padrão sintático, e a repetição foi para o MOLDE CONTRASTIVO (invisível ao padrão de abertura). Nos três casos o defeito seguinte foi achado por LEITURA, nunca por medição. **A regra que fica: estender a métrica ANTES de declarar vitória, não depois — uma dimensão não medida não é uma dimensão sem defeito, é uma dimensão sem número.**
   - **(2) Métrica nova: o CONECTIVO CONTRASTIVO principal** (primeiro, por posição, de uma lista fechada de 20 formas; `nenhum` quando não há). Linha de base: nos 35, **7 conectivos distintos com `enquanto` em 18/35 (51%)**; nos 17 `valorativo`, **4 distintos com `enquanto` em 14/17 (82%)**. **Nenhum dos 35 sai sem conectivo** — o molde contrastivo é universal no estágio. **NÃO registrado como defeito e nada no código reage a ele:** pode ser o piso do gênero, já que não existe forma neutra de dizer "um grupo acha X, o outro o contrário" em português que não seja contrastiva. A métrica existe para a decisão ser tomada com o número à vista.

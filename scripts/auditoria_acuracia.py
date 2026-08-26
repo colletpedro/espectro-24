@@ -636,31 +636,29 @@ def cmd_estabilidade() -> None:
         saida = ARQ_ESTABILIDADE_BRUTO.open("a", encoding="utf-8")
 
         def tarefa(review: dict) -> None:
-            erro = ""
-            for tentativa in range(3):
-                try:
-                    resp = deepseek_resposta(
-                        SYSTEM,
-                        f"Review (nota {review['nivel']} de 5 estrelas):\n\n"
-                        f"{review['texto']}",
-                        MODELO, max_tokens=300, json_mode=True, client=client)
-                    data = json.loads(resp.choices[0].message.content)
-                    eixos, livres, invalidos = _normalizar(data)
-                    registro = {
-                        "ok": True, "id": review["id"], "slug": review["slug"],
-                        "bucket": review["bucket"], "n_chars": review["n_chars"],
-                        "eixos_original": review["eixos"],
-                        "eixos_reclassificado": eixos,
-                        "temas_livres_reclassificado": livres,
-                        "eixos_invalidos_reclassificado": invalidos,
-                        "uso": deepseek_uso(resp),
-                    }
-                    break
-                except Exception as e:  # noqa: BLE001
-                    erro = f"{type(e).__name__}: {e}"
-                    time.sleep(2 * (tentativa + 1))
-            else:
-                registro = {"ok": False, "id": review["id"], "erro": erro}
+            # [v1.9.25, §3[D]] Laço de retentativa REMOVIDO — o adaptador
+            # retenta TRANSPORTE dentro de `deepseek_resposta`. O `except`
+            # só REGISTRA a falha (sem re-chamar): erro de CONTEÚDO passa
+            # a custar 1 chamada e vira `ok: False` visível.
+            try:
+                resp = deepseek_resposta(
+                    SYSTEM,
+                    f"Review (nota {review['nivel']} de 5 estrelas):\n\n"
+                    f"{review['texto']}",
+                    MODELO, max_tokens=300, json_mode=True, client=client)
+                data = json.loads(resp.choices[0].message.content)
+                eixos, livres, invalidos = _normalizar(data)
+                registro = {
+                    "ok": True, "id": review["id"], "slug": review["slug"],
+                    "bucket": review["bucket"], "n_chars": review["n_chars"],
+                    "eixos_original": review["eixos"],
+                    "eixos_reclassificado": eixos,
+                    "temas_livres_reclassificado": livres,
+                    "eixos_invalidos_reclassificado": invalidos,
+                    "uso": deepseek_uso(resp),
+                }
+            except Exception as e:  # noqa: BLE001
+                registro = {"ok": False, "id": review["id"], "erro": f"{type(e).__name__}: {e}"}
             with lock:
                 saida.write(json.dumps(registro, ensure_ascii=False) + "\n")
                 saida.flush()

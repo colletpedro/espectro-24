@@ -49,6 +49,7 @@ from espectro24.synthesize import (  # noqa: E402
     deepseek_client,
     deepseek_resposta,
     deepseek_uso,
+    telemetria_retentativa_llm,
 )
 
 SAIDA = RAIZ / "resultado" / "gate-taxonomia"
@@ -64,7 +65,10 @@ N_FILMES = 15
 N_REVIEWS_POR_BUCKET = 20
 MODELO = "deepseek-v4-flash"
 CONCORRENCIA = 8
-MAX_TENTATIVAS = 3
+# [v1.9.25] `MAX_TENTATIVAS` REMOVIDO: retentativa de transporte vive no
+# adaptador (`synthesize._com_retentativa`, §3[D]), com backoff exponencial
+# e jitter. Os laços locais retentavam também erro de CONTEÚDO e, depois da
+# v1.9.25, empilhariam sobre a do adaptador.
 
 # --- A taxonomia sob teste -------------------------------------------------
 EIXOS = (
@@ -326,33 +330,33 @@ def classificar(limite: int | None = None) -> None:
 
     client = deepseek_client()
     lock, contador, t0 = Lock(), [0], time.time()
+    falhas = [0]
     saida = ARQ_CLASSIF.open("a", encoding="utf-8")
 
     def tarefa(review: dict) -> None:
-        erro = ""
-        for tentativa in range(MAX_TENTATIVAS):
-            try:
-                data, uso = _chamar(client, review)
-                eixos, livres, invalidos = _normalizar(data)
-                registro = {
-                    "ok": True, "slug": review["slug"], "perfil": review["perfil"],
-                    "bucket": review["bucket"], "id": review["id"],
-                    "nivel": review["nivel"], "n_chars": review["n_chars"],
-                    "eixos": eixos, "temas_livres": livres,
-                    "eixos_invalidos": invalidos, "uso": uso,
-                    "tentativas": tentativa + 1,
-                }
-                break
-            except Exception as e:  # noqa: BLE001
-                erro = f"{type(e).__name__}: {e}"
-                time.sleep(2 * (tentativa + 1))
-        else:
-            registro = {"ok": False, "slug": review["slug"], "perfil": review["perfil"],
-                        "bucket": review["bucket"], "id": review["id"], "erro": erro}
+        # [v1.9.25, §3[D]] SEM laço de retentativa próprio — o adaptador
+        # retenta TRANSPORTE dentro de `deepseek_resposta`, e um laço aqui
+        # empilharia 3×3. O `except` só REGISTRA e deixa o lote seguir.
+        try:
+            data, uso = _chamar(client, review)
+            eixos, livres, invalidos = _normalizar(data)
+            registro = {
+                "ok": True, "slug": review["slug"], "perfil": review["perfil"],
+                "bucket": review["bucket"], "id": review["id"],
+                "nivel": review["nivel"], "n_chars": review["n_chars"],
+                "eixos": eixos, "temas_livres": livres,
+                "eixos_invalidos": invalidos, "uso": uso,
+            }
+        except Exception as e:  # noqa: BLE001
+            registro = {"ok": False, "slug": review["slug"],
+                        "perfil": review["perfil"], "bucket": review["bucket"],
+                        "id": review["id"], "erro": f"{type(e).__name__}: {e}"}
         with lock:
             saida.write(json.dumps(registro, ensure_ascii=False) + "\n")
             saida.flush()
             contador[0] += 1
+            if not registro["ok"]:
+                falhas[0] += 1
             if contador[0] % 25 == 0 or contador[0] == len(pendentes):
                 dt = time.time() - t0
                 print(f"  {contador[0]}/{len(pendentes)} · {dt:.0f}s "
@@ -361,6 +365,11 @@ def classificar(limite: int | None = None) -> None:
     with ThreadPoolExecutor(max_workers=CONCORRENCIA) as pool:
         list(pool.map(tarefa, pendentes))
     saida.close()
+    # [v1.9.25] Taxa VISÍVEL — o consumidor pula `ok: False` em silêncio.
+    tel = telemetria_retentativa_llm()
+    print(f"  falhas (ok=False): {falhas[0]}/{len(pendentes)} · retentativas "
+          f"de transporte no adaptador: {tel['n_retentativas']}"
+          + (f" {tel['por_tipo']}" if tel["por_tipo"] else ""))
 
 
 # ===========================================================================
@@ -422,13 +431,12 @@ def familias() -> None:
     print(f"{len(rotulos)} rótulos distintos")
 
     def chamar(system: str, user: str, max_tokens: int) -> tuple[dict, dict]:
-        for tentativa in range(MAX_TENTATIVAS):
-            try:
-                return _chamar_json(client, system, user, max_tokens)
-            except Exception:  # noqa: BLE001
-                if tentativa == MAX_TENTATIVAS - 1:
-                    raise
-                time.sleep(2 * (tentativa + 1))
+        # [v1.9.25, §3[D]] O laço de retentativa saiu: o adaptador já retenta
+        # TRANSPORTE. Este caminho SEMPRE propagou o erro na última tentativa
+        # (`raise`), então remover o laço não muda o contrato — só deixa de
+        # repetir chamada por erro de CONTEÚDO e de empilhar sobre o
+        # adaptador.
+        return _chamar_json(client, system, user, max_tokens)
 
     # Passo 1 — proposta das famílias. A lista vai em ordem ALFABÉTICA e sem
     # contagem: o modelo não pode inferir frequência daqui.
@@ -522,21 +530,16 @@ def triagem() -> None:
     lock = Lock()
 
     def tarefa(r: dict) -> None:
+        # [v1.9.25, §3[D]] Idem: laço removido, contrato preservado (este
+        # caminho já propagava o erro na última tentativa).
         texto = textos[(r["slug"], r["bucket"], r["id"])]
-        for tentativa in range(MAX_TENTATIVAS):
-            try:
-                data, u = _chamar_json(client, SYSTEM_TRIAGEM,
-                                       f"Review:\n\n{texto}", 40)
-                v = data.get("veredito")
-                reg = {"slug": r["slug"], "perfil": r["perfil"],
-                       "bucket": r["bucket"], "id": r["id"],
-                       "veredito": v if v in ("avaliavel", "sem_conteudo") else "avaliavel",
-                       "uso": u}
-                break
-            except Exception:  # noqa: BLE001
-                if tentativa == MAX_TENTATIVAS - 1:
-                    raise
-                time.sleep(2 * (tentativa + 1))
+        data, u = _chamar_json(client, SYSTEM_TRIAGEM,
+                               f"Review:\n\n{texto}", 40)
+        v = data.get("veredito")
+        reg = {"slug": r["slug"], "perfil": r["perfil"],
+               "bucket": r["bucket"], "id": r["id"],
+               "veredito": v if v in ("avaliavel", "sem_conteudo") else "avaliavel",
+               "uso": u}
         with lock:
             saida.write(json.dumps(reg, ensure_ascii=False) + "\n")
             saida.flush()

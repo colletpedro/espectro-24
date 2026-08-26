@@ -53,7 +53,10 @@ SEMENTE = 20260808
 N_EXEMPLOS = 30
 MODELO = "deepseek-v4-flash"
 CONCORRENCIA = 8
-MAX_TENTATIVAS = 3
+# [v1.9.25] `MAX_TENTATIVAS` REMOVIDO: a retentativa de transporte
+# vive no adaptador (`synthesize._com_retentativa`, §3[D]), com
+# backoff exponencial e jitter. O laço local retentava também erro
+# de CONTEÚDO e, depois da v1.9.25, empilharia sobre a do adaptador.
 
 SYSTEM = """Você recebe UMA review de cinema que um classificador anterior marcou como falando de "circunstância de assistir" (onde, quando, com quem, em que condições a pessoa viu o filme).
 
@@ -126,18 +129,14 @@ def classificar() -> None:
     saida, lock, uso = [], Lock(), Counter()
 
     def tarefa(it: dict) -> None:
-        for tentativa in range(MAX_TENTATIVAS):
-            try:
-                resp = deepseek_resposta(
-                    SYSTEM, f"Review (nota {it.get('nivel', '?')}):\n\n{it['texto']}",
-                    MODELO, max_tokens=200, json_mode=True, client=client)
-                data = json.loads(resp.choices[0].message.content)
-                u = deepseek_uso(resp)
-                break
-            except Exception:  # noqa: BLE001
-                if tentativa == MAX_TENTATIVAS - 1:
-                    raise
-                time.sleep(2 * (tentativa + 1))
+        # [v1.9.25, §3[D]] Laço de retentativa REMOVIDO — o adaptador
+        # retenta TRANSPORTE. Este caminho já propagava o erro na
+        # última tentativa, então o contrato não muda.
+        resp = deepseek_resposta(
+            SYSTEM, f"Review (nota {it.get('nivel', '?')}):\n\n{it['texto']}",
+            MODELO, max_tokens=200, json_mode=True, client=client)
+        data = json.loads(resp.choices[0].message.content)
+        u = deepseek_uso(resp)
         with lock:
             saida.append({**{k: it[k] for k in ("slug", "bucket", "id",
                                                 "eixos_8", "rotulos",

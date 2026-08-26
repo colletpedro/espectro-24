@@ -11,7 +11,7 @@ from __future__ import annotations
 # mostrou "1.6.0 → 1.9.0" quando deveria ser "1.6.0 → 1.9.11"). Os JSONs
 # já publicados NÃO foram reescritos: carimbo corrigido depois do fato não
 # é evidência de nada — mesma política de `VERSAO_COLETOR` abaixo.
-SPEC_VERSION = "1.9.23"
+SPEC_VERSION = "1.9.25"
 
 BASE = "https://letterboxd.com"
 
@@ -73,6 +73,19 @@ ESPERA_503 = 30.0
 # ocorrência levanta `SobrecargaError`. A v1.9.5 foi interrompida por um 503 e
 # essa decisão foi correta; automatizar a insistência a desfaria.
 LIMITE_503_LOTE = 1
+
+# --- Retentativa de transporte do adaptador de LLM (§3[D], v1.9.24) --------
+# MESMO desenho do Fetcher acima — só erro de TRANSPORTE retenta, backoff
+# exponencial com jitter, teto de tentativas. Motivação medida: a v1.9.23
+# registrou um `ServerError` transitório do Gemini abortando um lote de 35
+# filmes no primeiro item (achado operacional, não corrigido naquela sessão).
+# Constantes SEPARADAS das do Fetcher (`MAX_TENTATIVAS`/`BACKOFF_*` acima) —
+# mesmo valor hoje, mas os dois transportes (scraping HTML vs. API de LLM)
+# têm perfis de latência e confiabilidade diferentes, e acoplar as duas
+# configs tornaria impossível ajustar uma sem a outra.
+LLM_MAX_TENTATIVAS = 3
+LLM_BACKOFF_BASE_SEGUNDOS = 2.0
+LLM_BACKOFF_JITTER = 0.25
 
 # --- Buckets e cotas (§2) ---
 # DERIVADO das fronteiras (v1.9.0). Cada nível pertence a exatamente um bucket

@@ -37,6 +37,7 @@ RAIZ = Path(__file__).resolve().parent.parent
 sys.path.insert(0, str(RAIZ / "src"))
 
 from espectro24.config import SPEC_VERSION  # noqa: E402
+from espectro24.synthesize import parse_linha_telemetria_llm  # noqa: E402
 
 RESULTADO_DIR = RAIZ / "resultado"
 CONSENSO = RAIZ / "resultado" / "votacao-3" / "consenso.jsonl"
@@ -132,8 +133,13 @@ def publicar_um(slug: str) -> dict:
         expirou = True
     dt = time.time() - t0
     ok = rc == 0 and _ja_publicado(slug)
+    # [v1.9.25, §3[D]] A telemetria de retentativa do LLM vive no processo
+    # FILHO e morre com ele; o stderr é o único canal que atravessa. Extraída
+    # aqui para virar campo próprio no log — sem isso ficaria só embutida no
+    # `stderr_tail`, legível por grep e invisível no relatório.
     return {"slug": slug, "ok": ok, "elapsed_s": round(dt, 1),
             "returncode": rc, "expirou": expirou,
+            "retentativa_llm": parse_linha_telemetria_llm(stderr),
             "stdout_tail": stdout[-3000:], "stderr_tail": stderr[-6000:]}
 
 
@@ -197,6 +203,35 @@ def cmd_relatorio() -> None:
     print(f"\ncontraste: {n_tematico} tematico / {n_valorativo} valorativo "
           f"de {n_tematico + n_valorativo}")
     print(f"filmes com alguma flag mecânica: {n_com_flag}")
+    _linha_retentativa_llm(linhas_log)
+
+
+def _linha_retentativa_llm(linhas_log: dict) -> None:
+    """[v1.9.25, §3[D]] Retentativa de transporte do LLM, agregada no LOTE.
+
+    É o lugar certo para ela: por filme seria ruído (a esmagadora maioria é
+    zero), e num lote de ~300 uma taxa alta é o sinal de degradação do
+    provider que, sem isto, só apareceria como lentidão inexplicada.
+
+    Filmes SEM a linha (publicados antes da v1.9.25, ou execução que morreu
+    antes do fim) contam à parte, como `sem telemetria` — "não sei" não é a
+    mesma coisa que "foram zero", e somá-los como zero maquiaria a taxa.
+    """
+    com, sem, total, por_tipo = 0, 0, 0, {}
+    for r in linhas_log.values():
+        tel = r.get("retentativa_llm")
+        if tel is None:
+            sem += 1
+            continue
+        com += 1
+        total += tel.get("n_retentativas", 0)
+        for k, v in (tel.get("por_tipo") or {}).items():
+            por_tipo[k] = por_tipo.get(k, 0) + v
+    if not com and not sem:
+        return
+    detalhe = f" · {por_tipo}" if por_tipo else ""
+    print(f"retentativas de transporte do LLM: {total} em {com} execução(ões)"
+          f"{detalhe}" + (f" · {sem} sem telemetria" if sem else ""))
 
 
 def main() -> None:

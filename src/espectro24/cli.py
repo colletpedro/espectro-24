@@ -38,7 +38,7 @@ from .render import (
     write_json,
 )
 from .narrador import narrar, telemetria_para_json
-from .synthesize import ProviderError
+from .synthesize import ProviderError, linha_telemetria_llm
 
 
 def _parse_args(argv):
@@ -365,6 +365,7 @@ def main(argv=None):
     print(render_terminal(output, tom=args.tom))
     print(f"\nJSON salvo em {path}", file=sys.stderr)
     print(f"Requisições de rede nesta execução: {fetcher_net}", file=sys.stderr)
+    print(linha_telemetria_llm(), file=sys.stderr)
 
 
 if __name__ == "__main__":

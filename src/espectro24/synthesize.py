@@ -28,11 +28,16 @@ from __future__ import annotations
 import difflib
 import json
 import os
+import random
 import re
+import time
 
 from .config import (
     BUCKETS,
     BUCKET_ALVO,
+    LLM_MAX_TENTATIVAS,
+    LLM_BACKOFF_BASE_SEGUNDOS,
+    LLM_BACKOFF_JITTER,
     LLM_MAX_TOKENS,
     LLM_TIMEOUT_MS,
     MAX_TEMAS,
@@ -147,6 +152,18 @@ class LLMError(RuntimeError):
     pass
 
 
+class LLMTransportError(LLMError):
+    """[v1.9.24, §3[D]] Erro de TRANSPORTE do LLM que sobreviveu a
+    `LLM_MAX_TENTATIVAS` retentativas dentro de `resposta()`.
+
+    Herda de `LLMError` (não de uma classe nova e desconectada) para que um
+    chamador que já trate `LLMError` — a exceção geral do adaptador —
+    continue tratando esta sem precisar de um `except` adicional. Nunca é
+    levantada para erro de conteúdo/autenticação/cota/parâmetro inválido:
+    esses sobem imediatamente, sem retentar (ver `_erros_transporte_llm`).
+    """
+
+
 class ProviderError(RuntimeError):
     """Erro na seleção/resolução de provider (chave ausente/ambígua, nome inválido)."""
 
@@ -242,6 +259,16 @@ def _gemini_resposta(system: str, user: str, model: str, *,
     Espelho de `deepseek_resposta` — existe pela mesma razão registrada na
     v1.9.4: sem acesso aos contadores, um chamador que precise de custo
     reimplementa o transporte e perde os parâmetros que o adaptador fixa.
+
+    **v1.9.25: é AQUI que a retentativa de transporte vive** para o Gemini,
+    e desde esta versão este é o ÚNICO transporte do provider — `_gemini_call`
+    delega para cá em vez de duplicá-lo (ver a docstring dele).
+
+    TIMEOUT (v1.6.0): sem ele o SDK bloqueia INDEFINIDAMENTE. Observado ao
+    vivo — um processo ficou 67 minutos parado, 0% de CPU, dormindo num
+    socket, sem nunca voltar nem falhar. Um timeout transforma "trava para
+    sempre" em "erro que o chamador vê" — e, desde a v1.9.24, em erro que a
+    retentativa reconhece como transporte.
     """
     from google import genai
     from google.genai import types
@@ -258,46 +285,40 @@ def _gemini_resposta(system: str, user: str, model: str, *,
     if gemini_supports_thinking(model):
         config_kwargs["thinking_config"] = types.ThinkingConfig(
             thinking_budget=thinking_budget)
-    return client.models.generate_content(
+    return _com_retentativa("gemini", model, lambda: client.models.generate_content(
         model=model, contents=user,
-        config=types.GenerateContentConfig(**config_kwargs))
+        config=types.GenerateContentConfig(**config_kwargs)))
 
 
 def _gemini_call(system: str, user: str, model: str, *, max_output_tokens: int,
                  thinking_budget: int, json_mode: bool) -> str:
-    """Transporte comum do Gemini. `thinking_budget` só é enviado quando o
-    modelo suporta (`gemini_supports_thinking`) — passá-lo a um gemini-2.0
-    pode ser rejeitado pela API. `json_mode=False` desliga
-    `response_mime_type` para etapas cuja saída é texto puro (§E2 editor)."""
-    from google import genai
-    from google.genai import types
+    """Transporte comum do Gemini — só o TEXTO. `thinking_budget` só é
+    enviado quando o modelo suporta (`gemini_supports_thinking`) — passá-lo
+    a um gemini-2.0 pode ser rejeitado pela API. `json_mode=False` desliga
+    `response_mime_type` para etapas cuja saída é texto puro (§E2 editor).
 
-    key = os.environ.get(PROVIDER_ENV_KEYS["gemini"])
-    if not key:
-        raise LLMError(f"{PROVIDER_ENV_KEYS['gemini']} não definida no ambiente.")
-    # TIMEOUT (v1.6.0): sem ele o SDK bloqueia INDEFINIDAMENTE. Observado ao
-    # vivo durante a regeneração desta versão — um processo ficou 67 minutos
-    # parado, 0% de CPU, dormindo num socket, sem nunca voltar nem falhar.
-    # Um timeout transforma "trava para sempre" em "erro que o chamador vê".
-    client = genai.Client(
-        api_key=key,
-        http_options=types.HttpOptions(timeout=LLM_TIMEOUT_MS),
-    )
-    config_kwargs = dict(
-        system_instruction=system,
-        max_output_tokens=max_output_tokens,
-    )
-    if json_mode:
-        config_kwargs["response_mime_type"] = "application/json"
-    if gemini_supports_thinking(model):
-        config_kwargs["thinking_config"] = types.ThinkingConfig(
-            thinking_budget=thinking_budget)
-    resp = client.models.generate_content(
-        model=model,
-        contents=user,
-        config=types.GenerateContentConfig(**config_kwargs),
-    )
-    return resp.text
+    **v1.9.25 — DELEGA em vez de duplicar.** Até a v1.9.24 esta função tinha
+    transporte PRÓPRIO: instanciava seu próprio `genai.Client` e chamava
+    `generate_content` por conta, enquanto `_gemini_resposta` fazia o mesmo
+    ao lado. Eram dois pontos de contato com o SDK para um provider só — e
+    foi por isso que a retentativa da v1.9.24, colocada em `resposta()`,
+    não alcançava o caminho `client_call` do Gemini de forma alguma.
+
+    A duplicata era EXATA: os corpos só diferiam em (a) devolver `resp.text`
+    em vez da resposta inteira e (b) grafar a checagem de chave inline em
+    vez de chamar `_exigir_chave` — verificado em runtime que as duas
+    levantam `LLMError` com mensagem byte-idêntica. `thinking_budget` é
+    repassado EXPLICITAMENTE, sem depender do default de `_gemini_resposta`.
+
+    O paralelo com `_deepseek_call` (que sempre delegou a `deepseek_resposta`)
+    passa a valer para os dois providers — mesma dívida que a v1.9.4 pagou no
+    transporte por script e a extração de `quantificador.py` pagou no mapa
+    de faixas: uma regra, uma implementação.
+    """
+    return _gemini_resposta(system, user, model,
+                            max_output_tokens=max_output_tokens,
+                            json_mode=json_mode,
+                            thinking_budget=thinking_budget).text
 
 
 def deepseek_client_call(system: str, user: str, model: str) -> str:
@@ -373,6 +394,11 @@ def deepseek_resposta(system: str, user: str, model: str, *, max_tokens: int,
     que empurrava cada script novo a reimplementar o transporte e, no caminho,
     esquecer `thinking: disabled`. Fechar o buraco é o que torna o guard-rail
     aplicável em vez de apenas restritivo.
+
+    **v1.9.25: é AQUI que a retentativa de transporte vive** para o DeepSeek
+    — um dos dois pontos que tocam o SDK. As duas portas de entrada do
+    adaptador (`resposta()` e `client_call`→`_deepseek_call`) passam por
+    esta função, então cobri-la cobre as duas de uma vez.
     """
     client = deepseek_client() if client is None else client
     kwargs = dict(
@@ -387,7 +413,12 @@ def deepseek_resposta(system: str, user: str, model: str, *, max_tokens: int,
     )
     if json_mode:
         kwargs["response_format"] = {"type": "json_object"}
-    return client.chat.completions.create(**kwargs)
+    # A construção do cliente fica FORA da retentativa de propósito: ela não
+    # é transporte (não fala com a rede), e recriá-la a cada tentativa
+    # descartaria a conexão reaproveitada que `deepseek_client` existe para
+    # dar (v1.9.4).
+    return _com_retentativa(
+        "deepseek", model, lambda: client.chat.completions.create(**kwargs))
 
 
 def deepseek_uso(resp) -> dict:
@@ -450,12 +481,205 @@ def _exigir_chave(provider: str) -> None:
         raise LLMError(f"{env} não definida no ambiente.")
 
 
+# ===========================================================================
+# Retentativa de TRANSPORTE (v1.9.24, §3[D])
+# ===========================================================================
+# Precedente: `Fetcher._backoff`/`_registrar_retentativa` (fetcher.py, §2.4,
+# v1.9.6). MESMO desenho — só erro de TRANSPORTE retenta, backoff exponencial
+# `2s · 4s` com jitter de ±25%, teto de tentativas — trazido para o adaptador
+# de LLM, que não tinha nenhuma retentativa. Motivo: um `ServerError`
+# transitório do Gemini abortou um lote de 35 filmes no primeiro item
+# (v1.9.23, achado operacional registrado e não corrigido naquela sessão).
+#
+# Divergência DELIBERADA do precedente: o Fetcher também tem `PressaoDoSite`
+# — um teto de 503 ABSORVIDOS POR LOTE, acima do teto por-requisição, porque
+# insistir além dele é pressão sobre o site, não retentativa (§2.4). Esse
+# mecanismo depende de um objeto compartilhado passado a CADA chamada; hoje
+# nenhum chamador de `resposta()` (narrador, veredito, scripts) recebe ou
+# repassa um objeto assim, e criar um exigiria plumbing por todos eles — fora
+# do escopo desta sessão (não mexer em narrativa/veredito). O teto
+# por-chamada (`LLM_MAX_TENTATIVAS`) é o único freio aqui; se a taxa de 5xx
+# justificar um teto por-lote como o do Fetcher, é decisão de uma sessão
+# futura, com o plumbing que ela exige.
+
+
+def _erros_transporte_llm(provider: str) -> tuple[type[BaseException], ...]:
+    """Erros de TRANSPORTE do `provider` — só estes retentam.
+
+    Critério (mesmo do Fetcher, §2.4): a chamada não produziu resposta da
+    API (timeout, falha de conexão), ou a API respondeu 5xx (o SERVIDOR
+    sinalizando sobrecarga/erro interno). Deliberadamente FORA, para os dois
+    providers: erro de conteúdo, autenticação, cota ou parâmetro inválido —
+    todos 4xx, decisão do serviço sobre o pedido, não falha de rede.
+    Retentá-los seria pressão, não recuperação de transporte.
+    """
+    if provider == "deepseek":
+        import openai
+
+        # `APIConnectionError` cobre timeout (`APITimeoutError` é subclasse,
+        # ver MRO do SDK) e falha de conexão sem resposta HTTP nenhuma.
+        # `InternalServerError` é o 5xx explícito do lado da API. FORA, de
+        # propósito: `RateLimitError` (429, COTA — nunca retentar por
+        # instrução explícita desta sessão), `AuthenticationError`,
+        # `PermissionDeniedError`, `BadRequestError`, `NotFoundError`,
+        # `UnprocessableEntityError`, `ConflictError` (todos 4xx) e
+        # `APIResponseValidationError` (resposta malformada — conteúdo, não
+        # transporte).
+        return (openai.APIConnectionError, openai.InternalServerError)
+    if provider == "gemini":
+        import httpx
+        from google.genai import errors as genai_errors
+
+        # `ServerError` é o 5xx explícito do SDK (`APIError.raise_error`
+        # despacha por faixa de status: 4xx -> `ClientError`, 5xx ->
+        # `ServerError`). `httpx.TimeoutException`/`ConnectError` também
+        # retentam: PONTO AMBÍGUO investigado nesta sessão — o SDK só
+        # embrulha erro de transporte em exceção própria quando chamado com
+        # `HttpRetryOptions`; sem essa opção (o caso deste projeto,
+        # `_gemini_resposta`/`_gemini_call` não a passam), `retry_args`
+        # (`_api_client.py`) usa `stop_after_attempt(1)` e a exceção crua do
+        # httpx sobe intacta. Classificado como TRANSPORTE porque é
+        # exatamente isso — ausência de resposta HTTP —, não uma decisão do
+        # servidor. FORA, de propósito: `ClientError` (4xx, inclui 429 de
+        # cota e 400/401/403) — decisão do serviço, não falha de rede.
+        return (genai_errors.ServerError, httpx.TimeoutException, httpx.ConnectError)
+    raise ProviderError(f"provider {provider!r} sem retentativa de transporte "
+                        f"definida — use um de {sorted(PROVIDER_CLIENTS)}.")
+
+
+def _backoff_llm(tentativa: int) -> float:
+    """`2s · 4s` com jitter de ±25% — mesma fórmula do Fetcher (§2.4). O
+    jitter evita que várias chamadas do mesmo lote, tropeçando no mesmo
+    instante, voltem todas em uníssono."""
+    base = LLM_BACKOFF_BASE_SEGUNDOS * (2 ** (tentativa - 1))
+    return base * random.uniform(1 - LLM_BACKOFF_JITTER, 1 + LLM_BACKOFF_JITTER)
+
+
+# Telemetria de retentativa de transporte, acumulada por PROCESSO (v1.9.24).
+# Mesmo espírito de `Fetcher.telemetria_retentativa` (§2.4): taxa alta de
+# retentativa é sinal de degradação do provider e precisa ficar VISÍVEL, não
+# ser absorvida em silêncio. Diferença deliberada do Fetcher: lá a telemetria
+# vive num objeto (`Fetcher`) que o harness cria por filme; aqui não há
+# objeto equivalente passado a `resposta()` por nenhum chamador hoje — um
+# contador de MÓDULO, que uma execução do CLI (um processo) acumula do
+# início ao fim, cobre o caso de uso real sem exigir plumbing novo em
+# narrador/veredito/scripts só para carregar um objeto que ninguém pediu.
+# Onde gravar isto num relatório por filme é decisão de sessão futura (fora
+# de escopo aqui) — `telemetria_retentativa_llm()` é o ponto de leitura.
+_telemetria_llm = {"n_retentativas": 0, "por_tipo": {}}
+
+
+def telemetria_retentativa_llm() -> dict:
+    """[§3[D], v1.9.24] Retentativas de TRANSPORTE acumuladas nesta execução,
+    por todo provider/estágio que passou por `resposta()`."""
+    return {"n_retentativas": _telemetria_llm["n_retentativas"],
+            "por_tipo": dict(_telemetria_llm["por_tipo"])}
+
+
+def resetar_telemetria_retentativa_llm() -> None:
+    """Zera o contador — para isolar execuções em teste. Um processo novo do
+    CLI já começa zerado; produção nunca precisa chamar isto."""
+    _telemetria_llm["n_retentativas"] = 0
+    _telemetria_llm["por_tipo"] = {}
+
+
+def _registrar_retentativa_llm(tipo: str) -> None:
+    _telemetria_llm["n_retentativas"] += 1
+    _telemetria_llm["por_tipo"][tipo] = _telemetria_llm["por_tipo"].get(tipo, 0) + 1
+
+
+# --- A travessia do limite de PROCESSO (v1.9.25, Entrega 3) ----------------
+# O harness de lote (§3[H], `scripts/publicar_catalogo.py`) roda o CLI como
+# SUBPROCESSO (`subprocess.run([... "-m", "espectro24.cli" ...])`). O
+# contador acima vive no processo FILHO e morre com ele — o pai não consegue
+# lê-lo por import, só pelo que o filho escreveu. `stderr` já é capturado
+# (`stdout_tail`/`stderr_tail` no log de publicação), então é o canal que
+# existe, e uma linha nele é o menor acréscimo possível.
+#
+# O formato e o parser ficam JUNTOS, de propósito: são as duas metades do
+# mesmo contrato, e separá-los é como o mapa de quantificador acabou em duas
+# cópias divergentes até a v1.9.21 extrair `quantificador.py`. Quem mudar a
+# linha muda o parser no mesmo lugar, ou o teste de ida-e-volta reprova.
+PREFIXO_TELEMETRIA_LLM = "Retentativas de transporte do LLM:"
+
+
+def linha_telemetria_llm() -> str:
+    """A linha que o CLI imprime em stderr no fim da execução."""
+    tel = telemetria_retentativa_llm()
+    return (f"{PREFIXO_TELEMETRIA_LLM} {tel['n_retentativas']} "
+            f"{json.dumps(tel['por_tipo'], sort_keys=True)}")
+
+
+def parse_linha_telemetria_llm(texto: str) -> dict | None:
+    """Extrai a telemetria do stderr de um subprocesso do CLI.
+
+    Devolve `None` quando a linha não está lá — que é o caso legítimo de um
+    filme publicado por uma versão anterior à v1.9.25, ou de uma execução que
+    morreu antes do fim. `None` é "não sei", e o relatório o distingue de
+    zero retentativas, que é "sei, e foram zero".
+    """
+    for linha in reversed(texto.splitlines()):
+        if not linha.startswith(PREFIXO_TELEMETRIA_LLM):
+            continue
+        resto = linha[len(PREFIXO_TELEMETRIA_LLM):].strip()
+        n, _, bruto = resto.partition(" ")
+        try:
+            return {"n_retentativas": int(n), "por_tipo": json.loads(bruto)}
+        except (ValueError, json.JSONDecodeError):
+            return None
+    return None
+
+
+def _com_retentativa(provider: str, model: str, chamada):
+    """[v1.9.25, §3[D]] Executa `chamada()` retentando só erro de TRANSPORTE.
+
+    **A ÚNICA implementação da retentativa no projeto.** Fica aqui, e é
+    invocada pelas DUAS funções que efetivamente tocam o SDK
+    (`deepseek_resposta` e `_gemini_resposta`) — não pelas camadas de cima.
+    Essa é a correção da v1.9.25 sobre a v1.9.24: lá a retentativa estava em
+    `resposta()`, que é só UMA das duas portas de entrada do adaptador, e a
+    síntese de bucket (§D) entra pela outra (`client_call`), ficando
+    descoberta.
+
+    Colocá-la no ponto mais baixo é o que torna "uma implementação, todas as
+    camadas" verdadeiro em vez de aspiracional: qualquer camada acima herda,
+    e ninguém pode contorná-la sem falar com o SDK direto — que é
+    exatamente o que o guard-rail de §3[D] proíbe.
+
+    Classificação de erro, teto, backoff e jitter são os da v1.9.24, sem
+    redecisão: só MUDARAM DE LUGAR.
+    """
+    erros_transporte = _erros_transporte_llm(provider)
+    ultimo_erro: BaseException | None = None
+    for tentativa in range(1, LLM_MAX_TENTATIVAS + 1):
+        try:
+            return chamada()
+        except erros_transporte as e:
+            _registrar_retentativa_llm(type(e).__name__)
+            ultimo_erro = e
+            if tentativa == LLM_MAX_TENTATIVAS:
+                break
+            time.sleep(_backoff_llm(tentativa))
+            continue
+
+    raise LLMTransportError(
+        f"{provider}/{model} -> falhou após {LLM_MAX_TENTATIVAS} tentativas "
+        f"(erro de transporte): {type(ultimo_erro).__name__}: {ultimo_erro}"
+    ) from ultimo_erro
+
+
 def resposta(system: str, user: str, model: str, *, provider: str,
              max_tokens: int, json_mode: bool, client=None):
     """A chamada crua, com a resposta INTEIRA — inclusive contadores de token.
 
     Despacha por provider mantendo a assinatura de `deepseek_resposta`, para
     que um chamador troque de provider mudando um argumento, não o caminho.
+
+    **A retentativa de transporte NÃO vive aqui** (v1.9.25) — vive um nível
+    abaixo, em `deepseek_resposta`/`_gemini_resposta` (`_com_retentativa`).
+    Esta função a herda como qualquer outro chamador. Duplicá-la aqui
+    produziria tentativas ANINHADAS (`LLM_MAX_TENTATIVAS²`), e há teste
+    dedicado provando que isso não acontece.
     """
     if provider == "deepseek":
         return deepseek_resposta(system, user, model, max_tokens=max_tokens,

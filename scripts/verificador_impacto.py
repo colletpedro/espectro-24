@@ -82,7 +82,10 @@ ARQ_PROJECAO = SAIDA / "projecao.json"
 
 EIXO = "impacto_emocional"
 CONCORRENCIA = 8
-MAX_TENTATIVAS = 3
+# [v1.9.25] `MAX_TENTATIVAS` REMOVIDO: a retentativa de transporte
+# vive no adaptador (`synthesize._com_retentativa`, §3[D]), com
+# backoff exponencial e jitter. O laço local retentava também erro
+# de CONTEÚDO e, depois da v1.9.25, empilharia sobre a do adaptador.
 N_PASSES = 3
 
 # Preços DeepSeek, USD por 1M de tokens (mesmos de `classificar_10`).
@@ -219,29 +222,27 @@ def rodar_passe(variante: str, n_passe: int, reviews: list[dict],
     saida = arq.open("a", encoding="utf-8")
 
     def tarefa(review: dict) -> None:
-        erro = ""
-        for tentativa in range(MAX_TENTATIVAS):
-            try:
-                resp = deepseek_resposta(
-                    system,
-                    f"Review (nota {review['nivel']} de 5 estrelas):\n\n"
-                    f"{review['texto']}\n\n"
-                    f"Esta review foi marcada com `impacto_emocional`. "
-                    f"Confirma ou remove?",
-                    MODELO, max_tokens=300, json_mode=True, client=client)
-                data = json.loads(resp.choices[0].message.content)
-                confirma, frase, alvo = _normalizar_veredito(data)
-                registro = {"ok": True, "variante": variante, "passe": n_passe,
-                            "id": review["id"], "n_chars": review["n_chars"],
-                            "confirma": confirma, "frase": frase, "alvo": alvo,
-                            "uso": deepseek_uso(resp)}
-                break
-            except Exception as e:  # noqa: BLE001
-                erro = f"{type(e).__name__}: {e}"
-                time.sleep(2 * (tentativa + 1))
-        else:
+        # [v1.9.25, §3[D]] Laço de retentativa REMOVIDO — o adaptador
+        # retenta TRANSPORTE dentro de `deepseek_resposta`. O `except`
+        # só REGISTRA a falha (sem re-chamar): erro de CONTEÚDO passa
+        # a custar 1 chamada e vira `ok: False` visível.
+        try:
+            resp = deepseek_resposta(
+                system,
+                f"Review (nota {review['nivel']} de 5 estrelas):\n\n"
+                f"{review['texto']}\n\n"
+                f"Esta review foi marcada com `impacto_emocional`. "
+                f"Confirma ou remove?",
+                MODELO, max_tokens=300, json_mode=True, client=client)
+            data = json.loads(resp.choices[0].message.content)
+            confirma, frase, alvo = _normalizar_veredito(data)
+            registro = {"ok": True, "variante": variante, "passe": n_passe,
+                        "id": review["id"], "n_chars": review["n_chars"],
+                        "confirma": confirma, "frase": frase, "alvo": alvo,
+                        "uso": deepseek_uso(resp)}
+        except Exception as e:  # noqa: BLE001
             registro = {"ok": False, "variante": variante, "passe": n_passe,
-                        "id": review["id"], "erro": erro}
+                        "id": review["id"], "erro": f"{type(e).__name__}: {e}"}
         with lock:
             saida.write(json.dumps(registro, ensure_ascii=False) + "\n")
             saida.flush()

@@ -68,6 +68,7 @@ from espectro24.synthesize import (  # noqa: E402
     deepseek_client,
     deepseek_resposta,
     deepseek_uso,
+    telemetria_retentativa_llm,
 )
 
 SAIDA = RAIZ / "resultado" / "votacao-3"
@@ -83,7 +84,10 @@ ARQ_ESTABILIDADE_CONSENSO = SAIDA / "estabilidade_consenso.json"
 FONTE_PASSADA_UNICA = RAIZ / "resultado" / "taxonomia-10" / "classificacoes.jsonl"
 
 CONCORRENCIA = 8
-MAX_TENTATIVAS = 3
+# [v1.9.25] `MAX_TENTATIVAS` REMOVIDO: retentativa de transporte agora vive
+# no adaptador (`synthesize._com_retentativa`, §3[D]), com backoff
+# exponencial e jitter. O laço local retentava também erro de CONTEÚDO e,
+# depois da v1.9.25, empilharia sobre a do adaptador.
 
 
 # ===========================================================================
@@ -139,41 +143,44 @@ def classificar_passe(n_passe: int, limite: int | None = None) -> None:
 
     client = deepseek_client()
     lock, contador, t0 = Lock(), [0], time.time()
+    falhas = [0]
     saida = arq.open("a", encoding="utf-8")
 
     def tarefa(review: dict) -> None:
-        erro = ""
-        for tentativa in range(MAX_TENTATIVAS):
-            try:
-                resp = deepseek_resposta(
-                    SYSTEM,
-                    f"Review (nota {review['nivel']} de 5 estrelas):\n\n"
-                    f"{review['texto']}",
-                    MODELO, max_tokens=300, json_mode=True, client=client)
-                data = json.loads(resp.choices[0].message.content)
-                eixos, livres, invalidos = _normalizar(data)
-                registro = {
-                    "ok": True, "taxonomia_id": tid, "passe": n_passe,
-                    "slug": review["slug"], "perfil": review["perfil"],
-                    "bucket": review["bucket"], "id": review["id"],
-                    "nivel": review["nivel"], "n_chars": review["n_chars"],
-                    "eixos": eixos, "temas_livres": livres,
-                    "eixos_invalidos": invalidos, "uso": deepseek_uso(resp),
-                    "tentativas": tentativa + 1,
-                }
-                break
-            except Exception as e:  # noqa: BLE001
-                erro = f"{type(e).__name__}: {e}"
-                time.sleep(2 * (tentativa + 1))
-        else:
+        # [v1.9.25, §3[D]] SEM laço de retentativa próprio. O adaptador
+        # retenta TRANSPORTE (5xx/timeout/conexão) dentro de
+        # `deepseek_resposta`; um laço aqui empilharia 3×3 tentativas com
+        # backoffs somados. O `except` fica só para REGISTRAR a falha e
+        # deixar o passe seguir — sem re-chamar. Erro de CONTEÚDO (JSON
+        # malformado) agora custa 1 chamada, não 3, e vira `ok: False`
+        # visível no resumo em vez de ser reabsorvido em silêncio.
+        try:
+            resp = deepseek_resposta(
+                SYSTEM,
+                f"Review (nota {review['nivel']} de 5 estrelas):\n\n"
+                f"{review['texto']}",
+                MODELO, max_tokens=300, json_mode=True, client=client)
+            data = json.loads(resp.choices[0].message.content)
+            eixos, livres, invalidos = _normalizar(data)
+            registro = {
+                "ok": True, "taxonomia_id": tid, "passe": n_passe,
+                "slug": review["slug"], "perfil": review["perfil"],
+                "bucket": review["bucket"], "id": review["id"],
+                "nivel": review["nivel"], "n_chars": review["n_chars"],
+                "eixos": eixos, "temas_livres": livres,
+                "eixos_invalidos": invalidos, "uso": deepseek_uso(resp),
+            }
+        except Exception as e:  # noqa: BLE001
             registro = {"ok": False, "taxonomia_id": tid, "passe": n_passe,
                         "slug": review["slug"], "perfil": review["perfil"],
                         "bucket": review["bucket"], "id": review["id"],
-                        "erro": erro}
+                        "erro": f"{type(e).__name__}: {e}"}
         with lock:
             saida.write(json.dumps(registro, ensure_ascii=False) + "\n")
             saida.flush()
             contador[0] += 1
+            if not registro["ok"]:
+                falhas[0] += 1
             if contador[0] % 200 == 0 or contador[0] == len(pendentes):
                 dt = time.time() - t0
                 print(f"  passe {n_passe}: {contador[0]}/{len(pendentes)} · "
@@ -182,6 +189,13 @@ def classificar_passe(n_passe: int, limite: int | None = None) -> None:
     with ThreadPoolExecutor(max_workers=CONCORRENCIA) as pool:
         list(pool.map(tarefa, pendentes))
     saida.close()
+    # [v1.9.25] Taxa VISÍVEL: falha vira `ok: False` no JSONL e todo
+    # consumidor a pula com `if not r.get("ok")`. Sem esta linha, uma taxa
+    # alta some entre 8 mil registros.
+    tel = telemetria_retentativa_llm()
+    print(f"  passe {n_passe}: falhas (ok=False) {falhas[0]}/{len(pendentes)} "
+          f"· retentativas de transporte no adaptador: {tel['n_retentativas']}"
+          + (f" {tel['por_tipo']}" if tel["por_tipo"] else ""))
 
 
 def cmd_passe(n_passe: int, limite: int | None) -> None:

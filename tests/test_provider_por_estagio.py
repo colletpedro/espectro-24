@@ -207,14 +207,36 @@ def test_o_transporte_do_gemini_vive_no_adaptador():
     assert "generate_content(" in fonte
 
 
-def test_gemini_resposta_devolve_o_objeto_nao_o_texto():
+def test_gemini_resposta_devolve_o_objeto_nao_o_texto(monkeypatch):
     """É o que permite a `uso` ler os contadores — devolver só o texto foi
     exatamente a lacuna que a v1.9.4 registrou como causa de scripts
-    reimplementarem o transporte."""
-    import inspect
-    src = inspect.getsource(S._gemini_resposta)
-    assert "return client.models.generate_content(" in src
-    assert ".text" not in src.split("return")[-1]
+    reimplementarem o transporte.
+
+    v1.9.25: passou a asserção de TEXTO DO FONTE para COMPORTAMENTO. A
+    versão anterior casava a linha literal `return client.models.
+    generate_content(`, que quebrou quando a retentativa de transporte
+    passou a envolver essa chamada — sem que a invariante sob teste
+    (devolver o objeto, não `.text`) tivesse mudado. Verificar o retorno é
+    mais forte que verificar a grafia: pega também um `.text` introduzido
+    por um caminho que o casamento textual não previsse."""
+    import google.genai as genai_mod
+
+    sentinela = SimpleNamespace(text="só o texto", usage_metadata="contadores")
+
+    class _FakeGeminiClient:
+        def __init__(self, *a, **kw):
+            self.models = self
+
+        def generate_content(self, **kwargs):
+            return sentinela
+
+    monkeypatch.setattr(genai_mod, "Client", _FakeGeminiClient)
+    monkeypatch.setenv("GEMINI_API_KEY", "chave-fake")
+
+    out = S._gemini_resposta("s", "u", "gemini-2.5-flash",
+                             max_output_tokens=10, json_mode=True)
+    assert out is sentinela, "devolveu algo que não é a resposta inteira"
+    assert out is not sentinela.text
 
 
 def test_cliente_do_gemini_nao_quebra_com_chave_presente(monkeypatch):
