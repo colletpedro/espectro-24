@@ -1366,46 +1366,53 @@
     "n_chamadas": 3,
     "prefixo_codigo": "",
     "retry": null,
-    "spec_version": "1.9.21",
-    "texto": "A divergência central sobre o roteiro está no impacto das escolhas dos personagens. Enquanto a maioria dos que não recomendam se irrita com as atitudes insensatas do protagonista, a maior parte dos que recomendam considera que essa mesma irracionalidade funciona a favor da trama.",
-    "texto_modelo": "A divergência central sobre o roteiro está no impacto das escolhas dos personagens. Enquanto a maioria dos que não recomendam se irrita com as atitudes insensatas do protagonista, a maior parte dos que recomendam considera que essa mesma irracionalidade funciona a favor da trama.",
+    "spec_version": "1.9.22",
+    "texto": "A discussão se concentra no roteiro e no comportamento insensato dos personagens. A maioria dos que recomendam defende que essas decisões irracionais funcionam dentro da proposta da trama, enquanto a maioria dos que não recomendam avalia a postura irritante dos protagonistas como uma falha que compromete a experiência.",
+    "texto_modelo": "A discussão se concentra no roteiro e no comportamento insensato dos personagens. A maioria dos que recomendam defende que essas decisões irracionais funcionam dentro da proposta da trama, enquanto a maioria dos que não recomendam avalia a postura irritante dos protagonistas como uma falha que compromete a experiência.",
     "origem": "llm",
     "motivo": "melhor_entre_limpos",
-    "criterio_decisivo": "brevidade",
-    "indice_escolhido": 0,
+    "criterio_decisivo": "abertura",
+    "abertura": "discu",
+    "indice_escolhido": 1,
     "flags": [],
     "candidatos": [
       {
         "indice": 0,
         "n_flags": 0,
         "flags": [],
-        "n_palavras": 44,
+        "n_palavras": 45,
         "n_ancoras": 1,
+        "abertura": "diver",
+        "abertura_freq": 7,
         "eliminado": false
       },
       {
         "indice": 1,
         "n_flags": 0,
         "flags": [],
-        "n_palavras": 52,
+        "n_palavras": 48,
         "n_ancoras": 1,
+        "abertura": "discu",
+        "abertura_freq": 0,
         "eliminado": false
       },
       {
         "indice": 2,
         "n_flags": 0,
         "flags": [],
-        "n_palavras": 47,
+        "n_palavras": 49,
         "n_ancoras": 1,
+        "abertura": "diver",
+        "abertura_freq": 7,
         "eliminado": false
       }
     ],
     "uso": {
-      "prompt_tokens": 2787,
-      "completion_tokens": 222,
+      "prompt_tokens": 3669,
+      "completion_tokens": 220,
       "cache_hit_tokens": 0,
-      "cache_miss_tokens": 2787
+      "cache_miss_tokens": 3669
     },
-    "latencia_s": 7.58
+    "latencia_s": 9.73
   }
 }

@@ -247,4 +247,5 @@ def test_os_textos_perdedores_nao_sao_gravados():
     r = V.gerar(_dois_lados_com_lift(), n=3, gerar=_gerador(INVALIDO, LIMPO))
     for c in r["candidatos"]:
         assert set(c) <= {"indice", "n_flags", "flags", "n_palavras",
-                          "n_ancoras", "eliminado"}
+                          "n_ancoras", "abertura", "abertura_freq",
+                          "eliminado"}

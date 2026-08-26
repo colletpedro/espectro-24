@@ -1271,12 +1271,13 @@
     "n_chamadas": 3,
     "prefixo_codigo": "",
     "retry": null,
-    "spec_version": "1.9.21",
-    "texto": "As opiniões divergem diretamente sobre a estrutura do roteiro. A maioria dos que recomendam aprecia as viradas e o desenrolar da trama, enquanto muitos dos que não recomendam consideram a história sem lógica e desmedida.",
-    "texto_modelo": "As opiniões divergem diretamente sobre a estrutura do roteiro. A maioria dos que recomendam aprecia as viradas e o desenrolar da trama, enquanto muitos dos que não recomendam consideram a história sem lógica e desmedida.",
+    "spec_version": "1.9.22",
+    "texto": "As opiniões divergem sobre a eficácia da narrativa e sua construção. Enquanto a maioria dos que recomendam elogia o roteiro e a dinâmica das suas reviravoltas, muitos entre os que desaprovam apontam que a trama se torna sem sentido e exagerada.",
+    "texto_modelo": "As opiniões divergem sobre a eficácia da narrativa e sua construção. Enquanto a maioria dos que recomendam elogia o roteiro e a dinâmica das suas reviravoltas, muitos entre os que desaprovam apontam que a trama se torna sem sentido e exagerada.",
     "origem": "llm",
     "motivo": "melhor_entre_limpos",
-    "criterio_decisivo": "ancoras",
+    "criterio_decisivo": "abertura",
+    "abertura": "opini",
     "indice_escolhido": 0,
     "flags": [],
     "candidatos": [
@@ -1284,33 +1285,39 @@
         "indice": 0,
         "n_flags": 0,
         "flags": [],
-        "n_palavras": 35,
+        "n_palavras": 41,
         "n_ancoras": 1,
+        "abertura": "opini",
+        "abertura_freq": 5,
         "eliminado": false
       },
       {
         "indice": 1,
         "n_flags": 0,
         "flags": [],
-        "n_palavras": 38,
+        "n_palavras": 36,
         "n_ancoras": 0,
+        "abertura": "diver",
+        "abertura_freq": 8,
         "eliminado": false
       },
       {
         "indice": 2,
         "n_flags": 0,
         "flags": [],
-        "n_palavras": 39,
-        "n_ancoras": 0,
+        "n_palavras": 34,
+        "n_ancoras": 1,
+        "abertura": "diver",
+        "abertura_freq": 8,
         "eliminado": false
       }
     ],
     "uso": {
-      "prompt_tokens": 2784,
-      "completion_tokens": 176,
+      "prompt_tokens": 3666,
+      "completion_tokens": 182,
       "cache_hit_tokens": 0,
-      "cache_miss_tokens": 2784
+      "cache_miss_tokens": 3666
     },
-    "latencia_s": 10.89
+    "latencia_s": 10.59
   }
 }

@@ -472,6 +472,73 @@ def eixos_do_briefing(b: dict) -> set[str]:
 
 
 # ===========================================================================
+# [v1.9.22] PADRÃO SINTÁTICO DE ABERTURA — a métrica do Defeito 2
+# ===========================================================================
+# **O que ela mede, e por que Jaccard não via.** Sob a v1.9.21 a repetição
+# saiu do léxico e foi para a ESTRUTURA: 11 dos 17 filmes `valorativo`
+# abriam com uma fórmula de divergência ("A divergência central está…", "As
+# opiniões divergem…"). As palavras de conteúdo de cada um são distintas, o
+# Jaccard médio ficou em 0,06 — e quem navega três filmes seguidos vê a
+# mesma frase três vezes. É a versão estrutural do defeito que a v1.9.21
+# veio consertar.
+#
+# **A definição, e ela é um PROXY DECLARADO:** o padrão é o núcleo do
+# primeiro sintagma nominal — o primeiro token de conteúdo da frase, fora da
+# classe fechada de determinantes/preposições/conjunções —, truncado a 5
+# caracteres, com os RÓTULOS DE QUANTIFICADOR colapsados em `QUANT`.
+#
+# Duas decisões de desenho, as duas medidas antes de fixar:
+#
+# (1) **Sem o verbo.** A definição "núcleo + verbo principal" foi testada e
+#     descartada: sem analisador sintático, o verbo é identificado por
+#     terminação, e "está" colide com "esta" ao remover acento, e o primeiro
+#     verbo finito costuma estar DENTRO do sujeito ("dos que recomendam").
+#     O resultado é que ela reporta 22 padrões distintos em 35 contra 7 da
+#     definição sem verbo — **ela parece melhor porque é mais ruidosa**, e
+#     uma métrica que melhora o número por imprecisão é pior que não ter
+#     métrica.
+#
+# (2) **Rótulo de quantificador colapsado.** Qual rótulo abre a frase é
+#     decisão do CÓDIGO (vem do mapa da v1.2.3, §D2), não do modelo. Contar
+#     "A maioria…" e "Cerca de metade…" como aberturas diferentes creditaria
+#     ao modelo uma variedade que é do dado.
+#
+# Linha de base medida nos 35 publicados sob a v1.9.21: **7 padrões para 35
+# filmes, com os três maiores cobrindo 28 (80%)** — QUANT 14, `diver` 8,
+# `opini` 6.
+
+_FUNCIONAIS = {
+    "o", "a", "os", "as", "um", "uma", "uns", "umas", "de", "do", "da",
+    "dos", "das", "em", "no", "na", "nos", "nas", "por", "pelo", "pela",
+    "pelos", "pelas", "para", "com", "sem", "sob", "sobre", "entre", "ate",
+    "desde", "apos", "ante", "e", "ou", "mas", "que", "se", "ja",
+    "enquanto", "embora", "quando", "porque", "pois", "tanto", "quanto",
+    "assim", "tambem", "alem", "ambos", "ambas", "este", "esta", "esse",
+    "essa", "aquele", "aquela", "seu", "sua", "seus", "suas", "nesse",
+    "neste", "nessa", "desta", "deste", "dessa", "desse", "ao", "aos",
+    "mais", "menos", "bem", "aqui", "nao",
+}
+
+# Prefixos de 5 dos rótulos do mapa de quantificador, mais as formas que
+# abrem frase. Colapsados em `QUANT` — ver decisão (2) acima.
+_PREFIXOS_QUANT = ({_normalizar(r)[:PREFIXO_PALAVRA] for r in Q.ROTULOS}
+                   | {"maior", "cerca", "quase", "muito", "pouco", "algun",
+                      "metad", "grand", "boa p"})
+
+ABERTURA_QUANTIFICADOR = "QUANT"
+
+
+def padrao_de_abertura(texto: str) -> str:
+    """O padrão sintático com que o veredito começa. `""` se não houver."""
+    for w in re.findall(r"[a-z]+", _normalizar(texto)):
+        if len(w) < 4 or w in _FUNCIONAIS:
+            continue
+        p = w[:PREFIXO_PALAVRA]
+        return ABERTURA_QUANTIFICADOR if p in _PREFIXOS_QUANT else p
+    return ""
+
+
+# ===========================================================================
 # Validações pós-parsing — em CÓDIGO, nunca só no prompt
 # ===========================================================================
 
@@ -570,43 +637,136 @@ _FIM_FRASE = re.compile(r"(?<=[.!?])\s+")
 # Construção -> faixa, derivado do mapa que o briefing da NARRATIVA já usa.
 # Os conjuntos são disjuntos e nenhuma construção é substring de outra faixa
 # (invariante travada por teste em `test_variantes_prompt.py`).
+# [v1.9.22] As CONTRAÇÕES do artigo inicial fazem parte do rótulo, não são
+# desvio dele: "de a maioria" vira "da maioria", "por a maioria" vira "pela
+# maioria". A regra já vale em §D2 (regra 4, v1.4.1) e faltava aqui — sem
+# ela, `dune-2021` escrevia "pela maioria dos que reprovam", usando o rótulo
+# EXATO que o briefing forneceu, e a checagem não o reconhecia. Achado ao
+# medir o Defeito 1: era um falso NEGATIVO do instrumento, e viraria falso
+# POSITIVO assim que a checagem passasse a exigir o rótulo.
+_CONTRACOES_ARTIGO_A = ("da", "na", "pela", "a", "à")
+
+
+def _padroes_da_construcao(construcao: str) -> str:
+    c = _normalizar(construcao)
+    pads = [rf"(?<![a-z]){re.escape(c)}(?![a-z])"]
+    if c.startswith("a "):
+        resto = re.escape(c[2:])
+        alt = "|".join(_normalizar(x) for x in _CONTRACOES_ARTIGO_A)
+        pads.append(rf"(?<![a-z])(?:{alt})\s+{resto}(?![a-z])")
+    return "|".join(pads)
+
+
 _FAIXA_DA_CONSTRUCAO = {
     _normalizar(c): faixa
     for faixa, construcoes in br.FAIXAS_QUANTIFICADOR.items()
     for c in construcoes
 }
 
+_RE_CONSTRUCAO = [(faixa, re.compile(_padroes_da_construcao(c)))
+                  for c, faixa in _FAIXA_DA_CONSTRUCAO.items()]
+
+
+# [v1.9.22] DEFLAÇÃO POR HEDGE — o defeito do Defeito 1, e por que ele é do
+# §0 e não de estilo.
+#
+# Um adjetivo de magnitude reduzida ("pontuais", "isoladas", "esparsas",
+# "raras") qualificando um substantivo de review afirma um TAMANHO — e
+# tamanho é do código, não do modelo. Medido em produção:
+#   · `pearl-2022`: negativas e positivas com a MESMA frequência (58%, rótulo
+#     `cerca de metade` nos dois). O lado positivo recebeu o rótulo; o
+#     negativo virou "impressões negativas pontuais". Mesmo número, dois
+#     tratamentos, e o que os separa é o SENTIMENTO do grupo — violação
+#     direta da neutralidade de tratamento do §0.
+#   · `the-godfather`: "relatos pontuais apontam que a maioria dos que
+#     desaprovam..." — pontual e maioria na mesma oração, autocontraditório.
+#     O rótulo estava CERTO; o hedge é que o desmente.
+#
+# A EXCEÇÃO é o que separa deflação de cautela legítima: quando a frase
+# ancora explicitamente na AMOSTRA ("analisadas", "disponíveis",
+# "coletadas", "amostra"), ela fala de quantas reviews foram lidas, e isso
+# é verdade e é obrigatório em modo reduzido (invariante 8 do prompt).
+# `wonka` depende dessa exceção: "entre as poucas manifestações
+# desfavoráveis ANALISADAS" é uma afirmação sobre a base, não sobre a
+# frequência dentro do grupo.
+_DEFLATOR = r"(?:pontuais?|isolad[ao]s?|espars[ao]s?|rar[ao]s?)"
+_NOME_DE_REVIEW = (r"(?:relatos?|impressoes|impressao|avaliacoes|avaliacao|"
+                   r"manifestacoes|mencoes|opinioes|comentarios?|vozes|"
+                   r"reacoes|leituras)")
+_RE_DEFLACAO = re.compile(
+    rf"{_NOME_DE_REVIEW}(?:\s+\w+){{0,2}}\s+{_DEFLATOR}"
+    rf"|{_DEFLATOR}\s+{_NOME_DE_REVIEW}")
+_RE_ANCORA_DE_AMOSTRA = re.compile(
+    r"analisad[ao]s|disponiveis|coletad[ao]s|amostra|examinad[ao]s|lidas")
+
 
 def _frases(texto: str) -> list[str]:
     return [f.strip() for f in _FIM_FRASE.split(texto or "") if f.strip()]
 
 
-def _quantificador_mais_forte(texto: str, b: dict) -> bool:
-    """Se o texto usa uma faixa mais forte que a mais forte AUTORIZADA.
-
-    A checagem é de nível de TEXTO, não por grupo: num veredito de 1-2 frases
-    não há span por grupo para ancorar a atribuição (é justamente por isso
-    que `selecao_narrativa` não é reusável aqui). Assumir o teto mais alto do
-    briefing é a leitura CONSERVADORA — ela nunca reprova um texto correto,
-    e deixa passar só o caso em que o modelo aplicou a um grupo o rótulo
-    autorizado do outro.
-    """
-    autorizados = [g["eixo_maior_frequencia"]["rotulo_quantificador"]
-                   for g in b.get("grupos", {}).values()
-                   if g.get("eixo_maior_frequencia")]
+def _rotulos_autorizados(b: dict) -> set[str]:
+    """Todo rótulo que o briefing forneceu, de qualquer grupo."""
+    aut = {g["eixo_maior_frequencia"]["rotulo_quantificador"]
+           for g in b.get("grupos", {}).values()
+           if g.get("eixo_maior_frequencia")}
     a = b.get("assunto_compartilhado")
     if a:
-        autorizados += [a["rotulo_quantificador_negativas"],
-                        a["rotulo_quantificador_positivas"]]
+        aut |= {a["rotulo_quantificador_negativas"],
+                a["rotulo_quantificador_positivas"]}
+    return aut
+
+
+def _quantificador_divergente(texto: str, b: dict) -> bool:
+    """Qualquer faixa usada que o briefing NÃO forneceu — nos dois sentidos.
+
+    **[v1.9.22] Mudança de POLÍTICA, não de checagem.** Até a v1.9.21 esta
+    função era `_quantificador_mais_forte` e reprovava só o rótulo mais
+    FORTE, porque a invariante 4 do prompt dizia "mais fraco é permitido".
+    Essa metade estava errada: **deflação é falsidade tanto quanto
+    inflação**, e o §0 ("o código é a autoridade sobre quantidade") não
+    distingue direção. Um grupo de 58% descrito como anedota mente sobre o
+    dado exatamente como um de 40% descrito como "quase todos".
+
+    Registro honesto do alcance: no catálogo publicado sob a v1.9.21 esta
+    checagem reprova ZERO textos — nenhum dos 35 usou faixa fora do
+    conjunto autorizado, nem para cima nem para baixo. É trava PREVENTIVA.
+    O que realmente conserta os dois casos medidos é `_deflacao_por_hedge`.
+
+    Continua sendo de nível de TEXTO, não por grupo: num veredito de 1-2
+    frases não há span por grupo para ancorar a atribuição com segurança —
+    a medição do Defeito 1 tentou atribuir por proximidade e errou em 4 de
+    35. Comparar contra o CONJUNTO de rótulos autorizados é a leitura que
+    não inventa atribuição: deixa passar só o caso em que o modelo aplicou
+    a um grupo o rótulo autorizado do outro.
+    """
+    autorizados = _rotulos_autorizados(b)
     if not autorizados:
         return False
-    teto = max(autorizados, key=lambda r: Q.ROTULOS.index(r)
-               if r in Q.ROTULOS else -1)
     plano = _normalizar(texto)
-    for construcao, faixa in _FAIXA_DA_CONSTRUCAO.items():
-        if re.search(rf"(?<![a-z]){re.escape(construcao)}(?![a-z])", plano):
-            if Q.mais_forte_que(faixa, teto):
-                return True
+    return any(rx.search(plano) for faixa, rx in _RE_CONSTRUCAO
+               if faixa not in autorizados)
+
+
+def _deflacao_por_hedge(texto: str, b: dict) -> bool:
+    """Hedge que faz o TAMANHO de um grupo parecer menor que o rótulo dele.
+
+    A regra que isto implementa, e que a invariante 8 do prompt passa a
+    dizer por extenso: **cautela é sobre a AMOSTRA (quantas reviews foram
+    analisadas), nunca sobre a FREQUÊNCIA (que fatia daquele grupo disse
+    aquilo)**. Qualificar a base é obrigatório em modo reduzido; encolher a
+    magnitude é afirmar um número, e número é do código.
+
+    A âncora de amostra na vizinhança da ocorrência é o que preserva a
+    formulação legítima (`wonka`). A janela é de 60 caracteres para cada
+    lado: perto o bastante para ser a mesma oração, larga o bastante para
+    alcançar o particípio que ancora ("...manifestações desfavoráveis
+    ANALISADAS").
+    """
+    plano = _normalizar(texto)
+    for m in _RE_DEFLACAO.finditer(plano):
+        vizinhanca = plano[max(0, m.start() - 60):m.end() + 60]
+        if not _RE_ANCORA_DE_AMOSTRA.search(vizinhanca):
+            return True
     return False
 
 
@@ -673,8 +833,10 @@ def validar(texto: str, b: dict) -> list[str]:
         flags.append("escopo_generalizado")
     if any(re.search(p, plano) for p in _NOTA_OU_SCORE):
         flags.append("nota_ou_score")
-    if _quantificador_mais_forte(texto, b):
-        flags.append("quantificador_mais_forte")
+    if _quantificador_divergente(texto, b):
+        flags.append("quantificador_divergente")
+    if _deflacao_por_hedge(texto, b):
+        flags.append("deflacao_por_hedge")
     if _tema_ausente(texto, b):
         flags.append("tema_ausente")
     if _tema_verbatim(texto, b):
@@ -704,8 +866,14 @@ _EXPLICACAO = {
                            'público" em vez de falar do GRUPO',
     "nota_ou_score": "menciona nota, estrela ou score — proibido em qualquer "
                      "lugar do produto",
-    "quantificador_mais_forte": "usa um quantificador MAIS FORTE que o "
-                                "autorizado pelo briefing",
+    "quantificador_divergente": "usa um quantificador que o briefing NÃO "
+                                "forneceu — nem mais forte, nem mais fraco: "
+                                "escreva exatamente o rótulo dado",
+    "deflacao_por_hedge": "faz o tamanho de um grupo parecer menor do que o "
+                          "rótulo dele ('relatos pontuais', 'impressões "
+                          "pontuais'). Cautela é sobre a AMOSTRA (quantas "
+                          "reviews foram analisadas), nunca sobre a "
+                          "FREQUÊNCIA dentro do grupo",
     "tema_ausente": "cita um assunto que não está no briefing",
     "tema_verbatim": "copia um tema do briefing palavra por palavra — diga o "
                      "assunto com as suas palavras",
@@ -714,21 +882,30 @@ _EXPLICACAO = {
     "cliche": "usa expressão de resenha genérica",
 }
 
-_CHAVES = ("ancoras", "brevidade")
+_CHAVES = ("ancoras", "abertura", "brevidade")
 
 
-def _medir(texto: str, b: dict) -> dict:
+def _medir(texto: str, b: dict, aberturas: dict | None = None) -> dict:
     flags = validar(texto, b)
+    abertura = padrao_de_abertura(texto)
     return {"flags": flags, "n_flags": len(flags),
             "n_palavras": len(re.findall(r"\S+", texto or "")),
             "n_ancoras": n_ancoras(texto, b),
-            "pontuacao": pontuacao_ancoras(texto, b)}
+            "pontuacao": pontuacao_ancoras(texto, b),
+            "abertura": abertura,
+            "abertura_freq": (aberturas or {}).get(abertura, 0)}
 
 
 def _chave(m: dict) -> tuple:
-    """Menor é melhor: âncoras entram NEGADAS (mais é melhor), palavras
-    entram diretas (menos é melhor)."""
-    return (-m["pontuacao"], m["n_palavras"])
+    """Menor é melhor: âncoras entram NEGADAS (mais é melhor); frequência da
+    abertura e número de palavras entram diretas (menos é melhor).
+
+    [v1.9.22] `abertura_freq` entra ANTES da brevidade — é o ataque ao
+    Defeito 2 pela SELEÇÃO, usando os candidatos que o best-of-3 já gerou,
+    sem nenhuma chamada nova. Ver `selecionar` para a política de
+    estabilidade que a torna independente da ordem dos filmes.
+    """
+    return (-m["pontuacao"], m["abertura_freq"], m["n_palavras"])
 
 
 def _criterio_decisivo(vencedor: dict, resto: list[dict]) -> str:
@@ -741,7 +918,8 @@ def _criterio_decisivo(vencedor: dict, resto: list[dict]) -> str:
     return "empate"
 
 
-def selecionar(candidatos: list[str], b: dict) -> dict:
+def selecionar(candidatos: list[str], b: dict,
+               aberturas: dict | None = None) -> dict:
     """A escolha, e o registro de por que ela foi feita.
 
     **A chave NÃO é brevidade.** A primeira proposta desta sessão foi "o mais
@@ -755,7 +933,7 @@ def selecionar(candidatos: list[str], b: dict) -> dict:
     """
     medidos = []
     for i, texto in enumerate(candidatos):
-        m = _medir(texto, b)
+        m = _medir(texto, b, aberturas)
         m["indice"] = i
         m["eliminado"] = m["n_flags"] > 0
         medidos.append(m)
@@ -777,8 +955,10 @@ def selecionar(candidatos: list[str], b: dict) -> dict:
         "precisa_retry": precisa_retry,
         "criterio_decisivo": _criterio_decisivo(vencedor, resto),
         "flags": vencedor["flags"],
+        "abertura": vencedor["abertura"],
         "candidatos": [{k: m[k] for k in ("indice", "n_flags", "flags",
                                           "n_palavras", "n_ancoras",
+                                          "abertura", "abertura_freq",
                                           "eliminado")}
                        for m in medidos],
     }
@@ -893,9 +1073,14 @@ dizer que a divergência é sobre se ele FUNCIONA. Concordar sobre o que o \
 filme é e discordar sobre se ele funciona é um RESULTADO, não uma falta de \
 resultado — escreva com essa segurança.
 
-3. QUANTIFICADORES: use o quantificador AUTORIZADO do briefing. Um mais \
-FORTE é PROIBIDO ("quase todos" onde o briefing diz "a maioria"); um mais \
-FRACO é permitido.
+3. QUANTIFICADORES: escreva EXATAMENTE o quantificador que o briefing \
+autoriza para aquele grupo. Um mais FORTE é PROIBIDO ("quase todos" onde o \
+briefing diz "a maioria") e um mais FRACO também é PROIBIDO ("cerca de \
+metade" onde o briefing diz "a maioria"). Encolher mente sobre o dado \
+exatamente como inflar: o número é do sistema, não seu. É PROIBIDO também \
+ENVOLVER o quantificador em algo que o desminta — "relatos pontuais apontam \
+que a maioria..." diz pontual e maioria na mesma frase, e uma das duas é \
+falsa.
 
 4. ZERO DÍGITOS: nenhum algarismo na saída. Nenhuma contagem de review, \
 nenhum percentual, nenhuma nota, score ou estrela. Se o briefing disser que \
@@ -912,8 +1097,20 @@ uma perspectiva, nunca uma fatia quantificada do público.
 7. PALAVRAS SUAS: é PROIBIDO copiar um tema do briefing palavra por palavra. \
 Diga o assunto com as suas palavras, sem aspas de citação.
 
-8. AMOSTRA PEQUENA: quando o briefing marcar amostra pequena num grupo, a \
-redação não pode apresentar o achado como sólido.
+8. AMOSTRA PEQUENA: quando o briefing marcar amostra pequena num grupo, \
+diga isso — mas a cautela é sobre a AMOSTRA, nunca sobre a FREQUÊNCIA. \
+Qualifique QUANTAS reviews foram analisadas, não que fatia daquele grupo \
+disse aquilo. PERMITIDO: "numa amostra pequena", "entre os poucos relatos \
+analisados", "no material disponível". PROIBIDO: "impressões pontuais", \
+"relatos isolados", "menções esparsas" — isso afirma um tamanho, e o \
+tamanho já veio no quantificador. Um grupo com amostra pequena continua \
+recebendo o rótulo que o briefing deu, com a ressalva sobre a base ao lado.
+
+8b. MESMO TRATAMENTO PARA OS DOIS LADOS: quando o briefing der o MESMO \
+quantificador a quem recomenda e a quem não recomenda, os dois recebem o \
+mesmo tratamento textual. É PROIBIDO nomear a frequência de um lado e \
+tratar o outro como anedota. O que separa os dois grupos é o que eles \
+dizem, nunca o peso que você dá a eles.
 
 9. FORMA: 1 a 2 frases, no máximo 55 palavras, alvo de cerca de 45. Sem \
 aspas, sem subtítulo, sem lista. Tom seco e informativo, nunca publicitário.
@@ -968,7 +1165,8 @@ def _somar(usos: list[dict]) -> dict:
 
 
 def gerar(output: dict, *, n: int = BEST_OF_N, provider: str | None = None,
-          model: str | None = None, gerar=None) -> dict | None:
+          model: str | None = None, gerar=None,
+          aberturas: dict | None = None) -> dict | None:
     """O bloco `veredito` do JSON de resultado, pronto para gravar.
 
     `gerar` é o ponto de injeção dos testes: `(system, user) -> (texto, uso,
@@ -1014,6 +1212,7 @@ def gerar(output: dict, *, n: int = BEST_OF_N, provider: str | None = None,
             texto_modelo=None, origem="template_fallback",
             motivo="template_fallback",
             criterio_decisivo=None,
+            abertura=padrao_de_abertura(veredito_template(b)),
             indice_escolhido=None,
             flags=motivo_flags,
             candidatos=(escolha or {}).get("candidatos", []),
@@ -1024,7 +1223,7 @@ def gerar(output: dict, *, n: int = BEST_OF_N, provider: str | None = None,
     if not candidatos:
         return _fallback(["nenhuma_amostra_com_texto"])
 
-    escolha = selecionar(candidatos, b)
+    escolha = selecionar(candidatos, b, aberturas)
 
     # Degrau 1: nenhuma limpa -> retry DIRECIONADO, com as flags explicadas.
     if escolha["precisa_retry"]:
@@ -1033,7 +1232,7 @@ def gerar(output: dict, *, n: int = BEST_OF_N, provider: str | None = None,
         usos.append(uso)
         latencias.append(dt)
         if texto:
-            medida = _medir(texto, b)
+            medida = _medir(texto, b, aberturas)
             # A corrigida só entra se REALMENTE melhorar — um retry que piora
             # não é conserto (mesma regra de §D2).
             aplicado = medida["n_flags"] < len(escolha["flags"])
@@ -1055,6 +1254,7 @@ def gerar(output: dict, *, n: int = BEST_OF_N, provider: str | None = None,
         origem="llm",
         motivo=escolha["motivo"],
         criterio_decisivo=escolha["criterio_decisivo"],
+        abertura=escolha["abertura"],
         indice_escolhido=escolha["indice"],
         flags=escolha["flags"],
         candidatos=escolha["candidatos"],

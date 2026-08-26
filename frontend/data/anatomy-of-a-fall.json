@@ -1260,46 +1260,53 @@
     "n_chamadas": 3,
     "prefixo_codigo": "",
     "retry": null,
-    "spec_version": "1.9.21",
-    "texto": "A maioria dos que recomendam destaca a complexidade do término de uma relação no roteiro. Em contrapartida, quase todos os que não recomendam se frustram com o desfecho inconclusivo da trama e apontam a lentidão no desenvolvimento da narrativa como um incômodo particular.",
-    "texto_modelo": "A maioria dos que recomendam destaca a complexidade do término de uma relação no roteiro. Em contrapartida, quase todos os que não recomendam se frustram com o desfecho inconclusivo da trama e apontam a lentidão no desenvolvimento da narrativa como um incômodo particular.",
+    "spec_version": "1.9.22",
+    "texto": "A maioria dos que recomendam destaca a complexidade e o desgaste da relação conjugal no roteiro. Em contrapartida, quase todos os que não recomendam se frustram com o desfecho sem respostas conclusivas, além de apontarem a cadência excessivamente arrastada da narrativa.",
+    "texto_modelo": "A maioria dos que recomendam destaca a complexidade e o desgaste da relação conjugal no roteiro. Em contrapartida, quase todos os que não recomendam se frustram com o desfecho sem respostas conclusivas, além de apontarem a cadência excessivamente arrastada da narrativa.",
     "origem": "llm",
     "motivo": "melhor_entre_limpos",
     "criterio_decisivo": "empate",
-    "indice_escolhido": 2,
+    "abertura": "QUANT",
+    "indice_escolhido": 0,
     "flags": [],
     "candidatos": [
       {
         "indice": 0,
         "n_flags": 0,
         "flags": [],
-        "n_palavras": 40,
-        "n_ancoras": 0,
+        "n_palavras": 41,
+        "n_ancoras": 1,
+        "abertura": "QUANT",
+        "abertura_freq": 17,
         "eliminado": false
       },
       {
         "indice": 1,
         "n_flags": 0,
         "flags": [],
-        "n_palavras": 47,
+        "n_palavras": 41,
         "n_ancoras": 1,
+        "abertura": "QUANT",
+        "abertura_freq": 17,
         "eliminado": false
       },
       {
         "indice": 2,
         "n_flags": 0,
         "flags": [],
-        "n_palavras": 43,
+        "n_palavras": 41,
         "n_ancoras": 1,
+        "abertura": "QUANT",
+        "abertura_freq": 17,
         "eliminado": false
       }
     ],
     "uso": {
-      "prompt_tokens": 2694,
-      "completion_tokens": 210,
+      "prompt_tokens": 3576,
+      "completion_tokens": 198,
       "cache_hit_tokens": 0,
-      "cache_miss_tokens": 2694
+      "cache_miss_tokens": 3576
     },
-    "latencia_s": 9.64
+    "latencia_s": 11.98
   }
 }

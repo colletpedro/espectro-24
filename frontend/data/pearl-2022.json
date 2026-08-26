@@ -1271,24 +1271,25 @@
     "n_chamadas": 3,
     "prefixo_codigo": "",
     "retry": null,
-    "spec_version": "1.9.21",
-    "texto": "As opiniões divergem sobre a eficácia do roteiro e de sua estrutura. Enquanto cerca de metade das avaliações favoráveis destaca o impacto do discurso de encerramento, impressões negativas pontuais apontam desconforto com a postura da figura central da trama.",
-    "texto_modelo": "As opiniões divergem sobre a eficácia do roteiro e de sua estrutura. Enquanto cerca de metade das avaliações favoráveis destaca o impacto do discurso de encerramento, impressões negativas pontuais apontam desconforto com a postura da figura central da trama.",
+    "spec_version": "1.9.22",
+    "texto": "Numa amostra pequena, cerca de metade dos que não recomendam a obra critica o roteiro pelo incômodo gerado pela figura central. Em contrapartida, cerca de metade dos que aprovam valoriza essa mesma estrutura narrativa, destacando o discurso de encerramento.",
+    "texto_modelo": "Numa amostra pequena, cerca de metade dos que não recomendam a obra critica o roteiro pelo incômodo gerado pela figura central. Em contrapartida, cerca de metade dos que aprovam valoriza essa mesma estrutura narrativa, destacando o discurso de encerramento.",
     "origem": "llm",
     "motivo": "melhor_entre_limpos",
-    "criterio_decisivo": "brevidade",
+    "criterio_decisivo": "abertura",
+    "abertura": "numa",
     "indice_escolhido": 1,
     "flags": [],
     "candidatos": [
       {
         "indice": 0,
-        "n_flags": 1,
-        "flags": [
-          "tema_ausente"
-        ],
-        "n_palavras": 40,
+        "n_flags": 0,
+        "flags": [],
+        "n_palavras": 42,
         "n_ancoras": 1,
-        "eliminado": true
+        "abertura": "diver",
+        "abertura_freq": 8,
+        "eliminado": false
       },
       {
         "indice": 1,
@@ -1296,23 +1297,29 @@
         "flags": [],
         "n_palavras": 39,
         "n_ancoras": 1,
+        "abertura": "numa",
+        "abertura_freq": 0,
         "eliminado": false
       },
       {
         "indice": 2,
-        "n_flags": 0,
-        "flags": [],
-        "n_palavras": 41,
+        "n_flags": 1,
+        "flags": [
+          "quantificador_divergente"
+        ],
+        "n_palavras": 39,
         "n_ancoras": 1,
-        "eliminado": false
+        "abertura": "diver",
+        "abertura_freq": 8,
+        "eliminado": true
       }
     ],
     "uso": {
-      "prompt_tokens": 2811,
-      "completion_tokens": 203,
+      "prompt_tokens": 3693,
+      "completion_tokens": 187,
       "cache_hit_tokens": 0,
-      "cache_miss_tokens": 2811
+      "cache_miss_tokens": 3693
     },
-    "latencia_s": 12.11
+    "latencia_s": 11.71
   }
 }

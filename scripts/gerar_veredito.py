@@ -68,13 +68,94 @@ def slugs_publicados() -> list[str]:
     return saida
 
 
+def snapshot_de_aberturas() -> dict[str, str]:
+    """`slug -> padrão de abertura` do catálogo COMO ESTÁ NO DISCO AGORA.
+
+    Tirado UMA vez, antes de qualquer escrita. Sem isto o harness teria um
+    bug real e silencioso no caminho de produção: `gerar_um` sem `--saida`
+    grava em `resultado/`, então recalcular o histórico a cada filme faria o
+    filme nº 2 ver o veredito NOVO do filme nº 1 — e a saída passaria a
+    depender da ordem, exatamente a instabilidade que a política de
+    estabilidade existe para impedir. Os testes não pegavam porque rodam
+    contra um `--saida` de sandbox.
+    """
+    saida: dict[str, str] = {}
+    for caminho in sorted(RESULTADO_DIR.glob("*.json")):
+        try:
+            d = json.loads(caminho.read_text(encoding="utf-8"))
+        except (ValueError, OSError):
+            continue
+        bloco = d.get(CHAVE) or {}
+        texto = bloco.get("texto_modelo") or bloco.get("texto")
+        if texto:
+            padrao = V.padrao_de_abertura(texto)
+            if padrao:
+                saida[caminho.stem] = padrao
+    return saida
+
+
+def historico_para(snapshot: dict[str, str], slug: str) -> dict[str, int]:
+    """Quantas vezes cada padrão aparece nos OUTROS filmes do snapshot.
+
+    O próprio filme sai da conta: senão o veredito anterior dele penalizaria
+    a abertura que ele talvez devesse manter, e a regeneração viraria uma
+    fuga da escolha anterior em vez de uma escolha entre candidatos.
+    """
+    contagem: dict[str, int] = {}
+    for outro, padrao in snapshot.items():
+        if outro == slug:
+            continue
+        contagem[padrao] = contagem.get(padrao, 0) + 1
+    return contagem
+
+
+def aberturas_publicadas(exceto: str | None = None) -> dict[str, int]:
+    """[v1.9.22] Quantas vezes cada PADRÃO DE ABERTURA (§3[V]) já aparece no
+    catálogo publicado — o histórico que o desempate de seleção consulta.
+
+    **A política de estabilidade, e ela é o que torna o critério admissível.**
+    O histórico vem do que está PUBLICADO em `resultado/`, nunca do que foi
+    gerado agora, e **não é atualizado durante a execução**. As duas
+    consequências são as que a sessão exigiu antes de autorizar o critério:
+
+      · o resultado NÃO depende da ordem dos filmes — cada filme vê
+        exatamente o mesmo histórico, e regenerar em ordem alfabética,
+        inversa ou aleatória dá o mesmo texto;
+      · regenerar UM filme isolado vê o mesmo histórico que a regeneração
+        completa veria para ele (os outros 34 publicados), então o resultado
+        é estável entre os dois modos.
+
+    Um histórico atualizado no meio da execução seria mais eficaz e
+    INSTÁVEL — o mesmo filme sairia diferente conforme fosse o primeiro ou o
+    último da fila. A eficácia perdida está medida no changelog da v1.9.22;
+    a instabilidade não era negociável.
+    """
+    contagem: dict[str, int] = {}
+    for caminho in sorted(RESULTADO_DIR.glob("*.json")):
+        if exceto and caminho.stem == exceto:
+            continue
+        try:
+            d = json.loads(caminho.read_text(encoding="utf-8"))
+        except (ValueError, OSError):
+            continue
+        bloco = d.get(CHAVE) or {}
+        texto = bloco.get("texto_modelo") or bloco.get("texto")
+        if not texto:
+            continue
+        padrao = V.padrao_de_abertura(texto)
+        if padrao:
+            contagem[padrao] = contagem.get(padrao, 0) + 1
+    return contagem
+
+
 def _campos_fora_da_chave(d: dict) -> dict:
     return {k: v for k, v in d.items() if k != CHAVE}
 
 
 def gerar_um(slug: str, *, modelo: str | None = None,
              provider: str | None = None, saida: Path | None = None,
-             so_veredito: bool = False) -> dict:
+             so_veredito: bool = False, usar_aberturas: bool = True,
+             aberturas: dict | None = None) -> dict:
     """Regera o veredito de UM filme e grava. Devolve a telemetria.
 
     `saida` grava noutro diretório (é o que o A/B de modelo usa, para os dois
@@ -86,7 +167,14 @@ def gerar_um(slug: str, *, modelo: str | None = None,
     antes = _campos_fora_da_chave(documento)
 
     t0 = time.time()
-    bloco = V.gerar(documento, model=modelo, provider=provider)
+    if not usar_aberturas:
+        aberturas = None
+    elif aberturas is None:
+        # chamada isolada: o histórico é o disco AGORA, menos este filme —
+        # o mesmo que a regeneração completa veria para ele.
+        aberturas = historico_para(snapshot_de_aberturas(), slug)
+    bloco = V.gerar(documento, model=modelo, provider=provider,
+                    aberturas=aberturas)
     if bloco is None:
         return {"slug": slug, "ok": False, "motivo": "sem_bloco_eixos"}
 
@@ -109,6 +197,7 @@ def gerar_um(slug: str, *, modelo: str | None = None,
         json.dumps(a_gravar, ensure_ascii=False, indent=2), encoding="utf-8")
 
     return {"slug": slug, "ok": True, "origem": bloco["origem"],
+            "abertura": bloco.get("abertura"),
             "modelo": bloco["modelo"], "flags": bloco["flags"],
             "motivo": bloco["motivo"], "n_palavras": len(bloco["texto"].split()),
             "texto": bloco["texto"], "elapsed_s": round(time.time() - t0, 1)}
@@ -126,6 +215,9 @@ def main() -> None:
     ap.add_argument("--so-veredito", action="store_true",
                     help="grava só slug + bloco (comparação, não publicação)")
     ap.add_argument("--log", help="jsonl com a telemetria de cada filme")
+    ap.add_argument("--sem-desempate-de-abertura", action="store_true",
+                    help="desliga o desempate por padrão de abertura "
+                         "(v1.9.22) — existe para medir o efeito dele")
     args = ap.parse_args()
 
     load_dotenv(RAIZ / ".env")
@@ -137,11 +229,16 @@ def main() -> None:
     if log:
         log.parent.mkdir(parents=True, exist_ok=True)
 
+    # UMA vez, antes de qualquer escrita — ver `snapshot_de_aberturas`.
+    snapshot = snapshot_de_aberturas() if not args.sem_desempate_de_abertura else {}
+
     n_llm = n_fallback = 0
     for slug in slugs:
         r = gerar_um(slug, modelo=args.modelo, provider=args.provider,
                      saida=Path(args.saida) if args.saida else None,
-                     so_veredito=args.so_veredito)
+                     so_veredito=args.so_veredito,
+                     usar_aberturas=not args.sem_desempate_de_abertura,
+                     aberturas=historico_para(snapshot, slug))
         if log:
             with log.open("a", encoding="utf-8") as fh:
                 fh.write(json.dumps(r, ensure_ascii=False) + "\n")

@@ -1257,21 +1257,24 @@
     "n_chamadas": 3,
     "prefixo_codigo": "",
     "retry": null,
-    "spec_version": "1.9.21",
-    "texto": "A maioria dos que recomendam a obra destaca comparações com outros títulos e valoriza o impacto do desfecho narrativo. Por outro lado, cerca de metade dos que não recomendam aponta fragilidades estruturais no roteiro e falta de desenvolvimento da história.",
-    "texto_modelo": "A maioria dos que recomendam a obra destaca comparações com outros títulos e valoriza o impacto do desfecho narrativo. Por outro lado, cerca de metade dos que não recomendam aponta fragilidades estruturais no roteiro e falta de desenvolvimento da história.",
+    "spec_version": "1.9.22",
+    "texto": "Enquanto a maioria dos que recomendam apoia sua avaliação em comparações com outras produções, cerca de metade dos que não recomendam aponta fragilidades no texto e ausência de desenvolvimento na trama.",
+    "texto_modelo": "Enquanto a maioria dos que recomendam apoia sua avaliação em comparações com outras produções, cerca de metade dos que não recomendam aponta fragilidades no texto e ausência de desenvolvimento na trama.",
     "origem": "llm",
     "motivo": "melhor_entre_limpos",
-    "criterio_decisivo": "empate",
-    "indice_escolhido": 0,
+    "criterio_decisivo": "brevidade",
+    "abertura": "QUANT",
+    "indice_escolhido": 2,
     "flags": [],
     "candidatos": [
       {
         "indice": 0,
         "n_flags": 0,
         "flags": [],
-        "n_palavras": 40,
-        "n_ancoras": 2,
+        "n_palavras": 36,
+        "n_ancoras": 1,
+        "abertura": "QUANT",
+        "abertura_freq": 17,
         "eliminado": false
       },
       {
@@ -1279,24 +1282,28 @@
         "n_flags": 0,
         "flags": [],
         "n_palavras": 36,
-        "n_ancoras": 0,
+        "n_ancoras": 1,
+        "abertura": "QUANT",
+        "abertura_freq": 17,
         "eliminado": false
       },
       {
         "indice": 2,
         "n_flags": 0,
         "flags": [],
-        "n_palavras": 44,
-        "n_ancoras": 2,
+        "n_palavras": 31,
+        "n_ancoras": 1,
+        "abertura": "QUANT",
+        "abertura_freq": 17,
         "eliminado": false
       }
     ],
     "uso": {
-      "prompt_tokens": 2673,
-      "completion_tokens": 185,
+      "prompt_tokens": 3555,
+      "completion_tokens": 165,
       "cache_hit_tokens": 0,
-      "cache_miss_tokens": 2673
+      "cache_miss_tokens": 3555
     },
-    "latencia_s": 10.86
+    "latencia_s": 11.9
   }
 }

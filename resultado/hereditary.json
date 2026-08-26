@@ -1333,46 +1333,55 @@
     "n_chamadas": 3,
     "prefixo_codigo": "",
     "retry": null,
-    "spec_version": "1.9.21",
-    "texto": "Enquanto muitos dos que recomendam o filme baseiam suas impressões em comparações, cerca de metade dos que não recomendam aponta o andamento excessivamente lento e a sensação de tédio como o principal incômodo.",
-    "texto_modelo": "Enquanto muitos dos que recomendam o filme baseiam suas impressões em comparações, cerca de metade dos que não recomendam aponta o andamento excessivamente lento e a sensação de tédio como o principal incômodo.",
+    "spec_version": "1.9.22",
+    "texto": "Entre os que recomendam, muitos centram suas análises em comparações. Em contrapartida, cerca de metade dos que não recomendam rejeita a produção pelo andamento arrastado e pela sensação de monotonia.",
+    "texto_modelo": "Entre os que recomendam, muitos centram suas análises em comparações. Em contrapartida, cerca de metade dos que não recomendam rejeita a produção pelo andamento arrastado e pela sensação de monotonia.",
     "origem": "llm",
     "motivo": "melhor_entre_limpos",
-    "criterio_decisivo": "ancoras",
-    "indice_escolhido": 0,
+    "criterio_decisivo": "abertura",
+    "abertura": "recom",
+    "indice_escolhido": 2,
     "flags": [],
     "candidatos": [
       {
         "indice": 0,
         "n_flags": 0,
         "flags": [],
-        "n_palavras": 33,
-        "n_ancoras": 2,
+        "n_palavras": 31,
+        "n_ancoras": 1,
+        "abertura": "QUANT",
+        "abertura_freq": 17,
         "eliminado": false
       },
       {
         "indice": 1,
-        "n_flags": 0,
-        "flags": [],
-        "n_palavras": 47,
-        "n_ancoras": 1,
-        "eliminado": false
+        "n_flags": 1,
+        "flags": [
+          "tema_ausente"
+        ],
+        "n_palavras": 37,
+        "n_ancoras": 2,
+        "abertura": "QUANT",
+        "abertura_freq": 17,
+        "eliminado": true
       },
       {
         "indice": 2,
         "n_flags": 0,
         "flags": [],
-        "n_palavras": 34,
+        "n_palavras": 30,
         "n_ancoras": 1,
+        "abertura": "recom",
+        "abertura_freq": 0,
         "eliminado": false
       }
     ],
     "uso": {
-      "prompt_tokens": 2634,
-      "completion_tokens": 180,
+      "prompt_tokens": 3516,
+      "completion_tokens": 166,
       "cache_hit_tokens": 0,
-      "cache_miss_tokens": 2634
+      "cache_miss_tokens": 3516
     },
-    "latencia_s": 8.73
+    "latencia_s": 11.36
   }
 }

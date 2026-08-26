@@ -1325,12 +1325,13 @@
     "n_chamadas": 3,
     "prefixo_codigo": "",
     "retry": null,
-    "spec_version": "1.9.21",
-    "texto": "Cerca de metade de quem recomenda destaca a trajetória de autodescoberta e reconhecimento da própria identidade. Por outro lado, cerca de metade de quem desaprova se incomoda com a violência gráfica excessiva e aponta previsibilidade na condução da trama.",
-    "texto_modelo": "Cerca de metade de quem recomenda destaca a trajetória de autodescoberta e reconhecimento da própria identidade. Por outro lado, cerca de metade de quem desaprova se incomoda com a violência gráfica excessiva e aponta previsibilidade na condução da trama.",
+    "spec_version": "1.9.22",
+    "texto": "Cerca de metade de quem recomenda valoriza a narrativa pela trajetória de autoconhecimento e aceitação pessoal. Em contrapartida, cerca de metade de quem não recomenda expressa forte repulsa ao excesso de sangue e violência gráfica, além de considerar a trama previsível.",
+    "texto_modelo": "Cerca de metade de quem recomenda valoriza a narrativa pela trajetória de autoconhecimento e aceitação pessoal. Em contrapartida, cerca de metade de quem não recomenda expressa forte repulsa ao excesso de sangue e violência gráfica, além de considerar a trama previsível.",
     "origem": "llm",
     "motivo": "melhor_entre_limpos",
-    "criterio_decisivo": "brevidade",
+    "criterio_decisivo": "ancoras",
+    "abertura": "QUANT",
     "indice_escolhido": 1,
     "flags": [],
     "candidatos": [
@@ -1338,33 +1339,39 @@
         "indice": 0,
         "n_flags": 0,
         "flags": [],
-        "n_palavras": 40,
-        "n_ancoras": 1,
+        "n_palavras": 38,
+        "n_ancoras": 0,
+        "abertura": "QUANT",
+        "abertura_freq": 17,
         "eliminado": false
       },
       {
         "indice": 1,
         "n_flags": 0,
         "flags": [],
-        "n_palavras": 39,
+        "n_palavras": 41,
         "n_ancoras": 1,
+        "abertura": "QUANT",
+        "abertura_freq": 17,
         "eliminado": false
       },
       {
         "indice": 2,
         "n_flags": 0,
         "flags": [],
-        "n_palavras": 40,
-        "n_ancoras": 1,
+        "n_palavras": 36,
+        "n_ancoras": 0,
+        "abertura": "QUANT",
+        "abertura_freq": 17,
         "eliminado": false
       }
     ],
     "uso": {
-      "prompt_tokens": 2766,
-      "completion_tokens": 192,
+      "prompt_tokens": 3648,
+      "completion_tokens": 193,
       "cache_hit_tokens": 0,
-      "cache_miss_tokens": 2766
+      "cache_miss_tokens": 3648
     },
-    "latencia_s": 8.22
+    "latencia_s": 9.17
   }
 }

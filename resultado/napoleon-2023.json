@@ -1328,46 +1328,53 @@
     "n_chamadas": 3,
     "prefixo_codigo": "O meio-termo é o maior grupo da recepção (~45% das notas). ",
     "retry": null,
-    "spec_version": "1.9.21",
-    "texto": "O meio-termo é o maior grupo da recepção (~45% das notas). Enquanto muitos dos que recomendam centram suas avaliações em comparações, a maioria dos que rejeitam a obra questiona a caracterização de Napoleão e o impacto emocional. Já as opiniões intermediárias destacam a duração arrastada e a atenção dedicada à relação com Josefina.",
-    "texto_modelo": "Enquanto muitos dos que recomendam centram suas avaliações em comparações, a maioria dos que rejeitam a obra questiona a caracterização de Napoleão e o impacto emocional. Já as opiniões intermediárias destacam a duração arrastada e a atenção dedicada à relação com Josefina.",
+    "spec_version": "1.9.22",
+    "texto": "O meio-termo é o maior grupo da recepção (~45% das notas). Enquanto muitos que recomendam baseiam-se em comparações, a maioria dos que reprovam questiona a representação de Napoleão e aponta o impacto emocional. No meio-termo, cerca de metade aborda a ênfase no relacionamento com Josefina, trazendo também ressalvas ao ritmo e à duração extensa.",
+    "texto_modelo": "Enquanto muitos que recomendam baseiam-se em comparações, a maioria dos que reprovam questiona a representação de Napoleão e aponta o impacto emocional. No meio-termo, cerca de metade aborda a ênfase no relacionamento com Josefina, trazendo também ressalvas ao ritmo e à duração extensa.",
     "origem": "llm",
     "motivo": "melhor_entre_limpos",
     "criterio_decisivo": "brevidade",
-    "indice_escolhido": 1,
+    "abertura": "QUANT",
+    "indice_escolhido": 2,
     "flags": [],
     "candidatos": [
       {
         "indice": 0,
         "n_flags": 0,
         "flags": [],
-        "n_palavras": 46,
-        "n_ancoras": 4,
+        "n_palavras": 51,
+        "n_ancoras": 3,
+        "abertura": "QUANT",
+        "abertura_freq": 17,
         "eliminado": false
       },
       {
         "indice": 1,
         "n_flags": 0,
         "flags": [],
-        "n_palavras": 42,
-        "n_ancoras": 3,
+        "n_palavras": 46,
+        "n_ancoras": 4,
+        "abertura": "QUANT",
+        "abertura_freq": 17,
         "eliminado": false
       },
       {
         "indice": 2,
         "n_flags": 0,
         "flags": [],
-        "n_palavras": 46,
+        "n_palavras": 43,
         "n_ancoras": 4,
+        "abertura": "QUANT",
+        "abertura_freq": 17,
         "eliminado": false
       }
     ],
     "uso": {
-      "prompt_tokens": 2979,
-      "completion_tokens": 222,
+      "prompt_tokens": 3861,
+      "completion_tokens": 227,
       "cache_hit_tokens": 0,
-      "cache_miss_tokens": 2979
+      "cache_miss_tokens": 3861
     },
-    "latencia_s": 12.39
+    "latencia_s": 11.74
   }
 }

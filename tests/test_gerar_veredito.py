@@ -260,3 +260,117 @@ def test_saida_alternativa_nao_toca_o_resultado_original(tmp_path, sandbox,
     assert (sandbox / f"{SLUG}.json").read_text(encoding="utf-8") == antes
     parcial = json.loads((destino / f"{SLUG}.json").read_text(encoding="utf-8"))
     assert set(parcial) == {"slug", "veredito"}
+
+
+# ===========================================================================
+# [v1.9.22] ESTABILIDADE do desempate por abertura
+# ===========================================================================
+# O desempate consulta um histórico de aberturas, e histórico é justamente o
+# que torna uma saída dependente de ordem. A sessão que autorizou o critério
+# pôs duas condições, e estes testes são elas:
+#   · o resultado não pode depender da ORDEM dos filmes;
+#   · regenerar UM filme isolado tem de dar o mesmo resultado que a
+#     regeneração completa daria para ele.
+# A política que satisfaz as duas: o histórico vem do que está PUBLICADO e
+# NÃO é atualizado durante a execução.
+
+def test_o_historico_de_aberturas_nao_depende_da_ordem(sandbox, documento):
+    """Função pura do estado do diretório — `sorted(glob)` e soma comutativa.
+    Sem isto, o desempate seria não-determinístico entre execuções."""
+    gv = _gv()
+    a = gv.aberturas_publicadas()
+    for _ in range(3):
+        assert gv.aberturas_publicadas() == a
+
+
+def test_regenerar_isolado_ve_o_MESMO_historico_que_a_regeneracao_completa(
+        sandbox, documento, monkeypatch):
+    """A condição que decide se o critério entra. O histórico de um filme é
+    "os OUTROS publicados" — e isso não muda conforme ele seja regenerado
+    sozinho ou no meio dos 35, porque nada é atualizado no meio do caminho.
+    """
+    gv = _gv()
+    # dois filmes de mentira, com aberturas conhecidas, além do real
+    for nome, texto in (("filme-a", "A divergência está no roteiro."),
+                        ("filme-b", "As opiniões divergem sobre o roteiro.")):
+        (sandbox / f"{nome}.json").write_text(json.dumps(
+            {"slug": nome, "veredito": {"texto": texto, "texto_modelo": texto}}),
+            encoding="utf-8")
+
+    isolado = gv.aberturas_publicadas(exceto=SLUG)
+    # "regeneração completa": o histórico consultado para SLUG é o mesmo,
+    # porque os outros arquivos não mudaram durante a execução
+    for outro in ("filme-a", "filme-b"):
+        gv.aberturas_publicadas(exceto=outro)      # não deve ter efeito
+    assert gv.aberturas_publicadas(exceto=SLUG) == isolado
+    assert isolado.get("diver") == 1 and isolado.get("opini") == 1
+
+
+def test_o_filme_gerado_NAO_entra_no_proprio_historico(sandbox, documento):
+    """Senão o veredito anterior dele mesmo penalizaria a abertura que ele
+    talvez devesse manter — e a regeneração viraria uma fuga da própria
+    escolha anterior, não uma escolha entre candidatos."""
+    gv = _gv()
+    com = gv.aberturas_publicadas()
+    sem = gv.aberturas_publicadas(exceto=SLUG)
+    padrao = V.padrao_de_abertura(
+        json.loads((sandbox / f"{SLUG}.json").read_text(encoding="utf-8"))
+        ["veredito"]["texto_modelo"])
+    assert sem.get(padrao, 0) == com.get(padrao, 0) - 1
+
+
+def test_o_desempate_pode_ser_DESLIGADO_para_medicao(sandbox, sem_llm):
+    """`--sem-desempate-de-abertura`: existe para medir o efeito do critério
+    contra ele mesmo desligado, que é como a v1.9.22 decidiu se ele entra."""
+    gv = _gv()
+    r = gv.gerar_um(SLUG, saida=sandbox, usar_aberturas=False)
+    assert r["ok"] is True
+
+
+def test_o_historico_e_tirado_UMA_vez_e_nao_ve_o_que_a_execucao_grava(
+        sandbox, sem_llm, monkeypatch):
+    """**Bug real, achado no caminho de PRODUÇÃO e invisível para os testes
+    que usavam `--saida`.** `gerar_um` sem `--saida` grava em `resultado/`.
+    Se o histórico fosse recalculado a cada filme, o filme nº 2 veria o
+    veredito NOVO do nº 1 — e a saída passaria a depender da ORDEM, que é
+    exatamente a instabilidade que a política de estabilidade existe para
+    impedir e a condição que a sessão pôs para o critério entrar.
+
+    A trava: o snapshot é tirado ANTES do laço e `historico_para` deriva
+    dele. Este teste grava por cima de um filme no meio do caminho e exige
+    que o histórico do snapshot não se mexa.
+    """
+    gv = _gv()
+    snapshot = gv.snapshot_de_aberturas()
+    antes = gv.historico_para(snapshot, SLUG)
+
+    # simula a escrita que a execução real faz num OUTRO filme
+    (sandbox / "outro.json").write_text(json.dumps(
+        {"slug": "outro", "veredito": {
+            "texto": "A divergência central está no roteiro.",
+            "texto_modelo": "A divergência central está no roteiro."}}),
+        encoding="utf-8")
+
+    assert gv.historico_para(snapshot, SLUG) == antes, (
+        "o histórico derivado do snapshot mudou depois de uma escrita — "
+        "a saída voltou a depender da ordem dos filmes")
+    # e um snapshot NOVO enxerga a escrita: é isso que torna o teste um
+    # detector de verdade, e não uma tautologia sobre um dict congelado.
+    assert gv.historico_para(gv.snapshot_de_aberturas(), SLUG) != antes
+
+
+def test_a_ordem_dos_filmes_nao_muda_o_historico_de_ninguem(sandbox):
+    """Order-independence por construção: cada filme deriva do MESMO
+    snapshot, então percorrer os 35 em qualquer ordem dá o mesmo histórico
+    para cada um."""
+    gv = _gv()
+    for nome, texto in (("filme-a", "A divergência está no roteiro."),
+                        ("filme-b", "As opiniões divergem sobre o roteiro."),
+                        ("filme-c", "Quem recomenda destaca o roteiro.")):
+        (sandbox / f"{nome}.json").write_text(json.dumps(
+            {"slug": nome, "veredito": {"texto": texto, "texto_modelo": texto}}),
+            encoding="utf-8")
+    snapshot = gv.snapshot_de_aberturas()
+    direta = {s: gv.historico_para(snapshot, s) for s in sorted(snapshot)}
+    inversa = {s: gv.historico_para(snapshot, s) for s in sorted(snapshot, reverse=True)}
+    assert direta == inversa

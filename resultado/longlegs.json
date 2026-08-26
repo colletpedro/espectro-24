@@ -1335,13 +1335,14 @@
     "n_chamadas": 3,
     "prefixo_codigo": "",
     "retry": null,
-    "spec_version": "1.9.21",
-    "texto": "A divergência central está na construção da história: enquanto a maioria dos que recomendam valoriza o desenvolvimento da trama e o clima de tensão, a maioria dos que não recomendam aponta que a narrativa se torna confusa e sem coerência.",
-    "texto_modelo": "A divergência central está na construção da história: enquanto a maioria dos que recomendam valoriza o desenvolvimento da trama e o clima de tensão, a maioria dos que não recomendam aponta que a narrativa se torna confusa e sem coerência.",
+    "spec_version": "1.9.22",
+    "texto": "A divergência central está na qualidade do roteiro: a maioria dos que recomendam valoriza o desenvolvimento da narrativa e a atmosfera de tensão, enquanto a maioria dos que desaprovam considera a trama confusa e destituída de lógica.",
+    "texto_modelo": "A divergência central está na qualidade do roteiro: a maioria dos que recomendam valoriza o desenvolvimento da narrativa e a atmosfera de tensão, enquanto a maioria dos que desaprovam considera a trama confusa e destituída de lógica.",
     "origem": "llm",
     "motivo": "melhor_entre_limpos",
-    "criterio_decisivo": "brevidade",
-    "indice_escolhido": 0,
+    "criterio_decisivo": "ancoras",
+    "abertura": "diver",
+    "indice_escolhido": 2,
     "flags": [],
     "candidatos": [
       {
@@ -1350,31 +1351,37 @@
         "flags": [],
         "n_palavras": 40,
         "n_ancoras": 1,
+        "abertura": "opini",
+        "abertura_freq": 6,
         "eliminado": false
       },
       {
         "indice": 1,
         "n_flags": 0,
         "flags": [],
-        "n_palavras": 45,
-        "n_ancoras": 1,
+        "n_palavras": 44,
+        "n_ancoras": 0,
+        "abertura": "opini",
+        "abertura_freq": 6,
         "eliminado": false
       },
       {
         "indice": 2,
         "n_flags": 0,
         "flags": [],
-        "n_palavras": 43,
-        "n_ancoras": 1,
+        "n_palavras": 37,
+        "n_ancoras": 2,
+        "abertura": "diver",
+        "abertura_freq": 7,
         "eliminado": false
       }
     ],
     "uso": {
-      "prompt_tokens": 2757,
-      "completion_tokens": 186,
+      "prompt_tokens": 3639,
+      "completion_tokens": 180,
       "cache_hit_tokens": 0,
-      "cache_miss_tokens": 2757
+      "cache_miss_tokens": 3639
     },
-    "latencia_s": 10.83
+    "latencia_s": 11.63
   }
 }

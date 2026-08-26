@@ -1343,51 +1343,69 @@
     "provider": "gemini",
     "modelo": "gemini-3.7-flash",
     "n_candidatos": 3,
-    "n_chamadas": 3,
+    "n_chamadas": 4,
     "prefixo_codigo": "",
-    "retry": null,
-    "spec_version": "1.9.21",
-    "texto": "Muitos dos relatos que recomendam o filme baseiam suas impressões em comparações diretas. Por outro lado, entre as poucas manifestações desfavoráveis analisadas, surgem queixas sobre um distanciamento perceptível em relação à figura original do protagonista.",
-    "texto_modelo": "Muitos dos relatos que recomendam o filme baseiam suas impressões em comparações diretas. Por outro lado, entre as poucas manifestações desfavoráveis analisadas, surgem queixas sobre um distanciamento perceptível em relação à figura original do protagonista.",
+    "retry": {
+      "flags_antes": [
+        "tema_ausente"
+      ],
+      "flags_depois": [],
+      "aplicado": true
+    },
+    "spec_version": "1.9.22",
+    "texto": "Muitos dos que recomendam o filme destacam o valor das comparações estabelecidas na obra. Por outro lado, numa amostra pequena analisada, muitos dos que não recomendam discordam da eficácia desses mesmos paralelos.",
+    "texto_modelo": "Muitos dos que recomendam o filme destacam o valor das comparações estabelecidas na obra. Por outro lado, numa amostra pequena analisada, muitos dos que não recomendam discordam da eficácia desses mesmos paralelos.",
     "origem": "llm",
-    "motivo": "melhor_entre_limpos",
-    "criterio_decisivo": "ancoras",
+    "motivo": "retry_direcionado",
+    "criterio_decisivo": "empate",
+    "abertura": "QUANT",
     "indice_escolhido": 1,
     "flags": [],
     "candidatos": [
       {
         "indice": 0,
-        "n_flags": 1,
+        "n_flags": 2,
         "flags": [
+          "quantificador_divergente",
           "tema_ausente"
         ],
-        "n_palavras": 37,
+        "n_palavras": 34,
         "n_ancoras": 1,
+        "abertura": "QUANT",
+        "abertura_freq": 17,
         "eliminado": true
       },
       {
         "indice": 1,
-        "n_flags": 0,
-        "flags": [],
-        "n_palavras": 35,
+        "n_flags": 1,
+        "flags": [
+          "tema_ausente"
+        ],
+        "n_palavras": 33,
         "n_ancoras": 1,
-        "eliminado": false
+        "abertura": "QUANT",
+        "abertura_freq": 17,
+        "eliminado": true
       },
       {
         "indice": 2,
-        "n_flags": 0,
-        "flags": [],
+        "n_flags": 1,
+        "flags": [
+          "tema_ausente"
+        ],
         "n_palavras": 33,
-        "n_ancoras": 0,
-        "eliminado": false
+        "n_ancoras": 1,
+        "abertura": "QUANT",
+        "abertura_freq": 17,
+        "eliminado": true
       }
     ],
     "uso": {
-      "prompt_tokens": 2685,
-      "completion_tokens": 182,
+      "prompt_tokens": 4644,
+      "completion_tokens": 219,
       "cache_hit_tokens": 0,
-      "cache_miss_tokens": 2685
+      "cache_miss_tokens": 4644
     },
-    "latencia_s": 10.2
+    "latencia_s": 15.55
   }
 }

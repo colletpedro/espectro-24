@@ -1351,24 +1351,25 @@
     "n_chamadas": 3,
     "prefixo_codigo": "",
     "retry": null,
-    "spec_version": "1.9.21",
-    "texto": "A maioria de quem recomenda centra suas análises em comparações. Por outro lado, cerca de metade de quem não recomenda discute o impacto emocional da obra, trazendo ainda queixas exclusivas sobre a cadência excessivamente vagarosa e momentos de monotonia.",
-    "texto_modelo": "A maioria de quem recomenda centra suas análises em comparações. Por outro lado, cerca de metade de quem não recomenda discute o impacto emocional da obra, trazendo ainda queixas exclusivas sobre a cadência excessivamente vagarosa e momentos de monotonia.",
+    "spec_version": "1.9.22",
+    "texto": "A maioria de quem recomenda concentra sua análise em comparações. Já entre quem não recomenda, cerca de metade aborda o impacto emocional da obra, trazendo a lentidão do andamento e a sensação de tédio como queixas exclusivas.",
+    "texto_modelo": "A maioria de quem recomenda concentra sua análise em comparações. Já entre quem não recomenda, cerca de metade aborda o impacto emocional da obra, trazendo a lentidão do andamento e a sensação de tédio como queixas exclusivas.",
     "origem": "llm",
     "motivo": "melhor_entre_limpos",
-    "criterio_decisivo": "unico",
-    "indice_escolhido": 2,
+    "criterio_decisivo": "brevidade",
+    "abertura": "QUANT",
+    "indice_escolhido": 0,
     "flags": [],
     "candidatos": [
       {
         "indice": 0,
-        "n_flags": 1,
-        "flags": [
-          "escopo_generalizado"
-        ],
-        "n_palavras": 46,
+        "n_flags": 0,
+        "flags": [],
+        "n_palavras": 37,
         "n_ancoras": 2,
-        "eliminado": true
+        "abertura": "QUANT",
+        "abertura_freq": 17,
+        "eliminado": false
       },
       {
         "indice": 1,
@@ -1376,25 +1377,29 @@
         "flags": [
           "tema_ausente"
         ],
-        "n_palavras": 42,
+        "n_palavras": 41,
         "n_ancoras": 2,
+        "abertura": "QUANT",
+        "abertura_freq": 17,
         "eliminado": true
       },
       {
         "indice": 2,
         "n_flags": 0,
         "flags": [],
-        "n_palavras": 39,
+        "n_palavras": 45,
         "n_ancoras": 2,
+        "abertura": "QUANT",
+        "abertura_freq": 17,
         "eliminado": false
       }
     ],
     "uso": {
-      "prompt_tokens": 2607,
-      "completion_tokens": 190,
+      "prompt_tokens": 3489,
+      "completion_tokens": 185,
       "cache_hit_tokens": 0,
-      "cache_miss_tokens": 2607
+      "cache_miss_tokens": 3489
     },
-    "latencia_s": 9.71
+    "latencia_s": 9.86
   }
 }

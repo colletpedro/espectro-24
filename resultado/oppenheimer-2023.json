@@ -1362,48 +1362,55 @@
     "n_chamadas": 3,
     "prefixo_codigo": "",
     "retry": null,
-    "spec_version": "1.9.21",
-    "texto": "A divergência central está na avaliação da mesma estrutura e andamento. Cerca de metade dos que recomendam aprecia a trama complexa e não linear, enquanto cerca de metade dos que desaprovam vê a condução como confusa, arrastada e excessivamente longa.",
-    "texto_modelo": "A divergência central está na avaliação da mesma estrutura e andamento. Cerca de metade dos que recomendam aprecia a trama complexa e não linear, enquanto cerca de metade dos que desaprovam vê a condução como confusa, arrastada e excessivamente longa.",
+    "spec_version": "1.9.22",
+    "texto": "As opiniões divergem no valor atribuído à construção da trama: cerca de metade de quem recomenda valoriza a narrativa intrincada e não linear, enquanto cerca de metade dos que não recomendam critica o andamento arrastado e considera a escrita confusa e pedante.",
+    "texto_modelo": "As opiniões divergem no valor atribuído à construção da trama: cerca de metade de quem recomenda valoriza a narrativa intrincada e não linear, enquanto cerca de metade dos que não recomendam critica o andamento arrastado e considera a escrita confusa e pedante.",
     "origem": "llm",
     "motivo": "melhor_entre_limpos",
     "criterio_decisivo": "brevidade",
-    "indice_escolhido": 0,
+    "abertura": "opini",
+    "indice_escolhido": 2,
     "flags": [],
     "candidatos": [
       {
         "indice": 0,
         "n_flags": 0,
         "flags": [],
-        "n_palavras": 40,
+        "n_palavras": 46,
         "n_ancoras": 1,
+        "abertura": "opini",
+        "abertura_freq": 6,
         "eliminado": false
       },
       {
         "indice": 1,
-        "n_flags": 0,
-        "flags": [],
-        "n_palavras": 46,
-        "n_ancoras": 1,
-        "eliminado": false
-      },
-      {
-        "indice": 2,
         "n_flags": 1,
         "flags": [
           "formato_invalido"
         ],
-        "n_palavras": 48,
-        "n_ancoras": 2,
+        "n_palavras": 49,
+        "n_ancoras": 1,
+        "abertura": "opini",
+        "abertura_freq": 6,
         "eliminado": true
+      },
+      {
+        "indice": 2,
+        "n_flags": 0,
+        "flags": [],
+        "n_palavras": 42,
+        "n_ancoras": 1,
+        "abertura": "opini",
+        "abertura_freq": 6,
+        "eliminado": false
       }
     ],
     "uso": {
-      "prompt_tokens": 2772,
-      "completion_tokens": 211,
+      "prompt_tokens": 3654,
+      "completion_tokens": 227,
       "cache_hit_tokens": 0,
-      "cache_miss_tokens": 2772
+      "cache_miss_tokens": 3654
     },
-    "latencia_s": 10.75
+    "latencia_s": 11.99
   }
 }

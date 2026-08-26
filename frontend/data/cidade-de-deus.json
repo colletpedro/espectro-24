@@ -1235,46 +1235,55 @@
     "n_chamadas": 3,
     "prefixo_codigo": "",
     "retry": null,
-    "spec_version": "1.9.21",
-    "texto": "A divergência central está em avaliar se a construção da história funciona. Enquanto cerca de metade dos que recomendam valoriza o roteiro, muitos dos que não recomendam criticam o pouco desenvolvimento dos personagens e apontam sensacionalismo no retrato da pobreza.",
-    "texto_modelo": "A divergência central está em avaliar se a construção da história funciona. Enquanto cerca de metade dos que recomendam valoriza o roteiro, muitos dos que não recomendam criticam o pouco desenvolvimento dos personagens e apontam sensacionalismo no retrato da pobreza.",
+    "spec_version": "1.9.22",
+    "texto": "A divisão sobre o filme gira em torno de como a narrativa e as questões sociais são trabalhadas. Enquanto cerca de metade dos que recomendam elogia a condução do roteiro, muitos dos que não recomendam apontam personagens pouco desenvolvidos e enxergam uma abordagem sensacionalista na representação da pobreza.",
+    "texto_modelo": "A divisão sobre o filme gira em torno de como a narrativa e as questões sociais são trabalhadas. Enquanto cerca de metade dos que recomendam elogia a condução do roteiro, muitos dos que não recomendam apontam personagens pouco desenvolvidos e enxergam uma abordagem sensacionalista na representação da pobreza.",
     "origem": "llm",
     "motivo": "melhor_entre_limpos",
     "criterio_decisivo": "ancoras",
-    "indice_escolhido": 0,
+    "abertura": "divis",
+    "indice_escolhido": 1,
     "flags": [],
     "candidatos": [
       {
         "indice": 0,
-        "n_flags": 0,
-        "flags": [],
-        "n_palavras": 40,
+        "n_flags": 1,
+        "flags": [
+          "formato_invalido"
+        ],
+        "n_palavras": 46,
         "n_ancoras": 2,
-        "eliminado": false
+        "abertura": "diver",
+        "abertura_freq": 7,
+        "eliminado": true
       },
       {
         "indice": 1,
         "n_flags": 0,
         "flags": [],
-        "n_palavras": 40,
-        "n_ancoras": 0,
+        "n_palavras": 48,
+        "n_ancoras": 2,
+        "abertura": "divis",
+        "abertura_freq": 0,
         "eliminado": false
       },
       {
         "indice": 2,
         "n_flags": 0,
         "flags": [],
-        "n_palavras": 45,
+        "n_palavras": 40,
         "n_ancoras": 1,
+        "abertura": "diver",
+        "abertura_freq": 7,
         "eliminado": false
       }
     ],
     "uso": {
-      "prompt_tokens": 2757,
-      "completion_tokens": 185,
+      "prompt_tokens": 3639,
+      "completion_tokens": 212,
       "cache_hit_tokens": 0,
-      "cache_miss_tokens": 2757
+      "cache_miss_tokens": 3639
     },
-    "latencia_s": 12.61
+    "latencia_s": 12.41
   }
 }

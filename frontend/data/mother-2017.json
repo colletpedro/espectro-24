@@ -1265,48 +1265,55 @@
     "n_chamadas": 3,
     "prefixo_codigo": "",
     "retry": null,
-    "spec_version": "1.9.21",
-    "texto": "As opiniões divergem sobre a eficácia da narrativa e da condução da trama. Enquanto a maioria dos que recomendam destaca a intensidade do texto e seu impacto emocional, a maior parte dos que discordam concentra seus apontamentos exatamente nos problemas de roteiro e estruturação.",
-    "texto_modelo": "As opiniões divergem sobre a eficácia da narrativa e da condução da trama. Enquanto a maioria dos que recomendam destaca a intensidade do texto e seu impacto emocional, a maior parte dos que discordam concentra seus apontamentos exatamente nos problemas de roteiro e estruturação.",
+    "spec_version": "1.9.22",
+    "texto": "A divisão em torno do filme se concentra na construção do roteiro e na sua estrutura. Enquanto a maioria dos que recomendam exalta a intensidade do texto e da condução da história, a maioria dos que não recomendam discorda do resultado dessa mesma condução narrativa.",
+    "texto_modelo": "A divisão em torno do filme se concentra na construção do roteiro e na sua estrutura. Enquanto a maioria dos que recomendam exalta a intensidade do texto e da condução da história, a maioria dos que não recomendam discorda do resultado dessa mesma condução narrativa.",
     "origem": "llm",
     "motivo": "melhor_entre_limpos",
-    "criterio_decisivo": "ancoras",
-    "indice_escolhido": 1,
+    "criterio_decisivo": "abertura",
+    "abertura": "divis",
+    "indice_escolhido": 2,
     "flags": [],
     "candidatos": [
       {
         "indice": 0,
-        "n_flags": 0,
-        "flags": [],
-        "n_palavras": 45,
+        "n_flags": 1,
+        "flags": [
+          "tema_ausente"
+        ],
+        "n_palavras": 39,
         "n_ancoras": 1,
-        "eliminado": false
+        "abertura": "diver",
+        "abertura_freq": 8,
+        "eliminado": true
       },
       {
         "indice": 1,
         "n_flags": 0,
         "flags": [],
-        "n_palavras": 44,
-        "n_ancoras": 2,
+        "n_palavras": 39,
+        "n_ancoras": 1,
+        "abertura": "diver",
+        "abertura_freq": 8,
         "eliminado": false
       },
       {
         "indice": 2,
-        "n_flags": 1,
-        "flags": [
-          "tema_ausente"
-        ],
-        "n_palavras": 44,
+        "n_flags": 0,
+        "flags": [],
+        "n_palavras": 45,
         "n_ancoras": 1,
-        "eliminado": true
+        "abertura": "divis",
+        "abertura_freq": 0,
+        "eliminado": false
       }
     ],
     "uso": {
-      "prompt_tokens": 2649,
-      "completion_tokens": 189,
+      "prompt_tokens": 3531,
+      "completion_tokens": 171,
       "cache_hit_tokens": 0,
-      "cache_miss_tokens": 2649
+      "cache_miss_tokens": 3531
     },
-    "latencia_s": 8.92
+    "latencia_s": 8.35
   }
 }

@@ -1259,48 +1259,53 @@
     "n_chamadas": 3,
     "prefixo_codigo": "",
     "retry": null,
-    "spec_version": "1.9.21",
-    "texto": "A maioria em ambos os lados concentra suas avaliações nas comparações com o predecessor, Guerra Infinita. A divergência está em determinar se esse paralelo funciona: quem recomenda valoriza o resultado frente ao filme anterior, enquanto a maioria dos que rejeitam conclui que o longa não se sustenta nessa relação.",
-    "texto_modelo": "A maioria em ambos os lados concentra suas avaliações nas comparações com o predecessor, Guerra Infinita. A divergência está em determinar se esse paralelo funciona: quem recomenda valoriza o resultado frente ao filme anterior, enquanto a maioria dos que rejeitam conclui que o longa não se sustenta nessa relação.",
+    "spec_version": "1.9.22",
+    "texto": "A divergência central está no paralelo traçado com Guerra Infinita, tema mais abordado por ambos os lados. Enquanto a maioria dos que recomendam avalia positivamente esse confronto direto com o longa anterior, a maioria dos que não recomendam discorda do resultado dessa comparação.",
+    "texto_modelo": "A divergência central está no paralelo traçado com Guerra Infinita, tema mais abordado por ambos os lados. Enquanto a maioria dos que recomendam avalia positivamente esse confronto direto com o longa anterior, a maioria dos que não recomendam discorda do resultado dessa comparação.",
     "origem": "llm",
     "motivo": "melhor_entre_limpos",
-    "criterio_decisivo": "ancoras",
-    "indice_escolhido": 0,
+    "criterio_decisivo": "brevidade",
+    "abertura": "diver",
+    "indice_escolhido": 1,
     "flags": [],
     "candidatos": [
       {
         "indice": 0,
         "n_flags": 0,
         "flags": [],
-        "n_palavras": 49,
+        "n_palavras": 44,
         "n_ancoras": 1,
+        "abertura": "diver",
+        "abertura_freq": 8,
         "eliminado": false
       },
       {
         "indice": 1,
-        "n_flags": 1,
-        "flags": [
-          "escopo_generalizado"
-        ],
-        "n_palavras": 47,
-        "n_ancoras": 0,
-        "eliminado": true
+        "n_flags": 0,
+        "flags": [],
+        "n_palavras": 43,
+        "n_ancoras": 1,
+        "abertura": "diver",
+        "abertura_freq": 8,
+        "eliminado": false
       },
       {
         "indice": 2,
         "n_flags": 0,
         "flags": [],
-        "n_palavras": 45,
-        "n_ancoras": 0,
+        "n_palavras": 44,
+        "n_ancoras": 1,
+        "abertura": "diver",
+        "abertura_freq": 8,
         "eliminado": false
       }
     ],
     "uso": {
-      "prompt_tokens": 2658,
-      "completion_tokens": 200,
+      "prompt_tokens": 3540,
+      "completion_tokens": 193,
       "cache_hit_tokens": 0,
-      "cache_miss_tokens": 2658
+      "cache_miss_tokens": 3540
     },
-    "latencia_s": 8.71
+    "latencia_s": 9.18
   }
 }

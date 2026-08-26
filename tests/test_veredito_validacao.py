@@ -72,16 +72,48 @@ def test_digito_e_reprovado(bf_tematico):
     assert "digito" in _flags("Em 3 reviews o ritmo aparece.", bf_tematico)
 
 
-def test_quantificador_mais_forte_e_reprovado_mais_fraco_e_permitido(bf_tematico):
-    """A regra 4 do prompt, na direção certa: rótulo mais FORTE mente sobre o
-    dado; mais FRACO só subestima, e subestimar é a política do projeto em
-    toda fronteira ambígua (v1.2.3)."""
-    # o briefing dá "a maioria" (75%) para o eixo de frequência das negativas
-    assert "quantificador_mais_forte" in _flags(
+def test_quantificador_divergente_reprova_NOS_DOIS_SENTIDOS(bf_tematico):
+    """[v1.9.22] MUDANÇA DE POLÍTICA, e ela é a correção do Defeito 1.
+
+    Até a v1.9.21 a invariante 4 dizia "mais forte é proibido, mais fraco é
+    permitido", e a validação só barrava o mais forte. **A segunda metade
+    estava errada:** deflação é falsidade tanto quanto inflação, e o §0 ("o
+    código é a autoridade sobre quantidade") não distingue direção. Um grupo
+    de 58% descrito como anedota mente sobre o dado exatamente como um de
+    40% descrito como "quase todos".
+    """
+    # o briefing autoriza {"a maioria" (75%, negativas e positivas),
+    # "muitos" (35%, assunto compartilhado)}
+    assert "quantificador_divergente" in _flags(
         "Quase todos que não recomendam apontam o ritmo arrastado.",
         bf_tematico)
-    assert "quantificador_mais_forte" not in _flags(
-        "Muitos que não recomendam apontam o ritmo arrastado.", bf_tematico)
+    assert "quantificador_divergente" in _flags(
+        "Poucos que não recomendam apontam o ritmo arrastado.", bf_tematico)
+
+
+def test_o_rotulo_AUTORIZADO_passa_limpo(bf_tematico):
+    """O par indispensável do teste acima: se a checagem também reprovasse o
+    uso CORRETO, ela tornaria a tarefa impossível em vez de discipliná-la."""
+    assert "quantificador_divergente" not in _flags(
+        "A maioria de quem não recomenda aponta o ritmo arrastado.",
+        bf_tematico)
+    # e "muitos", que o assunto compartilhado autoriza, também é rótulo dado
+    assert "quantificador_divergente" not in _flags(
+        "Muitos de quem não recomenda apontam o ritmo arrastado.",
+        bf_tematico)
+
+
+def test_a_contracao_do_artigo_e_forma_do_rotulo_nao_desvio(bf_tematico):
+    """Achado ao medir o Defeito 1: `dune-2021` escreveu "pela maioria dos
+    que reprovam" — o rótulo EXATO do briefing, com a contração que §D2
+    (regra 4, v1.4.1) já reconhece — e o instrumento não o via. Era falso
+    negativo na medição; viraria falso POSITIVO agora que a checagem exige o
+    rótulo, e empurraria o filme para o fallback por escrever português
+    correto."""
+    for forma in ("pela maioria", "da maioria", "na maioria", "à maioria"):
+        assert "quantificador_divergente" not in _flags(
+            f"O ritmo arrastado é apontado {forma} de quem não recomenda.",
+            bf_tematico), forma
 
 
 def test_tema_ausente_do_briefing_e_reprovado(bf_tematico):
@@ -449,3 +481,169 @@ def test_o_marcador_com_asterisco_casa_por_PREFIXO(bf_valorativo):
         assert "tema_ausente" in _flags(
             f"Os dois lados acham o filme {flexao} e discordam sobre isso.",
             bf_valorativo)
+
+
+# ===========================================================================
+# [v1.9.22] DEFLAÇÃO POR HEDGE — a correção de NEUTRALIDADE (§0)
+# ===========================================================================
+# Estes testes vêm de dois textos MEDIDOS em produção sob a v1.9.21, não de
+# imaginação. A regra que eles travam: **cautela é sobre a AMOSTRA (quantas
+# reviews foram analisadas), nunca sobre a FREQUÊNCIA (que fatia daquele
+# grupo disse aquilo)**.
+
+def test_hedge_que_encolhe_o_grupo_e_reprovado(bf_tematico):
+    """`pearl-2022`, o caso grave: negativas e positivas com a MESMA
+    frequência (58%, rótulo `cerca de metade` nos dois). O lado positivo
+    recebeu o rótulo; o negativo virou "impressões negativas pontuais".
+    Mesmo número, dois tratamentos, e o que os separa é o SENTIMENTO do
+    grupo — violação direta da neutralidade de tratamento do §0."""
+    assert "deflacao_por_hedge" in _flags(
+        "A maioria de quem recomenda destaca o ritmo arrastado, enquanto "
+        "impressões negativas pontuais apontam a atmosfera densa.",
+        bf_tematico)
+
+
+def test_hedge_que_ENVOLVE_o_rotulo_certo_tambem_e_reprovado(bf_tematico):
+    """`the-godfather`: "relatos pontuais apontam que a maioria dos que
+    desaprovam considera a cadência arrastada". O rótulo está CERTO e o
+    briefing autoriza — e mesmo assim o texto mente, porque pontual e
+    maioria não podem ser a mesma coisa. A checagem de rótulo sozinha é cega
+    a isto: foi por isso que o defeito passou pela v1.9.21."""
+    assert "deflacao_por_hedge" in _flags(
+        "Relatos pontuais apontam que a maioria de quem não recomenda cita o "
+        "ritmo arrastado.", bf_tematico)
+
+
+def test_o_uso_CORRETO_do_rotulo_passa_limpo(bf_tematico):
+    """O par indispensável. Sem ele a checagem vira armadilha: um texto que
+    nomeia a frequência dos dois lados com o rótulo dado é exatamente o que
+    a correção quer produzir, e tem de passar."""
+    assert "deflacao_por_hedge" not in _flags(
+        "A maioria de quem não recomenda aponta o ritmo arrastado; a maioria "
+        "de quem recomenda destaca a atmosfera densa.", bf_tematico)
+
+
+def test_REGRESSAO_wonka_a_ancora_de_AMOSTRA_preserva_a_cautela_legitima(
+        bf_tematico):
+    """**A exceção existe para este caso, e ele é real.** `wonka` escreveu
+    "entre as poucas manifestações desfavoráveis ANALISADAS" — uma afirmação
+    sobre QUANTAS reviews foram lidas, que é verdadeira, e que a invariante
+    8 do prompt OBRIGA quando o grupo está em modo reduzido.
+
+    Sem a âncora de amostra, a checagem reprovaria a única forma honesta de
+    dizer "a base é pequena" e empurraria o filme para o `template_fallback`
+    — devolvendo ao leitor a frase genérica que a v1.9.21 veio eliminar. Não
+    "simplifique" esta exceção.
+    """
+    for ancora in ("analisadas", "disponíveis", "coletadas"):
+        assert "deflacao_por_hedge" not in _flags(
+            f"A maioria de quem recomenda destaca o ritmo arrastado; entre as "
+            f"poucas manifestações desfavoráveis {ancora}, aparece a "
+            f"atmosfera densa.", bf_tematico), ancora
+
+
+def test_cautela_sobre_a_BASE_passa_limpo(bf_tematico):
+    """As três formulações que a invariante 8 lista como PERMITIDAS."""
+    for frase in ("numa amostra pequena", "entre os poucos relatos analisados",
+                  "no material disponível"):
+        assert "deflacao_por_hedge" not in _flags(
+            f"A maioria de quem não recomenda aponta o ritmo arrastado, "
+            f"{frase}; a maioria de quem recomenda destaca a atmosfera densa.",
+            bf_tematico), frase
+
+
+def test_a_validacao_nova_NAO_forca_presenca_de_rotulo(bf_tematico):
+    """Confirmação pedida: rótulo AUSENTE não é rótulo errado. Num texto de
+    1-2 frases com teto de 55 palavras, exigir quantificador para os três
+    grupos estoura o orçamento e produz rigidez. Um texto sem nenhum
+    quantificador passa limpo nas duas checagens novas — a limitação fica
+    registrada na spec, não convertida em validação por efeito colateral."""
+    sem_rotulo = ("Quem não recomenda aponta o ritmo arrastado; quem "
+                  "recomenda destaca a atmosfera densa.")
+    flags = _flags(sem_rotulo, bf_tematico)
+    assert "quantificador_divergente" not in flags
+    assert "deflacao_por_hedge" not in flags
+
+
+# ===========================================================================
+# [v1.9.22] PADRÃO DE ABERTURA — a métrica do Defeito 2 e o desempate
+# ===========================================================================
+
+def test_padrao_de_abertura_colapsa_o_quantificador():
+    """Qual rótulo abre a frase é decisão do CÓDIGO (mapa da v1.2.3), não do
+    modelo. Contar "A maioria..." e "Cerca de metade..." como aberturas
+    DIFERENTES creditaria ao modelo uma variedade que é do dado."""
+    for frase in ("A maioria dos que recomendam destaca o ritmo.",
+                  "Cerca de metade de quem recomenda cita o ritmo.",
+                  "Muitos dos que não recomendam relatam tédio.",
+                  "Quase todos os que recomendam destacam o ritmo."):
+        assert V.padrao_de_abertura(frase) == V.ABERTURA_QUANTIFICADOR, frase
+
+
+def test_padrao_de_abertura_ignora_a_classe_fechada():
+    """Determinante, preposição e conjunção não carregam o assunto da
+    abertura — "A divergência" e "Enquanto a divergência" são a mesma
+    fórmula."""
+    assert (V.padrao_de_abertura("A divergência central está no roteiro.")
+            == V.padrao_de_abertura("Enquanto a divergência sobre o roteiro "
+                                    "cresce, o resto some.")
+            == "diver")
+    assert V.padrao_de_abertura("As opiniões divergem sobre o roteiro.") == "opini"
+
+
+def test_padrao_de_abertura_de_texto_vazio():
+    assert V.padrao_de_abertura("") == ""
+    assert V.padrao_de_abertura("A de o e.") == ""
+
+
+def test_a_abertura_MENOS_frequente_vence_entre_limpos(bf_tematico):
+    """O ataque ao Defeito 2 pela SELEÇÃO: entre candidatos que já passaram
+    nas validações e empatam em âncoras, vence o que abre com o padrão menos
+    repetido no catálogo. Usa os candidatos que o best-of-3 já gerou — custo
+    zero de chamada."""
+    comum = ("A divergência está no ritmo arrastado, que quem não recomenda "
+             "aponta, e na atmosfera densa que quem recomenda destaca.")
+    raro = ("Quem não recomenda aponta o ritmo arrastado; quem recomenda "
+            "destaca a atmosfera densa do longa.")
+    assert V.padrao_de_abertura(comum) == "diver"
+    assert V.padrao_de_abertura(raro) == "quem"
+
+    historico = {"diver": 8, "opini": 6, "quem": 1}
+    escolha = V.selecionar([comum, raro], bf_tematico, historico)
+    assert escolha["texto"] == raro
+    assert escolha["criterio_decisivo"] == "abertura"
+
+
+def test_as_ANCORAS_continuam_vencendo_a_abertura(bf_tematico):
+    """A ordem das chaves é a da tarefa: informatividade primeiro. Um texto
+    com abertura rara e sem assunto nomeado perde para um informativo — o
+    Defeito 2 não pode reintroduzir o defeito que a v1.9.21 corrigiu."""
+    raro_e_vazio = "Quem não recomenda discorda de quem recomenda."
+    comum_e_rico = ("A divergência está no ritmo arrastado e na atmosfera "
+                    "densa do longa.")
+    escolha = V.selecionar([raro_e_vazio, comum_e_rico], bf_tematico,
+                           {"diver": 8, "quem": 0})
+    assert escolha["texto"] == comum_e_rico
+    assert escolha["criterio_decisivo"] == "ancoras"
+
+
+def test_a_brevidade_continua_desempatando_quando_a_abertura_empata(bf_tematico):
+    curto = ("Quem não recomenda aponta o ritmo arrastado; quem recomenda "
+             "destaca a atmosfera densa.")
+    longo = curto[:-1] + " do filme, segundo o que cada grupo escreveu."
+    escolha = V.selecionar([longo, curto], bf_tematico, {"quem": 3})
+    assert escolha["texto"] == curto
+    assert escolha["criterio_decisivo"] == "brevidade"
+
+
+def test_sem_historico_a_selecao_e_a_da_v1921(bf_tematico):
+    """`aberturas=None` zera a chave nova para todos os candidatos, e a
+    ordem de decisão volta a ser âncoras -> brevidade. É o que garante que
+    ligar o desempate não muda nada em quem não o usa (e é como o
+    `--sem-desempate-de-abertura` do harness mede o efeito dele)."""
+    curto = ("Quem não recomenda aponta o ritmo arrastado; quem recomenda "
+             "destaca a atmosfera densa.")
+    longo = curto[:-1] + " do filme, segundo o que cada grupo escreveu."
+    escolha = V.selecionar([longo, curto], bf_tematico)
+    assert escolha["texto"] == curto
+    assert escolha["criterio_decisivo"] == "brevidade"

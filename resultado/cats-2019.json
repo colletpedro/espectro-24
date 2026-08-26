@@ -1355,46 +1355,53 @@
     "n_chamadas": 3,
     "prefixo_codigo": "",
     "retry": null,
-    "spec_version": "1.9.21",
-    "texto": "Muitos dos que não recomendam relatam uma sensação de incômodo ao assistir. Já entre quem recomenda, cerca de metade recorre a comparações com outras obras, valorizando o tom cult e a estética exagerada como fontes de diversão descompromissada.",
-    "texto_modelo": "Muitos dos que não recomendam relatam uma sensação de incômodo ao assistir. Já entre quem recomenda, cerca de metade recorre a comparações com outras obras, valorizando o tom cult e a estética exagerada como fontes de diversão descompromissada.",
+    "spec_version": "1.9.22",
+    "texto": "Enquanto cerca de metade de quem recomenda recorre a comparações e destaca a atmosfera camp com apelo cult, muitos dos que não recomendam apontam uma experiência de exibição incômoda e desconfortável.",
+    "texto_modelo": "Enquanto cerca de metade de quem recomenda recorre a comparações e destaca a atmosfera camp com apelo cult, muitos dos que não recomendam apontam uma experiência de exibição incômoda e desconfortável.",
     "origem": "llm",
     "motivo": "melhor_entre_limpos",
     "criterio_decisivo": "brevidade",
-    "indice_escolhido": 0,
+    "abertura": "QUANT",
+    "indice_escolhido": 2,
     "flags": [],
     "candidatos": [
       {
         "indice": 0,
         "n_flags": 0,
         "flags": [],
-        "n_palavras": 38,
+        "n_palavras": 40,
         "n_ancoras": 2,
+        "abertura": "QUANT",
+        "abertura_freq": 17,
         "eliminado": false
       },
       {
         "indice": 1,
         "n_flags": 0,
         "flags": [],
-        "n_palavras": 50,
+        "n_palavras": 37,
         "n_ancoras": 1,
+        "abertura": "QUANT",
+        "abertura_freq": 17,
         "eliminado": false
       },
       {
         "indice": 2,
         "n_flags": 0,
         "flags": [],
-        "n_palavras": 39,
+        "n_palavras": 31,
         "n_ancoras": 3,
+        "abertura": "QUANT",
+        "abertura_freq": 17,
         "eliminado": false
       }
     ],
     "uso": {
-      "prompt_tokens": 2667,
-      "completion_tokens": 201,
+      "prompt_tokens": 3549,
+      "completion_tokens": 172,
       "cache_hit_tokens": 0,
-      "cache_miss_tokens": 2667
+      "cache_miss_tokens": 3549
     },
-    "latencia_s": 13.26
+    "latencia_s": 12.06
   }
 }

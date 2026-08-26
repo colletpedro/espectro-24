@@ -1355,13 +1355,14 @@
     "n_chamadas": 3,
     "prefixo_codigo": "",
     "retry": null,
-    "spec_version": "1.9.21",
-    "texto": "A divergência sobre o filme concentra-se na eficácia de seu comentário social. Enquanto a maioria dos que recomendam valoriza a representação do regime militar, cerca de metade dos que não indicam a produção aponta pouca densidade nas questões políticas abordadas.",
-    "texto_modelo": "A divergência sobre o filme concentra-se na eficácia de seu comentário social. Enquanto a maioria dos que recomendam valoriza a representação do regime militar, cerca de metade dos que não indicam a produção aponta pouca densidade nas questões políticas abordadas.",
+    "spec_version": "1.9.22",
+    "texto": "O debate gira em torno da crítica social do filme: a maioria dos que recomendam exalta a reconstituição da ditadura militar, ao passo que cerca de metade dos que não recomendam vê superficialidade no tratamento das questões políticas.",
+    "texto_modelo": "O debate gira em torno da crítica social do filme: a maioria dos que recomendam exalta a reconstituição da ditadura militar, ao passo que cerca de metade dos que não recomendam vê superficialidade no tratamento das questões políticas.",
     "origem": "llm",
     "motivo": "melhor_entre_limpos",
-    "criterio_decisivo": "brevidade",
-    "indice_escolhido": 2,
+    "criterio_decisivo": "abertura",
+    "abertura": "debat",
+    "indice_escolhido": 1,
     "flags": [],
     "candidatos": [
       {
@@ -1370,33 +1371,37 @@
         "flags": [],
         "n_palavras": 41,
         "n_ancoras": 1,
+        "abertura": "diver",
+        "abertura_freq": 7,
         "eliminado": false
       },
       {
         "indice": 1,
-        "n_flags": 1,
-        "flags": [
-          "tema_ausente"
-        ],
-        "n_palavras": 41,
+        "n_flags": 0,
+        "flags": [],
+        "n_palavras": 38,
         "n_ancoras": 1,
-        "eliminado": true
+        "abertura": "debat",
+        "abertura_freq": 0,
+        "eliminado": false
       },
       {
         "indice": 2,
         "n_flags": 0,
         "flags": [],
-        "n_palavras": 40,
+        "n_palavras": 45,
         "n_ancoras": 1,
+        "abertura": "opini",
+        "abertura_freq": 6,
         "eliminado": false
       }
     ],
     "uso": {
-      "prompt_tokens": 2742,
-      "completion_tokens": 185,
+      "prompt_tokens": 3624,
+      "completion_tokens": 179,
       "cache_hit_tokens": 0,
-      "cache_miss_tokens": 2742
+      "cache_miss_tokens": 3624
     },
-    "latencia_s": 14.96
+    "latencia_s": 9.51
   }
 }

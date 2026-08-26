@@ -1275,12 +1275,13 @@ window.ESPECTRO_DATA = {
         "n_chamadas": 3,
         "prefixo_codigo": "",
         "retry": null,
-        "spec_version": "1.9.21",
-        "texto": "Cerca de metade dos que recomendam destaca o humor sarcástico e as situações desconfortáveis, elogiando a inteligência do texto. Por outro lado, cerca de metade dos que desaprovam foca na estrutura da história, apontando que a trama é rasa e carece de maior profundidade.",
-        "texto_modelo": "Cerca de metade dos que recomendam destaca o humor sarcástico e as situações desconfortáveis, elogiando a inteligência do texto. Por outro lado, cerca de metade dos que desaprovam foca na estrutura da história, apontando que a trama é rasa e carece de maior profundidade.",
+        "spec_version": "1.9.22",
+        "texto": "Cerca de metade de quem recomenda valoriza o tom de humor ácido e as situações desconfortáveis presentes na narrativa. Já entre quem não recomenda, cerca de metade aponta que a escrita é superficial e carece de maior profundidade no desenvolvimento da história.",
+        "texto_modelo": "Cerca de metade de quem recomenda valoriza o tom de humor ácido e as situações desconfortáveis presentes na narrativa. Já entre quem não recomenda, cerca de metade aponta que a escrita é superficial e carece de maior profundidade no desenvolvimento da história.",
         "origem": "llm",
         "motivo": "melhor_entre_limpos",
         "criterio_decisivo": "ancoras",
+        "abertura": "QUANT",
         "indice_escolhido": 1,
         "flags": [],
         "candidatos": [
@@ -1288,34 +1289,40 @@ window.ESPECTRO_DATA = {
             "indice": 0,
             "n_flags": 0,
             "flags": [],
-            "n_palavras": 42,
+            "n_palavras": 43,
             "n_ancoras": 1,
+            "abertura": "QUANT",
+            "abertura_freq": 17,
             "eliminado": false
           },
           {
             "indice": 1,
             "n_flags": 0,
             "flags": [],
-            "n_palavras": 44,
+            "n_palavras": 42,
             "n_ancoras": 2,
+            "abertura": "QUANT",
+            "abertura_freq": 17,
             "eliminado": false
           },
           {
             "indice": 2,
             "n_flags": 0,
             "flags": [],
-            "n_palavras": 43,
+            "n_palavras": 35,
             "n_ancoras": 0,
+            "abertura": "QUANT",
+            "abertura_freq": 17,
             "eliminado": false
           }
         ],
         "uso": {
-          "prompt_tokens": 2724,
-          "completion_tokens": 204,
+          "prompt_tokens": 3606,
+          "completion_tokens": 178,
           "cache_hit_tokens": 0,
-          "cache_miss_tokens": 2724
+          "cache_miss_tokens": 3606
         },
-        "latencia_s": 8.45
+        "latencia_s": 12.07
       }
     },
     "aftersun": {
@@ -2580,49 +2587,54 @@ window.ESPECTRO_DATA = {
         "n_chamadas": 3,
         "prefixo_codigo": "",
         "retry": null,
-        "spec_version": "1.9.21",
-        "texto": "A divergência central está na condução da história: enquanto a maioria dos que não recomendam aponta uma trama indefinida e pouco desenvolvida, a maioria dos que recomendam se apega à autenticidade do laço entre pai e filha, destacando a força de sua carga sentimental.",
-        "texto_modelo": "A divergência central está na condução da história: enquanto a maioria dos que não recomendam aponta uma trama indefinida e pouco desenvolvida, a maioria dos que recomendam se apega à autenticidade do laço entre pai e filha, destacando a força de sua carga sentimental.",
+        "spec_version": "1.9.22",
+        "texto": "As opiniões divergem sobre a eficácia do roteiro e da estrutura da história. Enquanto a maioria dos que recomendam destaca a autenticidade do vínculo entre pai e filha e a força emocional da trama, a maioria dos que não recomendam considera a narrativa excessivamente vaga e carente de desenvolvimento.",
+        "texto_modelo": "As opiniões divergem sobre a eficácia do roteiro e da estrutura da história. Enquanto a maioria dos que recomendam destaca a autenticidade do vínculo entre pai e filha e a força emocional da trama, a maioria dos que não recomendam considera a narrativa excessivamente vaga e carente de desenvolvimento.",
         "origem": "llm",
         "motivo": "melhor_entre_limpos",
-        "criterio_decisivo": "ancoras",
-        "indice_escolhido": 1,
+        "criterio_decisivo": "abertura",
+        "abertura": "opini",
+        "indice_escolhido": 0,
         "flags": [],
         "candidatos": [
           {
             "indice": 0,
             "n_flags": 0,
             "flags": [],
-            "n_palavras": 44,
-            "n_ancoras": 0,
+            "n_palavras": 49,
+            "n_ancoras": 1,
+            "abertura": "opini",
+            "abertura_freq": 6,
             "eliminado": false
           },
           {
             "indice": 1,
             "n_flags": 0,
             "flags": [],
-            "n_palavras": 44,
+            "n_palavras": 46,
             "n_ancoras": 1,
+            "abertura": "diver",
+            "abertura_freq": 7,
             "eliminado": false
           },
           {
             "indice": 2,
-            "n_flags": 1,
-            "flags": [
-              "formato_invalido"
-            ],
-            "n_palavras": 41,
+            "n_flags": 0,
+            "flags": [],
+            "n_palavras": 46,
             "n_ancoras": 1,
-            "eliminado": true
+            "abertura": "diver",
+            "abertura_freq": 7,
+            "eliminado": false
           }
         ],
         "uso": {
-          "prompt_tokens": 2757,
-          "completion_tokens": 200,
+          "prompt_tokens": 3639,
+          "completion_tokens": 198,
           "cache_hit_tokens": 0,
-          "cache_miss_tokens": 2757
+          "cache_miss_tokens": 3639
         },
-        "latencia_s": 9.52
+        "latencia_s": 12.07
       }
     },
     "anatomy-of-a-fall": {
@@ -3887,47 +3899,54 @@ window.ESPECTRO_DATA = {
         "n_chamadas": 3,
         "prefixo_codigo": "",
         "retry": null,
-        "spec_version": "1.9.21",
-        "texto": "A maioria dos que recomendam destaca a complexidade do término de uma relação no roteiro. Em contrapartida, quase todos os que não recomendam se frustram com o desfecho inconclusivo da trama e apontam a lentidão no desenvolvimento da narrativa como um incômodo particular.",
-        "texto_modelo": "A maioria dos que recomendam destaca a complexidade do término de uma relação no roteiro. Em contrapartida, quase todos os que não recomendam se frustram com o desfecho inconclusivo da trama e apontam a lentidão no desenvolvimento da narrativa como um incômodo particular.",
+        "spec_version": "1.9.22",
+        "texto": "A maioria dos que recomendam destaca a complexidade e o desgaste da relação conjugal no roteiro. Em contrapartida, quase todos os que não recomendam se frustram com o desfecho sem respostas conclusivas, além de apontarem a cadência excessivamente arrastada da narrativa.",
+        "texto_modelo": "A maioria dos que recomendam destaca a complexidade e o desgaste da relação conjugal no roteiro. Em contrapartida, quase todos os que não recomendam se frustram com o desfecho sem respostas conclusivas, além de apontarem a cadência excessivamente arrastada da narrativa.",
         "origem": "llm",
         "motivo": "melhor_entre_limpos",
         "criterio_decisivo": "empate",
-        "indice_escolhido": 2,
+        "abertura": "QUANT",
+        "indice_escolhido": 0,
         "flags": [],
         "candidatos": [
           {
             "indice": 0,
             "n_flags": 0,
             "flags": [],
-            "n_palavras": 40,
-            "n_ancoras": 0,
+            "n_palavras": 41,
+            "n_ancoras": 1,
+            "abertura": "QUANT",
+            "abertura_freq": 17,
             "eliminado": false
           },
           {
             "indice": 1,
             "n_flags": 0,
             "flags": [],
-            "n_palavras": 47,
+            "n_palavras": 41,
             "n_ancoras": 1,
+            "abertura": "QUANT",
+            "abertura_freq": 17,
             "eliminado": false
           },
           {
             "indice": 2,
             "n_flags": 0,
             "flags": [],
-            "n_palavras": 43,
+            "n_palavras": 41,
             "n_ancoras": 1,
+            "abertura": "QUANT",
+            "abertura_freq": 17,
             "eliminado": false
           }
         ],
         "uso": {
-          "prompt_tokens": 2694,
-          "completion_tokens": 210,
+          "prompt_tokens": 3576,
+          "completion_tokens": 198,
           "cache_hit_tokens": 0,
-          "cache_miss_tokens": 2694
+          "cache_miss_tokens": 3576
         },
-        "latencia_s": 9.64
+        "latencia_s": 11.98
       }
     },
     "avengers-endgame": {
@@ -5191,49 +5210,54 @@ window.ESPECTRO_DATA = {
         "n_chamadas": 3,
         "prefixo_codigo": "",
         "retry": null,
-        "spec_version": "1.9.21",
-        "texto": "A maioria em ambos os lados concentra suas avaliações nas comparações com o predecessor, Guerra Infinita. A divergência está em determinar se esse paralelo funciona: quem recomenda valoriza o resultado frente ao filme anterior, enquanto a maioria dos que rejeitam conclui que o longa não se sustenta nessa relação.",
-        "texto_modelo": "A maioria em ambos os lados concentra suas avaliações nas comparações com o predecessor, Guerra Infinita. A divergência está em determinar se esse paralelo funciona: quem recomenda valoriza o resultado frente ao filme anterior, enquanto a maioria dos que rejeitam conclui que o longa não se sustenta nessa relação.",
+        "spec_version": "1.9.22",
+        "texto": "A divergência central está no paralelo traçado com Guerra Infinita, tema mais abordado por ambos os lados. Enquanto a maioria dos que recomendam avalia positivamente esse confronto direto com o longa anterior, a maioria dos que não recomendam discorda do resultado dessa comparação.",
+        "texto_modelo": "A divergência central está no paralelo traçado com Guerra Infinita, tema mais abordado por ambos os lados. Enquanto a maioria dos que recomendam avalia positivamente esse confronto direto com o longa anterior, a maioria dos que não recomendam discorda do resultado dessa comparação.",
         "origem": "llm",
         "motivo": "melhor_entre_limpos",
-        "criterio_decisivo": "ancoras",
-        "indice_escolhido": 0,
+        "criterio_decisivo": "brevidade",
+        "abertura": "diver",
+        "indice_escolhido": 1,
         "flags": [],
         "candidatos": [
           {
             "indice": 0,
             "n_flags": 0,
             "flags": [],
-            "n_palavras": 49,
+            "n_palavras": 44,
             "n_ancoras": 1,
+            "abertura": "diver",
+            "abertura_freq": 8,
             "eliminado": false
           },
           {
             "indice": 1,
-            "n_flags": 1,
-            "flags": [
-              "escopo_generalizado"
-            ],
-            "n_palavras": 47,
-            "n_ancoras": 0,
-            "eliminado": true
+            "n_flags": 0,
+            "flags": [],
+            "n_palavras": 43,
+            "n_ancoras": 1,
+            "abertura": "diver",
+            "abertura_freq": 8,
+            "eliminado": false
           },
           {
             "indice": 2,
             "n_flags": 0,
             "flags": [],
-            "n_palavras": 45,
-            "n_ancoras": 0,
+            "n_palavras": 44,
+            "n_ancoras": 1,
+            "abertura": "diver",
+            "abertura_freq": 8,
             "eliminado": false
           }
         ],
         "uso": {
-          "prompt_tokens": 2658,
-          "completion_tokens": 200,
+          "prompt_tokens": 3540,
+          "completion_tokens": 193,
           "cache_hit_tokens": 0,
-          "cache_miss_tokens": 2658
+          "cache_miss_tokens": 3540
         },
-        "latencia_s": 8.71
+        "latencia_s": 9.18
       }
     },
     "barbie": {
@@ -6505,47 +6529,54 @@ window.ESPECTRO_DATA = {
         "n_chamadas": 3,
         "prefixo_codigo": "",
         "retry": null,
-        "spec_version": "1.9.21",
-        "texto": "A maioria dos que recomendam valoriza o comentário sobre o patriarcado e as pressões enfrentadas pelas mulheres. Por outro lado, a maioria dos que desaprovam considera a mensagem feminista exagerada e sem nuances, além de trazer comparações com outras produções para embasar a rejeição.",
-        "texto_modelo": "A maioria dos que recomendam valoriza o comentário sobre o patriarcado e as pressões enfrentadas pelas mulheres. Por outro lado, a maioria dos que desaprovam considera a mensagem feminista exagerada e sem nuances, além de trazer comparações com outras produções para embasar a rejeição.",
+        "spec_version": "1.9.22",
+        "texto": "A maioria de quem recomenda valoriza o comentário sobre estruturas patriarcais e cobranças impostas às mulheres. Em contraste, a maioria dos que não recomendam considera a abordagem feminista artificial e pouco sutil, dedicando-se também a comparações externas.",
+        "texto_modelo": "A maioria de quem recomenda valoriza o comentário sobre estruturas patriarcais e cobranças impostas às mulheres. Em contraste, a maioria dos que não recomendam considera a abordagem feminista artificial e pouco sutil, dedicando-se também a comparações externas.",
         "origem": "llm",
         "motivo": "melhor_entre_limpos",
         "criterio_decisivo": "brevidade",
-        "indice_escolhido": 0,
+        "abertura": "QUANT",
+        "indice_escolhido": 2,
         "flags": [],
         "candidatos": [
           {
             "indice": 0,
             "n_flags": 0,
             "flags": [],
-            "n_palavras": 44,
+            "n_palavras": 43,
             "n_ancoras": 2,
+            "abertura": "QUANT",
+            "abertura_freq": 17,
             "eliminado": false
           },
           {
             "indice": 1,
             "n_flags": 0,
             "flags": [],
-            "n_palavras": 46,
+            "n_palavras": 40,
             "n_ancoras": 2,
+            "abertura": "QUANT",
+            "abertura_freq": 17,
             "eliminado": false
           },
           {
             "indice": 2,
             "n_flags": 0,
             "flags": [],
-            "n_palavras": 46,
+            "n_palavras": 37,
             "n_ancoras": 2,
+            "abertura": "QUANT",
+            "abertura_freq": 17,
             "eliminado": false
           }
         ],
         "uso": {
-          "prompt_tokens": 2706,
-          "completion_tokens": 213,
+          "prompt_tokens": 3588,
+          "completion_tokens": 181,
           "cache_hit_tokens": 0,
-          "cache_miss_tokens": 2706
+          "cache_miss_tokens": 3588
         },
-        "latencia_s": 9.15
+        "latencia_s": 9.3
       }
     },
     "bones-and-all": {
@@ -7805,12 +7836,13 @@ window.ESPECTRO_DATA = {
         "n_chamadas": 3,
         "prefixo_codigo": "",
         "retry": null,
-        "spec_version": "1.9.21",
-        "texto": "Cerca de metade de quem recomenda destaca a trajetória de autodescoberta e reconhecimento da própria identidade. Por outro lado, cerca de metade de quem desaprova se incomoda com a violência gráfica excessiva e aponta previsibilidade na condução da trama.",
-        "texto_modelo": "Cerca de metade de quem recomenda destaca a trajetória de autodescoberta e reconhecimento da própria identidade. Por outro lado, cerca de metade de quem desaprova se incomoda com a violência gráfica excessiva e aponta previsibilidade na condução da trama.",
+        "spec_version": "1.9.22",
+        "texto": "Cerca de metade de quem recomenda valoriza a narrativa pela trajetória de autoconhecimento e aceitação pessoal. Em contrapartida, cerca de metade de quem não recomenda expressa forte repulsa ao excesso de sangue e violência gráfica, além de considerar a trama previsível.",
+        "texto_modelo": "Cerca de metade de quem recomenda valoriza a narrativa pela trajetória de autoconhecimento e aceitação pessoal. Em contrapartida, cerca de metade de quem não recomenda expressa forte repulsa ao excesso de sangue e violência gráfica, além de considerar a trama previsível.",
         "origem": "llm",
         "motivo": "melhor_entre_limpos",
-        "criterio_decisivo": "brevidade",
+        "criterio_decisivo": "ancoras",
+        "abertura": "QUANT",
         "indice_escolhido": 1,
         "flags": [],
         "candidatos": [
@@ -7818,34 +7850,40 @@ window.ESPECTRO_DATA = {
             "indice": 0,
             "n_flags": 0,
             "flags": [],
-            "n_palavras": 40,
-            "n_ancoras": 1,
+            "n_palavras": 38,
+            "n_ancoras": 0,
+            "abertura": "QUANT",
+            "abertura_freq": 17,
             "eliminado": false
           },
           {
             "indice": 1,
             "n_flags": 0,
             "flags": [],
-            "n_palavras": 39,
+            "n_palavras": 41,
             "n_ancoras": 1,
+            "abertura": "QUANT",
+            "abertura_freq": 17,
             "eliminado": false
           },
           {
             "indice": 2,
             "n_flags": 0,
             "flags": [],
-            "n_palavras": 40,
-            "n_ancoras": 1,
+            "n_palavras": 36,
+            "n_ancoras": 0,
+            "abertura": "QUANT",
+            "abertura_freq": 17,
             "eliminado": false
           }
         ],
         "uso": {
-          "prompt_tokens": 2766,
-          "completion_tokens": 192,
+          "prompt_tokens": 3648,
+          "completion_tokens": 193,
           "cache_hit_tokens": 0,
-          "cache_miss_tokens": 2766
+          "cache_miss_tokens": 3648
         },
-        "latencia_s": 8.22
+        "latencia_s": 9.17
       }
     },
     "cats-2019": {
@@ -9114,47 +9152,54 @@ window.ESPECTRO_DATA = {
         "n_chamadas": 3,
         "prefixo_codigo": "",
         "retry": null,
-        "spec_version": "1.9.21",
-        "texto": "Muitos dos que não recomendam relatam uma sensação de incômodo ao assistir. Já entre quem recomenda, cerca de metade recorre a comparações com outras obras, valorizando o tom cult e a estética exagerada como fontes de diversão descompromissada.",
-        "texto_modelo": "Muitos dos que não recomendam relatam uma sensação de incômodo ao assistir. Já entre quem recomenda, cerca de metade recorre a comparações com outras obras, valorizando o tom cult e a estética exagerada como fontes de diversão descompromissada.",
+        "spec_version": "1.9.22",
+        "texto": "Enquanto cerca de metade de quem recomenda recorre a comparações e destaca a atmosfera camp com apelo cult, muitos dos que não recomendam apontam uma experiência de exibição incômoda e desconfortável.",
+        "texto_modelo": "Enquanto cerca de metade de quem recomenda recorre a comparações e destaca a atmosfera camp com apelo cult, muitos dos que não recomendam apontam uma experiência de exibição incômoda e desconfortável.",
         "origem": "llm",
         "motivo": "melhor_entre_limpos",
         "criterio_decisivo": "brevidade",
-        "indice_escolhido": 0,
+        "abertura": "QUANT",
+        "indice_escolhido": 2,
         "flags": [],
         "candidatos": [
           {
             "indice": 0,
             "n_flags": 0,
             "flags": [],
-            "n_palavras": 38,
+            "n_palavras": 40,
             "n_ancoras": 2,
+            "abertura": "QUANT",
+            "abertura_freq": 17,
             "eliminado": false
           },
           {
             "indice": 1,
             "n_flags": 0,
             "flags": [],
-            "n_palavras": 50,
+            "n_palavras": 37,
             "n_ancoras": 1,
+            "abertura": "QUANT",
+            "abertura_freq": 17,
             "eliminado": false
           },
           {
             "indice": 2,
             "n_flags": 0,
             "flags": [],
-            "n_palavras": 39,
+            "n_palavras": 31,
             "n_ancoras": 3,
+            "abertura": "QUANT",
+            "abertura_freq": 17,
             "eliminado": false
           }
         ],
         "uso": {
-          "prompt_tokens": 2667,
-          "completion_tokens": 201,
+          "prompt_tokens": 3549,
+          "completion_tokens": 172,
           "cache_hit_tokens": 0,
-          "cache_miss_tokens": 2667
+          "cache_miss_tokens": 3549
         },
-        "latencia_s": 13.26
+        "latencia_s": 12.06
       }
     },
     "cidade-de-deus": {
@@ -10394,47 +10439,56 @@ window.ESPECTRO_DATA = {
         "n_chamadas": 3,
         "prefixo_codigo": "",
         "retry": null,
-        "spec_version": "1.9.21",
-        "texto": "A divergência central está em avaliar se a construção da história funciona. Enquanto cerca de metade dos que recomendam valoriza o roteiro, muitos dos que não recomendam criticam o pouco desenvolvimento dos personagens e apontam sensacionalismo no retrato da pobreza.",
-        "texto_modelo": "A divergência central está em avaliar se a construção da história funciona. Enquanto cerca de metade dos que recomendam valoriza o roteiro, muitos dos que não recomendam criticam o pouco desenvolvimento dos personagens e apontam sensacionalismo no retrato da pobreza.",
+        "spec_version": "1.9.22",
+        "texto": "A divisão sobre o filme gira em torno de como a narrativa e as questões sociais são trabalhadas. Enquanto cerca de metade dos que recomendam elogia a condução do roteiro, muitos dos que não recomendam apontam personagens pouco desenvolvidos e enxergam uma abordagem sensacionalista na representação da pobreza.",
+        "texto_modelo": "A divisão sobre o filme gira em torno de como a narrativa e as questões sociais são trabalhadas. Enquanto cerca de metade dos que recomendam elogia a condução do roteiro, muitos dos que não recomendam apontam personagens pouco desenvolvidos e enxergam uma abordagem sensacionalista na representação da pobreza.",
         "origem": "llm",
         "motivo": "melhor_entre_limpos",
         "criterio_decisivo": "ancoras",
-        "indice_escolhido": 0,
+        "abertura": "divis",
+        "indice_escolhido": 1,
         "flags": [],
         "candidatos": [
           {
             "indice": 0,
-            "n_flags": 0,
-            "flags": [],
-            "n_palavras": 40,
+            "n_flags": 1,
+            "flags": [
+              "formato_invalido"
+            ],
+            "n_palavras": 46,
             "n_ancoras": 2,
-            "eliminado": false
+            "abertura": "diver",
+            "abertura_freq": 7,
+            "eliminado": true
           },
           {
             "indice": 1,
             "n_flags": 0,
             "flags": [],
-            "n_palavras": 40,
-            "n_ancoras": 0,
+            "n_palavras": 48,
+            "n_ancoras": 2,
+            "abertura": "divis",
+            "abertura_freq": 0,
             "eliminado": false
           },
           {
             "indice": 2,
             "n_flags": 0,
             "flags": [],
-            "n_palavras": 45,
+            "n_palavras": 40,
             "n_ancoras": 1,
+            "abertura": "diver",
+            "abertura_freq": 7,
             "eliminado": false
           }
         ],
         "uso": {
-          "prompt_tokens": 2757,
-          "completion_tokens": 185,
+          "prompt_tokens": 3639,
+          "completion_tokens": 212,
           "cache_hit_tokens": 0,
-          "cache_miss_tokens": 2757
+          "cache_miss_tokens": 3639
         },
-        "latencia_s": 12.61
+        "latencia_s": 12.41
       }
     },
     "cure": {
@@ -11675,16 +11729,23 @@ window.ESPECTRO_DATA = {
         "provider": "gemini",
         "modelo": "gemini-3.7-flash",
         "n_candidatos": 3,
-        "n_chamadas": 3,
+        "n_chamadas": 4,
         "prefixo_codigo": "",
-        "retry": null,
-        "spec_version": "1.9.21",
-        "texto": "A maioria dos que não recomendam critica o desenvolvimento da trama pela falta de um desfecho compensador ou ápice marcante. Já cerca de metade dos que recomendam elogia o mistério da narrativa, destacando também a construção da ambientação e a condução da cena como aspectos próprios desse grupo.",
-        "texto_modelo": "A maioria dos que não recomendam critica o desenvolvimento da trama pela falta de um desfecho compensador ou ápice marcante. Já cerca de metade dos que recomendam elogia o mistério da narrativa, destacando também a construção da ambientação e a condução da cena como aspectos próprios desse grupo.",
+        "retry": {
+          "flags_antes": [
+            "tema_ausente"
+          ],
+          "flags_depois": [],
+          "aplicado": true
+        },
+        "spec_version": "1.9.22",
+        "texto": "A maioria dos que não recomendam critica a condução da trama e o desfecho da história. Em contrapartida, cerca de metade dos que recomendam elogia a atmosfera de suspense e a tensão proposta pelo roteiro.",
+        "texto_modelo": "A maioria dos que não recomendam critica a condução da trama e o desfecho da história. Em contrapartida, cerca de metade dos que recomendam elogia a atmosfera de suspense e a tensão proposta pelo roteiro.",
         "origem": "llm",
-        "motivo": "melhor_entre_limpos",
-        "criterio_decisivo": "ancoras",
-        "indice_escolhido": 2,
+        "motivo": "retry_direcionado",
+        "criterio_decisivo": "brevidade",
+        "abertura": "QUANT",
+        "indice_escolhido": 0,
         "flags": [],
         "candidatos": [
           {
@@ -11694,33 +11755,43 @@ window.ESPECTRO_DATA = {
               "tema_ausente"
             ],
             "n_palavras": 39,
-            "n_ancoras": 0,
+            "n_ancoras": 1,
+            "abertura": "QUANT",
+            "abertura_freq": 17,
             "eliminado": true
           },
           {
             "indice": 1,
-            "n_flags": 0,
-            "flags": [],
-            "n_palavras": 45,
+            "n_flags": 1,
+            "flags": [
+              "tema_ausente"
+            ],
+            "n_palavras": 41,
             "n_ancoras": 0,
-            "eliminado": false
+            "abertura": "QUANT",
+            "abertura_freq": 17,
+            "eliminado": true
           },
           {
             "indice": 2,
-            "n_flags": 0,
-            "flags": [],
-            "n_palavras": 48,
+            "n_flags": 1,
+            "flags": [
+              "tema_ausente"
+            ],
+            "n_palavras": 47,
             "n_ancoras": 1,
-            "eliminado": false
+            "abertura": "QUANT",
+            "abertura_freq": 17,
+            "eliminado": true
           }
         ],
         "uso": {
-          "prompt_tokens": 2712,
-          "completion_tokens": 195,
+          "prompt_tokens": 4675,
+          "completion_tokens": 247,
           "cache_hit_tokens": 0,
-          "cache_miss_tokens": 2712
+          "cache_miss_tokens": 4675
         },
-        "latencia_s": 14.94
+        "latencia_s": 13.74
       }
     },
     "dune-2021": {
@@ -12986,12 +13057,13 @@ window.ESPECTRO_DATA = {
         "n_chamadas": 3,
         "prefixo_codigo": "",
         "retry": null,
-        "spec_version": "1.9.21",
-        "texto": "A divergência gira em torno do julgamento dos mesmos aspectos, principalmente nas comparações apontadas pela maioria dos que reprovam o filme. Por outro lado, cerca de metade dos que recomendam exalta o trabalho de direção e o visual marcante.",
-        "texto_modelo": "A divergência gira em torno do julgamento dos mesmos aspectos, principalmente nas comparações apontadas pela maioria dos que reprovam o filme. Por outro lado, cerca de metade dos que recomendam exalta o trabalho de direção e o visual marcante.",
+        "spec_version": "1.9.22",
+        "texto": "A divergência está no julgamento dos mesmos aspectos: enquanto cerca de metade de quem recomenda exalta o visual marcante da fotografia, a maioria de quem não recomenda recorre a comparações ao avaliar se a obra realmente funciona.",
+        "texto_modelo": "A divergência está no julgamento dos mesmos aspectos: enquanto cerca de metade de quem recomenda exalta o visual marcante da fotografia, a maioria de quem não recomenda recorre a comparações ao avaliar se a obra realmente funciona.",
         "origem": "llm",
         "motivo": "melhor_entre_limpos",
         "criterio_decisivo": "brevidade",
+        "abertura": "diver",
         "indice_escolhido": 1,
         "flags": [],
         "candidatos": [
@@ -12999,34 +13071,42 @@ window.ESPECTRO_DATA = {
             "indice": 0,
             "n_flags": 0,
             "flags": [],
-            "n_palavras": 43,
+            "n_palavras": 41,
             "n_ancoras": 1,
+            "abertura": "diver",
+            "abertura_freq": 7,
             "eliminado": false
           },
           {
             "indice": 1,
             "n_flags": 0,
             "flags": [],
-            "n_palavras": 39,
+            "n_palavras": 37,
             "n_ancoras": 1,
+            "abertura": "diver",
+            "abertura_freq": 7,
             "eliminado": false
           },
           {
             "indice": 2,
-            "n_flags": 0,
-            "flags": [],
-            "n_palavras": 44,
+            "n_flags": 1,
+            "flags": [
+              "escopo_generalizado"
+            ],
+            "n_palavras": 43,
             "n_ancoras": 1,
-            "eliminado": false
+            "abertura": "espec",
+            "abertura_freq": 0,
+            "eliminado": true
           }
         ],
         "uso": {
-          "prompt_tokens": 2703,
-          "completion_tokens": 183,
+          "prompt_tokens": 3585,
+          "completion_tokens": 174,
           "cache_hit_tokens": 0,
-          "cache_miss_tokens": 2703
+          "cache_miss_tokens": 3585
         },
-        "latencia_s": 15.96
+        "latencia_s": 11.5
       }
     },
     "dune-part-two": {
@@ -14292,24 +14372,25 @@ window.ESPECTRO_DATA = {
         "n_chamadas": 3,
         "prefixo_codigo": "",
         "retry": null,
-        "spec_version": "1.9.21",
-        "texto": "A maioria de quem recomenda centra suas análises em comparações. Por outro lado, cerca de metade de quem não recomenda discute o impacto emocional da obra, trazendo ainda queixas exclusivas sobre a cadência excessivamente vagarosa e momentos de monotonia.",
-        "texto_modelo": "A maioria de quem recomenda centra suas análises em comparações. Por outro lado, cerca de metade de quem não recomenda discute o impacto emocional da obra, trazendo ainda queixas exclusivas sobre a cadência excessivamente vagarosa e momentos de monotonia.",
+        "spec_version": "1.9.22",
+        "texto": "A maioria de quem recomenda concentra sua análise em comparações. Já entre quem não recomenda, cerca de metade aborda o impacto emocional da obra, trazendo a lentidão do andamento e a sensação de tédio como queixas exclusivas.",
+        "texto_modelo": "A maioria de quem recomenda concentra sua análise em comparações. Já entre quem não recomenda, cerca de metade aborda o impacto emocional da obra, trazendo a lentidão do andamento e a sensação de tédio como queixas exclusivas.",
         "origem": "llm",
         "motivo": "melhor_entre_limpos",
-        "criterio_decisivo": "unico",
-        "indice_escolhido": 2,
+        "criterio_decisivo": "brevidade",
+        "abertura": "QUANT",
+        "indice_escolhido": 0,
         "flags": [],
         "candidatos": [
           {
             "indice": 0,
-            "n_flags": 1,
-            "flags": [
-              "escopo_generalizado"
-            ],
-            "n_palavras": 46,
+            "n_flags": 0,
+            "flags": [],
+            "n_palavras": 37,
             "n_ancoras": 2,
-            "eliminado": true
+            "abertura": "QUANT",
+            "abertura_freq": 17,
+            "eliminado": false
           },
           {
             "indice": 1,
@@ -14317,26 +14398,30 @@ window.ESPECTRO_DATA = {
             "flags": [
               "tema_ausente"
             ],
-            "n_palavras": 42,
+            "n_palavras": 41,
             "n_ancoras": 2,
+            "abertura": "QUANT",
+            "abertura_freq": 17,
             "eliminado": true
           },
           {
             "indice": 2,
             "n_flags": 0,
             "flags": [],
-            "n_palavras": 39,
+            "n_palavras": 45,
             "n_ancoras": 2,
+            "abertura": "QUANT",
+            "abertura_freq": 17,
             "eliminado": false
           }
         ],
         "uso": {
-          "prompt_tokens": 2607,
-          "completion_tokens": 190,
+          "prompt_tokens": 3489,
+          "completion_tokens": 185,
           "cache_hit_tokens": 0,
-          "cache_miss_tokens": 2607
+          "cache_miss_tokens": 3489
         },
-        "latencia_s": 9.71
+        "latencia_s": 9.86
       }
     },
     "eighth-grade": {
@@ -15611,47 +15696,54 @@ window.ESPECTRO_DATA = {
         "n_chamadas": 3,
         "prefixo_codigo": "",
         "retry": null,
-        "spec_version": "1.9.21",
-        "texto": "Quase todos os que recomendam destacam o impacto emocional gerado pela sensação de desconforto e constrangimento da experiência. Em contrapartida, muitos dos que não aprovam criticam a estrutura do roteiro, apontando falas artificiais e repetitivas.",
-        "texto_modelo": "Quase todos os que recomendam destacam o impacto emocional gerado pela sensação de desconforto e constrangimento da experiência. Em contrapartida, muitos dos que não aprovam criticam a estrutura do roteiro, apontando falas artificiais e repetitivas.",
+        "spec_version": "1.9.22",
+        "texto": "Enquanto quase todos os que recomendam destacam a sensação constante de desconforto e vergonha alheia como o cerne da experiência, muitos dos que não recomendam apontam falas pouco naturais e redundâncias no texto.",
+        "texto_modelo": "Enquanto quase todos os que recomendam destacam a sensação constante de desconforto e vergonha alheia como o cerne da experiência, muitos dos que não recomendam apontam falas pouco naturais e redundâncias no texto.",
         "origem": "llm",
         "motivo": "melhor_entre_limpos",
-        "criterio_decisivo": "ancoras",
-        "indice_escolhido": 0,
+        "criterio_decisivo": "brevidade",
+        "abertura": "QUANT",
+        "indice_escolhido": 2,
         "flags": [],
         "candidatos": [
           {
             "indice": 0,
             "n_flags": 0,
             "flags": [],
-            "n_palavras": 35,
-            "n_ancoras": 2,
+            "n_palavras": 36,
+            "n_ancoras": 1,
+            "abertura": "QUANT",
+            "abertura_freq": 17,
             "eliminado": false
           },
           {
             "indice": 1,
             "n_flags": 0,
             "flags": [],
-            "n_palavras": 45,
+            "n_palavras": 38,
             "n_ancoras": 0,
+            "abertura": "QUANT",
+            "abertura_freq": 17,
             "eliminado": false
           },
           {
             "indice": 2,
             "n_flags": 0,
             "flags": [],
-            "n_palavras": 34,
-            "n_ancoras": 0,
+            "n_palavras": 33,
+            "n_ancoras": 1,
+            "abertura": "QUANT",
+            "abertura_freq": 17,
             "eliminado": false
           }
         ],
         "uso": {
-          "prompt_tokens": 2733,
-          "completion_tokens": 198,
+          "prompt_tokens": 3615,
+          "completion_tokens": 186,
           "cache_hit_tokens": 0,
-          "cache_miss_tokens": 2733
+          "cache_miss_tokens": 3615
         },
-        "latencia_s": 7.99
+        "latencia_s": 7.87
       }
     },
     "everything-everywhere-all-at-once": {
@@ -16911,47 +17003,58 @@ window.ESPECTRO_DATA = {
         "n_chamadas": 3,
         "prefixo_codigo": "",
         "retry": null,
-        "spec_version": "1.9.21",
-        "texto": "Cerca de metade dos que recomendam destaca o impacto emocional voltado à esperança e aos laços familiares. Em contrapartida, a maioria dos que não recomendam considera essa dinâmica familiar forçada no roteiro, apontando ainda superficialidade na crítica social e previsibilidade no desfecho.",
-        "texto_modelo": "Cerca de metade dos que recomendam destaca o impacto emocional voltado à esperança e aos laços familiares. Em contrapartida, a maioria dos que não recomendam considera essa dinâmica familiar forçada no roteiro, apontando ainda superficialidade na crítica social e previsibilidade no desfecho.",
+        "spec_version": "1.9.22",
+        "texto": "Cerca de metade de quem recomenda ressalta o impacto emocional ao abordar superação, laços familiares e esperança. Em contrapartida, a maioria dos que não recomendam critica o roteiro por alegorias familiares artificiais, além de apontar pouca profundidade no teor social e um desfecho previsível.",
+        "texto_modelo": "Cerca de metade de quem recomenda ressalta o impacto emocional ao abordar superação, laços familiares e esperança. Em contrapartida, a maioria dos que não recomendam critica o roteiro por alegorias familiares artificiais, além de apontar pouca profundidade no teor social e um desfecho previsível.",
         "origem": "llm",
         "motivo": "melhor_entre_limpos",
-        "criterio_decisivo": "brevidade",
-        "indice_escolhido": 2,
+        "criterio_decisivo": "unico",
+        "abertura": "QUANT",
+        "indice_escolhido": 0,
         "flags": [],
         "candidatos": [
           {
             "indice": 0,
             "n_flags": 0,
             "flags": [],
-            "n_palavras": 47,
+            "n_palavras": 44,
             "n_ancoras": 3,
+            "abertura": "QUANT",
+            "abertura_freq": 17,
             "eliminado": false
           },
           {
             "indice": 1,
-            "n_flags": 0,
-            "flags": [],
-            "n_palavras": 46,
-            "n_ancoras": 3,
-            "eliminado": false
+            "n_flags": 1,
+            "flags": [
+              "tema_ausente"
+            ],
+            "n_palavras": 47,
+            "n_ancoras": 2,
+            "abertura": "QUANT",
+            "abertura_freq": 17,
+            "eliminado": true
           },
           {
             "indice": 2,
-            "n_flags": 0,
-            "flags": [],
-            "n_palavras": 42,
-            "n_ancoras": 3,
-            "eliminado": false
+            "n_flags": 1,
+            "flags": [
+              "tema_ausente"
+            ],
+            "n_palavras": 45,
+            "n_ancoras": 2,
+            "abertura": "QUANT",
+            "abertura_freq": 17,
+            "eliminado": true
           }
         ],
         "uso": {
-          "prompt_tokens": 2724,
-          "completion_tokens": 209,
+          "prompt_tokens": 3606,
+          "completion_tokens": 211,
           "cache_hit_tokens": 0,
-          "cache_miss_tokens": 2724
+          "cache_miss_tokens": 3606
         },
-        "latencia_s": 10.03
+        "latencia_s": 10.8
       }
     },
     "friday-the-13th-2009": {
@@ -18216,47 +18319,56 @@ window.ESPECTRO_DATA = {
         "n_chamadas": 3,
         "prefixo_codigo": "O meio-termo é o maior grupo da recepção (~41% das notas). ",
         "retry": null,
-        "spec_version": "1.9.21",
-        "texto": "O meio-termo é o maior grupo da recepção (~41% das notas). As opiniões divergem sobre o funcionamento do roteiro e o resgate da franquia: a maioria dos que recomendam vê a produção como uma releitura eficiente das obras originais, enquanto cerca de metade dos que reprovam aponta figuras sem personalidade e atitudes sem sentido ao longo da narrativa.",
-        "texto_modelo": "As opiniões divergem sobre o funcionamento do roteiro e o resgate da franquia: a maioria dos que recomendam vê a produção como uma releitura eficiente das obras originais, enquanto cerca de metade dos que reprovam aponta figuras sem personalidade e atitudes sem sentido ao longo da narrativa.",
+        "spec_version": "1.9.22",
+        "texto": "O meio-termo é o maior grupo da recepção (~41% das notas). As visões divergem na avaliação do roteiro e de sua relação com o material clássico. Enquanto a maioria dos que aprovam valoriza a estrutura e defende a refilmagem, cerca de metade dos insatisfeitos critica escolhas tolas de personagens genéricos, e a maioria ponderada o vê como uma síntese competente dos originais.",
+        "texto_modelo": "As visões divergem na avaliação do roteiro e de sua relação com o material clássico. Enquanto a maioria dos que aprovam valoriza a estrutura e defende a refilmagem, cerca de metade dos insatisfeitos critica escolhas tolas de personagens genéricos, e a maioria ponderada o vê como uma síntese competente dos originais.",
         "origem": "llm",
         "motivo": "melhor_entre_limpos",
-        "criterio_decisivo": "brevidade",
-        "indice_escolhido": 2,
+        "criterio_decisivo": "abertura",
+        "abertura": "visoe",
+        "indice_escolhido": 1,
         "flags": [],
         "candidatos": [
           {
             "indice": 0,
             "n_flags": 0,
             "flags": [],
-            "n_palavras": 49,
+            "n_palavras": 46,
             "n_ancoras": 1,
+            "abertura": "opini",
+            "abertura_freq": 5,
             "eliminado": false
           },
           {
             "indice": 1,
             "n_flags": 0,
             "flags": [],
-            "n_palavras": 50,
+            "n_palavras": 51,
             "n_ancoras": 1,
+            "abertura": "visoe",
+            "abertura_freq": 0,
             "eliminado": false
           },
           {
             "indice": 2,
-            "n_flags": 0,
-            "flags": [],
-            "n_palavras": 47,
-            "n_ancoras": 1,
-            "eliminado": false
+            "n_flags": 1,
+            "flags": [
+              "formato_invalido"
+            ],
+            "n_palavras": 49,
+            "n_ancoras": 2,
+            "abertura": "disco",
+            "abertura_freq": 0,
+            "eliminado": true
           }
         ],
         "uso": {
-          "prompt_tokens": 3132,
-          "completion_tokens": 209,
+          "prompt_tokens": 4014,
+          "completion_tokens": 221,
           "cache_hit_tokens": 0,
-          "cache_miss_tokens": 3132
+          "cache_miss_tokens": 4014
         },
-        "latencia_s": 15.37
+        "latencia_s": 19.08
       }
     },
     "hereditary": {
@@ -19521,47 +19633,56 @@ window.ESPECTRO_DATA = {
         "n_chamadas": 3,
         "prefixo_codigo": "",
         "retry": null,
-        "spec_version": "1.9.21",
-        "texto": "Enquanto muitos dos que recomendam o filme baseiam suas impressões em comparações, cerca de metade dos que não recomendam aponta o andamento excessivamente lento e a sensação de tédio como o principal incômodo.",
-        "texto_modelo": "Enquanto muitos dos que recomendam o filme baseiam suas impressões em comparações, cerca de metade dos que não recomendam aponta o andamento excessivamente lento e a sensação de tédio como o principal incômodo.",
+        "spec_version": "1.9.22",
+        "texto": "Entre os que recomendam, muitos centram suas análises em comparações. Em contrapartida, cerca de metade dos que não recomendam rejeita a produção pelo andamento arrastado e pela sensação de monotonia.",
+        "texto_modelo": "Entre os que recomendam, muitos centram suas análises em comparações. Em contrapartida, cerca de metade dos que não recomendam rejeita a produção pelo andamento arrastado e pela sensação de monotonia.",
         "origem": "llm",
         "motivo": "melhor_entre_limpos",
-        "criterio_decisivo": "ancoras",
-        "indice_escolhido": 0,
+        "criterio_decisivo": "abertura",
+        "abertura": "recom",
+        "indice_escolhido": 2,
         "flags": [],
         "candidatos": [
           {
             "indice": 0,
             "n_flags": 0,
             "flags": [],
-            "n_palavras": 33,
-            "n_ancoras": 2,
+            "n_palavras": 31,
+            "n_ancoras": 1,
+            "abertura": "QUANT",
+            "abertura_freq": 17,
             "eliminado": false
           },
           {
             "indice": 1,
-            "n_flags": 0,
-            "flags": [],
-            "n_palavras": 47,
-            "n_ancoras": 1,
-            "eliminado": false
+            "n_flags": 1,
+            "flags": [
+              "tema_ausente"
+            ],
+            "n_palavras": 37,
+            "n_ancoras": 2,
+            "abertura": "QUANT",
+            "abertura_freq": 17,
+            "eliminado": true
           },
           {
             "indice": 2,
             "n_flags": 0,
             "flags": [],
-            "n_palavras": 34,
+            "n_palavras": 30,
             "n_ancoras": 1,
+            "abertura": "recom",
+            "abertura_freq": 0,
             "eliminado": false
           }
         ],
         "uso": {
-          "prompt_tokens": 2634,
-          "completion_tokens": 180,
+          "prompt_tokens": 3516,
+          "completion_tokens": 166,
           "cache_hit_tokens": 0,
-          "cache_miss_tokens": 2634
+          "cache_miss_tokens": 3516
         },
-        "latencia_s": 8.73
+        "latencia_s": 11.36
       }
     },
     "im-still-here-2024": {
@@ -20833,13 +20954,14 @@ window.ESPECTRO_DATA = {
         "n_chamadas": 3,
         "prefixo_codigo": "",
         "retry": null,
-        "spec_version": "1.9.21",
-        "texto": "A divergência sobre o filme concentra-se na eficácia de seu comentário social. Enquanto a maioria dos que recomendam valoriza a representação do regime militar, cerca de metade dos que não indicam a produção aponta pouca densidade nas questões políticas abordadas.",
-        "texto_modelo": "A divergência sobre o filme concentra-se na eficácia de seu comentário social. Enquanto a maioria dos que recomendam valoriza a representação do regime militar, cerca de metade dos que não indicam a produção aponta pouca densidade nas questões políticas abordadas.",
+        "spec_version": "1.9.22",
+        "texto": "O debate gira em torno da crítica social do filme: a maioria dos que recomendam exalta a reconstituição da ditadura militar, ao passo que cerca de metade dos que não recomendam vê superficialidade no tratamento das questões políticas.",
+        "texto_modelo": "O debate gira em torno da crítica social do filme: a maioria dos que recomendam exalta a reconstituição da ditadura militar, ao passo que cerca de metade dos que não recomendam vê superficialidade no tratamento das questões políticas.",
         "origem": "llm",
         "motivo": "melhor_entre_limpos",
-        "criterio_decisivo": "brevidade",
-        "indice_escolhido": 2,
+        "criterio_decisivo": "abertura",
+        "abertura": "debat",
+        "indice_escolhido": 1,
         "flags": [],
         "candidatos": [
           {
@@ -20848,34 +20970,38 @@ window.ESPECTRO_DATA = {
             "flags": [],
             "n_palavras": 41,
             "n_ancoras": 1,
+            "abertura": "diver",
+            "abertura_freq": 7,
             "eliminado": false
           },
           {
             "indice": 1,
-            "n_flags": 1,
-            "flags": [
-              "tema_ausente"
-            ],
-            "n_palavras": 41,
+            "n_flags": 0,
+            "flags": [],
+            "n_palavras": 38,
             "n_ancoras": 1,
-            "eliminado": true
+            "abertura": "debat",
+            "abertura_freq": 0,
+            "eliminado": false
           },
           {
             "indice": 2,
             "n_flags": 0,
             "flags": [],
-            "n_palavras": 40,
+            "n_palavras": 45,
             "n_ancoras": 1,
+            "abertura": "opini",
+            "abertura_freq": 6,
             "eliminado": false
           }
         ],
         "uso": {
-          "prompt_tokens": 2742,
-          "completion_tokens": 185,
+          "prompt_tokens": 3624,
+          "completion_tokens": 179,
           "cache_hit_tokens": 0,
-          "cache_miss_tokens": 2742
+          "cache_miss_tokens": 3624
         },
-        "latencia_s": 14.96
+        "latencia_s": 9.51
       }
     },
     "interstellar": {
@@ -22141,21 +22267,24 @@ window.ESPECTRO_DATA = {
         "n_chamadas": 3,
         "prefixo_codigo": "",
         "retry": null,
-        "spec_version": "1.9.21",
-        "texto": "A maioria dos que recomendam destaca a ambição e a complexidade do texto. Por outro lado, cerca de metade dos que não recomendam aponta fragilidades na trama e falas artificiais, trazendo também queixas exclusivas sobre o fraco desempenho do elenco e a construção dos personagens.",
-        "texto_modelo": "A maioria dos que recomendam destaca a ambição e a complexidade do texto. Por outro lado, cerca de metade dos que não recomendam aponta fragilidades na trama e falas artificiais, trazendo também queixas exclusivas sobre o fraco desempenho do elenco e a construção dos personagens.",
+        "spec_version": "1.9.22",
+        "texto": "A maioria dos que recomendam destaca o texto ambicioso e complexo da trama. Em contrapartida, cerca de metade dos que não recomendam aponta fragilidades no enredo e falas artificiais, além de criticar a construção dos personagens e o desempenho do elenco.",
+        "texto_modelo": "A maioria dos que recomendam destaca o texto ambicioso e complexo da trama. Em contrapartida, cerca de metade dos que não recomendam aponta fragilidades no enredo e falas artificiais, além de criticar a construção dos personagens e o desempenho do elenco.",
         "origem": "llm",
         "motivo": "melhor_entre_limpos",
-        "criterio_decisivo": "empate",
-        "indice_escolhido": 0,
+        "criterio_decisivo": "brevidade",
+        "abertura": "QUANT",
+        "indice_escolhido": 1,
         "flags": [],
         "candidatos": [
           {
             "indice": 0,
             "n_flags": 0,
             "flags": [],
-            "n_palavras": 45,
-            "n_ancoras": 2,
+            "n_palavras": 43,
+            "n_ancoras": 1,
+            "abertura": "QUANT",
+            "abertura_freq": 17,
             "eliminado": false
           },
           {
@@ -22164,24 +22293,28 @@ window.ESPECTRO_DATA = {
             "flags": [],
             "n_palavras": 41,
             "n_ancoras": 1,
+            "abertura": "QUANT",
+            "abertura_freq": 17,
             "eliminado": false
           },
           {
             "indice": 2,
             "n_flags": 0,
             "flags": [],
-            "n_palavras": 45,
-            "n_ancoras": 2,
+            "n_palavras": 44,
+            "n_ancoras": 1,
+            "abertura": "QUANT",
+            "abertura_freq": 17,
             "eliminado": false
           }
         ],
         "uso": {
-          "prompt_tokens": 2733,
-          "completion_tokens": 201,
+          "prompt_tokens": 3615,
+          "completion_tokens": 197,
           "cache_hit_tokens": 0,
-          "cache_miss_tokens": 2733
+          "cache_miss_tokens": 3615
         },
-        "latencia_s": 7.55
+        "latencia_s": 9.31
       }
     },
     "joker-folie-a-deux": {
@@ -23443,21 +23576,24 @@ window.ESPECTRO_DATA = {
         "n_chamadas": 3,
         "prefixo_codigo": "",
         "retry": null,
-        "spec_version": "1.9.21",
-        "texto": "A maioria dos que recomendam a obra destaca comparações com outros títulos e valoriza o impacto do desfecho narrativo. Por outro lado, cerca de metade dos que não recomendam aponta fragilidades estruturais no roteiro e falta de desenvolvimento da história.",
-        "texto_modelo": "A maioria dos que recomendam a obra destaca comparações com outros títulos e valoriza o impacto do desfecho narrativo. Por outro lado, cerca de metade dos que não recomendam aponta fragilidades estruturais no roteiro e falta de desenvolvimento da história.",
+        "spec_version": "1.9.22",
+        "texto": "Enquanto a maioria dos que recomendam apoia sua avaliação em comparações com outras produções, cerca de metade dos que não recomendam aponta fragilidades no texto e ausência de desenvolvimento na trama.",
+        "texto_modelo": "Enquanto a maioria dos que recomendam apoia sua avaliação em comparações com outras produções, cerca de metade dos que não recomendam aponta fragilidades no texto e ausência de desenvolvimento na trama.",
         "origem": "llm",
         "motivo": "melhor_entre_limpos",
-        "criterio_decisivo": "empate",
-        "indice_escolhido": 0,
+        "criterio_decisivo": "brevidade",
+        "abertura": "QUANT",
+        "indice_escolhido": 2,
         "flags": [],
         "candidatos": [
           {
             "indice": 0,
             "n_flags": 0,
             "flags": [],
-            "n_palavras": 40,
-            "n_ancoras": 2,
+            "n_palavras": 36,
+            "n_ancoras": 1,
+            "abertura": "QUANT",
+            "abertura_freq": 17,
             "eliminado": false
           },
           {
@@ -23465,25 +23601,29 @@ window.ESPECTRO_DATA = {
             "n_flags": 0,
             "flags": [],
             "n_palavras": 36,
-            "n_ancoras": 0,
+            "n_ancoras": 1,
+            "abertura": "QUANT",
+            "abertura_freq": 17,
             "eliminado": false
           },
           {
             "indice": 2,
             "n_flags": 0,
             "flags": [],
-            "n_palavras": 44,
-            "n_ancoras": 2,
+            "n_palavras": 31,
+            "n_ancoras": 1,
+            "abertura": "QUANT",
+            "abertura_freq": 17,
             "eliminado": false
           }
         ],
         "uso": {
-          "prompt_tokens": 2673,
-          "completion_tokens": 185,
+          "prompt_tokens": 3555,
+          "completion_tokens": 165,
           "cache_hit_tokens": 0,
-          "cache_miss_tokens": 2673
+          "cache_miss_tokens": 3555
         },
-        "latencia_s": 10.86
+        "latencia_s": 11.9
       }
     },
     "longlegs": {
@@ -24748,13 +24888,14 @@ window.ESPECTRO_DATA = {
         "n_chamadas": 3,
         "prefixo_codigo": "",
         "retry": null,
-        "spec_version": "1.9.21",
-        "texto": "A divergência central está na construção da história: enquanto a maioria dos que recomendam valoriza o desenvolvimento da trama e o clima de tensão, a maioria dos que não recomendam aponta que a narrativa se torna confusa e sem coerência.",
-        "texto_modelo": "A divergência central está na construção da história: enquanto a maioria dos que recomendam valoriza o desenvolvimento da trama e o clima de tensão, a maioria dos que não recomendam aponta que a narrativa se torna confusa e sem coerência.",
+        "spec_version": "1.9.22",
+        "texto": "A divergência central está na qualidade do roteiro: a maioria dos que recomendam valoriza o desenvolvimento da narrativa e a atmosfera de tensão, enquanto a maioria dos que desaprovam considera a trama confusa e destituída de lógica.",
+        "texto_modelo": "A divergência central está na qualidade do roteiro: a maioria dos que recomendam valoriza o desenvolvimento da narrativa e a atmosfera de tensão, enquanto a maioria dos que desaprovam considera a trama confusa e destituída de lógica.",
         "origem": "llm",
         "motivo": "melhor_entre_limpos",
-        "criterio_decisivo": "brevidade",
-        "indice_escolhido": 0,
+        "criterio_decisivo": "ancoras",
+        "abertura": "diver",
+        "indice_escolhido": 2,
         "flags": [],
         "candidatos": [
           {
@@ -24763,32 +24904,38 @@ window.ESPECTRO_DATA = {
             "flags": [],
             "n_palavras": 40,
             "n_ancoras": 1,
+            "abertura": "opini",
+            "abertura_freq": 6,
             "eliminado": false
           },
           {
             "indice": 1,
             "n_flags": 0,
             "flags": [],
-            "n_palavras": 45,
-            "n_ancoras": 1,
+            "n_palavras": 44,
+            "n_ancoras": 0,
+            "abertura": "opini",
+            "abertura_freq": 6,
             "eliminado": false
           },
           {
             "indice": 2,
             "n_flags": 0,
             "flags": [],
-            "n_palavras": 43,
-            "n_ancoras": 1,
+            "n_palavras": 37,
+            "n_ancoras": 2,
+            "abertura": "diver",
+            "abertura_freq": 7,
             "eliminado": false
           }
         ],
         "uso": {
-          "prompt_tokens": 2757,
-          "completion_tokens": 186,
+          "prompt_tokens": 3639,
+          "completion_tokens": 180,
           "cache_hit_tokens": 0,
-          "cache_miss_tokens": 2757
+          "cache_miss_tokens": 3639
         },
-        "latencia_s": 10.83
+        "latencia_s": 11.63
       }
     },
     "mother-2017": {
@@ -26058,49 +26205,56 @@ window.ESPECTRO_DATA = {
         "n_chamadas": 3,
         "prefixo_codigo": "",
         "retry": null,
-        "spec_version": "1.9.21",
-        "texto": "As opiniões divergem sobre a eficácia da narrativa e da condução da trama. Enquanto a maioria dos que recomendam destaca a intensidade do texto e seu impacto emocional, a maior parte dos que discordam concentra seus apontamentos exatamente nos problemas de roteiro e estruturação.",
-        "texto_modelo": "As opiniões divergem sobre a eficácia da narrativa e da condução da trama. Enquanto a maioria dos que recomendam destaca a intensidade do texto e seu impacto emocional, a maior parte dos que discordam concentra seus apontamentos exatamente nos problemas de roteiro e estruturação.",
+        "spec_version": "1.9.22",
+        "texto": "A divisão em torno do filme se concentra na construção do roteiro e na sua estrutura. Enquanto a maioria dos que recomendam exalta a intensidade do texto e da condução da história, a maioria dos que não recomendam discorda do resultado dessa mesma condução narrativa.",
+        "texto_modelo": "A divisão em torno do filme se concentra na construção do roteiro e na sua estrutura. Enquanto a maioria dos que recomendam exalta a intensidade do texto e da condução da história, a maioria dos que não recomendam discorda do resultado dessa mesma condução narrativa.",
         "origem": "llm",
         "motivo": "melhor_entre_limpos",
-        "criterio_decisivo": "ancoras",
-        "indice_escolhido": 1,
+        "criterio_decisivo": "abertura",
+        "abertura": "divis",
+        "indice_escolhido": 2,
         "flags": [],
         "candidatos": [
           {
             "indice": 0,
-            "n_flags": 0,
-            "flags": [],
-            "n_palavras": 45,
+            "n_flags": 1,
+            "flags": [
+              "tema_ausente"
+            ],
+            "n_palavras": 39,
             "n_ancoras": 1,
-            "eliminado": false
+            "abertura": "diver",
+            "abertura_freq": 8,
+            "eliminado": true
           },
           {
             "indice": 1,
             "n_flags": 0,
             "flags": [],
-            "n_palavras": 44,
-            "n_ancoras": 2,
+            "n_palavras": 39,
+            "n_ancoras": 1,
+            "abertura": "diver",
+            "abertura_freq": 8,
             "eliminado": false
           },
           {
             "indice": 2,
-            "n_flags": 1,
-            "flags": [
-              "tema_ausente"
-            ],
-            "n_palavras": 44,
+            "n_flags": 0,
+            "flags": [],
+            "n_palavras": 45,
             "n_ancoras": 1,
-            "eliminado": true
+            "abertura": "divis",
+            "abertura_freq": 0,
+            "eliminado": false
           }
         ],
         "uso": {
-          "prompt_tokens": 2649,
-          "completion_tokens": 189,
+          "prompt_tokens": 3531,
+          "completion_tokens": 171,
           "cache_hit_tokens": 0,
-          "cache_miss_tokens": 2649
+          "cache_miss_tokens": 3531
         },
-        "latencia_s": 8.92
+        "latencia_s": 8.35
       }
     },
     "napoleon-2023": {
@@ -27327,47 +27481,54 @@ window.ESPECTRO_DATA = {
         "n_chamadas": 3,
         "prefixo_codigo": "O meio-termo é o maior grupo da recepção (~45% das notas). ",
         "retry": null,
-        "spec_version": "1.9.21",
-        "texto": "O meio-termo é o maior grupo da recepção (~45% das notas). Enquanto muitos dos que recomendam centram suas avaliações em comparações, a maioria dos que rejeitam a obra questiona a caracterização de Napoleão e o impacto emocional. Já as opiniões intermediárias destacam a duração arrastada e a atenção dedicada à relação com Josefina.",
-        "texto_modelo": "Enquanto muitos dos que recomendam centram suas avaliações em comparações, a maioria dos que rejeitam a obra questiona a caracterização de Napoleão e o impacto emocional. Já as opiniões intermediárias destacam a duração arrastada e a atenção dedicada à relação com Josefina.",
+        "spec_version": "1.9.22",
+        "texto": "O meio-termo é o maior grupo da recepção (~45% das notas). Enquanto muitos que recomendam baseiam-se em comparações, a maioria dos que reprovam questiona a representação de Napoleão e aponta o impacto emocional. No meio-termo, cerca de metade aborda a ênfase no relacionamento com Josefina, trazendo também ressalvas ao ritmo e à duração extensa.",
+        "texto_modelo": "Enquanto muitos que recomendam baseiam-se em comparações, a maioria dos que reprovam questiona a representação de Napoleão e aponta o impacto emocional. No meio-termo, cerca de metade aborda a ênfase no relacionamento com Josefina, trazendo também ressalvas ao ritmo e à duração extensa.",
         "origem": "llm",
         "motivo": "melhor_entre_limpos",
         "criterio_decisivo": "brevidade",
-        "indice_escolhido": 1,
+        "abertura": "QUANT",
+        "indice_escolhido": 2,
         "flags": [],
         "candidatos": [
           {
             "indice": 0,
             "n_flags": 0,
             "flags": [],
-            "n_palavras": 46,
-            "n_ancoras": 4,
+            "n_palavras": 51,
+            "n_ancoras": 3,
+            "abertura": "QUANT",
+            "abertura_freq": 17,
             "eliminado": false
           },
           {
             "indice": 1,
             "n_flags": 0,
             "flags": [],
-            "n_palavras": 42,
-            "n_ancoras": 3,
+            "n_palavras": 46,
+            "n_ancoras": 4,
+            "abertura": "QUANT",
+            "abertura_freq": 17,
             "eliminado": false
           },
           {
             "indice": 2,
             "n_flags": 0,
             "flags": [],
-            "n_palavras": 46,
+            "n_palavras": 43,
             "n_ancoras": 4,
+            "abertura": "QUANT",
+            "abertura_freq": 17,
             "eliminado": false
           }
         ],
         "uso": {
-          "prompt_tokens": 2979,
-          "completion_tokens": 222,
+          "prompt_tokens": 3861,
+          "completion_tokens": 227,
           "cache_hit_tokens": 0,
-          "cache_miss_tokens": 2979
+          "cache_miss_tokens": 3861
         },
-        "latencia_s": 12.39
+        "latencia_s": 11.74
       }
     },
     "obsession-2026": {
@@ -28602,50 +28763,69 @@ window.ESPECTRO_DATA = {
         "provider": "gemini",
         "modelo": "gemini-3.7-flash",
         "n_candidatos": 3,
-        "n_chamadas": 3,
+        "n_chamadas": 4,
         "prefixo_codigo": "",
-        "retry": null,
-        "spec_version": "1.9.21",
-        "texto": "Relatos favoráveis tendem a valorizar a estética visual e a fotografia, apontando também uma trama inteligente e bem construída. Em contrapartida, avaliações negativas costumam apontar fragilidades e confusão no roteiro, indicando percepções divididas sobre o desenvolvimento da narrativa.",
-        "texto_modelo": "Relatos favoráveis tendem a valorizar a estética visual e a fotografia, apontando também uma trama inteligente e bem construída. Em contrapartida, avaliações negativas costumam apontar fragilidades e confusão no roteiro, indicando percepções divididas sobre o desenvolvimento da narrativa.",
+        "retry": {
+          "flags_antes": [
+            "quantificador_divergente"
+          ],
+          "flags_depois": [],
+          "aplicado": true
+        },
+        "spec_version": "1.9.22",
+        "texto": "Em uma amostra reduzida de avaliações, a maioria dos que recomendam destaca o trabalho visual e a condução narrativa engenhosa. Em contrapartida, a maioria dos que não recomendam aponta fragilidades e falta de coesão no desenvolvimento da história.",
+        "texto_modelo": "Em uma amostra reduzida de avaliações, a maioria dos que recomendam destaca o trabalho visual e a condução narrativa engenhosa. Em contrapartida, a maioria dos que não recomendam aponta fragilidades e falta de coesão no desenvolvimento da história.",
         "origem": "llm",
-        "motivo": "melhor_entre_limpos",
-        "criterio_decisivo": "brevidade",
-        "indice_escolhido": 0,
+        "motivo": "retry_direcionado",
+        "criterio_decisivo": "empate",
+        "abertura": "numa",
+        "indice_escolhido": 2,
         "flags": [],
         "candidatos": [
           {
             "indice": 0,
-            "n_flags": 0,
-            "flags": [],
-            "n_palavras": 38,
-            "n_ancoras": 2,
-            "eliminado": false
+            "n_flags": 1,
+            "flags": [
+              "quantificador_divergente"
+            ],
+            "n_palavras": 41,
+            "n_ancoras": 0,
+            "abertura": "conju",
+            "abertura_freq": 0,
+            "eliminado": true
           },
           {
             "indice": 1,
-            "n_flags": 0,
-            "flags": [],
-            "n_palavras": 40,
-            "n_ancoras": 0,
-            "eliminado": false
+            "n_flags": 1,
+            "flags": [
+              "quantificador_divergente"
+            ],
+            "n_palavras": 43,
+            "n_ancoras": 1,
+            "abertura": "QUANT",
+            "abertura_freq": 18,
+            "eliminado": true
           },
           {
             "indice": 2,
-            "n_flags": 0,
-            "flags": [],
+            "n_flags": 1,
+            "flags": [
+              "quantificador_divergente"
+            ],
             "n_palavras": 43,
-            "n_ancoras": 2,
-            "eliminado": false
+            "n_ancoras": 1,
+            "abertura": "numa",
+            "abertura_freq": 0,
+            "eliminado": true
           }
         ],
         "uso": {
-          "prompt_tokens": 2859,
-          "completion_tokens": 208,
+          "prompt_tokens": 4854,
+          "completion_tokens": 271,
           "cache_hit_tokens": 0,
-          "cache_miss_tokens": 2859
+          "cache_miss_tokens": 4854
         },
-        "latencia_s": 35.21
+        "latencia_s": 11.73
       }
     },
     "oppenheimer-2023": {
@@ -29918,49 +30098,56 @@ window.ESPECTRO_DATA = {
         "n_chamadas": 3,
         "prefixo_codigo": "",
         "retry": null,
-        "spec_version": "1.9.21",
-        "texto": "A divergência central está na avaliação da mesma estrutura e andamento. Cerca de metade dos que recomendam aprecia a trama complexa e não linear, enquanto cerca de metade dos que desaprovam vê a condução como confusa, arrastada e excessivamente longa.",
-        "texto_modelo": "A divergência central está na avaliação da mesma estrutura e andamento. Cerca de metade dos que recomendam aprecia a trama complexa e não linear, enquanto cerca de metade dos que desaprovam vê a condução como confusa, arrastada e excessivamente longa.",
+        "spec_version": "1.9.22",
+        "texto": "As opiniões divergem no valor atribuído à construção da trama: cerca de metade de quem recomenda valoriza a narrativa intrincada e não linear, enquanto cerca de metade dos que não recomendam critica o andamento arrastado e considera a escrita confusa e pedante.",
+        "texto_modelo": "As opiniões divergem no valor atribuído à construção da trama: cerca de metade de quem recomenda valoriza a narrativa intrincada e não linear, enquanto cerca de metade dos que não recomendam critica o andamento arrastado e considera a escrita confusa e pedante.",
         "origem": "llm",
         "motivo": "melhor_entre_limpos",
         "criterio_decisivo": "brevidade",
-        "indice_escolhido": 0,
+        "abertura": "opini",
+        "indice_escolhido": 2,
         "flags": [],
         "candidatos": [
           {
             "indice": 0,
             "n_flags": 0,
             "flags": [],
-            "n_palavras": 40,
+            "n_palavras": 46,
             "n_ancoras": 1,
+            "abertura": "opini",
+            "abertura_freq": 6,
             "eliminado": false
           },
           {
             "indice": 1,
-            "n_flags": 0,
-            "flags": [],
-            "n_palavras": 46,
-            "n_ancoras": 1,
-            "eliminado": false
-          },
-          {
-            "indice": 2,
             "n_flags": 1,
             "flags": [
               "formato_invalido"
             ],
-            "n_palavras": 48,
-            "n_ancoras": 2,
+            "n_palavras": 49,
+            "n_ancoras": 1,
+            "abertura": "opini",
+            "abertura_freq": 6,
             "eliminado": true
+          },
+          {
+            "indice": 2,
+            "n_flags": 0,
+            "flags": [],
+            "n_palavras": 42,
+            "n_ancoras": 1,
+            "abertura": "opini",
+            "abertura_freq": 6,
+            "eliminado": false
           }
         ],
         "uso": {
-          "prompt_tokens": 2772,
-          "completion_tokens": 211,
+          "prompt_tokens": 3654,
+          "completion_tokens": 227,
           "cache_hit_tokens": 0,
-          "cache_miss_tokens": 2772
+          "cache_miss_tokens": 3654
         },
-        "latencia_s": 10.75
+        "latencia_s": 11.99
       }
     },
     "parasite-2019": {
@@ -31236,12 +31423,13 @@ window.ESPECTRO_DATA = {
         "n_chamadas": 3,
         "prefixo_codigo": "",
         "retry": null,
-        "spec_version": "1.9.21",
-        "texto": "As opiniões divergem diretamente sobre a estrutura do roteiro. A maioria dos que recomendam aprecia as viradas e o desenrolar da trama, enquanto muitos dos que não recomendam consideram a história sem lógica e desmedida.",
-        "texto_modelo": "As opiniões divergem diretamente sobre a estrutura do roteiro. A maioria dos que recomendam aprecia as viradas e o desenrolar da trama, enquanto muitos dos que não recomendam consideram a história sem lógica e desmedida.",
+        "spec_version": "1.9.22",
+        "texto": "As opiniões divergem sobre a eficácia da narrativa e sua construção. Enquanto a maioria dos que recomendam elogia o roteiro e a dinâmica das suas reviravoltas, muitos entre os que desaprovam apontam que a trama se torna sem sentido e exagerada.",
+        "texto_modelo": "As opiniões divergem sobre a eficácia da narrativa e sua construção. Enquanto a maioria dos que recomendam elogia o roteiro e a dinâmica das suas reviravoltas, muitos entre os que desaprovam apontam que a trama se torna sem sentido e exagerada.",
         "origem": "llm",
         "motivo": "melhor_entre_limpos",
-        "criterio_decisivo": "ancoras",
+        "criterio_decisivo": "abertura",
+        "abertura": "opini",
         "indice_escolhido": 0,
         "flags": [],
         "candidatos": [
@@ -31249,34 +31437,40 @@ window.ESPECTRO_DATA = {
             "indice": 0,
             "n_flags": 0,
             "flags": [],
-            "n_palavras": 35,
+            "n_palavras": 41,
             "n_ancoras": 1,
+            "abertura": "opini",
+            "abertura_freq": 5,
             "eliminado": false
           },
           {
             "indice": 1,
             "n_flags": 0,
             "flags": [],
-            "n_palavras": 38,
+            "n_palavras": 36,
             "n_ancoras": 0,
+            "abertura": "diver",
+            "abertura_freq": 8,
             "eliminado": false
           },
           {
             "indice": 2,
             "n_flags": 0,
             "flags": [],
-            "n_palavras": 39,
-            "n_ancoras": 0,
+            "n_palavras": 34,
+            "n_ancoras": 1,
+            "abertura": "diver",
+            "abertura_freq": 8,
             "eliminado": false
           }
         ],
         "uso": {
-          "prompt_tokens": 2784,
-          "completion_tokens": 176,
+          "prompt_tokens": 3666,
+          "completion_tokens": 182,
           "cache_hit_tokens": 0,
-          "cache_miss_tokens": 2784
+          "cache_miss_tokens": 3666
         },
-        "latencia_s": 10.89
+        "latencia_s": 10.59
       }
     },
     "pearl-2022": {
@@ -32552,24 +32746,25 @@ window.ESPECTRO_DATA = {
         "n_chamadas": 3,
         "prefixo_codigo": "",
         "retry": null,
-        "spec_version": "1.9.21",
-        "texto": "As opiniões divergem sobre a eficácia do roteiro e de sua estrutura. Enquanto cerca de metade das avaliações favoráveis destaca o impacto do discurso de encerramento, impressões negativas pontuais apontam desconforto com a postura da figura central da trama.",
-        "texto_modelo": "As opiniões divergem sobre a eficácia do roteiro e de sua estrutura. Enquanto cerca de metade das avaliações favoráveis destaca o impacto do discurso de encerramento, impressões negativas pontuais apontam desconforto com a postura da figura central da trama.",
+        "spec_version": "1.9.22",
+        "texto": "Numa amostra pequena, cerca de metade dos que não recomendam a obra critica o roteiro pelo incômodo gerado pela figura central. Em contrapartida, cerca de metade dos que aprovam valoriza essa mesma estrutura narrativa, destacando o discurso de encerramento.",
+        "texto_modelo": "Numa amostra pequena, cerca de metade dos que não recomendam a obra critica o roteiro pelo incômodo gerado pela figura central. Em contrapartida, cerca de metade dos que aprovam valoriza essa mesma estrutura narrativa, destacando o discurso de encerramento.",
         "origem": "llm",
         "motivo": "melhor_entre_limpos",
-        "criterio_decisivo": "brevidade",
+        "criterio_decisivo": "abertura",
+        "abertura": "numa",
         "indice_escolhido": 1,
         "flags": [],
         "candidatos": [
           {
             "indice": 0,
-            "n_flags": 1,
-            "flags": [
-              "tema_ausente"
-            ],
-            "n_palavras": 40,
+            "n_flags": 0,
+            "flags": [],
+            "n_palavras": 42,
             "n_ancoras": 1,
-            "eliminado": true
+            "abertura": "diver",
+            "abertura_freq": 8,
+            "eliminado": false
           },
           {
             "indice": 1,
@@ -32577,24 +32772,30 @@ window.ESPECTRO_DATA = {
             "flags": [],
             "n_palavras": 39,
             "n_ancoras": 1,
+            "abertura": "numa",
+            "abertura_freq": 0,
             "eliminado": false
           },
           {
             "indice": 2,
-            "n_flags": 0,
-            "flags": [],
-            "n_palavras": 41,
+            "n_flags": 1,
+            "flags": [
+              "quantificador_divergente"
+            ],
+            "n_palavras": 39,
             "n_ancoras": 1,
-            "eliminado": false
+            "abertura": "diver",
+            "abertura_freq": 8,
+            "eliminado": true
           }
         ],
         "uso": {
-          "prompt_tokens": 2811,
-          "completion_tokens": 203,
+          "prompt_tokens": 3693,
+          "completion_tokens": 187,
           "cache_hit_tokens": 0,
-          "cache_miss_tokens": 2811
+          "cache_miss_tokens": 3693
         },
-        "latencia_s": 12.11
+        "latencia_s": 11.71
       }
     },
     "perfect-days-2023": {
@@ -33857,47 +34058,54 @@ window.ESPECTRO_DATA = {
         "n_chamadas": 3,
         "prefixo_codigo": "",
         "retry": null,
-        "spec_version": "1.9.21",
-        "texto": "A maioria dos que não recomendam aponta que o andamento arrastado torna a experiência entediante. Já a maioria dos que recomendam valoriza esse ritmo contemplativo e destaca a sensibilidade ao retratar a beleza da rotina e das coisas simples.",
-        "texto_modelo": "A maioria dos que não recomendam aponta que o andamento arrastado torna a experiência entediante. Já a maioria dos que recomendam valoriza esse ritmo contemplativo e destaca a sensibilidade ao retratar a beleza da rotina e das coisas simples.",
+        "spec_version": "1.9.22",
+        "texto": "A maioria dos que não recomendam a produção destaca o andamento excessivamente vagaroso e entediante. Em contrapartida, a maioria dos que recomendam foca na atmosfera, ressaltando o encanto presente na rotina simples e nos detalhes do dia a dia.",
+        "texto_modelo": "A maioria dos que não recomendam a produção destaca o andamento excessivamente vagaroso e entediante. Em contrapartida, a maioria dos que recomendam foca na atmosfera, ressaltando o encanto presente na rotina simples e nos detalhes do dia a dia.",
         "origem": "llm",
         "motivo": "melhor_entre_limpos",
         "criterio_decisivo": "ancoras",
-        "indice_escolhido": 2,
+        "abertura": "QUANT",
+        "indice_escolhido": 0,
         "flags": [],
         "candidatos": [
           {
             "indice": 0,
             "n_flags": 0,
             "flags": [],
-            "n_palavras": 45,
-            "n_ancoras": 0,
+            "n_palavras": 39,
+            "n_ancoras": 1,
+            "abertura": "QUANT",
+            "abertura_freq": 17,
             "eliminado": false
           },
           {
             "indice": 1,
             "n_flags": 0,
             "flags": [],
-            "n_palavras": 38,
+            "n_palavras": 39,
             "n_ancoras": 0,
+            "abertura": "QUANT",
+            "abertura_freq": 17,
             "eliminado": false
           },
           {
             "indice": 2,
             "n_flags": 0,
             "flags": [],
-            "n_palavras": 39,
-            "n_ancoras": 2,
+            "n_palavras": 34,
+            "n_ancoras": 0,
+            "abertura": "QUANT",
+            "abertura_freq": 17,
             "eliminado": false
           }
         ],
         "uso": {
-          "prompt_tokens": 2694,
-          "completion_tokens": 197,
+          "prompt_tokens": 3576,
+          "completion_tokens": 180,
           "cache_hit_tokens": 0,
-          "cache_miss_tokens": 2694
+          "cache_miss_tokens": 3576
         },
-        "latencia_s": 7.79
+        "latencia_s": 10.3
       }
     },
     "shutter-island": {
@@ -35170,49 +35378,54 @@ window.ESPECTRO_DATA = {
         "n_chamadas": 3,
         "prefixo_codigo": "",
         "retry": null,
-        "spec_version": "1.9.21",
-        "texto": "A divergência se concentra no roteiro e na sua estrutura: enquanto a maioria dos que recomendam elogia a condução do mistério, quase todos os que não recomendam consideram as revelações da trama previsíveis e frustrantes.",
-        "texto_modelo": "A divergência se concentra no roteiro e na sua estrutura: enquanto a maioria dos que recomendam elogia a condução do mistério, quase todos os que não recomendam consideram as revelações da trama previsíveis e frustrantes.",
+        "spec_version": "1.9.22",
+        "texto": "As opiniões divergem sobre a eficácia da narrativa e de suas revelações. Enquanto a maioria de quem recomenda valoriza o desenvolvimento do mistério no texto, quase todos entre os que não recomendam acham as reviravoltas previsíveis ou frustrantes.",
+        "texto_modelo": "As opiniões divergem sobre a eficácia da narrativa e de suas revelações. Enquanto a maioria de quem recomenda valoriza o desenvolvimento do mistério no texto, quase todos entre os que não recomendam acham as reviravoltas previsíveis ou frustrantes.",
         "origem": "llm",
         "motivo": "melhor_entre_limpos",
         "criterio_decisivo": "brevidade",
-        "indice_escolhido": 2,
+        "abertura": "opini",
+        "indice_escolhido": 0,
         "flags": [],
         "candidatos": [
           {
             "indice": 0,
-            "n_flags": 1,
-            "flags": [
-              "tema_ausente"
-            ],
-            "n_palavras": 40,
+            "n_flags": 0,
+            "flags": [],
+            "n_palavras": 38,
             "n_ancoras": 1,
-            "eliminado": true
+            "abertura": "opini",
+            "abertura_freq": 6,
+            "eliminado": false
           },
           {
             "indice": 1,
             "n_flags": 0,
             "flags": [],
-            "n_palavras": 45,
+            "n_palavras": 40,
             "n_ancoras": 1,
+            "abertura": "diver",
+            "abertura_freq": 7,
             "eliminado": false
           },
           {
             "indice": 2,
             "n_flags": 0,
             "flags": [],
-            "n_palavras": 35,
+            "n_palavras": 39,
             "n_ancoras": 1,
+            "abertura": "opini",
+            "abertura_freq": 6,
             "eliminado": false
           }
         ],
         "uso": {
-          "prompt_tokens": 2781,
-          "completion_tokens": 187,
+          "prompt_tokens": 3663,
+          "completion_tokens": 184,
           "cache_hit_tokens": 0,
-          "cache_miss_tokens": 2781
+          "cache_miss_tokens": 3663
         },
-        "latencia_s": 9.72
+        "latencia_s": 12.39
       }
     },
     "spider-man-across-the-spider-verse": {
@@ -36486,47 +36699,54 @@ window.ESPECTRO_DATA = {
         "n_chamadas": 3,
         "prefixo_codigo": "",
         "retry": null,
-        "spec_version": "1.9.21",
-        "texto": "A maioria dos que desaprovam o filme se incomoda com a estrutura fragmentada da história e o desfecho pouco conclusivo. Em contrapartida, cerca de metade dos que o defendem valoriza a maneira como a trama desenvolve seus personagens.",
-        "texto_modelo": "A maioria dos que desaprovam o filme se incomoda com a estrutura fragmentada da história e o desfecho pouco conclusivo. Em contrapartida, cerca de metade dos que o defendem valoriza a maneira como a trama desenvolve seus personagens.",
+        "spec_version": "1.9.22",
+        "texto": "A maioria dos que não recomendam aponta que a narrativa é truncada e carece de um desfecho convincente. Em contrapartida, cerca de metade dos que recomendam valoriza a construção e a evolução das personagens ao longo da trama.",
+        "texto_modelo": "A maioria dos que não recomendam aponta que a narrativa é truncada e carece de um desfecho convincente. Em contrapartida, cerca de metade dos que recomendam valoriza a construção e a evolução das personagens ao longo da trama.",
         "origem": "llm",
         "motivo": "melhor_entre_limpos",
-        "criterio_decisivo": "brevidade",
-        "indice_escolhido": 1,
+        "criterio_decisivo": "ancoras",
+        "abertura": "QUANT",
+        "indice_escolhido": 0,
         "flags": [],
         "candidatos": [
           {
             "indice": 0,
             "n_flags": 0,
             "flags": [],
-            "n_palavras": 44,
-            "n_ancoras": 0,
+            "n_palavras": 38,
+            "n_ancoras": 1,
+            "abertura": "QUANT",
+            "abertura_freq": 17,
             "eliminado": false
           },
           {
             "indice": 1,
             "n_flags": 0,
             "flags": [],
-            "n_palavras": 38,
-            "n_ancoras": 1,
+            "n_palavras": 37,
+            "n_ancoras": 0,
+            "abertura": "QUANT",
+            "abertura_freq": 17,
             "eliminado": false
           },
           {
             "indice": 2,
             "n_flags": 0,
             "flags": [],
-            "n_palavras": 39,
-            "n_ancoras": 1,
+            "n_palavras": 40,
+            "n_ancoras": 0,
+            "abertura": "QUANT",
+            "abertura_freq": 17,
             "eliminado": false
           }
         ],
         "uso": {
-          "prompt_tokens": 2700,
-          "completion_tokens": 189,
+          "prompt_tokens": 3582,
+          "completion_tokens": 182,
           "cache_hit_tokens": 0,
-          "cache_miss_tokens": 2700
+          "cache_miss_tokens": 3582
         },
-        "latencia_s": 7.67
+        "latencia_s": 9.11
       }
     },
     "talk-to-me-2022": {
@@ -37800,47 +38020,54 @@ window.ESPECTRO_DATA = {
         "n_chamadas": 3,
         "prefixo_codigo": "",
         "retry": null,
-        "spec_version": "1.9.21",
-        "texto": "A divergência central sobre o roteiro está no impacto das escolhas dos personagens. Enquanto a maioria dos que não recomendam se irrita com as atitudes insensatas do protagonista, a maior parte dos que recomendam considera que essa mesma irracionalidade funciona a favor da trama.",
-        "texto_modelo": "A divergência central sobre o roteiro está no impacto das escolhas dos personagens. Enquanto a maioria dos que não recomendam se irrita com as atitudes insensatas do protagonista, a maior parte dos que recomendam considera que essa mesma irracionalidade funciona a favor da trama.",
+        "spec_version": "1.9.22",
+        "texto": "A discussão se concentra no roteiro e no comportamento insensato dos personagens. A maioria dos que recomendam defende que essas decisões irracionais funcionam dentro da proposta da trama, enquanto a maioria dos que não recomendam avalia a postura irritante dos protagonistas como uma falha que compromete a experiência.",
+        "texto_modelo": "A discussão se concentra no roteiro e no comportamento insensato dos personagens. A maioria dos que recomendam defende que essas decisões irracionais funcionam dentro da proposta da trama, enquanto a maioria dos que não recomendam avalia a postura irritante dos protagonistas como uma falha que compromete a experiência.",
         "origem": "llm",
         "motivo": "melhor_entre_limpos",
-        "criterio_decisivo": "brevidade",
-        "indice_escolhido": 0,
+        "criterio_decisivo": "abertura",
+        "abertura": "discu",
+        "indice_escolhido": 1,
         "flags": [],
         "candidatos": [
           {
             "indice": 0,
             "n_flags": 0,
             "flags": [],
-            "n_palavras": 44,
+            "n_palavras": 45,
             "n_ancoras": 1,
+            "abertura": "diver",
+            "abertura_freq": 7,
             "eliminado": false
           },
           {
             "indice": 1,
             "n_flags": 0,
             "flags": [],
-            "n_palavras": 52,
+            "n_palavras": 48,
             "n_ancoras": 1,
+            "abertura": "discu",
+            "abertura_freq": 0,
             "eliminado": false
           },
           {
             "indice": 2,
             "n_flags": 0,
             "flags": [],
-            "n_palavras": 47,
+            "n_palavras": 49,
             "n_ancoras": 1,
+            "abertura": "diver",
+            "abertura_freq": 7,
             "eliminado": false
           }
         ],
         "uso": {
-          "prompt_tokens": 2787,
-          "completion_tokens": 222,
+          "prompt_tokens": 3669,
+          "completion_tokens": 220,
           "cache_hit_tokens": 0,
-          "cache_miss_tokens": 2787
+          "cache_miss_tokens": 3669
         },
-        "latencia_s": 7.58
+        "latencia_s": 9.73
       }
     },
     "the-godfather": {
@@ -39113,50 +39340,57 @@ window.ESPECTRO_DATA = {
         "n_chamadas": 3,
         "prefixo_codigo": "",
         "retry": null,
-        "spec_version": "1.9.21",
-        "texto": "Enquanto cerca de metade dos que recomendam destaca a evolução de Michael Corleone no roteiro, relatos pontuais apontam que a maioria dos que desaprovam considera a cadência arrastada e tediosa, divergindo sobre o ritmo e preferindo outros filmes ao traçar comparações.",
-        "texto_modelo": "Enquanto cerca de metade dos que recomendam destaca a evolução de Michael Corleone no roteiro, relatos pontuais apontam que a maioria dos que desaprovam considera a cadência arrastada e tediosa, divergindo sobre o ritmo e preferindo outros filmes ao traçar comparações.",
+        "spec_version": "1.9.22",
+        "texto": "As visões convergem sobre os mesmos aspectos da obra e discordam quanto ao seu funcionamento e peso frente a outros filmes. Enquanto cerca de metade de quem recomenda valoriza a evolução do protagonista no roteiro, a maioria dos que não recomendam, numa amostra pequena, critica o andamento arrastado da narrativa.",
+        "texto_modelo": "As visões convergem sobre os mesmos aspectos da obra e discordam quanto ao seu funcionamento e peso frente a outros filmes. Enquanto cerca de metade de quem recomenda valoriza a evolução do protagonista no roteiro, a maioria dos que não recomendam, numa amostra pequena, critica o andamento arrastado da narrativa.",
         "origem": "llm",
         "motivo": "melhor_entre_limpos",
-        "criterio_decisivo": "ancoras",
-        "indice_escolhido": 0,
+        "criterio_decisivo": "abertura",
+        "abertura": "visoe",
+        "indice_escolhido": 2,
         "flags": [],
         "candidatos": [
           {
             "indice": 0,
-            "n_flags": 0,
-            "flags": [],
-            "n_palavras": 41,
-            "n_ancoras": 3,
-            "eliminado": false
-          },
-          {
-            "indice": 1,
             "n_flags": 2,
             "flags": [
               "escopo_generalizado",
-              "tema_verbatim"
+              "formato_invalido"
             ],
-            "n_palavras": 44,
-            "n_ancoras": 1,
+            "n_palavras": 41,
+            "n_ancoras": 0,
+            "abertura": "espec",
+            "abertura_freq": 0,
             "eliminado": true
+          },
+          {
+            "indice": 1,
+            "n_flags": 0,
+            "flags": [],
+            "n_palavras": 45,
+            "n_ancoras": 0,
+            "abertura": "opini",
+            "abertura_freq": 6,
+            "eliminado": false
           },
           {
             "indice": 2,
             "n_flags": 0,
             "flags": [],
-            "n_palavras": 47,
+            "n_palavras": 50,
             "n_ancoras": 0,
+            "abertura": "visoe",
+            "abertura_freq": 0,
             "eliminado": false
           }
         ],
         "uso": {
-          "prompt_tokens": 2787,
-          "completion_tokens": 209,
+          "prompt_tokens": 3669,
+          "completion_tokens": 214,
           "cache_hit_tokens": 0,
-          "cache_miss_tokens": 2787
+          "cache_miss_tokens": 3669
         },
-        "latencia_s": 12.77
+        "latencia_s": 9.83
       }
     },
     "the-hateful-eight": {
@@ -40410,47 +40644,54 @@ window.ESPECTRO_DATA = {
         "n_chamadas": 3,
         "prefixo_codigo": "",
         "retry": null,
-        "spec_version": "1.9.21",
-        "texto": "Enquanto quem recomenda destaca o suspense envolvente da atmosfera e elogia o texto afiado, a maioria dos que desaprovam critica a cadência lenta e a duração exagerada, apontando excesso de exposição nas falas.",
-        "texto_modelo": "Enquanto quem recomenda destaca o suspense envolvente da atmosfera e elogia o texto afiado, a maioria dos que desaprovam critica a cadência lenta e a duração exagerada, apontando excesso de exposição nas falas.",
+        "spec_version": "1.9.22",
+        "texto": "A maioria dos que recomendam destaca o texto bem trabalhado e a atmosfera envolvente de mistério e tensão. Por outro lado, a maioria dos que não recomendam aponta que a narrativa sofre com um andamento excessivamente lento e tempo de duração prolongado.",
+        "texto_modelo": "A maioria dos que recomendam destaca o texto bem trabalhado e a atmosfera envolvente de mistério e tensão. Por outro lado, a maioria dos que não recomendam aponta que a narrativa sofre com um andamento excessivamente lento e tempo de duração prolongado.",
         "origem": "llm",
         "motivo": "melhor_entre_limpos",
-        "criterio_decisivo": "brevidade",
-        "indice_escolhido": 0,
+        "criterio_decisivo": "empate",
+        "abertura": "QUANT",
+        "indice_escolhido": 2,
         "flags": [],
         "candidatos": [
           {
             "indice": 0,
             "n_flags": 0,
             "flags": [],
-            "n_palavras": 33,
+            "n_palavras": 45,
             "n_ancoras": 3,
+            "abertura": "QUANT",
+            "abertura_freq": 18,
             "eliminado": false
           },
           {
             "indice": 1,
             "n_flags": 0,
             "flags": [],
-            "n_palavras": 44,
-            "n_ancoras": 3,
+            "n_palavras": 39,
+            "n_ancoras": 1,
+            "abertura": "QUANT",
+            "abertura_freq": 18,
             "eliminado": false
           },
           {
             "indice": 2,
             "n_flags": 0,
             "flags": [],
-            "n_palavras": 44,
+            "n_palavras": 42,
             "n_ancoras": 2,
+            "abertura": "QUANT",
+            "abertura_freq": 18,
             "eliminado": false
           }
         ],
         "uso": {
-          "prompt_tokens": 2718,
-          "completion_tokens": 196,
+          "prompt_tokens": 3600,
+          "completion_tokens": 202,
           "cache_hit_tokens": 0,
-          "cache_miss_tokens": 2718
+          "cache_miss_tokens": 3600
         },
-        "latencia_s": 14.28
+        "latencia_s": 10.75
       }
     },
     "the-northman": {
@@ -41724,21 +41965,24 @@ window.ESPECTRO_DATA = {
         "n_chamadas": 3,
         "prefixo_codigo": "",
         "retry": null,
-        "spec_version": "1.9.21",
-        "texto": "As opiniões avaliam os mesmos aspectos da produção e divergem sobre a eficácia do resultado. Enquanto cerca de metade de quem recomenda exalta a fidelidade mitológica nórdica e a condução visual de Robert Eggers, a maioria de quem não recomenda aponta fragilidades e previsibilidade no desenvolvimento da narrativa.",
-        "texto_modelo": "As opiniões avaliam os mesmos aspectos da produção e divergem sobre a eficácia do resultado. Enquanto cerca de metade de quem recomenda exalta a fidelidade mitológica nórdica e a condução visual de Robert Eggers, a maioria de quem não recomenda aponta fragilidades e previsibilidade no desenvolvimento da narrativa.",
+        "spec_version": "1.9.22",
+        "texto": "Os dois lados abordam o trabalho de direção e imagem, mas discordam sobre o resultado final. Enquanto cerca de metade dos que recomendam destaca a fidelidade histórica e a mitologia nórdica, a maioria dos que não recomendam aponta um enredo previsível e frágil.",
+        "texto_modelo": "Os dois lados abordam o trabalho de direção e imagem, mas discordam sobre o resultado final. Enquanto cerca de metade dos que recomendam destaca a fidelidade histórica e a mitologia nórdica, a maioria dos que não recomendam aponta um enredo previsível e frágil.",
         "origem": "llm",
         "motivo": "melhor_entre_limpos",
-        "criterio_decisivo": "brevidade",
-        "indice_escolhido": 1,
+        "criterio_decisivo": "ancoras",
+        "abertura": "dois",
+        "indice_escolhido": 0,
         "flags": [],
         "candidatos": [
           {
             "indice": 0,
             "n_flags": 0,
             "flags": [],
-            "n_palavras": 50,
-            "n_ancoras": 3,
+            "n_palavras": 43,
+            "n_ancoras": 2,
+            "abertura": "dois",
+            "abertura_freq": 0,
             "eliminado": false
           },
           {
@@ -41746,27 +41990,29 @@ window.ESPECTRO_DATA = {
             "n_flags": 0,
             "flags": [],
             "n_palavras": 48,
-            "n_ancoras": 2,
+            "n_ancoras": 0,
+            "abertura": "opini",
+            "abertura_freq": 5,
             "eliminado": false
           },
           {
             "indice": 2,
-            "n_flags": 1,
-            "flags": [
-              "escopo_generalizado"
-            ],
-            "n_palavras": 48,
-            "n_ancoras": 3,
-            "eliminado": true
+            "n_flags": 0,
+            "flags": [],
+            "n_palavras": 43,
+            "n_ancoras": 1,
+            "abertura": "diver",
+            "abertura_freq": 8,
+            "eliminado": false
           }
         ],
         "uso": {
-          "prompt_tokens": 2730,
-          "completion_tokens": 220,
+          "prompt_tokens": 3612,
+          "completion_tokens": 205,
           "cache_hit_tokens": 0,
-          "cache_miss_tokens": 2730
+          "cache_miss_tokens": 3612
         },
-        "latencia_s": 11.04
+        "latencia_s": 11.03
       }
     },
     "the-substance": {
@@ -43038,12 +43284,13 @@ window.ESPECTRO_DATA = {
         "n_chamadas": 3,
         "prefixo_codigo": "",
         "retry": null,
-        "spec_version": "1.9.21",
-        "texto": "As avaliações concentram-se nos mesmos pontos e divergem sobre o seu resultado: enquanto cerca de metade dos que recomendam destaca a força do impacto emocional, a maioria dos que não recomendam aponta que a construção do roteiro sofre com a falta de desenvolvimento.",
-        "texto_modelo": "As avaliações concentram-se nos mesmos pontos e divergem sobre o seu resultado: enquanto cerca de metade dos que recomendam destaca a força do impacto emocional, a maioria dos que não recomendam aponta que a construção do roteiro sofre com a falta de desenvolvimento.",
+        "spec_version": "1.9.22",
+        "texto": "A divisão em torno da obra é sobre seu funcionamento geral. Cerca de metade de quem recomenda destaca a força do impacto emocional provocado pela história, enquanto a maioria de quem não recomenda critica a falta de desenvolvimento no roteiro e na estrutura narrativa.",
+        "texto_modelo": "A divisão em torno da obra é sobre seu funcionamento geral. Cerca de metade de quem recomenda destaca a força do impacto emocional provocado pela história, enquanto a maioria de quem não recomenda critica a falta de desenvolvimento no roteiro e na estrutura narrativa.",
         "origem": "llm",
         "motivo": "melhor_entre_limpos",
-        "criterio_decisivo": "brevidade",
+        "criterio_decisivo": "abertura",
+        "abertura": "divis",
         "indice_escolhido": 1,
         "flags": [],
         "candidatos": [
@@ -43051,34 +43298,40 @@ window.ESPECTRO_DATA = {
             "indice": 0,
             "n_flags": 0,
             "flags": [],
-            "n_palavras": 44,
+            "n_palavras": 38,
             "n_ancoras": 2,
+            "abertura": "opini",
+            "abertura_freq": 6,
             "eliminado": false
           },
           {
             "indice": 1,
             "n_flags": 0,
             "flags": [],
-            "n_palavras": 43,
+            "n_palavras": 44,
             "n_ancoras": 2,
+            "abertura": "divis",
+            "abertura_freq": 0,
             "eliminado": false
           },
           {
             "indice": 2,
             "n_flags": 0,
             "flags": [],
-            "n_palavras": 45,
+            "n_palavras": 37,
             "n_ancoras": 1,
+            "abertura": "diver",
+            "abertura_freq": 8,
             "eliminado": false
           }
         ],
         "uso": {
-          "prompt_tokens": 2703,
-          "completion_tokens": 188,
+          "prompt_tokens": 3585,
+          "completion_tokens": 162,
           "cache_hit_tokens": 0,
-          "cache_miss_tokens": 2703
+          "cache_miss_tokens": 3585
         },
-        "latencia_s": 9.87
+        "latencia_s": 12.49
       }
     },
     "wicked-2024": {
@@ -44352,47 +44605,56 @@ window.ESPECTRO_DATA = {
         "n_chamadas": 3,
         "prefixo_codigo": "",
         "retry": null,
-        "spec_version": "1.9.21",
-        "texto": "As opiniões divergem no julgamento da trilha sonora: muitos que recomendam destacam faixas memoráveis e bem encaixadas, enquanto avaliações contrárias tendem a considerar as composições genéricas. Entre os relatos desfavoráveis, muitos também apontam um ritmo excessivamente lento e arrastado ao longo da exibição.",
-        "texto_modelo": "As opiniões divergem no julgamento da trilha sonora: muitos que recomendam destacam faixas memoráveis e bem encaixadas, enquanto avaliações contrárias tendem a considerar as composições genéricas. Entre os relatos desfavoráveis, muitos também apontam um ritmo excessivamente lento e arrastado ao longo da exibição.",
+        "spec_version": "1.9.22",
+        "texto": "Em uma amostra reduzida de relatos, a divergência reside na eficácia da trilha sonora: muitos que recomendam acham as composições memoráveis e bem encaixadas, enquanto muitos que não recomendam consideram a música descartável e apontam um andamento excessivamente lento.",
+        "texto_modelo": "Em uma amostra reduzida de relatos, a divergência reside na eficácia da trilha sonora: muitos que recomendam acham as composições memoráveis e bem encaixadas, enquanto muitos que não recomendam consideram a música descartável e apontam um andamento excessivamente lento.",
         "origem": "llm",
         "motivo": "melhor_entre_limpos",
         "criterio_decisivo": "brevidade",
-        "indice_escolhido": 0,
+        "abertura": "amost",
+        "indice_escolhido": 1,
         "flags": [],
         "candidatos": [
           {
             "indice": 0,
-            "n_flags": 0,
-            "flags": [],
-            "n_palavras": 43,
-            "n_ancoras": 2,
-            "eliminado": false
+            "n_flags": 1,
+            "flags": [
+              "tema_ausente"
+            ],
+            "n_palavras": 41,
+            "n_ancoras": 1,
+            "abertura": "numa",
+            "abertura_freq": 0,
+            "eliminado": true
           },
           {
             "indice": 1,
             "n_flags": 0,
             "flags": [],
-            "n_palavras": 45,
-            "n_ancoras": 2,
+            "n_palavras": 39,
+            "n_ancoras": 1,
+            "abertura": "amost",
+            "abertura_freq": 0,
             "eliminado": false
           },
           {
             "indice": 2,
             "n_flags": 0,
             "flags": [],
-            "n_palavras": 45,
+            "n_palavras": 46,
             "n_ancoras": 1,
+            "abertura": "numa",
+            "abertura_freq": 0,
             "eliminado": false
           }
         ],
         "uso": {
-          "prompt_tokens": 2922,
-          "completion_tokens": 227,
+          "prompt_tokens": 3804,
+          "completion_tokens": 215,
           "cache_hit_tokens": 0,
-          "cache_miss_tokens": 2922
+          "cache_miss_tokens": 3804
         },
-        "latencia_s": 9.47
+        "latencia_s": 11.63
       }
     },
     "wonka": {
@@ -45659,52 +45921,70 @@ window.ESPECTRO_DATA = {
         "provider": "gemini",
         "modelo": "gemini-3.7-flash",
         "n_candidatos": 3,
-        "n_chamadas": 3,
+        "n_chamadas": 4,
         "prefixo_codigo": "",
-        "retry": null,
-        "spec_version": "1.9.21",
-        "texto": "Muitos dos relatos que recomendam o filme baseiam suas impressões em comparações diretas. Por outro lado, entre as poucas manifestações desfavoráveis analisadas, surgem queixas sobre um distanciamento perceptível em relação à figura original do protagonista.",
-        "texto_modelo": "Muitos dos relatos que recomendam o filme baseiam suas impressões em comparações diretas. Por outro lado, entre as poucas manifestações desfavoráveis analisadas, surgem queixas sobre um distanciamento perceptível em relação à figura original do protagonista.",
+        "retry": {
+          "flags_antes": [
+            "tema_ausente"
+          ],
+          "flags_depois": [],
+          "aplicado": true
+        },
+        "spec_version": "1.9.22",
+        "texto": "Muitos dos que recomendam o filme destacam o valor das comparações estabelecidas na obra. Por outro lado, numa amostra pequena analisada, muitos dos que não recomendam discordam da eficácia desses mesmos paralelos.",
+        "texto_modelo": "Muitos dos que recomendam o filme destacam o valor das comparações estabelecidas na obra. Por outro lado, numa amostra pequena analisada, muitos dos que não recomendam discordam da eficácia desses mesmos paralelos.",
         "origem": "llm",
-        "motivo": "melhor_entre_limpos",
-        "criterio_decisivo": "ancoras",
+        "motivo": "retry_direcionado",
+        "criterio_decisivo": "empate",
+        "abertura": "QUANT",
         "indice_escolhido": 1,
         "flags": [],
         "candidatos": [
           {
             "indice": 0,
-            "n_flags": 1,
+            "n_flags": 2,
             "flags": [
+              "quantificador_divergente",
               "tema_ausente"
             ],
-            "n_palavras": 37,
+            "n_palavras": 34,
             "n_ancoras": 1,
+            "abertura": "QUANT",
+            "abertura_freq": 17,
             "eliminado": true
           },
           {
             "indice": 1,
-            "n_flags": 0,
-            "flags": [],
-            "n_palavras": 35,
+            "n_flags": 1,
+            "flags": [
+              "tema_ausente"
+            ],
+            "n_palavras": 33,
             "n_ancoras": 1,
-            "eliminado": false
+            "abertura": "QUANT",
+            "abertura_freq": 17,
+            "eliminado": true
           },
           {
             "indice": 2,
-            "n_flags": 0,
-            "flags": [],
+            "n_flags": 1,
+            "flags": [
+              "tema_ausente"
+            ],
             "n_palavras": 33,
-            "n_ancoras": 0,
-            "eliminado": false
+            "n_ancoras": 1,
+            "abertura": "QUANT",
+            "abertura_freq": 17,
+            "eliminado": true
           }
         ],
         "uso": {
-          "prompt_tokens": 2685,
-          "completion_tokens": 182,
+          "prompt_tokens": 4644,
+          "completion_tokens": 219,
           "cache_hit_tokens": 0,
-          "cache_miss_tokens": 2685
+          "cache_miss_tokens": 4644
         },
-        "latencia_s": 10.2
+        "latencia_s": 15.55
       }
     },
     "teste-degradado": {

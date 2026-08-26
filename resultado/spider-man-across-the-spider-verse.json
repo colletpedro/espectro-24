@@ -1355,46 +1355,53 @@
     "n_chamadas": 3,
     "prefixo_codigo": "",
     "retry": null,
-    "spec_version": "1.9.21",
-    "texto": "A maioria dos que desaprovam o filme se incomoda com a estrutura fragmentada da história e o desfecho pouco conclusivo. Em contrapartida, cerca de metade dos que o defendem valoriza a maneira como a trama desenvolve seus personagens.",
-    "texto_modelo": "A maioria dos que desaprovam o filme se incomoda com a estrutura fragmentada da história e o desfecho pouco conclusivo. Em contrapartida, cerca de metade dos que o defendem valoriza a maneira como a trama desenvolve seus personagens.",
+    "spec_version": "1.9.22",
+    "texto": "A maioria dos que não recomendam aponta que a narrativa é truncada e carece de um desfecho convincente. Em contrapartida, cerca de metade dos que recomendam valoriza a construção e a evolução das personagens ao longo da trama.",
+    "texto_modelo": "A maioria dos que não recomendam aponta que a narrativa é truncada e carece de um desfecho convincente. Em contrapartida, cerca de metade dos que recomendam valoriza a construção e a evolução das personagens ao longo da trama.",
     "origem": "llm",
     "motivo": "melhor_entre_limpos",
-    "criterio_decisivo": "brevidade",
-    "indice_escolhido": 1,
+    "criterio_decisivo": "ancoras",
+    "abertura": "QUANT",
+    "indice_escolhido": 0,
     "flags": [],
     "candidatos": [
       {
         "indice": 0,
         "n_flags": 0,
         "flags": [],
-        "n_palavras": 44,
-        "n_ancoras": 0,
+        "n_palavras": 38,
+        "n_ancoras": 1,
+        "abertura": "QUANT",
+        "abertura_freq": 17,
         "eliminado": false
       },
       {
         "indice": 1,
         "n_flags": 0,
         "flags": [],
-        "n_palavras": 38,
-        "n_ancoras": 1,
+        "n_palavras": 37,
+        "n_ancoras": 0,
+        "abertura": "QUANT",
+        "abertura_freq": 17,
         "eliminado": false
       },
       {
         "indice": 2,
         "n_flags": 0,
         "flags": [],
-        "n_palavras": 39,
-        "n_ancoras": 1,
+        "n_palavras": 40,
+        "n_ancoras": 0,
+        "abertura": "QUANT",
+        "abertura_freq": 17,
         "eliminado": false
       }
     ],
     "uso": {
-      "prompt_tokens": 2700,
-      "completion_tokens": 189,
+      "prompt_tokens": 3582,
+      "completion_tokens": 182,
       "cache_hit_tokens": 0,
-      "cache_miss_tokens": 2700
+      "cache_miss_tokens": 3582
     },
-    "latencia_s": 7.67
+    "latencia_s": 9.11
   }
 }

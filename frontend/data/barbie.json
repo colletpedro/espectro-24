@@ -1267,46 +1267,53 @@
     "n_chamadas": 3,
     "prefixo_codigo": "",
     "retry": null,
-    "spec_version": "1.9.21",
-    "texto": "A maioria dos que recomendam valoriza o comentário sobre o patriarcado e as pressões enfrentadas pelas mulheres. Por outro lado, a maioria dos que desaprovam considera a mensagem feminista exagerada e sem nuances, além de trazer comparações com outras produções para embasar a rejeição.",
-    "texto_modelo": "A maioria dos que recomendam valoriza o comentário sobre o patriarcado e as pressões enfrentadas pelas mulheres. Por outro lado, a maioria dos que desaprovam considera a mensagem feminista exagerada e sem nuances, além de trazer comparações com outras produções para embasar a rejeição.",
+    "spec_version": "1.9.22",
+    "texto": "A maioria de quem recomenda valoriza o comentário sobre estruturas patriarcais e cobranças impostas às mulheres. Em contraste, a maioria dos que não recomendam considera a abordagem feminista artificial e pouco sutil, dedicando-se também a comparações externas.",
+    "texto_modelo": "A maioria de quem recomenda valoriza o comentário sobre estruturas patriarcais e cobranças impostas às mulheres. Em contraste, a maioria dos que não recomendam considera a abordagem feminista artificial e pouco sutil, dedicando-se também a comparações externas.",
     "origem": "llm",
     "motivo": "melhor_entre_limpos",
     "criterio_decisivo": "brevidade",
-    "indice_escolhido": 0,
+    "abertura": "QUANT",
+    "indice_escolhido": 2,
     "flags": [],
     "candidatos": [
       {
         "indice": 0,
         "n_flags": 0,
         "flags": [],
-        "n_palavras": 44,
+        "n_palavras": 43,
         "n_ancoras": 2,
+        "abertura": "QUANT",
+        "abertura_freq": 17,
         "eliminado": false
       },
       {
         "indice": 1,
         "n_flags": 0,
         "flags": [],
-        "n_palavras": 46,
+        "n_palavras": 40,
         "n_ancoras": 2,
+        "abertura": "QUANT",
+        "abertura_freq": 17,
         "eliminado": false
       },
       {
         "indice": 2,
         "n_flags": 0,
         "flags": [],
-        "n_palavras": 46,
+        "n_palavras": 37,
         "n_ancoras": 2,
+        "abertura": "QUANT",
+        "abertura_freq": 17,
         "eliminado": false
       }
     ],
     "uso": {
-      "prompt_tokens": 2706,
-      "completion_tokens": 213,
+      "prompt_tokens": 3588,
+      "completion_tokens": 181,
       "cache_hit_tokens": 0,
-      "cache_miss_tokens": 2706
+      "cache_miss_tokens": 3588
     },
-    "latencia_s": 9.15
+    "latencia_s": 9.3
   }
 }

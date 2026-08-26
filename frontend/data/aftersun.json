@@ -1260,48 +1260,53 @@
     "n_chamadas": 3,
     "prefixo_codigo": "",
     "retry": null,
-    "spec_version": "1.9.21",
-    "texto": "A divergência central está na condução da história: enquanto a maioria dos que não recomendam aponta uma trama indefinida e pouco desenvolvida, a maioria dos que recomendam se apega à autenticidade do laço entre pai e filha, destacando a força de sua carga sentimental.",
-    "texto_modelo": "A divergência central está na condução da história: enquanto a maioria dos que não recomendam aponta uma trama indefinida e pouco desenvolvida, a maioria dos que recomendam se apega à autenticidade do laço entre pai e filha, destacando a força de sua carga sentimental.",
+    "spec_version": "1.9.22",
+    "texto": "As opiniões divergem sobre a eficácia do roteiro e da estrutura da história. Enquanto a maioria dos que recomendam destaca a autenticidade do vínculo entre pai e filha e a força emocional da trama, a maioria dos que não recomendam considera a narrativa excessivamente vaga e carente de desenvolvimento.",
+    "texto_modelo": "As opiniões divergem sobre a eficácia do roteiro e da estrutura da história. Enquanto a maioria dos que recomendam destaca a autenticidade do vínculo entre pai e filha e a força emocional da trama, a maioria dos que não recomendam considera a narrativa excessivamente vaga e carente de desenvolvimento.",
     "origem": "llm",
     "motivo": "melhor_entre_limpos",
-    "criterio_decisivo": "ancoras",
-    "indice_escolhido": 1,
+    "criterio_decisivo": "abertura",
+    "abertura": "opini",
+    "indice_escolhido": 0,
     "flags": [],
     "candidatos": [
       {
         "indice": 0,
         "n_flags": 0,
         "flags": [],
-        "n_palavras": 44,
-        "n_ancoras": 0,
+        "n_palavras": 49,
+        "n_ancoras": 1,
+        "abertura": "opini",
+        "abertura_freq": 6,
         "eliminado": false
       },
       {
         "indice": 1,
         "n_flags": 0,
         "flags": [],
-        "n_palavras": 44,
+        "n_palavras": 46,
         "n_ancoras": 1,
+        "abertura": "diver",
+        "abertura_freq": 7,
         "eliminado": false
       },
       {
         "indice": 2,
-        "n_flags": 1,
-        "flags": [
-          "formato_invalido"
-        ],
-        "n_palavras": 41,
+        "n_flags": 0,
+        "flags": [],
+        "n_palavras": 46,
         "n_ancoras": 1,
-        "eliminado": true
+        "abertura": "diver",
+        "abertura_freq": 7,
+        "eliminado": false
       }
     ],
     "uso": {
-      "prompt_tokens": 2757,
-      "completion_tokens": 200,
+      "prompt_tokens": 3639,
+      "completion_tokens": 198,
       "cache_hit_tokens": 0,
-      "cache_miss_tokens": 2757
+      "cache_miss_tokens": 3639
     },
-    "latencia_s": 9.52
+    "latencia_s": 12.07
   }
 }

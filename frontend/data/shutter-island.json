@@ -1268,48 +1268,53 @@
     "n_chamadas": 3,
     "prefixo_codigo": "",
     "retry": null,
-    "spec_version": "1.9.21",
-    "texto": "A divergência se concentra no roteiro e na sua estrutura: enquanto a maioria dos que recomendam elogia a condução do mistério, quase todos os que não recomendam consideram as revelações da trama previsíveis e frustrantes.",
-    "texto_modelo": "A divergência se concentra no roteiro e na sua estrutura: enquanto a maioria dos que recomendam elogia a condução do mistério, quase todos os que não recomendam consideram as revelações da trama previsíveis e frustrantes.",
+    "spec_version": "1.9.22",
+    "texto": "As opiniões divergem sobre a eficácia da narrativa e de suas revelações. Enquanto a maioria de quem recomenda valoriza o desenvolvimento do mistério no texto, quase todos entre os que não recomendam acham as reviravoltas previsíveis ou frustrantes.",
+    "texto_modelo": "As opiniões divergem sobre a eficácia da narrativa e de suas revelações. Enquanto a maioria de quem recomenda valoriza o desenvolvimento do mistério no texto, quase todos entre os que não recomendam acham as reviravoltas previsíveis ou frustrantes.",
     "origem": "llm",
     "motivo": "melhor_entre_limpos",
     "criterio_decisivo": "brevidade",
-    "indice_escolhido": 2,
+    "abertura": "opini",
+    "indice_escolhido": 0,
     "flags": [],
     "candidatos": [
       {
         "indice": 0,
-        "n_flags": 1,
-        "flags": [
-          "tema_ausente"
-        ],
-        "n_palavras": 40,
+        "n_flags": 0,
+        "flags": [],
+        "n_palavras": 38,
         "n_ancoras": 1,
-        "eliminado": true
+        "abertura": "opini",
+        "abertura_freq": 6,
+        "eliminado": false
       },
       {
         "indice": 1,
         "n_flags": 0,
         "flags": [],
-        "n_palavras": 45,
+        "n_palavras": 40,
         "n_ancoras": 1,
+        "abertura": "diver",
+        "abertura_freq": 7,
         "eliminado": false
       },
       {
         "indice": 2,
         "n_flags": 0,
         "flags": [],
-        "n_palavras": 35,
+        "n_palavras": 39,
         "n_ancoras": 1,
+        "abertura": "opini",
+        "abertura_freq": 6,
         "eliminado": false
       }
     ],
     "uso": {
-      "prompt_tokens": 2781,
-      "completion_tokens": 187,
+      "prompt_tokens": 3663,
+      "completion_tokens": 184,
       "cache_hit_tokens": 0,
-      "cache_miss_tokens": 2781
+      "cache_miss_tokens": 3663
     },
-    "latencia_s": 9.72
+    "latencia_s": 12.39
   }
 }

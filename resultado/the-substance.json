@@ -1334,12 +1334,13 @@
     "n_chamadas": 3,
     "prefixo_codigo": "",
     "retry": null,
-    "spec_version": "1.9.21",
-    "texto": "As avaliações concentram-se nos mesmos pontos e divergem sobre o seu resultado: enquanto cerca de metade dos que recomendam destaca a força do impacto emocional, a maioria dos que não recomendam aponta que a construção do roteiro sofre com a falta de desenvolvimento.",
-    "texto_modelo": "As avaliações concentram-se nos mesmos pontos e divergem sobre o seu resultado: enquanto cerca de metade dos que recomendam destaca a força do impacto emocional, a maioria dos que não recomendam aponta que a construção do roteiro sofre com a falta de desenvolvimento.",
+    "spec_version": "1.9.22",
+    "texto": "A divisão em torno da obra é sobre seu funcionamento geral. Cerca de metade de quem recomenda destaca a força do impacto emocional provocado pela história, enquanto a maioria de quem não recomenda critica a falta de desenvolvimento no roteiro e na estrutura narrativa.",
+    "texto_modelo": "A divisão em torno da obra é sobre seu funcionamento geral. Cerca de metade de quem recomenda destaca a força do impacto emocional provocado pela história, enquanto a maioria de quem não recomenda critica a falta de desenvolvimento no roteiro e na estrutura narrativa.",
     "origem": "llm",
     "motivo": "melhor_entre_limpos",
-    "criterio_decisivo": "brevidade",
+    "criterio_decisivo": "abertura",
+    "abertura": "divis",
     "indice_escolhido": 1,
     "flags": [],
     "candidatos": [
@@ -1347,33 +1348,39 @@
         "indice": 0,
         "n_flags": 0,
         "flags": [],
-        "n_palavras": 44,
+        "n_palavras": 38,
         "n_ancoras": 2,
+        "abertura": "opini",
+        "abertura_freq": 6,
         "eliminado": false
       },
       {
         "indice": 1,
         "n_flags": 0,
         "flags": [],
-        "n_palavras": 43,
+        "n_palavras": 44,
         "n_ancoras": 2,
+        "abertura": "divis",
+        "abertura_freq": 0,
         "eliminado": false
       },
       {
         "indice": 2,
         "n_flags": 0,
         "flags": [],
-        "n_palavras": 45,
+        "n_palavras": 37,
         "n_ancoras": 1,
+        "abertura": "diver",
+        "abertura_freq": 8,
         "eliminado": false
       }
     ],
     "uso": {
-      "prompt_tokens": 2703,
-      "completion_tokens": 188,
+      "prompt_tokens": 3585,
+      "completion_tokens": 162,
       "cache_hit_tokens": 0,
-      "cache_miss_tokens": 2703
+      "cache_miss_tokens": 3585
     },
-    "latencia_s": 9.87
+    "latencia_s": 12.49
   }
 }

@@ -1269,21 +1269,24 @@
     "n_chamadas": 3,
     "prefixo_codigo": "",
     "retry": null,
-    "spec_version": "1.9.21",
-    "texto": "As opiniões avaliam os mesmos aspectos da produção e divergem sobre a eficácia do resultado. Enquanto cerca de metade de quem recomenda exalta a fidelidade mitológica nórdica e a condução visual de Robert Eggers, a maioria de quem não recomenda aponta fragilidades e previsibilidade no desenvolvimento da narrativa.",
-    "texto_modelo": "As opiniões avaliam os mesmos aspectos da produção e divergem sobre a eficácia do resultado. Enquanto cerca de metade de quem recomenda exalta a fidelidade mitológica nórdica e a condução visual de Robert Eggers, a maioria de quem não recomenda aponta fragilidades e previsibilidade no desenvolvimento da narrativa.",
+    "spec_version": "1.9.22",
+    "texto": "Os dois lados abordam o trabalho de direção e imagem, mas discordam sobre o resultado final. Enquanto cerca de metade dos que recomendam destaca a fidelidade histórica e a mitologia nórdica, a maioria dos que não recomendam aponta um enredo previsível e frágil.",
+    "texto_modelo": "Os dois lados abordam o trabalho de direção e imagem, mas discordam sobre o resultado final. Enquanto cerca de metade dos que recomendam destaca a fidelidade histórica e a mitologia nórdica, a maioria dos que não recomendam aponta um enredo previsível e frágil.",
     "origem": "llm",
     "motivo": "melhor_entre_limpos",
-    "criterio_decisivo": "brevidade",
-    "indice_escolhido": 1,
+    "criterio_decisivo": "ancoras",
+    "abertura": "dois",
+    "indice_escolhido": 0,
     "flags": [],
     "candidatos": [
       {
         "indice": 0,
         "n_flags": 0,
         "flags": [],
-        "n_palavras": 50,
-        "n_ancoras": 3,
+        "n_palavras": 43,
+        "n_ancoras": 2,
+        "abertura": "dois",
+        "abertura_freq": 0,
         "eliminado": false
       },
       {
@@ -1291,26 +1294,28 @@
         "n_flags": 0,
         "flags": [],
         "n_palavras": 48,
-        "n_ancoras": 2,
+        "n_ancoras": 0,
+        "abertura": "opini",
+        "abertura_freq": 5,
         "eliminado": false
       },
       {
         "indice": 2,
-        "n_flags": 1,
-        "flags": [
-          "escopo_generalizado"
-        ],
-        "n_palavras": 48,
-        "n_ancoras": 3,
-        "eliminado": true
+        "n_flags": 0,
+        "flags": [],
+        "n_palavras": 43,
+        "n_ancoras": 1,
+        "abertura": "diver",
+        "abertura_freq": 8,
+        "eliminado": false
       }
     ],
     "uso": {
-      "prompt_tokens": 2730,
-      "completion_tokens": 220,
+      "prompt_tokens": 3612,
+      "completion_tokens": 205,
       "cache_hit_tokens": 0,
-      "cache_miss_tokens": 2730
+      "cache_miss_tokens": 3612
     },
-    "latencia_s": 11.04
+    "latencia_s": 11.03
   }
 }

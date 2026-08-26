@@ -1258,46 +1258,53 @@
     "n_chamadas": 3,
     "prefixo_codigo": "",
     "retry": null,
-    "spec_version": "1.9.21",
-    "texto": "A maioria dos que não recomendam aponta que o andamento arrastado torna a experiência entediante. Já a maioria dos que recomendam valoriza esse ritmo contemplativo e destaca a sensibilidade ao retratar a beleza da rotina e das coisas simples.",
-    "texto_modelo": "A maioria dos que não recomendam aponta que o andamento arrastado torna a experiência entediante. Já a maioria dos que recomendam valoriza esse ritmo contemplativo e destaca a sensibilidade ao retratar a beleza da rotina e das coisas simples.",
+    "spec_version": "1.9.22",
+    "texto": "A maioria dos que não recomendam a produção destaca o andamento excessivamente vagaroso e entediante. Em contrapartida, a maioria dos que recomendam foca na atmosfera, ressaltando o encanto presente na rotina simples e nos detalhes do dia a dia.",
+    "texto_modelo": "A maioria dos que não recomendam a produção destaca o andamento excessivamente vagaroso e entediante. Em contrapartida, a maioria dos que recomendam foca na atmosfera, ressaltando o encanto presente na rotina simples e nos detalhes do dia a dia.",
     "origem": "llm",
     "motivo": "melhor_entre_limpos",
     "criterio_decisivo": "ancoras",
-    "indice_escolhido": 2,
+    "abertura": "QUANT",
+    "indice_escolhido": 0,
     "flags": [],
     "candidatos": [
       {
         "indice": 0,
         "n_flags": 0,
         "flags": [],
-        "n_palavras": 45,
-        "n_ancoras": 0,
+        "n_palavras": 39,
+        "n_ancoras": 1,
+        "abertura": "QUANT",
+        "abertura_freq": 17,
         "eliminado": false
       },
       {
         "indice": 1,
         "n_flags": 0,
         "flags": [],
-        "n_palavras": 38,
+        "n_palavras": 39,
         "n_ancoras": 0,
+        "abertura": "QUANT",
+        "abertura_freq": 17,
         "eliminado": false
       },
       {
         "indice": 2,
         "n_flags": 0,
         "flags": [],
-        "n_palavras": 39,
-        "n_ancoras": 2,
+        "n_palavras": 34,
+        "n_ancoras": 0,
+        "abertura": "QUANT",
+        "abertura_freq": 17,
         "eliminado": false
       }
     ],
     "uso": {
-      "prompt_tokens": 2694,
-      "completion_tokens": 197,
+      "prompt_tokens": 3576,
+      "completion_tokens": 180,
       "cache_hit_tokens": 0,
-      "cache_miss_tokens": 2694
+      "cache_miss_tokens": 3576
     },
-    "latencia_s": 7.79
+    "latencia_s": 10.3
   }
 }

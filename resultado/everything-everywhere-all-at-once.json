@@ -1329,46 +1329,57 @@
     "n_chamadas": 3,
     "prefixo_codigo": "",
     "retry": null,
-    "spec_version": "1.9.21",
-    "texto": "Cerca de metade dos que recomendam destaca o impacto emocional voltado à esperança e aos laços familiares. Em contrapartida, a maioria dos que não recomendam considera essa dinâmica familiar forçada no roteiro, apontando ainda superficialidade na crítica social e previsibilidade no desfecho.",
-    "texto_modelo": "Cerca de metade dos que recomendam destaca o impacto emocional voltado à esperança e aos laços familiares. Em contrapartida, a maioria dos que não recomendam considera essa dinâmica familiar forçada no roteiro, apontando ainda superficialidade na crítica social e previsibilidade no desfecho.",
+    "spec_version": "1.9.22",
+    "texto": "Cerca de metade de quem recomenda ressalta o impacto emocional ao abordar superação, laços familiares e esperança. Em contrapartida, a maioria dos que não recomendam critica o roteiro por alegorias familiares artificiais, além de apontar pouca profundidade no teor social e um desfecho previsível.",
+    "texto_modelo": "Cerca de metade de quem recomenda ressalta o impacto emocional ao abordar superação, laços familiares e esperança. Em contrapartida, a maioria dos que não recomendam critica o roteiro por alegorias familiares artificiais, além de apontar pouca profundidade no teor social e um desfecho previsível.",
     "origem": "llm",
     "motivo": "melhor_entre_limpos",
-    "criterio_decisivo": "brevidade",
-    "indice_escolhido": 2,
+    "criterio_decisivo": "unico",
+    "abertura": "QUANT",
+    "indice_escolhido": 0,
     "flags": [],
     "candidatos": [
       {
         "indice": 0,
         "n_flags": 0,
         "flags": [],
-        "n_palavras": 47,
+        "n_palavras": 44,
         "n_ancoras": 3,
+        "abertura": "QUANT",
+        "abertura_freq": 17,
         "eliminado": false
       },
       {
         "indice": 1,
-        "n_flags": 0,
-        "flags": [],
-        "n_palavras": 46,
-        "n_ancoras": 3,
-        "eliminado": false
+        "n_flags": 1,
+        "flags": [
+          "tema_ausente"
+        ],
+        "n_palavras": 47,
+        "n_ancoras": 2,
+        "abertura": "QUANT",
+        "abertura_freq": 17,
+        "eliminado": true
       },
       {
         "indice": 2,
-        "n_flags": 0,
-        "flags": [],
-        "n_palavras": 42,
-        "n_ancoras": 3,
-        "eliminado": false
+        "n_flags": 1,
+        "flags": [
+          "tema_ausente"
+        ],
+        "n_palavras": 45,
+        "n_ancoras": 2,
+        "abertura": "QUANT",
+        "abertura_freq": 17,
+        "eliminado": true
       }
     ],
     "uso": {
-      "prompt_tokens": 2724,
-      "completion_tokens": 209,
+      "prompt_tokens": 3606,
+      "completion_tokens": 211,
       "cache_hit_tokens": 0,
-      "cache_miss_tokens": 2724
+      "cache_miss_tokens": 3606
     },
-    "latencia_s": 10.03
+    "latencia_s": 10.8
   }
 }

@@ -1236,16 +1236,23 @@
     "provider": "gemini",
     "modelo": "gemini-3.7-flash",
     "n_candidatos": 3,
-    "n_chamadas": 3,
+    "n_chamadas": 4,
     "prefixo_codigo": "",
-    "retry": null,
-    "spec_version": "1.9.21",
-    "texto": "A maioria dos que não recomendam critica o desenvolvimento da trama pela falta de um desfecho compensador ou ápice marcante. Já cerca de metade dos que recomendam elogia o mistério da narrativa, destacando também a construção da ambientação e a condução da cena como aspectos próprios desse grupo.",
-    "texto_modelo": "A maioria dos que não recomendam critica o desenvolvimento da trama pela falta de um desfecho compensador ou ápice marcante. Já cerca de metade dos que recomendam elogia o mistério da narrativa, destacando também a construção da ambientação e a condução da cena como aspectos próprios desse grupo.",
+    "retry": {
+      "flags_antes": [
+        "tema_ausente"
+      ],
+      "flags_depois": [],
+      "aplicado": true
+    },
+    "spec_version": "1.9.22",
+    "texto": "A maioria dos que não recomendam critica a condução da trama e o desfecho da história. Em contrapartida, cerca de metade dos que recomendam elogia a atmosfera de suspense e a tensão proposta pelo roteiro.",
+    "texto_modelo": "A maioria dos que não recomendam critica a condução da trama e o desfecho da história. Em contrapartida, cerca de metade dos que recomendam elogia a atmosfera de suspense e a tensão proposta pelo roteiro.",
     "origem": "llm",
-    "motivo": "melhor_entre_limpos",
-    "criterio_decisivo": "ancoras",
-    "indice_escolhido": 2,
+    "motivo": "retry_direcionado",
+    "criterio_decisivo": "brevidade",
+    "abertura": "QUANT",
+    "indice_escolhido": 0,
     "flags": [],
     "candidatos": [
       {
@@ -1255,32 +1262,42 @@
           "tema_ausente"
         ],
         "n_palavras": 39,
-        "n_ancoras": 0,
+        "n_ancoras": 1,
+        "abertura": "QUANT",
+        "abertura_freq": 17,
         "eliminado": true
       },
       {
         "indice": 1,
-        "n_flags": 0,
-        "flags": [],
-        "n_palavras": 45,
+        "n_flags": 1,
+        "flags": [
+          "tema_ausente"
+        ],
+        "n_palavras": 41,
         "n_ancoras": 0,
-        "eliminado": false
+        "abertura": "QUANT",
+        "abertura_freq": 17,
+        "eliminado": true
       },
       {
         "indice": 2,
-        "n_flags": 0,
-        "flags": [],
-        "n_palavras": 48,
+        "n_flags": 1,
+        "flags": [
+          "tema_ausente"
+        ],
+        "n_palavras": 47,
         "n_ancoras": 1,
-        "eliminado": false
+        "abertura": "QUANT",
+        "abertura_freq": 17,
+        "eliminado": true
       }
     ],
     "uso": {
-      "prompt_tokens": 2712,
-      "completion_tokens": 195,
+      "prompt_tokens": 4675,
+      "completion_tokens": 247,
       "cache_hit_tokens": 0,
-      "cache_miss_tokens": 2712
+      "cache_miss_tokens": 4675
     },
-    "latencia_s": 14.94
+    "latencia_s": 13.74
   }
 }

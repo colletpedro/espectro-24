@@ -1270,46 +1270,53 @@
     "n_chamadas": 3,
     "prefixo_codigo": "",
     "retry": null,
-    "spec_version": "1.9.21",
-    "texto": "Quase todos os que recomendam destacam o impacto emocional gerado pela sensação de desconforto e constrangimento da experiência. Em contrapartida, muitos dos que não aprovam criticam a estrutura do roteiro, apontando falas artificiais e repetitivas.",
-    "texto_modelo": "Quase todos os que recomendam destacam o impacto emocional gerado pela sensação de desconforto e constrangimento da experiência. Em contrapartida, muitos dos que não aprovam criticam a estrutura do roteiro, apontando falas artificiais e repetitivas.",
+    "spec_version": "1.9.22",
+    "texto": "Enquanto quase todos os que recomendam destacam a sensação constante de desconforto e vergonha alheia como o cerne da experiência, muitos dos que não recomendam apontam falas pouco naturais e redundâncias no texto.",
+    "texto_modelo": "Enquanto quase todos os que recomendam destacam a sensação constante de desconforto e vergonha alheia como o cerne da experiência, muitos dos que não recomendam apontam falas pouco naturais e redundâncias no texto.",
     "origem": "llm",
     "motivo": "melhor_entre_limpos",
-    "criterio_decisivo": "ancoras",
-    "indice_escolhido": 0,
+    "criterio_decisivo": "brevidade",
+    "abertura": "QUANT",
+    "indice_escolhido": 2,
     "flags": [],
     "candidatos": [
       {
         "indice": 0,
         "n_flags": 0,
         "flags": [],
-        "n_palavras": 35,
-        "n_ancoras": 2,
+        "n_palavras": 36,
+        "n_ancoras": 1,
+        "abertura": "QUANT",
+        "abertura_freq": 17,
         "eliminado": false
       },
       {
         "indice": 1,
         "n_flags": 0,
         "flags": [],
-        "n_palavras": 45,
+        "n_palavras": 38,
         "n_ancoras": 0,
+        "abertura": "QUANT",
+        "abertura_freq": 17,
         "eliminado": false
       },
       {
         "indice": 2,
         "n_flags": 0,
         "flags": [],
-        "n_palavras": 34,
-        "n_ancoras": 0,
+        "n_palavras": 33,
+        "n_ancoras": 1,
+        "abertura": "QUANT",
+        "abertura_freq": 17,
         "eliminado": false
       }
     ],
     "uso": {
-      "prompt_tokens": 2733,
-      "completion_tokens": 198,
+      "prompt_tokens": 3615,
+      "completion_tokens": 186,
       "cache_hit_tokens": 0,
-      "cache_miss_tokens": 2733
+      "cache_miss_tokens": 3615
     },
-    "latencia_s": 7.99
+    "latencia_s": 7.87
   }
 }

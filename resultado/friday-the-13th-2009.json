@@ -1352,46 +1352,55 @@
     "n_chamadas": 3,
     "prefixo_codigo": "O meio-termo é o maior grupo da recepção (~41% das notas). ",
     "retry": null,
-    "spec_version": "1.9.21",
-    "texto": "O meio-termo é o maior grupo da recepção (~41% das notas). As opiniões divergem sobre o funcionamento do roteiro e o resgate da franquia: a maioria dos que recomendam vê a produção como uma releitura eficiente das obras originais, enquanto cerca de metade dos que reprovam aponta figuras sem personalidade e atitudes sem sentido ao longo da narrativa.",
-    "texto_modelo": "As opiniões divergem sobre o funcionamento do roteiro e o resgate da franquia: a maioria dos que recomendam vê a produção como uma releitura eficiente das obras originais, enquanto cerca de metade dos que reprovam aponta figuras sem personalidade e atitudes sem sentido ao longo da narrativa.",
+    "spec_version": "1.9.22",
+    "texto": "O meio-termo é o maior grupo da recepção (~41% das notas). As visões divergem na avaliação do roteiro e de sua relação com o material clássico. Enquanto a maioria dos que aprovam valoriza a estrutura e defende a refilmagem, cerca de metade dos insatisfeitos critica escolhas tolas de personagens genéricos, e a maioria ponderada o vê como uma síntese competente dos originais.",
+    "texto_modelo": "As visões divergem na avaliação do roteiro e de sua relação com o material clássico. Enquanto a maioria dos que aprovam valoriza a estrutura e defende a refilmagem, cerca de metade dos insatisfeitos critica escolhas tolas de personagens genéricos, e a maioria ponderada o vê como uma síntese competente dos originais.",
     "origem": "llm",
     "motivo": "melhor_entre_limpos",
-    "criterio_decisivo": "brevidade",
-    "indice_escolhido": 2,
+    "criterio_decisivo": "abertura",
+    "abertura": "visoe",
+    "indice_escolhido": 1,
     "flags": [],
     "candidatos": [
       {
         "indice": 0,
         "n_flags": 0,
         "flags": [],
-        "n_palavras": 49,
+        "n_palavras": 46,
         "n_ancoras": 1,
+        "abertura": "opini",
+        "abertura_freq": 5,
         "eliminado": false
       },
       {
         "indice": 1,
         "n_flags": 0,
         "flags": [],
-        "n_palavras": 50,
+        "n_palavras": 51,
         "n_ancoras": 1,
+        "abertura": "visoe",
+        "abertura_freq": 0,
         "eliminado": false
       },
       {
         "indice": 2,
-        "n_flags": 0,
-        "flags": [],
-        "n_palavras": 47,
-        "n_ancoras": 1,
-        "eliminado": false
+        "n_flags": 1,
+        "flags": [
+          "formato_invalido"
+        ],
+        "n_palavras": 49,
+        "n_ancoras": 2,
+        "abertura": "disco",
+        "abertura_freq": 0,
+        "eliminado": true
       }
     ],
     "uso": {
-      "prompt_tokens": 3132,
-      "completion_tokens": 209,
+      "prompt_tokens": 4014,
+      "completion_tokens": 221,
       "cache_hit_tokens": 0,
-      "cache_miss_tokens": 3132
+      "cache_miss_tokens": 4014
     },
-    "latencia_s": 15.37
+    "latencia_s": 19.08
   }
 }

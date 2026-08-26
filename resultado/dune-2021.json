@@ -1333,12 +1333,13 @@
     "n_chamadas": 3,
     "prefixo_codigo": "",
     "retry": null,
-    "spec_version": "1.9.21",
-    "texto": "A divergência gira em torno do julgamento dos mesmos aspectos, principalmente nas comparações apontadas pela maioria dos que reprovam o filme. Por outro lado, cerca de metade dos que recomendam exalta o trabalho de direção e o visual marcante.",
-    "texto_modelo": "A divergência gira em torno do julgamento dos mesmos aspectos, principalmente nas comparações apontadas pela maioria dos que reprovam o filme. Por outro lado, cerca de metade dos que recomendam exalta o trabalho de direção e o visual marcante.",
+    "spec_version": "1.9.22",
+    "texto": "A divergência está no julgamento dos mesmos aspectos: enquanto cerca de metade de quem recomenda exalta o visual marcante da fotografia, a maioria de quem não recomenda recorre a comparações ao avaliar se a obra realmente funciona.",
+    "texto_modelo": "A divergência está no julgamento dos mesmos aspectos: enquanto cerca de metade de quem recomenda exalta o visual marcante da fotografia, a maioria de quem não recomenda recorre a comparações ao avaliar se a obra realmente funciona.",
     "origem": "llm",
     "motivo": "melhor_entre_limpos",
     "criterio_decisivo": "brevidade",
+    "abertura": "diver",
     "indice_escolhido": 1,
     "flags": [],
     "candidatos": [
@@ -1346,33 +1347,41 @@
         "indice": 0,
         "n_flags": 0,
         "flags": [],
-        "n_palavras": 43,
+        "n_palavras": 41,
         "n_ancoras": 1,
+        "abertura": "diver",
+        "abertura_freq": 7,
         "eliminado": false
       },
       {
         "indice": 1,
         "n_flags": 0,
         "flags": [],
-        "n_palavras": 39,
+        "n_palavras": 37,
         "n_ancoras": 1,
+        "abertura": "diver",
+        "abertura_freq": 7,
         "eliminado": false
       },
       {
         "indice": 2,
-        "n_flags": 0,
-        "flags": [],
-        "n_palavras": 44,
+        "n_flags": 1,
+        "flags": [
+          "escopo_generalizado"
+        ],
+        "n_palavras": 43,
         "n_ancoras": 1,
-        "eliminado": false
+        "abertura": "espec",
+        "abertura_freq": 0,
+        "eliminado": true
       }
     ],
     "uso": {
-      "prompt_tokens": 2703,
-      "completion_tokens": 183,
+      "prompt_tokens": 3585,
+      "completion_tokens": 174,
       "cache_hit_tokens": 0,
-      "cache_miss_tokens": 2703
+      "cache_miss_tokens": 3585
     },
-    "latencia_s": 15.96
+    "latencia_s": 11.5
   }
 }

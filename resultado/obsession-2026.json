@@ -1258,49 +1258,68 @@
     "provider": "gemini",
     "modelo": "gemini-3.7-flash",
     "n_candidatos": 3,
-    "n_chamadas": 3,
+    "n_chamadas": 4,
     "prefixo_codigo": "",
-    "retry": null,
-    "spec_version": "1.9.21",
-    "texto": "Relatos favoráveis tendem a valorizar a estética visual e a fotografia, apontando também uma trama inteligente e bem construída. Em contrapartida, avaliações negativas costumam apontar fragilidades e confusão no roteiro, indicando percepções divididas sobre o desenvolvimento da narrativa.",
-    "texto_modelo": "Relatos favoráveis tendem a valorizar a estética visual e a fotografia, apontando também uma trama inteligente e bem construída. Em contrapartida, avaliações negativas costumam apontar fragilidades e confusão no roteiro, indicando percepções divididas sobre o desenvolvimento da narrativa.",
+    "retry": {
+      "flags_antes": [
+        "quantificador_divergente"
+      ],
+      "flags_depois": [],
+      "aplicado": true
+    },
+    "spec_version": "1.9.22",
+    "texto": "Em uma amostra reduzida de avaliações, a maioria dos que recomendam destaca o trabalho visual e a condução narrativa engenhosa. Em contrapartida, a maioria dos que não recomendam aponta fragilidades e falta de coesão no desenvolvimento da história.",
+    "texto_modelo": "Em uma amostra reduzida de avaliações, a maioria dos que recomendam destaca o trabalho visual e a condução narrativa engenhosa. Em contrapartida, a maioria dos que não recomendam aponta fragilidades e falta de coesão no desenvolvimento da história.",
     "origem": "llm",
-    "motivo": "melhor_entre_limpos",
-    "criterio_decisivo": "brevidade",
-    "indice_escolhido": 0,
+    "motivo": "retry_direcionado",
+    "criterio_decisivo": "empate",
+    "abertura": "numa",
+    "indice_escolhido": 2,
     "flags": [],
     "candidatos": [
       {
         "indice": 0,
-        "n_flags": 0,
-        "flags": [],
-        "n_palavras": 38,
-        "n_ancoras": 2,
-        "eliminado": false
+        "n_flags": 1,
+        "flags": [
+          "quantificador_divergente"
+        ],
+        "n_palavras": 41,
+        "n_ancoras": 0,
+        "abertura": "conju",
+        "abertura_freq": 0,
+        "eliminado": true
       },
       {
         "indice": 1,
-        "n_flags": 0,
-        "flags": [],
-        "n_palavras": 40,
-        "n_ancoras": 0,
-        "eliminado": false
+        "n_flags": 1,
+        "flags": [
+          "quantificador_divergente"
+        ],
+        "n_palavras": 43,
+        "n_ancoras": 1,
+        "abertura": "QUANT",
+        "abertura_freq": 18,
+        "eliminado": true
       },
       {
         "indice": 2,
-        "n_flags": 0,
-        "flags": [],
+        "n_flags": 1,
+        "flags": [
+          "quantificador_divergente"
+        ],
         "n_palavras": 43,
-        "n_ancoras": 2,
-        "eliminado": false
+        "n_ancoras": 1,
+        "abertura": "numa",
+        "abertura_freq": 0,
+        "eliminado": true
       }
     ],
     "uso": {
-      "prompt_tokens": 2859,
-      "completion_tokens": 208,
+      "prompt_tokens": 4854,
+      "completion_tokens": 271,
       "cache_hit_tokens": 0,
-      "cache_miss_tokens": 2859
+      "cache_miss_tokens": 4854
     },
-    "latencia_s": 35.21
+    "latencia_s": 11.73
   }
 }
