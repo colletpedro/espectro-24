@@ -183,6 +183,65 @@ faltava chegando.
 > sabendo ler as páginas de filme. É a única posição do produto em que as
 > duas formas convivem de propósito.
 
+> **A ORDEM DE LEITURA DOS BLOCOS PASSA A SEGUIR O PESO (v1.9.30) — e isto
+> NÃO é uma terceira exceção a este §0.** É o contrário: é o §0 sendo
+> aplicado a uma dimensão da tela em que ele estava sendo ignorado.
+>
+> **O defeito.** Os dois blocos em destaque saíam em ordem FIXA — negativas
+> antes de positivas — qualquer que fosse o peso de cada grupo.
+> `the-godfather` é 2 / 5 / 93: a leitura abria por **HATERS, 2% das
+> notas**, e o grupo que responde por 93% da recepção só chegava depois. É a
+> mesma **infidelidade por omissão** que motivou a v1.4.0, num canal que a
+> v1.4.0 não tinha olhado: cada bloco era verdadeiro, e a ordem em que eles
+> chegavam comunicava outra coisa.
+>
+> **A regra: os blocos em destaque são ordenados por `share_real`, do maior
+> para o menor.** Medido no catálogo: em `cats-2019` (86 / 7 / 7) o primeiro
+> bloco é HATERS; em `the-godfather` (2 / 5 / 93) é FANS.
+>
+> **POR QUE ELA É COMPATÍVEL COM ESTE §0, e a frase é a inteira: a regra é
+> função do DADO, não do sentimento.** Ela nunca privilegia o negativo nem o
+> positivo — privilegia **quem é maior**, e quem é maior sai do
+> `share_real`, que é o histograma do Letterboxd, não um juízo do produto.
+> Não existe caminho pelo qual esta regra favoreça um lado: o lado que ela
+> favorece é escolhido pelas notas de quem assistiu.
+>
+> **E A ORDEM ANTIGA NÃO ERA NEUTRA — ERA CONSTANTE, que é outra coisa.**
+> Isto precisa ficar escrito porque a intuição diz o oposto (uma ordem que
+> nunca muda *parece* a opção neutra). Liderar sempre pelo negativo é uma
+> **escolha editorial fixa**, tomada uma vez e repetida 35 vezes sem que o
+> dado fosse consultado nenhuma delas. Neutralidade de tratamento é dar
+> **formato idêntico** aos grupos; nunca foi dar posição idêntica, que é
+> impossível — alguém tem de vir primeiro. Quando duas posições são
+> desiguais por construção, a única regra defensável é a que decide entre
+> elas **pelo dado**.
+>
+> **A NEUTRALIDADE DE TRATAMENTO CONTINUA INTEGRALMENTE EM VIGOR, e a
+> mudança foi desenhada para não tocar em nada dela:** mesmo leiaute, mesmo
+> peso tipográfico, **mesma quantidade de bullets** (6 e 6 nos 35, conferido
+> depois da mudança), mesmas cores, mesmo espaço estrutural. **Só a POSIÇÃO
+> muda.** Nenhum número, nenhum bullet, nenhum pixel de estrutura se move.
+>
+> **A POLÍTICA DO MEIO NÃO MUDA.** `medianas` continua rebaixado por padrão,
+> com a mesma exceção automática de quando é o grupo dominante (o parágrafo
+> acima). A ordenação só ordena o que já está em destaque: quando o meio
+> está lá, ele entra na mesma conta — `napoleon-2023` (22 / 45 / 33) abre
+> por MIXED, `friday-the-13th-2009` (33 / 41 / 26) também.
+>
+> **EMPATE: a ordem canônica do produto** (negativas → medianas →
+> positivas), como critério de desempate explícito no código, e não como
+> efeito colateral da estabilidade do `sort` do runtime. O mesmo filme
+> renderiza sempre na mesma ordem. Nenhum dos 35 empata hoje entre grupos em
+> destaque; a regra existe para o filme que ainda não foi publicado.
+>
+> **A BARRA DE PROPORÇÃO NÃO É REORDENADA**, e a razão é de significado, não
+> de esforço: a ordem dela é **semântica**, um eixo ordinal de 0,5★ a 5★.
+> Ver §3[E].
+>
+> **O DADO não muda em nada.** Nenhum arquivo de `resultado/` foi tocado por
+> esta regra; nenhum filme foi regerado. Ela vive numa função de
+> `frontend/js/filme.js` (`ordenarPorPeso`) e em nenhum outro lugar.
+
 ---
 **Objetivo:** dado o nome de um filme, agregar reviews de usuários do Letterboxd em três buckets por nota e produzir, via LLM, uma síntese temática de cada bucket — pontos recorrentes com frequência — permitindo entender a recepção do filme sem viés de leitura seletiva e sem spoilers.
 
@@ -5163,17 +5222,68 @@ Etapa **aditiva e independente** do resto do pipeline (`ficha.py`): dado o títu
 
 **As DIMENSÕES, essas, o campo não traz** — e são obrigatórias para o frontend reservar a proporção antes de carregar (§3[E]). O `poster_path` escolhido é procurado dentro de `images.posters`, que traz `width`/`height` reais. Elas **não são sempre 2:3**: medido no catálogo, `aftersun` é 1632×2449 (0,666) e o curta experimental é 505×750 (0,673). Se o caminho não aparecer na lista, as dimensões ficam ausentes e o frontend cai na razão padrão — ausência é estado válido, nunca erro.
 
-**`backdrop_paths[]` é COLETADO e NÃO RENDERIZADO, por decisão de produto.** Teto de **10** por filme (`TETO_BACKDROPS`), na ordem que a API devolve. Não existe galeria de backdrops na v1: o TMDB não garante que um backdrop seja livre de spoiler, e *"0 spoilers para quem ainda não assistiu"* é a promessa central do produto (§0) — uma imagem legítima do acervo pode ser do terceiro ato. A coleta acontece assim mesmo porque o custo marginal é zero (mesma chamada) e porque isso evita reestruturar o pipeline no dia em que a política de curadoria existir. Nenhum arquivo do frontend lê esse campo.
+**`backdrop_paths[]` — a LISTA continua coletada e não percorrida; o
+ESCOLHIDO passa a ser renderizado (v1.9.30).** Teto de **10** por filme
+(`TETO_BACKDROPS`), na ordem que a API devolve. **Até a v1.9.29 nenhum
+backdrop era renderizado**, e a razão registrada era esta: o TMDB não
+garante que um backdrop seja livre de spoiler, e *"0 spoilers para quem
+ainda não assistiu"* é a promessa central do produto (§0). **Esse fato
+continua verdadeiro; o que mudou foi a decisão sobre ele.** Na v1.9.30 o
+dono do projeto decidiu, com o trade-off explicitamente na mesa, abrir a
+página do filme com **um** backdrop, sem curadoria de spoiler — **exceção
+explícita ao §0**, registrada por extenso em §3[E], "O BACKDROP no topo da
+página do filme". **Não existe galeria**, e a distinção não é retórica: a
+lista continua sendo dado guardado que arquivo nenhum do frontend percorre;
+o frontend lê `backdrop_path`, o campo do escolhido.
+
+**A ESCOLHA É DO CÓDIGO, por uma ORDEM TOTAL (v1.9.30).** Ao contrário do
+pôster — onde a cascata pedida já era o que o `poster_path` da API entrega —
+aqui não há nada para reaproveitar: o TMDB não expõe campo de topo para "o
+melhor backdrop" nem para "a arte sem texto". `_ordem_imagem`/`_melhor`
+(`ficha.py`) ordenam por **(1)** sem texto sobreposto (`iso_639_1 is None`,
+preferência e não filtro), **(2)** `vote_average` desc, **(3)** `vote_count`
+desc, **(4)** `width` desc, **(5)** `file_path` asc. O último degrau é o que
+fecha a ordem total. A escolha sai de dentro de `backdrops[:TETO_BACKDROPS]`
+— o `backdrop_path` é sempre um dos itens de `backdrop_paths[]`, e isso é
+travado por teste. Racional degrau a degrau, com as três medições que o
+sustentam, em §3[E].
+
+**O PÔSTER SEM TEXTO (v1.9.30)** — `poster_sem_texto_path` e dimensões: a
+melhor arte de `images.posters` com `iso_639_1: null`, pela mesma ordem.
+**Aqui o `iso_639_1 is None` é FILTRO, não preferência:** arte com idioma
+declarado tem texto sobreposto por definição, e devolvê-la neste campo seria
+devolver a coisa que ele existe para evitar. Campo próprio, **aditivo**: não
+substitui `poster_path`. Medido nos 35: **todos têm**; em 1
+(`talk-to-me-2022`) coincide com o próprio `poster_path`.
+
+**CUSTO MARGINAL DE REDE ZERO, confirmado.** Os dois campos novos saem do
+**mesmo bloco `images`** que a v1.9.29 já pedia, com o mesmo
+`include_image_language=pt,null` — nenhuma requisição nova, e o teste
+`test_os_campos_novos_nao_custam_UMA_requisicao_a_mais` trava isso contando
+as chamadas a `/movie/{id}`.
+
+**As DIMENSÕES do backdrop vêm junto**, pelo mesmo motivo das do pôster: sem
+elas o frontend não reserva a proporção antes de carregar e o ganho de CLS
+zero da v1.9.29 regride — e aqui regrediria **pior**, porque a caixa é mais
+alta (§3[E], a tabela de medição). Elas vêm da própria entrada de
+`images.backdrops`, que traz `width`/`height`; não são todas 16:9 (medido:
+`eighth-grade` é 3500×1969).
 
 **RASTREABILIDADE — `tmdb_fetched_at`, e vale para TODOS os campos derivados do TMDB**, não só as imagens: título, sinopse, diretor, gêneros, duração, pôster e backdrops vêm todos da mesma resposta, no mesmo instante, e um carimbo por campo seria a mesma data repetida sete vezes. **Por que ele existe:** os termos de uso da API do TMDB proíbem **cachear por mais de 6 meses** qualquer informação obtida através dela, e o projeto guarda dados de ficha **indefinidamente** em `resultado/*.json` desde a v1.3.0. **Isto NÃO é problema novo criado pelos pôsteres — é uma limitação PRÉ-EXISTENTE que os pôsteres tornam visível.** Esta versão **não** constrói cache, revalidação, expiração nem coleta de lixo, deliberadamente: a entrega é só a data de obtenção, que é o que torna uma política de revalidação possível depois. Sem ela não há sequer como saber o que está vencido. A intenção fica registrada aqui; a implementação é de outra versão.
 
 **O TMDB não estende nenhum direito sobre as imagens.** O copyright dos pôsteres é dos estúdios e distribuidores; o TMDB apenas hospeda e declara não reivindicar propriedade sobre as imagens da API. Nenhum binário é baixado ou versionado (§3[E]): o JSON guarda só `file_path`, e a imagem vem do CDN.
 
-**Cache de ficha anterior à v1.9.29.** Uma entrada gravada antes desta versão não tem os campos de imagem. Devolvê-la como está produziria o pior sintoma possível — *"este filme não tem pôster"* para um filme que tem, sem nenhum aviso. A ausência de `tmdb_fetched_at` conta como **MISS** e a entrada é refeita. Não é expiração (que esta versão não constrói); é uma entrada de formato antigo sendo reconhecida como incompleta.
+**Cache de ficha de uma versão anterior — a checagem de COMPLETUDE.** Uma entrada gravada antes de uma versão que acrescenta campo de imagem não tem esse campo. Devolvê-la como está produziria o pior sintoma possível — *"este filme não tem pôster"*, *"não tem backdrop"* — para um filme que tem, sem nenhum aviso. Uma entrada **incompleta** conta como **MISS** e é refeita por cima. Não é expiração (que o projeto continua não construindo, por decisão); é uma entrada de formato antigo sendo reconhecida como incompleta.
 
-**Campos novos na ficha:** `tmdb_id`, `tmdb_fetched_at`, `poster_path`, `poster_largura`, `poster_altura`, `backdrop_paths[]`. **Aditivos por design, como toda a ficha desde a v1.3.0:** qualquer falha (rede, HTTP, filme sem imagem, chave ausente) nunca bloqueia coleta, publicação ou render. **Ausência de pôster é estado válido, não erro.**
+**[v1.9.30] A checagem deixou de ser o `tmdb_fetched_at` da v1.9.29 e passou a ser a LISTA de chaves que a versão corrente escreve (`_CHAVES_COMPLETUDE`), e a lição vale registrar porque ela quase mordeu.** A regra da v1.9.29 olhava só o carimbo — e as 35 entradas em cache **já o tinham**. Mantida como estava, esta versão teria devolvido `backdrop_path` e `poster_sem_texto_path` ausentes, em silêncio, para os 35: o defeito exato que aquela regra existia para evitar, repetido um degrau adiante. É **presença de chave**, não valor verdadeiro: `backdrop_path: None` é resposta válida (filme sem backdrop) e não pode forçar uma requisição nova a cada execução. **Ao acrescentar campo de imagem, acrescente à lista.**
 
-**Retrofit dos 35 — `scripts/enriquecer_ficha.py` (v1.9.29).** Os filmes já publicados ganham os campos novos **sem re-rodar o pipeline**: harness próprio, no espírito de `scripts/gerar_veredito.py` (v1.9.21) e da trava por teste da v1.9.25. Ele lê o JSON em disco, faz UMA consulta ao TMDB e grava só as chaves acima dentro do bloco `ficha`. Não chama coleta, seleção, classificação, verificação, síntese, [D3], narrativa nem veredito; **não passa pela guarda de lote de `publicar_catalogo.py` (`LIMITE_LOTE_SEM_CONFIRMACAO = 5`) e não deve — e também não a contorna:** publicar continua inalcançável dali, inclusive por caminho indireto. `tests/test_enriquecer_ficha.py` trava as quatro coisas substituindo os pontos de entrada por `pytest.fail` e comparando o documento campo a campo. Ele carrega ainda uma **guarda de identidade**: reconsultar o TMDB reabre a desambiguação que o pipeline já fez, então se a resposta descrever outro filme (título, ano ou diretor divergentes) o filme é abortado sem gravar — melhor ficar sem pôster do que colar o pôster de outro filme numa página publicada. Ela disparou de verdade em `mother-2017` e apontou uma causa real: buscar pelo `ficha.titulo` (o título pt-BR, `"mãe!"`) em vez do título do slug resolve outro filme ("Perfeita é a Mãe 2"). O harness passou a usar o título do SLUG, como o pipeline usa. **Resultado medido: 35 de 35 filmes com pôster, 0 sem, 0 falhas.**
+**Campos de imagem na ficha:** `tmdb_id`, `tmdb_fetched_at`, `poster_path`, `poster_largura`, `poster_altura`, `backdrop_paths[]` (v1.9.29) e — **v1.9.30** — `backdrop_path`, `backdrop_largura`, `backdrop_altura`, `poster_sem_texto_path`, `poster_sem_texto_largura`, `poster_sem_texto_altura`. **Aditivos por design, como toda a ficha desde a v1.3.0:** qualquer falha (rede, HTTP, filme sem imagem, chave ausente) nunca bloqueia coleta, publicação ou render. **Ausência de pôster é estado válido, não erro.**
+
+**Retrofit dos 35 — `scripts/enriquecer_ficha.py` (v1.9.29).** Os filmes já publicados ganham os campos novos **sem re-rodar o pipeline**: harness próprio, no espírito de `scripts/gerar_veredito.py` (v1.9.21) e da trava por teste da v1.9.25. Ele lê o JSON em disco, faz UMA consulta ao TMDB e grava só as chaves acima dentro do bloco `ficha`. Não chama coleta, seleção, classificação, verificação, síntese, [D3], narrativa nem veredito; **não passa pela guarda de lote de `publicar_catalogo.py` (`LIMITE_LOTE_SEM_CONFIRMACAO = 5`) e não deve — e também não a contorna:** publicar continua inalcançável dali, inclusive por caminho indireto. `tests/test_enriquecer_ficha.py` trava as quatro coisas substituindo os pontos de entrada por `pytest.fail` e comparando o documento campo a campo. Ele carrega ainda uma **guarda de identidade**: reconsultar o TMDB reabre a desambiguação que o pipeline já fez, então se a resposta descrever outro filme (título, ano ou diretor divergentes) o filme é abortado sem gravar — melhor ficar sem pôster do que colar o pôster de outro filme numa página publicada. Ela disparou de verdade em `mother-2017` e apontou uma causa real: buscar pelo `ficha.titulo` (o título pt-BR, `"mãe!"`) em vez do título do slug resolve outro filme ("Perfeita é a Mãe 2"). O harness passou a usar o título do SLUG, como o pipeline usa. **Resultado medido (v1.9.29): 35 de 35 filmes com pôster, 0 sem, 0 falhas.**
+
+**Retrofit da v1.9.30 — mesmo harness, mesmas travas, `CHAVES_NOVAS` maior.** Os seis campos da v1.9.30 entraram pelo mesmo passe, com a guarda de lote continuando inalcançável e a **guarda de identidade** (a que pegou `mother-2017`) em vigor. **Resultado medido: 35 de 35 processados, 0 falhas; 34 com backdrop e 1 sem (`talk-to-me-2022`); 35 com arte sem texto e 0 sem.** Diff dos `resultado/*.json` conferido campo a campo contra o `HEAD` anterior: **nada mudou fora do bloco `ficha`**, e dentro dele mudaram exatamente os seis campos novos mais `tmdb_fetched_at` — que é o carimbo da nova consulta e está em `CHAVES_NOVAS` desde a v1.9.29. `poster_path`, as dimensões do pôster e `backdrop_paths[]` vieram **idênticos** aos de antes, o que é a confirmação independente de que a reconsulta resolveu os mesmos 35 filmes.
+
+**RESSALVA MEDIDA, PRÉ-EXISTENTE E NÃO CORRIGIDA AQUI — `talk-to-me-2022` publica a ficha de OUTRO FILME.** O slug é o de *Talk to Me* (2022, Danny e Michael Philippou), e a ficha em `resultado/talk-to-me-2022.json` é a de **"The Elms Estate: You Can Talk To Me"** (`tmdb_id` 976680), um curta de **3 minutos** dirigido por George Williams — título, sinopse, diretor, duração e pôster, todos do filme errado, publicados desde a v1.3.0. É uma falha da desambiguação do TMDB por título, do mesmo tipo que a guarda de ano da v1.7.0 foi escrita para pegar e que ela não pega neste caso (os dois são de 2022). A **guarda de identidade** do retrofit não a detecta por construção: ela compara o disco com a resposta nova, e as duas são o mesmo filme errado. **É também a razão real do único "sem backdrop" do catálogo** — não é escassez de acervo (o *Talk to Me* verdadeiro, `tmdb_id` 1008042, tem 49 backdrops); é que o curta não tem nenhum. **Não corrigido nesta versão de propósito:** o conserto trocaria `titulo`, `sinopse_oficial`, `diretor` e `duracao_min` — campos fora de `CHAVES_NOVAS` — e a narrativa e o veredito publicados desse filme foram escritos sobre a ficha errada, o que faz do conserto uma **republicação**, não um retrofit.
 
 **Diretor em escrita latina (v1.6.0):** o TMDB devolve o nome do diretor no **alfabeto nativo** quando a localidade pt-BR não tem tradução — `cure` vinha com `"黒沢清"`, que foi parar na narrativa **publicada** (o narrador só reproduz o que a ficha entrega). Quando o nome pt-BR não está em escrita latina (`_e_escrita_latina`, checagem sobre `unicodedata.name` de cada letra — cobre diacríticos latinos como ç/é/ñ sem lista de exceções), o `credits` de `en-US` é consultado e a transliteração é usada (`"Kiyoshi Kurosawa"`). A ficha carrega `diretor_transliterado: true` — visível, nunca silencioso. **Custo:** no máximo 1 requisição extra, e só para filmes nessa condição; quando o fallback de sinopse já buscou `en-US`, a resposta é **reaproveitada** em vez de refeita. Se o `en-US` também não for latino, mantém o nome original (melhor um nome em alfabeto nativo do que nenhum). Cacheado junto da ficha, como todo o resto.
 
@@ -5499,6 +5609,80 @@ Falha em qualquer uma → **1 retentativa** com reforço (listando os trechos pe
    negativas/medianas/positivas, e as chaves do dado não mudam. Escopo,
    trade-off e política de reversão em **§0, "SEGUNDA EXCEÇÃO DELIBERADA na
    INTERFACE"**.
+
+   #### A ORDEM DOS BLOCOS EM DESTAQUE — POR PESO (v1.9.30)
+
+   O item 6 da ordem publicada acima ("bullets por sentimento") passa a ter
+   ordem **interna** definida pelo dado: os blocos em destaque saem
+   ordenados por `share_real`, **do maior para o menor**. O racional
+   completo — por que a regra é compatível com o §0, e por que a ordem fixa
+   anterior não era neutra e sim constante — está em **§0, "A ORDEM DE
+   LEITURA DOS BLOCOS PASSA A SEGUIR O PESO"**. Aqui ficam a mecânica e a
+   medição.
+
+   **Vale nos DOIS leiautes, e é a mesma linha de código nos dois.** O
+   contêiner é grid e **a ordem do DOM é a ordem visual**: no desktop
+   "primeiro" é a coluna da ESQUERDA; no mobile, empilhado em coluna única,
+   é o de CIMA. Nada de `order:` no CSS, nada de reordenar por
+   breakpoint — o mobile é onde a ordem pesa mais, porque lá o segundo bloco
+   só existe depois de uma rolagem, e ele é servido pela mesma decisão.
+   MEDIDO em `the-godfather` a 375px: FANS em y=1203, HATERS em y=2166.
+
+   **RESULTADO MEDIDO nos 35: a ordem MUDOU em 33.** Os dois que ficaram
+   iguais são os dois filmes de recepção negativa dominante —
+   `cats-2019` (86 / 7 / 7) e `joker-folie-a-deux` (46 / 33 / 21) —, e é
+   exatamente a prova de que a regra não é "positivas primeiro" com outro
+   nome: nesses dois, HATERS continua abrindo a leitura, porque HATERS é o
+   maior grupo. Dos 33 que mudaram, 31 passaram de `NEG→POS` para
+   `POS→NEG`, e os 2 de meio dominante viraram `MED→NEG→POS`
+   (`friday-the-13th-2009`) e `MED→POS→NEG` (`napoleon-2023`).
+
+   **A BARRA DE PROPORÇÃO NÃO É REORDENADA — e isso não é uma inconsistência
+   por esquecimento, é a diferença entre dois tipos de ordem.** A ordem da
+   barra é **SEMÂNTICA**: ela é um eixo ordinal de 0,5★ a 5★, e HATERS à
+   esquerda / MIXED no meio / FANS à direita é o que faz a barra ler como
+   **uma população particionada** em vez de três medições justapostas.
+   Ordenar por peso ali destruiria o eixo — o meio deixaria de estar no
+   meio, e a diagonal entre duas faixas deixaria de separar níveis de nota
+   vizinhos. **Continuam todos em negativas → medianas → positivas:** a
+   barra da página do filme, a faixa do mosaico da home, a legenda e o
+   `aria-label`. Conferido depois da mudança em `the-godfather`
+   (*"HATERS, cerca de 2%…; MIXED, cerca de 5%…; FANS, cerca de 93%…"*) e em
+   `cats-2019`.
+
+   **A DESSINCRONIA ENTRE A BARRA E OS BULLETS — observada na tela, e é
+   pequena.** Sim, a página passa a ter dois objetos com ordens diferentes:
+   a barra em ordem de estrela e os bullets em ordem de peso. Na tela isso
+   quase não se nota, por dois motivos concretos: eles estão a uma rolagem
+   um do outro (barra no topo, bullets depois da linha arco-íris), e o
+   **callout de percentual** ancora cada número na sua fatia, então o leitor
+   chega aos bullets já sabendo qual grupo é o grande — encontrar esse grupo
+   primeiro **confirma** a barra em vez de contradizê-la. O caso em que a
+   diferença é mais visível é `cats-2019`, onde a fatia esquerda é 86% e o
+   primeiro bloco é justamente HATERS: ali as duas ordens **coincidem**.
+   Onde elas divergem (`the-godfather`), a fatia grande é a da direita e o
+   bloco grande é o de cima — eixos diferentes, sem confronto direto.
+
+   **O VEREDITO PODE FICAR EM DESCOMPASSO, e isto é RESSALVA REGISTRADA, não
+   defeito corrigido.** O veredito (§3[V]) é **estágio fechado**: escrito por
+   LLM sobre briefing determinístico, com a sua própria ordem de
+   apresentação dos grupos, e **não foi regenerado nem alterado** por esta
+   versão. Ele pode, portanto, abrir por um grupo diferente do primeiro
+   bloco de bullets.
+
+   **MEDIDO nos 35, e o número surpreende na direção boa:** o descompasso
+   (primeiro grupo citado no veredito ≠ primeiro bloco de bullets) aparece
+   em **6 de 35** DEPOIS desta mudança, contra **31 de 35** ANTES dela. A
+   ordem fixa era a que estava fora de sincronia com o veredito quase
+   sempre — o texto do LLM tende a abrir pelo grupo dominante, e a tela
+   abria pelo negativo. Os 6 remanescentes: `cats-2019` e
+   `joker-folie-a-deux` (bullets em HATERS, veredito abre pelos que
+   recomendam) e `cure`, `pearl-2022`, `perfect-days-2023`,
+   `spider-man-across-the-spider-verse` (bullets em FANS, veredito abre
+   pelos que não recomendam). Medição por detecção de vocabulário no texto
+   publicado (`recomendam`/`não recomendam`/`aprovam`/`reprovam`/
+   `meio-termo`), sobre `veredito.texto` incluindo o prefixo determinístico
+   de meio dominante.
 
    #### O CALLOUT DE PERCENTUAL abaixo da barra (v1.9.27)
 
@@ -5905,6 +6089,224 @@ Falha em qualquer uma → **1 retentativa** com reforço (listando os trechos pe
    servindo `w342` não quebrariam nada, não apareceriam em teste nenhum, e a
    única consequência seria peso de rede que ninguém mede.
 
+   #### O BACKDROP no topo da página do filme (v1.9.30)
+
+   **O pôster vertical SAI do topo da página do filme e entra um BACKDROP
+   (16:9, horizontal), no mesmo lugar — acima do par ano → título.** Decisão
+   do dono do projeto, tomada e **não reaberta**. **O PÔSTER CONTINUA NA
+   HOME**, sem nenhuma alteração: esta entrega troca a imagem SÓ na página
+   do filme.
+
+   ##### ISTO É EXCEÇÃO EXPLÍCITA AO PRINCÍPIO ANTI-SPOILER DO §0
+
+   Este registro é obrigatório e é a parte da decisão que custa alguma
+   coisa. Não há como escrevê-lo sem tensão, e ele não tenta.
+
+   **O que o produto promete.** A home anuncia **"0 SPOILERS"** em caixa
+   alta, ao lado de "24 QUADROS" e "3 GRUPOS". O parágrafo de abertura desta
+   spec diz, sobre o público-alvo: *"pessoa que ainda NÃO assistiu ao filme.
+   Toda decisão de design que envolva trade-off entre completude e risco de
+   spoiler resolve a favor de evitar spoiler."* E o produto cumpre isso em
+   toda parte: as reviews passam por filtro anti-spoiler na coleta (§3[C]),
+   o prompt de síntese proíbe descrever eventos de enredo (§3[D]), o
+   veredito é **proibido de citar reviravolta** (§3[V]), e a galeria de
+   backdrops foi recusada na v1 **por este exato motivo**.
+
+   **O que o backdrop é.** Um quadro do filme, do acervo do TMDB, **sem
+   nenhuma garantia** de que não seja do terceiro ato. Não existe curadoria
+   — nem humana, nem automática, nem por metadado: o TMDB não marca imagem
+   por posição na narrativa, e não há sinal na API do qual isso se derive.
+   **O dono do projeto decidiu prosseguir SEM curadoria de spoiler**, com o
+   trade-off explicitamente na mesa.
+
+   **E ele fica na POSIÇÃO MAIS PROEMINENTE DA PÁGINA** — o primeiro
+   elemento, acima do título, **antes da sinopse**, em largura total. Não é
+   um detalhe periférico onde a exceção seria pequena: é literalmente a
+   primeira coisa que o leitor vê, e ele a vê sem ter escolhido vê-la.
+
+   **O QUE SE GANHA:**
+   - **Leitura horizontal.** 16:9 é o formato da imagem em movimento, e um
+     quadro largo abre a página como abertura editorial em vez de capa de
+     catálogo.
+   - **Menos espaço vertical no topo.** Medido: o backdrop reserva **405px**
+     de altura em desktop (720px de coluna) contra os ~300px do pôster de
+     200px de largura — mas ele ocupa a **largura inteira**, então não
+     divide a linha com nada e não empurra o par ano → título para o lado.
+     No mobile o ganho é o real: de borda a borda, contra uma capa de 140px
+     que deixava dois terços da linha vazios.
+   - **Abertura editorial.** O pôster é o objeto de marketing do filme; o
+     quadro é o filme. Para uma página que existe para descrever recepção, a
+     segunda leitura é a que o dono quis.
+
+   **O QUE SE PERDE, sem maquiagem:** **a promessa anti-spoiler deixa de
+   valer neste elemento.** Não fica mais fraca, não fica condicionada, não
+   fica "mitigada por curadoria": ela **não vale ali**. Um leitor que confia
+   no "0 spoilers" da home e abre uma página de filme pode ver, antes de
+   qualquer texto, um quadro do desfecho. O produto continua a resolver todo
+   o resto contra o spoiler; este elemento, e só ele, é a exceção. Se algum
+   dia existir política de curadoria, ela entra aqui — e o pipeline já está
+   preparado para isso, porque a lista de candidatos continua guardada.
+
+   ##### QUAL backdrop — regra determinística, em código
+
+   A escolha é do **pipeline** (`_ordem_imagem`/`_melhor` em `ficha.py`,
+   §3[F]), gravada no JSON como `backdrop_path`, e sai de **dentro dos até
+   10 coletados** (`backdrop_paths[]`) — nunca do acervo inteiro. Isso é o
+   que mantém "qual imagem esta página mostra" respondível olhando só o JSON
+   publicado. **NÃO EXISTE GALERIA:** `backdrop_paths[]` continua sendo lista
+   guardada que nenhum arquivo do frontend percorre; o frontend lê **um**
+   campo, o do escolhido.
+
+   **A ordem, do degrau mais forte ao mais fraco, e por que cada um:**
+
+   1. **sem texto sobreposto** (`iso_639_1 is None`) antes de arte com
+      idioma declarado;
+   2. **`vote_average`** decrescente — a resposta a "o mais bem avaliado";
+   3. **`vote_count`** decrescente;
+   4. **`width`** decrescente;
+   5. **`file_path`** crescente — o degrau que fecha a **ordem total**.
+
+   **Por que "mais bem avaliado" e não as outras duas propostas.**
+   *Maior resolução* como primeiro critério escolhe o maior arquivo, não o
+   melhor quadro: o acervo é cheio de 3840×2160 sem voto nenhum, e a régua
+   viraria "quem exportou em 4K". *Primeiro da lista* delega a escolha a uma
+   ordenação que a API **não declara**: `images.backdrops` chega por
+   `vote_average` decrescente, mas isso não é ordem total — empates são
+   comuns e o desempate é indefinido. **MEDIDO nos 35: em 3 filmes**
+   (`eighth-grade`, `friday-the-13th-2009`, `wicked-2024`) **o primeiro da
+   lista não é o que esta ordem escolhe.** Confiar na posição deixaria a
+   imagem de um filme publicado livre para mudar entre duas execuções sem
+   que nada no dado tivesse mudado — que é exatamente o que "determinística"
+   proíbe. Os degraus 3–5 existem por isso: sem o `file_path` no fim, a
+   ordem não é total e o problema volta pela porta dos fundos.
+
+   **O degrau 1 é PREFERÊNCIA, nunca filtro** — um filme cujas imagens sejam
+   todas `pt` continua tendo backdrop. Ele existe porque uma imagem
+   `iso_639_1='pt'` é **key art de campanha**: título tratado e bloco de
+   elenco gravados no pixel, indo logo ACIMA do par ano → título que a
+   própria página escreve. **MEDIDO: afeta 2 dos 35** —
+   `joker-folie-a-deux` e `longlegs`, os dois com uma peça `pt` de
+   `vote_average` 7,542 que venceria sem a regra (a do Joker traz
+   *"PHOENIX GAGA / JOKER: LOUCURA A DOIS"* em tipografia de cartaz). É
+   também o degrau mais fácil de reverter se o dono preferir a key art:
+   é um argumento de `_melhor`.
+
+   ##### FALLBACK, em dois degraus
+
+   1. filme **sem backdrop** usa o **pôster** que já estava ali — contido,
+      200px no desktop / 140px no mobile, exatamente como na v1.9.29;
+   2. filme **sem os dois** cai no **estado de ausência já desenhado**.
+
+   O backdrop **não cai no pôster por conta própria** dentro de
+   `montarBackdrop` (ele devolve `null` e quem chama decide), porque as duas
+   caixas têm proporção e tamanho diferentes — um pôster 2:3 esticado na
+   largura da coluna seria pior que qualquer um dos dois estados.
+
+   **MEDIDO: 34 dos 35 têm backdrop; 1 não** — `talk-to-me-2022`, e o motivo
+   dele **não é escassez de acervo**: a ficha publicada desse slug é a de
+   outro filme (ver a ressalva no §3[F]). Uma falha do CDN cai no mesmo
+   estado desenhado da ausência, na caixa 16:9.
+
+   ##### PROPORÇÃO RESERVADA — o requisito ficou mais duro, não menos
+
+   Mesma construção em dois níveis do pôster (§3[E], v1.9.29):
+   `aspect-ratio` inline vindo de `ficha.backdrop_largura`/`backdrop_altura`
+   **e** `width`/`height` no `<img>`. **Aqui a reserva importa MAIS:** sendo
+   largo, o backdrop reserva mais altura em pixels que o pôster contido, e
+   sem ela o salto seria **pior** que o de antes.
+
+   **MEDIDO** (`the-godfather`, viewport 1280, coluna de 720px):
+
+   | | valor |
+   |---|---|
+   | caixa reservada | 720 × 405 px |
+   | `aspect-ratio` inline | `1920 / 1080` (dimensões reais do TMDB) |
+   | y do `<h1>` **com** a imagem carregada | 530,52 px |
+   | y do `<h1>` **sem** a imagem (só a reserva) | 530,52 px |
+   | y do `<h1>` **sem a reserva** | 125,52 px |
+   | **salto que a reserva evita** | **405 px** |
+   | **CLS observada** | **0** (0 entradas de `layout-shift`) |
+
+   A CLS foi medida com `PerformanceObserver({type:'layout-shift',
+   buffered:true})` sobre um carregamento completo, em desktop (1280px) e a
+   375px: **0 nos dois**, com **zero** entradas — não é um total pequeno, é
+   a ausência de qualquer deslocamento. A home, que não mudou, foi medida de
+   novo para confirmar que não regrediu: **CLS 0**, altura de documento
+   **1657px** — o mesmo número da v1.9.29 — nas duas variantes de pôster.
+
+   ##### TAMANHO DE CDN — `w1280`, e a conta
+
+   O TMDB serve backdrops numa lista de larguras **própria**
+   (`w300 · w780 · w1280 · original`) — `w500` nem existe para backdrop, e
+   por isso ele não entra no mapa de tamanhos do pôster. A coluna de leitura
+   é `--maxw` (720px, 760px acima do breakpoint largo) menos 20px de padding
+   de cada lado: **680–720px CSS**. A regra do projeto (maior largura CSS ×
+   2, arredondando para cima na lista) pediria 1360–1440 — e o degrau
+   seguinte é **`original`** (3840×2160, ~1,5 MB), que a regra do projeto
+   proíbe servir e que num elemento decorativo seria desperdício de quase
+   toda a transferência.
+
+   **`w1280` é a escolha, com o custo declarado:** ela entrega **1,78–1,88×**
+   num aparelho de densidade 2, contra os 2,0× ideais — diferença que não se
+   vê num quadro fotográfico e que custaria megabytes para fechar. `w780`
+   ficaria em **1,08×** no desktop, visivelmente mole em retina.
+
+   ##### `alt`, e a moldura
+
+   `alt` = **"Imagem de &lt;título&gt; (&lt;ano&gt;)"**. Mesma política do
+   pôster: diz o que a imagem **É**, sem descrever a arte (não temos a
+   descrição, e inventá-la seria mentir para quem depende do `alt`) e sem
+   repetir o que o `<h1>` logo abaixo já diz. **Não é chamada de "cena"** de
+   propósito: parte do acervo é arte de divulgação, não fotograma, e o `alt`
+   afirmaria uma coisa que nem sempre é verdade.
+
+   **Sem borda e sem sombra projetada, ao contrário do pôster** — o pôster é
+   um objeto pousado na página e a borda o recorta do fundo; o backdrop é a
+   abertura, e uma moldura o transformaria num print. Um degradê na base
+   costura a imagem no fundo da página, porque o par ano → título vem logo
+   abaixo e uma aresta dura ali cortaria os dois. No mobile ele vai **de
+   borda a borda** (recuo negativo de 20px de cada lado): com o padding, um
+   quadro 16:9 mediria 335px de largura numa tela de 375 e leria como
+   miniatura.
+
+   #### O PÔSTER SEM TEXTO — variante testável, só na HOME (v1.9.30)
+
+   **A queixa do dono:** os pôsteres são poluídos — bloco de créditos,
+   tagline, laurel de festival. O TMDB serve **arte-chave sem texto**, que é
+   a que declara `iso_639_1: null`, e o pipeline passou a coletá-la em
+   **campo próprio** (§3[F]): `poster_sem_texto_path` e suas dimensões.
+   **Aditivo: não substitui `poster_path`**, que continua sendo o do próprio
+   TMDB.
+
+   **MECANISMO TEMPORÁRIO**, o mesmo das rodadas anteriores (`?barra=`,
+   `?ficha=` na v1.9.26): as duas variantes ficam ATIVAS e alternáveis por
+   query param, para a escolha ser feita **olhando**, e a perdedora **sai do
+   código** junto com a decisão — removida, não escondida atrás de flag.
+
+   ```
+   ?poster=texto   o `poster_path` do próprio TMDB   ← DEFAULT
+   ?poster=limpo   a arte-chave sem texto
+   ```
+
+   **O DEFAULT É SÓ DEFAULT.** `texto` é o que já estava publicado e é o que
+   a home mostra sem parâmetro nenhum. Isso **não é uma decisão a favor
+   dele** — é a ausência de decisão preservada até haver uma.
+
+   **VALE NA HOME, e só nela**, porque a página do filme trocou o pôster por
+   um backdrop: não há pôster lá para alternar.
+
+   **FALLBACK:** filme sem arte sem texto usa o pôster normal. A variante
+   nunca produz buraco.
+
+   **MEDIDO nos 35: os 35 têm arte sem texto — nenhum está sem.** Em **34**
+   dela é uma imagem diferente do pôster normal; em **1**
+   (`talk-to-me-2022`) o `poster_sem_texto_path` é **o mesmo arquivo** do
+   `poster_path`, porque aquele registro do TMDB tem uma única arte e ela já
+   é sem idioma — a variante existe e simplesmente coincide. Nas duas
+   variantes a home foi medida em **CLS 0** e altura de documento **1657px**,
+   idêntica; a variante troca o arquivo servido, não a geometria (a reserva
+   usa as dimensões da imagem efetivamente escolhida).
+
    #### ATRIBUIÇÃO AO TMDB (v1.9.29) — obrigatória, não cosmética
 
    Até a v1.9.28 o site inteiro dizia apenas "fonte TMDB" numa linha de
@@ -6125,6 +6527,18 @@ As três incógnitas abaixo foram resolvidas na Fase 1; os achados já estão in
 ---
 
 ## Changelog
+- **v1.9.30** (2026-08-27) — **A ordem dos bullets passa a seguir o PESO; o topo da página do filme troca o pôster por um BACKDROP (exceção explícita ao anti-spoiler do §0, decidida pelo dono); e o pôster SEM TEXTO entra como variante testável na home.** Suíte Python: **1525 passando** (1512 da baseline + 13 novos em `test_ficha.py`), nenhum teste anterior alterado. `SPEC_VERSION` continua em 1.9.25, pelo mesmo registro da v1.9.26–v1.9.29.
+  - **(1) ORDEM DOS BLOCOS EM DESTAQUE — por `share_real`, do maior para o menor.** `the-godfather` (2/5/93) abria a leitura por HATERS, 2% das notas. A regra é **função do dado, não do sentimento**: em `cats-2019` (86/7/7) o primeiro bloco continua sendo HATERS. A ordem fixa anterior não era neutra — era **constante**, que é outra coisa. **MEDIDO: a ordem mudou em 33 dos 35**; os 2 que ficaram iguais são os dois de recepção negativa dominante. Empate desempata pela ordem canônica, explicitamente no código. Vale nos dois leiautes (o DOM é a ordem visual; no mobile, FANS em y=1203 e HATERS em y=2166 em `the-godfather` a 375px). **Neutralidade de tratamento intacta:** mesmo leiaute, mesmo peso tipográfico, 6 e 6 bullets, mesmas cores — só a POSIÇÃO muda. §0 e §3[E].
+  - **(2) A BARRA NÃO É REORDENADA.** A ordem dela é **semântica** — eixo ordinal de 0,5★ a 5★. HATERS → MIXED → FANS na barra, na faixa do mosaico, na legenda e no `aria-label`, conferido depois da mudança. A dessincronia com os bullets é pequena na tela (uma rolagem de distância, e o callout já ancorou cada peso na sua fatia).
+  - **(3) DESCOMPASSO COM O VEREDITO — ressalva reportada, veredito NÃO tocado.** Estágio fechado, nada regenerado. **MEDIDO: 6 de 35 depois da mudança, contra 31 de 35 antes** — a ordem fixa é que estava fora de sincronia quase sempre, porque o texto do LLM tende a abrir pelo grupo dominante.
+  - **(4) BACKDROP no topo da página do filme — EXCEÇÃO EXPLÍCITA AO §0, registrada por extenso.** Decisão do dono, tomada com o trade-off na mesa: **sem curadoria de spoiler**. O produto anuncia "0 spoilers" e resolve todo trade-off contra o spoiler (bullets filtrados, veredito proibido de citar reviravolta); o backdrop é quadro do filme, **sem garantia nenhuma** de não ser do terceiro ato, e ocupa a posição mais proeminente da página, antes da sinopse. Ganha-se leitura horizontal, menos espaço vertical desperdiçado e abertura editorial; perde-se a promessa anti-spoiler **neste elemento** — não enfraquecida, **não valendo**. §3[E].
+  - **(5) QUAL backdrop — ordem TOTAL, no pipeline.** sem texto → `vote_average` → `vote_count` → `width` → `file_path`. "Primeiro da lista" foi recusado com número: **em 3 dos 35** o primeiro da resposta não é o escolhido, e a API não declara desempate. "Maior resolução" escolheria o maior arquivo, não o melhor quadro. A escolha sai de dentro dos ≤10 coletados — o `backdrop_path` é sempre um item de `backdrop_paths[]`, travado por teste. A preferência por arte sem texto **afeta 2 dos 35** (`joker-folie-a-deux`, `longlegs`, os dois com key art de campanha vencendo).
+  - **(6) FALLBACK e CLS.** Sem backdrop → pôster; sem os dois → estado de ausência desenhado. **34 dos 35 têm backdrop.** **CLS medida: 0** na página do filme (0 entradas de `layout-shift`), em desktop e a 375px; o título fica em **y=530,52 com e sem a imagem**, e **sem a reserva** o salto seria de **405px**. Home reconferida: CLS 0 e 1657px de altura, o mesmo número da v1.9.29.
+  - **(7) CDN `w1280` para o backdrop.** Lista própria (`w300 · w780 · w1280 · original`). Coluna de 680–720px CSS pediria 1360–1440; o degrau seguinte é `original` (~1,5 MB), proibido. `w1280` entrega 1,78–1,88× em densidade 2 — custo declarado. `alt` = "Imagem de &lt;título&gt; (&lt;ano&gt;)": diz o que a imagem É, e **não** a chama de "cena".
+  - **(8) PÔSTER SEM TEXTO — campo próprio, aditivo, variante só na HOME.** `?poster=texto` (DEFAULT, e é **só** default) / `?poster=limpo`, pelo mecanismo temporário das rodadas anteriores. **Nenhuma requisição nova** — mesmo bloco `images`, confirmado por teste que conta as chamadas. **MEDIDO: os 35 têm arte sem texto**; em 34 é imagem diferente do pôster normal, em 1 (`talk-to-me-2022`) coincide.
+  - **(9) A CHECAGEM DE CACHE virou lista de chaves, e quase mordeu.** A regra da v1.9.29 olhava só `tmdb_fetched_at` — que as 35 entradas **já tinham**. Mantida, esta versão teria devolvido os campos novos ausentes em silêncio, nos 35: o defeito exato que aquela regra existia para evitar. Agora é presença das chaves da versão corrente (`_CHAVES_COMPLETUDE`), e presença, não verdade.
+  - **(10) RETROFIT dos 35 pelo harness existente**, travas por teste em vigor e guarda de identidade mantida. Diff conferido campo a campo: **nada fora do bloco `ficha`**; dentro dele, os seis campos novos mais `tmdb_fetched_at`. `poster_path`, dimensões e `backdrop_paths[]` vieram idênticos.
+  - **(11) RESSALVA PRÉ-EXISTENTE, encontrada e NÃO corrigida: `talk-to-me-2022` publica a ficha de outro filme** — um curta de 3 minutos ("The Elms Estate: You Can Talk To Me", `tmdb_id` 976680) no lugar de *Talk to Me* (2022). Falha de desambiguação do TMDB, publicada desde a v1.3.0, invisível para a guarda de ano (ambos 2022) e para a guarda de identidade (disco e resposta são o mesmo filme errado). É a razão real do único "sem backdrop" do catálogo. Corrigir é **republicar**, não retrofitar: mexeria em título, sinopse, diretor e duração, e a narrativa e o veredito foram escritos sobre a ficha errada. §3[F].
 - **v1.9.29** (2026-08-27) — **PÔSTER entra no catálogo: o pipeline coleta imagens numa chamada única, os 35 publicados ganham os campos por RETROFIT, a célula da home é REDESENHADA em torno do pôster, e o site ganha a ATRIBUIÇÃO ao TMDB que os termos exigem.** Não é galeria: `backdrop_paths[]` é coletado e **não renderizado em lugar nenhum** (§3[F] — o TMDB não garante backdrop livre de spoiler, e "0 spoilers" é a promessa central, §0). Suíte Python: **1512 passando** (1492 da baseline + 20 novos: 10 de imagens em `test_ficha.py`, 10 do harness em `test_enriquecer_ficha.py`), nenhum teste anterior alterado. `SPEC_VERSION` continua em 1.9.25 pelo mesmo registro da v1.9.26–v1.9.28.
   - **(1) Coleta, custo marginal ZERO.** `images` entra no `append_to_response` que já trazia `credits` — nenhuma requisição nova. Campos novos: `tmdb_id`, `tmdb_fetched_at`, `poster_path`, `poster_largura`, `poster_altura`, `backdrop_paths[]` (teto 10).
   - **(2) `include_image_language` é `pt`, NÃO `pt-BR` — correção MEDIDA da instrução original.** O parâmetro aceita ISO-639-1 e descarta um código de localidade em **silêncio**. Dos 9 filmes sondados, **7** perdiam as dimensões do pôster com `pt-BR,null`; com `pt,null`, nenhum. Sem o parâmetro, `backdrops` volta vazio para filmes de pouca cobertura (`eighth-grade`: 0 contra 18).

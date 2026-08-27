@@ -19,7 +19,7 @@
     "fonte": "tmdb",
     "ano_fonte": "letterboxd",
     "tmdb_id": 598,
-    "tmdb_fetched_at": "2026-08-27T11:49:20+00:00",
+    "tmdb_fetched_at": "2026-08-27T16:35:23+00:00",
     "poster_path": "/gfnXixcGC060QcG6JPxN6AMdVsq.jpg",
     "poster_largura": 2000,
     "poster_altura": 3000,
@@ -34,7 +34,13 @@
       "/61ybf8KA2ZmH7wFvKtJtHGrjlWX.jpg",
       "/n4raYTYSwzfOW9QxCV0WNIT9bBy.jpg",
       "/sBnmoU8j6cIk4SpZVVcCiGUjwfm.jpg"
-    ]
+    ],
+    "backdrop_path": "/uvitbjFU4JqvMwIkMWHp69bmUzG.jpg",
+    "backdrop_largura": 3840,
+    "backdrop_altura": 2160,
+    "poster_sem_texto_path": "/2vroDkANgFQLqKbSwGpGVGuOeKR.jpg",
+    "poster_sem_texto_largura": 2000,
+    "poster_sem_texto_altura": 3000
   },
   "distribuicao": {
     "n_notas_total": 1216381,

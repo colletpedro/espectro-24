@@ -61,7 +61,7 @@ window.ESPECTRO_DATA = {
         "fonte": "tmdb",
         "ano_fonte": "slug",
         "tmdb_id": 950028,
-        "tmdb_fetched_at": "2026-08-27T11:49:36+00:00",
+        "tmdb_fetched_at": "2026-08-27T16:35:39+00:00",
         "poster_path": "/umUWgZ9YOAB7KczJnEFvrPJXx9n.jpg",
         "poster_largura": 2000,
         "poster_altura": 3000,
@@ -76,7 +76,13 @@ window.ESPECTRO_DATA = {
           "/h3c3SPAzj3j7rNypVd3uuUQ0uEt.jpg",
           "/5OnUwYqHyr70P0p5g1jqN7jAltA.jpg",
           "/ifOExsweHnEn5j1e76wo3p86Cqd.jpg"
-        ]
+        ],
+        "backdrop_path": "/lEwqBGNR65KZv6Ej5ufcmhZu2y2.jpg",
+        "backdrop_largura": 3840,
+        "backdrop_altura": 2160,
+        "poster_sem_texto_path": "/seZyY20Tec4GXKtQHBjvpR69lAr.jpg",
+        "poster_sem_texto_largura": 2000,
+        "poster_sem_texto_altura": 3000
       },
       "distribuicao": {
         "n_notas_total": 338448,
@@ -1362,7 +1368,7 @@ window.ESPECTRO_DATA = {
         "fonte": "tmdb",
         "ano_fonte": "bruto",
         "tmdb_id": 965150,
-        "tmdb_fetched_at": "2026-08-27T11:49:16+00:00",
+        "tmdb_fetched_at": "2026-08-27T16:35:18+00:00",
         "poster_path": "/kXk5veq5oOh6SefMyXq6xtUBevw.jpg",
         "poster_largura": 1632,
         "poster_altura": 2449,
@@ -1377,7 +1383,13 @@ window.ESPECTRO_DATA = {
           "/AnYRxI3qvd1f7aKirSKFgmCOnLO.jpg",
           "/udcfRWbChhS1fwUI8oOeDWpSyim.jpg",
           "/cCpxmvATuFFbR0gCEISWfBiAYPU.jpg"
-        ]
+        ],
+        "backdrop_path": "/4jdduww9j5RyzO4ITRcuBFhqNN1.jpg",
+        "backdrop_largura": 3840,
+        "backdrop_altura": 2160,
+        "poster_sem_texto_path": "/9KkCXMiAXHqVoeEk1K08epNaoXH.jpg",
+        "poster_sem_texto_largura": 2000,
+        "poster_sem_texto_altura": 3000
       },
       "distribuicao": {
         "n_notas_total": 1657928,
@@ -2693,7 +2705,7 @@ window.ESPECTRO_DATA = {
         "fonte": "tmdb",
         "ano_fonte": "bruto",
         "tmdb_id": 915935,
-        "tmdb_fetched_at": "2026-08-27T11:49:17+00:00",
+        "tmdb_fetched_at": "2026-08-27T16:35:19+00:00",
         "poster_path": "/woXYl0DJTx6TsfYWPkSfNHTsoOx.jpg",
         "poster_largura": 1000,
         "poster_altura": 1500,
@@ -2708,7 +2720,13 @@ window.ESPECTRO_DATA = {
           "/zMHfN9EM6sk4RuXWuX4t6GBIOsZ.jpg",
           "/pecCCwwLfCK0461DUF9eFTNIg0h.jpg",
           "/hrLUowoEClVKMHbzok6cVo7x4Dp.jpg"
-        ]
+        ],
+        "backdrop_path": "/lDVl2jf6VB8ODl1olZ6FLvOV1gX.jpg",
+        "backdrop_largura": 3840,
+        "backdrop_altura": 2160,
+        "poster_sem_texto_path": "/4XXORc8htmIt7tITBscdeL2ug9G.jpg",
+        "poster_sem_texto_largura": 2000,
+        "poster_sem_texto_altura": 3000
       },
       "distribuicao": {
         "n_notas_total": 1528627,
@@ -4022,7 +4040,7 @@ window.ESPECTRO_DATA = {
         "fonte": "tmdb",
         "ano_fonte": "bruto",
         "tmdb_id": 299534,
-        "tmdb_fetched_at": "2026-08-27T11:49:17+00:00",
+        "tmdb_fetched_at": "2026-08-27T16:35:20+00:00",
         "poster_path": "/9fRX8UKlIW7Lb9GqNsJVakWWFCi.jpg",
         "poster_largura": 2000,
         "poster_altura": 3000,
@@ -4037,7 +4055,13 @@ window.ESPECTRO_DATA = {
           "/bYU6qq8pXGAodkfTa2SjmrjlZDy.jpg",
           "/eFzIlCERjyrp2z2YpZo8yaETGWx.jpg",
           "/1XgjeKWxtjNIY3JAEjGsuThQ19B.jpg"
-        ]
+        ],
+        "backdrop_path": "/7RyHsO4yDXtBv1zUU3mTpHeQ0d5.jpg",
+        "backdrop_largura": 3840,
+        "backdrop_altura": 2160,
+        "poster_sem_texto_path": "/3YBoaKqcCl5FEVPFgycG5jWw3ky.jpg",
+        "poster_sem_texto_largura": 1600,
+        "poster_sem_texto_altura": 2400
       },
       "distribuicao": {
         "n_notas_total": 3753819,
@@ -5350,7 +5374,7 @@ window.ESPECTRO_DATA = {
         "fonte": "tmdb",
         "ano_fonte": "bruto",
         "tmdb_id": 346698,
-        "tmdb_fetched_at": "2026-08-27T11:49:18+00:00",
+        "tmdb_fetched_at": "2026-08-27T16:35:21+00:00",
         "poster_path": "/yRRuLt7sMBEQkHsd1S3KaaofZn7.jpg",
         "poster_largura": 2000,
         "poster_altura": 3000,
@@ -5365,7 +5389,13 @@ window.ESPECTRO_DATA = {
           "/tTfnd2VrlaZJSBD9HUbtSF3CqPJ.jpg",
           "/fRyYKQdsXIjw26MendWxpWmvnBs.jpg",
           "/v3gfn7147bmp776ouWRUL3j3viV.jpg"
-        ]
+        ],
+        "backdrop_path": "/1esAE8sLJRWWFsLLeh5r3g2WanI.jpg",
+        "backdrop_largura": 3840,
+        "backdrop_altura": 2160,
+        "poster_sem_texto_path": "/cgYg04miVQUAG2FKk3amSnnHzOp.jpg",
+        "poster_sem_texto_largura": 2000,
+        "poster_sem_texto_altura": 3000
       },
       "distribuicao": {
         "n_notas_total": 5967139,
@@ -6686,7 +6716,7 @@ window.ESPECTRO_DATA = {
         "fonte": "tmdb",
         "ano_fonte": "bruto",
         "tmdb_id": 791177,
-        "tmdb_fetched_at": "2026-08-27T11:49:19+00:00",
+        "tmdb_fetched_at": "2026-08-27T16:35:21+00:00",
         "poster_path": "/skrBwlNcYcZmrIKW8blfJAYlszx.jpg",
         "poster_largura": 2000,
         "poster_altura": 3000,
@@ -6701,7 +6731,13 @@ window.ESPECTRO_DATA = {
           "/qM4uQ9iiz8DUwkLywijsQEYmp5p.jpg",
           "/wvpfFcPgB6V1vtyFmn6mi6jqP7H.jpg",
           "/iZF6JPW5gkXk3IDk2Bl9mrKWbAA.jpg"
-        ]
+        ],
+        "backdrop_path": "/8sPxa4sdRvjgRG3GgkO8RQxUR9P.jpg",
+        "backdrop_largura": 3840,
+        "backdrop_altura": 2160,
+        "poster_sem_texto_path": "/hJz5vjU80zKSjlQRuWDHtg24h5h.jpg",
+        "poster_sem_texto_largura": 2000,
+        "poster_sem_texto_altura": 3000
       },
       "distribuicao": {
         "n_notas_total": 1301224,
@@ -8010,7 +8046,7 @@ window.ESPECTRO_DATA = {
         "fonte": "tmdb",
         "ano_fonte": "bruto",
         "tmdb_id": 536869,
-        "tmdb_fetched_at": "2026-08-27T11:49:19+00:00",
+        "tmdb_fetched_at": "2026-08-27T16:35:22+00:00",
         "poster_path": "/5XIZDh3n6BZAy00PqXpK1D16tZg.jpg",
         "poster_largura": 2000,
         "poster_altura": 3000,
@@ -8025,7 +8061,13 @@ window.ESPECTRO_DATA = {
           "/1vU8RqTEjS3kDrgfpujaWSxUac5.jpg",
           "/uR9WPnxYUTPpGfScs2fhFmph2eH.jpg",
           "/12ZJcobGdPfrAr4bu4vJDPJ5BIN.jpg"
-        ]
+        ],
+        "backdrop_path": "/rXSDDbT43pcTjppu1qTxs1cOwla.jpg",
+        "backdrop_largura": 1280,
+        "backdrop_altura": 720,
+        "poster_sem_texto_path": "/9xb7xztqUy74gQpGNJiG8wzJkDS.jpg",
+        "poster_sem_texto_largura": 1000,
+        "poster_sem_texto_altura": 1426
       },
       "distribuicao": {
         "n_notas_total": 185229,
@@ -9342,7 +9384,7 @@ window.ESPECTRO_DATA = {
         "fonte": "tmdb",
         "ano_fonte": "letterboxd",
         "tmdb_id": 598,
-        "tmdb_fetched_at": "2026-08-27T11:49:20+00:00",
+        "tmdb_fetched_at": "2026-08-27T16:35:23+00:00",
         "poster_path": "/gfnXixcGC060QcG6JPxN6AMdVsq.jpg",
         "poster_largura": 2000,
         "poster_altura": 3000,
@@ -9357,7 +9399,13 @@ window.ESPECTRO_DATA = {
           "/61ybf8KA2ZmH7wFvKtJtHGrjlWX.jpg",
           "/n4raYTYSwzfOW9QxCV0WNIT9bBy.jpg",
           "/sBnmoU8j6cIk4SpZVVcCiGUjwfm.jpg"
-        ]
+        ],
+        "backdrop_path": "/uvitbjFU4JqvMwIkMWHp69bmUzG.jpg",
+        "backdrop_largura": 3840,
+        "backdrop_altura": 2160,
+        "poster_sem_texto_path": "/2vroDkANgFQLqKbSwGpGVGuOeKR.jpg",
+        "poster_sem_texto_largura": 2000,
+        "poster_sem_texto_altura": 3000
       },
       "distribuicao": {
         "n_notas_total": 1216381,
@@ -10650,7 +10698,7 @@ window.ESPECTRO_DATA = {
         "fonte": "tmdb",
         "ano_fonte": "letterboxd",
         "tmdb_id": 36095,
-        "tmdb_fetched_at": "2026-08-27T11:49:21+00:00",
+        "tmdb_fetched_at": "2026-08-27T16:35:24+00:00",
         "poster_path": "/g2x1gF89LFej8gOTeeLVefDP5Je.jpg",
         "poster_largura": 1000,
         "poster_altura": 1500,
@@ -10665,7 +10713,13 @@ window.ESPECTRO_DATA = {
           "/yvpfjDMyV2nT0WJ6r3vZEfig6p2.jpg",
           "/chwzbN7cpmRIMj2YKUqsu1ywuuh.jpg",
           "/3Q3SOWePS1e4uAthlqBhnOG8bPp.jpg"
-        ]
+        ],
+        "backdrop_path": "/xxIRKSd9LmHojUD5grvMuGypwVC.jpg",
+        "backdrop_largura": 3840,
+        "backdrop_altura": 2160,
+        "poster_sem_texto_path": "/pQlxKoBB1yoLHTGDsOt1LnZO7YS.jpg",
+        "poster_sem_texto_largura": 2000,
+        "poster_sem_texto_altura": 3000
       },
       "distribuicao": {
         "n_notas_total": 375278,
@@ -11968,7 +12022,7 @@ window.ESPECTRO_DATA = {
         "fonte": "tmdb",
         "ano_fonte": "bruto",
         "tmdb_id": 438631,
-        "tmdb_fetched_at": "2026-08-27T11:49:22+00:00",
+        "tmdb_fetched_at": "2026-08-27T16:35:25+00:00",
         "poster_path": "/uzERcfV2rSHNhW5eViQiO9hNiA7.jpg",
         "poster_largura": 2000,
         "poster_altura": 3000,
@@ -11983,7 +12037,13 @@ window.ESPECTRO_DATA = {
           "/guB0jTCIlMB5gJUILzZrxXVMuyJ.jpg",
           "/1httqnYN5eMIkuxibCkRzInUvoS.jpg",
           "/aHFgoGZ2VQNY45nJWGcBvszaMXz.jpg"
-        ]
+        ],
+        "backdrop_path": "/h3HsfV8Kn9Sz2QWUYYdP5ya23hx.jpg",
+        "backdrop_largura": 3840,
+        "backdrop_altura": 2160,
+        "poster_sem_texto_path": "/yyrBBEHvwdJEgNgALxuh0EyWmsN.jpg",
+        "poster_sem_texto_largura": 2000,
+        "poster_sem_texto_altura": 3000
       },
       "distribuicao": {
         "n_notas_total": 4323089,
@@ -13300,7 +13360,7 @@ window.ESPECTRO_DATA = {
         "fonte": "tmdb",
         "ano_fonte": "bruto",
         "tmdb_id": 693134,
-        "tmdb_fetched_at": "2026-08-27T11:49:22+00:00",
+        "tmdb_fetched_at": "2026-08-27T16:35:26+00:00",
         "poster_path": "/8LJJjLjAzAwXS40S5mx79PJ2jSs.jpg",
         "poster_largura": 2000,
         "poster_altura": 3000,
@@ -13315,7 +13375,13 @@ window.ESPECTRO_DATA = {
           "/f6ahdeUZPwUVirr86gcZ1QmiasQ.jpg",
           "/wauiyiVXpdvTvt2CzdSWbYlbaE3.jpg",
           "/lDrlJzuLdg2bKcvek4ZpmN3Lo47.jpg"
-        ]
+        ],
+        "backdrop_path": "/eZ239CUp1d6OryZEBPnO2n87gMG.jpg",
+        "backdrop_largura": 3840,
+        "backdrop_altura": 2160,
+        "poster_sem_texto_path": "/76upJ0fnQ3osESX8mkTyfuXK5Ju.jpg",
+        "poster_sem_texto_largura": 2000,
+        "poster_sem_texto_altura": 3000
       },
       "distribuicao": {
         "n_notas_total": 3535690,
@@ -14632,7 +14698,7 @@ window.ESPECTRO_DATA = {
         "fonte": "tmdb",
         "ano_fonte": "bruto",
         "tmdb_id": 489925,
-        "tmdb_fetched_at": "2026-08-27T11:49:23+00:00",
+        "tmdb_fetched_at": "2026-08-27T16:35:26+00:00",
         "poster_path": "/5cXqKpHo2vydjnaYOGbYrKbqXk8.jpg",
         "poster_largura": 1000,
         "poster_altura": 1500,
@@ -14647,7 +14713,13 @@ window.ESPECTRO_DATA = {
           "/enrdrBqL9oNqTLMVlJkvwYPKqH2.jpg",
           "/4GTEsN3mlF5Ak4ZWFUxxxnd6G1Y.jpg",
           "/qyb7Cp8G3Oa4fhPZ5cibG2dlhte.jpg"
-        ]
+        ],
+        "backdrop_path": "/7cDZkagW1YTnT4nP1BYrLPSd04B.jpg",
+        "backdrop_largura": 3500,
+        "backdrop_altura": 1969,
+        "poster_sem_texto_path": "/lUCR3clEU68tkTnjGnd06lj9KR5.jpg",
+        "poster_sem_texto_largura": 2000,
+        "poster_sem_texto_altura": 3000
       },
       "distribuicao": {
         "n_notas_total": 469004,
@@ -15972,7 +16044,7 @@ window.ESPECTRO_DATA = {
         "fonte": "tmdb",
         "ano_fonte": "bruto",
         "tmdb_id": 545611,
-        "tmdb_fetched_at": "2026-08-27T11:49:23+00:00",
+        "tmdb_fetched_at": "2026-08-27T16:35:27+00:00",
         "poster_path": "/2dSZQGwijlXvMSyuGe0FSgrXnv0.jpg",
         "poster_largura": 800,
         "poster_altura": 1200,
@@ -15987,7 +16059,13 @@ window.ESPECTRO_DATA = {
           "/wp3vpSWAIjKSEeYb8F5NSZfONqw.jpg",
           "/wUUwjNJ0OM8xfRCePTHRGOrq2p4.jpg",
           "/4MG8ge6LOgsVkB0EMBM8lbFdEc6.jpg"
-        ]
+        ],
+        "backdrop_path": "/ss0Os3uWJfQAENILHZUdX8Tt1OC.jpg",
+        "backdrop_largura": 3840,
+        "backdrop_altura": 2160,
+        "poster_sem_texto_path": "/mb3JAvJiYCUSiAslibfIgtDOKdP.jpg",
+        "poster_sem_texto_largura": 1708,
+        "poster_sem_texto_altura": 2562
       },
       "distribuicao": {
         "n_notas_total": 4060162,
@@ -17299,7 +17377,7 @@ window.ESPECTRO_DATA = {
         "fonte": "tmdb",
         "ano_fonte": "bruto",
         "tmdb_id": 13207,
-        "tmdb_fetched_at": "2026-08-27T11:49:24+00:00",
+        "tmdb_fetched_at": "2026-08-27T16:35:28+00:00",
         "poster_path": "/9tXjmu3J8ad4IpvrjEMS4ZxmsjN.jpg",
         "poster_largura": 2000,
         "poster_altura": 3000,
@@ -17314,7 +17392,13 @@ window.ESPECTRO_DATA = {
           "/lXcZbz8WZ1r6F7kezzqhzrNbcSu.jpg",
           "/lSrFh3C2lTlqlc0Ua2oAwu6B8Mb.jpg",
           "/nQvMQWJtd5cSRJelDTp5WfEqyx5.jpg"
-        ]
+        ],
+        "backdrop_path": "/xECaVCK8nT1KCKdGg01mQgizuOd.jpg",
+        "backdrop_largura": 3840,
+        "backdrop_altura": 2160,
+        "poster_sem_texto_path": "/6B8RWtfCn1yuQlRmCI1Z2HT4XB6.jpg",
+        "poster_sem_texto_largura": 2000,
+        "poster_sem_texto_altura": 3000
       },
       "distribuicao": {
         "n_notas_total": 215405,
@@ -18631,7 +18715,7 @@ window.ESPECTRO_DATA = {
         "fonte": "tmdb",
         "ano_fonte": "bruto",
         "tmdb_id": 493922,
-        "tmdb_fetched_at": "2026-08-27T11:49:25+00:00",
+        "tmdb_fetched_at": "2026-08-27T16:35:28+00:00",
         "poster_path": "/wonYMeHauhrxSi5UTOtj5L479mS.jpg",
         "poster_largura": 2000,
         "poster_altura": 3000,
@@ -18646,7 +18730,13 @@ window.ESPECTRO_DATA = {
           "/yVWiOMpzf7gullGvug83r7gMdha.jpg",
           "/3z0oRN1qKDIB5puUtSaFs3pJO4V.jpg",
           "/8Z8njxARIoyt57agKeiCxnKWIiW.jpg"
-        ]
+        ],
+        "backdrop_path": "/gJbTXKNTL6O7r7PzF6ZRkJGBlPp.jpg",
+        "backdrop_largura": 3840,
+        "backdrop_altura": 2160,
+        "poster_sem_texto_path": "/RWmP3QwUwAWa2rRaaPZT34Hilv.jpg",
+        "poster_sem_texto_largura": 2000,
+        "poster_sem_texto_altura": 3000
       },
       "distribuicao": {
         "n_notas_total": 2794208,
@@ -19961,7 +20051,7 @@ window.ESPECTRO_DATA = {
         "fonte": "tmdb",
         "ano_fonte": "bruto",
         "tmdb_id": 1000837,
-        "tmdb_fetched_at": "2026-08-27T11:49:25+00:00",
+        "tmdb_fetched_at": "2026-08-27T16:35:29+00:00",
         "poster_path": "/zNAw7jK8bwCK56rIW676pdgkwhd.jpg",
         "poster_largura": 1280,
         "poster_altura": 1920,
@@ -19976,7 +20066,13 @@ window.ESPECTRO_DATA = {
           "/4r4wGMIwivfSQpbtySOX521GsC2.jpg",
           "/3xfqCoBqPGrcIFiMto0UEijj7Ef.jpg",
           "/owxI2vJMWjWpLJg9mVJnqucyDan.jpg"
-        ]
+        ],
+        "backdrop_path": "/j9uruwRe9qM8RnP758dF7ISB8Bj.jpg",
+        "backdrop_largura": 3840,
+        "backdrop_altura": 2160,
+        "poster_sem_texto_path": "/kZoorgkKAC6tNtKnvEqkRBAg9cv.jpg",
+        "poster_sem_texto_largura": 2000,
+        "poster_sem_texto_altura": 3000
       },
       "distribuicao": {
         "n_notas_total": 800305,
@@ -21298,7 +21394,7 @@ window.ESPECTRO_DATA = {
         "fonte": "tmdb",
         "ano_fonte": "bruto",
         "tmdb_id": 157336,
-        "tmdb_fetched_at": "2026-08-27T11:49:26+00:00",
+        "tmdb_fetched_at": "2026-08-27T16:35:30+00:00",
         "poster_path": "/6ricSDD83BClJsFdGB6x7cM0MFQ.jpg",
         "poster_largura": 2000,
         "poster_altura": 3000,
@@ -21313,7 +21409,13 @@ window.ESPECTRO_DATA = {
           "/5C3RriLKkIAQtQMx85JLtu4rVI2.jpg",
           "/9mmkq59uRuJWDFz9UHeX5ATNJYf.jpg",
           "/8q9wSh1w7plE7oHliG8Dfzbi5fg.jpg"
-        ]
+        ],
+        "backdrop_path": "/5XNQBqnBwPA9yT0jZ0p3s8bbLh0.jpg",
+        "backdrop_largura": 3840,
+        "backdrop_altura": 2160,
+        "poster_sem_texto_path": "/iolc5VLP4PFU0XvjTVRiCb80mUR.jpg",
+        "poster_sem_texto_largura": 2000,
+        "poster_sem_texto_altura": 3000
       },
       "distribuicao": {
         "n_notas_total": 6173935,
@@ -22628,7 +22730,7 @@ window.ESPECTRO_DATA = {
         "fonte": "tmdb",
         "ano_fonte": "bruto",
         "tmdb_id": 889737,
-        "tmdb_fetched_at": "2026-08-27T11:49:27+00:00",
+        "tmdb_fetched_at": "2026-08-27T16:34:50+00:00",
         "poster_path": "/9RmVr8dPWicFyPZ5JCQK3NcBNB5.jpg",
         "poster_largura": 2000,
         "poster_altura": 3000,
@@ -22643,7 +22745,13 @@ window.ESPECTRO_DATA = {
           "/dnIr3WRjksA13Q9e01YMEDv7nvZ.jpg",
           "/vaMZ1HmcJs4mp1l9lbqB3gpebbZ.jpg",
           "/mraxhuBdLzK4Ai46fwr7erji4je.jpg"
-        ]
+        ],
+        "backdrop_path": "/AVWlQpVhpudyFsSh3OQIieHHYf.jpg",
+        "backdrop_largura": 3840,
+        "backdrop_altura": 2160,
+        "poster_sem_texto_path": "/AddubP4WODsIq1tloR8bv7pQyFz.jpg",
+        "poster_sem_texto_largura": 2000,
+        "poster_sem_texto_altura": 3000
       },
       "distribuicao": {
         "n_notas_total": 951241,
@@ -23954,7 +24062,7 @@ window.ESPECTRO_DATA = {
         "fonte": "tmdb",
         "ano_fonte": "bruto",
         "tmdb_id": 1226578,
-        "tmdb_fetched_at": "2026-08-27T11:49:27+00:00",
+        "tmdb_fetched_at": "2026-08-27T16:35:31+00:00",
         "poster_path": "/uURBOrqLFyU8iKODcI3t2Xkbhqs.jpg",
         "poster_largura": 718,
         "poster_altura": 1076,
@@ -23969,7 +24077,13 @@ window.ESPECTRO_DATA = {
           "/koV8FHYNZ71aTw3Cim6gh1vVIbc.jpg",
           "/bSzfJUHyDXTIoUCvnMoywTTz51c.jpg",
           "/2IMUncXzi8ajpOQJGnWois5mATp.jpg"
-        ]
+        ],
+        "backdrop_path": "/6ToGkmqn0KG0UGGGUAC1Ww0e5CM.jpg",
+        "backdrop_largura": 3840,
+        "backdrop_altura": 2160,
+        "poster_sem_texto_path": "/k4ZlRlZxngQ9r2TzH3KPB2jnDi9.jpg",
+        "poster_sem_texto_largura": 2000,
+        "poster_sem_texto_altura": 3000
       },
       "distribuicao": {
         "n_notas_total": 1869284,
@@ -25282,7 +25396,7 @@ window.ESPECTRO_DATA = {
         "fonte": "tmdb",
         "ano_fonte": "bruto",
         "tmdb_id": 381283,
-        "tmdb_fetched_at": "2026-08-27T11:49:28+00:00",
+        "tmdb_fetched_at": "2026-08-27T16:35:31+00:00",
         "poster_path": "/ldEZHi9jyfAhJuSUaEWd7qf7nU3.jpg",
         "poster_largura": 1933,
         "poster_altura": 2900,
@@ -25297,7 +25411,13 @@ window.ESPECTRO_DATA = {
           "/tmkrGWqMshsxp5cEv3515pGpPBM.jpg",
           "/6ao98lR8a7AAvDmZYlt6J2wagjW.jpg",
           "/koQCafVJATc9Gxw8QrCQzLY3jdx.jpg"
-        ]
+        ],
+        "backdrop_path": "/2wS8pMZgvzq7kaZb5LHX54poQnA.jpg",
+        "backdrop_largura": 3840,
+        "backdrop_altura": 2160,
+        "poster_sem_texto_path": "/466CsG8OhvJcXeSMMoS2xqHU9ad.jpg",
+        "poster_sem_texto_largura": 1800,
+        "poster_sem_texto_altura": 2694
       },
       "distribuicao": {
         "n_notas_total": 884774,
@@ -26619,7 +26739,7 @@ window.ESPECTRO_DATA = {
         "fonte": "tmdb",
         "ano_fonte": "bruto",
         "tmdb_id": 753342,
-        "tmdb_fetched_at": "2026-08-27T11:49:29+00:00",
+        "tmdb_fetched_at": "2026-08-27T16:35:32+00:00",
         "poster_path": "/2UY2xfkgw9EgOOyA7ro3eyGJ9V9.jpg",
         "poster_largura": 2000,
         "poster_altura": 3000,
@@ -26634,7 +26754,13 @@ window.ESPECTRO_DATA = {
           "/aMi6Y2pwJmWysM1HSZGgOlid5EM.jpg",
           "/d0M9RyWuV3SteXIpCiN4ssDfPEm.jpg",
           "/f1AQhx6ZfGhPZFTVKgxG91PhEYc.jpg"
-        ]
+        ],
+        "backdrop_path": "/33pMXav77ICRnceEBLhL8lXTywv.jpg",
+        "backdrop_largura": 3840,
+        "backdrop_altura": 2160,
+        "poster_sem_texto_path": "/fwtSZ1FpWPyrhj1QyuIpyn749uf.jpg",
+        "poster_sem_texto_largura": 2000,
+        "poster_sem_texto_altura": 3000
       },
       "distribuicao": {
         "n_notas_total": 598710,
@@ -27909,7 +28035,7 @@ window.ESPECTRO_DATA = {
         "fonte": "tmdb",
         "ano_fonte": "bruto",
         "tmdb_id": 1339713,
-        "tmdb_fetched_at": "2026-08-27T11:49:29+00:00",
+        "tmdb_fetched_at": "2026-08-27T16:35:33+00:00",
         "poster_path": "/wUc6IDf5ChjM1UyQye21qFBeJY0.jpg",
         "poster_largura": 1000,
         "poster_altura": 1500,
@@ -27924,7 +28050,13 @@ window.ESPECTRO_DATA = {
           "/fnASfC4pJ4NSzJ1ch7FBD99PiaZ.jpg",
           "/reRGz6r9EMpJfU6dRhKCEyyVGdl.jpg",
           "/j8brS9jQanEE03DfALGIMNwILAR.jpg"
-        ]
+        ],
+        "backdrop_path": "/rZfmzpixLKLR3Hg2u0WgC7XLFl8.jpg",
+        "backdrop_largura": 3200,
+        "backdrop_altura": 1800,
+        "poster_sem_texto_path": "/pgya613gQdfzfmksLZO0HeWdTHZ.jpg",
+        "poster_sem_texto_largura": 1023,
+        "poster_sem_texto_altura": 1537
       },
       "distribuicao": {
         "n_notas_total": 214,
@@ -29223,7 +29355,7 @@ window.ESPECTRO_DATA = {
         "fonte": "tmdb",
         "ano_fonte": "bruto",
         "tmdb_id": 872585,
-        "tmdb_fetched_at": "2026-08-27T11:49:30+00:00",
+        "tmdb_fetched_at": "2026-08-27T16:35:34+00:00",
         "poster_path": "/1OsQJEoSXBjduuCvDOlRhoEUaHu.jpg",
         "poster_largura": 1999,
         "poster_altura": 3000,
@@ -29238,7 +29370,13 @@ window.ESPECTRO_DATA = {
           "/xcXALwBjdHIjrESpGVhghqj8fGT.jpg",
           "/lybU7fxqmg2l0jqU8N4ZpsSmPQq.jpg",
           "/yNMgBF92CfD5ILvePt6nIy3OYdm.jpg"
-        ]
+        ],
+        "backdrop_path": "/neeNHeXjMF5fXoCJRsOmkNGC7q.jpg",
+        "backdrop_largura": 3840,
+        "backdrop_altura": 2160,
+        "poster_sem_texto_path": "/eHjIEiEKTnb9euehI7IbCxtGH5N.jpg",
+        "poster_sem_texto_largura": 2000,
+        "poster_sem_texto_altura": 3000
       },
       "distribuicao": {
         "n_notas_total": 4484625,
@@ -30563,7 +30701,7 @@ window.ESPECTRO_DATA = {
         "fonte": "tmdb",
         "ano_fonte": "bruto",
         "tmdb_id": 496243,
-        "tmdb_fetched_at": "2026-08-27T11:49:31+00:00",
+        "tmdb_fetched_at": "2026-08-27T16:35:35+00:00",
         "poster_path": "/igw938inb6Fy0YVcwIyxQ7Lu5FO.jpg",
         "poster_largura": 2000,
         "poster_altura": 3000,
@@ -30578,7 +30716,13 @@ window.ESPECTRO_DATA = {
           "/p0giX7IG8hXv6lr1KE3jFn0VqXA.jpg",
           "/25tz24hlrqAbjhpHx1FhmfPH8Qf.jpg",
           "/xOXIXRH6F2CDeEPwVSBe6y2v25V.jpg"
-        ]
+        ],
+        "backdrop_path": "/vbC0rzdrb7Ohc2TkbEbxtOABECe.jpg",
+        "backdrop_largura": 2880,
+        "backdrop_altura": 1620,
+        "poster_sem_texto_path": "/izlnBckdcLJfW9QMoaSXVPFESP0.jpg",
+        "poster_sem_texto_largura": 2000,
+        "poster_sem_texto_altura": 3000
       },
       "distribuicao": {
         "n_notas_total": 5686550,
@@ -31901,7 +32045,7 @@ window.ESPECTRO_DATA = {
         "fonte": "tmdb",
         "ano_fonte": "bruto",
         "tmdb_id": 949423,
-        "tmdb_fetched_at": "2026-08-27T11:49:31+00:00",
+        "tmdb_fetched_at": "2026-08-27T16:35:35+00:00",
         "poster_path": "/cTgLkhIMmzwH1NAaq7NDbFN20zi.jpg",
         "poster_largura": 2000,
         "poster_altura": 3000,
@@ -31916,7 +32060,13 @@ window.ESPECTRO_DATA = {
           "/ddfGBZiyOhVCAOtffie7AiXVYiE.jpg",
           "/w2D1ZgaPhDu1DPuVr3E3YRcvSOJ.jpg",
           "/jY0HbDUOtIdRC2HcTu1VHSYa2J4.jpg"
-        ]
+        ],
+        "backdrop_path": "/fdzpbJ0xdyjMUY4DqN6cOpESA1X.jpg",
+        "backdrop_largura": 3840,
+        "backdrop_altura": 2160,
+        "poster_sem_texto_path": "/8tmjDSwCpCoui2baBlG6WZbTZdw.jpg",
+        "poster_sem_texto_largura": 2000,
+        "poster_sem_texto_altura": 3000
       },
       "distribuicao": {
         "n_notas_total": 2096463,
@@ -33243,7 +33393,7 @@ window.ESPECTRO_DATA = {
         "fonte": "tmdb",
         "ano_fonte": "bruto",
         "tmdb_id": 976893,
-        "tmdb_fetched_at": "2026-08-27T11:49:32+00:00",
+        "tmdb_fetched_at": "2026-08-27T16:35:36+00:00",
         "poster_path": "/p4oCDJgtYPg8lWqmeNIsqPwzZ7X.jpg",
         "poster_largura": 2000,
         "poster_altura": 3000,
@@ -33258,7 +33408,13 @@ window.ESPECTRO_DATA = {
           "/8Hwgz3AkjifQ9369gjCBC0fg9Ig.jpg",
           "/moOV5JNhVm1RWApOyt6DK7n3EGt.jpg",
           "/ynRFKOnTGsKqDQC4UVJVhVciNcA.jpg"
-        ]
+        ],
+        "backdrop_path": "/hjWxngV6tidwDkfJDEgMjHD2KEz.jpg",
+        "backdrop_largura": 3840,
+        "backdrop_altura": 2160,
+        "poster_sem_texto_path": "/fAM0bpXVqPQbD1nIVvNznDkIAf.jpg",
+        "poster_sem_texto_largura": 2000,
+        "poster_sem_texto_altura": 3000
       },
       "distribuicao": {
         "n_notas_total": 874872,
@@ -34572,7 +34728,7 @@ window.ESPECTRO_DATA = {
         "fonte": "tmdb",
         "ano_fonte": "bruto",
         "tmdb_id": 11324,
-        "tmdb_fetched_at": "2026-08-27T11:49:33+00:00",
+        "tmdb_fetched_at": "2026-08-27T16:35:37+00:00",
         "poster_path": "/erl801HYIodoIBGZeFk0GTwCUBh.jpg",
         "poster_largura": 1066,
         "poster_altura": 1600,
@@ -34587,7 +34743,13 @@ window.ESPECTRO_DATA = {
           "/qxnuwAaD7cFyLW8yRM3H6sqMGxM.jpg",
           "/6USzEhpyhDF0upzqo4HLrr3ATYE.jpg",
           "/jCAtxJHGWZkVaBPhxc8XuR5YgJp.jpg"
-        ]
+        ],
+        "backdrop_path": "/rbZvGN1A1QyZuoKzhCw8QPmf2q0.jpg",
+        "backdrop_largura": 3840,
+        "backdrop_altura": 2160,
+        "poster_sem_texto_path": "/6GvUFnmnrcpo2UARaJdWiHuTgps.jpg",
+        "poster_sem_texto_largura": 1000,
+        "poster_sem_texto_altura": 1426
       },
       "distribuicao": {
         "n_notas_total": 3640785,
@@ -35910,7 +36072,7 @@ window.ESPECTRO_DATA = {
         "fonte": "tmdb",
         "ano_fonte": "bruto",
         "tmdb_id": 569094,
-        "tmdb_fetched_at": "2026-08-27T11:49:33+00:00",
+        "tmdb_fetched_at": "2026-08-27T16:35:38+00:00",
         "poster_path": "/fBS6y0LYX4kU6pPSBYMdQy6SIHX.jpg",
         "poster_largura": 2000,
         "poster_altura": 3000,
@@ -35925,7 +36087,13 @@ window.ESPECTRO_DATA = {
           "/bpvjzk0QXbJPV4wVwrHuYiq1TbP.jpg",
           "/2I5eBh98Q4aPq8WdQrHdTC8ARhY.jpg",
           "/dlebyCnmdwXtJfHNicBYhudz5EJ.jpg"
-        ]
+        ],
+        "backdrop_path": "/kVd3a9YeLGkoeR50jGEXM6EqseS.jpg",
+        "backdrop_largura": 3840,
+        "backdrop_altura": 2160,
+        "poster_sem_texto_path": "/uc5U4GCZu9Z2Zb3yqk5fZfLwawR.jpg",
+        "poster_sem_texto_largura": 2000,
+        "poster_sem_texto_altura": 3000
       },
       "distribuicao": {
         "n_notas_total": 3912952,
@@ -37245,11 +37413,17 @@ window.ESPECTRO_DATA = {
         "fonte": "tmdb",
         "ano_fonte": "bruto",
         "tmdb_id": 976680,
-        "tmdb_fetched_at": "2026-08-27T11:49:34+00:00",
+        "tmdb_fetched_at": "2026-08-27T16:34:51+00:00",
         "poster_path": "/oauz8kPiFCpsflMMEBq7UbNasKf.jpg",
         "poster_largura": 2000,
         "poster_altura": 3000,
-        "backdrop_paths": []
+        "backdrop_paths": [],
+        "backdrop_path": null,
+        "backdrop_largura": null,
+        "backdrop_altura": null,
+        "poster_sem_texto_path": "/oauz8kPiFCpsflMMEBq7UbNasKf.jpg",
+        "poster_sem_texto_largura": 2000,
+        "poster_sem_texto_altura": 3000
       },
       "distribuicao": {
         "n_notas_total": 1484316,
@@ -38573,7 +38747,7 @@ window.ESPECTRO_DATA = {
         "fonte": "tmdb",
         "ano_fonte": "bruto",
         "tmdb_id": 238,
-        "tmdb_fetched_at": "2026-08-27T11:49:35+00:00",
+        "tmdb_fetched_at": "2026-08-27T16:34:49+00:00",
         "poster_path": "/oJagOzBu9Rdd9BrciseCm3U3MCU.jpg",
         "poster_largura": 2000,
         "poster_altura": 3000,
@@ -38588,7 +38762,13 @@ window.ESPECTRO_DATA = {
           "/7VrRna8S3x6xbijooeBmxqvHXiu.jpg",
           "/htuuuEwAvDVECMpb0ltLLyZyDDt.jpg",
           "/vDACQOBMpdwrcpKfnNrdg1z9MGq.jpg"
-        ]
+        ],
+        "backdrop_path": "/ejdD20cdHNFAYAN2DlqPToXKyzx.jpg",
+        "backdrop_largura": 1920,
+        "backdrop_altura": 1080,
+        "poster_sem_texto_path": "/JybfgPwFGPydjA3vyvBS2WPpWi.jpg",
+        "poster_sem_texto_largura": 1080,
+        "poster_sem_texto_altura": 1620
       },
       "distribuicao": {
         "n_notas_total": 2842603,
@@ -39914,7 +40094,7 @@ window.ESPECTRO_DATA = {
         "fonte": "tmdb",
         "ano_fonte": "bruto",
         "tmdb_id": 273248,
-        "tmdb_fetched_at": "2026-08-27T11:49:36+00:00",
+        "tmdb_fetched_at": "2026-08-27T16:35:39+00:00",
         "poster_path": "/jfTo9U9OgOXODEEspNnYFuZdR1q.jpg",
         "poster_largura": 1400,
         "poster_altura": 2100,
@@ -39929,7 +40109,13 @@ window.ESPECTRO_DATA = {
           "/iWVXhCkL579GYHjQMs6OxTLOcyk.jpg",
           "/cDxcPmqwhAfpdHFB8mvIqDZslT9.jpg",
           "/dJhamJ4DJVM6gLCAtMImoHqTSux.jpg"
-        ]
+        ],
+        "backdrop_path": "/7g1zO5t0bd27Iqn5ZUDJmksOGPJ.jpg",
+        "backdrop_largura": 3840,
+        "backdrop_altura": 2160,
+        "poster_sem_texto_path": "/hqsqQyy2VVdv2FnvRNy018qnOn.jpg",
+        "poster_sem_texto_largura": 1440,
+        "poster_sem_texto_altura": 2160
       },
       "distribuicao": {
         "n_notas_total": 1307441,
@@ -41232,7 +41418,7 @@ window.ESPECTRO_DATA = {
         "fonte": "tmdb",
         "ano_fonte": "bruto",
         "tmdb_id": 639933,
-        "tmdb_fetched_at": "2026-08-27T11:49:37+00:00",
+        "tmdb_fetched_at": "2026-08-27T16:35:40+00:00",
         "poster_path": "/vJfLNvOMK1Ek7OvpKgBDSqH2kN1.jpg",
         "poster_largura": 2000,
         "poster_altura": 3000,
@@ -41247,7 +41433,13 @@ window.ESPECTRO_DATA = {
           "/7I79TnoHp1x4EoleUBg4BraYQkz.jpg",
           "/AiNU7EHB5CaVut1OoFTlUoFQw7D.jpg",
           "/xOMLQ0NypqxlEge75I7prBRvRbc.jpg"
-        ]
+        ],
+        "backdrop_path": "/qZYvF1M7y8Gfp4S6OBHbYfB0Lgc.jpg",
+        "backdrop_largura": 3840,
+        "backdrop_altura": 2160,
+        "poster_sem_texto_path": "/zUVqUuddxk81iZhLWC43D2FewOM.jpg",
+        "poster_sem_texto_largura": 2000,
+        "poster_sem_texto_altura": 3000
       },
       "distribuicao": {
         "n_notas_total": 946031,
@@ -42569,7 +42761,7 @@ window.ESPECTRO_DATA = {
         "fonte": "tmdb",
         "ano_fonte": "bruto",
         "tmdb_id": 933260,
-        "tmdb_fetched_at": "2026-08-27T11:49:37+00:00",
+        "tmdb_fetched_at": "2026-08-27T16:35:41+00:00",
         "poster_path": "/vWeOgzlhnP1sS23H3rzctGHB9Nb.jpg",
         "poster_largura": 2000,
         "poster_altura": 3000,
@@ -42584,7 +42776,13 @@ window.ESPECTRO_DATA = {
           "/9oYdz5gDoIl8h67e3ccv3OHtmm2.jpg",
           "/jlWk4J1sV1EHgkjhvsN7EdzGvOx.jpg",
           "/b0itXhS69X33BvLi7uWjUZQs9MB.jpg"
-        ]
+        ],
+        "backdrop_path": "/bVSOgrxasVJF6V71T7v2KfBRSzu.jpg",
+        "backdrop_largura": 3840,
+        "backdrop_altura": 2160,
+        "poster_sem_texto_path": "/snq9VCzSzTpxfFzx9WoVgLxjozo.jpg",
+        "poster_sem_texto_largura": 2000,
+        "poster_sem_texto_altura": 3000
       },
       "distribuicao": {
         "n_notas_total": 3735113,
@@ -43906,7 +44104,7 @@ window.ESPECTRO_DATA = {
         "fonte": "tmdb",
         "ano_fonte": "bruto",
         "tmdb_id": 402431,
-        "tmdb_fetched_at": "2026-08-27T11:49:38+00:00",
+        "tmdb_fetched_at": "2026-08-27T16:35:42+00:00",
         "poster_path": "/qcaKkLwIXCAxJtpetVYHniCvLZj.jpg",
         "poster_largura": 2000,
         "poster_altura": 3000,
@@ -43921,7 +44119,13 @@ window.ESPECTRO_DATA = {
           "/3M5USne9t9XKMmb4nJ7SfcAYh6X.jpg",
           "/kvzaAYMVjVkuNcMNg5ECOlgQXJc.jpg",
           "/uDjYG4ODYetiNuRaopvLvRq0RuO.jpg"
-        ]
+        ],
+        "backdrop_path": "/w22GVYotTIVC1dUd58mRhwPqiS.jpg",
+        "backdrop_largura": 3840,
+        "backdrop_altura": 2160,
+        "poster_sem_texto_path": "/hcIN0JOMXET8xbFPAspUMu7OLNZ.jpg",
+        "poster_sem_texto_largura": 1895,
+        "poster_sem_texto_altura": 2842
       },
       "distribuicao": {
         "n_notas_total": 2819879,
@@ -45246,7 +45450,7 @@ window.ESPECTRO_DATA = {
         "fonte": "tmdb",
         "ano_fonte": "bruto",
         "tmdb_id": 787699,
-        "tmdb_fetched_at": "2026-08-27T11:49:39+00:00",
+        "tmdb_fetched_at": "2026-08-27T16:35:43+00:00",
         "poster_path": "/uQWEomz2wLoijrvoFaJt2gUMXRu.jpg",
         "poster_largura": 2000,
         "poster_altura": 3000,
@@ -45261,7 +45465,13 @@ window.ESPECTRO_DATA = {
           "/g7eBZgkQ7JpbFdQSOB3v1alpLl4.jpg",
           "/pkrIKjugQEK7p2sXXYsMgbzdNFc.jpg",
           "/ihz5aCRlKGluAQ6BPyKHRjrcW2X.jpg"
-        ]
+        ],
+        "backdrop_path": "/uIk2g2bRkNwNywKZIhC5oIU94Kh.jpg",
+        "backdrop_largura": 3840,
+        "backdrop_altura": 2160,
+        "poster_sem_texto_path": "/f9Ci5on44fIV1BMTOzzGrDf3P5C.jpg",
+        "poster_sem_texto_largura": 2000,
+        "poster_sem_texto_altura": 3000
       },
       "distribuicao": {
         "n_notas_total": 1712913,

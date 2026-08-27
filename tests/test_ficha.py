@@ -489,3 +489,183 @@ def test_fallback_en_us_nao_rebaixa_imagens(tmp_path):
     # e as imagens da resposta pt-BR seguem intactas
     assert ficha["poster_path"] == "/poster.jpg"
     assert ficha["sinopse_fallback_en"] is True
+
+
+# =====================================================================
+# v1.9.30 — BACKDROP ESCOLHIDO e PÔSTER SEM TEXTO (§3[F], §3[E])
+# =====================================================================
+
+def _img(path, *, va=0.0, vc=0, w=1920, h=1080, iso=None):
+    return {"file_path": path, "width": w, "height": h,
+            "vote_average": va, "vote_count": vc, "iso_639_1": iso}
+
+
+def _ficha_imagens(tmp_path, *, backdrops=None, posters=None,
+                   poster_path="/poster.jpg"):
+    d = _detalhes()
+    d["poster_path"] = poster_path
+    d["images"] = {"posters": posters if posters is not None else [],
+                   "backdrops": backdrops if backdrops is not None else []}
+    session = FakeTmdbSession({
+        ("search", "Cure", 1997): {"results": [{"id": 5, "release_date": "1997-01-01"}]},
+        ("movie", "pt-BR"): d,
+    })
+    ficha, _, _ = buscar_ficha("Cure", 1997, tmp_path, api_key="k", session=session)
+    return ficha, session
+
+
+def test_o_backdrop_escolhido_e_o_mais_bem_avaliado(tmp_path):
+    """O degrau que responde "melhor avaliada": `vote_average` é a única
+    curadoria humana que o TMDB expõe sobre imagem. Resolução NÃO é o
+    primeiro critério de propósito — `width` sozinho escolhe o maior
+    arquivo, não o melhor quadro."""
+    ficha, _ = _ficha_imagens(tmp_path, backdrops=[
+        _img("/a.jpg", va=3.0, w=3840, h=2160),
+        _img("/b.jpg", va=8.0, w=1280, h=720),
+        _img("/c.jpg", va=5.0, w=3840, h=2160),
+    ])
+    assert ficha["backdrop_path"] == "/b.jpg"
+    assert (ficha["backdrop_largura"], ficha["backdrop_altura"]) == (1280, 720)
+
+
+def test_a_escolha_do_backdrop_nao_depende_da_ORDEM_da_resposta(tmp_path):
+    """REGRA DETERMINÍSTICA (§3[E]): o mesmo filme não pode trocar de imagem
+    entre execuções. `images.backdrops` chega ordenada por `vote_average`,
+    mas isso não é ordem TOTAL — empates são comuns e a API não declara
+    desempate. Medido nos 35: em 3 filmes o primeiro da lista não é o que
+    esta ordem escolhe. Duas permutações da MESMA resposta têm de dar a
+    mesma imagem."""
+    itens = [
+        _img("/z.jpg", va=6.0, vc=10, w=1920),
+        _img("/a.jpg", va=6.0, vc=10, w=1920),   # empata em tudo menos path
+        _img("/m.jpg", va=6.0, vc=30, w=1920),   # mesma nota, mais votos
+    ]
+    a, _ = _ficha_imagens(tmp_path, backdrops=list(itens))
+    b, _ = _ficha_imagens(tmp_path / "outro", backdrops=list(reversed(itens)))
+    assert a["backdrop_path"] == b["backdrop_path"] == "/m.jpg"
+
+
+def test_desempate_de_backdrop_desce_ate_o_file_path(tmp_path):
+    """O último degrau é o que fecha a ORDEM TOTAL. Sem ele, duas imagens
+    idênticas nos critérios anteriores dependeriam de novo da posição."""
+    ficha, _ = _ficha_imagens(tmp_path, backdrops=[
+        _img("/zebra.jpg", va=6.0, vc=10, w=1920),
+        _img("/abelha.jpg", va=6.0, vc=10, w=1920),
+    ])
+    assert ficha["backdrop_path"] == "/abelha.jpg"
+
+
+def test_backdrop_sem_texto_tem_preferencia_sobre_arte_com_idioma(tmp_path):
+    """Uma imagem `iso_639_1='pt'` é key art de campanha — título tratado e
+    bloco de elenco gravados —, e ela iria logo ACIMA do par ano→título que
+    a própria página escreve. Medido: afeta 2 dos 35."""
+    ficha, _ = _ficha_imagens(tmp_path, backdrops=[
+        _img("/keyart.jpg", va=9.0, iso="pt"),
+        _img("/quadro.jpg", va=4.0, iso=None),
+    ])
+    assert ficha["backdrop_path"] == "/quadro.jpg"
+
+
+def test_a_preferencia_por_sem_texto_e_PREFERENCIA_e_nao_filtro(tmp_path):
+    """Um filme cujas imagens sejam todas `pt` continua tendo backdrop —
+    senão a regra de qualidade viraria uma causa de ausência."""
+    ficha, _ = _ficha_imagens(tmp_path, backdrops=[
+        _img("/so-pt-1.jpg", va=2.0, iso="pt"),
+        _img("/so-pt-2.jpg", va=9.0, iso="pt"),
+    ])
+    assert ficha["backdrop_path"] == "/so-pt-2.jpg"
+
+
+def test_o_backdrop_escolhido_esta_sempre_entre_os_coletados(tmp_path):
+    """A escolha sai de DENTRO dos até `TETO_BACKDROPS` guardados, não do
+    acervo inteiro: "qual imagem esta página mostra" tem de ser respondível
+    olhando só o JSON publicado. Aqui a melhor imagem do acervo está FORA do
+    teto e não pode ser a escolhida."""
+    dentro = [_img(f"/bd{i}.jpg", va=1.0) for i in range(TETO_BACKDROPS)]
+    fora = [_img("/tesouro.jpg", va=10.0)]
+    ficha, _ = _ficha_imagens(tmp_path, backdrops=dentro + fora)
+    assert len(ficha["backdrop_paths"]) == TETO_BACKDROPS
+    assert ficha["backdrop_path"] in ficha["backdrop_paths"]
+    assert ficha["backdrop_path"] != "/tesouro.jpg"
+
+
+def test_filme_sem_backdrop_nenhum_e_estado_valido(tmp_path):
+    """AUSÊNCIA NUNCA BLOQUEIA: o frontend cai no pôster, e sem os dois, no
+    estado de ausência já desenhado."""
+    ficha, _ = _ficha_imagens(tmp_path, backdrops=[])
+    assert ficha["backdrop_paths"] == []
+    assert ficha["backdrop_path"] is None
+    assert ficha["backdrop_largura"] is None
+    assert ficha["backdrop_altura"] is None
+
+
+def test_poster_sem_texto_so_aceita_iso_639_1_nulo(tmp_path):
+    """Aqui o `iso_639_1 is None` é FILTRO, não preferência: arte com idioma
+    declarado tem texto sobreposto por definição, e devolvê-la neste campo
+    seria devolver exatamente a coisa que ele existe para evitar."""
+    ficha, _ = _ficha_imagens(tmp_path, posters=[
+        _img("/com-texto.jpg", va=9.0, iso="pt", w=2000, h=3000),
+        _img("/limpo.jpg", va=3.0, iso=None, w=1000, h=1500),
+    ])
+    assert ficha["poster_sem_texto_path"] == "/limpo.jpg"
+    assert (ficha["poster_sem_texto_largura"],
+            ficha["poster_sem_texto_altura"]) == (1000, 1500)
+
+
+def test_poster_sem_texto_e_o_mais_bem_avaliado_entre_os_sem_texto(tmp_path):
+    ficha, _ = _ficha_imagens(tmp_path, posters=[
+        _img("/limpo-fraco.jpg", va=1.0, iso=None),
+        _img("/limpo-forte.jpg", va=7.0, iso=None),
+    ])
+    assert ficha["poster_sem_texto_path"] == "/limpo-forte.jpg"
+
+
+def test_sem_arte_sem_texto_o_campo_fica_nulo_e_o_poster_normal_fica(tmp_path):
+    """ADITIVO: o campo novo não substitui nada. Sem arte sem texto, o
+    frontend usa o pôster normal — que continua exatamente onde estava."""
+    ficha, _ = _ficha_imagens(tmp_path, posters=[
+        _img("/com-texto.jpg", va=9.0, iso="pt")], poster_path="/poster.jpg")
+    assert ficha["poster_sem_texto_path"] is None
+    assert ficha["poster_path"] == "/poster.jpg"
+
+
+def test_os_campos_novos_nao_custam_UMA_requisicao_a_mais(tmp_path):
+    """Confirmação pedida na entrega: a chamada já trazia `images` com
+    `include_image_language=pt,null` desde a v1.9.29 — backdrop escolhido e
+    arte sem texto saem do MESMO bloco, sem nenhuma requisição nova."""
+    ficha, session = _ficha_imagens(
+        tmp_path,
+        backdrops=[_img("/bd.jpg", va=5.0)],
+        posters=[_img("/limpo.jpg", va=5.0, iso=None)])
+    assert len([1 for u, _p in session.calls if "movie/" in u]) == 1
+    assert ficha["backdrop_path"] == "/bd.jpg"
+    assert ficha["poster_sem_texto_path"] == "/limpo.jpg"
+
+
+def test_cache_da_v1929_conta_como_MISS_por_faltar_campo_novo(tmp_path):
+    """A regra da v1.9.29 olhava só `tmdb_fetched_at` — e as 35 entradas em
+    cache JÁ o tinham. Mantida como estava, esta versão teria devolvido os
+    campos novos ausentes, em silêncio: o defeito exato que aquela regra
+    existia para evitar. A checagem passou a ser a LISTA de chaves da versão
+    corrente."""
+    from espectro24.ficha import _cache_key
+    antiga = {"titulo": "Título PT", "fonte": "tmdb", "ano": 1997,
+              "tmdb_fetched_at": "2026-08-27T11:49:16+00:00",
+              "poster_path": "/velho.jpg", "backdrop_paths": []}
+    (tmp_path / f"{_cache_key('Cure', 1997)}.json").write_text(
+        json.dumps(antiga), encoding="utf-8")
+
+    ficha, _ = _ficha_imagens(tmp_path, backdrops=[_img("/bd.jpg", va=5.0)])
+    assert ficha["backdrop_path"] == "/bd.jpg"
+
+
+def test_entrada_completa_com_campo_novo_NULO_e_HIT_e_nao_rebusca(tmp_path):
+    """Presença, não verdade: `backdrop_path: None` é resposta válida (filme
+    sem backdrop) e não pode forçar uma requisição nova a cada execução."""
+    ficha, session = _ficha_imagens(tmp_path, backdrops=[])
+    assert ficha["backdrop_path"] is None
+    n = len(session.calls)
+    de_novo, _, _ = buscar_ficha("Cure", 1997, tmp_path, api_key="k",
+                                 session=session)
+    assert len(session.calls) == n, "houve rebusca de uma entrada completa"
+    assert de_novo["backdrop_path"] is None

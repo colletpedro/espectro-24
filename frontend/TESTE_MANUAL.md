@@ -85,6 +85,63 @@ corrigida na v1.9.1).
 | 26 | **Mobile (375px)** — a grade vira coluna única, o cabeçalho de colunas some, as 3 células de um eixo empilham em y distintos e cada uma exibe o nome do grupo via `::before` na cor do grupo; **sem overflow horizontal** | ✅ |
 | 27 | **Console limpo** — home, os 3 filmes e o degradado carregam com 0 erro (verificado em aba nova; uma regressão de `var` içado — `MESES` usado antes da atribuição — foi achada e corrigida por este teste) | ✅ |
 
+## v1.9.30 — ORDEM DOS BULLETS POR PESO · BACKDROP no topo · PÔSTER SEM TEXTO
+
+Método: servidor estático local (`python3 -m http.server`, `frontend/`),
+Chromium do painel, **1280×900** (coluna de leitura de **720px**) e
+**375×812**. MEDIDO = valor lido por script na página, pela rede ou por
+teste; VISTO = conferido em captura de tela. O catálogo tem **34/35 com
+backdrop**, então a falha de imagem foi **simulada** (linha 100).
+
+| # | Cenário | MEDIDO / VISTO | ok |
+|---|---------|----------------|----|
+| 91 | **Ordem dos blocos por peso — a conta nos 35** — a ordem **mudou em 33**; **2 iguais** (`cats-2019` 86/7/7 e `joker-folie-a-deux` 46/33/21, os dois de negativa dominante — a prova de que a regra não é "positivas primeiro"). 31 viraram `NEG→POS` ⇒ `POS→NEG`; `friday-the-13th-2009` ⇒ `MED→NEG→POS`; `napoleon-2023` ⇒ `MED→POS→NEG` | MEDIDO | ✅ |
+| 92 | **`the-godfather` (2/5/93), desktop** — 1º bloco **FANS ~93%**, 2º **HATERS ~2%**; `sentiment-groups--2` | MEDIDO + VISTO | ✅ |
+| 93 | **`cats-2019` (86/7/7), desktop** — 1º bloco **HATERS ~86%**, 2º **FANS ~7%**; meio recolhido em "~7% ficaram no meio-termo" | MEDIDO + VISTO | ✅ |
+| 94 | **`napoleon-2023` (22/45/33) — meio dominante** — três blocos em destaque, na ordem **MIXED ~45% → FANS ~33% → HATERS ~22%**; `sentiment-groups--3`, nenhum `disclosure--meio`. A política do meio não mudou | MEDIDO + VISTO | ✅ |
+| 95 | **Mobile 375px, `the-godfather`** — coluna única (`grid-template-columns: 335px`), **FANS em y=1203 e HATERS em y=2166**: no empilhado o maior vem em cima, que é onde a ordem pesa mais | MEDIDO | ✅ |
+| 96 | **A BARRA NÃO FOI REORDENADA** — `aria-label` = *"HATERS, cerca de 2%…; MIXED, cerca de 5%…; FANS, cerca de 93%…"*, legenda `HATERS MIXED FANS`, callout `~2% ~5% ~93%`. Idem `cats-2019`. Geometria, animação e faixa do mosaico intactas | MEDIDO | ✅ |
+| 97 | **Animação da barra intacta** — 10 animações na página do filme (`proportion-fronteiras` 650ms + `proportion-lead`/`ignite` 260ms), as mesmas da v1.9.28; a 11ª é o `poster-in` de 240ms da imagem de abertura | MEDIDO | ✅ |
+| 98 | **Descompasso com o VEREDITO — ressalva, não conserto** — **6 de 35 depois** da mudança contra **31 de 35 antes**. Remanescentes: `cats-2019`, `joker-folie-a-deux` (bullets HATERS / veredito abre pelos que recomendam) e `cure`, `pearl-2022`, `perfect-days-2023`, `spider-man-across-the-spider-verse` (o inverso). Nenhum veredito regenerado ou alterado | MEDIDO | ✅ |
+| 99 | **Backdrop no topo, desktop** — `the-godfather`, `avengers-endgame`, `eighth-grade`, `obsession-2026`, `cats-2019`, `napoleon-2023`: caixa **720×405**, `aspect-ratio` inline com as dimensões reais (`1920/1080`, `3840/2160`, `3500/1969`, `3200/1800`, `1280/720`). Ordem do DOM: `backdrop → ano → título → chip` | MEDIDO + VISTO | ✅ |
+| 100 | **Falha do CDN (404 SIMULADO em `eighth-grade`)** — cai no estado desenhado ("24 / SEM IMAGEM", hachura) dentro da mesma caixa. Antes e depois: **405,05×720, docH 2919, título em y=530,56** — deslocamento **0** | MEDIDO + VISTO | ✅ |
+| 101 | **Fallback sem backdrop — `talk-to-me-2022`** — nenhum `.backdrop`; volta o `poster--ficha` contido, `aspect-ratio 2000/3000`, `w500`, `alt="Pôster de …"`. Nada mais na página muda | MEDIDO + VISTO | ✅ |
+| 102 | **CLS na página do filme — `0`, zero entradas de `layout-shift`**, em 1280×900 e em 375×812 (`PerformanceObserver{buffered:true}`, carregamento completo) | MEDIDO | ✅ |
+| 103 | **Reserva de proporção, contrafactual** — `the-godfather`: título em **y=530,52 com e sem** a imagem carregada; **sem a reserva** a caixa vai a **0px** e o título sobe para **y=125,52** — **salto de 405px** que a reserva compra (era 298px com o pôster da v1.9.29: a reserva ficou MAIS necessária, não menos) | MEDIDO | ✅ |
+| 104 | **Mobile 375px — backdrop de borda a borda** — caixa **375×211**, `left=0`, **sem overflow horizontal** (`scrollWidth == innerWidth`) | MEDIDO | ✅ |
+| 105 | **Tamanho de CDN do backdrop** — `w1280` nos 34: **5081 KB no total, 149 KB de média** (44–326 KB), UMA imagem por página. `original` nos mesmos 34 daria **38689 KB, 1138 KB de média** — **7,6×**. Nenhum `original` em lugar nenhum | MEDIDO (rede) | ✅ |
+| 106 | **`alt` e `loading` do backdrop** — `alt="Imagem de Vingadores: Ultimato (2019)"`, `loading="eager"`, `decoding="async"`, `width`/`height` presentes | MEDIDO | ✅ |
+| 107 | **Home, variante `?poster=texto` (DEFAULT)** — 35 imagens `w342`, **CLS 0**, altura de documento **1657px** — o mesmo número da v1.9.29, a home não regrediu | MEDIDO + VISTO | ✅ |
+| 108 | **Home, variante `?poster=limpo`** — 35 imagens, **0 em estado vazio**, 35 carregadas; **CLS 0** e **1657px** de altura, idênticos à outra variante. Nos 35 há arte sem texto; em 34 é arquivo diferente do pôster normal, em 1 (`talk-to-me-2022`) coincide | MEDIDO + VISTO | ✅ |
+| 109 | **Home `limpo`, mobile 375px** — 3 colunas (`109px 109px 109px`), sem overflow horizontal, CLS 0 | MEDIDO + VISTO | ✅ |
+| 110 | **Peso da variante limpa** — `w342` nos 35: **1448 KB** contra **1282 KB** da variante com texto (**+13%**, média 41,4 KB contra 36,6 KB). Não é critério de escolha, é o custo declarado dela | MEDIDO (rede) | ✅ |
+| 111 | **Retrofit dos 35** — 35 processados, **0 falhas**; **34 com backdrop · 1 sem** (`talk-to-me-2022`); **35 com arte sem texto · 0 sem**. Guarda de identidade em vigor | MEDIDO | ✅ |
+| 112 | **Diff dos 35 `resultado/*.json`** — campo a campo contra o `HEAD` anterior: **nada fora do bloco `ficha`**; dentro dele, só os 6 campos novos + `tmdb_fetched_at`. `poster_path`, dimensões do pôster e `backdrop_paths[]` vieram **idênticos** | MEDIDO | ✅ |
+| 113 | **Não regrediu o que não era desta sessão** — `disclosure--meio` e `disclosure--narrativa` fechados por padrão em `obsession-2026`; rótulos HATERS/MIXED/FANS; linha de metadados sans; atribuição TMDB no rodapé | MEDIDO + VISTO | ✅ |
+| 114 | **Zero erro de console** — home nas duas variantes, `creditos.html`, e `filme.html` de `the-godfather`, `cats-2019`, `napoleon-2023`, `avengers-endgame`, `eighth-grade`, `obsession-2026`, `talk-to-me-2022`, nos dois tamanhos | MEDIDO | ✅ |
+| 115 | **Suíte Python** — **1525 passando** (1512 de baseline + 13 novos em `test_ficha.py`), nenhum teste anterior alterado | MEDIDO | ✅ |
+
+## O que este teste NÃO cobre
+
+- **Nenhum teste automatizado de frontend existe.** Continua sendo a maior
+  dívida de teste do projeto, e ela cresceu de novo: a ordem dos blocos
+  agora é uma FUNÇÃO (`ordenarPorPeso`) que nada verifica sozinho, e o
+  desempate por ordem canônica **não é exercitado por filme nenhum do
+  catálogo** — nenhum dos 35 empata entre grupos em destaque. Se ele
+  quebrar, a verificação manual acima não pega.
+- **Spoiler no backdrop não é verificável por este teste, e por design não é
+  verificável por nenhum.** As 34 imagens escolhidas não foram auditadas
+  quanto a conteúdo narrativo — não há critério mecânico para isso, e a
+  decisão registrada em §3[E] é justamente prosseguir sem curadoria. O que
+  este teste mostra é que a imagem certa aparece, não que ela seja segura.
+- **A ficha errada de `talk-to-me-2022`** (um curta de 3 minutos no lugar do
+  filme de 2022) foi encontrada nesta sessão e **não corrigida** — corrigir
+  é republicar, não retrofitar. Ver §3[F].
+- A conferência da rotulagem [D3] continua em
+  `resultado/v1914/ROTULAGEM_CONFERENCIA.md`, não aqui.
+
+---
+
 ## v1.9.29 — PÔSTER (home e página do filme) + ATRIBUIÇÃO AO TMDB
 
 Método: servidor estático local, Chromium do painel, `1280×900` (desktop) e

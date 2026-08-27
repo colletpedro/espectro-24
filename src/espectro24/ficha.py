@@ -4,7 +4,9 @@ Busca `/search/movie` (query + year) para resolver o ID, depois
 `/movie/{id}` com `language=pt-BR` e `append_to_response=credits,images` para
 extrair título pt-BR, sinopse oficial, gêneros, duração, diretor e ano — e,
 desde a v1.9.29, `tmdb_id`, o carimbo de obtenção, o `poster_path` com suas
-dimensões, e a lista de `backdrop_paths` (COLETADA e NÃO renderizada).
+dimensões, e a lista de `backdrop_paths`. Na v1.9.30 entram o BACKDROP
+ESCOLHIDO (um só, com dimensões — o topo da página do filme) e o PÔSTER SEM
+TEXTO (arte-chave `iso_639_1: null`, campo próprio, variante do frontend).
 
 Cache em disco (mesmo padrão do cache do Letterboxd em `fetcher.py`: chave
 determinística, nunca rebusca filme já buscado). Falha da API (chave
@@ -55,13 +57,104 @@ TMDB_ENV_KEY = "TMDB_API_KEY"
 # pequena porque quase todos são `null` mesmo).
 TMDB_IMAGE_LANGS = "pt,null"
 
-# Teto de backdrops guardados por filme. COLETADOS E NÃO RENDERIZADOS (§3[F]):
-# a galeria não existe na v1 porque o TMDB não garante que um backdrop seja
-# livre de spoiler, e "0 spoilers" é a promessa central (§0). 10 é folga
-# confortável para qualquer curadoria futura (o teto real do TMDB passa de
-# 100 num filme popular) sem inchar os `resultado/*.json` — a lista é de
-# strings curtas, e 10 × ~32 bytes é ruído no documento.
+# Teto de backdrops guardados por filme. 10 é folga confortável (o teto real
+# do TMDB passa de 100 num filme popular — medido: `wicked-2024` tem 257)
+# sem inchar os `resultado/*.json`: a lista é de strings curtas, e
+# 10 × ~32 bytes é ruído no documento.
+#
+# [v1.9.30] A LISTA CONTINUA COLETADA E NÃO RENDERIZADA; o que passou a ser
+# renderizado é UM backdrop, o ESCOLHIDO, no topo da página do filme. Não
+# existe galeria, e a distinção não é retórica: `backdrop_paths[]` segue
+# sendo dado guardado que nenhum arquivo do frontend percorre. **A escolha
+# sai de dentro desta lista** (`backdrops[:TETO_BACKDROPS]`), e não do
+# acervo inteiro, para que "qual imagem esta página mostra" continue
+# respondível olhando só o JSON publicado.
+#
+# **ISTO É EXCEÇÃO EXPLÍCITA AO PRINCÍPIO ANTI-SPOILER DO §0**, tomada pelo
+# dono do projeto com o trade-off na mesa. O TMDB não garante que um
+# backdrop seja livre de spoiler — é quadro do filme, e pode ser do terceiro
+# ato. O registro por extenso (o que se ganha, o que se perde, por que não
+# há como maquiar a tensão) está em SPEC §3[E], "O BACKDROP no topo da
+# página do filme".
 TETO_BACKDROPS = 10
+
+# [v1.9.30] A ORDEM DE PREFERÊNCIA ENTRE IMAGENS, e por que ela é do CÓDIGO
+# e não da API. `images.backdrops` chega ordenada por `vote_average`
+# decrescente, mas isso NÃO é uma ordem total: empates são comuns e a API
+# não declara critério de desempate. Medido nos 35 (2026-08-27): em 3 filmes
+# (`eighth-grade`, `friday-the-13th-2009`, `wicked-2024`) o primeiro da
+# lista NÃO é o que esta ordem escolhe. Confiar na posição faria a imagem de
+# um filme publicado poder mudar entre duas execuções sem que nada no dado
+# tivesse mudado — que é exatamente o que "regra determinística" proíbe.
+#
+# Os degraus, do mais forte ao mais fraco:
+#
+#   1. SEM TEXTO SOBREPOSTO (`iso_639_1 is None`) vem antes de arte com
+#      idioma declarado. Uma imagem com `iso_639_1='pt'` é key art de
+#      campanha: traz o título tratado e o bloco de elenco. Medido: afeta 2
+#      dos 35 (`joker-folie-a-deux`, `longlegs`), e nos dois o vencedor sem
+#      a regra seria uma peça de marketing com "PHOENIX GAGA / JOKER" gravado
+#      — logo ACIMA do par ano→título que a própria página escreve. É
+#      PREFERÊNCIA, nunca filtro: um filme cujas imagens sejam todas `pt`
+#      continua tendo imagem.
+#   2. `vote_average` decrescente — a única curadoria humana que o TMDB
+#      expõe sobre imagem. É o degrau que responde "melhor avaliada".
+#   3. `vote_count` decrescente — mesma nota, mais gente confirmando. Caso
+#      real em `the-godfather`: 4,934 com 30 votos contra 4,934 com 15.
+#   4. `width` decrescente — sobrando empate, mais pixels.
+#   5. `file_path` crescente — o degrau que fecha a ORDEM TOTAL. Sem ele,
+#      duas imagens idênticas nos quatro critérios acima dependeriam de novo
+#      da posição na resposta.
+#
+# Resolução NÃO é o primeiro degrau de propósito: `width` sozinho escolhe o
+# maior arquivo, não o melhor quadro, e o acervo é cheio de 3840×2160 sem
+# voto nenhum.
+
+
+def _ordem_imagem(img: dict, *, preferir_sem_texto: bool) -> tuple:
+    """Chave de ordenação — ordem TOTAL, ver o comentário acima.
+
+    Tolerante a campo ausente (`vote_average`, `width`): o TMDB sempre os
+    manda, mas um `None` aqui viraria TypeError na comparação, e a ficha é
+    aditiva — ela nunca derruba o pipeline por causa de uma imagem.
+    """
+    sem_texto = 0 if img.get("iso_639_1") is None else 1
+    return (
+        sem_texto if preferir_sem_texto else 0,
+        -(img.get("vote_average") or 0),
+        -(img.get("vote_count") or 0),
+        -(img.get("width") or 0),
+        img.get("file_path") or "",
+    )
+
+
+def _melhor(imagens: list[dict], *, preferir_sem_texto: bool = False,
+            so_sem_texto: bool = False) -> dict | None:
+    """A melhor imagem da lista pela ordem acima, ou `None` se não houver.
+
+    `so_sem_texto=True` FILTRA (arte-chave sem texto, §3[F] v1.9.30);
+    `preferir_sem_texto=True` só PRIORIZA.
+    """
+    candidatas = [i for i in imagens if i.get("file_path")]
+    if so_sem_texto:
+        candidatas = [i for i in candidatas if i.get("iso_639_1") is None]
+    if not candidatas:
+        return None
+    return min(candidatas, key=lambda i: _ordem_imagem(
+        i, preferir_sem_texto=preferir_sem_texto))
+
+
+# As chaves que uma entrada de cache precisa TER para ser considerada
+# completa. Presença, não verdade: `backdrop_path: None` é resposta válida
+# (filme sem backdrop) e não deve forçar uma nova requisição a cada execução.
+_CHAVES_COMPLETUDE = (
+    "tmdb_fetched_at", "poster_path", "backdrop_path", "poster_sem_texto_path",
+)
+
+
+def _entrada_completa(cached: dict) -> bool:
+    return bool(cached.get("tmdb_fetched_at")) and all(
+        k in cached for k in _CHAVES_COMPLETUDE)
 
 _ANO_RE_CANDIDATOS = (
     re.compile(r"/films/year/(\d{4})/"),
@@ -305,6 +398,15 @@ def _imagens(detalhes: dict) -> dict[str, Any]:
     lista (não observado nos 5 filmes sondados, mas possível), as dimensões
     ficam ausentes e o frontend cai na proporção padrão — ausência é estado
     válido, nunca erro.
+
+    **[v1.9.30] Os DOIS campos novos, e o que os separa do `poster_path`.**
+    O `backdrop_path` e o `poster_sem_texto_path` NÃO são escolhas que a API
+    já faça por conta — não existe campo de topo para "o melhor backdrop"
+    nem para "a arte sem texto" —, então aqui a escolha é do código, por uma
+    ordem TOTAL e registrada (`_ordem_imagem`). É a diferença exata para o
+    pôster: lá reimplementar a cascata seria refazer pior o que a API já
+    faz; aqui não há nada para reaproveitar. Nenhuma requisição nova em
+    nenhum dos dois casos — tudo sai do mesmo bloco `images`.
     """
     imagens = detalhes.get("images") or {}
     poster_path = detalhes.get("poster_path") or None
@@ -317,18 +419,46 @@ def _imagens(detalhes: dict) -> dict[str, Any]:
                 altura = p.get("height")
                 break
 
-    # COLETADOS E NÃO RENDERIZADOS — ver `TETO_BACKDROPS`. A ordem é a que a
-    # API devolve (ela já ordena por avaliação); o corte é no fim.
-    backdrops = [
-        b["file_path"] for b in (imagens.get("backdrops") or [])
-        if b.get("file_path")
-    ][:TETO_BACKDROPS]
+    # A LISTA continua coletada e não percorrida pelo frontend — ver
+    # `TETO_BACKDROPS`. A ordem é a que a API devolve; o corte é no fim.
+    lista_backdrops = (imagens.get("backdrops") or [])[:TETO_BACKDROPS]
+    backdrops = [b["file_path"] for b in lista_backdrops if b.get("file_path")]
+
+    # [v1.9.30] O BACKDROP ESCOLHIDO — UM, o do topo da página do filme.
+    # Sai de DENTRO dos até 10 coletados (e não do acervo inteiro), pela
+    # ordem total de `_ordem_imagem`, para que a pergunta "qual imagem esta
+    # página mostra" seja respondível olhando só o JSON publicado: o
+    # `backdrop_path` é sempre um dos itens de `backdrop_paths`.
+    #
+    # As DIMENSÕES vêm junto pelo mesmo motivo do pôster (§3[E]): sem elas o
+    # frontend não reserva a proporção antes de carregar, e o ganho de CLS
+    # zero da v1.9.29 regride. Ausência é estado válido — filme sem backdrop
+    # nenhum cai no pôster, e sem os dois, no estado de ausência desenhado.
+    escolhido = _melhor(lista_backdrops, preferir_sem_texto=True)
+
+    # [v1.9.30] O PÔSTER SEM TEXTO — arte-chave sem bloco de créditos, sem
+    # tagline e sem laurel de festival, que o TMDB serve com
+    # `iso_639_1: null`. CAMPO PRÓPRIO: não substitui `poster_path`, que
+    # continua sendo o do próprio TMDB (a cascata sensível a `language`, ver
+    # a docstring acima). É variante alternável no frontend, e ausência
+    # nunca bloqueia nada — filme sem arte sem texto usa o pôster normal.
+    #
+    # Aqui o `iso_639_1 is None` é FILTRO, não preferência: uma arte com
+    # idioma declarado tem texto sobreposto por definição, e devolvê-la
+    # neste campo seria devolver a coisa que ele existe para evitar.
+    limpo = _melhor(imagens.get("posters") or [], so_sem_texto=True)
 
     return {
         "poster_path": poster_path,
         "poster_largura": largura,
         "poster_altura": altura,
         "backdrop_paths": backdrops,
+        "backdrop_path": escolhido.get("file_path") if escolhido else None,
+        "backdrop_largura": escolhido.get("width") if escolhido else None,
+        "backdrop_altura": escolhido.get("height") if escolhido else None,
+        "poster_sem_texto_path": limpo.get("file_path") if limpo else None,
+        "poster_sem_texto_largura": limpo.get("width") if limpo else None,
+        "poster_sem_texto_altura": limpo.get("height") if limpo else None,
     }
 
 
@@ -421,14 +551,21 @@ def buscar_ficha(titulo: str, ano: int | None, cache_dir: str | Path,
         cached = json.loads(path.read_text(encoding="utf-8"))
         if cached.get("nao_encontrado"):
             return None, f"TMDB: nenhum resultado para {titulo!r} ({ano}) [cache].", None
-        # [v1.9.29] Ficha cacheada ANTES desta versão não tem os campos de
-        # imagem nem o carimbo de obtenção. Devolvê-la como está produziria o
-        # pior sintoma possível — "este filme não tem pôster" para um filme
-        # que tem —, e sem nenhum aviso. `tmdb_fetched_at` é o marcador: sua
-        # ausência conta como MISS e a entrada é refeita por cima. Não é
-        # expiração (que esta versão não constrói, por decisão); é só uma
+        # Ficha cacheada por uma versão ANTERIOR não tem os campos de imagem
+        # que a versão atual escreve. Devolvê-la como está produziria o pior
+        # sintoma possível — "este filme não tem pôster"/"não tem backdrop"
+        # para um filme que tem —, e sem nenhum aviso. Uma entrada
+        # INCOMPLETA conta como MISS e é refeita por cima. Não é expiração
+        # (que esta versão continua não construindo, por decisão); é uma
         # entrada de formato antigo sendo reconhecida como incompleta.
-        if cached.get("tmdb_fetched_at"):
+        #
+        # [v1.9.30] A checagem deixou de ser o `tmdb_fetched_at` da v1.9.29 e
+        # passou a ser a LISTA de chaves que a versão corrente escreve, por um
+        # motivo aprendido nesta rodada: o carimbo já existia nas 35 entradas
+        # em cache, então os campos novos desta versão teriam voltado
+        # ausentes, em silêncio, exatamente o defeito que aquela regra existia
+        # para evitar. Ao acrescentar campo de imagem, acrescente aqui.
+        if _entrada_completa(cached):
             return cached, None, None
 
     key = api_key or os.environ.get(TMDB_ENV_KEY)

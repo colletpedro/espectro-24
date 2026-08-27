@@ -368,6 +368,64 @@ a { color: inherit; }
   .poster--ficha { width: 140px; margin-bottom: 14px; }
 }
 
+/* --- [v1.9.30] O BACKDROP: a abertura da página do filme ---------------
+   Substitui o pôster vertical no topo (decisão do dono do projeto). Ocupa a
+   largura inteira da coluna de leitura e é 16:9 — a leitura vira horizontal
+   e a barra de proporção sobe na página em vez de ser empurrada por uma
+   capa de 300px de altura.
+
+   A PROPORÇÃO É RESERVADA como a do pôster, e aqui o requisito é mais duro,
+   não menos: sendo largo, o backdrop reserva MAIS altura que o pôster
+   contido, então a falta de reserva daria um salto maior que o de antes.
+   O `aspect-ratio` inline vem do JS a partir de
+   `ficha.backdrop_largura`/`backdrop_altura`; esta regra NUNCA o define.
+
+   Sem borda e sem sombra projetada, ao contrário do pôster: o pôster é um
+   objeto pousado na página e a borda o recorta do fundo; o backdrop é a
+   abertura, e uma moldura o transformaria num print. O degradê na base
+   costura a imagem no fundo da página — o par ano → título vem logo abaixo,
+   e uma aresta dura ali cortaria os dois. */
+.backdrop {
+  display: block;
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  margin: 0 0 18px;
+  border-radius: 10px;
+  background: var(--bg-elev);
+}
+.backdrop::after {
+  content: "";
+  position: absolute;
+  inset: auto 0 0 0;
+  height: 38%;
+  background: linear-gradient(to bottom, #0000 0%, var(--bg) 100%);
+  pointer-events: none;
+}
+.backdrop.is-vazio::after { content: none; }
+@media (max-width: 640px) {
+  .backdrop {
+    margin-bottom: 14px;
+    /* De borda a borda no mobile: com 20px de padding de cada lado a imagem
+       ficaria com 335px de largura numa tela de 375px, e um quadro 16:9
+       nesse tamanho lê como miniatura. O recuo negativo devolve os 20px. */
+    width: calc(100% + 40px);
+    margin-left: -20px;
+    margin-right: -20px;
+    border-radius: 0;
+  }
+}
+
+/* O estado de ausência do backdrop reusa o desenho do pôster (mesma hachura,
+   mesma marca), na caixa 16:9 em vez da 2:3. É o mesmo caminho para "não
+   veio" e "quebrou no CDN" — nunca ícone de imagem quebrada. */
+.backdrop.is-vazio {
+  background:
+    repeating-linear-gradient(135deg,
+      #ffffff08 0 2px, #00000000 2px 9px),
+    var(--bg-elev-2);
+}
+
 /* =======================================================
    MOSAICO (Entrega 1-4 v1.9.17; refeito na v1.9.18)
    ======================================================= */

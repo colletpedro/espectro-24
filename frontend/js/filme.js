@@ -197,23 +197,45 @@
     h1.className = "film-header__title";
     h1.textContent = titleOf(f);
 
-    // [v1.9.29] O PÔSTER abre a ficha, e abre CONTIDO — 200px no desktop,
-    // 140px no mobile. O produto não vira catálogo visual: o pôster
-    // representa o FILME, a barra logo abaixo representa a RECEPÇÃO, e a
-    // composição existe para que nenhum dos dois domine o outro. Um pôster
-    // em largura total empurraria a barra para fora da primeira tela e
-    // inverteria a hierarquia que a v1.9.26 estabeleceu.
+    // [v1.9.30] O BACKDROP abre a página do filme, no lugar que o pôster
+    // vertical ocupava desde a v1.9.29. DECISÃO DO DONO DO PROJETO: o
+    // pôster ocupa espaço vertical demais no topo, e um quadro 16:9 lê na
+    // horizontal, deixa a barra mais perto da primeira tela e dá uma
+    // abertura editorial em vez de uma capa de catálogo.
     //
-    // ORDEM PRESERVADA. A composição de referência é
-    // [PÔSTER] → TÍTULO → ANO → barra; o que a página publica desde a
-    // v1.9.26 é ano → título (§3[E], item 1 da ordem publicada), e essa
-    // micro-ordem não é o que esta sessão veio mudar. O pôster entra ACIMA
-    // do par, e o par segue como está. A BARRA não é tocada — nem posição,
-    // nem geometria, nem animação de entrada (§3[E], v1.9.28).
+    // ISTO É EXCEÇÃO EXPLÍCITA AO PRINCÍPIO ANTI-SPOILER DO §0. O TMDB não
+    // garante que um backdrop seja livre de spoiler — é quadro do filme, e
+    // pode ser do terceiro ato — e ele fica na posição MAIS PROEMINENTE da
+    // página, antes até da sinopse. O produto anuncia "0 spoilers" na home
+    // e resolve todo trade-off contra o spoiler em todo o resto (bullets
+    // filtrados, veredito proibido de citar reviravolta); aqui, e só aqui,
+    // essa promessa deixa de valer. Foi decidido com o trade-off na mesa,
+    // não por descuido, e o registro por extenso está em SPEC §3[E], "O
+    // BACKDROP no topo da página do filme". Não há como escrever isso sem
+    // tensão, e o comentário não tenta.
+    //
+    // O PÔSTER CONTINUA NA HOME. Esta troca é só da página do filme.
+    //
+    // FALLBACK, em dois degraus: filme sem backdrop usa o pôster que já
+    // estava aqui (contido, 200px — nada muda para ele); filme sem os dois
+    // cai no estado de ausência já desenhado, que é o que `montar` faz
+    // sozinho. Medido no catálogo: 34 dos 35 têm backdrop; o único sem é
+    // `talk-to-me-2022`.
+    //
+    // ORDEM PRESERVADA. A imagem entra ACIMA do par ano → título, exatamente
+    // onde o pôster entrava (§3[E], item 1 da ordem publicada), e o par
+    // segue como está. A BARRA não é tocada — nem posição, nem geometria,
+    // nem animação de entrada (§3[E], v1.9.28).
     if (window.ESPECTRO_POSTER && f.ficha) {
-      el.appendChild(window.ESPECTRO_POSTER.montar(f.ficha, {
-        uso: "ficha", titulo: titleOf(f), ano: ano, lazy: false,
-      }));
+      var abertura = window.ESPECTRO_POSTER.montarBackdrop(f.ficha, {
+        titulo: titleOf(f), ano: ano,
+      });
+      if (!abertura) {
+        abertura = window.ESPECTRO_POSTER.montar(f.ficha, {
+          uso: "ficha", titulo: titleOf(f), ano: ano, lazy: false,
+        });
+      }
+      el.appendChild(abertura);
     }
 
     if (meta) el.appendChild(meta);
@@ -962,6 +984,67 @@
   // evitar. Isto quebra a promessa de "três grupos, formato idêntico"
   // DELIBERADAMENTE; a razão está registrada em SPEC.md §0.
   // =====================================================================
+  // =====================================================================
+  // [v1.9.30] A ORDEM DE LEITURA DOS BLOCOS EM DESTAQUE — POR PESO.
+  //
+  // Até aqui os blocos saíam em ordem FIXA (negativas antes de positivas),
+  // qualquer que fosse o peso de cada grupo. `the-godfather` é 2/5/93: a
+  // leitura abria por HATERS, que é 2% das notas, e o grupo que responde por
+  // 93% da recepção chegava depois. Isso não descreve o filme.
+  //
+  // A REGRA É FUNÇÃO DO DADO, E É ISSO QUE A MANTÉM COMPATÍVEL COM O §0.
+  // Ela não privilegia negativo nem positivo: privilegia QUEM É MAIOR, e
+  // quem é maior sai do `share_real`, não de um juízo do produto. Em
+  // `cats-2019` (86/7/7) o primeiro bloco é HATERS; em `the-godfather`
+  // (2/5/93) é FANS. A ordem antiga não era neutra — era CONSTANTE, que é
+  // outra coisa: liderar sempre pelo negativo é uma escolha editorial fixa,
+  // e ela estava sendo tomada 35 vezes sem que o dado fosse consultado.
+  //
+  // A NEUTRALIDADE DE TRATAMENTO CONTINUA INTEGRALMENTE EM VIGOR: mesmo
+  // leiaute, mesmo peso tipográfico, mesma quantidade de bullets, mesmas
+  // cores, mesmo espaço estrutural. Só a POSIÇÃO muda — e a posição é a
+  // única coisa da tela que o peso pode legitimamente decidir.
+  //
+  // VALE NOS DOIS LEIAUTES, e é a mesma linha de código nos dois: o
+  // container é grid/flex e a ordem do DOM É a ordem visual. No desktop
+  // "primeiro" é a coluna da ESQUERDA; no mobile, empilhado, é o de CIMA —
+  // onde a ordem pesa mais, porque lá o segundo bloco só existe depois de
+  // uma rolagem.
+  //
+  // O MEIO NÃO MUDA DE POLÍTICA. Quem decide se `medianas` está em destaque
+  // continua sendo `bucketDominante` (a exceção automática do §0), e esta
+  // função só ordena o que já foi decidido: se o meio está em destaque, ele
+  // entra na mesma ordenação por peso; se está recolhido, ele não é
+  // ordenado porque não está aqui.
+  //
+  // A BARRA DE PROPORÇÃO NÃO É REORDENADA — e isso não é uma omissão. A
+  // ordem dela é SEMÂNTICA: é um eixo ordinal de 0,5★ a 5★, e HATERS à
+  // esquerda / MIXED no meio / FANS à direita é o que faz a barra ser uma
+  // população particionada em vez de três medições. Reordenar por peso ali
+  // destruiria o eixo. Barra, faixa do mosaico, legenda e `aria-label`
+  // continuam todos em negativas → medianas → positivas.
+  //
+  // EMPATE: critério determinístico, e é a ordem canônica do produto
+  // (negativas → medianas → positivas). `Array.prototype.sort` é estável em
+  // todo motor moderno, mas a estabilidade não é o que está sendo usada
+  // aqui — o índice canônico entra na comparação EXPLICITAMENTE, para que a
+  // regra seja legível no código e não uma propriedade herdada do runtime.
+  // Nenhum dos 35 filmes empata hoje entre grupos em destaque; a regra
+  // existe para o filme que ainda não foi publicado.
+  function ordenarPorPeso(nomes, porNome) {
+    function peso(nome) {
+      var b = porNome[nome];
+      // Sem `share_real` (JSON antigo, sem histograma) não há peso para
+      // ordenar, e o filme cai inteiro na ordem canônica — que é o que a
+      // página já fazia antes desta versão.
+      return (b && typeof b.share_real === "number") ? b.share_real : -1;
+    }
+    return nomes.slice().sort(function (a, b) {
+      return (peso(b) - peso(a))
+          || (GRUPOS_ORDEM.indexOf(a) - GRUPOS_ORDEM.indexOf(b));
+    });
+  }
+
   function sentimentGroupsBlock(f) {
     var porNome = {};
     (f.buckets || []).forEach(function (b) { porNome[b.bucket] = b; });
@@ -974,9 +1057,10 @@
     var destaque = document.createElement("div");
     destaque.className = "sentiment-groups"
       + (meioDominante ? " sentiment-groups--3" : " sentiment-groups--2");
-    var ordem = meioDominante
-      ? ["negativas", "medianas", "positivas"]
-      : ["negativas", "positivas"];
+    var ordem = ordenarPorPeso(
+      meioDominante ? ["negativas", "medianas", "positivas"]
+                    : ["negativas", "positivas"],
+      porNome);
     ordem.forEach(function (nome) {
       if (porNome[nome]) destaque.appendChild(groupBlock(porNome[nome], f));
     });

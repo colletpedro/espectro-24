@@ -20,7 +20,7 @@
     "fonte": "tmdb",
     "ano_fonte": "bruto",
     "tmdb_id": 787699,
-    "tmdb_fetched_at": "2026-08-27T11:49:39+00:00",
+    "tmdb_fetched_at": "2026-08-27T16:35:43+00:00",
     "poster_path": "/uQWEomz2wLoijrvoFaJt2gUMXRu.jpg",
     "poster_largura": 2000,
     "poster_altura": 3000,
@@ -35,7 +35,13 @@
       "/g7eBZgkQ7JpbFdQSOB3v1alpLl4.jpg",
       "/pkrIKjugQEK7p2sXXYsMgbzdNFc.jpg",
       "/ihz5aCRlKGluAQ6BPyKHRjrcW2X.jpg"
-    ]
+    ],
+    "backdrop_path": "/uIk2g2bRkNwNywKZIhC5oIU94Kh.jpg",
+    "backdrop_largura": 3840,
+    "backdrop_altura": 2160,
+    "poster_sem_texto_path": "/f9Ci5on44fIV1BMTOzzGrDf3P5C.jpg",
+    "poster_sem_texto_largura": 2000,
+    "poster_sem_texto_altura": 3000
   },
   "distribuicao": {
     "n_notas_total": 1712913,

@@ -10,7 +10,13 @@ já está em disco, faz **uma** consulta ao TMDB (a mesma chamada única de
 `ficha`**:
 
     tmdb_id · tmdb_fetched_at · poster_path · poster_largura ·
-    poster_altura · backdrop_paths
+    poster_altura · backdrop_paths · backdrop_path · backdrop_largura ·
+    backdrop_altura · poster_sem_texto_path · poster_sem_texto_largura ·
+    poster_sem_texto_altura
+
+[v1.9.30] A lista cresceu com o backdrop escolhido e o pôster sem texto; o
+harness, a trava por teste e a guarda de identidade são os mesmos. A guarda
+de identidade é a que pegou `mother-2017` na v1.9.29 e continua em vigor.
 
 **Por que harness PRÓPRIO, e não `publicar_catalogo.py`.** Mesmo argumento
 da v1.9.21 e da v1.9.25: aquele script tem o checkpoint por `spec_version` e
@@ -74,6 +80,12 @@ RESULTADO_DIR = RAIZ / "resultado"
 CHAVES_NOVAS = (
     "tmdb_id", "tmdb_fetched_at",
     "poster_path", "poster_largura", "poster_altura", "backdrop_paths",
+    # [v1.9.30] o BACKDROP ESCOLHIDO (topo da página do filme) e o PÔSTER
+    # SEM TEXTO (variante da home). Aditivos: nenhum dos dois substitui
+    # `poster_path`, e ausência é estado válido nos dois.
+    "backdrop_path", "backdrop_largura", "backdrop_altura",
+    "poster_sem_texto_path", "poster_sem_texto_largura",
+    "poster_sem_texto_altura",
 )
 
 # Campos que precisam BATER entre a ficha em disco e a resposta de agora
@@ -183,6 +195,12 @@ def enriquecer_um(slug: str, *, cache_dir: Path, dry_run: bool = False,
             "dimensoes": (ficha_nova.get("poster_largura"),
                           ficha_nova.get("poster_altura")),
             "n_backdrops": len(ficha_nova.get("backdrop_paths") or []),
+            "backdrop": ficha_nova.get("backdrop_path"),
+            "backdrop_dim": (ficha_nova.get("backdrop_largura"),
+                             ficha_nova.get("backdrop_altura")),
+            "sem_texto": ficha_nova.get("poster_sem_texto_path"),
+            "sem_texto_dim": (ficha_nova.get("poster_sem_texto_largura"),
+                              ficha_nova.get("poster_sem_texto_altura")),
             "tmdb_id": ficha_nova.get("tmdb_id")}
 
 
@@ -207,6 +225,8 @@ def main() -> None:
     com = []
     sem = []
     falhas = []
+    sem_backdrop = []
+    sem_arte_limpa = []
     for slug in slugs:
         r = enriquecer_um(slug, cache_dir=cache_dir, dry_run=args.dry_run,
                           saida=Path(args.saida) if args.saida else None)
@@ -214,21 +234,38 @@ def main() -> None:
             falhas.append((slug, r["motivo"]))
             print(f"  [!] {slug}: {r['motivo']}")
             continue
+        if not r["backdrop"]:
+            sem_backdrop.append(slug)
+        if not r["sem_texto"]:
+            sem_arte_limpa.append(slug)
+        bl, ba = r["backdrop_dim"]
+        sl, sa = r["sem_texto_dim"]
+        bd = f"{bl}x{ba} {r['backdrop']}" if r["backdrop"] else "SEM BACKDROP"
+        st = f"{sl}x{sa} {r['sem_texto']}" if r["sem_texto"] else "SEM ARTE LIMPA"
         if r["poster"]:
             com.append(slug)
             l, a = r["dimensoes"]
-            print(f"  [✓] {slug}: id={r['tmdb_id']} {l}x{a} "
-                  f"backdrops={r['n_backdrops']} {r['poster_path']}")
+            print(f"  [✓] {slug}: id={r['tmdb_id']} pôster {l}x{a} "
+                  f"{r['poster_path']}")
         else:
             sem.append(slug)
-            print(f"  [·] {slug}: id={r['tmdb_id']} SEM PÔSTER "
-                  f"backdrops={r['n_backdrops']}")
+            print(f"  [·] {slug}: id={r['tmdb_id']} SEM PÔSTER")
+        print(f"        backdrop  ({r['n_backdrops']} coletados): {bd}")
+        print(f"        sem texto: {st}")
 
     print(f"\n{len(com)} com pôster · {len(sem)} sem pôster · "
           f"{len(falhas)} sem ficha/falha"
           + ("  (DRY RUN — nada gravado)" if args.dry_run else ""))
+    print(f"{len(slugs) - len(sem_backdrop) - len(falhas)} com backdrop · "
+          f"{len(sem_backdrop)} sem · "
+          f"{len(slugs) - len(sem_arte_limpa) - len(falhas)} com arte sem texto · "
+          f"{len(sem_arte_limpa)} sem")
     if sem:
         print("  sem pôster: " + ", ".join(sem))
+    if sem_backdrop:
+        print("  sem backdrop: " + ", ".join(sem_backdrop))
+    if sem_arte_limpa:
+        print("  sem arte sem texto: " + ", ".join(sem_arte_limpa))
     if falhas:
         print("  falhas: " + ", ".join(s for s, _ in falhas))
 

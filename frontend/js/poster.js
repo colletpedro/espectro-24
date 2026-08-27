@@ -15,14 +15,25 @@
    e a imagem vem do CDN do TMDB. Nenhum download, nenhum proxy, nenhum
    cache local — ver SPEC §3[F].
 
-   BACKDROPS NÃO SÃO RENDERIZADOS EM LUGAR NENHUM. O pipeline coleta
-   `backdrop_paths[]` (custo marginal zero, mesma chamada) e este arquivo
-   deliberadamente não os lê: o TMDB não garante que um backdrop seja livre
-   de spoiler, e "0 spoilers para quem ainda não assistiu" é a promessa
-   central do produto (§0). Uma imagem legítima do acervo pode ser do
-   terceiro ato. Se você veio aqui para "aproveitar" os backdrops, a decisão
-   de produto está registrada no changelog da v1.9.29 e depende de uma
-   política de curadoria que ainda não existe. */
+   [v1.9.30] O BACKDROP passou a ser renderizado — UM, no topo da página do
+   filme, no lugar onde o pôster estava. NÃO EXISTE GALERIA e a distinção
+   não é retórica: `backdrop_paths[]` continua sendo lista guardada que
+   arquivo nenhum do frontend percorre; o que este arquivo lê é o campo
+   `backdrop_path`, o ESCOLHIDO, decidido em código no pipeline por uma
+   ordem total e registrada (`_ordem_imagem`, `ficha.py`).
+
+   ISTO É EXCEÇÃO EXPLÍCITA AO PRINCÍPIO ANTI-SPOILER DO §0, e o comentário
+   anterior deste arquivo — que dizia, com razão, que o TMDB não garante que
+   um backdrop seja livre de spoiler — continua VERDADEIRO. O que mudou não
+   foi o fato; foi a decisão sobre ele, tomada pelo dono do projeto com o
+   trade-off na mesa. O produto anuncia "0 spoilers" na home e resolve todo
+   trade-off contra o spoiler (bullets filtrados, veredito proibido de citar
+   reviravolta) — e este elemento, e só ele, deixa de valer essa promessa,
+   na posição mais proeminente da página. Registro por extenso, com o que se
+   ganha e o que se perde, em SPEC §3[E], "O BACKDROP no topo da página do
+   filme".
+
+   O PÔSTER CONTINUA NA HOME, inclusive na variante SEM TEXTO (v1.9.30). */
 (function () {
   "use strict";
 
@@ -44,6 +55,28 @@
   //     e 140px no mobile; 200 × 2 = 400. `w342` ficaria abaixo em retina,
   //     e é UMA imagem por página — a folga custa pouco.
   var TAMANHO = { mosaico: "w342", ficha: "w500" };
+
+  // [v1.9.30] BACKDROP — lista de larguras PRÓPRIA no TMDB
+  // (w300 · w780 · w1280 · original), e é por isso que ele não entra no mapa
+  // acima: `w500` nem existe para backdrop.
+  //
+  //   ficha → w1280. A coluna de leitura é `--maxw` (720px, 760px acima do
+  //     breakpoint largo) menos 20px de padding de cada lado: 680–720px CSS.
+  //     680 × 2 = 1360 e 720 × 2 = 1440, e o degrau seguinte da lista é
+  //     `original` (3840×2160, ~1,5 MB), que a regra do projeto proíbe
+  //     servir. `w1280` cobre 1× com folga e entrega 1,78–1,88× num aparelho
+  //     de densidade 2, contra os 2,0× ideais — diferença que não se vê num
+  //     quadro fotográfico e que custaria megabytes para fechar. `w780`
+  //     ficaria em 1,08× no desktop, visivelmente mole em retina.
+  var TAMANHO_BACKDROP = "w1280";
+
+  // Proporção de reserva do backdrop quando as dimensões não vieram da API.
+  // 16:9 é o formato do acervo de backdrops do TMDB (medido nos 34 do
+  // catálogo que têm um: 3840×2160, 1920×1080, 2560×1440 — e as exceções,
+  // como `eighth-grade` em 3500×1969, ficam perto). Vale a mesma regra do
+  // pôster: as dimensões REAIS têm precedência, esta razão só existe para o
+  // caso em que elas faltam.
+  var RAZAO_BACKDROP = "16 / 9";
 
   // Proporção de reserva quando as dimensões não vieram da API. 2:3 é o
   // padrão de pôster de cinema e o que a esmagadora maioria do TMDB usa —
@@ -67,69 +100,97 @@
          razão INTRÍNSECA e o faz reservar sozinho, sem depender do CSS.
 
      Um só dos dois já resolveria o caso feliz. Os dois juntos resolvem
-     também o caso em que o CSS não carregou e o em que a imagem não vem. */
-  function razaoDe(ficha) {
-    var l = ficha && ficha.poster_largura, a = ficha && ficha.poster_altura;
-    return (l > 0 && a > 0) ? (l + " / " + a) : RAZAO_PADRAO;
+     também o caso em que o CSS não carregou e o em que a imagem não vem.
+
+     [v1.9.30] O BACKDROP entra pela MESMA porta, e isso é requisito: ele é
+     16:9 e ocupa a largura inteira da coluna, então a altura que ele reserva
+     é MAIOR em pixels que a do pôster contido de 200px — sem reserva, o
+     salto seria pior que o de antes, não menor. O ganho de CLS zero da
+     v1.9.29 não pode regredir. */
+  function razaoOu(largura, altura, padrao) {
+    return (largura > 0 && altura > 0) ? (largura + " / " + altura) : padrao;
   }
 
-  /* AUSÊNCIA DE PÔSTER É ESTADO DESENHADO, não imagem quebrada. Nenhum dos
-     35 filmes publicados está neste caso hoje (medido: 35/35 com pôster),
-     mas a expansão trará filmes obscuros com cobertura menor — e o estado
-     tem de existir ANTES, senão o primeiro filme sem pôster vira um ícone
-     de imagem quebrada em produção. O desenho é a própria caixa do pôster,
-     na proporção padrão, com a marca do produto em vez de uma foto: mesma
-     silhueta, sem fingir que a imagem está chegando. */
-  function vazio(titulo) {
+  function razaoDe(ficha) {
+    return razaoOu(ficha && ficha.poster_largura,
+                   ficha && ficha.poster_altura, RAZAO_PADRAO);
+  }
+
+  /* [v1.9.30] A VARIANTE DE PÔSTER — MECANISMO TEMPORÁRIO, como o
+     `?barra=`/`?ficha=` da v1.9.26. O dono do projeto acha os pôsteres
+     poluídos (bloco de créditos, tagline, laurel de festival) e o TMDB serve
+     arte-chave SEM TEXTO (`iso_639_1: null`), que o pipeline passou a
+     coletar em campo próprio. As duas ficam ATIVAS e alternáveis por query
+     param para a escolha ser feita OLHANDO:
+
+       ?poster=texto   o `poster_path` do próprio TMDB (DEFAULT — e é só
+                       default, não decisão: nada foi escolhido ainda)
+       ?poster=limpo   a arte sem texto, quando o filme tem
+
+     FALLBACK: filme sem arte sem texto usa o pôster normal — a variante
+     nunca produz um buraco. Escolhida uma das duas, a outra sai do JS junto
+     com o mecanismo. */
+  var VARIANTE_PADRAO = "texto";
+
+  function fonteDoPoster(ficha, variante) {
+    if (variante === "limpo" && ficha && ficha.poster_sem_texto_path) {
+      return {
+        path: ficha.poster_sem_texto_path,
+        largura: ficha.poster_sem_texto_largura,
+        altura: ficha.poster_sem_texto_altura,
+      };
+    }
+    return {
+      path: (ficha && ficha.poster_path) || null,
+      largura: ficha && ficha.poster_largura,
+      altura: ficha && ficha.poster_altura,
+    };
+  }
+
+  /* AUSÊNCIA DE IMAGEM É ESTADO DESENHADO, não imagem quebrada. Nenhum dos
+     35 filmes publicados está sem pôster (medido: 35/35), e 34 dos 35 têm
+     backdrop, mas a expansão trará filmes obscuros com cobertura menor — e o
+     estado tem de existir ANTES, senão o primeiro filme sem imagem vira um
+     ícone quebrado em produção. O desenho é a própria caixa da imagem, na
+     proporção que ela teria, com a marca do produto em vez de uma foto:
+     mesma silhueta, sem fingir que a imagem está chegando. */
+  function vazio(nota) {
     var el = document.createElement("span");
     el.className = "poster__vazio";
     el.setAttribute("aria-hidden", "true");     // o alt do bloco já diz tudo
     var marca = document.createElement("span");
     marca.className = "poster__vazio-marca";
     marca.textContent = "24";
-    var nota = document.createElement("span");
-    nota.className = "poster__vazio-nota";
-    nota.textContent = "sem pôster";
+    var nt = document.createElement("span");
+    nt.className = "poster__vazio-nota";
+    nt.textContent = nota || "sem pôster";
     el.appendChild(marca);
-    el.appendChild(nota);
+    el.appendChild(nt);
     return el;
   }
 
-  /* `montar(ficha, opcoes)` → o elemento pronto, com a proporção já
-     reservada. `opcoes.uso` é "mosaico" ou "ficha"; `opcoes.titulo` e
-     `opcoes.ano` compõem o `alt`; `opcoes.lazy` liga `loading="lazy"`. */
-  function montar(ficha, opcoes) {
-    opcoes = opcoes || {};
-    var uso = opcoes.uso === "ficha" ? "ficha" : "mosaico";
+  // A caixa comum de pôster e backdrop: proporção reservada, imagem dentro,
+  // e o MESMO estado desenhado para "não veio" e "quebrou no CDN".
+  function caixaDeImagem(cfg) {
     var caixa = document.createElement("span");
-    caixa.className = "poster poster--" + uso;
-    caixa.style.aspectRatio = razaoDe(ficha);
+    caixa.className = cfg.classe;
+    caixa.style.aspectRatio = cfg.razao;
 
-    var caminho = ficha && ficha.poster_path;
-    if (!caminho) {
+    if (!cfg.path) {
       caixa.classList.add("is-vazio");
-      caixa.appendChild(vazio(opcoes.titulo));
+      caixa.appendChild(vazio(cfg.notaVazio));
       return caixa;
     }
 
     var img = document.createElement("img");
     img.className = "poster__img";
-    img.src = url(caminho, TAMANHO[uso]);
-    if (ficha.poster_largura) img.width = ficha.poster_largura;
-    if (ficha.poster_altura) img.height = ficha.poster_altura;
+    img.src = url(cfg.path, cfg.tamanho);
+    if (cfg.largura) img.width = cfg.largura;
+    if (cfg.altura) img.height = cfg.altura;
 
-    // `lazy` na home (35 imagens, a maioria abaixo da dobra) e `eager` na
-    // página do filme (UMA imagem, sempre acima da dobra — adiá-la só
-    // atrasaria a abertura da página). `decoding="async"` nos dois: nenhum
-    // dos dois casos precisa bloquear a pintura do texto.
-    img.loading = opcoes.lazy ? "lazy" : "eager";
+    img.loading = cfg.lazy ? "lazy" : "eager";
     img.decoding = "async";
-
-    // ALT: o pôster ilustra um filme que o texto ao lado JÁ nomeia. Descrever
-    // a arte seria invenção (não temos a descrição) e repetir o título seria
-    // ruído para quem usa leitor de tela. O alt diz o que a imagem É.
-    var nome = opcoes.titulo || "";
-    img.alt = "Pôster de " + nome + (opcoes.ano ? " (" + opcoes.ano + ")" : "");
+    img.alt = cfg.alt;
 
     // Falha do CDN (404, rede, `file_path` que envelheceu) cai no MESMO
     // estado desenhado da ausência — nunca no ícone de imagem quebrada.
@@ -137,15 +198,81 @@
       if (caixa.classList.contains("is-vazio")) return;
       caixa.classList.add("is-vazio");
       caixa.innerHTML = "";
-      caixa.appendChild(vazio(nome));
+      caixa.appendChild(vazio(cfg.notaVazio));
     });
 
     caixa.appendChild(img);
     return caixa;
   }
 
+  function sufixoAno(ano) { return ano ? " (" + ano + ")" : ""; }
+
+  /* `montar(ficha, opcoes)` → o pôster pronto, com a proporção já reservada.
+     `opcoes.uso` é "mosaico" ou "ficha"; `opcoes.titulo` e `opcoes.ano`
+     compõem o `alt`; `opcoes.lazy` liga `loading="lazy"`;
+     `opcoes.variante` é "texto" (default) ou "limpo". */
+  function montar(ficha, opcoes) {
+    opcoes = opcoes || {};
+    var uso = opcoes.uso === "ficha" ? "ficha" : "mosaico";
+    var fonte = fonteDoPoster(ficha, opcoes.variante || VARIANTE_PADRAO);
+    var nome = opcoes.titulo || "";
+    return caixaDeImagem({
+      classe: "poster poster--" + uso,
+      razao: razaoOu(fonte.largura, fonte.altura, RAZAO_PADRAO),
+      path: fonte.path,
+      largura: fonte.largura,
+      altura: fonte.altura,
+      tamanho: TAMANHO[uso],
+      // `lazy` na home (35 imagens, a maioria abaixo da dobra) e `eager` na
+      // página do filme (UMA imagem, sempre acima da dobra — adiá-la só
+      // atrasaria a abertura da página).
+      lazy: !!opcoes.lazy,
+      // ALT: o pôster ilustra um filme que o texto ao lado JÁ nomeia.
+      // Descrever a arte seria invenção (não temos a descrição) e repetir o
+      // título seria ruído para quem usa leitor de tela. O alt diz o que a
+      // imagem É. A variante sem texto NÃO muda o alt: para quem não vê a
+      // imagem, "o pôster com ou sem o bloco de créditos" não é distinção
+      // que informe — é detalhe de tratamento visual.
+      alt: "Pôster de " + nome + sufixoAno(opcoes.ano),
+      notaVazio: "sem pôster",
+    });
+  }
+
+  /* [v1.9.30] `montarBackdrop(ficha, opcoes)` → o backdrop do topo da página
+     do filme. UMA imagem, nunca carrossel: o `backdrop_path` é o escolhido
+     pelo pipeline, e `backdrop_paths[]` continua sem nenhum leitor aqui.
+
+     Devolve `null` quando o filme não tem backdrop — quem chama decide o
+     fallback (hoje: `filme.js` cai no pôster, que por sua vez cai no estado
+     de ausência). Ele NÃO cai no pôster por conta própria de propósito: a
+     caixa é de proporção e tamanho diferentes, e um pôster 2:3 esticado na
+     largura da coluna seria pior que qualquer um dos dois estados. */
+  function montarBackdrop(ficha, opcoes) {
+    opcoes = opcoes || {};
+    if (!ficha || !ficha.backdrop_path) return null;
+    return caixaDeImagem({
+      classe: "backdrop",
+      razao: razaoOu(ficha.backdrop_largura, ficha.backdrop_altura,
+                     RAZAO_BACKDROP),
+      path: ficha.backdrop_path,
+      largura: ficha.backdrop_largura,
+      altura: ficha.backdrop_altura,
+      tamanho: TAMANHO_BACKDROP,
+      lazy: false,           // UMA imagem, sempre acima da dobra
+      // ALT: mesma política do pôster — diz o que a imagem É, sem descrever
+      // a arte (não temos a descrição) e sem chamá-la de "cena", que seria
+      // afirmar uma coisa que nem sempre é verdade (parte do acervo é arte
+      // de divulgação, não fotograma).
+      alt: "Imagem de " + (opcoes.titulo || "") + sufixoAno(opcoes.ano),
+      notaVazio: "sem imagem",
+    });
+  }
+
   window.ESPECTRO_POSTER = {
-    CDN: CDN, TAMANHO: TAMANHO, RAZAO_PADRAO: RAZAO_PADRAO,
+    CDN: CDN, TAMANHO: TAMANHO, TAMANHO_BACKDROP: TAMANHO_BACKDROP,
+    RAZAO_PADRAO: RAZAO_PADRAO, RAZAO_BACKDROP: RAZAO_BACKDROP,
+    VARIANTE_PADRAO: VARIANTE_PADRAO,
     url: url, razaoDe: razaoDe, montar: montar,
+    montarBackdrop: montarBackdrop,
   };
 })();

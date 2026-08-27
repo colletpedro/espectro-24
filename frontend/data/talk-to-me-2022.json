@@ -18,11 +18,17 @@
     "fonte": "tmdb",
     "ano_fonte": "bruto",
     "tmdb_id": 976680,
-    "tmdb_fetched_at": "2026-08-27T11:49:34+00:00",
+    "tmdb_fetched_at": "2026-08-27T16:34:51+00:00",
     "poster_path": "/oauz8kPiFCpsflMMEBq7UbNasKf.jpg",
     "poster_largura": 2000,
     "poster_altura": 3000,
-    "backdrop_paths": []
+    "backdrop_paths": [],
+    "backdrop_path": null,
+    "backdrop_largura": null,
+    "backdrop_altura": null,
+    "poster_sem_texto_path": "/oauz8kPiFCpsflMMEBq7UbNasKf.jpg",
+    "poster_sem_texto_largura": 2000,
+    "poster_sem_texto_altura": 3000
   },
   "distribuicao": {
     "n_notas_total": 1484316,
