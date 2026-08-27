@@ -33,7 +33,8 @@
    ganha e o que se perde, em SPEC §3[E], "O BACKDROP no topo da página do
    filme".
 
-   O PÔSTER CONTINUA NA HOME, inclusive na variante SEM TEXTO (v1.9.30). */
+   O PÔSTER CONTINUA NA HOME, e desde a v1.9.31 SEMPRE na variante SEM
+   TEXTO (com fallback para a com texto — ver `fonteDoPoster`). */
 (function () {
   "use strict";
 
@@ -116,24 +117,25 @@
                    ficha && ficha.poster_altura, RAZAO_PADRAO);
   }
 
-  /* [v1.9.30] A VARIANTE DE PÔSTER — MECANISMO TEMPORÁRIO, como o
-     `?barra=`/`?ficha=` da v1.9.26. O dono do projeto acha os pôsteres
-     poluídos (bloco de créditos, tagline, laurel de festival) e o TMDB serve
-     arte-chave SEM TEXTO (`iso_639_1: null`), que o pipeline passou a
-     coletar em campo próprio. As duas ficam ATIVAS e alternáveis por query
-     param para a escolha ser feita OLHANDO:
+  /* [v1.9.30, DECIDIDO na v1.9.31] O PÔSTER SEM TEXTO É O PADRÃO ÚNICO da
+     home. O mecanismo `?poster=texto`/`?poster=limpo` foi o jeito de o dono
+     do projeto comparar as duas OLHANDO — o mesmo esquema de `?barra=` e
+     `?ficha=` nas rodadas anteriores — e ele escolheu a limpa. Seguindo a
+     mesma convenção daquelas duas decisões (a barra contínua e a ficha em
+     pilha de sistema): a variante vencedora fica, a perdedora e o mecanismo
+     de escolha SAEM do código — não como opção morta atrás de flag.
 
-       ?poster=texto   o `poster_path` do próprio TMDB (DEFAULT — e é só
-                       default, não decisão: nada foi escolhido ainda)
-       ?poster=limpo   a arte sem texto, quando o filme tem
+     Uma URL antiga com `?poster=` não quebra nada: o parâmetro
+     simplesmente não é mais lido, como já é o comportamento estabelecido
+     para query params obsoletos das rodadas passadas.
 
-     FALLBACK: filme sem arte sem texto usa o pôster normal — a variante
-     nunca produz um buraco. Escolhida uma das duas, a outra sai do JS junto
-     com o mecanismo. */
-  var VARIANTE_PADRAO = "texto";
-
-  function fonteDoPoster(ficha, variante) {
-    if (variante === "limpo" && ficha && ficha.poster_sem_texto_path) {
+     O FALLBACK que segue abaixo NÃO é resquício do mecanismo de escolha —
+     é a mesma regra de AUSÊNCIA que já rege backdrop (§3[E]) e ficha
+     (§3[F]) desde a v1.3.0: dado ausente cai para o próximo degrau, nunca
+     para buraco. Filme sem arte sem texto usa o pôster normal (com
+     texto). */
+  function fonteDoPoster(ficha) {
+    if (ficha && ficha.poster_sem_texto_path) {
       return {
         path: ficha.poster_sem_texto_path,
         largura: ficha.poster_sem_texto_largura,
@@ -209,12 +211,11 @@
 
   /* `montar(ficha, opcoes)` → o pôster pronto, com a proporção já reservada.
      `opcoes.uso` é "mosaico" ou "ficha"; `opcoes.titulo` e `opcoes.ano`
-     compõem o `alt`; `opcoes.lazy` liga `loading="lazy"`;
-     `opcoes.variante` é "texto" (default) ou "limpo". */
+     compõem o `alt`; `opcoes.lazy` liga `loading="lazy"`. */
   function montar(ficha, opcoes) {
     opcoes = opcoes || {};
     var uso = opcoes.uso === "ficha" ? "ficha" : "mosaico";
-    var fonte = fonteDoPoster(ficha, opcoes.variante || VARIANTE_PADRAO);
+    var fonte = fonteDoPoster(ficha);
     var nome = opcoes.titulo || "";
     return caixaDeImagem({
       classe: "poster poster--" + uso,
@@ -271,7 +272,6 @@
   window.ESPECTRO_POSTER = {
     CDN: CDN, TAMANHO: TAMANHO, TAMANHO_BACKDROP: TAMANHO_BACKDROP,
     RAZAO_PADRAO: RAZAO_PADRAO, RAZAO_BACKDROP: RAZAO_BACKDROP,
-    VARIANTE_PADRAO: VARIANTE_PADRAO,
     url: url, razaoDe: razaoDe, montar: montar,
     montarBackdrop: montarBackdrop,
   };

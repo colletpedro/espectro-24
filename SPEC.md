@@ -6269,42 +6269,48 @@ Falha em qualquer uma → **1 retentativa** com reforço (listando os trechos pe
    quadro 16:9 mediria 335px de largura numa tela de 375 e leria como
    miniatura.
 
-   #### O PÔSTER SEM TEXTO — variante testável, só na HOME (v1.9.30)
+   #### O PÔSTER SEM TEXTO — DECISÃO FINAL: a arte limpa venceu (v1.9.30, decidido v1.9.31)
 
    **A queixa do dono:** os pôsteres são poluídos — bloco de créditos,
    tagline, laurel de festival. O TMDB serve **arte-chave sem texto**, que é
-   a que declara `iso_639_1: null`, e o pipeline passou a coletá-la em
-   **campo próprio** (§3[F]): `poster_sem_texto_path` e suas dimensões.
-   **Aditivo: não substitui `poster_path`**, que continua sendo o do próprio
-   TMDB.
+   a que declara `iso_639_1: null`, e o pipeline coleta em **campo próprio**
+   (§3[F]): `poster_sem_texto_path` e suas dimensões. **Aditivo: não
+   substitui `poster_path`**, que continua sendo o do próprio TMDB — o
+   fallback abaixo depende de os dois campos coexistirem.
 
-   **MECANISMO TEMPORÁRIO**, o mesmo das rodadas anteriores (`?barra=`,
-   `?ficha=` na v1.9.26): as duas variantes ficam ATIVAS e alternáveis por
-   query param, para a escolha ser feita **olhando**, e a perdedora **sai do
-   código** junto com a decisão — removida, não escondida atrás de flag.
+   **A v1.9.30 rodou as duas variantes ATIVAS e alternáveis por query
+   param** (`?poster=texto` / `?poster=limpo`), o mesmo mecanismo de
+   `?barra=`/`?ficha=` da v1.9.26, para a escolha ser feita **olhando**.
 
-   ```
-   ?poster=texto   o `poster_path` do próprio TMDB   ← DEFAULT
-   ?poster=limpo   a arte-chave sem texto
-   ```
-
-   **O DEFAULT É SÓ DEFAULT.** `texto` é o que já estava publicado e é o que
-   a home mostra sem parâmetro nenhum. Isso **não é uma decisão a favor
-   dele** — é a ausência de decisão preservada até haver uma.
+   **O DONO DO PROJETO COMPAROU AS DUAS E ESCOLHEU A ARTE SEM TEXTO
+   (v1.9.31).** Seguindo a mesma convenção das duas decisões anteriores (a
+   barra contínua venceu a divergente; a pilha de sistema venceu a Inter
+   auto-hospedada): a variante vencedora fica como **único caminho**, e o
+   mecanismo de escolha — o parâmetro, a leitura de `location.search`, o
+   ramo condicional — **sai do JS**, não fica como opção morta atrás de
+   flag. `?poster=` não existe mais em nenhum lugar do código; uma URL
+   antiga com esse parâmetro não quebra nada, só o ignora, como já é o
+   comportamento estabelecido para query params obsoletos de rodadas
+   passadas.
 
    **VALE NA HOME, e só nela**, porque a página do filme trocou o pôster por
-   um backdrop: não há pôster lá para alternar.
+   um backdrop (v1.9.30) — não há pôster lá para variar.
 
-   **FALLBACK:** filme sem arte sem texto usa o pôster normal. A variante
-   nunca produz buraco.
+   **O FALLBACK NÃO É RESQUÍCIO DO MECANISMO DE ESCOLHA — é a mesma regra de
+   AUSÊNCIA que já rege backdrop e ficha desde a v1.3.0.** Filme sem arte
+   sem texto usa o pôster normal (com texto); a lógica em `fonteDoPoster`
+   (`poster.js`) é a mesma de antes, só sem o parâmetro decidindo entre as
+   duas — agora ela sempre tenta a arte limpa primeiro e cai para a com
+   texto quando o campo está ausente.
 
-   **MEDIDO nos 35: os 35 têm arte sem texto — nenhum está sem.** Em **34**
-   dela é uma imagem diferente do pôster normal; em **1**
+   **MEDIDO nos 35: os 35 têm arte sem texto — o fallback não é exercitado
+   pelo catálogo de hoje, e existe para o filme obscuro que a expansão vai
+   trazer.** Em **34** ela é uma imagem diferente do pôster normal; em **1**
    (`talk-to-me-2022`) o `poster_sem_texto_path` é **o mesmo arquivo** do
    `poster_path`, porque aquele registro do TMDB tem uma única arte e ela já
-   é sem idioma — a variante existe e simplesmente coincide. Nas duas
-   variantes a home foi medida em **CLS 0** e altura de documento **1657px**,
-   idêntica; a variante troca o arquivo servido, não a geometria (a reserva
+   é sem idioma. A home foi medida com a arte limpa como único caminho em
+   **CLS 0** e altura de documento **1657px** — o mesmo número de antes da
+   decisão: a variante troca o arquivo servido, não a geometria (a reserva
    usa as dimensões da imagem efetivamente escolhida).
 
    #### ATRIBUIÇÃO AO TMDB (v1.9.29) — obrigatória, não cosmética
@@ -6527,6 +6533,7 @@ As três incógnitas abaixo foram resolvidas na Fase 1; os achados já estão in
 ---
 
 ## Changelog
+- **v1.9.31** (2026-08-27) — **DECISÃO FINAL do dono: o pôster SEM TEXTO vence e vira o único caminho na home. O mecanismo `?poster=texto`/`?poster=limpo` sai do código**, seguindo a mesma convenção das duas decisões anteriores (barra contínua venceu a divergente; pilha de sistema venceu a Inter). O parâmetro não existe mais em `poster.js`/`home.js`; uma URL antiga com `?poster=` não quebra nada, só o ignora. **O fallback continua** — filme sem arte sem texto usa o pôster com texto —, e não é resquício do switch: é a mesma regra de ausência que já rege backdrop e ficha desde a v1.3.0. Página do filme (backdrop) não foi tocada — já era definitiva desde a v1.9.30. Merge de `preview/posteres` em `main`, sem branch de preview.
 - **v1.9.30** (2026-08-27) — **A ordem dos bullets passa a seguir o PESO; o topo da página do filme troca o pôster por um BACKDROP (exceção explícita ao anti-spoiler do §0, decidida pelo dono); e o pôster SEM TEXTO entra como variante testável na home.** Suíte Python: **1525 passando** (1512 da baseline + 13 novos em `test_ficha.py`), nenhum teste anterior alterado. `SPEC_VERSION` continua em 1.9.25, pelo mesmo registro da v1.9.26–v1.9.29.
   - **(1) ORDEM DOS BLOCOS EM DESTAQUE — por `share_real`, do maior para o menor.** `the-godfather` (2/5/93) abria a leitura por HATERS, 2% das notas. A regra é **função do dado, não do sentimento**: em `cats-2019` (86/7/7) o primeiro bloco continua sendo HATERS. A ordem fixa anterior não era neutra — era **constante**, que é outra coisa. **MEDIDO: a ordem mudou em 33 dos 35**; os 2 que ficaram iguais são os dois de recepção negativa dominante. Empate desempata pela ordem canônica, explicitamente no código. Vale nos dois leiautes (o DOM é a ordem visual; no mobile, FANS em y=1203 e HATERS em y=2166 em `the-godfather` a 375px). **Neutralidade de tratamento intacta:** mesmo leiaute, mesmo peso tipográfico, 6 e 6 bullets, mesmas cores — só a POSIÇÃO muda. §0 e §3[E].
   - **(2) A BARRA NÃO É REORDENADA.** A ordem dela é **semântica** — eixo ordinal de 0,5★ a 5★. HATERS → MIXED → FANS na barra, na faixa do mosaico, na legenda e no `aria-label`, conferido depois da mudança. A dessincronia com os bullets é pequena na tela (uma rolagem de distância, e o callout já ancorou cada peso na sua fatia).

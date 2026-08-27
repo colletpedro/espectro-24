@@ -12,31 +12,6 @@
 
   var DATA = window.ESPECTRO_DATA || { catalogo: [], filmes: {} };
 
-  // =====================================================================
-  // [v1.9.30] VARIANTE DE PÔSTER — MECANISMO TEMPORÁRIO, igual ao
-  // `?barra=`/`?ficha=` da v1.9.26: as duas ficam ATIVAS e alternáveis por
-  // query param para o dono do projeto escolher OLHANDO, e a perdedora SAI
-  // do código junto com a escolha (removida, não escondida atrás de flag).
-  //
-  //   ?poster=texto   o `poster_path` do próprio TMDB — DEFAULT
-  //   ?poster=limpo   a arte-chave SEM TEXTO (`iso_639_1: null`), sem bloco
-  //                   de créditos, sem tagline, sem laurel de festival
-  //
-  // O DEFAULT É SÓ DEFAULT. `texto` é o que já estava publicado e continua
-  // sendo o que a home mostra sem parâmetro nenhum — não é uma decisão a
-  // favor dele, é a ausência de decisão preservada até haver uma.
-  //
-  // VALE NA HOME, e só nela: a página do filme trocou o pôster por um
-  // backdrop (§3[E], v1.9.30), então não há pôster lá para alternar.
-  //
-  // FALLBACK: filme sem arte sem texto usa o pôster normal (`fonteDoPoster`
-  // em poster.js). Medido nos 35: todos os 35 têm arte sem texto, então o
-  // fallback não é exercitado pelo catálogo de hoje — existe para o filme
-  // obscuro que a expansão vai trazer.
-  var VARIANTE_POSTER =
-    new URLSearchParams(location.search).get("poster") === "limpo"
-      ? "limpo" : "texto";
-
   // --- barra espectral segmentada (marca) ---
   var brand = document.getElementById("brandBar");
   if (brand) {
@@ -152,10 +127,16 @@
     // Trinta e cinco sequências simultâneas na entrada viram espetáculo e
     // competem entre si; a home mostra a faixa no ESTADO FINAL, e a
     // animação continua sendo o momento de abrir um filme.
+    //
+    // [v1.9.31] `montar` sempre usa a arte SEM TEXTO quando o filme tem
+    // (`fonteDoPoster` em poster.js) — decisão final do dono do projeto,
+    // depois de comparar as duas variantes ao vivo (`?poster=texto/limpo`,
+    // v1.9.30). O mecanismo de escolha saiu do código; o fallback para o
+    // pôster com texto continua, porque é regra de AUSÊNCIA de dado, não
+    // resquício do switch.
     if (window.ESPECTRO_POSTER) {
       a.appendChild(window.ESPECTRO_POSTER.montar(f.ficha, {
         uso: "mosaico", titulo: titulo, ano: ano, lazy: true,
-        variante: VARIANTE_POSTER,
       }));
     }
 
