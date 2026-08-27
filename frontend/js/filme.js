@@ -197,6 +197,25 @@
     h1.className = "film-header__title";
     h1.textContent = titleOf(f);
 
+    // [v1.9.29] O PÔSTER abre a ficha, e abre CONTIDO — 200px no desktop,
+    // 140px no mobile. O produto não vira catálogo visual: o pôster
+    // representa o FILME, a barra logo abaixo representa a RECEPÇÃO, e a
+    // composição existe para que nenhum dos dois domine o outro. Um pôster
+    // em largura total empurraria a barra para fora da primeira tela e
+    // inverteria a hierarquia que a v1.9.26 estabeleceu.
+    //
+    // ORDEM PRESERVADA. A composição de referência é
+    // [PÔSTER] → TÍTULO → ANO → barra; o que a página publica desde a
+    // v1.9.26 é ano → título (§3[E], item 1 da ordem publicada), e essa
+    // micro-ordem não é o que esta sessão veio mudar. O pôster entra ACIMA
+    // do par, e o par segue como está. A BARRA não é tocada — nem posição,
+    // nem geometria, nem animação de entrada (§3[E], v1.9.28).
+    if (window.ESPECTRO_POSTER && f.ficha) {
+      el.appendChild(window.ESPECTRO_POSTER.montar(f.ficha, {
+        uso: "ficha", titulo: titleOf(f), ano: ano, lazy: false,
+      }));
+    }
+
     if (meta) el.appendChild(meta);
     el.appendChild(h1);
 

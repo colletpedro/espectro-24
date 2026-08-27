@@ -353,3 +353,139 @@ def test_ano_fonte_e_persistido_na_ficha(tmp_path):
     ficha, _, _ = buscar_ficha("Cure", 1997, tmp_path, api_key="k",
                               session=session, ano_fonte="letterboxd")
     assert ficha["ano_fonte"] == "letterboxd"
+
+
+# =====================================================================
+# v1.9.29 — IMAGENS e RASTREABILIDADE (§3[F])
+# =====================================================================
+
+from espectro24.ficha import TETO_BACKDROPS, TMDB_IMAGE_LANGS  # noqa: E402
+
+
+def _detalhes_com_imagens(poster_path="/poster.jpg", n_backdrops=3,
+                          poster_nas_imagens=True, **kw):
+    d = _detalhes(**kw)
+    d["poster_path"] = poster_path
+    d["images"] = {
+        "posters": ([{"file_path": poster_path, "width": 1000,
+                      "height": 1500, "iso_639_1": "pt"}]
+                    if poster_nas_imagens and poster_path else []) + [
+            {"file_path": "/outro.jpg", "width": 500, "height": 750,
+             "iso_639_1": None}],
+        "backdrops": [{"file_path": f"/bd{i}.jpg", "width": 1920,
+                       "height": 1080} for i in range(n_backdrops)],
+    }
+    return d
+
+
+def _ficha_com_imagens(tmp_path, **kw):
+    session = FakeTmdbSession({
+        ("search", "Cure", 1997): {"results": [{"id": 5, "release_date": "1997-01-01"}]},
+        ("movie", "pt-BR"): _detalhes_com_imagens(**kw),
+    })
+    ficha, _, _ = buscar_ficha("Cure", 1997, tmp_path, api_key="k", session=session)
+    return ficha, session
+
+
+def test_a_chamada_de_detalhes_e_UNICA_e_pede_credits_e_images(tmp_path):
+    """Custo marginal de rede ZERO: `images` entra no mesmo
+    `append_to_response` que já trazia `credits` — nenhuma requisição nova."""
+    _ficha, session = _ficha_com_imagens(tmp_path)
+    detalhes = [(u, p) for u, p in session.calls if "movie/" in u]
+    assert len(detalhes) == 1, "houve mais de uma chamada de detalhes"
+    params = detalhes[0][1]
+    assert params["append_to_response"] == "credits,images"
+    assert params["include_image_language"] == TMDB_IMAGE_LANGS
+
+
+def test_include_image_language_esta_presente_e_e_o_da_constante(tmp_path):
+    """A razão está medida no comentário de `TMDB_IMAGE_LANGS`: sem este
+    parâmetro, `language=pt-BR` filtra o bloco de imagens e `backdrops` volta
+    VAZIO para filmes com pouca cobertura pt-BR — o sintoma parece "este
+    filme não tem imagens". O teste trava o parâmetro, não a medição.
+
+    E o valor é `pt`, NÃO `pt-BR`: o parâmetro aceita ISO-639-1, e um código
+    de localidade é ignorado em silêncio (7 dos 9 filmes sondados perdiam as
+    dimensões do pôster com `pt-BR,null`). Uma regressão para `pt-BR` aqui
+    voltaria a produzir um dado faltando sem nenhum erro — daí o teste."""
+    assert TMDB_IMAGE_LANGS == "pt,null"
+
+
+def test_o_poster_e_o_poster_path_do_proprio_tmdb(tmp_path):
+    """A cascata (pt-BR → sem idioma → original → melhor avaliado) já é o que
+    o campo `poster_path` da resposta de detalhes entrega, porque ele é
+    sensível a `language`. Medido antes de decidir; não reimplementado."""
+    ficha, _ = _ficha_com_imagens(tmp_path, poster_path="/escolhido.jpg")
+    assert ficha["poster_path"] == "/escolhido.jpg"
+
+
+def test_as_dimensoes_vem_de_images_posters_e_nao_sao_presumidas(tmp_path):
+    """O `poster_path` não traz dimensões, e elas são OBRIGATÓRIAS para o
+    frontend reservar a proporção antes de carregar (§3[E]). São procuradas
+    na entrada correspondente de `images.posters`."""
+    ficha, _ = _ficha_com_imagens(tmp_path)
+    assert (ficha["poster_largura"], ficha["poster_altura"]) == (1000, 1500)
+
+
+def test_poster_ausente_de_images_posters_deixa_dimensoes_nulas(tmp_path):
+    """Ausência é estado válido: o frontend cai na proporção padrão."""
+    ficha, _ = _ficha_com_imagens(tmp_path, poster_nas_imagens=False)
+    assert ficha["poster_path"] == "/poster.jpg"
+    assert ficha["poster_largura"] is None
+    assert ficha["poster_altura"] is None
+
+
+def test_filme_sem_poster_nenhum_e_estado_valido_nao_erro(tmp_path):
+    ficha, _ = _ficha_com_imagens(tmp_path, poster_path=None, n_backdrops=0)
+    assert ficha is not None and ficha["titulo"] == "Título PT"
+    assert ficha["poster_path"] is None
+    assert ficha["backdrop_paths"] == []
+
+
+def test_backdrops_sao_coletados_e_respeitam_o_teto(tmp_path):
+    ficha, _ = _ficha_com_imagens(tmp_path, n_backdrops=TETO_BACKDROPS + 7)
+    assert len(ficha["backdrop_paths"]) == TETO_BACKDROPS
+    assert ficha["backdrop_paths"][0] == "/bd0.jpg"
+
+
+def test_tmdb_id_e_carimbo_de_obtencao_entram_na_ficha(tmp_path):
+    """RASTREABILIDADE (§3[F]): o carimbo vale para a ficha INTEIRA — todos
+    os campos vêm da mesma resposta, no mesmo instante. Ele existe porque os
+    termos da API proíbem cachear por mais de 6 meses; a política de
+    revalidação NÃO é construída aqui, só a data que a torna possível."""
+    ficha, _ = _ficha_com_imagens(tmp_path)
+    assert ficha["tmdb_id"] == 5
+    assert ficha["tmdb_fetched_at"].endswith("+00:00")
+
+
+def test_ficha_cacheada_sem_carimbo_e_refeita_e_nao_devolvida_capenga(tmp_path):
+    """Ficha gravada ANTES da v1.9.29 não tem imagens. Devolvê-la como está
+    produziria "este filme não tem pôster" para um filme que tem, em
+    silêncio. A ausência do carimbo conta como MISS."""
+    from espectro24.ficha import _cache_key
+    antiga = {"titulo": "Título PT", "fonte": "tmdb", "ano": 1997}
+    (tmp_path / f"{_cache_key('Cure', 1997)}.json").write_text(
+        json.dumps(antiga), encoding="utf-8")
+
+    ficha, _ = _ficha_com_imagens(tmp_path)
+    assert ficha["poster_path"] == "/poster.jpg"
+    assert ficha["tmdb_fetched_at"]
+
+
+def test_fallback_en_us_nao_rebaixa_imagens(tmp_path):
+    """Os fallbacks en-US (sinopse vazia / diretor não-latino) só querem
+    `overview`/`credits`; o bloco de imagens é grande e não deve ser baixado
+    duas vezes."""
+    session = FakeTmdbSession({
+        ("search", "Cure", 1997): {"results": [{"id": 5, "release_date": "1997-01-01"}]},
+        ("movie", "pt-BR"): _detalhes_com_imagens(overview=""),
+        ("movie", "en-US"): _detalhes(overview="An english overview."),
+    })
+    ficha, _, _ = buscar_ficha("Cure", 1997, tmp_path, api_key="k", session=session)
+    en = [p for u, p in session.calls if p.get("language") == "en-US"]
+    assert len(en) == 1
+    assert en[0]["append_to_response"] == "credits"
+    assert "include_image_language" not in en[0]
+    # e as imagens da resposta pt-BR seguem intactas
+    assert ficha["poster_path"] == "/poster.jpg"
+    assert ficha["sinopse_fallback_en"] is True

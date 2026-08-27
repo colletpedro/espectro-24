@@ -5155,6 +5155,26 @@ Etapa **aditiva e independente** do resto do pipeline (`ficha.py`): dado o títu
 
 **Detalhes:** `GET /movie/{id}?language=pt-BR&append_to_response=credits`. Extraídos: título pt-BR (`title`), sinopse oficial (`overview`), gêneros (`genres[].name`), duração (`runtime`), diretor (primeiro `credits.crew[]` com `job == "Director"`), ano (`release_date[:4]`).
 
+**Imagens — PÔSTER e backdrops (v1.9.29).** A mesma chamada de detalhes passa a pedir `append_to_response=credits,images&include_image_language=pt,null`. **Custo marginal de rede ZERO** — nenhuma requisição nova, `images` entra no `append_to_response` que já trazia `credits`.
+
+**`include_image_language` é obrigatório, e o valor é `pt`, NÃO `pt-BR`.** Duas medições ao vivo (2026-08-27) sustentam as duas metades da frase. (a) *Obrigatório:* `language=pt-BR` filtra também o bloco `images`, e a esmagadora maioria dos backdrops não declara idioma — sem o parâmetro o campo volta VAZIO para filmes com pouca cobertura pt-BR e o sintoma parece "este filme não tem imagens". Medido: `eighth-grade` 1 pôster / **0 backdrops** sem o parâmetro contra 2 / 18 com ele; `the-invite-2026` 4 / **0** contra 10 / 21; o curta experimental (id 1079736) **0 / 0** contra 1 / 0; `the-godfather` 6 / 4 contra 21 / 102. (b) *`pt`, não `pt-BR`:* o parâmetro aceita códigos **ISO-639-1**, e um código de LOCALIDADE é descartado em **silêncio** — com `pt-BR,null` só o degrau `null` sobrevive. O sintoma não é um erro, é um dado faltando sem aviso: dos 9 filmes sondados, **7** (`aftersun`, `anatomy-of-a-fall`, `cats-2019`, `cure`, `hereditary`, `the-northman`, `wonka`) ficaram **sem as dimensões do pôster** com `pt-BR,null`, porque o `poster_path` que o TMDB escolheu é uma arte `iso_639_1='pt'` que o filtro tinha jogado fora; com `pt,null`, nenhum ficou.
+
+**O pôster é o `poster_path` do PRÓPRIO TMDB — a cascata não foi reimplementada, e isso foi MEDIDO antes de decidir.** A política pedida (pt-BR → arte sem idioma → idioma original → melhor avaliado) já é o que aquele campo entrega: ele é sensível a `language`. Medido: `napoleon-2023` devolve `/2UY2xfk…` (`iso_639_1='pt'`) em pt-BR e `/ytFOXyg…` em en-US — a localidade é respeitada; o curta experimental, que só tem arte SEM idioma, devolve a mesma imagem nas duas localidades — o degrau neutro também. Reescrever a cascata em código seria refazer, com menos informação, uma escolha que a API já faz — e divergir dela em silêncio no dia em que ela mudasse de critério.
+
+**As DIMENSÕES, essas, o campo não traz** — e são obrigatórias para o frontend reservar a proporção antes de carregar (§3[E]). O `poster_path` escolhido é procurado dentro de `images.posters`, que traz `width`/`height` reais. Elas **não são sempre 2:3**: medido no catálogo, `aftersun` é 1632×2449 (0,666) e o curta experimental é 505×750 (0,673). Se o caminho não aparecer na lista, as dimensões ficam ausentes e o frontend cai na razão padrão — ausência é estado válido, nunca erro.
+
+**`backdrop_paths[]` é COLETADO e NÃO RENDERIZADO, por decisão de produto.** Teto de **10** por filme (`TETO_BACKDROPS`), na ordem que a API devolve. Não existe galeria de backdrops na v1: o TMDB não garante que um backdrop seja livre de spoiler, e *"0 spoilers para quem ainda não assistiu"* é a promessa central do produto (§0) — uma imagem legítima do acervo pode ser do terceiro ato. A coleta acontece assim mesmo porque o custo marginal é zero (mesma chamada) e porque isso evita reestruturar o pipeline no dia em que a política de curadoria existir. Nenhum arquivo do frontend lê esse campo.
+
+**RASTREABILIDADE — `tmdb_fetched_at`, e vale para TODOS os campos derivados do TMDB**, não só as imagens: título, sinopse, diretor, gêneros, duração, pôster e backdrops vêm todos da mesma resposta, no mesmo instante, e um carimbo por campo seria a mesma data repetida sete vezes. **Por que ele existe:** os termos de uso da API do TMDB proíbem **cachear por mais de 6 meses** qualquer informação obtida através dela, e o projeto guarda dados de ficha **indefinidamente** em `resultado/*.json` desde a v1.3.0. **Isto NÃO é problema novo criado pelos pôsteres — é uma limitação PRÉ-EXISTENTE que os pôsteres tornam visível.** Esta versão **não** constrói cache, revalidação, expiração nem coleta de lixo, deliberadamente: a entrega é só a data de obtenção, que é o que torna uma política de revalidação possível depois. Sem ela não há sequer como saber o que está vencido. A intenção fica registrada aqui; a implementação é de outra versão.
+
+**O TMDB não estende nenhum direito sobre as imagens.** O copyright dos pôsteres é dos estúdios e distribuidores; o TMDB apenas hospeda e declara não reivindicar propriedade sobre as imagens da API. Nenhum binário é baixado ou versionado (§3[E]): o JSON guarda só `file_path`, e a imagem vem do CDN.
+
+**Cache de ficha anterior à v1.9.29.** Uma entrada gravada antes desta versão não tem os campos de imagem. Devolvê-la como está produziria o pior sintoma possível — *"este filme não tem pôster"* para um filme que tem, sem nenhum aviso. A ausência de `tmdb_fetched_at` conta como **MISS** e a entrada é refeita. Não é expiração (que esta versão não constrói); é uma entrada de formato antigo sendo reconhecida como incompleta.
+
+**Campos novos na ficha:** `tmdb_id`, `tmdb_fetched_at`, `poster_path`, `poster_largura`, `poster_altura`, `backdrop_paths[]`. **Aditivos por design, como toda a ficha desde a v1.3.0:** qualquer falha (rede, HTTP, filme sem imagem, chave ausente) nunca bloqueia coleta, publicação ou render. **Ausência de pôster é estado válido, não erro.**
+
+**Retrofit dos 35 — `scripts/enriquecer_ficha.py` (v1.9.29).** Os filmes já publicados ganham os campos novos **sem re-rodar o pipeline**: harness próprio, no espírito de `scripts/gerar_veredito.py` (v1.9.21) e da trava por teste da v1.9.25. Ele lê o JSON em disco, faz UMA consulta ao TMDB e grava só as chaves acima dentro do bloco `ficha`. Não chama coleta, seleção, classificação, verificação, síntese, [D3], narrativa nem veredito; **não passa pela guarda de lote de `publicar_catalogo.py` (`LIMITE_LOTE_SEM_CONFIRMACAO = 5`) e não deve — e também não a contorna:** publicar continua inalcançável dali, inclusive por caminho indireto. `tests/test_enriquecer_ficha.py` trava as quatro coisas substituindo os pontos de entrada por `pytest.fail` e comparando o documento campo a campo. Ele carrega ainda uma **guarda de identidade**: reconsultar o TMDB reabre a desambiguação que o pipeline já fez, então se a resposta descrever outro filme (título, ano ou diretor divergentes) o filme é abortado sem gravar — melhor ficar sem pôster do que colar o pôster de outro filme numa página publicada. Ela disparou de verdade em `mother-2017` e apontou uma causa real: buscar pelo `ficha.titulo` (o título pt-BR, `"mãe!"`) em vez do título do slug resolve outro filme ("Perfeita é a Mãe 2"). O harness passou a usar o título do SLUG, como o pipeline usa. **Resultado medido: 35 de 35 filmes com pôster, 0 sem, 0 falhas.**
+
 **Diretor em escrita latina (v1.6.0):** o TMDB devolve o nome do diretor no **alfabeto nativo** quando a localidade pt-BR não tem tradução — `cure` vinha com `"黒沢清"`, que foi parar na narrativa **publicada** (o narrador só reproduz o que a ficha entrega). Quando o nome pt-BR não está em escrita latina (`_e_escrita_latina`, checagem sobre `unicodedata.name` de cada letra — cobre diacríticos latinos como ç/é/ñ sem lista de exceções), o `credits` de `en-US` é consultado e a transliteração é usada (`"Kiyoshi Kurosawa"`). A ficha carrega `diretor_transliterado: true` — visível, nunca silencioso. **Custo:** no máximo 1 requisição extra, e só para filmes nessa condição; quando o fallback de sinopse já buscou `en-US`, a resposta é **reaproveitada** em vez de refeita. Se o `en-US` também não for latino, mantém o nome original (melhor um nome em alfabeto nativo do que nenhum). Cacheado junto da ficha, como todo o resto.
 
 **Fallback de sinopse:** se `overview` vier vazio na resposta pt-BR (acontece para filmes com localização incompleta no TMDB), uma segunda chamada com `language=en-US` busca o overview em inglês; a ficha carrega esse texto com a flag `sinopse_fallback_en: true` — nunca fica silenciosamente vazia, mas também nunca finge ser pt-BR quando não é.
@@ -5798,6 +5818,122 @@ Falha em qualquer uma → **1 retentativa** com reforço (listando os trechos pe
    de método em `frontend/TESTE_MANUAL.md`. O total caiu de 1190ms para
    1020ms na v1.9.28, o que reduz o custo por visita em 14%.
 
+   #### O PÔSTER (v1.9.29) — na home e na página do filme
+
+   **Decisão de produto, tomada e não reaberta:** pôster SIM, na home e na
+   página do filme; **galeria de backdrops NÃO na v1** (§3[F] — o TMDB não
+   garante que um backdrop seja livre de spoiler). O pipeline coleta
+   `backdrop_paths[]` e **nenhum arquivo do frontend os lê**.
+
+   **Página do filme — CONTIDO.** O pôster abre a ficha, 200px no desktop e
+   140px no mobile. O produto não vira catálogo visual: o pôster representa
+   o FILME, a barra logo abaixo representa a RECEPÇÃO, e a composição existe
+   para que **nenhum dos dois domine o outro**. Um pôster em largura total
+   empurraria a barra para fora da primeira tela e inverteria a hierarquia
+   que a v1.9.26 estabeleceu. A composição de referência do dono é
+   `[PÔSTER] → TÍTULO → ANO → barra`; o que a página publica desde a v1.9.26
+   é **ano → título** (item 1 da ordem publicada acima), e essa micro-ordem
+   não é o que esta sessão veio mudar — o pôster entra ACIMA do par e o par
+   segue como está. **A BARRA não foi tocada:** nem posição, nem geometria,
+   nem a animação de entrada da v1.9.28.
+
+   **Home — REDESENHO da célula, não acréscimo.** A célula da v1.9.18 foi
+   desenhada SEM imagem (card escuro em 4/5, texto como protagonista, faixa
+   de 5px na base). Encaixar um pôster nela daria o pior dos dois — uma
+   miniatura apertada disputando espaço com o título. Então: a célula muda
+   de proporção (**4/5 → 2/3**, a do próprio pôster), o pôster ocupa a
+   célula inteira, e o texto sobe para um **degradê** na base que chega a
+   98% de preto — o título tem de ser legível sobre pôster claro
+   (`barbie`, `wonka`) e sobre escuro, e um véu uniforme apagaria a arte.
+   A grade fica ~20% mais alta (5 linhas de 213px contra 165px no desktop);
+   é o custo de densidade que mostrar pôster cobra. **A faixa de recepção
+   continua**, de 5px para **6px** com um fio escuro em cima que a separa de
+   qualquer arte sem depender da cor dela — ela é o único sinal de RECEPÇÃO
+   da célula, e é o que impede a home de virar um catálogo de capas. Cores,
+   ordem e semântica: idênticas.
+
+   **A ANIMAÇÃO DA BARRA NÃO RODA NA HOME — decisão registrada.** Trinta e
+   cinco sequências simultâneas na entrada viram espetáculo e competem entre
+   si. A home mostra a faixa no **estado final**; a animação continua sendo
+   o momento de **abrir um filme**.
+
+   **AUSÊNCIA DE PÔSTER É ESTADO DESENHADO**, nunca imagem quebrada. Nenhum
+   dos 35 publicados está nesse caso (medido: 35/35 com pôster), mas a
+   expansão trará filmes obscuros com menos cobertura, e o estado precisa
+   existir ANTES do primeiro — senão ele vira um ícone de imagem quebrada em
+   produção. O desenho mantém a silhueta do pôster, com hachura diagonal
+   sutil, a marca do produto e "SEM PÔSTER". Uma falha do CDN (404, rede,
+   `file_path` que envelheceu) cai no MESMO estado.
+
+   **A PROPORÇÃO É RESERVADA ANTES DE CARREGAR**, em dois níveis: um
+   `aspect-ratio` inline escrito pelo JS a partir de
+   `ficha.poster_largura`/`poster_altura` (segura a caixa mesmo se a imagem
+   nunca chegar) **e** `width`/`height` no próprio `<img>` (dá ao navegador
+   a razão intrínseca sem depender do CSS). **Medido:** com a reserva, a
+   geometria da home é **byte-idêntica** com e sem as 35 imagens no DOM
+   (altura de documento 1657px nos dois casos, 0 de 35 células mudando de
+   retângulo) e a CLS observada é **0**; na página do filme, o título fica
+   em y=425,52 com ou sem o pôster. **Sem a reserva**, a caixa do pôster
+   mediria **2px** de altura até a imagem chegar — o título saltaria
+   **298px** quando ela chegasse. Esse é o número que a reserva compra.
+
+   **TAMANHOS DO CDN, e o cálculo.** O TMDB serve variantes de largura
+   (`w92 · w154 · w185 · w342 · w500 · w780 · original`). A regra é a maior
+   largura CSS que o elemento atinge, vezes 2 (telas de densidade 2x/3x),
+   arredondada para cima na lista.
+   - **mosaico → `w342`.** A célula mede ~142px CSS no desktop (mosaico de
+     1080px, 7 colunas) e ~111px no mobile de 375px (3 colunas); 142×2=284,
+     111×3=333. **Peso medido dos 35:** `w185` 525 KB (pequeno demais em
+     retina), **`w342` 1282 KB** (37 KB de média, 17–66 KB), `w500` 2362 KB
+     (+84% por pixels que a célula não usa).
+   - **ficha → `w500`.** O pôster mede 200px CSS no desktop; 200×2=400.
+     `w342` ficaria abaixo em retina, e é UMA imagem por página.
+   `original` (2000px de largura) num card de mosaico é desperdiçar 99% dos
+   bytes, e é explicitamente o que não se faz.
+
+   **`loading="lazy"` na home** (35 imagens, a maioria abaixo da dobra) e
+   **`eager` na ficha** (UMA imagem, sempre acima da dobra — adiá-la só
+   atrasaria a abertura). `alt` diz o que a imagem É ("Pôster de <título>
+   (<ano>)"): descrever a arte seria invenção, e o texto ao lado já nomeia o
+   filme. **Nada de binário no repositório:** o JSON guarda só `file_path`,
+   a imagem vem do CDN do TMDB, sem download, proxy ou cache local.
+
+   **Onde mora.** `frontend/js/poster.js`, compartilhado pelas duas páginas
+   — e a exceção à duplicação deliberada do projeto (`EIXO_LABEL` vive em
+   home.js E filme.js) é justificada: lá a lista é fechada e divergir seria
+   visível no primeiro filme; aqui uma home servindo `w500` e uma ficha
+   servindo `w342` não quebrariam nada, não apareceriam em teste nenhum, e a
+   única consequência seria peso de rede que ninguém mede.
+
+   #### ATRIBUIÇÃO AO TMDB (v1.9.29) — obrigatória, não cosmética
+
+   Até a v1.9.28 o site inteiro dizia apenas "fonte TMDB" numa linha de
+   metadados da ficha, e não existia seção "Sobre" ou "Créditos". Os termos
+   de uso da API exigem mais. Passa a existir:
+
+   - **O aviso, de forma proeminente, em TODAS as páginas** (rodapé de
+     `index.html`, `filme.html` e `creditos.html`) — um aviso escondido
+     atrás de um clique não é proeminente. Texto **conferido contra a página
+     oficial de atribuição do TMDB** antes de ser escrito, e não contra
+     memória: *"This product uses the TMDB API but is not endorsed or
+     certified by TMDB."* Ele aparece na página de créditos em inglês,
+     LITERAL — é a frase que os termos pedem — com a tradução ao lado, porque
+     o produto é em pt-BR e um aviso que o leitor não entende não avisa.
+   - **`frontend/creditos.html`**, a seção "Sobre/Créditos" que o site não
+     tinha: o que vem do TMDB, o que vem do Letterboxd, e o que o site faz
+     com isso.
+   - **O copyright das imagens não é do TMDB.** Registrado na spec e na
+     página: os pôsteres pertencem aos estúdios e distribuidores; o TMDB
+     apenas hospeda e declara não reivindicar propriedade sobre as imagens
+     da API.
+   - **O LOGO DO TMDB NÃO É USADO — decisão registrada.** Os termos permitem
+     usá-lo desde que seja um dos oficiais, sem alterar cor, proporção,
+     espelhar ou rotacionar, e menos proeminente que a marca do próprio
+     Espectro. Nenhuma condição é difícil, mas o projeto não versiona
+     binário nem baixa asset de terceiro (mesma regra dos pôsteres), e a
+     atribuição em texto satisfaz a exigência por inteiro. Se o logo entrar,
+     entra por decisão de design, não por obrigação.
+
    #### A LINHA DE METADADOS DA FICHA — tipografia (v1.9.26)
 
    A linha `DIR. · GÊNEROS · DURAÇÃO · FONTE` era monoespaçada em caixa
@@ -5989,6 +6125,15 @@ As três incógnitas abaixo foram resolvidas na Fase 1; os achados já estão in
 ---
 
 ## Changelog
+- **v1.9.29** (2026-08-27) — **PÔSTER entra no catálogo: o pipeline coleta imagens numa chamada única, os 35 publicados ganham os campos por RETROFIT, a célula da home é REDESENHADA em torno do pôster, e o site ganha a ATRIBUIÇÃO ao TMDB que os termos exigem.** Não é galeria: `backdrop_paths[]` é coletado e **não renderizado em lugar nenhum** (§3[F] — o TMDB não garante backdrop livre de spoiler, e "0 spoilers" é a promessa central, §0). Suíte Python: **1512 passando** (1492 da baseline + 20 novos: 10 de imagens em `test_ficha.py`, 10 do harness em `test_enriquecer_ficha.py`), nenhum teste anterior alterado. `SPEC_VERSION` continua em 1.9.25 pelo mesmo registro da v1.9.26–v1.9.28.
+  - **(1) Coleta, custo marginal ZERO.** `images` entra no `append_to_response` que já trazia `credits` — nenhuma requisição nova. Campos novos: `tmdb_id`, `tmdb_fetched_at`, `poster_path`, `poster_largura`, `poster_altura`, `backdrop_paths[]` (teto 10).
+  - **(2) `include_image_language` é `pt`, NÃO `pt-BR` — correção MEDIDA da instrução original.** O parâmetro aceita ISO-639-1 e descarta um código de localidade em **silêncio**. Dos 9 filmes sondados, **7** perdiam as dimensões do pôster com `pt-BR,null`; com `pt,null`, nenhum. Sem o parâmetro, `backdrops` volta vazio para filmes de pouca cobertura (`eighth-grade`: 0 contra 18).
+  - **(3) O pôster é o `poster_path` do próprio TMDB.** A cascata pedida já é o que aquele campo entrega (ele é sensível a `language`) — medido antes de decidir, e registrado em vez de reimplementado. As DIMENSÕES, que ele não traz, vêm de `images.posters`; não são sempre 2:3 (`aftersun` 1632×2449, o curta experimental 505×750).
+  - **(4) Retrofit dos 35 por harness próprio,** `scripts/enriquecer_ficha.py`, travado por teste como na v1.9.21/v1.9.25. **Medido: 35 de 35 com pôster, 0 sem, 0 falhas.** Diff conferido campo a campo nos 35 `resultado/*.json`: **zero alteração fora do bloco `ficha`, zero alteração dentro dele fora das 6 chaves novas, ordem de chaves preservada.** A guarda de identidade disparou de verdade em `mother-2017` e revelou a causa (buscar pelo título pt-BR em vez do título do slug resolve outro filme).
+  - **(5) Home: REDESENHO da célula.** 4/5 → 2/3, pôster ocupando a célula, texto num degradê na base, faixa de recepção de 5px → 6px com fio. **A animação da barra NÃO roda na home** — decisão registrada. **Layout shift medido: CLS 0**, geometria byte-idêntica com e sem as imagens; sem a reserva de proporção o título saltaria 298px na página do filme. **`w342` na home (1282 KB nos 35, 37 KB de média), `w500` na ficha.**
+  - **(6) Rastreabilidade e o teto de 6 meses.** `tmdb_fetched_at` grava a data de obtenção de TODOS os campos vindos do TMDB. Os termos proíbem cachear por mais de 6 meses, e o projeto guarda ficha indefinidamente desde a v1.3.0 — **limitação pré-existente que os pôsteres tornam visível**, não problema novo. **Nenhum cache, revalidação, expiração ou coleta de lixo foi construído**, deliberadamente: a entrega é a data, que é o que torna a política possível depois.
+  - **(7) Atribuição.** Aviso proeminente em todas as páginas + `frontend/creditos.html`. Texto conferido contra a página oficial do TMDB. Logo não usado, por decisão registrada. Registrado que o copyright dos pôsteres é dos estúdios — o TMDB apenas hospeda.
+  - **PRESERVADO e conferido:** barra de proporção (posição, geometria, animação da v1.9.28), disclosure APROFUNDAR, rótulos HATERS/MIXED/FANS, glossário da home, exceção do bucket dominante, ordem da página. Nenhum veredito ou narrativa regerado. Nenhuma segunda fonte de imagem. Nenhum backdrop renderizado.
 - **v1.9.28** (2026-08-27) — **FRONTEND: a animação da barra troca de modelo — as FRONTEIRAS DESLIZAM de uma partição em terços até a distribuição real — e o neon dos percentuais deixa de decair e fica ACESO.** Sessão de interface: os únicos arquivos alterados são `frontend/js/filme.js` e `frontend/css/styles.css` (mais SPEC.md e `frontend/TESTE_MANUAL.md`). **Nenhum filme regenerado, nenhum `resultado/*.json` tocado, nenhum estágio do pipeline alterado.** Nenhuma biblioteca de animação adicionada. Suíte Python: **1492 passando, intacta**. `SPEC_VERSION` continua em 1.9.25 pelo mesmo registro da v1.9.26/v1.9.27 (a constante carimba artefato de PIPELINE).
   - **(1) O MODELO fill 0→100% SAIU INTEIRO, e a camada de prefill neutra foi REMOVIDA** do JS e do CSS — não escondida atrás de flag. A barra passa a **nascer completa**, particionada em três partes iguais, com as fronteiras deslizando até `h` e `h+m`. As antigas Fase 1 (fill) e Fase 2 (partição) viram **uma**. Linha do tempo nova: **fronteiras 0→650ms · ignição 650→1020ms · total 1020ms** (era 1190ms).
   - **(2) UMA FUNÇÃO TEMPORAL SÓ, e é literal — não são duas animações sincronizadas.** `--k` é um `<number>` registrado por `@property`, animado UMA vez na barra; as duas fronteiras e a diagonal são funções puras dele. **E a arquitetura de camadas empilhadas dá a garantia mais forte ainda:** a camada de baixo ocupa 100% da barra em todo frame, então a terceira região é "o que sobra" e a soma fecha **por construção**, não por sincronia. Três segmentos independentes em flex/grid foi recusado por ser justamente a forma que deixa buraco. **Medido em 60 quadros** (6 filmes × 2 tamanhos × 5 instantes): soma = **100,00000 em todos**; erro absoluto máximo entre a fronteira medida e a prevista por `x_i(k)` com o MESMO `k` = **0,070pp** em desktop e **0,151pp** a 375px — e o erro escala exatamente com `1/largura_da_barra`, que é a assinatura da resolução do instrumento (varredura por hit-test a 0,25px), não da animação.

@@ -18,3 +18,7 @@ dados/lote/
 # Config local do Claude Code (launch.json do servidor de preview, etc.).
 # Ferramenta de quem está editando, não do projeto — nunca entra no repo.
 .claude/
+
+# [v1.9.29] cache de rede do TMDB, criado por scripts/enriquecer_ficha.py
+# (mesmo estatuto de resultado/cache/ acima: artefato de rede, nunca fonte)
+dados/cache/

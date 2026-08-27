@@ -19,7 +19,24 @@
     "diretor_transliterado": true,
     "ano": 1997,
     "fonte": "tmdb",
-    "ano_fonte": "letterboxd"
+    "ano_fonte": "letterboxd",
+    "tmdb_id": 36095,
+    "tmdb_fetched_at": "2026-08-27T11:49:21+00:00",
+    "poster_path": "/g2x1gF89LFej8gOTeeLVefDP5Je.jpg",
+    "poster_largura": 1000,
+    "poster_altura": 1500,
+    "backdrop_paths": [
+      "/xxIRKSd9LmHojUD5grvMuGypwVC.jpg",
+      "/yFNZidMRI7dTr7dklBfo3I2yMsc.jpg",
+      "/xAWvdbC2cOFCKuH6jCWrWjtOG8p.jpg",
+      "/1son1inSL9AHKYhYfOtOdENi0CH.jpg",
+      "/73hRTdIpS2rGz6PWw2fIEpX2ivS.jpg",
+      "/td7K6x2krq757DACfgQ8NXl6N19.jpg",
+      "/nYiknvDX37PYwXTRA1KvvvhjNkV.jpg",
+      "/yvpfjDMyV2nT0WJ6r3vZEfig6p2.jpg",
+      "/chwzbN7cpmRIMj2YKUqsu1ywuuh.jpg",
+      "/3Q3SOWePS1e4uAthlqBhnOG8bPp.jpg"
+    ]
   },
   "distribuicao": {
     "n_notas_total": 375278,

@@ -85,6 +85,36 @@ corrigida na v1.9.1).
 | 26 | **Mobile (375px)** — a grade vira coluna única, o cabeçalho de colunas some, as 3 células de um eixo empilham em y distintos e cada uma exibe o nome do grupo via `::before` na cor do grupo; **sem overflow horizontal** | ✅ |
 | 27 | **Console limpo** — home, os 3 filmes e o degradado carregam com 0 erro (verificado em aba nova; uma regressão de `var` içado — `MESES` usado antes da atribuição — foi achada e corrigida por este teste) | ✅ |
 
+## v1.9.29 — PÔSTER (home e página do filme) + ATRIBUIÇÃO AO TMDB
+
+Método: servidor estático local, Chromium do painel, `1280×900` (desktop) e
+`375×812` (mobile). MEDIDO = valor lido por script na página ou pela rede;
+VISTO = conferido em captura de tela. O catálogo tem **35/35 filmes com
+pôster**, então o estado "sem pôster" foi **simulado** (linhas 79 e 84).
+
+| # | Cenário | MEDIDO / VISTO | ok |
+|---|---------|----------------|----|
+| 71 | **Coleta — `include_image_language` obrigatório** — `eighth-grade` 1 pôster/**0 backdrops** sem o parâmetro contra 2/18 com ele; `the-invite-2026` 4/**0** contra 10/21; curta experimental **0/0** contra 1/0; `the-godfather` 6/4 contra 21/102 | MEDIDO (API real) | ✅ |
+| 72 | **Coleta — `pt` e não `pt-BR`** — com `pt-BR,null`, **7 de 9** filmes sondados ficam SEM dimensões do pôster (localidade descartada em silêncio); com `pt,null`, **0 de 9** | MEDIDO (API real) | ✅ |
+| 73 | **Chamada ÚNICA** — uma só requisição de detalhes por filme, `append_to_response=credits,images`; o fallback en-US pede `credits` sem `images` | MEDIDO (teste) | ✅ |
+| 74 | **Retrofit dos 35** — **35 com pôster · 0 sem · 0 falhas**. Dimensões reais, não presumidas: `aftersun` 1632×2449, `everything-everywhere` 800×1200, `longlegs` 718×1076, `the-godfather` 2000×3000 | MEDIDO | ✅ |
+| 75 | **Diff dos 35 `resultado/*.json`** — comparação campo a campo contra `HEAD`: **35 arquivos conformes, 0 violações**. Nada mudou fora de `ficha`; dentro de `ficha`, só as 6 chaves novas; ordem das chaves de topo preservada | MEDIDO | ✅ |
+| 76 | **Guarda de identidade dispara de verdade** — `mother-2017` foi ABORTADO sem gravar quando a busca resolveu "Perfeita é a Mãe 2" (dir. Scott Moore) em vez de "mãe!" (dir. Darren Aronofsky). Causa: buscar pelo título pt-BR em vez do título do slug. Corrigido | MEDIDO | ✅ |
+| 77 | **Home, desktop** — 35 pôsteres, grade 7 colunas × 5 linhas, célula 142,28×213,42px, faixa de recepção de 6px visível na base de todas | MEDIDO + VISTO | ✅ |
+| 78 | **Home, mobile 375px** — 3 colunas, pôster + título + ano + faixa, sem overflow horizontal | VISTO | ✅ |
+| 79 | **Home — ausência de pôster (SIMULADA em 3 células)** — hachura diagonal, marca "24", "SEM PÔSTER"; mesma silhueta, mesma altura de célula (213,43px), título/ano/faixa intactos. **Nenhum ícone de imagem quebrada** | MEDIDO + VISTO | ✅ |
+| 80 | **Layout shift na home — CLS `0`, zero entradas de `layout-shift`** | MEDIDO | ✅ |
+| 81 | **Layout shift na home, prova ESTRUTURAL** — removendo as 35 `<img>` do DOM: altura de documento **1657px nos dois casos**, e **0 de 35** células mudam de retângulo. A geometria não depende das imagens | MEDIDO | ✅ |
+| 82 | **Página do filme — reserva de proporção** — `the-godfather`: caixa 200×300 e título em **y=425,52 com e sem** a imagem (deslocamento **0px**). **Contrafactual: sem a reserva a caixa mediria 2px** — o título saltaria **298px** ao carregar | MEDIDO | ✅ |
+| 83 | **Página do filme — `the-godfather`, `eighth-grade`, `napoleon-2023`, `obsession-2026`** — pôster contido (200px) acima de ano → título → chip → ficha → **barra**, nos dois tamanhos. Barra, callout, animação e ordem intactos; `napoleon-2023` segue com os três grupos em destaque | VISTO | ✅ |
+| 84 | **Página do filme — ausência de pôster (SIMULADA)** — mesma caixa 200×300 com o estado desenhado; o resto da página não se move | MEDIDO + VISTO | ✅ |
+| 85 | **Tamanhos do CDN e peso** — home `w342`: **1282 KB** nos 35 (média 37 KB, 17–66 KB). Comparação: `w185` 525 KB (pequeno em retina), `w500` 2362 KB (**+84%**). Ficha: `w500`. Nenhum `original` em lugar nenhum | MEDIDO (rede) | ✅ |
+| 86 | **`loading` e `alt`** — home `lazy`, ficha `eager`; `alt="Pôster de O Poderoso Chefão (1972)"`; `width`/`height` presentes no `<img>` | MEDIDO | ✅ |
+| 87 | **Nenhum backdrop renderizado** — `backdrop_paths[]` existe nos 35 JSONs e nenhum arquivo do frontend o lê | MEDIDO (grep) | ✅ |
+| 88 | **Atribuição** — o aviso exigido está no rodapé de `index.html`, `filme.html` e `creditos.html`; `creditos.html` traz a frase oficial em inglês, LITERAL, com tradução, e o registro de que o copyright das imagens é dos estúdios. Link "créditos e fontes" nas duas páginas do site | MEDIDO + VISTO | ✅ |
+| 89 | **Zero erro de console** em home, `creditos.html` e nas 4 páginas de filme, nos dois tamanhos | MEDIDO | ✅ |
+| 90 | **Suíte Python** — **1512 passando** (1492 de baseline + 20 novos), nenhum teste anterior alterado | MEDIDO | ✅ |
+
 ## O que este teste NÃO cobre
 
 - **Nenhum teste automatizado de frontend existe.** Não há runner de JS no
@@ -219,6 +249,16 @@ aparece por baixo — não que dois pixels adjacentes tenham a cor esperada.
 ## O que este teste NÃO cobre
 
 - **Nenhum teste automatizado de frontend**, como sempre.
+- **[v1.9.29] Rede FRIA de verdade.** A CLS de 0 e a prova estrutural do
+  cenário 81 valem; o que este ambiente não permitiu foi medir a chegada
+  das 35 imagens com o cache vazio (as URLs com parâmetro de cache-busting
+  ficaram penduradas no navegador do painel). A prova estrutural é mais
+  forte que a medição de rede que faltou — ela mostra que a geometria não
+  depende das imagens **em nenhum instante** —, mas a diferença fica
+  registrada em vez de escondida.
+- **[v1.9.29] Um pôster que o CDN recusa.** O handler de `error` cai no
+  estado desenhado por construção e está lido no código, não exercitado
+  contra um 404 real.
 - **A sequência em velocidade real** — ver a ressalva de método.
 - **Amostragem de pixel** — a cobertura é provada por hit-test (cenário
   56), que é coisa diferente e mais fraca em um aspecto: prova que há

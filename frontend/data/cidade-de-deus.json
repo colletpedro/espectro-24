@@ -17,7 +17,24 @@
     "diretor_transliterado": false,
     "ano": 2002,
     "fonte": "tmdb",
-    "ano_fonte": "letterboxd"
+    "ano_fonte": "letterboxd",
+    "tmdb_id": 598,
+    "tmdb_fetched_at": "2026-08-27T11:49:20+00:00",
+    "poster_path": "/gfnXixcGC060QcG6JPxN6AMdVsq.jpg",
+    "poster_largura": 2000,
+    "poster_altura": 3000,
+    "backdrop_paths": [
+      "/uvitbjFU4JqvMwIkMWHp69bmUzG.jpg",
+      "/rr0vFvjbAU7zaLjSRtUAxavH2bv.jpg",
+      "/5p3aTxtUtZHCHwYsuycutmxIhND.jpg",
+      "/g52pHwOgfozKB9rNh6NiuIJMUas.jpg",
+      "/1F5p9C8ORjkkzK3FhccWVTYfeSM.jpg",
+      "/dCi0Y946pO7QOPVgUBJQ6OToJMq.jpg",
+      "/tlGreC0Cn1OGFhDYmC1Vl0MWVkn.jpg",
+      "/61ybf8KA2ZmH7wFvKtJtHGrjlWX.jpg",
+      "/n4raYTYSwzfOW9QxCV0WNIT9bBy.jpg",
+      "/sBnmoU8j6cIk4SpZVVcCiGUjwfm.jpg"
+    ]
   },
   "distribuicao": {
     "n_notas_total": 1216381,

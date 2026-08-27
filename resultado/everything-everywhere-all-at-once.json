@@ -18,7 +18,24 @@
     "diretor_transliterado": false,
     "ano": 2022,
     "fonte": "tmdb",
-    "ano_fonte": "bruto"
+    "ano_fonte": "bruto",
+    "tmdb_id": 545611,
+    "tmdb_fetched_at": "2026-08-27T11:49:23+00:00",
+    "poster_path": "/2dSZQGwijlXvMSyuGe0FSgrXnv0.jpg",
+    "poster_largura": 800,
+    "poster_altura": 1200,
+    "backdrop_paths": [
+      "/ss0Os3uWJfQAENILHZUdX8Tt1OC.jpg",
+      "/tt79dbOPd9Z9ykEOpvckttgYXwH.jpg",
+      "/fIwiFha3WPu5nHkBeMQ4GzEk0Hv.jpg",
+      "/xw383myGoydmJyL2yzFj0tVljll.jpg",
+      "/qggO1mPZFv6fuzyYOw69M7HPtny.jpg",
+      "/xYxLYHnGXhgWyoHvXjpRLSuJ2LW.jpg",
+      "/iN3vKCuOGRdZ9Cn3yRGCyMlaiST.jpg",
+      "/wp3vpSWAIjKSEeYb8F5NSZfONqw.jpg",
+      "/wUUwjNJ0OM8xfRCePTHRGOrq2p4.jpg",
+      "/4MG8ge6LOgsVkB0EMBM8lbFdEc6.jpg"
+    ]
   },
   "distribuicao": {
     "n_notas_total": 4060162,

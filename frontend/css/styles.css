@@ -119,6 +119,59 @@ a { color: inherit; }
 }
 .site-footer .wrap { display: flex; flex-direction: column; gap: 6px; }
 .site-footer a { color: var(--text-dim); text-underline-offset: 3px; }
+/* [v1.9.29, Entrega 4] O aviso exigido pelos termos do TMDB. Proeminente
+   quer dizer LEGÍVEL e presente em toda página — não um asterisco. Fica no
+   mesmo tamanho do resto do rodapé (0.9rem, não 0.7), e a marca do próprio
+   Espectro continua acima e mais forte, como os termos pedem quando há
+   marca do TMDB envolvida. */
+.site-footer__aviso {
+  color: var(--text-dim);
+  font-size: 0.9rem;
+  max-width: 62ch;
+}
+.site-footer__creditos { font-size: 0.9rem; }
+
+/* =======================================================
+   CRÉDITOS (v1.9.29) — a seção "Sobre" que o site não tinha
+   ======================================================= */
+.creditos { padding-bottom: 8px; }
+.creditos__titulo {
+  font-family: var(--serif);
+  font-size: clamp(1.7rem, 5vw, 2.3rem);
+  line-height: 1.15;
+  margin: 26px 0 14px;
+}
+.creditos__intro { color: var(--text-dim); font-size: 1.02rem; line-height: 1.6; }
+.creditos__bloco {
+  border-top: 1px solid var(--border-soft);
+  margin-top: 30px;
+  padding-top: 20px;
+}
+.creditos__bloco p { line-height: 1.62; color: var(--text-dim); }
+.creditos__h2 {
+  font-family: var(--mono);
+  font-size: 0.72rem;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--text-mute);
+  margin: 0 0 12px;
+}
+/* O aviso literal exigido pelos termos: destacado, não diluído no corpo. */
+.creditos__aviso {
+  border-left: 2px solid var(--warn);
+  background: var(--bg-elev);
+  border-radius: 0 8px 8px 0;
+  padding: 14px 16px;
+  margin: 0 0 18px;
+  font-size: 1rem;
+}
+.creditos__aviso .creditos__aviso-pt {
+  display: block;
+  margin-top: 7px;
+  color: var(--text-mute);
+  font-size: 0.92rem;
+}
+.creditos__link { font-family: var(--mono); font-size: 0.8rem; }
 
 /* =======================================================
    HOME
@@ -228,6 +281,94 @@ a { color: inherit; }
 }
 
 /* =======================================================
+   PÔSTER (v1.9.29) — mosaico da home e abertura da ficha
+   =======================================================
+   A proporção é RESERVADA antes de carregar, em `aspect-ratio` inline
+   escrito pelo JS a partir de `ficha.poster_largura`/`poster_altura` (ver
+   `js/poster.js`). Sem isso, 35 pôsteres chegando em ordem aleatória
+   empurram a grade enquanto a pessoa lê. As regras abaixo NUNCA definem
+   `aspect-ratio` — se definissem, sobrescreveriam ou brigariam com o valor
+   real do filme (que não é sempre 2:3: `aftersun` é 1632×2449, o curta
+   experimental é 505×750). */
+.poster {
+  display: block;
+  position: relative;
+  overflow: hidden;
+  background: var(--bg-elev);
+}
+.poster__img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  /* a imagem entra sem piscar quando vem do cache e com um fade curto
+     quando vem da rede; nada de animação coreografada — a animação do
+     produto é a da BARRA, e ela é o momento de abrir um filme. */
+  animation: poster-in 0.24s ease both;
+}
+@keyframes poster-in { from { opacity: 0; } to { opacity: 1; } }
+@media (prefers-reduced-motion: reduce) {
+  .poster__img { animation: none; }
+}
+
+/* AUSÊNCIA DE PÔSTER — estado DESENHADO, nunca imagem quebrada.
+   Nenhum dos 35 filmes publicados está neste caso (medido: 35/35 com
+   pôster), mas a expansão trará filmes obscuros com menos cobertura, e o
+   estado precisa existir ANTES do primeiro. A caixa mantém a silhueta do
+   pôster e mostra a marca do produto, não um ícone de erro. Também é onde
+   cai uma falha do CDN (404, rede) — ver o handler de `error` no JS. */
+.poster.is-vazio {
+  background:
+    repeating-linear-gradient(135deg,
+      #ffffff08 0 2px, #00000000 2px 9px),
+    var(--bg-elev-2);
+}
+.poster__vazio {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+}
+.poster__vazio-marca {
+  font-family: var(--serif);
+  font-weight: 700;
+  font-size: 1.5rem;
+  line-height: 1;
+  color: #ffffff1f;
+}
+.poster__vazio-nota {
+  font-family: var(--mono);
+  font-size: 0.56rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--text-mute);
+}
+
+/* --- no mosaico: o pôster É a célula --- */
+.poster--mosaico {
+  position: absolute;
+  inset: 0;
+  border-radius: 0;      /* o arredondamento é da célula, que tem overflow */
+}
+.poster--mosaico .poster__vazio-nota { font-size: 0.52rem; }
+
+/* --- na ficha: CONTIDO, o produto não vira catálogo visual --- */
+.poster--ficha {
+  width: 200px;
+  max-width: 46vw;
+  margin: 0 0 18px;
+  border-radius: 8px;
+  border: 1px solid var(--border);
+  box-shadow: 0 14px 34px -18px #000000e6;
+}
+@media (max-width: 640px) {
+  .poster--ficha { width: 140px; margin-bottom: 14px; }
+}
+
+/* =======================================================
    MOSAICO (Entrega 1-4 v1.9.17; refeito na v1.9.18)
    ======================================================= */
 /* Mais largo que a coluna de leitura (`--maxw`, 720/760px) de propósito —
@@ -262,7 +403,14 @@ a { color: inherit; }
    2-3 linhas, e um quadrado apertava demais. */
 .mosaic-cell {
   position: relative;
-  aspect-ratio: 4 / 5;
+  /* [v1.9.29] 4/5 → 2/3: a célula assume a proporção do PÔSTER. A razão de
+     ser 4/5 na v1.9.18 era acomodar títulos de até ~37 caracteres em 2-3
+     linhas num card sem imagem; com o pôster ocupando a célula, o texto
+     mora num degradê sobre ele e a caixa passa a ser a da arte. A grade
+     fica ~20% mais alta (5 linhas de 213px contra 5 de 165px no desktop) —
+     é o custo de densidade que a decisão de mostrar pôster cobra, e está
+     medido no relatório da versão. */
+  aspect-ratio: 2 / 3;
   display: block;
   background: var(--bg-elev);
   border: 1px solid var(--border);
@@ -307,9 +455,19 @@ a { color: inherit; }
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
-  /* padding-bottom maior que o topo: dá respiro pra faixa de 5px (abaixo)
-     sem o texto colar nela. */
-  padding: 10px 10px 16px;
+  /* padding-bottom maior que o topo: dá respiro pra faixa (abaixo) sem o
+     texto colar nela. */
+  padding: 10px 10px 17px;
+  /* [v1.9.29] O DEGRADÊ, e por que ele é opaco embaixo. O título tem de ser
+     legível sobre QUALQUER pôster — inclusive os claros (`barbie`,
+     `wonka`). Um véu uniforme apagaria a arte inteira; este só existe onde
+     o texto está, e chega a 96% de preto na base, o que garante o contraste
+     do título sem tocar os dois terços de cima da imagem. Sobre a célula
+     VAZIA (sem pôster) ele é praticamente invisível — o fundo já é escuro —
+     e o desenho continua o mesmo card da v1.9.18. */
+  background: linear-gradient(to top,
+      #000000fa 0%, #000000f0 24%, #000000ba 44%, #00000059 62%,
+      #00000000 84%);
 }
 .mosaic-cell__title {
   font-family: var(--serif);
@@ -341,7 +499,13 @@ a { color: inherit; }
 .mosaic-cell__strip {
   position: absolute;
   left: 0; right: 0; bottom: 0;
-  height: 5px;
+  /* [v1.9.29] 5px → 6px, e um fio escuro em cima. Contra fundo chapado
+     (v1.9.18) 5px bastavam; sobre um pôster a faixa precisa se destacar da
+     arte sem depender da cor dela, e o fio faz isso para pôster claro e
+     escuro com a mesma regra. A faixa é o único sinal de RECEPÇÃO da
+     célula — é o que impede a home de virar um catálogo de capas. */
+  height: 6px;
+  box-shadow: 0 -1px 0 #00000073;
   display: flex;
 }
 .mosaic-cell__seg { height: 100%; }

@@ -1,8 +1,10 @@
 """[NOVO v1.3.0] Ficha técnica do filme via TMDB — dado aditivo, opcional.
 
 Busca `/search/movie` (query + year) para resolver o ID, depois
-`/movie/{id}` com `language=pt-BR` e `append_to_response=credits` para
-extrair título pt-BR, sinopse oficial, gêneros, duração, diretor e ano.
+`/movie/{id}` com `language=pt-BR` e `append_to_response=credits,images` para
+extrair título pt-BR, sinopse oficial, gêneros, duração, diretor e ano — e,
+desde a v1.9.29, `tmdb_id`, o carimbo de obtenção, o `poster_path` com suas
+dimensões, e a lista de `backdrop_paths` (COLETADA e NÃO renderizada).
 
 Cache em disco (mesmo padrão do cache do Letterboxd em `fetcher.py`: chave
 determinística, nunca rebusca filme já buscado). Falha da API (chave
@@ -16,6 +18,7 @@ import json
 import os
 import re
 import unicodedata
+from datetime import datetime, timezone
 from pathlib import Path
 from typing import Any
 
@@ -27,10 +30,53 @@ from .urls import film_page_cache_key, film_page_url
 TMDB_BASE = "https://api.themoviedb.org/3"
 TMDB_ENV_KEY = "TMDB_API_KEY"
 
+# [v1.9.29] Imagens — ver SPEC §3[F], "Imagens (v1.9.29)".
+#
+# `include_image_language` é OBRIGATÓRIO, e a razão foi MEDIDA ao vivo contra
+# a API antes de fixar: `language=pt-BR` filtra também o bloco `images`, e a
+# esmagadora maioria dos backdrops não tem idioma declarado. Sem o parâmetro,
+# `images.backdrops` volta VAZIO para filmes com pouca cobertura pt-BR e o
+# sintoma parece "este filme não tem imagens". Medido em 2026-08-27:
+#
+#   eighth-grade (489925)          sem: 1 pôster,  0 backdrops | com: 2,  18
+#   the-invite-2026 (950028)       sem: 4 pôsteres, 0 backdrops | com: 10, 21
+#   o curta experimental (1079736) sem: 0 e 0                   | com: 1,  0
+#   the-godfather (238)            sem: 6 pôsteres, 4 backdrops | com: 21, 102
+#
+# **O VALOR É `pt`, NÃO `pt-BR` — e isto é uma correção medida, não um
+# detalhe de estilo.** O parâmetro aceita códigos ISO-639-1, e um código de
+# LOCALIDADE é ignorado em SILÊNCIO: com `pt-BR,null` só o degrau `null`
+# sobrevive, e o `pt` some. O sintoma não é um erro — é pior, é um dado que
+# falta sem avisar. Medido em 9 filmes do catálogo: com `pt-BR,null`, 7 deles
+# (aftersun, anatomy-of-a-fall, cats-2019, cure, hereditary, the-northman,
+# wonka) ficaram SEM as dimensões do pôster, porque o `poster_path` escolhido
+# pelo TMDB é uma arte `iso_639_1='pt'` que o filtro tinha descartado; com
+# `pt,null`, nenhum ficou. Os backdrops também sobem um pouco (a diferença é
+# pequena porque quase todos são `null` mesmo).
+TMDB_IMAGE_LANGS = "pt,null"
+
+# Teto de backdrops guardados por filme. COLETADOS E NÃO RENDERIZADOS (§3[F]):
+# a galeria não existe na v1 porque o TMDB não garante que um backdrop seja
+# livre de spoiler, e "0 spoilers" é a promessa central (§0). 10 é folga
+# confortável para qualquer curadoria futura (o teto real do TMDB passa de
+# 100 num filme popular) sem inchar os `resultado/*.json` — a lista é de
+# strings curtas, e 10 × ~32 bytes é ruído no documento.
+TETO_BACKDROPS = 10
+
 _ANO_RE_CANDIDATOS = (
     re.compile(r"/films/year/(\d{4})/"),
     re.compile(r'og:title"\s+content="[^"]*\((\d{4})\)'),
 )
+
+
+def _agora_utc() -> str:
+    """Carimbo de obtenção, ISO-8601 UTC com segundos.
+
+    Função própria (em vez de `datetime.now()` inline) para que o teste possa
+    substituí-la e comparar fichas byte a byte sem que o relógio entre na
+    comparação.
+    """
+    return datetime.now(timezone.utc).replace(microsecond=0).isoformat()
 
 
 class FichaError(RuntimeError):
@@ -185,9 +231,23 @@ def _resolver_id(session, api_key: str, titulo: str, ano: int | None) -> int | N
 
 
 def _buscar_detalhes(session, api_key: str, movie_id: int,
-                     language: str = "pt-BR") -> dict[str, Any]:
+                     language: str = "pt-BR",
+                     com_imagens: bool = True) -> dict[str, Any]:
+    """Detalhes do filme numa CHAMADA ÚNICA.
+
+    [v1.9.29] `images` entra no MESMO `append_to_response` que já trazia
+    `credits` — custo marginal de rede zero, nenhuma requisição nova. O
+    `include_image_language` acompanha e é o que faz o bloco vir preenchido
+    (ver `TMDB_IMAGE_LANGS`).
+
+    `com_imagens=False` existe para os fallbacks en-US (sinopse vazia,
+    diretor não-latino): eles só querem `overview`/`credits`, e o bloco de
+    imagens é grande — não há por que baixá-lo duas vezes.
+    """
     params = {"api_key": api_key, "language": language,
-              "append_to_response": "credits"}
+              "append_to_response": "credits,images" if com_imagens else "credits"}
+    if com_imagens:
+        params["include_image_language"] = TMDB_IMAGE_LANGS
     return _get_json(session, f"{TMDB_BASE}/movie/{movie_id}", params)
 
 
@@ -221,6 +281,57 @@ def _e_escrita_latina(nome: str) -> bool:
     return True
 
 
+def _imagens(detalhes: dict) -> dict[str, Any]:
+    """Os campos de imagem da ficha, derivados da resposta de detalhes.
+
+    **O PÔSTER É O DO PRÓPRIO TMDB, e isso foi medido antes de decidir.** A
+    cascata pedida (pt-BR → arte sem idioma → idioma original → melhor
+    avaliado) já é o que o campo `poster_path` da resposta de detalhes
+    entrega: ele é sensível a `language`, então com `language=pt-BR` devolve
+    o pôster pt-BR quando existe e cai sozinho para a arte sem idioma quando
+    não existe. Medido em 2026-08-27: `napoleon-2023` devolve
+    `/2UY2xfk…` (iso_639_1='pt') em pt-BR e `/ytFOXyg…` em en-US — a
+    localidade está sendo respeitada; o curta experimental (1079736), que só
+    tem uma arte SEM idioma, devolve a mesma imagem nas duas localidades.
+    Reimplementar a cascata seria reescrever, com menos informação, uma
+    escolha que a API já faz — e divergir dela em silêncio no dia em que ela
+    mudasse de critério.
+
+    **As DIMENSÕES, essas, o campo não traz** — e elas são obrigatórias para
+    o frontend reservar a proporção antes de carregar (§3[E]). Por isso o
+    `poster_path` escolhido é procurado dentro de `images.posters`, que traz
+    `width`/`height` reais. Não são sempre 2:3: o curta experimental mede
+    505×750 (razão 0,673), não 2000×3000. Quando o caminho não aparece na
+    lista (não observado nos 5 filmes sondados, mas possível), as dimensões
+    ficam ausentes e o frontend cai na proporção padrão — ausência é estado
+    válido, nunca erro.
+    """
+    imagens = detalhes.get("images") or {}
+    poster_path = detalhes.get("poster_path") or None
+
+    largura = altura = None
+    if poster_path:
+        for p in imagens.get("posters") or []:
+            if p.get("file_path") == poster_path:
+                largura = p.get("width")
+                altura = p.get("height")
+                break
+
+    # COLETADOS E NÃO RENDERIZADOS — ver `TETO_BACKDROPS`. A ordem é a que a
+    # API devolve (ela já ordena por avaliação); o corte é no fim.
+    backdrops = [
+        b["file_path"] for b in (imagens.get("backdrops") or [])
+        if b.get("file_path")
+    ][:TETO_BACKDROPS]
+
+    return {
+        "poster_path": poster_path,
+        "poster_largura": largura,
+        "poster_altura": altura,
+        "backdrop_paths": backdrops,
+    }
+
+
 def _montar_ficha(session, api_key: str, movie_id: int, detalhes: dict) -> dict[str, Any]:
     overview = detalhes.get("overview") or ""
     fallback_en = False
@@ -228,7 +339,8 @@ def _montar_ficha(session, api_key: str, movie_id: int, detalhes: dict) -> dict[
     if not overview:
         # §1.3: overview vazio em pt-BR -> fallback para en, sinalizado
         # (nunca silencioso) em vez de deixar a sinopse vazia.
-        detalhes_en = _buscar_detalhes(session, api_key, movie_id, language="en-US")
+        detalhes_en = _buscar_detalhes(session, api_key, movie_id, language="en-US",
+                                       com_imagens=False)
         overview = detalhes_en.get("overview") or ""
         fallback_en = True
 
@@ -244,7 +356,7 @@ def _montar_ficha(session, api_key: str, movie_id: int, detalhes: dict) -> dict[
     if diretor and not _e_escrita_latina(diretor):
         if detalhes_en is None:
             detalhes_en = _buscar_detalhes(session, api_key, movie_id,
-                                           language="en-US")
+                                           language="en-US", com_imagens=False)
         diretor_en = _diretor(detalhes_en)
         if diretor_en and _e_escrita_latina(diretor_en):
             diretor = diretor_en
@@ -264,6 +376,22 @@ def _montar_ficha(session, api_key: str, movie_id: int, detalhes: dict) -> dict[
         "diretor_transliterado": diretor_transliterado,
         "ano": ano,
         "fonte": "tmdb",
+        # [v1.9.29] Identidade e RASTREABILIDADE. `tmdb_fetched_at` vale para
+        # a ficha INTEIRA — título, sinopse, diretor, gêneros, duração,
+        # pôster e backdrops vêm todos da mesma resposta, no mesmo instante,
+        # e um carimbo por campo seria a mesma data repetida sete vezes.
+        #
+        # POR QUE ELE EXISTE (§3[F], "Rastreabilidade e o teto de 6 meses"):
+        # os termos da API do TMDB proíbem cachear por mais de 6 meses
+        # qualquer informação obtida através dela, e o projeto guarda ficha
+        # indefinidamente em `resultado/*.json` desde a v1.3.0. A limitação é
+        # PRÉ-EXISTENTE — os pôsteres só a tornam visível. Esta versão NÃO
+        # constrói cache, revalidação, expiração nem coleta de lixo: entrega
+        # só a data, que é o que torna uma política de revalidação possível
+        # depois. Sem ela não há nem como saber o que está vencido.
+        "tmdb_id": movie_id,
+        "tmdb_fetched_at": _agora_utc(),
+        **_imagens(detalhes),
     }
 
 
@@ -293,7 +421,15 @@ def buscar_ficha(titulo: str, ano: int | None, cache_dir: str | Path,
         cached = json.loads(path.read_text(encoding="utf-8"))
         if cached.get("nao_encontrado"):
             return None, f"TMDB: nenhum resultado para {titulo!r} ({ano}) [cache].", None
-        return cached, None, None
+        # [v1.9.29] Ficha cacheada ANTES desta versão não tem os campos de
+        # imagem nem o carimbo de obtenção. Devolvê-la como está produziria o
+        # pior sintoma possível — "este filme não tem pôster" para um filme
+        # que tem —, e sem nenhum aviso. `tmdb_fetched_at` é o marcador: sua
+        # ausência conta como MISS e a entrada é refeita por cima. Não é
+        # expiração (que esta versão não constrói, por decisão); é só uma
+        # entrada de formato antigo sendo reconhecida como incompleta.
+        if cached.get("tmdb_fetched_at"):
+            return cached, None, None
 
     key = api_key or os.environ.get(TMDB_ENV_KEY)
     if not key:

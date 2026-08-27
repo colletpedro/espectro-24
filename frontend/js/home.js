@@ -107,6 +107,32 @@
     a.href = "filme.html?slug=" + encodeURIComponent(slug);
     a.setAttribute("aria-label", titulo + (ano ? " (" + ano + ")" : "") + " — ver análise");
 
+    // [v1.9.29] O PÔSTER — e isto é REDESENHO da célula, não acréscimo.
+    //
+    // A célula da v1.9.18 foi desenhada SEM imagem: um card escuro em 4/5,
+    // com o texto como protagonista e uma faixa de 5px na base. Encaixar um
+    // pôster nela sem mexer no resto daria o pior dos dois — uma miniatura
+    // apertada disputando espaço com o título. Então a célula muda de
+    // proporção (4/5 → 2/3, a do próprio pôster), o pôster passa a ocupar a
+    // célula inteira, e o texto sobe para um degradê na base.
+    //
+    // O QUE NÃO MUDA, e é o motivo de a faixa continuar existindo: a home
+    // não vira um catálogo de capas. A faixa é o único sinal de RECEPÇÃO da
+    // célula, e sobre imagem ela precisava de mais presença que os 5px que
+    // tinha contra fundo chapado — subiu para 6px e ganhou um fio escuro em
+    // cima, que a separa de qualquer pôster (claro ou escuro) sem depender
+    // da cor da arte. Cores, ordem e semântica: idênticas.
+    //
+    // A ANIMAÇÃO DA BARRA NÃO RODA AQUI — decisão registrada (§3[E]).
+    // Trinta e cinco sequências simultâneas na entrada viram espetáculo e
+    // competem entre si; a home mostra a faixa no ESTADO FINAL, e a
+    // animação continua sendo o momento de abrir um filme.
+    if (window.ESPECTRO_POSTER) {
+      a.appendChild(window.ESPECTRO_POSTER.montar(f.ficha, {
+        uso: "mosaico", titulo: titulo, ano: ano, lazy: true,
+      }));
+    }
+
     // corpo: título sempre visível (Entrega 1, v1.9.18 — revoga o "só no
     // hover" da v1.9.17), ano abaixo, alinhados na base da célula.
     var body = document.createElement("span");

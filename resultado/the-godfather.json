@@ -17,7 +17,24 @@
     "diretor_transliterado": false,
     "ano": 1972,
     "fonte": "tmdb",
-    "ano_fonte": "bruto"
+    "ano_fonte": "bruto",
+    "tmdb_id": 238,
+    "tmdb_fetched_at": "2026-08-27T11:49:35+00:00",
+    "poster_path": "/oJagOzBu9Rdd9BrciseCm3U3MCU.jpg",
+    "poster_largura": 2000,
+    "poster_altura": 3000,
+    "backdrop_paths": [
+      "/ejdD20cdHNFAYAN2DlqPToXKyzx.jpg",
+      "/tSPT36ZKlP2WVHJLM4cQPLSzv3b.jpg",
+      "/tmU7GeKVybMWFButWEGl2M4GeiP.jpg",
+      "/39rtAdg3yx6IDxRg0ZLXefv0aPY.jpg",
+      "/rSPw7tgCH9c6NqICZef4kZjFOQ5.jpg",
+      "/41xIKcLiM5ryfz4C9sZFcBOJGsK.jpg",
+      "/jdHsptJbtalEuVhCV5i7kSC3g0x.jpg",
+      "/7VrRna8S3x6xbijooeBmxqvHXiu.jpg",
+      "/htuuuEwAvDVECMpb0ltLLyZyDDt.jpg",
+      "/vDACQOBMpdwrcpKfnNrdg1z9MGq.jpg"
+    ]
   },
   "distribuicao": {
     "n_notas_total": 2842603,
