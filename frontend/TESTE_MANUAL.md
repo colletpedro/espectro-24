@@ -85,6 +85,56 @@ corrigida na v1.9.1).
 | 26 | **Mobile (375px)** — a grade vira coluna única, o cabeçalho de colunas some, as 3 células de um eixo empilham em y distintos e cada uma exibe o nome do grupo via `::before` na cor do grupo; **sem overflow horizontal** | ✅ |
 | 27 | **Console limpo** — home, os 3 filmes e o degradado carregam com 0 erro (verificado em aba nova; uma regressão de `var` içado — `MESES` usado antes da atribuição — foi achada e corrigida por este teste) | ✅ |
 
+## v1.9.32 — TOPO EDITORIAL: sinopse fora, backdrop dissolvido, seções nomeadas
+
+Método: servidor estático local, Chromium do painel, **1280×900** (coluna de
+720px) e **375×812**. MEDIDO = valor lido por script na página, por
+composição analítica sobre os pixels reais da imagem, ou pela CSSOM; VISTO =
+conferido em captura de tela.
+
+| # | Cenário | MEDIDO / VISTO | ok |
+|---|---------|----------------|----|
+| 116 | **Sinopse removida** — nenhum `.ficha__synopsis` no DOM, nenhum card: `.ficha` com `background: none`, `border: 0`, `padding: 0`. O aviso de sinopse em inglês saiu junto (avisava sobre texto que não está mais na tela) | MEDIDO | ✅ |
+| 117 | **Linha de metadados sobrevive e credita** — `OLIVIA WILDE · Drama, Comédia · 107 min · fonte TMDB`. "fonte TMDB" presente; aviso do TMDB no rodapé das 3 páginas e `creditos.html` no ar e linkado | MEDIDO + VISTO | ✅ |
+| 118 | **Diretor em caixa alta é do CSS, não do dado** — `text-transform: uppercase`; o texto no DOM continua "Olivia Wilde". Nome mais longo do catálogo (`FRANCIS FORD COPPOLA`) cabe em 1 linha no desktop e quebra limpo a 375px | MEDIDO + VISTO | ✅ |
+| 119 | **Backdrop dissolvido** — `border-radius: 0`, `margin: 0`; fade de **232px** (desktop) / **156px** (mobile) terminando em `--bg`, confirmado no `getComputedStyle(bd,'::after')` | MEDIDO | ✅ |
+| 120 | **Título invade a imagem** — `the-invite-2026` desktop: caixa 720×405, recuo do bloco **58px**, **18,1px do título sobre a imagem**. Mobile: caixa 375×211, recuo 52px, **12,1px** (`the-godfather`) | MEDIDO | ✅ |
+| 121 | **PISO DE CONTRASTE nos 34 backdrops** — composição analítica sobre os pixels reais (`w1280`, luminância WCAG, α exato de cada parada, pior pixel de cada linha ocupada pelo texto): o fundo sob o texto compõe **exatamente `#0b0c10` em 34 de 34** → título **17,15:1**, ano **4,56:1**. **Nenhum filme abaixo do piso** | MEDIDO | ✅ |
+| 122 | **O piso é independente da imagem, e o contrafactual prova** — com o fade da v1.9.30, se o texto invadisse, o pior caso daria título **4,92:1** e ano **1,31:1** | MEDIDO | ✅ |
+| 123 | **O pior backdrop NÃO é o suposto** — por luminância média da faixa inferior: `barbie` **0,370** e `the-hateful-eight` **0,351** são os piores; `dune-2021` (a hipótese) é o **12º**, 0,098. Os dois piores foram percorridos na tela | MEDIDO + VISTO | ✅ |
+| 124 | **Link do Letterboxd secundário** — sem fundo, sem borda, sem pill; mono 0,68rem. `target="_blank"` + `rel="noopener noreferrer"`, `:focus-visible` com contorno de 2px, **alvo de toque de 46px** medidos a 375px (≥44px) | MEDIDO + VISTO | ✅ |
+| 125 | **Seções nomeadas** — `RECEPÇÃO` antes da barra e `EM DETALHE · TEMA A TEMA` antes dos bullets, na mono de rótulo já existente. Legenda `HATERS · MIXED · FANS` abaixo dos percentuais | MEDIDO + VISTO | ✅ |
+| 126 | **Redundância de peso: DOIS lugares com número, não três** — callout e cabeçalho de grupo; a legenda tem nome e cor, nenhum número. **134px** entre os dois, **ambos na mesma tela** em 1280×900 e 375×812. A distância entre legenda e cabeçalho **aumentou** de 65px (v1.9.31 publicada) para 98px. NADA MEXIDO — a entrega pedia reportar | MEDIDO | ✅ |
+| 127 | **Coreografia das duas animações** — ano 0→430ms, título 70→500ms, barra 0→1020ms. **13 animações**: as **10 da barra intactas** (`proportion-fronteiras` 650ms + 3×(`lead`,`lead`,`ignite`) a 650/705/760ms), 2 novas de `hero-in` e o `poster-in` de 240ms que já existia. **Total da página segue 1020ms** | MEDIDO | ✅ |
+| 128 | **`prefers-reduced-motion` verificado na CSSOM** — varrendo `document.styleSheets`, a regra com `opacity: 0` para `.film-hero__text` aparece **1× dentro** do bloco `no-preference` e **0× fora**. O estado base do CSS é o final | MEDIDO | ✅ |
+| 129 | **Fallback sem backdrop não herda a sobreposição** — `talk-to-me-2022`: `.film-hero--poster`, `margin-top: 0px`, pôster contido, texto inteiramente abaixo. Estrutura nova toda funcionando nele | MEDIDO + VISTO | ✅ |
+| 130 | **Percurso completo, desktop e mobile** — `the-invite-2026`, `dune-2021`, `barbie`, `the-godfather`, `cats-2019`, `napoleon-2023`, `eighth-grade`, `talk-to-me-2022`. Sem overflow horizontal em nenhum | MEDIDO + VISTO | ✅ |
+| 131 | **Não regrediu o que não era desta sessão** — ordem dos bullets por peso (FANS→HATERS em `the-godfather`, HATERS→FANS em `cats-2019`, MIXED→FANS→HATERS em `napoleon-2023`); barra, callout e `aria-label` em HATERS→MIXED→FANS; `disclosure--meio` e APROFUNDAR fechados; veredito, narrativa colapsada e micro-pesquisa no lugar | MEDIDO + VISTO | ✅ |
+| 132 | **Zero erro de console** nas 8 páginas de filme, nos dois tamanhos | MEDIDO | ✅ |
+| 133 | **Suíte Python** — **1525 passando**, inalterada. **Nenhum arquivo de `resultado/` no diff** | MEDIDO | ✅ |
+
+## O que este teste NÃO cobre
+
+- **Nenhum teste automatizado de frontend existe**, e a dívida cresceu de
+  novo: o piso de contraste é hoje um **acoplamento entre dois números em
+  arquivos diferentes** — a faixa chapada do degradê (`.backdrop::after`) e
+  o `--hero-overlap`. Nada no projeto quebra se alguém mexer num e não no
+  outro; a garantia vira falsa em silêncio, e só reaparece como texto
+  ilegível sobre um backdrop claro.
+- **A medição de contraste é ANALÍTICA, não de pixel renderizado.** Ela
+  compõe a imagem com o α exato do degradê em vez de ler a tela, porque o
+  CDN do TMDB é origem cruzada e `canvas.getImageData` seria bloqueado. Ela
+  é fiel à especificação do degradê, não à rasterização do navegador —
+  diferenças de arredondamento de subpixel não estão cobertas.
+- **A perda da sinopse não é medível por este teste.** Que os bullets
+  cheguem sem premissa é um custo de compreensão, e ele só aparece em uso
+  real com filmes que o leitor não conhece — o catálogo de hoje é de filmes
+  conhecidos e não exercita o pior caso. Ver o registro em §3[E].
+- A conferência da rotulagem [D3] continua em
+  `resultado/v1914/ROTULAGEM_CONFERENCIA.md`, não aqui.
+
+---
+
 ## v1.9.30 — ORDEM DOS BULLETS POR PESO · BACKDROP no topo · PÔSTER SEM TEXTO
 
 Método: servidor estático local (`python3 -m http.server`, `frontend/`),

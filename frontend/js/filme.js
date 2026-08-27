@@ -162,7 +162,7 @@
   // ---------------------------------------------------------------------
   function render(f) {
     app.appendChild(header(f));                       // 1 ano+título, 2 chip
-    if (f.ficha) app.appendChild(fichaBlock(f.ficha));// 3 ficha
+    app.appendChild(fichaBlock(f.ficha || {}, f.reviews_url)); // 3 metadados
     app.appendChild(proporcaoBlock(f));               // 4 barra + nota da cota
     app.appendChild(detailDivider());                 // 5 linha arco-íris
     app.appendChild(sentimentGroupsBlock(f));         // 6 bullets por grupo
@@ -226,70 +226,150 @@
     // onde o pôster entrava (§3[E], item 1 da ordem publicada), e o par
     // segue como está. A BARRA não é tocada — nem posição, nem geometria,
     // nem animação de entrada (§3[E], v1.9.28).
+    // [v1.9.32] O BACKDROP DEIXA DE SER BLOCO FECHADO e passa a se DISSOLVER
+    // no fundo, com o par ano → título começando PARCIALMENTE SOBRE a
+    // imagem, dentro do fade, e terminando no fundo escuro. A transição
+    // entre obra visual e conteúdo editorial vira contínua, não um corte.
+    //
+    // A ESTRUTURA que isso exige: um contêiner `.film-hero` com a imagem e
+    // um bloco de texto que SOBE por cima dela (margem negativa). O texto
+    // precisa ser irmão da imagem e vir DEPOIS dela — daí o wrapper, que é a
+    // única mudança de árvore aqui. A ordem publicada (§3[E]) não muda: a
+    // imagem continua acima do par ano → título.
+    //
+    // O CONTRASTE É GARANTIDO POR CONSTRUÇÃO, não por sorte com a imagem —
+    // ver `.backdrop::after` em styles.css. O fade termina numa FAIXA
+    // 100% OPACA na cor do fundo da página, e o recuo do texto é
+    // exatamente a altura dessa faixa (`--hero-overlap`): o texto nunca
+    // pousa em cima de pixel de imagem, só sobre fundo já chapado. É o
+    // mesmo princípio do degradê da célula do mosaico (v1.9.29, título
+    // sobre pôster claro), com a diferença de que lá a base é preta e aqui
+    // é `--bg`, porque aqui o degradê tem de casar com a página.
+    var hero = document.createElement("div");
+    hero.className = "film-hero";
+
     if (window.ESPECTRO_POSTER && f.ficha) {
       var abertura = window.ESPECTRO_POSTER.montarBackdrop(f.ficha, {
         titulo: titleOf(f), ano: ano,
       });
+      // FALLBACK sem backdrop: o pôster contido volta, e com ele a
+      // composição ANTIGA — pôster fechado, texto INTEIRAMENTE abaixo dele.
+      // A sobreposição é do backdrop, não do pôster: um pôster 2:3 de 200px
+      // não tem faixa inferior larga onde um título de 3,6rem caiba, e
+      // deixar o título subir por cima dele cobriria o rosto do cartaz.
+      // `.film-hero--poster` é o que desliga o recuo negativo.
       if (!abertura) {
+        hero.classList.add("film-hero--poster");
         abertura = window.ESPECTRO_POSTER.montar(f.ficha, {
           uso: "ficha", titulo: titleOf(f), ano: ano, lazy: false,
         });
       }
-      el.appendChild(abertura);
+      hero.appendChild(abertura);
     }
 
-    if (meta) el.appendChild(meta);
-    el.appendChild(h1);
+    var texto = document.createElement("div");
+    texto.className = "film-hero__text";
+    if (meta) texto.appendChild(meta);
+    texto.appendChild(h1);
+    hero.appendChild(texto);
+    el.appendChild(hero);
 
-    if (f.reviews_url) {
-      var chip = document.createElement("a");
-      chip.className = "chip";
-      chip.href = f.reviews_url;
-      chip.target = "_blank";
-      chip.rel = "noopener noreferrer";
-      chip.innerHTML = "reviews no Letterboxd&nbsp;↗";
-      el.appendChild(chip);
-    }
     return el;
   }
 
   // --- ficha (dado novo v1.3.0) ---
-  function fichaBlock(ficha) {
+  //
+  // [v1.9.32] A SINOPSE SAIU, e o card que a continha saiu com ela.
+  // DECISÃO FINAL do dono do projeto. Não é ocultar nem colapsar: o bloco
+  // não existe mais na página. O que sobrevive é a LINHA DE METADADOS,
+  // agora solta — sem fundo, sem borda, sem padding de card.
+  //
+  // A CONSEQUÊNCIA PREVISTA, registrada aqui e em SPEC §3[E] porque é ela
+  // que a decisão custa: o público-alvo é quem AINDA NÃO ASSISTIU, e a
+  // sinopse era o único elemento da página que dizia DO QUE O FILME TRATA.
+  // Sem ela os bullets chegam sem premissa onde se apoiar — "o ritmo
+  // arrasta" pressupõe saber o que arrasta. O custo é baixo nos 35 de hoje
+  // (filmes conhecidos, backdrop expressivo) e CRESCENTE na expansão, com
+  // filmes obscuros e estrangeiros em que ninguém traz contexto de casa.
+  //
+  // A ATRIBUIÇÃO AO TMDB NÃO É AFETADA e continua obrigatória: esta linha
+  // (diretor, gêneros, duração) vem toda do TMDB, e por isso o "fonte
+  // TMDB" continua nela, junto do aviso no rodapé de todas as páginas e da
+  // página de créditos (§3[E], "ATRIBUIÇÃO AO TMDB"). Tirar a sinopse
+  // reduz o que se usa da API; não reduz em nada o que se deve a ela.
+  function fichaBlock(ficha, reviewsUrl) {
     var el = document.createElement("section");
     el.className = "ficha";
     el.setAttribute("aria-label", "Ficha técnica do filme");
 
-    if (ficha.sinopse_oficial) {
-      var syn = document.createElement("p");
-      syn.className = "ficha__synopsis";
-      syn.textContent = ficha.sinopse_oficial;
-      el.appendChild(syn);
-    }
-
+    // O DIRETOR EM CAIXA ALTA E SEM O PREFIXO "dir." — o esboço do dono
+    // abre a linha pelo nome, e o prefixo era uma muleta que só existia
+    // porque o nome vinha em caixa normal no meio de outros dados. A caixa
+    // alta é do CSS (`.ficha__dir`), NUNCA do dado: `toUpperCase()` em JS
+    // quebraria a busca por texto e o que o leitor de tela anuncia.
     var parts = [];
-    if (ficha.diretor) parts.push("dir. " + ficha.diretor);
     if (ficha.generos && ficha.generos.length) parts.push(ficha.generos.join(", "));
     if (ficha.duracao_min) parts.push(ficha.duracao_min + " min");
-    parts.push("fonte TMDB");
+    // "fonte TMDB" só quando há dado do TMDB na linha. Num filme sem ficha
+    // (`teste-degradado`, e qualquer filme cuja busca falhe — §3[F], a
+    // ficha é aditiva e a ausência é estado válido) a linha inteira não
+    // existe, e creditar uma fonte da qual não veio nada seria falso.
+    var temTmdb = !!(ficha.diretor || parts.length);
+    if (temTmdb) parts.push("fonte TMDB");
 
-    // [v1.9.26] A linha de metadados passou de monoespaçada em caixa alta
-    // para SANS, caixa normal — decisão FINAL do dono do projeto, depois
-    // de comparar com a variante "Inter" auto-hospedada. O pedido original
-    // era "a fonte que a Apple usa": a pilha de sistema (`--sans-ui`)
-    // entrega a San Francisco de verdade em Mac e iPhone porque usa a
-    // fonte JÁ INSTALADA no aparelho — o motivo de a SF Pro não poder ser
-    // embutida como arquivo está em `fonts/LEIA-ME.md`. O CONTEÚDO da
-    // linha não muda; a sinopse acima não é tocada.
-    var line = document.createElement("p");
-    line.className = "ficha__line";
-    line.innerHTML = parts.map(esc).join('<span class="dot">·</span>');
-    el.appendChild(line);
+    // [v1.9.26] A linha de metadados é SANS, caixa normal — decisão FINAL
+    // do dono do projeto, depois de comparar com a variante "Inter"
+    // auto-hospedada. O pedido original era "a fonte que a Apple usa": a
+    // pilha de sistema (`--sans-ui`) entrega a San Francisco de verdade em
+    // Mac e iPhone porque usa a fonte JÁ INSTALADA no aparelho — o motivo
+    // de a SF Pro não poder ser embutida está em `fonts/LEIA-ME.md`.
+    //
+    // [v1.9.32] Essa decisão CONTINUA VALENDO para gêneros, duração e
+    // fonte. A caixa alta nova é só do NOME DO DIRETOR, que abre a linha —
+    // não é uma volta ao mono-caixa-alta que a v1.9.26 removeu.
+    if (temTmdb) {
+      var line = document.createElement("p");
+      line.className = "ficha__line";
+      var html = "";
+      if (ficha.diretor) {
+        html += '<span class="ficha__dir">' + esc(ficha.diretor) + "</span>";
+        if (parts.length) html += '<span class="dot">·</span>';
+      }
+      html += parts.map(esc).join('<span class="dot">·</span>');
+      line.innerHTML = html;
+      el.appendChild(line);
+    }
 
-    if (ficha.sinopse_fallback_en) {
-      var fb = document.createElement("p");
-      fb.className = "ficha__fallback";
-      fb.textContent = "⚠ Sinopse oficial em pt-BR indisponível — exibindo a versão em inglês.";
-      el.appendChild(fb);
+    // [v1.9.32] O AVISO DE SINOPSE EM INGLÊS SAI JUNTO COM A SINOPSE. Ele
+    // existia para não deixar o leitor achar que estava lendo pt-BR quando
+    // não estava (§3[F], fallback de sinopse); sem sinopse na tela, ele
+    // passaria a avisar sobre um texto que não está mais ali. O campo
+    // `sinopse_fallback_en` continua no JSON, intocado, e volta a ter uso
+    // no dia em que a sinopse voltar.
+
+    // [v1.9.32] O LINK PARA O LETTERBOXD desce do topo para cá e DEIXA DE
+    // SER PILL: mono pequena, sem caixa, sem borda, sem fundo — a mesma
+    // direção do disclosure APROFUNDAR na v1.9.26 (parte do bloco
+    // editorial, não componente externo pousado nele).
+    //
+    // O QUE NÃO MUDA, porque é semântica e não estilo: continua `<a>` de
+    // verdade, com `target="_blank"` + `rel="noopener noreferrer"`, foco
+    // visível (`:focus-visible` em styles.css) e área de toque confortável
+    // no mobile — o padding vertical existe para isso, mesmo sem caixa
+    // desenhada.
+    //
+    // O TEXTO CONTINUA "reviews no Letterboxd", e não só "letterboxd": é o
+    // nome acessível do link, e o que ele promete é a LISTA DE REVIEWS
+    // daquele filme, não a home do site. Trocar seria a única perda de
+    // informação de uma entrega que só pedia tratamento visual.
+    if (reviewsUrl) {
+      var link = document.createElement("a");
+      link.className = "reviews-link";
+      link.href = reviewsUrl;
+      link.target = "_blank";
+      link.rel = "noopener noreferrer";
+      link.innerHTML = "reviews no Letterboxd&nbsp;↗";
+      el.appendChild(link);
     }
     return el;
   }
@@ -367,6 +447,12 @@
   function proporcaoBlock(f) {
     var el = document.createElement("section");
     el.className = "proportion";
+
+    // [v1.9.32] RECEPÇÃO — a barra passa a ser o primeiro grande bloco
+    // NOMEADO da página. O rótulo entra ACIMA da barra; a barra em si não
+    // é tocada (geometria, ordem, callout e animação de entrada da v1.9.28
+    // ficam exatamente como estão).
+    el.appendChild(sectionLabel("RECEPÇÃO"));
 
     var fatias = fatiasDeProporcao(f);
     if (fatias) {
@@ -722,10 +808,33 @@
   // bullets vêm direto), e o disclaimer migrou para `notaDaCota`, embaixo
   // da barra. Sobra a linha arco-íris, que continua marcando a passagem do
   // topo para a análise — só mudou de posição na página.
+  // [v1.9.32] ETIQUETAS DE SEÇÃO — a página ganha estrutura nomeada.
+  // Tipografia de rótulo mono já existente no projeto (a mesma família,
+  // corpo e tracking que `.film-header__meta` e a legenda da barra usam);
+  // nenhuma família nova entra por causa disto.
+  function sectionLabel(texto) {
+    var el = document.createElement("p");
+    el.className = "section-label";
+    el.textContent = texto;
+    return el;
+  }
+
+  // [v1.9.32] "EM DETALHE · TEMA A TEMA" ESTÁ VOLTANDO, e a reversão é
+  // consciente — ver SPEC §3[E]. Ele foi REMOVIDO na v1.9.26 com uma razão
+  // específica: com o veredito descendo para o rodapé, não havia mais um
+  // resumo ANTES dos bullets do qual separar "o detalhe", e o rótulo virou
+  // uma promessa sem contraparte. A razão de agora é OUTRA, e é o que
+  // torna isto reversão e não vaivém: a página passou a ter seções
+  // NOMEADAS (RECEPÇÃO abre o topo), e numa página seccionada o bloco de
+  // bullets é o único que ficaria anônimo. Além disso a SINOPSE saiu, e
+  // com ela o último texto corrido antes dos bullets — o leitor chega ali
+  // vindo direto da barra, e o rótulo é o que diz que a régua mudou de
+  // "peso de cada grupo" para "o que cada grupo disse".
   function detailDivider() {
     var el = document.createElement("div");
     el.className = "detail-divider";
     el.innerHTML = '<div class="spectrum-line" aria-hidden="true"></div>';
+    el.appendChild(sectionLabel("EM DETALHE · TEMA A TEMA"));
     return el;
   }
 

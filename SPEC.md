@@ -5508,6 +5508,26 @@ Falha em qualquer uma → **1 retentativa** com reforço (listando os trechos pe
    8. narrativa completa, colapsada
    9. micro-pesquisa
 
+   **(v1.9.32) A ORDEM ATUALIZADA.** A lista acima é a da v1.9.26 e fica
+   como registro histórico. A publicada hoje:
+
+   1. **BACKDROP** dissolvido no fundo (v1.9.30, refeito na v1.9.32), com
+      **ano + título começando SOBRE a imagem**, dentro do fade
+   2. linha de metadados — **DIRETOR EM CAIXA ALTA** · gêneros · duração ·
+      fonte TMDB, solta, sem card (a **SINOPSE SAIU** na v1.9.32)
+   3. "reviews no Letterboxd ↗", **link secundário** (deixou de ser pill)
+   4. **RECEPÇÃO** (etiqueta de seção) + **BARRA DE PROPORÇÃO** + callout de
+      percentual + legenda HATERS · MIXED · FANS
+   5. linha arco-íris + **EM DETALHE · TEMA A TEMA** (etiqueta de seção,
+      de volta — ver abaixo)
+   6. bullets por sentimento, **ordenados por peso** (v1.9.30)
+   7. **VEREDITO** (§3[V]) — inalterado
+   8. narrativa completa, colapsada — inalterada
+   9. micro-pesquisa — inalterada
+
+   Os itens 7, 8 e 9 não foram tocados pela v1.9.32 e continuam exatamente
+   onde estavam; o rodapé com a atribuição ao TMDB também.
+
    **A BARRA DE PROPORÇÃO** é a divisão dos três grupos numa faixa
    **contínua**, largura proporcional ao peso real, na ordem de leitura de
    sempre. Ela lê `share_real` — a MESMA fonte que os cabeçalhos de grupo
@@ -6269,6 +6289,245 @@ Falha em qualquer uma → **1 retentativa** com reforço (listando os trechos pe
    quadro 16:9 mediria 335px de largura numa tela de 375 e leria como
    miniatura.
 
+   #### O TOPO EDITORIAL (v1.9.32) — a sinopse sai, o backdrop dissolve, o título invade
+
+   Cinco mudanças de uma vez no topo da página do filme, todas decisão do
+   dono do projeto. A barra de proporção **não foi tocada** — nem
+   geometria, nem ordem, nem callout, nem a regra de colisão, nem a
+   animação de entrada da v1.9.28.
+
+   ##### A SINOPSE SAI — decisão final, e o que ela custa
+
+   O bloco de sinopse e o **card escuro** que o continha foram **removidos**
+   da página. Não é ocultar nem colapsar: não existem mais. A **linha de
+   metadados sobrevive**, agora **solta** — sem fundo, sem borda, sem
+   padding de caixa —, porque com uma linha só um card desenha uma caixa
+   sem conteúdo para conter.
+
+   **A CONSEQUÊNCIA PREVISTA, escrita porque é ela que a decisão paga.** O
+   público-alvo declarado do produto (§1) é **quem ainda NÃO assistiu**, e
+   a sinopse era **o único elemento da página inteira que dizia do que o
+   filme trata**. Sem ela, os bullets chegam **sem premissa onde se
+   apoiar**: "o ritmo arrasta" pressupõe saber o que arrasta, "a atuação
+   sustenta" pressupõe saber quem atua. O produto passa a assumir que o
+   leitor **já sabe qual é o filme** antes de chegar.
+
+   **O custo é BAIXO HOJE e CRESCENTE depois, e essa assimetria é o ponto.**
+   Nos 35 do catálogo atual ele quase não morde: são filmes conhecidos, e o
+   backdrop faz muito do trabalho de situar (o quadro de `dune-2021` diz
+   "deserto, ficção científica" sem uma palavra). Na expansão — filmes
+   obscuros, estrangeiros, sem circulação no Brasil — nada disso vale: nem
+   o leitor traz contexto de casa, nem o backdrop de um drama iraniano
+   comunica premissa. **A dívida cresce com o catálogo, e não aparece
+   enquanto o catálogo for o de hoje.** Decisão consciente do dono, tomada
+   com isto na mesa.
+
+   **A ATRIBUIÇÃO AO TMDB NÃO É AFETADA e continua integralmente em vigor.**
+   Conferido depois da mudança: a linha de metadados (diretor, gêneros,
+   duração) **continua vindo do TMDB**, e por isso continua carregando
+   **"fonte TMDB"**; o aviso exigido pelos termos segue no **rodapé de
+   `index.html`, `filme.html` e `creditos.html`**, e a página de créditos
+   segue no ar e linkada. Usar menos da API não reduz em nada o que se deve
+   a ela. O que saiu junto com a sinopse foi só o **aviso de sinopse em
+   inglês** (`sinopse_fallback_en`) — ele avisava sobre um texto que não
+   está mais na tela; o campo continua no JSON, intocado.
+
+   **O DIRETOR EM CAIXA ALTA, sem o prefixo "dir."** — o esboço do dono abre
+   a linha pelo nome, e o prefixo era muleta de quando o nome vinha em caixa
+   normal no meio de outros dados. **A caixa alta é do CSS
+   (`text-transform`), nunca do dado:** `toUpperCase()` em JS mudaria o que
+   o leitor de tela anuncia e o que uma busca por texto encontra. **Só o
+   nome do diretor** muda de caixa — gêneros, duração e fonte continuam em
+   sans caixa normal, como a v1.9.26 decidiu; isto **não** é uma volta ao
+   mono-caixa-alta que aquela versão removeu. Conferido com o nome mais
+   longo do catálogo (`FRANCIS FORD COPPOLA`, 20 caracteres): cabe em uma
+   linha no desktop e quebra limpo no mobile, sem hifenização nem estouro.
+
+   ##### O BACKDROP DISSOLVE, e o título INVADE — com piso de contraste
+
+   O backdrop deixa de ser bloco fechado: **sem `border-radius`, sem margem
+   inferior**, terminando dissolvido no fundo da página. O par ano → título
+   **começa SOBRE a imagem**, dentro do fade, e **termina no fundo escuro** —
+   a passagem de obra visual para conteúdo editorial vira contínua, não um
+   corte.
+
+   **O REQUISITO DURO: contraste garantido em QUALQUER backdrop.** Os
+   backdrops variam muito no brilho da faixa inferior, e um degradê que só
+   "escurece um pouco" entrega contraste diferente por filme — os que
+   ficarem bons ficam por sorte.
+
+   **A CONSTRUÇÃO — a mesma ideia do degradê da célula do mosaico (v1.9.29,
+   título legível sobre pôster claro), adaptada.** O degradê chega a **100%
+   opaco antes do fim da imagem**, formando uma **faixa chapada** na base; o
+   recuo negativo do texto é **menor que essa faixa**. O texto, portanto,
+   **nunca pousa sobre pixel de imagem** — só sobre `--bg` já chapado.
+
+   | | fade | faixa 100% opaca | recuo do texto | folga |
+   |---|---|---|---|---|
+   | desktop | 232px | 68px | 58px | 10px |
+   | ≤640px | 156px | 58px | 52px | 6px |
+
+   **A CONSEQUÊNCIA é o que torna o requisito verificável: o contraste vira
+   INDEPENDENTE DA IMAGEM.** Não é "medimos os 34 e deu bom" — é que a
+   imagem **não entra na conta**.
+
+   **Duas diferenças para o mosaico, ambas deliberadas.** (a) Lá a base do
+   degradê é **preta** (a célula é um card sobre fundo escuro e o preto some
+   nela); aqui é **`--bg`**, porque o degradê tem de casar exatamente com o
+   fundo da página — qualquer outra cor deixaria emenda visível onde a
+   imagem acaba. (b) As paradas são em **px, não em %**: a faixa chapada
+   precisa ter a mesma altura que o recuo, que é em px; em % ela mudaria de
+   altura com a proporção do backdrop (de 3840×2160 a 3500×1969 no
+   catálogo) e o casamento quebraria sem sintoma.
+
+   **MEDIDO — composição analítica sobre os pixels reais dos 34 backdrops**
+   (imagem `w1280` baixada, luminância relativa WCAG, composição
+   `img×(1−α) + bg×α` com o α exato de cada parada do degradê, pior pixel
+   de cada linha que o texto ocupa):
+
+   | | título (`--text`) | ano (`--text-mute`) |
+   |---|---|---|
+   | **fade da v1.9.32, nos 34** | **17,15:1** | **4,56:1** |
+   | texto sobre o fundo puro `#0b0c10` | 17,15:1 | 4,56:1 |
+   | fade da v1.9.30, se o texto invadisse (pior caso) | 4,92:1 | **1,31:1** |
+
+   Em **34 de 34** o fundo sob o texto compõe **exatamente `#0b0c10`** —
+   idêntico, dígito a dígito, ao fundo da página. **Nenhum filme fica
+   abaixo do piso**, e não há caso a tratar. O ano a 4,56:1 passa o AA de
+   texto normal (4,5:1) e **é o mesmo valor que ele já tinha** em qualquer
+   outro ponto do site: não há regressão, e o teto dele é uma dívida
+   pré-existente da paleta, não desta versão.
+
+   **O PIOR BACKDROP DO CATÁLOGO NÃO É O QUE SE SUPUNHA, e vale registrar.**
+   A hipótese de trabalho era `dune-2021` (céu claro embaixo). Medindo a
+   luminância média da faixa inferior dos 34, `dune-2021` é o **12º**
+   (0,098); os dois piores são **`barbie` (0,370)** e **`the-hateful-eight`
+   (0,351)**. Com o fade antigo, `barbie` daria **1,33:1** no ano — texto
+   praticamente ilegível. Com o novo, 4,56:1 como todos os outros.
+
+   ##### O LINK DO LETTERBOXD, secundário
+
+   Deixa de ser pill: **sem caixa, sem borda, sem fundo** — mono pequena,
+   na mesma direção do disclosure APROFUNDAR da v1.9.26 (parte do bloco
+   editorial, não componente pousado nele). Desce do topo para logo abaixo
+   da linha de metadados.
+
+   **O que NÃO foi sacrificado junto com a caixa:** continua `<a>` de
+   verdade, `target="_blank"` + `rel="noopener noreferrer"`, **foco visível**
+   (`:focus-visible` com contorno de 2px) e **área de toque de 46px medidos
+   no mobile** (≥ 44px recomendado) — o padding vertical continua existindo,
+   invisível mas clicável. Um link discreto que fica difícil de acertar com
+   o polegar seria downgrade de acessibilidade disfarçado de refinamento.
+
+   **O TEXTO CONTINUA "reviews no Letterboxd", e não só "letterboxd".** O
+   esboço do dono escreve a forma curta, e ela foi mantida longa de
+   propósito: é o **nome acessível** do link, e o que ele promete é a LISTA
+   DE REVIEWS daquele filme, não a home do site. Era a única perda de
+   informação de uma entrega que pediu tratamento visual — decisão de uma
+   palavra, trivial de reverter se o dono quiser a forma curta.
+
+   ##### SEÇÕES NOMEADAS, e o rótulo que VOLTA
+
+   Duas etiquetas, na tipografia mono de rótulo que o projeto já usa
+   (mesma família, corpo e tracking; nenhuma família nova entra):
+
+   - **RECEPÇÃO**, antes da barra — que passa a ser o primeiro grande bloco
+     **nomeado** da página;
+   - **EM DETALHE · TEMA A TEMA**, antes dos bullets.
+
+   **"EM DETALHE · TEMA A TEMA" ESTÁ VOLTANDO, e a reversão é consciente.**
+   Ele foi **removido na v1.9.26**, e a razão de lá está registrada acima:
+   com o veredito descendo para o rodapé, não havia mais um resumo ANTES
+   dos bullets do qual separar "o detalhe", e o rótulo virou promessa sem
+   contraparte. **A razão de agora é outra**, e é isso que faz disto
+   reversão e não vaivém: (a) a página passou a ter **seções nomeadas**, e
+   numa página seccionada o bloco de bullets seria o único anônimo; (b) a
+   **sinopse saiu**, e com ela o último texto corrido antes dos bullets — o
+   leitor chega ali vindo direto da barra, e o rótulo é o que avisa que a
+   régua mudou de "peso de cada grupo" para "o que cada grupo disse".
+
+   A legenda `HATERS · MIXED · FANS` fica **abaixo dos percentuais**, que já
+   era a ordem do DOM desde a v1.9.27 — nada mudou nela.
+
+   ##### A REDUNDÂNCIA DE PESO — percorrida e MEDIDA, não corrigida
+
+   A pergunta levantada foi se peso aparece em três lugares (callout,
+   legenda, cabeçalhos de grupo). **Medido: são DOIS, não três.** A legenda
+   carrega **nome e cor**, nenhum número — ela é chave de leitura, não
+   afirmação de peso. Os dois que afirmam peso com número são o **callout**
+   (`~2% ~7% ~91%`, ancorado nas fatias) e o **cabeçalho de cada grupo**
+   (`~91% DAS NOTAS`).
+
+   **MEDIDO em `the-invite-2026`: 134px** entre o callout e o primeiro
+   cabeçalho de grupo, e **os dois cabem na mesma tela** — tanto em
+   1280×900 quanto em 375×812. Ou seja: o leitor vê `~91%` e, um terço de
+   tela abaixo, `~91% DAS NOTAS`. **Isso lê como repetição, e o relatório
+   diz isso em vez de maquiar.**
+
+   **Duas observações que qualificam o incômodo, e nenhuma o desfaz.**
+   (a) A distância **aumentou**, não diminuiu: na v1.9.31 publicada eram
+   **65px** entre a legenda e o primeiro cabeçalho, contra **98px** agora —
+   a etiqueta EM DETALHE entrou no meio e separou os dois blocos. (b) O
+   cabeçalho é justamente o sinal que a v1.9.27 decidiu **preservar** ao
+   remover o disclaimer da cota, e a condição que amarrou aquela remoção
+   continua valendo: *"se o percentual do cabeçalho algum dia sair da tela,
+   esta frase tem de voltar"*. **Nada foi mexido** — a entrega pedia
+   percorrer e reportar, e é o que está aqui.
+
+   ##### ANIMAÇÃO DE ENTRADA DE ANO E TÍTULO — a coreografia, decidida
+
+   Segunda animação de entrada da página, ao lado da sequência da barra
+   (v1.9.28). **Decisão: rodam EM PARALELO, as duas a partir de 0ms**, e a
+   do título é muito mais curta.
+
+   | animação | início | duração | fim |
+   |---|---|---|---|
+   | ano (`hero-in`) | 0ms | 430ms | 430ms |
+   | título (`hero-in`) | 70ms | 430ms | **500ms** |
+   | barra · fronteiras | 0ms | 650ms | 650ms |
+   | barra · ignição dos 3 números | 650ms | 260ms × 3, escalonados 55ms | **1020ms** |
+
+   **Total da página: 1020ms — exatamente o da v1.9.28. O título não
+   atrasou a barra em um único milissegundo.** Verificado pela Web
+   Animations API: 13 animações na página (as **10 da barra, intactas**, as
+   2 novas do herói e o `poster-in` de 240ms da imagem, que já existia).
+
+   **POR QUE NÃO ENCADEADAS.** Encadear (título, depois barra) somaria
+   ~500ms de tempo morto antes de o conteúdo começar a se mover, e **a
+   barra é o conteúdo; o título é a moldura**. A página abriria com meio
+   segundo em que nada do que ela veio dizer está acontecendo.
+
+   **POR QUE O TÍTULO AINDA ASSIM "VEM PRIMEIRO".** Ele vem primeiro na
+   ordem em que **termina**, não na em que começa: a moldura se assenta e
+   fica parada enquanto o conteúdo ainda resolve. O olho pousa no que parou
+   de se mexer. O escalonamento ano → título (70ms) é a única sequência
+   interna, e é de leitura: o ano é metadado, o título é o assunto.
+
+   **MESMA DISCIPLINA DA BARRA:** `transform` + `opacity` apenas (as duas
+   propriedades que compõem sem relayout), **10px** de deslocamento,
+   `cubic-bezier(0.22, 0.68, 0.28, 1)` — desaceleração pura, sem bounce,
+   sem spring, sem overshoot.
+
+   **`prefers-reduced-motion`: nenhuma das duas roda, estado final
+   imediato.** Mesma construção da v1.9.27/v1.9.28 — **o estado base do CSS
+   É o final**, e o estado INICIAL (`opacity: 0` + `animation`) vive inteiro
+   dentro de `@media (prefers-reduced-motion: no-preference)`. **Verificado
+   no CSSOM, não no arquivo:** varrendo `document.styleSheets`, a regra com
+   `opacity: 0` para `.film-hero__text` aparece **1 vez dentro** do bloco
+   `no-preference` e **0 vezes fora dele**. Se ela morasse fora, `reduce`
+   deixaria o título invisível para sempre.
+
+   ##### O FALLBACK SEM BACKDROP não herda a sobreposição
+
+   Filme sem backdrop continua caindo no **pôster contido** (200px), e com
+   ele volta a **composição antiga**: texto inteiramente ABAIXO da imagem
+   (`.film-hero--poster` zera o recuo negativo). Um pôster 2:3 de 200px não
+   tem faixa inferior larga o bastante para um título de 3,6rem, e deixar o
+   título subir cobriria o cartaz. Conferido em `talk-to-me-2022`, o único
+   do catálogo nessa condição: `margin-top: 0px`, texto começando 18px
+   abaixo da base do pôster, estrutura nova (metadados soltos, link
+   secundário, RECEPÇÃO, EM DETALHE) toda funcionando.
+
    #### O PÔSTER SEM TEXTO — DECISÃO FINAL: a arte limpa venceu (v1.9.30, decidido v1.9.31)
 
    **A queixa do dono:** os pôsteres são poluídos — bloco de créditos,
@@ -6533,6 +6792,17 @@ As três incógnitas abaixo foram resolvidas na Fase 1; os achados já estão in
 ---
 
 ## Changelog
+- **v1.9.32** (2026-08-27) — **O TOPO VIRA EDITORIAL: a sinopse sai, o backdrop se dissolve com o título invadindo a imagem, o link do Letterboxd vira secundário, a página ganha seções nomeadas e o par ano → título ganha animação de entrada.** Só frontend: **nenhum arquivo de `resultado/` no diff**, pipeline intocado. Suíte Python: **1525 passando**, inalterada.
+  - **(1) A SINOPSE SAI, e o card com ela** — decisão final do dono. A linha de metadados sobrevive **solta**, sem card. **O custo, registrado e não maquiado:** o público-alvo é quem ainda NÃO assistiu, e a sinopse era o único elemento da página que dizia **do que o filme trata** — sem ela os bullets chegam sem premissa onde se apoiar. **Baixo hoje** (35 filmes conhecidos, backdrop expressivo) e **crescente na expansão** (obscuros, estrangeiros), que é a parte que não aparece enquanto o catálogo for o de hoje. §3[E].
+  - **(2) ATRIBUIÇÃO CONFERIDA e intacta.** A linha de metadados continua vindo do TMDB e continua com "fonte TMDB"; o aviso exigido segue no rodapé das três páginas e `creditos.html` segue no ar. Saiu junto só o aviso de sinopse em inglês — avisava sobre um texto que não está mais na tela; o campo `sinopse_fallback_en` continua no JSON.
+  - **(3) DIRETOR EM CAIXA ALTA, sem "dir."** — caixa alta pelo CSS, **nunca pelo dado** (`toUpperCase()` mudaria o que o leitor de tela anuncia). Só o nome; gêneros/duração/fonte continuam em sans caixa normal, como a v1.9.26 decidiu. Conferido no nome mais longo do catálogo (`FRANCIS FORD COPPOLA`).
+  - **(4) BACKDROP DISSOLVIDO + TÍTULO INVADINDO, com PISO DE CONTRASTE por construção.** O degradê chega a **100% opaco antes do fim da imagem** e o recuo do texto é menor que essa faixa chapada (desktop 68px de faixa / 58px de recuo; mobile 58/52). **O texto nunca pousa sobre pixel de imagem** — e por isso o contraste é **independente da imagem**, não "deu bom nos 34".
+  - **(5) MEDIDO nos 34 backdrops** (composição analítica sobre os pixels reais, α exato do degradê, pior pixel de cada linha): fundo sob o texto compõe **exatamente `#0b0c10` em 34 de 34** → título **17,15:1**, ano **4,56:1**, idênticos ao texto sobre o fundo da página. **Nenhum filme abaixo do piso.** Com o fade da v1.9.30, o pior caso daria **1,31:1** no ano. **O pior backdrop não é o suposto:** `dune-2021` é o 12º em brilho da faixa inferior; os piores são `barbie` e `the-hateful-eight`.
+  - **(6) LINK DO LETTERBOXD SECUNDÁRIO** — sem caixa, sem borda, sem fundo, mono pequena, na direção do disclosure APROFUNDAR. Mantidos: `<a>` real, `rel="noopener noreferrer"`, foco visível e **46px medidos de alvo de toque** no mobile. **O texto continua "reviews no Letterboxd"** e não a forma curta do esboço: é o nome acessível, e o link promete a lista de reviews, não a home do site.
+  - **(7) SEÇÕES NOMEADAS: RECEPÇÃO e EM DETALHE · TEMA A TEMA.** O segundo **está voltando** — removido na v1.9.26 porque, com o veredito no rodapé, não havia resumo do qual separar "o detalhe"; volta por **razão diferente**: a página passou a ter seções nomeadas e a sinopse saiu, então o bloco de bullets seria o único anônimo e o leitor chega nele direto da barra. Reversão consciente, não vaivém.
+  - **(8) REDUNDÂNCIA DE PESO — percorrida, MEDIDA, NÃO corrigida.** São **dois** lugares com número, não três: callout e cabeçalho de grupo (a legenda tem nome e cor, nenhum número). **134px** entre eles, **os dois na mesma tela** em 1280×900 e em 375×812 — lê como repetição, e o relatório diz isso. A distância **aumentou** (de 65px para 98px entre legenda e cabeçalho: a etiqueta EM DETALHE entrou no meio), e a condição da v1.9.27 que preserva o percentual do cabeçalho continua valendo. Nada mexido.
+  - **(9) ANIMAÇÃO DE ANO E TÍTULO — em PARALELO com a da barra.** Ano 0→430ms, título 70→500ms, barra 0→1020ms. **Total da página: 1020ms, o mesmo da v1.9.28 — o título não atrasou a barra em 1ms**; 13 animações medidas (as 10 da barra intactas + 2 novas + o `poster-in` que já existia). Encadear somaria ~500ms de tempo morto antes de o **conteúdo** se mover, e a barra é o conteúdo. O título "vem primeiro" na ordem em que **termina**. `prefers-reduced-motion` verificado **no CSSOM**: o estado inicial aparece 1× dentro de `no-preference` e 0× fora.
+  - **(10) FALLBACK SEM BACKDROP não herda a sobreposição** — `.film-hero--poster` zera o recuo e o texto volta inteiramente abaixo do pôster contido. Conferido em `talk-to-me-2022`.
 - **v1.9.31** (2026-08-27) — **DECISÃO FINAL do dono: o pôster SEM TEXTO vence e vira o único caminho na home. O mecanismo `?poster=texto`/`?poster=limpo` sai do código**, seguindo a mesma convenção das duas decisões anteriores (barra contínua venceu a divergente; pilha de sistema venceu a Inter). O parâmetro não existe mais em `poster.js`/`home.js`; uma URL antiga com `?poster=` não quebra nada, só o ignora. **O fallback continua** — filme sem arte sem texto usa o pôster com texto —, e não é resquício do switch: é a mesma regra de ausência que já rege backdrop e ficha desde a v1.3.0. Página do filme (backdrop) não foi tocada — já era definitiva desde a v1.9.30. Merge de `preview/posteres` em `main`, sem branch de preview.
 - **v1.9.30** (2026-08-27) — **A ordem dos bullets passa a seguir o PESO; o topo da página do filme troca o pôster por um BACKDROP (exceção explícita ao anti-spoiler do §0, decidida pelo dono); e o pôster SEM TEXTO entra como variante testável na home.** Suíte Python: **1525 passando** (1512 da baseline + 13 novos em `test_ficha.py`), nenhum teste anterior alterado. `SPEC_VERSION` continua em 1.9.25, pelo mesmo registro da v1.9.26–v1.9.29.
   - **(1) ORDEM DOS BLOCOS EM DESTAQUE — por `share_real`, do maior para o menor.** `the-godfather` (2/5/93) abria a leitura por HATERS, 2% das notas. A regra é **função do dado, não do sentimento**: em `cats-2019` (86/7/7) o primeiro bloco continua sendo HATERS. A ordem fixa anterior não era neutra — era **constante**, que é outra coisa. **MEDIDO: a ordem mudou em 33 dos 35**; os 2 que ficaram iguais são os dois de recepção negativa dominante. Empate desempata pela ordem canônica, explicitamente no código. Vale nos dois leiautes (o DOM é a ordem visual; no mobile, FANS em y=1203 e HATERS em y=2166 em `the-godfather` a 375px). **Neutralidade de tratamento intacta:** mesmo leiaute, mesmo peso tipográfico, 6 e 6 bullets, mesmas cores — só a POSIÇÃO muda. §0 e §3[E].
