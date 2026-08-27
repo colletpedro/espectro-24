@@ -85,6 +85,32 @@ corrigida na v1.9.1).
 | 26 | **Mobile (375px)** — a grade vira coluna única, o cabeçalho de colunas some, as 3 células de um eixo empilham em y distintos e cada uma exibe o nome do grupo via `::before` na cor do grupo; **sem overflow horizontal** | ✅ |
 | 27 | **Console limpo** — home, os 3 filmes e o degradado carregam com 0 erro (verificado em aba nova; uma regressão de `var` içado — `MESES` usado antes da atribuição — foi achada e corrigida por este teste) | ✅ |
 
+## v1.9.33 — acoplamento do piso de contraste fechado por construção
+
+Método: mesmo servidor local, mesma inspeção de CSSOM/geometria da v1.9.32.
+
+| # | Cenário | MEDIDO / VISTO | ok |
+|---|---------|----------------|----|
+| 134 | **Regressão zero, desktop** — `the-invite-2026`: 18,1px de título sobre a imagem, gradiente resolvendo em `68.06px/123.984px/152.028px/164px/232px` (byte-idêntico à v1.9.32, agora derivado de `--fade-h`/`--fade-solid`) | MEDIDO | ✅ |
+| 135 | **Regressão zero, mobile** — `barbie` a 375px: `--fade-h:156px`, `--fade-solid:58px`, `--fade-folga:6px`, `margin-top:-52px`, **12,1px** de título sobre a imagem — os mesmos números da v1.9.32 | MEDIDO | ✅ |
+| 136 | **A invariante segura sob tensão** — sobrescrevendo `--fade-solid` para `20px` em runtime, sem tocar em mais nada: `--hero-overlap` recalculou sozinho para `calc(20px - 6px)` = `14px`. A desigualdade `recuo < faixa` se manteve automaticamente | MEDIDO | ✅ |
+| 137 | **O breakpoint mobile não redeclara o gradiente** — a media query `≤640px` só sobrescreve `--fade-h`/`--fade-solid`/`--fade-folga`; `background`/`height` de `.backdrop::after` continuam as mesmas regras do desktop, resolvendo por `calc()` | MEDIDO | ✅ |
+| 138 | **Fallback sem backdrop intacto** — `talk-to-me-2022`: `.film-hero--poster`, `margin-top: 0px`, sem regressão | MEDIDO | ✅ |
+| 139 | **`the-hateful-eight` (2º pior backdrop) e demais páginas de filme** — sem erro de console, sem mudança visual perceptível em relação à v1.9.32 | MEDIDO + VISTO | ✅ |
+| 140 | **Suíte Python** — **1525 passando**, inalterada. **Nenhum arquivo de `resultado/` no diff** — a mudança é 100% CSS | MEDIDO | ✅ |
+
+## O que este teste NÃO cobre
+
+- A dívida de acoplamento anotada na v1.9.32 está **fechada** para o par
+  faixa/recuo; ela não cobre CSS futuro que venha a introduzir um terceiro
+  número relacionado ao piso de contraste sem passar pela mesma
+  derivação — a garantia é sobre o desenho atual, não uma prova geral.
+- Nenhum teste automatizado de frontend continua existindo.
+- A conferência da rotulagem [D3] continua em
+  `resultado/v1914/ROTULAGEM_CONFERENCIA.md`, não aqui.
+
+---
+
 ## v1.9.32 — TOPO EDITORIAL: sinopse fora, backdrop dissolvido, seções nomeadas
 
 Método: servidor estático local, Chromium do painel, **1280×900** (coluna de

@@ -399,68 +399,97 @@ a { color: inherit; }
   background: var(--bg-elev);
 }
 
-/* [v1.9.32] O FADE — e o PISO DE CONTRASTE, que é requisito duro.
+/* [v1.9.33] O FADE — e o PISO DE CONTRASTE, FECHADO POR CONSTRUÇÃO.
    ------------------------------------------------------------------
    O par ano → título começa SOBRE a imagem. Backdrops variam muito no
    brilho da faixa inferior: `the-invite-2026` é escuro ali e funcionaria
-   por sorte; `dune-2021` tem céu claro exatamente onde o título cai. Um
-   degradê que só "escurece um pouco" entrega contraste diferente por
-   filme, e o requisito é um PISO garantido em QUALQUER imagem.
+   por sorte; `barbie` e `the-hateful-eight` são os mais claros do
+   catálogo. Um degradê que só "escurece um pouco" entrega contraste
+   diferente por filme, e o requisito é um PISO garantido em QUALQUER
+   imagem.
 
-   A CONSTRUÇÃO, que é a mesma ideia do degradê da célula do mosaico
-   (v1.9.29 — título legível sobre pôster claro), adaptada: o degradê
-   chega a 100% OPACO antes do fim da imagem, formando uma FAIXA CHAPADA
-   de `--hero-overlap` de altura na base. O recuo negativo do texto é
-   exatamente essa altura, então o texto nunca pousa sobre pixel de
-   imagem — só sobre `--bg` já chapado.
+   A CONSTRUÇÃO: o degradê chega a 100% OPACO antes do fim da imagem,
+   formando uma FAIXA CHAPADA na base. O recuo negativo do texto tem de
+   ser MENOR que essa faixa — nunca igual, nunca maior —, senão uma fração
+   do texto pousa fora da região chapada, sobre pixel de imagem de verdade,
+   e o piso deixa de ser garantido.
 
-   A CONSEQUÊNCIA é o que torna o requisito verificável: o contraste do
-   título e do ano vira INDEPENDENTE DA IMAGEM, idêntico ao contraste dos
-   mesmos textos sobre o fundo da página em qualquer outro lugar do site.
-   Não é "medimos os 34 e deu bom"; é que a imagem não entra na conta.
+   [v1.9.32 → v1.9.33] ATÉ AQUI A FAIXA CHAPADA (68px) E O RECUO (58px)
+   ERAM DOIS NÚMEROS EM COMENTÁRIOS DIFERENTES, que só concordavam porque
+   alguém fez a conta uma vez e não errou. Nada no CSS impedia editar um
+   sem o outro — mudar a faixa para 40px sem tocar no recuo de 58px teria
+   revertido a garantia em SILÊNCIO, e o sintoma só apareceria como título
+   ilegível no próximo backdrop claro que entrasse no catálogo.
 
-   A diferença para o mosaico: lá a base do degradê é PRETA (a célula é um
-   card sobre fundo escuro e o preto some no card); aqui é `--bg`, porque
-   aqui o degradê tem de casar EXATAMENTE com o fundo da página — qualquer
-   outra cor deixaria uma emenda visível na altura em que a imagem acaba.
+   A CORREÇÃO, no mesmo espírito de `--k` na barra (uma propriedade
+   registrada, duas fronteiras como funções puras dela): **UMA variável é
+   a fonte, a outra é DERIVADA por `calc()`, e a desigualdade fica dentro
+   da própria expressão — não numa nota ao lado.**
 
-   As paradas são em PX, não em %, de propósito: a faixa chapada precisa
-   ter a mesma altura que o recuo do texto, e o recuo é em px. Em % ela
-   mudaria de altura com a proporção do backdrop (medido: de 3840×2160 a
-   3500×1969 no catálogo) e o casamento quebraria. */
+     --fade-solid   a faixa chapada. ÚNICO número que se ajusta ao gosto.
+     --fade-folga   folga fixa e sempre positiva (nunca um dial de
+                    ajuste fino — é o que garante a desigualdade).
+     --hero-overlap: calc(var(--fade-solid) - var(--fade-folga))
+
+   `--fade-folga` positiva é o que torna `--hero-overlap < --fade-solid`
+   uma PROPRIEDADE ARITMÉTICA da expressão, não uma coincidência entre
+   dois valores escolhidos à mão: subtrair um número positivo de
+   `--fade-solid` produz, por definição de subtração, algo menor que
+   `--fade-solid`. Mudar só `--fade-solid` (para dar mais ou menos
+   invasão do título) move o recuo JUNTO, na mesma direção, sem que a
+   desigualdade possa quebrar — o único jeito de quebrá-la seria zerar ou
+   negativar `--fade-folga`, e ela não é o dial que esta entrega mexe.
+
+   A CONSEQUÊNCIA CONTINUA A MESMA: o contraste do título e do ano vira
+   INDEPENDENTE DA IMAGEM, idêntico ao contraste dos mesmos textos sobre o
+   fundo da página em qualquer outro lugar do site — porque o texto nunca
+   pousa fora da faixa 100% opaca. Não é "medimos os 34 e deu bom"; é que
+   a imagem não entra na conta, e agora isso vale mesmo se `--fade-solid`
+   for retocado depois sem ninguém lembrar do recuo.
+
+   `--fade-h` (altura total do fade) e `--fade-solid` juntos definem ONDE
+   a opacidade chega a 100% (`--fade-opaco-em`, também `calc()`), e os
+   estágios intermediários do degradê são FRAÇÕES dessa mesma distância —
+   não paradas fixas independentes. Editar `--fade-h` ou `--fade-solid`
+   redesenha a curva inteira consistente consigo mesma.
+
+   A diferença para o degradê do mosaico permanece: lá a base é PRETA (a
+   célula é um card sobre fundo escuro); aqui é `--bg`, porque este
+   degradê tem de casar EXATAMENTE com o fundo da página. */
+:root {
+  --fade-h:     232px;   /* altura total do ::after */
+  --fade-solid: 68px;    /* faixa 100% opaca — o ÚNICO número pra ajustar */
+  --fade-folga: 10px;    /* fixa e positiva — garante recuo < faixa */
+  --fade-opaco-em:  calc(var(--fade-h) - var(--fade-solid));
+  --hero-overlap:   calc(var(--fade-solid) - var(--fade-folga));
+}
 .backdrop::after {
   content: "";
   position: absolute;
   inset: auto 0 0 0;
-  height: 232px;
+  height: var(--fade-h);
   background: linear-gradient(to bottom,
       #0b0c1000 0px,
-      #0b0c1040 68px,
-      #0b0c10a6 124px,
-      #0b0c10e0 152px,
-      #0b0c10 164px,
-      #0b0c10 232px);
+      #0b0c1040 calc(var(--fade-opaco-em) * 0.415),
+      #0b0c10a6 calc(var(--fade-opaco-em) * 0.756),
+      #0b0c10e0 calc(var(--fade-opaco-em) * 0.927),
+      #0b0c10 var(--fade-opaco-em),
+      #0b0c10 var(--fade-h));
   pointer-events: none;
 }
 .backdrop.is-vazio::after { content: none; }
 
-/* O RECUO do texto sobre a imagem, e por que ele vale ESTE número.
-   O degradê acima tem 232px e é 100% opaco a partir de 164px, ou seja uma
-   faixa CHAPADA de 68px na base da imagem. O recuo é 58px: 10px a menos
-   que a faixa, de folga para ascendentes e para o line-box do ano.
-
-   58px é o que faz o TÍTULO invadir a imagem, e não só o ano: o ano ocupa
-   ~30px (linha + margem), então os ~28px restantes são a fatia do título
-   que fica sobre a imagem. O título CRUZA a borda — começa dentro do fade
-   e termina no fundo da página, que é o que o esboço pede. Com um recuo
-   de 40px só o ano subia, e o título nascia 1px abaixo da imagem: a
-   composição lia como legenda embaixo da foto, não como título invadindo.
+/* O RECUO do texto sobre a imagem vem de `--hero-overlap`, acima — ele NÃO
+   é redefinido aqui. 58px no desktop (68 − 10) é o que faz o TÍTULO
+   invadir a imagem, e não só o ano: o ano ocupa ~30px (linha + margem),
+   então os ~28px restantes são a fatia do título que fica sobre a
+   imagem — o título CRUZA a borda, começa dentro do fade e termina no
+   fundo da página, que é o que o esboço pede.
 
    MARGEM DE TOPO DO PRIMEIRO FILHO ZERADA: o projeto não tem reset de
    `p`, então `.film-header__meta` carregava o `margin-top: 1em` do
    navegador (11,2px no corpo dele) e comia parte do recuo — o recuo
    pedido e o recuo real divergiam sem sintoma visível. */
-:root { --hero-overlap: 58px; }
 .film-hero { position: relative; }
 .film-hero__text {
   position: relative;   /* pinta ACIMA do ::after do backdrop */
@@ -526,24 +555,23 @@ a { color: inherit; }
     margin-left: -20px;
     margin-right: -20px;
   }
-  /* O backdrop mede ~211px de altura a 375px — um fade de 216px cobriria a
-     imagem inteira. Encolhe proporcionalmente, mantendo a faixa chapada
-     (100% opaco a partir de 106px → 34px chapados, para 30px de recuo). */
-  .backdrop::after {
-    height: 156px;
-    background: linear-gradient(to bottom,
-        #0b0c1000 0px,
-        #0b0c1040 44px,
-        #0b0c10a6 80px,
-        #0b0c10e0 92px,
-        #0b0c10 98px,
-        #0b0c10 156px);
+  /* [v1.9.33] SÓ AS TRÊS VARIÁVEIS-FONTE MUDAM. `--fade-opaco-em` e
+     `--hero-overlap` NÃO são redeclaradas aqui — são `calc()` que já
+     dependem destas três, então recalculam sozinhas quando o navegador
+     resolve `.backdrop::after`/`.film-hero__text` neste breakpoint. O
+     `background`/`height` de `.backdrop::after` também não são
+     redeclarados: já usam `var(--fade-h)`/`var(--fade-opaco-em)`, e por
+     isso seguem o valor mobile sem repetir o gradiente inteiro.
+
+     O backdrop mede ~211px de altura a 375px — um fade de 232px (o do
+     desktop) cobriria a imagem quase inteira. Encolhe proporcionalmente,
+     com a MESMA folga positiva do desktop reduzida de 10px para 6px
+     (a caixa é menor, e 10px nela é uma fração maior da faixa chapada). */
+  :root {
+    --fade-h:     156px;
+    --fade-solid: 58px;   /* → recuo 52px: título entra ~12px na imagem */
+    --fade-folga: 6px;
   }
-  /* 58px de faixa chapada, 52px de recuo — mesma folga de 6px do desktop.
-     Com 46px o título só encostava 6px na imagem; com 52px ele entra ~12px
-     e a leitura de "título invadindo" sobrevive à tela pequena, sem que a
-     faixa chapada coma mais de uma imagem que já é baixa (211px). */
-  :root { --hero-overlap: 52px; }
 }
 
 /* O estado de ausência do backdrop reusa o desenho do pôster (mesma hachura,

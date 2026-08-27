@@ -6405,6 +6405,67 @@ Falha em qualquer uma → **1 retentativa** com reforço (listando os trechos pe
    (0,351)**. Com o fade antigo, `barbie` daria **1,33:1** no ano — texto
    praticamente ilegível. Com o novo, 4,56:1 como todos os outros.
 
+   ##### O ACOPLAMENTO FECHADO POR CONSTRUÇÃO (v1.9.33)
+
+   **A INVARIANTE, em uma frase: o recuo do texto é sempre menor que a
+   faixa opaca, e é isso que faz a imagem não entrar no cálculo de
+   contraste.**
+
+   Na v1.9.32 essa invariante vivia em DOIS comentários, num arquivo só,
+   sobre DOIS números que só concordavam porque alguém fez a conta certo
+   uma vez: a faixa chapada do degradê (`68px` em `.backdrop::after`) e o
+   recuo do texto (`58px`, `--hero-overlap`). Nada no CSS impedia editar um
+   sem lembrar do outro — mudar a faixa sem tocar no recuo teria revertido
+   a garantia **em silêncio**, e o sintoma só reapareceria como título
+   ilegível no próximo backdrop claro que entrasse no catálogo.
+
+   **A correção segue o mesmo padrão de `--k` na barra de proporção**
+   (§3[E]: uma propriedade é a fonte, as fronteiras e a diagonal são
+   funções puras dela). Aqui: **`--fade-solid` é a fonte** (a faixa chapada
+   — o único número pensado para se ajustar), e **`--hero-overlap` é
+   `calc(var(--fade-solid) - var(--fade-folga))`**, com `--fade-folga` uma
+   constante **fixa e sempre positiva** (10px no desktop, 6px em ≤640px).
+
+   **Por que isto fecha a desigualdade por ARITMÉTICA, não por disciplina.**
+   Subtrair um número positivo de `--fade-solid` produz, por definição de
+   subtração, um valor **menor** que `--fade-solid` — não é uma verificação
+   que roda, é uma propriedade da própria expressão. Mudar só
+   `--fade-solid` (para dar mais ou menos invasão do título) move
+   `--hero-overlap` **junto, na mesma direção**, e a desigualdade não pode
+   quebrar por essa edição. O único jeito de quebrá-la seria zerar ou
+   negativar `--fade-folga` — e ela é declarada como constante justamente
+   para não ser o dial que uma entrega futura mexe sem pensar.
+
+   **Os estágios intermediários do degradê também deixaram de ser paradas
+   fixas independentes.** `--fade-opaco-em: calc(var(--fade-h) -
+   var(--fade-solid))` é o ponto em que a opacidade chega a 100%, e as três
+   paradas parciais do gradiente são **frações dessa mesma distância**
+   (`× 0.415`, `× 0.756`, `× 0.927`) — editar `--fade-h` ou `--fade-solid`
+   redesenha a curva inteira de forma consistente consigo mesma, em vez de
+   deixar paradas antigas apontando para uma altura que já não existe.
+
+   **O breakpoint mobile deixou de redeclarar o gradiente inteiro.** Como
+   `.backdrop::after` já é 100% `calc()`/`var()`, a media query de `≤640px`
+   só sobrescreve as três variáveis-fonte (`--fade-h`, `--fade-solid`,
+   `--fade-folga`); `--fade-opaco-em` e `--hero-overlap`, por serem
+   `calc()`, recalculam sozinhas quando o navegador resolve as regras que
+   as consomem — não precisam ser redeclaradas.
+
+   **VERIFICADO, não só argumentado — em dois sentidos.** (1) *Regressão
+   zero:* os valores computados depois da refatoração são **byte-idênticos**
+   aos de antes, nos dois breakpoints — desktop `18,1px` de título sobre a
+   imagem (o mesmo de `the-invite-2026` na v1.9.32), mobile `12,1px` (o
+   mesmo de `the-godfather`/`barbie`). (2) *A invariante segura sob
+   tensão:* sobrescrevendo `--fade-solid` para `20px` em runtime, SEM tocar
+   em mais nada, `--hero-overlap` recalculou sozinho para `calc(20px -
+   6px)` = `14px` — a desigualdade se manteve automaticamente, exatamente o
+   comportamento que o design promete.
+
+   **A garantia agora é estrutural: não existe edição de um valor só que a
+   viole**, exceto zerar/negativar a folga — e essa é uma ação deliberada
+   sobre uma constante nomeada como tal, não um efeito colateral de ajustar
+   a faixa.
+
    ##### O LINK DO LETTERBOXD, secundário
 
    Deixa de ser pill: **sem caixa, sem borda, sem fundo** — mono pequena,
@@ -6449,7 +6510,7 @@ Falha em qualquer uma → **1 retentativa** com reforço (listando os trechos pe
    A legenda `HATERS · MIXED · FANS` fica **abaixo dos percentuais**, que já
    era a ordem do DOM desde a v1.9.27 — nada mudou nela.
 
-   ##### A REDUNDÂNCIA DE PESO — percorrida e MEDIDA, não corrigida
+   ##### A REDUNDÂNCIA DE PESO — percorrida, MEDIDA, e MANTIDA por decisão do dono
 
    A pergunta levantada foi se peso aparece em três lugares (callout,
    legenda, cabeçalhos de grupo). **Medido: são DOIS, não três.** A legenda
@@ -6461,18 +6522,33 @@ Falha em qualquer uma → **1 retentativa** com reforço (listando os trechos pe
    **MEDIDO em `the-invite-2026`: 134px** entre o callout e o primeiro
    cabeçalho de grupo, e **os dois cabem na mesma tela** — tanto em
    1280×900 quanto em 375×812. Ou seja: o leitor vê `~91%` e, um terço de
-   tela abaixo, `~91% DAS NOTAS`. **Isso lê como repetição, e o relatório
-   diz isso em vez de maquiar.**
+   tela abaixo, `~91% DAS NOTAS`. **Isso lê como repetição**, e a medição
+   não maquia isso.
 
-   **Duas observações que qualificam o incômodo, e nenhuma o desfaz.**
-   (a) A distância **aumentou**, não diminuiu: na v1.9.31 publicada eram
-   **65px** entre a legenda e o primeiro cabeçalho, contra **98px** agora —
-   a etiqueta EM DETALHE entrou no meio e separou os dois blocos. (b) O
-   cabeçalho é justamente o sinal que a v1.9.27 decidiu **preservar** ao
-   remover o disclaimer da cota, e a condição que amarrou aquela remoção
-   continua valendo: *"se o percentual do cabeçalho algum dia sair da tela,
-   esta frase tem de voltar"*. **Nada foi mexido** — a entrega pedia
-   percorrer e reportar, e é o que está aqui.
+   **DECISÃO DO DONO DO PROJETO: manter os dois, com a razão registrada —
+   eles não servem ao mesmo leitor.** O callout serve a quem está **olhando
+   a barra**: o número nasce ali, ancorado na fatia, no momento em que a
+   proporção é o assunto da tela. O percentual do cabeçalho serve a quem já
+   **rolou para dentro dos bullets** e está lendo tema por tema — sobretudo
+   no **mobile**, onde os grupos empilham em vez de ficar lado a lado e o
+   segundo bloco pode estar uma tela inteira de distância do callout. Ali o
+   cabeçalho é o **único sinal de peso co-localizado com as listas** —
+   exatamente a função que a v1.9.27 já tinha reconhecido ao **remover** o
+   disclaimer da cota e manter o percentual do cabeçalho no lugar dele: *"o
+   número no cabeçalho cobre a mesma leitura errada no lugar certo (ao lado
+   dos bullets, não a 800px deles)"*. Tirar agora o segundo número
+   reabriria exatamente o buraco que aquela remoção fechou.
+
+   **A observação que continua valendo, e não muda a decisão:** a distância
+   entre os dois **aumentou**, não diminuiu — na v1.9.31 publicada eram
+   **65px** entre a legenda e o primeiro cabeçalho, contra **98px** agora,
+   porque a etiqueta EM DETALHE entrou no meio. Isso torna os dois blocos
+   mais claramente **duas leituras diferentes** (uma acima da etiqueta, uma
+   abaixo dela) em vez de um número ecoando o de cima sem intervalo — o que
+   é consistente com a razão de mantê-los, não uma correção adicional.
+   **A CONDIÇÃO DA v1.9.27 CONTINUA DE PÉ:** *"se o percentual do cabeçalho
+   algum dia sair da tela, [o disclaimer da cota] tem de voltar"* — nada
+   nesta versão toca esse número, e a condição segue amarrada a ele.
 
    ##### ANIMAÇÃO DE ENTRADA DE ANO E TÍTULO — a coreografia, decidida
 
@@ -6792,6 +6868,8 @@ As três incógnitas abaixo foram resolvidas na Fase 1; os achados já estão in
 ---
 
 ## Changelog
+- **v1.9.33** (2026-08-27) — **O piso de contraste do backdrop fecha por CONSTRUÇÃO, não por comentário.** Até aqui a faixa chapada do degradê (68px) e o recuo do texto (58px) eram dois números concordando por acaso — editar um sem o outro reverteria a garantia em silêncio. `--hero-overlap` passa a ser `calc(var(--fade-solid) - var(--fade-folga))`, com `--fade-folga` uma constante fixa e sempre positiva: subtrair um positivo de `--fade-solid` produz por aritmética algo menor que `--fade-solid`, então a desigualdade **não pode** ser violada mudando só o dial pretendido (`--fade-solid`). Os estágios do degradê também derivam de `--fade-h`/`--fade-solid` via `--fade-opaco-em`. **Verificado nos dois sentidos:** os valores computados são byte-idênticos aos de antes da refatoração (18,1px/12,1px de invasão do título); e sobrescrever só `--fade-solid` em runtime moveu `--hero-overlap` junto, sem quebrar a desigualdade. Mesmo padrão de `--k` na barra de proporção. Nenhum arquivo de `resultado/` no diff; suíte inalterada.
+  - **Redundância de peso (callout + cabeçalho): MANTIDA, por decisão do dono.** Os dois não servem ao mesmo leitor — o callout serve a quem está olhando a barra, o cabeçalho a quem já rolou para os bullets (sobretudo no mobile, onde os grupos empilham e o segundo bloco fica longe do callout). É o único sinal de peso co-localizado com as listas, a mesma função que a v1.9.27 preservou ao remover o disclaimer da cota. Nada mexido.
 - **v1.9.32** (2026-08-27) — **O TOPO VIRA EDITORIAL: a sinopse sai, o backdrop se dissolve com o título invadindo a imagem, o link do Letterboxd vira secundário, a página ganha seções nomeadas e o par ano → título ganha animação de entrada.** Só frontend: **nenhum arquivo de `resultado/` no diff**, pipeline intocado. Suíte Python: **1525 passando**, inalterada.
   - **(1) A SINOPSE SAI, e o card com ela** — decisão final do dono. A linha de metadados sobrevive **solta**, sem card. **O custo, registrado e não maquiado:** o público-alvo é quem ainda NÃO assistiu, e a sinopse era o único elemento da página que dizia **do que o filme trata** — sem ela os bullets chegam sem premissa onde se apoiar. **Baixo hoje** (35 filmes conhecidos, backdrop expressivo) e **crescente na expansão** (obscuros, estrangeiros), que é a parte que não aparece enquanto o catálogo for o de hoje. §3[E].
   - **(2) ATRIBUIÇÃO CONFERIDA e intacta.** A linha de metadados continua vindo do TMDB e continua com "fonte TMDB"; o aviso exigido segue no rodapé das três páginas e `creditos.html` segue no ar. Saiu junto só o aviso de sinopse em inglês — avisava sobre um texto que não está mais na tela; o campo `sinopse_fallback_en` continua no JSON.
