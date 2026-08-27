@@ -559,20 +559,57 @@ a { color: inherit; }
   max-width: 44rem;
 }
 
+/* [v1.9.28] `--k` — O ÚNICO NÚMERO ANIMADO DA BARRA, e a razão de ele
+   existir. A animação de entrada desliza as FRONTEIRAS de uma partição em
+   terços até a distribuição real; se cada camada animasse a sua largura
+   por conta própria, seriam duas animações que PARECEM a mesma função do
+   tempo. Com `--k` é uma função só, lida por dois lugares:
+
+     x(k)     = neutro + (fim − neutro) × k        (cada fronteira)
+     menor(k) = 33,333 + (menor_final − 33,333) × k   (a diagonal)
+
+   Precisa de `@property` porque propriedade personalizada NÃO REGISTRADA
+   não interpola — ela salta no meio do keyframe. Registrada como
+   `<number>` com `initial-value: 1`, ela interpola continuamente e o valor
+   de repouso já é o estado final.
+
+   DEGRADAÇÃO em navegador sem `@property` (anterior a Chrome 85 / Safari
+   16.4 / Firefox 128): o `var(--k, 1)` de cada fórmula garante o ESTADO
+   FINAL correto em repouso; o que se perde é a continuidade do deslize,
+   que vira um salto no meio da duração. Nunca fica errado parado — fica
+   sem interpolação. Mesma política do fallback de `container-type` logo
+   abaixo. */
+@property --k {
+  syntax: "<number>";
+  inherits: true;
+  initial-value: 1;
+}
+
 /* Camadas empilhadas, cada uma começando na borda esquerda e terminando
    na sua fronteira com uma aresta DIAGONAL; a de baixo (positivas)
    preenche a barra toda. Ver `barraContinua` em filme.js para a geometria
    e para o cálculo adaptativo de `--diag`.
 
    `--diag` é a projeção horizontal da diagonal. O JS grava só
-   `--menor-pct` (o percentual da menor fatia, um número sem unidade — que
-   é DADO e nunca muda); a conversão para pixel acontece aqui, com `cqw`
-   (1cqw = 1% da largura do contêiner). Assim a diagonal acompanha resize
-   sozinha, sem `ResizeObserver` e sem um recálculo em JS. */
+   `--menor-pct` (o percentual da menor fatia FINAL, um número sem unidade
+   — que é DADO e nunca muda); a conversão para pixel acontece aqui, com
+   `cqw` (1cqw = 1% da largura do contêiner). Assim a diagonal acompanha
+   resize sozinha, sem `ResizeObserver` e sem um recálculo em JS.
+
+   [v1.9.28] A DIAGONAL ACOMPANHA A INTERPOLAÇÃO (`--menor-agora`). Ela é
+   função da fatia mais fina EXIBIDA, e durante o deslize a fatia mais
+   fina exibida é a interpolada — no estado de terços, 33,333%. Fixá-la no
+   valor final faria a barra animar inteira com uma diagonal dimensionada
+   para um destino que ainda não chegou. A identidade
+   `min(lerp(t, f_i, k)) = lerp(t, min(f_i), k)` (todas as fatias partem
+   do MESMO 33,333%) é o que permite escrever isso como uma conta só, sem
+   comparar as três em tempo de execução. */
 .proportion { container-type: inline-size; }
 .proportion .proportion__bar {
+  --k: 1;                               /* 1 = distribuição real, 0 = terços */
   --menor-pct: 10;                      /* substituído pelo JS, por filme */
-  --diag: clamp(3px, calc(var(--menor-pct) * 0.55 * 1cqw), 12px);
+  --menor-agora: calc(33.333 + (var(--menor-pct) - 33.333) * var(--k, 1));
+  --diag: clamp(3px, calc(var(--menor-agora) * 0.55 * 1cqw), 12px);
 }
 /* Navegador sem unidade de contêiner: diagonal fixa e conservadora —
    menor que o teto, para não comer a fatia estreita de um filme como
@@ -586,6 +623,15 @@ a { color: inherit; }
   bottom: 0;
   left: 0;
   display: block;
+  /* [v1.9.28] A FRONTEIRA, interpolada. `--neutro` e `--fim` vêm do JS
+     (percentuais sem unidade); `--k` vem da animação. `+ --diag / 2` é a
+     geometria de sempre: a diagonal fica CENTRADA na fronteira, então a
+     meia altura da barra cai exatamente em x(k). */
+  width: calc(
+    (var(--neutro) + (var(--fim) - var(--neutro)) * var(--k, 1)) * 1%
+    + var(--diag) / 2
+  );
+  clip-path: polygon(0 0, 100% 0, calc(100% - var(--diag)) 100%, 0 100%);
   /* A aresta diagonal precisa de uma marca própria para não depender só
      do contraste entre as duas cores adjacentes — sem ela, quem não
      distingue laranja de dourado perde a fronteira. `drop-shadow`
@@ -595,9 +641,285 @@ a { color: inherit; }
      resolve — uma dobra, não um corte: as cores continuam encostadas. */
   filter: drop-shadow(1px 0 0 #0b0c1088);
 }
+/* A camada de baixo: 100% da barra, sem recorte e SEM FRONTEIRA PRÓPRIA.
+   Não participa da interpolação porque não tem o que interpolar — a região
+   dela é "o que sobra", e é isso que faz a soma fechar 100% em todo frame
+   por CONSTRUÇÃO, e não por sincronia entre animações. */
+.proportion__layer--fundo {
+  width: 100%;
+  clip-path: none;
+}
 .proportion__layer[data-group="negativas"] { background: var(--neg); }
 .proportion__layer[data-group="medianas"]  { background: var(--med); }
 .proportion__layer[data-group="positivas"] { background: var(--pos); }
+
+/* =======================================================================
+   [v1.9.27, Entrega 3] CALLOUT DE PERCENTUAL — os três números abaixo da
+   barra, cada um ancorado na sua fatia por um indicador fino.
+
+   A REGRA DE COLISÃO mora aqui, e não no JS, pela mesma razão que `--diag`
+   (§3[E]): ela mistura três grandezas que vivem em lugares diferentes — o
+   centro da fatia é DADO (percentual, vem do JSON), a largura da caixa do
+   número é TIPOGRAFIA (`ch` da mono, que só o CSS conhece sem medir) e a
+   largura da barra é LAYOUT (muda a cada resize). `min()`/`max()` misturam
+   porcentagem e `ch` sem reclamar, então a conta inteira reage a resize e
+   a zoom de fonte sozinha, sem `ResizeObserver` e sem um recálculo em JS.
+
+   EMPACOTAMENTO DA ESQUERDA PARA A DIREITA:
+     x1 = max(0,            min(c1 − L/2,  100% − 3L − 2g))
+     x2 = max(x1 + L + g,   min(c2 − L/2,  100% − 2L − g))
+     x3 = max(x2 + L + g,   min(c3 − L/2,  100% − L))
+   Cada número vai para o centro da sua fatia; quando não cabe, escorrega o
+   mínimo necessário e o indicador inclina. O ponto de ancoragem não se
+   move — quem se move é o rótulo. Sempre tem solução enquanto 3L + 2g
+   couber na barra: ~135px contra 335px a 375px de viewport.
+
+   O termo `(var(--n) − i)` generaliza para 1, 2 ou 3 fatias (o JSON pode
+   trazer uma fatia zerada, que `fatiasDeProporcao` filtra): o que cada
+   número reserva à direita é o espaço dos que ainda vêm depois dele.
+   ======================================================================= */
+.proportion__callout {
+  position: relative;
+  font-family: var(--mono);
+  font-size: 0.74rem;
+  letter-spacing: 0.01em;
+  --L: 5.6ch;            /* caixa do número — "~100%" cabe em 5ch de mono */
+  /* [v1.9.28] A FOLGA MÍNIMA passou de 8px para 14px, e o motivo é o NEON
+     PERMANENTE. Com o halo aceso o tempo todo, ele passa a ocupar espaço
+     o tempo todo — e a regra de empacotamento tinha sido calculada sem
+     ele. Em `the-godfather` a 375px o segundo número começa a 8px do fim
+     do primeiro; um halo de raio 11px de cada lado atravessaria essa
+     folga e misturaria o brilho de dois grupos de cores DIFERENTES, que é
+     exatamente o que a paleta por grupo existe para não fazer.
+
+     A conta, com R = raio do halo permanente (11px) e P = respiro que a
+     caixa já dá em volta do texto (a caixa tem 5,6ch e o texto mais largo,
+     "~100%", tem 5ch → P ≈ 5,75px de cada lado):
+
+         folga_entre_textos = --gap + 2P  ≥  2R
+         --gap ≥ 2(11) − 2(5,75) = 10,5px  →  14px, com margem
+
+     ESCOLHIDO CONTAR O HALO NA REGRA, E TAMBÉM LIMITAR O RAIO — as duas
+     coisas, porque cada uma sozinha é frágil: só limitar o raio deixaria
+     a garantia dependendo de um número que a próxima calibração de brilho
+     pode mexer sem perceber; só aumentar a folga deixaria o halo livre
+     para crescer. Aumentar a folga não custa nada nos 30 filmes em que a
+     restrição não morde (o rótulo já cabia no centro da sua fatia); custa
+     ~6px de deslocamento a mais só nos que já estavam deslocados. */
+  --gap: 14px;           /* folga mínima entre duas caixas vizinhas */
+  --half: calc(var(--L) / 2);
+  --step: calc(var(--L) + var(--gap));
+  --track: 9px;          /* altura da pista do indicador, barra → número */
+  --t: 1px;              /* espessura do indicador */
+  height: calc(var(--track) + 1.15rem);
+  margin-top: 3px;
+
+  --x1: max(0px,
+            min(calc(var(--c1) * 1% - var(--half)),
+                calc(100% - var(--L) - (var(--n) - 1) * var(--step))));
+  --x2: max(calc(var(--x1) + var(--step)),
+            min(calc(var(--c2) * 1% - var(--half)),
+                calc(100% - var(--L) - (var(--n) - 2) * var(--step))));
+  --x3: max(calc(var(--x2) + var(--step)),
+            min(calc(var(--c3) * 1% - var(--half)),
+                calc(100% - var(--L))));
+}
+
+/* Um invólucro por fatia, do tamanho do callout inteiro: é ele que dá aos
+   filhos um bloco contentor com a LARGURA DA BARRA, que é o sistema de
+   coordenadas em que `--c` está escrito. */
+.proportion__anchor { position: absolute; inset: 0; pointer-events: none; }
+.proportion__anchor:nth-child(1) { --c: var(--c1); --x: var(--x1); }
+.proportion__anchor:nth-child(2) { --c: var(--c2); --x: var(--x2); }
+.proportion__anchor:nth-child(3) { --c: var(--c3); --x: var(--x3); }
+.proportion__anchor {
+  --cx:  calc(var(--c) * 1%);              /* centro VERDADEIRO da fatia */
+  --lcx: calc(var(--x) + var(--half));     /* centro do rótulo, já movido */
+}
+.proportion__anchor[data-group="negativas"] { --g: var(--neg); --g-soft: var(--neg-soft); }
+.proportion__anchor[data-group="medianas"]  { --g: var(--med); --g-soft: var(--med-soft); }
+.proportion__anchor[data-group="positivas"] { --g: var(--pos); --g-soft: var(--pos-soft); }
+
+/* [v1.9.28] O ESTADO ACESO PERMANENTE. Estes dois tokens são o REPOUSO do
+   neon — e, por serem o estado base, são também o que `prefers-reduced-
+   motion: reduce` entrega no primeiro frame: o neon aceso NÃO é
+   movimento, e fica.
+
+   Calibração: núcleo branco fechado (2px), halo na cor do grupo (6px) e
+   um halo externo na cor a 20% de alfa (11px) — aceso o bastante para ler
+   como neon, discreto o bastante para não competir com o título do filme,
+   que é serifado, 2,6rem e ocupa a largura da coluna. O RAIO MÁXIMO DE
+   11px é requisito de layout: ver a derivação de `--gap` acima. O pico da
+   ignição vai a 28px, mas por ~35ms e escalonado — dois vizinhos nunca
+   estão no pico ao mesmo tempo (55ms de defasagem). */
+.proportion__pct {
+  position: absolute;
+  left: var(--x);
+  top: var(--track);
+  width: var(--L);
+  text-align: center;
+  font-variant-numeric: tabular-nums;
+  --pct-aceso: #ffffff;
+  --pct-neon: 0 0 2px rgba(255, 255, 255, 0.65), 0 0 6px var(--g),
+              0 0 11px var(--g-soft), 0 0 0 transparent;
+  color: var(--pct-aceso);
+  text-shadow: var(--pct-neon);
+}
+
+/* O indicador, em duas metades porque o CSS não tem sinal. A que aponta
+   para a direita mede `max(0, rótulo − centro)`; a que aponta para a
+   esquerda, `max(0, centro − rótulo)`. Só uma tem largura de verdade — a
+   outra colapsa para `--t` e, por estar ancorada NO CENTRO VERDADEIRO,
+   vira a marquinha vertical em cima dele. Sem deslocamento as duas
+   colapsam e sobra uma marca vertical de 2px, que é o caso mais comum do
+   catálogo. `clip-path` desenha a faixa fina inclinada dentro da caixa;
+   com a caixa em `--t`, o polígono degenera num retângulo vertical. */
+.proportion__lead {
+  position: absolute;
+  top: 0;
+  height: var(--track);
+  background: var(--g);
+  opacity: 0.5;
+  pointer-events: none;
+}
+.proportion__lead--dir {
+  left: var(--cx);
+  width: max(var(--t), calc(var(--lcx) - var(--cx)));
+  clip-path: polygon(0 0, var(--t) 0, 100% 100%, calc(100% - var(--t)) 100%);
+}
+.proportion__lead--esq {
+  right: calc(100% - var(--cx));
+  width: max(var(--t), calc(var(--cx) - var(--lcx)));
+  clip-path: polygon(100% 0, calc(100% - var(--t)) 0, 0 100%, var(--t) 100%);
+}
+
+/* =======================================================================
+   [v1.9.28] ANIMAÇÃO DE ENTRADA DA BARRA — as FRONTEIRAS DESLIZAM.
+
+   O MODELO ANTERIOR SAIU INTEIRO. A v1.9.27 preenchia a barra de 0 a 100%
+   com um bloco neutro e só então revelava as cores; a camada de prefill
+   (`.proportion__prefill`, `#454b5a`) foi REMOVIDA, não escondida atrás de
+   flag. O modelo novo: a barra nasce COMPLETA, particionada em três partes
+   iguais, e as fronteiras deslizam até a distribuição real. Com isso as
+   antigas Fase 1 (fill) e Fase 2 (partição) deixam de existir como etapas
+   separadas — viram UMA.
+
+   O ESTADO BASE DESTE ARQUIVO CONTINUA SENDO O ESTADO FINAL. Tudo que a
+   animação faz está DENTRO de `@media (prefers-reduced-motion:
+   no-preference)`, inclusive o estado inicial (`--k: 0`, número apagado).
+   É a única construção em que `reduce` entrega o estado final no primeiro
+   frame sem depender de nenhuma regra de desligamento. O
+   `* { animation: none !important }` lá embaixo continua valendo como
+   segunda linha, mas nada aqui depende dele.
+
+   AS DUAS FASES, e a soma:
+     A · fronteiras    0ms → 650ms     terços ──▶ distribuição real
+     B · ignição     650ms → 1020ms    3 números × 260ms, escalonados 55ms
+   Total 1020ms.
+
+   FASE A — UMA FUNÇÃO TEMPORAL SÓ. `--k` é animado uma vez, na barra; as
+   duas fronteiras e a diagonal são funções puras dele (ver `@property
+   --k` acima). Não são duas animações com temporização igual: é uma
+   animação, lida por dois lugares. E a camada de baixo ocupa 100% da
+   barra em todos os frames, então a soma fecha por CONSTRUÇÃO — a região
+   da terceira fatia é o que sobra, não um terceiro valor animado.
+
+   A DURAÇÃO É FIXA (650ms) e independente da distribuição. A DISTÂNCIA
+   que cada fronteira percorre é consequência do dado — `cats-2019` move a
+   primeira fronteira 53 pontos percentuais e `napoleon-2023` move 11 —,
+   mas as duas levam os mesmos 650ms. Amarrar a duração à distância faria
+   a animação codificar uma segunda variável competindo com a barra.
+
+   A CURVA é desaceleração pura: `cubic-bezier(0.22, 0.68, 0.28, 1)`, os
+   dois pontos de controle dentro de [0,1]. Isso não é preferência, é o
+   que garante `k ∈ [0,1]` em todo instante — e `k` fora desse intervalo
+   (overshoot, bounce, spring, elasticidade) produziria x1 > x2, ou seja,
+   uma fatia de largura NEGATIVA. A proibição de overshoot é geométrica
+   antes de ser estética.
+
+   NENHUM VÃO EM FRAME NENHUM. Não há gutter, fio separador, margem,
+   borda-separador nem pixel transparente entre regiões, nem durante o
+   deslize: as camadas não mudam de opacidade nem de posição, só de
+   LIMITE, e continuam encostadas umas nas outras o tempo todo.
+
+   FASE B — ver `proportion-ignite`.
+
+   NENHUM TEMPORIZADOR EM JS. Fase A é uma animação sem atraso; o
+   encadeamento da Fase B é `animation-delay: 650ms + var(--ordem) × 55ms`.
+   Sair da página no meio não deixa nada pela metade porque não há nada
+   guardado em lugar nenhum: a página é remontada do zero a cada visita, e
+   o estado final é o estado base.
+   ======================================================================= */
+@media (prefers-reduced-motion: no-preference) {
+  .proportion__bar {
+    animation: proportion-fronteiras 650ms cubic-bezier(0.22, 0.68, 0.28, 1) both;
+  }
+  .proportion__lead {
+    animation: proportion-lead 260ms ease-out both;
+    animation-delay: calc(650ms + var(--ordem, 0) * 55ms);
+  }
+  .proportion__pct {
+    animation: proportion-ignite 260ms linear both;
+    animation-delay: calc(650ms + var(--ordem, 0) * 55ms);
+  }
+}
+
+@keyframes proportion-fronteiras {
+  from { --k: 0; }
+  to   { --k: 1; }
+}
+
+@keyframes proportion-lead {
+  from { opacity: 0; }
+  to   { opacity: 0.5; }
+}
+
+/* A IGNIÇÃO — letreiro antigo entrando em funcionamento. Começa apagado,
+   oscila, dá um pico e ESTABILIZA ACESO.
+
+   [v1.9.28] O INÍCIO PASSOU DE OPACIDADE 0,16 PARA 0, revertendo a escolha
+   da v1.9.27, e o motivo é o modelo novo de animação. Antes, a barra
+   crescia vazia e um número fantasma embaixo dela não contradizia nada.
+   Agora a barra nasce em TERÇOS e as fronteiras deslizam — um `~2%`
+   visível, ancorado na posição FINAL, ficaria meio segundo apontando para
+   uma região que naquele instante é 33%. O empacotamento do callout não
+   depende de `--k` (as posições são as finais desde o primeiro frame), e é
+   justamente por isso que os rótulos não podem estar visíveis antes de as
+   fronteiras chegarem. Ausentes durante a interpolação, acesos depois, já
+   no lugar certo e com o valor certo.
+
+   O TEXTO CONTINUA NO DOM desde o primeiro frame, com o valor final: o que
+   muda é opacidade, cor e sombra. A animação segue sendo de aparência, não
+   de conteúdo.
+
+   [v1.9.28] O NEON FICA LIGADO — correção da decisão da v1.9.27, pelo dono
+   do projeto. O brilho NÃO decai depois do pico: o repouso é um estado
+   ACESO permanente (núcleo branco + halo na cor do grupo), não um resíduo.
+   A ignição continua sendo o EVENTO — apagado → flicker → pico →
+   estabiliza —, e o pico continua mais intenso que o repouso; o que mudou
+   foi o destino.
+
+   AS QUATRO CAMADAS DE SOMBRA SÃO AS MESMAS EM TODOS OS QUADROS, com a
+   quarta zerada no repouso. `text-shadow` com número DIFERENTE de camadas
+   entre dois quadros não interpola — salta. Manter a contagem é o que faz
+   o pico descer suavemente até o repouso em vez de piscar para ele.
+
+   O RAIO DO HALO PERMANENTE É LIMITADO A 11px, e isso é requisito de
+   layout, não de gosto: ver `--gap` no callout. */
+@keyframes proportion-ignite {
+  0%   { opacity: 0; color: var(--text-mute);
+         text-shadow: 0 0 0 transparent, 0 0 0 transparent,
+                      0 0 0 transparent, 0 0 0 transparent; }
+  14%  { opacity: 0.52; color: var(--text-dim); }
+  22%  { opacity: 0.12; color: var(--text-mute); }
+  34%  { opacity: 0.88; color: var(--text-dim); }
+  42%  { opacity: 0.30; color: var(--text-mute); }
+  58%  { opacity: 1;    color: #ffffff;
+         text-shadow: 0 0 2px #fff, 0 0 6px var(--g),
+                      0 0 15px var(--g), 0 0 28px var(--g-soft); }
+  100% { opacity: 1;    color: var(--pct-aceso);
+         text-shadow: var(--pct-neon); }
+}
 
 /* [v1.9.19] VEREDITO — Entrega 2. Uma frase, montada por TEMPLATE sobre o
    lift já computado (ver `veredito()` em filme.js) — zero LLM.

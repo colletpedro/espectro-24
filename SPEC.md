@@ -5440,12 +5440,36 @@ Falha em qualquer uma → **1 retentativa** com reforço (listando os trechos pe
    tem a construção completa (fórmula do zero, marca de divergência,
    verificação de honestidade em `napoleon-2023` e `the-godfather`).
 
-   **O DISCLAIMER DA COTA continua obrigatório e mudou só de lugar.** Ele
-   impede a leitura errada mais provável da página — listas de bullets do
-   mesmo tamanho não são grupos do mesmo peso — e por isso mora agora
-   **debaixo da barra**, ancorado no objeto que mostra o peso. As duas
-   variantes da v1.4.0 continuam existindo, escolhidas pela presença do dado;
-   sem distribuição não há barra, e o texto volta a ser o da v1.2.1 inteiro.
+   **O DISCLAIMER DA COTA — REMOVIDO DO RAMO COM BARRA na v1.9.27, e isso
+   é decisão registrada, não esquecimento.** Na v1.9.26 ele morava debaixo
+   da barra, com este texto: *"A barra é o peso real de cada grupo. A
+   análise abaixo tem profundidade igual nos três — o tamanho das listas
+   não indica peso."* Com o **callout de percentual** (v1.9.27) o topo
+   passou a dizer o peso duas vezes — a barra e os três números ancorados
+   nela —, e a frase virou uma terceira explicação do mesmo fato, a uma
+   rolagem inteira de distância das listas que ela existia para desarmar.
+
+   **O que a remoção custa, escrito porque é ele que a decisão paga.** Era
+   a única frase que dizia, em palavras, que listas de bullets do mesmo
+   tamanho NÃO são grupos do mesmo peso. Sem ela, o único sinal de peso
+   **co-localizado com as listas** é o `~X% DAS NOTAS` no cabeçalho de cada
+   grupo — e **é por isso que o percentual do cabeçalho FICA**. As duas
+   coisas são uma decisão só: a frase sai porque o número do cabeçalho
+   cobre a mesma leitura errada no lugar certo (ao lado dos bullets, não a
+   800px deles). Quem rolar direto para a análise encontra seis marcadores
+   em HATERS e seis em FANS com `~2%` e `~93%` impressos ao lado do nome de
+   cada grupo; é o número no cabeçalho que impede "listas iguais, pesos
+   iguais" de fechar. **Se o percentual do cabeçalho algum dia sair da
+   tela, esta frase tem de voltar** — e essa é a condição que amarra a
+   remoção.
+
+   **O RAMO SEM DISTRIBUIÇÃO REAL fica INTACTO, no texto da v1.2.1** (*"Os
+   grupos são cotas de coleta — não a proporção real das opiniões."*).
+   Nesse caminho não há barra, não há callout e não há percentual em
+   cabeçalho nenhum: a única coisa na tela sobre tamanho de grupo são as
+   listas, e a regra da v1.2.1 volta a valer sozinha e inteira. Mantido em
+   sincronia com `render.py` (`DISCLAIMER_*`); o render de TERMINAL não
+   mudou.
 
    **O cabeçalho "EM DETALHE · TEMA A TEMA" foi REMOVIDO** — com o veredito
    no rodapé, não há mais um resumo antes dele do qual separar "o detalhe".
@@ -5455,6 +5479,324 @@ Falha em qualquer uma → **1 retentativa** com reforço (listando os trechos pe
    negativas/medianas/positivas, e as chaves do dado não mudam. Escopo,
    trade-off e política de reversão em **§0, "SEGUNDA EXCEÇÃO DELIBERADA na
    INTERFACE"**.
+
+   #### O CALLOUT DE PERCENTUAL abaixo da barra (v1.9.27)
+
+   Os três percentuais deixam de aparecer **só** nos cabeçalhos de grupo e
+   passam a aparecer também **abaixo da barra**, cada um **ancorado na sua
+   fatia** por um indicador fino. O percentual do cabeçalho **continua onde
+   estava** — ver o parágrafo do disclaimer acima: é ele que carrega a
+   informação de peso para o lado das listas de bullets. **A fonte
+   continua sendo uma só:** `b.share_real`, o mesmo inteiro que o cabeçalho
+   e que o `aria-label` imprimem; o callout não recalcula nada.
+
+   **A COLISÃO é o problema real desta entrega.** `the-godfather` é
+   2% / 5% / 93%: os centros verdadeiros das duas primeiras fatias caem a
+   1% e 4,5% da largura da barra — **7,2px e 32,4px** em desktop (720px),
+   **3,35px e 15,07px** a 375px (barra de 335px). A caixa de um número mede
+   **39,91px**. Três números centrados nos seus centros verdadeiros se
+   sobrepõem, e nenhum dos dois primeiros cabe dentro da própria fatia. O
+   pior caso do catálogo não é nem esse: é `cidade-de-deus`, 1% / 3% / 96%.
+
+   **A REGRA: empacotamento da ESQUERDA para a DIREITA com folga mínima, e
+   o indicador inclinado absorve o deslocamento.**
+
+   ```
+   x1 = max(0,          min(c1 − L/2,  100% − 3L − 2g))
+   x2 = max(x1 + L + g, min(c2 − L/2,  100% − 2L − g))
+   x3 = max(x2 + L + g, min(c3 − L/2,  100% − L))
+   ```
+
+   `c` é o centro VERDADEIRO da fatia (o mesmo número normalizado que
+   desenha a barra), `L` a largura da caixa do número (`5.6ch` da mono) e
+   `g` a folga mínima (**14px desde a v1.9.28** — era 8px; a diferença é o
+   espaço que o halo do neon permanente passou a ocupar, ver "A COLISÃO QUE
+   O NEON PERMANENTE CRIA"). Cada número vai para o centro da sua fatia;
+   quando não cabe, escorrega o mínimo necessário e a linha que o liga ao
+   centro verdadeiro inclina. **O ponto de ancoragem nunca se move** —
+   quem se move é o rótulo, e a inclinação é a declaração visível de que
+   ele se moveu. O termo `100% − L` na última linha é o que trata o outro
+   lado: uma fatia colada na borda direita puxa o rótulo para DENTRO, e aí
+   o indicador inclina para a direita em vez de para a esquerda
+   (`cats-2019`, 86/7/7, é o caso).
+
+   **Por que esta regra e não as outras duas consideradas:**
+   - **Omissão abaixo de um limiar** foi descartada de saída: sumir com o
+     `~2%` é apagar exatamente o número que o leitor não esperava, e a
+     exigência de acessibilidade desta versão é que os três estejam
+     legíveis e no DOM desde o primeiro frame.
+   - **Empilhamento vertical** resolve a colisão, mas cobra altura, desfaz
+     a leitura em linha única e **não evita o problema**: um número na
+     segunda linha continua precisando de um indicador inclinado para achar
+     a sua fatia. Paga o custo do deslocamento sem se livrar dele.
+
+   **Por que ela vale para QUALQUER distribuição futura, e não só para as
+   35 de hoje.** É uma passada de empacotamento, não uma exceção por filme:
+   sempre tem solução enquanto `3L + 2g` couber na barra — **147,7px contra
+   335px** de barra a 375px de viewport (com `g` = 14px), folga de 2,3×. Qualquer trinca que
+   some 100 é acomodada, inclusive 0/0/100 e 33/33/34; abaixo de ~180px de
+   barra (viewport que não existe) os números encostariam.
+
+   **ONDE A CONTA MORA: no CSS**, pela mesma razão de `--diag`. Ela mistura
+   três grandezas que vivem em lugares diferentes — o centro da fatia é
+   **dado** (percentual, sai do JSON e nunca muda), a largura da caixa do
+   número é **tipografia** (`ch` da mono, que o CSS conhece e o JS só
+   saberia medindo) e a largura da barra é **layout** (muda a cada resize).
+   `min()`/`max()` misturam porcentagem e `ch` sem problema, então a conta
+   inteira reage a resize e a zoom de fonte sozinha: **sem
+   `ResizeObserver`, sem ouvinte de `resize`, sem um único recálculo em
+   JS**. O JS grava só `--c1..--cn` e `--n`.
+
+   **O INDICADOR tem duas metades porque o CSS não tem sinal.** A que
+   aponta para a direita mede `max(0, rótulo − centro)`; a que aponta para
+   a esquerda, `max(0, centro − rótulo)`. Só uma tem largura de verdade; a
+   outra colapsa para a espessura mínima (1px) e, por estar ancorada NO
+   CENTRO VERDADEIRO, vira a marquinha vertical em cima dele — que é
+   exatamente o que se quer ali. Sem deslocamento nenhum as duas colapsam e
+   o indicador é uma marca vertical de 2px, que é o caso da maioria do
+   catálogo.
+
+   **MEDIDO em `the-godfather`, os dois tamanhos** (posição em px a partir
+   da borda esquerda da barra; `centro` é o centro do rótulo, `fatia` o
+   centro verdadeiro da fatia):
+
+   | | rótulo | esquerda | centro | fatia | desloc. |
+   |---|---|---|---|---|---|
+   | desktop (barra 720px) | `~2%` | 0,00 | 19,96 | 7,20 | +12,76 |
+   | | `~5%` | 53,91 | 73,87 | 32,40 | +41,47 |
+   | | `~93%` | 365,23 | 385,19 | 385,20 | −0,01 |
+   | 375px (barra 335px) | `~2%` | 0,00 | 19,96 | 3,35 | +16,61 |
+   | | `~5%` | 53,91 | 73,87 | 15,07 | +58,80 |
+   | | `~93%` | 159,27 | 179,22 | 179,22 | 0,00 |
+
+   Caixa de 39,91px nos dois tamanhos (a fonte não encolhe no mobile);
+   nenhuma sobreposição, nenhum overflow horizontal. (Valores da v1.9.28,
+   com `--gap` de 14px; na v1.9.27, com 8px, o segundo rótulo ficava 6px
+   à esquerda destes.)
+
+   **`aria-hidden="true"` no callout — DIVERGE, de propósito, da decisão
+   tomada para a LEGENDA.** A legenda visível não é escondida de leitor de
+   tela ("esconder texto visível troca um problema por outro"), e a
+   redundância com o `aria-label` é aceita — mas a legenda carrega o **nome
+   do grupo**: lida isolada, ela informa. Um `~2%` solto, não. Sem o nome
+   ao lado, os três números viram três grandezas órfãs anunciadas logo
+   depois de o leitor de tela já ter lido *"HATERS, cerca de 2% das notas;
+   MIXED…"* — que é o `aria-label` da barra, com rótulo, na mesma ordem e
+   com os mesmos inteiros. O callout **não acrescenta um bit** ao que a
+   alternativa textual da barra já diz: é uma re-apresentação VISUAL dela.
+   Esconder aqui não perde informação e evita três números sem dono.
+
+   #### A ANIMAÇÃO DE ENTRADA DA BARRA — as FRONTEIRAS DESLIZAM (v1.9.28)
+
+   **O MODELO DA v1.9.27 SAIU INTEIRO.** Lá a barra crescia de 0 a 100%
+   como um bloco neutro (`#454b5a`) e só então as cores nasciam por cima,
+   em duas fases (fill + partição). A camada de prefill foi **removida do
+   JS e do CSS**, não escondida atrás de flag. Decisão do dono do projeto.
+
+   **O MODELO PUBLICADO:** a barra **nasce completa**, particionada em
+   **três partes iguais**, e as fronteiras deslizam até a distribuição
+   real. Com isso as duas fases viram **uma**.
+
+   ```
+   x1: 33,333%  ──▶  h            x2: 66,667%  ──▶  h + m
+   x(k) = neutro + (fim − neutro) × k
+   ```
+
+   | fase | janela | o quê |
+   |---|---|---|
+   | A · fronteiras | 0 → 650ms | terços ──▶ distribuição real |
+   | B · ignição | 650 → 1020ms | 3 números × 260ms, escalonados 55ms |
+
+   **Total 1020ms** (era 1190ms com o modelo antigo), medido pela Web
+   Animations API.
+
+   **UMA FUNÇÃO TEMPORAL SÓ, e ela é literal.** `--k` é um número
+   registrado por `@property` e animado **uma vez**, na barra; as duas
+   fronteiras e a diagonal são funções puras dele. Não são duas animações
+   com temporização igual que *pareceriam* a mesma função — é uma animação,
+   lida por dois lugares. Isso mata na origem o frame em que a soma não
+   fecha 100%.
+
+   **E A ARQUITETURA DE CAMADAS EMPILHADAS dá a garantia mais forte
+   ainda**, e é por isso que ela foi preservada: a camada de baixo ocupa
+   **100% da barra em todos os frames**, então a região da terceira fatia é
+   literalmente "o que sobra". A soma fecha **por construção**, não por
+   sincronia — e não existe superfície descoberta em frame nenhum. Três
+   segmentos independentes em flex/grid é a forma de fazer isto que deixa
+   buraco; foi recusada.
+
+   **A DURAÇÃO É FIXA (650ms) e independente da distribuição.** A
+   DISTÂNCIA percorrida é consequência do dado — `cats-2019` move a
+   primeira fronteira 52,7 pontos percentuais e `napoleon-2023` move 11,3 —,
+   mas as duas levam os mesmos 650ms. Amarrar a duração à distância faria a
+   animação codificar uma segunda variável competindo com a barra.
+
+   **A CURVA — `cubic-bezier(0.22, 0.68, 0.28, 1)`, desaceleração pura.** A
+   proibição de overshoot/bounce/spring é **geométrica antes de ser
+   estética**: os dois pontos de controle dentro de [0,1] são o que garante
+   `k ∈ [0,1]` em todo instante, e `k` fora desse intervalo produziria
+   `x1 > x2`, ou seja, uma fatia de largura **negativa**.
+
+   **NENHUM VÃO EM FRAME NENHUM.** Durante o deslize as camadas não mudam
+   de opacidade nem de posição — só de **limite** —, e continuam encostadas
+   o tempo todo. Zero gutter, zero fio separador, zero margem, zero borda
+   como separador, zero pixel transparente.
+
+   ##### `--diag` durante a interpolação — ACOMPANHA (v1.9.28)
+
+   A diagonal é derivada da fatia mais fina. No estado de terços a mais
+   fina é 33,333%; no final pode ser 2%. **Escolhido ACOMPANHAR a
+   interpolação**, com as duas variantes construídas e medidas lado a lado.
+
+   `--menor-agora = 33,333 + (menor_final − 33,333) × k`, e a identidade
+   `min(lerp(t, f_i, k)) = lerp(t, min(f_i), k)` — todas as fatias partem
+   do MESMO 33,333% — é o que permite escrever isso como **uma conta só**,
+   sem comparar as três em tempo de execução.
+
+   **Por quê:** a diagonal existe para proteger a fatia estreita, e durante
+   o deslize a fatia estreita ainda não é estreita. Fixá-la no valor final
+   faz a barra animar inteira com uma diagonal dimensionada para um destino
+   que ainda não chegou — e isso é **visível**: em `the-godfather` a 375px,
+   no meio da animação, a variante fixa desenha uma fronteira de 3,68px
+   entre duas regiões largas, que lê como corte reto e não como a diagonal
+   da barra publicada. A variante que acompanha desenha 12px ali, e a barra
+   lê como o mesmo objeto do começo ao fim. Os dois estados finais são
+   idênticos.
+
+   **O risco levantado (tremor / artefato de subpixel na fatia estreita)
+   foi medido e NÃO existe.** Em 131 amostras de 5ms, nas duas variantes:
+   **zero reversões** na aresta de cima e na de baixo da diagonal (a de
+   baixo é a que corre risco, porque `base = x1 − diag/2` e os dois termos
+   encolhem juntos); o ponto mais fino da fatia de 2% nunca desce de
+   **4,861px**, o mesmo valor final nas duas variantes.
+
+   **O que ACOMPANHAR de fato custa, registrado:** o `clamp()` prende a
+   diagonal no teto de 12px durante a primeira metade e só então a solta,
+   então o **valor** é contínuo mas a **taxa** tem um canto no ponto em que
+   o clamp deixa de morder (t ≈ 301ms a 375px, t ≈ 470ms em desktop).
+   Medido: a diagonal muda no máximo **0,947px por quadro**, contra
+   **8,425px por quadro** de deslocamento da própria fronteira — a mudança
+   do ângulo é ~9× mais lenta que o movimento em que ela viaja, e fica
+   enterrada nele.
+
+   ##### Os rótulos durante a interpolação — AUSENTES (v1.9.28)
+
+   Os rótulos do callout são ancorados aos segmentos, e o empacotamento
+   **não depende de `--k`**: as posições são as finais desde o primeiro
+   frame. Um `~2%` visível durante o deslize ficaria meio segundo apontando
+   para uma região que naquele instante é 33% — ou teria de deslizar junto
+   (mostrando número que não bate com a região) ou mudar de valor (animar
+   dado, descartado desde a v1.9.27).
+
+   **Rótulos e indicadores AUSENTES durante a interpolação**, acendendo
+   depois, já nas posições finais e com os valores finais. A ignição
+   continua sendo o momento em que o número aparece. Isso **reverte** o
+   `opacity: 0.16` inicial da v1.9.27 (o "tubo apagado"), que só fazia
+   sentido enquanto a barra crescia vazia e o número não contradizia nada.
+   **O texto continua no DOM com o valor final desde o primeiro frame** — o
+   que muda é opacidade, cor e sombra.
+
+   ##### O NEON FICA LIGADO (v1.9.28)
+
+   **Correção da decisão da v1.9.27, pelo dono do projeto:** o brilho NÃO
+   decai depois do pico. A ignição continua sendo o EVENTO — apagado →
+   flicker → pico → estabiliza —, e o pico continua mais intenso que o
+   repouso; o que mudou foi o **destino**: em vez de o halo praticamente
+   desaparecer, ele estabiliza num estado **aceso permanente**.
+
+   Calibrado na tela: núcleo branco fechado (2px a 65%), halo na cor do
+   grupo (6px) e halo externo na cor a 20% de alfa (**11px, e esse teto é
+   requisito de layout — ver abaixo**). O pico vai a 28px, por ~35ms.
+
+   **AS QUATRO CAMADAS DE SOMBRA SÃO AS MESMAS EM TODOS OS QUADROS**, com a
+   quarta zerada no repouso. `text-shadow` com número DIFERENTE de camadas
+   entre dois quadros **não interpola** — salta. Manter a contagem é o que
+   faz o pico descer suavemente até o repouso em vez de piscar para ele.
+
+   ##### A COLISÃO QUE O NEON PERMANENTE CRIA, e como ela foi fechada
+
+   Com o halo aceso o tempo todo, ele passa a **ocupar espaço** o tempo
+   todo — e a regra de empacotamento tinha sido calculada sem ele. Em
+   `the-godfather` a 375px o segundo número começa a 8px do fim do
+   primeiro; um halo de raio grande atravessa essa folga e mistura o brilho
+   de dois grupos de **cores diferentes**, que é exatamente o que a paleta
+   por grupo existe para não fazer.
+
+   **ESCOLHIDAS AS DUAS SAÍDAS, e não uma.** Limitar o raio (11px) **e**
+   fazer o empacotamento contar o halo (`--gap` de 8px para 14px). Cada uma
+   sozinha é frágil: só limitar o raio deixaria a garantia dependendo de um
+   número que a próxima calibração de brilho pode mexer sem perceber; só
+   aumentar a folga deixaria o halo livre para crescer. A conta, com `R` o
+   raio do halo e `P` o respiro que a caixa já dá em volta do texto:
+
+   ```
+   folga_entre_tintas = --gap + 2P  ≥  2R
+   ```
+
+   O pior caso possível é dois rótulos de **4 caracteres** empacotados lado
+   a lado (`P` mínimo = 5,46px): `--gap ≥ 2(11) − 2(5,46) = 11,08px`.
+   Com 14px sobram 2,92px **no pior caso que a regra admite**, e não só nos
+   filmes de hoje. Aumentar a folga **não custa nada** nos filmes em que a
+   restrição não morde — o rótulo já cabia no centro da sua fatia —; custa
+   ~6px de deslocamento a mais só nos que já estavam deslocados.
+
+   **MEDIDO** (folga entre as TINTAS, medida com `Range`, não entre as
+   caixas; precisa de 22px):
+
+   | filme | par | desktop | 375px |
+   |---|---|---|---|
+   | `the-godfather` | `~2%` · `~5%` | 32,17px | 32,17px |
+   | `cidade-de-deus` | `~1%` · `~3%` | 32,17px | 32,17px |
+   | `eighth-grade` | `~6%` · `~18%` | 61,91px | **28,55px** |
+   | `cats-2019` | `~7%` · `~7%` | 32,17px | 32,18px |
+
+   Nenhuma mistura em nenhum dos dois tamanhos. O par mais apertado do
+   catálogo não é o de `the-godfather` e sim o de `eighth-grade` a 375px,
+   porque ali um dos dois rótulos tem 4 caracteres e sobra menos respiro
+   dentro da caixa.
+
+
+   #### ACESSIBILIDADE DA ANIMAÇÃO (v1.9.27, reconfirmada na v1.9.28)
+
+   1. **`prefers-reduced-motion`: nenhuma fase roda.** A construção é a
+      única que entrega isso sem depender de regra de desligamento: **o
+      estado base do CSS É o estado final**, e tudo que a animação faz —
+      inclusive o estado INICIAL (`--k: 0`, número apagado) — vive dentro
+      de `@media (prefers-reduced-motion: no-preference)`. O
+      `* { animation: none !important }` que já existia sob `reduce`
+      continua valendo como segunda linha, mas nada aqui depende dele —
+      **e essa é a diferença que importa**: se o estado inicial morasse
+      fora do bloco, `reduce` deixaria a barra em terços para sempre.
+      Verificado nos dois sentidos: com o bloco `no-preference` inativo, 0
+      animações, `--k = 1`, barra na distribuição real e números acesos;
+      reativado, as 10 animações voltam e a sequência re-arma do zero.
+      **O NEON PERMANENTE NÃO É MOVIMENTO E FICA** — conferido: sob
+      `reduce` o `text-shadow` de repouso está aplicado por inteiro.
+   2. **A alternativa textual descreve sempre o ESTADO FINAL.** O
+      `aria-label` do `role="img"` é escrito na montagem, com os três
+      rótulos e os três pesos, e nunca é tocado pela animação. **O estado
+      neutro de terços é expressivo e nunca é anunciado**: um leitor de
+      tela jamais ouve "33% / 33% / 33%".
+   3. **Os percentuais são conteúdo, não aparência.** O texto está no DOM
+      com os **valores finais** desde o primeiro frame; a animação não
+      cria, remove nem altera um caractere — muda opacidade, cor e sombra.
+      Que eles fiquem **invisíveis** durante o deslize é decisão de
+      apresentação (ver "Os rótulos durante a interpolação"), não de
+      conteúdo.
+   4. **Sair da página no meio não deixa nada pela metade.** Não há estado
+      guardado em lugar nenhum: a página é remontada do zero a cada visita,
+      a sequência é CSS puro com `animation-fill-mode: both`, e o estado
+      final coincide com o estado base.
+
+   **CADÊNCIA — DECISÃO EM ABERTO PARA O DONO DO PROJETO.** Implementado
+   **SEMPRE** (roda a cada visita a uma página de filme), que é o que a
+   intenção "sensação de estar sendo calculado na hora" pede. A alternativa
+   é uma vez por sessão (`sessionStorage`), e ela tem um custo próprio: a
+   barra passaria a aparecer pronta em algumas visitas e animada em outras,
+   sem que o leitor saiba por quê. A leitura sobre cansaço em navegação
+   repetida continua não podendo ser dada por experiência — ver a ressalva
+   de método em `frontend/TESTE_MANUAL.md`. O total caiu de 1190ms para
+   1020ms na v1.9.28, o que reduz o custo por visita em 14%.
 
    #### A LINHA DE METADADOS DA FICHA — tipografia (v1.9.26)
 
@@ -5647,6 +5989,24 @@ As três incógnitas abaixo foram resolvidas na Fase 1; os achados já estão in
 ---
 
 ## Changelog
+- **v1.9.28** (2026-08-27) — **FRONTEND: a animação da barra troca de modelo — as FRONTEIRAS DESLIZAM de uma partição em terços até a distribuição real — e o neon dos percentuais deixa de decair e fica ACESO.** Sessão de interface: os únicos arquivos alterados são `frontend/js/filme.js` e `frontend/css/styles.css` (mais SPEC.md e `frontend/TESTE_MANUAL.md`). **Nenhum filme regenerado, nenhum `resultado/*.json` tocado, nenhum estágio do pipeline alterado.** Nenhuma biblioteca de animação adicionada. Suíte Python: **1492 passando, intacta**. `SPEC_VERSION` continua em 1.9.25 pelo mesmo registro da v1.9.26/v1.9.27 (a constante carimba artefato de PIPELINE).
+  - **(1) O MODELO fill 0→100% SAIU INTEIRO, e a camada de prefill neutra foi REMOVIDA** do JS e do CSS — não escondida atrás de flag. A barra passa a **nascer completa**, particionada em três partes iguais, com as fronteiras deslizando até `h` e `h+m`. As antigas Fase 1 (fill) e Fase 2 (partição) viram **uma**. Linha do tempo nova: **fronteiras 0→650ms · ignição 650→1020ms · total 1020ms** (era 1190ms).
+  - **(2) UMA FUNÇÃO TEMPORAL SÓ, e é literal — não são duas animações sincronizadas.** `--k` é um `<number>` registrado por `@property`, animado UMA vez na barra; as duas fronteiras e a diagonal são funções puras dele. **E a arquitetura de camadas empilhadas dá a garantia mais forte ainda:** a camada de baixo ocupa 100% da barra em todo frame, então a terceira região é "o que sobra" e a soma fecha **por construção**, não por sincronia. Três segmentos independentes em flex/grid foi recusado por ser justamente a forma que deixa buraco. **Medido em 60 quadros** (6 filmes × 2 tamanhos × 5 instantes): soma = **100,00000 em todos**; erro absoluto máximo entre a fronteira medida e a prevista por `x_i(k)` com o MESMO `k` = **0,070pp** em desktop e **0,151pp** a 375px — e o erro escala exatamente com `1/largura_da_barra`, que é a assinatura da resolução do instrumento (varredura por hit-test a 0,25px), não da animação.
+  - **(3) NENHUM PIXEL TRANSPARENTE ENTRE REGIÕES, verificado e não presumido.** Varredura por `elementFromPoint` a cada 0,25px, em **três alturas** (topo, meio, base — a base é onde a diagonal mais corta), nos mesmos 60 quadros: **exatamente 3 regiões contíguas em todas as 180 varreduras**, zero ocorrências de "buraco" (a própria barra visível por baixo) e zero pontos sem elemento. A verificação é de **hit-test**, não de amostragem de pixel — está registrado assim em `TESTE_MANUAL.md`.
+  - **(4) `--diag` durante a interpolação: ACOMPANHA (Ponto 1 decidido).** As duas variantes foram construídas e medidas lado a lado. Escolhida a que acompanha, pelo argumento que o dono já tinha: a diagonal é função do dado EXIBIDO, e durante o deslize o dado exibido é o interpolado. **E é visível:** em `the-godfather` a 375px, no meio da animação, a variante fixa desenha 3,68px entre duas regiões largas — lê como corte reto, não como a diagonal da barra publicada; a que acompanha desenha 12px e a barra lê como o mesmo objeto do começo ao fim. **O risco de tremor foi medido e não existe:** 131 amostras de 5ms, zero reversões nas duas arestas da diagonal, nas duas variantes; o ponto mais fino da fatia de 2% nunca desce de 4,861px. **O que custa, registrado:** o `clamp()` prende a diagonal no teto de 12px na primeira metade e a solta depois, então o valor é contínuo mas a taxa tem um canto (t ≈ 301ms a 375px) — medido em **0,947px por quadro** no máximo, contra **8,425px por quadro** da própria fronteira, ~9× mais lento que o movimento em que viaja.
+  - **(5) Os rótulos durante a interpolação: AUSENTES (Ponto 2, recomendação do dono aceita sem contraproposta).** O empacotamento do callout não depende de `--k` — as posições são as finais desde o primeiro frame —, então um `~2%` visível durante o deslize ficaria meio segundo apontando para uma região que naquele instante é 33%. Rótulos e indicadores acendem depois, já no lugar certo e com o valor certo. **Isso reverte o `opacity: 0.16` da v1.9.27**, que só fazia sentido enquanto a barra crescia vazia. O texto continua no DOM com o valor final desde o primeiro frame.
+  - **(6) O NEON FICA LIGADO — correção da decisão da v1.9.27, pelo dono.** O brilho não decai depois do pico: estabiliza num estado aceso permanente (núcleo branco 2px, halo do grupo 6px, halo externo 11px a 20% de alfa). A ignição continua sendo o evento e o pico continua mais intenso (28px, ~35ms). Detalhe técnico que a mudança exigiu: **as quatro camadas de `text-shadow` são as mesmas em todos os quadros**, com a quarta zerada no repouso — `text-shadow` com contagem diferente de camadas não interpola, salta.
+  - **(7) A COLISÃO QUE O NEON PERMANENTE CRIA, fechada pelas DUAS saídas.** Limitar o raio do halo (11px) **e** fazer o empacotamento contar o halo (`--gap` de 8px → 14px). Cada uma sozinha é frágil: só o raio deixa a garantia dependendo de um número que a próxima calibração de brilho mexe sem perceber; só a folga deixa o halo livre para crescer. Conta: `folga_entre_tintas = gap + 2P ≥ 2R`, com o pior caso sendo dois rótulos de 4 caracteres empacotados (`gap ≥ 11,08px`) — 14px deixa 2,92px de sobra **no pior caso que a regra admite**, não só nos 35 de hoje. **Medido** (folga entre as TINTAS, com `Range`; precisa de 22px): `the-godfather` e `cidade-de-deus` 32,17px nos dois tamanhos; `cats-2019` 32,17/32,18px; e o par mais apertado do catálogo, `eighth-grade` a 375px, **28,55px** — porque ali um dos rótulos tem 4 caracteres. Zero misturas.
+  - **(8) ACESSIBILIDADE reconfirmada, com o item novo.** Sob `reduce`: 0 animações, `--k = 1`, barra na distribuição real e números acesos no primeiro frame — **e o neon permanente FICA**, conferido no `text-shadow` computado (não é movimento). Reativado: as 10 animações voltam e a sequência re-arma do zero. O `aria-label` descreve sempre o estado final e **o estado neutro de terços nunca é anunciado**. Os percentuais estão no DOM com os valores finais desde o primeiro frame.
+  - **REGISTRO DE DEPENDÊNCIA NOVA: `@property`.** É o que torna `--k` interpolável — propriedade personalizada não registrada não interpola, salta no meio do keyframe. Degradação em navegador anterior a Chrome 85 / Safari 16.4 / Firefox 128: o `var(--k, 1)` de cada fórmula garante o **estado final correto em repouso**; o que se perde é a continuidade do deslize. Nunca fica errado parado — fica sem interpolação. Mesma política do fallback de `container-type` que já existia.
+- **v1.9.27** (2026-08-27) — **FRONTEND: a barra de proporção ganha ANIMAÇÃO DE ENTRADA em três fases, os percentuais descem para um CALLOUT ancorado nas fatias, e o disclaimer da cota sai do ramo com barra.** Sessão de interface: os únicos arquivos alterados são `frontend/js/filme.js` e `frontend/css/styles.css` (mais SPEC.md e `frontend/TESTE_MANUAL.md`). **Nenhum filme regenerado, nenhum `resultado/*.json` tocado, nenhum estágio do pipeline alterado** — nada de §3[D], §3[D2], §3[D3], §3[V], seleção, coleta, classificação, verificação, briefing, prompt, validadores ou adaptador de LLM. **Nenhuma biblioteca de animação adicionada** (o projeto não tem nenhuma, e continua sem). Conferido no diff antes do commit. Suíte Python: **1492 passando, intacta**.
+  - **NUMERAÇÃO, mesmo registro da v1.9.26.** `SPEC_VERSION` (config.py) e o título deste documento continuam em 1.9.25; a constante carimba artefato de PIPELINE e esta sessão não mudou pipeline nenhum. A decisão em aberto (se a numeração de frontend passa a subir o título) segue em aberto.
+  - **(1) O DISCLAIMER DA COTA SAIU do ramo com barra (Entrega 1), e o percentual do cabeçalho FICOU — as duas coisas são UMA decisão.** A frase *"A barra é o peso real de cada grupo. A análise abaixo tem profundidade igual nos três — o tamanho das listas não indica peso."* saiu porque, com o callout, o topo passou a dizer o peso duas vezes e ela virou uma terceira explicação do mesmo fato a uma rolagem de distância das listas que existia para desarmar. **O que a remoção custa está escrito por extenso em §3[E]:** era a única frase em PALAVRAS contra a leitura "listas do mesmo tamanho, grupos do mesmo peso", e o que resta contra ela é o `~X% DAS NOTAS` no cabeçalho de cada grupo — o único sinal de peso CO-LOCALIZADO com os bullets. **Condição registrada: se o percentual do cabeçalho algum dia sair da tela, a frase tem de voltar.** O ramo SEM distribuição real (o degradado sintético) fica intacto no texto da v1.2.1, conferido; o render de TERMINAL não mudou.
+  - **(2) CALLOUT DE PERCENTUAL abaixo da barra (Entrega 3), e a REGRA DE COLISÃO que ele exigiu.** Os três números passam a ficar ancorados na sua fatia, ligados por um indicador fino. A colisão é o problema real: `the-godfather` (2/5/93) tem os centros das duas primeiras fatias a 7,20px e 32,40px em desktop e a 3,35px e 15,07px a 375px, contra uma caixa de rótulo de 39,91px — e o pior caso do catálogo é `cidade-de-deus` (1/3/96). **Regra escolhida: empacotamento esquerda→direita com folga mínima, com o indicador inclinado absorvendo o deslocamento** (fórmula, alternativas rejeitadas e medições nos dois tamanhos em §3[E]). Ela vale para qualquer distribuição futura porque é uma passada de empacotamento e não uma exceção por filme: sempre tem solução enquanto `3L + 2g` couber na barra — 135,7px contra 335px a 375px. **A conta mora no CSS**, pela mesma razão de `--diag`: mistura dado (o centro da fatia), tipografia (`ch` da mono) e layout (a largura da barra), e `min()`/`max()` misturam `%` com `ch` — resize e zoom de fonte funcionam sozinhos, sem `ResizeObserver` e sem um recálculo em JS. **`aria-hidden` no callout diverge de propósito da decisão tomada para a legenda**, e a razão está em §3[E]: a legenda carrega o NOME do grupo e informa isolada; um `~2%` solto, não — e o `aria-label` da barra já anunciou os três, com rótulo, na mesma ordem.
+  - **(3) ANIMAÇÃO DE ENTRADA em três fases (Entrega 2 + Fase 3), 1190ms no total.** fill 0→650ms (bloco único, cor NEUTRA, duração FIXA e jamais proporcional ao valor) · partição 650→820ms (3 camadas × 90ms escalonadas 40ms, esquerda→direita) · ignição 820→1190ms (3 números × 260ms escalonados 55ms). **A animação trabalha COM a arquitetura de camadas empilhadas, e não contra ela** — foi o que tornou a ordem da partição possível: o bloco neutro fica no fundo da pilha e as cores aparecem por cima dele, com a última camada (100% da barra) cobrindo o resto. **Nenhum frame introduz vão, gutter ou fio separador**: a barra contínua é decisão do dono do projeto e uma animação que abrisse um gap transitório contradiria a decisão em movimento. A expansão curta é `translateX` de `--diag × 0,35`, presa à MESMA escala adaptativa da diagonal (1,29px em `the-godfather` no mobile, onde um deslocamento fixo comeria a fatia de 6,7px). **O NEON É EVENTO, NUNCA ESTADO:** pico de ~35ms com núcleo branco + halo na cor do grupo, repouso com um único `0 0 7px` a 20% de alfa. **Zero temporizador em JS** — todo o encadeamento é `animation-delay` sobre `--ordem`.
+  - **(4) ACESSIBILIDADE (Entrega 4) — o estado base do CSS É o estado final.** Tudo que a animação faz, INCLUSIVE os estados iniciais, vive dentro de `@media (prefers-reduced-motion: no-preference)`. Essa é a parte não óbvia: se os estados iniciais morassem fora do bloco, `reduce` deixaria a barra invisível para sempre, e o `* { animation: none !important }` que já existia não salvaria. Verificado nos dois sentidos (0 animações e estado final com o bloco inativo; 13 animações re-armando quando reativado). `aria-label` descreve sempre o estado final; os percentuais estão no DOM com texto de verdade desde o primeiro frame (a ignição começa em opacidade 0,16 — apagado, não ausente); sair a 400ms e voltar pelo histórico recomeça do zero e termina no estado final.
+  - **(5) CADÊNCIA — implementado SEMPRE, e a leitura pedida vem com uma RESSALVA DE MÉTODO.** A sequência roda a cada visita, que é o que "sensação de estar sendo calculado na hora" pede. **A leitura honesta é que não pude formá-la por experiência:** o painel de navegação desta sessão roda em documento OCULTO, onde `document.timeline` fica congelado e as animações só avançam quando um frame é forçado (screenshot). Percorri os filmes e MEDI a sequência pela Web Animations API, mas **não a vi rodando em velocidade real nem uma vez**, muito menos várias seguidas — e cansaço em navegação repetida é exatamente o tipo de coisa que só a experiência mede. O que dá para dizer sem inventar: 1,19s é curto para uma visita e longo para a quinta seguida, e o único trecho que o leitor espera *sem receber informação nova* é a Fase 1 (650ms, mais da metade do total) — se a cadência incomodar, é dela que se corta, antes de trocar "sempre" por "uma vez por sessão". A decisão fica com o dono do projeto, que vai ver a animação antes de publicar.
+  - **PRESERVADO e conferido:** geometria da barra (fronteira diagonal adaptativa, zero vão, proporção exata), ordem da página, disclosure APROFUNDAR, rótulos HATERS/MIXED/FANS e o critério rótulo-versus-prosa, glossário da home, exceção do bucket dominante (`napoleon-2023` e `friday-the-13th-2009` seguem com os três em destaque), ficha na pilha de sistema. **Conferência barra × cabeçalhos nos 35: zero divergência** — a fronteira medida na meia altura bate com o `share_real` normalizado em todos, exatamente como na v1.9.26.
 - **v1.9.26** (2026-08-26) — **FRONTEND: a página do filme é reordenada em torno de uma BARRA DE PROPORÇÃO no topo, o veredito desce para o fecho, os três grupos ganham NOME DE RÓTULO (HATERS/MIXED/FANS) e o disclosure do bullet deixa de parecer botão.** Sessão de interface: os únicos arquivos alterados são `frontend/js/filme.js` e `frontend/css/styles.css`. **Nenhum filme regenerado, nenhum `resultado/*.json` tocado, nenhum estágio do pipeline alterado** — nada de §3[D], §3[D2], §3[D3], §3[V], seleção, coleta, classificação, verificação, briefing, prompt, validadores ou adaptador de LLM. Conferido no diff antes do commit. Suíte Python: **1492 passando, intacta**.
   - **NUMERAÇÃO, registro honesto.** `SPEC_VERSION` (config.py) e o título deste documento **continuam em 1.9.25**, e o teste que amarra os dois (`test_spec_version.py`) segue verde. A constante carimba `resultado/*.json` e existe para dizer sob qual versão do PIPELINE um artefato foi gerado; esta sessão não mudou pipeline nenhum, e subi-la faria o próximo filme gerado carimbar uma versão que não descreve nada do que ele contém. É o mesmo tratamento que as v1.9.17–v1.9.20 receberam (quatro versões de frontend numeradas no changelog enquanto a constante ficou parada) — com a diferença de que aqui a entrada é escrita NA SESSÃO, e não como dívida paga quatro versões depois. **Decisão em aberto para o dono do projeto:** se a numeração de frontend passar a subir o título, esta entrada e a constante sobem juntas.
   - **(1) A página reordenada (Entrega 1).** Ordem nova, de cima para baixo: ano + título → botão de reviews → ficha (sinopse + metadados) → **BARRA DE PROPORÇÃO** (nova) → linha arco-íris → bullets por sentimento, direto → **VEREDITO** (movido) → narrativa colapsada → pesquisa. O topo passa a ser ocupado pelo sinal DIMENSIONAL ("quanta gente de cada lado", legível de relance, sem leitura) em vez do VERBAL; o veredito é uma CONCLUSÃO, e conclusão lida antes da evidência é asserção, lida depois é fecho. O cabeçalho **"EM DETALHE · TEMA A TEMA" SAI** — não há mais um resumo antes dele do qual separar "o detalhe". O veredito muda de POSIÇÃO e **não de conteúdo**: mesmo texto, mesma origem, mesma geração, §3[V] intocado.

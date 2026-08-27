@@ -330,10 +330,15 @@
     var fatias = fatiasDeProporcao(f);
     if (fatias) {
       el.appendChild(barraContinua(fatias));
+      el.appendChild(calloutDePercentual(fatias));
       el.appendChild(legendaDaBarra(fatias));
+    } else {
+      // [v1.9.27, Entrega 1] SEM distribuição real não há barra — e aí a
+      // nota da cota volta INTEIRA, no texto da v1.2.1. Só o ramo COM
+      // barra perdeu a frase; este é preservado sem uma vírgula de
+      // diferença (ver `notaDaCota`).
+      el.appendChild(notaDaCota());
     }
-
-    el.appendChild(notaDaCota(f, !!fatias));
     return el;
   }
 
@@ -385,6 +390,36 @@
   // a própria largura. O teto de 12px impede que um filme sem fatia
   // estreita ganhe uma diagonal exagerada; o piso de 3px impede que ela
   // desapareça quando a menor fatia é minúscula.
+  //
+  // ---------------------------------------------------------------------
+  // [v1.9.28] A ANIMAÇÃO DE ENTRADA: AS FRONTEIRAS DESLIZAM. O modelo
+  // anterior (bloco neutro crescendo de 0 a 100%, cores nascendo por cima)
+  // SAIU inteiro, e com ele a camada de prefill. A barra agora **nasce
+  // completa**, particionada em TRÊS PARTES IGUAIS, e as fronteiras
+  // deslizam até a distribuição real.
+  //
+  //   x1: 33,333%  ──▶  h            x2: 66,667%  ──▶  h + m
+  //
+  // O QUE O JS GRAVA, e é só isto: por camada, `--neutro` (a fronteira do
+  // estado de terços) e `--fim` (a fronteira real), os dois em percentual
+  // sem unidade. A INTERPOLAÇÃO INTEIRA mora no CSS, num único número
+  // animado (`--k`, 0 → 1), e cada fronteira é
+  //
+  //     x(k) = neutro + (fim − neutro) × k
+  //
+  // UMA função temporal só, literalmente: `--k` é animado UMA vez, na
+  // barra, e as duas fronteiras (mais a diagonal) são funções puras dele.
+  // Não são duas animações com temporização igual — é uma animação só,
+  // lida por dois lugares. Isso mata na origem o frame em que a soma não
+  // fecha 100%.
+  //
+  // E a arquitetura de CAMADAS EMPILHADAS, preservada, dá a garantia mais
+  // forte ainda: a camada de baixo ocupa 100% da barra em TODOS os frames,
+  // então a região da terceira fatia é literalmente "o que sobra" e a soma
+  // fecha por construção, não por sincronia. Não existe superfície
+  // descoberta em frame nenhum, nem durante o deslize — e é por isso que
+  // as fatias NÃO viraram três segmentos independentes em flex/grid, que
+  // é a forma de fazer isto que deixa buraco.
   function barraContinua(fatias) {
     var bar = document.createElement("div");
     bar.className = "proportion__bar";
@@ -402,23 +437,152 @@
       if (i === fatias.length - 1) {
         // A última preenche a barra inteira e não recebe recorte: é o
         // fundo sobre o qual as outras terminam. Sem ela haveria uma
-        // faixa descoberta na direita quando a soma arredondada der 99.
-        camada.style.width = "100%";
+        // faixa descoberta na direita quando a soma arredondada der 99 —
+        // e, com a animação de fronteiras, uma faixa descoberta em todo
+        // frame intermediário. Ela não tem fronteira própria e por isso
+        // não participa da interpolação.
+        camada.className += " proportion__layer--fundo";
       } else {
-        camada.style.width = "calc(" + acumulado + "% + var(--diag) / 2)";
-        camada.style.clipPath =
-          "polygon(0 0, 100% 0, calc(100% - var(--diag)) 100%, 0 100%)";
+        // As DUAS pontas da fronteira desta camada. `--neutro` é a
+        // partição em partes iguais (i+1 de n), que é onde a barra nasce;
+        // `--fim` é a fronteira real acumulada. O CSS interpola entre as
+        // duas com o mesmo `--k` que todas as outras leem.
+        camada.style.setProperty("--neutro",
+          (((i + 1) / fatias.length) * 100).toFixed(3));
+        camada.style.setProperty("--fim", acumulado.toFixed(3));
       }
       bar.appendChild(camada);
     });
 
-    // O único valor que o JS grava: o percentual da menor fatia, sem
-    // unidade. A conversão para pixel é do CSS (ver acima).
+    // O percentual da menor fatia FINAL, sem unidade. A conversão para
+    // pixel é do CSS (ver acima), e a interpolação da diagonal durante o
+    // deslize também — no estado de terços a menor fatia é 33,333%, e o
+    // CSS deriva o valor de agora do mesmo `--k`.
     var menorPct = fatias.reduce(function (m, x) {
       return Math.min(m, x.pct);
     }, 100);
     bar.style.setProperty("--menor-pct", menorPct.toFixed(3));
     return bar;
+  }
+
+  // =====================================================================
+  // [v1.9.27, Entrega 3] O CALLOUT DE PERCENTUAL — os três números descem
+  // da barra e passam a ficar ANCORADOS na fatia de cada um, abaixo dela,
+  // ligados por um indicador fino. Os percentuais dos CABEÇALHOS de grupo
+  // continuam onde estavam (Entrega 1): são o mesmo inteiro, e a fonte é a
+  // mesma `share_real` de sempre.
+  //
+  // ---------------------------------------------------------------------
+  // A COLISÃO, que é o problema real desta entrega, e a REGRA que a
+  // resolve. `the-godfather` é 2% / 5% / 93%: os centros verdadeiros das
+  // duas primeiras fatias ficam a 1% e 4,5% da largura da barra — 7,2px e
+  // 32,4px em desktop, 3,4px e 15,1px a 375px. A caixa de um número mede
+  // ~40px. Três números centrados nos seus centros verdadeiros se
+  // sobrepõem, e nenhuma delas cabe dentro da própria fatia.
+  //
+  // REGRA ESCOLHIDA: EMPACOTAMENTO DA ESQUERDA PARA A DIREITA COM FOLGA
+  // MÍNIMA, e o indicador inclinado absorve o deslocamento.
+  //
+  //   x1 = clamp de (c1 − L/2) entre 0 e (100% − 3L − 2g)
+  //   x2 = max(x1 + L + g,  min(c2 − L/2, 100% − 2L − g))
+  //   x3 = max(x2 + L + g,  min(c3 − L/2, 100% − L))
+  //
+  // onde c é o centro VERDADEIRO da fatia (o mesmo número que desenha a
+  // barra), L a largura fixa da caixa do número e g a folga mínima. Cada
+  // número vai para o centro da sua fatia; quando não cabe, escorrega o
+  // mínimo necessário para a direita, e a linha que o liga ao centro
+  // verdadeiro inclina. O ponto de ancoragem NUNCA se move: quem se move é
+  // o rótulo, e a inclinação é a declaração visível de que ele se moveu.
+  //
+  // POR QUE ESTA E NÃO AS OUTRAS DUAS:
+  //  · OMISSÃO abaixo de um limiar foi descartada de saída — sumir com o
+  //    "~2%" é apagar exatamente o número que o leitor não esperava, e a
+  //    Entrega 4 exige os três legíveis e no DOM desde o primeiro frame.
+  //  · EMPILHAMENTO VERTICAL resolve a colisão mas cobra altura e desfaz a
+  //    leitura em linha única; e um número na segunda linha continua
+  //    precisando de um indicador inclinado para achar a fatia — ou seja,
+  //    paga o custo do deslocamento sem evitar o problema dele.
+  //
+  // POR QUE ELA VALE PARA QUALQUER DISTRIBUIÇÃO FUTURA, e não só para as
+  // 35 de hoje: a regra é uma passada de empacotamento, não uma exceção
+  // por filme. Ela SEMPRE tem solução enquanto 3L + 2g couber na barra —
+  // ~135px contra 335px de barra a 375px de viewport, com folga de 2,5×.
+  // Abaixo disso (viewport de ~180px, que não existe) os números
+  // encostariam; acima, qualquer combinação de três percentuais que somem
+  // 100 é acomodada, inclusive 0/0/100 e 33/33/34.
+  //
+  // ONDE A CONTA MORA: NO CSS, pela mesma razão de `--diag` (§3[E]). O
+  // centro de cada fatia é DADO (percentual, sai do JSON e nunca muda); a
+  // largura da caixa do número é TIPOGRAFIA (`ch` da mono, o CSS sabe e o
+  // JS só saberia medindo); a largura da barra é LAYOUT (muda a cada
+  // resize). `min()`/`max()` misturam porcentagem e `ch` sem problema, e
+  // o resultado reage a resize e a zoom de fonte sozinho — sem
+  // `ResizeObserver`, sem ouvinte de `resize`, sem um único recálculo em
+  // JS. O JS grava só `--c1..--cn` e `--n`.
+  //
+  // `aria-hidden` — DIVERGE, de propósito, da decisão tomada para a
+  // LEGENDA logo abaixo ("a legenda visível não é aria-hidden: esconder
+  // texto visível de quem usa leitor de tela troca um problema por
+  // outro"). A legenda carrega o NOME do grupo: lida isolada, ela
+  // informa. Um "~2%" solto, não — sem o nome ao lado, os três números
+  // viram três grandezas órfãs logo depois de o leitor de tela já ter
+  // anunciado "HATERS, cerca de 2% das notas; MIXED...", que é o
+  // `aria-label` da barra, com rótulo e na mesma ordem. O callout não
+  // acrescenta um bit de informação ao que a alternativa textual da barra
+  // já diz; é uma re-apresentação VISUAL dela. Esconder aqui não perde
+  // nada e evita três números sem dono.
+  // =====================================================================
+  function calloutDePercentual(fatias) {
+    var el = document.createElement("div");
+    el.className = "proportion__callout";
+    el.setAttribute("aria-hidden", "true");
+    el.style.setProperty("--n", String(fatias.length));
+
+    var acumulado = 0;
+    fatias.forEach(function (s, i) {
+      // O centro VERDADEIRO da fatia, na mesma escala normalizada que
+      // desenha a barra — é a mesma lista `fatias`, então o indicador
+      // aponta para a geometria real, e não para uma segunda conta que
+      // pudesse divergir dela.
+      var centro = acumulado + s.pct / 2;
+      acumulado += s.pct;
+      el.style.setProperty("--c" + (i + 1), centro.toFixed(3));
+
+      // Um invólucro por fatia, `inset: 0`: ele tem a MESMA largura do
+      // callout, então as porcentagens de `left`/`width` dos filhos
+      // resolvem contra a largura da barra, que é o sistema de
+      // coordenadas em que `--c` está escrito.
+      var anc = document.createElement("div");
+      anc.className = "proportion__anchor";
+      anc.setAttribute("data-group", s.grupo);
+      anc.style.setProperty("--ordem", String(i));
+
+      // O indicador tem DUAS metades porque o CSS não tem sinal: a que
+      // aponta para a direita mede `max(0, rótulo − centro)` e a que
+      // aponta para a esquerda mede `max(0, centro − rótulo)`. Só uma tem
+      // largura de verdade; a outra colapsa para a espessura mínima e vira
+      // a marquinha vertical em cima do centro verdadeiro da fatia — que é
+      // justamente o que se quer ali. Sem deslocamento nenhum, as duas
+      // colapsam e o indicador é uma marca vertical de 2px.
+      var dir = document.createElement("span");
+      dir.className = "proportion__lead proportion__lead--dir";
+      var esq = document.createElement("span");
+      esq.className = "proportion__lead proportion__lead--esq";
+
+      // O NÚMERO. Mesmo inteiro do cabeçalho do grupo, mesma fonte
+      // `share_real`. Está no DOM, com texto de verdade, desde o primeiro
+      // frame: a ignição da Fase 3 mexe em opacidade, cor e sombra — nunca
+      // em conteúdo (Entrega 4, item 3).
+      var num = document.createElement("span");
+      num.className = "proportion__pct";
+      num.textContent = "~" + s.share + "%";
+
+      anc.appendChild(dir);
+      anc.appendChild(esq);
+      anc.appendChild(num);
+      el.appendChild(anc);
+    });
+    return el;
   }
 
   function legendaDaBarra(fatias) {
@@ -473,26 +637,41 @@
       }).join("; ") + ".";
   }
 
-  // [v1.9.26, Entrega 1] O DISCLAIMER DA COTA, preservado em forma mínima
-  // e reancorado. Ele é o que impede a leitura errada mais provável desta
-  // página: listas de bullets do mesmo tamanho NÃO significam grupos do
-  // mesmo peso — a cota de análise é 40/40/40 por decisão (§0), o peso é
-  // o que a barra acima mostra. Até a v1.9.25 a frase morava sob o
-  // cabeçalho "EM DETALHE"; ela desce para debaixo da barra porque é ali
-  // que a substância dela fica ancorada no objeto que mostra o peso.
+  // [v1.9.27, Entrega 1] O DISCLAIMER DA COTA SAIU DO RAMO COM BARRA.
+  // Esta função existe agora só para o ramo SEM distribuição real.
   //
-  // v1.4.0 (preservado): o texto depende do dado disponível. SEM
-  // distribuição real não há barra, e a regra da v1.2.1 volta a valer
-  // inteira — os tamanhos não são prevalência de nada. Mantido em
-  // sincronia com render.py (DISCLAIMER_*).
+  // O QUE SAIU, literal: "A barra é o peso real de cada grupo. A análise
+  // abaixo tem profundidade igual nos três — o tamanho das listas não
+  // indica peso." Ficava sob a barra desde a v1.9.26.
+  //
+  // POR QUE SAIU, e é DECISÃO, não esquecimento: com o callout de
+  // percentual (Entrega 3) o topo da página passou a dizer o peso duas
+  // vezes — a barra e os três números ancorados nela —, e a frase virava
+  // uma terceira explicação do mesmo fato a 800px de distância das listas
+  // que ela existia para desarmar.
+  //
+  // O QUE A REMOÇÃO CUSTA, escrito porque é ele que a decisão paga: essa
+  // era a única frase que dizia, em palavras, que listas de bullets do
+  // mesmo tamanho NÃO são grupos do mesmo peso. Sem ela, o único sinal de
+  // peso CO-LOCALIZADO com as listas é o "~46% DAS NOTAS" no cabeçalho de
+  // cada grupo — e é por isso que ele FICA (a Entrega 1 removeu a frase e
+  // preservou o percentual do cabeçalho de propósito). Quem rolar direto
+  // para os bullets vê seis marcadores em HATERS e seis em FANS com 2% e
+  // 93% impressos ao lado do nome de cada um; o número no cabeçalho é o
+  // que impede a leitura "listas iguais, pesos iguais" de fechar. Se o
+  // percentual do cabeçalho algum dia sair, esta frase tem de voltar.
+  //
+  // v1.4.0 / v1.2.1 (PRESERVADO INTACTO): sem distribuição real não há
+  // barra nenhuma, não há callout e não há percentual em cabeçalho algum —
+  // aí a única coisa na tela sobre tamanho de grupo são as listas, e a
+  // regra da v1.2.1 volta a valer inteira. Mesmo texto de sempre, mantido
+  // em sincronia com render.py (DISCLAIMER_*).
   // [v1.9.20] Sem algarismo de contagem de review ("40 · 40 · 40" saiu).
-  function notaDaCota(f, temBarra) {
+  function notaDaCota() {
     var p = document.createElement("p");
     p.className = "proportion__note";
-    p.textContent = temBarra
-      ? "A barra é o peso real de cada grupo. A análise abaixo tem "
-        + "profundidade igual nos três — o tamanho das listas não indica peso."
-      : "Os grupos são cotas de coleta — não a proporção real das opiniões.";
+    p.textContent =
+      "Os grupos são cotas de coleta — não a proporção real das opiniões.";
     return p;
   }
 
