@@ -338,38 +338,78 @@ def test_linhas_saem_na_ordem_canonica_dos_eixos():
 
 @pytest.fixture(scope="module")
 def catalogo():
+    """[2026-08-31] DUAS correções em relação à versão original.
+
+    **(1) Lê `CONSENSO_VERIFICADO`, não `CONSENSO_PADRAO`.** A fixture
+    original lia `consenso.jsonl` — o consenso CRU, pré-verificador —, um
+    resíduo de quando o teste foi escrito (v1.9.15), ANTES da adoção do
+    passe `V2_alvo` na v1.9.16. Desde então, `_carregar_consenso_producao`
+    prefere o VERIFICADO sempre que ele existe e está em dia (§2.5 da SPEC)
+    — é ele que produção usa, não o cru. A divergência era invisível porque
+    ninguém tinha comparado os dois; ficou exposta ao investigar a
+    discrepância desta correção.
+
+    **(2) Filtrado por `_filtrar_pela_analisada`, como `montar_bloco` faz na
+    produção real** — não o dict cru de `carregar_classificacao`.
+
+    Achado ao estender a cobertura de classificação aos 35 filmes
+    (`AUDITORIA_POPULACAO_E_GABARITO.md`/`RELATORIO_GABARITO_E_COBERTURA.md`):
+    `consenso.jsonl`/`consenso_verificado.jsonl` ACUMULAM classificação de
+    seleções antigas (o mesmo defeito que motivou `_filtrar_pela_analisada`
+    na v1.9.15, agora manifesto em 93 dos 105 buckets, não só nos 9 que a
+    extensão original tocou). O dict cru chega a ter 68 reviews classificadas
+    num bucket de 40 — sem o filtro, os testes mediam um denominador que a
+    síntese nunca leu, exatamente o "dois quarentas" que a v1.9.15 corrigiu
+    só para os 3 filmes publicados na época. Este fixture aplica a MESMA
+    correção que `montar_eixos`/`montar_bloco` já aplicam em produção, para
+    que o teste continue sendo um sentinela do catálogo REAL, não de um
+    caminho de cálculo que a produção não usa.
+    """
     from pathlib import Path
-    caminho = Path(__file__).resolve().parent.parent / E.CONSENSO_PADRAO
+    from espectro24.pipeline import amostra_do_bruto
+    caminho = Path(__file__).resolve().parent.parent / E.CONSENSO_VERIFICADO
     if not caminho.exists():
         pytest.skip(f"classificação não disponível: {caminho}")
-    return E.carregar_classificacao(caminho)
+    bruto = E.carregar_classificacao(caminho)
+    raiz_bruto = Path(__file__).resolve().parent.parent / "dados" / "bruto"
+    saida = {}
+    for slug, cls in bruto.items():
+        if not (raiz_bruto / slug).is_dir():
+            saida[slug] = cls
+            continue
+        jp = Path(__file__).resolve().parent.parent / "resultado" / f"{slug}.json"
+        import json
+        coleta = (json.loads(jp.read_text(encoding="utf-8")).get("coleta")
+                  if jp.exists() else None)
+        analisadas = {b: {r.id for r in rs} for b, rs in
+                      amostra_do_bruto(slug, coleta=coleta, raiz=raiz_bruto).items()}
+        saida[slug] = E._filtrar_pela_analisada(cls, analisadas)
+    return saida
 
 
 def test_catalogo_tem_os_35_filmes_classificados(catalogo):
     assert len(catalogo) == 35
 
 
-def test_catalogo_reproduz_18_tematicos_e_17_valorativos(catalogo):
-    """[v1.9.15] O número decidido em §2.5, sob `>=` exato. Era 13/22 na
-    v1.9.14, sob a comparação estrita que reproduzia por acidente o mesmo
-    bug de ponto flutuante que a medição de referência tinha. Se a margem, a
-    métrica ou a comparação mudarem, é aqui que o catálogo inteiro reclama."""
+def test_catalogo_reproduz_16_tematicos_e_19_valorativos(catalogo):
+    """[2026-08-31] Era 18/17 sob a cobertura parcial de 2.866/4.056 (70,7%)
+    que vigorava desde a v1.9.15. A extensão desta sessão levou a cobertura a
+    4.056/4.056 (100%) nos 35 filmes, e **10 filmes mudaram de estado**
+    (6 tematico→valorativo, 4 valorativo→tematico) — não por viés de
+    conteúdo das reviews que faltavam (medido: diferença de ≤2pp em todas as
+    frequências por eixo), mas porque os 10 tinham o lift observado a poucos
+    pontos percentuais da margem de 20pp, e a margem já era conhecida como
+    porosa nesse regime de n (`ESTUDO_CATALOGO_35.md` §8, bootstrap: 13/31
+    marcações sobrevivem a menos de 60% das reamostragens). Cruzamento
+    direto: `bones-and-all`, `everything-everywhere-all-at-once`,
+    `hereditary`, `napoleon-2023`, `perfect-days-2023` e
+    `spider-man-across-the-spider-verse` já estavam nessa lista de
+    marcações frágeis. Se a margem, a métrica ou a comparação mudarem, é
+    aqui que o catálogo inteiro reclama."""
     estados = {slug: E.contraste(E.lifts(E.frequencias(cls)))
                for slug, cls in catalogo.items()}
     tematicos = [s for s, e in estados.items() if e == "tematico"]
-    assert (len(tematicos), len(estados) - len(tematicos)) == (18, 17)
-
-
-def test_os_5_filmes_na_linha_dos_20pp_agora_sao_tematicos(catalogo):
-    """[v1.9.15] Os 5 filmes que caíam de fora sob `>` estrito (§2.5) agora
-    ATINGEM a margem sob `>=`: exatamente o efeito que motivou a correção."""
-    na_linha = {"barbie", "bones-and-all", "hereditary", "im-still-here-2024",
-                "spider-man-across-the-spider-verse"}
-    for slug in na_linha:
-        lifts = E.lifts(E.frequencias(catalogo[slug]))
-        melhor = max(v for por_eixo in lifts.values() for v in por_eixo.values())
-        assert melhor == Fraction(1, 5), slug
-        assert E.contraste(lifts) == "tematico", slug
+    assert (len(tematicos), len(estados) - len(tematicos)) == (16, 19)
 
 
 def test_estado_dos_3_filmes_publicados(catalogo):

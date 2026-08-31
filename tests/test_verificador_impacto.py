@@ -184,14 +184,31 @@ def test_projecao_usa_a_margem_exata_e_nao_float(vi):
     assert not vi._atinge(Fraction(199, 1000))
 
 
-def test_base_da_projecao_reproduz_18_de_35(vi, corpus):
-    """A base correta é 18/35, não os 13/35 que a projeção antiga usava.
+def test_base_da_projecao_reproduz_10_de_35(vi, corpus):
+    """Era 18/35 sob a cobertura parcial de 2.866/4.056 que vigorava desde a
+    v1.9.15. **NÃO é o número de produção** (esse é 16/35, ver
+    `tests/test_eixos.py::test_catalogo_reproduz_16_tematicos_e_19_valorativos`)
+    — é o número que `_cobertura_exata`/`_corpus_consenso` DEVOLVEM, porque
+    estas duas funções, ao contrário de `eixos.montar_bloco`, NÃO chamam
+    `_filtrar_pela_analisada`. `_corpus_consenso()` lê `consenso.jsonl` cru e
+    conta toda review classificada para aquele bucket, mesmo a que não está
+    na seleção de produção atual — o mesmo "dois quarentas" que a v1.9.15
+    corrigiu em `montar_bloco`, nunca replicado aqui porque este script é
+    ferramenta de PROJEÇÃO (usada durante a investigação da saturação de
+    `impacto_emocional`), não parte do caminho de renderização.
 
-    Este é o número que a v1.9.15 estabeleceu sob `>=` exato, e é a régua
-    contra a qual qualquer ganho projetado tem de ser lido.
+    **Achado desta sessão** (extensão de cobertura,
+    `RELATORIO_GABARITO_E_COBERTURA.md`): a lacuna era invisível com 9 de 105
+    buckets acumulados; com a extensão aos 35 filmes ela passou a 93 de 105,
+    e `_cobertura_exata` sobre `consenso.jsonl` cru diverge do número real de
+    produção em 6 filmes (10 contra 16). **Fica registrado como limitação
+    conhecida, não corrigido nesta sessão** (fora do escopo autorizado —
+    `verificador_impacto.py` não foi tocado). Se `_cobertura_exata` for usada
+    de novo para decidir alguma coisa sobre o catálogo real, aplicar
+    `eixos._filtrar_pela_analisada` antes é pré-requisito.
     """
     base = vi._cobertura_exata(corpus)
-    assert base["n_filmes_com_algum"] == 18
+    assert base["n_filmes_com_algum"] == 10
     assert base["n_filmes"] == 35
 
 
