@@ -935,8 +935,12 @@
     // O que se ganha junto: duas implementações da mesma regra em linguagens
     // diferentes eram uma divergência esperando acontecer, com sintoma
     // silencioso. `tests/test_veredito_paridade_js.py` existia só para vigiar
-    // essa divergência, e saiu com ela — o risco não é mais monitorado
-    // porque não é mais possível.
+    // ESSA divergência entre as duas implementações — sem a segunda
+    // implementação, o teste não perde cobertura, deixa de vigiar um risco
+    // que deixou de existir. Ele saiu junto (não ficou como verde permanente
+    // sem objeto — o mesmo modo de falha do trap vazio registrado em §2.10).
+    // NÃO recrie esse teste achando que fechou uma lacuna: a lacuna era a
+    // segunda implementação, e ela é que não deveria voltar.
     //
     // Consequência aceita: um filme com bloco `eixos` e SEM `veredito` não
     // renderiza veredito nenhum, em vez de um texto montado aqui. É o
