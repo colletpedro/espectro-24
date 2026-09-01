@@ -1,0 +1,63 @@
+{
+  "concordancia": {
+    "n": 27,
+    "total": 28,
+    "fracao": 0.9642857142857143
+  },
+  "por_grupo": {
+    "G1": {
+      "n": 13,
+      "total": 14
+    },
+    "G2": {
+      "n": 9,
+      "total": 9
+    },
+    "controle": {
+      "n": 5,
+      "total": 5
+    }
+  },
+  "matriz_confusao": {
+    "sustenta": {
+      "sustenta": 12,
+      "não sustenta": 0,
+      "contradiz": 0,
+      "não sei julgar": 0
+    },
+    "não sustenta": {
+      "sustenta": 0,
+      "não sustenta": 14,
+      "contradiz": 1,
+      "não sei julgar": 0
+    },
+    "contradiz": {
+      "sustenta": 0,
+      "não sustenta": 0,
+      "contradiz": 1,
+      "não sei julgar": 0
+    },
+    "não sei julgar": {
+      "sustenta": 0,
+      "não sustenta": 0,
+      "contradiz": 0,
+      "não sei julgar": 0
+    }
+  },
+  "discordancias": [
+    {
+      "n": 1,
+      "dono": "não sustenta",
+      "modelo": "contradiz",
+      "grupo": "G1",
+      "texto": "Hay algo neurodivergente en la interpretación de Joaquín Phoenix que me hace pensar en el presidente Javier Gerardo Milei. Mucho CG, por momentos era como ver un juego de estrategia en la computadora."
+    }
+  ],
+  "contagem_final": {
+    "sustenta": 12,
+    "contradiz": 1,
+    "nao_sei_julgar": 0,
+    "total": 40
+  },
+  "faltando_dono": []
+}

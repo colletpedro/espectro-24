@@ -1,0 +1,84 @@
+{
+  "concordancia": {
+    "n": 10,
+    "total": 14,
+    "fracao": 0.7142857142857143
+  },
+  "por_grupo": {
+    "G1": {
+      "n": 2,
+      "total": 5
+    },
+    "G2": {
+      "n": 4,
+      "total": 4
+    },
+    "controle": {
+      "n": 4,
+      "total": 5
+    }
+  },
+  "matriz_confusao": {
+    "sustenta": {
+      "sustenta": 2,
+      "não sustenta": 0,
+      "contradiz": 0,
+      "não sei julgar": 0
+    },
+    "não sustenta": {
+      "sustenta": 3,
+      "não sustenta": 8,
+      "contradiz": 0,
+      "não sei julgar": 0
+    },
+    "contradiz": {
+      "sustenta": 0,
+      "não sustenta": 0,
+      "contradiz": 0,
+      "não sei julgar": 0
+    },
+    "não sei julgar": {
+      "sustenta": 0,
+      "não sustenta": 1,
+      "contradiz": 0,
+      "não sei julgar": 0
+    }
+  },
+  "discordancias": [
+    {
+      "n": 1,
+      "dono": "não sustenta",
+      "modelo": "sustenta",
+      "grupo": "G1",
+      "texto": "is it bad to say i would have liked this more if it wasnt australian like half of it felt like one of those videos they make you watch in high school about peer pressure"
+    },
+    {
+      "n": 2,
+      "dono": "não sustenta",
+      "modelo": "sustenta",
+      "grupo": "G1",
+      "texto": "Me irritou essa protagonista e o filme inteiro. Não sei quem inventou de colocar memes em filmes de terror. Se os filmes de agora em diante for para colocar memes então é melhor criar uma rede social"
+    },
+    {
+      "n": 7,
+      "dono": "não sustenta",
+      "modelo": "sustenta",
+      "grupo": "G1",
+      "texto": "унылая хуйня с фрикозоидными актёрами и ебейшими тарантиновскими диалогами от которых тошно становится автор дегенерат ебаный желаю ему смерти в муках"
+    },
+    {
+      "n": 27,
+      "dono": "não sei julgar",
+      "modelo": "não sustenta",
+      "grupo": "controle",
+      "texto": "نجمتين كثيرة عليه حرفياً تتكلم عن لقطات معدودة جداً في الفيلم هذا كانت جيدة حتى تابعته مع يزيد كان ممتع البلوت تويست يوم الاب يخش على لامين يامال ويحاول يقتلها واخرتها تقتل ابوه سالفه غير مهمه والله داري محد بيتابعه"
+    }
+  ],
+  "contagem_final": {
+    "sustenta": 2,
+    "contradiz": 0,
+    "nao_sei_julgar": 1,
+    "total": 40
+  },
+  "faltando_dono": []
+}
