@@ -242,6 +242,60 @@ faltava chegando.
 > esta regra; nenhum filme foi regerado. Ela vive numa função de
 > `frontend/js/filme.js` (`ordenarPorPeso`) e em nenhum outro lugar.
 
+> **A MARGEM DE CONTRASTE PASSA A DEPENDER DE `n` (v1.9.34) — e isto NÃO é uma
+> terceira exceção a este §0. É o §0 aplicado a uma dimensão em que ele estava
+> sendo ignorado**, exatamente como a ordenação por peso da v1.9.30.
+>
+> **O ESCOPO, primeiro, porque ele resolve metade da pergunta.** Este §0 governa
+> a neutralidade entre os TRÊS GRUPOS **dentro** de um filme: cota 40/40/40,
+> mesma estrutura, mesmo espaço, mesma margem para os dois lados. Ele nunca
+> falou sobre neutralidade **entre filmes**. A lei por `n` (§2.5) **não toca em
+> nada que este parágrafo governa**: dentro de cada filme os três buckets são
+> julgados pelo MESMO limiar, com a mesma métrica e o mesmo denominador. Não
+> existe caminho pelo qual `negativas` receba um limiar e `positivas` outro — e
+> há teste travando isso (`tests/test_eixos.py`).
+>
+> **NEUTRALIDADE DE TRATAMENTO É MESMA EXIGÊNCIA PROBATÓRIA, NÃO MESMO NÚMERO.**
+> É a frase que esta versão acrescenta ao princípio, e ela precisa estar escrita
+> porque a intuição diz o oposto (um número igual para todos *parece* a opção
+> neutra). **MEDIDO** (`ESTUDO_MARGEM_20PP.md` §4.1): o mesmo limiar de 20pp é o
+> percentil **3** do ruído com n=10, **34** com n=20, **65** com n=30, **83**
+> com n=40 e **99,8** com n=100. Um número constante aplicado a amostras de
+> tamanhos diferentes exige provas **sistematicamente diferentes**, e a régua é
+> mais FROUXA exatamente onde o dado é mais fraco — o filme com amostra pequena
+> passa mais fácil, e o que ele publica tem mais chance de ser ruído. Chamar
+> isso de neutralidade é chamar de neutro o resultado de não olhar.
+>
+> **O PRECEDENTE JÁ ESTAVA AQUI DENTRO, e o argumento é o mesmo trocando duas
+> palavras.** A v1.9.30 escreveu, sobre a ordem dos blocos: *"a ordem antiga não
+> era neutra — era CONSTANTE, que é outra coisa… quando duas posições são
+> desiguais por construção, a única regra defensável é a que decide entre elas
+> pelo DADO."* Troque "ordem" por "limiar" e "peso" por "tamanho de amostra" e o
+> parágrafo se lê sem uma emenda.
+>
+> **E O TESTE QUE A v1.9.30 USOU PARA SE AUTORIZAR PASSA AQUI TAMBÉM, POR
+> CONSTRUÇÃO:** a regra é função do DADO, não do sentimento. `n` é quantas
+> reviews com texto ≥150 caracteres o Letterboxd tem naquele bucket — contagem,
+> não juízo. **Não existe mecanismo pelo qual um limiar em função de `n`
+> favoreça o grupo negativo ou o positivo**, porque `n` é o mesmo para os três
+> dentro de um filme (é o MENOR dos três, §2.5) e entra uma vez só.
+>
+> **O QUE SE PERDE, escrito por extenso porque é a metade honesta.**
+> **Comparabilidade entre páginas.** O leitor que vê `tematico` em `cats-2019` e
+> `valorativo` em `the-godfather` não tem como saber que o segundo foi julgado
+> sob um limiar mais alto (26,4pp contra 22,8pp). A afirmação implícita "estes
+> dois filmes são diferentes" fica um grau mais fraca do que parece. **MEDIDO:
+> isso afeta 6 dos 35 filmes hoje** (os que têm algum bucket abaixo de 40), e em
+> 4 deles a diferença de limiar é menor que um passo do quantum. O caso extremo
+> é um só (`obsession-2026`, n = 5/6/8) e é exatamente aquele em que o produto
+> **deveria** estar dizendo outra coisa — e passa a dizer: ele sai sem estado
+> publicado (§2.5, piso de `n`).
+>
+> **O DADO por filme não muda de forma.** A cota 40/40/40 continua literal, os
+> três buckets continuam com o mesmo leiaute, o mesmo espaço estrutural e a
+> mesma quantidade de bullets. O que muda é **quais filmes** caem em cada ramo
+> do veredito — não como um filme trata seus três grupos.
+
 ---
 **Objetivo:** dado o nome de um filme, agregar reviews de usuários do Letterboxd em três buckets por nota e produzir, via LLM, uma síntese temática de cada bucket — pontos recorrentes com frequência — permitindo entender a recepção do filme sem viés de leitura seletiva e sem spoilers.
 
@@ -648,7 +702,189 @@ absoluto. Nenhuma das três métricas atinge cobertura ≥18/35 filmes com ruíd
 ≤35%; **a métrica atual é a menos ruim das três**, e é assim que ela deve
 ser lida.
 
-### A margem: 20pp — escolha entre pureza de lista e cobertura
+### A MARGEM — a lei por `n` (v1.9.34). **Este é o parâmetro em vigor.**
+
+```
+limiar(n) = 144,4 / √n   pontos percentuais       n = o MENOR dos três buckets
+```
+
+**A comparação é EXATA, na forma quadrada que elimina a raiz.** `144,4/√n` é
+irracional e comparar em float jogaria fora a garantia que a v1.9.15 comprou
+caro (*"nenhuma decisão de estado depende de arredondamento de float"* — cinco
+filmes já caíram fora da margem uma vez por isso). Para `lift > 0`:
+
+```
+lift >= (1444/1000)/√n      ⟺      lift² · n  >=  Fraction(2085136, 1000000)
+```
+
+`lift` é `Fraction` de 0 a 1 (não pontos percentuais: 144,4pp de constante é
+1,444 nessa escala), `n` é `int`, e `lift² · n >= Fraction(2085136, 1000000)` é
+uma comparação de racionais **exata** — sem raiz, sem float, sem tabela de
+arredondamento. Elevar ao quadrado é monotônico no ramo positivo; `lift <= 0`
+reprova por inspeção antes da conta. **Conferido: a forma exata devolve
+exatamente os mesmos 6 filmes que a aritmética de alta precisão.**
+
+**PISO — `n < 10` no menor bucket: o estado `contraste` NÃO É PUBLICADO.** Não
+é `valorativo`: é **ausente**, no mesmo estatuto de `montar_bloco` devolver
+`None` sem classificação — **chave ausente distingue "não medido" de "medido e
+sem contraste"**. Publicar `valorativo` ali seria trocar uma afirmação sem
+lastro por outra: naquele `n` a medição não distingue os dois estados, e dizer
+"os grupos falam das mesmas coisas" é tão sem base quanto dizer o contrário.
+Afeta **1 filme hoje** (`obsession-2026`, n = 5/6/8, cujo estado tem
+**P(ruído) = 0,976**); o piso entra na versão completa, e não como exceção
+nomeada, porque a expansão de catálogo trará mais filmes com bucket pequeno.
+
+#### O limiar por `n`, e a taxa que ele realiza
+
+| n | limiar | taxa de falso contraste realizada |
+|---:|---:|---:|
+| 10 | 45,7pp | 0,060 |
+| 15 | 37,3pp | 0,061 |
+| 20 | 32,3pp | 0,049 |
+| 25 | 28,9pp | 0,040 |
+| 30 | 26,4pp | 0,075 |
+| 35 | 24,4pp | 0,053 |
+| **40** | **22,8pp** | **0,037** |
+| 50 | 20,4pp | 0,040 |
+| 100 | 14,4pp | 0,047 |
+
+Entre **3,7% e 7,5%**, média ≈ 5%. A oscilação em torno do alvo é a
+**quantização** — o lift só assume múltiplos de `100/n`, e em n=30 nenhum limiar
+acerta 5% exatamente. **Leitura prática:** nos 29 filmes com 40/40/40 a lei dá
+22,8pp e o corte operante é **25,0pp** (o próximo múltiplo de 2,5pp). A lei não
+faz nada de mais fino que um limiar fixo de 25pp ali — **ela existe pelos outros
+6**, cujos limiares são `talk-to-me-2022` 23,1 · `wicked-2024` 23,7 · `wonka`
+25,5 · `the-godfather` 26,4 · `pearl-2022` 27,8 · `obsession-2026` 64,6.
+
+#### O que mediu isso: o NULO DO MÁXIMO, que é novo
+
+Três medições de nulo/reamostragem já existiam no projeto e **nenhuma era
+esta**. O nulo de permutação da tabela histórica abaixo conta **pares (eixo,
+bucket) agregados sobre o catálogo**; os bootstraps de
+`ESTUDO_CATALOGO_35.md` §8 e `MEDICAO_VERIFICACAO_BINARIA.md` Entrega 2
+reamostram em torno do **observado**. Faltava a distribuição do **máximo sobre
+as 30 células sob a hipótese de que não há contraste nenhum** — que é a
+estatística que o estado `contraste` de fato usa, porque `tematico` é
+*"alguma das 30 células passa do limiar"*.
+
+Desenho registrado ANTES de rodar em `DESENHO_NULO_DO_MAXIMO.md`; resultados em
+`ESTUDO_MARGEM_20PP.md`. **B = 10.000 permutações por filme, semente 24**,
+embaralhando o rótulo de bucket dentro de cada filme — preserva o conjunto de
+eixos de cada review intacto (logo toda a **dependência entre eixos da mesma
+review**), a frequência global de cada eixo e o tamanho de cada bucket.
+
+**O que ele mediu, e é o diagnóstico que fecha o caso da margem de 20pp:**
+
+| | |
+|---|---|
+| percentil de 20pp no nulo (mediana dos 35) | **82** |
+| taxa de falso contraste a 20pp, n=40 | **17,3%** |
+| taxa de falso contraste a 20pp, no `n` MEDIANO em que o catálogo foi publicado (28) | **37,3%** |
+| filmes distinguíveis do nulo a α=0,05, sem correção | **6 de 35** |
+| … com Holm–Bonferroni sobre os 35 | **1 de 35** |
+| FDR entre os 16 `tematico` sob cobertura 100% | **24% a 38%** |
+| nos 6 filmes cujo veredito nomeia causa que o dado completo não sustenta: P(ruído) média | **0,633** |
+
+O último número é o que justifica a mudança: **essas seis páginas nomeavam uma
+causa que, na amostra em que foram decididas, tinha ~63% de chance de ser
+sorteio.**
+
+**E o `n` publicado nunca foi 40.** Reconstruído do campo `de_n` dos 35
+`resultado/<slug>.json`: mediana **28**, média 27,3, mínimo **5**, com **56 dos
+105 buckets abaixo de 30** e **24 abaixo de 20**. A frase "n≈40 é insuficiente
+para a margem de 20pp" era verdadeira e otimista.
+
+#### ⚠️ LIMITAÇÃO IN-SAMPLE — leia isto ANTES de expandir o catálogo
+
+**A lei foi calibrada sobre exatamente os mesmos 35 filmes que ela julga.** Com
+35 não existe como separar treino de teste sem perder todo o poder, e não foi
+feito. Consequências, sem maquiagem:
+
+- **A taxa de 5% é uma estimativa in-sample, e portanto OTIMISTA.** O valor
+  out-of-sample é desconhecido e quase certamente maior. Não cite "5%" como
+  propriedade da regra; cite como "5% medido nos 35 que a calibraram".
+- **A constante 144,4 é `média(q95 · √n)` sobre n ∈ {20, 30, 40, 50, 100}** do
+  nulo desses 35. Ela carrega a estrutura de co-ocorrência de eixos DESTE
+  corpus (2,95 eixos por review em média, faixa 2,12–3,67). Um catálogo com
+  carga de eixos diferente terá nulo diferente — **MEDIDO: corr(carga,
+  P(falso)) = +0,74**, com a taxa indo de 0,119 a 0,206 entre os extremos do
+  catálogo atual. É efeito de segunda ordem contra `n`, mas não é zero.
+- **A expansão de catálogo é o PRIMEIRO teste out-of-sample desta lei, e deve
+  ser tratada como teste.** Ao acrescentar filmes: rode o nulo do máximo sobre
+  os filmes NOVOS, sozinhos, e compare a taxa realizada com a tabela acima. Se
+  divergir materialmente, **é a constante que precisa ser recalibrada — não os
+  filmes novos que estão errados.**
+- **Nada aqui vale para filmes fora dos 35.** Nem a constante, nem a tabela, nem
+  o piso de `n < 10` como "afeta 1 filme".
+
+#### O critério "cerca de um terço do catálogo" está APOSENTADO
+
+A v1.9.15 registrou como critério de sucesso: *"20pp entrega contraste em cerca
+de um terço dos filmes sem publicar listas majoritariamente ruidosas"*, e
+celebrou 18/35 por estar mais perto de um terço que 13/35. **Esse critério sai
+de vigor nesta versão, e a razão é medida, não estética.**
+
+Ele é um alvo de **COBERTURA**, e foi fixado quando `valorativo` era o estado
+fraco — o defeito da v1.9.20 era o veredito publicar a MESMA frase em 20 de 35
+filmes. **`valorativo` não é mais o estado fraco. MEDIDO
+(`ESTUDO_MARGEM_20PP.md` §5.2):**
+
+- os 17 vereditos `valorativo` publicados são **17 textos distintos**, com
+  **zero frases de mais de 25 caracteres repetidas** entre dois filmes
+  quaisquer — a reescrita da v1.9.21 e o ataque estrutural da v1.9.22 mataram o
+  defeito;
+- o ramo `valorativo` **nomeia o `assunto_compartilhado`**, que é uma afirmação
+  de conteúdo real e vem de **FREQUÊNCIA**, não de lift;
+- e frequência é a estatística estável do sistema: no evento real de cobertura
+  70,7% → 100%, o eixo nomeado pelo ramo `valorativo` mudou em **8 de 35**
+  filmes, contra **16 de 35** do eixo de maior lift que o ramo `tematico`
+  nomeia. **Mover um filme para `valorativo` move a afirmação publicada da
+  estatística MENOS estável do sistema para a MAIS estável.**
+
+**O critério que entra no lugar é de ERRO, não de cobertura:** o limiar é o que
+mantém a taxa de falso contraste em nível declarado (≈5%), e o número de filmes
+`tematico` é **consequência**, não alvo. Sob a lei, o catálogo é **6 `tematico`
+/ 29 `valorativo` / 1 sem estado** — e 6/35 não é um defeito a corrigir
+afrouxando a lei.
+
+#### α = 0,05 e não 0,10 — a razão é assimetria de dano
+
+`ESTABILIDADE_10_FLIPS.md` isolou os dois erros e eles não custam o mesmo. Um
+filme que deveria ser `valorativo` e sai `tematico` publica, em prosa
+categórica, uma causa que não existe ("quem não recomenda rejeita pelo ritmo
+arrastado"). Um filme que deveria ser `tematico` e sai `valorativo`
+**subafirma** — deixa de contar algo verdadeiro, sem afirmar nada falso.
+**Quando os dois erros custam coisas diferentes, o nível se escolhe pelo mais
+caro.** α = 0,10 daria 9 `tematico` com FDR de ~24–39%; α = 0,05 dá 6 com FDR
+de ~15–23%.
+
+**Registrado como escolha, não como fato:** a multiplicidade entre os 35 filmes
+NÃO é corrigida. Corrigir (Holm) responde *"existe alguma afirmação errada no
+catálogo?"* — a pergunta certa se o produto fizesse uma afirmação sobre o
+catálogo. Cada página faz sua própria afirmação, lida isoladamente, então o
+controle certo é o de **proporção** (FDR), não o de família. Quem argumentar
+que o leitor navega o catálogo inteiro e forma impressão agregada estará
+pedindo Holm, e **não estará errado** — estará pedindo um catálogo com 1
+`tematico`.
+
+#### O que MUDA e o que NÃO MUDA de forma
+
+**NÃO muda de forma:** o template do veredito continua ramificando em
+`tematico`/`valorativo` com os mesmos dois blocos de instrução (§3[V]); a
+interface continua com os mesmos comportamentos por ramo; a métrica de lift, a
+seleção 2+3 de bullets, a taxonomia, o `taxonomia_id`, a cota 40/40/40, o
+`assunto_compartilhado`, o piso de 25% e `min_chars` estão **intocados**.
+**Só muda QUAIS filmes caem em cada ramo** — mais o caminho novo de estado
+ausente, que é a única adição de forma da versão.
+
+---
+
+### A margem de 20pp — REGISTRO HISTÓRICO (v1.9.14 a v1.9.33)
+
+**Esta seção descreve o parâmetro que vigorou até a v1.9.33 e não está mais em
+vigor.** Fica porque o raciocínio dela é o que a lei acima substitui, e porque
+a tabela de nulo por par continua sendo a medição correta de *outra* coisa (a
+taxa de ruído por célula agregada).
 
 Medida por **nulo de permutação** (2000 rodadas, embaralhando o rótulo de
 bucket DENTRO de cada filme — preserva a frequência global de cada eixo e
@@ -694,6 +930,25 @@ recall em review curta, porque a frequência média por eixo subiu. 20pp
 segue sendo o ponto escolhido entre os dois extremos, com os números
 recalculados aqui para que a escolha continue revisável com dado, não com
 memória.
+
+**CORREÇÃO DE REGISTRO (v1.9.34): o "34% que cruzaria por acaso" está medido na
+população ERRADA, e o número na população certa é PIOR.** A tabela acima usa,
+por decisão metodológica declarada logo abaixo, a amostra classificada **bruta**
+(`consenso.jsonl`), que acumula a seleção antiga e a nova lado a lado (§[D3],
+"duas populações de 40") e **não** é a população que o bloco `eixos` publicado
+conta. Recalculada na população publicada (produção ∩ `consenso_verificado`,
+cobertura 100% de §2.8), com o mesmo método:
+
+| margem | pares acima (observado) | esperado sob o nulo | fração de ruído |
+|---|---:|---:|---:|
+| 15pp | 56 | 28,9 | **51,6%** |
+| **20pp** | **23** | **9,9** | **42,8%** |
+| 25pp | 11 | 3,7 | **33,3%** |
+
+**A margem de 20pp entregava 42,8% de ruído por célula na população que o
+produto de fato publicava, não 34%.** O número antigo não está errado para o
+que mede; está medindo outra população. `CLASSIFICACAO_CONSOLIDADO.md` §6 já
+registrava 41,1% num terceiro corpus, e o valor recomputado cai em cima dele.
 
 ### A comparação é `>=`, EXATA — revertida na v1.9.15
 
@@ -753,7 +1008,32 @@ existia antes, e não responde a pergunta que o produto faz — *no que estes
 grupos discordam?*. Os dois lados vêm rotulados como o que são, nunca
 misturados numa lista única sem etiqueta.
 
-### Estado `contraste`: `tematico` | `valorativo`
+### Estado `contraste`: `tematico` | `valorativo` | **ausente** (v1.9.34)
+
+**Os três casos, e o terceiro é novo:**
+
+| `n` do menor bucket | condição | `contraste` |
+|---|---|---|
+| ≥ 10 | alguma das 30 células atinge `limiar(n)` | `"tematico"` |
+| ≥ 10 | nenhuma atinge | `"valorativo"` |
+| **< 10** | — | **chave AUSENTE do bloco `eixos`** |
+
+**Ausente não é um terceiro VALOR; é a ausência da chave**, no mesmo estatuto
+do bloco `eixos` inteiro quando não há classificação. Um consumidor que faça
+`eixos.get("contraste") == "valorativo"` continua correto; um que faça
+`eixos["contraste"]` quebra, e deve quebrar. **A regra para todo consumidor:
+ausência significa "não medido", nunca "medido e sem contraste".** O resto do
+bloco `eixos` (linhas, frequências, lifts, bullets) **continua sendo publicado
+normalmente** — o que falta é só a decisão binária, porque é ela que o `n` não
+sustenta.
+
+Contagem atual do catálogo sob a lei da v1.9.34: **6 `tematico`, 29
+`valorativo`, 1 sem estado** (`obsession-2026`).
+
+---
+
+*A partir daqui, esta subseção é o registro da v1.9.14/v1.9.15, sob a margem
+fixa de 20pp. As contagens abaixo (13/22, 18/17) são históricas.*
 
 Filme sem NENHUM eixo acima da margem recebe `contraste: valorativo`. **São
 22 de 35 filmes (63%) — quase dois terços do catálogo.** O estado não é caso
@@ -806,13 +1086,485 @@ removê-lo do schema apagaria um eixo que o público de fato usa, e as três
 tentativas de conserto estão medidas e registradas como refutadas — não como
 pendências.
 
-Existe uma correção que **funcionou** e que NÃO foi aplicada: o passe de
-verificação separado (V2 `alvo`), que leva a precisão de 0,486 para 0,794 em
-passada única, com projeção de de-saturação de 75,5% para 35,7% no corpus. Ele
-está medido, não adotado — rodá-lo sobre o corpus (~3013 chamadas, ~US$0,10)
-é decisão pendente do dono do projeto, e mesmo ele melhora pouco a margem
-(15/35 filmes a 20pp, contra 13/35 hoje). Registrado aqui para que "a
-limitação é conhecida" não seja confundido com "não há saída conhecida".
+Existe uma correção que **funcionou** — o passe de verificação separado
+(V2 `alvo`), que leva a precisão de 0,486 para 0,794 em passada única, com
+projeção de de-saturação de 75,5% para 35,7% no corpus.
+
+**CORREÇÃO DE REGISTRO (v1.9.31): ela FOI aplicada, na v1.9.16, e este
+parágrafo a descrevia como pendente desde então.** O texto anterior — *"uma
+correção que funcionou e que NÃO foi aplicada… é decisão pendente do dono do
+projeto"* — descrevia o estado de quando foi escrito, e não foi atualizado
+quando a adoção aconteceu (changelog da v1.9.16, item 1). O passe roda como
+estágio à parte após o consenso de votação
+(`scripts/verificador_impacto.py aplicar-producao`), produz
+`resultado/votacao-3/consenso_verificado.jsonl` + manifesto, e
+`pipeline._carregar_consenso_producao` **prefere o verificado** quando ele
+existe e está em dia — com erro explícito, não fallback silencioso, se
+`consenso.jsonl` cresceu depois da verificação. A aplicação é declarada no
+bloco publicado, em `eixos.verificador`.
+
+**O estado ATUAL do eixo, medido sobre o consenso de produção:**
+
+| | `consenso.jsonl` (cru) | `consenso_verificado.jsonl` (**produção**) |
+|---|---:|---:|
+| `impacto_emocional` no corpus (n=4.181) | 75,6% | **36,1%** |
+| na seleção de produção (n=2.866) | 75,6% | **34,6%** |
+| eixos por review | 3,42 | 3,01 |
+| reviews sem nenhum eixo | 0,2% | 2,0% |
+
+A projeção de 35,7% acertou dentro de 1pp. **O eixo não está mais saturado**;
+`n_removidas_no_corpus` é 1.654 e está carimbado em cada filme publicado.
+
+**O que NÃO mudou, e continua valendo:** a precisão de 0,486 é a do prompt de
+classificação **sem** o passe, e é ela que justifica o passe existir; as três
+tentativas de conserto pelo prompt seguem **refutadas** (parágrafos acima); o
+ganho de margem é pequeno (15/35 filmes a 20pp contra 13/35 sem o passe, na
+contagem da v1.9.14) — a de-saturação corrigiu a precisão do eixo, não o
+problema do lift. E a dependência de arquitetura fica registrada como
+limitação: a precisão de 0,79 depende de um **script separado** ter sido
+rodado, e não de uma etapa do pipeline; o `taxonomia_id` cobre o prompt de
+classificação, não o passe de verificação.
+
+---
+
+## 2.6 Feelings — EM ESPERA, com dependência de ordem registrada (2026-08-29)
+
+Registro de decisão do dono do projeto. **Nada aqui está implementado, e nada
+aqui autoriza implementar.**
+
+**Feelings NÃO é descartado.** A medição de `MEDICAO_SPLIT_E_FONTES.md`
+(Entrega 3) achou que o TMDB emite `mood` editorial junto com as `keywords` —
+`moody`, `bitter`, `playful`, `so bad it's good`, presentes em 17 de 35 filmes
+— colidindo com a categoria que `DESENHO_CLASSIFICACAO_V2.md` atribuiu à
+review. **Essa colisão é argumento para NÃO misturar as duas fontes, não para
+descartar uma delas.** As duas semânticas são diferentes e ambas são reais:
+
+| fonte | o que a etiqueta significa | quem atribuiu |
+|---|---|---|
+| **review-derived** (`mood`, `experiencia`, `narrativa`) | o que ficou em quem assistiu | o público |
+| **work-derived** (`tema`, `contexto`) | do que a obra trata — máfia, família, guerra | quem cataloga |
+
+Elas continuam como **entidades internas SEPARADAS**, com listas próprias e
+sem precedência de uma sobre a outra, exatamente porque `mood` do TMDB é
+catalogação editorial e `mood` de review é relato de leitor. Fundi-las
+produziria uma etiqueta cuja procedência o produto não saberia declarar.
+
+**Feelings não avança até a granularidade/faithfulness dos TEMAS estar
+resolvida.** A razão é de ordem, não de mérito: feelings é uma **segunda**
+camada de classificação sobre o mesmo material, e adicioná-la a um sistema cuja
+**primeira** camada ainda erra — `roteiro_estrutura` em 55,5% do corpus, a
+contagem por tema sem gabarito confiável, o `contradiz` com recall medido em
+~1 de 5 — aumenta o espaço de erro sem isolar a causa. Um filtro público errado
+não seria distinguível de uma classificação de tema errada por baixo dele.
+
+**A dependência, explícita:** feelings aguarda o veredito da verificação
+binária por (review, tema) — a Entrega 1 de `MEDICAO_VERIFICACAO_BINARIA.md`,
+que **reprovou** no critério registrado. Enquanto a primeira camada não tiver
+um número de menções que o código possa defender, a segunda não começa. As
+cinco perguntas bloqueantes já listadas em `DESENHO_CLASSIFICACAO_V2.md`
+(entre elas o gabarito humano de ~100 reviews para feelings) continuam
+valendo e são posteriores a esta.
+
+**Ressalva acrescentada em 2026-08-30:** a reprovação da verificação binária
+citada acima **não está estabelecida** — o critério que a produziu (C1a) foi
+medido contra o gabarito dos 5 casos, que §2.7 mostra subestimar. Isso não
+libera feelings: a dependência de ordem continua valendo, agora com a primeira
+camada em estado *indeterminado* em vez de *reprovado*, o que é motivo igual
+para não empilhar a segunda.
+
+---
+
+## 2.7 AVISO — o gabarito de contagem à mão dos 5 casos SUBESTIMA (2026-08-30)
+
+**Quem for usar os cinco números de contagem à mão do `ESTUDO_CATALOGO_35.md`
+§12 (`wonka`, `talk-to-me-2022`, `napoleon-2023`, `interstellar`, `cats-2019`)
+precisa ler isto antes.** Eles já foram a régua de **duas** reprovações — a da
+contagem por eixo (`MEDICAO_CONTAGEM_E_AB.md`, Entrega 1) e a da verificação
+binária (`MEDICAO_VERIFICACAO_BINARIA.md`, critério C1a) — e **subestimam de
+forma sistemática, não aleatória.**
+
+**A causa é o protocolo, e está declarada no próprio estudo** (§12, "Protocolo
+de leitura"): para cada bullet, ler **até 12** reviews que já carregam o eixo do
+bullet, mais **até 6** que casam por palavra de conteúdo do tema. **Até 18 de
+40**, e a segunda metade por casamento de palavra, num corpus multilíngue. Isso
+não pode achar paráfrase, e não pode achar nada nos idiomas em que a palavra de
+busca não foi escrita.
+
+O estudo declarou um viés, mas na direção errada: escreveu que *"o viés deste
+protocolo favorece o produto"* porque procura suporte onde ele é mais provável.
+**Isso vale para o veredito qualitativo — achar suporte —, não para a
+CONTAGEM:** ler 18 de 40 e casar por palavra só pode contar **a menos**.
+
+**Os dois casos relidos por inteiro em texto corrido (as 40 reviews de cada
+bucket, sem casamento por palavra):**
+
+| caso | gabarito §12 | releitura integral | erro do gabarito |
+|---|---:|---:|---:|
+| `cats-2019` neg — *Experiência de visualização desconfortável* | 8 | **16** | **−8** |
+| `interstellar` pos — *Fotografia e efeitos visuais deslumbrantes* | 8 | **14** | **−6** |
+
+Em `interstellar` o número 8 **nunca teve derivação registrada**: o estudo
+discute o *exemplo* do bullet e diz que o *tema* é "impecavelmente sustentado",
+sem contar; o 8 aparece pela primeira vez na tabela de
+`MEDICAO_CONTAGEM_E_AB.md`.
+
+**ATUALIZAÇÃO (2026-08-31): os outros três casos foram refeitos sob o
+protocolo P1–P7 completo, com resolução humana onde o modelo divergiu. Os
+cinco casos estão todos refeitos agora.**
+
+| caso | gabarito §12 | valor refeito (P1–P7) | fonte |
+|---|---:|---:|---|
+| `wonka` neg — *Fotografia e efeitos visuais criticados* | 1 | **sustenta 3, contradiz 1** | leitura integral direta pelo dono (32/32), sem estágio reduzido |
+| `talk-to-me-2022` neg — *Diálogos e tom juvenil artificiais* | 2 | **sustenta 2, contradiz 0** | leitura em duas etapas, resolução humana — ver §"Confiabilidade medida..." abaixo |
+| `napoleon-2023` med — *Batalhas visualmente impressionantes* | 13 | **sustenta 12, contradiz 1** | idem |
+
+`talk-to-me-2022` fechou no MESMO valor do gabarito antigo (2). **Isto é
+coincidência de destino, não validação do protocolo antigo** — os dois
+métodos chegaram lá por caminhos diferentes: um por casamento de
+palavra-chave numa subamostra do bucket (o método que §2.7 mediu subcontar
+`cats-2019` em −8 e `interstellar` em −6, sem garantia nenhuma de acerto por
+método, só por sorte de amostra); o outro por leitura completa das 40
+reviews com frase literal registrada e resolução humana em cada
+discordância. Concordarem no número não dá crédito ao protocolo antigo.
+
+**Consequência para as duas reprovações, medida:** recomputando as mesmas
+tabelas com os dois casos corrigidos e os três outros inalterados, o erro
+absoluto médio contra o gabarito vira
+
+| | gabarito §12 | gabarito com 2 de 5 corrigidos |
+|---|---:|---:|
+| `mencoes_aproximadas` | 3,00 | **3,80** |
+| contagem por eixo | 3,60 | **2,80** |
+| verificação binária | 5,20 | **2,40** |
+
+**As duas reprovações se invertem sob a correção parcial**, e a direção do erro
+residual é conhecida: os três casos não relidos estão, pelo mesmo mecanismo,
+provavelmente baixos também — e corrigi-los para cima favorece ainda mais os
+métodos que contam mais alto. **Nenhuma das duas reprovações deve ser tratada
+como estabelecida enquanto os cinco não forem relidos por inteiro.**
+
+**O que continua de pé sem depender do gabarito:** o argumento conceitual contra
+a contagem por eixo (o eixo é **superconjunto** do tema, então trocar o número
+do tema pelo do eixo é erro de categoria, não de calibração), a colisão de
+barras em 28% dos bullets, os dois bullets com barra zero; e, contra a
+verificação binária, a reprodutibilidade entre execuções idênticas
+(Jaccard 0,70; `wonka` de 4 para 1), o recall de `contradiz` de 1 em 5, e o
+custo real medido de US$ 23,82 em 300 filmes com 3 votos.
+
+**Protocolo exigido para qualquer refação (P1–P7):** leitura **integral** do
+bucket (todas as 32–40 reviews), **sem** casamento por palavra-chave, julgando
+no idioma original, contra o **tema E a paráfrase publicada** (ver a revisão de
+P4 abaixo), com três valores (`sustenta`/`não sustenta`/`contradiz`) e a frase
+literal de cada review contada. Ver `AUDITORIA_POPULACAO_E_GABARITO.md`
+§Entrega 4.
+
+### P4 REVISADO (2026-08-31) — julgar contra o tema E contra a paráfrase
+
+A versão anterior de P4 dizia *"contando no nível do **tema** (não do
+exemplo)"*. **Está errada, e a calibração mostrou como.**
+
+O que o leitor vê na tela é o par tema + `exemplo_parafraseado`, e é a
+paráfrase que carrega a afirmação específica. Julgar só contra a formulação
+curta do tema perde reviews que sustentam o que o produto de fato afirma.
+
+**O caso que forçou a correção.** Em `wonka`/negativas, a paráfrase publicada
+diz literalmente *"cenários artificiais"*, e a review [11] (alemão) diz *"Alles
+ist mir einen Ticken zu künstlich"* com um exemplo visual concreto — o
+chocolate que "não tem mais nada a ver com chocolate". Julgando só contra o
+título *"Fotografia e efeitos visuais criticados"*, isso sai como `não
+sustenta`; julgando contra a paráfrase, é `sustenta`. O dono contou `sustenta`;
+a leitura por modelo contou `não sustenta`.
+
+**P4 passa a ser:** o julgamento é contra o tema **e** contra o
+`exemplo_parafraseado` publicado. Uma review que sustenta o que a paráfrase
+afirma sustenta o bullet, mesmo que a formulação curta do tema não capture
+aquilo. O quantificador da paráfrase continua **não** sendo testado (P3): se
+ela diz "para a maioria", a pergunta segue sendo se ESTA review afirma a coisa.
+
+### Confiabilidade medida da leitura por modelo sob P1–P7 — NÃO tem direção fixa
+
+**CORREÇÃO DE REGISTRO (2026-08-31): a frase original aqui dizia que o
+viés do modelo "tende ao conservadorismo", generalizando a partir de um
+único ponto de calibração (`wonka`). Um segundo ponto (`talk-to-me-2022`)
+mostrou o viés na direção OPOSTA. A generalização estava errada e o texto
+abaixo a substitui — não a preserva como histórico, porque manteria uma
+conclusão falsa disponível para leitura.**
+
+**MEDIDO, três calibrações (leitura integral independente do dono e do
+modelo, comparadas depois — `wonka`/negativas 32 reviews completas;
+`talk-to-me-2022`/negativas e `napoleon-2023`/medianas com a folha reduzida
+de duas etapas, §Consequência de desenho abaixo):**
+
+| caso | tipo de julgamento | concordância |
+|---|---|---:|
+| `napoleon-2023`/med — *"Batalhas visualmente impressionantes"* | visual/concreto | **27/28 = 96,4%** |
+| `wonka`/neg — *"Fotografia e efeitos visuais criticados"* | visual/concreto | **30/32 = 93,8%** |
+| `talk-to-me-2022`/neg — *"Diálogos e tom juvenil artificiais"* | registro de fala, referência cultural, ironia | **10/14 = 71,4%** |
+
+**A leitura correta não é "o modelo erra numa direção" — é que a
+confiabilidade depende do TIPO de julgamento.** Temas visuais/concretos
+("a fotografia é bonita/feia", "a batalha impressiona") têm alta
+concordância nos dois casos medidos. Um tema de registro de fala — se a
+gíria soa forçada, se uma referência cultural é a mesma coisa que o tema
+afirma — tem concordância bem mais baixa, e a direção do erro nesse caso
+foi para SUPERCONTAGEM, não subcontagem:
+
+Em `talk-to-me-2022`, dos 5 casos que o modelo marcou `sustenta` (grupo G1),
+**3 foram derrubados pelo dono** — o modelo aceitou como sustentação coisas
+adjacentes ao tema (comparar o filme a um vídeo de conscientização escolar;
+criticar o uso de memes num filme de terror; qualificar o diálogo de
+"estilo Tarantino") sem que nenhuma delas afirme especificamente que a
+gíria/diálogo *soa artificial/forçado*, que é o que o tema e a paráfrase
+publicada afirmam. Em `wonka` e `napoleon-2023`, o padrão foi o oposto ou
+ausente: em `wonka` o modelo perdeu um `sustenta` e um `contradiz`
+(subcontagem, os dois casos do texto anterior); em `napoleon-2023` houve
+só 1 discordância em 28, sem padrão de direção.
+
+**Isso é o que justifica manter a leitura humana como DECISÃO, não como
+fator de correção fixo.** Não existe um ajuste único ("some 1 sustenta",
+"desconte 10%") que corrija a leitura do modelo em qualquer tema — o
+próprio tipo de julgamento decide se o modelo tende a perder ou a
+inflar, e isso só se sabe calibrando cada tema, não aplicando uma
+constante.
+
+### Achado novo — o modelo nunca usa "não sei julgar", mesmo devendo
+
+**MEDIDO.** Nas 42 reviews das duas folhas reduzidas (`talk-to-me-2022` +
+`napoleon-2023`), cobrindo pelo menos 6 idiomas além do português (inglês,
+espanhol, francês, alemão, sueco, holandês, árabe, russo — a mistura variou
+por bucket), **o modelo escolheu `não sei julgar` zero vezes**. Isso inclui
+`viewing:1431255087` (árabe, `talk-to-me-2022`), que o dono marcou
+corretamente como `não sei julgar` e o modelo respondeu `não sustenta` com
+confiança implícita — sem sinalizar a limitação.
+
+**A distinção que importa:** isto não é o mesmo erro que uma leitura errada
+num idioma que o modelo de fato processa (esse é erro de interpretação,
+esperado e mensurável pela concordância). É **excesso de confiança em
+idioma dominado só parcialmente** — o modelo produziu um veredito com a
+mesma aparência de certeza de qualquer outro, em vez de declarar a
+limitação que a regra do prompt explicitamente autoriza ("é preferível a
+chutar"). Zero ocorrências em 42 tentativas, num corpus que sabidamente
+tem reviews em idiomas raros (ver a distribuição de idiomas do `wonka`,
+§2.7 acima), é sinal de que a instrução de abstenção não está sendo
+seguida na prática, não só de que o modelo raramente precisa dela.
+
+**Recomendação para os próximos gabaritos da expansão:** reforçar a
+instrução de abstenção no prompt com este caso como exemplo concreto —
+"uma review em árabe/idioma pouco comum não é candidata automática a
+`não sustenta`; se a confiança de tradução for baixa, declare `não sei
+julgar`" — em vez de deixar a regra genérica ("é preferível a chutar")
+sem um exemplo que mostre a falha real já observada.
+
+**Consequência de desenho, registrada:** gabarito não deve ser produzido por
+modelo sozinho. O desenho adotado é de duas etapas — o modelo lê o bucket
+inteiro; o humano lê uma folha reduzida contendo (i) tudo que o modelo marcou
+`sustenta`/`contradiz`, (ii) tudo que ele marcou `não sustenta` **com** o
+assunto tocado, e (iii) uma amostra cega de controle das `não sustenta` que nem
+tocaram o assunto, misturada sem marcação (semente registrada). **Onde houver
+divergência, o veredito humano vale** — o gabarito existe para julgar saída de
+modelo, e deixá-lo ser decidido por modelo onde há divergência com o humano é
+a circularidade que a calibração existe para quebrar. A confiabilidade
+variável por tipo de julgamento (acima) é o motivo estrutural de a decisão
+final ser sempre humana: um fator de correção fixo não existe para aplicar
+no lugar da leitura.
+
+### Gabaritos fechados nesta calibração
+
+| caso | sustenta | contradiz | não sustenta | não sei julgar |
+|---|---:|---:|---:|---:|
+| `talk-to-me-2022`/negativas — *"Diálogos e tom juvenil artificiais"* | **2** | **0** | 11 | 1 |
+| `napoleon-2023`/medianas — *"Batalhas visualmente impressionantes"* | **12** | **1** | 15 | 0 |
+
+**`talk-to-me-2022` fechou em 2 — o mesmo número do gabarito antigo de
+`ESTUDO_CATALOGO_35.md` §12. Isto é COINCIDÊNCIA DE DESTINO, não validação
+do protocolo antigo.** Os dois métodos chegaram ao mesmo número por
+caminhos diferentes e por razões diferentes: o protocolo antigo leu uma
+subamostra do bucket e casou por palavra-chave — o mesmo método que
+§2.7 mediu subcontar em `cats-2019` (−8) e `interstellar` (−6), e que aqui
+não tem nenhuma garantia de ter acertado por método, só por sorte de
+amostra. O número desta sessão vem de leitura completa das 40 reviews com
+resolução humana nos pontos de discordância — um processo auditável, com
+frase literal registrada para cada veredito. Concordarem no valor final não
+torna o protocolo antigo confiável; ele continua sem crédito.
+
+---
+
+## 2.8 Cobertura de classificação estendida a 100% (2026-08-30)
+
+**Aplicado.** `1.190` reviews que faltavam classificar foram classificadas sob
+a MESMA taxonomia (`ebab2667de74`), a mesma votação de 3 passadas, e o mesmo
+verificador `V2_alvo`, pelo caminho oficial
+(`scripts/estender_classificacao_producao.py` + `verificador_impacto.py
+aplicar-producao`) — nenhum desenho novo. `pipeline.amostra_do_bruto` foi o
+caminho usado (não `classificar_10.py:152`, que tem o defeito registrado em
+§[D3]), então a extensão **não** reproduz o "dois quarentas". Custo medido por
+diferença de linhas novas contra o commit-base: classificação US$ 0,1030
+(3.570 chamadas), verificador US$ 0,0471 (964 chamadas) — **US$ 0,15 no
+total**, não os US$ 0,03 nem os US$ 0,33 que duas projeções anteriores
+estimaram.
+
+**Cobertura: 100% verificada** (4.056/4.056, 35/35 filmes), não presumida —
+conferida reconstruindo `amostra_do_bruto` para os 35 slugs e checando
+interseção com `consenso_verificado.jsonl`.
+
+### O que fecha
+
+- **A ressalva de cobertura desigual de `ESTUDO_CATALOGO_35.md` §6c**
+  (70,7%, 8 filmes abaixo de 50%) — fechada. Todo filme agora tem denominador
+  de eixo igual ao denominador de análise.
+- **A composição do bootstrap da margem** (§8 daquele estudo) — recomputada
+  sobre a população completa; ver números abaixo.
+- **As frequências por eixo publicadas** — recalculadas ao dígito sobre 100%
+  da amostra; nenhuma se move mais que 1,2pp (tabela abaixo).
+
+### O que NÃO fecha
+
+- **O `n` por bucket** continua ~40 — a extensão preenche o denominador
+  existente, não coleta review nova.
+- **A margem de 20pp** não foi tocada nesta sessão — permanecia o parâmetro em
+  vigor. **[v1.9.34] Deixou de ser: a margem fixa deu lugar à lei por `n`
+  (§2.5), e a investigação que os 10 flips desta seção motivaram é exatamente
+  a que a produziu.**
+- **O gabarito dos 5 casos de `ESTUDO_CATALOGO_35.md` §12** — nenhum dos
+  cinco foi relido; a extensão não tem relação com contagem de tema, só com
+  cobertura de classificação por eixo.
+
+### Achado principal — a margem porosa, confirmada com dado real
+
+**MEDIDO.** Frequência por eixo: delta máximo **1,2pp** entre antes (n=2.866)
+e depois (n=4.056) — a previsão registrada antes de rodar ("nenhuma
+frequência se move mais que ~2pp") **se confirmou**.
+
+A previsão sobre o estado `contraste` **não se confirmou**: **10 de 35 filmes
+mudaram de estado** (6 tematico→valorativo, 4 valorativo→tematico) —
+`bones-and-all`, `dune-2021`, `everything-everywhere-all-at-once`,
+`hereditary`, `napoleon-2023`, `oppenheimer-2023`, `perfect-days-2023`,
+`spider-man-across-the-spider-verse`, `the-substance`, `wicked-2024`.
+
+**Investigado antes de prosseguir, como o critério desta sessão exigia.** A
+causa **não é viés de conteúdo** das reviews que faltavam (a mesma medição que
+sustentou a previsão original — comprimento e nota das 1.190 faltantes contra
+as 2.866 já classificadas — permanece válida, e a frequência por eixo confirma
+isso: delta máximo 1,2pp). A causa é que os 10 filmes tinham o lift observado
+**a poucos pontos percentuais da margem de 20pp** (entre 14,9pp e 28,9pp nos
+dois lados), e a margem já era conhecida como porosa nesse regime de n:
+`ESTUDO_CATALOGO_35.md` §8 mediu, por bootstrap, que 13 das 31 marcações de
+contraste sobrevivem a **menos de 60%** das reamostragens. Seis dos dez filmes
+que mudaram de estado — `bones-and-all`, `everything-everywhere-all-at-once`,
+`hereditary`, `napoleon-2023`, `perfect-days-2023`,
+`spider-man-across-the-spider-verse` — já estavam nomeados naquela lista de
+marcações frágeis (p<60%), e `the-substance` no near-miss. **Isto não é um
+achado novo de instabilidade — é o mesmo achado, agora observado com dado
+completo em vez de reamostragem simulada**, e reforça (não contradiz) a leitura
+de que n≈40 é insuficiente para a margem de 20pp decidir com confiança.
+
+### Recálculo lado a lado
+
+| | antes (n=2.866, 70,7%) | depois (n=4.056, 100%) |
+|---|---:|---:|
+| reviews órfãs | 337/2.866 = 11,8% | 477/4.056 = 11,8% |
+| reviews sem eixo | 57 = 2,0% | 79 = 1,9% |
+| células acima da margem (bootstrap) | 31 | 23 |
+| — p < 60% | 14 | 12 |
+| — 60–90% | 16 | 10 |
+| — ≥ 90% | 1 | 1 |
+| filmes `tematico` | 18 | **16** |
+| filmes `valorativo` | 17 | **19** |
+
+Frequência por eixo (maior delta): `impacto_emocional` +0,8pp · `livre`
++0,5pp · `roteiro_estrutura` +0,3pp · `comparacoes` +0,4pp · `atuacao` −1,2pp —
+todos os 11 eixos dentro de ±1,2pp.
+
+**Nota de honestidade sobre a suíte de testes.** A extensão expôs dois
+defeitos pré-existentes na suíte, nenhum deles novo nesta sessão: (1) a
+fixture `catalogo` de `tests/test_eixos.py` lia `consenso.jsonl` (cru,
+pré-verificador) em vez de `consenso_verificado.jsonl` — resíduo de quando o
+teste foi escrito na v1.9.15, nunca atualizado quando o verificador foi
+adotado na v1.9.16; (2) nem essa fixture nem `verificador_impacto.py
+_cobertura_exata`/`_corpus_consenso` aplicavam `eixos._filtrar_pela_analisada`
+— o mesmo "dois quarentas" que a v1.9.15 corrigiu em `montar_bloco`, nunca
+replicado nesses dois caminhos de teste/projeção. Com 9 de 105 buckets
+acumulados (o estado antes desta sessão) os dois defeitos eram invisíveis;
+com 93 de 105 (o estado depois de estender 32 filmes) eles quebraram os
+testes visivelmente. (1) foi corrigido nesta sessão (fixture agora lê o
+verificado). (2) foi corrigido na fixture de `test_eixos.py` (que agora
+filtra), mas **não** em `verificador_impacto.py` — fora do escopo autorizado;
+fica registrado como limitação conhecida em
+`tests/test_verificador_impacto.py::test_base_da_projecao_reproduz_10_de_35`.
+Suíte: **1.524 de 1.525** — um teste (`test_os_5_filmes_na_linha_dos_20pp_
+agora_sao_tematicos`) foi retirado, não substituído: a sua premissa (5 filmes
+nomeados sentados exatamente em 20,0pp) era uma coincidência da amostra
+PARCIAL de antes da extensão e deixou de ser verdade por construção — não há
+assinatura equivalente a reafirmar sob a amostra completa.
+
+---
+
+## 2.9 Defasagem entre os artefatos publicados e o consenso estendido (2026-08-31)
+
+**Para quem chegar aqui sem contexto:** os arquivos `resultado/<slug>.json`
+**não foram tocados** por §2.8 e **continuam internamente coerentes** — eixos,
+lift, `contraste` e `veredito` concordam entre si dentro de cada arquivo
+publicado. Não há inconsistência dentro do produto. O que existe é
+**defasagem**: cada `resultado/<slug>.json` foi gerado sob a cobertura de
+classificação vigente na hora em que rodou (para a maioria dos 35, 70,7% —
+ver §2.5, "duas populações de 40"), e `resultado/votacao-3/consenso_
+verificado.jsonl` agora tem cobertura 100% (§2.8). Os dois nunca foram
+reconciliados por regeneração.
+
+**Medido, sem regenerar nada:** sob o consenso completo, **10 de 35 filmes
+teriam estado `contraste` diferente do publicado** — detalhado em
+`ESTABILIDADE_10_FLIPS.md`, com o lift antes/depois de cada um e, para os 6
+que virariam `tematico → valorativo`, o texto do veredito publicado hoje na
+íntegra:
+
+| filme | publicado | sob consenso completo |
+|---|---|---|
+| `bones-and-all` | tematico | valorativo |
+| `everything-everywhere-all-at-once` | tematico | valorativo |
+| `hereditary` | tematico | valorativo |
+| `napoleon-2023` | tematico | valorativo |
+| `perfect-days-2023` | tematico | valorativo |
+| `spider-man-across-the-spider-verse` | tematico | valorativo |
+| `dune-2021` | valorativo | tematico |
+| `oppenheimer-2023` | valorativo | tematico |
+| `the-substance` | valorativo | tematico |
+| `wicked-2024` | valorativo | tematico |
+
+**Decisão do dono: NÃO republicar por ora.** Razão registrada: o estado de
+contraste desses 10 filmes está instável **perto da margem de 20pp**, e três
+medições independentes concordam nisso — o bootstrap de
+`ESTUDO_CATALOGO_35.md` §8 (13/31 marcações sobrevivem a <60% das
+reamostragens), a curva de retorno marginal por `n` (`MEDICAO_VERIFICACAO_
+BINARIA.md`, Entrega 2: IC95 do lift dominante em 38,4pp com n=40, quase o
+dobro da própria margem), e esta observação direta (§2.8, 6 dos 10 flips já
+estavam na lista de marcações frágeis do bootstrap). **O estudo da margem —
+a próxima sessão — pode reformular o limiar de 20pp, o que mudaria a lista
+de filmes afetados.** Republicar agora, sob a margem atual, seria trabalho
+refeito se a margem mudar.
+
+**Esta defasagem é insumo do estudo da margem, não pendência esquecida.**
+Qualquer sessão que reabra a margem de lift deve ler `ESTABILIDADE_10_
+FLIPS.md` antes de decidir o novo limiar — ele é o conjunto de casos reais
+que o novo limiar precisa resolver, não hipotéticos de bootstrap.
+
+### FECHADA na v1.9.34 — a republicação aconteceu, sob a lei nova
+
+**A defasagem descrita acima não existe mais.** O estudo da margem rodou
+(`ESTUDO_MARGEM_20PP.md`), o dono aprovou a lei por `n` (§2.5), e os filmes
+afetados foram republicados sob ela — **16 filmes**, não os 10 desta seção,
+porque a lei muda mais estados que a extensão de cobertura sozinha. Os
+`resultado/<slug>.json` e o consenso verificado voltam a estar reconciliados.
+
+**A decisão de esperar se confirmou, mas por uma razão diferente da registrada
+acima, e vale corrigir.** Esta seção disse que republicar sob 20pp "seria
+trabalho refeito se a margem mudar". **MEDIDO: dos 10 filmes acima, apenas 2
+(`dune-2021` e `wicked-2024`) teriam estado diferente sob a lei em relação ao
+que a republicação sob 20pp lhes daria** — os outros 8 receberiam o mesmo
+estado das duas vezes. A contabilidade real era 20 regenerações (10 agora + 10
+depois) contra 16 (uma vez só): um argumento de **4 regenerações**, não do
+trabalho inteiro. A razão FORTE para esperar era outra, e é a que valeu:
+republicar sob 20pp colocaria no ar 16 estados com taxa de falso contraste de
+24–38%, para tirar depois.
 
 ---
 
@@ -4548,7 +5300,7 @@ bucket dominante** — o meio nunca é um dos dois lados do contraste):
 
 | Campo | Origem | Quem calcula |
 |---|---|---|
-| `eixo_maior_lift` + `lift_pp` + `acima_da_margem` | `eixos.linhas[].por_bucket[].lift_pp` | código |
+| `eixo_maior_lift` + `lift_pp` + `acima_da_margem` | `eixos.linhas[].por_bucket[]` — o eixo e o `lift_pp` de lá; **e desde a v1.9.34 o `acima_da_margem` também vem de lá, LIDO e não recalculado** (§4). Até a v1.9.33 este campo era `lift_pp >= margem` em float, e com a lei por `n` isso passaria a poder divergir da decisão exata | código |
 | `eixo_maior_frequencia` + `tema` + `freq_pct` | `mencoes`/`de_n` e `tema` da mesma linha | código |
 | `rotulo_quantificador` | `freq_pct` → mapa de faixas | código (`quantificador.py`) |
 | `share_pct` | `buckets[].share_real` | histograma (§3[G]) |
@@ -6842,7 +7594,71 @@ Por bucket: **(v1.4.0)** `share_real` (percentual inteiro), **omitido** quando n
 }
 ```
 
-`mencoes`/`de_n` são as contagens INTEIRAS — a fonte da verdade; `freq_pct` e `lift_pp` são derivados e arredondados **para exibição**, e nenhuma decisão do código lê os derivados (a comparação com a margem é exata, §2.5). `tema`/`exemplo_parafraseado` vêm de §[D3] e são `null` quando aquele bucket não tem tema naquele eixo — célula vazia é estado, não falta de dado. `bullet_de` é `"frequencia"` | `"contraste"` | `null` por bucket, e é o que a interface lê para saber o que exibir como bullet daquele grupo. `contraste` é `"tematico"` | `"valorativo"` (§2.5), sempre acompanhado do `taxonomia_id` sob o qual foi decidido — o veredito descreve a régua atual, não o filme.
+`mencoes`/`de_n` são as contagens INTEIRAS — a fonte da verdade; `freq_pct` e `lift_pp` são derivados e arredondados **para exibição**. `tema`/`exemplo_parafraseado` vêm de §[D3] e são `null` quando aquele bucket não tem tema naquele eixo — célula vazia é estado, não falta de dado. `bullet_de` é `"frequencia"` | `"contraste"` | `null` por bucket, e é o que a interface lê para saber o que exibir como bullet daquele grupo. `contraste` é `"tematico"` | `"valorativo"` (§2.5), sempre acompanhado do `taxonomia_id` sob o qual foi decidido — o veredito descreve a régua atual, não o filme.
+
+### (v1.9.34) O bloco `margem`, `acima_da_margem` por célula, e um DEFEITO que a lei por `n` expôs
+
+**O defeito, primeiro, porque ele desmente uma frase que estava escrita aqui.**
+Esta seção afirmava que *"nenhuma decisão do código lê os derivados (a comparação
+com a margem é exata)"*. **Isso era falso desde a v1.9.20.** Dois consumidores a
+jusante decidem lendo `lift_pp`, que é o float **arredondado a uma casa**:
+
+- `veredito.py:_maior_lift` → o campo `acima_da_margem` do briefing, que é o que
+  decide se o veredito diz "ASSUNTO PRÓPRIO deste grupo";
+- `frontend/js/filme.js:veredito()` → a frase de veredito montada em código.
+
+Com a margem fixa **inteira** de 20pp o defeito era inofensivo por acidente
+aritmético: `lift_pp` vinha de múltiplos de `100/n` e nenhum arredondamento podia
+cruzar um inteiro. **`limiar(n) = 144,4/√n` é irracional, e o acidente acaba.**
+Uma célula a menos de 0,05pp do limiar decidiria diferente no código exato e no
+consumidor arredondado. **MEDIDO nas 35 × 30 células sob a lei: 0 divergências, e
+nenhuma célula a menos de 0,15pp da fronteira** — mas o mecanismo já está vivo
+(`wicked-2024` tem buckets 37/40/37, logo quantum de lift de **0,068pp**), e a
+expansão de catálogo o aciona.
+
+**A correção: `eixos.py` publica a decisão, e ninguém a recalcula.**
+
+```json
+{
+  "eixos": {
+    "taxonomia_id": "ebab2667de74",
+    "margem": {
+      "lei": "lift^2 * n >= 2085136/1000000",
+      "constante_quadrada": [2085136, 1000000],
+      "n": 40,
+      "limiar_pp": 22.83
+    },
+    "margem_lift_pp": 22.83,
+    "contraste": "valorativo",
+    "linhas": [
+      {"eixo": "ritmo",
+       "por_bucket": {
+         "negativas": {"mencoes": 24, "de_n": 40, "freq_pct": 60,
+                       "lift_pp": 27.5, "acima_da_margem": true, "…": "…"}}}
+    ]
+  }
+}
+```
+
+- **`acima_da_margem`** (bool, por célula) é calculado por `eixos.py` em
+  `Fraction` exato e é **a única fonte de verdade sobre "esta célula atinge a
+  margem"**. `veredito.py` e `filme.js` passam a LER este campo em vez de
+  comparar `lift_pp`. A frase de invariante volta a ser verdadeira, agora por
+  construção e com teste que falha se alguém reintroduzir a comparação em float.
+- **`margem_lift_pp`** continua existindo e continua significando "o limiar em pp
+  que governou ESTE filme" — só que agora é o **limiar resolvido** (float, uma
+  casa: 22,83 para n=40) em vez do inteiro 20. É **derivado e para exibição**;
+  nenhuma decisão o lê.
+- **`margem`** é o bloco novo, e existe por um critério só: **um artefato precisa
+  poder ser auditado sozinho, sem consultar a versão do código que o gerou.** Ele
+  carrega a lei em forma **exata** (a constante como par de inteiros, e o `n`
+  usado), de modo que qualquer terceiro reproduza a decisão de cada célula com
+  aritmética racional e sem adivinhar nada. `limiar_pp` fica ao lado, derivado,
+  para leitura humana.
+- **`contraste` pode estar AUSENTE** quando `n < 10` (§2.5). `margem`,
+  `margem_lift_pp` e `acima_da_margem` **continuam presentes** nesse caso — o que
+  falta é só a decisão binária do filme, não a medição das células. Um consumidor
+  que assuma a chave `contraste` presente quebra, e **deve** quebrar.
 
 ---
 
@@ -6868,6 +7684,19 @@ As três incógnitas abaixo foram resolvidas na Fase 1; os achados já estão in
 ---
 
 ## Changelog
+- **v1.9.34** (2026-09-01) — **A MARGEM DE CONTRASTE DEIXA DE SER UM NÚMERO FIXO E PASSA A SER UMA LEI POR `n`.** Primeira mudança do arco que altera dado publicado e republica filmes. `limiar(n) = 144,4/√n` pp, `n` = o MENOR dos três buckets, comparado em `Fraction` **exato** pela forma quadrada `lift² · n >= Fraction(2085136, 1000000)` — que elimina a raiz e preserva a garantia da v1.9.15 (*nenhuma decisão de estado depende de arredondamento de float*). **Piso: `n < 10` → `contraste` AUSENTE do bloco `eixos`**, não `valorativo` — chave ausente distingue "não medido" de "medido e sem contraste". Catálogo: **6 `tematico` / 29 `valorativo` / 1 sem estado**, contra 18/17 publicados. §0, §2.5, §2.8, §2.9 e §4 reescritos.
+  - **(1) O que motivou: o NULO DO MÁXIMO, uma medição que não existia.** O estado `contraste` nunca foi um teste — é o **máximo sobre 30 células** (10 eixos × 3 buckets) comparado a um limiar, e o máximo de um conjunto ruidoso é enviesado para cima, com o viés crescendo quando `n` encolhe. As três medições anteriores (nulo por PAR de §2.5, bootstraps de `ESTUDO_CATALOGO_35.md` §8 e `MEDICAO_VERIFICACAO_BINARIA.md`) mediam outras coisas. Desenho registrado ANTES de rodar (`DESENHO_NULO_DO_MAXIMO.md`, com previsões escritas para poderem falhar — **uma falhou e está reportada como falha**); resultados em `ESTUDO_MARGEM_20PP.md`. **MEDIDO:** 20pp cai no percentil **82** do ruído com n=40; taxa de falso contraste **17,3%** em n=40 e **37,3%** no `n` mediano em que o catálogo foi de fato publicado; **6 de 35** filmes distinguíveis do nulo a α=0,05, **1** sobrevivendo a Holm; FDR de **24–38%** entre os 16 `tematico`.
+  - **(2) O número que decidiu, e é sobre as páginas no ar.** Nos **6 filmes cujo veredito nomeia por extenso a causa que separa os grupos e que o dado completo não sustenta** (`ESTABILIDADE_10_FLIPS.md`), a probabilidade média de aquele contraste ter vindo puramente de ruído era **0,633**. Não é "a margem é porosa": é seis páginas nomeando uma causa que tinha ~63% de chance de ser sorteio.
+  - **(3) O `n` publicado NUNCA foi 40 — a correção de registro que reenquadra §2.8/§2.9.** Reconstruído do campo `de_n` dos 35 JSONs: mediana **28**, média 27,3, mínimo **5**; **56 dos 105 buckets abaixo de 30** e **24 abaixo de 20**. `perfect-days-2023` publica com [18, 12, 17]; `hereditary` com [22, 13, 16]. O regime era muito pior que o "n≈40" que o registro supunha.
+  - **(4) As três opções não eram três.** **MEDIDO:** o valor crítico do nulo a α=0,05 varia **0,12pp** entre os 29 filmes com 40/40/40 — o "critério estatístico" É o "limiar fixo" para 29 dos 35, e só diverge nos 6 com bucket abaixo de 40, o que É o limiar por `n`. A decisão real era binária: o limiar olha para `n` ou não. E o critério estatístico recalculado em produção foi **rejeitado por um motivo de arquitetura, não de estatística** — um p-valor por permutação faria o estado depender de uma SEMENTE, regressão direta no compromisso central do §2.5.
+  - **(5) §0 ganha a frase que faltava: neutralidade de tratamento é MESMA EXIGÊNCIA PROBATÓRIA, não mesmo número.** O mesmo 20pp é o percentil **3** do ruído com n=10 e **99,8** com n=100 — um número constante exige provas sistematicamente diferentes, e mais frouxas exatamente onde o dado é mais fraco. O precedente é o próprio §0 na v1.9.30 (*"a ordem antiga não era neutra — era CONSTANTE, que é outra coisa"*), e o teste que ela usou passa aqui: a regra é função do DADO (`n` é contagem de reviews, não juízo), e **`n` é o mesmo para os três buckets dentro de um filme**, travado por teste. O que se perde está escrito: comparabilidade entre páginas, em 6 dos 35 filmes.
+  - **(6) O critério "cerca de um terço do catálogo" está APOSENTADO, e a razão é medida.** Era um alvo de COBERTURA, fixado quando `valorativo` era o estado fraco. **MEDIDO:** os 17 vereditos `valorativo` publicados são **17 textos distintos, com zero frases de mais de 25 caracteres repetidas** — o defeito das v1.9.21–23 está morto; e o ramo `valorativo` nomeia o `assunto_compartilhado`, que vem de **FREQUÊNCIA**: no evento real de cobertura 70,7%→100%, o eixo que ele nomeia mudou em **8 de 35** filmes contra **16 de 35** do eixo de maior lift. **Mover um filme para `valorativo` move a afirmação publicada da estatística menos estável para a mais estável.** O critério que entra é de ERRO (taxa de falso contraste ≈5%); a contagem de `tematico` é consequência, não alvo.
+  - **(7) α = 0,05 e não 0,10, por assimetria de dano.** `tematico` errado publica causa falsa em prosa categórica; `valorativo` errado subafirma. Quando os erros custam diferente, o nível se escolhe pelo mais caro. **Registrado como escolha, não como fato:** a multiplicidade entre os 35 filmes NÃO é corrigida, porque cada página faz sua própria afirmação lida isoladamente — quem pedir Holm não está errado, está pedindo um catálogo com 1 `tematico`.
+  - **(8) LIMITAÇÃO IN-SAMPLE, escrita onde quem expandir o catálogo vá encontrá-la (§2.5).** A lei foi calibrada sobre exatamente os 35 filmes que ela julga; com 35 não há como separar treino de teste. **A taxa de 5% é in-sample e otimista**, e a constante 144,4 carrega a estrutura de co-ocorrência de eixos deste corpus (**corr(carga de eixos, P(falso)) = +0,74**). A expansão é o primeiro teste out-of-sample e deve ser tratada como teste: rodar o nulo nos filmes NOVOS e comparar com a tabela — se divergir, é a constante que se recalibra.
+  - **(9) UM DEFEITO PRÉ-EXISTENTE que a lei expôs, e a frase da spec que ele desmentia.** §4 afirmava que *"nenhuma decisão do código lê os derivados"*. Falso desde a v1.9.20: `veredito.py:_maior_lift` e `frontend/js/filme.js:veredito()` decidiam comparando `lift_pp`, o float **arredondado a uma casa**. Com margem inteira o defeito era inofensivo por acidente aritmético; com um limiar irracional o acidente acaba. **MEDIDO: 0 divergências nas 35 × 30 células de hoje, e nenhuma célula a menos de 0,15pp da fronteira** — mas o mecanismo está vivo (`wicked-2024`, buckets 37/40/37, quantum de **0,068pp**). Correção: `eixos.py` publica **`acima_da_margem` por célula**, exato, e os dois consumidores passam a LER em vez de recalcular.
+  - **(10) O carimbo, e o critério que o decidiu: um artefato precisa poder ser auditado SOZINHO.** O bloco `eixos` ganha `margem` (`{lei, constante_quadrada, n, limiar_pp}`) — a lei em forma **exata**, com o `n` usado, para que um terceiro reproduza a decisão de cada célula sem a versão do código que a gerou. `margem_lift_pp` sobrevive com o mesmo significado ("o limiar em pp deste filme") e passa a ser o limiar RESOLVIDO (22,83 em n=40) em vez do inteiro 20; segue derivado e para exibição.
+  - **(11) §2.9 FECHA, e uma correção de registro dela.** A defasagem entre artefatos publicados e consenso estendido é resolvida pela republicação desta versão. **MEDIDO:** dos 10 filmes de §2.9, só **2** teriam estado diferente sob a lei em relação ao que a republicação sob 20pp lhes daria — o argumento de "trabalho refeito" valia **4 regenerações** (20 contra 16), não o trabalho inteiro. A razão forte para esperar era outra: republicar sob 20pp colocaria no ar 16 estados com FDR de 24–38%.
+  - **(12) Fora de escopo e NÃO tocados:** taxonomia, `taxonomia_id`, cota 40/40/40, `assunto_compartilhado`, piso de 25%, `min_chars`, seleção 2+3 de bullets, métrica de lift, fronteiras de bucket, ordenação, pôster/backdrop/barra/disclosure/rótulos/home. Nenhuma reclassificação, nenhuma coleta. **A "quarta opção"** (publicar a confiança ao lado do estado) foi avaliada e **NÃO implementada** — bom complemento, péssimo primeiro passo. **E os 5 filmes que trocam de estado em função de o verificador de `impacto_emocional` ter rodado ou não** (`dune-2021`, `eighth-grade`, `im-still-here-2024`, `napoleon-2023`, `the-godfather`) ficam para a próxima sessão: é instabilidade de CLASSIFICAÇÃO, fonte separada desta. A republicação usa `consenso_verificado.jsonl`, para não misturar as duas.
 - **v1.9.33** (2026-08-27) — **O piso de contraste do backdrop fecha por CONSTRUÇÃO, não por comentário.** Até aqui a faixa chapada do degradê (68px) e o recuo do texto (58px) eram dois números concordando por acaso — editar um sem o outro reverteria a garantia em silêncio. `--hero-overlap` passa a ser `calc(var(--fade-solid) - var(--fade-folga))`, com `--fade-folga` uma constante fixa e sempre positiva: subtrair um positivo de `--fade-solid` produz por aritmética algo menor que `--fade-solid`, então a desigualdade **não pode** ser violada mudando só o dial pretendido (`--fade-solid`). Os estágios do degradê também derivam de `--fade-h`/`--fade-solid` via `--fade-opaco-em`. **Verificado nos dois sentidos:** os valores computados são byte-idênticos aos de antes da refatoração (18,1px/12,1px de invasão do título); e sobrescrever só `--fade-solid` em runtime moveu `--hero-overlap` junto, sem quebrar a desigualdade. Mesmo padrão de `--k` na barra de proporção. Nenhum arquivo de `resultado/` no diff; suíte inalterada.
   - **Redundância de peso (callout + cabeçalho): MANTIDA, por decisão do dono.** Os dois não servem ao mesmo leitor — o callout serve a quem está olhando a barra, o cabeçalho a quem já rolou para os bullets (sobretudo no mobile, onde os grupos empilham e o segundo bloco fica longe do callout). É o único sinal de peso co-localizado com as listas, a mesma função que a v1.9.27 preservou ao remover o disclaimer da cota. Nada mexido.
 - **v1.9.32** (2026-08-27) — **O TOPO VIRA EDITORIAL: a sinopse sai, o backdrop se dissolve com o título invadindo a imagem, o link do Letterboxd vira secundário, a página ganha seções nomeadas e o par ano → título ganha animação de entrada.** Só frontend: **nenhum arquivo de `resultado/` no diff**, pipeline intocado. Suíte Python: **1525 passando**, inalterada.
