@@ -858,8 +858,16 @@
   },
   "eixos": {
     "taxonomia_id": "ebab2667de74",
-    "margem_lift_pp": 20,
-    "contraste": "valorativo",
+    "margem": {
+      "lei": "lift^2 * n >= 2085136/1000000",
+      "constante_quadrada": [
+        2085136,
+        1000000
+      ],
+      "n": 40,
+      "limiar_pp": 22.83
+    },
+    "margem_lift_pp": 22.83,
     "linhas": [
       {
         "eixo": "ritmo",
@@ -869,6 +877,7 @@
             "de_n": 40,
             "freq_pct": 35.0,
             "lift_pp": -5.0,
+            "acima_da_margem": false,
             "tema": "Excesso de violência e ritmo exaustivo",
             "exemplo_parafraseado": "A violência constante e a edição frenética são criticadas por tornarem a experiência cansativa e por reduzirem o impacto emocional, fazendo com que as mortes pareçam banais e sem peso.",
             "temas_no_mesmo_eixo": []
@@ -878,6 +887,7 @@
             "de_n": 40,
             "freq_pct": 40.0,
             "lift_pp": 5.0,
+            "acima_da_margem": false,
             "tema": null,
             "exemplo_parafraseado": null,
             "temas_no_mesmo_eixo": []
@@ -887,6 +897,7 @@
             "de_n": 40,
             "freq_pct": 25.0,
             "lift_pp": -15.0,
+            "acima_da_margem": false,
             "tema": null,
             "exemplo_parafraseado": null,
             "temas_no_mesmo_eixo": []
@@ -906,6 +917,7 @@
             "de_n": 40,
             "freq_pct": 10.0,
             "lift_pp": -7.5,
+            "acima_da_margem": false,
             "tema": null,
             "exemplo_parafraseado": null,
             "temas_no_mesmo_eixo": []
@@ -915,6 +927,7 @@
             "de_n": 40,
             "freq_pct": 17.5,
             "lift_pp": 0.0,
+            "acima_da_margem": false,
             "tema": null,
             "exemplo_parafraseado": null,
             "temas_no_mesmo_eixo": []
@@ -924,6 +937,7 @@
             "de_n": 40,
             "freq_pct": 17.5,
             "lift_pp": 0.0,
+            "acima_da_margem": false,
             "tema": "Atuações e elenco",
             "exemplo_parafraseado": "As reviews elogiam as atuações convincentes, especialmente de atores não profissionais, que adicionam autenticidade e profundidade aos personagens.",
             "temas_no_mesmo_eixo": []
@@ -943,6 +957,7 @@
             "de_n": 40,
             "freq_pct": 30.0,
             "lift_pp": -7.5,
+            "acima_da_margem": false,
             "tema": "Estética e estilo vazios, tecnicamente chamativos",
             "exemplo_parafraseado": "Embora a direção de arte e a fotografia chamem atenção, o estilo é visto como superficial e mais preocupado em impressionar do que em servir à narrativa.",
             "temas_no_mesmo_eixo": []
@@ -952,6 +967,7 @@
             "de_n": 40,
             "freq_pct": 37.5,
             "lift_pp": 2.5,
+            "acima_da_margem": false,
             "tema": null,
             "exemplo_parafraseado": null,
             "temas_no_mesmo_eixo": []
@@ -961,6 +977,7 @@
             "de_n": 40,
             "freq_pct": 35.0,
             "lift_pp": -2.5,
+            "acima_da_margem": false,
             "tema": "Cinematografia e direção",
             "exemplo_parafraseado": "Os elogios se concentram na fotografia marcante, nos ângulos de câmera dinâmicos e na direção segura, que criam uma experiência visual imersiva e estilisticamente impressionante.",
             "temas_no_mesmo_eixo": []
@@ -980,6 +997,7 @@
             "de_n": 40,
             "freq_pct": 40.0,
             "lift_pp": -20.0,
+            "acima_da_margem": false,
             "tema": "Falta de desenvolvimento dos personagens",
             "exemplo_parafraseado": "Os personagens são considerados rasos, servindo mais como tipos do que como pessoas reais, o que impede a conexão emocional do público e enfraquece o drama.",
             "temas_no_mesmo_eixo": [
@@ -991,6 +1009,7 @@
             "de_n": 40,
             "freq_pct": 60.0,
             "lift_pp": 0.0,
+            "acima_da_margem": false,
             "tema": "Narrativa episódica e difícil de seguir",
             "exemplo_parafraseado": "A história é contada em fragmentos que não se conectam bem, tornando difícil acompanhar a trama e os muitos personagens.",
             "temas_no_mesmo_eixo": [
@@ -1002,6 +1021,7 @@
             "de_n": 40,
             "freq_pct": 60.0,
             "lift_pp": 0.0,
+            "acima_da_margem": false,
             "tema": "Roteiro e narrativa",
             "exemplo_parafraseado": "Muitas reviews positivas mencionam a estrutura não linear e a forma como as histórias se entrelaçam, mantendo o interesse e proporcionando uma narrativa coesa e envolvente.",
             "temas_no_mesmo_eixo": []
@@ -1021,6 +1041,7 @@
             "de_n": 40,
             "freq_pct": 2.5,
             "lift_pp": -7.5,
+            "acima_da_margem": false,
             "tema": null,
             "exemplo_parafraseado": null,
             "temas_no_mesmo_eixo": []
@@ -1030,6 +1051,7 @@
             "de_n": 40,
             "freq_pct": 10.0,
             "lift_pp": 2.5,
+            "acima_da_margem": false,
             "tema": null,
             "exemplo_parafraseado": null,
             "temas_no_mesmo_eixo": []
@@ -1039,6 +1061,7 @@
             "de_n": 40,
             "freq_pct": 7.5,
             "lift_pp": -2.5,
+            "acima_da_margem": false,
             "tema": "Trilha sonora e ritmo",
             "exemplo_parafraseado": "Algumas reviews destacam a trilha sonora marcante e o ritmo acelerado, que contribuem para a energia e a fluidez do filme, mantendo o espectador preso à tela.",
             "temas_no_mesmo_eixo": []
@@ -1058,6 +1081,7 @@
             "de_n": 40,
             "freq_pct": 10.0,
             "lift_pp": -7.5,
+            "acima_da_margem": false,
             "tema": null,
             "exemplo_parafraseado": null,
             "temas_no_mesmo_eixo": []
@@ -1067,6 +1091,7 @@
             "de_n": 40,
             "freq_pct": 17.5,
             "lift_pp": 5.0,
+            "acima_da_margem": false,
             "tema": "Excesso de violência",
             "exemplo_parafraseado": "A violência é tão constante e intensa que acaba se tornando entorpecente, com mortes demais que perdem o impacto.",
             "temas_no_mesmo_eixo": []
@@ -1076,6 +1101,7 @@
             "de_n": 40,
             "freq_pct": 12.5,
             "lift_pp": -5.0,
+            "acima_da_margem": false,
             "tema": "Realismo e brutalidade",
             "exemplo_parafraseado": "As reviews positivas frequentemente destacam como o filme retrata de forma crua e realista a violência e a pobreza nas favelas, transmitindo uma sensação de autenticidade que impacta o espectador.",
             "temas_no_mesmo_eixo": []
@@ -1095,6 +1121,7 @@
             "de_n": 40,
             "freq_pct": 37.5,
             "lift_pp": -7.5,
+            "acima_da_margem": false,
             "tema": null,
             "exemplo_parafraseado": null,
             "temas_no_mesmo_eixo": []
@@ -1104,6 +1131,7 @@
             "de_n": 40,
             "freq_pct": 30.0,
             "lift_pp": -15.0,
+            "acima_da_margem": false,
             "tema": "Técnica impressionante, mas distanciamento emocional",
             "exemplo_parafraseado": "A direção, a fotografia e a edição são brilhantes, mas o estilo visual tão chamativo cria uma barreira que impede uma conexão mais profunda com a história.",
             "temas_no_mesmo_eixo": []
@@ -1113,6 +1141,7 @@
             "de_n": 40,
             "freq_pct": 45.0,
             "lift_pp": 7.5,
+            "acima_da_margem": false,
             "tema": "Impacto emocional",
             "exemplo_parafraseado": "Os espectadores relatam que o filme provoca fortes emoções, variando de choque e tristeza à admiração, e que a história permanece na mente muito depois do fim.",
             "temas_no_mesmo_eixo": []
@@ -1132,6 +1161,7 @@
             "de_n": 40,
             "freq_pct": 32.5,
             "lift_pp": -10.0,
+            "acima_da_margem": false,
             "tema": null,
             "exemplo_parafraseado": null,
             "temas_no_mesmo_eixo": []
@@ -1141,6 +1171,7 @@
             "de_n": 40,
             "freq_pct": 42.5,
             "lift_pp": 10.0,
+            "acima_da_margem": false,
             "tema": "Comparações com outros filmes de gangster",
             "exemplo_parafraseado": "A obra remete a outros clássicos do gênero, mas muitos acham que ela não alcança a mesma profundidade ou complexidade desses filmes.",
             "temas_no_mesmo_eixo": []
@@ -1150,6 +1181,7 @@
             "de_n": 40,
             "freq_pct": 22.5,
             "lift_pp": -20.0,
+            "acima_da_margem": false,
             "tema": null,
             "exemplo_parafraseado": null,
             "temas_no_mesmo_eixo": []
@@ -1169,6 +1201,7 @@
             "de_n": 40,
             "freq_pct": 27.5,
             "lift_pp": 7.5,
+            "acima_da_margem": false,
             "tema": "Filme superestimado em relação à sua recepção",
             "exemplo_parafraseado": "Muitos que não gostaram mencionam que não entendem a alta avaliação do filme, considerando-o superestimado e aquém das expectativas criadas pela fama.",
             "temas_no_mesmo_eixo": []
@@ -1178,6 +1211,7 @@
             "de_n": 40,
             "freq_pct": 20.0,
             "lift_pp": -7.5,
+            "acima_da_margem": false,
             "tema": null,
             "exemplo_parafraseado": null,
             "temas_no_mesmo_eixo": []
@@ -1187,6 +1221,7 @@
             "de_n": 40,
             "freq_pct": 12.5,
             "lift_pp": -15.0,
+            "acima_da_margem": false,
             "tema": null,
             "exemplo_parafraseado": null,
             "temas_no_mesmo_eixo": []
@@ -1206,6 +1241,7 @@
             "de_n": 40,
             "freq_pct": 50.0,
             "lift_pp": 0.0,
+            "acima_da_margem": false,
             "tema": "Retrato explorador e sensacionalista da pobreza",
             "exemplo_parafraseado": "O filme é visto como uma exploração da miséria, usando a violência e o sofrimento como espetáculo para o público estrangeiro, sem se aprofundar nas causas sociais ou dar dignidade aos personagens.",
             "temas_no_mesmo_eixo": []
@@ -1215,6 +1251,7 @@
             "de_n": 40,
             "freq_pct": 50.0,
             "lift_pp": 0.0,
+            "acima_da_margem": false,
             "tema": "Retrato realista da vida na favela",
             "exemplo_parafraseado": "O filme mostra com crueza a pobreza e a falta de oportunidades nas comunidades carentes, o que dá um peso documental à obra.",
             "temas_no_mesmo_eixo": []
@@ -1224,6 +1261,7 @@
             "de_n": 40,
             "freq_pct": 32.5,
             "lift_pp": -17.5,
+            "acima_da_margem": false,
             "tema": null,
             "exemplo_parafraseado": null,
             "temas_no_mesmo_eixo": []
@@ -1236,20 +1274,21 @@
         }
       }
     ],
+    "contraste": "valorativo",
     "rotulagem": {
       "n_chamadas": 3,
       "falharam": [],
       "fora_da_taxonomia": {},
       "houve_retentativa": []
     },
-    "spec_version": "1.9.16",
     "verificador": {
       "aplicado": true,
       "variante": "V2_alvo",
       "passada": 1,
       "eixo": "impacto_emocional",
       "n_removidas_no_corpus": 1654
-    }
+    },
+    "spec_version": "1.9.34"
   },
   "veredito": {
     "provider": "gemini",

@@ -787,35 +787,46 @@
   ],
   "eixos": {
     "taxonomia_id": "ebab2667de74",
-    "margem_lift_pp": 20,
-    "contraste": "tematico",
+    "margem": {
+      "lei": "lift^2 * n >= 2085136/1000000",
+      "constante_quadrada": [
+        2085136,
+        1000000
+      ],
+      "n": 40,
+      "limiar_pp": 22.83
+    },
+    "margem_lift_pp": 22.83,
     "linhas": [
       {
         "eixo": "ritmo",
         "por_bucket": {
           "negativas": {
-            "mencoes": 11,
-            "de_n": 18,
-            "freq_pct": 61.1,
-            "lift_pp": 19.4,
+            "mencoes": 21,
+            "de_n": 40,
+            "freq_pct": 52.5,
+            "lift_pp": 17.5,
+            "acima_da_margem": false,
             "tema": "Ritmo lento e tédio",
             "exemplo_parafraseado": "A lentidão e a ausência de eventos relevantes tornam a experiência entediante, fazendo o espectador lutar para manter a atenção.",
             "temas_no_mesmo_eixo": []
           },
           "medianas": {
-            "mencoes": 5,
-            "de_n": 12,
-            "freq_pct": 41.7,
-            "lift_pp": -19.4,
+            "mencoes": 14,
+            "de_n": 40,
+            "freq_pct": 35.0,
+            "lift_pp": -17.5,
+            "acima_da_margem": false,
             "tema": "Ritmo lento e repetitivo",
             "exemplo_parafraseado": "Muitos espectadores consideraram a rotina do protagonista excessivamente repetitiva, o que tornou a experiência cansativa e até entediante, embora alguns tenham reconhecido que essa repetição servia ao propósito narrativo.",
             "temas_no_mesmo_eixo": []
           },
           "positivas": {
-            "mencoes": 7,
-            "de_n": 17,
-            "freq_pct": 41.2,
-            "lift_pp": -19.9,
+            "mencoes": 12,
+            "de_n": 40,
+            "freq_pct": 30.0,
+            "lift_pp": -22.5,
+            "acima_da_margem": false,
             "tema": "Ritmo lento e contemplativo",
             "exemplo_parafraseado": "Algumas reviews mencionam que o ritmo vagaroso pode ser desafiador, mas que a imersão na vida do personagem compensa, tornando a experiência quase meditativa.",
             "temas_no_mesmo_eixo": []
@@ -831,28 +842,31 @@
         "eixo": "atuacao",
         "por_bucket": {
           "negativas": {
-            "mencoes": 2,
-            "de_n": 18,
-            "freq_pct": 11.1,
-            "lift_pp": -12.4,
+            "mencoes": 5,
+            "de_n": 40,
+            "freq_pct": 12.5,
+            "lift_pp": -5.0,
+            "acima_da_margem": false,
             "tema": null,
             "exemplo_parafraseado": null,
             "temas_no_mesmo_eixo": []
           },
           "medianas": {
-            "mencoes": 2,
-            "de_n": 12,
-            "freq_pct": 16.7,
-            "lift_pp": -6.9,
+            "mencoes": 4,
+            "de_n": 40,
+            "freq_pct": 10.0,
+            "lift_pp": -7.5,
+            "acima_da_margem": false,
             "tema": "Atuação do protagonista (Koji Yakusho)",
             "exemplo_parafraseado": "A performance do ator principal foi destacada como excepcional, transmitindo uma gama de emoções através de gestos sutis e expressões faciais, especialmente nas cenas mais silenciosas e na conclusão do filme.",
             "temas_no_mesmo_eixo": []
           },
           "positivas": {
-            "mencoes": 4,
-            "de_n": 17,
-            "freq_pct": 23.5,
-            "lift_pp": 6.9,
+            "mencoes": 7,
+            "de_n": 40,
+            "freq_pct": 17.5,
+            "lift_pp": 5.0,
+            "acima_da_margem": false,
             "tema": "Atuação de Koji Yakusho e minimalismo",
             "exemplo_parafraseado": "As reviews ressaltam que a atuação do protagonista é marcante mesmo com pouquíssimos diálogos, transmitindo emoção através de expressões e gestos sutis.",
             "temas_no_mesmo_eixo": []
@@ -868,28 +882,31 @@
         "eixo": "direcao_imagem",
         "por_bucket": {
           "negativas": {
-            "mencoes": 7,
-            "de_n": 18,
-            "freq_pct": 38.9,
-            "lift_pp": 5.6,
+            "mencoes": 14,
+            "de_n": 40,
+            "freq_pct": 35.0,
+            "lift_pp": 12.5,
+            "acima_da_margem": false,
             "tema": "Elogios a fotografia e trilha sonora",
             "exemplo_parafraseado": "Apesar das críticas, muitos reconhecem a beleza das imagens e a boa seleção musical, que ajudam a criar uma atmosfera agradável.",
             "temas_no_mesmo_eixo": []
           },
           "medianas": {
-            "mencoes": 4,
-            "de_n": 12,
-            "freq_pct": 33.3,
-            "lift_pp": -5.6,
+            "mencoes": 9,
+            "de_n": 40,
+            "freq_pct": 22.5,
+            "lift_pp": -12.5,
+            "acima_da_margem": false,
             "tema": "Visual e fotografia bonitos",
             "exemplo_parafraseado": "A direção de arte e a fotografia foram amplamente elogiadas, com destaque para a iluminação, a arquitetura japonesa e a composição dos planos, que criaram uma atmosfera visualmente agradável e contemplativa.",
             "temas_no_mesmo_eixo": []
           },
           "positivas": {
-            "mencoes": 2,
-            "de_n": 17,
-            "freq_pct": 11.8,
-            "lift_pp": -27.1,
+            "mencoes": 9,
+            "de_n": 40,
+            "freq_pct": 22.5,
+            "lift_pp": -12.5,
+            "acima_da_margem": false,
             "tema": "Fotografia e estética visual",
             "exemplo_parafraseado": "Muitas reviews elogiam a fotografia, com cores bonitas, cenas de Tóquio, o jogo de luz e sombras, e o uso de imagens em preto e branco.",
             "temas_no_mesmo_eixo": []
@@ -905,10 +922,11 @@
         "eixo": "roteiro_estrutura",
         "por_bucket": {
           "negativas": {
-            "mencoes": 8,
-            "de_n": 18,
-            "freq_pct": 44.4,
-            "lift_pp": -13.9,
+            "mencoes": 15,
+            "de_n": 40,
+            "freq_pct": 37.5,
+            "lift_pp": -20.0,
+            "acima_da_margem": false,
             "tema": "Falta de profundidade narrativa e personagens rasos",
             "exemplo_parafraseado": "O filme falha em desenvolver o protagonista ou qualquer arco dramático, contentando-se com situações superficiais que não geram envolvimento.",
             "temas_no_mesmo_eixo": [
@@ -917,56 +935,61 @@
             ]
           },
           "medianas": {
-            "mencoes": 7,
-            "de_n": 12,
-            "freq_pct": 58.3,
-            "lift_pp": 13.9,
+            "mencoes": 23,
+            "de_n": 40,
+            "freq_pct": 57.5,
+            "lift_pp": 7.5,
+            "acima_da_margem": false,
             "tema": "Falta de desenvolvimento e profundidade",
             "exemplo_parafraseado": "Alguns espectadores sentiram que o filme não explorou adequadamente o passado ou a psicologia do protagonista, deixando questões em aberto e impedindo uma conexão mais profunda com o personagem.",
             "temas_no_mesmo_eixo": []
           },
           "positivas": {
-            "mencoes": 6,
-            "de_n": 17,
-            "freq_pct": 35.3,
-            "lift_pp": -23.0,
+            "mencoes": 20,
+            "de_n": 40,
+            "freq_pct": 50.0,
+            "lift_pp": -7.5,
+            "acima_da_margem": false,
             "tema": null,
             "exemplo_parafraseado": null,
             "temas_no_mesmo_eixo": []
           }
         },
         "bullet_de": {
-          "negativas": "frequencia",
+          "negativas": null,
           "medianas": "frequencia",
-          "positivas": null
+          "positivas": "frequencia"
         }
       },
       {
         "eixo": "som_trilha",
         "por_bucket": {
           "negativas": {
-            "mencoes": 3,
-            "de_n": 18,
-            "freq_pct": 16.7,
-            "lift_pp": -1.0,
+            "mencoes": 5,
+            "de_n": 40,
+            "freq_pct": 12.5,
+            "lift_pp": -2.5,
+            "acima_da_margem": false,
             "tema": null,
             "exemplo_parafraseado": null,
             "temas_no_mesmo_eixo": []
           },
           "medianas": {
-            "mencoes": 2,
-            "de_n": 12,
-            "freq_pct": 16.7,
-            "lift_pp": -1.0,
+            "mencoes": 4,
+            "de_n": 40,
+            "freq_pct": 10.0,
+            "lift_pp": -5.0,
+            "acima_da_margem": false,
             "tema": null,
             "exemplo_parafraseado": null,
             "temas_no_mesmo_eixo": []
           },
           "positivas": {
-            "mencoes": 3,
-            "de_n": 17,
-            "freq_pct": 17.6,
-            "lift_pp": 1.0,
+            "mencoes": 6,
+            "de_n": 40,
+            "freq_pct": 15.0,
+            "lift_pp": 2.5,
+            "acima_da_margem": false,
             "tema": null,
             "exemplo_parafraseado": null,
             "temas_no_mesmo_eixo": []
@@ -982,28 +1005,31 @@
         "eixo": "tom_atmosfera",
         "por_bucket": {
           "negativas": {
-            "mencoes": 5,
-            "de_n": 18,
-            "freq_pct": 27.8,
-            "lift_pp": -42.8,
+            "mencoes": 8,
+            "de_n": 40,
+            "freq_pct": 20.0,
+            "lift_pp": -37.5,
+            "acima_da_margem": false,
             "tema": null,
             "exemplo_parafraseado": null,
             "temas_no_mesmo_eixo": []
           },
           "medianas": {
-            "mencoes": 5,
-            "de_n": 12,
-            "freq_pct": 41.7,
-            "lift_pp": -28.9,
+            "mencoes": 18,
+            "de_n": 40,
+            "freq_pct": 45.0,
+            "lift_pp": -12.5,
+            "acima_da_margem": false,
             "tema": null,
             "exemplo_parafraseado": null,
             "temas_no_mesmo_eixo": []
           },
           "positivas": {
-            "mencoes": 12,
-            "de_n": 17,
-            "freq_pct": 70.6,
-            "lift_pp": 28.9,
+            "mencoes": 23,
+            "de_n": 40,
+            "freq_pct": 57.5,
+            "lift_pp": 12.5,
+            "acima_da_margem": false,
             "tema": "Beleza na rotina e nas pequenas coisas",
             "exemplo_parafraseado": "As reviews positivas destacam que o filme encontra poesia e significado na repetição diária, valorizando pequenos gestos, a luz através das folhas, a música, os livros e a simplicidade do cotidiano.",
             "temas_no_mesmo_eixo": [
@@ -1013,36 +1039,39 @@
         },
         "bullet_de": {
           "negativas": null,
-          "medianas": null,
-          "positivas": "frequencia_e_contraste"
+          "medianas": "frequencia",
+          "positivas": "frequencia"
         }
       },
       {
         "eixo": "impacto_emocional",
         "por_bucket": {
           "negativas": {
-            "mencoes": 7,
-            "de_n": 18,
-            "freq_pct": 38.9,
-            "lift_pp": -25.8,
+            "mencoes": 14,
+            "de_n": 40,
+            "freq_pct": 35.0,
+            "lift_pp": -15.0,
+            "acima_da_margem": false,
             "tema": null,
             "exemplo_parafraseado": null,
             "temas_no_mesmo_eixo": []
           },
           "medianas": {
-            "mencoes": 4,
-            "de_n": 12,
-            "freq_pct": 33.3,
-            "lift_pp": -31.4,
+            "mencoes": 12,
+            "de_n": 40,
+            "freq_pct": 30.0,
+            "lift_pp": -20.0,
+            "acima_da_margem": false,
             "tema": null,
             "exemplo_parafraseado": null,
             "temas_no_mesmo_eixo": []
           },
           "positivas": {
-            "mencoes": 11,
-            "de_n": 17,
-            "freq_pct": 64.7,
-            "lift_pp": 25.8,
+            "mencoes": 20,
+            "de_n": 40,
+            "freq_pct": 50.0,
+            "lift_pp": 15.0,
+            "acima_da_margem": false,
             "tema": "Emoções ambivalentes: alegria e melancolia",
             "exemplo_parafraseado": "As reviews destacam a capacidade do filme de equilibrar felicidade e tristeza, lembrando que a vida boa pode conter ambos, como na cena final que mistura lágrimas e sorriso.",
             "temas_no_mesmo_eixo": []
@@ -1051,35 +1080,38 @@
         "bullet_de": {
           "negativas": null,
           "medianas": null,
-          "positivas": "frequencia_e_contraste"
+          "positivas": null
         }
       },
       {
         "eixo": "comparacoes",
         "por_bucket": {
           "negativas": {
-            "mencoes": 6,
-            "de_n": 18,
-            "freq_pct": 33.3,
-            "lift_pp": 0.0,
+            "mencoes": 10,
+            "de_n": 40,
+            "freq_pct": 25.0,
+            "lift_pp": -2.5,
+            "acima_da_margem": false,
             "tema": null,
             "exemplo_parafraseado": null,
             "temas_no_mesmo_eixo": []
           },
           "medianas": {
-            "mencoes": 4,
-            "de_n": 12,
-            "freq_pct": 33.3,
-            "lift_pp": 0.0,
+            "mencoes": 11,
+            "de_n": 40,
+            "freq_pct": 27.5,
+            "lift_pp": 2.5,
+            "acima_da_margem": false,
             "tema": null,
             "exemplo_parafraseado": null,
             "temas_no_mesmo_eixo": []
           },
           "positivas": {
-            "mencoes": 3,
-            "de_n": 17,
-            "freq_pct": 17.6,
-            "lift_pp": -15.7,
+            "mencoes": 7,
+            "de_n": 40,
+            "freq_pct": 17.5,
+            "lift_pp": -10.0,
+            "acima_da_margem": false,
             "tema": null,
             "exemplo_parafraseado": null,
             "temas_no_mesmo_eixo": []
@@ -1095,28 +1127,31 @@
         "eixo": "expectativa",
         "por_bucket": {
           "negativas": {
-            "mencoes": 1,
-            "de_n": 18,
-            "freq_pct": 5.6,
-            "lift_pp": 5.6,
+            "mencoes": 4,
+            "de_n": 40,
+            "freq_pct": 10.0,
+            "lift_pp": 2.5,
+            "acima_da_margem": false,
             "tema": null,
             "exemplo_parafraseado": null,
             "temas_no_mesmo_eixo": []
           },
           "medianas": {
-            "mencoes": 0,
-            "de_n": 12,
-            "freq_pct": 0.0,
-            "lift_pp": -5.6,
+            "mencoes": 3,
+            "de_n": 40,
+            "freq_pct": 7.5,
+            "lift_pp": -2.5,
+            "acima_da_margem": false,
             "tema": null,
             "exemplo_parafraseado": null,
             "temas_no_mesmo_eixo": []
           },
           "positivas": {
             "mencoes": 0,
-            "de_n": 17,
+            "de_n": 40,
             "freq_pct": 0.0,
-            "lift_pp": -5.6,
+            "lift_pp": -10.0,
+            "acima_da_margem": false,
             "tema": null,
             "exemplo_parafraseado": null,
             "temas_no_mesmo_eixo": []
@@ -1132,19 +1167,21 @@
         "eixo": "critica_social",
         "por_bucket": {
           "negativas": {
-            "mencoes": 8,
-            "de_n": 18,
-            "freq_pct": 44.4,
-            "lift_pp": -13.9,
+            "mencoes": 16,
+            "de_n": 40,
+            "freq_pct": 40.0,
+            "lift_pp": 5.0,
+            "acima_da_margem": false,
             "tema": "Romantização do trabalho e da rotina",
             "exemplo_parafraseado": "Há uma crítica incisiva à forma como a obra enobrece a vida de um faxineiro, ignorando as condições estruturais e o desgaste do trabalho, sendo comparada a uma propaganda de gentrificação.",
             "temas_no_mesmo_eixo": []
           },
           "medianas": {
-            "mencoes": 7,
-            "de_n": 12,
-            "freq_pct": 58.3,
-            "lift_pp": 13.9,
+            "mencoes": 14,
+            "de_n": 40,
+            "freq_pct": 35.0,
+            "lift_pp": -5.0,
+            "acima_da_margem": false,
             "tema": "Mensagem de apreciar as pequenas coisas",
             "exemplo_parafraseado": "O filme transmite uma mensagem edificante sobre encontrar beleza e contentamento nos detalhes simples do cotidiano, uma filosofia de vida que muitos espectadores acharam tocante e inspiradora.",
             "temas_no_mesmo_eixo": [
@@ -1152,57 +1189,38 @@
             ]
           },
           "positivas": {
-            "mencoes": 4,
-            "de_n": 17,
-            "freq_pct": 23.5,
-            "lift_pp": -34.8,
+            "mencoes": 8,
+            "de_n": 40,
+            "freq_pct": 20.0,
+            "lift_pp": -20.0,
+            "acima_da_margem": false,
             "tema": null,
             "exemplo_parafraseado": null,
             "temas_no_mesmo_eixo": []
           }
         },
         "bullet_de": {
-          "negativas": null,
-          "medianas": "frequencia",
+          "negativas": "frequencia",
+          "medianas": null,
           "positivas": null
         }
       }
     ],
-    "fonte_classificacao": {
-      "arquivo": "resultado/votacao-3/consenso.jsonl",
-      "criterio": "votacao_3_consenso_2_de_3",
-      "por_bucket": {
-        "negativas": {
-          "n_classificadas": 18,
-          "n_analisadas": 40,
-          "sobreposicao_com_analisadas": 18
-        },
-        "medianas": {
-          "n_classificadas": 12,
-          "n_analisadas": 40,
-          "sobreposicao_com_analisadas": 12
-        },
-        "positivas": {
-          "n_classificadas": 17,
-          "n_analisadas": 40,
-          "sobreposicao_com_analisadas": 17
-        }
-      }
-    },
+    "contraste": "valorativo",
     "rotulagem": {
       "n_chamadas": 3,
       "falharam": [],
       "fora_da_taxonomia": {},
       "houve_retentativa": []
     },
-    "spec_version": "1.9.16",
     "verificador": {
       "aplicado": true,
       "variante": "V2_alvo",
       "passada": 1,
       "eixo": "impacto_emocional",
       "n_removidas_no_corpus": 1654
-    }
+    },
+    "spec_version": "1.9.34"
   },
   "narrativa": "Dirigido por Wim Wenders, o drama Dias Perfeitos (2023) acompanha a história de Hirayama, um homem de meia-idade reflexivo que vive de maneira modesta como zelador, limpando banheiros públicos em Tóquio. O cotidiano do protagonista é revelado por meio de suas três paixões — a música que ouve, os livros que lê e as fotos que tira das árvores —, até que encontros inesperados começam a surgir e sugerem dimensões de um passado não tão metódico.\n\nA narrativa adota um ritmo lento e cadenciado, estruturando-se em torno da repetição dos afazeres diários e da ambientação urbana constante nos espaços públicos da cidade.\n\nNa grande maioria das notas (~92%), a maior parte destaca que o filme encontra poesia e beleza na rotina e nas pequenas coisas da vida. Nesse mesmo conjunto, uma parcela expressiva elogia a fotografia e a estética visual, enquanto uma fatia menor ressalta a atuação minimalista de Koji Yakusho, conduzida por expressões sutis e quase sem diálogos.\n\nPara quem está situado numa fração mínima das notas (~7%), a percepção é dividida: um número considerável aponta que o ritmo lento e a repetição tornam a experiência cansativa, ao mesmo tempo em que vários consideram tocante a mensagem de valorizar a simplicidade, e uma parte salienta a beleza visual e a fotografia.\n\nNa perspectiva de quem compõe uma fração ainda menor das notas (~2%), surgem objeções mais enfáticas: para boa parte, o ritmo lento e a ausência de acontecimentos geram tédio, muitos criticam a romantização do trabalho e da rotina, e alguns apontam falta de profundidade narrativa aliada a personagens rasos.",
   "verificacao_narrativa": {
@@ -1281,53 +1299,53 @@
     "n_chamadas": 3,
     "prefixo_codigo": "",
     "retry": null,
-    "spec_version": "1.9.22",
-    "texto": "A maioria dos que não recomendam a produção destaca o andamento excessivamente vagaroso e entediante. Em contrapartida, a maioria dos que recomendam foca na atmosfera, ressaltando o encanto presente na rotina simples e nos detalhes do dia a dia.",
-    "texto_modelo": "A maioria dos que não recomendam a produção destaca o andamento excessivamente vagaroso e entediante. Em contrapartida, a maioria dos que recomendam foca na atmosfera, ressaltando o encanto presente na rotina simples e nos detalhes do dia a dia.",
+    "spec_version": "1.9.25",
+    "texto": "As opiniões divergem sobre o funcionamento do roteiro e da estrutura. Enquanto cerca de metade de quem recomenda encontra encanto no cotidiano e na simplicidade dos acontecimentos, cerca de metade de quem não recomenda considera a condução arrastada e monótona, apontando superficialidade no desenvolvimento do enredo e dos personagens.",
+    "texto_modelo": "As opiniões divergem sobre o funcionamento do roteiro e da estrutura. Enquanto cerca de metade de quem recomenda encontra encanto no cotidiano e na simplicidade dos acontecimentos, cerca de metade de quem não recomenda considera a condução arrastada e monótona, apontando superficialidade no desenvolvimento do enredo e dos personagens.",
     "origem": "llm",
     "motivo": "melhor_entre_limpos",
-    "criterio_decisivo": "ancoras",
-    "abertura": "QUANT",
-    "indice_escolhido": 0,
+    "criterio_decisivo": "empate",
+    "abertura": "opini",
+    "indice_escolhido": 1,
     "flags": [],
     "candidatos": [
       {
         "indice": 0,
         "n_flags": 0,
         "flags": [],
-        "n_palavras": 39,
-        "n_ancoras": 1,
-        "abertura": "QUANT",
-        "abertura_freq": 17,
+        "n_palavras": 46,
+        "n_ancoras": 0,
+        "abertura": "opini",
+        "abertura_freq": 4,
         "eliminado": false
       },
       {
         "indice": 1,
         "n_flags": 0,
         "flags": [],
-        "n_palavras": 39,
-        "n_ancoras": 0,
-        "abertura": "QUANT",
-        "abertura_freq": 17,
+        "n_palavras": 49,
+        "n_ancoras": 1,
+        "abertura": "opini",
+        "abertura_freq": 4,
         "eliminado": false
       },
       {
         "indice": 2,
         "n_flags": 0,
         "flags": [],
-        "n_palavras": 34,
-        "n_ancoras": 0,
-        "abertura": "QUANT",
-        "abertura_freq": 17,
+        "n_palavras": 49,
+        "n_ancoras": 1,
+        "abertura": "opini",
+        "abertura_freq": 4,
         "eliminado": false
       }
     ],
     "uso": {
-      "prompt_tokens": 3576,
-      "completion_tokens": 180,
+      "prompt_tokens": 3612,
+      "completion_tokens": 219,
       "cache_hit_tokens": 0,
-      "cache_miss_tokens": 3576
+      "cache_miss_tokens": 3612
     },
-    "latencia_s": 10.3
+    "latencia_s": 27.42
   }
 }

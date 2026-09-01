@@ -788,35 +788,46 @@
   ],
   "eixos": {
     "taxonomia_id": "ebab2667de74",
-    "margem_lift_pp": 20,
-    "contraste": "valorativo",
+    "margem": {
+      "lei": "lift^2 * n >= 2085136/1000000",
+      "constante_quadrada": [
+        2085136,
+        1000000
+      ],
+      "n": 40,
+      "limiar_pp": 22.83
+    },
+    "margem_lift_pp": 22.83,
     "linhas": [
       {
         "eixo": "ritmo",
         "por_bucket": {
           "negativas": {
-            "mencoes": 14,
-            "de_n": 32,
-            "freq_pct": 43.8,
-            "lift_pp": 9.1,
+            "mencoes": 15,
+            "de_n": 40,
+            "freq_pct": 37.5,
+            "lift_pp": 2.5,
+            "acima_da_margem": false,
             "tema": "Ritmo lento e narrativa arrastada",
             "exemplo_parafraseado": "A trama se estende desnecessariamente, com longos momentos que pouco acrescentam e que poderiam ser condensados para manter o interesse.",
             "temas_no_mesmo_eixo": []
           },
           "medianas": {
-            "mencoes": 9,
-            "de_n": 26,
-            "freq_pct": 34.6,
-            "lift_pp": -9.1,
+            "mencoes": 14,
+            "de_n": 40,
+            "freq_pct": 35.0,
+            "lift_pp": -2.5,
+            "acima_da_margem": false,
             "tema": "Ritmo lento e falta de dinamismo",
             "exemplo_parafraseado": "Várias reviews apontam que o filme se arrasta, com longas pausas e cenas monótonas, o que dificulta a imersão e o envolvimento emocional.",
             "temas_no_mesmo_eixo": []
           },
           "positivas": {
-            "mencoes": 4,
-            "de_n": 26,
-            "freq_pct": 15.4,
-            "lift_pp": -28.4,
+            "mencoes": 8,
+            "de_n": 40,
+            "freq_pct": 20.0,
+            "lift_pp": -17.5,
+            "acima_da_margem": false,
             "tema": null,
             "exemplo_parafraseado": null,
             "temas_no_mesmo_eixo": []
@@ -832,28 +843,31 @@
         "eixo": "atuacao",
         "por_bucket": {
           "negativas": {
-            "mencoes": 10,
-            "de_n": 32,
-            "freq_pct": 31.2,
-            "lift_pp": -14.9,
+            "mencoes": 14,
+            "de_n": 40,
+            "freq_pct": 35.0,
+            "lift_pp": -12.5,
+            "acima_da_margem": false,
             "tema": "Desempenho destaca-se, mas não sustenta o conjunto",
             "exemplo_parafraseado": "A atuação principal é elogiada como o ponto alto, mas os demais aspectos do filme não acompanham esse nível, deixando a obra sem brilho.",
             "temas_no_mesmo_eixo": []
           },
           "medianas": {
-            "mencoes": 10,
-            "de_n": 26,
-            "freq_pct": 38.5,
-            "lift_pp": -7.7,
+            "mencoes": 16,
+            "de_n": 40,
+            "freq_pct": 40.0,
+            "lift_pp": -7.5,
+            "acima_da_margem": false,
             "tema": "Atuação de Fernanda Torres",
             "exemplo_parafraseado": "A performance de Fernanda Torres é amplamente elogiada, transmitindo a angústia e a força da personagem de forma sutil e comovente, sendo considerada a alma do filme.",
             "temas_no_mesmo_eixo": []
           },
           "positivas": {
-            "mencoes": 12,
-            "de_n": 26,
-            "freq_pct": 46.2,
-            "lift_pp": 7.7,
+            "mencoes": 19,
+            "de_n": 40,
+            "freq_pct": 47.5,
+            "lift_pp": 7.5,
+            "acima_da_margem": false,
             "tema": "Atuações excepcionais",
             "exemplo_parafraseado": "Os elogios se concentram nas atuações de Fernanda Torres e Fernanda Montenegro, destacando a capacidade de transmitir emoções profundas através de expressões e silêncios.",
             "temas_no_mesmo_eixo": []
@@ -869,28 +883,31 @@
         "eixo": "direcao_imagem",
         "por_bucket": {
           "negativas": {
-            "mencoes": 8,
-            "de_n": 32,
-            "freq_pct": 25.0,
-            "lift_pp": 5.8,
+            "mencoes": 11,
+            "de_n": 40,
+            "freq_pct": 27.5,
+            "lift_pp": 7.5,
+            "acima_da_margem": false,
             "tema": "Estética segura e previsível",
             "exemplo_parafraseado": "A direção de fotografia e a montagem são tecnicamente competentes, mas sem ousadia, seguindo um padrão internacional acomodado.",
             "temas_no_mesmo_eixo": []
           },
           "medianas": {
-            "mencoes": 4,
-            "de_n": 26,
-            "freq_pct": 15.4,
-            "lift_pp": -9.6,
+            "mencoes": 7,
+            "de_n": 40,
+            "freq_pct": 17.5,
+            "lift_pp": -10.0,
+            "acima_da_margem": false,
             "tema": null,
             "exemplo_parafraseado": null,
             "temas_no_mesmo_eixo": []
           },
           "positivas": {
-            "mencoes": 5,
-            "de_n": 26,
-            "freq_pct": 19.2,
-            "lift_pp": -5.8,
+            "mencoes": 8,
+            "de_n": 40,
+            "freq_pct": 20.0,
+            "lift_pp": -7.5,
+            "acima_da_margem": false,
             "tema": "Direção e aspectos técnicos",
             "exemplo_parafraseado": "A direção de Walter Salles, a fotografia, a trilha sonora e a reconstituição de época foram citadas como elementos que intensificam a imersão na história.",
             "temas_no_mesmo_eixo": []
@@ -906,28 +923,31 @@
         "eixo": "roteiro_estrutura",
         "por_bucket": {
           "negativas": {
-            "mencoes": 16,
-            "de_n": 32,
-            "freq_pct": 50.0,
-            "lift_pp": 19.2,
+            "mencoes": 22,
+            "de_n": 40,
+            "freq_pct": 55.0,
+            "lift_pp": 15.0,
+            "acima_da_margem": false,
             "tema": null,
             "exemplo_parafraseado": null,
             "temas_no_mesmo_eixo": []
           },
           "medianas": {
-            "mencoes": 8,
-            "de_n": 26,
-            "freq_pct": 30.8,
-            "lift_pp": -19.2,
+            "mencoes": 16,
+            "de_n": 40,
+            "freq_pct": 40.0,
+            "lift_pp": -15.0,
+            "acima_da_margem": false,
             "tema": "Estrutura narrativa e elipses temporais",
             "exemplo_parafraseado": "As transições temporais no final foram consideradas desnecessárias e enfraqueceram o desenvolvimento dramático, fazendo o filme perder força.",
             "temas_no_mesmo_eixo": []
           },
           "positivas": {
-            "mencoes": 6,
-            "de_n": 26,
-            "freq_pct": 23.1,
-            "lift_pp": -26.9,
+            "mencoes": 12,
+            "de_n": 40,
+            "freq_pct": 30.0,
+            "lift_pp": -25.0,
+            "acima_da_margem": false,
             "tema": "Primeira parte memorável",
             "exemplo_parafraseado": "Os primeiros 30 minutos foram amplamente elogiados por sua construção calorosa da família, contrastando com o clima de tensão iminente.",
             "temas_no_mesmo_eixo": []
@@ -943,28 +963,31 @@
         "eixo": "som_trilha",
         "por_bucket": {
           "negativas": {
-            "mencoes": 3,
-            "de_n": 32,
-            "freq_pct": 9.4,
-            "lift_pp": -2.2,
+            "mencoes": 5,
+            "de_n": 40,
+            "freq_pct": 12.5,
+            "lift_pp": 5.0,
+            "acima_da_margem": false,
             "tema": null,
             "exemplo_parafraseado": null,
             "temas_no_mesmo_eixo": []
           },
           "medianas": {
-            "mencoes": 0,
-            "de_n": 26,
-            "freq_pct": 0.0,
-            "lift_pp": -11.5,
+            "mencoes": 1,
+            "de_n": 40,
+            "freq_pct": 2.5,
+            "lift_pp": -10.0,
+            "acima_da_margem": false,
             "tema": null,
             "exemplo_parafraseado": null,
             "temas_no_mesmo_eixo": []
           },
           "positivas": {
             "mencoes": 3,
-            "de_n": 26,
-            "freq_pct": 11.5,
-            "lift_pp": 2.2,
+            "de_n": 40,
+            "freq_pct": 7.5,
+            "lift_pp": -5.0,
+            "acima_da_margem": false,
             "tema": null,
             "exemplo_parafraseado": null,
             "temas_no_mesmo_eixo": []
@@ -981,27 +1004,30 @@
         "por_bucket": {
           "negativas": {
             "mencoes": 2,
-            "de_n": 32,
-            "freq_pct": 6.2,
-            "lift_pp": -16.8,
+            "de_n": 40,
+            "freq_pct": 5.0,
+            "lift_pp": -20.0,
+            "acima_da_margem": false,
             "tema": null,
             "exemplo_parafraseado": null,
             "temas_no_mesmo_eixo": []
           },
           "medianas": {
-            "mencoes": 2,
-            "de_n": 26,
-            "freq_pct": 7.7,
-            "lift_pp": -15.4,
+            "mencoes": 5,
+            "de_n": 40,
+            "freq_pct": 12.5,
+            "lift_pp": -12.5,
+            "acima_da_margem": false,
             "tema": null,
             "exemplo_parafraseado": null,
             "temas_no_mesmo_eixo": []
           },
           "positivas": {
-            "mencoes": 6,
-            "de_n": 26,
-            "freq_pct": 23.1,
-            "lift_pp": 15.4,
+            "mencoes": 10,
+            "de_n": 40,
+            "freq_pct": 25.0,
+            "lift_pp": 12.5,
+            "acima_da_margem": false,
             "tema": null,
             "exemplo_parafraseado": null,
             "temas_no_mesmo_eixo": []
@@ -1017,28 +1043,31 @@
         "eixo": "impacto_emocional",
         "por_bucket": {
           "negativas": {
-            "mencoes": 4,
-            "de_n": 32,
+            "mencoes": 5,
+            "de_n": 40,
             "freq_pct": 12.5,
-            "lift_pp": -45.2,
+            "lift_pp": -45.0,
+            "acima_da_margem": false,
             "tema": "Manipulação emocional e excesso de melodrama",
             "exemplo_parafraseado": "O filme força emoções no espectador com cenas e trilha sonora calculadas, lembrando uma novela, em vez de deixar a história respirar.",
             "temas_no_mesmo_eixo": []
           },
           "medianas": {
-            "mencoes": 10,
-            "de_n": 26,
-            "freq_pct": 38.5,
-            "lift_pp": -19.2,
+            "mencoes": 16,
+            "de_n": 40,
+            "freq_pct": 40.0,
+            "lift_pp": -17.5,
+            "acima_da_margem": false,
             "tema": "Falta de conexão emocional",
             "exemplo_parafraseado": "Alguns espectadores não conseguiram se conectar afetivamente com a história, apesar de reconhecerem sua importância, resultando em uma experiência impactante apenas de forma parcial.",
             "temas_no_mesmo_eixo": []
           },
           "positivas": {
-            "mencoes": 15,
-            "de_n": 26,
-            "freq_pct": 57.7,
-            "lift_pp": 19.2,
+            "mencoes": 23,
+            "de_n": 40,
+            "freq_pct": 57.5,
+            "lift_pp": 17.5,
+            "acima_da_margem": false,
             "tema": "Força emocional e impacto",
             "exemplo_parafraseado": "Muitos relataram que o filme provocou choro e sensações intensas, como angústia e esperança, deixando uma marca duradoura.",
             "temas_no_mesmo_eixo": []
@@ -1054,28 +1083,31 @@
         "eixo": "comparacoes",
         "por_bucket": {
           "negativas": {
-            "mencoes": 11,
-            "de_n": 32,
-            "freq_pct": 34.4,
-            "lift_pp": 19.0,
+            "mencoes": 13,
+            "de_n": 40,
+            "freq_pct": 32.5,
+            "lift_pp": 12.5,
+            "acima_da_margem": false,
             "tema": null,
             "exemplo_parafraseado": null,
             "temas_no_mesmo_eixo": []
           },
           "medianas": {
-            "mencoes": 4,
-            "de_n": 26,
-            "freq_pct": 15.4,
-            "lift_pp": -19.0,
+            "mencoes": 6,
+            "de_n": 40,
+            "freq_pct": 15.0,
+            "lift_pp": -17.5,
+            "acima_da_margem": false,
             "tema": null,
             "exemplo_parafraseado": null,
             "temas_no_mesmo_eixo": []
           },
           "positivas": {
-            "mencoes": 3,
-            "de_n": 26,
-            "freq_pct": 11.5,
-            "lift_pp": -22.8,
+            "mencoes": 8,
+            "de_n": 40,
+            "freq_pct": 20.0,
+            "lift_pp": -12.5,
+            "acima_da_margem": false,
             "tema": null,
             "exemplo_parafraseado": null,
             "temas_no_mesmo_eixo": []
@@ -1092,27 +1124,30 @@
         "por_bucket": {
           "negativas": {
             "mencoes": 6,
-            "de_n": 32,
-            "freq_pct": 18.8,
-            "lift_pp": 7.2,
+            "de_n": 40,
+            "freq_pct": 15.0,
+            "lift_pp": -2.5,
+            "acima_da_margem": false,
             "tema": null,
             "exemplo_parafraseado": null,
             "temas_no_mesmo_eixo": []
           },
           "medianas": {
-            "mencoes": 3,
-            "de_n": 26,
-            "freq_pct": 11.5,
-            "lift_pp": -7.2,
+            "mencoes": 7,
+            "de_n": 40,
+            "freq_pct": 17.5,
+            "lift_pp": 2.5,
+            "acima_da_margem": false,
             "tema": null,
             "exemplo_parafraseado": null,
             "temas_no_mesmo_eixo": []
           },
           "positivas": {
-            "mencoes": 0,
-            "de_n": 26,
-            "freq_pct": 0.0,
-            "lift_pp": -18.8,
+            "mencoes": 1,
+            "de_n": 40,
+            "freq_pct": 2.5,
+            "lift_pp": -15.0,
+            "acima_da_margem": false,
             "tema": null,
             "exemplo_parafraseado": null,
             "temas_no_mesmo_eixo": []
@@ -1128,10 +1163,11 @@
         "eixo": "critica_social",
         "por_bucket": {
           "negativas": {
-            "mencoes": 17,
-            "de_n": 32,
-            "freq_pct": 53.1,
-            "lift_pp": -12.3,
+            "mencoes": 22,
+            "de_n": 40,
+            "freq_pct": 55.0,
+            "lift_pp": -10.0,
+            "acima_da_margem": false,
             "tema": "Falta de profundidade política",
             "exemplo_parafraseado": "O pano de fundo histórico da ditadura é tratado de forma superficial, sem explorar o contexto político e as diferentes forças envolvidas, o que enfraquece a crítica.",
             "temas_no_mesmo_eixo": [
@@ -1139,10 +1175,11 @@
             ]
           },
           "medianas": {
-            "mencoes": 14,
-            "de_n": 26,
-            "freq_pct": 53.8,
-            "lift_pp": -11.5,
+            "mencoes": 19,
+            "de_n": 40,
+            "freq_pct": 47.5,
+            "lift_pp": -17.5,
+            "acima_da_margem": false,
             "tema": "Importância histórica e temática da ditadura",
             "exemplo_parafraseado": "Reconhece-se o valor do filme como registro da ditadura militar brasileira e da luta por memória e justiça, destacando sua relevância política e social.",
             "temas_no_mesmo_eixo": [
@@ -1150,10 +1187,11 @@
             ]
           },
           "positivas": {
-            "mencoes": 17,
-            "de_n": 26,
-            "freq_pct": 65.4,
-            "lift_pp": 11.5,
+            "mencoes": 26,
+            "de_n": 40,
+            "freq_pct": 65.0,
+            "lift_pp": 10.0,
+            "acima_da_margem": false,
             "tema": "Retrato da ditadura militar",
             "exemplo_parafraseado": "O filme é valorizado por expor as atrocidades do regime militar brasileiro, servindo como um alerta histórico e um ato de resistência.",
             "temas_no_mesmo_eixo": []
@@ -1166,27 +1204,7 @@
         }
       }
     ],
-    "fonte_classificacao": {
-      "arquivo": "resultado/votacao-3/consenso.jsonl",
-      "criterio": "votacao_3_consenso_2_de_3",
-      "por_bucket": {
-        "negativas": {
-          "n_classificadas": 32,
-          "n_analisadas": 40,
-          "sobreposicao_com_analisadas": 32
-        },
-        "medianas": {
-          "n_classificadas": 26,
-          "n_analisadas": 40,
-          "sobreposicao_com_analisadas": 26
-        },
-        "positivas": {
-          "n_classificadas": 26,
-          "n_analisadas": 40,
-          "sobreposicao_com_analisadas": 26
-        }
-      }
-    },
+    "contraste": "valorativo",
     "rotulagem": {
       "n_chamadas": 3,
       "falharam": [],
@@ -1197,14 +1215,14 @@
       },
       "houve_retentativa": []
     },
-    "spec_version": "1.9.16",
     "verificador": {
       "aplicado": true,
       "variante": "V2_alvo",
       "passada": 1,
       "eixo": "impacto_emocional",
       "n_removidas_no_corpus": 1654
-    }
+    },
+    "spec_version": "1.9.34"
   },
   "narrativa": "Dirigido por Walter Salles e lançado em 2024, Ainda Estou Aqui é um drama histórico ambientado durante o endurecimento da ditadura militar brasileira. A narrativa acompanha a família Paiva no Rio de Janeiro a partir do momento em que o pai é levado por militares à paisana e desaparece.\n\nA experiência é conduzida por um ritmo lento e cadenciado, apoiando-se em silêncios, longas pausas e numa reconstituição de época detalhada do contexto sociopolítico do período.\n\nOs diferentes públicos tratam essencialmente dos mesmos tópicos e concordam sobre o que o filme apresenta, mas divergem frontalmente no veredito sobre o funcionamento da obra. Na grande maioria das notas (~96%), grande parte destaca as atuações excepcionais do elenco, enquanto a maior parcela aponta uma intensa força emocional e impacto. Além disso, boa parte ressalta o retrato da ditadura militar como um registro histórico relevante.\n\nPara quem está numa fração mínima das notas (~4%), um número considerável elogia a atuação de Fernanda Torres, mas vários apontam o ritmo lento e a falta de dinamismo como obstáculos ao envolvimento, embora uma parte ainda reconheça a importância histórica e a temática da ditadura.\n\nJá sob a perspectiva presente numa fração ainda menor das notas (~1%), uma parcela expressiva critica o que considera manipulação emocional e excesso de melodrama, enquanto muitos apontam um ritmo lento com narrativa arrastada e alguns apontam falta de profundidade política.",
   "verificacao_narrativa": {
@@ -1290,13 +1308,13 @@
     "n_chamadas": 3,
     "prefixo_codigo": "",
     "retry": null,
-    "spec_version": "1.9.22",
-    "texto": "O debate gira em torno da crítica social do filme: a maioria dos que recomendam exalta a reconstituição da ditadura militar, ao passo que cerca de metade dos que não recomendam vê superficialidade no tratamento das questões políticas.",
-    "texto_modelo": "O debate gira em torno da crítica social do filme: a maioria dos que recomendam exalta a reconstituição da ditadura militar, ao passo que cerca de metade dos que não recomendam vê superficialidade no tratamento das questões políticas.",
+    "spec_version": "1.9.25",
+    "texto": "A divergência central está no teor político e social da obra. Enquanto a maioria dos que recomendam valoriza a representação do regime militar, cerca de metade dos que não recomendam aponta superficialidade nesse debate e contesta a estrutura do roteiro.",
+    "texto_modelo": "A divergência central está no teor político e social da obra. Enquanto a maioria dos que recomendam valoriza a representação do regime militar, cerca de metade dos que não recomendam aponta superficialidade nesse debate e contesta a estrutura do roteiro.",
     "origem": "llm",
     "motivo": "melhor_entre_limpos",
     "criterio_decisivo": "abertura",
-    "abertura": "debat",
+    "abertura": "diver",
     "indice_escolhido": 1,
     "flags": [],
     "candidatos": [
@@ -1305,38 +1323,38 @@
         "n_flags": 0,
         "flags": [],
         "n_palavras": 41,
-        "n_ancoras": 1,
-        "abertura": "diver",
-        "abertura_freq": 7,
+        "n_ancoras": 0,
+        "abertura": "opini",
+        "abertura_freq": 4,
         "eliminado": false
       },
       {
         "indice": 1,
         "n_flags": 0,
         "flags": [],
-        "n_palavras": 38,
-        "n_ancoras": 1,
-        "abertura": "debat",
-        "abertura_freq": 0,
+        "n_palavras": 40,
+        "n_ancoras": 2,
+        "abertura": "diver",
+        "abertura_freq": 3,
         "eliminado": false
       },
       {
         "indice": 2,
         "n_flags": 0,
         "flags": [],
-        "n_palavras": 45,
-        "n_ancoras": 1,
+        "n_palavras": 48,
+        "n_ancoras": 2,
         "abertura": "opini",
-        "abertura_freq": 6,
+        "abertura_freq": 4,
         "eliminado": false
       }
     ],
     "uso": {
-      "prompt_tokens": 3624,
-      "completion_tokens": 179,
+      "prompt_tokens": 3600,
+      "completion_tokens": 190,
       "cache_hit_tokens": 0,
-      "cache_miss_tokens": 3624
+      "cache_miss_tokens": 3600
     },
-    "latencia_s": 9.51
+    "latencia_s": 30.29
   }
 }

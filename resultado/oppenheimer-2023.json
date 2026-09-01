@@ -885,35 +885,46 @@
   ],
   "eixos": {
     "taxonomia_id": "ebab2667de74",
-    "margem_lift_pp": 20,
-    "contraste": "valorativo",
+    "margem": {
+      "lei": "lift^2 * n >= 2085136/1000000",
+      "constante_quadrada": [
+        2085136,
+        1000000
+      ],
+      "n": 40,
+      "limiar_pp": 22.83
+    },
+    "margem_lift_pp": 22.83,
     "linhas": [
       {
         "eixo": "ritmo",
         "por_bucket": {
           "negativas": {
-            "mencoes": 18,
-            "de_n": 34,
-            "freq_pct": 52.9,
-            "lift_pp": 4.4,
+            "mencoes": 22,
+            "de_n": 40,
+            "freq_pct": 55.0,
+            "lift_pp": 2.5,
+            "acima_da_margem": false,
             "tema": "Ritmo lento e duração excessiva",
             "exemplo_parafraseado": "O filme é longo demais, com muitas conversas e pouca ação, o que o torna cansativo e entediante.",
             "temas_no_mesmo_eixo": []
           },
           "medianas": {
-            "mencoes": 17,
-            "de_n": 35,
-            "freq_pct": 48.6,
-            "lift_pp": -4.4,
+            "mencoes": 18,
+            "de_n": 40,
+            "freq_pct": 45.0,
+            "lift_pp": -10.0,
+            "acima_da_margem": false,
             "tema": "Ritmo arrastado e duração excessiva",
             "exemplo_parafraseado": "O filme se estende demais, com muitas cenas de diálogo e pouca ação, fazendo com que a experiência se torne cansativa e até entediante em vários momentos.",
             "temas_no_mesmo_eixo": []
           },
           "positivas": {
-            "mencoes": 12,
-            "de_n": 27,
-            "freq_pct": 44.4,
-            "lift_pp": -8.5,
+            "mencoes": 21,
+            "de_n": 40,
+            "freq_pct": 52.5,
+            "lift_pp": -2.5,
+            "acima_da_margem": false,
             "tema": "Ritmo e duração prolongados",
             "exemplo_parafraseado": "Embora a duração de três horas seja considerada justificável para a profundidade da história, alguns espectadores sentem que o ritmo se arrasta em certas partes, especialmente no início.",
             "temas_no_mesmo_eixo": []
@@ -929,28 +940,31 @@
         "eixo": "atuacao",
         "por_bucket": {
           "negativas": {
-            "mencoes": 8,
-            "de_n": 34,
-            "freq_pct": 23.5,
-            "lift_pp": -13.6,
+            "mencoes": 9,
+            "de_n": 40,
+            "freq_pct": 22.5,
+            "lift_pp": -15.0,
+            "acima_da_margem": false,
             "tema": null,
             "exemplo_parafraseado": null,
             "temas_no_mesmo_eixo": []
           },
           "medianas": {
-            "mencoes": 13,
-            "de_n": 35,
-            "freq_pct": 37.1,
-            "lift_pp": 11.2,
+            "mencoes": 14,
+            "de_n": 40,
+            "freq_pct": 35.0,
+            "lift_pp": -2.5,
+            "acima_da_margem": false,
             "tema": "Atuações elogiadas",
             "exemplo_parafraseado": "O elenco é um dos pontos altos, com destaque para as atuações de Cillian Murphy e Robert Downey Jr., que elevam o material.",
             "temas_no_mesmo_eixo": []
           },
           "positivas": {
-            "mencoes": 7,
-            "de_n": 27,
-            "freq_pct": 25.9,
-            "lift_pp": -11.2,
+            "mencoes": 15,
+            "de_n": 40,
+            "freq_pct": 37.5,
+            "lift_pp": 2.5,
+            "acima_da_margem": false,
             "tema": "Atuações marcantes",
             "exemplo_parafraseado": "O desempenho de Cillian Murphy no papel principal é frequentemente elogiado como digno de prêmios, transmitindo a complexidade e o peso emocional do personagem; Robert Downey Jr. também é destacado por sua atuação intensa e transformadora.",
             "temas_no_mesmo_eixo": []
@@ -966,28 +980,31 @@
         "eixo": "direcao_imagem",
         "por_bucket": {
           "negativas": {
-            "mencoes": 10,
-            "de_n": 34,
-            "freq_pct": 29.4,
-            "lift_pp": -10.6,
+            "mencoes": 12,
+            "de_n": 40,
+            "freq_pct": 30.0,
+            "lift_pp": -10.0,
+            "acima_da_margem": false,
             "tema": null,
             "exemplo_parafraseado": null,
             "temas_no_mesmo_eixo": []
           },
           "medianas": {
-            "mencoes": 14,
-            "de_n": 35,
+            "mencoes": 16,
+            "de_n": 40,
             "freq_pct": 40.0,
-            "lift_pp": 3.0,
+            "lift_pp": 2.5,
+            "acima_da_margem": false,
             "tema": "Qualidade visual e técnica",
             "exemplo_parafraseado": "A fotografia, a direção de arte e o uso do formato IMAX impressionam, embora os efeitos práticos da explosão deixem a desejar para alguns.",
             "temas_no_mesmo_eixo": []
           },
           "positivas": {
-            "mencoes": 10,
-            "de_n": 27,
-            "freq_pct": 37.0,
-            "lift_pp": -3.0,
+            "mencoes": 15,
+            "de_n": 40,
+            "freq_pct": 37.5,
+            "lift_pp": -2.5,
+            "acima_da_margem": false,
             "tema": "Fotografia e efeitos visuais impressionantes",
             "exemplo_parafraseado": "A direção de fotografia e os efeitos práticos criam imagens marcantes, especialmente nas sequências que ilustram a escala e a intensidade do projeto.",
             "temas_no_mesmo_eixo": []
@@ -1003,10 +1020,11 @@
         "eixo": "roteiro_estrutura",
         "por_bucket": {
           "negativas": {
-            "mencoes": 17,
-            "de_n": 34,
-            "freq_pct": 50.0,
-            "lift_pp": -1.9,
+            "mencoes": 19,
+            "de_n": 40,
+            "freq_pct": 47.5,
+            "lift_pp": -10.0,
+            "acima_da_margem": false,
             "tema": "Roteiro pretensioso e confuso",
             "exemplo_parafraseado": "A narrativa é complexa artificialmente, com cortes temporais que dificultam o entendimento e parecem mais uma tentativa de parecer inteligente.",
             "temas_no_mesmo_eixo": [
@@ -1014,10 +1032,11 @@
             ]
           },
           "medianas": {
-            "mencoes": 16,
-            "de_n": 35,
-            "freq_pct": 45.7,
-            "lift_pp": -6.1,
+            "mencoes": 18,
+            "de_n": 40,
+            "freq_pct": 45.0,
+            "lift_pp": -12.5,
+            "acima_da_margem": false,
             "tema": "Narrativa fragmentada e confusa",
             "exemplo_parafraseado": "A estrutura não linear com muitos cortes e saltos temporais dificulta o acompanhamento da história, deixando a trama cansativa e pouco fluida.",
             "temas_no_mesmo_eixo": [
@@ -1025,10 +1044,11 @@
             ]
           },
           "positivas": {
-            "mencoes": 14,
-            "de_n": 27,
-            "freq_pct": 51.9,
-            "lift_pp": 1.9,
+            "mencoes": 23,
+            "de_n": 40,
+            "freq_pct": 57.5,
+            "lift_pp": 10.0,
+            "acima_da_margem": false,
             "tema": "Narrativa complexa e não linear",
             "exemplo_parafraseado": "A estrutura temporal fragmentada é desafiadora de acompanhar, com múltiplas linhas do tempo, mas muitos apreciam como isso reflete a mente do protagonista.",
             "temas_no_mesmo_eixo": []
@@ -1044,28 +1064,31 @@
         "eixo": "som_trilha",
         "por_bucket": {
           "negativas": {
-            "mencoes": 6,
-            "de_n": 34,
-            "freq_pct": 17.6,
-            "lift_pp": -8.3,
+            "mencoes": 9,
+            "de_n": 40,
+            "freq_pct": 22.5,
+            "lift_pp": -7.5,
+            "acima_da_margem": false,
             "tema": "Trilha sonora e técnica superestimadas",
             "exemplo_parafraseado": "A música e a edição são boas, mas não salvam o filme da monotonia visual e da falta de profundidade.",
             "temas_no_mesmo_eixo": []
           },
           "medianas": {
             "mencoes": 6,
-            "de_n": 35,
-            "freq_pct": 17.1,
-            "lift_pp": -8.8,
+            "de_n": 40,
+            "freq_pct": 15.0,
+            "lift_pp": -15.0,
+            "acima_da_margem": false,
             "tema": "Trilha sonora marcante",
             "exemplo_parafraseado": "A trilha sonora é um dos destaques, contribuindo para a atmosfera intensa do filme, embora em alguns momentos possa soar dominante demais.",
             "temas_no_mesmo_eixo": []
           },
           "positivas": {
-            "mencoes": 7,
-            "de_n": 27,
-            "freq_pct": 25.9,
-            "lift_pp": 8.3,
+            "mencoes": 12,
+            "de_n": 40,
+            "freq_pct": 30.0,
+            "lift_pp": 7.5,
+            "acima_da_margem": false,
             "tema": "Trilha sonora e som impactantes",
             "exemplo_parafraseado": "A música de Ludwig Göransson é considerada excepcional, elevando a tensão e a atmosfera do filme, embora alguns achem o volume alto demais em certos momentos.",
             "temas_no_mesmo_eixo": []
@@ -1082,27 +1105,30 @@
         "por_bucket": {
           "negativas": {
             "mencoes": 1,
-            "de_n": 34,
-            "freq_pct": 2.9,
-            "lift_pp": -15.6,
+            "de_n": 40,
+            "freq_pct": 2.5,
+            "lift_pp": -15.0,
+            "acima_da_margem": false,
             "tema": null,
             "exemplo_parafraseado": null,
             "temas_no_mesmo_eixo": []
           },
           "medianas": {
-            "mencoes": 0,
-            "de_n": 35,
-            "freq_pct": 0.0,
-            "lift_pp": -18.5,
+            "mencoes": 1,
+            "de_n": 40,
+            "freq_pct": 2.5,
+            "lift_pp": -15.0,
+            "acima_da_margem": false,
             "tema": null,
             "exemplo_parafraseado": null,
             "temas_no_mesmo_eixo": []
           },
           "positivas": {
-            "mencoes": 5,
-            "de_n": 27,
-            "freq_pct": 18.5,
-            "lift_pp": 15.6,
+            "mencoes": 7,
+            "de_n": 40,
+            "freq_pct": 17.5,
+            "lift_pp": 15.0,
+            "acima_da_margem": false,
             "tema": "Exploração de culpa e consequências morais",
             "exemplo_parafraseado": "O filme aborda a responsabilidade e o peso moral de criar uma arma de destruição em massa, gerando reflexões profundas sobre ciência e política.",
             "temas_no_mesmo_eixo": []
@@ -1118,28 +1144,31 @@
         "eixo": "impacto_emocional",
         "por_bucket": {
           "negativas": {
-            "mencoes": 9,
-            "de_n": 34,
-            "freq_pct": 26.5,
-            "lift_pp": -2.1,
+            "mencoes": 10,
+            "de_n": 40,
+            "freq_pct": 25.0,
+            "lift_pp": -2.5,
+            "acima_da_margem": false,
             "tema": null,
             "exemplo_parafraseado": null,
             "temas_no_mesmo_eixo": []
           },
           "medianas": {
-            "mencoes": 10,
-            "de_n": 35,
-            "freq_pct": 28.6,
-            "lift_pp": 2.1,
+            "mencoes": 11,
+            "de_n": 40,
+            "freq_pct": 27.5,
+            "lift_pp": 2.5,
+            "acima_da_margem": false,
             "tema": null,
             "exemplo_parafraseado": null,
             "temas_no_mesmo_eixo": []
           },
           "positivas": {
-            "mencoes": 6,
-            "de_n": 27,
-            "freq_pct": 22.2,
-            "lift_pp": -6.3,
+            "mencoes": 9,
+            "de_n": 40,
+            "freq_pct": 22.5,
+            "lift_pp": -5.0,
+            "acima_da_margem": false,
             "tema": null,
             "exemplo_parafraseado": null,
             "temas_no_mesmo_eixo": []
@@ -1155,28 +1184,31 @@
         "eixo": "comparacoes",
         "por_bucket": {
           "negativas": {
-            "mencoes": 12,
-            "de_n": 34,
-            "freq_pct": 35.3,
-            "lift_pp": -1.7,
+            "mencoes": 16,
+            "de_n": 40,
+            "freq_pct": 40.0,
+            "lift_pp": -12.5,
+            "acima_da_margem": false,
             "tema": null,
             "exemplo_parafraseado": null,
             "temas_no_mesmo_eixo": []
           },
           "medianas": {
-            "mencoes": 7,
-            "de_n": 35,
-            "freq_pct": 20.0,
-            "lift_pp": -17.0,
+            "mencoes": 9,
+            "de_n": 40,
+            "freq_pct": 22.5,
+            "lift_pp": -30.0,
+            "acima_da_margem": false,
             "tema": null,
             "exemplo_parafraseado": null,
             "temas_no_mesmo_eixo": []
           },
           "positivas": {
-            "mencoes": 10,
-            "de_n": 27,
-            "freq_pct": 37.0,
-            "lift_pp": 1.7,
+            "mencoes": 21,
+            "de_n": 40,
+            "freq_pct": 52.5,
+            "lift_pp": 12.5,
+            "acima_da_margem": false,
             "tema": null,
             "exemplo_parafraseado": null,
             "temas_no_mesmo_eixo": []
@@ -1192,28 +1224,31 @@
         "eixo": "expectativa",
         "por_bucket": {
           "negativas": {
-            "mencoes": 8,
-            "de_n": 34,
-            "freq_pct": 23.5,
-            "lift_pp": 0.7,
+            "mencoes": 10,
+            "de_n": 40,
+            "freq_pct": 25.0,
+            "lift_pp": 5.0,
+            "acima_da_margem": false,
             "tema": null,
             "exemplo_parafraseado": null,
             "temas_no_mesmo_eixo": []
           },
           "medianas": {
             "mencoes": 8,
-            "de_n": 35,
-            "freq_pct": 22.9,
-            "lift_pp": -0.7,
+            "de_n": 40,
+            "freq_pct": 20.0,
+            "lift_pp": -5.0,
+            "acima_da_margem": false,
             "tema": null,
             "exemplo_parafraseado": null,
             "temas_no_mesmo_eixo": []
           },
           "positivas": {
-            "mencoes": 4,
-            "de_n": 27,
-            "freq_pct": 14.8,
-            "lift_pp": -8.7,
+            "mencoes": 7,
+            "de_n": 40,
+            "freq_pct": 17.5,
+            "lift_pp": -7.5,
+            "acima_da_margem": false,
             "tema": null,
             "exemplo_parafraseado": null,
             "temas_no_mesmo_eixo": []
@@ -1229,10 +1264,11 @@
         "eixo": "critica_social",
         "por_bucket": {
           "negativas": {
-            "mencoes": 16,
-            "de_n": 34,
-            "freq_pct": 47.1,
-            "lift_pp": 17.4,
+            "mencoes": 19,
+            "de_n": 40,
+            "freq_pct": 47.5,
+            "lift_pp": 25.0,
+            "acima_da_margem": true,
             "tema": "Falta de consequências humanas da bomba",
             "exemplo_parafraseado": "O filme quase não mostra o impacto real dos bombardeios, concentrando-se apenas no dilema interno de Oppenheimer.",
             "temas_no_mesmo_eixo": [
@@ -1240,66 +1276,48 @@
             ]
           },
           "medianas": {
-            "mencoes": 4,
-            "de_n": 35,
-            "freq_pct": 11.4,
-            "lift_pp": -35.6,
+            "mencoes": 5,
+            "de_n": 40,
+            "freq_pct": 12.5,
+            "lift_pp": -35.0,
+            "acima_da_margem": false,
             "tema": null,
             "exemplo_parafraseado": null,
             "temas_no_mesmo_eixo": []
           },
           "positivas": {
-            "mencoes": 8,
-            "de_n": 27,
-            "freq_pct": 29.6,
-            "lift_pp": -17.4,
+            "mencoes": 9,
+            "de_n": 40,
+            "freq_pct": 22.5,
+            "lift_pp": -25.0,
+            "acima_da_margem": false,
             "tema": null,
             "exemplo_parafraseado": null,
             "temas_no_mesmo_eixo": []
           }
         },
         "bullet_de": {
-          "negativas": null,
+          "negativas": "contraste",
           "medianas": null,
           "positivas": null
         }
       }
     ],
-    "fonte_classificacao": {
-      "arquivo": "resultado/votacao-3/consenso.jsonl",
-      "criterio": "votacao_3_consenso_2_de_3",
-      "por_bucket": {
-        "negativas": {
-          "n_classificadas": 34,
-          "n_analisadas": 40,
-          "sobreposicao_com_analisadas": 34
-        },
-        "medianas": {
-          "n_classificadas": 35,
-          "n_analisadas": 40,
-          "sobreposicao_com_analisadas": 35
-        },
-        "positivas": {
-          "n_classificadas": 27,
-          "n_analisadas": 40,
-          "sobreposicao_com_analisadas": 27
-        }
-      }
-    },
+    "contraste": "tematico",
     "rotulagem": {
       "n_chamadas": 3,
       "falharam": [],
       "fora_da_taxonomia": {},
       "houve_retentativa": []
     },
-    "spec_version": "1.9.16",
     "verificador": {
       "aplicado": true,
       "variante": "V2_alvo",
       "passada": 1,
       "eixo": "impacto_emocional",
       "n_removidas_no_corpus": 1654
-    }
+    },
+    "spec_version": "1.9.34"
   },
   "narrativa": "Lançado em 2023 sob a direção de Christopher Nolan, Oppenheimer é um longa-metragem dos gêneros drama e história. A obra acompanha a biografia do físico norte-americano J. Robert Oppenheimer, explorando detalhadamente a sua participação fundamental na liderança do Projeto Manhattan e na criação da bomba atômica no decorrer da Segunda Guerra Mundial, bem como a forma como esses eventos modificaram a história mundial para sempre.\n\nA experiência de exibição estrutura-se por meio de uma narrativa fragmentada, complexa e não linear, conduzindo os acontecimentos ao longo de uma duração marcadamente extensa e com um ritmo prolongado.\n\nEm termos de recepção, os grupos concentram suas análises sobre os mesmos aspectos factuais da produção, discordando principalmente no veredito sobre a sua eficácia geral. Na grande maioria das notas (~85%), uma parcela expressiva destaca as atuações marcantes do elenco, enquanto boa parte exalta o impacto técnico da trilha sonora e do som, e vários ressaltam o vigor demonstrado pela fotografia e pelos efeitos visuais impressionantes.\n\nPara a perspectiva expressa numa fração mínima das notas (~11%), muitos apontam incômodo com o ritmo arrastado e a duração excessiva, embora um número considerável sustente atuações elogiadas e uma parte mencione a qualidade visual e técnica. Em contrapartida, sob o ponto de vista de quem se situa numa fração ainda menor das notas (~3%), a maioria condena o ritmo lento e a duração excessiva, acompanhada por uma parcela expressiva que rejeita o roteiro como pretensioso e confuso, além de alguns que criticam personagens femininas mal desenvolvidas.",
   "verificacao_narrativa": {
@@ -1385,14 +1403,14 @@
     "n_chamadas": 3,
     "prefixo_codigo": "",
     "retry": null,
-    "spec_version": "1.9.22",
-    "texto": "As opiniões divergem no valor atribuído à construção da trama: cerca de metade de quem recomenda valoriza a narrativa intrincada e não linear, enquanto cerca de metade dos que não recomendam critica o andamento arrastado e considera a escrita confusa e pedante.",
-    "texto_modelo": "As opiniões divergem no valor atribuído à construção da trama: cerca de metade de quem recomenda valoriza a narrativa intrincada e não linear, enquanto cerca de metade dos que não recomendam critica o andamento arrastado e considera a escrita confusa e pedante.",
+    "spec_version": "1.9.25",
+    "texto": "Enquanto cerca de metade de quem recomenda destaca a estrutura narrativa não linear e intrincada, cerca de metade dos que não recomendam aponta o andamento excessivamente arrastado e longo. Além disso, esse segundo grupo sente falta de uma abordagem sobre os impactos humanos causados pela arma.",
+    "texto_modelo": "Enquanto cerca de metade de quem recomenda destaca a estrutura narrativa não linear e intrincada, cerca de metade dos que não recomendam aponta o andamento excessivamente arrastado e longo. Além disso, esse segundo grupo sente falta de uma abordagem sobre os impactos humanos causados pela arma.",
     "origem": "llm",
     "motivo": "melhor_entre_limpos",
-    "criterio_decisivo": "brevidade",
-    "abertura": "opini",
-    "indice_escolhido": 2,
+    "criterio_decisivo": "ancoras",
+    "abertura": "QUANT",
+    "indice_escolhido": 1,
     "flags": [],
     "candidatos": [
       {
@@ -1400,40 +1418,38 @@
         "n_flags": 0,
         "flags": [],
         "n_palavras": 46,
-        "n_ancoras": 1,
-        "abertura": "opini",
-        "abertura_freq": 6,
+        "n_ancoras": 0,
+        "abertura": "QUANT",
+        "abertura_freq": 16,
         "eliminado": false
       },
       {
         "indice": 1,
-        "n_flags": 1,
-        "flags": [
-          "formato_invalido"
-        ],
-        "n_palavras": 49,
-        "n_ancoras": 1,
-        "abertura": "opini",
-        "abertura_freq": 6,
-        "eliminado": true
+        "n_flags": 0,
+        "flags": [],
+        "n_palavras": 46,
+        "n_ancoras": 2,
+        "abertura": "QUANT",
+        "abertura_freq": 16,
+        "eliminado": false
       },
       {
         "indice": 2,
         "n_flags": 0,
         "flags": [],
-        "n_palavras": 42,
+        "n_palavras": 45,
         "n_ancoras": 1,
-        "abertura": "opini",
-        "abertura_freq": 6,
+        "abertura": "QUANT",
+        "abertura_freq": 16,
         "eliminado": false
       }
     ],
     "uso": {
-      "prompt_tokens": 3654,
-      "completion_tokens": 227,
+      "prompt_tokens": 3576,
+      "completion_tokens": 201,
       "cache_hit_tokens": 0,
-      "cache_miss_tokens": 3654
+      "cache_miss_tokens": 3576
     },
-    "latencia_s": 11.99
+    "latencia_s": 41.9
   }
 }

@@ -895,35 +895,46 @@
   ],
   "eixos": {
     "taxonomia_id": "ebab2667de74",
-    "margem_lift_pp": 20,
-    "contraste": "tematico",
+    "margem": {
+      "lei": "lift^2 * n >= 2085136/1000000",
+      "constante_quadrada": [
+        2085136,
+        1000000
+      ],
+      "n": 40,
+      "limiar_pp": 22.83
+    },
+    "margem_lift_pp": 22.83,
     "linhas": [
       {
         "eixo": "ritmo",
         "por_bucket": {
           "negativas": {
-            "mencoes": 8,
-            "de_n": 32,
+            "mencoes": 10,
+            "de_n": 40,
             "freq_pct": 25.0,
-            "lift_pp": 1.9,
+            "lift_pp": -2.5,
+            "acima_da_margem": false,
             "tema": "Ritmo lento e tédio",
             "exemplo_parafraseado": "Várias pessoas dizem que o filme se arrasta, com cenas longas e paradas que não prendem a atenção, levando ao tédio e até ao abandono da sala antes do fim.",
             "temas_no_mesmo_eixo": []
           },
           "medianas": {
-            "mencoes": 6,
-            "de_n": 26,
-            "freq_pct": 23.1,
-            "lift_pp": -1.9,
+            "mencoes": 11,
+            "de_n": 40,
+            "freq_pct": 27.5,
+            "lift_pp": 2.5,
+            "acima_da_margem": false,
             "tema": "Roteiro fraco e ritmo lento",
             "exemplo_parafraseado": "A trama foi considerada arrastada, com desenvolvimento insuficiente e certa falta de foco, o que comprometeu o engajamento e o desfecho.",
             "temas_no_mesmo_eixo": []
           },
           "positivas": {
-            "mencoes": 2,
-            "de_n": 22,
-            "freq_pct": 9.1,
-            "lift_pp": -15.9,
+            "mencoes": 5,
+            "de_n": 40,
+            "freq_pct": 12.5,
+            "lift_pp": -15.0,
+            "acima_da_margem": false,
             "tema": null,
             "exemplo_parafraseado": null,
             "temas_no_mesmo_eixo": []
@@ -940,27 +951,30 @@
         "por_bucket": {
           "negativas": {
             "mencoes": 5,
-            "de_n": 32,
-            "freq_pct": 15.6,
-            "lift_pp": -30.5,
+            "de_n": 40,
+            "freq_pct": 12.5,
+            "lift_pp": -30.0,
+            "acima_da_margem": false,
             "tema": null,
             "exemplo_parafraseado": null,
             "temas_no_mesmo_eixo": []
           },
           "medianas": {
-            "mencoes": 12,
-            "de_n": 26,
-            "freq_pct": 46.2,
-            "lift_pp": 9.8,
+            "mencoes": 17,
+            "de_n": 40,
+            "freq_pct": 42.5,
+            "lift_pp": 15.0,
+            "acima_da_margem": false,
             "tema": "Atuações elogiadas",
             "exemplo_parafraseado": "As performances de Joaquin Phoenix e Lady Gaga foram destacadas como um ponto alto, com boa química entre eles, embora alguns tenham achado o papel de Harley Quinn subaproveitado.",
             "temas_no_mesmo_eixo": []
           },
           "positivas": {
-            "mencoes": 8,
-            "de_n": 22,
-            "freq_pct": 36.4,
-            "lift_pp": -9.8,
+            "mencoes": 11,
+            "de_n": 40,
+            "freq_pct": 27.5,
+            "lift_pp": -15.0,
+            "acima_da_margem": false,
             "tema": "Atuações marcantes (Phoenix e Gaga)",
             "exemplo_parafraseado": "O grupo elogia especialmente Joaquin Phoenix, que sustenta a complexidade do personagem, e Lady Gaga, cuja interpretação de Arlequina foge do estereótipo submissa, trazendo uma energia própria.",
             "temas_no_mesmo_eixo": []
@@ -977,27 +991,30 @@
         "por_bucket": {
           "negativas": {
             "mencoes": 6,
-            "de_n": 32,
-            "freq_pct": 18.8,
-            "lift_pp": -12.0,
+            "de_n": 40,
+            "freq_pct": 15.0,
+            "lift_pp": -12.5,
+            "acima_da_margem": false,
             "tema": null,
             "exemplo_parafraseado": null,
             "temas_no_mesmo_eixo": []
           },
           "medianas": {
-            "mencoes": 8,
-            "de_n": 26,
-            "freq_pct": 30.8,
-            "lift_pp": 3.5,
+            "mencoes": 11,
+            "de_n": 40,
+            "freq_pct": 27.5,
+            "lift_pp": 0.0,
+            "acima_da_margem": false,
             "tema": "Fotografia e visuais impressionantes",
             "exemplo_parafraseado": "A direção de arte e a fotografia foram apontadas como visualmente belas, com atmosfera marcante e cenas bem compostas, contribuindo para a experiência estética.",
             "temas_no_mesmo_eixo": []
           },
           "positivas": {
-            "mencoes": 6,
-            "de_n": 22,
-            "freq_pct": 27.3,
-            "lift_pp": -3.5,
+            "mencoes": 11,
+            "de_n": 40,
+            "freq_pct": 27.5,
+            "lift_pp": 0.0,
+            "acima_da_margem": false,
             "tema": "Fotografia e direção de arte",
             "exemplo_parafraseado": "Este grupo destaca a beleza visual do filme, com uma fotografia gótica e sombria que mantém a atmosfera característica da Gotham, além de composições de luz intencionais.",
             "temas_no_mesmo_eixo": []
@@ -1013,10 +1030,11 @@
         "eixo": "roteiro_estrutura",
         "por_bucket": {
           "negativas": {
-            "mencoes": 17,
-            "de_n": 32,
-            "freq_pct": 53.1,
-            "lift_pp": -31.5,
+            "mencoes": 20,
+            "de_n": 40,
+            "freq_pct": 50.0,
+            "lift_pp": -27.5,
+            "acima_da_margem": false,
             "tema": "Roteiro fraco e sem desenvolvimento",
             "exemplo_parafraseado": "Várias pessoas apontam que a história quase não avança, que não há desenvolvimento dos personagens e que o filme parece vazio, dependendo de repetições e voltas ao passado.",
             "temas_no_mesmo_eixo": [
@@ -1026,19 +1044,21 @@
             ]
           },
           "medianas": {
-            "mencoes": 22,
-            "de_n": 26,
-            "freq_pct": 84.6,
-            "lift_pp": 21.0,
+            "mencoes": 31,
+            "de_n": 40,
+            "freq_pct": 77.5,
+            "lift_pp": 22.5,
+            "acima_da_margem": false,
             "tema": "Desconstrução do personagem",
             "exemplo_parafraseado": "Parte do grupo percebeu uma tentativa de desmistificar o protagonista, mostrando sua humanidade frágil e distanciando-se da imagem icônica do palhaço, o que gerou reações mistas.",
             "temas_no_mesmo_eixo": []
           },
           "positivas": {
-            "mencoes": 14,
-            "de_n": 22,
-            "freq_pct": 63.6,
-            "lift_pp": -21.0,
+            "mencoes": 22,
+            "de_n": 40,
+            "freq_pct": 55.0,
+            "lift_pp": -22.5,
+            "acima_da_margem": false,
             "tema": "Final ousado e significativo",
             "exemplo_parafraseado": "As reviews positivas consideram o desfecho uma conclusão poderosa para a trajetória de Arthur, pois revela a distância entre a pessoa real e o símbolo que ele inspirou.",
             "temas_no_mesmo_eixo": []
@@ -1046,7 +1066,7 @@
         },
         "bullet_de": {
           "negativas": "frequencia",
-          "medianas": "frequencia_e_contraste",
+          "medianas": "frequencia",
           "positivas": "frequencia"
         }
       },
@@ -1054,28 +1074,31 @@
         "eixo": "som_trilha",
         "por_bucket": {
           "negativas": {
-            "mencoes": 9,
-            "de_n": 32,
-            "freq_pct": 28.1,
-            "lift_pp": -21.9,
+            "mencoes": 10,
+            "de_n": 40,
+            "freq_pct": 25.0,
+            "lift_pp": -25.0,
+            "acima_da_margem": false,
             "tema": "Números musicais deslocados",
             "exemplo_parafraseado": "A maioria dos críticos deste grupo acha que as canções interrompem o ritmo do filme e não combinam com a proposta do personagem, tornando a experiência cansativa e sem sentido.",
             "temas_no_mesmo_eixo": []
           },
           "medianas": {
-            "mencoes": 13,
-            "de_n": 26,
+            "mencoes": 20,
+            "de_n": 40,
             "freq_pct": 50.0,
-            "lift_pp": 4.5,
+            "lift_pp": 15.0,
+            "acima_da_margem": false,
             "tema": "Musical deslocado",
             "exemplo_parafraseado": "A inclusão de números musicais foi vista como desnecessária e desconectada, não contribuindo para o avanço da trama ou desenvolvimento dos personagens, apenas arrastando o ritmo.",
             "temas_no_mesmo_eixo": []
           },
           "positivas": {
-            "mencoes": 10,
-            "de_n": 22,
-            "freq_pct": 45.5,
-            "lift_pp": -4.5,
+            "mencoes": 14,
+            "de_n": 40,
+            "freq_pct": 35.0,
+            "lift_pp": -15.0,
+            "acima_da_margem": false,
             "tema": null,
             "exemplo_parafraseado": null,
             "temas_no_mesmo_eixo": []
@@ -1091,28 +1114,31 @@
         "eixo": "tom_atmosfera",
         "por_bucket": {
           "negativas": {
-            "mencoes": 8,
-            "de_n": 32,
-            "freq_pct": 25.0,
-            "lift_pp": -15.9,
+            "mencoes": 11,
+            "de_n": 40,
+            "freq_pct": 27.5,
+            "lift_pp": -10.0,
+            "acima_da_margem": false,
             "tema": null,
             "exemplo_parafraseado": null,
             "temas_no_mesmo_eixo": []
           },
           "medianas": {
-            "mencoes": 7,
-            "de_n": 26,
-            "freq_pct": 26.9,
-            "lift_pp": -14.0,
+            "mencoes": 10,
+            "de_n": 40,
+            "freq_pct": 25.0,
+            "lift_pp": -12.5,
+            "acima_da_margem": false,
             "tema": null,
             "exemplo_parafraseado": null,
             "temas_no_mesmo_eixo": []
           },
           "positivas": {
-            "mencoes": 9,
-            "de_n": 22,
-            "freq_pct": 40.9,
-            "lift_pp": 14.0,
+            "mencoes": 15,
+            "de_n": 40,
+            "freq_pct": 37.5,
+            "lift_pp": 10.0,
+            "acima_da_margem": false,
             "tema": "Uso do musical como expressão da mente",
             "exemplo_parafraseado": "As reviews positivas veem os números musicais como uma forma criativa de traduzir a realidade distorcida de Arthur e sua fuga para a fantasia, mesmo reconhecendo que a escolha pode não agradar a todos.",
             "temas_no_mesmo_eixo": []
@@ -1128,28 +1154,31 @@
         "eixo": "impacto_emocional",
         "por_bucket": {
           "negativas": {
-            "mencoes": 12,
-            "de_n": 32,
-            "freq_pct": 37.5,
-            "lift_pp": 19.3,
+            "mencoes": 13,
+            "de_n": 40,
+            "freq_pct": 32.5,
+            "lift_pp": 12.5,
+            "acima_da_margem": false,
             "tema": null,
             "exemplo_parafraseado": null,
             "temas_no_mesmo_eixo": []
           },
           "medianas": {
-            "mencoes": 3,
-            "de_n": 26,
-            "freq_pct": 11.5,
-            "lift_pp": -26.0,
+            "mencoes": 8,
+            "de_n": 40,
+            "freq_pct": 20.0,
+            "lift_pp": -12.5,
+            "acima_da_margem": false,
             "tema": null,
             "exemplo_parafraseado": null,
             "temas_no_mesmo_eixo": []
           },
           "positivas": {
-            "mencoes": 4,
-            "de_n": 22,
-            "freq_pct": 18.2,
-            "lift_pp": -19.3,
+            "mencoes": 6,
+            "de_n": 40,
+            "freq_pct": 15.0,
+            "lift_pp": -17.5,
+            "acima_da_margem": false,
             "tema": null,
             "exemplo_parafraseado": null,
             "temas_no_mesmo_eixo": []
@@ -1165,28 +1194,31 @@
         "eixo": "comparacoes",
         "por_bucket": {
           "negativas": {
-            "mencoes": 16,
-            "de_n": 32,
-            "freq_pct": 50.0,
-            "lift_pp": -22.7,
+            "mencoes": 22,
+            "de_n": 40,
+            "freq_pct": 55.0,
+            "lift_pp": -20.0,
+            "acima_da_margem": false,
             "tema": null,
             "exemplo_parafraseado": null,
             "temas_no_mesmo_eixo": []
           },
           "medianas": {
-            "mencoes": 18,
-            "de_n": 26,
-            "freq_pct": 69.2,
-            "lift_pp": -3.5,
+            "mencoes": 28,
+            "de_n": 40,
+            "freq_pct": 70.0,
+            "lift_pp": -5.0,
+            "acima_da_margem": false,
             "tema": "Comparação desfavorável com o primeiro filme",
             "exemplo_parafraseado": "Este grupo considera que a sequência não alcança a força narrativa e o impacto do filme original, parecendo inferior em vários aspectos.",
             "temas_no_mesmo_eixo": []
           },
           "positivas": {
-            "mencoes": 16,
-            "de_n": 22,
-            "freq_pct": 72.7,
-            "lift_pp": 3.5,
+            "mencoes": 30,
+            "de_n": 40,
+            "freq_pct": 75.0,
+            "lift_pp": 5.0,
+            "acima_da_margem": false,
             "tema": null,
             "exemplo_parafraseado": null,
             "temas_no_mesmo_eixo": []
@@ -1202,28 +1234,31 @@
         "eixo": "expectativa",
         "por_bucket": {
           "negativas": {
-            "mencoes": 7,
-            "de_n": 32,
-            "freq_pct": 21.9,
-            "lift_pp": -9.9,
+            "mencoes": 9,
+            "de_n": 40,
+            "freq_pct": 22.5,
+            "lift_pp": -7.5,
+            "acima_da_margem": false,
             "tema": null,
             "exemplo_parafraseado": null,
             "temas_no_mesmo_eixo": []
           },
           "medianas": {
-            "mencoes": 7,
-            "de_n": 26,
-            "freq_pct": 26.9,
-            "lift_pp": -4.9,
+            "mencoes": 12,
+            "de_n": 40,
+            "freq_pct": 30.0,
+            "lift_pp": 0.0,
+            "acima_da_margem": false,
             "tema": null,
             "exemplo_parafraseado": null,
             "temas_no_mesmo_eixo": []
           },
           "positivas": {
-            "mencoes": 7,
-            "de_n": 22,
-            "freq_pct": 31.8,
-            "lift_pp": 4.9,
+            "mencoes": 12,
+            "de_n": 40,
+            "freq_pct": 30.0,
+            "lift_pp": 0.0,
+            "acima_da_margem": false,
             "tema": null,
             "exemplo_parafraseado": null,
             "temas_no_mesmo_eixo": []
@@ -1239,28 +1274,31 @@
         "eixo": "critica_social",
         "por_bucket": {
           "negativas": {
-            "mencoes": 8,
-            "de_n": 32,
-            "freq_pct": 25.0,
-            "lift_pp": -11.4,
+            "mencoes": 9,
+            "de_n": 40,
+            "freq_pct": 22.5,
+            "lift_pp": -15.0,
+            "acima_da_margem": false,
             "tema": null,
             "exemplo_parafraseado": null,
             "temas_no_mesmo_eixo": []
           },
           "medianas": {
-            "mencoes": 5,
-            "de_n": 26,
-            "freq_pct": 19.2,
-            "lift_pp": -17.1,
+            "mencoes": 8,
+            "de_n": 40,
+            "freq_pct": 20.0,
+            "lift_pp": -17.5,
+            "acima_da_margem": false,
             "tema": null,
             "exemplo_parafraseado": null,
             "temas_no_mesmo_eixo": []
           },
           "positivas": {
-            "mencoes": 8,
-            "de_n": 22,
-            "freq_pct": 36.4,
-            "lift_pp": 11.4,
+            "mencoes": 15,
+            "de_n": 40,
+            "freq_pct": 37.5,
+            "lift_pp": 15.0,
+            "acima_da_margem": false,
             "tema": "Crítica à idolatria do Coringa",
             "exemplo_parafraseado": "Este grupo de reviews positivas entende que o filme é uma provocação deliberada aos fãs que endeusaram a persona do Coringa, mostrando que Arthur Fleck não é um herói, mas um homem doente cuja criação o consome.",
             "temas_no_mesmo_eixo": []
@@ -1273,41 +1311,21 @@
         }
       }
     ],
-    "fonte_classificacao": {
-      "arquivo": "resultado/votacao-3/consenso.jsonl",
-      "criterio": "votacao_3_consenso_2_de_3",
-      "por_bucket": {
-        "negativas": {
-          "n_classificadas": 32,
-          "n_analisadas": 40,
-          "sobreposicao_com_analisadas": 32
-        },
-        "medianas": {
-          "n_classificadas": 26,
-          "n_analisadas": 40,
-          "sobreposicao_com_analisadas": 26
-        },
-        "positivas": {
-          "n_classificadas": 22,
-          "n_analisadas": 40,
-          "sobreposicao_com_analisadas": 22
-        }
-      }
-    },
+    "contraste": "valorativo",
     "rotulagem": {
       "n_chamadas": 3,
       "falharam": [],
       "fora_da_taxonomia": {},
       "houve_retentativa": []
     },
-    "spec_version": "1.9.16",
     "verificador": {
       "aplicado": true,
       "variante": "V2_alvo",
       "passada": 1,
       "eixo": "impacto_emocional",
       "n_removidas_no_corpus": 1654
-    }
+    },
+    "spec_version": "1.9.34"
   },
   "narrativa": "Lançado em 2024 sob a direção de Todd Phillips, o drama policial Coringa: Delírio a Dois acompanha Arthur Fleck internado no Hospital Arkham à espera do julgamento por seus crimes como Coringa. Enquanto lida com o conflito de sua dupla identidade, o protagonista se depara com o amor verdadeiro e encontra a música que sempre esteve presente dentro dele.\n\nA experiência da obra é estruturada a partir de um ritmo lento, intercalando o desenvolvimento das cenas com a inserção constante de números musicais ao longo de toda a narrativa.\n\nEm boa parte das notas (~46%), a maior parte aponta que os números musicais surgem deslocados e prejudicam o andamento do filme. Além disso, uma parcela expressiva critica a história por apresentar um roteiro fraco e sem desenvolvimento, enquanto vários apontam uma descaracterização de Arthur Fleck em comparação ao que havia sido construído anteriormente.\n\nNuma parte menor das notas (~33%), muitos também observam o aspecto musical como deslocado dentro da proposta. Nessa leitura, um número considerável estabelece uma comparação desfavorável com o primeiro filme, embora boa parte reserve elogios para as atuações apresentadas.\n\nPara quem se posiciona numa parcela das notas (~21%), uma parcela expressiva compreende o uso do musical como uma forma de expressão da mente do protagonista. Nesse mesmo sentido, alguns valorizam a abordagem centrada na crítica à idolatria do Coringa, enquanto parte deles ressalta a força das atuações marcantes de Phoenix e Gaga.",
   "verificacao_narrativa": {
@@ -1386,13 +1404,13 @@
     "n_chamadas": 3,
     "prefixo_codigo": "",
     "retry": null,
-    "spec_version": "1.9.22",
-    "texto": "Enquanto a maioria dos que recomendam apoia sua avaliação em comparações com outras produções, cerca de metade dos que não recomendam aponta fragilidades no texto e ausência de desenvolvimento na trama.",
-    "texto_modelo": "Enquanto a maioria dos que recomendam apoia sua avaliação em comparações com outras produções, cerca de metade dos que não recomendam aponta fragilidades no texto e ausência de desenvolvimento na trama.",
+    "spec_version": "1.9.25",
+    "texto": "Os relatos convergem ao centrar a discussão em paralelos com outras obras, divergindo sobre a sua eficácia. A maioria dos que recomendam considera que essas relações valorizam a experiência, enquanto cerca de metade dos que não recomendam avalia que essas referências comparativas não funcionam.",
+    "texto_modelo": "Os relatos convergem ao centrar a discussão em paralelos com outras obras, divergindo sobre a sua eficácia. A maioria dos que recomendam considera que essas relações valorizam a experiência, enquanto cerca de metade dos que não recomendam avalia que essas referências comparativas não funcionam.",
     "origem": "llm",
     "motivo": "melhor_entre_limpos",
-    "criterio_decisivo": "brevidade",
-    "abertura": "QUANT",
+    "criterio_decisivo": "abertura",
+    "abertura": "relat",
     "indice_escolhido": 2,
     "flags": [],
     "candidatos": [
@@ -1400,39 +1418,39 @@
         "indice": 0,
         "n_flags": 0,
         "flags": [],
-        "n_palavras": 36,
+        "n_palavras": 34,
         "n_ancoras": 1,
-        "abertura": "QUANT",
-        "abertura_freq": 17,
+        "abertura": "diver",
+        "abertura_freq": 3,
         "eliminado": false
       },
       {
         "indice": 1,
         "n_flags": 0,
         "flags": [],
-        "n_palavras": 36,
+        "n_palavras": 35,
         "n_ancoras": 1,
-        "abertura": "QUANT",
-        "abertura_freq": 17,
+        "abertura": "diver",
+        "abertura_freq": 3,
         "eliminado": false
       },
       {
         "indice": 2,
         "n_flags": 0,
         "flags": [],
-        "n_palavras": 31,
+        "n_palavras": 44,
         "n_ancoras": 1,
-        "abertura": "QUANT",
-        "abertura_freq": 17,
+        "abertura": "relat",
+        "abertura_freq": 0,
         "eliminado": false
       }
     ],
     "uso": {
-      "prompt_tokens": 3555,
-      "completion_tokens": 165,
+      "prompt_tokens": 3552,
+      "completion_tokens": 175,
       "cache_hit_tokens": 0,
-      "cache_miss_tokens": 3555
+      "cache_miss_tokens": 3552
     },
-    "latencia_s": 11.9
+    "latencia_s": 44.7
   }
 }

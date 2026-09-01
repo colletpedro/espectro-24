@@ -880,35 +880,46 @@
   ],
   "eixos": {
     "taxonomia_id": "ebab2667de74",
-    "margem_lift_pp": 20,
-    "contraste": "valorativo",
+    "margem": {
+      "lei": "lift^2 * n >= 2085136/1000000",
+      "constante_quadrada": [
+        2085136,
+        1000000
+      ],
+      "n": 40,
+      "limiar_pp": 22.83
+    },
+    "margem_lift_pp": 22.83,
     "linhas": [
       {
         "eixo": "ritmo",
         "por_bucket": {
           "negativas": {
-            "mencoes": 5,
-            "de_n": 30,
-            "freq_pct": 16.7,
-            "lift_pp": -13.3,
+            "mencoes": 8,
+            "de_n": 40,
+            "freq_pct": 20.0,
+            "lift_pp": -7.5,
+            "acima_da_margem": false,
             "tema": null,
             "exemplo_parafraseado": null,
             "temas_no_mesmo_eixo": []
           },
           "medianas": {
-            "mencoes": 9,
-            "de_n": 30,
-            "freq_pct": 30.0,
-            "lift_pp": 1.4,
+            "mencoes": 11,
+            "de_n": 40,
+            "freq_pct": 27.5,
+            "lift_pp": 7.5,
+            "acima_da_margem": false,
             "tema": null,
             "exemplo_parafraseado": null,
             "temas_no_mesmo_eixo": []
           },
           "positivas": {
-            "mencoes": 6,
-            "de_n": 21,
-            "freq_pct": 28.6,
-            "lift_pp": -1.4,
+            "mencoes": 8,
+            "de_n": 40,
+            "freq_pct": 20.0,
+            "lift_pp": -7.5,
+            "acima_da_margem": false,
             "tema": null,
             "exemplo_parafraseado": null,
             "temas_no_mesmo_eixo": []
@@ -924,28 +935,31 @@
         "eixo": "atuacao",
         "por_bucket": {
           "negativas": {
-            "mencoes": 5,
-            "de_n": 30,
-            "freq_pct": 16.7,
-            "lift_pp": -13.3,
+            "mencoes": 8,
+            "de_n": 40,
+            "freq_pct": 20.0,
+            "lift_pp": -12.5,
+            "acima_da_margem": false,
             "tema": "Jason sem carisma e fora de personagem",
             "exemplo_parafraseado": "O reviewer sente que Jason perdeu a essência original, pois agora corre e age como um lutador, e até sequestra uma garota, algo que não combina com o assassino lento e metódico dos filmes antigos, além de não ter o mesmo carisma.",
             "temas_no_mesmo_eixo": []
           },
           "medianas": {
-            "mencoes": 9,
-            "de_n": 30,
-            "freq_pct": 30.0,
-            "lift_pp": 11.0,
+            "mencoes": 13,
+            "de_n": 40,
+            "freq_pct": 32.5,
+            "lift_pp": 12.5,
+            "acima_da_margem": false,
             "tema": null,
             "exemplo_parafraseado": null,
             "temas_no_mesmo_eixo": []
           },
           "positivas": {
-            "mencoes": 4,
-            "de_n": 21,
-            "freq_pct": 19.0,
-            "lift_pp": -11.0,
+            "mencoes": 6,
+            "de_n": 40,
+            "freq_pct": 15.0,
+            "lift_pp": -17.5,
+            "acima_da_margem": false,
             "tema": null,
             "exemplo_parafraseado": null,
             "temas_no_mesmo_eixo": []
@@ -961,28 +975,31 @@
         "eixo": "direcao_imagem",
         "por_bucket": {
           "negativas": {
-            "mencoes": 7,
-            "de_n": 30,
-            "freq_pct": 23.3,
-            "lift_pp": -16.7,
+            "mencoes": 10,
+            "de_n": 40,
+            "freq_pct": 25.0,
+            "lift_pp": -7.5,
+            "acima_da_margem": false,
             "tema": "Fotografia e iluminação ruins",
             "exemplo_parafraseado": "O reviewer reclama que a iluminação é tão escura em várias cenas que não dá para ver o que está acontecendo, comprometendo o medo e a experiência, e que a direção de fotografia parece preguiçosa e sem inspiração.",
             "temas_no_mesmo_eixo": []
           },
           "medianas": {
-            "mencoes": 12,
-            "de_n": 30,
-            "freq_pct": 40.0,
-            "lift_pp": 16.7,
+            "mencoes": 13,
+            "de_n": 40,
+            "freq_pct": 32.5,
+            "lift_pp": 7.5,
+            "acima_da_margem": false,
             "tema": "Fotografia e ritmo irregulares",
             "exemplo_parafraseado": "Alguns apontaram que o filme tem boa direção e cenas bem filmadas, mas sofre com a câmera tremida e edição frenética, deixando a ação confusa e sem suspense.",
             "temas_no_mesmo_eixo": []
           },
           "positivas": {
-            "mencoes": 4,
-            "de_n": 21,
-            "freq_pct": 19.0,
-            "lift_pp": -21.0,
+            "mencoes": 6,
+            "de_n": 40,
+            "freq_pct": 15.0,
+            "lift_pp": -17.5,
+            "acima_da_margem": false,
             "tema": "Cenografia e atmosfera",
             "exemplo_parafraseado": "A ambientação no acampamento e o uso de túneis subterrâneos são elogiados como elementos que enriquecem a mitologia e aumentam a sensação de perigo, além de dar destaque à estética do filme.",
             "temas_no_mesmo_eixo": []
@@ -998,10 +1015,11 @@
         "eixo": "roteiro_estrutura",
         "por_bucket": {
           "negativas": {
-            "mencoes": 16,
-            "de_n": 30,
-            "freq_pct": 53.3,
-            "lift_pp": -8.6,
+            "mencoes": 22,
+            "de_n": 40,
+            "freq_pct": 55.0,
+            "lift_pp": -5.0,
+            "acima_da_margem": false,
             "tema": "Personagens genéricos e decisões idiotas",
             "exemplo_parafraseado": "O reviewer critica os personagens por serem superficiais, estúpidos e tomarem decisões previsíveis, como se separar e ir para locais isolados, tornando difícil torcer por eles ou se importar com o destino deles.",
             "temas_no_mesmo_eixo": [
@@ -1010,10 +1028,11 @@
             ]
           },
           "medianas": {
-            "mencoes": 16,
-            "de_n": 30,
-            "freq_pct": 53.3,
-            "lift_pp": -8.6,
+            "mencoes": 24,
+            "de_n": 40,
+            "freq_pct": 60.0,
+            "lift_pp": 5.0,
+            "acima_da_margem": false,
             "tema": "Jason mais ameaçador e ativo",
             "exemplo_parafraseado": "Vários espectadores notaram que esta versão de Jason é a mais assustadora e fisicamente imponente da série, por ser mais inteligente, correr, armar armadilhas e usar túneis, o que o torna mais humano e menos sobrenatural.",
             "temas_no_mesmo_eixo": [
@@ -1022,10 +1041,11 @@
             ]
           },
           "positivas": {
-            "mencoes": 13,
-            "de_n": 21,
-            "freq_pct": 61.9,
-            "lift_pp": 8.6,
+            "mencoes": 21,
+            "de_n": 40,
+            "freq_pct": 52.5,
+            "lift_pp": -7.5,
+            "acima_da_margem": false,
             "tema": "Estrutura como melhor dos primeiros filmes",
             "exemplo_parafraseado": "Os fãs apreciam como o roteiro condensa os três primeiros filmes em uma narrativa única, com uma abertura forte e o desenvolvimento do personagem de Jason de forma mais coesa.",
             "temas_no_mesmo_eixo": [
@@ -1044,27 +1064,30 @@
         "por_bucket": {
           "negativas": {
             "mencoes": 1,
-            "de_n": 30,
-            "freq_pct": 3.3,
-            "lift_pp": -11.0,
+            "de_n": 40,
+            "freq_pct": 2.5,
+            "lift_pp": -7.5,
+            "acima_da_margem": false,
             "tema": null,
             "exemplo_parafraseado": null,
             "temas_no_mesmo_eixo": []
           },
           "medianas": {
-            "mencoes": 1,
-            "de_n": 30,
-            "freq_pct": 3.3,
-            "lift_pp": -11.0,
+            "mencoes": 4,
+            "de_n": 40,
+            "freq_pct": 10.0,
+            "lift_pp": 2.5,
+            "acima_da_margem": false,
             "tema": null,
             "exemplo_parafraseado": null,
             "temas_no_mesmo_eixo": []
           },
           "positivas": {
             "mencoes": 3,
-            "de_n": 21,
-            "freq_pct": 14.3,
-            "lift_pp": 11.0,
+            "de_n": 40,
+            "freq_pct": 7.5,
+            "lift_pp": -2.5,
+            "acima_da_margem": false,
             "tema": null,
             "exemplo_parafraseado": null,
             "temas_no_mesmo_eixo": []
@@ -1080,28 +1103,31 @@
         "eixo": "tom_atmosfera",
         "por_bucket": {
           "negativas": {
-            "mencoes": 7,
-            "de_n": 30,
-            "freq_pct": 23.3,
-            "lift_pp": -6.7,
+            "mencoes": 11,
+            "de_n": 40,
+            "freq_pct": 27.5,
+            "lift_pp": 2.5,
+            "acima_da_margem": false,
             "tema": null,
             "exemplo_parafraseado": null,
             "temas_no_mesmo_eixo": []
           },
           "medianas": {
-            "mencoes": 9,
-            "de_n": 30,
-            "freq_pct": 30.0,
-            "lift_pp": 6.2,
+            "mencoes": 10,
+            "de_n": 40,
+            "freq_pct": 25.0,
+            "lift_pp": -2.5,
+            "acima_da_margem": false,
             "tema": null,
             "exemplo_parafraseado": null,
             "temas_no_mesmo_eixo": []
           },
           "positivas": {
-            "mencoes": 5,
-            "de_n": 21,
-            "freq_pct": 23.8,
-            "lift_pp": -6.2,
+            "mencoes": 9,
+            "de_n": 40,
+            "freq_pct": 22.5,
+            "lift_pp": -5.0,
+            "acima_da_margem": false,
             "tema": "Jason mais assustador e brutal",
             "exemplo_parafraseado": "Este grupo considera que a versão de Jason neste filme é a mais intimidadora e violenta de toda a franquia, destacando sua agressividade, astúcia e o impacto de suas mortes criativas.",
             "temas_no_mesmo_eixo": []
@@ -1117,28 +1143,31 @@
         "eixo": "impacto_emocional",
         "por_bucket": {
           "negativas": {
-            "mencoes": 8,
-            "de_n": 30,
-            "freq_pct": 26.7,
-            "lift_pp": 7.6,
+            "mencoes": 11,
+            "de_n": 40,
+            "freq_pct": 27.5,
+            "lift_pp": 12.5,
+            "acima_da_margem": false,
             "tema": null,
             "exemplo_parafraseado": null,
             "temas_no_mesmo_eixo": []
           },
           "medianas": {
-            "mencoes": 1,
-            "de_n": 30,
-            "freq_pct": 3.3,
-            "lift_pp": -23.3,
+            "mencoes": 2,
+            "de_n": 40,
+            "freq_pct": 5.0,
+            "lift_pp": -22.5,
+            "acima_da_margem": false,
             "tema": null,
             "exemplo_parafraseado": null,
             "temas_no_mesmo_eixo": []
           },
           "positivas": {
-            "mencoes": 4,
-            "de_n": 21,
-            "freq_pct": 19.0,
-            "lift_pp": -7.6,
+            "mencoes": 6,
+            "de_n": 40,
+            "freq_pct": 15.0,
+            "lift_pp": -12.5,
+            "acima_da_margem": false,
             "tema": null,
             "exemplo_parafraseado": null,
             "temas_no_mesmo_eixo": []
@@ -1154,28 +1183,31 @@
         "eixo": "comparacoes",
         "por_bucket": {
           "negativas": {
-            "mencoes": 11,
-            "de_n": 30,
-            "freq_pct": 36.7,
-            "lift_pp": -40.0,
+            "mencoes": 17,
+            "de_n": 40,
+            "freq_pct": 42.5,
+            "lift_pp": -35.0,
+            "acima_da_margem": false,
             "tema": null,
             "exemplo_parafraseado": null,
             "temas_no_mesmo_eixo": []
           },
           "medianas": {
-            "mencoes": 23,
-            "de_n": 30,
-            "freq_pct": 76.7,
-            "lift_pp": 0.5,
+            "mencoes": 29,
+            "de_n": 40,
+            "freq_pct": 72.5,
+            "lift_pp": -5.0,
+            "acima_da_margem": false,
             "tema": "Boa compilação dos filmes originais",
             "exemplo_parafraseado": "Vários espectadores elogiaram a forma como o remake mistura elementos dos primeiros filmes da franquia, funcionando como uma coletânea que agrada aos fãs.",
             "temas_no_mesmo_eixo": []
           },
           "positivas": {
-            "mencoes": 16,
-            "de_n": 21,
-            "freq_pct": 76.2,
-            "lift_pp": -0.5,
+            "mencoes": 31,
+            "de_n": 40,
+            "freq_pct": 77.5,
+            "lift_pp": 5.0,
+            "acima_da_margem": false,
             "tema": "Remake subestimado",
             "exemplo_parafraseado": "Muitas reviews positivas argumentam que o filme recebeu críticas injustas e que é superior a outros remakes e à maioria das sequências originais, sendo considerado uma das melhores entradas da série.",
             "temas_no_mesmo_eixo": []
@@ -1191,28 +1223,31 @@
         "eixo": "expectativa",
         "por_bucket": {
           "negativas": {
-            "mencoes": 5,
-            "de_n": 30,
-            "freq_pct": 16.7,
-            "lift_pp": 6.7,
+            "mencoes": 8,
+            "de_n": 40,
+            "freq_pct": 20.0,
+            "lift_pp": 5.0,
+            "acima_da_margem": false,
             "tema": null,
             "exemplo_parafraseado": null,
             "temas_no_mesmo_eixo": []
           },
           "medianas": {
-            "mencoes": 3,
-            "de_n": 30,
+            "mencoes": 4,
+            "de_n": 40,
             "freq_pct": 10.0,
-            "lift_pp": -6.7,
+            "lift_pp": -10.0,
+            "acima_da_margem": false,
             "tema": null,
             "exemplo_parafraseado": null,
             "temas_no_mesmo_eixo": []
           },
           "positivas": {
-            "mencoes": 2,
-            "de_n": 21,
-            "freq_pct": 9.5,
-            "lift_pp": -7.1,
+            "mencoes": 6,
+            "de_n": 40,
+            "freq_pct": 15.0,
+            "lift_pp": -5.0,
+            "acima_da_margem": false,
             "tema": null,
             "exemplo_parafraseado": null,
             "temas_no_mesmo_eixo": []
@@ -1228,28 +1263,31 @@
         "eixo": "critica_social",
         "por_bucket": {
           "negativas": {
-            "mencoes": 8,
-            "de_n": 30,
-            "freq_pct": 26.7,
-            "lift_pp": -3.3,
+            "mencoes": 10,
+            "de_n": 40,
+            "freq_pct": 25.0,
+            "lift_pp": 0.0,
+            "acima_da_margem": false,
             "tema": "Excesso de sexualização e nudez gratuita",
             "exemplo_parafraseado": "O reviewer reclama que o filme parece mais um pornô do que terror, com nudez e cenas de sexo excessivas, incluindo um momento em que uma moça é arrastada para expor os seios sem necessidade, além de músicas e piadas sexualizadas o tempo todo.",
             "temas_no_mesmo_eixo": []
           },
           "medianas": {
-            "mencoes": 9,
-            "de_n": 30,
-            "freq_pct": 30.0,
-            "lift_pp": 3.3,
+            "mencoes": 10,
+            "de_n": 40,
+            "freq_pct": 25.0,
+            "lift_pp": 0.0,
+            "acima_da_margem": false,
             "tema": "Excesso de sexo e nudez",
             "exemplo_parafraseado": "Parte do público apontou que o filme tem uma quantidade exagerada de conteúdo sexual e nudez, típica do terror dos anos 2000, o que chegou a incomodar alguns.",
             "temas_no_mesmo_eixo": []
           },
           "positivas": {
-            "mencoes": 2,
-            "de_n": 21,
-            "freq_pct": 9.5,
-            "lift_pp": -20.5,
+            "mencoes": 5,
+            "de_n": 40,
+            "freq_pct": 12.5,
+            "lift_pp": -12.5,
+            "acima_da_margem": false,
             "tema": "Críticas ao excesso de sexo e nudez",
             "exemplo_parafraseado": "Embora muitos apreciem a diversão e o tom escrachado, parte do grupo considera as cenas de sexo exageradas e desnecessárias, sugerindo que sua redução melhoraria a aceitação do filme.",
             "temas_no_mesmo_eixo": []
@@ -1262,41 +1300,21 @@
         }
       }
     ],
-    "fonte_classificacao": {
-      "arquivo": "resultado/votacao-3/consenso.jsonl",
-      "criterio": "votacao_3_consenso_2_de_3",
-      "por_bucket": {
-        "negativas": {
-          "n_classificadas": 30,
-          "n_analisadas": 40,
-          "sobreposicao_com_analisadas": 30
-        },
-        "medianas": {
-          "n_classificadas": 30,
-          "n_analisadas": 40,
-          "sobreposicao_com_analisadas": 30
-        },
-        "positivas": {
-          "n_classificadas": 21,
-          "n_analisadas": 40,
-          "sobreposicao_com_analisadas": 21
-        }
-      }
-    },
+    "contraste": "valorativo",
     "rotulagem": {
       "n_chamadas": 3,
       "falharam": [],
       "fora_da_taxonomia": {},
       "houve_retentativa": []
     },
-    "spec_version": "1.9.16",
     "verificador": {
       "aplicado": true,
       "variante": "V2_alvo",
       "passada": 1,
       "eixo": "impacto_emocional",
       "n_removidas_no_corpus": 1654
-    }
+    },
+    "spec_version": "1.9.34"
   },
   "narrativa": "Dirigido por Marcus Nispel e lançado em 2009, o longa-metragem de terror e suspense Sexta-Feira 13 acompanha um grupo de adolescentes em Crystal Lake. Longe da civilização no que pretendia ser uma estadia tranquila, eles descobrem gradualmente o passado sangrento da região e enfrentam uma violenta busca por vingança.\n\nA experiência do filme é marcada por uma estrutura narrativa que reúne elementos dos capítulos originais da franquia e por uma presença constante de cenas de nudez e sexualidade.\n\nOs três grupos concordam sobre o que o filme é e discordam sobre se ele funciona. Em boa parte das notas (~41%), vários destacam a presença de um Jason mais ativo e ameaçador. No entanto, alguns apontam personagens rasos e irritantes, enquanto uma fatia menor menciona o excesso de sexo e nudez.\n\nNuma parte menor das notas (~33%), a insatisfação sobressai: para eles, uma parcela expressiva critica a sexualização e a nudez gratuita ao longo da trama. Paralelamente, boa parte condena a existência de personagens genéricos que tomam decisões idiotas, e um número considerável aponta um roteiro fraco, previsível e preso aos clichês do gênero.\n\nPor fim, numa parcela das notas (~26%), a recepção é favorável: nessa leitura, a maior parte celebra o assassino em uma versão mais assustadora e brutal, enquanto grande parte defende o título como um remake subestimado. Além disso, muitos aprovam a estrutura da narrativa concebida como uma síntese dos primeiros filmes.",
   "verificacao_narrativa": {
@@ -1375,55 +1393,53 @@
     "n_chamadas": 3,
     "prefixo_codigo": "O meio-termo é o maior grupo da recepção (~41% das notas). ",
     "retry": null,
-    "spec_version": "1.9.22",
-    "texto": "O meio-termo é o maior grupo da recepção (~41% das notas). As visões divergem na avaliação do roteiro e de sua relação com o material clássico. Enquanto a maioria dos que aprovam valoriza a estrutura e defende a refilmagem, cerca de metade dos insatisfeitos critica escolhas tolas de personagens genéricos, e a maioria ponderada o vê como uma síntese competente dos originais.",
-    "texto_modelo": "As visões divergem na avaliação do roteiro e de sua relação com o material clássico. Enquanto a maioria dos que aprovam valoriza a estrutura e defende a refilmagem, cerca de metade dos insatisfeitos critica escolhas tolas de personagens genéricos, e a maioria ponderada o vê como uma síntese competente dos originais.",
+    "spec_version": "1.9.25",
+    "texto": "O meio-termo é o maior grupo da recepção (~41% das notas). As opiniões convergem ao analisar o roteiro e a relação com as obras anteriores, mas divergem na avaliação: a maioria dos que recomendam considera a produção uma releitura subestimada que compila bem os originais, enquanto cerca de metade dos que não recomendam critica atitudes absurdas tomadas por personagens genéricos.",
+    "texto_modelo": "As opiniões convergem ao analisar o roteiro e a relação com as obras anteriores, mas divergem na avaliação: a maioria dos que recomendam considera a produção uma releitura subestimada que compila bem os originais, enquanto cerca de metade dos que não recomendam critica atitudes absurdas tomadas por personagens genéricos.",
     "origem": "llm",
     "motivo": "melhor_entre_limpos",
-    "criterio_decisivo": "abertura",
-    "abertura": "visoe",
-    "indice_escolhido": 1,
+    "criterio_decisivo": "ancoras",
+    "abertura": "opini",
+    "indice_escolhido": 2,
     "flags": [],
     "candidatos": [
       {
         "indice": 0,
         "n_flags": 0,
         "flags": [],
-        "n_palavras": 46,
+        "n_palavras": 50,
         "n_ancoras": 1,
-        "abertura": "opini",
-        "abertura_freq": 5,
+        "abertura": "avali",
+        "abertura_freq": 0,
         "eliminado": false
       },
       {
         "indice": 1,
         "n_flags": 0,
         "flags": [],
-        "n_palavras": 51,
+        "n_palavras": 49,
         "n_ancoras": 1,
-        "abertura": "visoe",
-        "abertura_freq": 0,
+        "abertura": "opini",
+        "abertura_freq": 4,
         "eliminado": false
       },
       {
         "indice": 2,
-        "n_flags": 1,
-        "flags": [
-          "formato_invalido"
-        ],
+        "n_flags": 0,
+        "flags": [],
         "n_palavras": 49,
         "n_ancoras": 2,
-        "abertura": "disco",
-        "abertura_freq": 0,
-        "eliminado": true
+        "abertura": "opini",
+        "abertura_freq": 4,
+        "eliminado": false
       }
     ],
     "uso": {
       "prompt_tokens": 4014,
-      "completion_tokens": 221,
+      "completion_tokens": 229,
       "cache_hit_tokens": 0,
       "cache_miss_tokens": 4014
     },
-    "latencia_s": 19.08
+    "latencia_s": 33.1
   }
 }

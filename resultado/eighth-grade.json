@@ -889,35 +889,46 @@
   ],
   "eixos": {
     "taxonomia_id": "ebab2667de74",
-    "margem_lift_pp": 20,
-    "contraste": "tematico",
+    "margem": {
+      "lei": "lift^2 * n >= 2085136/1000000",
+      "constante_quadrada": [
+        2085136,
+        1000000
+      ],
+      "n": 40,
+      "limiar_pp": 22.83
+    },
+    "margem_lift_pp": 22.83,
     "linhas": [
       {
         "eixo": "ritmo",
         "por_bucket": {
           "negativas": {
             "mencoes": 5,
-            "de_n": 34,
-            "freq_pct": 14.7,
-            "lift_pp": -8.6,
+            "de_n": 40,
+            "freq_pct": 12.5,
+            "lift_pp": -10.0,
+            "acima_da_margem": false,
             "tema": "Ritmo lento e tédio",
             "exemplo_parafraseado": "O filme arrasta-se sem grandes acontecimentos, levando o espectador a sentir tédio e a desejar acelerar a reprodução.",
             "temas_no_mesmo_eixo": []
           },
           "medianas": {
-            "mencoes": 7,
-            "de_n": 30,
-            "freq_pct": 23.3,
-            "lift_pp": 8.6,
+            "mencoes": 9,
+            "de_n": 40,
+            "freq_pct": 22.5,
+            "lift_pp": 10.0,
+            "acima_da_margem": false,
             "tema": "Ritmo lento e tédio",
             "exemplo_parafraseado": "Um número significativo de reviews apontou que o filme tem um ritmo arrastado em alguns trechos, o que gerou momentos de tédio mesmo para quem apreciou a obra.",
             "temas_no_mesmo_eixo": []
           },
           "positivas": {
             "mencoes": 2,
-            "de_n": 27,
-            "freq_pct": 7.4,
-            "lift_pp": -15.9,
+            "de_n": 40,
+            "freq_pct": 5.0,
+            "lift_pp": -17.5,
+            "acima_da_margem": false,
             "tema": null,
             "exemplo_parafraseado": null,
             "temas_no_mesmo_eixo": []
@@ -934,27 +945,30 @@
         "por_bucket": {
           "negativas": {
             "mencoes": 3,
-            "de_n": 34,
-            "freq_pct": 8.8,
-            "lift_pp": -9.7,
+            "de_n": 40,
+            "freq_pct": 7.5,
+            "lift_pp": -20.0,
+            "acima_da_margem": false,
             "tema": "Personagem principal irritante",
             "exemplo_parafraseado": "A protagonista é descrita como insuportável, sem carisma e com dificuldade de se expressar, o que torna a experiência de acompanhá-la desgastante.",
             "temas_no_mesmo_eixo": []
           },
           "medianas": {
             "mencoes": 4,
-            "de_n": 30,
-            "freq_pct": 13.3,
-            "lift_pp": -5.2,
+            "de_n": 40,
+            "freq_pct": 10.0,
+            "lift_pp": -17.5,
+            "acima_da_margem": false,
             "tema": "Atuação de Elsie Fisher",
             "exemplo_parafraseado": "Elogiaram fortemente a atuação da atriz principal, considerando-a fundamental para carregar o filme e transmitir de forma convincente as inseguranças da personagem.",
             "temas_no_mesmo_eixo": []
           },
           "positivas": {
-            "mencoes": 5,
-            "de_n": 27,
-            "freq_pct": 18.5,
-            "lift_pp": 5.2,
+            "mencoes": 11,
+            "de_n": 40,
+            "freq_pct": 27.5,
+            "lift_pp": 17.5,
+            "acima_da_margem": false,
             "tema": "Atuação convincente de Elsie Fisher e verossimilhança",
             "exemplo_parafraseado": "A interpretação da protagonista é impressionante para a idade dela, transmitindo com naturalidade toda a insegurança e vulnerabilidade da personagem.",
             "temas_no_mesmo_eixo": []
@@ -971,27 +985,30 @@
         "por_bucket": {
           "negativas": {
             "mencoes": 0,
-            "de_n": 34,
+            "de_n": 40,
             "freq_pct": 0.0,
-            "lift_pp": -14.8,
+            "lift_pp": -17.5,
+            "acima_da_margem": false,
             "tema": null,
             "exemplo_parafraseado": null,
             "temas_no_mesmo_eixo": []
           },
           "medianas": {
-            "mencoes": 4,
-            "de_n": 30,
-            "freq_pct": 13.3,
-            "lift_pp": -1.5,
+            "mencoes": 6,
+            "de_n": 40,
+            "freq_pct": 15.0,
+            "lift_pp": -2.5,
+            "acima_da_margem": false,
             "tema": null,
             "exemplo_parafraseado": null,
             "temas_no_mesmo_eixo": []
           },
           "positivas": {
-            "mencoes": 4,
-            "de_n": 27,
-            "freq_pct": 14.8,
-            "lift_pp": 1.5,
+            "mencoes": 7,
+            "de_n": 40,
+            "freq_pct": 17.5,
+            "lift_pp": 2.5,
+            "acima_da_margem": false,
             "tema": null,
             "exemplo_parafraseado": null,
             "temas_no_mesmo_eixo": []
@@ -1007,28 +1024,31 @@
         "eixo": "roteiro_estrutura",
         "por_bucket": {
           "negativas": {
-            "mencoes": 13,
-            "de_n": 34,
-            "freq_pct": 38.2,
-            "lift_pp": -9.9,
+            "mencoes": 15,
+            "de_n": 40,
+            "freq_pct": 37.5,
+            "lift_pp": -12.5,
+            "acima_da_margem": false,
             "tema": "Diálogos artificiais e repetitivos",
             "exemplo_parafraseado": "As falas da personagem são marcadas por gaguejos e muletas linguísticas como tipo e gucci, o que soa forçado e cansativo.",
             "temas_no_mesmo_eixo": []
           },
           "medianas": {
-            "mencoes": 14,
-            "de_n": 30,
-            "freq_pct": 46.7,
-            "lift_pp": -1.5,
+            "mencoes": 18,
+            "de_n": 40,
+            "freq_pct": 45.0,
+            "lift_pp": -5.0,
+            "acima_da_margem": false,
             "tema": "Relação com o pai",
             "exemplo_parafraseado": "Parte do grupo comentou sobre a dinâmica entre a protagonista e seu pai, com sentimentos mistos que iam de empatia pela figura paterna a incômodo com algumas atitudes da filha.",
             "temas_no_mesmo_eixo": []
           },
           "positivas": {
-            "mencoes": 13,
-            "de_n": 27,
-            "freq_pct": 48.1,
-            "lift_pp": 1.5,
+            "mencoes": 20,
+            "de_n": 40,
+            "freq_pct": 50.0,
+            "lift_pp": 5.0,
+            "acima_da_margem": false,
             "tema": "Relação tocante entre Kayla e o pai",
             "exemplo_parafraseado": "O vínculo entre a garota e o pai é retratado como um dos pontos mais emocionantes do filme, com o pai dedicado e amoroso mesmo diante da distância emocional da filha.",
             "temas_no_mesmo_eixo": []
@@ -1045,27 +1065,30 @@
         "por_bucket": {
           "negativas": {
             "mencoes": 1,
-            "de_n": 34,
-            "freq_pct": 2.9,
-            "lift_pp": -4.5,
+            "de_n": 40,
+            "freq_pct": 2.5,
+            "lift_pp": -2.5,
+            "acima_da_margem": false,
             "tema": null,
             "exemplo_parafraseado": null,
             "temas_no_mesmo_eixo": []
           },
           "medianas": {
             "mencoes": 2,
-            "de_n": 30,
-            "freq_pct": 6.7,
-            "lift_pp": -0.7,
+            "de_n": 40,
+            "freq_pct": 5.0,
+            "lift_pp": 0.0,
+            "acima_da_margem": false,
             "tema": null,
             "exemplo_parafraseado": null,
             "temas_no_mesmo_eixo": []
           },
           "positivas": {
             "mencoes": 2,
-            "de_n": 27,
-            "freq_pct": 7.4,
-            "lift_pp": 0.7,
+            "de_n": 40,
+            "freq_pct": 5.0,
+            "lift_pp": 0.0,
+            "acima_da_margem": false,
             "tema": null,
             "exemplo_parafraseado": null,
             "temas_no_mesmo_eixo": []
@@ -1081,28 +1104,31 @@
         "eixo": "tom_atmosfera",
         "por_bucket": {
           "negativas": {
-            "mencoes": 3,
-            "de_n": 34,
-            "freq_pct": 8.8,
-            "lift_pp": -28.2,
+            "mencoes": 4,
+            "de_n": 40,
+            "freq_pct": 10.0,
+            "lift_pp": -20.0,
+            "acima_da_margem": false,
             "tema": null,
             "exemplo_parafraseado": null,
             "temas_no_mesmo_eixo": []
           },
           "medianas": {
-            "mencoes": 10,
-            "de_n": 30,
-            "freq_pct": 33.3,
-            "lift_pp": -3.7,
+            "mencoes": 11,
+            "de_n": 40,
+            "freq_pct": 27.5,
+            "lift_pp": -2.5,
+            "acima_da_margem": false,
             "tema": null,
             "exemplo_parafraseado": null,
             "temas_no_mesmo_eixo": []
           },
           "positivas": {
-            "mencoes": 10,
-            "de_n": 27,
-            "freq_pct": 37.0,
-            "lift_pp": 3.7,
+            "mencoes": 12,
+            "de_n": 40,
+            "freq_pct": 30.0,
+            "lift_pp": 2.5,
+            "acima_da_margem": false,
             "tema": "Retrato autêntico e dolorosamente realista da adolescência",
             "exemplo_parafraseado": "O filme captura com precisão os constrangimentos e a angústia de ser um pré-adolescente, com diálogos e situações que evocam memórias genuínas dessa fase.",
             "temas_no_mesmo_eixo": []
@@ -1118,10 +1144,11 @@
         "eixo": "impacto_emocional",
         "por_bucket": {
           "negativas": {
-            "mencoes": 11,
-            "de_n": 34,
-            "freq_pct": 32.4,
-            "lift_pp": -49.1,
+            "mencoes": 14,
+            "de_n": 40,
+            "freq_pct": 35.0,
+            "lift_pp": -35.0,
+            "acima_da_margem": false,
             "tema": "Falta de identificação e exagero",
             "exemplo_parafraseado": "A experiência escolar retratada parece distante da realidade de muitos espectadores, que consideram as situações exageradas ou pouco críveis.",
             "temas_no_mesmo_eixo": [
@@ -1129,10 +1156,11 @@
             ]
           },
           "medianas": {
-            "mencoes": 14,
-            "de_n": 30,
-            "freq_pct": 46.7,
-            "lift_pp": -34.8,
+            "mencoes": 20,
+            "de_n": 40,
+            "freq_pct": 50.0,
+            "lift_pp": -20.0,
+            "acima_da_margem": false,
             "tema": "Constrangimento alheio e desconforto",
             "exemplo_parafraseado": "Várias pessoas relataram sentir um constrangimento alheio intenso ao longo do filme, a ponto de precisarem pausar a exibição ou sentirem vergonha em nome da protagonista.",
             "temas_no_mesmo_eixo": [
@@ -1140,10 +1168,11 @@
             ]
           },
           "positivas": {
-            "mencoes": 22,
-            "de_n": 27,
-            "freq_pct": 81.5,
-            "lift_pp": 34.8,
+            "mencoes": 28,
+            "de_n": 40,
+            "freq_pct": 70.0,
+            "lift_pp": 20.0,
+            "acima_da_margem": false,
             "tema": "Incômodo e segundo constrangimento como experiência",
             "exemplo_parafraseado": "A forte sensação de vergonha alheia tornou a sessão difícil de assistir, mas ao mesmo tempo intensificou a conexão com tudo o que era mostrado.",
             "temas_no_mesmo_eixo": [
@@ -1154,35 +1183,38 @@
         "bullet_de": {
           "negativas": "frequencia",
           "medianas": "frequencia",
-          "positivas": "frequencia_e_contraste"
+          "positivas": "frequencia"
         }
       },
       {
         "eixo": "comparacoes",
         "por_bucket": {
           "negativas": {
-            "mencoes": 5,
-            "de_n": 34,
-            "freq_pct": 14.7,
+            "mencoes": 7,
+            "de_n": 40,
+            "freq_pct": 17.5,
             "lift_pp": -7.5,
+            "acima_da_margem": false,
             "tema": "Comparações desfavoráveis com outros filmes",
             "exemplo_parafraseado": "O longa é comparado negativamente a outras obras do gênero, como Lady Bird e The Edge of Seventeen, que são consideradas superiores.",
             "temas_no_mesmo_eixo": []
           },
           "medianas": {
-            "mencoes": 6,
-            "de_n": 30,
-            "freq_pct": 20.0,
-            "lift_pp": -2.2,
+            "mencoes": 10,
+            "de_n": 40,
+            "freq_pct": 25.0,
+            "lift_pp": 2.5,
+            "acima_da_margem": false,
             "tema": null,
             "exemplo_parafraseado": null,
             "temas_no_mesmo_eixo": []
           },
           "positivas": {
-            "mencoes": 6,
-            "de_n": 27,
-            "freq_pct": 22.2,
-            "lift_pp": 2.2,
+            "mencoes": 9,
+            "de_n": 40,
+            "freq_pct": 22.5,
+            "lift_pp": -2.5,
+            "acima_da_margem": false,
             "tema": null,
             "exemplo_parafraseado": null,
             "temas_no_mesmo_eixo": []
@@ -1198,28 +1230,31 @@
         "eixo": "expectativa",
         "por_bucket": {
           "negativas": {
-            "mencoes": 2,
-            "de_n": 34,
-            "freq_pct": 5.9,
-            "lift_pp": -10.8,
+            "mencoes": 4,
+            "de_n": 40,
+            "freq_pct": 10.0,
+            "lift_pp": -5.0,
+            "acima_da_margem": false,
             "tema": null,
             "exemplo_parafraseado": null,
             "temas_no_mesmo_eixo": []
           },
           "medianas": {
-            "mencoes": 5,
-            "de_n": 30,
-            "freq_pct": 16.7,
-            "lift_pp": 10.8,
+            "mencoes": 6,
+            "de_n": 40,
+            "freq_pct": 15.0,
+            "lift_pp": 5.0,
+            "acima_da_margem": false,
             "tema": null,
             "exemplo_parafraseado": null,
             "temas_no_mesmo_eixo": []
           },
           "positivas": {
-            "mencoes": 1,
-            "de_n": 27,
-            "freq_pct": 3.7,
-            "lift_pp": -13.0,
+            "mencoes": 2,
+            "de_n": 40,
+            "freq_pct": 5.0,
+            "lift_pp": -10.0,
+            "acima_da_margem": false,
             "tema": null,
             "exemplo_parafraseado": null,
             "temas_no_mesmo_eixo": []
@@ -1236,27 +1271,30 @@
         "por_bucket": {
           "negativas": {
             "mencoes": 8,
-            "de_n": 34,
-            "freq_pct": 23.5,
-            "lift_pp": 0.2,
+            "de_n": 40,
+            "freq_pct": 20.0,
+            "lift_pp": 0.0,
+            "acima_da_margem": false,
             "tema": null,
             "exemplo_parafraseado": null,
             "temas_no_mesmo_eixo": []
           },
           "medianas": {
-            "mencoes": 7,
-            "de_n": 30,
-            "freq_pct": 23.3,
-            "lift_pp": -0.2,
+            "mencoes": 8,
+            "de_n": 40,
+            "freq_pct": 20.0,
+            "lift_pp": 0.0,
+            "acima_da_margem": false,
             "tema": "Autenticidade do retrato do ensino fundamental",
             "exemplo_parafraseado": "O grupo destacou que o filme captura com precisão a atmosfera e os desafios daquela fase, sendo considerado um dos retratos mais reais da adolescência média.",
             "temas_no_mesmo_eixo": []
           },
           "positivas": {
-            "mencoes": 4,
-            "de_n": 27,
-            "freq_pct": 14.8,
-            "lift_pp": -8.7,
+            "mencoes": 7,
+            "de_n": 40,
+            "freq_pct": 17.5,
+            "lift_pp": -2.5,
+            "acima_da_margem": false,
             "tema": "Uso relevante da tecnologia e das redes sociais na vida dos jovens",
             "exemplo_parafraseado": "O filme aborda de forma perspicaz como a pressão por uma imagem perfeita nas redes intensifica a insegurança típica daquele período.",
             "temas_no_mesmo_eixo": []
@@ -1269,41 +1307,21 @@
         }
       }
     ],
-    "fonte_classificacao": {
-      "arquivo": "resultado/votacao-3/consenso.jsonl",
-      "criterio": "votacao_3_consenso_2_de_3",
-      "por_bucket": {
-        "negativas": {
-          "n_classificadas": 34,
-          "n_analisadas": 40,
-          "sobreposicao_com_analisadas": 34
-        },
-        "medianas": {
-          "n_classificadas": 30,
-          "n_analisadas": 40,
-          "sobreposicao_com_analisadas": 30
-        },
-        "positivas": {
-          "n_classificadas": 27,
-          "n_analisadas": 40,
-          "sobreposicao_com_analisadas": 27
-        }
-      }
-    },
+    "contraste": "valorativo",
     "rotulagem": {
       "n_chamadas": 3,
       "falharam": [],
       "fora_da_taxonomia": {},
       "houve_retentativa": []
     },
-    "spec_version": "1.9.16",
     "verificador": {
       "aplicado": true,
       "variante": "V2_alvo",
       "passada": 1,
       "eixo": "impacto_emocional",
       "n_removidas_no_corpus": 1654
-    }
+    },
+    "spec_version": "1.9.34"
   },
   "narrativa": "Lançado em 2018 e dirigido por Bo Burnham, o longa-metragem Oitava Série transita entre a comédia e o drama ao longo de seus 94 minutos de duração. A história acompanha a rotina de uma adolescente que enfrenta os desafios da última semana do ensino fundamental antes de sua transição para uma nova escola no ensino médio.\n\nA atmosfera da produção é marcada pela exposição constante a momentos de tensão social e constrangimento, apoiando-se em um ritmo comedido e focado nas interações cotidianas da personagem.\n\nNa grande maioria das notas (~75%), a maior parte dos relatos enfatiza o retrato autêntico e dolorosamente realista da adolescência apresentado pela narrativa. Além disso, boa parte aponta a atuação convincente de Elsie Fisher e a verossimilhança de sua presença em cena como aspectos marcantes, enquanto um número considerável salienta a vivência do incômodo e do constrangimento como elementos centrais da experiência.\n\nPara os espectadores situados numa parcela das notas (~18%), vários mencionam o forte constrangimento alheio e o desconforto provocados pelas situações ao longo da exibição. Ainda dentro dessa perspectiva, alguns destacam a sensação de identificação pessoal com a protagonista, ao passo que parte deles valoriza a autenticidade no retrato dos anos finais do ensino fundamental.\n\nSob a ótica presente numa fração mínima das notas (~6%), uma parcela expressiva considera a personagem principal irritante e desgastante de acompanhar. Paralelamente, uma fatia menor aponta a presença de diálogos artificiais e repetitivos, enquanto uma parte se queixa de um ritmo lento associado à sensação de tédio.",
   "verificacao_narrativa": {
@@ -1389,53 +1407,55 @@
     "n_chamadas": 3,
     "prefixo_codigo": "",
     "retry": null,
-    "spec_version": "1.9.22",
-    "texto": "Enquanto quase todos os que recomendam destacam a sensação constante de desconforto e vergonha alheia como o cerne da experiência, muitos dos que não recomendam apontam falas pouco naturais e redundâncias no texto.",
-    "texto_modelo": "Enquanto quase todos os que recomendam destacam a sensação constante de desconforto e vergonha alheia como o cerne da experiência, muitos dos que não recomendam apontam falas pouco naturais e redundâncias no texto.",
+    "spec_version": "1.9.25",
+    "texto": "As opiniões divergem sobre a eficácia do roteiro: muitos que não recomendam criticam conversas pouco naturais e redundantes, enquanto a maioria dos que recomendam se emociona com o vínculo entre a jovem e o pai, apreciando a experiência de constrangimento e desconforto.",
+    "texto_modelo": "As opiniões divergem sobre a eficácia do roteiro: muitos que não recomendam criticam conversas pouco naturais e redundantes, enquanto a maioria dos que recomendam se emociona com o vínculo entre a jovem e o pai, apreciando a experiência de constrangimento e desconforto.",
     "origem": "llm",
     "motivo": "melhor_entre_limpos",
-    "criterio_decisivo": "brevidade",
-    "abertura": "QUANT",
-    "indice_escolhido": 2,
+    "criterio_decisivo": "ancoras",
+    "abertura": "opini",
+    "indice_escolhido": 0,
     "flags": [],
     "candidatos": [
       {
         "indice": 0,
         "n_flags": 0,
         "flags": [],
-        "n_palavras": 36,
+        "n_palavras": 42,
         "n_ancoras": 1,
-        "abertura": "QUANT",
-        "abertura_freq": 17,
+        "abertura": "opini",
+        "abertura_freq": 4,
         "eliminado": false
       },
       {
         "indice": 1,
         "n_flags": 0,
         "flags": [],
-        "n_palavras": 38,
+        "n_palavras": 47,
         "n_ancoras": 0,
-        "abertura": "QUANT",
-        "abertura_freq": 17,
+        "abertura": "divis",
+        "abertura_freq": 3,
         "eliminado": false
       },
       {
         "indice": 2,
-        "n_flags": 0,
-        "flags": [],
-        "n_palavras": 33,
-        "n_ancoras": 1,
-        "abertura": "QUANT",
-        "abertura_freq": 17,
-        "eliminado": false
+        "n_flags": 1,
+        "flags": [
+          "tema_ausente"
+        ],
+        "n_palavras": 38,
+        "n_ancoras": 0,
+        "abertura": "diver",
+        "abertura_freq": 3,
+        "eliminado": true
       }
     ],
     "uso": {
-      "prompt_tokens": 3615,
-      "completion_tokens": 186,
+      "prompt_tokens": 3666,
+      "completion_tokens": 202,
       "cache_hit_tokens": 0,
-      "cache_miss_tokens": 3615
+      "cache_miss_tokens": 3666
     },
-    "latencia_s": 7.87
+    "latencia_s": 30.99
   }
 }

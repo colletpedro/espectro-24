@@ -884,35 +884,46 @@
   ],
   "eixos": {
     "taxonomia_id": "ebab2667de74",
-    "margem_lift_pp": 20,
-    "contraste": "valorativo",
+    "margem": {
+      "lei": "lift^2 * n >= 2085136/1000000",
+      "constante_quadrada": [
+        2085136,
+        1000000
+      ],
+      "n": 39,
+      "limiar_pp": 23.12
+    },
+    "margem_lift_pp": 23.12,
     "linhas": [
       {
         "eixo": "ritmo",
         "por_bucket": {
           "negativas": {
             "mencoes": 8,
-            "de_n": 33,
-            "freq_pct": 24.2,
-            "lift_pp": -14.5,
+            "de_n": 40,
+            "freq_pct": 20.0,
+            "lift_pp": -18.5,
+            "acima_da_margem": false,
             "tema": "Falta de terror e ritmo irregular",
             "exemplo_parafraseado": "O filme não assusta como deveria, aposta em sustos baratos e tem momentos tediosos, não funcionando como terror.",
             "temas_no_mesmo_eixo": []
           },
           "medianas": {
-            "mencoes": 12,
-            "de_n": 31,
-            "freq_pct": 38.7,
-            "lift_pp": 14.5,
+            "mencoes": 15,
+            "de_n": 39,
+            "freq_pct": 38.5,
+            "lift_pp": 18.5,
+            "acima_da_margem": false,
             "tema": "Ritmo lento e arrastado",
             "exemplo_parafraseado": "Muitos comentaram que o filme demora a engrenar, especialmente na primeira metade, e que isso prejudica o ritmo e o envolvimento com a história.",
             "temas_no_mesmo_eixo": []
           },
           "positivas": {
-            "mencoes": 3,
-            "de_n": 33,
-            "freq_pct": 9.1,
-            "lift_pp": -29.6,
+            "mencoes": 5,
+            "de_n": 40,
+            "freq_pct": 12.5,
+            "lift_pp": -26.0,
+            "acima_da_margem": false,
             "tema": null,
             "exemplo_parafraseado": null,
             "temas_no_mesmo_eixo": []
@@ -928,28 +939,31 @@
         "eixo": "atuacao",
         "por_bucket": {
           "negativas": {
-            "mencoes": 8,
-            "de_n": 33,
-            "freq_pct": 24.2,
-            "lift_pp": 1.7,
+            "mencoes": 9,
+            "de_n": 40,
+            "freq_pct": 22.5,
+            "lift_pp": -0.6,
+            "acima_da_margem": false,
             "tema": "Atuações medianas",
             "exemplo_parafraseado": "Além da protagonista, o elenco não convence e falta carisma, deixando as cenas mornas.",
             "temas_no_mesmo_eixo": []
           },
           "medianas": {
-            "mencoes": 7,
-            "de_n": 31,
-            "freq_pct": 22.6,
-            "lift_pp": -1.7,
+            "mencoes": 9,
+            "de_n": 39,
+            "freq_pct": 23.1,
+            "lift_pp": 0.6,
+            "acima_da_margem": false,
             "tema": "Atuações elogiadas, personagens irritantes",
             "exemplo_parafraseado": "A atuação da protagonista foi amplamente elogiada, mas boa parte dos espectadores achou os personagens, especialmente os amigos, imaturos e irritantes, o que gerou frustração.",
             "temas_no_mesmo_eixo": []
           },
           "positivas": {
-            "mencoes": 5,
-            "de_n": 33,
-            "freq_pct": 15.2,
-            "lift_pp": -9.1,
+            "mencoes": 6,
+            "de_n": 40,
+            "freq_pct": 15.0,
+            "lift_pp": -8.1,
+            "acima_da_margem": false,
             "tema": "Atuação de Sophie Wilde",
             "exemplo_parafraseado": "A performance de Sophie Wilde é amplamente elogiada por transmitir vulnerabilidade e deterioração emocional de forma convincente, elevando o filme com sua presença intensa e subtil.",
             "temas_no_mesmo_eixo": []
@@ -965,28 +979,31 @@
         "eixo": "direcao_imagem",
         "por_bucket": {
           "negativas": {
-            "mencoes": 10,
-            "de_n": 33,
-            "freq_pct": 30.3,
-            "lift_pp": 1.3,
+            "mencoes": 12,
+            "de_n": 40,
+            "freq_pct": 30.0,
+            "lift_pp": 1.8,
+            "acima_da_margem": false,
             "tema": null,
             "exemplo_parafraseado": null,
             "temas_no_mesmo_eixo": []
           },
           "medianas": {
-            "mencoes": 9,
-            "de_n": 31,
-            "freq_pct": 29.0,
-            "lift_pp": -1.3,
+            "mencoes": 11,
+            "de_n": 39,
+            "freq_pct": 28.2,
+            "lift_pp": -1.8,
+            "acima_da_margem": false,
             "tema": null,
             "exemplo_parafraseado": null,
             "temas_no_mesmo_eixo": []
           },
           "positivas": {
-            "mencoes": 6,
-            "de_n": 33,
-            "freq_pct": 18.2,
-            "lift_pp": -12.1,
+            "mencoes": 7,
+            "de_n": 40,
+            "freq_pct": 17.5,
+            "lift_pp": -12.5,
+            "acima_da_margem": false,
             "tema": "Efeitos práticos e maquiagem",
             "exemplo_parafraseado": "O trabalho de maquiagem e os efeitos práticos são destacados como excepcionais, com cenas grotescas e perturbadoras que deixam uma impressão duradoura.",
             "temas_no_mesmo_eixo": []
@@ -1002,10 +1019,11 @@
         "eixo": "roteiro_estrutura",
         "por_bucket": {
           "negativas": {
-            "mencoes": 25,
-            "de_n": 33,
-            "freq_pct": 75.8,
-            "lift_pp": 0.0,
+            "mencoes": 29,
+            "de_n": 40,
+            "freq_pct": 72.5,
+            "lift_pp": -1.9,
+            "acima_da_margem": false,
             "tema": "Protagonista irritante e decisões idiotas",
             "exemplo_parafraseado": "A protagonista é insuportável e age de forma egoísta, colocando a vida dos amigos em risco apenas para satisfazer seus desejos, o que torna a experiência frustrante.",
             "temas_no_mesmo_eixo": [
@@ -1013,10 +1031,11 @@
             ]
           },
           "medianas": {
-            "mencoes": 22,
-            "de_n": 31,
-            "freq_pct": 71.0,
-            "lift_pp": -4.8,
+            "mencoes": 29,
+            "de_n": 39,
+            "freq_pct": 74.4,
+            "lift_pp": 1.9,
+            "acima_da_margem": false,
             "tema": "Premissa criativa, execução irregular",
             "exemplo_parafraseado": "Vários espectadores elogiaram a ideia original da mão embalsamada e do jogo de possessão, mas acharam que o desenvolvimento e a execução não corresponderam ao potencial, resultando em uma experiência apenas mediana.",
             "temas_no_mesmo_eixo": [
@@ -1025,10 +1044,11 @@
             ]
           },
           "positivas": {
-            "mencoes": 25,
-            "de_n": 33,
-            "freq_pct": 75.8,
-            "lift_pp": 0.0,
+            "mencoes": 27,
+            "de_n": 40,
+            "freq_pct": 67.5,
+            "lift_pp": -6.9,
+            "acima_da_margem": false,
             "tema": "Personagens exasperantes e decisões irracionais",
             "exemplo_parafraseado": "Muitos comentam que os protagonistas tomam decisões tão estúpidas que chegam a irritar, mas isso também gera um entretenimento mórbido enquanto a audiência julga cada escolha errada.",
             "temas_no_mesmo_eixo": [
@@ -1046,28 +1066,31 @@
         "eixo": "som_trilha",
         "por_bucket": {
           "negativas": {
-            "mencoes": 1,
-            "de_n": 33,
-            "freq_pct": 3.0,
-            "lift_pp": -0.2,
+            "mencoes": 2,
+            "de_n": 40,
+            "freq_pct": 5.0,
+            "lift_pp": -0.1,
+            "acima_da_margem": false,
             "tema": null,
             "exemplo_parafraseado": null,
             "temas_no_mesmo_eixo": []
           },
           "medianas": {
-            "mencoes": 1,
-            "de_n": 31,
-            "freq_pct": 3.2,
-            "lift_pp": 0.2,
+            "mencoes": 2,
+            "de_n": 39,
+            "freq_pct": 5.1,
+            "lift_pp": 0.1,
+            "acima_da_margem": false,
             "tema": null,
             "exemplo_parafraseado": null,
             "temas_no_mesmo_eixo": []
           },
           "positivas": {
-            "mencoes": 1,
-            "de_n": 33,
-            "freq_pct": 3.0,
-            "lift_pp": -0.2,
+            "mencoes": 2,
+            "de_n": 40,
+            "freq_pct": 5.0,
+            "lift_pp": -0.1,
+            "acima_da_margem": false,
             "tema": null,
             "exemplo_parafraseado": null,
             "temas_no_mesmo_eixo": []
@@ -1083,28 +1106,31 @@
         "eixo": "tom_atmosfera",
         "por_bucket": {
           "negativas": {
-            "mencoes": 8,
-            "de_n": 33,
-            "freq_pct": 24.2,
-            "lift_pp": -6.1,
+            "mencoes": 10,
+            "de_n": 40,
+            "freq_pct": 25.0,
+            "lift_pp": -5.0,
+            "acima_da_margem": false,
             "tema": "Diálogos e tom juvenil artificiais",
             "exemplo_parafraseado": "As piadas e gírias usadas parecem forçadas, como se o roteirista tentasse imitar a linguagem jovem sem naturalidade.",
             "temas_no_mesmo_eixo": []
           },
           "medianas": {
-            "mencoes": 7,
-            "de_n": 31,
-            "freq_pct": 22.6,
-            "lift_pp": -7.7,
+            "mencoes": 10,
+            "de_n": 39,
+            "freq_pct": 25.6,
+            "lift_pp": -4.4,
+            "acima_da_margem": false,
             "tema": "Sustos e atmosfera: mais perturbador que assustador",
             "exemplo_parafraseado": "Apesar de não ser considerado um filme muito assustador, muitos notaram que ele cria uma atmosfera perturbadora e desconfortável, com cenas de possessão e body horror bem executadas.",
             "temas_no_mesmo_eixo": []
           },
           "positivas": {
-            "mencoes": 10,
-            "de_n": 33,
-            "freq_pct": 30.3,
-            "lift_pp": 6.1,
+            "mencoes": 12,
+            "de_n": 40,
+            "freq_pct": 30.0,
+            "lift_pp": 4.4,
+            "acima_da_margem": false,
             "tema": "Terror genuíno e atmosfera opressiva",
             "exemplo_parafraseado": "O filme é elogiado por criar uma sensação constante de desconforto e medo que não depende de sustos fáceis, mas de uma tensão lenta e opressiva que permanece após o término.",
             "temas_no_mesmo_eixo": []
@@ -1120,28 +1146,31 @@
         "eixo": "impacto_emocional",
         "por_bucket": {
           "negativas": {
-            "mencoes": 11,
-            "de_n": 33,
-            "freq_pct": 33.3,
-            "lift_pp": -15.2,
+            "mencoes": 13,
+            "de_n": 40,
+            "freq_pct": 32.5,
+            "lift_pp": -15.0,
+            "acima_da_margem": false,
             "tema": null,
             "exemplo_parafraseado": null,
             "temas_no_mesmo_eixo": []
           },
           "medianas": {
-            "mencoes": 9,
-            "de_n": 31,
-            "freq_pct": 29.0,
-            "lift_pp": -19.5,
+            "mencoes": 11,
+            "de_n": 39,
+            "freq_pct": 28.2,
+            "lift_pp": -19.3,
+            "acima_da_margem": false,
             "tema": null,
             "exemplo_parafraseado": null,
             "temas_no_mesmo_eixo": []
           },
           "positivas": {
-            "mencoes": 16,
-            "de_n": 33,
-            "freq_pct": 48.5,
-            "lift_pp": 15.2,
+            "mencoes": 19,
+            "de_n": 40,
+            "freq_pct": 47.5,
+            "lift_pp": 15.0,
+            "acima_da_margem": false,
             "tema": null,
             "exemplo_parafraseado": null,
             "temas_no_mesmo_eixo": []
@@ -1158,27 +1187,30 @@
         "por_bucket": {
           "negativas": {
             "mencoes": 8,
-            "de_n": 33,
-            "freq_pct": 24.2,
-            "lift_pp": -9.1,
+            "de_n": 40,
+            "freq_pct": 20.0,
+            "lift_pp": -15.0,
+            "acima_da_margem": false,
             "tema": null,
             "exemplo_parafraseado": null,
             "temas_no_mesmo_eixo": []
           },
           "medianas": {
-            "mencoes": 8,
-            "de_n": 31,
-            "freq_pct": 25.8,
-            "lift_pp": -7.5,
+            "mencoes": 9,
+            "de_n": 39,
+            "freq_pct": 23.1,
+            "lift_pp": -11.9,
+            "acima_da_margem": false,
             "tema": null,
             "exemplo_parafraseado": null,
             "temas_no_mesmo_eixo": []
           },
           "positivas": {
-            "mencoes": 11,
-            "de_n": 33,
-            "freq_pct": 33.3,
-            "lift_pp": 7.5,
+            "mencoes": 14,
+            "de_n": 40,
+            "freq_pct": 35.0,
+            "lift_pp": 11.9,
+            "acima_da_margem": false,
             "tema": null,
             "exemplo_parafraseado": null,
             "temas_no_mesmo_eixo": []
@@ -1194,28 +1226,31 @@
         "eixo": "expectativa",
         "por_bucket": {
           "negativas": {
-            "mencoes": 5,
-            "de_n": 33,
-            "freq_pct": 15.2,
-            "lift_pp": -12.1,
+            "mencoes": 6,
+            "de_n": 40,
+            "freq_pct": 15.0,
+            "lift_pp": -7.5,
+            "acima_da_margem": false,
             "tema": "Subaproveitamento do potencial da premissa",
             "exemplo_parafraseado": "A premissa da mão possuída oferecia um grande potencial para explorar temas como luto e vício, mas o filme não aproveita e se perde em subtramas.",
             "temas_no_mesmo_eixo": []
           },
           "medianas": {
             "mencoes": 7,
-            "de_n": 31,
-            "freq_pct": 22.6,
-            "lift_pp": -4.7,
+            "de_n": 39,
+            "freq_pct": 17.9,
+            "lift_pp": -4.6,
+            "acima_da_margem": false,
             "tema": null,
             "exemplo_parafraseado": null,
             "temas_no_mesmo_eixo": []
           },
           "positivas": {
             "mencoes": 9,
-            "de_n": 33,
-            "freq_pct": 27.3,
-            "lift_pp": 4.7,
+            "de_n": 40,
+            "freq_pct": 22.5,
+            "lift_pp": 4.6,
+            "acima_da_margem": false,
             "tema": null,
             "exemplo_parafraseado": null,
             "temas_no_mesmo_eixo": []
@@ -1231,28 +1266,31 @@
         "eixo": "critica_social",
         "por_bucket": {
           "negativas": {
-            "mencoes": 3,
-            "de_n": 33,
-            "freq_pct": 9.1,
-            "lift_pp": -6.1,
+            "mencoes": 5,
+            "de_n": 40,
+            "freq_pct": 12.5,
+            "lift_pp": -2.5,
+            "acima_da_margem": false,
             "tema": null,
             "exemplo_parafraseado": null,
             "temas_no_mesmo_eixo": []
           },
           "medianas": {
-            "mencoes": 1,
-            "de_n": 31,
-            "freq_pct": 3.2,
-            "lift_pp": -11.9,
+            "mencoes": 3,
+            "de_n": 39,
+            "freq_pct": 7.7,
+            "lift_pp": -7.3,
+            "acima_da_margem": false,
             "tema": null,
             "exemplo_parafraseado": null,
             "temas_no_mesmo_eixo": []
           },
           "positivas": {
-            "mencoes": 5,
-            "de_n": 33,
-            "freq_pct": 15.2,
-            "lift_pp": 6.1,
+            "mencoes": 6,
+            "de_n": 40,
+            "freq_pct": 15.0,
+            "lift_pp": 2.5,
+            "acima_da_margem": false,
             "tema": "Metáfora do vício e autodestruição",
             "exemplo_parafraseado": "Várias análises interpretam a trama como uma alegoria clara para o uso de drogas, destacando como o ritual da mão representa a sedução e as consequências devastadoras da dependência, consumindo aqueles que buscam uma fuga da dor.",
             "temas_no_mesmo_eixo": []
@@ -1265,41 +1303,21 @@
         }
       }
     ],
-    "fonte_classificacao": {
-      "arquivo": "resultado/votacao-3/consenso.jsonl",
-      "criterio": "votacao_3_consenso_2_de_3",
-      "por_bucket": {
-        "negativas": {
-          "n_classificadas": 33,
-          "n_analisadas": 40,
-          "sobreposicao_com_analisadas": 33
-        },
-        "medianas": {
-          "n_classificadas": 31,
-          "n_analisadas": 39,
-          "sobreposicao_com_analisadas": 31
-        },
-        "positivas": {
-          "n_classificadas": 33,
-          "n_analisadas": 40,
-          "sobreposicao_com_analisadas": 33
-        }
-      }
-    },
+    "contraste": "valorativo",
     "rotulagem": {
       "n_chamadas": 3,
       "falharam": [],
       "fora_da_taxonomia": {},
       "houve_retentativa": []
     },
-    "spec_version": "1.9.16",
     "verificador": {
       "aplicado": true,
       "variante": "V2_alvo",
       "passada": 1,
       "eixo": "impacto_emocional",
       "n_removidas_no_corpus": 1654
-    }
+    },
+    "spec_version": "1.9.34"
   },
   "narrativa": "Dirigido por George Williams e lançado em 2022, o drama The Elms Estate: You Can Talk To Me acompanha a trajetória de um homem emocionalmente instável. Em meio às sequelas deixadas pelo término de um relacionamento doloroso, ele tenta se restabelecer enquanto lida com sua psique fragmentada em três partes.\n\nA experiência é conduzida por uma atmosfera perturbadora e de forte teor psicológico. A estrutura apoia-se em um ritmo que oscila entre a introspecção e momentos de maior tensão dramática.\n\nOs grupos debatem essencialmente os mesmos elementos e concordam sobre o que o filme é, divergindo apenas no veredito sobre a sua eficácia. Na maioria das notas (~67%), boa parte destaca a metáfora do vício e da autodestruição, enquanto uma parcela expressiva ressalta a atuação de Sophie Wilde. Além disso, alguns elogiam o trabalho de maquiagem e os efeitos práticos.\n\nEm uma perspectiva intermediária, presente em uma parcela das notas (~25%), muitos apontam que a premissa é criativa, mas a execução se mostra irregular. Para esse segmento, vários apontam um ritmo lento e arrastado, e uma fatia menor reconhece o valor das atuações, embora critique atitudes irritantes das personagens.\n\nSob uma ótica desfavorável, expressa em uma fração mínima das notas (~8%), um número considerável critica as decisões tolas da protagonista. Nesse mesmo grupo, muitos qualificam o roteiro como fraco e previsível, enquanto parte deles aponta um subaproveitamento do potencial da premissa.",
   "verificacao_narrativa": {

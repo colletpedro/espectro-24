@@ -880,35 +880,46 @@
   ],
   "eixos": {
     "taxonomia_id": "ebab2667de74",
-    "margem_lift_pp": 20,
-    "contraste": "tematico",
+    "margem": {
+      "lei": "lift^2 * n >= 2085136/1000000",
+      "constante_quadrada": [
+        2085136,
+        1000000
+      ],
+      "n": 40,
+      "limiar_pp": 22.83
+    },
+    "margem_lift_pp": 22.83,
     "linhas": [
       {
         "eixo": "ritmo",
         "por_bucket": {
           "negativas": {
             "mencoes": 2,
-            "de_n": 34,
-            "freq_pct": 5.9,
-            "lift_pp": -5.7,
+            "de_n": 40,
+            "freq_pct": 5.0,
+            "lift_pp": -7.5,
+            "acima_da_margem": false,
             "tema": null,
             "exemplo_parafraseado": null,
             "temas_no_mesmo_eixo": []
           },
           "medianas": {
-            "mencoes": 3,
-            "de_n": 26,
-            "freq_pct": 11.5,
-            "lift_pp": 5.7,
+            "mencoes": 5,
+            "de_n": 40,
+            "freq_pct": 12.5,
+            "lift_pp": 7.5,
+            "acima_da_margem": false,
             "tema": null,
             "exemplo_parafraseado": null,
             "temas_no_mesmo_eixo": []
           },
           "positivas": {
             "mencoes": 1,
-            "de_n": 28,
-            "freq_pct": 3.6,
-            "lift_pp": -8.0,
+            "de_n": 40,
+            "freq_pct": 2.5,
+            "lift_pp": -10.0,
+            "acima_da_margem": false,
             "tema": null,
             "exemplo_parafraseado": null,
             "temas_no_mesmo_eixo": []
@@ -924,28 +935,31 @@
         "eixo": "atuacao",
         "por_bucket": {
           "negativas": {
-            "mencoes": 9,
-            "de_n": 34,
-            "freq_pct": 26.5,
-            "lift_pp": -0.5,
+            "mencoes": 10,
+            "de_n": 40,
+            "freq_pct": 25.0,
+            "lift_pp": -5.0,
+            "acima_da_margem": false,
             "tema": "Casting de celebridades mal aproveitado",
             "exemplo_parafraseado": "Vários artistas de peso aparecem em papéis que não se encaixam bem, entregando atuações sem brilho ou simplesmente deslocadas, o que reforça a sensação de desperdício de talento.",
             "temas_no_mesmo_eixo": []
           },
           "medianas": {
-            "mencoes": 7,
-            "de_n": 26,
-            "freq_pct": 26.9,
-            "lift_pp": 0.5,
+            "mencoes": 12,
+            "de_n": 40,
+            "freq_pct": 30.0,
+            "lift_pp": 5.0,
+            "acima_da_margem": false,
             "tema": "Elenco de estrelas desperdiçado",
             "exemplo_parafraseado": "O elenco renomado não se encaixa bem nos papéis ou é mal aproveitado, gerando atuações inconsistentes.",
             "temas_no_mesmo_eixo": []
           },
           "positivas": {
-            "mencoes": 6,
-            "de_n": 28,
-            "freq_pct": 21.4,
-            "lift_pp": -5.5,
+            "mencoes": 10,
+            "de_n": 40,
+            "freq_pct": 25.0,
+            "lift_pp": -5.0,
+            "acima_da_margem": false,
             "tema": "Atuações e escolhas de elenco",
             "exemplo_parafraseado": "Há comentários sobre performances de alguns atores, com alguns sendo criticados e outros elogiados como destaques.",
             "temas_no_mesmo_eixo": []
@@ -961,10 +975,11 @@
         "eixo": "direcao_imagem",
         "por_bucket": {
           "negativas": {
-            "mencoes": 12,
-            "de_n": 34,
-            "freq_pct": 35.3,
-            "lift_pp": -7.0,
+            "mencoes": 16,
+            "de_n": 40,
+            "freq_pct": 40.0,
+            "lift_pp": -7.5,
+            "acima_da_margem": false,
             "tema": "Design perturbador dos gatos humanoides",
             "exemplo_parafraseado": "O visual híbrido dos gatos com rostos humanos e pelos digitais causa um profundo desconforto, ficando no vale da estranheza e tornando a experiência visual bastante desagradável.",
             "temas_no_mesmo_eixo": [
@@ -972,19 +987,21 @@
             ]
           },
           "medianas": {
-            "mencoes": 11,
-            "de_n": 26,
-            "freq_pct": 42.3,
-            "lift_pp": 3.0,
+            "mencoes": 19,
+            "de_n": 40,
+            "freq_pct": 47.5,
+            "lift_pp": 7.5,
+            "acima_da_margem": false,
             "tema": "Visualização dos gatos é estranha",
             "exemplo_parafraseado": "O visual dos personagens, misturando humanos com felinos por meio de CGI, é desconfortável e frequentemente causa estranhamento.",
             "temas_no_mesmo_eixo": []
           },
           "positivas": {
-            "mencoes": 11,
-            "de_n": 28,
-            "freq_pct": 39.3,
-            "lift_pp": -3.0,
+            "mencoes": 15,
+            "de_n": 40,
+            "freq_pct": 37.5,
+            "lift_pp": -10.0,
+            "acima_da_margem": false,
             "tema": "Visual bizarro e CGI questionável",
             "exemplo_parafraseado": "Muitas reviews mencionam a estranheza visual dos gatos, com efeitos digitais considerados perturbadores, mas alguns veem isso como parte do charme do filme.",
             "temas_no_mesmo_eixo": []
@@ -1000,28 +1017,31 @@
         "eixo": "roteiro_estrutura",
         "por_bucket": {
           "negativas": {
-            "mencoes": 8,
-            "de_n": 34,
-            "freq_pct": 23.5,
-            "lift_pp": -14.9,
+            "mencoes": 10,
+            "de_n": 40,
+            "freq_pct": 25.0,
+            "lift_pp": -10.0,
+            "acima_da_margem": false,
             "tema": "Roteiro inexistente e narrativa confusa",
             "exemplo_parafraseado": "A trama é praticamente ausente, se resumindo a uma sucessão de números musicais sem conexão clara, com personagens sendo apresentados o tempo todo sem que a história avance de fato.",
             "temas_no_mesmo_eixo": []
           },
           "medianas": {
-            "mencoes": 10,
-            "de_n": 26,
-            "freq_pct": 38.5,
-            "lift_pp": 13.5,
+            "mencoes": 14,
+            "de_n": 40,
+            "freq_pct": 35.0,
+            "lift_pp": 7.5,
+            "acima_da_margem": false,
             "tema": "Falta de enredo",
             "exemplo_parafraseado": "A história é considerada frágil ou confusa, sendo um dos pontos mais criticados.",
             "temas_no_mesmo_eixo": []
           },
           "positivas": {
-            "mencoes": 7,
-            "de_n": 28,
-            "freq_pct": 25.0,
-            "lift_pp": -13.5,
+            "mencoes": 11,
+            "de_n": 40,
+            "freq_pct": 27.5,
+            "lift_pp": -7.5,
+            "acima_da_margem": false,
             "tema": null,
             "exemplo_parafraseado": null,
             "temas_no_mesmo_eixo": []
@@ -1037,28 +1057,31 @@
         "eixo": "som_trilha",
         "por_bucket": {
           "negativas": {
-            "mencoes": 4,
-            "de_n": 34,
-            "freq_pct": 11.8,
-            "lift_pp": -26.7,
+            "mencoes": 6,
+            "de_n": 40,
+            "freq_pct": 15.0,
+            "lift_pp": -27.5,
+            "acima_da_margem": false,
             "tema": "Execução musical inconsistente",
             "exemplo_parafraseado": "Algumas canções e vocais se destacam positivamente, mas em geral a trilha soa apagada e sem impacto, principalmente quando comparada à versão teatral.",
             "temas_no_mesmo_eixo": []
           },
           "medianas": {
-            "mencoes": 10,
-            "de_n": 26,
-            "freq_pct": 38.5,
-            "lift_pp": 9.9,
+            "mencoes": 17,
+            "de_n": 40,
+            "freq_pct": 42.5,
+            "lift_pp": 20.0,
+            "acima_da_margem": false,
             "tema": "Música é um ponto forte",
             "exemplo_parafraseado": "A trilha sonora e as performances vocais se destacam positivamente, com elogios a Jennifer Hudson.",
             "temas_no_mesmo_eixo": []
           },
           "positivas": {
-            "mencoes": 8,
-            "de_n": 28,
-            "freq_pct": 28.6,
-            "lift_pp": -9.9,
+            "mencoes": 9,
+            "de_n": 40,
+            "freq_pct": 22.5,
+            "lift_pp": -20.0,
+            "acima_da_margem": false,
             "tema": "Qualidade musical e dança",
             "exemplo_parafraseado": "Os elogios às canções e à coreografia são recorrentes, destacando a força do elenco e a beleza dos números musicais.",
             "temas_no_mesmo_eixo": []
@@ -1075,27 +1098,30 @@
         "por_bucket": {
           "negativas": {
             "mencoes": 4,
-            "de_n": 34,
-            "freq_pct": 11.8,
-            "lift_pp": -34.7,
+            "de_n": 40,
+            "freq_pct": 10.0,
+            "lift_pp": -37.5,
+            "acima_da_margem": false,
             "tema": null,
             "exemplo_parafraseado": null,
             "temas_no_mesmo_eixo": []
           },
           "medianas": {
-            "mencoes": 3,
-            "de_n": 26,
-            "freq_pct": 11.5,
-            "lift_pp": -34.9,
+            "mencoes": 5,
+            "de_n": 40,
+            "freq_pct": 12.5,
+            "lift_pp": -35.0,
+            "acima_da_margem": false,
             "tema": "Filme é tão ruim que diverte",
             "exemplo_parafraseado": "Parte do grupo acha o filme um desastre tão grande que vira entretenimento, sendo divertido de assistir justamente por seu fracasso.",
             "temas_no_mesmo_eixo": []
           },
           "positivas": {
-            "mencoes": 13,
-            "de_n": 28,
-            "freq_pct": 46.4,
-            "lift_pp": 34.7,
+            "mencoes": 19,
+            "de_n": 40,
+            "freq_pct": 47.5,
+            "lift_pp": 35.0,
+            "acima_da_margem": true,
             "tema": "Culto e arte camp",
             "exemplo_parafraseado": "O grupo compara o filme a obras cult como The Rocky Horror Picture Show, celebrando seu exagero e falta de vergonha como qualidades artísticas.",
             "temas_no_mesmo_eixo": []
@@ -1111,28 +1137,31 @@
         "eixo": "impacto_emocional",
         "por_bucket": {
           "negativas": {
-            "mencoes": 17,
-            "de_n": 34,
-            "freq_pct": 50.0,
-            "lift_pp": 3.6,
+            "mencoes": 18,
+            "de_n": 40,
+            "freq_pct": 45.0,
+            "lift_pp": 2.5,
+            "acima_da_margem": false,
             "tema": "Experiência de visualização desconfortável",
             "exemplo_parafraseado": "O filme gera um mal-estar constante, com momentos tão estranhos e sem sentido que a vontade é de interromper a exibição logo no início.",
             "temas_no_mesmo_eixo": []
           },
           "medianas": {
-            "mencoes": 8,
-            "de_n": 26,
-            "freq_pct": 30.8,
-            "lift_pp": -19.2,
+            "mencoes": 13,
+            "de_n": 40,
+            "freq_pct": 32.5,
+            "lift_pp": -12.5,
+            "acima_da_margem": false,
             "tema": "Experiência especial para assistir chapado",
             "exemplo_parafraseado": "Alguns espectadores sugerem que assistir sob efeito de maconha melhora a experiência do filme, tornando-o mais divertido.",
             "temas_no_mesmo_eixo": []
           },
           "positivas": {
-            "mencoes": 13,
-            "de_n": 28,
-            "freq_pct": 46.4,
-            "lift_pp": -3.6,
+            "mencoes": 17,
+            "de_n": 40,
+            "freq_pct": 42.5,
+            "lift_pp": -2.5,
+            "acima_da_margem": false,
             "tema": "Diversão e prazer culposo",
             "exemplo_parafraseado": "O grupo considera o filme um entretenimento descompromissado e prazeroso, apesar de reconhecer suas falhas técnicas.",
             "temas_no_mesmo_eixo": [
@@ -1150,28 +1179,31 @@
         "eixo": "comparacoes",
         "por_bucket": {
           "negativas": {
-            "mencoes": 15,
-            "de_n": 34,
-            "freq_pct": 44.1,
-            "lift_pp": -9.5,
+            "mencoes": 17,
+            "de_n": 40,
+            "freq_pct": 42.5,
+            "lift_pp": -12.5,
+            "acima_da_margem": false,
             "tema": null,
             "exemplo_parafraseado": null,
             "temas_no_mesmo_eixo": []
           },
           "medianas": {
-            "mencoes": 11,
-            "de_n": 26,
-            "freq_pct": 42.3,
-            "lift_pp": -11.3,
+            "mencoes": 19,
+            "de_n": 40,
+            "freq_pct": 47.5,
+            "lift_pp": -7.5,
+            "acima_da_margem": false,
             "tema": null,
             "exemplo_parafraseado": null,
             "temas_no_mesmo_eixo": []
           },
           "positivas": {
-            "mencoes": 15,
-            "de_n": 28,
-            "freq_pct": 53.6,
-            "lift_pp": 9.5,
+            "mencoes": 22,
+            "de_n": 40,
+            "freq_pct": 55.0,
+            "lift_pp": 7.5,
+            "acima_da_margem": false,
             "tema": null,
             "exemplo_parafraseado": null,
             "temas_no_mesmo_eixo": []
@@ -1188,27 +1220,30 @@
         "por_bucket": {
           "negativas": {
             "mencoes": 7,
-            "de_n": 34,
-            "freq_pct": 20.6,
-            "lift_pp": 5.2,
+            "de_n": 40,
+            "freq_pct": 17.5,
+            "lift_pp": -2.5,
+            "acima_da_margem": false,
             "tema": null,
             "exemplo_parafraseado": null,
             "temas_no_mesmo_eixo": []
           },
           "medianas": {
-            "mencoes": 4,
-            "de_n": 26,
-            "freq_pct": 15.4,
-            "lift_pp": -5.2,
+            "mencoes": 8,
+            "de_n": 40,
+            "freq_pct": 20.0,
+            "lift_pp": 2.5,
+            "acima_da_margem": false,
             "tema": null,
             "exemplo_parafraseado": null,
             "temas_no_mesmo_eixo": []
           },
           "positivas": {
-            "mencoes": 0,
-            "de_n": 28,
-            "freq_pct": 0.0,
-            "lift_pp": -20.6,
+            "mencoes": 1,
+            "de_n": 40,
+            "freq_pct": 2.5,
+            "lift_pp": -17.5,
+            "acima_da_margem": false,
             "tema": null,
             "exemplo_parafraseado": null,
             "temas_no_mesmo_eixo": []
@@ -1224,28 +1259,31 @@
         "eixo": "critica_social",
         "por_bucket": {
           "negativas": {
-            "mencoes": 5,
-            "de_n": 34,
-            "freq_pct": 14.7,
-            "lift_pp": -4.5,
+            "mencoes": 6,
+            "de_n": 40,
+            "freq_pct": 15.0,
+            "lift_pp": 0.0,
+            "acima_da_margem": false,
             "tema": null,
             "exemplo_parafraseado": null,
             "temas_no_mesmo_eixo": []
           },
           "medianas": {
             "mencoes": 5,
-            "de_n": 26,
-            "freq_pct": 19.2,
-            "lift_pp": 4.5,
+            "de_n": 40,
+            "freq_pct": 12.5,
+            "lift_pp": -2.5,
+            "acima_da_margem": false,
             "tema": null,
             "exemplo_parafraseado": null,
             "temas_no_mesmo_eixo": []
           },
           "positivas": {
-            "mencoes": 2,
-            "de_n": 28,
-            "freq_pct": 7.1,
-            "lift_pp": -12.1,
+            "mencoes": 6,
+            "de_n": 40,
+            "freq_pct": 15.0,
+            "lift_pp": 0.0,
+            "acima_da_margem": false,
             "tema": null,
             "exemplo_parafraseado": null,
             "temas_no_mesmo_eixo": []
@@ -1258,41 +1296,21 @@
         }
       }
     ],
-    "fonte_classificacao": {
-      "arquivo": "resultado/votacao-3/consenso.jsonl",
-      "criterio": "votacao_3_consenso_2_de_3",
-      "por_bucket": {
-        "negativas": {
-          "n_classificadas": 34,
-          "n_analisadas": 40,
-          "sobreposicao_com_analisadas": 34
-        },
-        "medianas": {
-          "n_classificadas": 26,
-          "n_analisadas": 40,
-          "sobreposicao_com_analisadas": 26
-        },
-        "positivas": {
-          "n_classificadas": 28,
-          "n_analisadas": 40,
-          "sobreposicao_com_analisadas": 28
-        }
-      }
-    },
+    "contraste": "tematico",
     "rotulagem": {
       "n_chamadas": 3,
       "falharam": [],
       "fora_da_taxonomia": {},
       "houve_retentativa": []
     },
-    "spec_version": "1.9.16",
     "verificador": {
       "aplicado": true,
       "variante": "V2_alvo",
       "passada": 1,
       "eixo": "impacto_emocional",
       "n_removidas_no_corpus": 1654
-    }
+    },
+    "spec_version": "1.9.34"
   },
   "narrativa": "Dirigido por Tom Hooper e lançado em 2019, Cats é uma produção que mescla fantasia, comédia e drama. A premissa acompanha a tribo de gatos Jellicles durante uma noite especial, na qual cada felino relata sua história ao líder na tentativa de ser o escolhido para ascender ao Heaviside Layer e conquistar uma nova vida.\n\nEm termos formais, a obra se organiza por meio de uma sucessão contínua de números musicais e coreografias, sustentada por uma concepção estética que funde traços humanos e felinos em ambientações cenográficas específicas.\n\nNa grande maioria das notas (~86%), a maior parte critica o design perturbador dos gatos humanoides, apontando que a fusão digital resulta em uma experiência visual incômoda. Paralelamente, boa parte destaca a ausência de um roteiro claro e uma narrativa confusa que se limita a encadear canções sem progressão dramática, enquanto um número considerável ressalta que o expressivo elenco de celebridades foi mal aproveitado em papéis deslocados.\n\nDe acordo com o público situado em uma faixa intermediária, presente numa fração mínima das notas (~7%), muitos ressaltam o estranhamento gerado pelo visual dos personagens híbridos. Contudo, uma parcela expressiva identifica a execução musical como um ponto forte da produção, e uma fatia menor encara os excessos e falhas do projeto como algo tão peculiar que acaba se tornando divertido.\n\nJá na perspectiva favorável, reunida também numa fração mínima das notas (~7%), vários encaram o filme como uma experiência de diversão e prazer culposo descompromissado. Adicionalmente, muitos ressaltam a qualidade técnica dos números de dança e da música, ao passo que boa parte observa o visual bizarro e os efeitos digitais questionáveis sem que isso anule o apelo da obra.",
   "verificacao_narrativa": {
@@ -1378,13 +1396,13 @@
     "n_chamadas": 3,
     "prefixo_codigo": "",
     "retry": null,
-    "spec_version": "1.9.22",
-    "texto": "Enquanto cerca de metade de quem recomenda recorre a comparações e destaca a atmosfera camp com apelo cult, muitos dos que não recomendam apontam uma experiência de exibição incômoda e desconfortável.",
-    "texto_modelo": "Enquanto cerca de metade de quem recomenda recorre a comparações e destaca a atmosfera camp com apelo cult, muitos dos que não recomendam apontam uma experiência de exibição incômoda e desconfortável.",
+    "spec_version": "1.9.25",
+    "texto": "As comparações com outras obras dividem as discussões. Entre quem recomenda, cerca de metade foca nesses paralelos e valoriza a estética camp de apelo cult, enquanto muitos que não recomendam se queixam de uma sensação incômoda e desagradável ao assistir.",
+    "texto_modelo": "As comparações com outras obras dividem as discussões. Entre quem recomenda, cerca de metade foca nesses paralelos e valoriza a estética camp de apelo cult, enquanto muitos que não recomendam se queixam de uma sensação incômoda e desagradável ao assistir.",
     "origem": "llm",
     "motivo": "melhor_entre_limpos",
-    "criterio_decisivo": "brevidade",
-    "abertura": "QUANT",
+    "criterio_decisivo": "empate",
+    "abertura": "compa",
     "indice_escolhido": 2,
     "flags": [],
     "candidatos": [
@@ -1392,39 +1410,39 @@
         "indice": 0,
         "n_flags": 0,
         "flags": [],
-        "n_palavras": 40,
-        "n_ancoras": 2,
+        "n_palavras": 35,
+        "n_ancoras": 1,
         "abertura": "QUANT",
-        "abertura_freq": 17,
+        "abertura_freq": 15,
         "eliminado": false
       },
       {
         "indice": 1,
         "n_flags": 0,
         "flags": [],
-        "n_palavras": 37,
+        "n_palavras": 47,
         "n_ancoras": 1,
-        "abertura": "QUANT",
-        "abertura_freq": 17,
+        "abertura": "avali",
+        "abertura_freq": 0,
         "eliminado": false
       },
       {
         "indice": 2,
         "n_flags": 0,
         "flags": [],
-        "n_palavras": 31,
-        "n_ancoras": 3,
-        "abertura": "QUANT",
-        "abertura_freq": 17,
+        "n_palavras": 40,
+        "n_ancoras": 1,
+        "abertura": "compa",
+        "abertura_freq": 0,
         "eliminado": false
       }
     ],
     "uso": {
-      "prompt_tokens": 3549,
-      "completion_tokens": 172,
+      "prompt_tokens": 3525,
+      "completion_tokens": 185,
       "cache_hit_tokens": 0,
-      "cache_miss_tokens": 3549
+      "cache_miss_tokens": 3525
     },
-    "latencia_s": 12.06
+    "latencia_s": 31.84
   }
 }

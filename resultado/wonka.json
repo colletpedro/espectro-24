@@ -874,8 +874,16 @@
   ],
   "eixos": {
     "taxonomia_id": "ebab2667de74",
-    "margem_lift_pp": 20,
-    "contraste": "tematico",
+    "margem": {
+      "lei": "lift^2 * n >= 2085136/1000000",
+      "constante_quadrada": [
+        2085136,
+        1000000
+      ],
+      "n": 32,
+      "limiar_pp": 25.53
+    },
+    "margem_lift_pp": 25.53,
     "linhas": [
       {
         "eixo": "ritmo",
@@ -884,25 +892,28 @@
             "mencoes": 4,
             "de_n": 32,
             "freq_pct": 12.5,
-            "lift_pp": 3.4,
+            "lift_pp": 5.0,
+            "acima_da_margem": false,
             "tema": null,
             "exemplo_parafraseado": null,
             "temas_no_mesmo_eixo": []
           },
           "medianas": {
-            "mencoes": 1,
-            "de_n": 25,
-            "freq_pct": 4.0,
-            "lift_pp": -8.5,
+            "mencoes": 2,
+            "de_n": 34,
+            "freq_pct": 5.9,
+            "lift_pp": -6.6,
+            "acima_da_margem": false,
             "tema": null,
             "exemplo_parafraseado": null,
             "temas_no_mesmo_eixo": []
           },
           "positivas": {
             "mencoes": 3,
-            "de_n": 33,
-            "freq_pct": 9.1,
-            "lift_pp": -3.4,
+            "de_n": 40,
+            "freq_pct": 7.5,
+            "lift_pp": -5.0,
+            "acima_da_margem": false,
             "tema": null,
             "exemplo_parafraseado": null,
             "temas_no_mesmo_eixo": []
@@ -921,25 +932,28 @@
             "mencoes": 12,
             "de_n": 32,
             "freq_pct": 37.5,
-            "lift_pp": -22.5,
+            "lift_pp": -21.3,
+            "acima_da_margem": false,
             "tema": "Atuações medianas e elenco subutilizado",
             "exemplo_parafraseado": "Apesar do carisma de Chalamet, sua atuação foi considerada sem brilho, e o elenco de apoio não conseguiu elevar o material, com destaque apenas para Hugh Grant.",
             "temas_no_mesmo_eixo": []
           },
           "medianas": {
-            "mencoes": 15,
-            "de_n": 25,
-            "freq_pct": 60.0,
-            "lift_pp": 20.6,
+            "mencoes": 20,
+            "de_n": 34,
+            "freq_pct": 58.8,
+            "lift_pp": 16.3,
+            "acima_da_margem": false,
             "tema": "Atuação de Timothée Chalamet divide opiniões",
             "exemplo_parafraseado": "O protagonista é carismático e encanta em alguns momentos, mas falta intensidade e presença vocal para sustentar o papel de um Willy Wonka mais excêntrico.",
             "temas_no_mesmo_eixo": []
           },
           "positivas": {
-            "mencoes": 13,
-            "de_n": 33,
-            "freq_pct": 39.4,
-            "lift_pp": -20.6,
+            "mencoes": 17,
+            "de_n": 40,
+            "freq_pct": 42.5,
+            "lift_pp": -16.3,
+            "acima_da_margem": false,
             "tema": "Atuação de Timothée Chalamet",
             "exemplo_parafraseado": "Diversas reviews positivas elogiam a atuação de Timothée Chalamet, destacando seu carisma, energia e habilidade de carregar o filme, sendo considerado um dos pontos altos da produção.",
             "temas_no_mesmo_eixo": [
@@ -949,8 +963,8 @@
         },
         "bullet_de": {
           "negativas": "frequencia",
-          "medianas": "frequencia_e_contraste",
-          "positivas": null
+          "medianas": "frequencia",
+          "positivas": "frequencia"
         }
       },
       {
@@ -960,25 +974,28 @@
             "mencoes": 3,
             "de_n": 32,
             "freq_pct": 9.4,
-            "lift_pp": -30.6,
+            "lift_pp": -25.9,
+            "acima_da_margem": false,
             "tema": "Fotografia e efeitos visuais criticados",
             "exemplo_parafraseado": "A estética visual foi duramente criticada, com uso excessivo de CGI, cenários artificiais e uma paleta de cores desbotada, tornando o filme feio aos olhos.",
             "temas_no_mesmo_eixo": []
           },
           "medianas": {
-            "mencoes": 10,
-            "de_n": 25,
-            "freq_pct": 40.0,
-            "lift_pp": 24.8,
+            "mencoes": 12,
+            "de_n": 34,
+            "freq_pct": 35.3,
+            "lift_pp": 22.8,
+            "acima_da_margem": false,
             "tema": "Visual encantador e cenários bonitos",
             "exemplo_parafraseado": "Os cenários coloridos e a fotografia caprichada criam uma atmosfera mágica de conto de fadas, embora alguns efeitos especiais deixem a desejar.",
             "temas_no_mesmo_eixo": []
           },
           "positivas": {
             "mencoes": 5,
-            "de_n": 33,
-            "freq_pct": 15.2,
-            "lift_pp": -24.8,
+            "de_n": 40,
+            "freq_pct": 12.5,
+            "lift_pp": -22.8,
+            "acima_da_margem": false,
             "tema": "Visual e direção de arte",
             "exemplo_parafraseado": "Muitos elogiam a fotografia e os cenários, considerando o filme visualmente deslumbrante, com cores vibrantes e uma estética que reforça o tom fantasioso da história.",
             "temas_no_mesmo_eixo": []
@@ -986,7 +1003,7 @@
         },
         "bullet_de": {
           "negativas": null,
-          "medianas": "contraste",
+          "medianas": null,
           "positivas": null
         }
       },
@@ -997,25 +1014,28 @@
             "mencoes": 9,
             "de_n": 32,
             "freq_pct": 28.1,
-            "lift_pp": -15.9,
+            "lift_pp": -7.2,
+            "acima_da_margem": false,
             "tema": "Roteiro fraco e previsível",
             "exemplo_parafraseado": "A história foi vista como básica, sem sustentação, com desenvolvimento arrastado e desconexo entre cenas, além de não justificar a necessidade de um prequel.",
             "temas_no_mesmo_eixo": []
           },
           "medianas": {
-            "mencoes": 11,
-            "de_n": 25,
-            "freq_pct": 44.0,
-            "lift_pp": 13.7,
+            "mencoes": 12,
+            "de_n": 34,
+            "freq_pct": 35.3,
+            "lift_pp": 2.8,
+            "acima_da_margem": false,
             "tema": "Roteiro previsível e sem profundidade",
             "exemplo_parafraseado": "A história segue uma fórmula conhecida e não surpreende, sendo considerada simples e um tanto esquecível, embora agradável para o público infantil.",
             "temas_no_mesmo_eixo": []
           },
           "positivas": {
-            "mencoes": 10,
-            "de_n": 33,
-            "freq_pct": 30.3,
-            "lift_pp": -13.7,
+            "mencoes": 13,
+            "de_n": 40,
+            "freq_pct": 32.5,
+            "lift_pp": -2.8,
+            "acima_da_margem": false,
             "tema": "Roteiro e mensagem",
             "exemplo_parafraseado": "Alguns comentários elogiam a história como uma origin story envolvente, com uma mensagem positiva sobre compartilhar e sobre a importância das relações humanas, alinhada ao espírito dos livros de Roald Dahl.",
             "temas_no_mesmo_eixo": []
@@ -1034,25 +1054,28 @@
             "mencoes": 11,
             "de_n": 32,
             "freq_pct": 34.4,
-            "lift_pp": -5.6,
+            "lift_pp": -9.7,
+            "acima_da_margem": false,
             "tema": "Músicas e números musicais criticados",
             "exemplo_parafraseado": "As canções irritavam e faziam querer sair da sala, sendo consideradas chatas e sem talento vocal, com alguns números desnecessariamente longos.",
             "temas_no_mesmo_eixo": []
           },
           "medianas": {
-            "mencoes": 10,
-            "de_n": 25,
-            "freq_pct": 40.0,
-            "lift_pp": 5.6,
+            "mencoes": 15,
+            "de_n": 34,
+            "freq_pct": 44.1,
+            "lift_pp": 9.1,
+            "acima_da_margem": false,
             "tema": "Canções medianas ou esquecíveis",
             "exemplo_parafraseado": "As músicas não são marcantes e algumas são consideradas fracas, com letras pouco inspiradas, apesar de haver algumas exceções agradáveis.",
             "temas_no_mesmo_eixo": []
           },
           "positivas": {
-            "mencoes": 11,
-            "de_n": 33,
-            "freq_pct": 33.3,
-            "lift_pp": -6.7,
+            "mencoes": 14,
+            "de_n": 40,
+            "freq_pct": 35.0,
+            "lift_pp": -9.1,
+            "acima_da_margem": false,
             "tema": "Música e números musicais",
             "exemplo_parafraseado": "As reviews elogiam as canções originais e os números musicais, considerando-os cativantes e essenciais para o clima alegre do filme, embora alguns mencionem que nem todas as músicas têm o mesmo impacto.",
             "temas_no_mesmo_eixo": []
@@ -1071,25 +1094,28 @@
             "mencoes": 4,
             "de_n": 32,
             "freq_pct": 12.5,
-            "lift_pp": -29.9,
+            "lift_pp": -27.5,
+            "acima_da_margem": false,
             "tema": "Público-alvo indefinido e humor sem graça",
             "exemplo_parafraseado": "O filme não parecia saber para quem foi feito, com tom infantil demais para adultos e piadas que raramente funcionavam, resultando em tédio.",
             "temas_no_mesmo_eixo": []
           },
           "medianas": {
-            "mencoes": 8,
-            "de_n": 25,
-            "freq_pct": 32.0,
-            "lift_pp": -10.4,
+            "mencoes": 11,
+            "de_n": 34,
+            "freq_pct": 32.4,
+            "lift_pp": -7.6,
+            "acima_da_margem": false,
             "tema": "Tom leve e agradável para a família",
             "exemplo_parafraseado": "O filme é divertido, aconchegante e adequado para assistir em família, proporcionando uma experiência agradável sem grandes pretensões.",
             "temas_no_mesmo_eixo": []
           },
           "positivas": {
-            "mencoes": 14,
-            "de_n": 33,
-            "freq_pct": 42.4,
-            "lift_pp": 10.4,
+            "mencoes": 16,
+            "de_n": 40,
+            "freq_pct": 40.0,
+            "lift_pp": 7.6,
+            "acima_da_margem": false,
             "tema": "Magia, diversão e clima acolhedor",
             "exemplo_parafraseado": "Os comentários descrevem o filme como mágico, encantador e divertido, com uma atmosfera que remete à infância e proporciona conforto, sendo um filme ideal para assistir em família.",
             "temas_no_mesmo_eixo": []
@@ -1098,7 +1124,7 @@
         "bullet_de": {
           "negativas": null,
           "medianas": null,
-          "positivas": "frequencia"
+          "positivas": null
         }
       },
       {
@@ -1108,25 +1134,28 @@
             "mencoes": 10,
             "de_n": 32,
             "freq_pct": 31.2,
-            "lift_pp": -2.1,
+            "lift_pp": -1.2,
+            "acima_da_margem": false,
             "tema": null,
             "exemplo_parafraseado": null,
             "temas_no_mesmo_eixo": []
           },
           "medianas": {
-            "mencoes": 8,
-            "de_n": 25,
-            "freq_pct": 32.0,
-            "lift_pp": -1.3,
+            "mencoes": 11,
+            "de_n": 34,
+            "freq_pct": 32.4,
+            "lift_pp": -0.1,
+            "acima_da_margem": false,
             "tema": null,
             "exemplo_parafraseado": null,
             "temas_no_mesmo_eixo": []
           },
           "positivas": {
-            "mencoes": 11,
-            "de_n": 33,
-            "freq_pct": 33.3,
-            "lift_pp": 1.3,
+            "mencoes": 13,
+            "de_n": 40,
+            "freq_pct": 32.5,
+            "lift_pp": 0.1,
+            "acima_da_margem": false,
             "tema": null,
             "exemplo_parafraseado": null,
             "temas_no_mesmo_eixo": []
@@ -1145,25 +1174,28 @@
             "mencoes": 15,
             "de_n": 32,
             "freq_pct": 46.9,
-            "lift_pp": -9.1,
+            "lift_pp": -6.1,
+            "acima_da_margem": false,
             "tema": "Falta de conexão com o personagem original",
             "exemplo_parafraseado": "O Wonka de Chalamet foi considerado muito doce e sem a complexidade ou o lado sombrio característico, decepcionando quem esperava algo mais próximo das versões anteriores.",
             "temas_no_mesmo_eixo": []
           },
           "medianas": {
-            "mencoes": 14,
-            "de_n": 25,
-            "freq_pct": 56.0,
-            "lift_pp": 7.5,
+            "mencoes": 18,
+            "de_n": 34,
+            "freq_pct": 52.9,
+            "lift_pp": 2.9,
+            "acima_da_margem": false,
             "tema": "Comparação com versões anteriores do personagem",
             "exemplo_parafraseado": "Esta versão de Wonka é mais doce e sonhadora, carecendo do lado excêntrico e misterioso presente em adaptações anteriores, o que gera estranhamento em alguns fãs.",
             "temas_no_mesmo_eixo": []
           },
           "positivas": {
-            "mencoes": 16,
-            "de_n": 33,
-            "freq_pct": 48.5,
-            "lift_pp": -7.5,
+            "mencoes": 20,
+            "de_n": 40,
+            "freq_pct": 50.0,
+            "lift_pp": -2.9,
+            "acima_da_margem": false,
             "tema": null,
             "exemplo_parafraseado": null,
             "temas_no_mesmo_eixo": []
@@ -1182,25 +1214,28 @@
             "mencoes": 6,
             "de_n": 32,
             "freq_pct": 18.8,
-            "lift_pp": 0.6,
+            "lift_pp": -1.2,
+            "acima_da_margem": false,
             "tema": null,
             "exemplo_parafraseado": null,
             "temas_no_mesmo_eixo": []
           },
           "medianas": {
-            "mencoes": 3,
-            "de_n": 25,
-            "freq_pct": 12.0,
-            "lift_pp": -6.8,
+            "mencoes": 5,
+            "de_n": 34,
+            "freq_pct": 14.7,
+            "lift_pp": -5.3,
+            "acima_da_margem": false,
             "tema": null,
             "exemplo_parafraseado": null,
             "temas_no_mesmo_eixo": []
           },
           "positivas": {
-            "mencoes": 6,
-            "de_n": 33,
-            "freq_pct": 18.2,
-            "lift_pp": -0.6,
+            "mencoes": 8,
+            "de_n": 40,
+            "freq_pct": 20.0,
+            "lift_pp": 1.2,
+            "acima_da_margem": false,
             "tema": null,
             "exemplo_parafraseado": null,
             "temas_no_mesmo_eixo": []
@@ -1219,25 +1254,28 @@
             "mencoes": 3,
             "de_n": 32,
             "freq_pct": 9.4,
-            "lift_pp": 0.3,
+            "lift_pp": -0.6,
+            "acima_da_margem": false,
             "tema": null,
             "exemplo_parafraseado": null,
             "temas_no_mesmo_eixo": []
           },
           "medianas": {
             "mencoes": 2,
-            "de_n": 25,
-            "freq_pct": 8.0,
-            "lift_pp": -1.4,
+            "de_n": 34,
+            "freq_pct": 5.9,
+            "lift_pp": -4.1,
+            "acima_da_margem": false,
             "tema": null,
             "exemplo_parafraseado": null,
             "temas_no_mesmo_eixo": []
           },
           "positivas": {
-            "mencoes": 3,
-            "de_n": 33,
-            "freq_pct": 9.1,
-            "lift_pp": -0.3,
+            "mencoes": 4,
+            "de_n": 40,
+            "freq_pct": 10.0,
+            "lift_pp": 0.6,
+            "acima_da_margem": false,
             "tema": null,
             "exemplo_parafraseado": null,
             "temas_no_mesmo_eixo": []
@@ -1250,41 +1288,21 @@
         }
       }
     ],
-    "fonte_classificacao": {
-      "arquivo": "resultado/votacao-3/consenso.jsonl",
-      "criterio": "votacao_3_consenso_2_de_3",
-      "por_bucket": {
-        "negativas": {
-          "n_classificadas": 32,
-          "n_analisadas": 32,
-          "sobreposicao_com_analisadas": 32
-        },
-        "medianas": {
-          "n_classificadas": 25,
-          "n_analisadas": 34,
-          "sobreposicao_com_analisadas": 25
-        },
-        "positivas": {
-          "n_classificadas": 33,
-          "n_analisadas": 40,
-          "sobreposicao_com_analisadas": 33
-        }
-      }
-    },
+    "contraste": "valorativo",
     "rotulagem": {
       "n_chamadas": 3,
       "falharam": [],
       "fora_da_taxonomia": {},
       "houve_retentativa": []
     },
-    "spec_version": "1.9.16",
     "verificador": {
       "aplicado": true,
       "variante": "V2_alvo",
       "passada": 1,
       "eixo": "impacto_emocional",
       "n_removidas_no_corpus": 1654
-    }
+    },
+    "spec_version": "1.9.34"
   },
   "narrativa": "Dirigido por Paul King e lançado em 2023, Wonka é um longa-metragem de 120 minutos que mescla comédia, fantasia e aventura para toda a família. A narrativa retrata o jovem Willy antes de se tornar a mente por trás da maior fábrica de chocolate do mundo, mostrando seus passos enquanto enfrenta obstáculos para espalhar alegria com suas criações.\n\nA experiência do filme é construída por meio de uma atmosfera fantástica e lúdica, com uma estrutura que combina sequências cômicas e constantes números musicais.\n\nNa maioria das notas (~50%), a recepção é calorosa: boa parte exalta a atuação de Timothée Chalamet pelo carisma que conduz a produção, enquanto vários elogiam a presença das músicas e dos números musicais na construção da narrativa. Além disso, uma parte salienta a sensação de magia, a diversão e o clima acolhedor transmitidos pela obra.\n\nEm boa parte das notas (~34%), as discussões enfatizam a direção de imagem e a parte estética do filme. Nessa perspectiva, alguns sublinham o visual encantador e os cenários bonitos, mas um número considerável descreve as canções como medianas ou esquecíveis. Complementando esse quadro intermediário, uma parcela expressiva relata que a atuação de Timothée Chalamet divide opiniões.\n\nPara quem se posiciona nessa faixa, numa parcela das notas (~15%), muitos direcionam queixas severas às músicas e aos números musicais apresentados. Além desse aspecto, vários sentem uma evidente falta de conexão com o personagem original estabelecido anteriormente, enquanto parte deles aponta um roteiro fraco e previsível no desenvolvimento da história.",
   "verificacao_narrativa": {
@@ -1366,69 +1384,58 @@
     "provider": "gemini",
     "modelo": "gemini-3.7-flash",
     "n_candidatos": 3,
-    "n_chamadas": 4,
+    "n_chamadas": 3,
     "prefixo_codigo": "",
-    "retry": {
-      "flags_antes": [
-        "tema_ausente"
-      ],
-      "flags_depois": [],
-      "aplicado": true
-    },
-    "spec_version": "1.9.22",
-    "texto": "Muitos dos que recomendam o filme destacam o valor das comparações estabelecidas na obra. Por outro lado, numa amostra pequena analisada, muitos dos que não recomendam discordam da eficácia desses mesmos paralelos.",
-    "texto_modelo": "Muitos dos que recomendam o filme destacam o valor das comparações estabelecidas na obra. Por outro lado, numa amostra pequena analisada, muitos dos que não recomendam discordam da eficácia desses mesmos paralelos.",
+    "retry": null,
+    "spec_version": "1.9.25",
+    "texto": "Ambos os lados concentram suas avaliações em comparações com o material prévio, divergindo sobre o resultado dessa relação. Enquanto muitos dos que recomendam aprovam os paralelos estabelecidos, muitos dos que desaprovam, observados em uma amostra reduzida, sentem falta de vínculo com a figura original.",
+    "texto_modelo": "Ambos os lados concentram suas avaliações em comparações com o material prévio, divergindo sobre o resultado dessa relação. Enquanto muitos dos que recomendam aprovam os paralelos estabelecidos, muitos dos que desaprovam, observados em uma amostra reduzida, sentem falta de vínculo com a figura original.",
     "origem": "llm",
-    "motivo": "retry_direcionado",
-    "criterio_decisivo": "empate",
-    "abertura": "QUANT",
-    "indice_escolhido": 1,
+    "motivo": "melhor_entre_limpos",
+    "criterio_decisivo": "abertura",
+    "abertura": "lados",
+    "indice_escolhido": 2,
     "flags": [],
     "candidatos": [
       {
         "indice": 0,
-        "n_flags": 2,
-        "flags": [
-          "quantificador_divergente",
-          "tema_ausente"
-        ],
-        "n_palavras": 34,
+        "n_flags": 0,
+        "flags": [],
+        "n_palavras": 40,
         "n_ancoras": 1,
-        "abertura": "QUANT",
-        "abertura_freq": 17,
-        "eliminado": true
+        "abertura": "diver",
+        "abertura_freq": 3,
+        "eliminado": false
       },
       {
         "indice": 1,
         "n_flags": 1,
         "flags": [
-          "tema_ausente"
+          "quantificador_divergente"
         ],
-        "n_palavras": 33,
+        "n_palavras": 37,
         "n_ancoras": 1,
         "abertura": "QUANT",
-        "abertura_freq": 17,
+        "abertura_freq": 15,
         "eliminado": true
       },
       {
         "indice": 2,
-        "n_flags": 1,
-        "flags": [
-          "tema_ausente"
-        ],
-        "n_palavras": 33,
+        "n_flags": 0,
+        "flags": [],
+        "n_palavras": 44,
         "n_ancoras": 1,
-        "abertura": "QUANT",
-        "abertura_freq": 17,
-        "eliminado": true
+        "abertura": "lados",
+        "abertura_freq": 0,
+        "eliminado": false
       }
     ],
     "uso": {
-      "prompt_tokens": 4644,
-      "completion_tokens": 219,
+      "prompt_tokens": 3627,
+      "completion_tokens": 193,
       "cache_hit_tokens": 0,
-      "cache_miss_tokens": 4644
+      "cache_miss_tokens": 3627
     },
-    "latencia_s": 15.55
+    "latencia_s": 34.41
   }
 }

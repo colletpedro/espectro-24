@@ -877,35 +877,46 @@
   ],
   "eixos": {
     "taxonomia_id": "ebab2667de74",
-    "margem_lift_pp": 20,
-    "contraste": "valorativo",
+    "margem": {
+      "lei": "lift^2 * n >= 2085136/1000000",
+      "constante_quadrada": [
+        2085136,
+        1000000
+      ],
+      "n": 30,
+      "limiar_pp": 26.36
+    },
+    "margem_lift_pp": 26.36,
     "linhas": [
       {
         "eixo": "ritmo",
         "por_bucket": {
           "negativas": {
-            "mencoes": 16,
-            "de_n": 25,
-            "freq_pct": 64.0,
-            "lift_pp": 19.6,
+            "mencoes": 18,
+            "de_n": 30,
+            "freq_pct": 60.0,
+            "lift_pp": 12.5,
+            "acima_da_margem": false,
             "tema": "Ritmo lento e tédio",
             "exemplo_parafraseado": "Muitos espectadores relataram que a duração longa e o ritmo arrastado tornaram a experiência cansativa, com alguns confessando que pegaram no sono ou tiveram dificuldade para manter a atenção do início ao fim.",
             "temas_no_mesmo_eixo": []
           },
           "medianas": {
-            "mencoes": 12,
-            "de_n": 27,
-            "freq_pct": 44.4,
-            "lift_pp": -19.6,
+            "mencoes": 19,
+            "de_n": 40,
+            "freq_pct": 47.5,
+            "lift_pp": -12.5,
+            "acima_da_margem": false,
             "tema": "Ritmo lento e longa duração",
             "exemplo_parafraseado": "Muitas reviews medianas apontam que o filme é arrastado e excessivamente longo, com cenas que poderiam ser cortadas sem prejuízo.",
             "temas_no_mesmo_eixo": []
           },
           "positivas": {
-            "mencoes": 8,
-            "de_n": 31,
-            "freq_pct": 25.8,
-            "lift_pp": -38.2,
+            "mencoes": 12,
+            "de_n": 40,
+            "freq_pct": 30.0,
+            "lift_pp": -30.0,
+            "acima_da_margem": false,
             "tema": "Ritmo lento e longa duração",
             "exemplo_parafraseado": "Embora alguns achem o ritmo arrastado, a maioria considera a duração justificada, com um desenvolvimento cuidadoso que mantém o interesse e torna o filme uma experiência imersiva.",
             "temas_no_mesmo_eixo": []
@@ -921,28 +932,31 @@
         "eixo": "atuacao",
         "por_bucket": {
           "negativas": {
-            "mencoes": 3,
-            "de_n": 25,
-            "freq_pct": 12.0,
-            "lift_pp": -33.2,
+            "mencoes": 5,
+            "de_n": 30,
+            "freq_pct": 16.7,
+            "lift_pp": -30.8,
+            "acima_da_margem": false,
             "tema": "Apreço pela atuação de Al Pacino",
             "exemplo_parafraseado": "Apesar das críticas negativas, um ponto positivo recorrente foi a atuação de Al Pacino, que recebeu elogios por sua atuação jovem e carisma, sendo apontado como um dos poucos aspectos que prenderam a atenção dos espectadores.",
             "temas_no_mesmo_eixo": []
           },
           "medianas": {
-            "mencoes": 11,
-            "de_n": 27,
-            "freq_pct": 40.7,
-            "lift_pp": -4.4,
+            "mencoes": 16,
+            "de_n": 40,
+            "freq_pct": 40.0,
+            "lift_pp": -7.5,
+            "acima_da_margem": false,
             "tema": "Atuações de destaque (Al Pacino, Marlon Brando)",
             "exemplo_parafraseado": "Várias reviews elogiam as atuações, especialmente as de Al Pacino e Marlon Brando, dizendo que eles elevam o filme, embora alguns achem a performance de Brando exagerada.",
             "temas_no_mesmo_eixo": []
           },
           "positivas": {
-            "mencoes": 14,
-            "de_n": 31,
-            "freq_pct": 45.2,
-            "lift_pp": 4.4,
+            "mencoes": 19,
+            "de_n": 40,
+            "freq_pct": 47.5,
+            "lift_pp": 7.5,
+            "acima_da_margem": false,
             "tema": "Atuações marcantes",
             "exemplo_parafraseado": "As performances são amplamente elogiadas, com destaque para Marlon Brando e Al Pacino, cuja atuação transmite a complexidade e a transformação de seus personagens.",
             "temas_no_mesmo_eixo": []
@@ -951,35 +965,38 @@
         "bullet_de": {
           "negativas": null,
           "medianas": null,
-          "positivas": "frequencia"
+          "positivas": null
         }
       },
       {
         "eixo": "direcao_imagem",
         "por_bucket": {
           "negativas": {
-            "mencoes": 1,
-            "de_n": 25,
-            "freq_pct": 4.0,
-            "lift_pp": -18.6,
+            "mencoes": 2,
+            "de_n": 30,
+            "freq_pct": 6.7,
+            "lift_pp": -18.3,
+            "acima_da_margem": false,
             "tema": null,
             "exemplo_parafraseado": null,
             "temas_no_mesmo_eixo": []
           },
           "medianas": {
-            "mencoes": 3,
-            "de_n": 27,
-            "freq_pct": 11.1,
-            "lift_pp": -11.5,
+            "mencoes": 7,
+            "de_n": 40,
+            "freq_pct": 17.5,
+            "lift_pp": -7.5,
+            "acima_da_margem": false,
             "tema": "Qualidade técnica e cinematografia",
             "exemplo_parafraseado": "A fotografia e a direção de arte são frequentemente elogiadas, com muitos reconhecendo a beleza visual e a competência técnica, mesmo quando a narrativa não agrada totalmente.",
             "temas_no_mesmo_eixo": []
           },
           "positivas": {
-            "mencoes": 7,
-            "de_n": 31,
-            "freq_pct": 22.6,
-            "lift_pp": 11.5,
+            "mencoes": 10,
+            "de_n": 40,
+            "freq_pct": 25.0,
+            "lift_pp": 7.5,
+            "acima_da_margem": false,
             "tema": "Maestria técnica e visual",
             "exemplo_parafraseado": "A direção, fotografia, design de produção e música são considerados impecáveis, criando uma atmosfera densa e envolvente que transporta o espectador para o mundo da máfia.",
             "temas_no_mesmo_eixo": []
@@ -995,28 +1012,31 @@
         "eixo": "roteiro_estrutura",
         "por_bucket": {
           "negativas": {
-            "mencoes": 8,
-            "de_n": 25,
-            "freq_pct": 32.0,
-            "lift_pp": -26.1,
+            "mencoes": 10,
+            "de_n": 30,
+            "freq_pct": 33.3,
+            "lift_pp": -21.7,
+            "acima_da_margem": false,
             "tema": "Excesso de diálogos e falta de ação",
             "exemplo_parafraseado": "O grupo comentou que há muita conversa e pouco acontecimento, com longas cenas de diálogos que se arrastam sem avançar na história, contribuindo para a sensação de marasmo.",
             "temas_no_mesmo_eixo": []
           },
           "medianas": {
-            "mencoes": 14,
-            "de_n": 27,
-            "freq_pct": 51.9,
-            "lift_pp": -6.2,
+            "mencoes": 21,
+            "de_n": 40,
+            "freq_pct": 52.5,
+            "lift_pp": -2.5,
+            "acima_da_margem": false,
             "tema": null,
             "exemplo_parafraseado": null,
             "temas_no_mesmo_eixo": []
           },
           "positivas": {
-            "mencoes": 18,
-            "de_n": 31,
-            "freq_pct": 58.1,
-            "lift_pp": 6.2,
+            "mencoes": 22,
+            "de_n": 40,
+            "freq_pct": 55.0,
+            "lift_pp": 2.5,
+            "acima_da_margem": false,
             "tema": "Transformação de Michael Corleone",
             "exemplo_parafraseado": "Muitas reviews destacam a jornada de Michael, de um jovem relutante a um líder frio e implacável, como o coração do filme, com uma evolução convincente e bem construída.",
             "temas_no_mesmo_eixo": [
@@ -1034,28 +1054,31 @@
         "eixo": "som_trilha",
         "por_bucket": {
           "negativas": {
-            "mencoes": 1,
-            "de_n": 25,
-            "freq_pct": 4.0,
-            "lift_pp": -3.4,
+            "mencoes": 2,
+            "de_n": 30,
+            "freq_pct": 6.7,
+            "lift_pp": -3.3,
+            "acima_da_margem": false,
             "tema": null,
             "exemplo_parafraseado": null,
             "temas_no_mesmo_eixo": []
           },
           "medianas": {
-            "mencoes": 2,
-            "de_n": 27,
-            "freq_pct": 7.4,
-            "lift_pp": 1.0,
+            "mencoes": 4,
+            "de_n": 40,
+            "freq_pct": 10.0,
+            "lift_pp": 2.5,
+            "acima_da_margem": false,
             "tema": null,
             "exemplo_parafraseado": null,
             "temas_no_mesmo_eixo": []
           },
           "positivas": {
-            "mencoes": 2,
-            "de_n": 31,
-            "freq_pct": 6.5,
-            "lift_pp": -1.0,
+            "mencoes": 3,
+            "de_n": 40,
+            "freq_pct": 7.5,
+            "lift_pp": -2.5,
+            "acima_da_margem": false,
             "tema": null,
             "exemplo_parafraseado": null,
             "temas_no_mesmo_eixo": []
@@ -1072,27 +1095,30 @@
         "por_bucket": {
           "negativas": {
             "mencoes": 2,
-            "de_n": 25,
-            "freq_pct": 8.0,
-            "lift_pp": -11.4,
+            "de_n": 30,
+            "freq_pct": 6.7,
+            "lift_pp": -13.3,
+            "acima_da_margem": false,
             "tema": null,
             "exemplo_parafraseado": null,
             "temas_no_mesmo_eixo": []
           },
           "medianas": {
-            "mencoes": 1,
-            "de_n": 27,
-            "freq_pct": 3.7,
-            "lift_pp": -15.7,
+            "mencoes": 3,
+            "de_n": 40,
+            "freq_pct": 7.5,
+            "lift_pp": -12.5,
+            "acima_da_margem": false,
             "tema": null,
             "exemplo_parafraseado": null,
             "temas_no_mesmo_eixo": []
           },
           "positivas": {
-            "mencoes": 6,
-            "de_n": 31,
-            "freq_pct": 19.4,
-            "lift_pp": 11.4,
+            "mencoes": 8,
+            "de_n": 40,
+            "freq_pct": 20.0,
+            "lift_pp": 12.5,
+            "acima_da_margem": false,
             "tema": null,
             "exemplo_parafraseado": null,
             "temas_no_mesmo_eixo": []
@@ -1108,28 +1134,31 @@
         "eixo": "impacto_emocional",
         "por_bucket": {
           "negativas": {
-            "mencoes": 10,
-            "de_n": 25,
+            "mencoes": 12,
+            "de_n": 30,
             "freq_pct": 40.0,
-            "lift_pp": 17.4,
+            "lift_pp": 12.5,
+            "acima_da_margem": false,
             "tema": "Dificuldade de conexão com a trama",
             "exemplo_parafraseado": "Alguns espectadores mencionaram que a história não conseguiu prendê-los, com uma narrativa que parecia desconexa ou difícil de acompanhar, fazendo com que se sentissem perdidos ou desinteressados nos acontecimentos.",
             "temas_no_mesmo_eixo": []
           },
           "medianas": {
-            "mencoes": 5,
-            "de_n": 27,
-            "freq_pct": 18.5,
-            "lift_pp": -21.5,
+            "mencoes": 11,
+            "de_n": 40,
+            "freq_pct": 27.5,
+            "lift_pp": -12.5,
+            "acima_da_margem": false,
             "tema": null,
             "exemplo_parafraseado": null,
             "temas_no_mesmo_eixo": []
           },
           "positivas": {
-            "mencoes": 7,
-            "de_n": 31,
-            "freq_pct": 22.6,
-            "lift_pp": -17.4,
+            "mencoes": 8,
+            "de_n": 40,
+            "freq_pct": 20.0,
+            "lift_pp": -20.0,
+            "acima_da_margem": false,
             "tema": "Cenas icônicas e memoráveis",
             "exemplo_parafraseado": "Diversas cenas são citadas como inesquecíveis, como a do batismo e a abertura do casamento, destacando o simbolismo e a força narrativa que se tornaram marcos do cinema.",
             "temas_no_mesmo_eixo": []
@@ -1145,28 +1174,31 @@
         "eixo": "comparacoes",
         "por_bucket": {
           "negativas": {
-            "mencoes": 12,
-            "de_n": 25,
-            "freq_pct": 48.0,
-            "lift_pp": 2.8,
+            "mencoes": 14,
+            "de_n": 30,
+            "freq_pct": 46.7,
+            "lift_pp": -3.3,
+            "acima_da_margem": false,
             "tema": "Preferência por outros filmes ou gêneros",
             "exemplo_parafraseado": "Alguns espectadores afirmaram que a temática de máfia não é atraente para eles, ou que preferem obras de outros diretores ou mesmo de outros gêneros, o que fez com que o filme não os agradasse.",
             "temas_no_mesmo_eixo": []
           },
           "medianas": {
-            "mencoes": 9,
-            "de_n": 27,
-            "freq_pct": 33.3,
-            "lift_pp": -14.7,
+            "mencoes": 15,
+            "de_n": 40,
+            "freq_pct": 37.5,
+            "lift_pp": -12.5,
+            "acima_da_margem": false,
             "tema": "Importância histórica e influência",
             "exemplo_parafraseado": "Algumas reviews reconhecem o impacto do filme no gênero de máfia e no cinema como um todo, mas questionam se isso justifica sua alta avaliação nos dias de hoje.",
             "temas_no_mesmo_eixo": []
           },
           "positivas": {
-            "mencoes": 14,
-            "de_n": 31,
-            "freq_pct": 45.2,
-            "lift_pp": -2.8,
+            "mencoes": 20,
+            "de_n": 40,
+            "freq_pct": 50.0,
+            "lift_pp": 3.3,
+            "acima_da_margem": false,
             "tema": null,
             "exemplo_parafraseado": null,
             "temas_no_mesmo_eixo": []
@@ -1175,35 +1207,38 @@
         "bullet_de": {
           "negativas": "frequencia",
           "medianas": null,
-          "positivas": null
+          "positivas": "frequencia"
         }
       },
       {
         "eixo": "expectativa",
         "por_bucket": {
           "negativas": {
-            "mencoes": 8,
-            "de_n": 25,
-            "freq_pct": 32.0,
-            "lift_pp": 6.1,
+            "mencoes": 9,
+            "de_n": 30,
+            "freq_pct": 30.0,
+            "lift_pp": 2.5,
+            "acima_da_margem": false,
             "tema": "Filme superestimado",
             "exemplo_parafraseado": "Uma parcela significativa do grupo considerou que a alta reputação do filme não condiz com o que assistiram, afirmando que ele é muito elogiado sem merecer tanto, o que gerou expectativas altas e resultou em decepção.",
             "temas_no_mesmo_eixo": []
           },
           "medianas": {
-            "mencoes": 7,
-            "de_n": 27,
-            "freq_pct": 25.9,
-            "lift_pp": -6.1,
+            "mencoes": 11,
+            "de_n": 40,
+            "freq_pct": 27.5,
+            "lift_pp": -2.5,
+            "acima_da_margem": false,
             "tema": "Expectativas altas não correspondidas",
             "exemplo_parafraseado": "Um grupo considerável menciona que, por ser considerado um dos melhores filmes de todos os tempos, esperavam mais e acabaram se decepcionando, achando superestimado.",
             "temas_no_mesmo_eixo": []
           },
           "positivas": {
             "mencoes": 4,
-            "de_n": 31,
-            "freq_pct": 12.9,
-            "lift_pp": -19.1,
+            "de_n": 40,
+            "freq_pct": 10.0,
+            "lift_pp": -20.0,
+            "acima_da_margem": false,
             "tema": null,
             "exemplo_parafraseado": null,
             "temas_no_mesmo_eixo": []
@@ -1219,28 +1254,31 @@
         "eixo": "critica_social",
         "por_bucket": {
           "negativas": {
-            "mencoes": 4,
-            "de_n": 25,
-            "freq_pct": 16.0,
-            "lift_pp": -9.9,
+            "mencoes": 5,
+            "de_n": 30,
+            "freq_pct": 16.7,
+            "lift_pp": -5.8,
+            "acima_da_margem": false,
             "tema": null,
             "exemplo_parafraseado": null,
             "temas_no_mesmo_eixo": []
           },
           "medianas": {
-            "mencoes": 7,
-            "de_n": 27,
-            "freq_pct": 25.9,
-            "lift_pp": 9.9,
+            "mencoes": 9,
+            "de_n": 40,
+            "freq_pct": 22.5,
+            "lift_pp": 5.8,
+            "acima_da_margem": false,
             "tema": "Tratamento das personagens femininas",
             "exemplo_parafraseado": "Algumas reviews criticam a forma como as mulheres são retratadas, sendo superficiais ou deixadas em segundo plano, o que incomoda especialmente em uma perspectiva feminista.",
             "temas_no_mesmo_eixo": []
           },
           "positivas": {
             "mencoes": 4,
-            "de_n": 31,
-            "freq_pct": 12.9,
-            "lift_pp": -13.0,
+            "de_n": 40,
+            "freq_pct": 10.0,
+            "lift_pp": -12.5,
+            "acima_da_margem": false,
             "tema": null,
             "exemplo_parafraseado": null,
             "temas_no_mesmo_eixo": []
@@ -1253,41 +1291,21 @@
         }
       }
     ],
-    "fonte_classificacao": {
-      "arquivo": "resultado/votacao-3/consenso.jsonl",
-      "criterio": "votacao_3_consenso_2_de_3",
-      "por_bucket": {
-        "negativas": {
-          "n_classificadas": 25,
-          "n_analisadas": 30,
-          "sobreposicao_com_analisadas": 25
-        },
-        "medianas": {
-          "n_classificadas": 27,
-          "n_analisadas": 40,
-          "sobreposicao_com_analisadas": 27
-        },
-        "positivas": {
-          "n_classificadas": 31,
-          "n_analisadas": 40,
-          "sobreposicao_com_analisadas": 31
-        }
-      }
-    },
+    "contraste": "valorativo",
     "rotulagem": {
       "n_chamadas": 3,
       "falharam": [],
       "fora_da_taxonomia": {},
       "houve_retentativa": []
     },
-    "spec_version": "1.9.16",
     "verificador": {
       "aplicado": true,
       "variante": "V2_alvo",
       "passada": 1,
       "eixo": "impacto_emocional",
       "n_removidas_no_corpus": 1654
-    }
+    },
+    "spec_version": "1.9.34"
   },
   "narrativa": "Lançado em 1972 e dirigido por Francis Ford Coppola, O Poderoso Chefão é um drama policial ambientado em Nova York. A trama acompanha a influente família mafiosa chefiada por Don Corleone em meio a disputas de poder e atentados que levam seu filho Michael, até então afastado dos negócios da família, a assumir a proteção do pai e de seu legado.\n\nA experiência do longa-metragem se apoia em uma narrativa de ritmo cadenciado, estrutura extensa e forte densidade dramática.\n\nOs diferentes grupos avaliam os mesmos aspectos da obra e concordam sobre o que o filme é, divergindo essencialmente no veredito sobre o seu funcionamento. Na grande maioria das notas (~93%), a recepção é consagradora: a maior parcela destaca as atuações marcantes, cerca de metade enfatiza a transformação de Michael Corleone e boa parte ressalta a maestria técnica e visual da produção.\n\nNuma fração mínima das notas (~5%), sob a perspectiva desse grupo intermediário, uma parcela expressiva aponta o ritmo lento e a longa duração como fatores de cansaço, um número considerável menciona expectativas altas não correspondidas, enquanto alguns valorizam as atuações de destaque de Marlon Brando e Al Pacino. Já numa fração ainda menor das notas (~2%), para quem avaliou negativamente, metade deles se queixa do ritmo lento e da sensação de tédio, vários consideram o filme superestimado e muitos relatam dificuldade de conexão com a trama.",
   "verificacao_narrativa": {
@@ -1375,56 +1393,53 @@
     "n_chamadas": 3,
     "prefixo_codigo": "",
     "retry": null,
-    "spec_version": "1.9.22",
-    "texto": "As visões convergem sobre os mesmos aspectos da obra e discordam quanto ao seu funcionamento e peso frente a outros filmes. Enquanto cerca de metade de quem recomenda valoriza a evolução do protagonista no roteiro, a maioria dos que não recomendam, numa amostra pequena, critica o andamento arrastado da narrativa.",
-    "texto_modelo": "As visões convergem sobre os mesmos aspectos da obra e discordam quanto ao seu funcionamento e peso frente a outros filmes. Enquanto cerca de metade de quem recomenda valoriza a evolução do protagonista no roteiro, a maioria dos que não recomendam, numa amostra pequena, critica o andamento arrastado da narrativa.",
+    "spec_version": "1.9.25",
+    "texto": "As visões divergem ao avaliar as comparações com outras produções: cerca de metade de quem recomenda valoriza a evolução do protagonista na condução da trama, enquanto, numa amostra pequena, cerca de metade dos que não recomendam considera o andamento narrativo excessivamente vagaroso e cansativo.",
+    "texto_modelo": "As visões divergem ao avaliar as comparações com outras produções: cerca de metade de quem recomenda valoriza a evolução do protagonista na condução da trama, enquanto, numa amostra pequena, cerca de metade dos que não recomendam considera o andamento narrativo excessivamente vagaroso e cansativo.",
     "origem": "llm",
     "motivo": "melhor_entre_limpos",
     "criterio_decisivo": "abertura",
     "abertura": "visoe",
-    "indice_escolhido": 2,
+    "indice_escolhido": 0,
     "flags": [],
     "candidatos": [
       {
         "indice": 0,
-        "n_flags": 2,
-        "flags": [
-          "escopo_generalizado",
-          "formato_invalido"
-        ],
-        "n_palavras": 41,
+        "n_flags": 0,
+        "flags": [],
+        "n_palavras": 44,
         "n_ancoras": 0,
-        "abertura": "espec",
-        "abertura_freq": 0,
-        "eliminado": true
+        "abertura": "visoe",
+        "abertura_freq": 1,
+        "eliminado": false
       },
       {
         "indice": 1,
         "n_flags": 0,
         "flags": [],
-        "n_palavras": 45,
+        "n_palavras": 49,
         "n_ancoras": 0,
         "abertura": "opini",
-        "abertura_freq": 6,
+        "abertura_freq": 4,
         "eliminado": false
       },
       {
         "indice": 2,
         "n_flags": 0,
         "flags": [],
-        "n_palavras": 50,
+        "n_palavras": 48,
         "n_ancoras": 0,
-        "abertura": "visoe",
-        "abertura_freq": 0,
+        "abertura": "opini",
+        "abertura_freq": 4,
         "eliminado": false
       }
     ],
     "uso": {
-      "prompt_tokens": 3669,
+      "prompt_tokens": 3672,
       "completion_tokens": 214,
       "cache_hit_tokens": 0,
-      "cache_miss_tokens": 3669
+      "cache_miss_tokens": 3672
     },
-    "latencia_s": 9.83
+    "latencia_s": 22.31
   }
 }

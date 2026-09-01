@@ -923,8 +923,28 @@
       aviso.textContent = semEstadoDeContraste();
       return aviso;
     }
-    var pronto = f.veredito && f.veredito.texto;
-    var texto = pronto ? f.veredito.texto : veredito(f);
+    // [v1.9.34] O FALLBACK DE RENDER FOI REMOVIDO — este render é render.
+    //
+    // `veredito()` existia como segunda implementação, em JS, do template
+    // determinístico que `veredito.veredito_template` faz em Python: era a
+    // compatibilidade com JSON publicado antes da v1.9.21. Depois da
+    // republicação desta versão **não existe JSON antigo**, e código que
+    // ninguém exercita é pior que ausência — foi o mesmo argumento que tirou
+    // as variantes de barra e de tipografia depois da escolha.
+    //
+    // O que se ganha junto: duas implementações da mesma regra em linguagens
+    // diferentes eram uma divergência esperando acontecer, com sintoma
+    // silencioso. `tests/test_veredito_paridade_js.py` existia só para vigiar
+    // essa divergência, e saiu com ela — o risco não é mais monitorado
+    // porque não é mais possível.
+    //
+    // Consequência aceita: um filme com bloco `eixos` e SEM `veredito` não
+    // renderiza veredito nenhum, em vez de um texto montado aqui. É o
+    // estatuto aditivo de sempre (ficha §3[F], distribuição §3[G]), e é o
+    // comportamento honesto — melhor nada que uma afirmação que o Python não
+    // assinou. O Python garante que, existindo a chave, o texto não é vazio
+    // (o template é a rede do estágio, §3[V]).
+    var texto = f.veredito && f.veredito.texto;
     if (!texto) return null;
     var el = document.createElement("p");
     el.className = "verdict";
@@ -932,90 +952,6 @@
     return el;
   }
 
-  function veredito(f) {
-    var e = f.eixos;
-    if (!e || !e.linhas || !e.linhas.length) return null;
-    var buckets = f.buckets || [];
-
-    var dominante = bucketDominante(buckets);
-    var meioDominante = !!(dominante && dominante.bucket === "medianas");
-
-    var pos = eixoDeMaiorLift(e, "positivas", buckets);
-    var neg = eixoDeMaiorLift(e, "negativas", buckets);
-    var posOk = !!pos && pos.acima_da_margem;
-    var negOk = !!neg && neg.acima_da_margem;
-
-    var frase;
-    if (posOk && negOk) {
-      frase = "Quem recomenda destaca " + eixoEmFrase(pos.eixo) + "; quem não "
-        + "recomenda aponta " + eixoEmFrase(neg.eixo) + ".";
-    } else if (posOk || negOk) {
-      // [v1.9.20, Entrega 1] Achado real em `anatomy-of-a-fall` (88%
-      // positivas): "nenhum assunto se destaca" mentia por omissão — o lado
-      // sem lift não estava mudo, estava falando de um tema MUITO citado
-      // que também aparece nos outros grupos (então o CONTRASTE é baixo
-      // mesmo com a FREQUÊNCIA alta). O leitor lia "os positivos não
-      // elogiaram nada"; o dado dizia "elogiaram o que todo mundo cita".
-      // Cai pro eixo de maior FREQUÊNCIA do lado sem lift — nunca fingindo
-      // que é exclusivo (a redação distingue "aponta/destaca" de "fala
-      // sobretudo de..."). [v1.9.21] O fecho dessa segunda oração era uma
-      // frase FIXA que afirmava "todos"; ver a Entrega 6 logo abaixo.
-      var comLift = posOk ? pos : neg;
-      var ladoSemLift = posOk ? "negativas" : "positivas";
-      var freqDoOutro = eixoDeMaiorFrequencia(e, ladoSemLift, buckets);
-      var bucketSemLift = (buckets || []).filter(function (x) {
-        return x.bucket === ladoSemLift;
-      })[0] || {};
-      var verbo = posOk ? "Quem recomenda destaca " : "Quem não recomenda aponta ";
-      var verboOutro = ladoSemLift === "positivas"
-        ? "quem recomenda fala sobretudo de "
-        : "quem não recomenda fala sobretudo de ";
-
-      // [v1.9.21, Entrega 6] BUG REAL, medido em produção e corrigido aqui.
-      //
-      // Este ramo terminava com a frase FIXA "— um assunto que todos os
-      // grupos citam", disparada sempre que existisse qualquer eixo com
-      // `mencoes > 0`, SEM checar se a frequência sustenta "todos":
-      //   · `obsession-2026` afirmava isso a partir de 2 de 5 reviews (40%),
-      //     num grupo que o próprio site rotula "modo reduzido";
-      //   · `eighth-grade`, com amostra completa, a partir de 13 de 34 (38%).
-      // É a mesma classe de inflação retórica que as v1.2.2/v1.2.3 já tinham
-      // resolvido para a narrativa, reintroduzida num lugar novo.
-      //
-      // O quantificador agora vem do MESMO mapa determinístico do pipeline
-      // (`src/espectro24/quantificador.py`, faixas da v1.2.3), e amostra
-      // reduzida é caso à parte: cautela explícita, nunca generalização.
-      if (!freqDoOutro) {
-        frase = verbo + eixoEmFrase(comLift.eixo) + " — do outro lado, nenhum "
-          + "assunto se destaca tanto assim.";
-      } else if (amostraReduzida(bucketSemLift)) {
-        frase = verbo + eixoEmFrase(comLift.eixo) + "; " + verboOutro
-          + eixoEmFrase(freqDoOutro.eixo)
-          + " — amostra pequena demais para dizer mais que isso.";
-      } else {
-        var rot = rotuloQuantificador(freqDoOutro.freqPct);
-        frase = verbo + eixoEmFrase(comLift.eixo) + "; " + verboOutro
-          + eixoEmFrase(freqDoOutro.eixo) + " — um assunto que " + rot
-          + " naquele grupo também " + (PLURAL[rot] ? "mencionam" : "menciona")
-          + ".";
-      }
-    } else {
-      // `contraste: valorativo` (nenhum bucket acima da margem) cai aqui —
-      // mas também qualquer `tematico` em que o contraste mora só no meio,
-      // caso em que negativas/positivas de fato não têm nada de próprio.
-      frase = "Os grupos falam das mesmas coisas — discordam sobre se elas "
-        + "funcionam.";
-    }
-
-    // Entrega 4: quando o meio é o MAIOR grupo, a frase original mentiria
-    // por omissão (descreveria o filme só pelos dois grupos minoritários).
-    // A menção vem ANTES, como contexto que muda a leitura do resto.
-    if (meioDominante && typeof dominante.share_real === "number") {
-      frase = "O meio-termo é o maior grupo da recepção (~"
-        + dominante.share_real + "% das notas). " + frase;
-    }
-    return frase;
-  }
 
   // O grupo com maior `share_real` — usado tanto no veredito quanto na
   // decisão de promover o meio a destaque (Entrega 4). `null` sem
@@ -1030,54 +966,7 @@
     });
   }
 
-  // O eixo de maior lift de UM bucket — "o que aquele grupo tem de
-  // próprio". `null` quando o bucket não sustenta nada: piso `sem_analise`
-  // (não há análise temática pra esse grupo, então não há lift confiável
-  // pra citar) ou nenhum eixo mencionado.
-  function eixoDeMaiorLift(e, bucket, buckets) {
-    var b = (buckets || []).filter(function (x) { return x.bucket === bucket; })[0];
-    if (b && b.estado_piso === "sem_analise") return null;
-    var candidatos = (e.linhas || []).filter(function (l) {
-      var d = (l.por_bucket || {})[bucket];
-      return d && d.mencoes > 0 && typeof d.lift_pp === "number";
-    });
-    if (!candidatos.length) return null;
-    var melhor = candidatos.reduce(function (a, l) {
-      return l.por_bucket[bucket].lift_pp > a.por_bucket[bucket].lift_pp ? l : a;
-    });
-    var cel = melhor.por_bucket[bucket];
-    // [v1.9.34] `acima_da_margem` vem do JSON, calculado em Fraction exato
-    // por `eixos.py`. NUNCA recalcule `lift_pp >= margem` aqui: `lift_pp` é
-    // derivado e arredondado a uma casa, e o limiar da lei (144,4/√n) é
-    // IRRACIONAL — o acidente aritmético que tornava o recálculo inofensivo
-    // enquanto a margem era o inteiro 20 acabou (SPEC §4).
-    return { eixo: melhor.eixo, lift_pp: cel.lift_pp,
-             acima_da_margem: cel.acima_da_margem === true };
-  }
 
-  // [v1.9.20] O eixo de maior FREQUÊNCIA de um bucket — "do que aquele
-  // grupo mais fala", sem exigir que seja EXCLUSIVO dele (ao contrário de
-  // `eixoDeMaiorLift`, aqui um lift negativo não desqualifica: o tema pode
-  // ser ainda mais comum nos outros grupos e mesmo assim ser o que este
-  // grupo mais cita). Mesma guarda de piso `sem_analise` que `eixoDeMaiorLift`.
-  function eixoDeMaiorFrequencia(e, bucket, buckets) {
-    var b = (buckets || []).filter(function (x) { return x.bucket === bucket; })[0];
-    if (b && b.estado_piso === "sem_analise") return null;
-    var candidatos = (e.linhas || []).filter(function (l) {
-      var d = (l.por_bucket || {})[bucket];
-      return d && d.mencoes > 0 && d.de_n > 0;
-    });
-    if (!candidatos.length) return null;
-    var melhor = candidatos.reduce(function (a, l) {
-      var da = a.por_bucket[bucket], dl = l.por_bucket[bucket];
-      return (dl.mencoes / dl.de_n) > (da.mencoes / da.de_n) ? l : a;
-    });
-    var d = melhor.por_bucket[bucket];
-    // [v1.9.21] A FREQUÊNCIA volta junto com o eixo — sem ela, quem chama
-    // não tem como escolher o quantificador honesto, que foi exatamente o
-    // buraco por onde entrou o "todos os grupos citam" a partir de 38%.
-    return { eixo: melhor.eixo, freqPct: Math.round(100 * d.mencoes / d.de_n) };
-  }
 
   // [v1.9.21] O mapa fração→palavra da v1.2.3, PORTADO de
   // `src/espectro24/quantificador.py`. Duplicação ENTRE LINGUAGENS, que
@@ -1091,32 +980,9 @@
     ["muitos", 25, 50, true], ["cerca de metade", 40, 60, true],
     ["a maioria", 50, 80, true], ["quase todos", 80, 100, true],
   ];
-  var PLURAL = { "poucos": 1, "alguns": 1, "muitos": 1, "quase todos": 1 };
 
-  function rotuloQuantificador(pct) {
-    pct = Math.max(0, Math.min(100, pct));
-    for (var i = 0; i < BANDAS_QUANTIFICADOR.length; i++) {
-      var b = BANDAS_QUANTIFICADOR[i];
-      if (pct < b[1]) continue;
-      if (b[3] ? pct <= b[2] : pct < b[2]) return b[0];
-    }
-    return "quase todos";
-  }
 
-  // Amostra pequena: o site já rotula esses grupos como degradados na tela;
-  // um veredito que generalize a partir deles contradiria o próprio aviso
-  // que aparece dois blocos abaixo.
-  function amostraReduzida(b) {
-    return !!b && (b.modo === "reduzido" || (b.estado_piso
-      && b.estado_piso !== "completa"));
-  }
 
-  // Rótulo do eixo em minúscula, pra encaixar em "destaca <eixo>" — os
-  // valores de `EIXO_LABEL` são pensados pra cabeçalho (inicial maiúscula).
-  function eixoEmFrase(id) {
-    var label = EIXO_LABEL[id] || id;
-    return label.charAt(0).toLowerCase() + label.slice(1);
-  }
 
   // =====================================================================
   // BULLETS AGRUPADOS POR SENTIMENTO (Entrega 3) + O MEIO REBAIXADO

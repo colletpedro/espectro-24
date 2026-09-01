@@ -789,17 +789,26 @@
   ],
   "eixos": {
     "taxonomia_id": "ebab2667de74",
-    "margem_lift_pp": 20,
-    "contraste": "tematico",
+    "margem": {
+      "lei": "lift^2 * n >= 2085136/1000000",
+      "constante_quadrada": [
+        2085136,
+        1000000
+      ],
+      "n": 40,
+      "limiar_pp": 22.83
+    },
+    "margem_lift_pp": 22.83,
     "linhas": [
       {
         "eixo": "ritmo",
         "por_bucket": {
           "negativas": {
-            "mencoes": 7,
-            "de_n": 19,
-            "freq_pct": 36.8,
-            "lift_pp": -0.7,
+            "mencoes": 10,
+            "de_n": 40,
+            "freq_pct": 25.0,
+            "lift_pp": -5.0,
+            "acima_da_margem": false,
             "tema": "Caos excessivo e confuso",
             "exemplo_parafraseado": "O filme apresenta uma sucessão de elementos desconexos e sobrepostos, que mais cansam do que envolvem, e a tentativa de justificar essa bagunça como parte da proposta estética não convence; a falta de uma narrativa clara e a quantidade de estímulos visuais deixam a experiência exaustiva e prejudicam a compreensão.",
             "temas_no_mesmo_eixo": [
@@ -807,19 +816,21 @@
             ]
           },
           "medianas": {
-            "mencoes": 6,
-            "de_n": 16,
-            "freq_pct": 37.5,
-            "lift_pp": 0.7,
+            "mencoes": 12,
+            "de_n": 40,
+            "freq_pct": 30.0,
+            "lift_pp": 5.0,
+            "acima_da_margem": false,
             "tema": "Excesso e exaustão",
             "exemplo_parafraseado": "A narrativa tenta abraçar tantas ideias e absurdos que acaba cansando, com várias resenhas apontando que o filme se estende além do necessário e que o ritmo oscila entre momentos arrastados e a sobrecarga sensorial.",
             "temas_no_mesmo_eixo": []
           },
           "positivas": {
-            "mencoes": 5,
-            "de_n": 17,
-            "freq_pct": 29.4,
-            "lift_pp": -8.1,
+            "mencoes": 6,
+            "de_n": 40,
+            "freq_pct": 15.0,
+            "lift_pp": -15.0,
+            "acima_da_margem": false,
             "tema": null,
             "exemplo_parafraseado": null,
             "temas_no_mesmo_eixo": []
@@ -835,28 +846,31 @@
         "eixo": "atuacao",
         "por_bucket": {
           "negativas": {
-            "mencoes": 5,
-            "de_n": 19,
-            "freq_pct": 26.3,
-            "lift_pp": -4.9,
+            "mencoes": 6,
+            "de_n": 40,
+            "freq_pct": 15.0,
+            "lift_pp": -7.5,
+            "acima_da_margem": false,
             "tema": null,
             "exemplo_parafraseado": null,
             "temas_no_mesmo_eixo": []
           },
           "medianas": {
-            "mencoes": 5,
-            "de_n": 16,
-            "freq_pct": 31.2,
-            "lift_pp": 4.9,
+            "mencoes": 9,
+            "de_n": 40,
+            "freq_pct": 22.5,
+            "lift_pp": 5.0,
+            "acima_da_margem": false,
             "tema": "Atuação de Michelle Yeoh elogiada",
             "exemplo_parafraseado": "A performance da protagonista é amplamente elogiada como o ponto alto, com carisma e profundidade que sustentam o filme mesmo quando a trama perde o foco.",
             "temas_no_mesmo_eixo": []
           },
           "positivas": {
-            "mencoes": 3,
-            "de_n": 17,
-            "freq_pct": 17.6,
-            "lift_pp": -13.6,
+            "mencoes": 7,
+            "de_n": 40,
+            "freq_pct": 17.5,
+            "lift_pp": -5.0,
+            "acima_da_margem": false,
             "tema": "Atuações memoráveis",
             "exemplo_parafraseado": "O elenco, com destaque para os quatro protagonistas, apresenta performances marcantes que elevam ainda mais a narrativa.",
             "temas_no_mesmo_eixo": []
@@ -872,28 +886,31 @@
         "eixo": "direcao_imagem",
         "por_bucket": {
           "negativas": {
-            "mencoes": 4,
-            "de_n": 19,
-            "freq_pct": 21.1,
-            "lift_pp": -28.9,
+            "mencoes": 9,
+            "de_n": 40,
+            "freq_pct": 22.5,
+            "lift_pp": -17.5,
+            "acima_da_margem": false,
             "tema": null,
             "exemplo_parafraseado": null,
             "temas_no_mesmo_eixo": []
           },
           "medianas": {
-            "mencoes": 8,
-            "de_n": 16,
-            "freq_pct": 50.0,
-            "lift_pp": 28.9,
+            "mencoes": 16,
+            "de_n": 40,
+            "freq_pct": 40.0,
+            "lift_pp": 17.5,
+            "acima_da_margem": false,
             "tema": "Elogios técnicos e visuais",
             "exemplo_parafraseado": "Muitos destacam a direção inventiva, a edição ágil, a fotografia criativa e o design de produção impressionante, reconhecendo o esforço técnico por trás da experiência.",
             "temas_no_mesmo_eixo": []
           },
           "positivas": {
-            "mencoes": 3,
-            "de_n": 17,
-            "freq_pct": 17.6,
-            "lift_pp": -32.4,
+            "mencoes": 7,
+            "de_n": 40,
+            "freq_pct": 17.5,
+            "lift_pp": -22.5,
+            "acima_da_margem": false,
             "tema": "Montagem e criatividade visual",
             "exemplo_parafraseado": "A edição dinâmica e as escolhas visuais inovadoras, com coreografias de luta impressionantes e referências a diversos gêneros, fazem do filme um espetáculo.",
             "temas_no_mesmo_eixo": []
@@ -901,7 +918,7 @@
         },
         "bullet_de": {
           "negativas": null,
-          "medianas": "frequencia_e_contraste",
+          "medianas": "frequencia",
           "positivas": null
         }
       },
@@ -909,28 +926,31 @@
         "eixo": "roteiro_estrutura",
         "por_bucket": {
           "negativas": {
-            "mencoes": 12,
-            "de_n": 19,
-            "freq_pct": 63.2,
-            "lift_pp": -5.6,
+            "mencoes": 25,
+            "de_n": 40,
+            "freq_pct": 62.5,
+            "lift_pp": 0.0,
+            "acima_da_margem": false,
             "tema": "Metáfora familiar forçada e mal desenvolvida",
             "exemplo_parafraseado": "A história tenta abordar a relação entre mãe e filha, traumas geracionais e a importância da família por meio de uma alegoria multiversal, mas essas ideias são apresentadas de modo superficial e resolvidas de forma abrupta e clichê, sem aprofundamento psicológico.",
             "temas_no_mesmo_eixo": []
           },
           "medianas": {
-            "mencoes": 11,
-            "de_n": 16,
-            "freq_pct": 68.8,
-            "lift_pp": 5.6,
+            "mencoes": 25,
+            "de_n": 40,
+            "freq_pct": 62.5,
+            "lift_pp": 0.0,
+            "acima_da_margem": false,
             "tema": "Desbalance entre caos e emoção",
             "exemplo_parafraseado": "A tentativa de misturar ação maluca com drama familiar acaba soando desconexa, com o núcleo emocional sendo ofuscado pelo excesso de piadas e reviravoltas, deixando o impacto reduzido.",
             "temas_no_mesmo_eixo": []
           },
           "positivas": {
-            "mencoes": 8,
-            "de_n": 17,
-            "freq_pct": 47.1,
-            "lift_pp": -21.7,
+            "mencoes": 15,
+            "de_n": 40,
+            "freq_pct": 37.5,
+            "lift_pp": -25.0,
+            "acima_da_margem": false,
             "tema": "Família, trauma e aceitação",
             "exemplo_parafraseado": "A obra aborda o conflito entre mãe e filha, o trauma geracional e a busca por aceitação dentro da dinâmica familiar imigrante asiática.",
             "temas_no_mesmo_eixo": []
@@ -947,27 +967,30 @@
         "por_bucket": {
           "negativas": {
             "mencoes": 0,
-            "de_n": 19,
+            "de_n": 40,
             "freq_pct": 0.0,
-            "lift_pp": -6.2,
+            "lift_pp": -5.0,
+            "acima_da_margem": false,
             "tema": null,
             "exemplo_parafraseado": null,
             "temas_no_mesmo_eixo": []
           },
           "medianas": {
             "mencoes": 1,
-            "de_n": 16,
-            "freq_pct": 6.2,
-            "lift_pp": 0.4,
+            "de_n": 40,
+            "freq_pct": 2.5,
+            "lift_pp": -2.5,
+            "acima_da_margem": false,
             "tema": null,
             "exemplo_parafraseado": null,
             "temas_no_mesmo_eixo": []
           },
           "positivas": {
-            "mencoes": 1,
-            "de_n": 17,
-            "freq_pct": 5.9,
-            "lift_pp": -0.4,
+            "mencoes": 2,
+            "de_n": 40,
+            "freq_pct": 5.0,
+            "lift_pp": 2.5,
+            "acima_da_margem": false,
             "tema": null,
             "exemplo_parafraseado": null,
             "temas_no_mesmo_eixo": []
@@ -983,28 +1006,31 @@
         "eixo": "tom_atmosfera",
         "por_bucket": {
           "negativas": {
-            "mencoes": 7,
-            "de_n": 19,
-            "freq_pct": 36.8,
-            "lift_pp": 1.5,
+            "mencoes": 11,
+            "de_n": 40,
+            "freq_pct": 27.5,
+            "lift_pp": -10.0,
+            "acima_da_margem": false,
             "tema": "Humor sem graça e bizarro",
             "exemplo_parafraseado": "As piadas envolvendo elementos escatológicos, sexuais e absurdos parecem forçadas e deslocadas, quebrando o clima de momentos que poderiam ser sérios e contribuindo para a sensação de constrangimento e falta de sentido.",
             "temas_no_mesmo_eixo": []
           },
           "medianas": {
-            "mencoes": 3,
-            "de_n": 16,
-            "freq_pct": 18.8,
-            "lift_pp": -18.1,
+            "mencoes": 15,
+            "de_n": 40,
+            "freq_pct": 37.5,
+            "lift_pp": 0.0,
+            "acima_da_margem": false,
             "tema": "Humor não funciona para todos",
             "exemplo_parafraseado": "O tom cômico, repleto de referências e escatologia, divide opiniões: alguns acham divertido, mas muitos consideram o humor forçado, datado ou que tira a seriedade das cenas dramáticas.",
             "temas_no_mesmo_eixo": []
           },
           "positivas": {
-            "mencoes": 6,
-            "de_n": 17,
-            "freq_pct": 35.3,
-            "lift_pp": -1.5,
+            "mencoes": 15,
+            "de_n": 40,
+            "freq_pct": 37.5,
+            "lift_pp": 0.0,
+            "acima_da_margem": false,
             "tema": "Caos e absurdo como experiência",
             "exemplo_parafraseado": "O filme é uma montanha-russa de situações bizarras e sem sentido aparente, mas que no fim se mostram parte de uma experiência única e inesquecível.",
             "temas_no_mesmo_eixo": []
@@ -1020,28 +1046,31 @@
         "eixo": "impacto_emocional",
         "por_bucket": {
           "negativas": {
-            "mencoes": 9,
-            "de_n": 19,
-            "freq_pct": 47.4,
-            "lift_pp": -5.6,
+            "mencoes": 18,
+            "de_n": 40,
+            "freq_pct": 45.0,
+            "lift_pp": -17.5,
+            "acima_da_margem": false,
             "tema": null,
             "exemplo_parafraseado": null,
             "temas_no_mesmo_eixo": []
           },
           "medianas": {
-            "mencoes": 2,
-            "de_n": 16,
-            "freq_pct": 12.5,
-            "lift_pp": -40.4,
+            "mencoes": 10,
+            "de_n": 40,
+            "freq_pct": 25.0,
+            "lift_pp": -37.5,
+            "acima_da_margem": false,
             "tema": null,
             "exemplo_parafraseado": null,
             "temas_no_mesmo_eixo": []
           },
           "positivas": {
-            "mencoes": 9,
-            "de_n": 17,
-            "freq_pct": 52.9,
-            "lift_pp": 5.6,
+            "mencoes": 25,
+            "de_n": 40,
+            "freq_pct": 62.5,
+            "lift_pp": 17.5,
+            "acima_da_margem": false,
             "tema": "Mensagem existencial e esperança",
             "exemplo_parafraseado": "O longa discute o niilismo, a infinitude de possibilidades e ensina que, mesmo em meio ao caos, é possível encontrar beleza e propósito na vida que se tem.",
             "temas_no_mesmo_eixo": []
@@ -1057,28 +1086,31 @@
         "eixo": "comparacoes",
         "por_bucket": {
           "negativas": {
-            "mencoes": 6,
-            "de_n": 19,
-            "freq_pct": 31.6,
-            "lift_pp": -5.9,
+            "mencoes": 9,
+            "de_n": 40,
+            "freq_pct": 22.5,
+            "lift_pp": -10.0,
+            "acima_da_margem": false,
             "tema": null,
             "exemplo_parafraseado": null,
             "temas_no_mesmo_eixo": []
           },
           "medianas": {
-            "mencoes": 6,
-            "de_n": 16,
-            "freq_pct": 37.5,
-            "lift_pp": 5.9,
+            "mencoes": 13,
+            "de_n": 40,
+            "freq_pct": 32.5,
+            "lift_pp": 10.0,
+            "acima_da_margem": false,
             "tema": null,
             "exemplo_parafraseado": null,
             "temas_no_mesmo_eixo": []
           },
           "positivas": {
-            "mencoes": 4,
-            "de_n": 17,
-            "freq_pct": 23.5,
-            "lift_pp": -14.0,
+            "mencoes": 9,
+            "de_n": 40,
+            "freq_pct": 22.5,
+            "lift_pp": -10.0,
+            "acima_da_margem": false,
             "tema": null,
             "exemplo_parafraseado": null,
             "temas_no_mesmo_eixo": []
@@ -1094,28 +1126,31 @@
         "eixo": "expectativa",
         "por_bucket": {
           "negativas": {
-            "mencoes": 3,
-            "de_n": 19,
-            "freq_pct": 15.8,
-            "lift_pp": -3.0,
+            "mencoes": 9,
+            "de_n": 40,
+            "freq_pct": 22.5,
+            "lift_pp": 2.5,
+            "acima_da_margem": false,
             "tema": "Superestimado e prêmios injustificados",
             "exemplo_parafraseado": "A aclamação crítica e a vitória no Oscar parecem desproporcionais à qualidade do filme, que entrega mais aparência de profundidade do que substância real; aspectos como montagem são elogiados, mas o conjunto não justifica o reconhecimento.",
             "temas_no_mesmo_eixo": []
           },
           "medianas": {
-            "mencoes": 3,
-            "de_n": 16,
-            "freq_pct": 18.8,
-            "lift_pp": 1.1,
+            "mencoes": 8,
+            "de_n": 40,
+            "freq_pct": 20.0,
+            "lift_pp": -2.5,
+            "acima_da_margem": false,
             "tema": null,
             "exemplo_parafraseado": null,
             "temas_no_mesmo_eixo": []
           },
           "positivas": {
-            "mencoes": 3,
-            "de_n": 17,
-            "freq_pct": 17.6,
-            "lift_pp": -1.1,
+            "mencoes": 6,
+            "de_n": 40,
+            "freq_pct": 15.0,
+            "lift_pp": -7.5,
+            "acima_da_margem": false,
             "tema": null,
             "exemplo_parafraseado": null,
             "temas_no_mesmo_eixo": []
@@ -1131,75 +1166,58 @@
         "eixo": "critica_social",
         "por_bucket": {
           "negativas": {
-            "mencoes": 9,
-            "de_n": 19,
-            "freq_pct": 47.4,
-            "lift_pp": 23.8,
+            "mencoes": 13,
+            "de_n": 40,
+            "freq_pct": 32.5,
+            "lift_pp": 7.5,
+            "acima_da_margem": false,
             "tema": "Mensagem superficial e final previsível",
             "exemplo_parafraseado": "A conclusão tenta entregar uma moral sobre amor, aceitação e a infinitude de possibilidades, mas soa vazia e genérica, sem sustentação na trama; a reflexão sobre niilismo e humanismo é apresentada como slogans, não como algo genuinamente explorado.",
             "temas_no_mesmo_eixo": []
           },
           "medianas": {
-            "mencoes": 2,
-            "de_n": 16,
-            "freq_pct": 12.5,
-            "lift_pp": -34.9,
+            "mencoes": 10,
+            "de_n": 40,
+            "freq_pct": 25.0,
+            "lift_pp": -7.5,
+            "acima_da_margem": false,
             "tema": "Mensagem existencial reconhecida, mas batida",
             "exemplo_parafraseado": "A reflexão sobre sentido da vida, escolhas e conexões humanas é notada, porém muitos consideram a abordagem pouco original ou exposta de forma didática demais, soando moralista.",
             "temas_no_mesmo_eixo": []
           },
           "positivas": {
-            "mencoes": 4,
-            "de_n": 17,
-            "freq_pct": 23.5,
-            "lift_pp": -23.8,
+            "mencoes": 6,
+            "de_n": 40,
+            "freq_pct": 15.0,
+            "lift_pp": -17.5,
+            "acima_da_margem": false,
             "tema": "Unicidade e originalidade",
             "exemplo_parafraseado": "A obra apresenta uma proposta tão original que desafia qualquer comparação, misturando elementos de ficção científica, comédia e drama de forma nunca antes vista.",
             "temas_no_mesmo_eixo": []
           }
         },
         "bullet_de": {
-          "negativas": "contraste",
+          "negativas": null,
           "medianas": null,
           "positivas": null
         }
       }
     ],
-    "fonte_classificacao": {
-      "arquivo": "resultado/votacao-3/consenso.jsonl",
-      "criterio": "votacao_3_consenso_2_de_3",
-      "por_bucket": {
-        "negativas": {
-          "n_classificadas": 19,
-          "n_analisadas": 40,
-          "sobreposicao_com_analisadas": 19
-        },
-        "medianas": {
-          "n_classificadas": 16,
-          "n_analisadas": 40,
-          "sobreposicao_com_analisadas": 16
-        },
-        "positivas": {
-          "n_classificadas": 17,
-          "n_analisadas": 40,
-          "sobreposicao_com_analisadas": 17
-        }
-      }
-    },
+    "contraste": "valorativo",
     "rotulagem": {
       "n_chamadas": 3,
       "falharam": [],
       "fora_da_taxonomia": {},
       "houve_retentativa": []
     },
-    "spec_version": "1.9.16",
     "verificador": {
       "aplicado": true,
       "variante": "V2_alvo",
       "passada": 1,
       "eixo": "impacto_emocional",
       "n_removidas_no_corpus": 1654
-    }
+    },
+    "spec_version": "1.9.34"
   },
   "narrativa": "Lançado em 2022 e dirigido por Daniel Scheinert, Tudo em Todo o Lugar ao Mesmo Tempo é um longa-metragem que mescla ação, aventura e ficção científica ao longo de seus 139 minutos de duração. Na premissa oficial, uma imigrante chinesa parte em direção a uma aventura onde, sozinha, precisará salvar o mundo enquanto explora múltiplos universos e caminhos alternativos que poderia ter vivido, mas se vê em apuros ao ficar retida nessa infinidade de possibilidades sem encontrar o caminho de volta para casa.\n\nA experiência de acompanhar a obra é caracterizada por um ritmo acelerado e por uma densidade estética constante, estruturada a partir de uma montagem dinâmica e de uma alternância contínua entre a intensidade do absurdo, a comédia excêntrica e o tom de drama pessoal.\n\nNa grande maioria das notas (~86%), uma parcela expressiva compreende o caos e o absurdo como elementos centrais de uma experiência marcante e singular. Além disso, muitos enfatizam a força dos temas voltados para a dinâmica familiar, o trauma e a busca por aceitação, enquanto boa parte destaca a relevância da mensagem existencial e do sentimento de esperança construído pela narrativa.\n\nPara quem se posiciona numa fração mínima das notas (~9%), vários sustentam que o excesso de acontecimentos e a sobrecarga de estímulos tornam o percurso cansativo, ainda que um número considerável reconheça e elogie os atributos técnicos e o visual inventivo da obra. Em acréscimo, uma parcela expressiva desse segmento avalia que o humor não funciona de maneira uniforme para todos.\n\nPor fim, na perspectiva de quem integra uma fração ainda menor das notas (~5%), muitos apontam que a condução resulta em um caos excessivo e confuso. Nesse contexto, boa parte considera a metáfora familiar forçada e mal desenvolvida, ao mesmo tempo em que uma parte rejeita o tom cômico por achá-lo bizarro e sem graça.",
   "verificacao_narrativa": {
@@ -1275,28 +1293,41 @@
     "provider": "gemini",
     "modelo": "gemini-3.7-flash",
     "n_candidatos": 3,
-    "n_chamadas": 3,
+    "n_chamadas": 4,
     "prefixo_codigo": "",
-    "retry": null,
-    "spec_version": "1.9.22",
-    "texto": "Cerca de metade de quem recomenda ressalta o impacto emocional ao abordar superação, laços familiares e esperança. Em contrapartida, a maioria dos que não recomendam critica o roteiro por alegorias familiares artificiais, além de apontar pouca profundidade no teor social e um desfecho previsível.",
-    "texto_modelo": "Cerca de metade de quem recomenda ressalta o impacto emocional ao abordar superação, laços familiares e esperança. Em contrapartida, a maioria dos que não recomendam critica o roteiro por alegorias familiares artificiais, além de apontar pouca profundidade no teor social e um desfecho previsível.",
-    "origem": "llm",
-    "motivo": "melhor_entre_limpos",
-    "criterio_decisivo": "unico",
-    "abertura": "QUANT",
-    "indice_escolhido": 0,
-    "flags": [],
+    "retry": {
+      "flags_antes": [
+        "tema_ausente"
+      ],
+      "flags_depois": [
+        "tema_ausente"
+      ],
+      "aplicado": false
+    },
+    "spec_version": "1.9.25",
+    "texto": "Os grupos falam das mesmas coisas — discordam sobre se elas funcionam.",
+    "texto_modelo": null,
+    "origem": "template_fallback",
+    "motivo": "template_fallback",
+    "criterio_decisivo": null,
+    "abertura": "grupo",
+    "indice_escolhido": null,
+    "flags": [
+      "tema_ausente"
+    ],
     "candidatos": [
       {
         "indice": 0,
-        "n_flags": 0,
-        "flags": [],
-        "n_palavras": 44,
-        "n_ancoras": 3,
-        "abertura": "QUANT",
-        "abertura_freq": 17,
-        "eliminado": false
+        "n_flags": 2,
+        "flags": [
+          "formato_invalido",
+          "tema_ausente"
+        ],
+        "n_palavras": 43,
+        "n_ancoras": 2,
+        "abertura": "diver",
+        "abertura_freq": 3,
+        "eliminado": true
       },
       {
         "indice": 1,
@@ -1304,10 +1335,10 @@
         "flags": [
           "tema_ausente"
         ],
-        "n_palavras": 47,
+        "n_palavras": 42,
         "n_ancoras": 2,
-        "abertura": "QUANT",
-        "abertura_freq": 17,
+        "abertura": "diver",
+        "abertura_freq": 3,
         "eliminado": true
       },
       {
@@ -1316,19 +1347,19 @@
         "flags": [
           "tema_ausente"
         ],
-        "n_palavras": 45,
+        "n_palavras": 44,
         "n_ancoras": 2,
-        "abertura": "QUANT",
-        "abertura_freq": 17,
+        "abertura": "diver",
+        "abertura_freq": 3,
         "eliminado": true
       }
     ],
     "uso": {
-      "prompt_tokens": 3606,
-      "completion_tokens": 211,
+      "prompt_tokens": 4685,
+      "completion_tokens": 247,
       "cache_hit_tokens": 0,
-      "cache_miss_tokens": 3606
+      "cache_miss_tokens": 4685
     },
-    "latencia_s": 10.8
+    "latencia_s": 38.37
   }
 }

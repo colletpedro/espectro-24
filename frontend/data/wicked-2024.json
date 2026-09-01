@@ -796,26 +796,36 @@
   ],
   "eixos": {
     "taxonomia_id": "ebab2667de74",
-    "margem_lift_pp": 20,
-    "contraste": "valorativo",
+    "margem": {
+      "lei": "lift^2 * n >= 2085136/1000000",
+      "constante_quadrada": [
+        2085136,
+        1000000
+      ],
+      "n": 37,
+      "limiar_pp": 23.74
+    },
+    "margem_lift_pp": 23.74,
     "linhas": [
       {
         "eixo": "ritmo",
         "por_bucket": {
           "negativas": {
-            "mencoes": 17,
-            "de_n": 36,
-            "freq_pct": 47.2,
-            "lift_pp": 14.9,
+            "mencoes": 19,
+            "de_n": 38,
+            "freq_pct": 50.0,
+            "lift_pp": 20.0,
+            "acima_da_margem": false,
             "tema": "Ritmo arrastado e duração excessiva",
             "exemplo_parafraseado": "O filme parece muito longo, com várias partes que não acrescentam nada à história, fazendo a sessão se arrastar.",
             "temas_no_mesmo_eixo": []
           },
           "medianas": {
-            "mencoes": 11,
-            "de_n": 34,
-            "freq_pct": 32.4,
-            "lift_pp": -14.9,
+            "mencoes": 12,
+            "de_n": 40,
+            "freq_pct": 30.0,
+            "lift_pp": -20.0,
+            "acima_da_margem": false,
             "tema": "Duração excessiva",
             "exemplo_parafraseado": "Muitos reclamaram que o filme se arrasta e poderia ser mais curto, alguns levaram dias para terminar a sessão.",
             "temas_no_mesmo_eixo": [
@@ -823,10 +833,11 @@
             ]
           },
           "positivas": {
-            "mencoes": 1,
-            "de_n": 24,
-            "freq_pct": 4.2,
-            "lift_pp": -43.1,
+            "mencoes": 3,
+            "de_n": 37,
+            "freq_pct": 8.1,
+            "lift_pp": -41.9,
+            "acima_da_margem": false,
             "tema": "Cativante e envolvente apesar da duração",
             "exemplo_parafraseado": "Muitos afirmam que, apesar de o filme ser longo, ele passa rápido e mantém o interesse do início ao fim, com uma narrativa que prende a atenção e proporciona uma experiência imersiva.",
             "temas_no_mesmo_eixo": []
@@ -842,67 +853,33 @@
         "eixo": "atuacao",
         "por_bucket": {
           "negativas": {
-            "mencoes": 15,
-            "de_n": 36,
-            "freq_pct": 41.7,
-            "lift_pp": 12.3,
+            "mencoes": 16,
+            "de_n": 38,
+            "freq_pct": 42.1,
+            "lift_pp": 12.1,
+            "acima_da_margem": false,
             "tema": "Atuação e presença de Ariana Grande",
             "exemplo_parafraseado": "Ariana Grande não convence como atriz, mantendo a mesma expressão e a mesma personalidade de sempre, embora alguns reconheçam seu talento vocal e simpatia.",
             "temas_no_mesmo_eixo": []
           },
           "medianas": {
-            "mencoes": 10,
-            "de_n": 34,
-            "freq_pct": 29.4,
-            "lift_pp": -12.3,
+            "mencoes": 12,
+            "de_n": 40,
+            "freq_pct": 30.0,
+            "lift_pp": -12.1,
+            "acima_da_margem": false,
             "tema": "Atuações de Ariana e Cynthia",
             "exemplo_parafraseado": "O grupo frequentemente elogia as performances e vocais das duas protagonistas, destacando-as como os pontos altos do filme.",
             "temas_no_mesmo_eixo": []
           },
           "positivas": {
-            "mencoes": 5,
-            "de_n": 24,
-            "freq_pct": 20.8,
-            "lift_pp": -20.8,
+            "mencoes": 10,
+            "de_n": 37,
+            "freq_pct": 27.0,
+            "lift_pp": -15.1,
+            "acima_da_margem": false,
             "tema": "Atuações e vocais excepcionais",
             "exemplo_parafraseado": "Várias reviews elogiam intensamente as atuações e vozes de Cynthia Erivo e Ariana Grande, destacando que Erivo rouba a cena com sua entrega emocional e poder vocal, enquanto Grande surpreende positivamente em seu papel cômico e musical.",
-            "temas_no_mesmo_eixo": []
-          }
-        },
-        "bullet_de": {
-          "negativas": null,
-          "medianas": null,
-          "positivas": null
-        }
-      },
-      {
-        "eixo": "direcao_imagem",
-        "por_bucket": {
-          "negativas": {
-            "mencoes": 16,
-            "de_n": 36,
-            "freq_pct": 44.4,
-            "lift_pp": 6.2,
-            "tema": "Estética visual inconsistente ou artificial",
-            "exemplo_parafraseado": "Apesar dos cenários e figurinos caprichados, a fotografia muitas vezes parece sem cor ou com aparência digital forçada, destoando da proposta visual.",
-            "temas_no_mesmo_eixo": []
-          },
-          "medianas": {
-            "mencoes": 13,
-            "de_n": 34,
-            "freq_pct": 38.2,
-            "lift_pp": -6.2,
-            "tema": "Visual e figurino",
-            "exemplo_parafraseado": "A estética colorida, os cenários detalhados e os figurinos são frequentemente elogiados, embora alguns apontem problemas de iluminação ou fotografia.",
-            "temas_no_mesmo_eixo": []
-          },
-          "positivas": {
-            "mencoes": 5,
-            "de_n": 24,
-            "freq_pct": 20.8,
-            "lift_pp": -23.6,
-            "tema": "Visual e direção de arte",
-            "exemplo_parafraseado": "As reviews elogiam a fantasia visual do filme, como os cenários coloridos e o design de produção, embora alguns critiquem a iluminação em certas partes por parecer acinzentada, e outros apontem que os efeitos práticos e figurinos são detalhados e impressionantes.",
             "temas_no_mesmo_eixo": []
           }
         },
@@ -913,13 +890,54 @@
         }
       },
       {
+        "eixo": "direcao_imagem",
+        "por_bucket": {
+          "negativas": {
+            "mencoes": 16,
+            "de_n": 38,
+            "freq_pct": 42.1,
+            "lift_pp": -0.4,
+            "acima_da_margem": false,
+            "tema": "Estética visual inconsistente ou artificial",
+            "exemplo_parafraseado": "Apesar dos cenários e figurinos caprichados, a fotografia muitas vezes parece sem cor ou com aparência digital forçada, destoando da proposta visual.",
+            "temas_no_mesmo_eixo": []
+          },
+          "medianas": {
+            "mencoes": 17,
+            "de_n": 40,
+            "freq_pct": 42.5,
+            "lift_pp": 0.4,
+            "acima_da_margem": false,
+            "tema": "Visual e figurino",
+            "exemplo_parafraseado": "A estética colorida, os cenários detalhados e os figurinos são frequentemente elogiados, embora alguns apontem problemas de iluminação ou fotografia.",
+            "temas_no_mesmo_eixo": []
+          },
+          "positivas": {
+            "mencoes": 8,
+            "de_n": 37,
+            "freq_pct": 21.6,
+            "lift_pp": -20.9,
+            "acima_da_margem": false,
+            "tema": "Visual e direção de arte",
+            "exemplo_parafraseado": "As reviews elogiam a fantasia visual do filme, como os cenários coloridos e o design de produção, embora alguns critiquem a iluminação em certas partes por parecer acinzentada, e outros apontem que os efeitos práticos e figurinos são detalhados e impressionantes.",
+            "temas_no_mesmo_eixo": []
+          }
+        },
+        "bullet_de": {
+          "negativas": null,
+          "medianas": null,
+          "positivas": null
+        }
+      },
+      {
         "eixo": "roteiro_estrutura",
         "por_bucket": {
           "negativas": {
-            "mencoes": 15,
-            "de_n": 36,
-            "freq_pct": 41.7,
-            "lift_pp": -2.5,
+            "mencoes": 16,
+            "de_n": 38,
+            "freq_pct": 42.1,
+            "lift_pp": -5.4,
+            "acima_da_margem": false,
             "tema": "História previsível e sem aprofundamento",
             "exemplo_parafraseado": "O enredo é óbvio desde o início, com pouca complexidade, e a trama se alonga sem desenvolver bem os conflitos e personagens.",
             "temas_no_mesmo_eixo": [
@@ -927,19 +945,21 @@
             ]
           },
           "medianas": {
-            "mencoes": 15,
-            "de_n": 34,
-            "freq_pct": 44.1,
-            "lift_pp": 2.5,
+            "mencoes": 19,
+            "de_n": 40,
+            "freq_pct": 47.5,
+            "lift_pp": 5.4,
+            "acima_da_margem": false,
             "tema": null,
             "exemplo_parafraseado": null,
             "temas_no_mesmo_eixo": []
           },
           "positivas": {
-            "mencoes": 9,
-            "de_n": 24,
-            "freq_pct": 37.5,
-            "lift_pp": -6.6,
+            "mencoes": 12,
+            "de_n": 37,
+            "freq_pct": 32.4,
+            "lift_pp": -15.1,
+            "acima_da_margem": false,
             "tema": "Personagens cativantes e desenvolvimento",
             "exemplo_parafraseado": "As protagonistas são bem desenvolvidas e carismáticas, com destaque para a jornada de Elphaba e a evolução de Glinda, embora alguns secundários sejam considerados rasos ou irritantes em certos momentos.",
             "temas_no_mesmo_eixo": []
@@ -948,7 +968,7 @@
         "bullet_de": {
           "negativas": null,
           "medianas": "frequencia",
-          "positivas": "frequencia"
+          "positivas": null
         }
       },
       {
@@ -956,27 +976,30 @@
         "por_bucket": {
           "negativas": {
             "mencoes": 15,
-            "de_n": 36,
-            "freq_pct": 41.7,
-            "lift_pp": -8.3,
+            "de_n": 38,
+            "freq_pct": 39.5,
+            "lift_pp": -18.0,
+            "acima_da_margem": false,
             "tema": "Músicas genéricas e esquecíveis",
             "exemplo_parafraseado": "As canções são todas parecidas e nenhuma fica na memória após o filme, soando como algo que um algoritmo geraria.",
             "temas_no_mesmo_eixo": []
           },
           "medianas": {
-            "mencoes": 17,
-            "de_n": 34,
-            "freq_pct": 50.0,
-            "lift_pp": 4.2,
+            "mencoes": 23,
+            "de_n": 40,
+            "freq_pct": 57.5,
+            "lift_pp": 17.0,
+            "acima_da_margem": false,
             "tema": "Qualidade musical",
             "exemplo_parafraseado": "Algumas reviews acham as canções cativantes e bem integradas, enquanto outras as consideram numerosas demais e um pouco cansativas.",
             "temas_no_mesmo_eixo": []
           },
           "positivas": {
-            "mencoes": 11,
-            "de_n": 24,
-            "freq_pct": 45.8,
-            "lift_pp": -4.2,
+            "mencoes": 15,
+            "de_n": 37,
+            "freq_pct": 40.5,
+            "lift_pp": -17.0,
+            "acima_da_margem": false,
             "tema": "Músicas marcantes e bem integradas",
             "exemplo_parafraseado": "As canções são apontadas como um dos pontos altos, com destaque para Defying Gravity e Dancing Through Life, sendo descritas como emocionantes e perfeitamente adaptadas às cenas, embora alguns mencionem que a quantidade de números musicais pode ser excessiva.",
             "temas_no_mesmo_eixo": []
@@ -993,27 +1016,30 @@
         "por_bucket": {
           "negativas": {
             "mencoes": 6,
-            "de_n": 36,
-            "freq_pct": 16.7,
-            "lift_pp": 0.0,
+            "de_n": 38,
+            "freq_pct": 15.8,
+            "lift_pp": 2.3,
+            "acima_da_margem": false,
             "tema": null,
             "exemplo_parafraseado": null,
             "temas_no_mesmo_eixo": []
           },
           "medianas": {
-            "mencoes": 1,
-            "de_n": 34,
-            "freq_pct": 2.9,
-            "lift_pp": -13.7,
+            "mencoes": 2,
+            "de_n": 40,
+            "freq_pct": 5.0,
+            "lift_pp": -10.8,
+            "acima_da_margem": false,
             "tema": null,
             "exemplo_parafraseado": null,
             "temas_no_mesmo_eixo": []
           },
           "positivas": {
-            "mencoes": 4,
-            "de_n": 24,
-            "freq_pct": 16.7,
-            "lift_pp": 0.0,
+            "mencoes": 5,
+            "de_n": 37,
+            "freq_pct": 13.5,
+            "lift_pp": -2.3,
+            "acima_da_margem": false,
             "tema": null,
             "exemplo_parafraseado": null,
             "temas_no_mesmo_eixo": []
@@ -1029,28 +1055,31 @@
         "eixo": "impacto_emocional",
         "por_bucket": {
           "negativas": {
-            "mencoes": 8,
-            "de_n": 36,
-            "freq_pct": 22.2,
-            "lift_pp": -15.3,
+            "mencoes": 9,
+            "de_n": 38,
+            "freq_pct": 23.7,
+            "lift_pp": -11.5,
+            "acima_da_margem": false,
             "tema": null,
             "exemplo_parafraseado": null,
             "temas_no_mesmo_eixo": []
           },
           "medianas": {
-            "mencoes": 8,
-            "de_n": 34,
-            "freq_pct": 23.5,
-            "lift_pp": -14.0,
+            "mencoes": 10,
+            "de_n": 40,
+            "freq_pct": 25.0,
+            "lift_pp": -10.1,
+            "acima_da_margem": false,
             "tema": null,
             "exemplo_parafraseado": null,
             "temas_no_mesmo_eixo": []
           },
           "positivas": {
-            "mencoes": 9,
-            "de_n": 24,
-            "freq_pct": 37.5,
-            "lift_pp": 14.0,
+            "mencoes": 13,
+            "de_n": 37,
+            "freq_pct": 35.1,
+            "lift_pp": 10.1,
+            "acima_da_margem": false,
             "tema": null,
             "exemplo_parafraseado": null,
             "temas_no_mesmo_eixo": []
@@ -1059,7 +1088,7 @@
         "bullet_de": {
           "negativas": null,
           "medianas": null,
-          "positivas": null
+          "positivas": "frequencia"
         }
       },
       {
@@ -1067,27 +1096,30 @@
         "por_bucket": {
           "negativas": {
             "mencoes": 11,
-            "de_n": 36,
-            "freq_pct": 30.6,
-            "lift_pp": 5.6,
+            "de_n": 38,
+            "freq_pct": 28.9,
+            "lift_pp": -0.8,
+            "acima_da_margem": false,
             "tema": null,
             "exemplo_parafraseado": null,
             "temas_no_mesmo_eixo": []
           },
           "medianas": {
-            "mencoes": 5,
-            "de_n": 34,
-            "freq_pct": 14.7,
-            "lift_pp": -15.8,
+            "mencoes": 8,
+            "de_n": 40,
+            "freq_pct": 20.0,
+            "lift_pp": -9.7,
+            "acima_da_margem": false,
             "tema": null,
             "exemplo_parafraseado": null,
             "temas_no_mesmo_eixo": []
           },
           "positivas": {
-            "mencoes": 6,
-            "de_n": 24,
-            "freq_pct": 25.0,
-            "lift_pp": -5.6,
+            "mencoes": 11,
+            "de_n": 37,
+            "freq_pct": 29.7,
+            "lift_pp": 0.8,
+            "acima_da_margem": false,
             "tema": null,
             "exemplo_parafraseado": null,
             "temas_no_mesmo_eixo": []
@@ -1103,28 +1135,31 @@
         "eixo": "expectativa",
         "por_bucket": {
           "negativas": {
-            "mencoes": 4,
-            "de_n": 36,
-            "freq_pct": 11.1,
-            "lift_pp": -21.2,
+            "mencoes": 5,
+            "de_n": 38,
+            "freq_pct": 13.2,
+            "lift_pp": -22.0,
+            "acima_da_margem": false,
             "tema": null,
             "exemplo_parafraseado": null,
             "temas_no_mesmo_eixo": []
           },
           "medianas": {
-            "mencoes": 11,
-            "de_n": 34,
-            "freq_pct": 32.4,
-            "lift_pp": 3.2,
+            "mencoes": 13,
+            "de_n": 40,
+            "freq_pct": 32.5,
+            "lift_pp": -2.6,
+            "acima_da_margem": false,
             "tema": null,
             "exemplo_parafraseado": null,
             "temas_no_mesmo_eixo": []
           },
           "positivas": {
-            "mencoes": 7,
-            "de_n": 24,
-            "freq_pct": 29.2,
-            "lift_pp": -3.2,
+            "mencoes": 13,
+            "de_n": 37,
+            "freq_pct": 35.1,
+            "lift_pp": 2.6,
+            "acima_da_margem": false,
             "tema": null,
             "exemplo_parafraseado": null,
             "temas_no_mesmo_eixo": []
@@ -1141,27 +1176,30 @@
         "por_bucket": {
           "negativas": {
             "mencoes": 6,
-            "de_n": 36,
-            "freq_pct": 16.7,
-            "lift_pp": 4.2,
+            "de_n": 38,
+            "freq_pct": 15.8,
+            "lift_pp": 2.3,
+            "acima_da_margem": false,
             "tema": null,
             "exemplo_parafraseado": null,
             "temas_no_mesmo_eixo": []
           },
           "medianas": {
-            "mencoes": 3,
-            "de_n": 34,
-            "freq_pct": 8.8,
-            "lift_pp": -7.8,
+            "mencoes": 5,
+            "de_n": 40,
+            "freq_pct": 12.5,
+            "lift_pp": -3.3,
+            "acima_da_margem": false,
             "tema": "Mensagem e temas",
             "exemplo_parafraseado": "O grupo nota que a história aborda questões como preconceito e julgamento social, mas alguns sentem que esses temas poderiam ter sido mais aprofundados.",
             "temas_no_mesmo_eixo": []
           },
           "positivas": {
-            "mencoes": 3,
-            "de_n": 24,
-            "freq_pct": 12.5,
-            "lift_pp": -4.2,
+            "mencoes": 5,
+            "de_n": 37,
+            "freq_pct": 13.5,
+            "lift_pp": -2.3,
+            "acima_da_margem": false,
             "tema": "Temas de amizade, preconceito e identidade",
             "exemplo_parafraseado": "Várias análises destacam a profundidade temática do filme, como a complexa amizade entre as protagonistas, a superação de preconceitos e a busca pela própria identidade, com uma leitura social relevante sobre o julgamento das aparências.",
             "temas_no_mesmo_eixo": []
@@ -1174,41 +1212,21 @@
         }
       }
     ],
-    "fonte_classificacao": {
-      "arquivo": "resultado/votacao-3/consenso.jsonl",
-      "criterio": "votacao_3_consenso_2_de_3",
-      "por_bucket": {
-        "negativas": {
-          "n_classificadas": 36,
-          "n_analisadas": 38,
-          "sobreposicao_com_analisadas": 36
-        },
-        "medianas": {
-          "n_classificadas": 34,
-          "n_analisadas": 40,
-          "sobreposicao_com_analisadas": 34
-        },
-        "positivas": {
-          "n_classificadas": 24,
-          "n_analisadas": 37,
-          "sobreposicao_com_analisadas": 24
-        }
-      }
-    },
+    "contraste": "valorativo",
     "rotulagem": {
       "n_chamadas": 3,
       "falharam": [],
       "fora_da_taxonomia": {},
       "houve_retentativa": []
     },
-    "spec_version": "1.9.16",
     "verificador": {
       "aplicado": true,
       "variante": "V2_alvo",
       "passada": 1,
       "eixo": "impacto_emocional",
       "n_removidas_no_corpus": 1654
-    }
+    },
+    "spec_version": "1.9.34"
   },
   "narrativa": "Lançado em 2024 e dirigido por Jon M. Chu, Wicked é uma produção que combina drama, romance e fantasia ao longo de seus 161 minutos de duração. A história acompanha Elphaba, uma jovem que lida com a incompreensão alheia por causa de sua pele verde e busca compreender seus verdadeiros poderes ao ingressar na Universidade de Shiz. No ambiente acadêmico, sua trajetória se cruza com a de Glinda, uma estudante popular e ambiciosa, iniciando uma amizade improvável cujos contrastes de ambição e princípios impactam o futuro de ambas no Reino de Oz.\n\nA experiência do longa se estrutura no formato de um musical de longa metragem, apoiando-se em frequentes passagens cantadas e numa composição visual com forte presença cenográfica.\n\nOs grupos de avaliação concentram suas análises essencialmente nos mesmos elementos, discordando sobre o veredito de seu funcionamento em tela.\n\nNa grande maioria das notas (~76%), uma parcela expressiva elogia as atuações e a potência vocal do elenco principal, enquanto boa parte destaca as músicas como marcantes e bem integradas ao desenvolvimento narrativo. Além disso, uma fatia menor pontua que o filme se mantém cativante e envolvente do início ao fim, sustentando a atenção a despeito de sua extensa minutagem.\n\nNuma parcela das notas (~17%), sob uma perspectiva mais moderada, alguns apontam a duração excessiva como um elemento desgastante da sessão. Ainda nessa leitura, parte deles reconhece o valor das atuações centrais, ao passo que uma parte manifesta ponderações divididas em relação ao repertório musical.\n\nPor fim, numa fração mínima das notas (~7%), para quem avaliou a obra negativamente, muitos consideram as canções genéricas e pouco memoráveis. Nesse mesmo segmento, um número considerável critica o ritmo arrastado associado ao tempo de tela, e vários apontam ressalvas à atuação dramática de Ariana Grande.",
   "verificacao_narrativa": {

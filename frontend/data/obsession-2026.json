@@ -781,8 +781,16 @@
   ],
   "eixos": {
     "taxonomia_id": "ebab2667de74",
-    "margem_lift_pp": 20,
-    "contraste": "tematico",
+    "margem": {
+      "lei": "lift^2 * n >= 2085136/1000000",
+      "constante_quadrada": [
+        2085136,
+        1000000
+      ],
+      "n": 5,
+      "limiar_pp": 64.58
+    },
+    "margem_lift_pp": 64.58,
     "linhas": [
       {
         "eixo": "ritmo",
@@ -792,6 +800,7 @@
             "de_n": 5,
             "freq_pct": 20.0,
             "lift_pp": -5.0,
+            "acima_da_margem": false,
             "tema": null,
             "exemplo_parafraseado": null,
             "temas_no_mesmo_eixo": []
@@ -801,6 +810,7 @@
             "de_n": 6,
             "freq_pct": 16.7,
             "lift_pp": -8.3,
+            "acima_da_margem": false,
             "tema": null,
             "exemplo_parafraseado": null,
             "temas_no_mesmo_eixo": []
@@ -810,6 +820,7 @@
             "de_n": 8,
             "freq_pct": 25.0,
             "lift_pp": 5.0,
+            "acima_da_margem": false,
             "tema": null,
             "exemplo_parafraseado": null,
             "temas_no_mesmo_eixo": []
@@ -829,6 +840,7 @@
             "de_n": 5,
             "freq_pct": 0.0,
             "lift_pp": -37.5,
+            "acima_da_margem": false,
             "tema": null,
             "exemplo_parafraseado": null,
             "temas_no_mesmo_eixo": []
@@ -838,6 +850,7 @@
             "de_n": 6,
             "freq_pct": 0.0,
             "lift_pp": -37.5,
+            "acima_da_margem": false,
             "tema": null,
             "exemplo_parafraseado": null,
             "temas_no_mesmo_eixo": []
@@ -847,6 +860,7 @@
             "de_n": 8,
             "freq_pct": 37.5,
             "lift_pp": 37.5,
+            "acima_da_margem": false,
             "tema": "Atuações convincentes",
             "exemplo_parafraseado": "As reviews positivas elogiam fortemente as atuações, especialmente a de Inde Navarrette, que é descrita como brilhante e capaz de transmitir uma volatilidade emocional assustadora, elevando o filme.",
             "temas_no_mesmo_eixo": []
@@ -855,7 +869,7 @@
         "bullet_de": {
           "negativas": null,
           "medianas": null,
-          "positivas": "contraste"
+          "positivas": null
         }
       },
       {
@@ -866,6 +880,7 @@
             "de_n": 5,
             "freq_pct": 20.0,
             "lift_pp": -42.5,
+            "acima_da_margem": false,
             "tema": "Fotografia mediana",
             "exemplo_parafraseado": "Um comentário elogia levemente o trabalho de câmera, classificando-o como aceitável.",
             "temas_no_mesmo_eixo": []
@@ -875,6 +890,7 @@
             "de_n": 6,
             "freq_pct": 16.7,
             "lift_pp": -45.8,
+            "acima_da_margem": false,
             "tema": "Caráter amador e simplicidade da produção",
             "exemplo_parafraseado": "Duas reviews apontam que o filme tem uma estética de produção caseira ou de projeto escolar, o que é compreensível dado o contexto de um primeiro trabalho, mas que limita a experiência.",
             "temas_no_mesmo_eixo": [
@@ -886,6 +902,7 @@
             "de_n": 8,
             "freq_pct": 62.5,
             "lift_pp": 42.5,
+            "acima_da_margem": false,
             "tema": "Direção de fotografia e estilo visual",
             "exemplo_parafraseado": "Várias reviews destacam a qualidade da cinematografia, com uso criativo de lentes, filtros e iluminação que contribuem para a atmosfera tensa e imersiva do filme.",
             "temas_no_mesmo_eixo": []
@@ -894,7 +911,7 @@
         "bullet_de": {
           "negativas": null,
           "medianas": null,
-          "positivas": "frequencia_e_contraste"
+          "positivas": "frequencia"
         }
       },
       {
@@ -905,6 +922,7 @@
             "de_n": 5,
             "freq_pct": 40.0,
             "lift_pp": -10.0,
+            "acima_da_margem": false,
             "tema": "Roteiro fraco e confuso",
             "exemplo_parafraseado": "As reviews criticam a narrativa por ser pouco desenvolvida, resultando em confusão sobre o enredo e falta de profundidade.",
             "temas_no_mesmo_eixo": [
@@ -916,6 +934,7 @@
             "de_n": 6,
             "freq_pct": 0.0,
             "lift_pp": -50.0,
+            "acima_da_margem": false,
             "tema": null,
             "exemplo_parafraseado": null,
             "temas_no_mesmo_eixo": []
@@ -925,6 +944,7 @@
             "de_n": 8,
             "freq_pct": 50.0,
             "lift_pp": 10.0,
+            "acima_da_margem": false,
             "tema": "Roteiro inteligente e bem estruturado",
             "exemplo_parafraseado": "O roteiro é elogiado por ser engenhoso e cheio de propósito, transformando gestos comuns de afeto em situações perturbadoras e encontrando horror no colapso de limites emocionais.",
             "temas_no_mesmo_eixo": []
@@ -944,6 +964,7 @@
             "de_n": 5,
             "freq_pct": 0.0,
             "lift_pp": -50.0,
+            "acima_da_margem": false,
             "tema": null,
             "exemplo_parafraseado": null,
             "temas_no_mesmo_eixo": []
@@ -953,6 +974,7 @@
             "de_n": 6,
             "freq_pct": 50.0,
             "lift_pp": 37.5,
+            "acima_da_margem": false,
             "tema": "Música e edição eficazes na construção de clima",
             "exemplo_parafraseado": "Algumas das reviews mencionam que a trilha sonora e a montagem se combinam bem para criar uma atmosfera de suspense, mesmo em um curta-metragem de poucos minutos.",
             "temas_no_mesmo_eixo": []
@@ -962,6 +984,7 @@
             "de_n": 8,
             "freq_pct": 12.5,
             "lift_pp": -37.5,
+            "acima_da_margem": false,
             "tema": "Trilha sonora",
             "exemplo_parafraseado": "Algumas reviews destacam a trilha sonora como um elemento que complementa bem a cinematografia e contribui para a experiência geral do filme.",
             "temas_no_mesmo_eixo": []
@@ -969,7 +992,7 @@
         },
         "bullet_de": {
           "negativas": null,
-          "medianas": "frequencia_e_contraste",
+          "medianas": "frequencia",
           "positivas": null
         }
       },
@@ -981,6 +1004,7 @@
             "de_n": 5,
             "freq_pct": 20.0,
             "lift_pp": -42.5,
+            "acima_da_margem": false,
             "tema": "Tom inadequado",
             "exemplo_parafraseado": "Alguns comentários apontam que a obra oscila entre romance adolescente e tentativas de terror, sem alcançar nenhum dos dois de forma satisfatória.",
             "temas_no_mesmo_eixo": []
@@ -990,6 +1014,7 @@
             "de_n": 6,
             "freq_pct": 16.7,
             "lift_pp": -45.8,
+            "acima_da_margem": false,
             "tema": null,
             "exemplo_parafraseado": null,
             "temas_no_mesmo_eixo": []
@@ -999,6 +1024,7 @@
             "de_n": 8,
             "freq_pct": 62.5,
             "lift_pp": 42.5,
+            "acima_da_margem": false,
             "tema": "Construção de tensão e atmosfera",
             "exemplo_parafraseado": "As reviews mencionam que o filme cria uma tensão crescente e uma atmosfera desconfortável a partir de situações cotidianas, sem depender de sustos previsíveis, mantendo o espectador apreensivo.",
             "temas_no_mesmo_eixo": []
@@ -1007,7 +1033,7 @@
         "bullet_de": {
           "negativas": null,
           "medianas": null,
-          "positivas": "frequencia_e_contraste"
+          "positivas": "frequencia"
         }
       },
       {
@@ -1018,6 +1044,7 @@
             "de_n": 5,
             "freq_pct": 20.0,
             "lift_pp": -30.0,
+            "acima_da_margem": false,
             "tema": null,
             "exemplo_parafraseado": null,
             "temas_no_mesmo_eixo": []
@@ -1027,6 +1054,7 @@
             "de_n": 6,
             "freq_pct": 0.0,
             "lift_pp": -50.0,
+            "acima_da_margem": false,
             "tema": null,
             "exemplo_parafraseado": null,
             "temas_no_mesmo_eixo": []
@@ -1036,6 +1064,7 @@
             "de_n": 8,
             "freq_pct": 50.0,
             "lift_pp": 30.0,
+            "acima_da_margem": false,
             "tema": null,
             "exemplo_parafraseado": null,
             "temas_no_mesmo_eixo": []
@@ -1055,6 +1084,7 @@
             "de_n": 5,
             "freq_pct": 0.0,
             "lift_pp": -37.5,
+            "acima_da_margem": false,
             "tema": null,
             "exemplo_parafraseado": null,
             "temas_no_mesmo_eixo": []
@@ -1064,6 +1094,7 @@
             "de_n": 6,
             "freq_pct": 16.7,
             "lift_pp": -20.8,
+            "acima_da_margem": false,
             "tema": "Potencial promissor do cineasta",
             "exemplo_parafraseado": "As reviews medianas reconhecem que, apesar de ser um primeiro trabalho, o curta demonstra potencial e deixam claro que estão interessados em acompanhar os próximos projetos do diretor.",
             "temas_no_mesmo_eixo": []
@@ -1073,6 +1104,7 @@
             "de_n": 8,
             "freq_pct": 37.5,
             "lift_pp": 20.8,
+            "acima_da_margem": false,
             "tema": null,
             "exemplo_parafraseado": null,
             "temas_no_mesmo_eixo": []
@@ -1092,6 +1124,7 @@
             "de_n": 5,
             "freq_pct": 0.0,
             "lift_pp": -25.0,
+            "acima_da_margem": false,
             "tema": "Potencial não realizado",
             "exemplo_parafraseado": "Duas reviews reconhecem que, apesar das falhas, há indícios de talento e potencial para trabalhos futuros, especialmente considerando a baixa experiência e orçamento.",
             "temas_no_mesmo_eixo": []
@@ -1101,6 +1134,7 @@
             "de_n": 6,
             "freq_pct": 16.7,
             "lift_pp": -8.3,
+            "acima_da_margem": false,
             "tema": null,
             "exemplo_parafraseado": null,
             "temas_no_mesmo_eixo": []
@@ -1110,6 +1144,7 @@
             "de_n": 8,
             "freq_pct": 25.0,
             "lift_pp": 8.3,
+            "acima_da_margem": false,
             "tema": null,
             "exemplo_parafraseado": null,
             "temas_no_mesmo_eixo": []
@@ -1129,6 +1164,7 @@
             "de_n": 5,
             "freq_pct": 20.0,
             "lift_pp": 7.5,
+            "acima_da_margem": false,
             "tema": "Violência sem propósito",
             "exemplo_parafraseado": "Uma review lamenta a morte de um personagem, considerando-a gratuita e sem justificativa dentro da história.",
             "temas_no_mesmo_eixo": []
@@ -1138,6 +1174,7 @@
             "de_n": 6,
             "freq_pct": 0.0,
             "lift_pp": -20.0,
+            "acima_da_margem": false,
             "tema": null,
             "exemplo_parafraseado": null,
             "temas_no_mesmo_eixo": []
@@ -1147,6 +1184,7 @@
             "de_n": 8,
             "freq_pct": 12.5,
             "lift_pp": -7.5,
+            "acima_da_margem": false,
             "tema": null,
             "exemplo_parafraseado": null,
             "temas_no_mesmo_eixo": []
@@ -1165,14 +1203,14 @@
       "fora_da_taxonomia": {},
       "houve_retentativa": []
     },
-    "spec_version": "1.9.16",
     "verificador": {
       "aplicado": true,
       "variante": "V2_alvo",
       "passada": 1,
       "eixo": "impacto_emocional",
       "n_removidas_no_corpus": 1654
-    }
+    },
+    "spec_version": "1.9.34"
   },
   "narrativa": "Lançado em 2026 e dirigido por Curry Barker, Obsessão é uma produção de terror e suspense que se desenvolve ao longo de 100 minutos de duração. Na história, um romântico incurável adquire despretensiosamente um artefato misterioso com a promessa de atender a pedidos singulares. Ao quebrar o objeto para tentar conquistar a pessoa por quem tem sentimentos, ele obtém o resultado esperado, mas logo se depara com consequências sinistras.\n\nNa maioria das notas (~55%), as atuações convincentes assumem o papel central dos elogios, sendo ressaltadas em ~5 de 8 reviews (62%) pela entrega e intensidade transmitidas em tela. Complementando essa recepção favorável, a direção de fotografia e o estilo visual aparecem em ~4 de 8 reviews (50%) pelo uso imersivo da iluminação e lentes, ao passo que a originalidade e a abordagem inovadora também são celebradas em ~4 de 8 reviews (50%) por trazerem uma perspectiva diferenciada às convenções temáticas.\n\nNuma parcela das notas (~29%), nota-se o potencial promissor do cineasta, gerando expectativa para o desenvolvimento de suas próximas obras cinematográficas. Nessa perspectiva, a música e a edição são avaliadas como eficazes na construção de clima e tensão, somando-se a um conceito central interessante que desperta atenção, ainda que a realização demonstre traços de simplicidade e amadorismo em sua execução.\n\nPara quem se posiciona numa parcela menor das notas (~16%), a obra tropeça em um roteiro fraco e confuso que não aprofunda adequadamente os elementos narrativos. O grupo avalia que o filme manifesta um tom inadequado ao oscilar sem firmeza entre suas propostas, restando apenas vislumbres de um potencial não realizado por trás do projeto.",
   "verificacao_narrativa": {
@@ -1248,73 +1286,5 @@
       "cache_miss_tokens": 10510
     },
     "latencia_s": 30.73
-  },
-  "veredito": {
-    "provider": "gemini",
-    "modelo": "gemini-3.7-flash",
-    "n_candidatos": 3,
-    "n_chamadas": 4,
-    "prefixo_codigo": "",
-    "retry": {
-      "flags_antes": [
-        "quantificador_divergente"
-      ],
-      "flags_depois": [],
-      "aplicado": true
-    },
-    "spec_version": "1.9.22",
-    "texto": "Em uma amostra reduzida de avaliações, a maioria dos que recomendam destaca o trabalho visual e a condução narrativa engenhosa. Em contrapartida, a maioria dos que não recomendam aponta fragilidades e falta de coesão no desenvolvimento da história.",
-    "texto_modelo": "Em uma amostra reduzida de avaliações, a maioria dos que recomendam destaca o trabalho visual e a condução narrativa engenhosa. Em contrapartida, a maioria dos que não recomendam aponta fragilidades e falta de coesão no desenvolvimento da história.",
-    "origem": "llm",
-    "motivo": "retry_direcionado",
-    "criterio_decisivo": "empate",
-    "abertura": "numa",
-    "indice_escolhido": 2,
-    "flags": [],
-    "candidatos": [
-      {
-        "indice": 0,
-        "n_flags": 1,
-        "flags": [
-          "quantificador_divergente"
-        ],
-        "n_palavras": 41,
-        "n_ancoras": 0,
-        "abertura": "conju",
-        "abertura_freq": 0,
-        "eliminado": true
-      },
-      {
-        "indice": 1,
-        "n_flags": 1,
-        "flags": [
-          "quantificador_divergente"
-        ],
-        "n_palavras": 43,
-        "n_ancoras": 1,
-        "abertura": "QUANT",
-        "abertura_freq": 18,
-        "eliminado": true
-      },
-      {
-        "indice": 2,
-        "n_flags": 1,
-        "flags": [
-          "quantificador_divergente"
-        ],
-        "n_palavras": 43,
-        "n_ancoras": 1,
-        "abertura": "numa",
-        "abertura_freq": 0,
-        "eliminado": true
-      }
-    ],
-    "uso": {
-      "prompt_tokens": 4854,
-      "completion_tokens": 271,
-      "cache_hit_tokens": 0,
-      "cache_miss_tokens": 4854
-    },
-    "latencia_s": 11.73
   }
 }

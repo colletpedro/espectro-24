@@ -789,35 +789,46 @@
   ],
   "eixos": {
     "taxonomia_id": "ebab2667de74",
-    "margem_lift_pp": 20,
-    "contraste": "tematico",
+    "margem": {
+      "lei": "lift^2 * n >= 2085136/1000000",
+      "constante_quadrada": [
+        2085136,
+        1000000
+      ],
+      "n": 40,
+      "limiar_pp": 22.83
+    },
+    "margem_lift_pp": 22.83,
     "linhas": [
       {
         "eixo": "ritmo",
         "por_bucket": {
           "negativas": {
-            "mencoes": 6,
-            "de_n": 27,
-            "freq_pct": 22.2,
-            "lift_pp": -27.8,
+            "mencoes": 8,
+            "de_n": 40,
+            "freq_pct": 20.0,
+            "lift_pp": -25.0,
+            "acima_da_margem": false,
             "tema": "Ritmo e edição",
             "exemplo_parafraseado": "O filme é descrito como lento, cansativo e mal estruturado, com uma narrativa fragmentada que pula eventos sem dar contexto, dificultando o envolvimento do público.",
             "temas_no_mesmo_eixo": []
           },
           "medianas": {
-            "mencoes": 13,
-            "de_n": 26,
-            "freq_pct": 50.0,
-            "lift_pp": 25.0,
+            "mencoes": 18,
+            "de_n": 40,
+            "freq_pct": 45.0,
+            "lift_pp": 12.5,
+            "acima_da_margem": false,
             "tema": "Ritmo irregular e excesso de duração",
             "exemplo_parafraseado": "O filme se arrasta em várias partes, com uma barriga no meio e uma sensação de que o tempo de tela é mal aproveitado; muitos consideram a versão estendida ainda mais cansativa, apesar de algumas melhorias.",
             "temas_no_mesmo_eixo": []
           },
           "positivas": {
-            "mencoes": 5,
-            "de_n": 20,
-            "freq_pct": 25.0,
-            "lift_pp": -25.0,
+            "mencoes": 13,
+            "de_n": 40,
+            "freq_pct": 32.5,
+            "lift_pp": -12.5,
+            "acima_da_margem": false,
             "tema": "Ritmo e edição",
             "exemplo_parafraseado": "A versão estendida foi elogiada por melhorar o ritmo, dando mais profundidade aos eventos, enquanto a versão original parecia correr por alguns marcos históricos.",
             "temas_no_mesmo_eixo": []
@@ -825,7 +836,7 @@
         },
         "bullet_de": {
           "negativas": null,
-          "medianas": "frequencia_e_contraste",
+          "medianas": null,
           "positivas": null
         }
       },
@@ -833,28 +844,31 @@
         "eixo": "atuacao",
         "por_bucket": {
           "negativas": {
-            "mencoes": 10,
-            "de_n": 27,
-            "freq_pct": 37.0,
-            "lift_pp": 2.4,
+            "mencoes": 14,
+            "de_n": 40,
+            "freq_pct": 35.0,
+            "lift_pp": 0.0,
+            "acima_da_margem": false,
             "tema": "Atuações e elenco",
             "exemplo_parafraseado": "Embora alguns reconheçam o talento dos atores, muitos consideram a escalação de Joaquin Phoenix inadequada para o papel, criticando sua idade e a falta de carisma, enquanto Vanessa Kirby é elogiada por sua atuação.",
             "temas_no_mesmo_eixo": []
           },
           "medianas": {
-            "mencoes": 9,
-            "de_n": 26,
-            "freq_pct": 34.6,
-            "lift_pp": -2.4,
+            "mencoes": 11,
+            "de_n": 40,
+            "freq_pct": 27.5,
+            "lift_pp": -7.5,
+            "acima_da_margem": false,
             "tema": "Atuações de destaque, especialmente de Phoenix e Kirby",
             "exemplo_parafraseado": "Joaquin Phoenix e Vanessa Kirby recebem elogios por suas performances, mesmo que alguns achem que Phoenix não convence totalmente como Napoleão ou que a construção dos personagens seja superficial.",
             "temas_no_mesmo_eixo": []
           },
           "positivas": {
-            "mencoes": 4,
-            "de_n": 20,
-            "freq_pct": 20.0,
-            "lift_pp": -17.0,
+            "mencoes": 14,
+            "de_n": 40,
+            "freq_pct": 35.0,
+            "lift_pp": 0.0,
+            "acima_da_margem": false,
             "tema": "Atuações e carisma de Joaquin Phoenix e Vanessa Kirby",
             "exemplo_parafraseado": "A performance de Joaquin Phoenix foi elogiada por capturar a dualidade do personagem, transitando entre a vulnerabilidade e a autoridade, enquanto Vanessa Kirby se destacou ao dar profundidade à Josefina.",
             "temas_no_mesmo_eixo": []
@@ -870,28 +884,31 @@
         "eixo": "direcao_imagem",
         "por_bucket": {
           "negativas": {
-            "mencoes": 12,
-            "de_n": 27,
-            "freq_pct": 44.4,
-            "lift_pp": -5.6,
+            "mencoes": 15,
+            "de_n": 40,
+            "freq_pct": 37.5,
+            "lift_pp": -12.5,
+            "acima_da_margem": false,
             "tema": "Batalhas decepcionantes",
             "exemplo_parafraseado": "As cenas de batalha são apontadas como visualmente impressionantes, mas carecem de estratégia e tática, sendo muitas vezes confusas e sem o brilhantismo militar que caracterizou Napoleão.",
             "temas_no_mesmo_eixo": []
           },
           "medianas": {
-            "mencoes": 13,
-            "de_n": 26,
+            "mencoes": 20,
+            "de_n": 40,
             "freq_pct": 50.0,
-            "lift_pp": 5.6,
+            "lift_pp": 5.0,
+            "acima_da_margem": false,
             "tema": "Batalhas visualmente impressionantes",
             "exemplo_parafraseado": "As sequências de batalha são amplamente elogiadas por sua grandiosidade e direção competente, sendo o ponto alto do filme para a maioria dos espectadores deste grupo.",
             "temas_no_mesmo_eixo": []
           },
           "positivas": {
-            "mencoes": 8,
-            "de_n": 20,
-            "freq_pct": 40.0,
-            "lift_pp": -10.0,
+            "mencoes": 18,
+            "de_n": 40,
+            "freq_pct": 45.0,
+            "lift_pp": -5.0,
+            "acima_da_margem": false,
             "tema": "Impacto visual e direção de arte",
             "exemplo_parafraseado": "A fotografia, os figurinos e os cenários foram descritos como deslumbrantes, criando uma imersão na França do século XIX e elevando a experiência visual do filme.",
             "temas_no_mesmo_eixo": [
@@ -902,17 +919,18 @@
         "bullet_de": {
           "negativas": null,
           "medianas": null,
-          "positivas": "frequencia"
+          "positivas": null
         }
       },
       {
         "eixo": "roteiro_estrutura",
         "por_bucket": {
           "negativas": {
-            "mencoes": 20,
-            "de_n": 27,
-            "freq_pct": 74.1,
-            "lift_pp": 16.4,
+            "mencoes": 30,
+            "de_n": 40,
+            "freq_pct": 75.0,
+            "lift_pp": 7.5,
+            "acima_da_margem": false,
             "tema": "Retrato de Napoleão",
             "exemplo_parafraseado": "As reviews negativas criticam a representação de Napoleão como um personagem fraco, submisso e infantilizado, reduzindo sua figura histórica a uma caricatura, o que é considerado uma afronta ao verdadeiro estrategista e líder.",
             "temas_no_mesmo_eixo": [
@@ -920,10 +938,11 @@
             ]
           },
           "medianas": {
-            "mencoes": 15,
-            "de_n": 26,
-            "freq_pct": 57.7,
-            "lift_pp": -16.4,
+            "mencoes": 27,
+            "de_n": 40,
+            "freq_pct": 67.5,
+            "lift_pp": -7.5,
+            "acima_da_margem": false,
             "tema": "Foco excessivo no relacionamento com Josefina",
             "exemplo_parafraseado": "O filme dedica uma parcela desproporcional do tempo ao romance entre Napoleão e Josefina, em detrimento de sua carreira militar e política, o que desagrada os espectadores que esperavam um retrato mais abrangente.",
             "temas_no_mesmo_eixo": [
@@ -931,10 +950,11 @@
             ]
           },
           "positivas": {
-            "mencoes": 7,
-            "de_n": 20,
-            "freq_pct": 35.0,
-            "lift_pp": -39.1,
+            "mencoes": 22,
+            "de_n": 40,
+            "freq_pct": 55.0,
+            "lift_pp": -20.0,
+            "acima_da_margem": false,
             "tema": "Abordagem pessoal e íntima do personagem",
             "exemplo_parafraseado": "O filme foi apreciado por focar nas inseguranças e na vida pessoal de Napoleão, apresentando-o como um homem comum com defeitos, em vez de um herói mitológico.",
             "temas_no_mesmo_eixo": []
@@ -943,6 +963,46 @@
         "bullet_de": {
           "negativas": "frequencia",
           "medianas": "frequencia",
+          "positivas": "frequencia"
+        }
+      },
+      {
+        "eixo": "som_trilha",
+        "por_bucket": {
+          "negativas": {
+            "mencoes": 2,
+            "de_n": 40,
+            "freq_pct": 5.0,
+            "lift_pp": 0.0,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "medianas": {
+            "mencoes": 1,
+            "de_n": 40,
+            "freq_pct": 2.5,
+            "lift_pp": -2.5,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "positivas": {
+            "mencoes": 2,
+            "de_n": 40,
+            "freq_pct": 5.0,
+            "lift_pp": 0.0,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          }
+        },
+        "bullet_de": {
+          "negativas": null,
+          "medianas": null,
           "positivas": null
         }
       },
@@ -950,28 +1010,31 @@
         "eixo": "tom_atmosfera",
         "por_bucket": {
           "negativas": {
-            "mencoes": 1,
-            "de_n": 27,
-            "freq_pct": 3.7,
-            "lift_pp": -11.7,
+            "mencoes": 2,
+            "de_n": 40,
+            "freq_pct": 5.0,
+            "lift_pp": -7.5,
+            "acima_da_margem": false,
             "tema": null,
             "exemplo_parafraseado": null,
             "temas_no_mesmo_eixo": []
           },
           "medianas": {
             "mencoes": 4,
-            "de_n": 26,
-            "freq_pct": 15.4,
-            "lift_pp": 5.4,
+            "de_n": 40,
+            "freq_pct": 10.0,
+            "lift_pp": -2.5,
+            "acima_da_margem": false,
             "tema": null,
             "exemplo_parafraseado": null,
             "temas_no_mesmo_eixo": []
           },
           "positivas": {
-            "mencoes": 2,
-            "de_n": 20,
-            "freq_pct": 10.0,
-            "lift_pp": -5.4,
+            "mencoes": 5,
+            "de_n": 40,
+            "freq_pct": 12.5,
+            "lift_pp": 2.5,
+            "acima_da_margem": false,
             "tema": null,
             "exemplo_parafraseado": null,
             "temas_no_mesmo_eixo": []
@@ -987,35 +1050,38 @@
         "eixo": "impacto_emocional",
         "por_bucket": {
           "negativas": {
-            "mencoes": 7,
-            "de_n": 27,
-            "freq_pct": 25.9,
-            "lift_pp": 20.9,
+            "mencoes": 9,
+            "de_n": 40,
+            "freq_pct": 22.5,
+            "lift_pp": 12.5,
+            "acima_da_margem": false,
             "tema": null,
             "exemplo_parafraseado": null,
             "temas_no_mesmo_eixo": []
           },
           "medianas": {
-            "mencoes": 0,
-            "de_n": 26,
-            "freq_pct": 0.0,
-            "lift_pp": -25.9,
+            "mencoes": 2,
+            "de_n": 40,
+            "freq_pct": 5.0,
+            "lift_pp": -17.5,
+            "acima_da_margem": false,
             "tema": null,
             "exemplo_parafraseado": null,
             "temas_no_mesmo_eixo": []
           },
           "positivas": {
-            "mencoes": 1,
-            "de_n": 20,
-            "freq_pct": 5.0,
-            "lift_pp": -20.9,
+            "mencoes": 4,
+            "de_n": 40,
+            "freq_pct": 10.0,
+            "lift_pp": -12.5,
+            "acima_da_margem": false,
             "tema": null,
             "exemplo_parafraseado": null,
             "temas_no_mesmo_eixo": []
           }
         },
         "bullet_de": {
-          "negativas": "contraste",
+          "negativas": null,
           "medianas": null,
           "positivas": null
         }
@@ -1024,28 +1090,31 @@
         "eixo": "comparacoes",
         "por_bucket": {
           "negativas": {
-            "mencoes": 16,
-            "de_n": 27,
-            "freq_pct": 59.3,
-            "lift_pp": 9.3,
+            "mencoes": 20,
+            "de_n": 40,
+            "freq_pct": 50.0,
+            "lift_pp": -2.5,
+            "acima_da_margem": false,
             "tema": null,
             "exemplo_parafraseado": null,
             "temas_no_mesmo_eixo": []
           },
           "medianas": {
-            "mencoes": 13,
-            "de_n": 26,
-            "freq_pct": 50.0,
-            "lift_pp": -9.3,
+            "mencoes": 21,
+            "de_n": 40,
+            "freq_pct": 52.5,
+            "lift_pp": 0.0,
+            "acima_da_margem": false,
             "tema": null,
             "exemplo_parafraseado": null,
             "temas_no_mesmo_eixo": []
           },
           "positivas": {
-            "mencoes": 10,
-            "de_n": 20,
-            "freq_pct": 50.0,
-            "lift_pp": -9.3,
+            "mencoes": 21,
+            "de_n": 40,
+            "freq_pct": 52.5,
+            "lift_pp": 0.0,
+            "acima_da_margem": false,
             "tema": null,
             "exemplo_parafraseado": null,
             "temas_no_mesmo_eixo": []
@@ -1053,7 +1122,7 @@
         },
         "bullet_de": {
           "negativas": "frequencia",
-          "medianas": null,
+          "medianas": "frequencia",
           "positivas": "frequencia"
         }
       },
@@ -1061,28 +1130,31 @@
         "eixo": "expectativa",
         "por_bucket": {
           "negativas": {
-            "mencoes": 10,
-            "de_n": 27,
-            "freq_pct": 37.0,
-            "lift_pp": 12.0,
+            "mencoes": 12,
+            "de_n": 40,
+            "freq_pct": 30.0,
+            "lift_pp": 7.5,
+            "acima_da_margem": false,
             "tema": null,
             "exemplo_parafraseado": null,
             "temas_no_mesmo_eixo": []
           },
           "medianas": {
-            "mencoes": 5,
-            "de_n": 26,
-            "freq_pct": 19.2,
-            "lift_pp": -17.8,
+            "mencoes": 9,
+            "de_n": 40,
+            "freq_pct": 22.5,
+            "lift_pp": -7.5,
+            "acima_da_margem": false,
             "tema": null,
             "exemplo_parafraseado": null,
             "temas_no_mesmo_eixo": []
           },
           "positivas": {
-            "mencoes": 5,
-            "de_n": 20,
-            "freq_pct": 25.0,
-            "lift_pp": -12.0,
+            "mencoes": 8,
+            "de_n": 40,
+            "freq_pct": 20.0,
+            "lift_pp": -10.0,
+            "acima_da_margem": false,
             "tema": null,
             "exemplo_parafraseado": null,
             "temas_no_mesmo_eixo": []
@@ -1098,28 +1170,31 @@
         "eixo": "critica_social",
         "por_bucket": {
           "negativas": {
-            "mencoes": 9,
-            "de_n": 27,
-            "freq_pct": 33.3,
-            "lift_pp": -5.1,
+            "mencoes": 15,
+            "de_n": 40,
+            "freq_pct": 37.5,
+            "lift_pp": -2.5,
+            "acima_da_margem": false,
             "tema": "Imprecisões históricas",
             "exemplo_parafraseado": "Muitos espectadores apontam que o filme contém inúmeros erros de datas, eventos e batalhas, o que compromete a fidelidade histórica e desaponta aqueles que conhecem a trajetória real de Napoleão.",
             "temas_no_mesmo_eixo": []
           },
           "medianas": {
-            "mencoes": 10,
-            "de_n": 26,
-            "freq_pct": 38.5,
-            "lift_pp": 5.1,
+            "mencoes": 16,
+            "de_n": 40,
+            "freq_pct": 40.0,
+            "lift_pp": 2.5,
+            "acima_da_margem": false,
             "tema": "Imprecisões históricas e licenças poéticas",
             "exemplo_parafraseado": "Várias pessoas apontam que o longa distorce acontecimentos reais, omite eventos importantes e toma liberdades criativas que comprometem a veracidade histórica, o que é decepcionante para quem conhece a trajetória do personagem.",
             "temas_no_mesmo_eixo": []
           },
           "positivas": {
-            "mencoes": 5,
-            "de_n": 20,
-            "freq_pct": 25.0,
-            "lift_pp": -13.5,
+            "mencoes": 13,
+            "de_n": 40,
+            "freq_pct": 32.5,
+            "lift_pp": -7.5,
+            "acima_da_margem": false,
             "tema": null,
             "exemplo_parafraseado": null,
             "temas_no_mesmo_eixo": []
@@ -1132,41 +1207,21 @@
         }
       }
     ],
-    "fonte_classificacao": {
-      "arquivo": "resultado/votacao-3/consenso.jsonl",
-      "criterio": "votacao_3_consenso_2_de_3",
-      "por_bucket": {
-        "negativas": {
-          "n_classificadas": 27,
-          "n_analisadas": 40,
-          "sobreposicao_com_analisadas": 27
-        },
-        "medianas": {
-          "n_classificadas": 26,
-          "n_analisadas": 40,
-          "sobreposicao_com_analisadas": 26
-        },
-        "positivas": {
-          "n_classificadas": 20,
-          "n_analisadas": 40,
-          "sobreposicao_com_analisadas": 20
-        }
-      }
-    },
+    "contraste": "valorativo",
     "rotulagem": {
       "n_chamadas": 3,
       "falharam": [],
       "fora_da_taxonomia": {},
       "houve_retentativa": []
     },
-    "spec_version": "1.9.16",
     "verificador": {
       "aplicado": true,
       "variante": "V2_alvo",
       "passada": 1,
       "eixo": "impacto_emocional",
       "n_removidas_no_corpus": 1654
-    }
+    },
+    "spec_version": "1.9.34"
   },
   "narrativa": "Dirigido por Ridley Scott e lançado em 2023, Napoleão é um drama histórico de guerra que apresenta as origens do líder militar francês e sua rápida e implacável ascensão a imperador. A narrativa explora essa trajetória sob o prisma do relacionamento dependente e volátil entre Napoleão e sua esposa, Josefina.\n\nA experiência do longa é estruturada pela alternância constante entre grandiosas encenações de confrontos militares e passagens voltadas à intimidade do casal protagonista. A ambientação reconstitui a época do Império Francês, estendendo-se por décadas de acontecimentos em uma narrativa de longa duração.\n\nEm boa parte das notas (~45%), uma parcela expressiva elogia a grandiosidade e a execução técnica das cenas de batalha como momentos marcantes da obra. Contudo, vários apontam um ritmo irregular e uma sensação de excesso na duração total da narrativa, enquanto uma parte lamenta o que considera um foco excessivo no romance com Josefina em detrimento das complexidades políticas e militares do período.\n\nNuma parte menor das notas (~33%), alguns destacam positivamente as atuações e o carisma de Joaquin Phoenix e Vanessa Kirby nos papéis principais. Para eles, parte deles ressalta o impacto visual construído por meio da direção de arte, dos cenários e dos figurinos de época, enquanto uma fatia menor celebra o vigor e a qualidade das grandes sequências de combate.\n\nPara a visão expressa numa parcela das notas (~22%), onde o impacto emocional negativo predomina, muitos criticam a forma como Napoleão é retratado na trama, considerando o personagem enfraquecido ou caricatural. Além disso, um número considerável condena as imprecisões e licenças históricas presentes na obra, ao passo que alguns apontam falhas no ritmo e na edição como fatores que fragmentam a narrativa.",
   "verificacao_narrativa": {
@@ -1245,13 +1300,13 @@
     "n_chamadas": 3,
     "prefixo_codigo": "O meio-termo é o maior grupo da recepção (~45% das notas). ",
     "retry": null,
-    "spec_version": "1.9.22",
-    "texto": "O meio-termo é o maior grupo da recepção (~45% das notas). Enquanto muitos que recomendam baseiam-se em comparações, a maioria dos que reprovam questiona a representação de Napoleão e aponta o impacto emocional. No meio-termo, cerca de metade aborda a ênfase no relacionamento com Josefina, trazendo também ressalvas ao ritmo e à duração extensa.",
-    "texto_modelo": "Enquanto muitos que recomendam baseiam-se em comparações, a maioria dos que reprovam questiona a representação de Napoleão e aponta o impacto emocional. No meio-termo, cerca de metade aborda a ênfase no relacionamento com Josefina, trazendo também ressalvas ao ritmo e à duração extensa.",
+    "spec_version": "1.9.25",
+    "texto": "O meio-termo é o maior grupo da recepção (~45% das notas). O debate gira em torno da condução narrativa e da figura central: cerca de metade de quem recomenda valoriza a abordagem íntima do protagonista, enquanto a maioria dos que não recomendam reprova esse retrato. Para a maioria nas avaliações intermediárias, o incômodo está na ênfase exagerada à relação com Josefina.",
+    "texto_modelo": "O debate gira em torno da condução narrativa e da figura central: cerca de metade de quem recomenda valoriza a abordagem íntima do protagonista, enquanto a maioria dos que não recomendam reprova esse retrato. Para a maioria nas avaliações intermediárias, o incômodo está na ênfase exagerada à relação com Josefina.",
     "origem": "llm",
     "motivo": "melhor_entre_limpos",
-    "criterio_decisivo": "brevidade",
-    "abertura": "QUANT",
+    "criterio_decisivo": "abertura",
+    "abertura": "debat",
     "indice_escolhido": 2,
     "flags": [],
     "candidatos": [
@@ -1259,39 +1314,39 @@
         "indice": 0,
         "n_flags": 0,
         "flags": [],
-        "n_palavras": 51,
-        "n_ancoras": 3,
-        "abertura": "QUANT",
-        "abertura_freq": 17,
+        "n_palavras": 52,
+        "n_ancoras": 1,
+        "abertura": "diver",
+        "abertura_freq": 3,
         "eliminado": false
       },
       {
         "indice": 1,
         "n_flags": 0,
         "flags": [],
-        "n_palavras": 46,
-        "n_ancoras": 4,
-        "abertura": "QUANT",
-        "abertura_freq": 17,
+        "n_palavras": 53,
+        "n_ancoras": 1,
+        "abertura": "opini",
+        "abertura_freq": 4,
         "eliminado": false
       },
       {
         "indice": 2,
         "n_flags": 0,
         "flags": [],
-        "n_palavras": 43,
-        "n_ancoras": 4,
-        "abertura": "QUANT",
-        "abertura_freq": 17,
+        "n_palavras": 50,
+        "n_ancoras": 1,
+        "abertura": "debat",
+        "abertura_freq": 1,
         "eliminado": false
       }
     ],
     "uso": {
-      "prompt_tokens": 3861,
-      "completion_tokens": 227,
+      "prompt_tokens": 4026,
+      "completion_tokens": 234,
       "cache_hit_tokens": 0,
-      "cache_miss_tokens": 3861
+      "cache_miss_tokens": 4026
     },
-    "latencia_s": 11.74
+    "latencia_s": 25.83
   }
 }

@@ -861,8 +861,16 @@
   ],
   "eixos": {
     "taxonomia_id": "ebab2667de74",
-    "margem_lift_pp": 20,
-    "contraste": "valorativo",
+    "margem": {
+      "lei": "lift^2 * n >= 2085136/1000000",
+      "constante_quadrada": [
+        2085136,
+        1000000
+      ],
+      "n": 40,
+      "limiar_pp": 22.83
+    },
+    "margem_lift_pp": 22.83,
     "linhas": [
       {
         "eixo": "ritmo",
@@ -871,25 +879,28 @@
             "mencoes": 13,
             "de_n": 40,
             "freq_pct": 32.5,
-            "lift_pp": 6.2,
+            "lift_pp": 7.5,
+            "acima_da_margem": false,
             "tema": "Ritmo lento e arrastado",
             "exemplo_parafraseado": "O filme se arrasta de tal forma que chega a dar sono, e muitas cenas parecem desnecessárias, tornando a experiência entediante.",
             "temas_no_mesmo_eixo": []
           },
           "medianas": {
-            "mencoes": 7,
-            "de_n": 36,
-            "freq_pct": 19.4,
-            "lift_pp": -13.1,
+            "mencoes": 8,
+            "de_n": 40,
+            "freq_pct": 20.0,
+            "lift_pp": -12.5,
+            "acima_da_margem": false,
             "tema": "Ritmo irregular (primeira parte lenta)",
             "exemplo_parafraseado": "O início foi descrito como lento e monótono, mas o filme ganha intensidade no meio, embora haja altos e baixos que quebram o fluxo.",
             "temas_no_mesmo_eixo": []
           },
           "positivas": {
             "mencoes": 10,
-            "de_n": 38,
-            "freq_pct": 26.3,
-            "lift_pp": -6.2,
+            "de_n": 40,
+            "freq_pct": 25.0,
+            "lift_pp": -7.5,
+            "acima_da_margem": false,
             "tema": null,
             "exemplo_parafraseado": null,
             "temas_no_mesmo_eixo": []
@@ -908,25 +919,28 @@
             "mencoes": 4,
             "de_n": 40,
             "freq_pct": 10.0,
-            "lift_pp": -5.8,
+            "lift_pp": -5.0,
+            "acima_da_margem": false,
             "tema": "Atuações ruins ou pouco convincentes",
             "exemplo_parafraseado": "Achei as atuações forçadas e sem naturalidade, o que contribuiu para eu não acreditar na história.",
             "temas_no_mesmo_eixo": []
           },
           "medianas": {
             "mencoes": 4,
-            "de_n": 36,
-            "freq_pct": 11.1,
-            "lift_pp": -4.7,
+            "de_n": 40,
+            "freq_pct": 10.0,
+            "lift_pp": -5.0,
+            "acima_da_margem": false,
             "tema": null,
             "exemplo_parafraseado": null,
             "temas_no_mesmo_eixo": []
           },
           "positivas": {
             "mencoes": 6,
-            "de_n": 38,
-            "freq_pct": 15.8,
-            "lift_pp": 4.7,
+            "de_n": 40,
+            "freq_pct": 15.0,
+            "lift_pp": 5.0,
+            "acima_da_margem": false,
             "tema": "Atuações do elenco",
             "exemplo_parafraseado": "As atuações são amplamente elogiadas, com destaque para a capacidade dos atores de transmitirem emoções complexas apenas com o olhar.",
             "temas_no_mesmo_eixo": []
@@ -945,25 +959,28 @@
             "mencoes": 5,
             "de_n": 40,
             "freq_pct": 12.5,
-            "lift_pp": -27.0,
+            "lift_pp": -25.0,
+            "acima_da_margem": false,
             "tema": null,
             "exemplo_parafraseado": null,
             "temas_no_mesmo_eixo": []
           },
           "medianas": {
-            "mencoes": 10,
-            "de_n": 36,
-            "freq_pct": 27.8,
-            "lift_pp": -11.7,
+            "mencoes": 11,
+            "de_n": 40,
+            "freq_pct": 27.5,
+            "lift_pp": -10.0,
+            "acima_da_margem": false,
             "tema": "Simbolismo e direção de arte elogiados",
             "exemplo_parafraseado": "A fotografia, os cenários e a direção de arte foram bastante elogiados, especialmente o uso de escadas e alturas para representar a hierarquia social.",
             "temas_no_mesmo_eixo": []
           },
           "positivas": {
             "mencoes": 15,
-            "de_n": 38,
-            "freq_pct": 39.5,
-            "lift_pp": 11.7,
+            "de_n": 40,
+            "freq_pct": 37.5,
+            "lift_pp": 10.0,
+            "acima_da_margem": false,
             "tema": "Direção e simbolismo visual",
             "exemplo_parafraseado": "O grupo ressalta a maestria do diretor em usar a linguagem visual para reforçar os temas, como as escadas e os espaços verticais que simbolizam a hierarquia social, além das composições repletas de metáforas.",
             "temas_no_mesmo_eixo": [
@@ -984,7 +1001,8 @@
             "mencoes": 18,
             "de_n": 40,
             "freq_pct": 45.0,
-            "lift_pp": -24.4,
+            "lift_pp": -25.0,
+            "acima_da_margem": false,
             "tema": "Roteiro sem sentido ou exagerado",
             "exemplo_parafraseado": "A trama começa interessante, mas depois se perde em reviravoltas absurdas e situações inverossímeis, deixando a impressão de que o roteirista perdeu o controle.",
             "temas_no_mesmo_eixo": [
@@ -992,10 +1010,11 @@
             ]
           },
           "medianas": {
-            "mencoes": 25,
-            "de_n": 36,
-            "freq_pct": 69.4,
-            "lift_pp": 1.0,
+            "mencoes": 28,
+            "de_n": 40,
+            "freq_pct": 70.0,
+            "lift_pp": 0.0,
+            "acima_da_margem": false,
             "tema": "Personagens superficiais ou caricatos",
             "exemplo_parafraseado": "As figuras são mais símbolos de suas classes do que pessoas complexas, com profundidade psicológica insuficiente, o que enfraquece a conexão emocional.",
             "temas_no_mesmo_eixo": [
@@ -1004,10 +1023,11 @@
             ]
           },
           "positivas": {
-            "mencoes": 26,
-            "de_n": 38,
-            "freq_pct": 68.4,
-            "lift_pp": -1.0,
+            "mencoes": 28,
+            "de_n": 40,
+            "freq_pct": 70.0,
+            "lift_pp": 0.0,
+            "acima_da_margem": false,
             "tema": "Roteiro e reviravoltas",
             "exemplo_parafraseado": "Muitos elogiam a construção narrativa e as reviravoltas inesperadas, que transformam a história de forma surpreendente e mantêm a tensão até o fim.",
             "temas_no_mesmo_eixo": []
@@ -1026,25 +1046,28 @@
             "mencoes": 0,
             "de_n": 40,
             "freq_pct": 0.0,
-            "lift_pp": -5.6,
+            "lift_pp": -7.5,
+            "acima_da_margem": false,
             "tema": null,
             "exemplo_parafraseado": null,
             "temas_no_mesmo_eixo": []
           },
           "medianas": {
-            "mencoes": 2,
-            "de_n": 36,
-            "freq_pct": 5.6,
-            "lift_pp": 2.9,
+            "mencoes": 3,
+            "de_n": 40,
+            "freq_pct": 7.5,
+            "lift_pp": 5.0,
+            "acima_da_margem": false,
             "tema": null,
             "exemplo_parafraseado": null,
             "temas_no_mesmo_eixo": []
           },
           "positivas": {
             "mencoes": 1,
-            "de_n": 38,
-            "freq_pct": 2.6,
-            "lift_pp": -2.9,
+            "de_n": 40,
+            "freq_pct": 2.5,
+            "lift_pp": -5.0,
+            "acima_da_margem": false,
             "tema": null,
             "exemplo_parafraseado": null,
             "temas_no_mesmo_eixo": []
@@ -1063,25 +1086,28 @@
             "mencoes": 4,
             "de_n": 40,
             "freq_pct": 10.0,
-            "lift_pp": -17.8,
+            "lift_pp": -20.0,
+            "acima_da_margem": false,
             "tema": null,
             "exemplo_parafraseado": null,
             "temas_no_mesmo_eixo": []
           },
           "medianas": {
-            "mencoes": 10,
-            "de_n": 36,
-            "freq_pct": 27.8,
-            "lift_pp": 6.7,
+            "mencoes": 12,
+            "de_n": 40,
+            "freq_pct": 30.0,
+            "lift_pp": 10.0,
+            "acima_da_margem": false,
             "tema": null,
             "exemplo_parafraseado": null,
             "temas_no_mesmo_eixo": []
           },
           "positivas": {
             "mencoes": 8,
-            "de_n": 38,
-            "freq_pct": 21.1,
-            "lift_pp": -6.7,
+            "de_n": 40,
+            "freq_pct": 20.0,
+            "lift_pp": -10.0,
+            "acima_da_margem": false,
             "tema": "Mudança de tom e gênero",
             "exemplo_parafraseado": "Muitos comentam sobre a brusca transição do humor para o suspense e terror, que pode ser chocante, mas contribui para a força do filme.",
             "temas_no_mesmo_eixo": []
@@ -1100,25 +1126,28 @@
             "mencoes": 16,
             "de_n": 40,
             "freq_pct": 40.0,
-            "lift_pp": 8.4,
+            "lift_pp": 10.0,
+            "acima_da_margem": false,
             "tema": null,
             "exemplo_parafraseado": null,
             "temas_no_mesmo_eixo": []
           },
           "medianas": {
-            "mencoes": 10,
-            "de_n": 36,
-            "freq_pct": 27.8,
-            "lift_pp": -12.2,
+            "mencoes": 11,
+            "de_n": 40,
+            "freq_pct": 27.5,
+            "lift_pp": -12.5,
+            "acima_da_margem": false,
             "tema": null,
             "exemplo_parafraseado": null,
             "temas_no_mesmo_eixo": []
           },
           "positivas": {
             "mencoes": 12,
-            "de_n": 38,
-            "freq_pct": 31.6,
-            "lift_pp": -8.4,
+            "de_n": 40,
+            "freq_pct": 30.0,
+            "lift_pp": -10.0,
+            "acima_da_margem": false,
             "tema": null,
             "exemplo_parafraseado": null,
             "temas_no_mesmo_eixo": []
@@ -1137,25 +1166,28 @@
             "mencoes": 2,
             "de_n": 40,
             "freq_pct": 5.0,
-            "lift_pp": -21.3,
+            "lift_pp": -20.0,
+            "acima_da_margem": false,
             "tema": null,
             "exemplo_parafraseado": null,
             "temas_no_mesmo_eixo": []
           },
           "medianas": {
             "mencoes": 5,
-            "de_n": 36,
-            "freq_pct": 13.9,
-            "lift_pp": -12.4,
+            "de_n": 40,
+            "freq_pct": 12.5,
+            "lift_pp": -12.5,
+            "acima_da_margem": false,
             "tema": null,
             "exemplo_parafraseado": null,
             "temas_no_mesmo_eixo": []
           },
           "positivas": {
             "mencoes": 10,
-            "de_n": 38,
-            "freq_pct": 26.3,
-            "lift_pp": 12.4,
+            "de_n": 40,
+            "freq_pct": 25.0,
+            "lift_pp": 12.5,
+            "acima_da_margem": false,
             "tema": null,
             "exemplo_parafraseado": null,
             "temas_no_mesmo_eixo": []
@@ -1174,25 +1206,28 @@
             "mencoes": 12,
             "de_n": 40,
             "freq_pct": 30.0,
-            "lift_pp": -0.6,
+            "lift_pp": 0.0,
+            "acima_da_margem": false,
             "tema": "Expectativa não correspondida",
             "exemplo_parafraseado": "Cheguei com uma expectativa enorme por causa do Oscar e do hype, mas o filme não me entregou nada disso, sendo bem decepcionante.",
             "temas_no_mesmo_eixo": []
           },
           "medianas": {
-            "mencoes": 11,
-            "de_n": 36,
-            "freq_pct": 30.6,
-            "lift_pp": 0.6,
+            "mencoes": 12,
+            "de_n": 40,
+            "freq_pct": 30.0,
+            "lift_pp": 0.0,
+            "acima_da_margem": false,
             "tema": "Expectativas altas e hype",
             "exemplo_parafraseado": "Muitas pessoas disseram que o filme foi superestimado, pois a fama criou expectativas que não se confirmaram, resultando em uma experiência apenas boa, não marcante.",
             "temas_no_mesmo_eixo": []
           },
           "positivas": {
             "mencoes": 6,
-            "de_n": 38,
-            "freq_pct": 15.8,
-            "lift_pp": -14.8,
+            "de_n": 40,
+            "freq_pct": 15.0,
+            "lift_pp": -15.0,
+            "acima_da_margem": false,
             "tema": null,
             "exemplo_parafraseado": null,
             "temas_no_mesmo_eixo": []
@@ -1211,25 +1246,28 @@
             "mencoes": 13,
             "de_n": 40,
             "freq_pct": 32.5,
-            "lift_pp": -22.8,
+            "lift_pp": -22.5,
+            "acima_da_margem": false,
             "tema": "Crítica social superficial ou mal desenvolvida",
             "exemplo_parafraseado": "A mensagem sobre desigualdade social é interessante, mas é apresentada de forma tão óbvia e forçada que acaba perdendo a profundidade.",
             "temas_no_mesmo_eixo": []
           },
           "medianas": {
-            "mencoes": 15,
-            "de_n": 36,
-            "freq_pct": 41.7,
-            "lift_pp": -13.6,
+            "mencoes": 17,
+            "de_n": 40,
+            "freq_pct": 42.5,
+            "lift_pp": -12.5,
+            "acima_da_margem": false,
             "tema": null,
             "exemplo_parafraseado": null,
             "temas_no_mesmo_eixo": []
           },
           "positivas": {
-            "mencoes": 21,
-            "de_n": 38,
-            "freq_pct": 55.3,
-            "lift_pp": 13.6,
+            "mencoes": 22,
+            "de_n": 40,
+            "freq_pct": 55.0,
+            "lift_pp": 12.5,
+            "acima_da_margem": false,
             "tema": "Crítica social e desigualdade de classes",
             "exemplo_parafraseado": "Este grupo destaca como a obra expõe o abismo entre classes, mostrando que um mesmo acontecimento pode ser visto como bênção ou desgraça dependendo da posição social, e que os mais pobres são sempre os mais prejudicados.",
             "temas_no_mesmo_eixo": []
@@ -1242,41 +1280,21 @@
         }
       }
     ],
-    "fonte_classificacao": {
-      "arquivo": "resultado/votacao-3/consenso.jsonl",
-      "criterio": "votacao_3_consenso_2_de_3",
-      "por_bucket": {
-        "negativas": {
-          "n_classificadas": 40,
-          "n_analisadas": 40,
-          "sobreposicao_com_analisadas": 40
-        },
-        "medianas": {
-          "n_classificadas": 36,
-          "n_analisadas": 40,
-          "sobreposicao_com_analisadas": 36
-        },
-        "positivas": {
-          "n_classificadas": 38,
-          "n_analisadas": 40,
-          "sobreposicao_com_analisadas": 38
-        }
-      }
-    },
+    "contraste": "valorativo",
     "rotulagem": {
       "n_chamadas": 3,
       "falharam": [],
       "fora_da_taxonomia": {},
       "houve_retentativa": []
     },
-    "spec_version": "1.9.16",
     "verificador": {
       "aplicado": true,
       "variante": "V2_alvo",
       "passada": 1,
       "eixo": "impacto_emocional",
       "n_removidas_no_corpus": 1654
-    }
+    },
+    "spec_version": "1.9.34"
   },
   "narrativa": "Dirigido por Bong Joon-ho e lançado em 2019, o longa-metragem Parasita combina comédia, drama e suspense ao retratar o cotidiano de uma família desempregada que vive em condições precárias num porão apertado. Ao vislumbrarem uma oportunidade, eles elaboram um plano cuidadoso para se infiltrar gradualmente na rotina de um lar abastado, descobrindo que os segredos e mentiras cobram consequências severas.\n\nA experiência cinematográfica estrutura-se sobre uma cadência inicial cadenciada, apoiando-se em composições visuais repletas de simbolismos espaciais e em uma alternância tonal que articula humor, drama e tensão.\n\nNo que tange à recepção, os três grupos abordam essencialmente os mesmos elementos da produção, discordando apenas no veredito sobre a sua efetividade. Na grande maioria das notas (~94%), quase todos destacam o impacto da crítica social voltada à desigualdade de classes, enquanto muitos elogiam o roteiro e suas reviravoltas surpreendentes, e uma parcela expressiva exalta a direção pelo uso engenhoso do simbolismo visual. Em contrapartida, numa fração mínima das notas (~5%), para quem avalia dessa perspectiva intermediária, um número considerável afirma que a alta expectativa gerada reduziu o entusiasmo, com alguns apontando personagens superficiais ou caricatos e uma parte ressaltando furos de roteiro e falta de realismo. Por fim, numa fração ainda menor das notas (~1%), sob essa ótica negativa, vários criticam o ritmo excessivamente lento e arrastado, ao passo que uma fatia menor classifica a trama como exagerada ou sem sentido e parte deles manifesta frustração diante da expectativa não correspondida.",
   "verificacao_narrativa": {

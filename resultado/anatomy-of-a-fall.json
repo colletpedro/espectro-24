@@ -872,35 +872,46 @@
   ],
   "eixos": {
     "taxonomia_id": "ebab2667de74",
-    "margem_lift_pp": 20,
-    "contraste": "tematico",
+    "margem": {
+      "lei": "lift^2 * n >= 2085136/1000000",
+      "constante_quadrada": [
+        2085136,
+        1000000
+      ],
+      "n": 40,
+      "limiar_pp": 22.83
+    },
+    "margem_lift_pp": 22.83,
     "linhas": [
       {
         "eixo": "ritmo",
         "por_bucket": {
           "negativas": {
-            "mencoes": 23,
-            "de_n": 34,
-            "freq_pct": 67.6,
-            "lift_pp": 28.8,
+            "mencoes": 27,
+            "de_n": 40,
+            "freq_pct": 67.5,
+            "lift_pp": 30.0,
+            "acima_da_margem": true,
             "tema": "Ritmo lento e arrastado",
             "exemplo_parafraseado": "Muitas reviews negativas reclamam que o filme se estende demais, com cenas longas e diálogos prolongados que tornam a experiência cansativa e até entediante.",
             "temas_no_mesmo_eixo": []
           },
           "medianas": {
-            "mencoes": 14,
-            "de_n": 36,
-            "freq_pct": 38.9,
-            "lift_pp": -28.8,
+            "mencoes": 15,
+            "de_n": 40,
+            "freq_pct": 37.5,
+            "lift_pp": -30.0,
+            "acima_da_margem": false,
             "tema": "Ritmo lento e duração excessiva",
             "exemplo_parafraseado": "O filme se arrasta e poderia ser mais curto, o que cansa o espectador.",
             "temas_no_mesmo_eixo": []
           },
           "positivas": {
-            "mencoes": 9,
-            "de_n": 27,
-            "freq_pct": 33.3,
-            "lift_pp": -34.3,
+            "mencoes": 14,
+            "de_n": 40,
+            "freq_pct": 35.0,
+            "lift_pp": -32.5,
+            "acima_da_margem": false,
             "tema": "Tensão e suspense no tribunal",
             "exemplo_parafraseado": "As cenas de tribunal são apontadas como extremamente cativantes, gerando ansiedade e mantendo o espectador sem saber o desfecho até o fim.",
             "temas_no_mesmo_eixo": []
@@ -916,28 +927,31 @@
         "eixo": "atuacao",
         "por_bucket": {
           "negativas": {
-            "mencoes": 13,
-            "de_n": 34,
-            "freq_pct": 38.2,
-            "lift_pp": -9.9,
+            "mencoes": 14,
+            "de_n": 40,
+            "freq_pct": 35.0,
+            "lift_pp": -10.0,
+            "acima_da_margem": false,
             "tema": null,
             "exemplo_parafraseado": null,
             "temas_no_mesmo_eixo": []
           },
           "medianas": {
-            "mencoes": 11,
-            "de_n": 36,
-            "freq_pct": 30.6,
-            "lift_pp": -17.6,
+            "mencoes": 13,
+            "de_n": 40,
+            "freq_pct": 32.5,
+            "lift_pp": -12.5,
+            "acima_da_margem": false,
             "tema": "Atuações fortes (incluindo o cachorro)",
             "exemplo_parafraseado": "A atuação da protagonista é excelente, e o cachorro rouba a cena.",
             "temas_no_mesmo_eixo": []
           },
           "positivas": {
-            "mencoes": 13,
-            "de_n": 27,
-            "freq_pct": 48.1,
-            "lift_pp": 9.9,
+            "mencoes": 18,
+            "de_n": 40,
+            "freq_pct": 45.0,
+            "lift_pp": 10.0,
+            "acima_da_margem": false,
             "tema": "Atuações excepcionais",
             "exemplo_parafraseado": "As performances, especialmente as de Sandra Hüller e do ator mirim, são tão convincentes que os espectadores esquecem que estão vendo uma ficção.",
             "temas_no_mesmo_eixo": []
@@ -953,28 +967,31 @@
         "eixo": "direcao_imagem",
         "por_bucket": {
           "negativas": {
-            "mencoes": 5,
-            "de_n": 34,
-            "freq_pct": 14.7,
-            "lift_pp": -14.9,
+            "mencoes": 7,
+            "de_n": 40,
+            "freq_pct": 17.5,
+            "lift_pp": -7.5,
+            "acima_da_margem": false,
             "tema": null,
             "exemplo_parafraseado": null,
             "temas_no_mesmo_eixo": []
           },
           "medianas": {
-            "mencoes": 3,
-            "de_n": 36,
-            "freq_pct": 8.3,
-            "lift_pp": -21.3,
+            "mencoes": 4,
+            "de_n": 40,
+            "freq_pct": 10.0,
+            "lift_pp": -15.0,
+            "acima_da_margem": false,
             "tema": null,
             "exemplo_parafraseado": null,
             "temas_no_mesmo_eixo": []
           },
           "positivas": {
-            "mencoes": 8,
-            "de_n": 27,
-            "freq_pct": 29.6,
-            "lift_pp": 14.9,
+            "mencoes": 10,
+            "de_n": 40,
+            "freq_pct": 25.0,
+            "lift_pp": 7.5,
+            "acima_da_margem": false,
             "tema": "Direção e atmosfera realista",
             "exemplo_parafraseado": "A direção é elogiada por criar uma sensação de realismo, com uma câmera que observa sem julgar e um uso de som que amplifica a tensão.",
             "temas_no_mesmo_eixo": []
@@ -990,10 +1007,11 @@
         "eixo": "roteiro_estrutura",
         "por_bucket": {
           "negativas": {
-            "mencoes": 28,
-            "de_n": 34,
-            "freq_pct": 82.4,
-            "lift_pp": 7.4,
+            "mencoes": 32,
+            "de_n": 40,
+            "freq_pct": 80.0,
+            "lift_pp": 5.0,
+            "acima_da_margem": false,
             "tema": "Final em aberto frustrante",
             "exemplo_parafraseado": "A ausência de uma conclusão definitiva sobre o que realmente aconteceu foi um ponto central de insatisfação, deixando a impressão de que as horas investidas não trouxeram recompensa.",
             "temas_no_mesmo_eixo": [
@@ -1002,10 +1020,11 @@
             ]
           },
           "medianas": {
-            "mencoes": 27,
-            "de_n": 36,
+            "mencoes": 30,
+            "de_n": 40,
             "freq_pct": 75.0,
-            "lift_pp": -7.4,
+            "lift_pp": -5.0,
+            "acima_da_margem": false,
             "tema": "Final ambíguo e sem respostas definitivas",
             "exemplo_parafraseado": "A falta de uma conclusão clara deixa uma sensação de insatisfação, mas também provoca reflexão sobre a complexidade da verdade.",
             "temas_no_mesmo_eixo": [
@@ -1013,10 +1032,11 @@
             ]
           },
           "positivas": {
-            "mencoes": 19,
-            "de_n": 27,
-            "freq_pct": 70.4,
-            "lift_pp": -12.0,
+            "mencoes": 29,
+            "de_n": 40,
+            "freq_pct": 72.5,
+            "lift_pp": -7.5,
+            "acima_da_margem": false,
             "tema": "Dissolução e complexidade conjugal",
             "exemplo_parafraseado": "O filme é descrito como uma autópsia emocional de um casamento, mostrando as falhas de comunicação, ressentimentos e a dificuldade de conhecer verdadeiramente o outro.",
             "temas_no_mesmo_eixo": [
@@ -1034,28 +1054,31 @@
         "eixo": "som_trilha",
         "por_bucket": {
           "negativas": {
-            "mencoes": 2,
-            "de_n": 34,
-            "freq_pct": 5.9,
-            "lift_pp": -8.9,
+            "mencoes": 4,
+            "de_n": 40,
+            "freq_pct": 10.0,
+            "lift_pp": -2.5,
+            "acima_da_margem": false,
             "tema": "Mistura de idiomas incomoda",
             "exemplo_parafraseado": "A alternância entre francês e inglês foi vista por alguns como artificial e desconfortável, dificultando a imersão.",
             "temas_no_mesmo_eixo": []
           },
           "medianas": {
             "mencoes": 1,
-            "de_n": 36,
-            "freq_pct": 2.8,
-            "lift_pp": -12.0,
+            "de_n": 40,
+            "freq_pct": 2.5,
+            "lift_pp": -10.0,
+            "acima_da_margem": false,
             "tema": null,
             "exemplo_parafraseado": null,
             "temas_no_mesmo_eixo": []
           },
           "positivas": {
-            "mencoes": 4,
-            "de_n": 27,
-            "freq_pct": 14.8,
-            "lift_pp": 8.9,
+            "mencoes": 5,
+            "de_n": 40,
+            "freq_pct": 12.5,
+            "lift_pp": 2.5,
+            "acima_da_margem": false,
             "tema": null,
             "exemplo_parafraseado": null,
             "temas_no_mesmo_eixo": []
@@ -1072,27 +1095,30 @@
         "por_bucket": {
           "negativas": {
             "mencoes": 3,
-            "de_n": 34,
-            "freq_pct": 8.8,
-            "lift_pp": -9.7,
+            "de_n": 40,
+            "freq_pct": 7.5,
+            "lift_pp": -12.5,
+            "acima_da_margem": false,
             "tema": null,
             "exemplo_parafraseado": null,
             "temas_no_mesmo_eixo": []
           },
           "medianas": {
             "mencoes": 3,
-            "de_n": 36,
-            "freq_pct": 8.3,
-            "lift_pp": -10.2,
+            "de_n": 40,
+            "freq_pct": 7.5,
+            "lift_pp": -12.5,
+            "acima_da_margem": false,
             "tema": "Foco nas relações humanas e na subjetividade da verdade",
             "exemplo_parafraseado": "A história mostra como cada pessoa interpreta os fatos de um jeito, expondo a fragilidade dos relacionamentos.",
             "temas_no_mesmo_eixo": []
           },
           "positivas": {
-            "mencoes": 5,
-            "de_n": 27,
-            "freq_pct": 18.5,
-            "lift_pp": 9.7,
+            "mencoes": 8,
+            "de_n": 40,
+            "freq_pct": 20.0,
+            "lift_pp": 12.5,
+            "acima_da_margem": false,
             "tema": "Reflexões sobre verdade e percepção",
             "exemplo_parafraseado": "O filme propõe questionamentos sobre a natureza da verdade e como a mesma história pode ser interpretada de maneiras opostas, deixando espaço para dúvidas.",
             "temas_no_mesmo_eixo": []
@@ -1109,27 +1135,30 @@
         "por_bucket": {
           "negativas": {
             "mencoes": 14,
-            "de_n": 34,
-            "freq_pct": 41.2,
-            "lift_pp": -3.3,
+            "de_n": 40,
+            "freq_pct": 35.0,
+            "lift_pp": -5.0,
+            "acima_da_margem": false,
             "tema": null,
             "exemplo_parafraseado": null,
             "temas_no_mesmo_eixo": []
           },
           "medianas": {
-            "mencoes": 15,
-            "de_n": 36,
-            "freq_pct": 41.7,
-            "lift_pp": -2.8,
+            "mencoes": 16,
+            "de_n": 40,
+            "freq_pct": 40.0,
+            "lift_pp": 0.0,
+            "acima_da_margem": false,
             "tema": null,
             "exemplo_parafraseado": null,
             "temas_no_mesmo_eixo": []
           },
           "positivas": {
-            "mencoes": 12,
-            "de_n": 27,
-            "freq_pct": 44.4,
-            "lift_pp": 2.8,
+            "mencoes": 16,
+            "de_n": 40,
+            "freq_pct": 40.0,
+            "lift_pp": 0.0,
+            "acima_da_margem": false,
             "tema": null,
             "exemplo_parafraseado": null,
             "temas_no_mesmo_eixo": []
@@ -1145,28 +1174,31 @@
         "eixo": "comparacoes",
         "por_bucket": {
           "negativas": {
-            "mencoes": 9,
-            "de_n": 34,
-            "freq_pct": 26.5,
-            "lift_pp": -3.2,
+            "mencoes": 11,
+            "de_n": 40,
+            "freq_pct": 27.5,
+            "lift_pp": 2.5,
+            "acima_da_margem": false,
             "tema": null,
             "exemplo_parafraseado": null,
             "temas_no_mesmo_eixo": []
           },
           "medianas": {
-            "mencoes": 4,
-            "de_n": 36,
-            "freq_pct": 11.1,
-            "lift_pp": -18.5,
+            "mencoes": 7,
+            "de_n": 40,
+            "freq_pct": 17.5,
+            "lift_pp": -10.0,
+            "acima_da_margem": false,
             "tema": null,
             "exemplo_parafraseado": null,
             "temas_no_mesmo_eixo": []
           },
           "positivas": {
-            "mencoes": 8,
-            "de_n": 27,
-            "freq_pct": 29.6,
-            "lift_pp": 3.2,
+            "mencoes": 10,
+            "de_n": 40,
+            "freq_pct": 25.0,
+            "lift_pp": -2.5,
+            "acima_da_margem": false,
             "tema": null,
             "exemplo_parafraseado": null,
             "temas_no_mesmo_eixo": []
@@ -1182,28 +1214,31 @@
         "eixo": "expectativa",
         "por_bucket": {
           "negativas": {
-            "mencoes": 8,
-            "de_n": 34,
-            "freq_pct": 23.5,
-            "lift_pp": 6.9,
+            "mencoes": 10,
+            "de_n": 40,
+            "freq_pct": 25.0,
+            "lift_pp": 10.0,
+            "acima_da_margem": false,
             "tema": "Expectativas não correspondidas",
             "exemplo_parafraseado": "Devido ao enorme hype e aos prêmios recebidos, muitos entraram com altas expectativas e saíram decepcionados, considerando o filme superestimado.",
             "temas_no_mesmo_eixo": []
           },
           "medianas": {
             "mencoes": 6,
-            "de_n": 36,
-            "freq_pct": 16.7,
-            "lift_pp": -6.9,
+            "de_n": 40,
+            "freq_pct": 15.0,
+            "lift_pp": -10.0,
+            "acima_da_margem": false,
             "tema": "Expectativa por um grande acontecimento que não vem",
             "exemplo_parafraseado": "A trama não oferece uma grande reviravolta, o que decepciona quem esperava mais ação.",
             "temas_no_mesmo_eixo": []
           },
           "positivas": {
-            "mencoes": 3,
-            "de_n": 27,
-            "freq_pct": 11.1,
-            "lift_pp": -12.4,
+            "mencoes": 6,
+            "de_n": 40,
+            "freq_pct": 15.0,
+            "lift_pp": -10.0,
+            "acima_da_margem": false,
             "tema": null,
             "exemplo_parafraseado": null,
             "temas_no_mesmo_eixo": []
@@ -1220,27 +1255,30 @@
         "por_bucket": {
           "negativas": {
             "mencoes": 5,
-            "de_n": 34,
-            "freq_pct": 14.7,
-            "lift_pp": -3.8,
+            "de_n": 40,
+            "freq_pct": 12.5,
+            "lift_pp": -5.0,
+            "acima_da_margem": false,
             "tema": null,
             "exemplo_parafraseado": null,
             "temas_no_mesmo_eixo": []
           },
           "medianas": {
             "mencoes": 5,
-            "de_n": 36,
-            "freq_pct": 13.9,
-            "lift_pp": -4.6,
+            "de_n": 40,
+            "freq_pct": 12.5,
+            "lift_pp": -5.0,
+            "acima_da_margem": false,
             "tema": null,
             "exemplo_parafraseado": null,
             "temas_no_mesmo_eixo": []
           },
           "positivas": {
-            "mencoes": 5,
-            "de_n": 27,
-            "freq_pct": 18.5,
-            "lift_pp": 3.8,
+            "mencoes": 7,
+            "de_n": 40,
+            "freq_pct": 17.5,
+            "lift_pp": 5.0,
+            "acima_da_margem": false,
             "tema": null,
             "exemplo_parafraseado": null,
             "temas_no_mesmo_eixo": []
@@ -1253,41 +1291,21 @@
         }
       }
     ],
-    "fonte_classificacao": {
-      "arquivo": "resultado/votacao-3/consenso.jsonl",
-      "criterio": "votacao_3_consenso_2_de_3",
-      "por_bucket": {
-        "negativas": {
-          "n_classificadas": 34,
-          "n_analisadas": 40,
-          "sobreposicao_com_analisadas": 34
-        },
-        "medianas": {
-          "n_classificadas": 36,
-          "n_analisadas": 40,
-          "sobreposicao_com_analisadas": 36
-        },
-        "positivas": {
-          "n_classificadas": 27,
-          "n_analisadas": 40,
-          "sobreposicao_com_analisadas": 27
-        }
-      }
-    },
+    "contraste": "tematico",
     "rotulagem": {
       "n_chamadas": 3,
       "falharam": [],
       "fora_da_taxonomia": {},
       "houve_retentativa": []
     },
-    "spec_version": "1.9.16",
     "verificador": {
       "aplicado": true,
       "variante": "V2_alvo",
       "passada": 1,
       "eixo": "impacto_emocional",
       "n_removidas_no_corpus": 1654
-    }
+    },
+    "spec_version": "1.9.34"
   },
   "narrativa": "Lançado em 2023 e dirigido por Justine Triet, Anatomia de uma Queda combina elementos de suspense, mistério e drama criminal. A trama acompanha uma mulher que se torna a principal suspeita após a morte de seu marido, enquanto o filho do casal, que tem deficiência visual, se vê diante de um dilema moral por ser a única testemunha do caso.\n\nA obra se estrutura a partir de um ritmo desacelerado e de uma condução processual que se debruça detalhadamente sobre depoimentos e averiguações. Ao longo de sua duração, o filme mantém um tom sóbrio e uma atmosfera investigativa que se recusa a oferecer resoluções categóricas.\n\nNa grande maioria das notas (~88%), a maior parte destaca o impacto das atuações excepcionais no centro da narrativa. Paralelamente, uma parcela expressiva enfatiza como o longa disseca a dissolução e a complexidade conjugal, enquanto vários elogiam a construção do roteiro inteligente e de seus diálogos afiados.\n\nPara quem se posiciona numa fração mínima das notas (~10%), muitos apontam o ritmo lento e a duração excessiva como elementos que pesam na experiência. Nessa mesma faixa, boa parte comenta sobre o final ambíguo e sem respostas definitivas, embora um número considerável faça questão de reconhecer as atuações fortes, incluindo o desempenho do cão.\n\nJá na visão de quem compõe uma fração ainda menor das notas (~2%), a maior parcela critica o ritmo lento e arrastado da produção. Para além disso, muitos expressam incômodo com o desfecho em aberto, considerado frustrante, e uma fatia menor avalia que a história carece de profundidade.",
   "verificacao_narrativa": {
@@ -1366,12 +1384,12 @@
     "n_chamadas": 3,
     "prefixo_codigo": "",
     "retry": null,
-    "spec_version": "1.9.22",
-    "texto": "A maioria dos que recomendam destaca a complexidade e o desgaste da relação conjugal no roteiro. Em contrapartida, quase todos os que não recomendam se frustram com o desfecho sem respostas conclusivas, além de apontarem a cadência excessivamente arrastada da narrativa.",
-    "texto_modelo": "A maioria dos que recomendam destaca a complexidade e o desgaste da relação conjugal no roteiro. Em contrapartida, quase todos os que não recomendam se frustram com o desfecho sem respostas conclusivas, além de apontarem a cadência excessivamente arrastada da narrativa.",
+    "spec_version": "1.9.25",
+    "texto": "A maioria dos que recomendam destaca o retrato complexo da crise conjugal no roteiro. Em contraste, a maioria dos que não recomendam se frustra com o desfecho sem respostas fechadas na narrativa, além de apontar um andamento excessivamente vagaroso como problema.",
+    "texto_modelo": "A maioria dos que recomendam destaca o retrato complexo da crise conjugal no roteiro. Em contraste, a maioria dos que não recomendam se frustra com o desfecho sem respostas fechadas na narrativa, além de apontar um andamento excessivamente vagaroso como problema.",
     "origem": "llm",
     "motivo": "melhor_entre_limpos",
-    "criterio_decisivo": "empate",
+    "criterio_decisivo": "ancoras",
     "abertura": "QUANT",
     "indice_escolhido": 0,
     "flags": [],
@@ -1383,36 +1401,38 @@
         "n_palavras": 41,
         "n_ancoras": 1,
         "abertura": "QUANT",
-        "abertura_freq": 17,
+        "abertura_freq": 15,
         "eliminado": false
       },
       {
         "indice": 1,
         "n_flags": 0,
         "flags": [],
-        "n_palavras": 41,
-        "n_ancoras": 1,
+        "n_palavras": 44,
+        "n_ancoras": 0,
         "abertura": "QUANT",
-        "abertura_freq": 17,
+        "abertura_freq": 15,
         "eliminado": false
       },
       {
         "indice": 2,
-        "n_flags": 0,
-        "flags": [],
-        "n_palavras": 41,
+        "n_flags": 1,
+        "flags": [
+          "tema_ausente"
+        ],
+        "n_palavras": 43,
         "n_ancoras": 1,
         "abertura": "QUANT",
-        "abertura_freq": 17,
-        "eliminado": false
+        "abertura_freq": 15,
+        "eliminado": true
       }
     ],
     "uso": {
       "prompt_tokens": 3576,
-      "completion_tokens": 198,
+      "completion_tokens": 206,
       "cache_hit_tokens": 0,
       "cache_miss_tokens": 3576
     },
-    "latencia_s": 11.98
+    "latencia_s": 25.63
   }
 }

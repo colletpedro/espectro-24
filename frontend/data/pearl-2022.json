@@ -794,35 +794,46 @@
   ],
   "eixos": {
     "taxonomia_id": "ebab2667de74",
-    "margem_lift_pp": 20,
-    "contraste": "valorativo",
+    "margem": {
+      "lei": "lift^2 * n >= 2085136/1000000",
+      "constante_quadrada": [
+        2085136,
+        1000000
+      ],
+      "n": 27,
+      "limiar_pp": 27.79
+    },
+    "margem_lift_pp": 27.79,
     "linhas": [
       {
         "eixo": "ritmo",
         "por_bucket": {
           "negativas": {
             "mencoes": 8,
-            "de_n": 26,
-            "freq_pct": 30.8,
-            "lift_pp": 9.6,
+            "de_n": 27,
+            "freq_pct": 29.6,
+            "lift_pp": 7.1,
+            "acima_da_margem": false,
             "tema": "Tédio e ritmo arrastado",
             "exemplo_parafraseado": "O filme se arrasta e não consegue manter o interesse, sendo monótono e cansativo.",
             "temas_no_mesmo_eixo": []
           },
           "medianas": {
-            "mencoes": 7,
-            "de_n": 33,
-            "freq_pct": 21.2,
-            "lift_pp": -9.6,
+            "mencoes": 9,
+            "de_n": 40,
+            "freq_pct": 22.5,
+            "lift_pp": -7.1,
+            "acima_da_margem": false,
             "tema": "Ritmo e narrativa",
             "exemplo_parafraseado": "Muitos espectadores consideram o filme lento em alguns trechos, com a trama se desenvolvendo de forma arrastada, apesar de manter o interesse até o final.",
             "temas_no_mesmo_eixo": []
           },
           "positivas": {
             "mencoes": 2,
-            "de_n": 31,
-            "freq_pct": 6.5,
-            "lift_pp": -24.3,
+            "de_n": 40,
+            "freq_pct": 5.0,
+            "lift_pp": -24.6,
+            "acima_da_margem": false,
             "tema": null,
             "exemplo_parafraseado": null,
             "temas_no_mesmo_eixo": []
@@ -839,27 +850,30 @@
         "por_bucket": {
           "negativas": {
             "mencoes": 9,
-            "de_n": 26,
-            "freq_pct": 34.6,
-            "lift_pp": -20.2,
+            "de_n": 27,
+            "freq_pct": 33.3,
+            "lift_pp": -19.2,
+            "acima_da_margem": false,
             "tema": "Atuação boa apesar dos problemas",
             "exemplo_parafraseado": "Mesmo com todos os defeitos do filme, a atuação da atriz principal foi elogiada por transmitir bem as emoções da personagem.",
             "temas_no_mesmo_eixo": []
           },
           "medianas": {
-            "mencoes": 13,
-            "de_n": 33,
-            "freq_pct": 39.4,
-            "lift_pp": -15.4,
+            "mencoes": 17,
+            "de_n": 40,
+            "freq_pct": 42.5,
+            "lift_pp": -10.0,
+            "acima_da_margem": false,
             "tema": "Atuação de Mia Goth",
             "exemplo_parafraseado": "A atuação de Mia Goth é considerada o ponto alto do filme, com muitos destacando sua habilidade em alternar entre inocência e fúria intensa, além de sua presença marcante em cena.",
             "temas_no_mesmo_eixo": []
           },
           "positivas": {
-            "mencoes": 17,
-            "de_n": 31,
-            "freq_pct": 54.8,
-            "lift_pp": 15.4,
+            "mencoes": 21,
+            "de_n": 40,
+            "freq_pct": 52.5,
+            "lift_pp": 10.0,
+            "acima_da_margem": false,
             "tema": "Atuação de Mia Goth",
             "exemplo_parafraseado": "A atuação de Mia Goth é fenomenal, transmitindo a deterioração psicológica da personagem de forma visceral.",
             "temas_no_mesmo_eixo": []
@@ -867,7 +881,7 @@
         },
         "bullet_de": {
           "negativas": "frequencia",
-          "medianas": null,
+          "medianas": "frequencia",
           "positivas": "frequencia"
         }
       },
@@ -876,27 +890,30 @@
         "por_bucket": {
           "negativas": {
             "mencoes": 5,
-            "de_n": 26,
-            "freq_pct": 19.2,
-            "lift_pp": -6.6,
+            "de_n": 27,
+            "freq_pct": 18.5,
+            "lift_pp": -9.0,
+            "acima_da_margem": false,
             "tema": "Fotografia e estética visual marcante",
             "exemplo_parafraseado": "A direção de arte e a fotografia são visualmente impressionantes, mas isso não compensa as falhas na história e no desenvolvimento.",
             "temas_no_mesmo_eixo": []
           },
           "medianas": {
-            "mencoes": 7,
-            "de_n": 33,
-            "freq_pct": 21.2,
-            "lift_pp": -4.6,
+            "mencoes": 10,
+            "de_n": 40,
+            "freq_pct": 25.0,
+            "lift_pp": -2.5,
+            "acima_da_margem": false,
             "tema": "Estética visual e fotografia",
             "exemplo_parafraseado": "A direção de arte e a fotografia em cores vibrantes, que remetem a filmes clássicos, são amplamente elogiadas por contrastar com o tom sombrio da história.",
             "temas_no_mesmo_eixo": []
           },
           "positivas": {
-            "mencoes": 8,
-            "de_n": 31,
-            "freq_pct": 25.8,
-            "lift_pp": 4.6,
+            "mencoes": 11,
+            "de_n": 40,
+            "freq_pct": 27.5,
+            "lift_pp": 2.5,
+            "acima_da_margem": false,
             "tema": "Estética e direção de arte",
             "exemplo_parafraseado": "A estética vintage e a fotografia são elogiadas por criar uma atmosfera nostálgica e perturbadora.",
             "temas_no_mesmo_eixo": []
@@ -913,9 +930,10 @@
         "por_bucket": {
           "negativas": {
             "mencoes": 15,
-            "de_n": 26,
-            "freq_pct": 57.7,
-            "lift_pp": -0.4,
+            "de_n": 27,
+            "freq_pct": 55.6,
+            "lift_pp": -4.4,
+            "acima_da_margem": false,
             "tema": "Personagem principal irritante",
             "exemplo_parafraseado": "A protagonista é tão desagradável e egocêntrica que se torna difícil torcer por ela ou mesmo suportar sua presença em cena.",
             "temas_no_mesmo_eixo": [
@@ -923,19 +941,21 @@
             ]
           },
           "medianas": {
-            "mencoes": 15,
-            "de_n": 33,
-            "freq_pct": 45.5,
-            "lift_pp": -12.6,
+            "mencoes": 17,
+            "de_n": 40,
+            "freq_pct": 42.5,
+            "lift_pp": -17.5,
+            "acima_da_margem": false,
             "tema": "Personagem de Pearl e sua complexidade",
             "exemplo_parafraseado": "A construção da personagem Pearl é vista como um dos pontos fortes, com sua loucura e motivações gerando sentimentos ambivalentes de empatia e repulsa.",
             "temas_no_mesmo_eixo": []
           },
           "positivas": {
-            "mencoes": 18,
-            "de_n": 31,
-            "freq_pct": 58.1,
-            "lift_pp": 0.4,
+            "mencoes": 24,
+            "de_n": 40,
+            "freq_pct": 60.0,
+            "lift_pp": 4.4,
+            "acima_da_margem": false,
             "tema": "Monólogo final",
             "exemplo_parafraseado": "Destacam o monólogo final devastador que expõe a vulnerabilidade e a fúria da protagonista.",
             "temas_no_mesmo_eixo": [
@@ -945,7 +965,7 @@
         },
         "bullet_de": {
           "negativas": "frequencia",
-          "medianas": "frequencia",
+          "medianas": null,
           "positivas": "frequencia"
         }
       },
@@ -954,27 +974,30 @@
         "por_bucket": {
           "negativas": {
             "mencoes": 0,
-            "de_n": 26,
+            "de_n": 27,
             "freq_pct": 0.0,
-            "lift_pp": -6.1,
+            "lift_pp": -10.0,
+            "acima_da_margem": false,
             "tema": null,
             "exemplo_parafraseado": null,
             "temas_no_mesmo_eixo": []
           },
           "medianas": {
-            "mencoes": 2,
-            "de_n": 33,
-            "freq_pct": 6.1,
-            "lift_pp": 6.1,
+            "mencoes": 4,
+            "de_n": 40,
+            "freq_pct": 10.0,
+            "lift_pp": 7.5,
+            "acima_da_margem": false,
             "tema": "Trilha sonora",
             "exemplo_parafraseado": "A música é elogiada por sua beleza e por carregar um tom sinistro que complementa a atmosfera do filme.",
             "temas_no_mesmo_eixo": []
           },
           "positivas": {
-            "mencoes": 0,
-            "de_n": 31,
-            "freq_pct": 0.0,
-            "lift_pp": -6.1,
+            "mencoes": 1,
+            "de_n": 40,
+            "freq_pct": 2.5,
+            "lift_pp": -7.5,
+            "acima_da_margem": false,
             "tema": null,
             "exemplo_parafraseado": null,
             "temas_no_mesmo_eixo": []
@@ -991,27 +1014,30 @@
         "por_bucket": {
           "negativas": {
             "mencoes": 3,
-            "de_n": 26,
-            "freq_pct": 11.5,
-            "lift_pp": -11.0,
+            "de_n": 27,
+            "freq_pct": 11.1,
+            "lift_pp": -13.9,
+            "acima_da_margem": false,
             "tema": null,
             "exemplo_parafraseado": null,
             "temas_no_mesmo_eixo": []
           },
           "medianas": {
-            "mencoes": 5,
-            "de_n": 33,
-            "freq_pct": 15.2,
-            "lift_pp": -7.4,
+            "mencoes": 7,
+            "de_n": 40,
+            "freq_pct": 17.5,
+            "lift_pp": -7.5,
+            "acima_da_margem": false,
             "tema": null,
             "exemplo_parafraseado": null,
             "temas_no_mesmo_eixo": []
           },
           "positivas": {
-            "mencoes": 7,
-            "de_n": 31,
-            "freq_pct": 22.6,
-            "lift_pp": 7.4,
+            "mencoes": 10,
+            "de_n": 40,
+            "freq_pct": 25.0,
+            "lift_pp": 7.5,
+            "acima_da_margem": false,
             "tema": null,
             "exemplo_parafraseado": null,
             "temas_no_mesmo_eixo": []
@@ -1028,27 +1054,30 @@
         "por_bucket": {
           "negativas": {
             "mencoes": 4,
-            "de_n": 26,
-            "freq_pct": 15.4,
-            "lift_pp": -8.9,
+            "de_n": 27,
+            "freq_pct": 14.8,
+            "lift_pp": -12.7,
+            "acima_da_margem": false,
             "tema": null,
             "exemplo_parafraseado": null,
             "temas_no_mesmo_eixo": []
           },
           "medianas": {
-            "mencoes": 8,
-            "de_n": 33,
-            "freq_pct": 24.2,
-            "lift_pp": 1.7,
+            "mencoes": 11,
+            "de_n": 40,
+            "freq_pct": 27.5,
+            "lift_pp": 0.0,
+            "acima_da_margem": false,
             "tema": null,
             "exemplo_parafraseado": null,
             "temas_no_mesmo_eixo": []
           },
           "positivas": {
-            "mencoes": 7,
-            "de_n": 31,
-            "freq_pct": 22.6,
-            "lift_pp": -1.7,
+            "mencoes": 11,
+            "de_n": 40,
+            "freq_pct": 27.5,
+            "lift_pp": 0.0,
+            "acima_da_margem": false,
             "tema": null,
             "exemplo_parafraseado": null,
             "temas_no_mesmo_eixo": []
@@ -1064,28 +1093,31 @@
         "eixo": "comparacoes",
         "por_bucket": {
           "negativas": {
-            "mencoes": 4,
-            "de_n": 26,
-            "freq_pct": 15.4,
-            "lift_pp": -30.1,
+            "mencoes": 5,
+            "de_n": 27,
+            "freq_pct": 18.5,
+            "lift_pp": -26.5,
+            "acima_da_margem": false,
             "tema": null,
             "exemplo_parafraseado": null,
             "temas_no_mesmo_eixo": []
           },
           "medianas": {
-            "mencoes": 15,
-            "de_n": 33,
-            "freq_pct": 45.5,
+            "mencoes": 18,
+            "de_n": 40,
+            "freq_pct": 45.0,
             "lift_pp": 10.0,
+            "acima_da_margem": false,
             "tema": "Comparação com outros filmes da trilogia",
             "exemplo_parafraseado": "Alguns espectadores notam que este filme se distingue dos demais da trilogia por focar mais no aspecto psicológico, ao mesmo tempo que aprofunda a compreensão do primeiro filme.",
             "temas_no_mesmo_eixo": []
           },
           "positivas": {
-            "mencoes": 11,
-            "de_n": 31,
-            "freq_pct": 35.5,
+            "mencoes": 14,
+            "de_n": 40,
+            "freq_pct": 35.0,
             "lift_pp": -10.0,
+            "acima_da_margem": false,
             "tema": null,
             "exemplo_parafraseado": null,
             "temas_no_mesmo_eixo": []
@@ -1102,27 +1134,30 @@
         "por_bucket": {
           "negativas": {
             "mencoes": 3,
-            "de_n": 26,
-            "freq_pct": 11.5,
-            "lift_pp": 2.4,
+            "de_n": 27,
+            "freq_pct": 11.1,
+            "lift_pp": 1.1,
+            "acima_da_margem": false,
             "tema": "Expectativa de terror não atendida",
             "exemplo_parafraseado": "O filme promete sustos e momentos de tensão, mas entrega pouco horror, decepcionando quem esperava mais do gênero.",
             "temas_no_mesmo_eixo": []
           },
           "medianas": {
-            "mencoes": 3,
-            "de_n": 33,
-            "freq_pct": 9.1,
-            "lift_pp": -2.4,
+            "mencoes": 4,
+            "de_n": 40,
+            "freq_pct": 10.0,
+            "lift_pp": -1.1,
+            "acima_da_margem": false,
             "tema": null,
             "exemplo_parafraseado": null,
             "temas_no_mesmo_eixo": []
           },
           "positivas": {
-            "mencoes": 2,
-            "de_n": 31,
-            "freq_pct": 6.5,
-            "lift_pp": -5.1,
+            "mencoes": 3,
+            "de_n": 40,
+            "freq_pct": 7.5,
+            "lift_pp": -3.6,
+            "acima_da_margem": false,
             "tema": null,
             "exemplo_parafraseado": null,
             "temas_no_mesmo_eixo": []
@@ -1139,27 +1174,30 @@
         "por_bucket": {
           "negativas": {
             "mencoes": 3,
-            "de_n": 26,
-            "freq_pct": 11.5,
-            "lift_pp": -3.6,
+            "de_n": 27,
+            "freq_pct": 11.1,
+            "lift_pp": -6.4,
+            "acima_da_margem": false,
             "tema": null,
             "exemplo_parafraseado": null,
             "temas_no_mesmo_eixo": []
           },
           "medianas": {
-            "mencoes": 5,
-            "de_n": 33,
-            "freq_pct": 15.2,
-            "lift_pp": 2.2,
+            "mencoes": 7,
+            "de_n": 40,
+            "freq_pct": 17.5,
+            "lift_pp": 2.5,
+            "acima_da_margem": false,
             "tema": null,
             "exemplo_parafraseado": null,
             "temas_no_mesmo_eixo": []
           },
           "positivas": {
-            "mencoes": 4,
-            "de_n": 31,
-            "freq_pct": 12.9,
-            "lift_pp": -2.2,
+            "mencoes": 6,
+            "de_n": 40,
+            "freq_pct": 15.0,
+            "lift_pp": -2.5,
+            "acima_da_margem": false,
             "tema": "Retrato da raiva feminina",
             "exemplo_parafraseado": "As reviews positivas celebram a representação intensa da fúria feminina e do desejo de libertação.",
             "temas_no_mesmo_eixo": [
@@ -1174,41 +1212,21 @@
         }
       }
     ],
-    "fonte_classificacao": {
-      "arquivo": "resultado/votacao-3/consenso.jsonl",
-      "criterio": "votacao_3_consenso_2_de_3",
-      "por_bucket": {
-        "negativas": {
-          "n_classificadas": 26,
-          "n_analisadas": 27,
-          "sobreposicao_com_analisadas": 26
-        },
-        "medianas": {
-          "n_classificadas": 33,
-          "n_analisadas": 40,
-          "sobreposicao_com_analisadas": 33
-        },
-        "positivas": {
-          "n_classificadas": 31,
-          "n_analisadas": 40,
-          "sobreposicao_com_analisadas": 31
-        }
-      }
-    },
+    "contraste": "valorativo",
     "rotulagem": {
       "n_chamadas": 3,
       "falharam": [],
       "fora_da_taxonomia": {},
       "houve_retentativa": []
     },
-    "spec_version": "1.9.16",
     "verificador": {
       "aplicado": true,
       "variante": "V2_alvo",
       "passada": 1,
       "eixo": "impacto_emocional",
       "n_removidas_no_corpus": 1654
-    }
+    },
+    "spec_version": "1.9.34"
   },
   "narrativa": "Lançado em 2022 e dirigido por Ti West, o longa-metragem de terror Pearl: Uma História de Origem 'X' situa a narrativa na fazenda isolada onde a protagonista cuida do pai doente sob o olhar amargo e autoritário de sua mãe devota. Em meio ao confinamento, suas ambições por uma vida glamourosa como as do cinema colidem com repressões profundas, apresentando a história de origem em estética technicolor da vilã de X.\n\nA experiência cinematográfica apoia-se em uma ambientação de época com estética visual marcante e cores vivas, articulada a uma cadência estruturada em torno do acompanhamento psicológico de sua figura central.\n\nOs grupos concordam sobre o que o filme é e discordam no veredito sobre se a produção funciona. Na grande maioria das notas (~76%), a maior parte exalta a atuação de Mia Goth, enquanto boa parte destaca a entrega no monólogo final e uma parcela expressiva elogia a estética e a direção de arte da obra.\n\nPara quem se situa numa parcela das notas (~20%), muitos reconhecem as qualidades da atuação de Mia Goth e um número considerável valoriza a estética visual e a fotografia, embora uma parte aponte ressalvas em relação ao ritmo e à narrativa. Já sob a ótica de quem integra uma fração mínima das notas (~5%), vários manifestam tédio perante o ritmo arrastado, muitos consideram a personagem principal irritante e parte deles aponta a falta de desenvolvimento dos personagens.",
   "verificacao_narrativa": {

@@ -1105,6 +1105,19 @@ dizia "6 / 29 / 1", que soma 36. `obsession-2026` estava contado duas vezes —
 como `valorativo` sob a lei e como sem-estado sob o piso. Ele é UM filme, e o
 piso o tira de `valorativo`, não o acrescenta.)*
 
+> **NOTA DE MÉTODO, porque o modo de falha se repete.** O número errado
+> atravessou o estudo, esta spec, o changelog e três mensagens do dono **sem
+> ninguém somar 6 + 28 + 1**. A razão é a forma: ele viveu sempre **dentro de
+> uma frase** ("6 `tematico` / 29 `valorativo` / 1 sem estado"), nunca numa
+> tabela com uma linha de total. Numa tabela, o total é uma célula que alguém
+> escreve; numa frase, é uma conta que ninguém faz. **A conferência mais
+> simples disponível foi a única não feita**, e ela sobreviveu a várias
+> revisões cuidadosas de coisas muito mais difíceis.
+>
+> **Regra prática:** partição de população vai em TABELA com linha de total, e
+> o total é conferido contra o N conhecido. Vale para qualquer contagem que
+> particione os 35 filmes, as 105 células de bucket ou as 30 células de eixo.
+
 ---
 
 *A partir daqui, esta subseção é o registro da v1.9.14/v1.9.15, sob a margem
@@ -1622,6 +1635,29 @@ Qualquer sessão que reabra a margem de lift deve ler `ESTABILIDADE_10_
 FLIPS.md` antes de decidir o novo limiar — ele é o conjunto de casos reais
 que o novo limiar precisa resolver, não hipotéticos de bootstrap.
 
+### REGRA: o gatilho de regeneração do veredito é o BRIEFING, não o ESTADO
+
+**Reutilizável, e ela custou uma correção de rota na v1.9.34.** O plano
+aprovado era regerar o veredito onde o `contraste` mudasse. **Medido antes de
+disparar: o critério de estado é proxy ERRADO**, e deixaria texto publicado
+descrevendo um briefing que não existe mais. Os dois casos que o provaram:
+
+- **`anatomy-of-a-fall`** continua `tematico` dos dois lados, e o quantificador
+  do grupo negativo cai de **"quase todos"** para **"a maioria"**. O texto no ar
+  diz "quase todos" — sob os números novos isso é **inflação de quantificador**,
+  exatamente o que a validação `quantificador_divergente` da v1.9.22 reprova.
+  Manter seria publicar de propósito o que o próprio validador do projeto
+  rejeitaria.
+- **`barbie`** continua `tematico`, e o eixo que o veredito NOMEIA para as
+  negativas muda de `comparacoes` para `roteiro_estrutura`.
+
+**A regra:** qualquer mudança futura que altere o BRIEFING — eixo nomeado,
+`assunto_compartilhado`, rótulo de quantificador, bucket dominante, estado de
+piso — exige regeneração do veredito, **mesmo que o estado `contraste` não
+mude**. O estado é uma das entradas do briefing, não um resumo dele.
+Travado em `tests/test_aplicar_lei_margem.py::test_o_criterio_e_o_BRIEFING_e_
+nao_o_estado`.
+
 ### FECHADA na v1.9.34 — a republicação aconteceu, sob a lei nova
 
 **A defasagem descrita acima não existe mais.** O estudo da margem rodou
@@ -1640,6 +1676,83 @@ depois) contra 16 (uma vez só): um argumento de **4 regenerações**, não do
 trabalho inteiro. A razão FORTE para esperar era outra, e é a que valeu:
 republicar sob 20pp colocaria no ar 16 estados com taxa de falso contraste de
 24–38%, para tirar depois.
+
+#### E a decomposição do custo confirma a espera por um argumento MAIOR
+
+**MEDIDO ao planejar a republicação.** Sob o critério de BRIEFING (a regra
+acima), 27 dos 35 filmes precisam de veredito novo. A causa de cada um:
+
+| por que o briefing mudou | filmes |
+|---|---:|
+| **só a ressincronização de cobertura desta §2.9** (70,7% → 100%) | **19** |
+| só a LEI nova de §2.5 | 3 (`obsession-2026`, `the-invite-2026`, `wonka`) |
+| as duas | 7 |
+| as duas, **cancelando-se** (não regera) | 1 (`wicked-2024`) |
+
+**A maior parte deste custo não é o preço da lei nova — é o preço acumulado de
+não ter republicado quando a cobertura foi a 100%.** Dezenove filmes carregam
+briefing defasado por §2.8, e só três pela mudança de margem.
+
+**Isto confirma a decisão de esperar retroativamente, e com um argumento mais
+forte do que o que a fundamentou.** Ela foi tomada sobre "20 regenerações
+contra 16" — 4 de diferença. O que se confirmou é que as duas correções, a de
+cobertura e a de margem, **entram numa republicação só em vez de duas**, e que
+a de cobertura era a maior das duas em volume. Republicar em §2.8 e de novo
+agora teria custado 19 regenerações a mais, não 4.
+
+---
+
+## 2.10 Regras de TESTE e de AMBIENTE (v1.9.34)
+
+Saíram de defeitos reais desta versão, e entram como **regra do projeto**, não
+como nota de sessão — as três primeiras porque um trap que passa pelo motivo
+errado é pior que trap nenhum (ele dá garantia falsa), e a quarta porque é a
+segunda reincidência no mesmo arco.
+
+### Traps de escopo — as três regras
+
+O projeto trava escopo de harness **por teste**, envenenando pontos de entrada
+com `pytest.fail` e rodando o harness de verdade (v1.9.21, v1.9.29). Ao
+escrever o trap da v1.9.34, dois dos alvos estavam errados e o teste passava
+assim mesmo. As regras que evitam isso:
+
+1. **Trap vazio é pior que trap ausente — `assert hasattr` ANTES de
+   envenenar.** A lista da v1.9.34 tinha `synthesize.build_output`, que **não
+   existe**, e um `continue` de conveniência escondia isso: a entrada dava
+   impressão de cobertura e não cobria nada. Um nome que some num refactor
+   transforma o trap em decoração silenciosa. O `assert` faz o teste reprovar e
+   pedir correção do nome.
+2. **`from x import y` faz o poison em `x.y` NUNCA interceptar.** O alvo passa a
+   ter duas ligações: `x.y` e `modulo_que_importou.y`. Envenenar o módulo de
+   origem não toca a segunda. **Quem escreve um trap tem de verificar COMO o
+   alvo é importado** por quem o chama — `grep "import <alvo>"` antes de
+   confiar no `monkeypatch`.
+3. **Alvo "proibido" que na verdade é chamada LEGÍTIMA vira teste que afirma o
+   contrário.** `selecao.selecionar` estava na lista de proibidos da v1.9.34 e
+   não deveria: `pipeline.amostra_do_bruto` PRECISA chamá-la para saber quais
+   reviews a síntese leu (zero rede, tudo do disco). Remover a entrada em
+   silêncio convida a próxima pessoa a "consertar" o trap reintroduzindo-a. A
+   saída é um teste NOMEADO que afirma que a chamada acontece e diz por quê
+   (`test_a_selecao_E_chamada_e_isso_e_CORRETO`).
+
+### Ambiente — função de biblioteca não altera o ambiente do processo
+
+**REGRA: carregar `.env` (ou qualquer mutação de `os.environ`) é
+responsabilidade do `main`, nunca de uma função de biblioteca.**
+
+**Segunda reincidência no mesmo arco.** A primeira foi em
+`classificar()`/`classificar_passe()`, registrada como dívida e **não corrigida
+aqui** (fora de escopo — fica como está, com a regra escrita ao lado). A
+segunda foi `aplicar_lei_margem.aplicar()`, que chamava `load_dotenv` e
+**poluía a suíte**: as chaves de API entravam no ambiente do processo e três
+testes de `test_provider.py` (auto-detecção de provider por chave presente)
+**passavam isolados e falhavam no conjunto**. Corrigida movendo a chamada para
+`main()`.
+
+O sintoma é sempre o mesmo e é caro de diagnosticar: teste verde sozinho,
+vermelho na suíte, sem relação aparente com o que mudou. A fronteira do efeito
+colateral é o `main` porque é o único lugar onde ele é uma decisão do usuário
+e não um efeito surpresa de um import.
 
 ---
 

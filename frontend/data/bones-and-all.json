@@ -789,35 +789,46 @@
   ],
   "eixos": {
     "taxonomia_id": "ebab2667de74",
-    "margem_lift_pp": 20,
-    "contraste": "tematico",
+    "margem": {
+      "lei": "lift^2 * n >= 2085136/1000000",
+      "constante_quadrada": [
+        2085136,
+        1000000
+      ],
+      "n": 40,
+      "limiar_pp": 22.83
+    },
+    "margem_lift_pp": 22.83,
     "linhas": [
       {
         "eixo": "ritmo",
         "por_bucket": {
           "negativas": {
-            "mencoes": 4,
-            "de_n": 19,
-            "freq_pct": 21.1,
-            "lift_pp": 8.0,
+            "mencoes": 9,
+            "de_n": 40,
+            "freq_pct": 22.5,
+            "lift_pp": 12.5,
+            "acima_da_margem": false,
             "tema": "Ritmo lento e cansativo",
             "exemplo_parafraseado": "A narrativa se arrasta por longos períodos sem avanço significativo, tornando a experiência monótona e difícil de manter o interesse.",
             "temas_no_mesmo_eixo": []
           },
           "medianas": {
-            "mencoes": 1,
-            "de_n": 15,
-            "freq_pct": 6.7,
-            "lift_pp": -14.4,
+            "mencoes": 4,
+            "de_n": 40,
+            "freq_pct": 10.0,
+            "lift_pp": -12.5,
+            "acima_da_margem": false,
             "tema": null,
             "exemplo_parafraseado": null,
             "temas_no_mesmo_eixo": []
           },
           "positivas": {
             "mencoes": 3,
-            "de_n": 23,
-            "freq_pct": 13.0,
-            "lift_pp": -8.0,
+            "de_n": 40,
+            "freq_pct": 7.5,
+            "lift_pp": -15.0,
+            "acima_da_margem": false,
             "tema": null,
             "exemplo_parafraseado": null,
             "temas_no_mesmo_eixo": []
@@ -833,28 +844,31 @@
         "eixo": "atuacao",
         "por_bucket": {
           "negativas": {
-            "mencoes": 6,
-            "de_n": 19,
-            "freq_pct": 31.6,
-            "lift_pp": -21.8,
+            "mencoes": 11,
+            "de_n": 40,
+            "freq_pct": 27.5,
+            "lift_pp": -17.5,
+            "acima_da_margem": false,
             "tema": "Falta de química e romance pouco convincente",
             "exemplo_parafraseado": "A relação entre os protagonistas parece forçada e sem profundidade, mais uma conveniência do enredo do que um amor genuíno, o que enfraquece o drama.",
             "temas_no_mesmo_eixo": []
           },
           "medianas": {
-            "mencoes": 8,
-            "de_n": 15,
-            "freq_pct": 53.3,
-            "lift_pp": 21.8,
+            "mencoes": 18,
+            "de_n": 40,
+            "freq_pct": 45.0,
+            "lift_pp": 17.5,
+            "acima_da_margem": false,
             "tema": "Atuações e elenco",
             "exemplo_parafraseado": "As performances de Taylor Russell e Timothée Chalamet foram amplamente elogiadas, e muitos também destacaram o papel de Mark Rylance como particularmente perturbador e memorável, com alguns considerando-o digno de prêmios.",
             "temas_no_mesmo_eixo": []
           },
           "positivas": {
-            "mencoes": 6,
-            "de_n": 23,
-            "freq_pct": 26.1,
-            "lift_pp": -27.2,
+            "mencoes": 7,
+            "de_n": 40,
+            "freq_pct": 17.5,
+            "lift_pp": -27.5,
+            "acima_da_margem": false,
             "tema": "Atuações marcantes de Taylor Russell e Timothée Chalamet",
             "exemplo_parafraseado": "As reviews elogiam as atuações de Taylor Russell, que brilha como a protagonista em reconstrução, e de Timothée Chalamet, que traz complexidade ao seu papel, destacando a química entre eles como um dos pontos fortes do filme.",
             "temas_no_mesmo_eixo": []
@@ -862,7 +876,7 @@
         },
         "bullet_de": {
           "negativas": null,
-          "medianas": "frequencia_e_contraste",
+          "medianas": "frequencia",
           "positivas": null
         }
       },
@@ -870,28 +884,31 @@
         "eixo": "direcao_imagem",
         "por_bucket": {
           "negativas": {
-            "mencoes": 4,
-            "de_n": 19,
-            "freq_pct": 21.1,
-            "lift_pp": -5.6,
+            "mencoes": 8,
+            "de_n": 40,
+            "freq_pct": 20.0,
+            "lift_pp": 0.0,
+            "acima_da_margem": false,
             "tema": "Atuações e visual elogiados",
             "exemplo_parafraseado": "Apesar das críticas ao filme, muitos reconhecem a beleza das imagens e a competência do elenco, especialmente as atuações de Timothée Chalamet e Taylor Russell.",
             "temas_no_mesmo_eixo": []
           },
           "medianas": {
-            "mencoes": 4,
-            "de_n": 15,
-            "freq_pct": 26.7,
-            "lift_pp": 4.9,
+            "mencoes": 8,
+            "de_n": 40,
+            "freq_pct": 20.0,
+            "lift_pp": 0.0,
+            "acima_da_margem": false,
             "tema": "Estética e direção",
             "exemplo_parafraseado": "A direção de Luca Guadagnino e a fotografia foram elogiadas por criar uma atmosfera visualmente bonita, embora alguns tenham sentido que o estilo visual não se manteve consistente ao longo do filme.",
             "temas_no_mesmo_eixo": []
           },
           "positivas": {
-            "mencoes": 5,
-            "de_n": 23,
-            "freq_pct": 21.7,
-            "lift_pp": -4.9,
+            "mencoes": 8,
+            "de_n": 40,
+            "freq_pct": 20.0,
+            "lift_pp": 0.0,
+            "acima_da_margem": false,
             "tema": "Fotografia, trilha sonora e direção de arte imersivas",
             "exemplo_parafraseado": "A estética visual do filme é amplamente elogiada, com destaque para a fotografia deslumbrante, a trilha sonora marcante e a direção de arte que ajudam a construir a ambientação melancólica e poética da história.",
             "temas_no_mesmo_eixo": []
@@ -907,10 +924,11 @@
         "eixo": "roteiro_estrutura",
         "por_bucket": {
           "negativas": {
-            "mencoes": 9,
-            "de_n": 19,
-            "freq_pct": 47.4,
-            "lift_pp": -26.0,
+            "mencoes": 22,
+            "de_n": 40,
+            "freq_pct": 55.0,
+            "lift_pp": -2.5,
+            "acima_da_margem": false,
             "tema": "Roteiro fraco e previsível",
             "exemplo_parafraseado": "Os diálogos parecem artificiais e as reviravoltas são facilmente antecipadas, resultando em uma história sem surpresas e com desenvolvimento superficial.",
             "temas_no_mesmo_eixo": [
@@ -918,19 +936,21 @@
             ]
           },
           "medianas": {
-            "mencoes": 11,
-            "de_n": 15,
-            "freq_pct": 73.3,
-            "lift_pp": 16.8,
+            "mencoes": 23,
+            "de_n": 40,
+            "freq_pct": 57.5,
+            "lift_pp": 0.0,
+            "acima_da_margem": false,
             "tema": "Roteiro e desenvolvimento",
             "exemplo_parafraseado": "Alguns críticos notaram que a trama carece de desenvolvimento mais profundo, principalmente em relação à história da mãe da protagonista, e que o ritmo do filme se arrasta em certos momentos, tornando algumas partes monótonas.",
             "temas_no_mesmo_eixo": []
           },
           "positivas": {
-            "mencoes": 13,
-            "de_n": 23,
-            "freq_pct": 56.5,
-            "lift_pp": -16.8,
+            "mencoes": 23,
+            "de_n": 40,
+            "freq_pct": 57.5,
+            "lift_pp": 0.0,
+            "acima_da_margem": false,
             "tema": "Jornada de autodescoberta e aceitação da própria identidade",
             "exemplo_parafraseado": "Muitas reviews destacam a jornada dos protagonistas em busca de autoconhecimento e aceitação, tanto de si mesmos quanto perante uma sociedade que os marginaliza, encontrando no outro um refúgio para não se sentirem sozinhos.",
             "temas_no_mesmo_eixo": []
@@ -947,27 +967,30 @@
         "por_bucket": {
           "negativas": {
             "mencoes": 0,
-            "de_n": 19,
+            "de_n": 40,
             "freq_pct": 0.0,
-            "lift_pp": -13.3,
+            "lift_pp": -10.0,
+            "acima_da_margem": false,
             "tema": null,
             "exemplo_parafraseado": null,
             "temas_no_mesmo_eixo": []
           },
           "medianas": {
-            "mencoes": 2,
-            "de_n": 15,
-            "freq_pct": 13.3,
-            "lift_pp": 4.6,
+            "mencoes": 3,
+            "de_n": 40,
+            "freq_pct": 7.5,
+            "lift_pp": -2.5,
+            "acima_da_margem": false,
             "tema": null,
             "exemplo_parafraseado": null,
             "temas_no_mesmo_eixo": []
           },
           "positivas": {
-            "mencoes": 2,
-            "de_n": 23,
-            "freq_pct": 8.7,
-            "lift_pp": -4.6,
+            "mencoes": 4,
+            "de_n": 40,
+            "freq_pct": 10.0,
+            "lift_pp": 2.5,
+            "acima_da_margem": false,
             "tema": null,
             "exemplo_parafraseado": null,
             "temas_no_mesmo_eixo": []
@@ -983,28 +1006,31 @@
         "eixo": "tom_atmosfera",
         "por_bucket": {
           "negativas": {
-            "mencoes": 5,
-            "de_n": 19,
-            "freq_pct": 26.3,
-            "lift_pp": -17.2,
+            "mencoes": 7,
+            "de_n": 40,
+            "freq_pct": 17.5,
+            "lift_pp": -22.5,
+            "acima_da_margem": false,
             "tema": null,
             "exemplo_parafraseado": null,
             "temas_no_mesmo_eixo": []
           },
           "medianas": {
-            "mencoes": 3,
-            "de_n": 15,
-            "freq_pct": 20.0,
-            "lift_pp": -23.5,
+            "mencoes": 9,
+            "de_n": 40,
+            "freq_pct": 22.5,
+            "lift_pp": -17.5,
+            "acima_da_margem": false,
             "tema": null,
             "exemplo_parafraseado": null,
             "temas_no_mesmo_eixo": []
           },
           "positivas": {
-            "mencoes": 10,
-            "de_n": 23,
-            "freq_pct": 43.5,
-            "lift_pp": 17.2,
+            "mencoes": 16,
+            "de_n": 40,
+            "freq_pct": 40.0,
+            "lift_pp": 17.5,
+            "acima_da_margem": false,
             "tema": "Equilíbrio entre romance e horror",
             "exemplo_parafraseado": "O filme é descrito como uma mistura perfeita de romance e horror, que consegue ser ao mesmo tempo belo e perturbador, criando uma atmosfera única que alterna entre cenas delicadas e momentos de violência visceral.",
             "temas_no_mesmo_eixo": []
@@ -1020,35 +1046,38 @@
         "eixo": "impacto_emocional",
         "por_bucket": {
           "negativas": {
-            "mencoes": 10,
-            "de_n": 19,
-            "freq_pct": 52.6,
-            "lift_pp": 26.0,
+            "mencoes": 20,
+            "de_n": 40,
+            "freq_pct": 50.0,
+            "lift_pp": 5.0,
+            "acima_da_margem": false,
             "tema": "Repulsa e desconforto com o gore",
             "exemplo_parafraseado": "O excesso de violência gráfica e cenas de canibalismo causou repulsa física, com vários espectadores tendo que pausar o filme ou abandoná-lo por não suportarem as imagens.",
             "temas_no_mesmo_eixo": []
           },
           "medianas": {
-            "mencoes": 4,
-            "de_n": 15,
-            "freq_pct": 26.7,
-            "lift_pp": -26.0,
+            "mencoes": 18,
+            "de_n": 40,
+            "freq_pct": 45.0,
+            "lift_pp": -5.0,
+            "acima_da_margem": false,
             "tema": "Desconforto e repulsa",
             "exemplo_parafraseado": "Muitos espectadores relataram ter sentido náuseas ou desconforto intenso durante o filme, alguns a ponto de quase vomitar, e mencionaram que a violência gráfica e as cenas de canibalismo foram difíceis de assistir.",
             "temas_no_mesmo_eixo": []
           },
           "positivas": {
-            "mencoes": 6,
-            "de_n": 23,
-            "freq_pct": 26.1,
-            "lift_pp": -26.5,
+            "mencoes": 15,
+            "de_n": 40,
+            "freq_pct": 37.5,
+            "lift_pp": -12.5,
+            "acima_da_margem": false,
             "tema": "Final impactante e emocional",
             "exemplo_parafraseado": "O desfecho é frequente citado como um dos momentos mais devastadores e memoráveis, capaz de provocar forte impacto emocional e redefinir a compreensão de toda a narrativa.",
             "temas_no_mesmo_eixo": []
           }
         },
         "bullet_de": {
-          "negativas": "frequencia_e_contraste",
+          "negativas": "frequencia",
           "medianas": null,
           "positivas": null
         }
@@ -1057,28 +1086,31 @@
         "eixo": "comparacoes",
         "por_bucket": {
           "negativas": {
-            "mencoes": 8,
-            "de_n": 19,
-            "freq_pct": 42.1,
-            "lift_pp": 2.1,
+            "mencoes": 14,
+            "de_n": 40,
+            "freq_pct": 35.0,
+            "lift_pp": 7.5,
+            "acima_da_margem": false,
             "tema": null,
             "exemplo_parafraseado": null,
             "temas_no_mesmo_eixo": []
           },
           "medianas": {
-            "mencoes": 6,
-            "de_n": 15,
-            "freq_pct": 40.0,
-            "lift_pp": -2.1,
+            "mencoes": 10,
+            "de_n": 40,
+            "freq_pct": 25.0,
+            "lift_pp": -10.0,
+            "acima_da_margem": false,
             "tema": "Comparações e expectativas",
             "exemplo_parafraseado": "Alguns espectadores compararam o filme a outras obras de Guadagnino, como Me Chame pelo Seu Nome e Suspiria, e discutiram como ele mistura romance e horror, com reações mistas sobre o resultado.",
             "temas_no_mesmo_eixo": []
           },
           "positivas": {
-            "mencoes": 7,
-            "de_n": 23,
-            "freq_pct": 30.4,
-            "lift_pp": -11.7,
+            "mencoes": 11,
+            "de_n": 40,
+            "freq_pct": 27.5,
+            "lift_pp": -7.5,
+            "acima_da_margem": false,
             "tema": null,
             "exemplo_parafraseado": null,
             "temas_no_mesmo_eixo": []
@@ -1094,28 +1126,31 @@
         "eixo": "expectativa",
         "por_bucket": {
           "negativas": {
-            "mencoes": 4,
-            "de_n": 19,
-            "freq_pct": 21.1,
-            "lift_pp": 7.7,
+            "mencoes": 7,
+            "de_n": 40,
+            "freq_pct": 17.5,
+            "lift_pp": 2.5,
+            "acima_da_margem": false,
             "tema": null,
             "exemplo_parafraseado": null,
             "temas_no_mesmo_eixo": []
           },
           "medianas": {
-            "mencoes": 2,
-            "de_n": 15,
-            "freq_pct": 13.3,
-            "lift_pp": -7.7,
+            "mencoes": 6,
+            "de_n": 40,
+            "freq_pct": 15.0,
+            "lift_pp": -2.5,
+            "acima_da_margem": false,
             "tema": null,
             "exemplo_parafraseado": null,
             "temas_no_mesmo_eixo": []
           },
           "positivas": {
-            "mencoes": 3,
-            "de_n": 23,
-            "freq_pct": 13.0,
-            "lift_pp": -8.0,
+            "mencoes": 5,
+            "de_n": 40,
+            "freq_pct": 12.5,
+            "lift_pp": -5.0,
+            "acima_da_margem": false,
             "tema": null,
             "exemplo_parafraseado": null,
             "temas_no_mesmo_eixo": []
@@ -1131,28 +1166,31 @@
         "eixo": "critica_social",
         "por_bucket": {
           "negativas": {
-            "mencoes": 5,
-            "de_n": 19,
-            "freq_pct": 26.3,
-            "lift_pp": 0.2,
+            "mencoes": 8,
+            "de_n": 40,
+            "freq_pct": 20.0,
+            "lift_pp": -2.5,
+            "acima_da_margem": false,
             "tema": null,
             "exemplo_parafraseado": null,
             "temas_no_mesmo_eixo": []
           },
           "medianas": {
-            "mencoes": 1,
-            "de_n": 15,
-            "freq_pct": 6.7,
-            "lift_pp": -19.6,
+            "mencoes": 6,
+            "de_n": 40,
+            "freq_pct": 15.0,
+            "lift_pp": -7.5,
+            "acima_da_margem": false,
             "tema": "Metáfora e mensagem",
             "exemplo_parafraseado": "Vários espectadores comentaram sobre o uso do canibalismo como metáfora para aceitação de si mesmo e busca por conexão, mas opiniões divergiram sobre a eficácia dessa metáfora, com alguns achando-a poderosa e outros confusa ou inadequada.",
             "temas_no_mesmo_eixo": []
           },
           "positivas": {
-            "mencoes": 6,
-            "de_n": 23,
-            "freq_pct": 26.1,
-            "lift_pp": -0.2,
+            "mencoes": 9,
+            "de_n": 40,
+            "freq_pct": 22.5,
+            "lift_pp": 2.5,
+            "acima_da_margem": false,
             "tema": "Canibalismo como metáfora do amor e da aceitação",
             "exemplo_parafraseado": "As reviews positivas interpretam o canibalismo como uma metáfora para o amor incondicional e a aceitação total do outro, onde consumir alguém representa o desejo de união absoluta e a entrega completa, sendo uma forma poética de expressar a profundidade dos sentimentos.",
             "temas_no_mesmo_eixo": []
@@ -1165,41 +1203,21 @@
         }
       }
     ],
-    "fonte_classificacao": {
-      "arquivo": "resultado/votacao-3/consenso.jsonl",
-      "criterio": "votacao_3_consenso_2_de_3",
-      "por_bucket": {
-        "negativas": {
-          "n_classificadas": 19,
-          "n_analisadas": 40,
-          "sobreposicao_com_analisadas": 19
-        },
-        "medianas": {
-          "n_classificadas": 15,
-          "n_analisadas": 40,
-          "sobreposicao_com_analisadas": 15
-        },
-        "positivas": {
-          "n_classificadas": 23,
-          "n_analisadas": 40,
-          "sobreposicao_com_analisadas": 23
-        }
-      }
-    },
+    "contraste": "valorativo",
     "rotulagem": {
       "n_chamadas": 3,
       "falharam": [],
       "fora_da_taxonomia": {},
       "houve_retentativa": []
     },
-    "spec_version": "1.9.16",
     "verificador": {
       "aplicado": true,
       "variante": "V2_alvo",
       "passada": 1,
       "eixo": "impacto_emocional",
       "n_removidas_no_corpus": 1654
-    }
+    },
+    "spec_version": "1.9.34"
   },
   "narrativa": "Lançado em 2022 e dirigido por Luca Guadagnino, Até os Ossos combina terror, romance e drama em uma narrativa de 131 minutos. O filme apresenta a história do primeiro amor entre Maren, uma jovem que busca sobreviver à margem da sociedade, e Lee, um andarilho sem amarras, que partem juntos em uma odisseia de mil e quinhentos quilômetros pelas estradas dos Estados Unidos confrontando seus passados traumáticos.\n\nA obra desenvolve uma atmosfera densa que mescla momentos de choque visual e sensibilidade dramática, estruturando-se pelo ritmo de uma viagem de estrada.\n\nNa grande maioria das notas (~76%), a maior parte interpreta o canibalismo como uma metáfora lírica sobre o amor e a aceitação incondicional do outro. Paralelamente, muitos ressaltam a jornada de autodescoberta e aceitação dos personagens perante o isolamento, enquanto um número considerável elogia as atuações marcantes de Taylor Russell e Timothée Chalamet na condução da história.\n\nNuma perspectiva intermediária, presente numa parcela das notas (~17%), vários relatam forte desconforto e repulsa diante da violência gráfica e das cenas explícitas. Nessa faixa, uma parcela expressiva valoriza as atuações do elenco, enquanto boa parte expressa visões divididas sobre a eficácia da metáfora central.\n\nPor fim, segundo a visão expressa numa fração mínima das notas (~6%), uma parcela expressiva manifesta repulsa pelo gore. Além disso, alguns apontam falta de química no romance e parte deles considera o ritmo lento e cansativo.",
   "verificacao_narrativa": {
@@ -1278,53 +1296,55 @@
     "n_chamadas": 3,
     "prefixo_codigo": "",
     "retry": null,
-    "spec_version": "1.9.22",
-    "texto": "Cerca de metade de quem recomenda valoriza a narrativa pela trajetória de autoconhecimento e aceitação pessoal. Em contrapartida, cerca de metade de quem não recomenda expressa forte repulsa ao excesso de sangue e violência gráfica, além de considerar a trama previsível.",
-    "texto_modelo": "Cerca de metade de quem recomenda valoriza a narrativa pela trajetória de autoconhecimento e aceitação pessoal. Em contrapartida, cerca de metade de quem não recomenda expressa forte repulsa ao excesso de sangue e violência gráfica, além de considerar a trama previsível.",
+    "spec_version": "1.9.25",
+    "texto": "A divergência central está na condução do roteiro. Cerca de metade de quem recomenda valoriza a trajetória de autoconhecimento e afirmação pessoal, enquanto cerca de metade de quem não recomenda critica a trama por considerá-la rasa e de desdobramentos óbvios.",
+    "texto_modelo": "A divergência central está na condução do roteiro. Cerca de metade de quem recomenda valoriza a trajetória de autoconhecimento e afirmação pessoal, enquanto cerca de metade de quem não recomenda critica a trama por considerá-la rasa e de desdobramentos óbvios.",
     "origem": "llm",
     "motivo": "melhor_entre_limpos",
-    "criterio_decisivo": "ancoras",
-    "abertura": "QUANT",
+    "criterio_decisivo": "abertura",
+    "abertura": "diver",
     "indice_escolhido": 1,
     "flags": [],
     "candidatos": [
       {
         "indice": 0,
-        "n_flags": 0,
-        "flags": [],
-        "n_palavras": 38,
+        "n_flags": 1,
+        "flags": [
+          "formato_invalido"
+        ],
+        "n_palavras": 39,
         "n_ancoras": 0,
-        "abertura": "QUANT",
-        "abertura_freq": 17,
-        "eliminado": false
+        "abertura": "opini",
+        "abertura_freq": 4,
+        "eliminado": true
       },
       {
         "indice": 1,
         "n_flags": 0,
         "flags": [],
-        "n_palavras": 41,
-        "n_ancoras": 1,
-        "abertura": "QUANT",
-        "abertura_freq": 17,
+        "n_palavras": 40,
+        "n_ancoras": 0,
+        "abertura": "diver",
+        "abertura_freq": 3,
         "eliminado": false
       },
       {
         "indice": 2,
         "n_flags": 0,
         "flags": [],
-        "n_palavras": 36,
+        "n_palavras": 40,
         "n_ancoras": 0,
-        "abertura": "QUANT",
-        "abertura_freq": 17,
+        "abertura": "opini",
+        "abertura_freq": 4,
         "eliminado": false
       }
     ],
     "uso": {
-      "prompt_tokens": 3648,
-      "completion_tokens": 193,
+      "prompt_tokens": 3699,
+      "completion_tokens": 190,
       "cache_hit_tokens": 0,
-      "cache_miss_tokens": 3648
+      "cache_miss_tokens": 3699
     },
-    "latencia_s": 9.17
+    "latencia_s": 29.11
   }
 }

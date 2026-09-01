@@ -789,35 +789,46 @@
   ],
   "eixos": {
     "taxonomia_id": "ebab2667de74",
-    "margem_lift_pp": 20,
-    "contraste": "valorativo",
+    "margem": {
+      "lei": "lift^2 * n >= 2085136/1000000",
+      "constante_quadrada": [
+        2085136,
+        1000000
+      ],
+      "n": 40,
+      "limiar_pp": 22.83
+    },
+    "margem_lift_pp": 22.83,
     "linhas": [
       {
         "eixo": "ritmo",
         "por_bucket": {
           "negativas": {
-            "mencoes": 12,
-            "de_n": 33,
-            "freq_pct": 36.4,
-            "lift_pp": 14.1,
+            "mencoes": 14,
+            "de_n": 40,
+            "freq_pct": 35.0,
+            "lift_pp": 15.0,
+            "acima_da_margem": false,
             "tema": "Ritmo lento e arrastado",
             "exemplo_parafraseado": "Muitos críticos negativos afirmam que a narrativa se desenvolve de forma excessivamente lenta, tornando a experiência entediante e fazendo com que o público perdesse o interesse.",
             "temas_no_mesmo_eixo": []
           },
           "medianas": {
             "mencoes": 8,
-            "de_n": 36,
-            "freq_pct": 22.2,
-            "lift_pp": -14.1,
+            "de_n": 40,
+            "freq_pct": 20.0,
+            "lift_pp": -15.0,
+            "acima_da_margem": false,
             "tema": null,
             "exemplo_parafraseado": null,
             "temas_no_mesmo_eixo": []
           },
           "positivas": {
-            "mencoes": 7,
-            "de_n": 33,
-            "freq_pct": 21.2,
-            "lift_pp": -15.2,
+            "mencoes": 8,
+            "de_n": 40,
+            "freq_pct": 20.0,
+            "lift_pp": -15.0,
+            "acima_da_margem": false,
             "tema": "Ritmo e edição",
             "exemplo_parafraseado": "O ritmo é descrito como lento em alguns trechos, mas isso não atrapalha a experiência geral, que é considerada satisfatória e recompensadora.",
             "temas_no_mesmo_eixo": []
@@ -833,28 +844,31 @@
         "eixo": "atuacao",
         "por_bucket": {
           "negativas": {
-            "mencoes": 10,
-            "de_n": 33,
-            "freq_pct": 30.3,
+            "mencoes": 11,
+            "de_n": 40,
+            "freq_pct": 27.5,
             "lift_pp": -22.5,
+            "acima_da_margem": false,
             "tema": "Atuações e personagens fracos",
             "exemplo_parafraseado": "Há queixas sobre a protagonista e o vilão, que foram considerados pouco carismáticos e sem profundidade, embora alguns reconheçam o esforço de Nicolas Cage e de Maika Monroe.",
             "temas_no_mesmo_eixo": []
           },
           "medianas": {
-            "mencoes": 19,
-            "de_n": 36,
-            "freq_pct": 52.8,
-            "lift_pp": 4.3,
+            "mencoes": 20,
+            "de_n": 40,
+            "freq_pct": 50.0,
+            "lift_pp": 2.5,
+            "acima_da_margem": false,
             "tema": "Atuação polarizadora de Nicolas Cage",
             "exemplo_parafraseado": "A performance de Cage divide opiniões: uns acham marcante e memorável, outros a consideram exagerada e até cômica, tirando a seriedade do vilão.",
             "temas_no_mesmo_eixo": []
           },
           "positivas": {
-            "mencoes": 16,
-            "de_n": 33,
-            "freq_pct": 48.5,
-            "lift_pp": -4.3,
+            "mencoes": 19,
+            "de_n": 40,
+            "freq_pct": 47.5,
+            "lift_pp": -2.5,
+            "acima_da_margem": false,
             "tema": "Atuações marcantes",
             "exemplo_parafraseado": "Os elogios se concentram nas atuações de Maika Monroe e Nicolas Cage, que são descritas como assustadoras, cativantes e capazes de sustentar o clima tenso do filme.",
             "temas_no_mesmo_eixo": []
@@ -870,28 +884,31 @@
         "eixo": "direcao_imagem",
         "por_bucket": {
           "negativas": {
-            "mencoes": 10,
-            "de_n": 33,
-            "freq_pct": 30.3,
-            "lift_pp": -16.9,
+            "mencoes": 12,
+            "de_n": 40,
+            "freq_pct": 30.0,
+            "lift_pp": -17.5,
+            "acima_da_margem": false,
             "tema": null,
             "exemplo_parafraseado": null,
             "temas_no_mesmo_eixo": []
           },
           "medianas": {
-            "mencoes": 17,
-            "de_n": 36,
-            "freq_pct": 47.2,
-            "lift_pp": 4.8,
+            "mencoes": 19,
+            "de_n": 40,
+            "freq_pct": 47.5,
+            "lift_pp": 0.0,
+            "acima_da_margem": false,
             "tema": "Cinematografia e atmosfera elogiadas",
             "exemplo_parafraseado": "A atmosfera densa e a fotografia impecável, com uso de cores frias e quentes e enquadramentos que criam tensão, são destacadas como os pontos mais fortes.",
             "temas_no_mesmo_eixo": []
           },
           "positivas": {
-            "mencoes": 14,
-            "de_n": 33,
-            "freq_pct": 42.4,
-            "lift_pp": -4.8,
+            "mencoes": 19,
+            "de_n": 40,
+            "freq_pct": 47.5,
+            "lift_pp": 0.0,
+            "acima_da_margem": false,
             "tema": "Direção de fotografia e estilo visual",
             "exemplo_parafraseado": "A fotografia e o design de produção são frequentemente elogiados, com menções a planos abertos, ângulos incomuns e uso de cores para diferenciar passado e presente.",
             "temas_no_mesmo_eixo": []
@@ -907,10 +924,11 @@
         "eixo": "roteiro_estrutura",
         "por_bucket": {
           "negativas": {
-            "mencoes": 25,
-            "de_n": 33,
-            "freq_pct": 75.8,
-            "lift_pp": 3.5,
+            "mencoes": 30,
+            "de_n": 40,
+            "freq_pct": 75.0,
+            "lift_pp": 5.0,
+            "acima_da_margem": false,
             "tema": "Roteiro confuso e sem lógica",
             "exemplo_parafraseado": "As reviews negativas apontam que a trama apresentava furos e explicações superficiais, deixando muitos eventos sem sentido ou com resolução apressada.",
             "temas_no_mesmo_eixo": [
@@ -918,10 +936,11 @@
             ]
           },
           "medianas": {
-            "mencoes": 26,
-            "de_n": 36,
-            "freq_pct": 72.2,
-            "lift_pp": -3.5,
+            "mencoes": 28,
+            "de_n": 40,
+            "freq_pct": 70.0,
+            "lift_pp": -5.0,
+            "acima_da_margem": false,
             "tema": "Roteiro inconsistente e furos narrativos",
             "exemplo_parafraseado": "Muitos consideram a história mal estruturada, com explicações insuficientes e reviravoltas previsíveis, deixando pontas soltas que enfraquecem a trama.",
             "temas_no_mesmo_eixo": [
@@ -930,10 +949,11 @@
             ]
           },
           "positivas": {
-            "mencoes": 20,
-            "de_n": 33,
-            "freq_pct": 60.6,
-            "lift_pp": -15.2,
+            "mencoes": 24,
+            "de_n": 40,
+            "freq_pct": 60.0,
+            "lift_pp": -15.0,
+            "acima_da_margem": false,
             "tema": "Roteiro e narrativa",
             "exemplo_parafraseado": "A história é vista como envolvente e cheia de mistério, embora alguns achem a trama confusa ou com reviravoltas abruptas, e desejem mais profundidade no desenvolvimento dos personagens.",
             "temas_no_mesmo_eixo": [
@@ -952,27 +972,30 @@
         "por_bucket": {
           "negativas": {
             "mencoes": 1,
-            "de_n": 33,
-            "freq_pct": 3.0,
-            "lift_pp": -5.3,
+            "de_n": 40,
+            "freq_pct": 2.5,
+            "lift_pp": -7.5,
+            "acima_da_margem": false,
             "tema": null,
             "exemplo_parafraseado": null,
             "temas_no_mesmo_eixo": []
           },
           "medianas": {
             "mencoes": 3,
-            "de_n": 36,
-            "freq_pct": 8.3,
-            "lift_pp": 2.3,
+            "de_n": 40,
+            "freq_pct": 7.5,
+            "lift_pp": -2.5,
+            "acima_da_margem": false,
             "tema": null,
             "exemplo_parafraseado": null,
             "temas_no_mesmo_eixo": []
           },
           "positivas": {
-            "mencoes": 2,
-            "de_n": 33,
-            "freq_pct": 6.1,
-            "lift_pp": -2.3,
+            "mencoes": 4,
+            "de_n": 40,
+            "freq_pct": 10.0,
+            "lift_pp": 2.5,
+            "acima_da_margem": false,
             "tema": null,
             "exemplo_parafraseado": null,
             "temas_no_mesmo_eixo": []
@@ -988,28 +1011,31 @@
         "eixo": "tom_atmosfera",
         "por_bucket": {
           "negativas": {
-            "mencoes": 7,
-            "de_n": 33,
-            "freq_pct": 21.2,
-            "lift_pp": -45.5,
+            "mencoes": 9,
+            "de_n": 40,
+            "freq_pct": 22.5,
+            "lift_pp": -37.5,
+            "acima_da_margem": false,
             "tema": "Falta de sustos e terror fraco",
             "exemplo_parafraseado": "O grupo reclama que o filme, apesar de criar uma atmosfera tensa, não entrega sustos efetivos e falha em causar medo, sendo mais entediante do que assustador.",
             "temas_no_mesmo_eixo": []
           },
           "medianas": {
-            "mencoes": 20,
-            "de_n": 36,
-            "freq_pct": 55.6,
-            "lift_pp": -11.1,
+            "mencoes": 23,
+            "de_n": 40,
+            "freq_pct": 57.5,
+            "lift_pp": -2.5,
+            "acima_da_margem": false,
             "tema": null,
             "exemplo_parafraseado": null,
             "temas_no_mesmo_eixo": []
           },
           "positivas": {
-            "mencoes": 22,
-            "de_n": 33,
-            "freq_pct": 66.7,
-            "lift_pp": 11.1,
+            "mencoes": 24,
+            "de_n": 40,
+            "freq_pct": 60.0,
+            "lift_pp": 2.5,
+            "acima_da_margem": false,
             "tema": "Atmosfera e tensão",
             "exemplo_parafraseado": "Muitos espectadores destacam a atmosfera opressiva e o suspense constante, que criam uma sensação de desconforto e medo sem depender de sustos baratos.",
             "temas_no_mesmo_eixo": []
@@ -1025,35 +1051,38 @@
         "eixo": "impacto_emocional",
         "por_bucket": {
           "negativas": {
-            "mencoes": 13,
-            "de_n": 33,
-            "freq_pct": 39.4,
-            "lift_pp": 6.1,
+            "mencoes": 15,
+            "de_n": 40,
+            "freq_pct": 37.5,
+            "lift_pp": 5.0,
+            "acima_da_margem": false,
             "tema": null,
             "exemplo_parafraseado": null,
             "temas_no_mesmo_eixo": []
           },
           "medianas": {
-            "mencoes": 11,
-            "de_n": 36,
-            "freq_pct": 30.6,
-            "lift_pp": -8.8,
+            "mencoes": 13,
+            "de_n": 40,
+            "freq_pct": 32.5,
+            "lift_pp": -5.0,
+            "acima_da_margem": false,
             "tema": null,
             "exemplo_parafraseado": null,
             "temas_no_mesmo_eixo": []
           },
           "positivas": {
-            "mencoes": 11,
-            "de_n": 33,
-            "freq_pct": 33.3,
-            "lift_pp": -6.1,
+            "mencoes": 12,
+            "de_n": 40,
+            "freq_pct": 30.0,
+            "lift_pp": -7.5,
+            "acima_da_margem": false,
             "tema": null,
             "exemplo_parafraseado": null,
             "temas_no_mesmo_eixo": []
           }
         },
         "bullet_de": {
-          "negativas": "frequencia",
+          "negativas": null,
           "medianas": null,
           "positivas": null
         }
@@ -1062,28 +1091,31 @@
         "eixo": "comparacoes",
         "por_bucket": {
           "negativas": {
-            "mencoes": 6,
-            "de_n": 33,
-            "freq_pct": 18.2,
-            "lift_pp": -15.2,
+            "mencoes": 7,
+            "de_n": 40,
+            "freq_pct": 17.5,
+            "lift_pp": -15.0,
+            "acima_da_margem": false,
             "tema": null,
             "exemplo_parafraseado": null,
             "temas_no_mesmo_eixo": []
           },
           "medianas": {
-            "mencoes": 10,
-            "de_n": 36,
-            "freq_pct": 27.8,
-            "lift_pp": -5.6,
+            "mencoes": 12,
+            "de_n": 40,
+            "freq_pct": 30.0,
+            "lift_pp": -2.5,
+            "acima_da_margem": false,
             "tema": null,
             "exemplo_parafraseado": null,
             "temas_no_mesmo_eixo": []
           },
           "positivas": {
-            "mencoes": 11,
-            "de_n": 33,
-            "freq_pct": 33.3,
-            "lift_pp": 5.6,
+            "mencoes": 13,
+            "de_n": 40,
+            "freq_pct": 32.5,
+            "lift_pp": 2.5,
+            "acima_da_margem": false,
             "tema": null,
             "exemplo_parafraseado": null,
             "temas_no_mesmo_eixo": []
@@ -1099,35 +1131,38 @@
         "eixo": "expectativa",
         "por_bucket": {
           "negativas": {
-            "mencoes": 12,
-            "de_n": 33,
-            "freq_pct": 36.4,
-            "lift_pp": 11.4,
+            "mencoes": 17,
+            "de_n": 40,
+            "freq_pct": 42.5,
+            "lift_pp": 17.5,
+            "acima_da_margem": false,
             "tema": "Expectativa alta, decepção",
             "exemplo_parafraseado": "Diversas pessoas relataram que foram ao cinema com grandes expectativas devido à forte campanha de marketing e ao boca a boca, mas se sentiram frustradas com o resultado final.",
             "temas_no_mesmo_eixo": []
           },
           "medianas": {
-            "mencoes": 9,
-            "de_n": 36,
+            "mencoes": 10,
+            "de_n": 40,
             "freq_pct": 25.0,
-            "lift_pp": -11.4,
+            "lift_pp": -17.5,
+            "acima_da_margem": false,
             "tema": "Começo promissor que não se sustenta",
             "exemplo_parafraseado": "O filme prende a atenção no início, criando uma expectativa alta, mas depois perde o fôlego e não entrega o que prometia, decepcionando na reta final.",
             "temas_no_mesmo_eixo": []
           },
           "positivas": {
-            "mencoes": 6,
-            "de_n": 33,
-            "freq_pct": 18.2,
-            "lift_pp": -18.2,
+            "mencoes": 8,
+            "de_n": 40,
+            "freq_pct": 20.0,
+            "lift_pp": -22.5,
+            "acima_da_margem": false,
             "tema": null,
             "exemplo_parafraseado": null,
             "temas_no_mesmo_eixo": []
           }
         },
         "bullet_de": {
-          "negativas": null,
+          "negativas": "frequencia",
           "medianas": null,
           "positivas": null
         }
@@ -1137,27 +1172,30 @@
         "por_bucket": {
           "negativas": {
             "mencoes": 0,
-            "de_n": 33,
+            "de_n": 40,
             "freq_pct": 0.0,
-            "lift_pp": -9.1,
+            "lift_pp": -10.0,
+            "acima_da_margem": false,
             "tema": null,
             "exemplo_parafraseado": null,
             "temas_no_mesmo_eixo": []
           },
           "medianas": {
             "mencoes": 3,
-            "de_n": 36,
-            "freq_pct": 8.3,
-            "lift_pp": -0.8,
+            "de_n": 40,
+            "freq_pct": 7.5,
+            "lift_pp": -2.5,
+            "acima_da_margem": false,
             "tema": null,
             "exemplo_parafraseado": null,
             "temas_no_mesmo_eixo": []
           },
           "positivas": {
-            "mencoes": 3,
-            "de_n": 33,
-            "freq_pct": 9.1,
-            "lift_pp": 0.8,
+            "mencoes": 4,
+            "de_n": 40,
+            "freq_pct": 10.0,
+            "lift_pp": 2.5,
+            "acima_da_margem": false,
             "tema": null,
             "exemplo_parafraseado": null,
             "temas_no_mesmo_eixo": []
@@ -1170,41 +1208,21 @@
         }
       }
     ],
-    "fonte_classificacao": {
-      "arquivo": "resultado/votacao-3/consenso.jsonl",
-      "criterio": "votacao_3_consenso_2_de_3",
-      "por_bucket": {
-        "negativas": {
-          "n_classificadas": 33,
-          "n_analisadas": 40,
-          "sobreposicao_com_analisadas": 33
-        },
-        "medianas": {
-          "n_classificadas": 36,
-          "n_analisadas": 40,
-          "sobreposicao_com_analisadas": 36
-        },
-        "positivas": {
-          "n_classificadas": 33,
-          "n_analisadas": 40,
-          "sobreposicao_com_analisadas": 33
-        }
-      }
-    },
+    "contraste": "valorativo",
     "rotulagem": {
       "n_chamadas": 3,
       "falharam": [],
       "fora_da_taxonomia": {},
       "houve_retentativa": []
     },
-    "spec_version": "1.9.16",
     "verificador": {
       "aplicado": true,
       "variante": "V2_alvo",
       "passada": 1,
       "eixo": "impacto_emocional",
       "n_removidas_no_corpus": 1654
-    }
+    },
+    "spec_version": "1.9.34"
   },
   "narrativa": "Lançado em 2024 e dirigido por Osgood Perkins, Longlegs - Vínculo Mortal combina elementos de crime, terror e mistério. A trama acompanha uma agente do FBI designada para investigar o caso de um assassino em série cujos crimes envolvem indícios de ocultismo, revelando uma conexão pessoal entre ela e o criminoso durante a busca para impedi-lo.\n\nA experiência estrutura-se em um ritmo cadenciado e na construção de uma atmosfera densa e constante de suspense, apoiada por uma ambientação carregada e escolhas visuais marcantes.\n\nOs diferentes grupos avaliam os mesmos aspectos da produção, divergindo essencialmente no veredito sobre a eficácia do resultado. Na maioria das notas (~57%), uma parcela expressiva exalta atuações marcantes na condução da história, ao passo que boa parte valoriza a atmosfera e a tensão contínua, e um número considerável destaca a qualidade da direção de fotografia e do estilo visual.\n\nEm boa parte das notas (~31%), a avaliação torna-se mais dividida. Nessa leitura, muitos apontam problemas de consistência e furos no roteiro, enquanto vários mantêm elogios à cinematografia e à atmosfera, e uma parcela expressiva ressalta a atuação polarizadora de Nicolas Cage.\n\nPara quem está em uma fração mínima das notas (~13%), a percepção geral é negativa. Boa parte desse segmento critica o roteiro como confuso e sem lógica, muitos mencionam a frustração decorrente da alta expectativa prévia e vários apontam a falta de sustos e um terror considerado fraco.",
   "verificacao_narrativa": {
@@ -1283,12 +1301,12 @@
     "n_chamadas": 3,
     "prefixo_codigo": "",
     "retry": null,
-    "spec_version": "1.9.22",
-    "texto": "A divergência central está na qualidade do roteiro: a maioria dos que recomendam valoriza o desenvolvimento da narrativa e a atmosfera de tensão, enquanto a maioria dos que desaprovam considera a trama confusa e destituída de lógica.",
-    "texto_modelo": "A divergência central está na qualidade do roteiro: a maioria dos que recomendam valoriza o desenvolvimento da narrativa e a atmosfera de tensão, enquanto a maioria dos que desaprovam considera a trama confusa e destituída de lógica.",
+    "spec_version": "1.9.25",
+    "texto": "A divergência central está na construção da história: enquanto a maioria dos que não recomendam considera o encadeamento dos acontecimentos confuso e sem lógica, cerca de metade dos que recomendam elogia o roteiro e a condução da narrativa.",
+    "texto_modelo": "A divergência central está na construção da história: enquanto a maioria dos que não recomendam considera o encadeamento dos acontecimentos confuso e sem lógica, cerca de metade dos que recomendam elogia o roteiro e a condução da narrativa.",
     "origem": "llm",
     "motivo": "melhor_entre_limpos",
-    "criterio_decisivo": "ancoras",
+    "criterio_decisivo": "abertura",
     "abertura": "diver",
     "indice_escolhido": 2,
     "flags": [],
@@ -1297,39 +1315,39 @@
         "indice": 0,
         "n_flags": 0,
         "flags": [],
-        "n_palavras": 40,
+        "n_palavras": 44,
         "n_ancoras": 1,
         "abertura": "opini",
-        "abertura_freq": 6,
+        "abertura_freq": 4,
         "eliminado": false
       },
       {
         "indice": 1,
         "n_flags": 0,
         "flags": [],
-        "n_palavras": 44,
-        "n_ancoras": 0,
+        "n_palavras": 42,
+        "n_ancoras": 1,
         "abertura": "opini",
-        "abertura_freq": 6,
+        "abertura_freq": 4,
         "eliminado": false
       },
       {
         "indice": 2,
         "n_flags": 0,
         "flags": [],
-        "n_palavras": 37,
-        "n_ancoras": 2,
+        "n_palavras": 38,
+        "n_ancoras": 1,
         "abertura": "diver",
-        "abertura_freq": 7,
+        "abertura_freq": 2,
         "eliminado": false
       }
     ],
     "uso": {
-      "prompt_tokens": 3639,
-      "completion_tokens": 180,
+      "prompt_tokens": 3648,
+      "completion_tokens": 181,
       "cache_hit_tokens": 0,
-      "cache_miss_tokens": 3639
+      "cache_miss_tokens": 3648
     },
-    "latencia_s": 11.63
+    "latencia_s": 31.24
   }
 }
