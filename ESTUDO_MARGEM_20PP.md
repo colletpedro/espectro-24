@@ -817,7 +817,8 @@ escasso.
 > estatuto do `taxonomia_id`: aritmética exata, zero Monte Carlo em produção,
 > zero dependência de semente.
 >
-> Catálogo resultante: **6 `tematico` / 29 `valorativo`.**
+> Catálogo resultante: **6 `tematico` / 28 `valorativo` / 1 sem estado**
+> (`obsession-2026`, pelo piso). **6 + 28 + 1 = 35.**
 
 **MEDIDO — a taxa de falso contraste que essa lei realiza**, sobre o nulo dos 29
 filmes cheios, por `n`:

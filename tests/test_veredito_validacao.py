@@ -414,6 +414,8 @@ def test_template_prefixa_o_meio_dominante():
 
 def test_o_template_nunca_devolve_vazio_em_nenhum_filme_publicado():
     """A rede precisa segurar os 35, senão não é rede."""
+    from conftest import exige_resultado_sob_a_lei
+    exige_resultado_sob_a_lei()
     import json
     vistos = 0
     for caminho in sorted((RAIZ / "resultado").glob("*.json")):

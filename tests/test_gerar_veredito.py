@@ -46,6 +46,8 @@ def documento():
     caminho = RAIZ / "resultado" / f"{SLUG}.json"
     if not caminho.exists():
         pytest.skip(f"{SLUG} não publicado neste checkout")
+    from conftest import exige_resultado_sob_a_lei
+    exige_resultado_sob_a_lei(caminho)
     return json.loads(caminho.read_text(encoding="utf-8"))
 
 

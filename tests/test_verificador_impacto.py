@@ -174,14 +174,19 @@ def corpus(vi):
 
 
 def test_projecao_usa_a_margem_exata_e_nao_float(vi):
-    """O bug de v1.9.14/float: 20,0pp EXATOS atingem a margem mínima.
+    """A projeção aplica a MESMA lei que a produção, em `Fraction`.
 
-    Se a projeção voltar a comparar em float, este caso — 8/40 contra 0/40,
-    exatamente 20,0pp — deixa de contar e o teste cai.
+    [v1.9.34] Era 20,0pp fixo; virou `limiar(n) = 144,4/√n` (§2.5), e
+    `_atinge` ganhou `n`. O que o teste protege não mudou: a comparação é
+    exata e o script não tem régua própria. A fronteira exata usada aqui é a
+    de n=100 (`144,4/√100 = 14,44pp`), a única racional — com n quadrado
+    perfeito a lei tem um ponto de igualdade que se pode escrever.
     """
     from fractions import Fraction
-    assert vi._atinge(Fraction(8, 40) - Fraction(0, 40))
-    assert not vi._atinge(Fraction(199, 1000))
+    assert vi._atinge(Fraction(1444, 10000), 100)              # na fronteira
+    assert not vi._atinge(Fraction(1444, 10000) - Fraction(1, 10 ** 9), 100)
+    # e o MESMO lift decide diferente conforme `n` — a mudança da versão
+    assert vi._atinge(Fraction(1, 5), 60) and not vi._atinge(Fraction(1, 5), 40)
 
 
 def test_base_da_projecao_reproduz_10_de_35(vi, corpus):
@@ -206,10 +211,24 @@ def test_base_da_projecao_reproduz_10_de_35(vi, corpus):
     `verificador_impacto.py` não foi tocado). Se `_cobertura_exata` for usada
     de novo para decidir alguma coisa sobre o catálogo real, aplicar
     `eixos._filtrar_pela_analisada` antes é pré-requisito.
+
+    [v1.9.34] Passou de 10 para **11** sob a lei por `n`, e a direção é
+    contraintuitiva: um limiar MAIOR (22,83pp em n=40 contra 20pp) devolvendo
+    MAIS filmes com contraste. A causa é a mesma lacuna que este docstring já
+    descreve — `_corpus_consenso()` lê `consenso.jsonl` CRU e acumula reviews
+    de seleções antigas, então os buckets aqui têm n MAIOR que 40 (até 68), e
+    `limiar(n)` CAI com n. Não é a lei se comportando mal: é esta função
+    medindo uma população que a produção não usa, o que a limitação registrada
+    abaixo já dizia. O número de produção é 6 (`tests/test_eixos.py`).
+
+    `obsession-2026` sai da conta por baixo: com n=5 no menor bucket ele fica
+    abaixo do piso e `contraste` devolve `None` — nem `tematico` nem
+    `valorativo`.
     """
     base = vi._cobertura_exata(corpus)
-    assert base["n_filmes_com_algum"] == 10
+    assert base["n_filmes_com_algum"] == 11
     assert base["n_filmes"] == 35
+    assert base["contraste"]["obsession-2026"] is None
 
 
 def test_base_da_projecao_reproduz_o_contraste_publicado(vi, corpus):

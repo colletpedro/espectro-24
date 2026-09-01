@@ -89,19 +89,21 @@ def test_lift_com_um_bucket_so_nao_tem_com_quem_comparar():
 # --- a margem, e a fronteira exata dos 5 filmes ---------------------------
 
 def test_lift_exatamente_na_margem_ESTA_acima_dela():
-    """[v1.9.15] O caso dos 5 filmes do catálogo (§2.5). 8 reviews de
-    diferença em 40 são exatamente 20,0pp; a decisão registrada é `>=`
-    EXATO — "margem MÍNIMA" é a semântica natural, e é o que a medição de
-    referência sempre pretendeu produzir (13/35 vinha de um bug de ponto
-    flutuante fazendo `0.2 >= 0.2` avaliar falso, não de uma escolha de
-    comparação estrita)."""
-    cls = _uniforme({"negativas": [("critica_social", 33)],
-                     "medianas": [("critica_social", 25)],
-                     "positivas": [("critica_social", 19)]}, n=40)
-    lifts = E.lifts(E.frequencias(cls))
-    assert lifts["negativas"]["critica_social"] == Fraction(1, 5)  # 20,0pp
-    assert E.acima_da_margem(lifts["negativas"]["critica_social"])
-    assert E.contraste(lifts) == "tematico"
+    """A semântica `>=` da v1.9.15 SOBREVIVE à lei por `n` (v1.9.34) — só
+    mudou onde a fronteira fica.
+
+    O teste original usava 20,0pp com n=40, porque 5 dos 35 filmes sentavam
+    exatamente ali sob a margem fixa. Sob a lei, o limiar de n=40 é 22,83pp e
+    NENHUM lift racional o atinge exatamente (`144,4/√40` é irracional). A
+    fronteira exata existe quando `n` é um QUADRADO PERFEITO: com n=100,
+    `144,4/√100 = 14,44pp` é racional, e `lift = 1444/10000` cai exatamente
+    em cima dela.
+
+    "Margem MÍNIMA" continua sendo `>=`: quem senta na fronteira ATINGE."""
+    lift = Fraction(1444, 10000)
+    assert lift * lift * 100 == E.MARGEM_LEI_K2      # exatamente na fronteira
+    assert E.acima_da_margem(lift, 100) is True
+    assert E.acima_da_margem(lift - Fraction(1, 10 ** 12), 100) is False
 
 
 def test_um_quantum_abaixo_da_margem_fica_fora():
@@ -111,8 +113,8 @@ def test_um_quantum_abaixo_da_margem_fica_fora():
                      "positivas": [("critica_social", 19)]}, n=40)
     lifts = E.lifts(E.frequencias(cls))
     assert lifts["negativas"]["critica_social"] == Fraction(7, 40)  # 17,5pp
-    assert not E.acima_da_margem(lifts["negativas"]["critica_social"])
-    assert E.contraste(lifts) == "valorativo"
+    assert not E.acima_da_margem(lifts["negativas"]["critica_social"], 40)
+    assert E.contraste(lifts, n=40) == "valorativo"
 
 
 def test_a_comparacao_nao_passa_por_ponto_flutuante():
@@ -123,15 +125,22 @@ def test_a_comparacao_nao_passa_por_ponto_flutuante():
     comparar, este teste cai."""
     exato = Fraction(33, 40) - Fraction(25, 40)
     assert exato == Fraction(1, 5)
-    assert E.acima_da_margem(exato)          # 1/5 EXATO atinge a margem
-    assert not E.acima_da_margem(Fraction(199, 1000))  # o vizinho de baixo, não
+    # [v1.9.34] a margem deixou de ser 20pp fixo; com n=40 o limiar é 22,83pp,
+    # então 1/5 NÃO atinge mais — o que este teste protege é a EXATIDÃO, não
+    # o valor: a fração construída por subtração continua sendo comparada sem
+    # passar por float. `test_margem_por_n.py` cobre a lei em si.
+    assert E.acima_da_margem(Fraction(23, 100), 40)     # 23pp > 22,83pp
+    assert not E.acima_da_margem(Fraction(2283, 10000), 40)  # o vizinho de baixo
 
 
-def test_margem_e_parametro_e_nao_constante_enterrada():
-    lift = Fraction(1, 5)
-    assert E.acima_da_margem(lift)                    # atinge 20pp
-    assert not E.acima_da_margem(lift, margem_pp=25)   # não atinge 25pp
-    assert E.acima_da_margem(lift, margem_pp=15)       # supera 15pp
+def test_a_margem_depende_de_n_e_nao_e_constante_enterrada():
+    """[v1.9.34] Era `margem_pp` como parâmetro; virou `n`, e o limiar sai da
+    lei. O MESMO lift decide diferente conforme o tamanho da amostra — que é
+    a mudança inteira desta versão em uma asserção."""
+    lift = Fraction(1, 5)                       # 20,0pp
+    assert not E.acima_da_margem(lift, 40)      # limiar 22,83pp — não atinge
+    assert E.acima_da_margem(lift, 60)          # limiar 18,64pp — atinge
+    assert not E.acima_da_margem(lift, 20)      # limiar 32,29pp — longe
 
 
 # --- contraste -------------------------------------------------------------
@@ -140,11 +149,14 @@ def test_contraste_valorativo_quando_nenhum_eixo_passa():
     cls = _uniforme({"negativas": [("ritmo", 20)],
                      "medianas": [("ritmo", 20)],
                      "positivas": [("ritmo", 21)]}, n=40)
-    assert E.contraste(E.lifts(E.frequencias(cls))) == "valorativo"
+    assert E.contraste(E.lifts(E.frequencias(cls)), n=40) == "valorativo"
 
 
-def test_contraste_e_sempre_um_dos_dois_estados():
-    assert E.contraste({}) == "valorativo"
+def test_contraste_sem_classificacao_nenhuma():
+    """Sem bucket nenhum, `n_efetivo` é 0 — abaixo do piso, e o estado NÃO é
+    decidido. Até a v1.9.33 isto devolvia `valorativo`, que afirmava "os
+    grupos falam das mesmas coisas" sobre zero reviews."""
+    assert E.contraste({}, n=E.n_efetivo({})) is None
 
 
 # --- seleção de bullets: 2 de frequência + 3 de lift ----------------------
@@ -159,7 +171,7 @@ def test_bullets_sao_2_de_frequencia_e_3_de_lift():
                       ("som_trilha", 1), ("atuacao", 2), ("comparacoes", 3)],
     }, n=40)
     f, l = E.frequencias(cls), E.lifts(E.frequencias(cls))
-    bullets = E.bullets(f, l)["negativas"]
+    bullets = E.bullets(f, l, 40)["negativas"]
     # CONTRASTE primeiro — é o que só este grupo diz; consenso depois.
     assert [b["papel"] for b in bullets] == (
         ["contraste", "contraste", "contraste", "frequencia", "frequencia"])
@@ -175,7 +187,7 @@ def test_eixo_que_e_consenso_E_contraste_entra_uma_vez_com_os_dois_papeis():
     cls = _uniforme({"negativas": [("ritmo", 36), ("atuacao", 20)],
                      "medianas": [("ritmo", 4), ("atuacao", 18)],
                      "positivas": [("ritmo", 2), ("atuacao", 19)]}, n=40)
-    bullets = E.bullets(E.frequencias(cls), E.lifts(E.frequencias(cls)))
+    bullets = E.bullets(E.frequencias(cls), E.lifts(E.frequencias(cls)), 40)
     eixos = [b["eixo"] for b in bullets["negativas"]]
     assert eixos.count("ritmo") == 1
     papel = next(b["papel"] for b in bullets["negativas"] if b["eixo"] == "ritmo")
@@ -188,7 +200,7 @@ def test_lista_encurta_em_vez_de_completar_com_ruido():
     cls = _uniforme({"negativas": [("ritmo", 20), ("atuacao", 18)],
                      "medianas": [("ritmo", 20), ("atuacao", 18)],
                      "positivas": [("ritmo", 19), ("atuacao", 17)]}, n=40)
-    bullets = E.bullets(E.frequencias(cls), E.lifts(E.frequencias(cls)))
+    bullets = E.bullets(E.frequencias(cls), E.lifts(E.frequencias(cls)), 40)
     papeis = [b["papel"] for b in bullets["negativas"]]
     assert papeis == ["frequencia", "frequencia"]
 
@@ -198,7 +210,7 @@ def test_empate_desfeito_pela_ordem_canonica_dos_eixos():
     acidente de iteração — mesma política de `ORDEM_CANONICA` no briefing."""
     cls = _uniforme({"negativas": [("atuacao", 20), ("ritmo", 20)],
                      "medianas": [], "positivas": []}, n=40)
-    bullets = E.bullets(E.frequencias(cls), E.lifts(E.frequencias(cls)))
+    bullets = E.bullets(E.frequencias(cls), E.lifts(E.frequencias(cls)), 40)
     eixos = [b["eixo"] for b in bullets["negativas"][:2]]
     assert eixos == sorted(eixos, key=E.EIXOS.index)
 
@@ -206,7 +218,7 @@ def test_empate_desfeito_pela_ordem_canonica_dos_eixos():
 def test_eixo_ausente_do_bucket_nao_vira_bullet():
     cls = _uniforme({"negativas": [("ritmo", 10)],
                      "medianas": [], "positivas": []}, n=40)
-    bullets = E.bullets(E.frequencias(cls), E.lifts(E.frequencias(cls)))
+    bullets = E.bullets(E.frequencias(cls), E.lifts(E.frequencias(cls)), 40)
     assert [b["eixo"] for b in bullets["negativas"]] == ["ritmo"]
 
 
@@ -215,7 +227,7 @@ def test_livre_nunca_vira_bullet():
     Publicá-lo como linha diria ao leitor que 'diversos' é um assunto."""
     cls = _uniforme({"negativas": [("livre", 30), ("ritmo", 10)],
                      "medianas": [], "positivas": []}, n=40)
-    bullets = E.bullets(E.frequencias(cls), E.lifts(E.frequencias(cls)))
+    bullets = E.bullets(E.frequencias(cls), E.lifts(E.frequencias(cls)), 40)
     assert "livre" not in [b["eixo"] for b in bullets["negativas"]]
 
 
@@ -227,7 +239,9 @@ def test_bloco_declara_taxonomia_margem_e_contraste():
                      "positivas": [("ritmo", 8)]}, n=40)
     bloco = E.montar_bloco(cls, analisadas={}, temas_por_eixo={})
     assert bloco["taxonomia_id"] == E.TAXONOMIA_ID
-    assert bloco["margem_lift_pp"] == E.MARGEM_LIFT_PP
+    assert bloco["margem_lift_pp"] == round(E.limiar_pp(40), 2)
+    assert bloco["margem"]["n"] == 40
+    assert bloco["margem"]["constante_quadrada"] == [2085136, 1000000]
     assert bloco["contraste"] == "tematico"
 
 
@@ -391,32 +405,71 @@ def test_catalogo_tem_os_35_filmes_classificados(catalogo):
     assert len(catalogo) == 35
 
 
-def test_catalogo_reproduz_16_tematicos_e_19_valorativos(catalogo):
-    """[2026-08-31] Era 18/17 sob a cobertura parcial de 2.866/4.056 (70,7%)
-    que vigorava desde a v1.9.15. A extensão desta sessão levou a cobertura a
-    4.056/4.056 (100%) nos 35 filmes, e **10 filmes mudaram de estado**
-    (6 tematico→valorativo, 4 valorativo→tematico) — não por viés de
-    conteúdo das reviews que faltavam (medido: diferença de ≤2pp em todas as
-    frequências por eixo), mas porque os 10 tinham o lift observado a poucos
-    pontos percentuais da margem de 20pp, e a margem já era conhecida como
-    porosa nesse regime de n (`ESTUDO_CATALOGO_35.md` §8, bootstrap: 13/31
-    marcações sobrevivem a menos de 60% das reamostragens). Cruzamento
-    direto: `bones-and-all`, `everything-everywhere-all-at-once`,
-    `hereditary`, `napoleon-2023`, `perfect-days-2023` e
-    `spider-man-across-the-spider-verse` já estavam nessa lista de
-    marcações frágeis. Se a margem, a métrica ou a comparação mudarem, é
-    aqui que o catálogo inteiro reclama."""
-    estados = {slug: E.contraste(E.lifts(E.frequencias(cls)))
+def test_catalogo_reproduz_6_tematicos_29_valorativos_e_1_sem_estado(catalogo):
+    """[v1.9.34] **A contagem do catálogo sob a LEI POR `n` (§2.5).**
+
+    A história desta asserção, porque ela é o sentinela do catálogo inteiro e
+    já mudou três vezes por razões diferentes:
+
+    - **13/35** (v1.9.14) — margem fixa de 20pp com `>` estrito, que
+      reproduzia por construção o bug de ponto flutuante da medição de
+      referência.
+    - **18/17** (v1.9.15) — o mesmo 20pp com `>=` exato, a fronteira que a
+      medição sempre pretendeu. Cobertura de classificação em 70,7%.
+    - **16/19** (2026-08-31) — mesmo 20pp, cobertura estendida a 100%: 10
+      filmes mudaram de estado, 6 deles perdendo um contraste que o veredito
+      publicado nomeava por extenso.
+    - **6/28/1** (v1.9.34, esta) — a margem deixa de ser um número fixo. Não
+      é mais um ajuste de fronteira: os 16/19 vinham de um limiar cuja taxa
+      de falso contraste era de **17,3% em n=40 e 37,3% no `n` mediano em que
+      o catálogo foi de fato publicado (28)**, com FDR de 24–38% entre os 16
+      `tematico`. A lei calibra o limiar para ≈5%.
+
+    O 1 sem estado é `obsession-2026` (buckets 5/6/8): abaixo do piso de
+    `n < 10`, o estado NÃO é publicado — e ele é o filme cujo `tematico`
+    carregava menos informação de todo o catálogo (**P(ruído) = 0,976**,
+    `ESTUDO_MARGEM_20PP.md` §2.3).
+
+    Se a lei, a constante, o piso, a métrica de lift ou a escolha de `n`
+    mudarem, é aqui que o catálogo inteiro reclama.
+    """
+    estados = {slug: E.contraste(E.lifts(E.frequencias(cls)),
+                                 n=E.n_efetivo(E.frequencias(cls)))
                for slug, cls in catalogo.items()}
-    tematicos = [s for s, e in estados.items() if e == "tematico"]
-    assert (len(tematicos), len(estados) - len(tematicos)) == (16, 19)
+    tematicos = sorted(s for s, e in estados.items() if e == "tematico")
+    valorativos = [s for s, e in estados.items() if e == "valorativo"]
+    sem_estado = sorted(s for s, e in estados.items() if e is None)
+
+    assert (len(tematicos), len(valorativos), len(sem_estado)) == (6, 28, 1)
+    assert tematicos == ["anatomy-of-a-fall", "barbie", "cats-2019", "cure",
+                         "oppenheimer-2023", "the-substance"]
+    assert sem_estado == ["obsession-2026"]
+
+
+def test_os_6_filmes_que_publicavam_causa_sem_lastro_saem_de_tematico(catalogo):
+    """[v1.9.34] Os 6 de `ESTABILIDADE_10_FLIPS.md` cujo veredito NOMEIA por
+    extenso a causa que separa os grupos, e cujo contraste tinha **63% de
+    probabilidade média de ser ruído** na amostra em que foram decididos
+    (`ESTUDO_MARGEM_20PP.md` §2.3). É o dano concreto que motivou a versão;
+    esta asserção existe para que nenhum deles volte sem alguém notar."""
+    for slug in ("bones-and-all", "everything-everywhere-all-at-once",
+                 "hereditary", "napoleon-2023", "perfect-days-2023",
+                 "spider-man-across-the-spider-verse"):
+        freqs = E.frequencias(catalogo[slug])
+        assert E.contraste(E.lifts(freqs), n=E.n_efetivo(freqs)) == "valorativo"
 
 
 def test_estado_dos_3_filmes_publicados(catalogo):
-    esperado = {"cure": "tematico", "the-invite-2026": "tematico",
+    # [v1.9.34] `the-invite-2026` era `tematico` sob a margem fixa de 20pp
+    # (lift dominante 22,5pp) e passa a `valorativo`: com n=40 o limiar é
+    # 22,83pp, e o corte operante na grade de 2,5pp é 25pp. Ele estava a um
+    # quantum da fronteira antiga — p-valor 0,1015 no nulo do máximo, ou seja
+    # ~1 chance em 10 de o contraste dele ser sorteio.
+    esperado = {"cure": "tematico", "the-invite-2026": "valorativo",
                 "cidade-de-deus": "valorativo"}
     for slug, estado in esperado.items():
-        assert E.contraste(E.lifts(E.frequencias(catalogo[slug]))) == estado
+        assert E.contraste(E.lifts(E.frequencias(catalogo[slug])),
+                            n=E.n_efetivo(E.frequencias(catalogo[slug]))) == estado
 
 
 def _corpus_falso(tmp_path, taxonomia_id: str):

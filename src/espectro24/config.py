@@ -4,6 +4,8 @@ Nenhum valor aqui deve divergir da SPEC.md sem bump de versão.
 """
 from __future__ import annotations
 
+from fractions import Fraction
+
 # v1.9.11: estava parada em "1.9.0" desde então, enquanto a SPEC.md
 # avançava até a v1.9.11 — todo `resultado/*.json` gerado de v1.9.1 a
 # v1.9.10 carimbou a versão errada. Achado ao rodar o pipeline de ponta a
@@ -495,18 +497,43 @@ MODEL_DEFAULT = PROVIDER_DEFAULT_MODELS[DEFAULT_PROVIDER]
 LLM_MAX_TOKENS = 3000
 MAX_TEMAS = 6                # §D.3
 
-# --- Margem de LIFT (§2.5, v1.9.14) ---------------------------------------
-# Em PONTOS PERCENTUAIS, inteiros: a comparação é feita em `Fraction` contra
-# `MARGEM_LIFT_PP/100`, nunca em float (5 dos 35 filmes do catálogo têm o
-# melhor lift em exatamente 20,0pp, e `0.2` binário decidiria o estado deles
-# por erro de representação — ver `eixos.acima_da_margem`).
+# --- Margem de LIFT: a LEI POR `n` (§2.5, v1.9.34) -------------------------
+# A margem deixou de ser um número fixo. `MARGEM_LIFT_PP = 20` NÃO existe mais
+# aqui, de propósito: o valor histórico e a razão de ele ter caído estão na
+# spec (§2.5, "A margem de 20pp — REGISTRO HISTÓRICO"), não no código, para
+# que ninguém o reimporte por engano achando que é o parâmetro em vigor.
 #
-# 20 é DECISÃO DE PRODUTO entre pureza de lista e cobertura, medida por nulo
-# de permutação (2000 rodadas): a 15pp, 63% dos pares que cruzam a margem
-# cruzariam por acaso; a 20pp, 41%; a 25pp, 29% — mas só 9 de 35 filmes
-# teriam algum contraste. Não existe margem correta; existe esta, escolhida
-# com os três números à vista.
-MARGEM_LIFT_PP = 20
+#     limiar(n) = 144,4 / √n  pontos percentuais    n = o MENOR dos três buckets
+#
+# `144,4` é `média(q95 · √n)` do NULO DO MÁXIMO sobre n ∈ {20,30,40,50,100},
+# calibrada para taxa de falso contraste de ~5% (medido: 3,7% a 7,5% conforme
+# a quantização de cada `n`). O que ela substitui: 20pp entregava 17,3% de
+# falso contraste em n=40 e 37,3% no `n` mediano em que o catálogo foi de fato
+# publicado (28). Ver `ESTUDO_MARGEM_20PP.md` e `DESENHO_NULO_DO_MAXIMO.md`.
+#
+# A CONSTANTE É O QUADRADO, e é essa a forma que o código compara — porque
+# `144,4/√n` é IRRACIONAL e comparar em float jogaria fora a garantia da
+# v1.9.15 (nenhuma decisão de estado depende de arredondamento). Para
+# `lift > 0`:
+#
+#     lift >= (1444/1000)/√n   ⟺   lift² · n >= (1444/1000)² = 2085136/1000000
+#
+# A GUARDA DE SINAL É PARTE DA LEI (§2.5): elevar ao quadrado APAGA o sinal, e
+# a equivalência só vale no ramo positivo. Sem ela, lift de −0,5 com n=40 dá
+# `0,25 · 40 = 10 >= 2,085136` e APROVA — publicando "assunto próprio deste
+# grupo" sobre o eixo que o grupo MENOS toca. Ver `eixos.acima_da_margem`.
+# A forma CANÔNICA do par, para o carimbo do JSON: `Fraction` normaliza
+# (2085136/1000000 vira 130321/62500), e o artefato publicado precisa carregar
+# a forma em que a lei é escrita na spec, não a forma reduzida.
+MARGEM_LEI_K2_PAR = (2085136, 1000000)
+MARGEM_LEI_K2 = Fraction(*MARGEM_LEI_K2_PAR)
+
+# Piso de amostra (§2.5): abaixo disto o estado `contraste` NÃO é publicado —
+# a chave some do bloco, e ausente NÃO é `valorativo`. Em n < 10 a medição não
+# distingue os dois estados (`obsession-2026`, n = 5/6/8, tem P(ruído) = 0,976
+# sob a margem antiga), e publicar qualquer um dos dois seria trocar uma
+# afirmação sem lastro por outra.
+MARGEM_N_MINIMO = 10
 
 # --- Configuração de produção da PROSA (narrador §D2 + editor §E2) — v1.6.0 ---
 # A síntese por bucket (§D) NÃO usa estes valores: continua com

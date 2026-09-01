@@ -44,7 +44,7 @@ from . import briefing as br
 from . import qualidade as q
 from . import quantificador as Q
 from . import synthesize as S
-from .config import BEST_OF_N, MARGEM_LIFT_PP, SPEC_VERSION
+from .config import BEST_OF_N, SPEC_VERSION
 from .taxonomia import EIXOS, LIVRE, rotulo_do_eixo
 
 ESTAGIO = "veredito"
@@ -147,16 +147,40 @@ def _ordem_canonica(eixo: str) -> int:
     return EIXOS.index(eixo) if eixo in EIXOS else len(EIXOS)
 
 
-def _maior_lift(eixos: dict, bucket: str, margem: int) -> dict | None:
-    """O eixo de maior lift — "o que aquele grupo tem de PRÓPRIO"."""
+def _maior_lift(eixos: dict, bucket: str) -> dict | None:
+    """O eixo de maior lift — "o que aquele grupo tem de PRÓPRIO".
+
+    **[v1.9.34] `acima_da_margem` é LIDO do bloco, nunca recalculado.** Até a
+    v1.9.33 esta função fazia `c["lift_pp"] >= margem` — comparando o float
+    ARREDONDADO A UMA CASA contra a margem. Enquanto a margem era o inteiro
+    20 isso era inofensivo por acidente aritmético (`lift_pp` vem de múltiplos
+    de `100/n`, e nenhum arredondamento cruza um inteiro); com
+    `limiar(n) = 144,4/√n`, irracional, o acidente acabou e uma célula a menos
+    de 0,05pp da fronteira decidiria diferente aqui e em `eixos.py`.
+
+    `lift_pp` continua sendo lido — mas só para ORDENAR e para telemetria, e
+    ordenar por um derivado é seguro: empate de arredondamento cai na ordem
+    canônica, não numa decisão de estado.
+
+    A chave AUSENTE é ERRO, não recálculo silencioso: um bloco sem ela é
+    anterior à v1.9.34 ou está corrompido, e voltar a calcular a partir de
+    `lift_pp` seria reintroduzir o defeito sem que ninguém visse (mesma
+    política de `pipeline._carregar_consenso_producao`).
+    """
     cands = [(eixo, c) for eixo, c in _celulas_citadas(eixos, bucket)
              if isinstance(c.get("lift_pp"), (int, float))]
     if not cands:
         return None
     eixo, c = max(cands, key=lambda t: (t[1]["lift_pp"], -_ordem_canonica(t[0])))
+    if "acima_da_margem" not in c:
+        raise KeyError(
+            f"célula {eixo}/{bucket} sem `acima_da_margem`: bloco `eixos` "
+            "anterior à v1.9.34. Regere o bloco — recalcular a margem a "
+            "partir de `lift_pp` reintroduziria o defeito que ela fechou "
+            "(§4).")
     return {"eixo": eixo, "eixo_rotulo": rotulo_do_eixo(eixo),
             "lift_pp": c["lift_pp"],
-            "acima_da_margem": c["lift_pp"] >= margem,
+            "acima_da_margem": bool(c["acima_da_margem"]),
             "tema": c.get("tema")}
 
 
@@ -242,7 +266,26 @@ def montar_briefing(output: dict) -> dict | None:
     if not eixos.get("linhas"):
         return None
 
-    margem = eixos.get("margem_lift_pp") or MARGEM_LIFT_PP
+    # [v1.9.34] O ESTADO AUSENTE PARA AQUI, e é o caminho mais importante
+    # desta função. `contraste` não está no bloco quando o menor bucket tem
+    # `n < 10` (§2.5, piso): a medição se RECUSOU a decidir se os grupos
+    # falam de coisas diferentes ou das mesmas coisas.
+    #
+    # Sem esta guarda o ausente cairia no ramo TEMÁTICO lá embaixo
+    # (`if estado == "valorativo": ... else:`), e o briefing mandaria o modelo
+    # escrever "a medição encontrou assunto próprio de pelo menos um grupo"
+    # sobre o filme cuja medição não encontrou nada — a afirmação exata que o
+    # piso existe para impedir. O frontend tinha o defeito ESPELHADO, caindo
+    # na frase VALORATIVA pelo fallback de render (§2.5, "o defeito que o piso
+    # encontrou", que se manifesta de dois jeitos opostos nos dois lados).
+    #
+    # Devolver `None` faz a chave `veredito` sumir do JSON — estatuto aditivo
+    # de `ficha` (§3[F]) e `distribuicao` (§3[G]). A página não fica em
+    # silêncio: `render`/frontend põem no lugar a LINHA DE AUSÊNCIA (§2.5),
+    # que é gerada por código e não é um veredito.
+    if "contraste" not in eixos:
+        return None
+
     buckets = output.get("buckets") or []
     por_nome = {b.get("bucket"): b for b in buckets if b.get("bucket")}
     dominante = _bucket_dominante(buckets)
@@ -263,7 +306,7 @@ def montar_briefing(output: dict) -> dict | None:
         g = {
             "modo": modo,
             "estado_piso": estado,
-            "eixo_maior_lift": None if mudo else _maior_lift(eixos, nome, margem),
+            "eixo_maior_lift": None if mudo else _maior_lift(eixos, nome),
             "eixo_maior_frequencia": None if mudo else _maior_frequencia(eixos, nome),
         }
         if isinstance(b.get("share_real"), (int, float)):
@@ -278,7 +321,8 @@ def montar_briefing(output: dict) -> dict | None:
         "titulo": ficha.get("titulo") or (output.get("slug") or ""),
         "ano": ficha.get("ano"),
         "contraste": eixos.get("contraste"),
-        "margem_lift_pp": margem,
+        "margem_lift_pp": eixos.get("margem_lift_pp"),
+        "margem": eixos.get("margem"),
         "taxonomia_id": eixos.get("taxonomia_id"),
         "bucket_dominante": dominante,
         "assunto_compartilhado": _assunto_compartilhado(eixos),

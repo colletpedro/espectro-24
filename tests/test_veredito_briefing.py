@@ -30,14 +30,35 @@ RAIZ = Path(__file__).resolve().parent.parent
 sys.path.insert(0, str(RAIZ / "src"))
 
 from espectro24 import veredito as V  # noqa: E402
+from espectro24.eixos import limiar_pp as E_LIMIAR  # noqa: E402
 
 
 # --------------------------------------------------------------- fixtures
 
-def _celula(mencoes, de_n, lift_pp, tema=None):
+# [v1.9.34] `N_FIXTURE` é o `n` que estes fixtures declaram, e `LIMIAR_FIXTURE`
+# o limiar que a lei (§2.5) dá para ele — 22,83pp com n=40. Os fixtures deste
+# arquivo foram escritos sob a margem fixa de 20pp; os lifts continuam os
+# mesmos, e o que muda é que a decisão agora VIAJA no dado em vez de ser
+# recalculada por quem lê (§4).
+N_FIXTURE = 40
+LIMIAR_FIXTURE = E_LIMIAR(N_FIXTURE)
+
+
+def _celula(mencoes, de_n, lift_pp, tema=None, acima=None):
+    """`acima` default = a lei aplicada ao `lift_pp` do próprio fixture.
+
+    O default calcula porque escrever `acima_da_margem` à mão em ~200 células
+    de fixture convidaria ao erro de digitação silencioso — e um fixture que
+    declara `acima_da_margem: True` num lift de 5pp testaria uma realidade
+    impossível. Quem precisa de uma célula INCOERENTE de propósito (os testes
+    de envenenamento) passa `acima` explícito.
+    """
     return {"mencoes": mencoes, "de_n": de_n,
             "freq_pct": round(100 * mencoes / de_n, 1) if de_n else 0.0,
-            "lift_pp": lift_pp, "tema": tema, "exemplo_parafraseado": "",
+            "lift_pp": lift_pp,
+            "acima_da_margem": (lift_pp >= LIMIAR_FIXTURE if acima is None
+                                else acima),
+            "tema": tema, "exemplo_parafraseado": "",
             "temas_no_mesmo_eixo": []}
 
 
@@ -59,7 +80,12 @@ def _output(linhas, contraste="tematico", shares=(10, 20, 70), **kw):
         "ficha": {"titulo": "Filme de Teste", "ano": 2026},
         "buckets": [_bucket("negativas", neg), _bucket("medianas", med),
                     _bucket("positivas", pos)],
-        "eixos": {"contraste": contraste, "margem_lift_pp": 20,
+        "eixos": {"contraste": contraste,
+                  "margem": {"lei": "lift^2 * n >= 2085136/1000000",
+                             "constante_quadrada": [2085136, 1000000],
+                             "n": N_FIXTURE,
+                             "limiar_pp": round(LIMIAR_FIXTURE, 2)},
+                  "margem_lift_pp": round(LIMIAR_FIXTURE, 2),
                   "taxonomia_id": "ebab2667de74", "linhas": linhas},
     }
     base.update(kw)
@@ -202,7 +228,8 @@ def test_filme_sem_bloco_eixos_devolve_None():
     out = _um_lado_com_lift()
     out.pop("eixos")
     assert V.montar_briefing(out) is None
-    out["eixos"] = {"contraste": "tematico", "margem_lift_pp": 20, "linhas": []}
+    out["eixos"] = {"contraste": "tematico",
+                    "margem_lift_pp": round(LIMIAR_FIXTURE, 2), "linhas": []}
     assert V.montar_briefing(out) is None
 
 
@@ -331,6 +358,8 @@ def test_a_serializacao_nao_vaza_algarismo_em_NENHUM_filme_publicado():
     (amostra reduzida), `napoleon-2023` (meio dominante) e os 17
     `valorativo`. Fixture sintética não pega vazamento que só aparece num
     campo que o filme de teste não exercita."""
+    from conftest import exige_resultado_sob_a_lei
+    exige_resultado_sob_a_lei()
     vistos = 0
     for caminho in sorted((RAIZ / "resultado").glob("*.json")):
         d = json.loads(caminho.read_text(encoding="utf-8"))
@@ -393,6 +422,8 @@ def test_nenhum_filme_publicado_fica_com_menos_de_duas_ancoras():
 
     O teto da chave primária é 2, então dois é o número que importa.
     """
+    from conftest import exige_resultado_sob_a_lei
+    exige_resultado_sob_a_lei()
     magros = []
     for caminho in sorted((RAIZ / "resultado").glob("*.json")):
         d = json.loads(caminho.read_text(encoding="utf-8"))
@@ -408,6 +439,8 @@ def test_dune_e_the_substance_tem_ancora_com_tema_nomeado():
     """Os dois casos sem `tema` no eixo compartilhado. Confirma que eles não
     dependem SÓ do rótulo do eixo — cada um tem, no top-frequência de algum
     lado, uma âncora com tema nomeado de verdade."""
+    from conftest import exige_resultado_sob_a_lei
+    exige_resultado_sob_a_lei()
     for slug in ("dune-2021", "the-substance"):
         caminho = RAIZ / "resultado" / f"{slug}.json"
         if not caminho.exists():

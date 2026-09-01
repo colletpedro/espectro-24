@@ -597,9 +597,16 @@ N_SORTEIOS = 2000
 SEMENTE_PROJECAO = 20260822
 
 
-def _atinge(lift: Fraction) -> bool:
-    """A margem do projeto, EXATA. Fonte única: `eixos.acima_da_margem`."""
-    return EX.acima_da_margem(lift)
+def _atinge(lift: Fraction, n: int) -> bool:
+    """A margem do projeto, EXATA. Fonte única: `eixos.acima_da_margem`.
+
+    [v1.9.34] Ganhou `n`: a margem deixou de ser constante e passou a ser
+    `limiar(n) = 144,4/√n` (§2.5). Este script projeta o impacto do
+    verificador de `impacto_emocional` sobre o estado `contraste`, então ele
+    precisa aplicar a MESMA lei que a produção — passar um `n` errado aqui
+    produziria uma projeção sobre uma régua que não existe.
+    """
+    return EX.acima_da_margem(lift, n)
 
 
 def _corpus_consenso() -> list[dict]:
@@ -640,7 +647,10 @@ def _cobertura_exata(corpus: list[dict]) -> dict:
     for slug, buckets in filmes.items():
         freqs = EX.frequencias(buckets)
         lf = EX.lifts(freqs)
-        est = EX.contraste(lf)
+        # [v1.9.34] `contraste` pode ser None (n abaixo do piso, §2.5). Aqui
+        # ele conta como "sem contraste temático", que é o que a projeção
+        # mede — mas NÃO é publicado como `valorativo` em lugar nenhum.
+        est = EX.contraste(lf, EX.n_efetivo(freqs))
         contraste[slug] = est
         com_algum += est == "tematico"
         n = sum(f["n"] for f in freqs.values())
@@ -670,7 +680,7 @@ def cmd_projetar_exato() -> None:
         "natureza": "PROJECAO, nao medicao — a medicao exige rodar o "
                     "verificador sobre o corpus inteiro",
         "corrige": "projecao.json (2026-08-14), medida em float e com 1 sorteio",
-        "margem_pp": EX.MARGEM_LIFT_PP,
+        "margem_lei": "lift^2 * n >= 2085136/1000000  (limiar(n) = 144,4/sqrt(n) pp)",
         "n_sorteios": N_SORTEIOS,
         "base": {
             "n_filmes": base["n_filmes"],
@@ -925,8 +935,9 @@ def relatorio_aplicacao(linhas_cru: list[dict],
     total_removidas = 0
     for slug in slugs:
         bc, bv = cru.get(slug, {}), ver.get(slug, {})
-        contraste_c = EX.contraste(EX.lifts(EX.frequencias(bc))) if bc else None
-        contraste_v = EX.contraste(EX.lifts(EX.frequencias(bv))) if bv else None
+        fc, fv = EX.frequencias(bc), EX.frequencias(bv)
+        contraste_c = EX.contraste(EX.lifts(fc), EX.n_efetivo(fc)) if bc else None
+        contraste_v = EX.contraste(EX.lifts(fv), EX.n_efetivo(fv)) if bv else None
 
         removidas_bucket = {}
         for b in sorted(set(bc) | set(bv)):

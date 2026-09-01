@@ -207,9 +207,138 @@
   "consensos_usados": [],
   "eixos": {
     "taxonomia_id": "ebab2667de74",
-    "margem_lift_pp": 20,
-    "contraste": "tematico",
-    "spec_version": "1.9.14",
+    "margem": {
+      "lei": "lift^2 * n >= 2085136/1000000",
+      "constante_quadrada": [
+        2085136,
+        1000000
+      ],
+      "n": 2,
+      "limiar_pp": 102.11
+    },
+    "margem_lift_pp": 102.11,
+    "linhas": [
+      {
+        "eixo": "ritmo",
+        "por_bucket": {
+          "negativas": {
+            "mencoes": 5,
+            "de_n": 7,
+            "freq_pct": 71.4,
+            "lift_pp": 21.4,
+            "acima_da_margem": false,
+            "tema": "Ritmo arrastado",
+            "exemplo_parafraseado": "",
+            "temas_no_mesmo_eixo": []
+          },
+          "medianas": {
+            "mencoes": 1,
+            "de_n": 2,
+            "freq_pct": 50.0,
+            "lift_pp": -21.4,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "positivas": {
+            "mencoes": 6,
+            "de_n": 30,
+            "freq_pct": 20.0,
+            "lift_pp": -51.4,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          }
+        },
+        "bullet_de": {
+          "negativas": "frequencia",
+          "medianas": "frequencia",
+          "positivas": null
+        }
+      },
+      {
+        "eixo": "som_trilha",
+        "por_bucket": {
+          "negativas": {
+            "mencoes": 0,
+            "de_n": 7,
+            "freq_pct": 0.0,
+            "lift_pp": -30.0,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "medianas": {
+            "mencoes": 0,
+            "de_n": 2,
+            "freq_pct": 0.0,
+            "lift_pp": -30.0,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "positivas": {
+            "mencoes": 9,
+            "de_n": 30,
+            "freq_pct": 30.0,
+            "lift_pp": 30.0,
+            "acima_da_margem": false,
+            "tema": "Trilha marcante",
+            "exemplo_parafraseado": "",
+            "temas_no_mesmo_eixo": []
+          }
+        },
+        "bullet_de": {
+          "negativas": null,
+          "medianas": null,
+          "positivas": "frequencia"
+        }
+      },
+      {
+        "eixo": "tom_atmosfera",
+        "por_bucket": {
+          "negativas": {
+            "mencoes": 3,
+            "de_n": 7,
+            "freq_pct": 42.9,
+            "lift_pp": -17.1,
+            "acima_da_margem": false,
+            "tema": "Roteiro raso",
+            "exemplo_parafraseado": "",
+            "temas_no_mesmo_eixo": []
+          },
+          "medianas": {
+            "mencoes": 1,
+            "de_n": 2,
+            "freq_pct": 50.0,
+            "lift_pp": -10.0,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "positivas": {
+            "mencoes": 18,
+            "de_n": 30,
+            "freq_pct": 60.0,
+            "lift_pp": 10.0,
+            "acima_da_margem": false,
+            "tema": "Atmosfera envolvente",
+            "exemplo_parafraseado": "",
+            "temas_no_mesmo_eixo": []
+          }
+        },
+        "bullet_de": {
+          "negativas": "frequencia",
+          "medianas": "frequencia",
+          "positivas": "frequencia"
+        }
+      }
+    ],
     "fonte_classificacao": {
       "arquivo": "resultado/votacao-3/consenso.jsonl",
       "criterio": "votacao_3_consenso_2_de_3",
@@ -231,125 +360,13 @@
         }
       }
     },
-    "linhas": [
-      {
-        "eixo": "ritmo",
-        "por_bucket": {
-          "negativas": {
-            "mencoes": 5,
-            "de_n": 7,
-            "freq_pct": 71.4,
-            "lift_pp": 51.4,
-            "tema": "Ritmo arrastado",
-            "exemplo_parafraseado": "",
-            "temas_no_mesmo_eixo": []
-          },
-          "medianas": {
-            "mencoes": 1,
-            "de_n": 2,
-            "freq_pct": 50.0,
-            "lift_pp": 30.0,
-            "tema": null,
-            "exemplo_parafraseado": null,
-            "temas_no_mesmo_eixo": []
-          },
-          "positivas": {
-            "mencoes": 6,
-            "de_n": 30,
-            "freq_pct": 20.0,
-            "lift_pp": -51.4,
-            "tema": null,
-            "exemplo_parafraseado": null,
-            "temas_no_mesmo_eixo": []
-          }
-        },
-        "bullet_de": {
-          "negativas": "frequencia_e_contraste",
-          "medianas": null,
-          "positivas": null
-        }
-      },
-      {
-        "eixo": "som_trilha",
-        "por_bucket": {
-          "negativas": {
-            "mencoes": 0,
-            "de_n": 7,
-            "freq_pct": 0.0,
-            "lift_pp": -30.0,
-            "tema": null,
-            "exemplo_parafraseado": null,
-            "temas_no_mesmo_eixo": []
-          },
-          "medianas": {
-            "mencoes": 0,
-            "de_n": 2,
-            "freq_pct": 0.0,
-            "lift_pp": -30.0,
-            "tema": null,
-            "exemplo_parafraseado": null,
-            "temas_no_mesmo_eixo": []
-          },
-          "positivas": {
-            "mencoes": 9,
-            "de_n": 30,
-            "freq_pct": 30.0,
-            "lift_pp": 30.0,
-            "tema": "Trilha marcante",
-            "exemplo_parafraseado": "",
-            "temas_no_mesmo_eixo": []
-          }
-        },
-        "bullet_de": {
-          "negativas": null,
-          "medianas": null,
-          "positivas": "frequencia_e_contraste"
-        }
-      },
-      {
-        "eixo": "tom_atmosfera",
-        "por_bucket": {
-          "negativas": {
-            "mencoes": 3,
-            "de_n": 7,
-            "freq_pct": 42.9,
-            "lift_pp": -17.1,
-            "tema": "Roteiro raso",
-            "exemplo_parafraseado": "",
-            "temas_no_mesmo_eixo": []
-          },
-          "medianas": {
-            "mencoes": 1,
-            "de_n": 2,
-            "freq_pct": 50.0,
-            "lift_pp": -10.0,
-            "tema": null,
-            "exemplo_parafraseado": null,
-            "temas_no_mesmo_eixo": []
-          },
-          "positivas": {
-            "mencoes": 18,
-            "de_n": 30,
-            "freq_pct": 60.0,
-            "lift_pp": 10.0,
-            "tema": "Atmosfera envolvente",
-            "exemplo_parafraseado": "",
-            "temas_no_mesmo_eixo": []
-          }
-        },
-        "bullet_de": {
-          "negativas": "frequencia",
-          "medianas": null,
-          "positivas": "frequencia"
-        }
-      }
-    ],
     "rotulagem": {
       "n_chamadas": 2,
       "falharam": [],
       "fora_da_taxonomia": {},
       "houve_retentativa": []
-    }
+    },
+    "spec_version": "1.9.14"
   },
   "_oculto_do_catalogo": true
 }

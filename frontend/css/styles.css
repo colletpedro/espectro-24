@@ -1389,6 +1389,33 @@ a { color: inherit; }
   max-width: 40rem;
 }
 
+/* [v1.9.34] A LINHA DE AUSÊNCIA DE VEREDITO — ocupa a POSIÇÃO do veredito e
+   precisa NÃO ser lida como um (SPEC §2.5). Ela não afirma nada sobre o
+   filme; diz por que o produto se recusa a afirmar.
+
+   O que a distingue, e cada escolha faz um trabalho:
+   · SANS, não serifa — a serifa é a voz editorial do produto (veredito,
+     narrativa); esta linha é do sistema falando de si, o mesmo registro do
+     `.disclaimer` e do `.proportion__note`;
+   · corpo menor e cor secundária — não compete com os bullets acima, que são
+     o achado de verdade nesta página;
+   · a barra à esquerda marca "nota de método" sem caixa nem ícone, no mesmo
+     vocabulário discreto do disclosure APROFUNDAR.
+
+   NÃO é `.verdict` com modificador, de propósito: um modificador convida a
+   herdar a serifa de volta num refactor futuro, e aí a linha vira veredito
+   por acidente de CSS. */
+.verdict-absent {
+  font-family: var(--sans);
+  font-size: 0.94rem;
+  line-height: 1.55;
+  color: var(--text-dim);
+  margin: 40px 0 8px;
+  max-width: 40rem;
+  padding-left: 14px;
+  border-left: 2px solid var(--border);
+}
+
 /* divisor — [v1.9.26] só a linha arco-íris. O rótulo "EM DETALHE · TEMA A
    TEMA" saiu da tela (Entrega 1: não há mais um resumo antes dele do qual
    separar "o detalhe"; os bullets vêm direto), e o `.disclaimer` que vinha

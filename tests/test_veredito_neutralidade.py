@@ -68,6 +68,8 @@ def _rotulo(b, grupo):
 
 @pytest.fixture(scope="module")
 def publicados():
+    from conftest import exige_resultado_sob_a_lei
+    exige_resultado_sob_a_lei()
     p = _publicados()
     if len(p) < 30:
         pytest.skip(f"poucos filmes publicados neste checkout ({len(p)})")

@@ -89,3 +89,45 @@ class FakeSession:
     def get(self, url, headers=None, timeout=None):
         self.n_calls += 1
         return SimpleNamespace(status_code=self._status, text=self._text)
+
+
+# --------------------------------------------------------------------------
+# [v1.9.34] A janela entre a IMPLEMENTAÇÃO e a REPUBLICAÇÃO
+# --------------------------------------------------------------------------
+
+def exige_resultado_sob_a_lei(caminho=None):
+    """Pula o teste enquanto `resultado/` ainda não foi republicado sob a lei.
+
+    A v1.9.34 introduziu `eixos.margem` e `acima_da_margem` por célula, e fez
+    `veredito.py` LER a decisão em vez de recalculá-la a partir de `lift_pp`
+    (§4). Entre o commit de implementação e o de republicação existe uma
+    janela em que o código exige um campo que os artefatos publicados ainda
+    não têm — e é uma janela legítima: os dois commits são separados de
+    propósito, para que o diff da republicação seja legível daqui a seis
+    meses.
+
+    **Por que SKIP e não um fallback.** Um fallback para `lift_pp` seria
+    exatamente o defeito que a versão fecha, reintroduzido dentro do teste
+    que deveria protegê-lo. O skip é honesto sobre o estado: o teste não pode
+    rodar ainda, diz por quê, e **volta sozinho** quando a republicação
+    acontecer — nenhuma linha precisa ser editada para reativá-lo.
+
+    Se este skip ainda estiver disparando depois da Etapa 4 da v1.9.34, a
+    republicação não terminou.
+    """
+    import json
+    import pytest
+    from pathlib import Path
+
+    raiz = Path(__file__).resolve().parent.parent
+    alvos = ([Path(caminho)] if caminho else
+             sorted((raiz / "resultado").glob("*.json")))
+    for p in alvos:
+        d = json.loads(p.read_text(encoding="utf-8"))
+        bloco = d.get("eixos")
+        if bloco and "margem" not in bloco:
+            pytest.skip(
+                f"{p.name} ainda não foi republicado sob a lei por `n` da "
+                "v1.9.34 (bloco `eixos` sem `margem`/`acima_da_margem`). "
+                "Este teste lê artefato PUBLICADO e volta sozinho depois da "
+                "republicação — ver `tests/conftest.py`.")

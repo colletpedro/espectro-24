@@ -14,11 +14,91 @@ render (buckets do mundo real são todos `completo`).
 from __future__ import annotations
 
 import json
+import sys
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
 RESULTADO = ROOT / "resultado"
 FRONTEND = ROOT / "frontend"
+
+sys.path.insert(0, str(ROOT / "src"))
+from espectro24 import eixos as _E  # noqa: E402
+
+
+# [v1.9.34] O bloco `eixos` do filme sintético passa a ser GERADO pelo mesmo
+# código que gera o dos 35 reais, em vez de escrito à mão.
+#
+# **O motivo é um defeito medido, não elegância.** O bloco hardcoded já havia
+# divergido: seus `bullet_de` não eram os que `eixos.bullets()` produziria
+# para aquelas frequências. Numa mudança de schema ele fica para trás **e o
+# fixture continua verde**, testando um schema que não existe mais — que é
+# exatamente o modo de falha que um fixture de conformidade deve impedir.
+# Agora ele não pode divergir: é a mesma função.
+#
+# `fonte_classificacao` e `rotulagem` continuam à mão e são anexados depois —
+# eles são fixtures de OUTRA coisa (divergência entre amostra classificada e
+# analisada; telemetria de §[D3]) e não têm como sair de uma classificação
+# sintética sem inventar uma segunda camada de mentira.
+_DEG_FREQ = {
+    # bucket: (n, {eixo: quantas reviews carregam})
+    "negativas": (7, {"ritmo": 5, "tom_atmosfera": 3}),
+    "medianas": (2, {"ritmo": 1, "tom_atmosfera": 1}),
+    "positivas": (30, {"ritmo": 6, "som_trilha": 9, "tom_atmosfera": 18}),
+}
+_DEG_TEMAS = {
+    "negativas": {"ritmo": {"tema": "Ritmo arrastado", "exemplo_parafraseado": ""},
+                  "tom_atmosfera": {"tema": "Roteiro raso",
+                                    "exemplo_parafraseado": ""}},
+    "positivas": {"som_trilha": {"tema": "Trilha marcante",
+                                 "exemplo_parafraseado": ""},
+                  "tom_atmosfera": {"tema": "Atmosfera envolvente",
+                                    "exemplo_parafraseado": ""}},
+}
+
+
+def _eixos_do_degradado() -> dict:
+    """O bloco `eixos` do filme sintético, pelo caminho de produção.
+
+    **Ele fica ABAIXO DO PISO de `n` (§2.5) e NÃO tem `contraste` — e isso é
+    estrutural, não uma escolha desta função.** O bucket `negativas` tem n=7
+    para exercitar `estado_piso: sem_numero`, que exige `3 <= n < 8`; o piso do
+    estado de contraste é `n >= 10`. **Um filme com bucket `sem_numero` está
+    abaixo do piso do contraste POR CONSTRUÇÃO** — não existe fixture que
+    exercite os dois ao mesmo tempo.
+
+    **Coberturas que isto MOVE, declaradas:**
+    · GANHA a LINHA DE AUSÊNCIA de veredito (`.verdict-absent`), que no mundo
+      real só `obsession-2026` exercita.
+    · PERDE o fallback de render de `filme.js` (`veredito()`), que era a razão
+      declarada de este filme não ter bloco `veredito` desde a v1.9.21. Depois
+      da republicação da v1.9.34 nenhum filme real o exercita tampouco — ele
+      vira código de compatibilidade sem exercitador. Registrado como lacuna
+      conhecida, não escondido: a decisão entre mantê-lo sem teste ou removê-lo
+      é do dono do projeto, e não foi tomada aqui.
+    """
+    cls = {b: {f"{b}:{i}": [e for e, k in eixos.items() if i < k]
+               for i in range(n)}
+           for b, (n, eixos) in _DEG_FREQ.items()}
+    analisadas = {b: set(rs) for b, rs in cls.items()}
+    bloco = _E.montar_bloco(cls, analisadas, _DEG_TEMAS)
+    bloco["fonte_classificacao"] = {
+        "arquivo": "resultado/votacao-3/consenso.jsonl",
+        "criterio": "votacao_3_consenso_2_de_3",
+        "por_bucket": {
+            "negativas": {"n_classificadas": 7, "n_analisadas": 7,
+                          "sobreposicao_com_analisadas": 5},
+            "medianas": {"n_classificadas": 2, "n_analisadas": 2,
+                         "sobreposicao_com_analisadas": 2},
+            "positivas": {"n_classificadas": 30, "n_analisadas": 30,
+                          "sobreposicao_com_analisadas": 22}}}
+    bloco["rotulagem"] = {"n_chamadas": 2, "falharam": [],
+                          "fora_da_taxonomia": {}, "houve_retentativa": []}
+    # Carimbo que `pipeline.montar_eixos` põe no caminho real e `montar_bloco`
+    # não põe (o bloco carrega a PRÓPRIA versão, não a do arquivo). Fixo em
+    # 1.9.14 desde sempre neste fixture: ele documenta um bloco ANTIGO, e é
+    # essa divergência com o arquivo que a política de carimbo quer visível.
+    bloco["spec_version"] = "1.9.14"
+    return bloco
 
 def _catalogo() -> list[str]:
     """[v1.9.16] Os 35 slugs de `votacao-3/consenso.jsonl` — a mesma fonte
@@ -146,40 +226,7 @@ def _filme_degradado():
         # `sem_numero` (célula com tema e sem número), `sem_analise` (coluna
         # indisponível) e célula VAZIA (eixo que o grupo não menciona)
         # aparecem lado a lado com uma célula normal.
-        "eixos": {
-            "taxonomia_id": "ebab2667de74", "margem_lift_pp": 20,
-            "contraste": "tematico", "spec_version": "1.9.14",
-            "fonte_classificacao": {
-                "arquivo": "resultado/votacao-3/consenso.jsonl",
-                "criterio": "votacao_3_consenso_2_de_3",
-                "por_bucket": {
-                    "negativas": {"n_classificadas": 7, "n_analisadas": 7,
-                                  "sobreposicao_com_analisadas": 5},
-                    "medianas": {"n_classificadas": 2, "n_analisadas": 2,
-                                 "sobreposicao_com_analisadas": 2},
-                    "positivas": {"n_classificadas": 30, "n_analisadas": 30,
-                                  "sobreposicao_com_analisadas": 22}}},
-            "linhas": [
-                {"eixo": "ritmo", "por_bucket": {
-                    "negativas": {"mencoes": 5, "de_n": 7, "freq_pct": 71.4, "lift_pp": 51.4, "tema": "Ritmo arrastado", "exemplo_parafraseado": "", "temas_no_mesmo_eixo": []},
-                    "medianas": {"mencoes": 1, "de_n": 2, "freq_pct": 50.0, "lift_pp": 30.0, "tema": None, "exemplo_parafraseado": None, "temas_no_mesmo_eixo": []},
-                    "positivas": {"mencoes": 6, "de_n": 30, "freq_pct": 20.0, "lift_pp": -51.4, "tema": None, "exemplo_parafraseado": None, "temas_no_mesmo_eixo": []}},
-                 "bullet_de": {"negativas": "frequencia_e_contraste",
-                               "medianas": None, "positivas": None}},
-                {"eixo": "som_trilha", "por_bucket": {
-                    "negativas": {"mencoes": 0, "de_n": 7, "freq_pct": 0.0, "lift_pp": -30.0, "tema": None, "exemplo_parafraseado": None, "temas_no_mesmo_eixo": []},
-                    "medianas": {"mencoes": 0, "de_n": 2, "freq_pct": 0.0, "lift_pp": -30.0, "tema": None, "exemplo_parafraseado": None, "temas_no_mesmo_eixo": []},
-                    "positivas": {"mencoes": 9, "de_n": 30, "freq_pct": 30.0, "lift_pp": 30.0, "tema": "Trilha marcante", "exemplo_parafraseado": "", "temas_no_mesmo_eixo": []}},
-                 "bullet_de": {"negativas": None, "medianas": None,
-                               "positivas": "frequencia_e_contraste"}},
-                {"eixo": "tom_atmosfera", "por_bucket": {
-                    "negativas": {"mencoes": 3, "de_n": 7, "freq_pct": 42.9, "lift_pp": -17.1, "tema": "Roteiro raso", "exemplo_parafraseado": "", "temas_no_mesmo_eixo": []},
-                    "medianas": {"mencoes": 1, "de_n": 2, "freq_pct": 50.0, "lift_pp": -10.0, "tema": None, "exemplo_parafraseado": None, "temas_no_mesmo_eixo": []},
-                    "positivas": {"mencoes": 18, "de_n": 30, "freq_pct": 60.0, "lift_pp": 10.0, "tema": "Atmosfera envolvente", "exemplo_parafraseado": "", "temas_no_mesmo_eixo": []}},
-                 "bullet_de": {"negativas": "frequencia", "medianas": None,
-                               "positivas": "frequencia"}}],
-            "rotulagem": {"n_chamadas": 2, "falharam": [],
-                          "fora_da_taxonomia": {}, "houve_retentativa": []}},
+        "eixos": _eixos_do_degradado(),
         "_oculto_do_catalogo": True,
     }
 

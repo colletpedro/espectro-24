@@ -883,7 +883,46 @@
   // A TELEMETRIA do bloco (`origem`, `modelo`, `flags`, `candidatos`) é
   // diagnóstico de produção e NÃO aparece na tela — mesma decisão já tomada
   // para `verificacao_narrativa` e `narrativa_selecao`.
+  // [v1.9.34] A LINHA DE AUSÊNCIA DE VEREDITO (SPEC §2.5). Determinística,
+  // em código, ZERO LLM — ela não é um veredito, é a explicação de por que
+  // não há um, e o CSS a distingue de um (`.verdict-absent`, não `.verdict`).
+  //
+  // As três invariantes que a redação obedece, e nenhuma é decorativa:
+  //   · ancorada na BASE, nunca na MAGNITUDE — é exatamente a exceção que a
+  //     v1.9.22 preservou ao proibir deflação por hedge;
+  //   · zero algarismo (v1.9.20) e zero quantificador (v1.9.22);
+  //   · os DOIS estados no MESMO nível, por extenso. "ou apenas discordam"
+  //     rebaixaria em prosa o estado que 29 dos 35 filmes publicam — é a
+  //     neutralidade do §0 aplicada à frase que explica por que não há estado.
+  // FUNÇÃO, e não `var`, de propósito. A primeira versão disto era
+  // `var SEM_ESTADO_DE_CONTRASTE = "..."` declarado aqui, ao lado de quem
+  // usa — e a página renderizou a linha VAZIA: o render dispara antes desta
+  // altura do arquivo, então no momento da chamada o `var` ainda valia
+  // `undefined`, e `textContent = undefined` grava STRING VAZIA (não a
+  // palavra "undefined"), o que faz o defeito não gritar em lugar nenhum.
+  // Declaração de função é hasteada inteira; a ordem deixa de importar.
+  // Pego pela verificação no navegador, com a suíte inteira verde.
+  function semEstadoDeContraste() {
+    return "A amostra analisada deste filme é pequena demais para dizer se " +
+      "os grupos falam de coisas diferentes ou se falam das mesmas coisas e " +
+      "divergem no julgamento.";
+  }
+
   function veredictoBlock(f) {
+    var e = f.eixos;
+    // Sem `contraste` no bloco, a medição se RECUSOU a decidir (n < 10,
+    // §2.5). O fallback de render NÃO pode rodar aqui: com nenhum eixo acima
+    // da margem ele produziria a frase VALORATIVA ("os grupos falam das
+    // mesmas coisas e divergem no julgamento"), que é uma das duas
+    // afirmações que o piso existe para impedir. O espelho deste defeito no
+    // Python punha o ausente no ramo TEMÁTICO — o mesmo buraco, saindo pelos
+    // dois lados opostos (§2.5, "o defeito que o piso encontrou").
+    if (e && e.linhas && e.linhas.length && !("contraste" in e)) {
+      var aviso = document.createElement("p");
+      aviso.className = "verdict-absent";
+      aviso.textContent = semEstadoDeContraste();
+      return aviso;
+    }
     var pronto = f.veredito && f.veredito.texto;
     var texto = pronto ? f.veredito.texto : veredito(f);
     if (!texto) return null;
@@ -897,15 +936,14 @@
     var e = f.eixos;
     if (!e || !e.linhas || !e.linhas.length) return null;
     var buckets = f.buckets || [];
-    var margem = e.margem_lift_pp || 20;
 
     var dominante = bucketDominante(buckets);
     var meioDominante = !!(dominante && dominante.bucket === "medianas");
 
     var pos = eixoDeMaiorLift(e, "positivas", buckets);
     var neg = eixoDeMaiorLift(e, "negativas", buckets);
-    var posOk = !!pos && pos.lift_pp >= margem;
-    var negOk = !!neg && neg.lift_pp >= margem;
+    var posOk = !!pos && pos.acima_da_margem;
+    var negOk = !!neg && neg.acima_da_margem;
 
     var frase;
     if (posOk && negOk) {
@@ -1007,7 +1045,14 @@
     var melhor = candidatos.reduce(function (a, l) {
       return l.por_bucket[bucket].lift_pp > a.por_bucket[bucket].lift_pp ? l : a;
     });
-    return { eixo: melhor.eixo, lift_pp: melhor.por_bucket[bucket].lift_pp };
+    var cel = melhor.por_bucket[bucket];
+    // [v1.9.34] `acima_da_margem` vem do JSON, calculado em Fraction exato
+    // por `eixos.py`. NUNCA recalcule `lift_pp >= margem` aqui: `lift_pp` é
+    // derivado e arredondado a uma casa, e o limiar da lei (144,4/√n) é
+    // IRRACIONAL — o acidente aritmético que tornava o recálculo inofensivo
+    // enquanto a margem era o inteiro 20 acabou (SPEC §4).
+    return { eixo: melhor.eixo, lift_pp: cel.lift_pp,
+             acima_da_margem: cel.acima_da_margem === true };
   }
 
   // [v1.9.20] O eixo de maior FREQUÊNCIA de um bucket — "do que aquele

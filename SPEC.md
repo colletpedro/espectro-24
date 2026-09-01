@@ -914,7 +914,7 @@ filmes. **`valorativo` não é mais o estado fraco. MEDIDO
 **O critério que entra no lugar é de ERRO, não de cobertura:** o limiar é o que
 mantém a taxa de falso contraste em nível declarado (≈5%), e o número de filmes
 `tematico` é **consequência**, não alvo. Sob a lei, o catálogo é **6 `tematico`
-/ 29 `valorativo` / 1 sem estado** — e 6/35 não é um defeito a corrigir
+/ 28 `valorativo` / 1 sem estado publicado** — e 6/35 não é um defeito a corrigir
 afrouxando a lei.
 
 #### α = 0,05 e não 0,10 — a razão é assimetria de dano
@@ -1097,8 +1097,13 @@ bloco `eixos` (linhas, frequências, lifts, bullets) **continua sendo publicado
 normalmente** — o que falta é só a decisão binária, porque é ela que o `n` não
 sustenta.
 
-Contagem atual do catálogo sob a lei da v1.9.34: **6 `tematico`, 29
-`valorativo`, 1 sem estado** (`obsession-2026`).
+Contagem atual do catálogo sob a lei da v1.9.34: **6 `tematico`, 28
+`valorativo`, 1 sem estado** (`obsession-2026`) — **6 + 28 + 1 = 35**.
+
+*(Correção de registro, feita ao implementar: a primeira redação desta seção
+dizia "6 / 29 / 1", que soma 36. `obsession-2026` estava contado duas vezes —
+como `valorativo` sob a lei e como sem-estado sob o piso. Ele é UM filme, e o
+piso o tira de `valorativo`, não o acrescenta.)*
 
 ---
 
@@ -7777,7 +7782,7 @@ As três incógnitas abaixo foram resolvidas na Fase 1; os achados já estão in
 ---
 
 ## Changelog
-- **v1.9.34** (2026-09-01) — **A MARGEM DE CONTRASTE DEIXA DE SER UM NÚMERO FIXO E PASSA A SER UMA LEI POR `n`.** Primeira mudança do arco que altera dado publicado e republica filmes. `limiar(n) = 144,4/√n` pp, `n` = o MENOR dos três buckets, comparado em `Fraction` **exato** pela forma quadrada `lift² · n >= Fraction(2085136, 1000000)` — que elimina a raiz e preserva a garantia da v1.9.15 (*nenhuma decisão de estado depende de arredondamento de float*). **Piso: `n < 10` → `contraste` AUSENTE do bloco `eixos`**, não `valorativo` — chave ausente distingue "não medido" de "medido e sem contraste". Catálogo: **6 `tematico` / 29 `valorativo` / 1 sem estado**, contra 18/17 publicados. §0, §2.5, §2.8, §2.9 e §4 reescritos.
+- **v1.9.34** (2026-09-01) — **A MARGEM DE CONTRASTE DEIXA DE SER UM NÚMERO FIXO E PASSA A SER UMA LEI POR `n`.** Primeira mudança do arco que altera dado publicado e republica filmes. `limiar(n) = 144,4/√n` pp, `n` = o MENOR dos três buckets, comparado em `Fraction` **exato** pela forma quadrada `lift² · n >= Fraction(2085136, 1000000)` — que elimina a raiz e preserva a garantia da v1.9.15 (*nenhuma decisão de estado depende de arredondamento de float*). **Piso: `n < 10` → `contraste` AUSENTE do bloco `eixos`**, não `valorativo` — chave ausente distingue "não medido" de "medido e sem contraste". Catálogo: **6 `tematico` / 28 `valorativo` / 1 sem estado**, contra 18/17 publicados. §0, §2.5, §2.8, §2.9 e §4 reescritos.
   - **(1) O que motivou: o NULO DO MÁXIMO, uma medição que não existia.** O estado `contraste` nunca foi um teste — é o **máximo sobre 30 células** (10 eixos × 3 buckets) comparado a um limiar, e o máximo de um conjunto ruidoso é enviesado para cima, com o viés crescendo quando `n` encolhe. As três medições anteriores (nulo por PAR de §2.5, bootstraps de `ESTUDO_CATALOGO_35.md` §8 e `MEDICAO_VERIFICACAO_BINARIA.md`) mediam outras coisas. Desenho registrado ANTES de rodar (`DESENHO_NULO_DO_MAXIMO.md`, com previsões escritas para poderem falhar — **uma falhou e está reportada como falha**); resultados em `ESTUDO_MARGEM_20PP.md`. **MEDIDO:** 20pp cai no percentil **82** do ruído com n=40; taxa de falso contraste **17,3%** em n=40 e **37,3%** no `n` mediano em que o catálogo foi de fato publicado; **6 de 35** filmes distinguíveis do nulo a α=0,05, **1** sobrevivendo a Holm; FDR de **24–38%** entre os 16 `tematico`.
   - **(2) O número que decidiu, e é sobre as páginas no ar.** Nos **6 filmes cujo veredito nomeia por extenso a causa que separa os grupos e que o dado completo não sustenta** (`ESTABILIDADE_10_FLIPS.md`), a probabilidade média de aquele contraste ter vindo puramente de ruído era **0,633**. Não é "a margem é porosa": é seis páginas nomeando uma causa que tinha ~63% de chance de ser sorteio.
   - **(3) O `n` publicado NUNCA foi 40 — a correção de registro que reenquadra §2.8/§2.9.** Reconstruído do campo `de_n` dos 35 JSONs: mediana **28**, média 27,3, mínimo **5**; **56 dos 105 buckets abaixo de 30** e **24 abaixo de 20**. `perfect-days-2023` publica com [18, 12, 17]; `hereditary` com [22, 13, 16]. O regime era muito pior que o "n≈40" que o registro supunha.

@@ -35,6 +35,8 @@ RUNNER = Path(__file__).parent / "js" / "fallback_filme_js.js"
 
 
 def test_o_template_python_e_o_fallback_js_produzem_o_MESMO_texto():
+    from conftest import exige_resultado_sob_a_lei
+    exige_resultado_sob_a_lei()
     node = shutil.which("node")
     if not node:
         pytest.skip("node indisponível — a paridade JS/Python não foi medida")
