@@ -3771,7 +3771,16 @@ Custo estimado: no pior caso ~100 requisições extras por filme novo (uma por r
 >
 > **Por que a classificação NÃO migra.** Ela está calibrada e auditada
 > contra um gabarito humano de 100 reviews, com precisão e recall medidos
-> por eixo (`CLASSIFICACAO_CONSOLIDADO.md`). Trocar o modelo ali invalida
+> por eixo (`CLASSIFICACAO_CONSOLIDADO.md`). **[v1.9.34] O gabarito vive em
+> `resultado/auditoria-acuracia/leitura.md`, e a TRILHA das duas correções
+> que o produziram está versionada ao lado, em `leitura.md.bak-0` e
+> `.bak-1`** (`.bak-0` → `.bak-1` → vigente; o que se move entre eles é
+> `impacto_emocional`, 32 reviews de diferença entre o primeiro snapshot e o
+> atual — a correção de `CLASSIFICACAO_CONSOLIDADO.md` §5). **Não recrie um
+> snapshot solto na raiz do repositório:** a trilha já existe, e uma segunda
+> cópia do gabarito permanente num caminho mais visível que o real passa a
+> ter aparência de régua aplicada sem ser — o cenário que o docstring de
+> `scripts/corrigir_gabarito.py` existe para evitar. Trocar o modelo ali invalida
 > oito sessões de medição de uma vez: o `taxonomia_id` não muda (ele
 > hasheia prompt + eixos, não o modelo), então a troca seria **silenciosa**
 > — o pior tipo. É tarefa estruturada, alto volume, saída JSON curta: o
@@ -7615,6 +7624,20 @@ consumidor arredondado. **MEDIDO nas 35 × 30 células sob a lei: 0 divergência
 nenhuma célula a menos de 0,15pp da fronteira** — mas o mecanismo já está vivo
 (`wicked-2024` tem buckets 37/40/37, logo quantum de lift de **0,068pp**), e a
 expansão de catálogo o aciona.
+
+**O ALCANCE do defeito, e ele é menor do que parece — a varredura completa
+achou um TERCEIRO canal, e é ele que explica por que nada nunca apareceu na
+tela.** `bullet_de` (§4, acima) é computado por `eixos.bullets()` **com a mesma
+comparação exata** de `contraste`, e é o que `briefing.py`, `frontend/js/
+filme.js` (grade e ordenação de temas) e `frontend/js/home.js` leem para saber o
+que é bullet de contraste. **Os BULLETS sempre estiveram certos.** O defeito
+estava **confinado ao VEREDITO** — a frase que nomeia o assunto próprio de um
+grupo —, em dois pontos (`veredito.py:_maior_lift` e o template de fallback de
+`filme.js`), e não distribuído pela interface. Isto precisa ficar registrado
+porque as duas coisas têm consequências diferentes: um defeito confinado a um
+consumidor se conserta num lugar e não deixa rastro em dado publicado antigo;
+um distribuído pela interface exigiria auditar tudo que já foi renderizado.
+Aqui é o primeiro caso.
 
 **A correção: `eixos.py` publica a decisão, e ninguém a recalcula.**
 
