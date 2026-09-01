@@ -720,9 +720,26 @@ lift >= (1444/1000)/√n      ⟺      lift² · n  >=  Fraction(2085136, 100000
 `lift` é `Fraction` de 0 a 1 (não pontos percentuais: 144,4pp de constante é
 1,444 nessa escala), `n` é `int`, e `lift² · n >= Fraction(2085136, 1000000)` é
 uma comparação de racionais **exata** — sem raiz, sem float, sem tabela de
-arredondamento. Elevar ao quadrado é monotônico no ramo positivo; `lift <= 0`
-reprova por inspeção antes da conta. **Conferido: a forma exata devolve
-exatamente os mesmos 6 filmes que a aritmética de alta precisão.**
+arredondamento. **Conferido: a forma exata devolve exatamente os mesmos 6 filmes
+que a aritmética de alta precisão.**
+
+> **A GUARDA DE SINAL `lift > 0` É PARTE DA LEI, NÃO OTIMIZAÇÃO — e quem for
+> "simplificar" a expressão precisa esbarrar nisto.** Elevar ao quadrado
+> **apaga o sinal** e só é monotônico no ramo positivo. Sem a guarda, um lift de
+> **−0,5** com n = 40 daria `0,25 · 40 = 10 >= 2,085136` — **APROVADO**. E −0,5
+> de lift significa que o eixo é 50pp MENOS falado naquele grupo que no
+> concorrente: o produto publicaria "este é o assunto próprio deste grupo"
+> sobre o assunto que o grupo é o que MENOS toca. Não é um erro de borda, é a
+> afirmação exatamente invertida, e ela passaria em qualquer teste que só
+> exercitasse lifts positivos.
+>
+> Isto estava **latente na formulação da lei** quando ela foi aprovada — a
+> equivalência `lift >= k/√n ⟺ lift² · n >= k²` só vale sob `lift > 0`, e a
+> condição não estava escrita. Fica escrita agora, com teste nomeado
+> (`test_lift_nao_positivo_reprova_sempre`).
+>
+> **A ordem importa:** `lift <= 0` reprova **por inspeção, ANTES** da
+> multiplicação. Não é o mesmo que checar depois.
 
 **PISO — `n < 10` no menor bucket: o estado `contraste` NÃO É PUBLICADO.** Não
 é `valorativo`: é **ausente**, no mesmo estatuto de `montar_bloco` devolver
@@ -733,6 +750,59 @@ lastro por outra: naquele `n` a medição não distingue os dois estados, e dize
 Afeta **1 filme hoje** (`obsession-2026`, n = 5/6/8, cujo estado tem
 **P(ruído) = 0,976**); o piso entra na versão completa, e não como exceção
 nomeada, porque a expansão de catálogo trará mais filmes com bucket pequeno.
+
+> **O DEFEITO QUE O PISO ENCONTROU, e ele se manifesta de dois jeitos OPOSTOS
+> nos dois lados do produto.** Antes desta versão o estado nunca podia faltar,
+> então os dois consumidores tratavam a ausência por omissão — e cada um caía
+> num ramo diferente, os dois publicando exatamente o que o piso existe para
+> não afirmar:
+>
+> - **Python** (`veredito.py`, montagem do briefing): `if estado ==
+>   "valorativo": … else: <ramo temático>`. Estado ausente cai no **ramo
+>   TEMÁTICO**, e o briefing manda o modelo escrever *"a medição encontrou
+>   assunto próprio de pelo menos um grupo"* — sobre o filme cuja medição se
+>   RECUSOU a decidir.
+> - **Frontend** (`frontend/js/filme.js`, `veredictoBlock`): sem
+>   `veredito.texto` cai no fallback de render, que com nenhum eixo acima da
+>   margem produz a frase **VALORATIVA** — *"os grupos falam das mesmas coisas
+>   e divergem no julgamento"*, que é a outra afirmação proibida ali.
+>
+> **Um defeito que produz as duas afirmações contrárias, por caminhos
+> diferentes, merece estar escrito** — porque a lição não é "faltou um `elif`".
+> É que **ausência tratada por omissão vira a asserção que o código já tinha à
+> mão**, e qual delas é acidente da estrutura do `if`. Correção: os dois
+> caminhos passam a ter tratamento EXPLÍCITO de estado ausente (`montar_briefing`
+> devolve `None`, e o fallback de render é bloqueado), nunca um ramo padrão.
+
+#### A linha que explica a AUSÊNCIA de veredito (v1.9.34)
+
+Sem `contraste`, a chave `veredito` **some do JSON** — estatuto aditivo de
+`ficha` (§3[F]) e `distribuicao` (§3[G]). Mas a página **não fica em silêncio**,
+pelo mesmo argumento que este §2.5 já usou para a ausência de bullets de
+contraste: *"se ficar como AUSÊNCIA, vai parecer bug ao leitor"*. Na posição do
+veredito entra, gerada por **CÓDIGO**, determinística, **zero LLM**:
+
+> **"A amostra analisada deste filme é pequena demais para dizer se os grupos
+> falam de coisas diferentes ou se falam das mesmas coisas e divergem no
+> julgamento."**
+
+**Ela NÃO é um veredito** — é a explicação de por que não há um —, e o
+tratamento visual a distingue de um (classe própria, não `.verdict`).
+
+**Por que esta frase e não outra, em três invariantes:**
+
+1. **Ancorada na BASE, nunca na MAGNITUDE.** É exatamente a exceção que a
+   v1.9.22 preservou ao proibir deflação: hedge sobre *"a amostra analisada"* é
+   legítimo; hedge que encolhe a quantidade (*"relatos pontuais…"*) é
+   falsidade. A frase fala do denominador, não do achado.
+2. **Zero algarismo** (v1.9.20) e **zero quantificador de magnitude** (v1.9.22).
+3. **Os DOIS estados aparecem no mesmo nível** — "falam de coisas diferentes"
+   e "falam das mesmas coisas e divergem no julgamento", por extenso, nenhum
+   reduzido a resíduo do outro. **É a neutralidade do §0 aplicada à frase que
+   explica por que não há estado:** discordar sobre o mesmo assunto é achado de
+   primeira classe neste produto (é o que 29 dos 35 filmes publicam), e uma
+   redação como *"ou apenas discordam"* rebaixaria em prosa o estado que o
+   resto do produto trata como primeira classe. Protegida por teste nomeado.
 
 #### O limiar por `n`, e a taxa que ele realiza
 
