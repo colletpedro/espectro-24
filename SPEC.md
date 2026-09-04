@@ -296,6 +296,232 @@ faltava chegando.
 > mesma quantidade de bullets. O que muda é **quais filmes** caem em cada ramo
 > do veredito — não como um filme trata seus três grupos.
 
+> **TERCEIRA EXCEÇÃO DELIBERADA — as CONDIÇÕES DE DECISÃO, e o produto passa a
+> RECOMENDAR onde antes só RELATAVA (v1.9.35).** Decisão do dono do projeto,
+> tomada depois de duas rodadas de estudo de viabilidade
+> (`DESENHO_CONDICOES_DE_DECISAO.md`, `MEDICAO_CONDICOES_DE_DECISAO.md`,
+> `MEDICAO_CONDICOES_R2.md`) e de feedback de uso real.
+>
+> **O QUE MUDA, e é uma frase deste documento que deixa de valer.** O §3[V]
+> abre dizendo que o veredito *"não é crítica, não é resenha, **não é
+> recomendação** — é o mapa de ONDE as opiniões divergem"*. A partir desta
+> versão isso continua verdadeiro **do veredito** e **deixa de valer para o
+> bloco de CONDIÇÕES**, que é recomendação condicional por construção:
+>
+>     Vale a pena se você...    quer um retrato íntimo, não o estadista
+>     Talvez evite se você...   quer rigor histórico
+>
+> Não há como registrar isto de outro jeito: o produto passa a dizer ao leitor
+> **em que caso assistir**, e não apenas o que as pessoas acharam. É uma
+> mudança de NATUREZA, aceita conscientemente, e não uma extensão que o
+> documento possa fingir que já estava prevista.
+>
+> **A RAZÃO, e ela sai deste mesmo §0.** O público-alvo declarado é *"pessoa
+> que ainda NÃO assistiu ao filme"*, decidindo se assiste. **Relato
+> perfeitamente neutro que não ajuda a decidir falha com o público que este
+> parágrafo nomeia** — a neutralidade é um meio para que a decisão seja do
+> leitor, nunca um fim que a substitua. E há um segundo argumento, medido:
+> em `hereditary` o veredito não menciona *Atuações* (20 de 40) nem *Atmosfera
+> e tensão* (15 de 40), os dois temas mais citados do grupo que responde por
+> 80% da recepção, porque o veredito nomeia o assunto COMPARTILHADO; as
+> condições os nomeiam. O formato novo carrega informação que o antigo
+> estruturalmente não alcança.
+>
+> **O QUE SUSTENTA A EXCEÇÃO — três garantias, e nenhuma é opcional.**
+>
+> 1. **PROVENIÊNCIA VISÍVEL.** Toda condição carrega o `tema` de origem, e a
+>    citação é verificável por máquina contra a lista de temas daquele filme.
+>    Condição que não puder ser ancorada não é escrita.
+> 2. **SELEÇÃO DE TEMA EM CÓDIGO.** O modelo não escolhe sobre o que falar. A
+>    rodada 1 mediu o modelo divergindo da ordem de frequência em **14 de 16**
+>    casos e descartando, em `the-godfather`, o terceiro tema mais citado do
+>    grupo. A fronteira do §3[V] — *"o código decide O QUÊ; o modelo decide
+>    apenas COMO ESCREVER"* — vale aqui **integralmente**.
+> 3. **LEITURA HUMANA DE 100% ANTES DE PUBLICAR.** Nenhuma condição vai ao ar
+>    sem passar pela leitura do dono, condição a condição, contra o tema e a
+>    paráfrase. Não é amostra: é a população. *"Qualidade incontestável"* não
+>    sai de validador.
+>
+> **O QUE NÃO MUDA, e a lista é fechada:**
+>
+> - **nenhuma nota, score, estrela ou número-síntese** do filme, em lugar
+>   nenhum (§1, intocado);
+> - **zero algarismo escrito pelo modelo** — todo número do bloco é
+>   concatenado pelo CÓDIGO, fora da saída dele;
+> - **quantidade é do código.** O modelo é proibido de escrever "a maioria",
+>   "alguns", "poucos"; o rótulo vem de `quantificador.fracao_e_rotulo` e é
+>   exibido ao lado da frase;
+> - **anti-spoiler** (§3[D]): os temas já passaram pelo filtro e não podem ser
+>   expandidos;
+> - **a neutralidade ESTRUTURAL entre os grupos.** Cota 40/40/40 literal,
+>   mesma margem para os dois lados, mesmos bullets, mesmo espaço. O bloco de
+>   condições **não** reordena, apaga nem encolhe nada do que já existe.
+>
+> **A VIA DE REVERSÃO, barata de propósito.** O veredito **continua existindo
+> em código e continua sendo gerado** — não é substituído nesta fase (ver
+> "FASE 1", abaixo). Reverter a exceção é trocar o que a página **renderiza**,
+> não reprocessar corpus: nenhuma coleta, nenhuma síntese, nenhuma
+> classificação depende dela. O custo de errar foi desenhado para ser baixo
+> antes de a aposta ser feita, exatamente como no rename HATERS/MIXED/FANS.
+>
+> **FASE 1 — COEXISTÊNCIA, não substituição, e a pergunta fica aberta.**
+> Condições, veredito e bullets convivem na mesma página. É decisão de
+> produto, e tem duas razões de arquitetura que valem registro:
+>
+> - **os bullets põem a EVIDÊNCIA na mesma tela da afirmação.** Se uma
+>   condição enganar, o bullet logo abaixo a contradiz — e foi assim que o
+>   pior caso conhecido (`napoleon`/batalhas) se tornou visível;
+> - **o veredito carrega o que as condições não têm.** Ele diz *"numa amostra
+>   pequena"* e traz o rótulo de quantificador dentro da prosa. Enquanto o
+>   prefixo de peso do bloco de condições não estiver medido em uso, o
+>   veredito é a rede.
+>
+> **EM ABERTO, e é decisão futura do dono:** se as condições substituem o
+> veredito, e sob que critério. Esta versão não a toma.
+>
+> ---
+>
+> **[v1.9.36] O ANTI-SPOILER PRECISOU SER REAVALIADO, e o achado é sobre ESTE
+> parágrafo.** A exceção acima lista o anti-spoiler entre os não-negociáveis e,
+> na mesma frase, aprova a mudança de natureza (recomendar em vez de relatar).
+> **As duas metades não foram cruzadas** — ninguém perguntou o que a mudança
+> de natureza faz com o anti-spoiler. A leitura de população inteira da rodada
+> 3 respondeu: **5 das 7 condições marcadas para reescrita eram spoiler**, e
+> nenhuma delas expandia o tema.
+>
+> **O mecanismo é do FORMATO, não do modelo.** O filtro de §3[D] roda sobre os
+> TEMAS e continua correto; o que muda é a FORÇA ILOCUCIONÁRIA. O bullet
+> *"Monólogo final"* **relata** o que as pessoas comentaram; a condição *"vale
+> a pena se você espera um monólogo final devastador"* **instrui** o leitor
+> sobre o que aguardar. Mesmo conteúdo, ato de fala diferente — e é o segundo
+> que estraga o filme.
+>
+> **A regra que passa a valer, e a unidade que ela protege é nova:**
+>
+> > É proibido usar desfecho, reviravolta, ponto de chegada de arco, morte,
+> > revelação final ou qualquer informação cujo valor dependa de o espectador
+> > ainda não conhecê-la **como motivo para recomendar ou desaconselhar**. A
+> > regra vale mesmo quando o tema de origem é válido e mesmo quando a review
+> > menciona o elemento. **A unidade a proteger é a CONDIÇÃO PUBLICADA, não o
+> > tema.**
+>
+> **A PRECEDÊNCIA entre as duas regras novas, porque elas se cruzam.** O
+> anti-spoiler empurra para ABSTRAIR; o controle de especificidade proíbe
+> abstrair além do que a paráfrase sustenta. **O anti-spoiler REBAIXA o teto
+> de abstração disponível** — e se a única formulação sem spoiler já não tem
+> lastro pleno, a resposta é **ABSTER-SE**, nunca escolher a menos pior.
+> Lastro nunca é sacrificado para caber numa regra de forma.
+>
+> **DETECÇÃO MECÂNICA DE SPOILER: MEDIDA E RECUSADA como validador.** Sobre as
+> 266 condições da rodada 3, o marcador lexical dispara em 19 (7,1%) e acerta
+> 3 dos 5 casos reais — **precisão de 15,8%**, pior que os 7,7% do léxico de
+> valência que a rodada 3 removeu, e com o mesmo modo de falha caro (falso
+> positivo descarta condição boa). Ele entra apenas como **marca no
+> BRIEFING**, por **assimetria de custo**: ali um falso positivo só deixa o
+> modelo mais cuidadoso. A rede continua sendo a regra no prompt mais a
+> leitura humana — que é o que a terceira garantia desta exceção já dizia.
+>
+> **[v1.9.37] ACHADO DE MÉTODO, não bug corrigido: UM EXEMPLO DENTRO DO
+> PROMPT TEM FORÇA DE REGRA, e um exemplo contraditório derrota a regra que
+> ele deveria ilustrar.** É a SEGUNDA vez neste arco que isso acontece, e as
+> duas vezes o mecanismo é o mesmo: a proibição explícita fica correta, e o
+> exemplo ilustrativo ao lado dela ensina o padrão oposto.
+>
+> - **Primeira vez (rodada 1→4).** O preâmbulo original do prompt dizia *"Ela
+>   descreve o LEITOR, não o filme"*, com o par de exemplo *"quer um retrato
+>   íntimo, não o estadista" / "o filme é íntimo"*. A proibição de perfil não
+>   estava escrita ainda — só o exemplo —, e o exemplo produziu exatamente o
+>   molde *"prioriza X em vez de Y"* que a rodada 4 teve de proibir por
+>   extenso.
+> - **Segunda vez (rodada 4→5).** A regra de anti-spoiler da rodada 4 dava
+>   como formulação **PREFERÍVEL** *"busca histórias que recontextualizam o
+>   que veio antes"* — e "recontextualizar" é precisamente a descrição do
+>   EFEITO de uma reviravolta que a Decisão 2 da rodada 5 veio proibir. O
+>   modelo seguiu o exemplo que o prompt lhe deu como bom: `shutter-island`
+>   produziu *"aprecia uma mudança memorável de perspectiva na trama"*, a
+>   mesma família da frase "preferível" que estava escrita ali.
+>
+> **A regra prática que fica:** ao escrever ou revisar um exemplo dentro de
+> um prompt deste projeto, ele precisa ser verificado contra a MESMA lista de
+> proibições que se aplica ao texto que o modelo vai gerar — um exemplo não é
+> prosa de apoio, é a regra que o modelo mais copia.
+>
+> ---
+>
+> ### PENDÊNCIA EDITORIAL NOMEADA — o eixo `expectativa` e o bloco de condições
+>
+> **O conflito é ESTRUTURAL, não de redação.** `expectativa` é o **único dos
+> dez eixos da taxonomia cujo objeto não é o filme** — é a relação entre o
+> público e a REPUTAÇÃO do filme. Os outros nove nomeiam algo que está na
+> tela (ritmo, atuação, imagem, som, roteiro, tom, comparações, crítica
+> social, impacto). Este nomeia algo que está **fora** dela.
+>
+> A gramática das condições exige ancorar na obra (*"estas são experiências e
+> qualidades que a recepção encontrou NESTE filme"*). Um eixo cujo assunto é
+> a reputação não tem o que ancorar, e as três saídas observadas em cinco
+> rodadas de estudo foram todas ruins:
+>
+> 1. **abster** — perde informação de decisão real (rodada 4, 6 filmes);
+> 2. **subir ao meta** — *"quando obras de grande reputação não correspondem
+>    a altas expectativas"*, reprovado no portão editorial;
+> 3. **descer ao conteúdo que a paráfrase carrega ao lado da reputação** — só
+>    funciona quando esse conteúdo existe.
+>
+> **DECISÃO EDITORIAL DO DONO: não reescrever agora.** As condições deste
+> eixo saem do conjunto considerado fechado até que o destino do eixo seja
+> decidido. Reescrevê-las seria inventar soluções pontuais para um problema
+> que é do eixo, e salvar a categoria fabricando atributo do filme é o que a
+> regra de lastro proíbe.
+>
+> **AS OCORRÊNCIAS SÃO SEIS, e não cinco.** A varredura por eixo (e não por
+> memória da leitura) encontrou uma que a lista não continha:
+>
+> | filme | tema | texto atual |
+> |---|---|---|
+> | `the-godfather` NEG-B | Filme superestimado | *acha que o filme não merece tanto elogio quanto recebe* |
+> | `hereditary` NEG-B | Expectativa vs. realidade (hype) | *se decepciona quando filmes de grande repercussão não correspondem a altas expectativas* |
+> | `interstellar` NEG-B | Filme superestimado | *se frustra quando um filme muito elogiado parece superestimado* |
+> | `longlegs` NEG-B | Expectativa alta, decepção | *se frustra quando obras cercadas de grande expectativa não correspondem à forte repercussão* |
+> | `parasite-2019` NEG-C | Expectativa não correspondida | *se frustra quando obras premiadas e consagradas não correspondem a altas expectativas* |
+> | **`everything-everywhere-all-at-once` NEG-F** | Superestimado e prêmios injustificados | *se decepciona quando obras muito aclamadas aparentam profundidade sem substância real* |
+>
+> **Duas condições do eixo NÃO entram na pendência**, e a razão é a mesma que
+> define o conflito — nelas o objeto **é o filme**:
+> `spider-man-across-the-spider-verse` POS-E (o final aberto da própria obra)
+> e `talk-to-me-2022` NEG-C (o potencial da própria premissa).
+>
+> **`friday-the-13th-2009` POS-B é EXCEÇÃO, não molde.** Ele saiu do eixo
+> porque a paráfrase dele oferecia uma comparação concreta fora da reputação
+> (*"é superior a outros remakes e à maioria das sequências originais"*), e a
+> condição final usa essa comparação: *"acha este remake superior às
+> sequências originais da franquia"*. **A maioria das paráfrases deste eixo
+> não oferece esse conteúdo**, e tratar o caso dele como receita produziria
+> exatamente a fabricação que a regra de lastro proíbe.
+>
+> **O DADO QUE INFORMA A DECISÃO FUTURA — MEDIDO nesta sessão** sobre
+> `consenso_verificado.jsonl` (5.371 reviews) e sobre os 629 bullets
+> publicados:
+>
+> | | reviews | bullets | razão |
+> |---|---:|---:|---:|
+> | `expectativa` | **20,6%** | **4,0%** | 5,2× |
+>
+> **CORREÇÃO DE REGISTRO: `expectativa` NÃO é a segunda maior assimetria do
+> catálogo.** Por razão entre as duas taxas é a **terceira** (atrás de
+> `comparacoes` 16,3× e `impacto_emocional` 5,6×); por diferença em pontos
+> percentuais é a **sexta** (+16,6pp, atrás de `comparacoes` +36,6,
+> `roteiro_estrutura` +30,9, `impacto_emocional` +29,8, `direcao_imagem`
+> +19,6 e `ritmo` +18,4). **O que a medição sustenta é a conclusão, não a
+> posição:** com 20,6% das reviews carregando o eixo e 4,0% dos bullets
+> publicando-o, **o problema nunca foi de volume de informação.**
+>
+> **A PERGUNTA EM ABERTO, que esta versão não decide:** `expectativa` deve
+> alimentar CONDIÇÕES, ou pertence ao VEREDITO? O veredito descreve em
+> terceira pessoa, e *"quem não recomenda achou o filme superestimado"* é
+> honesto ali. A condição não comporta, porque fala **com o leitor sobre o
+> filme** — e a reputação não é uma qualidade do filme. **Decisão do dono,
+> posterior à publicação da fase 1.**
+
 ---
 **Objetivo:** dado o nome de um filme, agregar reviews de usuários do Letterboxd em três buckets por nota e produzir, via LLM, uma síntese temática de cada bucket — pontos recorrentes com frequência — permitindo entender a recepção do filme sem viés de leitura seletiva e sem spoilers.
 
@@ -1753,6 +1979,48 @@ O sintoma é sempre o mesmo e é caro de diagnosticar: teste verde sozinho,
 vermelho na suíte, sem relação aparente com o que mudou. A fronteira do efeito
 colateral é o `main` porque é o único lugar onde ele é uma decisão do usuário
 e não um efeito surpresa de um import.
+
+### [v1.9.37] Frontend — constante de módulo lida por `render()` vai no TOPO
+
+**REGRA: em `frontend/js/filme.js`, toda constante de módulo que o `render()`
+alcança declara-se no topo do arquivo, junto das demais, NUNCA depois da
+chamada `render(film)`.**
+
+`var` hoista a **declaração** e não a **atribuição**. Uma constante declarada
+abaixo da chamada chega `undefined` dentro das funções que o render aciona — e
+o sintoma **não** é `ReferenceError`, é um `undefined` silencioso que só
+estoura quando alguém o indexa. Funções não têm o problema: declarações de
+função hoistam inteiras, e foi por isso que nos dois casos o render *quase*
+funcionou.
+
+**Duas ocorrências no mesmo arquivo neste arco, as duas achadas só por olhar a
+tela, com a suíte verde:**
+
+| versão | constante | como apareceu |
+|---|---|---|
+| v1.9.26 | o veredito | reordenação da página |
+| v1.9.37 | `ABERTURA_DA_COLUNA` | bloco de condições estourava inteiro |
+
+**TRAVADA POR TESTE, e a trava foi verificada contra o defeito real:**
+`tests/test_frontend_constantes_hoisted.py`. Ela lê a fonte, acha a linha de
+`render(film)` e reprova qualquer `  var NOME_MAIUSCULO =` declarado depois
+dela **e lido em outro ponto do arquivo**. Reintroduzir o defeito da v1.9.37 a
+faz falhar com a linha exata; desfazer a reintrodução a faz passar.
+
+**O escopo está declarado no próprio teste, para que a trava não seja lida
+como mais forte do que é:** é varredura textual, não parser de JS. Cobre a
+convenção que o arquivo usa (`var` maiúsculo no nível do IIFE); não cobre
+`let`/`const` (o arquivo é ES5 por compatibilidade) nem constantes internas a
+funções, que não têm o problema.
+
+**Ela tem guarda de TRAP VAZIO** (lição da v1.9.25): um teste à parte falha
+alto se o arquivo sumir ou se a chamada `render(film)` mudar de forma — sem
+ele, a trava passaria a verificar nada e continuaria verde.
+
+**Achado de passagem, registrado e NÃO corrigido:** a mesma varredura
+encontrou `BANDAS_QUANTIFICADOR` declarada e **nunca lida** — código morto. Fica
+como dívida conhecida (`xfail` nomeado no teste), fora do escopo da sessão de
+publicação.
 
 ---
 
