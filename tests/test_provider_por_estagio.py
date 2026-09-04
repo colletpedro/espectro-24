@@ -31,9 +31,13 @@ def test_existe_provider_para_cada_estagio():
     # racional registrados em `config.PROVIDER_POR_ESTAGIO` e na spec. A
     # lista é LITERAL de propósito — um estágio novo aparecendo aqui sem
     # decisão registrada é exatamente o que este teste existe para expor, e
-    # foi o que ele fez quando o veredito chegou.
+    # foi o que ele fez quando o veredito chegou. v1.9.35: `condicoes` entra
+    # como quinto, em Gemini — e este teste REPROVOU quando o estágio chegou,
+    # como devia. A decisão está registrada em `config.PROVIDER_POR_ESTAGIO`
+    # e no §0 (terceira exceção deliberada), não só nesta linha.
     assert set(config.PROVIDER_POR_ESTAGIO) == {"classificacao", "narrativa",
-                                                "rotulagem", "veredito"}
+                                                "rotulagem", "veredito",
+                                                "condicoes"}
     for p in config.PROVIDER_POR_ESTAGIO.values():
         assert p in config.PROVIDER_ENV_KEYS
 
@@ -50,6 +54,13 @@ def test_a_classificacao_continua_em_deepseek():
     """Trocar o provider da classificação invalidaria a auditoria contra
     gabarito humano SEM mudar o taxonomia_id — silenciosamente."""
     assert config.PROVIDER_POR_ESTAGIO["classificacao"] == "deepseek"
+
+
+def test_as_condicoes_usam_gemini():
+    """[v1.9.35] Mesmo critério do veredito: uma chamada por filme, prosa
+    curta, nada calibrado a invalidar. A qualidade é julgada por LEITURA
+    HUMANA DE 100%, que é uma das três garantias do §0."""
+    assert config.PROVIDER_POR_ESTAGIO["condicoes"] == "gemini"
 
 
 def test_a_narrativa_usa_gemini():

@@ -393,6 +393,15 @@ PROVIDER_POR_ESTAGIO = {
     # CONSTRUÇÃO e não por confiança: a serialização do briefing do veredito
     # não contém nenhum algarismo, então não há número para inflar.
     "veredito": "gemini",
+    # [v1.9.35] §0 terceira exceção: as CONDIÇÕES DE DECISÃO. Mesmo critério
+    # do veredito, e pelo mesmo motivo: uma chamada por filme (volume
+    # irrelevante), prosa curta, e nada calibrado a invalidar — a qualidade é
+    # julgada por LEITURA HUMANA DE 100%, que é uma das três garantias que
+    # sustentam a exceção no §0. O risco histórico do Gemini (inflar
+    # contagem) é neutralizado por CONSTRUÇÃO: a serialização do briefing das
+    # condições não contém algarismo, e o modelo é proibido de escrever
+    # qualquer palavra de quantidade — o rótulo de força vem do código.
+    "condicoes": "gemini",
 }
 
 # Modelo default de cada estágio.
@@ -481,6 +490,7 @@ MODELO_POR_ESTAGIO = {
     "narrativa": "gemini-3.7-flash",
     "rotulagem": "deepseek-v4-flash",
     "veredito": "gemini-3.7-flash",
+    "condicoes": "gemini-3.7-flash",
 }
 
 # mantido por compatibilidade (era o único provider na v1.1.0); agora segue
