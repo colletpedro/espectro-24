@@ -521,6 +521,52 @@ faltava chegando.
 > honesto ali. A condição não comporta, porque fala **com o leitor sobre o
 > filme** — e a reputação não é uma qualidade do filme. **Decisão do dono,
 > posterior à publicação da fase 1.**
+>
+> ---
+>
+> ### [v1.9.37] NO AR — e o que fica ABERTO, num bloco só
+>
+> **PUBLICADO em 2026-09-04:** 257 condições nos 35 filmes,
+> `https://espectro-24-eu6z.vercel.app`. Harness `publicar_condicoes.py`,
+> travado por `tests/test_publicar_condicoes.py`. O bloco entra entre a BARRA
+> e os BULLETS; o veredito continua no fecho (v1.9.26, não movido).
+>
+> **Este bloco existe para que a próxima sessão encontre o que está aberto sem
+> arqueologia. São quatro coisas, e nenhuma delas é bug.**
+>
+> **1. `expectativa` é DECISÃO EDITORIAL PENDENTE.** 6 condições retiradas da
+> fase 1 (a tabela acima). O conflito é estrutural: é o único dos dez eixos
+> cujo objeto **não é o filme**. `friday-the-13th-2009` POS-B é **exceção
+> resolvida e não molde** — só funcionou porque a paráfrase dele oferecia uma
+> comparação concreta fora da reputação. **A pergunta: alimenta CONDIÇÕES, ou
+> pertence ao VEREDITO?**
+>
+> **2. A COEXISTÊNCIA é FASE 1.** Condições, veredito e bullets juntos, para
+> colher feedback. As duas razões de arquitetura estão registradas acima (os
+> bullets põem a evidência na mesma tela; o veredito carrega o quantificador
+> em prosa). **A pergunta: as condições substituem o veredito depois, e sob
+> que critério?** Nada nesta versão a responde.
+>
+> **3. A PERGUNTA QUE A INSPEÇÃO NÃO RESPONDE.** Com a barra, os dois
+> percentuais e as duas colunas na tela, a proporção de `the-godfather`
+> (2/5/93) **fica clara na minha leitura** — o número da coluna repete o da
+> barra a três linhas de distância, em duas codificações, uma dimensional e
+> uma verbal. **Isso é INSPEÇÃO, não medição.** O que ela não responde: se um
+> leitor apressado lê as duas colunas como equivalentes **apesar** dos
+> números, porque a simetria visual é sinal forte e a assimetria vive só no
+> texto. **É exatamente o que a fase 1 existe para colher.**
+>
+> **4. A DÍVIDA A MONTANTE QUE A FEATURE TORNOU VISÍVEL.** MEDIDO: em **80 de
+> 611 temas (13,1%)** a PARÁFRASE usa uma palavra de quantidade mais forte que
+> o rótulo do código (*"uma parcela significativa"* ao lado de `alguns`;
+> *"a maioria"* com 10 de 40). **O código está certo** — o rótulo é
+> `menções/analisadas`, calculado em código. Quem infla é a paráfrase, que vem
+> de [D], e é o modo de falha que o §10 do `ESTUDO_CATALOGO_35` já tinha
+> medido (*"os erros estão nas palavras de quantidade e de escopo"*). **A
+> novidade é de EXPOSIÇÃO, não de dado:** o bloco de condições põe o rótulo do
+> código e a paráfrase da síntese lado a lado na mesma tela pela primeira vez,
+> e a discordância deixou de ser invisível ao leitor. Não corrigida aqui —
+> corrigir é mexer em [D], a montante.
 
 ---
 **Objetivo:** dado o nome de um filme, agregar reviews de usuários do Letterboxd em três buckets por nota e produzir, via LLM, uma síntese temática de cada bucket — pontos recorrentes com frequência — permitindo entender a recepção do filme sem viés de leitura seletiva e sem spoilers.
