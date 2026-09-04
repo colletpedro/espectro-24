@@ -78,6 +78,71 @@ TMDB_IMAGE_LANGS = "pt,null"
 # página do filme".
 TETO_BACKDROPS = 10
 
+# [v1.9.38] Teto da GALERIA DE PÔSTERES ALTERNATIVOS (§3[F] — decisão
+# registrada em ETAPA 0 antes de qualquer implementação, não palpite).
+#
+# Medido ao vivo em 2026-09-04, os 35 filmes publicados, sob
+# `include_image_language=pt,null` (o mesmo filtro de sempre): mediana de
+# 17 pôsteres por filme, mínimo 2 (`eighth-grade`), máximo 64
+# (`dune-part-two`). A mediana >= 4 sustenta a galeria como galeria (gate
+# passou). TETO_GALERIA=8 foi escolhido porque 30 dos 35 filmes têm >= 8
+# pôsteres sob o filtro — a galeria enche para a maioria — e o teto é
+# baixo o bastante para continuar decoração, não abas de imagens.
+# `eighth-grade` (2) e `cats-2019` (4) simplesmente renderizam menos: é
+# TETO, não piso — nenhum filme é obrigado a preencher os 8.
+TETO_GALERIA = 8
+
+# [v1.9.38] PISO da galeria — mesma lógica de `n < 10` na lei de margem
+# (`config.py`, §2.5): abaixo de um mínimo, o dado não sustenta a coisa que
+# ele estaria ali para mostrar, e a ausência é mais honesta que uma versão
+# raquítica dela. Uma "galeria" de 1 ou 2 miniaturas não é galeria — é
+# ruído visual do tamanho de um erro de layout. `PISO_GALERIA=3` é o piso
+# ÓBVIO (menos que isso não enche nem uma linha da grade num layout de
+# 3+ colunas) e reaproveita o vocabulário que o projeto já usa para "dado
+# de menos": abaixo dele a lista final (depois de ordenar, excluir o
+# pôster publicado e aplicar `TETO_GALERIA`) é zerada, não truncada — a
+# seção inteira desaparece (ver `galeriaBlock`, `filme.js`).
+#
+# Medido nos 35: só `eighth-grade` cai neste piso (1 pôster alternativo
+# depois de excluir o publicado) — `cats-2019` fica em 3 (exatamente no
+# piso, RENDERIZA) e `talk-to-me-2022` já estava zerado pelo filtro de
+# duração, então o piso não muda o resultado dele.
+PISO_GALERIA = 3
+
+# [v1.9.38] Piso de duração que decide se a galeria é montada.
+#
+# **NÃO É UMA GUARDA DE IDENTIDADE** — é só um filtro de DURAÇÃO, e o nome e
+# o comentário abaixo existem para que essa distinção não se perca: nada
+# aqui confirma que o `tmdb_id` resolvido é o filme certo. Uma guarda de
+# identidade de verdade — comparando o tmdb_id contra uma segunda fonte,
+# título original, elenco, o que for — continua PENDENTE no pipeline de
+# COLETA (`buscar_ficha`), onde o `tmdb_id` é decidido; este piso só reage
+# a um sintoma dele DEPOIS do fato, e só para a galeria.
+#
+# Caso conhecido, e o que este piso pega DELE: `talk-to-me-2022` resolve
+# para `tmdb_id=976680`, um CURTA de George Williams de 3 minutos — não o
+# longa de A24 (2022) que o catálogo pretende. A guarda de ano da v1.7.0
+# (`buscar_ficha`, tolerância de 1 ano) NÃO pega este caso porque o curta
+# errado também é de 2022: os dois sinais mais óbvios (ano, tmdb_id
+# resolvido com sucesso) concordam, e só o CONTEÚDO da ficha denuncia o
+# erro. `duracao_min` é esse conteúdo: MEDIDO nos 35, separa o caso limpo —
+# os 34 longas vão de 94 a 181 minutos, o curta fica em 3. Um piso de 40 min
+# (definição comum de "longa-metragem", ex. Academy/BAFTA) reage a ISSO:
+# abaixo dele, a galeria fica vazia — um filme sem galeria é aceitável (ver
+# docstring de `_galeria`) — mas a ficha inteira (título, sinopse, pôster
+# principal) continua publicada como sempre, porque o piso não decide nada
+# sobre identidade, só sobre se a duração PARECE de longa.
+#
+# Comparar título (pt-BR do TMDB) contra o título derivado do slug (inglês)
+# foi medido e DESCARTADO como sinal PARA ESTE piso: rodando nos 35, a
+# similaridade (SequenceMatcher) fica baixa para uma maioria de filmes com
+# título pt-BR bem diferente do inglês (`the-godfather` -> "O Poderoso
+# Chefão" = 0.27, `shutter-island` -> "Ilha do Medo" = 0.19) — mais falsos
+# positivos que o caso real que este piso pega. Não é sinal utilizável sem
+# uma segunda fonte de título original, que a ficha atual não guarda — o
+# que reforça, e não resolve, a pendência de guarda de identidade acima.
+GALERIA_DURACAO_MIN_FEATURE = 40
+
 # [v1.9.30] A ORDEM DE PREFERÊNCIA ENTRE IMAGENS, e por que ela é do CÓDIGO
 # e não da API. `images.backdrops` chega ordenada por `vote_average`
 # decrescente, mas isso NÃO é uma ordem total: empates são comuns e a API
@@ -144,11 +209,62 @@ def _melhor(imagens: list[dict], *, preferir_sem_texto: bool = False,
         i, preferir_sem_texto=preferir_sem_texto))
 
 
+def duracao_compativel_com_longa(duracao_min: int | None) -> bool:
+    """`True` se `duracao_min` está no território de longa-metragem (§3[F]
+    v1.9.38) — ver `GALERIA_DURACAO_MIN_FEATURE` para o porquê do piso.
+
+    **NÃO CONFIRMA IDENTIDADE.** É um filtro de duração, não uma prova de
+    que o `tmdb_id` é o filme certo — só o sinal mais barato disponível na
+    ficha já buscada para reagir ao sintoma de um `tmdb_id` errado (o caso
+    real: `talk-to-me-2022` resolvendo para um curta de 3 minutos). A guarda
+    de identidade de verdade (uma segunda fonte confirmando o `tmdb_id` no
+    momento em que ele é RESOLVIDO, em `buscar_ficha`) continua pendente —
+    isto não a fecha, só evita que o sintoma dela vaze para a galeria.
+
+    `False` (duração ausente ou abaixo do piso) é o caminho seguro: a
+    galeria fica vazia em vez de arriscar mostrar pôsteres do filme errado.
+    """
+    return duracao_min is not None and duracao_min >= GALERIA_DURACAO_MIN_FEATURE
+
+
+def _galeria(imagens: dict, poster_path: str | None, *,
+             teto: int = TETO_GALERIA, piso: int = PISO_GALERIA) -> list[dict]:
+    """Os até `teto` pôsteres ALTERNATIVOS ao `poster_path` já publicado,
+    na ORDEM DE CÓDIGO exigida (§3[F] v1.9.38 — não é a mesma ordem de
+    `_ordem_imagem`, que é para o BACKDROP escolhido/pôster sem texto):
+
+        1. `vote_average` decrescente — única curadoria humana do TMDB.
+        2. `file_path` crescente — fecha a ordem total (desempate estável),
+           mesmo raciocínio do degrau final de `_ordem_imagem`.
+
+    Nenhuma preferência estética por filme: a ordem é sempre esta. O
+    `poster_path` já publicado é EXCLUÍDO — a galeria é de alternativas,
+    mostrá-lo de novo seria repetir a imagem que já está no topo da página.
+
+    **PISO, depois do teto:** se o resultado (já ordenado, já sem o pôster
+    publicado, já cortado em `teto`) tem menos de `piso` itens, a lista
+    volta VAZIA — ver `PISO_GALERIA`. Mesma lógica de `n < 10` na lei de
+    margem: abaixo do piso, ausência é mais honesta que uma versão
+    raquítica da coisa.
+    """
+    candidatos = [p for p in (imagens.get("posters") or [])
+                  if p.get("file_path") and p.get("file_path") != poster_path]
+    candidatos.sort(key=lambda p: (-(p.get("vote_average") or 0),
+                                    p.get("file_path") or ""))
+    galeria = [
+        {"poster_path": p["file_path"], "poster_largura": p.get("width"),
+         "poster_altura": p.get("height")}
+        for p in candidatos[:teto]
+    ]
+    return galeria if len(galeria) >= piso else []
+
+
 # As chaves que uma entrada de cache precisa TER para ser considerada
 # completa. Presença, não verdade: `backdrop_path: None` é resposta válida
 # (filme sem backdrop) e não deve forçar uma nova requisição a cada execução.
 _CHAVES_COMPLETUDE = (
     "tmdb_fetched_at", "poster_path", "backdrop_path", "poster_sem_texto_path",
+    "galeria_posters",
 )
 
 
@@ -448,6 +564,13 @@ def _imagens(detalhes: dict) -> dict[str, Any]:
     # neste campo seria devolver a coisa que ele existe para evitar.
     limpo = _melhor(imagens.get("posters") or [], so_sem_texto=True)
 
+    # [v1.9.38] A GALERIA — computada aqui (mesmo bloco `images`, zero
+    # requisição nova), mas ainda SEM o filtro de duração: `_imagens` não
+    # tem a `duracao_min` de que ele precisa (`_montar_ficha` monta os
+    # dois a partir da mesma resposta). `_montar_ficha` zera esta lista
+    # quando a duração não bate com longa — ver `duracao_compativel_com_longa`.
+    galeria = _galeria(imagens, poster_path)
+
     return {
         "poster_path": poster_path,
         "poster_largura": largura,
@@ -459,6 +582,7 @@ def _imagens(detalhes: dict) -> dict[str, Any]:
         "poster_sem_texto_path": limpo.get("file_path") if limpo else None,
         "poster_sem_texto_largura": limpo.get("width") if limpo else None,
         "poster_sem_texto_altura": limpo.get("height") if limpo else None,
+        "galeria_posters": galeria,
     }
 
 
@@ -494,12 +618,13 @@ def _montar_ficha(session, api_key: str, movie_id: int, detalhes: dict) -> dict[
 
     data = detalhes.get("release_date") or ""
     ano = int(data[:4]) if data[:4].isdigit() else None
-    return {
+    duracao_min = detalhes.get("runtime")
+    ficha = {
         "titulo": detalhes.get("title") or detalhes.get("original_title") or "",
         "sinopse_oficial": overview,
         "sinopse_fallback_en": fallback_en,
         "generos": [g["name"] for g in detalhes.get("genres") or []],
-        "duracao_min": detalhes.get("runtime"),
+        "duracao_min": duracao_min,
         "diretor": diretor,
         # telemetria: o nome exibido veio do credits en-US porque o pt-BR
         # não estava em escrita latina (visível, nunca silencioso)
@@ -523,6 +648,18 @@ def _montar_ficha(session, api_key: str, movie_id: int, detalhes: dict) -> dict[
         "tmdb_fetched_at": _agora_utc(),
         **_imagens(detalhes),
     }
+
+    # [v1.9.38] FILTRO DE DURAÇÃO da galeria — aplicado aqui, único ponto
+    # que tem `duracao_min` E o `galeria_posters` que `_imagens` já montou.
+    # NÃO É guarda de identidade (ver `duracao_compativel_com_longa`): reage
+    # a um sintoma (duração de curta) sem confirmar o `tmdb_id`, e não fecha
+    # a pendência de identidade do pipeline de coleta. Reprovado: galeria
+    # some (lista vazia), nunca a ficha inteira — um filme sem galeria é
+    # aceitável (§3[F]); a ficha (título, sinopse, pôster principal etc.)
+    # segue publicada normalmente.
+    if not duracao_compativel_com_longa(duracao_min):
+        ficha["galeria_posters"] = []
+    return ficha
 
 
 def buscar_ficha(titulo: str, ano: int | None, cache_dir: str | Path,

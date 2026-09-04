@@ -40,7 +40,8 @@
     "backdrop_altura": 1969,
     "poster_sem_texto_path": "/lUCR3clEU68tkTnjGnd06lj9KR5.jpg",
     "poster_sem_texto_largura": 2000,
-    "poster_sem_texto_altura": 3000
+    "poster_sem_texto_altura": 3000,
+    "galeria_posters": []
   },
   "distribuicao": {
     "n_notas_total": 469004,

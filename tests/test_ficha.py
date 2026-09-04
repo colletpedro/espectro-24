@@ -669,3 +669,146 @@ def test_entrada_completa_com_campo_novo_NULO_e_HIT_e_nao_rebusca(tmp_path):
                                  session=session)
     assert len(session.calls) == n, "houve rebusca de uma entrada completa"
     assert de_novo["backdrop_path"] is None
+
+
+# --- galeria de pôsteres alternativos (§3[F] v1.9.38) ---
+
+def test_galeria_ordena_por_vote_average_desc_com_desempate_por_file_path(tmp_path):
+    """Ordem de CÓDIGO exigida: vote_average decrescente, desempate estável
+    por file_path — nunca escolha estética por filme."""
+    ficha, _ = _ficha_imagens(tmp_path, poster_path="/poster.jpg", posters=[
+        _img("/b.jpg", va=7.0), _img("/a.jpg", va=7.0), _img("/c.jpg", va=9.0),
+    ])
+    caminhos = [p["poster_path"] for p in ficha["galeria_posters"]]
+    assert caminhos == ["/c.jpg", "/a.jpg", "/b.jpg"]
+
+
+def test_galeria_exclui_o_poster_ja_publicado(tmp_path):
+    # 4 candidatos além do já publicado (excluído) -> 3 sobram, no piso.
+    ficha, _ = _ficha_imagens(tmp_path, poster_path="/poster.jpg", posters=[
+        _img("/poster.jpg", va=9.0), _img("/outro1.jpg", va=5.0),
+        _img("/outro2.jpg", va=4.0), _img("/outro3.jpg", va=3.0),
+    ])
+    caminhos = [p["poster_path"] for p in ficha["galeria_posters"]]
+    assert "/poster.jpg" not in caminhos
+    assert caminhos == ["/outro1.jpg", "/outro2.jpg", "/outro3.jpg"]
+
+
+def test_galeria_respeita_o_teto(tmp_path):
+    from espectro24.ficha import TETO_GALERIA
+    posters = [_img(f"/p{i}.jpg", va=float(i)) for i in range(TETO_GALERIA + 5)]
+    ficha, _ = _ficha_imagens(tmp_path, poster_path="/poster.jpg", posters=posters)
+    assert len(ficha["galeria_posters"]) == TETO_GALERIA
+    # o de maior vote_average (maior i) vem primeiro
+    assert ficha["galeria_posters"][0]["poster_path"] == f"/p{TETO_GALERIA + 4}.jpg"
+
+
+def test_galeria_no_piso_exato_2_nao_renderiza_3_renderiza(tmp_path):
+    """PISO_GALERIA=3, mesma lógica de `n < 10` na lei de margem: abaixo do
+    piso, a lista final some inteira em vez de mostrar uma galeria
+    raquítica. Testa os dois lados do piso EXATO — 2 (abaixo, vazia) e 3
+    (no piso, renderiza)."""
+    from espectro24.ficha import PISO_GALERIA
+    assert PISO_GALERIA == 3
+
+    posters_2 = [_img(f"/p{i}.jpg", va=float(i)) for i in range(2)]
+    ficha_2, _ = _ficha_imagens(tmp_path / "abaixo", poster_path="/poster.jpg",
+                                posters=posters_2)
+    assert ficha_2["galeria_posters"] == []
+
+    posters_3 = [_img(f"/q{i}.jpg", va=float(i)) for i in range(3)]
+    ficha_3, _ = _ficha_imagens(tmp_path / "no_piso", poster_path="/poster2.jpg",
+                                posters=posters_3)
+    assert len(ficha_3["galeria_posters"]) == 3
+
+
+def test_galeria_piso_aplica_DEPOIS_do_teto_e_da_exclusao_do_atual(tmp_path):
+    """O piso olha o resultado FINAL — depois de excluir o pôster já
+    publicado e cortar em `TETO_GALERIA` — não a contagem bruta de
+    `images.posters`. 4 pôsteres brutos, um deles é o já publicado: sobram
+    3, exatamente no piso, renderiza."""
+    ficha, _ = _ficha_imagens(tmp_path, poster_path="/poster.jpg", posters=[
+        _img("/poster.jpg", va=9.0),  # o já publicado — excluído
+        _img("/a.jpg", va=3.0), _img("/b.jpg", va=2.0), _img("/c.jpg", va=1.0),
+    ])
+    assert len(ficha["galeria_posters"]) == 3
+
+
+def test_galeria_traz_dimensoes_por_item(tmp_path):
+    ficha, _ = _ficha_imagens(tmp_path, poster_path="/poster.jpg", posters=[
+        _img("/alt.jpg", va=5.0, w=1000, h=1500),
+        _img("/alt2.jpg", va=3.0, w=800, h=1200),
+        _img("/alt3.jpg", va=1.0, w=600, h=900),
+    ])
+    item = ficha["galeria_posters"][0]
+    assert (item["poster_largura"], item["poster_altura"]) == (1000, 1500)
+
+
+def test_filtro_de_duracao_caso_positivo_longa_metragem_tem_galeria(tmp_path):
+    """Caso positivo: duração de longa (>= 40 min) passa no filtro."""
+    ficha, _ = _ficha_imagens(tmp_path, poster_path="/poster.jpg", posters=[
+        _img("/alt.jpg", va=5.0), _img("/alt2.jpg", va=3.0), _img("/alt3.jpg", va=1.0),
+    ])
+    assert ficha["duracao_min"] == 111  # default de _detalhes()
+    assert ficha["galeria_posters"] != []
+
+
+def test_filtro_de_duracao_caso_negativo_curta_fica_sem_galeria(tmp_path):
+    """Caso negativo — o CASO REAL: `talk-to-me-2022` resolve para um curta
+    de 3 minutos (tmdb_id=976680, George Williams), não o longa esperado. O
+    filtro de duração reprova e a galeria fica vazia, mas a ficha (título,
+    pôster principal etc.) continua publicada — um filme sem galeria é
+    aceitável. NÃO CONFIRMA IDENTIDADE: só reage ao sintoma, sem provar que
+    o `tmdb_id` é o certo — a guarda de identidade em si continua pendente
+    no pipeline de coleta (`buscar_ficha`)."""
+    # 3 candidatos alternativos (>= PISO_GALERIA) para que a lista vazia
+    # aqui prove o FILTRO DE DURAÇÃO, não seja confundida com o piso.
+    d = _detalhes(release_date="2022-01-01")
+    d["runtime"] = 3
+    d["poster_path"] = "/poster.jpg"
+    d["images"] = {"posters": [_img("/poster.jpg", va=1.0),
+                               _img("/alt1.jpg", va=5.0),
+                               _img("/alt2.jpg", va=4.0),
+                               _img("/alt3.jpg", va=3.0)],
+                   "backdrops": []}
+    session = FakeTmdbSession({
+        ("search", "Talk To Me", 2022): {"results": [{"id": 976680,
+                                                       "release_date": "2022-01-01"}]},
+        ("movie", "pt-BR"): d,
+    })
+    ficha, _, _ = buscar_ficha("Talk To Me", 2022, tmp_path, api_key="k",
+                               session=session)
+    assert ficha["duracao_min"] == 3
+    assert ficha["galeria_posters"] == []
+    # o resto da ficha segue publicado normalmente — o filtro é só da galeria
+    assert ficha["poster_path"] == "/poster.jpg"
+
+
+def test_filtro_de_duracao_caso_sem_dado_duracao_ausente_fica_sem_galeria(tmp_path):
+    """Caso sem dado: `runtime` ausente/None do TMDB não pode ser tratado
+    como 'compatível com longa' por omissão — o filtro é conservador."""
+    # 3 candidatos alternativos (>= PISO_GALERIA), mesma razão do teste
+    # anterior — isolar o filtro de duração do piso.
+    d = _detalhes()
+    d["runtime"] = None
+    d["poster_path"] = "/poster.jpg"
+    d["images"] = {"posters": [_img("/poster.jpg", va=1.0),
+                               _img("/alt1.jpg", va=5.0),
+                               _img("/alt2.jpg", va=4.0),
+                               _img("/alt3.jpg", va=3.0)],
+                   "backdrops": []}
+    session = FakeTmdbSession({
+        ("search", "Cure", 1997): {"results": [{"id": 5, "release_date": "1997-01-01"}]},
+        ("movie", "pt-BR"): d,
+    })
+    ficha, _, _ = buscar_ficha("Cure", 1997, tmp_path, api_key="k", session=session)
+    assert ficha["duracao_min"] is None
+    assert ficha["galeria_posters"] == []
+
+
+def test_duracao_compativel_com_longa_no_piso_exato():
+    from espectro24.ficha import (GALERIA_DURACAO_MIN_FEATURE,
+                                  duracao_compativel_com_longa)
+    assert duracao_compativel_com_longa(GALERIA_DURACAO_MIN_FEATURE) is True
+    assert duracao_compativel_com_longa(GALERIA_DURACAO_MIN_FEATURE - 1) is False
+    assert duracao_compativel_com_longa(None) is False

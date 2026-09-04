@@ -71,6 +71,16 @@
   //     ficaria em 1,08× no desktop, visivelmente mole em retina.
   var TAMANHO_BACKDROP = "w1280";
 
+  // [v1.9.38] GALERIA DE PÔSTERES ALTERNATIVOS — lista própria de largura,
+  // porque a caixa é uma MINIATURA, bem menor que o pôster de 200px da
+  // ficha. Medido: a coluna de leitura cabe ~5 miniaturas de ~100px CSS de
+  // largura com gap de 8px (720px / (100+8) ≈ 6, folga para o gap externo).
+  // 100 × 2 = 200; `w154` (154px) cobre 1,54× — acima do 1× e abaixo do
+  // custo de `w185`/`w342` por imagem, e são até 8 delas na mesma página
+  // (`TETO_GALERIA`, `ficha.py`), ao contrário do pôster/backdrop que são
+  // UMA imagem só. `w92` ficaria mole em tela retina (0,92×).
+  var TAMANHO_GALERIA = "w154";
+
   // Proporção de reserva do backdrop quando as dimensões não vieram da API.
   // 16:9 é o formato do acervo de backdrops do TMDB (medido nos 34 do
   // catálogo que têm um: 3840×2160, 1920×1080, 2560×1440 — e as exceções,
@@ -269,10 +279,51 @@
     });
   }
 
+  /* [v1.9.38] `montarGaleria(ficha, opcoes)` → array de miniaturas
+     (`<span>` na mesma caixa comum de imagem, cada uma com sua própria
+     proporção reservada) para a galeria de pôsteres alternativos.
+
+     Devolve array VAZIO — nunca `null` — quando não há galeria: o filme
+     está sem `ficha`, `galeria_posters` é ausente/vazio (inclui o caso da
+     GUARDA DE IDENTIDADE, `ficha.py`, que zera a lista quando o `tmdb_id`
+     resolvido não é confirmado como o longa esperado), ou o campo não é
+     array. Quem chama decide o que fazer com array vazio — hoje, não
+     renderizar a seção (ver `filme.js`): galeria vazia não é erro, é o
+     mesmo "filme sem [dado]" de sempre (§3[F]).
+
+     `lazy: true` sempre — a galeria vem DEPOIS da narrativa, abaixo da
+     dobra em qualquer tela, ao contrário do pôster da ficha (acima) e do
+     backdrop (topo). */
+  function montarGaleria(ficha, opcoes) {
+    opcoes = opcoes || {};
+    var lista = (ficha && ficha.galeria_posters) || [];
+    if (!Array.isArray(lista)) return [];
+    var nome = opcoes.titulo || "";
+    return lista.filter(function (p) { return p && p.poster_path; })
+      .map(function (p, i) {
+        return caixaDeImagem({
+          classe: "poster poster--galeria",
+          razao: razaoOu(p.poster_largura, p.poster_altura, RAZAO_PADRAO),
+          path: p.poster_path,
+          largura: p.poster_largura,
+          altura: p.poster_altura,
+          tamanho: TAMANHO_GALERIA,
+          lazy: true,
+          // ALT numerado: são várias imagens do MESMO filme lado a lado, e
+          // "Pôster de X" repetido 8 vezes seria ruído idêntico para quem
+          // usa leitor de tela — o número as distingue sem inventar
+          // descrição de arte que não temos.
+          alt: "Pôster alternativo " + (i + 1) + " de " + nome,
+          notaVazio: "sem pôster",
+        });
+      });
+  }
+
   window.ESPECTRO_POSTER = {
     CDN: CDN, TAMANHO: TAMANHO, TAMANHO_BACKDROP: TAMANHO_BACKDROP,
+    TAMANHO_GALERIA: TAMANHO_GALERIA,
     RAZAO_PADRAO: RAZAO_PADRAO, RAZAO_BACKDROP: RAZAO_BACKDROP,
     url: url, razaoDe: razaoDe, montar: montar,
-    montarBackdrop: montarBackdrop,
+    montarBackdrop: montarBackdrop, montarGaleria: montarGaleria,
   };
 })();

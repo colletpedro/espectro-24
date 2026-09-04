@@ -368,6 +368,29 @@ a { color: inherit; }
   .poster--ficha { width: 140px; margin-bottom: 14px; }
 }
 
+/* =======================================================================
+   [v1.9.38] GALERIA DE PÔSTERES ALTERNATIVOS — decoração, não dado.
+   Grade ESTÁTICA de miniaturas: sem carrossel, sem transição própria, sem
+   nada que se mexa sozinho — a única animação é o mesmo fade-in de 0,24s
+   de qualquer pôster do site (`.poster__img`, acima), não uma nova. Fica
+   DEPOIS da narrativa e ANTES da pesquisa; não desloca nenhum bloco
+   existente (ver a ordem comentada em `render()`, filme.js). */
+.poster-galeria { margin: 28px 0 8px; }
+.poster-galeria__grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(84px, 1fr));
+  gap: 10px;
+  max-width: 420px;
+}
+.poster--galeria {
+  border-radius: 6px;
+  border: 1px solid var(--border);
+}
+.poster--galeria .poster__vazio-nota { font-size: 0.5rem; }
+@media (max-width: 640px) {
+  .poster-galeria__grid { max-width: none; }
+}
+
 /* --- [v1.9.30] O BACKDROP: a abertura da página do filme ---------------
    Substitui o pôster vertical no topo (decisão do dono do projeto). Ocupa a
    largura inteira da coluna de leitura e é 16:9 — a leitura vira horizontal

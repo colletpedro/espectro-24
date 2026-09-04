@@ -28,7 +28,8 @@
     "backdrop_altura": null,
     "poster_sem_texto_path": "/oauz8kPiFCpsflMMEBq7UbNasKf.jpg",
     "poster_sem_texto_largura": 2000,
-    "poster_sem_texto_altura": 3000
+    "poster_sem_texto_altura": 3000,
+    "galeria_posters": []
   },
   "distribuicao": {
     "n_notas_total": 1484316,

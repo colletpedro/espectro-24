@@ -216,6 +216,9 @@
 
     if (f.narrativa) app.appendChild(narrativaCollapsedBlock(f.narrativa)); // 8
 
+    var galeria = galeriaBlock(f);                    // 9 [v1.9.38] galeria
+    if (galeria) app.appendChild(galeria);
+
     // micro-pesquisa (A/B) — módulo separado
     if (window.mountSurvey) window.mountSurvey(app, f);
   }
@@ -443,6 +446,45 @@
     });
     det.appendChild(body);
     return det;
+  }
+
+  // --- galeria de pôsteres alternativos (§3[F] v1.9.38) ---
+  //
+  // Posição: DEPOIS da narrativa, ANTES da pesquisa. Não redesenha nada
+  // acima — a ordem (backdrop → ficha → barra → condições → bullets →
+  // veredito → narrativa) é a mesma restrição de "acrescentar sem mover"
+  // que já vale para as condições de decisão.
+  //
+  // A galeria é DECORAÇÃO: não pode competir com dado nem introduzir
+  // animação que dispute atenção com a barra de proporção — por isso não
+  // há carrossel automático, nem transição, nem qualquer coisa que se
+  // mexa sozinha. É uma grade estática de miniaturas.
+  //
+  // Filme com galeria vazia (duração fora do território de longa —
+  // `duracao_compativel_com_longa`, `ficha.py`, NÃO é confirmação de
+  // identidade —, filme sem ficha, ou simplesmente sem pôsteres
+  // suficientes sob o filtro): a SEÇÃO NÃO RENDERIZA. Sem placeholder, sem
+  // estado de erro visível — `null` aqui, e `render()` já trata `null`
+  // como "não anexar".
+  function galeriaBlock(f) {
+    if (!window.ESPECTRO_POSTER || !window.ESPECTRO_POSTER.montarGaleria) {
+      return null;
+    }
+    var itens = window.ESPECTRO_POSTER.montarGaleria(f.ficha, {
+      titulo: (f.ficha && f.ficha.titulo) || "",
+    });
+    if (!itens.length) return null;
+
+    var el = document.createElement("section");
+    el.className = "poster-galeria";
+    el.appendChild(sectionLabel("OUTROS PÔSTERES"));
+
+    var grid = document.createElement("div");
+    grid.className = "poster-galeria__grid";
+    itens.forEach(function (caixa) { grid.appendChild(caixa); });
+    el.appendChild(grid);
+
+    return el;
   }
 
   function chevronSvg() {
