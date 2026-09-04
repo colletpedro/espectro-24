@@ -191,16 +191,31 @@ def test_so_o_bloco_veredito_muda_no_json(sandbox, documento, sem_llm):
 
 
 def test_a_ordem_das_chaves_de_topo_e_preservada(sandbox, documento, sem_llm):
-    """`veredito` entra no FIM, e nada é reordenado — um diff de git legível
-    é o que torna a Entrega 5 auditável por leitura humana, além do teste."""
+    """O harness de veredito NÃO REORDENA nada — um diff de git legível é o
+    que torna a Entrega 5 auditável por leitura humana, além do teste.
+
+    **[v1.9.37] A asserção mudou de forma, e o motivo fica escrito.** Ela era
+    `list(depois)[-1] == "veredito"`, e passou a falhar quando a v1.9.37
+    publicou o bloco `condicoes` — que entra DEPOIS de `veredito` e vira a
+    última chave. A premissa "veredito é a última" era verdadeira só enquanto
+    ele fosse a última coisa acrescentada ao schema, e isso nunca foi o que o
+    teste queria dizer.
+
+    O que ele quer dizer, e agora diz: **a ordem das chaves não muda**, e um
+    `veredito` que ainda não existia entra no FIM. Isso continua valendo
+    quando o schema ganhar a próxima chave aditiva.
+    """
+    antes = list(documento)
     _gv().gerar_um(SLUG, saida=sandbox)
     depois = json.loads((sandbox / f"{SLUG}.json").read_text(encoding="utf-8"))
-    # `documento` já pode TER o bloco (é o estado normal depois da v1.9.21):
-    # comparar contra a lista crua faria o teste passar antes da publicação e
-    # falhar depois, por motivo nenhum.
-    esperado = [k for k in documento if k != "veredito"]
-    assert [k for k in depois if k != "veredito"] == esperado
-    assert list(depois)[-1] == "veredito"
+
+    if "veredito" in documento:
+        # já publicado: a ordem inteira tem de sair idêntica
+        assert list(depois) == antes
+    else:
+        # ainda não publicado: entra no fim, sem mexer no resto
+        assert list(depois)[:-1] == antes
+        assert list(depois)[-1] == "veredito"
 
 
 def test_o_spec_version_do_FILME_nao_sobe(sandbox, documento, sem_llm):

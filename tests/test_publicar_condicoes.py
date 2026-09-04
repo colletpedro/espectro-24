@@ -141,14 +141,24 @@ def test_nao_chama_NENHUM_estagio_a_montante(sandbox, origem, monkeypatch):
 # ===========================================================================
 
 def test_publicar_altera_APENAS_a_chave_condicoes(sandbox, origem, documento):
+    """**A fixture lê o `resultado/` real, que DEPOIS da publicação já tem o
+    bloco.** Comparar contra a lista crua faria o teste passar antes de
+    publicar e falhar depois, por motivo nenhum — a mesma armadilha que o
+    teste equivalente do veredito já documenta."""
+    antes = list(documento)
     _pc().publicar_um(SLUG, origem, dry_run=False)
     depois = json.loads((sandbox / f"{SLUG}.json").read_text(encoding="utf-8"))
 
     assert "condicoes" in depois
     assert set(depois) == set(documento) | {"condicoes"}
-    # ordem das chaves de topo preservada, com `condicoes` acrescentada no fim
-    assert list(depois)[:-1] == list(documento)
+    if "condicoes" in documento:
+        assert list(depois) == antes          # já publicado: ordem idêntica
+    else:
+        assert list(depois)[:-1] == antes     # entra no fim
+        assert list(depois)[-1] == "condicoes"
     for chave in documento:
+        if chave == "condicoes":
+            continue                          # é a única que o harness escreve
         assert depois[chave] == documento[chave], (
             f"o harness alterou a chave {chave!r} — ele só pode escrever "
             f"`condicoes`")
