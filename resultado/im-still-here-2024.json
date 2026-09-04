@@ -1444,5 +1444,153 @@
       "cache_miss_tokens": 3600
     },
     "latencia_s": 30.29
+  },
+  "condicoes": {
+    "vale_a_pena": [
+      {
+        "texto": "valoriza atuações comoventes guiadas por expressões sutis e silêncios expressivos",
+        "tema_origem": "POS-A",
+        "bucket_origem": "positivas",
+        "tema_texto": "Atuações excepcionais",
+        "rotulo_forca": "a maioria"
+      },
+      {
+        "texto": "busca um impacto emocional profundo que desperte sensações intensas e duradouras",
+        "tema_origem": "POS-B",
+        "bucket_origem": "positivas",
+        "tema_texto": "Força emocional e impacto",
+        "rotulo_forca": "a maioria"
+      },
+      {
+        "texto": "procura uma obra que retrate os horrores da ditadura como denúncia histórica",
+        "tema_origem": "POS-C",
+        "bucket_origem": "positivas",
+        "tema_texto": "Retrato da ditadura militar",
+        "rotulo_forca": "muitos"
+      },
+      {
+        "texto": "se interessa por filmes com valor educativo voltados à preservação da memória",
+        "tema_origem": "POS-E",
+        "bucket_origem": "positivas",
+        "tema_texto": "Valor histórico e educativo",
+        "rotulo_forca": "muitos"
+      },
+      {
+        "texto": "aprecia direção cuidadosa com reconstituição de época e trilha sonora imersiva",
+        "tema_origem": "POS-F",
+        "bucket_origem": "positivas",
+        "tema_texto": "Direção e aspectos técnicos",
+        "rotulo_forca": "alguns"
+      }
+    ],
+    "talvez_evite": [
+      {
+        "texto": "se incomoda com recursos melodramáticos calculados para forçar comoção",
+        "tema_origem": "NEG-A",
+        "bucket_origem": "negativas",
+        "tema_texto": "Manipulação emocional e excesso de melodrama",
+        "rotulo_forca": "muitos"
+      },
+      {
+        "texto": "se frustra com narrativas arrastadas que prolongam momentos desnecessariamente",
+        "tema_origem": "NEG-B",
+        "bucket_origem": "negativas",
+        "tema_texto": "Ritmo lento e narrativa arrastada",
+        "rotulo_forca": "muitos"
+      },
+      {
+        "texto": "prefere uma análise política aprofundada do contexto histórico em vez de superficial",
+        "tema_origem": "NEG-C",
+        "bucket_origem": "negativas",
+        "tema_texto": "Falta de profundidade política",
+        "rotulo_forca": "alguns"
+      },
+      {
+        "texto": "acha insuficiente quando um grande desempenho individual não sustenta o conjunto",
+        "tema_origem": "NEG-E",
+        "bucket_origem": "negativas",
+        "tema_texto": "Desempenho destaca-se, mas não sustenta o conjunto",
+        "rotulo_forca": "alguns"
+      }
+    ],
+    "ordem_colunas": [
+      "vale_a_pena",
+      "talvez_evite"
+    ],
+    "peso": {
+      "vale_a_pena": {
+        "peso_pct": 96,
+        "peso_texto": "~96% das notas",
+        "nota_de_amostra": null
+      },
+      "talvez_evite": {
+        "peso_pct": 1,
+        "peso_texto": "~1% das notas",
+        "nota_de_amostra": null
+      }
+    },
+    "peso_meio": null,
+    "origem": "llm",
+    "temas_pedidos": {
+      "vale_a_pena": [
+        "POS-A",
+        "POS-B",
+        "POS-C",
+        "POS-E",
+        "POS-F"
+      ],
+      "talvez_evite": [
+        "NEG-A",
+        "NEG-B",
+        "NEG-C",
+        "NEG-E"
+      ]
+    },
+    "temas_saltados": {
+      "vale_a_pena": [],
+      "talvez_evite": []
+    },
+    "descartadas": [],
+    "retry": null,
+    "provider": "gemini",
+    "modelo": "gemini-3.7-flash",
+    "n_candidatos": 3,
+    "n_chamadas": 3,
+    "indice_escolhido": 2,
+    "candidatos": [
+      {
+        "indice": 0,
+        "n_condicoes": 9,
+        "n_flags": 1,
+        "flags": [
+          "exemplo_verbatim"
+        ],
+        "n_temas_cobertos": 9
+      },
+      {
+        "indice": 1,
+        "n_condicoes": 9,
+        "n_flags": 1,
+        "flags": [
+          "exemplo_verbatim"
+        ],
+        "n_temas_cobertos": 9
+      },
+      {
+        "indice": 2,
+        "n_condicoes": 9,
+        "n_flags": 0,
+        "flags": [],
+        "n_temas_cobertos": 9
+      }
+    ],
+    "uso": {
+      "prompt_tokens": 8112,
+      "completion_tokens": 1261,
+      "cache_hit_tokens": 0,
+      "cache_miss_tokens": 8112
+    },
+    "latencia_s": 18.51,
+    "spec_version": "1.9.25"
   }
 }

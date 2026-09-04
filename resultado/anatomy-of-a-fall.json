@@ -1434,5 +1434,129 @@
       "cache_miss_tokens": 3576
     },
     "latencia_s": 25.63
+  },
+  "condicoes": {
+    "vale_a_pena": [
+      {
+        "texto": "busca atuações extremamente convincentes que trazem autenticidade aos personagens",
+        "tema_origem": "POS-A",
+        "bucket_origem": "positivas",
+        "tema_texto": "Atuações excepcionais",
+        "rotulo_forca": "a maioria"
+      },
+      {
+        "texto": "se interessa pelo exame detalhado dos ressentimentos e complexidades de um casamento",
+        "tema_origem": "POS-B",
+        "bucket_origem": "positivas",
+        "tema_texto": "Dissolução e complexidade conjugal",
+        "rotulo_forca": "muitos"
+      },
+      {
+        "texto": "aprecia roteiros minuciosos com diálogos cheios de nuances e tensão moral",
+        "tema_origem": "POS-C",
+        "bucket_origem": "positivas",
+        "tema_texto": "Roteiro inteligente e diálogos afiados",
+        "rotulo_forca": "muitos"
+      }
+    ],
+    "talvez_evite": [
+      {
+        "texto": "se cansa com narrativas de ritmo vagaroso e diálogos excessivamente prolongados",
+        "tema_origem": "NEG-A",
+        "bucket_origem": "negativas",
+        "tema_texto": "Ritmo lento e arrastado",
+        "rotulo_forca": "a maioria"
+      },
+      {
+        "texto": "se incomoda com desfechos em aberto que recusam uma resolução definitiva",
+        "tema_origem": "NEG-B",
+        "bucket_origem": "negativas",
+        "tema_texto": "Final em aberto frustrante",
+        "rotulo_forca": "muitos"
+      },
+      {
+        "texto": "evita tramas consideradas previsíveis e com desenvolvimento superficial de personagens",
+        "tema_origem": "NEG-C",
+        "bucket_origem": "negativas",
+        "tema_texto": "História sem profundidade",
+        "rotulo_forca": "alguns"
+      }
+    ],
+    "ordem_colunas": [
+      "vale_a_pena",
+      "talvez_evite"
+    ],
+    "peso": {
+      "vale_a_pena": {
+        "peso_pct": 88,
+        "peso_texto": "~88% das notas",
+        "nota_de_amostra": null
+      },
+      "talvez_evite": {
+        "peso_pct": 2,
+        "peso_texto": "~2% das notas",
+        "nota_de_amostra": null
+      }
+    },
+    "peso_meio": null,
+    "origem": "llm",
+    "temas_pedidos": {
+      "vale_a_pena": [
+        "POS-A",
+        "POS-B",
+        "POS-C"
+      ],
+      "talvez_evite": [
+        "NEG-A",
+        "NEG-B",
+        "NEG-C"
+      ]
+    },
+    "temas_saltados": {
+      "vale_a_pena": [],
+      "talvez_evite": []
+    },
+    "descartadas": [],
+    "retry": null,
+    "provider": "gemini",
+    "modelo": "gemini-3.7-flash",
+    "n_candidatos": 3,
+    "n_chamadas": 3,
+    "indice_escolhido": 2,
+    "candidatos": [
+      {
+        "indice": 0,
+        "n_condicoes": 6,
+        "n_flags": 1,
+        "flags": [
+          "exemplo_verbatim"
+        ],
+        "n_temas_cobertos": 6
+      },
+      {
+        "indice": 1,
+        "n_condicoes": 6,
+        "n_flags": 1,
+        "flags": [
+          "ancora_nao_verificavel"
+        ],
+        "n_temas_cobertos": 6
+      },
+      {
+        "indice": 2,
+        "n_condicoes": 6,
+        "n_flags": 0,
+        "flags": [],
+        "n_temas_cobertos": 6
+      }
+    ],
+    "uso": {
+      "prompt_tokens": 7854,
+      "completion_tokens": 771,
+      "cache_hit_tokens": 0,
+      "cache_miss_tokens": 7854
+    },
+    "latencia_s": 12.5,
+    "spec_version": "1.9.25"
   }
 }

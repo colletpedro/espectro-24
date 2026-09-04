@@ -1444,5 +1444,153 @@
       "cache_miss_tokens": 3525
     },
     "latencia_s": 31.84
+  },
+  "condicoes": {
+    "vale_a_pena": [
+      {
+        "texto": "busca um entretenimento descompromissado e divertido, relevando eventuais falhas técnicas",
+        "tema_origem": "POS-A",
+        "bucket_origem": "positivas",
+        "tema_texto": "Diversão e prazer culposo",
+        "rotulo_forca": "muitos"
+      },
+      {
+        "texto": "aprecia belos números musicais com canções marcantes e coreografias expressivas",
+        "tema_origem": "POS-B",
+        "bucket_origem": "positivas",
+        "tema_texto": "Qualidade musical e dança",
+        "rotulo_forca": "muitos"
+      },
+      {
+        "texto": "se diverte com a estranheza visual e o charme bizarro dos efeitos digitais",
+        "tema_origem": "POS-C",
+        "bucket_origem": "positivas",
+        "tema_texto": "Visual bizarro e CGI questionável",
+        "rotulo_forca": "muitos"
+      },
+      {
+        "texto": "aprecia a estética camp e celebra o exagero desavergonhado como escolha artística",
+        "tema_origem": "POS-E",
+        "bucket_origem": "positivas",
+        "tema_texto": "Culto e arte camp",
+        "rotulo_forca": "alguns"
+      }
+    ],
+    "talvez_evite": [
+      {
+        "texto": "se incomoda com o visual híbrido e desconfortável dos gatos humanoides",
+        "tema_origem": "NEG-A",
+        "bucket_origem": "negativas",
+        "tema_texto": "Design perturbador dos gatos humanoides",
+        "rotulo_forca": "a maioria"
+      },
+      {
+        "texto": "busca uma história com trama estruturada em vez de números musicais desconexos",
+        "tema_origem": "NEG-B",
+        "bucket_origem": "negativas",
+        "tema_texto": "Roteiro inexistente e narrativa confusa",
+        "rotulo_forca": "muitos"
+      },
+      {
+        "texto": "se frustra ao ver artistas renomados em papéis deslocados e mal aproveitados",
+        "tema_origem": "NEG-C",
+        "bucket_origem": "negativas",
+        "tema_texto": "Casting de celebridades mal aproveitado",
+        "rotulo_forca": "muitos"
+      },
+      {
+        "texto": "quer evitar momentos sem sentido que geram um mal-estar constante",
+        "tema_origem": "NEG-D",
+        "bucket_origem": "negativas",
+        "tema_texto": "Experiência de visualização desconfortável",
+        "rotulo_forca": "alguns"
+      },
+      {
+        "texto": "espera uma trilha musical consistente e impactante, sem oscilações apagadas",
+        "tema_origem": "NEG-F",
+        "bucket_origem": "negativas",
+        "tema_texto": "Execução musical inconsistente",
+        "rotulo_forca": "alguns"
+      }
+    ],
+    "ordem_colunas": [
+      "talvez_evite",
+      "vale_a_pena"
+    ],
+    "peso": {
+      "vale_a_pena": {
+        "peso_pct": 7,
+        "peso_texto": "~7% das notas",
+        "nota_de_amostra": null
+      },
+      "talvez_evite": {
+        "peso_pct": 86,
+        "peso_texto": "~86% das notas",
+        "nota_de_amostra": null
+      }
+    },
+    "peso_meio": null,
+    "origem": "llm",
+    "temas_pedidos": {
+      "vale_a_pena": [
+        "POS-A",
+        "POS-B",
+        "POS-C",
+        "POS-E"
+      ],
+      "talvez_evite": [
+        "NEG-A",
+        "NEG-B",
+        "NEG-C",
+        "NEG-D",
+        "NEG-F"
+      ]
+    },
+    "temas_saltados": {
+      "vale_a_pena": [],
+      "talvez_evite": []
+    },
+    "descartadas": [],
+    "retry": null,
+    "provider": "gemini",
+    "modelo": "gemini-3.7-flash",
+    "n_candidatos": 3,
+    "n_chamadas": 3,
+    "indice_escolhido": 2,
+    "candidatos": [
+      {
+        "indice": 0,
+        "n_condicoes": 9,
+        "n_flags": 3,
+        "flags": [
+          "exemplo_verbatim"
+        ],
+        "n_temas_cobertos": 9
+      },
+      {
+        "indice": 1,
+        "n_condicoes": 9,
+        "n_flags": 1,
+        "flags": [
+          "sem_discriminacao"
+        ],
+        "n_temas_cobertos": 9
+      },
+      {
+        "indice": 2,
+        "n_condicoes": 9,
+        "n_flags": 0,
+        "flags": [],
+        "n_temas_cobertos": 9
+      }
+    ],
+    "uso": {
+      "prompt_tokens": 8172,
+      "completion_tokens": 1271,
+      "cache_hit_tokens": 0,
+      "cache_miss_tokens": 8172
+    },
+    "latencia_s": 24.9,
+    "spec_version": "1.9.25"
   }
 }

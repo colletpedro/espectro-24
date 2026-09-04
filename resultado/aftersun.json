@@ -1444,5 +1444,127 @@
       "cache_miss_tokens": 3642
     },
     "latencia_s": 28.31
+  },
+  "condicoes": {
+    "vale_a_pena": [
+      {
+        "texto": "aprecia atuações autênticas comoventes que transmitem uma forte química entre pai e filha",
+        "tema_origem": "POS-A",
+        "bucket_origem": "positivas",
+        "tema_texto": "Atuações naturais e cativantes",
+        "rotulo_forca": "muitos"
+      },
+      {
+        "texto": "se emociona com retratos sutis de depressão construídos através de silêncios e olhares",
+        "tema_origem": "POS-B",
+        "bucket_origem": "positivas",
+        "tema_texto": "Depressão e sofrimento oculto",
+        "rotulo_forca": "muitos"
+      },
+      {
+        "texto": "busca um olhar nostálgico sobre memórias de infância e viagens em família",
+        "tema_origem": "POS-C",
+        "bucket_origem": "positivas",
+        "tema_texto": "Nostalgia e memória",
+        "rotulo_forca": "muitos"
+      }
+    ],
+    "talvez_evite": [
+      {
+        "texto": "se entedia com um andamento excessivamente lento, arrastado e monótono",
+        "tema_origem": "NEG-A",
+        "bucket_origem": "negativas",
+        "tema_texto": "Ritmo lento e tédio",
+        "rotulo_forca": "muitos"
+      },
+      {
+        "texto": "evita tramas vagas, sem propósito claro e com intenções excessivamente implícitas",
+        "tema_origem": "NEG-B",
+        "bucket_origem": "negativas",
+        "tema_texto": "Narrativa vaga e sem desenvolvimento",
+        "rotulo_forca": "muitos"
+      },
+      {
+        "texto": "não se convence com Paul Mescal no papel de pai",
+        "tema_origem": "NEG-C",
+        "bucket_origem": "negativas",
+        "tema_texto": "Atuação de Paul Mescal não convence",
+        "rotulo_forca": "alguns"
+      }
+    ],
+    "ordem_colunas": [
+      "vale_a_pena",
+      "talvez_evite"
+    ],
+    "peso": {
+      "vale_a_pena": {
+        "peso_pct": 88,
+        "peso_texto": "~88% das notas",
+        "nota_de_amostra": null
+      },
+      "talvez_evite": {
+        "peso_pct": 3,
+        "peso_texto": "~3% das notas",
+        "nota_de_amostra": null
+      }
+    },
+    "peso_meio": null,
+    "origem": "llm",
+    "temas_pedidos": {
+      "vale_a_pena": [
+        "POS-A",
+        "POS-B",
+        "POS-C"
+      ],
+      "talvez_evite": [
+        "NEG-A",
+        "NEG-B",
+        "NEG-C"
+      ]
+    },
+    "temas_saltados": {
+      "vale_a_pena": [],
+      "talvez_evite": []
+    },
+    "descartadas": [],
+    "retry": null,
+    "provider": "gemini",
+    "modelo": "gemini-3.7-flash",
+    "n_candidatos": 3,
+    "n_chamadas": 3,
+    "indice_escolhido": 0,
+    "candidatos": [
+      {
+        "indice": 0,
+        "n_condicoes": 6,
+        "n_flags": 0,
+        "flags": [],
+        "n_temas_cobertos": 6
+      },
+      {
+        "indice": 1,
+        "n_condicoes": 6,
+        "n_flags": 1,
+        "flags": [
+          "tema_verbatim"
+        ],
+        "n_temas_cobertos": 6
+      },
+      {
+        "indice": 2,
+        "n_condicoes": 6,
+        "n_flags": 0,
+        "flags": [],
+        "n_temas_cobertos": 6
+      }
+    ],
+    "uso": {
+      "prompt_tokens": 7779,
+      "completion_tokens": 891,
+      "cache_hit_tokens": 0,
+      "cache_miss_tokens": 7779
+    },
+    "latencia_s": 15.89,
+    "spec_version": "1.9.25"
   }
 }

@@ -1451,5 +1451,153 @@
       "cache_miss_tokens": 3576
     },
     "latencia_s": 41.9
+  },
+  "condicoes": {
+    "vale_a_pena": [
+      {
+        "texto": "busca atuações intensas que transmitam peso emocional e complexidade psicológica",
+        "tema_origem": "POS-A",
+        "bucket_origem": "positivas",
+        "tema_texto": "Atuações marcantes",
+        "rotulo_forca": "muitos"
+      },
+      {
+        "texto": "aprecia trilhas sonoras marcantes que elevam a tensão, mesmo com momentos de volume excessivo",
+        "tema_origem": "POS-B",
+        "bucket_origem": "positivas",
+        "tema_texto": "Trilha sonora e som impactantes",
+        "rotulo_forca": "muitos"
+      },
+      {
+        "texto": "se impressiona com fotografia marcante e efeitos práticos de grande escala visual",
+        "tema_origem": "POS-C",
+        "bucket_origem": "positivas",
+        "tema_texto": "Fotografia e efeitos visuais impressionantes",
+        "rotulo_forca": "muitos"
+      },
+      {
+        "texto": "gosta de narrativas fragmentadas e desafiadoras que exploram múltiplas linhas temporais",
+        "tema_origem": "POS-D",
+        "bucket_origem": "positivas",
+        "tema_texto": "Narrativa complexa e não linear",
+        "rotulo_forca": "alguns"
+      },
+      {
+        "texto": "tolera um ritmo inicial mais lento e longa duração para obter uma história profunda",
+        "tema_origem": "POS-E",
+        "bucket_origem": "positivas",
+        "tema_texto": "Ritmo e duração prolongados",
+        "rotulo_forca": "alguns"
+      }
+    ],
+    "talvez_evite": [
+      {
+        "texto": "se cansa com filmes longos dominados por diálogos e pouca ação",
+        "tema_origem": "NEG-A",
+        "bucket_origem": "negativas",
+        "tema_texto": "Ritmo lento e duração excessiva",
+        "rotulo_forca": "a maioria"
+      },
+      {
+        "texto": "se irrita com cortes temporais confusos que tornam a narrativa artificialmente complexa",
+        "tema_origem": "NEG-B",
+        "bucket_origem": "negativas",
+        "tema_texto": "Roteiro pretensioso e confuso",
+        "rotulo_forca": "muitos"
+      },
+      {
+        "texto": "se frustra com figuras femininas reduzidas a estereótipos sem relevância na trama",
+        "tema_origem": "NEG-C",
+        "bucket_origem": "negativas",
+        "tema_texto": "Personagens femininas mal desenvolvidas",
+        "rotulo_forca": "alguns"
+      },
+      {
+        "texto": "acha que boa técnica e trilha sonora não salvam uma narrativa monótona",
+        "tema_origem": "NEG-F",
+        "bucket_origem": "negativas",
+        "tema_texto": "Trilha sonora e técnica superestimadas",
+        "rotulo_forca": "alguns"
+      }
+    ],
+    "ordem_colunas": [
+      "vale_a_pena",
+      "talvez_evite"
+    ],
+    "peso": {
+      "vale_a_pena": {
+        "peso_pct": 85,
+        "peso_texto": "~85% das notas",
+        "nota_de_amostra": null
+      },
+      "talvez_evite": {
+        "peso_pct": 3,
+        "peso_texto": "~3% das notas",
+        "nota_de_amostra": null
+      }
+    },
+    "peso_meio": null,
+    "origem": "llm",
+    "temas_pedidos": {
+      "vale_a_pena": [
+        "POS-A",
+        "POS-B",
+        "POS-C",
+        "POS-D",
+        "POS-E"
+      ],
+      "talvez_evite": [
+        "NEG-A",
+        "NEG-B",
+        "NEG-C",
+        "NEG-F"
+      ]
+    },
+    "temas_saltados": {
+      "vale_a_pena": [],
+      "talvez_evite": []
+    },
+    "descartadas": [],
+    "retry": null,
+    "provider": "gemini",
+    "modelo": "gemini-3.7-flash",
+    "n_candidatos": 3,
+    "n_chamadas": 3,
+    "indice_escolhido": 1,
+    "candidatos": [
+      {
+        "indice": 0,
+        "n_condicoes": 7,
+        "n_flags": 1,
+        "flags": [
+          "sem_discriminacao"
+        ],
+        "n_temas_cobertos": 7
+      },
+      {
+        "indice": 1,
+        "n_condicoes": 9,
+        "n_flags": 0,
+        "flags": [],
+        "n_temas_cobertos": 9
+      },
+      {
+        "indice": 2,
+        "n_condicoes": 9,
+        "n_flags": 1,
+        "flags": [
+          "sem_discriminacao"
+        ],
+        "n_temas_cobertos": 9
+      }
+    ],
+    "uso": {
+      "prompt_tokens": 8121,
+      "completion_tokens": 1161,
+      "cache_hit_tokens": 0,
+      "cache_miss_tokens": 8121
+    },
+    "latencia_s": 19.75,
+    "spec_version": "1.9.25"
   }
 }

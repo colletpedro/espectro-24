@@ -1446,5 +1446,138 @@
       "cache_miss_tokens": 3573
     },
     "latencia_s": 37.99
+  },
+  "condicoes": {
+    "vale_a_pena": [
+      {
+        "texto": "se interessa por narrativas construídas como uma alegoria bíblica carregada de metáforas",
+        "tema_origem": "POS-A",
+        "bucket_origem": "positivas",
+        "tema_texto": "Símbolos e metáforas religiosas",
+        "rotulo_forca": "muitos"
+      },
+      {
+        "texto": "valoriza uma atuação crua e de grande intensidade da protagonista",
+        "tema_origem": "POS-B",
+        "bucket_origem": "positivas",
+        "tema_texto": "Desempenho de Jennifer Lawrence",
+        "rotulo_forca": "muitos"
+      },
+      {
+        "texto": "procura um suspense sufocante que provoque uma constante sensação de opressão",
+        "tema_origem": "POS-D",
+        "bucket_origem": "positivas",
+        "tema_texto": "Sensação de desconforto e ansiedade",
+        "rotulo_forca": "alguns"
+      }
+    ],
+    "talvez_evite": [
+      {
+        "texto": "se incomoda com excesso de simbolismos e metáforas que tornam a trama enfadonha",
+        "tema_origem": "NEG-A",
+        "bucket_origem": "negativas",
+        "tema_texto": "Alta carga alegórica e excesso de simbolismo",
+        "rotulo_forca": "muitos"
+      },
+      {
+        "texto": "evita obras que provoquem angústia extrema e um nível severo de estresse",
+        "tema_origem": "NEG-B",
+        "bucket_origem": "negativas",
+        "tema_texto": "Experiência insuportável e desconfortável",
+        "rotulo_forca": "muitos"
+      },
+      {
+        "texto": "se incomoda com um ritmo que faz o filme parecer longo e cansativo",
+        "tema_origem": "NEG-C",
+        "bucket_origem": "negativas",
+        "tema_texto": "Ritmo problemático e sensação de longa duração",
+        "rotulo_forca": "alguns"
+      }
+    ],
+    "ordem_colunas": [
+      "vale_a_pena",
+      "talvez_evite"
+    ],
+    "peso": {
+      "vale_a_pena": {
+        "peso_pct": 64,
+        "peso_texto": "~64% das notas",
+        "nota_de_amostra": null
+      },
+      "talvez_evite": {
+        "peso_pct": 14,
+        "peso_texto": "~14% das notas",
+        "nota_de_amostra": null
+      }
+    },
+    "peso_meio": {
+      "pct": 22,
+      "texto": "~22% das notas ficaram no meio-termo"
+    },
+    "origem": "llm",
+    "temas_pedidos": {
+      "vale_a_pena": [
+        "POS-A",
+        "POS-B",
+        "POS-C",
+        "POS-D"
+      ],
+      "talvez_evite": [
+        "NEG-A",
+        "NEG-B",
+        "NEG-C",
+        "NEG-E"
+      ]
+    },
+    "temas_saltados": {
+      "vale_a_pena": [
+        "POS-C"
+      ],
+      "talvez_evite": [
+        "NEG-E"
+      ]
+    },
+    "descartadas": [],
+    "retry": null,
+    "provider": "gemini",
+    "modelo": "gemini-3.7-flash",
+    "n_candidatos": 3,
+    "n_chamadas": 3,
+    "indice_escolhido": 1,
+    "candidatos": [
+      {
+        "indice": 0,
+        "n_condicoes": 6,
+        "n_flags": 2,
+        "flags": [
+          "sem_discriminacao"
+        ],
+        "n_temas_cobertos": 6
+      },
+      {
+        "indice": 1,
+        "n_condicoes": 6,
+        "n_flags": 0,
+        "flags": [],
+        "n_temas_cobertos": 6
+      },
+      {
+        "indice": 2,
+        "n_condicoes": 6,
+        "n_flags": 1,
+        "flags": [
+          "sem_discriminacao"
+        ],
+        "n_temas_cobertos": 6
+      }
+    ],
+    "uso": {
+      "prompt_tokens": 8289,
+      "completion_tokens": 867,
+      "cache_hit_tokens": 0,
+      "cache_miss_tokens": 8289
+    },
+    "latencia_s": 19.32,
+    "spec_version": "1.9.25"
   }
 }

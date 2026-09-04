@@ -1424,5 +1424,168 @@
       "cache_miss_tokens": 3543
     },
     "latencia_s": 21.25
+  },
+  "condicoes": {
+    "vale_a_pena": [
+      {
+        "texto": "busca uma forte carga emocional com momentos comoventes e sensação de encerramento",
+        "tema_origem": "POS-A",
+        "bucket_origem": "positivas",
+        "tema_texto": "Carga emocional e despedidas",
+        "rotulo_forca": "a maioria"
+      },
+      {
+        "texto": "espera um espetáculo grandioso repleto de ação épica e homenagens aos fãs",
+        "tema_origem": "POS-B",
+        "bucket_origem": "positivas",
+        "tema_texto": "Batalha final épica e fan service",
+        "rotulo_forca": "muitos"
+      },
+      {
+        "texto": "gosta de viagem no tempo para revisitar a história, aceitando algumas inconsistências",
+        "tema_origem": "POS-C",
+        "bucket_origem": "positivas",
+        "tema_texto": "Viagem no tempo e lógica interna",
+        "rotulo_forca": "alguns"
+      },
+      {
+        "texto": "tolera um ritmo inicial mais lento em troca de grande envolvimento emocional",
+        "tema_origem": "POS-F",
+        "bucket_origem": "positivas",
+        "tema_texto": "Ritmo e duração",
+        "rotulo_forca": "alguns"
+      }
+    ],
+    "talvez_evite": [
+      {
+        "texto": "rejeita o apelo à nostalgia baseado no passado em vez de novidades",
+        "tema_origem": "NEG-B",
+        "bucket_origem": "negativas",
+        "tema_texto": "Favoritismo e nostalgia forçada",
+        "rotulo_forca": "muitos"
+      },
+      {
+        "texto": "se frustra com arcos de personagens tratados com superficialidade e piadas excessivas",
+        "tema_origem": "NEG-D",
+        "bucket_origem": "negativas",
+        "tema_texto": "Desenvolvimento de personagens decepcionante",
+        "rotulo_forca": "alguns"
+      },
+      {
+        "texto": "se incomoda com direção de arte e efeitos visuais considerados pouco inspirados",
+        "tema_origem": "NEG-F",
+        "bucket_origem": "negativas",
+        "tema_texto": "Efeitos visuais e estética comprometidos",
+        "rotulo_forca": "alguns"
+      }
+    ],
+    "ordem_colunas": [
+      "vale_a_pena",
+      "talvez_evite"
+    ],
+    "peso": {
+      "vale_a_pena": {
+        "peso_pct": 81,
+        "peso_texto": "~81% das notas",
+        "nota_de_amostra": null
+      },
+      "talvez_evite": {
+        "peso_pct": 4,
+        "peso_texto": "~4% das notas",
+        "nota_de_amostra": null
+      }
+    },
+    "peso_meio": null,
+    "origem": "llm",
+    "temas_pedidos": {
+      "vale_a_pena": [
+        "POS-A",
+        "POS-B",
+        "POS-C",
+        "POS-F"
+      ],
+      "talvez_evite": [
+        "NEG-A",
+        "NEG-B",
+        "NEG-C",
+        "NEG-D",
+        "NEG-F"
+      ]
+    },
+    "temas_saltados": {
+      "vale_a_pena": [],
+      "talvez_evite": [
+        "NEG-A",
+        "NEG-C"
+      ]
+    },
+    "descartadas": [
+      {
+        "texto": "se incomoda com roteiro incoerente repleto de diálogos fracos e situações forçadas",
+        "tema_origem": "NEG-A",
+        "lado": "talvez_evite",
+        "flags": [
+          "exemplo_verbatim"
+        ]
+      },
+      {
+        "texto": "se cansa com duração excessiva e ritmo arrastado na primeira metade",
+        "tema_origem": "NEG-C",
+        "lado": "talvez_evite",
+        "flags": [
+          "exemplo_verbatim"
+        ]
+      }
+    ],
+    "retry": {
+      "n_reprovadas": 2,
+      "n_aplicadas": 0,
+      "n_saltadas_pelo_modelo": 0,
+      "n_descartadas": 2
+    },
+    "provider": "gemini",
+    "modelo": "gemini-3.7-flash",
+    "n_candidatos": 3,
+    "n_chamadas": 4,
+    "indice_escolhido": 1,
+    "candidatos": [
+      {
+        "indice": 0,
+        "n_condicoes": 9,
+        "n_flags": 3,
+        "flags": [
+          "ancora_nao_verificavel",
+          "exemplo_verbatim",
+          "sem_discriminacao"
+        ],
+        "n_temas_cobertos": 9
+      },
+      {
+        "indice": 1,
+        "n_condicoes": 9,
+        "n_flags": 2,
+        "flags": [
+          "exemplo_verbatim"
+        ],
+        "n_temas_cobertos": 9
+      },
+      {
+        "indice": 2,
+        "n_condicoes": 9,
+        "n_flags": 2,
+        "flags": [
+          "exemplo_verbatim"
+        ],
+        "n_temas_cobertos": 9
+      }
+    ],
+    "uso": {
+      "prompt_tokens": 12373,
+      "completion_tokens": 1357,
+      "cache_hit_tokens": 0,
+      "cache_miss_tokens": 12373
+    },
+    "latencia_s": 31.22,
+    "spec_version": "1.9.25"
   }
 }

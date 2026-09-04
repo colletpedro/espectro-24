@@ -1432,5 +1432,143 @@
       "cache_miss_tokens": 3654
     },
     "latencia_s": 23.35
+  },
+  "condicoes": {
+    "vale_a_pena": [
+      {
+        "texto": "aprecia diálogos provocativos e conversas envolventes conduzidas com humor seco",
+        "tema_origem": "POS-A",
+        "bucket_origem": "positivas",
+        "tema_texto": "Diálogos e roteiro afiados",
+        "rotulo_forca": "a maioria"
+      },
+      {
+        "texto": "busca atuações marcantes de um elenco entrosado e repleto de nuances",
+        "tema_origem": "POS-B",
+        "bucket_origem": "positivas",
+        "tema_texto": "Atuações memoráveis do elenco",
+        "rotulo_forca": "muitos"
+      },
+      {
+        "texto": "valoriza uma ambientação de inverno sufocante com bela fotografia em cenários isolados",
+        "tema_origem": "POS-C",
+        "bucket_origem": "positivas",
+        "tema_texto": "Fotografia e ambientação de inverno",
+        "rotulo_forca": "muitos"
+      },
+      {
+        "texto": "aceita um início lento em troca de uma construção gradual de conflito",
+        "tema_origem": "POS-E",
+        "bucket_origem": "positivas",
+        "tema_texto": "Ritmo lento no início, mas que compensa",
+        "rotulo_forca": "muitos"
+      }
+    ],
+    "talvez_evite": [
+      {
+        "texto": "se cansa com narrativas longas de ritmo muito lento e arrastado",
+        "tema_origem": "NEG-A",
+        "bucket_origem": "negativas",
+        "tema_texto": "Ritmo arrastado e duração excessiva",
+        "rotulo_forca": "muitos"
+      },
+      {
+        "texto": "se incomoda com diálogos excessivos e conversas repetitivas que travam a história",
+        "tema_origem": "NEG-B",
+        "bucket_origem": "negativas",
+        "tema_texto": "Diálogos excessivos e exposição",
+        "rotulo_forca": "muitos"
+      },
+      {
+        "texto": "rejeita o uso insistente de insultos raciais considerados gratuitos na narrativa",
+        "tema_origem": "NEG-C",
+        "bucket_origem": "negativas",
+        "tema_texto": "Uso excessivo de insultos raciais",
+        "rotulo_forca": "muitos"
+      },
+      {
+        "texto": "se desaponta com personagens caricatos e desagradáveis que não geram empatia",
+        "tema_origem": "NEG-E",
+        "bucket_origem": "negativas",
+        "tema_texto": "Personagens pouco interessantes",
+        "rotulo_forca": "alguns"
+      }
+    ],
+    "ordem_colunas": [
+      "vale_a_pena",
+      "talvez_evite"
+    ],
+    "peso": {
+      "vale_a_pena": {
+        "peso_pct": 84,
+        "peso_texto": "~84% das notas",
+        "nota_de_amostra": null
+      },
+      "talvez_evite": {
+        "peso_pct": 3,
+        "peso_texto": "~3% das notas",
+        "nota_de_amostra": null
+      }
+    },
+    "peso_meio": null,
+    "origem": "llm",
+    "temas_pedidos": {
+      "vale_a_pena": [
+        "POS-A",
+        "POS-B",
+        "POS-C",
+        "POS-E"
+      ],
+      "talvez_evite": [
+        "NEG-A",
+        "NEG-B",
+        "NEG-C",
+        "NEG-E"
+      ]
+    },
+    "temas_saltados": {
+      "vale_a_pena": [],
+      "talvez_evite": []
+    },
+    "descartadas": [],
+    "retry": null,
+    "provider": "gemini",
+    "modelo": "gemini-3.7-flash",
+    "n_candidatos": 3,
+    "n_chamadas": 3,
+    "indice_escolhido": 0,
+    "candidatos": [
+      {
+        "indice": 0,
+        "n_condicoes": 8,
+        "n_flags": 0,
+        "flags": [],
+        "n_temas_cobertos": 8
+      },
+      {
+        "indice": 1,
+        "n_condicoes": 8,
+        "n_flags": 1,
+        "flags": [
+          "comprimento"
+        ],
+        "n_temas_cobertos": 8
+      },
+      {
+        "indice": 2,
+        "n_condicoes": 8,
+        "n_flags": 0,
+        "flags": [],
+        "n_temas_cobertos": 8
+      }
+    ],
+    "uso": {
+      "prompt_tokens": 8394,
+      "completion_tokens": 1118,
+      "cache_hit_tokens": 0,
+      "cache_miss_tokens": 8394
+    },
+    "latencia_s": 18.26,
+    "spec_version": "1.9.25"
   }
 }

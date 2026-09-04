@@ -1440,5 +1440,137 @@
       "cache_miss_tokens": 3597
     },
     "latencia_s": 20.36
+  },
+  "condicoes": {
+    "vale_a_pena": [
+      {
+        "texto": "admira uma direção imponente com fotografia arrojada e paisagens de grande escala",
+        "tema_origem": "POS-A",
+        "bucket_origem": "positivas",
+        "tema_texto": "Direção e fotografia excepcionais",
+        "rotulo_forca": "a maioria"
+      },
+      {
+        "texto": "busca atuações marcantes e multifacetadas, incluindo uma interpretação vilanesca expressiva",
+        "tema_origem": "POS-B",
+        "bucket_origem": "positivas",
+        "tema_texto": "Atuações principais",
+        "rotulo_forca": "muitos"
+      },
+      {
+        "texto": "se interessa por sagas épicas focadas na profunda transformação do protagonista",
+        "tema_origem": "POS-C",
+        "bucket_origem": "positivas",
+        "tema_texto": "Evolução do personagem de Paul",
+        "rotulo_forca": "muitos"
+      }
+    ],
+    "talvez_evite": [
+      {
+        "texto": "se incomoda com um ritmo arrastado e sequências longas sem acontecimentos relevantes",
+        "tema_origem": "NEG-A",
+        "bucket_origem": "negativas",
+        "tema_texto": "Ritmo lento e tédio",
+        "rotulo_forca": "a maioria"
+      },
+      {
+        "texto": "se decepciona com figuras centrais pouco carismáticas e com escassa profundidade emocional",
+        "tema_origem": "NEG-B",
+        "bucket_origem": "negativas",
+        "tema_texto": "Desenvolvimento de personagens fraco",
+        "rotulo_forca": "muitos"
+      },
+      {
+        "texto": "tem pouca paciência para tramas difíceis de acompanhar e eventos aparentemente desconexos",
+        "tema_origem": "NEG-C",
+        "bucket_origem": "negativas",
+        "tema_texto": "Roteiro e trama confusos",
+        "rotulo_forca": "alguns"
+      },
+      {
+        "texto": "se frustra com um romance central sem química genuína e com dinâmica forçada",
+        "tema_origem": "NEG-D",
+        "bucket_origem": "negativas",
+        "tema_texto": "Falta de química entre os protagonistas",
+        "rotulo_forca": "alguns"
+      }
+    ],
+    "ordem_colunas": [
+      "vale_a_pena",
+      "talvez_evite"
+    ],
+    "peso": {
+      "vale_a_pena": {
+        "peso_pct": 91,
+        "peso_texto": "~91% das notas",
+        "nota_de_amostra": null
+      },
+      "talvez_evite": {
+        "peso_pct": 2,
+        "peso_texto": "~2% das notas",
+        "nota_de_amostra": null
+      }
+    },
+    "peso_meio": null,
+    "origem": "llm",
+    "temas_pedidos": {
+      "vale_a_pena": [
+        "POS-A",
+        "POS-B",
+        "POS-C"
+      ],
+      "talvez_evite": [
+        "NEG-A",
+        "NEG-B",
+        "NEG-C",
+        "NEG-D"
+      ]
+    },
+    "temas_saltados": {
+      "vale_a_pena": [],
+      "talvez_evite": []
+    },
+    "descartadas": [],
+    "retry": null,
+    "provider": "gemini",
+    "modelo": "gemini-3.7-flash",
+    "n_candidatos": 3,
+    "n_chamadas": 3,
+    "indice_escolhido": 0,
+    "candidatos": [
+      {
+        "indice": 0,
+        "n_condicoes": 7,
+        "n_flags": 0,
+        "flags": [],
+        "n_temas_cobertos": 7
+      },
+      {
+        "indice": 1,
+        "n_condicoes": 7,
+        "n_flags": 1,
+        "flags": [
+          "sem_discriminacao"
+        ],
+        "n_temas_cobertos": 7
+      },
+      {
+        "indice": 2,
+        "n_condicoes": 7,
+        "n_flags": 1,
+        "flags": [
+          "sem_discriminacao"
+        ],
+        "n_temas_cobertos": 7
+      }
+    ],
+    "uso": {
+      "prompt_tokens": 7776,
+      "completion_tokens": 986,
+      "cache_hit_tokens": 0,
+      "cache_miss_tokens": 7776
+    },
+    "latencia_s": 14.46,
+    "spec_version": "1.9.25"
   }
 }

@@ -1420,5 +1420,138 @@
       "cache_miss_tokens": 3663
     },
     "latencia_s": 36.84
+  },
+  "condicoes": {
+    "vale_a_pena": [
+      {
+        "texto": "aprecia atuações em perfeita sintonia que equilibram momentos dramáticos e cômicos",
+        "tema_origem": "POS-A",
+        "bucket_origem": "positivas",
+        "tema_texto": "Atuações excepcionais do elenco principal",
+        "rotulo_forca": "a maioria"
+      },
+      {
+        "texto": "busca uma comédia desconfortável movida por diálogos mordazes e momentos embaraçosos",
+        "tema_origem": "POS-B",
+        "bucket_origem": "positivas",
+        "tema_texto": "Humor ácido e situações constrangedoras",
+        "rotulo_forca": "muitos"
+      },
+      {
+        "texto": "valoriza uma direção precisa em cenário único com estilo teatral e enquadramentos expressivos",
+        "tema_origem": "POS-C",
+        "bucket_origem": "positivas",
+        "tema_texto": "Direção precisa e estilo visual de peça teatral",
+        "rotulo_forca": "muitos"
+      }
+    ],
+    "talvez_evite": [
+      {
+        "texto": "se incomoda com roteiros previsíveis que recorrem a clichês e conflitos rasos",
+        "tema_origem": "NEG-A",
+        "bucket_origem": "negativas",
+        "tema_texto": "Roteiro superficial e sem profundidade",
+        "rotulo_forca": "muitos"
+      },
+      {
+        "texto": "se irrita com atuações exageradas e forçadas que destoam do restante do elenco",
+        "tema_origem": "NEG-B",
+        "bucket_origem": "negativas",
+        "tema_texto": "Atuação exagerada de Olivia Wilde",
+        "rotulo_forca": "muitos"
+      },
+      {
+        "texto": "se cansa de comédias arrastadas com piadas ineficazes e ritmo entediante",
+        "tema_origem": "NEG-C",
+        "bucket_origem": "negativas",
+        "tema_texto": "Falta de humor e ritmo arrastado",
+        "rotulo_forca": "alguns"
+      }
+    ],
+    "ordem_colunas": [
+      "vale_a_pena",
+      "talvez_evite"
+    ],
+    "peso": {
+      "vale_a_pena": {
+        "peso_pct": 91,
+        "peso_texto": "~91% das notas",
+        "nota_de_amostra": null
+      },
+      "talvez_evite": {
+        "peso_pct": 2,
+        "peso_texto": "~2% das notas",
+        "nota_de_amostra": null
+      }
+    },
+    "peso_meio": null,
+    "origem": "llm",
+    "temas_pedidos": {
+      "vale_a_pena": [
+        "POS-A",
+        "POS-B",
+        "POS-C"
+      ],
+      "talvez_evite": [
+        "NEG-A",
+        "NEG-B",
+        "NEG-C"
+      ]
+    },
+    "temas_saltados": {
+      "vale_a_pena": [],
+      "talvez_evite": []
+    },
+    "descartadas": [],
+    "retry": {
+      "n_reprovadas": 1,
+      "n_aplicadas": 1,
+      "n_saltadas_pelo_modelo": 0,
+      "n_descartadas": 0
+    },
+    "provider": "gemini",
+    "modelo": "gemini-3.7-flash",
+    "n_candidatos": 3,
+    "n_chamadas": 4,
+    "indice_escolhido": 2,
+    "candidatos": [
+      {
+        "indice": 0,
+        "n_condicoes": 6,
+        "n_flags": 2,
+        "flags": [
+          "exemplo_verbatim",
+          "tema_verbatim"
+        ],
+        "n_temas_cobertos": 6
+      },
+      {
+        "indice": 1,
+        "n_condicoes": 6,
+        "n_flags": 2,
+        "flags": [
+          "exemplo_verbatim",
+          "sem_discriminacao"
+        ],
+        "n_temas_cobertos": 6
+      },
+      {
+        "indice": 2,
+        "n_condicoes": 6,
+        "n_flags": 1,
+        "flags": [
+          "tema_verbatim"
+        ],
+        "n_temas_cobertos": 6
+      }
+    ],
+    "uso": {
+      "prompt_tokens": 10509,
+      "completion_tokens": 942,
+      "cache_hit_tokens": 0,
+      "cache_miss_tokens": 10509
+    },
+    "latencia_s": 15.56,
+    "spec_version": "1.9.25"
   }
 }

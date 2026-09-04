@@ -1456,5 +1456,141 @@
       "cache_miss_tokens": 4675
     },
     "latencia_s": 13.74
+  },
+  "condicoes": {
+    "vale_a_pena": [
+      {
+        "texto": "busca uma atmosfera opressiva com silêncios e planos longos que geram desconforto",
+        "tema_origem": "POS-A",
+        "bucket_origem": "positivas",
+        "tema_texto": "Atmosfera e direção",
+        "rotulo_forca": "a maioria"
+      },
+      {
+        "texto": "aprecia atuações que constroem um antagonista inquietante por meio de calma perturbadora",
+        "tema_origem": "POS-B",
+        "bucket_origem": "positivas",
+        "tema_texto": "Vilão e performance",
+        "rotulo_forca": "muitos"
+      },
+      {
+        "texto": "se interessa por reflexões sobre a natureza do mal e impulsos reprimidos",
+        "tema_origem": "POS-C",
+        "bucket_origem": "positivas",
+        "tema_texto": "Temas psicológicos e filosóficos",
+        "rotulo_forca": "muitos"
+      },
+      {
+        "texto": "aceita um ritmo meticuloso e paciente em troca de uma imersão profunda",
+        "tema_origem": "POS-D",
+        "bucket_origem": "positivas",
+        "tema_texto": "Ritmo e construção lenta",
+        "rotulo_forca": "muitos"
+      },
+      {
+        "texto": "valoriza uma fotografia com enquadramentos que acentuam o isolamento dos personagens",
+        "tema_origem": "POS-F",
+        "bucket_origem": "positivas",
+        "tema_texto": "Fotografia e composição",
+        "rotulo_forca": "alguns"
+      }
+    ],
+    "talvez_evite": [
+      {
+        "texto": "se cansa com cenas longas e monótonas em uma narrativa que se arrasta",
+        "tema_origem": "NEG-A",
+        "bucket_origem": "negativas",
+        "tema_texto": "Ritmo lento e arrastado",
+        "rotulo_forca": "a maioria"
+      },
+      {
+        "texto": "se frustra com tramas que criam expectativa e terminam sem respostas satisfatórias",
+        "tema_origem": "NEG-B",
+        "bucket_origem": "negativas",
+        "tema_texto": "Falta de clímax ou recompensa",
+        "rotulo_forca": "muitos"
+      },
+      {
+        "texto": "se incomoda com personagens distantes sem empatia e um antagonista repetitivo",
+        "tema_origem": "NEG-C",
+        "bucket_origem": "negativas",
+        "tema_texto": "Personagens pouco cativantes",
+        "rotulo_forca": "muitos"
+      }
+    ],
+    "ordem_colunas": [
+      "vale_a_pena",
+      "talvez_evite"
+    ],
+    "peso": {
+      "vale_a_pena": {
+        "peso_pct": 90,
+        "peso_texto": "~90% das notas",
+        "nota_de_amostra": null
+      },
+      "talvez_evite": {
+        "peso_pct": 2,
+        "peso_texto": "~2% das notas",
+        "nota_de_amostra": null
+      }
+    },
+    "peso_meio": null,
+    "origem": "llm",
+    "temas_pedidos": {
+      "vale_a_pena": [
+        "POS-A",
+        "POS-B",
+        "POS-C",
+        "POS-D",
+        "POS-F"
+      ],
+      "talvez_evite": [
+        "NEG-A",
+        "NEG-B",
+        "NEG-C"
+      ]
+    },
+    "temas_saltados": {
+      "vale_a_pena": [],
+      "talvez_evite": []
+    },
+    "descartadas": [],
+    "retry": null,
+    "provider": "gemini",
+    "modelo": "gemini-3.7-flash",
+    "n_candidatos": 3,
+    "n_chamadas": 3,
+    "indice_escolhido": 0,
+    "candidatos": [
+      {
+        "indice": 0,
+        "n_condicoes": 8,
+        "n_flags": 0,
+        "flags": [],
+        "n_temas_cobertos": 8
+      },
+      {
+        "indice": 1,
+        "n_condicoes": 8,
+        "n_flags": 0,
+        "flags": [],
+        "n_temas_cobertos": 8
+      },
+      {
+        "indice": 2,
+        "n_condicoes": 8,
+        "n_flags": 0,
+        "flags": [],
+        "n_temas_cobertos": 8
+      }
+    ],
+    "uso": {
+      "prompt_tokens": 8079,
+      "completion_tokens": 1110,
+      "cache_hit_tokens": 0,
+      "cache_miss_tokens": 8079
+    },
+    "latencia_s": 15.0,
+    "spec_version": "1.9.25"
   }
 }

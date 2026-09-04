@@ -1444,5 +1444,146 @@
       "cache_miss_tokens": 3669
     },
     "latencia_s": 9.73
+  },
+  "condicoes": {
+    "vale_a_pena": [
+      {
+        "texto": "aprecia narrativas de terror que funcionam como alegorias sobre dependência e autodestruição",
+        "tema_origem": "POS-A",
+        "bucket_origem": "positivas",
+        "tema_texto": "Metáfora do vício e autodestruição",
+        "rotulo_forca": "muitos"
+      },
+      {
+        "texto": "valoriza atuações intensas que transmitem vulnerabilidade e deterioração emocional convincente",
+        "tema_origem": "POS-B",
+        "bucket_origem": "positivas",
+        "tema_texto": "Atuação de Sophie Wilde",
+        "rotulo_forca": "muitos"
+      },
+      {
+        "texto": "busca terror visceral com efeitos práticos marcantes e maquiagem perturbadora",
+        "tema_origem": "POS-C",
+        "bucket_origem": "positivas",
+        "tema_texto": "Efeitos práticos e maquiagem",
+        "rotulo_forca": "alguns"
+      },
+      {
+        "texto": "se diverte acompanhando personagens que tomam escolhas imprudentes e exasperantes",
+        "tema_origem": "POS-D",
+        "bucket_origem": "positivas",
+        "tema_texto": "Personagens exasperantes e decisões irracionais",
+        "rotulo_forca": "alguns"
+      }
+    ],
+    "talvez_evite": [
+      {
+        "texto": "se incomoda com protagonistas egoístas cujas atitudes imprudentes geram frustração",
+        "tema_origem": "NEG-A",
+        "bucket_origem": "negativas",
+        "tema_texto": "Protagonista irritante e decisões idiotas",
+        "rotulo_forca": "muitos"
+      },
+      {
+        "texto": "se decepciona com tramas que deixam ideias pouco desenvolvidas e pontas soltas",
+        "tema_origem": "NEG-B",
+        "bucket_origem": "negativas",
+        "tema_texto": "Roteiro fraco e previsível",
+        "rotulo_forca": "muitos"
+      },
+      {
+        "texto": "se frustra quando premissas promissoras se perdem em subtramas mal exploradas",
+        "tema_origem": "NEG-C",
+        "bucket_origem": "negativas",
+        "tema_texto": "Subaproveitamento do potencial da premissa",
+        "rotulo_forca": "alguns"
+      },
+      {
+        "texto": "se desmotiva com elencos coadjuvantes sem carisma e atuações mornas",
+        "tema_origem": "NEG-F",
+        "bucket_origem": "negativas",
+        "tema_texto": "Atuações medianas",
+        "rotulo_forca": "alguns"
+      }
+    ],
+    "ordem_colunas": [
+      "vale_a_pena",
+      "talvez_evite"
+    ],
+    "peso": {
+      "vale_a_pena": {
+        "peso_pct": 67,
+        "peso_texto": "~67% das notas",
+        "nota_de_amostra": null
+      },
+      "talvez_evite": {
+        "peso_pct": 8,
+        "peso_texto": "~8% das notas",
+        "nota_de_amostra": null
+      }
+    },
+    "peso_meio": {
+      "pct": 25,
+      "texto": "~25% das notas ficaram no meio-termo"
+    },
+    "origem": "llm",
+    "temas_pedidos": {
+      "vale_a_pena": [
+        "POS-A",
+        "POS-B",
+        "POS-C",
+        "POS-D"
+      ],
+      "talvez_evite": [
+        "NEG-A",
+        "NEG-B",
+        "NEG-C",
+        "NEG-F"
+      ]
+    },
+    "temas_saltados": {
+      "vale_a_pena": [],
+      "talvez_evite": []
+    },
+    "descartadas": [],
+    "retry": null,
+    "provider": "gemini",
+    "modelo": "gemini-3.7-flash",
+    "n_candidatos": 3,
+    "n_chamadas": 3,
+    "indice_escolhido": 0,
+    "candidatos": [
+      {
+        "indice": 0,
+        "n_condicoes": 8,
+        "n_flags": 0,
+        "flags": [],
+        "n_temas_cobertos": 8
+      },
+      {
+        "indice": 1,
+        "n_condicoes": 8,
+        "n_flags": 2,
+        "flags": [
+          "sem_discriminacao"
+        ],
+        "n_temas_cobertos": 8
+      },
+      {
+        "indice": 2,
+        "n_condicoes": 8,
+        "n_flags": 0,
+        "flags": [],
+        "n_temas_cobertos": 8
+      }
+    ],
+    "uso": {
+      "prompt_tokens": 8292,
+      "completion_tokens": 1146,
+      "cache_hit_tokens": 0,
+      "cache_miss_tokens": 8292
+    },
+    "latencia_s": 12.72,
+    "spec_version": "1.9.25"
   }
 }
