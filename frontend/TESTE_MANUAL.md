@@ -401,3 +401,55 @@ aparece por baixo — não que dois pixels adjacentes tenham a cor esperada.
   da duração, estado final correto) está raciocinada em §3[E], não testada:
   não há navegador assim disponível neste ambiente.
 - **Leitor de tela real.**
+
+---
+
+## [v1.9.37] BLOCO DE CONDIÇÕES DE DECISÃO — verificação manual
+
+**Contexto.** O bloco entra entre a BARRA e os BULLETS (`condicoesBlock` em
+`filme.js`, `.decide*` em `styles.css`). Não há teste automatizado de
+frontend no projeto; esta lista é o aceite.
+
+**Como reproduzir os dados.** `resultado/*.json` NÃO contém a chave
+`condicoes` (a fase de leitura ainda estava aberta quando o bloco foi
+escrito). Para verificar, gere as condições fora de `resultado/` e injete no
+`data.js`:
+
+```bash
+python scripts/gerar_condicoes.py --todos --saida /tmp/cond
+# injetar /tmp/cond/*.json na chave `condicoes` de cada filme em
+# frontend/js/data.js, verificar, e restaurar com:
+git checkout -- frontend/js/data.js
+```
+
+### Casos e o que conferir
+
+| filme | por quê | esperado | ✔ |
+|---|---|---|---|
+| `the-godfather` (2/5/93) | o caso de PROPORÇÃO | abre por **Vale a pena · ~93% das notas**; a outra coluna traz **~2% das notas · amostra pequena** e NÃO encolhe (3 condições, mesmo leiaute) | ✅ |
+| `cats-2019` (86/7/7) | distribuição invertida | abre por **Talvez evite · ~86% das notas** | ✅ |
+| `napoleon-2023` (22/45/33) | `peso_meio` | linha acima das colunas: *"~45% das notas ficaram no meio-termo — sem coluna própria aqui."*; colunas ~33% e ~22% | ✅ |
+| `obsession-2026` (n=5/6/8) | piso de §3[C3] | `rotulo_forca` ausente nas seis condições (a proveniência mostra só o tema, sem quantificador); a página traz `.verdict-absent` e nenhum `.verdict` | ✅ |
+| `perfect-days-2023` (2/7/92) | caso normal | duas colunas, ~92% / ~2%, sem `peso_meio` | ✅ |
+| `hereditary` (6/14/80) | um filme do eixo `expectativa` | condição de hype presente, com proveniência *"muitos · Expectativa vs. realidade (hype)"* | ✅ |
+
+### Transversais
+
+- **Zero erro de console** em todos os seis — conferido em aba limpa. ✅
+- **Sem transbordo horizontal a 375px**: `scrollWidth === innerWidth === 375`
+  nos seis; o grid colapsa para uma coluna (`335px`). ✅
+- **Ordem por peso preservada no empilhamento mobile**: a coluna de maior
+  `share_real` vem primeiro no DOM (ordenada em Python), então empilhar
+  mantém a ordem sem nenhuma regra de ordem no CSS. Conferido em
+  `the-godfather` (Vale a pena primeiro) e `cats-2019` (Talvez evite
+  primeiro). ✅
+- **Proveniência sempre visível** (tema + rótulo de força, mono pequena). ✅
+
+### Defeito achado e corrigido nesta verificação
+
+`var ABERTURA_DA_COLUNA` estava declarada junto de `condicoesBlock`, **depois**
+da chamada `render(film)` (linha ~110). `var` hoista a declaração mas não a
+atribuição: a tabela chegava `undefined` e o bloco inteiro estourava com
+`Cannot read properties of undefined (reading 'vale_a_pena')`. As funções
+sobreviviam por serem declarações (essas hoistam inteiras); a tabela não.
+Movida para as constantes de módulo, no topo.

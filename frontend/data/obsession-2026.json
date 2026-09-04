@@ -1286,5 +1286,123 @@
       "cache_miss_tokens": 10510
     },
     "latencia_s": 30.73
+  },
+  "condicoes": {
+    "vale_a_pena": [
+      {
+        "texto": "busca atuações marcantes com interpretações intensas de forte volatilidade emocional",
+        "tema_origem": "POS-A",
+        "bucket_origem": "positivas",
+        "tema_texto": "Atuações convincentes",
+        "rotulo_forca": null
+      },
+      {
+        "texto": "valoriza um estilo visual envolvente com iluminação e lentes que criam tensão",
+        "tema_origem": "POS-B",
+        "bucket_origem": "positivas",
+        "tema_texto": "Direção de fotografia e estilo visual",
+        "rotulo_forca": null
+      },
+      {
+        "texto": "procura uma abordagem original que subverte convenções ao tratar de obsessão",
+        "tema_origem": "POS-C",
+        "bucket_origem": "positivas",
+        "tema_texto": "Originalidade e abordagem inovadora",
+        "rotulo_forca": null
+      }
+    ],
+    "talvez_evite": [
+      {
+        "texto": "se incomoda com narrativas pouco desenvolvidas que geram confusão no enredo",
+        "tema_origem": "NEG-A",
+        "bucket_origem": "negativas",
+        "tema_texto": "Roteiro fraco e confuso",
+        "rotulo_forca": null
+      },
+      {
+        "texto": "não gosta de obras que oscilam sem firmeza entre romance e terror",
+        "tema_origem": "NEG-B",
+        "bucket_origem": "negativas",
+        "tema_texto": "Tom inadequado",
+        "rotulo_forca": null
+      }
+    ],
+    "ordem_colunas": [
+      "vale_a_pena",
+      "talvez_evite"
+    ],
+    "peso": {
+      "vale_a_pena": {
+        "peso_pct": 55,
+        "peso_texto": "~55% das notas",
+        "nota_de_amostra": "amostra pequena"
+      },
+      "talvez_evite": {
+        "peso_pct": 16,
+        "peso_texto": "~16% das notas",
+        "nota_de_amostra": "amostra pequena"
+      }
+    },
+    "peso_meio": {
+      "pct": 29,
+      "texto": "~29% das notas ficaram no meio-termo"
+    },
+    "origem": "llm",
+    "temas_pedidos": {
+      "vale_a_pena": [
+        "POS-A",
+        "POS-B",
+        "POS-C"
+      ],
+      "talvez_evite": [
+        "NEG-A",
+        "NEG-B",
+        "NEG-C"
+      ]
+    },
+    "temas_saltados": {
+      "vale_a_pena": [],
+      "talvez_evite": [
+        "NEG-C"
+      ]
+    },
+    "descartadas": [],
+    "retry": null,
+    "provider": "gemini",
+    "modelo": "gemini-3.7-flash",
+    "n_candidatos": 3,
+    "n_chamadas": 3,
+    "indice_escolhido": 0,
+    "candidatos": [
+      {
+        "indice": 0,
+        "n_condicoes": 5,
+        "n_flags": 0,
+        "flags": [],
+        "n_temas_cobertos": 5
+      },
+      {
+        "indice": 1,
+        "n_condicoes": 5,
+        "n_flags": 0,
+        "flags": [],
+        "n_temas_cobertos": 5
+      },
+      {
+        "indice": 2,
+        "n_condicoes": 5,
+        "n_flags": 0,
+        "flags": [],
+        "n_temas_cobertos": 5
+      }
+    ],
+    "uso": {
+      "prompt_tokens": 7992,
+      "completion_tokens": 725,
+      "cache_hit_tokens": 0,
+      "cache_miss_tokens": 7992
+    },
+    "latencia_s": 11.83,
+    "spec_version": "1.9.25"
   }
 }

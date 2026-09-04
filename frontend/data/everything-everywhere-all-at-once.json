@@ -1361,5 +1361,162 @@
       "cache_miss_tokens": 4685
     },
     "latencia_s": 38.37
+  },
+  "condicoes": {
+    "vale_a_pena": [
+      {
+        "texto": "busca uma experiência marcada por situações bizarras e caos imprevisível",
+        "tema_origem": "POS-A",
+        "bucket_origem": "positivas",
+        "tema_texto": "Caos e absurdo como experiência",
+        "rotulo_forca": "muitos"
+      },
+      {
+        "texto": "se interessa por conflitos entre mãe e filha e traumas geracionais",
+        "tema_origem": "POS-B",
+        "bucket_origem": "positivas",
+        "tema_texto": "Família, trauma e aceitação",
+        "rotulo_forca": "muitos"
+      },
+      {
+        "texto": "valoriza reflexões sobre niilismo, esperança e a busca por propósito",
+        "tema_origem": "POS-C",
+        "bucket_origem": "positivas",
+        "tema_texto": "Mensagem existencial e esperança",
+        "rotulo_forca": "muitos"
+      },
+      {
+        "texto": "aprecia atuações marcantes que elevam o peso dramático do elenco",
+        "tema_origem": "POS-D",
+        "bucket_origem": "positivas",
+        "tema_texto": "Atuações memoráveis",
+        "rotulo_forca": "alguns"
+      },
+      {
+        "texto": "aprecia uma narrativa singular que combina ficção científica, humor e drama",
+        "tema_origem": "POS-F",
+        "bucket_origem": "positivas",
+        "tema_texto": "Unicidade e originalidade",
+        "rotulo_forca": "alguns"
+      }
+    ],
+    "talvez_evite": [
+      {
+        "texto": "se cansa com excesso de estímulos visuais e narrativas caóticas",
+        "tema_origem": "NEG-A",
+        "bucket_origem": "negativas",
+        "tema_texto": "Caos excessivo e confuso",
+        "rotulo_forca": "muitos"
+      },
+      {
+        "texto": "se incomoda com dramas familiares resolvidos de forma superficial e abrupta",
+        "tema_origem": "NEG-B",
+        "bucket_origem": "negativas",
+        "tema_texto": "Metáfora familiar forçada e mal desenvolvida",
+        "rotulo_forca": "muitos"
+      },
+      {
+        "texto": "se constrange com piadas de tom sexual e humor escatológico absurdo",
+        "tema_origem": "NEG-C",
+        "bucket_origem": "negativas",
+        "tema_texto": "Humor sem graça e bizarro",
+        "rotulo_forca": "alguns"
+      },
+      {
+        "texto": "se frustra com mensagens existenciais genéricas e reflexões morais pouco aprofundadas",
+        "tema_origem": "NEG-E",
+        "bucket_origem": "negativas",
+        "tema_texto": "Mensagem superficial e final previsível",
+        "rotulo_forca": "alguns"
+      }
+    ],
+    "ordem_colunas": [
+      "vale_a_pena",
+      "talvez_evite"
+    ],
+    "peso": {
+      "vale_a_pena": {
+        "peso_pct": 86,
+        "peso_texto": "~86% das notas",
+        "nota_de_amostra": null
+      },
+      "talvez_evite": {
+        "peso_pct": 5,
+        "peso_texto": "~5% das notas",
+        "nota_de_amostra": null
+      }
+    },
+    "peso_meio": null,
+    "origem": "llm",
+    "temas_pedidos": {
+      "vale_a_pena": [
+        "POS-A",
+        "POS-B",
+        "POS-C",
+        "POS-D",
+        "POS-F"
+      ],
+      "talvez_evite": [
+        "NEG-A",
+        "NEG-B",
+        "NEG-C",
+        "NEG-E",
+        "NEG-F"
+      ]
+    },
+    "temas_saltados": {
+      "vale_a_pena": [],
+      "talvez_evite": []
+    },
+    "descartadas": [],
+    "retry": {
+      "n_reprovadas": 1,
+      "n_aplicadas": 1,
+      "n_saltadas_pelo_modelo": 0,
+      "n_descartadas": 0
+    },
+    "provider": "gemini",
+    "modelo": "gemini-3.7-flash",
+    "n_candidatos": 3,
+    "n_chamadas": 4,
+    "indice_escolhido": 1,
+    "candidatos": [
+      {
+        "indice": 0,
+        "n_condicoes": 10,
+        "n_flags": 2,
+        "flags": [
+          "exemplo_verbatim",
+          "sem_discriminacao"
+        ],
+        "n_temas_cobertos": 10
+      },
+      {
+        "indice": 1,
+        "n_condicoes": 10,
+        "n_flags": 1,
+        "flags": [
+          "exemplo_verbatim"
+        ],
+        "n_temas_cobertos": 10
+      },
+      {
+        "indice": 2,
+        "n_condicoes": 10,
+        "n_flags": 1,
+        "flags": [
+          "exemplo_verbatim"
+        ],
+        "n_temas_cobertos": 10
+      }
+    ],
+    "uso": {
+      "prompt_tokens": 12336,
+      "completion_tokens": 1308,
+      "cache_hit_tokens": 0,
+      "cache_miss_tokens": 12336
+    },
+    "latencia_s": 23.39,
+    "spec_version": "1.9.25"
   }
 }

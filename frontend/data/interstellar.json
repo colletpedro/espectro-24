@@ -1350,5 +1350,131 @@
       "cache_miss_tokens": 3675
     },
     "latencia_s": 38.9
+  },
+  "condicoes": {
+    "vale_a_pena": [
+      {
+        "texto": "valoriza uma trilha sonora imponente com órgão para intensificar as emoções",
+        "tema_origem": "POS-A",
+        "bucket_origem": "positivas",
+        "tema_texto": "Trilha sonora marcante",
+        "rotulo_forca": "muitos"
+      },
+      {
+        "texto": "se comove com dramas familiares tocantes sobre separação entre pai e filha",
+        "tema_origem": "POS-B",
+        "bucket_origem": "positivas",
+        "tema_texto": "Impacto emocional e relação pai-filha",
+        "rotulo_forca": "muitos"
+      },
+      {
+        "texto": "aprecia uma fotografia deslumbrante com representações grandiosas de paisagens espaciais",
+        "tema_origem": "POS-C",
+        "bucket_origem": "positivas",
+        "tema_texto": "Fotografia e efeitos visuais deslumbrantes",
+        "rotulo_forca": "muitos"
+      }
+    ],
+    "talvez_evite": [
+      {
+        "texto": "se incomoda com diálogos artificiais que tentam soar profundos sem substância",
+        "tema_origem": "NEG-A",
+        "bucket_origem": "negativas",
+        "tema_texto": "Roteiro fraco e diálogos artificiais",
+        "rotulo_forca": "muitos"
+      },
+      {
+        "texto": "se cansa de narrativas arrastadas que tornam o desenvolvimento entediante",
+        "tema_origem": "NEG-C",
+        "bucket_origem": "negativas",
+        "tema_texto": "Ritmo lento e tédio",
+        "rotulo_forca": "muitos"
+      }
+    ],
+    "ordem_colunas": [
+      "vale_a_pena",
+      "talvez_evite"
+    ],
+    "peso": {
+      "vale_a_pena": {
+        "peso_pct": 92,
+        "peso_texto": "~92% das notas",
+        "nota_de_amostra": null
+      },
+      "talvez_evite": {
+        "peso_pct": 2,
+        "peso_texto": "~2% das notas",
+        "nota_de_amostra": null
+      }
+    },
+    "peso_meio": null,
+    "origem": "llm",
+    "temas_pedidos": {
+      "vale_a_pena": [
+        "POS-A",
+        "POS-B",
+        "POS-C"
+      ],
+      "talvez_evite": [
+        "NEG-A",
+        "NEG-B",
+        "NEG-C"
+      ]
+    },
+    "temas_saltados": {
+      "vale_a_pena": [],
+      "talvez_evite": []
+    },
+    "descartadas": [],
+    "retry": {
+      "n_reprovadas": 1,
+      "n_aplicadas": 1,
+      "n_saltadas_pelo_modelo": 0,
+      "n_descartadas": 0
+    },
+    "provider": "gemini",
+    "modelo": "gemini-3.7-flash",
+    "n_candidatos": 3,
+    "n_chamadas": 4,
+    "indice_escolhido": 1,
+    "candidatos": [
+      {
+        "indice": 0,
+        "n_condicoes": 6,
+        "n_flags": 3,
+        "flags": [
+          "exemplo_verbatim",
+          "sem_discriminacao"
+        ],
+        "n_temas_cobertos": 6
+      },
+      {
+        "indice": 1,
+        "n_condicoes": 6,
+        "n_flags": 1,
+        "flags": [
+          "sem_discriminacao"
+        ],
+        "n_temas_cobertos": 6
+      },
+      {
+        "indice": 2,
+        "n_condicoes": 6,
+        "n_flags": 2,
+        "flags": [
+          "ancora_nao_verificavel",
+          "tema_verbatim"
+        ],
+        "n_temas_cobertos": 6
+      }
+    ],
+    "uso": {
+      "prompt_tokens": 10410,
+      "completion_tokens": 910,
+      "cache_hit_tokens": 0,
+      "cache_miss_tokens": 10410
+    },
+    "latencia_s": 20.03,
+    "spec_version": "1.9.25"
   }
 }

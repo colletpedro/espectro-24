@@ -1361,5 +1361,141 @@
       "cache_miss_tokens": 3666
     },
     "latencia_s": 30.99
+  },
+  "condicoes": {
+    "vale_a_pena": [
+      {
+        "texto": "busca um retrato dolorosamente fiel e autêntico das angústias da pré-adolescência",
+        "tema_origem": "POS-A",
+        "bucket_origem": "positivas",
+        "tema_texto": "Retrato autêntico e dolorosamente realista da adolescência",
+        "rotulo_forca": "a maioria"
+      },
+      {
+        "texto": "aprecia uma atuação protagonista que transmite insegurança e vulnerabilidade com extrema naturalidade",
+        "tema_origem": "POS-B",
+        "bucket_origem": "positivas",
+        "tema_texto": "Atuação convincente de Elsie Fisher e verossimilhança",
+        "rotulo_forca": "muitos"
+      },
+      {
+        "texto": "aceita o desconforto da vergonha alheia para vivenciar uma forte conexão emocional",
+        "tema_origem": "POS-C",
+        "bucket_origem": "positivas",
+        "tema_texto": "Incômodo e segundo constrangimento como experiência",
+        "rotulo_forca": "muitos"
+      }
+    ],
+    "talvez_evite": [
+      {
+        "texto": "se incomoda em acompanhar uma protagonista considerada insuportável e sem carisma",
+        "tema_origem": "NEG-A",
+        "bucket_origem": "negativas",
+        "tema_texto": "Personagem principal irritante",
+        "rotulo_forca": "muitos"
+      },
+      {
+        "texto": "se cansa de diálogos repetitivos repletos de gaguejos e muletas linguísticas forçadas",
+        "tema_origem": "NEG-B",
+        "bucket_origem": "negativas",
+        "tema_texto": "Diálogos artificiais e repetitivos",
+        "rotulo_forca": "alguns"
+      },
+      {
+        "texto": "rejeita narrativas de andamento arrastado e sem grandes acontecimentos que geram tédio",
+        "tema_origem": "NEG-C",
+        "bucket_origem": "negativas",
+        "tema_texto": "Ritmo lento e tédio",
+        "rotulo_forca": "alguns"
+      },
+      {
+        "texto": "busca retratos escolares realistas e acha as situações retratadas exageradas ou inverossímeis",
+        "tema_origem": "NEG-D",
+        "bucket_origem": "negativas",
+        "tema_texto": "Falta de identificação e exagero",
+        "rotulo_forca": "alguns"
+      },
+      {
+        "texto": "evita sequências de extremo constrangimento que provocam forte desconforto ou repulsa física",
+        "tema_origem": "NEG-E",
+        "bucket_origem": "negativas",
+        "tema_texto": "Cenas desconfortáveis e vergonha alheia",
+        "rotulo_forca": "alguns"
+      }
+    ],
+    "ordem_colunas": [
+      "vale_a_pena",
+      "talvez_evite"
+    ],
+    "peso": {
+      "vale_a_pena": {
+        "peso_pct": 75,
+        "peso_texto": "~75% das notas",
+        "nota_de_amostra": null
+      },
+      "talvez_evite": {
+        "peso_pct": 6,
+        "peso_texto": "~6% das notas",
+        "nota_de_amostra": null
+      }
+    },
+    "peso_meio": null,
+    "origem": "llm",
+    "temas_pedidos": {
+      "vale_a_pena": [
+        "POS-A",
+        "POS-B",
+        "POS-C"
+      ],
+      "talvez_evite": [
+        "NEG-A",
+        "NEG-B",
+        "NEG-C",
+        "NEG-D",
+        "NEG-E"
+      ]
+    },
+    "temas_saltados": {
+      "vale_a_pena": [],
+      "talvez_evite": []
+    },
+    "descartadas": [],
+    "retry": null,
+    "provider": "gemini",
+    "modelo": "gemini-3.7-flash",
+    "n_candidatos": 3,
+    "n_chamadas": 3,
+    "indice_escolhido": 0,
+    "candidatos": [
+      {
+        "indice": 0,
+        "n_condicoes": 8,
+        "n_flags": 0,
+        "flags": [],
+        "n_temas_cobertos": 8
+      },
+      {
+        "indice": 1,
+        "n_condicoes": 8,
+        "n_flags": 0,
+        "flags": [],
+        "n_temas_cobertos": 8
+      },
+      {
+        "indice": 2,
+        "n_condicoes": 8,
+        "n_flags": 0,
+        "flags": [],
+        "n_temas_cobertos": 8
+      }
+    ],
+    "uso": {
+      "prompt_tokens": 8019,
+      "completion_tokens": 1148,
+      "cache_hit_tokens": 0,
+      "cache_miss_tokens": 8019
+    },
+    "latencia_s": 13.43,
+    "spec_version": "1.9.25"
   }
 }

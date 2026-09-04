@@ -23,6 +23,18 @@
     critica_social: "Crítica social",
   };
 
+  // [v1.9.37] As duas aberturas fixas do bloco de CONDIÇÕES. Declarada AQUI,
+  // com as outras constantes de módulo, e não junto de `condicoesBlock` lá
+  // embaixo — `render(film)` é chamado na linha ~110, antes daquele ponto, e
+  // `var` hoista a DECLARAÇÃO mas não a ATRIBUIÇÃO: a constante chegava
+  // `undefined` no render e o bloco inteiro estourava. Achado ao verificar a
+  // página, com erro no console; as funções sobreviviam por serem declarações
+  // (essas hoistam inteiras), a tabela não.
+  var ABERTURA_DA_COLUNA = {
+    vale_a_pena: "Vale a pena se você…",
+    talvez_evite: "Talvez evite se você…"
+  };
+
   // Permissões do piso escalonado (§3[C3]) — as MESMAS quatro do backend.
   // A linha do eixo acompanha o que cada bucket pode dizer, célula a célula.
   var PISO = {
@@ -160,14 +172,46 @@
   // de `veredictoBlock` de antes para depois de `sentimentGroupsBlock`
   // não passa informação nenhuma entre as duas.
   // ---------------------------------------------------------------------
+  // ---------------------------------------------------------------------
+  // [v1.9.37] O BLOCO DE CONDIÇÕES entra entre a BARRA e os BULLETS — e a
+  // ordem proposta no estudo foi CONTESTADA num ponto, com razão registrada.
+  //
+  // A proposta da rodada 3 do estudo era `barra → CONDIÇÕES → veredito →
+  // bullets`, o que moveria o veredito de volta para ANTES dos bullets. Isso
+  // desfaria a decisão da v1.9.26, que o desceu para o fecho com uma razão
+  // explícita: *"conclusão lida ANTES da evidência é asserção, lida DEPOIS é
+  // fecho"*. A proposta não citava essa decisão — provavelmente não a
+  // considerou.
+  //
+  // A ordem implementada mantém as duas coisas:
+  //
+  //   barra → CONDIÇÕES → divisor → bullets → veredito
+  //
+  // · as CONDIÇÕES ficam coladas na barra, que é o contexto de PESO que elas
+  //   pressupõem (elas trazem `~93% das notas` no cabeçalho de cada coluna, e
+  //   esse número só se lê contra a barra logo acima);
+  // · o VEREDITO fica onde a v1.9.26 o pôs, intacto;
+  // · os BULLETS ficam entre os dois, como a EVIDÊNCIA que sustenta a
+  //   recomendação acima e o fecho abaixo — que é exatamente a razão de
+  //   arquitetura da COEXISTÊNCIA registrada no §0 ("se uma condição
+  //   enganar, o bullet logo abaixo a contradiz").
+  //
+  // E é a mudança MENOR: um bloco entra, nenhum bloco existente se move. A
+  // restrição da entrega era acrescentar sem redesenhar, e mover o veredito
+  // seria redesenhar uma decisão registrada.
+  // ---------------------------------------------------------------------
   function render(f) {
     app.appendChild(header(f));                       // 1 ano+título, 2 chip
     app.appendChild(fichaBlock(f.ficha || {}, f.reviews_url)); // 3 metadados
     app.appendChild(proporcaoBlock(f));               // 4 barra + nota da cota
-    app.appendChild(detailDivider());                 // 5 linha arco-íris
-    app.appendChild(sentimentGroupsBlock(f));         // 6 bullets por grupo
 
-    var veredito = veredictoBlock(f);                 // 7 veredito (movido)
+    var condicoes = condicoesBlock(f);                // 5 [v1.9.37] condições
+    if (condicoes) app.appendChild(condicoes);
+
+    app.appendChild(detailDivider());                 // 6 linha arco-íris
+    app.appendChild(sentimentGroupsBlock(f));         // 7 bullets por grupo
+
+    var veredito = veredictoBlock(f);                 // 8 veredito (v1.9.26)
     if (veredito) app.appendChild(veredito);
 
     if (f.narrativa) app.appendChild(narrativaCollapsedBlock(f.narrativa)); // 8
@@ -907,6 +951,127 @@
       "os grupos falam de coisas diferentes ou se falam das mesmas coisas e " +
       "divergem no julgamento.";
   }
+
+  // =====================================================================
+  // [v1.9.37] CONDIÇÕES DE DECISÃO — o bloco que RECOMENDA (§0, terceira
+  // exceção deliberada).
+  //
+  // **Tudo aqui é RENDER PURO.** Nenhum número, rótulo, ordem ou texto é
+  // decidido nesta função: as duas colunas vêm ordenadas por `share_real` do
+  // Python (`ordem_colunas`), o `~n% das notas` vem de `peso[lado]`, a
+  // ressalva de amostra vem de `nota_de_amostra`, o `~n% no meio-termo` vem
+  // de `peso_meio`, e o rótulo de força de `rotulo_forca`. O JS lê e desenha.
+  //
+  // **A LINHA DE PROVENIÊNCIA é SEMPRE VISÍVEL, e a decisão tem razão.** Ela
+  // não é ornamento: é uma das três garantias que autorizam este produto a
+  // recomendar (§0). As três opções eram esconder atrás de disclosure,
+  // mostrar sempre, ou híbrido — e a escolha é HÍBRIDA, distribuída entre
+  // dois blocos da mesma página:
+  //
+  // · o TEMA de origem fica sempre visível, ao lado do rótulo de força, em
+  //   mono pequena — quem lê a condição vê de onde ela saiu sem clicar;
+  // · a PARÁFRASE completa (a evidência) não é repetida aqui, porque ela já
+  //   está na mesma tela, nos bullets logo abaixo, com a barra de frequência
+  //   ao lado. Duplicá-la seria dizer a mesma coisa duas vezes e empurrar as
+  //   colunas para longe da barra que lhes dá contexto.
+  //
+  // Esconder o tema atrás de disclosure foi descartado: uma garantia que
+  // exige um clique para existir é uma garantia decorativa, e esta é a que
+  // permitiu auditar a feature em cinco rodadas.
+  //
+  // **A COLUNA MINORITÁRIA NÃO ENCOLHE.** `the-godfather` publica três
+  // condições de quem não recomenda com `~2% das notas` ao lado, no mesmo
+  // leiaute e no mesmo espaço da outra. Encolher reintroduziria a
+  // infidelidade por omissão que a v1.4.0 corrigiu — e a razão nº 1 do
+  // estudo (o formato apagava o peso) foi fechada pelo NÚMERO na coluna, não
+  // por tirar espaço de ninguém.
+  // =====================================================================
+
+  function condicoesBlock(f) {
+    var c = f.condicoes;
+    if (!c) return null;                       // estatuto aditivo, como ficha
+    var ordem = c.ordem_colunas || ["vale_a_pena", "talvez_evite"];
+    var comConteudo = ordem.filter(function (lado) {
+      return (c[lado] || []).length > 0;
+    });
+    if (!comConteudo.length) return null;      // abstenção total: bloco some
+
+    var sec = document.createElement("section");
+    sec.className = "decide";
+    sec.appendChild(sectionLabel("PARA DECIDIR"));
+
+    // [v1.9.37] O peso do MEIO, nos filmes em que as duas colunas não somam o
+    // filme (§0). Sem ele, `napoleon-2023` mostra ~33% e ~22% e deixa 45%
+    // invisíveis — os dois números verdadeiros e o conjunto sugerindo que
+    // somam tudo.
+    if (c.peso_meio && c.peso_meio.texto) {
+      var pm = document.createElement("p");
+      pm.className = "decide__meio";
+      pm.textContent = c.peso_meio.texto + " — sem coluna própria aqui.";
+      sec.appendChild(pm);
+    }
+
+    var grid = document.createElement("div");
+    grid.className = "decide__grid";
+    comConteudo.forEach(function (lado) {
+      grid.appendChild(colunaDeCondicoes(c, lado));
+    });
+    sec.appendChild(grid);
+    return sec;
+  }
+
+  function colunaDeCondicoes(c, lado) {
+    var col = document.createElement("div");
+    col.className = "decide__col decide__col--"
+      + (lado === "vale_a_pena" ? "pos" : "neg");
+
+    var cab = document.createElement("p");
+    cab.className = "decide__head";
+    cab.textContent = ABERTURA_DA_COLUNA[lado] || "";
+    col.appendChild(cab);
+
+    var peso = (c.peso || {})[lado] || {};
+    if (peso.peso_texto) {
+      var p = document.createElement("p");
+      p.className = "decide__peso";
+      // `nota_de_amostra` só existe em bucket reduzido — é a ressalva que o
+      // veredito carrega em prosa e que as condições não carregavam.
+      p.textContent = peso.peso_texto
+        + (peso.nota_de_amostra ? " · " + peso.nota_de_amostra : "");
+      col.appendChild(p);
+    }
+
+    var ul = document.createElement("ul");
+    ul.className = "decide__list";
+    // A abertura é o cabeçalho da coluna e cada item a completa; um leitor de
+    // tela que caia direto num item precisa da frase inteira.
+    ul.setAttribute("aria-label", ABERTURA_DA_COLUNA[lado] || "");
+
+    (c[lado] || []).forEach(function (cond) {
+      var li = document.createElement("li");
+      li.className = "decide__item";
+
+      var txt = document.createElement("p");
+      txt.className = "decide__text";
+      txt.textContent = cond.texto;
+      li.appendChild(txt);
+
+      // rótulo de força + PROVENIÊNCIA, sempre visíveis
+      var partes = [];
+      if (cond.rotulo_forca) partes.push(cond.rotulo_forca);
+      if (cond.tema_texto) partes.push(cond.tema_texto);
+      if (partes.length) {
+        var meta = document.createElement("p");
+        meta.className = "decide__meta";
+        meta.textContent = partes.join(" · ");
+        li.appendChild(meta);
+      }
+      ul.appendChild(li);
+    });
+    col.appendChild(ul);
+    return col;
+  }
+
 
   function veredictoBlock(f) {
     var e = f.eixos;

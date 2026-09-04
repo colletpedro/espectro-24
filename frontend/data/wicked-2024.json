@@ -1360,5 +1360,161 @@
       "cache_miss_tokens": 3804
     },
     "latencia_s": 11.63
+  },
+  "condicoes": {
+    "vale_a_pena": [
+      {
+        "texto": "se encanta com performances vocais potentes e atuações de intensa entrega emocional",
+        "tema_origem": "POS-A",
+        "bucket_origem": "positivas",
+        "tema_texto": "Atuações e vocais excepcionais",
+        "rotulo_forca": "muitos"
+      },
+      {
+        "texto": "gosta de canções emocionantes e aceita uma presença constante de números musicais",
+        "tema_origem": "POS-B",
+        "bucket_origem": "positivas",
+        "tema_texto": "Músicas marcantes e bem integradas",
+        "rotulo_forca": "muitos"
+      },
+      {
+        "texto": "procura uma narrativa longa, mas envolvente e imersiva do início ao fim",
+        "tema_origem": "POS-C",
+        "bucket_origem": "positivas",
+        "tema_texto": "Cativante e envolvente apesar da duração",
+        "rotulo_forca": "alguns"
+      },
+      {
+        "texto": "aprecia cenários coloridos e figurinos detalhados, mesmo com momentos de iluminação acinzentada",
+        "tema_origem": "POS-D",
+        "bucket_origem": "positivas",
+        "tema_texto": "Visual e direção de arte",
+        "rotulo_forca": "alguns"
+      },
+      {
+        "texto": "valoriza protagonistas carismáticas e desenvolvidas, relevando personagens secundários menos trabalhados",
+        "tema_origem": "POS-F",
+        "bucket_origem": "positivas",
+        "tema_texto": "Personagens cativantes e desenvolvimento",
+        "rotulo_forca": "alguns"
+      }
+    ],
+    "talvez_evite": [
+      {
+        "texto": "se incomoda com canções genéricas e números musicais pouco memoráveis",
+        "tema_origem": "NEG-A",
+        "bucket_origem": "negativas",
+        "tema_texto": "Músicas genéricas e esquecíveis",
+        "rotulo_forca": "muitos"
+      },
+      {
+        "texto": "se frustra com narrativas arrastadas e trechos que pouco acrescentam à história",
+        "tema_origem": "NEG-B",
+        "bucket_origem": "negativas",
+        "tema_texto": "Ritmo arrastado e duração excessiva",
+        "rotulo_forca": "muitos"
+      },
+      {
+        "texto": "espera uma atuação convincente que vá além da simpatia e do alcance vocal",
+        "tema_origem": "NEG-C",
+        "bucket_origem": "negativas",
+        "tema_texto": "Atuação e presença de Ariana Grande",
+        "rotulo_forca": "muitos"
+      },
+      {
+        "texto": "se incomoda com fotografia digital e sem cor destoando da produção visual",
+        "tema_origem": "NEG-E",
+        "bucket_origem": "negativas",
+        "tema_texto": "Estética visual inconsistente ou artificial",
+        "rotulo_forca": "alguns"
+      }
+    ],
+    "ordem_colunas": [
+      "vale_a_pena",
+      "talvez_evite"
+    ],
+    "peso": {
+      "vale_a_pena": {
+        "peso_pct": 76,
+        "peso_texto": "~76% das notas",
+        "nota_de_amostra": "amostra pequena"
+      },
+      "talvez_evite": {
+        "peso_pct": 7,
+        "peso_texto": "~7% das notas",
+        "nota_de_amostra": "amostra pequena"
+      }
+    },
+    "peso_meio": null,
+    "origem": "llm",
+    "temas_pedidos": {
+      "vale_a_pena": [
+        "POS-A",
+        "POS-B",
+        "POS-C",
+        "POS-D",
+        "POS-F"
+      ],
+      "talvez_evite": [
+        "NEG-A",
+        "NEG-B",
+        "NEG-C",
+        "NEG-E"
+      ]
+    },
+    "temas_saltados": {
+      "vale_a_pena": [],
+      "talvez_evite": []
+    },
+    "descartadas": [],
+    "retry": {
+      "n_reprovadas": 1,
+      "n_aplicadas": 1,
+      "n_saltadas_pelo_modelo": 0,
+      "n_descartadas": 0
+    },
+    "provider": "gemini",
+    "modelo": "gemini-3.7-flash",
+    "n_candidatos": 3,
+    "n_chamadas": 4,
+    "indice_escolhido": 1,
+    "candidatos": [
+      {
+        "indice": 0,
+        "n_condicoes": 9,
+        "n_flags": 3,
+        "flags": [
+          "ancora_nao_verificavel",
+          "sem_discriminacao"
+        ],
+        "n_temas_cobertos": 9
+      },
+      {
+        "indice": 1,
+        "n_condicoes": 9,
+        "n_flags": 1,
+        "flags": [
+          "sem_discriminacao"
+        ],
+        "n_temas_cobertos": 9
+      },
+      {
+        "indice": 2,
+        "n_condicoes": 9,
+        "n_flags": 1,
+        "flags": [
+          "sem_discriminacao"
+        ],
+        "n_temas_cobertos": 9
+      }
+    ],
+    "uso": {
+      "prompt_tokens": 12062,
+      "completion_tokens": 1363,
+      "cache_hit_tokens": 0,
+      "cache_miss_tokens": 12062
+    },
+    "latencia_s": 29.23,
+    "spec_version": "1.9.25"
   }
 }

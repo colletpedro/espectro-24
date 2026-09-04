@@ -1347,5 +1347,161 @@
       "cache_miss_tokens": 3639
     },
     "latencia_s": 12.41
+  },
+  "condicoes": {
+    "vale_a_pena": [
+      {
+        "texto": "busca um retrato cru e autêntico da violência urbana e da pobreza",
+        "tema_origem": "POS-A",
+        "bucket_origem": "positivas",
+        "tema_texto": "Realismo e brutalidade",
+        "rotulo_forca": "muitos"
+      },
+      {
+        "texto": "aprecia uma direção dinâmica com visual imersivo e fotografia estilisticamente marcante",
+        "tema_origem": "POS-B",
+        "bucket_origem": "positivas",
+        "tema_texto": "Cinematografia e direção",
+        "rotulo_forca": "muitos"
+      },
+      {
+        "texto": "busca uma narrativa não linear cujas histórias entrelaçadas compõem uma trama coesa",
+        "tema_origem": "POS-C",
+        "bucket_origem": "positivas",
+        "tema_texto": "Roteiro e narrativa",
+        "rotulo_forca": "alguns"
+      },
+      {
+        "texto": "quer uma experiência de forte impacto emocional que permaneça na memória",
+        "tema_origem": "POS-E",
+        "bucket_origem": "positivas",
+        "tema_texto": "Impacto emocional",
+        "rotulo_forca": "alguns"
+      }
+    ],
+    "talvez_evite": [
+      {
+        "texto": "se incomoda com abordagens que tratam a miséria e a violência como espetáculo",
+        "tema_origem": "NEG-A",
+        "bucket_origem": "negativas",
+        "tema_texto": "Retrato explorador e sensacionalista da pobreza",
+        "rotulo_forca": "muitos"
+      },
+      {
+        "texto": "se cansa com violência contínua e uma montagem acelerada que banaliza conflitos",
+        "tema_origem": "NEG-B",
+        "bucket_origem": "negativas",
+        "tema_texto": "Excesso de violência e ritmo exaustivo",
+        "rotulo_forca": "muitos"
+      },
+      {
+        "texto": "busca personagens aprofundados e se desaponta com figuras dramáticas pouco desenvolvidas",
+        "tema_origem": "NEG-C",
+        "bucket_origem": "negativas",
+        "tema_texto": "Falta de desenvolvimento dos personagens",
+        "rotulo_forca": "alguns"
+      },
+      {
+        "texto": "se incomoda com estrutura não linear confusa e narração em voz off didática",
+        "tema_origem": "NEG-D",
+        "bucket_origem": "negativas",
+        "tema_texto": "Narrativa fragmentada e excesso de narração",
+        "rotulo_forca": "alguns"
+      },
+      {
+        "texto": "se ressente de um apuro visual chamativo colocado acima da substância narrativa",
+        "tema_origem": "NEG-E",
+        "bucket_origem": "negativas",
+        "tema_texto": "Estética e estilo vazios, tecnicamente chamativos",
+        "rotulo_forca": "alguns"
+      }
+    ],
+    "ordem_colunas": [
+      "vale_a_pena",
+      "talvez_evite"
+    ],
+    "peso": {
+      "vale_a_pena": {
+        "peso_pct": 96,
+        "peso_texto": "~96% das notas",
+        "nota_de_amostra": null
+      },
+      "talvez_evite": {
+        "peso_pct": 1,
+        "peso_texto": "~1% das notas",
+        "nota_de_amostra": null
+      }
+    },
+    "peso_meio": null,
+    "origem": "llm",
+    "temas_pedidos": {
+      "vale_a_pena": [
+        "POS-A",
+        "POS-B",
+        "POS-C",
+        "POS-E"
+      ],
+      "talvez_evite": [
+        "NEG-A",
+        "NEG-B",
+        "NEG-C",
+        "NEG-D",
+        "NEG-E"
+      ]
+    },
+    "temas_saltados": {
+      "vale_a_pena": [],
+      "talvez_evite": []
+    },
+    "descartadas": [],
+    "retry": {
+      "n_reprovadas": 2,
+      "n_aplicadas": 2,
+      "n_saltadas_pelo_modelo": 0,
+      "n_descartadas": 0
+    },
+    "provider": "gemini",
+    "modelo": "gemini-3.7-flash",
+    "n_candidatos": 3,
+    "n_chamadas": 4,
+    "indice_escolhido": 1,
+    "candidatos": [
+      {
+        "indice": 0,
+        "n_condicoes": 9,
+        "n_flags": 4,
+        "flags": [
+          "ancora_nao_verificavel",
+          "sem_discriminacao"
+        ],
+        "n_temas_cobertos": 9
+      },
+      {
+        "indice": 1,
+        "n_condicoes": 9,
+        "n_flags": 2,
+        "flags": [
+          "sem_discriminacao"
+        ],
+        "n_temas_cobertos": 9
+      },
+      {
+        "indice": 2,
+        "n_condicoes": 9,
+        "n_flags": 2,
+        "flags": [
+          "sem_discriminacao"
+        ],
+        "n_temas_cobertos": 9
+      }
+    ],
+    "uso": {
+      "prompt_tokens": 11329,
+      "completion_tokens": 1361,
+      "cache_hit_tokens": 0,
+      "cache_miss_tokens": 11329
+    },
+    "latencia_s": 18.98,
+    "spec_version": "1.9.25"
   }
 }

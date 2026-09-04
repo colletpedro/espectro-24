@@ -1349,5 +1349,150 @@
       "cache_miss_tokens": 3645
     },
     "latencia_s": 25.68
+  },
+  "condicoes": {
+    "vale_a_pena": [
+      {
+        "texto": "aprecia atuações intensas e vulneráveis que transitam por emoções complexas",
+        "tema_origem": "POS-A",
+        "bucket_origem": "positivas",
+        "tema_texto": "Atuações",
+        "rotulo_forca": "muitos"
+      },
+      {
+        "texto": "busca um suspense construído com silêncios, planos longos e desconforto contínuo",
+        "tema_origem": "POS-B",
+        "bucket_origem": "positivas",
+        "tema_texto": "Atmosfera e tensão",
+        "rotulo_forca": "muitos"
+      },
+      {
+        "texto": "aprecia uma cinematografia de imagens perturbadoras integrada a uma direção de arte opressiva",
+        "tema_origem": "POS-C",
+        "bucket_origem": "positivas",
+        "tema_texto": "Cinematografia e direção",
+        "rotulo_forca": "alguns"
+      },
+      {
+        "texto": "aprecia terror psicológico e drama familiar gradual, mesmo com viradas previsíveis",
+        "tema_origem": "POS-D",
+        "bucket_origem": "positivas",
+        "tema_texto": "Roteiro e história",
+        "rotulo_forca": "alguns"
+      },
+      {
+        "texto": "procura uma experiência aterrorizante e perturbadora cujo pavor permanece após a sessão",
+        "tema_origem": "POS-E",
+        "bucket_origem": "positivas",
+        "tema_texto": "Impacto emocional",
+        "rotulo_forca": "alguns"
+      }
+    ],
+    "talvez_evite": [
+      {
+        "texto": "se incomoda com um ritmo arrastado e longos períodos sem ação",
+        "tema_origem": "NEG-A",
+        "bucket_origem": "negativas",
+        "tema_texto": "Ritmo lento e tédio",
+        "rotulo_forca": "muitos"
+      },
+      {
+        "texto": "espera sustos genuínos e rejeita um terror pretensioso de choque ineficaz",
+        "tema_origem": "NEG-C",
+        "bucket_origem": "negativas",
+        "tema_texto": "Falta de sustos e terror",
+        "rotulo_forca": "alguns"
+      }
+    ],
+    "ordem_colunas": [
+      "vale_a_pena",
+      "talvez_evite"
+    ],
+    "peso": {
+      "vale_a_pena": {
+        "peso_pct": 80,
+        "peso_texto": "~80% das notas",
+        "nota_de_amostra": null
+      },
+      "talvez_evite": {
+        "peso_pct": 6,
+        "peso_texto": "~6% das notas",
+        "nota_de_amostra": null
+      }
+    },
+    "peso_meio": null,
+    "origem": "llm",
+    "temas_pedidos": {
+      "vale_a_pena": [
+        "POS-A",
+        "POS-B",
+        "POS-C",
+        "POS-D",
+        "POS-E"
+      ],
+      "talvez_evite": [
+        "NEG-A",
+        "NEG-B",
+        "NEG-C",
+        "NEG-F"
+      ]
+    },
+    "temas_saltados": {
+      "vale_a_pena": [],
+      "talvez_evite": [
+        "NEG-F"
+      ]
+    },
+    "descartadas": [],
+    "retry": {
+      "n_reprovadas": 2,
+      "n_aplicadas": 2,
+      "n_saltadas_pelo_modelo": 0,
+      "n_descartadas": 0
+    },
+    "provider": "gemini",
+    "modelo": "gemini-3.7-flash",
+    "n_candidatos": 3,
+    "n_chamadas": 4,
+    "indice_escolhido": 1,
+    "candidatos": [
+      {
+        "indice": 0,
+        "n_condicoes": 7,
+        "n_flags": 1,
+        "flags": [
+          "sem_discriminacao"
+        ],
+        "n_temas_cobertos": 7
+      },
+      {
+        "indice": 1,
+        "n_condicoes": 8,
+        "n_flags": 2,
+        "flags": [
+          "quantidade_escrita",
+          "sem_discriminacao"
+        ],
+        "n_temas_cobertos": 8
+      },
+      {
+        "indice": 2,
+        "n_condicoes": 8,
+        "n_flags": 2,
+        "flags": [
+          "exemplo_verbatim",
+          "sem_discriminacao"
+        ],
+        "n_temas_cobertos": 8
+      }
+    ],
+    "uso": {
+      "prompt_tokens": 11442,
+      "completion_tokens": 1181,
+      "cache_hit_tokens": 0,
+      "cache_miss_tokens": 11442
+    },
+    "latencia_s": 24.96,
+    "spec_version": "1.9.25"
   }
 }

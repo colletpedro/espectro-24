@@ -1916,3 +1916,110 @@ a { color: inherit; }
   color: var(--text-mute);
   margin: 2px 0 0;
 }
+
+/* =======================================================================
+   [v1.9.37] CONDIÇÕES DE DECISÃO — o bloco que RECOMENDA (§0, terceira
+   exceção deliberada). Entra entre a BARRA e os BULLETS.
+
+   Cada escolha faz um trabalho, e nenhuma família/cor nova entra:
+
+   · SERIFA no texto da condição — é a voz EDITORIAL do produto, a mesma do
+     veredito e da narrativa. A condição é prosa do produto, não metadado;
+   · MONO no cabeçalho, no peso e na proveniência — é o registro do SISTEMA
+     falando (`.section-label`, `.proportion__note`, o disclosure APROFUNDAR
+     usam o mesmo), e é o que separa visualmente "o que o código decidiu" de
+     "o que o produto afirma";
+   · a cor de cada coluna é a do GRUPO de origem (--pos azul / --neg
+     âmbar-avermelhado), a paleta oficial dos três grupos. NUNCA verde e
+     vermelho: a página inteira evita esse par, e "vale a pena / talvez
+     evite" seria exatamente onde a leitura semafórica tentaria entrar;
+   · a barra de 2px à esquerda marca a coluna sem caixa nem fundo, no mesmo
+     vocabulário discreto de `.verdict-absent`.
+
+   AS DUAS COLUNAS TÊM O MESMO PESO VISUAL, por decisão registrada: largura
+   igual (`1fr 1fr`), mesma tipografia, mesmo espaçamento. `the-godfather`
+   publica três condições de quem não recomenda com `~2% das notas` ao lado —
+   o peso é dito pelo NÚMERO, nunca por encolher a coluna. Encolher
+   reintroduziria a infidelidade por omissão que a v1.4.0 corrigiu. */
+.decide {
+  margin: 34px 0 6px;
+}
+
+.decide__meio {
+  font-family: var(--mono);
+  font-size: 0.76rem;
+  line-height: 1.5;
+  color: var(--text-mute);
+  margin: 0 0 18px;
+}
+
+.decide__grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 26px;
+}
+
+.decide__col {
+  padding-left: 14px;
+  border-left: 2px solid var(--border);
+  min-width: 0;            /* impede transbordo horizontal no grid */
+}
+.decide__col--pos { border-left-color: var(--pos); }
+.decide__col--neg { border-left-color: var(--neg); }
+
+.decide__head {
+  font-family: var(--mono);
+  font-size: 0.74rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  margin: 0 0 4px;
+}
+.decide__col--pos .decide__head { color: var(--pos); }
+.decide__col--neg .decide__head { color: var(--neg); }
+
+.decide__peso {
+  font-family: var(--mono);
+  font-size: 0.72rem;
+  color: var(--text-mute);
+  margin: 0 0 14px;
+}
+
+.decide__list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.decide__item { margin: 0 0 15px; }
+.decide__item:last-child { margin-bottom: 0; }
+
+.decide__text {
+  font-family: var(--serif);
+  font-size: 1.02rem;
+  line-height: 1.45;
+  color: var(--text);
+  margin: 0;
+  overflow-wrap: break-word;
+}
+
+/* A PROVENIÊNCIA. Discreta, mas SEMPRE presente — é uma das três garantias
+   que autorizam o produto a recomendar (§0), e uma garantia que exige clique
+   para existir é decorativa. A paráfrase completa não se repete aqui: ela
+   está nos bullets logo abaixo, na mesma tela, que é a razão de arquitetura
+   da coexistência da FASE 1. */
+.decide__meta {
+  font-family: var(--mono);
+  font-size: 0.68rem;
+  line-height: 1.4;
+  color: var(--text-mute);
+  margin: 3px 0 0;
+  overflow-wrap: break-word;
+}
+
+@media (max-width: 640px) {
+  /* Empilha. A coluna de MAIOR peso vem primeiro no DOM (ordenada em
+     Python), então empilhar preserva a ordem por peso da v1.9.30 sem
+     nenhuma regra de ordem no CSS. */
+  .decide__grid { grid-template-columns: 1fr; gap: 22px; }
+  .decide__text { font-size: 0.99rem; }
+}

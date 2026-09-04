@@ -1352,5 +1352,149 @@
       "cache_miss_tokens": 3576
     },
     "latencia_s": 15.2
+  },
+  "condicoes": {
+    "vale_a_pena": [
+      {
+        "texto": "se encanta com um visual arrebatador repleto de quadros plasticamente impressionantes",
+        "tema_origem": "POS-A",
+        "bucket_origem": "positivas",
+        "tema_texto": "Fotografia deslumbrante",
+        "rotulo_forca": "a maioria"
+      },
+      {
+        "texto": "aprecia composições sonoras intensas e inovadoras que criam uma atmosfera imersiva",
+        "tema_origem": "POS-B",
+        "bucket_origem": "positivas",
+        "tema_texto": "Trilha sonora marcante",
+        "rotulo_forca": "cerca de metade"
+      },
+      {
+        "texto": "se atrai por universos vastos e detalhados com ricas culturas para explorar",
+        "tema_origem": "POS-C",
+        "bucket_origem": "positivas",
+        "tema_texto": "Construção de mundo imersiva",
+        "rotulo_forca": "muitos"
+      },
+      {
+        "texto": "aceita um ritmo pausado em prol de estabelecer cenários e construir a trama",
+        "tema_origem": "POS-E",
+        "bucket_origem": "positivas",
+        "tema_texto": "Ritmo lento, mas com construção",
+        "rotulo_forca": "muitos"
+      }
+    ],
+    "talvez_evite": [
+      {
+        "texto": "se cansa com narrativas arrastadas compostas por cenas longas e monótonas",
+        "tema_origem": "NEG-A",
+        "bucket_origem": "negativas",
+        "tema_texto": "Ritmo lento e tédio",
+        "rotulo_forca": "muitos"
+      },
+      {
+        "texto": "se incomoda com figuras sem carisma que despertam pouca profundidade emocional",
+        "tema_origem": "NEG-B",
+        "bucket_origem": "negativas",
+        "tema_texto": "Falta de profundidade emocional e personagens vazios",
+        "rotulo_forca": "muitos"
+      },
+      {
+        "texto": "se frustra com narrativas fragmentadas sobrecarregadas de explicações e construção de universo",
+        "tema_origem": "NEG-C",
+        "bucket_origem": "negativas",
+        "tema_texto": "História confusa e exposição excessiva",
+        "rotulo_forca": "alguns"
+      },
+      {
+        "texto": "se desgasta com desenhos de som e composições musicais onipresentes e ensurdecedoras",
+        "tema_origem": "NEG-F",
+        "bucket_origem": "negativas",
+        "tema_texto": "Trilha sonora e design de som excessivos",
+        "rotulo_forca": "alguns"
+      }
+    ],
+    "ordem_colunas": [
+      "vale_a_pena",
+      "talvez_evite"
+    ],
+    "peso": {
+      "vale_a_pena": {
+        "peso_pct": 79,
+        "peso_texto": "~79% das notas",
+        "nota_de_amostra": null
+      },
+      "talvez_evite": {
+        "peso_pct": 5,
+        "peso_texto": "~5% das notas",
+        "nota_de_amostra": null
+      }
+    },
+    "peso_meio": null,
+    "origem": "llm",
+    "temas_pedidos": {
+      "vale_a_pena": [
+        "POS-A",
+        "POS-B",
+        "POS-C",
+        "POS-E"
+      ],
+      "talvez_evite": [
+        "NEG-A",
+        "NEG-B",
+        "NEG-C",
+        "NEG-F"
+      ]
+    },
+    "temas_saltados": {
+      "vale_a_pena": [],
+      "talvez_evite": []
+    },
+    "descartadas": [],
+    "retry": null,
+    "provider": "gemini",
+    "modelo": "gemini-3.7-flash",
+    "n_candidatos": 3,
+    "n_chamadas": 3,
+    "indice_escolhido": 1,
+    "candidatos": [
+      {
+        "indice": 0,
+        "n_condicoes": 8,
+        "n_flags": 5,
+        "flags": [
+          "cliche",
+          "exemplo_verbatim",
+          "sem_discriminacao",
+          "tema_verbatim"
+        ],
+        "n_temas_cobertos": 8
+      },
+      {
+        "indice": 1,
+        "n_condicoes": 8,
+        "n_flags": 0,
+        "flags": [],
+        "n_temas_cobertos": 8
+      },
+      {
+        "indice": 2,
+        "n_condicoes": 8,
+        "n_flags": 2,
+        "flags": [
+          "cliche",
+          "sem_discriminacao"
+        ],
+        "n_temas_cobertos": 8
+      }
+    ],
+    "uso": {
+      "prompt_tokens": 8145,
+      "completion_tokens": 1140,
+      "cache_hit_tokens": 0,
+      "cache_miss_tokens": 8145
+    },
+    "latencia_s": 20.67,
+    "spec_version": "1.9.25"
   }
 }

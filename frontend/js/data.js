@@ -1385,6 +1385,139 @@ window.ESPECTRO_DATA = {
           "cache_miss_tokens": 3663
         },
         "latencia_s": 36.84
+      },
+      "condicoes": {
+        "vale_a_pena": [
+          {
+            "texto": "aprecia atuações em perfeita sintonia que equilibram momentos dramáticos e cômicos",
+            "tema_origem": "POS-A",
+            "bucket_origem": "positivas",
+            "tema_texto": "Atuações excepcionais do elenco principal",
+            "rotulo_forca": "a maioria"
+          },
+          {
+            "texto": "busca uma comédia desconfortável movida por diálogos mordazes e momentos embaraçosos",
+            "tema_origem": "POS-B",
+            "bucket_origem": "positivas",
+            "tema_texto": "Humor ácido e situações constrangedoras",
+            "rotulo_forca": "muitos"
+          },
+          {
+            "texto": "valoriza uma direção precisa em cenário único com estilo teatral e enquadramentos expressivos",
+            "tema_origem": "POS-C",
+            "bucket_origem": "positivas",
+            "tema_texto": "Direção precisa e estilo visual de peça teatral",
+            "rotulo_forca": "muitos"
+          }
+        ],
+        "talvez_evite": [
+          {
+            "texto": "se incomoda com roteiros previsíveis que recorrem a clichês e conflitos rasos",
+            "tema_origem": "NEG-A",
+            "bucket_origem": "negativas",
+            "tema_texto": "Roteiro superficial e sem profundidade",
+            "rotulo_forca": "muitos"
+          },
+          {
+            "texto": "se irrita com atuações exageradas e forçadas que destoam do restante do elenco",
+            "tema_origem": "NEG-B",
+            "bucket_origem": "negativas",
+            "tema_texto": "Atuação exagerada de Olivia Wilde",
+            "rotulo_forca": "muitos"
+          },
+          {
+            "texto": "se cansa de comédias arrastadas com piadas ineficazes e ritmo entediante",
+            "tema_origem": "NEG-C",
+            "bucket_origem": "negativas",
+            "tema_texto": "Falta de humor e ritmo arrastado",
+            "rotulo_forca": "alguns"
+          }
+        ],
+        "ordem_colunas": [
+          "vale_a_pena",
+          "talvez_evite"
+        ],
+        "peso": {
+          "vale_a_pena": {
+            "peso_pct": 91,
+            "peso_texto": "~91% das notas",
+            "nota_de_amostra": null
+          },
+          "talvez_evite": {
+            "peso_pct": 2,
+            "peso_texto": "~2% das notas",
+            "nota_de_amostra": null
+          }
+        },
+        "peso_meio": null,
+        "origem": "llm",
+        "temas_pedidos": {
+          "vale_a_pena": [
+            "POS-A",
+            "POS-B",
+            "POS-C"
+          ],
+          "talvez_evite": [
+            "NEG-A",
+            "NEG-B",
+            "NEG-C"
+          ]
+        },
+        "temas_saltados": {
+          "vale_a_pena": [],
+          "talvez_evite": []
+        },
+        "descartadas": [],
+        "retry": {
+          "n_reprovadas": 1,
+          "n_aplicadas": 1,
+          "n_saltadas_pelo_modelo": 0,
+          "n_descartadas": 0
+        },
+        "provider": "gemini",
+        "modelo": "gemini-3.7-flash",
+        "n_candidatos": 3,
+        "n_chamadas": 4,
+        "indice_escolhido": 2,
+        "candidatos": [
+          {
+            "indice": 0,
+            "n_condicoes": 6,
+            "n_flags": 2,
+            "flags": [
+              "exemplo_verbatim",
+              "tema_verbatim"
+            ],
+            "n_temas_cobertos": 6
+          },
+          {
+            "indice": 1,
+            "n_condicoes": 6,
+            "n_flags": 2,
+            "flags": [
+              "exemplo_verbatim",
+              "sem_discriminacao"
+            ],
+            "n_temas_cobertos": 6
+          },
+          {
+            "indice": 2,
+            "n_condicoes": 6,
+            "n_flags": 1,
+            "flags": [
+              "tema_verbatim"
+            ],
+            "n_temas_cobertos": 6
+          }
+        ],
+        "uso": {
+          "prompt_tokens": 10509,
+          "completion_tokens": 942,
+          "cache_hit_tokens": 0,
+          "cache_miss_tokens": 10509
+        },
+        "latencia_s": 15.56,
+        "spec_version": "1.9.25"
       }
     },
     "aftersun": {
@@ -2742,6 +2875,128 @@ window.ESPECTRO_DATA = {
           "cache_miss_tokens": 3642
         },
         "latencia_s": 28.31
+      },
+      "condicoes": {
+        "vale_a_pena": [
+          {
+            "texto": "aprecia atuações autênticas comoventes que transmitem uma forte química entre pai e filha",
+            "tema_origem": "POS-A",
+            "bucket_origem": "positivas",
+            "tema_texto": "Atuações naturais e cativantes",
+            "rotulo_forca": "muitos"
+          },
+          {
+            "texto": "se emociona com retratos sutis de depressão construídos através de silêncios e olhares",
+            "tema_origem": "POS-B",
+            "bucket_origem": "positivas",
+            "tema_texto": "Depressão e sofrimento oculto",
+            "rotulo_forca": "muitos"
+          },
+          {
+            "texto": "busca um olhar nostálgico sobre memórias de infância e viagens em família",
+            "tema_origem": "POS-C",
+            "bucket_origem": "positivas",
+            "tema_texto": "Nostalgia e memória",
+            "rotulo_forca": "muitos"
+          }
+        ],
+        "talvez_evite": [
+          {
+            "texto": "se entedia com um andamento excessivamente lento, arrastado e monótono",
+            "tema_origem": "NEG-A",
+            "bucket_origem": "negativas",
+            "tema_texto": "Ritmo lento e tédio",
+            "rotulo_forca": "muitos"
+          },
+          {
+            "texto": "evita tramas vagas, sem propósito claro e com intenções excessivamente implícitas",
+            "tema_origem": "NEG-B",
+            "bucket_origem": "negativas",
+            "tema_texto": "Narrativa vaga e sem desenvolvimento",
+            "rotulo_forca": "muitos"
+          },
+          {
+            "texto": "não se convence com Paul Mescal no papel de pai",
+            "tema_origem": "NEG-C",
+            "bucket_origem": "negativas",
+            "tema_texto": "Atuação de Paul Mescal não convence",
+            "rotulo_forca": "alguns"
+          }
+        ],
+        "ordem_colunas": [
+          "vale_a_pena",
+          "talvez_evite"
+        ],
+        "peso": {
+          "vale_a_pena": {
+            "peso_pct": 88,
+            "peso_texto": "~88% das notas",
+            "nota_de_amostra": null
+          },
+          "talvez_evite": {
+            "peso_pct": 3,
+            "peso_texto": "~3% das notas",
+            "nota_de_amostra": null
+          }
+        },
+        "peso_meio": null,
+        "origem": "llm",
+        "temas_pedidos": {
+          "vale_a_pena": [
+            "POS-A",
+            "POS-B",
+            "POS-C"
+          ],
+          "talvez_evite": [
+            "NEG-A",
+            "NEG-B",
+            "NEG-C"
+          ]
+        },
+        "temas_saltados": {
+          "vale_a_pena": [],
+          "talvez_evite": []
+        },
+        "descartadas": [],
+        "retry": null,
+        "provider": "gemini",
+        "modelo": "gemini-3.7-flash",
+        "n_candidatos": 3,
+        "n_chamadas": 3,
+        "indice_escolhido": 0,
+        "candidatos": [
+          {
+            "indice": 0,
+            "n_condicoes": 6,
+            "n_flags": 0,
+            "flags": [],
+            "n_temas_cobertos": 6
+          },
+          {
+            "indice": 1,
+            "n_condicoes": 6,
+            "n_flags": 1,
+            "flags": [
+              "tema_verbatim"
+            ],
+            "n_temas_cobertos": 6
+          },
+          {
+            "indice": 2,
+            "n_condicoes": 6,
+            "n_flags": 0,
+            "flags": [],
+            "n_temas_cobertos": 6
+          }
+        ],
+        "uso": {
+          "prompt_tokens": 7779,
+          "completion_tokens": 891,
+          "cache_hit_tokens": 0,
+          "cache_miss_tokens": 7779
+        },
+        "latencia_s": 15.89,
+        "spec_version": "1.9.25"
       }
     },
     "anatomy-of-a-fall": {
@@ -4097,6 +4352,130 @@ window.ESPECTRO_DATA = {
           "cache_miss_tokens": 3576
         },
         "latencia_s": 25.63
+      },
+      "condicoes": {
+        "vale_a_pena": [
+          {
+            "texto": "busca atuações extremamente convincentes que trazem autenticidade aos personagens",
+            "tema_origem": "POS-A",
+            "bucket_origem": "positivas",
+            "tema_texto": "Atuações excepcionais",
+            "rotulo_forca": "a maioria"
+          },
+          {
+            "texto": "se interessa pelo exame detalhado dos ressentimentos e complexidades de um casamento",
+            "tema_origem": "POS-B",
+            "bucket_origem": "positivas",
+            "tema_texto": "Dissolução e complexidade conjugal",
+            "rotulo_forca": "muitos"
+          },
+          {
+            "texto": "aprecia roteiros minuciosos com diálogos cheios de nuances e tensão moral",
+            "tema_origem": "POS-C",
+            "bucket_origem": "positivas",
+            "tema_texto": "Roteiro inteligente e diálogos afiados",
+            "rotulo_forca": "muitos"
+          }
+        ],
+        "talvez_evite": [
+          {
+            "texto": "se cansa com narrativas de ritmo vagaroso e diálogos excessivamente prolongados",
+            "tema_origem": "NEG-A",
+            "bucket_origem": "negativas",
+            "tema_texto": "Ritmo lento e arrastado",
+            "rotulo_forca": "a maioria"
+          },
+          {
+            "texto": "se incomoda com desfechos em aberto que recusam uma resolução definitiva",
+            "tema_origem": "NEG-B",
+            "bucket_origem": "negativas",
+            "tema_texto": "Final em aberto frustrante",
+            "rotulo_forca": "muitos"
+          },
+          {
+            "texto": "evita tramas consideradas previsíveis e com desenvolvimento superficial de personagens",
+            "tema_origem": "NEG-C",
+            "bucket_origem": "negativas",
+            "tema_texto": "História sem profundidade",
+            "rotulo_forca": "alguns"
+          }
+        ],
+        "ordem_colunas": [
+          "vale_a_pena",
+          "talvez_evite"
+        ],
+        "peso": {
+          "vale_a_pena": {
+            "peso_pct": 88,
+            "peso_texto": "~88% das notas",
+            "nota_de_amostra": null
+          },
+          "talvez_evite": {
+            "peso_pct": 2,
+            "peso_texto": "~2% das notas",
+            "nota_de_amostra": null
+          }
+        },
+        "peso_meio": null,
+        "origem": "llm",
+        "temas_pedidos": {
+          "vale_a_pena": [
+            "POS-A",
+            "POS-B",
+            "POS-C"
+          ],
+          "talvez_evite": [
+            "NEG-A",
+            "NEG-B",
+            "NEG-C"
+          ]
+        },
+        "temas_saltados": {
+          "vale_a_pena": [],
+          "talvez_evite": []
+        },
+        "descartadas": [],
+        "retry": null,
+        "provider": "gemini",
+        "modelo": "gemini-3.7-flash",
+        "n_candidatos": 3,
+        "n_chamadas": 3,
+        "indice_escolhido": 2,
+        "candidatos": [
+          {
+            "indice": 0,
+            "n_condicoes": 6,
+            "n_flags": 1,
+            "flags": [
+              "exemplo_verbatim"
+            ],
+            "n_temas_cobertos": 6
+          },
+          {
+            "indice": 1,
+            "n_condicoes": 6,
+            "n_flags": 1,
+            "flags": [
+              "ancora_nao_verificavel"
+            ],
+            "n_temas_cobertos": 6
+          },
+          {
+            "indice": 2,
+            "n_condicoes": 6,
+            "n_flags": 0,
+            "flags": [],
+            "n_temas_cobertos": 6
+          }
+        ],
+        "uso": {
+          "prompt_tokens": 7854,
+          "completion_tokens": 771,
+          "cache_hit_tokens": 0,
+          "cache_miss_tokens": 7854
+        },
+        "latencia_s": 12.5,
+        "spec_version": "1.9.25"
       }
     },
     "avengers-endgame": {
@@ -5449,6 +5828,169 @@ window.ESPECTRO_DATA = {
           "cache_miss_tokens": 3543
         },
         "latencia_s": 21.25
+      },
+      "condicoes": {
+        "vale_a_pena": [
+          {
+            "texto": "busca uma forte carga emocional com momentos comoventes e sensação de encerramento",
+            "tema_origem": "POS-A",
+            "bucket_origem": "positivas",
+            "tema_texto": "Carga emocional e despedidas",
+            "rotulo_forca": "a maioria"
+          },
+          {
+            "texto": "espera um espetáculo grandioso repleto de ação épica e homenagens aos fãs",
+            "tema_origem": "POS-B",
+            "bucket_origem": "positivas",
+            "tema_texto": "Batalha final épica e fan service",
+            "rotulo_forca": "muitos"
+          },
+          {
+            "texto": "gosta de viagem no tempo para revisitar a história, aceitando algumas inconsistências",
+            "tema_origem": "POS-C",
+            "bucket_origem": "positivas",
+            "tema_texto": "Viagem no tempo e lógica interna",
+            "rotulo_forca": "alguns"
+          },
+          {
+            "texto": "tolera um ritmo inicial mais lento em troca de grande envolvimento emocional",
+            "tema_origem": "POS-F",
+            "bucket_origem": "positivas",
+            "tema_texto": "Ritmo e duração",
+            "rotulo_forca": "alguns"
+          }
+        ],
+        "talvez_evite": [
+          {
+            "texto": "rejeita o apelo à nostalgia baseado no passado em vez de novidades",
+            "tema_origem": "NEG-B",
+            "bucket_origem": "negativas",
+            "tema_texto": "Favoritismo e nostalgia forçada",
+            "rotulo_forca": "muitos"
+          },
+          {
+            "texto": "se frustra com arcos de personagens tratados com superficialidade e piadas excessivas",
+            "tema_origem": "NEG-D",
+            "bucket_origem": "negativas",
+            "tema_texto": "Desenvolvimento de personagens decepcionante",
+            "rotulo_forca": "alguns"
+          },
+          {
+            "texto": "se incomoda com direção de arte e efeitos visuais considerados pouco inspirados",
+            "tema_origem": "NEG-F",
+            "bucket_origem": "negativas",
+            "tema_texto": "Efeitos visuais e estética comprometidos",
+            "rotulo_forca": "alguns"
+          }
+        ],
+        "ordem_colunas": [
+          "vale_a_pena",
+          "talvez_evite"
+        ],
+        "peso": {
+          "vale_a_pena": {
+            "peso_pct": 81,
+            "peso_texto": "~81% das notas",
+            "nota_de_amostra": null
+          },
+          "talvez_evite": {
+            "peso_pct": 4,
+            "peso_texto": "~4% das notas",
+            "nota_de_amostra": null
+          }
+        },
+        "peso_meio": null,
+        "origem": "llm",
+        "temas_pedidos": {
+          "vale_a_pena": [
+            "POS-A",
+            "POS-B",
+            "POS-C",
+            "POS-F"
+          ],
+          "talvez_evite": [
+            "NEG-A",
+            "NEG-B",
+            "NEG-C",
+            "NEG-D",
+            "NEG-F"
+          ]
+        },
+        "temas_saltados": {
+          "vale_a_pena": [],
+          "talvez_evite": [
+            "NEG-A",
+            "NEG-C"
+          ]
+        },
+        "descartadas": [
+          {
+            "texto": "se incomoda com roteiro incoerente repleto de diálogos fracos e situações forçadas",
+            "tema_origem": "NEG-A",
+            "lado": "talvez_evite",
+            "flags": [
+              "exemplo_verbatim"
+            ]
+          },
+          {
+            "texto": "se cansa com duração excessiva e ritmo arrastado na primeira metade",
+            "tema_origem": "NEG-C",
+            "lado": "talvez_evite",
+            "flags": [
+              "exemplo_verbatim"
+            ]
+          }
+        ],
+        "retry": {
+          "n_reprovadas": 2,
+          "n_aplicadas": 0,
+          "n_saltadas_pelo_modelo": 0,
+          "n_descartadas": 2
+        },
+        "provider": "gemini",
+        "modelo": "gemini-3.7-flash",
+        "n_candidatos": 3,
+        "n_chamadas": 4,
+        "indice_escolhido": 1,
+        "candidatos": [
+          {
+            "indice": 0,
+            "n_condicoes": 9,
+            "n_flags": 3,
+            "flags": [
+              "ancora_nao_verificavel",
+              "exemplo_verbatim",
+              "sem_discriminacao"
+            ],
+            "n_temas_cobertos": 9
+          },
+          {
+            "indice": 1,
+            "n_condicoes": 9,
+            "n_flags": 2,
+            "flags": [
+              "exemplo_verbatim"
+            ],
+            "n_temas_cobertos": 9
+          },
+          {
+            "indice": 2,
+            "n_condicoes": 9,
+            "n_flags": 2,
+            "flags": [
+              "exemplo_verbatim"
+            ],
+            "n_temas_cobertos": 9
+          }
+        ],
+        "uso": {
+          "prompt_tokens": 12373,
+          "completion_tokens": 1357,
+          "cache_hit_tokens": 0,
+          "cache_miss_tokens": 12373
+        },
+        "latencia_s": 31.22,
+        "spec_version": "1.9.25"
       }
     },
     "barbie": {
@@ -6809,6 +7351,150 @@ window.ESPECTRO_DATA = {
           "cache_miss_tokens": 3633
         },
         "latencia_s": 25.31
+      },
+      "condicoes": {
+        "vale_a_pena": [
+          {
+            "texto": "busca reflexões sobre as cobranças e contradições impostas às mulheres na sociedade",
+            "tema_origem": "POS-A",
+            "bucket_origem": "positivas",
+            "tema_texto": "Crítica ao patriarcado e às expectativas femininas",
+            "rotulo_forca": "muitos"
+          },
+          {
+            "texto": "aprecia atuações versáteis e marcantes, com destaque para o papel de Ken",
+            "tema_origem": "POS-B",
+            "bucket_origem": "positivas",
+            "tema_texto": "Atuações de Margot Robbie e Ryan Gosling",
+            "rotulo_forca": "alguns"
+          },
+          {
+            "texto": "quer um filme comovente sobre a falta de liberdade sob expectativas sociais",
+            "tema_origem": "POS-C",
+            "bucket_origem": "positivas",
+            "tema_texto": "Impacto emocional e reflexão pessoal",
+            "rotulo_forca": "alguns"
+          },
+          {
+            "texto": "valoriza debates feministas acessíveis, mesmo que sem grande profundidade conceitual",
+            "tema_origem": "POS-F",
+            "bucket_origem": "positivas",
+            "tema_texto": "Mensagem feminista e representação",
+            "rotulo_forca": "alguns"
+          }
+        ],
+        "talvez_evite": [
+          {
+            "texto": "se incomoda com discursos temáticos transmitidos de maneira explícita e sem sutileza",
+            "tema_origem": "NEG-A",
+            "bucket_origem": "negativas",
+            "tema_texto": "Discurso feminista forçado e sem sutileza",
+            "rotulo_forca": "muitos"
+          },
+          {
+            "texto": "se frustra com narrativas confusas que misturam ideias sem uma direção clara",
+            "tema_origem": "NEG-B",
+            "bucket_origem": "negativas",
+            "tema_texto": "Roteiro confuso e sem direção clara",
+            "rotulo_forca": "muitos"
+          },
+          {
+            "texto": "se cansa com trechos de ritmo arrastado que provocam tédio",
+            "tema_origem": "NEG-C",
+            "bucket_origem": "negativas",
+            "tema_texto": "Ritmo arrastado e tédio",
+            "rotulo_forca": "alguns"
+          },
+          {
+            "texto": "se incomoda com atuações desiguais ou desempenhos considerados exagerados no elenco",
+            "tema_origem": "NEG-F",
+            "bucket_origem": "negativas",
+            "tema_texto": "Atuações desequilibradas",
+            "rotulo_forca": "alguns"
+          }
+        ],
+        "ordem_colunas": [
+          "vale_a_pena",
+          "talvez_evite"
+        ],
+        "peso": {
+          "vale_a_pena": {
+            "peso_pct": 70,
+            "peso_texto": "~70% das notas",
+            "nota_de_amostra": null
+          },
+          "talvez_evite": {
+            "peso_pct": 8,
+            "peso_texto": "~8% das notas",
+            "nota_de_amostra": null
+          }
+        },
+        "peso_meio": {
+          "pct": 22,
+          "texto": "~22% das notas ficaram no meio-termo"
+        },
+        "origem": "llm",
+        "temas_pedidos": {
+          "vale_a_pena": [
+            "POS-A",
+            "POS-B",
+            "POS-C",
+            "POS-F"
+          ],
+          "talvez_evite": [
+            "NEG-A",
+            "NEG-B",
+            "NEG-C",
+            "NEG-F"
+          ]
+        },
+        "temas_saltados": {
+          "vale_a_pena": [],
+          "talvez_evite": []
+        },
+        "descartadas": [],
+        "retry": null,
+        "provider": "gemini",
+        "modelo": "gemini-3.7-flash",
+        "n_candidatos": 3,
+        "n_chamadas": 3,
+        "indice_escolhido": 1,
+        "candidatos": [
+          {
+            "indice": 0,
+            "n_condicoes": 8,
+            "n_flags": 2,
+            "flags": [
+              "exemplo_verbatim",
+              "sem_discriminacao"
+            ],
+            "n_temas_cobertos": 8
+          },
+          {
+            "indice": 1,
+            "n_condicoes": 8,
+            "n_flags": 0,
+            "flags": [],
+            "n_temas_cobertos": 8
+          },
+          {
+            "indice": 2,
+            "n_condicoes": 8,
+            "n_flags": 2,
+            "flags": [
+              "sem_discriminacao"
+            ],
+            "n_temas_cobertos": 8
+          }
+        ],
+        "uso": {
+          "prompt_tokens": 8340,
+          "completion_tokens": 1028,
+          "cache_hit_tokens": 0,
+          "cache_miss_tokens": 8340
+        },
+        "latencia_s": 16.0,
+        "spec_version": "1.9.25"
       }
     },
     "bones-and-all": {
@@ -8159,6 +8845,149 @@ window.ESPECTRO_DATA = {
           "cache_miss_tokens": 3699
         },
         "latencia_s": 29.11
+      },
+      "condicoes": {
+        "vale_a_pena": [
+          {
+            "texto": "se interessa por metáforas extremas sobre amor, entrega e aceitação mútua",
+            "tema_origem": "POS-A",
+            "bucket_origem": "positivas",
+            "tema_texto": "Canibalismo como metáfora do amor e da aceitação",
+            "rotulo_forca": "a maioria"
+          },
+          {
+            "texto": "busca narrativas sobre autodescoberta e acolhimento entre personagens marginalizados",
+            "tema_origem": "POS-B",
+            "bucket_origem": "positivas",
+            "tema_texto": "Jornada de autodescoberta e aceitação da própria identidade",
+            "rotulo_forca": "muitos"
+          },
+          {
+            "texto": "valoriza atuações complexas e forte sintonia entre os protagonistas",
+            "tema_origem": "POS-C",
+            "bucket_origem": "positivas",
+            "tema_texto": "Atuações marcantes de Taylor Russell e Timothée Chalamet",
+            "rotulo_forca": "muitos"
+          },
+          {
+            "texto": "aprecia histórias que combinam romance delicado com momentos de horror visceral",
+            "tema_origem": "POS-D",
+            "bucket_origem": "positivas",
+            "tema_texto": "Equilíbrio entre romance e horror",
+            "rotulo_forca": "muitos"
+          }
+        ],
+        "talvez_evite": [
+          {
+            "texto": "tem aversão a cenas com violência gráfica e forte apelo gore",
+            "tema_origem": "NEG-A",
+            "bucket_origem": "negativas",
+            "tema_texto": "Repulsa e desconforto com o gore",
+            "rotulo_forca": "muitos"
+          },
+          {
+            "texto": "se incomoda com romances centrais que parecem artificiais ou forçados",
+            "tema_origem": "NEG-B",
+            "bucket_origem": "negativas",
+            "tema_texto": "Falta de química e romance pouco convincente",
+            "rotulo_forca": "alguns"
+          },
+          {
+            "texto": "se cansa com narrativas de ritmo lento que demoram a avançar",
+            "tema_origem": "NEG-C",
+            "bucket_origem": "negativas",
+            "tema_texto": "Ritmo lento e cansativo",
+            "rotulo_forca": "alguns"
+          },
+          {
+            "texto": "se frustra com metáforas conceituais que soam pretensiosas e pouco desenvolvidas",
+            "tema_origem": "NEG-E",
+            "bucket_origem": "negativas",
+            "tema_texto": "Metáfora forçada e sem exploração",
+            "rotulo_forca": "alguns"
+          }
+        ],
+        "ordem_colunas": [
+          "vale_a_pena",
+          "talvez_evite"
+        ],
+        "peso": {
+          "vale_a_pena": {
+            "peso_pct": 76,
+            "peso_texto": "~76% das notas",
+            "nota_de_amostra": null
+          },
+          "talvez_evite": {
+            "peso_pct": 6,
+            "peso_texto": "~6% das notas",
+            "nota_de_amostra": null
+          }
+        },
+        "peso_meio": null,
+        "origem": "llm",
+        "temas_pedidos": {
+          "vale_a_pena": [
+            "POS-A",
+            "POS-B",
+            "POS-C",
+            "POS-D"
+          ],
+          "talvez_evite": [
+            "NEG-A",
+            "NEG-B",
+            "NEG-C",
+            "NEG-E",
+            "NEG-F"
+          ]
+        },
+        "temas_saltados": {
+          "vale_a_pena": [],
+          "talvez_evite": [
+            "NEG-F"
+          ]
+        },
+        "descartadas": [],
+        "retry": null,
+        "provider": "gemini",
+        "modelo": "gemini-3.7-flash",
+        "n_candidatos": 3,
+        "n_chamadas": 3,
+        "indice_escolhido": 1,
+        "candidatos": [
+          {
+            "indice": 0,
+            "n_condicoes": 8,
+            "n_flags": 1,
+            "flags": [
+              "sem_discriminacao"
+            ],
+            "n_temas_cobertos": 8
+          },
+          {
+            "indice": 1,
+            "n_condicoes": 8,
+            "n_flags": 0,
+            "flags": [],
+            "n_temas_cobertos": 8
+          },
+          {
+            "indice": 2,
+            "n_condicoes": 8,
+            "n_flags": 1,
+            "flags": [
+              "sem_discriminacao"
+            ],
+            "n_temas_cobertos": 8
+          }
+        ],
+        "uso": {
+          "prompt_tokens": 8688,
+          "completion_tokens": 1103,
+          "cache_hit_tokens": 0,
+          "cache_miss_tokens": 8688
+        },
+        "latencia_s": 12.59,
+        "spec_version": "1.9.25"
       }
     },
     "cats-2019": {
@@ -9516,6 +10345,154 @@ window.ESPECTRO_DATA = {
           "cache_miss_tokens": 3525
         },
         "latencia_s": 31.84
+      },
+      "condicoes": {
+        "vale_a_pena": [
+          {
+            "texto": "busca um entretenimento descompromissado e divertido, relevando eventuais falhas técnicas",
+            "tema_origem": "POS-A",
+            "bucket_origem": "positivas",
+            "tema_texto": "Diversão e prazer culposo",
+            "rotulo_forca": "muitos"
+          },
+          {
+            "texto": "aprecia belos números musicais com canções marcantes e coreografias expressivas",
+            "tema_origem": "POS-B",
+            "bucket_origem": "positivas",
+            "tema_texto": "Qualidade musical e dança",
+            "rotulo_forca": "muitos"
+          },
+          {
+            "texto": "se diverte com a estranheza visual e o charme bizarro dos efeitos digitais",
+            "tema_origem": "POS-C",
+            "bucket_origem": "positivas",
+            "tema_texto": "Visual bizarro e CGI questionável",
+            "rotulo_forca": "muitos"
+          },
+          {
+            "texto": "aprecia a estética camp e celebra o exagero desavergonhado como escolha artística",
+            "tema_origem": "POS-E",
+            "bucket_origem": "positivas",
+            "tema_texto": "Culto e arte camp",
+            "rotulo_forca": "alguns"
+          }
+        ],
+        "talvez_evite": [
+          {
+            "texto": "se incomoda com o visual híbrido e desconfortável dos gatos humanoides",
+            "tema_origem": "NEG-A",
+            "bucket_origem": "negativas",
+            "tema_texto": "Design perturbador dos gatos humanoides",
+            "rotulo_forca": "a maioria"
+          },
+          {
+            "texto": "busca uma história com trama estruturada em vez de números musicais desconexos",
+            "tema_origem": "NEG-B",
+            "bucket_origem": "negativas",
+            "tema_texto": "Roteiro inexistente e narrativa confusa",
+            "rotulo_forca": "muitos"
+          },
+          {
+            "texto": "se frustra ao ver artistas renomados em papéis deslocados e mal aproveitados",
+            "tema_origem": "NEG-C",
+            "bucket_origem": "negativas",
+            "tema_texto": "Casting de celebridades mal aproveitado",
+            "rotulo_forca": "muitos"
+          },
+          {
+            "texto": "quer evitar momentos sem sentido que geram um mal-estar constante",
+            "tema_origem": "NEG-D",
+            "bucket_origem": "negativas",
+            "tema_texto": "Experiência de visualização desconfortável",
+            "rotulo_forca": "alguns"
+          },
+          {
+            "texto": "espera uma trilha musical consistente e impactante, sem oscilações apagadas",
+            "tema_origem": "NEG-F",
+            "bucket_origem": "negativas",
+            "tema_texto": "Execução musical inconsistente",
+            "rotulo_forca": "alguns"
+          }
+        ],
+        "ordem_colunas": [
+          "talvez_evite",
+          "vale_a_pena"
+        ],
+        "peso": {
+          "vale_a_pena": {
+            "peso_pct": 7,
+            "peso_texto": "~7% das notas",
+            "nota_de_amostra": null
+          },
+          "talvez_evite": {
+            "peso_pct": 86,
+            "peso_texto": "~86% das notas",
+            "nota_de_amostra": null
+          }
+        },
+        "peso_meio": null,
+        "origem": "llm",
+        "temas_pedidos": {
+          "vale_a_pena": [
+            "POS-A",
+            "POS-B",
+            "POS-C",
+            "POS-E"
+          ],
+          "talvez_evite": [
+            "NEG-A",
+            "NEG-B",
+            "NEG-C",
+            "NEG-D",
+            "NEG-F"
+          ]
+        },
+        "temas_saltados": {
+          "vale_a_pena": [],
+          "talvez_evite": []
+        },
+        "descartadas": [],
+        "retry": null,
+        "provider": "gemini",
+        "modelo": "gemini-3.7-flash",
+        "n_candidatos": 3,
+        "n_chamadas": 3,
+        "indice_escolhido": 2,
+        "candidatos": [
+          {
+            "indice": 0,
+            "n_condicoes": 9,
+            "n_flags": 3,
+            "flags": [
+              "exemplo_verbatim"
+            ],
+            "n_temas_cobertos": 9
+          },
+          {
+            "indice": 1,
+            "n_condicoes": 9,
+            "n_flags": 1,
+            "flags": [
+              "sem_discriminacao"
+            ],
+            "n_temas_cobertos": 9
+          },
+          {
+            "indice": 2,
+            "n_condicoes": 9,
+            "n_flags": 0,
+            "flags": [],
+            "n_temas_cobertos": 9
+          }
+        ],
+        "uso": {
+          "prompt_tokens": 8172,
+          "completion_tokens": 1271,
+          "cache_hit_tokens": 0,
+          "cache_miss_tokens": 8172
+        },
+        "latencia_s": 24.9,
+        "spec_version": "1.9.25"
       }
     },
     "cidade-de-deus": {
@@ -10867,6 +11844,162 @@ window.ESPECTRO_DATA = {
           "cache_miss_tokens": 3639
         },
         "latencia_s": 12.41
+      },
+      "condicoes": {
+        "vale_a_pena": [
+          {
+            "texto": "busca um retrato cru e autêntico da violência urbana e da pobreza",
+            "tema_origem": "POS-A",
+            "bucket_origem": "positivas",
+            "tema_texto": "Realismo e brutalidade",
+            "rotulo_forca": "muitos"
+          },
+          {
+            "texto": "aprecia uma direção dinâmica com visual imersivo e fotografia estilisticamente marcante",
+            "tema_origem": "POS-B",
+            "bucket_origem": "positivas",
+            "tema_texto": "Cinematografia e direção",
+            "rotulo_forca": "muitos"
+          },
+          {
+            "texto": "busca uma narrativa não linear cujas histórias entrelaçadas compõem uma trama coesa",
+            "tema_origem": "POS-C",
+            "bucket_origem": "positivas",
+            "tema_texto": "Roteiro e narrativa",
+            "rotulo_forca": "alguns"
+          },
+          {
+            "texto": "quer uma experiência de forte impacto emocional que permaneça na memória",
+            "tema_origem": "POS-E",
+            "bucket_origem": "positivas",
+            "tema_texto": "Impacto emocional",
+            "rotulo_forca": "alguns"
+          }
+        ],
+        "talvez_evite": [
+          {
+            "texto": "se incomoda com abordagens que tratam a miséria e a violência como espetáculo",
+            "tema_origem": "NEG-A",
+            "bucket_origem": "negativas",
+            "tema_texto": "Retrato explorador e sensacionalista da pobreza",
+            "rotulo_forca": "muitos"
+          },
+          {
+            "texto": "se cansa com violência contínua e uma montagem acelerada que banaliza conflitos",
+            "tema_origem": "NEG-B",
+            "bucket_origem": "negativas",
+            "tema_texto": "Excesso de violência e ritmo exaustivo",
+            "rotulo_forca": "muitos"
+          },
+          {
+            "texto": "busca personagens aprofundados e se desaponta com figuras dramáticas pouco desenvolvidas",
+            "tema_origem": "NEG-C",
+            "bucket_origem": "negativas",
+            "tema_texto": "Falta de desenvolvimento dos personagens",
+            "rotulo_forca": "alguns"
+          },
+          {
+            "texto": "se incomoda com estrutura não linear confusa e narração em voz off didática",
+            "tema_origem": "NEG-D",
+            "bucket_origem": "negativas",
+            "tema_texto": "Narrativa fragmentada e excesso de narração",
+            "rotulo_forca": "alguns"
+          },
+          {
+            "texto": "se ressente de um apuro visual chamativo colocado acima da substância narrativa",
+            "tema_origem": "NEG-E",
+            "bucket_origem": "negativas",
+            "tema_texto": "Estética e estilo vazios, tecnicamente chamativos",
+            "rotulo_forca": "alguns"
+          }
+        ],
+        "ordem_colunas": [
+          "vale_a_pena",
+          "talvez_evite"
+        ],
+        "peso": {
+          "vale_a_pena": {
+            "peso_pct": 96,
+            "peso_texto": "~96% das notas",
+            "nota_de_amostra": null
+          },
+          "talvez_evite": {
+            "peso_pct": 1,
+            "peso_texto": "~1% das notas",
+            "nota_de_amostra": null
+          }
+        },
+        "peso_meio": null,
+        "origem": "llm",
+        "temas_pedidos": {
+          "vale_a_pena": [
+            "POS-A",
+            "POS-B",
+            "POS-C",
+            "POS-E"
+          ],
+          "talvez_evite": [
+            "NEG-A",
+            "NEG-B",
+            "NEG-C",
+            "NEG-D",
+            "NEG-E"
+          ]
+        },
+        "temas_saltados": {
+          "vale_a_pena": [],
+          "talvez_evite": []
+        },
+        "descartadas": [],
+        "retry": {
+          "n_reprovadas": 2,
+          "n_aplicadas": 2,
+          "n_saltadas_pelo_modelo": 0,
+          "n_descartadas": 0
+        },
+        "provider": "gemini",
+        "modelo": "gemini-3.7-flash",
+        "n_candidatos": 3,
+        "n_chamadas": 4,
+        "indice_escolhido": 1,
+        "candidatos": [
+          {
+            "indice": 0,
+            "n_condicoes": 9,
+            "n_flags": 4,
+            "flags": [
+              "ancora_nao_verificavel",
+              "sem_discriminacao"
+            ],
+            "n_temas_cobertos": 9
+          },
+          {
+            "indice": 1,
+            "n_condicoes": 9,
+            "n_flags": 2,
+            "flags": [
+              "sem_discriminacao"
+            ],
+            "n_temas_cobertos": 9
+          },
+          {
+            "indice": 2,
+            "n_condicoes": 9,
+            "n_flags": 2,
+            "flags": [
+              "sem_discriminacao"
+            ],
+            "n_temas_cobertos": 9
+          }
+        ],
+        "uso": {
+          "prompt_tokens": 11329,
+          "completion_tokens": 1361,
+          "cache_hit_tokens": 0,
+          "cache_miss_tokens": 11329
+        },
+        "latencia_s": 18.98,
+        "spec_version": "1.9.25"
       }
     },
     "cure": {
@@ -12232,6 +13365,142 @@ window.ESPECTRO_DATA = {
           "cache_miss_tokens": 4675
         },
         "latencia_s": 13.74
+      },
+      "condicoes": {
+        "vale_a_pena": [
+          {
+            "texto": "busca uma atmosfera opressiva com silêncios e planos longos que geram desconforto",
+            "tema_origem": "POS-A",
+            "bucket_origem": "positivas",
+            "tema_texto": "Atmosfera e direção",
+            "rotulo_forca": "a maioria"
+          },
+          {
+            "texto": "aprecia atuações que constroem um antagonista inquietante por meio de calma perturbadora",
+            "tema_origem": "POS-B",
+            "bucket_origem": "positivas",
+            "tema_texto": "Vilão e performance",
+            "rotulo_forca": "muitos"
+          },
+          {
+            "texto": "se interessa por reflexões sobre a natureza do mal e impulsos reprimidos",
+            "tema_origem": "POS-C",
+            "bucket_origem": "positivas",
+            "tema_texto": "Temas psicológicos e filosóficos",
+            "rotulo_forca": "muitos"
+          },
+          {
+            "texto": "aceita um ritmo meticuloso e paciente em troca de uma imersão profunda",
+            "tema_origem": "POS-D",
+            "bucket_origem": "positivas",
+            "tema_texto": "Ritmo e construção lenta",
+            "rotulo_forca": "muitos"
+          },
+          {
+            "texto": "valoriza uma fotografia com enquadramentos que acentuam o isolamento dos personagens",
+            "tema_origem": "POS-F",
+            "bucket_origem": "positivas",
+            "tema_texto": "Fotografia e composição",
+            "rotulo_forca": "alguns"
+          }
+        ],
+        "talvez_evite": [
+          {
+            "texto": "se cansa com cenas longas e monótonas em uma narrativa que se arrasta",
+            "tema_origem": "NEG-A",
+            "bucket_origem": "negativas",
+            "tema_texto": "Ritmo lento e arrastado",
+            "rotulo_forca": "a maioria"
+          },
+          {
+            "texto": "se frustra com tramas que criam expectativa e terminam sem respostas satisfatórias",
+            "tema_origem": "NEG-B",
+            "bucket_origem": "negativas",
+            "tema_texto": "Falta de clímax ou recompensa",
+            "rotulo_forca": "muitos"
+          },
+          {
+            "texto": "se incomoda com personagens distantes sem empatia e um antagonista repetitivo",
+            "tema_origem": "NEG-C",
+            "bucket_origem": "negativas",
+            "tema_texto": "Personagens pouco cativantes",
+            "rotulo_forca": "muitos"
+          }
+        ],
+        "ordem_colunas": [
+          "vale_a_pena",
+          "talvez_evite"
+        ],
+        "peso": {
+          "vale_a_pena": {
+            "peso_pct": 90,
+            "peso_texto": "~90% das notas",
+            "nota_de_amostra": null
+          },
+          "talvez_evite": {
+            "peso_pct": 2,
+            "peso_texto": "~2% das notas",
+            "nota_de_amostra": null
+          }
+        },
+        "peso_meio": null,
+        "origem": "llm",
+        "temas_pedidos": {
+          "vale_a_pena": [
+            "POS-A",
+            "POS-B",
+            "POS-C",
+            "POS-D",
+            "POS-F"
+          ],
+          "talvez_evite": [
+            "NEG-A",
+            "NEG-B",
+            "NEG-C"
+          ]
+        },
+        "temas_saltados": {
+          "vale_a_pena": [],
+          "talvez_evite": []
+        },
+        "descartadas": [],
+        "retry": null,
+        "provider": "gemini",
+        "modelo": "gemini-3.7-flash",
+        "n_candidatos": 3,
+        "n_chamadas": 3,
+        "indice_escolhido": 0,
+        "candidatos": [
+          {
+            "indice": 0,
+            "n_condicoes": 8,
+            "n_flags": 0,
+            "flags": [],
+            "n_temas_cobertos": 8
+          },
+          {
+            "indice": 1,
+            "n_condicoes": 8,
+            "n_flags": 0,
+            "flags": [],
+            "n_temas_cobertos": 8
+          },
+          {
+            "indice": 2,
+            "n_condicoes": 8,
+            "n_flags": 0,
+            "flags": [],
+            "n_temas_cobertos": 8
+          }
+        ],
+        "uso": {
+          "prompt_tokens": 8079,
+          "completion_tokens": 1110,
+          "cache_hit_tokens": 0,
+          "cache_miss_tokens": 8079
+        },
+        "latencia_s": 15.0,
+        "spec_version": "1.9.25"
       }
     },
     "dune-2021": {
@@ -13588,6 +14857,150 @@ window.ESPECTRO_DATA = {
           "cache_miss_tokens": 3576
         },
         "latencia_s": 15.2
+      },
+      "condicoes": {
+        "vale_a_pena": [
+          {
+            "texto": "se encanta com um visual arrebatador repleto de quadros plasticamente impressionantes",
+            "tema_origem": "POS-A",
+            "bucket_origem": "positivas",
+            "tema_texto": "Fotografia deslumbrante",
+            "rotulo_forca": "a maioria"
+          },
+          {
+            "texto": "aprecia composições sonoras intensas e inovadoras que criam uma atmosfera imersiva",
+            "tema_origem": "POS-B",
+            "bucket_origem": "positivas",
+            "tema_texto": "Trilha sonora marcante",
+            "rotulo_forca": "cerca de metade"
+          },
+          {
+            "texto": "se atrai por universos vastos e detalhados com ricas culturas para explorar",
+            "tema_origem": "POS-C",
+            "bucket_origem": "positivas",
+            "tema_texto": "Construção de mundo imersiva",
+            "rotulo_forca": "muitos"
+          },
+          {
+            "texto": "aceita um ritmo pausado em prol de estabelecer cenários e construir a trama",
+            "tema_origem": "POS-E",
+            "bucket_origem": "positivas",
+            "tema_texto": "Ritmo lento, mas com construção",
+            "rotulo_forca": "muitos"
+          }
+        ],
+        "talvez_evite": [
+          {
+            "texto": "se cansa com narrativas arrastadas compostas por cenas longas e monótonas",
+            "tema_origem": "NEG-A",
+            "bucket_origem": "negativas",
+            "tema_texto": "Ritmo lento e tédio",
+            "rotulo_forca": "muitos"
+          },
+          {
+            "texto": "se incomoda com figuras sem carisma que despertam pouca profundidade emocional",
+            "tema_origem": "NEG-B",
+            "bucket_origem": "negativas",
+            "tema_texto": "Falta de profundidade emocional e personagens vazios",
+            "rotulo_forca": "muitos"
+          },
+          {
+            "texto": "se frustra com narrativas fragmentadas sobrecarregadas de explicações e construção de universo",
+            "tema_origem": "NEG-C",
+            "bucket_origem": "negativas",
+            "tema_texto": "História confusa e exposição excessiva",
+            "rotulo_forca": "alguns"
+          },
+          {
+            "texto": "se desgasta com desenhos de som e composições musicais onipresentes e ensurdecedoras",
+            "tema_origem": "NEG-F",
+            "bucket_origem": "negativas",
+            "tema_texto": "Trilha sonora e design de som excessivos",
+            "rotulo_forca": "alguns"
+          }
+        ],
+        "ordem_colunas": [
+          "vale_a_pena",
+          "talvez_evite"
+        ],
+        "peso": {
+          "vale_a_pena": {
+            "peso_pct": 79,
+            "peso_texto": "~79% das notas",
+            "nota_de_amostra": null
+          },
+          "talvez_evite": {
+            "peso_pct": 5,
+            "peso_texto": "~5% das notas",
+            "nota_de_amostra": null
+          }
+        },
+        "peso_meio": null,
+        "origem": "llm",
+        "temas_pedidos": {
+          "vale_a_pena": [
+            "POS-A",
+            "POS-B",
+            "POS-C",
+            "POS-E"
+          ],
+          "talvez_evite": [
+            "NEG-A",
+            "NEG-B",
+            "NEG-C",
+            "NEG-F"
+          ]
+        },
+        "temas_saltados": {
+          "vale_a_pena": [],
+          "talvez_evite": []
+        },
+        "descartadas": [],
+        "retry": null,
+        "provider": "gemini",
+        "modelo": "gemini-3.7-flash",
+        "n_candidatos": 3,
+        "n_chamadas": 3,
+        "indice_escolhido": 1,
+        "candidatos": [
+          {
+            "indice": 0,
+            "n_condicoes": 8,
+            "n_flags": 5,
+            "flags": [
+              "cliche",
+              "exemplo_verbatim",
+              "sem_discriminacao",
+              "tema_verbatim"
+            ],
+            "n_temas_cobertos": 8
+          },
+          {
+            "indice": 1,
+            "n_condicoes": 8,
+            "n_flags": 0,
+            "flags": [],
+            "n_temas_cobertos": 8
+          },
+          {
+            "indice": 2,
+            "n_condicoes": 8,
+            "n_flags": 2,
+            "flags": [
+              "cliche",
+              "sem_discriminacao"
+            ],
+            "n_temas_cobertos": 8
+          }
+        ],
+        "uso": {
+          "prompt_tokens": 8145,
+          "completion_tokens": 1140,
+          "cache_hit_tokens": 0,
+          "cache_miss_tokens": 8145
+        },
+        "latencia_s": 20.67,
+        "spec_version": "1.9.25"
       }
     },
     "dune-part-two": {
@@ -14942,6 +16355,138 @@ window.ESPECTRO_DATA = {
           "cache_miss_tokens": 3597
         },
         "latencia_s": 20.36
+      },
+      "condicoes": {
+        "vale_a_pena": [
+          {
+            "texto": "admira uma direção imponente com fotografia arrojada e paisagens de grande escala",
+            "tema_origem": "POS-A",
+            "bucket_origem": "positivas",
+            "tema_texto": "Direção e fotografia excepcionais",
+            "rotulo_forca": "a maioria"
+          },
+          {
+            "texto": "busca atuações marcantes e multifacetadas, incluindo uma interpretação vilanesca expressiva",
+            "tema_origem": "POS-B",
+            "bucket_origem": "positivas",
+            "tema_texto": "Atuações principais",
+            "rotulo_forca": "muitos"
+          },
+          {
+            "texto": "se interessa por sagas épicas focadas na profunda transformação do protagonista",
+            "tema_origem": "POS-C",
+            "bucket_origem": "positivas",
+            "tema_texto": "Evolução do personagem de Paul",
+            "rotulo_forca": "muitos"
+          }
+        ],
+        "talvez_evite": [
+          {
+            "texto": "se incomoda com um ritmo arrastado e sequências longas sem acontecimentos relevantes",
+            "tema_origem": "NEG-A",
+            "bucket_origem": "negativas",
+            "tema_texto": "Ritmo lento e tédio",
+            "rotulo_forca": "a maioria"
+          },
+          {
+            "texto": "se decepciona com figuras centrais pouco carismáticas e com escassa profundidade emocional",
+            "tema_origem": "NEG-B",
+            "bucket_origem": "negativas",
+            "tema_texto": "Desenvolvimento de personagens fraco",
+            "rotulo_forca": "muitos"
+          },
+          {
+            "texto": "tem pouca paciência para tramas difíceis de acompanhar e eventos aparentemente desconexos",
+            "tema_origem": "NEG-C",
+            "bucket_origem": "negativas",
+            "tema_texto": "Roteiro e trama confusos",
+            "rotulo_forca": "alguns"
+          },
+          {
+            "texto": "se frustra com um romance central sem química genuína e com dinâmica forçada",
+            "tema_origem": "NEG-D",
+            "bucket_origem": "negativas",
+            "tema_texto": "Falta de química entre os protagonistas",
+            "rotulo_forca": "alguns"
+          }
+        ],
+        "ordem_colunas": [
+          "vale_a_pena",
+          "talvez_evite"
+        ],
+        "peso": {
+          "vale_a_pena": {
+            "peso_pct": 91,
+            "peso_texto": "~91% das notas",
+            "nota_de_amostra": null
+          },
+          "talvez_evite": {
+            "peso_pct": 2,
+            "peso_texto": "~2% das notas",
+            "nota_de_amostra": null
+          }
+        },
+        "peso_meio": null,
+        "origem": "llm",
+        "temas_pedidos": {
+          "vale_a_pena": [
+            "POS-A",
+            "POS-B",
+            "POS-C"
+          ],
+          "talvez_evite": [
+            "NEG-A",
+            "NEG-B",
+            "NEG-C",
+            "NEG-D"
+          ]
+        },
+        "temas_saltados": {
+          "vale_a_pena": [],
+          "talvez_evite": []
+        },
+        "descartadas": [],
+        "retry": null,
+        "provider": "gemini",
+        "modelo": "gemini-3.7-flash",
+        "n_candidatos": 3,
+        "n_chamadas": 3,
+        "indice_escolhido": 0,
+        "candidatos": [
+          {
+            "indice": 0,
+            "n_condicoes": 7,
+            "n_flags": 0,
+            "flags": [],
+            "n_temas_cobertos": 7
+          },
+          {
+            "indice": 1,
+            "n_condicoes": 7,
+            "n_flags": 1,
+            "flags": [
+              "sem_discriminacao"
+            ],
+            "n_temas_cobertos": 7
+          },
+          {
+            "indice": 2,
+            "n_condicoes": 7,
+            "n_flags": 1,
+            "flags": [
+              "sem_discriminacao"
+            ],
+            "n_temas_cobertos": 7
+          }
+        ],
+        "uso": {
+          "prompt_tokens": 7776,
+          "completion_tokens": 986,
+          "cache_hit_tokens": 0,
+          "cache_miss_tokens": 7776
+        },
+        "latencia_s": 14.46,
+        "spec_version": "1.9.25"
       }
     },
     "eighth-grade": {
@@ -16307,6 +17852,142 @@ window.ESPECTRO_DATA = {
           "cache_miss_tokens": 3666
         },
         "latencia_s": 30.99
+      },
+      "condicoes": {
+        "vale_a_pena": [
+          {
+            "texto": "busca um retrato dolorosamente fiel e autêntico das angústias da pré-adolescência",
+            "tema_origem": "POS-A",
+            "bucket_origem": "positivas",
+            "tema_texto": "Retrato autêntico e dolorosamente realista da adolescência",
+            "rotulo_forca": "a maioria"
+          },
+          {
+            "texto": "aprecia uma atuação protagonista que transmite insegurança e vulnerabilidade com extrema naturalidade",
+            "tema_origem": "POS-B",
+            "bucket_origem": "positivas",
+            "tema_texto": "Atuação convincente de Elsie Fisher e verossimilhança",
+            "rotulo_forca": "muitos"
+          },
+          {
+            "texto": "aceita o desconforto da vergonha alheia para vivenciar uma forte conexão emocional",
+            "tema_origem": "POS-C",
+            "bucket_origem": "positivas",
+            "tema_texto": "Incômodo e segundo constrangimento como experiência",
+            "rotulo_forca": "muitos"
+          }
+        ],
+        "talvez_evite": [
+          {
+            "texto": "se incomoda em acompanhar uma protagonista considerada insuportável e sem carisma",
+            "tema_origem": "NEG-A",
+            "bucket_origem": "negativas",
+            "tema_texto": "Personagem principal irritante",
+            "rotulo_forca": "muitos"
+          },
+          {
+            "texto": "se cansa de diálogos repetitivos repletos de gaguejos e muletas linguísticas forçadas",
+            "tema_origem": "NEG-B",
+            "bucket_origem": "negativas",
+            "tema_texto": "Diálogos artificiais e repetitivos",
+            "rotulo_forca": "alguns"
+          },
+          {
+            "texto": "rejeita narrativas de andamento arrastado e sem grandes acontecimentos que geram tédio",
+            "tema_origem": "NEG-C",
+            "bucket_origem": "negativas",
+            "tema_texto": "Ritmo lento e tédio",
+            "rotulo_forca": "alguns"
+          },
+          {
+            "texto": "busca retratos escolares realistas e acha as situações retratadas exageradas ou inverossímeis",
+            "tema_origem": "NEG-D",
+            "bucket_origem": "negativas",
+            "tema_texto": "Falta de identificação e exagero",
+            "rotulo_forca": "alguns"
+          },
+          {
+            "texto": "evita sequências de extremo constrangimento que provocam forte desconforto ou repulsa física",
+            "tema_origem": "NEG-E",
+            "bucket_origem": "negativas",
+            "tema_texto": "Cenas desconfortáveis e vergonha alheia",
+            "rotulo_forca": "alguns"
+          }
+        ],
+        "ordem_colunas": [
+          "vale_a_pena",
+          "talvez_evite"
+        ],
+        "peso": {
+          "vale_a_pena": {
+            "peso_pct": 75,
+            "peso_texto": "~75% das notas",
+            "nota_de_amostra": null
+          },
+          "talvez_evite": {
+            "peso_pct": 6,
+            "peso_texto": "~6% das notas",
+            "nota_de_amostra": null
+          }
+        },
+        "peso_meio": null,
+        "origem": "llm",
+        "temas_pedidos": {
+          "vale_a_pena": [
+            "POS-A",
+            "POS-B",
+            "POS-C"
+          ],
+          "talvez_evite": [
+            "NEG-A",
+            "NEG-B",
+            "NEG-C",
+            "NEG-D",
+            "NEG-E"
+          ]
+        },
+        "temas_saltados": {
+          "vale_a_pena": [],
+          "talvez_evite": []
+        },
+        "descartadas": [],
+        "retry": null,
+        "provider": "gemini",
+        "modelo": "gemini-3.7-flash",
+        "n_candidatos": 3,
+        "n_chamadas": 3,
+        "indice_escolhido": 0,
+        "candidatos": [
+          {
+            "indice": 0,
+            "n_condicoes": 8,
+            "n_flags": 0,
+            "flags": [],
+            "n_temas_cobertos": 8
+          },
+          {
+            "indice": 1,
+            "n_condicoes": 8,
+            "n_flags": 0,
+            "flags": [],
+            "n_temas_cobertos": 8
+          },
+          {
+            "indice": 2,
+            "n_condicoes": 8,
+            "n_flags": 0,
+            "flags": [],
+            "n_temas_cobertos": 8
+          }
+        ],
+        "uso": {
+          "prompt_tokens": 8019,
+          "completion_tokens": 1148,
+          "cache_hit_tokens": 0,
+          "cache_miss_tokens": 8019
+        },
+        "latencia_s": 13.43,
+        "spec_version": "1.9.25"
       }
     },
     "everything-everywhere-all-at-once": {
@@ -17672,6 +19353,163 @@ window.ESPECTRO_DATA = {
           "cache_miss_tokens": 4685
         },
         "latencia_s": 38.37
+      },
+      "condicoes": {
+        "vale_a_pena": [
+          {
+            "texto": "busca uma experiência marcada por situações bizarras e caos imprevisível",
+            "tema_origem": "POS-A",
+            "bucket_origem": "positivas",
+            "tema_texto": "Caos e absurdo como experiência",
+            "rotulo_forca": "muitos"
+          },
+          {
+            "texto": "se interessa por conflitos entre mãe e filha e traumas geracionais",
+            "tema_origem": "POS-B",
+            "bucket_origem": "positivas",
+            "tema_texto": "Família, trauma e aceitação",
+            "rotulo_forca": "muitos"
+          },
+          {
+            "texto": "valoriza reflexões sobre niilismo, esperança e a busca por propósito",
+            "tema_origem": "POS-C",
+            "bucket_origem": "positivas",
+            "tema_texto": "Mensagem existencial e esperança",
+            "rotulo_forca": "muitos"
+          },
+          {
+            "texto": "aprecia atuações marcantes que elevam o peso dramático do elenco",
+            "tema_origem": "POS-D",
+            "bucket_origem": "positivas",
+            "tema_texto": "Atuações memoráveis",
+            "rotulo_forca": "alguns"
+          },
+          {
+            "texto": "aprecia uma narrativa singular que combina ficção científica, humor e drama",
+            "tema_origem": "POS-F",
+            "bucket_origem": "positivas",
+            "tema_texto": "Unicidade e originalidade",
+            "rotulo_forca": "alguns"
+          }
+        ],
+        "talvez_evite": [
+          {
+            "texto": "se cansa com excesso de estímulos visuais e narrativas caóticas",
+            "tema_origem": "NEG-A",
+            "bucket_origem": "negativas",
+            "tema_texto": "Caos excessivo e confuso",
+            "rotulo_forca": "muitos"
+          },
+          {
+            "texto": "se incomoda com dramas familiares resolvidos de forma superficial e abrupta",
+            "tema_origem": "NEG-B",
+            "bucket_origem": "negativas",
+            "tema_texto": "Metáfora familiar forçada e mal desenvolvida",
+            "rotulo_forca": "muitos"
+          },
+          {
+            "texto": "se constrange com piadas de tom sexual e humor escatológico absurdo",
+            "tema_origem": "NEG-C",
+            "bucket_origem": "negativas",
+            "tema_texto": "Humor sem graça e bizarro",
+            "rotulo_forca": "alguns"
+          },
+          {
+            "texto": "se frustra com mensagens existenciais genéricas e reflexões morais pouco aprofundadas",
+            "tema_origem": "NEG-E",
+            "bucket_origem": "negativas",
+            "tema_texto": "Mensagem superficial e final previsível",
+            "rotulo_forca": "alguns"
+          }
+        ],
+        "ordem_colunas": [
+          "vale_a_pena",
+          "talvez_evite"
+        ],
+        "peso": {
+          "vale_a_pena": {
+            "peso_pct": 86,
+            "peso_texto": "~86% das notas",
+            "nota_de_amostra": null
+          },
+          "talvez_evite": {
+            "peso_pct": 5,
+            "peso_texto": "~5% das notas",
+            "nota_de_amostra": null
+          }
+        },
+        "peso_meio": null,
+        "origem": "llm",
+        "temas_pedidos": {
+          "vale_a_pena": [
+            "POS-A",
+            "POS-B",
+            "POS-C",
+            "POS-D",
+            "POS-F"
+          ],
+          "talvez_evite": [
+            "NEG-A",
+            "NEG-B",
+            "NEG-C",
+            "NEG-E",
+            "NEG-F"
+          ]
+        },
+        "temas_saltados": {
+          "vale_a_pena": [],
+          "talvez_evite": []
+        },
+        "descartadas": [],
+        "retry": {
+          "n_reprovadas": 1,
+          "n_aplicadas": 1,
+          "n_saltadas_pelo_modelo": 0,
+          "n_descartadas": 0
+        },
+        "provider": "gemini",
+        "modelo": "gemini-3.7-flash",
+        "n_candidatos": 3,
+        "n_chamadas": 4,
+        "indice_escolhido": 1,
+        "candidatos": [
+          {
+            "indice": 0,
+            "n_condicoes": 10,
+            "n_flags": 2,
+            "flags": [
+              "exemplo_verbatim",
+              "sem_discriminacao"
+            ],
+            "n_temas_cobertos": 10
+          },
+          {
+            "indice": 1,
+            "n_condicoes": 10,
+            "n_flags": 1,
+            "flags": [
+              "exemplo_verbatim"
+            ],
+            "n_temas_cobertos": 10
+          },
+          {
+            "indice": 2,
+            "n_condicoes": 10,
+            "n_flags": 1,
+            "flags": [
+              "exemplo_verbatim"
+            ],
+            "n_temas_cobertos": 10
+          }
+        ],
+        "uso": {
+          "prompt_tokens": 12336,
+          "completion_tokens": 1308,
+          "cache_hit_tokens": 0,
+          "cache_miss_tokens": 12336
+        },
+        "latencia_s": 23.39,
+        "spec_version": "1.9.25"
       }
     },
     "friday-the-13th-2009": {
@@ -19025,6 +20863,160 @@ window.ESPECTRO_DATA = {
           "cache_miss_tokens": 4014
         },
         "latencia_s": 33.1
+      },
+      "condicoes": {
+        "vale_a_pena": [
+          {
+            "texto": "busca uma versão mais agressiva, intimidadora e brutal do vilão",
+            "tema_origem": "POS-A",
+            "bucket_origem": "positivas",
+            "tema_texto": "Jason mais assustador e brutal",
+            "rotulo_forca": "a maioria"
+          },
+          {
+            "texto": "acha este remake superior às sequências originais da franquia",
+            "tema_origem": "POS-B",
+            "bucket_origem": "positivas",
+            "tema_texto": "Remake subestimado",
+            "rotulo_forca": "a maioria"
+          },
+          {
+            "texto": "valoriza uma narrativa coesa que sintetiza elementos dos filmes originais",
+            "tema_origem": "POS-C",
+            "bucket_origem": "positivas",
+            "tema_texto": "Estrutura como melhor dos primeiros filmes",
+            "rotulo_forca": "muitos"
+          },
+          {
+            "texto": "quer acompanhar a busca determinada de um protagonista cativante por sua irmã",
+            "tema_origem": "POS-D",
+            "bucket_origem": "positivas",
+            "tema_texto": "Personagem de destaque: Clay e sua busca",
+            "rotulo_forca": "alguns"
+          }
+        ],
+        "talvez_evite": [
+          {
+            "texto": "se incomoda com excesso de sexualização e cenas frequentes de nudez gratuita",
+            "tema_origem": "NEG-A",
+            "bucket_origem": "negativas",
+            "tema_texto": "Excesso de sexualização e nudez gratuita",
+            "rotulo_forca": "muitos"
+          },
+          {
+            "texto": "se irrita com personagens superficiais que tomam decisões tolas e previsíveis",
+            "tema_origem": "NEG-B",
+            "bucket_origem": "negativas",
+            "tema_texto": "Personagens genéricos e decisões idiotas",
+            "rotulo_forca": "muitos"
+          },
+          {
+            "texto": "se incomoda com uma narrativa formulaica que funciona como colagem sem novidades",
+            "tema_origem": "NEG-C",
+            "bucket_origem": "negativas",
+            "tema_texto": "Roteiro fraco e previsível, clichês do gênero",
+            "rotulo_forca": "muitos"
+          },
+          {
+            "texto": "prefere a caracterização clássica de Jason como um assassino lento e metódico",
+            "tema_origem": "NEG-D",
+            "bucket_origem": "negativas",
+            "tema_texto": "Jason sem carisma e fora de personagem",
+            "rotulo_forca": "alguns"
+          }
+        ],
+        "ordem_colunas": [
+          "talvez_evite",
+          "vale_a_pena"
+        ],
+        "peso": {
+          "vale_a_pena": {
+            "peso_pct": 26,
+            "peso_texto": "~26% das notas",
+            "nota_de_amostra": null
+          },
+          "talvez_evite": {
+            "peso_pct": 33,
+            "peso_texto": "~33% das notas",
+            "nota_de_amostra": null
+          }
+        },
+        "peso_meio": {
+          "pct": 41,
+          "texto": "~41% das notas ficaram no meio-termo"
+        },
+        "origem": "llm",
+        "temas_pedidos": {
+          "vale_a_pena": [
+            "POS-A",
+            "POS-B",
+            "POS-C",
+            "POS-D",
+            "POS-E"
+          ],
+          "talvez_evite": [
+            "NEG-A",
+            "NEG-B",
+            "NEG-C",
+            "NEG-D"
+          ]
+        },
+        "temas_saltados": {
+          "vale_a_pena": [
+            "POS-E"
+          ],
+          "talvez_evite": []
+        },
+        "descartadas": [],
+        "retry": {
+          "n_reprovadas": 2,
+          "n_aplicadas": 2,
+          "n_saltadas_pelo_modelo": 0,
+          "n_descartadas": 0
+        },
+        "provider": "gemini",
+        "modelo": "gemini-3.7-flash",
+        "n_candidatos": 3,
+        "n_chamadas": 4,
+        "indice_escolhido": 0,
+        "candidatos": [
+          {
+            "indice": 0,
+            "n_condicoes": 8,
+            "n_flags": 2,
+            "flags": [
+              "sem_discriminacao"
+            ],
+            "n_temas_cobertos": 8
+          },
+          {
+            "indice": 1,
+            "n_condicoes": 8,
+            "n_flags": 3,
+            "flags": [
+              "ancora_nao_verificavel",
+              "sem_discriminacao"
+            ],
+            "n_temas_cobertos": 8
+          },
+          {
+            "indice": 2,
+            "n_condicoes": 8,
+            "n_flags": 2,
+            "flags": [
+              "ancora_nao_verificavel"
+            ],
+            "n_temas_cobertos": 8
+          }
+        ],
+        "uso": {
+          "prompt_tokens": 11793,
+          "completion_tokens": 1215,
+          "cache_hit_tokens": 0,
+          "cache_miss_tokens": 11793
+        },
+        "latencia_s": 35.39,
+        "spec_version": "1.9.25"
       }
     },
     "hereditary": {
@@ -20378,6 +22370,151 @@ window.ESPECTRO_DATA = {
           "cache_miss_tokens": 3645
         },
         "latencia_s": 25.68
+      },
+      "condicoes": {
+        "vale_a_pena": [
+          {
+            "texto": "aprecia atuações intensas e vulneráveis que transitam por emoções complexas",
+            "tema_origem": "POS-A",
+            "bucket_origem": "positivas",
+            "tema_texto": "Atuações",
+            "rotulo_forca": "muitos"
+          },
+          {
+            "texto": "busca um suspense construído com silêncios, planos longos e desconforto contínuo",
+            "tema_origem": "POS-B",
+            "bucket_origem": "positivas",
+            "tema_texto": "Atmosfera e tensão",
+            "rotulo_forca": "muitos"
+          },
+          {
+            "texto": "aprecia uma cinematografia de imagens perturbadoras integrada a uma direção de arte opressiva",
+            "tema_origem": "POS-C",
+            "bucket_origem": "positivas",
+            "tema_texto": "Cinematografia e direção",
+            "rotulo_forca": "alguns"
+          },
+          {
+            "texto": "aprecia terror psicológico e drama familiar gradual, mesmo com viradas previsíveis",
+            "tema_origem": "POS-D",
+            "bucket_origem": "positivas",
+            "tema_texto": "Roteiro e história",
+            "rotulo_forca": "alguns"
+          },
+          {
+            "texto": "procura uma experiência aterrorizante e perturbadora cujo pavor permanece após a sessão",
+            "tema_origem": "POS-E",
+            "bucket_origem": "positivas",
+            "tema_texto": "Impacto emocional",
+            "rotulo_forca": "alguns"
+          }
+        ],
+        "talvez_evite": [
+          {
+            "texto": "se incomoda com um ritmo arrastado e longos períodos sem ação",
+            "tema_origem": "NEG-A",
+            "bucket_origem": "negativas",
+            "tema_texto": "Ritmo lento e tédio",
+            "rotulo_forca": "muitos"
+          },
+          {
+            "texto": "espera sustos genuínos e rejeita um terror pretensioso de choque ineficaz",
+            "tema_origem": "NEG-C",
+            "bucket_origem": "negativas",
+            "tema_texto": "Falta de sustos e terror",
+            "rotulo_forca": "alguns"
+          }
+        ],
+        "ordem_colunas": [
+          "vale_a_pena",
+          "talvez_evite"
+        ],
+        "peso": {
+          "vale_a_pena": {
+            "peso_pct": 80,
+            "peso_texto": "~80% das notas",
+            "nota_de_amostra": null
+          },
+          "talvez_evite": {
+            "peso_pct": 6,
+            "peso_texto": "~6% das notas",
+            "nota_de_amostra": null
+          }
+        },
+        "peso_meio": null,
+        "origem": "llm",
+        "temas_pedidos": {
+          "vale_a_pena": [
+            "POS-A",
+            "POS-B",
+            "POS-C",
+            "POS-D",
+            "POS-E"
+          ],
+          "talvez_evite": [
+            "NEG-A",
+            "NEG-B",
+            "NEG-C",
+            "NEG-F"
+          ]
+        },
+        "temas_saltados": {
+          "vale_a_pena": [],
+          "talvez_evite": [
+            "NEG-F"
+          ]
+        },
+        "descartadas": [],
+        "retry": {
+          "n_reprovadas": 2,
+          "n_aplicadas": 2,
+          "n_saltadas_pelo_modelo": 0,
+          "n_descartadas": 0
+        },
+        "provider": "gemini",
+        "modelo": "gemini-3.7-flash",
+        "n_candidatos": 3,
+        "n_chamadas": 4,
+        "indice_escolhido": 1,
+        "candidatos": [
+          {
+            "indice": 0,
+            "n_condicoes": 7,
+            "n_flags": 1,
+            "flags": [
+              "sem_discriminacao"
+            ],
+            "n_temas_cobertos": 7
+          },
+          {
+            "indice": 1,
+            "n_condicoes": 8,
+            "n_flags": 2,
+            "flags": [
+              "quantidade_escrita",
+              "sem_discriminacao"
+            ],
+            "n_temas_cobertos": 8
+          },
+          {
+            "indice": 2,
+            "n_condicoes": 8,
+            "n_flags": 2,
+            "flags": [
+              "exemplo_verbatim",
+              "sem_discriminacao"
+            ],
+            "n_temas_cobertos": 8
+          }
+        ],
+        "uso": {
+          "prompt_tokens": 11442,
+          "completion_tokens": 1181,
+          "cache_hit_tokens": 0,
+          "cache_miss_tokens": 11442
+        },
+        "latencia_s": 24.96,
+        "spec_version": "1.9.25"
       }
     },
     "im-still-here-2024": {
@@ -21738,6 +23875,154 @@ window.ESPECTRO_DATA = {
           "cache_miss_tokens": 3600
         },
         "latencia_s": 30.29
+      },
+      "condicoes": {
+        "vale_a_pena": [
+          {
+            "texto": "valoriza atuações comoventes guiadas por expressões sutis e silêncios expressivos",
+            "tema_origem": "POS-A",
+            "bucket_origem": "positivas",
+            "tema_texto": "Atuações excepcionais",
+            "rotulo_forca": "a maioria"
+          },
+          {
+            "texto": "busca um impacto emocional profundo que desperte sensações intensas e duradouras",
+            "tema_origem": "POS-B",
+            "bucket_origem": "positivas",
+            "tema_texto": "Força emocional e impacto",
+            "rotulo_forca": "a maioria"
+          },
+          {
+            "texto": "procura uma obra que retrate os horrores da ditadura como denúncia histórica",
+            "tema_origem": "POS-C",
+            "bucket_origem": "positivas",
+            "tema_texto": "Retrato da ditadura militar",
+            "rotulo_forca": "muitos"
+          },
+          {
+            "texto": "se interessa por filmes com valor educativo voltados à preservação da memória",
+            "tema_origem": "POS-E",
+            "bucket_origem": "positivas",
+            "tema_texto": "Valor histórico e educativo",
+            "rotulo_forca": "muitos"
+          },
+          {
+            "texto": "aprecia direção cuidadosa com reconstituição de época e trilha sonora imersiva",
+            "tema_origem": "POS-F",
+            "bucket_origem": "positivas",
+            "tema_texto": "Direção e aspectos técnicos",
+            "rotulo_forca": "alguns"
+          }
+        ],
+        "talvez_evite": [
+          {
+            "texto": "se incomoda com recursos melodramáticos calculados para forçar comoção",
+            "tema_origem": "NEG-A",
+            "bucket_origem": "negativas",
+            "tema_texto": "Manipulação emocional e excesso de melodrama",
+            "rotulo_forca": "muitos"
+          },
+          {
+            "texto": "se frustra com narrativas arrastadas que prolongam momentos desnecessariamente",
+            "tema_origem": "NEG-B",
+            "bucket_origem": "negativas",
+            "tema_texto": "Ritmo lento e narrativa arrastada",
+            "rotulo_forca": "muitos"
+          },
+          {
+            "texto": "prefere uma análise política aprofundada do contexto histórico em vez de superficial",
+            "tema_origem": "NEG-C",
+            "bucket_origem": "negativas",
+            "tema_texto": "Falta de profundidade política",
+            "rotulo_forca": "alguns"
+          },
+          {
+            "texto": "acha insuficiente quando um grande desempenho individual não sustenta o conjunto",
+            "tema_origem": "NEG-E",
+            "bucket_origem": "negativas",
+            "tema_texto": "Desempenho destaca-se, mas não sustenta o conjunto",
+            "rotulo_forca": "alguns"
+          }
+        ],
+        "ordem_colunas": [
+          "vale_a_pena",
+          "talvez_evite"
+        ],
+        "peso": {
+          "vale_a_pena": {
+            "peso_pct": 96,
+            "peso_texto": "~96% das notas",
+            "nota_de_amostra": null
+          },
+          "talvez_evite": {
+            "peso_pct": 1,
+            "peso_texto": "~1% das notas",
+            "nota_de_amostra": null
+          }
+        },
+        "peso_meio": null,
+        "origem": "llm",
+        "temas_pedidos": {
+          "vale_a_pena": [
+            "POS-A",
+            "POS-B",
+            "POS-C",
+            "POS-E",
+            "POS-F"
+          ],
+          "talvez_evite": [
+            "NEG-A",
+            "NEG-B",
+            "NEG-C",
+            "NEG-E"
+          ]
+        },
+        "temas_saltados": {
+          "vale_a_pena": [],
+          "talvez_evite": []
+        },
+        "descartadas": [],
+        "retry": null,
+        "provider": "gemini",
+        "modelo": "gemini-3.7-flash",
+        "n_candidatos": 3,
+        "n_chamadas": 3,
+        "indice_escolhido": 2,
+        "candidatos": [
+          {
+            "indice": 0,
+            "n_condicoes": 9,
+            "n_flags": 1,
+            "flags": [
+              "exemplo_verbatim"
+            ],
+            "n_temas_cobertos": 9
+          },
+          {
+            "indice": 1,
+            "n_condicoes": 9,
+            "n_flags": 1,
+            "flags": [
+              "exemplo_verbatim"
+            ],
+            "n_temas_cobertos": 9
+          },
+          {
+            "indice": 2,
+            "n_condicoes": 9,
+            "n_flags": 0,
+            "flags": [],
+            "n_temas_cobertos": 9
+          }
+        ],
+        "uso": {
+          "prompt_tokens": 8112,
+          "completion_tokens": 1261,
+          "cache_hit_tokens": 0,
+          "cache_miss_tokens": 8112
+        },
+        "latencia_s": 18.51,
+        "spec_version": "1.9.25"
       }
     },
     "interstellar": {
@@ -23092,6 +25377,132 @@ window.ESPECTRO_DATA = {
           "cache_miss_tokens": 3675
         },
         "latencia_s": 38.9
+      },
+      "condicoes": {
+        "vale_a_pena": [
+          {
+            "texto": "valoriza uma trilha sonora imponente com órgão para intensificar as emoções",
+            "tema_origem": "POS-A",
+            "bucket_origem": "positivas",
+            "tema_texto": "Trilha sonora marcante",
+            "rotulo_forca": "muitos"
+          },
+          {
+            "texto": "se comove com dramas familiares tocantes sobre separação entre pai e filha",
+            "tema_origem": "POS-B",
+            "bucket_origem": "positivas",
+            "tema_texto": "Impacto emocional e relação pai-filha",
+            "rotulo_forca": "muitos"
+          },
+          {
+            "texto": "aprecia uma fotografia deslumbrante com representações grandiosas de paisagens espaciais",
+            "tema_origem": "POS-C",
+            "bucket_origem": "positivas",
+            "tema_texto": "Fotografia e efeitos visuais deslumbrantes",
+            "rotulo_forca": "muitos"
+          }
+        ],
+        "talvez_evite": [
+          {
+            "texto": "se incomoda com diálogos artificiais que tentam soar profundos sem substância",
+            "tema_origem": "NEG-A",
+            "bucket_origem": "negativas",
+            "tema_texto": "Roteiro fraco e diálogos artificiais",
+            "rotulo_forca": "muitos"
+          },
+          {
+            "texto": "se cansa de narrativas arrastadas que tornam o desenvolvimento entediante",
+            "tema_origem": "NEG-C",
+            "bucket_origem": "negativas",
+            "tema_texto": "Ritmo lento e tédio",
+            "rotulo_forca": "muitos"
+          }
+        ],
+        "ordem_colunas": [
+          "vale_a_pena",
+          "talvez_evite"
+        ],
+        "peso": {
+          "vale_a_pena": {
+            "peso_pct": 92,
+            "peso_texto": "~92% das notas",
+            "nota_de_amostra": null
+          },
+          "talvez_evite": {
+            "peso_pct": 2,
+            "peso_texto": "~2% das notas",
+            "nota_de_amostra": null
+          }
+        },
+        "peso_meio": null,
+        "origem": "llm",
+        "temas_pedidos": {
+          "vale_a_pena": [
+            "POS-A",
+            "POS-B",
+            "POS-C"
+          ],
+          "talvez_evite": [
+            "NEG-A",
+            "NEG-B",
+            "NEG-C"
+          ]
+        },
+        "temas_saltados": {
+          "vale_a_pena": [],
+          "talvez_evite": []
+        },
+        "descartadas": [],
+        "retry": {
+          "n_reprovadas": 1,
+          "n_aplicadas": 1,
+          "n_saltadas_pelo_modelo": 0,
+          "n_descartadas": 0
+        },
+        "provider": "gemini",
+        "modelo": "gemini-3.7-flash",
+        "n_candidatos": 3,
+        "n_chamadas": 4,
+        "indice_escolhido": 1,
+        "candidatos": [
+          {
+            "indice": 0,
+            "n_condicoes": 6,
+            "n_flags": 3,
+            "flags": [
+              "exemplo_verbatim",
+              "sem_discriminacao"
+            ],
+            "n_temas_cobertos": 6
+          },
+          {
+            "indice": 1,
+            "n_condicoes": 6,
+            "n_flags": 1,
+            "flags": [
+              "sem_discriminacao"
+            ],
+            "n_temas_cobertos": 6
+          },
+          {
+            "indice": 2,
+            "n_condicoes": 6,
+            "n_flags": 2,
+            "flags": [
+              "ancora_nao_verificavel",
+              "tema_verbatim"
+            ],
+            "n_temas_cobertos": 6
+          }
+        ],
+        "uso": {
+          "prompt_tokens": 10410,
+          "completion_tokens": 910,
+          "cache_hit_tokens": 0,
+          "cache_miss_tokens": 10410
+        },
+        "latencia_s": 20.03,
+        "spec_version": "1.9.25"
       }
     },
     "joker-folie-a-deux": {
@@ -24442,6 +26853,143 @@ window.ESPECTRO_DATA = {
           "cache_miss_tokens": 3552
         },
         "latencia_s": 44.7
+      },
+      "condicoes": {
+        "vale_a_pena": [
+          {
+            "texto": "aprecia números musicais usados de forma criativa para expressar a mente do protagonista",
+            "tema_origem": "POS-A",
+            "bucket_origem": "positivas",
+            "tema_texto": "Uso do musical como expressão da mente",
+            "rotulo_forca": "muitos"
+          },
+          {
+            "texto": "se interessa por uma provocação deliberada à idolatria da persona do Coringa",
+            "tema_origem": "POS-B",
+            "bucket_origem": "positivas",
+            "tema_texto": "Crítica à idolatria do Coringa",
+            "rotulo_forca": "alguns"
+          },
+          {
+            "texto": "valoriza atuações marcantes de Joaquin Phoenix e Lady Gaga com complexidade e energia",
+            "tema_origem": "POS-C",
+            "bucket_origem": "positivas",
+            "tema_texto": "Atuações marcantes (Phoenix e Gaga)",
+            "rotulo_forca": "alguns"
+          }
+        ],
+        "talvez_evite": [
+          {
+            "texto": "se incomoda com canções e números musicais que interrompem o ritmo da trama",
+            "tema_origem": "NEG-A",
+            "bucket_origem": "negativas",
+            "tema_texto": "Números musicais deslocados",
+            "rotulo_forca": "a maioria"
+          },
+          {
+            "texto": "se incomoda com narrativas repetitivas que quase não avançam a história dos personagens",
+            "tema_origem": "NEG-B",
+            "bucket_origem": "negativas",
+            "tema_texto": "Roteiro fraco e sem desenvolvimento",
+            "rotulo_forca": "muitos"
+          },
+          {
+            "texto": "espera reencontrar Arthur Fleck com a mesma complexidade e profundidade do filme anterior",
+            "tema_origem": "NEG-C",
+            "bucket_origem": "negativas",
+            "tema_texto": "Descaracterização do Arthur Fleck",
+            "rotulo_forca": "muitos"
+          },
+          {
+            "texto": "espera que a personagem de Lady Gaga tenha papel central e relevância na história",
+            "tema_origem": "NEG-E",
+            "bucket_origem": "negativas",
+            "tema_texto": "Personagem Harley Quinn subutilizada",
+            "rotulo_forca": "alguns"
+          }
+        ],
+        "ordem_colunas": [
+          "talvez_evite",
+          "vale_a_pena"
+        ],
+        "peso": {
+          "vale_a_pena": {
+            "peso_pct": 21,
+            "peso_texto": "~21% das notas",
+            "nota_de_amostra": null
+          },
+          "talvez_evite": {
+            "peso_pct": 46,
+            "peso_texto": "~46% das notas",
+            "nota_de_amostra": null
+          }
+        },
+        "peso_meio": {
+          "pct": 33,
+          "texto": "~33% das notas ficaram no meio-termo"
+        },
+        "origem": "llm",
+        "temas_pedidos": {
+          "vale_a_pena": [
+            "POS-A",
+            "POS-B",
+            "POS-C"
+          ],
+          "talvez_evite": [
+            "NEG-A",
+            "NEG-B",
+            "NEG-C",
+            "NEG-E"
+          ]
+        },
+        "temas_saltados": {
+          "vale_a_pena": [],
+          "talvez_evite": []
+        },
+        "descartadas": [],
+        "retry": null,
+        "provider": "gemini",
+        "modelo": "gemini-3.7-flash",
+        "n_candidatos": 3,
+        "n_chamadas": 3,
+        "indice_escolhido": 0,
+        "candidatos": [
+          {
+            "indice": 0,
+            "n_condicoes": 7,
+            "n_flags": 0,
+            "flags": [],
+            "n_temas_cobertos": 7
+          },
+          {
+            "indice": 1,
+            "n_condicoes": 7,
+            "n_flags": 2,
+            "flags": [
+              "ancora_nao_verificavel",
+              "sem_discriminacao"
+            ],
+            "n_temas_cobertos": 7
+          },
+          {
+            "indice": 2,
+            "n_condicoes": 7,
+            "n_flags": 4,
+            "flags": [
+              "ancora_nao_verificavel",
+              "sem_discriminacao"
+            ],
+            "n_temas_cobertos": 7
+          }
+        ],
+        "uso": {
+          "prompt_tokens": 8004,
+          "completion_tokens": 1000,
+          "cache_hit_tokens": 0,
+          "cache_miss_tokens": 8004
+        },
+        "latencia_s": 15.66,
+        "spec_version": "1.9.25"
       }
     },
     "longlegs": {
@@ -25795,6 +28343,143 @@ window.ESPECTRO_DATA = {
           "cache_miss_tokens": 3648
         },
         "latencia_s": 31.24
+      },
+      "condicoes": {
+        "vale_a_pena": [
+          {
+            "texto": "valoriza atuações assustadoras e intensas que sustentam o clima tenso da narrativa",
+            "tema_origem": "POS-A",
+            "bucket_origem": "positivas",
+            "tema_texto": "Atuações marcantes",
+            "rotulo_forca": "muitos"
+          },
+          {
+            "texto": "busca um suspense constante e atmosfera opressiva sem dependência de sustos fáceis",
+            "tema_origem": "POS-B",
+            "bucket_origem": "positivas",
+            "tema_texto": "Atmosfera e tensão",
+            "rotulo_forca": "muitos"
+          },
+          {
+            "texto": "aprecia fotografia marcante com ângulos incomuns e uso estilizado de cores",
+            "tema_origem": "POS-C",
+            "bucket_origem": "positivas",
+            "tema_texto": "Direção de fotografia e estilo visual",
+            "rotulo_forca": "muitos"
+          },
+          {
+            "texto": "quer um mistério envolvente e aceita viradas abruptas na trama",
+            "tema_origem": "POS-D",
+            "bucket_origem": "positivas",
+            "tema_texto": "Roteiro e narrativa",
+            "rotulo_forca": "alguns"
+          }
+        ],
+        "talvez_evite": [
+          {
+            "texto": "se irrita com furos na trama, explicações superficiais e resoluções apressadas de eventos",
+            "tema_origem": "NEG-A",
+            "bucket_origem": "negativas",
+            "tema_texto": "Roteiro confuso e sem lógica",
+            "rotulo_forca": "muitos"
+          },
+          {
+            "texto": "espera sustos efetivos e medo real, achando insuficiente apenas um clima tenso",
+            "tema_origem": "NEG-C",
+            "bucket_origem": "negativas",
+            "tema_texto": "Falta de sustos e terror fraco",
+            "rotulo_forca": "muitos"
+          },
+          {
+            "texto": "se decepciona com personagens sem profundidade e pouco carisma, apesar da dedicação dos atores",
+            "tema_origem": "NEG-F",
+            "bucket_origem": "negativas",
+            "tema_texto": "Atuações e personagens fracos",
+            "rotulo_forca": "alguns"
+          }
+        ],
+        "ordem_colunas": [
+          "vale_a_pena",
+          "talvez_evite"
+        ],
+        "peso": {
+          "vale_a_pena": {
+            "peso_pct": 57,
+            "peso_texto": "~57% das notas",
+            "nota_de_amostra": null
+          },
+          "talvez_evite": {
+            "peso_pct": 13,
+            "peso_texto": "~13% das notas",
+            "nota_de_amostra": null
+          }
+        },
+        "peso_meio": {
+          "pct": 31,
+          "texto": "~31% das notas ficaram no meio-termo"
+        },
+        "origem": "llm",
+        "temas_pedidos": {
+          "vale_a_pena": [
+            "POS-A",
+            "POS-B",
+            "POS-C",
+            "POS-D"
+          ],
+          "talvez_evite": [
+            "NEG-A",
+            "NEG-B",
+            "NEG-C",
+            "NEG-F"
+          ]
+        },
+        "temas_saltados": {
+          "vale_a_pena": [],
+          "talvez_evite": []
+        },
+        "descartadas": [],
+        "retry": null,
+        "provider": "gemini",
+        "modelo": "gemini-3.7-flash",
+        "n_candidatos": 3,
+        "n_chamadas": 3,
+        "indice_escolhido": 1,
+        "candidatos": [
+          {
+            "indice": 0,
+            "n_condicoes": 6,
+            "n_flags": 1,
+            "flags": [
+              "ancora_nao_verificavel"
+            ],
+            "n_temas_cobertos": 6
+          },
+          {
+            "indice": 1,
+            "n_condicoes": 8,
+            "n_flags": 0,
+            "flags": [],
+            "n_temas_cobertos": 8
+          },
+          {
+            "indice": 2,
+            "n_condicoes": 6,
+            "n_flags": 2,
+            "flags": [
+              "ancora_nao_verificavel",
+              "sem_discriminacao"
+            ],
+            "n_temas_cobertos": 6
+          }
+        ],
+        "uso": {
+          "prompt_tokens": 8730,
+          "completion_tokens": 990,
+          "cache_hit_tokens": 0,
+          "cache_miss_tokens": 8730
+        },
+        "latencia_s": 18.03,
+        "spec_version": "1.9.25"
       }
     },
     "mother-2017": {
@@ -27156,6 +29841,139 @@ window.ESPECTRO_DATA = {
           "cache_miss_tokens": 3573
         },
         "latencia_s": 37.99
+      },
+      "condicoes": {
+        "vale_a_pena": [
+          {
+            "texto": "se interessa por narrativas construídas como uma alegoria bíblica carregada de metáforas",
+            "tema_origem": "POS-A",
+            "bucket_origem": "positivas",
+            "tema_texto": "Símbolos e metáforas religiosas",
+            "rotulo_forca": "muitos"
+          },
+          {
+            "texto": "valoriza uma atuação crua e de grande intensidade da protagonista",
+            "tema_origem": "POS-B",
+            "bucket_origem": "positivas",
+            "tema_texto": "Desempenho de Jennifer Lawrence",
+            "rotulo_forca": "muitos"
+          },
+          {
+            "texto": "procura um suspense sufocante que provoque uma constante sensação de opressão",
+            "tema_origem": "POS-D",
+            "bucket_origem": "positivas",
+            "tema_texto": "Sensação de desconforto e ansiedade",
+            "rotulo_forca": "alguns"
+          }
+        ],
+        "talvez_evite": [
+          {
+            "texto": "se incomoda com excesso de simbolismos e metáforas que tornam a trama enfadonha",
+            "tema_origem": "NEG-A",
+            "bucket_origem": "negativas",
+            "tema_texto": "Alta carga alegórica e excesso de simbolismo",
+            "rotulo_forca": "muitos"
+          },
+          {
+            "texto": "evita obras que provoquem angústia extrema e um nível severo de estresse",
+            "tema_origem": "NEG-B",
+            "bucket_origem": "negativas",
+            "tema_texto": "Experiência insuportável e desconfortável",
+            "rotulo_forca": "muitos"
+          },
+          {
+            "texto": "se incomoda com um ritmo que faz o filme parecer longo e cansativo",
+            "tema_origem": "NEG-C",
+            "bucket_origem": "negativas",
+            "tema_texto": "Ritmo problemático e sensação de longa duração",
+            "rotulo_forca": "alguns"
+          }
+        ],
+        "ordem_colunas": [
+          "vale_a_pena",
+          "talvez_evite"
+        ],
+        "peso": {
+          "vale_a_pena": {
+            "peso_pct": 64,
+            "peso_texto": "~64% das notas",
+            "nota_de_amostra": null
+          },
+          "talvez_evite": {
+            "peso_pct": 14,
+            "peso_texto": "~14% das notas",
+            "nota_de_amostra": null
+          }
+        },
+        "peso_meio": {
+          "pct": 22,
+          "texto": "~22% das notas ficaram no meio-termo"
+        },
+        "origem": "llm",
+        "temas_pedidos": {
+          "vale_a_pena": [
+            "POS-A",
+            "POS-B",
+            "POS-C",
+            "POS-D"
+          ],
+          "talvez_evite": [
+            "NEG-A",
+            "NEG-B",
+            "NEG-C",
+            "NEG-E"
+          ]
+        },
+        "temas_saltados": {
+          "vale_a_pena": [
+            "POS-C"
+          ],
+          "talvez_evite": [
+            "NEG-E"
+          ]
+        },
+        "descartadas": [],
+        "retry": null,
+        "provider": "gemini",
+        "modelo": "gemini-3.7-flash",
+        "n_candidatos": 3,
+        "n_chamadas": 3,
+        "indice_escolhido": 1,
+        "candidatos": [
+          {
+            "indice": 0,
+            "n_condicoes": 6,
+            "n_flags": 2,
+            "flags": [
+              "sem_discriminacao"
+            ],
+            "n_temas_cobertos": 6
+          },
+          {
+            "indice": 1,
+            "n_condicoes": 6,
+            "n_flags": 0,
+            "flags": [],
+            "n_temas_cobertos": 6
+          },
+          {
+            "indice": 2,
+            "n_condicoes": 6,
+            "n_flags": 1,
+            "flags": [
+              "sem_discriminacao"
+            ],
+            "n_temas_cobertos": 6
+          }
+        ],
+        "uso": {
+          "prompt_tokens": 8289,
+          "completion_tokens": 867,
+          "cache_hit_tokens": 0,
+          "cache_miss_tokens": 8289
+        },
+        "latencia_s": 19.32,
+        "spec_version": "1.9.25"
       }
     },
     "napoleon-2023": {
@@ -28508,6 +31326,166 @@ window.ESPECTRO_DATA = {
           "cache_miss_tokens": 4026
         },
         "latencia_s": 25.83
+      },
+      "condicoes": {
+        "vale_a_pena": [
+          {
+            "texto": "aprecia atuações marcantes que transitam entre autoridade e vulnerabilidade emocional",
+            "tema_origem": "POS-A",
+            "bucket_origem": "positivas",
+            "tema_texto": "Atuações e carisma de Joaquin Phoenix e Vanessa Kirby",
+            "rotulo_forca": "alguns"
+          },
+          {
+            "texto": "busca uma experiência visual rica em cenários, figurinos e fotografia deslumbrante",
+            "tema_origem": "POS-B",
+            "bucket_origem": "positivas",
+            "tema_texto": "Impacto visual e direção de arte",
+            "rotulo_forca": "alguns"
+          },
+          {
+            "texto": "valoriza grandes cenas de batalha encenadas com brutalidade e coreografias autênticas",
+            "tema_origem": "POS-C",
+            "bucket_origem": "positivas",
+            "tema_texto": "Qualidade das cenas de batalha",
+            "rotulo_forca": "alguns"
+          },
+          {
+            "texto": "prefere retratos históricos focados na vida pessoal e nas inseguranças do líder",
+            "tema_origem": "POS-D",
+            "bucket_origem": "positivas",
+            "tema_texto": "Abordagem pessoal e íntima do personagem",
+            "rotulo_forca": "alguns"
+          },
+          {
+            "texto": "prefere a versão estendida com ritmo aprofundado em vez do corte original corrido",
+            "tema_origem": "POS-E",
+            "bucket_origem": "positivas",
+            "tema_texto": "Ritmo e edição",
+            "rotulo_forca": "alguns"
+          }
+        ],
+        "talvez_evite": [
+          {
+            "texto": "se incomoda com figuras históricas retratadas de forma fraca e caricata",
+            "tema_origem": "NEG-A",
+            "bucket_origem": "negativas",
+            "tema_texto": "Retrato de Napoleão",
+            "rotulo_forca": "muitos"
+          },
+          {
+            "texto": "exige rigor e fidelidade histórica em datas, eventos e batalhas retratadas",
+            "tema_origem": "NEG-B",
+            "bucket_origem": "negativas",
+            "tema_texto": "Imprecisões históricas",
+            "rotulo_forca": "muitos"
+          },
+          {
+            "texto": "rejeita narrativas fragmentadas que pulam eventos históricos sem oferecer contexto suficiente",
+            "tema_origem": "NEG-C",
+            "bucket_origem": "negativas",
+            "tema_texto": "Ritmo e edição",
+            "rotulo_forca": "alguns"
+          },
+          {
+            "texto": "busca combates com estratégia e clareza tática além do espetáculo visual",
+            "tema_origem": "NEG-F",
+            "bucket_origem": "negativas",
+            "tema_texto": "Batalhas decepcionantes",
+            "rotulo_forca": "alguns"
+          }
+        ],
+        "ordem_colunas": [
+          "vale_a_pena",
+          "talvez_evite"
+        ],
+        "peso": {
+          "vale_a_pena": {
+            "peso_pct": 33,
+            "peso_texto": "~33% das notas",
+            "nota_de_amostra": null
+          },
+          "talvez_evite": {
+            "peso_pct": 22,
+            "peso_texto": "~22% das notas",
+            "nota_de_amostra": null
+          }
+        },
+        "peso_meio": {
+          "pct": 45,
+          "texto": "~45% das notas ficaram no meio-termo"
+        },
+        "origem": "llm",
+        "temas_pedidos": {
+          "vale_a_pena": [
+            "POS-A",
+            "POS-B",
+            "POS-C",
+            "POS-D",
+            "POS-E"
+          ],
+          "talvez_evite": [
+            "NEG-A",
+            "NEG-B",
+            "NEG-C",
+            "NEG-E",
+            "NEG-F"
+          ]
+        },
+        "temas_saltados": {
+          "vale_a_pena": [],
+          "talvez_evite": [
+            "NEG-E"
+          ]
+        },
+        "descartadas": [],
+        "retry": {
+          "n_reprovadas": 1,
+          "n_aplicadas": 1,
+          "n_saltadas_pelo_modelo": 0,
+          "n_descartadas": 0
+        },
+        "provider": "gemini",
+        "modelo": "gemini-3.7-flash",
+        "n_candidatos": 3,
+        "n_chamadas": 4,
+        "indice_escolhido": 0,
+        "candidatos": [
+          {
+            "indice": 0,
+            "n_condicoes": 9,
+            "n_flags": 1,
+            "flags": [
+              "sem_discriminacao"
+            ],
+            "n_temas_cobertos": 9
+          },
+          {
+            "indice": 1,
+            "n_condicoes": 8,
+            "n_flags": 0,
+            "flags": [],
+            "n_temas_cobertos": 8
+          },
+          {
+            "indice": 2,
+            "n_condicoes": 8,
+            "n_flags": 3,
+            "flags": [
+              "ancora_nao_verificavel",
+              "sem_discriminacao"
+            ],
+            "n_temas_cobertos": 8
+          }
+        ],
+        "uso": {
+          "prompt_tokens": 11703,
+          "completion_tokens": 1253,
+          "cache_hit_tokens": 0,
+          "cache_miss_tokens": 11703
+        },
+        "latencia_s": 34.15,
+        "spec_version": "1.9.25"
       }
     },
     "obsession-2026": {
@@ -29798,6 +32776,124 @@ window.ESPECTRO_DATA = {
           "cache_miss_tokens": 10510
         },
         "latencia_s": 30.73
+      },
+      "condicoes": {
+        "vale_a_pena": [
+          {
+            "texto": "busca atuações marcantes com interpretações intensas de forte volatilidade emocional",
+            "tema_origem": "POS-A",
+            "bucket_origem": "positivas",
+            "tema_texto": "Atuações convincentes",
+            "rotulo_forca": null
+          },
+          {
+            "texto": "valoriza um estilo visual envolvente com iluminação e lentes que criam tensão",
+            "tema_origem": "POS-B",
+            "bucket_origem": "positivas",
+            "tema_texto": "Direção de fotografia e estilo visual",
+            "rotulo_forca": null
+          },
+          {
+            "texto": "procura uma abordagem original que subverte convenções ao tratar de obsessão",
+            "tema_origem": "POS-C",
+            "bucket_origem": "positivas",
+            "tema_texto": "Originalidade e abordagem inovadora",
+            "rotulo_forca": null
+          }
+        ],
+        "talvez_evite": [
+          {
+            "texto": "se incomoda com narrativas pouco desenvolvidas que geram confusão no enredo",
+            "tema_origem": "NEG-A",
+            "bucket_origem": "negativas",
+            "tema_texto": "Roteiro fraco e confuso",
+            "rotulo_forca": null
+          },
+          {
+            "texto": "não gosta de obras que oscilam sem firmeza entre romance e terror",
+            "tema_origem": "NEG-B",
+            "bucket_origem": "negativas",
+            "tema_texto": "Tom inadequado",
+            "rotulo_forca": null
+          }
+        ],
+        "ordem_colunas": [
+          "vale_a_pena",
+          "talvez_evite"
+        ],
+        "peso": {
+          "vale_a_pena": {
+            "peso_pct": 55,
+            "peso_texto": "~55% das notas",
+            "nota_de_amostra": "amostra pequena"
+          },
+          "talvez_evite": {
+            "peso_pct": 16,
+            "peso_texto": "~16% das notas",
+            "nota_de_amostra": "amostra pequena"
+          }
+        },
+        "peso_meio": {
+          "pct": 29,
+          "texto": "~29% das notas ficaram no meio-termo"
+        },
+        "origem": "llm",
+        "temas_pedidos": {
+          "vale_a_pena": [
+            "POS-A",
+            "POS-B",
+            "POS-C"
+          ],
+          "talvez_evite": [
+            "NEG-A",
+            "NEG-B",
+            "NEG-C"
+          ]
+        },
+        "temas_saltados": {
+          "vale_a_pena": [],
+          "talvez_evite": [
+            "NEG-C"
+          ]
+        },
+        "descartadas": [],
+        "retry": null,
+        "provider": "gemini",
+        "modelo": "gemini-3.7-flash",
+        "n_candidatos": 3,
+        "n_chamadas": 3,
+        "indice_escolhido": 0,
+        "candidatos": [
+          {
+            "indice": 0,
+            "n_condicoes": 5,
+            "n_flags": 0,
+            "flags": [],
+            "n_temas_cobertos": 5
+          },
+          {
+            "indice": 1,
+            "n_condicoes": 5,
+            "n_flags": 0,
+            "flags": [],
+            "n_temas_cobertos": 5
+          },
+          {
+            "indice": 2,
+            "n_condicoes": 5,
+            "n_flags": 0,
+            "flags": [],
+            "n_temas_cobertos": 5
+          }
+        ],
+        "uso": {
+          "prompt_tokens": 7992,
+          "completion_tokens": 725,
+          "cache_hit_tokens": 0,
+          "cache_miss_tokens": 7992
+        },
+        "latencia_s": 11.83,
+        "spec_version": "1.9.25"
       }
     },
     "oppenheimer-2023": {
@@ -31159,6 +34255,154 @@ window.ESPECTRO_DATA = {
           "cache_miss_tokens": 3576
         },
         "latencia_s": 41.9
+      },
+      "condicoes": {
+        "vale_a_pena": [
+          {
+            "texto": "busca atuações intensas que transmitam peso emocional e complexidade psicológica",
+            "tema_origem": "POS-A",
+            "bucket_origem": "positivas",
+            "tema_texto": "Atuações marcantes",
+            "rotulo_forca": "muitos"
+          },
+          {
+            "texto": "aprecia trilhas sonoras marcantes que elevam a tensão, mesmo com momentos de volume excessivo",
+            "tema_origem": "POS-B",
+            "bucket_origem": "positivas",
+            "tema_texto": "Trilha sonora e som impactantes",
+            "rotulo_forca": "muitos"
+          },
+          {
+            "texto": "se impressiona com fotografia marcante e efeitos práticos de grande escala visual",
+            "tema_origem": "POS-C",
+            "bucket_origem": "positivas",
+            "tema_texto": "Fotografia e efeitos visuais impressionantes",
+            "rotulo_forca": "muitos"
+          },
+          {
+            "texto": "gosta de narrativas fragmentadas e desafiadoras que exploram múltiplas linhas temporais",
+            "tema_origem": "POS-D",
+            "bucket_origem": "positivas",
+            "tema_texto": "Narrativa complexa e não linear",
+            "rotulo_forca": "alguns"
+          },
+          {
+            "texto": "tolera um ritmo inicial mais lento e longa duração para obter uma história profunda",
+            "tema_origem": "POS-E",
+            "bucket_origem": "positivas",
+            "tema_texto": "Ritmo e duração prolongados",
+            "rotulo_forca": "alguns"
+          }
+        ],
+        "talvez_evite": [
+          {
+            "texto": "se cansa com filmes longos dominados por diálogos e pouca ação",
+            "tema_origem": "NEG-A",
+            "bucket_origem": "negativas",
+            "tema_texto": "Ritmo lento e duração excessiva",
+            "rotulo_forca": "a maioria"
+          },
+          {
+            "texto": "se irrita com cortes temporais confusos que tornam a narrativa artificialmente complexa",
+            "tema_origem": "NEG-B",
+            "bucket_origem": "negativas",
+            "tema_texto": "Roteiro pretensioso e confuso",
+            "rotulo_forca": "muitos"
+          },
+          {
+            "texto": "se frustra com figuras femininas reduzidas a estereótipos sem relevância na trama",
+            "tema_origem": "NEG-C",
+            "bucket_origem": "negativas",
+            "tema_texto": "Personagens femininas mal desenvolvidas",
+            "rotulo_forca": "alguns"
+          },
+          {
+            "texto": "acha que boa técnica e trilha sonora não salvam uma narrativa monótona",
+            "tema_origem": "NEG-F",
+            "bucket_origem": "negativas",
+            "tema_texto": "Trilha sonora e técnica superestimadas",
+            "rotulo_forca": "alguns"
+          }
+        ],
+        "ordem_colunas": [
+          "vale_a_pena",
+          "talvez_evite"
+        ],
+        "peso": {
+          "vale_a_pena": {
+            "peso_pct": 85,
+            "peso_texto": "~85% das notas",
+            "nota_de_amostra": null
+          },
+          "talvez_evite": {
+            "peso_pct": 3,
+            "peso_texto": "~3% das notas",
+            "nota_de_amostra": null
+          }
+        },
+        "peso_meio": null,
+        "origem": "llm",
+        "temas_pedidos": {
+          "vale_a_pena": [
+            "POS-A",
+            "POS-B",
+            "POS-C",
+            "POS-D",
+            "POS-E"
+          ],
+          "talvez_evite": [
+            "NEG-A",
+            "NEG-B",
+            "NEG-C",
+            "NEG-F"
+          ]
+        },
+        "temas_saltados": {
+          "vale_a_pena": [],
+          "talvez_evite": []
+        },
+        "descartadas": [],
+        "retry": null,
+        "provider": "gemini",
+        "modelo": "gemini-3.7-flash",
+        "n_candidatos": 3,
+        "n_chamadas": 3,
+        "indice_escolhido": 1,
+        "candidatos": [
+          {
+            "indice": 0,
+            "n_condicoes": 7,
+            "n_flags": 1,
+            "flags": [
+              "sem_discriminacao"
+            ],
+            "n_temas_cobertos": 7
+          },
+          {
+            "indice": 1,
+            "n_condicoes": 9,
+            "n_flags": 0,
+            "flags": [],
+            "n_temas_cobertos": 9
+          },
+          {
+            "indice": 2,
+            "n_condicoes": 9,
+            "n_flags": 1,
+            "flags": [
+              "sem_discriminacao"
+            ],
+            "n_temas_cobertos": 9
+          }
+        ],
+        "uso": {
+          "prompt_tokens": 8121,
+          "completion_tokens": 1161,
+          "cache_hit_tokens": 0,
+          "cache_miss_tokens": 8121
+        },
+        "latencia_s": 19.75,
+        "spec_version": "1.9.25"
       }
     },
     "parasite-2019": {
@@ -32523,6 +35767,133 @@ window.ESPECTRO_DATA = {
           "cache_miss_tokens": 3666
         },
         "latencia_s": 10.59
+      },
+      "condicoes": {
+        "vale_a_pena": [
+          {
+            "texto": "busca uma crítica contundente sobre o abismo e a desigualdade entre classes",
+            "tema_origem": "POS-A",
+            "bucket_origem": "positivas",
+            "tema_texto": "Crítica social e desigualdade de classes",
+            "rotulo_forca": "quase todos"
+          },
+          {
+            "texto": "procura uma construção narrativa tensa conduzida por reviravoltas inesperadas",
+            "tema_origem": "POS-B",
+            "bucket_origem": "positivas",
+            "tema_texto": "Roteiro e reviravoltas",
+            "rotulo_forca": "muitos"
+          },
+          {
+            "texto": "valoriza uma direção engenhosa rica em metáforas e simbolismos visuais",
+            "tema_origem": "POS-C",
+            "bucket_origem": "positivas",
+            "tema_texto": "Direção e simbolismo visual",
+            "rotulo_forca": "muitos"
+          }
+        ],
+        "talvez_evite": [
+          {
+            "texto": "se incomoda com um ritmo arrastado e cenas que parecem desnecessárias",
+            "tema_origem": "NEG-A",
+            "bucket_origem": "negativas",
+            "tema_texto": "Ritmo lento e arrastado",
+            "rotulo_forca": "muitos"
+          },
+          {
+            "texto": "se irrita com reviravoltas absurdas e situações que descambam para o inverossímil",
+            "tema_origem": "NEG-B",
+            "bucket_origem": "negativas",
+            "tema_texto": "Roteiro sem sentido ou exagerado",
+            "rotulo_forca": "alguns"
+          },
+          {
+            "texto": "rejeita discussões sobre desigualdade social apresentadas de maneira óbvia e forçada",
+            "tema_origem": "NEG-D",
+            "bucket_origem": "negativas",
+            "tema_texto": "Crítica social superficial ou mal desenvolvida",
+            "rotulo_forca": "alguns"
+          }
+        ],
+        "ordem_colunas": [
+          "vale_a_pena",
+          "talvez_evite"
+        ],
+        "peso": {
+          "vale_a_pena": {
+            "peso_pct": 94,
+            "peso_texto": "~94% das notas",
+            "nota_de_amostra": null
+          },
+          "talvez_evite": {
+            "peso_pct": 1,
+            "peso_texto": "~1% das notas",
+            "nota_de_amostra": null
+          }
+        },
+        "peso_meio": null,
+        "origem": "llm",
+        "temas_pedidos": {
+          "vale_a_pena": [
+            "POS-A",
+            "POS-B",
+            "POS-C"
+          ],
+          "talvez_evite": [
+            "NEG-A",
+            "NEG-B",
+            "NEG-C",
+            "NEG-D"
+          ]
+        },
+        "temas_saltados": {
+          "vale_a_pena": [],
+          "talvez_evite": []
+        },
+        "descartadas": [],
+        "retry": null,
+        "provider": "gemini",
+        "modelo": "gemini-3.7-flash",
+        "n_candidatos": 3,
+        "n_chamadas": 3,
+        "indice_escolhido": 2,
+        "candidatos": [
+          {
+            "indice": 0,
+            "n_condicoes": 7,
+            "n_flags": 2,
+            "flags": [
+              "exemplo_verbatim",
+              "tema_verbatim"
+            ],
+            "n_temas_cobertos": 7
+          },
+          {
+            "indice": 1,
+            "n_condicoes": 7,
+            "n_flags": 2,
+            "flags": [
+              "exemplo_verbatim",
+              "tema_verbatim"
+            ],
+            "n_temas_cobertos": 7
+          },
+          {
+            "indice": 2,
+            "n_condicoes": 7,
+            "n_flags": 0,
+            "flags": [],
+            "n_temas_cobertos": 7
+          }
+        ],
+        "uso": {
+          "prompt_tokens": 8364,
+          "completion_tokens": 1017,
+          "cache_hit_tokens": 0,
+          "cache_miss_tokens": 8364
+        },
+        "latencia_s": 15.73,
+        "spec_version": "1.9.25"
       }
     },
     "pearl-2022": {
@@ -33889,6 +37260,147 @@ window.ESPECTRO_DATA = {
           "cache_miss_tokens": 3693
         },
         "latencia_s": 11.71
+      },
+      "condicoes": {
+        "vale_a_pena": [
+          {
+            "texto": "aprecia uma atuação visceral de Mia Goth retratando uma deterioração psicológica",
+            "tema_origem": "POS-A",
+            "bucket_origem": "positivas",
+            "tema_texto": "Atuação de Mia Goth",
+            "rotulo_forca": "a maioria"
+          },
+          {
+            "texto": "quer ver a protagonista num monólogo devastador de fúria e vulnerabilidade",
+            "tema_origem": "POS-B",
+            "bucket_origem": "positivas",
+            "tema_texto": "Monólogo final",
+            "rotulo_forca": "muitos"
+          },
+          {
+            "texto": "se interessa por estética vintage e fotografia com atmosfera nostálgica e perturbadora",
+            "tema_origem": "POS-C",
+            "bucket_origem": "positivas",
+            "tema_texto": "Estética e direção de arte",
+            "rotulo_forca": "muitos"
+          },
+          {
+            "texto": "procura um estudo de personagem focado no desenvolvimento psicológico e no desconforto",
+            "tema_origem": "POS-E",
+            "bucket_origem": "positivas",
+            "tema_texto": "Estudo de personagem",
+            "rotulo_forca": "alguns"
+          }
+        ],
+        "talvez_evite": [
+          {
+            "texto": "se incomoda com um ritmo arrastado que torna a experiência monótona e cansativa",
+            "tema_origem": "NEG-A",
+            "bucket_origem": "negativas",
+            "tema_texto": "Tédio e ritmo arrastado",
+            "rotulo_forca": "muitos"
+          },
+          {
+            "texto": "tem dificuldade em acompanhar protagonistas com atitudes egocêntricas e desagradáveis",
+            "tema_origem": "NEG-B",
+            "bucket_origem": "negativas",
+            "tema_texto": "Personagem principal irritante",
+            "rotulo_forca": "muitos"
+          },
+          {
+            "texto": "se frustra com personagens secundários superficiais e motivações pouco exploradas",
+            "tema_origem": "NEG-C",
+            "bucket_origem": "negativas",
+            "tema_texto": "Falta de desenvolvimento dos personagens",
+            "rotulo_forca": "alguns"
+          },
+          {
+            "texto": "sente que visuais impressionantes não compensam falhas na história e no desenvolvimento",
+            "tema_origem": "NEG-F",
+            "bucket_origem": "negativas",
+            "tema_texto": "Fotografia e estética visual marcante",
+            "rotulo_forca": "alguns"
+          }
+        ],
+        "ordem_colunas": [
+          "vale_a_pena",
+          "talvez_evite"
+        ],
+        "peso": {
+          "vale_a_pena": {
+            "peso_pct": 76,
+            "peso_texto": "~76% das notas",
+            "nota_de_amostra": null
+          },
+          "talvez_evite": {
+            "peso_pct": 5,
+            "peso_texto": "~5% das notas",
+            "nota_de_amostra": "amostra pequena"
+          }
+        },
+        "peso_meio": null,
+        "origem": "llm",
+        "temas_pedidos": {
+          "vale_a_pena": [
+            "POS-A",
+            "POS-B",
+            "POS-C",
+            "POS-E"
+          ],
+          "talvez_evite": [
+            "NEG-A",
+            "NEG-B",
+            "NEG-C",
+            "NEG-E",
+            "NEG-F"
+          ]
+        },
+        "temas_saltados": {
+          "vale_a_pena": [],
+          "talvez_evite": [
+            "NEG-E"
+          ]
+        },
+        "descartadas": [],
+        "retry": null,
+        "provider": "gemini",
+        "modelo": "gemini-3.7-flash",
+        "n_candidatos": 3,
+        "n_chamadas": 3,
+        "indice_escolhido": 0,
+        "candidatos": [
+          {
+            "indice": 0,
+            "n_condicoes": 8,
+            "n_flags": 0,
+            "flags": [],
+            "n_temas_cobertos": 8
+          },
+          {
+            "indice": 1,
+            "n_condicoes": 8,
+            "n_flags": 1,
+            "flags": [
+              "exemplo_verbatim"
+            ],
+            "n_temas_cobertos": 8
+          },
+          {
+            "indice": 2,
+            "n_condicoes": 8,
+            "n_flags": 0,
+            "flags": [],
+            "n_temas_cobertos": 8
+          }
+        ],
+        "uso": {
+          "prompt_tokens": 8367,
+          "completion_tokens": 1112,
+          "cache_hit_tokens": 0,
+          "cache_miss_tokens": 8367
+        },
+        "latencia_s": 16.93,
+        "spec_version": "1.9.25"
       }
     },
     "perfect-days-2023": {
@@ -35240,6 +38752,144 @@ window.ESPECTRO_DATA = {
           "cache_miss_tokens": 3612
         },
         "latencia_s": 27.42
+      },
+      "condicoes": {
+        "vale_a_pena": [
+          {
+            "texto": "se encanta com a poesia da rotina e a simplicidade do cotidiano",
+            "tema_origem": "POS-A",
+            "bucket_origem": "positivas",
+            "tema_texto": "Beleza na rotina e nas pequenas coisas",
+            "rotulo_forca": "a maioria"
+          },
+          {
+            "texto": "aprecia uma estética visual marcada por belos jogos de luz e sombras",
+            "tema_origem": "POS-B",
+            "bucket_origem": "positivas",
+            "tema_texto": "Fotografia e estética visual",
+            "rotulo_forca": "muitos"
+          },
+          {
+            "texto": "valoriza atuações minimalistas e expressivas construídas através de gestos sutis",
+            "tema_origem": "POS-C",
+            "bucket_origem": "positivas",
+            "tema_texto": "Atuação de Koji Yakusho e minimalismo",
+            "rotulo_forca": "alguns"
+          },
+          {
+            "texto": "busca uma experiência meditativa e aceita um ritmo vagaroso e imersivo",
+            "tema_origem": "POS-D",
+            "bucket_origem": "positivas",
+            "tema_texto": "Ritmo lento e contemplativo",
+            "rotulo_forca": "alguns"
+          }
+        ],
+        "talvez_evite": [
+          {
+            "texto": "se entedia com narrativas lentas e marcadas pela ausência de acontecimentos",
+            "tema_origem": "NEG-A",
+            "bucket_origem": "negativas",
+            "tema_texto": "Ritmo lento e tédio",
+            "rotulo_forca": "muitos"
+          },
+          {
+            "texto": "se incomoda com a romantização do trabalho braçal sem crítica estrutural",
+            "tema_origem": "NEG-B",
+            "bucket_origem": "negativas",
+            "tema_texto": "Romantização do trabalho e da rotina",
+            "rotulo_forca": "muitos"
+          },
+          {
+            "texto": "se frustra com a ausência de arcos dramáticos e desenvolvimento profundo",
+            "tema_origem": "NEG-C",
+            "bucket_origem": "negativas",
+            "tema_texto": "Falta de profundidade narrativa e personagens rasos",
+            "rotulo_forca": "alguns"
+          }
+        ],
+        "ordem_colunas": [
+          "vale_a_pena",
+          "talvez_evite"
+        ],
+        "peso": {
+          "vale_a_pena": {
+            "peso_pct": 92,
+            "peso_texto": "~92% das notas",
+            "nota_de_amostra": null
+          },
+          "talvez_evite": {
+            "peso_pct": 2,
+            "peso_texto": "~2% das notas",
+            "nota_de_amostra": null
+          }
+        },
+        "peso_meio": null,
+        "origem": "llm",
+        "temas_pedidos": {
+          "vale_a_pena": [
+            "POS-A",
+            "POS-B",
+            "POS-C",
+            "POS-D"
+          ],
+          "talvez_evite": [
+            "NEG-A",
+            "NEG-B",
+            "NEG-C",
+            "NEG-D"
+          ]
+        },
+        "temas_saltados": {
+          "vale_a_pena": [],
+          "talvez_evite": [
+            "NEG-D"
+          ]
+        },
+        "descartadas": [],
+        "retry": null,
+        "provider": "gemini",
+        "modelo": "gemini-3.7-flash",
+        "n_candidatos": 3,
+        "n_chamadas": 3,
+        "indice_escolhido": 1,
+        "candidatos": [
+          {
+            "indice": 0,
+            "n_condicoes": 7,
+            "n_flags": 4,
+            "flags": [
+              "ancora_nao_verificavel",
+              "quantidade_escrita",
+              "sem_discriminacao"
+            ],
+            "n_temas_cobertos": 7
+          },
+          {
+            "indice": 1,
+            "n_condicoes": 7,
+            "n_flags": 0,
+            "flags": [],
+            "n_temas_cobertos": 7
+          },
+          {
+            "indice": 2,
+            "n_condicoes": 7,
+            "n_flags": 3,
+            "flags": [
+              "ancora_nao_verificavel",
+              "sem_discriminacao"
+            ],
+            "n_temas_cobertos": 7
+          }
+        ],
+        "uso": {
+          "prompt_tokens": 8067,
+          "completion_tokens": 993,
+          "cache_hit_tokens": 0,
+          "cache_miss_tokens": 8067
+        },
+        "latencia_s": 15.76,
+        "spec_version": "1.9.25"
       }
     },
     "shutter-island": {
@@ -36601,6 +40251,132 @@ window.ESPECTRO_DATA = {
           "cache_miss_tokens": 3663
         },
         "latencia_s": 12.39
+      },
+      "condicoes": {
+        "vale_a_pena": [
+          {
+            "texto": "aprecia uma atmosfera de isolamento e paranoia construída com forte desconforto sensorial",
+            "tema_origem": "POS-A",
+            "bucket_origem": "positivas",
+            "tema_texto": "Atmosfera imersiva",
+            "rotulo_forca": "a maioria"
+          },
+          {
+            "texto": "valoriza uma interpretação intensa que retrata com profundidade a angústia e instabilidade mental",
+            "tema_origem": "POS-C",
+            "bucket_origem": "positivas",
+            "tema_texto": "Atuação de Leonardo DiCaprio",
+            "rotulo_forca": "muitos"
+          }
+        ],
+        "talvez_evite": [
+          {
+            "texto": "se cansa com um ritmo vagaroso marcado por sequências longas que dispersam o interesse",
+            "tema_origem": "NEG-A",
+            "bucket_origem": "negativas",
+            "tema_texto": "Ritmo lento e arrastado",
+            "rotulo_forca": "muitos"
+          },
+          {
+            "texto": "se incomoda com abordagens simplistas de transtornos psiquiátricos que reforçam estigmas e estereótipos",
+            "tema_origem": "NEG-C",
+            "bucket_origem": "negativas",
+            "tema_texto": "Representação problemática de saúde mental",
+            "rotulo_forca": "alguns"
+          }
+        ],
+        "ordem_colunas": [
+          "vale_a_pena",
+          "talvez_evite"
+        ],
+        "peso": {
+          "vale_a_pena": {
+            "peso_pct": 89,
+            "peso_texto": "~89% das notas",
+            "nota_de_amostra": null
+          },
+          "talvez_evite": {
+            "peso_pct": 2,
+            "peso_texto": "~2% das notas",
+            "nota_de_amostra": null
+          }
+        },
+        "peso_meio": null,
+        "origem": "llm",
+        "temas_pedidos": {
+          "vale_a_pena": [
+            "POS-A",
+            "POS-B",
+            "POS-C"
+          ],
+          "talvez_evite": [
+            "NEG-A",
+            "NEG-B",
+            "NEG-C"
+          ]
+        },
+        "temas_saltados": {
+          "vale_a_pena": [
+            "POS-B"
+          ],
+          "talvez_evite": [
+            "NEG-B"
+          ]
+        },
+        "descartadas": [
+          {
+            "texto": "se frustra com narrativas cuja reviravolta final se revela previsível logo no início",
+            "tema_origem": "NEG-B",
+            "lado": "talvez_evite",
+            "flags": [
+              "sem_discriminacao"
+            ]
+          }
+        ],
+        "retry": {
+          "n_reprovadas": 1,
+          "n_aplicadas": 0,
+          "n_saltadas_pelo_modelo": 0,
+          "n_descartadas": 1
+        },
+        "provider": "gemini",
+        "modelo": "gemini-3.7-flash",
+        "n_candidatos": 3,
+        "n_chamadas": 4,
+        "indice_escolhido": 1,
+        "candidatos": [
+          {
+            "indice": 0,
+            "n_condicoes": 4,
+            "n_flags": 0,
+            "flags": [],
+            "n_temas_cobertos": 4
+          },
+          {
+            "indice": 1,
+            "n_condicoes": 5,
+            "n_flags": 1,
+            "flags": [
+              "sem_discriminacao"
+            ],
+            "n_temas_cobertos": 5
+          },
+          {
+            "indice": 2,
+            "n_condicoes": 4,
+            "n_flags": 0,
+            "flags": [],
+            "n_temas_cobertos": 4
+          }
+        ],
+        "uso": {
+          "prompt_tokens": 11330,
+          "completion_tokens": 748,
+          "cache_hit_tokens": 0,
+          "cache_miss_tokens": 11330
+        },
+        "latencia_s": 21.76,
+        "spec_version": "1.9.25"
       }
     },
     "spider-man-across-the-spider-verse": {
@@ -37963,6 +41739,147 @@ window.ESPECTRO_DATA = {
           "cache_miss_tokens": 3615
         },
         "latencia_s": 26.46
+      },
+      "condicoes": {
+        "vale_a_pena": [
+          {
+            "texto": "aprecia visuais de animação inventivos que combinam múltiplos estilos artísticos marcantes",
+            "tema_origem": "POS-A",
+            "bucket_origem": "positivas",
+            "tema_texto": "Animação inovadora e impressionante",
+            "rotulo_forca": "a maioria"
+          },
+          {
+            "texto": "aprecia composições musicais envolventes que aumentam a intensidade e complementam a narrativa",
+            "tema_origem": "POS-B",
+            "bucket_origem": "positivas",
+            "tema_texto": "Trilha sonora marcante",
+            "rotulo_forca": "alguns"
+          },
+          {
+            "texto": "busca arcos de personagens bem construídos com relações e conflitos emocionantes",
+            "tema_origem": "POS-C",
+            "bucket_origem": "positivas",
+            "tema_texto": "Desenvolvimento de personagens",
+            "rotulo_forca": "alguns"
+          },
+          {
+            "texto": "gosta de desfechos em aberto que criam forte expectativa para continuações",
+            "tema_origem": "POS-E",
+            "bucket_origem": "positivas",
+            "tema_texto": "Cliffhanger e expectativa pela continuação",
+            "rotulo_forca": "alguns"
+          }
+        ],
+        "talvez_evite": [
+          {
+            "texto": "se frustra com narrativas incompletas que funcionam apenas como preparação sem desfecho",
+            "tema_origem": "NEG-A",
+            "bucket_origem": "negativas",
+            "tema_texto": "Narrativa fragmentada e sem conclusão satisfatória",
+            "rotulo_forca": "muitos"
+          },
+          {
+            "texto": "se incomoda com um ritmo acelerado e confuso sem coesão clara",
+            "tema_origem": "NEG-B",
+            "bucket_origem": "negativas",
+            "tema_texto": "Enredo apressado e desordenado",
+            "rotulo_forca": "muitos"
+          },
+          {
+            "texto": "se irrita com protagonistas imaturos e figuras centrais pouco aprofundadas",
+            "tema_origem": "NEG-C",
+            "bucket_origem": "negativas",
+            "tema_texto": "Desenvolvimento de personagens fraco ou irritante",
+            "rotulo_forca": "muitos"
+          }
+        ],
+        "ordem_colunas": [
+          "vale_a_pena",
+          "talvez_evite"
+        ],
+        "peso": {
+          "vale_a_pena": {
+            "peso_pct": 93,
+            "peso_texto": "~93% das notas",
+            "nota_de_amostra": null
+          },
+          "talvez_evite": {
+            "peso_pct": 1,
+            "peso_texto": "~1% das notas",
+            "nota_de_amostra": null
+          }
+        },
+        "peso_meio": null,
+        "origem": "llm",
+        "temas_pedidos": {
+          "vale_a_pena": [
+            "POS-A",
+            "POS-B",
+            "POS-C",
+            "POS-E"
+          ],
+          "talvez_evite": [
+            "NEG-A",
+            "NEG-B",
+            "NEG-C"
+          ]
+        },
+        "temas_saltados": {
+          "vale_a_pena": [],
+          "talvez_evite": []
+        },
+        "descartadas": [],
+        "retry": {
+          "n_reprovadas": 1,
+          "n_aplicadas": 1,
+          "n_saltadas_pelo_modelo": 0,
+          "n_descartadas": 0
+        },
+        "provider": "gemini",
+        "modelo": "gemini-3.7-flash",
+        "n_candidatos": 3,
+        "n_chamadas": 4,
+        "indice_escolhido": 0,
+        "candidatos": [
+          {
+            "indice": 0,
+            "n_condicoes": 7,
+            "n_flags": 1,
+            "flags": [
+              "tema_verbatim"
+            ],
+            "n_temas_cobertos": 7
+          },
+          {
+            "indice": 1,
+            "n_condicoes": 7,
+            "n_flags": 2,
+            "flags": [
+              "ancora_nao_verificavel",
+              "sem_discriminacao"
+            ],
+            "n_temas_cobertos": 7
+          },
+          {
+            "indice": 2,
+            "n_condicoes": 6,
+            "n_flags": 2,
+            "flags": [
+              "ancora_nao_verificavel",
+              "sem_discriminacao"
+            ],
+            "n_temas_cobertos": 6
+          }
+        ],
+        "uso": {
+          "prompt_tokens": 11038,
+          "completion_tokens": 1024,
+          "cache_hit_tokens": 0,
+          "cache_miss_tokens": 11038
+        },
+        "latencia_s": 17.85,
+        "spec_version": "1.9.25"
       }
     },
     "talk-to-me-2022": {
@@ -39314,6 +43231,147 @@ window.ESPECTRO_DATA = {
           "cache_miss_tokens": 3669
         },
         "latencia_s": 9.73
+      },
+      "condicoes": {
+        "vale_a_pena": [
+          {
+            "texto": "aprecia narrativas de terror que funcionam como alegorias sobre dependência e autodestruição",
+            "tema_origem": "POS-A",
+            "bucket_origem": "positivas",
+            "tema_texto": "Metáfora do vício e autodestruição",
+            "rotulo_forca": "muitos"
+          },
+          {
+            "texto": "valoriza atuações intensas que transmitem vulnerabilidade e deterioração emocional convincente",
+            "tema_origem": "POS-B",
+            "bucket_origem": "positivas",
+            "tema_texto": "Atuação de Sophie Wilde",
+            "rotulo_forca": "muitos"
+          },
+          {
+            "texto": "busca terror visceral com efeitos práticos marcantes e maquiagem perturbadora",
+            "tema_origem": "POS-C",
+            "bucket_origem": "positivas",
+            "tema_texto": "Efeitos práticos e maquiagem",
+            "rotulo_forca": "alguns"
+          },
+          {
+            "texto": "se diverte acompanhando personagens que tomam escolhas imprudentes e exasperantes",
+            "tema_origem": "POS-D",
+            "bucket_origem": "positivas",
+            "tema_texto": "Personagens exasperantes e decisões irracionais",
+            "rotulo_forca": "alguns"
+          }
+        ],
+        "talvez_evite": [
+          {
+            "texto": "se incomoda com protagonistas egoístas cujas atitudes imprudentes geram frustração",
+            "tema_origem": "NEG-A",
+            "bucket_origem": "negativas",
+            "tema_texto": "Protagonista irritante e decisões idiotas",
+            "rotulo_forca": "muitos"
+          },
+          {
+            "texto": "se decepciona com tramas que deixam ideias pouco desenvolvidas e pontas soltas",
+            "tema_origem": "NEG-B",
+            "bucket_origem": "negativas",
+            "tema_texto": "Roteiro fraco e previsível",
+            "rotulo_forca": "muitos"
+          },
+          {
+            "texto": "se frustra quando premissas promissoras se perdem em subtramas mal exploradas",
+            "tema_origem": "NEG-C",
+            "bucket_origem": "negativas",
+            "tema_texto": "Subaproveitamento do potencial da premissa",
+            "rotulo_forca": "alguns"
+          },
+          {
+            "texto": "se desmotiva com elencos coadjuvantes sem carisma e atuações mornas",
+            "tema_origem": "NEG-F",
+            "bucket_origem": "negativas",
+            "tema_texto": "Atuações medianas",
+            "rotulo_forca": "alguns"
+          }
+        ],
+        "ordem_colunas": [
+          "vale_a_pena",
+          "talvez_evite"
+        ],
+        "peso": {
+          "vale_a_pena": {
+            "peso_pct": 67,
+            "peso_texto": "~67% das notas",
+            "nota_de_amostra": null
+          },
+          "talvez_evite": {
+            "peso_pct": 8,
+            "peso_texto": "~8% das notas",
+            "nota_de_amostra": null
+          }
+        },
+        "peso_meio": {
+          "pct": 25,
+          "texto": "~25% das notas ficaram no meio-termo"
+        },
+        "origem": "llm",
+        "temas_pedidos": {
+          "vale_a_pena": [
+            "POS-A",
+            "POS-B",
+            "POS-C",
+            "POS-D"
+          ],
+          "talvez_evite": [
+            "NEG-A",
+            "NEG-B",
+            "NEG-C",
+            "NEG-F"
+          ]
+        },
+        "temas_saltados": {
+          "vale_a_pena": [],
+          "talvez_evite": []
+        },
+        "descartadas": [],
+        "retry": null,
+        "provider": "gemini",
+        "modelo": "gemini-3.7-flash",
+        "n_candidatos": 3,
+        "n_chamadas": 3,
+        "indice_escolhido": 0,
+        "candidatos": [
+          {
+            "indice": 0,
+            "n_condicoes": 8,
+            "n_flags": 0,
+            "flags": [],
+            "n_temas_cobertos": 8
+          },
+          {
+            "indice": 1,
+            "n_condicoes": 8,
+            "n_flags": 2,
+            "flags": [
+              "sem_discriminacao"
+            ],
+            "n_temas_cobertos": 8
+          },
+          {
+            "indice": 2,
+            "n_condicoes": 8,
+            "n_flags": 0,
+            "flags": [],
+            "n_temas_cobertos": 8
+          }
+        ],
+        "uso": {
+          "prompt_tokens": 8292,
+          "completion_tokens": 1146,
+          "cache_hit_tokens": 0,
+          "cache_miss_tokens": 8292
+        },
+        "latencia_s": 12.72,
+        "spec_version": "1.9.25"
       }
     },
     "the-godfather": {
@@ -40675,6 +44733,134 @@ window.ESPECTRO_DATA = {
           "cache_miss_tokens": 3672
         },
         "latencia_s": 22.31
+      },
+      "condicoes": {
+        "vale_a_pena": [
+          {
+            "texto": "aprecia atuações marcantes que transmitem a complexidade e transformação dos personagens",
+            "tema_origem": "POS-A",
+            "bucket_origem": "positivas",
+            "tema_texto": "Atuações marcantes",
+            "rotulo_forca": "a maioria"
+          },
+          {
+            "texto": "valoriza uma transformação de protagonista profunda, convincente e bem construída",
+            "tema_origem": "POS-B",
+            "bucket_origem": "positivas",
+            "tema_texto": "Transformação de Michael Corleone",
+            "rotulo_forca": "cerca de metade"
+          },
+          {
+            "texto": "busca uma atmosfera envolvente sustentada por direção, fotografia e trilha primorosas",
+            "tema_origem": "POS-C",
+            "bucket_origem": "positivas",
+            "tema_texto": "Maestria técnica e visual",
+            "rotulo_forca": "muitos"
+          },
+          {
+            "texto": "aceita um ritmo pausado e longa duração em favor de desenvolvimento cuidadoso",
+            "tema_origem": "POS-E",
+            "bucket_origem": "positivas",
+            "tema_texto": "Ritmo lento e longa duração",
+            "rotulo_forca": "muitos"
+          }
+        ],
+        "talvez_evite": [
+          {
+            "texto": "se cansa com narrativas de longa duração e ritmo arrastado",
+            "tema_origem": "NEG-A",
+            "bucket_origem": "negativas",
+            "tema_texto": "Ritmo lento e tédio",
+            "rotulo_forca": "cerca de metade"
+          },
+          {
+            "texto": "perde o interesse porque a história não prende e soa desconexa",
+            "tema_origem": "NEG-C",
+            "bucket_origem": "negativas",
+            "tema_texto": "Dificuldade de conexão com a trama",
+            "rotulo_forca": "muitos"
+          }
+        ],
+        "ordem_colunas": [
+          "vale_a_pena",
+          "talvez_evite"
+        ],
+        "peso": {
+          "vale_a_pena": {
+            "peso_pct": 93,
+            "peso_texto": "~93% das notas",
+            "nota_de_amostra": null
+          },
+          "talvez_evite": {
+            "peso_pct": 2,
+            "peso_texto": "~2% das notas",
+            "nota_de_amostra": "amostra pequena"
+          }
+        },
+        "peso_meio": null,
+        "origem": "llm",
+        "temas_pedidos": {
+          "vale_a_pena": [
+            "POS-A",
+            "POS-B",
+            "POS-C",
+            "POS-E"
+          ],
+          "talvez_evite": [
+            "NEG-A",
+            "NEG-B",
+            "NEG-C",
+            "NEG-D"
+          ]
+        },
+        "temas_saltados": {
+          "vale_a_pena": [],
+          "talvez_evite": [
+            "NEG-D"
+          ]
+        },
+        "descartadas": [],
+        "retry": null,
+        "provider": "gemini",
+        "modelo": "gemini-3.7-flash",
+        "n_candidatos": 3,
+        "n_chamadas": 3,
+        "indice_escolhido": 0,
+        "candidatos": [
+          {
+            "indice": 0,
+            "n_condicoes": 7,
+            "n_flags": 0,
+            "flags": [],
+            "n_temas_cobertos": 7
+          },
+          {
+            "indice": 1,
+            "n_condicoes": 7,
+            "n_flags": 1,
+            "flags": [
+              "sem_discriminacao"
+            ],
+            "n_temas_cobertos": 7
+          },
+          {
+            "indice": 2,
+            "n_condicoes": 7,
+            "n_flags": 1,
+            "flags": [
+              "sem_discriminacao"
+            ],
+            "n_temas_cobertos": 7
+          }
+        ],
+        "uso": {
+          "prompt_tokens": 8406,
+          "completion_tokens": 975,
+          "cache_hit_tokens": 0,
+          "cache_miss_tokens": 8406
+        },
+        "latencia_s": 20.04,
+        "spec_version": "1.9.25"
       }
     },
     "the-hateful-eight": {
@@ -42017,6 +46203,144 @@ window.ESPECTRO_DATA = {
           "cache_miss_tokens": 3654
         },
         "latencia_s": 23.35
+      },
+      "condicoes": {
+        "vale_a_pena": [
+          {
+            "texto": "aprecia diálogos provocativos e conversas envolventes conduzidas com humor seco",
+            "tema_origem": "POS-A",
+            "bucket_origem": "positivas",
+            "tema_texto": "Diálogos e roteiro afiados",
+            "rotulo_forca": "a maioria"
+          },
+          {
+            "texto": "busca atuações marcantes de um elenco entrosado e repleto de nuances",
+            "tema_origem": "POS-B",
+            "bucket_origem": "positivas",
+            "tema_texto": "Atuações memoráveis do elenco",
+            "rotulo_forca": "muitos"
+          },
+          {
+            "texto": "valoriza uma ambientação de inverno sufocante com bela fotografia em cenários isolados",
+            "tema_origem": "POS-C",
+            "bucket_origem": "positivas",
+            "tema_texto": "Fotografia e ambientação de inverno",
+            "rotulo_forca": "muitos"
+          },
+          {
+            "texto": "aceita um início lento em troca de uma construção gradual de conflito",
+            "tema_origem": "POS-E",
+            "bucket_origem": "positivas",
+            "tema_texto": "Ritmo lento no início, mas que compensa",
+            "rotulo_forca": "muitos"
+          }
+        ],
+        "talvez_evite": [
+          {
+            "texto": "se cansa com narrativas longas de ritmo muito lento e arrastado",
+            "tema_origem": "NEG-A",
+            "bucket_origem": "negativas",
+            "tema_texto": "Ritmo arrastado e duração excessiva",
+            "rotulo_forca": "muitos"
+          },
+          {
+            "texto": "se incomoda com diálogos excessivos e conversas repetitivas que travam a história",
+            "tema_origem": "NEG-B",
+            "bucket_origem": "negativas",
+            "tema_texto": "Diálogos excessivos e exposição",
+            "rotulo_forca": "muitos"
+          },
+          {
+            "texto": "rejeita o uso insistente de insultos raciais considerados gratuitos na narrativa",
+            "tema_origem": "NEG-C",
+            "bucket_origem": "negativas",
+            "tema_texto": "Uso excessivo de insultos raciais",
+            "rotulo_forca": "muitos"
+          },
+          {
+            "texto": "se desaponta com personagens caricatos e desagradáveis que não geram empatia",
+            "tema_origem": "NEG-E",
+            "bucket_origem": "negativas",
+            "tema_texto": "Personagens pouco interessantes",
+            "rotulo_forca": "alguns"
+          }
+        ],
+        "ordem_colunas": [
+          "vale_a_pena",
+          "talvez_evite"
+        ],
+        "peso": {
+          "vale_a_pena": {
+            "peso_pct": 84,
+            "peso_texto": "~84% das notas",
+            "nota_de_amostra": null
+          },
+          "talvez_evite": {
+            "peso_pct": 3,
+            "peso_texto": "~3% das notas",
+            "nota_de_amostra": null
+          }
+        },
+        "peso_meio": null,
+        "origem": "llm",
+        "temas_pedidos": {
+          "vale_a_pena": [
+            "POS-A",
+            "POS-B",
+            "POS-C",
+            "POS-E"
+          ],
+          "talvez_evite": [
+            "NEG-A",
+            "NEG-B",
+            "NEG-C",
+            "NEG-E"
+          ]
+        },
+        "temas_saltados": {
+          "vale_a_pena": [],
+          "talvez_evite": []
+        },
+        "descartadas": [],
+        "retry": null,
+        "provider": "gemini",
+        "modelo": "gemini-3.7-flash",
+        "n_candidatos": 3,
+        "n_chamadas": 3,
+        "indice_escolhido": 0,
+        "candidatos": [
+          {
+            "indice": 0,
+            "n_condicoes": 8,
+            "n_flags": 0,
+            "flags": [],
+            "n_temas_cobertos": 8
+          },
+          {
+            "indice": 1,
+            "n_condicoes": 8,
+            "n_flags": 1,
+            "flags": [
+              "comprimento"
+            ],
+            "n_temas_cobertos": 8
+          },
+          {
+            "indice": 2,
+            "n_condicoes": 8,
+            "n_flags": 0,
+            "flags": [],
+            "n_temas_cobertos": 8
+          }
+        ],
+        "uso": {
+          "prompt_tokens": 8394,
+          "completion_tokens": 1118,
+          "cache_hit_tokens": 0,
+          "cache_miss_tokens": 8394
+        },
+        "latencia_s": 18.26,
+        "spec_version": "1.9.25"
       }
     },
     "the-northman": {
@@ -43381,6 +47705,159 @@ window.ESPECTRO_DATA = {
           "cache_miss_tokens": 3609
         },
         "latencia_s": 22.72
+      },
+      "condicoes": {
+        "vale_a_pena": [
+          {
+            "texto": "aprecia a direção autoral de Robert Eggers e busca atmosferas imersivas",
+            "tema_origem": "POS-A",
+            "bucket_origem": "positivas",
+            "tema_texto": "Direção e estilo de Robert Eggers",
+            "rotulo_forca": "a maioria"
+          },
+          {
+            "texto": "se impressiona com fotografia marcante em cenários naturais e ambientação rústica",
+            "tema_origem": "POS-B",
+            "bucket_origem": "positivas",
+            "tema_texto": "Fotografia e ambientação",
+            "rotulo_forca": "muitos"
+          },
+          {
+            "texto": "busca histórias de vingança conduzidas por uma masculinidade bruta e visceral",
+            "tema_origem": "POS-C",
+            "bucket_origem": "positivas",
+            "tema_texto": "Revenge e masculinidade animal",
+            "rotulo_forca": "muitos"
+          },
+          {
+            "texto": "gosta de trilhas percussivas envolventes, mesmo com passagens de ritmo mais lento",
+            "tema_origem": "POS-F",
+            "bucket_origem": "positivas",
+            "tema_texto": "Trilha sonora e ritmo",
+            "rotulo_forca": "alguns"
+          }
+        ],
+        "talvez_evite": [
+          {
+            "texto": "se incomoda com atuações artificiais e interpretações que soam exageradas ou deslocadas",
+            "tema_origem": "NEG-B",
+            "bucket_origem": "negativas",
+            "tema_texto": "Atuações ruins",
+            "rotulo_forca": "muitos"
+          },
+          {
+            "texto": "rejeita narrativas de ritmo arrastado com cenas excessivas que tornam o filme cansativo",
+            "tema_origem": "NEG-C",
+            "bucket_origem": "negativas",
+            "tema_texto": "Ritmo lento e arrastado",
+            "rotulo_forca": "muitos"
+          },
+          {
+            "texto": "busca personagens com motivações profundas e tem dificuldade em criar empatia pelo protagonista",
+            "tema_origem": "NEG-F",
+            "bucket_origem": "negativas",
+            "tema_texto": "Desenvolvimento de personagens superficial",
+            "rotulo_forca": "alguns"
+          }
+        ],
+        "ordem_colunas": [
+          "vale_a_pena",
+          "talvez_evite"
+        ],
+        "peso": {
+          "vale_a_pena": {
+            "peso_pct": 76,
+            "peso_texto": "~76% das notas",
+            "nota_de_amostra": null
+          },
+          "talvez_evite": {
+            "peso_pct": 6,
+            "peso_texto": "~6% das notas",
+            "nota_de_amostra": null
+          }
+        },
+        "peso_meio": null,
+        "origem": "llm",
+        "temas_pedidos": {
+          "vale_a_pena": [
+            "POS-A",
+            "POS-B",
+            "POS-C",
+            "POS-F"
+          ],
+          "talvez_evite": [
+            "NEG-A",
+            "NEG-B",
+            "NEG-C",
+            "NEG-F"
+          ]
+        },
+        "temas_saltados": {
+          "vale_a_pena": [],
+          "talvez_evite": [
+            "NEG-A"
+          ]
+        },
+        "descartadas": [
+          {
+            "texto": "se incomoda com enredos de vingança previsíveis e repletos de clichês",
+            "tema_origem": "NEG-A",
+            "lado": "talvez_evite",
+            "flags": [
+              "sem_discriminacao"
+            ]
+          }
+        ],
+        "retry": {
+          "n_reprovadas": 1,
+          "n_aplicadas": 0,
+          "n_saltadas_pelo_modelo": 0,
+          "n_descartadas": 1
+        },
+        "provider": "gemini",
+        "modelo": "gemini-3.7-flash",
+        "n_candidatos": 3,
+        "n_chamadas": 4,
+        "indice_escolhido": 2,
+        "candidatos": [
+          {
+            "indice": 0,
+            "n_condicoes": 8,
+            "n_flags": 2,
+            "flags": [
+              "exemplo_verbatim",
+              "sem_discriminacao"
+            ],
+            "n_temas_cobertos": 8
+          },
+          {
+            "indice": 1,
+            "n_condicoes": 8,
+            "n_flags": 2,
+            "flags": [
+              "exemplo_verbatim",
+              "sem_discriminacao"
+            ],
+            "n_temas_cobertos": 8
+          },
+          {
+            "indice": 2,
+            "n_condicoes": 8,
+            "n_flags": 1,
+            "flags": [
+              "sem_discriminacao"
+            ],
+            "n_temas_cobertos": 8
+          }
+        ],
+        "uso": {
+          "prompt_tokens": 11426,
+          "completion_tokens": 1181,
+          "cache_hit_tokens": 0,
+          "cache_miss_tokens": 11426
+        },
+        "latencia_s": 21.17,
+        "spec_version": "1.9.25"
       }
     },
     "the-substance": {
@@ -44741,6 +49218,155 @@ window.ESPECTRO_DATA = {
           "cache_miss_tokens": 3525
         },
         "latencia_s": 41.38
+      },
+      "condicoes": {
+        "vale_a_pena": [
+          {
+            "texto": "aprecia alegorias sobre a obsessão pela juventude e a pressão estética",
+            "tema_origem": "POS-A",
+            "bucket_origem": "positivas",
+            "tema_texto": "Metáfora da autodestruição e padrões de beleza",
+            "rotulo_forca": "muitos"
+          },
+          {
+            "texto": "busca atuações intensas que transmitam a angústia e a dualidade das personagens",
+            "tema_origem": "POS-B",
+            "bucket_origem": "positivas",
+            "tema_texto": "Atuações de Demi Moore e Margaret Qualley",
+            "rotulo_forca": "alguns"
+          },
+          {
+            "texto": "valoriza uma direção estilizada com enquadramentos expressivos e atmosfera visual marcante",
+            "tema_origem": "POS-C",
+            "bucket_origem": "positivas",
+            "tema_texto": "Direção e estilo visual marcantes",
+            "rotulo_forca": "alguns"
+          },
+          {
+            "texto": "aprecia um terror corporal extremo com efeitos práticos impressionantes e bem executados",
+            "tema_origem": "POS-D",
+            "bucket_origem": "positivas",
+            "tema_texto": "Body horror extremo e efeitos práticos",
+            "rotulo_forca": "alguns"
+          }
+        ],
+        "talvez_evite": [
+          {
+            "texto": "se incomoda com violência extrema e mutilações gráficas usadas apenas para chocar",
+            "tema_origem": "NEG-A",
+            "bucket_origem": "negativas",
+            "tema_texto": "Excesso de gore e violência gratuita",
+            "rotulo_forca": "muitos"
+          },
+          {
+            "texto": "prefere evitar produções com excesso de nudez e forte apelo sexual gratuito",
+            "tema_origem": "NEG-B",
+            "bucket_origem": "negativas",
+            "tema_texto": "Exibicionismo e nudez excessiva",
+            "rotulo_forca": "alguns"
+          },
+          {
+            "texto": "se frustra com narrativas previsíveis que não aprofundam a premissa inicial",
+            "tema_origem": "NEG-C",
+            "bucket_origem": "negativas",
+            "tema_texto": "Roteiro sem desenvolvimento",
+            "rotulo_forca": "alguns"
+          },
+          {
+            "texto": "dispensa críticas sociais tratadas de forma repetitiva e sem nenhuma sutileza",
+            "tema_origem": "NEG-D",
+            "bucket_origem": "negativas",
+            "tema_texto": "Mensagem superficial e repetitiva",
+            "rotulo_forca": "alguns"
+          }
+        ],
+        "ordem_colunas": [
+          "vale_a_pena",
+          "talvez_evite"
+        ],
+        "peso": {
+          "vale_a_pena": {
+            "peso_pct": 75,
+            "peso_texto": "~75% das notas",
+            "nota_de_amostra": null
+          },
+          "talvez_evite": {
+            "peso_pct": 7,
+            "peso_texto": "~7% das notas",
+            "nota_de_amostra": null
+          }
+        },
+        "peso_meio": null,
+        "origem": "llm",
+        "temas_pedidos": {
+          "vale_a_pena": [
+            "POS-A",
+            "POS-B",
+            "POS-C",
+            "POS-D"
+          ],
+          "talvez_evite": [
+            "NEG-A",
+            "NEG-B",
+            "NEG-C",
+            "NEG-D"
+          ]
+        },
+        "temas_saltados": {
+          "vale_a_pena": [],
+          "talvez_evite": []
+        },
+        "descartadas": [],
+        "retry": {
+          "n_reprovadas": 1,
+          "n_aplicadas": 1,
+          "n_saltadas_pelo_modelo": 0,
+          "n_descartadas": 0
+        },
+        "provider": "gemini",
+        "modelo": "gemini-3.7-flash",
+        "n_candidatos": 3,
+        "n_chamadas": 4,
+        "indice_escolhido": 2,
+        "candidatos": [
+          {
+            "indice": 0,
+            "n_condicoes": 8,
+            "n_flags": 2,
+            "flags": [
+              "exemplo_verbatim",
+              "sem_discriminacao"
+            ],
+            "n_temas_cobertos": 8
+          },
+          {
+            "indice": 1,
+            "n_condicoes": 8,
+            "n_flags": 2,
+            "flags": [
+              "exemplo_verbatim",
+              "sem_discriminacao"
+            ],
+            "n_temas_cobertos": 8
+          },
+          {
+            "indice": 2,
+            "n_condicoes": 8,
+            "n_flags": 1,
+            "flags": [
+              "sem_discriminacao"
+            ],
+            "n_temas_cobertos": 8
+          }
+        ],
+        "uso": {
+          "prompt_tokens": 10997,
+          "completion_tokens": 1202,
+          "cache_hit_tokens": 0,
+          "cache_miss_tokens": 10997
+        },
+        "latencia_s": 20.43,
+        "spec_version": "1.9.25"
       }
     },
     "wicked-2024": {
@@ -46105,6 +50731,162 @@ window.ESPECTRO_DATA = {
           "cache_miss_tokens": 3804
         },
         "latencia_s": 11.63
+      },
+      "condicoes": {
+        "vale_a_pena": [
+          {
+            "texto": "se encanta com performances vocais potentes e atuações de intensa entrega emocional",
+            "tema_origem": "POS-A",
+            "bucket_origem": "positivas",
+            "tema_texto": "Atuações e vocais excepcionais",
+            "rotulo_forca": "muitos"
+          },
+          {
+            "texto": "gosta de canções emocionantes e aceita uma presença constante de números musicais",
+            "tema_origem": "POS-B",
+            "bucket_origem": "positivas",
+            "tema_texto": "Músicas marcantes e bem integradas",
+            "rotulo_forca": "muitos"
+          },
+          {
+            "texto": "procura uma narrativa longa, mas envolvente e imersiva do início ao fim",
+            "tema_origem": "POS-C",
+            "bucket_origem": "positivas",
+            "tema_texto": "Cativante e envolvente apesar da duração",
+            "rotulo_forca": "alguns"
+          },
+          {
+            "texto": "aprecia cenários coloridos e figurinos detalhados, mesmo com momentos de iluminação acinzentada",
+            "tema_origem": "POS-D",
+            "bucket_origem": "positivas",
+            "tema_texto": "Visual e direção de arte",
+            "rotulo_forca": "alguns"
+          },
+          {
+            "texto": "valoriza protagonistas carismáticas e desenvolvidas, relevando personagens secundários menos trabalhados",
+            "tema_origem": "POS-F",
+            "bucket_origem": "positivas",
+            "tema_texto": "Personagens cativantes e desenvolvimento",
+            "rotulo_forca": "alguns"
+          }
+        ],
+        "talvez_evite": [
+          {
+            "texto": "se incomoda com canções genéricas e números musicais pouco memoráveis",
+            "tema_origem": "NEG-A",
+            "bucket_origem": "negativas",
+            "tema_texto": "Músicas genéricas e esquecíveis",
+            "rotulo_forca": "muitos"
+          },
+          {
+            "texto": "se frustra com narrativas arrastadas e trechos que pouco acrescentam à história",
+            "tema_origem": "NEG-B",
+            "bucket_origem": "negativas",
+            "tema_texto": "Ritmo arrastado e duração excessiva",
+            "rotulo_forca": "muitos"
+          },
+          {
+            "texto": "espera uma atuação convincente que vá além da simpatia e do alcance vocal",
+            "tema_origem": "NEG-C",
+            "bucket_origem": "negativas",
+            "tema_texto": "Atuação e presença de Ariana Grande",
+            "rotulo_forca": "muitos"
+          },
+          {
+            "texto": "se incomoda com fotografia digital e sem cor destoando da produção visual",
+            "tema_origem": "NEG-E",
+            "bucket_origem": "negativas",
+            "tema_texto": "Estética visual inconsistente ou artificial",
+            "rotulo_forca": "alguns"
+          }
+        ],
+        "ordem_colunas": [
+          "vale_a_pena",
+          "talvez_evite"
+        ],
+        "peso": {
+          "vale_a_pena": {
+            "peso_pct": 76,
+            "peso_texto": "~76% das notas",
+            "nota_de_amostra": "amostra pequena"
+          },
+          "talvez_evite": {
+            "peso_pct": 7,
+            "peso_texto": "~7% das notas",
+            "nota_de_amostra": "amostra pequena"
+          }
+        },
+        "peso_meio": null,
+        "origem": "llm",
+        "temas_pedidos": {
+          "vale_a_pena": [
+            "POS-A",
+            "POS-B",
+            "POS-C",
+            "POS-D",
+            "POS-F"
+          ],
+          "talvez_evite": [
+            "NEG-A",
+            "NEG-B",
+            "NEG-C",
+            "NEG-E"
+          ]
+        },
+        "temas_saltados": {
+          "vale_a_pena": [],
+          "talvez_evite": []
+        },
+        "descartadas": [],
+        "retry": {
+          "n_reprovadas": 1,
+          "n_aplicadas": 1,
+          "n_saltadas_pelo_modelo": 0,
+          "n_descartadas": 0
+        },
+        "provider": "gemini",
+        "modelo": "gemini-3.7-flash",
+        "n_candidatos": 3,
+        "n_chamadas": 4,
+        "indice_escolhido": 1,
+        "candidatos": [
+          {
+            "indice": 0,
+            "n_condicoes": 9,
+            "n_flags": 3,
+            "flags": [
+              "ancora_nao_verificavel",
+              "sem_discriminacao"
+            ],
+            "n_temas_cobertos": 9
+          },
+          {
+            "indice": 1,
+            "n_condicoes": 9,
+            "n_flags": 1,
+            "flags": [
+              "sem_discriminacao"
+            ],
+            "n_temas_cobertos": 9
+          },
+          {
+            "indice": 2,
+            "n_condicoes": 9,
+            "n_flags": 1,
+            "flags": [
+              "sem_discriminacao"
+            ],
+            "n_temas_cobertos": 9
+          }
+        ],
+        "uso": {
+          "prompt_tokens": 12062,
+          "completion_tokens": 1363,
+          "cache_hit_tokens": 0,
+          "cache_miss_tokens": 12062
+        },
+        "latencia_s": 29.23,
+        "spec_version": "1.9.25"
       }
     },
     "wonka": {
@@ -47465,6 +52247,147 @@ window.ESPECTRO_DATA = {
           "cache_miss_tokens": 3627
         },
         "latencia_s": 34.41
+      },
+      "condicoes": {
+        "vale_a_pena": [
+          {
+            "texto": "aprecia uma atuação carismática e enérgica de Timothée Chalamet conduzindo o filme",
+            "tema_origem": "POS-A",
+            "bucket_origem": "positivas",
+            "tema_texto": "Atuação de Timothée Chalamet",
+            "rotulo_forca": "muitos"
+          },
+          {
+            "texto": "gosta de canções cativantes e números musicais alegres, mesmo com impacto irregular",
+            "tema_origem": "POS-B",
+            "bucket_origem": "positivas",
+            "tema_texto": "Música e números musicais",
+            "rotulo_forca": "muitos"
+          },
+          {
+            "texto": "busca um clima acolhedor e mágico, divertido para assistir em família",
+            "tema_origem": "POS-C",
+            "bucket_origem": "positivas",
+            "tema_texto": "Magia, diversão e clima acolhedor",
+            "rotulo_forca": "alguns"
+          },
+          {
+            "texto": "procura uma história envolvente com mensagem positiva sobre generosidade e relações humanas",
+            "tema_origem": "POS-F",
+            "bucket_origem": "positivas",
+            "tema_texto": "Roteiro e mensagem",
+            "rotulo_forca": "alguns"
+          }
+        ],
+        "talvez_evite": [
+          {
+            "texto": "se irrita com números musicais longos e canções sem destaque vocal",
+            "tema_origem": "NEG-A",
+            "bucket_origem": "negativas",
+            "tema_texto": "Músicas e números musicais criticados",
+            "rotulo_forca": "muitos"
+          },
+          {
+            "texto": "espera uma versão sombria e complexa de Wonka próxima dos filmes anteriores",
+            "tema_origem": "NEG-B",
+            "bucket_origem": "negativas",
+            "tema_texto": "Falta de conexão com o personagem original",
+            "rotulo_forca": "muitos"
+          },
+          {
+            "texto": "se incomoda com um roteiro básico, de desenvolvimento arrastado e cenas desconexas",
+            "tema_origem": "NEG-C",
+            "bucket_origem": "negativas",
+            "tema_texto": "Roteiro fraco e previsível",
+            "rotulo_forca": "alguns"
+          },
+          {
+            "texto": "acha que o carisma do protagonista não compensa atuações sem brilho do elenco",
+            "tema_origem": "NEG-E",
+            "bucket_origem": "negativas",
+            "tema_texto": "Atuações medianas e elenco subutilizado",
+            "rotulo_forca": "alguns"
+          }
+        ],
+        "ordem_colunas": [
+          "vale_a_pena",
+          "talvez_evite"
+        ],
+        "peso": {
+          "vale_a_pena": {
+            "peso_pct": 50,
+            "peso_texto": "~50% das notas",
+            "nota_de_amostra": null
+          },
+          "talvez_evite": {
+            "peso_pct": 15,
+            "peso_texto": "~15% das notas",
+            "nota_de_amostra": "amostra pequena"
+          }
+        },
+        "peso_meio": {
+          "pct": 34,
+          "texto": "~34% das notas ficaram no meio-termo"
+        },
+        "origem": "llm",
+        "temas_pedidos": {
+          "vale_a_pena": [
+            "POS-A",
+            "POS-B",
+            "POS-C",
+            "POS-F"
+          ],
+          "talvez_evite": [
+            "NEG-A",
+            "NEG-B",
+            "NEG-C",
+            "NEG-E"
+          ]
+        },
+        "temas_saltados": {
+          "vale_a_pena": [],
+          "talvez_evite": []
+        },
+        "descartadas": [],
+        "retry": null,
+        "provider": "gemini",
+        "modelo": "gemini-3.7-flash",
+        "n_candidatos": 3,
+        "n_chamadas": 3,
+        "indice_escolhido": 1,
+        "candidatos": [
+          {
+            "indice": 0,
+            "n_condicoes": 8,
+            "n_flags": 1,
+            "flags": [
+              "sem_discriminacao"
+            ],
+            "n_temas_cobertos": 8
+          },
+          {
+            "indice": 1,
+            "n_condicoes": 8,
+            "n_flags": 0,
+            "flags": [],
+            "n_temas_cobertos": 8
+          },
+          {
+            "indice": 2,
+            "n_condicoes": 8,
+            "n_flags": 0,
+            "flags": [],
+            "n_temas_cobertos": 8
+          }
+        ],
+        "uso": {
+          "prompt_tokens": 8781,
+          "completion_tokens": 1117,
+          "cache_hit_tokens": 0,
+          "cache_miss_tokens": 8781
+        },
+        "latencia_s": 21.91,
+        "spec_version": "1.9.25"
       }
     },
     "teste-degradado": {

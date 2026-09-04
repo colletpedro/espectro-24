@@ -1356,5 +1356,146 @@
       "cache_miss_tokens": 3627
     },
     "latencia_s": 34.41
+  },
+  "condicoes": {
+    "vale_a_pena": [
+      {
+        "texto": "aprecia uma atuação carismática e enérgica de Timothée Chalamet conduzindo o filme",
+        "tema_origem": "POS-A",
+        "bucket_origem": "positivas",
+        "tema_texto": "Atuação de Timothée Chalamet",
+        "rotulo_forca": "muitos"
+      },
+      {
+        "texto": "gosta de canções cativantes e números musicais alegres, mesmo com impacto irregular",
+        "tema_origem": "POS-B",
+        "bucket_origem": "positivas",
+        "tema_texto": "Música e números musicais",
+        "rotulo_forca": "muitos"
+      },
+      {
+        "texto": "busca um clima acolhedor e mágico, divertido para assistir em família",
+        "tema_origem": "POS-C",
+        "bucket_origem": "positivas",
+        "tema_texto": "Magia, diversão e clima acolhedor",
+        "rotulo_forca": "alguns"
+      },
+      {
+        "texto": "procura uma história envolvente com mensagem positiva sobre generosidade e relações humanas",
+        "tema_origem": "POS-F",
+        "bucket_origem": "positivas",
+        "tema_texto": "Roteiro e mensagem",
+        "rotulo_forca": "alguns"
+      }
+    ],
+    "talvez_evite": [
+      {
+        "texto": "se irrita com números musicais longos e canções sem destaque vocal",
+        "tema_origem": "NEG-A",
+        "bucket_origem": "negativas",
+        "tema_texto": "Músicas e números musicais criticados",
+        "rotulo_forca": "muitos"
+      },
+      {
+        "texto": "espera uma versão sombria e complexa de Wonka próxima dos filmes anteriores",
+        "tema_origem": "NEG-B",
+        "bucket_origem": "negativas",
+        "tema_texto": "Falta de conexão com o personagem original",
+        "rotulo_forca": "muitos"
+      },
+      {
+        "texto": "se incomoda com um roteiro básico, de desenvolvimento arrastado e cenas desconexas",
+        "tema_origem": "NEG-C",
+        "bucket_origem": "negativas",
+        "tema_texto": "Roteiro fraco e previsível",
+        "rotulo_forca": "alguns"
+      },
+      {
+        "texto": "acha que o carisma do protagonista não compensa atuações sem brilho do elenco",
+        "tema_origem": "NEG-E",
+        "bucket_origem": "negativas",
+        "tema_texto": "Atuações medianas e elenco subutilizado",
+        "rotulo_forca": "alguns"
+      }
+    ],
+    "ordem_colunas": [
+      "vale_a_pena",
+      "talvez_evite"
+    ],
+    "peso": {
+      "vale_a_pena": {
+        "peso_pct": 50,
+        "peso_texto": "~50% das notas",
+        "nota_de_amostra": null
+      },
+      "talvez_evite": {
+        "peso_pct": 15,
+        "peso_texto": "~15% das notas",
+        "nota_de_amostra": "amostra pequena"
+      }
+    },
+    "peso_meio": {
+      "pct": 34,
+      "texto": "~34% das notas ficaram no meio-termo"
+    },
+    "origem": "llm",
+    "temas_pedidos": {
+      "vale_a_pena": [
+        "POS-A",
+        "POS-B",
+        "POS-C",
+        "POS-F"
+      ],
+      "talvez_evite": [
+        "NEG-A",
+        "NEG-B",
+        "NEG-C",
+        "NEG-E"
+      ]
+    },
+    "temas_saltados": {
+      "vale_a_pena": [],
+      "talvez_evite": []
+    },
+    "descartadas": [],
+    "retry": null,
+    "provider": "gemini",
+    "modelo": "gemini-3.7-flash",
+    "n_candidatos": 3,
+    "n_chamadas": 3,
+    "indice_escolhido": 1,
+    "candidatos": [
+      {
+        "indice": 0,
+        "n_condicoes": 8,
+        "n_flags": 1,
+        "flags": [
+          "sem_discriminacao"
+        ],
+        "n_temas_cobertos": 8
+      },
+      {
+        "indice": 1,
+        "n_condicoes": 8,
+        "n_flags": 0,
+        "flags": [],
+        "n_temas_cobertos": 8
+      },
+      {
+        "indice": 2,
+        "n_condicoes": 8,
+        "n_flags": 0,
+        "flags": [],
+        "n_temas_cobertos": 8
+      }
+    ],
+    "uso": {
+      "prompt_tokens": 8781,
+      "completion_tokens": 1117,
+      "cache_hit_tokens": 0,
+      "cache_miss_tokens": 8781
+    },
+    "latencia_s": 21.91,
+    "spec_version": "1.9.25"
   }
 }

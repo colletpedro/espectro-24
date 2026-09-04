@@ -1346,5 +1346,142 @@
       "cache_miss_tokens": 3552
     },
     "latencia_s": 44.7
+  },
+  "condicoes": {
+    "vale_a_pena": [
+      {
+        "texto": "aprecia números musicais usados de forma criativa para expressar a mente do protagonista",
+        "tema_origem": "POS-A",
+        "bucket_origem": "positivas",
+        "tema_texto": "Uso do musical como expressão da mente",
+        "rotulo_forca": "muitos"
+      },
+      {
+        "texto": "se interessa por uma provocação deliberada à idolatria da persona do Coringa",
+        "tema_origem": "POS-B",
+        "bucket_origem": "positivas",
+        "tema_texto": "Crítica à idolatria do Coringa",
+        "rotulo_forca": "alguns"
+      },
+      {
+        "texto": "valoriza atuações marcantes de Joaquin Phoenix e Lady Gaga com complexidade e energia",
+        "tema_origem": "POS-C",
+        "bucket_origem": "positivas",
+        "tema_texto": "Atuações marcantes (Phoenix e Gaga)",
+        "rotulo_forca": "alguns"
+      }
+    ],
+    "talvez_evite": [
+      {
+        "texto": "se incomoda com canções e números musicais que interrompem o ritmo da trama",
+        "tema_origem": "NEG-A",
+        "bucket_origem": "negativas",
+        "tema_texto": "Números musicais deslocados",
+        "rotulo_forca": "a maioria"
+      },
+      {
+        "texto": "se incomoda com narrativas repetitivas que quase não avançam a história dos personagens",
+        "tema_origem": "NEG-B",
+        "bucket_origem": "negativas",
+        "tema_texto": "Roteiro fraco e sem desenvolvimento",
+        "rotulo_forca": "muitos"
+      },
+      {
+        "texto": "espera reencontrar Arthur Fleck com a mesma complexidade e profundidade do filme anterior",
+        "tema_origem": "NEG-C",
+        "bucket_origem": "negativas",
+        "tema_texto": "Descaracterização do Arthur Fleck",
+        "rotulo_forca": "muitos"
+      },
+      {
+        "texto": "espera que a personagem de Lady Gaga tenha papel central e relevância na história",
+        "tema_origem": "NEG-E",
+        "bucket_origem": "negativas",
+        "tema_texto": "Personagem Harley Quinn subutilizada",
+        "rotulo_forca": "alguns"
+      }
+    ],
+    "ordem_colunas": [
+      "talvez_evite",
+      "vale_a_pena"
+    ],
+    "peso": {
+      "vale_a_pena": {
+        "peso_pct": 21,
+        "peso_texto": "~21% das notas",
+        "nota_de_amostra": null
+      },
+      "talvez_evite": {
+        "peso_pct": 46,
+        "peso_texto": "~46% das notas",
+        "nota_de_amostra": null
+      }
+    },
+    "peso_meio": {
+      "pct": 33,
+      "texto": "~33% das notas ficaram no meio-termo"
+    },
+    "origem": "llm",
+    "temas_pedidos": {
+      "vale_a_pena": [
+        "POS-A",
+        "POS-B",
+        "POS-C"
+      ],
+      "talvez_evite": [
+        "NEG-A",
+        "NEG-B",
+        "NEG-C",
+        "NEG-E"
+      ]
+    },
+    "temas_saltados": {
+      "vale_a_pena": [],
+      "talvez_evite": []
+    },
+    "descartadas": [],
+    "retry": null,
+    "provider": "gemini",
+    "modelo": "gemini-3.7-flash",
+    "n_candidatos": 3,
+    "n_chamadas": 3,
+    "indice_escolhido": 0,
+    "candidatos": [
+      {
+        "indice": 0,
+        "n_condicoes": 7,
+        "n_flags": 0,
+        "flags": [],
+        "n_temas_cobertos": 7
+      },
+      {
+        "indice": 1,
+        "n_condicoes": 7,
+        "n_flags": 2,
+        "flags": [
+          "ancora_nao_verificavel",
+          "sem_discriminacao"
+        ],
+        "n_temas_cobertos": 7
+      },
+      {
+        "indice": 2,
+        "n_condicoes": 7,
+        "n_flags": 4,
+        "flags": [
+          "ancora_nao_verificavel",
+          "sem_discriminacao"
+        ],
+        "n_temas_cobertos": 7
+      }
+    ],
+    "uso": {
+      "prompt_tokens": 8004,
+      "completion_tokens": 1000,
+      "cache_hit_tokens": 0,
+      "cache_miss_tokens": 8004
+    },
+    "latencia_s": 15.66,
+    "spec_version": "1.9.25"
   }
 }

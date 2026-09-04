@@ -1358,5 +1358,146 @@
       "cache_miss_tokens": 3615
     },
     "latencia_s": 26.46
+  },
+  "condicoes": {
+    "vale_a_pena": [
+      {
+        "texto": "aprecia visuais de animação inventivos que combinam múltiplos estilos artísticos marcantes",
+        "tema_origem": "POS-A",
+        "bucket_origem": "positivas",
+        "tema_texto": "Animação inovadora e impressionante",
+        "rotulo_forca": "a maioria"
+      },
+      {
+        "texto": "aprecia composições musicais envolventes que aumentam a intensidade e complementam a narrativa",
+        "tema_origem": "POS-B",
+        "bucket_origem": "positivas",
+        "tema_texto": "Trilha sonora marcante",
+        "rotulo_forca": "alguns"
+      },
+      {
+        "texto": "busca arcos de personagens bem construídos com relações e conflitos emocionantes",
+        "tema_origem": "POS-C",
+        "bucket_origem": "positivas",
+        "tema_texto": "Desenvolvimento de personagens",
+        "rotulo_forca": "alguns"
+      },
+      {
+        "texto": "gosta de desfechos em aberto que criam forte expectativa para continuações",
+        "tema_origem": "POS-E",
+        "bucket_origem": "positivas",
+        "tema_texto": "Cliffhanger e expectativa pela continuação",
+        "rotulo_forca": "alguns"
+      }
+    ],
+    "talvez_evite": [
+      {
+        "texto": "se frustra com narrativas incompletas que funcionam apenas como preparação sem desfecho",
+        "tema_origem": "NEG-A",
+        "bucket_origem": "negativas",
+        "tema_texto": "Narrativa fragmentada e sem conclusão satisfatória",
+        "rotulo_forca": "muitos"
+      },
+      {
+        "texto": "se incomoda com um ritmo acelerado e confuso sem coesão clara",
+        "tema_origem": "NEG-B",
+        "bucket_origem": "negativas",
+        "tema_texto": "Enredo apressado e desordenado",
+        "rotulo_forca": "muitos"
+      },
+      {
+        "texto": "se irrita com protagonistas imaturos e figuras centrais pouco aprofundadas",
+        "tema_origem": "NEG-C",
+        "bucket_origem": "negativas",
+        "tema_texto": "Desenvolvimento de personagens fraco ou irritante",
+        "rotulo_forca": "muitos"
+      }
+    ],
+    "ordem_colunas": [
+      "vale_a_pena",
+      "talvez_evite"
+    ],
+    "peso": {
+      "vale_a_pena": {
+        "peso_pct": 93,
+        "peso_texto": "~93% das notas",
+        "nota_de_amostra": null
+      },
+      "talvez_evite": {
+        "peso_pct": 1,
+        "peso_texto": "~1% das notas",
+        "nota_de_amostra": null
+      }
+    },
+    "peso_meio": null,
+    "origem": "llm",
+    "temas_pedidos": {
+      "vale_a_pena": [
+        "POS-A",
+        "POS-B",
+        "POS-C",
+        "POS-E"
+      ],
+      "talvez_evite": [
+        "NEG-A",
+        "NEG-B",
+        "NEG-C"
+      ]
+    },
+    "temas_saltados": {
+      "vale_a_pena": [],
+      "talvez_evite": []
+    },
+    "descartadas": [],
+    "retry": {
+      "n_reprovadas": 1,
+      "n_aplicadas": 1,
+      "n_saltadas_pelo_modelo": 0,
+      "n_descartadas": 0
+    },
+    "provider": "gemini",
+    "modelo": "gemini-3.7-flash",
+    "n_candidatos": 3,
+    "n_chamadas": 4,
+    "indice_escolhido": 0,
+    "candidatos": [
+      {
+        "indice": 0,
+        "n_condicoes": 7,
+        "n_flags": 1,
+        "flags": [
+          "tema_verbatim"
+        ],
+        "n_temas_cobertos": 7
+      },
+      {
+        "indice": 1,
+        "n_condicoes": 7,
+        "n_flags": 2,
+        "flags": [
+          "ancora_nao_verificavel",
+          "sem_discriminacao"
+        ],
+        "n_temas_cobertos": 7
+      },
+      {
+        "indice": 2,
+        "n_condicoes": 6,
+        "n_flags": 2,
+        "flags": [
+          "ancora_nao_verificavel",
+          "sem_discriminacao"
+        ],
+        "n_temas_cobertos": 6
+      }
+    ],
+    "uso": {
+      "prompt_tokens": 11038,
+      "completion_tokens": 1024,
+      "cache_hit_tokens": 0,
+      "cache_miss_tokens": 11038
+    },
+    "latencia_s": 17.85,
+    "spec_version": "1.9.25"
   }
 }

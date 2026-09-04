@@ -1362,5 +1362,146 @@
       "cache_miss_tokens": 3693
     },
     "latencia_s": 11.71
+  },
+  "condicoes": {
+    "vale_a_pena": [
+      {
+        "texto": "aprecia uma atuação visceral de Mia Goth retratando uma deterioração psicológica",
+        "tema_origem": "POS-A",
+        "bucket_origem": "positivas",
+        "tema_texto": "Atuação de Mia Goth",
+        "rotulo_forca": "a maioria"
+      },
+      {
+        "texto": "quer ver a protagonista num monólogo devastador de fúria e vulnerabilidade",
+        "tema_origem": "POS-B",
+        "bucket_origem": "positivas",
+        "tema_texto": "Monólogo final",
+        "rotulo_forca": "muitos"
+      },
+      {
+        "texto": "se interessa por estética vintage e fotografia com atmosfera nostálgica e perturbadora",
+        "tema_origem": "POS-C",
+        "bucket_origem": "positivas",
+        "tema_texto": "Estética e direção de arte",
+        "rotulo_forca": "muitos"
+      },
+      {
+        "texto": "procura um estudo de personagem focado no desenvolvimento psicológico e no desconforto",
+        "tema_origem": "POS-E",
+        "bucket_origem": "positivas",
+        "tema_texto": "Estudo de personagem",
+        "rotulo_forca": "alguns"
+      }
+    ],
+    "talvez_evite": [
+      {
+        "texto": "se incomoda com um ritmo arrastado que torna a experiência monótona e cansativa",
+        "tema_origem": "NEG-A",
+        "bucket_origem": "negativas",
+        "tema_texto": "Tédio e ritmo arrastado",
+        "rotulo_forca": "muitos"
+      },
+      {
+        "texto": "tem dificuldade em acompanhar protagonistas com atitudes egocêntricas e desagradáveis",
+        "tema_origem": "NEG-B",
+        "bucket_origem": "negativas",
+        "tema_texto": "Personagem principal irritante",
+        "rotulo_forca": "muitos"
+      },
+      {
+        "texto": "se frustra com personagens secundários superficiais e motivações pouco exploradas",
+        "tema_origem": "NEG-C",
+        "bucket_origem": "negativas",
+        "tema_texto": "Falta de desenvolvimento dos personagens",
+        "rotulo_forca": "alguns"
+      },
+      {
+        "texto": "sente que visuais impressionantes não compensam falhas na história e no desenvolvimento",
+        "tema_origem": "NEG-F",
+        "bucket_origem": "negativas",
+        "tema_texto": "Fotografia e estética visual marcante",
+        "rotulo_forca": "alguns"
+      }
+    ],
+    "ordem_colunas": [
+      "vale_a_pena",
+      "talvez_evite"
+    ],
+    "peso": {
+      "vale_a_pena": {
+        "peso_pct": 76,
+        "peso_texto": "~76% das notas",
+        "nota_de_amostra": null
+      },
+      "talvez_evite": {
+        "peso_pct": 5,
+        "peso_texto": "~5% das notas",
+        "nota_de_amostra": "amostra pequena"
+      }
+    },
+    "peso_meio": null,
+    "origem": "llm",
+    "temas_pedidos": {
+      "vale_a_pena": [
+        "POS-A",
+        "POS-B",
+        "POS-C",
+        "POS-E"
+      ],
+      "talvez_evite": [
+        "NEG-A",
+        "NEG-B",
+        "NEG-C",
+        "NEG-E",
+        "NEG-F"
+      ]
+    },
+    "temas_saltados": {
+      "vale_a_pena": [],
+      "talvez_evite": [
+        "NEG-E"
+      ]
+    },
+    "descartadas": [],
+    "retry": null,
+    "provider": "gemini",
+    "modelo": "gemini-3.7-flash",
+    "n_candidatos": 3,
+    "n_chamadas": 3,
+    "indice_escolhido": 0,
+    "candidatos": [
+      {
+        "indice": 0,
+        "n_condicoes": 8,
+        "n_flags": 0,
+        "flags": [],
+        "n_temas_cobertos": 8
+      },
+      {
+        "indice": 1,
+        "n_condicoes": 8,
+        "n_flags": 1,
+        "flags": [
+          "exemplo_verbatim"
+        ],
+        "n_temas_cobertos": 8
+      },
+      {
+        "indice": 2,
+        "n_condicoes": 8,
+        "n_flags": 0,
+        "flags": [],
+        "n_temas_cobertos": 8
+      }
+    ],
+    "uso": {
+      "prompt_tokens": 8367,
+      "completion_tokens": 1112,
+      "cache_hit_tokens": 0,
+      "cache_miss_tokens": 8367
+    },
+    "latencia_s": 16.93,
+    "spec_version": "1.9.25"
   }
 }

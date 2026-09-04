@@ -1347,5 +1347,143 @@
       "cache_miss_tokens": 3612
     },
     "latencia_s": 27.42
+  },
+  "condicoes": {
+    "vale_a_pena": [
+      {
+        "texto": "se encanta com a poesia da rotina e a simplicidade do cotidiano",
+        "tema_origem": "POS-A",
+        "bucket_origem": "positivas",
+        "tema_texto": "Beleza na rotina e nas pequenas coisas",
+        "rotulo_forca": "a maioria"
+      },
+      {
+        "texto": "aprecia uma estética visual marcada por belos jogos de luz e sombras",
+        "tema_origem": "POS-B",
+        "bucket_origem": "positivas",
+        "tema_texto": "Fotografia e estética visual",
+        "rotulo_forca": "muitos"
+      },
+      {
+        "texto": "valoriza atuações minimalistas e expressivas construídas através de gestos sutis",
+        "tema_origem": "POS-C",
+        "bucket_origem": "positivas",
+        "tema_texto": "Atuação de Koji Yakusho e minimalismo",
+        "rotulo_forca": "alguns"
+      },
+      {
+        "texto": "busca uma experiência meditativa e aceita um ritmo vagaroso e imersivo",
+        "tema_origem": "POS-D",
+        "bucket_origem": "positivas",
+        "tema_texto": "Ritmo lento e contemplativo",
+        "rotulo_forca": "alguns"
+      }
+    ],
+    "talvez_evite": [
+      {
+        "texto": "se entedia com narrativas lentas e marcadas pela ausência de acontecimentos",
+        "tema_origem": "NEG-A",
+        "bucket_origem": "negativas",
+        "tema_texto": "Ritmo lento e tédio",
+        "rotulo_forca": "muitos"
+      },
+      {
+        "texto": "se incomoda com a romantização do trabalho braçal sem crítica estrutural",
+        "tema_origem": "NEG-B",
+        "bucket_origem": "negativas",
+        "tema_texto": "Romantização do trabalho e da rotina",
+        "rotulo_forca": "muitos"
+      },
+      {
+        "texto": "se frustra com a ausência de arcos dramáticos e desenvolvimento profundo",
+        "tema_origem": "NEG-C",
+        "bucket_origem": "negativas",
+        "tema_texto": "Falta de profundidade narrativa e personagens rasos",
+        "rotulo_forca": "alguns"
+      }
+    ],
+    "ordem_colunas": [
+      "vale_a_pena",
+      "talvez_evite"
+    ],
+    "peso": {
+      "vale_a_pena": {
+        "peso_pct": 92,
+        "peso_texto": "~92% das notas",
+        "nota_de_amostra": null
+      },
+      "talvez_evite": {
+        "peso_pct": 2,
+        "peso_texto": "~2% das notas",
+        "nota_de_amostra": null
+      }
+    },
+    "peso_meio": null,
+    "origem": "llm",
+    "temas_pedidos": {
+      "vale_a_pena": [
+        "POS-A",
+        "POS-B",
+        "POS-C",
+        "POS-D"
+      ],
+      "talvez_evite": [
+        "NEG-A",
+        "NEG-B",
+        "NEG-C",
+        "NEG-D"
+      ]
+    },
+    "temas_saltados": {
+      "vale_a_pena": [],
+      "talvez_evite": [
+        "NEG-D"
+      ]
+    },
+    "descartadas": [],
+    "retry": null,
+    "provider": "gemini",
+    "modelo": "gemini-3.7-flash",
+    "n_candidatos": 3,
+    "n_chamadas": 3,
+    "indice_escolhido": 1,
+    "candidatos": [
+      {
+        "indice": 0,
+        "n_condicoes": 7,
+        "n_flags": 4,
+        "flags": [
+          "ancora_nao_verificavel",
+          "quantidade_escrita",
+          "sem_discriminacao"
+        ],
+        "n_temas_cobertos": 7
+      },
+      {
+        "indice": 1,
+        "n_condicoes": 7,
+        "n_flags": 0,
+        "flags": [],
+        "n_temas_cobertos": 7
+      },
+      {
+        "indice": 2,
+        "n_condicoes": 7,
+        "n_flags": 3,
+        "flags": [
+          "ancora_nao_verificavel",
+          "sem_discriminacao"
+        ],
+        "n_temas_cobertos": 7
+      }
+    ],
+    "uso": {
+      "prompt_tokens": 8067,
+      "completion_tokens": 993,
+      "cache_hit_tokens": 0,
+      "cache_miss_tokens": 8067
+    },
+    "latencia_s": 15.76,
+    "spec_version": "1.9.25"
   }
 }

@@ -1356,5 +1356,149 @@
       "cache_miss_tokens": 3633
     },
     "latencia_s": 25.31
+  },
+  "condicoes": {
+    "vale_a_pena": [
+      {
+        "texto": "busca reflexões sobre as cobranças e contradições impostas às mulheres na sociedade",
+        "tema_origem": "POS-A",
+        "bucket_origem": "positivas",
+        "tema_texto": "Crítica ao patriarcado e às expectativas femininas",
+        "rotulo_forca": "muitos"
+      },
+      {
+        "texto": "aprecia atuações versáteis e marcantes, com destaque para o papel de Ken",
+        "tema_origem": "POS-B",
+        "bucket_origem": "positivas",
+        "tema_texto": "Atuações de Margot Robbie e Ryan Gosling",
+        "rotulo_forca": "alguns"
+      },
+      {
+        "texto": "quer um filme comovente sobre a falta de liberdade sob expectativas sociais",
+        "tema_origem": "POS-C",
+        "bucket_origem": "positivas",
+        "tema_texto": "Impacto emocional e reflexão pessoal",
+        "rotulo_forca": "alguns"
+      },
+      {
+        "texto": "valoriza debates feministas acessíveis, mesmo que sem grande profundidade conceitual",
+        "tema_origem": "POS-F",
+        "bucket_origem": "positivas",
+        "tema_texto": "Mensagem feminista e representação",
+        "rotulo_forca": "alguns"
+      }
+    ],
+    "talvez_evite": [
+      {
+        "texto": "se incomoda com discursos temáticos transmitidos de maneira explícita e sem sutileza",
+        "tema_origem": "NEG-A",
+        "bucket_origem": "negativas",
+        "tema_texto": "Discurso feminista forçado e sem sutileza",
+        "rotulo_forca": "muitos"
+      },
+      {
+        "texto": "se frustra com narrativas confusas que misturam ideias sem uma direção clara",
+        "tema_origem": "NEG-B",
+        "bucket_origem": "negativas",
+        "tema_texto": "Roteiro confuso e sem direção clara",
+        "rotulo_forca": "muitos"
+      },
+      {
+        "texto": "se cansa com trechos de ritmo arrastado que provocam tédio",
+        "tema_origem": "NEG-C",
+        "bucket_origem": "negativas",
+        "tema_texto": "Ritmo arrastado e tédio",
+        "rotulo_forca": "alguns"
+      },
+      {
+        "texto": "se incomoda com atuações desiguais ou desempenhos considerados exagerados no elenco",
+        "tema_origem": "NEG-F",
+        "bucket_origem": "negativas",
+        "tema_texto": "Atuações desequilibradas",
+        "rotulo_forca": "alguns"
+      }
+    ],
+    "ordem_colunas": [
+      "vale_a_pena",
+      "talvez_evite"
+    ],
+    "peso": {
+      "vale_a_pena": {
+        "peso_pct": 70,
+        "peso_texto": "~70% das notas",
+        "nota_de_amostra": null
+      },
+      "talvez_evite": {
+        "peso_pct": 8,
+        "peso_texto": "~8% das notas",
+        "nota_de_amostra": null
+      }
+    },
+    "peso_meio": {
+      "pct": 22,
+      "texto": "~22% das notas ficaram no meio-termo"
+    },
+    "origem": "llm",
+    "temas_pedidos": {
+      "vale_a_pena": [
+        "POS-A",
+        "POS-B",
+        "POS-C",
+        "POS-F"
+      ],
+      "talvez_evite": [
+        "NEG-A",
+        "NEG-B",
+        "NEG-C",
+        "NEG-F"
+      ]
+    },
+    "temas_saltados": {
+      "vale_a_pena": [],
+      "talvez_evite": []
+    },
+    "descartadas": [],
+    "retry": null,
+    "provider": "gemini",
+    "modelo": "gemini-3.7-flash",
+    "n_candidatos": 3,
+    "n_chamadas": 3,
+    "indice_escolhido": 1,
+    "candidatos": [
+      {
+        "indice": 0,
+        "n_condicoes": 8,
+        "n_flags": 2,
+        "flags": [
+          "exemplo_verbatim",
+          "sem_discriminacao"
+        ],
+        "n_temas_cobertos": 8
+      },
+      {
+        "indice": 1,
+        "n_condicoes": 8,
+        "n_flags": 0,
+        "flags": [],
+        "n_temas_cobertos": 8
+      },
+      {
+        "indice": 2,
+        "n_condicoes": 8,
+        "n_flags": 2,
+        "flags": [
+          "sem_discriminacao"
+        ],
+        "n_temas_cobertos": 8
+      }
+    ],
+    "uso": {
+      "prompt_tokens": 8340,
+      "completion_tokens": 1028,
+      "cache_hit_tokens": 0,
+      "cache_miss_tokens": 8340
+    },
+    "latencia_s": 16.0,
+    "spec_version": "1.9.25"
   }
 }

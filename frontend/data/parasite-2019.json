@@ -1360,5 +1360,132 @@
       "cache_miss_tokens": 3666
     },
     "latencia_s": 10.59
+  },
+  "condicoes": {
+    "vale_a_pena": [
+      {
+        "texto": "busca uma crítica contundente sobre o abismo e a desigualdade entre classes",
+        "tema_origem": "POS-A",
+        "bucket_origem": "positivas",
+        "tema_texto": "Crítica social e desigualdade de classes",
+        "rotulo_forca": "quase todos"
+      },
+      {
+        "texto": "procura uma construção narrativa tensa conduzida por reviravoltas inesperadas",
+        "tema_origem": "POS-B",
+        "bucket_origem": "positivas",
+        "tema_texto": "Roteiro e reviravoltas",
+        "rotulo_forca": "muitos"
+      },
+      {
+        "texto": "valoriza uma direção engenhosa rica em metáforas e simbolismos visuais",
+        "tema_origem": "POS-C",
+        "bucket_origem": "positivas",
+        "tema_texto": "Direção e simbolismo visual",
+        "rotulo_forca": "muitos"
+      }
+    ],
+    "talvez_evite": [
+      {
+        "texto": "se incomoda com um ritmo arrastado e cenas que parecem desnecessárias",
+        "tema_origem": "NEG-A",
+        "bucket_origem": "negativas",
+        "tema_texto": "Ritmo lento e arrastado",
+        "rotulo_forca": "muitos"
+      },
+      {
+        "texto": "se irrita com reviravoltas absurdas e situações que descambam para o inverossímil",
+        "tema_origem": "NEG-B",
+        "bucket_origem": "negativas",
+        "tema_texto": "Roteiro sem sentido ou exagerado",
+        "rotulo_forca": "alguns"
+      },
+      {
+        "texto": "rejeita discussões sobre desigualdade social apresentadas de maneira óbvia e forçada",
+        "tema_origem": "NEG-D",
+        "bucket_origem": "negativas",
+        "tema_texto": "Crítica social superficial ou mal desenvolvida",
+        "rotulo_forca": "alguns"
+      }
+    ],
+    "ordem_colunas": [
+      "vale_a_pena",
+      "talvez_evite"
+    ],
+    "peso": {
+      "vale_a_pena": {
+        "peso_pct": 94,
+        "peso_texto": "~94% das notas",
+        "nota_de_amostra": null
+      },
+      "talvez_evite": {
+        "peso_pct": 1,
+        "peso_texto": "~1% das notas",
+        "nota_de_amostra": null
+      }
+    },
+    "peso_meio": null,
+    "origem": "llm",
+    "temas_pedidos": {
+      "vale_a_pena": [
+        "POS-A",
+        "POS-B",
+        "POS-C"
+      ],
+      "talvez_evite": [
+        "NEG-A",
+        "NEG-B",
+        "NEG-C",
+        "NEG-D"
+      ]
+    },
+    "temas_saltados": {
+      "vale_a_pena": [],
+      "talvez_evite": []
+    },
+    "descartadas": [],
+    "retry": null,
+    "provider": "gemini",
+    "modelo": "gemini-3.7-flash",
+    "n_candidatos": 3,
+    "n_chamadas": 3,
+    "indice_escolhido": 2,
+    "candidatos": [
+      {
+        "indice": 0,
+        "n_condicoes": 7,
+        "n_flags": 2,
+        "flags": [
+          "exemplo_verbatim",
+          "tema_verbatim"
+        ],
+        "n_temas_cobertos": 7
+      },
+      {
+        "indice": 1,
+        "n_condicoes": 7,
+        "n_flags": 2,
+        "flags": [
+          "exemplo_verbatim",
+          "tema_verbatim"
+        ],
+        "n_temas_cobertos": 7
+      },
+      {
+        "indice": 2,
+        "n_condicoes": 7,
+        "n_flags": 0,
+        "flags": [],
+        "n_temas_cobertos": 7
+      }
+    ],
+    "uso": {
+      "prompt_tokens": 8364,
+      "completion_tokens": 1017,
+      "cache_hit_tokens": 0,
+      "cache_miss_tokens": 8364
+    },
+    "latencia_s": 15.73,
+    "spec_version": "1.9.25"
   }
 }

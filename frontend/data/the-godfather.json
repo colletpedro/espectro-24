@@ -1357,5 +1357,133 @@
       "cache_miss_tokens": 3672
     },
     "latencia_s": 22.31
+  },
+  "condicoes": {
+    "vale_a_pena": [
+      {
+        "texto": "aprecia atuações marcantes que transmitem a complexidade e transformação dos personagens",
+        "tema_origem": "POS-A",
+        "bucket_origem": "positivas",
+        "tema_texto": "Atuações marcantes",
+        "rotulo_forca": "a maioria"
+      },
+      {
+        "texto": "valoriza uma transformação de protagonista profunda, convincente e bem construída",
+        "tema_origem": "POS-B",
+        "bucket_origem": "positivas",
+        "tema_texto": "Transformação de Michael Corleone",
+        "rotulo_forca": "cerca de metade"
+      },
+      {
+        "texto": "busca uma atmosfera envolvente sustentada por direção, fotografia e trilha primorosas",
+        "tema_origem": "POS-C",
+        "bucket_origem": "positivas",
+        "tema_texto": "Maestria técnica e visual",
+        "rotulo_forca": "muitos"
+      },
+      {
+        "texto": "aceita um ritmo pausado e longa duração em favor de desenvolvimento cuidadoso",
+        "tema_origem": "POS-E",
+        "bucket_origem": "positivas",
+        "tema_texto": "Ritmo lento e longa duração",
+        "rotulo_forca": "muitos"
+      }
+    ],
+    "talvez_evite": [
+      {
+        "texto": "se cansa com narrativas de longa duração e ritmo arrastado",
+        "tema_origem": "NEG-A",
+        "bucket_origem": "negativas",
+        "tema_texto": "Ritmo lento e tédio",
+        "rotulo_forca": "cerca de metade"
+      },
+      {
+        "texto": "perde o interesse porque a história não prende e soa desconexa",
+        "tema_origem": "NEG-C",
+        "bucket_origem": "negativas",
+        "tema_texto": "Dificuldade de conexão com a trama",
+        "rotulo_forca": "muitos"
+      }
+    ],
+    "ordem_colunas": [
+      "vale_a_pena",
+      "talvez_evite"
+    ],
+    "peso": {
+      "vale_a_pena": {
+        "peso_pct": 93,
+        "peso_texto": "~93% das notas",
+        "nota_de_amostra": null
+      },
+      "talvez_evite": {
+        "peso_pct": 2,
+        "peso_texto": "~2% das notas",
+        "nota_de_amostra": "amostra pequena"
+      }
+    },
+    "peso_meio": null,
+    "origem": "llm",
+    "temas_pedidos": {
+      "vale_a_pena": [
+        "POS-A",
+        "POS-B",
+        "POS-C",
+        "POS-E"
+      ],
+      "talvez_evite": [
+        "NEG-A",
+        "NEG-B",
+        "NEG-C",
+        "NEG-D"
+      ]
+    },
+    "temas_saltados": {
+      "vale_a_pena": [],
+      "talvez_evite": [
+        "NEG-D"
+      ]
+    },
+    "descartadas": [],
+    "retry": null,
+    "provider": "gemini",
+    "modelo": "gemini-3.7-flash",
+    "n_candidatos": 3,
+    "n_chamadas": 3,
+    "indice_escolhido": 0,
+    "candidatos": [
+      {
+        "indice": 0,
+        "n_condicoes": 7,
+        "n_flags": 0,
+        "flags": [],
+        "n_temas_cobertos": 7
+      },
+      {
+        "indice": 1,
+        "n_condicoes": 7,
+        "n_flags": 1,
+        "flags": [
+          "sem_discriminacao"
+        ],
+        "n_temas_cobertos": 7
+      },
+      {
+        "indice": 2,
+        "n_condicoes": 7,
+        "n_flags": 1,
+        "flags": [
+          "sem_discriminacao"
+        ],
+        "n_temas_cobertos": 7
+      }
+    ],
+    "uso": {
+      "prompt_tokens": 8406,
+      "completion_tokens": 975,
+      "cache_hit_tokens": 0,
+      "cache_miss_tokens": 8406
+    },
+    "latencia_s": 20.04,
+    "spec_version": "1.9.25"
   }
 }
