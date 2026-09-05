@@ -34,7 +34,7 @@ aferição, e esta entrega é a avaliação da correção candidata.)*
 
 A candidata: trocar por `mencoes / de_n` do eixo correspondente, que vem de
 `consenso_verificado.jsonl`, é somado em `Counter` por
-[eixos.py](src/espectro24/eixos.py), é auditável e já é o número que decide o
+[eixos.py](../../../src/espectro24/eixos.py), é auditável e já é o número que decide o
 lift e o estado `contraste`.
 
 **Dois cenários foram medidos**, porque a troca mexe no numerador *e* no

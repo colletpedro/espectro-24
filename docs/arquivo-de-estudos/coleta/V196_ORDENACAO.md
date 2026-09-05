@@ -1,6 +1,6 @@
 # v1.9.6 — Retentativa no Fetcher e passada `by/added-earliest`
 
-**Data:** 2026-08-09 · **Spec:** [SPEC.md](SPEC.md) v1.9.6 (delta escrito ANTES do código)
+**Data:** 2026-08-09 · **Spec:** [SPEC.md](../../../SPEC.md) v1.9.6 (delta escrito ANTES do código)
 
 Não tocados: fronteiras, cota, `min_chars`, cascata, orçamento base, teto de
 extensão, `RESERVA_PROFUNDIDADE`, `FRACOES_PROFUNDIDADE`, schema de eixos,

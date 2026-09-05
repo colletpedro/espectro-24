@@ -44,8 +44,8 @@ contra o qual a docstring de
 > de produção em vez de uma parecida com ela."*
 
 O projeto tem **um módulo inteiro** para reconciliar as duas
-([`uniao_amostra.py`](src/espectro24/uniao_amostra.py), v1.9.15) e um script de
-orquestração ([`estender_classificacao_producao.py`](scripts/estender_classificacao_producao.py)).
+([`uniao_amostra.py`](../../../src/espectro24/uniao_amostra.py), v1.9.15) e um script de
+orquestração ([`estender_classificacao_producao.py`](../../../scripts/estender_classificacao_producao.py)).
 A correção estrutural — estender a classificação até cobrir a seleção de
 produção — **foi aplicada a 3 dos 35 filmes** (`cure`, `cidade-de-deus`,
 `the-invite-2026`); os outros 32 seguem divergentes por decisão registrada.

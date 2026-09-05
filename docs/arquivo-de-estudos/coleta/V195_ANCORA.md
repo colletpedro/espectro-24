@@ -1,6 +1,6 @@
 # v1.9.5 — Âncora de profundidade e estratificação da seleção
 
-**Data:** 2026-08-09 · **Spec:** [SPEC.md](SPEC.md) v1.9.5 (delta escrito ANTES do código)
+**Data:** 2026-08-09 · **Spec:** [SPEC.md](../../../SPEC.md) v1.9.5 (delta escrito ANTES do código)
 
 **Última sessão da camada de COLETA.** Depois desta versão, todo parâmetro
 restante do projeto é de ANÁLISE, aplicável sobre o bruto sem uma requisição.

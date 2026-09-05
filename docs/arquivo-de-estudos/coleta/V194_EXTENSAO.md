@@ -1,6 +1,6 @@
 # v1.9.4 — Extensão de orçamento por déficit
 
-**Data:** 2026-08-08 · **Spec:** [SPEC.md](SPEC.md) v1.9.4 (delta escrito ANTES da implementação)
+**Data:** 2026-08-08 · **Spec:** [SPEC.md](../../../SPEC.md) v1.9.4 (delta escrito ANTES da implementação)
 
 Fora de escopo e não tocados: `MIN_CHARS`, cascata, fronteiras, cota, alocação
 proporcional, `ORCAMENTO_PAGINAS_POR_BUCKET` (a base continua **16**),

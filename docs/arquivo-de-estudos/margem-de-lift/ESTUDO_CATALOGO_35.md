@@ -611,7 +611,7 @@ sorteio com reposição preservando o n (a população é exatamente a que o blo
 publicado conta: seleção de produção ∩ consenso verificado). Recalculo
 `freq(eixo, bucket)`, `lift = freq − max(freq nos outros dois)` e comparo com
 20pp em **`Fraction` exato**, como o código de produção
-([src/espectro24/eixos.py](src/espectro24/eixos.py)). Registro, por eixo e por
+([src/espectro24/eixos.py](../../../src/espectro24/eixos.py)). Registro, por eixo e por
 filme, em que fração das reamostragens ele passaria.
 
 **Números — visão geral.**
