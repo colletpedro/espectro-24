@@ -203,7 +203,7 @@ def test_base_da_projecao_reproduz_10_de_35(vi, corpus):
     `impacto_emocional`), não parte do caminho de renderização.
 
     **Achado desta sessão** (extensão de cobertura,
-    `RELATORIO_GABARITO_E_COBERTURA.md`): a lacuna era invisível com 9 de 105
+    registrada em `SPEC.md` §2.7): a lacuna era invisível com 9 de 105
     buckets acumulados; com a extensão aos 35 filmes ela passou a 93 de 105,
     e `_cobertura_exata` sobre `consenso.jsonl` cru diverge do número real de
     produção em 6 filmes (10 contra 16). **Fica registrado como limitação

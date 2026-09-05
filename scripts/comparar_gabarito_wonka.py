@@ -110,9 +110,9 @@ def _textos_das_reviews(caminho_folha: Path) -> dict[int, str]:
 
 def main() -> int:
     ap = argparse.ArgumentParser(description=__doc__)
-    ap.add_argument("--dono", type=Path, default=RAIZ / "FOLHA_LEITURA_CEGA_WONKA_NEG.md",
+    ap.add_argument("--dono", type=Path, default=RAIZ / "docs/arquivo-de-estudos/classificacao/FOLHA_LEITURA_CEGA_WONKA_NEG.md",
                     help="folha preenchida pelo dono")
-    ap.add_argument("--code", type=Path, default=RAIZ / "LEITURA_CODE_NAO_ABRIR_ANTES.md",
+    ap.add_argument("--code", type=Path, default=RAIZ / "docs/arquivo-de-estudos/classificacao/LEITURA_CODE_NAO_ABRIR_ANTES.md",
                     help="leitura própria (código)")
     ap.add_argument("--saida", type=Path, default=None,
                      help="se dado, também grava um JSON com o resultado completo")

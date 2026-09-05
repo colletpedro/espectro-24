@@ -367,7 +367,8 @@ def catalogo():
     produção real** — não o dict cru de `carregar_classificacao`.
 
     Achado ao estender a cobertura de classificação aos 35 filmes
-    (`AUDITORIA_POPULACAO_E_GABARITO.md`/`RELATORIO_GABARITO_E_COBERTURA.md`):
+    (`AUDITORIA_POPULACAO_E_GABARITO.md`; o refazimento do gabarito e a
+    extensao de cobertura estao registrados em `SPEC.md` §2.7):
     `consenso.jsonl`/`consenso_verificado.jsonl` ACUMULAM classificação de
     seleções antigas (o mesmo defeito que motivou `_filtrar_pela_analisada`
     na v1.9.15, agora manifesto em 93 dos 105 buckets, não só nos 9 que a

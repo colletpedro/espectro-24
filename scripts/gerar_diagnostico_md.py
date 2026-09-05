@@ -16,7 +16,7 @@ sys.path.insert(0, str(ROOT / "src"))
 sys.path.insert(0, str(ROOT / "scripts"))
 
 IN_DIR = ROOT / "resultado" / "diagnostico_fluencia"
-OUT = ROOT / "DIAGNOSTICO_FLUENCIA.md"
+OUT = ROOT / "docs/arquivo-de-estudos/editor-e-narrador/DIAGNOSTICO_FLUENCIA.md"
 
 ROTULO_COMB = {
     "A": "gemini-2.5-flash · thinking off (baseline de produção)",

@@ -17,7 +17,7 @@ ROOT = Path(__file__).resolve().parent.parent
 sys.path.insert(0, str(ROOT / "src"))
 V1_DIR = ROOT / "resultado" / "diagnostico_fluencia"
 V2_DIR = V1_DIR / "v2"
-OUT = ROOT / "DIAGNOSTICO_FLUENCIA_V2.md"
+OUT = ROOT / "docs/arquivo-de-estudos/editor-e-narrador/DIAGNOSTICO_FLUENCIA_V2.md"
 
 from espectro24.synthesize import (  # noqa: E402
     _ancora_de_grupo,
