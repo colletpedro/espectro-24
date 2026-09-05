@@ -10,6 +10,11 @@ versão nova.** É o que impede o padrão que a auditoria estrutural encontrou:
 item já fechado continuar escrito como aberto, porque o lugar onde ele estava
 escrito não tinha estado.
 
+**Por onde começar:** os dois itens com número pronto para agir são o **A1**
+(o `the-godfather` comparado contra uma margem revogada — o valor certo já está
+ao lado do errado) e o **G1** (as 674 linhas de render que ficaram na `SPEC.md`
+com medição misturada à lei). Os dois fecham por decisão, sem medição nova.
+
 **Nada nesta lista foi corrigido na sessão que a criou.** A reestruturação moveu
 texto e não alterou nenhuma regra; onde ela encontrou contradição ou erro de
 fato, registrou aqui.
@@ -229,3 +234,90 @@ As versões **v1.9.35, v1.9.36 e v1.9.37** não têm entrada de changelog na for
 `- **vX.Y.Z**`, apesar de terem posto 257 condições no ar. Decidir se ganham
 entrada retroativa ou se a numeração do documento passa a admitir versões sem
 changelog.
+
+---
+
+## G. A próxima passada de corte na documentação
+
+A divisão de 2026-09-04 parou num ponto declarado, não num ponto natural. Os
+dois itens abaixo são **o trabalho que ela adiou** — não observação de rodapé.
+
+### G1. O `§3[E]` foi cortado em granularidade de SUBSEÇÃO, não de parágrafo
+
+O render é a maior seção da spec original e a única cujo corte ficou grosso.
+
+| | linhas |
+|---|---:|
+| `§3[E]` na spec original | **1.362** |
+| foi para `HISTORICO_FRONTEND.md` | 688 |
+| **ficou na `SPEC.md`** | **674** |
+| dessas 674, quanto é lei de verdade | **não medido** |
+
+**O que isso significa na prática:** as outras seções foram cortadas parágrafo
+a parágrafo, com o ponto de virada localizado um a um. O `§3[E]` não — nele a
+lei e a medição alternam **dentro** do mesmo bloco (a decisão vem primeiro, a
+medição que a sustenta vem logo abaixo, e o padrão se repete em cada um dos
+sub-blocos de animação, pôster, backdrop e topo editorial). Cortar mais fino
+sem uma passada frase a frase produziria erro, e a sessão não tinha mandato
+para reescrever.
+
+**A consequência que o leitor sente:** as ~674 linhas de render que estão na
+`SPEC.md` ainda carregam medição junto da regra — variantes rejeitadas,
+números de CLS, composição analítica de backdrops. É exatamente o defeito que a
+divisão existia para corrigir, sobrevivendo numa seção só.
+
+**O que decidir:** se vale uma passada frase a frase no `§3[E]`, ou se render
+é uma camada em que lei e medição são inseparáveis na prática e o corte grosso
+é o certo. **A decisão fecha o item; não é preciso esperar versão nova.**
+
+### G2. Vinte e um parágrafos de justificativa embutida sobreviveram na `SPEC.md`
+
+A decisão de formato da divisão foi: regra fica, justificativa sai e vira
+ponteiro. Ela foi aplicada onde o corte era de bloco inteiro — mas **não** onde
+a justificativa está no mesmo parágrafo da regra, ou num parágrafo logo abaixo
+dela dentro do mesmo bloco. Varredura da `SPEC.md` final encontrou **21**
+sobreviventes. Eles se dividem em três naturezas, e **só a primeira é
+claramente para mover**:
+
+**(a) Parágrafo inteiro de justificativa, com cabeçalho que o anuncia — 11
+casos.** São os mais fáceis: o cabeçalho já diz que o que vem é *por quê*.
+
+| linha | abre com |
+|---:|---|
+| 347 | *"**Por que:** 2,5★ é o ponto médio exato da escala…"* (fronteiras de bucket) |
+| 399 | *"**Por que não `by/added-earliest`**…"* |
+| 441 | *"**Por que 20 e não outro número**…"* (`LIMIAR_PASSADA_ANTIGA`) |
+| 678 | *"**Por que os dois critérios, e não só o lift.**"* |
+| 1068 | *"**Por que observacional e NÃO preditivo.**"* (extensão por déficit) |
+| 1709 | *"**Por que não exibir texto bruto (v1.1.4)**…"* |
+| 2210 | *"**Por que a invariante (c) existe (v1.2.1 — defeito corrigido)**…"* |
+| 2212 | *"**Por que o quantificador virou pré-computado (v1.2.3…)**…"* |
+| 2214 | *"**Por que o Movimento 1 é condicional à ficha (v1.3.0)**…"* |
+| 2404 | *"**Por que ela existe, e são dois riscos distintos.**"* |
+| 627 | *"**Por que esta frase e não outra, em três invariantes:**"* — **caso de fronteira**: abre como justificativa mas o que vem depois são três invariantes protegidas por teste, que são lei |
+
+**(b) Nota histórica que não é lei nenhuma — 4 casos.** Linhas **405**
+(*"Correção de registro: a v1.0.0 justificou `by/activity`…"*), **744** (a
+correção do diagrama do pipeline), **1526** (*"O defeito que corrige"*, na
+estratificação da seleção) e **2109** (*"Motivo — as métricas não acompanham
+qualidade"*). Estas pertencem aos `HISTORICO_*`, não à lei.
+
+**(c) Ressalva declarada — 3 casos, e o argumento é que elas FICAM.** Linhas
+**411** (*"trocar `by/activity` por `by/added` troca um viés por outro"*),
+**465** (o recorte de coorte da passada seletiva) e **944** (fronteira exata no
+posicionamento). Não são justificativa: são **declarações de limitação que o
+produto se obriga a carregar**, no mesmo estatuto da ressalva de assimetria de
+validação. Mover isso para o histórico esconderia limitação conhecida — que é
+o oposto do que este projeto faz.
+
+**Três casos que a varredura por padrão não pega, e que valem a mesma
+inspeção:** a coluna **"Razão"** da tabela de retentativa do §2.4 (quatro
+linhas de *por quê* dentro de uma tabela de lei); o parágrafo do
+`SobrecargaError` que não herda de `FetchError` *"deliberadamente"*, com o
+motivo colado; e o caso `barbie` inteiro dentro de *"`taxonomia_id` no veredito
+não é burocracia"*.
+
+**O que decidir:** se (a) e (b) saem numa próxima passada — são 15 parágrafos,
+trabalho de uma sessão — e se (c) fica onde está. **O critério proposto:** sai
+o que responde *por que a regra é essa*; fica o que responde *o que esta regra
+não garante*.
