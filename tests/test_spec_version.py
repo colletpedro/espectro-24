@@ -53,6 +53,7 @@ from pathlib import Path
 from espectro24.config import SPEC_VERSION
 
 SPEC = Path(__file__).resolve().parent.parent / "SPEC.md"
+CHANGELOG = Path(__file__).resolve().parent.parent / "CHANGELOG.md"
 
 
 def _tupla(v: str) -> tuple[int, ...]:
@@ -77,8 +78,12 @@ def _versoes_do_changelog() -> set[str]:
     Deliberadamente NÃO é "qualquer vX.Y.Z no corpo": o corpo cita dezenas de
     versões em prosa, e aceitar todas transformaria a checagem num detector de
     nada — a mesma ressalva que `_versao_do_titulo` já carrega.
+
+    [2026-09-04] Lê `CHANGELOG.md`, não `SPEC.md`: a reestruturação extraiu o
+    changelog para arquivo próprio. A versão continua saindo do TÍTULO da
+    `SPEC.md` — são duas fontes diferentes de propósito.
     """
-    txt = SPEC.read_text(encoding="utf-8")
+    txt = CHANGELOG.read_text(encoding="utf-8")
     return set(re.findall(r"^\s*-\s*\*\*v(\d+\.\d+\.\d+)\*\*", txt, re.MULTILINE))
 
 
@@ -135,5 +140,5 @@ def test_leitor_do_changelog_ignora_versao_citada_em_prosa(tmp_path, monkeypatch
         "- **v3.2.0** (2025-12-31) — outra entrada.\n",
         encoding="utf-8")
     import tests.test_spec_version as mod
-    monkeypatch.setattr(mod, "SPEC", falso)
+    monkeypatch.setattr(mod, "CHANGELOG", falso)
     assert mod._versoes_do_changelog() == {"3.2.1", "3.2.0"}
