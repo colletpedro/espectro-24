@@ -144,7 +144,13 @@ def test_o_primeiro_item_continua_sendo_o_mais_votado():
 def test_vizinhas_no_ranking_nunca_caem_na_mesma_faixa():
     """A garantia que a amostragem dá contra a duplicata que o pHash NÃO
     reconhece: com n >= 2*teto, dois itens adjacentes nunca são ambos
-    escolhidos."""
+    escolhidos.
+
+    [v1.9.41] A garantia em si não mudou — o que mudou foi quantos filmes
+    a alcançam, porque o teto subiu de 8 para 16 e o alvo virou n >= 32:
+    30 dos 34 longas, contra 33 antes. Os quatro de fora estão nomeados na
+    docstring de `_amostra_espalhada`. Este teste continua provando a
+    propriedade matemática, com o mesmo rigor, no teto vigente."""
     for n in range(2 * TETO_STILLS, 130):
         idx = [(k * n) // TETO_STILLS for k in range(TETO_STILLS)]
         assert all(b - a >= 2 for a, b in zip(idx, idx[1:])), n
@@ -174,7 +180,9 @@ def test_stills_aplica_dedup_ANTES_do_teto_e_do_piso():
     fora = _stills({"backdrops": backdrops}, "/hero.jpg", hashes=hashes)
     caminhos = [x["still_path"] for x in fora]
     assert len([c for c in caminhos if c.startswith("/dup")]) == 1
-    assert len(caminhos) == 4
+    # [v1.9.42] o hero entra na lista (pinado em 1º) e conta no total: 4 → 5
+    assert caminhos[0] == "/hero.jpg"
+    assert len(caminhos) == 5
 
 
 def test_stills_cai_no_piso_quando_a_dedup_derruba_abaixo_dele():
@@ -195,7 +203,9 @@ def test_stills_sem_hashes_se_comporta_como_antes_da_v1_9_40():
     backdrops = [_b("/hero.jpg", va=100.0)]
     backdrops += [_b(f"/p{i:02d}.jpg", va=float(i)) for i in range(5)]
     fora = [x["still_path"] for x in _stills({"backdrops": backdrops}, "/hero.jpg")]
-    assert fora == ["/p04.jpg", "/p03.jpg", "/p02.jpg", "/p01.jpg", "/p00.jpg"]
+    # [v1.9.42] com o hero pinado em 1º; o resto na ordem de sempre
+    assert fora == ["/hero.jpg", "/p04.jpg", "/p03.jpg", "/p02.jpg",
+                    "/p01.jpg", "/p00.jpg"]
 
 
 # --- a rede da dedup passa pela sessão INJETADA ---

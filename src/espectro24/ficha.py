@@ -105,7 +105,83 @@ TETO_BACKDROPS = 10
 # teto de pôsteres por decisão explícita do dono do produto**, apesar de o
 # still 16:9 ser ~2,3× mais largo por item que o pôster 2:3 (proposta
 # alternativa de N=6, por layout, foi feita e recusada).
-TETO_STILLS = 8
+#
+# [v1.9.41] **8 → 16**, porque a galeria deixou de ser grade estática e
+# virou FAIXA DE ROLAGEM CONTÍNUA (`faixa.js`), e numa faixa o teto deixa
+# de ser uma pergunta de layout ("quantos cabem em duas linhas") e vira
+# uma pergunta de PERÍODO: com poucos itens o ciclo fecha depressa e a
+# repetição vira o efeito dominante, no lugar do movimento.
+#
+# A grandeza que decide é **quantas TELAS de material distinto a faixa
+# guarda** — N dividido pelo número de itens visíveis de uma vez. Medido
+# ao vivo (2026-09-06, coluna de leitura de 720px no desktop, item de
+# 172px + 10px de gap → 3,96 itens visíveis):
+#
+#     teto | telas distintas | ciclo a 28px/s | sustentam | espalhamento
+#        8 |            2,0  |           52 s |     34/34 |        33/34
+#       12 |            3,0  |           78 s |     34/34 |        31/34
+#       16 |            4,0  |          104 s |     33/34 |        30/34
+#       20 |            5,1  |          130 s |     32/34 |        27/34
+#       24 |            6,1  |          156 s |     31/34 |        24/34
+#
+# ("sustentam" = filmes cujo pool JÁ DEDUPLICADO tem ao menos `teto`
+# itens; "espalhamento" = filmes com n ≥ 2·teto, o limiar em que
+# `_amostra_espalhada` ainda garante que duas vizinhas do ranking não
+# caem na mesma faixa.)
+#
+# **O critério, declarado: o maior teto que ainda entrega ≥ 4 telas de
+# material distinto no desktop E preserva a garantia de espalhamento em
+# ≥ 85% do catálogo.** 16 fecha os dois (4,0 telas; 30/34 = 88%); 20 já
+# cai para 79% de espalhamento. O teto de 8 falha o primeiro critério com
+# folga (2,0 telas) — é exatamente o sintoma que motivou a mudança.
+#
+# Custo aceito, medido: `eighth-grade` (pool deduplicado de 15) é o ÚNICO
+# filme que não enche 16 — renderiza 15, e o piso continua em 3. Quatro
+# filmes (`eighth-grade` 15, `cats-2019` 19, `the-invite-2026` 20,
+# `anatomy-of-a-fall` 28) ficam abaixo de n ≥ 32 e perdem a garantia de
+# espalhamento: neles, uma duplicata que o pHash não reconheceu (recall
+# 0,830, ver `still_hash.py`) pode aparecer em posições vizinhas.
+#
+# O PESO não é o limite aqui: 16 × 13,3 kB (média medida de 40 stills
+# publicados em `w300`) = 213 kB, bem abaixo do teto de ~1,5 MB por
+# página. A duplicação da sequência que o loop da faixa faz NÃO dobra
+# isso — as cópias reusam a mesma URL, servida do cache do navegador.
+#
+# [v1.9.42] **16 → 12**, porque a faixa MUDOU DE LUGAR: deixou de ser uma
+# tira de miniaturas no rodapé e passou a ser o HERO, no topo da página
+# (correção de escopo do dono). O item deixou de medir 172px e passou a
+# medir a largura inteira da coluna — MEDIDO ao vivo em 2026-09-06:
+# **720 × 405 no desktop, 375 × 211 no mobile**. Cabe ~1 por tela, não
+# ~4, e as duas contas que fixavam o teto viraram outras.
+#
+# 1. TELAS DE MATERIAL DISTINTO. Com 1 item por tela, N telas = N itens.
+#    O critério declarado na v1.9.41 (≥ 4 telas no desktop) passa a ser
+#    atendido por qualquer teto ≥ 4 — ele deixa de ser o gargalo.
+#
+# 2. DURAÇÃO DA VOLTA. É esta que decide agora. A velocidade passou a ser
+#    declarada em SEGUNDOS POR STILL (`faixa.js`), não em px/s, porque o
+#    item mudou de tamanho e um px/s fixo daria ritmos diferentes em
+#    desktop e mobile. A 12 s por still:
+#
+#        teto |  volta  | peso do ciclo (w1280) | peso (w780, mobile)
+#           8 |  1min36 |               1,08 MB |             0,46 MB
+#          10 |  2min00 |               1,35 MB |             0,58 MB
+#          12 |  2min24 |               1,62 MB |             0,69 MB
+#          16 |  3min12 |               2,17 MB |             0,92 MB
+#
+# **12 é o maior teto cujo peso de ciclo fica próximo do teto de ~1,5 MB
+# por página em vez de 45% acima dele**, e entrega 12 telas distintas —
+# o triplo do piso de 4 que a v1.9.41 declarou. 16 continuaria
+# funcionando, mas custaria 2,17 MB por volta sem comprar nada que o
+# critério de telas distintas peça.
+#
+# O peso NÃO é resolvido baixando a qualidade (decisão do dono: a
+# nitidez do hero não regride) — é resolvido por CARREGAMENTO SOB
+# DEMANDA: só os primeiros itens são buscados no carregamento da página e
+# os seguintes chegam conforme a faixa avança, ver `montarHeroFaixa` em
+# `poster.js`. Os números acima são o total de UMA VOLTA INTEIRA (2min24),
+# não o custo de abrir a página.
+TETO_STILLS = 12
 
 # [v1.9.39] PISO da galeria — mesma lógica de `n < 10` na lei de margem
 # (`config.py`, §2.5) e o mesmo valor da geração anterior (pôsteres,
@@ -401,8 +477,18 @@ def _amostra_espalhada(itens: list[dict], teto: int) -> list[dict]:
     que o pHash NÃO reconhece (mesmo plano em escala e gradação muito
     diferentes — ver `still_hash.py`) são quase sempre VIZINHAS no
     ranking, porque é o mesmo quadro popular concentrando voto. Duas
-    vizinhas nunca caem na mesma faixa quando `n >= 2 * teto`, e nos 34
-    longas do catálogo `n` é sempre bem maior que 16.
+    vizinhas nunca caem na mesma faixa quando `n >= 2 * teto`.
+
+    [v1.9.41] **Essa cobertura DEIXOU DE SER TOTAL quando o teto foi de 8
+    para 16.** Com teto=8, 33 dos 34 longas tinham `n >= 16`; com teto=16,
+    o alvo virou `n >= 32` e quatro filmes ficam abaixo —
+    `eighth-grade` (15), `cats-2019` (19), `the-invite-2026` (20) e
+    `anatomy-of-a-fall` (28). Neles a amostragem escolhe índices quase
+    consecutivos, e uma duplicata que o pHash não reconheceu (recall
+    0,830, ver `still_hash.py`) PODE aparecer em posições vizinhas da
+    faixa. É o custo medido e aceito do teto novo (30/34 = 88% do
+    catálogo mantém a garantia, acima do piso de 85% que o critério
+    de `TETO_STILLS` declara); não é um defeito silencioso.
 
     DETERMINÍSTICA: só divisão inteira sobre o tamanho da lista.
     """
@@ -432,31 +518,59 @@ def _stills(imagens: dict, hero_backdrop_path: str | None, *,
     filtra a proporção pela mesma razão: um crop fora de 16:9 não serve à
     grade da galeria (ver CSS, `styles.css`).
 
-    O `hero_backdrop_path` (o backdrop JÁ escolhido para o topo da página,
-    `backdrop_path`) é EXCLUÍDO — mesma razão de excluir o pôster já
-    publicado na geração anterior: a galeria é de OUTROS quadros, mostrar
-    de novo o que já está no topo repetiria a imagem.
+    **[v1.9.42] O `hero_backdrop_path` INVERTEU DE PAPEL: era EXCLUÍDO,
+    agora é PINADO EM PRIMEIRO.**
+
+    Até a v1.9.41 a galeria ficava no rodapé da página e o backdrop do
+    hero ficava no topo; mostrar o mesmo quadro nos dois lugares repetia
+    a imagem, e por isso o hero saía do pool. Nesta versão **a faixa É o
+    hero** (a galeria de rodapé foi removida por inteiro, não há mais dois
+    lugares), então excluir o backdrop escolhido faria a página abrir com
+    um quadro que não é o que a ficha publica em `backdrop_path` — e o
+    filme sem faixa, que cai no hero estático, mostraria uma imagem
+    diferente da que a faixa mostraria. O hero passa a ser o PRIMEIRO
+    item da sequência, e a página abre exatamente no mesmo quadro de
+    sempre.
+
+    COMO ele fica em primeiro: entra na chave de ordenação como degrau
+    ZERO, antes do `vote_average`. Não é um `insert(0, ...)` depois da
+    dedup, e a diferença importa — `_deduplicar` emite cada grupo na
+    posição do seu membro melhor colocado, então pinar ANTES faz o GRUPO
+    do hero sair em primeiro mesmo quando o representante escolhido é um
+    gêmeo de resolução maior. MEDIDO nos 34 longas (2026-09-06): o hero
+    sobrevive à dedup como item próprio em 28 deles (+1 no pool); nos
+    outros 6 (`anatomy-of-a-fall`, `cats-2019`, `dune-part-two`,
+    `everything-everywhere-all-at-once`, `friday-the-13th-2009`,
+    `the-substance`) ele colapsa num gêmeo perceptual e quem abre a faixa
+    é esse gêmeo — o MESMO quadro, em outro arquivo. Nenhum hero do
+    catálogo é barrado pelos filtros (todos são `iso_639_1 is None` e
+    16:9 exatos).
 
     **RISCO DE SPOILER ASSUMIDO** (ver docstring do módulo): nenhuma outra
     filtragem de conteúdo é aplicada — um still pode ser de qualquer ponto
     do filme, terceiro ato incluído.
 
-    **PISO, depois do teto:** se o resultado (já ordenado, já sem o
-    backdrop do hero, já cortado em `teto`) tem menos de `piso` itens, a
-    lista volta VAZIA — ver `PISO_STILLS`. Mesma lógica de `n < 10` na lei
+    **PISO, depois do teto:** se o resultado (já ordenado, já deduplicado,
+    já cortado em `teto`) tem menos de `piso` itens, a lista volta VAZIA — ver `PISO_STILLS`. Mesma lógica de `n < 10` na lei
     de margem: abaixo do piso, ausência é mais honesta que uma versão
     raquítica da coisa.
     """
     candidatos = [b for b in (imagens.get("backdrops") or [])
-                  if b.get("file_path") and b.get("file_path") != hero_backdrop_path
+                  if b.get("file_path")
                   and b.get("iso_639_1") is None and _still_16_9(b)]
-    candidatos.sort(key=lambda b: (-(b.get("vote_average") or 0),
-                                    b.get("file_path") or ""))
+    # degrau ZERO: o backdrop do hero primeiro; o resto pela ordem de sempre
+    candidatos.sort(key=lambda b: (0 if b.get("file_path") == hero_backdrop_path else 1,
+                                   -(b.get("vote_average") or 0),
+                                   b.get("file_path") or ""))
     candidatos = _deduplicar(candidatos, hashes)
+    # A amostragem espalhada vale para o RESTO: a posição 0 é do hero, por
+    # decisão, e não pode ser sorteada pela faixa do ranking.
+    escolhidos = (candidatos[:1] + _amostra_espalhada(candidatos[1:], teto - 1)
+                  if candidatos else [])
     stills = [
         {"still_path": b["file_path"], "still_largura": b.get("width"),
          "still_altura": b.get("height")}
-        for b in _amostra_espalhada(candidatos, teto)
+        for b in escolhidos
     ]
     return stills if len(stills) >= piso else []
 

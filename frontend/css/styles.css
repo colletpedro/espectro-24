@@ -53,7 +53,16 @@
 
   --maxw: 720px;
   --radius: 12px;
+
+  /* [v1.9.43] A faixa do hero. O quadro mantém a largura que sempre teve
+     (a coluna de leitura: `--maxw` de 760px acima de 600px, menos 20px de
+     padding de cada lado = 720px) e a altura 16:9 dela. São as duas
+     grandezas que a faixa full-bleed NÃO muda — ver `.hero-faixa-caixa`. */
+  --hero-faixa-item-w: 720px;
+  --hero-faixa-h: 405px;   /* 720 × 9/16 */
 }
+
+
 
 * { box-sizing: border-box; }
 
@@ -61,6 +70,11 @@ html { -webkit-text-size-adjust: 100%; }
 
 body {
   margin: 0;
+  /* [v1.9.43] `clip` e não `hidden`: `hidden` faria do body um contêiner de
+     rolagem e quebraria `position: sticky` na página inteira. Existe só
+     para aparar os ~15px que `100vw` conta a mais por causa da barra de
+     rolagem vertical, na faixa full-bleed do hero (`.hero-faixa-caixa`). */
+  overflow-x: clip;
   background: var(--bg);
   color: var(--text);
   font-family: var(--sans);
@@ -369,40 +383,133 @@ a { color: inherit; }
 }
 
 /* =======================================================================
-   [v1.9.39] GALERIA DE STILLS — decoração, não dado. Substitui a galeria
-   de pôsteres alternativos (v1.9.38, removida por mudança de escopo
-   autorizada: stills 16:9, não pôsteres — ver `ficha.py`).
+   [v1.9.42] A GALERIA DE STILLS DO RODAPÉ FOI REMOVIDA (existiu da
+   v1.9.39 à v1.9.41: grade estática, depois faixa rolante). O CSS dela
+   saiu junto — `.stills-galeria`, `.stills-galeria__faixa`,
+   `.stills-galeria__trilha` e `.still` não existem mais em lugar nenhum.
 
-   Grade ESTÁTICA de miniaturas: sem carrossel, sem transição própria, sem
-   nada que se mexa sozinho — a única animação é o mesmo fade-in de 0,24s
-   de qualquer pôster do site (`.poster__img`, acima), não uma nova. Fica
-   DEPOIS da narrativa e ANTES da pesquisa; não desloca nenhum bloco
-   existente (ver a ordem comentada em `render()`, filme.js).
+   A faixa passou a ser o HERO, no topo da página, e o estilo dela vive
+   junto do `.backdrop` logo abaixo, porque ela OCUPA a caixa do backdrop
+   — mesma largura, mesma proporção, mesmo fade na base, mesmo recuo do
+   par ano → título. Manter as regras separadas convidaria as duas a
+   divergirem, que é o defeito que o §3[E] já registrou uma vez.
+   ======================================================================= */
 
-   O item é 16:9, ~2,3× mais largo por unidade que o pôster 2:3 da geração
-   anterior — por isso a grade cabe MENOS colunas na mesma largura de
-   coluna (`minmax(150px, 1fr)` × ~720px ≈ 4 colunas, contra ~6-7 da
-   grade de pôster) e `TETO_STILLS=8` (igual ao teto antigo, mantido por
-   decisão do dono apesar do item mais largo) fecha em 2 linhas de 4, não
-   em 1. **RISCO DE SPOILER ASSUMIDO** — nenhuma classe aqui filtra
-   conteúdo; a decisão é do dono do produto, registrada em `ficha.py`. */
-.stills-galeria { margin: 28px 0 8px; }
-.stills-galeria__grid {
+/* =======================================================================
+   [v1.9.43] GALERIA DO MOBILE — e por que ela VOLTOU depois de removida.
+
+   A v1.9.42 removeu a seção de rodapé porque a faixa do hero já mostrava
+   os mesmos stills: repetir era redundância. No MOBILE isso deixou de
+   valer, por uma razão medida na tela: com a janela mais estreita que um
+   quadro, a faixa mostra a maior parte do tempo UM quadro cortado ao
+   meio, que não é sequência nem é imagem. Então no mobile o hero volta a
+   ser a imagem estática de sempre e os stills aparecem aqui embaixo, na
+   MESMA posição de antes (depois da narrativa, antes da pesquisa).
+
+   No desktop esta seção NÃO EXISTE — não é escondida por CSS, não é
+   renderizada (ver `ehModoFaixa`, `filme.js`). Esconder deixaria o
+   navegador baixar 12 imagens que ninguém veria.
+
+   O LAYOUT é UMA COLUNA, de borda a borda, com respiro entre os itens.
+   Não é fileira de miniatura: cada quadro ocupa a largura inteira do
+   aparelho (375px num iPhone padrão), que é o maior tamanho que a tela
+   oferece. Duas colunas dariam 180px por item — miniatura de novo. E as
+   alturas são todas iguais de propósito: o acervo é 16:9 inteiro
+   (`_still_16_9`, `ficha.py`), então altura variada só sairia de recorte
+   inventado por nós.
+   ======================================================================= */
+.galeria-mobile { margin: 30px 0 8px; }
+.galeria-mobile__lista {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
-  gap: 10px;
-  max-width: 720px;
+  grid-template-columns: 1fr;
+  gap: 14px;
+  /* de borda a borda, como o backdrop já faz no mobile */
+  width: calc(100% + 40px);
+  margin-left: -20px;
+  margin-right: -20px;
 }
-.still {
-  border-radius: 6px;
-  border: 1px solid var(--border);
+.galeria-mobile__item {
+  display: block;
+  width: 100%;
+  padding: 0;
+  border: 0;
+  background: none;
+  cursor: pointer;
+  /* é um `<button>`: abre o modo tela cheia. O reset acima existe para
+     que ele não pareça um botão — o alvo de toque é a imagem. */
 }
-.still .poster__vazio-nota { font-size: 0.5rem; }
-@media (max-width: 640px) {
-  .stills-galeria__grid {
-    max-width: none;
-    grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
-  }
+.galeria-mobile__item:focus-visible {
+  outline: 2px solid var(--fg);
+  outline-offset: -3px;
+}
+.galeria-mobile .hero-still { display: block; width: 100%; }
+
+/* =======================================================================
+   [v1.9.43] TELA CHEIA (lightbox) — abre ao tocar um item da galeria.
+
+   SEM indicadores, SEM pontos, SEM setas e SEM contador, igual à faixa —
+   a proibição vale aqui também. O único controle visível é o BOTÃO DE
+   FECHAR, que a entrega pede por extenso; navegar é gesto (swipe lateral)
+   ou teclado (setas), e fechar é gesto (swipe para baixo), botão ou Esc.
+   ======================================================================= */
+.lightbox {
+  position: fixed;
+  inset: 0;
+  z-index: 100;
+  background: #000;
+  display: flex;
+  align-items: center;
+  /* o trilho horizontal com encaixe: swipe lateral navega, e o encaixe
+     garante que o gesto termine sempre num quadro inteiro, nunca no meio
+     de dois */
+  overflow-x: auto;
+  overflow-y: hidden;
+  scroll-snap-type: x mandatory;
+  overscroll-behavior: contain;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+  touch-action: pan-x;
+}
+.lightbox::-webkit-scrollbar { display: none; }
+.lightbox__quadro {
+  flex: 0 0 100%;
+  height: 100%;
+  scroll-snap-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.lightbox__quadro img {
+  max-width: 100%;
+  max-height: 100%;
+  width: auto;
+  height: auto;
+  display: block;
+}
+.lightbox__fechar {
+  position: fixed;
+  top: max(12px, env(safe-area-inset-top));
+  right: 12px;
+  z-index: 1;
+  width: 44px;          /* alvo de toque de 44px, o mínimo confortável */
+  height: 44px;
+  border-radius: 50%;
+  border: 0;
+  background: rgba(0, 0, 0, 0.55);
+  color: #fff;
+  font-size: 22px;
+  line-height: 1;
+  cursor: pointer;
+}
+.lightbox__fechar:focus-visible {
+  outline: 2px solid #fff;
+  outline-offset: 2px;
+}
+/* enquanto o modo tela cheia está aberto, a página atrás não rola */
+body.lightbox-aberto { overflow: hidden; }
+
+@media (prefers-reduced-motion: reduce) {
+  .lightbox { scroll-behavior: auto; }
 }
 
 /* --- [v1.9.30] O BACKDROP: a abertura da página do filme ---------------
@@ -435,6 +542,102 @@ a { color: inherit; }
   margin: 0;
   background: var(--bg-elev);
 }
+
+/* [v1.9.42] A FAIXA quando ela É o backdrop. Herda `.backdrop` inteiro
+   (largura, proporção reservada, fade da base, full-bleed no mobile) e
+   acrescenta só o que a rolagem exige.
+
+   `overflow-x: auto` é o que dá arrasto, swipe e trackpad de graça — o
+   movimento automático é só `scrollLeft` avançando em rAF (ver
+   `faixa.js`, e o porquê de não ser `transform` animado).
+
+   O SCROLL VERTICAL DA PÁGINA NÃO PODE SER SEQUESTRADO, e aqui isso pesa
+   mais que na galeria de rodapé: a faixa é a PRIMEIRA coisa da página, e
+   é onde o polegar começa a rolar. Por isso NÃO existe `touch-action`
+   nenhum — o padrão deixa o navegador escolher o eixo do gesto —, e
+   `overscroll-behavior-x: contain` só impede que o fim da faixa vire
+   gesto de "voltar". */
+/* [v1.9.43] A CAIXA DA FAIXA É FULL-BLEED — a única coisa da página que
+   sai do contêiner de leitura. Decisão do dono: a faixa atravessa a
+   janela de borda a borda, e todo o resto (ficha, barra, condições,
+   bullets, veredito, narrativa, pesquisa) continua exatamente na mesma
+   largura e com as mesmas margens de sempre.
+
+   A TÉCNICA: `width: 100vw` com margem negativa de meia janela. O
+   `left: 50%; transform: translateX(-50%)` faria o mesmo, mas criaria um
+   contexto de empilhamento que atrapalharia o `::after` do fade.
+
+   `100vw` INCLUI a barra de rolagem vertical na maioria dos motores, o
+   que produziria alguns pixels de rolagem horizontal na página inteira.
+   `overflow-x: clip` no `body` (abaixo) apara isso. `clip` e não
+   `hidden`: `hidden` transformaria o body num contêiner de rolagem e
+   quebraria `position: sticky` em qualquer lugar da página.
+
+   A ALTURA NÃO ACOMPANHA a largura — e é o ponto. Se a proporção 16:9
+   governasse a caixa full-bleed, o hero teria 810px de altura a 1440 e
+   1440px a 2560, engolindo a página. A altura fica a MESMA de antes
+   (a do quadro de 720px, ou seja 405px), e o que a largura extra compra
+   são mais quadros SIMULTÂNEOS: 2,0 a 1440, 2,7 a 1920 e 3,6 a 2560. */
+.hero-faixa-caixa {
+  overflow: hidden;
+  width: 100vw;
+  margin-left: calc(50% - 50vw);
+  margin-right: calc(50% - 50vw);
+  height: var(--hero-faixa-h);
+  /* a proporção inline que o JS escreve vale para o hero ESTÁTICO; aqui a
+     altura é fixa e a razão não pode disputar com ela */
+  aspect-ratio: auto !important;
+}
+.hero-faixa {
+  width: 100%;
+  height: 100%;
+  overflow-x: auto;
+  overflow-y: hidden;
+  overscroll-behavior-x: contain;
+  /* barra de scroll escondida com o scroll INTACTO, nos três motores */
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+.hero-faixa::-webkit-scrollbar { display: none; }
+.hero-faixa:focus-visible {
+  outline: 2px solid var(--fg);
+  outline-offset: -3px;   /* para dentro: a faixa encosta na borda da tela */
+}
+/* ZERO gap entre os quadros: o alvo é uma sequência contínua, não um
+   slideshow com transição. Um respiro entre eles desenharia a fronteira
+   que o movimento existe para dissolver — mesmo raciocínio do "ZERO gap"
+   da barra de proporção (§3[E], v1.9.26). */
+/* `width: 100%` (da FAIXA), NÃO `max-content`. A diferença não é de
+   estilo: os quadros são `flex: 0 0 100%`, e uma porcentagem resolve
+   contra o pai — com `max-content` o pai depende dos filhos que dependem
+   do pai, e o navegador resolve essa circularidade multiplicando tudo.
+   MEDIDO ao vivo antes da correção: cada quadro saiu com **17280px** de
+   largura em vez de 720. Com a trilha amarrada à largura da faixa, `100%`
+   é sempre a caixa do hero, e é ela que os quadros ocupam; quem rola é a
+   faixa, pelo transbordo dos filhos. */
+.hero-faixa__trilha {
+  display: flex;
+  gap: 0;
+  width: 100%;
+  height: 100%;
+}
+/* Cada quadro ocupa exatamente a caixa do hero — um por tela, com os
+   vizinhos entrando pela borda. `100%` da faixa, não uma largura fixa:
+   assim desktop, mobile e a virada do aparelho saem todos certos, e é a
+   mesma largura que `faixa.js` mede para derivar a velocidade. */
+/* Largura FIXA do quadro, não mais `100%` da faixa: com a faixa
+   full-bleed, `100%` faria um quadro só ocupar a janela inteira — o
+   oposto do efeito pedido. 720px é a largura que o quadro já tinha
+   (a coluna de leitura), mantida por decisão explícita: o que muda é
+   quantos cabem, não o tamanho de cada um. */
+.hero-faixa .hero-still {
+  flex: 0 0 var(--hero-faixa-item-w);
+  display: block;
+  position: relative;
+  overflow: hidden;
+  background: var(--bg-elev);
+}
+.hero-faixa .hero-still img { display: block; width: 100%; height: 100%; }
 
 /* [v1.9.33] O FADE — e o PISO DE CONTRASTE, FECHADO POR CONSTRUÇÃO.
    ------------------------------------------------------------------

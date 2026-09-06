@@ -684,29 +684,51 @@ def test_entrada_completa_com_campo_novo_NULO_e_HIT_e_nao_rebusca(tmp_path):
 # contra o valor errado por acidente.
 
 def test_stills_ordena_por_vote_average_desc_com_desempate_por_file_path(tmp_path):
-    """Ordem de CÓDIGO exigida: vote_average decrescente, desempate estável
-    por file_path — nunca escolha estética por filme."""
+    """Ordem de CÓDIGO exigida DEPOIS do hero: vote_average decrescente,
+    desempate estável por file_path — nunca escolha estética por filme.
+
+    [v1.9.42] O hero deixou de ser excluído e passou a ser o degrau ZERO
+    da ordenação. A asserção não afrouxou: continua fixando a ordem
+    INTEIRA e completa da lista, agora com a posição do hero incluída."""
     ficha, _ = _ficha_imagens(tmp_path, backdrops=[
-        _img("/hero.jpg", va=10.0),  # maior nota -> vira o hero, excluído
+        _img("/hero.jpg", va=10.0),  # maior nota -> vira o hero, PINADO em 1º
         _img("/b.jpg", va=7.0), _img("/a.jpg", va=7.0), _img("/c.jpg", va=9.0),
     ])
     assert ficha["backdrop_path"] == "/hero.jpg"
     caminhos = [s["still_path"] for s in ficha["galeria_stills"]]
-    assert caminhos == ["/c.jpg", "/a.jpg", "/b.jpg"]
+    assert caminhos == ["/hero.jpg", "/c.jpg", "/a.jpg", "/b.jpg"]
 
 
-def test_stills_exclui_o_backdrop_do_hero(tmp_path):
-    """Mesma lógica que excluía o pôster já publicado (v1.9.38): a galeria é
-    de OUTROS quadros — o hero já está no topo da página."""
-    # 4 candidatos além do hero (excluído) -> 3 sobram, no piso.
+def test_stills_PINA_o_backdrop_do_hero_em_primeiro(tmp_path):
+    """[v1.9.42] INVERSÃO: o backdrop do hero era EXCLUÍDO da lista (a
+    galeria ficava no rodapé e repetir a imagem do topo era redundância);
+    agora a faixa É o hero, e ele abre a sequência.
+
+    Substitui `test_stills_exclui_o_backdrop_do_hero`, que testava a regra
+    contrária e perdeu o objeto. A trava é a MESMA em força — a lista
+    inteira, item a item —, com o sinal invertido: onde antes se exigia
+    ausência, agora se exige a primeira posição."""
     ficha, _ = _ficha_imagens(tmp_path, backdrops=[
         _img("/hero.jpg", va=9.0), _img("/outro1.jpg", va=5.0),
         _img("/outro2.jpg", va=4.0), _img("/outro3.jpg", va=3.0),
     ])
     assert ficha["backdrop_path"] == "/hero.jpg"
     caminhos = [s["still_path"] for s in ficha["galeria_stills"]]
-    assert "/hero.jpg" not in caminhos
-    assert caminhos == ["/outro1.jpg", "/outro2.jpg", "/outro3.jpg"]
+    assert caminhos[0] == "/hero.jpg"
+    assert caminhos == ["/hero.jpg", "/outro1.jpg", "/outro2.jpg", "/outro3.jpg"]
+
+
+def test_stills_pina_o_hero_mesmo_com_vote_average_baixo(tmp_path):
+    """O hero é degrau ZERO — vem antes do `vote_average`, não junto com
+    ele. Um hero mal votado ainda abre a faixa. (O `backdrop_path` é
+    escolhido por `_ordem_imagem` entre os 10 primeiros; aqui a fixture
+    força o caso pedindo um hero que NÃO é o mais votado do pool.)"""
+    from espectro24.ficha import _stills
+    backdrops = [_img("/pouco_votado.jpg", va=0.0), _img("/a.jpg", va=9.0),
+                 _img("/b.jpg", va=8.0), _img("/c.jpg", va=7.0)]
+    fora = [x["still_path"] for x in _stills({"backdrops": backdrops},
+                                             "/pouco_votado.jpg")]
+    assert fora == ["/pouco_votado.jpg", "/a.jpg", "/b.jpg", "/c.jpg"]
 
 
 def test_stills_respeita_o_teto(tmp_path):
@@ -716,8 +738,10 @@ def test_stills_respeita_o_teto(tmp_path):
     ficha, _ = _ficha_imagens(tmp_path, backdrops=[hero] + candidatos)
     assert ficha["backdrop_path"] == "/hero.jpg"
     assert len(ficha["galeria_stills"]) == TETO_STILLS
-    # o de maior vote_average entre os candidatos (maior i) vem primeiro
-    assert ficha["galeria_stills"][0]["still_path"] == f"/p{TETO_STILLS + 4}.jpg"
+    # [v1.9.42] o HERO vem primeiro (degrau zero), não o mais votado
+    assert ficha["galeria_stills"][0]["still_path"] == "/hero.jpg"
+    # e o mais votado dos demais abre o resto da sequência
+    assert ficha["galeria_stills"][1]["still_path"] == f"/p{TETO_STILLS + 4}.jpg"
 
 
 def test_stills_no_piso_exato_2_nao_renderiza_3_renderiza(tmp_path):
@@ -728,27 +752,36 @@ def test_stills_no_piso_exato_2_nao_renderiza_3_renderiza(tmp_path):
     from espectro24.ficha import PISO_STILLS
     assert PISO_STILLS == 3
 
-    abaixo = [_img("/hero.jpg", va=9.0)] + [_img(f"/p{i}.jpg", va=float(i))
-                                            for i in range(2)]
+    # [v1.9.42] o hero CONTA para o piso, porque agora está na lista: com
+    # hero + 1 outro são 2 (abaixo do piso, some); hero + 2 outros são 3.
+    abaixo = [_img("/hero.jpg", va=9.0)] + [_img("/p0.jpg", va=1.0)]
     ficha_2, _ = _ficha_imagens(tmp_path / "abaixo", backdrops=abaixo)
     assert ficha_2["galeria_stills"] == []
 
     no_piso = [_img("/hero2.jpg", va=9.0)] + [_img(f"/q{i}.jpg", va=float(i))
-                                              for i in range(3)]
+                                              for i in range(2)]
     ficha_3, _ = _ficha_imagens(tmp_path / "no_piso", backdrops=no_piso)
     assert len(ficha_3["galeria_stills"]) == 3
+    assert ficha_3["galeria_stills"][0]["still_path"] == "/hero2.jpg"
 
 
-def test_stills_piso_aplica_DEPOIS_do_teto_e_da_exclusao_do_hero(tmp_path):
-    """O piso olha o resultado FINAL — depois de excluir o backdrop do hero
-    e cortar em `TETO_STILLS` — não a contagem bruta de `images.backdrops`.
-    4 backdrops brutos, um deles é o hero: sobram 3, exatamente no piso,
-    renderiza."""
+def test_stills_piso_aplica_DEPOIS_do_teto_da_dedup_e_do_pino_do_hero(tmp_path):
+    """O piso olha o resultado FINAL — depois de pinar o hero, deduplicar e
+    cortar em `TETO_STILLS` — não a contagem bruta de `images.backdrops`.
+
+    [v1.9.42] Antes o hero SAÍA da conta (4 brutos → 3 finais). Agora ele
+    ENTRA (4 brutos → 4 finais), e o caso do piso exato é montado com 3
+    brutos. A trava continua sendo a mesma: contar o resultado final."""
     ficha, _ = _ficha_imagens(tmp_path, backdrops=[
-        _img("/hero.jpg", va=9.0),  # o hero — excluído
-        _img("/a.jpg", va=3.0), _img("/b.jpg", va=2.0), _img("/c.jpg", va=1.0),
+        _img("/hero.jpg", va=9.0), _img("/a.jpg", va=3.0),
+        _img("/b.jpg", va=2.0), _img("/c.jpg", va=1.0),
     ])
-    assert len(ficha["galeria_stills"]) == 3
+    assert len(ficha["galeria_stills"]) == 4
+
+    exato, _ = _ficha_imagens(tmp_path / "exato", backdrops=[
+        _img("/h2.jpg", va=9.0), _img("/x.jpg", va=3.0), _img("/y.jpg", va=2.0),
+    ])
+    assert len(exato["galeria_stills"]) == 3
 
 
 def test_stills_traz_dimensoes_por_item(tmp_path):
@@ -781,7 +814,9 @@ def test_stills_aspect_ratio_fora_da_faixa_e_excluido(tmp_path):
     caminhos = [s["still_path"] for s in ficha["galeria_stills"]]
     assert "/ultrawide.jpg" not in caminhos
     assert "/quadrado.jpg" not in caminhos
-    assert caminhos == ["/dentro1.jpg", "/dentro2.jpg", "/dentro3.jpg"]
+    # [v1.9.42] o hero entra na lista (pinado em 1º); o filtro de proporção
+    # não mudou — ultrawide e 4:3 seguem fora, com nota alta e tudo
+    assert caminhos == ["/hero.jpg", "/dentro1.jpg", "/dentro2.jpg", "/dentro3.jpg"]
 
 
 def test_stills_aspect_ratio_no_limite_exato_1_70_e_1_85_entram(tmp_path):
@@ -815,7 +850,9 @@ def test_stills_exclui_iso_639_1_nao_nulo_mesmo_dentro_da_proporcao(tmp_path):
     ])
     caminhos = [s["still_path"] for s in ficha["galeria_stills"]]
     assert "/keyart-pt.jpg" not in caminhos
-    assert caminhos == ["/quadro1.jpg", "/quadro2.jpg", "/quadro3.jpg"]
+    # [v1.9.42] o hero entra na lista (pinado em 1º); o filtro de idioma não
+    # mudou — a arte `pt` continua fora, mesmo com a nota mais alta de todas
+    assert caminhos == ["/hero.jpg", "/quadro1.jpg", "/quadro2.jpg", "/quadro3.jpg"]
 
 
 def test_filtro_de_duracao_caso_positivo_longa_metragem_tem_galeria(tmp_path):

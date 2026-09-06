@@ -172,15 +172,30 @@ def processar(slug: str, key: str, sess: requests.Session, *, dry_run: bool) -> 
     detalhes = resp.json()
     imagens = detalhes.get("images") or {}
 
-    # O hero (backdrop_path) é RECALCULADO aqui pela mesma ordem total de
-    # `_ordem_imagem` que `_imagens` usa em produção — precisamos dele para
-    # excluir da galeria, e a ficha já publicada guarda `backdrop_path`
-    # (deveria bater; não confiamos nele cegamente porque o teto de
-    # backdrops capturados em `backdrop_paths` já publicado pode ter sido
-    # gerado por uma versão anterior).
+    # O hero, e por que agora é o `backdrop_path` PUBLICADO que manda.
+    #
+    # Até a v1.9.41 este valor era RECALCULADO da resposta viva e servia
+    # para EXCLUIR o hero da galeria; recalcular era o certo, porque um
+    # engano ali só trocava qual quadro ficava de fora de uma galeria de
+    # rodapé. Na v1.9.42 o papel inverteu: o hero é PINADO em 1º e vira a
+    # abertura da página, e o `backdrop_path` publicado é o que o frontend
+    # usa no caminho estático (filme sem faixa) e de onde saem
+    # `backdrop_largura`/`backdrop_altura`, que reservam a proporção.
+    #
+    # MEDIDO nesta rodada: o acervo do TMDB andou desde a publicação das
+    # fichas, e em 2 dos 34 longas (`dune-2021`, `parasite-2019`) o hero
+    # recalculado é uma imagem COMPLETAMENTE outra (distância de pHash 32).
+    # Com o valor recalculado, esses dois abririam a faixa num quadro e
+    # cairiam noutro no caminho estático — duas aberturas diferentes para a
+    # mesma página, dependendo de um ramo que o leitor não escolhe.
+    #
+    # Pinar o PUBLICADO fecha isso por construção: o primeiro quadro da
+    # faixa é, sempre, a mesma imagem que o hero estático mostraria. O
+    # recálculo continua como reserva para ficha sem `backdrop_path`.
     lista_backdrops = (imagens.get("backdrops") or [])[:10]
     escolhido = _melhor(lista_backdrops, preferir_sem_texto=True)
-    hero_path = escolhido.get("file_path") if escolhido else ficha.get("backdrop_path")
+    hero_path = ficha.get("backdrop_path") or (
+        escolhido.get("file_path") if escolhido else None)
 
     # [v1.9.40] pHash das candidatas — FAZ REDE (uma w300 por candidata),
     # com cache em disco: a segunda execução do backfill não rebaixa nada.

@@ -35,6 +35,16 @@
     talvez_evite: "Talvez evite se você…"
   };
 
+  // [v1.9.43] O ponto de corte entre os dois modos da página (o porquê do
+  // valor está na docstring de `ehModoFaixa`). Declarada AQUI pelo MESMO
+  // motivo de `ABERTURA_DA_COLUNA` acima, e o defeito se repetiu: nascida
+  // junto da função, `var` hoistava a declaração sem a atribuição e
+  // `ehModoFaixa()` lia `undefined` durante o render — a página abria
+  // SEMPRE no modo estático, em qualquer largura. Quem pegou foi
+  // `test_frontend_constantes_hoisted.py`, que existe desde a v1.9.37
+  // exatamente para este erro.
+  var MQ_MODO_FAIXA = "(min-width: 1024px)";
+
   // Permissões do piso escalonado (§3[C3]) — as MESMAS quatro do backend.
   // A linha do eixo acompanha o que cada bucket pode dizer, célula a célula.
   var PISO = {
@@ -121,6 +131,43 @@
 
   render(film);
 
+  // [v1.9.43] Troca de modo AO VIVO. Uma janela arrastada por baixo de
+  // 1024px (ou um tablet girado) muda de modo sem recarregar; só o hero e
+  // a galeria são refeitos, e o resto da página não é tocado. O guard de
+  // `addEventListener` cobre Safari antigo, onde `MediaQueryList` só tem
+  // `addListener` — e onde não houver nem um nem outro, a página fica no
+  // modo em que abriu, que é o comportamento de antes desta versão.
+  var reconciliar = function () { aoTrocarModo(film); };
+  try {
+    var mql = window.matchMedia && window.matchMedia(MQ_MODO_FAIXA);
+    if (mql) {
+      if (mql.addEventListener) mql.addEventListener("change", reconciliar);
+      else if (mql.addListener) mql.addListener(reconciliar);
+    }
+  } catch (e) { /* sem matchMedia: sobra o `resize` abaixo */ }
+  // E TAMBÉM `resize`, não só o `change` da media query. Os dois cobrem o
+  // mesmo evento em teoria; na prática o `change` de `MediaQueryList` é o
+  // que mais varia entre motores (e não dispara em nenhum navegador
+  // controlado remotamente que este projeto usou para verificar). O custo
+  // de escutar os dois é zero: `aoTrocarModo` é idempotente e só faz
+  // trabalho quando o modo realmente virou.
+  window.addEventListener("resize", reconciliar);
+
+  // RECONCILIAÇÃO depois da primeira pintura. `render()` decide o modo com
+  // a largura que a janela tem no instante em que o script roda, e há
+  // casos reais em que essa largura ainda não é a definitiva — restauração
+  // de sessão, barra de rolagem que aparece depois do layout, um contêiner
+  // que só recebe tamanho no primeiro quadro. Sem isto, um desses casos
+  // deixaria a página presa no modo errado até o leitor mexer na janela.
+  // `aoTrocarModo` é idempotente: quando o modo já está certo, não faz nada.
+  //
+  // `setTimeout` e NÃO `requestAnimationFrame`: rAF não roda em aba oculta,
+  // e uma página aberta em segundo plano (link do meio, restauração de
+  // sessão) ficaria presa no modo de parse até ganhar foco. A conta aqui
+  // não depende de pintura — `matchMedia` responde sobre a janela, não
+  // sobre o layout —, então não há por que esperar por um quadro.
+  setTimeout(function () { aoTrocarModo(film); }, 0);
+
   // =====================================================================
   // [v1.9.19] REORDENAÇÃO DA PÁGINA — dados primeiro.
   //
@@ -200,6 +247,45 @@
   // restrição da entrega era acrescentar sem redesenhar, e mover o veredito
   // seria redesenhar uma decisão registrada.
   // ---------------------------------------------------------------------
+  /* [v1.9.43] OS DOIS MODOS DA PÁGINA, e o ponto de corte entre eles.
+
+     MODO FAIXA (≥ 1024px): o hero é a faixa full-bleed e NÃO existe
+     galeria embaixo.
+     MODO ESTÁTICO (< 1024px): o hero volta a ser a imagem única de
+     sempre e os stills vão para uma galeria depois da narrativa.
+
+     POR QUE 1024. O quadro da faixa tem 720px. O que quebra a faixa em
+     tela estreita não é a tela ser "de celular" — é a janela ser
+     comparável a UM quadro, porque aí não há sequência: fica um quadro
+     cortado quase o tempo todo, que foi exatamente o defeito relatado.
+     A grandeza que decide é `janela ÷ 720`:
+
+         janela | quadros simultâneos
+           768  | 1,07   ← um quadro cortado; é o defeito
+           834  | 1,16
+          1024  | 1,42   ← já há sempre um quadro inteiro + 42% do vizinho
+          1280  | 1,78
+          1440  | 2,00
+
+     1024 é o menor valor redondo em que a faixa mostra um quadro INTEIRO
+     com folga e o vizinho sempre entrando pela borda. Consequências, e
+     elas são intencionais: **tablet em retrato (768–834) fica no modo
+     estático**, com galeria embaixo — é o tamanho onde a faixa falha;
+     **tablet em paisagem (≥1024) usa a faixa**; e uma **janela de
+     desktop estreitada abaixo de 1024 troca de modo ao vivo**, sem
+     recarregar (ver `aoTrocarModo`). Não é o "mobile" do CSS (640px) de
+     propósito: aquele breakpoint responde a tipografia e margem, este
+     responde à largura de um quadro 16:9.
+
+     A CONSTANTE fica no topo do arquivo, junto das outras de módulo — ver
+     `MQ_MODO_FAIXA` lá em cima e o comentário de `ABERTURA_DA_COLUNA`
+     sobre o porquê. */
+  function ehModoFaixa() {
+    try {
+      return !!(window.matchMedia && window.matchMedia(MQ_MODO_FAIXA).matches);
+    } catch (e) { return true; }   // sem matchMedia, o modo de sempre
+  }
+
   function render(f) {
     app.appendChild(header(f));                       // 1 ano+título, 2 chip
     app.appendChild(fichaBlock(f.ficha || {}, f.reviews_url)); // 3 metadados
@@ -216,8 +302,15 @@
 
     if (f.narrativa) app.appendChild(narrativaCollapsedBlock(f.narrativa)); // 8
 
-    var galeria = galeriaBlock(f);                    // 9 [v1.9.39] galeria (stills)
-    if (galeria) app.appendChild(galeria);
+    // [v1.9.43] ÂNCORA da galeria do mobile — um nó inerte que marca o
+    // lugar exato onde a seção entra (depois da narrativa, antes da
+    // pesquisa), para que trocar de modo ao vivo não precise recalcular
+    // posição nem remontar a página inteira. Sem conteúdo e sem caixa:
+    // no modo faixa ele não desenha nada.
+    ancoraGaleria = document.createElement("div");
+    ancoraGaleria.hidden = true;
+    app.appendChild(ancoraGaleria);
+    aplicarModoGaleria(f);
 
     // micro-pesquisa (A/B) — módulo separado
     if (window.mountSurvey) window.mountSurvey(app, f);
@@ -292,13 +385,29 @@
     // mesmo princípio do degradê da célula do mosaico (v1.9.29, título
     // sobre pôster claro), com a diferença de que lá a base é preta e aqui
     // é `--bg`, porque aqui o degradê tem de casar com a página.
+    // [v1.9.42] A ABERTURA VIROU UMA FAIXA QUE ANDA. Correção de escopo do
+    // dono: a v1.9.41 tinha posto a faixa de stills numa seção "Galeria" no
+    // RODAPÉ da página — lugar errado. O hero deixa de ser uma imagem
+    // estática e passa a ser a faixa, ocupando exatamente o mesmo espaço e a
+    // mesma proporção de sempre, com um quadro por vez e os vizinhos
+    // entrando pela borda. A seção do rodapé foi REMOVIDA por inteiro
+    // (mesmo conteúdo duas vezes na mesma página).
+    //
+    // O QUE NÃO MUDOU, e é a maior parte: a posição do herói na página, o
+    // fade da base (`.backdrop::after`), o recuo do par ano → título, a
+    // barra, a ficha, as condições, os bullets, o veredito, a narrativa e a
+    // pesquisa. A troca é só de QUEM ocupa a caixa da abertura.
     var hero = document.createElement("div");
     hero.className = "film-hero";
 
     if (window.ESPECTRO_POSTER && f.ficha) {
-      var abertura = window.ESPECTRO_POSTER.montarBackdrop(f.ficha, {
-        titulo: titleOf(f), ano: ano,
-      });
+      // [v1.9.43] A faixa só no MODO FAIXA. Abaixo de 1024px o hero volta
+      // a ser a imagem estática de sempre e os stills descem para a
+      // galeria — ver `MQ_MODO_FAIXA`.
+      var abertura = (ehModoFaixa() ? heroFaixa(f, ano) : null) ||
+        window.ESPECTRO_POSTER.montarBackdrop(f.ficha, {
+          titulo: titleOf(f), ano: ano,
+        });
       // FALLBACK sem backdrop: o pôster contido volta, e com ele a
       // composição ANTIGA — pôster fechado, texto INTEIRAMENTE abaixo dele.
       // A sobreposição é do backdrop, não do pôster: um pôster 2:3 de 200px
@@ -321,7 +430,57 @@
     hero.appendChild(texto);
     el.appendChild(hero);
 
+    heroEl = hero;          // para a troca de modo ao vivo
+    heroAno = ano;
     return el;
+  }
+
+  // --- [v1.9.43] troca de modo ao vivo -------------------------------
+  //
+  // Uma janela de desktop estreitada abaixo de 1024px (ou um tablet
+  // girado) precisa mudar de modo SEM recarregar. Só as duas peças que
+  // dependem do modo são refeitas — o hero e a galeria. A página inteira
+  // NÃO é remontada de propósito: `mountSurvey` guarda estado de A/B, e
+  // remontá-lo a cada arrasto da borda da janela reiniciaria o
+  // experimento do leitor.
+  var heroEl = null, heroAno = "", ancoraGaleria = null, galeriaEl = null;
+
+  function aplicarModoHero(f) {
+    if (!heroEl || !window.ESPECTRO_POSTER || !f.ficha) return;
+    var visual = heroEl.firstElementChild;
+    if (!visual) return;
+    // IDEMPOTENTE: se o hero já está no modo certo, não reconstrói. Sem
+    // isso, cada reconciliação trocaria o `<img>` por um igual, e o topo
+    // da página piscaria a cada chamada.
+    var temFaixa = visual.classList.contains("hero-faixa-caixa");
+    if (temFaixa === ehModoFaixa()) return;
+    var nova = (ehModoFaixa() ? heroFaixa(f, heroAno) : null) ||
+      window.ESPECTRO_POSTER.montarBackdrop(f.ficha, {
+        titulo: titleOf(f), ano: heroAno,
+      });
+    if (!nova) return;
+    heroEl.classList.toggle(
+      "film-hero--poster",
+      !nova.classList.contains("backdrop"));
+    heroEl.replaceChild(nova, visual);
+  }
+
+  function aplicarModoGaleria(f) {
+    if (!ancoraGaleria) return;
+    var precisa = !ehModoFaixa();
+    if (precisa === !!galeriaEl) return;      // já está como deveria
+    if (!precisa) {
+      galeriaEl.remove();
+      galeriaEl = null;
+      return;
+    }
+    galeriaEl = galeriaMobileBlock(f);
+    if (galeriaEl) ancoraGaleria.parentNode.insertBefore(galeriaEl, ancoraGaleria);
+  }
+
+  function aoTrocarModo(f) {
+    aplicarModoHero(f);
+    aplicarModoGaleria(f);
   }
 
   // --- ficha (dado novo v1.3.0) ---
@@ -448,49 +607,145 @@
     return det;
   }
 
-  // --- galeria de STILLS (§3[F] v1.9.39 — mudança de escopo AUTORIZADA:
-  //     stills 16:9, não mais pôsteres alternativos, v1.9.38 removido) ---
-  //
-  // Posição INALTERADA: DEPOIS da narrativa, ANTES da pesquisa. Não
-  // redesenha nada acima — a ordem (backdrop → ficha → barra → condições →
-  // bullets → veredito → narrativa) é a mesma restrição de "acrescentar
-  // sem mover" que já vale para as condições de decisão.
-  //
-  // A galeria é DECORAÇÃO: não pode competir com dado nem introduzir
-  // animação que dispute atenção com a barra de proporção — por isso não
-  // há carrossel automático, nem transição, nem qualquer coisa que se
-  // mexa sozinha. É uma grade estática de miniaturas 16:9.
-  //
-  // **RISCO DE SPOILER ASSUMIDO** (decisão do dono do produto, registrada
-  // em `ficha.py`): nenhum filtro anti-spoiler é aplicado aos stills, ao
-  // contrário do resto da página (bullets filtrados, veredito proibido de
-  // citar reviravolta).
-  //
-  // Filme com galeria vazia (duração fora do território de longa —
-  // `duracao_compativel_com_longa`, `ficha.py`, NÃO é confirmação de
-  // identidade —, filme sem ficha, ou simplesmente sem stills suficientes
-  // sob o filtro de proporção/idioma): a SEÇÃO NÃO RENDERIZA. Sem
-  // placeholder, sem estado de erro visível — `null` aqui, e `render()`
-  // já trata `null` como "não anexar".
-  function galeriaBlock(f) {
-    if (!window.ESPECTRO_POSTER || !window.ESPECTRO_POSTER.montarGaleria) {
+  // [v1.9.42] A SEÇÃO "GALERIA" DO RODAPÉ FOI REMOVIDA, não desativada.
+  // Ela existiu da v1.9.39 à v1.9.41 (grade de miniaturas, depois faixa
+  // rolante) e saiu quando a faixa virou o HERO: manter as duas mostraria o
+  // mesmo conjunto de stills duas vezes na mesma página. `galeriaBlock` e
+  // `montarGaleria` foram apagados junto — nenhum ramo morto, nenhuma flag
+  // desligada, mesmo padrão da remoção de `galeria_posters` na v1.9.39.
+
+  /* [v1.9.42] A FAIXA do hero, ou `null` se este filme não tem faixa.
+     `null` NÃO é um estado de erro: é o caminho normal para
+     `talk-to-me-2022` (filtro de duração), para filme sem ficha e para
+     qualquer filme cujo pool não chegue a `PISO_STILLS`. Quem chama cai no
+     `montarBackdrop` de sempre, e o hero continua exibindo a imagem
+     estática — **o topo da página nunca fica vazio**, que é a diferença
+     entre esta seção e a galeria de rodapé que ela substitui (aquela podia
+     simplesmente não renderizar; esta não pode).
+
+     A ROLAGEM é `faixa.js`, sem alteração de mecânica: loop sem salto
+     (`periodoDaTrilha`), pausa por conjunto de motivos, rampa de retomada,
+     velocidade por delta de tempo, `prefers-reduced-motion` e arranque via
+     rAF. Sem `faixa.js` no ar, a faixa nasce estática e rolável à mão —
+     degradada, nunca quebrada, e o primeiro quadro visível continua sendo o
+     mesmo backdrop de antes. */
+  function heroFaixa(f, ano) {
+    if (!window.ESPECTRO_POSTER || !window.ESPECTRO_POSTER.montarHeroFaixa) {
       return null;
     }
-    var itens = window.ESPECTRO_POSTER.montarGaleria(f.ficha, {
+    var itens = window.ESPECTRO_POSTER.montarHeroFaixa(f.ficha, {
+      titulo: titleOf(f),
+      ano: f.ficha && f.ficha.ano ? String(f.ficha.ano) : "",
+      diferido: true,     // `src` sob demanda — ver `faixa.js`
+    });
+    if (!itens.length) return null;
+
+    // ACESSIBILIDADE — o contêiner recebe o foco, não cada quadro.
+    // `role="region"` + `tabindex="0"` + nome acessível é a técnica padrão
+    // para região rolável: um Tab entra na faixa e as setas percorrem todos
+    // os quadros, inclusive os fora da tela. Dar `tabindex` a cada still
+    // criaria 12 paradas de Tab decorativas logo na abertura da página,
+    // antes de qualquer conteúdo — obstáculo, não acesso.
+    // TRÊS CAIXAS, e a do meio existe por um motivo MEDIDO.
+    //
+    //   .backdrop (caixa)  — NÃO rola. Leva a proporção reservada e o
+    //                        `::after`, que é o FADE da base.
+    //   .hero-faixa        — rola. É o `overflow-x: auto`.
+    //   .hero-faixa__trilha — os quadros, em linha.
+    //
+    // Por que o fade não pode morar na caixa que rola: `.backdrop::after`
+    // é `position: absolute; left: 0; right: 0; bottom: 0`, e dentro de um
+    // contêiner com scroll isso ancora no CONTEÚDO, não na parte visível.
+    // MEDIDO ao vivo antes da correção: com a faixa em `scrollLeft = 1500`,
+    // o fade estava em `left: -1147px` — fora da tela. E o fade não é
+    // enfeite: é a construção que garante o PISO DE CONTRASTE do par ano →
+    // título (ver `.backdrop::after` em styles.css, e a nota da v1.9.33
+    // sobre a faixa chapada e o recuo). Sem ele, o título ficaria sobre
+    // pixel de imagem de verdade assim que a faixa saísse do lugar.
+    var caixa = document.createElement("div");
+    caixa.className = "backdrop hero-faixa-caixa";
+    // A PROPORÇÃO É RESERVADA aqui, com a razão do PRIMEIRO quadro (que é
+    // o backdrop do hero, pinado em 1º por `ficha.py`): sem isso o topo da
+    // página saltaria enquanto a primeira imagem carrega — exatamente o
+    // que `.backdrop` com `aspect-ratio` inline já evitava.
+    caixa.style.aspectRatio = itens[0].style.aspectRatio;
+
+    var faixa = document.createElement("div");
+    faixa.className = "hero-faixa";
+    faixa.setAttribute("role", "region");
+    faixa.setAttribute("tabindex", "0");
+    faixa.setAttribute("aria-label", "Imagens do filme");
+
+    var trilha = document.createElement("div");
+    trilha.className = "hero-faixa__trilha";
+    itens.forEach(function (item) { trilha.appendChild(item); });
+    faixa.appendChild(trilha);
+    caixa.appendChild(faixa);
+
+    if (window.ESPECTRO_FAIXA && window.ESPECTRO_FAIXA.montarFaixa) {
+      window.ESPECTRO_FAIXA.montarFaixa(faixa, trilha);
+    }
+    return caixa;
+  }
+
+  /* [v1.9.43] A GALERIA DO MOBILE — só no modo estático (< 1024px).
+
+     Volta a ocupar a MESMA posição da seção removida na v1.9.42 (depois
+     da narrativa, antes da pesquisa), com os MESMOS stills que a faixa
+     mostraria. No desktop ela não é escondida: não é construída, e por
+     isso o navegador não baixa as 12 imagens dela.
+
+     Cada quadro é um `<button>`, não um `<div>` com `onclick`: ele abre
+     um modo de tela cheia, que é ação, e um elemento de ação precisa
+     estar no fluxo de teclado, responder a Enter/Espaço e se anunciar
+     como botão sem que a gente reimplemente nada disso.
+
+     `null` quando não há stills — o mesmo contrato de sempre: seção que
+     não tem o que mostrar não renderiza (`talk-to-me-2022`). */
+  function galeriaMobileBlock(f) {
+    if (!window.ESPECTRO_POSTER || !window.ESPECTRO_POSTER.montarGaleriaMobile) {
+      return null;
+    }
+    var itens = window.ESPECTRO_POSTER.montarGaleriaMobile(f.ficha, {
       titulo: titleOf(f),
       ano: f.ficha && f.ficha.ano ? String(f.ficha.ano) : "",
     });
     if (!itens.length) return null;
 
     var el = document.createElement("section");
-    el.className = "stills-galeria";
+    el.className = "galeria-mobile";
     el.appendChild(sectionLabel("GALERIA"));
 
-    var grid = document.createElement("div");
-    grid.className = "stills-galeria__grid";
-    itens.forEach(function (caixa) { grid.appendChild(caixa); });
-    el.appendChild(grid);
+    var lista = document.createElement("div");
+    lista.className = "galeria-mobile__lista";
 
+    // Os DADOS das imagens, para o modo tela cheia montar os seus
+    // próprios `<img>` em vez de mover estes — assim fechar não precisa
+    // desfazer nada aqui atrás.
+    var dados = itens.map(function (caixa) {
+      var img = caixa.querySelector("img");
+      return img ? {
+        src: img.getAttribute("src"),
+        srcset: img.getAttribute("srcset"),
+        sizes: img.getAttribute("sizes"),
+        alt: img.getAttribute("alt"),
+      } : null;
+    });
+
+    itens.forEach(function (caixa, i) {
+      var botao = document.createElement("button");
+      botao.type = "button";
+      botao.className = "galeria-mobile__item";
+      botao.appendChild(caixa);
+      botao.addEventListener("click", function () {
+        if (window.ESPECTRO_LIGHTBOX && window.ESPECTRO_LIGHTBOX.abrir) {
+          window.ESPECTRO_LIGHTBOX.abrir(dados.filter(Boolean), i, botao);
+        }
+      });
+      lista.appendChild(botao);
+    });
+
+    el.appendChild(lista);
     return el;
   }
 
