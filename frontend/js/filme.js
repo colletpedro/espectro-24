@@ -216,7 +216,7 @@
 
     if (f.narrativa) app.appendChild(narrativaCollapsedBlock(f.narrativa)); // 8
 
-    var galeria = galeriaBlock(f);                    // 9 [v1.9.38] galeria
+    var galeria = galeriaBlock(f);                    // 9 [v1.9.39] galeria (stills)
     if (galeria) app.appendChild(galeria);
 
     // micro-pesquisa (A/B) — módulo separado
@@ -448,39 +448,46 @@
     return det;
   }
 
-  // --- galeria de pôsteres alternativos (§3[F] v1.9.38) ---
+  // --- galeria de STILLS (§3[F] v1.9.39 — mudança de escopo AUTORIZADA:
+  //     stills 16:9, não mais pôsteres alternativos, v1.9.38 removido) ---
   //
-  // Posição: DEPOIS da narrativa, ANTES da pesquisa. Não redesenha nada
-  // acima — a ordem (backdrop → ficha → barra → condições → bullets →
-  // veredito → narrativa) é a mesma restrição de "acrescentar sem mover"
-  // que já vale para as condições de decisão.
+  // Posição INALTERADA: DEPOIS da narrativa, ANTES da pesquisa. Não
+  // redesenha nada acima — a ordem (backdrop → ficha → barra → condições →
+  // bullets → veredito → narrativa) é a mesma restrição de "acrescentar
+  // sem mover" que já vale para as condições de decisão.
   //
   // A galeria é DECORAÇÃO: não pode competir com dado nem introduzir
   // animação que dispute atenção com a barra de proporção — por isso não
   // há carrossel automático, nem transição, nem qualquer coisa que se
-  // mexa sozinha. É uma grade estática de miniaturas.
+  // mexa sozinha. É uma grade estática de miniaturas 16:9.
+  //
+  // **RISCO DE SPOILER ASSUMIDO** (decisão do dono do produto, registrada
+  // em `ficha.py`): nenhum filtro anti-spoiler é aplicado aos stills, ao
+  // contrário do resto da página (bullets filtrados, veredito proibido de
+  // citar reviravolta).
   //
   // Filme com galeria vazia (duração fora do território de longa —
   // `duracao_compativel_com_longa`, `ficha.py`, NÃO é confirmação de
-  // identidade —, filme sem ficha, ou simplesmente sem pôsteres
-  // suficientes sob o filtro): a SEÇÃO NÃO RENDERIZA. Sem placeholder, sem
-  // estado de erro visível — `null` aqui, e `render()` já trata `null`
-  // como "não anexar".
+  // identidade —, filme sem ficha, ou simplesmente sem stills suficientes
+  // sob o filtro de proporção/idioma): a SEÇÃO NÃO RENDERIZA. Sem
+  // placeholder, sem estado de erro visível — `null` aqui, e `render()`
+  // já trata `null` como "não anexar".
   function galeriaBlock(f) {
     if (!window.ESPECTRO_POSTER || !window.ESPECTRO_POSTER.montarGaleria) {
       return null;
     }
     var itens = window.ESPECTRO_POSTER.montarGaleria(f.ficha, {
-      titulo: (f.ficha && f.ficha.titulo) || "",
+      titulo: titleOf(f),
+      ano: f.ficha && f.ficha.ano ? String(f.ficha.ano) : "",
     });
     if (!itens.length) return null;
 
     var el = document.createElement("section");
-    el.className = "poster-galeria";
-    el.appendChild(sectionLabel("OUTROS PÔSTERES"));
+    el.className = "stills-galeria";
+    el.appendChild(sectionLabel("GALERIA"));
 
     var grid = document.createElement("div");
-    grid.className = "poster-galeria__grid";
+    grid.className = "stills-galeria__grid";
     itens.forEach(function (caixa) { grid.appendChild(caixa); });
     el.appendChild(grid);
 

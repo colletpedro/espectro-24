@@ -671,106 +671,180 @@ def test_entrada_completa_com_campo_novo_NULO_e_HIT_e_nao_rebusca(tmp_path):
     assert de_novo["backdrop_path"] is None
 
 
-# --- galeria de pôsteres alternativos (§3[F] v1.9.38) ---
+# --- galeria de STILLS (§3[F] v1.9.39 — mudança de escopo autorizada:
+#     stills 16:9, não mais pôsteres alternativos, v1.9.38 removido) ---
+#
+# `_img(..., w=1920, h=1080, iso=None)` por padrão já é 16:9 EXATO (razão
+# 1,778) e sem texto — passa no filtro de still por padrão. Em toda fixture
+# abaixo, o primeiro item da lista tem o `vote_average` mais alto de
+# propósito: ele é quem `_melhor`/`_ordem_imagem` escolhe como o BACKDROP
+# DO HERO (`ficha["backdrop_path"]`), e é esse valor — não um parâmetro
+# separado, como era `poster_path` na geração de pôsteres — que a produção
+# exclui da galeria. Cada teste confirma o hero para não testar a exclusão
+# contra o valor errado por acidente.
 
-def test_galeria_ordena_por_vote_average_desc_com_desempate_por_file_path(tmp_path):
+def test_stills_ordena_por_vote_average_desc_com_desempate_por_file_path(tmp_path):
     """Ordem de CÓDIGO exigida: vote_average decrescente, desempate estável
     por file_path — nunca escolha estética por filme."""
-    ficha, _ = _ficha_imagens(tmp_path, poster_path="/poster.jpg", posters=[
+    ficha, _ = _ficha_imagens(tmp_path, backdrops=[
+        _img("/hero.jpg", va=10.0),  # maior nota -> vira o hero, excluído
         _img("/b.jpg", va=7.0), _img("/a.jpg", va=7.0), _img("/c.jpg", va=9.0),
     ])
-    caminhos = [p["poster_path"] for p in ficha["galeria_posters"]]
+    assert ficha["backdrop_path"] == "/hero.jpg"
+    caminhos = [s["still_path"] for s in ficha["galeria_stills"]]
     assert caminhos == ["/c.jpg", "/a.jpg", "/b.jpg"]
 
 
-def test_galeria_exclui_o_poster_ja_publicado(tmp_path):
-    # 4 candidatos além do já publicado (excluído) -> 3 sobram, no piso.
-    ficha, _ = _ficha_imagens(tmp_path, poster_path="/poster.jpg", posters=[
-        _img("/poster.jpg", va=9.0), _img("/outro1.jpg", va=5.0),
+def test_stills_exclui_o_backdrop_do_hero(tmp_path):
+    """Mesma lógica que excluía o pôster já publicado (v1.9.38): a galeria é
+    de OUTROS quadros — o hero já está no topo da página."""
+    # 4 candidatos além do hero (excluído) -> 3 sobram, no piso.
+    ficha, _ = _ficha_imagens(tmp_path, backdrops=[
+        _img("/hero.jpg", va=9.0), _img("/outro1.jpg", va=5.0),
         _img("/outro2.jpg", va=4.0), _img("/outro3.jpg", va=3.0),
     ])
-    caminhos = [p["poster_path"] for p in ficha["galeria_posters"]]
-    assert "/poster.jpg" not in caminhos
+    assert ficha["backdrop_path"] == "/hero.jpg"
+    caminhos = [s["still_path"] for s in ficha["galeria_stills"]]
+    assert "/hero.jpg" not in caminhos
     assert caminhos == ["/outro1.jpg", "/outro2.jpg", "/outro3.jpg"]
 
 
-def test_galeria_respeita_o_teto(tmp_path):
-    from espectro24.ficha import TETO_GALERIA
-    posters = [_img(f"/p{i}.jpg", va=float(i)) for i in range(TETO_GALERIA + 5)]
-    ficha, _ = _ficha_imagens(tmp_path, poster_path="/poster.jpg", posters=posters)
-    assert len(ficha["galeria_posters"]) == TETO_GALERIA
-    # o de maior vote_average (maior i) vem primeiro
-    assert ficha["galeria_posters"][0]["poster_path"] == f"/p{TETO_GALERIA + 4}.jpg"
+def test_stills_respeita_o_teto(tmp_path):
+    from espectro24.ficha import TETO_STILLS
+    candidatos = [_img(f"/p{i}.jpg", va=float(i)) for i in range(TETO_STILLS + 5)]
+    hero = _img("/hero.jpg", va=1000.0)  # nota absurda -> garantidamente o hero
+    ficha, _ = _ficha_imagens(tmp_path, backdrops=[hero] + candidatos)
+    assert ficha["backdrop_path"] == "/hero.jpg"
+    assert len(ficha["galeria_stills"]) == TETO_STILLS
+    # o de maior vote_average entre os candidatos (maior i) vem primeiro
+    assert ficha["galeria_stills"][0]["still_path"] == f"/p{TETO_STILLS + 4}.jpg"
 
 
-def test_galeria_no_piso_exato_2_nao_renderiza_3_renderiza(tmp_path):
-    """PISO_GALERIA=3, mesma lógica de `n < 10` na lei de margem: abaixo do
+def test_stills_no_piso_exato_2_nao_renderiza_3_renderiza(tmp_path):
+    """PISO_STILLS=3, mesma lógica de `n < 10` na lei de margem: abaixo do
     piso, a lista final some inteira em vez de mostrar uma galeria
     raquítica. Testa os dois lados do piso EXATO — 2 (abaixo, vazia) e 3
     (no piso, renderiza)."""
-    from espectro24.ficha import PISO_GALERIA
-    assert PISO_GALERIA == 3
+    from espectro24.ficha import PISO_STILLS
+    assert PISO_STILLS == 3
 
-    posters_2 = [_img(f"/p{i}.jpg", va=float(i)) for i in range(2)]
-    ficha_2, _ = _ficha_imagens(tmp_path / "abaixo", poster_path="/poster.jpg",
-                                posters=posters_2)
-    assert ficha_2["galeria_posters"] == []
+    abaixo = [_img("/hero.jpg", va=9.0)] + [_img(f"/p{i}.jpg", va=float(i))
+                                            for i in range(2)]
+    ficha_2, _ = _ficha_imagens(tmp_path / "abaixo", backdrops=abaixo)
+    assert ficha_2["galeria_stills"] == []
 
-    posters_3 = [_img(f"/q{i}.jpg", va=float(i)) for i in range(3)]
-    ficha_3, _ = _ficha_imagens(tmp_path / "no_piso", poster_path="/poster2.jpg",
-                                posters=posters_3)
-    assert len(ficha_3["galeria_posters"]) == 3
+    no_piso = [_img("/hero2.jpg", va=9.0)] + [_img(f"/q{i}.jpg", va=float(i))
+                                              for i in range(3)]
+    ficha_3, _ = _ficha_imagens(tmp_path / "no_piso", backdrops=no_piso)
+    assert len(ficha_3["galeria_stills"]) == 3
 
 
-def test_galeria_piso_aplica_DEPOIS_do_teto_e_da_exclusao_do_atual(tmp_path):
-    """O piso olha o resultado FINAL — depois de excluir o pôster já
-    publicado e cortar em `TETO_GALERIA` — não a contagem bruta de
-    `images.posters`. 4 pôsteres brutos, um deles é o já publicado: sobram
-    3, exatamente no piso, renderiza."""
-    ficha, _ = _ficha_imagens(tmp_path, poster_path="/poster.jpg", posters=[
-        _img("/poster.jpg", va=9.0),  # o já publicado — excluído
+def test_stills_piso_aplica_DEPOIS_do_teto_e_da_exclusao_do_hero(tmp_path):
+    """O piso olha o resultado FINAL — depois de excluir o backdrop do hero
+    e cortar em `TETO_STILLS` — não a contagem bruta de `images.backdrops`.
+    4 backdrops brutos, um deles é o hero: sobram 3, exatamente no piso,
+    renderiza."""
+    ficha, _ = _ficha_imagens(tmp_path, backdrops=[
+        _img("/hero.jpg", va=9.0),  # o hero — excluído
         _img("/a.jpg", va=3.0), _img("/b.jpg", va=2.0), _img("/c.jpg", va=1.0),
     ])
-    assert len(ficha["galeria_posters"]) == 3
+    assert len(ficha["galeria_stills"]) == 3
 
 
-def test_galeria_traz_dimensoes_por_item(tmp_path):
-    ficha, _ = _ficha_imagens(tmp_path, poster_path="/poster.jpg", posters=[
-        _img("/alt.jpg", va=5.0, w=1000, h=1500),
-        _img("/alt2.jpg", va=3.0, w=800, h=1200),
-        _img("/alt3.jpg", va=1.0, w=600, h=900),
+def test_stills_traz_dimensoes_por_item(tmp_path):
+    ficha, _ = _ficha_imagens(tmp_path, backdrops=[
+        _img("/hero.jpg", va=9.0),
+        _img("/alt.jpg", va=5.0, w=1920, h=1080),
+        _img("/alt2.jpg", va=3.0, w=1600, h=900),
+        _img("/alt3.jpg", va=1.0, w=1280, h=720),
     ])
-    item = ficha["galeria_posters"][0]
-    assert (item["poster_largura"], item["poster_altura"]) == (1000, 1500)
+    item = ficha["galeria_stills"][0]
+    assert (item["still_largura"], item["still_altura"]) == (1920, 1080)
+
+
+# --- filtro de aspect_ratio (§3[F] v1.9.39 — NOVO: não existia na galeria
+#     de pôsteres, onde a proporção era a do próprio pôster, sem filtro) ---
+
+def test_stills_aspect_ratio_fora_da_faixa_e_excluido(tmp_path):
+    """16:9 nominal (está em `backdrops`) não é 16:9 REAL — o acervo do
+    TMDB tem crops fora da proporção. `[1.70, 1.85]` é FILTRO: um crop
+    2,33:1 (ultrawide) ou 4:3 (1,33) fica de fora mesmo com nota alta."""
+    ficha, _ = _ficha_imagens(tmp_path, backdrops=[
+        _img("/hero.jpg", va=20.0, w=1920, h=1080),  # nota mais alta -> hero
+        _img("/dentro1.jpg", va=8.0, w=1920, h=1080),   # 1,778 — dentro
+        _img("/dentro2.jpg", va=7.0, w=1280, h=720),    # 1,778 — dentro
+        _img("/dentro3.jpg", va=6.0, w=3840, h=2160),   # 1,778 — dentro
+        _img("/ultrawide.jpg", va=10.0, w=2560, h=1080),  # 2,370 — FORA
+        _img("/quadrado.jpg", va=10.0, w=1440, h=1080),   # 1,333 (4:3) — FORA
+    ])
+    assert ficha["backdrop_path"] == "/hero.jpg"
+    caminhos = [s["still_path"] for s in ficha["galeria_stills"]]
+    assert "/ultrawide.jpg" not in caminhos
+    assert "/quadrado.jpg" not in caminhos
+    assert caminhos == ["/dentro1.jpg", "/dentro2.jpg", "/dentro3.jpg"]
+
+
+def test_stills_aspect_ratio_no_limite_exato_1_70_e_1_85_entram(tmp_path):
+    """Os dois limites são INCLUSIVOS — folga de arredondamento de pixel,
+    não um intervalo aberto."""
+    ficha, _ = _ficha_imagens(tmp_path, backdrops=[
+        _img("/hero.jpg", va=20.0, w=1920, h=1080),  # nota mais alta -> hero
+        _img("/limite-baixo.jpg", va=5.0, w=1700, h=1000),  # 1,700 exato
+        _img("/limite-alto.jpg", va=4.0, w=1850, h=1000),   # 1,850 exato
+        _img("/meio.jpg", va=3.5, w=1750, h=1000),          # 1,750 — dentro
+        _img("/fora-por-pouco.jpg", va=3.0, w=1860, h=1000),  # 1,860 — fora
+    ])
+    assert ficha["backdrop_path"] == "/hero.jpg"
+    caminhos = [s["still_path"] for s in ficha["galeria_stills"]]
+    assert "/limite-baixo.jpg" in caminhos
+    assert "/limite-alto.jpg" in caminhos
+    assert "/fora-por-pouco.jpg" not in caminhos
+
+
+def test_stills_exclui_iso_639_1_nao_nulo_mesmo_dentro_da_proporcao(tmp_path):
+    """`iso_639_1 is None` é FILTRO aqui, não preferência (diferente do
+    backdrop do hero, onde sem-texto só prioriza) — arte com idioma
+    declarado é promocional, com texto sobreposto, não um quadro do
+    filme."""
+    ficha, _ = _ficha_imagens(tmp_path, backdrops=[
+        _img("/hero.jpg", va=9.0),
+        _img("/keyart-pt.jpg", va=20.0, iso="pt"),  # nota altíssima, mas COM texto
+        _img("/quadro1.jpg", va=3.0, iso=None),
+        _img("/quadro2.jpg", va=2.0, iso=None),
+        _img("/quadro3.jpg", va=1.0, iso=None),
+    ])
+    caminhos = [s["still_path"] for s in ficha["galeria_stills"]]
+    assert "/keyart-pt.jpg" not in caminhos
+    assert caminhos == ["/quadro1.jpg", "/quadro2.jpg", "/quadro3.jpg"]
 
 
 def test_filtro_de_duracao_caso_positivo_longa_metragem_tem_galeria(tmp_path):
     """Caso positivo: duração de longa (>= 40 min) passa no filtro."""
-    ficha, _ = _ficha_imagens(tmp_path, poster_path="/poster.jpg", posters=[
+    ficha, _ = _ficha_imagens(tmp_path, backdrops=[
+        _img("/hero.jpg", va=9.0),
         _img("/alt.jpg", va=5.0), _img("/alt2.jpg", va=3.0), _img("/alt3.jpg", va=1.0),
     ])
     assert ficha["duracao_min"] == 111  # default de _detalhes()
-    assert ficha["galeria_posters"] != []
+    assert ficha["galeria_stills"] != []
 
 
 def test_filtro_de_duracao_caso_negativo_curta_fica_sem_galeria(tmp_path):
     """Caso negativo — o CASO REAL: `talk-to-me-2022` resolve para um curta
     de 3 minutos (tmdb_id=976680, George Williams), não o longa esperado. O
     filtro de duração reprova e a galeria fica vazia, mas a ficha (título,
-    pôster principal etc.) continua publicada — um filme sem galeria é
+    backdrop principal etc.) continua publicada — um filme sem galeria é
     aceitável. NÃO CONFIRMA IDENTIDADE: só reage ao sintoma, sem provar que
     o `tmdb_id` é o certo — a guarda de identidade em si continua pendente
-    no pipeline de coleta (`buscar_ficha`)."""
-    # 3 candidatos alternativos (>= PISO_GALERIA) para que a lista vazia
-    # aqui prove o FILTRO DE DURAÇÃO, não seja confundida com o piso.
+    no pipeline de coleta (`buscar_ficha`), e é BLOQUEANTE antes de
+    qualquer expansão de catálogo."""
+    # 4 backdrops (hero + 3 candidatos, >= PISO_STILLS) para que a lista
+    # vazia aqui prove o FILTRO DE DURAÇÃO, não seja confundida com o piso.
     d = _detalhes(release_date="2022-01-01")
     d["runtime"] = 3
-    d["poster_path"] = "/poster.jpg"
-    d["images"] = {"posters": [_img("/poster.jpg", va=1.0),
-                               _img("/alt1.jpg", va=5.0),
-                               _img("/alt2.jpg", va=4.0),
-                               _img("/alt3.jpg", va=3.0)],
-                   "backdrops": []}
+    d["images"] = {"posters": [], "backdrops": [
+        _img("/hero.jpg", va=9.0),
+        _img("/alt1.jpg", va=5.0), _img("/alt2.jpg", va=4.0), _img("/alt3.jpg", va=3.0),
+    ]}
     session = FakeTmdbSession({
         ("search", "Talk To Me", 2022): {"results": [{"id": 976680,
                                                        "release_date": "2022-01-01"}]},
@@ -779,31 +853,50 @@ def test_filtro_de_duracao_caso_negativo_curta_fica_sem_galeria(tmp_path):
     ficha, _, _ = buscar_ficha("Talk To Me", 2022, tmp_path, api_key="k",
                                session=session)
     assert ficha["duracao_min"] == 3
-    assert ficha["galeria_posters"] == []
+    assert ficha["galeria_stills"] == []
     # o resto da ficha segue publicado normalmente — o filtro é só da galeria
-    assert ficha["poster_path"] == "/poster.jpg"
+    assert ficha["backdrop_path"] == "/hero.jpg"
 
 
 def test_filtro_de_duracao_caso_sem_dado_duracao_ausente_fica_sem_galeria(tmp_path):
     """Caso sem dado: `runtime` ausente/None do TMDB não pode ser tratado
     como 'compatível com longa' por omissão — o filtro é conservador."""
-    # 3 candidatos alternativos (>= PISO_GALERIA), mesma razão do teste
-    # anterior — isolar o filtro de duração do piso.
+    # 4 backdrops (hero + 3 candidatos), mesma razão do teste anterior —
+    # isolar o filtro de duração do piso.
     d = _detalhes()
     d["runtime"] = None
-    d["poster_path"] = "/poster.jpg"
-    d["images"] = {"posters": [_img("/poster.jpg", va=1.0),
-                               _img("/alt1.jpg", va=5.0),
-                               _img("/alt2.jpg", va=4.0),
-                               _img("/alt3.jpg", va=3.0)],
-                   "backdrops": []}
+    d["images"] = {"posters": [], "backdrops": [
+        _img("/hero.jpg", va=9.0),
+        _img("/alt1.jpg", va=5.0), _img("/alt2.jpg", va=4.0), _img("/alt3.jpg", va=3.0),
+    ]}
     session = FakeTmdbSession({
         ("search", "Cure", 1997): {"results": [{"id": 5, "release_date": "1997-01-01"}]},
         ("movie", "pt-BR"): d,
     })
     ficha, _, _ = buscar_ficha("Cure", 1997, tmp_path, api_key="k", session=session)
     assert ficha["duracao_min"] is None
-    assert ficha["galeria_posters"] == []
+    assert ficha["galeria_stills"] == []
+
+
+def test_talk_to_me_2022_continua_caindo_no_filtro_mesmo_com_stills(tmp_path):
+    """[v1.9.39] Verificação explícita pedida na entrega: a troca de fonte
+    (pôster -> still) NÃO pode enfraquecer o caso real que a guarda de
+    duração existe para pegar. Reproduz o achado da ETAPA 0 desta versão:
+    o curta (976680) só tem 1 backdrop no TOTAL — cai tanto no filtro de
+    duração quanto, independentemente, no piso. Se algum dia isto passar a
+    montar galeria, a guarda quebrou."""
+    d = _detalhes(release_date="2022-01-01")
+    d["runtime"] = 3
+    d["images"] = {"posters": [], "backdrops": [_img("/unico.jpg", va=1.0)]}
+    session = FakeTmdbSession({
+        ("search", "Talk To Me", 2022): {"results": [{"id": 976680,
+                                                       "release_date": "2022-01-01"}]},
+        ("movie", "pt-BR"): d,
+    })
+    ficha, _, _ = buscar_ficha("Talk To Me", 2022, tmp_path, api_key="k",
+                               session=session)
+    assert ficha["tmdb_id"] == 976680
+    assert ficha["galeria_stills"] == []
 
 
 def test_duracao_compativel_com_longa_no_piso_exato():

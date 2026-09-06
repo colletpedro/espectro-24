@@ -104,7 +104,7 @@ def test_montar_galeria_nunca_retorna_null_so_array_vazio():
 
 def test_atribuicao_ao_tmdb_menciona_a_galeria():
     """Obrigação legal (não opcional): a página de créditos precisa cobrir
-    as imagens da galeria, não só o pôster principal."""
+    as imagens da galeria (stills, v1.9.39), não só o pôster principal."""
     creditos = (Path(__file__).resolve().parent.parent / "frontend"
                 / "creditos.html").read_text(encoding="utf-8")
-    assert "galeria de pôsteres alternativos" in creditos
+    assert "galeria de stills" in creditos

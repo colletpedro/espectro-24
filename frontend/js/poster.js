@@ -71,15 +71,14 @@
   //     ficaria em 1,08× no desktop, visivelmente mole em retina.
   var TAMANHO_BACKDROP = "w1280";
 
-  // [v1.9.38] GALERIA DE PÔSTERES ALTERNATIVOS — lista própria de largura,
-  // porque a caixa é uma MINIATURA, bem menor que o pôster de 200px da
-  // ficha. Medido: a coluna de leitura cabe ~5 miniaturas de ~100px CSS de
-  // largura com gap de 8px (720px / (100+8) ≈ 6, folga para o gap externo).
-  // 100 × 2 = 200; `w154` (154px) cobre 1,54× — acima do 1× e abaixo do
-  // custo de `w185`/`w342` por imagem, e são até 8 delas na mesma página
-  // (`TETO_GALERIA`, `ficha.py`), ao contrário do pôster/backdrop que são
-  // UMA imagem só. `w92` ficaria mole em tela retina (0,92×).
-  var TAMANHO_GALERIA = "w154";
+  // [v1.9.39] GALERIA DE STILLS — largura própria de MINIATURA 16:9 (não
+  // reaproveita `TAMANHO_BACKDROP`, que é para o backdrop ÚNICO do topo,
+  // largura de coluna inteira). Medido: a grade cabe ~4 colunas de ~170px
+  // CSS com gap de 8px (720px / (170+8) ≈ 4). 170 × 2 = 340; `w300` (300px,
+  // lista própria de largura de backdrop — não existe w342 aqui) cobre
+  // 1,76× — acima do 1× e abaixo do custo de `w780` por imagem, e são até 8
+  // delas na mesma página (`TETO_STILLS`, `ficha.py`).
+  var TAMANHO_STILLS = "w300";
 
   // Proporção de reserva do backdrop quando as dimensões não vieram da API.
   // 16:9 é o formato do acervo de backdrops do TMDB (medido nos 34 do
@@ -279,49 +278,59 @@
     });
   }
 
-  /* [v1.9.38] `montarGaleria(ficha, opcoes)` → array de miniaturas
+  /* [v1.9.39] `montarGaleria(ficha, opcoes)` → array de miniaturas 16:9
      (`<span>` na mesma caixa comum de imagem, cada uma com sua própria
-     proporção reservada) para a galeria de pôsteres alternativos.
+     proporção reservada) para a galeria de STILLS do filme.
+
+     **RISCO DE SPOILER ASSUMIDO** (ver docstring de `ficha.py`): nenhum
+     filtro de conteúdo é aplicado aqui — se o campo tem itens, eles
+     renderizam, sem checagem de ato/reviravolta.
 
      Devolve array VAZIO — nunca `null` — quando não há galeria: o filme
-     está sem `ficha`, `galeria_posters` é ausente/vazio (inclui o caso da
-     GUARDA DE IDENTIDADE, `ficha.py`, que zera a lista quando o `tmdb_id`
-     resolvido não é confirmado como o longa esperado), ou o campo não é
-     array. Quem chama decide o que fazer com array vazio — hoje, não
-     renderizar a seção (ver `filme.js`): galeria vazia não é erro, é o
-     mesmo "filme sem [dado]" de sempre (§3[F]).
+     está sem `ficha`, `galeria_stills` é ausente/vazio (inclui o caso do
+     FILTRO DE DURAÇÃO, `ficha.py` — não é guarda de identidade, ver a
+     docstring de `duracao_compativel_com_longa` — e o caso do PISO,
+     `PISO_STILLS`), ou o campo não é array. Quem chama decide o que fazer
+     com array vazio — hoje, não renderizar a seção (ver `filme.js`):
+     galeria vazia não é erro, é o mesmo "filme sem [dado]" de sempre
+     (§3[F]).
 
      `lazy: true` sempre — a galeria vem DEPOIS da narrativa, abaixo da
      dobra em qualquer tela, ao contrário do pôster da ficha (acima) e do
      backdrop (topo). */
   function montarGaleria(ficha, opcoes) {
     opcoes = opcoes || {};
-    var lista = (ficha && ficha.galeria_posters) || [];
+    var lista = (ficha && ficha.galeria_stills) || [];
     if (!Array.isArray(lista)) return [];
     var nome = opcoes.titulo || "";
-    return lista.filter(function (p) { return p && p.poster_path; })
-      .map(function (p, i) {
+    return lista.filter(function (s) { return s && s.still_path; })
+      .map(function (s, i) {
         return caixaDeImagem({
-          classe: "poster poster--galeria",
-          razao: razaoOu(p.poster_largura, p.poster_altura, RAZAO_PADRAO),
-          path: p.poster_path,
-          largura: p.poster_largura,
-          altura: p.poster_altura,
-          tamanho: TAMANHO_GALERIA,
+          // "poster" traz a caixa base compartilhada (proporção reservada,
+          // fundo, o estado `is-vazio` desenhado); "still" é o modificador
+          // próprio (borda, raio — ver `styles.css`). Mesmo padrão que
+          // `poster--ficha`/`poster--mosaico` já usavam.
+          classe: "poster still",
+          razao: razaoOu(s.still_largura, s.still_altura, RAZAO_BACKDROP),
+          path: s.still_path,
+          largura: s.still_largura,
+          altura: s.still_altura,
+          tamanho: TAMANHO_STILLS,
           lazy: true,
-          // ALT numerado: são várias imagens do MESMO filme lado a lado, e
-          // "Pôster de X" repetido 8 vezes seria ruído idêntico para quem
-          // usa leitor de tela — o número as distingue sem inventar
-          // descrição de arte que não temos.
-          alt: "Pôster alternativo " + (i + 1) + " de " + nome,
-          notaVazio: "sem pôster",
+          // ALT numerado: são vários quadros do MESMO filme lado a lado, e
+          // "Imagem de X" repetido 8 vezes seria ruído idêntico para quem
+          // usa leitor de tela — o número os distingue sem descrever a
+          // cena (não temos a descrição, e descrevê-la arriscaria spoiler
+          // além do que a imagem já arrisca).
+          alt: "Still " + (i + 1) + " de " + nome + sufixoAno(opcoes.ano),
+          notaVazio: "sem imagem",
         });
       });
   }
 
   window.ESPECTRO_POSTER = {
     CDN: CDN, TAMANHO: TAMANHO, TAMANHO_BACKDROP: TAMANHO_BACKDROP,
-    TAMANHO_GALERIA: TAMANHO_GALERIA,
+    TAMANHO_STILLS: TAMANHO_STILLS,
     RAZAO_PADRAO: RAZAO_PADRAO, RAZAO_BACKDROP: RAZAO_BACKDROP,
     url: url, razaoDe: razaoDe, montar: montar,
     montarBackdrop: montarBackdrop, montarGaleria: montarGaleria,

@@ -369,26 +369,40 @@ a { color: inherit; }
 }
 
 /* =======================================================================
-   [v1.9.38] GALERIA DE PÔSTERES ALTERNATIVOS — decoração, não dado.
+   [v1.9.39] GALERIA DE STILLS — decoração, não dado. Substitui a galeria
+   de pôsteres alternativos (v1.9.38, removida por mudança de escopo
+   autorizada: stills 16:9, não pôsteres — ver `ficha.py`).
+
    Grade ESTÁTICA de miniaturas: sem carrossel, sem transição própria, sem
    nada que se mexa sozinho — a única animação é o mesmo fade-in de 0,24s
    de qualquer pôster do site (`.poster__img`, acima), não uma nova. Fica
    DEPOIS da narrativa e ANTES da pesquisa; não desloca nenhum bloco
-   existente (ver a ordem comentada em `render()`, filme.js). */
-.poster-galeria { margin: 28px 0 8px; }
-.poster-galeria__grid {
+   existente (ver a ordem comentada em `render()`, filme.js).
+
+   O item é 16:9, ~2,3× mais largo por unidade que o pôster 2:3 da geração
+   anterior — por isso a grade cabe MENOS colunas na mesma largura de
+   coluna (`minmax(150px, 1fr)` × ~720px ≈ 4 colunas, contra ~6-7 da
+   grade de pôster) e `TETO_STILLS=8` (igual ao teto antigo, mantido por
+   decisão do dono apesar do item mais largo) fecha em 2 linhas de 4, não
+   em 1. **RISCO DE SPOILER ASSUMIDO** — nenhuma classe aqui filtra
+   conteúdo; a decisão é do dono do produto, registrada em `ficha.py`. */
+.stills-galeria { margin: 28px 0 8px; }
+.stills-galeria__grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(84px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
   gap: 10px;
-  max-width: 420px;
+  max-width: 720px;
 }
-.poster--galeria {
+.still {
   border-radius: 6px;
   border: 1px solid var(--border);
 }
-.poster--galeria .poster__vazio-nota { font-size: 0.5rem; }
+.still .poster__vazio-nota { font-size: 0.5rem; }
 @media (max-width: 640px) {
-  .poster-galeria__grid { max-width: none; }
+  .stills-galeria__grid {
+    max-width: none;
+    grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+  }
 }
 
 /* --- [v1.9.30] O BACKDROP: a abertura da página do filme ---------------

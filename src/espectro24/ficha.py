@@ -13,6 +13,16 @@ determinística, nunca rebusca filme já buscado). Falha da API (chave
 ausente, rede, HTTP, sem resultado) NUNCA levanta para o chamador — a ficha
 é aditiva por decisão de design (SPEC §1.2): o pipeline segue sem ela, com
 um aviso.
+
+[v1.9.39] `galeria_stills` — mudança de escopo AUTORIZADA pelo dono do
+produto: a galeria da página do filme mostra STILLS (backdrops 16:9), não
+mais pôsteres alternativos (`galeria_posters`, v1.9.38, removido — não
+convive com o campo novo). **Risco de spoiler ASSUMIDO explicitamente**:
+nenhum filtro anti-spoiler é aplicado aqui, ao contrário de todo o resto do
+produto (bullets filtrados, veredito proibido de citar reviravolta) — a
+mesma exceção que já valia para o backdrop ESCOLHIDO do topo da página
+(§3[E]), agora estendida a uma galeria inteira, com o mesmo trade-off
+registrado e a mesma decisão: do dono, não do código.
 """
 from __future__ import annotations
 
@@ -78,36 +88,41 @@ TMDB_IMAGE_LANGS = "pt,null"
 # página do filme".
 TETO_BACKDROPS = 10
 
-# [v1.9.38] Teto da GALERIA DE PÔSTERES ALTERNATIVOS (§3[F] — decisão
-# registrada em ETAPA 0 antes de qualquer implementação, não palpite).
+# [v1.9.39] Teto da GALERIA DE STILLS (§3[F] — decisão registrada em ETAPA
+# 0 antes de qualquer implementação, não palpite; mudança de escopo
+# AUTORIZADA pelo dono: stills 16:9, não pôsteres — ver docstring do
+# módulo).
 #
-# Medido ao vivo em 2026-09-04, os 35 filmes publicados, sob
-# `include_image_language=pt,null` (o mesmo filtro de sempre): mediana de
-# 17 pôsteres por filme, mínimo 2 (`eighth-grade`), máximo 64
-# (`dune-part-two`). A mediana >= 4 sustenta a galeria como galeria (gate
-# passou). TETO_GALERIA=8 foi escolhido porque 30 dos 35 filmes têm >= 8
-# pôsteres sob o filtro — a galeria enche para a maioria — e o teto é
-# baixo o bastante para continuar decoração, não abas de imagens.
-# `eighth-grade` (2) e `cats-2019` (4) simplesmente renderizam menos: é
-# TETO, não piso — nenhum filme é obrigado a preencher os 8.
-TETO_GALERIA = 8
+# Medido ao vivo em 2026-09-04, os 35 filmes publicados, `/movie/{id}/images`
+# SEM `include_image_language` (para pegar o TOTAL de verdade) e filtrado em
+# código (`iso_639_1 is None` E aspect_ratio em [1.70, 1.85]): mediana de
+# **69** stills por filme, mínimo **0** (`talk-to-me-2022` — o curta de 3
+# min só tem 1 backdrop no total), máximo 257 (`wicked-2024`). Excluindo o
+# curta, o PISO real do catálogo é 18 (`eighth-grade`) — bem acima de
+# qualquer teto razoável; N não é limitado pela distribuição aqui, ao
+# contrário da galeria de pôsteres (v1.9.38), onde `eighth-grade`/
+# `cats-2019` raspavam o fundo do poço. **TETO_STILLS=8 mantido igual ao
+# teto de pôsteres por decisão explícita do dono do produto**, apesar de o
+# still 16:9 ser ~2,3× mais largo por item que o pôster 2:3 (proposta
+# alternativa de N=6, por layout, foi feita e recusada).
+TETO_STILLS = 8
 
-# [v1.9.38] PISO da galeria — mesma lógica de `n < 10` na lei de margem
-# (`config.py`, §2.5): abaixo de um mínimo, o dado não sustenta a coisa que
-# ele estaria ali para mostrar, e a ausência é mais honesta que uma versão
-# raquítica dela. Uma "galeria" de 1 ou 2 miniaturas não é galeria — é
-# ruído visual do tamanho de um erro de layout. `PISO_GALERIA=3` é o piso
-# ÓBVIO (menos que isso não enche nem uma linha da grade num layout de
-# 3+ colunas) e reaproveita o vocabulário que o projeto já usa para "dado
-# de menos": abaixo dele a lista final (depois de ordenar, excluir o
-# pôster publicado e aplicar `TETO_GALERIA`) é zerada, não truncada — a
-# seção inteira desaparece (ver `galeriaBlock`, `filme.js`).
+# [v1.9.39] PISO da galeria — mesma lógica de `n < 10` na lei de margem
+# (`config.py`, §2.5) e o mesmo valor da geração anterior (pôsteres,
+# v1.9.38): abaixo de um mínimo, o dado não sustenta a coisa que ele
+# estaria ali para mostrar, e a ausência é mais honesta que uma versão
+# raquítica dela. `PISO_STILLS=3` é o piso ÓBVIO (menos que isso não enche
+# nem uma linha da grade) e reaproveita o vocabulário que o projeto já usa
+# para "dado de menos": abaixo dele a lista final (depois de ordenar,
+# excluir o backdrop do hero e aplicar `TETO_STILLS`) é zerada, não
+# truncada — a seção inteira desaparece (ver `galeriaBlock`, `filme.js`).
 #
-# Medido nos 35: só `eighth-grade` cai neste piso (1 pôster alternativo
-# depois de excluir o publicado) — `cats-2019` fica em 3 (exatamente no
-# piso, RENDERIZA) e `talk-to-me-2022` já estava zerado pelo filtro de
-# duração, então o piso não muda o resultado dele.
-PISO_GALERIA = 3
+# Medido nos 35: NENHUM filme cai neste piso por escassez de still — o
+# menor real (`eighth-grade`, 18) está bem acima de 3. Só
+# `talk-to-me-2022` fica vazio, e é pelo FILTRO DE DURAÇÃO abaixo, não pelo
+# piso (ele já teria 0 stills sob o filtro de qualquer forma — o curta só
+# tem 1 backdrop no total).
+PISO_STILLS = 3
 
 # [v1.9.38] Piso de duração que decide se a galeria é montada.
 #
@@ -119,6 +134,18 @@ PISO_GALERIA = 3
 # COLETA (`buscar_ficha`), onde o `tmdb_id` é decidido; este piso só reage
 # a um sintoma dele DEPOIS do fato, e só para a galeria.
 #
+# [v1.9.39] **FICA MAIS IMPORTANTE, não menos, com a troca para stills.**
+# Um pôster errado é uma imagem de capa de outro filme; um STILL errado é
+# um QUADRO de outro filme, sem nenhum filtro anti-spoiler por cima (risco
+# assumido, ver docstring do módulo) — o custo de a guarda falhar subiu, o
+# piso continua sendo o único freio. Verificado ao vivo (2026-09-04, ETAPA
+# 0 desta versão): `talk-to-me-2022` CONTINUA caindo aqui (`duracao_min=3`)
+# — e também cairia no piso de qualquer forma, já que o curta só tem 1
+# backdrop no total (0 sob o filtro de still). Se algum dia esse filme
+# passar por este piso, é sinal de que a guarda quebrou — investigar antes
+# de prosseguir com qualquer expansão de catálogo, que continua BLOQUEADA
+# até a guarda de identidade real (acima) ser implementada.
+#
 # Caso conhecido, e o que este piso pega DELE: `talk-to-me-2022` resolve
 # para `tmdb_id=976680`, um CURTA de George Williams de 3 minutos — não o
 # longa de A24 (2022) que o catálogo pretende. A guarda de ano da v1.7.0
@@ -129,7 +156,7 @@ PISO_GALERIA = 3
 # os 34 longas vão de 94 a 181 minutos, o curta fica em 3. Um piso de 40 min
 # (definição comum de "longa-metragem", ex. Academy/BAFTA) reage a ISSO:
 # abaixo dele, a galeria fica vazia — um filme sem galeria é aceitável (ver
-# docstring de `_galeria`) — mas a ficha inteira (título, sinopse, pôster
+# docstring de `_stills`) — mas a ficha inteira (título, sinopse, pôster
 # principal) continua publicada como sempre, porque o piso não decide nada
 # sobre identidade, só sobre se a duração PARECE de longa.
 #
@@ -174,6 +201,13 @@ GALERIA_DURACAO_MIN_FEATURE = 40
 # Resolução NÃO é o primeiro degrau de propósito: `width` sozinho escolhe o
 # maior arquivo, não o melhor quadro, e o acervo é cheio de 3840×2160 sem
 # voto nenhum.
+
+
+# [v1.9.40] O limiar e a distância vêm de `still_hash` (onde a matriz de
+# acerto que os justifica está registrada). Só a GERAÇÃO de hash precisa de
+# Pillow/imagehash; `distancia_phash` é aritmética de inteiro, então a dedup
+# e os testes dela rodam num ambiente sem as libs de imagem.
+from espectro24.still_hash import LIMIAR_PHASH, distancia as distancia_phash
 
 
 def _ordem_imagem(img: dict, *, preferir_sem_texto: bool) -> tuple:
@@ -227,36 +261,204 @@ def duracao_compativel_com_longa(duracao_min: int | None) -> bool:
     return duracao_min is not None and duracao_min >= GALERIA_DURACAO_MIN_FEATURE
 
 
-def _galeria(imagens: dict, poster_path: str | None, *,
-             teto: int = TETO_GALERIA, piso: int = PISO_GALERIA) -> list[dict]:
-    """Os até `teto` pôsteres ALTERNATIVOS ao `poster_path` já publicado,
-    na ORDEM DE CÓDIGO exigida (§3[F] v1.9.38 — não é a mesma ordem de
-    `_ordem_imagem`, que é para o BACKDROP escolhido/pôster sem texto):
+def _still_16_9(b: dict) -> bool:
+    """`True` se `b` (um item de `images.backdrops`) é 16:9 DE FATO — não
+    só "está na lista de backdrops". Medido nos 35 (2026-09-04): o acervo
+    de backdrop do TMDB tem exceções reais (ex. crops mais quadrados),
+    então a proporção NOMINAL (é backdrop) não é garantia da proporção
+    REAL, do mesmo jeito que o pôster não é sempre exatamente 2:3
+    (`RAZAO_PADRAO`, `poster.js`). `[1.70, 1.85]` cobre 16:9 (1,778) com
+    folga para arredondamento de pixel, sem aceitar um crop nitidamente
+    diferente (21:9 = 2,33, 4:3 = 1,33).
+    """
+    w, h = b.get("width"), b.get("height")
+    return bool(w and h and 1.70 <= (w / h) <= 1.85)
+
+
+def _hashes_dos_candidatos(detalhes: dict, *, session=None) -> dict[str, str]:
+    """`{file_path: phash}` das candidatas a still deste filme, ou `{}`.
+
+    Hasheia SÓ o que já passou pelos filtros baratos de `_stills`
+    (`iso_639_1 is None` e 16:9): metade do acervo de backdrop do TMDB cai
+    aí, e baixar uma imagem para descobrir depois que ela não era
+    candidata seria banda jogada fora. O hero NÃO é excluído aqui porque
+    `_imagens` só o conhece depois — hashear um arquivo a mais é barato,
+    e ele sai na filtragem de `_stills` do mesmo jeito.
+
+    **Faz REDE** (uma imagem w300, ~20 kB, por candidata) — pela MESMA
+    `session` que `buscar_ficha` já usa, e não por uma conexão própria: é
+    isso que mantém o teste da ficha offline, já que a sessão dublê que
+    ele injeta também atende estas requisições. É a única parte da ficha
+    que faz rede além da própria chamada ao TMDB — todo o resto sai da resposta que
+    `buscar_ficha` já tinha. É a conta pela dedup, e ela é paga UMA vez:
+    o cache em disco (`still_hash.hashes_de`) sobrevive entre execuções.
+    Qualquer falha (sem rede, sem Pillow, imagem corrompida) volta como
+    ausência, e ausência só desliga a dedup — nunca derruba a ficha.
+    """
+    candidatas = [b.get("file_path") for b in
+                  ((detalhes.get("images") or {}).get("backdrops") or [])
+                  if b.get("file_path") and b.get("iso_639_1") is None
+                  and _still_16_9(b)]
+    if not candidatas:
+        return {}
+    try:
+        from espectro24.still_hash import hashes_de
+        raiz = Path(__file__).resolve().parents[2]
+        return hashes_de(candidatas, session=session,
+                         memo=raiz / "dados" / "cache" / "_stills_phash.json")
+    except Exception:
+        return {}
+
+
+def _deduplicar(candidatos: list[dict], hashes: dict[str, str] | None,
+                *, limiar: int = LIMIAR_PHASH) -> list[dict]:
+    """Colapsa em UM item cada grupo de candidatas que leem como a mesma
+    imagem, pelo pHash (§3[F] v1.9.40 — o critério e o limiar são MEDIDOS,
+    ver a docstring de `still_hash.py`).
+
+    `hashes` é `{file_path: phash_hex}` INJETADO — a função é pura e não
+    baixa nada. Sem `hashes` (ou com uma candidata fora dele) a dedup é
+    pulada para aquela candidata: ausência de hash é "não sei comparar",
+    e a candidata sobrevive. Nunca o contrário — nada é descartado por
+    falta de dado.
+
+    DETERMINÍSTICA, nos dois eixos que poderiam variar:
+
+      * O AGRUPAMENTO é uma partição por união de pares abaixo do limiar
+        (fecho transitivo), e uma partição não depende da ordem em que os
+        pares são unidos.
+      * O REPRESENTANTE de cada grupo é a candidata de MAIOR RESOLUÇÃO
+        (`width * height`), com desempate estável por `file_path` — a
+        mesma regra que fecha `_ordem_imagem`. Duas execuções sobre a
+        mesma resposta do TMDB devolvem byte a byte a mesma lista.
+
+    A POSIÇÃO do grupo na lista é a do seu membro MELHOR COLOCADO — o
+    representante herda o lugar da candidata mais votada do grupo, não o
+    seu próprio. Sem isso, colapsar um grupo poderia empurrar para o topo
+    da galeria uma imagem que o `vote_average` tinha deixado no fim.
+
+    **O fecho transitivo é deliberado e tem custo conhecido:** se A~B e
+    B~C sem A~C, os três colapsam. Com precisão medida de 0.951 por par o
+    encadeamento errado é raro, e o custo dele (perder uma candidata
+    distinta de um pool de dezenas) continua menor que o de repetir um
+    quadro na página.
+    """
+    if not hashes:
+        return list(candidatos)
+
+    pai = {b["file_path"]: b["file_path"] for b in candidatos}
+
+    def raiz(x: str) -> str:
+        while pai[x] != x:
+            pai[x] = pai[pai[x]]
+            x = pai[x]
+        return x
+
+    comparaveis = [b for b in candidatos if b["file_path"] in hashes]
+    for i, a in enumerate(comparaveis):
+        for b in comparaveis[i + 1:]:
+            if distancia_phash(hashes[a["file_path"]],
+                               hashes[b["file_path"]]) <= limiar:
+                pai[raiz(a["file_path"])] = raiz(b["file_path"])
+
+    melhor_do_grupo: dict[str, dict] = {}
+    for b in candidatos:
+        g = raiz(b["file_path"])
+        atual = melhor_do_grupo.get(g)
+        chave = lambda x: (-((x.get("width") or 0) * (x.get("height") or 0)),
+                           x.get("file_path") or "")
+        if atual is None or chave(b) < chave(atual):
+            melhor_do_grupo[g] = b
+
+    saida, vistos = [], set()
+    for b in candidatos:            # a ordem de entrada JÁ é a do ranking
+        g = raiz(b["file_path"])
+        if g in vistos:
+            continue
+        vistos.add(g)
+        saida.append(melhor_do_grupo[g])
+    return saida
+
+
+def _amostra_espalhada(itens: list[dict], teto: int) -> list[dict]:
+    """Até `teto` itens ESPALHADOS pelo ranking, em vez dos `teto`
+    primeiros (§3[F] v1.9.40).
+
+    A regra: o ranking é cortado em `teto` faixas contíguas de tamanho
+    igual e cada faixa contribui com o seu PRIMEIRO item — o índice
+    escolhido da faixa `k` é `floor(k * n / teto)`. Com `n <= teto` isso
+    devolve a lista inteira, na ordem em que veio.
+
+    Por que "primeiro de cada faixa" e não "de N em N a partir do fim",
+    nem sorteio: é a única regra que espalha SEM abrir mão da curadoria.
+    O item 0 continua sendo o mais votado do filme (a galeria não fica
+    pior no primeiro quadro, que é o que mais gente vê), e cada uma das
+    outras 7 posições é a melhor colocada da sua faixa, não uma imagem
+    qualquer do fim do acervo — que, MEDIDO nos 5 filmes do estudo, é
+    onde moram os quadros escuros e os recortes de 1280x720.
+
+    O que ela conserta, e que a dedup sozinha não conserta: as duplicatas
+    que o pHash NÃO reconhece (mesmo plano em escala e gradação muito
+    diferentes — ver `still_hash.py`) são quase sempre VIZINHAS no
+    ranking, porque é o mesmo quadro popular concentrando voto. Duas
+    vizinhas nunca caem na mesma faixa quando `n >= 2 * teto`, e nos 34
+    longas do catálogo `n` é sempre bem maior que 16.
+
+    DETERMINÍSTICA: só divisão inteira sobre o tamanho da lista.
+    """
+    n = len(itens)
+    if n <= teto:
+        return list(itens)
+    return [itens[(k * n) // teto] for k in range(teto)]
+
+
+def _stills(imagens: dict, hero_backdrop_path: str | None, *,
+            teto: int = TETO_STILLS, piso: int = PISO_STILLS,
+            hashes: dict[str, str] | None = None) -> list[dict]:
+    """Os até `teto` STILLS do filme, na ORDEM DE CÓDIGO exigida (§3[F]
+    v1.9.39 — não é a mesma ordem de `_ordem_imagem`, que é para o
+    BACKDROP escolhido/pôster sem texto):
 
         1. `vote_average` decrescente — única curadoria humana do TMDB.
         2. `file_path` crescente — fecha a ordem total (desempate estável),
            mesmo raciocínio do degrau final de `_ordem_imagem`.
 
-    Nenhuma preferência estética por filme: a ordem é sempre esta. O
-    `poster_path` já publicado é EXCLUÍDO — a galeria é de alternativas,
-    mostrá-lo de novo seria repetir a imagem que já está no topo da página.
+    Nenhuma preferência estética por filme: a ordem é sempre esta.
 
-    **PISO, depois do teto:** se o resultado (já ordenado, já sem o pôster
-    publicado, já cortado em `teto`) tem menos de `piso` itens, a lista
-    volta VAZIA — ver `PISO_GALERIA`. Mesma lógica de `n < 10` na lei de
-    margem: abaixo do piso, ausência é mais honesta que uma versão
+    **Filtro, não preferência** (diferença do §3[E] original, onde
+    `iso_639_1 is None` era só PRIORIDADE sobre o backdrop escolhido): um
+    still com `iso_639_1` declarado é arte promocional com texto
+    sobreposto, não um quadro do filme — fica de fora. `_still_16_9`
+    filtra a proporção pela mesma razão: um crop fora de 16:9 não serve à
+    grade da galeria (ver CSS, `styles.css`).
+
+    O `hero_backdrop_path` (o backdrop JÁ escolhido para o topo da página,
+    `backdrop_path`) é EXCLUÍDO — mesma razão de excluir o pôster já
+    publicado na geração anterior: a galeria é de OUTROS quadros, mostrar
+    de novo o que já está no topo repetiria a imagem.
+
+    **RISCO DE SPOILER ASSUMIDO** (ver docstring do módulo): nenhuma outra
+    filtragem de conteúdo é aplicada — um still pode ser de qualquer ponto
+    do filme, terceiro ato incluído.
+
+    **PISO, depois do teto:** se o resultado (já ordenado, já sem o
+    backdrop do hero, já cortado em `teto`) tem menos de `piso` itens, a
+    lista volta VAZIA — ver `PISO_STILLS`. Mesma lógica de `n < 10` na lei
+    de margem: abaixo do piso, ausência é mais honesta que uma versão
     raquítica da coisa.
     """
-    candidatos = [p for p in (imagens.get("posters") or [])
-                  if p.get("file_path") and p.get("file_path") != poster_path]
-    candidatos.sort(key=lambda p: (-(p.get("vote_average") or 0),
-                                    p.get("file_path") or ""))
-    galeria = [
-        {"poster_path": p["file_path"], "poster_largura": p.get("width"),
-         "poster_altura": p.get("height")}
-        for p in candidatos[:teto]
+    candidatos = [b for b in (imagens.get("backdrops") or [])
+                  if b.get("file_path") and b.get("file_path") != hero_backdrop_path
+                  and b.get("iso_639_1") is None and _still_16_9(b)]
+    candidatos.sort(key=lambda b: (-(b.get("vote_average") or 0),
+                                    b.get("file_path") or ""))
+    candidatos = _deduplicar(candidatos, hashes)
+    stills = [
+        {"still_path": b["file_path"], "still_largura": b.get("width"),
+         "still_altura": b.get("height")}
+        for b in _amostra_espalhada(candidatos, teto)
     ]
-    return galeria if len(galeria) >= piso else []
+    return stills if len(stills) >= piso else []
 
 
 # As chaves que uma entrada de cache precisa TER para ser considerada
@@ -264,7 +466,7 @@ def _galeria(imagens: dict, poster_path: str | None, *,
 # (filme sem backdrop) e não deve forçar uma nova requisição a cada execução.
 _CHAVES_COMPLETUDE = (
     "tmdb_fetched_at", "poster_path", "backdrop_path", "poster_sem_texto_path",
-    "galeria_posters",
+    "galeria_stills",
 )
 
 
@@ -490,7 +692,7 @@ def _e_escrita_latina(nome: str) -> bool:
     return True
 
 
-def _imagens(detalhes: dict) -> dict[str, Any]:
+def _imagens(detalhes: dict, *, hashes: dict[str, str] | None = None) -> dict[str, Any]:
     """Os campos de imagem da ficha, derivados da resposta de detalhes.
 
     **O PÔSTER É O DO PRÓPRIO TMDB, e isso foi medido antes de decidir.** A
@@ -564,29 +766,34 @@ def _imagens(detalhes: dict) -> dict[str, Any]:
     # neste campo seria devolver a coisa que ele existe para evitar.
     limpo = _melhor(imagens.get("posters") or [], so_sem_texto=True)
 
-    # [v1.9.38] A GALERIA — computada aqui (mesmo bloco `images`, zero
-    # requisição nova), mas ainda SEM o filtro de duração: `_imagens` não
-    # tem a `duracao_min` de que ele precisa (`_montar_ficha` monta os
+    # [v1.9.39] A GALERIA DE STILLS — computada aqui (mesmo bloco `images`,
+    # zero requisição nova; busca no acervo INTEIRO de `backdrops`, não só
+    # nos `TETO_BACKDROPS` capturados para `backdrop_paths` acima — a
+    # galeria e a lista de backdrop do hero são coisas diferentes,
+    # coincidem só em fonte), mas ainda SEM o filtro de duração: `_imagens`
+    # não tem a `duracao_min` de que ele precisa (`_montar_ficha` monta os
     # dois a partir da mesma resposta). `_montar_ficha` zera esta lista
     # quando a duração não bate com longa — ver `duracao_compativel_com_longa`.
-    galeria = _galeria(imagens, poster_path)
+    hero_path = escolhido.get("file_path") if escolhido else None
+    galeria = _stills(imagens, hero_path, hashes=hashes)
 
     return {
         "poster_path": poster_path,
         "poster_largura": largura,
         "poster_altura": altura,
         "backdrop_paths": backdrops,
-        "backdrop_path": escolhido.get("file_path") if escolhido else None,
+        "backdrop_path": hero_path,
         "backdrop_largura": escolhido.get("width") if escolhido else None,
         "backdrop_altura": escolhido.get("height") if escolhido else None,
         "poster_sem_texto_path": limpo.get("file_path") if limpo else None,
         "poster_sem_texto_largura": limpo.get("width") if limpo else None,
         "poster_sem_texto_altura": limpo.get("height") if limpo else None,
-        "galeria_posters": galeria,
+        "galeria_stills": galeria,
     }
 
 
-def _montar_ficha(session, api_key: str, movie_id: int, detalhes: dict) -> dict[str, Any]:
+def _montar_ficha(session, api_key: str, movie_id: int, detalhes: dict,
+                  *, hashes: dict[str, str] | None = None) -> dict[str, Any]:
     overview = detalhes.get("overview") or ""
     fallback_en = False
     detalhes_en: dict[str, Any] | None = None
@@ -646,19 +853,21 @@ def _montar_ficha(session, api_key: str, movie_id: int, detalhes: dict) -> dict[
         # depois. Sem ela não há nem como saber o que está vencido.
         "tmdb_id": movie_id,
         "tmdb_fetched_at": _agora_utc(),
-        **_imagens(detalhes),
+        **_imagens(detalhes, hashes=hashes),
     }
 
-    # [v1.9.38] FILTRO DE DURAÇÃO da galeria — aplicado aqui, único ponto
-    # que tem `duracao_min` E o `galeria_posters` que `_imagens` já montou.
-    # NÃO É guarda de identidade (ver `duracao_compativel_com_longa`): reage
-    # a um sintoma (duração de curta) sem confirmar o `tmdb_id`, e não fecha
-    # a pendência de identidade do pipeline de coleta. Reprovado: galeria
-    # some (lista vazia), nunca a ficha inteira — um filme sem galeria é
-    # aceitável (§3[F]); a ficha (título, sinopse, pôster principal etc.)
-    # segue publicada normalmente.
+    # [v1.9.38, continua valendo na v1.9.39] FILTRO DE DURAÇÃO da galeria —
+    # aplicado aqui, único ponto que tem `duracao_min` E o `galeria_stills`
+    # que `_imagens` já montou. NÃO É guarda de identidade (ver
+    # `duracao_compativel_com_longa`): reage a um sintoma (duração de
+    # curta) sem confirmar o `tmdb_id`, e não fecha a pendência de
+    # identidade do pipeline de coleta — pendência que segue BLOQUEANTE
+    # antes de expandir o catálogo. Reprovado: galeria some (lista vazia),
+    # nunca a ficha inteira — um filme sem galeria é aceitável (§3[F]); a
+    # ficha (título, sinopse, pôster principal etc.) segue publicada
+    # normalmente.
     if not duracao_compativel_com_longa(duracao_min):
-        ficha["galeria_posters"] = []
+        ficha["galeria_stills"] = []
     return ficha
 
 
@@ -718,7 +927,8 @@ def buscar_ficha(titulo: str, ano: int | None, cache_dir: str | Path,
             path.write_text(json.dumps({"nao_encontrado": True}), encoding="utf-8")
             return None, f"TMDB: nenhum resultado para {titulo!r} ({ano}).", None
         detalhes = _buscar_detalhes(sess, key, movie_id)
-        ficha = _montar_ficha(sess, key, movie_id, detalhes)
+        ficha = _montar_ficha(sess, key, movie_id, detalhes,
+                              hashes=_hashes_dos_candidatos(detalhes, session=sess))
 
         # v1.7.0 — guarda de sanidade (§1.2): o ano é o sinal mais barato e
         # confiável de que o TMDB resolveu para o filme certo. Se o `ano`

@@ -19,6 +19,12 @@ gemini = ["google-genai>=0.3"]
 deepseek = ["openai>=1.50"]
 llm = ["anthropic>=0.117", "google-genai>=0.3", "openai>=1.50"]
 test = ["pytest>=7.0"]
+# [v1.9.40] Dedup perceptual da galeria de stills. OPCIONAL de propósito:
+# sem elas `_hashes_dos_candidatos` devolve `{}`, a dedup é pulada e a
+# galeria sai como saía na v1.9.39 — o pacote continua instalável e a
+# suíte inteira continua verde num ambiente sem libs de imagem (nenhum
+# teste de dedup precisa delas: os pHashes são injetados).
+stills = ["Pillow>=10", "ImageHash>=4.3"]
 
 [project.scripts]
 espectro24 = "espectro24.cli:main"

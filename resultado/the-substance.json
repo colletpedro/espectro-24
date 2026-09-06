@@ -41,46 +41,46 @@
     "poster_sem_texto_path": "/snq9VCzSzTpxfFzx9WoVgLxjozo.jpg",
     "poster_sem_texto_largura": 2000,
     "poster_sem_texto_altura": 3000,
-    "galeria_posters": [
+    "galeria_stills": [
       {
-        "poster_path": "/6L3PfQEydRzONYrhtpWtchRhOuV.jpg",
-        "poster_largura": 1706,
-        "poster_altura": 2560
+        "still_path": "/8ODNt5olCeIqBYTP3GgXEQYTfeX.jpg",
+        "still_largura": 3840,
+        "still_altura": 2160
       },
       {
-        "poster_path": "/snq9VCzSzTpxfFzx9WoVgLxjozo.jpg",
-        "poster_largura": 2000,
-        "poster_altura": 3000
+        "still_path": "/8dqZsevb5E8x29OFyr1neSp7bc9.jpg",
+        "still_largura": 3840,
+        "still_altura": 2160
       },
       {
-        "poster_path": "/nnCZbcBsqIJHzechhbfqy8fgXuL.jpg",
-        "poster_largura": 2000,
-        "poster_altura": 3000
+        "still_path": "/bfWIgS51TVrM4FpFLjiPZXVlZOf.jpg",
+        "still_largura": 1780,
+        "still_altura": 1000
       },
       {
-        "poster_path": "/2AvuOPwMcWEb0LYIi0OoBQJyIz0.jpg",
-        "poster_largura": 2000,
-        "poster_altura": 3000
+        "still_path": "/oBviuwvB1DyYwiNyVUdfXWn9El3.jpg",
+        "still_largura": 1429,
+        "still_altura": 804
       },
       {
-        "poster_path": "/6uX0Fj2zG9nvkl82BuO0FmPhCoo.jpg",
-        "poster_largura": 2000,
-        "poster_altura": 3000
+        "still_path": "/jV7PNYaxPoczdEKqx43rhnRITZK.jpg",
+        "still_largura": 1280,
+        "still_altura": 720
       },
       {
-        "poster_path": "/7kKRVhjmorwqDnAT9GFkBEcD8xh.jpg",
-        "poster_largura": 2000,
-        "poster_altura": 3000
+        "still_path": "/2vkJVIxZ9YURpXwQrMFsl8VOHz8.jpg",
+        "still_largura": 1780,
+        "still_altura": 1000
       },
       {
-        "poster_path": "/Ly0odRF3uo1Tg0bxY6VVZBZi8T.jpg",
-        "poster_largura": 2000,
-        "poster_altura": 3000
+        "still_path": "/dRulnkNLWubxpFd0nI8Fz82SxEQ.jpg",
+        "still_largura": 1780,
+        "still_altura": 1000
       },
       {
-        "poster_path": "/dBf7sO2NPpsYcEW7utocdDTKQGo.jpg",
-        "poster_largura": 2000,
-        "poster_altura": 3000
+        "still_path": "/qYnRH3B4Y9lqCVho2q7vJLnOtn7.jpg",
+        "still_largura": 1920,
+        "still_altura": 1080
       }
     ]
   },
