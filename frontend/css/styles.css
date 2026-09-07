@@ -1775,21 +1775,60 @@ body.lightbox-aberto { overflow: hidden; }
 .themes { margin-top: 16px; display: flex; flex-direction: column; gap: 20px; }
 .theme__top { display: flex; align-items: baseline; gap: 12px; }
 .theme__name { font-size: 1rem; font-weight: 500; color: var(--text); flex: 1; }
-/* TRACK visível (Entrega 7) — a trilha vazia precisa se ler de relance, não
-   só a parte preenchida. Um tom mais claro que --bg-elev-2 (que já é usado
-   noutro contexto) + borda sutil, pra não desaparecer contra o fundo. */
+/* =======================================================================
+   [v1.9.47] A TRILHA SAIU. Sobra o TRAÇO.
+
+   A trilha (`#242832` + borda) existia desde a Entrega 7 com o argumento
+   de que "a parte vazia precisa se ler de relance". O efeito colateral é
+   a FORMA: trilha cheia + preenchimento é a gramática de barra de
+   progresso, e barra de progresso promete uma coisa que se COMPLETA. A
+   intensidade passa a vir da comparação entre os traços vizinhos — todos
+   ancorados na mesma margem esquerda, que é a única referência que sobra
+   e por isso não pode ser deslocada por nada (ver o piso abaixo).
+
+   O QUE A BARRA CODIFICA — e a medição corrigiu a premissa desta entrega.
+   NÃO é `rotulo_forca`: esse campo só existe em `condicoes.*` e o
+   `filme.js` não o lê em lugar nenhum. A largura é
+   `mencoes_aproximadas / n_reviews_analisadas`, calculada em `themeRow` —
+   CONTÍNUA, não uma escada discreta. No catálogo publicado: 633 itens,
+   60 larguras distintas, de 10,0% a 87,5%, mediana 25,0%. A trilha
+   representava o denominador `N` (40 em 569 dos 633 itens); ela sai, e o
+   denominador continua onde sempre esteve em texto — no `aria-label` da
+   barra, que não muda.
+
+   `overflow: hidden` sai junto com a trilha: ele existia para RECORTAR o
+   preenchimento contra o raio dela. Sem caixa, não há o que recortar.
+
+   ATENÇÃO ao `box-sizing: border-box` global: com `height: 6px` e borda de
+   1px, o preenchimento tinha 4px de altura REAL dentro de uma caixa de
+   6px, e o 100% dele era a largura da barra MENOS 2px de borda. Sem borda,
+   os 6px e a largura inteira passam a ser do traço. A caixa externa
+   continua com a MESMA altura e as MESMAS margens de sempre, de propósito:
+   o ritmo vertical do bloco de bullets não se mexe com esta entrega. */
 .theme__bar {
   height: 6px;
-  background: #242832;
-  border: 1px solid var(--border-soft);
-  border-radius: 4px;
   margin: 8px 0 8px;
-  overflow: hidden;
 }
+/* O PISO DE COMPRIMENTO, e ele é deliberadamente INERTE hoje.
+
+   Sem trilha, um traço muito curto vira cisco solto no vão — e o clamp de
+   `_construir_temas` permite `mencoes_aproximadas` igual a 0, então o caso
+   degenerado (traço de largura zero, invisível) é alcançável pelo código
+   mesmo não tendo ocorrido ainda.
+
+   14px sai da medição, não de chute. O MENOR item do catálogo é 10,0%, que
+   dá 34,0px na coluna do desktop (340px) e 15,9px na coluna estreita do
+   mobile (159,5px). 14px fica ABAIXO desses dois: o piso não move NENHUM
+   dos 633 itens publicados, em nenhum dos dois leiautes — ele existe só
+   para o valor que ainda não foi publicado. Fosse maior que 15,9px, ele
+   estaria alongando os 8 itens de 10,0% no mobile e mentindo sobre eles.
+   Contra os 6px de altura, 14px ainda lê como traço (2,3:1), não como
+   ponto. */
 .theme__bar span {
   display: block;
   height: 100%;
-  border-radius: 4px;
+  min-width: 14px;
+  border-radius: 999px;
   transition: width 0.6s cubic-bezier(0.2, 0.7, 0.2, 1);
 }
 .group[data-group="negativas"] .theme__bar span { background: var(--neg); }
