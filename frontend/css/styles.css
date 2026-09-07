@@ -1689,6 +1689,11 @@ body.lightbox-aberto { overflow: hidden; }
   .sentiment-groups.sentiment-groups--3 { grid-template-columns: 1fr 1fr 1fr; }
 }
 
+/* [v1.9.45] O MODO DE DUAS COLUNAS DO MOBILE (≤640px) não mora aqui: ele
+   sobrescreve regras de `.theme*`/`.group*` declaradas mais abaixo neste
+   arquivo, e `@media` não soma especificidade — declarado neste ponto, ele
+   perderia para elas. Está logo depois de `.group__janela`, que é a última
+   regra do bloco de bullets. Procure por "AS DUAS COLUNAS CABEM NO CELULAR". */
 /* grupo — agora um item de grid (ou o conteúdo de um `.disclosure`
    colapsado), nunca mais uma faixa full-width com `border-top`; a
    separação vem do `gap` do grid, ou do próprio `<details>`. */
@@ -2155,6 +2160,127 @@ body.lightbox-aberto { overflow: hidden; }
   font-size: 0.68rem;
   color: var(--text-mute);
   margin: 2px 0 0;
+}
+
+/* =======================================================================
+   [v1.9.45] AS DUAS COLUNAS CABEM NO CELULAR — Tentativa A.
+
+   O PROBLEMA, em uma frase: empilhado, o mobile mostra "uma coisa por
+   vez". Quem chega na página sem ter visto o filme precisa comparar o que
+   os dois lados dizem SOBRE O MESMO TEMA, e a comparação é justamente o
+   que o empilhamento destrói — o segundo grupo só existe depois de duas
+   telas e meia de rolagem, e a essa altura o primeiro já saiu da memória.
+
+   O QUE MUDA: abaixo de 640px o `.sentiment-groups` deixa de ser uma
+   coluna e passa a ser DUAS, as mesmas do desktop. A regra de ≥720px
+   acima fica exatamente como estava — o desktop não é tocado por nada
+   deste bloco —, e a faixa 641-719px (tablet em retrato estreito)
+   continua empilhando como sempre: nada entre 641 e 719 muda.
+
+   POR QUE ISSO ENCOLHE, e por quanto. Metade da largura não é metade da
+   altura: o texto que quebrava em uma linha passa a quebrar em duas, e a
+   altura de TEXTO é quase conservada quando a coluna é dividida ao meio.
+   O que a segunda coluna economiza de verdade é a altura FIXA de cada
+   bullet — o alvo de toque de 44px do "APROFUNDAR", os 6px da barra com
+   as margens dela, o `gap` entre bullets, o cabeçalho do grupo —, que
+   antes era paga DUAS vezes (uma por grupo empilhado) e agora é paga uma.
+   São ~530px por filme só disso. O resto da economia vem da densidade
+   ajustada aqui embaixo, e está medida no relatório da sessão.
+
+   NEUTRALIDADE ESTRUTURAL (§0) — o que este bloco NÃO faz. Nenhuma regra
+   daqui olha para `[data-group]`: as duas colunas são `1fr 1fr` (largura
+   idêntica, não "a maior fica maior"), a tipografia é a mesma nos dois, as
+   margens são as mesmas, e a contagem de bullets não é tocada por CSS
+   nenhum. A única coisa que distingue um grupo do outro continua sendo a
+   POSIÇÃO, decidida por `ordenarPorPeso` a partir do `share_real` — no
+   desktop a coluna da esquerda, aqui também. Ver `filme.js`.
+
+   NENHUM NÚMERO É REFORMATADO. `~5% das notas`, `★ 0,5–2` e a janela da
+   amostra são strings prontas, montadas no JS a partir do dado; este
+   bloco só decide onde elas quebram de linha e em que corpo aparecem.
+   Nada aqui abrevia, arredonda ou recalcula algarismo.
+
+   O TERCEIRO GRUPO (`--3`, quando o meio é dominante: `napoleon-2023` e
+   `friday-the-13th-2009`). Três colunas em 375px dariam ~100px cada —
+   um nome de tema de 31 caracteres quebraria em cinco linhas. Aqui o
+   `--3` usa a MESMA grade de duas colunas, e o terceiro grupo desce para
+   a segunda linha da grade, na mesma largura e com o mesmo leiaute dos
+   outros dois. Quem desce é o TERCEIRO POR PESO, porque a ordem do DOM já
+   vem ordenada por `share_real` — de novo, só a posição varia.
+
+   O MEIO RECOLHIDO herda a densidade, de propósito. As regras de
+   tipografia aqui embaixo casam `.group`/`.theme*` sem exigir
+   `.sentiment-groups` como ancestral, então o `groupBlock` que vive dentro
+   do `<details>` do meio (`.disclosure--meio`) recebe o mesmo corpo, o
+   mesmo `gap` e as mesmas margens dos dois em destaque — ele só continua
+   em largura cheia, como sempre esteve. Alternativa era escopar tudo na
+   grade e deixar o meio com a tipografia do desktop: seria o MESMO
+   componente com dois tamanhos na mesma tela. Só a GRADE é escopada. */
+@media (max-width: 640px) {
+  .sentiment-groups.sentiment-groups--2,
+  .sentiment-groups.sentiment-groups--3 {
+    grid-template-columns: 1fr 1fr;
+  }
+  /* Coluna estreita é uma caixa de conteúdo mínimo `auto` por padrão, e
+     uma palavra longa ("Descaracterização") empurraria a grade para fora
+     da tela. `min-width: 0` no item é o que impede o transbordo — mesma
+     defesa que `.decide__col` já usa. */
+  .sentiment-groups > .group { min-width: 0; }
+  /* Coluna: 16px. Linha: 30px, e ela só existe no caso `--3`, para separar
+     o grupo que desceu sem que ele pareça um rodapé dos de cima. */
+  .sentiment-groups { gap: 30px 16px; }
+
+  /* CABEÇALHO. `HATERS`/`FANS` + a faixa de estrelas cabem na primeira
+     linha; o `~X% das notas` desce para a segunda. O `margin-left: auto`
+     que empurrava o percentual para a direita sai: numa coluna de ~160px
+     ele só criaria um vão, e alinhado à esquerda o número fica sob o
+     rótulo do próprio grupo, que é onde se lê. Sai nos DOIS grupos. */
+  .group__header { gap: 5px 8px; margin-bottom: 3px; }
+  .group__share { margin-left: 0; }
+  /* A janela da amostra NÃO encolhe. Ela já é 0.68rem (10,9px) — abaixo do
+     piso de 13px do projeto, herdado do desktop — e medi: em 0.62rem ela
+     ocupa as MESMAS três linhas na coluna estreita. Encolher aqui custaria
+     legibilidade sem devolver um pixel de altura. Só o respiro muda. */
+  .group__janela { line-height: 1.4; margin-top: 4px; }
+
+  /* BULLETS. O `gap` cai de 20 para 10px porque o "APROFUNDAR" já carrega
+     11px de respiro próprio em cima e embaixo (o padding do alvo de
+     toque): 20px em cima disso era espaço dobrado, não ritmo. */
+  .themes { margin-top: 12px; gap: 10px; }
+  .theme__name {
+    font-size: 0.875rem;   /* 14px — acima do piso de 13px do projeto */
+    line-height: 1.3;
+    overflow-wrap: break-word;
+  }
+  .theme__bar { margin: 6px 0 0; }
+  .theme__toggle { margin-top: 0; }
+  /* A paráfrase expandida NÃO encolhe. Ela vive numa linha de grade `0fr`
+     enquanto está fechada, então o corpo dela não entra na altura do bloco
+     — encolher aqui não devolveria um pixel e só pioraria a leitura de um
+     texto que já cai para ~22 caracteres por linha na coluna estreita. Só
+     o filete recua, para acompanhar a coluna. */
+  .theme__example-inner { padding-left: 10px; }
+
+  /* A observação do grupo é o bloco de texto corrido mais longo da coluna
+     (~290 caracteres). `hyphens: auto` só entra AQUI: em prosa a hifenação
+     tira o rio de espaço da coluna estreita, e nos nomes dos temas — que
+     são títulos — ela leria como erro. */
+  .group__obs {
+    font-size: 0.92rem;
+    line-height: 1.45;
+    margin: 14px 0 2px;
+    padding-left: 10px;
+    hyphens: auto;
+  }
+
+  .mode-warning {
+    font-size: 0.8rem;
+    line-height: 1.45;
+    padding: 9px 10px;
+    gap: 7px;
+    margin: 10px 0 4px;
+  }
+  .mode-warning__icon svg { width: 15px; height: 15px; }
 }
 
 /* =======================================================================
