@@ -1692,8 +1692,10 @@ body.lightbox-aberto { overflow: hidden; }
 /* [v1.9.45] O MODO DE DUAS COLUNAS DO MOBILE (≤640px) não mora aqui: ele
    sobrescreve regras de `.theme*`/`.group*` declaradas mais abaixo neste
    arquivo, e `@media` não soma especificidade — declarado neste ponto, ele
-   perderia para elas. Está logo depois de `.group__janela`, que é a última
-   regra do bloco de bullets. Procure por "AS DUAS COLUNAS CABEM NO CELULAR". */
+   perderia para elas. Fica DEPOIS da última delas, perto do fim do arquivo
+   — procure por "AS DUAS COLUNAS CABEM NO CELULAR". (Até a v1.9.47 esta
+   nota dizia "logo depois de `.group__janela`"; essa regra saiu na
+   v1.9.48 e a âncora agora é a busca pelo título.) */
 /* grupo — agora um item de grid (ou o conteúdo de um `.disclosure`
    colapsado), nunca mais uma faixa full-width com `border-top`; a
    separação vem do `gap` do grid, ou do próprio `<details>`. */
@@ -2007,18 +2009,12 @@ body.lightbox-aberto { overflow: hidden; }
   color: var(--text-mute);
 }
 
-/* observação geral do grupo — itálico REMOVIDO (Entrega 7): num bloco
-   longo, itálico cansa a leitura em vez de destacar. Serif regular, o
-   mesmo peso do resto da prosa. */
-.group__obs {
-  font-family: var(--serif);
-  font-size: 1.05rem;
-  line-height: 1.55;
-  color: var(--text-dim);
-  margin: 22px 0 4px;
-  padding-left: 14px;
-  border-left: 2px solid var(--border);
-}
+
+/* [v1.9.48] `.group__obs` (a observação geral, em serifa, abaixo dos
+   bullets) e `.group__janela` ("escritas majoritariamente entre…") saíram
+   da folha — o JS parou de construir os dois elementos, decisão do dono.
+   Ver `groupBlock` em filme.js. Os DADOS que os alimentavam continuam no
+   JSON; o que saiu é a tela. */
 
 /* [v1.9.19] DISCLOSURE genérico — narrativa completa colapsada (Entrega 1)
    e o grupo-do-meio recolhido (Entrega 4). RESPIRO em vez de linha
@@ -2190,16 +2186,6 @@ body.lightbox-aberto { overflow: hidden; }
    `.group`. Se a tabela precisar voltar, ver o histórico do git.
    =================================================================== */
 
-/* v1.9.14 — janela temporal da amostra: linha PRÓPRIA, logo abaixo do
-   denominador do grupo. Fora do header de propósito — colada ao "~X% das
-   notas" ela seria lida como se descrevesse o histograma, que acumula desde
-   2012 (§[E], "Janela temporal declarada"). */
-.group__janela {
-  font-family: var(--mono);
-  font-size: 0.68rem;
-  color: var(--text-mute);
-  margin: 2px 0 0;
-}
 
 /* =======================================================================
    [v1.9.45] AS DUAS COLUNAS CABEM NO CELULAR — Tentativa A.
@@ -2276,11 +2262,6 @@ body.lightbox-aberto { overflow: hidden; }
      rótulo do próprio grupo, que é onde se lê. Sai nos DOIS grupos. */
   .group__header { gap: 5px 8px; margin-bottom: 3px; }
   .group__share { margin-left: 0; }
-  /* A janela da amostra NÃO encolhe. Ela já é 0.68rem (10,9px) — abaixo do
-     piso de 13px do projeto, herdado do desktop — e medi: em 0.62rem ela
-     ocupa as MESMAS três linhas na coluna estreita. Encolher aqui custaria
-     legibilidade sem devolver um pixel de altura. Só o respiro muda. */
-  .group__janela { line-height: 1.4; margin-top: 4px; }
 
   /* BULLETS. O `gap` cai de 20 para 10px porque o "APROFUNDAR" já carrega
      11px de respiro próprio em cima e embaixo (o padding do alvo de
@@ -2299,18 +2280,6 @@ body.lightbox-aberto { overflow: hidden; }
      texto que já cai para ~22 caracteres por linha na coluna estreita. Só
      o filete recua, para acompanhar a coluna. */
   .theme__example-inner { padding-left: 10px; }
-
-  /* A observação do grupo é o bloco de texto corrido mais longo da coluna
-     (~290 caracteres). `hyphens: auto` só entra AQUI: em prosa a hifenação
-     tira o rio de espaço da coluna estreita, e nos nomes dos temas — que
-     são títulos — ela leria como erro. */
-  .group__obs {
-    font-size: 0.92rem;
-    line-height: 1.45;
-    margin: 14px 0 2px;
-    padding-left: 10px;
-    hyphens: auto;
-  }
 
   .mode-warning {
     font-size: 0.8rem;

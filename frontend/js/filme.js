@@ -54,8 +54,6 @@
     sem_analise:       { temas: false, numero: false },
   };
 
-  var MESES = ["janeiro", "fevereiro", "março", "abril", "maio", "junho",
-               "julho", "agosto", "setembro", "outubro", "novembro", "dezembro"];
 
   // =====================================================================
   // [v1.9.26, Entrega 3] O NOME DE EXIBIÇÃO DOS TRÊS GRUPOS — decisão de
@@ -1196,11 +1194,15 @@
   // com ela o último texto corrido antes dos bullets — o leitor chega ali
   // vindo direto da barra, e o rótulo é o que diz que a régua mudou de
   // "peso de cada grupo" para "o que cada grupo disse".
+  // [v1.9.48] O RÓTULO SAIU DE NOVO, e desta vez por uso, não por
+  // arquitetura: decisão do dono — o bloco já se explica sozinho. O
+  // divisor CONTINUA, agora só com a linha do espectro: ele é o que separa
+  // a régua de PESO (a barra de recepção, acima) da régua de CONTEÚDO (o
+  // que cada grupo disse). Sem ele os bullets encostam na barra.
   function detailDivider() {
     var el = document.createElement("div");
     el.className = "detail-divider";
     el.innerHTML = '<div class="spectrum-line" aria-hidden="true"></div>';
-    el.appendChild(sectionLabel("EM DETALHE · TEMA A TEMA"));
     return el;
   }
 
@@ -1660,20 +1662,14 @@
     }
     el.appendChild(head);
 
-    // v1.9.14 (Entrega 6): a JANELA da amostra vem logo abaixo do header —
-    // até a v1.9.19 vinha colada ao denominador ("40 de 40 analisadas"),
-    // que saiu na v1.9.20; a janela continua tendo linha própria, nunca ao
-    // lado do "~X% das notas". O peso vem do histograma de NOTAS, que
-    // acumula desde 2012; carimbar nele uma janela de semanas diria que as
-    // notas todas são recentes. São duas populações, e a linha separada é
-    // o que impede a leitura errada.
-    var janela = janelaTexto(b.janela_amostra);
-    if (janela) {
-      var jl = document.createElement("p");
-      jl.className = "group__janela";
-      jl.textContent = janela;
-      el.appendChild(jl);
-    }
+    // [v1.9.48] A JANELA DA AMOSTRA ("escritas majoritariamente entre maio
+    // de 2022 e agosto de 2026") SAIU DA TELA, decisão do dono. Ela existia
+    // desde a v1.9.14 para impedir uma leitura errada específica — que as
+    // notas do histograma (que acumula desde 2012) fossem lidas como
+    // recentes. O DADO não muda: `janela_amostra` continua no JSON, por
+    // bucket, com os quantis p5-p95 (ver `test_janela_amostra.py`); o que
+    // saiu é o render, e com ele `janelaTexto`, `mesAno` e `MESES`, que não
+    // tinham outro consumidor.
 
     // avisos de modo degradado — SEMPRE visíveis. [v1.9.20, Entrega 3] Sem
     // a contagem no bullet, um grupo de amostra pequena não pode mais
@@ -1695,8 +1691,8 @@
       link.innerHTML = "→ reviews disponíveis no Letterboxd&nbsp;↗";
       w.appendChild(link);
       el.appendChild(w);
-      // sem_analise não lista temas
-      if (b.observacao_geral) el.appendChild(obsBlock(b.observacao_geral));
+      // sem_analise não lista temas — e, desde a v1.9.48, também não
+      // publica a observação geral (ver `groupBlock`, abaixo)
       return el;
     }
 
@@ -1719,36 +1715,21 @@
       el.appendChild(themes);
     }
 
-    if (b.observacao_geral) el.appendChild(obsBlock(b.observacao_geral));
+    // [v1.9.48] A OBSERVAÇÃO GERAL DO GRUPO ("As reviews positivas
+    // destacam…") SAIU DA TELA, decisão do dono. Era o parágrafo em serifa
+    // logo abaixo dos bullets, um por grupo. `observacao_geral` continua no
+    // JSON e continua sendo gerada e validada pelo pipeline (é ela que
+    // alimenta a narrativa completa e os testes de tom/fluência) — o que
+    // saiu é o render, e com ele `obsBlock`, que não tinha outro chamador.
     return el;
   }
 
-  // A janela sai dos QUANTIS (p5-p95), nunca de min/max nem de média: `data`
-  // é a data ASSISTIDA (diário de quem escreveu), e um único registro
-  // atrasado domina os extremos — em `cure`/negativas o `min` é 2024 contra
-  // uma p5 de maio de 2026, e há review datada de 1442 no catálogo. A média
-  // seria mais lisonjeira (janela "mais ampla") e menos verdadeira.
-  function mesAno(iso) {
-    var p = String(iso || "").split("-");
-    if (p.length < 2) return null;
-    var m = MESES[parseInt(p[1], 10) - 1];
-    return m ? { mes: m, ano: p[0] } : null;
-  }
-
-  function janelaTexto(j) {
-    if (!j || !j.p5 || !j.p95) return null;
-    var a = mesAno(j.p5), b = mesAno(j.p95);
-    if (!a || !b) return null;
-    var quando;
-    if (a.mes === b.mes && a.ano === b.ano) {
-      quando = "em " + a.mes + " de " + a.ano;
-    } else if (a.ano === b.ano) {
-      quando = "entre " + a.mes + " e " + b.mes + " de " + a.ano;
-    } else {
-      quando = "entre " + a.mes + " de " + a.ano + " e " + b.mes + " de " + b.ano;
-    }
-    return "escritas majoritariamente " + quando;
-  }
+  // [v1.9.48] `mesAno` e `janelaTexto` saíram junto com a linha da janela
+  // da amostra — elas não tinham outro consumidor. A regra de que a janela
+  // sai dos QUANTIS (p5-p95) e nunca de min/max nem de média continua
+  // valendo onde ela é CALCULADA, no Python: `data` é a data assistida, e
+  // um único registro atrasado domina os extremos (há review datada de
+  // 1442 no catálogo). Ver `janela_amostra` e `test_janela_amostra.py`.
 
   function themeRow(t, bucket, idx) {
     var row = document.createElement("div");
@@ -1843,13 +1824,6 @@
       row.appendChild(ex);
     }
     return row;
-  }
-
-  function obsBlock(texto) {
-    var p = document.createElement("p");
-    p.className = "group__obs";
-    p.textContent = texto;
-    return p;
   }
 
   function warnBox(html) {

@@ -191,14 +191,28 @@ def test_o_bloco_mobile_vem_depois_das_regras_que_ele_sobrescreve():
     """
     css = _txt(CSS)
     pos_bloco = css.index(MARCA)
+    # `.group__obs` e `.group__janela` saíram desta lista na v1.9.48 porque
+    # as REGRAS saíram da folha (o JS parou de construir os elementos), não
+    # porque a trava afrouxou: o teste abaixo passou a exigir que o bloco
+    # mobile também não as ressuscite.
     for seletor in (".theme__name {", ".themes {", ".theme__bar {",
                     ".theme__toggle {", ".theme__example-inner {",
-                    ".group__obs {", ".group__header {", ".group__share {",
-                    ".group__janela {", ".mode-warning {"):
+                    ".group__header {", ".group__share {", ".mode-warning {"):
         pos = css.index(seletor)
         assert pos < pos_bloco, (
             f"{seletor} está DEPOIS do bloco mobile e vence dele — a "
             "sobrescrita do celular vira silenciosamente inativa")
+
+
+def test_o_bloco_mobile_nao_estiliza_o_que_saiu_da_tela():
+    """[v1.9.48] Contrapartida da lista acima: a observação geral do grupo
+    e a janela da amostra não são mais construídas pelo JS. Uma regra para
+    elas no bloco mobile seria CSS morto — e, pior, o sinal de que alguém
+    religou o elemento sem religar a decisão."""
+    bloco = _bloco_mobile()
+    for morto in (".group__obs", ".group__janela"):
+        assert morto not in bloco, (
+            f"{morto} voltou ao bloco mobile — ele saiu da tela na v1.9.48")
 
 
 # =====================================================================
@@ -240,14 +254,31 @@ def test_o_alvo_de_toque_do_aprofundar_continua_em_44px():
 # =====================================================================
 
 def test_as_strings_com_algarismo_continuam_as_mesmas_no_js():
-    """A entrega era de CSS. As três strings visíveis que carregam
-    algarismo — o peso do grupo, a faixa de estrelas e a janela da amostra
-    — continuam montadas em `filme.js` exatamente como antes; o mobile só
-    decide onde elas quebram de linha."""
+    """A entrega era de CSS. As strings visíveis que carregam algarismo
+    continuam montadas em `filme.js` exatamente como antes; o mobile só
+    decide onde elas quebram de linha.
+
+    Eram TRÊS até a v1.9.47. A terceira era a janela da amostra
+    (`"escritas majoritariamente " + quando`), que saiu da tela inteira na
+    v1.9.48 — a asserção sobre ela foi substituída, logo abaixo, por uma
+    que exige que ela NÃO volte. As duas que continuam na tela seguem
+    travadas caractere a caractere.
+    """
     js = _txt(FILME_JS)
     assert 'share.textContent = "~" + b.share_real + "% das notas";' in js
     assert 'return "★ " + starTxt(lo) + "–" + starTxt(hi);' in js
-    assert 'return "escritas majoritariamente " + quando;' in js
+
+
+def test_a_janela_da_amostra_nao_e_mais_montada_no_js():
+    """[v1.9.48] A linha saiu da tela por decisão do dono, e com ela as
+    funções que a montavam. O dado (`janela_amostra`, quantis p5-p95)
+    continua no JSON e continua coberto por `test_janela_amostra.py` — o
+    que este teste trava é a TELA."""
+    codigo = "\n".join(
+        l for l in _txt(FILME_JS).splitlines() if not l.lstrip().startswith("//"))
+    for morto in ("escritas majoritariamente", "janelaTexto", "mesAno",
+                  "group__janela"):
+        assert morto not in codigo, f"`{morto}` voltou ao filme.js"
 
 
 def test_a_proveniencia_do_bullet_nao_virou_disclosure():
@@ -263,3 +294,61 @@ def test_a_proveniencia_do_bullet_nao_virou_disclosure():
     assert m, "`.theme__bar` saiu do bloco mobile"
     assert set(re.findall(r"([a-z-]+):", m.group(1))) <= {"margin"}, (
         "o bloco mobile passou a mexer em mais que a margem da barra")
+
+
+# =====================================================================
+# 7. [v1.9.48] O que saiu da tela não volta pela porta dos fundos
+# =====================================================================
+
+def test_a_observacao_geral_do_grupo_nao_e_mais_montada_no_js():
+    """O parágrafo em serifa abaixo dos bullets ("As reviews positivas
+    destacam…") saiu da tela, decisão do dono.
+
+    O DADO fica: `observacao_geral` continua sendo gerada, validada e
+    testada no pipeline (tom, fluência, escopo), e continua alimentando a
+    narrativa completa. O que este teste trava é o RENDER — que o parágrafo
+    não volte a ser construído sem que a decisão seja retomada.
+    """
+    codigo = "\n".join(
+        l for l in _txt(FILME_JS).splitlines() if not l.lstrip().startswith("//"))
+    for morto in ("obsBlock", "group__obs"):
+        assert morto not in codigo, f"`{morto}` voltou ao filme.js"
+
+
+def test_o_rotulo_em_detalhe_saiu_e_o_divisor_ficou():
+    """[v1.9.48] "EM DETALHE · TEMA A TEMA" sai — o bloco se explica
+    sozinho. O DIVISOR fica: a linha do espectro é o que separa a régua de
+    PESO (a barra de recepção) da régua de CONTEÚDO (o que cada grupo
+    disse), e sem ela os bullets encostam na barra.
+
+    Este teste é o par exato disso: o rótulo fora, o divisor dentro. Falha
+    tanto se o texto voltar quanto se alguém aproveitar a remoção para
+    apagar o divisor junto.
+    """
+    js = _txt(FILME_JS)
+    # só o CÓDIGO: o arquivo comenta o vaivém histórico do rótulo (saiu na
+    # v1.9.26, voltou na v1.9.32, saiu de novo agora), e esse registro é
+    # justamente o que não se deve apagar.
+    codigo = "\n".join(
+        l for l in js.splitlines() if not l.lstrip().startswith("//"))
+    assert "EM DETALHE" not in codigo, "o rótulo voltou"
+    m = re.search(r"function detailDivider\(\) \{(.*?)\n  \}", js, re.S)
+    assert m, "`detailDivider` sumiu do filme.js"
+    corpo = m.group(1)
+    assert 'el.className = "detail-divider"' in corpo
+    assert "spectrum-line" in corpo
+    assert "sectionLabel" not in corpo, (
+        "o divisor voltou a carregar um rótulo de seção")
+    # e ele continua sendo MONTADO na página — contra `codigo`, não contra
+    # o arquivo cru: comentar a chamada é a forma mais fácil de apagar o
+    # divisor sem que uma busca por substring perceba.
+    assert "app.appendChild(detailDivider());" in codigo
+
+
+def test_sectionLabel_continua_viva_para_as_outras_secoes():
+    """A remoção é do RÓTULO DO BLOCO DE BULLETS, não do mecanismo de
+    rotular seções: RECEPÇÃO, PARA DECIDIR e GALERIA continuam nomeadas."""
+    js = _txt(FILME_JS)
+    for secao in ('sectionLabel("RECEPÇÃO")', 'sectionLabel("PARA DECIDIR")',
+                  'sectionLabel("GALERIA")'):
+        assert secao in js, f"{secao} sumiu junto"
