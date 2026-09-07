@@ -2372,19 +2372,9 @@ body.lightbox-aberto { overflow: hidden; }
   overflow-wrap: break-word;
 }
 
-/* A PROVENIÊNCIA. Discreta, mas SEMPRE presente — é uma das três garantias
-   que autorizam o produto a recomendar (§0), e uma garantia que exige clique
-   para existir é decorativa. A paráfrase completa não se repete aqui: ela
-   está nos bullets logo abaixo, na mesma tela, que é a razão de arquitetura
-   da coexistência da FASE 1. */
-.decide__meta {
-  font-family: var(--mono);
-  font-size: 0.68rem;
-  line-height: 1.4;
-  color: var(--text-mute);
-  margin: 3px 0 0;
-  overflow-wrap: break-word;
-}
+/* [v1.9.46] `.decide__meta` (o rótulo de força + tema de origem sob cada
+   condição) foi removida daqui — o JS parou de gerar o elemento, decisão do
+   dono. Ver o comentário de `condicoesBlock` em filme.js. */
 
 @media (max-width: 640px) {
   /* Empilha. A coluna de MAIOR peso vem primeiro no DOM (ordenada em

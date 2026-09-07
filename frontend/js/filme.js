@@ -1281,25 +1281,20 @@
   // **Tudo aqui é RENDER PURO.** Nenhum número, rótulo, ordem ou texto é
   // decidido nesta função: as duas colunas vêm ordenadas por `share_real` do
   // Python (`ordem_colunas`), o `~n% das notas` vem de `peso[lado]`, a
-  // ressalva de amostra vem de `nota_de_amostra`, o `~n% no meio-termo` vem
-  // de `peso_meio`, e o rótulo de força de `rotulo_forca`. O JS lê e desenha.
+  // ressalva de amostra vem de `nota_de_amostra`, e o `~n% no meio-termo` vem
+  // de `peso_meio`. O JS lê e desenha.
   //
-  // **A LINHA DE PROVENIÊNCIA é SEMPRE VISÍVEL, e a decisão tem razão.** Ela
-  // não é ornamento: é uma das três garantias que autorizam este produto a
-  // recomendar (§0). As três opções eram esconder atrás de disclosure,
-  // mostrar sempre, ou híbrido — e a escolha é HÍBRIDA, distribuída entre
-  // dois blocos da mesma página:
-  //
-  // · o TEMA de origem fica sempre visível, ao lado do rótulo de força, em
-  //   mono pequena — quem lê a condição vê de onde ela saiu sem clicar;
-  // · a PARÁFRASE completa (a evidência) não é repetida aqui, porque ela já
-  //   está na mesma tela, nos bullets logo abaixo, com a barra de frequência
-  //   ao lado. Duplicá-la seria dizer a mesma coisa duas vezes e empurrar as
-  //   colunas para longe da barra que lhes dá contexto.
-  //
-  // Esconder o tema atrás de disclosure foi descartado: uma garantia que
-  // exige um clique para existir é uma garantia decorativa, e esta é a que
-  // permitiu auditar a feature em cinco rodadas.
+  // [v1.9.46] A LINHA DE PROVENIÊNCIA (rótulo de força + tema de origem, sob
+  // cada condição — "muitos · Crítica ao patriarcado") SAIU, decisão do
+  // dono. Até aqui ela era descrita como uma das três garantias que
+  // autorizam este produto a recomendar (§0), com o argumento de que uma
+  // garantia atrás de clique é decorativa. O dono decidiu, vendo a tela
+  // publicada, que o par (rótulo de força e tema) pesava visualmente contra
+  // o texto da própria condição sem pagar a leitura — e que a paráfrase de
+  // evidência já está nos bullets logo abaixo, na mesma tela. `rotulo_forca`
+  // e `tema_texto` continuam vindo no JSON (o dado não muda, só o RENDER); a
+  // proveniência que sustenta a auditoria fica no dado e nos bullets, não
+  // mais na tela de condições.
   //
   // **A COLUNA MINORITÁRIA NÃO ENCOLHE.** `the-godfather` publica três
   // condições de quem não recomenda com `~2% das notas` ao lado, no mesmo
@@ -1378,16 +1373,6 @@
       txt.textContent = cond.texto;
       li.appendChild(txt);
 
-      // rótulo de força + PROVENIÊNCIA, sempre visíveis
-      var partes = [];
-      if (cond.rotulo_forca) partes.push(cond.rotulo_forca);
-      if (cond.tema_texto) partes.push(cond.tema_texto);
-      if (partes.length) {
-        var meta = document.createElement("p");
-        meta.className = "decide__meta";
-        meta.textContent = partes.join(" · ");
-        li.appendChild(meta);
-      }
       ul.appendChild(li);
     });
     col.appendChild(ul);
