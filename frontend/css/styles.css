@@ -2159,7 +2159,11 @@ body.lightbox-aberto { overflow: hidden; }
 
 /* =======================================================================
    [v1.9.37] CONDIÇÕES DE DECISÃO — o bloco que RECOMENDA (§0, terceira
-   exceção deliberada). Entra entre a BARRA e os BULLETS.
+   exceção deliberada). [v1.9.44] Entrava entre a BARRA e os BULLETS; agora
+   entra entre os BULLETS e o VEREDITO — troca de posição decidida pelo
+   dono, ver o comentário de `render()` em filme.js. O `margin-top` abaixo
+   passou a usar o mesmo respiro que o `.verdict` já usava para "logo após
+   os bullets" (era 34px, herdado da vizinhança com a barra).
 
    Cada escolha faz um trabalho, e nenhuma família/cor nova entra:
 
@@ -2182,7 +2186,7 @@ body.lightbox-aberto { overflow: hidden; }
    o peso é dito pelo NÚMERO, nunca por encolher a coluna. Encolher
    reintroduziria a infidelidade por omissão que a v1.4.0 corrigiu. */
 .decide {
-  margin: 34px 0 6px;
+  margin: 40px 0 8px;
 }
 
 .decide__meio {

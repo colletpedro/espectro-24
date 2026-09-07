@@ -247,6 +247,24 @@
   // restrição da entrega era acrescentar sem redesenhar, e mover o veredito
   // seria redesenhar uma decisão registrada.
   // ---------------------------------------------------------------------
+  // ---------------------------------------------------------------------
+  // [v1.9.44] OS BULLETS TROCAM DE LUGAR COM AS CONDIÇÕES.
+  //
+  // Decisão do dono: os bullets tema a tema são o trabalho central do
+  // produto e devem ter prioridade de leitura; as condições ("vale a pena
+  // se…" / "talvez evite se…") passam a ser a segunda leitura, não a
+  // primeira. Ordem nova:
+  //
+  //   barra → divisor → BULLETS → CONDIÇÕES → veredito
+  //
+  // É troca de POSIÇÃO, não de conteúdo — nenhuma das duas renderizações
+  // muda. O `detailDivider()` ("EM DETALHE · TEMA A TEMA") viaja JUNTO com
+  // os bullets: o rótulo descreve o conteúdo tema-a-tema que ele introduz,
+  // não a barra que o precede, então ele não podia ficar para trás. Isso
+  // significa que a barra deixa de estar coberta pelo mesmo `margin` que
+  // media a distância até o antigo vizinho (as condições) — ver o CSS de
+  // `.decide` para o ajuste de espaçamento.
+  // ---------------------------------------------------------------------
   /* [v1.9.43] OS DOIS MODOS DA PÁGINA, e o ponto de corte entre eles.
 
      MODO FAIXA (≥ 1024px): o hero é a faixa full-bleed e NÃO existe
@@ -291,11 +309,11 @@
     app.appendChild(fichaBlock(f.ficha || {}, f.reviews_url)); // 3 metadados
     app.appendChild(proporcaoBlock(f));               // 4 barra + nota da cota
 
-    var condicoes = condicoesBlock(f);                // 5 [v1.9.37] condições
-    if (condicoes) app.appendChild(condicoes);
+    app.appendChild(detailDivider());                 // 5 linha arco-íris
+    app.appendChild(sentimentGroupsBlock(f));         // 6 bullets por grupo
 
-    app.appendChild(detailDivider());                 // 6 linha arco-íris
-    app.appendChild(sentimentGroupsBlock(f));         // 7 bullets por grupo
+    var condicoes = condicoesBlock(f);                // 7 [v1.9.44] condições
+    if (condicoes) app.appendChild(condicoes);
 
     var veredito = veredictoBlock(f);                 // 8 veredito (v1.9.26)
     if (veredito) app.appendChild(veredito);

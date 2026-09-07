@@ -83,16 +83,24 @@ def test_render_nao_anexa_mais_nenhuma_secao_de_galeria():
 # --- nada mais na página se moveu -------------------------------------
 
 def test_a_ordem_dos_blocos_da_pagina_esta_intacta():
-    """A entrega troca QUEM ocupa a caixa da abertura e remove a seção do
-    rodapé. Nada entre uma coisa e outra pode ter mudado de lugar."""
+    """[v1.9.43] A entrega troca QUEM ocupa a caixa da abertura e remove a
+    seção do rodapé — nada entre uma coisa e outra devia mudar de lugar.
+
+    [v1.9.44] Uma troca de posição INTENCIONAL entra depois: os bullets
+    (`sentimentGroupsBlock`) passam a vir antes das condições
+    (`condicoesBlock`), decisão do dono — os bullets tema a tema são o
+    trabalho central do produto e ganham prioridade de leitura. O
+    `detailDivider` ("EM DETALHE · TEMA A TEMA") viaja junto com os
+    bullets, que é o conteúdo que ele rotula. Esta lista de âncoras
+    continua afirmando ordem EXATA — só a ordem esperada mudou."""
     fonte = _filme_js()
     ordem = [
         r"app\.appendChild\(header\(f\)\)",
         r"app\.appendChild\(fichaBlock\(",
         r"app\.appendChild\(proporcaoBlock\(f\)\)",
-        r"condicoesBlock\(f\)",
         r"app\.appendChild\(detailDivider\(\)\)",
         r"app\.appendChild\(sentimentGroupsBlock\(f\)\)",
+        r"condicoesBlock\(f\)",
         r"veredictoBlock\(f\)",
         r"narrativaCollapsedBlock\(f\.narrativa\)",
         r"window\.mountSurvey\(app, f\)",
