@@ -369,41 +369,26 @@ def test_travas_removidas_v1942():
         "o antigo trava um objeto que não existe mais")
 
 
-# --- o hero NUNCA fica vazio (caminho de talk-to-me-2022) --------------
+# --- regressão real: Talk to Me deixa o fallback do curta errado --------
 
-def test_talk_to_me_2022_cai_no_MESMO_hero_estatico_que_ja_mostrava():
-    """O caminho de fallback, testado no DADO PUBLICADO e não só no
-    código. `talk-to-me-2022` resolve para um curta de 3 min (guarda de
-    identidade PENDENTE, ver `duracao_compativel_com_longa`) e é ele quem
-    exercita este caminho no catálogo real.
+def test_talk_to_me_2022_publicado_e_o_longa_e_tem_hero_de_stills():
+    """A fixture foi preenchida para continuar provando o que o nome diz.
 
-    **E ele é o caso mais duro possível: é o ÚNICO filme do catálogo SEM
-    `backdrop_path`** (medido desde a v1.9.30, registrado em `filme.js`).
-    Ou seja, o "hero estático de hoje" dele nunca foi um backdrop — é o
-    segundo degrau do fallback, o pôster contido (`.film-hero--poster`).
-    A entrega prometeu "volta a exibir o hero estático de hoje", e é
-    exatamente isso que a cascata entrega, sem nenhum caminho novo: faixa
-    ausente → `montarBackdrop` devolve `null` → pôster.
-
-    A trava aqui é que a cascata continua com os TRÊS degraus e que este
-    filme tem com que preencher o topo."""
+    Antes da v1.9.49 este teste congelava, sem querer, o sintoma do bug:
+    exigia galeria vazia porque a ficha publicada era o curta de 3 minutos.
+    Agora trava a correção real e sua consequência visual: ID do longa,
+    duração de longa, backdrop e faixa completos.
+    """
     import json
     ficha = json.loads((RAIZ / "resultado" / "talk-to-me-2022.json")
                        .read_text(encoding="utf-8"))["ficha"]
-    assert ficha["galeria_stills"] == [], (
-        "talk-to-me-2022 passou a ter faixa — o filtro de duração quebrou, "
-        "e com ele a guarda que segrega o curta errado")
-    assert not ficha.get("backdrop_path"), (
-        "este filme ganhou um backdrop — a premissa do teste mudou; "
-        "confira se ele ainda é o caso sem backdrop do catálogo")
+    assert ficha["tmdb_id"] == 1008042
+    assert ficha["identidade"]["status"] == "validada"
+    assert ficha["duracao_min"] == 95
+    assert len(ficha["galeria_stills"]) == 12
+    assert ficha.get("backdrop_path")
     assert ficha.get("poster_path"), (
-        "sem backdrop E sem pôster o topo da página deste filme fica no "
-        "estado de ausência desenhado — não vazio, mas também não é o que "
-        "a entrega prometeu")
-    # e o degrau do pôster continua existindo no código do hero
-    corpo = _corpo(_filme_js(), "header")
-    assert 'hero.classList.add("film-hero--poster")' in corpo
-    assert "ESPECTRO_POSTER.montar(" in corpo
+        "a ficha correta perdeu o pôster")
 
 
 def test_todo_filme_publicado_tem_hero_de_algum_tipo():

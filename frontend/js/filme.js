@@ -376,7 +376,7 @@
     // estava aqui (contido, 200px — nada muda para ele); filme sem os dois
     // cai no estado de ausência já desenhado, que é o que `montar` faz
     // sozinho. Medido no catálogo: 34 dos 35 têm backdrop; o único sem é
-    // `talk-to-me-2022`.
+    // um filme sem acervo de backdrop.
     //
     // ORDEM PRESERVADA. A imagem entra ACIMA do par ano → título, exatamente
     // onde o pôster entrava (§3[E], item 1 da ordem publicada), e o par
@@ -632,7 +632,7 @@
 
   /* [v1.9.42] A FAIXA do hero, ou `null` se este filme não tem faixa.
      `null` NÃO é um estado de erro: é o caminho normal para
-     `talk-to-me-2022` (filtro de duração), para filme sem ficha e para
+     filme sem stills suficientes, para filme sem ficha e para
      qualquer filme cujo pool não chegue a `PISO_STILLS`. Quem chama cai no
      `montarBackdrop` de sempre, e o hero continua exibindo a imagem
      estática — **o topo da página nunca fica vazio**, que é a diferença
@@ -717,7 +717,7 @@
      como botão sem que a gente reimplemente nada disso.
 
      `null` quando não há stills — o mesmo contrato de sempre: seção que
-     não tem o que mostrar não renderiza (`talk-to-me-2022`). */
+     não tem o que mostrar não renderiza. */
   function galeriaMobileBlock(f) {
     if (!window.ESPECTRO_POSTER || !window.ESPECTRO_POSTER.montarGaleriaMobile) {
       return null;

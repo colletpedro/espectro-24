@@ -69,7 +69,8 @@ sys.path.insert(0, str(RAIZ / "src"))
 
 from dotenv import load_dotenv  # noqa: E402
 
-from espectro24.ficha import buscar_ficha, titulo_ano_de_slug  # noqa: E402
+from espectro24.fetcher import Fetcher  # noqa: E402
+from espectro24.ficha import buscar_ficha, resolver_identidade  # noqa: E402
 
 RESULTADO_DIR = RAIZ / "resultado"
 
@@ -78,7 +79,7 @@ RESULTADO_DIR = RAIZ / "resultado"
 # dia passar a mexer noutra coisa, a guarda de campo a campo quebra, e este
 # nome é onde o leitor descobre qual era o contrato.
 CHAVES_NOVAS = (
-    "tmdb_id", "tmdb_fetched_at",
+    "tmdb_id", "tmdb_fetched_at", "identidade",
     "poster_path", "poster_largura", "poster_altura", "backdrop_paths",
     # [v1.9.30] o BACKDROP ESCOLHIDO (topo da página do filme) e o PÔSTER
     # SEM TEXTO (variante da home). Aditivos: nenhum dos dois substitui
@@ -132,23 +133,21 @@ def enriquecer_um(slug: str, *, cache_dir: Path, dry_run: bool = False,
     if not ficha_antiga:
         return {"slug": slug, "ok": False, "motivo": "sem_ficha"}
 
-    # A MESMA resolução que o pipeline fez, e nesta ordem por um motivo
-    # MEDIDO: o título de busca vem do SLUG (`titulo_ano_de_slug`), não do
-    # `ficha.titulo`. O `ficha.titulo` é o título pt-BR que o TMDB devolveu —
-    # usá-lo como query reabre a busca com um termo diferente do original e
-    # resolve outro filme. Observado em `mother-2017`: o disco tem
-    # `titulo="mãe!"`, e buscar "mãe!" + 2017 devolve "Perfeita é a Mãe 2"
-    # (dir. Scott Moore). A guarda de identidade pegou; a causa era esta.
-    #
-    # O ANO, ao contrário, vem da ficha em disco: é o ano já VALIDADO na
-    # publicação (a guarda da v1.7.0 passou por ele), mais confiável que o
-    # sufixo do slug — e, para os 21 slugs sem ano no nome, é o único ano
-    # disponível sem ir à rede do Letterboxd.
-    titulo_slug, ano_slug = titulo_ano_de_slug(slug)
-    titulo = titulo_slug or ficha_antiga.get("titulo")
-    ano = ficha_antiga.get("ano") or ano_slug
+    # O retrofit também obedece ao contrato novo: não reabre busca por slug
+    # nem confia na ficha que pretende substituir. A prova vem do bruto já
+    # persistido ou da página canônica do Letterboxd.
+    identidade = resolver_identidade(
+        Fetcher(cache_dir=cache_dir.parent), slug,
+        meta_bruto=(documento.get("coleta") or {}))
+    if identidade is None:
+        return {"slug": slug, "ok": False,
+                "motivo": "identidade_letterboxd_indisponivel"}
+    titulo = identidade["titulo"]
+    ano = identidade.get("ano")
 
-    nova, aviso, _descartada = buscar_ficha(titulo, ano, cache_dir=cache_dir)
+    nova, aviso, _descartada = buscar_ficha(
+        titulo, ano, cache_dir=cache_dir, ano_fonte="letterboxd",
+        identidade=identidade)
     if not nova:
         return {"slug": slug, "ok": False, "motivo": aviso or "sem_resultado"}
 

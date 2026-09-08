@@ -1,19 +1,18 @@
-# Espectro 24 — Especificação v1.9.37
+# Espectro 24 — Especificação v1.9.49
 
-**Data:** 2026-09-04
+**Data:** 2026-09-08
 
 > **O título deste documento e a constante `SPEC_VERSION` são duas coisas
 > diferentes, e a divergência é DELIBERADA.** O título é a versão do
-> DOCUMENTO — a última decisão registrada aqui (hoje v1.9.37, as CONDIÇÕES DE
-> DECISÃO no ar). `SPEC_VERSION` (`config.py`) está em **`1.9.25`** e é o
+> DOCUMENTO — a última decisão registrada aqui. `SPEC_VERSION` (`config.py`)
+> está em **`1.9.49`** e é o
 > carimbo de ARTEFATO DE PIPELINE: ele só sobe quando muda alguma coisa que
 > um `resultado/<slug>.json` carrega. As v1.9.26–v1.9.37 foram sessões de
 > frontend e de harness de publicação, que não regeram artefato de pipeline —
-> por isso o carimbo não subiu, e é a mesma política de `VERSAO_COLETOR`
-> (§3[B']): um carimbo que não corresponde ao que foi executado não é
-> evidência de nada. **Conferido (2026-09-04):** `SPEC_VERSION = "1.9.25"` em
-> `config.py`; os 35 JSONs publicados carimbam `1.9.25` (27) e `1.9.22` (7)
-> no bloco `veredito`. *(Correção de registro: até 2026-09-04 o título dizia
+> por isso o carimbo não subiu. A v1.9.49 volta a subir o carimbo porque muda
+> o contrato e o schema da ficha publicada (`ficha.identidade`). Os artefatos
+> anteriores não são recarimbados: só uma nova geração pode constituir essa
+> evidência. *(Correção de registro: até 2026-09-04 o título dizia
 > `v1.9.25` e a data `2026-08-26`, doze versões atrás do próprio conteúdo —
 > o título estava copiando o carimbo de artefato em vez de nomear o
 > documento.)*
@@ -3093,6 +3092,20 @@ O contrato do briefing, as validações e o schema do bloco publicado continuam
 
 ### [F] Ficha do filme (TMDB) — v1.3.0
 
+**CONTRATO DE IDENTIDADE — v1.9.49 (prevalece sobre a resolução histórica descrita abaixo).** A página canônica do Letterboxd fornece `production:name`, ano e `data-tmdb-id`; os três passam a ser extraídos juntos e persistidos em `meta.identidade_letterboxd` nas coletas futuras. O título nunca mais é derivado do slug para decidir qual ficha publicar. Sem título canônico ou sem ID direto, o resultado é `ficha: null` com `ficha_indisponivel` explícito — ausência é aceitável, substituição silenciosa não é.
+
+O ID do Letterboxd é a fonte primária e leva diretamente a `GET /movie/{id}`; popularidade não decide identidade. Existe uma única associação manual, versionada em `identidade.py`: `obsession-2026` troca o ID observado `1615708` pelo longa de Curry Barker, `1339713`, com motivo, data e autor da decisão. Se o Letterboxd passar a declarar um terceiro ID não avaliado, a exceção se invalida e a ficha fica ausente; se passar a declarar `1339713`, o override deixa de ser necessário automaticamente.
+
+Depois dos detalhes, o título canônico precisa ser IGUAL — após normalizar caixa, pontuação e diacríticos — a pelo menos um membro de `{original_title, title pt-BR, title en-US, alternative_titles}`. Nunca há substring nem pontuação de similaridade. A chamada en-US só acontece se o conjunto já disponível não casar, cobrindo títulos internacionais como `Parasite` contra `기생충`/`Parasita`. `duracao_compativel_com_longa` permanece como uma segunda checagem independente: abaixo de 40 minutos ou sem duração, a ficha inteira é recusada.
+
+**Ano, decisão do dono:** quando o ID direto prova a obra, o ano editorial do Letterboxd prevalece no campo publicado. Divergências não somem: `ficha.identidade` conserva `ano_letterboxd`, `ano_tmdb` e `ano_divergente`. É o caso correto de `talk-to-me-2022`: Letterboxd 2022, TMDB 2023, `tmdb_id=1008042`. A tolerância histórica de ano continua apenas no caminho legado, que não é usado pelo pipeline de produção.
+
+**Cache:** uma ficha só é hit para o caminho de produção se trouxer `identidade.versao=1`, `status=validada`, o mesmo slug, ID escolhido e fonte da decisão. Todas as 35 entradas existentes foram medidas sem esse selo e viram miss automaticamente; uma resposta recusada não é cacheada como ficha válida. A evidência registra ainda qual título TMDB casou e, quando aplicável, o override inteiro.
+
+**Fronteira downstream:** o CLI zera `ficha` antes de narrativa/render e persiste o motivo da recusa. Assim, título, sinopse, imagens e duração reprovados não chegam ao narrador, ao frontend nem ao briefing do veredito. As condições de decisão foram verificadas no código: são derivadas de eixos/buckets e não recebem título, ano ou ficha; por isso uma correção de ficha não autoriza regenerá-las.
+
+*Histórico anterior, mantido para explicar a evolução e os defeitos que levaram ao contrato atual:*
+
 Etapa **aditiva e independente** do resto do pipeline (`ficha.py`): dado o título/ano do filme (derivados do slug por default — `titulo_ano_de_slug`, com override via `--titulo`/`--ano` no CLI para os casos em que o slug não carrega ano, ex. `cure`), busca a ficha técnica na API pública do TMDB (`api.themoviedb.org/3`).
 
 **Resolução do ID:** `GET /search/movie?query=<título>&language=pt-BR[&year=<ano>]`. Quando `ano` está disponível, é usado tanto como parâmetro de busca quanto para desambiguação pós-resposta: entre os candidatos com `release_date` no ano pedido, prefere o de maior `popularity` do TMDB — **não** o primeiro da lista. Necessário porque títulos comuns podem devolver mais de um candidato do MESMO ano (ex. "The Invite" tem múltiplas entradas no TMDB; "Cure" 1997 devolve o filme de Kiyoshi Kurosawa E um documentário obscuro do mesmo ano) — a ordem da API não é por relevância quando o filtro de ano está ativo. Medido ao vivo na regeneração da v1.3.0: escolher o primeiro resultado do ano pegou o documentário (`popularity=0.28`, 1 voto) em vez do filme correto (`popularity=3.79`, 820 votos); corrigido para desempate por popularidade antes da entrega.
@@ -3172,7 +3185,7 @@ alta (§3[E], a tabela de medição). Elas vêm da própria entrada de
 
 **Retrofit da v1.9.30 — mesmo harness, mesmas travas, `CHAVES_NOVAS` maior.** Os seis campos da v1.9.30 entraram pelo mesmo passe, com a guarda de lote continuando inalcançável e a **guarda de identidade** (a que pegou `mother-2017`) em vigor. **Resultado medido: 35 de 35 processados, 0 falhas; 34 com backdrop e 1 sem (`talk-to-me-2022`); 35 com arte sem texto e 0 sem.** Diff dos `resultado/*.json` conferido campo a campo contra o `HEAD` anterior: **nada mudou fora do bloco `ficha`**, e dentro dele mudaram exatamente os seis campos novos mais `tmdb_fetched_at` — que é o carimbo da nova consulta e está em `CHAVES_NOVAS` desde a v1.9.29. `poster_path`, as dimensões do pôster e `backdrop_paths[]` vieram **idênticos** aos de antes, o que é a confirmação independente de que a reconsulta resolveu os mesmos 35 filmes.
 
-**RESSALVA MEDIDA, PRÉ-EXISTENTE E NÃO CORRIGIDA AQUI — `talk-to-me-2022` publica a ficha de OUTRO FILME.** O slug é o de *Talk to Me* (2022, Danny e Michael Philippou), e a ficha em `resultado/talk-to-me-2022.json` é a de **"The Elms Estate: You Can Talk To Me"** (`tmdb_id` 976680), um curta de **3 minutos** dirigido por George Williams — título, sinopse, diretor, duração e pôster, todos do filme errado, publicados desde a v1.3.0. É uma falha da desambiguação do TMDB por título, do mesmo tipo que a guarda de ano da v1.7.0 foi escrita para pegar e que ela não pega neste caso (os dois são de 2022). A **guarda de identidade** do retrofit não a detecta por construção: ela compara o disco com a resposta nova, e as duas são o mesmo filme errado. **É também a razão real do único "sem backdrop" do catálogo** — não é escassez de acervo (o *Talk to Me* verdadeiro, `tmdb_id` 1008042, tem 49 backdrops); é que o curta não tem nenhum. **Não corrigido nesta versão de propósito:** o conserto trocaria `titulo`, `sinopse_oficial`, `diretor` e `duracao_min` — campos fora de `CHAVES_NOVAS` — e a narrativa e o veredito publicados desse filme foram escritos sobre a ficha errada, o que faz do conserto uma **republicação**, não um retrofit.
+**RESSALVA HISTÓRICA DA v1.9.30, CORRIGIDA NA v1.9.49 — `talk-to-me-2022` publicava a ficha de OUTRO FILME.** O slug é o de *Talk to Me* (2022, Danny e Michael Philippou), mas a ficha era **"The Elms Estate: You Can Talk To Me"** (`tmdb_id` 976680), curta de 3 minutos dirigido por George Williams. A v1.9.49 republicou ficha, narrativa e veredito sobre o longa correto (`tmdb_id=1008042`, 95 minutos); o ano editorial 2022 do Letterboxd prevalece e a data TMDB 2023 continua auditável em `ficha.identidade`. O caso deixa de ser o único filme sem backdrop e passa a ter a faixa normal de 12 stills. Reviews, classificação, eixos e condições não foram regenerados.
 
 **Diretor em escrita latina (v1.6.0):** o TMDB devolve o nome do diretor no **alfabeto nativo** quando a localidade pt-BR não tem tradução — `cure` vinha com `"黒沢清"`, que foi parar na narrativa **publicada** (o narrador só reproduz o que a ficha entrega). Quando o nome pt-BR não está em escrita latina (`_e_escrita_latina`, checagem sobre `unicodedata.name` de cada letra — cobre diacríticos latinos como ç/é/ñ sem lista de exceções), o `credits` de `en-US` é consultado e a transliteração é usada (`"Kiyoshi Kurosawa"`). A ficha carrega `diretor_transliterado: true` — visível, nunca silencioso. **Custo:** no máximo 1 requisição extra, e só para filmes nessa condição; quando o fallback de sinopse já buscou `en-US`, a resposta é **reaproveitada** em vez de refeita. Se o `en-US` também não for latino, mantém o nome original (melhor um nome em alfabeto nativo do que nenhum). Cacheado junto da ficha, como todo o resto.
 

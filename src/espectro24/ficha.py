@@ -30,6 +30,7 @@ import json
 import os
 import re
 import unicodedata
+from html import unescape
 from datetime import datetime, timezone
 from pathlib import Path
 from typing import Any
@@ -37,6 +38,7 @@ from typing import Any
 import requests
 
 from .fetcher import AntiBotError, FetchError
+from .identidade import VERSAO_CONTRATO_IDENTIDADE, tmdb_id_escolhido
 from .urls import film_page_cache_key, film_page_url
 
 TMDB_BASE = "https://api.themoviedb.org/3"
@@ -96,8 +98,8 @@ TETO_BACKDROPS = 10
 # Medido ao vivo em 2026-09-04, os 35 filmes publicados, `/movie/{id}/images`
 # SEM `include_image_language` (para pegar o TOTAL de verdade) e filtrado em
 # código (`iso_639_1 is None` E aspect_ratio em [1.70, 1.85]): mediana de
-# **69** stills por filme, mínimo **0** (`talk-to-me-2022` — o curta de 3
-# min só tem 1 backdrop no total), máximo 257 (`wicked-2024`). Excluindo o
+# **69** stills por filme, mínimo histórico **0** (`talk-to-me-2022` ainda
+# apontava para o curta errado de 3 min), máximo 257 (`wicked-2024`). Excluindo o
 # curta, o PISO real do catálogo é 18 (`eighth-grade`) — bem acima de
 # qualquer teto razoável; N não é limitado pela distribuição aqui, ao
 # contrário da galeria de pôsteres (v1.9.38), onde `eighth-grade`/
@@ -193,57 +195,20 @@ TETO_STILLS = 12
 # excluir o backdrop do hero e aplicar `TETO_STILLS`) é zerada, não
 # truncada — a seção inteira desaparece (ver `galeriaBlock`, `filme.js`).
 #
-# Medido nos 35: NENHUM filme cai neste piso por escassez de still — o
-# menor real (`eighth-grade`, 18) está bem acima de 3. Só
-# `talk-to-me-2022` fica vazio, e é pelo FILTRO DE DURAÇÃO abaixo, não pelo
-# piso (ele já teria 0 stills sob o filtro de qualquer forma — o curta só
-# tem 1 backdrop no total).
+# Na medição original, nenhum longa caiu neste piso por escassez de still; o
+# menor real (`eighth-grade`, 18) ficou bem acima de 3. O antigo vazio de
+# `talk-to-me-2022` era consequência da ficha do curta errado, corrigida pela
+# guarda de identidade da v1.9.49.
 PISO_STILLS = 3
 
-# [v1.9.38] Piso de duração que decide se a galeria é montada.
+# [v1.9.49] Segunda checagem, independente do contrato de identidade.
 #
-# **NÃO É UMA GUARDA DE IDENTIDADE** — é só um filtro de DURAÇÃO, e o nome e
-# o comentário abaixo existem para que essa distinção não se perca: nada
-# aqui confirma que o `tmdb_id` resolvido é o filme certo. Uma guarda de
-# identidade de verdade — comparando o tmdb_id contra uma segunda fonte,
-# título original, elenco, o que for — continua PENDENTE no pipeline de
-# COLETA (`buscar_ficha`), onde o `tmdb_id` é decidido; este piso só reage
-# a um sintoma dele DEPOIS do fato, e só para a galeria.
-#
-# [v1.9.39] **FICA MAIS IMPORTANTE, não menos, com a troca para stills.**
-# Um pôster errado é uma imagem de capa de outro filme; um STILL errado é
-# um QUADRO de outro filme, sem nenhum filtro anti-spoiler por cima (risco
-# assumido, ver docstring do módulo) — o custo de a guarda falhar subiu, o
-# piso continua sendo o único freio. Verificado ao vivo (2026-09-04, ETAPA
-# 0 desta versão): `talk-to-me-2022` CONTINUA caindo aqui (`duracao_min=3`)
-# — e também cairia no piso de qualquer forma, já que o curta só tem 1
-# backdrop no total (0 sob o filtro de still). Se algum dia esse filme
-# passar por este piso, é sinal de que a guarda quebrou — investigar antes
-# de prosseguir com qualquer expansão de catálogo, que continua BLOQUEADA
-# até a guarda de identidade real (acima) ser implementada.
-#
-# Caso conhecido, e o que este piso pega DELE: `talk-to-me-2022` resolve
-# para `tmdb_id=976680`, um CURTA de George Williams de 3 minutos — não o
-# longa de A24 (2022) que o catálogo pretende. A guarda de ano da v1.7.0
-# (`buscar_ficha`, tolerância de 1 ano) NÃO pega este caso porque o curta
-# errado também é de 2022: os dois sinais mais óbvios (ano, tmdb_id
-# resolvido com sucesso) concordam, e só o CONTEÚDO da ficha denuncia o
-# erro. `duracao_min` é esse conteúdo: MEDIDO nos 35, separa o caso limpo —
-# os 34 longas vão de 94 a 181 minutos, o curta fica em 3. Um piso de 40 min
-# (definição comum de "longa-metragem", ex. Academy/BAFTA) reage a ISSO:
-# abaixo dele, a galeria fica vazia — um filme sem galeria é aceitável (ver
-# docstring de `_stills`) — mas a ficha inteira (título, sinopse, pôster
-# principal) continua publicada como sempre, porque o piso não decide nada
-# sobre identidade, só sobre se a duração PARECE de longa.
-#
-# Comparar título (pt-BR do TMDB) contra o título derivado do slug (inglês)
-# foi medido e DESCARTADO como sinal PARA ESTE piso: rodando nos 35, a
-# similaridade (SequenceMatcher) fica baixa para uma maioria de filmes com
-# título pt-BR bem diferente do inglês (`the-godfather` -> "O Poderoso
-# Chefão" = 0.27, `shutter-island` -> "Ilha do Medo" = 0.19) — mais falsos
-# positivos que o caso real que este piso pega. Não é sinal utilizável sem
-# uma segunda fonte de título original, que a ficha atual não guarda — o
-# que reforça, e não resolve, a pendência de guarda de identidade acima.
+# O ID declarado pelo Letterboxd (ou um override manual auditável) e a
+# igualdade de título são a PROVA; duração não é. Mesmo assim, uma ficha com
+# menos de 40 minutos é recusada inteira: o piso pega a coincidência rara em
+# que ID/título parecem coerentes mas o objeto retornado é um curta. O caso
+# histórico que motivou a redundância foi o match errado de 3 minutos de
+# `talk-to-me-2022`. Nos outros 34 filmes medidos, a duração ia de 94 a 181.
 GALERIA_DURACAO_MIN_FEATURE = 40
 
 # [v1.9.30] A ORDEM DE PREFERÊNCIA ENTRE IMAGENS, e por que ela é do CÓDIGO
@@ -323,16 +288,10 @@ def duracao_compativel_com_longa(duracao_min: int | None) -> bool:
     """`True` se `duracao_min` está no território de longa-metragem (§3[F]
     v1.9.38) — ver `GALERIA_DURACAO_MIN_FEATURE` para o porquê do piso.
 
-    **NÃO CONFIRMA IDENTIDADE.** É um filtro de duração, não uma prova de
-    que o `tmdb_id` é o filme certo — só o sinal mais barato disponível na
-    ficha já buscada para reagir ao sintoma de um `tmdb_id` errado (o caso
-    real: `talk-to-me-2022` resolvendo para um curta de 3 minutos). A guarda
-    de identidade de verdade (uma segunda fonte confirmando o `tmdb_id` no
-    momento em que ele é RESOLVIDO, em `buscar_ficha`) continua pendente —
-    isto não a fecha, só evita que o sintoma dela vaze para a galeria.
-
-    `False` (duração ausente ou abaixo do piso) é o caminho seguro: a
-    galeria fica vazia em vez de arriscar mostrar pôsteres do filme errado.
+    **NÃO CONFIRMA IDENTIDADE.** É a segunda checagem independente aplicada
+    depois da prova Letterboxd→TMDB. ``False`` é o caminho seguro: a ficha
+    inteira fica indisponível, em vez de publicar metadados plausíveis de um
+    curta homônimo.
     """
     return duracao_min is not None and duracao_min >= GALERIA_DURACAO_MIN_FEATURE
 
@@ -584,14 +543,28 @@ _CHAVES_COMPLETUDE = (
 )
 
 
-def _entrada_completa(cached: dict) -> bool:
-    return bool(cached.get("tmdb_fetched_at")) and all(
+def _entrada_completa(cached: dict, identidade: dict | None = None) -> bool:
+    completa = bool(cached.get("tmdb_fetched_at")) and all(
         k in cached for k in _CHAVES_COMPLETUDE)
+    if not completa or identidade is None:
+        return completa
+    evidencia = cached.get("identidade") or {}
+    esperado, fonte, _manual = tmdb_id_escolhido(identidade)
+    return (
+        evidencia.get("versao") == VERSAO_CONTRATO_IDENTIDADE
+        and evidencia.get("status") == "validada"
+        and evidencia.get("slug") == identidade.get("slug")
+        and evidencia.get("tmdb_id_escolhido") == esperado
+        and evidencia.get("fonte_id") == fonte
+    )
 
 _ANO_RE_CANDIDATOS = (
     re.compile(r"/films/year/(\d{4})/"),
     re.compile(r'og:title"\s+content="[^"]*\((\d{4})\)'),
 )
+_TITULO_CANONICO_RE = re.compile(
+    r'<meta\s+name="production:name"\s+content="([^"]*)"', re.I)
+_TMDB_ID_LETTERBOXD_RE = re.compile(r'data-tmdb-id="(\d+)"', re.I)
 
 
 def _agora_utc() -> str:
@@ -646,6 +619,66 @@ def resolver_ano_letterboxd(fetcher, slug: str) -> int | None:
         if m:
             return int(m.group(1))
     return None
+
+
+def extrair_identidade_letterboxd(html: str, slug: str) -> dict | None:
+    """Extrai título canônico, ano e ID TMDB declarados pela página.
+
+    Sem título ou sem ID não há prova suficiente: devolve ``None``. O ano
+    pode faltar; nesse caso a cadeia já existente de resolução de ano ainda
+    pode completá-lo, sem inventar o título a partir do slug.
+    """
+    titulo = _TITULO_CANONICO_RE.search(html)
+    tmdb_id = _TMDB_ID_LETTERBOXD_RE.search(html)
+    if not titulo or not tmdb_id:
+        return None
+    ano = None
+    for padrao in _ANO_RE_CANDIDATOS:
+        achado = padrao.search(html)
+        if achado:
+            ano = int(achado.group(1))
+            break
+    return {
+        "slug": slug,
+        "titulo": unescape(titulo.group(1)).strip(),
+        "ano": ano,
+        "tmdb_id_letterboxd": int(tmdb_id.group(1)),
+        "fonte": "pagina_letterboxd",
+    }
+
+
+def resolver_identidade_letterboxd(fetcher, slug: str) -> dict | None:
+    """Obtém a identidade canônica com o mesmo cache/anti-bot da coleta."""
+    if fetcher is None:
+        return None
+    try:
+        html = fetcher.get(film_page_url(slug), film_page_cache_key(slug))
+    except (AntiBotError, FetchError, requests.RequestException):
+        return None
+    return extrair_identidade_letterboxd(html, slug)
+
+
+def identidade_do_meta(meta: dict | None) -> dict | None:
+    bloco = (meta or {}).get("identidade_letterboxd")
+    if not isinstance(bloco, dict):
+        return None
+    if not bloco.get("titulo") or not bloco.get("tmdb_id_letterboxd"):
+        return None
+    return dict(bloco)
+
+
+def resolver_identidade(fetcher, slug: str, *, meta_bruto: dict | None = None,
+                        ano_explicito: int | None = None) -> dict | None:
+    """Identidade persistida primeiro; página do Letterboxd depois."""
+    identidade = identidade_do_meta(meta_bruto)
+    if identidade is None:
+        identidade = resolver_identidade_letterboxd(fetcher, slug)
+    if identidade is None:
+        return None
+    identidade["slug"] = slug
+    if identidade.get("ano") is None and ano_explicito is not None:
+        identidade["ano"] = ano_explicito
+    return identidade
 
 
 def _ano_do_bruto(meta_bruto: dict | None) -> int | None:
@@ -715,6 +748,19 @@ def meta_com_ano(meta: dict, fetcher, slug: str) -> dict:
     return {**meta, "ano_lancamento": ano, "ano_fonte": fonte}
 
 
+def meta_com_identidade(meta: dict, fetcher, slug: str) -> dict:
+    """Persiste a prova canônica sem reescrever reviews do bruto."""
+    existente = identidade_do_meta(meta)
+    identidade = existente or resolver_identidade_letterboxd(fetcher, slug)
+    if identidade is None:
+        return meta_com_ano(meta, fetcher, slug)
+    saida = {**meta, "identidade_letterboxd": identidade}
+    if _ano_do_bruto(saida) is None and identidade.get("ano") is not None:
+        saida["ano_lancamento"] = identidade["ano"]
+        saida["ano_fonte"] = "letterboxd"
+    return saida
+
+
 def _cache_key(titulo: str, ano: int | None) -> str:
     chave = re.sub(r"[^a-z0-9]+", "_", titulo.lower()).strip("_")
     return f"{chave}_{ano}" if ano else chave
@@ -770,7 +816,8 @@ def _buscar_detalhes(session, api_key: str, movie_id: int,
     imagens é grande — não há por que baixá-lo duas vezes.
     """
     params = {"api_key": api_key, "language": language,
-              "append_to_response": "credits,images" if com_imagens else "credits"}
+              "append_to_response": (
+                  "credits,images,alternative_titles" if com_imagens else "credits")}
     if com_imagens:
         params["include_image_language"] = TMDB_IMAGE_LANGS
     return _get_json(session, f"{TMDB_BASE}/movie/{movie_id}", params)
@@ -907,10 +954,10 @@ def _imagens(detalhes: dict, *, hashes: dict[str, str] | None = None) -> dict[st
 
 
 def _montar_ficha(session, api_key: str, movie_id: int, detalhes: dict,
-                  *, hashes: dict[str, str] | None = None) -> dict[str, Any]:
+                  *, hashes: dict[str, str] | None = None,
+                  detalhes_en: dict[str, Any] | None = None) -> dict[str, Any]:
     overview = detalhes.get("overview") or ""
     fallback_en = False
-    detalhes_en: dict[str, Any] | None = None
     if not overview:
         # §1.3: overview vazio em pt-BR -> fallback para en, sinalizado
         # (nunca silencioso) em vez de deixar a sinopse vazia.
@@ -970,32 +1017,92 @@ def _montar_ficha(session, api_key: str, movie_id: int, detalhes: dict,
         **_imagens(detalhes, hashes=hashes),
     }
 
-    # [v1.9.38, continua valendo na v1.9.39] FILTRO DE DURAÇÃO da galeria —
-    # aplicado aqui, único ponto que tem `duracao_min` E o `galeria_stills`
-    # que `_imagens` já montou. NÃO É guarda de identidade (ver
-    # `duracao_compativel_com_longa`): reage a um sintoma (duração de
-    # curta) sem confirmar o `tmdb_id`, e não fecha a pendência de
-    # identidade do pipeline de coleta — pendência que segue BLOQUEANTE
-    # antes de expandir o catálogo. Reprovado: galeria some (lista vazia),
-    # nunca a ficha inteira — um filme sem galeria é aceitável (§3[F]); a
-    # ficha (título, sinopse, pôster principal etc.) segue publicada
-    # normalmente.
+    # Mantido aqui para consumidores legados de `_montar_ficha`; no caminho
+    # identificado, `buscar_ficha` aplica o mesmo piso à ficha INTEIRA.
     if not duracao_compativel_com_longa(duracao_min):
         ficha["galeria_stills"] = []
     return ficha
+
+
+def normalizar_titulo_identidade(titulo: str) -> str:
+    """Normalização conservadora: caixa, diacríticos e pontuação apenas."""
+    sem_diacriticos = "".join(
+        c for c in unicodedata.normalize("NFKD", titulo or "")
+        if not unicodedata.combining(c)
+    )
+    # `isalnum` preserva scripts não latinos. Uma regex ASCII reduziria
+    # títulos coreanos/japoneses/chineses à string vazia e faria duas obras
+    # diferentes parecerem iguais — o oposto exato desta guarda.
+    plano = "".join(c if c.isalnum() else " " for c in sem_diacriticos.casefold())
+    return unicodedata.normalize("NFC", " ".join(plano.split()))
+
+
+def _titulos_dos_detalhes(detalhes: dict) -> list[tuple[str, str]]:
+    titulos: list[tuple[str, str]] = []
+    for campo in ("original_title", "title"):
+        if detalhes.get(campo):
+            titulos.append((campo, detalhes[campo]))
+    alternativas = (detalhes.get("alternative_titles") or {}).get("titles") or []
+    for item in alternativas:
+        if item.get("title"):
+            titulos.append(("alternative_title", item["title"]))
+    return titulos
+
+
+def _titulo_correspondente(titulo_letterboxd: str,
+                           *respostas: dict | None) -> tuple[str, str] | None:
+    esperado = normalizar_titulo_identidade(titulo_letterboxd)
+    for detalhes in respostas:
+        for campo, titulo in _titulos_dos_detalhes(detalhes or {}):
+            if normalizar_titulo_identidade(titulo) == esperado:
+                return campo, titulo
+    return None
+
+
+def _evidencia_identidade(identidade: dict, ficha: dict,
+                          correspondencia: tuple[str, str], fonte_id: str,
+                          manual: dict | None) -> dict:
+    evidencia = {
+        "versao": VERSAO_CONTRATO_IDENTIDADE,
+        "status": "validada",
+        "slug": identidade.get("slug"),
+        "titulo_letterboxd": identidade.get("titulo"),
+        "ano_letterboxd": identidade.get("ano"),
+        "tmdb_id_letterboxd": identidade.get("tmdb_id_letterboxd"),
+        "tmdb_id_escolhido": ficha.get("tmdb_id"),
+        "fonte_id": fonte_id,
+        "titulo_tmdb_campo": correspondencia[0],
+        "titulo_tmdb_correspondente": correspondencia[1],
+        "ano_tmdb": ficha.get("ano"),
+        "ano_divergente": (
+            identidade.get("ano") is not None and ficha.get("ano") is not None
+            and identidade["ano"] != ficha["ano"]
+        ),
+    }
+    if manual:
+        evidencia["override_manual"] = manual
+    return evidencia
 
 
 def buscar_ficha(titulo: str, ano: int | None, cache_dir: str | Path,
                  api_key: str | None = None,
                  session=None,
                  ano_fonte: str | None = None,
+                 identidade: dict | None = None,
                  ) -> tuple[dict[str, Any] | None, str | None, dict[str, Any] | None]:
-    """Ponto de entrada. Retorna `(ficha, aviso, ficha_descartada)`:
+    """Ponto de entrada. Retorna `(ficha, aviso, ficha_descartada)`.
+
+    O caminho de produção passa ``identidade``: o ID vem diretamente do
+    Letterboxd (ou do mapa manual), o título precisa ser igualdade
+    normalizada com ``original_title``, ``title`` ou um título alternativo,
+    e a duração passa por uma segunda checagem. Sem prova, a ficha inteira é
+    recusada. Chamadas sem ``identidade`` existem só para compatibilidade com
+    ferramentas anteriores e conservam a resolução histórica por busca.
+
     - sucesso: `(dict, None, None)` — `dict` carrega `ano_fonte` (v1.7.0).
     - filme não encontrado / API indisponível / chave ausente:
       `(None, texto_do_aviso, None)`.
-    - resolvido no TMDB mas com ano divergente do esperado (v1.7.0, guarda
-      de sanidade — §1.2): `(None, texto_do_aviso, {"motivo": ...})`.
+    - identidade não comprovada: `(None, texto_do_aviso, {"motivo": ...})`.
 
     NUNCA levanta — falha de ficha é sempre reportada como aviso, o
     pipeline segue sem ela (§1.2). "Não encontrado" também é cacheado (para
@@ -1009,7 +1116,7 @@ def buscar_ficha(titulo: str, ano: int | None, cache_dir: str | Path,
     path = cache_dir / f"{_cache_key(titulo, ano)}.json"
     if path.exists():
         cached = json.loads(path.read_text(encoding="utf-8"))
-        if cached.get("nao_encontrado"):
+        if cached.get("nao_encontrado") and identidade is None:
             return None, f"TMDB: nenhum resultado para {titulo!r} ({ano}) [cache].", None
         # Ficha cacheada por uma versão ANTERIOR não tem os campos de imagem
         # que a versão atual escreve. Devolvê-la como está produziria o pior
@@ -1025,7 +1132,7 @@ def buscar_ficha(titulo: str, ano: int | None, cache_dir: str | Path,
         # em cache, então os campos novos desta versão teriam voltado
         # ausentes, em silêncio, exatamente o defeito que aquela regra existia
         # para evitar. Ao acrescentar campo de imagem, acrescente aqui.
-        if _entrada_completa(cached):
+        if _entrada_completa(cached, identidade):
             return cached, None, None
 
     key = api_key or os.environ.get(TMDB_ENV_KEY)
@@ -1035,14 +1142,61 @@ def buscar_ficha(titulo: str, ano: int | None, cache_dir: str | Path,
     sess = session or requests
 
     try:
-        movie_id = _resolver_id(sess, key, titulo, ano)
+        fonte_id = "busca_legada"
+        manual = None
+        if identidade is not None:
+            movie_id, fonte_id, manual = tmdb_id_escolhido(identidade)
+        else:
+            # Compatibilidade para consumidores antigos. O pipeline de
+            # produção nunca entra aqui: ele exige a identidade extraída da
+            # página do Letterboxd antes de consultar o TMDB.
+            movie_id = _resolver_id(sess, key, titulo, ano)
         if movie_id is None:
-            path.parent.mkdir(parents=True, exist_ok=True)
-            path.write_text(json.dumps({"nao_encontrado": True}), encoding="utf-8")
-            return None, f"TMDB: nenhum resultado para {titulo!r} ({ano}).", None
+            if identidade is None:
+                path.parent.mkdir(parents=True, exist_ok=True)
+                path.write_text(json.dumps({"nao_encontrado": True}), encoding="utf-8")
+            motivo = (fonte_id if identidade and fonte_id ==
+                      "override_manual_desatualizado" else
+                      "tmdb_id_letterboxd_ausente" if identidade else
+                      "nao_encontrado")
+            mensagem = (f"TMDB: identidade indisponível para {titulo!r} ({ano})."
+                        if identidade else
+                        f"TMDB: nenhum resultado para {titulo!r} ({ano}).")
+            return None, mensagem, {"motivo": motivo} if identidade else None
         detalhes = _buscar_detalhes(sess, key, movie_id)
+        detalhes_en = None
+        correspondencia = None
+        if identidade is not None:
+            correspondencia = _titulo_correspondente(identidade["titulo"], detalhes)
+            if correspondencia is None:
+                detalhes_en = _buscar_detalhes(
+                    sess, key, movie_id, language="en-US", com_imagens=False)
+                correspondencia = _titulo_correspondente(
+                    identidade["titulo"], detalhes, detalhes_en)
+            if correspondencia is None:
+                descarte = {
+                    "motivo": "titulo_divergente",
+                    "titulo_letterboxd": identidade["titulo"],
+                    "tmdb_id": movie_id,
+                    "titulos_tmdb": [t for _campo, t in (
+                        _titulos_dos_detalhes(detalhes)
+                        + _titulos_dos_detalhes(detalhes_en or {}))],
+                }
+                return None, (f"TMDB: ficha descartada para {titulo!r} — "
+                              "título não comprova a identidade."), descarte
         ficha = _montar_ficha(sess, key, movie_id, detalhes,
-                              hashes=_hashes_dos_candidatos(detalhes, session=sess))
+                              hashes=_hashes_dos_candidatos(detalhes, session=sess),
+                              detalhes_en=detalhes_en)
+
+        if identidade is not None and not duracao_compativel_com_longa(
+                ficha.get("duracao_min")):
+            descarte = {
+                "motivo": "duracao_incompativel_com_longa",
+                "tmdb_id": movie_id,
+                "duracao_min": ficha.get("duracao_min"),
+            }
+            return None, (f"TMDB: ficha descartada para {titulo!r} — duração "
+                          "incompatível com longa-metragem."), descarte
 
         # v1.7.0 — guarda de sanidade (§1.2): o ano é o sinal mais barato e
         # confiável de que o TMDB resolveu para o filme certo. Se o `ano`
@@ -1052,7 +1206,7 @@ def buscar_ficha(titulo: str, ano: int | None, cache_dir: str | Path,
         # ano resolveu para "The Cure" 2026 em vez de "Cure" 1997, uma
         # divergência de quase 30 anos). Descarta a ficha inteira — melhor
         # nenhuma ficha do que a ficha de outro filme.
-        if ano is not None and ficha.get("ano") is not None \
+        if identidade is None and ano is not None and ficha.get("ano") is not None \
                 and abs(ficha["ano"] - ano) > 1:
             descarte = {
                 "motivo": "ano_divergente",
@@ -1064,6 +1218,15 @@ def buscar_ficha(titulo: str, ano: int | None, cache_dir: str | Path,
             return None, aviso, descarte
 
         ficha["ano_fonte"] = ano_fonte
+        if identidade is not None:
+            ficha["identidade"] = _evidencia_identidade(
+                identidade, ficha, correspondencia, fonte_id, manual)
+            # A data do Letterboxd é a data editorial do catálogo. Divergência
+            # (como a estreia em festival de Talk to Me em 2022 versus o
+            # lançamento TMDB em 2023) permanece visível na evidência, mas o
+            # valor publicado obedece à fonte escolhida pelo dono.
+            if identidade.get("ano") is not None:
+                ficha["ano"] = identidade["ano"]
         path.parent.mkdir(parents=True, exist_ok=True)
         path.write_text(json.dumps(ficha, ensure_ascii=False, indent=2), encoding="utf-8")
         return ficha, None, None

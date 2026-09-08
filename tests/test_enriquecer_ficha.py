@@ -54,6 +54,15 @@ NOVA_FICHA = {
 }
 
 
+@pytest.fixture(autouse=True)
+def identidade_letterboxd(monkeypatch):
+    """O harness recebe a mesma prova canônica que produção exige."""
+    ef = _ef()
+    monkeypatch.setattr(ef, "resolver_identidade", lambda *a, **k: {
+        "slug": SLUG, "titulo": "The Godfather", "ano": 1972,
+        "tmdb_id_letterboxd": 238, "fonte": "pagina_letterboxd"})
+
+
 @pytest.fixture
 def documento():
     caminho = RAIZ / "resultado" / f"{SLUG}.json"

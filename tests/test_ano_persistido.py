@@ -135,3 +135,29 @@ def test_meta_com_ano_nao_grava_chave_quando_nao_resolve():
     f = _FetcherFake(falha=True)
     meta = meta_com_ano({"slug": "joker-folie-a-deux"}, f, "joker-folie-a-deux")
     assert "ano_lancamento" not in meta
+
+
+def test_coleta_persiste_identidade_canonica_completa():
+    html = '''<meta name="production:name" content="Cure">
+              <a href="/films/year/1997/">1997</a>
+              <body data-tmdb-type="movie" data-tmdb-id="36095">'''
+    f = _FetcherFake(html=html)
+    meta = F.meta_com_identidade({"slug": "cure"}, f, "cure")
+    assert meta["identidade_letterboxd"] == {
+        "slug": "cure", "titulo": "Cure", "ano": 1997,
+        "tmdb_id_letterboxd": 36095, "fonte": "pagina_letterboxd"}
+    assert meta["ano_lancamento"] == 1997
+    assert meta["ano_fonte"] == "letterboxd"
+
+
+def test_identidade_persistida_e_idempotente_sem_rede():
+    identidade = {"slug": "cure", "titulo": "Cure", "ano": 1997,
+                   "tmdb_id_letterboxd": 36095,
+                   "fonte": "pagina_letterboxd"}
+    f = _FetcherFake(falha=True)
+    meta = F.meta_com_identidade(
+        {"slug": "cure", "ano_lancamento": 1997,
+         "ano_fonte": "letterboxd", "identidade_letterboxd": identidade},
+        f, "cure")
+    assert meta["identidade_letterboxd"] == identidade
+    assert f.n == 0

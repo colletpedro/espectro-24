@@ -21,7 +21,11 @@ from .config import (
     SPEC_VERSION,
 )
 from .fetcher import AntiBotError, Fetcher
-from .ficha import buscar_ficha, resolver_ano, titulo_ano_de_slug
+from .ficha import (
+    buscar_ficha,
+    resolver_ano,
+    resolver_identidade,
+)
 from .collector import collect_distribuicao
 from .pipeline import (
     ids_analisados,
@@ -107,11 +111,12 @@ def _parse_args(argv):
                         "e renderiza. Requer --slug. Para A/B de tom sem re-gastar "
                         "as chamadas de síntese")
     p.add_argument("--titulo", default=None,
-                   help="título para a busca da ficha TMDB (v1.3.0); default: "
-                       "derivado do slug (ver ficha.titulo_ano_de_slug)")
+                   help="legado: o título canônico do Letterboxd prevalece "
+                       "na ficha; associações excepcionais vivem no mapa "
+                       "manual auditável")
     p.add_argument("--ano", type=int, default=None,
-                   help="ano para desambiguar a busca da ficha TMDB (v1.3.0); "
-                       "default: derivado do slug quando o slug tem sufixo -YYYY")
+                   help="fallback de ano quando o Letterboxd não o expõe; "
+                       "o ano canônico da página prevalece quando presente")
     p.add_argument("--no-ficha", action="store_true",
                    help="pula a busca da ficha TMDB (v1.3.0)")
     p.add_argument("--no-eixos", action="store_true",
@@ -251,19 +256,43 @@ def main(argv=None):
     if args.no_ficha:
         output["ficha"] = None
     else:
-        titulo = args.titulo
-        if titulo is None:
-            titulo, _ = titulo_ano_de_slug(slug)
+        # Uma republicação nunca pode conservar o motivo/ficha de uma
+        # tentativa anterior por acidente.
+        output.pop("ficha_descartada", None)
+        output.pop("ficha_indisponivel", None)
         # v1.9.12: a precedência inteira num lugar só (`ficha.resolver_ano`),
         # com o BRUTO como degrau novo antes da rede — é ele que faz uma
         # execução offline ter ficha. Em --reuse-synthesis não existe um
         # `fetcher` da coleta; cria um dedicado, mesmo padrão da distribuição.
         f_ano = fetcher if not args.reuse_synthesis else Fetcher(
             cache_dir=args.cache_dir, offline=args.offline)
-        ano, ano_fonte = resolver_ano(
-            f_ano, slug, ano_explicito=args.ano,
-            meta_bruto=(output.get("coleta") or {}))
-        if ano is None:
+        identidade = resolver_identidade(
+            f_ano, slug, meta_bruto=(output.get("coleta") or {}),
+            ano_explicito=args.ano)
+        if args.titulo is not None:
+            print("ℹ️  --titulo ignorado para a ficha: o título canônico do "
+                  "Letterboxd prevalece no contrato de identidade.",
+                  file=sys.stderr)
+        if identidade is None:
+            output["ficha"] = None
+            output["ficha_indisponivel"] = "identidade_letterboxd_indisponivel"
+            print("⚠️  Ficha do filme indisponível: a página do Letterboxd "
+                  "não forneceu título canônico + tmdb_id. Nenhuma busca "
+                  "heurística será publicada.", file=sys.stderr)
+            ano = None
+            ano_fonte = None
+        else:
+            titulo = identidade["titulo"]
+            # O ano canônico da identidade prevalece; `resolver_ano` só
+            # completa páginas antigas que ainda não o tenham exposto.
+            ano_identidade = identidade.get("ano")
+            ano, ano_fonte = resolver_ano(
+                f_ano, slug, ano_explicito=(args.ano if args.ano is not None
+                                            else ano_identidade),
+                meta_bruto=(output.get("coleta") or {}))
+            if ano_identidade is not None and args.ano is None:
+                ano_fonte = "letterboxd"
+        if identidade is not None and ano is None:
             # v1.7.0 (Tarefa 1.1c) — ano indisponível: NÃO busca a ficha (a
             # desambiguação por só o título já causou o defeito real do
             # `cure`, resolvido para "The Cure" 2026 em vez de 1997). Melhor
@@ -282,13 +311,16 @@ def main(argv=None):
                   "narrativa não vai apresentar o filme.\n"
                   "    Saídas: rodar uma vez com rede (grava o ano no bruto) "
                   "ou passar --ano.", file=sys.stderr)
-        else:
+        elif identidade is not None:
             ficha, aviso_ficha, ficha_descartada = buscar_ficha(
                 titulo, ano, cache_dir=Path(args.cache_dir) / "_tmdb",
-                ano_fonte=ano_fonte)
+                ano_fonte=ano_fonte, identidade=identidade)
             output["ficha"] = ficha
             if ficha_descartada:
                 output["ficha_descartada"] = ficha_descartada
+                output["ficha_indisponivel"] = ficha_descartada["motivo"]
+            elif ficha is None:
+                output["ficha_indisponivel"] = "tmdb_indisponivel"
             if aviso_ficha:
                 print(f"⚠️  Ficha TMDB: {aviso_ficha}", file=sys.stderr)
 

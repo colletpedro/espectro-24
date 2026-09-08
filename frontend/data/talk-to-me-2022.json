@@ -1,35 +1,121 @@
 {
   "slug": "talk-to-me-2022",
   "data_coleta": "2026-08-23T01:10:42.495418+00:00",
-  "spec_version": "1.9.16",
+  "spec_version": "1.9.49",
   "total_reviews_observadas": 756,
   "reviews_url": "https://letterboxd.com/film/talk-to-me-2022/reviews/",
   "ficha": {
-    "titulo": "The Elms Estate: You Can Talk To Me",
-    "sinopse_oficial": "An unstable man attempts to recover from the aftermath of a suffering relationship, his psyche split into three.",
-    "sinopse_fallback_en": true,
+    "titulo": "Fale Comigo",
+    "sinopse_oficial": "Quando um grupo de amigos descobre como conjurar espíritos usando uma antiga mão embalsamada, eles ficam viciados na nova emoção. Até que um deles vai longe demais e abre a porta para o mundo espiritual.",
+    "sinopse_fallback_en": false,
     "generos": [
-      "Drama"
+      "Terror"
     ],
-    "duracao_min": 3,
-    "diretor": "George Williams",
+    "duracao_min": 95,
+    "diretor": "Michael Philippou",
     "diretor_transliterado": false,
     "ano": 2022,
     "fonte": "tmdb",
-    "ano_fonte": "bruto",
-    "tmdb_id": 976680,
-    "tmdb_fetched_at": "2026-08-27T16:34:51+00:00",
-    "poster_path": "/oauz8kPiFCpsflMMEBq7UbNasKf.jpg",
-    "poster_largura": 2000,
-    "poster_altura": 3000,
-    "backdrop_paths": [],
-    "backdrop_path": null,
-    "backdrop_largura": null,
-    "backdrop_altura": null,
-    "poster_sem_texto_path": "/oauz8kPiFCpsflMMEBq7UbNasKf.jpg",
+    "tmdb_id": 1008042,
+    "tmdb_fetched_at": "2026-09-08T04:30:26+00:00",
+    "poster_path": "/7U3lC4YnHD8zpeoxbY6Hsj9jyeu.jpg",
+    "poster_largura": 1624,
+    "poster_altura": 2435,
+    "backdrop_paths": [
+      "/bIKgebhTJCc1hqnnb1Pvm0OfI0Q.jpg",
+      "/46Os8U0DEPmI0OnvKDxucl6SLVZ.jpg",
+      "/bTzq40wrtfbmEk7VmEXHAZcd52A.jpg",
+      "/rTJ8LLzT9NPRJA2dnQs0241bMRn.jpg",
+      "/iIvQnZyzgx9TkbrOgcXx0p7aLiq.jpg",
+      "/4qCbbeHGUY7247c0jeLYlruBPZU.jpg",
+      "/y8M1CS7510KaBFAej58XcjQoJLK.jpg",
+      "/jLlP4PX6wdndhbMHhfqtJDd7ev3.jpg",
+      "/lDCIQ1Qe7cRnhZ4ybQVVEbadMZ.jpg",
+      "/3tzPSJiCPqacAgRsMkMPof2ZinL.jpg"
+    ],
+    "backdrop_path": "/46Os8U0DEPmI0OnvKDxucl6SLVZ.jpg",
+    "backdrop_largura": 3840,
+    "backdrop_altura": 2160,
+    "poster_sem_texto_path": "/uPSthtiPU1gRK55Szjex31R4fmU.jpg",
     "poster_sem_texto_largura": 2000,
     "poster_sem_texto_altura": 3000,
-    "galeria_stills": []
+    "galeria_stills": [
+      {
+        "still_path": "/46Os8U0DEPmI0OnvKDxucl6SLVZ.jpg",
+        "still_largura": 3840,
+        "still_altura": 2160
+      },
+      {
+        "still_path": "/4qCbbeHGUY7247c0jeLYlruBPZU.jpg",
+        "still_largura": 3840,
+        "still_altura": 2160
+      },
+      {
+        "still_path": "/jLlP4PX6wdndhbMHhfqtJDd7ev3.jpg",
+        "still_largura": 3840,
+        "still_altura": 2160
+      },
+      {
+        "still_path": "/lDCIQ1Qe7cRnhZ4ybQVVEbadMZ.jpg",
+        "still_largura": 2397,
+        "still_altura": 1348
+      },
+      {
+        "still_path": "/55Rb9qt3yzyF4KQpC1c3T3Fbcao.jpg",
+        "still_largura": 3840,
+        "still_altura": 2160
+      },
+      {
+        "still_path": "/A6cQPjSA0JKkTbGeEWEUgZWmK3Y.jpg",
+        "still_largura": 3840,
+        "still_altura": 2160
+      },
+      {
+        "still_path": "/l19Gqm7tK4a7jQCLMg5JA8JIHKP.jpg",
+        "still_largura": 3000,
+        "still_altura": 1688
+      },
+      {
+        "still_path": "/zOsLfqzFxXGaoQRRsSXAZeKELz1.jpg",
+        "still_largura": 1920,
+        "still_altura": 1080
+      },
+      {
+        "still_path": "/dGKTGMSMk8oDoUYkdiRKSJyjOzW.jpg",
+        "still_largura": 2560,
+        "still_altura": 1439
+      },
+      {
+        "still_path": "/iDVzS1AkkS0vH9A8hVwPPmqKxBU.jpg",
+        "still_largura": 3840,
+        "still_altura": 2160
+      },
+      {
+        "still_path": "/ltMB4qwtat8YQHMZLjpwpp0GcAr.jpg",
+        "still_largura": 2745,
+        "still_altura": 1544
+      },
+      {
+        "still_path": "/oDTEh56ti8kYuBor6SOKRtbjn0n.jpg",
+        "still_largura": 1672,
+        "still_altura": 941
+      }
+    ],
+    "ano_fonte": "letterboxd",
+    "identidade": {
+      "versao": 1,
+      "status": "validada",
+      "slug": "talk-to-me-2022",
+      "titulo_letterboxd": "Talk to Me",
+      "ano_letterboxd": 2022,
+      "tmdb_id_letterboxd": 1008042,
+      "tmdb_id_escolhido": 1008042,
+      "fonte_id": "letterboxd",
+      "titulo_tmdb_campo": "original_title",
+      "titulo_tmdb_correspondente": "Talk to Me",
+      "ano_tmdb": 2023,
+      "ano_divergente": true
+    }
   },
   "distribuicao": {
     "n_notas_total": 1484316,
@@ -1223,17 +1309,17 @@
     },
     "spec_version": "1.9.34"
   },
-  "narrativa": "Dirigido por George Williams e lançado em 2022, o drama The Elms Estate: You Can Talk To Me acompanha a trajetória de um homem emocionalmente instável. Em meio às sequelas deixadas pelo término de um relacionamento doloroso, ele tenta se restabelecer enquanto lida com sua psique fragmentada em três partes.\n\nA experiência é conduzida por uma atmosfera perturbadora e de forte teor psicológico. A estrutura apoia-se em um ritmo que oscila entre a introspecção e momentos de maior tensão dramática.\n\nOs grupos debatem essencialmente os mesmos elementos e concordam sobre o que o filme é, divergindo apenas no veredito sobre a sua eficácia. Na maioria das notas (~67%), boa parte destaca a metáfora do vício e da autodestruição, enquanto uma parcela expressiva ressalta a atuação de Sophie Wilde. Além disso, alguns elogiam o trabalho de maquiagem e os efeitos práticos.\n\nEm uma perspectiva intermediária, presente em uma parcela das notas (~25%), muitos apontam que a premissa é criativa, mas a execução se mostra irregular. Para esse segmento, vários apontam um ritmo lento e arrastado, e uma fatia menor reconhece o valor das atuações, embora critique atitudes irritantes das personagens.\n\nSob uma ótica desfavorável, expressa em uma fração mínima das notas (~8%), um número considerável critica as decisões tolas da protagonista. Nesse mesmo grupo, muitos qualificam o roteiro como fraco e previsível, enquanto parte deles aponta um subaproveitamento do potencial da premissa.",
+  "narrativa": "Lançado em 2022 e dirigido por Michael Philippou, o filme de terror Fale Comigo apresenta a história de um grupo de amigos que aprende a conjurar espíritos através de uma mão embalsamada. Fascinados pela experiência, eles se entregam a essa prática até que a quebra de limites abre caminho definitivo para o universo espiritual.\n\nA condução da trama se apoia em uma atmosfera opressiva e perturbadora, combinando momentos de impacto direto com trechos de ritmo mais compassado.\n\nAs avaliações mostram que os grupos concordam sobre o que o filme é e tratam dos mesmos assuntos, divergindo estritamente quanto ao veredito sobre a sua eficácia.\n\nNa maioria das notas (~67%), vários avaliadores enfatizam a metáfora do vício e da autodestruição ligada ao ritual, ao passo que boa parte exalta o desempenho de Sophie Wilde. Adicionalmente, alguns valorizam a qualidade dos efeitos práticos e da maquiagem empregados nas cenas.\n\nPara quem se posiciona numa parcela das notas (~25%), muitos encaram a premissa como criativa, mas observam uma execução irregular no desenvolvimento. Nessa visão, uma parcela expressiva se queixa do ritmo lento e arrastado da história, enquanto uma fatia menor elogia as atuações, mas expressa incômodo com atitudes irritantes dos personagens.\n\nJá na leitura que compõe uma fração mínima das notas (~8%), um número considerável reprova a protagonista e a sequência de decisões insensatas ao longo dos acontecimentos. Nesse mesmo grupo, vários consideram o roteiro fraco e previsível, e parte deles aponta um claro subaproveitamento do potencial da premissa central.",
   "verificacao_narrativa": {
     "quantificador_fora_de_faixa": [],
     "quantificador_repetido": [],
     "paragrafos": {
-      "n_paragrafos": 5,
+      "n_paragrafos": 6,
       "minimo": 3,
       "insuficientes": false,
       "longos": []
     },
-    "n_paragrafos": 5,
+    "n_paragrafos": 6,
     "paragrafos_insuficientes": false,
     "paragrafos_longos": [],
     "grupos_sem_paragrafo_proprio": [],
@@ -1254,7 +1340,7 @@
     "n_chamadas": 3,
     "indice_escolhido": 0,
     "motivo": "melhor_entre_limpos",
-    "criterio_decisivo": "empate",
+    "criterio_decisivo": "unico",
     "candidatos": [
       {
         "indice": 0,
@@ -1267,31 +1353,31 @@
       },
       {
         "indice": 1,
-        "n_flags": 0,
+        "n_flags": 1,
         "cliches": 0,
         "repeticao_max": 2,
-        "ritmo": 4,
-        "cobertura": 1.0,
-        "eliminado": false
+        "ritmo": 8,
+        "cobertura": 0.889,
+        "eliminado": true
       },
       {
         "indice": 2,
-        "n_flags": 0,
+        "n_flags": 1,
         "cliches": 0,
         "repeticao_max": 2,
-        "ritmo": 5,
+        "ritmo": 7,
         "cobertura": 1.0,
-        "eliminado": false
+        "eliminado": true
       }
     ],
     "retry": null,
     "uso": {
-      "prompt_tokens": 9888,
-      "completion_tokens": 1059,
+      "prompt_tokens": 9957,
+      "completion_tokens": 1117,
       "cache_hit_tokens": 0,
-      "cache_miss_tokens": 9888
+      "cache_miss_tokens": 9957
     },
-    "latencia_s": 20.06
+    "latencia_s": 25.55
   },
   "veredito": {
     "provider": "gemini",
@@ -1300,34 +1386,34 @@
     "n_chamadas": 3,
     "prefixo_codigo": "",
     "retry": null,
-    "spec_version": "1.9.22",
-    "texto": "A discussão se concentra no roteiro e no comportamento insensato dos personagens. A maioria dos que recomendam defende que essas decisões irracionais funcionam dentro da proposta da trama, enquanto a maioria dos que não recomendam avalia a postura irritante dos protagonistas como uma falha que compromete a experiência.",
-    "texto_modelo": "A discussão se concentra no roteiro e no comportamento insensato dos personagens. A maioria dos que recomendam defende que essas decisões irracionais funcionam dentro da proposta da trama, enquanto a maioria dos que não recomendam avalia a postura irritante dos protagonistas como uma falha que compromete a experiência.",
+    "spec_version": "1.9.49",
+    "texto": "A discussão gira em torno do roteiro e da conduta das personagens diante de escolhas insensatas. Enquanto a maioria dos que recomendam aprecia esses comportamentos exasperantes e irracionais na condução da trama, a maioria dos que não recomendam considera o protagonista irritante e suas decisões tolas um entrave narrativo.",
+    "texto_modelo": "A discussão gira em torno do roteiro e da conduta das personagens diante de escolhas insensatas. Enquanto a maioria dos que recomendam aprecia esses comportamentos exasperantes e irracionais na condução da trama, a maioria dos que não recomendam considera o protagonista irritante e suas decisões tolas um entrave narrativo.",
     "origem": "llm",
     "motivo": "melhor_entre_limpos",
     "criterio_decisivo": "abertura",
     "abertura": "discu",
-    "indice_escolhido": 1,
+    "indice_escolhido": 2,
     "flags": [],
     "candidatos": [
       {
         "indice": 0,
         "n_flags": 0,
         "flags": [],
-        "n_palavras": 45,
+        "n_palavras": 42,
         "n_ancoras": 1,
         "abertura": "diver",
-        "abertura_freq": 7,
+        "abertura_freq": 11,
         "eliminado": false
       },
       {
         "indice": 1,
         "n_flags": 0,
         "flags": [],
-        "n_palavras": 48,
+        "n_palavras": 41,
         "n_ancoras": 1,
-        "abertura": "discu",
-        "abertura_freq": 0,
+        "abertura": "QUANT",
+        "abertura_freq": 5,
         "eliminado": false
       },
       {
@@ -1336,18 +1422,18 @@
         "flags": [],
         "n_palavras": 49,
         "n_ancoras": 1,
-        "abertura": "diver",
-        "abertura_freq": 7,
+        "abertura": "discu",
+        "abertura_freq": 0,
         "eliminado": false
       }
     ],
     "uso": {
       "prompt_tokens": 3669,
-      "completion_tokens": 220,
+      "completion_tokens": 201,
       "cache_hit_tokens": 0,
       "cache_miss_tokens": 3669
     },
-    "latencia_s": 9.73
+    "latencia_s": 11.86
   },
   "condicoes": {
     "vale_a_pena": [

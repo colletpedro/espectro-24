@@ -9,8 +9,12 @@ from __future__ import annotations
 import json
 from types import SimpleNamespace
 
+import pytest
+
 from espectro24.ficha import (
     buscar_ficha,
+    extrair_identidade_letterboxd,
+    normalizar_titulo_identidade,
     resolver_ano_letterboxd,
     titulo_ano_de_slug,
 )
@@ -51,6 +55,157 @@ def _detalhes(overview="Um filme sobre algo.", title="Título PT",
             {"job": "Director", "name": "Kiyoshi Kurosawa"},
         ]},
     }
+
+
+def _identidade(slug="cure", titulo="Cure", ano=1997, tmdb_id=5):
+    return {"slug": slug, "titulo": titulo, "ano": ano,
+            "tmdb_id_letterboxd": tmdb_id, "fonte": "pagina_letterboxd"}
+
+
+# =====================================================================
+# Contrato de identidade Letterboxd → TMDB
+# =====================================================================
+
+def test_identidade_letterboxd_extrai_titulo_canonico_ano_e_tmdb_id():
+    html = '''
+      <meta name="production:name" content="Talk to Me">
+      <meta name="production:name-and-year" content="Talk to Me (2022)">
+      <a href="/films/year/2022/">2022</a>
+      <body data-tmdb-type="movie" data-tmdb-id="1008042">
+    '''
+    assert extrair_identidade_letterboxd(html, "talk-to-me-2022") == {
+        "slug": "talk-to-me-2022", "titulo": "Talk to Me", "ano": 2022,
+        "tmdb_id_letterboxd": 1008042, "fonte": "pagina_letterboxd"}
+
+
+def test_normalizacao_nao_colapsa_scripts_nao_latinos_em_vazio():
+    assert normalizar_titulo_identidade("기생충") == "기생충"
+    assert normalizar_titulo_identidade("기생충") != normalizar_titulo_identidade("七人の侍")
+
+
+def test_talk_to_me_usa_id_direto_e_letterboxd_prevalece_no_ano(tmp_path):
+    session = FakeTmdbSession({
+        ("movie", "pt-BR"): _detalhes(
+            title="Fale Comigo", release_date="2023-07-26"),
+        ("movie", "en-US"): _detalhes(
+            title="Talk to Me", release_date="2023-07-26"),
+    })
+    session.respostas[("movie", "pt-BR")]["original_title"] = "Talk to Me"
+    ficha, aviso, descarte = buscar_ficha(
+        "Talk to Me", 2022, tmp_path, api_key="k", session=session,
+        ano_fonte="letterboxd",
+        identidade=_identidade("talk-to-me-2022", "Talk to Me", 2022, 1008042))
+    assert aviso is None and descarte is None
+    assert ficha["tmdb_id"] == 1008042
+    assert ficha["ano"] == 2022
+    assert ficha["identidade"]["ano_tmdb"] == 2023
+    assert ficha["identidade"]["ano_divergente"] is True
+    assert not any("search/movie" in url for url, _ in session.calls)
+    assert any(url.endswith("/movie/1008042") for url, _ in session.calls)
+
+
+def test_curta_homonimo_incorreto_e_rejeitado_por_titulo(tmp_path):
+    session = FakeTmdbSession({
+        ("movie", "pt-BR"): _detalhes(
+            title="The Elms Estate: You Can Talk To Me",
+            release_date="2022-01-01"),
+        ("movie", "en-US"): _detalhes(
+            title="The Elms Estate: You Can Talk To Me",
+            release_date="2022-01-01"),
+    })
+    ficha, aviso, descarte = buscar_ficha(
+        "Talk to Me", 2022, tmp_path, api_key="k", session=session,
+        identidade=_identidade("talk-to-me-2022", "Talk to Me", 2022, 976680))
+    assert ficha is None
+    assert descarte["motivo"] == "titulo_divergente"
+    assert "título" in aviso
+
+
+def test_titulo_internacional_pode_bater_no_title_en_us(tmp_path):
+    pt = _detalhes(title="Parasita", release_date="2019-05-30")
+    pt["original_title"] = "기생충"
+    en = _detalhes(title="Parasite", release_date="2019-05-30")
+    en["original_title"] = "기생충"
+    session = FakeTmdbSession({("movie", "pt-BR"): pt, ("movie", "en-US"): en})
+    ficha, aviso, descarte = buscar_ficha(
+        "Parasite", 2019, tmp_path, api_key="k", session=session,
+        identidade=_identidade("parasite-2019", "Parasite", 2019, 496243))
+    assert ficha is not None and aviso is None and descarte is None
+    assert ficha["identidade"]["titulo_tmdb_correspondente"] == "Parasite"
+
+
+@pytest.mark.parametrize(("slug", "canonico", "localizado", "original", "ano", "tmdb_id"), [
+    ("the-godfather", "The Godfather", "O Poderoso Chefão", "The Godfather", 1972, 238),
+    ("shutter-island", "Shutter Island", "Ilha do Medo", "Shutter Island", 2010, 11324),
+])
+def test_titulo_localizado_bate_no_original_sem_substring(
+        tmp_path, slug, canonico, localizado, original, ano, tmdb_id):
+    detalhes = _detalhes(title=localizado, release_date=f"{ano}-01-01")
+    detalhes["original_title"] = original
+    session = FakeTmdbSession({("movie", "pt-BR"): detalhes})
+    ficha, aviso, descarte = buscar_ficha(
+        canonico, ano, tmp_path, api_key="k", session=session,
+        identidade=_identidade(slug, canonico, ano, tmdb_id))
+    assert ficha is not None and aviso is None and descarte is None
+    assert ficha["identidade"]["titulo_tmdb_campo"] == "original_title"
+
+
+def test_sem_id_direto_mesmo_titulo_e_ano_nao_e_prova_bastante(tmp_path):
+    session = FakeTmdbSession({})
+    ficha, aviso, descarte = buscar_ficha(
+        "Filme Homônimo", 2026, tmp_path, api_key="k", session=session,
+        identidade=_identidade("filme-homonimo-2026", "Filme Homônimo", 2026, None))
+    assert ficha is None
+    assert descarte == {"motivo": "tmdb_id_letterboxd_ausente"}
+    assert "identidade indisponível" in aviso
+    assert session.calls == []
+
+
+def test_duracao_de_curta_rejeita_a_ficha_inteira(tmp_path):
+    curta = _detalhes(title="Talk to Me", release_date="2022-01-01")
+    curta["original_title"] = "Talk to Me"
+    curta["runtime"] = 3
+    session = FakeTmdbSession({("movie", "pt-BR"): curta})
+    ficha, aviso, descarte = buscar_ficha(
+        "Talk to Me", 2022, tmp_path, api_key="k", session=session,
+        identidade=_identidade("talk-to-me-2022", "Talk to Me", 2022, 1008042))
+    assert ficha is None
+    assert descarte == {"motivo": "duracao_incompativel_com_longa",
+                        "tmdb_id": 1008042, "duracao_min": 3}
+    assert "duração" in aviso
+
+
+def test_override_de_obsession_e_explicito_e_escolhe_o_longa(tmp_path):
+    longa = _detalhes(title="Obsession", release_date="2026-01-01")
+    longa["original_title"] = "Obsession"
+    session = FakeTmdbSession({("movie", "pt-BR"): longa})
+    ficha, aviso, descarte = buscar_ficha(
+        "Obsession", 2026, tmp_path, api_key="k", session=session,
+        identidade=_identidade("obsession-2026", "Obsession", 2026, 1615708))
+    assert ficha is not None and aviso is None and descarte is None
+    assert ficha["tmdb_id"] == 1339713
+    assert ficha["identidade"]["fonte_id"] == "override_manual"
+    assert ficha["identidade"]["override_manual"]["decidido_por"] == "dono_do_projeto"
+    assert any(url.endswith("/movie/1339713") for url, _ in session.calls)
+
+
+def test_cache_completo_sem_selo_de_identidade_vira_miss(tmp_path):
+    from espectro24.ficha import _cache_key
+    antigo = {
+        "titulo": "Filme errado", "ano": 1997, "tmdb_fetched_at": "2026-01-01",
+        "poster_path": None, "backdrop_path": None,
+        "poster_sem_texto_path": None, "galeria_stills": []}
+    (tmp_path / f"{_cache_key('Cure', 1997)}.json").write_text(
+        json.dumps(antigo), encoding="utf-8")
+    correto = _detalhes(title="Cure", release_date="1997-01-01")
+    correto["original_title"] = "Cure"
+    session = FakeTmdbSession({("movie", "pt-BR"): correto})
+    ficha, aviso, descarte = buscar_ficha(
+        "Cure", 1997, tmp_path, api_key="k", session=session,
+        identidade=_identidade())
+    assert ficha["titulo"] == "Cure"
+    assert ficha["identidade"]["status"] == "validada"
+    assert session.calls
 
 
 # --- desambiguação por ano ---
@@ -394,7 +549,7 @@ def test_a_chamada_de_detalhes_e_UNICA_e_pede_credits_e_images(tmp_path):
     detalhes = [(u, p) for u, p in session.calls if "movie/" in u]
     assert len(detalhes) == 1, "houve mais de uma chamada de detalhes"
     params = detalhes[0][1]
-    assert params["append_to_response"] == "credits,images"
+    assert params["append_to_response"] == "credits,images,alternative_titles"
     assert params["include_image_language"] == TMDB_IMAGE_LANGS
 
 

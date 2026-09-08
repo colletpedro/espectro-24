@@ -185,14 +185,16 @@ def test_no_ficha_pula_a_busca(tmp_path, monkeypatch, _iso_env, capsys):
 # TMDB para o filme errado (nenhum ano para desambiguar). Cobre a cadeia
 # INTEIRA de resolução tal como o CLI a executa, não só `ficha.py` isolado.
 
-def test_ano_do_slug_e_usado_direto_sem_letterboxd(tmp_path, monkeypatch, _iso_env):
-    """slug com sufixo -YYYY: ano vem do slug, resolver_ano_letterboxd nunca
-    é chamado (nenhuma requisição extra)."""
+def test_identidade_canonica_prevalece_sobre_ano_do_slug(tmp_path, monkeypatch, _iso_env):
+    """Com identidade já resolvida, o ano canônico vem do Letterboxd."""
     _escreve_json(tmp_path, slug="the-invite-2026")
     _mock_narrate(monkeypatch)
     chamado = []
     monkeypatch.setattr(F, "resolver_ano_letterboxd",
                         lambda *a, **k: chamado.append(1))
+    monkeypatch.setattr(cli, "resolver_identidade", lambda *a, **k: {
+        "slug": "the-invite-2026", "titulo": "The Invite", "ano": 2026,
+        "tmdb_id_letterboxd": 950028, "fonte": "pagina_letterboxd"})
     recebido = {}
 
     def fake_buscar(titulo, ano, cache_dir, ano_fonte=None, **k):
@@ -203,7 +205,7 @@ def test_ano_do_slug_e_usado_direto_sem_letterboxd(tmp_path, monkeypatch, _iso_e
     cli.main(["--slug", "the-invite-2026", "--reuse-synthesis",
               "--out-dir", str(tmp_path), "--tom", "estruturado"])
     assert chamado == []
-    assert recebido == {"ano": 2026, "ano_fonte": "slug"}
+    assert recebido == {"ano": 2026, "ano_fonte": "letterboxd"}
 
 
 def test_ano_ausente_no_slug_cai_para_letterboxd(tmp_path, monkeypatch, _iso_env):
@@ -212,7 +214,9 @@ def test_ano_ausente_no_slug_cai_para_letterboxd(tmp_path, monkeypatch, _iso_env
     real: sem isso, a busca ia sem ano e resolvia para o filme errado)."""
     _escreve_json(tmp_path, slug="cure")
     _mock_narrate(monkeypatch)
-    monkeypatch.setattr(F, "resolver_ano_letterboxd", lambda fetcher, slug: 1997)
+    monkeypatch.setattr(cli, "resolver_identidade", lambda *a, **k: {
+        "slug": "cure", "titulo": "Cure", "ano": 1997,
+        "tmdb_id_letterboxd": 36095, "fonte": "pagina_letterboxd"})
     recebido = {}
 
     def fake_buscar(titulo, ano, cache_dir, ano_fonte=None, **k):
@@ -225,7 +229,7 @@ def test_ano_ausente_no_slug_cai_para_letterboxd(tmp_path, monkeypatch, _iso_env
     monkeypatch.setattr(cli, "buscar_ficha", fake_buscar)
     cli.main(["--slug", "cure", "--reuse-synthesis", "--out-dir", str(tmp_path),
               "--tom", "estruturado"])
-    assert recebido == {"titulo": "cure", "ano": 1997, "ano_fonte": "letterboxd"}
+    assert recebido == {"titulo": "Cure", "ano": 1997, "ano_fonte": "letterboxd"}
     salvo = json.loads((tmp_path / "cure.json").read_text(encoding="utf-8"))
     assert salvo["ficha"]["diretor"] == "Kiyoshi Kurosawa"
 
@@ -235,7 +239,7 @@ def test_ano_indisponivel_em_lugar_nenhum_pula_a_busca_com_flag(tmp_path, monkey
     (melhor nenhuma do que a do filme errado) — e o motivo fica registrado."""
     _escreve_json(tmp_path, slug="cure")
     _mock_narrate(monkeypatch)
-    monkeypatch.setattr(F, "resolver_ano_letterboxd", lambda fetcher, slug: None)
+    monkeypatch.setattr(cli, "resolver_identidade", lambda *a, **k: None)
     chamou = []
     monkeypatch.setattr(cli, "buscar_ficha", lambda *a, **k: chamou.append(1))
     cli.main(["--slug", "cure", "--reuse-synthesis", "--out-dir", str(tmp_path),
@@ -243,7 +247,7 @@ def test_ano_indisponivel_em_lugar_nenhum_pula_a_busca_com_flag(tmp_path, monkey
     assert chamou == []                    # buscar_ficha nunca chamado
     salvo = json.loads((tmp_path / "cure.json").read_text(encoding="utf-8"))
     assert salvo["ficha"] is None
-    assert salvo["ficha_indisponivel"] == "ano_desconhecido"
+    assert salvo["ficha_indisponivel"] == "identidade_letterboxd_indisponivel"
 
 
 def test_ficha_descartada_por_ano_divergente_fica_registrada_no_json(tmp_path, monkeypatch, _iso_env):
@@ -260,6 +264,25 @@ def test_ficha_descartada_por_ano_divergente_fica_registrada_no_json(tmp_path, m
     salvo = json.loads((tmp_path / "cure.json").read_text(encoding="utf-8"))
     assert salvo["ficha"] is None
     assert salvo["ficha_descartada"] == descarte
+
+
+def test_ficha_recusada_nao_vaza_para_o_narrador(tmp_path, monkeypatch, _iso_env):
+    """O consumidor recebe ausência, nunca o dicionário plausível recusado."""
+    _escreve_json(tmp_path, slug="talk-to-me-2022")
+    chamadas_narrador = _mock_narrate(monkeypatch)
+    monkeypatch.setattr(cli, "resolver_identidade", lambda *a, **k: {
+        "slug": "talk-to-me-2022", "titulo": "Talk to Me", "ano": 2022,
+        "tmdb_id_letterboxd": 1008042, "fonte": "pagina_letterboxd"})
+    descarte = {"motivo": "titulo_divergente", "tmdb_id": 976680}
+    monkeypatch.setattr(cli, "buscar_ficha", lambda *a, **k: (
+        None, "identidade recusada", descarte))
+    cli.main(["--slug", "talk-to-me-2022", "--reuse-synthesis",
+              "--out-dir", str(tmp_path), "--tom", "narrativo"])
+    assert chamadas_narrador[0]["ficha"] is None
+    salvo = json.loads((tmp_path / "talk-to-me-2022.json").read_text(
+        encoding="utf-8"))
+    assert salvo["ficha"] is None
+    assert salvo["ficha_indisponivel"] == "titulo_divergente"
 
 
 
@@ -306,7 +329,11 @@ def test_ano_do_bruto_evita_a_rede(tmp_path, monkeypatch, _iso_env):
     _escreve_json(tmp_path, slug="cure")
     caminho = tmp_path / "cure.json"
     d = json.loads(caminho.read_text(encoding="utf-8"))
-    d["coleta"] = {"ano_lancamento": 1997, "ano_fonte": "letterboxd"}
+    d["coleta"] = {
+        "ano_lancamento": 1997, "ano_fonte": "letterboxd",
+        "identidade_letterboxd": {
+            "slug": "cure", "titulo": "Cure", "ano": 1997,
+            "tmdb_id_letterboxd": 36095, "fonte": "pagina_letterboxd"}}
     caminho.write_text(json.dumps(d, ensure_ascii=False), encoding="utf-8")
 
     _mock_narrate(monkeypatch)
@@ -322,7 +349,7 @@ def test_ano_do_bruto_evita_a_rede(tmp_path, monkeypatch, _iso_env):
     cli.main(["--slug", "cure", "--reuse-synthesis", "--out-dir", str(tmp_path),
               "--tom", "estruturado"])
     assert chamado == [], "o bruto tinha o ano — a rede não devia ser tocada"
-    assert recebido == {"ano": 1997, "ano_fonte": "bruto"}
+    assert recebido == {"ano": 1997, "ano_fonte": "letterboxd"}
 
 
 def test_ficha_indisponivel_AVISA_a_consequencia(tmp_path, monkeypatch,
@@ -331,9 +358,8 @@ def test_ficha_indisponivel_AVISA_a_consequencia(tmp_path, monkeypatch,
     despercebido por ser silencioso. O aviso diz a CONSEQUÊNCIA."""
     _escreve_json(tmp_path, slug="cure")
     _mock_narrate(monkeypatch)
-    monkeypatch.setattr(F, "resolver_ano_letterboxd", lambda *a, **k: None)
+    monkeypatch.setattr(cli, "resolver_identidade", lambda *a, **k: None)
     cli.main(["--slug", "cure", "--reuse-synthesis", "--out-dir", str(tmp_path),
               "--tom", "estruturado"])
     err = capsys.readouterr().err
-    assert "MOVIMENTO 1" in err and "OMITIDO" in err
-    assert "--ano" in err
+    assert "Nenhuma busca heurística" in err

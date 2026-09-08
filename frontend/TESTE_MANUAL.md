@@ -4,6 +4,16 @@ Executado em 2026-07-20, servindo `frontend/` via `python3 -m http.server`
 e dirigindo o navegador (desktop ~1280px + mobile 375×812). Verificação por
 screenshot, inspeção do DOM (`get_page_text`) e estilos computados.
 
+## v1.9.49 — identidade e republicação de `talk-to-me-2022`
+
+Servidor estático local, inspeção no navegador em desktop e em viewport
+375×812. A página abriu como **Fale Comigo (2022)**, Michael Philippou,
+Terror, 95 min, com faixa de 12 stills (24 nós no DOM pela duplicação usada
+no loop), proporção 8%/25%/67%, condições e novo veredito nos lugares
+esperados. No mobile, `scrollWidth == clientWidth` (360px úteis): nenhum
+overflow horizontal. Zero erro ou warning no console. A ficha visível e os
+alts dos stills nomeiam Fale Comigo; nenhuma referência ao curta antigo.
+
 ## Resultados
 
 | # | Cenário | Resultado |
@@ -210,9 +220,11 @@ backdrop**, então a falha de imagem foi **simulada** (linha 100).
   quanto a conteúdo narrativo — não há critério mecânico para isso, e a
   decisão registrada em §3[E] é justamente prosseguir sem curadoria. O que
   este teste mostra é que a imagem certa aparece, não que ela seja segura.
-- **A ficha errada de `talk-to-me-2022`** (um curta de 3 minutos no lugar do
-  filme de 2022) foi encontrada nesta sessão e **não corrigida** — corrigir
-  é republicar, não retrofitar. Ver §3[F].
+- **Correção posterior (v1.9.49):** a ficha errada de `talk-to-me-2022`
+  registrada nesta sessão foi republicada sobre o longa correto
+  (`tmdb_id=1008042`); deixou de ser o caso sem backdrop e ganhou a faixa de
+  12 stills. O registro acima permanece histórico, não descreve mais o dado
+  atual. Ver §3[F].
 - A conferência da rotulagem [D3] continua em
   `resultado/v1914/ROTULAGEM_CONFERENCIA.md`, não aqui.
 

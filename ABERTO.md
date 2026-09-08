@@ -147,12 +147,17 @@ quando o peso é muito assimétrico. A inspeção não respondeu se isso é prob
 
 ## C. Pipeline e dados
 
-### C1. `talk-to-me-2022` publica a ficha de outro filme
-Defeito conhecido, aberto, no estágio de ficha TMDB.
+### C1. `talk-to-me-2022` publicava a ficha de outro filme — FECHADA (v1.9.49)
+O JSON agora publica o longa correto (`tmdb_id=1008042`, 95 minutos), com ano
+editorial 2022 do Letterboxd e ano TMDB 2023 preservado na evidência. Ficha,
+narrativa e veredito foram regenerados; reviews, buckets, classificação, eixos,
+condições, coleta e distribuição ficaram byte-idênticos ao artefato anterior.
 
-### C2. Guarda de identidade no pipeline
-Não existe uma checagem que impeça um filme de ser publicado com metadados de
-outro — o defeito de C1 é o caso concreto que ela pegaria.
+### C2. Guarda de identidade no pipeline — FECHADA NO CÓDIGO (v1.9.49)
+Título canônico + ID direto do Letterboxd, igualdade contra o conjunto de
+títulos TMDB, piso de duração independente, ausência explícita e selo de cache
+versionado. As 35 entradas antigas viram miss. O fechamento de C1 no artefato
+foi conferido separadamente.
 
 ### C3. Instabilidade do verificador de `impacto_emocional` (5 filmes)
 Registrada, não corrigida.
@@ -189,6 +194,15 @@ contra a regra de ambiente do protocolo.
 
 ### C12. `anthropic_client_call` sem retentativa
 O terceiro ponto de contato do adaptador, registrado e não consertado.
+
+### C13. `obsession-2026`: página/reviews do Letterboxd misturam homônimos
+O dono definiu que o objeto editorial é o longa de Curry Barker
+(`tmdb_id=1339713`), e a ficha tem override manual auditável. A amostra atual,
+porém, contém ao menos uma review explicitamente sobre o curta e outras sobre o
+longa na mesma página. A guarda resolve a identidade da FICHA; não separa o
+corpus de recepção. Decidir se o ruído é aceito, filtrado ou se existe outra
+página canônica continua aberto antes de tratar esse filme como referência de
+qualidade da análise.
 
 ---
 
@@ -229,11 +243,11 @@ Pendência registrada no handoff, sem decisão.
 *"Edição [E2]: DESLIGADA (--no-edicao)"* para uma flag que não existe mais e um
 estágio que não roda desde a v1.9.10.
 
-### F3. O changelog para na v1.9.34, o título vai a v1.9.37
-As versões **v1.9.35, v1.9.36 e v1.9.37** não têm entrada de changelog na forma
-`- **vX.Y.Z**`, apesar de terem posto 257 condições no ar. Decidir se ganham
-entrada retroativa ou se a numeração do documento passa a admitir versões sem
-changelog.
+### F3. O changelog tem lacuna entre v1.9.34 e v1.9.49
+As versões **v1.9.35–v1.9.48** não têm entrada de changelog na forma
+`- **vX.Y.Z**`; a v1.9.49 foi registrada sem preencher retroativamente essa
+lacuna. Decidir se as versões ausentes ganham entrada retroativa ou se a
+numeração do documento admite versões sem changelog.
 
 ---
 
