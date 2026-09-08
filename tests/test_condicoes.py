@@ -24,6 +24,23 @@ def _idx(slug):
         encoding="utf-8")))
 
 
+def _idx_de_piso():
+    """Fixture mínimo para a regra de piso, agora sem caso real no catálogo."""
+    def bucket(nome, share):
+        return {
+            "bucket": nome, "modo": "reduzido", "estado_piso": "sem_numero",
+            "share_real": share,
+            "temas": [{
+                "tema": "Tema de teste", "exemplo_parafraseado": "Exemplo.",
+                "mencoes_aproximadas": 2, "n_reviews_analisadas": 5,
+            }],
+        }
+    return C.indexar({"buckets": [
+        bucket("negativas", 10), bucket("medianas", 20),
+        bucket("positivas", 70),
+    ]})
+
+
 @pytest.fixture(scope="module")
 def nap():
     return _idx("napoleon-2023")
@@ -277,14 +294,14 @@ def test_peso_do_lado_carrega_o_share_e_a_nota_de_amostra(godfather):
 def test_peso_e_publicado_mesmo_em_bucket_de_piso():
     """§3[C3]: o peso vem do histograma de NOTAS e não depende de haver
     review com texto. O piso suprime o QUANTIFICADOR, nunca o peso."""
-    obs = _idx("obsession-2026")
+    obs = _idx_de_piso()
     for lado in C.LADOS:
         assert C.peso_do_lado(obs, lado)["peso_pct"] is not None
     assert all(t["rotulo_forca"] is None for t in obs.values())
 
 
 def test_rotulo_forca_suprimido_nos_estados_de_piso():
-    obs = _idx("obsession-2026")
+    obs = _idx_de_piso()
     assert all(t["rotulo_forca"] is None for t in obs.values())
     normal = _idx("interstellar")
     assert all(t["rotulo_forca"] is not None for t in normal.values())
@@ -550,7 +567,7 @@ def test_peso_meio_usa_a_regua_do_DEFEITO_e_nao_uma_proxy():
     pearl = _idx("pearl-2022")
     assert C.peso_do_meio(pearl) is None
     alvos = {"napoleon-2023", "friday-the-13th-2009", "wonka",
-             "joker-folie-a-deux", "longlegs", "obsession-2026",
+             "joker-folie-a-deux", "longlegs",
              "talk-to-me-2022", "barbie", "mother-2017"}
     com_linha = set()
     for caminho in sorted(RESULTADO.glob("*.json")):

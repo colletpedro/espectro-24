@@ -391,7 +391,7 @@ def test_template_afirma_todos_apenas_com_lastro_de_quase_todos():
 
 
 def test_template_em_modo_reduzido_nao_generaliza():
-    """`obsession-2026`: um grupo que o próprio site rotula como amostra
+    """Um grupo que o próprio site rotula como amostra
     pequena não pode sustentar afirmação de prevalência. Cautela explícita,
     nunca generalização."""
     out = _um_lado_com_lift()

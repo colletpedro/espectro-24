@@ -175,18 +175,31 @@ def test_duracao_de_curta_rejeita_a_ficha_inteira(tmp_path):
     assert "duração" in aviso
 
 
-def test_override_de_obsession_e_explicito_e_escolhe_o_longa(tmp_path):
+def test_obsession_canonico_usa_id_direto_do_longa_sem_override(tmp_path):
     longa = _detalhes(title="Obsession", release_date="2026-01-01")
     longa["original_title"] = "Obsession"
     session = FakeTmdbSession({("movie", "pt-BR"): longa})
     ficha, aviso, descarte = buscar_ficha(
+        "Obsession", 2025, tmp_path, api_key="k", session=session,
+        identidade=_identidade("obsession-2025", "Obsession", 2025, 1339713))
+    assert ficha is not None and aviso is None and descarte is None
+    assert ficha["tmdb_id"] == 1339713
+    assert ficha["identidade"]["fonte_id"] == "letterboxd"
+    assert "override_manual" not in ficha["identidade"]
+    assert any(url.endswith("/movie/1339713") for url, _ in session.calls)
+
+
+def test_obsession_curta_nao_e_mais_substituido_pelo_longa(tmp_path):
+    curta = _detalhes(title="Obsession", release_date="2026-01-01")
+    curta["original_title"] = "Obsession"
+    session = FakeTmdbSession({("movie", "pt-BR"): curta})
+    ficha, aviso, descarte = buscar_ficha(
         "Obsession", 2026, tmp_path, api_key="k", session=session,
         identidade=_identidade("obsession-2026", "Obsession", 2026, 1615708))
     assert ficha is not None and aviso is None and descarte is None
-    assert ficha["tmdb_id"] == 1339713
-    assert ficha["identidade"]["fonte_id"] == "override_manual"
-    assert ficha["identidade"]["override_manual"]["decidido_por"] == "dono_do_projeto"
-    assert any(url.endswith("/movie/1339713") for url, _ in session.calls)
+    assert ficha["tmdb_id"] == 1615708
+    assert ficha["identidade"]["fonte_id"] == "letterboxd"
+    assert all(not url.endswith("/movie/1339713") for url, _ in session.calls)
 
 
 def test_cache_completo_sem_selo_de_identidade_vira_miss(tmp_path):

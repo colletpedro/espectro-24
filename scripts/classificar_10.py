@@ -129,6 +129,12 @@ PRECO_ENTRADA_MISS = 0.14 / 1_000_000
 PRECO_ENTRADA_HIT = 0.0028 / 1_000_000
 PRECO_SAIDA = 0.28 / 1_000_000
 
+# Brutos preservados por auditoria, mas proibidos de voltar ao corpus de
+# produção. `obsession-2026` é o curta de Jackson Treadway; o longa de Curry
+# Barker vive na página canônica `obsession-2025`. Apagar o bruto esconderia a
+# origem do erro; varrê-lo como filme publicável repetiria o erro.
+SLUGS_BRUTOS_RETIRADOS = {"obsession-2026"}
+
 
 
 # ===========================================================================
@@ -145,6 +151,8 @@ def montar_amostra() -> dict:
         if not (d / "meta.json").exists():
             continue
         slug = d.name
+        if slug in SLUGS_BRUTOS_RETIRADOS:
+            continue
         meta, todas = carregar(slug)
         hist = {float(k): v for k, v in meta.get("histograma_bruto", {}).items()}
         if not hist:

@@ -99,7 +99,8 @@ def _l3(p_top: float, p_2o: float, k_top: int, n_top: int,
     """log odds ratio com correção de Haldane-Anscombe (+0,5 por célula).
 
     A correção existe porque frequência 0 ou 1 é comum em bucket de 40
-    reviews (e universal em `obsession-2026`, de 5 a 8), e OR sem correção
+    reviews (e era universal no corpus retirado de `obsession-2026`, de 5 a
+    8), e OR sem correção
     diverge para infinito nesses casos. `+0,5` é a escolha padrão e é
     declarada aqui como parâmetro arbitrário: ela encolhe OR extremos em
     célula pequena, o que é conservador na direção certa.

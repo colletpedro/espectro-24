@@ -1,4 +1,4 @@
-# Espectro 24 — Especificação v1.9.49
+# Espectro 24 — Especificação v1.9.50
 
 **Data:** 2026-09-08
 
@@ -3092,9 +3092,11 @@ O contrato do briefing, as validações e o schema do bloco publicado continuam
 
 ### [F] Ficha do filme (TMDB) — v1.3.0
 
-**CONTRATO DE IDENTIDADE — v1.9.49 (prevalece sobre a resolução histórica descrita abaixo).** A página canônica do Letterboxd fornece `production:name`, ano e `data-tmdb-id`; os três passam a ser extraídos juntos e persistidos em `meta.identidade_letterboxd` nas coletas futuras. O título nunca mais é derivado do slug para decidir qual ficha publicar. Sem título canônico ou sem ID direto, o resultado é `ficha: null` com `ficha_indisponivel` explícito — ausência é aceitável, substituição silenciosa não é.
+**CONTRATO DE IDENTIDADE — v1.9.49, completado pela correção de corpus da v1.9.50 (prevalece sobre a resolução histórica descrita abaixo).** A página canônica do Letterboxd fornece `production:name`, ano e `data-tmdb-id`; os três passam a ser extraídos juntos e persistidos em `meta.identidade_letterboxd` nas coletas futuras. O título nunca mais é derivado do slug para decidir qual ficha publicar. Sem título canônico ou sem ID direto, o resultado é `ficha: null` com `ficha_indisponivel` explícito — ausência é aceitável, substituição silenciosa não é.
 
-O ID do Letterboxd é a fonte primária e leva diretamente a `GET /movie/{id}`; popularidade não decide identidade. Existe uma única associação manual, versionada em `identidade.py`: `obsession-2026` troca o ID observado `1615708` pelo longa de Curry Barker, `1339713`, com motivo, data e autor da decisão. Se o Letterboxd passar a declarar um terceiro ID não avaliado, a exceção se invalida e a ficha fica ausente; se passar a declarar `1339713`, o override deixa de ser necessário automaticamente.
+O ID do Letterboxd é a fonte primária e leva diretamente a `GET /movie/{id}`; popularidade não decide identidade. Não existe associação manual em vigor. A exceção criada na v1.9.49 para `obsession-2026` foi removida na v1.9.50: aquela URL é realmente o curta de Jackson Treadway (`1615708`) e não pode fornecer o corpus do longa. O objeto editorial correto vive em `obsession-2025`, cuja própria página declara Curry Barker, 2025 e `1339713`. A guarda de identidade da ficha não substitui uma guarda de identidade da fonte das reviews.
+
+**Retirada auditável de corpus — v1.9.50.** Um bruto comprovadamente associado à obra errada não é apagado: permanece em `dados/bruto/` como evidência do defeito, mas `classificar_10.montar_amostra()` o exclui por uma lista explícita. `votacao_3.cmd_consenso()` cruza os passes append-only com o conjunto de filmes da amostra vigente, impedindo que um filme retirado ressuscite sem apagar extensões de cobertura ainda válidas dos filmes ativos. Para `Obsession`, as 19 reviews analisadas do curta foram substituídas por 136 reviews classificadas do longa (120 da amostra base mais 16 necessárias para cobrir exatamente a seleção de produção); os três buckets publicados têm 40 reviews.
 
 Depois dos detalhes, o título canônico precisa ser IGUAL — após normalizar caixa, pontuação e diacríticos — a pelo menos um membro de `{original_title, title pt-BR, title en-US, alternative_titles}`. Nunca há substring nem pontuação de similaridade. A chamada en-US só acontece se o conjunto já disponível não casar, cobrindo títulos internacionais como `Parasite` contra `기생충`/`Parasita`. `duracao_compativel_com_longa` permanece como uma segunda checagem independente: abaixo de 40 minutos ou sem duração, a ficha inteira é recusada.
 

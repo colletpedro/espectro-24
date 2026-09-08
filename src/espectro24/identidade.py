@@ -1,9 +1,8 @@
 """Contrato auditável entre a obra do Letterboxd e a ficha do TMDB.
 
-O identificador declarado pela página do Letterboxd é a fonte primária.  A
-única exceção corrente é explícita e versionada abaixo: o próprio Letterboxd
-associa ``obsession-2026`` a um curta, embora a página/reviews estejam sendo
-usadas para o longa de Curry Barker.
+O identificador declarado pela página do Letterboxd é a fonte primária.
+Exceções, quando existirem, precisam ser decisões editoriais explícitas e
+versionadas; não existe nenhuma em vigor.
 """
 from __future__ import annotations
 
@@ -15,19 +14,7 @@ VERSAO_CONTRATO_IDENTIDADE = 1
 
 # Exceções são dados de produto, não fallbacks heurísticos.  Cada entrada
 # conserva tanto a associação observada quanto a decisão que a substitui.
-OVERRIDES_TMDB_POR_SLUG = {
-    "obsession-2026": {
-        "tmdb_id": 1339713,
-        "tmdb_id_letterboxd_observado": 1615708,
-        "motivo": (
-            "A obra pretendida pelo catálogo é o longa de Curry Barker; "
-            "a página do Letterboxd aponta para um curta homônimo e contém "
-            "reviews confundidas com o longa."
-        ),
-        "decidido_em": "2026-09-08",
-        "decidido_por": "dono_do_projeto",
-    },
-}
+OVERRIDES_TMDB_POR_SLUG = {}
 
 
 def override_tmdb_para(slug: str) -> dict | None:

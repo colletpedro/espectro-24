@@ -1,0 +1,1676 @@
+{
+  "slug": "obsession-2025",
+  "data_coleta": "2026-09-08T15:36:52.072476+00:00",
+  "spec_version": "1.9.50",
+  "total_reviews_observadas": 576,
+  "reviews_url": "https://letterboxd.com/film/obsession-2025/reviews/",
+  "ficha": {
+    "titulo": "Obsessão",
+    "sinopse_oficial": "Sem grandes pretensões, um romântico incurável compra um brinquedo que promete realizar desejos únicos. Ele quebra o artefato misterioso enquanto pede para conquistar a crush e consegue exatamente o que desejava, mas descobre que a consequência é sinistra.",
+    "sinopse_fallback_en": false,
+    "generos": [
+      "Terror",
+      "Thriller"
+    ],
+    "duracao_min": 100,
+    "diretor": "Curry Barker",
+    "diretor_transliterado": false,
+    "ano": 2025,
+    "fonte": "tmdb",
+    "tmdb_id": 1339713,
+    "tmdb_fetched_at": "2026-09-08T15:36:53+00:00",
+    "poster_path": "/wUc6IDf5ChjM1UyQye21qFBeJY0.jpg",
+    "poster_largura": 1000,
+    "poster_altura": 1500,
+    "backdrop_paths": [
+      "/rZfmzpixLKLR3Hg2u0WgC7XLFl8.jpg",
+      "/5lTZyuBTNOfawsfPT8Q0cIg6qAF.jpg",
+      "/r013C8Me2bZ0pUi0OWJRh0h7MzT.jpg",
+      "/diOZbaDnB2CIilwd0527AB1qMvW.jpg",
+      "/u5BkYDM5gfK4wINfoIFMAcEUKhx.jpg",
+      "/4k99kV4R1bbbrsnjR205v91Xbin.jpg",
+      "/d40SQY5TXCF8NJN2C6FnxFHsOD4.jpg",
+      "/fnASfC4pJ4NSzJ1ch7FBD99PiaZ.jpg",
+      "/reRGz6r9EMpJfU6dRhKCEyyVGdl.jpg",
+      "/j8brS9jQanEE03DfALGIMNwILAR.jpg"
+    ],
+    "backdrop_path": "/rZfmzpixLKLR3Hg2u0WgC7XLFl8.jpg",
+    "backdrop_largura": 3200,
+    "backdrop_altura": 1800,
+    "poster_sem_texto_path": "/pgya613gQdfzfmksLZO0HeWdTHZ.jpg",
+    "poster_sem_texto_largura": 1023,
+    "poster_sem_texto_altura": 1537,
+    "galeria_stills": [
+      {
+        "still_path": "/rZfmzpixLKLR3Hg2u0WgC7XLFl8.jpg",
+        "still_largura": 3200,
+        "still_altura": 1800
+      },
+      {
+        "still_path": "/5lTZyuBTNOfawsfPT8Q0cIg6qAF.jpg",
+        "still_largura": 3840,
+        "still_altura": 2160
+      },
+      {
+        "still_path": "/5oNFCTxGGlOxC3Xinu3SFRAhIWd.jpg",
+        "still_largura": 3840,
+        "still_altura": 2160
+      },
+      {
+        "still_path": "/eIw1YYdQ2ycsitUuiMa9ygzqgPm.jpg",
+        "still_largura": 3840,
+        "still_altura": 2160
+      },
+      {
+        "still_path": "/alWWTpRI3ZNry9HmuN8zr7xH8U.jpg",
+        "still_largura": 3840,
+        "still_altura": 2160
+      },
+      {
+        "still_path": "/3PIc1ToM2bNf19P2k1VlHC6i1Kt.jpg",
+        "still_largura": 3236,
+        "still_altura": 1820
+      },
+      {
+        "still_path": "/5tb8XG7VtcATcbPduoixeL8mTiV.jpg",
+        "still_largura": 3840,
+        "still_altura": 2160
+      },
+      {
+        "still_path": "/uNpoAhXWlc6pdnvtKXyz3w94P0j.jpg",
+        "still_largura": 3200,
+        "still_altura": 1800
+      },
+      {
+        "still_path": "/urEld5xLuj8HguMCYmbbxGzPn6U.jpg",
+        "still_largura": 3840,
+        "still_altura": 2160
+      },
+      {
+        "still_path": "/rnJNjnL4MxXn5h5d9GbcdCzHIim.jpg",
+        "still_largura": 3000,
+        "still_altura": 1688
+      },
+      {
+        "still_path": "/8ZpIZvmXfWL31tSbBCl0P0Ei9IX.jpg",
+        "still_largura": 3469,
+        "still_altura": 1951
+      },
+      {
+        "still_path": "/lBGeYf67obqteQ6ghrWn8Nt9NyR.jpg",
+        "still_largura": 2531,
+        "still_altura": 1424
+      }
+    ],
+    "ano_fonte": "letterboxd",
+    "identidade": {
+      "versao": 1,
+      "status": "validada",
+      "slug": "obsession-2025",
+      "titulo_letterboxd": "Obsession",
+      "ano_letterboxd": 2025,
+      "tmdb_id_letterboxd": 1339713,
+      "tmdb_id_escolhido": 1339713,
+      "fonte_id": "letterboxd",
+      "titulo_tmdb_campo": "original_title",
+      "titulo_tmdb_correspondente": "Obsession",
+      "ano_tmdb": 2026,
+      "ano_divergente": true
+    }
+  },
+  "distribuicao": {
+    "n_notas_total": 4791609,
+    "por_nivel": {
+      "0.5": 13740,
+      "1.0": 23986,
+      "1.5": 18664,
+      "2.0": 73454,
+      "2.5": 93688,
+      "3.0": 354709,
+      "3.5": 540778,
+      "4.0": 1498998,
+      "4.5": 937309,
+      "5.0": 1236283
+    },
+    "por_bucket": {
+      "negativas": 3,
+      "medianas": 9,
+      "positivas": 88
+    },
+    "fonte": "letterboxd_histograma"
+  },
+  "coleta": {
+    "slug": "obsession-2025",
+    "coletado_em": "2026-09-08T15:31:14.222248+00:00",
+    "versao_coletor": "1.9.6",
+    "ordenacao_usada": "by/added",
+    "histograma_bruto": {
+      "0.5": 13740,
+      "1.0": 23986,
+      "1.5": 18664,
+      "2.0": 73454,
+      "2.5": 93688,
+      "3.0": 354709,
+      "3.5": 540778,
+      "4.0": 1498998,
+      "4.5": 937309,
+      "5.0": 1236283
+    },
+    "orcamento_paginas_por_nivel": {
+      "0.5": 2,
+      "1.0": 3,
+      "1.5": 2,
+      "2.0": 9,
+      "2.5": 6,
+      "3.0": 10,
+      "3.5": 2,
+      "4.0": 6,
+      "4.5": 3,
+      "5.0": 5
+    },
+    "paginas_gastas_por_nivel": {
+      "0.5": 2,
+      "1.0": 3,
+      "1.5": 2,
+      "2.0": 9,
+      "2.5": 6,
+      "3.0": 10,
+      "3.5": 2,
+      "4.0": 6,
+      "4.5": 3,
+      "5.0": 5
+    },
+    "paradas_por_limite": [
+      "0.5",
+      "1.0",
+      "1.5",
+      "2.0",
+      "2.5",
+      "3.0",
+      "3.5",
+      "4.0",
+      "4.5",
+      "5.0"
+    ],
+    "contagem_bruta_por_nivel": {
+      "0.5": 24,
+      "1.0": 36,
+      "1.5": 24,
+      "2.0": 108,
+      "2.5": 72,
+      "3.0": 120,
+      "3.5": 24,
+      "4.0": 72,
+      "4.5": 36,
+      "5.0": 60
+    },
+    "contagem_estimada_valida_por_nivel": {
+      "0.5": 8,
+      "1.0": 5,
+      "1.5": 10,
+      "2.0": 20,
+      "2.5": 18,
+      "3.0": 21,
+      "3.5": 8,
+      "4.0": 18,
+      "4.5": 6,
+      "5.0": 14
+    },
+    "motivo_parada_por_nivel": {
+      "0.5": "orcamento_esgotado",
+      "1.0": "orcamento_esgotado",
+      "1.5": "orcamento_esgotado",
+      "2.0": "orcamento_esgotado",
+      "2.5": "orcamento_esgotado",
+      "3.0": "orcamento_esgotado",
+      "3.5": "orcamento_esgotado",
+      "4.0": "orcamento_esgotado",
+      "4.5": "orcamento_esgotado",
+      "5.0": "orcamento_esgotado"
+    },
+    "paginas_base_por_nivel": {
+      "0.5": 2,
+      "1.0": 3,
+      "1.5": 2,
+      "2.0": 9,
+      "2.5": 6,
+      "3.0": 10,
+      "3.5": 2,
+      "4.0": 6,
+      "4.5": 3,
+      "5.0": 5
+    },
+    "paginas_extensao_por_nivel": {
+      "0.5": 0,
+      "1.0": 0,
+      "1.5": 0,
+      "2.0": 0,
+      "2.5": 0,
+      "3.0": 0,
+      "3.5": 0,
+      "4.0": 0,
+      "4.5": 0,
+      "5.0": 0
+    },
+    "extensao_por_bucket": {
+      "negativas": {
+        "paginas_base": 16,
+        "paginas_extensao": 0,
+        "extras_por_nivel": {},
+        "motivo_parada": "meta_atingida",
+        "n_validas_pos_base": 51,
+        "n_validas_pos_extensao": 51,
+        "meta": 50
+      },
+      "medianas": {
+        "paginas_base": 16,
+        "paginas_extensao": 0,
+        "extras_por_nivel": {},
+        "motivo_parada": "meta_atingida",
+        "n_validas_pos_base": 50,
+        "n_validas_pos_extensao": 50,
+        "meta": 50
+      },
+      "positivas": {
+        "paginas_base": 16,
+        "paginas_extensao": 0,
+        "extras_por_nivel": {},
+        "motivo_parada": "meta_atingida",
+        "n_validas_pos_base": 52,
+        "n_validas_pos_extensao": 52,
+        "meta": 50
+      }
+    },
+    "profundidade_sondagem": {
+      "nivel_sondado": 4.0,
+      "profundidade": 256,
+      "exata": false,
+      "requisicoes": 4,
+      "motivo": "teto_plataforma"
+    },
+    "profundidade_estimada_por_nivel": {
+      "0.5": 2,
+      "1.0": 4,
+      "1.5": 3,
+      "2.0": 13,
+      "2.5": 16,
+      "3.0": 61,
+      "3.5": 92,
+      "4.0": 256,
+      "4.5": 160,
+      "5.0": 211
+    },
+    "janela_temporal": {
+      "total": {
+        "n": 682,
+        "min": "2000-01-31",
+        "max": "2026-09-08",
+        "p5": "2026-07-14",
+        "p50": "2026-09-07",
+        "p95": "2026-09-08"
+      },
+      "por_bucket": {
+        "negativas": {
+          "n": 215,
+          "min": "2000-01-31",
+          "max": "2026-09-08",
+          "p5": "2026-08-08",
+          "p50": "2026-09-07",
+          "p95": "2026-09-08"
+        },
+        "medianas": {
+          "n": 251,
+          "min": "2026-05-15",
+          "max": "2026-09-08",
+          "p5": "2026-07-16",
+          "p50": "2026-09-08",
+          "p95": "2026-09-08"
+        },
+        "positivas": {
+          "n": 216,
+          "min": "2026-03-25",
+          "max": "2026-09-08",
+          "p5": "2026-07-05",
+          "p50": "2026-09-08",
+          "p95": "2026-09-08"
+        }
+      }
+    },
+    "dias_por_100_paginas": {
+      "n_paginas": 19,
+      "pagina_min": 1,
+      "pagina_max": 128,
+      "dias": 1,
+      "dias_por_100_paginas": 0.7874015748031497,
+      "paginas_para_1_ano": 46355
+    },
+    "identidade_letterboxd": {
+      "slug": "obsession-2025",
+      "titulo": "Obsession",
+      "ano": 2025,
+      "tmdb_id_letterboxd": 1339713,
+      "fonte": "pagina_letterboxd"
+    },
+    "ano_lancamento": 2025,
+    "ano_fonte": "letterboxd",
+    "n_reviews_bruto": 682
+  },
+  "origem_paginas": {
+    "_histograma/obsession-2025.html": "cache",
+    "obsession-2025/pages/by_added/rated_4_page_4.html": "cache",
+    "obsession-2025/pages/by_added/rated_4_page_16.html": "cache",
+    "obsession-2025/pages/by_added/rated_4_page_64.html": "cache",
+    "obsession-2025/pages/by_added/rated_4_page_256.html": "cache",
+    "obsession-2025/pages/by_added/rated_0_5_page_1.html": "cache",
+    "obsession-2025/pages/by_added/rated_0_5_page_2.html": "cache",
+    "obsession-2025/fulltext/viewing_1486879430.html": "cache",
+    "obsession-2025/pages/by_added/rated_1_page_1.html": "cache",
+    "obsession-2025/pages/by_added/rated_1_page_2.html": "cache",
+    "obsession-2025/pages/by_added/rated_1_page_3.html": "cache",
+    "obsession-2025/fulltext/viewing_1487809310.html": "cache",
+    "obsession-2025/fulltext/viewing_1487527797.html": "cache",
+    "obsession-2025/fulltext/viewing_1487230195.html": "cache",
+    "obsession-2025/pages/by_added/rated_1_5_page_1.html": "cache",
+    "obsession-2025/pages/by_added/rated_1_5_page_2.html": "cache",
+    "obsession-2025/fulltext/viewing_1487217317.html": "cache",
+    "obsession-2025/fulltext/viewing_1486727370.html": "cache",
+    "obsession-2025/pages/by_added/rated_2_page_1.html": "cache",
+    "obsession-2025/pages/by_added/rated_2_page_2.html": "cache",
+    "obsession-2025/pages/by_added/rated_2_page_3.html": "cache",
+    "obsession-2025/pages/by_added/rated_2_page_4.html": "cache",
+    "obsession-2025/pages/by_added/rated_2_page_5.html": "cache",
+    "obsession-2025/pages/by_added/rated_2_page_6.html": "cache",
+    "obsession-2025/pages/by_added/rated_2_page_7.html": "cache",
+    "obsession-2025/pages/by_added/rated_2_page_8.html": "cache",
+    "obsession-2025/pages/by_added/rated_2_page_10.html": "cache",
+    "obsession-2025/fulltext/viewing_1488091346.html": "cache",
+    "obsession-2025/fulltext/viewing_1487672457.html": "cache",
+    "obsession-2025/fulltext/viewing_1487440937.html": "cache",
+    "obsession-2025/fulltext/viewing_1487288122.html": "cache",
+    "obsession-2025/fulltext/viewing_1487280313.html": "cache",
+    "obsession-2025/fulltext/viewing_1486713990.html": "cache",
+    "obsession-2025/pages/by_added/rated_2_5_page_1.html": "cache",
+    "obsession-2025/pages/by_added/rated_2_5_page_2.html": "cache",
+    "obsession-2025/pages/by_added/rated_2_5_page_3.html": "cache",
+    "obsession-2025/pages/by_added/rated_2_5_page_4.html": "cache",
+    "obsession-2025/pages/by_added/rated_2_5_page_5.html": "cache",
+    "obsession-2025/pages/by_added/rated_2_5_page_8.html": "cache",
+    "obsession-2025/fulltext/viewing_1488088523.html": "cache",
+    "obsession-2025/fulltext/viewing_1487763846.html": "cache",
+    "obsession-2025/fulltext/viewing_1487758766.html": "cache",
+    "obsession-2025/fulltext/viewing_1487737192.html": "cache",
+    "obsession-2025/fulltext/viewing_1487706860.html": "cache",
+    "obsession-2025/fulltext/viewing_1487690318.html": "cache",
+    "obsession-2025/fulltext/viewing_1487610396.html": "cache",
+    "obsession-2025/fulltext/viewing_1487206921.html": "cache",
+    "obsession-2025/pages/by_added/rated_3_page_1.html": "cache",
+    "obsession-2025/pages/by_added/rated_3_page_2.html": "cache",
+    "obsession-2025/pages/by_added/rated_3_page_3.html": "cache",
+    "obsession-2025/pages/by_added/rated_3_page_4.html": "cache",
+    "obsession-2025/pages/by_added/rated_3_page_5.html": "cache",
+    "obsession-2025/pages/by_added/rated_3_page_6.html": "cache",
+    "obsession-2025/pages/by_added/rated_3_page_7.html": "cache",
+    "obsession-2025/pages/by_added/rated_3_page_8.html": "cache",
+    "obsession-2025/pages/by_added/rated_3_page_15.html": "cache",
+    "obsession-2025/pages/by_added/rated_3_page_30.html": "cache",
+    "obsession-2025/fulltext/viewing_1488179744.html": "cache",
+    "obsession-2025/fulltext/viewing_1488120213.html": "cache",
+    "obsession-2025/pages/by_added/rated_3_5_page_1.html": "cache",
+    "obsession-2025/pages/by_added/rated_3_5_page_2.html": "cache",
+    "obsession-2025/fulltext/viewing_1488137287.html": "cache",
+    "obsession-2025/pages/by_added/rated_4_page_1.html": "cache",
+    "obsession-2025/pages/by_added/rated_4_page_2.html": "cache",
+    "obsession-2025/pages/by_added/rated_4_page_3.html": "cache",
+    "obsession-2025/pages/by_added/rated_4_page_128.html": "cache",
+    "obsession-2025/fulltext/viewing_1488176923.html": "cache",
+    "obsession-2025/fulltext/viewing_1488173013.html": "cache",
+    "obsession-2025/fulltext/viewing_1488140135.html": "cache",
+    "obsession-2025/pages/by_added/rated_4_5_page_1.html": "cache",
+    "obsession-2025/pages/by_added/rated_4_5_page_2.html": "cache",
+    "obsession-2025/pages/by_added/rated_4_5_page_40.html": "cache",
+    "obsession-2025/fulltext/viewing_1488151615.html": "cache",
+    "obsession-2025/fulltext/viewing_1487394968.html": "cache",
+    "obsession-2025/pages/by_added/rated_5_page_1.html": "cache",
+    "obsession-2025/pages/by_added/rated_5_page_2.html": "cache",
+    "obsession-2025/pages/by_added/rated_5_page_3.html": "cache",
+    "obsession-2025/pages/by_added/rated_5_page_4.html": "cache",
+    "obsession-2025/pages/by_added/rated_5_page_53.html": "cache",
+    "obsession-2025/fulltext/viewing_1488163373.html": "cache",
+    "obsession-2025/fulltext/viewing_1487484194.html": "cache",
+    "obsession-2025/film_page.html": "cache"
+  },
+  "buckets": [
+    {
+      "bucket": "negativas",
+      "alvo": 40,
+      "modo": "completo",
+      "estado_piso": "completa",
+      "n_validas": 40,
+      "share_real": 3,
+      "composicao_alvo": {
+        "0.5": 4,
+        "1.0": 7,
+        "1.5": 6,
+        "2.0": 23
+      },
+      "composicao_atingida": {
+        "0.5": 4,
+        "1.0": 7,
+        "1.5": 6,
+        "2.0": 23
+      },
+      "cascata_por_degrau": {
+        "150": 40
+      },
+      "deficit_redistribuido": 0,
+      "distribuicao_pagina_origem": {
+        "n": 40,
+        "min": 1,
+        "max": 10,
+        "p5": 1,
+        "p50": 4,
+        "p95": 9,
+        "fracao_profunda": 0.3
+      },
+      "janela_amostra": {
+        "n": 40,
+        "min": "2000-01-31",
+        "max": "2026-09-08",
+        "p5": "2026-06-15",
+        "p50": "2026-09-07",
+        "p95": "2026-09-08"
+      },
+      "niveis": [
+        {
+          "nivel": 0.5,
+          "n_validas": 4,
+          "n_alvo": 4,
+          "n_brutas": 24,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 1,
+          "n_descartadas_curtas": 14,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 1,
+          "motivos_descarte": {
+            "truncada_sem_texto": 1,
+            "spoiler": 1,
+            "abaixo_min_chars": 14,
+            "excedente_cota": 4,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 2
+        },
+        {
+          "nivel": 1.0,
+          "n_validas": 7,
+          "n_alvo": 7,
+          "n_brutas": 47,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 2,
+          "n_descartadas_curtas": 37,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 0,
+          "motivos_descarte": {
+            "truncada_sem_texto": 0,
+            "spoiler": 2,
+            "abaixo_min_chars": 37,
+            "excedente_cota": 1,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 3
+        },
+        {
+          "nivel": 1.5,
+          "n_validas": 6,
+          "n_alvo": 6,
+          "n_brutas": 24,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 2,
+          "n_descartadas_curtas": 12,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 0,
+          "motivos_descarte": {
+            "truncada_sem_texto": 0,
+            "spoiler": 2,
+            "abaixo_min_chars": 12,
+            "excedente_cota": 4,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 2
+        },
+        {
+          "nivel": 2.0,
+          "n_validas": 23,
+          "n_alvo": 23,
+          "n_brutas": 120,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 4,
+          "n_descartadas_curtas": 91,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 0,
+          "motivos_descarte": {
+            "truncada_sem_texto": 0,
+            "spoiler": 4,
+            "abaixo_min_chars": 91,
+            "excedente_cota": 2,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 9
+        }
+      ],
+      "temas": [
+        {
+          "tema": "Roteiro previsível e clichês",
+          "mencoes_aproximadas": 12,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "Muitos críticos deste grupo acharam a trama previsível, cheia de lugares-comuns do gênero e com decisões dos personagens que não soam naturais.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Excesso de violência e nojo",
+          "mencoes_aproximadas": 9,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "Várias resenhas mencionam cenas com sangue, urina e vômito que parecem existir apenas para chocar, o que tornou a experiência desagradável.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Atuações e personagens fracos",
+          "mencoes_aproximadas": 8,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "Embora alguns elogiem a performance da atriz principal, muitos apontam que os demais atores e o desenvolvimento dos personagens deixam a desejar.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Mensagem problemática sobre gênero",
+          "mencoes_aproximadas": 7,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "Este grupo critica a forma como o filme retrata a violência contra a mulher e a cultura do estupro, sentindo que a abordagem é confusa e até ofensiva.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Falta de originalidade",
+          "mencoes_aproximadas": 6,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "Alguns espectadores consideram a premissa pouco inovadora, afirmando já terem visto histórias semelhantes em outras produções do gênero.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Ritmo e duração excessivos",
+          "mencoes_aproximadas": 5,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "Parte do público sentiu que o filme se arrasta e que muitas cenas são desnecessárias, deixando a narrativa mais longa do que deveria.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        }
+      ],
+      "observacao_geral": "As reviews negativas concentram-se em falhas de roteiro, execução e desconforto com o excesso de violência, além de questionarem a mensagem sobre gênero. Muitos ainda apontam a falta de originalidade e personagens pouco cativantes, resultando em uma experiência que ficou aquém das expectativas.",
+      "idioma_invalido": false,
+      "escopo_suspeito": false
+    },
+    {
+      "bucket": "medianas",
+      "alvo": 40,
+      "modo": "completo",
+      "estado_piso": "completa",
+      "n_validas": 40,
+      "share_real": 9,
+      "composicao_alvo": {
+        "2.5": 8,
+        "3.0": 32
+      },
+      "composicao_atingida": {
+        "2.5": 8,
+        "3.0": 32
+      },
+      "cascata_por_degrau": {
+        "150": 40
+      },
+      "deficit_redistribuido": 0,
+      "distribuicao_pagina_origem": {
+        "n": 40,
+        "min": 1,
+        "max": 15,
+        "p5": 1,
+        "p50": 7,
+        "p95": 13,
+        "fracao_profunda": 0.4
+      },
+      "janela_amostra": {
+        "n": 40,
+        "min": "2026-05-15",
+        "max": "2026-09-08",
+        "p5": "2026-06-24",
+        "p50": "2026-09-07",
+        "p95": "2026-09-08"
+      },
+      "niveis": [
+        {
+          "nivel": 2.5,
+          "n_validas": 8,
+          "n_alvo": 8,
+          "n_brutas": 72,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 0,
+          "n_descartadas_curtas": 53,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 1,
+          "motivos_descarte": {
+            "truncada_sem_texto": 1,
+            "spoiler": 0,
+            "abaixo_min_chars": 53,
+            "excedente_cota": 10,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 6
+        },
+        {
+          "nivel": 3.0,
+          "n_validas": 32,
+          "n_alvo": 32,
+          "n_brutas": 179,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 9,
+          "n_descartadas_curtas": 136,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 2,
+          "motivos_descarte": {
+            "truncada_sem_texto": 2,
+            "spoiler": 9,
+            "abaixo_min_chars": 136,
+            "excedente_cota": 0,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 10
+        }
+      ],
+      "temas": [
+        {
+          "tema": "Atuação da atriz principal",
+          "mencoes_aproximadas": 10,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "Muitos destacam a performance da atriz principal, dizendo que ela carrega o filme e merece reconhecimento, embora alguns achem que em certos momentos a atuação não convence totalmente.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Potencial não realizado",
+          "mencoes_aproximadas": 8,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "Há uma percepção de que a premissa tinha grande potencial, mas a execução deixou a desejar, com desenvolvimento forçado e previsível, resultando em uma experiência mediana.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Crítica ao protagonista masculino",
+          "mencoes_aproximadas": 6,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "Vários comentam que o personagem principal é um covarde e imaturo, que recorre a meios mágicos para obter o amor de uma mulher em vez de enfrentar suas inseguranças, sendo alvo de duras críticas.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Ritmo e excesso de gritos",
+          "mencoes_aproximadas": 5,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "Alguns mencionam que as brigas e discussões são excessivamente barulhentas e repetitivas, tornando a experiência cansativa e prejudicando o desenvolvimento dos personagens.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Comparação com o hype",
+          "mencoes_aproximadas": 5,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "Há quem diga que as expectativas criadas pela repercussão eram altas demais, e que o filme, embora bom, não consegue corresponder a todo esse alvoroço.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Apreciação da direção e fotografia",
+          "mencoes_aproximadas": 4,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "Alguns elogiam a direção de Barker e a fotografia, destacando uso de iluminação e enquadramentos, apesar de considerarem o filme irregular no geral.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        }
+      ],
+      "observacao_geral": "As reviews medianas reconhecem qualidades no filme, como a atuação da protagonista e ideias interessantes, mas veem problemas de execução, ritmo e desenvolvimento, resultando em uma experiência que fica aquém do hype. A maioria não considera o filme nem excelente nem ruim, situando-o como uma obra com pontos fortes e fracos claros.",
+      "idioma_invalido": false,
+      "escopo_suspeito": false
+    },
+    {
+      "bucket": "positivas",
+      "alvo": 40,
+      "modo": "completo",
+      "estado_piso": "completa",
+      "n_validas": 40,
+      "share_real": 88,
+      "composicao_alvo": {
+        "3.5": 5,
+        "4.0": 14,
+        "4.5": 9,
+        "5.0": 12
+      },
+      "composicao_atingida": {
+        "3.5": 5,
+        "4.0": 14,
+        "4.5": 9,
+        "5.0": 12
+      },
+      "cascata_por_degrau": {
+        "150": 40
+      },
+      "deficit_redistribuido": 0,
+      "distribuicao_pagina_origem": {
+        "n": 40,
+        "min": 1,
+        "max": 64,
+        "p5": 1,
+        "p50": 3,
+        "p95": 64,
+        "fracao_profunda": 0.275
+      },
+      "janela_amostra": {
+        "n": 40,
+        "min": "2026-06-22",
+        "max": "2026-09-08",
+        "p5": "2026-08-14",
+        "p50": "2026-09-08",
+        "p95": "2026-09-08"
+      },
+      "niveis": [
+        {
+          "nivel": 3.5,
+          "n_validas": 5,
+          "n_alvo": 5,
+          "n_brutas": 24,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 0,
+          "n_descartadas_curtas": 16,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 0,
+          "motivos_descarte": {
+            "truncada_sem_texto": 0,
+            "spoiler": 0,
+            "abaixo_min_chars": 16,
+            "excedente_cota": 3,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 2
+        },
+        {
+          "nivel": 4.0,
+          "n_validas": 14,
+          "n_alvo": 14,
+          "n_brutas": 72,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 4,
+          "n_descartadas_curtas": 50,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 0,
+          "motivos_descarte": {
+            "truncada_sem_texto": 0,
+            "spoiler": 4,
+            "abaixo_min_chars": 50,
+            "excedente_cota": 4,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 6
+        },
+        {
+          "nivel": 4.5,
+          "n_validas": 9,
+          "n_alvo": 9,
+          "n_brutas": 60,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 4,
+          "n_descartadas_curtas": 44,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 0,
+          "motivos_descarte": {
+            "truncada_sem_texto": 0,
+            "spoiler": 4,
+            "abaixo_min_chars": 44,
+            "excedente_cota": 3,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 3
+        },
+        {
+          "nivel": 5.0,
+          "n_validas": 12,
+          "n_alvo": 12,
+          "n_brutas": 60,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 1,
+          "n_descartadas_curtas": 44,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 1,
+          "motivos_descarte": {
+            "truncada_sem_texto": 1,
+            "spoiler": 1,
+            "abaixo_min_chars": 44,
+            "excedente_cota": 2,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 5
+        }
+      ],
+      "temas": [
+        {
+          "tema": "Atuação de Inde Navarrette",
+          "mencoes_aproximadas": 10,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "A performance de Inde Navarrette foi amplamente elogiada, com a atriz transmitindo com maestria as duas personalidades distintas da personagem, alternando entre vulnerabilidade e frieza de forma assustadoramente convincente.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Crítica ao personagem Bear",
+          "mencoes_aproximadas": 8,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "Muitas reviews apontaram o protagonista masculino como o verdadeiro obsessor da trama, criticando suas atitudes egoístas e manipuladoras, que acabam destruindo a vida da personagem feminina e de outros ao redor.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Terror psicológico e desconforto",
+          "mencoes_aproximadas": 7,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "O filme foi elogiado por construir uma atmosfera de tensão constante e desconforto, usando mais sugestão e suspense do que sustos baratos, o que o torna uma experiência perturbadora e inovadora no gênero.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Fotografia e direção de arte",
+          "mencoes_aproximadas": 5,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "A direção de fotografia foi destacada pelo uso criativo de luz e sombra, enquadramentos incomuns e mudanças de proporção de tela, que contribuem para o clima sombrio e a sensação de claustrofobia.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Originalidade e frescor no horror",
+          "mencoes_aproximadas": 5,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "Os elogios incluem a abordagem inovadora do gênero, que foge dos clichês de possessão e apresenta uma crítica social disfarçada de terror, algo raro e bem-vindo no cinema atual.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Representação de relacionamento tóxico",
+          "mencoes_aproximadas": 4,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "As reviews mencionam como o filme explora temas de amor obsessivo e controle, retratando de forma crua como desejos egoístas podem destruir a autonomia e levar à tragédia.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        }
+      ],
+      "observacao_geral": "As reviews positivas destacam a atuação marcante de Inde Navarrette e a abordagem inovadora do terror psicológico, além de elogiarem a fotografia e a crítica social embutida na trama. Muitos também apontam o protagonista masculino como o verdadeiro vilão, reforçando a mensagem sobre relacionamentos abusivos.",
+      "idioma_invalido": false,
+      "escopo_suspeito": false
+    }
+  ],
+  "eixos": {
+    "taxonomia_id": "ebab2667de74",
+    "margem": {
+      "lei": "lift^2 * n >= 2085136/1000000",
+      "constante_quadrada": [
+        2085136,
+        1000000
+      ],
+      "n": 40,
+      "limiar_pp": 22.83
+    },
+    "margem_lift_pp": 22.83,
+    "linhas": [
+      {
+        "eixo": "ritmo",
+        "por_bucket": {
+          "negativas": {
+            "mencoes": 8,
+            "de_n": 40,
+            "freq_pct": 20.0,
+            "lift_pp": 2.5,
+            "acima_da_margem": false,
+            "tema": "Ritmo e duração excessivos",
+            "exemplo_parafraseado": "Parte do público sentiu que o filme se arrasta e que muitas cenas são desnecessárias, deixando a narrativa mais longa do que deveria.",
+            "temas_no_mesmo_eixo": []
+          },
+          "medianas": {
+            "mencoes": 7,
+            "de_n": 40,
+            "freq_pct": 17.5,
+            "lift_pp": -2.5,
+            "acima_da_margem": false,
+            "tema": "Ritmo e excesso de gritos",
+            "exemplo_parafraseado": "Alguns mencionam que as brigas e discussões são excessivamente barulhentas e repetitivas, tornando a experiência cansativa e prejudicando o desenvolvimento dos personagens.",
+            "temas_no_mesmo_eixo": []
+          },
+          "positivas": {
+            "mencoes": 7,
+            "de_n": 40,
+            "freq_pct": 17.5,
+            "lift_pp": -2.5,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          }
+        },
+        "bullet_de": {
+          "negativas": null,
+          "medianas": null,
+          "positivas": null
+        }
+      },
+      {
+        "eixo": "atuacao",
+        "por_bucket": {
+          "negativas": {
+            "mencoes": 14,
+            "de_n": 40,
+            "freq_pct": 35.0,
+            "lift_pp": 5.0,
+            "acima_da_margem": false,
+            "tema": "Atuações e personagens fracos",
+            "exemplo_parafraseado": "Embora alguns elogiem a performance da atriz principal, muitos apontam que os demais atores e o desenvolvimento dos personagens deixam a desejar.",
+            "temas_no_mesmo_eixo": []
+          },
+          "medianas": {
+            "mencoes": 9,
+            "de_n": 40,
+            "freq_pct": 22.5,
+            "lift_pp": -12.5,
+            "acima_da_margem": false,
+            "tema": "Atuação da atriz principal",
+            "exemplo_parafraseado": "Muitos destacam a performance da atriz principal, dizendo que ela carrega o filme e merece reconhecimento, embora alguns achem que em certos momentos a atuação não convence totalmente.",
+            "temas_no_mesmo_eixo": [
+              "Crítica ao protagonista masculino"
+            ]
+          },
+          "positivas": {
+            "mencoes": 12,
+            "de_n": 40,
+            "freq_pct": 30.0,
+            "lift_pp": -5.0,
+            "acima_da_margem": false,
+            "tema": "Atuação de Inde Navarrette",
+            "exemplo_parafraseado": "A performance de Inde Navarrette foi amplamente elogiada, com a atriz transmitindo com maestria as duas personalidades distintas da personagem, alternando entre vulnerabilidade e frieza de forma assustadoramente convincente.",
+            "temas_no_mesmo_eixo": []
+          }
+        },
+        "bullet_de": {
+          "negativas": "frequencia",
+          "medianas": null,
+          "positivas": null
+        }
+      },
+      {
+        "eixo": "direcao_imagem",
+        "por_bucket": {
+          "negativas": {
+            "mencoes": 7,
+            "de_n": 40,
+            "freq_pct": 17.5,
+            "lift_pp": -2.5,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "medianas": {
+            "mencoes": 7,
+            "de_n": 40,
+            "freq_pct": 17.5,
+            "lift_pp": -2.5,
+            "acima_da_margem": false,
+            "tema": "Apreciação da direção e fotografia",
+            "exemplo_parafraseado": "Alguns elogiam a direção de Barker e a fotografia, destacando uso de iluminação e enquadramentos, apesar de considerarem o filme irregular no geral.",
+            "temas_no_mesmo_eixo": []
+          },
+          "positivas": {
+            "mencoes": 8,
+            "de_n": 40,
+            "freq_pct": 20.0,
+            "lift_pp": 2.5,
+            "acima_da_margem": false,
+            "tema": "Fotografia e direção de arte",
+            "exemplo_parafraseado": "A direção de fotografia foi destacada pelo uso criativo de luz e sombra, enquadramentos incomuns e mudanças de proporção de tela, que contribuem para o clima sombrio e a sensação de claustrofobia.",
+            "temas_no_mesmo_eixo": []
+          }
+        },
+        "bullet_de": {
+          "negativas": null,
+          "medianas": null,
+          "positivas": null
+        }
+      },
+      {
+        "eixo": "roteiro_estrutura",
+        "por_bucket": {
+          "negativas": {
+            "mencoes": 29,
+            "de_n": 40,
+            "freq_pct": 72.5,
+            "lift_pp": 12.5,
+            "acima_da_margem": false,
+            "tema": "Roteiro previsível e clichês",
+            "exemplo_parafraseado": "Muitos críticos deste grupo acharam a trama previsível, cheia de lugares-comuns do gênero e com decisões dos personagens que não soam naturais.",
+            "temas_no_mesmo_eixo": []
+          },
+          "medianas": {
+            "mencoes": 24,
+            "de_n": 40,
+            "freq_pct": 60.0,
+            "lift_pp": -12.5,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "positivas": {
+            "mencoes": 20,
+            "de_n": 40,
+            "freq_pct": 50.0,
+            "lift_pp": -22.5,
+            "acima_da_margem": false,
+            "tema": "Crítica ao personagem Bear",
+            "exemplo_parafraseado": "Muitas reviews apontaram o protagonista masculino como o verdadeiro obsessor da trama, criticando suas atitudes egoístas e manipuladoras, que acabam destruindo a vida da personagem feminina e de outros ao redor.",
+            "temas_no_mesmo_eixo": []
+          }
+        },
+        "bullet_de": {
+          "negativas": "frequencia",
+          "medianas": "frequencia",
+          "positivas": "frequencia"
+        }
+      },
+      {
+        "eixo": "som_trilha",
+        "por_bucket": {
+          "negativas": {
+            "mencoes": 4,
+            "de_n": 40,
+            "freq_pct": 10.0,
+            "lift_pp": 5.0,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "medianas": {
+            "mencoes": 1,
+            "de_n": 40,
+            "freq_pct": 2.5,
+            "lift_pp": -7.5,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "positivas": {
+            "mencoes": 2,
+            "de_n": 40,
+            "freq_pct": 5.0,
+            "lift_pp": -5.0,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          }
+        },
+        "bullet_de": {
+          "negativas": null,
+          "medianas": null,
+          "positivas": null
+        }
+      },
+      {
+        "eixo": "tom_atmosfera",
+        "por_bucket": {
+          "negativas": {
+            "mencoes": 8,
+            "de_n": 40,
+            "freq_pct": 20.0,
+            "lift_pp": -27.5,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "medianas": {
+            "mencoes": 7,
+            "de_n": 40,
+            "freq_pct": 17.5,
+            "lift_pp": -30.0,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "positivas": {
+            "mencoes": 19,
+            "de_n": 40,
+            "freq_pct": 47.5,
+            "lift_pp": 27.5,
+            "acima_da_margem": true,
+            "tema": "Terror psicológico e desconforto",
+            "exemplo_parafraseado": "O filme foi elogiado por construir uma atmosfera de tensão constante e desconforto, usando mais sugestão e suspense do que sustos baratos, o que o torna uma experiência perturbadora e inovadora no gênero.",
+            "temas_no_mesmo_eixo": []
+          }
+        },
+        "bullet_de": {
+          "negativas": null,
+          "medianas": null,
+          "positivas": "frequencia_e_contraste"
+        }
+      },
+      {
+        "eixo": "impacto_emocional",
+        "por_bucket": {
+          "negativas": {
+            "mencoes": 14,
+            "de_n": 40,
+            "freq_pct": 35.0,
+            "lift_pp": -7.5,
+            "acima_da_margem": false,
+            "tema": "Excesso de violência e nojo",
+            "exemplo_parafraseado": "Várias resenhas mencionam cenas com sangue, urina e vômito que parecem existir apenas para chocar, o que tornou a experiência desagradável.",
+            "temas_no_mesmo_eixo": []
+          },
+          "medianas": {
+            "mencoes": 14,
+            "de_n": 40,
+            "freq_pct": 35.0,
+            "lift_pp": -7.5,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "positivas": {
+            "mencoes": 17,
+            "de_n": 40,
+            "freq_pct": 42.5,
+            "lift_pp": 7.5,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          }
+        },
+        "bullet_de": {
+          "negativas": null,
+          "medianas": "frequencia",
+          "positivas": null
+        }
+      },
+      {
+        "eixo": "comparacoes",
+        "por_bucket": {
+          "negativas": {
+            "mencoes": 7,
+            "de_n": 40,
+            "freq_pct": 17.5,
+            "lift_pp": -5.0,
+            "acima_da_margem": false,
+            "tema": "Falta de originalidade",
+            "exemplo_parafraseado": "Alguns espectadores consideram a premissa pouco inovadora, afirmando já terem visto histórias semelhantes em outras produções do gênero.",
+            "temas_no_mesmo_eixo": []
+          },
+          "medianas": {
+            "mencoes": 9,
+            "de_n": 40,
+            "freq_pct": 22.5,
+            "lift_pp": 0.0,
+            "acima_da_margem": false,
+            "tema": "Comparação com o hype",
+            "exemplo_parafraseado": "Há quem diga que as expectativas criadas pela repercussão eram altas demais, e que o filme, embora bom, não consegue corresponder a todo esse alvoroço.",
+            "temas_no_mesmo_eixo": []
+          },
+          "positivas": {
+            "mencoes": 9,
+            "de_n": 40,
+            "freq_pct": 22.5,
+            "lift_pp": 0.0,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          }
+        },
+        "bullet_de": {
+          "negativas": null,
+          "medianas": null,
+          "positivas": null
+        }
+      },
+      {
+        "eixo": "expectativa",
+        "por_bucket": {
+          "negativas": {
+            "mencoes": 7,
+            "de_n": 40,
+            "freq_pct": 17.5,
+            "lift_pp": -7.5,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "medianas": {
+            "mencoes": 10,
+            "de_n": 40,
+            "freq_pct": 25.0,
+            "lift_pp": 7.5,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "positivas": {
+            "mencoes": 6,
+            "de_n": 40,
+            "freq_pct": 15.0,
+            "lift_pp": -10.0,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          }
+        },
+        "bullet_de": {
+          "negativas": null,
+          "medianas": null,
+          "positivas": null
+        }
+      },
+      {
+        "eixo": "critica_social",
+        "por_bucket": {
+          "negativas": {
+            "mencoes": 10,
+            "de_n": 40,
+            "freq_pct": 25.0,
+            "lift_pp": -5.0,
+            "acima_da_margem": false,
+            "tema": "Mensagem problemática sobre gênero",
+            "exemplo_parafraseado": "Este grupo critica a forma como o filme retrata a violência contra a mulher e a cultura do estupro, sentindo que a abordagem é confusa e até ofensiva.",
+            "temas_no_mesmo_eixo": []
+          },
+          "medianas": {
+            "mencoes": 12,
+            "de_n": 40,
+            "freq_pct": 30.0,
+            "lift_pp": 5.0,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "positivas": {
+            "mencoes": 8,
+            "de_n": 40,
+            "freq_pct": 20.0,
+            "lift_pp": -10.0,
+            "acima_da_margem": false,
+            "tema": "Originalidade e frescor no horror",
+            "exemplo_parafraseado": "Os elogios incluem a abordagem inovadora do gênero, que foge dos clichês de possessão e apresenta uma crítica social disfarçada de terror, algo raro e bem-vindo no cinema atual.",
+            "temas_no_mesmo_eixo": [
+              "Representação de relacionamento tóxico"
+            ]
+          }
+        },
+        "bullet_de": {
+          "negativas": null,
+          "medianas": null,
+          "positivas": null
+        }
+      }
+    ],
+    "contraste": "tematico",
+    "rotulagem": {
+      "n_chamadas": 3,
+      "falharam": [],
+      "fora_da_taxonomia": {},
+      "houve_retentativa": []
+    },
+    "spec_version": "1.9.50",
+    "verificador": {
+      "aplicado": true,
+      "variante": "V2_alvo",
+      "passada": 1,
+      "eixo": "impacto_emocional",
+      "n_removidas_no_corpus": 2240
+    }
+  },
+  "narrativa": "Dirigido por Curry Barker e lançado em 2025, o longa-metragem de terror e thriller Obsessão conta a história de um romântico incurável que, sem grandes pretensões, adquire um misterioso brinquedo que promete a realização de desejos únicos. No entanto, ao quebrar o artefato enquanto formula o pedido para conquistar sua crush, ele obtém exatamente o que desejava, apenas para descobrir que o resultado traz consequências sinistras.\n\nA experiência da obra é marcada pela construção de uma atmosfera envolvente de tensão e desconforto psicológico, combinada a escolhas estilísticas de fotografia e a oscilações no ritmo ao longo da narrativa.\n\nNa grande maioria das notas (~88%), a atuação de Inde Navarrette é elogiada por uma parcela reduzida pelo modo como constrói a presença da personagem, enquanto um contingente direciona críticas severas às atitudes do personagem Bear. Em conjunto com esses aspectos, uma parte enfatiza a eficiência do terror psicológico e do desconforto gerado ao longo da trama.\n\nNessa leitura, presente numa fração mínima das notas (~9%), alguns reconhecem os méritos na atuação da atriz principal, embora uma fatia menor aponte que a história resulta em um potencial não realizado por conta de falhas na execução, ao passo que uma parte formula críticas diretas à conduta do protagonista masculino.\n\nPor fim, para quem se situa numa fração ainda menor das notas (~3%), uma parcela expressiva considera o roteiro excessivamente previsível e repleto de clichês habituais. Do mesmo modo, um segmento expressa forte incômodo com o excesso de violência e nojo nas telas, enquanto outros descrevem as atuações gerais e os personagens como fracos.",
+  "verificacao_narrativa": {
+    "quantificador_fora_de_faixa": [],
+    "quantificador_repetido": [],
+    "paragrafos": {
+      "n_paragrafos": 5,
+      "minimo": 3,
+      "insuficientes": false,
+      "longos": []
+    },
+    "n_paragrafos": 5,
+    "paragrafos_insuficientes": false,
+    "paragrafos_longos": [],
+    "grupos_sem_paragrafo_proprio": [],
+    "movimento1_e_movimento2_no_mesmo_paragrafo": false,
+    "formato_invalido": false,
+    "numeros_inventados": [],
+    "rotulos_faltando": [],
+    "ordem_incorreta": false,
+    "vocabulario_peso": false,
+    "resenha_speak": [],
+    "n_resenha_speak": 0,
+    "n_flags": 0
+  },
+  "narrativa_selecao": {
+    "provider": "gemini",
+    "modelo": "gemini-3.7-flash",
+    "n_candidatos": 3,
+    "n_chamadas": 4,
+    "indice_escolhido": 1,
+    "motivo": "menor_severidade",
+    "criterio_decisivo": "ritmo",
+    "candidatos": [
+      {
+        "indice": 0,
+        "n_flags": 1,
+        "cliches": 0,
+        "repeticao_max": 3,
+        "ritmo": 4,
+        "cobertura": 1.0,
+        "eliminado": true
+      },
+      {
+        "indice": 1,
+        "n_flags": 1,
+        "cliches": 0,
+        "repeticao_max": 2,
+        "ritmo": 9,
+        "cobertura": 1.0,
+        "eliminado": true
+      },
+      {
+        "indice": 2,
+        "n_flags": 2,
+        "cliches": 0,
+        "repeticao_max": 2,
+        "ritmo": 5,
+        "cobertura": 1.0,
+        "eliminado": true
+      }
+    ],
+    "retry": {
+      "n_frases_infratoras": 2,
+      "motivos": [
+        "construcao_repetida"
+      ],
+      "n_flags_depois": 0,
+      "aplicado": true
+    },
+    "uso": {
+      "prompt_tokens": 11583,
+      "completion_tokens": 1508,
+      "cache_hit_tokens": 0,
+      "cache_miss_tokens": 11583
+    },
+    "latencia_s": 37.86
+  },
+  "veredito": {
+    "provider": "gemini",
+    "modelo": "gemini-3.7-flash",
+    "n_candidatos": 3,
+    "n_chamadas": 3,
+    "prefixo_codigo": "",
+    "retry": null,
+    "spec_version": "1.9.50",
+    "texto": "A maioria dos que não recomendam aponta que a narrativa sofre com previsibilidade e lugares-comuns em sua estrutura. Já quem recomenda ressalta a construção de horror psicológico e o clima de desconforto, embora muitos nesse grupo também façam ressalvas ao personagem Bear.",
+    "texto_modelo": "A maioria dos que não recomendam aponta que a narrativa sofre com previsibilidade e lugares-comuns em sua estrutura. Já quem recomenda ressalta a construção de horror psicológico e o clima de desconforto, embora muitos nesse grupo também façam ressalvas ao personagem Bear.",
+    "origem": "llm",
+    "motivo": "melhor_entre_limpos",
+    "criterio_decisivo": "brevidade",
+    "abertura": "QUANT",
+    "indice_escolhido": 0,
+    "flags": [],
+    "candidatos": [
+      {
+        "indice": 0,
+        "n_flags": 0,
+        "flags": [],
+        "n_palavras": 42,
+        "n_ancoras": 2,
+        "abertura": "QUANT",
+        "abertura_freq": 5,
+        "eliminado": false
+      },
+      {
+        "indice": 1,
+        "n_flags": 0,
+        "flags": [],
+        "n_palavras": 44,
+        "n_ancoras": 1,
+        "abertura": "QUANT",
+        "abertura_freq": 5,
+        "eliminado": false
+      },
+      {
+        "indice": 2,
+        "n_flags": 0,
+        "flags": [],
+        "n_palavras": 45,
+        "n_ancoras": 2,
+        "abertura": "QUANT",
+        "abertura_freq": 5,
+        "eliminado": false
+      }
+    ],
+    "uso": {
+      "prompt_tokens": 3591,
+      "completion_tokens": 203,
+      "cache_hit_tokens": 0,
+      "cache_miss_tokens": 3591
+    },
+    "latencia_s": 8.78
+  },
+  "condicoes": {
+    "vale_a_pena": [
+      {
+        "texto": "aprecia atuações convincentes que alternam com maestria entre vulnerabilidade e frieza",
+        "tema_origem": "POS-A",
+        "bucket_origem": "positivas",
+        "tema_texto": "Atuação de Inde Navarrette",
+        "rotulo_forca": "alguns"
+      },
+      {
+        "texto": "se interessa por narrativas focadas no impacto de atitudes masculinas manipuladoras e egoístas",
+        "tema_origem": "POS-B",
+        "bucket_origem": "positivas",
+        "tema_texto": "Crítica ao personagem Bear",
+        "rotulo_forca": "alguns"
+      },
+      {
+        "texto": "busca terror psicológico construído com tensão constante e desconforto em vez de sustos",
+        "tema_origem": "POS-C",
+        "bucket_origem": "positivas",
+        "tema_texto": "Terror psicológico e desconforto",
+        "rotulo_forca": "alguns"
+      },
+      {
+        "texto": "prefere um horror que subverte clichês de possessão trazendo crítica social",
+        "tema_origem": "POS-E",
+        "bucket_origem": "positivas",
+        "tema_texto": "Originalidade e frescor no horror",
+        "rotulo_forca": "alguns"
+      }
+    ],
+    "talvez_evite": [
+      {
+        "texto": "se incomoda com tramas previsíveis repletas de clichês e decisões pouco naturais",
+        "tema_origem": "NEG-A",
+        "bucket_origem": "negativas",
+        "tema_texto": "Roteiro previsível e clichês",
+        "rotulo_forca": "muitos"
+      },
+      {
+        "texto": "rejeita cenas de violência e nojo voltadas apenas a causar choque",
+        "tema_origem": "NEG-B",
+        "bucket_origem": "negativas",
+        "tema_texto": "Excesso de violência e nojo",
+        "rotulo_forca": "alguns"
+      },
+      {
+        "texto": "evita premissas pouco inovadoras que trazem histórias já vistas no gênero",
+        "tema_origem": "NEG-E",
+        "bucket_origem": "negativas",
+        "tema_texto": "Falta de originalidade",
+        "rotulo_forca": "alguns"
+      }
+    ],
+    "ordem_colunas": [
+      "vale_a_pena",
+      "talvez_evite"
+    ],
+    "peso": {
+      "vale_a_pena": {
+        "peso_pct": 88,
+        "peso_texto": "~88% das notas",
+        "nota_de_amostra": null
+      },
+      "talvez_evite": {
+        "peso_pct": 3,
+        "peso_texto": "~3% das notas",
+        "nota_de_amostra": null
+      }
+    },
+    "peso_meio": null,
+    "origem": "llm",
+    "temas_pedidos": {
+      "vale_a_pena": [
+        "POS-A",
+        "POS-B",
+        "POS-C",
+        "POS-E"
+      ],
+      "talvez_evite": [
+        "NEG-A",
+        "NEG-B",
+        "NEG-C",
+        "NEG-E"
+      ]
+    },
+    "temas_saltados": {
+      "vale_a_pena": [],
+      "talvez_evite": [
+        "NEG-C"
+      ]
+    },
+    "descartadas": [
+      {
+        "texto": "se frustra quando atores secundários e desenvolvimento de personagens deixam a desejar",
+        "tema_origem": "NEG-C",
+        "lado": "talvez_evite",
+        "flags": [
+          "exemplo_verbatim"
+        ]
+      }
+    ],
+    "retry": {
+      "n_reprovadas": 1,
+      "n_aplicadas": 0,
+      "n_saltadas_pelo_modelo": 0,
+      "n_descartadas": 1
+    },
+    "provider": "gemini",
+    "modelo": "gemini-3.7-flash",
+    "n_candidatos": 3,
+    "n_chamadas": 4,
+    "indice_escolhido": 2,
+    "candidatos": [
+      {
+        "indice": 0,
+        "n_condicoes": 7,
+        "n_flags": 2,
+        "flags": [
+          "ancora_nao_verificavel",
+          "sem_discriminacao"
+        ],
+        "n_temas_cobertos": 7
+      },
+      {
+        "indice": 1,
+        "n_condicoes": 8,
+        "n_flags": 2,
+        "flags": [
+          "ancora_nao_verificavel",
+          "sem_discriminacao"
+        ],
+        "n_temas_cobertos": 8
+      },
+      {
+        "indice": 2,
+        "n_condicoes": 8,
+        "n_flags": 1,
+        "flags": [
+          "exemplo_verbatim"
+        ],
+        "n_temas_cobertos": 8
+      }
+    ],
+    "uso": {
+      "prompt_tokens": 10970,
+      "completion_tokens": 1154,
+      "cache_hit_tokens": 0,
+      "cache_miss_tokens": 10970
+    },
+    "latencia_s": 19.6,
+    "spec_version": "1.9.50"
+  }
+}

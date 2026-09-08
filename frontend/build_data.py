@@ -68,7 +68,7 @@ def _eixos_do_degradado() -> dict:
 
     **Coberturas que isto MOVE, declaradas:**
     · GANHA a LINHA DE AUSÊNCIA de veredito (`.verdict-absent`), que no mundo
-      real só `obsession-2026` exercita.
+      real o corpus incorreto e agora retirado de `obsession-2026` exercitava.
     · PERDE o fallback de render de `filme.js` (`veredito()`), que era a razão
       declarada de este filme não ter bloco `veredito` desde a v1.9.21. Depois
       da republicação da v1.9.34 nenhum filme real o exercita tampouco — ele

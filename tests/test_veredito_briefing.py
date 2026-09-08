@@ -181,7 +181,7 @@ def test_valorativo_carrega_assunto_compartilhado_e_marca_o_estado():
 
 
 def test_bucket_reduzido_e_sem_analise_viajam_no_briefing():
-    """Caso `obsession-2026`: o briefing precisa poder pedir CAUTELA, e um
+    """O briefing precisa poder pedir CAUTELA para um fixture reduzido, e um
     bucket `sem_analise` não empresta eixo nenhum (mesma guarda que
     `eixoDeMaiorLift`/`eixoDeMaiorFrequencia` já aplicavam no frontend)."""
     out = _um_lado_com_lift()
@@ -354,8 +354,8 @@ def test_a_mensagem_ao_modelo_nao_contem_nenhum_algarismo():
 
 
 def test_a_serializacao_nao_vaza_algarismo_em_NENHUM_filme_publicado():
-    """A mesma invariante sobre a população real — inclusive `obsession-2026`
-    (amostra reduzida), `napoleon-2023` (meio dominante) e os 17
+    """A mesma invariante sobre a população real — inclusive
+    `napoleon-2023` (meio dominante) e os filmes
     `valorativo`. Fixture sintética não pega vazamento que só aparece num
     campo que o filme de teste não exercita."""
     from conftest import exige_resultado_sob_a_lei

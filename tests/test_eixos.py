@@ -406,7 +406,7 @@ def test_catalogo_tem_os_35_filmes_classificados(catalogo):
     assert len(catalogo) == 35
 
 
-def test_catalogo_reproduz_6_tematicos_29_valorativos_e_1_sem_estado(catalogo):
+def test_catalogo_reproduz_7_tematicos_e_28_valorativos(catalogo):
     """[v1.9.34] **A contagem do catálogo sob a LEI POR `n` (§2.5).**
 
     A história desta asserção, porque ela é o sentinela do catálogo inteiro e
@@ -426,10 +426,9 @@ def test_catalogo_reproduz_6_tematicos_29_valorativos_e_1_sem_estado(catalogo):
       o catálogo foi de fato publicado (28)**, com FDR de 24–38% entre os 16
       `tematico`. A lei calibra o limiar para ≈5%.
 
-    O 1 sem estado é `obsession-2026` (buckets 5/6/8): abaixo do piso de
-    `n < 10`, o estado NÃO é publicado — e ele é o filme cujo `tematico`
-    carregava menos informação de todo o catálogo (**P(ruído) = 0,976**,
-    `ESTUDO_MARGEM_20PP.md` §2.3).
+    - **7/28/0** (v1.9.50) — o corpus incorreto de `obsession-2026` sai e o
+      longa canônico `obsession-2025` entra com 40 reviews em cada bucket.
+      Ele é temático; nenhum filme publicado permanece abaixo do piso.
 
     Se a lei, a constante, o piso, a métrica de lift ou a escolha de `n`
     mudarem, é aqui que o catálogo inteiro reclama.
@@ -441,10 +440,10 @@ def test_catalogo_reproduz_6_tematicos_29_valorativos_e_1_sem_estado(catalogo):
     valorativos = [s for s, e in estados.items() if e == "valorativo"]
     sem_estado = sorted(s for s, e in estados.items() if e is None)
 
-    assert (len(tematicos), len(valorativos), len(sem_estado)) == (6, 28, 1)
+    assert (len(tematicos), len(valorativos), len(sem_estado)) == (7, 28, 0)
     assert tematicos == ["anatomy-of-a-fall", "barbie", "cats-2019", "cure",
-                         "oppenheimer-2023", "the-substance"]
-    assert sem_estado == ["obsession-2026"]
+                         "obsession-2025", "oppenheimer-2023", "the-substance"]
+    assert sem_estado == []
 
 
 def test_os_6_filmes_que_publicavam_causa_sem_lastro_saem_de_tematico(catalogo):

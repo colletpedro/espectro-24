@@ -436,25 +436,25 @@
       "perfil": "invertido"
     },
     {
-      "slug": "obsession-2026",
-      "total_notas": 214,
+      "slug": "obsession-2025",
+      "total_notas": 4791609,
       "shares": {
-        "negativas": 16,
-        "medianas": 29,
-        "positivas": 55
+        "negativas": 3,
+        "medianas": 9,
+        "positivas": 88
       },
       "bucket_dominante": "positivas",
       "n_por_bucket": {
-        "negativas": 5,
-        "medianas": 6,
-        "positivas": 8
+        "negativas": 40,
+        "medianas": 40,
+        "positivas": 40
       },
       "estado_piso": {
-        "negativas": "sem_numero",
-        "medianas": "sem_numero",
-        "positivas": "sem_quantificador"
+        "negativas": "completa",
+        "medianas": "completa",
+        "positivas": "completa"
       },
-      "perfil": "obscuro"
+      "perfil": "aclamado"
     },
     {
       "slug": "oppenheimer-2023",
@@ -22306,177 +22306,6 @@
       "nivel": 5.0,
       "n_chars": 187,
       "texto": "Joaquin Phoenix is absolutely amazing in this role! The pacing is fantastic. How faithful this is to history and the man as he was is spectacular! Each piece of this movie is spectacular!"
-    },
-    {
-      "slug": "obsession-2026",
-      "perfil": "obscuro",
-      "bucket": "negativas",
-      "id": "viewing:1407748308",
-      "nivel": 0.5,
-      "n_chars": 142,
-      "texto": "No es mala idea pero se torna una pelicula romantica para adolescentes con muy de vez en cuando actitud de terror, no, terror no es, muy mala."
-    },
-    {
-      "slug": "obsession-2026",
-      "perfil": "obscuro",
-      "bucket": "negativas",
-      "id": "viewing:1229439522",
-      "nivel": 0.5,
-      "n_chars": 144,
-      "texto": "i didn’t like it but keep it up bro this is my first time watching something someone on letterboxd made themselves and it won’t be the last time"
-    },
-    {
-      "slug": "obsession-2026",
-      "perfil": "obscuro",
-      "bucket": "negativas",
-      "id": "viewing:1171744052",
-      "nivel": 1.0,
-      "n_chars": 24,
-      "texto": "Is basketball this deep?"
-    },
-    {
-      "slug": "obsession-2026",
-      "perfil": "obscuro",
-      "bucket": "negativas",
-      "id": "viewing:1202821278",
-      "nivel": 1.5,
-      "n_chars": 52,
-      "texto": "Alright camerawork, twist was good. Bit confused tho"
-    },
-    {
-      "slug": "obsession-2026",
-      "perfil": "obscuro",
-      "bucket": "negativas",
-      "id": "viewing:1282160073",
-      "nivel": 2.0,
-      "n_chars": 159,
-      "texto": "As a first film with almost zero budget,the maker have potential to do great things ahead.and feeling sorry for the last guy who get killed without any reason."
-    },
-    {
-      "slug": "obsession-2026",
-      "perfil": "obscuro",
-      "bucket": "medianas",
-      "id": "viewing:1203540638",
-      "nivel": 2.5,
-      "n_chars": 255,
-      "texto": "Not bad for a first short film. I liked the idea and the execution wasn't that bad. The music and the editing made a nice combination for building suspense, and the music fit perfectly. If I can, I'll try to watch your future films. Keep up the good work!"
-    },
-    {
-      "slug": "obsession-2026",
-      "perfil": "obscuro",
-      "bucket": "medianas",
-      "id": "viewing:1321889071",
-      "nivel": 3.0,
-      "n_chars": 280,
-      "texto": "Please note: this is not the Obsession horror movie by Curry Barker. This is a short film on YouTube. It's difficult to convey obsession in two minutes, but I like a lot of choices here. The black and white looks good here, and love that not a word is spoken in its short runtime."
-    },
-    {
-      "slug": "obsession-2026",
-      "perfil": "obscuro",
-      "bucket": "medianas",
-      "id": "viewing:1278586751",
-      "nivel": 3.0,
-      "n_chars": 157,
-      "texto": "Pretty interesting concept, I liked the off putting music and for a first short film this wasn’t too bad. I’m always willing to see what people come up with."
-    },
-    {
-      "slug": "obsession-2026",
-      "perfil": "obscuro",
-      "bucket": "medianas",
-      "id": "viewing:1205002016",
-      "nivel": 3.0,
-      "n_chars": 246,
-      "texto": "watching my mutual’s work is always a win. 'obsession' is a moody little short that shows a lot of promise. 3 stars because i can see the potential for more cool stuff in the future! excited to see what else Jackson cooks up next. keep it up man!"
-    },
-    {
-      "slug": "obsession-2026",
-      "perfil": "obscuro",
-      "bucket": "medianas",
-      "id": "viewing:1202902192",
-      "nivel": 3.0,
-      "n_chars": 508,
-      "texto": "This short film is becoming the Letterboxd equivalent of viral because for some reason it popped up like 5 times in my New From Friends section today so I had to watch it This is a hard one to rate because it is clearly the first movie by a very young filmmaker and that should always be encouraged and it does show potential but I mean this in the nicest way possible this gives off high school video class vibes (which it essentially is which is why I’m so fascinated it’s on Letterboxd) Watched on YouTube"
-    },
-    {
-      "slug": "obsession-2026",
-      "perfil": "obscuro",
-      "bucket": "medianas",
-      "id": "viewing:1159901821",
-      "nivel": 3.0,
-      "n_chars": 189,
-      "texto": "I tried, editing is hard, good thing I don’t want to edit for a living though. I liked the concept, it’s good for my first movie I’ve ever made, I think. Finished the whole thing in 3 days."
-    },
-    {
-      "slug": "obsession-2026",
-      "perfil": "obscuro",
-      "bucket": "positivas",
-      "id": "viewing:1361492523",
-      "nivel": 3.5,
-      "n_chars": 332,
-      "texto": "I’m no good with horror movies. Watched out the side of one eye for most of it once the plot started rolling. Lighting techniques were amazing. Cold sweats and stressed for Bear the entire time. A fresh take with a lot of quality work in the details. Jump scares well timed and contributes to the plot. Would hate to watch it again."
-    },
-    {
-      "slug": "obsession-2026",
-      "perfil": "obscuro",
-      "bucket": "positivas",
-      "id": "viewing:1203929072",
-      "nivel": 3.5,
-      "n_chars": 389,
-      "texto": "Amazing camera work, and a well thought out concept from Jackson Treadway I felt moved by this short film. in the span of 2 minutes, i felt the obsession and frustration of the protagonist, and through a creative choice of lens and filters, i was transported to a raw, gritty perspective on obsession and drive to succeed Amazing job, looking forward to more short films 👍 Jackson Treadway"
-    },
-    {
-      "slug": "obsession-2026",
-      "perfil": "obscuro",
-      "bucket": "positivas",
-      "id": "viewing:1202622185",
-      "nivel": 3.5,
-      "n_chars": 549,
-      "texto": "Obsession es un ejercicio sobre la fijación emocional y el deterioro mental. Tiene una puesta en escena sobria, que deja que la incomodidad crezca sin necesidad de exagerar nada. Lo que más funciona es cómo construye tensión desde lo cotidiano. Puede que no sea un corto que busque impresionar visualmente, pero sí deja un mensaje claro de cómo aquello que nos consume puede dañar a quienes nos rodean. Como primer intento, se siente valioso porque ya muestra intención y una búsqueda de identidad. Gracias al director por presentarme este proyecto."
-    },
-    {
-      "slug": "obsession-2026",
-      "perfil": "obscuro",
-      "bucket": "positivas",
-      "id": "viewing:1202582075",
-      "nivel": 3.5,
-      "n_chars": 287,
-      "texto": "The only cure for obsession is violence Jackson Treadway, the creator of the short film, introduced me to his project. This film combines good cinematography with great soundtrack. I truly enjoy watching young artists’ projects. Please watch to support this young artist and his project."
-    },
-    {
-      "slug": "obsession-2026",
-      "perfil": "obscuro",
-      "bucket": "positivas",
-      "id": "viewing:1335258966",
-      "nivel": 4.0,
-      "n_chars": 1106,
-      "texto": "Obsession | A Wildly Inventive Horror Spin on Love, Possession, and Personal Space Curry Barker’s Obsession takes a familiar romcom fantasy an awkward guy wishing his crush would love him back, and twists it into something deeply unsettling, darkly funny, and surprisingly sharp. Built on clever writing rather than scale, the film reimagines obsessive affection through grounded horror, where every scene, detail, and escalation serves a purpose. The storytelling constantly flips ordinary gestures of love into disturbing scenarios, creating tension without relying on conventional horror tricks. Michael Johnston convincingly captures the insecurity and panic of the protagonist, while Inde Navarrette is phenomenal in a role that shifts from warmth to terrifying emotional volatility. With inventive visual storytelling, precise atmosphere-building, and a script that finds horror in the collapse of emotional boundaries, Obsession feels refreshingly original. Bottom Line: A creative and confident approach that has been successfully delivered as a smart, unsettling and darkly hilarious horror flick."
-    },
-    {
-      "slug": "obsession-2026",
-      "perfil": "obscuro",
-      "bucket": "positivas",
-      "id": "viewing:1202482649",
-      "nivel": 4.5,
-      "n_chars": 298,
-      "texto": "A very fun little 2 minute student short film that I saw someone advertising in the comments of an unrelated review . I thought, “just 2 minutes? Perfect, I was wanting to watch something short.” Definitely glad I clicked on this, it’s well made and has a great punchline. Here’s the YouTube link ."
-    },
-    {
-      "slug": "obsession-2026",
-      "perfil": "obscuro",
-      "bucket": "positivas",
-      "id": "viewing:1369389951",
-      "nivel": 5.0,
-      "n_chars": 1669,
-      "texto": "Some people love Rollercoasters, or jumping out of planes for a rush or adrenaline; I watch horror films because I hate heights. The last three horror films I watched were Caveat, Oddity and Together; all three made me feel uncomfortable and creeped out. Together more than anything, I started watching it cuddling with my boyfriend, but by the end of the film, I didn't want him anywhere near me for at least 48 hours. But horror films lately have been missing something, something that I longed for. None of them scared me; all of them had a predictable plot, predictable characters, and predictable scares. Until my friend and I saw Obsession at the cinema on Wednesday. I could tell no one in the viewing was going to take it seriously, but we had hope from it being the first 18+ rated horror in a while. It was terrifying. The plot was amazing, and the acting was award-worthy, especially Inde Navarrette; she was absolutely brilliant, and I hope this projects her into more roles. I would love to see her in more horror films for sure. The scares and psychological turmoil were insaneee (in a good way), and you could never predict what was coming next. Even if you've seen clips or audio online and assume you know what it's about, you really don't. They all take you by surprise. I do believe it is more psychological for women to watch, so I suggest if you're a woman, go with your bestie/girlfriend, but if you have a good man, go with him, and he should understand why it's so insane. My friend and I are enthusiastic horror fans, and Obsession was so refreshing because it scared us to the point we left the cinema with our hearts racing and hands shaking."
-    },
-    {
-      "slug": "obsession-2026",
-      "perfil": "obscuro",
-      "bucket": "positivas",
-      "id": "viewing:1348238423",
-      "nivel": 5.0,
-      "n_chars": 410,
-      "texto": "WOWWWW!!!!!! incredible. I dont even care that I watched this because of its current trend. the cast???? incredible. new stars that we needed!!!!! they deserve HR cast level popularity now. it was awkwardly bad in the way that is sooooooo refreshing, especially for a psychological thriller. just the right amount of frightening that had me breathing hard in that dark theater. my fav horror movie of all time."
     },
     {
       "slug": "oppenheimer-2023",
@@ -49090,6 +48919,1230 @@
       "nivel": 5.0,
       "n_chars": 826,
       "texto": "when he says really it KILLS me. like the look on his face and also when he's looking through the door oh my fuuuuuck baba STUGCKVLH when he says 'what?' at noodle it kills me STOP BABA and when he's reading the small print BABABABABABABA unbeatable eatable that's my SON right there and when they're trying the chocolate OMF the face he makes when larry chucklesworth makes his marriage joke im gonna bawl THE TWITCH OF HIS MOUTH WHEN HES LOOKING AT HIS ROOM OMFG when he's talking in his soft little voice to noodle TwT im so maternal that's my sweetie little son and his chocolate is so fucking important and i fucking love him so fucking much AWHAWHAWH i can be his mamamamama :333 he's so fucking cute i'm gonna fucking cry and i'm gonna fucking kiss his fucking forehead and his whole fucking face off DEKENDJEHEBDVDGDHJ"
+    },
+    {
+      "slug": "obsession-2025",
+      "perfil": "aclamado",
+      "bucket": "negativas",
+      "id": "viewing:1488179468",
+      "nivel": 0.5,
+      "n_chars": 218,
+      "texto": "Que película de mierda, el guion lo escribió un hombre por donde lo veas. Porque claro, tenemos que hacer una historia en la que una mujer se obsesiona por mi y aunque yo lo pedí, yo soy la víctima. Igual arte muy bien"
+    },
+    {
+      "slug": "obsession-2025",
+      "perfil": "aclamado",
+      "bucket": "negativas",
+      "id": "viewing:1488122190",
+      "nivel": 0.5,
+      "n_chars": 313,
+      "texto": "oh- oh i fucking hated this movie. oh, i fucking hated this movie. genuinely left me upset. genuinely almost threw up a few times. genuinely will never watch again. i love the horror genre, i’ve been known to watch a disturbing flick, and see the artistry- but this? nahhh, fuck this stupid ass shit. i am. upset."
+    },
+    {
+      "slug": "obsession-2025",
+      "perfil": "aclamado",
+      "bucket": "negativas",
+      "id": "viewing:1487517431",
+      "nivel": 0.5,
+      "n_chars": 353,
+      "texto": "meudeus do ceu é tranquilamente um dos PIORES filmes que eu já vi na minha vida. que BOSTA de tudo puta que pariu nossa senhora COMO PODE ALGUEM GOSTAR DESTA MEEEEERDA????????????????? meia estrela pela fotografia pq é a unica coisa que minimamente salva nesse filme, mas de resto é literalmente só isso. eu estou indignada com a BOSTA que é esse filme."
+    },
+    {
+      "slug": "obsession-2025",
+      "perfil": "aclamado",
+      "bucket": "negativas",
+      "id": "viewing:1487373397",
+      "nivel": 0.5,
+      "n_chars": 231,
+      "texto": "Honestly, I don’t get the hype🤷‍♀️🤷‍♀️ Very simple, overused plot stretched out to last way longer than it should and made to seem deeper than it actually is. A cheap horror movie for Halloween night? Maybe. A masterpiece? Hell no."
+    },
+    {
+      "slug": "obsession-2025",
+      "perfil": "aclamado",
+      "bucket": "negativas",
+      "id": "viewing:1487809310",
+      "nivel": 1.0,
+      "n_chars": 705,
+      "texto": "A decent film about the horrors of the male loneliness epidemic and the lengths men take to get the woman they want. A good modernization of the classic tale of “be careful what you wish for” based in today’s society, especially the modern dating scene. I admit I wasn’t obsessed with obsession like everybody else but I did enjoy and respect the film’s message. I wasn’t too over the moon on the actor behind Niki’s character. I thought she was trying too hard to be scary with her performance, but I was able to look past it (even if it was hard to watch) overall a decent film with a great message but……. It’s nothing compared to the masterpiece that is Nightkiller 1990. aka Texas chainsaw massacre 3."
+    },
+    {
+      "slug": "obsession-2025",
+      "perfil": "aclamado",
+      "bucket": "negativas",
+      "id": "viewing:1487527797",
+      "nivel": 1.0,
+      "n_chars": 1095,
+      "texto": "i think maybe i was too late on this. maybe if i had seen it when it first came out, i would have liked it more, but now that it's beat all these records, i was expecting greatness and did not receive greatness. i understand the point of the movie perfectly fine. i agree, incels are trash and nikki was sexually assaulted and is the victim. idk why people had to discourse about that for months because it was quite obvious. the movie was more sad than scary and just overall uncomfortable to watch. which i suppose is the point. i didn't need a man to tell me that though. the dialogue was fucking trash. people don't talk like that. some lines were so edgy they could be used as scissors. all the characters are one-dimensional as fuck. a lot of the shots were too dark but that might've been my airplane's trashy screen. i don't really care to watch this on a better screen. companion (2025) pretty much says everything this movie says except it is a good, likable movie with gorgeous cinematography and charming production value. like i'm bored and underwhelmed. why did this make millions?"
+    },
+    {
+      "slug": "obsession-2025",
+      "perfil": "aclamado",
+      "bucket": "negativas",
+      "id": "viewing:1487410720",
+      "nivel": 1.0,
+      "n_chars": 164,
+      "texto": "The premise doesn't make sense. He wishes for Nikki to love him but it isn't actually Nikki that loves him since its only when she is possessed that “she” loves him"
+    },
+    {
+      "slug": "obsession-2025",
+      "perfil": "aclamado",
+      "bucket": "negativas",
+      "id": "viewing:1487230195",
+      "nivel": 1.0,
+      "n_chars": 729,
+      "texto": "Nope. Never again. Tried to broaden my taste with horror since I haven't seen much of the genre but whenever I do this, I'm reminded of why I stay far away from it. A terribly uncomfortable watch. Sure, that's the point of horror, but i just didn't enjoy that at all. I failed to connect with any of the characters, so nothing that happened to them sparked much of a reaction. Had a few jumpscares which I'm also not a fan of. The writing and overall execution could also use some work. The lighting was good, I liked that they stuck to the eerie yellowish colors, there are three good songs and acting was alright. Otherwise, even counting out my overall discomfort with horror, I don't understand why it has such a high rating."
+    },
+    {
+      "slug": "obsession-2025",
+      "perfil": "aclamado",
+      "bucket": "negativas",
+      "id": "viewing:1487189501",
+      "nivel": 1.0,
+      "n_chars": 181,
+      "texto": "Thought it was overrated cause there were a lot of plot holes and it wasn’t convincing Unbiased rating is 1.5 stars but gave 1 star cause self harm at the end gave me a panic attack"
+    },
+    {
+      "slug": "obsession-2025",
+      "perfil": "aclamado",
+      "bucket": "negativas",
+      "id": "viewing:1487002483",
+      "nivel": 1.0,
+      "n_chars": 297,
+      "texto": "Plutôt mauvais. Jeu d'acteur bon mais c'est tout. Des scènes inutiles. De l'urine et des excréments pour justifier la classification \"horreur\". Des choix de la part du personnage principal qui sont incohérents. Je passerais trop de temps a écrire si j'enumerais tout ce qui ne va pas dans ce film."
+    },
+    {
+      "slug": "obsession-2025",
+      "perfil": "aclamado",
+      "bucket": "negativas",
+      "id": "viewing:1486971932",
+      "nivel": 1.0,
+      "n_chars": 295,
+      "texto": "bear iğrenc bir adamsin o dileği dilemek yerine gidip insan olsaydin insanlarla nasdil iletisim kuracagini öğrenseydin hicbisey olmazdi nikki ne kadar yardim istesede hala kendi ezikliğinden dolayı mal mal davranmaya devam etti olan yine nikkiye oldu😢 All because a man couldn’t accept rejection"
+    },
+    {
+      "slug": "obsession-2025",
+      "perfil": "aclamado",
+      "bucket": "negativas",
+      "id": "viewing:1487842238",
+      "nivel": 1.5,
+      "n_chars": 461,
+      "texto": "ain’t no way this was the movie yall were raving about…… this entire movie was predictable and boring. also lameee, it didn’t feel dynamic in anyway and yes i understand it, im not confused about the underlying commentary. the film contributed nothing to that conversation, it just presented rape culture as a horror film in the worse way possible. i’m not even sure the director realizes how fucked this is, no one needs this story from this perspective. boooo"
+    },
+    {
+      "slug": "obsession-2025",
+      "perfil": "aclamado",
+      "bucket": "negativas",
+      "id": "viewing:1487564985",
+      "nivel": 1.5,
+      "n_chars": 507,
+      "texto": "e eu fico a pensar em que parte do filme acharam o roteiro bom. É bem menos que mais. Eu nem discordo em ter pessoas idiotas em filmes de terror, se você não consegue segurar um roteiro você precisa de uma idiotice que faça ele andar. Até metade do filme ele até enganou bem pois o protagonista se fazia de pão, não era idiota pois sabia exatamente o que estava fazendo, mas todo o ato final foi inteiramente de burrice atrás de burrice, ele mesmo pareceu se esquecer do motivo que levou ao clímax da coisa."
+    },
+    {
+      "slug": "obsession-2025",
+      "perfil": "aclamado",
+      "bucket": "negativas",
+      "id": "viewing:1487307540",
+      "nivel": 1.5,
+      "n_chars": 223,
+      "texto": "Ok the plot line of this was really good and really creative. I would probably give the plotline alone  a 4. But I just hate horror movies so it was too scary for me. Also a lot of gross scenes. That’s why I rated it so low"
+    },
+    {
+      "slug": "obsession-2025",
+      "perfil": "aclamado",
+      "bucket": "negativas",
+      "id": "viewing:1485826781",
+      "nivel": 1.5,
+      "n_chars": 508,
+      "texto": "I’m pissed off. This feels like it was created for the soul purpose of becoming a TikTok trend, and succeeded. Everything is mid shot, the dialogue was way too theatrical and the soundtrack was just popular TikTok songs. This has been the most overhyped movie I’ve ever come across, it’s a take on modern horror that didn’t need to be displayed. People are acting like this is the scariest thing they’ve ever seen, this performative blockbuster won’t be remembered in six years. Go and watch real body horror"
+    },
+    {
+      "slug": "obsession-2025",
+      "perfil": "aclamado",
+      "bucket": "negativas",
+      "id": "viewing:1487217317",
+      "nivel": 1.5,
+      "n_chars": 800,
+      "texto": "I just know Curry Barker had a toxic last relationship. To have been created by a 25 year old I can only praise, if this was made by someone ik my opinion would be drastically diff I would be hyping big time. However in reality if I didn’t know any of the previous info about this film or its success this is likely what I would have scored it, maybe even lower. I mean this in a nice way but it was giving me that riverdale aesthetic. The cinematography and music was probs my fav part. The audio for thriller pieces is make or break. So I enjoyed the audio design. I actively choose never to watch ‘horror’ but this didn’t feel scary at all? Was more like a baby thriller. Kinda got bored near the end and the magic thing began to feel v gimmicky. Nothing felt memorable or emotionally stimulating."
+    },
+    {
+      "slug": "obsession-2025",
+      "perfil": "aclamado",
+      "bucket": "negativas",
+      "id": "viewing:1487126107",
+      "nivel": 1.5,
+      "n_chars": 248,
+      "texto": "kinda perfect plane movie tho upon reading the reviews this seemingly went over my head but idk..kinda feels like a miranda july situation where i just have the cilantro gene & can't find the flavor in it i meant may december not miranda july lmaoo"
+    },
+    {
+      "slug": "obsession-2025",
+      "perfil": "aclamado",
+      "bucket": "negativas",
+      "id": "viewing:1488091346",
+      "nivel": 2.0,
+      "n_chars": 3203,
+      "texto": "Can see this dropping over time, honestly. Right now I’m carried by how great Inde is here (the rest of the acting is, by and large, mediocre) and the boldness. But the theming here gets pretty sloppy even with the simple premise. The film does a good enough job making Bear out to be “the bad guy” for the most part. He’s meek, cowardly, selfish, and irresponsible, to the extent that he is clearly a rapist by the film’s end. I think where I get a little frustrated with how clumsy the messaging here is, is that because the premise is still fantastical by nature, there’s still that lingering aspect of plausible deniability for too much of the film. Bear thinks it’s odd at first and he wonders if it worked (looks it up and originally the info actually suggests it DOESN’T work) but rolls with it. And initially he tries to be respectful in the face of odd behavior. And eventually he starts rolling with it. By the time it’s really confirmed for him, he’s ebbing between whether to kill himself to set her free and not caring about Nikki or her autonomy at all as long as wish Nikki can “perform” Nikki appropriately. The former would be near heroic and the other is downright monstrous. Everything is unequivocally Bear’s fault (though Ian certainly isn’t helpful) and yet the situation is so outrageous that the character’s condemnation accidentally becomes somewhat conditional. Unlike in the real world, Bear is never given a choice to just respect Nikki’s autonomy after the wish is made, before he begins to act intentionally. He immediately is locked into suicide or manipulation as his two options, and that’s where this basically fails as cultural critique. Technically there’s possibly a loophole with the wish and he actually attempts to exploit this, but there’s no clear indication as to how it would’ve panned out. The inherent issue here is that as pathetic as Bear is, there is probably a version of this film that gives him more reasonable opportunities to exit this situation cleanly and he still doesn’t take them due to his desire to possess “Nikki.” But that’s not really this movie and the messaging gets confused as a result. This thing is also very, very mean-spirited in general. I don’t really expect horror to be happy, but this whole thing really doesn’t have me rooting for anyone to make it through unscathed. I’m not sure any of the core four here totally deserves their fate, but I also think it’s telling that the two men are far closer to deserving it and the women go through, far, far worse, to the point of borderline directorial cruelty when they’ve functionally done very little wrong. Nikki is clearly the primary victim here and thinking about the film and how flimsy its messaging is, this reveals itself to be nearly torture porn for violence against women. I think about how easy Ian gets off, and maybe that’s “commentary,” but when I see interviews with Barker, he seems wholly unable to articulate any sort of genuine thematic intent. I think he just understands that watching women suffer feels bad, and decided to make that a movie. He’s right, but that doesn’t make this any good. The more I write this, the more I realize I do not like Obsession."
+    },
+    {
+      "slug": "obsession-2025",
+      "perfil": "aclamado",
+      "bucket": "negativas",
+      "id": "viewing:1487918439",
+      "nivel": 2.0,
+      "n_chars": 232,
+      "texto": "Un vecchio adagio che non sto qui a ripetere si avvera in un susseguirsi di psicopatie in questa minchiata tra realtà e desiderio, che creano un doppio straniante reiterato fino al desiderio di un altro adagio che spenga lo schermo."
+    },
+    {
+      "slug": "obsession-2025",
+      "perfil": "aclamado",
+      "bucket": "negativas",
+      "id": "viewing:1487883630",
+      "nivel": 2.0,
+      "n_chars": 189,
+      "texto": "The horror side of this movie was done well, other than that there isn't much else, acting was unatural, dialogue was shallow and too static. Plot was interesting but again poorly executed."
+    },
+    {
+      "slug": "obsession-2025",
+      "perfil": "aclamado",
+      "bucket": "negativas",
+      "id": "viewing:1487860285",
+      "nivel": 2.0,
+      "n_chars": 152,
+      "texto": "A lot of room for improvement but it did manage to make me feel uncomfortable so I give it 2 stars for that ⭐️ kirk and kirkette got their happy ending?"
+    },
+    {
+      "slug": "obsession-2025",
+      "perfil": "aclamado",
+      "bucket": "negativas",
+      "id": "viewing:1487672457",
+      "nivel": 2.0,
+      "n_chars": 615,
+      "texto": "assisti esse filme uma vez pra nunca mais, e acho q deve ser assim na vdd interessante como essa obsessão do bear pela nikki é na vdd algo muito comum na vida real, oq mostra q o ponto principal desse filme é q na vdd a nikki nunca foi a vilã, ela nunca foi obcecada pelo bear, mas sim o contrario, e, na minha opinião a cena mais perturbadora e q deixa isso ainda mais claro, é quando a própria nikki pede para ser morta e ele simplesmente pergunta oq tem de tão ruim em ficar com ele, e ela responde algo q só comprova de onde vem a verdadeira obsessão q o filme quer tanto retratar, nikki nunca ficou com o bear."
+    },
+    {
+      "slug": "obsession-2025",
+      "perfil": "aclamado",
+      "bucket": "negativas",
+      "id": "viewing:1487545408",
+      "nivel": 2.0,
+      "n_chars": 383,
+      "texto": "i'm tired of y'all hyping up the most mediocre dark romance stories/movies just to seem deeper than you actually are. the storyline is there and it's a great plot but it was executed poorly, the acting at the beginning is hooooorrrriiidddd i literally couldn't even finish it. i feel like this is just another movie along the many others that are played out and overhyped. boring bye"
+    },
+    {
+      "slug": "obsession-2025",
+      "perfil": "aclamado",
+      "bucket": "negativas",
+      "id": "viewing:1487453753",
+      "nivel": 2.0,
+      "n_chars": 177,
+      "texto": "I don’t get the hype??? It was way too predictable. I found myself laughing at her inhuman walking more than I felt scared at any point But I will say that she’s a great actress"
+    },
+    {
+      "slug": "obsession-2025",
+      "perfil": "aclamado",
+      "bucket": "negativas",
+      "id": "viewing:1487440937",
+      "nivel": 2.0,
+      "n_chars": 4608,
+      "texto": "Inde Navarrette's spectacular performance reminded me of a golden retriever (it's important her performance is natural at the beginning and then as a stunted dog later) and I found myself think about why I'd never own a pet again. There is this perverted want from the owner to own a dog. It is captivity. Moreover the dog doesn't have a choice in loving who will ultimately feed them. While you live your life, their life is nearly paused (you should take them to a dog daycare) and you restrict what they can do when you're together. It's this weird, acceptable relationship where almost instantly you can be loved. Just because you chose this for her doesn't make it less real. It sounds to me you have a moral obligation to be there for her. But love is not meant to be instant. It's not even meant to be initially comfortable or gratifying. OBSESSION, which I don't really think is the right title, could be sold as the anti-Prince Charming and Disney fantasy. Horror elements are clearly inspired by the Forbidden Room scene in PULSE. What's actually provocative isn't a gun in a person's mouth but expecting the bullet to come as they fumble with the mechanics of killing themselves. I had just told Tony the other day I don't reflect anymore (I suspect because I'm just so focused now) then I put on Depression Cherry and listened to it three times on the plane to Spain. Levitation's lyrics \"there is no right time\" and Days of Candy's \"the universe is riding off with you\" just hit me. I think I realized after watching OBSESSION, which iterates on skipping the awkward asking part of starting a relationship, how I'd been keeping myself in limbo and protecting myself from any possibility for a little too long. I start thinking of apologizing to Ines 20 years ago for leaving her in the basement and having ignored it, I think I thought it was weird kissing a girl younger than me at the time, that you were supposed to kiss someone your own age. I lost a friend when she moved. I thought about Kat and writing back after she ghosted me for two years but I was probably coming up on my own anniversary. I thought about how Nate was someone I felt close to but never really made a strong enough effort to maintain that relationship (so I texted him). I thought about, again, how I need to be kinder to my dad. That being disappointed is not an excuse for being irritable or curt. I thought about getting a plane ticket to Biaritz. I thought about the four or so questions I want to ask this girl at the gym and how this past week would have been a good time to ask them but I skipped lifting because my elbows and wrist hurt but then asking those questions would have been fine to ask the last two years and next week too. I thought about how I feel like the ground underneath me is unstable, how I can't take a shower without feeling like the tub might split in half and I'd sink through the floor or how some parts of the house feel like I could put a leg through it if I jumped. I thought about how these coming months feel like a major infection point in my life where I've been riding on table stakes with this game and either the last five months of development and time and sacrifice (no one but me asked to do)—well, I'll be rich or I'll have been delusional. I thought about how I shouldn't take my side projects so seriously and then in the same train of thought how I should quit my job to pursue them fully and if I truly enjoyed what I did, I wouldn't have to worry about the money. I thought about financial situation and how far and close I was to $4 million dollars. I thought about the insane commitment I'd say to someone, that I'd spent 22 years of my life trying to fit in and then the last 8 years being comfortable with who I am, that my delusions of grandeur and creation will likely come up short, that my goals may change, that I wasnt looking to absorb someone and was happy with the status quo but if they added to my life, I'd be unwaveringly faithful and excited to see the world through their eyes. I thought about how I wouldn't use dating apps, it'd have to be an approach. I thought about how the end doesn't concern me anymore, it's the middle parts where there's choices being made. I thought about how I'm done with games. I thought about how I hope my brother outgrows his feelings of inconveniencing people over his own comfort.  I thought about how recently my eyes get really watery again when I'm out in public spaces that aren't the gym almost like I'm going to cry. I thought about writing again. I thought about listening to Depression Cherry once more."
+    },
+    {
+      "slug": "obsession-2025",
+      "perfil": "aclamado",
+      "bucket": "negativas",
+      "id": "viewing:1487422738",
+      "nivel": 2.0,
+      "n_chars": 158,
+      "texto": "A fresh movie with an original story, the story was easy to follow and digestible but I dont like scary movies. Spoilers No good ending. Left the theatre sad."
+    },
+    {
+      "slug": "obsession-2025",
+      "perfil": "aclamado",
+      "bucket": "negativas",
+      "id": "viewing:1487410784",
+      "nivel": 2.0,
+      "n_chars": 158,
+      "texto": "me parece ilógico como quieren representar a la mujer como una película de terror cuando el fue el que la convirtió en esto esta película me da asco en verdad"
+    },
+    {
+      "slug": "obsession-2025",
+      "perfil": "aclamado",
+      "bucket": "negativas",
+      "id": "viewing:1487406345",
+      "nivel": 2.0,
+      "n_chars": 459,
+      "texto": "Una película, que en mi opinión sobraba mucho, sino fuera por Inde navarrete (la protagonista) gracias a quien la peli se lleva 2 estrellas y gracias. La historia de Bear y Nikki Moraleja: si una persona no te ama, no pidas deseos raros, que puedan costar la vida a tus seres queridos, NO LO HAGAS. Una mezcla entre cringe, y ganas de salirme de la sala de cine 🎞️. Está claro que las de terror y yo no congeniamos. Nota:4 Recaudación: 505 millones de dolares"
+    },
+    {
+      "slug": "obsession-2025",
+      "perfil": "aclamado",
+      "bucket": "negativas",
+      "id": "viewing:1487393471",
+      "nivel": 2.0,
+      "n_chars": 231,
+      "texto": "What were yall talkin about? Couldn’t have been this movie. The lead actor sucked and his character sucked and everyone acted very weird and unrealistic in response to the obsessed girl (who was the only decent part of this movie)."
+    },
+    {
+      "slug": "obsession-2025",
+      "perfil": "aclamado",
+      "bucket": "negativas",
+      "id": "viewing:1487288122",
+      "nivel": 2.0,
+      "n_chars": 2760,
+      "texto": "For a low budget, it looks and feels great. No glaringly obvious mistakes aside from the car scenes being obviously shot on a sound-stage or something like that. Preface, I am not a fan of horror. But I understand it, limitedly, but I do. And it just doesn't cut it for me. How many horror cliches are there? Let's see: creepy smiles, self-harm out of nowhere, tons of blood and yucky substances (like piss and vomit) for no real reason, wafer thin characterization, \"\"\"\"ironic\"\"\"\" needle drops with happy music and sad moments, painfully predictable jumpscares (when the music goes all mute, then you know something's coming), and just violence for the sake of it. No real resolution. Just climax and that's it. That might be just me, who wants everything to end in a thematic payoff, not just a structural one. BONUS point: mentions of \"therapy\" and mental illness (technically, the modern cliche is that the monster of the story is a representation of trauma, so not quite cliche-d but almost). I think the premise is way too silly after a certain point. Like, how does this world even work if there are magical talismans lying around everywhere. How has the world reached 2024 and not ended already because some mad man wished for the world to end? It would be one thing if Bear's toy worked but that was a 1 in a million chance of it working. Oh and let's not forget \"what's so bad about being with me?\"... BARON are you retarded? That is NOT THE BAD THING about the situation, you twat. That's because Nikki is a slave. DUDE ARE YOU TELLING ME THAT BARON COULDN'T PARSE THAT NIKKI AND THE FUCKING SUCCUBUS DEMON FROM HELL WERE TWO DIFFERENT PEOPLE. FOR REAl? and also, by tthat point she had already fed you your DECOMPSOING CAT, which she probably dug up from the ground!!! In that case YOU should have been the one asking \"what is so bad about being WITH HER!\" which is EVERYTHING. IMAGINE THIS: AT THE MIDPOINT, THE TWO OF THEM REALIZE THEIR MISTAKE AND WORK TOGETHER, YES TOGETHER, BEHIND THE DEMON THAT'S POSSESED NIKKI TO FREE HER. MAYBE I DON'T KNOW IT'S JUST \"SPITBALLING\", LIKE THE STORE OWNER SAID. WHAT WAS HIS WISH? I DONT KNOW A 8 INCH COCK MAYBE BECAUSE HE WAS A STORE OWNER IN THE MIDDLE OF FUCKASS NOWHERE, WHEN HE LITERALLY COULD HAVE GOTTEN 1 BILLION DOLLARS, CASH, NO IRS MEDDLING, OUT OF THING AIR. WHAT THE FUCK. Sorry, I am a screenwriter and I really do tned to overfocus on the story and plot of films when I criticize them. Inde is uh hot, and she acts well, kudos to her. That's it. The TRUE HORROR in this movie is going to IMDb only to find out that the first review that appears, which currently has MORE THAN ONE THOUSAND likes, is completely and obviously AI-generated. Worse than that it is WRONG about the movie. IT LIES."
+    },
+    {
+      "slug": "obsession-2025",
+      "perfil": "aclamado",
+      "bucket": "negativas",
+      "id": "viewing:1487280313",
+      "nivel": 2.0,
+      "n_chars": 829,
+      "texto": "OBSESSÃO Um filme bom, mas nada de mais. Obsessão funciona principalmente pela relação entre os dois protagonistas e pela maneira como o filme vai aumentando a tensão aos poucos. Não acho que seja especialmente profundo, mas existe uma dinâmica interessante entre eles que consegue sustentar boa parte da história. O roteiro sabe onde quer chegar e consegue criar alguns momentos realmente tensos, mas também é bastante previsível em algumas decisões. Eu esperava um pouco mais de desenvolvimento em determinados pontos. As atuações são boas e ajudam bastante, principalmente porque o filme depende muito mais dos personagens do que de grandes acontecimentos. Não há muito mais a dizer. É um filme competente, que funciona enquanto está passando, mas que não me deixou com muita coisa para pensar depois. Bom filme. Nada de mais."
+    },
+    {
+      "slug": "obsession-2025",
+      "perfil": "aclamado",
+      "bucket": "negativas",
+      "id": "viewing:1487267224",
+      "nivel": 2.0,
+      "n_chars": 153,
+      "texto": "Me perturba un poco, y no me gusta la sangre. Además no tenia lore suficiente para ser full terror. Y creo que mi novia es ella, o parecido. Tengo miedo."
+    },
+    {
+      "slug": "obsession-2025",
+      "perfil": "aclamado",
+      "bucket": "negativas",
+      "id": "viewing:1487225812",
+      "nivel": 2.0,
+      "n_chars": 198,
+      "texto": "Não achei esse hype todo. É legal mas não é inovador. Se não fosse sobrenatural eu gostaria mais. A personagem da Niki me dá vergonha alheia, se essa foi a intenção então a Navarete é uma boa atriz."
+    },
+    {
+      "slug": "obsession-2025",
+      "perfil": "aclamado",
+      "bucket": "negativas",
+      "id": "viewing:1487044606",
+      "nivel": 2.0,
+      "n_chars": 279,
+      "texto": "Not a bad movie at all. I just couldn’t care at all about the situation. The beta male gets to wish for his dream girl to be obsessed with him and then he can’t handle it. Boring. His friend got a billion dollars and didn’t even get a chance to spend it. That’s the real tragedy."
+    },
+    {
+      "slug": "obsession-2025",
+      "perfil": "aclamado",
+      "bucket": "negativas",
+      "id": "viewing:1487033376",
+      "nivel": 2.0,
+      "n_chars": 439,
+      "texto": "This movie was so odd. I’m not someone who typically watches movies like this I get scared quite easy. I think it would have been wayyy scarier if I watched it in theatres but I watched it in the comfort of my own home so it wasn’t too bad. I think the fact that he cracked a stick to make her go crazy pretty much was the stupidest thing ever like the plot was lowkey just dumb idk. Not my movie not my genre. I will never watch it again."
+    },
+    {
+      "slug": "obsession-2025",
+      "perfil": "aclamado",
+      "bucket": "negativas",
+      "id": "viewing:1486891566",
+      "nivel": 2.0,
+      "n_chars": 225,
+      "texto": "Cómo tres meses sin ver películas y veo esta mierda, si quieren denle menos desarrollo a Nikki q ladilla el protagonista d  shit Y los amigos también una porqueria me cayeron mal todos d paso la vi de día y no se ve un carajo"
+    },
+    {
+      "slug": "obsession-2025",
+      "perfil": "aclamado",
+      "bucket": "negativas",
+      "id": "viewing:1486864258",
+      "nivel": 2.0,
+      "n_chars": 496,
+      "texto": "I think this is one of the more overrated Indie films. I fell asleep after the first sex scene. I just didn’t find the appeal to the movie and I didn’t really find it as scary or thrilling either. I didn’t think it was a cool concept one of the more original ones that we haven’t seen in a while so I appreciated it, but I was also in a movie marathon. I had just finished watching back room so I was a little bit more tired than usual, but I did enjoy it as much as I could, until I fell asleep."
+    },
+    {
+      "slug": "obsession-2025",
+      "perfil": "aclamado",
+      "bucket": "negativas",
+      "id": "viewing:1486832753",
+      "nivel": 2.0,
+      "n_chars": 258,
+      "texto": "Kendimi bir saniye bile filmin havasına kaptıramadım.Bir film sürekli giriş gibi devam edebilir mi? Etti. Böyle şeyleri izledikçe insan oturup sinemanın helvasını kavurmak istiyor gerçekten.Hayatım boktanlaşınca boktan filmleri seçmem tesadüf değil herhalde."
+    },
+    {
+      "slug": "obsession-2025",
+      "perfil": "aclamado",
+      "bucket": "negativas",
+      "id": "viewing:1486824535",
+      "nivel": 2.0,
+      "n_chars": 206,
+      "texto": "Imo a little over rated and undercooked. I wasn’t as enamored with the lead actresses performance as everyone else seems to be. There were tense moments however I never felt a need to look away out of fear."
+    },
+    {
+      "slug": "obsession-2025",
+      "perfil": "aclamado",
+      "bucket": "negativas",
+      "id": "viewing:1486787493",
+      "nivel": 2.0,
+      "n_chars": 151,
+      "texto": "Was better when you could see her facial expressions and generally see better than the drive-in screen. Still just 'fine' as a movie. Over hyped a bit."
+    },
+    {
+      "slug": "obsession-2025",
+      "perfil": "aclamado",
+      "bucket": "medianas",
+      "id": "viewing:1488088523",
+      "nivel": 2.5,
+      "n_chars": 5937,
+      "texto": "Sigh coz I've been putting off logging this. I watched it twice to verify my suspicions and can say with absolute certainty that this is the work of a douchebag. Curry Barker is a douchebag. I have turned into a conspiracy theorist because of this film - the internet has decided it is a feminist masterpiece. My thesis is that Curry Barker's original premise was innately misogynistic and has only been altered to make it vaguely interpretable as feminist because he realised that is more profitable. I read an interview where Barker said the original inspiration for the film was seeing an actress play a character who shifted between emotions really quickly, and it freaked him out the idea of a woman who could switch emotions really fast. I will not insult my imaginary reader by explaining the misogynistic implications of this and tje historical demonisation of women's emotions and labelling them as hysterical yadda yadda yadda.  I will refer to the taboos still surrounding women's mental health and the dual fetishization / demonisation of \"crazy women\" which I think lies at the heart of this film. Barker also specifically stipulates that she isn't possessed, but is simply acting how someone who loves Bear \"more than anyone in the world\" would act. Okay, so the horror is not supernatural, but simply grounded in her acting mentally ill. Again, not gonna reiterate why that's an issue. But it also makes no sense, because she does things that objectively don't fit into that - moving in reverse for a start. Why would you write something that so clearly seems like a possession or an alternative entity, then deny its existence? Unless you have no clear idea of what you actually want to SAY and simply want to base a film of an aesthetic or concept, the concept here being crazy woman. It's just left open-ended enough that he has a get out of jail free. Yes, Bear is depicted in some ways as a villain. He is callous, lacks a firm grasp of the notion of consent, chooses to ignore Nikki's cries for help, and is selfish. For a woman watching Nikki's torment, the real horror lies there, and many women have stated that's why it's a good horror film. And I'm not going to undermine the positives in the way it depicts that selfishness, and there's definitely an argument to be made that he's playing with the clichés of how men view woman to create this film. But I do just think that's an intelligent viewer giving too much credit to a not that intelligent writer / director. Ultimately, that concept is not where the manufactured fear comes from, it all comes from Nikki carrying out clichéd versions of the crazy woman which are largely borrowed from films like Fatal Attraction and Misery even. Also, I'd argue the framing of the sex scene is still loaded with male gaze and the real fear being that a woman is being duplicitous but that's a whole other thing that I can't really figure out how to explain. And if he's so feminist, why is the naked defiled corpse of Sarah on display in the final sequence? Surely this undermines the whole imagined feminist thesis? What's the point of that? Why are we sexualising maimed corpses? Oh yeah because curry barker uses violence against women as a horror tool instead of something to genuinely dissect. Notice that the most gratuitous violence in the film is done to Sarah by Nikki, or to Nikki by herself. Both the men who die do so in relatively \"clean\" ways, no screaming or blood or mutilation and certainly no naked faceless corpse in fetish gear. Yes yes they'll argue that that's the point, is how Bear's passive selfishness and desire for control results in the destruction of women, but I still feel like the film's lens absolutely relishes the visual mutilation of women in a way I don't think should be interpreted as feminist. It's just more shock horror at the expense of women. I guess my question is: if Curry Barker is allegedly parodying the male gaze by embodying it, how is the actual product different onscreen? Also, when asked how they got Nikki's face to look so creepy and whether it was SFX or makeup or just her acting, he claimed it was a choice he'd made to use a special kind of makeup which is \"called contour I think\" (hate him). It's actually directly lifted from the Tiktok uncanny valley makeup trend which was started by Emilia Barth who he did not credit, so him taking credit for this idea pisses me off, and he also then removes credit from Inde Navarette, which also pisses me off. His other horror effects are just stolen from Tiktok horror shorts, like straight up putting it in reverse. I'm all for low budget cinema, but don't act like he is a genius for making a feature length Tiktok short. It's just cheap scares and self congratulating for ideas that aren't his own. Also the pacing is shit. She acts so insane on literally night one. There's no buildup. You're telling me he slowly realises she's not fine when she does that to his cat on night one. And I know you're going to say he chooses to ignore it and that's why he's the villain, but from a filmmaking pov it just makes no sense anyway. Also they're just screaming so much. It feels lazily explosive. I really really feel instinctively that this is a film about how men's biggest fear is a woman who is crazy, and the fear of being blamed for taking advantage of that. I believe Bear is still positioned as a victim, alongside Nikki. People are saying the point is that it seems like that but actually it's much deeper but I really think we're giving him too much credit. Curry Barker has made the premise and plot vague enough that it has been interpreted by emotionally intelligent viewers to carry that same emotional intelligence that they watched with, and he has piggybacked off that because it's more profitable. It's literally making me feel insane and no one seems to agree with me on this but seriously no one can tell me otherwise!!!!!! I know in my SOUL."
+    },
+    {
+      "slug": "obsession-2025",
+      "perfil": "aclamado",
+      "bucket": "medianas",
+      "id": "viewing:1487933134",
+      "nivel": 2.5,
+      "n_chars": 206,
+      "texto": "i hate to say that my expectations were set way too high for how good i felt this movie really was. it wasn’t the worst horror movie i’ve watched but i was waiting for it to shake my earth. i’d rewatch tho."
+    },
+    {
+      "slug": "obsession-2025",
+      "perfil": "aclamado",
+      "bucket": "medianas",
+      "id": "viewing:1487763846",
+      "nivel": 2.5,
+      "n_chars": 683,
+      "texto": "What’s all the noise about? Everybody in this film is shouting, which makes the whole experience unbearable very quickly. Especially because nothing new is being said. People are having the same conversations/arguments, repeating the same things. And it’s not only the annoying characters who’re loud. I can’t believe that the film community have been so vocal in their support for what’s, at best, an average, feature length episode of Black Mirror (main character discovers something that makes their desire a reality, but it spirals out of control rapidly). I’m all for a successful non-franchise film, which is why I’ll give Obsession some credit, but we can do better than this."
+    },
+    {
+      "slug": "obsession-2025",
+      "perfil": "aclamado",
+      "bucket": "medianas",
+      "id": "viewing:1487758766",
+      "nivel": 2.5,
+      "n_chars": 4837,
+      "texto": "Add Nikki’s moves to Fortnite, 6.99 for the jitter in the corner emote It’s hard to give this an unbiased review with the discussion this provoked in culture, but I think people’s excitement about showing how men don’t value women’s autonomy is making them not see how this movie doesn’t say or do a whole lot else. Essentially we are starting with the premise of “what if pygmalion’s statue had some personality beforehand mixed with monkey paw antics”. It’s not a terrible idea but having the film be wholly in bears perspective loses most, if not all of the horror of Nikki’s side and diminishes any message trying to be put across. I get the idea, it was always superficial to him, so anytime she deviates from his ideal partner persona he starts being like “why am I here” only to be comforted by the touch and reassurance he bought and paid for. The idea that she is is fully under his control with no autonomy is mainly seen from his side (which doesn’t get talked enough about regarding the lacanian mirror philosophy of how she reflects bear back himself). And these ideas work fine but when here will the kernel of the movie be sprung: you can be a huge loser coward but don’t let being so pussillanimous hurt others. The conversation about this movie ends with “even the nice guys will rape you” which while true, isn’t going as far as the movie is even letting you step. We see bears cowardice and fear throughout the movie, and by only being able to judge what we see, he’s probably internalized some toxic masculinity from Ian if not also just from existence. Nikki doesn’t get possessed by any spirit, she gets possessed by bears spirit (maybe why you only get one wish) which is full of loser cowardice and will grovel at any push back to try to fix his mistakes. Obviously he gets worse as the movie goes on and he’s rightfully criticized and called a rapist but we need to interrogate why he did this and why he acted this way. He’s a person who wanted someone to love him. That’s not a crazy wish, I doubt even the most hardcore incel could claim they never wished to be loved nor the most attractive person in the world. It’s not a sin to want to ignore the rough parts of developing a relationship. We don’t know the backstory besides a few small fragments of any of the main crew which hurts everyone’s personhood and leads to a lot of flat moments from a filmmaking and thematic perspective; but what we can parse is that Nikki is nice, wants to write, and doesn’t like a high school nickname and that bear is indecisive and a coward. We aren’t going off a lot here. The “did she like him before the wish or not debate” is pointless because they both are withholding their honest feelings to each other. Bear is guessing because he’s a loser and can’t talk about his feelings while Nikki says she’s famously hard to read if she crushes on someone or not. There’s no fault on Bear for wishing she loved him in a normal seeming world where magic hasn’t shown to him to be real. Where we can criticize him though, is for his main trait through the movie of being a coward. This man is not in touch with himself, he said during the beginning monologue that Nikki was the first person he really felt he could open up to due to her being the only nice person when he moved there and couldn’t shake his feelings just from that. Buddy, go talk to a normal non fratty guy over beers and figure your shit out. You don’t need to wish and rape a mirror version of yourself who only gives into your worst desires as those consequences escalate. I would list the cowardice on display but then I’m citing the whole movie. But to take the pills in order to get the last little bit of bliss can be the cherry on top of what I don’t feel like writing out. It’s late and I’m ranting. Maybe I’ll clean this up at some point but I think we need to discuss the dirty heart, our Id (I don’t think bear has much super ego to provide morals, just an ego to stop from looking bad), rather than just cast the bad man down to the depths. We can see that from the online manosphere backlash of this movie that this is clearly a problem that resonates with men that they don’t want to look at. It’s hard to say “don’t just call it the male rape fantasy movie to protect the dumb dudes who don’t think he’s wrong” but I think there needs to be some other avenue to get people who don’t get it to approach it. And that’s no one persons responsibility. But at the end of the day our art should try to help us see ourselves better and not help to obscure the truth that we don’t wanna talk about. Also the lighting was bad and dialogue sucked pretty bad and I think the movie was going way too slow for being 108 minutes. Cut out some of the weird shit we get it dude or make the runtime more impactful. Also the doll in the car scene looked so bad"
+    },
+    {
+      "slug": "obsession-2025",
+      "perfil": "aclamado",
+      "bucket": "medianas",
+      "id": "viewing:1487749921",
+      "nivel": 2.5,
+      "n_chars": 461,
+      "texto": "Enjoyable enough with a good soundtrack. Not scary at all and could’ve used a more convincing dummy in the car scene. Reverse-walking from Pulse ripped off poorly here, made me laugh every time it happened. The cast was great and their chemistry worked well. Bear and Nikki bond in a montage by making AI memes of themselves; they belong in turbo hell. Nothing special about this movie really. Curry Barker will never be Kane Parsons. Baby’s first horror movie."
+    },
+    {
+      "slug": "obsession-2025",
+      "perfil": "aclamado",
+      "bucket": "medianas",
+      "id": "viewing:1487741172",
+      "nivel": 2.5,
+      "n_chars": 201,
+      "texto": "Movie lowkey kinda mid i watched it with my mom is kinda disturbing and eerie but it didnt really scare me that much and the story didnt really click the movie was fun tho didnt feel like the hyped..:("
+    },
+    {
+      "slug": "obsession-2025",
+      "perfil": "aclamado",
+      "bucket": "medianas",
+      "id": "viewing:1487737192",
+      "nivel": 2.5,
+      "n_chars": 737,
+      "texto": "cuando la vi por primera vez estaba demasiado conmocionada, quería escribir algo realmente poético. con mi segunda experiencia creo que pude ver realmente como lo que es. ¿como es posible que una decisión, un acto tan egoísta pueda afectar a todo nuestro alrededor? es tristísimo hasta donde puede llegar la idealización de alguien sobre tu persona, que el terror se halla en lo real. no hay brujos, nada de espíritus o cruces raras, es solo un hombre volviendo realidad la pesadilla de toda mujer: que nos quiten total autoridad sobre nosotras, sobre nuestros cuerpos, decisiones, nuestro futuro. (quité varios tutoriales de acá para estar todavía más loca. ¿cuál es el veredicto: loser cute patootie intentando hacerse de la cinéfila?)"
+    },
+    {
+      "slug": "obsession-2025",
+      "perfil": "aclamado",
+      "bucket": "medianas",
+      "id": "viewing:1487706860",
+      "nivel": 2.5,
+      "n_chars": 846,
+      "texto": "Alright bitches I feel that I must give an explanation. Storyline: 3.5 Meaning: 5 Script and setting: 4 Acting: 4 I personally gave this a low rating on the first watch because I’ve felt that watching a lot of violent movies has negatively impacted my mental health. ( Don’t judge me, hypocrite!) I felt so uncomfortable the entire movie. I acknowledge that the discomfort was intended to be felt. I find this movie violent, not just physically but also mentally and sexually. Perhaps I’m fragile but I don’t feel that I need to or want to watch this again. I genuinely hope that this movie wakes up some of the disgusting, immature, self righteous incels. I also don’t feel the need to write an entire essay proving that I was paying attention to the movie. I also don’t want to write an essay rehashing literal trauma performed on screen. Bye ."
+    },
+    {
+      "slug": "obsession-2025",
+      "perfil": "aclamado",
+      "bucket": "medianas",
+      "id": "viewing:1488179744",
+      "nivel": 3.0,
+      "n_chars": 1346,
+      "texto": "When I heard all the hype around this film, I suspected it was kind of a \"normie\" horror movie.  And like, don't get me wrong it was pretty good, but it kinda left the impression that the people who were hyping it up aren't regular horror movie watchers. Some of the parts that were supposed to be creepy inched into \"goofy\" territory. That said it did have a lot of positives, there were a lot of good characterization moments that  questioned their motives and inform their decisions, acting was great, the leading actress really carried the film and did an excellent job. My two big complaints: 1. You pretty much know exactly what's going to happen from the beginning. There were no real surprises or deviations from the very basic premise. Guy wishes a girl was in love with him, she becomes too obsessed, people die. I don't need every film to have big twists but it just wasn't very interesting. 2. Why did the cat eat that oxy I kept expecting there to be some sort of explanation for why that happened it's just so odd. Why did he have an open bottle of his grandma's pills out and why did the cat eat them? Have you ever tried to get a cat to eat pills they don't like it very much. They only reason I could think is the main character was taking them, but there's literally no other indication that he's an addict or uses drugs at all."
+    },
+    {
+      "slug": "obsession-2025",
+      "perfil": "aclamado",
+      "bucket": "medianas",
+      "id": "viewing:1488170117",
+      "nivel": 3.0,
+      "n_chars": 164,
+      "texto": "Un bon film. Je pense que la hype dessus m’a trop hypé mais je reste satisfait du visionnage. Sachant le contexte de réalisation, je reste bluffé du résulte obtenu."
+    },
+    {
+      "slug": "obsession-2025",
+      "perfil": "aclamado",
+      "bucket": "medianas",
+      "id": "viewing:1488133725",
+      "nivel": 3.0,
+      "n_chars": 176,
+      "texto": "i needed to see this before the hype because i enjoyed it but its not the best film of all time + why was there so many think pieces about the obvious villain being the bad guy"
+    },
+    {
+      "slug": "obsession-2025",
+      "perfil": "aclamado",
+      "bucket": "medianas",
+      "id": "viewing:1488132815",
+      "nivel": 3.0,
+      "n_chars": 472,
+      "texto": "ao forçar o amor de nikki por meio de um feitiço, bear desrespeita o livre-arbítrio e a autonomia dela, transformando o sentimento dela em uma possessão doentia. e mesmo quando ela começa a apresentar comportamentos bizarros, ele escolhe priorizar suas próprias vontades e tenta preservar o desejo em vez de libertar ela. a obsessão induzida corrompe a nikki de forma irreversível, levando-a a cometer atos violentos contra os próprios amigos. dito isso ele é o vilão sim."
+    },
+    {
+      "slug": "obsession-2025",
+      "perfil": "aclamado",
+      "bucket": "medianas",
+      "id": "viewing:1488120213",
+      "nivel": 3.0,
+      "n_chars": 909,
+      "texto": "A girl gets possessed against her will and turns into an incontinent sex slave with the same needs of a toddler because of a raggedy, lame aahh excuse of a CREATURE,(‘cause you can’t call THAT a man) and that should actually be held in a psych ward given the amount of medication he takes, doesn’t have the balls to do something even 6th grader do: express his feelings. So what better way to get your girl than depriving her of free will and let a demon from whatever legion of hell take over her body by being a little selfish bitch and snapping a wish willow sprouted right from Satan’s ass crack…this way she won’t be able to do the most horrible and despicable thing ever: say no. Usually I’d say I’d choose the bear but i can’t this time since that’s his damn name, who the f**k calls their child that?? Like…are we in the jungle? Somebody call Tarzan asap we might just have found his long lost bother."
+    },
+    {
+      "slug": "obsession-2025",
+      "perfil": "aclamado",
+      "bucket": "medianas",
+      "id": "viewing:1488017655",
+      "nivel": 3.0,
+      "n_chars": 567,
+      "texto": "Fui ver esse filme com uma certa expectativa e um pouco no hype, já que muita gente estava falando dele. Achei a premissa e o desenvolvimento da história interessantes. A atriz que interpreta a obsessora tem momentos em que está bem, mas em outros parece que o papel não combina muito com ela — achei a atuação dela meio termo. O filme não me causou tanta aflição quanto imaginei, até porque achei o ator que faz o namorado dela muito bobo. Mesmo assim, no fim das contas, o filme cumpre o papel de entreter, e dou o mérito à ideia do roteiro, que é bem interessante."
+    },
+    {
+      "slug": "obsession-2025",
+      "perfil": "aclamado",
+      "bucket": "medianas",
+      "id": "viewing:1487545495",
+      "nivel": 3.0,
+      "n_chars": 435,
+      "texto": "Ainda estou deixando Obsessão reverberar. Há uma questão, em particular, na qual me encontro de certa maneira empacado: até que ponto estamos diante de uma investigação da moralidade, e em que momento essa investigação parece ceder lugar ao moralismo? Percebe onde quero chegar? Talvez seja justamente nessa zona de ambiguidade, entre o desejo, a culpa e o julgamento, que o filme me provoque mais. Enfim, ainda não consegui sair dele."
+    },
+    {
+      "slug": "obsession-2025",
+      "perfil": "aclamado",
+      "bucket": "medianas",
+      "id": "viewing:1487997990",
+      "nivel": 3.0,
+      "n_chars": 268,
+      "texto": "Decided to give it a second chance without insufferable people screaming and loudly eating popcorn, and that was way more enjoyable. Still not THE horror movie or acting of the year to me, but I was finally able to appreciate the photography and great parts this time!"
+    },
+    {
+      "slug": "obsession-2025",
+      "perfil": "aclamado",
+      "bucket": "medianas",
+      "id": "viewing:1487977194",
+      "nivel": 3.0,
+      "n_chars": 277,
+      "texto": "la thématique de l’amour obsessionnel est intéressante de fou et pour moi aurait pu être poussée pour tourner le film sur une touche plus dramatique et gore qu’horrifique, ce qui l’aurait rendu parfait à mon goût. mention spéciale à l’acting d’Inde Navarrette, juste excellent."
+    },
+    {
+      "slug": "obsession-2025",
+      "perfil": "aclamado",
+      "bucket": "medianas",
+      "id": "viewing:1487968972",
+      "nivel": 3.0,
+      "n_chars": 163,
+      "texto": "Tüm karakterler çok maldı beni sinir ettiler ama sardı yani aktı güzeldi konusu falan bayağı iyiydi ama bazı mantık uyuşmazlığı vardı hepsi de bir şey demiyor yani"
+    },
+    {
+      "slug": "obsession-2025",
+      "perfil": "aclamado",
+      "bucket": "medianas",
+      "id": "viewing:1487964282",
+      "nivel": 3.0,
+      "n_chars": 185,
+      "texto": "Thankfully he killed himself, or else I would have! The obsession Bear had on Nikki was the cruelest, I would say! Man, Nikki, who would smile like that, that sacred the shit outta me.."
+    },
+    {
+      "slug": "obsession-2025",
+      "perfil": "aclamado",
+      "bucket": "medianas",
+      "id": "viewing:1487942054",
+      "nivel": 3.0,
+      "n_chars": 329,
+      "texto": "I think it could have been a better short horror movie but I still liked it. Definitely one of the better movies to come out this year. The main character is a weird guy and the female protagonist is way out of his league and he knows it. Dude had no chance from the get go and ruined everyone’s life around him including his own"
+    },
+    {
+      "slug": "obsession-2025",
+      "perfil": "aclamado",
+      "bucket": "medianas",
+      "id": "viewing:1487942048",
+      "nivel": 3.0,
+      "n_chars": 162,
+      "texto": "ngl, this felt more like a sad story wrapped in horror. getting cursed by black magic was pretty normal here, in Indonesia we call it “ guna-guna ” or “ santet ”."
+    },
+    {
+      "slug": "obsession-2025",
+      "perfil": "aclamado",
+      "bucket": "medianas",
+      "id": "viewing:1487915058",
+      "nivel": 3.0,
+      "n_chars": 210,
+      "texto": "One of the few horror movies in a long time that got under my skin, but in general i still dont really get the appeal of such movies. The characters and the story feel so flat. I liked that it was so silly tho."
+    },
+    {
+      "slug": "obsession-2025",
+      "perfil": "aclamado",
+      "bucket": "medianas",
+      "id": "viewing:1487897902",
+      "nivel": 3.0,
+      "n_chars": 417,
+      "texto": "OBSESSION (2026) A surprisingly twisted and disturbing ride. What starts off like a simple obsession quickly turns into something much darker and more unpredictable. Loved the dark humour, violence and the increasingly unhinged situations. The movie doesn't take itself too seriously, which made the craziness even more enjoyable. Not a perfect film, but definitely a fun, bloody and memorable watch. Worth the watch."
+    },
+    {
+      "slug": "obsession-2025",
+      "perfil": "aclamado",
+      "bucket": "medianas",
+      "id": "viewing:1487897357",
+      "nivel": 3.0,
+      "n_chars": 243,
+      "texto": "hmm. OK but the end felt rushed. jumpscares/\"artsy\" shots felt incomplete which added something i guess but other times just made me sick to my stomach. not notable the way other breakouts have been notable, but earned its flowers nonetheless."
+    },
+    {
+      "slug": "obsession-2025",
+      "perfil": "aclamado",
+      "bucket": "medianas",
+      "id": "viewing:1487889438",
+      "nivel": 3.0,
+      "n_chars": 167,
+      "texto": "this movie was such a wild ride 😭🖤 … everything just kept getting more intense. i loved how unpredictable it felt, and by the end i was just sitting there like ??? 🥀🕯️"
+    },
+    {
+      "slug": "obsession-2025",
+      "perfil": "aclamado",
+      "bucket": "medianas",
+      "id": "viewing:1487876465",
+      "nivel": 3.0,
+      "n_chars": 310,
+      "texto": "- If you have any questions about how the wish works, or, if you read the back of the box... - I mean, is it even real? - Yeah, it's real. - No, I know that the... Is her love real? - Just because you chose this for her doesn't make it less real. - Okay, then I would like to cancel. - We don't really do that."
+    },
+    {
+      "slug": "obsession-2025",
+      "perfil": "aclamado",
+      "bucket": "medianas",
+      "id": "viewing:1487873998",
+      "nivel": 3.0,
+      "n_chars": 282,
+      "texto": "i mean this movie isnt BAD but i feel like they could’ve done so much more with this plot. although i do think its more of a psychological metaphorical movie rather than a horror movie, you dont get the point of it just using the naked eye its something you dig deeper to understand"
+    },
+    {
+      "slug": "obsession-2025",
+      "perfil": "aclamado",
+      "bucket": "medianas",
+      "id": "viewing:1487862217",
+      "nivel": 3.0,
+      "n_chars": 361,
+      "texto": "ang totoong obsessed dito ay si bear TOTOO wdym kita mo na consequences ng wish mo pero \"can i alter my wish?\" pa ang tanong mo sa hotline TAPOS nagpapa-wish ka pa sa tropa mo na sana never ka gumawa ng wish kaya dalawa binili mo para makapag-wish ka ulit ??? JUSKO NAMAN ah basta lason talaga ang mga lalaki sa babaeng maraming pangarap :(( HAHAHSHAH HANURAWWW"
+    },
+    {
+      "slug": "obsession-2025",
+      "perfil": "aclamado",
+      "bucket": "medianas",
+      "id": "viewing:1487827558",
+      "nivel": 3.0,
+      "n_chars": 200,
+      "texto": "I tink it is a good film just really disturbing and it is a but gross, and that just is not my cup of tea, I will admit the acting is spectacular and it is not a bad film I just wasn’t expecting that!"
+    },
+    {
+      "slug": "obsession-2025",
+      "perfil": "aclamado",
+      "bucket": "medianas",
+      "id": "viewing:1487803687",
+      "nivel": 3.0,
+      "n_chars": 230,
+      "texto": "no es tanto cómo dicen, la verdad que no me dio tanto miedo. de todas formas me gustó la trama y me pareció entretenida, y muy bien hecha considerando que no eran directores con experiencia, increíbles. Pero claramente no da miedo"
+    },
+    {
+      "slug": "obsession-2025",
+      "perfil": "aclamado",
+      "bucket": "medianas",
+      "id": "viewing:1487792030",
+      "nivel": 3.0,
+      "n_chars": 421,
+      "texto": "Omg fuuuuunnnnn!! Inde Navarette really turnt it. Loved the camera movement + lighting + framing + lens choices. I feel like I had heard/seen discussion on this that made me think it would have something to say but this felt like it explored fairly well trod territory. Worse still, there were more interesting movies inside it and it frustratingly avoided pursuing any of them. Did peacock kirk bear’s face or am I crazy"
+    },
+    {
+      "slug": "obsession-2025",
+      "perfil": "aclamado",
+      "bucket": "medianas",
+      "id": "viewing:1487776381",
+      "nivel": 3.0,
+      "n_chars": 269,
+      "texto": "Sei não, achei o filme bem fraquinho. Não sei se foi porque eu foquei mais na parte do terror e acabei deixando de lado a parte mais problemática, que é o rapaz ser obcecado pela mulher a ponto de fazer magia pra conseguir ficar com ela. É um filme ok, mas nada demais."
+    },
+    {
+      "slug": "obsession-2025",
+      "perfil": "aclamado",
+      "bucket": "medianas",
+      "id": "viewing:1487764392",
+      "nivel": 3.0,
+      "n_chars": 1595,
+      "texto": "Watched this with my friends after we finished WABIAD, which was some fundraiser, and honestly… what a way to end the day 😭 This movie had us laughing, screaming, and getting genuinely freaked out at the same time. Watching something this psychological and gory at school probably wasn’t the smartest idea, but somehow being surrounded by my friends made the whole experience even better. Every disturbing moment became ten times funnier because of our reactions. From a horror lover’s perspective, I really enjoyed the overall plot. There was something genuinely smart about the way everything unfolded, and I liked that it wasn’t just relying on gore for the sake of being gory. The psychological side made it much more interesting, especially when you start questioning what’s actually happening and where things are going. That being said, the movie definitely felt a little too fast. I think some scenes could have been given more time to breathe, especially the moments that were building tension or developing the story. I wanted to sit with certain ideas a little longer instead of immediately being thrown into the next thing. Still, the combination of psychological horror, gore, disturbing moments, and the absolutely chaotic experience of watching it with friends made this such a fun watch. Definitely the kind of horror movie that becomes even better when you’re sitting next to your friends trying not to scream while also laughing at each other. Would I watch it again? Probably. Would I recommend watching it at school with your friends? Absolutely not… but also absolutely yes😭"
+    },
+    {
+      "slug": "obsession-2025",
+      "perfil": "aclamado",
+      "bucket": "medianas",
+      "id": "viewing:1487758370",
+      "nivel": 3.0,
+      "n_chars": 489,
+      "texto": "‼️‼️‼️SPOILER‼️‼️‼️ I mean definitely gave me the creeps that’s for sure. which made me think I do not like it hehe, so I suppose it did its job. But “Bear” was just sick in the head BAD bc WHYYYYY are we not telling anybody what you did??? so we can get Nikki out of this horrible horrible predicament you put her in? I mean honestly, poor Nikki— only one alive to deal with the repercussions. If she had any sense left in her after that drama, she’d just off it right then and there too."
+    },
+    {
+      "slug": "obsession-2025",
+      "perfil": "aclamado",
+      "bucket": "medianas",
+      "id": "viewing:1487753128",
+      "nivel": 3.0,
+      "n_chars": 195,
+      "texto": "- nikki actress was oscar worthy - genuinely traumatized me i couldn’t watch i was watching the wall ngl - i couldn’t sleep fr i was freaked - freaked out is a good way to describe the experience"
+    },
+    {
+      "slug": "obsession-2025",
+      "perfil": "aclamado",
+      "bucket": "medianas",
+      "id": "viewing:1487751797",
+      "nivel": 3.0,
+      "n_chars": 539,
+      "texto": "I really liked the idea and the plot of this movie. Super creative and perfectly pulled people in. The acting is great, especially from Nikki’s actress. My biggest complaint with the movie is that it felt too predictable. Every plot point I felt I could see coming from a mile away. Usually, I don’t care enough to even think to be able to predict something that will happen next because I’m so invested in the movie, but I just never got to that point with the film. In all truth, for the hype this movie had, it’s a little disappointing."
+    },
+    {
+      "slug": "obsession-2025",
+      "perfil": "aclamado",
+      "bucket": "medianas",
+      "id": "viewing:1487748950",
+      "nivel": 3.0,
+      "n_chars": 163,
+      "texto": "Piglet in booties situation but I just am tired of people using entrapped, hysterical women as a mechanism to make a statement, even if that statement is pro-women"
+    },
+    {
+      "slug": "obsession-2025",
+      "perfil": "aclamado",
+      "bucket": "medianas",
+      "id": "viewing:1487743469",
+      "nivel": 3.0,
+      "n_chars": 371,
+      "texto": "A Inde Navarrette merece um Oscar pela atuação, porque ela carrega o filme nas costas. Dito isso... o plot é basicamente \"nunca confie em um homem tímido\". O cara preferiu fazer uma mandinga pra conquistar a menina em vez de, sei lá, tentar puxar assunto igual uma pessoa normal. Fala sério. Dá pra rir e se irritar ao mesmo tempo. Não é ruim, mas também não é tudo isso."
+    },
+    {
+      "slug": "obsession-2025",
+      "perfil": "aclamado",
+      "bucket": "medianas",
+      "id": "viewing:1487676134",
+      "nivel": 3.0,
+      "n_chars": 365,
+      "texto": "Lo primero que hay que marcar es la excelentísima dirección del pibe Baker. Y es tan cierto que Bear le arruinó la vida como que uno tranquilamente puede dejársela arruinar por Nikki. Toda escena donde se posa en la oscuridad se vuelve terrorífica y aunque se sabe que el terror está muy cerca de la comedia, los momentos símil Scott Pilgrim me sacaron de ambiente."
+    },
+    {
+      "slug": "obsession-2025",
+      "perfil": "aclamado",
+      "bucket": "medianas",
+      "id": "viewing:1487664722",
+      "nivel": 3.0,
+      "n_chars": 167,
+      "texto": "Medio pelo la verdad, mucho revuelo en tw, esta entretenida pero hasta ahi nomas, evidentemente el chabon es un mogolico de aquellos. Quede enamorado d Inde Navarrette"
+    },
+    {
+      "slug": "obsession-2025",
+      "perfil": "aclamado",
+      "bucket": "positivas",
+      "id": "viewing:1488163238",
+      "nivel": 3.5,
+      "n_chars": 170,
+      "texto": "Like having bpd and being in a relationship with someone who purposely triggers you and makes you feel crazy (apart from the cat thing and the Hansel and Gretel thing...)"
+    },
+    {
+      "slug": "obsession-2025",
+      "perfil": "aclamado",
+      "bucket": "positivas",
+      "id": "viewing:1488162818",
+      "nivel": 3.5,
+      "n_chars": 215,
+      "texto": "Very fun movie, great performances from actors I am unfamiliar with. Lots of questionable plot points but for a film in the horror genre that is always expected. If you watched this with your GF you are a brave man."
+    },
+    {
+      "slug": "obsession-2025",
+      "perfil": "aclamado",
+      "bucket": "positivas",
+      "id": "viewing:1488154905",
+      "nivel": 3.5,
+      "n_chars": 470,
+      "texto": "My GF will be a little mad at me rating this movie a 3.5 but I lowkey have to. I feel this movie was a little overhyped and it did not really live up to that high hype it was given. I think the movie was great but not super great. It had a great storyline and everything but it wasnt that scary and thats coming from someone with a very low scare tolerance. This movie also came out at the same time as Backrooms but I have to say I like Backrooms better than Obsession."
+    },
+    {
+      "slug": "obsession-2025",
+      "perfil": "aclamado",
+      "bucket": "positivas",
+      "id": "viewing:1488152958",
+      "nivel": 3.5,
+      "n_chars": 414,
+      "texto": "Baron had all the chance to express his love even without \"one wish willow\"but his hesitation ruined it to him ,he lost his friends and in return lost himself but never got the love he wanted ; anything beyond limit is a harmful & so is Nikki's obsession on baron few scenes were completely disgusting for my liking and acting were fantastic by both Nikki and baron love watching films which are less than 2 hours."
+    },
+    {
+      "slug": "obsession-2025",
+      "perfil": "aclamado",
+      "bucket": "positivas",
+      "id": "viewing:1488149906",
+      "nivel": 3.5,
+      "n_chars": 173,
+      "texto": "me caguei de medo dessa doida. o que mais me deixou incomodada foi ver que o bear não se incomoda em forçar a nikki a amar ele, o único incômodo foi a estranheza “excessiva”"
+    },
+    {
+      "slug": "obsession-2025",
+      "perfil": "aclamado",
+      "bucket": "positivas",
+      "id": "viewing:1488176923",
+      "nivel": 4.0,
+      "n_chars": 727,
+      "texto": "Obsession قصته عن هوس وتعلق يبدأ بشكل عادي ومع الوقت تنقلب العلاقة لشي أثقل بكثير وتدخل الشخصيات في دوامة من الشك والتوتر والضغط النفسي اللي عجبني إن الأحداث ما مب ورا بعض تمشي بهدوء وكل ما تقدمت تحس إن فيه شي مو مريح لين يبدأ الفيلم يلعب على الجانب النفسي بشكل أقوى Inde Navarrette كانت جامده في الدور وتقمصها للشخصية من أكثر الأشياء اللي رفعت الفيلم عندي تحس إنها فاهمة الشخصية ومتمكنة منها بشكل يخليك تنغمس معها والرعب النفسي هنا هو نقطة القوة عندي ما يعتمد على التخويف المباشر قد ما يخليك متوتر ومشكك طول الوقت وهذا النوع من الرعب يعجبني مرره وتحس طول الفلم على اعصابك ومو مرتاح لاي لقطه او حدث بصراحة قصة وتمثيل وأحداث ورعب نفسي كلها اجتمعت بشكل ممتاز جداً من ناحية عمل مبتدئ جداً رهيب والمخرج والاستديو كلهم مبدعين 4/5 ⭐️"
+    },
+    {
+      "slug": "obsession-2025",
+      "perfil": "aclamado",
+      "bucket": "positivas",
+      "id": "viewing:1488173013",
+      "nivel": 4.0,
+      "n_chars": 847,
+      "texto": "I know I know, late but still great 😉 I’ve been meaning to watch this for the longest time and when I finally did it felt so meta watching this with all the buzz and spoilers in my head. It felt like I was already so familiar with what I was about to see. It felt like watching something you’ve already seen and unfortunately because of that I feel like I robbed myself of experiencing that shock and awe firsthand but nevertheless, there were still a bunch of sequences and parts of the film that completely shocked me, I think bear turning around and seeing the door ducked taped was so original and clever I really loved that part, I mean in general I see why this was and is still so successful. with the little that they had, they made something that can stand up to all these big production movies made by these big studios, w mog mr barker."
+    },
+    {
+      "slug": "obsession-2025",
+      "perfil": "aclamado",
+      "bucket": "positivas",
+      "id": "viewing:1488166967",
+      "nivel": 4.0,
+      "n_chars": 221,
+      "texto": "\"Now, Amortentia doesn't create actual love—that would be impossible. But it does cause powerful infatuation or obsession, and for that reason... it is probably the most dangerous potion in this room.\" ~Professor Slughorn"
+    },
+    {
+      "slug": "obsession-2025",
+      "perfil": "aclamado",
+      "bucket": "positivas",
+      "id": "viewing:1488165922",
+      "nivel": 4.0,
+      "n_chars": 336,
+      "texto": "Claro ejemplo de cómo el deseo más profundo puede convertirse rápidamente en una pesadilla. Obsession nos trae una trama diferente a lo que estamos acostumbrados en el terror, y menos mal que alguien se atreve por fin a hacer una historia original en este género. Porque seamos sinceros, nada da más miedo que una novia tóxica y celosa."
+    },
+    {
+      "slug": "obsession-2025",
+      "perfil": "aclamado",
+      "bucket": "positivas",
+      "id": "viewing:1488165864",
+      "nivel": 4.0,
+      "n_chars": 261,
+      "texto": "Pqp que filme bom, eu gosto bastante que mostra que o Bear não é realmente um rapaz bom e apaixonado, e sim que quer se aproveitar da Nikki por puro desejo, o obcecado na verdade é ele. É incrível que eu apenas consegui ter empatia com a entidade e a Nikki real"
+    },
+    {
+      "slug": "obsession-2025",
+      "perfil": "aclamado",
+      "bucket": "positivas",
+      "id": "viewing:1488155130",
+      "nivel": 4.0,
+      "n_chars": 636,
+      "texto": "I didn’t realize there was a live action film of Doki Doki. Context: wanted to find something that was as horrific and humiliating as my fantasy baseball elimination. Couldn’t but I guess this will suffice. Pirated I did watch this knowing it was low budget and directed by a YouTuber, but I don’t say this as some form of concession or negative quality. Instead, you can see how the director cleverly orchestrates this “careful what you wish for” tale without requiring flashy effects or complicated lore. This is what makes horror films so popular right now; storytellers can entertain an audience without as many financial obstacles."
+    },
+    {
+      "slug": "obsession-2025",
+      "perfil": "aclamado",
+      "bucket": "positivas",
+      "id": "viewing:1488153568",
+      "nivel": 4.0,
+      "n_chars": 396,
+      "texto": "Açık konuşmam gerekirse sonunu daha iyi beklemiştim nikki çubuğu 1-2 saniye sonra kırsaydı ve ölen kişi bear olmasaydı daha iyi olurdu çünkü olan yine nikki ye oldu cesetlerle normale dönmüş şekilde kaldı tek başına takıntılı olan nikki tarafını gördüğümüz kadar sanki ibre tersine dönmüş halde bearın nikki ye saplantılı olduğu şekil görseydik daha çok tatmin olurdum ama izlenir saran bi filmdi"
+    },
+    {
+      "slug": "obsession-2025",
+      "perfil": "aclamado",
+      "bucket": "positivas",
+      "id": "viewing:1488151967",
+      "nivel": 4.0,
+      "n_chars": 268,
+      "texto": "SUMPAAHHH NIK GUE JUGA TAKUT LIAT LU NIK NIKK gue mikirnya kalo di konoha kita ini one wish willow kalo wish nya kaya si bear gini setara pelet ga sih. bayangin lu suka sama org terus lu pelet ehhh kelakuannya malah kaya si niki ini, aduhh mampus deh kata gue hahahaha"
+    },
+    {
+      "slug": "obsession-2025",
+      "perfil": "aclamado",
+      "bucket": "positivas",
+      "id": "viewing:1488150353",
+      "nivel": 4.0,
+      "n_chars": 257,
+      "texto": "me gusto. buena película, ella me dio mucha pena pero me alegra que haya un consenso social sobre la culpa de él. otra cosa a destacar es que en el final habían pensado que ella se mate pero me pareció mucho más crudo que quede viva y consciente. bien hecho"
+    },
+    {
+      "slug": "obsession-2025",
+      "perfil": "aclamado",
+      "bucket": "positivas",
+      "id": "viewing:1488140135",
+      "nivel": 4.0,
+      "n_chars": 1693,
+      "texto": "Obsessão é um filme eu não entendo como o pessoal fala que é ruim, o único motivo plausível pra mim por pessoal não gostar é só questão de opinião mesmo, por que devemos concordar que o filme é muito bem feito. A fotografia é muito bonita e consegue criar uma sensação constante de desconforto, usando bem a iluminação e os enquadramentos para acompanhar o clima cada vez mais intenso da história. A trilha sonora talvez seja uma das melhores que eu já vi, principalmente pelo fato de tocar forever no final mas tirando isso as outras músicas também merece muito destaque. Ela ajuda bastante a construir a tensão e, em vários momentos, consegue deixar cenas comuns muito mais inquietantes. É aquele tipo de trilha que realmente contribui para a experiência do filme, em vez de simplesmente estar ali no fundo. A atuação da Inde Navarrette foi outro ponto que gostei bastante. Ela consegue transmitir muito bem as emoções da personagem, principalmente nos momentos em que a situação começa a fugir do controle. Para mim, é uma das melhores coisas do filme. Apesar disso, acho que o roteiro poderia desenvolver algumas situações e personagens um pouco melhor. Em certos momentos, senti que o filme poderia ir mais fundo nas ideias que apresenta, e o ritmo também oscila um pouco. Outro ponto que eu não gostei no filme é uma cena específica que o Ian deseja 1 bilhão de dólares e começa a cair rios de dinheiro, eu simplesmente odiei essa cena, pra mim acabou com clima da cena, considerando que o filme tava quase no final. Mesmo com esses problemas, Obsessão funciona muito bem como um suspense psicológico, principalmente por sua estética, sua trilha sonora e pela atuação da Inde Navarrette."
+    },
+    {
+      "slug": "obsession-2025",
+      "perfil": "aclamado",
+      "bucket": "positivas",
+      "id": "viewing:1488139553",
+      "nivel": 4.0,
+      "n_chars": 195,
+      "texto": "E é tão bom que chega ser nojento, doentio e perturbador. Me deu ódio. É sempre um homem. E esse filha da puta ainda fica perguntando “você gosta de mim?” Caralho, vsfd, olha a merda que você fez"
+    },
+    {
+      "slug": "obsession-2025",
+      "perfil": "aclamado",
+      "bucket": "positivas",
+      "id": "viewing:1488136132",
+      "nivel": 4.0,
+      "n_chars": 441,
+      "texto": "Okay so I hate horror movies, can’t do them, they freak me out, but all my friends were telling me to watch Obsession. So I did, now personally I hated it, never would watch it again but that’s only because I really can’t do horror movies. Now looking at it without personal emotion and more as a filmmaker it’s a great film and really well done. Even if you don’t like horror movies I would 100% recommend this movie to at least watch once."
+    },
+    {
+      "slug": "obsession-2025",
+      "perfil": "aclamado",
+      "bucket": "positivas",
+      "id": "viewing:1488132772",
+      "nivel": 4.0,
+      "n_chars": 337,
+      "texto": "I love a horror movie that is super peculiar and unusual and this definitely was! I love how unsettling and uncomfortable certain scenes were and the theme of love and obsession throughout the whole thing really made the storyline so much more intriguing! I feel like there are so many little hidden easter eggs which I also really enjoy"
+    },
+    {
+      "slug": "obsession-2025",
+      "perfil": "aclamado",
+      "bucket": "positivas",
+      "id": "viewing:1488127656",
+      "nivel": 4.0,
+      "n_chars": 405,
+      "texto": "tiktok me arruinó la película, ya había visto la mitad de las escenas que daban miedo y no sentí nada joder me autospoilee, me imagino que si la ves por primera vez sin saber nada es de terror de cojones se nota que salió 2 pesos pero ta buena igual la recomiendo, el bear igual es bastante estúpido un poco te da bronca que sea tan pelotudo 8/10 ksyo no me pareció la obra de arte moderno que dicen x ahí"
+    },
+    {
+      "slug": "obsession-2025",
+      "perfil": "aclamado",
+      "bucket": "positivas",
+      "id": "viewing:1488178128",
+      "nivel": 4.5,
+      "n_chars": 169,
+      "texto": "Un horror fresco di come non se ne vedono da un po'. L'ansia viene costruita con maestria, lentamente. La vera forza sta nel dipengere l'errore come una normale pulsione"
+    },
+    {
+      "slug": "obsession-2025",
+      "perfil": "aclamado",
+      "bucket": "positivas",
+      "id": "viewing:1488164465",
+      "nivel": 4.5,
+      "n_chars": 211,
+      "texto": "Oğlan maldı MAL MAL MAL QIZIN HƏYATINI MƏHV ETDİ GİCOĞLU GİC YENƏ BİR XY GÖZƏL BİR QADININ HƏYATINI MƏHV EDİR BÜTÜN XYLƏR BU QƏDƏRDİ F*CK'EM I H@te these men, who are not confident and make women's life hard!!!!"
+    },
+    {
+      "slug": "obsession-2025",
+      "perfil": "aclamado",
+      "bucket": "positivas",
+      "id": "viewing:1488157502",
+      "nivel": 4.5,
+      "n_chars": 529,
+      "texto": "I would say a great movie indeed. Truly loves upto the title of a neo-noir horror movie. Rather than the conventional things you would expect in a horror movie, this one brings a blend of easy-to-relate life events with horror circumstances. Enough of real good jump scares to call it a scary movie. I love it how it also in a way portrays a toxic relationship in real life in a more horror tinged fashion. Loved the cinematography and how they have used the dim settings to create an eerie environment. Altogether a great watch."
+    },
+    {
+      "slug": "obsession-2025",
+      "perfil": "aclamado",
+      "bucket": "positivas",
+      "id": "viewing:1488151615",
+      "nivel": 4.5,
+      "n_chars": 678,
+      "texto": "um pouco repetitivo, mas não à exaustão. há tempos não sentia tanto medo c um filme. de certa forma ele inaugura uma nova fase do terror, ao menos no q diz respeito à sua montagem e ao seu tema: não se trata do fantastico e do sobrenatural, mas da atuação, uso de luz e sombra - o tema do duplo - e prolongamento das cenas. qnd niki, por vezes, volta ao seu eu original é absolutamente assustador. efeitos práticos muito adequados, bem feitos. o discurso da cena final, a coragem do filme \"fazer oq tem q ser feito\" sem precisat recorrer ao q o mercado cinematográfico exige. Incrivel. Original. - Obsecada- por ele. Meu desejo seria não o ter visto p me impressionar novamente."
+    },
+    {
+      "slug": "obsession-2025",
+      "perfil": "aclamado",
+      "bucket": "positivas",
+      "id": "viewing:1488140045",
+      "nivel": 4.5,
+      "n_chars": 424,
+      "texto": "Im not a big horror movie guy but this was definitely something else. It was done so well and it was so creepy at times. Not to mention the foreshadowing in the beginning. Inde did a fantastic job acting between two different personas, it actually felt like two different people. What I liked the most was all the stuff going on in the background with Nicky. If I ever made a horror movie thats how I always wanted to do it."
+    },
+    {
+      "slug": "obsession-2025",
+      "perfil": "aclamado",
+      "bucket": "positivas",
+      "id": "viewing:1488130637",
+      "nivel": 4.5,
+      "n_chars": 420,
+      "texto": "Utterly unnerving and horrific, deeply uncomfortable the entire way through. Inde Navarrette's acting and facial range was the real highlight, just felt totally gutwrenchingly out of control and fake in the nightmare puppet that was Wish Nikki. I was under the impression, due to the amount of discourse surrounding this film, that the SA and abusive themes would be subtext in the film but they are very much just text."
+    },
+    {
+      "slug": "obsession-2025",
+      "perfil": "aclamado",
+      "bucket": "positivas",
+      "id": "viewing:1488126865",
+      "nivel": 4.5,
+      "n_chars": 158,
+      "texto": "La segunda mejor película que he visto en 2026. La primera, es la anterior visualización de Obsession. Inde Navarrete, eres la mejor. Si lees esto: te quiero."
+    },
+    {
+      "slug": "obsession-2025",
+      "perfil": "aclamado",
+      "bucket": "positivas",
+      "id": "viewing:1488095222",
+      "nivel": 4.5,
+      "n_chars": 241,
+      "texto": "Other reviewers tell it better but I'll say if you like your women being wild and unhinged in the face of the patriarchy which makes men think twice next time about mansplaining when you are having a nice time, then this is your movie hunny."
+    },
+    {
+      "slug": "obsession-2025",
+      "perfil": "aclamado",
+      "bucket": "positivas",
+      "id": "viewing:1488092952",
+      "nivel": 4.5,
+      "n_chars": 415,
+      "texto": "Like Romeo & Juliet but gen-z. Highly enjoyed it, great acting, cinematography (loved the aspect ratio change from just 16:9), coloring, soundtrack and all. Might've gave me a panic attack during my second attempt of watching it (had to pause once and give it a couple of days as a cat owner), BUT it wonderfully managed to evoke emotions and feelings and thought - and that's what going to the cinema is all about."
+    },
+    {
+      "slug": "obsession-2025",
+      "perfil": "aclamado",
+      "bucket": "positivas",
+      "id": "viewing:1488178988",
+      "nivel": 5.0,
+      "n_chars": 192,
+      "texto": "Cómo dijo una amiga mía: es impresionante q Oso tenga el pelo roñoso durante toda la película JAJAJAHAJA Osea literal q tiene q olerle el pelo a rosquillas macho Por lo demás muy buena peli xd"
+    },
+    {
+      "slug": "obsession-2025",
+      "perfil": "aclamado",
+      "bucket": "positivas",
+      "id": "viewing:1488176561",
+      "nivel": 5.0,
+      "n_chars": 173,
+      "texto": "Aww, poor Nikki. I badly need her POV right now, cause there's a scene where the real Nikki was out there for a seconds. - and yeah, sorry I'm so late getting into this hehe"
+    },
+    {
+      "slug": "obsession-2025",
+      "perfil": "aclamado",
+      "bucket": "positivas",
+      "id": "viewing:1488167249",
+      "nivel": 5.0,
+      "n_chars": 406,
+      "texto": "I've thought a lot on why this film manages to frighten its audience, obviously the way Nikki acts is hugely exaggerated but there is a sense of realness underneath the psychotic mannerism which almost feels relatable. An absolute rollercoaster of a movie where at times it comes across as sweet and cutesy then immediately the screams, then immediately the taped front door, then immediately the brick etc"
+    },
+    {
+      "slug": "obsession-2025",
+      "perfil": "aclamado",
+      "bucket": "positivas",
+      "id": "viewing:1488163373",
+      "nivel": 5.0,
+      "n_chars": 230,
+      "texto": "It was SO GOOD like i genuinely loved it , it was also really disturbing which i was pleased with as honestly most horror movies never seem to be disturbing or scary really so yeah it was just over all great I hate bear tho…👀👀 Ok…"
+    },
+    {
+      "slug": "obsession-2025",
+      "perfil": "aclamado",
+      "bucket": "positivas",
+      "id": "viewing:1365791202",
+      "nivel": 5.0,
+      "n_chars": 463,
+      "texto": "Few horror movies have stuck with me like this one. Even months after watching it, I still find myself thinking about it. The slow (and then very fast) spiral of circumstances, the rapidly shifting perspective the audience has on the protagonist, and of course, the standout performance from Inde Navarrette. The film is claustrophobic in a way that is hard to describe, and it revels in moments where you KNOW what is going to happen; you're just waiting for it."
+    },
+    {
+      "slug": "obsession-2025",
+      "perfil": "aclamado",
+      "bucket": "positivas",
+      "id": "viewing:1488154512",
+      "nivel": 5.0,
+      "n_chars": 350,
+      "texto": "This was an insanely good movie. Horror has never been done like this. It’s so old in its concept yet so modern in its execution. I would say that this could never be replicated authentically again. I understand the hype my only regret is not having watching this sooner. Great movie, great movie, recommend it to all. This shit leaves you terrified."
+    },
+    {
+      "slug": "obsession-2025",
+      "perfil": "aclamado",
+      "bucket": "positivas",
+      "id": "viewing:1488146713",
+      "nivel": 5.0,
+      "n_chars": 378,
+      "texto": "Obsession was worth of all the hype. It was excellently written and well-executed film which had biting and interesting notions about relationships and toxic love. The movie was gripping and it had some very disturbing but also darkly funny moments. Acting was good, but the real star was Inde Navarrette, who was astounding as Nikki (yes, she really deserves Oscar that role!)."
+    },
+    {
+      "slug": "obsession-2025",
+      "perfil": "aclamado",
+      "bucket": "positivas",
+      "id": "viewing:1488144989",
+      "nivel": 5.0,
+      "n_chars": 297,
+      "texto": "Súper incómoda de ver, la oscuridad y la constante media luz son parte del ambiente. Me encantó como trata la monstruosidad que implica robarle a la otra persona su derecho a elegir(te). Ambas actuaciones están a la altura del guión, pero Inde Navarrete se lleva todo con su enorme interpretación."
+    },
+    {
+      "slug": "obsession-2025",
+      "perfil": "aclamado",
+      "bucket": "positivas",
+      "id": "viewing:1488137055",
+      "nivel": 5.0,
+      "n_chars": 221,
+      "texto": "Best horror movie I have ever watched, the movie was not silly but it did not take it self too serious and had some very exciting scenes. All the scary scenes were done in a tasteful manner and were very well thought out."
+    },
+    {
+      "slug": "obsession-2025",
+      "perfil": "aclamado",
+      "bucket": "positivas",
+      "id": "viewing:1488134618",
+      "nivel": 5.0,
+      "n_chars": 231,
+      "texto": "Probably one of the scariest films I have ever had the displeasure of watching. I was uncomfortable throughout the entire viewing. I’ve almost never had a death hit as hard as Sarah’s. I never want to watch this movie again. 10/10."
+    },
+    {
+      "slug": "obsession-2025",
+      "perfil": "aclamado",
+      "bucket": "positivas",
+      "id": "viewing:1488126117",
+      "nivel": 5.0,
+      "n_chars": 248,
+      "texto": "gra is behhh LECHE KA BEAR SINIRA MO BUHAY NI NIKKI lam mo yon walang monsters or such like katulad sa mga typical horror movies pero grabe sobrang nakakatakot to tbh lang.... ramdam ko bawat scenes na lalabas si nikki or may gagawin siyang kakaiba"
+    },
+    {
+      "slug": "obsession-2025",
+      "perfil": "aclamado",
+      "bucket": "positivas",
+      "id": "viewing:1488122853",
+      "nivel": 5.0,
+      "n_chars": 407,
+      "texto": "O que tinha tudo pra ser um filme simples de uma mulher possuída se tornou um filme do caralho e o exemplo perfeito de que tentar forçar o amor e controlar a vontade do outro destrói a autonomia individual e resulta em tragédia. A morte do Bear é apenas uma consequência de ter fudido com a vida de diversas pessoas próximas dele. Um exemplo prático de falta de consentimento e principalmente egoísmo causa."
+    },
+    {
+      "slug": "obsession-2025",
+      "perfil": "aclamado",
+      "bucket": "negativas",
+      "id": "viewing:1487360942",
+      "nivel": 0.5,
+      "n_chars": 178,
+      "texto": "Stupid, super american and zero care for details. The fact you are all loving this really shows how much you settle for films that give you nothing. Could have been good, though."
+    },
+    {
+      "slug": "obsession-2025",
+      "perfil": "aclamado",
+      "bucket": "negativas",
+      "id": "viewing:1487264659",
+      "nivel": 0.5,
+      "n_chars": 234,
+      "texto": "Rekommenderar inte till någon! Äckligaste skiten jag någonsin har sett. Fick en ohälsosam hjärtattack för både mig och hela min familj efter en jump-scare vid bil rutan. Kolla inte på den och varna folk i din närhet från den! //FF Out"
+    },
+    {
+      "slug": "obsession-2025",
+      "perfil": "aclamado",
+      "bucket": "negativas",
+      "id": "viewing:1486912249",
+      "nivel": 1.5,
+      "n_chars": 473,
+      "texto": "Ponto pra atuação e fotografia, gostei do trabalho psicótico com a personagem mas a história em si não tem nada de novo. É o mesmo grupinho de amigos burros, com uma situação idiota virando uma bola de neve por decisões que NINGUÉM jamais tomaria. No fim o grupo todo morre e alguém sobrevive, muita bizarrice visual e controle sonoro, vocês não cansam do mesmo de sempre? Já desisti do terror a muitos anos. E pelo amor de deus, não existe discussão de que a culpa é DELE!"
+    },
+    {
+      "slug": "obsession-2025",
+      "perfil": "aclamado",
+      "bucket": "negativas",
+      "id": "viewing:1486903868",
+      "nivel": 1.5,
+      "n_chars": 163,
+      "texto": "What the actual fuck, why am I watching a woman stood in a pile of her own faeces and vomit! As weird films go this is right up there, would not recommend, unless👀"
+    },
+    {
+      "slug": "obsession-2025",
+      "perfil": "aclamado",
+      "bucket": "negativas",
+      "id": "viewing:1486745718",
+      "nivel": 2.0,
+      "n_chars": 215,
+      "texto": "It was kind of on the nose and felt very long. I swear I've heard that exact premise in at least fifty other places, and I just feel like having a good message doesn't make a movie good especially if it's unoriginal"
+    },
+    {
+      "slug": "obsession-2025",
+      "perfil": "aclamado",
+      "bucket": "medianas",
+      "id": "viewing:1487528785",
+      "nivel": 2.5,
+      "n_chars": 193,
+      "texto": "Grim and excessive, I don't understand all the hype and praise this movie is getting. Maybe I hated it because it spent 90 minutes triggering my anxiety in a way only \"Mother!\" has done before?"
+    },
+    {
+      "slug": "obsession-2025",
+      "perfil": "aclamado",
+      "bucket": "medianas",
+      "id": "viewing:1487525193",
+      "nivel": 2.5,
+      "n_chars": 457,
+      "texto": "To force someone to be blindly in love with you then act like they are the crazy one is interesting. The film seemed like just a lot of SA which I wasn’t expecting and makes me wonder if I missed the point of the movie. Also the interactions between Bear and Sarah and Ian seemed uncanny to me. I enjoyed some parts of the movie and that scene where Nikki smashed in Sarah’s face gave me a fright lol but I don’t think I wanna watch this again anytime soon."
+    },
+    {
+      "slug": "obsession-2025",
+      "perfil": "aclamado",
+      "bucket": "medianas",
+      "id": "viewing:1487206921",
+      "nivel": 2.5,
+      "n_chars": 1967,
+      "texto": "I would give Obsession 2.5 out of 5 stars . Overall, I found the movie to be pretty strange, and while I thought the basic concept was interesting, I did not think the way the story played out worked very well. The idea behind the movie had a lot of potential and could have made for a really interesting psychological story, but I felt that the execution made the movie confusing and, at times, difficult to take seriously.One of my biggest problems was the story. I thought the plot had some interesting ideas, but the way everything developed felt somewhat forced and unrealistic. Instead of building tension naturally, some of the events felt like they were happening simply to move the story forward. I also felt that certain parts of the movie could have been developed more because the characters' decisions did not always make sense to me.The acting was okay overall, but it was not something that stood out to me. There were some good performances and believable moments, but I did not think the acting was strong enough to make up for some of the problems with the story. Because the movie relies so much on its characters and their relationships, I think stronger performances and more developed characters could have made the story much more effective.That being said, I do think the movie deserves some credit for its concept. There were moments where I could see what the filmmakers were trying to accomplish, and I think the idea could have worked really well with a different approach. The movie had the potential to be much more suspenseful and psychologically interesting than it ended up being.Overall, I wasn't a huge fan of Obsession . I thought the concept was cool, but the execution, story, and some of the acting kept me from really getting invested in the movie. There were definitely some interesting ideas, but I don't think they were developed as well as they could have been. For those reasons, I would give Obsession 2.5 out of 5 stars."
+    },
+    {
+      "slug": "obsession-2025",
+      "perfil": "aclamado",
+      "bucket": "positivas",
+      "id": "viewing:1488138133",
+      "nivel": 3.5,
+      "n_chars": 189,
+      "texto": "Really good I liked how realistic it felt cinematically . It didn’t give like 2026 Netflix movie lighting or anything like that so it made it a lot creepier but lowkey could’ve been scarier"
+    },
+    {
+      "slug": "obsession-2025",
+      "perfil": "aclamado",
+      "bucket": "positivas",
+      "id": "viewing:1488137287",
+      "nivel": 3.5,
+      "n_chars": 762,
+      "texto": "Nikki te entiendo, a mí ni me hicieron un hechizo pero me enamoré de tal manera la cual me hizo entrar en locura extrema. Hubiera dado mi vida por él aunq él no me quisiera. Me vi reflejada en nikki. Bear es tan miedoso no fue capaz de pegarse un 🔫 tuvo q tomarse las pastillas para morir lentamente. El en el fondo sabía q nikki no era para él era su otra amiga. Y el amigo de Bear me caía tannnnn mal él estaba para mi gusto enamorado de nikki pero bueno. A sido una buena película la cual retracta el que pedir un deseo es muy poderoso y si no es para ti no lo fuerces. Me da una pena que nikki vaya a ir a la cárcel por culpa de Bear. Me encantó la actuación de inde Navarrete y su llanto al final cuando la verdadera nikki vuelve en sí es tannn desgarrador."
+    },
+    {
+      "slug": "obsession-2025",
+      "perfil": "aclamado",
+      "bucket": "positivas",
+      "id": "viewing:1487453400",
+      "nivel": 4.0,
+      "n_chars": 179,
+      "texto": "الصراحه ماتوقعت الفيلم راح يكون في هذي الشكل القصه اسطوريه و التنفيذ رهيب و الرعب نفسه كان غريب و جديد و غير عن المخرج الي دخلني ب جوء الفليم من البدايه و حسسني ب الرعب النفسي صدق"
+    },
+    {
+      "slug": "obsession-2025",
+      "perfil": "aclamado",
+      "bucket": "positivas",
+      "id": "viewing:1487452777",
+      "nivel": 4.0,
+      "n_chars": 357,
+      "texto": "A verdade é que o Bear e o verdadeiro obsessor nessa história. Ele fez com que ela ficasse nesse estado, e mesmo a Nikki verdadeira implorando pra ele matá-la, porque ela não aguentava mais; ele simplesmente virou as costas e foi embora. E além de tudo ele se matou e deixou a mulher pra trás pra resolver todas as merdas que se desenrolaram por culpa dele."
+    },
+    {
+      "slug": "obsession-2025",
+      "perfil": "aclamado",
+      "bucket": "positivas",
+      "id": "viewing:1487452767",
+      "nivel": 4.0,
+      "n_chars": 176,
+      "texto": "If someone walks backwards and starts spouting Latin the way she did then I’m offing myself then and there. Genuinely good jump scares and felt uncomfortable for the whole film"
+    },
+    {
+      "slug": "obsession-2025",
+      "perfil": "aclamado",
+      "bucket": "positivas",
+      "id": "viewing:1487452010",
+      "nivel": 4.0,
+      "n_chars": 191,
+      "texto": "Obsessão é o básico bem feito. É o simples que funciona. Uma trama muito bem desenvolvida do início ao fim. Excelente atuação de Inde Navarrete (Nikki) e uma excelente direção de Curry Baker."
+    },
+    {
+      "slug": "obsession-2025",
+      "perfil": "aclamado",
+      "bucket": "positivas",
+      "id": "viewing:1487484194",
+      "nivel": 5.0,
+      "n_chars": 707,
+      "texto": "Curry Baker retira todo o aspecto mágico deste tipo de estória e leva-a para o mais puro desconforto e horror, com o auxílio da fotografia de Taylor Clemons que faz bom uso das sombras e do desfoque para criar a sugestão, apresentando uma \"enfeitiçada\" condenada a ser outra pessoa para servir ao desejo de um protagonista que aparenta ser um cara legal, porém, Curry consegue mostrar-nos uma perversidade neste tipo de comportamento que vai piorando a cada cena. Além disso, todo o encadeamento de eventos levam ao horror graças à interpretação da Inde Navarrette, sua variedade no tom de voz, suas expressões e sua fisicalidade causam um sério medo no telespectador. E o final é um dos melhores do gênero."
+    },
+    {
+      "slug": "obsession-2025",
+      "perfil": "aclamado",
+      "bucket": "positivas",
+      "id": "viewing:1487473389",
+      "nivel": 5.0,
+      "n_chars": 286,
+      "texto": "honestly we all knew Bear was a bitch, you smelled it within the first 5 mins. but Ian on the other hand, this movie was good but him just walking in and being like “yeah, the wish worked” after already witnessing it at his place and getting shot immediately was such a worthless scene."
     }
   ]
 }

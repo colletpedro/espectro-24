@@ -195,14 +195,13 @@ contra a regra de ambiente do protocolo.
 ### C12. `anthropic_client_call` sem retentativa
 O terceiro ponto de contato do adaptador, registrado e não consertado.
 
-### C13. `obsession-2026`: página/reviews do Letterboxd misturam homônimos
-O dono definiu que o objeto editorial é o longa de Curry Barker
-(`tmdb_id=1339713`), e a ficha tem override manual auditável. A amostra atual,
-porém, contém ao menos uma review explicitamente sobre o curta e outras sobre o
-longa na mesma página. A guarda resolve a identidade da FICHA; não separa o
-corpus de recepção. Decidir se o ruído é aceito, filtrado ou se existe outra
-página canônica continua aberto antes de tratar esse filme como referência de
-qualidade da análise.
+### C13. FECHADA em v1.9.50 — `obsession-2026` era a página do curta
+A página canônica do longa existe em `obsession-2025` e declara diretamente
+o `tmdb_id=1339713`. O curta saiu do catálogo, da amostra e do consenso; seu
+bruto continua preservado apenas para auditoria e é excluído por código. O
+longa foi recoletado e todos os estágios dependentes das reviews foram refeitos.
+O link público agora aponta para as reviews do longa. O override de ficha, que
+mascarava a divergência entre corpus e ficha, foi removido.
 
 ---
 

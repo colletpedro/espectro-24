@@ -441,7 +441,7 @@ git checkout -- frontend/js/data.js
 | `the-godfather` (2/5/93) | o caso de PROPORÇÃO | abre por **Vale a pena · ~93% das notas**; a outra coluna traz **~2% das notas · amostra pequena** e NÃO encolhe (3 condições, mesmo leiaute) | ✅ |
 | `cats-2019` (86/7/7) | distribuição invertida | abre por **Talvez evite · ~86% das notas** | ✅ |
 | `napoleon-2023` (22/45/33) | `peso_meio` | linha acima das colunas: *"~45% das notas ficaram no meio-termo — sem coluna própria aqui."*; colunas ~33% e ~22% | ✅ |
-| `obsession-2026` (n=5/6/8) | piso de §3[C3] | `rotulo_forca` ausente nas seis condições (a proveniência mostra só o tema, sem quantificador); a página traz `.verdict-absent` e nenhum `.verdict` | ✅ |
+| `obsession-2025` (n=40/40/40) | migração de identidade do corpus | ficha de Curry Barker; link abre `/film/obsession-2025/reviews/`; três grupos completos; veredito e sete condições presentes | ✅ |
 | `perfect-days-2023` (2/7/92) | caso normal | duas colunas, ~92% / ~2%, sem `peso_meio` | ✅ |
 | `hereditary` (6/14/80) | um filme do eixo `expectativa` | condição de hype presente, com proveniência *"muitos · Expectativa vs. realidade (hype)"* | ✅ |
 

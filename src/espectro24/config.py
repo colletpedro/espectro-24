@@ -13,7 +13,7 @@ from fractions import Fraction
 # mostrou "1.6.0 → 1.9.0" quando deveria ser "1.6.0 → 1.9.11"). Os JSONs
 # já publicados NÃO foram reescritos: carimbo corrigido depois do fato não
 # é evidência de nada — mesma política de `VERSAO_COLETOR` abaixo.
-SPEC_VERSION = "1.9.49"
+SPEC_VERSION = "1.9.50"
 
 BASE = "https://letterboxd.com"
 
@@ -540,9 +540,9 @@ MARGEM_LEI_K2 = Fraction(*MARGEM_LEI_K2_PAR)
 
 # Piso de amostra (§2.5): abaixo disto o estado `contraste` NÃO é publicado —
 # a chave some do bloco, e ausente NÃO é `valorativo`. Em n < 10 a medição não
-# distingue os dois estados (`obsession-2026`, n = 5/6/8, tem P(ruído) = 0,976
-# sob a margem antiga), e publicar qualquer um dos dois seria trocar uma
-# afirmação sem lastro por outra.
+# distingue os dois estados (o antigo corpus incorreto de `obsession-2026`,
+# n = 5/6/8, tinha P(ruído) = 0,976 sob a margem antiga), e publicar qualquer
+# um dos dois seria trocar uma afirmação sem lastro por outra.
 MARGEM_N_MINIMO = 10
 
 # --- Configuração de produção da PROSA (narrador §D2 + editor §E2) — v1.6.0 ---

@@ -41,7 +41,7 @@ def _alm():
 
 
 SLUG_MUDA = "hereditary"          # tematico -> valorativo, regenera
-SLUG_SEM_ESTADO = "obsession-2026"  # n = 5/6/8, fica sem estado
+SLUG_SEM_ESTADO = "fixture-sem-estado"
 
 
 @pytest.fixture
@@ -111,14 +111,37 @@ def sandbox(tmp_path, alm, monkeypatch):
     pré-estado**, para o harness escrever sem tocar no repositório e para a
     migração continuar sendo exercitada depois de já ter rodado."""
     for slug in (SLUG_MUDA, SLUG_SEM_ESTADO):
-        origem = RAIZ / "resultado" / f"{slug}.json"
+        slug_origem = "obsession-2025" if slug == SLUG_SEM_ESTADO else slug
+        origem = RAIZ / "resultado" / f"{slug_origem}.json"
         if not origem.exists():
-            pytest.skip(f"{slug} não publicado neste checkout")
+            pytest.skip(f"{slug_origem} não publicado neste checkout")
         doc = json.loads(origem.read_text(encoding="utf-8"))
+        doc["slug"] = slug
         (tmp_path / f"{slug}.json").write_text(
             json.dumps(_rebaixar_para_pre_lei(doc), ensure_ascii=False,
                        indent=2), encoding="utf-8")
     monkeypatch.setattr(alm, "RESULTADO_DIR", tmp_path)
+
+    bloco_novo_real = alm._bloco_novo
+
+    def bloco_novo(slug, doc):
+        if slug != SLUG_SEM_ESTADO:
+            return bloco_novo_real(slug, doc)
+        bloco = copy.deepcopy(doc["eixos"])
+        bloco.pop("contraste", None)
+        bloco["margem"] = {
+            "lei": "lift^2 * n >= 2085136/1000000",
+            "constante_quadrada": [2085136, 1000000],
+            "n": 5,
+            "limiar_pp": 64.58,
+        }
+        bloco["spec_version"] = "1.9.34"
+        for linha in bloco["linhas"]:
+            for celula in linha["por_bucket"].values():
+                celula["acima_da_margem"] = False
+        return bloco
+
+    monkeypatch.setattr(alm, "_bloco_novo", bloco_novo)
     return tmp_path
 
 
@@ -279,11 +302,11 @@ def test_o_spec_version_do_FILME_nao_sobe(sandbox, alm, sem_llm):
 # (3) O filme sem estado
 # ===========================================================================
 
-def test_obsession_fica_sem_estado_e_PERDE_a_chave_veredito(sandbox, alm,
-                                                            sem_llm):
+def test_amostra_reduzida_fica_sem_estado_e_PERDE_a_chave_veredito(
+        sandbox, alm, sem_llm):
     """O caso que ninguém mais exercita depois desta versão.
 
-    `obsession-2026` tem buckets 5/6/8 — abaixo do piso de `n < 10`. A chave
+    O fixture tem n=5 — abaixo do piso de `n < 10`. A chave
     `contraste` some do bloco, e com ela o `veredito`: sem estado não há
     briefing, e sem briefing não há texto. O que a página mostra no lugar é a
     LINHA DE AUSÊNCIA, gerada no frontend (§2.5).
@@ -403,12 +426,10 @@ def test_o_catalogo_publicado_esta_sob_a_lei(alm):
     t = sorted(s for s, v in estados.items() if v == "tematico")
     sem = sorted(s for s, v in estados.items() if v is None)
     v = [s for s, x in estados.items() if x == "valorativo"]
-    assert (len(t), len(v), len(sem)) == (6, 28, 1)
+    assert (len(t), len(v), len(sem)) == (7, 28, 0)
     assert len(t) + len(v) + len(sem) == 35     # a soma que faltou uma vez
-    assert sem == ["obsession-2026"]
-    d = _j.loads((RAIZ / "resultado" / "obsession-2026.json").read_text(
-        encoding="utf-8"))
-    assert "veredito" not in d
+    assert sem == []
+    assert "obsession-2025" in t
 
 
 def test_o_plano_nao_escreve_nada(alm):

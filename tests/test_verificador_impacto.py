@@ -221,14 +221,13 @@ def test_base_da_projecao_reproduz_10_de_35(vi, corpus):
     medindo uma população que a produção não usa, o que a limitação registrada
     abaixo já dizia. O número de produção é 6 (`tests/test_eixos.py`).
 
-    `obsession-2026` sai da conta por baixo: com n=5 no menor bucket ele fica
-    abaixo do piso e `contraste` devolve `None` — nem `tematico` nem
-    `valorativo`.
+    [v1.9.50] Passa de 11 para **12**: o corpus curto de `obsession-2026`
+    sai, e o longa `obsession-2025` entra como `tematico` com buckets cheios.
     """
     base = vi._cobertura_exata(corpus)
-    assert base["n_filmes_com_algum"] == 11
+    assert base["n_filmes_com_algum"] == 12
     assert base["n_filmes"] == 35
-    assert base["contraste"]["obsession-2026"] is None
+    assert base["contraste"]["obsession-2025"] == "tematico"
 
 
 def test_base_da_projecao_reproduz_o_contraste_publicado(vi, corpus):

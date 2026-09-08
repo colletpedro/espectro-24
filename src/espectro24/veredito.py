@@ -1096,7 +1096,7 @@ def veredito_template(b: dict) -> str:
     **A correção da v1.9.21 (Entrega 6).** O ramo de um-lado-só terminava com
     a frase fixa "— um assunto que todos os grupos citam", disparada sempre
     que existia qualquer eixo com `mencoes > 0`, sem checar se a frequência
-    sustenta "todos". Medido em produção: `obsession-2026` afirmava isso a
+    sustenta "todos". Medido no antigo corpus de `obsession-2026`: afirmava a
     partir de 2 de 5 reviews (40%), num grupo que o próprio site rotula como
     amostra pequena; `eighth-grade`, com amostra completa, a partir de 13 de
     34 (38%). É a mesma classe de inflação que as v1.2.2/v1.2.3 resolveram

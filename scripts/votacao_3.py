@@ -262,10 +262,21 @@ def _consensuar(passes: list[dict[tuple, dict]], chaves: list[tuple],
 
 def cmd_consenso() -> None:
     """[Entrega 1] Junta os passes 1-3 por chave e grava o consenso — só
-    entra na saída quem tem os TRÊS passes completos."""
+    entra na saída quem pertence ao conjunto de FILMES da amostra corrente e
+    tem os TRÊS passes completos. Os arquivos de passe são históricos
+    append-only; sem esse cruzamento, um filme retirado continuaria voltando
+    ao catálogo. O filtro é por slug, não por review: a amostra recebe
+    extensões de cobertura de produção, e regenerar sua base não pode apagar
+    classificações ainda válidas de um filme ativo."""
     passes = [_ler_passe(n) for n in (1, 2, 3)]
-    chaves = sorted(set(passes[0]) & set(passes[1]) & set(passes[2]))
-    faltando = (set(passes[0]) | set(passes[1]) | set(passes[2])) - set(chaves)
+    amostra = json.loads(ARQ_AMOSTRA.read_text(encoding="utf-8"))
+    chaves_amostra = {
+        (r["slug"], r["bucket"], r["id"]) for r in amostra["reviews"]
+    }
+    slugs_amostra = {f["slug"] for f in amostra["filmes"]}
+    completas = set(passes[0]) & set(passes[1]) & set(passes[2])
+    chaves = sorted(c for c in completas if c[0] in slugs_amostra)
+    faltando = chaves_amostra - completas
     consenso = _consensuar(passes, chaves)
 
     SAIDA.mkdir(parents=True, exist_ok=True)

@@ -188,9 +188,8 @@ def montar_amostra_auditoria(universo: list[dict], rng: random.Random
       excluindo o que já saiu acima). É onde o experimento Ollama achou o
       defeito de recall — review curta dá menos texto para o modelo errar
       por falta de sinal, ou generalizar demais a partir de pouco.
-    - **6 — perfil `obscuro`** (2 por bucket, quando disponível). Só
-      `obsession-2026` qualifica — sem alocação própria, esse perfil não
-      apareceria quase nunca por sorteio puro.
+    - **6 — perfil `obscuro`** (2 por bucket, quando disponível). Na medição
+      histórica, só o corpus depois retirado de `obsession-2026` qualificava.
     - **10 — `confianca=maioria`** e **10 — `confianca=unanime`** (não
       repartidos por bucket — a dimensão de interesse aqui é a confiança do
       voto, não o bucket). É a quebra mais informativa desta rodada: se
