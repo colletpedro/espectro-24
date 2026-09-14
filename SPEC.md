@@ -2425,6 +2425,17 @@ veredito sobre um JSON existente **não** re-roda coleta, seleção, síntese,
 que rodou. Mesma política de `VERSAO_COLETOR` (§3[B']): um carimbo que não
 corresponde ao que foi executado não é evidência de nada.
 
+> **Fallback de conteúdo (2026-09-14, `ABERTO.md` C16) — `SPEC_VERSION` NÃO
+> sobe, por decisão do dono.** O fallback acrescenta só chaves OPCIONAIS
+> (`fallback_conteudo` no bucket e no bloco `eixos`, `verificacao_pendente`
+> no bloco `eixos`, `motivos_falha` na telemetria de rotulagem), ausentes
+> quando nada aconteceu; nenhum consumidor muda de comportamento e o
+> contrato do produto é o mesmo. Subir a constante faria
+> `publicar_catalogo.py` ver o catálogo inteiro como pendente — republicar
+> tudo seria custo sem retorno. **Regra:** chave aditiva, ausente por
+> default, sem mudança de contrato → `SPEC_VERSION` não sobe. Registrado
+> também ao lado da constante (`config.py`).
+
 > **Consequência registrada, não corrigida nesta versão:** o checkpoint de
 > `scripts/publicar_catalogo.py` considera um filme "publicado sob o pipeline
 > corrente" quando `spec_version == SPEC_VERSION`. Com `SPEC_VERSION` em

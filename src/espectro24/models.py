@@ -314,6 +314,10 @@ class BucketResult:
     # corrigir o problema.
     idioma_invalido: bool = False
     escopo_suspeito: bool = False
+    # [2026-09-14] Fallback de CONTEÚDO (`synthesize.recusa_de_conteudo`):
+    # `{de, para, modelo, motivo}` quando o DeepSeek recusou este bucket e a
+    # síntese foi feita pelo Gemini. `None` = nenhuma troca de provider.
+    fallback_conteudo: dict | None = None
 
     @property
     def reviews_analisadas(self) -> list[Review]:

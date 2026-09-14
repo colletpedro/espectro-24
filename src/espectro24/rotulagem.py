@@ -94,7 +94,8 @@ def rotular_bucket(bucket_nome: str, temas: list[dict],
     `livre` em tudo e marca `falhou`.
     """
     saida = {"bucket": bucket_nome, "rotulos": [], "fora_da_taxonomia": [],
-             "houve_retentativa": False, "falhou": False, "n_chamadas": 0}
+             "houve_retentativa": False, "falhou": False, "n_chamadas": 0,
+             "motivos_falha": []}
     if not temas:
         return saida
 
@@ -107,8 +108,14 @@ def rotular_bucket(bucket_nome: str, temas: list[dict],
         try:
             resposta = call(system, user, modelo)
             bruto = _parse(resposta)
-        except Exception:
+            if bruto is None:
+                saida["motivos_falha"].append("json_invalido")
+        except Exception as e:
+            # [2026-09-14] Aditivo continua aditivo — mas nunca MUDO: sem o
+            # motivo, uma recusa de conteúdo aqui viraria "falhou" e ninguém
+            # descobriria (sem fallback nesta etapa, por decisão do dono).
             bruto = None
+            saida["motivos_falha"].append(_motivo_falha(e))
         if bruto is not None:
             break
         saida["houve_retentativa"] = True
@@ -191,8 +198,21 @@ def rotular_output(output: dict, client_call: Callable | None = None,
             telemetria["fora_da_taxonomia"][nome] = r["fora_da_taxonomia"]
         if r["houve_retentativa"]:
             telemetria["houve_retentativa"].append(nome)
+        if r["motivos_falha"]:
+            # Uma entrada por tentativa que falhou — inclusive quando a
+            # retentativa salvou o bucket. Chave ausente = nenhuma falha.
+            telemetria.setdefault("motivos_falha", {})[nome] = r["motivos_falha"]
         tabela[nome] = celulas_por_eixo(r["rotulos"])
     return tabela, telemetria
+
+
+def _motivo_falha(e: BaseException) -> str:
+    """A recusa de conteúdo nomeada como tal; o resto, tipo + mensagem curta."""
+    from .synthesize import MOTIVO_RECUSA_CONTEUDO, recusa_de_conteudo
+
+    if recusa_de_conteudo(e):
+        return f"recusa_de_conteudo: {MOTIVO_RECUSA_CONTEUDO}"
+    return f"{type(e).__name__}: {str(e)[:160]}"
 
 
 # --- transporte: SEMPRE pelo adaptador (§3[D], guard-rail do CI) ----------

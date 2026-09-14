@@ -4,6 +4,7 @@
 window.ESPECTRO_DATA = {
   "catalogo": [
     "the-invite-2026",
+    "a-brighter-summer-day",
     "aftersun",
     "anatomy-of-a-fall",
     "avengers-endgame",
@@ -1599,6 +1600,1472 @@ window.ESPECTRO_DATA = {
         },
         "latencia_s": 15.56,
         "spec_version": "1.9.25"
+      }
+    },
+    "a-brighter-summer-day": {
+      "slug": "a-brighter-summer-day",
+      "data_coleta": "2026-09-14T14:36:06.018490+00:00",
+      "spec_version": "1.9.50",
+      "total_reviews_observadas": 540,
+      "reviews_url": "https://letterboxd.com/film/a-brighter-summer-day/reviews/",
+      "ficha": {
+        "titulo": "Um Dia Quente de Verão",
+        "sinopse_oficial": "Baseado em uma história verídica sobre um conflito entre duas gangues de jovens, a namorada de um garoto de 14 anos entra em conflito com o chefe de uma gangue por uma razão pouco clara, até que finalmente o conflito atinge um clímax violento.",
+        "sinopse_fallback_en": false,
+        "generos": [
+          "Crime",
+          "Drama",
+          "Romance"
+        ],
+        "duracao_min": 237,
+        "diretor": "Edward Yang",
+        "diretor_transliterado": false,
+        "ano": 1991,
+        "fonte": "tmdb",
+        "tmdb_id": 15804,
+        "tmdb_fetched_at": "2026-09-10T20:04:01+00:00",
+        "poster_path": "/pTA6qhQiutlMED6vLlLaYHphpWa.jpg",
+        "poster_largura": 1351,
+        "poster_altura": 2027,
+        "backdrop_paths": [
+          "/hypv7bDxzqdhJfEpjRKf1aQbdc.jpg",
+          "/2LMgkmtnmhjUHvFXNDruHzrUFKK.jpg",
+          "/qMMaTIUTxCcRRrwgNsna8EUAd1z.jpg",
+          "/3eFJbv3repyWRiZDmcUYgccdQ6o.jpg",
+          "/5KGUvPNKlVbFVbXTgHVIzLwFfDc.jpg",
+          "/7x11kihUNVU92I7w1RLGi0S6PBv.jpg",
+          "/djvXCedFiwbfp4HSoX3VU3WUVVm.jpg",
+          "/AsBsVliHJTN6IoAubc4q43JfOSe.jpg",
+          "/lw9Yhucng5ii3hZdXmAEnFHReDX.jpg",
+          "/2m1zrKhAhPDQf9Z3siZz6MYFQjM.jpg"
+        ],
+        "backdrop_path": "/hypv7bDxzqdhJfEpjRKf1aQbdc.jpg",
+        "backdrop_largura": 3840,
+        "backdrop_altura": 2160,
+        "poster_sem_texto_path": "/7fgELkboROH6eDEc3qcIpitt4ss.jpg",
+        "poster_sem_texto_largura": 1814,
+        "poster_sem_texto_altura": 2721,
+        "galeria_stills": [
+          {
+            "still_path": "/hypv7bDxzqdhJfEpjRKf1aQbdc.jpg",
+            "still_largura": 3840,
+            "still_altura": 2160
+          },
+          {
+            "still_path": "/1Bqj2q0yUWdGmgcJCuXJFzO61mo.jpg",
+            "still_largura": 1920,
+            "still_altura": 1080
+          },
+          {
+            "still_path": "/sbOauACILLiunWsOUc6D3z1QgbR.jpg",
+            "still_largura": 1840,
+            "still_altura": 1035
+          },
+          {
+            "still_path": "/1erkeV9zVaI6gtxFa5YUgCjmujM.jpg",
+            "still_largura": 1835,
+            "still_altura": 1032
+          },
+          {
+            "still_path": "/7iXMyCU40XOeSkgFSZG4bSUqsFE.jpg",
+            "still_largura": 1921,
+            "still_altura": 1080
+          },
+          {
+            "still_path": "/795gg44emvf9Jr9Fp1zEDP64thx.jpg",
+            "still_largura": 1840,
+            "still_altura": 1035
+          },
+          {
+            "still_path": "/azXnBPrIrRo9pl6fD87qf1e2h8I.jpg",
+            "still_largura": 1842,
+            "still_altura": 1036
+          },
+          {
+            "still_path": "/eeWau2NKyL2bXgTV0UHmHAyasio.jpg",
+            "still_largura": 1836,
+            "still_altura": 1033
+          },
+          {
+            "still_path": "/j0Sj8t8QB6LqtFRbGsm8DWnXEbP.jpg",
+            "still_largura": 1835,
+            "still_altura": 1032
+          },
+          {
+            "still_path": "/ojU8u2CsxpQf0mNjJLtpwllRg8h.jpg",
+            "still_largura": 1921,
+            "still_altura": 1080
+          },
+          {
+            "still_path": "/sbIcEzSBIBdMbhApZ4XO6Dzr5Wv.jpg",
+            "still_largura": 1840,
+            "still_altura": 1035
+          },
+          {
+            "still_path": "/uXy3gB88XzZ6DjPjnYnACdsN7Ct.jpg",
+            "still_largura": 1828,
+            "still_altura": 1028
+          }
+        ],
+        "ano_fonte": "letterboxd",
+        "identidade": {
+          "versao": 1,
+          "status": "validada",
+          "slug": "a-brighter-summer-day",
+          "titulo_letterboxd": "A Brighter Summer Day",
+          "ano_letterboxd": 1991,
+          "tmdb_id_letterboxd": 15804,
+          "tmdb_id_escolhido": 15804,
+          "fonte_id": "letterboxd",
+          "titulo_tmdb_campo": "alternative_title",
+          "titulo_tmdb_correspondente": "A Brighter Summer Day",
+          "ano_tmdb": 1991,
+          "ano_divergente": false
+        }
+      },
+      "distribuicao": {
+        "n_notas_total": 81998,
+        "por_nivel": {
+          "0.5": 160,
+          "1.0": 293,
+          "1.5": 200,
+          "2.0": 858,
+          "2.5": 1144,
+          "3.0": 3919,
+          "3.5": 5895,
+          "4.0": 17241,
+          "4.5": 17265,
+          "5.0": 35023
+        },
+        "por_bucket": {
+          "negativas": 2,
+          "medianas": 6,
+          "positivas": 92
+        },
+        "fonte": "letterboxd_histograma"
+      },
+      "coleta": {
+        "slug": "a-brighter-summer-day",
+        "coletado_em": "2026-09-10T18:47:04.910970+00:00",
+        "versao_coletor": "1.9.6",
+        "ordenacao_usada": "by/added",
+        "histograma_bruto": {
+          "0.5": 160,
+          "1.0": 293,
+          "1.5": 200,
+          "2.0": 858,
+          "2.5": 1144,
+          "3.0": 3919,
+          "3.5": 5895,
+          "4.0": 17241,
+          "4.5": 17265,
+          "5.0": 35023
+        },
+        "orcamento_paginas_por_nivel": {
+          "0.5": 2,
+          "1.0": 3,
+          "1.5": 2,
+          "2.0": 9,
+          "2.5": 6,
+          "3.0": 10,
+          "3.5": 1,
+          "4.0": 4,
+          "4.5": 4,
+          "5.0": 7
+        },
+        "paginas_gastas_por_nivel": {
+          "0.5": 2,
+          "1.0": 2,
+          "1.5": 2,
+          "2.0": 7,
+          "2.5": 6,
+          "3.0": 10,
+          "3.5": 1,
+          "4.0": 4,
+          "4.5": 4,
+          "5.0": 7
+        },
+        "paradas_por_limite": [
+          "0.5",
+          "1.0",
+          "1.5",
+          "2.0",
+          "2.5",
+          "3.0",
+          "3.5",
+          "4.0",
+          "4.5",
+          "5.0"
+        ],
+        "contagem_bruta_por_nivel": {
+          "0.5": 24,
+          "1.0": 24,
+          "1.5": 24,
+          "2.0": 84,
+          "2.5": 72,
+          "3.0": 120,
+          "3.5": 12,
+          "4.0": 48,
+          "4.5": 48,
+          "5.0": 84
+        },
+        "contagem_estimada_valida_por_nivel": {
+          "0.5": 11,
+          "1.0": 12,
+          "1.5": 7,
+          "2.0": 44,
+          "2.5": 34,
+          "3.0": 41,
+          "3.5": 7,
+          "4.0": 23,
+          "4.5": 23,
+          "5.0": 44
+        },
+        "motivo_parada_por_nivel": {
+          "0.5": "orcamento_esgotado",
+          "1.0": "orcamento_esgotado",
+          "1.5": "orcamento_esgotado",
+          "2.0": "orcamento_esgotado",
+          "2.5": "orcamento_esgotado",
+          "3.0": "orcamento_esgotado",
+          "3.5": "orcamento_esgotado",
+          "4.0": "orcamento_esgotado",
+          "4.5": "orcamento_esgotado",
+          "5.0": "orcamento_esgotado"
+        },
+        "paginas_base_por_nivel": {
+          "0.5": 2,
+          "1.0": 2,
+          "1.5": 2,
+          "2.0": 7,
+          "2.5": 6,
+          "3.0": 10,
+          "3.5": 1,
+          "4.0": 4,
+          "4.5": 4,
+          "5.0": 7
+        },
+        "paginas_extensao_por_nivel": {
+          "0.5": 0,
+          "1.0": 0,
+          "1.5": 0,
+          "2.0": 0,
+          "2.5": 0,
+          "3.0": 0,
+          "3.5": 0,
+          "4.0": 0,
+          "4.5": 0,
+          "5.0": 0
+        },
+        "extensao_por_bucket": {
+          "negativas": {
+            "paginas_base": 13,
+            "paginas_extensao": 0,
+            "extras_por_nivel": {},
+            "motivo_parada": "meta_atingida",
+            "n_validas_pos_base": 74,
+            "n_validas_pos_extensao": 74,
+            "meta": 50
+          },
+          "medianas": {
+            "paginas_base": 16,
+            "paginas_extensao": 0,
+            "extras_por_nivel": {},
+            "motivo_parada": "meta_atingida",
+            "n_validas_pos_base": 75,
+            "n_validas_pos_extensao": 75,
+            "meta": 50
+          },
+          "positivas": {
+            "paginas_base": 16,
+            "paginas_extensao": 0,
+            "extras_por_nivel": {},
+            "motivo_parada": "meta_atingida",
+            "n_validas_pos_base": 96,
+            "n_validas_pos_extensao": 96,
+            "meta": 50
+          }
+        },
+        "profundidade_sondagem": {
+          "nivel_sondado": 5.0,
+          "profundidade": 256,
+          "exata": false,
+          "requisicoes": 4,
+          "motivo": "teto_plataforma"
+        },
+        "profundidade_estimada_por_nivel": {
+          "0.5": 1,
+          "1.0": 2,
+          "1.5": 1,
+          "2.0": 6,
+          "2.5": 8,
+          "3.0": 29,
+          "3.5": 43,
+          "4.0": 126,
+          "4.5": 126,
+          "5.0": 256
+        },
+        "janela_temporal": {
+          "total": {
+            "n": 540,
+            "min": "2012-01-11",
+            "max": "2026-09-10",
+            "p5": "2025-06-09",
+            "p50": "2026-06-01",
+            "p95": "2026-09-07"
+          },
+          "por_bucket": {
+            "negativas": {
+              "n": 156,
+              "min": "2012-01-11",
+              "max": "2026-09-07",
+              "p5": "2024-08-16",
+              "p50": "2026-01-07",
+              "p95": "2026-08-18"
+            },
+            "medianas": {
+              "n": 192,
+              "min": "2021-04-10",
+              "max": "2026-09-06",
+              "p5": "2025-08-25",
+              "p50": "2026-05-08",
+              "p95": "2026-08-23"
+            },
+            "positivas": {
+              "n": 192,
+              "min": "2022-04-29",
+              "max": "2026-09-10",
+              "p5": "2026-01-22",
+              "p50": "2026-09-05",
+              "p95": "2026-09-09"
+            }
+          }
+        },
+        "dias_por_100_paginas": {
+          "n_paginas": 13,
+          "pagina_min": 1,
+          "pagina_max": 128,
+          "dias": 215,
+          "dias_por_100_paginas": 169.29133858267716,
+          "paginas_para_1_ano": 216
+        },
+        "identidade_letterboxd": {
+          "slug": "a-brighter-summer-day",
+          "titulo": "A Brighter Summer Day",
+          "ano": 1991,
+          "tmdb_id_letterboxd": 15804,
+          "fonte": "pagina_letterboxd"
+        },
+        "ano_lancamento": 1991,
+        "ano_fonte": "letterboxd",
+        "n_reviews_bruto": 540
+      },
+      "buckets": [
+        {
+          "bucket": "negativas",
+          "alvo": 40,
+          "modo": "completo",
+          "estado_piso": "completa",
+          "n_validas": 40,
+          "share_real": 2,
+          "composicao_alvo": {
+            "0.5": 4,
+            "1.0": 8,
+            "1.5": 5,
+            "2.0": 23
+          },
+          "composicao_atingida": {
+            "0.5": 4,
+            "1.0": 8,
+            "1.5": 5,
+            "2.0": 23
+          },
+          "cascata_por_degrau": {
+            "150": 40
+          },
+          "deficit_redistribuido": 0,
+          "distribuicao_pagina_origem": {
+            "n": 40,
+            "min": 1,
+            "max": 6,
+            "p5": 1,
+            "p50": 2,
+            "p95": 6,
+            "fracao_profunda": 0.0
+          },
+          "janela_amostra": {
+            "n": 40,
+            "min": "2025-02-24",
+            "max": "2026-09-01",
+            "p5": "2025-08-25",
+            "p50": "2026-03-19",
+            "p95": "2026-08-23"
+          },
+          "niveis": [
+            {
+              "nivel": 0.5,
+              "n_validas": 4,
+              "n_alvo": 4,
+              "n_brutas": 24,
+              "filtro_aplicado": 150,
+              "n_sem_nota": 0,
+              "n_descartadas_spoiler": 1,
+              "n_descartadas_curtas": 12,
+              "n_descartadas_truncamento": 0,
+              "n_indisponivel_truncamento": 0,
+              "motivos_descarte": {
+                "truncada_sem_texto": 0,
+                "spoiler": 1,
+                "abaixo_min_chars": 12,
+                "excedente_cota": 7,
+                "duplicata": 0,
+                "outros": 0
+              },
+              "paginas_buscadas": 2
+            },
+            {
+              "nivel": 1.0,
+              "n_validas": 8,
+              "n_alvo": 8,
+              "n_brutas": 24,
+              "filtro_aplicado": 150,
+              "n_sem_nota": 0,
+              "n_descartadas_spoiler": 0,
+              "n_descartadas_curtas": 11,
+              "n_descartadas_truncamento": 0,
+              "n_indisponivel_truncamento": 1,
+              "motivos_descarte": {
+                "truncada_sem_texto": 1,
+                "spoiler": 0,
+                "abaixo_min_chars": 11,
+                "excedente_cota": 4,
+                "duplicata": 0,
+                "outros": 0
+              },
+              "paginas_buscadas": 2
+            },
+            {
+              "nivel": 1.5,
+              "n_validas": 5,
+              "n_alvo": 5,
+              "n_brutas": 24,
+              "filtro_aplicado": 150,
+              "n_sem_nota": 0,
+              "n_descartadas_spoiler": 0,
+              "n_descartadas_curtas": 15,
+              "n_descartadas_truncamento": 0,
+              "n_indisponivel_truncamento": 2,
+              "motivos_descarte": {
+                "truncada_sem_texto": 2,
+                "spoiler": 0,
+                "abaixo_min_chars": 15,
+                "excedente_cota": 2,
+                "duplicata": 0,
+                "outros": 0
+              },
+              "paginas_buscadas": 2
+            },
+            {
+              "nivel": 2.0,
+              "n_validas": 23,
+              "n_alvo": 23,
+              "n_brutas": 84,
+              "filtro_aplicado": 150,
+              "n_sem_nota": 0,
+              "n_descartadas_spoiler": 2,
+              "n_descartadas_curtas": 35,
+              "n_descartadas_truncamento": 0,
+              "n_indisponivel_truncamento": 3,
+              "motivos_descarte": {
+                "truncada_sem_texto": 3,
+                "spoiler": 2,
+                "abaixo_min_chars": 35,
+                "excedente_cota": 21,
+                "duplicata": 0,
+                "outros": 0
+              },
+              "paginas_buscadas": 7
+            }
+          ],
+          "temas": [
+            {
+              "tema": "Duração excessiva e ritmo lento",
+              "mencoes_aproximadas": 34,
+              "n_reviews_analisadas": 40,
+              "exemplo_parafraseado": "Muitas reviews reclamam que o filme é longo demais para o que oferece, com ritmo arrastado e cenas que parecem se estender sem necessidade, tornando a experiência cansativa e por vezes impossível de terminar.",
+              "mencoes_clampadas": false,
+              "mencoes_valor_original": null,
+              "aspas_removidas": false
+            },
+            {
+              "tema": "Personagens difíceis de distinguir e falta de envolvimento",
+              "mencoes_aproximadas": 18,
+              "n_reviews_analisadas": 40,
+              "exemplo_parafraseado": "Vários espectadores apontam que o grande número de personagens, muitos com aparência e nomes similares, dificulta a conexão emocional e a compreensão de quem é quem na história.",
+              "mencoes_clampadas": false,
+              "mencoes_valor_original": null,
+              "aspas_removidas": false
+            },
+            {
+              "tema": "Narrativa confusa e subtramas desconexas",
+              "mencoes_aproximadas": 15,
+              "n_reviews_analisadas": 40,
+              "exemplo_parafraseado": "As críticas mencionam que a trama se ramifica em muitas subtramas que não se convergem claramente, deixando a sensação de fragmentação e dificultando o entendimento do propósito de certas cenas.",
+              "mencoes_clampadas": false,
+              "mencoes_valor_original": null,
+              "aspas_removidas": false
+            },
+            {
+              "tema": "Final controverso e insatisfatório",
+              "mencoes_aproximadas": 9,
+              "n_reviews_analisadas": 40,
+              "exemplo_parafraseado": "Algumas reviews consideram o desfecho abrupto ou incoerente com o restante do filme, gerando frustração e a impressão de que não compensa o tempo investido.",
+              "mencoes_clampadas": false,
+              "mencoes_valor_original": null,
+              "aspas_removidas": false
+            },
+            {
+              "tema": "Fotografia e direção elogiadas, mas insuficientes",
+              "mencoes_aproximadas": 8,
+              "n_reviews_analisadas": 40,
+              "exemplo_parafraseado": "Embora reconheçam a qualidade visual e a construção estética, esses espectadores afirmam que tais aspectos não bastam para sustentar a longa duração ou tornar a experiência agradável.",
+              "mencoes_clampadas": false,
+              "mencoes_valor_original": null,
+              "aspas_removidas": false
+            },
+            {
+              "tema": "Expectativa frustrada por alta reputação",
+              "mencoes_aproximadas": 6,
+              "n_reviews_analisadas": 40,
+              "exemplo_parafraseado": "Há quem mencione que a fama de clássico e as altas avaliações criaram expectativas que não foram correspondidas, resultando em decepção.",
+              "mencoes_clampadas": false,
+              "mencoes_valor_original": null,
+              "aspas_removidas": false
+            }
+          ],
+          "observacao_geral": "As reviews negativas deste grupo destacam principalmente a duração excessiva, o ritmo lento e a dificuldade de se conectar com os personagens, além de apontarem uma narrativa confusa e um final insatisfatório, apesar de reconhecerem méritos na fotografia e direção.",
+          "idioma_invalido": false,
+          "escopo_suspeito": false
+        },
+        {
+          "bucket": "medianas",
+          "alvo": 40,
+          "modo": "completo",
+          "estado_piso": "completa",
+          "n_validas": 40,
+          "share_real": 6,
+          "composicao_alvo": {
+            "2.5": 9,
+            "3.0": 31
+          },
+          "composicao_atingida": {
+            "2.5": 9,
+            "3.0": 31
+          },
+          "cascata_por_degrau": {
+            "150": 40
+          },
+          "deficit_redistribuido": 0,
+          "distribuicao_pagina_origem": {
+            "n": 40,
+            "min": 1,
+            "max": 14,
+            "p5": 1,
+            "p50": 5,
+            "p95": 14,
+            "fracao_profunda": 0.35
+          },
+          "janela_amostra": {
+            "n": 40,
+            "min": "2022-07-17",
+            "max": "2026-09-05",
+            "p5": "2025-12-24",
+            "p50": "2026-06-01",
+            "p95": "2026-09-04"
+          },
+          "niveis": [
+            {
+              "nivel": 2.5,
+              "n_validas": 9,
+              "n_alvo": 9,
+              "n_brutas": 72,
+              "filtro_aplicado": 150,
+              "n_sem_nota": 0,
+              "n_descartadas_spoiler": 1,
+              "n_descartadas_curtas": 37,
+              "n_descartadas_truncamento": 0,
+              "n_indisponivel_truncamento": 0,
+              "motivos_descarte": {
+                "truncada_sem_texto": 0,
+                "spoiler": 1,
+                "abaixo_min_chars": 37,
+                "excedente_cota": 25,
+                "duplicata": 0,
+                "outros": 0
+              },
+              "paginas_buscadas": 6
+            },
+            {
+              "nivel": 3.0,
+              "n_validas": 31,
+              "n_alvo": 31,
+              "n_brutas": 120,
+              "filtro_aplicado": 150,
+              "n_sem_nota": 0,
+              "n_descartadas_spoiler": 7,
+              "n_descartadas_curtas": 70,
+              "n_descartadas_truncamento": 0,
+              "n_indisponivel_truncamento": 2,
+              "motivos_descarte": {
+                "truncada_sem_texto": 2,
+                "spoiler": 7,
+                "abaixo_min_chars": 70,
+                "excedente_cota": 10,
+                "duplicata": 0,
+                "outros": 0
+              },
+              "paginas_buscadas": 10
+            }
+          ],
+          "temas": [
+            {
+              "tema": "Duração excessiva e ritmo lento",
+              "mencoes_aproximadas": 36,
+              "n_reviews_analisadas": 40,
+              "exemplo_parafraseado": "Muitas reviews medianas consideram que as quase quatro horas de duração são excessivas e que o ritmo arrastado torna a experiência cansativa, com cenas que poderiam ser encurtadas ou cortadas sem prejuízo.",
+              "mencoes_clampadas": false,
+              "mencoes_valor_original": null,
+              "aspas_removidas": false
+            },
+            {
+              "tema": "Dificuldade em acompanhar a multiplicidade de personagens e tramas",
+              "mencoes_aproximadas": 15,
+              "n_reviews_analisadas": 40,
+              "exemplo_parafraseado": "Várias reviews apontam confusão diante do grande número de personagens e subtramas, levando a dificuldades para distinguir quem é quem e entender as relações e dinâmicas apresentadas.",
+              "mencoes_clampadas": false,
+              "mencoes_valor_original": null,
+              "aspas_removidas": false
+            },
+            {
+              "tema": "Qualidade técnica e visual",
+              "mencoes_aproximadas": 14,
+              "n_reviews_analisadas": 40,
+              "exemplo_parafraseado": "Algumas reviews medianas elogiam a fotografia, o design de som e a recriação de época, reconhecendo o cuidado técnico e a beleza estética do filme, mesmo quando não se conectam emocionalmente com a história.",
+              "mencoes_clampadas": false,
+              "mencoes_valor_original": null,
+              "aspas_removidas": false
+            },
+            {
+              "tema": "Falta de conexão emocional ou envolvimento",
+              "mencoes_aproximadas": 13,
+              "n_reviews_analisadas": 40,
+              "exemplo_parafraseado": "Certas reviews relatam que, apesar da qualidade técnica, não conseguiram se envolver emocionalmente com os personagens ou com a narrativa, sentindo distanciamento ao longo da projeção.",
+              "mencoes_clampadas": false,
+              "mencoes_valor_original": null,
+              "aspas_removidas": false
+            },
+            {
+              "tema": "Expectativas frustradas e comparação com Yi Yi",
+              "mencoes_aproximadas": 10,
+              "n_reviews_analisadas": 40,
+              "exemplo_parafraseado": "Diversas reviews medianas mencionam que esperavam mais do filme, muitas vezes comparando-o desfavoravelmente a outra obra do mesmo diretor, que consideram superior em termos de impacto e envolvimento.",
+              "mencoes_clampadas": false,
+              "mencoes_valor_original": null,
+              "aspas_removidas": false
+            },
+            {
+              "tema": "Desenvolvimento de personagens e roteiro",
+              "mencoes_aproximadas": 8,
+              "n_reviews_analisadas": 40,
+              "exemplo_parafraseado": "Algumas reviews criticam o desenvolvimento dos personagens e a condução do roteiro, apontando falta de profundidade ou de clareza nas motivações, o que prejudica o impacto da história.",
+              "mencoes_clampadas": false,
+              "mencoes_valor_original": null,
+              "aspas_removidas": false
+            }
+          ],
+          "observacao_geral": "As reviews medianas analisadas destacam principalmente a duração excessiva e o ritmo lento como principais pontos negativos, além da dificuldade em acompanhar as múltiplas tramas e personagens. Por outro lado, reconhecem a qualidade técnica e visual do filme, mas frequentemente relatam falta de conexão emocional e expectativas não correspondidas.",
+          "idioma_invalido": false,
+          "escopo_suspeito": false
+        },
+        {
+          "bucket": "positivas",
+          "alvo": 40,
+          "modo": "completo",
+          "estado_piso": "completa",
+          "n_validas": 40,
+          "share_real": 92,
+          "composicao_alvo": {
+            "3.5": 3,
+            "4.0": 9,
+            "4.5": 9,
+            "5.0": 19
+          },
+          "composicao_atingida": {
+            "3.5": 3,
+            "4.0": 9,
+            "4.5": 9,
+            "5.0": 19
+          },
+          "cascata_por_degrau": {
+            "150": 40
+          },
+          "deficit_redistribuido": 0,
+          "distribuicao_pagina_origem": {
+            "n": 40,
+            "min": 1,
+            "max": 64,
+            "p5": 1,
+            "p50": 3,
+            "p95": 64,
+            "fracao_profunda": 0.275
+          },
+          "janela_amostra": {
+            "n": 40,
+            "min": "2024-06-28",
+            "max": "2026-09-09",
+            "p5": "2026-04-13",
+            "p50": "2026-09-05",
+            "p95": "2026-09-09"
+          },
+          "niveis": [
+            {
+              "nivel": 3.5,
+              "n_validas": 3,
+              "n_alvo": 3,
+              "n_brutas": 12,
+              "filtro_aplicado": 150,
+              "n_sem_nota": 0,
+              "n_descartadas_spoiler": 0,
+              "n_descartadas_curtas": 5,
+              "n_descartadas_truncamento": 0,
+              "n_indisponivel_truncamento": 0,
+              "motivos_descarte": {
+                "truncada_sem_texto": 0,
+                "spoiler": 0,
+                "abaixo_min_chars": 5,
+                "excedente_cota": 4,
+                "duplicata": 0,
+                "outros": 0
+              },
+              "paginas_buscadas": 1
+            },
+            {
+              "nivel": 4.0,
+              "n_validas": 9,
+              "n_alvo": 9,
+              "n_brutas": 48,
+              "filtro_aplicado": 150,
+              "n_sem_nota": 0,
+              "n_descartadas_spoiler": 4,
+              "n_descartadas_curtas": 21,
+              "n_descartadas_truncamento": 0,
+              "n_indisponivel_truncamento": 0,
+              "motivos_descarte": {
+                "truncada_sem_texto": 0,
+                "spoiler": 4,
+                "abaixo_min_chars": 21,
+                "excedente_cota": 14,
+                "duplicata": 0,
+                "outros": 0
+              },
+              "paginas_buscadas": 4
+            },
+            {
+              "nivel": 4.5,
+              "n_validas": 9,
+              "n_alvo": 9,
+              "n_brutas": 48,
+              "filtro_aplicado": 150,
+              "n_sem_nota": 0,
+              "n_descartadas_spoiler": 0,
+              "n_descartadas_curtas": 24,
+              "n_descartadas_truncamento": 0,
+              "n_indisponivel_truncamento": 2,
+              "motivos_descarte": {
+                "truncada_sem_texto": 2,
+                "spoiler": 0,
+                "abaixo_min_chars": 24,
+                "excedente_cota": 13,
+                "duplicata": 0,
+                "outros": 0
+              },
+              "paginas_buscadas": 4
+            },
+            {
+              "nivel": 5.0,
+              "n_validas": 19,
+              "n_alvo": 19,
+              "n_brutas": 84,
+              "filtro_aplicado": 150,
+              "n_sem_nota": 0,
+              "n_descartadas_spoiler": 4,
+              "n_descartadas_curtas": 36,
+              "n_descartadas_truncamento": 0,
+              "n_indisponivel_truncamento": 0,
+              "motivos_descarte": {
+                "truncada_sem_texto": 0,
+                "spoiler": 4,
+                "abaixo_min_chars": 36,
+                "excedente_cota": 25,
+                "duplicata": 0,
+                "outros": 0
+              },
+              "paginas_buscadas": 7
+            }
+          ],
+          "temas": [
+            {
+              "tema": "Duração épica e ritmo imersivo",
+              "mencoes_aproximadas": 21,
+              "n_reviews_analisadas": 40,
+              "exemplo_parafraseado": "O espectador comenta que a longa duração não parece cansativa, pois a narrativa envolvente faz com que a experiência se assemelhe à leitura de um romance profundo.",
+              "mencoes_clampadas": false,
+              "mencoes_valor_original": null,
+              "aspas_removidas": false
+            },
+            {
+              "tema": "Retrato social e político de uma época",
+              "mencoes_aproximadas": 15,
+              "n_reviews_analisadas": 40,
+              "exemplo_parafraseado": "O autor da análise pontua que a obra capta com maestria o peso histórico de Taiwan nos anos 60 e os reflexos do autoritarismo na juventude.",
+              "mencoes_clampadas": false,
+              "mencoes_valor_original": null,
+              "aspas_removidas": false
+            },
+            {
+              "tema": "Estilo de direção e composição visual",
+              "mencoes_aproximadas": 14,
+              "n_reviews_analisadas": 40,
+              "exemplo_parafraseado": "Um avaliador elogia o enquadramento distante e o uso meticuloso da iluminação, ressaltando como a câmera observacional cria uma atmosfera intimista sem ser invasiva.",
+              "mencoes_clampadas": false,
+              "mencoes_valor_original": null,
+              "aspas_removidas": false
+            },
+            {
+              "tema": "Desfecho impactante e carga emocional",
+              "mencoes_aproximadas": 11,
+              "n_reviews_analisadas": 40,
+              "exemplo_parafraseado": "O usuário menciona que a conclusão da narrativa é devastadora e deixa uma forte sensação de choque construída com muita paciência.",
+              "mencoes_clampadas": false,
+              "mencoes_valor_original": null,
+              "aspas_removidas": false
+            },
+            {
+              "tema": "Complexidade e naturalismo dos personagens",
+              "mencoes_aproximadas": 9,
+              "n_reviews_analisadas": 40,
+              "exemplo_parafraseado": "A crítica destaca a autenticidade com que o elenco jovem atua e como o desenvolvimento individual de cada figura transmite uma grande sensação de realidade.",
+              "mencoes_clampadas": false,
+              "mencoes_valor_original": null,
+              "aspas_removidas": false
+            }
+          ],
+          "observacao_geral": "As reviews positivas celebram a obra como uma obra-prima cinematográfica, destacando que sua imponente duração é essencial para construir um retrato social profundo, respaldado por uma direção precisa e um clímax emocionalmente marcante.",
+          "idioma_invalido": false,
+          "escopo_suspeito": false,
+          "fallback_conteudo": {
+            "de": "deepseek",
+            "para": "gemini",
+            "modelo": "gemini-3.7-flash",
+            "motivo": "Content Exists Risk"
+          }
+        }
+      ],
+      "eixos": {
+        "taxonomia_id": "ebab2667de74",
+        "margem": {
+          "lei": "lift^2 * n >= 2085136/1000000",
+          "constante_quadrada": [
+            2085136,
+            1000000
+          ],
+          "n": 40,
+          "limiar_pp": 22.83
+        },
+        "margem_lift_pp": 22.83,
+        "linhas": [
+          {
+            "eixo": "ritmo",
+            "por_bucket": {
+              "negativas": {
+                "mencoes": 27,
+                "de_n": 40,
+                "freq_pct": 67.5,
+                "lift_pp": -12.5,
+                "acima_da_margem": false,
+                "tema": "Duração excessiva e ritmo lento",
+                "exemplo_parafraseado": "Muitas reviews reclamam que o filme é longo demais para o que oferece, com ritmo arrastado e cenas que parecem se estender sem necessidade, tornando a experiência cansativa e por vezes impossível de terminar.",
+                "temas_no_mesmo_eixo": []
+              },
+              "medianas": {
+                "mencoes": 32,
+                "de_n": 40,
+                "freq_pct": 80.0,
+                "lift_pp": 12.5,
+                "acima_da_margem": false,
+                "tema": "Duração excessiva e ritmo lento",
+                "exemplo_parafraseado": "Muitas reviews medianas consideram que as quase quatro horas de duração são excessivas e que o ritmo arrastado torna a experiência cansativa, com cenas que poderiam ser encurtadas ou cortadas sem prejuízo.",
+                "temas_no_mesmo_eixo": []
+              },
+              "positivas": {
+                "mencoes": 18,
+                "de_n": 40,
+                "freq_pct": 45.0,
+                "lift_pp": -35.0,
+                "acima_da_margem": false,
+                "tema": "Duração épica e ritmo imersivo",
+                "exemplo_parafraseado": "O espectador comenta que a longa duração não parece cansativa, pois a narrativa envolvente faz com que a experiência se assemelhe à leitura de um romance profundo.",
+                "temas_no_mesmo_eixo": []
+              }
+            },
+            "bullet_de": {
+              "negativas": "frequencia",
+              "medianas": "frequencia",
+              "positivas": null
+            }
+          },
+          {
+            "eixo": "atuacao",
+            "por_bucket": {
+              "negativas": {
+                "mencoes": 5,
+                "de_n": 40,
+                "freq_pct": 12.5,
+                "lift_pp": 2.5,
+                "acima_da_margem": false,
+                "tema": null,
+                "exemplo_parafraseado": null,
+                "temas_no_mesmo_eixo": []
+              },
+              "medianas": {
+                "mencoes": 4,
+                "de_n": 40,
+                "freq_pct": 10.0,
+                "lift_pp": -2.5,
+                "acima_da_margem": false,
+                "tema": null,
+                "exemplo_parafraseado": null,
+                "temas_no_mesmo_eixo": []
+              },
+              "positivas": {
+                "mencoes": 3,
+                "de_n": 40,
+                "freq_pct": 7.5,
+                "lift_pp": -5.0,
+                "acima_da_margem": false,
+                "tema": null,
+                "exemplo_parafraseado": null,
+                "temas_no_mesmo_eixo": []
+              }
+            },
+            "bullet_de": {
+              "negativas": null,
+              "medianas": null,
+              "positivas": null
+            }
+          },
+          {
+            "eixo": "direcao_imagem",
+            "por_bucket": {
+              "negativas": {
+                "mencoes": 13,
+                "de_n": 40,
+                "freq_pct": 32.5,
+                "lift_pp": 2.5,
+                "acima_da_margem": false,
+                "tema": "Fotografia e direção elogiadas, mas insuficientes",
+                "exemplo_parafraseado": "Embora reconheçam a qualidade visual e a construção estética, esses espectadores afirmam que tais aspectos não bastam para sustentar a longa duração ou tornar a experiência agradável.",
+                "temas_no_mesmo_eixo": []
+              },
+              "medianas": {
+                "mencoes": 12,
+                "de_n": 40,
+                "freq_pct": 30.0,
+                "lift_pp": -2.5,
+                "acima_da_margem": false,
+                "tema": "Qualidade técnica e visual",
+                "exemplo_parafraseado": "Algumas reviews medianas elogiam a fotografia, o design de som e a recriação de época, reconhecendo o cuidado técnico e a beleza estética do filme, mesmo quando não se conectam emocionalmente com a história.",
+                "temas_no_mesmo_eixo": []
+              },
+              "positivas": {
+                "mencoes": 11,
+                "de_n": 40,
+                "freq_pct": 27.5,
+                "lift_pp": -5.0,
+                "acima_da_margem": false,
+                "tema": "Estilo de direção e composição visual",
+                "exemplo_parafraseado": "Um avaliador elogia o enquadramento distante e o uso meticuloso da iluminação, ressaltando como a câmera observacional cria uma atmosfera intimista sem ser invasiva.",
+                "temas_no_mesmo_eixo": []
+              }
+            },
+            "bullet_de": {
+              "negativas": null,
+              "medianas": null,
+              "positivas": null
+            }
+          },
+          {
+            "eixo": "roteiro_estrutura",
+            "por_bucket": {
+              "negativas": {
+                "mencoes": 29,
+                "de_n": 40,
+                "freq_pct": 72.5,
+                "lift_pp": -7.5,
+                "acima_da_margem": false,
+                "tema": "Personagens difíceis de distinguir e falta de envolvimento",
+                "exemplo_parafraseado": "Vários espectadores apontam que o grande número de personagens, muitos com aparência e nomes similares, dificulta a conexão emocional e a compreensão de quem é quem na história.",
+                "temas_no_mesmo_eixo": [
+                  "Narrativa confusa e subtramas desconexas",
+                  "Final controverso e insatisfatório"
+                ]
+              },
+              "medianas": {
+                "mencoes": 32,
+                "de_n": 40,
+                "freq_pct": 80.0,
+                "lift_pp": 7.5,
+                "acima_da_margem": false,
+                "tema": "Dificuldade em acompanhar a multiplicidade de personagens e tramas",
+                "exemplo_parafraseado": "Várias reviews apontam confusão diante do grande número de personagens e subtramas, levando a dificuldades para distinguir quem é quem e entender as relações e dinâmicas apresentadas.",
+                "temas_no_mesmo_eixo": [
+                  "Desenvolvimento de personagens e roteiro"
+                ]
+              },
+              "positivas": {
+                "mencoes": 25,
+                "de_n": 40,
+                "freq_pct": 62.5,
+                "lift_pp": -17.5,
+                "acima_da_margem": false,
+                "tema": "Complexidade e naturalismo dos personagens",
+                "exemplo_parafraseado": "A crítica destaca a autenticidade com que o elenco jovem atua e como o desenvolvimento individual de cada figura transmite uma grande sensação de realidade.",
+                "temas_no_mesmo_eixo": []
+              }
+            },
+            "bullet_de": {
+              "negativas": "frequencia",
+              "medianas": "frequencia",
+              "positivas": "frequencia"
+            }
+          },
+          {
+            "eixo": "som_trilha",
+            "por_bucket": {
+              "negativas": {
+                "mencoes": 2,
+                "de_n": 40,
+                "freq_pct": 5.0,
+                "lift_pp": -7.5,
+                "acima_da_margem": false,
+                "tema": null,
+                "exemplo_parafraseado": null,
+                "temas_no_mesmo_eixo": []
+              },
+              "medianas": {
+                "mencoes": 4,
+                "de_n": 40,
+                "freq_pct": 10.0,
+                "lift_pp": -2.5,
+                "acima_da_margem": false,
+                "tema": null,
+                "exemplo_parafraseado": null,
+                "temas_no_mesmo_eixo": []
+              },
+              "positivas": {
+                "mencoes": 5,
+                "de_n": 40,
+                "freq_pct": 12.5,
+                "lift_pp": 2.5,
+                "acima_da_margem": false,
+                "tema": null,
+                "exemplo_parafraseado": null,
+                "temas_no_mesmo_eixo": []
+              }
+            },
+            "bullet_de": {
+              "negativas": null,
+              "medianas": null,
+              "positivas": null
+            }
+          },
+          {
+            "eixo": "tom_atmosfera",
+            "por_bucket": {
+              "negativas": {
+                "mencoes": 2,
+                "de_n": 40,
+                "freq_pct": 5.0,
+                "lift_pp": -27.5,
+                "acima_da_margem": false,
+                "tema": null,
+                "exemplo_parafraseado": null,
+                "temas_no_mesmo_eixo": []
+              },
+              "medianas": {
+                "mencoes": 3,
+                "de_n": 40,
+                "freq_pct": 7.5,
+                "lift_pp": -25.0,
+                "acima_da_margem": false,
+                "tema": null,
+                "exemplo_parafraseado": null,
+                "temas_no_mesmo_eixo": []
+              },
+              "positivas": {
+                "mencoes": 13,
+                "de_n": 40,
+                "freq_pct": 32.5,
+                "lift_pp": 25.0,
+                "acima_da_margem": true,
+                "tema": null,
+                "exemplo_parafraseado": null,
+                "temas_no_mesmo_eixo": []
+              }
+            },
+            "bullet_de": {
+              "negativas": null,
+              "medianas": null,
+              "positivas": "contraste"
+            }
+          },
+          {
+            "eixo": "impacto_emocional",
+            "por_bucket": {
+              "negativas": {
+                "mencoes": 22,
+                "de_n": 40,
+                "freq_pct": 55.0,
+                "lift_pp": -10.0,
+                "acima_da_margem": false,
+                "tema": null,
+                "exemplo_parafraseado": null,
+                "temas_no_mesmo_eixo": []
+              },
+              "medianas": {
+                "mencoes": 24,
+                "de_n": 40,
+                "freq_pct": 60.0,
+                "lift_pp": -5.0,
+                "acima_da_margem": false,
+                "tema": "Falta de conexão emocional ou envolvimento",
+                "exemplo_parafraseado": "Certas reviews relatam que, apesar da qualidade técnica, não conseguiram se envolver emocionalmente com os personagens ou com a narrativa, sentindo distanciamento ao longo da projeção.",
+                "temas_no_mesmo_eixo": []
+              },
+              "positivas": {
+                "mencoes": 26,
+                "de_n": 40,
+                "freq_pct": 65.0,
+                "lift_pp": 5.0,
+                "acima_da_margem": false,
+                "tema": "Desfecho impactante e carga emocional",
+                "exemplo_parafraseado": "O usuário menciona que a conclusão da narrativa é devastadora e deixa uma forte sensação de choque construída com muita paciência.",
+                "temas_no_mesmo_eixo": []
+              }
+            },
+            "bullet_de": {
+              "negativas": null,
+              "medianas": null,
+              "positivas": "frequencia"
+            }
+          },
+          {
+            "eixo": "comparacoes",
+            "por_bucket": {
+              "negativas": {
+                "mencoes": 16,
+                "de_n": 40,
+                "freq_pct": 40.0,
+                "lift_pp": -15.0,
+                "acima_da_margem": false,
+                "tema": null,
+                "exemplo_parafraseado": null,
+                "temas_no_mesmo_eixo": []
+              },
+              "medianas": {
+                "mencoes": 21,
+                "de_n": 40,
+                "freq_pct": 52.5,
+                "lift_pp": -2.5,
+                "acima_da_margem": false,
+                "tema": "Expectativas frustradas e comparação com Yi Yi",
+                "exemplo_parafraseado": "Diversas reviews medianas mencionam que esperavam mais do filme, muitas vezes comparando-o desfavoravelmente a outra obra do mesmo diretor, que consideram superior em termos de impacto e envolvimento.",
+                "temas_no_mesmo_eixo": []
+              },
+              "positivas": {
+                "mencoes": 22,
+                "de_n": 40,
+                "freq_pct": 55.0,
+                "lift_pp": 2.5,
+                "acima_da_margem": false,
+                "tema": null,
+                "exemplo_parafraseado": null,
+                "temas_no_mesmo_eixo": []
+              }
+            },
+            "bullet_de": {
+              "negativas": null,
+              "medianas": null,
+              "positivas": null
+            }
+          },
+          {
+            "eixo": "expectativa",
+            "por_bucket": {
+              "negativas": {
+                "mencoes": 13,
+                "de_n": 40,
+                "freq_pct": 32.5,
+                "lift_pp": -5.0,
+                "acima_da_margem": false,
+                "tema": "Expectativa frustrada por alta reputação",
+                "exemplo_parafraseado": "Há quem mencione que a fama de clássico e as altas avaliações criaram expectativas que não foram correspondidas, resultando em decepção.",
+                "temas_no_mesmo_eixo": []
+              },
+              "medianas": {
+                "mencoes": 15,
+                "de_n": 40,
+                "freq_pct": 37.5,
+                "lift_pp": 5.0,
+                "acima_da_margem": false,
+                "tema": null,
+                "exemplo_parafraseado": null,
+                "temas_no_mesmo_eixo": []
+              },
+              "positivas": {
+                "mencoes": 7,
+                "de_n": 40,
+                "freq_pct": 17.5,
+                "lift_pp": -20.0,
+                "acima_da_margem": false,
+                "tema": null,
+                "exemplo_parafraseado": null,
+                "temas_no_mesmo_eixo": []
+              }
+            },
+            "bullet_de": {
+              "negativas": null,
+              "medianas": null,
+              "positivas": null
+            }
+          },
+          {
+            "eixo": "critica_social",
+            "por_bucket": {
+              "negativas": {
+                "mencoes": 7,
+                "de_n": 40,
+                "freq_pct": 17.5,
+                "lift_pp": -7.5,
+                "acima_da_margem": false,
+                "tema": null,
+                "exemplo_parafraseado": null,
+                "temas_no_mesmo_eixo": []
+              },
+              "medianas": {
+                "mencoes": 7,
+                "de_n": 40,
+                "freq_pct": 17.5,
+                "lift_pp": -7.5,
+                "acima_da_margem": false,
+                "tema": null,
+                "exemplo_parafraseado": null,
+                "temas_no_mesmo_eixo": []
+              },
+              "positivas": {
+                "mencoes": 10,
+                "de_n": 40,
+                "freq_pct": 25.0,
+                "lift_pp": 7.5,
+                "acima_da_margem": false,
+                "tema": "Retrato social e político de uma época",
+                "exemplo_parafraseado": "O autor da análise pontua que a obra capta com maestria o peso histórico de Taiwan nos anos 60 e os reflexos do autoritarismo na juventude.",
+                "temas_no_mesmo_eixo": []
+              }
+            },
+            "bullet_de": {
+              "negativas": null,
+              "medianas": null,
+              "positivas": null
+            }
+          }
+        ],
+        "contraste": "tematico",
+        "rotulagem": {
+          "n_chamadas": 3,
+          "falharam": [],
+          "fora_da_taxonomia": {},
+          "houve_retentativa": []
+        },
+        "spec_version": "1.9.50",
+        "verificador": {
+          "aplicado": true,
+          "variante": "V2_alvo",
+          "passada": 1,
+          "eixo": "impacto_emocional",
+          "n_removidas_no_corpus": 2781
+        },
+        "fallback_conteudo": [
+          {
+            "bucket": "positivas",
+            "id": "viewing:1343536508",
+            "passes": [
+              {
+                "passe": 1,
+                "de": "deepseek",
+                "para": "gemini",
+                "modelo": "gemini-3.7-flash",
+                "motivo": "Content Exists Risk"
+              },
+              {
+                "passe": 2,
+                "de": "deepseek",
+                "para": "gemini",
+                "modelo": "gemini-3.7-flash",
+                "motivo": "Content Exists Risk"
+              },
+              {
+                "passe": 3,
+                "de": "deepseek",
+                "para": "gemini",
+                "modelo": "gemini-3.7-flash",
+                "motivo": "Content Exists Risk"
+              }
+            ],
+            "verificador": {
+              "de": "deepseek",
+              "para": "gemini",
+              "modelo": "gemini-3.7-flash",
+              "motivo": "Content Exists Risk"
+            }
+          }
+        ]
+      },
+      "narrativa": "Lançado em 1991 e dirigido por Edward Yang, Um Dia Quente de Verão é uma produção que combina drama, crime e romance ao longo de 237 minutos de projeção. A narrativa é baseada em uma história real centrada no confronto entre duas gangues de jovens, desenvolvendo-se a partir do momento em que a namorada de um rapaz de 14 anos se envolve em um conflito de motivações obscuras com o líder de um grupo rival, até culminar em um clímax violento.\n\nA experiência se apoia em uma cadência pausada ao longo de uma duração muito extensa, articulando uma densa tapeçaria de personagens sob um enquadramento visual paciente e distante.\n\nNa grande maioria das notas (~92%), o tom e a construção da atmosfera recebem atenção primordial, com cerca de metade ressaltando como a duração épica e o ritmo imersivo enriquecem a experiência. Além disso, boa parte salienta a importância do retrato social e político de uma época, enquanto um número considerável elogia o estilo de direção e a composição visual adotados.\n\nEm uma perspectiva intermediária, situada numa fração mínima das notas (~6%), quase todos apontam a duração excessiva e o ritmo lento como aspectos problemáticos. Nesse segmento, vários relatam dificuldade em acompanhar a multiplicidade de personagens e tramas, embora uma parcela expressiva reconheça o valor da qualidade técnica e visual apresentada.\n\nSob o ponto de vista mais crítico, registrado numa fração ainda menor das notas (~2%), a quase totalidade considera a duração excessiva e o andamento arrastado entraves centrais. Do mesmo modo, muitos mencionam que os personagens são difíceis de distinguir gerando falta de envolvimento, ao passo que boa parte aponta uma narrativa confusa repleta de subtramas desconexas.",
+      "verificacao_narrativa": {
+        "quantificador_fora_de_faixa": [],
+        "quantificador_repetido": [],
+        "paragrafos": {
+          "n_paragrafos": 5,
+          "minimo": 3,
+          "insuficientes": false,
+          "longos": []
+        },
+        "n_paragrafos": 5,
+        "paragrafos_insuficientes": false,
+        "paragrafos_longos": [],
+        "grupos_sem_paragrafo_proprio": [],
+        "movimento1_e_movimento2_no_mesmo_paragrafo": false,
+        "formato_invalido": false,
+        "numeros_inventados": [],
+        "rotulos_faltando": [],
+        "ordem_incorreta": false,
+        "vocabulario_peso": false,
+        "resenha_speak": [],
+        "n_resenha_speak": 0,
+        "n_flags": 0
+      },
+      "narrativa_selecao": {
+        "provider": "gemini",
+        "modelo": "gemini-3.7-flash",
+        "n_candidatos": 3,
+        "n_chamadas": 3,
+        "indice_escolhido": 1,
+        "motivo": "melhor_entre_limpos",
+        "criterio_decisivo": "ritmo",
+        "candidatos": [
+          {
+            "indice": 0,
+            "n_flags": 0,
+            "cliches": 0,
+            "repeticao_max": 2,
+            "ritmo": 6,
+            "cobertura": 1.0,
+            "eliminado": false
+          },
+          {
+            "indice": 1,
+            "n_flags": 0,
+            "cliches": 0,
+            "repeticao_max": 2,
+            "ritmo": 8,
+            "cobertura": 1.0,
+            "eliminado": false
+          },
+          {
+            "indice": 2,
+            "n_flags": 1,
+            "cliches": 0,
+            "repeticao_max": 2,
+            "ritmo": 11,
+            "cobertura": 1.0,
+            "eliminado": true
+          }
+        ],
+        "retry": null,
+        "uso": {
+          "prompt_tokens": 9981,
+          "completion_tokens": 1222,
+          "cache_hit_tokens": 0,
+          "cache_miss_tokens": 9981
+        },
+        "latencia_s": 35.28
+      },
+      "veredito": {
+        "provider": "gemini",
+        "modelo": "gemini-3.7-flash",
+        "n_candidatos": 3,
+        "n_chamadas": 3,
+        "prefixo_codigo": "",
+        "retry": null,
+        "spec_version": "1.9.50",
+        "texto": "Enquanto a maioria dos que não recomendam aponta personagens pouco distinguíveis e pouca conexão com a trama, a maioria dos que recomendam destaca o peso emocional do desfecho e valoriza o tom e a atmosfera da obra.",
+        "texto_modelo": "Enquanto a maioria dos que não recomendam aponta personagens pouco distinguíveis e pouca conexão com a trama, a maioria dos que recomendam destaca o peso emocional do desfecho e valoriza o tom e a atmosfera da obra.",
+        "origem": "llm",
+        "motivo": "melhor_entre_limpos",
+        "criterio_decisivo": "ancoras",
+        "abertura": "QUANT",
+        "indice_escolhido": 0,
+        "flags": [],
+        "candidatos": [
+          {
+            "indice": 0,
+            "n_flags": 0,
+            "flags": [],
+            "n_palavras": 37,
+            "n_ancoras": 3,
+            "abertura": "QUANT",
+            "abertura_freq": 6,
+            "eliminado": false
+          },
+          {
+            "indice": 1,
+            "n_flags": 0,
+            "flags": [],
+            "n_palavras": 46,
+            "n_ancoras": 1,
+            "abertura": "QUANT",
+            "abertura_freq": 6,
+            "eliminado": false
+          },
+          {
+            "indice": 2,
+            "n_flags": 0,
+            "flags": [],
+            "n_palavras": 36,
+            "n_ancoras": 0,
+            "abertura": "QUANT",
+            "abertura_freq": 6,
+            "eliminado": false
+          }
+        ],
+        "uso": {
+          "prompt_tokens": 3588,
+          "completion_tokens": 176,
+          "cache_hit_tokens": 0,
+          "cache_miss_tokens": 3588
+        },
+        "latencia_s": 12.15
       }
     },
     "aftersun": {

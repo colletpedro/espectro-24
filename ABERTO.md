@@ -346,6 +346,9 @@ estiver aberto, os 300 não devem ser disparados.
    nenhum contorno tentado.** Qualquer solução (capturar o erro por bucket e
    seguir sem aquele tema, trocar de provider só para o bucket afetado,
    pré-filtrar o texto) é decisão de produto, não deste piloto.
+   **RESOLVIDO (2026-09-14) por decisão do dono: fallback DeepSeek → Gemini
+   SÓ na recusa de conteúdo, marcado no dado. Filme republicado com n = 40
+   nos três buckets — ver C16.**
 8. **CORRIGIDO NA CAUSA (2026-09-13) — `get-out-2017` continua
    contaminado.** A publicação recoletava e deslocava a amostra DEPOIS da
    classificação. Investigado e relatado primeiro; (A) e (B) implementados
@@ -777,6 +780,301 @@ estiver aberto, os 300 não devem ser disparados.
       menor dos custos medidos. Os dois gabaritos (108 pares) ficam como
       conjunto de teste para qualquer régua futura — e ela terá de ser
       desenhada sem olhar para eles, ou validada num terceiro lote.
+
+### C15. DeepSeek vs. Gemini na classificação/rotulagem — fundamento corrigido, três medições novas
+
+**O motivo histórico da troca (v1.8.0) não vale mais.** `PROVIDER_POR_ESTAGIO`
+justificava DeepSeek em `classificacao`/`rotulagem` citando, em primeiro
+lugar, o teto de 20 req/dia do Gemini free tier. **A chave do Gemini tem
+billing ativo hoje — o teto não existe.** Corrigido em `config.py:320-405` e
+`synthesize.py` (`deepseek_client_call`), com nota datada, 2026-09-14: o
+argumento deixou de ser BLOQUEIO e virou CUSTO, e a permanência do DeepSeek
+passa a se apoiar nos outros dois motivos (tarefa estruturada, volume alto) —
+que nunca tinham sido medidos contra o Gemini. `HISTORICO_PROSA.md` já
+registrava a resolução; `CHANGELOG.md` e `experimentos-ollama-arquivado/`
+ficaram como estavam — são registro datado do que era verdade então, não
+justificativa viva.
+
+**(a) CUSTO, MEDIDO — não é competitivo, e por um motivo estrutural.**
+Classificação + verificador, 20 filmes do piloto, mesmas chamadas reais
+(7.068 + 1.597):
+
+| | DeepSeek (preço do repo, desatualizado) | DeepSeek (preço de hoje) | Gemini (medido) |
+|---|---:|---:|---:|
+| total | US$ 0,426 | US$ 0,557 | **US$ 9,23** |
+| por filme | US$ 0,0213 | US$ 0,0278 | **US$ 0,462** |
+
+Gemini sai **~17× mais caro**, mesmo no cenário que MAIS o favorece (ver
+abaixo). A causa não é o preço por token — é que o **DeepSeek cacheia
+automaticamente o prefixo do prompt** (89,5% de cache hit medido nos 35.559
+chamadas de classificação do catálogo inteiro) e o Gemini, sem cache
+explícito configurado (feature separada, com custo e complexidade próprios,
+não implementada), paga o prompt inteiro (~1.000-1.500 tokens) a preço cheio
+em TODA chamada.
+
+**Achado que muda a pergunta: a telemetria do projeto não só SUBESTIMA o
+Gemini — ela pode ESCONDER FALHA.** `synthesize.uso()` não lê
+`thoughts_token_count` (confirmado lendo o código: só `candidates_token_count`
+vira `completion_tokens`). Medido com chamada crua (fora do adaptador), em
+40 reviews reais do piloto, `gemini-3.7-flash` com `thinking_budget=0` E
+`max_output_tokens=300` (o mesmo teto que a classificação usa no DeepSeek):
+- **`thinking_budget=0` NÃO desliga o thinking neste modelo/tarefa** — 26 de
+  40 chamadas geraram tokens de raciocínio mesmo assim (média 140, até 291);
+- **20% das chamadas saíram truncadas** (`finish_reason=MAX_TOKENS`, JSON
+  inválido) — o orçamento de saída morreu para o pensamento antes de chegar
+  na resposta. Sem `thinking_budget` explícito (default do modelo), a taxa
+  sobe para 80%.
+- Subindo `max_output_tokens` para 2000, 15/15 chamadas de teste saíram
+  limpas (0% de falha) — mas cada uma ainda carrega ~50 tokens de thinking
+  em média, cobrados como saída. **É esse cenário (2000 tokens, 0% falha)
+  que gerou os US$ 0,462/filme da tabela acima — o número JÁ é o mais
+  favorável ao Gemini que o dado sustenta.** Ao orçamento real de 300
+  tokens, ele teria uma taxa de falha de 20%+ que o DeepSeek não tem.
+- Preço usado: US$ 0,75/M entrada, US$ 3,75/M saída (oficial até
+  31/12/2026, thinking cobrado como saída).
+
+**(b) BLOQUEIO DE CONTEÚDO — indicativo, Gemini NÃO recusou.** Testadas as
+MESMAS duas entradas que travaram o DeepSeek em `a-brighter-summer-day`:
+1. a review `viewing:1343536508` (a que falhou nos 3 passes de
+   classificação, `400 Content Exists Risk`);
+2. o bucket `positivas` inteiro reconstruído OFFLINE do bruto persistido
+   (`pipeline.amostra_do_bruto`, mesma seleção de produção, confirmado que
+   contém a review acima) — o mesmo texto que a síntese envia e que também
+   travou com `400`.
+
+**Os dois passaram limpos no Gemini** (`gemini-3.7-flash`, `thinking_budget=0`,
+JSON válido nos dois, sem qualquer sinalização de bloqueio em
+`prompt_feedback`). **Amostra de 1 filme, 2 chamadas — indicativo, não
+taxa.** Mas é o único bloqueante DETERMINÍSTICO que existe hoje (item 7 acima):
+se a taxa de recusa do DeepSeek para este tipo de conteúdo for consistente,
+trocar SÓ este estágio problemático (ou ter um fallback de provider quando
+`Content Exists Risk` disparar) resolveria um bloqueante real da expansão —
+questão de disponibilidade, não de custo.
+
+**(c) QUALIDADE — desenho proposto, ARQUIVADO NÃO RODADO (2026-09-14).**
+**Motivo do arquivamento:** a decisão de provider já está tomada por custo e
+cache (item a: ~17×, e estrutural — o DeepSeek cacheia o prefixo, o Gemini
+paga o prompt inteiro em toda chamada), e um resultado de qualidade não a
+mudaria: nem um Gemini melhor justificaria 17× no estágio de volume, nem um
+pior desfaria o fallback de C16, que existe por DISPONIBILIDADE, não por
+qualidade. Os ~US$ 8,11 não foram gastos. O desenho fica abaixo, intacto,
+para o caso de a premissa de custo mudar.
+
+Não comparar custo mais alto = melhor sem medir. Proposta, em duas partes:
+
+1. **Contra gabarito humano.** Rodar os MESMOS 100 exemplos rotulados à mão
+   de `CLASSIFICACAO_CONSOLIDADO.md` no Gemini, 3 passes (mesma votação de
+   3 já usada em produção), e comparar precisão/recall por eixo contra os
+   números já medidos do DeepSeek — sem precisar reclassificar o DeepSeek,
+   que já está medido. Custo: 300 chamadas × ~US$ 0,0011 ≈ **US$ 0,33**.
+2. **Concordância e reprodutibilidade sobre volume real.** Rodar Gemini 3×
+   sobre as 2.356 reviews do piloto (mesmo conjunto que o DeepSeek já
+   classificou 3×) e medir (i) concordância DeepSeek×Gemini por eixo
+   (interseção/união do voto majoritário de cada um) e (ii) reprodutibilidade
+   interna de cada provider (fração de unanimidade nos 3 passes — mesmo
+   método de `scripts/medir_reprodutibilidade_d3.py`, aplicado aqui à
+   classificação em vez da rotulagem). Custo: 2.356×3 chamadas Gemini ×
+   ~US$ 0,0011 ≈ **US$ 7,78** (repetindo a mesma ordem de grandeza do item a,
+   porque é o mesmo volume).
+   Total do desenho: **~US$ 8,11**, zero chamada DeepSeek nova (reusa o que
+   já está classificado). Nenhuma reclassificação; só grava num
+   diretório de estudo, fora de `resultado/`.
+
+**Nada foi trocado em produção.** `PROVIDER_POR_ESTAGIO` continua com
+`classificacao`/`rotulagem` em DeepSeek. Nenhuma asserção de teste foi
+afrouxada; `tests/test_provider_por_estagio.py` (34 testes) continua
+passando.
+
+### C16. Fallback de conteúdo DeepSeek → Gemini — implementado, medido, provado em `a-brighter-summer-day` (2026-09-14)
+
+**Decisão do dono:** fallback para o Gemini quando o DeepSeek recusa por
+conteúdo. O custo de execução é ~zero (o Gemini só roda na recusa), e o
+argumento não depende da taxa: sem fallback, cada recusa é um filme que não
+publica. `PROVIDER_POR_ESTAGIO` NÃO mudou.
+
+**Detecção — o critério inteiro** (`synthesize.recusa_de_conteudo`):
+`openai.BadRequestError` com `exc.body["message"] == "Content Exists Risk"`,
+comparação EXATA. É o que a API devolveu nas três vezes registradas (passes,
+log de publicação): HTTP 400, `type`/`code` = `invalid_request_error` — os
+mesmos de qualquer 400 (parâmetro inválido, contexto longo); só a mensagem
+distingue, e o SDK já desembrulha `error` em `body`. Falso positivo não tem
+como acontecer; se o DeepSeek mudar o texto, o fallback para de disparar e o
+filme falha ALTO como antes — o modo de falha é o erro visível, nunca o
+mascarado. **Não dispara** (um teste para cada): JSON inválido, timeout, 5xx,
+429 (nem com a mesma mensagem), outro 400, 400 sem corpo, mensagem parecida,
+erro do Gemini.
+
+**Onde.**
+- Classificação, POR REVIEW: `votacao_3.classificar_passe` →
+  `synthesize.resposta_classificacao`. Gemini `gemini-3.7-flash` com
+  `thinking_budget=0` e teto de 2000 tokens (C15.a: a 300, 20% truncava).
+- Síntese, POR BUCKET: `synthesize_bucket`, só no caminho de produção
+  resolvido para DeepSeek (client injetado não ganha fallback), pelo
+  `gemini_client_call` — o adaptador §D do Gemini, de produção até a
+  v1.8.0. As retentativas do bucket (JSON, idioma/escopo) ficam no Gemini:
+  mandar o mesmo texto de volta ao DeepSeek seria pagar uma recusa certa.
+- **O Gemini ser o provider da prosa não resolvia nada:** narrador, veredito
+  e condições leem só o `output` validado, nunca review bruta — o texto
+  recusado nunca chega a eles. A recusa acontece nos estágios que leem
+  review (classificação, síntese, verificador), e os dois primeiros são
+  necessários JUNTOS: sem a síntese, o filme não sai; sem a classificação, a
+  guarda do item 8 recusa a amostra.
+
+**Marca no dado** — a chave só existe quando houve troca (mesma política do
+`verificador`), e por isso as 7.843 linhas antigas de consenso ficaram byte a
+byte iguais:
+- registro de passe: `provider` e `modelo` (em todo registro novo) +
+  `fallback_conteudo: {de, para, modelo, motivo}`;
+- linha de consenso e de consenso verificado: `fallback_conteudo:
+  [{passe, de, para, modelo, motivo}]`;
+- bloco `eixos` do resultado: `fallback_conteudo: [{bucket, id, passes}]` —
+  só as reviews contadas no `n`;
+- bucket do resultado: `fallback_conteudo: {de, para, modelo, motivo}`;
+- sobrevive a `write_json` e a `frontend/build_data.py` (teste).
+**Telemetria:** linha `Fallbacks de conteúdo do LLM:` no stderr do CLI (com
+aviso legível ao lado), parseada pelo harness para o campo
+`fallback_conteudo` de `publicacao_log.jsonl`; resumo por passe em
+`votacao_3`; `publicar_catalogo --relatorio` lista onde, lendo do DADO.
+
+**Republicação de `a-brighter-summer-day` — a prova de ponta a ponta.**
+1. Classificação: a única review pendente da amostra inteira ×3 passes → 3
+   recusas do DeepSeek → 3 respostas do Gemini, `ok`, os mesmos 7 eixos nos
+   3 passes (unânime). ~1.529 tokens de entrada e ~57 de saída por chamada.
+2. Consenso: 7.843 → 7.844 linhas, 0 incompletas; o diff é a linha nova e
+   nenhuma outra.
+3. Verificador: `aplicar-producao --slug a-brighter-summer-day` — **flag
+   nova**, porque sem ela o resume retentaria as falhas de JSON de OUTROS
+   filmes e mudaria `consenso_verificado.jsonl` por baixo de JSONs já
+   publicados (o piloto registrou que `speak-no-evil-2022` mudaria). 3
+   chamadas: as 2 falhas antigas de JSON do próprio filme passaram; **a
+   review nova foi RECUSADA DE NOVO pelo DeepSeek** e ficou com
+   `impacto_emocional` sem verificação (política conservadora); `n_falharam`
+   14 → 13. `consenso_verificado`: 1 linha nova, 0 alteradas em qualquer
+   outro filme.
+4. Publicação (`publicar_catalogo --slug`, offline, 0 requisições, 57 s):
+   **n = 40 nos três buckets** (margem `n=40`, limiar 22,83pp), contraste
+   `tematico`, verificador aplicado, rotulagem em 3 chamadas sem falha,
+   narrativa com 0 flags. **Um bucket processado pelo Gemini: `positivas`**
+   (5 temas). Veredito gerado pelo LLM (não template).
+5. NÃO feito: condições (o §0 exige leitura humana de 100% antes de
+   `publicar_condicoes.py`) e `frontend/build_data.py`.
+
+**Rotulagem e verificador têm o mesmo risco?**
+- **Verificador: sim, observado AO VIVO** (passo 3). Manda o mesmo texto de
+  review que a classificação. A falha é conservadora, mas NÃO é visível por
+  filme: o bloco `eixos` carrega só o manifesto global. Em
+  `a-brighter-summer-day`/positivas, uma das marcações de
+  `impacto_emocional` é de review não verificada — e a variante de produção
+  remove 47,7% dessas marcações no corpus. **Recomendação: entrar**, com a
+  mesma detecção e um ponto de chamada (`rodar_passe`). Não implementado:
+  aguarda aval.
+- **Rotulagem: risco baixo.** Recebe só os NOMES dos temas (paráfrase em
+  português gerada pelo modelo), nunca texto de review; na republicação, os
+  temas de `positivas` — gerados pelo Gemini a partir do texto recusado —
+  passaram no DeepSeek. A falha é aditiva (célula sem frase,
+  `rotulagem.falharam`). Mas `rotular_bucket` tem `except Exception` largo:
+  uma recusa ali viraria `falhou` sem motivo. **Recomendação: não entrar no
+  fallback; gravar o motivo da falha** — mudança pequena, não feita.
+
+**Taxa real de bloqueio (dimensionamento, não gate) — custo zero: a medição
+já estava no disco.** Os três passes de produção já mandaram ao DeepSeek
+toda review da amostra, e a falha fica gravada com o erro.
+- Classificação: 7.844 reviews × 3 passes (23.532 chamadas) → **1 review
+  recusada** (a mesma, 3/3) = **0,013%**; nas 7.724 reviews dos outros 54
+  filmes, **0**. Nenhum outro tipo de erro nos três passes.
+- Verificador: 5.851 registros antes desta sessão, 0 recusas (as 14 falhas
+  eram JSON); +1 recusa agora, a mesma review.
+- Síntese: 162 buckets sintetizados no disco, 0 recusas; +1 recusado
+  (`positivas` deste filme, que contém a review).
+- **Concentração: total.** Tudo o que o DeepSeek recusou até hoje, em três
+  estágios, é UMA entrada de UM filme (1 de 55).
+- **Perfil:** *A Brighter Summer Day* (Edward Yang, Taiwan, 1991), o único
+  filme sino-falante do catálogo. A review recusada é POSITIVA (5★) e cita
+  Taiwan/Taipei. **Não é filtro de palavra:** 18 reviews da amostra citam
+  Taiwan (17 passaram), 15 citam China e 12 comunismo, e filmes de violência
+  extrema, abuso e ditadura (`im-still-here-2024`, `hard-to-be-a-god`,
+  `cidade-de-deus`, `the-substance`, `speak-no-evil-2022`) passaram limpos.
+  Hipótese NÃO medida: o filtro reage a tema político sensível para a China
+  (o DeepSeek é provider chinês). n = 1 não sustenta mais que hipótese.
+- **Projeção para 300:** na taxa de hoje, 1/55 filmes → ~5 filmes; com 1
+  evento, o IC 95% (Poisson exato) vai de ~0,1 a ~30. **O perfil empurra
+  para cima:** a expansão é de cinema internacional e temas difíceis, e se a
+  hipótese valer, filmes sobre China/Taiwan/Hong Kong/Tibete/Revolução
+  Cultural batem mais — o catálogo atual tem só um. Custo do fallback por
+  filme afetado: ~US$ 0,0014 por review por passe + ~US$ 0,01 por bucket de
+  síntese → < US$ 0,05/filme; no teto do IC, < US$ 2 no lote.
+
+**Aberto:**
+- `SPEC_VERSION` NÃO foi incrementada: a chave nova é aditiva, e incrementar
+  faria `_ja_publicado` recusar o catálogo inteiro (o harness republicaria
+  tudo). Decisão do dono no commit.
+- O `uso` do Gemini no fallback continua sem `thoughts_token_count` (item 4
+  do piloto): custo subestimado.
+- A síntese não grava provider quando NÃO há troca: "sem marca = DeepSeek"
+  vale para execuções com o provider default; `--provider` explícito não
+  deixa rastro no JSON (dívida anterior a esta sessão).
+- Fallback no verificador (recomendado) e motivo na rotulagem: aguardam aval.
+- Condições de `a-brighter-summer-day`: aguardam geração + leitura humana.
+
+**Testes:** `tests/test_fallback_conteudo.py` (39). Única asserção alterada:
+`test_sem_empilhamento_scripts.ALVOS_LLM` ganhou `resposta_classificacao` —
+APERTA: sem ela, a varredura de `votacao_3.py` ficaria sem alvo e passaria
+por vacuidade. Nenhuma afrouxada. Suíte: 1965 coletados / 1959 passam / 5
+falhas conhecidas (as mesmas de antes) / 1 xfail.
+
+**Rodada 2 (2026-09-14), aprovada pelo dono — resolve os itens "Aberto" acima.**
+1. **Verificador com fallback.** `resposta_json_com_fallback` (estágio
+   `verificador`); `resposta_classificacao` virou atalho dela. Teto de saída
+   `FALLBACK_CONTEUDO_MAX_TOKENS_JSON` = 2000, herdado da medição da
+   classificação (mesma forma de tarefa; não medido no verificador).
+   **Reverificação de `viewing:1343536508`:** o Gemini CONFIRMOU
+   `impacto_emocional` (alvo `espectador`) — **o estado não muda**. A linha
+   passa a carregar `verificador_fallback_conteudo`, e o bloco publicado
+   `eixos.fallback_conteudo` traz `verificador` junto dos `passes`.
+2. **O estado "sem verificação" deixou de ser invisível.**
+   `gerar_consenso_verificado` marca toda linha com `impacto_emocional` e sem
+   veredito com `verificacao_pendente: {eixo, motivo, erro}` (motivos:
+   `recusa_de_conteudo`, `recusa_de_conteudo_e_fallback_falhou`,
+   `erro_<Tipo>`, `sem_chamada`); o bloco `eixos` publica
+   `verificacao_pendente` para as reviews CONTADAS; o manifesto ganhou
+   `pendentes_por_motivo` e `n_fallback_conteudo`, e o custo dele passou a
+   somar só as chamadas do DeepSeek (os preços são os dele).
+   **Estado hoje:** 0 reviews sem verificação por recusa. **12 sem
+   verificação por `JSONDecodeError`, em 11 filmes, TODAS contadas no `n`
+   publicado e nenhuma marcada no JSON publicado** (os JSONs são anteriores
+   à marca): `drive-my-car`/negativas, `force-majeure-2014`/medianas,
+   `hard-to-be-a-god`/medianas, `memories-of-murder`/negativas,
+   `pinocchio-2022`/positivas, `satantango`/negativas,
+   `speak-no-evil-2022`/medianas, `the-cloud-capped-star`/positivas,
+   `the-turin-horse`/positivas, `whiplash-2014`/medianas, `zama`/negativas e
+   positivas. Em `consenso_verificado.jsonl` essas 12 linhas ganharam só a
+   chave — os eixos das 7.844 linhas estão intactos. **Decisão do dono,
+   não tomada:** (a) regenerar o bloco `eixos` desses 11 filmes para a marca
+   chegar à página; ou (b) retentar as 12 no verificador (falha não
+   determinística — no piloto, 8 de 8 passaram na retomada), o que PODE
+   mudar contagens publicadas (`speak-no-evil-2022` mudaria bullets).
+3. **Rotulagem: sem fallback, com motivo.** `motivos_falha` por tentativa
+   (`recusa_de_conteudo: Content Exists Risk`, `json_invalido`,
+   `<Tipo>: <mensagem>`), em `eixos.rotulagem.motivos_falha` só quando
+   houve falha; o CLI imprime.
+4. **`SPEC_VERSION` não sobe** — decisão registrada ao lado da constante
+   (`config.py`) e em `SPEC.md` §3[V], junto da política de carimbo.
+5. **Condições de `a-brighter-summer-day`: geradas, NÃO publicadas** —
+   `docs/arquivo-de-estudos/revisao-condicoes/insumo-proximo-lote/`, para o
+   próximo lote de revisão humana. 9 temas pedidos (5 vale a pena, 4 talvez
+   evite) → 8 condições (4 + 4), 0 descartadas, **1 recusa declarada pelo
+   modelo**: POS-D, regra R6 (spoiler — o tema é o impacto do desfecho).
+   Taxa de recusa 1/9 = 11%, a primeira sob o canal de recusa — um filme só.
+6. **Bloco `eixos` republicado** por `cli --reuse-synthesis --offline --tom
+   estruturado`: só `eixos.fallback_conteudo` e `veredito` (regerado)
+   mudaram; contagens, margem (n = 40), contraste, buckets e narrativa
+   idênticos. `build_data.py`: catálogo da home 54 → 55, `data.js` só com
+   inserções.
+
+Testes da rodada: +12 em `test_fallback_conteudo.py`; `ALVOS_LLM` ganhou
+`resposta_json_com_fallback` (aperta, pelo mesmo motivo). Nenhuma asserção
+afrouxada. Suíte: 1977 coletados / 1971 passam / 5 falhas conhecidas / 1
+xfail.
 
 ---
 

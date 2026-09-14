@@ -65,9 +65,10 @@ from classificar_10 import (  # noqa: E402 — MESMO prompt/eixos/amostra/adapta
 )
 from espectro24.buckets import FRONTEIRAS  # noqa: E402
 from espectro24.synthesize import (  # noqa: E402
+    FALLBACK_CONTEUDO_PROVIDER,
     deepseek_client,
-    deepseek_resposta,
-    deepseek_uso,
+    resposta_classificacao,
+    telemetria_fallback_conteudo,
     telemetria_retentativa_llm,
 )
 
@@ -144,6 +145,7 @@ def classificar_passe(n_passe: int, limite: int | None = None) -> None:
     client = deepseek_client()
     lock, contador, t0 = Lock(), [0], time.time()
     falhas = [0]
+    n_fallbacks_antes = len(telemetria_fallback_conteudo())
     saida = arq.open("a", encoding="utf-8")
 
     def tarefa(review: dict) -> None:
@@ -154,13 +156,22 @@ def classificar_passe(n_passe: int, limite: int | None = None) -> None:
         # deixar o passe seguir — sem re-chamar. Erro de CONTEÚDO (JSON
         # malformado) agora custa 1 chamada, não 3, e vira `ok: False`
         # visível no resumo em vez de ser reabsorvido em silêncio.
+        #
+        # [2026-09-14] `resposta_classificacao` é `deepseek_resposta` com UMA
+        # saída a mais: a recusa por conteúdo (`Content Exists Risk`) vai ao
+        # Gemini. Todo o resto — inclusive JSON inválido — é o de antes. O
+        # registro diz quem respondeu (`provider`/`modelo`) e, quando houve
+        # troca, carrega `fallback_conteudo`, no sucesso E na falha.
+        resp = None
         try:
-            resp = deepseek_resposta(
+            resp = resposta_classificacao(
                 SYSTEM,
                 f"Review (nota {review['nivel']} de 5 estrelas):\n\n"
                 f"{review['texto']}",
-                MODELO, max_tokens=300, json_mode=True, client=client)
-            data = json.loads(resp.choices[0].message.content)
+                MODELO, max_tokens=300, client=client,
+                unidade=f"{review['slug']}/{review['bucket']}/{review['id']}"
+                        f"/passe{n_passe}")
+            data = json.loads(resp["texto"])
             eixos, livres, invalidos = _normalizar(data)
             registro = {
                 "ok": True, "taxonomia_id": tid, "passe": n_passe,
@@ -168,13 +179,19 @@ def classificar_passe(n_passe: int, limite: int | None = None) -> None:
                 "bucket": review["bucket"], "id": review["id"],
                 "nivel": review["nivel"], "n_chars": review["n_chars"],
                 "eixos": eixos, "temas_livres": livres,
-                "eixos_invalidos": invalidos, "uso": deepseek_uso(resp),
+                "eixos_invalidos": invalidos, "uso": resp["uso"],
+                "provider": resp["provider"], "modelo": resp["modelo"],
             }
+            marca = resp["fallback_conteudo"]
         except Exception as e:  # noqa: BLE001
             registro = {"ok": False, "taxonomia_id": tid, "passe": n_passe,
                         "slug": review["slug"], "perfil": review["perfil"],
                         "bucket": review["bucket"], "id": review["id"],
                         "erro": f"{type(e).__name__}: {e}"}
+            marca = ((resp or {}).get("fallback_conteudo")
+                     or getattr(e, "marca", None))
+        if marca:
+            registro["fallback_conteudo"] = marca
         with lock:
             saida.write(json.dumps(registro, ensure_ascii=False) + "\n")
             saida.flush()
@@ -196,6 +213,13 @@ def classificar_passe(n_passe: int, limite: int | None = None) -> None:
     print(f"  passe {n_passe}: falhas (ok=False) {falhas[0]}/{len(pendentes)} "
           f"· retentativas de transporte no adaptador: {tel['n_retentativas']}"
           + (f" {tel['por_tipo']}" if tel["por_tipo"] else ""))
+    # [2026-09-14] Quantas reviews DESTE passe foram classificadas pelo
+    # Gemini porque o DeepSeek recusou — e quais. A marca também está em
+    # cada registro (`fallback_conteudo`); esta linha é o resumo do lote.
+    fb = telemetria_fallback_conteudo()[n_fallbacks_antes:]
+    print(f"  passe {n_passe}: fallbacks de conteúdo (deepseek → "
+          f"{FALLBACK_CONTEUDO_PROVIDER}) {len(fb)}"
+          + (f": {', '.join(f['unidade'] for f in fb)}" if fb else ""))
 
 
 def cmd_passe(n_passe: int, limite: int | None) -> None:
@@ -250,13 +274,21 @@ def _consensuar(passes: list[dict[tuple, dict]], chaves: list[tuple],
         votos = Counter(e for r in registros for e in r["eixos"])
         finais = sorted(e for e, v in votos.items() if v >= minimo)
         base = registros[0]
-        saida.append({
+        linha = {
             "slug": base["slug"], "perfil": base["perfil"],
             "bucket": base["bucket"], "id": base["id"], "nivel": base["nivel"],
             "n_chars": base["n_chars"], "eixos": finais,
             "votos": {e: votos.get(e, 0) for e in sorted(set(votos) | set(finais))},
             "eixos_por_passe": [r["eixos"] for r in registros],
-        })
+        }
+        # [2026-09-14] Qual passe foi votado pelo Gemini (fallback de
+        # conteúdo). A chave só existe quando houve troca — as linhas de
+        # classificação 100% DeepSeek ficam byte a byte como eram.
+        fallbacks = [{"passe": r.get("passe"), **r["fallback_conteudo"]}
+                     for r in registros if r.get("fallback_conteudo")]
+        if fallbacks:
+            linha["fallback_conteudo"] = fallbacks
+        saida.append(linha)
     return saida
 
 

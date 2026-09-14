@@ -70,9 +70,9 @@ import variante_impacto_estrito as vie  # noqa: E402
 from classificar_10 import EIXOS, MODELO  # noqa: E402
 from espectro24.previsao_frequencia import fator_pareado  # noqa: E402
 from espectro24.synthesize import (  # noqa: E402
+    MOTIVO_RECUSA_CONTEUDO,
     deepseek_client,
-    deepseek_resposta,
-    deepseek_uso,
+    resposta_json_com_fallback,
 )
 
 SAIDA = RAIZ / "resultado" / "auditoria-acuracia" / "verificador"
@@ -226,23 +226,37 @@ def rodar_passe(variante: str, n_passe: int, reviews: list[dict],
         # retenta TRANSPORTE dentro de `deepseek_resposta`. O `except`
         # só REGISTRA a falha (sem re-chamar): erro de CONTEÚDO passa
         # a custar 1 chamada e vira `ok: False` visível.
+        #
+        # [2026-09-14] Fallback de conteúdo, o mesmo da classificação: este
+        # estágio manda o MESMO texto de review, e a recusa se materializou
+        # aqui (`a-brighter-summer-day`, `viewing:1343536508`). Só a recusa
+        # `Content Exists Risk` troca de provider; o registro diz quem
+        # respondeu e carrega a marca, no sucesso e na falha.
+        resp = None
         try:
-            resp = deepseek_resposta(
+            resp = resposta_json_com_fallback(
                 system,
                 f"Review (nota {review['nivel']} de 5 estrelas):\n\n"
                 f"{review['texto']}\n\n"
                 f"Esta review foi marcada com `impacto_emocional`. "
                 f"Confirma ou remove?",
-                MODELO, max_tokens=300, json_mode=True, client=client)
-            data = json.loads(resp.choices[0].message.content)
+                MODELO, max_tokens=300, client=client, estagio="verificador",
+                unidade=f"{review.get('slug', '?')}/{review['id']}")
+            data = json.loads(resp["texto"])
             confirma, frase, alvo = _normalizar_veredito(data)
             registro = {"ok": True, "variante": variante, "passe": n_passe,
                         "id": review["id"], "n_chars": review["n_chars"],
                         "confirma": confirma, "frase": frase, "alvo": alvo,
-                        "uso": deepseek_uso(resp)}
+                        "uso": resp["uso"], "provider": resp["provider"],
+                        "modelo": resp["modelo"]}
+            marca = resp["fallback_conteudo"]
         except Exception as e:  # noqa: BLE001
             registro = {"ok": False, "variante": variante, "passe": n_passe,
                         "id": review["id"], "erro": f"{type(e).__name__}: {e}"}
+            marca = ((resp or {}).get("fallback_conteudo")
+                     or getattr(e, "marca", None))
+        if marca:
+            registro["fallback_conteudo"] = marca
         with lock:
             saida.write(json.dumps(registro, ensure_ascii=False) + "\n")
             saida.flush()
@@ -816,29 +830,74 @@ def _reviews_producao_a_verificar(linhas: list[dict]) -> list[dict]:
         if EIXO in r["eixos"]:
             t = por_id.get(r["id"])
             if t is not None:
-                saida.append({"id": r["id"], "nivel": t["nivel"],
+                saida.append({"id": r["id"], "slug": r["slug"],
+                              "nivel": t["nivel"],
                               "n_chars": t["n_chars"], "texto": t["texto"]})
     return saida
 
 
 def gerar_consenso_verificado(linhas: list[dict],
-                              vereditos_: dict[str, bool]) -> list[dict]:
+                              vereditos_: dict[str, bool],
+                              pendencias: dict[str, dict] | None = None,
+                              fallbacks: dict[str, dict] | None = None
+                              ) -> list[dict]:
     """O transform PURO: aplica os vereditos às linhas do consenso de
     produção. Só remove `EIXO`, e só quando há veredito EXPLÍCITO de
     remoção — linha sem `impacto_emocional`, sem veredito (chamada que
-    falhou) ou com veredito de confirmação sai IDÊNTICA à de entrada. Mesma
+    falhou) ou com veredito de confirmação mantém os EIXOS da entrada. Mesma
     política conservadora de `_normalizar_veredito`: na dúvida, não mexe.
+
+    [2026-09-14] O que não mexe passa a DIZER que não mexeu. Duas marcas,
+    cada uma só na linha a que se aplica — linha sem `EIXO` sai idêntica:
+    - `verificacao_pendente: {eixo, motivo, erro?}` — linha com `EIXO` e sem
+      veredito. O eixo fica (conservador) e a linha declara que ficou sem
+      verificação, e por quê (`pendencias[id]`; sem entrada, `sem_chamada`).
+      Até aqui esse estado era invisível: o eixo continuava contando no
+      filme publicado e nada no JSON dizia que ele não foi verificado.
+    - `verificador_fallback_conteudo: {de, para, modelo, motivo}` — o
+      veredito desta linha veio do Gemini porque o DeepSeek recusou.
     """
+    pendencias = pendencias or {}
+    fallbacks = fallbacks or {}
     saida = []
     for r in linhas:
+        linha = {**r}
         eixos = list(r["eixos"])
-        if EIXO in eixos and vereditos_.get(r["id"]) is False:
-            eixos.remove(EIXO)
-        saida.append({**r, "eixos": eixos})
+        if EIXO in eixos:
+            veredito = vereditos_.get(r["id"])
+            if veredito is None:
+                linha["verificacao_pendente"] = {
+                    "eixo": EIXO,
+                    **pendencias.get(r["id"], {"motivo": "sem_chamada"})}
+            else:
+                if veredito is False:
+                    eixos.remove(EIXO)
+                if r["id"] in fallbacks:
+                    linha["verificador_fallback_conteudo"] = fallbacks[r["id"]]
+        linha["eixos"] = eixos
+        saida.append(linha)
     return saida
 
 
-def cmd_aplicar_producao() -> None:
+def _motivo_pendencia(erro: str) -> dict:
+    """O motivo de uma candidata ter ficado sem veredito, a partir do `erro`
+    gravado no registro de falha — a recusa de conteúdo separada do resto,
+    porque é a que o fallback deveria ter resolvido."""
+    if erro.startswith("FallbackDeConteudoFalhou"):
+        motivo = "recusa_de_conteudo_e_fallback_falhou"
+    elif MOTIVO_RECUSA_CONTEUDO in erro:
+        motivo = "recusa_de_conteudo"
+    else:
+        motivo = "erro_" + erro.split(":", 1)[0]
+    return {"motivo": motivo, "erro": erro[:200]}
+
+
+def cmd_aplicar_producao(slugs: list[str] | None = None) -> None:
+    """`slugs` (2026-09-14) restringe só as CHAMADAS: sem ele, o resume
+    retenta toda candidata sem `ok` — inclusive as 14 falhas de JSON de
+    outros filmes, cujo veredito novo mudaria `consenso_verificado.jsonl`
+    por baixo de um JSON já publicado. A escrita continua cobrindo o consenso
+    inteiro, com os vereditos que já existem."""
     from dotenv import load_dotenv
     load_dotenv(RAIZ / ".env")
 
@@ -849,22 +908,36 @@ def cmd_aplicar_producao() -> None:
           f"({len(candidatas) / len(linhas):.1%}) · variante "
           f"{VARIANTE_PRODUCAO} · passada única")
 
-    rodar_passe(VARIANTE_PRODUCAO, 1, candidatas, arq=ARQ_PRODUCAO)
+    a_chamar = (candidatas if not slugs
+                else [c for c in candidatas if c["slug"] in set(slugs)])
+    if slugs:
+        print(f"  chamadas restritas a {sorted(slugs)}: "
+              f"{len(a_chamar)} candidata(s)")
+    rodar_passe(VARIANTE_PRODUCAO, 1, a_chamar, arq=ARQ_PRODUCAO)
 
-    resultados = {}
+    resultados, ultima_falha = {}, {}
     for l in ARQ_PRODUCAO.read_text(encoding="utf-8").splitlines():
         if l.strip():
             r = json.loads(l)
             if r.get("ok"):
                 resultados[r["id"]] = r
+            else:
+                ultima_falha[r["id"]] = r.get("erro", "")
     faltando = [c["id"] for c in candidatas if c["id"] not in resultados]
+    pendencias = {rid: _motivo_pendencia(ultima_falha[rid])
+                  for rid in faltando if rid in ultima_falha}
+    por_motivo = Counter(pendencias.get(rid, {"motivo": "sem_chamada"})["motivo"]
+                         for rid in faltando)
     if faltando:
         print(f"  AVISO: {len(faltando)} review(s) sem resultado ok (falha "
               "persistente) — ficam com a marcação original, política "
-              "conservadora.")
+              "conservadora, e MARCADAS `verificacao_pendente`: "
+              f"{dict(por_motivo)}")
     vereditos_ = {rid: r["confirma"] for rid, r in resultados.items()}
+    fallbacks = {rid: r["fallback_conteudo"] for rid, r in resultados.items()
+                 if r.get("fallback_conteudo")}
 
-    saida = gerar_consenso_verificado(linhas, vereditos_)
+    saida = gerar_consenso_verificado(linhas, vereditos_, pendencias, fallbacks)
     n_removidas = sum(1 for antes, depois in zip(linhas, saida)
                       if EIXO in antes["eixos"] and EIXO not in depois["eixos"])
 
@@ -873,8 +946,12 @@ def cmd_aplicar_producao() -> None:
         for r in saida:
             fh.write(json.dumps(r, ensure_ascii=False) + "\n")
 
+    # Só o que o DeepSeek respondeu entra no custo: os preços abaixo são os
+    # dele. As chamadas do fallback (Gemini) são contadas à parte.
     uso = Counter()
     for r in resultados.values():
+        if r.get("provider", "deepseek") != "deepseek":
+            continue
         for k, v in (r.get("uso") or {}).items():
             uso[k] += v
     custo = (uso["cache_miss_tokens"] * PRECO_ENTRADA_MISS
@@ -888,6 +965,10 @@ def cmd_aplicar_producao() -> None:
         "n_candidatas": len(candidatas),
         "n_verificadas": len(resultados),
         "n_falharam": len(faltando),
+        # [2026-09-14] os `n_falharam` por motivo — cada um MARCADO na linha
+        # (`verificacao_pendente`) — e os vereditos que vieram do fallback.
+        "pendentes_por_motivo": dict(sorted(por_motivo.items())),
+        "n_fallback_conteudo": len(fallbacks),
         "n_removidas": n_removidas,
         "n_chamadas": len(resultados),
         "uso": dict(uso),
@@ -1018,7 +1099,13 @@ def main() -> None:
     ap.add_argument("etapa", choices=["passes", "comparar", "projetar",
                                       "projetar-exato", "aplicar-producao",
                                       "relatorio-producao"])
+    ap.add_argument("--slug", action="append",
+                    help="aplicar-producao: só chama o verificador para as "
+                         "candidatas destes filmes (repetível)")
     args = ap.parse_args()
+    if args.etapa == "aplicar-producao":
+        cmd_aplicar_producao(args.slug)
+        return
     {"passes": cmd_passes, "comparar": cmd_comparar,
      "projetar": cmd_projetar,
      "projetar-exato": cmd_projetar_exato,

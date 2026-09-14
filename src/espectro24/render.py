@@ -122,6 +122,12 @@ def build_output(slug: str, buckets: list[BucketResult], data_coleta: str,
                 "observacao_geral": b.observacao_geral,
                 "idioma_invalido": b.idioma_invalido,
                 "escopo_suspeito": b.escopo_suspeito,
+                # [2026-09-14] Só existe quando a síntese DESTE bucket foi
+                # feita pelo Gemini porque o DeepSeek recusou por conteúdo —
+                # mesma política do `verificador` no bloco de eixos: a
+                # ausência é a declaração "não houve troca", nunca um default.
+                **({"fallback_conteudo": b.fallback_conteudo}
+                   if b.fallback_conteudo else {}),
             }
             for b in buckets
         ],

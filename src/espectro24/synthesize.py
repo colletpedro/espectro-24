@@ -30,11 +30,15 @@ import json
 import os
 import random
 import re
+import threading
 import time
 
 from .config import (
     BUCKETS,
     BUCKET_ALVO,
+    FALLBACK_CONTEUDO_MAX_TOKENS_JSON,
+    FALLBACK_CONTEUDO_MODELO,
+    FALLBACK_CONTEUDO_PROVIDER,
     LLM_MAX_TENTATIVAS,
     LLM_BACKOFF_BASE_SEGUNDOS,
     LLM_BACKOFF_JITTER,
@@ -327,9 +331,16 @@ def deepseek_client_call(system: str, user: str, model: str) -> str:
 
     Provider ADICIONAL, não default de produção (ver PROVIDER_CLIENTS
     abaixo) — decisão registrada após o encerramento dos experimentos de LLM
-    local (`experimentos-ollama-arquivado/`): o free tier do Gemini (20
-    req/dia) inviabiliza construir catálogo, e o modelo local não sustentou
-    as ~18 invariantes do narrador numa única chamada.
+    local (`experimentos-ollama-arquivado/`): NA ÉPOCA (v1.8.0), o free tier
+    do Gemini (20 req/dia) inviabilizava construir catálogo, e o modelo
+    local não sustentou as ~18 invariantes do narrador numa única chamada.
+
+    [2026-09-14] O motivo do free tier não vale mais — a chave do Gemini tem
+    billing ativo, sem o teto de 20/dia. O modelo local continua fora por
+    razão independente (as invariantes do narrador). A permanência do
+    DeepSeek em produção passou a se sustentar só nos outros dois motivos
+    registrados em `config.PROVIDER_POR_ESTAGIO` (tarefa estruturada,
+    volume), não neste. Ver ABERTO.md.
 
     NON-THINKING explícito (`extra_body={"thinking": {"type": "disabled"}}`)
     — MESMO motivo documentado para o Gemini (`gemini_client_call`) e
@@ -728,6 +739,252 @@ def uso(resp, provider: str) -> dict:
     return vazio
 
 
+# ===========================================================================
+# Fallback de CONTEÚDO (2026-09-14, ABERTO.md C16)
+# ===========================================================================
+# O filtro de conteúdo do DeepSeek é DETERMINÍSTICO: a mesma entrada recusada
+# uma vez é recusada sempre (`a-brighter-summer-day`, `viewing:1343536508`:
+# 3 de 3 passes; o bucket que a contém, na síntese). Sem saída, a recusa
+# derruba o filme inteiro. A saída é trocar de provider SÓ para a unidade
+# recusada — uma review na classificação, um bucket na síntese.
+#
+# ESCOPO ESTRITO, e é a razão de existir uma função de detecção em vez de um
+# `except` largo: timeout, 5xx, 429, JSON malformado e todo outro 400 seguem
+# o tratamento que já tinham. Um fallback que pegasse o erro errado
+# mascararia uma falha em vez de resolver uma.
+#
+# VISIBILIDADE: a unidade processada pelo Gemini carrega a marca
+# (`marca_fallback_conteudo`) no próprio dado — registro de passe, linha de
+# consenso, bloco de eixos, bucket do resultado — e a troca entra na
+# telemetria do processo, com o motivo. Fallback silencioso é o padrão que
+# este projeto já pagou duas vezes (consenso descartando filme; `n` de 40
+# para 39).
+
+MOTIVO_RECUSA_CONTEUDO = "Content Exists Risk"
+
+
+class FallbackDeConteudoFalhou(LLMError):
+    """O DeepSeek recusou por conteúdo E o fallback não produziu resposta.
+
+    Carrega a `marca` da troca: o registro dessa falha precisa dizer que o
+    Gemini foi tentado — uma falha do fallback não pode se passar por uma
+    recusa do DeepSeek, nem o contrário.
+    """
+
+    def __init__(self, mensagem: str, marca: dict):
+        super().__init__(mensagem)
+        self.marca = marca
+
+
+def recusa_de_conteudo(exc: BaseException) -> bool:
+    """True SÓ para a recusa do filtro de conteúdo do DeepSeek.
+
+    O que a API devolve (persistido em `resultado/votacao-3/passe_*.jsonl` e
+    no log de publicação): HTTP 400, corpo
+    `{"error": {"message": "Content Exists Risk", "type":
+    "invalid_request_error", "param": null, "code": "invalid_request_error"}}`.
+    O SDK da OpenAI levanta `BadRequestError` e já desembrulha `error` em
+    `exc.body` (`OpenAI._make_status_error`).
+
+    **O discriminador é a MENSAGEM, e só ela.** `type` e `code`
+    (`invalid_request_error`) são os mesmos de qualquer 400 — parâmetro
+    inválido, contexto longo demais —, e o status 400 idem. Comparação
+    EXATA, não substring nem `str(exc)`: um 400 de outra natureza não tem
+    como casar. Se o DeepSeek mudar o texto, o fallback deixa de disparar e o
+    filme volta a falhar ALTO, como antes desta função — o modo de falha
+    desse desenho é o erro visível, nunca o mascarado.
+    """
+    import openai
+
+    if not isinstance(exc, openai.BadRequestError):
+        return False
+    corpo = exc.body
+    return isinstance(corpo, dict) and corpo.get("message") == MOTIVO_RECUSA_CONTEUDO
+
+
+def marca_fallback_conteudo() -> dict:
+    """A marca gravada na unidade que trocou de provider."""
+    return {"de": "deepseek", "para": FALLBACK_CONTEUDO_PROVIDER,
+            "modelo": FALLBACK_CONTEUDO_MODELO,
+            "motivo": MOTIVO_RECUSA_CONTEUDO}
+
+
+# Telemetria por PROCESSO, mesmo desenho e mesma razão de
+# `_telemetria_llm` (v1.9.24): um CLI é um processo, e o harness de lote lê
+# o que o filho escreveu em stderr. Diferença: aqui importa QUAIS unidades,
+# não só quantas — então é lista, não contador. Lock porque a classificação
+# roda com 8 threads (`votacao_3.CONCORRENCIA`).
+_fallbacks_conteudo: list[dict] = []
+_lock_fallbacks = threading.Lock()
+
+
+def telemetria_fallback_conteudo() -> list[dict]:
+    """As trocas de provider por recusa de conteúdo desta execução, em ordem."""
+    with _lock_fallbacks:
+        return [dict(f) for f in _fallbacks_conteudo]
+
+
+def resetar_telemetria_fallback_conteudo() -> None:
+    """Zera — para isolar execuções em teste."""
+    with _lock_fallbacks:
+        _fallbacks_conteudo.clear()
+
+
+def _registrar_fallback_conteudo(estagio: str, unidade: str, marca: dict) -> None:
+    with _lock_fallbacks:
+        _fallbacks_conteudo.append({"estagio": estagio, "unidade": unidade,
+                                    **marca})
+
+
+PREFIXO_TELEMETRIA_FALLBACK = "Fallbacks de conteúdo do LLM:"
+
+
+def linha_telemetria_fallback() -> str:
+    """A linha que o CLI imprime em stderr no fim da execução — o par de
+    `linha_telemetria_llm`, com a lista de unidades em vez de um contador."""
+    fb = telemetria_fallback_conteudo()
+    return (f"{PREFIXO_TELEMETRIA_FALLBACK} {len(fb)} "
+            f"{json.dumps(fb, ensure_ascii=False, sort_keys=True)}")
+
+
+def parse_linha_telemetria_fallback(texto: str) -> dict | None:
+    """`{"n", "unidades"}` a partir do stderr de um subprocesso do CLI.
+
+    `None` quando a linha não está lá (execução anterior a este mecanismo, ou
+    que morreu antes do fim) — "não sei", distinto de `n == 0`.
+    """
+    for linha in reversed(texto.splitlines()):
+        if not linha.startswith(PREFIXO_TELEMETRIA_FALLBACK):
+            continue
+        resto = linha[len(PREFIXO_TELEMETRIA_FALLBACK):].strip()
+        n, _, bruto = resto.partition(" ")
+        try:
+            return {"n": int(n), "unidades": json.loads(bruto)}
+        except (ValueError, json.JSONDecodeError):
+            return None
+    return None
+
+
+def _motivo_resposta_vazia_gemini(resp) -> str:
+    """Por que o Gemini devolveu sem texto — bloqueio do prompt ou término do
+    candidato. Só para a mensagem de erro; nenhum campo é obrigatório."""
+    feedback = getattr(resp, "prompt_feedback", None)
+    bloqueio = getattr(feedback, "block_reason", None) if feedback else None
+    candidatos = getattr(resp, "candidates", None) or []
+    termino = getattr(candidatos[0], "finish_reason", None) if candidatos else None
+    return f"block_reason={bloqueio}, finish_reason={termino}"
+
+
+def resposta_json_com_fallback(system: str, user: str, model: str, *,
+                               max_tokens: int, estagio: str, unidade: str,
+                               client=None) -> dict:
+    """Uma chamada de JSON CURTO sobre UMA review — DeepSeek, e Gemini SÓ se
+    o DeepSeek recusar por conteúdo. Serve aos dois estágios que mandam o
+    texto da review: a classificação (`votacao_3`) e o verificador de
+    `impacto_emocional` (`verificador_impacto`).
+
+    Devolve `{"texto", "provider", "modelo", "uso", "fallback_conteudo"}` —
+    o `provider`/`modelo` que DE FATO respondeu, e a marca da troca (`None`
+    sem troca). O parsing do JSON continua com o chamador, como antes: um
+    JSON inválido do Gemini é o mesmo `ok: False` de um JSON inválido do
+    DeepSeek, sem segunda troca.
+
+    Qualquer outra exceção do DeepSeek sobe INTACTA (transporte já retentado
+    em `deepseek_resposta`; 4xx sem retentar). `estagio`/`unidade`
+    identificam a troca na telemetria.
+    """
+    try:
+        resp = deepseek_resposta(system, user, model, max_tokens=max_tokens,
+                                 json_mode=True, client=client)
+    except Exception as e:
+        if not recusa_de_conteudo(e):
+            raise
+        return _json_no_fallback(system, user, estagio, unidade)
+    return {"texto": resp.choices[0].message.content, "provider": "deepseek",
+            "modelo": model, "uso": deepseek_uso(resp),
+            "fallback_conteudo": None}
+
+
+def resposta_classificacao(system: str, user: str, model: str, *,
+                           max_tokens: int, unidade: str, client=None) -> dict:
+    """A chamada de CLASSIFICAÇÃO de uma review (`unidade` =
+    `slug/bucket/id/passeN`) — `resposta_json_com_fallback` no estágio
+    `classificacao`."""
+    return resposta_json_com_fallback(system, user, model,
+                                      max_tokens=max_tokens,
+                                      estagio="classificacao",
+                                      unidade=unidade, client=client)
+
+
+def _json_no_fallback(system: str, user: str, estagio: str,
+                      unidade: str) -> dict:
+    """`thinking_budget=0` e o teto de `FALLBACK_CONTEUDO_MAX_TOKENS_JSON` —
+    ver a medição em `config.py`. Mesmo prompt, byte a byte: só o transporte
+    muda, como em todo o adaptador."""
+    marca = marca_fallback_conteudo()
+    _registrar_fallback_conteudo(estagio, unidade, marca)
+    try:
+        resp = _gemini_resposta(
+            system, user, FALLBACK_CONTEUDO_MODELO,
+            max_output_tokens=FALLBACK_CONTEUDO_MAX_TOKENS_JSON,
+            json_mode=True, thinking_budget=0)
+    except Exception as e:
+        raise FallbackDeConteudoFalhou(
+            f"deepseek recusou ({MOTIVO_RECUSA_CONTEUDO}); fallback "
+            f"{FALLBACK_CONTEUDO_PROVIDER}/{FALLBACK_CONTEUDO_MODELO} falhou: "
+            f"{type(e).__name__}: {e}", marca) from e
+    texto = resp.text
+    if not texto:
+        raise FallbackDeConteudoFalhou(
+            f"deepseek recusou ({MOTIVO_RECUSA_CONTEUDO}); fallback "
+            f"{FALLBACK_CONTEUDO_PROVIDER}/{FALLBACK_CONTEUDO_MODELO} devolveu "
+            f"resposta vazia ({_motivo_resposta_vazia_gemini(resp)})", marca)
+    return {"texto": texto, "provider": FALLBACK_CONTEUDO_PROVIDER,
+            "modelo": FALLBACK_CONTEUDO_MODELO, "uso": uso(resp, "gemini"),
+            "fallback_conteudo": marca}
+
+
+class _ChamadaComFallback:
+    """`(system, user) -> str` para UMA unidade de síntese (um bucket).
+
+    Envolve o `client_call` resolvido. Na primeira recusa de conteúdo troca
+    para `gemini_client_call` — o adaptador §D do Gemini, que foi o de
+    produção desta etapa até a v1.8.0 — e FICA nele: as retentativas do
+    bucket (JSON inválido, idioma/escopo) mandam o mesmo texto, que o
+    DeepSeek recusaria de novo, e o bucket termina com um provider só.
+    `habilitado=False` (client injetado, ou provider que não é DeepSeek) é o
+    comportamento de antes, sem desvio nenhum.
+    """
+
+    def __init__(self, call, model: str, *, habilitado: bool, unidade: str):
+        self._call, self.modelo = call, model
+        self._habilitado, self._unidade = habilitado, unidade
+        self.fallback: dict | None = None
+
+    def __call__(self, system: str, user: str) -> str:
+        if self.fallback is None:
+            try:
+                return self._call(system, user, self.modelo)
+            except Exception as e:
+                if not (self._habilitado and recusa_de_conteudo(e)):
+                    raise
+                self.fallback = marca_fallback_conteudo()
+                _registrar_fallback_conteudo("sintese", self._unidade,
+                                             self.fallback)
+                self._call = gemini_client_call
+                self.modelo = FALLBACK_CONTEUDO_MODELO
+        try:
+            # `or ""`: bloqueio do lado do Gemini devolve `text=None`; vazio
+            # vira JSON inválido, o caminho de falha que o bucket já tem.
+            return self._call(system, user, self.modelo) or ""
+        except Exception as e:
+            raise FallbackDeConteudoFalhou(
+                f"deepseek recusou ({MOTIVO_RECUSA_CONTEUDO}) o bucket "
+                f"{self._unidade}; fallback {FALLBACK_CONTEUDO_PROVIDER}/"
+                f"{FALLBACK_CONTEUDO_MODELO} falhou: {type(e).__name__}: {e}",
+                self.fallback) from e
+
+
 def provider_do_estagio(estagio: str, explicit: str | None = None) -> str:
     """Resolve o provider de um ESTÁGIO do pipeline (v1.9.8).
 
@@ -1018,7 +1275,16 @@ def synthesize_bucket(bucket: BucketResult, client_call=None,
         )
         return bucket
 
+    # Fallback de conteúdo (2026-09-14): só no caminho de produção — client
+    # resolvido aqui, e resolvido para DeepSeek. Client injetado (testes,
+    # scripts de comparação) segue exatamente como antes.
+    habilitado = False
+    if client_call is None:
+        provider = detect_provider(provider)
+        habilitado = provider == "deepseek"
     call, model = _resolve_call_and_model(client_call, model, provider)
+    chamar = _ChamadaComFallback(call, model, habilitado=habilitado,
+                                 unidade=bucket.nome)
 
     system = build_system_prompt(bucket.nome)
     user = build_user_message(bucket)
@@ -1026,13 +1292,14 @@ def synthesize_bucket(bucket: BucketResult, client_call=None,
 
     data = None
     for tentativa in range(2):  # chamada + 1 retentativa de JSON inválido (§D)
-        raw = call(system, user, model)
+        raw = chamar(system, user)
         try:
             data = _parse_llm_json(raw)
             break
         except (ValueError, json.JSONDecodeError):
             if tentativa == 1:
                 bucket.observacao_geral = "Falha ao obter JSON válido do LLM."
+                bucket.fallback_conteudo = chamar.fallback
                 return bucket
 
     temas = _construir_temas(data, n_analisadas)
@@ -1042,7 +1309,7 @@ def synthesize_bucket(bucket: BucketResult, client_call=None,
     escopo_ok = not _tem_marcador_de_escopo(observacao_geral)
 
     if not idioma_ok or not escopo_ok:
-        raw_retry = call(system + _REFORCO_VALIDACAO, user, model)
+        raw_retry = chamar(system + _REFORCO_VALIDACAO, user)
         try:
             data_retry = _parse_llm_json(raw_retry)
             temas = _construir_temas(data_retry, n_analisadas)
@@ -1057,6 +1324,7 @@ def synthesize_bucket(bucket: BucketResult, client_call=None,
     bucket.observacao_geral = observacao_geral
     bucket.idioma_invalido = not idioma_ok
     bucket.escopo_suspeito = not escopo_ok
+    bucket.fallback_conteudo = chamar.fallback
     return bucket
 
 

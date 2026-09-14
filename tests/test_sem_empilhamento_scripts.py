@@ -44,7 +44,11 @@ SCRIPTS_SEM_LACO = [
 ]
 
 
-ALVOS_LLM = {"deepseek_resposta", "resposta", "_chamar", "_chamar_json"}
+# `resposta_classificacao` (2026-09-14): a chamada que `votacao_3.py` passou
+# a fazer — `deepseek_resposta` + fallback de conteúdo. Sem ela aqui, a
+# varredura de `votacao_3.py` ficaria sem alvo e passaria por vacuidade.
+ALVOS_LLM = {"deepseek_resposta", "resposta", "_chamar", "_chamar_json",
+             "resposta_classificacao", "resposta_json_com_fallback"}
 
 
 def _e_laco_de_contagem(laco) -> bool:

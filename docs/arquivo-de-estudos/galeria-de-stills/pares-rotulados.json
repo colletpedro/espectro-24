@@ -1,0 +1,1557 @@
+{
+ "_o_que_e": "155 pares de candidatas a still, rotulados a olho em 2026-09-05, que fixam o limiar de pHash da v1.9.40. Rotulo S = as duas leem como a MESMA imagem numa galeria (mesmo enquadramento, variando crop, gradacao ou fracao de segundo); D = planos distintos.",
+ "_amostragem": "CENSO de todos os pares com pHash<=18 (N=72) dos 5 filmes do estudo, mais amostra por faixa de dHash (censo de dHash<=15, 5 por faixa em 16/18/20/22, 5 ancoras em dHash>=25). Precisao medida sobre o censo e nao enviesada; recall vale sobre o conjunto rotulado.",
+ "_campos": "slug, a/b = file_path do TMDB, ia/ib = posicao no pool ordenado por vote_average desc, d = distancia dHash, p = distancia pHash, rotulo = S|D",
+ "pares": [
+  {
+   "slug": "anatomy-of-a-fall",
+   "a": "/kszooR7v1TLFM4pzx6IkKq2jDAN.jpg",
+   "b": "/nP3x0zuVPHVSyYXP4Ye6dcm0GNz.jpg",
+   "ia": 0,
+   "ib": 19,
+   "d": 24,
+   "p": 14,
+   "rotulo": "S"
+  },
+  {
+   "slug": "anatomy-of-a-fall",
+   "a": "/3Feq4UV4p2gU6dShAYfveqwWAEf.jpg",
+   "b": "/sxOGymHkRUfAhj63yLISFfyKARN.jpg",
+   "ia": 1,
+   "ib": 5,
+   "d": 27,
+   "p": 18,
+   "rotulo": "D"
+  },
+  {
+   "slug": "anatomy-of-a-fall",
+   "a": "/5fOu0c3lcjNYdZF2UlJVScuiaML.jpg",
+   "b": "/786cfVrkVLQV7bZAN6KnPFaHMNP.jpg",
+   "ia": 3,
+   "ib": 11,
+   "d": 14,
+   "p": 26,
+   "rotulo": "D"
+  },
+  {
+   "slug": "anatomy-of-a-fall",
+   "a": "/5fOu0c3lcjNYdZF2UlJVScuiaML.jpg",
+   "b": "/fyG3Bn2uEJsdbHG6jSKa63nEOEt.jpg",
+   "ia": 3,
+   "ib": 14,
+   "d": 5,
+   "p": 14,
+   "rotulo": "S"
+  },
+  {
+   "slug": "anatomy-of-a-fall",
+   "a": "/5fOu0c3lcjNYdZF2UlJVScuiaML.jpg",
+   "b": "/jn5UxJZligF9EqUq9DA3jDCT9pb.jpg",
+   "ia": 3,
+   "ib": 16,
+   "d": 12,
+   "p": 30,
+   "rotulo": "D"
+  },
+  {
+   "slug": "anatomy-of-a-fall",
+   "a": "/5fOu0c3lcjNYdZF2UlJVScuiaML.jpg",
+   "b": "/tALzpI7V3cDyqSsojUMwJw8I6k.jpg",
+   "ia": 3,
+   "ib": 29,
+   "d": 22,
+   "p": 22,
+   "rotulo": "D"
+  },
+  {
+   "slug": "anatomy-of-a-fall",
+   "a": "/pecCCwwLfCK0461DUF9eFTNIg0h.jpg",
+   "b": "/3hHmKcTn81zoTKFPqIlNNtp9tZ5.jpg",
+   "ia": 4,
+   "ib": 18,
+   "d": 7,
+   "p": 10,
+   "rotulo": "S"
+  },
+  {
+   "slug": "anatomy-of-a-fall",
+   "a": "/xyR7MdyqWZRYkiraHPFHHi5KDmu.jpg",
+   "b": "/iMc3V6eCmmBO3ULuUBiDgyt7oDt.jpg",
+   "ia": 6,
+   "ib": 25,
+   "d": 22,
+   "p": 22,
+   "rotulo": "D"
+  },
+  {
+   "slug": "anatomy-of-a-fall",
+   "a": "/786cfVrkVLQV7bZAN6KnPFaHMNP.jpg",
+   "b": "/fyG3Bn2uEJsdbHG6jSKa63nEOEt.jpg",
+   "ia": 11,
+   "ib": 14,
+   "d": 13,
+   "p": 26,
+   "rotulo": "D"
+  },
+  {
+   "slug": "anatomy-of-a-fall",
+   "a": "/786cfVrkVLQV7bZAN6KnPFaHMNP.jpg",
+   "b": "/dcnhVQS66PfpwzUu4K4iEF5qfT8.jpg",
+   "ia": 11,
+   "ib": 17,
+   "d": 14,
+   "p": 14,
+   "rotulo": "S"
+  },
+  {
+   "slug": "anatomy-of-a-fall",
+   "a": "/fyG3Bn2uEJsdbHG6jSKa63nEOEt.jpg",
+   "b": "/jn5UxJZligF9EqUq9DA3jDCT9pb.jpg",
+   "ia": 14,
+   "ib": 16,
+   "d": 11,
+   "p": 30,
+   "rotulo": "D"
+  },
+  {
+   "slug": "anatomy-of-a-fall",
+   "a": "/fyG3Bn2uEJsdbHG6jSKa63nEOEt.jpg",
+   "b": "/ljmoEpHaLA8Nqc7pkOst4YEDcOY.jpg",
+   "ia": 14,
+   "ib": 26,
+   "d": 15,
+   "p": 30,
+   "rotulo": "D"
+  },
+  {
+   "slug": "dune-part-two",
+   "a": "/24Ov8wnusgnzXwjV1eDm0Lzo5da.jpg",
+   "b": "/lDgLCaY8WMbb1V1mBmXfxjqq6uT.jpg",
+   "ia": 0,
+   "ib": 67,
+   "d": 14,
+   "p": 26,
+   "rotulo": "D"
+  },
+  {
+   "slug": "dune-part-two",
+   "a": "/24Ov8wnusgnzXwjV1eDm0Lzo5da.jpg",
+   "b": "/sKH4OkNhu26JcIwcluOrw1zQfBl.jpg",
+   "ia": 0,
+   "ib": 112,
+   "d": 13,
+   "p": 30,
+   "rotulo": "D"
+  },
+  {
+   "slug": "dune-part-two",
+   "a": "/rRBD8ORo9y34tYkAQJVbn4Ml6tu.jpg",
+   "b": "/f6ahdeUZPwUVirr86gcZ1QmiasQ.jpg",
+   "ia": 1,
+   "ib": 6,
+   "d": 24,
+   "p": 14,
+   "rotulo": "D"
+  },
+  {
+   "slug": "dune-part-two",
+   "a": "/rRBD8ORo9y34tYkAQJVbn4Ml6tu.jpg",
+   "b": "/sKH4OkNhu26JcIwcluOrw1zQfBl.jpg",
+   "ia": 1,
+   "ib": 112,
+   "d": 15,
+   "p": 22,
+   "rotulo": "D"
+  },
+  {
+   "slug": "dune-part-two",
+   "a": "/xOMo8BRK7PfcJv9JCnx7s5hj0PX.jpg",
+   "b": "/87IVlclAfWL6mdicU1DDuxdwXwe.jpg",
+   "ia": 2,
+   "ib": 5,
+   "d": 13,
+   "p": 26,
+   "rotulo": "D"
+  },
+  {
+   "slug": "dune-part-two",
+   "a": "/xOMo8BRK7PfcJv9JCnx7s5hj0PX.jpg",
+   "b": "/uhUO7vQQKvCTfQWubOt5MAKokbL.jpg",
+   "ia": 2,
+   "ib": 12,
+   "d": 15,
+   "p": 36,
+   "rotulo": "D"
+  },
+  {
+   "slug": "dune-part-two",
+   "a": "/xOMo8BRK7PfcJv9JCnx7s5hj0PX.jpg",
+   "b": "/8R07VhsX2P6ZcncX9UpXlRHNte.jpg",
+   "ia": 2,
+   "ib": 59,
+   "d": 15,
+   "p": 26,
+   "rotulo": "D"
+  },
+  {
+   "slug": "dune-part-two",
+   "a": "/8uVKfOJUhmybNsVh089EqLHUYEG.jpg",
+   "b": "/xfa2bWuY6aHNp0hr4vKADqiO2TX.jpg",
+   "ia": 3,
+   "ib": 36,
+   "d": 14,
+   "p": 38,
+   "rotulo": "D"
+  },
+  {
+   "slug": "dune-part-two",
+   "a": "/8uVKfOJUhmybNsVh089EqLHUYEG.jpg",
+   "b": "/aqMeHlGYd3OafJVrSqSrhX5Nb2C.jpg",
+   "ia": 3,
+   "ib": 47,
+   "d": 10,
+   "p": 28,
+   "rotulo": "D"
+  },
+  {
+   "slug": "dune-part-two",
+   "a": "/8uVKfOJUhmybNsVh089EqLHUYEG.jpg",
+   "b": "/1wg5XLcWR7IOmRKWA6sYkkbnBnz.jpg",
+   "ia": 3,
+   "ib": 86,
+   "d": 14,
+   "p": 28,
+   "rotulo": "D"
+  },
+  {
+   "slug": "dune-part-two",
+   "a": "/87IVlclAfWL6mdicU1DDuxdwXwe.jpg",
+   "b": "/wauiyiVXpdvTvt2CzdSWbYlbaE3.jpg",
+   "ia": 5,
+   "ib": 7,
+   "d": 20,
+   "p": 20,
+   "rotulo": "D"
+  },
+  {
+   "slug": "dune-part-two",
+   "a": "/87IVlclAfWL6mdicU1DDuxdwXwe.jpg",
+   "b": "/5JRVaEP6vp2nHrtJiNOaRkTc5gN.jpg",
+   "ia": 5,
+   "ib": 38,
+   "d": 15,
+   "p": 26,
+   "rotulo": "D"
+  },
+  {
+   "slug": "dune-part-two",
+   "a": "/87IVlclAfWL6mdicU1DDuxdwXwe.jpg",
+   "b": "/e5DbpCYx5wtoEJKOoXBbSsOOy6f.jpg",
+   "ia": 5,
+   "ib": 39,
+   "d": 13,
+   "p": 32,
+   "rotulo": "D"
+  },
+  {
+   "slug": "dune-part-two",
+   "a": "/87IVlclAfWL6mdicU1DDuxdwXwe.jpg",
+   "b": "/fLrEWOGNwjo2E8sbK97C3hDTafz.jpg",
+   "ia": 5,
+   "ib": 50,
+   "d": 15,
+   "p": 28,
+   "rotulo": "D"
+  },
+  {
+   "slug": "dune-part-two",
+   "a": "/f6ahdeUZPwUVirr86gcZ1QmiasQ.jpg",
+   "b": "/fLrEWOGNwjo2E8sbK97C3hDTafz.jpg",
+   "ia": 6,
+   "ib": 50,
+   "d": 13,
+   "p": 30,
+   "rotulo": "D"
+  },
+  {
+   "slug": "dune-part-two",
+   "a": "/WZCfWFlKnGKZy9Bdf1rdEQDGkc.jpg",
+   "b": "/x4nH6X9rV6msf3rqT2CJaMlYFME.jpg",
+   "ia": 8,
+   "ib": 71,
+   "d": 30,
+   "p": 18,
+   "rotulo": "D"
+  },
+  {
+   "slug": "dune-part-two",
+   "a": "/WZCfWFlKnGKZy9Bdf1rdEQDGkc.jpg",
+   "b": "/yQVR9qIBcY6rko9HwpXtAgbev89.jpg",
+   "ia": 8,
+   "ib": 118,
+   "d": 12,
+   "p": 6,
+   "rotulo": "S"
+  },
+  {
+   "slug": "dune-part-two",
+   "a": "/l6b9YZEokZl1nt7q0pprrur6btG.jpg",
+   "b": "/6tvykfnmrzjp9lCpLMvUKyC93sq.jpg",
+   "ia": 9,
+   "ib": 63,
+   "d": 15,
+   "p": 24,
+   "rotulo": "D"
+  },
+  {
+   "slug": "dune-part-two",
+   "a": "/lDrlJzuLdg2bKcvek4ZpmN3Lo47.jpg",
+   "b": "/oBCR7ShGq9ZdnHMK8SGOckGpEgo.jpg",
+   "ia": 10,
+   "ib": 30,
+   "d": 13,
+   "p": 20,
+   "rotulo": "S"
+  },
+  {
+   "slug": "dune-part-two",
+   "a": "/lDrlJzuLdg2bKcvek4ZpmN3Lo47.jpg",
+   "b": "/93YSyic1EahCGMdkqPla1jcqpJy.jpg",
+   "ia": 10,
+   "ib": 45,
+   "d": 15,
+   "p": 30,
+   "rotulo": "D"
+  },
+  {
+   "slug": "dune-part-two",
+   "a": "/lDrlJzuLdg2bKcvek4ZpmN3Lo47.jpg",
+   "b": "/qtfzjj2xrogers7i3eidM06AGeI.jpg",
+   "ia": 10,
+   "ib": 69,
+   "d": 23,
+   "p": 18,
+   "rotulo": "D"
+  },
+  {
+   "slug": "dune-part-two",
+   "a": "/lDrlJzuLdg2bKcvek4ZpmN3Lo47.jpg",
+   "b": "/vbtPFhnquMOczNMUS2QMxg3f1Q6.jpg",
+   "ia": 10,
+   "ib": 116,
+   "d": 3,
+   "p": 12,
+   "rotulo": "S"
+  },
+  {
+   "slug": "dune-part-two",
+   "a": "/uhUO7vQQKvCTfQWubOt5MAKokbL.jpg",
+   "b": "/oBCR7ShGq9ZdnHMK8SGOckGpEgo.jpg",
+   "ia": 12,
+   "ib": 30,
+   "d": 20,
+   "p": 20,
+   "rotulo": "D"
+  },
+  {
+   "slug": "dune-part-two",
+   "a": "/uhUO7vQQKvCTfQWubOt5MAKokbL.jpg",
+   "b": "/lDgLCaY8WMbb1V1mBmXfxjqq6uT.jpg",
+   "ia": 12,
+   "ib": 67,
+   "d": 14,
+   "p": 32,
+   "rotulo": "D"
+  },
+  {
+   "slug": "dune-part-two",
+   "a": "/uhUO7vQQKvCTfQWubOt5MAKokbL.jpg",
+   "b": "/vJGgox2d4HWmm3icilCytCC6RCR.jpg",
+   "ia": 12,
+   "ib": 70,
+   "d": 14,
+   "p": 32,
+   "rotulo": "D"
+  },
+  {
+   "slug": "dune-part-two",
+   "a": "/uhUO7vQQKvCTfQWubOt5MAKokbL.jpg",
+   "b": "/6OsZOKu1hfslnwkah4TFuOZfNPC.jpg",
+   "ia": 12,
+   "ib": 91,
+   "d": 15,
+   "p": 24,
+   "rotulo": "D"
+  },
+  {
+   "slug": "dune-part-two",
+   "a": "/vtTl849UKBVQ0Lr796Krjr90y0J.jpg",
+   "b": "/4wtuXhDpvJRWDk03g8YLqtTUzRo.jpg",
+   "ia": 13,
+   "ib": 56,
+   "d": 9,
+   "p": 26,
+   "rotulo": "S"
+  },
+  {
+   "slug": "dune-part-two",
+   "a": "/vtTl849UKBVQ0Lr796Krjr90y0J.jpg",
+   "b": "/sKH4OkNhu26JcIwcluOrw1zQfBl.jpg",
+   "ia": 13,
+   "ib": 112,
+   "d": 29,
+   "p": 18,
+   "rotulo": "S"
+  },
+  {
+   "slug": "dune-part-two",
+   "a": "/azNWPA0WvlGH1o5dhXJWB5ChJS.jpg",
+   "b": "/qBQV4i2sjIydDJUKm7pwvpyfy5p.jpg",
+   "ia": 14,
+   "ib": 15,
+   "d": 18,
+   "p": 18,
+   "rotulo": "S"
+  },
+  {
+   "slug": "dune-part-two",
+   "a": "/1fkinFdA5gPNZ6ieIA9Zexi6Q0B.jpg",
+   "b": "/yrTwMKU3y2eiW4ox4ULudB2QhUS.jpg",
+   "ia": 16,
+   "ib": 37,
+   "d": 22,
+   "p": 22,
+   "rotulo": "D"
+  },
+  {
+   "slug": "dune-part-two",
+   "a": "/1fkinFdA5gPNZ6ieIA9Zexi6Q0B.jpg",
+   "b": "/iLYkwQMQbxTR6GUSSV7toIn7pfN.jpg",
+   "ia": 16,
+   "ib": 81,
+   "d": 14,
+   "p": 12,
+   "rotulo": "S"
+  },
+  {
+   "slug": "dune-part-two",
+   "a": "/b41iPkFx8WsvB30d2ygw6QTHlOB.jpg",
+   "b": "/bdejpJb9Qi9pkJ1N9CPKAzu9IiQ.jpg",
+   "ia": 21,
+   "ib": 97,
+   "d": 4,
+   "p": 8,
+   "rotulo": "S"
+  },
+  {
+   "slug": "dune-part-two",
+   "a": "/dpmxapDnyAgA2Pnh3BJtQBRgT7Y.jpg",
+   "b": "/xfa2bWuY6aHNp0hr4vKADqiO2TX.jpg",
+   "ia": 22,
+   "ib": 36,
+   "d": 15,
+   "p": 14,
+   "rotulo": "S"
+  },
+  {
+   "slug": "dune-part-two",
+   "a": "/dpmxapDnyAgA2Pnh3BJtQBRgT7Y.jpg",
+   "b": "/sh9DOKUMIAZM9CSg9rR0pHjTV91.jpg",
+   "ia": 22,
+   "ib": 113,
+   "d": 9,
+   "p": 14,
+   "rotulo": "S"
+  },
+  {
+   "slug": "dune-part-two",
+   "a": "/lRYja7QWcrqFv6rgzRcNK861PII.jpg",
+   "b": "/iPOJvxJblmfL4RtAIUdQBQuIfIL.jpg",
+   "ia": 27,
+   "ib": 101,
+   "d": 8,
+   "p": 4,
+   "rotulo": "S"
+  },
+  {
+   "slug": "dune-part-two",
+   "a": "/oBCR7ShGq9ZdnHMK8SGOckGpEgo.jpg",
+   "b": "/vbtPFhnquMOczNMUS2QMxg3f1Q6.jpg",
+   "ia": 30,
+   "ib": 116,
+   "d": 16,
+   "p": 16,
+   "rotulo": "S"
+  },
+  {
+   "slug": "dune-part-two",
+   "a": "/oxfTPLZtoE16Lub4uurpyj0rw2E.jpg",
+   "b": "/kxKPvLQ3LdNtwnUZIVzwqXMTtrE.jpg",
+   "ia": 31,
+   "ib": 106,
+   "d": 18,
+   "p": 22,
+   "rotulo": "D"
+  },
+  {
+   "slug": "dune-part-two",
+   "a": "/uEteaqxqhbBlRjib82ZVyJrsq0q.jpg",
+   "b": "/DZ5KkiZmBbnzHnCRouh2P0s9b3.jpg",
+   "ia": 34,
+   "ib": 58,
+   "d": 13,
+   "p": 22,
+   "rotulo": "D"
+  },
+  {
+   "slug": "dune-part-two",
+   "a": "/xbNjzR91rtvwTV3hp2N4AWgb8Qp.jpg",
+   "b": "/4ZRUPoblB86AJaJZ8RdhRPlhzVA.jpg",
+   "ia": 35,
+   "ib": 78,
+   "d": 39,
+   "p": 18,
+   "rotulo": "D"
+  },
+  {
+   "slug": "dune-part-two",
+   "a": "/xfa2bWuY6aHNp0hr4vKADqiO2TX.jpg",
+   "b": "/aqMeHlGYd3OafJVrSqSrhX5Nb2C.jpg",
+   "ia": 36,
+   "ib": 47,
+   "d": 12,
+   "p": 28,
+   "rotulo": "D"
+  },
+  {
+   "slug": "dune-part-two",
+   "a": "/xfa2bWuY6aHNp0hr4vKADqiO2TX.jpg",
+   "b": "/dBDXZmgjHw7i0XJbHKpxu7yDCZJ.jpg",
+   "ia": 36,
+   "ib": 99,
+   "d": 10,
+   "p": 24,
+   "rotulo": "D"
+  },
+  {
+   "slug": "dune-part-two",
+   "a": "/xfa2bWuY6aHNp0hr4vKADqiO2TX.jpg",
+   "b": "/rRjwE2abjbCDwGpismuGyQUmhTA.jpg",
+   "ia": 36,
+   "ib": 111,
+   "d": 15,
+   "p": 32,
+   "rotulo": "D"
+  },
+  {
+   "slug": "dune-part-two",
+   "a": "/xfa2bWuY6aHNp0hr4vKADqiO2TX.jpg",
+   "b": "/sh9DOKUMIAZM9CSg9rR0pHjTV91.jpg",
+   "ia": 36,
+   "ib": 113,
+   "d": 10,
+   "p": 10,
+   "rotulo": "S"
+  },
+  {
+   "slug": "dune-part-two",
+   "a": "/5JRVaEP6vp2nHrtJiNOaRkTc5gN.jpg",
+   "b": "/imuQ2yxiwgmBLCfqjLuqoqI2Tq8.jpg",
+   "ia": 38,
+   "ib": 40,
+   "d": 21,
+   "p": 18,
+   "rotulo": "D"
+  },
+  {
+   "slug": "dune-part-two",
+   "a": "/e5DbpCYx5wtoEJKOoXBbSsOOy6f.jpg",
+   "b": "/o4WtRVT2ZYuBsoJQXtPt49T8tC3.jpg",
+   "ia": 39,
+   "ib": 52,
+   "d": 15,
+   "p": 32,
+   "rotulo": "D"
+  },
+  {
+   "slug": "dune-part-two",
+   "a": "/e5DbpCYx5wtoEJKOoXBbSsOOy6f.jpg",
+   "b": "/2mZlpZXvMJ8umYLNeXn3vq1qi3.jpg",
+   "ia": 39,
+   "ib": 87,
+   "d": 13,
+   "p": 30,
+   "rotulo": "D"
+  },
+  {
+   "slug": "dune-part-two",
+   "a": "/imuQ2yxiwgmBLCfqjLuqoqI2Tq8.jpg",
+   "b": "/sKH4OkNhu26JcIwcluOrw1zQfBl.jpg",
+   "ia": 40,
+   "ib": 112,
+   "d": 15,
+   "p": 20,
+   "rotulo": "D"
+  },
+  {
+   "slug": "dune-part-two",
+   "a": "/7Ka1gozTtbqph71EAmCoZzp0IeV.jpg",
+   "b": "/kxKPvLQ3LdNtwnUZIVzwqXMTtrE.jpg",
+   "ia": 44,
+   "ib": 106,
+   "d": 14,
+   "p": 28,
+   "rotulo": "D"
+  },
+  {
+   "slug": "dune-part-two",
+   "a": "/aUPWBGuNUDGKwHRqlojhd3Gk6Ic.jpg",
+   "b": "/vJGgox2d4HWmm3icilCytCC6RCR.jpg",
+   "ia": 46,
+   "ib": 70,
+   "d": 14,
+   "p": 26,
+   "rotulo": "D"
+  },
+  {
+   "slug": "dune-part-two",
+   "a": "/aqMeHlGYd3OafJVrSqSrhX5Nb2C.jpg",
+   "b": "/1wg5XLcWR7IOmRKWA6sYkkbnBnz.jpg",
+   "ia": 47,
+   "ib": 86,
+   "d": 14,
+   "p": 34,
+   "rotulo": "D"
+  },
+  {
+   "slug": "dune-part-two",
+   "a": "/aqMeHlGYd3OafJVrSqSrhX5Nb2C.jpg",
+   "b": "/dBDXZmgjHw7i0XJbHKpxu7yDCZJ.jpg",
+   "ia": 47,
+   "ib": 99,
+   "d": 14,
+   "p": 28,
+   "rotulo": "D"
+  },
+  {
+   "slug": "dune-part-two",
+   "a": "/f2GKTP0VbN96qTzz3o6qvAuMTeh.jpg",
+   "b": "/7bBBIBtWkHItzTmacaZ9XioeS3e.jpg",
+   "ia": 49,
+   "ib": 64,
+   "d": 15,
+   "p": 16,
+   "rotulo": "D"
+  },
+  {
+   "slug": "dune-part-two",
+   "a": "/o4WtRVT2ZYuBsoJQXtPt49T8tC3.jpg",
+   "b": "/tMSaxhbUFhYlADu1Aju4ETVHDwR.jpg",
+   "ia": 52,
+   "ib": 53,
+   "d": 10,
+   "p": 30,
+   "rotulo": "D"
+  },
+  {
+   "slug": "dune-part-two",
+   "a": "/o4WtRVT2ZYuBsoJQXtPt49T8tC3.jpg",
+   "b": "/qNHSIt6JAvjs76xcJUMd19aKYrL.jpg",
+   "ia": 52,
+   "ib": 68,
+   "d": 36,
+   "p": 18,
+   "rotulo": "D"
+  },
+  {
+   "slug": "dune-part-two",
+   "a": "/o4WtRVT2ZYuBsoJQXtPt49T8tC3.jpg",
+   "b": "/6OsZOKu1hfslnwkah4TFuOZfNPC.jpg",
+   "ia": 52,
+   "ib": 91,
+   "d": 25,
+   "p": 20,
+   "rotulo": "D"
+  },
+  {
+   "slug": "dune-part-two",
+   "a": "/z1AR7CJC80k4pw00URV9AVVgfjf.jpg",
+   "b": "/7bBBIBtWkHItzTmacaZ9XioeS3e.jpg",
+   "ia": 54,
+   "ib": 64,
+   "d": 14,
+   "p": 16,
+   "rotulo": "S"
+  },
+  {
+   "slug": "dune-part-two",
+   "a": "/8L3u9DhzJUpGA65mrnBxxGyTudt.jpg",
+   "b": "/vbtPFhnquMOczNMUS2QMxg3f1Q6.jpg",
+   "ia": 57,
+   "ib": 116,
+   "d": 27,
+   "p": 18,
+   "rotulo": "D"
+  },
+  {
+   "slug": "dune-part-two",
+   "a": "/beJK9Fpw9XZh2uaUmBnQT0zGH1l.jpg",
+   "b": "/1wg5XLcWR7IOmRKWA6sYkkbnBnz.jpg",
+   "ia": 60,
+   "ib": 86,
+   "d": 18,
+   "p": 22,
+   "rotulo": "D"
+  },
+  {
+   "slug": "dune-part-two",
+   "a": "/lDgLCaY8WMbb1V1mBmXfxjqq6uT.jpg",
+   "b": "/6qoibtt2NhSawynDRKiy08AoHLw.jpg",
+   "ia": 67,
+   "ib": 94,
+   "d": 14,
+   "p": 30,
+   "rotulo": "D"
+  },
+  {
+   "slug": "dune-part-two",
+   "a": "/lDgLCaY8WMbb1V1mBmXfxjqq6uT.jpg",
+   "b": "/sKH4OkNhu26JcIwcluOrw1zQfBl.jpg",
+   "ia": 67,
+   "ib": 112,
+   "d": 5,
+   "p": 24,
+   "rotulo": "S"
+  },
+  {
+   "slug": "dune-part-two",
+   "a": "/qtfzjj2xrogers7i3eidM06AGeI.jpg",
+   "b": "/6OsZOKu1hfslnwkah4TFuOZfNPC.jpg",
+   "ia": 69,
+   "ib": 91,
+   "d": 33,
+   "p": 18,
+   "rotulo": "D"
+  },
+  {
+   "slug": "dune-part-two",
+   "a": "/vJGgox2d4HWmm3icilCytCC6RCR.jpg",
+   "b": "/pXJXC8d2XZJ1UDCbzcF5vmSnEe3.jpg",
+   "ia": 70,
+   "ib": 109,
+   "d": 15,
+   "p": 26,
+   "rotulo": "D"
+  },
+  {
+   "slug": "dune-part-two",
+   "a": "/1Vbs1O9UCHG8BjUYppo4DSmHwNC.jpg",
+   "b": "/1or39DewHOkBiSFERlmMs4hoKQt.jpg",
+   "ia": 72,
+   "ib": 76,
+   "d": 6,
+   "p": 8,
+   "rotulo": "S"
+  },
+  {
+   "slug": "dune-part-two",
+   "a": "/nMlz33c7jrNZeFJwPNeqMpeSawr.jpg",
+   "b": "/8MwjMToCENly4y0hrYHCO3JduHr.jpg",
+   "ia": 83,
+   "ib": 95,
+   "d": 22,
+   "p": 20,
+   "rotulo": "D"
+  },
+  {
+   "slug": "dune-part-two",
+   "a": "/qU7EQna3n2NB3kxyPid4OynphVT.jpg",
+   "b": "/jRnEdrDA3LqcD6AcfyzoY2igmtM.jpg",
+   "ia": 85,
+   "ib": 104,
+   "d": 18,
+   "p": 22,
+   "rotulo": "D"
+  },
+  {
+   "slug": "dune-part-two",
+   "a": "/6RgKyGnXPfVqbJQzX3AkvHhXFsq.jpg",
+   "b": "/8MwjMToCENly4y0hrYHCO3JduHr.jpg",
+   "ia": 92,
+   "ib": 95,
+   "d": 20,
+   "p": 22,
+   "rotulo": "D"
+  },
+  {
+   "slug": "dune-part-two",
+   "a": "/6qoibtt2NhSawynDRKiy08AoHLw.jpg",
+   "b": "/kxKPvLQ3LdNtwnUZIVzwqXMTtrE.jpg",
+   "ia": 94,
+   "ib": 106,
+   "d": 13,
+   "p": 30,
+   "rotulo": "D"
+  },
+  {
+   "slug": "dune-part-two",
+   "a": "/6qoibtt2NhSawynDRKiy08AoHLw.jpg",
+   "b": "/sKH4OkNhu26JcIwcluOrw1zQfBl.jpg",
+   "ia": 94,
+   "ib": 112,
+   "d": 11,
+   "p": 32,
+   "rotulo": "D"
+  },
+  {
+   "slug": "dune-part-two",
+   "a": "/dBDXZmgjHw7i0XJbHKpxu7yDCZJ.jpg",
+   "b": "/rRjwE2abjbCDwGpismuGyQUmhTA.jpg",
+   "ia": 99,
+   "ib": 111,
+   "d": 15,
+   "p": 42,
+   "rotulo": "D"
+  },
+  {
+   "slug": "eighth-grade",
+   "a": "/523dtUswmKlaltwnESGmRU00S5X.jpg",
+   "b": "/YfPgZoitzva62dIzTt3HkOdG16.jpg",
+   "ia": 0,
+   "ib": 9,
+   "d": 0,
+   "p": 2,
+   "rotulo": "S"
+  },
+  {
+   "slug": "eighth-grade",
+   "a": "/q4XpVCWx3hk8jEaXyS1dulwQTAz.jpg",
+   "b": "/rbQMivwCoV23TTwllV0RZdO9XLN.jpg",
+   "ia": 2,
+   "ib": 10,
+   "d": 1,
+   "p": 2,
+   "rotulo": "S"
+  },
+  {
+   "slug": "eighth-grade",
+   "a": "/enrdrBqL9oNqTLMVlJkvwYPKqH2.jpg",
+   "b": "/k58rvaQw2FGyI6DT03QA3LlXffz.jpg",
+   "ia": 7,
+   "ib": 14,
+   "d": 25,
+   "p": 20,
+   "rotulo": "D"
+  },
+  {
+   "slug": "parasite-2019",
+   "a": "/hiKmpZMGZsrkA3cdce8a7Dpos1j.jpg",
+   "b": "/cI1RBfqXbWaITTjcKGYLhd9F083.jpg",
+   "ia": 0,
+   "ib": 16,
+   "d": 11,
+   "p": 14,
+   "rotulo": "S"
+  },
+  {
+   "slug": "parasite-2019",
+   "a": "/hiKmpZMGZsrkA3cdce8a7Dpos1j.jpg",
+   "b": "/xnPYcbmTN3l58uU93wcboBXD0oW.jpg",
+   "ia": 0,
+   "ib": 43,
+   "d": 11,
+   "p": 14,
+   "rotulo": "S"
+  },
+  {
+   "slug": "parasite-2019",
+   "a": "/8eihUxjQsJ7WvGySkVMC0EwbPAD.jpg",
+   "b": "/wCuUKiRaz0wEESsYqmQy005xvTE.jpg",
+   "ia": 1,
+   "ib": 5,
+   "d": 0,
+   "p": 0,
+   "rotulo": "S"
+  },
+  {
+   "slug": "parasite-2019",
+   "a": "/8eihUxjQsJ7WvGySkVMC0EwbPAD.jpg",
+   "b": "/1K9poXmKeOnvDzwsxbHM4WCEqwQ.jpg",
+   "ia": 1,
+   "ib": 24,
+   "d": 10,
+   "p": 28,
+   "rotulo": "D"
+  },
+  {
+   "slug": "parasite-2019",
+   "a": "/8eihUxjQsJ7WvGySkVMC0EwbPAD.jpg",
+   "b": "/pfHmfNcDpt1jc95HjCZAMianjh5.jpg",
+   "ia": 1,
+   "ib": 69,
+   "d": 11,
+   "p": 32,
+   "rotulo": "D"
+  },
+  {
+   "slug": "parasite-2019",
+   "a": "/vbC0rzdrb7Ohc2TkbEbxtOABECe.jpg",
+   "b": "/6LVpyYSTQdyRtJKOv8CtY4RW6us.jpg",
+   "ia": 2,
+   "ib": 19,
+   "d": 30,
+   "p": 18,
+   "rotulo": "D"
+  },
+  {
+   "slug": "parasite-2019",
+   "a": "/vbC0rzdrb7Ohc2TkbEbxtOABECe.jpg",
+   "b": "/8nIRrR1Z16Sq0RY79vkiEhSRVyn.jpg",
+   "ia": 2,
+   "ib": 56,
+   "d": 19,
+   "p": 18,
+   "rotulo": "D"
+  },
+  {
+   "slug": "parasite-2019",
+   "a": "/vbC0rzdrb7Ohc2TkbEbxtOABECe.jpg",
+   "b": "/yA0e69UK3c02DbE6PMJ8VJwUCkb.jpg",
+   "ia": 2,
+   "ib": 84,
+   "d": 30,
+   "p": 18,
+   "rotulo": "D"
+  },
+  {
+   "slug": "parasite-2019",
+   "a": "/cM0pnzCF6T7u1AAEYgyCG6Sua6k.jpg",
+   "b": "/hVc1v03PRZKOH1at1Sd45GevRPU.jpg",
+   "ia": 3,
+   "ib": 29,
+   "d": 1,
+   "p": 0,
+   "rotulo": "S"
+  },
+  {
+   "slug": "parasite-2019",
+   "a": "/wCuUKiRaz0wEESsYqmQy005xvTE.jpg",
+   "b": "/1K9poXmKeOnvDzwsxbHM4WCEqwQ.jpg",
+   "ia": 5,
+   "ib": 24,
+   "d": 10,
+   "p": 28,
+   "rotulo": "D"
+  },
+  {
+   "slug": "parasite-2019",
+   "a": "/wCuUKiRaz0wEESsYqmQy005xvTE.jpg",
+   "b": "/pfHmfNcDpt1jc95HjCZAMianjh5.jpg",
+   "ia": 5,
+   "ib": 69,
+   "d": 11,
+   "p": 32,
+   "rotulo": "D"
+  },
+  {
+   "slug": "parasite-2019",
+   "a": "/25tz24hlrqAbjhpHx1FhmfPH8Qf.jpg",
+   "b": "/bH4abGGVrVPkgXZMIqS80yGk5og.jpg",
+   "ia": 6,
+   "ib": 41,
+   "d": 2,
+   "p": 0,
+   "rotulo": "S"
+  },
+  {
+   "slug": "parasite-2019",
+   "a": "/uG3m6jBwU8jUkt0jbUOj8Vb2Y11.jpg",
+   "b": "/hi5n7qsHIGkWqJQjObSfc62gpu1.jpg",
+   "ia": 10,
+   "ib": 30,
+   "d": 3,
+   "p": 6,
+   "rotulo": "S"
+  },
+  {
+   "slug": "parasite-2019",
+   "a": "/uG3m6jBwU8jUkt0jbUOj8Vb2Y11.jpg",
+   "b": "/wmyNyzLUeolbp3XAz0UD4RFS5a4.jpg",
+   "ia": 10,
+   "ib": 33,
+   "d": 18,
+   "p": 12,
+   "rotulo": "S"
+  },
+  {
+   "slug": "parasite-2019",
+   "a": "/hAtRKAi24kw4wyGB2IyvmFdVGHC.jpg",
+   "b": "/wLtSpuWhk4uucVhWcbdVEt3l74I.jpg",
+   "ia": 12,
+   "ib": 74,
+   "d": 6,
+   "p": 4,
+   "rotulo": "S"
+  },
+  {
+   "slug": "parasite-2019",
+   "a": "/2MtpR7lLmLKfH1v5Etniucu18Wm.jpg",
+   "b": "/ogK82o4dLP60hmvcOnJYaU09jmH.jpg",
+   "ia": 13,
+   "ib": 44,
+   "d": 31,
+   "p": 18,
+   "rotulo": "D"
+  },
+  {
+   "slug": "parasite-2019",
+   "a": "/cI1RBfqXbWaITTjcKGYLhd9F083.jpg",
+   "b": "/xnPYcbmTN3l58uU93wcboBXD0oW.jpg",
+   "ia": 16,
+   "ib": 43,
+   "d": 0,
+   "p": 0,
+   "rotulo": "S"
+  },
+  {
+   "slug": "parasite-2019",
+   "a": "/cI1RBfqXbWaITTjcKGYLhd9F083.jpg",
+   "b": "/zLUgPjASJl7rniqRT2r91hQwbnX.jpg",
+   "ia": 16,
+   "ib": 86,
+   "d": 16,
+   "p": 10,
+   "rotulo": "S"
+  },
+  {
+   "slug": "parasite-2019",
+   "a": "/6LVpyYSTQdyRtJKOv8CtY4RW6us.jpg",
+   "b": "/yA0e69UK3c02DbE6PMJ8VJwUCkb.jpg",
+   "ia": 19,
+   "ib": 84,
+   "d": 2,
+   "p": 6,
+   "rotulo": "S"
+  },
+  {
+   "slug": "parasite-2019",
+   "a": "/bERQoM81bIewmVbffRYAVnUoEqP.jpg",
+   "b": "/i2ZWXLTijmPu0kWHkA7yDYG05W9.jpg",
+   "ia": 21,
+   "ib": 66,
+   "d": 15,
+   "p": 20,
+   "rotulo": "S"
+  },
+  {
+   "slug": "parasite-2019",
+   "a": "/oa1NfODv0U1cz0jtgmKccv2bmAv.jpg",
+   "b": "/4npDqHC8nee1V68czoBhfO8KpHc.jpg",
+   "ia": 22,
+   "ib": 34,
+   "d": 0,
+   "p": 0,
+   "rotulo": "S"
+  },
+  {
+   "slug": "parasite-2019",
+   "a": "/otp5YXXxHvPR9z26RXgW0lAo10w.jpg",
+   "b": "/xRm1g7ZSkyGKXOxRFqSdoEODD9N.jpg",
+   "ia": 23,
+   "ib": 80,
+   "d": 6,
+   "p": 8,
+   "rotulo": "S"
+  },
+  {
+   "slug": "parasite-2019",
+   "a": "/1K9poXmKeOnvDzwsxbHM4WCEqwQ.jpg",
+   "b": "/iS0VGXLTve8pUgXxSJMKEqTBel9.jpg",
+   "ia": 24,
+   "ib": 67,
+   "d": 36,
+   "p": 18,
+   "rotulo": "D"
+  },
+  {
+   "slug": "parasite-2019",
+   "a": "/1K9poXmKeOnvDzwsxbHM4WCEqwQ.jpg",
+   "b": "/pfHmfNcDpt1jc95HjCZAMianjh5.jpg",
+   "ia": 24,
+   "ib": 69,
+   "d": 7,
+   "p": 32,
+   "rotulo": "D"
+  },
+  {
+   "slug": "parasite-2019",
+   "a": "/dmXQPjjssQon28MKB3kqkSG1Xgm.jpg",
+   "b": "/eXvWje8yvhykNhKR8VkHUP5RVgF.jpg",
+   "ia": 27,
+   "ib": 62,
+   "d": 11,
+   "p": 8,
+   "rotulo": "S"
+  },
+  {
+   "slug": "parasite-2019",
+   "a": "/hi5n7qsHIGkWqJQjObSfc62gpu1.jpg",
+   "b": "/wmyNyzLUeolbp3XAz0UD4RFS5a4.jpg",
+   "ia": 30,
+   "ib": 33,
+   "d": 15,
+   "p": 12,
+   "rotulo": "S"
+  },
+  {
+   "slug": "parasite-2019",
+   "a": "/wmyNyzLUeolbp3XAz0UD4RFS5a4.jpg",
+   "b": "/xPe38m5I3IgtQIQ0aneYUgcxK6p.jpg",
+   "ia": 33,
+   "ib": 79,
+   "d": 20,
+   "p": 16,
+   "rotulo": "S"
+  },
+  {
+   "slug": "parasite-2019",
+   "a": "/eBLMslHrUdqxBo8DhvDZIGexACU.jpg",
+   "b": "/xPe38m5I3IgtQIQ0aneYUgcxK6p.jpg",
+   "ia": 38,
+   "ib": 79,
+   "d": 10,
+   "p": 10,
+   "rotulo": "S"
+  },
+  {
+   "slug": "parasite-2019",
+   "a": "/eBLMslHrUdqxBo8DhvDZIGexACU.jpg",
+   "b": "/xzYriUiuPOWHR5fskZzTlWGreUo.jpg",
+   "ia": 38,
+   "ib": 82,
+   "d": 6,
+   "p": 4,
+   "rotulo": "S"
+  },
+  {
+   "slug": "parasite-2019",
+   "a": "/xnPYcbmTN3l58uU93wcboBXD0oW.jpg",
+   "b": "/zLUgPjASJl7rniqRT2r91hQwbnX.jpg",
+   "ia": 43,
+   "ib": 86,
+   "d": 16,
+   "p": 10,
+   "rotulo": "S"
+  },
+  {
+   "slug": "parasite-2019",
+   "a": "/sQuCHhA5fVGgXurMe0SaIAcK7f7.jpg",
+   "b": "/dMiiX5p9PTFplTjSVWBQcCWBBvi.jpg",
+   "ia": 45,
+   "ib": 60,
+   "d": 19,
+   "p": 16,
+   "rotulo": "D"
+  },
+  {
+   "slug": "parasite-2019",
+   "a": "/fsu7oo8JikEIj2I6nRSnruGx3Es.jpg",
+   "b": "/xFujHpFNaB6PvLq6qwzrFRaLiL8.jpg",
+   "ia": 46,
+   "ib": 77,
+   "d": 24,
+   "p": 18,
+   "rotulo": "D"
+  },
+  {
+   "slug": "parasite-2019",
+   "a": "/29ro6Wvws1AXvQP0ZmdNbLknLIL.jpg",
+   "b": "/xN2ehKn5UbifWrHtL96jpL0CqSI.jpg",
+   "ia": 48,
+   "ib": 78,
+   "d": 15,
+   "p": 24,
+   "rotulo": "D"
+  },
+  {
+   "slug": "parasite-2019",
+   "a": "/4dnPWcE2WyWZ4NtVRFHfV1R53Gm.jpg",
+   "b": "/56gqbVoEQYtB5rIs3llPuNxQp9a.jpg",
+   "ia": 51,
+   "ib": 52,
+   "d": 31,
+   "p": 18,
+   "rotulo": "D"
+  },
+  {
+   "slug": "parasite-2019",
+   "a": "/8239PskFvv2w0mUiWE1lVK1GdG9.jpg",
+   "b": "/wnHYKbagErWP4GCgje73OgcClPG.jpg",
+   "ia": 54,
+   "ib": 75,
+   "d": 25,
+   "p": 20,
+   "rotulo": "D"
+  },
+  {
+   "slug": "parasite-2019",
+   "a": "/xPe38m5I3IgtQIQ0aneYUgcxK6p.jpg",
+   "b": "/xzYriUiuPOWHR5fskZzTlWGreUo.jpg",
+   "ia": 79,
+   "ib": 82,
+   "d": 14,
+   "p": 14,
+   "rotulo": "S"
+  },
+  {
+   "slug": "wonka",
+   "a": "/oyK2a8tMn6cmzilaUmKWYqNXzay.jpg",
+   "b": "/2dQ8IESvPzd7X8SRwqASIbFLeqF.jpg",
+   "ia": 0,
+   "ib": 25,
+   "d": 20,
+   "p": 18,
+   "rotulo": "S"
+  },
+  {
+   "slug": "wonka",
+   "a": "/xwzJiqdDIlXYeUkPjbOvXZicig2.jpg",
+   "b": "/g7eBZgkQ7JpbFdQSOB3v1alpLl4.jpg",
+   "ia": 1,
+   "ib": 7,
+   "d": 6,
+   "p": 8,
+   "rotulo": "S"
+  },
+  {
+   "slug": "wonka",
+   "a": "/yOm993lsJyPmBodlYjgpPwBjXP9.jpg",
+   "b": "/pkrIKjugQEK7p2sXXYsMgbzdNFc.jpg",
+   "ia": 2,
+   "ib": 8,
+   "d": 13,
+   "p": 16,
+   "rotulo": "S"
+  },
+  {
+   "slug": "wonka",
+   "a": "/yOm993lsJyPmBodlYjgpPwBjXP9.jpg",
+   "b": "/4onIYIsOEP11PfGYlkKC9bDJlTa.jpg",
+   "ia": 2,
+   "ib": 27,
+   "d": 1,
+   "p": 0,
+   "rotulo": "S"
+  },
+  {
+   "slug": "wonka",
+   "a": "/yOm993lsJyPmBodlYjgpPwBjXP9.jpg",
+   "b": "/6T30aPz7kFe0U7kBNJRJTFSC8AM.jpg",
+   "ia": 2,
+   "ib": 30,
+   "d": 15,
+   "p": 18,
+   "rotulo": "D"
+  },
+  {
+   "slug": "wonka",
+   "a": "/pkrIKjugQEK7p2sXXYsMgbzdNFc.jpg",
+   "b": "/54ThKtpzYlDLcsdv9GCPDwOdQGg.jpg",
+   "ia": 8,
+   "ib": 13,
+   "d": 10,
+   "p": 28,
+   "rotulo": "D"
+  },
+  {
+   "slug": "wonka",
+   "a": "/pkrIKjugQEK7p2sXXYsMgbzdNFc.jpg",
+   "b": "/x9xFllwdf2lPDrY89PDeRaIaOrn.jpg",
+   "ia": 8,
+   "ib": 17,
+   "d": 11,
+   "p": 32,
+   "rotulo": "D"
+  },
+  {
+   "slug": "wonka",
+   "a": "/pkrIKjugQEK7p2sXXYsMgbzdNFc.jpg",
+   "b": "/2d9fIHt1IeSFkzbrPTbLWOU0O1n.jpg",
+   "ia": 8,
+   "ib": 19,
+   "d": 9,
+   "p": 20,
+   "rotulo": "D"
+  },
+  {
+   "slug": "wonka",
+   "a": "/pkrIKjugQEK7p2sXXYsMgbzdNFc.jpg",
+   "b": "/4onIYIsOEP11PfGYlkKC9bDJlTa.jpg",
+   "ia": 8,
+   "ib": 27,
+   "d": 14,
+   "p": 16,
+   "rotulo": "S"
+  },
+  {
+   "slug": "wonka",
+   "a": "/pkrIKjugQEK7p2sXXYsMgbzdNFc.jpg",
+   "b": "/6T30aPz7kFe0U7kBNJRJTFSC8AM.jpg",
+   "ia": 8,
+   "ib": 30,
+   "d": 14,
+   "p": 24,
+   "rotulo": "D"
+  },
+  {
+   "slug": "wonka",
+   "a": "/pkrIKjugQEK7p2sXXYsMgbzdNFc.jpg",
+   "b": "/gt1W1VHtw7t9e4ISqwuZSZfwgjd.jpg",
+   "ia": 8,
+   "ib": 40,
+   "d": 14,
+   "p": 32,
+   "rotulo": "D"
+  },
+  {
+   "slug": "wonka",
+   "a": "/kLiKZcVUT1D46Vfv6dsi0iqZ6hh.jpg",
+   "b": "/wqIgerISdL3Gagx06bZGC6IZ9fa.jpg",
+   "ia": 10,
+   "ib": 12,
+   "d": 14,
+   "p": 14,
+   "rotulo": "D"
+  },
+  {
+   "slug": "wonka",
+   "a": "/54ThKtpzYlDLcsdv9GCPDwOdQGg.jpg",
+   "b": "/x9xFllwdf2lPDrY89PDeRaIaOrn.jpg",
+   "ia": 13,
+   "ib": 17,
+   "d": 13,
+   "p": 22,
+   "rotulo": "D"
+  },
+  {
+   "slug": "wonka",
+   "a": "/54ThKtpzYlDLcsdv9GCPDwOdQGg.jpg",
+   "b": "/2d9fIHt1IeSFkzbrPTbLWOU0O1n.jpg",
+   "ia": 13,
+   "ib": 19,
+   "d": 9,
+   "p": 26,
+   "rotulo": "D"
+  },
+  {
+   "slug": "wonka",
+   "a": "/54ThKtpzYlDLcsdv9GCPDwOdQGg.jpg",
+   "b": "/p2iXQIqeYfsoCu23VxxLaqK6kaa.jpg",
+   "ia": 13,
+   "ib": 22,
+   "d": 14,
+   "p": 22,
+   "rotulo": "D"
+  },
+  {
+   "slug": "wonka",
+   "a": "/54ThKtpzYlDLcsdv9GCPDwOdQGg.jpg",
+   "b": "/gt1W1VHtw7t9e4ISqwuZSZfwgjd.jpg",
+   "ia": 13,
+   "ib": 40,
+   "d": 14,
+   "p": 30,
+   "rotulo": "D"
+  },
+  {
+   "slug": "wonka",
+   "a": "/uVdY9uBl6aqYLYRVvbm86CQbxBa.jpg",
+   "b": "/mcnBZ7VsWZbnPuX3zSzJjHB2lcj.jpg",
+   "ia": 15,
+   "ib": 44,
+   "d": 15,
+   "p": 24,
+   "rotulo": "D"
+  },
+  {
+   "slug": "wonka",
+   "a": "/AbEfHyI7EnE6REdk3QzpjOJt2jR.jpg",
+   "b": "/wmQM4bnR0BgFjuhShiS5YsnxFJw.jpg",
+   "ia": 16,
+   "ib": 55,
+   "d": 1,
+   "p": 0,
+   "rotulo": "S"
+  },
+  {
+   "slug": "wonka",
+   "a": "/x9xFllwdf2lPDrY89PDeRaIaOrn.jpg",
+   "b": "/2d9fIHt1IeSFkzbrPTbLWOU0O1n.jpg",
+   "ia": 17,
+   "ib": 19,
+   "d": 12,
+   "p": 28,
+   "rotulo": "D"
+  },
+  {
+   "slug": "wonka",
+   "a": "/zZNi3rHJPpI2B5Cy7OAueTaiLfl.jpg",
+   "b": "/2GosYnilonhxCY5HfGcvGhSWbwK.jpg",
+   "ia": 18,
+   "ib": 24,
+   "d": 13,
+   "p": 30,
+   "rotulo": "D"
+  },
+  {
+   "slug": "wonka",
+   "a": "/2d9fIHt1IeSFkzbrPTbLWOU0O1n.jpg",
+   "b": "/6T30aPz7kFe0U7kBNJRJTFSC8AM.jpg",
+   "ia": 19,
+   "ib": 30,
+   "d": 9,
+   "p": 24,
+   "rotulo": "D"
+  },
+  {
+   "slug": "wonka",
+   "a": "/2d9fIHt1IeSFkzbrPTbLWOU0O1n.jpg",
+   "b": "/gt1W1VHtw7t9e4ISqwuZSZfwgjd.jpg",
+   "ia": 19,
+   "ib": 40,
+   "d": 15,
+   "p": 26,
+   "rotulo": "D"
+  },
+  {
+   "slug": "wonka",
+   "a": "/rOF4326lv2GRZfZWVR6U9OQ2Abo.jpg",
+   "b": "/gt1W1VHtw7t9e4ISqwuZSZfwgjd.jpg",
+   "ia": 20,
+   "ib": 40,
+   "d": 22,
+   "p": 20,
+   "rotulo": "D"
+  },
+  {
+   "slug": "wonka",
+   "a": "/4onIYIsOEP11PfGYlkKC9bDJlTa.jpg",
+   "b": "/6T30aPz7kFe0U7kBNJRJTFSC8AM.jpg",
+   "ia": 27,
+   "ib": 30,
+   "d": 16,
+   "p": 18,
+   "rotulo": "D"
+  },
+  {
+   "slug": "wonka",
+   "a": "/6T30aPz7kFe0U7kBNJRJTFSC8AM.jpg",
+   "b": "/z1ciStjwkxjIaR9t0uXf1rb1LIT.jpg",
+   "ia": 30,
+   "ib": 59,
+   "d": 25,
+   "p": 18,
+   "rotulo": "D"
+  },
+  {
+   "slug": "wonka",
+   "a": "/7NdXIAhzluNcKRAoSdu6TfzrqOf.jpg",
+   "b": "/tDbew4a2Gt92P6QdXlugsAko8o7.jpg",
+   "ia": 31,
+   "ib": 49,
+   "d": 8,
+   "p": 8,
+   "rotulo": "S"
+  },
+  {
+   "slug": "wonka",
+   "a": "/8usGWFo7kuw2xcNFAb5tYggZpo4.jpg",
+   "b": "/gt1W1VHtw7t9e4ISqwuZSZfwgjd.jpg",
+   "ia": 32,
+   "ib": 40,
+   "d": 12,
+   "p": 24,
+   "rotulo": "D"
+  },
+  {
+   "slug": "wonka",
+   "a": "/8usGWFo7kuw2xcNFAb5tYggZpo4.jpg",
+   "b": "/mKEx6Hysu9ghcdBKxC702JbEmh6.jpg",
+   "ia": 32,
+   "ib": 43,
+   "d": 15,
+   "p": 30,
+   "rotulo": "D"
+  },
+  {
+   "slug": "wonka",
+   "a": "/8usGWFo7kuw2xcNFAb5tYggZpo4.jpg",
+   "b": "/wOStuuUs91E4tJzbhnExUWT5J6i.jpg",
+   "ia": 32,
+   "ib": 54,
+   "d": 0,
+   "p": 0,
+   "rotulo": "S"
+  },
+  {
+   "slug": "wonka",
+   "a": "/f0CzyWjZi89gRqcg8U3Wf3yRjK1.jpg",
+   "b": "/t74rhcfOkqunlOljWMeQI3rf3GS.jpg",
+   "ia": 39,
+   "ib": 47,
+   "d": 16,
+   "p": 20,
+   "rotulo": "S"
+  },
+  {
+   "slug": "wonka",
+   "a": "/gt1W1VHtw7t9e4ISqwuZSZfwgjd.jpg",
+   "b": "/hW2deoiTD6GOUTr6ZVLLuOHW3OC.jpg",
+   "ia": 40,
+   "ib": 41,
+   "d": 19,
+   "p": 16,
+   "rotulo": "D"
+  },
+  {
+   "slug": "wonka",
+   "a": "/gt1W1VHtw7t9e4ISqwuZSZfwgjd.jpg",
+   "b": "/mKEx6Hysu9ghcdBKxC702JbEmh6.jpg",
+   "ia": 40,
+   "ib": 43,
+   "d": 11,
+   "p": 16,
+   "rotulo": "D"
+  },
+  {
+   "slug": "wonka",
+   "a": "/gt1W1VHtw7t9e4ISqwuZSZfwgjd.jpg",
+   "b": "/wOStuuUs91E4tJzbhnExUWT5J6i.jpg",
+   "ia": 40,
+   "ib": 54,
+   "d": 12,
+   "p": 24,
+   "rotulo": "D"
+  },
+  {
+   "slug": "wonka",
+   "a": "/mKEx6Hysu9ghcdBKxC702JbEmh6.jpg",
+   "b": "/t9zwxhlQzEcY0HMyRJyCIa5UqAF.jpg",
+   "ia": 43,
+   "ib": 48,
+   "d": 25,
+   "p": 18,
+   "rotulo": "D"
+  },
+  {
+   "slug": "wonka",
+   "a": "/mKEx6Hysu9ghcdBKxC702JbEmh6.jpg",
+   "b": "/wOStuuUs91E4tJzbhnExUWT5J6i.jpg",
+   "ia": 43,
+   "ib": 54,
+   "d": 15,
+   "p": 30,
+   "rotulo": "D"
+  }
+ ]
+}

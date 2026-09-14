@@ -38,7 +38,10 @@ RAIZ = Path(__file__).resolve().parent.parent
 sys.path.insert(0, str(RAIZ / "src"))
 
 from espectro24.config import SPEC_VERSION  # noqa: E402
-from espectro24.synthesize import parse_linha_telemetria_llm  # noqa: E402
+from espectro24.synthesize import (  # noqa: E402
+    parse_linha_telemetria_fallback,
+    parse_linha_telemetria_llm,
+)
 
 RESULTADO_DIR = RAIZ / "resultado"
 CONSENSO = RAIZ / "resultado" / "votacao-3" / "consenso.jsonl"
@@ -174,6 +177,9 @@ def publicar_um(slug: str) -> dict:
     return {"slug": slug, "ok": ok, "elapsed_s": round(dt, 1),
             "returncode": rc, "expirou": expirou,
             "retentativa_llm": parse_linha_telemetria_llm(stderr),
+            # [2026-09-14] Mesmo canal, mesma razão: as unidades que o
+            # DeepSeek recusou por conteúdo e o Gemini processou.
+            "fallback_conteudo": parse_linha_telemetria_fallback(stderr),
             "stdout_tail": stdout[-3000:], "stderr_tail": stderr[-6000:]}
 
 
@@ -205,6 +211,12 @@ def cmd_publicar(slugs: list[str], republicar_tudo: bool = False) -> None:
         res = publicar_um(slug)
         with LOG.open("a", encoding="utf-8") as fh:
             fh.write(json.dumps(res, ensure_ascii=False) + "\n")
+        fb = res.get("fallback_conteudo") or {}
+        if fb.get("n"):
+            print(f"  [!] {slug}: {fb['n']} unidade(s) recusada(s) pelo "
+                  f"DeepSeek e processada(s) pelo Gemini: "
+                  + ", ".join(f"{u['estagio']}:{u['unidade']}"
+                              for u in fb["unidades"]))
         if res["ok"]:
             print(f"  [✓] {slug}: {res['elapsed_s']}s")
             feitos += 1
@@ -253,6 +265,49 @@ def cmd_relatorio() -> None:
           f"de {n_tematico + n_valorativo}")
     print(f"filmes com alguma flag mecânica: {n_com_flag}")
     _linha_retentativa_llm(linhas_log)
+    _linha_fallback_conteudo(slugs)
+
+
+def fallbacks_publicados(dados: dict) -> list[str]:
+    """[2026-09-14] Onde o JSON publicado de um filme foi processado pelo
+    Gemini por recusa de conteúdo do DeepSeek — lido do DADO, não do log:
+    `sintese:<bucket>` e `classificacao:<bucket>/<id>`. Vazio = nenhuma troca.
+    """
+    fora = [f"sintese:{b['bucket']}" for b in dados.get("buckets", [])
+            if b.get("fallback_conteudo")]
+    for r in (dados.get("eixos") or {}).get("fallback_conteudo") or []:
+        if r.get("passes"):
+            fora.append(f"classificacao:{r['bucket']}/{r['id']}")
+        if r.get("verificador"):
+            fora.append(f"verificador:{r['bucket']}/{r['id']}")
+    return fora
+
+
+def pendentes_publicados(dados: dict) -> list[str]:
+    """[2026-09-14] Reviews CONTADAS no filme publicado cujo
+    `impacto_emocional` ficou sem verificação — `bucket/id (motivo)`."""
+    return [f"{r['bucket']}/{r['id']} ({r.get('motivo')})"
+            for r in (dados.get("eixos") or {}).get("verificacao_pendente") or []]
+
+
+def _linha_fallback_conteudo(slugs: list[str]) -> None:
+    """O catálogo passa a poder ser de provider misto; esta linha diz ONDE,
+    sem reprocessar nada."""
+    for rotulo, extrair in (
+            ("fallback de conteúdo (deepseek → gemini)", fallbacks_publicados),
+            ("verificação pendente (impacto_emocional contado sem veredito)",
+             pendentes_publicados)):
+        por_filme = {}
+        for slug in slugs:
+            p = RESULTADO_DIR / f"{slug}.json"
+            if p.exists():
+                unidades = extrair(json.loads(p.read_text(encoding="utf-8")))
+                if unidades:
+                    por_filme[slug] = unidades
+        total = sum(len(u) for u in por_filme.values())
+        print(f"{rotulo}: {total} unidade(s) em {len(por_filme)} filme(s)"
+              + "".join(f"\n  {s}: {', '.join(u)}"
+                        for s, u in por_filme.items()))
 
 
 def _linha_retentativa_llm(linhas_log: dict) -> None:

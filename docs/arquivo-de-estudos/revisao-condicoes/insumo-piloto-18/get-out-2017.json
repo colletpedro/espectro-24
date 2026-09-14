@@ -1,0 +1,145 @@
+{
+ "slug": "get-out-2017",
+ "condicoes": {
+  "vale_a_pena": [
+   {
+    "texto": "busca uma abordagem inteligente e desconfortável sobre o racismo velado",
+    "tema_origem": "POS-A",
+    "bucket_origem": "positivas",
+    "tema_texto": "Comentário social e racismo",
+    "rotulo_forca": "cerca de metade"
+   },
+   {
+    "texto": "valoriza atuações intensas e críveis no centro da narrativa",
+    "tema_origem": "POS-B",
+    "bucket_origem": "positivas",
+    "tema_texto": "Atuações",
+    "rotulo_forca": "muitos"
+   },
+   {
+    "texto": "aprecia um suspense com tensão crescente que mantém o clima apreensivo",
+    "tema_origem": "POS-C",
+    "bucket_origem": "positivas",
+    "tema_texto": "Tensão e suspense",
+    "rotulo_forca": "muitos"
+   }
+  ],
+  "talvez_evite": [
+   {
+    "texto": "se incomoda com tramas previsíveis e reviravoltas fáceis de antecipar",
+    "tema_origem": "NEG-A",
+    "bucket_origem": "negativas",
+    "tema_texto": "Previsibilidade da trama",
+    "rotulo_forca": "muitos"
+   },
+   {
+    "texto": "se desaponta com narrativas arrastadas de introdução longa e pouca tensão",
+    "tema_origem": "NEG-B",
+    "bucket_origem": "negativas",
+    "tema_texto": "Ritmo lento e falta de tensão",
+    "rotulo_forca": "muitos"
+   },
+   {
+    "texto": "se frustra quando produções amplamente aclamadas não correspondem ao grande hype",
+    "tema_origem": "NEG-C",
+    "bucket_origem": "negativas",
+    "tema_texto": "Filme superestimado",
+    "rotulo_forca": "alguns"
+   },
+   {
+    "texto": "rejeita roteiros com mensagens pouco sutis e abordagem simplista do racismo",
+    "tema_origem": "NEG-D",
+    "bucket_origem": "negativas",
+    "tema_texto": "Crítica ao roteiro e à abordagem do racismo",
+    "rotulo_forca": "alguns"
+   },
+   {
+    "texto": "se incomoda com um elenco irregular marcado por performances fracas ou deslocadas",
+    "tema_origem": "NEG-E",
+    "bucket_origem": "negativas",
+    "tema_texto": "Atuações irregulares",
+    "rotulo_forca": "alguns"
+   }
+  ],
+  "ordem_colunas": [
+   "vale_a_pena",
+   "talvez_evite"
+  ],
+  "peso": {
+   "vale_a_pena": {
+    "peso_pct": 87,
+    "peso_texto": "~87% das notas",
+    "nota_de_amostra": null
+   },
+   "talvez_evite": {
+    "peso_pct": 2,
+    "peso_texto": "~2% das notas",
+    "nota_de_amostra": null
+   }
+  },
+  "peso_meio": null,
+  "origem": "llm",
+  "temas_pedidos": {
+   "vale_a_pena": [
+    "POS-A",
+    "POS-B",
+    "POS-C"
+   ],
+   "talvez_evite": [
+    "NEG-A",
+    "NEG-B",
+    "NEG-C",
+    "NEG-D",
+    "NEG-E"
+   ]
+  },
+  "temas_saltados": {
+   "vale_a_pena": [],
+   "talvez_evite": []
+  },
+  "descartadas": [],
+  "retry": null,
+  "provider": "gemini",
+  "modelo": "gemini-3.7-flash",
+  "n_candidatos": 3,
+  "n_chamadas": 3,
+  "indice_escolhido": 2,
+  "candidatos": [
+   {
+    "indice": 0,
+    "n_condicoes": 8,
+    "n_flags": 2,
+    "flags": [
+     "ancora_nao_verificavel",
+     "sem_discriminacao"
+    ],
+    "n_temas_cobertos": 8
+   },
+   {
+    "indice": 1,
+    "n_condicoes": 8,
+    "n_flags": 2,
+    "flags": [
+     "ancora_nao_verificavel",
+     "sem_discriminacao"
+    ],
+    "n_temas_cobertos": 8
+   },
+   {
+    "indice": 2,
+    "n_condicoes": 8,
+    "n_flags": 0,
+    "flags": [],
+    "n_temas_cobertos": 8
+   }
+  ],
+  "uso": {
+   "prompt_tokens": 8253,
+   "completion_tokens": 1132,
+   "cache_hit_tokens": 0,
+   "cache_miss_tokens": 8253
+  },
+  "latencia_s": 17.82,
+  "spec_version": "1.9.50"
+ }
+}

@@ -122,6 +122,43 @@ def carregar_classificacao(caminho: str | Path,
     return fora
 
 
+def proveniencia_por_review(caminho: str | Path, slug: str
+                            ) -> dict[str, dict[str, dict[str, Any]]]:
+    """[2026-09-14] `{bucket: {id: marcas}}` das reviews de `slug` cuja
+    classificação NÃO é a de sempre — só elas; review ausente foi
+    classificada pelo DeepSeek nos três passes e, se candidata, verificada.
+
+    As marcas, cada uma presente só quando se aplica:
+    - `passes`: `[{passe, de, para, modelo, motivo}]` — passes classificados
+      pelo Gemini (`votacao_3._consensuar`, chave `fallback_conteudo`);
+    - `verificador`: o veredito de `impacto_emocional` veio do Gemini
+      (`verificador_fallback_conteudo`);
+    - `verificacao_pendente`: `{eixo, motivo, erro?}` — o eixo conta sem ter
+      sido verificado (`verificador_impacto.gerar_consenso_verificado`).
+
+    Separado de `carregar_classificacao` de propósito: aquela devolve só
+    eixos, e é o contrato que o cálculo inteiro consome.
+    """
+    fora: dict[str, dict[str, dict[str, Any]]] = {}
+    with Path(caminho).open(encoding="utf-8") as fh:
+        for linha in fh:
+            if not linha.strip():
+                continue
+            r = json.loads(linha)
+            if r.get("slug") != slug:
+                continue
+            marcas: dict[str, Any] = {}
+            if r.get("fallback_conteudo"):
+                marcas["passes"] = list(r["fallback_conteudo"])
+            if r.get("verificador_fallback_conteudo"):
+                marcas["verificador"] = r["verificador_fallback_conteudo"]
+            if r.get("verificacao_pendente"):
+                marcas["verificacao_pendente"] = r["verificacao_pendente"]
+            if marcas:
+                fora.setdefault(r["bucket"], {})[r["id"]] = marcas
+    return fora
+
+
 # --- frequência ------------------------------------------------------------
 
 def frequencias(classificacao: dict[str, dict[str, list[str]]]

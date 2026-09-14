@@ -43,7 +43,8 @@ from .render import (
     write_json,
 )
 from .narrador import narrar, telemetria_para_json
-from .synthesize import ProviderError, linha_telemetria_llm
+from .synthesize import (ProviderError, linha_telemetria_fallback,
+                         linha_telemetria_llm, telemetria_fallback_conteudo)
 
 
 def _parse_args(argv):
@@ -365,6 +366,15 @@ def main(argv=None):
                   f"{rot['n_chamadas']} chamada(s)"
                   + (f" · FALHOU em {', '.join(rot['falharam'])}"
                      if rot["falharam"] else ""), file=sys.stderr)
+            if rot.get("motivos_falha"):
+                print(f"⚠️  Rotulagem — motivo das falhas: "
+                      f"{rot['motivos_falha']}", file=sys.stderr)
+            if bloco.get("verificacao_pendente"):
+                print(f"⚠️  {len(bloco['verificacao_pendente'])} review(s) "
+                      f"contada(s) com impacto_emocional SEM verificação: "
+                      + ", ".join(f"{p['bucket']}/{p['id']} ({p['motivo']})"
+                                  for p in bloco["verificacao_pendente"]),
+                      file=sys.stderr)
             if rot["fora_da_taxonomia"]:
                 print(f"⚠️  Rotulagem devolveu eixo fora da taxonomia "
                       f"(virou `livre`): {rot['fora_da_taxonomia']}",
@@ -413,6 +423,17 @@ def main(argv=None):
     print(f"\nJSON salvo em {path}", file=sys.stderr)
     print(f"Requisições de rede nesta execução: {fetcher_net}", file=sys.stderr)
     print(linha_telemetria_llm(), file=sys.stderr)
+    # [2026-09-14] Fallback de conteúdo: quantas unidades o DeepSeek recusou
+    # e o Gemini processou, e quais. O aviso é para quem lê; a linha com
+    # prefixo fixo é para o harness de lote (`publicar_catalogo`).
+    fb = telemetria_fallback_conteudo()
+    if fb:
+        print(f"⚠️  Fallback de conteúdo: {len(fb)} unidade(s) recusada(s) "
+              f"pelo DeepSeek ({fb[0]['motivo']}) e processada(s) por "
+              f"{fb[0]['para']}/{fb[0]['modelo']}: "
+              + ", ".join(f"{f['estagio']}:{f['unidade']}" for f in fb),
+              file=sys.stderr)
+    print(linha_telemetria_fallback(), file=sys.stderr)
 
 
 if __name__ == "__main__":

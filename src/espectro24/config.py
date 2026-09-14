@@ -13,6 +13,16 @@ from fractions import Fraction
 # mostrou "1.6.0 → 1.9.0" quando deveria ser "1.6.0 → 1.9.11"). Os JSONs
 # já publicados NÃO foram reescritos: carimbo corrigido depois do fato não
 # é evidência de nada — mesma política de `VERSAO_COLETOR` abaixo.
+#
+# [2026-09-14] DECISÃO DO DONO — o fallback de conteúdo (ABERTO.md C16) NÃO
+# sobe esta constante. Ele só acrescenta chaves OPCIONAIS ao JSON
+# (`fallback_conteudo`, `verificacao_pendente`, `rotulagem.motivos_falha`),
+# que existem apenas quando algo aconteceu; nenhum consumidor muda de
+# comportamento e o contrato do produto é o mesmo. Subir faria
+# `publicar_catalogo._ja_publicado` enxergar o catálogo inteiro como pendente,
+# e publicá-lo de novo seria custo sem retorno. A regra que fica, para não
+# virar dúvida: chave ADITIVA, ausente por default, sem mudança de contrato
+# → a constante não sobe.
 SPEC_VERSION = "1.9.50"
 
 BASE = "https://letterboxd.com"
@@ -332,11 +342,21 @@ PROVIDER_DEFAULT_MODELS = {
     # experimentos de LLM local (ver experimentos-ollama-arquivado/): SDK
     # compatível com o da OpenAI, ~$0,14/M tokens de entrada (cache miss;
     # ~$0,0028/M com prefixo cacheado) e ~$0,28/M de saída, sem teto diário
-    # de requisições — ataca diretamente o gargalo do free tier do Gemini
-    # (20 req/dia) que inviabilizava construir catálogo. ATENÇÃO: os aliases
-    # antigos `deepseek-chat`/`deepseek-reasoner` foram descontinuados em
-    # 24/07/2026; não existe mais "DeepSeek-V3" na API — os nomes atuais são
-    # `deepseek-v4-flash` e `deepseek-v4-pro`.
+    # de requisições. NA ÉPOCA (v1.8.0), isso atacava o gargalo do free tier
+    # do Gemini (20 req/dia), que inviabilizava construir catálogo.
+    #
+    # [2026-09-14] ESSE MOTIVO NÃO VALE MAIS: a chave do Gemini tem billing
+    # ativo, e o teto de 20 req/dia não existe para ela. O argumento deixou
+    # de ser BLOQUEIO (o Gemini não constrói o catálogo) e virou CUSTO (o
+    # Gemini constrói, a preço diferente). A permanência do DeepSeek aqui se
+    # sustenta hoje nos outros dois motivos — tarefa estruturada de saída
+    # curta rende menos com modelo mais caro; volume alto (milhares de
+    # chamadas) vs. a prosa de volume baixo que foi para o Gemini —, que
+    # NUNCA foram medidos lado a lado. Ver ABERTO.md.
+    #
+    # ATENÇÃO: os aliases antigos `deepseek-chat`/`deepseek-reasoner` foram
+    # descontinuados em 24/07/2026; não existe mais "DeepSeek-V3" na API —
+    # os nomes atuais são `deepseek-v4-flash` e `deepseek-v4-pro`.
     "deepseek": "deepseek-v4-flash",
 }
 
@@ -351,8 +371,10 @@ PROVIDER_DEFAULT_MODELS = {
 #   - 23 das 24 checagens de honestidade (3 filmes × 8 flags) vieram limpas
 #     — a única exceção foi `perspectiva_nao_marcada` num filme;
 #   - custo ~US$0,0005/filme (narrador+editor), com 96-99% de cache hit no
-#     prompt do narrador, e SEM teto diário de requisições — o gargalo que
-#     inviabilizava o Gemini free tier para construir catálogo.
+#     prompt do narrador, e SEM teto diário de requisições. NA ÉPOCA, era o
+#     gargalo que inviabilizava o Gemini free tier para construir catálogo
+#     — motivo que não vale mais (ver a nota em `PROVIDER_DEFAULT_MODELS`,
+#     acima, e `PROVIDER_POR_ESTAGIO`, abaixo).
 # `anthropic` e `gemini` continuam plenamente selecionáveis via --provider;
 # a troca é só do que o CLI assume quando a flag é omitida.
 DEFAULT_PROVIDER = "deepseek"
@@ -366,6 +388,12 @@ DEFAULT_PROVIDER = "deepseek"
 # de medição — e o faria em SILÊNCIO, porque `taxonomia_id` hasheia prompt +
 # eixos, não o modelo. É também onde capacidade de modelo rende menos:
 # tarefa estruturada, alto volume, saída JSON curta.
+#
+# [2026-09-14] O motivo histórico de TROCA (teto de 20 req/dia do Gemini
+# free tier, que bloqueava construir catálogo) não vale mais — a chave do
+# Gemini tem billing ativo. Ficar em DeepSeek aqui se sustenta hoje no que
+# está escrito acima (tarefa estruturada, volume alto) mais CUSTO relativo,
+# nenhum dos dois medido lado a lado com Gemini até esta nota. Ver ABERTO.md.
 #
 # `narrativa` vai para Gemini. É o oposto em todos os eixos: uma chamada por
 # filme (volume irrelevante), prosa longa, nada calibrado a invalidar — a
@@ -492,6 +520,32 @@ MODELO_POR_ESTAGIO = {
     "veredito": "gemini-3.7-flash",
     "condicoes": "gemini-3.7-flash",
 }
+
+# --- Fallback de CONTEÚDO (2026-09-14, ABERTO.md C16) ----------------------
+# O DeepSeek recusa, de forma DETERMINÍSTICA, certas entradas com
+# `400 Content Exists Risk` (`a-brighter-summer-day`: uma review nos 3 passes
+# de classificação e o bucket de síntese que a contém). Sem saída, cada
+# recusa é um filme que não publica. SÓ essa recusa troca de provider — ver
+# `synthesize.recusa_de_conteudo` para o critério e por que ele não pega
+# outro 400. `PROVIDER_POR_ESTAGIO` NÃO muda: DeepSeek continua o provider
+# da classificação; o Gemini só é chamado quando o DeepSeek recusa.
+#
+# `gemini-3.7-flash`: a versão fixa que o projeto já usa (narrativa, veredito,
+# condições), e a MESMA em que as duas entradas recusadas foram testadas
+# (C15.b: as duas passaram limpas, JSON válido, sem bloqueio). Amostra de 2
+# chamadas — indicativo.
+FALLBACK_CONTEUDO_PROVIDER = "gemini"
+FALLBACK_CONTEUDO_MODELO = "gemini-3.7-flash"
+# Teto de saída das chamadas de JSON CURTO por review (classificação e
+# verificador) quando caem no Gemini. NÃO é o 300 do DeepSeek, e o motivo é
+# medido (C15.a, 40 reviews reais do piloto, na CLASSIFICAÇÃO):
+# `thinking_budget=0` não desliga o raciocínio no gemini-3.7-flash nesta
+# tarefa (26/40 chamadas geraram pensamento), e a 300 tokens 20% saíram
+# truncadas com JSON inválido; a 2000, 15/15 limpas. O verificador tem a
+# mesma forma (JSON de três campos, o mesmo teto de 300 no DeepSeek) e herda
+# a mesma margem — não medido separadamente. O custo extra é só de saída
+# numa chamada que, por construção, é rara.
+FALLBACK_CONTEUDO_MAX_TOKENS_JSON = 2000
 
 # mantido por compatibilidade (era o único provider na v1.1.0); agora segue
 # o provider DEFAULT de produção (v1.8.0), não mais fixo em "anthropic".

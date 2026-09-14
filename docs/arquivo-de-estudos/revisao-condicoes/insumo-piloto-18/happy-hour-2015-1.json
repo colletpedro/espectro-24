@@ -1,0 +1,143 @@
+{
+ "slug": "happy-hour-2015-1",
+ "condicoes": {
+  "vale_a_pena": [
+   {
+    "texto": "aprecia uma longa duração contemplativa que proporciona imersão na vida das personagens",
+    "tema_origem": "POS-A",
+    "bucket_origem": "positivas",
+    "tema_texto": "Duração longa e ritmo contemplativo",
+    "rotulo_forca": "cerca de metade"
+   },
+   {
+    "texto": "busca protagonistas femininas com grande profundidade psicológica, nuances e dilemas de identidade",
+    "tema_origem": "POS-B",
+    "bucket_origem": "positivas",
+    "tema_texto": "Personagens femininas complexas e bem construídas",
+    "rotulo_forca": "muitos"
+   },
+   {
+    "texto": "valoriza narrativas centradas no vínculo de afeto e cumplicidade de amizades femininas",
+    "tema_origem": "POS-C",
+    "bucket_origem": "positivas",
+    "tema_texto": "Amizade feminina como eixo emocional",
+    "rotulo_forca": "muitos"
+   },
+   {
+    "texto": "se interessa por diálogos naturais e filosóficos que revelam tensões e significados ocultos",
+    "tema_origem": "POS-D",
+    "bucket_origem": "positivas",
+    "tema_texto": "Diálogos e conversas como motor narrativo",
+    "rotulo_forca": "muitos"
+   }
+  ],
+  "talvez_evite": [
+   {
+    "texto": "se cansa com filmes muito extensos de andamento lento e cenas arrastadas",
+    "tema_origem": "NEG-A",
+    "bucket_origem": "negativas",
+    "tema_texto": "Duração excessiva e ritmo lento",
+    "rotulo_forca": "a maioria"
+   },
+   {
+    "texto": "se incomoda com figuras apáticas, diálogos pouco naturais e falta de conexão emocional",
+    "tema_origem": "NEG-B",
+    "bucket_origem": "negativas",
+    "tema_texto": "Personagens apáticos e sem carisma",
+    "rotulo_forca": "muitos"
+   },
+   {
+    "texto": "se frustra com narrativas sem foco dispersas em subtramas consideradas desnecessárias",
+    "tema_origem": "NEG-C",
+    "bucket_origem": "negativas",
+    "tema_texto": "Roteiro arrastado e falta de substância",
+    "rotulo_forca": "muitos"
+   },
+   {
+    "texto": "se desaponta com atuações inexpressivas e desempenhos que parecem desinteressados",
+    "tema_origem": "NEG-D",
+    "bucket_origem": "negativas",
+    "tema_texto": "Atuações fracas ou inexpressivas",
+    "rotulo_forca": "muitos"
+   }
+  ],
+  "ordem_colunas": [
+   "vale_a_pena",
+   "talvez_evite"
+  ],
+  "peso": {
+   "vale_a_pena": {
+    "peso_pct": 91,
+    "peso_texto": "~91% das notas",
+    "nota_de_amostra": null
+   },
+   "talvez_evite": {
+    "peso_pct": 2,
+    "peso_texto": "~2% das notas",
+    "nota_de_amostra": null
+   }
+  },
+  "peso_meio": null,
+  "origem": "llm",
+  "temas_pedidos": {
+   "vale_a_pena": [
+    "POS-A",
+    "POS-B",
+    "POS-C",
+    "POS-D"
+   ],
+   "talvez_evite": [
+    "NEG-A",
+    "NEG-B",
+    "NEG-C",
+    "NEG-D"
+   ]
+  },
+  "temas_saltados": {
+   "vale_a_pena": [],
+   "talvez_evite": []
+  },
+  "descartadas": [],
+  "retry": null,
+  "provider": "gemini",
+  "modelo": "gemini-3.7-flash",
+  "n_candidatos": 3,
+  "n_chamadas": 3,
+  "indice_escolhido": 1,
+  "candidatos": [
+   {
+    "indice": 0,
+    "n_condicoes": 8,
+    "n_flags": 1,
+    "flags": [
+     "sem_discriminacao"
+    ],
+    "n_temas_cobertos": 8
+   },
+   {
+    "indice": 1,
+    "n_condicoes": 8,
+    "n_flags": 0,
+    "flags": [],
+    "n_temas_cobertos": 8
+   },
+   {
+    "indice": 2,
+    "n_condicoes": 8,
+    "n_flags": 2,
+    "flags": [
+     "sem_discriminacao"
+    ],
+    "n_temas_cobertos": 8
+   }
+  ],
+  "uso": {
+   "prompt_tokens": 8577,
+   "completion_tokens": 1144,
+   "cache_hit_tokens": 0,
+   "cache_miss_tokens": 8577
+  },
+  "latencia_s": 17.83,
+  "spec_version": "1.9.50"
+ }
+}
