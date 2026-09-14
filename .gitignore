@@ -25,3 +25,13 @@ dados/cache/
 
 # macOS
 .DS_Store
+
+# [2026-09-14] Documentos de ESTUDO ficam fora do git (política da sessão:
+# "estudo untracked", ABERTO.md). Estes três diretórios entraram por engano
+# em 594786f e saíram no commit seguinte; a entrada impede que reentrem por
+# um `git add` amplo. Escopo DELIBERADAMENTE estreito: os outros subdiretórios
+# de docs/arquivo-de-estudos/ têm arquivos rastreados desde 85a8f11, e um
+# padrão para a pasta inteira passaria a ignorar arquivos novos neles.
+docs/arquivo-de-estudos/galeria-de-stills/
+docs/arquivo-de-estudos/piloto-expansao/
+docs/arquivo-de-estudos/revisao-condicoes/
