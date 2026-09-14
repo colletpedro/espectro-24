@@ -1,0 +1,1415 @@
+{
+  "slug": "get-out-2017",
+  "data_coleta": "2026-09-13T05:35:01.490228+00:00",
+  "spec_version": "1.9.50",
+  "total_reviews_observadas": 766,
+  "reviews_url": "https://letterboxd.com/film/get-out-2017/reviews/",
+  "ficha": {
+    "titulo": "Corra!",
+    "sinopse_oficial": "Agora que Chris e sua namorada, Rose, chegaram à fase de conhecer os pais no namoro, ela o convida para um fim de semana no interior com Missy e Dean. A princípio, Chris acha que o comportamento excessivamente agradável dos dois como tentativas nervosas de lidar com o relacionamento inter-racial da filha, mas, conforme o fim de semana avança, uma série de descobertas cada vez mais perturbadoras o levam a uma verdade que ele jamais poderia ter imaginado.",
+    "sinopse_fallback_en": false,
+    "generos": [
+      "Mistério",
+      "Thriller",
+      "Terror"
+    ],
+    "duracao_min": 104,
+    "diretor": "Jordan Peele",
+    "diretor_transliterado": false,
+    "ano": 2017,
+    "fonte": "tmdb",
+    "tmdb_id": 419430,
+    "tmdb_fetched_at": "2026-09-10T20:09:03+00:00",
+    "poster_path": "/A0RoSZh8PEYJgDMgM2EV7Ycz3dR.jpg",
+    "poster_largura": 2000,
+    "poster_altura": 3000,
+    "backdrop_paths": [
+      "/bBQHALHRAaaORlPNXv7fNcRXYdx.jpg",
+      "/o8dPH0ZSIyyViP6rjRX1djwCUwI.jpg",
+      "/vZ7EVk7FaNEWYqlVWbFLHP8Z0LU.jpg",
+      "/jDXOmBG97WOlT5iog0kxMBShDTN.jpg",
+      "/Ae58bf7Yj6OPzwKerPgXSnxCJdh.jpg",
+      "/aVyJnGubW0OBvqmqVg2z2wCuEsn.jpg",
+      "/rCEmgjIM098d84R4heGHPM2vUSb.jpg",
+      "/cAduIGrwDJlypHUCL2mFelJXVRT.jpg",
+      "/1GRceOQU1uw4XQDsolzPOTJDB2K.jpg",
+      "/5OlAmzEUaO0A12cM7g5g420w4d7.jpg"
+    ],
+    "backdrop_path": "/bBQHALHRAaaORlPNXv7fNcRXYdx.jpg",
+    "backdrop_largura": 3600,
+    "backdrop_altura": 2025,
+    "poster_sem_texto_path": "/1vRdUT8WLdmUsqcSvjDzHMKuwpu.jpg",
+    "poster_sem_texto_largura": 2000,
+    "poster_sem_texto_altura": 3000,
+    "galeria_stills": [
+      {
+        "still_path": "/bBQHALHRAaaORlPNXv7fNcRXYdx.jpg",
+        "still_largura": 3600,
+        "still_altura": 2025
+      },
+      {
+        "still_path": "/o8dPH0ZSIyyViP6rjRX1djwCUwI.jpg",
+        "still_largura": 3840,
+        "still_altura": 2160
+      },
+      {
+        "still_path": "/aVyJnGubW0OBvqmqVg2z2wCuEsn.jpg",
+        "still_largura": 1920,
+        "still_altura": 1080
+      },
+      {
+        "still_path": "/eEyzH5u9hbQ66WLV68GHjqu9ren.jpg",
+        "still_largura": 1280,
+        "still_altura": 720
+      },
+      {
+        "still_path": "/dsets2vu5jUjFdR0kRRXDKyU0T0.jpg",
+        "still_largura": 3840,
+        "still_altura": 2160
+      },
+      {
+        "still_path": "/emZPptKwTzlMmYcjlTvVVHmOAac.jpg",
+        "still_largura": 3840,
+        "still_altura": 2160
+      },
+      {
+        "still_path": "/2SIq2gOmnuJ5m0rc8DqzjdCZ2au.jpg",
+        "still_largura": 1422,
+        "still_altura": 800
+      },
+      {
+        "still_path": "/5xRObScC2HaIPRNam4Dwye6V7rp.jpg",
+        "still_largura": 2244,
+        "still_altura": 1262
+      },
+      {
+        "still_path": "/fTaRs7NSIemTwRuuWw2T9yFkOy8.jpg",
+        "still_largura": 3840,
+        "still_altura": 2160
+      },
+      {
+        "still_path": "/mKMLyTYGlwCwD7ZI7BaqvQGdVOC.jpg",
+        "still_largura": 3840,
+        "still_altura": 2160
+      },
+      {
+        "still_path": "/tvhGHH8aP25oZOCslDAQnmL3FU6.jpg",
+        "still_largura": 3840,
+        "still_altura": 2160
+      },
+      {
+        "still_path": "/x63VYE1qBX13dyKYyRyGBgd96rs.jpg",
+        "still_largura": 2238,
+        "still_altura": 1259
+      }
+    ],
+    "ano_fonte": "letterboxd",
+    "identidade": {
+      "versao": 1,
+      "status": "validada",
+      "slug": "get-out-2017",
+      "titulo_letterboxd": "Get Out",
+      "ano_letterboxd": 2017,
+      "tmdb_id_letterboxd": 419430,
+      "tmdb_id_escolhido": 419430,
+      "fonte_id": "letterboxd",
+      "titulo_tmdb_campo": "original_title",
+      "titulo_tmdb_correspondente": "Get Out",
+      "ano_tmdb": 2017,
+      "ano_divergente": false
+    }
+  },
+  "distribuicao": {
+    "n_notas_total": 4739915,
+    "por_nivel": {
+      "0.5": 5346,
+      "1.0": 15566,
+      "1.5": 9971,
+      "2.0": 66687,
+      "2.5": 67510,
+      "3.0": 434563,
+      "3.5": 506385,
+      "4.0": 1585506,
+      "4.5": 707581,
+      "5.0": 1340800
+    },
+    "por_bucket": {
+      "negativas": 2,
+      "medianas": 11,
+      "positivas": 87
+    },
+    "fonte": "letterboxd_histograma"
+  },
+  "coleta": {
+    "slug": "get-out-2017",
+    "coletado_em": "2026-09-13T05:34:47.869326+00:00",
+    "versao_coletor": "1.9.6",
+    "ordenacao_usada": "by/added",
+    "histograma_bruto": {
+      "0.5": 5346,
+      "1.0": 15566,
+      "1.5": 9971,
+      "2.0": 66687,
+      "2.5": 67510,
+      "3.0": 434563,
+      "3.5": 506385,
+      "4.0": 1585506,
+      "4.5": 707581,
+      "5.0": 1340800
+    },
+    "orcamento_paginas_por_nivel": {
+      "0.5": 2,
+      "1.0": 2,
+      "1.5": 2,
+      "2.0": 10,
+      "2.5": 6,
+      "3.0": 10,
+      "3.5": 2,
+      "4.0": 6,
+      "4.5": 3,
+      "5.0": 5
+    },
+    "paginas_gastas_por_nivel": {
+      "0.5": 2,
+      "1.0": 2,
+      "1.5": 2,
+      "2.0": 10,
+      "2.5": 6,
+      "3.0": 18,
+      "3.5": 2,
+      "4.0": 9,
+      "4.5": 4,
+      "5.0": 9
+    },
+    "paradas_por_limite": [
+      "0.5",
+      "1.0",
+      "1.5",
+      "2.0",
+      "2.5",
+      "3.0",
+      "3.5",
+      "4.0",
+      "4.5",
+      "5.0"
+    ],
+    "contagem_bruta_por_nivel": {
+      "0.5": 24,
+      "1.0": 24,
+      "1.5": 24,
+      "2.0": 120,
+      "2.5": 72,
+      "3.0": 215,
+      "3.5": 24,
+      "4.0": 108,
+      "4.5": 48,
+      "5.0": 107
+    },
+    "contagem_estimada_valida_por_nivel": {
+      "0.5": 6,
+      "1.0": 4,
+      "1.5": 8,
+      "2.0": 19,
+      "2.5": 10,
+      "3.0": 34,
+      "3.5": 6,
+      "4.0": 12,
+      "4.5": 9,
+      "5.0": 16
+    },
+    "motivo_parada_por_nivel": {
+      "0.5": "orcamento_esgotado",
+      "1.0": "orcamento_esgotado",
+      "1.5": "orcamento_esgotado",
+      "2.0": "orcamento_esgotado",
+      "2.5": "orcamento_esgotado",
+      "3.0": "orcamento_esgotado",
+      "3.5": "orcamento_esgotado",
+      "4.0": "orcamento_esgotado",
+      "4.5": "orcamento_esgotado",
+      "5.0": "orcamento_esgotado"
+    },
+    "paginas_base_por_nivel": {
+      "0.5": 2,
+      "1.0": 2,
+      "1.5": 2,
+      "2.0": 10,
+      "2.5": 6,
+      "3.0": 10,
+      "3.5": 2,
+      "4.0": 6,
+      "4.5": 3,
+      "5.0": 5
+    },
+    "paginas_extensao_por_nivel": {
+      "0.5": 0,
+      "1.0": 0,
+      "1.5": 0,
+      "2.0": 0,
+      "2.5": 0,
+      "3.0": 8,
+      "3.5": 0,
+      "4.0": 3,
+      "4.5": 1,
+      "5.0": 4
+    },
+    "extensao_por_bucket": {
+      "negativas": {
+        "paginas_base": 16,
+        "paginas_extensao": 0,
+        "extras_por_nivel": {},
+        "motivo_parada": "meta_atingida",
+        "n_validas_pos_base": 50,
+        "n_validas_pos_extensao": 50,
+        "meta": 50
+      },
+      "medianas": {
+        "paginas_base": 16,
+        "paginas_extensao": 8,
+        "extras_por_nivel": {
+          "3.0": 8
+        },
+        "motivo_parada": "teto_extensao",
+        "n_validas_pos_base": 44,
+        "n_validas_pos_extensao": 44,
+        "meta": 50
+      },
+      "positivas": {
+        "paginas_base": 16,
+        "paginas_extensao": 8,
+        "extras_por_nivel": {
+          "4.0": 3,
+          "4.5": 1,
+          "5.0": 4
+        },
+        "motivo_parada": "teto_extensao",
+        "n_validas_pos_base": 46,
+        "n_validas_pos_extensao": 49,
+        "meta": 50
+      }
+    },
+    "profundidade_sondagem": {
+      "nivel_sondado": 4.0,
+      "profundidade": 256,
+      "exata": false,
+      "requisicoes": 4,
+      "motivo": "teto_plataforma"
+    },
+    "profundidade_estimada_por_nivel": {
+      "0.5": 1,
+      "1.0": 3,
+      "1.5": 2,
+      "2.0": 11,
+      "2.5": 11,
+      "3.0": 70,
+      "3.5": 82,
+      "4.0": 256,
+      "4.5": 114,
+      "5.0": 216
+    },
+    "janela_temporal": {
+      "total": {
+        "n": 862,
+        "min": "2015-02-01",
+        "max": "2026-09-13",
+        "p5": "2026-06-13",
+        "p50": "2026-09-06",
+        "p95": "2026-09-10"
+      },
+      "por_bucket": {
+        "negativas": {
+          "n": 252,
+          "min": "2015-02-01",
+          "max": "2026-09-10",
+          "p5": "2026-04-06",
+          "p50": "2026-08-27",
+          "p95": "2026-09-08"
+        },
+        "medianas": {
+          "n": 287,
+          "min": "2017-05-20",
+          "max": "2026-09-10",
+          "p5": "2026-07-25",
+          "p50": "2026-09-06",
+          "p95": "2026-09-09"
+        },
+        "positivas": {
+          "n": 323,
+          "min": "2017-01-01",
+          "max": "2026-09-13",
+          "p5": "2026-08-30",
+          "p50": "2026-09-10",
+          "p95": "2026-09-12"
+        }
+      }
+    },
+    "dias_por_100_paginas": {
+      "n_paginas": 22,
+      "pagina_min": 1,
+      "pagina_max": 128,
+      "dias": 11,
+      "dias_por_100_paginas": 8.661417322834646,
+      "paginas_para_1_ano": 4214
+    },
+    "identidade_letterboxd": {
+      "slug": "get-out-2017",
+      "titulo": "Get Out",
+      "ano": 2017,
+      "tmdb_id_letterboxd": 419430,
+      "fonte": "pagina_letterboxd"
+    },
+    "ano_lancamento": 2017,
+    "ano_fonte": "letterboxd",
+    "n_reviews_bruto": 862
+  },
+  "buckets": [
+    {
+      "bucket": "negativas",
+      "alvo": 40,
+      "modo": "completo",
+      "estado_piso": "completa",
+      "n_validas": 40,
+      "share_real": 2,
+      "composicao_alvo": {
+        "0.5": 2,
+        "1.0": 7,
+        "1.5": 4,
+        "2.0": 27
+      },
+      "composicao_atingida": {
+        "0.5": 2,
+        "1.0": 4,
+        "1.5": 5,
+        "2.0": 29
+      },
+      "cascata_por_degrau": {
+        "150": 40
+      },
+      "deficit_redistribuido": 3,
+      "distribuicao_pagina_origem": {
+        "n": 40,
+        "min": 1,
+        "max": 14,
+        "p5": 1,
+        "p50": 5,
+        "p95": 14,
+        "fracao_profunda": 0.275
+      },
+      "janela_amostra": {
+        "n": 40,
+        "min": "2025-03-01",
+        "max": "2026-09-09",
+        "p5": "2025-12-26",
+        "p50": "2026-08-29",
+        "p95": "2026-09-08"
+      },
+      "niveis": [
+        {
+          "nivel": 0.5,
+          "n_validas": 2,
+          "n_alvo": 2,
+          "n_brutas": 24,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 1,
+          "n_descartadas_curtas": 17,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 0,
+          "motivos_descarte": {
+            "truncada_sem_texto": 0,
+            "spoiler": 1,
+            "abaixo_min_chars": 17,
+            "excedente_cota": 4,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 2
+        },
+        {
+          "nivel": 1.0,
+          "n_validas": 4,
+          "n_alvo": 7,
+          "n_brutas": 24,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 0,
+          "n_descartadas_curtas": 20,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 0,
+          "motivos_descarte": {
+            "truncada_sem_texto": 0,
+            "spoiler": 0,
+            "abaixo_min_chars": 20,
+            "excedente_cota": 0,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 2
+        },
+        {
+          "nivel": 1.5,
+          "n_validas": 5,
+          "n_alvo": 4,
+          "n_brutas": 24,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 1,
+          "n_descartadas_curtas": 15,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 0,
+          "motivos_descarte": {
+            "truncada_sem_texto": 0,
+            "spoiler": 1,
+            "abaixo_min_chars": 15,
+            "excedente_cota": 3,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 2
+        },
+        {
+          "nivel": 2.0,
+          "n_validas": 29,
+          "n_alvo": 27,
+          "n_brutas": 180,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 8,
+          "n_descartadas_curtas": 140,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 0,
+          "motivos_descarte": {
+            "truncada_sem_texto": 0,
+            "spoiler": 8,
+            "abaixo_min_chars": 140,
+            "excedente_cota": 3,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 10
+        }
+      ],
+      "temas": [
+        {
+          "tema": "Previsibilidade da trama",
+          "mencoes_aproximadas": 14,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "Várias reviews negativas afirmam que a história é totalmente previsível, com uma reviravolta óbvia que pode ser antecipada nos primeiros minutos, o que torna a experiência entediante.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Ritmo lento e falta de tensão",
+          "mencoes_aproximadas": 12,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "Alguns espectadores consideram o filme excessivamente lento, com uma introdução longa e sem cenas que gerem medo ou tensão real, tornando a narrativa arrastada.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Filme superestimado",
+          "mencoes_aproximadas": 10,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "Diversas reviews classificam a obra como superestimada, dizendo que não corresponde ao hype e que não entende o motivo de tanto elogio.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Crítica ao roteiro e à abordagem do racismo",
+          "mencoes_aproximadas": 9,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "Algumas reviews criticam o roteiro por ser simplista, maniqueísta ou por não aprofundar bem o tema do racismo, resultando em uma mensagem pouco sutil.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Atuações irregulares",
+          "mencoes_aproximadas": 7,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "Há comentários sobre atuações fracas ou deslocadas, com exceção de alguns atores como Daniel Kaluuya, que se destacam em meio a um elenco considerado irregular.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Final decepcionante",
+          "mencoes_aproximadas": 6,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "O desfecho é frequentemente citado como ridículo, apressado ou mal explicado, comprometendo a impressão geral do filme.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        }
+      ],
+      "observacao_geral": "As reviews negativas analisadas destacam principalmente a previsibilidade, o ritmo lento e a falta de tensão, considerando o filme superestimado. Também criticam o roteiro e a abordagem do racismo, além de apontarem atuações irregulares e um final decepcionante.",
+      "idioma_invalido": false,
+      "escopo_suspeito": false
+    },
+    {
+      "bucket": "medianas",
+      "alvo": 40,
+      "modo": "completo",
+      "estado_piso": "completa",
+      "n_validas": 40,
+      "share_real": 11,
+      "composicao_alvo": {
+        "2.5": 5,
+        "3.0": 35
+      },
+      "composicao_atingida": {
+        "2.5": 6,
+        "3.0": 34
+      },
+      "cascata_por_degrau": {
+        "150": 40
+      },
+      "deficit_redistribuido": 1,
+      "distribuicao_pagina_origem": {
+        "n": 40,
+        "min": 1,
+        "max": 35,
+        "p5": 2,
+        "p50": 7,
+        "p95": 16,
+        "fracao_profunda": 0.425
+      },
+      "janela_amostra": {
+        "n": 40,
+        "min": "2025-09-05",
+        "max": "2026-09-10",
+        "p5": "2026-08-29",
+        "p50": "2026-09-07",
+        "p95": "2026-09-09"
+      },
+      "niveis": [
+        {
+          "nivel": 2.5,
+          "n_validas": 6,
+          "n_alvo": 5,
+          "n_brutas": 72,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 3,
+          "n_descartadas_curtas": 59,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 0,
+          "motivos_descarte": {
+            "truncada_sem_texto": 0,
+            "spoiler": 3,
+            "abaixo_min_chars": 59,
+            "excedente_cota": 4,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 6
+        },
+        {
+          "nivel": 3.0,
+          "n_validas": 34,
+          "n_alvo": 35,
+          "n_brutas": 215,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 12,
+          "n_descartadas_curtas": 164,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 5,
+          "motivos_descarte": {
+            "truncada_sem_texto": 5,
+            "spoiler": 12,
+            "abaixo_min_chars": 164,
+            "excedente_cota": 0,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 18
+        }
+      ],
+      "temas": [
+        {
+          "tema": "Atuações elogiadas",
+          "mencoes_aproximadas": 12,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "Várias reviews medianas destacam a atuação do protagonista como excelente, com menções específicas à sua performance e à carreira que o filme impulsionou.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Roteiro previsível",
+          "mencoes_aproximadas": 10,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "Algumas pessoas acharam a trama fácil de prever, com reviravoltas que não as surpreenderam, tornando parte do filme desinteressante ou óbvia.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Mensagem e crítica social",
+          "mencoes_aproximadas": 9,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "Este grupo reconhece a mensagem sobre racismo e críticas sociais, considerando-a importante e bem-intencionada, mas alguns sentem que a execução não está à altura do tema.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Final criticado",
+          "mencoes_aproximadas": 7,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "O desfecho é apontado como anticlimático, apressado ou insatisfatório, com comentários de que poderia ter sido melhor desenvolvido.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Suspense psicológico e tensão",
+          "mencoes_aproximadas": 6,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "Algumas reviews medianas elogiam a construção de tensão psicológica e o clima inquietante, mas outras não sentem medo suficiente para um filme de terror.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Tom misto (comédia e terror)",
+          "mencoes_aproximadas": 4,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "A mistura de comédia com terror divide opiniões: alguns acham que a comédia alivia a tensão de forma desnecessária, enquanto outros apreciam o alívio cômico.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        }
+      ],
+      "observacao_geral": "As reviews medianas (2,5 a 3 estrelas) apontam para uma recepção morna: embora reconheçam qualidades técnicas, atuações e a mensagem social, criticam a previsibilidade do roteiro, o final insatisfatório e o tom misto. Este grupo destaca que o filme é competente, mas não atinge todo o seu potencial.",
+      "idioma_invalido": false,
+      "escopo_suspeito": false
+    },
+    {
+      "bucket": "positivas",
+      "alvo": 40,
+      "modo": "completo",
+      "estado_piso": "completa",
+      "n_validas": 40,
+      "share_real": 87,
+      "composicao_alvo": {
+        "3.5": 5,
+        "4.0": 15,
+        "4.5": 7,
+        "5.0": 13
+      },
+      "composicao_atingida": {
+        "3.5": 5,
+        "4.0": 15,
+        "4.5": 7,
+        "5.0": 13
+      },
+      "cascata_por_degrau": {
+        "150": 40
+      },
+      "deficit_redistribuido": 0,
+      "distribuicao_pagina_origem": {
+        "n": 40,
+        "min": 1,
+        "max": 28,
+        "p5": 1,
+        "p50": 4,
+        "p95": 10,
+        "fracao_profunda": 0.425
+      },
+      "janela_amostra": {
+        "n": 40,
+        "min": "2017-01-01",
+        "max": "2026-09-12",
+        "p5": "2026-09-07",
+        "p50": "2026-09-10",
+        "p95": "2026-09-10"
+      },
+      "niveis": [
+        {
+          "nivel": 3.5,
+          "n_validas": 5,
+          "n_alvo": 5,
+          "n_brutas": 24,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 0,
+          "n_descartadas_curtas": 17,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 1,
+          "motivos_descarte": {
+            "truncada_sem_texto": 1,
+            "spoiler": 0,
+            "abaixo_min_chars": 17,
+            "excedente_cota": 1,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 2
+        },
+        {
+          "nivel": 4.0,
+          "n_validas": 15,
+          "n_alvo": 15,
+          "n_brutas": 144,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 3,
+          "n_descartadas_curtas": 123,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 0,
+          "motivos_descarte": {
+            "truncada_sem_texto": 0,
+            "spoiler": 3,
+            "abaixo_min_chars": 123,
+            "excedente_cota": 3,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 9
+        },
+        {
+          "nivel": 4.5,
+          "n_validas": 7,
+          "n_alvo": 7,
+          "n_brutas": 48,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 1,
+          "n_descartadas_curtas": 38,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 0,
+          "motivos_descarte": {
+            "truncada_sem_texto": 0,
+            "spoiler": 1,
+            "abaixo_min_chars": 38,
+            "excedente_cota": 2,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 4
+        },
+        {
+          "nivel": 5.0,
+          "n_validas": 13,
+          "n_alvo": 13,
+          "n_brutas": 107,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 7,
+          "n_descartadas_curtas": 84,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 0,
+          "motivos_descarte": {
+            "truncada_sem_texto": 0,
+            "spoiler": 7,
+            "abaixo_min_chars": 84,
+            "excedente_cota": 3,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 9
+        }
+      ],
+      "temas": [
+        {
+          "tema": "Comentário social e racismo",
+          "mencoes_aproximadas": 24,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "As reviews positivas destacam que o filme aborda o racismo de forma inteligente, especialmente o racismo velado e disfarçado de elogios, educação e falsa aceitação, tornando a experiência desconfortável e assustadora.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Atuações",
+          "mencoes_aproximadas": 16,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "Este grupo elogia as atuações, com destaque para Daniel Kaluuya e Allison Williams, que entregam performances intensas e críveis.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Tensão e suspense",
+          "mencoes_aproximadas": 15,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "As reviews positivas mencionam que o filme constrói uma tensão crescente desde o início, mantendo o espectador apreensivo e envolvido.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Reviravoltas e roteiro",
+          "mencoes_aproximadas": 14,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "As reviews positivas apontam que as reviravoltas são impactantes e o roteiro é bem construído, com detalhes que se conectam e recompensam a atenção.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Direção de Jordan Peele",
+          "mencoes_aproximadas": 9,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "Este grupo destaca a estreia de Jordan Peele na direção como impressionante, mostrando talento para equilibrar terror, humor e crítica social.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Mistura de gêneros e originalidade",
+          "mencoes_aproximadas": 8,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "As reviews positivas comentam que o filme mistura terror psicológico, suspense, humor e crítica social de forma original e eficaz.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        }
+      ],
+      "observacao_geral": "As reviews positivas (3,5–5 estrelas) elogiam principalmente o comentário social sobre racismo, as atuações, a construção de tensão e suspense, as reviravoltas do roteiro, a direção de Jordan Peele e a originalidade da mistura de gêneros. Este grupo destaca o desconforto e o impacto emocional como pontos fortes.",
+      "idioma_invalido": false,
+      "escopo_suspeito": false
+    }
+  ],
+  "eixos": {
+    "taxonomia_id": "ebab2667de74",
+    "margem": {
+      "lei": "lift^2 * n >= 2085136/1000000",
+      "constante_quadrada": [
+        2085136,
+        1000000
+      ],
+      "n": 39,
+      "limiar_pp": 23.12
+    },
+    "margem_lift_pp": 23.12,
+    "linhas": [
+      {
+        "eixo": "ritmo",
+        "por_bucket": {
+          "negativas": {
+            "mencoes": 7,
+            "de_n": 40,
+            "freq_pct": 17.5,
+            "lift_pp": 0.0,
+            "acima_da_margem": false,
+            "tema": "Ritmo lento e falta de tensão",
+            "exemplo_parafraseado": "Alguns espectadores consideram o filme excessivamente lento, com uma introdução longa e sem cenas que gerem medo ou tensão real, tornando a narrativa arrastada.",
+            "temas_no_mesmo_eixo": []
+          },
+          "medianas": {
+            "mencoes": 7,
+            "de_n": 40,
+            "freq_pct": 17.5,
+            "lift_pp": 0.0,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "positivas": {
+            "mencoes": 5,
+            "de_n": 39,
+            "freq_pct": 12.8,
+            "lift_pp": -4.7,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          }
+        },
+        "bullet_de": {
+          "negativas": null,
+          "medianas": null,
+          "positivas": null
+        }
+      },
+      {
+        "eixo": "atuacao",
+        "por_bucket": {
+          "negativas": {
+            "mencoes": 6,
+            "de_n": 40,
+            "freq_pct": 15.0,
+            "lift_pp": -17.5,
+            "acima_da_margem": false,
+            "tema": "Atuações irregulares",
+            "exemplo_parafraseado": "Há comentários sobre atuações fracas ou deslocadas, com exceção de alguns atores como Daniel Kaluuya, que se destacam em meio a um elenco considerado irregular.",
+            "temas_no_mesmo_eixo": []
+          },
+          "medianas": {
+            "mencoes": 13,
+            "de_n": 40,
+            "freq_pct": 32.5,
+            "lift_pp": 4.3,
+            "acima_da_margem": false,
+            "tema": "Atuações elogiadas",
+            "exemplo_parafraseado": "Várias reviews medianas destacam a atuação do protagonista como excelente, com menções específicas à sua performance e à carreira que o filme impulsionou.",
+            "temas_no_mesmo_eixo": []
+          },
+          "positivas": {
+            "mencoes": 11,
+            "de_n": 39,
+            "freq_pct": 28.2,
+            "lift_pp": -4.3,
+            "acima_da_margem": false,
+            "tema": "Atuações",
+            "exemplo_parafraseado": "Este grupo elogia as atuações, com destaque para Daniel Kaluuya e Allison Williams, que entregam performances intensas e críveis.",
+            "temas_no_mesmo_eixo": []
+          }
+        },
+        "bullet_de": {
+          "negativas": null,
+          "medianas": null,
+          "positivas": null
+        }
+      },
+      {
+        "eixo": "direcao_imagem",
+        "por_bucket": {
+          "negativas": {
+            "mencoes": 3,
+            "de_n": 40,
+            "freq_pct": 7.5,
+            "lift_pp": -2.5,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "medianas": {
+            "mencoes": 4,
+            "de_n": 40,
+            "freq_pct": 10.0,
+            "lift_pp": 2.3,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "positivas": {
+            "mencoes": 3,
+            "de_n": 39,
+            "freq_pct": 7.7,
+            "lift_pp": -2.3,
+            "acima_da_margem": false,
+            "tema": "Direção de Jordan Peele",
+            "exemplo_parafraseado": "Este grupo destaca a estreia de Jordan Peele na direção como impressionante, mostrando talento para equilibrar terror, humor e crítica social.",
+            "temas_no_mesmo_eixo": []
+          }
+        },
+        "bullet_de": {
+          "negativas": null,
+          "medianas": null,
+          "positivas": null
+        }
+      },
+      {
+        "eixo": "roteiro_estrutura",
+        "por_bucket": {
+          "negativas": {
+            "mencoes": 34,
+            "de_n": 40,
+            "freq_pct": 85.0,
+            "lift_pp": 2.5,
+            "acima_da_margem": false,
+            "tema": "Previsibilidade da trama",
+            "exemplo_parafraseado": "Várias reviews negativas afirmam que a história é totalmente previsível, com uma reviravolta óbvia que pode ser antecipada nos primeiros minutos, o que torna a experiência entediante.",
+            "temas_no_mesmo_eixo": [
+              "Final decepcionante"
+            ]
+          },
+          "medianas": {
+            "mencoes": 33,
+            "de_n": 40,
+            "freq_pct": 82.5,
+            "lift_pp": -2.5,
+            "acima_da_margem": false,
+            "tema": "Roteiro previsível",
+            "exemplo_parafraseado": "Algumas pessoas acharam a trama fácil de prever, com reviravoltas que não as surpreenderam, tornando parte do filme desinteressante ou óbvia.",
+            "temas_no_mesmo_eixo": [
+              "Final criticado"
+            ]
+          },
+          "positivas": {
+            "mencoes": 29,
+            "de_n": 39,
+            "freq_pct": 74.4,
+            "lift_pp": -10.6,
+            "acima_da_margem": false,
+            "tema": "Reviravoltas e roteiro",
+            "exemplo_parafraseado": "As reviews positivas apontam que as reviravoltas são impactantes e o roteiro é bem construído, com detalhes que se conectam e recompensam a atenção.",
+            "temas_no_mesmo_eixo": []
+          }
+        },
+        "bullet_de": {
+          "negativas": "frequencia",
+          "medianas": "frequencia",
+          "positivas": "frequencia"
+        }
+      },
+      {
+        "eixo": "som_trilha",
+        "por_bucket": {
+          "negativas": {
+            "mencoes": 0,
+            "de_n": 40,
+            "freq_pct": 0.0,
+            "lift_pp": -5.1,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "medianas": {
+            "mencoes": 1,
+            "de_n": 40,
+            "freq_pct": 2.5,
+            "lift_pp": -2.6,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "positivas": {
+            "mencoes": 2,
+            "de_n": 39,
+            "freq_pct": 5.1,
+            "lift_pp": 2.6,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          }
+        },
+        "bullet_de": {
+          "negativas": null,
+          "medianas": null,
+          "positivas": null
+        }
+      },
+      {
+        "eixo": "tom_atmosfera",
+        "por_bucket": {
+          "negativas": {
+            "mencoes": 9,
+            "de_n": 40,
+            "freq_pct": 22.5,
+            "lift_pp": -21.1,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "medianas": {
+            "mencoes": 11,
+            "de_n": 40,
+            "freq_pct": 27.5,
+            "lift_pp": -16.1,
+            "acima_da_margem": false,
+            "tema": "Suspense psicológico e tensão",
+            "exemplo_parafraseado": "Algumas reviews medianas elogiam a construção de tensão psicológica e o clima inquietante, mas outras não sentem medo suficiente para um filme de terror.",
+            "temas_no_mesmo_eixo": [
+              "Tom misto (comédia e terror)"
+            ]
+          },
+          "positivas": {
+            "mencoes": 17,
+            "de_n": 39,
+            "freq_pct": 43.6,
+            "lift_pp": 16.1,
+            "acima_da_margem": false,
+            "tema": "Tensão e suspense",
+            "exemplo_parafraseado": "As reviews positivas mencionam que o filme constrói uma tensão crescente desde o início, mantendo o espectador apreensivo e envolvido.",
+            "temas_no_mesmo_eixo": [
+              "Mistura de gêneros e originalidade"
+            ]
+          }
+        },
+        "bullet_de": {
+          "negativas": null,
+          "medianas": null,
+          "positivas": "frequencia"
+        }
+      },
+      {
+        "eixo": "impacto_emocional",
+        "por_bucket": {
+          "negativas": {
+            "mencoes": 13,
+            "de_n": 40,
+            "freq_pct": 32.5,
+            "lift_pp": -11.1,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "medianas": {
+            "mencoes": 16,
+            "de_n": 40,
+            "freq_pct": 40.0,
+            "lift_pp": -3.6,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "positivas": {
+            "mencoes": 17,
+            "de_n": 39,
+            "freq_pct": 43.6,
+            "lift_pp": 3.6,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          }
+        },
+        "bullet_de": {
+          "negativas": null,
+          "medianas": "frequencia",
+          "positivas": null
+        }
+      },
+      {
+        "eixo": "comparacoes",
+        "por_bucket": {
+          "negativas": {
+            "mencoes": 12,
+            "de_n": 40,
+            "freq_pct": 30.0,
+            "lift_pp": 0.0,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "medianas": {
+            "mencoes": 12,
+            "de_n": 40,
+            "freq_pct": 30.0,
+            "lift_pp": 0.0,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "positivas": {
+            "mencoes": 9,
+            "de_n": 39,
+            "freq_pct": 23.1,
+            "lift_pp": -6.9,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          }
+        },
+        "bullet_de": {
+          "negativas": null,
+          "medianas": null,
+          "positivas": null
+        }
+      },
+      {
+        "eixo": "expectativa",
+        "por_bucket": {
+          "negativas": {
+            "mencoes": 18,
+            "de_n": 40,
+            "freq_pct": 45.0,
+            "lift_pp": 7.5,
+            "acima_da_margem": false,
+            "tema": "Filme superestimado",
+            "exemplo_parafraseado": "Diversas reviews classificam a obra como superestimada, dizendo que não corresponde ao hype e que não entende o motivo de tanto elogio.",
+            "temas_no_mesmo_eixo": []
+          },
+          "medianas": {
+            "mencoes": 15,
+            "de_n": 40,
+            "freq_pct": 37.5,
+            "lift_pp": -7.5,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "positivas": {
+            "mencoes": 11,
+            "de_n": 39,
+            "freq_pct": 28.2,
+            "lift_pp": -16.8,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          }
+        },
+        "bullet_de": {
+          "negativas": null,
+          "medianas": null,
+          "positivas": null
+        }
+      },
+      {
+        "eixo": "critica_social",
+        "por_bucket": {
+          "negativas": {
+            "mencoes": 21,
+            "de_n": 40,
+            "freq_pct": 52.5,
+            "lift_pp": 14.0,
+            "acima_da_margem": false,
+            "tema": "Crítica ao roteiro e à abordagem do racismo",
+            "exemplo_parafraseado": "Algumas reviews criticam o roteiro por ser simplista, maniqueísta ou por não aprofundar bem o tema do racismo, resultando em uma mensagem pouco sutil.",
+            "temas_no_mesmo_eixo": []
+          },
+          "medianas": {
+            "mencoes": 12,
+            "de_n": 40,
+            "freq_pct": 30.0,
+            "lift_pp": -22.5,
+            "acima_da_margem": false,
+            "tema": "Mensagem e crítica social",
+            "exemplo_parafraseado": "Este grupo reconhece a mensagem sobre racismo e críticas sociais, considerando-a importante e bem-intencionada, mas alguns sentem que a execução não está à altura do tema.",
+            "temas_no_mesmo_eixo": []
+          },
+          "positivas": {
+            "mencoes": 15,
+            "de_n": 39,
+            "freq_pct": 38.5,
+            "lift_pp": -14.0,
+            "acima_da_margem": false,
+            "tema": "Comentário social e racismo",
+            "exemplo_parafraseado": "As reviews positivas destacam que o filme aborda o racismo de forma inteligente, especialmente o racismo velado e disfarçado de elogios, educação e falsa aceitação, tornando a experiência desconfortável e assustadora.",
+            "temas_no_mesmo_eixo": []
+          }
+        },
+        "bullet_de": {
+          "negativas": "frequencia",
+          "medianas": null,
+          "positivas": null
+        }
+      }
+    ],
+    "contraste": "valorativo",
+    "fonte_classificacao": {
+      "arquivo": "resultado/votacao-3/consenso.jsonl",
+      "criterio": "votacao_3_consenso_2_de_3",
+      "por_bucket": {
+        "negativas": {
+          "n_classificadas": 40,
+          "n_analisadas": 40,
+          "sobreposicao_com_analisadas": 40
+        },
+        "medianas": {
+          "n_classificadas": 40,
+          "n_analisadas": 40,
+          "sobreposicao_com_analisadas": 40
+        },
+        "positivas": {
+          "n_classificadas": 39,
+          "n_analisadas": 40,
+          "sobreposicao_com_analisadas": 39
+        }
+      }
+    },
+    "rotulagem": {
+      "n_chamadas": 3,
+      "falharam": [],
+      "fora_da_taxonomia": {},
+      "houve_retentativa": []
+    },
+    "spec_version": "1.9.50",
+    "verificador": {
+      "aplicado": true,
+      "variante": "V2_alvo",
+      "passada": 1,
+      "eixo": "impacto_emocional",
+      "n_removidas_no_corpus": 2781
+    }
+  },
+  "narrativa": "Lançado em 2017 e dirigido por Jordan Peele, Corra! transita entre os gêneros de mistério, thriller e terror. O enredo se desenvolve quando Chris viaja com sua namorada, Rose, até o interior para conhecer a família dela durante um fim de semana. O comportamento inicialmente solícito dos anfitriões dá lugar a uma sequência de eventos cada vez mais inquietantes, que conduzem o protagonista a revelações surpreendentes.\n\nA condução da narrativa estabelece uma dinâmica de suspense psicológico que se intensifica de maneira gradual ao longo das cenas. A estrutura combina convenções clássicas do terror a modulações de humor, sustentando uma ambientação de desconforto constante e tensão psicológica.\n\nAs análises sobre a obra convergem quanto aos seus aspectos centrais, concentrando a divergência no veredito sobre o funcionamento desses elementos. Na grande maioria das notas (~87%), cerca de metade destaca o peso do comentário social e a abordagem do racismo, enquanto boa parte elogia a qualidade das atuações e uma parcela expressiva ressalta o domínio na criação de tensão e suspense.\n\nEm contrapartida, sob a ótica de uma fração mínima das notas (~11%), vários aprovam as atuações apresentadas, mas alguns consideram o roteiro previsível e uma parte pondera sobre a execução da mensagem e da crítica social. Já na leitura de uma fração ainda menor das notas (~2%), um número considerável critica a previsibilidade da trama, muitos apontam um ritmo lento associado à falta de tensão, e uma fatia menor define o longa-metragem como superestimado.",
+  "verificacao_narrativa": {
+    "quantificador_fora_de_faixa": [],
+    "quantificador_repetido": [],
+    "paragrafos": {
+      "n_paragrafos": 4,
+      "minimo": 3,
+      "insuficientes": false,
+      "longos": []
+    },
+    "n_paragrafos": 4,
+    "paragrafos_insuficientes": false,
+    "paragrafos_longos": [],
+    "grupos_sem_paragrafo_proprio": [
+      "negativas"
+    ],
+    "movimento1_e_movimento2_no_mesmo_paragrafo": true,
+    "formato_invalido": false,
+    "numeros_inventados": [],
+    "rotulos_faltando": [],
+    "ordem_incorreta": false,
+    "vocabulario_peso": false,
+    "resenha_speak": [],
+    "n_resenha_speak": 0,
+    "n_flags": 2
+  },
+  "narrativa_selecao": {
+    "provider": "gemini",
+    "modelo": "gemini-3.7-flash",
+    "n_candidatos": 3,
+    "n_chamadas": 4,
+    "indice_escolhido": 2,
+    "motivo": "menor_severidade",
+    "criterio_decisivo": "ritmo",
+    "candidatos": [
+      {
+        "indice": 0,
+        "n_flags": 2,
+        "cliches": 0,
+        "repeticao_max": 1,
+        "ritmo": 10,
+        "cobertura": 1.0,
+        "eliminado": true
+      },
+      {
+        "indice": 1,
+        "n_flags": 2,
+        "cliches": 0,
+        "repeticao_max": 1,
+        "ritmo": 10,
+        "cobertura": 0.889,
+        "eliminado": true
+      },
+      {
+        "indice": 2,
+        "n_flags": 2,
+        "cliches": 0,
+        "repeticao_max": 1,
+        "ritmo": 11,
+        "cobertura": 1.0,
+        "eliminado": true
+      }
+    ],
+    "retry": {
+      "n_frases_infratoras": 0,
+      "motivos": [],
+      "n_flags_depois": 2,
+      "aplicado": false
+    },
+    "uso": {
+      "prompt_tokens": 11695,
+      "completion_tokens": 1475,
+      "cache_hit_tokens": 0,
+      "cache_miss_tokens": 11695
+    },
+    "latencia_s": 31.51
+  }
+}

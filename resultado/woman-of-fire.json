@@ -1,0 +1,1402 @@
+{
+  "slug": "woman-of-fire",
+  "data_coleta": "2026-09-13T19:45:33.041758+00:00",
+  "spec_version": "1.9.50",
+  "total_reviews_observadas": 231,
+  "reviews_url": "https://letterboxd.com/film/woman-of-fire/reviews/",
+  "ficha": {
+    "titulo": "화녀",
+    "sinopse_oficial": "The lives of a composer and his wife, who live on a chicken farm, are thrown into turmoil when a femme fatale joins their household.",
+    "sinopse_fallback_en": true,
+    "generos": [
+      "Crime",
+      "Drama",
+      "Terror"
+    ],
+    "duracao_min": 100,
+    "diretor": "Kim Ki-young",
+    "diretor_transliterado": true,
+    "ano": 1971,
+    "fonte": "tmdb",
+    "tmdb_id": 108175,
+    "tmdb_fetched_at": "2026-09-10T20:04:20+00:00",
+    "poster_path": "/i8aMp1IWUQIW36QcHiJq7UXS5pS.jpg",
+    "poster_largura": null,
+    "poster_altura": null,
+    "backdrop_paths": [
+      "/zuNZcNXCXR6LEnxvwVQ2az6qZwz.jpg",
+      "/gmBRIw1s0bHZGKznOyGYFMpUGRk.jpg",
+      "/l5NaZ5dw70e3mEByTPMKh2cOGHS.jpg"
+    ],
+    "backdrop_path": "/l5NaZ5dw70e3mEByTPMKh2cOGHS.jpg",
+    "backdrop_largura": 1970,
+    "backdrop_altura": 1106,
+    "poster_sem_texto_path": null,
+    "poster_sem_texto_largura": null,
+    "poster_sem_texto_altura": null,
+    "galeria_stills": [
+      {
+        "still_path": "/l5NaZ5dw70e3mEByTPMKh2cOGHS.jpg",
+        "still_largura": 1970,
+        "still_altura": 1106
+      },
+      {
+        "still_path": "/gmBRIw1s0bHZGKznOyGYFMpUGRk.jpg",
+        "still_largura": 1919,
+        "still_altura": 1079
+      },
+      {
+        "still_path": "/zuNZcNXCXR6LEnxvwVQ2az6qZwz.jpg",
+        "still_largura": 1280,
+        "still_altura": 720
+      }
+    ],
+    "ano_fonte": "letterboxd",
+    "identidade": {
+      "versao": 1,
+      "status": "validada",
+      "slug": "woman-of-fire",
+      "titulo_letterboxd": "Woman of Fire",
+      "ano_letterboxd": 1971,
+      "tmdb_id_letterboxd": 108175,
+      "tmdb_id_escolhido": 108175,
+      "fonte_id": "letterboxd",
+      "titulo_tmdb_campo": "title",
+      "titulo_tmdb_correspondente": "Woman of Fire",
+      "ano_tmdb": 1971,
+      "ano_divergente": false
+    }
+  },
+  "distribuicao": {
+    "n_notas_total": 1145,
+    "por_nivel": {
+      "0.5": 3,
+      "1.0": 9,
+      "1.5": 9,
+      "2.0": 40,
+      "2.5": 83,
+      "3.0": 249,
+      "3.5": 331,
+      "4.0": 295,
+      "4.5": 78,
+      "5.0": 48
+    },
+    "por_bucket": {
+      "negativas": 5,
+      "medianas": 29,
+      "positivas": 66
+    },
+    "fonte": "letterboxd_histograma"
+  },
+  "coleta": {
+    "slug": "woman-of-fire",
+    "coletado_em": "2026-09-10T18:54:21.923857+00:00",
+    "versao_coletor": "1.9.6",
+    "ordenacao_usada": "by/added",
+    "histograma_bruto": {
+      "0.5": 3,
+      "1.0": 9,
+      "1.5": 9,
+      "2.0": 40,
+      "2.5": 83,
+      "3.0": 249,
+      "3.5": 331,
+      "4.0": 295,
+      "4.5": 78,
+      "5.0": 48
+    },
+    "orcamento_paginas_por_nivel": {
+      "0.5": 2,
+      "1.0": 2,
+      "1.5": 2,
+      "2.0": 10,
+      "2.5": 6,
+      "3.0": 10,
+      "3.5": 7,
+      "4.0": 6,
+      "4.5": 2,
+      "5.0": 1
+    },
+    "paginas_gastas_por_nivel": {
+      "0.5": 0,
+      "1.0": 1,
+      "1.5": 1,
+      "2.0": 1,
+      "2.5": 2,
+      "3.0": 5,
+      "3.5": 5,
+      "4.0": 4,
+      "4.5": 2,
+      "5.0": 1
+    },
+    "paradas_por_limite": [
+      "3.5",
+      "4.0",
+      "4.5",
+      "5.0"
+    ],
+    "contagem_bruta_por_nivel": {
+      "0.5": 0,
+      "1.0": 2,
+      "1.5": 3,
+      "2.0": 11,
+      "2.5": 20,
+      "3.0": 59,
+      "3.5": 60,
+      "4.0": 48,
+      "4.5": 16,
+      "5.0": 12
+    },
+    "contagem_estimada_valida_por_nivel": {
+      "0.5": 0,
+      "1.0": 0,
+      "1.5": 1,
+      "2.0": 6,
+      "2.5": 11,
+      "3.0": 33,
+      "3.5": 31,
+      "4.0": 22,
+      "4.5": 9,
+      "5.0": 9
+    },
+    "motivo_parada_por_nivel": {
+      "0.5": "material_esgotado",
+      "1.0": "material_esgotado",
+      "1.5": "material_esgotado",
+      "2.0": "material_esgotado",
+      "2.5": "material_esgotado",
+      "3.0": "material_esgotado",
+      "3.5": "orcamento_esgotado",
+      "4.0": "orcamento_esgotado",
+      "4.5": "orcamento_esgotado",
+      "5.0": "orcamento_esgotado"
+    },
+    "paginas_base_por_nivel": {
+      "0.5": 0,
+      "1.0": 1,
+      "1.5": 1,
+      "2.0": 1,
+      "2.5": 2,
+      "3.0": 5,
+      "3.5": 5,
+      "4.0": 4,
+      "4.5": 2,
+      "5.0": 1
+    },
+    "paginas_extensao_por_nivel": {
+      "0.5": 0,
+      "1.0": 0,
+      "1.5": 0,
+      "2.0": 0,
+      "2.5": 0,
+      "3.0": 0,
+      "3.5": 0,
+      "4.0": 0,
+      "4.5": 0,
+      "5.0": 0
+    },
+    "extensao_por_bucket": {
+      "negativas": {
+        "paginas_base": 3,
+        "paginas_extensao": 0,
+        "extras_por_nivel": {},
+        "motivo_parada": "material_esgotado",
+        "n_validas_pos_base": 9,
+        "n_validas_pos_extensao": 9,
+        "meta": 50
+      },
+      "medianas": {
+        "paginas_base": 7,
+        "paginas_extensao": 0,
+        "extras_por_nivel": {},
+        "motivo_parada": "material_esgotado",
+        "n_validas_pos_base": 44,
+        "n_validas_pos_extensao": 44,
+        "meta": 50
+      },
+      "positivas": {
+        "paginas_base": 12,
+        "paginas_extensao": 0,
+        "extras_por_nivel": {},
+        "motivo_parada": "meta_atingida",
+        "n_validas_pos_base": 71,
+        "n_validas_pos_extensao": 71,
+        "meta": 50
+      }
+    },
+    "profundidade_sondagem": {
+      "nivel_sondado": 3.5,
+      "profundidade": 5,
+      "exata": false,
+      "requisicoes": 5,
+      "motivo": "encontrada"
+    },
+    "profundidade_estimada_por_nivel": {
+      "0.5": 1,
+      "1.0": 1,
+      "1.5": 1,
+      "2.0": 1,
+      "2.5": 1,
+      "3.0": 4,
+      "3.5": 5,
+      "4.0": 4,
+      "4.5": 1,
+      "5.0": 1
+    },
+    "janela_temporal": {
+      "total": {
+        "n": 231,
+        "min": "2016-01-04",
+        "max": "2026-09-07",
+        "p5": "2020-02-06",
+        "p50": "2024-10-07",
+        "p95": "2026-05-29"
+      },
+      "por_bucket": {
+        "negativas": {
+          "n": 16,
+          "min": "2016-08-12",
+          "max": "2026-07-12",
+          "p5": "2019-05-16",
+          "p50": "2024-10-07",
+          "p95": "2026-05-27"
+        },
+        "medianas": {
+          "n": 79,
+          "min": "2016-01-04",
+          "max": "2026-08-16",
+          "p5": "2019-09-09",
+          "p50": "2024-07-16",
+          "p95": "2026-05-29"
+        },
+        "positivas": {
+          "n": 136,
+          "min": "2020-02-06",
+          "max": "2026-09-07",
+          "p5": "2021-03-16",
+          "p50": "2025-01-22",
+          "p95": "2026-05-26"
+        }
+      }
+    },
+    "dias_por_100_paginas": {
+      "n_paginas": 5,
+      "pagina_min": 1,
+      "pagina_max": 5,
+      "dias": 1886,
+      "dias_por_100_paginas": 47150.0,
+      "paginas_para_1_ano": 1
+    },
+    "identidade_letterboxd": {
+      "slug": "woman-of-fire",
+      "titulo": "Woman of Fire",
+      "ano": 1971,
+      "tmdb_id_letterboxd": 108175,
+      "fonte": "pagina_letterboxd"
+    },
+    "ano_lancamento": 1971,
+    "ano_fonte": "letterboxd",
+    "n_reviews_bruto": 231
+  },
+  "origem_paginas": {
+    "_histograma/woman-of-fire.html": "cache",
+    "woman-of-fire/pages/by_added/rated_3_5_page_4.html": "cache",
+    "woman-of-fire/pages/by_added/rated_3_5_page_16.html": "cache",
+    "woman-of-fire/pages/by_added/rated_3_5_page_10.html": "cache",
+    "woman-of-fire/pages/by_added/rated_3_5_page_7.html": "cache",
+    "woman-of-fire/pages/by_added/rated_3_5_page_5.html": "cache",
+    "woman-of-fire/pages/by_added/rated_0_5_page_1.html": "cache",
+    "woman-of-fire/pages/by_added/rated_1_page_1.html": "cache",
+    "woman-of-fire/pages/by_added/rated_1_page_2.html": "cache",
+    "woman-of-fire/pages/by_added/rated_1_5_page_1.html": "cache",
+    "woman-of-fire/pages/by_added/rated_1_5_page_2.html": "cache",
+    "woman-of-fire/pages/by_added/rated_2_page_1.html": "cache",
+    "woman-of-fire/pages/by_added/rated_2_page_2.html": "cache",
+    "woman-of-fire/fulltext/viewing_1153501339.html": "cache",
+    "woman-of-fire/fulltext/viewing_987865506.html": "cache",
+    "woman-of-fire/fulltext/viewing_890370529.html": "cache",
+    "woman-of-fire/pages/by_added/rated_2_5_page_1.html": "cache",
+    "woman-of-fire/pages/by_added/rated_2_5_page_2.html": "cache",
+    "woman-of-fire/pages/by_added/rated_2_5_page_3.html": "cache",
+    "woman-of-fire/fulltext/viewing_1432595075.html": "cache",
+    "woman-of-fire/fulltext/viewing_1018009745.html": "cache",
+    "woman-of-fire/fulltext/viewing_260541186.html": "cache",
+    "woman-of-fire/fulltext/viewing_216375847.html": "cache",
+    "woman-of-fire/fulltext/viewing_71055233.html": "cache",
+    "woman-of-fire/pages/by_added/rated_3_page_1.html": "cache",
+    "woman-of-fire/pages/by_added/rated_3_page_2.html": "cache",
+    "woman-of-fire/pages/by_added/rated_3_page_3.html": "cache",
+    "woman-of-fire/pages/by_added/rated_3_page_4.html": "cache",
+    "woman-of-fire/pages/by_added/rated_3_page_5.html": "cache",
+    "woman-of-fire/pages/by_added/rated_3_page_6.html": "cache",
+    "woman-of-fire/fulltext/viewing_884857782.html": "cache",
+    "woman-of-fire/fulltext/viewing_863243466.html": "cache",
+    "woman-of-fire/fulltext/viewing_816180485.html": "cache",
+    "woman-of-fire/fulltext/viewing_649842386.html": "cache",
+    "woman-of-fire/fulltext/viewing_589217061.html": "cache",
+    "woman-of-fire/fulltext/viewing_543454105.html": "cache",
+    "woman-of-fire/fulltext/viewing_179515211.html": "cache",
+    "woman-of-fire/fulltext/viewing_170034317.html": "cache",
+    "woman-of-fire/fulltext/viewing_87911636.html": "cache",
+    "woman-of-fire/fulltext/viewing_40585150.html": "cache",
+    "woman-of-fire/pages/by_added/rated_3_5_page_1.html": "cache",
+    "woman-of-fire/pages/by_added/rated_3_5_page_2.html": "cache",
+    "woman-of-fire/pages/by_added/rated_3_5_page_3.html": "cache",
+    "woman-of-fire/fulltext/viewing_1318839207.html": "cache",
+    "woman-of-fire/fulltext/viewing_1317830595.html": "cache",
+    "woman-of-fire/fulltext/viewing_1184221278.html": "cache",
+    "woman-of-fire/fulltext/viewing_827467582.html": "cache",
+    "woman-of-fire/fulltext/viewing_717243670.html": "cache",
+    "woman-of-fire/fulltext/viewing_586916517.html": "cache",
+    "woman-of-fire/fulltext/viewing_218866525.html": "cache",
+    "woman-of-fire/fulltext/viewing_207857005.html": "cache",
+    "woman-of-fire/fulltext/viewing_192710378.html": "cache",
+    "woman-of-fire/fulltext/viewing_140210142.html": "cache",
+    "woman-of-fire/pages/by_added/rated_4_page_1.html": "cache",
+    "woman-of-fire/pages/by_added/rated_4_page_2.html": "cache",
+    "woman-of-fire/pages/by_added/rated_4_page_3.html": "cache",
+    "woman-of-fire/pages/by_added/rated_4_page_4.html": "cache",
+    "woman-of-fire/fulltext/viewing_1487447919.html": "cache",
+    "woman-of-fire/fulltext/viewing_1319478979.html": "cache",
+    "woman-of-fire/fulltext/viewing_1317483879.html": "cache",
+    "woman-of-fire/fulltext/viewing_1318508867.html": "cache",
+    "woman-of-fire/fulltext/viewing_1317479452.html": "cache",
+    "woman-of-fire/fulltext/viewing_595745099.html": "cache",
+    "woman-of-fire/fulltext/viewing_507362129.html": "cache",
+    "woman-of-fire/fulltext/viewing_504081295.html": "cache",
+    "woman-of-fire/fulltext/viewing_473928724.html": "cache",
+    "woman-of-fire/fulltext/viewing_439311366.html": "cache",
+    "woman-of-fire/fulltext/viewing_429377344.html": "cache",
+    "woman-of-fire/fulltext/viewing_370457558.html": "cache",
+    "woman-of-fire/pages/by_added/rated_4_5_page_1.html": "cache",
+    "woman-of-fire/pages/by_added/rated_4_5_page_2.html": "cache",
+    "woman-of-fire/fulltext/viewing_1325378189.html": "cache",
+    "woman-of-fire/pages/by_added/rated_5_page_1.html": "cache",
+    "woman-of-fire/fulltext/viewing_166171983.html": "cache",
+    "woman-of-fire/film_page.html": "cache"
+  },
+  "buckets": [
+    {
+      "bucket": "negativas",
+      "alvo": 40,
+      "modo": "reduzido",
+      "estado_piso": "sem_quantificador",
+      "n_validas": 9,
+      "share_real": 5,
+      "composicao_alvo": {
+        "0.5": 2,
+        "1.0": 6,
+        "1.5": 6,
+        "2.0": 26
+      },
+      "composicao_atingida": {
+        "0.5": 0,
+        "1.0": 2,
+        "1.5": 1,
+        "2.0": 6
+      },
+      "cascata_por_degrau": {
+        "0": 0,
+        "50": 2,
+        "150": 7
+      },
+      "deficit_redistribuido": 0,
+      "distribuicao_pagina_origem": {
+        "n": 9,
+        "min": 1,
+        "max": 1,
+        "p5": 1,
+        "p50": 1,
+        "p95": 1,
+        "fracao_profunda": 0.0
+      },
+      "janela_amostra": {
+        "n": 9,
+        "min": "2016-08-12",
+        "max": "2026-01-11",
+        "p5": "2016-08-12",
+        "p50": "2024-10-07",
+        "p95": "2026-01-11"
+      },
+      "niveis": [
+        {
+          "nivel": 0.5,
+          "n_validas": 0,
+          "n_alvo": 2,
+          "n_brutas": 0,
+          "filtro_aplicado": 0,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 0,
+          "n_descartadas_curtas": 0,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 0,
+          "motivos_descarte": {
+            "truncada_sem_texto": 0,
+            "spoiler": 0,
+            "abaixo_min_chars": 0,
+            "excedente_cota": 0,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 0
+        },
+        {
+          "nivel": 1.0,
+          "n_validas": 2,
+          "n_alvo": 6,
+          "n_brutas": 2,
+          "filtro_aplicado": 50,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 0,
+          "n_descartadas_curtas": 0,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 0,
+          "motivos_descarte": {
+            "truncada_sem_texto": 0,
+            "spoiler": 0,
+            "abaixo_min_chars": 0,
+            "excedente_cota": 0,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 1
+        },
+        {
+          "nivel": 1.5,
+          "n_validas": 1,
+          "n_alvo": 6,
+          "n_brutas": 3,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 1,
+          "n_descartadas_curtas": 1,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 0,
+          "motivos_descarte": {
+            "truncada_sem_texto": 0,
+            "spoiler": 1,
+            "abaixo_min_chars": 1,
+            "excedente_cota": 0,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 1
+        },
+        {
+          "nivel": 2.0,
+          "n_validas": 6,
+          "n_alvo": 26,
+          "n_brutas": 11,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 0,
+          "n_descartadas_curtas": 5,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 0,
+          "motivos_descarte": {
+            "truncada_sem_texto": 0,
+            "spoiler": 0,
+            "abaixo_min_chars": 5,
+            "excedente_cota": 0,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 1
+        }
+      ],
+      "temas": [
+        {
+          "tema": "Atuações histriônicas e exageradas",
+          "mencoes_aproximadas": 6,
+          "n_reviews_analisadas": 9,
+          "exemplo_parafraseado": "Várias reviews descrevem as interpretações como teatrais e desconfortáveis, com a protagonista em sua estreia avaliada como exagerada e sem naturalidade, chegando a soar infantil em cenas de fragilidade.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Remake desnecessário e inferior ao original",
+          "mencoes_aproximadas": 5,
+          "n_reviews_analisadas": 9,
+          "exemplo_parafraseado": "O filme é tratado como uma refilmagem supérflua de uma obra anterior do mesmo diretor, pior em quase todos os aspectos, incluindo a substituição da estrutura cautelar original por uma investigação policial clichê.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Melodrama excessivo e tom descontrolado",
+          "mencoes_aproximadas": 4,
+          "n_reviews_analisadas": 9,
+          "exemplo_parafraseado": "O tom melodramático é levado ao extremo, resultando em oscilações emocionais constantes e um clima que beira o histérico, sem que o filme pareça ter clareza sobre o que quer ser.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Ritmo e estrutura irregulares",
+          "mencoes_aproximadas": 3,
+          "n_reviews_analisadas": 9,
+          "exemplo_parafraseado": "A segunda metade perde o interesse visual da primeira, com iluminação genérica e repetição de cenários, enquanto o roteiro se dispersa em tramas secundárias que não se conectam à história principal.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Fotografia e estilização como pontos positivos",
+          "mencoes_aproximadas": 3,
+          "n_reviews_analisadas": 9,
+          "exemplo_parafraseado": "Apesar das críticas, algumas reviews reconhecem que a fotografia e a edição ainda impressionam, ganhando textura com o uso de cores ausentes na versão original.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Confusão temática e falta de conexão",
+          "mencoes_aproximadas": 3,
+          "n_reviews_analisadas": 9,
+          "exemplo_parafraseado": "Espectadores relatam não entender a proposta do filme, com comentários iniciais que não se encaixam na narrativa principal e uma experiência que não gera envolvimento emocional.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        }
+      ],
+      "observacao_geral": "Este grupo de reviews negativas destaca principalmente atuações exageradas, tom melodramático descontrolado e a percepção de ser um remake inferior ao original, embora alguns reconheçam méritos na fotografia e edição. A falta de conexão emocional e a confusão temática também aparecem como queixas recorrentes.",
+      "idioma_invalido": false,
+      "escopo_suspeito": false
+    },
+    {
+      "bucket": "medianas",
+      "alvo": 40,
+      "modo": "completo",
+      "estado_piso": "completa",
+      "n_validas": 40,
+      "share_real": 29,
+      "composicao_alvo": {
+        "2.5": 10,
+        "3.0": 30
+      },
+      "composicao_atingida": {
+        "2.5": 10,
+        "3.0": 30
+      },
+      "cascata_por_degrau": {
+        "150": 40
+      },
+      "deficit_redistribuido": 0,
+      "distribuicao_pagina_origem": {
+        "n": 40,
+        "min": 1,
+        "max": 5,
+        "p5": 1,
+        "p50": 2,
+        "p95": 5,
+        "fracao_profunda": 0.0
+      },
+      "janela_amostra": {
+        "n": 40,
+        "min": "2016-01-04",
+        "max": "2026-08-16",
+        "p5": "2019-11-09",
+        "p50": "2024-08-13",
+        "p95": "2026-07-12"
+      },
+      "niveis": [
+        {
+          "nivel": 2.5,
+          "n_validas": 10,
+          "n_alvo": 10,
+          "n_brutas": 20,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 0,
+          "n_descartadas_curtas": 9,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 0,
+          "motivos_descarte": {
+            "truncada_sem_texto": 0,
+            "spoiler": 0,
+            "abaixo_min_chars": 9,
+            "excedente_cota": 1,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 2
+        },
+        {
+          "nivel": 3.0,
+          "n_validas": 30,
+          "n_alvo": 30,
+          "n_brutas": 59,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 0,
+          "n_descartadas_curtas": 26,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 0,
+          "motivos_descarte": {
+            "truncada_sem_texto": 0,
+            "spoiler": 0,
+            "abaixo_min_chars": 26,
+            "excedente_cota": 3,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 5
+        }
+      ],
+      "temas": [
+        {
+          "tema": "Comparação com o original e natureza de refilmagem",
+          "mencoes_aproximadas": 22,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "Este grupo de reviews medianas aponta que o filme é essencialmente uma refilmagem do mesmo diretor, com estrutura narrativa muito similar, e que a comparação com a obra original é inevitável e, para muitos, desfavorável.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Atuações exageradas e teatrais",
+          "mencoes_aproximadas": 14,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "As reviews medianas destacam que as atuações são frequentemente exageradas, melodramáticas e pouco naturais, o que, para alguns, compromete o impacto geral do filme.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Uso vibrante e estilizado da cor",
+          "mencoes_aproximadas": 12,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "Este grupo elogia a fotografia colorida, com cores intensas e contrastantes que criam uma estética visual marcante, embora não seja suficiente para superar outras falhas percebidas.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Excesso de melodrama e tom de novela",
+          "mencoes_aproximadas": 10,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "As reviews medianas criticam o tom excessivamente melodramático, comparando-o ao de uma novela ou soap opera, o que torna a experiência cansativa e pouco envolvente para parte do público.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Ritmo arrastado e previsibilidade",
+          "mencoes_aproximadas": 9,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "Algumas reviews medianas mencionam problemas de ritmo, com momentos lentos e uma sensação de previsibilidade que reduz o impacto da narrativa.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Mistura de estilos e referências (giallo, psicodelia, trash)",
+          "mencoes_aproximadas": 8,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "Este grupo observa uma fusão de influências que vão do giallo ao cinema psicodélico e trash, resultando em uma obra peculiar que divide opiniões, mas nunca passa despercebida.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        }
+      ],
+      "observacao_geral": "As reviews medianas analisadas destacam principalmente a comparação desfavorável com o original, o exagero nas atuações e no melodrama, e um ritmo por vezes arrastado, embora reconheçam o uso vibrante da cor e a mistura estilística como pontos de interesse. Este grupo específico não representa a recepção geral do filme, mas sim uma faixa intermediária de opiniões que equilibra críticas e elogios pontuais.",
+      "idioma_invalido": false,
+      "escopo_suspeito": false
+    },
+    {
+      "bucket": "positivas",
+      "alvo": 40,
+      "modo": "completo",
+      "estado_piso": "completa",
+      "n_validas": 40,
+      "share_real": 66,
+      "composicao_alvo": {
+        "3.5": 18,
+        "4.0": 16,
+        "4.5": 4,
+        "5.0": 2
+      },
+      "composicao_atingida": {
+        "3.5": 18,
+        "4.0": 16,
+        "4.5": 4,
+        "5.0": 2
+      },
+      "cascata_por_degrau": {
+        "150": 40
+      },
+      "deficit_redistribuido": 0,
+      "distribuicao_pagina_origem": {
+        "n": 40,
+        "min": 1,
+        "max": 5,
+        "p5": 1,
+        "p50": 2,
+        "p95": 4,
+        "fracao_profunda": 0.0
+      },
+      "janela_amostra": {
+        "n": 40,
+        "min": "2020-02-06",
+        "max": "2026-09-07",
+        "p5": "2021-09-16",
+        "p50": "2026-02-01",
+        "p95": "2026-08-27"
+      },
+      "niveis": [
+        {
+          "nivel": 3.5,
+          "n_validas": 18,
+          "n_alvo": 18,
+          "n_brutas": 60,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 3,
+          "n_descartadas_curtas": 26,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 0,
+          "motivos_descarte": {
+            "truncada_sem_texto": 0,
+            "spoiler": 3,
+            "abaixo_min_chars": 26,
+            "excedente_cota": 13,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 5
+        },
+        {
+          "nivel": 4.0,
+          "n_validas": 16,
+          "n_alvo": 16,
+          "n_brutas": 48,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 1,
+          "n_descartadas_curtas": 25,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 0,
+          "motivos_descarte": {
+            "truncada_sem_texto": 0,
+            "spoiler": 1,
+            "abaixo_min_chars": 25,
+            "excedente_cota": 6,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 4
+        },
+        {
+          "nivel": 4.5,
+          "n_validas": 4,
+          "n_alvo": 4,
+          "n_brutas": 16,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 0,
+          "n_descartadas_curtas": 7,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 0,
+          "motivos_descarte": {
+            "truncada_sem_texto": 0,
+            "spoiler": 0,
+            "abaixo_min_chars": 7,
+            "excedente_cota": 5,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 2
+        },
+        {
+          "nivel": 5.0,
+          "n_validas": 2,
+          "n_alvo": 2,
+          "n_brutas": 12,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 0,
+          "n_descartadas_curtas": 3,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 0,
+          "motivos_descarte": {
+            "truncada_sem_texto": 0,
+            "spoiler": 0,
+            "abaixo_min_chars": 3,
+            "excedente_cota": 7,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 1
+        }
+      ],
+      "temas": [
+        {
+          "tema": "Comparação com a obra original de 1960",
+          "mencoes_aproximadas": 25,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "Muitas reviews positivas comparam este filme com a versão original de 1960, notando que, embora seja uma refilmagem da mesma história pelo mesmo diretor, esta versão traz cores vibrantes, mais caos e uma abordagem mais ousada, embora algumas prefiram a tensão do original em preto e branco.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Atuação de Youn Yuh-jung",
+          "mencoes_aproximadas": 20,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "A atuação de Youn Yuh-jung em sua estreia é amplamente elogiada por sua energia descontrolada e presença de cena, sendo descrita como hipnotizante e assustadora, contribuindo para a intensidade do filme.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Estilo visual e fotografia",
+          "mencoes_aproximadas": 18,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "O uso de cores saturadas, iluminação expressionista e enquadramentos ousados é destacado como um dos pontos fortes, criando uma atmosfera psicodélica e estilizada que remete ao giallo e ao cinema de exploitation.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Tom surreal e exagerado",
+          "mencoes_aproximadas": 15,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "O filme é descrito como histérico, absurdo e delirante, com reviravoltas extremas e uma espiral de loucura que, embora possa parecer excessiva, mantém o interesse pela sua ousadia.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Crítica social e temas de gênero",
+          "mencoes_aproximadas": 12,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "As reviews apontam que a trama aborda dinâmicas de poder, exploração feminina e hipocrisia social, tocando em temas como patriarcado e autonomia corporal de forma perturbadora e ainda relevante.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Elementos de exploração e censura",
+          "mencoes_aproximadas": 10,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "A presença de cenas violentas e sexualmente sugestivas, muitas vezes contornando a censura da época, é mencionada como parte do apelo exploitation, com montagens de imagens estáticas e uma abordagem mais gráfica.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        }
+      ],
+      "observacao_geral": "As reviews positivas destacam a ousadia visual e a atuação intensa de Youn Yuh-jung, apreciando o tom surreal e exagerado que diferencia esta refilmagem da obra original. Este grupo enfatiza a energia caótica e a crítica social embutida na trama, considerando o filme uma experiência estilizada e impactante.",
+      "idioma_invalido": false,
+      "escopo_suspeito": false
+    }
+  ],
+  "eixos": {
+    "taxonomia_id": "ebab2667de74",
+    "margem": {
+      "lei": "lift^2 * n >= 2085136/1000000",
+      "constante_quadrada": [
+        2085136,
+        1000000
+      ],
+      "n": 9,
+      "limiar_pp": 48.13
+    },
+    "margem_lift_pp": 48.13,
+    "linhas": [
+      {
+        "eixo": "ritmo",
+        "por_bucket": {
+          "negativas": {
+            "mencoes": 1,
+            "de_n": 9,
+            "freq_pct": 11.1,
+            "lift_pp": -6.4,
+            "acima_da_margem": false,
+            "tema": "Ritmo e estrutura irregulares",
+            "exemplo_parafraseado": "A segunda metade perde o interesse visual da primeira, com iluminação genérica e repetição de cenários, enquanto o roteiro se dispersa em tramas secundárias que não se conectam à história principal.",
+            "temas_no_mesmo_eixo": []
+          },
+          "medianas": {
+            "mencoes": 7,
+            "de_n": 40,
+            "freq_pct": 17.5,
+            "lift_pp": 6.4,
+            "acima_da_margem": false,
+            "tema": "Ritmo arrastado e previsibilidade",
+            "exemplo_parafraseado": "Algumas reviews medianas mencionam problemas de ritmo, com momentos lentos e uma sensação de previsibilidade que reduz o impacto da narrativa.",
+            "temas_no_mesmo_eixo": []
+          },
+          "positivas": {
+            "mencoes": 4,
+            "de_n": 40,
+            "freq_pct": 10.0,
+            "lift_pp": -7.5,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          }
+        },
+        "bullet_de": {
+          "negativas": null,
+          "medianas": null,
+          "positivas": null
+        }
+      },
+      {
+        "eixo": "atuacao",
+        "por_bucket": {
+          "negativas": {
+            "mencoes": 6,
+            "de_n": 9,
+            "freq_pct": 66.7,
+            "lift_pp": 14.2,
+            "acima_da_margem": false,
+            "tema": "Atuações histriônicas e exageradas",
+            "exemplo_parafraseado": "Várias reviews descrevem as interpretações como teatrais e desconfortáveis, com a protagonista em sua estreia avaliada como exagerada e sem naturalidade, chegando a soar infantil em cenas de fragilidade.",
+            "temas_no_mesmo_eixo": []
+          },
+          "medianas": {
+            "mencoes": 18,
+            "de_n": 40,
+            "freq_pct": 45.0,
+            "lift_pp": -21.7,
+            "acima_da_margem": false,
+            "tema": "Atuações exageradas e teatrais",
+            "exemplo_parafraseado": "As reviews medianas destacam que as atuações são frequentemente exageradas, melodramáticas e pouco naturais, o que, para alguns, compromete o impacto geral do filme.",
+            "temas_no_mesmo_eixo": []
+          },
+          "positivas": {
+            "mencoes": 21,
+            "de_n": 40,
+            "freq_pct": 52.5,
+            "lift_pp": -14.2,
+            "acima_da_margem": false,
+            "tema": "Atuação de Youn Yuh-jung",
+            "exemplo_parafraseado": "A atuação de Youn Yuh-jung em sua estreia é amplamente elogiada por sua energia descontrolada e presença de cena, sendo descrita como hipnotizante e assustadora, contribuindo para a intensidade do filme.",
+            "temas_no_mesmo_eixo": []
+          }
+        },
+        "bullet_de": {
+          "negativas": "frequencia",
+          "medianas": null,
+          "positivas": null
+        }
+      },
+      {
+        "eixo": "direcao_imagem",
+        "por_bucket": {
+          "negativas": {
+            "mencoes": 4,
+            "de_n": 9,
+            "freq_pct": 44.4,
+            "lift_pp": -10.6,
+            "acima_da_margem": false,
+            "tema": "Fotografia e estilização como pontos positivos",
+            "exemplo_parafraseado": "Apesar das críticas, algumas reviews reconhecem que a fotografia e a edição ainda impressionam, ganhando textura com o uso de cores ausentes na versão original.",
+            "temas_no_mesmo_eixo": []
+          },
+          "medianas": {
+            "mencoes": 22,
+            "de_n": 40,
+            "freq_pct": 55.0,
+            "lift_pp": 0.0,
+            "acima_da_margem": false,
+            "tema": "Uso vibrante e estilizado da cor",
+            "exemplo_parafraseado": "Este grupo elogia a fotografia colorida, com cores intensas e contrastantes que criam uma estética visual marcante, embora não seja suficiente para superar outras falhas percebidas.",
+            "temas_no_mesmo_eixo": []
+          },
+          "positivas": {
+            "mencoes": 22,
+            "de_n": 40,
+            "freq_pct": 55.0,
+            "lift_pp": 0.0,
+            "acima_da_margem": false,
+            "tema": "Estilo visual e fotografia",
+            "exemplo_parafraseado": "O uso de cores saturadas, iluminação expressionista e enquadramentos ousados é destacado como um dos pontos fortes, criando uma atmosfera psicodélica e estilizada que remete ao giallo e ao cinema de exploitation.",
+            "temas_no_mesmo_eixo": []
+          }
+        },
+        "bullet_de": {
+          "negativas": null,
+          "medianas": null,
+          "positivas": null
+        }
+      },
+      {
+        "eixo": "roteiro_estrutura",
+        "por_bucket": {
+          "negativas": {
+            "mencoes": 8,
+            "de_n": 9,
+            "freq_pct": 88.9,
+            "lift_pp": 11.4,
+            "acima_da_margem": false,
+            "tema": "Confusão temática e falta de conexão",
+            "exemplo_parafraseado": "Espectadores relatam não entender a proposta do filme, com comentários iniciais que não se encaixam na narrativa principal e uma experiência que não gera envolvimento emocional.",
+            "temas_no_mesmo_eixo": []
+          },
+          "medianas": {
+            "mencoes": 31,
+            "de_n": 40,
+            "freq_pct": 77.5,
+            "lift_pp": -11.4,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "positivas": {
+            "mencoes": 25,
+            "de_n": 40,
+            "freq_pct": 62.5,
+            "lift_pp": -26.4,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          }
+        },
+        "bullet_de": {
+          "negativas": "frequencia",
+          "medianas": "frequencia",
+          "positivas": "frequencia"
+        }
+      },
+      {
+        "eixo": "som_trilha",
+        "por_bucket": {
+          "negativas": {
+            "mencoes": 0,
+            "de_n": 9,
+            "freq_pct": 0.0,
+            "lift_pp": -10.0,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "medianas": {
+            "mencoes": 3,
+            "de_n": 40,
+            "freq_pct": 7.5,
+            "lift_pp": -2.5,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "positivas": {
+            "mencoes": 4,
+            "de_n": 40,
+            "freq_pct": 10.0,
+            "lift_pp": 2.5,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          }
+        },
+        "bullet_de": {
+          "negativas": null,
+          "medianas": null,
+          "positivas": null
+        }
+      },
+      {
+        "eixo": "tom_atmosfera",
+        "por_bucket": {
+          "negativas": {
+            "mencoes": 3,
+            "de_n": 9,
+            "freq_pct": 33.3,
+            "lift_pp": -14.2,
+            "acima_da_margem": false,
+            "tema": "Melodrama excessivo e tom descontrolado",
+            "exemplo_parafraseado": "O tom melodramático é levado ao extremo, resultando em oscilações emocionais constantes e um clima que beira o histérico, sem que o filme pareça ter clareza sobre o que quer ser.",
+            "temas_no_mesmo_eixo": []
+          },
+          "medianas": {
+            "mencoes": 16,
+            "de_n": 40,
+            "freq_pct": 40.0,
+            "lift_pp": -7.5,
+            "acima_da_margem": false,
+            "tema": "Excesso de melodrama e tom de novela",
+            "exemplo_parafraseado": "As reviews medianas criticam o tom excessivamente melodramático, comparando-o ao de uma novela ou soap opera, o que torna a experiência cansativa e pouco envolvente para parte do público.",
+            "temas_no_mesmo_eixo": [
+              "Mistura de estilos e referências (giallo, psicodelia, trash)"
+            ]
+          },
+          "positivas": {
+            "mencoes": 19,
+            "de_n": 40,
+            "freq_pct": 47.5,
+            "lift_pp": 7.5,
+            "acima_da_margem": false,
+            "tema": "Tom surreal e exagerado",
+            "exemplo_parafraseado": "O filme é descrito como histérico, absurdo e delirante, com reviravoltas extremas e uma espiral de loucura que, embora possa parecer excessiva, mantém o interesse pela sua ousadia.",
+            "temas_no_mesmo_eixo": []
+          }
+        },
+        "bullet_de": {
+          "negativas": null,
+          "medianas": null,
+          "positivas": null
+        }
+      },
+      {
+        "eixo": "impacto_emocional",
+        "por_bucket": {
+          "negativas": {
+            "mencoes": 3,
+            "de_n": 9,
+            "freq_pct": 33.3,
+            "lift_pp": 28.3,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "medianas": {
+            "mencoes": 2,
+            "de_n": 40,
+            "freq_pct": 5.0,
+            "lift_pp": -28.3,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "positivas": {
+            "mencoes": 1,
+            "de_n": 40,
+            "freq_pct": 2.5,
+            "lift_pp": -30.8,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          }
+        },
+        "bullet_de": {
+          "negativas": null,
+          "medianas": null,
+          "positivas": null
+        }
+      },
+      {
+        "eixo": "comparacoes",
+        "por_bucket": {
+          "negativas": {
+            "mencoes": 5,
+            "de_n": 9,
+            "freq_pct": 55.6,
+            "lift_pp": -36.9,
+            "acima_da_margem": false,
+            "tema": "Remake desnecessário e inferior ao original",
+            "exemplo_parafraseado": "O filme é tratado como uma refilmagem supérflua de uma obra anterior do mesmo diretor, pior em quase todos os aspectos, incluindo a substituição da estrutura cautelar original por uma investigação policial clichê.",
+            "temas_no_mesmo_eixo": []
+          },
+          "medianas": {
+            "mencoes": 32,
+            "de_n": 40,
+            "freq_pct": 80.0,
+            "lift_pp": -12.5,
+            "acima_da_margem": false,
+            "tema": "Comparação com o original e natureza de refilmagem",
+            "exemplo_parafraseado": "Este grupo de reviews medianas aponta que o filme é essencialmente uma refilmagem do mesmo diretor, com estrutura narrativa muito similar, e que a comparação com a obra original é inevitável e, para muitos, desfavorável.",
+            "temas_no_mesmo_eixo": []
+          },
+          "positivas": {
+            "mencoes": 37,
+            "de_n": 40,
+            "freq_pct": 92.5,
+            "lift_pp": 12.5,
+            "acima_da_margem": false,
+            "tema": "Comparação com a obra original de 1960",
+            "exemplo_parafraseado": "Muitas reviews positivas comparam este filme com a versão original de 1960, notando que, embora seja uma refilmagem da mesma história pelo mesmo diretor, esta versão traz cores vibrantes, mais caos e uma abordagem mais ousada, embora algumas prefiram a tensão do original em preto e branco.",
+            "temas_no_mesmo_eixo": []
+          }
+        },
+        "bullet_de": {
+          "negativas": null,
+          "medianas": "frequencia",
+          "positivas": "frequencia"
+        }
+      },
+      {
+        "eixo": "expectativa",
+        "por_bucket": {
+          "negativas": {
+            "mencoes": 0,
+            "de_n": 9,
+            "freq_pct": 0.0,
+            "lift_pp": -25.0,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "medianas": {
+            "mencoes": 10,
+            "de_n": 40,
+            "freq_pct": 25.0,
+            "lift_pp": 2.5,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "positivas": {
+            "mencoes": 9,
+            "de_n": 40,
+            "freq_pct": 22.5,
+            "lift_pp": -2.5,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          }
+        },
+        "bullet_de": {
+          "negativas": null,
+          "medianas": null,
+          "positivas": null
+        }
+      },
+      {
+        "eixo": "critica_social",
+        "por_bucket": {
+          "negativas": {
+            "mencoes": 2,
+            "de_n": 9,
+            "freq_pct": 22.2,
+            "lift_pp": -5.3,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "medianas": {
+            "mencoes": 5,
+            "de_n": 40,
+            "freq_pct": 12.5,
+            "lift_pp": -15.0,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "positivas": {
+            "mencoes": 11,
+            "de_n": 40,
+            "freq_pct": 27.5,
+            "lift_pp": 5.3,
+            "acima_da_margem": false,
+            "tema": "Crítica social e temas de gênero",
+            "exemplo_parafraseado": "As reviews apontam que a trama aborda dinâmicas de poder, exploração feminina e hipocrisia social, tocando em temas como patriarcado e autonomia corporal de forma perturbadora e ainda relevante.",
+            "temas_no_mesmo_eixo": []
+          }
+        },
+        "bullet_de": {
+          "negativas": null,
+          "medianas": null,
+          "positivas": null
+        }
+      }
+    ],
+    "rotulagem": {
+      "n_chamadas": 3,
+      "falharam": [],
+      "fora_da_taxonomia": {},
+      "houve_retentativa": []
+    },
+    "spec_version": "1.9.50",
+    "verificador": {
+      "aplicado": true,
+      "variante": "V2_alvo",
+      "passada": 1,
+      "eixo": "impacto_emocional",
+      "n_removidas_no_corpus": 2781
+    }
+  },
+  "narrativa": "Lançado em 1971 e dirigido por Kim Ki-young, 화녀 é um longa-metragem que combina crime, drama e terror ao longo de seus 100 minutos de duração. A trama acompanha o cotidiano de um compositor e de sua esposa, que vivem em uma granja de galinhas e veem sua rotina entrar em colapso com a chegada de uma mulher fatal à residência.\n\nA experiência cinematográfica se estrutura sobre uma atmosfera densa de melodrama, conduzida por enquadramentos expressivos e uma iluminação com forte apelo visual. A encenação adota um tom ostensivo e uma dinâmica de ritmo marcada pela dramaticidade teatral e pelo uso contrastante de cores.\n\nNa maioria das notas (~66%), grande parte das manifestações compara a produção com a obra original, ressaltando como a nova versão adiciona ousadia visual e energia ao material. Nesse segmento favorável, uma parcela expressiva elogia a atuação de estreia de Youn Yuh-jung por sua intensidade em cena, enquanto vários destacam a fotografia estilizada e as cores saturadas como pontos altos da construção estética.\n\nNuma parcela das notas (~29%), a recepção se mostra dividida: para quem se situa nessa faixa intermediária, cerca de metade considera que a natureza de refilmagem traz paralelos inevitáveis que enfraquecem o filme frente ao clássico anterior. Além disso, boa parte reclama do caráter excessivamente teatral das atuações, embora um número considerável aponte o uso vibrante e estilizado da cor como um elemento de mérito.\n\nPor fim, numa fração mínima das notas (~5%), o veredito é estritamente crítico: nessa leitura, as interpretações do elenco são tidas como histriônicas e desconfortáveis, o longa é qualificado como um remake supérfluo e inferior, e o melodrama excessivo é apontado como responsável por um tom descontrolado.",
+  "verificacao_narrativa": {
+    "quantificador_fora_de_faixa": [],
+    "quantificador_repetido": [],
+    "paragrafos": {
+      "n_paragrafos": 5,
+      "minimo": 3,
+      "insuficientes": false,
+      "longos": []
+    },
+    "n_paragrafos": 5,
+    "paragrafos_insuficientes": false,
+    "paragrafos_longos": [],
+    "grupos_sem_paragrafo_proprio": [],
+    "movimento1_e_movimento2_no_mesmo_paragrafo": false,
+    "formato_invalido": false,
+    "numeros_inventados": [],
+    "rotulos_faltando": [],
+    "ordem_incorreta": false,
+    "vocabulario_peso": false,
+    "resenha_speak": [],
+    "n_resenha_speak": 0,
+    "n_flags": 0
+  },
+  "narrativa_selecao": {
+    "provider": "gemini",
+    "modelo": "gemini-3.7-flash",
+    "n_candidatos": 3,
+    "n_chamadas": 4,
+    "indice_escolhido": 2,
+    "motivo": "menor_severidade",
+    "criterio_decisivo": "ritmo",
+    "candidatos": [
+      {
+        "indice": 0,
+        "n_flags": 1,
+        "cliches": 0,
+        "repeticao_max": 1,
+        "ritmo": 7,
+        "cobertura": 1.0,
+        "eliminado": true
+      },
+      {
+        "indice": 1,
+        "n_flags": 1,
+        "cliches": 0,
+        "repeticao_max": 1,
+        "ritmo": 7,
+        "cobertura": 1.0,
+        "eliminado": true
+      },
+      {
+        "indice": 2,
+        "n_flags": 1,
+        "cliches": 0,
+        "repeticao_max": 1,
+        "ritmo": 8,
+        "cobertura": 1.0,
+        "eliminado": true
+      }
+    ],
+    "retry": {
+      "n_frases_infratoras": 1,
+      "motivos": [
+        "numero_inventado"
+      ],
+      "n_flags_depois": 0,
+      "aplicado": true
+    },
+    "uso": {
+      "prompt_tokens": 11774,
+      "completion_tokens": 1677,
+      "cache_hit_tokens": 0,
+      "cache_miss_tokens": 11774
+    },
+    "latencia_s": 37.31
+  }
+}

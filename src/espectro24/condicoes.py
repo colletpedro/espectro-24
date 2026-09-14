@@ -146,9 +146,13 @@ def mesmo_assunto(t1: dict, t2: dict) -> bool:
     return len(_prefixos_do_tema(t1) & _prefixos_do_tema(t2)) >= 2
 
 
-def _seq_maxima(texto: str, alvo: str) -> int:
+def _seq_maxima(texto: str, alvo: str, *,
+                nomes: frozenset[str] = frozenset()) -> int:
     """Maior sequência de palavras de conteúdo do `texto` que aparece, na
-    mesma ordem e contígua, no `alvo`."""
+    mesma ordem e contígua, no `alvo`.
+
+    Com `nomes`, uma sequência feita **só** de nomes próprios não conta — a
+    exceção de `exemplo_verbatim`, com a razão em `_validar_ancora`."""
     A, B = V.palavras_de_conteudo(texto), V.palavras_de_conteudo(alvo)
     melhor = 0
     for i in range(len(A)):
@@ -156,7 +160,7 @@ def _seq_maxima(texto: str, alvo: str) -> int:
             k = 0
             while i + k < len(A) and j + k < len(B) and A[i + k] == B[j + k]:
                 k += 1
-            if k > melhor:
+            if k > melhor and not all(w in nomes for w in A[i:i + k]):
                 melhor = k
     return melhor
 
@@ -166,23 +170,29 @@ def _sem_acento(s: str) -> str:
                    if not unicodedata.combining(c))
 
 
+def nomes_proprios(texto: str) -> frozenset[str]:
+    """Os NOMES PRÓPRIOS de um texto, normalizados como as palavras de
+    conteúdo: token Capitalizado fora da primeira posição.
+
+    A fronteira é TIPOGRÁFICA porque o dado a carrega. Mesma família da
+    correção de fronteira da v1.9.22 (`tom` casando dentro de "tomam"), com o
+    marcador de fronteira que o campo oferece.
+    """
+    brutos = re.findall(r"[^\W\d_]+", texto or "", flags=re.UNICODE)
+    return frozenset(_sem_acento(w).lower() for i, w in enumerate(brutos)
+                     if i > 0 and w[:1].isupper())
+
+
 def palavras_copiaveis(tema: str) -> list[str]:
     """As palavras de conteúdo de um `tema` que contam para `tema_verbatim`,
-    **excluídos os NOMES PRÓPRIOS**.
+    **excluídos os NOMES PRÓPRIOS** (`nomes_proprios`).
 
     [v1.9.35] A exceção existe porque nomear uma personagem exige o nome
     dela. MEDIDO na rodada 2 do estudo: 3 dos 5 disparos de `tema_verbatim`
     eram `Descaracterização do Arthur Fleck` — 3 palavras de conteúdo, o
     mínimo que aciona a regra, e **duas delas são o nome**.
-
-    A fronteira é TIPOGRÁFICA porque o dado a carrega: token Capitalizado
-    fora da primeira posição do tema. Mesma família da correção de fronteira
-    da v1.9.22 (`tom` casando dentro de "tomam"), com o marcador de fronteira
-    que o campo oferece.
     """
-    brutos = re.findall(r"[^\W\d_]+", tema or "", flags=re.UNICODE)
-    proprios = {_sem_acento(w).lower() for i, w in enumerate(brutos)
-                if i > 0 and w[:1].isupper()}
+    proprios = nomes_proprios(tema)
     return [w for w in V.palavras_de_conteudo(tema) if w not in proprios]
 
 
@@ -222,20 +232,36 @@ def selecionar(idx: dict, n: int = N_POR_LADO, *, par_obrigatorio: bool = True
       informação, não defeito de preenchimento"); deslocar o último
       selecionado trocaria uma omissão por outra.
     """
+    return _selecao_e_pares(idx, n, par_obrigatorio)[0]
+
+
+def pares_obrigatorios(idx: dict, n: int = N_POR_LADO) -> list[dict]:
+    """Os pares que o par obrigatório formou: `{base, forcado, lado_base,
+    lado_forcado}`, só os que sobreviveram ao teto `MAX_POR_LADO`.
+
+    Mesma computação de `selecionar` — não uma segunda régua. É a entrada da
+    regra de recusa em par (`consolidar_recusas`) e da rotulagem dos pares.
+    """
+    return _selecao_e_pares(idx, n, True)[1]
+
+
+def _selecao_e_pares(idx: dict, n: int, par_obrigatorio: bool):
     base = {}
     for lado, bucket in BUCKET_DO_LADO.items():
         do_bucket = sorted((t for t in idx.values() if t["bucket"] == bucket),
                            key=lambda t: t["ordem"])
         base[lado] = do_bucket[:n]
     if not par_obrigatorio:
-        return base
+        return base, []
 
     sel = {lado: list(v) for lado, v in base.items()}
+    pares: list[dict] = []
     for lado in LADOS:
         outro = "talvez_evite" if lado == "vale_a_pena" else "vale_a_pena"
         oposto = BUCKET_DO_LADO[outro]
         ja = {t["id"] for t in base[outro]}
         forcados: list[dict] = []
+        de_lado: list[dict] = []
         for t in base[lado]:
             candidatos = sorted(
                 (o for o in idx.values()
@@ -245,9 +271,13 @@ def selecionar(idx: dict, n: int = N_POR_LADO, *, par_obrigatorio: bool = True
                 key=lambda o: o["ordem"])
             if candidatos:
                 forcados.append(candidatos[0])
+                de_lado.append({"base": t["id"], "forcado": candidatos[0]["id"],
+                                "lado_base": lado, "lado_forcado": outro})
         sel[outro] = sorted(base[outro] + forcados,
                             key=lambda t: t["ordem"])[:MAX_POR_LADO]
-    return sel
+        dentro = {t["id"] for t in sel[outro]}
+        pares += [p for p in de_lado if p["forcado"] in dentro]
+    return sel, pares
 
 
 # ===========================================================================
@@ -401,7 +431,92 @@ def peso_do_meio(idx: dict) -> dict | None:
 
 
 # ===========================================================================
+# [piloto de expansão] EXCEÇÃO DE ANO EM NOME DE TEMA — a única forma de
+# algarismo admitida no briefing
+# ===========================================================================
+# **A regra continua sendo zero algarismo**, e a razão é de leitura: número
+# no texto compete com os números que o código controla — o leitor não
+# distingue "1940" de "34% das notas". A exceção é DECISÃO DO DONO
+# (2026-09-13), para o caso real `pinocchio-2022` NEG-F, *"Comparação com o
+# clássico de 1940"*, e é deliberadamente ESTREITA: decide por FORMA, nunca
+# por intenção. Um algarismo é admitido só quando TODAS valem:
+#
+#   1. está no campo `tema` (o NOME do tema), nunca em `exemplo_parafraseado`
+#      nem no texto do sistema — a paráfrase é onde as quantidades moram
+#      ("Os primeiros 30 minutos", `im-still-here-2024` POS-D);
+#   2. é um ano: exatamente quatro algarismos, de 1880 a 2039, sem
+#      algarismo, `%`, vírgula ou ponto decimal colado;
+#   3. vem logo depois da preposição `de` ou `em`, palavra inteira ("clássico
+#      de 1940", "versão de 2022", "lançado em 1999");
+#   4. a preposição não fecha locução de quantidade ("mais de", "cerca de",
+#      "perto de", "em torno de", "por volta de"…);
+#   5. o ano fecha o tema ou vem seguido de pontuação — nunca de palavra, que
+#      é onde a unidade de uma contagem apareceria ("de 2000 figurantes").
+#
+# **O que a forma NÃO separa, declarado:** `de NNNN` no fim do tema usado
+# como QUANTIDADE sem unidade, com NNNN entre 1880 e 2039. Medido: 1 tema com
+# algarismo em 953 temas de `resultado/*.json`, e é o ano de `pinocchio`.
+# A estreiteza custa só falso negativo (ano legítimo fora da forma — "O
+# remake de 2022 e o original" — é recusado), e o destino desse caso é o que
+# já era: reescrever o tema sem o ano.
+#
+# **A exceção é do INSUMO, não da SAÍDA.** Algarismo no texto de uma
+# condição continua reprovado sem exceção (validador `digito`, regra 7 do
+# prompt): o que o leitor lê não ganha número nenhum.
+_RE_ANO_EM_NOME_DE_TEMA = re.compile(
+    r"(?<![^\W\d_])(?i:de|em) (?P<ano>18[89]\d|19\d\d|20[0-3]\d)"
+    r"(?=\s*$|\s*[)\],;:.!?—–](?:\s|$))")
+
+# A palavra antes de `de`/`em` que faz dela uma locução de QUANTIDADE — o
+# ano ali seria contagem ("cerca de 1990"). Normalizada, sem acento.
+_LOCUCAO_DE_QUANTIDADE = frozenset({
+    "mais", "menos", "cerca", "perto", "acima", "abaixo", "alem", "torno",
+    "volta", "quase", "ate"})
+
+
+def _anos_admitidos(tema: str):
+    for m in _RE_ANO_EM_NOME_DE_TEMA.finditer(tema or ""):
+        antes = V._normalizar(tema[:m.start()]).split()
+        if antes and antes[-1] in _LOCUCAO_DE_QUANTIDADE:
+            continue
+        yield m
+
+
+def anos_em_nome_de_tema(tema: str) -> list[str]:
+    """Os anos do `tema` que a exceção admite, na ordem em que aparecem."""
+    return [m.group("ano") for m in _anos_admitidos(tema)]
+
+
+def _mascarar_anos_do_tema(tema: str) -> str:
+    partes, fim = [], 0
+    for m in _anos_admitidos(tema):
+        partes += [tema[fim:m.start("ano")], "ANO"]
+        fim = m.end("ano")
+    return "".join(partes) + (tema or "")[fim:]
+
+
+def algarismos_proibidos_no_tema(tema: str) -> list[str]:
+    """Os algarismos do NOME de um tema que a exceção não admite."""
+    return re.findall(r"\d+", _mascarar_anos_do_tema(tema))
+
+
+def algarismos_proibidos_no_briefing(b: dict) -> list[str]:
+    """Os algarismos do briefing serializado que a regra NÃO admite. Vazio =
+    limpo.
+
+    Serializa o briefing de verdade, com os anos admitidos mascarados — o
+    texto checado é o MESMO que vai ao modelo, e qualquer outro algarismo, em
+    qualquer linha (paráfrase, instrução, tema fora da forma), aparece.
+    """
+    mascarado = {**b, "selecao": {
+        lado: [{**t, "tema": _mascarar_anos_do_tema(t["tema"])} for t in ts]
+        for lado, ts in b["selecao"].items()}}
+    return re.findall(r"\d+", serializar_briefing(mascarado))
+
+
+# ===========================================================================
 # Briefing — só os temas escolhidos, na ordem escolhida, zero algarismo
+# (fora a exceção de ano em nome de tema, logo acima)
 # ===========================================================================
 
 _NOME = {"negativas": "QUEM NÃO RECOMENDA", "positivas": "QUEM RECOMENDA"}
@@ -415,7 +530,7 @@ def montar_briefing(output: dict) -> dict | None:
     insumo, a chave não é emitida, nunca um bloco montado sobre buraco.
     """
     idx = indexar(output)
-    sel = selecionar(idx)
+    sel, pares = _selecao_e_pares(idx, N_POR_LADO, True)
     if not any(sel[l] for l in LADOS):
         return None
     dominante = None
@@ -427,6 +542,7 @@ def montar_briefing(output: dict) -> dict | None:
         "slug": output.get("slug"),
         "idx": idx,
         "selecao": sel,
+        "pares": pares,
         "ordem_colunas": ordem_das_colunas(idx),
         "peso": {l: peso_do_lado(idx, l) for l in LADOS},
         "peso_meio": peso_do_meio(idx),
@@ -438,7 +554,9 @@ def serializar_briefing(b: dict) -> str:
     """O briefing como texto, para a mensagem do usuário.
 
     **Nenhum algarismo sai daqui, e o título do filme também não** — as duas
-    garantias do §3[V], herdadas literalmente. O título fica de fora porque
+    garantias do §3[V], herdadas literalmente. Uma exceção, estreita e por
+    FORMA: ano de quatro algarismos no NOME de um tema ("clássico de 1940"),
+    critério em `algarismos_proibidos_no_briefing`. O título fica de fora porque
     nomear o filme convida o modelo a usar o que ele sabe sobre o filme, e a
     invariante de fidelidade proíbe contexto externo.
 
@@ -463,14 +581,15 @@ def serializar_briefing(b: dict) -> str:
                 # Sem número de regra: o briefing é o texto que carrega DADO
                 # do filme, e a garantia "zero algarismo por construção" vale
                 # sobre ele inteiro. Citar "a regra 9" aqui a quebraria — e
-                # `test_briefing_nao_tem_algarismo_em_nenhum_dos_35` pegou
-                # exatamente isso na primeira escrita desta linha.
+                # `test_briefing_nao_tem_algarismo_proibido_em_nenhum_filme`
+                # pegou exatamente isso na primeira escrita desta linha.
                 L.append("       ATENÇÃO — este tema toca desfecho, "
                          "reviravolta ou revelação. Você PODE dizer que o "
                          "final é aberto ou que a obra tem uma virada; NÃO "
                          "pode dizer o que o final contém nem o EFEITO da "
                          "virada sobre a compreensão do filme. Sem "
-                         "formulação com lastro, SALTE o tema.")
+                         "formulação com lastro, DECLARE o tema em "
+                         "`sem_condicao`, com a regra e o motivo.")
         L.append("")
     if b["meio_dominante"]:
         L += ["O MEIO-TERMO É O MAIOR GRUPO DA RECEPÇÃO. O peso dos grupos é "
@@ -541,14 +660,33 @@ outro de contemplação; "quer um ritmo contemplativo" serve.
 
 5. RESSALVA DO PRÓPRIO TEMA. Se o texto do grupo trouxer uma ressalva ("mas \
 alguns acham...", "embora...", "apesar de..."), a condição NÃO pode ficar só \
-com a metade que convém. Ou ela carrega as duas, ou você salta o tema.
+com a metade que convém. Ou ela carrega as duas, ou você declara o tema sem \
+condição (regra 6, código R2).
 
-6. ABSTENÇÃO — SALTE O TEMA. Se de um tema recebido não sair uma condição \
-honesta, **não escreva nada para ele e passe ao seguinte**. É PROIBIDO \
-substituí-lo por outro assunto e é PROIBIDO completar cota. Devolver menos \
-condições do que temas recebidos é uma resposta CORRETA, e devolver lista \
-VAZIA também é. Saltar é sempre melhor que forçar: uma vaga vazia não engana \
-ninguém, uma condição forçada engana.
+6. ABSTENÇÃO DECLARADA — SEM CONDIÇÃO PUBLICÁVEL. Se de um tema recebido não \
+sair uma condição honesta, **não escreva condição para ele: DECLARE-O na \
+lista `sem_condicao`**, com o código do tema, a REGRA que impede a condição e \
+um MOTIVO de no máximo vinte palavras. Só estes cinco códigos de regra valem:
+
+  R1  — ÂNCORA E FIDELIDADE (regras 1 e 2): não há como nomear o assunto do \
+tema sem inventar.
+  R2  — SINAL E RESSALVA (regras 3 e 5): a paráfrase relata efeito, incômodo \
+ou dificuldade e não sustenta a frase; ou a ressalva não cabe nela.
+  R6  — ANTI-SPOILER (regra 9): a única formulação com lastro usa desfecho, \
+revelação ou ponto de chegada de um arco.
+  R12 — ESPECIFICIDADE (regra 13): abstrair até a frase ficar honesta a \
+deixaria sem lastro, ou faria de um detalhe o critério central.
+  R13 — EXPECTATIVA (regra 9g): o tema fala só de fama ou de hype, e a \
+paráfrase não diz nada do que a obra entrega.
+
+Se duas regras impedem, separe os códigos com barra: "R6/R12". É PROIBIDO \
+substituir o tema por outro assunto e é PROIBIDO completar cota — o sistema \
+NÃO põe outro tema no lugar. Devolver menos condições do que temas recebidos \
+é uma resposta CORRETA, e devolver as duas listas VAZIAS também é. Declarar é \
+sempre melhor que forçar: uma vaga declarada não engana ninguém, uma condição \
+forçada engana. **Mas declarar não é saída fácil:** cada declaração é lida \
+por uma pessoa, que pergunta se existia uma condição honesta. Escreva sempre \
+que houver uma; declare só quando não houver.
 
 7. ZERO DÍGITOS. Nenhum algarismo, em nenhuma forma.
 
@@ -602,8 +740,8 @@ vulnerabilidade
 9f. PRECEDÊNCIA. O anti-spoiler **REBAIXA o teto de abstração disponível** \
 (regra 13). Se a única formulação que evita o \
 spoiler já não tiver lastro pleno na paráfrase, a resposta é **SALTAR O \
-TEMA** — nunca escolher a menos pior. É PROIBIDO sacrificar lastro para caber \
-nesta regra.
+TEMA** — declará-lo em `sem_condicao` (R6, ou "R6/R12") —, nunca escolher a \
+menos pior. É PROIBIDO sacrificar lastro para caber nesta regra.
 
 9g. EXPECTATIVA E REPUTAÇÃO SÃO ASSUNTO LEGÍTIMO, e não são spoiler. Quando o \
 tema fala de hype, de o filme ser considerado superestimado, ou de a \
@@ -636,7 +774,11 @@ continuar sustentada. Abstrair além disso é inventar; especificar além disso 
 
 Responda APENAS com JSON puro:
 {"vale_a_pena": [{"texto": "...", "tema_origem": "POS-A"}],
- "talvez_evite": [{"texto": "...", "tema_origem": "NEG-A"}]}"""
+ "talvez_evite": [{"texto": "...", "tema_origem": "NEG-A"}],
+ "sem_condicao": [{"tema_origem": "NEG-C", "regra": "R6", "motivo": "..."}]}
+
+Cada tema recebido aparece UMA vez: numa das duas listas de condições OU em \
+`sem_condicao` — nunca nas duas."""
 
 
 # ===========================================================================
@@ -731,7 +873,24 @@ def _validar_ancora(cond: dict, idx: dict) -> list[str]:
     if len(copiaveis) >= 3 and _seq_maxima(cond["texto"], t["tema"]) >= len(
             V.palavras_de_conteudo(t["tema"])):
         flags.append("tema_verbatim")
-    if _seq_maxima(cond["texto"], t["exemplo"]) >= MAX_SEQ_EXEMPLO:
+    # [piloto de expansão] A exceção de NOME PRÓPRIO, estendida do
+    # `tema_verbatim`: uma sequência copiada feita SÓ de nomes não conta.
+    # Caso real: C026 (`get-out-2017`, texto do dono) copia "Daniel Kaluuya e
+    # Allison Williams" — nomear os atores exige o nome deles, e sem os nomes
+    # a sequência copiada é zero.
+    #
+    # **Por que "só de nomes" e não "tirar os nomes e recontar".** MEDIDO: a
+    # forma literal derruba a cópia real da rodada 1 que o teste de par trava
+    # ("…as inseguranças e a vida pessoal de Napoleão" — sem o nome, 3 < 4).
+    # Ali o nome vem colado à frase de outra pessoa; em C026 o nome É a
+    # frase. Sobre os 405 textos em disco (35 do catálogo + piloto, com as
+    # descartadas), as duas formas e a regra antiga dão o MESMO resultado
+    # (5 disparos); só os casos acima separam. Resíduo declarado: uma
+    # sequência de uma palavra comum mais três nomes ainda reprova — zero
+    # casos em disco.
+    nomes = nomes_proprios(t["exemplo"]) | nomes_proprios(cond["texto"])
+    if _seq_maxima(cond["texto"], t["exemplo"],
+                   nomes=nomes) >= MAX_SEQ_EXEMPLO:
         flags.append("exemplo_verbatim")
     return flags
 
@@ -754,8 +913,71 @@ def _validar_discriminacao(cond: dict, idx: dict) -> list[str]:
     return []
 
 
+# [piloto de expansão] AUTORIA HUMANA — a régua muda para quem escreveu, e
+# só para ele. Decisão do dono (opção a), sobre número:
+#
+# **O achado.** Nas 18 correções do dono ao lote `0ec05ad3e326` — texto
+# aprovado POR DEFINIÇÃO, o único conjunto rotulado que existe — as flags
+# LÉXICAS reprovam **7 (39%)**, e as EXATAS, **zero**. O motivo é de
+# construção: a régua léxica compara PREFIXOS, e o dono usou sinônimos
+# ("interpretações" por "atuações", "figuras" por "personagens", "dentro de
+# casa" por "doméstico") — exatamente a abstração que a regra 13 do prompt
+# (R12 do relatório) EXIGE. Aplicada a texto humano, a trava reprova o
+# comportamento que outra regra do sistema obriga. O desenho já registrava
+# que o proxy é lexical e o defeito semântico para o que ele DEIXA PASSAR;
+# isto é o espelho, o que ele reprova indevidamente.
+#
+# **O que muda, e o que não muda.** Texto com `origem: "leitura_humana"`
+# passa só pelas flags exatas; as de `FLAGS_LEXICAS` viram AVISO, que o
+# harness de publicação grava na condição. Texto do MODELO continua sob a
+# trava inteira — `extrair` nunca propaga `origem`, então a saída do modelo
+# não tem como se declarar humana.
+#
+# **Fora das duas listas do dono, e por isso ainda TRAVA para texto humano:**
+# `vazio`, `nota_ou_score`, `idioma` e `cliche`. Nenhum deles foi nomeado
+# como léxico; tratá-los como aviso seria afrouxar por inferência. Nenhuma
+# das 18 frases do dono dispara algum deles (MEDIDO: zero flag exata nas 18).
+#
+# Não entrou a opção (b) — reescrever o texto do dono para passar no léxico
+# seria o validador redigindo o produto — nem a (d) — tirar palavras de
+# discurso de `mesmo_assunto` muda também os pares e espera a rotulagem.
+ORIGEM_MODELO = "modelo"
+ORIGEM_HUMANA = "leitura_humana"
+ORIGENS = (ORIGEM_MODELO, ORIGEM_HUMANA)
+
+# 1c, 1d e o validador 2 — os que comparam PALAVRA, não FORMA.
+FLAGS_LEXICAS = frozenset({
+    "ancora_nao_verificavel",   # 1c
+    "tema_verbatim",            # 1d
+    "exemplo_verbatim",         # 1d
+    "sem_discriminacao",        # validador 2
+})
+
+
+def validar_com_avisos(cond: dict, idx: dict) -> tuple[list[str], list[str]]:
+    """`(trava, avisos)` de UMA condição.
+
+    Texto do modelo: tudo é trava, `avisos` é sempre vazio. Texto de autoria
+    humana (`origem == ORIGEM_HUMANA`): as flags de `FLAGS_LEXICAS` saem da
+    trava e vão para `avisos`; as exatas continuam travando.
+    """
+    flags = _todas_as_flags(cond, idx)
+    if cond.get("origem") != ORIGEM_HUMANA:
+        return flags, []
+    return ([f for f in flags if f not in FLAGS_LEXICAS],
+            [f for f in flags if f in FLAGS_LEXICAS])
+
+
 def validar(cond: dict, idx: dict) -> list[str]:
-    """As flags mecânicas de UMA condição. Lista ordenada, vazia = limpa."""
+    """As flags que TRAVAM uma condição. Lista ordenada, vazia = limpa.
+
+    Para texto de autoria humana, só as exatas (as léxicas estão em
+    `validar_com_avisos`)."""
+    return validar_com_avisos(cond, idx)[0]
+
+
+def _todas_as_flags(cond: dict, idx: dict) -> list[str]:
+    """As flags mecânicas de UMA condição, sem olhar a autoria."""
     texto = cond.get("texto") or ""
     if not texto.strip():
         return ["vazio"]
@@ -816,7 +1038,157 @@ _EXPLICACAO = {
     "sem_discriminacao": "o outro grupo fala do MESMO assunto e a sua frase "
                          "não diz qual das duas leituras ela oferece: use a "
                          "palavra que separa uma da outra",
+    "tema_repetido": "o mesmo tema aparece duas vezes — em duas condições, "
+                     "ou numa condição e em `sem_condicao`",
 }
+
+
+# ===========================================================================
+# [piloto de expansão] SEM CONDIÇÃO PUBLICÁVEL — a recusa DECLARADA
+# ===========================================================================
+# **O defeito que isto fecha, e ele era do SELETOR, não do prompt.** A regra
+# 6 sempre permitiu saltar um tema, mas em silêncio, e a chave do best-of
+# ordenava por temas cobertos: uma amostra que recusasse corretamente
+# PERDIA para uma que escrevesse mal. MEDIDO no piloto: `speak-no-evil-2022`
+# teve candidatos cobrindo 7, 4 e 7 temas, e o de 4 perdeu; C024 e C089 foram
+# ao modelo com a marca "SALTE o tema" e saíram escritos. O dono recusou os
+# dois (R6) e C051 (R2) por não terem condição honesta.
+#
+# **O canal.** O modelo DECLARA a recusa (`sem_condicao`), com regra de um
+# conjunto FECHADO e motivo curto; a recusa válida conta como tema RESOLVIDO
+# na chave do best-of, o silêncio continua não contando. O bloco publicado
+# guarda as recusas em `sem_condicao_publicavel`, com a `origem` (modelo ou
+# leitura humana). **O motivo nunca vai para a página** — `frontend/build_data`
+# o retira.
+#
+# **O que a recusa NÃO faz:** puxar o próximo tema. Seleção é do código e
+# não cai para o tema de ordem N+1 — o mesmo princípio dos bullets de eixo
+# ("a lista encurta em vez de ser completada"), do par obrigatório
+# ("acrescenta, nunca substitui") e da regra 6 ("proibido completar cota").
+# Coluna vazia é BLOQUEIO do filme, decidido por pessoa.
+#
+# Os códigos são os do RELATÓRIO de revisão (R1…R13), não os números das
+# regras do prompt — é a mesma recusa que o dono escreve, e a revisão lê as
+# duas lado a lado.
+REGRAS_DE_RECUSA = {
+    "R1": "âncora e fidelidade",
+    "R2": "sinal e ressalva",
+    "R6": "anti-spoiler",
+    "R12": "especificidade",
+    "R13": "expectativa",
+}
+TETO_PALAVRAS_MOTIVO = 20
+
+
+def regras_da_recusa(regra: str | None) -> list[str]:
+    """`"R6/R12"` → `["R6", "R12"]`. Mais de uma regra, separadas por barra,
+    é a forma que o dono usou (C089)."""
+    return [p.strip().upper() for p in (regra or "").split("/") if p.strip()]
+
+
+def validar_recusa(r: dict, lado_de: dict[str, str]) -> list[str]:
+    """As flags de UMA recusa — todas EXATAS. `lado_de` = `{tema pedido:
+    lado}`. Vazia = recusa válida."""
+    flags = []
+    tid = (r.get("tema_origem") or "").strip().upper()
+    if tid not in lado_de:
+        flags.append("recusa_tema_nao_pedido")
+    elif r.get("lado") and r["lado"] != lado_de[tid]:
+        flags.append("recusa_de_outro_lado")
+    codigos = regras_da_recusa(r.get("regra"))
+    if not codigos or any(c not in REGRAS_DE_RECUSA for c in codigos):
+        flags.append("recusa_regra_invalida")
+    motivo = (r.get("motivo") or "").strip()
+    if not motivo:
+        flags.append("recusa_sem_motivo")
+    elif len(re.findall(r"\S+", motivo)) > TETO_PALAVRAS_MOTIVO:
+        flags.append("recusa_motivo_longo")
+    if "origem" in r and r["origem"] not in ORIGENS:
+        flags.append("recusa_origem_invalida")
+    return sorted(flags)
+
+
+def consolidar_recusas(bloco: dict, idx: dict) -> dict:
+    """A regra do PAR aplicada às recusas de um bloco, e `temas_saltados`
+    recalculado. Devolve uma cópia; idempotente.
+
+    - **forçado recusado** → o tema de BASE continua publicável e ganha a
+      marca `par_recusado: <forçado>`. Tirá-lo puniria o tema mais citado
+      pela falha do forçado; a revisão julga se ele sozinho achata a
+      recepção (o defeito `napoleon`).
+    - **base recusado** → o par se desfaz: o forçado foi puxado para mostrar
+      a objeção a um traço que a página já não afirma. Ele sai da coluna
+      para `par_desfeito`, com o tema que o puxou.
+
+    `temas_saltados` passa a ser o SILÊNCIO: pedido, não publicado, não
+    recusado e não desfeito. As descartadas continuam dentro dele, como
+    antes.
+    """
+    import copy
+
+    b = copy.deepcopy(bloco)
+    recusados = {r.get("tema_origem")
+                 for r in b.get("sem_condicao_publicavel") or []}
+    for lado in LADOS:
+        for c in b.get(lado) or []:
+            c.pop("par_recusado", None)
+    for p in pares_obrigatorios(idx):
+        if p["forcado"] in recusados:
+            for c in b.get(p["lado_base"]) or []:
+                if c.get("tema_origem") == p["base"]:
+                    c["par_recusado"] = p["forcado"]
+        if p["base"] in recusados:
+            col = b.get(p["lado_forcado"]) or []
+            for c in [c for c in col if c.get("tema_origem") == p["forcado"]]:
+                col.remove(c)
+                b.setdefault("par_desfeito", []).append(
+                    {**c, "lado": p["lado_forcado"], "tema_base": p["base"]})
+    if b.get("temas_pedidos"):
+        fora = recusados | {c.get("tema_origem")
+                            for c in b.get("par_desfeito") or []}
+        b["temas_saltados"] = {
+            l: [t for t in b["temas_pedidos"].get(l) or []
+                if t not in {c.get("tema_origem") for c in b.get(l) or []}
+                and t not in fora]
+            for l in LADOS}
+    return b
+
+
+def inconsistencias_de_recusa(bloco: dict, idx: dict) -> list[str]:
+    """O que impede publicar um bloco, do lado das recusas. Vazio = limpo.
+
+    Cada recusa: válida por `validar_recusa`, com `origem` explícita, e o
+    tema dela nem publicado nem recusado duas vezes. O par: consolidado
+    exatamente como `consolidar_recusas` o deixaria.
+    """
+    pedidos = bloco.get("temas_pedidos") or {}
+    if any(pedidos.get(l) for l in LADOS):
+        lado_de = {t: l for l in LADOS for t in pedidos.get(l) or []}
+    else:
+        lado_de = {t["id"]: l for l, bk in BUCKET_DO_LADO.items()
+                   for t in idx.values() if t["bucket"] == bk}
+    publicados = {c.get("tema_origem") for l in LADOS for c in bloco.get(l) or []}
+    problemas, vistos = [], set()
+    for r in bloco.get("sem_condicao_publicavel") or []:
+        tid = r.get("tema_origem")
+        fs = validar_recusa(r, lado_de)
+        if "origem" not in r:
+            fs.append("recusa_sem_origem")
+        if tid in publicados or tid in vistos:
+            fs.append("tema_repetido")
+        vistos.add(tid)
+        if fs:
+            problemas.append(f"sem_condicao [{tid}] {sorted(fs)}")
+    esperado = consolidar_recusas(bloco, idx)
+    for l in LADOS:
+        tem = [(c.get("tema_origem"), c.get("par_recusado"))
+               for c in bloco.get(l) or []]
+        deve = [(c.get("tema_origem"), c.get("par_recusado"))
+                for c in esperado.get(l) or []]
+        if tem != deve:
+            problemas.append(f"par não consolidado na coluna `{l}`: {tem} "
+                             f"deveria ser {deve} (condicoes.consolidar_recusas)")
+    return problemas
 
 
 # ===========================================================================
@@ -826,24 +1198,37 @@ _EXPLICACAO = {
 def extrair(bruto: str) -> dict:
     """As condições da resposta do modelo. Mesma tolerância de
     `veredito.extrair_veredito`: JSON bem formado no caminho normal, e o
-    maior bloco `{...}` quando o modelo embrulha em prosa."""
+    maior bloco `{...}` quando o modelo embrulha em prosa.
+
+    [piloto de expansão] Lê também `sem_condicao` — a recusa declarada. A
+    validação (tema pedido, regra do conjunto, motivo curto) é de
+    `validar_recusa`, porque precisa do briefing; aqui só se normaliza.
+
+    **Os dicts são montados campo a campo, e isso é a trava do texto do
+    modelo:** nenhuma `origem` que o modelo escreva chega adiante — a saída
+    dele não tem como se declarar `leitura_humana` e escapar das flags
+    léxicas.
+    """
     import json
+
+    def vazio():
+        return {"vale_a_pena": [], "talvez_evite": [], "sem_condicao": []}
 
     bruto = (bruto or "").strip()
     if not bruto:
-        return {l: [] for l in LADOS}
+        return vazio()
     try:
         d = json.loads(bruto)
     except ValueError:
         m = re.search(r"\{.*\}", bruto, re.S)
         if not m:
-            return {l: [] for l in LADOS}
+            return vazio()
         try:
             d = json.loads(m.group(0))
         except ValueError:
-            return {l: [] for l in LADOS}
+            return vazio()
     if not isinstance(d, dict):
-        return {l: [] for l in LADOS}
+        return vazio()
     saida = {}
     for lado in LADOS:
         itens = d.get(lado) or []
@@ -854,14 +1239,25 @@ def extrair(bruto: str) -> dict:
             for i in itens
             if isinstance(i, dict) and (i.get("texto") or "").strip()
         ]
+    recusas = d.get("sem_condicao")
+    saida["sem_condicao"] = [
+        {"tema_origem": (i.get("tema_origem") or "").strip().upper(),
+         "regra": "/".join(regras_da_recusa(
+             "/".join(map(str, i["regra"])) if isinstance(i.get("regra"), list)
+             else str(i.get("regra") or ""))),
+         "motivo": str(i.get("motivo") or "").strip()}
+        for i in (recusas if isinstance(recusas, list) else [])
+        if isinstance(i, dict) and (i.get("tema_origem") or "").strip()
+    ]
     return saida
 
 
 def _medir(cand: dict, b: dict) -> dict:
     """Mede UM candidato inteiro (o conjunto de condições de uma amostra)."""
     idx = b["idx"]
-    pedidos = {t["id"] for lado in LADOS for t in b["selecao"][lado]}
-    conds, flags_totais = [], []
+    lado_de = {t["id"]: lado for lado in LADOS for t in b["selecao"][lado]}
+    pedidos = set(lado_de)
+    conds = []
     vistos = set()
     for lado in LADOS:
         for c in cand[lado]:
@@ -873,14 +1269,33 @@ def _medir(cand: dict, b: dict) -> dict:
                 fs = sorted(set(fs) | {"tema_repetido"})
             vistos.add(c["tema_origem"])
             conds.append({**c, "flags": fs})
-            flags_totais += fs
-    cobertos = vistos & pedidos
+    # [piloto de expansão] As recusas declaradas. Tema escrito E recusado é
+    # a mesma desobediência que o `tema_repetido` já pega, e marca as DUAS
+    # pontas: a recusa deixa de valer e a condição vai ao retry.
+    recusas, recusados_vistos = [], set()
+    for r in cand.get("sem_condicao") or []:
+        tid = r["tema_origem"]
+        fs = validar_recusa(r, lado_de)
+        if tid in vistos or tid in recusados_vistos:
+            fs = sorted(set(fs) | {"tema_repetido"})
+            for c in conds:
+                if c["tema_origem"] == tid:
+                    c["flags"] = sorted(set(c["flags"]) | {"tema_repetido"})
+        recusados_vistos.add(tid)
+        recusas.append({**r, "lado": lado_de.get(tid), "flags": fs})
+    flags_totais = ([f for c in conds for f in c["flags"]]
+                    + [f for r in recusas for f in r["flags"]])
+    escritos = vistos & pedidos
+    recusados = {r["tema_origem"] for r in recusas if not r["flags"]} & pedidos
     return {
         "condicoes": conds,
+        "recusas": recusas,
         "n_condicoes": len(conds),
         "n_flags": len(flags_totais),
         "flags": sorted(set(flags_totais)),
-        "n_temas_cobertos": len(cobertos),
+        "n_temas_cobertos": len(escritos),
+        "n_temas_recusados": len(recusados),
+        "n_temas_resolvidos": len(escritos | recusados),
         "n_temas_pedidos": len(pedidos),
     }
 
@@ -888,16 +1303,37 @@ def _medir(cand: dict, b: dict) -> dict:
 def _chave(m: dict) -> tuple:
     """Menor é melhor.
 
-    **PRIMÁRIA — cobertura de temas pedidos**, negada. É o análogo direto da
-    "informatividade ancorada" do §3[V], e existe pela mesma razão registrada
-    lá: a primeira ideia natural ("o mais curto", ou aqui "o mais limpo")
-    otimiza na direção do defeito — a saída perfeitamente limpa é a lista
-    vazia. A abstenção precisa ser possível sem ser premiada.
+    **PRIMÁRIA — temas RESOLVIDOS**, negada: escritos mais os DECLARADOS sem
+    condição com recusa válida. O silêncio continua não contando. É o
+    análogo da "informatividade ancorada" do §3[V], e existe pela mesma
+    razão registrada lá: a primeira ideia natural ("o mais limpo") otimiza
+    na direção do defeito — a saída perfeitamente limpa é a lista vazia.
 
-    **SECUNDÁRIA — menos flags.** Empate cai no primeiro índice, arbitrário e
-    determinístico.
+    [piloto de expansão] **Até aqui a primária era só `n_temas_cobertos`
+    (escritos), e isso PUNIA a recusa:** a amostra que recusasse um tema sem
+    condição honesta perdia para a que o escrevesse mal — o contrário do
+    "abstenção possível sem ser premiada" que este docstring pedia. MEDIDO:
+    `speak-no-evil-2022`, candidatos com 7, 4 e 7 temas; C024 e C089 saíram
+    escritos mesmo com a marca "SALTE o tema".
+
+    **SECUNDÁRIA — menos flags.**
+
+    **TERCIÁRIA — mais temas ESCRITOS.** Com cobertura e flags iguais, vence
+    quem escreveu: recusa válida não tem flag, e sem este desempate recusar
+    viraria o caminho de menor atrito.
+
+    **Risco declarado, MEDIDO sobre a telemetria existente:** em 12 dos 35
+    filmes do catálogo e 2 dos 18 do piloto, os três candidatos tinham ao
+    menos uma flag. Nesses, a secundária decide antes da terciária: um
+    candidato que DECLARE os temas difíceis (zero flag) vence os que os
+    escreveram com flag — mesmo quando o retry teria consertado a frase. A
+    revisão por lote confere as recusas ("a recusa procede?"); a taxa de
+    recusa se mede na primeira geração sob o canal novo.
+
+    Empate final cai no primeiro índice, arbitrário e determinístico.
     """
-    return (-m["n_temas_cobertos"], m["n_flags"], m["indice"])
+    return (-m["n_temas_resolvidos"], m["n_flags"], -m["n_temas_cobertos"],
+            m["indice"])
 
 
 def selecionar_candidato(candidatos: list[dict], b: dict) -> dict:
@@ -918,17 +1354,23 @@ def selecionar_candidato(candidatos: list[dict], b: dict) -> dict:
         "indice": vencedor["indice"],
         "medida": vencedor,
         "candidatos": [{k: m[k] for k in ("indice", "n_condicoes", "n_flags",
-                                          "flags", "n_temas_cobertos")}
+                                          "flags", "n_temas_cobertos",
+                                          "n_temas_recusados",
+                                          "n_temas_resolvidos")}
                        for m in medidos],
     }
 
 
 def prompt_retry(medida: dict) -> str:
-    """O retry DIRECIONADO: diz o que reprovou, condição a condição."""
+    """O retry DIRECIONADO: diz o que reprovou, condição a condição.
+
+    Sem algarismo nenhum, nem código de regra: o texto é concatenado à
+    mensagem do usuário, onde vale a garantia de zero algarismo."""
     L = ["Algumas condições foram REPROVADAS. Reescreva SOMENTE as listadas "
          "abaixo, mantendo o mesmo tema de origem e o mesmo lado. Se alguma "
-         "não puder ser corrigida sem inventar, DEVOLVA-A VAZIA — saltar o "
-         "tema é uma resposta correta.",
+         "não puder ser corrigida sem inventar, DECLARE o tema em "
+         "`sem_condicao`, com a regra e o motivo — declarar é uma resposta "
+         "correta.",
          "",
          "E a mesma PRECEDÊNCIA do anti-spoiler vale aqui: se corrigir exigiria "
          "abstrair além do que a paráfrase sustenta, SALTE o tema em vez de "
@@ -1003,9 +1445,12 @@ def gerar(output: dict, *, n: int = BEST_OF_N, provider: str | None = None,
     escolha = selecionar_candidato(candidatos, b)
     medida = escolha["medida"]
     retry = None
+    lado_de = {t["id"]: lado for lado in LADOS for t in b["selecao"][lado]}
+    recusas = list(medida["recusas"])
 
-    # Degrau único: se alguma condição tem flag, retry DIRECIONADO só delas.
-    if medida["n_flags"]:
+    # Degrau único: se alguma CONDIÇÃO tem flag, retry DIRECIONADO só delas.
+    # (Recusa inválida não vai ao retry: fica registrada e o tema, sem voz.)
+    if any(c["flags"] for c in medida["condicoes"]):
         bruto, uso, dt = gerar(PROMPT_CONDICOES,
                                user + "\n\n" + prompt_retry(medida))
         usos.append(uso)
@@ -1013,8 +1458,11 @@ def gerar(output: dict, *, n: int = BEST_OF_N, provider: str | None = None,
         corrigidas = extrair(bruto)
         por_tema = {c["tema_origem"]: c
                     for lado in LADOS for c in corrigidas[lado]}
+        recusadas_no_retry = {r["tema_origem"]: r
+                              for r in corrigidas["sem_condicao"]}
+        ja_recusados = {r["tema_origem"] for r in recusas if not r["flags"]}
         novas = []
-        aplicadas = saltadas_no_retry = 0
+        aplicadas = saltadas_no_retry = n_recusadas = 0
         for c in medida["condicoes"]:
             if not c["flags"]:
                 novas.append(c)
@@ -1028,6 +1476,17 @@ def gerar(output: dict, *, n: int = BEST_OF_N, provider: str | None = None,
                 continue
             if not nova:
                 saltadas_no_retry += 1
+                # O modelo pode DECLARAR, no retry, que o tema reprovado não
+                # tem condição honesta. A frase reprovada continua indo para
+                # `descartadas` (abaixo); a recusa, se válida, vale.
+                r = recusadas_no_retry.get(c["tema_origem"])
+                if r is not None and c["tema_origem"] not in ja_recusados:
+                    fr = validar_recusa(r, lado_de)
+                    recusas.append({**r, "lado": lado_de.get(
+                        c["tema_origem"]), "flags": fr})
+                    if not fr:
+                        n_recusadas += 1
+                        ja_recusados.add(c["tema_origem"])
             # **Nada desaparece sem registro.** A condição reprovada que o
             # retry não melhorou (ou que o modelo saltou) permanece na lista
             # COM as flags dela, e a eliminação final a manda para
@@ -1041,7 +1500,8 @@ def gerar(output: dict, *, n: int = BEST_OF_N, provider: str | None = None,
         retry = {"n_reprovadas": reprovadas,
                  "n_aplicadas": aplicadas,
                  "n_saltadas_pelo_modelo": saltadas_no_retry,
-                 "n_descartadas": reprovadas - aplicadas}
+                 "n_descartadas": reprovadas - aplicadas,
+                 "n_recusadas_pelo_modelo": n_recusadas}
         medida = {**medida, "condicoes": novas}
 
     # Eliminação final: condição que ainda tem flag NÃO é publicada.
@@ -1069,18 +1529,31 @@ def gerar(output: dict, *, n: int = BEST_OF_N, provider: str | None = None,
         por_lado[lado].sort(key=lambda c: posicao.get(c["tema_origem"], 99))
 
     pedidos = {l: [t["id"] for t in b["selecao"][l]] for l in LADOS}
-    escritos = {l: {c["tema_origem"] for c in por_lado[l]} for l in LADOS}
-    return {
+    bloco = {
         "vale_a_pena": por_lado["vale_a_pena"],
         "talvez_evite": por_lado["talvez_evite"],
         "ordem_colunas": b["ordem_colunas"],
         "peso": b["peso"],
         "peso_meio": b["peso_meio"],
-        "origem": "llm" if limpas else "abstencao",
+        "origem": None,                     # decidido depois do par, abaixo
         "temas_pedidos": pedidos,
-        "temas_saltados": {l: [t for t in pedidos[l] if t not in escritos[l]]
-                           for l in LADOS},
+        "temas_saltados": {l: [] for l in LADOS},   # idem
         "descartadas": descartadas,
+        # [piloto de expansão] A recusa declarada e válida. O `motivo` é
+        # material de revisão e nunca vai para a página.
+        "sem_condicao_publicavel": [
+            {"tema_origem": r["tema_origem"], "lado": r["lado"],
+             "regra": r["regra"], "motivo": r["motivo"],
+             "origem": ORIGEM_MODELO}
+            for r in sorted((r for r in recusas if not r["flags"]),
+                            key=lambda r: posicao.get(r["tema_origem"], 99))],
+        "par_desfeito": [],
+        # Nada desaparece sem registro: a recusa que não valeu fica aqui, e
+        # o tema dela volta a ser silêncio (`temas_saltados`).
+        "recusas_invalidas": [
+            {"tema_origem": r["tema_origem"], "lado": r["lado"],
+             "regra": r["regra"], "motivo": r["motivo"], "flags": r["flags"]}
+            for r in recusas if r["flags"]],
         "retry": retry,
         "provider": provider,
         "modelo": modelo,
@@ -1092,3 +1565,7 @@ def gerar(output: dict, *, n: int = BEST_OF_N, provider: str | None = None,
         "latencia_s": round(sum(latencias), 2),
         "spec_version": SPEC_VERSION,
     }
+    bloco = consolidar_recusas(bloco, idx)
+    bloco["origem"] = ("llm" if any(bloco[l] for l in LADOS)
+                       else "abstencao")
+    return bloco

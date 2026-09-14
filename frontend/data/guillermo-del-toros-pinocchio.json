@@ -1,0 +1,1518 @@
+{
+  "slug": "guillermo-del-toros-pinocchio",
+  "data_coleta": "2026-09-13T05:30:35.705151+00:00",
+  "spec_version": "1.9.50",
+  "total_reviews_observadas": 576,
+  "reviews_url": "https://letterboxd.com/film/guillermo-del-toros-pinocchio/reviews/",
+  "ficha": {
+    "titulo": "Pinóquio por Guillermo del Toro",
+    "sinopse_oficial": "Uma versão mais sombria do clássico conto de fadas infantil, onde um boneco de madeira se transforma em um menino vivo de verdade.",
+    "sinopse_fallback_en": false,
+    "generos": [
+      "Animação",
+      "Fantasia",
+      "Aventura",
+      "Drama"
+    ],
+    "duracao_min": 117,
+    "diretor": "Mark Gustafson",
+    "diretor_transliterado": false,
+    "ano": 2022,
+    "fonte": "tmdb",
+    "tmdb_id": 555604,
+    "tmdb_fetched_at": "2026-09-10T20:06:45+00:00",
+    "poster_path": "/x3IkO2sW4rSSVluFDz8isr6YDm8.jpg",
+    "poster_largura": 1482,
+    "poster_altura": 2222,
+    "backdrop_paths": [
+      "/e782pDRAlu4BG0ahd777n8zfPzZ.jpg",
+      "/qXOxYzPSPY9viZTgs7O6vNBOB7Y.jpg",
+      "/vIn8jG3KjqDg1EwmWU6JpiojO2e.jpg",
+      "/2JeIqOdSM5nC1SQmuhUOfj3iB1U.jpg",
+      "/tyNqJUWqqb0tjhqXYH4uwRwsp6A.jpg",
+      "/9k7FnCP20c6FsXgBNJpQaB19LiU.jpg",
+      "/b4g8Lpkpja8A7NROwAuaIMyhZqq.jpg",
+      "/13jnc1s33txOYATAN0RDvf6UZjm.jpg",
+      "/2ep6M2iWDrJtfT64vFjHWlkFKPI.jpg",
+      "/piWaItrWQZZukmVlvN4vToZoTel.jpg"
+    ],
+    "backdrop_path": "/e782pDRAlu4BG0ahd777n8zfPzZ.jpg",
+    "backdrop_largura": 3840,
+    "backdrop_altura": 2160,
+    "poster_sem_texto_path": "/f9bQQcCyrX5V97oqy1x8LEpo39A.jpg",
+    "poster_sem_texto_largura": 2000,
+    "poster_sem_texto_altura": 3000,
+    "galeria_stills": [
+      {
+        "still_path": "/13jnc1s33txOYATAN0RDvf6UZjm.jpg",
+        "still_largura": 3840,
+        "still_altura": 2160
+      },
+      {
+        "still_path": "/qXOxYzPSPY9viZTgs7O6vNBOB7Y.jpg",
+        "still_largura": 3840,
+        "still_altura": 2160
+      },
+      {
+        "still_path": "/2JeIqOdSM5nC1SQmuhUOfj3iB1U.jpg",
+        "still_largura": 3840,
+        "still_altura": 2160
+      },
+      {
+        "still_path": "/b4g8Lpkpja8A7NROwAuaIMyhZqq.jpg",
+        "still_largura": 3840,
+        "still_altura": 2160
+      },
+      {
+        "still_path": "/piWaItrWQZZukmVlvN4vToZoTel.jpg",
+        "still_largura": 3840,
+        "still_altura": 2160
+      },
+      {
+        "still_path": "/29UUaeTPJo9sOXsD7dHZqwdrtqi.jpg",
+        "still_largura": 1280,
+        "still_altura": 720
+      },
+      {
+        "still_path": "/9W9Ef7qJfF7zu0xb1Zcl3x6tHRt.jpg",
+        "still_largura": 1600,
+        "still_altura": 900
+      },
+      {
+        "still_path": "/twGcVmQk4cUTmrDFS9F48qeHT0z.jpg",
+        "still_largura": 3200,
+        "still_altura": 1800
+      },
+      {
+        "still_path": "/3ZtmcC5cM7IHtGRLYwyFTgBCB7G.jpg",
+        "still_largura": 1536,
+        "still_altura": 864
+      },
+      {
+        "still_path": "/AcpGhYwIGCeF63358rYEOIvZLNZ.jpg",
+        "still_largura": 1536,
+        "still_altura": 864
+      },
+      {
+        "still_path": "/e1uErLlaHYHPhVqG8ujWlZjgsIR.jpg",
+        "still_largura": 1574,
+        "still_altura": 885
+      },
+      {
+        "still_path": "/n8rF1mqNwvUwqQviFc1QhOzjKZE.jpg",
+        "still_largura": 1415,
+        "still_altura": 796
+      }
+    ],
+    "ano_fonte": "letterboxd",
+    "identidade": {
+      "versao": 1,
+      "status": "validada",
+      "slug": "guillermo-del-toros-pinocchio",
+      "titulo_letterboxd": "Guillermo del Toro's Pinocchio",
+      "ano_letterboxd": 2022,
+      "tmdb_id_letterboxd": 555604,
+      "tmdb_id_escolhido": 555604,
+      "fonte_id": "letterboxd",
+      "titulo_tmdb_campo": "original_title",
+      "titulo_tmdb_correspondente": "Guillermo del Toro's Pinocchio",
+      "ano_tmdb": 2022,
+      "ano_divergente": false
+    }
+  },
+  "distribuicao": {
+    "n_notas_total": 714140,
+    "por_nivel": {
+      "0.5": 1778,
+      "1.0": 4328,
+      "1.5": 2944,
+      "2.0": 14397,
+      "2.5": 16604,
+      "3.0": 67857,
+      "3.5": 104623,
+      "4.0": 238179,
+      "4.5": 114265,
+      "5.0": 149165
+    },
+    "por_bucket": {
+      "negativas": 3,
+      "medianas": 12,
+      "positivas": 85
+    },
+    "fonte": "letterboxd_histograma"
+  },
+  "coleta": {
+    "slug": "guillermo-del-toros-pinocchio",
+    "coletado_em": "2026-09-10T19:37:49.434080+00:00",
+    "versao_coletor": "1.9.6",
+    "ordenacao_usada": "by/added",
+    "histograma_bruto": {
+      "0.5": 1778,
+      "1.0": 4328,
+      "1.5": 2944,
+      "2.0": 14397,
+      "2.5": 16604,
+      "3.0": 67857,
+      "3.5": 104623,
+      "4.0": 238179,
+      "4.5": 114265,
+      "5.0": 149165
+    },
+    "orcamento_paginas_por_nivel": {
+      "0.5": 1,
+      "1.0": 3,
+      "1.5": 2,
+      "2.0": 10,
+      "2.5": 6,
+      "3.0": 10,
+      "3.5": 3,
+      "4.0": 6,
+      "4.5": 3,
+      "5.0": 4
+    },
+    "paginas_gastas_por_nivel": {
+      "0.5": 1,
+      "1.0": 3,
+      "1.5": 2,
+      "2.0": 10,
+      "2.5": 6,
+      "3.0": 10,
+      "3.5": 3,
+      "4.0": 6,
+      "4.5": 3,
+      "5.0": 4
+    },
+    "paradas_por_limite": [
+      "0.5",
+      "1.0",
+      "1.5",
+      "2.0",
+      "2.5",
+      "3.0",
+      "3.5",
+      "4.0",
+      "4.5",
+      "5.0"
+    ],
+    "contagem_bruta_por_nivel": {
+      "0.5": 12,
+      "1.0": 36,
+      "1.5": 24,
+      "2.0": 120,
+      "2.5": 72,
+      "3.0": 120,
+      "3.5": 36,
+      "4.0": 72,
+      "4.5": 36,
+      "5.0": 48
+    },
+    "contagem_estimada_valida_por_nivel": {
+      "0.5": 5,
+      "1.0": 15,
+      "1.5": 7,
+      "2.0": 28,
+      "2.5": 22,
+      "3.0": 36,
+      "3.5": 10,
+      "4.0": 20,
+      "4.5": 9,
+      "5.0": 14
+    },
+    "motivo_parada_por_nivel": {
+      "0.5": "orcamento_esgotado",
+      "1.0": "orcamento_esgotado",
+      "1.5": "orcamento_esgotado",
+      "2.0": "orcamento_esgotado",
+      "2.5": "orcamento_esgotado",
+      "3.0": "orcamento_esgotado",
+      "3.5": "orcamento_esgotado",
+      "4.0": "orcamento_esgotado",
+      "4.5": "orcamento_esgotado",
+      "5.0": "orcamento_esgotado"
+    },
+    "paginas_base_por_nivel": {
+      "0.5": 1,
+      "1.0": 3,
+      "1.5": 2,
+      "2.0": 10,
+      "2.5": 6,
+      "3.0": 10,
+      "3.5": 3,
+      "4.0": 6,
+      "4.5": 3,
+      "5.0": 4
+    },
+    "paginas_extensao_por_nivel": {
+      "0.5": 0,
+      "1.0": 0,
+      "1.5": 0,
+      "2.0": 0,
+      "2.5": 0,
+      "3.0": 0,
+      "3.5": 0,
+      "4.0": 0,
+      "4.5": 0,
+      "5.0": 0
+    },
+    "extensao_por_bucket": {
+      "negativas": {
+        "paginas_base": 16,
+        "paginas_extensao": 0,
+        "extras_por_nivel": {},
+        "motivo_parada": "meta_atingida",
+        "n_validas_pos_base": 55,
+        "n_validas_pos_extensao": 55,
+        "meta": 50
+      },
+      "medianas": {
+        "paginas_base": 16,
+        "paginas_extensao": 0,
+        "extras_por_nivel": {},
+        "motivo_parada": "meta_atingida",
+        "n_validas_pos_base": 58,
+        "n_validas_pos_extensao": 58,
+        "meta": 50
+      },
+      "positivas": {
+        "paginas_base": 16,
+        "paginas_extensao": 0,
+        "extras_por_nivel": {},
+        "motivo_parada": "meta_atingida",
+        "n_validas_pos_base": 53,
+        "n_validas_pos_extensao": 53,
+        "meta": 50
+      }
+    },
+    "profundidade_sondagem": {
+      "nivel_sondado": 4.0,
+      "profundidade": 256,
+      "exata": false,
+      "requisicoes": 4,
+      "motivo": "teto_plataforma"
+    },
+    "profundidade_estimada_por_nivel": {
+      "0.5": 2,
+      "1.0": 5,
+      "1.5": 3,
+      "2.0": 15,
+      "2.5": 18,
+      "3.0": 73,
+      "3.5": 112,
+      "4.0": 256,
+      "4.5": 123,
+      "5.0": 160
+    },
+    "janela_temporal": {
+      "total": {
+        "n": 576,
+        "min": "2019-01-17",
+        "max": "2026-09-10",
+        "p5": "2025-05-25",
+        "p50": "2026-07-25",
+        "p95": "2026-09-09"
+      },
+      "por_bucket": {
+        "negativas": {
+          "n": 192,
+          "min": "2022-11-10",
+          "max": "2026-09-09",
+          "p5": "2025-04-28",
+          "p50": "2026-05-05",
+          "p95": "2026-08-25"
+        },
+        "medianas": {
+          "n": 192,
+          "min": "2019-01-17",
+          "max": "2026-09-10",
+          "p5": "2025-07-01",
+          "p50": "2026-08-09",
+          "p95": "2026-09-07"
+        },
+        "positivas": {
+          "n": 192,
+          "min": "2022-11-08",
+          "max": "2026-09-10",
+          "p5": "2025-12-07",
+          "p50": "2026-09-06",
+          "p95": "2026-09-10"
+        }
+      }
+    },
+    "dias_por_100_paginas": {
+      "n_paginas": 17,
+      "pagina_min": 1,
+      "pagina_max": 128,
+      "dias": 129,
+      "dias_por_100_paginas": 101.5748031496063,
+      "paginas_para_1_ano": 359
+    },
+    "identidade_letterboxd": {
+      "slug": "guillermo-del-toros-pinocchio",
+      "titulo": "Guillermo del Toro's Pinocchio",
+      "ano": 2022,
+      "tmdb_id_letterboxd": 555604,
+      "fonte": "pagina_letterboxd"
+    },
+    "ano_lancamento": 2022,
+    "ano_fonte": "letterboxd",
+    "n_reviews_bruto": 576
+  },
+  "buckets": [
+    {
+      "bucket": "negativas",
+      "alvo": 40,
+      "modo": "completo",
+      "estado_piso": "completa",
+      "n_validas": 40,
+      "share_real": 3,
+      "composicao_alvo": {
+        "0.5": 3,
+        "1.0": 7,
+        "1.5": 5,
+        "2.0": 25
+      },
+      "composicao_atingida": {
+        "0.5": 3,
+        "1.0": 7,
+        "1.5": 5,
+        "2.0": 25
+      },
+      "cascata_por_degrau": {
+        "150": 40
+      },
+      "deficit_redistribuido": 0,
+      "distribuicao_pagina_origem": {
+        "n": 40,
+        "min": 1,
+        "max": 11,
+        "p5": 1,
+        "p50": 3,
+        "p95": 11,
+        "fracao_profunda": 0.2
+      },
+      "janela_amostra": {
+        "n": 40,
+        "min": "2022-12-25",
+        "max": "2026-09-05",
+        "p5": "2025-07-28",
+        "p50": "2026-05-08",
+        "p95": "2026-09-01"
+      },
+      "niveis": [
+        {
+          "nivel": 0.5,
+          "n_validas": 3,
+          "n_alvo": 3,
+          "n_brutas": 12,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 0,
+          "n_descartadas_curtas": 7,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 0,
+          "motivos_descarte": {
+            "truncada_sem_texto": 0,
+            "spoiler": 0,
+            "abaixo_min_chars": 7,
+            "excedente_cota": 2,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 1
+        },
+        {
+          "nivel": 1.0,
+          "n_validas": 7,
+          "n_alvo": 7,
+          "n_brutas": 36,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 0,
+          "n_descartadas_curtas": 21,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 0,
+          "motivos_descarte": {
+            "truncada_sem_texto": 0,
+            "spoiler": 0,
+            "abaixo_min_chars": 21,
+            "excedente_cota": 8,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 3
+        },
+        {
+          "nivel": 1.5,
+          "n_validas": 5,
+          "n_alvo": 5,
+          "n_brutas": 24,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 0,
+          "n_descartadas_curtas": 17,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 0,
+          "motivos_descarte": {
+            "truncada_sem_texto": 0,
+            "spoiler": 0,
+            "abaixo_min_chars": 17,
+            "excedente_cota": 2,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 2
+        },
+        {
+          "nivel": 2.0,
+          "n_validas": 25,
+          "n_alvo": 25,
+          "n_brutas": 120,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 4,
+          "n_descartadas_curtas": 88,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 0,
+          "motivos_descarte": {
+            "truncada_sem_texto": 0,
+            "spoiler": 4,
+            "abaixo_min_chars": 88,
+            "excedente_cota": 3,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 10
+        }
+      ],
+      "temas": [
+        {
+          "tema": "Ritmo lento e arrastado",
+          "mencoes_aproximadas": 12,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "Várias reviews negativas reclamam que o filme é excessivamente lento, com ritmo arrastado e se arrastando, o que torna a experiência cansativa e difícil de terminar.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Pinóquio irritante e personagem desagradável",
+          "mencoes_aproximadas": 10,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "O protagonista é descrito como insuportável, egoísta e malcriado, com uma voz estridente que contribui para a antipatia.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Músicas ruins e mal executadas",
+          "mencoes_aproximadas": 9,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "As canções são criticadas como fracas, sem graça e desnecessárias, muitas vezes parecendo diálogos com ritmo ou letras infantis.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Tom sombrio e deprimente excessivo",
+          "mencoes_aproximadas": 8,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "O clima é percebido como sombrio, depressivo e angustiante, sem equilíbrio, o que torna a experiência desagradável.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Design visual e animação feios ou perturbadores",
+          "mencoes_aproximadas": 8,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "Apesar da técnica impressionante, o visual é considerado feio, perturbador ou sem vida, com personagens de aparência desagradável.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Enredo confuso e mal desenvolvido",
+          "mencoes_aproximadas": 8,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "A história é vista como mal construída, com subtramas mal elaboradas e desenvolvimento fraco, resultando em uma narrativa sem foco.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        }
+      ],
+      "observacao_geral": "As reviews negativas destacam principalmente problemas de ritmo, a antipatia pelo protagonista e a insatisfação com as músicas. Apesar de reconhecerem a qualidade técnica da animação, este grupo considera o tom sombrio excessivo e o enredo pouco envolvente.",
+      "idioma_invalido": false,
+      "escopo_suspeito": false
+    },
+    {
+      "bucket": "medianas",
+      "alvo": 40,
+      "modo": "completo",
+      "estado_piso": "completa",
+      "n_validas": 40,
+      "share_real": 12,
+      "composicao_alvo": {
+        "2.5": 8,
+        "3.0": 32
+      },
+      "composicao_atingida": {
+        "2.5": 8,
+        "3.0": 32
+      },
+      "cascata_por_degrau": {
+        "150": 40
+      },
+      "deficit_redistribuido": 0,
+      "distribuicao_pagina_origem": {
+        "n": 40,
+        "min": 1,
+        "max": 36,
+        "p5": 1,
+        "p50": 5,
+        "p95": 36,
+        "fracao_profunda": 0.225
+      },
+      "janela_amostra": {
+        "n": 40,
+        "min": "2025-03-19",
+        "max": "2026-09-09",
+        "p5": "2026-03-21",
+        "p50": "2026-08-11",
+        "p95": "2026-09-08"
+      },
+      "niveis": [
+        {
+          "nivel": 2.5,
+          "n_validas": 8,
+          "n_alvo": 8,
+          "n_brutas": 72,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 1,
+          "n_descartadas_curtas": 49,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 0,
+          "motivos_descarte": {
+            "truncada_sem_texto": 0,
+            "spoiler": 1,
+            "abaixo_min_chars": 49,
+            "excedente_cota": 14,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 6
+        },
+        {
+          "nivel": 3.0,
+          "n_validas": 32,
+          "n_alvo": 32,
+          "n_brutas": 120,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 3,
+          "n_descartadas_curtas": 80,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 1,
+          "motivos_descarte": {
+            "truncada_sem_texto": 1,
+            "spoiler": 3,
+            "abaixo_min_chars": 80,
+            "excedente_cota": 4,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 10
+        }
+      ],
+      "temas": [
+        {
+          "tema": "Animação em stop-motion",
+          "mencoes_aproximadas": 30,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "As reviews medianas elogiam amplamente a qualidade técnica da animação em stop-motion, descrevendo-a como visualmente deslumbrante, com atenção impressionante aos detalhes e um trabalho artesanal admirável.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Números musicais",
+          "mencoes_aproximadas": 18,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "Este grupo critica as canções, considerando-as irritantes, desnecessárias ou mal executadas, e questiona a escolha de transformar a história em um musical.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Protagonista infantil",
+          "mencoes_aproximadas": 12,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "Várias reviews medianas acham o Pinocchio irritante, com uma voz fina e comportamentos que incomodam, embora algumas reconheçam que isso pode ser uma representação realista de uma criança.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Ritmo e duração",
+          "mencoes_aproximadas": 12,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "As reviews apontam problemas de ritmo, com uma segunda metade que se arrasta e uma sensação de que o filme é longo demais ou mal estruturado.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Tom sombrio e fascismo",
+          "mencoes_aproximadas": 12,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "Este grupo menciona o uso de elementos sombrios e a abordagem do fascismo como um ponto que gera desconforto ou que parece deslocado, embora alguns valorizem a crítica histórica.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Elenco de voz",
+          "mencoes_aproximadas": 9,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "As reviews medianas têm opiniões divididas sobre as atuações de voz, com alguns elogios isolados, mas críticas frequentes a escalações consideradas inadequadas ou sem destaque.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        }
+      ],
+      "observacao_geral": "As reviews medianas destacam a excelência da animação em stop-motion, mas apontam ressalvas quanto aos números musicais, ao ritmo e à caracterização do protagonista. Este grupo reconhece a qualidade técnica, porém demonstra reservas sobre a narrativa e a execução geral.",
+      "idioma_invalido": false,
+      "escopo_suspeito": false
+    },
+    {
+      "bucket": "positivas",
+      "alvo": 40,
+      "modo": "completo",
+      "estado_piso": "completa",
+      "n_validas": 40,
+      "share_real": 85,
+      "composicao_alvo": {
+        "3.5": 7,
+        "4.0": 16,
+        "4.5": 7,
+        "5.0": 10
+      },
+      "composicao_atingida": {
+        "3.5": 7,
+        "4.0": 16,
+        "4.5": 7,
+        "5.0": 10
+      },
+      "cascata_por_degrau": {
+        "150": 40
+      },
+      "deficit_redistribuido": 0,
+      "distribuicao_pagina_origem": {
+        "n": 40,
+        "min": 1,
+        "max": 128,
+        "p5": 1,
+        "p50": 3,
+        "p95": 128,
+        "fracao_profunda": 0.35
+      },
+      "janela_amostra": {
+        "n": 40,
+        "min": "2026-04-25",
+        "max": "2026-09-10",
+        "p5": "2026-04-29",
+        "p50": "2026-09-07",
+        "p95": "2026-09-10"
+      },
+      "niveis": [
+        {
+          "nivel": 3.5,
+          "n_validas": 7,
+          "n_alvo": 7,
+          "n_brutas": 36,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 2,
+          "n_descartadas_curtas": 23,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 1,
+          "motivos_descarte": {
+            "truncada_sem_texto": 1,
+            "spoiler": 2,
+            "abaixo_min_chars": 23,
+            "excedente_cota": 3,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 3
+        },
+        {
+          "nivel": 4.0,
+          "n_validas": 16,
+          "n_alvo": 16,
+          "n_brutas": 72,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 1,
+          "n_descartadas_curtas": 51,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 0,
+          "motivos_descarte": {
+            "truncada_sem_texto": 0,
+            "spoiler": 1,
+            "abaixo_min_chars": 51,
+            "excedente_cota": 4,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 6
+        },
+        {
+          "nivel": 4.5,
+          "n_validas": 7,
+          "n_alvo": 7,
+          "n_brutas": 36,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 1,
+          "n_descartadas_curtas": 26,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 0,
+          "motivos_descarte": {
+            "truncada_sem_texto": 0,
+            "spoiler": 1,
+            "abaixo_min_chars": 26,
+            "excedente_cota": 2,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 3
+        },
+        {
+          "nivel": 5.0,
+          "n_validas": 10,
+          "n_alvo": 10,
+          "n_brutas": 48,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 0,
+          "n_descartadas_curtas": 34,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 0,
+          "motivos_descarte": {
+            "truncada_sem_texto": 0,
+            "spoiler": 0,
+            "abaixo_min_chars": 34,
+            "excedente_cota": 4,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 4
+        }
+      ],
+      "temas": [
+        {
+          "tema": "Animação em stop-motion e design visual",
+          "mencoes_aproximadas": 24,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "As reviews elogiam a técnica de stop-motion como impressionante e detalhada, com design de personagens e cenários ricos em textura e criatividade, fazendo cada cena parecer uma obra de arte.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "História e adaptação do conto clássico",
+          "mencoes_aproximadas": 17,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "O grupo considera esta uma releitura ousada e profunda do conto, com desenvolvimento do vínculo entre o pai e o boneco, explorando temas como luto e aceitação.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Emoção e impacto emocional",
+          "mencoes_aproximadas": 14,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "Muitas reviews relatam que o filme comove profundamente, levando às lágrimas e tocando em temas sensíveis sobre vida, morte e perda.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Trilha sonora e canções",
+          "mencoes_aproximadas": 8,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "As opiniões sobre as músicas dividem o grupo: algumas reviews as consideram fracas ou dispensáveis, enquanto outras elogiam sua capacidade de permanecer na memória.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Contexto histórico e político",
+          "mencoes_aproximadas": 7,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "Este grupo destaca a ambientação na Itália fascista e a abordagem de temas como autoritarismo e guerra, embora alguns achem que esses elementos poderiam ser mais bem integrados.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Elenco e atuações de voz",
+          "mencoes_aproximadas": 6,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "As reviews elogiam o trabalho do elenco de voz, com destaque para a atuação que narra a história e para a química entre os personagens.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        }
+      ],
+      "observacao_geral": "As reviews positivas deste grupo destacam a animação em stop-motion como impressionante e o tratamento maduro de temas como luto e morte, que emociona profundamente. Apesar de elogios à ousadia da adaptação e ao contexto histórico, há ressalvas quanto às canções e a trechos do ritmo.",
+      "idioma_invalido": false,
+      "escopo_suspeito": false
+    }
+  ],
+  "eixos": {
+    "taxonomia_id": "ebab2667de74",
+    "margem": {
+      "lei": "lift^2 * n >= 2085136/1000000",
+      "constante_quadrada": [
+        2085136,
+        1000000
+      ],
+      "n": 40,
+      "limiar_pp": 22.83
+    },
+    "margem_lift_pp": 22.83,
+    "linhas": [
+      {
+        "eixo": "ritmo",
+        "por_bucket": {
+          "negativas": {
+            "mencoes": 10,
+            "de_n": 40,
+            "freq_pct": 25.0,
+            "lift_pp": 7.5,
+            "acima_da_margem": false,
+            "tema": "Ritmo lento e arrastado",
+            "exemplo_parafraseado": "Várias reviews negativas reclamam que o filme é excessivamente lento, com ritmo arrastado e se arrastando, o que torna a experiência cansativa e difícil de terminar.",
+            "temas_no_mesmo_eixo": []
+          },
+          "medianas": {
+            "mencoes": 7,
+            "de_n": 40,
+            "freq_pct": 17.5,
+            "lift_pp": -7.5,
+            "acima_da_margem": false,
+            "tema": "Ritmo e duração",
+            "exemplo_parafraseado": "As reviews apontam problemas de ritmo, com uma segunda metade que se arrasta e uma sensação de que o filme é longo demais ou mal estruturado.",
+            "temas_no_mesmo_eixo": []
+          },
+          "positivas": {
+            "mencoes": 2,
+            "de_n": 40,
+            "freq_pct": 5.0,
+            "lift_pp": -20.0,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          }
+        },
+        "bullet_de": {
+          "negativas": null,
+          "medianas": null,
+          "positivas": null
+        }
+      },
+      {
+        "eixo": "atuacao",
+        "por_bucket": {
+          "negativas": {
+            "mencoes": 7,
+            "de_n": 40,
+            "freq_pct": 17.5,
+            "lift_pp": -12.5,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "medianas": {
+            "mencoes": 12,
+            "de_n": 40,
+            "freq_pct": 30.0,
+            "lift_pp": 12.5,
+            "acima_da_margem": false,
+            "tema": "Elenco de voz",
+            "exemplo_parafraseado": "As reviews medianas têm opiniões divididas sobre as atuações de voz, com alguns elogios isolados, mas críticas frequentes a escalações consideradas inadequadas ou sem destaque.",
+            "temas_no_mesmo_eixo": []
+          },
+          "positivas": {
+            "mencoes": 7,
+            "de_n": 40,
+            "freq_pct": 17.5,
+            "lift_pp": -12.5,
+            "acima_da_margem": false,
+            "tema": "Elenco e atuações de voz",
+            "exemplo_parafraseado": "As reviews elogiam o trabalho do elenco de voz, com destaque para a atuação que narra a história e para a química entre os personagens.",
+            "temas_no_mesmo_eixo": []
+          }
+        },
+        "bullet_de": {
+          "negativas": null,
+          "medianas": null,
+          "positivas": null
+        }
+      },
+      {
+        "eixo": "direcao_imagem",
+        "por_bucket": {
+          "negativas": {
+            "mencoes": 32,
+            "de_n": 40,
+            "freq_pct": 80.0,
+            "lift_pp": 10.0,
+            "acima_da_margem": false,
+            "tema": "Design visual e animação feios ou perturbadores",
+            "exemplo_parafraseado": "Apesar da técnica impressionante, o visual é considerado feio, perturbador ou sem vida, com personagens de aparência desagradável.",
+            "temas_no_mesmo_eixo": []
+          },
+          "medianas": {
+            "mencoes": 25,
+            "de_n": 40,
+            "freq_pct": 62.5,
+            "lift_pp": -17.5,
+            "acima_da_margem": false,
+            "tema": "Animação em stop-motion",
+            "exemplo_parafraseado": "As reviews medianas elogiam amplamente a qualidade técnica da animação em stop-motion, descrevendo-a como visualmente deslumbrante, com atenção impressionante aos detalhes e um trabalho artesanal admirável.",
+            "temas_no_mesmo_eixo": []
+          },
+          "positivas": {
+            "mencoes": 28,
+            "de_n": 40,
+            "freq_pct": 70.0,
+            "lift_pp": -10.0,
+            "acima_da_margem": false,
+            "tema": "Animação em stop-motion e design visual",
+            "exemplo_parafraseado": "As reviews elogiam a técnica de stop-motion como impressionante e detalhada, com design de personagens e cenários ricos em textura e criatividade, fazendo cada cena parecer uma obra de arte.",
+            "temas_no_mesmo_eixo": []
+          }
+        },
+        "bullet_de": {
+          "negativas": "frequencia",
+          "medianas": "frequencia",
+          "positivas": "frequencia"
+        }
+      },
+      {
+        "eixo": "roteiro_estrutura",
+        "por_bucket": {
+          "negativas": {
+            "mencoes": 32,
+            "de_n": 40,
+            "freq_pct": 80.0,
+            "lift_pp": 5.0,
+            "acima_da_margem": false,
+            "tema": "Pinóquio irritante e personagem desagradável",
+            "exemplo_parafraseado": "O protagonista é descrito como insuportável, egoísta e malcriado, com uma voz estridente que contribui para a antipatia.",
+            "temas_no_mesmo_eixo": [
+              "Enredo confuso e mal desenvolvido"
+            ]
+          },
+          "medianas": {
+            "mencoes": 30,
+            "de_n": 40,
+            "freq_pct": 75.0,
+            "lift_pp": -5.0,
+            "acima_da_margem": false,
+            "tema": "Protagonista infantil",
+            "exemplo_parafraseado": "Várias reviews medianas acham o Pinocchio irritante, com uma voz fina e comportamentos que incomodam, embora algumas reconheçam que isso pode ser uma representação realista de uma criança.",
+            "temas_no_mesmo_eixo": []
+          },
+          "positivas": {
+            "mencoes": 27,
+            "de_n": 40,
+            "freq_pct": 67.5,
+            "lift_pp": -12.5,
+            "acima_da_margem": false,
+            "tema": "História e adaptação do conto clássico",
+            "exemplo_parafraseado": "O grupo considera esta uma releitura ousada e profunda do conto, com desenvolvimento do vínculo entre o pai e o boneco, explorando temas como luto e aceitação.",
+            "temas_no_mesmo_eixo": []
+          }
+        },
+        "bullet_de": {
+          "negativas": "frequencia",
+          "medianas": "frequencia",
+          "positivas": "frequencia"
+        }
+      },
+      {
+        "eixo": "som_trilha",
+        "por_bucket": {
+          "negativas": {
+            "mencoes": 12,
+            "de_n": 40,
+            "freq_pct": 30.0,
+            "lift_pp": 0.0,
+            "acima_da_margem": false,
+            "tema": "Músicas ruins e mal executadas",
+            "exemplo_parafraseado": "As canções são criticadas como fracas, sem graça e desnecessárias, muitas vezes parecendo diálogos com ritmo ou letras infantis.",
+            "temas_no_mesmo_eixo": []
+          },
+          "medianas": {
+            "mencoes": 12,
+            "de_n": 40,
+            "freq_pct": 30.0,
+            "lift_pp": 0.0,
+            "acima_da_margem": false,
+            "tema": "Números musicais",
+            "exemplo_parafraseado": "Este grupo critica as canções, considerando-as irritantes, desnecessárias ou mal executadas, e questiona a escolha de transformar a história em um musical.",
+            "temas_no_mesmo_eixo": []
+          },
+          "positivas": {
+            "mencoes": 10,
+            "de_n": 40,
+            "freq_pct": 25.0,
+            "lift_pp": -5.0,
+            "acima_da_margem": false,
+            "tema": "Trilha sonora e canções",
+            "exemplo_parafraseado": "As opiniões sobre as músicas dividem o grupo: algumas reviews as consideram fracas ou dispensáveis, enquanto outras elogiam sua capacidade de permanecer na memória.",
+            "temas_no_mesmo_eixo": []
+          }
+        },
+        "bullet_de": {
+          "negativas": null,
+          "medianas": null,
+          "positivas": null
+        }
+      },
+      {
+        "eixo": "tom_atmosfera",
+        "por_bucket": {
+          "negativas": {
+            "mencoes": 13,
+            "de_n": 40,
+            "freq_pct": 32.5,
+            "lift_pp": 0.0,
+            "acima_da_margem": false,
+            "tema": "Tom sombrio e deprimente excessivo",
+            "exemplo_parafraseado": "O clima é percebido como sombrio, depressivo e angustiante, sem equilíbrio, o que torna a experiência desagradável.",
+            "temas_no_mesmo_eixo": []
+          },
+          "medianas": {
+            "mencoes": 13,
+            "de_n": 40,
+            "freq_pct": 32.5,
+            "lift_pp": 0.0,
+            "acima_da_margem": false,
+            "tema": "Tom sombrio e fascismo",
+            "exemplo_parafraseado": "Este grupo menciona o uso de elementos sombrios e a abordagem do fascismo como um ponto que gera desconforto ou que parece deslocado, embora alguns valorizem a crítica histórica.",
+            "temas_no_mesmo_eixo": []
+          },
+          "positivas": {
+            "mencoes": 12,
+            "de_n": 40,
+            "freq_pct": 30.0,
+            "lift_pp": -2.5,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          }
+        },
+        "bullet_de": {
+          "negativas": null,
+          "medianas": null,
+          "positivas": null
+        }
+      },
+      {
+        "eixo": "impacto_emocional",
+        "por_bucket": {
+          "negativas": {
+            "mencoes": 18,
+            "de_n": 40,
+            "freq_pct": 45.0,
+            "lift_pp": 0.0,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "medianas": {
+            "mencoes": 12,
+            "de_n": 40,
+            "freq_pct": 30.0,
+            "lift_pp": -15.0,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "positivas": {
+            "mencoes": 18,
+            "de_n": 40,
+            "freq_pct": 45.0,
+            "lift_pp": 0.0,
+            "acima_da_margem": false,
+            "tema": "Emoção e impacto emocional",
+            "exemplo_parafraseado": "Muitas reviews relatam que o filme comove profundamente, levando às lágrimas e tocando em temas sensíveis sobre vida, morte e perda.",
+            "temas_no_mesmo_eixo": []
+          }
+        },
+        "bullet_de": {
+          "negativas": null,
+          "medianas": null,
+          "positivas": null
+        }
+      },
+      {
+        "eixo": "comparacoes",
+        "por_bucket": {
+          "negativas": {
+            "mencoes": 17,
+            "de_n": 40,
+            "freq_pct": 42.5,
+            "lift_pp": -12.5,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "medianas": {
+            "mencoes": 17,
+            "de_n": 40,
+            "freq_pct": 42.5,
+            "lift_pp": -12.5,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "positivas": {
+            "mencoes": 22,
+            "de_n": 40,
+            "freq_pct": 55.0,
+            "lift_pp": 12.5,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          }
+        },
+        "bullet_de": {
+          "negativas": null,
+          "medianas": null,
+          "positivas": null
+        }
+      },
+      {
+        "eixo": "expectativa",
+        "por_bucket": {
+          "negativas": {
+            "mencoes": 8,
+            "de_n": 40,
+            "freq_pct": 20.0,
+            "lift_pp": 2.5,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "medianas": {
+            "mencoes": 7,
+            "de_n": 40,
+            "freq_pct": 17.5,
+            "lift_pp": -2.5,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "positivas": {
+            "mencoes": 7,
+            "de_n": 40,
+            "freq_pct": 17.5,
+            "lift_pp": -2.5,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          }
+        },
+        "bullet_de": {
+          "negativas": null,
+          "medianas": null,
+          "positivas": null
+        }
+      },
+      {
+        "eixo": "critica_social",
+        "por_bucket": {
+          "negativas": {
+            "mencoes": 11,
+            "de_n": 40,
+            "freq_pct": 27.5,
+            "lift_pp": 0.0,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "medianas": {
+            "mencoes": 11,
+            "de_n": 40,
+            "freq_pct": 27.5,
+            "lift_pp": 0.0,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "positivas": {
+            "mencoes": 10,
+            "de_n": 40,
+            "freq_pct": 25.0,
+            "lift_pp": -2.5,
+            "acima_da_margem": false,
+            "tema": "Contexto histórico e político",
+            "exemplo_parafraseado": "Este grupo destaca a ambientação na Itália fascista e a abordagem de temas como autoritarismo e guerra, embora alguns achem que esses elementos poderiam ser mais bem integrados.",
+            "temas_no_mesmo_eixo": []
+          }
+        },
+        "bullet_de": {
+          "negativas": null,
+          "medianas": null,
+          "positivas": null
+        }
+      }
+    ],
+    "contraste": "valorativo",
+    "rotulagem": {
+      "n_chamadas": 3,
+      "falharam": [],
+      "fora_da_taxonomia": {},
+      "houve_retentativa": []
+    },
+    "spec_version": "1.9.50",
+    "verificador": {
+      "aplicado": true,
+      "variante": "V2_alvo",
+      "passada": 1,
+      "eixo": "impacto_emocional",
+      "n_removidas_no_corpus": 2781
+    }
+  },
+  "narrativa": "Lançado em 2022 e dirigido por Mark Gustafson, Pinóquio por Guillermo del Toro é um longa-metragem de 117 minutos que se insere nos gêneros de animação, fantasia, aventura e drama. A obra apresenta uma versão mais sombria do clássico conto de fadas infantil, acompanhando a jornada em que um boneco de madeira se transforma em um menino vivo de verdade.\n\nA experiência é construída por meio da técnica visual da animação em stop-motion, criando uma ambientação densa e sombria com passagens musicais inseridas na trama. A estrutura da narrativa adota um andamento cadenciado para articular elementos de fantasia com um contexto histórico e dramático.\n\nOs registros mostram que os diferentes grupos concentram sua atenção nos mesmos temas fundamentais, concordando sobre o que o filme é e discordando no veredito final sobre o funcionamento dessas opções.\n\nNa grande maioria das notas (~85%), cerca de metade exalta a animação em stop-motion e o design visual como realizações minuciosas e impressionantes. Além disso, uma parcela expressiva celebra a história e adaptação do conto clássico por sua abordagem madura, enquanto muitos ressaltam a profunda carga de emoção e impacto emocional gerada pela narrativa.\n\nNa perspectiva de quem se situa numa fração mínima das notas (~12%), a maior parte reconhece a qualidade técnica da animação em stop-motion, porém boa parte aponta ressalvas quanto aos números musicais e vários criticam o comportamento do protagonista infantil.\n\nJá sob o ponto de vista registrado numa fração ainda menor das notas (~3%), um número considerável se ressente de um ritmo lento e arrastado ao longo da exibição, enquanto alguns definem o Pinóquio como um personagem irritante e desagradável, e uma parte desaprova as músicas por considerá-las ruins e mal executadas.",
+  "verificacao_narrativa": {
+    "quantificador_fora_de_faixa": [],
+    "quantificador_repetido": [],
+    "paragrafos": {
+      "n_paragrafos": 6,
+      "minimo": 3,
+      "insuficientes": false,
+      "longos": []
+    },
+    "n_paragrafos": 6,
+    "paragrafos_insuficientes": false,
+    "paragrafos_longos": [],
+    "grupos_sem_paragrafo_proprio": [],
+    "movimento1_e_movimento2_no_mesmo_paragrafo": false,
+    "formato_invalido": false,
+    "numeros_inventados": [],
+    "rotulos_faltando": [],
+    "ordem_incorreta": false,
+    "vocabulario_peso": false,
+    "resenha_speak": [],
+    "n_resenha_speak": 0,
+    "n_flags": 0
+  },
+  "narrativa_selecao": {
+    "provider": "gemini",
+    "modelo": "gemini-3.7-flash",
+    "n_candidatos": 3,
+    "n_chamadas": 3,
+    "indice_escolhido": 1,
+    "motivo": "melhor_entre_limpos",
+    "criterio_decisivo": "unico",
+    "candidatos": [
+      {
+        "indice": 0,
+        "n_flags": 1,
+        "cliches": 0,
+        "repeticao_max": 1,
+        "ritmo": 8,
+        "cobertura": 1.0,
+        "eliminado": true
+      },
+      {
+        "indice": 1,
+        "n_flags": 0,
+        "cliches": 0,
+        "repeticao_max": 1,
+        "ritmo": 9,
+        "cobertura": 1.0,
+        "eliminado": false
+      },
+      {
+        "indice": 2,
+        "n_flags": 1,
+        "cliches": 0,
+        "repeticao_max": 1,
+        "ritmo": 10,
+        "cobertura": 1.0,
+        "eliminado": true
+      }
+    ],
+    "retry": null,
+    "uso": {
+      "prompt_tokens": 9876,
+      "completion_tokens": 1195,
+      "cache_hit_tokens": 0,
+      "cache_miss_tokens": 9876
+    },
+    "latencia_s": 45.93
+  },
+  "condicoes": {
+    "vale_a_pena": [
+      {
+        "texto": "admira animação em stop-motion detalhada com cenários criativos e ricos em textura",
+        "tema_origem": "POS-A",
+        "bucket_origem": "positivas",
+        "tema_texto": "Animação em stop-motion e design visual",
+        "rotulo_forca": "cerca de metade"
+      },
+      {
+        "texto": "busca uma releitura profunda de conto clássico com temas de luto e aceitação",
+        "tema_origem": "POS-B",
+        "bucket_origem": "positivas",
+        "tema_texto": "História e adaptação do conto clássico",
+        "rotulo_forca": "muitos"
+      },
+      {
+        "texto": "procura uma experiência comovente que toca em temas sensíveis de vida e perda",
+        "tema_origem": "POS-C",
+        "bucket_origem": "positivas",
+        "tema_texto": "Emoção e impacto emocional",
+        "rotulo_forca": "muitos"
+      }
+    ],
+    "talvez_evite": [
+      {
+        "texto": "se incomoda com um ritmo excessivamente lento e uma condução arrastada",
+        "tema_origem": "NEG-A",
+        "bucket_origem": "negativas",
+        "tema_texto": "Ritmo lento e arrastado",
+        "rotulo_forca": "muitos"
+      },
+      {
+        "texto": "se irrita com um protagonista malcriado, egoísta e de tom estridente",
+        "tema_origem": "NEG-B",
+        "bucket_origem": "negativas",
+        "tema_texto": "Pinóquio irritante e personagem desagradável",
+        "rotulo_forca": "alguns"
+      },
+      {
+        "texto": "prefere evitar produções com canções fracas, sem graça e letras infantis",
+        "tema_origem": "NEG-C",
+        "bucket_origem": "negativas",
+        "tema_texto": "Músicas ruins e mal executadas",
+        "rotulo_forca": "alguns"
+      },
+      {
+        "texto": "rejeita animações tecnicamente impressionantes, mas com visual perturbador e personagens desagradáveis",
+        "tema_origem": "NEG-E",
+        "bucket_origem": "negativas",
+        "tema_texto": "Design visual e animação feios ou perturbadores",
+        "rotulo_forca": "alguns",
+        "origem": "leitura_humana"
+      },
+      {
+        "texto": "se frustra com uma história mal construída e subtramas sem foco",
+        "tema_origem": "NEG-F",
+        "bucket_origem": "negativas",
+        "tema_texto": "Enredo confuso e mal desenvolvido",
+        "rotulo_forca": "alguns"
+      }
+    ],
+    "ordem_colunas": [
+      "vale_a_pena",
+      "talvez_evite"
+    ],
+    "peso": {
+      "vale_a_pena": {
+        "peso_pct": 85,
+        "peso_texto": "~85% das notas",
+        "nota_de_amostra": null
+      },
+      "talvez_evite": {
+        "peso_pct": 3,
+        "peso_texto": "~3% das notas",
+        "nota_de_amostra": null
+      }
+    },
+    "peso_meio": null,
+    "origem": "llm",
+    "temas_pedidos": {
+      "vale_a_pena": [
+        "POS-A",
+        "POS-B",
+        "POS-C",
+        "POS-D"
+      ],
+      "talvez_evite": [
+        "NEG-A",
+        "NEG-B",
+        "NEG-C",
+        "NEG-E",
+        "NEG-F"
+      ]
+    },
+    "temas_saltados": {
+      "vale_a_pena": [
+        "POS-D"
+      ],
+      "talvez_evite": []
+    },
+    "descartadas": [],
+    "retry": null,
+    "provider": "gemini",
+    "modelo": "gemini-3.7-flash",
+    "n_candidatos": 3,
+    "n_chamadas": 3,
+    "indice_escolhido": 0,
+    "candidatos": [
+      {
+        "indice": 0,
+        "n_condicoes": 8,
+        "n_flags": 0,
+        "flags": [],
+        "n_temas_cobertos": 8
+      },
+      {
+        "indice": 1,
+        "n_condicoes": 8,
+        "n_flags": 0,
+        "flags": [],
+        "n_temas_cobertos": 8
+      },
+      {
+        "indice": 2,
+        "n_condicoes": 8,
+        "n_flags": 1,
+        "flags": [
+          "sem_discriminacao"
+        ],
+        "n_temas_cobertos": 8
+      }
+    ],
+    "uso": {
+      "prompt_tokens": 8385,
+      "completion_tokens": 1125,
+      "cache_hit_tokens": 0,
+      "cache_miss_tokens": 8385
+    },
+    "latencia_s": 13.67,
+    "spec_version": "1.9.50"
+  }
+}

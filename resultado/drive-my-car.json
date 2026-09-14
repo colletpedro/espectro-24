@@ -1,0 +1,1644 @@
+{
+  "slug": "drive-my-car",
+  "data_coleta": "2026-09-13T05:20:25.036977+00:00",
+  "spec_version": "1.9.50",
+  "total_reviews_observadas": 576,
+  "reviews_url": "https://letterboxd.com/film/drive-my-car/reviews/",
+  "ficha": {
+    "titulo": "Drive My Car",
+    "sinopse_oficial": "Dois anos após a morte de sua esposa, Yusuke Kafuku recebe uma oferta para dirigir uma peça num festival de teatro em Hiroshima. Lá, ele conhece Misaki, uma jovem reservada, designada para ser sua motorista. Enquanto passam tempo juntos, Kafuku confronta o mistério de sua esposa que o assombra.",
+    "sinopse_fallback_en": false,
+    "generos": [
+      "Drama"
+    ],
+    "duracao_min": 179,
+    "diretor": "Ryusuke Hamaguchi",
+    "diretor_transliterado": true,
+    "ano": 2021,
+    "fonte": "tmdb",
+    "tmdb_id": 758866,
+    "tmdb_fetched_at": "2026-09-10T19:59:15+00:00",
+    "poster_path": "/z9QqfYRtYS3VqIsWkD09hpilyQ3.jpg",
+    "poster_largura": 2000,
+    "poster_altura": 2963,
+    "backdrop_paths": [
+      "/r6aqhlmJmu8Dv5E7QYEruaEXKYm.jpg",
+      "/esOyr2JE2mpvNpNZLqszRSnrnap.jpg",
+      "/eB44U7i6sQLthGNqPQmpovVKGWb.jpg",
+      "/rnLCkQNkgjSmMqcGVZUupofsqd1.jpg",
+      "/ue4bFvkuNc5SWPgYNnfNU2C0D0p.jpg",
+      "/giZudUSEhUCUlpYUYKWgW0cH3se.jpg",
+      "/mbfDQ1veETNbVMUL8UDblFHyIBd.jpg",
+      "/fpke0wXgf791WCtcAzK0W91iXNT.jpg",
+      "/txi6MhARvTNXnhVdsnn6k8fLKvi.jpg",
+      "/5UzbAexyDZmYxKA6c7WXvJuRuuw.jpg"
+    ],
+    "backdrop_path": "/r6aqhlmJmu8Dv5E7QYEruaEXKYm.jpg",
+    "backdrop_largura": 2048,
+    "backdrop_altura": 1151,
+    "poster_sem_texto_path": "/kFYiWJAdKNSksJ0fS9uIs5Apx60.jpg",
+    "poster_sem_texto_largura": 2000,
+    "poster_sem_texto_altura": 3000,
+    "galeria_stills": [
+      {
+        "still_path": "/r6aqhlmJmu8Dv5E7QYEruaEXKYm.jpg",
+        "still_largura": 2048,
+        "still_altura": 1151
+      },
+      {
+        "still_path": "/esOyr2JE2mpvNpNZLqszRSnrnap.jpg",
+        "still_largura": 1316,
+        "still_altura": 740
+      },
+      {
+        "still_path": "/giZudUSEhUCUlpYUYKWgW0cH3se.jpg",
+        "still_largura": 1920,
+        "still_altura": 1080
+      },
+      {
+        "still_path": "/fpke0wXgf791WCtcAzK0W91iXNT.jpg",
+        "still_largura": 2272,
+        "still_altura": 1278
+      },
+      {
+        "still_path": "/rcxS6GpesivgXFhJTyC2qFzwwR.jpg",
+        "still_largura": 3840,
+        "still_altura": 2160
+      },
+      {
+        "still_path": "/5lZeUgSBkMZZasMrVJvqSxHR5Zy.jpg",
+        "still_largura": 3104,
+        "still_altura": 1746
+      },
+      {
+        "still_path": "/8mUQN1osKvfTgG5IKPh9sOl3qR.jpg",
+        "still_largura": 1600,
+        "still_altura": 900
+      },
+      {
+        "still_path": "/ctlIBQoZJhRUcep8kEMkAfXZTA5.jpg",
+        "still_largura": 1920,
+        "still_altura": 1080
+      },
+      {
+        "still_path": "/ijyd0sE26gQawZARVWgsl5iPxse.jpg",
+        "still_largura": 1600,
+        "still_altura": 900
+      },
+      {
+        "still_path": "/nCSDATnksuWz4exNXGE11boV5wx.jpg",
+        "still_largura": 1849,
+        "still_altura": 1040
+      },
+      {
+        "still_path": "/qDudwb4juRHZEAQqc2rnXz9g07V.jpg",
+        "still_largura": 1849,
+        "still_altura": 1040
+      },
+      {
+        "still_path": "/wVdU9SgQp5B8iGbUM67MI38tpRi.jpg",
+        "still_largura": 1600,
+        "still_altura": 900
+      }
+    ],
+    "ano_fonte": "letterboxd",
+    "identidade": {
+      "versao": 1,
+      "status": "validada",
+      "slug": "drive-my-car",
+      "titulo_letterboxd": "Drive My Car",
+      "ano_letterboxd": 2021,
+      "tmdb_id_letterboxd": 758866,
+      "tmdb_id_escolhido": 758866,
+      "fonte_id": "letterboxd",
+      "titulo_tmdb_campo": "title",
+      "titulo_tmdb_correspondente": "Drive My Car",
+      "ano_tmdb": 2021,
+      "ano_divergente": false
+    }
+  },
+  "distribuicao": {
+    "n_notas_total": 395980,
+    "por_nivel": {
+      "0.5": 834,
+      "1.0": 1921,
+      "1.5": 1589,
+      "2.0": 6749,
+      "2.5": 8433,
+      "3.0": 30442,
+      "3.5": 45682,
+      "4.0": 118645,
+      "4.5": 87823,
+      "5.0": 93862
+    },
+    "por_bucket": {
+      "negativas": 3,
+      "medianas": 10,
+      "positivas": 87
+    },
+    "fonte": "letterboxd_histograma"
+  },
+  "coleta": {
+    "slug": "drive-my-car",
+    "coletado_em": "2026-09-10T18:35:23.771033+00:00",
+    "versao_coletor": "1.9.6",
+    "ordenacao_usada": "by/added",
+    "histograma_bruto": {
+      "0.5": 834,
+      "1.0": 1921,
+      "1.5": 1589,
+      "2.0": 6749,
+      "2.5": 8433,
+      "3.0": 30442,
+      "3.5": 45682,
+      "4.0": 118645,
+      "4.5": 87823,
+      "5.0": 93862
+    },
+    "orcamento_paginas_por_nivel": {
+      "0.5": 1,
+      "1.0": 3,
+      "1.5": 2,
+      "2.0": 10,
+      "2.5": 6,
+      "3.0": 10,
+      "3.5": 2,
+      "4.0": 6,
+      "4.5": 4,
+      "5.0": 4
+    },
+    "paginas_gastas_por_nivel": {
+      "0.5": 1,
+      "1.0": 3,
+      "1.5": 2,
+      "2.0": 10,
+      "2.5": 6,
+      "3.0": 10,
+      "3.5": 2,
+      "4.0": 6,
+      "4.5": 4,
+      "5.0": 4
+    },
+    "paradas_por_limite": [
+      "0.5",
+      "1.0",
+      "1.5",
+      "2.0",
+      "2.5",
+      "3.0",
+      "3.5",
+      "4.0",
+      "4.5",
+      "5.0"
+    ],
+    "contagem_bruta_por_nivel": {
+      "0.5": 12,
+      "1.0": 36,
+      "1.5": 24,
+      "2.0": 120,
+      "2.5": 72,
+      "3.0": 120,
+      "3.5": 24,
+      "4.0": 72,
+      "4.5": 48,
+      "5.0": 48
+    },
+    "contagem_estimada_valida_por_nivel": {
+      "0.5": 3,
+      "1.0": 10,
+      "1.5": 12,
+      "2.0": 40,
+      "2.5": 31,
+      "3.0": 49,
+      "3.5": 9,
+      "4.0": 24,
+      "4.5": 18,
+      "5.0": 21
+    },
+    "motivo_parada_por_nivel": {
+      "0.5": "orcamento_esgotado",
+      "1.0": "orcamento_esgotado",
+      "1.5": "orcamento_esgotado",
+      "2.0": "orcamento_esgotado",
+      "2.5": "orcamento_esgotado",
+      "3.0": "orcamento_esgotado",
+      "3.5": "orcamento_esgotado",
+      "4.0": "orcamento_esgotado",
+      "4.5": "orcamento_esgotado",
+      "5.0": "orcamento_esgotado"
+    },
+    "paginas_base_por_nivel": {
+      "0.5": 1,
+      "1.0": 3,
+      "1.5": 2,
+      "2.0": 10,
+      "2.5": 6,
+      "3.0": 10,
+      "3.5": 2,
+      "4.0": 6,
+      "4.5": 4,
+      "5.0": 4
+    },
+    "paginas_extensao_por_nivel": {
+      "0.5": 0,
+      "1.0": 0,
+      "1.5": 0,
+      "2.0": 0,
+      "2.5": 0,
+      "3.0": 0,
+      "3.5": 0,
+      "4.0": 0,
+      "4.5": 0,
+      "5.0": 0
+    },
+    "extensao_por_bucket": {
+      "negativas": {
+        "paginas_base": 16,
+        "paginas_extensao": 0,
+        "extras_por_nivel": {},
+        "motivo_parada": "meta_atingida",
+        "n_validas_pos_base": 65,
+        "n_validas_pos_extensao": 65,
+        "meta": 50
+      },
+      "medianas": {
+        "paginas_base": 16,
+        "paginas_extensao": 0,
+        "extras_por_nivel": {},
+        "motivo_parada": "meta_atingida",
+        "n_validas_pos_base": 80,
+        "n_validas_pos_extensao": 80,
+        "meta": 50
+      },
+      "positivas": {
+        "paginas_base": 16,
+        "paginas_extensao": 0,
+        "extras_por_nivel": {},
+        "motivo_parada": "meta_atingida",
+        "n_validas_pos_base": 72,
+        "n_validas_pos_extensao": 72,
+        "meta": 50
+      }
+    },
+    "profundidade_sondagem": {
+      "nivel_sondado": 4.0,
+      "profundidade": 256,
+      "exata": false,
+      "requisicoes": 4,
+      "motivo": "teto_plataforma"
+    },
+    "profundidade_estimada_por_nivel": {
+      "0.5": 2,
+      "1.0": 4,
+      "1.5": 3,
+      "2.0": 15,
+      "2.5": 18,
+      "3.0": 66,
+      "3.5": 99,
+      "4.0": 256,
+      "4.5": 189,
+      "5.0": 203
+    },
+    "janela_temporal": {
+      "total": {
+        "n": 575,
+        "min": "2021-04-12",
+        "max": "2026-09-10",
+        "p5": "2026-01-27",
+        "p50": "2026-07-24",
+        "p95": "2026-09-09"
+      },
+      "por_bucket": {
+        "negativas": {
+          "n": 192,
+          "min": "2021-04-12",
+          "max": "2026-09-09",
+          "p5": "2026-01-27",
+          "p50": "2026-05-18",
+          "p95": "2026-08-31"
+        },
+        "medianas": {
+          "n": 191,
+          "min": "2021-12-03",
+          "max": "2026-09-09",
+          "p5": "2024-12-20",
+          "p50": "2026-08-02",
+          "p95": "2026-09-06"
+        },
+        "positivas": {
+          "n": 192,
+          "min": "2022-01-31",
+          "max": "2026-09-10",
+          "p5": "2026-03-17",
+          "p50": "2026-09-07",
+          "p95": "2026-09-10"
+        }
+      }
+    },
+    "dias_por_100_paginas": {
+      "n_paginas": 16,
+      "pagina_min": 1,
+      "pagina_max": 128,
+      "dias": 173,
+      "dias_por_100_paginas": 136.2204724409449,
+      "paginas_para_1_ano": 268
+    },
+    "identidade_letterboxd": {
+      "slug": "drive-my-car",
+      "titulo": "Drive My Car",
+      "ano": 2021,
+      "tmdb_id_letterboxd": 758866,
+      "fonte": "pagina_letterboxd"
+    },
+    "ano_lancamento": 2021,
+    "ano_fonte": "letterboxd",
+    "n_reviews_bruto": 576
+  },
+  "origem_paginas": {
+    "_histograma/drive-my-car.html": "cache",
+    "drive-my-car/pages/by_added/rated_4_page_4.html": "cache",
+    "drive-my-car/pages/by_added/rated_4_page_16.html": "cache",
+    "drive-my-car/pages/by_added/rated_4_page_64.html": "cache",
+    "drive-my-car/pages/by_added/rated_4_page_256.html": "cache",
+    "drive-my-car/pages/by_added/rated_0_5_page_1.html": "cache",
+    "drive-my-car/pages/by_added/rated_1_page_1.html": "cache",
+    "drive-my-car/pages/by_added/rated_1_page_2.html": "cache",
+    "drive-my-car/pages/by_added/rated_1_page_3.html": "cache",
+    "drive-my-car/fulltext/viewing_1309644236.html": "cache",
+    "drive-my-car/pages/by_added/rated_1_5_page_1.html": "cache",
+    "drive-my-car/pages/by_added/rated_1_5_page_2.html": "cache",
+    "drive-my-car/fulltext/viewing_1429140097.html": "cache",
+    "drive-my-car/fulltext/viewing_1306567034.html": "cache",
+    "drive-my-car/fulltext/viewing_1287461290.html": "cache",
+    "drive-my-car/pages/by_added/rated_2_page_1.html": "cache",
+    "drive-my-car/pages/by_added/rated_2_page_2.html": "cache",
+    "drive-my-car/pages/by_added/rated_2_page_3.html": "cache",
+    "drive-my-car/pages/by_added/rated_2_page_4.html": "cache",
+    "drive-my-car/pages/by_added/rated_2_page_5.html": "cache",
+    "drive-my-car/pages/by_added/rated_2_page_6.html": "cache",
+    "drive-my-car/pages/by_added/rated_2_page_7.html": "cache",
+    "drive-my-car/pages/by_added/rated_2_page_8.html": "cache",
+    "drive-my-car/pages/by_added/rated_2_page_9.html": "cache",
+    "drive-my-car/pages/by_added/rated_2_page_11.html": "cache",
+    "drive-my-car/fulltext/viewing_1473407066.html": "cache",
+    "drive-my-car/fulltext/viewing_1451511350.html": "cache",
+    "drive-my-car/fulltext/viewing_1446878000.html": "cache",
+    "drive-my-car/fulltext/viewing_1441945437.html": "cache",
+    "drive-my-car/fulltext/viewing_1416969180.html": "cache",
+    "drive-my-car/fulltext/viewing_1377234542.html": "cache",
+    "drive-my-car/fulltext/viewing_1365415141.html": "cache",
+    "drive-my-car/fulltext/viewing_1344091269.html": "cache",
+    "drive-my-car/fulltext/viewing_1312675329.html": "cache",
+    "drive-my-car/fulltext/viewing_1292547681.html": "cache",
+    "drive-my-car/fulltext/viewing_1264074814.html": "cache",
+    "drive-my-car/fulltext/viewing_1244031335.html": "cache",
+    "drive-my-car/fulltext/viewing_1230105470.html": "cache",
+    "drive-my-car/fulltext/viewing_1185400976.html": "cache",
+    "drive-my-car/pages/by_added/rated_2_5_page_1.html": "cache",
+    "drive-my-car/pages/by_added/rated_2_5_page_2.html": "cache",
+    "drive-my-car/pages/by_added/rated_2_5_page_3.html": "cache",
+    "drive-my-car/pages/by_added/rated_2_5_page_4.html": "cache",
+    "drive-my-car/pages/by_added/rated_2_5_page_5.html": "cache",
+    "drive-my-car/pages/by_added/rated_2_5_page_9.html": "cache",
+    "drive-my-car/fulltext/viewing_1433334818.html": "cache",
+    "drive-my-car/fulltext/viewing_1429445876.html": "cache",
+    "drive-my-car/fulltext/viewing_1402444437.html": "cache",
+    "drive-my-car/fulltext/viewing_1398383758.html": "cache",
+    "drive-my-car/fulltext/viewing_1328581614.html": "cache",
+    "drive-my-car/fulltext/viewing_1266361315.html": "cache",
+    "drive-my-car/fulltext/viewing_1266360646.html": "cache",
+    "drive-my-car/fulltext/viewing_1266340102.html": "cache",
+    "drive-my-car/pages/by_added/rated_3_page_1.html": "cache",
+    "drive-my-car/pages/by_added/rated_3_page_2.html": "cache",
+    "drive-my-car/pages/by_added/rated_3_page_3.html": "cache",
+    "drive-my-car/pages/by_added/rated_3_page_4.html": "cache",
+    "drive-my-car/pages/by_added/rated_3_page_5.html": "cache",
+    "drive-my-car/pages/by_added/rated_3_page_6.html": "cache",
+    "drive-my-car/pages/by_added/rated_3_page_7.html": "cache",
+    "drive-my-car/pages/by_added/rated_3_page_8.html": "cache",
+    "drive-my-car/pages/by_added/rated_3_page_16.html": "cache",
+    "drive-my-car/pages/by_added/rated_3_page_33.html": "cache",
+    "drive-my-car/fulltext/viewing_1477300321.html": "cache",
+    "drive-my-car/fulltext/viewing_1437179429.html": "cache",
+    "drive-my-car/fulltext/viewing_1437129072.html": "cache",
+    "drive-my-car/fulltext/viewing_1345662465.html": "cache",
+    "drive-my-car/fulltext/viewing_1344567171.html": "cache",
+    "drive-my-car/fulltext/viewing_1241046475.html": "cache",
+    "drive-my-car/fulltext/viewing_1237833950.html": "cache",
+    "drive-my-car/pages/by_added/rated_3_5_page_1.html": "cache",
+    "drive-my-car/pages/by_added/rated_3_5_page_2.html": "cache",
+    "drive-my-car/fulltext/viewing_794214072.html": "cache",
+    "drive-my-car/pages/by_added/rated_4_page_1.html": "cache",
+    "drive-my-car/pages/by_added/rated_4_page_2.html": "cache",
+    "drive-my-car/pages/by_added/rated_4_page_3.html": "cache",
+    "drive-my-car/pages/by_added/rated_4_page_128.html": "cache",
+    "drive-my-car/fulltext/viewing_1488890033.html": "cache",
+    "drive-my-car/fulltext/viewing_1488786869.html": "cache",
+    "drive-my-car/fulltext/viewing_1344998229.html": "cache",
+    "drive-my-car/fulltext/viewing_1339011159.html": "cache",
+    "drive-my-car/fulltext/viewing_1344069394.html": "cache",
+    "drive-my-car/fulltext/viewing_1243354799.html": "cache",
+    "drive-my-car/pages/by_added/rated_4_5_page_1.html": "cache",
+    "drive-my-car/pages/by_added/rated_4_5_page_2.html": "cache",
+    "drive-my-car/pages/by_added/rated_4_5_page_3.html": "cache",
+    "drive-my-car/pages/by_added/rated_4_5_page_47.html": "cache",
+    "drive-my-car/fulltext/viewing_1490695830.html": "cache",
+    "drive-my-car/fulltext/viewing_1488329077.html": "cache",
+    "drive-my-car/fulltext/viewing_1487389447.html": "cache",
+    "drive-my-car/fulltext/viewing_1486843639.html": "cache",
+    "drive-my-car/fulltext/viewing_1388621458.html": "cache",
+    "drive-my-car/fulltext/viewing_1387280825.html": "cache",
+    "drive-my-car/pages/by_added/rated_5_page_1.html": "cache",
+    "drive-my-car/pages/by_added/rated_5_page_2.html": "cache",
+    "drive-my-car/pages/by_added/rated_5_page_3.html": "cache",
+    "drive-my-car/pages/by_added/rated_5_page_51.html": "cache",
+    "drive-my-car/fulltext/viewing_1490350418.html": "cache",
+    "drive-my-car/fulltext/viewing_1489733260.html": "cache",
+    "drive-my-car/fulltext/viewing_1487813160.html": "cache",
+    "drive-my-car/fulltext/viewing_1487742408.html": "cache",
+    "drive-my-car/fulltext/viewing_1487633576.html": "cache",
+    "drive-my-car/fulltext/viewing_1487624007.html": "cache",
+    "drive-my-car/fulltext/viewing_1486857701.html": "cache",
+    "drive-my-car/fulltext/viewing_1486712069.html": "cache",
+    "drive-my-car/fulltext/viewing_1411766308.html": "cache",
+    "drive-my-car/film_page.html": "cache"
+  },
+  "buckets": [
+    {
+      "bucket": "negativas",
+      "alvo": 40,
+      "modo": "completo",
+      "estado_piso": "completa",
+      "n_validas": 40,
+      "share_real": 3,
+      "composicao_alvo": {
+        "0.5": 3,
+        "1.0": 7,
+        "1.5": 6,
+        "2.0": 24
+      },
+      "composicao_atingida": {
+        "0.5": 3,
+        "1.0": 7,
+        "1.5": 6,
+        "2.0": 24
+      },
+      "cascata_por_degrau": {
+        "150": 40
+      },
+      "deficit_redistribuido": 0,
+      "distribuicao_pagina_origem": {
+        "n": 40,
+        "min": 1,
+        "max": 11,
+        "p5": 1,
+        "p50": 2,
+        "p95": 11,
+        "fracao_profunda": 0.275
+      },
+      "janela_amostra": {
+        "n": 40,
+        "min": "2026-01-27",
+        "max": "2026-09-07",
+        "p5": "2026-01-30",
+        "p50": "2026-05-11",
+        "p95": "2026-08-31"
+      },
+      "niveis": [
+        {
+          "nivel": 0.5,
+          "n_validas": 3,
+          "n_alvo": 3,
+          "n_brutas": 12,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 0,
+          "n_descartadas_curtas": 9,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 0,
+          "motivos_descarte": {
+            "truncada_sem_texto": 0,
+            "spoiler": 0,
+            "abaixo_min_chars": 9,
+            "excedente_cota": 0,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 1
+        },
+        {
+          "nivel": 1.0,
+          "n_validas": 7,
+          "n_alvo": 7,
+          "n_brutas": 36,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 0,
+          "n_descartadas_curtas": 26,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 0,
+          "motivos_descarte": {
+            "truncada_sem_texto": 0,
+            "spoiler": 0,
+            "abaixo_min_chars": 26,
+            "excedente_cota": 3,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 3
+        },
+        {
+          "nivel": 1.5,
+          "n_validas": 6,
+          "n_alvo": 6,
+          "n_brutas": 24,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 3,
+          "n_descartadas_curtas": 9,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 0,
+          "motivos_descarte": {
+            "truncada_sem_texto": 0,
+            "spoiler": 3,
+            "abaixo_min_chars": 9,
+            "excedente_cota": 6,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 2
+        },
+        {
+          "nivel": 2.0,
+          "n_validas": 24,
+          "n_alvo": 24,
+          "n_brutas": 120,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 1,
+          "n_descartadas_curtas": 78,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 1,
+          "motivos_descarte": {
+            "truncada_sem_texto": 1,
+            "spoiler": 1,
+            "abaixo_min_chars": 78,
+            "excedente_cota": 16,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 10
+        }
+      ],
+      "temas": [
+        {
+          "tema": "Duração excessiva e ritmo lento",
+          "mencoes_aproximadas": 24,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "Este grupo reclama que o filme se arrasta por quase três horas e que a duração não se justifica, tornando a experiência tediosa e cansativa.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Falta de emoção e atuações apáticas",
+          "mencoes_aproximadas": 17,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "As reviews negativas apontam que os personagens parecem robóticos ou indiferentes, e que a contenção emocional impede qualquer conexão com a história.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Roteiro confuso e diálogos prolongados",
+          "mencoes_aproximadas": 15,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "Este grupo critica a estrutura narrativa como confusa ou arrastada, com diálogos extensos que não acrescentam e momentos iniciais pouco claros.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Expectativa frustrada e obra superestimada",
+          "mencoes_aproximadas": 14,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "Muitas reviews expressam decepção em relação à aclamação recebida, considerando o filme superestimado e aquém das expectativas criadas.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Aspectos visuais elogiados, mas insuficientes",
+          "mencoes_aproximadas": 12,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "As reviews negativas reconhecem a bela fotografia e o capricho visual, mas afirmam que isso não compensa a falta de envolvimento emocional ou de uma narrativa cativante.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Personagens pouco cativantes e retrato de gênero problemático",
+          "mencoes_aproximadas": 9,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "Este grupo destaca a falta de empatia pelos personagens e critica a representação feminina como unidimensional ou misógina, especialmente por vir de uma adaptação literária.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        }
+      ],
+      "observacao_geral": "As reviews negativas concentram-se na duração excessiva, no ritmo lento e na frieza emocional, considerando o filme cansativo e superestimado. Apesar de elogios pontuais à fotografia, este grupo aponta falhas no roteiro e na construção dos personagens, resultando em uma experiência pouco envolvente.",
+      "idioma_invalido": false,
+      "escopo_suspeito": false
+    },
+    {
+      "bucket": "medianas",
+      "alvo": 40,
+      "modo": "completo",
+      "estado_piso": "completa",
+      "n_validas": 40,
+      "share_real": 10,
+      "composicao_alvo": {
+        "2.5": 9,
+        "3.0": 31
+      },
+      "composicao_atingida": {
+        "2.5": 9,
+        "3.0": 31
+      },
+      "cascata_por_degrau": {
+        "150": 40
+      },
+      "deficit_redistribuido": 0,
+      "distribuicao_pagina_origem": {
+        "n": 40,
+        "min": 1,
+        "max": 33,
+        "p5": 1,
+        "p50": 5,
+        "p95": 33,
+        "fracao_profunda": 0.325
+      },
+      "janela_amostra": {
+        "n": 40,
+        "min": "2021-12-03",
+        "max": "2026-09-09",
+        "p5": "2026-03-13",
+        "p50": "2026-08-11",
+        "p95": "2026-09-09"
+      },
+      "niveis": [
+        {
+          "nivel": 2.5,
+          "n_validas": 9,
+          "n_alvo": 9,
+          "n_brutas": 71,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 1,
+          "n_descartadas_curtas": 40,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 0,
+          "motivos_descarte": {
+            "truncada_sem_texto": 0,
+            "spoiler": 1,
+            "abaixo_min_chars": 40,
+            "excedente_cota": 21,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 6
+        },
+        {
+          "nivel": 3.0,
+          "n_validas": 31,
+          "n_alvo": 31,
+          "n_brutas": 120,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 2,
+          "n_descartadas_curtas": 66,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 3,
+          "motivos_descarte": {
+            "truncada_sem_texto": 3,
+            "spoiler": 2,
+            "abaixo_min_chars": 66,
+            "excedente_cota": 18,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 10
+        }
+      ],
+      "temas": [
+        {
+          "tema": "Duração excessiva e ritmo lento",
+          "mencoes_aproximadas": 28,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "Diversas reviews deste grupo consideram o filme longo demais para o que oferece, com ritmo arrastado e cenas que poderiam ser encurtadas sem prejuízo.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Fotografia e estética elogiadas",
+          "mencoes_aproximadas": 12,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "Várias pessoas do grupo destacam a beleza dos planos, a paleta de cores e a elegância visual, com menções frequentes ao carro vermelho como elemento marcante da imagem.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Atuações e profundidade emocional",
+          "mencoes_aproximadas": 10,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "Há comentários elogiando a atuação contida do protagonista e a capacidade do elenco de transmitir emoção sem exageros, ainda que alguns não tenham se conectado a esse aspecto.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Dificuldade de conexão emocional",
+          "mencoes_aproximadas": 9,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "Boa parte deste grupo relata não ter conseguido se envolver com as questões dos personagens, mesmo reconhecendo a seriedade com que o luto e a melancolia são tratados.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Relação com a obra de Murakami e Tio Vânia",
+          "mencoes_aproximadas": 7,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "Algumas reviews medianas mencionam o material de origem, comparando a adaptação com o texto literário e com a peça de Tchekhov, ora valorizando o diálogo entre as obras, ora achando a transposição confusa ou excessivamente teatral.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Diálogos densos e excesso de exposição",
+          "mencoes_aproximadas": 6,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "Este grupo aponta que o filme é muito falado, com longos monólogos e conversas que, em certos momentos, explicitam sentimentos de forma pouco sutil ou cansativa.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        }
+      ],
+      "observacao_geral": "As reviews medianas apontam um reconhecimento da beleza visual e da seriedade emocional do filme, mas destacam de forma recorrente a duração excessiva, o ritmo lento e a dificuldade de conexão com os personagens. Este grupo específico parece ver qualidades na obra sem que isso se traduza em envolvimento pleno.",
+      "idioma_invalido": false,
+      "escopo_suspeito": false
+    },
+    {
+      "bucket": "positivas",
+      "alvo": 40,
+      "modo": "completo",
+      "estado_piso": "completa",
+      "n_validas": 40,
+      "share_real": 87,
+      "composicao_alvo": {
+        "3.5": 5,
+        "4.0": 14,
+        "4.5": 10,
+        "5.0": 11
+      },
+      "composicao_atingida": {
+        "3.5": 5,
+        "4.0": 14,
+        "4.5": 10,
+        "5.0": 11
+      },
+      "cascata_por_degrau": {
+        "150": 40
+      },
+      "deficit_redistribuido": 0,
+      "distribuicao_pagina_origem": {
+        "n": 40,
+        "min": 1,
+        "max": 64,
+        "p5": 1,
+        "p50": 3,
+        "p95": 64,
+        "fracao_profunda": 0.325
+      },
+      "janela_amostra": {
+        "n": 40,
+        "min": "2024-08-31",
+        "max": "2026-09-10",
+        "p5": "2026-06-02",
+        "p50": "2026-09-07",
+        "p95": "2026-09-10"
+      },
+      "niveis": [
+        {
+          "nivel": 3.5,
+          "n_validas": 5,
+          "n_alvo": 5,
+          "n_brutas": 24,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 0,
+          "n_descartadas_curtas": 15,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 0,
+          "motivos_descarte": {
+            "truncada_sem_texto": 0,
+            "spoiler": 0,
+            "abaixo_min_chars": 15,
+            "excedente_cota": 4,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 2
+        },
+        {
+          "nivel": 4.0,
+          "n_validas": 14,
+          "n_alvo": 14,
+          "n_brutas": 72,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 4,
+          "n_descartadas_curtas": 44,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 0,
+          "motivos_descarte": {
+            "truncada_sem_texto": 0,
+            "spoiler": 4,
+            "abaixo_min_chars": 44,
+            "excedente_cota": 10,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 6
+        },
+        {
+          "nivel": 4.5,
+          "n_validas": 10,
+          "n_alvo": 10,
+          "n_brutas": 48,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 1,
+          "n_descartadas_curtas": 29,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 0,
+          "motivos_descarte": {
+            "truncada_sem_texto": 0,
+            "spoiler": 1,
+            "abaixo_min_chars": 29,
+            "excedente_cota": 8,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 4
+        },
+        {
+          "nivel": 5.0,
+          "n_validas": 11,
+          "n_alvo": 11,
+          "n_brutas": 48,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 4,
+          "n_descartadas_curtas": 21,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 2,
+          "motivos_descarte": {
+            "truncada_sem_texto": 2,
+            "spoiler": 4,
+            "abaixo_min_chars": 21,
+            "excedente_cota": 10,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 4
+        }
+      ],
+      "temas": [
+        {
+          "tema": "Luto e culpa",
+          "mencoes_aproximadas": 28,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "As reviews destacam como o filme explora o luto, a culpa e a dificuldade de seguir em frente após uma perda, mostrando personagens que carregam dores do passado e buscam aceitação.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Relação entre Kafuku e Misaki",
+          "mencoes_aproximadas": 18,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "A conexão que se desenvolve entre o diretor de teatro e sua motorista é frequentemente elogiada, com muitos descrevendo como os dois se reconhecem em suas feridas e criam um espaço de confiança e cura mútua.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Fotografia e estética",
+          "mencoes_aproximadas": 15,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "A fotografia e a composição visual do filme são muito elogiadas, com destaque para os planos amplos, a simetria e a beleza das paisagens, que ajudam a transmitir a solidão e a introspecção dos personagens.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Ritmo lento e duração",
+          "mencoes_aproximadas": 14,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "O ritmo deliberado e a longa duração são mencionados tanto como um desafio quanto como um aspecto que contribui para a imersão, com muitos afirmando que o tempo passa rápido apesar das três horas.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Intertextualidade com Tio Vânia e Murakami",
+          "mencoes_aproximadas": 12,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "A presença da peça Tio Vânia e a adaptação de contos de Murakami são vistas como elementos que enriquecem a narrativa, criando paralelos entre a arte e a vida dos personagens.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Atuações e direção",
+          "mencoes_aproximadas": 10,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "As atuações são amplamente elogiadas, assim como a direção de Hamaguchi, que é destacada por sua sensibilidade e capacidade de extrair performances profundas do elenco.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        }
+      ],
+      "observacao_geral": "As reviews positivas destacam a profundidade emocional do filme, especialmente no tratamento do luto e da culpa, e elogiam a relação entre os protagonistas, a fotografia e a intertextualidade com Tio Vânia e Murakami. Apesar do ritmo lento e da longa duração, muitos consideram a experiência recompensadora e imersiva.",
+      "idioma_invalido": false,
+      "escopo_suspeito": false
+    }
+  ],
+  "eixos": {
+    "taxonomia_id": "ebab2667de74",
+    "margem": {
+      "lei": "lift^2 * n >= 2085136/1000000",
+      "constante_quadrada": [
+        2085136,
+        1000000
+      ],
+      "n": 40,
+      "limiar_pp": 22.83
+    },
+    "margem_lift_pp": 22.83,
+    "linhas": [
+      {
+        "eixo": "ritmo",
+        "por_bucket": {
+          "negativas": {
+            "mencoes": 24,
+            "de_n": 40,
+            "freq_pct": 60.0,
+            "lift_pp": -2.5,
+            "acima_da_margem": false,
+            "tema": "Duração excessiva e ritmo lento",
+            "exemplo_parafraseado": "Este grupo reclama que o filme se arrasta por quase três horas e que a duração não se justifica, tornando a experiência tediosa e cansativa.",
+            "temas_no_mesmo_eixo": []
+          },
+          "medianas": {
+            "mencoes": 25,
+            "de_n": 40,
+            "freq_pct": 62.5,
+            "lift_pp": 2.5,
+            "acima_da_margem": false,
+            "tema": "Duração excessiva e ritmo lento",
+            "exemplo_parafraseado": "Diversas reviews deste grupo consideram o filme longo demais para o que oferece, com ritmo arrastado e cenas que poderiam ser encurtadas sem prejuízo.",
+            "temas_no_mesmo_eixo": []
+          },
+          "positivas": {
+            "mencoes": 19,
+            "de_n": 40,
+            "freq_pct": 47.5,
+            "lift_pp": -15.0,
+            "acima_da_margem": false,
+            "tema": "Ritmo lento e duração",
+            "exemplo_parafraseado": "O ritmo deliberado e a longa duração são mencionados tanto como um desafio quanto como um aspecto que contribui para a imersão, com muitos afirmando que o tempo passa rápido apesar das três horas.",
+            "temas_no_mesmo_eixo": []
+          }
+        },
+        "bullet_de": {
+          "negativas": "frequencia",
+          "medianas": "frequencia",
+          "positivas": null
+        }
+      },
+      {
+        "eixo": "atuacao",
+        "por_bucket": {
+          "negativas": {
+            "mencoes": 12,
+            "de_n": 40,
+            "freq_pct": 30.0,
+            "lift_pp": 2.5,
+            "acima_da_margem": false,
+            "tema": "Falta de emoção e atuações apáticas",
+            "exemplo_parafraseado": "As reviews negativas apontam que os personagens parecem robóticos ou indiferentes, e que a contenção emocional impede qualquer conexão com a história.",
+            "temas_no_mesmo_eixo": []
+          },
+          "medianas": {
+            "mencoes": 11,
+            "de_n": 40,
+            "freq_pct": 27.5,
+            "lift_pp": -2.5,
+            "acima_da_margem": false,
+            "tema": "Atuações e profundidade emocional",
+            "exemplo_parafraseado": "Há comentários elogiando a atuação contida do protagonista e a capacidade do elenco de transmitir emoção sem exageros, ainda que alguns não tenham se conectado a esse aspecto.",
+            "temas_no_mesmo_eixo": []
+          },
+          "positivas": {
+            "mencoes": 11,
+            "de_n": 40,
+            "freq_pct": 27.5,
+            "lift_pp": -2.5,
+            "acima_da_margem": false,
+            "tema": "Atuações e direção",
+            "exemplo_parafraseado": "As atuações são amplamente elogiadas, assim como a direção de Hamaguchi, que é destacada por sua sensibilidade e capacidade de extrair performances profundas do elenco.",
+            "temas_no_mesmo_eixo": []
+          }
+        },
+        "bullet_de": {
+          "negativas": null,
+          "medianas": null,
+          "positivas": null
+        }
+      },
+      {
+        "eixo": "direcao_imagem",
+        "por_bucket": {
+          "negativas": {
+            "mencoes": 12,
+            "de_n": 40,
+            "freq_pct": 30.0,
+            "lift_pp": -10.0,
+            "acima_da_margem": false,
+            "tema": "Aspectos visuais elogiados, mas insuficientes",
+            "exemplo_parafraseado": "As reviews negativas reconhecem a bela fotografia e o capricho visual, mas afirmam que isso não compensa a falta de envolvimento emocional ou de uma narrativa cativante.",
+            "temas_no_mesmo_eixo": []
+          },
+          "medianas": {
+            "mencoes": 14,
+            "de_n": 40,
+            "freq_pct": 35.0,
+            "lift_pp": -5.0,
+            "acima_da_margem": false,
+            "tema": "Fotografia e estética elogiadas",
+            "exemplo_parafraseado": "Várias pessoas do grupo destacam a beleza dos planos, a paleta de cores e a elegância visual, com menções frequentes ao carro vermelho como elemento marcante da imagem.",
+            "temas_no_mesmo_eixo": []
+          },
+          "positivas": {
+            "mencoes": 16,
+            "de_n": 40,
+            "freq_pct": 40.0,
+            "lift_pp": 5.0,
+            "acima_da_margem": false,
+            "tema": "Fotografia e estética",
+            "exemplo_parafraseado": "A fotografia e a composição visual do filme são muito elogiadas, com destaque para os planos amplos, a simetria e a beleza das paisagens, que ajudam a transmitir a solidão e a introspecção dos personagens.",
+            "temas_no_mesmo_eixo": []
+          }
+        },
+        "bullet_de": {
+          "negativas": null,
+          "medianas": null,
+          "positivas": null
+        }
+      },
+      {
+        "eixo": "roteiro_estrutura",
+        "por_bucket": {
+          "negativas": {
+            "mencoes": 30,
+            "de_n": 40,
+            "freq_pct": 75.0,
+            "lift_pp": -10.0,
+            "acima_da_margem": false,
+            "tema": "Roteiro confuso e diálogos prolongados",
+            "exemplo_parafraseado": "Este grupo critica a estrutura narrativa como confusa ou arrastada, com diálogos extensos que não acrescentam e momentos iniciais pouco claros.",
+            "temas_no_mesmo_eixo": []
+          },
+          "medianas": {
+            "mencoes": 29,
+            "de_n": 40,
+            "freq_pct": 72.5,
+            "lift_pp": -12.5,
+            "acima_da_margem": false,
+            "tema": "Diálogos densos e excesso de exposição",
+            "exemplo_parafraseado": "Este grupo aponta que o filme é muito falado, com longos monólogos e conversas que, em certos momentos, explicitam sentimentos de forma pouco sutil ou cansativa.",
+            "temas_no_mesmo_eixo": []
+          },
+          "positivas": {
+            "mencoes": 34,
+            "de_n": 40,
+            "freq_pct": 85.0,
+            "lift_pp": 10.0,
+            "acima_da_margem": false,
+            "tema": "Luto e culpa",
+            "exemplo_parafraseado": "As reviews destacam como o filme explora o luto, a culpa e a dificuldade de seguir em frente após uma perda, mostrando personagens que carregam dores do passado e buscam aceitação.",
+            "temas_no_mesmo_eixo": [
+              "Relação entre Kafuku e Misaki"
+            ]
+          }
+        },
+        "bullet_de": {
+          "negativas": "frequencia",
+          "medianas": "frequencia",
+          "positivas": "frequencia"
+        }
+      },
+      {
+        "eixo": "som_trilha",
+        "por_bucket": {
+          "negativas": {
+            "mencoes": 2,
+            "de_n": 40,
+            "freq_pct": 5.0,
+            "lift_pp": -7.5,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "medianas": {
+            "mencoes": 2,
+            "de_n": 40,
+            "freq_pct": 5.0,
+            "lift_pp": -7.5,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "positivas": {
+            "mencoes": 5,
+            "de_n": 40,
+            "freq_pct": 12.5,
+            "lift_pp": 7.5,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          }
+        },
+        "bullet_de": {
+          "negativas": null,
+          "medianas": null,
+          "positivas": null
+        }
+      },
+      {
+        "eixo": "tom_atmosfera",
+        "por_bucket": {
+          "negativas": {
+            "mencoes": 5,
+            "de_n": 40,
+            "freq_pct": 12.5,
+            "lift_pp": -20.0,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "medianas": {
+            "mencoes": 2,
+            "de_n": 40,
+            "freq_pct": 5.0,
+            "lift_pp": -27.5,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "positivas": {
+            "mencoes": 13,
+            "de_n": 40,
+            "freq_pct": 32.5,
+            "lift_pp": 20.0,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          }
+        },
+        "bullet_de": {
+          "negativas": null,
+          "medianas": null,
+          "positivas": null
+        }
+      },
+      {
+        "eixo": "impacto_emocional",
+        "por_bucket": {
+          "negativas": {
+            "mencoes": 18,
+            "de_n": 40,
+            "freq_pct": 45.0,
+            "lift_pp": -22.5,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "medianas": {
+            "mencoes": 23,
+            "de_n": 40,
+            "freq_pct": 57.5,
+            "lift_pp": -10.0,
+            "acima_da_margem": false,
+            "tema": "Dificuldade de conexão emocional",
+            "exemplo_parafraseado": "Boa parte deste grupo relata não ter conseguido se envolver com as questões dos personagens, mesmo reconhecendo a seriedade com que o luto e a melancolia são tratados.",
+            "temas_no_mesmo_eixo": []
+          },
+          "positivas": {
+            "mencoes": 27,
+            "de_n": 40,
+            "freq_pct": 67.5,
+            "lift_pp": 10.0,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          }
+        },
+        "bullet_de": {
+          "negativas": null,
+          "medianas": null,
+          "positivas": "frequencia"
+        }
+      },
+      {
+        "eixo": "comparacoes",
+        "por_bucket": {
+          "negativas": {
+            "mencoes": 17,
+            "de_n": 40,
+            "freq_pct": 42.5,
+            "lift_pp": -12.5,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "medianas": {
+            "mencoes": 13,
+            "de_n": 40,
+            "freq_pct": 32.5,
+            "lift_pp": -22.5,
+            "acima_da_margem": false,
+            "tema": "Relação com a obra de Murakami e Tio Vânia",
+            "exemplo_parafraseado": "Algumas reviews medianas mencionam o material de origem, comparando a adaptação com o texto literário e com a peça de Tchekhov, ora valorizando o diálogo entre as obras, ora achando a transposição confusa ou excessivamente teatral.",
+            "temas_no_mesmo_eixo": []
+          },
+          "positivas": {
+            "mencoes": 22,
+            "de_n": 40,
+            "freq_pct": 55.0,
+            "lift_pp": 12.5,
+            "acima_da_margem": false,
+            "tema": "Intertextualidade com Tio Vânia e Murakami",
+            "exemplo_parafraseado": "A presença da peça Tio Vânia e a adaptação de contos de Murakami são vistas como elementos que enriquecem a narrativa, criando paralelos entre a arte e a vida dos personagens.",
+            "temas_no_mesmo_eixo": []
+          }
+        },
+        "bullet_de": {
+          "negativas": null,
+          "medianas": null,
+          "positivas": null
+        }
+      },
+      {
+        "eixo": "expectativa",
+        "por_bucket": {
+          "negativas": {
+            "mencoes": 13,
+            "de_n": 40,
+            "freq_pct": 32.5,
+            "lift_pp": 7.5,
+            "acima_da_margem": false,
+            "tema": "Expectativa frustrada e obra superestimada",
+            "exemplo_parafraseado": "Muitas reviews expressam decepção em relação à aclamação recebida, considerando o filme superestimado e aquém das expectativas criadas.",
+            "temas_no_mesmo_eixo": []
+          },
+          "medianas": {
+            "mencoes": 10,
+            "de_n": 40,
+            "freq_pct": 25.0,
+            "lift_pp": -7.5,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "positivas": {
+            "mencoes": 3,
+            "de_n": 40,
+            "freq_pct": 7.5,
+            "lift_pp": -25.0,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          }
+        },
+        "bullet_de": {
+          "negativas": null,
+          "medianas": null,
+          "positivas": null
+        }
+      },
+      {
+        "eixo": "critica_social",
+        "por_bucket": {
+          "negativas": {
+            "mencoes": 10,
+            "de_n": 40,
+            "freq_pct": 25.0,
+            "lift_pp": 17.5,
+            "acima_da_margem": false,
+            "tema": "Personagens pouco cativantes e retrato de gênero problemático",
+            "exemplo_parafraseado": "Este grupo destaca a falta de empatia pelos personagens e critica a representação feminina como unidimensional ou misógina, especialmente por vir de uma adaptação literária.",
+            "temas_no_mesmo_eixo": []
+          },
+          "medianas": {
+            "mencoes": 3,
+            "de_n": 40,
+            "freq_pct": 7.5,
+            "lift_pp": -17.5,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "positivas": {
+            "mencoes": 1,
+            "de_n": 40,
+            "freq_pct": 2.5,
+            "lift_pp": -22.5,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          }
+        },
+        "bullet_de": {
+          "negativas": null,
+          "medianas": null,
+          "positivas": null
+        }
+      }
+    ],
+    "contraste": "valorativo",
+    "rotulagem": {
+      "n_chamadas": 3,
+      "falharam": [],
+      "fora_da_taxonomia": {},
+      "houve_retentativa": []
+    },
+    "spec_version": "1.9.50",
+    "verificador": {
+      "aplicado": true,
+      "variante": "V2_alvo",
+      "passada": 1,
+      "eixo": "impacto_emocional",
+      "n_removidas_no_corpus": 2781
+    }
+  },
+  "narrativa": "Lançado em 2021 sob a direção de Ryusuke Hamaguchi, o drama Drive My Car acompanha Yusuke Kafuku dois anos após a morte de sua esposa. Convidado para dirigir uma peça em um festival de teatro na cidade de Hiroshima, ele conhece Misaki, uma jovem reservada indicada para ser sua motorista. Convivendo no trajeto cotidiano, o protagonista é levado a confrontar o mistério de sua antiga parceira que ainda o assombra.\n\nA experiência da obra se caracteriza por uma condução em ritmo lento ao longo de quase três horas de duração, estruturada em diálogos prolongados e uma atmosfera de contemplação.\n\nOs diferentes grupos concordam sobre o que o filme é e discordam fundamentalmente sobre se ele funciona. Na grande maioria das notas (~87%), a maior parte enfatiza o tratamento do luto e da culpa ao longo da narrativa. Nesse mesmo conjunto, uma parcela expressiva destaca o vínculo desenvolvido entre Kafuku e Misaki, ao passo que muitos tecem elogios à fotografia e ao rigor estético da composição visual.\n\nSob a ótica de quem se encontra numa fração mínima das notas (~10%), a maioria aponta incômodo diante da duração excessiva e do ritmo lento do longa-metragem. Apesar dessa ressalva, boa parte desse grupo ressalta os méritos da fotografia e da estética, enquanto alguns reconhecem a qualidade das atuações e a profundidade emocional.\n\nPor fim, para quem se posiciona numa fração ainda menor das notas (~3%), cerca de metade rejeita o andamento lento e a extensão da produção. Dentro desse segmento, um número considerável reclama da aparente falta de emoção e de atuações apáticas, enquanto vários criticam a presença de um roteiro confuso estruturado em diálogos prolongados.",
+  "verificacao_narrativa": {
+    "quantificador_fora_de_faixa": [],
+    "quantificador_repetido": [],
+    "paragrafos": {
+      "n_paragrafos": 5,
+      "minimo": 3,
+      "insuficientes": false,
+      "longos": []
+    },
+    "n_paragrafos": 5,
+    "paragrafos_insuficientes": false,
+    "paragrafos_longos": [],
+    "grupos_sem_paragrafo_proprio": [],
+    "movimento1_e_movimento2_no_mesmo_paragrafo": true,
+    "formato_invalido": false,
+    "numeros_inventados": [],
+    "rotulos_faltando": [],
+    "ordem_incorreta": false,
+    "vocabulario_peso": false,
+    "resenha_speak": [],
+    "n_resenha_speak": 0,
+    "n_flags": 1
+  },
+  "narrativa_selecao": {
+    "provider": "gemini",
+    "modelo": "gemini-3.7-flash",
+    "n_candidatos": 3,
+    "n_chamadas": 4,
+    "indice_escolhido": 1,
+    "motivo": "menor_severidade",
+    "criterio_decisivo": "empate",
+    "candidatos": [
+      {
+        "indice": 0,
+        "n_flags": 2,
+        "cliches": 0,
+        "repeticao_max": 1,
+        "ritmo": 10,
+        "cobertura": 0.889,
+        "eliminado": true
+      },
+      {
+        "indice": 1,
+        "n_flags": 1,
+        "cliches": 0,
+        "repeticao_max": 1,
+        "ritmo": 4,
+        "cobertura": 1.0,
+        "eliminado": true
+      },
+      {
+        "indice": 2,
+        "n_flags": 2,
+        "cliches": 0,
+        "repeticao_max": 1,
+        "ritmo": 12,
+        "cobertura": 1.0,
+        "eliminado": true
+      }
+    ],
+    "retry": {
+      "n_frases_infratoras": 0,
+      "motivos": [],
+      "n_flags_depois": 1,
+      "aplicado": false
+    },
+    "uso": {
+      "prompt_tokens": 11818,
+      "completion_tokens": 1538,
+      "cache_hit_tokens": 0,
+      "cache_miss_tokens": 11818
+    },
+    "latencia_s": 46.85
+  },
+  "condicoes": {
+    "vale_a_pena": [
+      {
+        "texto": "se interessa por narrativas sobre luto, culpa e a busca por aceitação",
+        "tema_origem": "POS-A",
+        "bucket_origem": "positivas",
+        "tema_texto": "Luto e culpa",
+        "rotulo_forca": "a maioria"
+      },
+      {
+        "texto": "se interessa por vínculos entre personagens marcados por perdas, culpa e solidão",
+        "tema_origem": "POS-B",
+        "bucket_origem": "positivas",
+        "tema_texto": "Relação entre Kafuku e Misaki",
+        "rotulo_forca": "muitos",
+        "origem": "leitura_humana",
+        "avisos": [
+          "ancora_nao_verificavel",
+          "sem_discriminacao"
+        ]
+      },
+      {
+        "texto": "valoriza composições visuais simétricas e belas paisagens que refletem a solidão interior",
+        "tema_origem": "POS-C",
+        "bucket_origem": "positivas",
+        "tema_texto": "Fotografia e estética",
+        "rotulo_forca": "muitos"
+      }
+    ],
+    "talvez_evite": [
+      {
+        "texto": "se cansa com narrativas muito longas que parecem arrastadas e tediosas",
+        "tema_origem": "NEG-A",
+        "bucket_origem": "negativas",
+        "tema_texto": "Duração excessiva e ritmo lento",
+        "rotulo_forca": "cerca de metade"
+      },
+      {
+        "texto": "se incomoda com atuações apáticas e excessiva contenção emocional que distanciam a história",
+        "tema_origem": "NEG-B",
+        "bucket_origem": "negativas",
+        "tema_texto": "Falta de emoção e atuações apáticas",
+        "rotulo_forca": "muitos"
+      },
+      {
+        "texto": "se frustra com diálogos excessivamente extensos e uma estrutura narrativa confusa",
+        "tema_origem": "NEG-C",
+        "bucket_origem": "negativas",
+        "tema_texto": "Roteiro confuso e diálogos prolongados",
+        "rotulo_forca": "muitos"
+      },
+      {
+        "texto": "acha que belos visuais e fotografia caprichada não compensam a falta de envolvimento",
+        "tema_origem": "NEG-E",
+        "bucket_origem": "negativas",
+        "tema_texto": "Aspectos visuais elogiados, mas insuficientes",
+        "rotulo_forca": "muitos"
+      }
+    ],
+    "ordem_colunas": [
+      "vale_a_pena",
+      "talvez_evite"
+    ],
+    "peso": {
+      "vale_a_pena": {
+        "peso_pct": 87,
+        "peso_texto": "~87% das notas",
+        "nota_de_amostra": null
+      },
+      "talvez_evite": {
+        "peso_pct": 3,
+        "peso_texto": "~3% das notas",
+        "nota_de_amostra": null
+      }
+    },
+    "peso_meio": null,
+    "origem": "llm",
+    "temas_pedidos": {
+      "vale_a_pena": [
+        "POS-A",
+        "POS-B",
+        "POS-C",
+        "POS-D"
+      ],
+      "talvez_evite": [
+        "NEG-A",
+        "NEG-B",
+        "NEG-C",
+        "NEG-E"
+      ]
+    },
+    "temas_saltados": {
+      "vale_a_pena": [
+        "POS-D"
+      ],
+      "talvez_evite": []
+    },
+    "descartadas": [
+      {
+        "texto": "busca uma experiência imersiva e aceita um ritmo deliberado em longa duração",
+        "tema_origem": "POS-D",
+        "lado": "vale_a_pena",
+        "flags": [
+          "exemplo_verbatim"
+        ]
+      }
+    ],
+    "retry": {
+      "n_reprovadas": 1,
+      "n_aplicadas": 0,
+      "n_saltadas_pelo_modelo": 0,
+      "n_descartadas": 1
+    },
+    "provider": "gemini",
+    "modelo": "gemini-3.7-flash",
+    "n_candidatos": 3,
+    "n_chamadas": 4,
+    "indice_escolhido": 0,
+    "candidatos": [
+      {
+        "indice": 0,
+        "n_condicoes": 8,
+        "n_flags": 1,
+        "flags": [
+          "exemplo_verbatim"
+        ],
+        "n_temas_cobertos": 8
+      },
+      {
+        "indice": 1,
+        "n_condicoes": 8,
+        "n_flags": 2,
+        "flags": [
+          "exemplo_verbatim",
+          "sem_discriminacao"
+        ],
+        "n_temas_cobertos": 8
+      },
+      {
+        "indice": 2,
+        "n_condicoes": 8,
+        "n_flags": 2,
+        "flags": [
+          "exemplo_verbatim"
+        ],
+        "n_temas_cobertos": 8
+      }
+    ],
+    "uso": {
+      "prompt_tokens": 11030,
+      "completion_tokens": 1122,
+      "cache_hit_tokens": 0,
+      "cache_miss_tokens": 11030
+    },
+    "latencia_s": 19.63,
+    "spec_version": "1.9.50"
+  }
+}

@@ -1,0 +1,1620 @@
+{
+  "slug": "pinocchio-2022",
+  "data_coleta": "2026-09-13T05:31:43.452676+00:00",
+  "spec_version": "1.9.50",
+  "total_reviews_observadas": 576,
+  "reviews_url": "https://letterboxd.com/film/pinocchio-2022/reviews/",
+  "ficha": {
+    "titulo": "Pinóquio",
+    "sinopse_oficial": "O conto do boneco de madeira em uma arrepiante aventura para virar um menino de verdade, recontado.",
+    "sinopse_fallback_en": false,
+    "generos": [
+      "Fantasia",
+      "Aventura",
+      "Família"
+    ],
+    "duracao_min": 111,
+    "diretor": "Robert Zemeckis",
+    "diretor_transliterado": false,
+    "ano": 2022,
+    "fonte": "tmdb",
+    "tmdb_id": 532639,
+    "tmdb_fetched_at": "2026-09-10T20:06:52+00:00",
+    "poster_path": "/2nvHcplURnWLL2RX6SQlwM63wu3.jpg",
+    "poster_largura": 899,
+    "poster_altura": 1349,
+    "backdrop_paths": [
+      "/nnUQqlVZeEGuCRx8SaoCU4XVHJN.jpg",
+      "/lv4mA4jOnRSQCkmDYUyZ8ON43Dc.jpg",
+      "/hNou5JVGr5vj4ZRScLDuX6xMPjh.jpg",
+      "/pmTnOjUxp7wBZnX938zBDs6EtRW.jpg",
+      "/8NKYs8fxZYmguAuWFIPEKm2C9nK.jpg",
+      "/5BBDwAuMrWNi2OqqEe0qXQKVUQj.jpg",
+      "/gHVqvA5H1kPIMzYrSJJRzL8XG0Z.jpg",
+      "/3RZxZO6sE4n4cdpOgwwrYXvNfb1.jpg",
+      "/A8DQ1bimAFTYcia8IuAgDcIPcC.jpg",
+      "/wlkMCEpysOqg74F06NHi1Q0J4hq.jpg"
+    ],
+    "backdrop_path": "/nnUQqlVZeEGuCRx8SaoCU4XVHJN.jpg",
+    "backdrop_largura": 3840,
+    "backdrop_altura": 2160,
+    "poster_sem_texto_path": "/gOO1RZ6ps0br7idNtEuTc99oOBl.jpg",
+    "poster_sem_texto_largura": 2000,
+    "poster_sem_texto_altura": 3000,
+    "galeria_stills": [
+      {
+        "still_path": "/nnUQqlVZeEGuCRx8SaoCU4XVHJN.jpg",
+        "still_largura": 3840,
+        "still_altura": 2160
+      },
+      {
+        "still_path": "/lv4mA4jOnRSQCkmDYUyZ8ON43Dc.jpg",
+        "still_largura": 1920,
+        "still_altura": 1080
+      },
+      {
+        "still_path": "/cCrJpqS01WvbT5bW99bo8PjxhCN.jpg",
+        "still_largura": 3840,
+        "still_altura": 2160
+      },
+      {
+        "still_path": "/pmTnOjUxp7wBZnX938zBDs6EtRW.jpg",
+        "still_largura": 3840,
+        "still_altura": 2160
+      },
+      {
+        "still_path": "/3RZxZO6sE4n4cdpOgwwrYXvNfb1.jpg",
+        "still_largura": 1920,
+        "still_altura": 1080
+      },
+      {
+        "still_path": "/4IM1Neh019KvIy0P8HPPNL11fQ6.jpg",
+        "still_largura": 1920,
+        "still_altura": 1080
+      },
+      {
+        "still_path": "/6y6XrAQTdBGWLTusH5Lf4iqJoDd.jpg",
+        "still_largura": 3840,
+        "still_altura": 2160
+      },
+      {
+        "still_path": "/A8DQ1bimAFTYcia8IuAgDcIPcC.jpg",
+        "still_largura": 1920,
+        "still_altura": 1080
+      },
+      {
+        "still_path": "/aREG429ytUhzLrrJk8YZr10qoAS.jpg",
+        "still_largura": 1280,
+        "still_altura": 720
+      },
+      {
+        "still_path": "/j2eprR6F3PCuz1VHiLvlPrD0qkL.jpg",
+        "still_largura": 3840,
+        "still_altura": 2160
+      },
+      {
+        "still_path": "/wlkMCEpysOqg74F06NHi1Q0J4hq.jpg",
+        "still_largura": 1920,
+        "still_altura": 1080
+      }
+    ],
+    "ano_fonte": "letterboxd",
+    "identidade": {
+      "versao": 1,
+      "status": "validada",
+      "slug": "pinocchio-2022",
+      "titulo_letterboxd": "Pinocchio",
+      "ano_letterboxd": 2022,
+      "tmdb_id_letterboxd": 532639,
+      "tmdb_id_escolhido": 532639,
+      "fonte_id": "letterboxd",
+      "titulo_tmdb_campo": "original_title",
+      "titulo_tmdb_correspondente": "Pinocchio",
+      "ano_tmdb": 2022,
+      "ano_divergente": false
+    }
+  },
+  "distribuicao": {
+    "n_notas_total": 110315,
+    "por_nivel": {
+      "0.5": 12450,
+      "1.0": 19462,
+      "1.5": 13409,
+      "2.0": 21029,
+      "2.5": 12261,
+      "3.0": 15590,
+      "3.5": 5721,
+      "4.0": 6108,
+      "4.5": 1031,
+      "5.0": 3254
+    },
+    "por_bucket": {
+      "negativas": 60,
+      "medianas": 25,
+      "positivas": 15
+    },
+    "fonte": "letterboxd_histograma"
+  },
+  "coleta": {
+    "slug": "pinocchio-2022",
+    "coletado_em": "2026-09-10T19:42:12.847952+00:00",
+    "versao_coletor": "1.9.6",
+    "ordenacao_usada": "by/added",
+    "histograma_bruto": {
+      "0.5": 12450,
+      "1.0": 19462,
+      "1.5": 13409,
+      "2.0": 21029,
+      "2.5": 12261,
+      "3.0": 15590,
+      "3.5": 5721,
+      "4.0": 6108,
+      "4.5": 1031,
+      "5.0": 3254
+    },
+    "orcamento_paginas_por_nivel": {
+      "0.5": 3,
+      "1.0": 5,
+      "1.5": 3,
+      "2.0": 5,
+      "2.5": 7,
+      "3.0": 9,
+      "3.5": 6,
+      "4.0": 6,
+      "4.5": 1,
+      "5.0": 3
+    },
+    "paginas_gastas_por_nivel": {
+      "0.5": 3,
+      "1.0": 5,
+      "1.5": 3,
+      "2.0": 5,
+      "2.5": 7,
+      "3.0": 9,
+      "3.5": 6,
+      "4.0": 6,
+      "4.5": 1,
+      "5.0": 3
+    },
+    "paradas_por_limite": [
+      "0.5",
+      "1.0",
+      "1.5",
+      "2.0",
+      "2.5",
+      "3.0",
+      "3.5",
+      "4.0",
+      "4.5",
+      "5.0"
+    ],
+    "contagem_bruta_por_nivel": {
+      "0.5": 36,
+      "1.0": 60,
+      "1.5": 36,
+      "2.0": 60,
+      "2.5": 84,
+      "3.0": 108,
+      "3.5": 72,
+      "4.0": 72,
+      "4.5": 12,
+      "5.0": 36
+    },
+    "contagem_estimada_valida_por_nivel": {
+      "0.5": 11,
+      "1.0": 6,
+      "1.5": 10,
+      "2.0": 12,
+      "2.5": 33,
+      "3.0": 34,
+      "3.5": 19,
+      "4.0": 15,
+      "4.5": 4,
+      "5.0": 5
+    },
+    "motivo_parada_por_nivel": {
+      "0.5": "orcamento_esgotado",
+      "1.0": "orcamento_esgotado",
+      "1.5": "orcamento_esgotado",
+      "2.0": "orcamento_esgotado",
+      "2.5": "orcamento_esgotado",
+      "3.0": "orcamento_esgotado",
+      "3.5": "orcamento_esgotado",
+      "4.0": "orcamento_esgotado",
+      "4.5": "orcamento_esgotado",
+      "5.0": "orcamento_esgotado"
+    },
+    "paginas_base_por_nivel": {
+      "0.5": 3,
+      "1.0": 5,
+      "1.5": 3,
+      "2.0": 5,
+      "2.5": 7,
+      "3.0": 9,
+      "3.5": 6,
+      "4.0": 6,
+      "4.5": 1,
+      "5.0": 3
+    },
+    "paginas_extensao_por_nivel": {
+      "0.5": 0,
+      "1.0": 0,
+      "1.5": 0,
+      "2.0": 0,
+      "2.5": 0,
+      "3.0": 0,
+      "3.5": 0,
+      "4.0": 0,
+      "4.5": 0,
+      "5.0": 0
+    },
+    "extensao_por_bucket": {
+      "negativas": {
+        "paginas_base": 16,
+        "paginas_extensao": 0,
+        "extras_por_nivel": {},
+        "motivo_parada": "meta_atingida",
+        "n_validas_pos_base": 51,
+        "n_validas_pos_extensao": 51,
+        "meta": 50
+      },
+      "medianas": {
+        "paginas_base": 16,
+        "paginas_extensao": 0,
+        "extras_por_nivel": {},
+        "motivo_parada": "meta_atingida",
+        "n_validas_pos_base": 67,
+        "n_validas_pos_extensao": 67,
+        "meta": 50
+      },
+      "positivas": {
+        "paginas_base": 16,
+        "paginas_extensao": 0,
+        "extras_por_nivel": {},
+        "motivo_parada": "meta_atingida",
+        "n_validas_pos_base": 50,
+        "n_validas_pos_extensao": 50,
+        "meta": 50
+      }
+    },
+    "profundidade_sondagem": {
+      "nivel_sondado": 2.0,
+      "profundidade": 256,
+      "exata": false,
+      "requisicoes": 4,
+      "motivo": "teto_plataforma"
+    },
+    "profundidade_estimada_por_nivel": {
+      "0.5": 152,
+      "1.0": 237,
+      "1.5": 163,
+      "2.0": 256,
+      "2.5": 149,
+      "3.0": 190,
+      "3.5": 70,
+      "4.0": 74,
+      "4.5": 13,
+      "5.0": 40
+    },
+    "janela_temporal": {
+      "total": {
+        "n": 660,
+        "min": "2022-03-21",
+        "max": "2026-09-10",
+        "p5": "2022-09-18",
+        "p50": "2026-06-27",
+        "p95": "2026-09-01"
+      },
+      "por_bucket": {
+        "negativas": {
+          "n": 240,
+          "min": "2022-09-07",
+          "max": "2026-09-10",
+          "p5": "2022-12-16",
+          "p50": "2026-07-24",
+          "p95": "2026-09-03"
+        },
+        "medianas": {
+          "n": 192,
+          "min": "2022-05-01",
+          "max": "2026-09-09",
+          "p5": "2022-09-11",
+          "p50": "2026-05-31",
+          "p95": "2026-08-30"
+        },
+        "positivas": {
+          "n": 228,
+          "min": "2022-03-21",
+          "max": "2026-09-09",
+          "p5": "2022-09-24",
+          "p50": "2026-05-29",
+          "p95": "2026-08-30"
+        }
+      }
+    },
+    "dias_por_100_paginas": {
+      "n_paginas": 18,
+      "pagina_min": 1,
+      "pagina_max": 95,
+      "dias": 1441,
+      "dias_por_100_paginas": 1532.9787234042553,
+      "paginas_para_1_ano": 24
+    },
+    "identidade_letterboxd": {
+      "slug": "pinocchio-2022",
+      "titulo": "Pinocchio",
+      "ano": 2022,
+      "tmdb_id_letterboxd": 532639,
+      "fonte": "pagina_letterboxd"
+    },
+    "ano_lancamento": 2022,
+    "ano_fonte": "letterboxd",
+    "n_reviews_bruto": 660
+  },
+  "origem_paginas": {
+    "_histograma/pinocchio-2022.html": "cache",
+    "pinocchio-2022/pages/by_added/rated_2_page_4.html": "cache",
+    "pinocchio-2022/pages/by_added/rated_2_page_16.html": "cache",
+    "pinocchio-2022/pages/by_added/rated_2_page_64.html": "cache",
+    "pinocchio-2022/pages/by_added/rated_2_page_256.html": "cache",
+    "pinocchio-2022/pages/by_added/rated_0_5_page_1.html": "cache",
+    "pinocchio-2022/pages/by_added/rated_0_5_page_2.html": "cache",
+    "pinocchio-2022/pages/by_added/rated_0_5_page_38.html": "cache",
+    "pinocchio-2022/fulltext/viewing_1487856822.html": "cache",
+    "pinocchio-2022/fulltext/viewing_1467312570.html": "cache",
+    "pinocchio-2022/fulltext/viewing_1467277378.html": "cache",
+    "pinocchio-2022/fulltext/viewing_1459695280.html": "cache",
+    "pinocchio-2022/fulltext/viewing_1459510955.html": "cache",
+    "pinocchio-2022/fulltext/viewing_870161770.html": "cache",
+    "pinocchio-2022/pages/by_added/rated_1_page_1.html": "cache",
+    "pinocchio-2022/pages/by_added/rated_1_page_2.html": "cache",
+    "pinocchio-2022/pages/by_added/rated_1_page_3.html": "cache",
+    "pinocchio-2022/pages/by_added/rated_1_page_4.html": "cache",
+    "pinocchio-2022/pages/by_added/rated_1_page_59.html": "cache",
+    "pinocchio-2022/fulltext/viewing_1413323251.html": "cache",
+    "pinocchio-2022/pages/by_added/rated_1_5_page_1.html": "cache",
+    "pinocchio-2022/pages/by_added/rated_1_5_page_2.html": "cache",
+    "pinocchio-2022/pages/by_added/rated_1_5_page_41.html": "cache",
+    "pinocchio-2022/fulltext/viewing_1466656167.html": "cache",
+    "pinocchio-2022/pages/by_added/rated_2_page_1.html": "cache",
+    "pinocchio-2022/pages/by_added/rated_2_page_2.html": "cache",
+    "pinocchio-2022/pages/by_added/rated_2_page_3.html": "cache",
+    "pinocchio-2022/fulltext/viewing_1471020498.html": "cache",
+    "pinocchio-2022/fulltext/viewing_1468662267.html": "cache",
+    "pinocchio-2022/fulltext/viewing_1411777441.html": "cache",
+    "pinocchio-2022/fulltext/viewing_388894052.html": "cache",
+    "pinocchio-2022/pages/by_added/rated_2_5_page_1.html": "cache",
+    "pinocchio-2022/pages/by_added/rated_2_5_page_2.html": "cache",
+    "pinocchio-2022/pages/by_added/rated_2_5_page_3.html": "cache",
+    "pinocchio-2022/pages/by_added/rated_2_5_page_4.html": "cache",
+    "pinocchio-2022/pages/by_added/rated_2_5_page_5.html": "cache",
+    "pinocchio-2022/pages/by_added/rated_2_5_page_37.html": "cache",
+    "pinocchio-2022/pages/by_added/rated_2_5_page_74.html": "cache",
+    "pinocchio-2022/fulltext/viewing_1464253958.html": "cache",
+    "pinocchio-2022/fulltext/viewing_1461421480.html": "cache",
+    "pinocchio-2022/fulltext/viewing_1430370957.html": "cache",
+    "pinocchio-2022/fulltext/viewing_1351188427.html": "cache",
+    "pinocchio-2022/fulltext/viewing_1319866504.html": "cache",
+    "pinocchio-2022/fulltext/viewing_387839308.html": "cache",
+    "pinocchio-2022/fulltext/viewing_384347771.html": "cache",
+    "pinocchio-2022/fulltext/viewing_382324797.html": "cache",
+    "pinocchio-2022/fulltext/viewing_297498665.html": "cache",
+    "pinocchio-2022/fulltext/viewing_297477660.html": "cache",
+    "pinocchio-2022/pages/by_added/rated_3_page_1.html": "cache",
+    "pinocchio-2022/pages/by_added/rated_3_page_2.html": "cache",
+    "pinocchio-2022/pages/by_added/rated_3_page_3.html": "cache",
+    "pinocchio-2022/pages/by_added/rated_3_page_4.html": "cache",
+    "pinocchio-2022/pages/by_added/rated_3_page_5.html": "cache",
+    "pinocchio-2022/pages/by_added/rated_3_page_6.html": "cache",
+    "pinocchio-2022/pages/by_added/rated_3_page_7.html": "cache",
+    "pinocchio-2022/pages/by_added/rated_3_page_48.html": "cache",
+    "pinocchio-2022/pages/by_added/rated_3_page_95.html": "cache",
+    "pinocchio-2022/fulltext/viewing_1490119584.html": "cache",
+    "pinocchio-2022/fulltext/viewing_1379022555.html": "cache",
+    "pinocchio-2022/fulltext/viewing_1378835759.html": "cache",
+    "pinocchio-2022/fulltext/viewing_1373137484.html": "cache",
+    "pinocchio-2022/fulltext/viewing_1363169966.html": "cache",
+    "pinocchio-2022/fulltext/viewing_1320248305.html": "cache",
+    "pinocchio-2022/fulltext/viewing_1306673684.html": "cache",
+    "pinocchio-2022/fulltext/viewing_353624031.html": "cache",
+    "pinocchio-2022/fulltext/viewing_296189305.html": "cache",
+    "pinocchio-2022/pages/by_added/rated_3_5_page_1.html": "cache",
+    "pinocchio-2022/pages/by_added/rated_3_5_page_2.html": "cache",
+    "pinocchio-2022/pages/by_added/rated_3_5_page_3.html": "cache",
+    "pinocchio-2022/pages/by_added/rated_3_5_page_4.html": "cache",
+    "pinocchio-2022/pages/by_added/rated_3_5_page_18.html": "cache",
+    "pinocchio-2022/pages/by_added/rated_3_5_page_35.html": "cache",
+    "pinocchio-2022/fulltext/viewing_1485323577.html": "cache",
+    "pinocchio-2022/fulltext/viewing_1436122905.html": "cache",
+    "pinocchio-2022/fulltext/viewing_299287500.html": "cache",
+    "pinocchio-2022/pages/by_added/rated_4_page_1.html": "cache",
+    "pinocchio-2022/pages/by_added/rated_4_page_2.html": "cache",
+    "pinocchio-2022/pages/by_added/rated_4_page_3.html": "cache",
+    "pinocchio-2022/pages/by_added/rated_4_page_4.html": "cache",
+    "pinocchio-2022/pages/by_added/rated_4_page_18.html": "cache",
+    "pinocchio-2022/pages/by_added/rated_4_page_37.html": "cache",
+    "pinocchio-2022/fulltext/viewing_1445422235.html": "cache",
+    "pinocchio-2022/fulltext/viewing_1401422301.html": "cache",
+    "pinocchio-2022/fulltext/viewing_723588155.html": "cache",
+    "pinocchio-2022/fulltext/viewing_298771626.html": "cache",
+    "pinocchio-2022/fulltext/viewing_298295425.html": "cache",
+    "pinocchio-2022/pages/by_added/rated_4_5_page_1.html": "cache",
+    "pinocchio-2022/pages/by_added/rated_5_page_1.html": "cache",
+    "pinocchio-2022/pages/by_added/rated_5_page_2.html": "cache",
+    "pinocchio-2022/pages/by_added/rated_5_page_10.html": "cache",
+    "pinocchio-2022/fulltext/viewing_1420730552.html": "cache",
+    "pinocchio-2022/film_page.html": "cache"
+  },
+  "buckets": [
+    {
+      "bucket": "negativas",
+      "alvo": 40,
+      "modo": "completo",
+      "estado_piso": "completa",
+      "n_validas": 40,
+      "share_real": 60,
+      "composicao_alvo": {
+        "0.5": 7,
+        "1.0": 12,
+        "1.5": 8,
+        "2.0": 13
+      },
+      "composicao_atingida": {
+        "0.5": 7,
+        "1.0": 12,
+        "1.5": 8,
+        "2.0": 13
+      },
+      "cascata_por_degrau": {
+        "150": 40
+      },
+      "deficit_redistribuido": 0,
+      "distribuicao_pagina_origem": {
+        "n": 40,
+        "min": 1,
+        "max": 64,
+        "p5": 1,
+        "p50": 4,
+        "p95": 41,
+        "fracao_profunda": 0.475
+      },
+      "janela_amostra": {
+        "n": 40,
+        "min": "2022-09-08",
+        "max": "2026-09-10",
+        "p5": "2022-12-16",
+        "p50": "2026-07-09",
+        "p95": "2026-09-03"
+      },
+      "niveis": [
+        {
+          "nivel": 0.5,
+          "n_validas": 7,
+          "n_alvo": 7,
+          "n_brutas": 36,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 0,
+          "n_descartadas_curtas": 25,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 0,
+          "motivos_descarte": {
+            "truncada_sem_texto": 0,
+            "spoiler": 0,
+            "abaixo_min_chars": 25,
+            "excedente_cota": 4,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 3
+        },
+        {
+          "nivel": 1.0,
+          "n_validas": 12,
+          "n_alvo": 12,
+          "n_brutas": 96,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 1,
+          "n_descartadas_curtas": 78,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 3,
+          "motivos_descarte": {
+            "truncada_sem_texto": 3,
+            "spoiler": 1,
+            "abaixo_min_chars": 78,
+            "excedente_cota": 2,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 5
+        },
+        {
+          "nivel": 1.5,
+          "n_validas": 8,
+          "n_alvo": 8,
+          "n_brutas": 36,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 1,
+          "n_descartadas_curtas": 23,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 2,
+          "motivos_descarte": {
+            "truncada_sem_texto": 2,
+            "spoiler": 1,
+            "abaixo_min_chars": 23,
+            "excedente_cota": 2,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 3
+        },
+        {
+          "nivel": 2.0,
+          "n_validas": 13,
+          "n_alvo": 13,
+          "n_brutas": 72,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 0,
+          "n_descartadas_curtas": 56,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 0,
+          "motivos_descarte": {
+            "truncada_sem_texto": 0,
+            "spoiler": 0,
+            "abaixo_min_chars": 56,
+            "excedente_cota": 3,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 5
+        }
+      ],
+      "temas": [
+        {
+          "tema": "Falta de alma e artificialidade",
+          "mencoes_aproximadas": 28,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "Muitas reviews descrevem o filme como uma produção sem alma, oca e puramente comercial, que substitui o encanto e a magia do original por uma estética digital fria e calculada.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "CGI e efeitos visuais ruins",
+          "mencoes_aproximadas": 22,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "Os efeitos gerados por computador são criticados como feios, mal feitos e excessivos, com personagens digitais que parecem deslocados e sem vida, prejudicando a imersão.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Desnecessidade do remake",
+          "mencoes_aproximadas": 20,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "Várias pessoas questionam por que refazer um clássico que já funcionava perfeitamente, apontando que a nova versão não acrescenta nada de novo e soa como uma exploração nostálgica sem propósito artístico.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Atuação de Tom Hanks e elenco",
+          "mencoes_aproximadas": 15,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "A atuação de Tom Hanks é vista como esforçada, mas equivocada, com um sotaque instável e exageros que não convencem, enquanto o restante do elenco é considerado apático ou mal utilizado.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Ritmo lento e tédio",
+          "mencoes_aproximadas": 12,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "O filme é frequentemente classificado como entediante e arrastado, com uma narrativa que não consegue prender a atenção e faz a duração parecer excessiva.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Comparação com o clássico de 1940",
+          "mencoes_aproximadas": 10,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "Muitos destacam que o remake perde completamente a emoção, o charme e a ousadia do original, resultando em uma versão inferior que não justifica sua existência.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        }
+      ],
+      "observacao_geral": "As reviews negativas apontam que este grupo considerou o filme uma produção sem alma, artificial e desnecessária, com sérios problemas de CGI, atuações e ritmo. A maioria das críticas compara a obra desfavoravelmente ao clássico original e a outros remakes da Disney, reforçando a sensação de vazio e ausência de propósito.",
+      "idioma_invalido": false,
+      "escopo_suspeito": false
+    },
+    {
+      "bucket": "medianas",
+      "alvo": 40,
+      "modo": "completo",
+      "estado_piso": "completa",
+      "n_validas": 40,
+      "share_real": 25,
+      "composicao_alvo": {
+        "2.5": 18,
+        "3.0": 22
+      },
+      "composicao_atingida": {
+        "2.5": 18,
+        "3.0": 22
+      },
+      "cascata_por_degrau": {
+        "150": 40
+      },
+      "deficit_redistribuido": 0,
+      "distribuicao_pagina_origem": {
+        "n": 40,
+        "min": 1,
+        "max": 95,
+        "p5": 1,
+        "p50": 5,
+        "p95": 48,
+        "fracao_profunda": 0.35
+      },
+      "janela_amostra": {
+        "n": 40,
+        "min": "2022-09-09",
+        "max": "2026-09-09",
+        "p5": "2022-09-10",
+        "p50": "2026-05-17",
+        "p95": "2026-09-03"
+      },
+      "niveis": [
+        {
+          "nivel": 2.5,
+          "n_validas": 18,
+          "n_alvo": 18,
+          "n_brutas": 84,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 1,
+          "n_descartadas_curtas": 49,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 1,
+          "motivos_descarte": {
+            "truncada_sem_texto": 1,
+            "spoiler": 1,
+            "abaixo_min_chars": 49,
+            "excedente_cota": 15,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 7
+        },
+        {
+          "nivel": 3.0,
+          "n_validas": 22,
+          "n_alvo": 22,
+          "n_brutas": 108,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 2,
+          "n_descartadas_curtas": 71,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 1,
+          "motivos_descarte": {
+            "truncada_sem_texto": 1,
+            "spoiler": 2,
+            "abaixo_min_chars": 71,
+            "excedente_cota": 12,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 9
+        }
+      ],
+      "temas": [
+        {
+          "tema": "Efeitos visuais e CGI",
+          "mencoes_aproximadas": 18,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "As reviews medianas elogiam a qualidade geral do CGI, mas apontam inconsistências em algumas cenas e personagens, como o gato e a peixinha, que soam artificiais ou inacabados.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Comparação com a animação original e outros remakes",
+          "mencoes_aproximadas": 15,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "Este grupo destaca que o remake é fiel em vários momentos, mas não alcança a magia do clássico animado e, por vezes, altera canções e personagens de forma desnecessária.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Atuação de Tom Hanks e elenco",
+          "mencoes_aproximadas": 12,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "As reviews medianas consideram Tom Hanks carismático e adequado como Geppetto, embora alguns critiquem sua participação reduzida ou escolhas de atuação; Cynthia Erivo como a Fada Azul é frequentemente elogiada.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Ritmo e envolvimento emocional",
+          "mencoes_aproximadas": 10,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "Parte deste grupo sente que o filme é apressado em alguns trechos e não consegue gerar conexão emocional ou a magia necessária para cativar.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Canções e trilha sonora",
+          "mencoes_aproximadas": 8,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "As reviews medianas criticam as novas canções e as alterações nas originais, mas elogiam a trilha sonora de Alan Silvestri e a interpretação de Cynthia Erivo.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Sensação de remake desnecessário",
+          "mencoes_aproximadas": 7,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "Este grupo menciona que o filme parece um remake sem propósito, feito para lucrar, e que já existe uma versão animada superior.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        }
+      ],
+      "observacao_geral": "As reviews medianas apontam um filme tecnicamente competente em efeitos visuais, mas que carece de emoção e magia, com comparações desfavoráveis à animação original. Este grupo destaca atuações razoáveis e boa trilha sonora, mas critica a falta de envolvimento e a sensação de ser um remake desnecessário.",
+      "idioma_invalido": false,
+      "escopo_suspeito": false
+    },
+    {
+      "bucket": "positivas",
+      "alvo": 40,
+      "modo": "completo",
+      "estado_piso": "completa",
+      "n_validas": 40,
+      "share_real": 15,
+      "composicao_alvo": {
+        "3.5": 14,
+        "4.0": 15,
+        "4.5": 3,
+        "5.0": 8
+      },
+      "composicao_atingida": {
+        "3.5": 14,
+        "4.0": 15,
+        "4.5": 3,
+        "5.0": 8
+      },
+      "cascata_por_degrau": {
+        "150": 40
+      },
+      "deficit_redistribuido": 0,
+      "distribuicao_pagina_origem": {
+        "n": 40,
+        "min": 1,
+        "max": 37,
+        "p5": 1,
+        "p50": 3,
+        "p95": 35,
+        "fracao_profunda": 0.45
+      },
+      "janela_amostra": {
+        "n": 40,
+        "min": "2022-09-08",
+        "max": "2026-09-06",
+        "p5": "2022-09-21",
+        "p50": "2026-06-01",
+        "p95": "2026-08-24"
+      },
+      "niveis": [
+        {
+          "nivel": 3.5,
+          "n_validas": 14,
+          "n_alvo": 14,
+          "n_brutas": 72,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 1,
+          "n_descartadas_curtas": 51,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 1,
+          "motivos_descarte": {
+            "truncada_sem_texto": 1,
+            "spoiler": 1,
+            "abaixo_min_chars": 51,
+            "excedente_cota": 5,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 6
+        },
+        {
+          "nivel": 4.0,
+          "n_validas": 15,
+          "n_alvo": 15,
+          "n_brutas": 96,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 2,
+          "n_descartadas_curtas": 76,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 0,
+          "motivos_descarte": {
+            "truncada_sem_texto": 0,
+            "spoiler": 2,
+            "abaixo_min_chars": 76,
+            "excedente_cota": 3,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 6
+        },
+        {
+          "nivel": 4.5,
+          "n_validas": 3,
+          "n_alvo": 3,
+          "n_brutas": 12,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 0,
+          "n_descartadas_curtas": 8,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 0,
+          "motivos_descarte": {
+            "truncada_sem_texto": 0,
+            "spoiler": 0,
+            "abaixo_min_chars": 8,
+            "excedente_cota": 1,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 1
+        },
+        {
+          "nivel": 5.0,
+          "n_validas": 8,
+          "n_alvo": 8,
+          "n_brutas": 48,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 1,
+          "n_descartadas_curtas": 38,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 0,
+          "motivos_descarte": {
+            "truncada_sem_texto": 0,
+            "spoiler": 1,
+            "abaixo_min_chars": 38,
+            "excedente_cota": 1,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 3
+        }
+      ],
+      "temas": [
+        {
+          "tema": "Fidelidade e nostalgia em relação ao clássico",
+          "mencoes_aproximadas": 14,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "Muitas reviews positivas destacam que a adaptação mantém a essência da animação original, respeitando seus elementos clássicos e despertando nostalgia nos fãs.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Efeitos visuais e design de produção",
+          "mencoes_aproximadas": 12,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "O CGI e o design de produção são elogiados por sua qualidade, com cenários detalhados e personagens visualmente cativantes, embora alguns apontem estranhezas no visual.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Atuações do elenco",
+          "mencoes_aproximadas": 10,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "As atuações, especialmente as de Tom Hanks, Benjamin Evan Ainsworth e Cynthia Erivo, recebem elogios por sua emotividade e carisma, apesar de algumas críticas isoladas.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Trilha sonora e canções",
+          "mencoes_aproximadas": 7,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "A trilha sonora e as canções clássicas são lembradas com carinho, contribuindo para a atmosfera mágica e nostálgica do filme.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Mensagens e lições morais",
+          "mencoes_aproximadas": 7,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "As reviews ressaltam que o filme transmite lições sobre honestidade, coragem, amizade e amor, sendo considerado educativo e emocionante para todas as idades.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Comparação com outras adaptações e recepção crítica",
+          "mencoes_aproximadas": 6,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "Algumas reviews mencionam que, embora existam outras adaptações, esta versão se destaca como uma das melhores refilmagens da Disney, apesar das críticas negativas que recebeu.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        }
+      ],
+      "observacao_geral": "As reviews positivas deste grupo destacam a fidelidade ao clássico, a qualidade visual, as atuações e as mensagens emocionantes, demonstrando que muitos espectadores apreciaram a abordagem nostálgica e os elementos técnicos do filme.",
+      "idioma_invalido": false,
+      "escopo_suspeito": false
+    }
+  ],
+  "eixos": {
+    "taxonomia_id": "ebab2667de74",
+    "margem": {
+      "lei": "lift^2 * n >= 2085136/1000000",
+      "constante_quadrada": [
+        2085136,
+        1000000
+      ],
+      "n": 40,
+      "limiar_pp": 22.83
+    },
+    "margem_lift_pp": 22.83,
+    "linhas": [
+      {
+        "eixo": "ritmo",
+        "por_bucket": {
+          "negativas": {
+            "mencoes": 7,
+            "de_n": 40,
+            "freq_pct": 17.5,
+            "lift_pp": 12.5,
+            "acima_da_margem": false,
+            "tema": "Ritmo lento e tédio",
+            "exemplo_parafraseado": "O filme é frequentemente classificado como entediante e arrastado, com uma narrativa que não consegue prender a atenção e faz a duração parecer excessiva.",
+            "temas_no_mesmo_eixo": []
+          },
+          "medianas": {
+            "mencoes": 2,
+            "de_n": 40,
+            "freq_pct": 5.0,
+            "lift_pp": -12.5,
+            "acima_da_margem": false,
+            "tema": "Ritmo e envolvimento emocional",
+            "exemplo_parafraseado": "Parte deste grupo sente que o filme é apressado em alguns trechos e não consegue gerar conexão emocional ou a magia necessária para cativar.",
+            "temas_no_mesmo_eixo": []
+          },
+          "positivas": {
+            "mencoes": 0,
+            "de_n": 40,
+            "freq_pct": 0.0,
+            "lift_pp": -17.5,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          }
+        },
+        "bullet_de": {
+          "negativas": null,
+          "medianas": null,
+          "positivas": null
+        }
+      },
+      {
+        "eixo": "atuacao",
+        "por_bucket": {
+          "negativas": {
+            "mencoes": 16,
+            "de_n": 40,
+            "freq_pct": 40.0,
+            "lift_pp": -5.0,
+            "acima_da_margem": false,
+            "tema": "Atuação de Tom Hanks e elenco",
+            "exemplo_parafraseado": "A atuação de Tom Hanks é vista como esforçada, mas equivocada, com um sotaque instável e exageros que não convencem, enquanto o restante do elenco é considerado apático ou mal utilizado.",
+            "temas_no_mesmo_eixo": []
+          },
+          "medianas": {
+            "mencoes": 18,
+            "de_n": 40,
+            "freq_pct": 45.0,
+            "lift_pp": 5.0,
+            "acima_da_margem": false,
+            "tema": "Atuação de Tom Hanks e elenco",
+            "exemplo_parafraseado": "As reviews medianas consideram Tom Hanks carismático e adequado como Geppetto, embora alguns critiquem sua participação reduzida ou escolhas de atuação; Cynthia Erivo como a Fada Azul é frequentemente elogiada.",
+            "temas_no_mesmo_eixo": []
+          },
+          "positivas": {
+            "mencoes": 14,
+            "de_n": 40,
+            "freq_pct": 35.0,
+            "lift_pp": -10.0,
+            "acima_da_margem": false,
+            "tema": "Atuações do elenco",
+            "exemplo_parafraseado": "As atuações, especialmente as de Tom Hanks, Benjamin Evan Ainsworth e Cynthia Erivo, recebem elogios por sua emotividade e carisma, apesar de algumas críticas isoladas.",
+            "temas_no_mesmo_eixo": []
+          }
+        },
+        "bullet_de": {
+          "negativas": null,
+          "medianas": null,
+          "positivas": null
+        }
+      },
+      {
+        "eixo": "direcao_imagem",
+        "por_bucket": {
+          "negativas": {
+            "mencoes": 17,
+            "de_n": 40,
+            "freq_pct": 42.5,
+            "lift_pp": -12.5,
+            "acima_da_margem": false,
+            "tema": "CGI e efeitos visuais ruins",
+            "exemplo_parafraseado": "Os efeitos gerados por computador são criticados como feios, mal feitos e excessivos, com personagens digitais que parecem deslocados e sem vida, prejudicando a imersão.",
+            "temas_no_mesmo_eixo": []
+          },
+          "medianas": {
+            "mencoes": 22,
+            "de_n": 40,
+            "freq_pct": 55.0,
+            "lift_pp": 12.5,
+            "acima_da_margem": false,
+            "tema": "Efeitos visuais e CGI",
+            "exemplo_parafraseado": "As reviews medianas elogiam a qualidade geral do CGI, mas apontam inconsistências em algumas cenas e personagens, como o gato e a peixinha, que soam artificiais ou inacabados.",
+            "temas_no_mesmo_eixo": []
+          },
+          "positivas": {
+            "mencoes": 17,
+            "de_n": 40,
+            "freq_pct": 42.5,
+            "lift_pp": -12.5,
+            "acima_da_margem": false,
+            "tema": "Efeitos visuais e design de produção",
+            "exemplo_parafraseado": "O CGI e o design de produção são elogiados por sua qualidade, com cenários detalhados e personagens visualmente cativantes, embora alguns apontem estranhezas no visual.",
+            "temas_no_mesmo_eixo": []
+          }
+        },
+        "bullet_de": {
+          "negativas": null,
+          "medianas": "frequencia",
+          "positivas": null
+        }
+      },
+      {
+        "eixo": "roteiro_estrutura",
+        "por_bucket": {
+          "negativas": {
+            "mencoes": 23,
+            "de_n": 40,
+            "freq_pct": 57.5,
+            "lift_pp": -15.0,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "medianas": {
+            "mencoes": 22,
+            "de_n": 40,
+            "freq_pct": 55.0,
+            "lift_pp": -17.5,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "positivas": {
+            "mencoes": 29,
+            "de_n": 40,
+            "freq_pct": 72.5,
+            "lift_pp": 15.0,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          }
+        },
+        "bullet_de": {
+          "negativas": "frequencia",
+          "medianas": null,
+          "positivas": "frequencia"
+        }
+      },
+      {
+        "eixo": "som_trilha",
+        "por_bucket": {
+          "negativas": {
+            "mencoes": 5,
+            "de_n": 40,
+            "freq_pct": 12.5,
+            "lift_pp": -10.0,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "medianas": {
+            "mencoes": 9,
+            "de_n": 40,
+            "freq_pct": 22.5,
+            "lift_pp": 5.0,
+            "acima_da_margem": false,
+            "tema": "Canções e trilha sonora",
+            "exemplo_parafraseado": "As reviews medianas criticam as novas canções e as alterações nas originais, mas elogiam a trilha sonora de Alan Silvestri e a interpretação de Cynthia Erivo.",
+            "temas_no_mesmo_eixo": []
+          },
+          "positivas": {
+            "mencoes": 7,
+            "de_n": 40,
+            "freq_pct": 17.5,
+            "lift_pp": -5.0,
+            "acima_da_margem": false,
+            "tema": "Trilha sonora e canções",
+            "exemplo_parafraseado": "A trilha sonora e as canções clássicas são lembradas com carinho, contribuindo para a atmosfera mágica e nostálgica do filme.",
+            "temas_no_mesmo_eixo": []
+          }
+        },
+        "bullet_de": {
+          "negativas": null,
+          "medianas": null,
+          "positivas": null
+        }
+      },
+      {
+        "eixo": "tom_atmosfera",
+        "por_bucket": {
+          "negativas": {
+            "mencoes": 11,
+            "de_n": 40,
+            "freq_pct": 27.5,
+            "lift_pp": 12.5,
+            "acima_da_margem": false,
+            "tema": "Falta de alma e artificialidade",
+            "exemplo_parafraseado": "Muitas reviews descrevem o filme como uma produção sem alma, oca e puramente comercial, que substitui o encanto e a magia do original por uma estética digital fria e calculada.",
+            "temas_no_mesmo_eixo": []
+          },
+          "medianas": {
+            "mencoes": 5,
+            "de_n": 40,
+            "freq_pct": 12.5,
+            "lift_pp": -15.0,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "positivas": {
+            "mencoes": 6,
+            "de_n": 40,
+            "freq_pct": 15.0,
+            "lift_pp": -12.5,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          }
+        },
+        "bullet_de": {
+          "negativas": null,
+          "medianas": null,
+          "positivas": null
+        }
+      },
+      {
+        "eixo": "impacto_emocional",
+        "por_bucket": {
+          "negativas": {
+            "mencoes": 8,
+            "de_n": 40,
+            "freq_pct": 20.0,
+            "lift_pp": -15.0,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "medianas": {
+            "mencoes": 5,
+            "de_n": 40,
+            "freq_pct": 12.5,
+            "lift_pp": -22.5,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "positivas": {
+            "mencoes": 14,
+            "de_n": 40,
+            "freq_pct": 35.0,
+            "lift_pp": 15.0,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          }
+        },
+        "bullet_de": {
+          "negativas": null,
+          "medianas": null,
+          "positivas": null
+        }
+      },
+      {
+        "eixo": "comparacoes",
+        "por_bucket": {
+          "negativas": {
+            "mencoes": 35,
+            "de_n": 40,
+            "freq_pct": 87.5,
+            "lift_pp": 17.5,
+            "acima_da_margem": false,
+            "tema": "Desnecessidade do remake",
+            "exemplo_parafraseado": "Várias pessoas questionam por que refazer um clássico que já funcionava perfeitamente, apontando que a nova versão não acrescenta nada de novo e soa como uma exploração nostálgica sem propósito artístico.",
+            "temas_no_mesmo_eixo": [
+              "Comparação com o clássico de 1940"
+            ]
+          },
+          "medianas": {
+            "mencoes": 28,
+            "de_n": 40,
+            "freq_pct": 70.0,
+            "lift_pp": -17.5,
+            "acima_da_margem": false,
+            "tema": "Comparação com a animação original e outros remakes",
+            "exemplo_parafraseado": "Este grupo destaca que o remake é fiel em vários momentos, mas não alcança a magia do clássico animado e, por vezes, altera canções e personagens de forma desnecessária.",
+            "temas_no_mesmo_eixo": []
+          },
+          "positivas": {
+            "mencoes": 28,
+            "de_n": 40,
+            "freq_pct": 70.0,
+            "lift_pp": -17.5,
+            "acima_da_margem": false,
+            "tema": "Fidelidade e nostalgia em relação ao clássico",
+            "exemplo_parafraseado": "Muitas reviews positivas destacam que a adaptação mantém a essência da animação original, respeitando seus elementos clássicos e despertando nostalgia nos fãs.",
+            "temas_no_mesmo_eixo": [
+              "Comparação com outras adaptações e recepção crítica"
+            ]
+          }
+        },
+        "bullet_de": {
+          "negativas": "frequencia",
+          "medianas": "frequencia",
+          "positivas": "frequencia"
+        }
+      },
+      {
+        "eixo": "expectativa",
+        "por_bucket": {
+          "negativas": {
+            "mencoes": 6,
+            "de_n": 40,
+            "freq_pct": 15.0,
+            "lift_pp": -25.0,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "medianas": {
+            "mencoes": 16,
+            "de_n": 40,
+            "freq_pct": 40.0,
+            "lift_pp": 12.5,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "positivas": {
+            "mencoes": 11,
+            "de_n": 40,
+            "freq_pct": 27.5,
+            "lift_pp": -12.5,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          }
+        },
+        "bullet_de": {
+          "negativas": null,
+          "medianas": null,
+          "positivas": null
+        }
+      },
+      {
+        "eixo": "critica_social",
+        "por_bucket": {
+          "negativas": {
+            "mencoes": 21,
+            "de_n": 40,
+            "freq_pct": 52.5,
+            "lift_pp": 25.0,
+            "acima_da_margem": true,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "medianas": {
+            "mencoes": 11,
+            "de_n": 40,
+            "freq_pct": 27.5,
+            "lift_pp": -25.0,
+            "acima_da_margem": false,
+            "tema": "Sensação de remake desnecessário",
+            "exemplo_parafraseado": "Este grupo menciona que o filme parece um remake sem propósito, feito para lucrar, e que já existe uma versão animada superior.",
+            "temas_no_mesmo_eixo": []
+          },
+          "positivas": {
+            "mencoes": 9,
+            "de_n": 40,
+            "freq_pct": 22.5,
+            "lift_pp": -30.0,
+            "acima_da_margem": false,
+            "tema": "Mensagens e lições morais",
+            "exemplo_parafraseado": "As reviews ressaltam que o filme transmite lições sobre honestidade, coragem, amizade e amor, sendo considerado educativo e emocionante para todas as idades.",
+            "temas_no_mesmo_eixo": []
+          }
+        },
+        "bullet_de": {
+          "negativas": "contraste",
+          "medianas": null,
+          "positivas": null
+        }
+      }
+    ],
+    "contraste": "tematico",
+    "rotulagem": {
+      "n_chamadas": 3,
+      "falharam": [],
+      "fora_da_taxonomia": {},
+      "houve_retentativa": []
+    },
+    "spec_version": "1.9.50",
+    "verificador": {
+      "aplicado": true,
+      "variante": "V2_alvo",
+      "passada": 1,
+      "eixo": "impacto_emocional",
+      "n_removidas_no_corpus": 2781
+    }
+  },
+  "narrativa": "Lançado no ano de 2022 sob a direção de Robert Zemeckis, o longa-metragem Pinóquio apresenta 111 minutos de duração e combina os gêneros de fantasia, aventura e família. A narrativa reconstitui o conto do boneco de madeira em uma arrepiante aventura para virar um menino de verdade, recontado para uma nova experiência audiovisual.\n\nNa maioria das notas (~60%), a maior parte das análises critica fortemente a falta de alma e artificialidade observadas no filme, apontando um resultado excessivamente frio. Cerca de metade expressa insatisfação explícita com o CGI e efeitos visuais ruins, destacando elementos digitais que soam artificiais. Além disso, uma parcela expressiva reforça a desnecessidade do remake, argumentando que a adaptação não se justifica diante do impacto já estabelecido pelo material original.\n\nNuma parcela das notas (~25%), para quem está nessa faixa intermediária de avaliação, boa parte pondera sobre os efeitos visuais e CGI, reconhecendo competência técnica em determinadas passagens e falhas em outros trechos. Vários recorrem à comparação com a animação original e outros remakes para medir o peso das alterações promovidas. Complementando essa leitura, um número considerável de textos se dedica a comentar a atuação de Tom Hanks e elenco.\n\nNuma parcela menor das notas (~15%), sob a perspectiva dessa parcela favorável, muitos destacam com entusiasmo a fidelidade e nostalgia em relação ao clássico durante a história. Boa parte aprova com clareza o uso dos efeitos visuais e design de produção no desenvolvimento dos cenários, enquanto uma fatia menor dirige suas impressões positivas para as atuações do elenco.",
+  "verificacao_narrativa": {
+    "quantificador_fora_de_faixa": [],
+    "quantificador_repetido": [],
+    "paragrafos": {
+      "n_paragrafos": 4,
+      "minimo": 3,
+      "insuficientes": false,
+      "longos": []
+    },
+    "n_paragrafos": 4,
+    "paragrafos_insuficientes": false,
+    "paragrafos_longos": [],
+    "grupos_sem_paragrafo_proprio": [],
+    "movimento1_e_movimento2_no_mesmo_paragrafo": false,
+    "formato_invalido": false,
+    "numeros_inventados": [],
+    "rotulos_faltando": [],
+    "ordem_incorreta": false,
+    "vocabulario_peso": false,
+    "resenha_speak": [],
+    "n_resenha_speak": 0,
+    "n_flags": 0
+  },
+  "narrativa_selecao": {
+    "provider": "gemini",
+    "modelo": "gemini-3.7-flash",
+    "n_candidatos": 3,
+    "n_chamadas": 3,
+    "indice_escolhido": 0,
+    "motivo": "melhor_entre_limpos",
+    "criterio_decisivo": "empate",
+    "candidatos": [
+      {
+        "indice": 0,
+        "n_flags": 0,
+        "cliches": 0,
+        "repeticao_max": 2,
+        "ritmo": 5,
+        "cobertura": 1.0,
+        "eliminado": false
+      },
+      {
+        "indice": 1,
+        "n_flags": 1,
+        "cliches": 0,
+        "repeticao_max": 2,
+        "ritmo": 7,
+        "cobertura": 1.0,
+        "eliminado": true
+      },
+      {
+        "indice": 2,
+        "n_flags": 0,
+        "cliches": 0,
+        "repeticao_max": 2,
+        "ritmo": 5,
+        "cobertura": 1.0,
+        "eliminado": false
+      }
+    ],
+    "retry": null,
+    "uso": {
+      "prompt_tokens": 9894,
+      "completion_tokens": 1098,
+      "cache_hit_tokens": 0,
+      "cache_miss_tokens": 9894
+    },
+    "latencia_s": 49.24
+  },
+  "condicoes": {
+    "vale_a_pena": [
+      {
+        "texto": "busca reviver a essência e a nostalgia da animação clássica",
+        "tema_origem": "POS-A",
+        "bucket_origem": "positivas",
+        "tema_texto": "Fidelidade e nostalgia em relação ao clássico",
+        "rotulo_forca": "muitos"
+      },
+      {
+        "texto": "aprecia efeitos digitais e cenários detalhados, mesmo com estranhezas visuais",
+        "tema_origem": "POS-B",
+        "bucket_origem": "positivas",
+        "tema_texto": "Efeitos visuais e design de produção",
+        "rotulo_forca": "muitos",
+        "origem": "leitura_humana"
+      },
+      {
+        "texto": "valoriza atuações carismáticas e emotivas, embora não sejam livres de ressalvas",
+        "tema_origem": "POS-C",
+        "bucket_origem": "positivas",
+        "tema_texto": "Atuações do elenco",
+        "rotulo_forca": "alguns",
+        "origem": "leitura_humana"
+      },
+      {
+        "texto": "gosta de canções clássicas e trilhas sonoras que reforçam uma atmosfera mágica",
+        "tema_origem": "POS-D",
+        "bucket_origem": "positivas",
+        "tema_texto": "Trilha sonora e canções",
+        "rotulo_forca": "alguns"
+      }
+    ],
+    "talvez_evite": [
+      {
+        "texto": "se incomoda com produções calculadas que substituem o encanto por frieza digital",
+        "tema_origem": "NEG-A",
+        "bucket_origem": "negativas",
+        "tema_texto": "Falta de alma e artificialidade",
+        "rotulo_forca": "a maioria"
+      },
+      {
+        "texto": "rejeita efeitos visuais excessivos e personagens computadorizados sem vida",
+        "tema_origem": "NEG-B",
+        "bucket_origem": "negativas",
+        "tema_texto": "CGI e efeitos visuais ruins",
+        "rotulo_forca": "cerca de metade"
+      },
+      {
+        "texto": "evita remakes que exploram a nostalgia sem acrescentar propósito artístico",
+        "tema_origem": "NEG-C",
+        "bucket_origem": "negativas",
+        "tema_texto": "Desnecessidade do remake",
+        "rotulo_forca": "muitos"
+      },
+      {
+        "texto": "se decepciona com atuações esforçadas, porém afetadas, ou com desempenhos apáticos",
+        "tema_origem": "NEG-D",
+        "bucket_origem": "negativas",
+        "tema_texto": "Atuação de Tom Hanks e elenco",
+        "rotulo_forca": "muitos",
+        "origem": "leitura_humana"
+      },
+      {
+        "texto": "espera encontrar a mesma ousadia e emoção da animação clássica",
+        "tema_origem": "NEG-F",
+        "bucket_origem": "negativas",
+        "tema_texto": "Comparação com o clássico de 1940",
+        "rotulo_forca": "alguns"
+      }
+    ],
+    "ordem_colunas": [
+      "talvez_evite",
+      "vale_a_pena"
+    ],
+    "peso": {
+      "vale_a_pena": {
+        "peso_pct": 15,
+        "peso_texto": "~15% das notas",
+        "nota_de_amostra": null
+      },
+      "talvez_evite": {
+        "peso_pct": 60,
+        "peso_texto": "~60% das notas",
+        "nota_de_amostra": null
+      }
+    },
+    "peso_meio": {
+      "pct": 25,
+      "texto": "~25% das notas ficaram no meio-termo"
+    },
+    "origem": "llm",
+    "temas_pedidos": {
+      "vale_a_pena": [
+        "POS-A",
+        "POS-B",
+        "POS-C",
+        "POS-D"
+      ],
+      "talvez_evite": [
+        "NEG-A",
+        "NEG-B",
+        "NEG-C",
+        "NEG-D",
+        "NEG-F"
+      ]
+    },
+    "temas_saltados": {
+      "vale_a_pena": [],
+      "talvez_evite": []
+    },
+    "descartadas": [],
+    "retry": null,
+    "provider": "gemini",
+    "modelo": "gemini-3.7-flash",
+    "n_candidatos": 3,
+    "n_chamadas": 3,
+    "indice_escolhido": 2,
+    "candidatos": [
+      {
+        "indice": 0,
+        "n_condicoes": 9,
+        "n_flags": 1,
+        "flags": [
+          "sem_discriminacao"
+        ],
+        "n_temas_cobertos": 9
+      },
+      {
+        "indice": 1,
+        "n_condicoes": 9,
+        "n_flags": 2,
+        "flags": [
+          "sem_discriminacao"
+        ],
+        "n_temas_cobertos": 9
+      },
+      {
+        "indice": 2,
+        "n_condicoes": 9,
+        "n_flags": 0,
+        "flags": [],
+        "n_temas_cobertos": 9
+      }
+    ],
+    "uso": {
+      "prompt_tokens": 8307,
+      "completion_tokens": 1270,
+      "cache_hit_tokens": 0,
+      "cache_miss_tokens": 8307
+    },
+    "latencia_s": 16.99,
+    "spec_version": "1.9.50"
+  }
+}

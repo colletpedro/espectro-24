@@ -1,0 +1,1492 @@
+{
+  "slug": "happy-hour-2015-1",
+  "data_coleta": "2026-09-13T05:21:33.344656+00:00",
+  "spec_version": "1.9.50",
+  "total_reviews_observadas": 431,
+  "reviews_url": "https://letterboxd.com/film/happy-hour-2015-1/reviews/",
+  "ficha": {
+    "titulo": "Happy Hour",
+    "sinopse_oficial": "Quatro mulheres na faixa dos 30 anos reavaliam seus relacionamentos, tanto os compartilhados quanto os particulares, depois que uma revelação surpreendente sobre o casamento de uma delas as obriga a fazer uma das maiores perguntas da vida: “Eu sou quem eu quero ser?”",
+    "sinopse_fallback_en": false,
+    "generos": [
+      "Drama"
+    ],
+    "duracao_min": 317,
+    "diretor": "Ryusuke Hamaguchi",
+    "diretor_transliterado": true,
+    "ano": 2015,
+    "fonte": "tmdb",
+    "tmdb_id": 354759,
+    "tmdb_fetched_at": "2026-09-10T20:00:54+00:00",
+    "poster_path": "/7q4DjaoxK7rWQNllvmwmi5wiUur.jpg",
+    "poster_largura": null,
+    "poster_altura": null,
+    "backdrop_paths": [
+      "/c6sTTmEhCamDjF47bLv2PtisHYZ.jpg",
+      "/jfSP2x11d6Okd6bbPTDTrRGyKh8.jpg",
+      "/q8zlDoVS8ZnICPxh20TimE4NR9P.jpg",
+      "/cCx0qVkojDSYk5tT9hPbt9LV0oG.jpg",
+      "/bpSPncHd6OHaeJ7aDEvzD9ktV6Z.jpg",
+      "/srsi6AsZ2mGQCY8rC2b7UTtcbqx.jpg",
+      "/gYoUxF7LKACR6XGyMnk3PUE2o1J.jpg",
+      "/foF242adaVUKqpZP3sb9yGCj6YJ.jpg"
+    ],
+    "backdrop_path": "/jfSP2x11d6Okd6bbPTDTrRGyKh8.jpg",
+    "backdrop_largura": 2500,
+    "backdrop_altura": 1405,
+    "poster_sem_texto_path": null,
+    "poster_sem_texto_largura": null,
+    "poster_sem_texto_altura": null,
+    "galeria_stills": [
+      {
+        "still_path": "/jfSP2x11d6Okd6bbPTDTrRGyKh8.jpg",
+        "still_largura": 2500,
+        "still_altura": 1405
+      },
+      {
+        "still_path": "/c6sTTmEhCamDjF47bLv2PtisHYZ.jpg",
+        "still_largura": 1920,
+        "still_altura": 1080
+      },
+      {
+        "still_path": "/q8zlDoVS8ZnICPxh20TimE4NR9P.jpg",
+        "still_largura": 1920,
+        "still_altura": 1080
+      },
+      {
+        "still_path": "/cCx0qVkojDSYk5tT9hPbt9LV0oG.jpg",
+        "still_largura": 1920,
+        "still_altura": 1080
+      },
+      {
+        "still_path": "/bpSPncHd6OHaeJ7aDEvzD9ktV6Z.jpg",
+        "still_largura": 3840,
+        "still_altura": 2160
+      },
+      {
+        "still_path": "/foF242adaVUKqpZP3sb9yGCj6YJ.jpg",
+        "still_largura": 1919,
+        "still_altura": 1080
+      },
+      {
+        "still_path": "/gYoUxF7LKACR6XGyMnk3PUE2o1J.jpg",
+        "still_largura": 1920,
+        "still_altura": 1080
+      },
+      {
+        "still_path": "/srsi6AsZ2mGQCY8rC2b7UTtcbqx.jpg",
+        "still_largura": 1920,
+        "still_altura": 1080
+      }
+    ],
+    "ano_fonte": "letterboxd",
+    "identidade": {
+      "versao": 1,
+      "status": "validada",
+      "slug": "happy-hour-2015-1",
+      "titulo_letterboxd": "Happy Hour",
+      "ano_letterboxd": 2015,
+      "tmdb_id_letterboxd": 354759,
+      "tmdb_id_escolhido": 354759,
+      "fonte_id": "letterboxd",
+      "titulo_tmdb_campo": "original_title",
+      "titulo_tmdb_correspondente": "Happy Hour",
+      "ano_tmdb": 2015,
+      "ano_divergente": false
+    }
+  },
+  "distribuicao": {
+    "n_notas_total": 14888,
+    "por_nivel": {
+      "0.5": 32,
+      "1.0": 47,
+      "1.5": 46,
+      "2.0": 155,
+      "2.5": 229,
+      "3.0": 872,
+      "3.5": 1641,
+      "4.0": 4490,
+      "4.5": 3561,
+      "5.0": 3815
+    },
+    "por_bucket": {
+      "negativas": 2,
+      "medianas": 7,
+      "positivas": 91
+    },
+    "fonte": "letterboxd_histograma"
+  },
+  "coleta": {
+    "slug": "happy-hour-2015-1",
+    "coletado_em": "2026-09-10T18:41:17.539181+00:00",
+    "versao_coletor": "1.9.6",
+    "ordenacao_usada": "by/added",
+    "histograma_bruto": {
+      "0.5": 32,
+      "1.0": 47,
+      "1.5": 46,
+      "2.0": 155,
+      "2.5": 229,
+      "3.0": 872,
+      "3.5": 1641,
+      "4.0": 4490,
+      "4.5": 3561,
+      "5.0": 3815
+    },
+    "orcamento_paginas_por_nivel": {
+      "0.5": 2,
+      "1.0": 3,
+      "1.5": 2,
+      "2.0": 9,
+      "2.5": 6,
+      "3.0": 10,
+      "3.5": 2,
+      "4.0": 5,
+      "4.5": 4,
+      "5.0": 5
+    },
+    "paginas_gastas_por_nivel": {
+      "0.5": 1,
+      "1.0": 1,
+      "1.5": 1,
+      "2.0": 4,
+      "2.5": 4,
+      "3.0": 10,
+      "3.5": 2,
+      "4.0": 5,
+      "4.5": 4,
+      "5.0": 5
+    },
+    "paradas_por_limite": [
+      "2.5",
+      "3.0",
+      "3.5",
+      "4.0",
+      "4.5",
+      "5.0"
+    ],
+    "contagem_bruta_por_nivel": {
+      "0.5": 10,
+      "1.0": 12,
+      "1.5": 10,
+      "2.0": 39,
+      "2.5": 48,
+      "3.0": 120,
+      "3.5": 24,
+      "4.0": 60,
+      "4.5": 48,
+      "5.0": 60
+    },
+    "contagem_estimada_valida_por_nivel": {
+      "0.5": 8,
+      "1.0": 5,
+      "1.5": 6,
+      "2.0": 22,
+      "2.5": 29,
+      "3.0": 70,
+      "3.5": 10,
+      "4.0": 29,
+      "4.5": 32,
+      "5.0": 38
+    },
+    "motivo_parada_por_nivel": {
+      "0.5": "material_esgotado",
+      "1.0": "material_esgotado",
+      "1.5": "material_esgotado",
+      "2.0": "material_esgotado",
+      "2.5": "orcamento_esgotado",
+      "3.0": "orcamento_esgotado",
+      "3.5": "orcamento_esgotado",
+      "4.0": "orcamento_esgotado",
+      "4.5": "orcamento_esgotado",
+      "5.0": "orcamento_esgotado"
+    },
+    "paginas_base_por_nivel": {
+      "0.5": 1,
+      "1.0": 1,
+      "1.5": 1,
+      "2.0": 4,
+      "2.5": 4,
+      "3.0": 10,
+      "3.5": 2,
+      "4.0": 5,
+      "4.5": 4,
+      "5.0": 5
+    },
+    "paginas_extensao_por_nivel": {
+      "0.5": 0,
+      "1.0": 0,
+      "1.5": 0,
+      "2.0": 0,
+      "2.5": 0,
+      "3.0": 0,
+      "3.5": 0,
+      "4.0": 0,
+      "4.5": 0,
+      "5.0": 0
+    },
+    "extensao_por_bucket": {
+      "negativas": {
+        "paginas_base": 7,
+        "paginas_extensao": 0,
+        "extras_por_nivel": {},
+        "motivo_parada": "material_esgotado",
+        "n_validas_pos_base": 41,
+        "n_validas_pos_extensao": 41,
+        "meta": 50
+      },
+      "medianas": {
+        "paginas_base": 14,
+        "paginas_extensao": 0,
+        "extras_por_nivel": {},
+        "motivo_parada": "meta_atingida",
+        "n_validas_pos_base": 94,
+        "n_validas_pos_extensao": 94,
+        "meta": 50
+      },
+      "positivas": {
+        "paginas_base": 16,
+        "paginas_extensao": 0,
+        "extras_por_nivel": {},
+        "motivo_parada": "meta_atingida",
+        "n_validas_pos_base": 104,
+        "n_validas_pos_extensao": 104,
+        "meta": 50
+      }
+    },
+    "profundidade_sondagem": {
+      "nivel_sondado": 4.0,
+      "profundidade": 64,
+      "exata": false,
+      "requisicoes": 7,
+      "motivo": "encontrada"
+    },
+    "profundidade_estimada_por_nivel": {
+      "0.5": 1,
+      "1.0": 1,
+      "1.5": 1,
+      "2.0": 2,
+      "2.5": 3,
+      "3.0": 12,
+      "3.5": 23,
+      "4.0": 64,
+      "4.5": 51,
+      "5.0": 54
+    },
+    "janela_temporal": {
+      "total": {
+        "n": 431,
+        "min": "2016-08-14",
+        "max": "2026-09-09",
+        "p5": "2021-11-12",
+        "p50": "2025-06-20",
+        "p95": "2026-08-30"
+      },
+      "por_bucket": {
+        "negativas": {
+          "n": 71,
+          "min": "2016-08-14",
+          "max": "2026-08-15",
+          "p5": "2019-03-15",
+          "p50": "2023-08-20",
+          "p95": "2026-06-20"
+        },
+        "medianas": {
+          "n": 168,
+          "min": "2018-05-06",
+          "max": "2026-08-30",
+          "p5": "2021-01-15",
+          "p50": "2023-05-26",
+          "p95": "2026-06-22"
+        },
+        "positivas": {
+          "n": 192,
+          "min": "2021-12-26",
+          "max": "2026-09-09",
+          "p5": "2024-11-15",
+          "p50": "2026-07-24",
+          "p95": "2026-09-05"
+        }
+      }
+    },
+    "dias_por_100_paginas": {
+      "n_paginas": 13,
+      "pagina_min": 1,
+      "pagina_max": 16,
+      "dias": 522,
+      "dias_por_100_paginas": 3480.0,
+      "paginas_para_1_ano": 10
+    },
+    "identidade_letterboxd": {
+      "slug": "happy-hour-2015-1",
+      "titulo": "Happy Hour",
+      "ano": 2015,
+      "tmdb_id_letterboxd": 354759,
+      "fonte": "pagina_letterboxd"
+    },
+    "ano_lancamento": 2015,
+    "ano_fonte": "letterboxd",
+    "n_reviews_bruto": 431
+  },
+  "buckets": [
+    {
+      "bucket": "negativas",
+      "alvo": 40,
+      "modo": "completo",
+      "estado_piso": "completa",
+      "n_validas": 40,
+      "share_real": 2,
+      "composicao_alvo": {
+        "0.5": 4,
+        "1.0": 7,
+        "1.5": 7,
+        "2.0": 22
+      },
+      "composicao_atingida": {
+        "0.5": 7,
+        "1.0": 5,
+        "1.5": 6,
+        "2.0": 22
+      },
+      "cascata_por_degrau": {
+        "150": 40
+      },
+      "deficit_redistribuido": 3,
+      "distribuicao_pagina_origem": {
+        "n": 40,
+        "min": 1,
+        "max": 4,
+        "p5": 1,
+        "p50": 1,
+        "p95": 3,
+        "fracao_profunda": 0.0
+      },
+      "janela_amostra": {
+        "n": 40,
+        "min": "2016-08-14",
+        "max": "2026-07-20",
+        "p5": "2019-01-10",
+        "p50": "2023-08-20",
+        "p95": "2026-03-13"
+      },
+      "niveis": [
+        {
+          "nivel": 0.5,
+          "n_validas": 7,
+          "n_alvo": 4,
+          "n_brutas": 10,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 0,
+          "n_descartadas_curtas": 2,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 0,
+          "motivos_descarte": {
+            "truncada_sem_texto": 0,
+            "spoiler": 0,
+            "abaixo_min_chars": 2,
+            "excedente_cota": 1,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 1
+        },
+        {
+          "nivel": 1.0,
+          "n_validas": 5,
+          "n_alvo": 7,
+          "n_brutas": 12,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 1,
+          "n_descartadas_curtas": 4,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 2,
+          "motivos_descarte": {
+            "truncada_sem_texto": 2,
+            "spoiler": 1,
+            "abaixo_min_chars": 4,
+            "excedente_cota": 0,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 1
+        },
+        {
+          "nivel": 1.5,
+          "n_validas": 6,
+          "n_alvo": 7,
+          "n_brutas": 10,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 0,
+          "n_descartadas_curtas": 4,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 0,
+          "motivos_descarte": {
+            "truncada_sem_texto": 0,
+            "spoiler": 0,
+            "abaixo_min_chars": 4,
+            "excedente_cota": 0,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 1
+        },
+        {
+          "nivel": 2.0,
+          "n_validas": 22,
+          "n_alvo": 22,
+          "n_brutas": 39,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 2,
+          "n_descartadas_curtas": 15,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 0,
+          "motivos_descarte": {
+            "truncada_sem_texto": 0,
+            "spoiler": 2,
+            "abaixo_min_chars": 15,
+            "excedente_cota": 0,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 4
+        }
+      ],
+      "temas": [
+        {
+          "tema": "Duração excessiva e ritmo lento",
+          "mencoes_aproximadas": 30,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "Muitas reviews criticam a longa duração de mais de cinco horas, considerando-a desnecessária e arrastada, com cenas que poderiam ser encurtadas sem prejuízo.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Personagens apáticos e sem carisma",
+          "mencoes_aproximadas": 18,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "Várias reviews apontam que os personagens são difíceis de se conectar, parecendo vazios, sem emoção e com diálogos pouco naturais.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Roteiro arrastado e falta de substância",
+          "mencoes_aproximadas": 15,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "Algumas críticas mencionam que a história se perde em subtramas irrelevantes e não justifica o tempo investido, com uma narrativa sem foco.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Atuações fracas ou inexpressivas",
+          "mencoes_aproximadas": 12,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "Certas reviews destacam que a atuação parece desinteressada e sem expressão, prejudicando a imersão na história.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Fotografia e direção desinteressantes",
+          "mencoes_aproximadas": 10,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "Algumas opiniões consideram a fotografia simples e sem inspiração, e a direção pouco envolvente ou até mesmo descuidada.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Retrato irreal ou problemático da sociedade japonesa",
+          "mencoes_aproximadas": 8,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "Algumas reviews criticam a representação das mulheres japonesas e das relações sociais, considerando-a exagerada ou tendenciosa.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        }
+      ],
+      "observacao_geral": "As reviews negativas apontam principalmente para a duração excessiva e o ritmo lento, além de personagens pouco cativantes e um roteiro que não justifica o tempo de tela. Este grupo destaca também atuações fracas e uma direção desinteressante, resultando em uma experiência tediosa para muitos.",
+      "idioma_invalido": false,
+      "escopo_suspeito": false
+    },
+    {
+      "bucket": "medianas",
+      "alvo": 40,
+      "modo": "completo",
+      "estado_piso": "completa",
+      "n_validas": 40,
+      "share_real": 7,
+      "composicao_alvo": {
+        "2.5": 8,
+        "3.0": 32
+      },
+      "composicao_atingida": {
+        "2.5": 8,
+        "3.0": 32
+      },
+      "cascata_por_degrau": {
+        "150": 40
+      },
+      "deficit_redistribuido": 0,
+      "distribuicao_pagina_origem": {
+        "n": 40,
+        "min": 1,
+        "max": 11,
+        "p5": 1,
+        "p50": 5,
+        "p95": 11,
+        "fracao_profunda": 0.275
+      },
+      "janela_amostra": {
+        "n": 40,
+        "min": "2018-06-06",
+        "max": "2026-08-30",
+        "p5": "2022-01-04",
+        "p50": "2023-08-22",
+        "p95": "2026-07-20"
+      },
+      "niveis": [
+        {
+          "nivel": 2.5,
+          "n_validas": 8,
+          "n_alvo": 8,
+          "n_brutas": 48,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 2,
+          "n_descartadas_curtas": 17,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 5,
+          "motivos_descarte": {
+            "truncada_sem_texto": 5,
+            "spoiler": 2,
+            "abaixo_min_chars": 17,
+            "excedente_cota": 16,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 4
+        },
+        {
+          "nivel": 3.0,
+          "n_validas": 32,
+          "n_alvo": 32,
+          "n_brutas": 120,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 6,
+          "n_descartadas_curtas": 44,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 0,
+          "motivos_descarte": {
+            "truncada_sem_texto": 0,
+            "spoiler": 6,
+            "abaixo_min_chars": 44,
+            "excedente_cota": 38,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 10
+        }
+      ],
+      "temas": [
+        {
+          "tema": "Duração excessiva e ritmo lento",
+          "mencoes_aproximadas": 30,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "Várias reviews medianas consideram que as mais de cinco horas são cansativas e que o filme demora a engrenar, com trechos que poderiam ser encurtados sem prejuízo.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Comunicação e relações interpessoais",
+          "mencoes_aproximadas": 18,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "A comunicação falha ou ausente entre casais, familiares e amigos é apontada como núcleo temático do filme, e algumas reviews valorizam como isso é explorado.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Personagens pouco empáticas",
+          "mencoes_aproximadas": 15,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "Parte das reviews medianas diz não conseguir se conectar ou sentir empatia pelas protagonistas, achando suas atitudes egocêntricas ou incompreensíveis.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Atuações naturalistas e elenco",
+          "mencoes_aproximadas": 12,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "As atuações, muitas vezes de não profissionais, são elogiadas por sua naturalidade, embora algumas reviews as considerem monótonas ou teatrais demais.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Comparação com outras obras de Hamaguchi",
+          "mencoes_aproximadas": 11,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "Diversas reviews medianas comparam este filme a trabalhos posteriores do diretor, considerando que temas semelhantes foram tratados de forma mais concisa e emocionante em outras obras.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Roteiro dispersivo e falta de foco",
+          "mencoes_aproximadas": 10,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "Algumas reviews apontam que o roteiro se ramifica demais e perde o centro dramático, tornando a experiência arrastada e pouco coesa.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        }
+      ],
+      "observacao_geral": "As reviews medianas analisadas destacam principalmente a duração excessiva e o ritmo lento como obstáculos, além de ressaltarem a falta de empatia pelos personagens e a dispersão narrativa; ainda assim, várias reconhecem qualidades nas atuações naturalistas e na abordagem temática sobre comunicação e relações.",
+      "idioma_invalido": false,
+      "escopo_suspeito": false
+    },
+    {
+      "bucket": "positivas",
+      "alvo": 40,
+      "modo": "completo",
+      "estado_piso": "completa",
+      "n_validas": 40,
+      "share_real": 91,
+      "composicao_alvo": {
+        "3.5": 5,
+        "4.0": 13,
+        "4.5": 11,
+        "5.0": 11
+      },
+      "composicao_atingida": {
+        "3.5": 5,
+        "4.0": 13,
+        "4.5": 11,
+        "5.0": 11
+      },
+      "cascata_por_degrau": {
+        "150": 40
+      },
+      "deficit_redistribuido": 0,
+      "distribuicao_pagina_origem": {
+        "n": 40,
+        "min": 1,
+        "max": 16,
+        "p5": 1,
+        "p50": 3,
+        "p95": 16,
+        "fracao_profunda": 0.325
+      },
+      "janela_amostra": {
+        "n": 40,
+        "min": "2024-05-02",
+        "max": "2026-09-09",
+        "p5": "2025-01-05",
+        "p50": "2026-07-28",
+        "p95": "2026-09-08"
+      },
+      "niveis": [
+        {
+          "nivel": 3.5,
+          "n_validas": 5,
+          "n_alvo": 5,
+          "n_brutas": 24,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 0,
+          "n_descartadas_curtas": 14,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 0,
+          "motivos_descarte": {
+            "truncada_sem_texto": 0,
+            "spoiler": 0,
+            "abaixo_min_chars": 14,
+            "excedente_cota": 5,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 2
+        },
+        {
+          "nivel": 4.0,
+          "n_validas": 13,
+          "n_alvo": 13,
+          "n_brutas": 60,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 4,
+          "n_descartadas_curtas": 27,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 0,
+          "motivos_descarte": {
+            "truncada_sem_texto": 0,
+            "spoiler": 4,
+            "abaixo_min_chars": 27,
+            "excedente_cota": 16,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 5
+        },
+        {
+          "nivel": 4.5,
+          "n_validas": 11,
+          "n_alvo": 11,
+          "n_brutas": 48,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 1,
+          "n_descartadas_curtas": 15,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 0,
+          "motivos_descarte": {
+            "truncada_sem_texto": 0,
+            "spoiler": 1,
+            "abaixo_min_chars": 15,
+            "excedente_cota": 21,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 4
+        },
+        {
+          "nivel": 5.0,
+          "n_validas": 11,
+          "n_alvo": 11,
+          "n_brutas": 60,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 1,
+          "n_descartadas_curtas": 20,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 6,
+          "motivos_descarte": {
+            "truncada_sem_texto": 6,
+            "spoiler": 1,
+            "abaixo_min_chars": 20,
+            "excedente_cota": 22,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 5
+        }
+      ],
+      "temas": [
+        {
+          "tema": "Duração longa e ritmo contemplativo",
+          "mencoes_aproximadas": 22,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "Muitas reviews destacam que, apesar das mais de cinco horas, o filme não parece arrastado; a duração é sentida como uma imersão que permite acompanhar a vida das personagens com naturalidade e até deixa vontade de que durasse mais.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Personagens femininas complexas e bem construídas",
+          "mencoes_aproximadas": 18,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "As reviews elogiam a profundidade das quatro protagonistas, suas nuances e a forma como cada uma lida de maneira distinta com relacionamentos, crises pessoais e a própria identidade.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Amizade feminina como eixo emocional",
+          "mencoes_aproximadas": 14,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "A amizade entre as mulheres é apontada como o coração do filme, uma forma de amor e apoio que permeia até os momentos em que elas estão separadas, oferecendo um senso de pertencimento e identidade.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Diálogos e conversas como motor narrativo",
+          "mencoes_aproximadas": 12,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "O texto elogia a escrita dos diálogos, que soam naturais e filosóficos sem perder a mundaneidade, e a maneira como as conversas revelam camadas de significado e tensões não ditas.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Crítica social ao casamento e às instituições",
+          "mencoes_aproximadas": 9,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "As reviews observam que o filme examina de perto o casamento, o divórcio e as pressões sociais sobre as mulheres no Japão, retratando relacionamentos heterossexuais como insatisfatórios e explorando a burocracia do divórcio.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Naturalismo e atuações",
+          "mencoes_aproximadas": 8,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "A abordagem naturalista e as atuações, incluindo o trabalho com atrizes não profissionais, são muito elogiadas por darem autenticidade e humanidade às personagens.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        }
+      ],
+      "observacao_geral": "As reviews positivas deste grupo destacam sobretudo a duração longa e o ritmo contemplativo como uma experiência imersiva, a profundidade das personagens femininas, a amizade como eixo emocional e a força dos diálogos naturais. Este grupo enxerga no filme um retrato humano e minucioso de relações e instituições sociais, com atuações naturalistas e uma crítica sensível ao casamento e às expectativas de gênero.",
+      "idioma_invalido": false,
+      "escopo_suspeito": false
+    }
+  ],
+  "eixos": {
+    "taxonomia_id": "ebab2667de74",
+    "margem": {
+      "lei": "lift^2 * n >= 2085136/1000000",
+      "constante_quadrada": [
+        2085136,
+        1000000
+      ],
+      "n": 40,
+      "limiar_pp": 22.83
+    },
+    "margem_lift_pp": 22.83,
+    "linhas": [
+      {
+        "eixo": "ritmo",
+        "por_bucket": {
+          "negativas": {
+            "mencoes": 31,
+            "de_n": 40,
+            "freq_pct": 77.5,
+            "lift_pp": 2.5,
+            "acima_da_margem": false,
+            "tema": "Duração excessiva e ritmo lento",
+            "exemplo_parafraseado": "Muitas reviews criticam a longa duração de mais de cinco horas, considerando-a desnecessária e arrastada, com cenas que poderiam ser encurtadas sem prejuízo.",
+            "temas_no_mesmo_eixo": []
+          },
+          "medianas": {
+            "mencoes": 30,
+            "de_n": 40,
+            "freq_pct": 75.0,
+            "lift_pp": -2.5,
+            "acima_da_margem": false,
+            "tema": "Duração excessiva e ritmo lento",
+            "exemplo_parafraseado": "Várias reviews medianas consideram que as mais de cinco horas são cansativas e que o filme demora a engrenar, com trechos que poderiam ser encurtados sem prejuízo.",
+            "temas_no_mesmo_eixo": []
+          },
+          "positivas": {
+            "mencoes": 20,
+            "de_n": 40,
+            "freq_pct": 50.0,
+            "lift_pp": -27.5,
+            "acima_da_margem": false,
+            "tema": "Duração longa e ritmo contemplativo",
+            "exemplo_parafraseado": "Muitas reviews destacam que, apesar das mais de cinco horas, o filme não parece arrastado; a duração é sentida como uma imersão que permite acompanhar a vida das personagens com naturalidade e até deixa vontade de que durasse mais.",
+            "temas_no_mesmo_eixo": []
+          }
+        },
+        "bullet_de": {
+          "negativas": "frequencia",
+          "medianas": "frequencia",
+          "positivas": null
+        }
+      },
+      {
+        "eixo": "atuacao",
+        "por_bucket": {
+          "negativas": {
+            "mencoes": 13,
+            "de_n": 40,
+            "freq_pct": 32.5,
+            "lift_pp": 2.5,
+            "acima_da_margem": false,
+            "tema": "Atuações fracas ou inexpressivas",
+            "exemplo_parafraseado": "Certas reviews destacam que a atuação parece desinteressada e sem expressão, prejudicando a imersão na história.",
+            "temas_no_mesmo_eixo": []
+          },
+          "medianas": {
+            "mencoes": 12,
+            "de_n": 40,
+            "freq_pct": 30.0,
+            "lift_pp": -2.5,
+            "acima_da_margem": false,
+            "tema": "Atuações naturalistas e elenco",
+            "exemplo_parafraseado": "As atuações, muitas vezes de não profissionais, são elogiadas por sua naturalidade, embora algumas reviews as considerem monótonas ou teatrais demais.",
+            "temas_no_mesmo_eixo": []
+          },
+          "positivas": {
+            "mencoes": 12,
+            "de_n": 40,
+            "freq_pct": 30.0,
+            "lift_pp": -2.5,
+            "acima_da_margem": false,
+            "tema": "Naturalismo e atuações",
+            "exemplo_parafraseado": "A abordagem naturalista e as atuações, incluindo o trabalho com atrizes não profissionais, são muito elogiadas por darem autenticidade e humanidade às personagens.",
+            "temas_no_mesmo_eixo": []
+          }
+        },
+        "bullet_de": {
+          "negativas": null,
+          "medianas": null,
+          "positivas": null
+        }
+      },
+      {
+        "eixo": "direcao_imagem",
+        "por_bucket": {
+          "negativas": {
+            "mencoes": 7,
+            "de_n": 40,
+            "freq_pct": 17.5,
+            "lift_pp": -2.5,
+            "acima_da_margem": false,
+            "tema": "Fotografia e direção desinteressantes",
+            "exemplo_parafraseado": "Algumas opiniões consideram a fotografia simples e sem inspiração, e a direção pouco envolvente ou até mesmo descuidada.",
+            "temas_no_mesmo_eixo": []
+          },
+          "medianas": {
+            "mencoes": 8,
+            "de_n": 40,
+            "freq_pct": 20.0,
+            "lift_pp": 0.0,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "positivas": {
+            "mencoes": 8,
+            "de_n": 40,
+            "freq_pct": 20.0,
+            "lift_pp": 0.0,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          }
+        },
+        "bullet_de": {
+          "negativas": null,
+          "medianas": null,
+          "positivas": null
+        }
+      },
+      {
+        "eixo": "roteiro_estrutura",
+        "por_bucket": {
+          "negativas": {
+            "mencoes": 28,
+            "de_n": 40,
+            "freq_pct": 70.0,
+            "lift_pp": -17.5,
+            "acima_da_margem": false,
+            "tema": "Personagens apáticos e sem carisma",
+            "exemplo_parafraseado": "Várias reviews apontam que os personagens são difíceis de se conectar, parecendo vazios, sem emoção e com diálogos pouco naturais.",
+            "temas_no_mesmo_eixo": [
+              "Roteiro arrastado e falta de substância"
+            ]
+          },
+          "medianas": {
+            "mencoes": 35,
+            "de_n": 40,
+            "freq_pct": 87.5,
+            "lift_pp": 5.0,
+            "acima_da_margem": false,
+            "tema": "Comunicação e relações interpessoais",
+            "exemplo_parafraseado": "A comunicação falha ou ausente entre casais, familiares e amigos é apontada como núcleo temático do filme, e algumas reviews valorizam como isso é explorado.",
+            "temas_no_mesmo_eixo": [
+              "Personagens pouco empáticas",
+              "Roteiro dispersivo e falta de foco"
+            ]
+          },
+          "positivas": {
+            "mencoes": 33,
+            "de_n": 40,
+            "freq_pct": 82.5,
+            "lift_pp": -5.0,
+            "acima_da_margem": false,
+            "tema": "Personagens femininas complexas e bem construídas",
+            "exemplo_parafraseado": "As reviews elogiam a profundidade das quatro protagonistas, suas nuances e a forma como cada uma lida de maneira distinta com relacionamentos, crises pessoais e a própria identidade.",
+            "temas_no_mesmo_eixo": [
+              "Diálogos e conversas como motor narrativo"
+            ]
+          }
+        },
+        "bullet_de": {
+          "negativas": "frequencia",
+          "medianas": "frequencia",
+          "positivas": "frequencia"
+        }
+      },
+      {
+        "eixo": "som_trilha",
+        "por_bucket": {
+          "negativas": {
+            "mencoes": 1,
+            "de_n": 40,
+            "freq_pct": 2.5,
+            "lift_pp": -10.0,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "medianas": {
+            "mencoes": 2,
+            "de_n": 40,
+            "freq_pct": 5.0,
+            "lift_pp": -7.5,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "positivas": {
+            "mencoes": 5,
+            "de_n": 40,
+            "freq_pct": 12.5,
+            "lift_pp": 7.5,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          }
+        },
+        "bullet_de": {
+          "negativas": null,
+          "medianas": null,
+          "positivas": null
+        }
+      },
+      {
+        "eixo": "tom_atmosfera",
+        "por_bucket": {
+          "negativas": {
+            "mencoes": 6,
+            "de_n": 40,
+            "freq_pct": 15.0,
+            "lift_pp": -2.5,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "medianas": {
+            "mencoes": 6,
+            "de_n": 40,
+            "freq_pct": 15.0,
+            "lift_pp": -2.5,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "positivas": {
+            "mencoes": 7,
+            "de_n": 40,
+            "freq_pct": 17.5,
+            "lift_pp": 2.5,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          }
+        },
+        "bullet_de": {
+          "negativas": null,
+          "medianas": null,
+          "positivas": null
+        }
+      },
+      {
+        "eixo": "impacto_emocional",
+        "por_bucket": {
+          "negativas": {
+            "mencoes": 19,
+            "de_n": 40,
+            "freq_pct": 47.5,
+            "lift_pp": -10.0,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "medianas": {
+            "mencoes": 18,
+            "de_n": 40,
+            "freq_pct": 45.0,
+            "lift_pp": -12.5,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "positivas": {
+            "mencoes": 23,
+            "de_n": 40,
+            "freq_pct": 57.5,
+            "lift_pp": 10.0,
+            "acima_da_margem": false,
+            "tema": "Amizade feminina como eixo emocional",
+            "exemplo_parafraseado": "A amizade entre as mulheres é apontada como o coração do filme, uma forma de amor e apoio que permeia até os momentos em que elas estão separadas, oferecendo um senso de pertencimento e identidade.",
+            "temas_no_mesmo_eixo": []
+          }
+        },
+        "bullet_de": {
+          "negativas": null,
+          "medianas": null,
+          "positivas": "frequencia"
+        }
+      },
+      {
+        "eixo": "comparacoes",
+        "por_bucket": {
+          "negativas": {
+            "mencoes": 15,
+            "de_n": 40,
+            "freq_pct": 37.5,
+            "lift_pp": -17.5,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "medianas": {
+            "mencoes": 22,
+            "de_n": 40,
+            "freq_pct": 55.0,
+            "lift_pp": 17.5,
+            "acima_da_margem": false,
+            "tema": "Comparação com outras obras de Hamaguchi",
+            "exemplo_parafraseado": "Diversas reviews medianas comparam este filme a trabalhos posteriores do diretor, considerando que temas semelhantes foram tratados de forma mais concisa e emocionante em outras obras.",
+            "temas_no_mesmo_eixo": []
+          },
+          "positivas": {
+            "mencoes": 15,
+            "de_n": 40,
+            "freq_pct": 37.5,
+            "lift_pp": -17.5,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          }
+        },
+        "bullet_de": {
+          "negativas": null,
+          "medianas": null,
+          "positivas": null
+        }
+      },
+      {
+        "eixo": "expectativa",
+        "por_bucket": {
+          "negativas": {
+            "mencoes": 12,
+            "de_n": 40,
+            "freq_pct": 30.0,
+            "lift_pp": 2.5,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "medianas": {
+            "mencoes": 11,
+            "de_n": 40,
+            "freq_pct": 27.5,
+            "lift_pp": -2.5,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "positivas": {
+            "mencoes": 7,
+            "de_n": 40,
+            "freq_pct": 17.5,
+            "lift_pp": -12.5,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          }
+        },
+        "bullet_de": {
+          "negativas": null,
+          "medianas": null,
+          "positivas": null
+        }
+      },
+      {
+        "eixo": "critica_social",
+        "por_bucket": {
+          "negativas": {
+            "mencoes": 8,
+            "de_n": 40,
+            "freq_pct": 20.0,
+            "lift_pp": 0.0,
+            "acima_da_margem": false,
+            "tema": "Retrato irreal ou problemático da sociedade japonesa",
+            "exemplo_parafraseado": "Algumas reviews criticam a representação das mulheres japonesas e das relações sociais, considerando-a exagerada ou tendenciosa.",
+            "temas_no_mesmo_eixo": []
+          },
+          "medianas": {
+            "mencoes": 5,
+            "de_n": 40,
+            "freq_pct": 12.5,
+            "lift_pp": -7.5,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "positivas": {
+            "mencoes": 8,
+            "de_n": 40,
+            "freq_pct": 20.0,
+            "lift_pp": 0.0,
+            "acima_da_margem": false,
+            "tema": "Crítica social ao casamento e às instituições",
+            "exemplo_parafraseado": "As reviews observam que o filme examina de perto o casamento, o divórcio e as pressões sociais sobre as mulheres no Japão, retratando relacionamentos heterossexuais como insatisfatórios e explorando a burocracia do divórcio.",
+            "temas_no_mesmo_eixo": []
+          }
+        },
+        "bullet_de": {
+          "negativas": null,
+          "medianas": null,
+          "positivas": null
+        }
+      }
+    ],
+    "contraste": "valorativo",
+    "rotulagem": {
+      "n_chamadas": 3,
+      "falharam": [],
+      "fora_da_taxonomia": {},
+      "houve_retentativa": []
+    },
+    "spec_version": "1.9.50",
+    "verificador": {
+      "aplicado": true,
+      "variante": "V2_alvo",
+      "passada": 1,
+      "eixo": "impacto_emocional",
+      "n_removidas_no_corpus": 2781
+    }
+  },
+  "narrativa": "Lançado em 2015 e dirigido por Ryusuke Hamaguchi, o drama Happy Hour acompanha quatro mulheres na faixa dos trinta anos que reavaliam seus relacionamentos pessoais e compartilhados. Esse processo tem início após uma revelação inesperada sobre o casamento de uma delas, levando-as a questionar a própria identidade.\n\nCom mais de cinco horas de duração, a obra adota um ritmo lento e contemplativo, estruturando-se em torno de longas conversas e na observação detalhada das dinâmicas interpessoais.\n\nOs diferentes grupos de recepção concordam sobre as características fundamentais do filme, divergindo no veredito sobre o seu funcionamento. Na grande maioria das notas (~91%), a duração longa e o ritmo contemplativo são valorizados por cerca de metade como uma experiência imersiva. Além disso, uma parcela expressiva exalta a complexidade das personagens femininas, enquanto vários ressaltam a amizade entre elas como o eixo emocional da história.\n\nPara os avaliadores que se situam numa fração mínima das notas (~7%), a maior parte aponta a duração excessiva e a lentidão como aspectos cansativos; ainda assim, boa parte destaca o foco nas relações interpessoais e na comunicação, ao passo que um número considerável relata pouca empatia pelas protagonistas.\n\nPor fim, na perspectiva de quem compõe uma fração ainda menor das notas (~2%), a maioria vê a extensão temporal e o andamento como entraves, com muitos apontando personagens apáticos e sem carisma, além de um roteiro arrastado e com falta de substância.",
+  "verificacao_narrativa": {
+    "quantificador_fora_de_faixa": [],
+    "quantificador_repetido": [],
+    "paragrafos": {
+      "n_paragrafos": 5,
+      "minimo": 3,
+      "insuficientes": false,
+      "longos": []
+    },
+    "n_paragrafos": 5,
+    "paragrafos_insuficientes": false,
+    "paragrafos_longos": [],
+    "grupos_sem_paragrafo_proprio": [],
+    "movimento1_e_movimento2_no_mesmo_paragrafo": false,
+    "formato_invalido": false,
+    "numeros_inventados": [],
+    "rotulos_faltando": [],
+    "ordem_incorreta": false,
+    "vocabulario_peso": false,
+    "resenha_speak": [],
+    "n_resenha_speak": 0,
+    "n_flags": 0
+  },
+  "narrativa_selecao": {
+    "provider": "gemini",
+    "modelo": "gemini-3.7-flash",
+    "n_candidatos": 3,
+    "n_chamadas": 3,
+    "indice_escolhido": 2,
+    "motivo": "melhor_entre_limpos",
+    "criterio_decisivo": "unico",
+    "candidatos": [
+      {
+        "indice": 0,
+        "n_flags": 1,
+        "cliches": 0,
+        "repeticao_max": 2,
+        "ritmo": 7,
+        "cobertura": 1.0,
+        "eliminado": true
+      },
+      {
+        "indice": 1,
+        "n_flags": 1,
+        "cliches": 0,
+        "repeticao_max": 2,
+        "ritmo": 10,
+        "cobertura": 1.0,
+        "eliminado": true
+      },
+      {
+        "indice": 2,
+        "n_flags": 0,
+        "cliches": 0,
+        "repeticao_max": 1,
+        "ritmo": 10,
+        "cobertura": 1.0,
+        "eliminado": false
+      }
+    ],
+    "retry": null,
+    "uso": {
+      "prompt_tokens": 10140,
+      "completion_tokens": 1140,
+      "cache_hit_tokens": 0,
+      "cache_miss_tokens": 10140
+    },
+    "latencia_s": 37.09
+  },
+  "condicoes": {
+    "vale_a_pena": [
+      {
+        "texto": "aprecia uma longa duração contemplativa que proporciona imersão na vida das personagens",
+        "tema_origem": "POS-A",
+        "bucket_origem": "positivas",
+        "tema_texto": "Duração longa e ritmo contemplativo",
+        "rotulo_forca": "cerca de metade"
+      },
+      {
+        "texto": "busca protagonistas femininas com grande profundidade psicológica, nuances e dilemas de identidade",
+        "tema_origem": "POS-B",
+        "bucket_origem": "positivas",
+        "tema_texto": "Personagens femininas complexas e bem construídas",
+        "rotulo_forca": "muitos"
+      },
+      {
+        "texto": "valoriza narrativas centradas no vínculo de afeto e cumplicidade de amizades femininas",
+        "tema_origem": "POS-C",
+        "bucket_origem": "positivas",
+        "tema_texto": "Amizade feminina como eixo emocional",
+        "rotulo_forca": "muitos"
+      },
+      {
+        "texto": "se interessa por diálogos naturais e filosóficos que revelam tensões e significados ocultos",
+        "tema_origem": "POS-D",
+        "bucket_origem": "positivas",
+        "tema_texto": "Diálogos e conversas como motor narrativo",
+        "rotulo_forca": "muitos"
+      }
+    ],
+    "talvez_evite": [
+      {
+        "texto": "se cansa com filmes muito extensos de andamento lento e cenas arrastadas",
+        "tema_origem": "NEG-A",
+        "bucket_origem": "negativas",
+        "tema_texto": "Duração excessiva e ritmo lento",
+        "rotulo_forca": "a maioria"
+      },
+      {
+        "texto": "se incomoda com figuras apáticas, diálogos pouco naturais e falta de conexão emocional",
+        "tema_origem": "NEG-B",
+        "bucket_origem": "negativas",
+        "tema_texto": "Personagens apáticos e sem carisma",
+        "rotulo_forca": "muitos"
+      },
+      {
+        "texto": "se frustra com narrativas sem foco dispersas em subtramas consideradas desnecessárias",
+        "tema_origem": "NEG-C",
+        "bucket_origem": "negativas",
+        "tema_texto": "Roteiro arrastado e falta de substância",
+        "rotulo_forca": "muitos"
+      },
+      {
+        "texto": "se desaponta com atuações inexpressivas e desempenhos que parecem desinteressados",
+        "tema_origem": "NEG-D",
+        "bucket_origem": "negativas",
+        "tema_texto": "Atuações fracas ou inexpressivas",
+        "rotulo_forca": "muitos"
+      }
+    ],
+    "ordem_colunas": [
+      "vale_a_pena",
+      "talvez_evite"
+    ],
+    "peso": {
+      "vale_a_pena": {
+        "peso_pct": 91,
+        "peso_texto": "~91% das notas",
+        "nota_de_amostra": null
+      },
+      "talvez_evite": {
+        "peso_pct": 2,
+        "peso_texto": "~2% das notas",
+        "nota_de_amostra": null
+      }
+    },
+    "peso_meio": null,
+    "origem": "llm",
+    "temas_pedidos": {
+      "vale_a_pena": [
+        "POS-A",
+        "POS-B",
+        "POS-C",
+        "POS-D"
+      ],
+      "talvez_evite": [
+        "NEG-A",
+        "NEG-B",
+        "NEG-C",
+        "NEG-D"
+      ]
+    },
+    "temas_saltados": {
+      "vale_a_pena": [],
+      "talvez_evite": []
+    },
+    "descartadas": [],
+    "retry": null,
+    "provider": "gemini",
+    "modelo": "gemini-3.7-flash",
+    "n_candidatos": 3,
+    "n_chamadas": 3,
+    "indice_escolhido": 1,
+    "candidatos": [
+      {
+        "indice": 0,
+        "n_condicoes": 8,
+        "n_flags": 1,
+        "flags": [
+          "sem_discriminacao"
+        ],
+        "n_temas_cobertos": 8
+      },
+      {
+        "indice": 1,
+        "n_condicoes": 8,
+        "n_flags": 0,
+        "flags": [],
+        "n_temas_cobertos": 8
+      },
+      {
+        "indice": 2,
+        "n_condicoes": 8,
+        "n_flags": 2,
+        "flags": [
+          "sem_discriminacao"
+        ],
+        "n_temas_cobertos": 8
+      }
+    ],
+    "uso": {
+      "prompt_tokens": 8577,
+      "completion_tokens": 1144,
+      "cache_hit_tokens": 0,
+      "cache_miss_tokens": 8577
+    },
+    "latencia_s": 17.83,
+    "spec_version": "1.9.50"
+  }
+}

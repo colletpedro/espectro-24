@@ -106,8 +106,11 @@ def main() -> None:
         b = r["bloco"] or {}
         nc = len(b.get("vale_a_pena", [])) + len(b.get("talvez_evite", []))
         ped = sum(len(v) for v in (b.get("temas_pedidos") or {}).values())
+        # `recusou` é a taxa que a revisão precisa medir na primeira
+        # geração sob o canal de recusa (ABERTO C14.13).
         print(f"{slug:40} pediu {ped:2}  publicou {nc:2}  "
               f"descartou {len(b.get('descartadas') or [])}  "
+              f"recusou {len(b.get('sem_condicao_publicavel') or [])}  "
               f"{r['latencia_s']:5.1f}s", flush=True)
         resumo.append(r)
     (destino / "_resumo.json").write_text(

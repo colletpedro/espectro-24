@@ -1,0 +1,1617 @@
+{
+  "slug": "force-majeure-2014",
+  "data_coleta": "2026-09-13T05:25:55.472198+00:00",
+  "spec_version": "1.9.50",
+  "total_reviews_observadas": 576,
+  "reviews_url": "https://letterboxd.com/film/force-majeure-2014/reviews/",
+  "ficha": {
+    "titulo": "Força Maior",
+    "sinopse_oficial": "Uma família sueca vai para as montanhas para esquiar por alguns dias. Durante um almoço num restaurante, uma avalanche vira tudo de pernas para o ar. O casamento de Tomas e Ebba é posto à prova enquanto Tomas tenta desesperadamente manter seu papel de patriarca.",
+    "sinopse_fallback_en": false,
+    "generos": [
+      "Drama"
+    ],
+    "duracao_min": 121,
+    "diretor": "Ruben Östlund",
+    "diretor_transliterado": false,
+    "ano": 2014,
+    "fonte": "tmdb",
+    "tmdb_id": 265189,
+    "tmdb_fetched_at": "2026-09-10T20:04:41+00:00",
+    "poster_path": "/zNmdJn2A8V9UOUk6FLpK8yMxZjD.jpg",
+    "poster_largura": 718,
+    "poster_altura": 1050,
+    "backdrop_paths": [
+      "/oZp8CLwvRXgBAYGhn8P0pKOD4Ho.jpg",
+      "/os632o7nbJ2PTdLaJoo5mRJ30LP.jpg",
+      "/qZ3rzhbOFmPdbaje0Hvl3sYoRqU.jpg",
+      "/wzAsaOtQf2SZc6sus0H5sfYWfMv.jpg",
+      "/6TgIMBaXyfAFQMCEexJ7zhNn25Z.jpg",
+      "/8nTKWjwHDAL76PoCnCP5ONPpcJu.jpg",
+      "/3qIF0NekCz0ADEsa3cS9WQdu8T.jpg",
+      "/l16hW8OVOMnkyM1CT6McnfMSSxy.jpg",
+      "/xBRgrLY9zydqKvrO1Nq7Io9szaN.jpg"
+    ],
+    "backdrop_path": "/oZp8CLwvRXgBAYGhn8P0pKOD4Ho.jpg",
+    "backdrop_largura": 3840,
+    "backdrop_altura": 2160,
+    "poster_sem_texto_path": null,
+    "poster_sem_texto_largura": null,
+    "poster_sem_texto_altura": null,
+    "galeria_stills": [
+      {
+        "still_path": "/oZp8CLwvRXgBAYGhn8P0pKOD4Ho.jpg",
+        "still_largura": 3840,
+        "still_altura": 2160
+      },
+      {
+        "still_path": "/3qIF0NekCz0ADEsa3cS9WQdu8T.jpg",
+        "still_largura": 1462,
+        "still_altura": 822
+      },
+      {
+        "still_path": "/6TgIMBaXyfAFQMCEexJ7zhNn25Z.jpg",
+        "still_largura": 1462,
+        "still_altura": 822
+      },
+      {
+        "still_path": "/8nTKWjwHDAL76PoCnCP5ONPpcJu.jpg",
+        "still_largura": 1464,
+        "still_altura": 823
+      },
+      {
+        "still_path": "/os632o7nbJ2PTdLaJoo5mRJ30LP.jpg",
+        "still_largura": 3840,
+        "still_altura": 2160
+      },
+      {
+        "still_path": "/qZ3rzhbOFmPdbaje0Hvl3sYoRqU.jpg",
+        "still_largura": 1920,
+        "still_altura": 1080
+      },
+      {
+        "still_path": "/wzAsaOtQf2SZc6sus0H5sfYWfMv.jpg",
+        "still_largura": 1462,
+        "still_altura": 822
+      },
+      {
+        "still_path": "/l16hW8OVOMnkyM1CT6McnfMSSxy.jpg",
+        "still_largura": 3840,
+        "still_altura": 2160
+      },
+      {
+        "still_path": "/xBRgrLY9zydqKvrO1Nq7Io9szaN.jpg",
+        "still_largura": 1920,
+        "still_altura": 1080
+      }
+    ],
+    "ano_fonte": "letterboxd",
+    "identidade": {
+      "versao": 1,
+      "status": "validada",
+      "slug": "force-majeure-2014",
+      "titulo_letterboxd": "Force Majeure",
+      "ano_letterboxd": 2014,
+      "tmdb_id_letterboxd": 265189,
+      "tmdb_id_escolhido": 265189,
+      "fonte_id": "letterboxd",
+      "titulo_tmdb_campo": "alternative_title",
+      "titulo_tmdb_correspondente": "Force Majeure",
+      "ano_tmdb": 2014,
+      "ano_divergente": false
+    }
+  },
+  "distribuicao": {
+    "n_notas_total": 138906,
+    "por_nivel": {
+      "0.5": 331,
+      "1.0": 747,
+      "1.5": 828,
+      "2.0": 3344,
+      "2.5": 4923,
+      "3.0": 18063,
+      "3.5": 31116,
+      "4.0": 51736,
+      "4.5": 16944,
+      "5.0": 10874
+    },
+    "por_bucket": {
+      "negativas": 4,
+      "medianas": 17,
+      "positivas": 80
+    },
+    "fonte": "letterboxd_histograma"
+  },
+  "coleta": {
+    "slug": "force-majeure-2014",
+    "coletado_em": "2026-09-10T19:06:58.736590+00:00",
+    "versao_coletor": "1.9.6",
+    "ordenacao_usada": "by/added",
+    "histograma_bruto": {
+      "0.5": 331,
+      "1.0": 747,
+      "1.5": 828,
+      "2.0": 3344,
+      "2.5": 4923,
+      "3.0": 18063,
+      "3.5": 31116,
+      "4.0": 51736,
+      "4.5": 16944,
+      "5.0": 10874
+    },
+    "orcamento_paginas_por_nivel": {
+      "0.5": 1,
+      "1.0": 2,
+      "1.5": 3,
+      "2.0": 10,
+      "2.5": 6,
+      "3.0": 10,
+      "3.5": 5,
+      "4.0": 7,
+      "4.5": 2,
+      "5.0": 2
+    },
+    "paginas_gastas_por_nivel": {
+      "0.5": 1,
+      "1.0": 2,
+      "1.5": 3,
+      "2.0": 10,
+      "2.5": 6,
+      "3.0": 10,
+      "3.5": 5,
+      "4.0": 7,
+      "4.5": 2,
+      "5.0": 2
+    },
+    "paradas_por_limite": [
+      "0.5",
+      "1.0",
+      "1.5",
+      "2.0",
+      "2.5",
+      "3.0",
+      "3.5",
+      "4.0",
+      "4.5",
+      "5.0"
+    ],
+    "contagem_bruta_por_nivel": {
+      "0.5": 12,
+      "1.0": 24,
+      "1.5": 36,
+      "2.0": 120,
+      "2.5": 72,
+      "3.0": 120,
+      "3.5": 60,
+      "4.0": 84,
+      "4.5": 24,
+      "5.0": 24
+    },
+    "contagem_estimada_valida_por_nivel": {
+      "0.5": 3,
+      "1.0": 7,
+      "1.5": 11,
+      "2.0": 39,
+      "2.5": 24,
+      "3.0": 34,
+      "3.5": 19,
+      "4.0": 29,
+      "4.5": 12,
+      "5.0": 6
+    },
+    "motivo_parada_por_nivel": {
+      "0.5": "orcamento_esgotado",
+      "1.0": "orcamento_esgotado",
+      "1.5": "orcamento_esgotado",
+      "2.0": "orcamento_esgotado",
+      "2.5": "orcamento_esgotado",
+      "3.0": "orcamento_esgotado",
+      "3.5": "orcamento_esgotado",
+      "4.0": "orcamento_esgotado",
+      "4.5": "orcamento_esgotado",
+      "5.0": "orcamento_esgotado"
+    },
+    "paginas_base_por_nivel": {
+      "0.5": 1,
+      "1.0": 2,
+      "1.5": 3,
+      "2.0": 10,
+      "2.5": 6,
+      "3.0": 10,
+      "3.5": 5,
+      "4.0": 7,
+      "4.5": 2,
+      "5.0": 2
+    },
+    "paginas_extensao_por_nivel": {
+      "0.5": 0,
+      "1.0": 0,
+      "1.5": 0,
+      "2.0": 0,
+      "2.5": 0,
+      "3.0": 0,
+      "3.5": 0,
+      "4.0": 0,
+      "4.5": 0,
+      "5.0": 0
+    },
+    "extensao_por_bucket": {
+      "negativas": {
+        "paginas_base": 16,
+        "paginas_extensao": 0,
+        "extras_por_nivel": {},
+        "motivo_parada": "meta_atingida",
+        "n_validas_pos_base": 60,
+        "n_validas_pos_extensao": 60,
+        "meta": 50
+      },
+      "medianas": {
+        "paginas_base": 16,
+        "paginas_extensao": 0,
+        "extras_por_nivel": {},
+        "motivo_parada": "meta_atingida",
+        "n_validas_pos_base": 58,
+        "n_validas_pos_extensao": 58,
+        "meta": 50
+      },
+      "positivas": {
+        "paginas_base": 16,
+        "paginas_extensao": 0,
+        "extras_por_nivel": {},
+        "motivo_parada": "meta_atingida",
+        "n_validas_pos_base": 66,
+        "n_validas_pos_extensao": 66,
+        "meta": 50
+      }
+    },
+    "profundidade_sondagem": {
+      "nivel_sondado": 4.0,
+      "profundidade": 256,
+      "exata": false,
+      "requisicoes": 4,
+      "motivo": "teto_plataforma"
+    },
+    "profundidade_estimada_por_nivel": {
+      "0.5": 2,
+      "1.0": 4,
+      "1.5": 4,
+      "2.0": 17,
+      "2.5": 24,
+      "3.0": 89,
+      "3.5": 154,
+      "4.0": 256,
+      "4.5": 84,
+      "5.0": 54
+    },
+    "janela_temporal": {
+      "total": {
+        "n": 576,
+        "min": "2014-10-19",
+        "max": "2026-09-10",
+        "p5": "2025-09-30",
+        "p50": "2026-07-26",
+        "p95": "2026-09-07"
+      },
+      "por_bucket": {
+        "negativas": {
+          "n": 192,
+          "min": "2019-02-16",
+          "max": "2026-09-08",
+          "p5": "2025-09-30",
+          "p50": "2026-04-25",
+          "p95": "2026-08-27"
+        },
+        "medianas": {
+          "n": 192,
+          "min": "2014-10-19",
+          "max": "2026-09-09",
+          "p5": "2025-10-03",
+          "p50": "2026-07-30",
+          "p95": "2026-09-05"
+        },
+        "positivas": {
+          "n": 192,
+          "min": "2015-10-23",
+          "max": "2026-09-10",
+          "p5": "2025-08-17",
+          "p50": "2026-08-31",
+          "p95": "2026-09-08"
+        }
+      }
+    },
+    "dias_por_100_paginas": {
+      "n_paginas": 16,
+      "pagina_min": 1,
+      "pagina_max": 128,
+      "dias": 383,
+      "dias_por_100_paginas": 301.5748031496063,
+      "paginas_para_1_ano": 121
+    },
+    "identidade_letterboxd": {
+      "slug": "force-majeure-2014",
+      "titulo": "Force Majeure",
+      "ano": 2014,
+      "tmdb_id_letterboxd": 265189,
+      "fonte": "pagina_letterboxd"
+    },
+    "ano_lancamento": 2014,
+    "ano_fonte": "letterboxd",
+    "n_reviews_bruto": 576
+  },
+  "origem_paginas": {
+    "_histograma/force-majeure-2014.html": "cache",
+    "force-majeure-2014/pages/by_added/rated_4_page_4.html": "cache",
+    "force-majeure-2014/pages/by_added/rated_4_page_16.html": "cache",
+    "force-majeure-2014/pages/by_added/rated_4_page_64.html": "cache",
+    "force-majeure-2014/pages/by_added/rated_4_page_256.html": "cache",
+    "force-majeure-2014/pages/by_added/rated_0_5_page_1.html": "cache",
+    "force-majeure-2014/fulltext/viewing_1370556199.html": "cache",
+    "force-majeure-2014/pages/by_added/rated_1_page_1.html": "cache",
+    "force-majeure-2014/pages/by_added/rated_1_page_2.html": "cache",
+    "force-majeure-2014/pages/by_added/rated_1_5_page_1.html": "cache",
+    "force-majeure-2014/pages/by_added/rated_1_5_page_2.html": "cache",
+    "force-majeure-2014/pages/by_added/rated_1_5_page_3.html": "cache",
+    "force-majeure-2014/fulltext/viewing_1482711620.html": "cache",
+    "force-majeure-2014/fulltext/viewing_1457526098.html": "cache",
+    "force-majeure-2014/fulltext/viewing_1063230228.html": "cache",
+    "force-majeure-2014/pages/by_added/rated_2_page_1.html": "cache",
+    "force-majeure-2014/pages/by_added/rated_2_page_2.html": "cache",
+    "force-majeure-2014/pages/by_added/rated_2_page_3.html": "cache",
+    "force-majeure-2014/pages/by_added/rated_2_page_4.html": "cache",
+    "force-majeure-2014/pages/by_added/rated_2_page_5.html": "cache",
+    "force-majeure-2014/pages/by_added/rated_2_page_6.html": "cache",
+    "force-majeure-2014/pages/by_added/rated_2_page_7.html": "cache",
+    "force-majeure-2014/pages/by_added/rated_2_page_8.html": "cache",
+    "force-majeure-2014/pages/by_added/rated_2_page_9.html": "cache",
+    "force-majeure-2014/pages/by_added/rated_2_page_13.html": "cache",
+    "force-majeure-2014/fulltext/viewing_1363829989.html": "cache",
+    "force-majeure-2014/fulltext/viewing_1356358118.html": "cache",
+    "force-majeure-2014/fulltext/viewing_1199482518.html": "cache",
+    "force-majeure-2014/fulltext/viewing_1197964533.html": "cache",
+    "force-majeure-2014/fulltext/viewing_1185019416.html": "cache",
+    "force-majeure-2014/fulltext/viewing_1026829114.html": "cache",
+    "force-majeure-2014/pages/by_added/rated_2_5_page_1.html": "cache",
+    "force-majeure-2014/pages/by_added/rated_2_5_page_2.html": "cache",
+    "force-majeure-2014/pages/by_added/rated_2_5_page_3.html": "cache",
+    "force-majeure-2014/pages/by_added/rated_2_5_page_4.html": "cache",
+    "force-majeure-2014/pages/by_added/rated_2_5_page_6.html": "cache",
+    "force-majeure-2014/pages/by_added/rated_2_5_page_12.html": "cache",
+    "force-majeure-2014/fulltext/viewing_1361647136.html": "cache",
+    "force-majeure-2014/fulltext/viewing_1280222715.html": "cache",
+    "force-majeure-2014/pages/by_added/rated_3_page_1.html": "cache",
+    "force-majeure-2014/pages/by_added/rated_3_page_2.html": "cache",
+    "force-majeure-2014/pages/by_added/rated_3_page_3.html": "cache",
+    "force-majeure-2014/pages/by_added/rated_3_page_4.html": "cache",
+    "force-majeure-2014/pages/by_added/rated_3_page_5.html": "cache",
+    "force-majeure-2014/pages/by_added/rated_3_page_6.html": "cache",
+    "force-majeure-2014/pages/by_added/rated_3_page_7.html": "cache",
+    "force-majeure-2014/pages/by_added/rated_3_page_8.html": "cache",
+    "force-majeure-2014/pages/by_added/rated_3_page_22.html": "cache",
+    "force-majeure-2014/pages/by_added/rated_3_page_44.html": "cache",
+    "force-majeure-2014/fulltext/viewing_1486989791.html": "cache",
+    "force-majeure-2014/fulltext/viewing_1483071861.html": "cache",
+    "force-majeure-2014/fulltext/viewing_1478840986.html": "cache",
+    "force-majeure-2014/fulltext/viewing_1465545991.html": "cache",
+    "force-majeure-2014/fulltext/viewing_1448163408.html": "cache",
+    "force-majeure-2014/fulltext/viewing_1431965432.html": "cache",
+    "force-majeure-2014/fulltext/viewing_1416755025.html": "cache",
+    "force-majeure-2014/fulltext/viewing_1409227745.html": "cache",
+    "force-majeure-2014/fulltext/viewing_1030765482.html": "cache",
+    "force-majeure-2014/fulltext/viewing_1029424328.html": "cache",
+    "force-majeure-2014/pages/by_added/rated_3_5_page_1.html": "cache",
+    "force-majeure-2014/pages/by_added/rated_3_5_page_2.html": "cache",
+    "force-majeure-2014/pages/by_added/rated_3_5_page_3.html": "cache",
+    "force-majeure-2014/pages/by_added/rated_3_5_page_4.html": "cache",
+    "force-majeure-2014/pages/by_added/rated_3_5_page_38.html": "cache",
+    "force-majeure-2014/fulltext/viewing_1489147148.html": "cache",
+    "force-majeure-2014/fulltext/viewing_1482459699.html": "cache",
+    "force-majeure-2014/fulltext/viewing_1482051556.html": "cache",
+    "force-majeure-2014/fulltext/viewing_1474713533.html": "cache",
+    "force-majeure-2014/fulltext/viewing_1474018017.html": "cache",
+    "force-majeure-2014/fulltext/viewing_1224627836.html": "cache",
+    "force-majeure-2014/pages/by_added/rated_4_page_1.html": "cache",
+    "force-majeure-2014/pages/by_added/rated_4_page_2.html": "cache",
+    "force-majeure-2014/pages/by_added/rated_4_page_3.html": "cache",
+    "force-majeure-2014/pages/by_added/rated_4_page_5.html": "cache",
+    "force-majeure-2014/pages/by_added/rated_4_page_128.html": "cache",
+    "force-majeure-2014/fulltext/viewing_1487374609.html": "cache",
+    "force-majeure-2014/fulltext/viewing_1479369613.html": "cache",
+    "force-majeure-2014/fulltext/viewing_1476844468.html": "cache",
+    "force-majeure-2014/fulltext/viewing_1476217540.html": "cache",
+    "force-majeure-2014/fulltext/viewing_1475013773.html": "cache",
+    "force-majeure-2014/pages/by_added/rated_4_5_page_1.html": "cache",
+    "force-majeure-2014/pages/by_added/rated_4_5_page_2.html": "cache",
+    "force-majeure-2014/fulltext/viewing_1486658581.html": "cache",
+    "force-majeure-2014/fulltext/viewing_1472470646.html": "cache",
+    "force-majeure-2014/fulltext/viewing_1471914494.html": "cache",
+    "force-majeure-2014/pages/by_added/rated_5_page_1.html": "cache",
+    "force-majeure-2014/pages/by_added/rated_5_page_2.html": "cache",
+    "force-majeure-2014/fulltext/viewing_1485382585.html": "cache",
+    "force-majeure-2014/fulltext/viewing_1476371966.html": "cache",
+    "force-majeure-2014/film_page.html": "cache"
+  },
+  "buckets": [
+    {
+      "bucket": "negativas",
+      "alvo": 40,
+      "modo": "completo",
+      "estado_piso": "completa",
+      "n_validas": 40,
+      "share_real": 4,
+      "composicao_alvo": {
+        "0.5": 3,
+        "1.0": 6,
+        "1.5": 6,
+        "2.0": 25
+      },
+      "composicao_atingida": {
+        "0.5": 3,
+        "1.0": 6,
+        "1.5": 6,
+        "2.0": 25
+      },
+      "cascata_por_degrau": {
+        "150": 40
+      },
+      "deficit_redistribuido": 0,
+      "distribuicao_pagina_origem": {
+        "n": 40,
+        "min": 1,
+        "max": 13,
+        "p5": 1,
+        "p50": 2,
+        "p95": 13,
+        "fracao_profunda": 0.225
+      },
+      "janela_amostra": {
+        "n": 40,
+        "min": "2019-02-16",
+        "max": "2026-09-01",
+        "p5": "2025-09-28",
+        "p50": "2026-04-24",
+        "p95": "2026-08-21"
+      },
+      "niveis": [
+        {
+          "nivel": 0.5,
+          "n_validas": 3,
+          "n_alvo": 3,
+          "n_brutas": 12,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 0,
+          "n_descartadas_curtas": 7,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 2,
+          "motivos_descarte": {
+            "truncada_sem_texto": 2,
+            "spoiler": 0,
+            "abaixo_min_chars": 7,
+            "excedente_cota": 0,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 1
+        },
+        {
+          "nivel": 1.0,
+          "n_validas": 6,
+          "n_alvo": 6,
+          "n_brutas": 24,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 1,
+          "n_descartadas_curtas": 15,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 1,
+          "motivos_descarte": {
+            "truncada_sem_texto": 1,
+            "spoiler": 1,
+            "abaixo_min_chars": 15,
+            "excedente_cota": 1,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 2
+        },
+        {
+          "nivel": 1.5,
+          "n_validas": 6,
+          "n_alvo": 6,
+          "n_brutas": 36,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 0,
+          "n_descartadas_curtas": 24,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 1,
+          "motivos_descarte": {
+            "truncada_sem_texto": 1,
+            "spoiler": 0,
+            "abaixo_min_chars": 24,
+            "excedente_cota": 5,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 3
+        },
+        {
+          "nivel": 2.0,
+          "n_validas": 25,
+          "n_alvo": 25,
+          "n_brutas": 120,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 6,
+          "n_descartadas_curtas": 74,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 1,
+          "motivos_descarte": {
+            "truncada_sem_texto": 1,
+            "spoiler": 6,
+            "abaixo_min_chars": 74,
+            "excedente_cota": 14,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 10
+        }
+      ],
+      "temas": [
+        {
+          "tema": "Ritmo lento e duração excessiva",
+          "mencoes_aproximadas": 24,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "Muitos espectadores relatam que o filme se arrasta, com cenas longas e repetitivas que tornam a experiência entediante, e que a duração poderia ser reduzida sem prejuízo.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Personagens irritantes e falta de profundidade",
+          "mencoes_aproximadas": 18,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "As críticas apontam que os personagens, especialmente o casal protagonista, são unidimensionais e suas reações soam exageradas ou infantilizadas, dificultando a conexão do público.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Mensagem sobre papéis de gênero e masculinidade frágil",
+          "mencoes_aproximadas": 16,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "Vários comentários consideram que a abordagem das questões de gênero é simplista ou mal desenvolvida, ora acusando o filme de misoginia, ora de reforçar estereótipos de forma superficial.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Roteiro raso e diálogos artificiais",
+          "mencoes_aproximadas": 14,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "O texto é descrito como pouco natural, com diálogos que não soam autênticos e uma trama que não explora a fundo as implicações do conflito central.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Final decepcionante e anticlimático",
+          "mencoes_aproximadas": 12,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "A conclusão é vista como insatisfatória, confusa ou que contradiz o desenvolvimento anterior, deixando a sensação de que o filme não soube encerrar suas questões.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Fotografia e paisagens como único ponto positivo",
+          "mencoes_aproximadas": 11,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "A qualidade visual, com belas imagens de montanhas e neve, é frequentemente elogiada, mas insuficiente para compensar os demais problemas apontados.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        }
+      ],
+      "observacao_geral": "As reviews negativas destacam principalmente o ritmo lento e a duração excessiva, além de personagens pouco cativantes e um roteiro que não aprofunda as questões propostas. A abordagem sobre papéis de gênero divide opiniões, sendo considerada simplista ou problemática, enquanto a fotografia é elogiada mas não resolve os demais defeitos.",
+      "idioma_invalido": false,
+      "escopo_suspeito": false
+    },
+    {
+      "bucket": "medianas",
+      "alvo": 40,
+      "modo": "completo",
+      "estado_piso": "completa",
+      "n_validas": 40,
+      "share_real": 17,
+      "composicao_alvo": {
+        "2.5": 9,
+        "3.0": 31
+      },
+      "composicao_atingida": {
+        "2.5": 9,
+        "3.0": 31
+      },
+      "cascata_por_degrau": {
+        "150": 40
+      },
+      "deficit_redistribuido": 0,
+      "distribuicao_pagina_origem": {
+        "n": 40,
+        "min": 1,
+        "max": 44,
+        "p5": 1,
+        "p50": 5,
+        "p95": 44,
+        "fracao_profunda": 0.25
+      },
+      "janela_amostra": {
+        "n": 40,
+        "min": "2015-04-13",
+        "max": "2026-09-09",
+        "p5": "2025-10-01",
+        "p50": "2026-08-07",
+        "p95": "2026-09-06"
+      },
+      "niveis": [
+        {
+          "nivel": 2.5,
+          "n_validas": 9,
+          "n_alvo": 9,
+          "n_brutas": 72,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 0,
+          "n_descartadas_curtas": 48,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 0,
+          "motivos_descarte": {
+            "truncada_sem_texto": 0,
+            "spoiler": 0,
+            "abaixo_min_chars": 48,
+            "excedente_cota": 15,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 6
+        },
+        {
+          "nivel": 3.0,
+          "n_validas": 31,
+          "n_alvo": 31,
+          "n_brutas": 120,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 5,
+          "n_descartadas_curtas": 78,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 3,
+          "motivos_descarte": {
+            "truncada_sem_texto": 3,
+            "spoiler": 5,
+            "abaixo_min_chars": 78,
+            "excedente_cota": 3,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 10
+        }
+      ],
+      "temas": [
+        {
+          "tema": "Masculinidade frágil e egoísmo do protagonista",
+          "mencoes_aproximadas": 18,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "Várias reviews deste grupo criticam o comportamento do protagonista, descrevendo-o como um homem que foge do perigo e depois nega o ocorrido, revelando uma masculinidade frágil e egocêntrica que a esposa e os filhos precisam tolerar.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Ritmo lento e duração excessiva",
+          "mencoes_aproximadas": 15,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "O filme é frequentemente descrito como lento e arrastado, com uma segunda metade que se alonga sem necessidade, tornando a experiência cansativa apesar da premissa interessante.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Fotografia e paisagens nevadas",
+          "mencoes_aproximadas": 12,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "A fotografia das montanhas cobertas de neve e dos interiores do hotel é elogiada por sua beleza e frieza, contribuindo para a atmosfera clínica e alienante do filme.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Roteiro superficial e falta de desenvolvimento",
+          "mencoes_aproximadas": 10,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "Algumas reviews apontam que o roteiro não aprofunda os temas que propõe, permanecendo na superfície e deixando questões importantes sem exploração, como a psicologia dos personagens femininos.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Desfecho insatisfatório e anticlimático",
+          "mencoes_aproximadas": 9,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "O final é visto como decepcionante ou sem impacto, com alguns espectadores sentindo que a resolução não condiz com a tensão construída ao longo da narrativa.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Comparações com outras obras de Östlund",
+          "mencoes_aproximadas": 6,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "Diversas reviews comparam este filme a outras obras do diretor, como Triângulo da Tristeza e Força Maior, considerando-o inferior ou menos envolvente.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        }
+      ],
+      "observacao_geral": "As reviews medianas analisadas destacam a bela fotografia e a proposta temática, mas criticam o ritmo lento, a duração excessiva e a falta de profundidade no roteiro. Muitas mencionam a masculinidade frágil do protagonista e consideram o desfecho insatisfatório.",
+      "idioma_invalido": false,
+      "escopo_suspeito": false
+    },
+    {
+      "bucket": "positivas",
+      "alvo": 40,
+      "modo": "completo",
+      "estado_piso": "completa",
+      "n_validas": 40,
+      "share_real": 80,
+      "composicao_alvo": {
+        "3.5": 11,
+        "4.0": 19,
+        "4.5": 6,
+        "5.0": 4
+      },
+      "composicao_atingida": {
+        "3.5": 11,
+        "4.0": 19,
+        "4.5": 6,
+        "5.0": 4
+      },
+      "cascata_por_degrau": {
+        "150": 40
+      },
+      "deficit_redistribuido": 0,
+      "distribuicao_pagina_origem": {
+        "n": 40,
+        "min": 1,
+        "max": 128,
+        "p5": 1,
+        "p50": 2,
+        "p95": 128,
+        "fracao_profunda": 0.2
+      },
+      "janela_amostra": {
+        "n": 40,
+        "min": "2015-10-23",
+        "max": "2026-09-09",
+        "p5": "2025-08-17",
+        "p50": "2026-09-01",
+        "p95": "2026-09-08"
+      },
+      "niveis": [
+        {
+          "nivel": 3.5,
+          "n_validas": 11,
+          "n_alvo": 11,
+          "n_brutas": 60,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 2,
+          "n_descartadas_curtas": 39,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 0,
+          "motivos_descarte": {
+            "truncada_sem_texto": 0,
+            "spoiler": 2,
+            "abaixo_min_chars": 39,
+            "excedente_cota": 8,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 5
+        },
+        {
+          "nivel": 4.0,
+          "n_validas": 19,
+          "n_alvo": 19,
+          "n_brutas": 84,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 1,
+          "n_descartadas_curtas": 54,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 0,
+          "motivos_descarte": {
+            "truncada_sem_texto": 0,
+            "spoiler": 1,
+            "abaixo_min_chars": 54,
+            "excedente_cota": 10,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 7
+        },
+        {
+          "nivel": 4.5,
+          "n_validas": 6,
+          "n_alvo": 6,
+          "n_brutas": 24,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 1,
+          "n_descartadas_curtas": 11,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 0,
+          "motivos_descarte": {
+            "truncada_sem_texto": 0,
+            "spoiler": 1,
+            "abaixo_min_chars": 11,
+            "excedente_cota": 6,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 2
+        },
+        {
+          "nivel": 5.0,
+          "n_validas": 4,
+          "n_alvo": 4,
+          "n_brutas": 24,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 2,
+          "n_descartadas_curtas": 16,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 0,
+          "motivos_descarte": {
+            "truncada_sem_texto": 0,
+            "spoiler": 2,
+            "abaixo_min_chars": 16,
+            "excedente_cota": 2,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 2
+        }
+      ],
+      "temas": [
+        {
+          "tema": "Masculinidade frágil e ego masculino",
+          "mencoes_aproximadas": 16,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "Várias reviews destacam como o filme examina a fragilidade masculina e o ego do homem, mostrando um personagem que não consegue assumir seus erros e transforma a própria culpa em vitimização.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Crítica aos papéis de gênero e ao casamento",
+          "mencoes_aproximadas": 11,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "O grupo aponta que a obra levanta questões sobre papéis de gênero, expectativas sociais e a dinâmica do casamento, deixando o espectador em dúvida sobre quem está certo.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Desconforto e humor incômodo",
+          "mencoes_aproximadas": 11,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "Muitas reviews descrevem a experiência como desconfortável e ao mesmo tempo engraçada, com situações de constrangimento que geram riso nervoso e tensão.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Fotografia e enquadramento",
+          "mencoes_aproximadas": 10,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "A fotografia é elogiada, com planos longos e enquadramentos que exploram o espaço e a posição dos personagens, além de paisagens montanhosas e interiores marcantes.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Atuações e naturalidade",
+          "mencoes_aproximadas": 8,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "As atuações são bastante elogiadas, com destaque para a naturalidade e a capacidade do elenco de sustentar momentos longos e emocionalmente intensos.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Ritmo lento e final questionável",
+          "mencoes_aproximadas": 7,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "Algumas reviews mencionam um ritmo lento e um desfecho que não agradou a todos, embora reconheçam que a abordagem funciona para a proposta do filme.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        }
+      ],
+      "observacao_geral": "As reviews positivas destacam a abordagem afiada do filme sobre masculinidade frágil, papéis de gênero e desconforto social, elogiando atuações e fotografia, mas apontando ritmo lento e desfecho divisivo. Este grupo valoriza a capacidade da obra de gerar reflexão e conversa, mesmo quando a experiência é desconfortável.",
+      "idioma_invalido": false,
+      "escopo_suspeito": false
+    }
+  ],
+  "eixos": {
+    "taxonomia_id": "ebab2667de74",
+    "margem": {
+      "lei": "lift^2 * n >= 2085136/1000000",
+      "constante_quadrada": [
+        2085136,
+        1000000
+      ],
+      "n": 40,
+      "limiar_pp": 22.83
+    },
+    "margem_lift_pp": 22.83,
+    "linhas": [
+      {
+        "eixo": "ritmo",
+        "por_bucket": {
+          "negativas": {
+            "mencoes": 21,
+            "de_n": 40,
+            "freq_pct": 52.5,
+            "lift_pp": 25.0,
+            "acima_da_margem": true,
+            "tema": "Ritmo lento e duração excessiva",
+            "exemplo_parafraseado": "Muitos espectadores relatam que o filme se arrasta, com cenas longas e repetitivas que tornam a experiência entediante, e que a duração poderia ser reduzida sem prejuízo.",
+            "temas_no_mesmo_eixo": []
+          },
+          "medianas": {
+            "mencoes": 11,
+            "de_n": 40,
+            "freq_pct": 27.5,
+            "lift_pp": -25.0,
+            "acima_da_margem": false,
+            "tema": "Ritmo lento e duração excessiva",
+            "exemplo_parafraseado": "O filme é frequentemente descrito como lento e arrastado, com uma segunda metade que se alonga sem necessidade, tornando a experiência cansativa apesar da premissa interessante.",
+            "temas_no_mesmo_eixo": []
+          },
+          "positivas": {
+            "mencoes": 5,
+            "de_n": 40,
+            "freq_pct": 12.5,
+            "lift_pp": -40.0,
+            "acima_da_margem": false,
+            "tema": "Ritmo lento e final questionável",
+            "exemplo_parafraseado": "Algumas reviews mencionam um ritmo lento e um desfecho que não agradou a todos, embora reconheçam que a abordagem funciona para a proposta do filme.",
+            "temas_no_mesmo_eixo": []
+          }
+        },
+        "bullet_de": {
+          "negativas": "frequencia_e_contraste",
+          "medianas": null,
+          "positivas": null
+        }
+      },
+      {
+        "eixo": "atuacao",
+        "por_bucket": {
+          "negativas": {
+            "mencoes": 5,
+            "de_n": 40,
+            "freq_pct": 12.5,
+            "lift_pp": -15.0,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "medianas": {
+            "mencoes": 4,
+            "de_n": 40,
+            "freq_pct": 10.0,
+            "lift_pp": -17.5,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "positivas": {
+            "mencoes": 11,
+            "de_n": 40,
+            "freq_pct": 27.5,
+            "lift_pp": 15.0,
+            "acima_da_margem": false,
+            "tema": "Atuações e naturalidade",
+            "exemplo_parafraseado": "As atuações são bastante elogiadas, com destaque para a naturalidade e a capacidade do elenco de sustentar momentos longos e emocionalmente intensos.",
+            "temas_no_mesmo_eixo": []
+          }
+        },
+        "bullet_de": {
+          "negativas": null,
+          "medianas": null,
+          "positivas": null
+        }
+      },
+      {
+        "eixo": "direcao_imagem",
+        "por_bucket": {
+          "negativas": {
+            "mencoes": 12,
+            "de_n": 40,
+            "freq_pct": 30.0,
+            "lift_pp": -10.0,
+            "acima_da_margem": false,
+            "tema": "Fotografia e paisagens como único ponto positivo",
+            "exemplo_parafraseado": "A qualidade visual, com belas imagens de montanhas e neve, é frequentemente elogiada, mas insuficiente para compensar os demais problemas apontados.",
+            "temas_no_mesmo_eixo": []
+          },
+          "medianas": {
+            "mencoes": 16,
+            "de_n": 40,
+            "freq_pct": 40.0,
+            "lift_pp": 0.0,
+            "acima_da_margem": false,
+            "tema": "Fotografia e paisagens nevadas",
+            "exemplo_parafraseado": "A fotografia das montanhas cobertas de neve e dos interiores do hotel é elogiada por sua beleza e frieza, contribuindo para a atmosfera clínica e alienante do filme.",
+            "temas_no_mesmo_eixo": []
+          },
+          "positivas": {
+            "mencoes": 16,
+            "de_n": 40,
+            "freq_pct": 40.0,
+            "lift_pp": 0.0,
+            "acima_da_margem": false,
+            "tema": "Fotografia e enquadramento",
+            "exemplo_parafraseado": "A fotografia é elogiada, com planos longos e enquadramentos que exploram o espaço e a posição dos personagens, além de paisagens montanhosas e interiores marcantes.",
+            "temas_no_mesmo_eixo": []
+          }
+        },
+        "bullet_de": {
+          "negativas": null,
+          "medianas": "frequencia",
+          "positivas": "frequencia"
+        }
+      },
+      {
+        "eixo": "roteiro_estrutura",
+        "por_bucket": {
+          "negativas": {
+            "mencoes": 31,
+            "de_n": 40,
+            "freq_pct": 77.5,
+            "lift_pp": -2.5,
+            "acima_da_margem": false,
+            "tema": "Personagens irritantes e falta de profundidade",
+            "exemplo_parafraseado": "As críticas apontam que os personagens, especialmente o casal protagonista, são unidimensionais e suas reações soam exageradas ou infantilizadas, dificultando a conexão do público.",
+            "temas_no_mesmo_eixo": [
+              "Roteiro raso e diálogos artificiais",
+              "Final decepcionante e anticlimático"
+            ]
+          },
+          "medianas": {
+            "mencoes": 32,
+            "de_n": 40,
+            "freq_pct": 80.0,
+            "lift_pp": 2.5,
+            "acima_da_margem": false,
+            "tema": "Roteiro superficial e falta de desenvolvimento",
+            "exemplo_parafraseado": "Algumas reviews apontam que o roteiro não aprofunda os temas que propõe, permanecendo na superfície e deixando questões importantes sem exploração, como a psicologia dos personagens femininos.",
+            "temas_no_mesmo_eixo": [
+              "Desfecho insatisfatório e anticlimático"
+            ]
+          },
+          "positivas": {
+            "mencoes": 31,
+            "de_n": 40,
+            "freq_pct": 77.5,
+            "lift_pp": -2.5,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          }
+        },
+        "bullet_de": {
+          "negativas": "frequencia",
+          "medianas": "frequencia",
+          "positivas": "frequencia"
+        }
+      },
+      {
+        "eixo": "som_trilha",
+        "por_bucket": {
+          "negativas": {
+            "mencoes": 6,
+            "de_n": 40,
+            "freq_pct": 15.0,
+            "lift_pp": 5.0,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "medianas": {
+            "mencoes": 4,
+            "de_n": 40,
+            "freq_pct": 10.0,
+            "lift_pp": -5.0,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "positivas": {
+            "mencoes": 3,
+            "de_n": 40,
+            "freq_pct": 7.5,
+            "lift_pp": -7.5,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          }
+        },
+        "bullet_de": {
+          "negativas": null,
+          "medianas": null,
+          "positivas": null
+        }
+      },
+      {
+        "eixo": "tom_atmosfera",
+        "por_bucket": {
+          "negativas": {
+            "mencoes": 8,
+            "de_n": 40,
+            "freq_pct": 20.0,
+            "lift_pp": -20.0,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "medianas": {
+            "mencoes": 8,
+            "de_n": 40,
+            "freq_pct": 20.0,
+            "lift_pp": -20.0,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "positivas": {
+            "mencoes": 16,
+            "de_n": 40,
+            "freq_pct": 40.0,
+            "lift_pp": 20.0,
+            "acima_da_margem": false,
+            "tema": "Desconforto e humor incômodo",
+            "exemplo_parafraseado": "Muitas reviews descrevem a experiência como desconfortável e ao mesmo tempo engraçada, com situações de constrangimento que geram riso nervoso e tensão.",
+            "temas_no_mesmo_eixo": []
+          }
+        },
+        "bullet_de": {
+          "negativas": null,
+          "medianas": null,
+          "positivas": null
+        }
+      },
+      {
+        "eixo": "impacto_emocional",
+        "por_bucket": {
+          "negativas": {
+            "mencoes": 13,
+            "de_n": 40,
+            "freq_pct": 32.5,
+            "lift_pp": -7.5,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "medianas": {
+            "mencoes": 11,
+            "de_n": 40,
+            "freq_pct": 27.5,
+            "lift_pp": -12.5,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "positivas": {
+            "mencoes": 16,
+            "de_n": 40,
+            "freq_pct": 40.0,
+            "lift_pp": 7.5,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          }
+        },
+        "bullet_de": {
+          "negativas": null,
+          "medianas": null,
+          "positivas": null
+        }
+      },
+      {
+        "eixo": "comparacoes",
+        "por_bucket": {
+          "negativas": {
+            "mencoes": 9,
+            "de_n": 40,
+            "freq_pct": 22.5,
+            "lift_pp": 0.0,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "medianas": {
+            "mencoes": 7,
+            "de_n": 40,
+            "freq_pct": 17.5,
+            "lift_pp": -5.0,
+            "acima_da_margem": false,
+            "tema": "Comparações com outras obras de Östlund",
+            "exemplo_parafraseado": "Diversas reviews comparam este filme a outras obras do diretor, como Triângulo da Tristeza e Força Maior, considerando-o inferior ou menos envolvente.",
+            "temas_no_mesmo_eixo": []
+          },
+          "positivas": {
+            "mencoes": 9,
+            "de_n": 40,
+            "freq_pct": 22.5,
+            "lift_pp": 0.0,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          }
+        },
+        "bullet_de": {
+          "negativas": null,
+          "medianas": null,
+          "positivas": null
+        }
+      },
+      {
+        "eixo": "expectativa",
+        "por_bucket": {
+          "negativas": {
+            "mencoes": 8,
+            "de_n": 40,
+            "freq_pct": 20.0,
+            "lift_pp": 5.0,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "medianas": {
+            "mencoes": 6,
+            "de_n": 40,
+            "freq_pct": 15.0,
+            "lift_pp": -5.0,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "positivas": {
+            "mencoes": 3,
+            "de_n": 40,
+            "freq_pct": 7.5,
+            "lift_pp": -12.5,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          }
+        },
+        "bullet_de": {
+          "negativas": null,
+          "medianas": null,
+          "positivas": null
+        }
+      },
+      {
+        "eixo": "critica_social",
+        "por_bucket": {
+          "negativas": {
+            "mencoes": 10,
+            "de_n": 40,
+            "freq_pct": 25.0,
+            "lift_pp": -15.0,
+            "acima_da_margem": false,
+            "tema": "Mensagem sobre papéis de gênero e masculinidade frágil",
+            "exemplo_parafraseado": "Vários comentários consideram que a abordagem das questões de gênero é simplista ou mal desenvolvida, ora acusando o filme de misoginia, ora de reforçar estereótipos de forma superficial.",
+            "temas_no_mesmo_eixo": []
+          },
+          "medianas": {
+            "mencoes": 14,
+            "de_n": 40,
+            "freq_pct": 35.0,
+            "lift_pp": -5.0,
+            "acima_da_margem": false,
+            "tema": "Masculinidade frágil e egoísmo do protagonista",
+            "exemplo_parafraseado": "Várias reviews deste grupo criticam o comportamento do protagonista, descrevendo-o como um homem que foge do perigo e depois nega o ocorrido, revelando uma masculinidade frágil e egocêntrica que a esposa e os filhos precisam tolerar.",
+            "temas_no_mesmo_eixo": []
+          },
+          "positivas": {
+            "mencoes": 16,
+            "de_n": 40,
+            "freq_pct": 40.0,
+            "lift_pp": 5.0,
+            "acima_da_margem": false,
+            "tema": "Masculinidade frágil e ego masculino",
+            "exemplo_parafraseado": "Várias reviews destacam como o filme examina a fragilidade masculina e o ego do homem, mostrando um personagem que não consegue assumir seus erros e transforma a própria culpa em vitimização.",
+            "temas_no_mesmo_eixo": [
+              "Crítica aos papéis de gênero e ao casamento"
+            ]
+          }
+        },
+        "bullet_de": {
+          "negativas": null,
+          "medianas": null,
+          "positivas": null
+        }
+      }
+    ],
+    "contraste": "tematico",
+    "rotulagem": {
+      "n_chamadas": 3,
+      "falharam": [],
+      "fora_da_taxonomia": {},
+      "houve_retentativa": []
+    },
+    "spec_version": "1.9.50",
+    "verificador": {
+      "aplicado": true,
+      "variante": "V2_alvo",
+      "passada": 1,
+      "eixo": "impacto_emocional",
+      "n_removidas_no_corpus": 2781
+    }
+  },
+  "narrativa": "Lançado em 2014 e dirigido por Ruben Östlund, o drama Força Maior acompanha uma família sueca em uma viagem de férias para esquiar nas montanhas. Durante um almoço no restaurante do resort, a iminência de uma avalanche desestabiliza a convivência, colocando o casamento de Tomas e Ebba à prova enquanto o marido tenta manter a todo custo seu papel de patriarca.\n\nA produção estrutura-se a partir de um ritmo contemplativo e lento, ambientada na frieza das paisagens nevadas. A experiência é pautada por uma atmosfera constante de desconforto e tensão social entre os presentes.\n\nNa grande maioria das notas (~80%), boa parte dos relatos elogia a forma como a obra examina a masculinidade frágil e as oscilações do ego masculino. Uma parcela expressiva ressalta as discussões provocadas sobre papéis de gênero e expectativas no casamento, enquanto vários sublinham a presença de um humor incômodo que intensifica a sensação de constrangimento.\n\nNuma parcela das notas (~17%), a perspectiva torna-se mais reservada: muitos chamam a atenção para o egoísmo e a fragilidade do protagonista diante dos acontecimentos. No entanto, um número considerável considera que o ritmo lento e a duração excessiva tornam a narrativa cansativa, ainda que boa parte valorize a qualidade visual da fotografia e os cenários de montanha.\n\nEm tom de rejeição, numa fração mínima das notas (~4%), cerca de metade aponta o ritmo arrastado e a duração excessiva como falhas determinantes da experiência. Além disso, uma parcela expressiva critica a superficialidade e as atitudes dos personagens, ao passo que muitos julgam rasa ou problemática a mensagem em torno dos papéis de gênero e da masculinidade frágil.",
+  "verificacao_narrativa": {
+    "quantificador_fora_de_faixa": [],
+    "quantificador_repetido": [],
+    "paragrafos": {
+      "n_paragrafos": 5,
+      "minimo": 3,
+      "insuficientes": false,
+      "longos": []
+    },
+    "n_paragrafos": 5,
+    "paragrafos_insuficientes": false,
+    "paragrafos_longos": [],
+    "grupos_sem_paragrafo_proprio": [],
+    "movimento1_e_movimento2_no_mesmo_paragrafo": false,
+    "formato_invalido": false,
+    "numeros_inventados": [],
+    "rotulos_faltando": [],
+    "ordem_incorreta": false,
+    "vocabulario_peso": false,
+    "resenha_speak": [],
+    "n_resenha_speak": 0,
+    "n_flags": 0
+  },
+  "narrativa_selecao": {
+    "provider": "gemini",
+    "modelo": "gemini-3.7-flash",
+    "n_candidatos": 3,
+    "n_chamadas": 4,
+    "indice_escolhido": 2,
+    "motivo": "menor_severidade",
+    "criterio_decisivo": "ritmo",
+    "candidatos": [
+      {
+        "indice": 0,
+        "n_flags": 1,
+        "cliches": 0,
+        "repeticao_max": 2,
+        "ritmo": 5,
+        "cobertura": 1.0,
+        "eliminado": true
+      },
+      {
+        "indice": 1,
+        "n_flags": 1,
+        "cliches": 0,
+        "repeticao_max": 2,
+        "ritmo": 4,
+        "cobertura": 1.0,
+        "eliminado": true
+      },
+      {
+        "indice": 2,
+        "n_flags": 1,
+        "cliches": 0,
+        "repeticao_max": 2,
+        "ritmo": 6,
+        "cobertura": 1.0,
+        "eliminado": true
+      }
+    ],
+    "retry": {
+      "n_frases_infratoras": 1,
+      "motivos": [
+        "quantificador_fora_de_faixa"
+      ],
+      "n_flags_depois": 0,
+      "aplicado": true
+    },
+    "uso": {
+      "prompt_tokens": 11876,
+      "completion_tokens": 1588,
+      "cache_hit_tokens": 0,
+      "cache_miss_tokens": 11876
+    },
+    "latencia_s": 35.72
+  },
+  "condicoes": {
+    "vale_a_pena": [
+      {
+        "texto": "busca um estudo sobre fragilidade masculina, culpa e vitimização",
+        "tema_origem": "POS-A",
+        "bucket_origem": "positivas",
+        "tema_texto": "Masculinidade frágil e ego masculino",
+        "rotulo_forca": "muitos"
+      },
+      {
+        "texto": "aprecia reflexões sobre papéis de gênero e dinâmicas de casamento com ambiguidades",
+        "tema_origem": "POS-B",
+        "bucket_origem": "positivas",
+        "tema_texto": "Crítica aos papéis de gênero e ao casamento",
+        "rotulo_forca": "muitos",
+        "par_recusado": "NEG-E"
+      },
+      {
+        "texto": "gosta de humor desconfortável nascido de situações de constrangimento e tensão",
+        "tema_origem": "POS-C",
+        "bucket_origem": "positivas",
+        "tema_texto": "Desconforto e humor incômodo",
+        "rotulo_forca": "muitos"
+      },
+      {
+        "texto": "aceita lentidão e escolhas narrativas controversas quando coerentes com a proposta",
+        "tema_origem": "POS-F",
+        "bucket_origem": "positivas",
+        "tema_texto": "Ritmo lento e final questionável",
+        "rotulo_forca": "alguns",
+        "origem": "leitura_humana",
+        "avisos": [
+          "ancora_nao_verificavel",
+          "sem_discriminacao"
+        ]
+      }
+    ],
+    "talvez_evite": [
+      {
+        "texto": "se cansa de cenas longas, repetitivas e com ritmo arrastado",
+        "tema_origem": "NEG-A",
+        "bucket_origem": "negativas",
+        "tema_texto": "Ritmo lento e duração excessiva",
+        "rotulo_forca": "cerca de metade"
+      },
+      {
+        "texto": "se irrita com personagens unidimensionais e reações infantilizadas no casal protagonista",
+        "tema_origem": "NEG-B",
+        "bucket_origem": "negativas",
+        "tema_texto": "Personagens irritantes e falta de profundidade",
+        "rotulo_forca": "muitos"
+      },
+      {
+        "texto": "rejeita discussões de gênero tratadas de modo simplista ou com estereótipos superficiais",
+        "tema_origem": "NEG-C",
+        "bucket_origem": "negativas",
+        "tema_texto": "Mensagem sobre papéis de gênero e masculinidade frágil",
+        "rotulo_forca": "muitos"
+      }
+    ],
+    "ordem_colunas": [
+      "vale_a_pena",
+      "talvez_evite"
+    ],
+    "peso": {
+      "vale_a_pena": {
+        "peso_pct": 80,
+        "peso_texto": "~80% das notas",
+        "nota_de_amostra": null
+      },
+      "talvez_evite": {
+        "peso_pct": 4,
+        "peso_texto": "~4% das notas",
+        "nota_de_amostra": null
+      }
+    },
+    "peso_meio": null,
+    "origem": "llm",
+    "temas_pedidos": {
+      "vale_a_pena": [
+        "POS-A",
+        "POS-B",
+        "POS-C",
+        "POS-F"
+      ],
+      "talvez_evite": [
+        "NEG-A",
+        "NEG-B",
+        "NEG-C",
+        "NEG-E"
+      ]
+    },
+    "temas_saltados": {
+      "vale_a_pena": [],
+      "talvez_evite": []
+    },
+    "descartadas": [],
+    "retry": {
+      "n_reprovadas": 1,
+      "n_aplicadas": 0,
+      "n_saltadas_pelo_modelo": 0,
+      "n_descartadas": 1
+    },
+    "provider": "gemini",
+    "modelo": "gemini-3.7-flash",
+    "n_candidatos": 3,
+    "n_chamadas": 4,
+    "indice_escolhido": 2,
+    "candidatos": [
+      {
+        "indice": 0,
+        "n_condicoes": 8,
+        "n_flags": 2,
+        "flags": [
+          "exemplo_verbatim",
+          "sem_discriminacao"
+        ],
+        "n_temas_cobertos": 8
+      },
+      {
+        "indice": 1,
+        "n_condicoes": 8,
+        "n_flags": 2,
+        "flags": [
+          "sem_discriminacao"
+        ],
+        "n_temas_cobertos": 8
+      },
+      {
+        "indice": 2,
+        "n_condicoes": 8,
+        "n_flags": 1,
+        "flags": [
+          "sem_discriminacao"
+        ],
+        "n_temas_cobertos": 8
+      }
+    ],
+    "uso": {
+      "prompt_tokens": 11624,
+      "completion_tokens": 1199,
+      "cache_hit_tokens": 0,
+      "cache_miss_tokens": 11624
+    },
+    "latencia_s": 22.0,
+    "spec_version": "1.9.50",
+    "sem_condicao_publicavel": [
+      {
+        "tema_origem": "NEG-E",
+        "lado": "talvez_evite",
+        "regra": "R6",
+        "motivo": "o tema usa exclusivamente características do desfecho como critério de decisão",
+        "origem": "leitura_humana"
+      }
+    ]
+  }
+}

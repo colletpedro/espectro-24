@@ -1,0 +1,1597 @@
+{
+  "slug": "whiplash-2014",
+  "data_coleta": "2026-09-13T05:33:56.914044+00:00",
+  "spec_version": "1.9.50",
+  "total_reviews_observadas": 619,
+  "reviews_url": "https://letterboxd.com/film/whiplash-2014/reviews/",
+  "ficha": {
+    "titulo": "Whiplash: Em Busca da Perfeição",
+    "sinopse_oficial": "Andrew sonha em ser o melhor baterista de sua geração. Ele chama a atenção do impiedoso mestre do jazz Terence Fletcher, que ultrapassa os limites e transforma seu sonho em uma obsessão, colocando em risco a saúde física e mental do jovem músico.",
+    "sinopse_fallback_en": false,
+    "generos": [
+      "Drama",
+      "Música",
+      "Thriller"
+    ],
+    "duracao_min": 107,
+    "diretor": "Damien Chazelle",
+    "diretor_transliterado": false,
+    "ano": 2014,
+    "fonte": "tmdb",
+    "tmdb_id": 244786,
+    "tmdb_fetched_at": "2026-09-10T20:07:41+00:00",
+    "poster_path": "/2msJb27jMeuA101ox4MuTQK4mDa.jpg",
+    "poster_largura": 1000,
+    "poster_altura": 1500,
+    "backdrop_paths": [
+      "/fRGxZuo7jJUWQsVg9PREb98Aclp.jpg",
+      "/wbQa0EnWUyRzQ5d1pHLNRlmsCUP.jpg",
+      "/1kuYEvLkX2nTkbfzN6X0w0xQFQU.jpg",
+      "/bF8eIIIJJoMZf2mFibAejqEGQcX.jpg",
+      "/eIFzdcJKvQ5h4igYiVIIZyl67pP.jpg",
+      "/ttnlkfAihfMmm34WWMsg2WUns3u.jpg",
+      "/snZDM1Nsu4ONKNHpf8TsRsDHM0a.jpg",
+      "/hFCPCPF2F9KY6CkCqDBzjHpG2J8.jpg",
+      "/6dZak2xlk8C44j2rT81qr6isA0y.jpg",
+      "/fzEM34VXnBRy1DdheGEJd4xLezT.jpg"
+    ],
+    "backdrop_path": "/fRGxZuo7jJUWQsVg9PREb98Aclp.jpg",
+    "backdrop_largura": 3840,
+    "backdrop_altura": 2160,
+    "poster_sem_texto_path": "/cPNaCo32ssauruGs8jDtK1r1vkW.jpg",
+    "poster_sem_texto_largura": 1000,
+    "poster_sem_texto_altura": 1500,
+    "galeria_stills": [
+      {
+        "still_path": "/fRGxZuo7jJUWQsVg9PREb98Aclp.jpg",
+        "still_largura": 3840,
+        "still_altura": 2160
+      },
+      {
+        "still_path": "/wbQa0EnWUyRzQ5d1pHLNRlmsCUP.jpg",
+        "still_largura": 1920,
+        "still_altura": 1080
+      },
+      {
+        "still_path": "/5JKu78RZxxOHOJMn4bE6VdCb0hE.jpg",
+        "still_largura": 3600,
+        "still_altura": 2025
+      },
+      {
+        "still_path": "/irBF4hm0NxgvK1KcG0cOio20EiO.jpg",
+        "still_largura": 3600,
+        "still_altura": 2025
+      },
+      {
+        "still_path": "/wRWweY3KKBULAClFKCy2XEMNMYV.jpg",
+        "still_largura": 3600,
+        "still_altura": 2025
+      },
+      {
+        "still_path": "/ntEGUe8ak007htzxvf8lpIyxnfI.jpg",
+        "still_largura": 3600,
+        "still_altura": 2025
+      },
+      {
+        "still_path": "/uEPt16Ic6T5psaXY3qLB91M5yIh.jpg",
+        "still_largura": 1920,
+        "still_altura": 1080
+      },
+      {
+        "still_path": "/2dWxiqcpVfMC9KTNghAVa2NBNZP.jpg",
+        "still_largura": 1920,
+        "still_altura": 1080
+      },
+      {
+        "still_path": "/aus6kYyZLqJibtyfevFchUgUPV5.jpg",
+        "still_largura": 2230,
+        "still_altura": 1254
+      },
+      {
+        "still_path": "/gduu5napte3HfzTxV1N0TslGbq4.jpg",
+        "still_largura": 2240,
+        "still_altura": 1260
+      },
+      {
+        "still_path": "/md5HymGa0sUzUsSJGcyG3pjn6i6.jpg",
+        "still_largura": 1920,
+        "still_altura": 1080
+      },
+      {
+        "still_path": "/qu9lbqqxPHlz7HZqqSibVdF54n1.jpg",
+        "still_largura": 1920,
+        "still_altura": 1080
+      }
+    ],
+    "ano_fonte": "letterboxd",
+    "identidade": {
+      "versao": 1,
+      "status": "validada",
+      "slug": "whiplash-2014",
+      "titulo_letterboxd": "Whiplash",
+      "ano_letterboxd": 2014,
+      "tmdb_id_letterboxd": 244786,
+      "tmdb_id_escolhido": 244786,
+      "fonte_id": "letterboxd",
+      "titulo_tmdb_campo": "original_title",
+      "titulo_tmdb_correspondente": "Whiplash",
+      "ano_tmdb": 2014,
+      "ano_divergente": false
+    }
+  },
+  "distribuicao": {
+    "n_notas_total": 4774893,
+    "por_nivel": {
+      "0.5": 4694,
+      "1.0": 11223,
+      "1.5": 5971,
+      "2.0": 38355,
+      "2.5": 36171,
+      "3.0": 237134,
+      "3.5": 309024,
+      "4.0": 1226131,
+      "4.5": 900920,
+      "5.0": 2005270
+    },
+    "por_bucket": {
+      "negativas": 1,
+      "medianas": 6,
+      "positivas": 93
+    },
+    "fonte": "letterboxd_histograma"
+  },
+  "coleta": {
+    "slug": "whiplash-2014",
+    "coletado_em": "2026-09-10T19:49:58.413020+00:00",
+    "versao_coletor": "1.9.6",
+    "ordenacao_usada": "by/added",
+    "histograma_bruto": {
+      "0.5": 4694,
+      "1.0": 11223,
+      "1.5": 5971,
+      "2.0": 38355,
+      "2.5": 36171,
+      "3.0": 237134,
+      "3.5": 309024,
+      "4.0": 1226131,
+      "4.5": 900920,
+      "5.0": 2005270
+    },
+    "orcamento_paginas_por_nivel": {
+      "0.5": 1,
+      "1.0": 3,
+      "1.5": 2,
+      "2.0": 10,
+      "2.5": 6,
+      "3.0": 10,
+      "3.5": 1,
+      "4.0": 5,
+      "4.5": 3,
+      "5.0": 7
+    },
+    "paginas_gastas_por_nivel": {
+      "0.5": 1,
+      "1.0": 2,
+      "1.5": 2,
+      "2.0": 8,
+      "2.5": 5,
+      "3.0": 18,
+      "3.5": 1,
+      "4.0": 5,
+      "4.5": 3,
+      "5.0": 7
+    },
+    "paradas_por_limite": [
+      "0.5",
+      "1.0",
+      "1.5",
+      "2.0",
+      "2.5",
+      "3.0",
+      "3.5",
+      "4.0",
+      "4.5",
+      "5.0"
+    ],
+    "contagem_bruta_por_nivel": {
+      "0.5": 12,
+      "1.0": 24,
+      "1.5": 24,
+      "2.0": 96,
+      "2.5": 60,
+      "3.0": 216,
+      "3.5": 12,
+      "4.0": 60,
+      "4.5": 36,
+      "5.0": 79
+    },
+    "contagem_estimada_valida_por_nivel": {
+      "0.5": 3,
+      "1.0": 5,
+      "1.5": 12,
+      "2.0": 19,
+      "2.5": 15,
+      "3.0": 32,
+      "3.5": 2,
+      "4.0": 8,
+      "4.5": 11,
+      "5.0": 17
+    },
+    "motivo_parada_por_nivel": {
+      "0.5": "orcamento_esgotado",
+      "1.0": "orcamento_esgotado",
+      "1.5": "orcamento_esgotado",
+      "2.0": "orcamento_esgotado",
+      "2.5": "orcamento_esgotado",
+      "3.0": "orcamento_esgotado",
+      "3.5": "orcamento_esgotado",
+      "4.0": "orcamento_esgotado",
+      "4.5": "orcamento_esgotado",
+      "5.0": "orcamento_esgotado"
+    },
+    "paginas_base_por_nivel": {
+      "0.5": 1,
+      "1.0": 2,
+      "1.5": 2,
+      "2.0": 8,
+      "2.5": 5,
+      "3.0": 10,
+      "3.5": 1,
+      "4.0": 5,
+      "4.5": 3,
+      "5.0": 7
+    },
+    "paginas_extensao_por_nivel": {
+      "0.5": 0,
+      "1.0": 0,
+      "1.5": 0,
+      "2.0": 0,
+      "2.5": 0,
+      "3.0": 8,
+      "3.5": 0,
+      "4.0": 0,
+      "4.5": 0,
+      "5.0": 0
+    },
+    "extensao_por_bucket": {
+      "negativas": {
+        "paginas_base": 13,
+        "paginas_extensao": 0,
+        "extras_por_nivel": {},
+        "motivo_parada": "meta_atingida",
+        "n_validas_pos_base": 53,
+        "n_validas_pos_extensao": 53,
+        "meta": 50
+      },
+      "medianas": {
+        "paginas_base": 15,
+        "paginas_extensao": 8,
+        "extras_por_nivel": {
+          "3.0": 8
+        },
+        "motivo_parada": "teto_extensao",
+        "n_validas_pos_base": 47,
+        "n_validas_pos_extensao": 47,
+        "meta": 50
+      },
+      "positivas": {
+        "paginas_base": 16,
+        "paginas_extensao": 0,
+        "extras_por_nivel": {},
+        "motivo_parada": "meta_atingida",
+        "n_validas_pos_base": 50,
+        "n_validas_pos_extensao": 50,
+        "meta": 50
+      }
+    },
+    "profundidade_sondagem": {
+      "nivel_sondado": 5.0,
+      "profundidade": 256,
+      "exata": false,
+      "requisicoes": 4,
+      "motivo": "teto_plataforma"
+    },
+    "profundidade_estimada_por_nivel": {
+      "0.5": 1,
+      "1.0": 1,
+      "1.5": 1,
+      "2.0": 5,
+      "2.5": 5,
+      "3.0": 30,
+      "3.5": 39,
+      "4.0": 157,
+      "4.5": 115,
+      "5.0": 256
+    },
+    "janela_temporal": {
+      "total": {
+        "n": 763,
+        "min": "2015-04-15",
+        "max": "2026-09-11",
+        "p5": "2026-04-23",
+        "p50": "2026-09-05",
+        "p95": "2026-09-10"
+      },
+      "por_bucket": {
+        "negativas": {
+          "n": 216,
+          "min": "2015-04-15",
+          "max": "2026-09-10",
+          "p5": "2025-08-18",
+          "p50": "2026-08-28",
+          "p95": "2026-09-09"
+        },
+        "medianas": {
+          "n": 276,
+          "min": "2018-10-03",
+          "max": "2026-09-11",
+          "p5": "2026-05-04",
+          "p50": "2026-09-04",
+          "p95": "2026-09-09"
+        },
+        "positivas": {
+          "n": 271,
+          "min": "2021-11-18",
+          "max": "2026-09-11",
+          "p5": "2026-08-28",
+          "p50": "2026-09-10",
+          "p95": "2026-09-10"
+        }
+      }
+    },
+    "dias_por_100_paginas": {
+      "n_paginas": 22,
+      "pagina_min": 1,
+      "pagina_max": 128,
+      "dias": 4,
+      "dias_por_100_paginas": 3.1496062992125986,
+      "paginas_para_1_ano": 11589
+    },
+    "identidade_letterboxd": {
+      "slug": "whiplash-2014",
+      "titulo": "Whiplash",
+      "ano": 2014,
+      "tmdb_id_letterboxd": 244786,
+      "fonte": "pagina_letterboxd"
+    },
+    "ano_lancamento": 2014,
+    "ano_fonte": "letterboxd",
+    "n_reviews_bruto": 763
+  },
+  "origem_paginas": {
+    "_histograma/whiplash-2014.html": "cache",
+    "whiplash-2014/pages/by_added/rated_5_page_4.html": "cache",
+    "whiplash-2014/pages/by_added/rated_5_page_16.html": "cache",
+    "whiplash-2014/pages/by_added/rated_5_page_64.html": "cache",
+    "whiplash-2014/pages/by_added/rated_5_page_256.html": "cache",
+    "whiplash-2014/pages/by_added/rated_0_5_page_1.html": "cache",
+    "whiplash-2014/pages/by_added/rated_1_page_1.html": "cache",
+    "whiplash-2014/pages/by_added/rated_1_page_2.html": "cache",
+    "whiplash-2014/fulltext/viewing_1473921537.html": "cache",
+    "whiplash-2014/pages/by_added/rated_1_5_page_1.html": "cache",
+    "whiplash-2014/pages/by_added/rated_1_5_page_2.html": "cache",
+    "whiplash-2014/fulltext/viewing_1472149406.html": "cache",
+    "whiplash-2014/fulltext/viewing_1468971905.html": "cache",
+    "whiplash-2014/fulltext/viewing_1468814090.html": "cache",
+    "whiplash-2014/pages/by_added/rated_2_page_1.html": "cache",
+    "whiplash-2014/pages/by_added/rated_2_page_2.html": "cache",
+    "whiplash-2014/pages/by_added/rated_2_page_3.html": "cache",
+    "whiplash-2014/pages/by_added/rated_2_page_4.html": "cache",
+    "whiplash-2014/pages/by_added/rated_2_page_5.html": "cache",
+    "whiplash-2014/pages/by_added/rated_2_page_6.html": "cache",
+    "whiplash-2014/pages/by_added/rated_2_page_7.html": "cache",
+    "whiplash-2014/pages/by_added/rated_2_page_8.html": "cache",
+    "whiplash-2014/fulltext/viewing_1477875332.html": "cache",
+    "whiplash-2014/fulltext/viewing_1477436488.html": "cache",
+    "whiplash-2014/fulltext/viewing_1469598954.html": "cache",
+    "whiplash-2014/fulltext/viewing_1465588455.html": "cache",
+    "whiplash-2014/fulltext/viewing_1464640858.html": "cache",
+    "whiplash-2014/pages/by_added/rated_2_5_page_1.html": "cache",
+    "whiplash-2014/pages/by_added/rated_2_5_page_2.html": "cache",
+    "whiplash-2014/pages/by_added/rated_2_5_page_3.html": "cache",
+    "whiplash-2014/pages/by_added/rated_2_5_page_4.html": "cache",
+    "whiplash-2014/pages/by_added/rated_2_5_page_5.html": "cache",
+    "whiplash-2014/fulltext/viewing_1488996959.html": "cache",
+    "whiplash-2014/fulltext/viewing_1478997072.html": "cache",
+    "whiplash-2014/fulltext/viewing_1477435913.html": "cache",
+    "whiplash-2014/pages/by_added/rated_3_page_1.html": "cache",
+    "whiplash-2014/pages/by_added/rated_3_page_2.html": "cache",
+    "whiplash-2014/pages/by_added/rated_3_page_3.html": "cache",
+    "whiplash-2014/pages/by_added/rated_3_page_4.html": "cache",
+    "whiplash-2014/pages/by_added/rated_3_page_5.html": "cache",
+    "whiplash-2014/pages/by_added/rated_3_page_6.html": "cache",
+    "whiplash-2014/pages/by_added/rated_3_page_7.html": "cache",
+    "whiplash-2014/pages/by_added/rated_3_page_8.html": "cache",
+    "whiplash-2014/pages/by_added/rated_3_page_9.html": "cache",
+    "whiplash-2014/pages/by_added/rated_3_page_15.html": "cache",
+    "whiplash-2014/fulltext/viewing_1489749246.html": "cache",
+    "whiplash-2014/fulltext/viewing_1489732142.html": "cache",
+    "whiplash-2014/fulltext/viewing_1488037319.html": "cache",
+    "whiplash-2014/fulltext/viewing_1487138032.html": "cache",
+    "whiplash-2014/fulltext/viewing_1483296229.html": "cache",
+    "whiplash-2014/pages/by_added/rated_3_5_page_1.html": "cache",
+    "whiplash-2014/pages/by_added/rated_4_page_1.html": "cache",
+    "whiplash-2014/pages/by_added/rated_4_page_2.html": "cache",
+    "whiplash-2014/pages/by_added/rated_4_page_3.html": "cache",
+    "whiplash-2014/pages/by_added/rated_4_page_4.html": "cache",
+    "whiplash-2014/pages/by_added/rated_4_page_39.html": "cache",
+    "whiplash-2014/fulltext/viewing_1490361314.html": "cache",
+    "whiplash-2014/pages/by_added/rated_4_5_page_1.html": "cache",
+    "whiplash-2014/pages/by_added/rated_4_5_page_2.html": "cache",
+    "whiplash-2014/pages/by_added/rated_4_5_page_29.html": "cache",
+    "whiplash-2014/fulltext/viewing_1490544929.html": "cache",
+    "whiplash-2014/pages/by_added/rated_5_page_1.html": "cache",
+    "whiplash-2014/pages/by_added/rated_5_page_2.html": "cache",
+    "whiplash-2014/pages/by_added/rated_5_page_3.html": "cache",
+    "whiplash-2014/pages/by_added/rated_5_page_5.html": "cache",
+    "whiplash-2014/pages/by_added/rated_5_page_128.html": "cache",
+    "whiplash-2014/fulltext/viewing_1487670468.html": "cache",
+    "whiplash-2014/fulltext/viewing_1484516521.html": "cache",
+    "whiplash-2014/pages/by_added/rated_3_page_10.html": "cache",
+    "whiplash-2014/pages/by_added/rated_3_page_11.html": "cache",
+    "whiplash-2014/pages/by_added/rated_3_page_12.html": "cache",
+    "whiplash-2014/pages/by_added/rated_3_page_13.html": "cache",
+    "whiplash-2014/pages/by_added/rated_3_page_14.html": "cache",
+    "whiplash-2014/pages/by_added/rated_3_page_16.html": "cache",
+    "whiplash-2014/pages/by_added/rated_3_page_17.html": "cache",
+    "whiplash-2014/pages/by_added/rated_3_page_18.html": "cache",
+    "whiplash-2014/film_page.html": "cache"
+  },
+  "buckets": [
+    {
+      "bucket": "negativas",
+      "alvo": 40,
+      "modo": "completo",
+      "estado_piso": "completa",
+      "n_validas": 40,
+      "share_real": 1,
+      "composicao_alvo": {
+        "0.5": 3,
+        "1.0": 7,
+        "1.5": 4,
+        "2.0": 26
+      },
+      "composicao_atingida": {
+        "0.5": 3,
+        "1.0": 5,
+        "1.5": 5,
+        "2.0": 27
+      },
+      "cascata_por_degrau": {
+        "150": 40
+      },
+      "deficit_redistribuido": 2,
+      "distribuicao_pagina_origem": {
+        "n": 40,
+        "min": 1,
+        "max": 12,
+        "p5": 1,
+        "p50": 4,
+        "p95": 11,
+        "fracao_profunda": 0.225
+      },
+      "janela_amostra": {
+        "n": 40,
+        "min": "2015-04-15",
+        "max": "2026-09-10",
+        "p5": "2025-04-04",
+        "p50": "2026-08-29",
+        "p95": "2026-09-08"
+      },
+      "niveis": [
+        {
+          "nivel": 0.5,
+          "n_validas": 3,
+          "n_alvo": 3,
+          "n_brutas": 12,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 0,
+          "n_descartadas_curtas": 9,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 0,
+          "motivos_descarte": {
+            "truncada_sem_texto": 0,
+            "spoiler": 0,
+            "abaixo_min_chars": 9,
+            "excedente_cota": 0,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 1
+        },
+        {
+          "nivel": 1.0,
+          "n_validas": 5,
+          "n_alvo": 7,
+          "n_brutas": 24,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 0,
+          "n_descartadas_curtas": 19,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 0,
+          "motivos_descarte": {
+            "truncada_sem_texto": 0,
+            "spoiler": 0,
+            "abaixo_min_chars": 19,
+            "excedente_cota": 0,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 2
+        },
+        {
+          "nivel": 1.5,
+          "n_validas": 5,
+          "n_alvo": 4,
+          "n_brutas": 24,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 0,
+          "n_descartadas_curtas": 11,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 1,
+          "motivos_descarte": {
+            "truncada_sem_texto": 1,
+            "spoiler": 0,
+            "abaixo_min_chars": 11,
+            "excedente_cota": 7,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 2
+        },
+        {
+          "nivel": 2.0,
+          "n_validas": 27,
+          "n_alvo": 26,
+          "n_brutas": 156,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 3,
+          "n_descartadas_curtas": 118,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 2,
+          "motivos_descarte": {
+            "truncada_sem_texto": 2,
+            "spoiler": 3,
+            "abaixo_min_chars": 118,
+            "excedente_cota": 6,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 8
+        }
+      ],
+      "temas": [
+        {
+          "tema": "Romantização do abuso e da toxicidade",
+          "mencoes_aproximadas": 27,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "Várias reviews criticam a forma como o filme retrata a relação entre professor e aluno como uma apologia à violência psicológica e física, normalizando o sadismo e a humilhação em nome da excelência artística.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Personagens desagradáveis e sem profundidade",
+          "mencoes_aproximadas": 20,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "Muitos espectadores consideram o protagonista e o mentor figuras irritantes, egoístas e unidimensionais, cujas motivações soam falsas ou exageradas, dificultando qualquer empatia.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Ritmo arrastado e experiência angustiante",
+          "mencoes_aproximadas": 16,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "A narrativa é percebida como monótona e repetitiva, focada excessivamente em ensaios e sofrimento, o que gera ansiedade e tédio em vez de envolvimento.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Mensagem problemática e superficial",
+          "mencoes_aproximadas": 14,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "As reviews apontam que o filme reforça tropos como o artista sofredor e a ideia de que a grandeza justifica o abuso, sem oferecer uma crítica ou reflexão mais profunda.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Retrato irreal e clichê do jazz",
+          "mencoes_aproximadas": 9,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "Alguns espectadores familiarizados com jazz criticam a representação fantasiosa e hollywoodiana do meio musical, reduzindo a prática a um ritual de humilhação e sofrimento.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Excesso de hype e expectativas frustradas",
+          "mencoes_aproximadas": 8,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "Diversas pessoas relatam que a obra não corresponde à aclamação que recebeu, sentindo-se decepcionadas após tantos elogios e considerando o resultado superestimado.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        }
+      ],
+      "observacao_geral": "As reviews negativas deste grupo destacam principalmente a romantização do abuso, personagens desagradáveis, ritmo angustiante e uma mensagem problemática. Muitos também criticam o hype excessivo e o retrato irreal do jazz, resultando em uma experiência frustrante para estes espectadores.",
+      "idioma_invalido": false,
+      "escopo_suspeito": false
+    },
+    {
+      "bucket": "medianas",
+      "alvo": 40,
+      "modo": "completo",
+      "estado_piso": "completa",
+      "n_validas": 40,
+      "share_real": 6,
+      "composicao_alvo": {
+        "2.5": 5,
+        "3.0": 35
+      },
+      "composicao_atingida": {
+        "2.5": 8,
+        "3.0": 32
+      },
+      "cascata_por_degrau": {
+        "150": 40
+      },
+      "deficit_redistribuido": 3,
+      "distribuicao_pagina_origem": {
+        "n": 40,
+        "min": 1,
+        "max": 18,
+        "p5": 1,
+        "p50": 5,
+        "p95": 17,
+        "fracao_profunda": 0.45
+      },
+      "janela_amostra": {
+        "n": 40,
+        "min": "2026-08-29",
+        "max": "2026-09-10",
+        "p5": "2026-08-31",
+        "p50": "2026-09-05",
+        "p95": "2026-09-10"
+      },
+      "niveis": [
+        {
+          "nivel": 2.5,
+          "n_validas": 8,
+          "n_alvo": 5,
+          "n_brutas": 60,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 1,
+          "n_descartadas_curtas": 44,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 0,
+          "motivos_descarte": {
+            "truncada_sem_texto": 0,
+            "spoiler": 1,
+            "abaixo_min_chars": 44,
+            "excedente_cota": 7,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 5
+        },
+        {
+          "nivel": 3.0,
+          "n_validas": 32,
+          "n_alvo": 35,
+          "n_brutas": 216,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 5,
+          "n_descartadas_curtas": 177,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 2,
+          "motivos_descarte": {
+            "truncada_sem_texto": 2,
+            "spoiler": 5,
+            "abaixo_min_chars": 177,
+            "excedente_cota": 0,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 18
+        }
+      ],
+      "temas": [
+        {
+          "tema": "Atuações",
+          "mencoes_aproximadas": 12,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "As atuações de Miles Teller e J.K. Simmons são frequentemente elogiadas, com destaque para a intensidade e a capacidade de alternar entre fúria e falsa simpatia do intérprete do instrutor.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Ritmo e Tensão",
+          "mencoes_aproximadas": 11,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "A tensão constante e o ritmo acelerado, especialmente nas cenas de ensaio e apresentação, são reconhecidos como pontos fortes que prendem a atenção.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Personagem do Instrutor e Métodos de Ensino",
+          "mencoes_aproximadas": 10,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "O instrutor é descrito como cruel, abusivo e psicologicamente violento, levantando questionamentos sobre os limites do ensino e a legitimidade de métodos extremos.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Execução Técnica",
+          "mencoes_aproximadas": 9,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "A direção, a edição e a fotografia são elogiadas pela eficiência em transmitir a intensidade e o esforço físico, embora alguns considerem o estilo excessivamente técnico.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Roteiro e Desenvolvimento",
+          "mencoes_aproximadas": 8,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "Críticas apontam que a trama se torna repetitiva, com ciclos previsíveis de pressão e humilhação, e que os personagens carecem de profundidade.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Mensagem e Moral",
+          "mencoes_aproximadas": 7,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "A mensagem sobre a busca pela excelência a qualquer custo é vista como problemática, glorificando o abuso e deixando uma impressão negativa.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        }
+      ],
+      "observacao_geral": "As reviews medianas apontam uma recepção morna, reconhecendo a intensidade e as atuações, mas criticando a repetição, a falta de profundidade e a moral questionável. Este grupo destaca que o filme não atendeu às expectativas geradas por sua reputação.",
+      "idioma_invalido": false,
+      "escopo_suspeito": false
+    },
+    {
+      "bucket": "positivas",
+      "alvo": 40,
+      "modo": "completo",
+      "estado_piso": "completa",
+      "n_validas": 40,
+      "share_real": 93,
+      "composicao_alvo": {
+        "3.5": 3,
+        "4.0": 11,
+        "4.5": 8,
+        "5.0": 18
+      },
+      "composicao_atingida": {
+        "3.5": 2,
+        "4.0": 11,
+        "4.5": 8,
+        "5.0": 19
+      },
+      "cascata_por_degrau": {
+        "150": 40
+      },
+      "deficit_redistribuido": 1,
+      "distribuicao_pagina_origem": {
+        "n": 40,
+        "min": 1,
+        "max": 64,
+        "p5": 1,
+        "p50": 4,
+        "p95": 39,
+        "fracao_profunda": 0.425
+      },
+      "janela_amostra": {
+        "n": 40,
+        "min": "2021-11-18",
+        "max": "2026-09-10",
+        "p5": "2026-09-06",
+        "p50": "2026-09-10",
+        "p95": "2026-09-10"
+      },
+      "niveis": [
+        {
+          "nivel": 3.5,
+          "n_validas": 2,
+          "n_alvo": 3,
+          "n_brutas": 12,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 1,
+          "n_descartadas_curtas": 9,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 0,
+          "motivos_descarte": {
+            "truncada_sem_texto": 0,
+            "spoiler": 1,
+            "abaixo_min_chars": 9,
+            "excedente_cota": 0,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 1
+        },
+        {
+          "nivel": 4.0,
+          "n_validas": 11,
+          "n_alvo": 11,
+          "n_brutas": 108,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 1,
+          "n_descartadas_curtas": 92,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 2,
+          "motivos_descarte": {
+            "truncada_sem_texto": 2,
+            "spoiler": 1,
+            "abaixo_min_chars": 92,
+            "excedente_cota": 2,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 5
+        },
+        {
+          "nivel": 4.5,
+          "n_validas": 8,
+          "n_alvo": 8,
+          "n_brutas": 36,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 0,
+          "n_descartadas_curtas": 25,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 0,
+          "motivos_descarte": {
+            "truncada_sem_texto": 0,
+            "spoiler": 0,
+            "abaixo_min_chars": 25,
+            "excedente_cota": 3,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 3
+        },
+        {
+          "nivel": 5.0,
+          "n_validas": 19,
+          "n_alvo": 18,
+          "n_brutas": 115,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 2,
+          "n_descartadas_curtas": 86,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 3,
+          "motivos_descarte": {
+            "truncada_sem_texto": 3,
+            "spoiler": 2,
+            "abaixo_min_chars": 86,
+            "excedente_cota": 5,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 7
+        }
+      ],
+      "temas": [
+        {
+          "tema": "Atuações marcantes",
+          "mencoes_aproximadas": 18,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "As reviews positivas elogiam as atuações, especialmente a de J.K. Simmons, considerada intensa e realista, e a de Miles Teller, que também recebe destaque.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Obsessão e busca pela perfeição",
+          "mencoes_aproximadas": 16,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "O filme é visto como um retrato da obsessão e do desejo de atingir a perfeição, mostrando as consequências desse comportamento na vida do protagonista.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Tensão e intensidade",
+          "mencoes_aproximadas": 14,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "Muitas reviews destacam a tensão constante e a intensidade do filme, que mantém o espectador nervoso e envolvido do início ao fim.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Representação do mundo da música",
+          "mencoes_aproximadas": 10,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "As reviews elogiam a forma como o filme retrata o universo do jazz e a indústria musical, incluindo seus bastidores e desafios.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Relação professor-aluno",
+          "mencoes_aproximadas": 9,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "A dinâmica entre o professor e o aluno é frequentemente mencionada, com ênfase nos métodos abusivos e na manipulação psicológica exercida pelo mentor.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Final impactante",
+          "mencoes_aproximadas": 8,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "O desfecho do filme é amplamente elogiado por sua força e execução, sendo considerado um dos pontos altos da obra.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        }
+      ],
+      "observacao_geral": "As reviews positivas destacam a intensidade das atuações, a representação da obsessão pela perfeição e a tensão constante, com muitos elogios ao retrato do mundo da música e à relação abusiva entre professor e aluno. O final é frequentemente citado como impactante, e a obra é vista como uma reflexão sobre os custos da busca pela excelência.",
+      "idioma_invalido": false,
+      "escopo_suspeito": false
+    }
+  ],
+  "eixos": {
+    "taxonomia_id": "ebab2667de74",
+    "margem": {
+      "lei": "lift^2 * n >= 2085136/1000000",
+      "constante_quadrada": [
+        2085136,
+        1000000
+      ],
+      "n": 40,
+      "limiar_pp": 22.83
+    },
+    "margem_lift_pp": 22.83,
+    "linhas": [
+      {
+        "eixo": "ritmo",
+        "por_bucket": {
+          "negativas": {
+            "mencoes": 3,
+            "de_n": 40,
+            "freq_pct": 7.5,
+            "lift_pp": -5.0,
+            "acima_da_margem": false,
+            "tema": "Ritmo arrastado e experiência angustiante",
+            "exemplo_parafraseado": "A narrativa é percebida como monótona e repetitiva, focada excessivamente em ensaios e sofrimento, o que gera ansiedade e tédio em vez de envolvimento.",
+            "temas_no_mesmo_eixo": []
+          },
+          "medianas": {
+            "mencoes": 4,
+            "de_n": 40,
+            "freq_pct": 10.0,
+            "lift_pp": -2.5,
+            "acima_da_margem": false,
+            "tema": "Ritmo e Tensão",
+            "exemplo_parafraseado": "A tensão constante e o ritmo acelerado, especialmente nas cenas de ensaio e apresentação, são reconhecidos como pontos fortes que prendem a atenção.",
+            "temas_no_mesmo_eixo": []
+          },
+          "positivas": {
+            "mencoes": 5,
+            "de_n": 40,
+            "freq_pct": 12.5,
+            "lift_pp": 2.5,
+            "acima_da_margem": false,
+            "tema": "Tensão e intensidade",
+            "exemplo_parafraseado": "Muitas reviews destacam a tensão constante e a intensidade do filme, que mantém o espectador nervoso e envolvido do início ao fim.",
+            "temas_no_mesmo_eixo": []
+          }
+        },
+        "bullet_de": {
+          "negativas": null,
+          "medianas": null,
+          "positivas": null
+        }
+      },
+      {
+        "eixo": "atuacao",
+        "por_bucket": {
+          "negativas": {
+            "mencoes": 14,
+            "de_n": 40,
+            "freq_pct": 35.0,
+            "lift_pp": -7.5,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "medianas": {
+            "mencoes": 15,
+            "de_n": 40,
+            "freq_pct": 37.5,
+            "lift_pp": -5.0,
+            "acima_da_margem": false,
+            "tema": "Atuações",
+            "exemplo_parafraseado": "As atuações de Miles Teller e J.K. Simmons são frequentemente elogiadas, com destaque para a intensidade e a capacidade de alternar entre fúria e falsa simpatia do intérprete do instrutor.",
+            "temas_no_mesmo_eixo": []
+          },
+          "positivas": {
+            "mencoes": 17,
+            "de_n": 40,
+            "freq_pct": 42.5,
+            "lift_pp": 5.0,
+            "acima_da_margem": false,
+            "tema": "Atuações marcantes",
+            "exemplo_parafraseado": "As reviews positivas elogiam as atuações, especialmente a de J.K. Simmons, considerada intensa e realista, e a de Miles Teller, que também recebe destaque.",
+            "temas_no_mesmo_eixo": []
+          }
+        },
+        "bullet_de": {
+          "negativas": "frequencia",
+          "medianas": null,
+          "positivas": null
+        }
+      },
+      {
+        "eixo": "direcao_imagem",
+        "por_bucket": {
+          "negativas": {
+            "mencoes": 3,
+            "de_n": 40,
+            "freq_pct": 7.5,
+            "lift_pp": -10.0,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "medianas": {
+            "mencoes": 5,
+            "de_n": 40,
+            "freq_pct": 12.5,
+            "lift_pp": -5.0,
+            "acima_da_margem": false,
+            "tema": "Execução Técnica",
+            "exemplo_parafraseado": "A direção, a edição e a fotografia são elogiadas pela eficiência em transmitir a intensidade e o esforço físico, embora alguns considerem o estilo excessivamente técnico.",
+            "temas_no_mesmo_eixo": []
+          },
+          "positivas": {
+            "mencoes": 7,
+            "de_n": 40,
+            "freq_pct": 17.5,
+            "lift_pp": 5.0,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          }
+        },
+        "bullet_de": {
+          "negativas": null,
+          "medianas": null,
+          "positivas": null
+        }
+      },
+      {
+        "eixo": "roteiro_estrutura",
+        "por_bucket": {
+          "negativas": {
+            "mencoes": 29,
+            "de_n": 40,
+            "freq_pct": 72.5,
+            "lift_pp": 0.0,
+            "acima_da_margem": false,
+            "tema": "Personagens desagradáveis e sem profundidade",
+            "exemplo_parafraseado": "Muitos espectadores consideram o protagonista e o mentor figuras irritantes, egoístas e unidimensionais, cujas motivações soam falsas ou exageradas, dificultando qualquer empatia.",
+            "temas_no_mesmo_eixo": []
+          },
+          "medianas": {
+            "mencoes": 26,
+            "de_n": 40,
+            "freq_pct": 65.0,
+            "lift_pp": -7.5,
+            "acima_da_margem": false,
+            "tema": "Personagem do Instrutor e Métodos de Ensino",
+            "exemplo_parafraseado": "O instrutor é descrito como cruel, abusivo e psicologicamente violento, levantando questionamentos sobre os limites do ensino e a legitimidade de métodos extremos.",
+            "temas_no_mesmo_eixo": [
+              "Roteiro e Desenvolvimento"
+            ]
+          },
+          "positivas": {
+            "mencoes": 29,
+            "de_n": 40,
+            "freq_pct": 72.5,
+            "lift_pp": 0.0,
+            "acima_da_margem": false,
+            "tema": "Obsessão e busca pela perfeição",
+            "exemplo_parafraseado": "O filme é visto como um retrato da obsessão e do desejo de atingir a perfeição, mostrando as consequências desse comportamento na vida do protagonista.",
+            "temas_no_mesmo_eixo": [
+              "Relação professor-aluno"
+            ]
+          }
+        },
+        "bullet_de": {
+          "negativas": "frequencia",
+          "medianas": "frequencia",
+          "positivas": "frequencia"
+        }
+      },
+      {
+        "eixo": "som_trilha",
+        "por_bucket": {
+          "negativas": {
+            "mencoes": 8,
+            "de_n": 40,
+            "freq_pct": 20.0,
+            "lift_pp": -2.5,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "medianas": {
+            "mencoes": 5,
+            "de_n": 40,
+            "freq_pct": 12.5,
+            "lift_pp": -10.0,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "positivas": {
+            "mencoes": 9,
+            "de_n": 40,
+            "freq_pct": 22.5,
+            "lift_pp": 2.5,
+            "acima_da_margem": false,
+            "tema": "Representação do mundo da música",
+            "exemplo_parafraseado": "As reviews elogiam a forma como o filme retrata o universo do jazz e a indústria musical, incluindo seus bastidores e desafios.",
+            "temas_no_mesmo_eixo": []
+          }
+        },
+        "bullet_de": {
+          "negativas": null,
+          "medianas": null,
+          "positivas": null
+        }
+      },
+      {
+        "eixo": "tom_atmosfera",
+        "por_bucket": {
+          "negativas": {
+            "mencoes": 8,
+            "de_n": 40,
+            "freq_pct": 20.0,
+            "lift_pp": 5.0,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "medianas": {
+            "mencoes": 6,
+            "de_n": 40,
+            "freq_pct": 15.0,
+            "lift_pp": -5.0,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "positivas": {
+            "mencoes": 2,
+            "de_n": 40,
+            "freq_pct": 5.0,
+            "lift_pp": -15.0,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          }
+        },
+        "bullet_de": {
+          "negativas": null,
+          "medianas": null,
+          "positivas": null
+        }
+      },
+      {
+        "eixo": "impacto_emocional",
+        "por_bucket": {
+          "negativas": {
+            "mencoes": 13,
+            "de_n": 40,
+            "freq_pct": 32.5,
+            "lift_pp": -17.5,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "medianas": {
+            "mencoes": 20,
+            "de_n": 40,
+            "freq_pct": 50.0,
+            "lift_pp": 2.5,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "positivas": {
+            "mencoes": 19,
+            "de_n": 40,
+            "freq_pct": 47.5,
+            "lift_pp": -2.5,
+            "acima_da_margem": false,
+            "tema": "Final impactante",
+            "exemplo_parafraseado": "O desfecho do filme é amplamente elogiado por sua força e execução, sendo considerado um dos pontos altos da obra.",
+            "temas_no_mesmo_eixo": []
+          }
+        },
+        "bullet_de": {
+          "negativas": null,
+          "medianas": "frequencia",
+          "positivas": "frequencia"
+        }
+      },
+      {
+        "eixo": "comparacoes",
+        "por_bucket": {
+          "negativas": {
+            "mencoes": 11,
+            "de_n": 40,
+            "freq_pct": 27.5,
+            "lift_pp": 2.5,
+            "acima_da_margem": false,
+            "tema": "Retrato irreal e clichê do jazz",
+            "exemplo_parafraseado": "Alguns espectadores familiarizados com jazz criticam a representação fantasiosa e hollywoodiana do meio musical, reduzindo a prática a um ritual de humilhação e sofrimento.",
+            "temas_no_mesmo_eixo": []
+          },
+          "medianas": {
+            "mencoes": 10,
+            "de_n": 40,
+            "freq_pct": 25.0,
+            "lift_pp": -2.5,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "positivas": {
+            "mencoes": 8,
+            "de_n": 40,
+            "freq_pct": 20.0,
+            "lift_pp": -7.5,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          }
+        },
+        "bullet_de": {
+          "negativas": null,
+          "medianas": null,
+          "positivas": null
+        }
+      },
+      {
+        "eixo": "expectativa",
+        "por_bucket": {
+          "negativas": {
+            "mencoes": 14,
+            "de_n": 40,
+            "freq_pct": 35.0,
+            "lift_pp": -2.5,
+            "acima_da_margem": false,
+            "tema": "Excesso de hype e expectativas frustradas",
+            "exemplo_parafraseado": "Diversas pessoas relatam que a obra não corresponde à aclamação que recebeu, sentindo-se decepcionadas após tantos elogios e considerando o resultado superestimado.",
+            "temas_no_mesmo_eixo": []
+          },
+          "medianas": {
+            "mencoes": 15,
+            "de_n": 40,
+            "freq_pct": 37.5,
+            "lift_pp": 2.5,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "positivas": {
+            "mencoes": 7,
+            "de_n": 40,
+            "freq_pct": 17.5,
+            "lift_pp": -20.0,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          }
+        },
+        "bullet_de": {
+          "negativas": null,
+          "medianas": null,
+          "positivas": null
+        }
+      },
+      {
+        "eixo": "critica_social",
+        "por_bucket": {
+          "negativas": {
+            "mencoes": 14,
+            "de_n": 40,
+            "freq_pct": 35.0,
+            "lift_pp": 5.0,
+            "acima_da_margem": false,
+            "tema": "Romantização do abuso e da toxicidade",
+            "exemplo_parafraseado": "Várias reviews criticam a forma como o filme retrata a relação entre professor e aluno como uma apologia à violência psicológica e física, normalizando o sadismo e a humilhação em nome da excelência artística.",
+            "temas_no_mesmo_eixo": [
+              "Mensagem problemática e superficial"
+            ]
+          },
+          "medianas": {
+            "mencoes": 12,
+            "de_n": 40,
+            "freq_pct": 30.0,
+            "lift_pp": -5.0,
+            "acima_da_margem": false,
+            "tema": "Mensagem e Moral",
+            "exemplo_parafraseado": "A mensagem sobre a busca pela excelência a qualquer custo é vista como problemática, glorificando o abuso e deixando uma impressão negativa.",
+            "temas_no_mesmo_eixo": []
+          },
+          "positivas": {
+            "mencoes": 5,
+            "de_n": 40,
+            "freq_pct": 12.5,
+            "lift_pp": -22.5,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          }
+        },
+        "bullet_de": {
+          "negativas": null,
+          "medianas": null,
+          "positivas": null
+        }
+      }
+    ],
+    "contraste": "valorativo",
+    "rotulagem": {
+      "n_chamadas": 3,
+      "falharam": [],
+      "fora_da_taxonomia": {},
+      "houve_retentativa": []
+    },
+    "spec_version": "1.9.50",
+    "verificador": {
+      "aplicado": true,
+      "variante": "V2_alvo",
+      "passada": 1,
+      "eixo": "impacto_emocional",
+      "n_removidas_no_corpus": 2781
+    }
+  },
+  "narrativa": "Lançado em 2014 sob a direção de Damien Chazelle, Whiplash: Em Busca da Perfeição é um drama e thriller musical que acompanha Andrew em seu objetivo de ser o melhor baterista de sua geração. O jovem chama a atenção do impiedoso mestre do jazz Terence Fletcher, que ultrapassa os limites e transforma essa dedicação em uma obsessão que coloca em risco sua saúde física e mental.\n\nA experiência cinematográfica é pautada por uma atmosfera de tensão contínua e por um ritmo de intensidade constante. A ambientação e a estrutura dramática estabelecem um tom de rigor e atrito permanente no espaço dos ensaios musicais.\n\nOs três grupos concordam sobre o que o filme é e discordam sobre se ele funciona, convergindo nos temas e divergindo no veredito. Na grande maioria das notas (~93%), uma parcela expressiva ressalta as atuações marcantes, enquanto boa parte enfatiza a representação da obsessão e da busca pela perfeição. Nesse mesmo grupo, vários destacam a tensão e a intensidade que permeiam a narrativa.\n\nPara quem está nessa faixa, numa fração mínima das notas (~6%), muitos reconhecem o impacto das atuações e um número considerável observa o ritmo e a tensão, ainda que uma fatia menor teça ressalvas quanto ao personagem do instrutor e seus métodos de ensino.\n\nJá sob a leitura presente numa fração ainda menor das notas (~1%), a maior parte reprova a romantização do abuso e da toxicidade, boa parte se incomoda com personagens desagradáveis e sem profundidade, e vários apontam um ritmo arrastado que resulta em uma experiência angustiante.",
+  "verificacao_narrativa": {
+    "quantificador_fora_de_faixa": [],
+    "quantificador_repetido": [],
+    "paragrafos": {
+      "n_paragrafos": 5,
+      "minimo": 3,
+      "insuficientes": false,
+      "longos": []
+    },
+    "n_paragrafos": 5,
+    "paragrafos_insuficientes": false,
+    "paragrafos_longos": [],
+    "grupos_sem_paragrafo_proprio": [],
+    "movimento1_e_movimento2_no_mesmo_paragrafo": false,
+    "formato_invalido": false,
+    "numeros_inventados": [],
+    "rotulos_faltando": [],
+    "ordem_incorreta": false,
+    "vocabulario_peso": false,
+    "resenha_speak": [],
+    "n_resenha_speak": 0,
+    "n_flags": 0
+  },
+  "narrativa_selecao": {
+    "provider": "gemini",
+    "modelo": "gemini-3.7-flash",
+    "n_candidatos": 3,
+    "n_chamadas": 3,
+    "indice_escolhido": 0,
+    "motivo": "melhor_entre_limpos",
+    "criterio_decisivo": "empate",
+    "candidatos": [
+      {
+        "indice": 0,
+        "n_flags": 0,
+        "cliches": 0,
+        "repeticao_max": 2,
+        "ritmo": 11,
+        "cobertura": 1.0,
+        "eliminado": false
+      },
+      {
+        "indice": 1,
+        "n_flags": 1,
+        "cliches": 0,
+        "repeticao_max": 2,
+        "ritmo": 11,
+        "cobertura": 1.0,
+        "eliminado": true
+      },
+      {
+        "indice": 2,
+        "n_flags": 0,
+        "cliches": 0,
+        "repeticao_max": 2,
+        "ritmo": 11,
+        "cobertura": 1.0,
+        "eliminado": false
+      }
+    ],
+    "retry": null,
+    "uso": {
+      "prompt_tokens": 9951,
+      "completion_tokens": 1127,
+      "cache_hit_tokens": 0,
+      "cache_miss_tokens": 9951
+    },
+    "latencia_s": 36.69
+  },
+  "condicoes": {
+    "vale_a_pena": [
+      {
+        "texto": "valoriza a força e a naturalidade de J.K. Simmons e Miles Teller",
+        "tema_origem": "POS-A",
+        "bucket_origem": "positivas",
+        "tema_texto": "Atuações marcantes",
+        "rotulo_forca": "muitos",
+        "origem": "leitura_humana",
+        "avisos": [
+          "sem_discriminacao"
+        ]
+      },
+      {
+        "texto": "se interessa pelo retrato da obsessão e pelas consequências da busca por perfeição",
+        "tema_origem": "POS-B",
+        "bucket_origem": "positivas",
+        "tema_texto": "Obsessão e busca pela perfeição",
+        "rotulo_forca": "muitos"
+      },
+      {
+        "texto": "procura uma narrativa guiada por tensão constante e intensidade do início ao fim",
+        "tema_origem": "POS-C",
+        "bucket_origem": "positivas",
+        "tema_texto": "Tensão e intensidade",
+        "rotulo_forca": "muitos"
+      },
+      {
+        "texto": "quer conhecer os bastidores e os desafios exigentes do meio do jazz",
+        "tema_origem": "POS-D",
+        "bucket_origem": "positivas",
+        "tema_texto": "Representação do mundo da música",
+        "rotulo_forca": "alguns"
+      }
+    ],
+    "talvez_evite": [
+      {
+        "texto": "se incomoda com tramas que retratam humilhação e violência psicológica como algo justificável",
+        "tema_origem": "NEG-A",
+        "bucket_origem": "negativas",
+        "tema_texto": "Romantização do abuso e da toxicidade",
+        "rotulo_forca": "a maioria"
+      },
+      {
+        "texto": "rejeita histórias com protagonistas egoístas e figuras irritantes que dificultam a empatia",
+        "tema_origem": "NEG-B",
+        "bucket_origem": "negativas",
+        "tema_texto": "Personagens desagradáveis e sem profundidade",
+        "rotulo_forca": "muitos"
+      },
+      {
+        "texto": "se entedia com uma dinâmica monótona e repetitiva centrada em ensaios e sofrimento",
+        "tema_origem": "NEG-C",
+        "bucket_origem": "negativas",
+        "tema_texto": "Ritmo arrastado e experiência angustiante",
+        "rotulo_forca": "muitos"
+      }
+    ],
+    "ordem_colunas": [
+      "vale_a_pena",
+      "talvez_evite"
+    ],
+    "peso": {
+      "vale_a_pena": {
+        "peso_pct": 93,
+        "peso_texto": "~93% das notas",
+        "nota_de_amostra": null
+      },
+      "talvez_evite": {
+        "peso_pct": 1,
+        "peso_texto": "~1% das notas",
+        "nota_de_amostra": null
+      }
+    },
+    "peso_meio": null,
+    "origem": "llm",
+    "temas_pedidos": {
+      "vale_a_pena": [
+        "POS-A",
+        "POS-B",
+        "POS-C",
+        "POS-D"
+      ],
+      "talvez_evite": [
+        "NEG-A",
+        "NEG-B",
+        "NEG-C",
+        "NEG-F"
+      ]
+    },
+    "temas_saltados": {
+      "vale_a_pena": [],
+      "talvez_evite": []
+    },
+    "descartadas": [],
+    "retry": null,
+    "provider": "gemini",
+    "modelo": "gemini-3.7-flash",
+    "n_candidatos": 3,
+    "n_chamadas": 3,
+    "indice_escolhido": 0,
+    "candidatos": [
+      {
+        "indice": 0,
+        "n_condicoes": 8,
+        "n_flags": 0,
+        "flags": [],
+        "n_temas_cobertos": 8
+      },
+      {
+        "indice": 1,
+        "n_condicoes": 8,
+        "n_flags": 1,
+        "flags": [
+          "tema_verbatim"
+        ],
+        "n_temas_cobertos": 8
+      },
+      {
+        "indice": 2,
+        "n_condicoes": 8,
+        "n_flags": 1,
+        "flags": [
+          "tema_verbatim"
+        ],
+        "n_temas_cobertos": 8
+      }
+    ],
+    "uso": {
+      "prompt_tokens": 8049,
+      "completion_tokens": 1134,
+      "cache_hit_tokens": 0,
+      "cache_miss_tokens": 8049
+    },
+    "latencia_s": 17.36,
+    "spec_version": "1.9.50"
+  }
+}

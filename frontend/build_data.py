@@ -231,6 +231,19 @@ def _filme_degradado():
     }
 
 
+def sem_motivo_de_recusa(data: dict) -> dict:
+    """Tira o `motivo` de cada `condicoes.sem_condicao_publicavel`.
+
+    O motivo de uma recusa é material de REVISÃO (por que o tema não virou
+    condição) e **nunca vai para a página** — decisão do dono ao aprovar o
+    estado "sem condição publicável". O resto da entrada (tema, lado, regra,
+    origem) fica: é proveniência, não texto ao leitor. Muta e devolve `data`.
+    """
+    for r in (data.get("condicoes") or {}).get("sem_condicao_publicavel") or []:
+        r.pop("motivo", None)
+    return data
+
+
 def main():
     filmes = {}
     catalogo_presente = []
@@ -243,6 +256,7 @@ def main():
         data = json.loads(caminho.read_text(encoding="utf-8"))
         # aliviar o peso: origem_paginas não é usado no frontend
         data.pop("origem_paginas", None)
+        sem_motivo_de_recusa(data)
         filmes[slug] = data
         # cópia crua (referência/deploy), sem origem_paginas
         (FRONTEND / "data" / f"{slug}.json").write_text(

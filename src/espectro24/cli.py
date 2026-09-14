@@ -27,6 +27,7 @@ from .ficha import (
     resolver_identidade,
 )
 from .collector import collect_distribuicao
+from .eixos import AmostraNaoClassificada
 from .pipeline import (
     ids_analisados,
     ids_analisados_do_bruto,
@@ -336,8 +337,15 @@ def main(argv=None):
                       else ids_analisados_do_bruto(
                           slug, coleta=output.get("coleta"),
                           raiz=args.dados_dir, cota_por_bucket=args.cota))
-        bloco = montar_eixos(slug, output, analisadas, provider=args.provider,
-                             model=args.model)
+        try:
+            bloco = montar_eixos(slug, output, analisadas,
+                                 provider=args.provider, model=args.model)
+        except AmostraNaoClassificada as e:
+            # NÃO aditivo: sem esta saída, o filme publicaria com um `n`
+            # menor e nenhum aviso (C14.8, `get-out-2017`). Nada é gravado.
+            print(f"\n⛔ AMOSTRA NÃO CLASSIFICADA — nada publicado: {e}",
+                  file=sys.stderr)
+            sys.exit(6)
         if bloco is None:
             output.pop("eixos", None)
             print("ℹ️  Sem bloco de eixos: este slug não tem classificação sob "
@@ -345,7 +353,14 @@ def main(argv=None):
         else:
             output["eixos"] = bloco
             rot = bloco["rotulagem"]
-            print(f"  eixos: contraste={bloco['contraste']} · "
+            # `contraste` fica AUSENTE (não `None`) quando `n < MARGEM_N_MINIMO`
+            # — estado LEGÍTIMO da lei de margem (§2.5, `eixos.contraste`),
+            # não erro. `.get()` em vez de `[...]`: indexação direta quebrava
+            # o CLI inteiro num filme cujo menor bucket cai abaixo do piso
+            # (achado real: `woman-of-fire`, negativas n=9, piloto de
+            # expansão 2026-09). O rótulo é explícito para não confundir
+            # "não medido" com um terceiro estado de contraste.
+            print(f"  eixos: contraste={bloco.get('contraste', 'sem_estado (n<10)')} · "
                   f"{len(bloco['linhas'])} linhas · rotulagem em "
                   f"{rot['n_chamadas']} chamada(s)"
                   + (f" · FALHOU em {', '.join(rot['falharam'])}"

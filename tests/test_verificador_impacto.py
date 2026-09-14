@@ -189,6 +189,30 @@ def test_projecao_usa_a_margem_exata_e_nao_float(vi):
     assert vi._atinge(Fraction(1, 5), 60) and not vi._atinge(Fraction(1, 5), 40)
 
 
+# [piloto de expansão, 2026-09] Os 35 filmes que `_cobertura_exata` media
+# quando este teste foi escrito — CONGELADOS por NOME, não mais por
+# contagem. `corpus` (via `_corpus_consenso`) passou a crescer com a
+# expansão; um número de filmes fixo (`== 35`) quebra a cada filme novo
+# classificado, mas o que o teste PROVA — como `_cobertura_exata` se
+# comporta sobre ESTE corpus específico, com SUA lacuna documentada de
+# não aplicar `_filtrar_pela_analisada` — não depende do tamanho do
+# catálogo hoje. Filtrar pela lista nomeada preserva exatamente a mesma
+# prova, robusta ao catálogo crescer; ampliar o ESCOPO do teste para o
+# catálogo novo é uma decisão separada (fora daqui, ver ABERTO.md D1).
+_SLUGS_35_ORIGINAIS = frozenset({
+    "aftersun", "anatomy-of-a-fall", "avengers-endgame", "barbie",
+    "bones-and-all", "cats-2019", "cidade-de-deus", "cure", "dune-2021",
+    "dune-part-two", "eighth-grade", "everything-everywhere-all-at-once",
+    "friday-the-13th-2009", "hereditary", "im-still-here-2024",
+    "interstellar", "joker-folie-a-deux", "longlegs", "mother-2017",
+    "napoleon-2023", "obsession-2025", "oppenheimer-2023", "parasite-2019",
+    "pearl-2022", "perfect-days-2023", "shutter-island",
+    "spider-man-across-the-spider-verse", "talk-to-me-2022", "the-godfather",
+    "the-hateful-eight", "the-invite-2026", "the-northman", "the-substance",
+    "wicked-2024", "wonka",
+})
+
+
 def test_base_da_projecao_reproduz_10_de_35(vi, corpus):
     """Era 18/35 sob a cobertura parcial de 2.866/4.056 que vigorava desde a
     v1.9.15. **NÃO é o número de produção** (esse é 16/35, ver
@@ -223,10 +247,16 @@ def test_base_da_projecao_reproduz_10_de_35(vi, corpus):
 
     [v1.9.50] Passa de 11 para **12**: o corpus curto de `obsession-2026`
     sai, e o longa `obsession-2025` entra como `tematico` com buckets cheios.
+
+    [piloto de expansão, 2026-09] `corpus` filtrado aos 35 originais
+    (`_SLUGS_35_ORIGINAIS`), não mais `35` como contagem cega — ver o
+    comentário acima da lista. Nenhum número mudou; só deixou de ser
+    invalidado por filme novo classificado.
     """
-    base = vi._cobertura_exata(corpus)
+    corpus_35 = [r for r in corpus if r["slug"] in _SLUGS_35_ORIGINAIS]
+    base = vi._cobertura_exata(corpus_35)
+    assert base["n_filmes"] == len(_SLUGS_35_ORIGINAIS)
     assert base["n_filmes_com_algum"] == 12
-    assert base["n_filmes"] == 35
     assert base["contraste"]["obsession-2025"] == "tematico"
 
 

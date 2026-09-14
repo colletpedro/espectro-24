@@ -3026,6 +3026,14 @@ O contrato do briefing, as validações e o schema do bloco publicado continuam
 >   nenhum (§1, intocado);
 > - **zero algarismo escrito pelo modelo** — todo número do bloco é
 >   concatenado pelo CÓDIGO, fora da saída dele;
+>   *[piloto de expansão, 2026-09-13 — decisão do dono] o BRIEFING, que também
+>   era zero algarismo, passa a admitir UMA forma: ano de quatro algarismos
+>   (1880–2039) no NOME de um tema, depois de `de`/`em`, fechando o tema ou
+>   seguido de pontuação, fora de locução de quantidade ("Comparação com o
+>   clássico de 1940", `pinocchio-2022` NEG-F). Decidido por FORMA, nunca por
+>   intenção; paráfrase e texto do sistema continuam sem exceção, e a saída
+>   do modelo também (validador `digito`). Critério exato e o resíduo que a
+>   forma não separa: `condicoes.algarismos_proibidos_no_briefing`;*
 > - **quantidade é do código.** O modelo é proibido de escrever "a maioria",
 >   "alguns", "poucos"; o rótulo vem de `quantificador.fracao_e_rotulo` e é
 >   exibido ao lado da frase;

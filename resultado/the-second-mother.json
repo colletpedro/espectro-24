@@ -1,0 +1,1595 @@
+{
+  "slug": "the-second-mother",
+  "data_coleta": "2026-09-13T05:25:00.305073+00:00",
+  "spec_version": "1.9.50",
+  "total_reviews_observadas": 540,
+  "reviews_url": "https://letterboxd.com/film/the-second-mother/reviews/",
+  "ficha": {
+    "titulo": "Que Horas Ela Volta?",
+    "sinopse_oficial": "A pernambucana Val (Regina Casé) se mudou para São Paulo a fim de dar melhores condições de vida para sua filha Jéssica. Com muito receio, ela deixou a menina no interior de Pernambuco para ser babá de Fabinho, morando integralmente na casa de seus patrões. Treze anos depois, quando o menino (Michel Joelsas) vai prestar vestibular, Jéssica (Camila Márdila) lhe telefona, pedindo ajuda para ir à São Paulo, no intuito de prestar a mesma prova. Os chefes de Val recebem a menina de braços abertos, só que quando ela deixa de seguir certo protocolo, circulando livremente, como não deveria, a situação se complica.",
+    "sinopse_fallback_en": false,
+    "generos": [
+      "Drama"
+    ],
+    "duracao_min": 112,
+    "diretor": "Anna Muylaert",
+    "diretor_transliterado": false,
+    "ano": 2015,
+    "fonte": "tmdb",
+    "tmdb_id": 310569,
+    "tmdb_fetched_at": "2026-09-10T20:04:35+00:00",
+    "poster_path": "/d5aIZjwdG87YradTjmtmyZtR1dy.jpg",
+    "poster_largura": 1000,
+    "poster_altura": 1500,
+    "backdrop_paths": [
+      "/9h5BsxRmxLAvASADo2VcTlTUdb0.jpg",
+      "/jaJuyCoIV3mtJHAaLW0iB9AUtHm.jpg",
+      "/oirihXGa5nm08QssHHH4qi59Dm6.jpg",
+      "/nE4FiaqpI4zdOUKape6msoEM5Dx.jpg",
+      "/ujWNICv7rKHnq7zDKiyhsPAMTJL.jpg",
+      "/47zznnFceNHsQCyVPMCsKEONJjc.jpg",
+      "/83GRZSqB4CXjdL0pzfevo1hv73O.jpg",
+      "/tEsnTLjIOj8KEiiL6Cr5nzu5aq1.jpg",
+      "/qcJx3vYX9eLu1KBLE2lotqjwwZP.jpg",
+      "/f8XlmD7OCC09hmY9pdV1KEySgog.jpg"
+    ],
+    "backdrop_path": "/9h5BsxRmxLAvASADo2VcTlTUdb0.jpg",
+    "backdrop_largura": 3840,
+    "backdrop_altura": 2160,
+    "poster_sem_texto_path": null,
+    "poster_sem_texto_largura": null,
+    "poster_sem_texto_altura": null,
+    "galeria_stills": [
+      {
+        "still_path": "/9h5BsxRmxLAvASADo2VcTlTUdb0.jpg",
+        "still_largura": 3840,
+        "still_altura": 2160
+      },
+      {
+        "still_path": "/nE4FiaqpI4zdOUKape6msoEM5Dx.jpg",
+        "still_largura": 1890,
+        "still_altura": 1063
+      },
+      {
+        "still_path": "/ujWNICv7rKHnq7zDKiyhsPAMTJL.jpg",
+        "still_largura": 1890,
+        "still_altura": 1063
+      },
+      {
+        "still_path": "/47zznnFceNHsQCyVPMCsKEONJjc.jpg",
+        "still_largura": 1890,
+        "still_altura": 1063
+      },
+      {
+        "still_path": "/83GRZSqB4CXjdL0pzfevo1hv73O.jpg",
+        "still_largura": 1280,
+        "still_altura": 720
+      },
+      {
+        "still_path": "/f8XlmD7OCC09hmY9pdV1KEySgog.jpg",
+        "still_largura": 1920,
+        "still_altura": 1080
+      },
+      {
+        "still_path": "/qcJx3vYX9eLu1KBLE2lotqjwwZP.jpg",
+        "still_largura": 1890,
+        "still_altura": 1063
+      },
+      {
+        "still_path": "/tEsnTLjIOj8KEiiL6Cr5nzu5aq1.jpg",
+        "still_largura": 1890,
+        "still_altura": 1063
+      },
+      {
+        "still_path": "/irCDusNNtQiBU9cMjY7c82btR9Z.jpg",
+        "still_largura": 1430,
+        "still_altura": 804
+      }
+    ],
+    "ano_fonte": "letterboxd",
+    "identidade": {
+      "versao": 1,
+      "status": "validada",
+      "slug": "the-second-mother",
+      "titulo_letterboxd": "The Second Mother",
+      "ano_letterboxd": 2015,
+      "tmdb_id_letterboxd": 310569,
+      "tmdb_id_escolhido": 310569,
+      "fonte_id": "letterboxd",
+      "titulo_tmdb_campo": "title",
+      "titulo_tmdb_correspondente": "The Second Mother",
+      "ano_tmdb": 2015,
+      "ano_divergente": false
+    }
+  },
+  "distribuicao": {
+    "n_notas_total": 149576,
+    "por_nivel": {
+      "0.5": 156,
+      "1.0": 294,
+      "1.5": 246,
+      "2.0": 1075,
+      "2.5": 1498,
+      "3.0": 6692,
+      "3.5": 11858,
+      "4.0": 39223,
+      "4.5": 24936,
+      "5.0": 63598
+    },
+    "por_bucket": {
+      "negativas": 1,
+      "medianas": 5,
+      "positivas": 93
+    },
+    "fonte": "letterboxd_histograma"
+  },
+  "coleta": {
+    "slug": "the-second-mother",
+    "coletado_em": "2026-09-10T19:03:17.991593+00:00",
+    "versao_coletor": "1.9.6",
+    "ordenacao_usada": "by/added",
+    "histograma_bruto": {
+      "0.5": 156,
+      "1.0": 294,
+      "1.5": 246,
+      "2.0": 1075,
+      "2.5": 1498,
+      "3.0": 6692,
+      "3.5": 11858,
+      "4.0": 39223,
+      "4.5": 24936,
+      "5.0": 63598
+    },
+    "orcamento_paginas_por_nivel": {
+      "0.5": 1,
+      "1.0": 3,
+      "1.5": 2,
+      "2.0": 10,
+      "2.5": 6,
+      "3.0": 10,
+      "3.5": 1,
+      "4.0": 5,
+      "4.5": 3,
+      "5.0": 7
+    },
+    "paginas_gastas_por_nivel": {
+      "0.5": 1,
+      "1.0": 2,
+      "1.5": 2,
+      "2.0": 8,
+      "2.5": 6,
+      "3.0": 10,
+      "3.5": 1,
+      "4.0": 5,
+      "4.5": 3,
+      "5.0": 7
+    },
+    "paradas_por_limite": [
+      "0.5",
+      "1.0",
+      "1.5",
+      "2.0",
+      "2.5",
+      "3.0",
+      "3.5",
+      "4.0",
+      "4.5",
+      "5.0"
+    ],
+    "contagem_bruta_por_nivel": {
+      "0.5": 12,
+      "1.0": 24,
+      "1.5": 24,
+      "2.0": 96,
+      "2.5": 72,
+      "3.0": 120,
+      "3.5": 12,
+      "4.0": 60,
+      "4.5": 36,
+      "5.0": 84
+    },
+    "contagem_estimada_valida_por_nivel": {
+      "0.5": 3,
+      "1.0": 8,
+      "1.5": 2,
+      "2.0": 26,
+      "2.5": 17,
+      "3.0": 33,
+      "3.5": 1,
+      "4.0": 15,
+      "4.5": 13,
+      "5.0": 22
+    },
+    "motivo_parada_por_nivel": {
+      "0.5": "orcamento_esgotado",
+      "1.0": "orcamento_esgotado",
+      "1.5": "orcamento_esgotado",
+      "2.0": "orcamento_esgotado",
+      "2.5": "orcamento_esgotado",
+      "3.0": "orcamento_esgotado",
+      "3.5": "orcamento_esgotado",
+      "4.0": "orcamento_esgotado",
+      "4.5": "orcamento_esgotado",
+      "5.0": "orcamento_esgotado"
+    },
+    "paginas_base_por_nivel": {
+      "0.5": 1,
+      "1.0": 2,
+      "1.5": 2,
+      "2.0": 8,
+      "2.5": 6,
+      "3.0": 10,
+      "3.5": 1,
+      "4.0": 5,
+      "4.5": 3,
+      "5.0": 7
+    },
+    "paginas_extensao_por_nivel": {
+      "0.5": 0,
+      "1.0": 0,
+      "1.5": 0,
+      "2.0": 0,
+      "2.5": 0,
+      "3.0": 0,
+      "3.5": 0,
+      "4.0": 0,
+      "4.5": 0,
+      "5.0": 0
+    },
+    "extensao_por_bucket": {
+      "negativas": {
+        "paginas_base": 13,
+        "paginas_extensao": 0,
+        "extras_por_nivel": {},
+        "motivo_parada": "meta_atingida",
+        "n_validas_pos_base": 50,
+        "n_validas_pos_extensao": 50,
+        "meta": 50
+      },
+      "medianas": {
+        "paginas_base": 16,
+        "paginas_extensao": 0,
+        "extras_por_nivel": {},
+        "motivo_parada": "meta_atingida",
+        "n_validas_pos_base": 50,
+        "n_validas_pos_extensao": 50,
+        "meta": 50
+      },
+      "positivas": {
+        "paginas_base": 16,
+        "paginas_extensao": 0,
+        "extras_por_nivel": {},
+        "motivo_parada": "meta_atingida",
+        "n_validas_pos_base": 51,
+        "n_validas_pos_extensao": 51,
+        "meta": 50
+      }
+    },
+    "profundidade_sondagem": {
+      "nivel_sondado": 5.0,
+      "profundidade": 256,
+      "exata": false,
+      "requisicoes": 4,
+      "motivo": "teto_plataforma"
+    },
+    "profundidade_estimada_por_nivel": {
+      "0.5": 1,
+      "1.0": 1,
+      "1.5": 1,
+      "2.0": 4,
+      "2.5": 6,
+      "3.0": 27,
+      "3.5": 48,
+      "4.0": 158,
+      "4.5": 100,
+      "5.0": 256
+    },
+    "janela_temporal": {
+      "total": {
+        "n": 564,
+        "min": "2016-04-11",
+        "max": "2026-09-10",
+        "p5": "2025-03-11",
+        "p50": "2026-07-08",
+        "p95": "2026-09-09"
+      },
+      "por_bucket": {
+        "negativas": {
+          "n": 180,
+          "min": "2016-04-11",
+          "max": "2026-09-08",
+          "p5": "2025-02-05",
+          "p50": "2026-02-01",
+          "p95": "2026-08-21"
+        },
+        "medianas": {
+          "n": 192,
+          "min": "2022-08-06",
+          "max": "2026-09-10",
+          "p5": "2026-02-14",
+          "p50": "2026-07-14",
+          "p95": "2026-09-04"
+        },
+        "positivas": {
+          "n": 192,
+          "min": "2023-11-13",
+          "max": "2026-09-10",
+          "p5": "2026-05-17",
+          "p50": "2026-09-06",
+          "p95": "2026-09-09"
+        }
+      }
+    },
+    "dias_por_100_paginas": {
+      "n_paginas": 14,
+      "pagina_min": 1,
+      "pagina_max": 128,
+      "dias": 109,
+      "dias_por_100_paginas": 85.8267716535433,
+      "paginas_para_1_ano": 425
+    },
+    "identidade_letterboxd": {
+      "slug": "the-second-mother",
+      "titulo": "The Second Mother",
+      "ano": 2015,
+      "tmdb_id_letterboxd": 310569,
+      "fonte": "pagina_letterboxd"
+    },
+    "ano_lancamento": 2015,
+    "ano_fonte": "letterboxd",
+    "n_reviews_bruto": 564
+  },
+  "origem_paginas": {
+    "_histograma/the-second-mother.html": "cache",
+    "the-second-mother/pages/by_added/rated_5_page_4.html": "cache",
+    "the-second-mother/pages/by_added/rated_5_page_16.html": "cache",
+    "the-second-mother/pages/by_added/rated_5_page_64.html": "cache",
+    "the-second-mother/pages/by_added/rated_5_page_256.html": "cache",
+    "the-second-mother/pages/by_added/rated_0_5_page_1.html": "cache",
+    "the-second-mother/pages/by_added/rated_1_page_1.html": "cache",
+    "the-second-mother/pages/by_added/rated_1_page_2.html": "cache",
+    "the-second-mother/fulltext/viewing_844502851.html": "cache",
+    "the-second-mother/pages/by_added/rated_1_5_page_1.html": "cache",
+    "the-second-mother/pages/by_added/rated_1_5_page_2.html": "cache",
+    "the-second-mother/pages/by_added/rated_2_page_1.html": "cache",
+    "the-second-mother/pages/by_added/rated_2_page_2.html": "cache",
+    "the-second-mother/pages/by_added/rated_2_page_3.html": "cache",
+    "the-second-mother/pages/by_added/rated_2_page_4.html": "cache",
+    "the-second-mother/pages/by_added/rated_2_page_5.html": "cache",
+    "the-second-mother/pages/by_added/rated_2_page_6.html": "cache",
+    "the-second-mother/pages/by_added/rated_2_page_7.html": "cache",
+    "the-second-mother/pages/by_added/rated_2_page_8.html": "cache",
+    "the-second-mother/fulltext/viewing_1353019593.html": "cache",
+    "the-second-mother/fulltext/viewing_1289646582.html": "cache",
+    "the-second-mother/fulltext/viewing_1184819829.html": "cache",
+    "the-second-mother/fulltext/viewing_1072436801.html": "cache",
+    "the-second-mother/fulltext/viewing_998724163.html": "cache",
+    "the-second-mother/fulltext/viewing_907598917.html": "cache",
+    "the-second-mother/fulltext/viewing_859727331.html": "cache",
+    "the-second-mother/pages/by_added/rated_2_5_page_1.html": "cache",
+    "the-second-mother/pages/by_added/rated_2_5_page_2.html": "cache",
+    "the-second-mother/pages/by_added/rated_2_5_page_3.html": "cache",
+    "the-second-mother/pages/by_added/rated_2_5_page_4.html": "cache",
+    "the-second-mother/pages/by_added/rated_2_5_page_5.html": "cache",
+    "the-second-mother/pages/by_added/rated_2_5_page_6.html": "cache",
+    "the-second-mother/fulltext/viewing_1471921130.html": "cache",
+    "the-second-mother/fulltext/viewing_1459832442.html": "cache",
+    "the-second-mother/fulltext/viewing_1438392929.html": "cache",
+    "the-second-mother/fulltext/viewing_1338751906.html": "cache",
+    "the-second-mother/fulltext/viewing_1299397552.html": "cache",
+    "the-second-mother/fulltext/viewing_1217868427.html": "cache",
+    "the-second-mother/pages/by_added/rated_3_page_1.html": "cache",
+    "the-second-mother/pages/by_added/rated_3_page_2.html": "cache",
+    "the-second-mother/pages/by_added/rated_3_page_3.html": "cache",
+    "the-second-mother/pages/by_added/rated_3_page_4.html": "cache",
+    "the-second-mother/pages/by_added/rated_3_page_5.html": "cache",
+    "the-second-mother/pages/by_added/rated_3_page_6.html": "cache",
+    "the-second-mother/pages/by_added/rated_3_page_7.html": "cache",
+    "the-second-mother/pages/by_added/rated_3_page_8.html": "cache",
+    "the-second-mother/pages/by_added/rated_3_page_9.html": "cache",
+    "the-second-mother/pages/by_added/rated_3_page_14.html": "cache",
+    "the-second-mother/fulltext/viewing_1433830169.html": "cache",
+    "the-second-mother/fulltext/viewing_1422790411.html": "cache",
+    "the-second-mother/fulltext/viewing_1420505558.html": "cache",
+    "the-second-mother/fulltext/viewing_1414620266.html": "cache",
+    "the-second-mother/fulltext/viewing_1404402097.html": "cache",
+    "the-second-mother/fulltext/viewing_1365797047.html": "cache",
+    "the-second-mother/fulltext/viewing_1363467017.html": "cache",
+    "the-second-mother/fulltext/viewing_1287814160.html": "cache",
+    "the-second-mother/pages/by_added/rated_3_5_page_1.html": "cache",
+    "the-second-mother/pages/by_added/rated_4_page_1.html": "cache",
+    "the-second-mother/pages/by_added/rated_4_page_2.html": "cache",
+    "the-second-mother/pages/by_added/rated_4_page_3.html": "cache",
+    "the-second-mother/pages/by_added/rated_4_page_4.html": "cache",
+    "the-second-mother/pages/by_added/rated_4_page_40.html": "cache",
+    "the-second-mother/fulltext/viewing_1488828048.html": "cache",
+    "the-second-mother/fulltext/viewing_1482619082.html": "cache",
+    "the-second-mother/fulltext/viewing_1371930223.html": "cache",
+    "the-second-mother/pages/by_added/rated_4_5_page_1.html": "cache",
+    "the-second-mother/pages/by_added/rated_4_5_page_2.html": "cache",
+    "the-second-mother/pages/by_added/rated_4_5_page_25.html": "cache",
+    "the-second-mother/fulltext/viewing_1488522986.html": "cache",
+    "the-second-mother/fulltext/viewing_1488111447.html": "cache",
+    "the-second-mother/fulltext/viewing_1487536539.html": "cache",
+    "the-second-mother/fulltext/viewing_1478981257.html": "cache",
+    "the-second-mother/fulltext/viewing_1385748262.html": "cache",
+    "the-second-mother/fulltext/viewing_1385142961.html": "cache",
+    "the-second-mother/fulltext/viewing_1383238191.html": "cache",
+    "the-second-mother/pages/by_added/rated_5_page_1.html": "cache",
+    "the-second-mother/pages/by_added/rated_5_page_2.html": "cache",
+    "the-second-mother/pages/by_added/rated_5_page_3.html": "cache",
+    "the-second-mother/pages/by_added/rated_5_page_5.html": "cache",
+    "the-second-mother/pages/by_added/rated_5_page_128.html": "cache",
+    "the-second-mother/fulltext/viewing_1488843772.html": "cache",
+    "the-second-mother/fulltext/viewing_1488224523.html": "cache",
+    "the-second-mother/fulltext/viewing_1486783189.html": "cache",
+    "the-second-mother/fulltext/viewing_1486317756.html": "cache",
+    "the-second-mother/fulltext/viewing_1486234456.html": "cache",
+    "the-second-mother/fulltext/viewing_1318698136.html": "cache",
+    "the-second-mother/film_page.html": "cache"
+  },
+  "buckets": [
+    {
+      "bucket": "negativas",
+      "alvo": 40,
+      "modo": "completo",
+      "estado_piso": "completa",
+      "n_validas": 40,
+      "share_real": 1,
+      "composicao_alvo": {
+        "0.5": 3,
+        "1.0": 7,
+        "1.5": 6,
+        "2.0": 24
+      },
+      "composicao_atingida": {
+        "0.5": 3,
+        "1.0": 7,
+        "1.5": 6,
+        "2.0": 24
+      },
+      "cascata_por_degrau": {
+        "150": 40
+      },
+      "deficit_redistribuido": 0,
+      "distribuicao_pagina_origem": {
+        "n": 40,
+        "min": 1,
+        "max": 9,
+        "p5": 1,
+        "p50": 3,
+        "p95": 9,
+        "fracao_profunda": 0.225
+      },
+      "janela_amostra": {
+        "n": 40,
+        "min": "2018-06-06",
+        "max": "2026-09-08",
+        "p5": "2023-07-15",
+        "p50": "2025-12-29",
+        "p95": "2026-08-29"
+      },
+      "niveis": [
+        {
+          "nivel": 0.5,
+          "n_validas": 3,
+          "n_alvo": 3,
+          "n_brutas": 12,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 0,
+          "n_descartadas_curtas": 9,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 0,
+          "motivos_descarte": {
+            "truncada_sem_texto": 0,
+            "spoiler": 0,
+            "abaixo_min_chars": 9,
+            "excedente_cota": 0,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 1
+        },
+        {
+          "nivel": 1.0,
+          "n_validas": 7,
+          "n_alvo": 7,
+          "n_brutas": 24,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 0,
+          "n_descartadas_curtas": 15,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 1,
+          "motivos_descarte": {
+            "truncada_sem_texto": 1,
+            "spoiler": 0,
+            "abaixo_min_chars": 15,
+            "excedente_cota": 1,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 2
+        },
+        {
+          "nivel": 1.5,
+          "n_validas": 6,
+          "n_alvo": 6,
+          "n_brutas": 36,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 0,
+          "n_descartadas_curtas": 28,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 0,
+          "motivos_descarte": {
+            "truncada_sem_texto": 0,
+            "spoiler": 0,
+            "abaixo_min_chars": 28,
+            "excedente_cota": 2,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 2
+        },
+        {
+          "nivel": 2.0,
+          "n_validas": 24,
+          "n_alvo": 24,
+          "n_brutas": 108,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 3,
+          "n_descartadas_curtas": 74,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 0,
+          "motivos_descarte": {
+            "truncada_sem_texto": 0,
+            "spoiler": 3,
+            "abaixo_min_chars": 74,
+            "excedente_cota": 7,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 8
+        }
+      ],
+      "temas": [
+        {
+          "tema": "Ritmo lento e arrastado",
+          "mencoes_aproximadas": 11,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "Várias pessoas descrevem o filme como excessivamente devagar e entediante, com cenas longas que diluem o conflito e tornam a experiência cansativa, fazendo alguns até cochilarem.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Roteiro fraco e desenvolvimento inconsistente",
+          "mencoes_aproximadas": 10,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "O texto é criticado por ser mal construído, sem nexo ou progressão clara, com situações jogadas sem desenvolvimento e uma sensação de que a história não vai a lugar nenhum.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Crítica social panfletária e simplista",
+          "mencoes_aproximadas": 9,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "Alguns espectadores consideram que a mensagem sobre desigualdade é importante, mas entregue de forma didática e maniqueísta, tratando questões complexas como preto no branco e subestimando a inteligência da plateia.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Personagens irritantes e estereotipados",
+          "mencoes_aproximadas": 8,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "A filha da protagonista é frequentemente descrita como insuportável e folgada, enquanto outros personagens soam como caricaturas e estereótipos, o que afasta o envolvimento com a história.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Atuação e representação nordestina criticadas",
+          "mencoes_aproximadas": 5,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "Há quem critique a atuação de Regina Casé, vista como novelesca ou pouco convincente no papel de mulher humilde, além do sotaque artificial e do uso de estereótipos nordestinos considerados forçados.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Falta de engajamento e emoção",
+          "mencoes_aproximadas": 4,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "Mesmo reconhecendo a relevância do tema, parte do público não conseguiu se conectar emocionalmente com o filme, achando-o pouco emocionante e sem o impacto esperado.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        }
+      ],
+      "observacao_geral": "As reviews negativas deste grupo concentram-se em problemas de ritmo, roteiro e desenvolvimento, além de considerarem a crítica social simplista e os personagens pouco críveis. Ainda que várias reconheçam a importância do tema, este grupo destaca que a execução não sustenta a mensagem proposta.",
+      "idioma_invalido": false,
+      "escopo_suspeito": false
+    },
+    {
+      "bucket": "medianas",
+      "alvo": 40,
+      "modo": "completo",
+      "estado_piso": "completa",
+      "n_validas": 40,
+      "share_real": 5,
+      "composicao_alvo": {
+        "2.5": 7,
+        "3.0": 33
+      },
+      "composicao_atingida": {
+        "2.5": 7,
+        "3.0": 33
+      },
+      "cascata_por_degrau": {
+        "150": 40
+      },
+      "deficit_redistribuido": 0,
+      "distribuicao_pagina_origem": {
+        "n": 40,
+        "min": 1,
+        "max": 14,
+        "p5": 1,
+        "p50": 5,
+        "p95": 9,
+        "fracao_profunda": 0.25
+      },
+      "janela_amostra": {
+        "n": 40,
+        "min": "2024-07-18",
+        "max": "2026-09-04",
+        "p5": "2026-03-19",
+        "p50": "2026-07-19",
+        "p95": "2026-08-28"
+      },
+      "niveis": [
+        {
+          "nivel": 2.5,
+          "n_validas": 7,
+          "n_alvo": 7,
+          "n_brutas": 72,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 3,
+          "n_descartadas_curtas": 51,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 1,
+          "motivos_descarte": {
+            "truncada_sem_texto": 1,
+            "spoiler": 3,
+            "abaixo_min_chars": 51,
+            "excedente_cota": 10,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 6
+        },
+        {
+          "nivel": 3.0,
+          "n_validas": 33,
+          "n_alvo": 33,
+          "n_brutas": 120,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 5,
+          "n_descartadas_curtas": 80,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 2,
+          "motivos_descarte": {
+            "truncada_sem_texto": 2,
+            "spoiler": 5,
+            "abaixo_min_chars": 80,
+            "excedente_cota": 0,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 10
+        }
+      ],
+      "temas": [
+        {
+          "tema": "Crítica social e desigualdade de classe",
+          "mencoes_aproximadas": 25,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "As reviews medianas frequentemente elogiam a forma como o filme expõe as relações de poder e a hierarquia entre patrões e empregada, destacando a crítica à meritocracia e ao preconceito estrutural.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Atuação de Regina Casé e elenco",
+          "mencoes_aproximadas": 15,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "Muitas reviews medianas destacam a atuação de Regina Casé como o ponto alto, enquanto outras criticam a atuação de parte do elenco por falta de expressividade ou por soar forçada.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Roteiro e desenvolvimento da trama",
+          "mencoes_aproximadas": 14,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "Este grupo aponta problemas no roteiro, como subtramas desnecessárias, falta de profundidade em personagens secundários e um final que parece fraco ou pouco resolvido.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Ritmo lento e edição",
+          "mencoes_aproximadas": 10,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "As reviews medianas mencionam que o ritmo é arrastado e que algumas cenas são desconexas ou desnecessárias, tornando a experiência cansativa para parte do público.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Sotaque nordestino e estereótipos",
+          "mencoes_aproximadas": 8,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "Algumas reviews medianas criticam o sotaque nordestino forçado e a reprodução de estereótipos regionais, considerando que isso empobrece a representação.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Personagem Jéssica e sua condução",
+          "mencoes_aproximadas": 8,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "Parte das reviews medianas considera a personagem Jéssica mal conduzida, com atitudes que soam arrogantes ou ingratas, enquanto outras a veem como uma figura importante para tensionar a narrativa.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        }
+      ],
+      "observacao_geral": "As reviews medianas reconhecem a importância da crítica social e a força da atuação de Regina Casé, mas apontam ressalvas quanto ao ritmo lento, ao roteiro com subtramas questionáveis e a elementos como sotaque e desenvolvimento de personagens. Este grupo específico não representa a recepção geral do filme, refletindo apenas opiniões de quem atribuiu notas medianas.",
+      "idioma_invalido": false,
+      "escopo_suspeito": false
+    },
+    {
+      "bucket": "positivas",
+      "alvo": 40,
+      "modo": "completo",
+      "estado_piso": "completa",
+      "n_validas": 40,
+      "share_real": 93,
+      "composicao_alvo": {
+        "3.5": 4,
+        "4.0": 11,
+        "4.5": 7,
+        "5.0": 18
+      },
+      "composicao_atingida": {
+        "3.5": 1,
+        "4.0": 11,
+        "4.5": 9,
+        "5.0": 19
+      },
+      "cascata_por_degrau": {
+        "150": 40
+      },
+      "deficit_redistribuido": 3,
+      "distribuicao_pagina_origem": {
+        "n": 40,
+        "min": 1,
+        "max": 128,
+        "p5": 1,
+        "p50": 2,
+        "p95": 64,
+        "fracao_profunda": 0.2
+      },
+      "janela_amostra": {
+        "n": 40,
+        "min": "2023-11-13",
+        "max": "2026-09-10",
+        "p5": "2026-05-16",
+        "p50": "2026-09-07",
+        "p95": "2026-09-09"
+      },
+      "niveis": [
+        {
+          "nivel": 3.5,
+          "n_validas": 1,
+          "n_alvo": 4,
+          "n_brutas": 12,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 0,
+          "n_descartadas_curtas": 11,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 0,
+          "motivos_descarte": {
+            "truncada_sem_texto": 0,
+            "spoiler": 0,
+            "abaixo_min_chars": 11,
+            "excedente_cota": 0,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 1
+        },
+        {
+          "nivel": 4.0,
+          "n_validas": 11,
+          "n_alvo": 11,
+          "n_brutas": 60,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 0,
+          "n_descartadas_curtas": 45,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 0,
+          "motivos_descarte": {
+            "truncada_sem_texto": 0,
+            "spoiler": 0,
+            "abaixo_min_chars": 45,
+            "excedente_cota": 4,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 5
+        },
+        {
+          "nivel": 4.5,
+          "n_validas": 9,
+          "n_alvo": 7,
+          "n_brutas": 36,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 3,
+          "n_descartadas_curtas": 20,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 0,
+          "motivos_descarte": {
+            "truncada_sem_texto": 0,
+            "spoiler": 3,
+            "abaixo_min_chars": 20,
+            "excedente_cota": 4,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 3
+        },
+        {
+          "nivel": 5.0,
+          "n_validas": 19,
+          "n_alvo": 18,
+          "n_brutas": 84,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 3,
+          "n_descartadas_curtas": 58,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 1,
+          "motivos_descarte": {
+            "truncada_sem_texto": 1,
+            "spoiler": 3,
+            "abaixo_min_chars": 58,
+            "excedente_cota": 3,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 7
+        }
+      ],
+      "temas": [
+        {
+          "tema": "Desigualdade social e crítica de classe",
+          "mencoes_aproximadas": 28,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "As reviews deste grupo elogiam como o filme expõe a desigualdade brasileira e as barreiras invisíveis entre patrões e empregados, tratando o ambiente doméstico como um retrato das hierarquias sociais do país.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Classismo e falsa ideia de 'quase da família'",
+          "mencoes_aproximadas": 19,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "Várias reviews destacam como o discurso de que a empregada é praticamente da família funciona apenas enquanto ela mantém o lugar subalterno que lhe é reservado, revelando um paternalismo que mascara a exploração.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Atuação de Regina Casé e do elenco",
+          "mencoes_aproximadas": 17,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "Este grupo elogia de forma recorrente a atuação de Regina Casé, descrita como natural e capaz de dar humanidade à personagem, além de destacar a qualidade do restante do elenco.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Maternidade, ausência e vínculo entre mãe e filha",
+          "mencoes_aproximadas": 14,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "As reviews positivas apontam para o modo como o filme trata a maternidade atravessada pela distância e pela falta, mostrando os custos afetivos do trabalho doméstico e o reencontro entre mãe e filha como eixo do relato.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Mobilidade social e educação como ruptura",
+          "mencoes_aproximadas": 13,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "Este grupo comenta como a educação e o acesso à universidade pública aparecem como ameaça à ordem estabelecida, e como a chegada da filha rompe o ciclo de submissão que a mãe havia internalizado.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Crítica social e atualidade do retrato brasileiro",
+          "mencoes_aproximadas": 12,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "As reviews destacam a força do filme como retrato atemporal e necessário da realidade brasileira, elogiando sua capacidade de unir crítica social e representação do cotidiano.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        }
+      ],
+      "observacao_geral": "Este grupo de reviews positivas descreve o filme como uma obra potente e necessária, cuja força está em expor a desigualdade social brasileira e as hierarquias domésticas de forma realista e sutil. As reviews elogiam especialmente as atuações e a construção de camadas sociais no cotidiano, tratando o filme como um retrato marcante e desconfortável da sociedade.",
+      "idioma_invalido": false,
+      "escopo_suspeito": false
+    }
+  ],
+  "eixos": {
+    "taxonomia_id": "ebab2667de74",
+    "margem": {
+      "lei": "lift^2 * n >= 2085136/1000000",
+      "constante_quadrada": [
+        2085136,
+        1000000
+      ],
+      "n": 40,
+      "limiar_pp": 22.83
+    },
+    "margem_lift_pp": 22.83,
+    "linhas": [
+      {
+        "eixo": "ritmo",
+        "por_bucket": {
+          "negativas": {
+            "mencoes": 6,
+            "de_n": 40,
+            "freq_pct": 15.0,
+            "lift_pp": 7.5,
+            "acima_da_margem": false,
+            "tema": "Ritmo lento e arrastado",
+            "exemplo_parafraseado": "Várias pessoas descrevem o filme como excessivamente devagar e entediante, com cenas longas que diluem o conflito e tornam a experiência cansativa, fazendo alguns até cochilarem.",
+            "temas_no_mesmo_eixo": []
+          },
+          "medianas": {
+            "mencoes": 3,
+            "de_n": 40,
+            "freq_pct": 7.5,
+            "lift_pp": -7.5,
+            "acima_da_margem": false,
+            "tema": "Ritmo lento e edição",
+            "exemplo_parafraseado": "As reviews medianas mencionam que o ritmo é arrastado e que algumas cenas são desconexas ou desnecessárias, tornando a experiência cansativa para parte do público.",
+            "temas_no_mesmo_eixo": []
+          },
+          "positivas": {
+            "mencoes": 0,
+            "de_n": 40,
+            "freq_pct": 0.0,
+            "lift_pp": -15.0,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          }
+        },
+        "bullet_de": {
+          "negativas": null,
+          "medianas": null,
+          "positivas": null
+        }
+      },
+      {
+        "eixo": "atuacao",
+        "por_bucket": {
+          "negativas": {
+            "mencoes": 11,
+            "de_n": 40,
+            "freq_pct": 27.5,
+            "lift_pp": -2.5,
+            "acima_da_margem": false,
+            "tema": "Atuação e representação nordestina criticadas",
+            "exemplo_parafraseado": "Há quem critique a atuação de Regina Casé, vista como novelesca ou pouco convincente no papel de mulher humilde, além do sotaque artificial e do uso de estereótipos nordestinos considerados forçados.",
+            "temas_no_mesmo_eixo": []
+          },
+          "medianas": {
+            "mencoes": 12,
+            "de_n": 40,
+            "freq_pct": 30.0,
+            "lift_pp": 2.5,
+            "acima_da_margem": false,
+            "tema": "Atuação de Regina Casé e elenco",
+            "exemplo_parafraseado": "Muitas reviews medianas destacam a atuação de Regina Casé como o ponto alto, enquanto outras criticam a atuação de parte do elenco por falta de expressividade ou por soar forçada.",
+            "temas_no_mesmo_eixo": []
+          },
+          "positivas": {
+            "mencoes": 11,
+            "de_n": 40,
+            "freq_pct": 27.5,
+            "lift_pp": -2.5,
+            "acima_da_margem": false,
+            "tema": "Atuação de Regina Casé e do elenco",
+            "exemplo_parafraseado": "Este grupo elogia de forma recorrente a atuação de Regina Casé, descrita como natural e capaz de dar humanidade à personagem, além de destacar a qualidade do restante do elenco.",
+            "temas_no_mesmo_eixo": []
+          }
+        },
+        "bullet_de": {
+          "negativas": null,
+          "medianas": null,
+          "positivas": null
+        }
+      },
+      {
+        "eixo": "direcao_imagem",
+        "por_bucket": {
+          "negativas": {
+            "mencoes": 6,
+            "de_n": 40,
+            "freq_pct": 15.0,
+            "lift_pp": 0.0,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "medianas": {
+            "mencoes": 6,
+            "de_n": 40,
+            "freq_pct": 15.0,
+            "lift_pp": 0.0,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "positivas": {
+            "mencoes": 4,
+            "de_n": 40,
+            "freq_pct": 10.0,
+            "lift_pp": -5.0,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          }
+        },
+        "bullet_de": {
+          "negativas": null,
+          "medianas": null,
+          "positivas": null
+        }
+      },
+      {
+        "eixo": "roteiro_estrutura",
+        "por_bucket": {
+          "negativas": {
+            "mencoes": 29,
+            "de_n": 40,
+            "freq_pct": 72.5,
+            "lift_pp": -17.5,
+            "acima_da_margem": false,
+            "tema": "Roteiro fraco e desenvolvimento inconsistente",
+            "exemplo_parafraseado": "O texto é criticado por ser mal construído, sem nexo ou progressão clara, com situações jogadas sem desenvolvimento e uma sensação de que a história não vai a lugar nenhum.",
+            "temas_no_mesmo_eixo": [
+              "Personagens irritantes e estereotipados"
+            ]
+          },
+          "medianas": {
+            "mencoes": 36,
+            "de_n": 40,
+            "freq_pct": 90.0,
+            "lift_pp": 17.5,
+            "acima_da_margem": false,
+            "tema": "Roteiro e desenvolvimento da trama",
+            "exemplo_parafraseado": "Este grupo aponta problemas no roteiro, como subtramas desnecessárias, falta de profundidade em personagens secundários e um final que parece fraco ou pouco resolvido.",
+            "temas_no_mesmo_eixo": [
+              "Personagem Jéssica e sua condução"
+            ]
+          },
+          "positivas": {
+            "mencoes": 25,
+            "de_n": 40,
+            "freq_pct": 62.5,
+            "lift_pp": -27.5,
+            "acima_da_margem": false,
+            "tema": "Maternidade, ausência e vínculo entre mãe e filha",
+            "exemplo_parafraseado": "As reviews positivas apontam para o modo como o filme trata a maternidade atravessada pela distância e pela falta, mostrando os custos afetivos do trabalho doméstico e o reencontro entre mãe e filha como eixo do relato.",
+            "temas_no_mesmo_eixo": []
+          }
+        },
+        "bullet_de": {
+          "negativas": "frequencia",
+          "medianas": "frequencia",
+          "positivas": "frequencia"
+        }
+      },
+      {
+        "eixo": "som_trilha",
+        "por_bucket": {
+          "negativas": {
+            "mencoes": 1,
+            "de_n": 40,
+            "freq_pct": 2.5,
+            "lift_pp": -2.5,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "medianas": {
+            "mencoes": 2,
+            "de_n": 40,
+            "freq_pct": 5.0,
+            "lift_pp": 2.5,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "positivas": {
+            "mencoes": 0,
+            "de_n": 40,
+            "freq_pct": 0.0,
+            "lift_pp": -5.0,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          }
+        },
+        "bullet_de": {
+          "negativas": null,
+          "medianas": null,
+          "positivas": null
+        }
+      },
+      {
+        "eixo": "tom_atmosfera",
+        "por_bucket": {
+          "negativas": {
+            "mencoes": 3,
+            "de_n": 40,
+            "freq_pct": 7.5,
+            "lift_pp": -7.5,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "medianas": {
+            "mencoes": 4,
+            "de_n": 40,
+            "freq_pct": 10.0,
+            "lift_pp": -5.0,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "positivas": {
+            "mencoes": 6,
+            "de_n": 40,
+            "freq_pct": 15.0,
+            "lift_pp": 5.0,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          }
+        },
+        "bullet_de": {
+          "negativas": null,
+          "medianas": null,
+          "positivas": null
+        }
+      },
+      {
+        "eixo": "impacto_emocional",
+        "por_bucket": {
+          "negativas": {
+            "mencoes": 14,
+            "de_n": 40,
+            "freq_pct": 35.0,
+            "lift_pp": -15.0,
+            "acima_da_margem": false,
+            "tema": "Falta de engajamento e emoção",
+            "exemplo_parafraseado": "Mesmo reconhecendo a relevância do tema, parte do público não conseguiu se conectar emocionalmente com o filme, achando-o pouco emocionante e sem o impacto esperado.",
+            "temas_no_mesmo_eixo": []
+          },
+          "medianas": {
+            "mencoes": 18,
+            "de_n": 40,
+            "freq_pct": 45.0,
+            "lift_pp": -5.0,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "positivas": {
+            "mencoes": 20,
+            "de_n": 40,
+            "freq_pct": 50.0,
+            "lift_pp": 5.0,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          }
+        },
+        "bullet_de": {
+          "negativas": null,
+          "medianas": null,
+          "positivas": null
+        }
+      },
+      {
+        "eixo": "comparacoes",
+        "por_bucket": {
+          "negativas": {
+            "mencoes": 6,
+            "de_n": 40,
+            "freq_pct": 15.0,
+            "lift_pp": 7.5,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "medianas": {
+            "mencoes": 3,
+            "de_n": 40,
+            "freq_pct": 7.5,
+            "lift_pp": -7.5,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "positivas": {
+            "mencoes": 2,
+            "de_n": 40,
+            "freq_pct": 5.0,
+            "lift_pp": -10.0,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          }
+        },
+        "bullet_de": {
+          "negativas": null,
+          "medianas": null,
+          "positivas": null
+        }
+      },
+      {
+        "eixo": "expectativa",
+        "por_bucket": {
+          "negativas": {
+            "mencoes": 6,
+            "de_n": 40,
+            "freq_pct": 15.0,
+            "lift_pp": -5.0,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "medianas": {
+            "mencoes": 8,
+            "de_n": 40,
+            "freq_pct": 20.0,
+            "lift_pp": 5.0,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "positivas": {
+            "mencoes": 3,
+            "de_n": 40,
+            "freq_pct": 7.5,
+            "lift_pp": -12.5,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          }
+        },
+        "bullet_de": {
+          "negativas": null,
+          "medianas": null,
+          "positivas": null
+        }
+      },
+      {
+        "eixo": "critica_social",
+        "por_bucket": {
+          "negativas": {
+            "mencoes": 24,
+            "de_n": 40,
+            "freq_pct": 60.0,
+            "lift_pp": -15.0,
+            "acima_da_margem": false,
+            "tema": "Crítica social panfletária e simplista",
+            "exemplo_parafraseado": "Alguns espectadores consideram que a mensagem sobre desigualdade é importante, mas entregue de forma didática e maniqueísta, tratando questões complexas como preto no branco e subestimando a inteligência da plateia.",
+            "temas_no_mesmo_eixo": []
+          },
+          "medianas": {
+            "mencoes": 26,
+            "de_n": 40,
+            "freq_pct": 65.0,
+            "lift_pp": -10.0,
+            "acima_da_margem": false,
+            "tema": "Crítica social e desigualdade de classe",
+            "exemplo_parafraseado": "As reviews medianas frequentemente elogiam a forma como o filme expõe as relações de poder e a hierarquia entre patrões e empregada, destacando a crítica à meritocracia e ao preconceito estrutural.",
+            "temas_no_mesmo_eixo": [
+              "Sotaque nordestino e estereótipos"
+            ]
+          },
+          "positivas": {
+            "mencoes": 30,
+            "de_n": 40,
+            "freq_pct": 75.0,
+            "lift_pp": 10.0,
+            "acima_da_margem": false,
+            "tema": "Desigualdade social e crítica de classe",
+            "exemplo_parafraseado": "As reviews deste grupo elogiam como o filme expõe a desigualdade brasileira e as barreiras invisíveis entre patrões e empregados, tratando o ambiente doméstico como um retrato das hierarquias sociais do país.",
+            "temas_no_mesmo_eixo": [
+              "Classismo e falsa ideia de 'quase da família'",
+              "Mobilidade social e educação como ruptura",
+              "Crítica social e atualidade do retrato brasileiro"
+            ]
+          }
+        },
+        "bullet_de": {
+          "negativas": "frequencia",
+          "medianas": "frequencia",
+          "positivas": "frequencia"
+        }
+      }
+    ],
+    "contraste": "valorativo",
+    "rotulagem": {
+      "n_chamadas": 3,
+      "falharam": [],
+      "fora_da_taxonomia": {},
+      "houve_retentativa": []
+    },
+    "spec_version": "1.9.50",
+    "verificador": {
+      "aplicado": true,
+      "variante": "V2_alvo",
+      "passada": 1,
+      "eixo": "impacto_emocional",
+      "n_removidas_no_corpus": 2781
+    }
+  },
+  "narrativa": "Lançado em 2015 sob a direção de Anna Muylaert, o drama brasileiro Que Horas Ela Volta? acompanha a trajetória de Val, uma mulher pernambucana que reside no emprego como babá em São Paulo para sustentar a filha que ficou no Nordeste. Anos depois, a convivência na casa dos patrões entra em tensão quando a jovem viaja à capital para prestar o mesmo vestibular do filho da família e passa a circular no espaço sem seguir os protocolos tradicionais da residência.\n\nA narrativa adota uma cadência lenta e pausada, concentrando sua ambientação nas dinâmicas cotidianas e nas tensões espaciais do ambiente doméstico.\n\nAo avaliar a obra, os diferentes grupos concordam sobre os temas centrais do filme e discordam quanto ao seu veredito. Na grande maioria das notas (~93%), grande parte exalta a representação da desigualdade social e das barreiras de classe na convivência diária. Além disso, uma parcela expressiva enfatiza a exposição do paternalismo em torno da ideia de que a empregada seria quase da família, enquanto um número considerável destaca a qualidade da atuação de Regina Casé e do elenco.\n\nNuma fração mínima das notas (~5%), a perspectiva dos avaliadores torna-se mais comedida: a maioria reconhece a crítica social e as disparidades de classe, vários elogiam o desempenho do elenco e de Regina Casé, mas boa parte aponta ressalvas no roteiro e no desenvolvimento da trama. Por fim, numa fração ainda menor das notas (~1%), sob a ótica desse segmento, muitos apontam o ritmo lento e arrastado como um obstáculo, alguns criticam o texto por inconsistências no roteiro, e uma fatia menor classifica a crítica social como simplista e panfletária.",
+  "verificacao_narrativa": {
+    "quantificador_fora_de_faixa": [],
+    "quantificador_repetido": [],
+    "paragrafos": {
+      "n_paragrafos": 4,
+      "minimo": 3,
+      "insuficientes": false,
+      "longos": []
+    },
+    "n_paragrafos": 4,
+    "paragrafos_insuficientes": false,
+    "paragrafos_longos": [],
+    "grupos_sem_paragrafo_proprio": [
+      "negativas"
+    ],
+    "movimento1_e_movimento2_no_mesmo_paragrafo": true,
+    "formato_invalido": false,
+    "numeros_inventados": [],
+    "rotulos_faltando": [],
+    "ordem_incorreta": false,
+    "vocabulario_peso": false,
+    "resenha_speak": [],
+    "n_resenha_speak": 0,
+    "n_flags": 2
+  },
+  "narrativa_selecao": {
+    "provider": "gemini",
+    "modelo": "gemini-3.7-flash",
+    "n_candidatos": 3,
+    "n_chamadas": 4,
+    "indice_escolhido": 2,
+    "motivo": "menor_severidade",
+    "criterio_decisivo": "ritmo",
+    "candidatos": [
+      {
+        "indice": 0,
+        "n_flags": 2,
+        "cliches": 0,
+        "repeticao_max": 1,
+        "ritmo": 10,
+        "cobertura": 0.889,
+        "eliminado": true
+      },
+      {
+        "indice": 1,
+        "n_flags": 2,
+        "cliches": 0,
+        "repeticao_max": 1,
+        "ritmo": 5,
+        "cobertura": 1.0,
+        "eliminado": true
+      },
+      {
+        "indice": 2,
+        "n_flags": 2,
+        "cliches": 0,
+        "repeticao_max": 1,
+        "ritmo": 11,
+        "cobertura": 1.0,
+        "eliminado": true
+      }
+    ],
+    "retry": {
+      "n_frases_infratoras": 0,
+      "motivos": [],
+      "n_flags_depois": 2,
+      "aplicado": false
+    },
+    "uso": {
+      "prompt_tokens": 12278,
+      "completion_tokens": 1499,
+      "cache_hit_tokens": 0,
+      "cache_miss_tokens": 12278
+    },
+    "latencia_s": 33.84
+  },
+  "condicoes": {
+    "vale_a_pena": [
+      {
+        "texto": "se interessa pelas divisões de classe presentes nas relações dentro de casa",
+        "tema_origem": "POS-A",
+        "bucket_origem": "positivas",
+        "tema_texto": "Desigualdade social e crítica de classe",
+        "rotulo_forca": "a maioria",
+        "origem": "leitura_humana",
+        "avisos": [
+          "ancora_nao_verificavel",
+          "sem_discriminacao"
+        ]
+      },
+      {
+        "texto": "se interessa por críticas ao paternalismo que mascara a subalternidade nas relações domésticas",
+        "tema_origem": "POS-B",
+        "bucket_origem": "positivas",
+        "tema_texto": "Classismo e falsa ideia de 'quase da família'",
+        "rotulo_forca": "muitos"
+      },
+      {
+        "texto": "valoriza uma interpretação natural e humanizada de Regina Casé junto ao elenco",
+        "tema_origem": "POS-C",
+        "bucket_origem": "positivas",
+        "tema_texto": "Atuação de Regina Casé e do elenco",
+        "rotulo_forca": "muitos"
+      }
+    ],
+    "talvez_evite": [
+      {
+        "texto": "se cansa com narrativas de andamento excessivamente vagaroso e cenas longas",
+        "tema_origem": "NEG-A",
+        "bucket_origem": "negativas",
+        "tema_texto": "Ritmo lento e arrastado",
+        "rotulo_forca": "muitos"
+      },
+      {
+        "texto": "se incomoda com roteiros de progressão frouxa e situações sem desenvolvimento claro",
+        "tema_origem": "NEG-B",
+        "bucket_origem": "negativas",
+        "tema_texto": "Roteiro fraco e desenvolvimento inconsistente",
+        "rotulo_forca": "alguns"
+      },
+      {
+        "texto": "rejeita comentários sociais abordados de forma didática, maniqueísta ou simplificada",
+        "tema_origem": "NEG-C",
+        "bucket_origem": "negativas",
+        "tema_texto": "Crítica social panfletária e simplista",
+        "rotulo_forca": "alguns"
+      },
+      {
+        "texto": "se afasta de histórias com figuras caricatas, estereotipadas ou de atitudes irritantes",
+        "tema_origem": "NEG-D",
+        "bucket_origem": "negativas",
+        "tema_texto": "Personagens irritantes e estereotipados",
+        "rotulo_forca": "alguns"
+      }
+    ],
+    "ordem_colunas": [
+      "vale_a_pena",
+      "talvez_evite"
+    ],
+    "peso": {
+      "vale_a_pena": {
+        "peso_pct": 93,
+        "peso_texto": "~93% das notas",
+        "nota_de_amostra": null
+      },
+      "talvez_evite": {
+        "peso_pct": 1,
+        "peso_texto": "~1% das notas",
+        "nota_de_amostra": null
+      }
+    },
+    "peso_meio": null,
+    "origem": "llm",
+    "temas_pedidos": {
+      "vale_a_pena": [
+        "POS-A",
+        "POS-B",
+        "POS-C"
+      ],
+      "talvez_evite": [
+        "NEG-A",
+        "NEG-B",
+        "NEG-C",
+        "NEG-D"
+      ]
+    },
+    "temas_saltados": {
+      "vale_a_pena": [],
+      "talvez_evite": []
+    },
+    "descartadas": [],
+    "retry": null,
+    "provider": "gemini",
+    "modelo": "gemini-3.7-flash",
+    "n_candidatos": 3,
+    "n_chamadas": 3,
+    "indice_escolhido": 0,
+    "candidatos": [
+      {
+        "indice": 0,
+        "n_condicoes": 7,
+        "n_flags": 0,
+        "flags": [],
+        "n_temas_cobertos": 7
+      },
+      {
+        "indice": 1,
+        "n_condicoes": 7,
+        "n_flags": 0,
+        "flags": [],
+        "n_temas_cobertos": 7
+      },
+      {
+        "indice": 2,
+        "n_condicoes": 7,
+        "n_flags": 0,
+        "flags": [],
+        "n_temas_cobertos": 7
+      }
+    ],
+    "uso": {
+      "prompt_tokens": 8052,
+      "completion_tokens": 1001,
+      "cache_hit_tokens": 0,
+      "cache_miss_tokens": 8052
+    },
+    "latencia_s": 10.71,
+    "spec_version": "1.9.50"
+  }
+}

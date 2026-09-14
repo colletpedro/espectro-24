@@ -1,0 +1,289 @@
+{
+  "slug": "drive-my-car",
+  "coletado_em": "2026-09-10T18:35:23.771033+00:00",
+  "versao_coletor": "1.9.6",
+  "ordenacao_usada": "by/added",
+  "histograma_bruto": {
+    "0.5": 834,
+    "1.0": 1921,
+    "1.5": 1589,
+    "2.0": 6749,
+    "2.5": 8433,
+    "3.0": 30442,
+    "3.5": 45682,
+    "4.0": 118645,
+    "4.5": 87823,
+    "5.0": 93862
+  },
+  "orcamento_paginas_por_nivel": {
+    "0.5": 1,
+    "1.0": 3,
+    "1.5": 2,
+    "2.0": 10,
+    "2.5": 6,
+    "3.0": 10,
+    "3.5": 2,
+    "4.0": 6,
+    "4.5": 4,
+    "5.0": 4
+  },
+  "paginas_gastas_por_nivel": {
+    "0.5": 1,
+    "1.0": 3,
+    "1.5": 2,
+    "2.0": 10,
+    "2.5": 6,
+    "3.0": 10,
+    "3.5": 2,
+    "4.0": 6,
+    "4.5": 4,
+    "5.0": 4
+  },
+  "paradas_por_limite": [
+    "0.5",
+    "1.0",
+    "1.5",
+    "2.0",
+    "2.5",
+    "3.0",
+    "3.5",
+    "4.0",
+    "4.5",
+    "5.0"
+  ],
+  "contagem_bruta_por_nivel": {
+    "0.5": 12,
+    "1.0": 36,
+    "1.5": 24,
+    "2.0": 120,
+    "2.5": 72,
+    "3.0": 120,
+    "3.5": 24,
+    "4.0": 72,
+    "4.5": 48,
+    "5.0": 48
+  },
+  "contagem_estimada_valida_por_nivel": {
+    "0.5": 3,
+    "1.0": 10,
+    "1.5": 12,
+    "2.0": 40,
+    "2.5": 31,
+    "3.0": 49,
+    "3.5": 9,
+    "4.0": 24,
+    "4.5": 18,
+    "5.0": 21
+  },
+  "motivo_parada_por_nivel": {
+    "0.5": "orcamento_esgotado",
+    "1.0": "orcamento_esgotado",
+    "1.5": "orcamento_esgotado",
+    "2.0": "orcamento_esgotado",
+    "2.5": "orcamento_esgotado",
+    "3.0": "orcamento_esgotado",
+    "3.5": "orcamento_esgotado",
+    "4.0": "orcamento_esgotado",
+    "4.5": "orcamento_esgotado",
+    "5.0": "orcamento_esgotado"
+  },
+  "paginas_base_por_nivel": {
+    "0.5": 1,
+    "1.0": 3,
+    "1.5": 2,
+    "2.0": 10,
+    "2.5": 6,
+    "3.0": 10,
+    "3.5": 2,
+    "4.0": 6,
+    "4.5": 4,
+    "5.0": 4
+  },
+  "paginas_extensao_por_nivel": {
+    "0.5": 0,
+    "1.0": 0,
+    "1.5": 0,
+    "2.0": 0,
+    "2.5": 0,
+    "3.0": 0,
+    "3.5": 0,
+    "4.0": 0,
+    "4.5": 0,
+    "5.0": 0
+  },
+  "extensao_por_bucket": {
+    "negativas": {
+      "paginas_base": 16,
+      "paginas_extensao": 0,
+      "extras_por_nivel": {},
+      "motivo_parada": "meta_atingida",
+      "n_validas_pos_base": 65,
+      "n_validas_pos_extensao": 65,
+      "meta": 50
+    },
+    "medianas": {
+      "paginas_base": 16,
+      "paginas_extensao": 0,
+      "extras_por_nivel": {},
+      "motivo_parada": "meta_atingida",
+      "n_validas_pos_base": 80,
+      "n_validas_pos_extensao": 80,
+      "meta": 50
+    },
+    "positivas": {
+      "paginas_base": 16,
+      "paginas_extensao": 0,
+      "extras_por_nivel": {},
+      "motivo_parada": "meta_atingida",
+      "n_validas_pos_base": 72,
+      "n_validas_pos_extensao": 72,
+      "meta": 50
+    }
+  },
+  "profundidade_sondagem": {
+    "nivel_sondado": 4.0,
+    "profundidade": 256,
+    "exata": false,
+    "requisicoes": 4,
+    "motivo": "teto_plataforma"
+  },
+  "profundidade_estimada_por_nivel": {
+    "0.5": 2,
+    "1.0": 4,
+    "1.5": 3,
+    "2.0": 15,
+    "2.5": 18,
+    "3.0": 66,
+    "3.5": 99,
+    "4.0": 256,
+    "4.5": 189,
+    "5.0": 203
+  },
+  "janela_temporal": {
+    "total": {
+      "n": 575,
+      "min": "2021-04-12",
+      "max": "2026-09-10",
+      "p5": "2026-01-27",
+      "p50": "2026-07-24",
+      "p95": "2026-09-09"
+    },
+    "por_bucket": {
+      "negativas": {
+        "n": 192,
+        "min": "2021-04-12",
+        "max": "2026-09-09",
+        "p5": "2026-01-27",
+        "p50": "2026-05-18",
+        "p95": "2026-08-31"
+      },
+      "medianas": {
+        "n": 191,
+        "min": "2021-12-03",
+        "max": "2026-09-09",
+        "p5": "2024-12-20",
+        "p50": "2026-08-02",
+        "p95": "2026-09-06"
+      },
+      "positivas": {
+        "n": 192,
+        "min": "2022-01-31",
+        "max": "2026-09-10",
+        "p5": "2026-03-17",
+        "p50": "2026-09-07",
+        "p95": "2026-09-10"
+      }
+    }
+  },
+  "dias_por_100_paginas": {
+    "n_paginas": 16,
+    "pagina_min": 1,
+    "pagina_max": 128,
+    "dias": 173,
+    "dias_por_100_paginas": 136.2204724409449,
+    "paginas_para_1_ano": 268
+  },
+  "dias_por_100_paginas_por_nivel": {
+    "1.0": {
+      "n_paginas": 3,
+      "pagina_min": 1,
+      "pagina_max": 3,
+      "dias": 99,
+      "dias_por_100_paginas": 4950.0,
+      "paginas_para_1_ano": 7
+    },
+    "1.5": {
+      "n_paginas": 2,
+      "pagina_min": 1,
+      "pagina_max": 2,
+      "dias": 89,
+      "dias_por_100_paginas": 8900.0,
+      "paginas_para_1_ano": 4
+    },
+    "2.0": {
+      "n_paginas": 10,
+      "pagina_min": 1,
+      "pagina_max": 11,
+      "dias": 214,
+      "dias_por_100_paginas": 2140.0,
+      "paginas_para_1_ano": 17
+    },
+    "2.5": {
+      "n_paginas": 6,
+      "pagina_min": 1,
+      "pagina_max": 9,
+      "dias": 153,
+      "dias_por_100_paginas": 1912.5,
+      "paginas_para_1_ano": 19
+    },
+    "3.0": {
+      "n_paginas": 10,
+      "pagina_min": 1,
+      "pagina_max": 33,
+      "dias": 177,
+      "dias_por_100_paginas": 553.125,
+      "paginas_para_1_ano": 66
+    },
+    "3.5": {
+      "n_paginas": 2,
+      "pagina_min": 1,
+      "pagina_max": 2,
+      "dias": 5,
+      "dias_por_100_paginas": 500.0,
+      "paginas_para_1_ano": 73
+    },
+    "4.0": {
+      "n_paginas": 6,
+      "pagina_min": 1,
+      "pagina_max": 128,
+      "dias": 176,
+      "dias_por_100_paginas": 138.58267716535434,
+      "paginas_para_1_ano": 263
+    },
+    "4.5": {
+      "n_paginas": 4,
+      "pagina_min": 1,
+      "pagina_max": 47,
+      "dias": 62,
+      "dias_por_100_paginas": 134.7826086956522,
+      "paginas_para_1_ano": 271
+    },
+    "5.0": {
+      "n_paginas": 4,
+      "pagina_min": 1,
+      "pagina_max": 51,
+      "dias": 48,
+      "dias_por_100_paginas": 96.0,
+      "paginas_para_1_ano": 380
+    }
+  },
+  "ano_lancamento": 2021,
+  "ano_fonte": "letterboxd",
+  "identidade_letterboxd": {
+    "slug": "drive-my-car",
+    "titulo": "Drive My Car",
+    "ano": 2021,
+    "tmdb_id_letterboxd": 758866,
+    "fonte": "pagina_letterboxd"
+  }
+}

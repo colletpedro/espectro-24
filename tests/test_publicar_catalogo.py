@@ -76,16 +76,30 @@ def test_json_corrompido_nao_conta(tmp_path, monkeypatch):
     assert pc._ja_publicado("x") is False
 
 
-def test_filmes_padrao_sao_os_32_faltantes():
-    """A lista default é o catálogo (35, de `consenso.jsonl`) menos os 3 já
-    publicados sob o pipeline corrente — travado no número, não recomputado
-    aqui, para que uma mudança silenciosa no catálogo apareça como falha."""
+def test_filmes_padrao_sao_o_catalogo_menos_os_ja_publicados():
+    """A lista default é o catálogo (`consenso.jsonl`) menos os já publicados
+    sob o pipeline corrente (`JA_PUBLICADOS_ANTES`).
+
+    [piloto de expansão, 2026-09] **Deixou de fixar `32`.** A expansão faz
+    esse número crescer por construção. O que continua travado — e é o que
+    "uma mudança silenciosa no catálogo aparece como falha" realmente
+    precisa provar — é a RELAÇÃO: `filmes_pendentes()` é exatamente o
+    catálogo declarado em `consenso.jsonl` menos `JA_PUBLICADOS_ANTES`, nem
+    um filme a mais nem a menos. O catálogo é lido AQUI de novo,
+    independente de `pc.catalogo_completo()`, para que o teste prove que
+    aquela função lê o arquivo certo — não só que ela concorda consigo
+    mesma."""
+    import json
     pc = _pc()
-    if not (RAIZ / "resultado" / "votacao-3" / "consenso.jsonl").exists():
+    caminho = RAIZ / "resultado" / "votacao-3" / "consenso.jsonl"
+    if not caminho.exists():
         import pytest
         pytest.skip("consenso.jsonl indisponível")
+    do_catalogo = {json.loads(l)["slug"] for l in
+                   caminho.read_text(encoding="utf-8").splitlines() if l.strip()}
     faltantes = pc.filmes_pendentes()
-    assert len(faltantes) == 32
+    assert set(faltantes) == do_catalogo - pc.JA_PUBLICADOS_ANTES
+    assert len(faltantes) == len(set(faltantes)), "filmes_pendentes duplicou slug"
     assert "oppenheimer-2023" in faltantes
     assert "cure" not in faltantes
 
@@ -175,3 +189,80 @@ def test_a_guarda_roda_dentro_de_cmd_publicar(tmp_path, monkeypatch):
         f"publicou {slug} apesar da guarda"))
     with pytest.raises(SystemExit):
         pc.cmd_publicar(slugs)
+
+
+# ===========================================================================
+# [piloto de expansão, `ABERTO.md` C14.8] A amostra não muda entre
+# classificação e publicação — (A) `--offline`, (B) recusa antes do CLI
+# ===========================================================================
+
+def test_publicar_um_roda_o_cli_em_offline(tmp_path, monkeypatch):
+    """(A) Sem `--offline`, toda publicação recoletava da rede — foi assim que
+    `get-out-2017` ganhou uma review não classificada na amostra."""
+    import subprocess
+    pc = _pc()
+    monkeypatch.setattr(pc, "RESULTADO_DIR", tmp_path)
+    visto = {}
+
+    def fake_run(argv, **kw):
+        visto["argv"] = argv
+        return subprocess.CompletedProcess(argv, 0, "", "")
+    monkeypatch.setattr(pc.subprocess, "run", fake_run)
+    pc.publicar_um("get-out-2017")
+    assert visto["argv"][-5:] == ["--slug", "get-out-2017", "--tom", "ambos",
+                                  "--offline"]
+
+
+def _classificacao_de_40(monkeypatch, analisadas_positivas):
+    """Classificação de produção com 40 nas positivas; o bruto, lido por
+    `ids_analisados_do_bruto`, devolve `analisadas_positivas`."""
+    from espectro24 import pipeline as P
+    classificadas = {f"viewing:{i}": [] for i in range(40)}
+    monkeypatch.setattr(P, "_carregar_consenso_producao", lambda E: (
+        {"get-out-2017": {"positivas": classificadas}}, {"aplicado": True}))
+    monkeypatch.setattr(P, "ids_analisados_do_bruto",
+                        lambda slug, **k: {"positivas": set(analisadas_positivas)})
+    return list(classificadas)
+
+
+def test_amostra_divergente_e_RECUSADA_antes_do_cli(tmp_path, monkeypatch):
+    """(B) O caso `get-out-2017` no harness: classificada com 40; o bruto
+    passou a ter 41 candidatas e a seleção ficou com a nova. O filme é
+    recusado ANTES do subprocesso — nenhuma chamada paga —, a recusa vai para
+    o log, e o lote segue (falha isolada por filme, como o resto do harness)."""
+    pc = _pc()
+    monkeypatch.setattr(pc, "RESULTADO_DIR", tmp_path)
+    monkeypatch.setattr(pc, "LOG_DIR", tmp_path)
+    monkeypatch.setattr(pc, "LOG", tmp_path / "log.jsonl")
+    monkeypatch.setattr(pc, "RAIZ", tmp_path)   # o resumo imprime LOG relativo à raiz
+    classificadas = _classificacao_de_40(monkeypatch, [])
+    candidatas = classificadas + ["viewing:1493797951"]            # 41
+    _classificacao_de_40(monkeypatch, candidatas[:39] + candidatas[40:])
+    monkeypatch.setattr(pc, "publicar_um", lambda slug: pytest.fail(
+        f"{slug} chegou ao CLI com a amostra divergente"))
+
+    pc.cmd_publicar(["get-out-2017"])
+
+    registro = json.loads((tmp_path / "log.jsonl").read_text(encoding="utf-8"))
+    assert registro["ok"] is False
+    assert registro["recusado_antes_do_cli"] == "AmostraNaoClassificada"
+    assert "viewing:1493797951" in registro["motivo"]
+
+
+def test_amostra_consistente_segue_para_o_cli(tmp_path, monkeypatch):
+    """O contraponto: a guarda não pode recusar o caso normal — classificada
+    com MAIS reviews do que as analisadas (acúmulo legítimo de §[D3])."""
+    pc = _pc()
+    monkeypatch.setattr(pc, "RESULTADO_DIR", tmp_path)
+    monkeypatch.setattr(pc, "LOG_DIR", tmp_path)
+    monkeypatch.setattr(pc, "LOG", tmp_path / "log.jsonl")
+    monkeypatch.setattr(pc, "RAIZ", tmp_path)   # o resumo imprime LOG relativo à raiz
+    classificadas = _classificacao_de_40(monkeypatch, [])
+    _classificacao_de_40(monkeypatch, classificadas[:35])
+    chamados = []
+    monkeypatch.setattr(pc, "publicar_um", lambda slug: (
+        chamados.append(slug), {"slug": slug, "ok": False, "elapsed_s": 0,
+                                "returncode": 1, "expirou": False,
+                                "stderr_tail": ""})[1])
+    pc.cmd_publicar(["get-out-2017"])
+    assert chamados == ["get-out-2017"]

@@ -1,0 +1,1511 @@
+{
+  "slug": "the-wailing",
+  "data_coleta": "2026-09-13T05:18:22.848330+00:00",
+  "spec_version": "1.9.50",
+  "total_reviews_observadas": 576,
+  "reviews_url": "https://letterboxd.com/film/the-wailing/reviews/",
+  "ficha": {
+    "titulo": "O Lamento",
+    "sinopse_oficial": "A chegada de um misterioso estranho em uma aldeia tranquila coincide com uma onda de assassinatos cruéis, causando pânico e desconfiança entre os moradores. Quando a filha do oficial de investigação Jong-Goo cai sob a mesma magia selvagem, ele chama um xamã para ajudar a encontrar o culpado.",
+    "sinopse_fallback_en": false,
+    "generos": [
+      "Terror",
+      "Mistério"
+    ],
+    "duracao_min": 156,
+    "diretor": "Na Hong-jin",
+    "diretor_transliterado": true,
+    "ano": 2016,
+    "fonte": "tmdb",
+    "tmdb_id": 293670,
+    "tmdb_fetched_at": "2026-09-10T19:56:53+00:00",
+    "poster_path": "/mL4vGghS5XtgeNIPjhoTg8Tv5cJ.jpg",
+    "poster_largura": 2000,
+    "poster_altura": 3000,
+    "backdrop_paths": [
+      "/9qxBNfI1QFbiZS62fsgaUd563t2.jpg",
+      "/hge97XAJgT6977lFTedreLPlZwh.jpg",
+      "/bxClpKgXdUKD0cGncSVcMKEBZMg.jpg",
+      "/pe9zwREf58CDkt6hlP0plSS1NIn.jpg",
+      "/fZIo2rxZ1aj0fXciC8sMSMUaXIo.jpg",
+      "/2B2uMUTmalGuZvKg3MzNUQt7tcp.jpg",
+      "/nqVCL9ve3fLhXDkpiZYODdGthAb.jpg",
+      "/re3NgHlnh1oQc9GQlT2HRDd2nYr.jpg",
+      "/yHmgEk47ErEPhVpsf5nzgm8LqQo.jpg",
+      "/dXkLEI5sVe1wM7CPVn85D7ZwQA3.jpg"
+    ],
+    "backdrop_path": "/9qxBNfI1QFbiZS62fsgaUd563t2.jpg",
+    "backdrop_largura": 1920,
+    "backdrop_altura": 1080,
+    "poster_sem_texto_path": "/1nmiAsG8XL6JwPSIwi6Nn7JSP4d.jpg",
+    "poster_sem_texto_largura": 2000,
+    "poster_sem_texto_altura": 3000,
+    "galeria_stills": [
+      {
+        "still_path": "/9qxBNfI1QFbiZS62fsgaUd563t2.jpg",
+        "still_largura": 1920,
+        "still_altura": 1080
+      },
+      {
+        "still_path": "/hge97XAJgT6977lFTedreLPlZwh.jpg",
+        "still_largura": 2000,
+        "still_altura": 1126
+      },
+      {
+        "still_path": "/bxClpKgXdUKD0cGncSVcMKEBZMg.jpg",
+        "still_largura": 3840,
+        "still_altura": 2160
+      },
+      {
+        "still_path": "/pe9zwREf58CDkt6hlP0plSS1NIn.jpg",
+        "still_largura": 1712,
+        "still_altura": 964
+      },
+      {
+        "still_path": "/dXkLEI5sVe1wM7CPVn85D7ZwQA3.jpg",
+        "still_largura": 1920,
+        "still_altura": 1080
+      },
+      {
+        "still_path": "/aEew5jRNGwhaE9nnqNgyhrTIFgW.jpg",
+        "still_largura": 2560,
+        "still_altura": 1440
+      },
+      {
+        "still_path": "/6scmdhZFMO5SjsybCE5yXPXBqBH.jpg",
+        "still_largura": 2560,
+        "still_altura": 1440
+      },
+      {
+        "still_path": "/bm4tWutVlctk6Cesbfs9QqNEqBH.jpg",
+        "still_largura": 1416,
+        "still_altura": 795
+      },
+      {
+        "still_path": "/er0qd0j3KbMOjLbUATYmyHQsknx.jpg",
+        "still_largura": 2560,
+        "still_altura": 1440
+      },
+      {
+        "still_path": "/gOl9UPNODdAefVx1nhZsOIvfvih.jpg",
+        "still_largura": 2560,
+        "still_altura": 1440
+      },
+      {
+        "still_path": "/ohzfJIEpJWcf5dibWAH6J8hIV46.jpg",
+        "still_largura": 3840,
+        "still_altura": 2160
+      },
+      {
+        "still_path": "/vlpSZmVX38eLkiE5NiH4s184GtZ.jpg",
+        "still_largura": 3840,
+        "still_altura": 2160
+      }
+    ],
+    "ano_fonte": "letterboxd",
+    "identidade": {
+      "versao": 1,
+      "status": "validada",
+      "slug": "the-wailing",
+      "titulo_letterboxd": "The Wailing",
+      "ano_letterboxd": 2016,
+      "tmdb_id_letterboxd": 293670,
+      "tmdb_id_escolhido": 293670,
+      "fonte_id": "letterboxd",
+      "titulo_tmdb_campo": "title",
+      "titulo_tmdb_correspondente": "The Wailing",
+      "ano_tmdb": 2016,
+      "ano_divergente": false
+    }
+  },
+  "distribuicao": {
+    "n_notas_total": 327019,
+    "por_nivel": {
+      "0.5": 887,
+      "1.0": 1750,
+      "1.5": 1868,
+      "2.0": 7134,
+      "2.5": 10149,
+      "3.0": 33738,
+      "3.5": 52693,
+      "4.0": 111202,
+      "4.5": 57432,
+      "5.0": 50166
+    },
+    "por_bucket": {
+      "negativas": 4,
+      "medianas": 13,
+      "positivas": 83
+    },
+    "fonte": "letterboxd_histograma"
+  },
+  "coleta": {
+    "slug": "the-wailing",
+    "coletado_em": "2026-09-10T18:27:03.561199+00:00",
+    "versao_coletor": "1.9.6",
+    "ordenacao_usada": "by/added",
+    "histograma_bruto": {
+      "0.5": 887,
+      "1.0": 1750,
+      "1.5": 1868,
+      "2.0": 7134,
+      "2.5": 10149,
+      "3.0": 33738,
+      "3.5": 52693,
+      "4.0": 111202,
+      "4.5": 57432,
+      "5.0": 50166
+    },
+    "orcamento_paginas_por_nivel": {
+      "0.5": 1,
+      "1.0": 2,
+      "1.5": 3,
+      "2.0": 10,
+      "2.5": 6,
+      "3.0": 10,
+      "3.5": 3,
+      "4.0": 7,
+      "4.5": 3,
+      "5.0": 3
+    },
+    "paginas_gastas_por_nivel": {
+      "0.5": 1,
+      "1.0": 2,
+      "1.5": 3,
+      "2.0": 10,
+      "2.5": 6,
+      "3.0": 10,
+      "3.5": 3,
+      "4.0": 7,
+      "4.5": 3,
+      "5.0": 3
+    },
+    "paradas_por_limite": [
+      "0.5",
+      "1.0",
+      "1.5",
+      "2.0",
+      "2.5",
+      "3.0",
+      "3.5",
+      "4.0",
+      "4.5",
+      "5.0"
+    ],
+    "contagem_bruta_por_nivel": {
+      "0.5": 12,
+      "1.0": 24,
+      "1.5": 36,
+      "2.0": 120,
+      "2.5": 72,
+      "3.0": 120,
+      "3.5": 36,
+      "4.0": 84,
+      "4.5": 36,
+      "5.0": 36
+    },
+    "contagem_estimada_valida_por_nivel": {
+      "0.5": 4,
+      "1.0": 9,
+      "1.5": 13,
+      "2.0": 35,
+      "2.5": 16,
+      "3.0": 40,
+      "3.5": 15,
+      "4.0": 24,
+      "4.5": 13,
+      "5.0": 11
+    },
+    "motivo_parada_por_nivel": {
+      "0.5": "orcamento_esgotado",
+      "1.0": "orcamento_esgotado",
+      "1.5": "orcamento_esgotado",
+      "2.0": "orcamento_esgotado",
+      "2.5": "orcamento_esgotado",
+      "3.0": "orcamento_esgotado",
+      "3.5": "orcamento_esgotado",
+      "4.0": "orcamento_esgotado",
+      "4.5": "orcamento_esgotado",
+      "5.0": "orcamento_esgotado"
+    },
+    "paginas_base_por_nivel": {
+      "0.5": 1,
+      "1.0": 2,
+      "1.5": 3,
+      "2.0": 10,
+      "2.5": 6,
+      "3.0": 10,
+      "3.5": 3,
+      "4.0": 7,
+      "4.5": 3,
+      "5.0": 3
+    },
+    "paginas_extensao_por_nivel": {
+      "0.5": 0,
+      "1.0": 0,
+      "1.5": 0,
+      "2.0": 0,
+      "2.5": 0,
+      "3.0": 0,
+      "3.5": 0,
+      "4.0": 0,
+      "4.5": 0,
+      "5.0": 0
+    },
+    "extensao_por_bucket": {
+      "negativas": {
+        "paginas_base": 16,
+        "paginas_extensao": 0,
+        "extras_por_nivel": {},
+        "motivo_parada": "meta_atingida",
+        "n_validas_pos_base": 61,
+        "n_validas_pos_extensao": 61,
+        "meta": 50
+      },
+      "medianas": {
+        "paginas_base": 16,
+        "paginas_extensao": 0,
+        "extras_por_nivel": {},
+        "motivo_parada": "meta_atingida",
+        "n_validas_pos_base": 56,
+        "n_validas_pos_extensao": 56,
+        "meta": 50
+      },
+      "positivas": {
+        "paginas_base": 16,
+        "paginas_extensao": 0,
+        "extras_por_nivel": {},
+        "motivo_parada": "meta_atingida",
+        "n_validas_pos_base": 63,
+        "n_validas_pos_extensao": 63,
+        "meta": 50
+      }
+    },
+    "profundidade_sondagem": {
+      "nivel_sondado": 4.0,
+      "profundidade": 256,
+      "exata": false,
+      "requisicoes": 4,
+      "motivo": "teto_plataforma"
+    },
+    "profundidade_estimada_por_nivel": {
+      "0.5": 2,
+      "1.0": 4,
+      "1.5": 4,
+      "2.0": 16,
+      "2.5": 23,
+      "3.0": 78,
+      "3.5": 121,
+      "4.0": 256,
+      "4.5": 132,
+      "5.0": 115
+    },
+    "janela_temporal": {
+      "total": {
+        "n": 576,
+        "min": "2019-11-04",
+        "max": "2026-09-10",
+        "p5": "2026-07-10",
+        "p50": "2026-08-30",
+        "p95": "2026-09-10"
+      },
+      "por_bucket": {
+        "negativas": {
+          "n": 192,
+          "min": "2022-03-24",
+          "max": "2026-09-10",
+          "p5": "2026-05-27",
+          "p50": "2026-08-15",
+          "p95": "2026-09-08"
+        },
+        "medianas": {
+          "n": 192,
+          "min": "2020-05-24",
+          "max": "2026-09-10",
+          "p5": "2026-07-17",
+          "p50": "2026-09-03",
+          "p95": "2026-09-09"
+        },
+        "positivas": {
+          "n": 192,
+          "min": "2019-11-04",
+          "max": "2026-09-10",
+          "p5": "2026-07-11",
+          "p50": "2026-09-08",
+          "p95": "2026-09-10"
+        }
+      }
+    },
+    "dias_por_100_paginas": {
+      "n_paginas": 17,
+      "pagina_min": 1,
+      "pagina_max": 128,
+      "dias": 60,
+      "dias_por_100_paginas": 47.24409448818898,
+      "paginas_para_1_ano": 773
+    },
+    "identidade_letterboxd": {
+      "slug": "the-wailing",
+      "titulo": "The Wailing",
+      "ano": 2016,
+      "tmdb_id_letterboxd": 293670,
+      "fonte": "pagina_letterboxd"
+    },
+    "ano_lancamento": 2016,
+    "ano_fonte": "letterboxd",
+    "n_reviews_bruto": 576
+  },
+  "buckets": [
+    {
+      "bucket": "negativas",
+      "alvo": 40,
+      "modo": "completo",
+      "estado_piso": "completa",
+      "n_validas": 40,
+      "share_real": 4,
+      "composicao_alvo": {
+        "0.5": 3,
+        "1.0": 6,
+        "1.5": 6,
+        "2.0": 25
+      },
+      "composicao_atingida": {
+        "0.5": 3,
+        "1.0": 6,
+        "1.5": 6,
+        "2.0": 25
+      },
+      "cascata_por_degrau": {
+        "150": 40
+      },
+      "deficit_redistribuido": 0,
+      "distribuicao_pagina_origem": {
+        "n": 40,
+        "min": 1,
+        "max": 12,
+        "p5": 1,
+        "p50": 2,
+        "p95": 12,
+        "fracao_profunda": 0.225
+      },
+      "janela_amostra": {
+        "n": 40,
+        "min": "2025-11-29",
+        "max": "2026-09-09",
+        "p5": "2026-05-27",
+        "p50": "2026-08-15",
+        "p95": "2026-09-09"
+      },
+      "niveis": [
+        {
+          "nivel": 0.5,
+          "n_validas": 3,
+          "n_alvo": 3,
+          "n_brutas": 12,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 1,
+          "n_descartadas_curtas": 7,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 0,
+          "motivos_descarte": {
+            "truncada_sem_texto": 0,
+            "spoiler": 1,
+            "abaixo_min_chars": 7,
+            "excedente_cota": 1,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 1
+        },
+        {
+          "nivel": 1.0,
+          "n_validas": 6,
+          "n_alvo": 6,
+          "n_brutas": 24,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 0,
+          "n_descartadas_curtas": 15,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 0,
+          "motivos_descarte": {
+            "truncada_sem_texto": 0,
+            "spoiler": 0,
+            "abaixo_min_chars": 15,
+            "excedente_cota": 3,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 2
+        },
+        {
+          "nivel": 1.5,
+          "n_validas": 6,
+          "n_alvo": 6,
+          "n_brutas": 36,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 1,
+          "n_descartadas_curtas": 21,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 1,
+          "motivos_descarte": {
+            "truncada_sem_texto": 1,
+            "spoiler": 1,
+            "abaixo_min_chars": 21,
+            "excedente_cota": 7,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 3
+        },
+        {
+          "nivel": 2.0,
+          "n_validas": 25,
+          "n_alvo": 25,
+          "n_brutas": 120,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 2,
+          "n_descartadas_curtas": 81,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 2,
+          "motivos_descarte": {
+            "truncada_sem_texto": 2,
+            "spoiler": 2,
+            "abaixo_min_chars": 81,
+            "excedente_cota": 10,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 10
+        }
+      ],
+      "temas": [
+        {
+          "tema": "Duração excessiva e ritmo lento",
+          "mencoes_aproximadas": 24,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "Várias pessoas deste grupo reclamam que o filme se arrasta por mais de duas horas e meia, com pausas e repetições que fazem a tensão se dissipar em vez de crescer, tornando a experiência cansativa e sem recompensa.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Roteiro confuso e sem coerência",
+          "mencoes_aproximadas": 21,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "Este grupo considera que a trama avança em círculos, acumulando reviravoltas e pistas contraditórias que nunca se encaixam, deixando a sensação de que a história carece de estrutura lógica interna.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Personagens burros e mal construídos",
+          "mencoes_aproximadas": 13,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "Para essas reviews, os personagens tomam decisões que beiram o absurdo e parecem existir apenas como peças de um enredo mal montado, o que torna impossível se importar com eles ou levar a história a sério.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Final ambíguo e vazio",
+          "mencoes_aproximadas": 12,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "Essas críticas afirmam que o desfecho deixa perguntas sem resposta de forma gratuita, sem a ambiguidade recompensadora de uma obra bem construída, resultando em um gosto de vazio e frustração ao final.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Falta de tensão e medo",
+          "mencoes_aproximadas": 11,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "Vários textos apontam que o filme não consegue gerar suspense ou sustos eficazes, com cenas que se sucedem sem construir qualquer apreensão, e alguns chegam a dizer que riram mais do que se assustaram.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Excesso de elementos e gêneros misturados",
+          "mencoes_aproximadas": 10,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "Este grupo reclama que a obra empilha elementos de zumbis, exorcismo, xamanismo e investigação policial sem coesão, resultando em um amontoado de ideias que perde o foco e a identidade.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        }
+      ],
+      "observacao_geral": "As reviews negativas deste grupo destacam principalmente a duração arrastada, o roteiro confuso e a falta de tensão eficaz, com críticas recorrentes à construção dos personagens e ao desfecho ambíguo. Apesar de elogiarem a fotografia e a atmosfera, este grupo considera que a execução não sustenta o suspense prometido.",
+      "idioma_invalido": false,
+      "escopo_suspeito": false
+    },
+    {
+      "bucket": "medianas",
+      "alvo": 40,
+      "modo": "completo",
+      "estado_piso": "completa",
+      "n_validas": 40,
+      "share_real": 13,
+      "composicao_alvo": {
+        "2.5": 9,
+        "3.0": 31
+      },
+      "composicao_atingida": {
+        "2.5": 9,
+        "3.0": 31
+      },
+      "cascata_por_degrau": {
+        "150": 40
+      },
+      "deficit_redistribuido": 0,
+      "distribuicao_pagina_origem": {
+        "n": 40,
+        "min": 1,
+        "max": 39,
+        "p5": 1,
+        "p50": 5,
+        "p95": 39,
+        "fracao_profunda": 0.25
+      },
+      "janela_amostra": {
+        "n": 40,
+        "min": "2026-07-17",
+        "max": "2026-09-10",
+        "p5": "2026-07-18",
+        "p50": "2026-09-05",
+        "p95": "2026-09-10"
+      },
+      "niveis": [
+        {
+          "nivel": 2.5,
+          "n_validas": 9,
+          "n_alvo": 9,
+          "n_brutas": 72,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 6,
+          "n_descartadas_curtas": 49,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 1,
+          "motivos_descarte": {
+            "truncada_sem_texto": 1,
+            "spoiler": 6,
+            "abaixo_min_chars": 49,
+            "excedente_cota": 7,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 6
+        },
+        {
+          "nivel": 3.0,
+          "n_validas": 31,
+          "n_alvo": 31,
+          "n_brutas": 120,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 4,
+          "n_descartadas_curtas": 76,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 0,
+          "motivos_descarte": {
+            "truncada_sem_texto": 0,
+            "spoiler": 4,
+            "abaixo_min_chars": 76,
+            "excedente_cota": 9,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 10
+        }
+      ],
+      "temas": [
+        {
+          "tema": "Duração excessiva e ritmo arrastado",
+          "mencoes_aproximadas": 21,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "Várias reviews medianas reclamam que o filme é longo demais para a ideia que sustenta, com uma duração que poderia ser reduzida em pelo menos meia hora, tornando a experiência cansativa e por vezes entediante.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Confusão narrativa e ambiguidade excessiva",
+          "mencoes_aproximadas": 19,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "Muitos espectadores deste grupo relatam dificuldade em acompanhar a trama, sentindo-se perdidos com tantas reviravoltas, subtramas e interpretações possíveis, o que gera frustração em vez de envolvimento.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Mistura tonal desequilibrada",
+          "mencoes_aproximadas": 11,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "As reviews apontam que o filme não decide se é comédia, drama, terror ou investigação policial, misturando gêneros de forma que o tom fica inconsistente e algumas cenas cômicas soam deslocadas.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Atuação da criança e elenco",
+          "mencoes_aproximadas": 10,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "A performance da atriz mirim é frequentemente elogiada como o ponto mais forte do filme, enquanto outros personagens, especialmente o protagonista policial, são vistos como irritantes ou pouco convincentes.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Roteiro com furos e falta de explicação",
+          "mencoes_aproximadas": 9,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "Vários textos mencionam buracos no roteiro e informações mal explicadas, com decisões que parecem visar apenas o choque, abandonando a lógica interna da história.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Fotografia e atmosfera eficazes",
+          "mencoes_aproximadas": 8,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "Algumas reviews destacam a boa fotografia, com paisagens rurais marcantes e uma atmosfera de tensão e mistério que funciona bem em diversos momentos.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        }
+      ],
+      "observacao_geral": "As reviews medianas apontam um filme ambicioso, mas excessivamente longo e confuso, com mistura tonal que desagrada e roteiro repleto de lacunas; ainda assim, este grupo reconhece qualidades na atuação infantil, na fotografia e em sequências isoladas de tensão.",
+      "idioma_invalido": false,
+      "escopo_suspeito": false
+    },
+    {
+      "bucket": "positivas",
+      "alvo": 40,
+      "modo": "completo",
+      "estado_piso": "completa",
+      "n_validas": 40,
+      "share_real": 83,
+      "composicao_alvo": {
+        "3.5": 8,
+        "4.0": 16,
+        "4.5": 9,
+        "5.0": 7
+      },
+      "composicao_atingida": {
+        "3.5": 8,
+        "4.0": 16,
+        "4.5": 9,
+        "5.0": 7
+      },
+      "cascata_por_degrau": {
+        "150": 40
+      },
+      "deficit_redistribuido": 0,
+      "distribuicao_pagina_origem": {
+        "n": 40,
+        "min": 1,
+        "max": 128,
+        "p5": 1,
+        "p50": 2,
+        "p95": 64,
+        "fracao_profunda": 0.35
+      },
+      "janela_amostra": {
+        "n": 40,
+        "min": "2026-06-19",
+        "max": "2026-09-10",
+        "p5": "2026-07-10",
+        "p50": "2026-09-08",
+        "p95": "2026-09-10"
+      },
+      "niveis": [
+        {
+          "nivel": 3.5,
+          "n_validas": 8,
+          "n_alvo": 8,
+          "n_brutas": 36,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 0,
+          "n_descartadas_curtas": 20,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 1,
+          "motivos_descarte": {
+            "truncada_sem_texto": 1,
+            "spoiler": 0,
+            "abaixo_min_chars": 20,
+            "excedente_cota": 7,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 3
+        },
+        {
+          "nivel": 4.0,
+          "n_validas": 16,
+          "n_alvo": 16,
+          "n_brutas": 84,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 3,
+          "n_descartadas_curtas": 57,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 0,
+          "motivos_descarte": {
+            "truncada_sem_texto": 0,
+            "spoiler": 3,
+            "abaixo_min_chars": 57,
+            "excedente_cota": 8,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 7
+        },
+        {
+          "nivel": 4.5,
+          "n_validas": 9,
+          "n_alvo": 9,
+          "n_brutas": 36,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 6,
+          "n_descartadas_curtas": 16,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 1,
+          "motivos_descarte": {
+            "truncada_sem_texto": 1,
+            "spoiler": 6,
+            "abaixo_min_chars": 16,
+            "excedente_cota": 4,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 3
+        },
+        {
+          "nivel": 5.0,
+          "n_validas": 7,
+          "n_alvo": 7,
+          "n_brutas": 36,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 0,
+          "n_descartadas_curtas": 23,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 2,
+          "motivos_descarte": {
+            "truncada_sem_texto": 2,
+            "spoiler": 0,
+            "abaixo_min_chars": 23,
+            "excedente_cota": 4,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 3
+        }
+      ],
+      "temas": [
+        {
+          "tema": "Duração excessiva e ritmo lento",
+          "mencoes_aproximadas": 10,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "Várias reviews positivas apontam que o filme é longo demais e que o ritmo arrastado em certos trechos prejudica a experiência, com alguns sugerindo que cortes de vinte a trinta minutos melhorariam a fluidez.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Mistério ambíguo e confusão sobre quem confiar",
+          "mencoes_aproximadas": 10,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "Este grupo destaca que a trama mantém o espectador em dúvida sobre quem é o verdadeiro vilão e o que é real, com reviravoltas que desorientam e deixam a audiência sem saber em quem acreditar até o fim.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Atuações e personagens marcantes",
+          "mencoes_aproximadas": 9,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "As reviews elogiam as atuações, especialmente a performance da criança, e descrevem o protagonista como um policial atrapalhado mas dedicado à família, o que gera tanto humor quanto compaixão.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Fotografia e atmosfera opressiva",
+          "mencoes_aproximadas": 8,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "Muitas reviews positivas exaltam a cinematografia, com destaque para a beleza sombria das paisagens rurais e a atmosfera úmida e angustiante que contribui para o clima de terror.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Crítica social e religiosa",
+          "mencoes_aproximadas": 6,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "Algumas reviews interpretam o filme como uma crítica ao colonialismo japonês e à discriminação, além de explorar crenças religiosas e xamanismo coreano de forma alegórica.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Ausência de jumpscares e terror psicológico",
+          "mencoes_aproximadas": 6,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "Este grupo ressalta que o filme não depende de sustos fáceis, mas sim de uma tensão psicológica constante que deixa o espectador desconfortável e apreensivo.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        }
+      ],
+      "observacao_geral": "As reviews positivas destacam a ousadia do filme em misturar gêneros e criar uma atmosfera opressiva, embora muitas critiquem a duração excessiva e a confusão deliberada. Este grupo valoriza especialmente as atuações, a fotografia e as camadas de crítica social e religiosa.",
+      "idioma_invalido": false,
+      "escopo_suspeito": false
+    }
+  ],
+  "eixos": {
+    "taxonomia_id": "ebab2667de74",
+    "margem": {
+      "lei": "lift^2 * n >= 2085136/1000000",
+      "constante_quadrada": [
+        2085136,
+        1000000
+      ],
+      "n": 40,
+      "limiar_pp": 22.83
+    },
+    "margem_lift_pp": 22.83,
+    "linhas": [
+      {
+        "eixo": "ritmo",
+        "por_bucket": {
+          "negativas": {
+            "mencoes": 29,
+            "de_n": 40,
+            "freq_pct": 72.5,
+            "lift_pp": 15.0,
+            "acima_da_margem": false,
+            "tema": "Duração excessiva e ritmo lento",
+            "exemplo_parafraseado": "Várias pessoas deste grupo reclamam que o filme se arrasta por mais de duas horas e meia, com pausas e repetições que fazem a tensão se dissipar em vez de crescer, tornando a experiência cansativa e sem recompensa.",
+            "temas_no_mesmo_eixo": []
+          },
+          "medianas": {
+            "mencoes": 23,
+            "de_n": 40,
+            "freq_pct": 57.5,
+            "lift_pp": -15.0,
+            "acima_da_margem": false,
+            "tema": "Duração excessiva e ritmo arrastado",
+            "exemplo_parafraseado": "Várias reviews medianas reclamam que o filme é longo demais para a ideia que sustenta, com uma duração que poderia ser reduzida em pelo menos meia hora, tornando a experiência cansativa e por vezes entediante.",
+            "temas_no_mesmo_eixo": []
+          },
+          "positivas": {
+            "mencoes": 18,
+            "de_n": 40,
+            "freq_pct": 45.0,
+            "lift_pp": -27.5,
+            "acima_da_margem": false,
+            "tema": "Duração excessiva e ritmo lento",
+            "exemplo_parafraseado": "Várias reviews positivas apontam que o filme é longo demais e que o ritmo arrastado em certos trechos prejudica a experiência, com alguns sugerindo que cortes de vinte a trinta minutos melhorariam a fluidez.",
+            "temas_no_mesmo_eixo": []
+          }
+        },
+        "bullet_de": {
+          "negativas": "frequencia",
+          "medianas": null,
+          "positivas": null
+        }
+      },
+      {
+        "eixo": "atuacao",
+        "por_bucket": {
+          "negativas": {
+            "mencoes": 7,
+            "de_n": 40,
+            "freq_pct": 17.5,
+            "lift_pp": -17.5,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "medianas": {
+            "mencoes": 14,
+            "de_n": 40,
+            "freq_pct": 35.0,
+            "lift_pp": 17.5,
+            "acima_da_margem": false,
+            "tema": "Atuação da criança e elenco",
+            "exemplo_parafraseado": "A performance da atriz mirim é frequentemente elogiada como o ponto mais forte do filme, enquanto outros personagens, especialmente o protagonista policial, são vistos como irritantes ou pouco convincentes.",
+            "temas_no_mesmo_eixo": []
+          },
+          "positivas": {
+            "mencoes": 7,
+            "de_n": 40,
+            "freq_pct": 17.5,
+            "lift_pp": -17.5,
+            "acima_da_margem": false,
+            "tema": "Atuações e personagens marcantes",
+            "exemplo_parafraseado": "As reviews elogiam as atuações, especialmente a performance da criança, e descrevem o protagonista como um policial atrapalhado mas dedicado à família, o que gera tanto humor quanto compaixão.",
+            "temas_no_mesmo_eixo": []
+          }
+        },
+        "bullet_de": {
+          "negativas": null,
+          "medianas": null,
+          "positivas": null
+        }
+      },
+      {
+        "eixo": "direcao_imagem",
+        "por_bucket": {
+          "negativas": {
+            "mencoes": 11,
+            "de_n": 40,
+            "freq_pct": 27.5,
+            "lift_pp": 2.5,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "medianas": {
+            "mencoes": 10,
+            "de_n": 40,
+            "freq_pct": 25.0,
+            "lift_pp": -2.5,
+            "acima_da_margem": false,
+            "tema": "Fotografia e atmosfera eficazes",
+            "exemplo_parafraseado": "Algumas reviews destacam a boa fotografia, com paisagens rurais marcantes e uma atmosfera de tensão e mistério que funciona bem em diversos momentos.",
+            "temas_no_mesmo_eixo": []
+          },
+          "positivas": {
+            "mencoes": 10,
+            "de_n": 40,
+            "freq_pct": 25.0,
+            "lift_pp": -2.5,
+            "acima_da_margem": false,
+            "tema": "Fotografia e atmosfera opressiva",
+            "exemplo_parafraseado": "Muitas reviews positivas exaltam a cinematografia, com destaque para a beleza sombria das paisagens rurais e a atmosfera úmida e angustiante que contribui para o clima de terror.",
+            "temas_no_mesmo_eixo": []
+          }
+        },
+        "bullet_de": {
+          "negativas": null,
+          "medianas": null,
+          "positivas": null
+        }
+      },
+      {
+        "eixo": "roteiro_estrutura",
+        "por_bucket": {
+          "negativas": {
+            "mencoes": 36,
+            "de_n": 40,
+            "freq_pct": 90.0,
+            "lift_pp": -5.0,
+            "acima_da_margem": false,
+            "tema": "Roteiro confuso e sem coerência",
+            "exemplo_parafraseado": "Este grupo considera que a trama avança em círculos, acumulando reviravoltas e pistas contraditórias que nunca se encaixam, deixando a sensação de que a história carece de estrutura lógica interna.",
+            "temas_no_mesmo_eixo": [
+              "Personagens burros e mal construídos",
+              "Final ambíguo e vazio"
+            ]
+          },
+          "medianas": {
+            "mencoes": 38,
+            "de_n": 40,
+            "freq_pct": 95.0,
+            "lift_pp": 5.0,
+            "acima_da_margem": false,
+            "tema": "Confusão narrativa e ambiguidade excessiva",
+            "exemplo_parafraseado": "Muitos espectadores deste grupo relatam dificuldade em acompanhar a trama, sentindo-se perdidos com tantas reviravoltas, subtramas e interpretações possíveis, o que gera frustração em vez de envolvimento.",
+            "temas_no_mesmo_eixo": [
+              "Roteiro com furos e falta de explicação"
+            ]
+          },
+          "positivas": {
+            "mencoes": 31,
+            "de_n": 40,
+            "freq_pct": 77.5,
+            "lift_pp": -17.5,
+            "acima_da_margem": false,
+            "tema": "Mistério ambíguo e confusão sobre quem confiar",
+            "exemplo_parafraseado": "Este grupo destaca que a trama mantém o espectador em dúvida sobre quem é o verdadeiro vilão e o que é real, com reviravoltas que desorientam e deixam a audiência sem saber em quem acreditar até o fim.",
+            "temas_no_mesmo_eixo": []
+          }
+        },
+        "bullet_de": {
+          "negativas": "frequencia",
+          "medianas": "frequencia",
+          "positivas": "frequencia"
+        }
+      },
+      {
+        "eixo": "som_trilha",
+        "por_bucket": {
+          "negativas": {
+            "mencoes": 0,
+            "de_n": 40,
+            "freq_pct": 0.0,
+            "lift_pp": -5.0,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "medianas": {
+            "mencoes": 2,
+            "de_n": 40,
+            "freq_pct": 5.0,
+            "lift_pp": 0.0,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "positivas": {
+            "mencoes": 2,
+            "de_n": 40,
+            "freq_pct": 5.0,
+            "lift_pp": 0.0,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          }
+        },
+        "bullet_de": {
+          "negativas": null,
+          "medianas": null,
+          "positivas": null
+        }
+      },
+      {
+        "eixo": "tom_atmosfera",
+        "por_bucket": {
+          "negativas": {
+            "mencoes": 19,
+            "de_n": 40,
+            "freq_pct": 47.5,
+            "lift_pp": -10.0,
+            "acima_da_margem": false,
+            "tema": "Falta de tensão e medo",
+            "exemplo_parafraseado": "Vários textos apontam que o filme não consegue gerar suspense ou sustos eficazes, com cenas que se sucedem sem construir qualquer apreensão, e alguns chegam a dizer que riram mais do que se assustaram.",
+            "temas_no_mesmo_eixo": [
+              "Excesso de elementos e gêneros misturados"
+            ]
+          },
+          "medianas": {
+            "mencoes": 20,
+            "de_n": 40,
+            "freq_pct": 50.0,
+            "lift_pp": -7.5,
+            "acima_da_margem": false,
+            "tema": "Mistura tonal desequilibrada",
+            "exemplo_parafraseado": "As reviews apontam que o filme não decide se é comédia, drama, terror ou investigação policial, misturando gêneros de forma que o tom fica inconsistente e algumas cenas cômicas soam deslocadas.",
+            "temas_no_mesmo_eixo": []
+          },
+          "positivas": {
+            "mencoes": 23,
+            "de_n": 40,
+            "freq_pct": 57.5,
+            "lift_pp": 7.5,
+            "acima_da_margem": false,
+            "tema": "Ausência de jumpscares e terror psicológico",
+            "exemplo_parafraseado": "Este grupo ressalta que o filme não depende de sustos fáceis, mas sim de uma tensão psicológica constante que deixa o espectador desconfortável e apreensivo.",
+            "temas_no_mesmo_eixo": []
+          }
+        },
+        "bullet_de": {
+          "negativas": null,
+          "medianas": null,
+          "positivas": null
+        }
+      },
+      {
+        "eixo": "impacto_emocional",
+        "por_bucket": {
+          "negativas": {
+            "mencoes": 16,
+            "de_n": 40,
+            "freq_pct": 40.0,
+            "lift_pp": -25.0,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "medianas": {
+            "mencoes": 24,
+            "de_n": 40,
+            "freq_pct": 60.0,
+            "lift_pp": -5.0,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "positivas": {
+            "mencoes": 26,
+            "de_n": 40,
+            "freq_pct": 65.0,
+            "lift_pp": 5.0,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          }
+        },
+        "bullet_de": {
+          "negativas": null,
+          "medianas": "frequencia",
+          "positivas": "frequencia"
+        }
+      },
+      {
+        "eixo": "comparacoes",
+        "por_bucket": {
+          "negativas": {
+            "mencoes": 12,
+            "de_n": 40,
+            "freq_pct": 30.0,
+            "lift_pp": -5.0,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "medianas": {
+            "mencoes": 12,
+            "de_n": 40,
+            "freq_pct": 30.0,
+            "lift_pp": -5.0,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "positivas": {
+            "mencoes": 14,
+            "de_n": 40,
+            "freq_pct": 35.0,
+            "lift_pp": 5.0,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          }
+        },
+        "bullet_de": {
+          "negativas": null,
+          "medianas": null,
+          "positivas": null
+        }
+      },
+      {
+        "eixo": "expectativa",
+        "por_bucket": {
+          "negativas": {
+            "mencoes": 10,
+            "de_n": 40,
+            "freq_pct": 25.0,
+            "lift_pp": 0.0,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "medianas": {
+            "mencoes": 10,
+            "de_n": 40,
+            "freq_pct": 25.0,
+            "lift_pp": 0.0,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "positivas": {
+            "mencoes": 6,
+            "de_n": 40,
+            "freq_pct": 15.0,
+            "lift_pp": -10.0,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          }
+        },
+        "bullet_de": {
+          "negativas": null,
+          "medianas": null,
+          "positivas": null
+        }
+      },
+      {
+        "eixo": "critica_social",
+        "por_bucket": {
+          "negativas": {
+            "mencoes": 3,
+            "de_n": 40,
+            "freq_pct": 7.5,
+            "lift_pp": -7.5,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "medianas": {
+            "mencoes": 4,
+            "de_n": 40,
+            "freq_pct": 10.0,
+            "lift_pp": -5.0,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "positivas": {
+            "mencoes": 6,
+            "de_n": 40,
+            "freq_pct": 15.0,
+            "lift_pp": 5.0,
+            "acima_da_margem": false,
+            "tema": "Crítica social e religiosa",
+            "exemplo_parafraseado": "Algumas reviews interpretam o filme como uma crítica ao colonialismo japonês e à discriminação, além de explorar crenças religiosas e xamanismo coreano de forma alegórica.",
+            "temas_no_mesmo_eixo": []
+          }
+        },
+        "bullet_de": {
+          "negativas": null,
+          "medianas": null,
+          "positivas": null
+        }
+      }
+    ],
+    "contraste": "valorativo",
+    "rotulagem": {
+      "n_chamadas": 3,
+      "falharam": [],
+      "fora_da_taxonomia": {},
+      "houve_retentativa": []
+    },
+    "spec_version": "1.9.50",
+    "verificador": {
+      "aplicado": true,
+      "variante": "V2_alvo",
+      "passada": 1,
+      "eixo": "impacto_emocional",
+      "n_removidas_no_corpus": 2781
+    }
+  },
+  "narrativa": "Dirigido por Na Hong-jin e lançado em 2016, O Lamento é um filme de terror e mistério com 156 minutos de duração. A narrativa acompanha uma aldeia tranquila abalada por assassinatos cruéis após a chegada de um forasteiro misterioso, levando um oficial de investigação a recorrer a um xamã quando sua filha é atingida pela mesma magia.\n\nA experiência apresenta um ritmo deliberadamente cadenciado e uma atmosfera densa, estruturando-se em torno de uma trama repleta de pistas ambíguas e constantes reviravoltas. Ao longo de sua exibição, a obra também combina diferentes convenções de gêneros dentro de seu clima de investigação.\n\nOs diferentes grupos concordam sobre o que o filme é e discordam sobre se ele funciona. Na grande maioria das notas (~83%), alguns apontam que a duração excessiva e o ritmo lento afetam a fluidez, enquanto uma parte valoriza o mistério ambíguo e a dúvida sobre em quem confiar, e uma fatia menor destaca a presença de atuações e personagens marcantes.\n\nEntre as avaliações reunidas numa fração mínima das notas (~13%), cerca de metade critica o ritmo arrastado e a extensão longa, uma parcela expressiva relata frustração diante da confusão narrativa e da ambiguidade excessiva, e vários apontam um desequilíbrio na mistura de tons.\n\nJá sob a perspectiva adotada numa fração ainda menor das notas (~4%), quase metade condena o ritmo lento por prejudicar a tensão, em torno de metade avalia o roteiro como confuso e sem coerência interna, e um número considerável rejeita a condução dos personagens por considerá-los mal construídos.",
+  "verificacao_narrativa": {
+    "quantificador_fora_de_faixa": [],
+    "quantificador_repetido": [],
+    "paragrafos": {
+      "n_paragrafos": 5,
+      "minimo": 3,
+      "insuficientes": false,
+      "longos": []
+    },
+    "n_paragrafos": 5,
+    "paragrafos_insuficientes": false,
+    "paragrafos_longos": [],
+    "grupos_sem_paragrafo_proprio": [],
+    "movimento1_e_movimento2_no_mesmo_paragrafo": false,
+    "formato_invalido": false,
+    "numeros_inventados": [],
+    "rotulos_faltando": [],
+    "ordem_incorreta": false,
+    "vocabulario_peso": false,
+    "resenha_speak": [],
+    "n_resenha_speak": 0,
+    "n_flags": 0
+  },
+  "narrativa_selecao": {
+    "provider": "gemini",
+    "modelo": "gemini-3.7-flash",
+    "n_candidatos": 3,
+    "n_chamadas": 4,
+    "indice_escolhido": 1,
+    "motivo": "menor_severidade",
+    "criterio_decisivo": "ritmo",
+    "candidatos": [
+      {
+        "indice": 0,
+        "n_flags": 3,
+        "cliches": 0,
+        "repeticao_max": 1,
+        "ritmo": 10,
+        "cobertura": 1.0,
+        "eliminado": true
+      },
+      {
+        "indice": 1,
+        "n_flags": 1,
+        "cliches": 0,
+        "repeticao_max": 1,
+        "ritmo": 12,
+        "cobertura": 1.0,
+        "eliminado": true
+      },
+      {
+        "indice": 2,
+        "n_flags": 1,
+        "cliches": 0,
+        "repeticao_max": 1,
+        "ritmo": 11,
+        "cobertura": 1.0,
+        "eliminado": true
+      }
+    ],
+    "retry": {
+      "n_frases_infratoras": 1,
+      "motivos": [
+        "construcao_repetida"
+      ],
+      "n_flags_depois": 0,
+      "aplicado": true
+    },
+    "uso": {
+      "prompt_tokens": 12114,
+      "completion_tokens": 1529,
+      "cache_hit_tokens": 0,
+      "cache_miss_tokens": 12114
+    },
+    "latencia_s": 36.0
+  },
+  "condicoes": {
+    "vale_a_pena": [
+      {
+        "texto": "gosta de tramas de mistério que desorientam e deixam dúvidas constantes",
+        "tema_origem": "POS-B",
+        "bucket_origem": "positivas",
+        "tema_texto": "Mistério ambíguo e confusão sobre quem confiar",
+        "rotulo_forca": "alguns"
+      },
+      {
+        "texto": "aprecia atuações expressivas que equilibram momentos cômicos com drama familiar comovente",
+        "tema_origem": "POS-C",
+        "bucket_origem": "positivas",
+        "tema_texto": "Atuações e personagens marcantes",
+        "rotulo_forca": "alguns"
+      }
+    ],
+    "talvez_evite": [
+      {
+        "texto": "se cansa com narrativas muito extensas em que o ritmo dilui a tensão",
+        "tema_origem": "NEG-A",
+        "bucket_origem": "negativas",
+        "tema_texto": "Duração excessiva e ritmo lento",
+        "rotulo_forca": "cerca de metade"
+      },
+      {
+        "texto": "se incomoda com enredos que acumulam pistas contraditórias e carecem de lógica interna",
+        "tema_origem": "NEG-B",
+        "bucket_origem": "negativas",
+        "tema_texto": "Roteiro confuso e sem coerência",
+        "rotulo_forca": "cerca de metade"
+      },
+      {
+        "texto": "se frustra com personagens que tomam decisões absurdas e parecem mal desenvolvidos",
+        "tema_origem": "NEG-C",
+        "bucket_origem": "negativas",
+        "tema_texto": "Personagens burros e mal construídos",
+        "rotulo_forca": "muitos"
+      },
+      {
+        "texto": "evita desfechos abertos que deixam perguntas essenciais sem respostas recompensadoras",
+        "tema_origem": "NEG-D",
+        "bucket_origem": "negativas",
+        "tema_texto": "Final ambíguo e vazio",
+        "rotulo_forca": "muitos"
+      }
+    ],
+    "ordem_colunas": [
+      "vale_a_pena",
+      "talvez_evite"
+    ],
+    "peso": {
+      "vale_a_pena": {
+        "peso_pct": 83,
+        "peso_texto": "~83% das notas",
+        "nota_de_amostra": null
+      },
+      "talvez_evite": {
+        "peso_pct": 4,
+        "peso_texto": "~4% das notas",
+        "nota_de_amostra": null
+      }
+    },
+    "peso_meio": null,
+    "origem": "llm",
+    "temas_pedidos": {
+      "vale_a_pena": [
+        "POS-A",
+        "POS-B",
+        "POS-C"
+      ],
+      "talvez_evite": [
+        "NEG-A",
+        "NEG-B",
+        "NEG-C",
+        "NEG-D"
+      ]
+    },
+    "temas_saltados": {
+      "vale_a_pena": [
+        "POS-A"
+      ],
+      "talvez_evite": []
+    },
+    "descartadas": [],
+    "retry": null,
+    "provider": "gemini",
+    "modelo": "gemini-3.7-flash",
+    "n_candidatos": 3,
+    "n_chamadas": 3,
+    "indice_escolhido": 1,
+    "candidatos": [
+      {
+        "indice": 0,
+        "n_condicoes": 6,
+        "n_flags": 1,
+        "flags": [
+          "sem_discriminacao"
+        ],
+        "n_temas_cobertos": 6
+      },
+      {
+        "indice": 1,
+        "n_condicoes": 6,
+        "n_flags": 0,
+        "flags": [],
+        "n_temas_cobertos": 6
+      },
+      {
+        "indice": 2,
+        "n_condicoes": 6,
+        "n_flags": 0,
+        "flags": [],
+        "n_temas_cobertos": 6
+      }
+    ],
+    "uso": {
+      "prompt_tokens": 8784,
+      "completion_tokens": 888,
+      "cache_hit_tokens": 0,
+      "cache_miss_tokens": 8784
+    },
+    "latencia_s": 21.45,
+    "spec_version": "1.9.50"
+  }
+}

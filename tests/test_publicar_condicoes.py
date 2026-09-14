@@ -221,9 +221,14 @@ def test_as_seis_retiradas_nao_sao_publicadas(sandbox, origem):
 
 
 def test_a_lista_de_retiradas_e_literal_e_completa():
-    """São seis, nomeadas. Se alguém derivar isto do eixo, o conjunto passa a
-    mudar sozinho quando o catálogo mudar — e é decisão editorial sobre seis
-    frases, não uma regra."""
+    """São oito, nomeadas. Se alguém derivar isto do eixo, o conjunto passa a
+    mudar sozinho quando o catálogo mudar — e é decisão editorial sobre
+    frases específicas, não uma regra.
+
+    [piloto de expansão] Eram seis; entram C030 (`get-out-2017` NEG-C) e
+    C134 (`whiplash-2014` NEG-F), os dois de `expectativa` do piloto, que a
+    lista literal deixaria publicar contra a R13. A aplicação por REGRA
+    (eixo de origem) está proposta e não implementada (`ABERTO.md`)."""
     assert _pc().RETIRADAS == {
         ("the-godfather", "NEG-B"),
         ("hereditary", "NEG-B"),
@@ -231,4 +236,169 @@ def test_a_lista_de_retiradas_e_literal_e_completa():
         ("longlegs", "NEG-B"),
         ("parasite-2019", "NEG-C"),
         ("everything-everywhere-all-at-once", "NEG-F"),
+        ("get-out-2017", "NEG-C"),
+        ("whiplash-2014", "NEG-F"),
     }
+
+
+# ===========================================================================
+# (5) [piloto de expansão] Texto de AUTORIA HUMANA e "sem condição publicável"
+# ===========================================================================
+
+CORRIGIDO = (RAIZ / "docs" / "arquivo-de-estudos" / "revisao-condicoes"
+             / "lote-piloto-18-corrigido")
+
+
+def _sandbox_de(tmp_path, monkeypatch, slug):
+    caminho = RAIZ / "resultado" / f"{slug}.json"
+    if not caminho.exists():
+        pytest.skip(f"{slug} não publicado neste checkout")
+    dir_ = tmp_path / "resultado"
+    dir_.mkdir(exist_ok=True)
+    (dir_ / f"{slug}.json").write_text(caminho.read_text(encoding="utf-8"),
+                                       encoding="utf-8")
+    monkeypatch.setattr(_pc(), "RESULTADO_DIR", dir_)
+    return dir_
+
+
+def _origem_com(tmp_path, slug, bloco):
+    d = tmp_path / "origem"
+    d.mkdir(exist_ok=True)
+    (d / f"{slug}.json").write_text(
+        json.dumps({"slug": slug, "condicoes": bloco}, ensure_ascii=False),
+        encoding="utf-8")
+    return d
+
+
+def _bloco_corrigido(slug):
+    p = CORRIGIDO / f"{slug}.json"
+    if not p.exists():
+        pytest.skip("lote corrigido do piloto ausente neste checkout")
+    return json.loads(p.read_text(encoding="utf-8"))["condicoes"]
+
+
+def test_texto_humano_publica_com_AVISO_e_o_mesmo_texto_sem_origem_nao(
+        tmp_path, monkeypatch):
+    """C058 (`memories-of-murder` POS-A), texto do dono: "interpretações"
+    por "atuações", "figuras" por "personagens" — a abstração que a R12 pede
+    e a régua de prefixo reprova. Com a marca de autoria, publica e o aviso
+    fica gravado na condição; SEM a marca, a mesma frase é recusada — é a
+    trava inteira de sempre."""
+    slug = "memories-of-murder"
+    res = _sandbox_de(tmp_path, monkeypatch, slug)
+    bloco = _bloco_corrigido(slug)
+    c058 = next(c for c in bloco["vale_a_pena"] if c["tema_origem"] == "POS-A")
+    assert c058["origem"] == "leitura_humana"
+
+    r = _pc().publicar_um(slug, _origem_com(tmp_path, slug, bloco),
+                          dry_run=False)
+    assert r["avisos"] == {"POS-A": ["ancora_nao_verificavel"]}
+    pub = json.loads((res / f"{slug}.json").read_text(encoding="utf-8"))
+    gravada = next(c for c in pub["condicoes"]["vale_a_pena"]
+                   if c["tema_origem"] == "POS-A")
+    assert gravada["avisos"] == ["ancora_nao_verificavel"]
+
+    del c058["origem"]
+    with pytest.raises(_pc().CondicaoInvalida) as e:
+        _pc().publicar_um(slug, _origem_com(tmp_path, slug, bloco),
+                          dry_run=True)
+    assert "ancora_nao_verificavel" in str(e.value)
+
+
+@pytest.mark.parametrize("texto,flag", [
+    ("aprecia interpretações fortes de 2 figuras complexas", "digito"),
+    ('aprecia "interpretações fortes" de figuras complexas', "aspas"),
+    ("aprecia interpretações fortes de figuras complexas e de conduta "
+     "ambivalente num filme longo e muito escuro", "comprimento"),
+    ("aprecia, como a maioria, interpretações fortes de figuras complexas",
+     "quantidade_escrita"),
+])
+def test_texto_humano_continua_sob_os_validadores_EXATOS(
+        tmp_path, monkeypatch, texto, flag):
+    """A marca de autoria só tira da trava as flags LÉXICAS. Algarismo,
+    aspas, comprimento, quantidade — reprovam o texto do dono como
+    reprovam o do modelo."""
+    slug = "memories-of-murder"
+    _sandbox_de(tmp_path, monkeypatch, slug)
+    bloco = _bloco_corrigido(slug)
+    c = next(c for c in bloco["vale_a_pena"] if c["tema_origem"] == "POS-A")
+    c["texto"] = texto
+    with pytest.raises(_pc().CondicaoInvalida) as e:
+        _pc().publicar_um(slug, _origem_com(tmp_path, slug, bloco),
+                          dry_run=True)
+    assert flag in str(e.value)
+
+
+def test_recusa_do_dono_publica_e_recusa_invalida_bloqueia(tmp_path,
+                                                          monkeypatch):
+    """C051 (`hard-to-be-a-god` POS-C): recusa do dono, R2. Publica como
+    `sem_condicao_publicavel`; com regra fora do conjunto fechado, o filme
+    inteiro é recusado."""
+    slug = "hard-to-be-a-god"
+    res = _sandbox_de(tmp_path, monkeypatch, slug)
+    bloco = _bloco_corrigido(slug)
+    rec = bloco["sem_condicao_publicavel"]
+    assert [(r["tema_origem"], r["regra"], r["origem"]) for r in rec] == [
+        ("POS-C", "R2", "leitura_humana")]
+    assert "POS-C" not in {c["tema_origem"] for c in bloco["vale_a_pena"]}
+
+    _pc().publicar_um(slug, _origem_com(tmp_path, slug, bloco), dry_run=False)
+    pub = json.loads((res / f"{slug}.json").read_text(encoding="utf-8"))
+    assert pub["condicoes"]["sem_condicao_publicavel"][0]["motivo"]
+
+    rec[0]["regra"] = "R9"
+    with pytest.raises(_pc().CondicaoInvalida) as e:
+        _pc().publicar_um(slug, _origem_com(tmp_path, slug, bloco),
+                          dry_run=True)
+    assert "recusa_regra_invalida" in str(e.value)
+
+
+def test_par_recusado_precisa_estar_consolidado(tmp_path, monkeypatch):
+    """C024 (`force-majeure-2014` NEG-E) foi FORÇADO por POS-B e o dono o
+    recusou: POS-B publica com a marca `par_recusado`. Sem a marca, o
+    bloco não está consolidado e o filme é recusado — a regra do par não
+    depende de alguém lembrar de aplicá-la."""
+    slug = "force-majeure-2014"
+    _sandbox_de(tmp_path, monkeypatch, slug)
+    bloco = _bloco_corrigido(slug)
+    base = next(c for c in bloco["vale_a_pena"] if c["tema_origem"] == "POS-B")
+    assert base["par_recusado"] == "NEG-E"
+    _pc().publicar_um(slug, _origem_com(tmp_path, slug, bloco), dry_run=True)
+
+    del base["par_recusado"]
+    with pytest.raises(_pc().CondicaoInvalida) as e:
+        _pc().publicar_um(slug, _origem_com(tmp_path, slug, bloco),
+                          dry_run=True)
+    assert "par não consolidado" in str(e.value)
+
+
+def test_coluna_vazia_BLOQUEIA_o_filme(sandbox, origem):
+    """Coluna vazia é decisão humana: o harness recusa, e o código não
+    completa a coluna com outro tema."""
+    b = json.loads((origem / f"{SLUG}.json").read_text(encoding="utf-8"))
+    b["condicoes"]["vale_a_pena"] = []
+    (origem / f"{SLUG}.json").write_text(json.dumps(b, ensure_ascii=False),
+                                         encoding="utf-8")
+    with pytest.raises(_pc().CondicaoInvalida) as e:
+        _pc().publicar_um(SLUG, origem, dry_run=True)
+    assert "VAZIA" in str(e.value)
+
+
+def test_o_motivo_da_recusa_nao_vai_para_a_pagina():
+    """O `motivo` fica no JSON de `resultado/` (material de revisão) e sai
+    na geração do site — `frontend/build_data.py`, a única ponte entre os
+    dois. A regra, o tema e a origem ficam: são proveniência."""
+    sys.path.insert(0, str(RAIZ / "frontend"))
+    import build_data
+    data = {"condicoes": {"sem_condicao_publicavel": [
+        {"tema_origem": "POS-C", "lado": "vale_a_pena", "regra": "R2",
+         "motivo": "o tema relata dificuldade", "origem": "leitura_humana"}]}}
+    build_data.sem_motivo_de_recusa(data)
+    assert data["condicoes"]["sem_condicao_publicavel"] == [
+        {"tema_origem": "POS-C", "lado": "vale_a_pena", "regra": "R2",
+         "origem": "leitura_humana"}]
+    assert "motivo" not in json.dumps(data)
+    fonte = (RAIZ / "frontend" / "build_data.py").read_text(encoding="utf-8")
+    assert "sem_motivo_de_recusa(data)" in fonte.split("def main")[1]
+    assert "sem_condicao" not in (RAIZ / "frontend" / "js" / "filme.js"
+                                  ).read_text(encoding="utf-8")

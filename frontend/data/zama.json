@@ -1,0 +1,1515 @@
+{
+  "slug": "zama",
+  "data_coleta": "2026-09-13T05:26:52.962412+00:00",
+  "spec_version": "1.9.50",
+  "total_reviews_observadas": 576,
+  "reviews_url": "https://letterboxd.com/film/zama/reviews/",
+  "ficha": {
+    "titulo": "Zama",
+    "sinopse_oficial": "Final do século XVIII, Don Diego de Zama é um magistrado espanhol do século XVIII, cumprindo castigo em Assunção, esperando ser transferido para Buenos Aires. Quando sua última esperança de partida não dá em nada, Zama se junta a uma expedição para localizar Vicuña Porto, um lendário fora-da-lei, que pode ou não existir, e sai a explorar terras distantes habitadas por índios selvagens.",
+    "sinopse_fallback_en": false,
+    "generos": [
+      "Drama",
+      "História"
+    ],
+    "duracao_min": 115,
+    "diretor": "Lucrecia Martel",
+    "diretor_transliterado": false,
+    "ano": 2017,
+    "fonte": "tmdb",
+    "tmdb_id": 326382,
+    "tmdb_fetched_at": "2026-09-10T20:04:57+00:00",
+    "poster_path": "/3pfgZyIJ1AyXD4JB6b0d2IHzTLV.jpg",
+    "poster_largura": null,
+    "poster_altura": null,
+    "backdrop_paths": [
+      "/9JqIR7bBO0uofsJiONgYAX2yw1R.jpg",
+      "/oG8sdayvGEMbHYPIIlJlKzoZsAR.jpg",
+      "/7DVaA3yyEXPaXCLbLdpZgrqFWHt.jpg",
+      "/fhniVap3BiCPU8IDYTXa0iZpAYK.jpg",
+      "/p6bjM0WVuJbjEmaS73raMj8mbMk.jpg",
+      "/lXY4fpvQKxRX6NYuaic4M7J8lMe.jpg",
+      "/g2pGbEeATklQGkgbI2AGxbVnTe5.jpg",
+      "/fKxYQYwv0fyjalIuL4zgXBaTXwD.jpg",
+      "/ctX9t64gVhNtz8TtqPp2YJQukKZ.jpg",
+      "/boltkh0lwo9W1kx7ojeZab1K7yq.jpg"
+    ],
+    "backdrop_path": "/9JqIR7bBO0uofsJiONgYAX2yw1R.jpg",
+    "backdrop_largura": 1920,
+    "backdrop_altura": 1080,
+    "poster_sem_texto_path": null,
+    "poster_sem_texto_largura": null,
+    "poster_sem_texto_altura": null,
+    "galeria_stills": [
+      {
+        "still_path": "/9JqIR7bBO0uofsJiONgYAX2yw1R.jpg",
+        "still_largura": 1920,
+        "still_altura": 1080
+      },
+      {
+        "still_path": "/ctX9t64gVhNtz8TtqPp2YJQukKZ.jpg",
+        "still_largura": 1920,
+        "still_altura": 1080
+      },
+      {
+        "still_path": "/2ybds9OxhZmnd6yfBvUp7BNTeOF.jpg",
+        "still_largura": 1920,
+        "still_altura": 1080
+      },
+      {
+        "still_path": "/qjWWz3ORGYnL287iUiNYl6tLPDS.jpg",
+        "still_largura": 3840,
+        "still_altura": 2160
+      },
+      {
+        "still_path": "/boltkh0lwo9W1kx7ojeZab1K7yq.jpg",
+        "still_largura": 1920,
+        "still_altura": 1080
+      },
+      {
+        "still_path": "/fhniVap3BiCPU8IDYTXa0iZpAYK.jpg",
+        "still_largura": 1995,
+        "still_altura": 1122
+      },
+      {
+        "still_path": "/kjY08iAohgbm42SGzr3VbYu2rY1.jpg",
+        "still_largura": 3840,
+        "still_altura": 2160
+      },
+      {
+        "still_path": "/lXY4fpvQKxRX6NYuaic4M7J8lMe.jpg",
+        "still_largura": 1280,
+        "still_altura": 720
+      },
+      {
+        "still_path": "/p6bjM0WVuJbjEmaS73raMj8mbMk.jpg",
+        "still_largura": 1280,
+        "still_altura": 720
+      },
+      {
+        "still_path": "/pfETIv9sfwI5nI2tSbfs9A6Zzld.jpg",
+        "still_largura": 1920,
+        "still_altura": 1080
+      },
+      {
+        "still_path": "/tPP68s1r7Jn4Cq8B7Bx1qNfiFzL.jpg",
+        "still_largura": 1920,
+        "still_altura": 1080
+      },
+      {
+        "still_path": "/vdY2X4Wgu4BjwgfPv9piUfvTLsw.jpg",
+        "still_largura": 1920,
+        "still_altura": 1080
+      }
+    ],
+    "ano_fonte": "letterboxd",
+    "identidade": {
+      "versao": 1,
+      "status": "validada",
+      "slug": "zama",
+      "titulo_letterboxd": "Zama",
+      "ano_letterboxd": 2017,
+      "tmdb_id_letterboxd": 326382,
+      "tmdb_id_escolhido": 326382,
+      "fonte_id": "letterboxd",
+      "titulo_tmdb_campo": "original_title",
+      "titulo_tmdb_correspondente": "Zama",
+      "ano_tmdb": 2017,
+      "ano_divergente": false
+    }
+  },
+  "distribuicao": {
+    "n_notas_total": 25021,
+    "por_nivel": {
+      "0.5": 168,
+      "1.0": 375,
+      "1.5": 343,
+      "2.0": 1386,
+      "2.5": 1688,
+      "3.0": 4555,
+      "3.5": 4795,
+      "4.0": 6916,
+      "4.5": 2509,
+      "5.0": 2286
+    },
+    "por_bucket": {
+      "negativas": 9,
+      "medianas": 25,
+      "positivas": 66
+    },
+    "fonte": "letterboxd_histograma"
+  },
+  "coleta": {
+    "slug": "zama",
+    "coletado_em": "2026-09-10T19:13:01.453872+00:00",
+    "versao_coletor": "1.9.6",
+    "ordenacao_usada": "by/added",
+    "histograma_bruto": {
+      "0.5": 168,
+      "1.0": 375,
+      "1.5": 343,
+      "2.0": 1386,
+      "2.5": 1688,
+      "3.0": 4555,
+      "3.5": 4795,
+      "4.0": 6916,
+      "4.5": 2509,
+      "5.0": 2286
+    },
+    "orcamento_paginas_por_nivel": {
+      "0.5": 1,
+      "1.0": 3,
+      "1.5": 2,
+      "2.0": 10,
+      "2.5": 6,
+      "3.0": 10,
+      "3.5": 5,
+      "4.0": 7,
+      "4.5": 2,
+      "5.0": 2
+    },
+    "paginas_gastas_por_nivel": {
+      "0.5": 1,
+      "1.0": 3,
+      "1.5": 2,
+      "2.0": 10,
+      "2.5": 6,
+      "3.0": 10,
+      "3.5": 5,
+      "4.0": 7,
+      "4.5": 2,
+      "5.0": 2
+    },
+    "paradas_por_limite": [
+      "0.5",
+      "1.0",
+      "1.5",
+      "2.0",
+      "2.5",
+      "3.0",
+      "3.5",
+      "4.0",
+      "4.5",
+      "5.0"
+    ],
+    "contagem_bruta_por_nivel": {
+      "0.5": 12,
+      "1.0": 36,
+      "1.5": 24,
+      "2.0": 120,
+      "2.5": 72,
+      "3.0": 120,
+      "3.5": 60,
+      "4.0": 84,
+      "4.5": 24,
+      "5.0": 24
+    },
+    "contagem_estimada_valida_por_nivel": {
+      "0.5": 1,
+      "1.0": 15,
+      "1.5": 5,
+      "2.0": 44,
+      "2.5": 33,
+      "3.0": 46,
+      "3.5": 32,
+      "4.0": 41,
+      "4.5": 17,
+      "5.0": 10
+    },
+    "motivo_parada_por_nivel": {
+      "0.5": "orcamento_esgotado",
+      "1.0": "orcamento_esgotado",
+      "1.5": "orcamento_esgotado",
+      "2.0": "orcamento_esgotado",
+      "2.5": "orcamento_esgotado",
+      "3.0": "orcamento_esgotado",
+      "3.5": "orcamento_esgotado",
+      "4.0": "orcamento_esgotado",
+      "4.5": "orcamento_esgotado",
+      "5.0": "orcamento_esgotado"
+    },
+    "paginas_base_por_nivel": {
+      "0.5": 1,
+      "1.0": 3,
+      "1.5": 2,
+      "2.0": 10,
+      "2.5": 6,
+      "3.0": 10,
+      "3.5": 5,
+      "4.0": 7,
+      "4.5": 2,
+      "5.0": 2
+    },
+    "paginas_extensao_por_nivel": {
+      "0.5": 0,
+      "1.0": 0,
+      "1.5": 0,
+      "2.0": 0,
+      "2.5": 0,
+      "3.0": 0,
+      "3.5": 0,
+      "4.0": 0,
+      "4.5": 0,
+      "5.0": 0
+    },
+    "extensao_por_bucket": {
+      "negativas": {
+        "paginas_base": 16,
+        "paginas_extensao": 0,
+        "extras_por_nivel": {},
+        "motivo_parada": "meta_atingida",
+        "n_validas_pos_base": 65,
+        "n_validas_pos_extensao": 65,
+        "meta": 50
+      },
+      "medianas": {
+        "paginas_base": 16,
+        "paginas_extensao": 0,
+        "extras_por_nivel": {},
+        "motivo_parada": "meta_atingida",
+        "n_validas_pos_base": 79,
+        "n_validas_pos_extensao": 79,
+        "meta": 50
+      },
+      "positivas": {
+        "paginas_base": 16,
+        "paginas_extensao": 0,
+        "extras_por_nivel": {},
+        "motivo_parada": "meta_atingida",
+        "n_validas_pos_base": 99,
+        "n_validas_pos_extensao": 99,
+        "meta": 50
+      }
+    },
+    "profundidade_sondagem": {
+      "nivel_sondado": 4.0,
+      "profundidade": 88,
+      "exata": false,
+      "requisicoes": 7,
+      "motivo": "encontrada"
+    },
+    "profundidade_estimada_por_nivel": {
+      "0.5": 2,
+      "1.0": 5,
+      "1.5": 4,
+      "2.0": 18,
+      "2.5": 21,
+      "3.0": 58,
+      "3.5": 61,
+      "4.0": 88,
+      "4.5": 32,
+      "5.0": 29
+    },
+    "janela_temporal": {
+      "total": {
+        "n": 576,
+        "min": "2017-10-01",
+        "max": "2026-09-10",
+        "p5": "2022-01-02",
+        "p50": "2026-02-23",
+        "p95": "2026-08-18"
+      },
+      "por_bucket": {
+        "negativas": {
+          "n": 192,
+          "min": "2017-10-05",
+          "max": "2026-09-04",
+          "p5": "2021-03-28",
+          "p50": "2025-08-07",
+          "p95": "2026-07-20"
+        },
+        "medianas": {
+          "n": 192,
+          "min": "2017-10-01",
+          "max": "2026-09-04",
+          "p5": "2021-12-05",
+          "p50": "2026-01-31",
+          "p95": "2026-08-04"
+        },
+        "positivas": {
+          "n": 192,
+          "min": "2021-07-01",
+          "max": "2026-09-10",
+          "p5": "2022-01-31",
+          "p50": "2026-06-06",
+          "p95": "2026-09-01"
+        }
+      }
+    },
+    "dias_por_100_paginas": {
+      "n_paginas": 15,
+      "pagina_min": 1,
+      "pagina_max": 44,
+      "dias": 1656,
+      "dias_por_100_paginas": 3851.1627906976746,
+      "paginas_para_1_ano": 9
+    },
+    "identidade_letterboxd": {
+      "slug": "zama",
+      "titulo": "Zama",
+      "ano": 2017,
+      "tmdb_id_letterboxd": 326382,
+      "fonte": "pagina_letterboxd"
+    },
+    "ano_lancamento": 2017,
+    "ano_fonte": "letterboxd",
+    "n_reviews_bruto": 576
+  },
+  "buckets": [
+    {
+      "bucket": "negativas",
+      "alvo": 40,
+      "modo": "completo",
+      "estado_piso": "completa",
+      "n_validas": 40,
+      "share_real": 9,
+      "composicao_alvo": {
+        "0.5": 3,
+        "1.0": 7,
+        "1.5": 6,
+        "2.0": 24
+      },
+      "composicao_atingida": {
+        "0.5": 1,
+        "1.0": 7,
+        "1.5": 5,
+        "2.0": 27
+      },
+      "cascata_por_degrau": {
+        "150": 40
+      },
+      "deficit_redistribuido": 3,
+      "distribuicao_pagina_origem": {
+        "n": 40,
+        "min": 1,
+        "max": 14,
+        "p5": 1,
+        "p50": 3,
+        "p95": 14,
+        "fracao_profunda": 0.225
+      },
+      "janela_amostra": {
+        "n": 40,
+        "min": "2018-05-22",
+        "max": "2026-09-02",
+        "p5": "2021-04-22",
+        "p50": "2025-09-01",
+        "p95": "2026-07-05"
+      },
+      "niveis": [
+        {
+          "nivel": 0.5,
+          "n_validas": 1,
+          "n_alvo": 3,
+          "n_brutas": 12,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 1,
+          "n_descartadas_curtas": 10,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 0,
+          "motivos_descarte": {
+            "truncada_sem_texto": 0,
+            "spoiler": 1,
+            "abaixo_min_chars": 10,
+            "excedente_cota": 0,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 1
+        },
+        {
+          "nivel": 1.0,
+          "n_validas": 7,
+          "n_alvo": 7,
+          "n_brutas": 36,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 0,
+          "n_descartadas_curtas": 21,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 0,
+          "motivos_descarte": {
+            "truncada_sem_texto": 0,
+            "spoiler": 0,
+            "abaixo_min_chars": 21,
+            "excedente_cota": 8,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 3
+        },
+        {
+          "nivel": 1.5,
+          "n_validas": 5,
+          "n_alvo": 6,
+          "n_brutas": 24,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 0,
+          "n_descartadas_curtas": 18,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 1,
+          "motivos_descarte": {
+            "truncada_sem_texto": 1,
+            "spoiler": 0,
+            "abaixo_min_chars": 18,
+            "excedente_cota": 0,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 2
+        },
+        {
+          "nivel": 2.0,
+          "n_validas": 27,
+          "n_alvo": 24,
+          "n_brutas": 120,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 3,
+          "n_descartadas_curtas": 72,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 1,
+          "motivos_descarte": {
+            "truncada_sem_texto": 1,
+            "spoiler": 3,
+            "abaixo_min_chars": 72,
+            "excedente_cota": 17,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 10
+        }
+      ],
+      "temas": [
+        {
+          "tema": "Ritmo lento e tédio",
+          "mencoes_aproximadas": 25,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "Muitas reviews descrevem o filme como arrastado e entediante, com cenas que se prolongam excessivamente e uma narrativa que não prende a atenção.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Confusão e falta de compreensão",
+          "mencoes_aproximadas": 15,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "Diversos espectadores relatam dificuldade em acompanhar a história, sentindo-se perdidos ou sem entender o que está acontecendo na tela.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Roteiro e narrativa fracos",
+          "mencoes_aproximadas": 12,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "O roteiro é criticado por parecer sem direção, mal adaptado ou por não desenvolver uma trama envolvente, deixando a sensação de que nada acontece.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Personagens desinteressantes",
+          "mencoes_aproximadas": 10,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "O protagonista e os demais personagens são vistos como apáticos, sem carisma ou insuportáveis, dificultando qualquer conexão emocional.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Fotografia e aspectos técnicos elogiados, mas insuficientes",
+          "mencoes_aproximadas": 9,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "Apesar de reconhecerem a beleza da fotografia, do design de produção e da trilha sonora, muitos afirmam que esses elementos não compensam os problemas narrativos.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Dificuldade em se conectar emocionalmente",
+          "mencoes_aproximadas": 8,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "Espectadores mencionam não sentir nada pelo filme, permanecendo emocionalmente distantes e indiferentes ao que é retratado.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        }
+      ],
+      "observacao_geral": "As reviews negativas deste grupo destacam principalmente o ritmo lento e o tédio, a confusão narrativa e a falta de envolvimento com os personagens. Embora alguns reconheçam qualidades técnicas, como fotografia e som, estas não são suficientes para superar a insatisfação geral com a experiência.",
+      "idioma_invalido": false,
+      "escopo_suspeito": false
+    },
+    {
+      "bucket": "medianas",
+      "alvo": 40,
+      "modo": "completo",
+      "estado_piso": "completa",
+      "n_validas": 40,
+      "share_real": 25,
+      "composicao_alvo": {
+        "2.5": 11,
+        "3.0": 29
+      },
+      "composicao_atingida": {
+        "2.5": 11,
+        "3.0": 29
+      },
+      "cascata_por_degrau": {
+        "150": 40
+      },
+      "deficit_redistribuido": 0,
+      "distribuicao_pagina_origem": {
+        "n": 40,
+        "min": 1,
+        "max": 29,
+        "p5": 1,
+        "p50": 5,
+        "p95": 29,
+        "fracao_profunda": 0.325
+      },
+      "janela_amostra": {
+        "n": 40,
+        "min": "2017-10-01",
+        "max": "2026-08-22",
+        "p5": "2021-10-24",
+        "p50": "2026-02-07",
+        "p95": "2026-08-07"
+      },
+      "niveis": [
+        {
+          "nivel": 2.5,
+          "n_validas": 11,
+          "n_alvo": 11,
+          "n_brutas": 72,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 1,
+          "n_descartadas_curtas": 38,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 0,
+          "motivos_descarte": {
+            "truncada_sem_texto": 0,
+            "spoiler": 1,
+            "abaixo_min_chars": 38,
+            "excedente_cota": 22,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 6
+        },
+        {
+          "nivel": 3.0,
+          "n_validas": 29,
+          "n_alvo": 29,
+          "n_brutas": 120,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 1,
+          "n_descartadas_curtas": 73,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 0,
+          "motivos_descarte": {
+            "truncada_sem_texto": 0,
+            "spoiler": 1,
+            "abaixo_min_chars": 73,
+            "excedente_cota": 17,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 10
+        }
+      ],
+      "temas": [
+        {
+          "tema": "Ritmo lento e sensação de duração excessiva",
+          "mencoes_aproximadas": 25,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "Diversas reviews medianas descrevem a experiência como arrastada, com longos trechos de estagnação que fazem o filme parecer muito mais longo do que realmente é, tornando a sessão cansativa.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Fotografia, arte e som de alta qualidade",
+          "mencoes_aproximadas": 18,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "Mesmo sem se envolver totalmente, várias pessoas destacam a beleza das imagens, a composição dos planos, o design de produção e a potência do som como aspectos técnicos notáveis.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Atuação de Daniel Giménez Cacho",
+          "mencoes_aproximadas": 10,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "A interpretação do protagonista é frequentemente elogiada, com menções à sua capacidade de transmitir cansaço, frustração e uma presença melancólica que sustenta boa parte do filme.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Distanciamento emocional e dificuldade de conexão",
+          "mencoes_aproximadas": 9,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "Muitas reviews medianas relatam que, apesar de reconhecerem a qualidade formal, não conseguiram se envolver emocionalmente com o protagonista ou com a história, sentindo-se mantidas à distância.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Crítica ao colonialismo e burocracia",
+          "mencoes_aproximadas": 8,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "Algumas pessoas apontam que o filme retrata de forma satírica a ineficiência da administração colonial, o absurdo da burocracia e as relações de poder, ainda que nem sempre desenvolvendo esses temas a fundo.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Estrutura narrativa fragmentada e falta de trama convencional",
+          "mencoes_aproximadas": 7,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "Há quem mencione que o roteiro se afasta de uma progressão linear, com saltos temporais e eventos que parecem desconexos, o que gera confusão ou desinteresse em parte do público.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        }
+      ],
+      "observacao_geral": "As reviews medianas analisadas reconhecem a qualidade técnica do filme, sobretudo fotografia, som e atuação, mas expressam insatisfação com o ritmo lento e a dificuldade de conexão emocional. Este grupo destaca que, embora haja valor na proposta, a experiência tende a ser cansativa e distante.",
+      "idioma_invalido": false,
+      "escopo_suspeito": false
+    },
+    {
+      "bucket": "positivas",
+      "alvo": 40,
+      "modo": "completo",
+      "estado_piso": "completa",
+      "n_validas": 40,
+      "share_real": 66,
+      "composicao_alvo": {
+        "3.5": 12,
+        "4.0": 17,
+        "4.5": 6,
+        "5.0": 5
+      },
+      "composicao_atingida": {
+        "3.5": 12,
+        "4.0": 17,
+        "4.5": 6,
+        "5.0": 5
+      },
+      "cascata_por_degrau": {
+        "150": 40
+      },
+      "deficit_redistribuido": 0,
+      "distribuicao_pagina_origem": {
+        "n": 40,
+        "min": 1,
+        "max": 44,
+        "p5": 1,
+        "p50": 3,
+        "p95": 22,
+        "fracao_profunda": 0.25
+      },
+      "janela_amostra": {
+        "n": 40,
+        "min": "2022-01-31",
+        "max": "2026-09-08",
+        "p5": "2024-09-02",
+        "p50": "2026-06-13",
+        "p95": "2026-09-05"
+      },
+      "niveis": [
+        {
+          "nivel": 3.5,
+          "n_validas": 12,
+          "n_alvo": 12,
+          "n_brutas": 60,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 0,
+          "n_descartadas_curtas": 28,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 0,
+          "motivos_descarte": {
+            "truncada_sem_texto": 0,
+            "spoiler": 0,
+            "abaixo_min_chars": 28,
+            "excedente_cota": 20,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 5
+        },
+        {
+          "nivel": 4.0,
+          "n_validas": 17,
+          "n_alvo": 17,
+          "n_brutas": 84,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 1,
+          "n_descartadas_curtas": 41,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 2,
+          "motivos_descarte": {
+            "truncada_sem_texto": 2,
+            "spoiler": 1,
+            "abaixo_min_chars": 41,
+            "excedente_cota": 23,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 7
+        },
+        {
+          "nivel": 4.5,
+          "n_validas": 6,
+          "n_alvo": 6,
+          "n_brutas": 24,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 0,
+          "n_descartadas_curtas": 7,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 0,
+          "motivos_descarte": {
+            "truncada_sem_texto": 0,
+            "spoiler": 0,
+            "abaixo_min_chars": 7,
+            "excedente_cota": 11,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 2
+        },
+        {
+          "nivel": 5.0,
+          "n_validas": 5,
+          "n_alvo": 5,
+          "n_brutas": 24,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 0,
+          "n_descartadas_curtas": 13,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 1,
+          "motivos_descarte": {
+            "truncada_sem_texto": 1,
+            "spoiler": 0,
+            "abaixo_min_chars": 13,
+            "excedente_cota": 5,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 2
+        }
+      ],
+      "temas": [
+        {
+          "tema": "Ritmo lento e atmosfera opressiva",
+          "mencoes_aproximadas": 18,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "Várias reviews positivas comentam que o ritmo é deliberadamente lento e arrastado, criando uma sensação de agonia e claustrofobia que combina com a experiência do protagonista, embora algumas considerem que isso possa tornar o filme cansativo em certos momentos.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Fotografia, som e direção de arte",
+          "mencoes_aproximadas": 16,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "As reviews elogiam a fotografia impressionante, o desenho de som imersivo e a recriação de época meticulosa, que transportam o espectador para o século XVIII e criam uma atmosfera densa e sensorial.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Crítica ao colonialismo e à burocracia",
+          "mencoes_aproximadas": 15,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "Este grupo destaca como o filme expõe o absurdo e a violência do sistema colonial, retratando a burocracia espanhola como kafkiana e mostrando a hipocrisia dos colonizadores, que tratam os povos originários com desprezo enquanto dependem de um poder central que os ignora.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Atuação e construção do protagonista",
+          "mencoes_aproximadas": 10,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "A atuação de Daniel Giménez Cacho é frequentemente citada como soberba, dando vida a um personagem patético, frustrado e em declínio mental, cuja trajetória é ao mesmo tempo trágica e ridícula.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Dificuldade de envolvimento emocional ou compreensão",
+          "mencoes_aproximadas": 9,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "Parte das reviews positivas admite que não conseguiu se conectar emocionalmente com os personagens ou entender completamente a narrativa em uma primeira assistência, sentindo-se desorientada, mas ainda assim valoriza os aspectos técnicos e temáticos.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Humor absurdo e comédia seca",
+          "mencoes_aproximadas": 8,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "Alguns membros do grupo percebem o filme como uma comédia negra e absurda, com ironias sutis e situações que beiram o surreal, embora reconheçam que o humor é seco e pode não agradar a todos.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        }
+      ],
+      "observacao_geral": "As reviews positivas destacam a força visual e sonora do filme, sua crítica contundente ao colonialismo e a atuação marcante do protagonista, embora muitas apontem o ritmo lento e a dificuldade de envolvimento emocional como obstáculos. Este grupo específico reconhece a complexidade da obra e a considera uma experiência recompensadora para quem se entrega ao seu universo.",
+      "idioma_invalido": false,
+      "escopo_suspeito": false
+    }
+  ],
+  "eixos": {
+    "taxonomia_id": "ebab2667de74",
+    "margem": {
+      "lei": "lift^2 * n >= 2085136/1000000",
+      "constante_quadrada": [
+        2085136,
+        1000000
+      ],
+      "n": 40,
+      "limiar_pp": 22.83
+    },
+    "margem_lift_pp": 22.83,
+    "linhas": [
+      {
+        "eixo": "ritmo",
+        "por_bucket": {
+          "negativas": {
+            "mencoes": 22,
+            "de_n": 40,
+            "freq_pct": 55.0,
+            "lift_pp": -12.5,
+            "acima_da_margem": false,
+            "tema": "Ritmo lento e tédio",
+            "exemplo_parafraseado": "Muitas reviews descrevem o filme como arrastado e entediante, com cenas que se prolongam excessivamente e uma narrativa que não prende a atenção.",
+            "temas_no_mesmo_eixo": []
+          },
+          "medianas": {
+            "mencoes": 27,
+            "de_n": 40,
+            "freq_pct": 67.5,
+            "lift_pp": 12.5,
+            "acima_da_margem": false,
+            "tema": "Ritmo lento e sensação de duração excessiva",
+            "exemplo_parafraseado": "Diversas reviews medianas descrevem a experiência como arrastada, com longos trechos de estagnação que fazem o filme parecer muito mais longo do que realmente é, tornando a sessão cansativa.",
+            "temas_no_mesmo_eixo": []
+          },
+          "positivas": {
+            "mencoes": 9,
+            "de_n": 40,
+            "freq_pct": 22.5,
+            "lift_pp": -45.0,
+            "acima_da_margem": false,
+            "tema": "Ritmo lento e atmosfera opressiva",
+            "exemplo_parafraseado": "Várias reviews positivas comentam que o ritmo é deliberadamente lento e arrastado, criando uma sensação de agonia e claustrofobia que combina com a experiência do protagonista, embora algumas considerem que isso possa tornar o filme cansativo em certos momentos.",
+            "temas_no_mesmo_eixo": []
+          }
+        },
+        "bullet_de": {
+          "negativas": null,
+          "medianas": "frequencia",
+          "positivas": null
+        }
+      },
+      {
+        "eixo": "atuacao",
+        "por_bucket": {
+          "negativas": {
+            "mencoes": 4,
+            "de_n": 40,
+            "freq_pct": 10.0,
+            "lift_pp": -25.0,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "medianas": {
+            "mencoes": 14,
+            "de_n": 40,
+            "freq_pct": 35.0,
+            "lift_pp": 25.0,
+            "acima_da_margem": true,
+            "tema": "Atuação de Daniel Giménez Cacho",
+            "exemplo_parafraseado": "A interpretação do protagonista é frequentemente elogiada, com menções à sua capacidade de transmitir cansaço, frustração e uma presença melancólica que sustenta boa parte do filme.",
+            "temas_no_mesmo_eixo": []
+          },
+          "positivas": {
+            "mencoes": 4,
+            "de_n": 40,
+            "freq_pct": 10.0,
+            "lift_pp": -25.0,
+            "acima_da_margem": false,
+            "tema": "Atuação e construção do protagonista",
+            "exemplo_parafraseado": "A atuação de Daniel Giménez Cacho é frequentemente citada como soberba, dando vida a um personagem patético, frustrado e em declínio mental, cuja trajetória é ao mesmo tempo trágica e ridícula.",
+            "temas_no_mesmo_eixo": []
+          }
+        },
+        "bullet_de": {
+          "negativas": null,
+          "medianas": "contraste",
+          "positivas": null
+        }
+      },
+      {
+        "eixo": "direcao_imagem",
+        "por_bucket": {
+          "negativas": {
+            "mencoes": 17,
+            "de_n": 40,
+            "freq_pct": 42.5,
+            "lift_pp": -25.0,
+            "acima_da_margem": false,
+            "tema": "Fotografia e aspectos técnicos elogiados, mas insuficientes",
+            "exemplo_parafraseado": "Apesar de reconhecerem a beleza da fotografia, do design de produção e da trilha sonora, muitos afirmam que esses elementos não compensam os problemas narrativos.",
+            "temas_no_mesmo_eixo": []
+          },
+          "medianas": {
+            "mencoes": 27,
+            "de_n": 40,
+            "freq_pct": 67.5,
+            "lift_pp": 17.5,
+            "acima_da_margem": false,
+            "tema": "Fotografia, arte e som de alta qualidade",
+            "exemplo_parafraseado": "Mesmo sem se envolver totalmente, várias pessoas destacam a beleza das imagens, a composição dos planos, o design de produção e a potência do som como aspectos técnicos notáveis.",
+            "temas_no_mesmo_eixo": []
+          },
+          "positivas": {
+            "mencoes": 20,
+            "de_n": 40,
+            "freq_pct": 50.0,
+            "lift_pp": -17.5,
+            "acima_da_margem": false,
+            "tema": "Fotografia, som e direção de arte",
+            "exemplo_parafraseado": "As reviews elogiam a fotografia impressionante, o desenho de som imersivo e a recriação de época meticulosa, que transportam o espectador para o século XVIII e criam uma atmosfera densa e sensorial.",
+            "temas_no_mesmo_eixo": []
+          }
+        },
+        "bullet_de": {
+          "negativas": null,
+          "medianas": "frequencia",
+          "positivas": null
+        }
+      },
+      {
+        "eixo": "roteiro_estrutura",
+        "por_bucket": {
+          "negativas": {
+            "mencoes": 27,
+            "de_n": 40,
+            "freq_pct": 67.5,
+            "lift_pp": -10.0,
+            "acima_da_margem": false,
+            "tema": "Confusão e falta de compreensão",
+            "exemplo_parafraseado": "Diversos espectadores relatam dificuldade em acompanhar a história, sentindo-se perdidos ou sem entender o que está acontecendo na tela.",
+            "temas_no_mesmo_eixo": [
+              "Roteiro e narrativa fracos",
+              "Personagens desinteressantes"
+            ]
+          },
+          "medianas": {
+            "mencoes": 24,
+            "de_n": 40,
+            "freq_pct": 60.0,
+            "lift_pp": -17.5,
+            "acima_da_margem": false,
+            "tema": "Estrutura narrativa fragmentada e falta de trama convencional",
+            "exemplo_parafraseado": "Há quem mencione que o roteiro se afasta de uma progressão linear, com saltos temporais e eventos que parecem desconexos, o que gera confusão ou desinteresse em parte do público.",
+            "temas_no_mesmo_eixo": []
+          },
+          "positivas": {
+            "mencoes": 31,
+            "de_n": 40,
+            "freq_pct": 77.5,
+            "lift_pp": 10.0,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          }
+        },
+        "bullet_de": {
+          "negativas": "frequencia",
+          "medianas": null,
+          "positivas": "frequencia"
+        }
+      },
+      {
+        "eixo": "som_trilha",
+        "por_bucket": {
+          "negativas": {
+            "mencoes": 7,
+            "de_n": 40,
+            "freq_pct": 17.5,
+            "lift_pp": -17.5,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "medianas": {
+            "mencoes": 14,
+            "de_n": 40,
+            "freq_pct": 35.0,
+            "lift_pp": 5.0,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "positivas": {
+            "mencoes": 12,
+            "de_n": 40,
+            "freq_pct": 30.0,
+            "lift_pp": -5.0,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          }
+        },
+        "bullet_de": {
+          "negativas": null,
+          "medianas": null,
+          "positivas": null
+        }
+      },
+      {
+        "eixo": "tom_atmosfera",
+        "por_bucket": {
+          "negativas": {
+            "mencoes": 9,
+            "de_n": 40,
+            "freq_pct": 22.5,
+            "lift_pp": -32.5,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "medianas": {
+            "mencoes": 11,
+            "de_n": 40,
+            "freq_pct": 27.5,
+            "lift_pp": -27.5,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "positivas": {
+            "mencoes": 22,
+            "de_n": 40,
+            "freq_pct": 55.0,
+            "lift_pp": 27.5,
+            "acima_da_margem": true,
+            "tema": "Humor absurdo e comédia seca",
+            "exemplo_parafraseado": "Alguns membros do grupo percebem o filme como uma comédia negra e absurda, com ironias sutis e situações que beiram o surreal, embora reconheçam que o humor é seco e pode não agradar a todos.",
+            "temas_no_mesmo_eixo": []
+          }
+        },
+        "bullet_de": {
+          "negativas": null,
+          "medianas": null,
+          "positivas": "frequencia_e_contraste"
+        }
+      },
+      {
+        "eixo": "impacto_emocional",
+        "por_bucket": {
+          "negativas": {
+            "mencoes": 25,
+            "de_n": 40,
+            "freq_pct": 62.5,
+            "lift_pp": 17.5,
+            "acima_da_margem": false,
+            "tema": "Dificuldade em se conectar emocionalmente",
+            "exemplo_parafraseado": "Espectadores mencionam não sentir nada pelo filme, permanecendo emocionalmente distantes e indiferentes ao que é retratado.",
+            "temas_no_mesmo_eixo": []
+          },
+          "medianas": {
+            "mencoes": 18,
+            "de_n": 40,
+            "freq_pct": 45.0,
+            "lift_pp": -17.5,
+            "acima_da_margem": false,
+            "tema": "Distanciamento emocional e dificuldade de conexão",
+            "exemplo_parafraseado": "Muitas reviews medianas relatam que, apesar de reconhecerem a qualidade formal, não conseguiram se envolver emocionalmente com o protagonista ou com a história, sentindo-se mantidas à distância.",
+            "temas_no_mesmo_eixo": []
+          },
+          "positivas": {
+            "mencoes": 15,
+            "de_n": 40,
+            "freq_pct": 37.5,
+            "lift_pp": -25.0,
+            "acima_da_margem": false,
+            "tema": "Dificuldade de envolvimento emocional ou compreensão",
+            "exemplo_parafraseado": "Parte das reviews positivas admite que não conseguiu se conectar emocionalmente com os personagens ou entender completamente a narrativa em uma primeira assistência, sentindo-se desorientada, mas ainda assim valoriza os aspectos técnicos e temáticos.",
+            "temas_no_mesmo_eixo": []
+          }
+        },
+        "bullet_de": {
+          "negativas": "frequencia",
+          "medianas": null,
+          "positivas": null
+        }
+      },
+      {
+        "eixo": "comparacoes",
+        "por_bucket": {
+          "negativas": {
+            "mencoes": 12,
+            "de_n": 40,
+            "freq_pct": 30.0,
+            "lift_pp": -20.0,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "medianas": {
+            "mencoes": 17,
+            "de_n": 40,
+            "freq_pct": 42.5,
+            "lift_pp": -7.5,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "positivas": {
+            "mencoes": 20,
+            "de_n": 40,
+            "freq_pct": 50.0,
+            "lift_pp": 7.5,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          }
+        },
+        "bullet_de": {
+          "negativas": null,
+          "medianas": null,
+          "positivas": null
+        }
+      },
+      {
+        "eixo": "expectativa",
+        "por_bucket": {
+          "negativas": {
+            "mencoes": 13,
+            "de_n": 40,
+            "freq_pct": 32.5,
+            "lift_pp": 0.0,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "medianas": {
+            "mencoes": 13,
+            "de_n": 40,
+            "freq_pct": 32.5,
+            "lift_pp": 0.0,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "positivas": {
+            "mencoes": 11,
+            "de_n": 40,
+            "freq_pct": 27.5,
+            "lift_pp": -5.0,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          }
+        },
+        "bullet_de": {
+          "negativas": null,
+          "medianas": null,
+          "positivas": null
+        }
+      },
+      {
+        "eixo": "critica_social",
+        "por_bucket": {
+          "negativas": {
+            "mencoes": 12,
+            "de_n": 40,
+            "freq_pct": 30.0,
+            "lift_pp": -10.0,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "medianas": {
+            "mencoes": 14,
+            "de_n": 40,
+            "freq_pct": 35.0,
+            "lift_pp": -5.0,
+            "acima_da_margem": false,
+            "tema": "Crítica ao colonialismo e burocracia",
+            "exemplo_parafraseado": "Algumas pessoas apontam que o filme retrata de forma satírica a ineficiência da administração colonial, o absurdo da burocracia e as relações de poder, ainda que nem sempre desenvolvendo esses temas a fundo.",
+            "temas_no_mesmo_eixo": []
+          },
+          "positivas": {
+            "mencoes": 16,
+            "de_n": 40,
+            "freq_pct": 40.0,
+            "lift_pp": 5.0,
+            "acima_da_margem": false,
+            "tema": "Crítica ao colonialismo e à burocracia",
+            "exemplo_parafraseado": "Este grupo destaca como o filme expõe o absurdo e a violência do sistema colonial, retratando a burocracia espanhola como kafkiana e mostrando a hipocrisia dos colonizadores, que tratam os povos originários com desprezo enquanto dependem de um poder central que os ignora.",
+            "temas_no_mesmo_eixo": []
+          }
+        },
+        "bullet_de": {
+          "negativas": null,
+          "medianas": null,
+          "positivas": null
+        }
+      }
+    ],
+    "contraste": "tematico",
+    "rotulagem": {
+      "n_chamadas": 3,
+      "falharam": [],
+      "fora_da_taxonomia": {},
+      "houve_retentativa": []
+    },
+    "spec_version": "1.9.50",
+    "verificador": {
+      "aplicado": true,
+      "variante": "V2_alvo",
+      "passada": 1,
+      "eixo": "impacto_emocional",
+      "n_removidas_no_corpus": 2781
+    }
+  },
+  "narrativa": "Dirigido por Lucrecia Martel e lançado em 2017, Zama é um drama histórico ambientado no final do século XVIII. A narrativa acompanha Don Diego de Zama, um magistrado espanhol que cumpre castigo em Assunção enquanto aguarda uma transferência para Buenos Aires, decidindo posteriormente se juntar a uma expedição em busca de um lendário fora-da-lei por terras distantes.\n\nA obra estrutura sua experiência em um ritmo pausado e contemplativo, apoiando-se em uma ambientação histórica marcada por estagnação e densidade sensorial.\n\nNa maioria das notas (~66%), uma parcela expressiva ressalta o ritmo lento e a atmosfera opressiva como elementos centrais da proposta. Além disso, muitos enfatizam a qualidade da fotografia, do som e da direção de arte, enquanto vários destacam a representação crítica voltada ao colonialismo e à burocracia.\n\nNessa perspectiva, presente numa parcela das notas (~25%), a maior parte relata que o andamento arrastado provoca uma sensação de duração excessiva. Ao mesmo tempo, boa parte reconhece o valor técnico da fotografia, da arte e do som, e uma fatia menor sublinha a atuação de Daniel Giménez Cacho no papel principal.\n\nPara a visão expressa numa fração mínima das notas (~9%), grande parte aponta o ritmo lento e o tédio como pontos centrais do descontentamento. Ademais, um número considerável menciona confusão e falta de compreensão dos acontecimentos, e uma parcela expressiva critica o roteiro e o desenvolvimento da narrativa por considerá-los fracos.",
+  "verificacao_narrativa": {
+    "quantificador_fora_de_faixa": [],
+    "quantificador_repetido": [],
+    "paragrafos": {
+      "n_paragrafos": 5,
+      "minimo": 3,
+      "insuficientes": false,
+      "longos": []
+    },
+    "n_paragrafos": 5,
+    "paragrafos_insuficientes": false,
+    "paragrafos_longos": [],
+    "grupos_sem_paragrafo_proprio": [],
+    "movimento1_e_movimento2_no_mesmo_paragrafo": false,
+    "formato_invalido": false,
+    "numeros_inventados": [],
+    "rotulos_faltando": [],
+    "ordem_incorreta": false,
+    "vocabulario_peso": false,
+    "resenha_speak": [],
+    "n_resenha_speak": 0,
+    "n_flags": 0
+  },
+  "narrativa_selecao": {
+    "provider": "gemini",
+    "modelo": "gemini-3.7-flash",
+    "n_candidatos": 3,
+    "n_chamadas": 3,
+    "indice_escolhido": 2,
+    "motivo": "melhor_entre_limpos",
+    "criterio_decisivo": "unico",
+    "candidatos": [
+      {
+        "indice": 0,
+        "n_flags": 1,
+        "cliches": 0,
+        "repeticao_max": 2,
+        "ritmo": 5,
+        "cobertura": 1.0,
+        "eliminado": true
+      },
+      {
+        "indice": 1,
+        "n_flags": 2,
+        "cliches": 0,
+        "repeticao_max": 2,
+        "ritmo": 7,
+        "cobertura": 0.889,
+        "eliminado": true
+      },
+      {
+        "indice": 2,
+        "n_flags": 0,
+        "cliches": 0,
+        "repeticao_max": 2,
+        "ritmo": 5,
+        "cobertura": 1.0,
+        "eliminado": false
+      }
+    ],
+    "retry": null,
+    "uso": {
+      "prompt_tokens": 10164,
+      "completion_tokens": 1170,
+      "cache_hit_tokens": 0,
+      "cache_miss_tokens": 10164
+    },
+    "latencia_s": 30.4
+  },
+  "condicoes": {
+    "vale_a_pena": [
+      {
+        "texto": "aprecia uma cadência lenta e opressiva, mesmo que a experiência se torne cansativa",
+        "tema_origem": "POS-A",
+        "bucket_origem": "positivas",
+        "tema_texto": "Ritmo lento e atmosfera opressiva",
+        "rotulo_forca": "muitos"
+      },
+      {
+        "texto": "busca uma recriação de época meticulosa com fotografia impressionante e som imersivo",
+        "tema_origem": "POS-B",
+        "bucket_origem": "positivas",
+        "tema_texto": "Fotografia, som e direção de arte",
+        "rotulo_forca": "muitos"
+      },
+      {
+        "texto": "se interessa pela exposição da violência colonial e do absurdo burocrático espanhol",
+        "tema_origem": "POS-C",
+        "bucket_origem": "positivas",
+        "tema_texto": "Crítica ao colonialismo e à burocracia",
+        "rotulo_forca": "muitos",
+        "origem": "leitura_humana"
+      },
+      {
+        "texto": "valoriza aspectos técnicos e temáticos apesar de possível distanciamento e desorientação",
+        "tema_origem": "POS-E",
+        "bucket_origem": "positivas",
+        "tema_texto": "Dificuldade de envolvimento emocional ou compreensão",
+        "rotulo_forca": "alguns",
+        "origem": "leitura_humana",
+        "avisos": [
+          "exemplo_verbatim"
+        ]
+      }
+    ],
+    "talvez_evite": [
+      {
+        "texto": "se incomoda com narrativas arrastadas e cenas excessivamente prolongadas que causam tédio",
+        "tema_origem": "NEG-A",
+        "bucket_origem": "negativas",
+        "tema_texto": "Ritmo lento e tédio",
+        "rotulo_forca": "a maioria"
+      },
+      {
+        "texto": "se frustra ao se sentir perdido diante de uma história difícil de acompanhar",
+        "tema_origem": "NEG-B",
+        "bucket_origem": "negativas",
+        "tema_texto": "Confusão e falta de compreensão",
+        "rotulo_forca": "muitos"
+      },
+      {
+        "texto": "rejeita narrativas sem direção definida que deixam a sensação de que nada acontece",
+        "tema_origem": "NEG-C",
+        "bucket_origem": "negativas",
+        "tema_texto": "Roteiro e narrativa fracos",
+        "rotulo_forca": "muitos"
+      }
+    ],
+    "ordem_colunas": [
+      "vale_a_pena",
+      "talvez_evite"
+    ],
+    "peso": {
+      "vale_a_pena": {
+        "peso_pct": 66,
+        "peso_texto": "~66% das notas",
+        "nota_de_amostra": null
+      },
+      "talvez_evite": {
+        "peso_pct": 9,
+        "peso_texto": "~9% das notas",
+        "nota_de_amostra": null
+      }
+    },
+    "peso_meio": {
+      "pct": 25,
+      "texto": "~25% das notas ficaram no meio-termo"
+    },
+    "origem": "llm",
+    "temas_pedidos": {
+      "vale_a_pena": [
+        "POS-A",
+        "POS-B",
+        "POS-C",
+        "POS-E"
+      ],
+      "talvez_evite": [
+        "NEG-A",
+        "NEG-B",
+        "NEG-C"
+      ]
+    },
+    "temas_saltados": {
+      "vale_a_pena": [],
+      "talvez_evite": []
+    },
+    "descartadas": [],
+    "retry": null,
+    "provider": "gemini",
+    "modelo": "gemini-3.7-flash",
+    "n_candidatos": 3,
+    "n_chamadas": 3,
+    "indice_escolhido": 2,
+    "candidatos": [
+      {
+        "indice": 0,
+        "n_condicoes": 7,
+        "n_flags": 2,
+        "flags": [
+          "sem_discriminacao"
+        ],
+        "n_temas_cobertos": 7
+      },
+      {
+        "indice": 1,
+        "n_condicoes": 7,
+        "n_flags": 1,
+        "flags": [
+          "sem_discriminacao"
+        ],
+        "n_temas_cobertos": 7
+      },
+      {
+        "indice": 2,
+        "n_condicoes": 7,
+        "n_flags": 0,
+        "flags": [],
+        "n_temas_cobertos": 7
+      }
+    ],
+    "uso": {
+      "prompt_tokens": 8055,
+      "completion_tokens": 1016,
+      "cache_hit_tokens": 0,
+      "cache_miss_tokens": 8055
+    },
+    "latencia_s": 20.56,
+    "spec_version": "1.9.50"
+  }
+}

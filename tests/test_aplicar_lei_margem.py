@@ -413,22 +413,57 @@ def test_estado_igual_com_briefing_igual_NAO_regera(sandbox, alm):
 def test_o_catalogo_publicado_esta_sob_a_lei(alm):
     """O estado FINAL, permanente — complementa os testes de migração acima.
 
-    Eles exercitam o que o harness FAZ; este afirma o que ficou no ar."""
+    Eles exercitam o que o harness FAZ; este afirma o que ficou no ar.
+
+    [piloto de expansão, 2026-09] **Deixou de fixar `35`/`(7, 28, 0)`.** A
+    expansão do catálogo invalida qualquer contagem literal por construção —
+    o número de filmes, e a proporção tematico/valorativo dentro dele, são
+    dados de produto que MUDAM a cada filme publicado, não uma lei que se
+    possa prever de antemão. O que continua travado, e não afrouxou:
+
+      1. **escopo é o CATÁLOGO CANÔNICO** (`votacao-3/consenso.jsonl`), não
+         um glob cego de `resultado/*.json` — que hoje inclui artefatos fora
+         do catálogo (ex.: o curta de teste
+         `como-fazer-um-curta-metragem-experimental-...json`, sem bloco
+         `eixos`, e que um glob cego contaria/ignoraria por acidente de
+         chave ausente, não por pertencimento).
+      2. todo filme do catálogo com JSON publicado passou pela migração
+         (`"margem" in e`);
+      3. **nenhum fica sem estado** (`sem == []`) — este é o achado real que
+         sobrevive a qualquer N: hoje nenhum filme publicado tem bucket
+         abaixo do piso (`n < MARGEM_N_MINIMO`); se um dia tiver, É AQUI que
+         precisa aparecer, não ser engolido por uma contagem agregada;
+      4. a soma bate com o catálogo (nenhum filme contado duas vezes ou
+         perdido do lado);
+      5. `obsession-2025` continua `tematico` — fato específico, não
+         proporção, e por isso sobrevive à expansão sem reformulação.
+    """
     import json as _j
+    caminho_consenso = RAIZ / "resultado" / "votacao-3" / "consenso.jsonl"
+    if not caminho_consenso.exists():
+        pytest.skip("consenso.jsonl indisponível")
+    catalogo = {_j.loads(l)["slug"] for l in
+                caminho_consenso.read_text(encoding="utf-8").splitlines()
+                if l.strip()}
+
     estados = {}
-    for p in sorted((RAIZ / "resultado").glob("*.json")):
+    for slug in sorted(catalogo):
+        p = RAIZ / "resultado" / f"{slug}.json"
+        if not p.exists():
+            continue
         e = _j.loads(p.read_text(encoding="utf-8")).get("eixos")
         if e:
-            assert "margem" in e, f"{p.stem} não passou pela migração"
-            estados[p.stem] = e.get("contraste")
+            assert "margem" in e, f"{slug} não passou pela migração"
+            estados[slug] = e.get("contraste")
     if len(estados) < 30:
         pytest.skip(f"poucos filmes publicados neste checkout ({len(estados)})")
+
     t = sorted(s for s, v in estados.items() if v == "tematico")
     sem = sorted(s for s, v in estados.items() if v is None)
     v = [s for s, x in estados.items() if x == "valorativo"]
-    assert (len(t), len(v), len(sem)) == (7, 28, 0)
-    assert len(t) + len(v) + len(sem) == 35     # a soma que faltou uma vez
-    assert sem == []
+    assert len(t) + len(v) + len(sem) == len(estados), (
+        "a soma dos três estados não bate com o catálogo publicado")
+    assert sem == [], f"filme(s) publicado(s) sem estado de contraste: {sem}"
     assert "obsession-2025" in t
 
 

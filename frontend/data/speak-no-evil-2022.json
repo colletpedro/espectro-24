@@ -1,0 +1,1529 @@
+{
+  "slug": "speak-no-evil-2022",
+  "data_coleta": "2026-09-13T05:32:51.966805+00:00",
+  "spec_version": "1.9.50",
+  "total_reviews_observadas": 576,
+  "reviews_url": "https://letterboxd.com/film/speak-no-evil-2022/reviews/",
+  "ficha": {
+    "titulo": "Não Fale o Mal",
+    "sinopse_oficial": "Após conhecerem uma família holandesa durante suas férias na Tosca, uma família dinamarquesa recebe o convite de passar o fim de semana na casa de seus novos amigos. Mas não demora muito para que mal-entendidos revelem que a família holandesa não é quem diziam ser.",
+    "sinopse_fallback_en": false,
+    "generos": [
+      "Terror",
+      "Thriller",
+      "Drama"
+    ],
+    "duracao_min": 98,
+    "diretor": "Christian Tafdrup",
+    "diretor_transliterado": false,
+    "ano": 2022,
+    "fonte": "tmdb",
+    "tmdb_id": 833339,
+    "tmdb_fetched_at": "2026-09-10T20:06:58+00:00",
+    "poster_path": "/cTcqksGeVKtHelStB7eKrSckczN.jpg",
+    "poster_largura": 1000,
+    "poster_altura": 1500,
+    "backdrop_paths": [
+      "/lHhRU3jEnju4pKibOeYOgxaEw2y.jpg",
+      "/akmMZoh4QN2INFwgDiHLo33rFVv.jpg",
+      "/s5NL9pitr7lRlR1wEV4SqLJC9m0.jpg",
+      "/i7oEj5lMzTNChoHXfzRrAfZ9a2e.jpg",
+      "/4gEz2Vnv7xCzVOQozgZXkeoMRkM.jpg",
+      "/t7iUYPXMl4vU7UzzvFB4vJyJ5JV.jpg",
+      "/l2352MAht6LnBYaK8ckz1soUxlu.jpg",
+      "/b6RFw4hNaYtOWbcPuxBV80hS7Qh.jpg",
+      "/6wUZx8vrVYboqqqhm4sWvTFONHS.jpg",
+      "/ke0lCNOEHm7CZX9MdE54ofBxDXT.jpg"
+    ],
+    "backdrop_path": "/lHhRU3jEnju4pKibOeYOgxaEw2y.jpg",
+    "backdrop_largura": 1920,
+    "backdrop_altura": 1080,
+    "poster_sem_texto_path": "/9Hsz84sAefFWQWPAMlMH5rQDVsY.jpg",
+    "poster_sem_texto_largura": 1984,
+    "poster_sem_texto_altura": 2835,
+    "galeria_stills": [
+      {
+        "still_path": "/lHhRU3jEnju4pKibOeYOgxaEw2y.jpg",
+        "still_largura": 1920,
+        "still_altura": 1080
+      },
+      {
+        "still_path": "/akmMZoh4QN2INFwgDiHLo33rFVv.jpg",
+        "still_largura": 3840,
+        "still_altura": 2160
+      },
+      {
+        "still_path": "/s5NL9pitr7lRlR1wEV4SqLJC9m0.jpg",
+        "still_largura": 1920,
+        "still_altura": 1080
+      },
+      {
+        "still_path": "/i7oEj5lMzTNChoHXfzRrAfZ9a2e.jpg",
+        "still_largura": 3840,
+        "still_altura": 2160
+      },
+      {
+        "still_path": "/4gEz2Vnv7xCzVOQozgZXkeoMRkM.jpg",
+        "still_largura": 1920,
+        "still_altura": 1080
+      },
+      {
+        "still_path": "/6wUZx8vrVYboqqqhm4sWvTFONHS.jpg",
+        "still_largura": 3000,
+        "still_altura": 1687
+      },
+      {
+        "still_path": "/b6RFw4hNaYtOWbcPuxBV80hS7Qh.jpg",
+        "still_largura": 3840,
+        "still_altura": 2160
+      },
+      {
+        "still_path": "/ke0lCNOEHm7CZX9MdE54ofBxDXT.jpg",
+        "still_largura": 3840,
+        "still_altura": 2160
+      },
+      {
+        "still_path": "/l2352MAht6LnBYaK8ckz1soUxlu.jpg",
+        "still_largura": 3198,
+        "still_altura": 1799
+      },
+      {
+        "still_path": "/t7iUYPXMl4vU7UzzvFB4vJyJ5JV.jpg",
+        "still_largura": 1920,
+        "still_altura": 1080
+      },
+      {
+        "still_path": "/jqWmLsW3a6U1l3v4JN807GI058U.jpg",
+        "still_largura": 1920,
+        "still_altura": 1080
+      }
+    ],
+    "ano_fonte": "letterboxd",
+    "identidade": {
+      "versao": 1,
+      "status": "validada",
+      "slug": "speak-no-evil-2022",
+      "titulo_letterboxd": "Speak No Evil",
+      "ano_letterboxd": 2022,
+      "tmdb_id_letterboxd": 833339,
+      "tmdb_id_escolhido": 833339,
+      "fonte_id": "letterboxd",
+      "titulo_tmdb_campo": "original_title",
+      "titulo_tmdb_correspondente": "Speak No Evil",
+      "ano_tmdb": 2022,
+      "ano_divergente": false
+    }
+  },
+  "distribuicao": {
+    "n_notas_total": 247174,
+    "por_nivel": {
+      "0.5": 2813,
+      "1.0": 4702,
+      "1.5": 4433,
+      "2.0": 15050,
+      "2.5": 19111,
+      "3.0": 49924,
+      "3.5": 57146,
+      "4.0": 64170,
+      "4.5": 14695,
+      "5.0": 15130
+    },
+    "por_bucket": {
+      "negativas": 11,
+      "medianas": 28,
+      "positivas": 61
+    },
+    "fonte": "letterboxd_histograma"
+  },
+  "coleta": {
+    "slug": "speak-no-evil-2022",
+    "coletado_em": "2026-09-10T19:46:04.483082+00:00",
+    "versao_coletor": "1.9.6",
+    "ordenacao_usada": "by/added",
+    "histograma_bruto": {
+      "0.5": 2813,
+      "1.0": 4702,
+      "1.5": 4433,
+      "2.0": 15050,
+      "2.5": 19111,
+      "3.0": 49924,
+      "3.5": 57146,
+      "4.0": 64170,
+      "4.5": 14695,
+      "5.0": 15130
+    },
+    "orcamento_paginas_por_nivel": {
+      "0.5": 2,
+      "1.0": 3,
+      "1.5": 2,
+      "2.0": 9,
+      "2.5": 6,
+      "3.0": 10,
+      "3.5": 6,
+      "4.0": 7,
+      "4.5": 1,
+      "5.0": 2
+    },
+    "paginas_gastas_por_nivel": {
+      "0.5": 2,
+      "1.0": 3,
+      "1.5": 2,
+      "2.0": 9,
+      "2.5": 6,
+      "3.0": 10,
+      "3.5": 6,
+      "4.0": 7,
+      "4.5": 1,
+      "5.0": 2
+    },
+    "paradas_por_limite": [
+      "0.5",
+      "1.0",
+      "1.5",
+      "2.0",
+      "2.5",
+      "3.0",
+      "3.5",
+      "4.0",
+      "4.5",
+      "5.0"
+    ],
+    "contagem_bruta_por_nivel": {
+      "0.5": 24,
+      "1.0": 36,
+      "1.5": 24,
+      "2.0": 108,
+      "2.5": 72,
+      "3.0": 120,
+      "3.5": 72,
+      "4.0": 84,
+      "4.5": 12,
+      "5.0": 24
+    },
+    "contagem_estimada_valida_por_nivel": {
+      "0.5": 9,
+      "1.0": 7,
+      "1.5": 7,
+      "2.0": 32,
+      "2.5": 14,
+      "3.0": 24,
+      "3.5": 23,
+      "4.0": 21,
+      "4.5": 4,
+      "5.0": 4
+    },
+    "motivo_parada_por_nivel": {
+      "0.5": "orcamento_esgotado",
+      "1.0": "orcamento_esgotado",
+      "1.5": "orcamento_esgotado",
+      "2.0": "orcamento_esgotado",
+      "2.5": "orcamento_esgotado",
+      "3.0": "orcamento_esgotado",
+      "3.5": "orcamento_esgotado",
+      "4.0": "orcamento_esgotado",
+      "4.5": "orcamento_esgotado",
+      "5.0": "orcamento_esgotado"
+    },
+    "paginas_base_por_nivel": {
+      "0.5": 2,
+      "1.0": 3,
+      "1.5": 2,
+      "2.0": 9,
+      "2.5": 6,
+      "3.0": 10,
+      "3.5": 6,
+      "4.0": 7,
+      "4.5": 1,
+      "5.0": 2
+    },
+    "paginas_extensao_por_nivel": {
+      "0.5": 0,
+      "1.0": 0,
+      "1.5": 0,
+      "2.0": 0,
+      "2.5": 0,
+      "3.0": 0,
+      "3.5": 0,
+      "4.0": 0,
+      "4.5": 0,
+      "5.0": 0
+    },
+    "extensao_por_bucket": {
+      "negativas": {
+        "paginas_base": 16,
+        "paginas_extensao": 0,
+        "extras_por_nivel": {},
+        "motivo_parada": "meta_atingida",
+        "n_validas_pos_base": 55,
+        "n_validas_pos_extensao": 55,
+        "meta": 50
+      },
+      "medianas": {
+        "paginas_base": 16,
+        "paginas_extensao": 0,
+        "extras_por_nivel": {},
+        "motivo_parada": "meta_atingida",
+        "n_validas_pos_base": 50,
+        "n_validas_pos_extensao": 50,
+        "meta": 50
+      },
+      "positivas": {
+        "paginas_base": 16,
+        "paginas_extensao": 0,
+        "extras_por_nivel": {},
+        "motivo_parada": "meta_atingida",
+        "n_validas_pos_base": 52,
+        "n_validas_pos_extensao": 52,
+        "meta": 50
+      }
+    },
+    "profundidade_sondagem": {
+      "nivel_sondado": 4.0,
+      "profundidade": 256,
+      "exata": false,
+      "requisicoes": 4,
+      "motivo": "teto_plataforma"
+    },
+    "profundidade_estimada_por_nivel": {
+      "0.5": 11,
+      "1.0": 19,
+      "1.5": 18,
+      "2.0": 60,
+      "2.5": 76,
+      "3.0": 199,
+      "3.5": 228,
+      "4.0": 256,
+      "4.5": 59,
+      "5.0": 60
+    },
+    "janela_temporal": {
+      "total": {
+        "n": 612,
+        "min": "2022-09-07",
+        "max": "2026-09-10",
+        "p5": "2026-01-05",
+        "p50": "2026-08-25",
+        "p95": "2026-09-08"
+      },
+      "por_bucket": {
+        "negativas": {
+          "n": 192,
+          "min": "2023-06-13",
+          "max": "2026-09-09",
+          "p5": "2026-02-14",
+          "p50": "2026-08-15",
+          "p95": "2026-09-07"
+        },
+        "medianas": {
+          "n": 228,
+          "min": "2024-03-19",
+          "max": "2026-09-10",
+          "p5": "2026-01-05",
+          "p50": "2026-08-25",
+          "p95": "2026-09-07"
+        },
+        "positivas": {
+          "n": 192,
+          "min": "2022-09-07",
+          "max": "2026-09-10",
+          "p5": "2026-01-04",
+          "p50": "2026-09-03",
+          "p95": "2026-09-09"
+        }
+      }
+    },
+    "dias_por_100_paginas": {
+      "n_paginas": 21,
+      "pagina_min": 1,
+      "pagina_max": 128,
+      "dias": 225,
+      "dias_por_100_paginas": 177.16535433070865,
+      "paginas_para_1_ano": 206
+    },
+    "identidade_letterboxd": {
+      "slug": "speak-no-evil-2022",
+      "titulo": "Speak No Evil",
+      "ano": 2022,
+      "tmdb_id_letterboxd": 833339,
+      "fonte": "pagina_letterboxd"
+    },
+    "ano_lancamento": 2022,
+    "ano_fonte": "letterboxd",
+    "n_reviews_bruto": 612
+  },
+  "buckets": [
+    {
+      "bucket": "negativas",
+      "alvo": 40,
+      "modo": "completo",
+      "estado_piso": "completa",
+      "n_validas": 40,
+      "share_real": 11,
+      "composicao_alvo": {
+        "0.5": 4,
+        "1.0": 7,
+        "1.5": 7,
+        "2.0": 22
+      },
+      "composicao_atingida": {
+        "0.5": 4,
+        "1.0": 7,
+        "1.5": 7,
+        "2.0": 22
+      },
+      "cascata_por_degrau": {
+        "150": 40
+      },
+      "deficit_redistribuido": 0,
+      "distribuicao_pagina_origem": {
+        "n": 40,
+        "min": 1,
+        "max": 30,
+        "p5": 1,
+        "p50": 2,
+        "p95": 15,
+        "fracao_profunda": 0.15
+      },
+      "janela_amostra": {
+        "n": 40,
+        "min": "2026-02-14",
+        "max": "2026-09-09",
+        "p5": "2026-06-07",
+        "p50": "2026-08-14",
+        "p95": "2026-09-07"
+      },
+      "niveis": [
+        {
+          "nivel": 0.5,
+          "n_validas": 4,
+          "n_alvo": 4,
+          "n_brutas": 24,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 1,
+          "n_descartadas_curtas": 14,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 0,
+          "motivos_descarte": {
+            "truncada_sem_texto": 0,
+            "spoiler": 1,
+            "abaixo_min_chars": 14,
+            "excedente_cota": 5,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 2
+        },
+        {
+          "nivel": 1.0,
+          "n_validas": 7,
+          "n_alvo": 7,
+          "n_brutas": 36,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 2,
+          "n_descartadas_curtas": 26,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 1,
+          "motivos_descarte": {
+            "truncada_sem_texto": 1,
+            "spoiler": 2,
+            "abaixo_min_chars": 26,
+            "excedente_cota": 0,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 3
+        },
+        {
+          "nivel": 1.5,
+          "n_validas": 7,
+          "n_alvo": 7,
+          "n_brutas": 24,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 1,
+          "n_descartadas_curtas": 16,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 0,
+          "motivos_descarte": {
+            "truncada_sem_texto": 0,
+            "spoiler": 1,
+            "abaixo_min_chars": 16,
+            "excedente_cota": 0,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 2
+        },
+        {
+          "nivel": 2.0,
+          "n_validas": 22,
+          "n_alvo": 22,
+          "n_brutas": 108,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 6,
+          "n_descartadas_curtas": 69,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 1,
+          "motivos_descarte": {
+            "truncada_sem_texto": 1,
+            "spoiler": 6,
+            "abaixo_min_chars": 69,
+            "excedente_cota": 10,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 9
+        }
+      ],
+      "temas": [
+        {
+          "tema": "Personagens burros e sem instinto de sobrevivência",
+          "mencoes_aproximadas": 30,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "Os personagens tomam decisões idiotas atrás de idiotas, sem qualquer instinto de autopreservação, o que torna a história inacreditável e irritante.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Roteiro forçado e ilógico",
+          "mencoes_aproximadas": 22,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "A trama depende de coincidências e ações sem sentido para avançar, parecendo que os personagens agem apenas para cumprir as exigências do roteiro.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Final insatisfatório e pretensioso",
+          "mencoes_aproximadas": 18,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "O desfecho é decepcionante, gratuito e tenta chocar sem construir um significado coerente, deixando uma sensação de vazio.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Falta de motivação dos antagonistas",
+          "mencoes_aproximadas": 12,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "As razões por trás das ações da família antagonista nunca são explicadas, tornando suas atitudes arbitrárias e difíceis de engolir.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Ritmo arrastado e falta de tensão",
+          "mencoes_aproximadas": 10,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "O filme demora a engrenar e, quando tenta criar suspense, soa monótono e previsível, sem gerar medo ou ansiedade reais.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Mensagem política ou social panfletária",
+          "mencoes_aproximadas": 8,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "A crítica social embutida é apresentada de forma rasa e panfletária, com uma mensagem reacionária que soa forçada e sem sutileza.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        }
+      ],
+      "observacao_geral": "As reviews negativas destacam principalmente a estupidez dos personagens e a falta de lógica do roteiro, que torna a experiência frustrante. Este grupo também critica o final insatisfatório, a ausência de motivações dos vilões e a mensagem panfletária, resultando em uma recepção bastante desfavorável.",
+      "idioma_invalido": false,
+      "escopo_suspeito": false
+    },
+    {
+      "bucket": "medianas",
+      "alvo": 40,
+      "modo": "completo",
+      "estado_piso": "completa",
+      "n_validas": 40,
+      "share_real": 28,
+      "composicao_alvo": {
+        "2.5": 11,
+        "3.0": 29
+      },
+      "composicao_atingida": {
+        "2.5": 11,
+        "3.0": 29
+      },
+      "cascata_por_degrau": {
+        "150": 40
+      },
+      "deficit_redistribuido": 0,
+      "distribuicao_pagina_origem": {
+        "n": 40,
+        "min": 1,
+        "max": 38,
+        "p5": 1,
+        "p50": 6,
+        "p95": 38,
+        "fracao_profunda": 0.425
+      },
+      "janela_amostra": {
+        "n": 40,
+        "min": "2026-02-16",
+        "max": "2026-09-07",
+        "p5": "2026-02-18",
+        "p50": "2026-08-25",
+        "p95": "2026-09-06"
+      },
+      "niveis": [
+        {
+          "nivel": 2.5,
+          "n_validas": 11,
+          "n_alvo": 11,
+          "n_brutas": 72,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 7,
+          "n_descartadas_curtas": 50,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 1,
+          "motivos_descarte": {
+            "truncada_sem_texto": 1,
+            "spoiler": 7,
+            "abaixo_min_chars": 50,
+            "excedente_cota": 3,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 6
+        },
+        {
+          "nivel": 3.0,
+          "n_validas": 29,
+          "n_alvo": 29,
+          "n_brutas": 156,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 9,
+          "n_descartadas_curtas": 107,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 4,
+          "motivos_descarte": {
+            "truncada_sem_texto": 4,
+            "spoiler": 9,
+            "abaixo_min_chars": 107,
+            "excedente_cota": 7,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 10
+        }
+      ],
+      "temas": [
+        {
+          "tema": "Personagens principais excessivamente passivos e sem instinto de sobrevivência",
+          "mencoes_aproximadas": 32,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "Várias reviews medianas criticam a falta de instinto de autopreservação do casal protagonista, descrevendo suas decisões como ingênuas e frustrantes, o que prejudica a imersão na história.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Atuações e aspectos técnicos elogiados",
+          "mencoes_aproximadas": 18,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "Este grupo destaca as atuações competentes e a boa fotografia, ainda que esses elementos não sejam suficientes para compensar os problemas de roteiro.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Ritmo lento e acúmulo de tensão desconfortável",
+          "mencoes_aproximadas": 15,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "As reviews medianas mencionam que a construção gradual do desconforto e a atmosfera opressiva funcionam, mas podem tornar a experiência lenta ou arrastada para alguns.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Roteiro com decisões questionáveis e falta de desenvolvimento",
+          "mencoes_aproximadas": 14,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "Algumas críticas apontam que o roteiro apresenta escolhas pouco convincentes e personagens subdesenvolvidos, o que enfraquece a narrativa e a conexão emocional.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Comparação com o remake americano",
+          "mencoes_aproximadas": 13,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "Muitos espectadores comparam esta versão original ao remake americano, frequentemente preferindo o remake por seu desenvolvimento ou final, embora alguns prefiram o final mais sombrio do original.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Final impactante e controverso",
+          "mencoes_aproximadas": 12,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "O desfecho é descrito como brutal, chocante ou excessivamente niilista, dividindo opiniões entre os que o consideram eficaz e os que o acham gratuito ou pouco crível.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        }
+      ],
+      "observacao_geral": "As reviews medianas deste grupo destacam principalmente a frustração com a passividade do casal protagonista e as decisões questionáveis do roteiro, embora reconheçam qualidades técnicas como atuações e fotografia. A tensão construída e o final controverso também são pontos recorrentes, com muitos comparando esta versão ao remake americano.",
+      "idioma_invalido": false,
+      "escopo_suspeito": false
+    },
+    {
+      "bucket": "positivas",
+      "alvo": 40,
+      "modo": "completo",
+      "estado_piso": "completa",
+      "n_validas": 40,
+      "share_real": 61,
+      "composicao_alvo": {
+        "3.5": 15,
+        "4.0": 17,
+        "4.5": 4,
+        "5.0": 4
+      },
+      "composicao_atingida": {
+        "3.5": 15,
+        "4.0": 17,
+        "4.5": 4,
+        "5.0": 4
+      },
+      "cascata_por_degrau": {
+        "150": 40
+      },
+      "deficit_redistribuido": 0,
+      "distribuicao_pagina_origem": {
+        "n": 40,
+        "min": 1,
+        "max": 128,
+        "p5": 1,
+        "p50": 3,
+        "p95": 64,
+        "fracao_profunda": 0.275
+      },
+      "janela_amostra": {
+        "n": 40,
+        "min": "2024-09-12",
+        "max": "2026-09-10",
+        "p5": "2026-01-25",
+        "p50": "2026-09-04",
+        "p95": "2026-09-09"
+      },
+      "niveis": [
+        {
+          "nivel": 3.5,
+          "n_validas": 15,
+          "n_alvo": 15,
+          "n_brutas": 72,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 3,
+          "n_descartadas_curtas": 46,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 0,
+          "motivos_descarte": {
+            "truncada_sem_texto": 0,
+            "spoiler": 3,
+            "abaixo_min_chars": 46,
+            "excedente_cota": 8,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 6
+        },
+        {
+          "nivel": 4.0,
+          "n_validas": 17,
+          "n_alvo": 17,
+          "n_brutas": 84,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 6,
+          "n_descartadas_curtas": 57,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 0,
+          "motivos_descarte": {
+            "truncada_sem_texto": 0,
+            "spoiler": 6,
+            "abaixo_min_chars": 57,
+            "excedente_cota": 4,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 7
+        },
+        {
+          "nivel": 4.5,
+          "n_validas": 4,
+          "n_alvo": 4,
+          "n_brutas": 12,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 2,
+          "n_descartadas_curtas": 6,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 0,
+          "motivos_descarte": {
+            "truncada_sem_texto": 0,
+            "spoiler": 2,
+            "abaixo_min_chars": 6,
+            "excedente_cota": 0,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 1
+        },
+        {
+          "nivel": 5.0,
+          "n_validas": 4,
+          "n_alvo": 4,
+          "n_brutas": 24,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 1,
+          "n_descartadas_curtas": 19,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 0,
+          "motivos_descarte": {
+            "truncada_sem_texto": 0,
+            "spoiler": 1,
+            "abaixo_min_chars": 19,
+            "excedente_cota": 0,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 2
+        }
+      ],
+      "temas": [
+        {
+          "tema": "Desconforto e tensão constantes",
+          "mencoes_aproximadas": 18,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "As reviews descrevem uma experiência angustiante do início ao fim, com cenas que causam ansiedade e um clima opressivo que domina todo o filme.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Passividade e excesso de gentileza dos protagonistas",
+          "mencoes_aproximadas": 17,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "Este grupo critica a dificuldade dos personagens em dizer não e a tendência a ceder para não parecer indelicados, o que os coloca em situações cada vez mais desconfortáveis.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Final impactante e brutal",
+          "mencoes_aproximadas": 15,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "As reviews destacam que o desfecho é chocante, cruel e difícil de esquecer, sendo frequentemente apontado como o ponto mais forte do longa.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Atuações e construção de personagens",
+          "mencoes_aproximadas": 10,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "As atuações são elogiadas, especialmente a do ator que interpreta o pai, e os personagens são considerados críveis dentro de sua ingenuidade.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Comparação com a refilmagem americana",
+          "mencoes_aproximadas": 9,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "Diversas reviews comparam esta obra à sua refilmagem, afirmando que a versão original é mais sombria, corajosa e eficaz em seu impacto.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Crítica social e comportamento humano",
+          "mencoes_aproximadas": 8,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "Este grupo enxerga no filme uma reflexão sobre convenções sociais, o medo de contrariar e as consequências de pequenas concessões cotidianas.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        }
+      ],
+      "observacao_geral": "As reviews positivas destacam a tensão constante, a crítica à passividade social e o final brutal como pontos centrais, além de elogiarem as atuações e a atmosfera opressiva. Este grupo também costuma comparar a obra à sua refilmagem, considerando a versão original mais impactante e corajosa.",
+      "idioma_invalido": false,
+      "escopo_suspeito": false
+    }
+  ],
+  "eixos": {
+    "taxonomia_id": "ebab2667de74",
+    "margem": {
+      "lei": "lift^2 * n >= 2085136/1000000",
+      "constante_quadrada": [
+        2085136,
+        1000000
+      ],
+      "n": 40,
+      "limiar_pp": 22.83
+    },
+    "margem_lift_pp": 22.83,
+    "linhas": [
+      {
+        "eixo": "ritmo",
+        "por_bucket": {
+          "negativas": {
+            "mencoes": 4,
+            "de_n": 40,
+            "freq_pct": 10.0,
+            "lift_pp": -7.5,
+            "acima_da_margem": false,
+            "tema": "Ritmo arrastado e falta de tensão",
+            "exemplo_parafraseado": "O filme demora a engrenar e, quando tenta criar suspense, soa monótono e previsível, sem gerar medo ou ansiedade reais.",
+            "temas_no_mesmo_eixo": []
+          },
+          "medianas": {
+            "mencoes": 7,
+            "de_n": 40,
+            "freq_pct": 17.5,
+            "lift_pp": 7.5,
+            "acima_da_margem": false,
+            "tema": "Ritmo lento e acúmulo de tensão desconfortável",
+            "exemplo_parafraseado": "As reviews medianas mencionam que a construção gradual do desconforto e a atmosfera opressiva funcionam, mas podem tornar a experiência lenta ou arrastada para alguns.",
+            "temas_no_mesmo_eixo": []
+          },
+          "positivas": {
+            "mencoes": 4,
+            "de_n": 40,
+            "freq_pct": 10.0,
+            "lift_pp": -7.5,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          }
+        },
+        "bullet_de": {
+          "negativas": null,
+          "medianas": null,
+          "positivas": null
+        }
+      },
+      {
+        "eixo": "atuacao",
+        "por_bucket": {
+          "negativas": {
+            "mencoes": 5,
+            "de_n": 40,
+            "freq_pct": 12.5,
+            "lift_pp": -2.5,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "medianas": {
+            "mencoes": 6,
+            "de_n": 40,
+            "freq_pct": 15.0,
+            "lift_pp": 2.5,
+            "acima_da_margem": false,
+            "tema": "Atuações e aspectos técnicos elogiados",
+            "exemplo_parafraseado": "Este grupo destaca as atuações competentes e a boa fotografia, ainda que esses elementos não sejam suficientes para compensar os problemas de roteiro.",
+            "temas_no_mesmo_eixo": []
+          },
+          "positivas": {
+            "mencoes": 5,
+            "de_n": 40,
+            "freq_pct": 12.5,
+            "lift_pp": -2.5,
+            "acima_da_margem": false,
+            "tema": "Atuações e construção de personagens",
+            "exemplo_parafraseado": "As atuações são elogiadas, especialmente a do ator que interpreta o pai, e os personagens são considerados críveis dentro de sua ingenuidade.",
+            "temas_no_mesmo_eixo": []
+          }
+        },
+        "bullet_de": {
+          "negativas": null,
+          "medianas": null,
+          "positivas": null
+        }
+      },
+      {
+        "eixo": "direcao_imagem",
+        "por_bucket": {
+          "negativas": {
+            "mencoes": 5,
+            "de_n": 40,
+            "freq_pct": 12.5,
+            "lift_pp": -2.5,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "medianas": {
+            "mencoes": 6,
+            "de_n": 40,
+            "freq_pct": 15.0,
+            "lift_pp": 2.5,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "positivas": {
+            "mencoes": 5,
+            "de_n": 40,
+            "freq_pct": 12.5,
+            "lift_pp": -2.5,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          }
+        },
+        "bullet_de": {
+          "negativas": null,
+          "medianas": null,
+          "positivas": null
+        }
+      },
+      {
+        "eixo": "roteiro_estrutura",
+        "por_bucket": {
+          "negativas": {
+            "mencoes": 39,
+            "de_n": 40,
+            "freq_pct": 97.5,
+            "lift_pp": 15.0,
+            "acima_da_margem": false,
+            "tema": "Personagens burros e sem instinto de sobrevivência",
+            "exemplo_parafraseado": "Os personagens tomam decisões idiotas atrás de idiotas, sem qualquer instinto de autopreservação, o que torna a história inacreditável e irritante.",
+            "temas_no_mesmo_eixo": [
+              "Roteiro forçado e ilógico",
+              "Final insatisfatório e pretensioso",
+              "Falta de motivação dos antagonistas"
+            ]
+          },
+          "medianas": {
+            "mencoes": 33,
+            "de_n": 40,
+            "freq_pct": 82.5,
+            "lift_pp": -15.0,
+            "acima_da_margem": false,
+            "tema": "Personagens principais excessivamente passivos e sem instinto de sobrevivência",
+            "exemplo_parafraseado": "Várias reviews medianas criticam a falta de instinto de autopreservação do casal protagonista, descrevendo suas decisões como ingênuas e frustrantes, o que prejudica a imersão na história.",
+            "temas_no_mesmo_eixo": [
+              "Roteiro com decisões questionáveis e falta de desenvolvimento"
+            ]
+          },
+          "positivas": {
+            "mencoes": 32,
+            "de_n": 40,
+            "freq_pct": 80.0,
+            "lift_pp": -17.5,
+            "acima_da_margem": false,
+            "tema": "Passividade e excesso de gentileza dos protagonistas",
+            "exemplo_parafraseado": "Este grupo critica a dificuldade dos personagens em dizer não e a tendência a ceder para não parecer indelicados, o que os coloca em situações cada vez mais desconfortáveis.",
+            "temas_no_mesmo_eixo": [
+              "Final impactante e brutal"
+            ]
+          }
+        },
+        "bullet_de": {
+          "negativas": "frequencia",
+          "medianas": "frequencia",
+          "positivas": "frequencia"
+        }
+      },
+      {
+        "eixo": "som_trilha",
+        "por_bucket": {
+          "negativas": {
+            "mencoes": 4,
+            "de_n": 40,
+            "freq_pct": 10.0,
+            "lift_pp": -2.5,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "medianas": {
+            "mencoes": 5,
+            "de_n": 40,
+            "freq_pct": 12.5,
+            "lift_pp": 2.5,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "positivas": {
+            "mencoes": 2,
+            "de_n": 40,
+            "freq_pct": 5.0,
+            "lift_pp": -7.5,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          }
+        },
+        "bullet_de": {
+          "negativas": null,
+          "medianas": null,
+          "positivas": null
+        }
+      },
+      {
+        "eixo": "tom_atmosfera",
+        "por_bucket": {
+          "negativas": {
+            "mencoes": 12,
+            "de_n": 40,
+            "freq_pct": 30.0,
+            "lift_pp": -12.5,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "medianas": {
+            "mencoes": 10,
+            "de_n": 40,
+            "freq_pct": 25.0,
+            "lift_pp": -17.5,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "positivas": {
+            "mencoes": 17,
+            "de_n": 40,
+            "freq_pct": 42.5,
+            "lift_pp": 12.5,
+            "acima_da_margem": false,
+            "tema": "Desconforto e tensão constantes",
+            "exemplo_parafraseado": "As reviews descrevem uma experiência angustiante do início ao fim, com cenas que causam ansiedade e um clima opressivo que domina todo o filme.",
+            "temas_no_mesmo_eixo": []
+          }
+        },
+        "bullet_de": {
+          "negativas": null,
+          "medianas": null,
+          "positivas": null
+        }
+      },
+      {
+        "eixo": "impacto_emocional",
+        "por_bucket": {
+          "negativas": {
+            "mencoes": 16,
+            "de_n": 40,
+            "freq_pct": 40.0,
+            "lift_pp": -27.5,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "medianas": {
+            "mencoes": 19,
+            "de_n": 40,
+            "freq_pct": 47.5,
+            "lift_pp": -20.0,
+            "acima_da_margem": false,
+            "tema": "Final impactante e controverso",
+            "exemplo_parafraseado": "O desfecho é descrito como brutal, chocante ou excessivamente niilista, dividindo opiniões entre os que o consideram eficaz e os que o acham gratuito ou pouco crível.",
+            "temas_no_mesmo_eixo": []
+          },
+          "positivas": {
+            "mencoes": 27,
+            "de_n": 40,
+            "freq_pct": 67.5,
+            "lift_pp": 20.0,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          }
+        },
+        "bullet_de": {
+          "negativas": "frequencia",
+          "medianas": "frequencia",
+          "positivas": "frequencia"
+        }
+      },
+      {
+        "eixo": "comparacoes",
+        "por_bucket": {
+          "negativas": {
+            "mencoes": 7,
+            "de_n": 40,
+            "freq_pct": 17.5,
+            "lift_pp": -40.0,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "medianas": {
+            "mencoes": 19,
+            "de_n": 40,
+            "freq_pct": 47.5,
+            "lift_pp": -10.0,
+            "acima_da_margem": false,
+            "tema": "Comparação com o remake americano",
+            "exemplo_parafraseado": "Muitos espectadores comparam esta versão original ao remake americano, frequentemente preferindo o remake por seu desenvolvimento ou final, embora alguns prefiram o final mais sombrio do original.",
+            "temas_no_mesmo_eixo": []
+          },
+          "positivas": {
+            "mencoes": 23,
+            "de_n": 40,
+            "freq_pct": 57.5,
+            "lift_pp": 10.0,
+            "acima_da_margem": false,
+            "tema": "Comparação com a refilmagem americana",
+            "exemplo_parafraseado": "Diversas reviews comparam esta obra à sua refilmagem, afirmando que a versão original é mais sombria, corajosa e eficaz em seu impacto.",
+            "temas_no_mesmo_eixo": []
+          }
+        },
+        "bullet_de": {
+          "negativas": null,
+          "medianas": null,
+          "positivas": null
+        }
+      },
+      {
+        "eixo": "expectativa",
+        "por_bucket": {
+          "negativas": {
+            "mencoes": 6,
+            "de_n": 40,
+            "freq_pct": 15.0,
+            "lift_pp": -12.5,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "medianas": {
+            "mencoes": 11,
+            "de_n": 40,
+            "freq_pct": 27.5,
+            "lift_pp": 12.5,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "positivas": {
+            "mencoes": 3,
+            "de_n": 40,
+            "freq_pct": 7.5,
+            "lift_pp": -20.0,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          }
+        },
+        "bullet_de": {
+          "negativas": null,
+          "medianas": null,
+          "positivas": null
+        }
+      },
+      {
+        "eixo": "critica_social",
+        "por_bucket": {
+          "negativas": {
+            "mencoes": 8,
+            "de_n": 40,
+            "freq_pct": 20.0,
+            "lift_pp": -5.0,
+            "acima_da_margem": false,
+            "tema": "Mensagem política ou social panfletária",
+            "exemplo_parafraseado": "A crítica social embutida é apresentada de forma rasa e panfletária, com uma mensagem reacionária que soa forçada e sem sutileza.",
+            "temas_no_mesmo_eixo": []
+          },
+          "medianas": {
+            "mencoes": 9,
+            "de_n": 40,
+            "freq_pct": 22.5,
+            "lift_pp": -2.5,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "positivas": {
+            "mencoes": 10,
+            "de_n": 40,
+            "freq_pct": 25.0,
+            "lift_pp": 2.5,
+            "acima_da_margem": false,
+            "tema": "Crítica social e comportamento humano",
+            "exemplo_parafraseado": "Este grupo enxerga no filme uma reflexão sobre convenções sociais, o medo de contrariar e as consequências de pequenas concessões cotidianas.",
+            "temas_no_mesmo_eixo": []
+          }
+        },
+        "bullet_de": {
+          "negativas": null,
+          "medianas": null,
+          "positivas": null
+        }
+      }
+    ],
+    "contraste": "valorativo",
+    "rotulagem": {
+      "n_chamadas": 3,
+      "falharam": [],
+      "fora_da_taxonomia": {},
+      "houve_retentativa": []
+    },
+    "spec_version": "1.9.50",
+    "verificador": {
+      "aplicado": true,
+      "variante": "V2_alvo",
+      "passada": 1,
+      "eixo": "impacto_emocional",
+      "n_removidas_no_corpus": 2781
+    }
+  },
+  "narrativa": "Lançado em 2022 e dirigido por Christian Tafdrup, o longa-metragem de terror, suspense e drama Não Fale o Mal acompanha uma família dinamarquesa que passa férias na Toscana. Após fazerem amizade com uma família holandesa, eles aceitam o convite para passar um fim de semana na residência dos novos conhecidos, até que uma sucessão de mal-entendidos revela que os anfitriões não são quem pareciam ser.\n\nA experiência é estruturada sobre um ritmo lento e gradual, estabelecendo uma atmosfera densa pautada pelo acúmulo contínuo de tensão psicológica e desconforto.\n\nOs registros indicam que as diferentes faixas de avaliação debatem os mesmos temas centrais, discordando estritamente no veredito sobre o funcionamento da produção. Na maioria das notas (~61%), uma parcela expressiva ressalta o clima constante de desconforto e tensão ao longo da narrativa. Ao mesmo tempo, boa parte desse grupo examina a postura passiva e a extrema polidez dos protagonistas diante das situações, enquanto um número considerável salienta o desfecho impactante e brutal.\n\nPara quem se posiciona numa parcela das notas (~28%), a maior parte critica a passividade excessiva dos personagens principais e a aparente falta de instinto de sobrevivência. Ainda assim, muitos destacam de forma positiva as atuações e os aspectos técnicos, ao passo que vários apontam o ritmo lento e a construção do desconforto. Já sob a ótica de uma fração mínima das notas (~11%), a maior parcela reprova o comportamento dos personagens por julgá-los desprovidos de instinto, cerca de metade vê o roteiro como forçado e ilógico, e muitos avaliam o final como pretensioso e insatisfatório.",
+  "verificacao_narrativa": {
+    "quantificador_fora_de_faixa": [],
+    "quantificador_repetido": [],
+    "paragrafos": {
+      "n_paragrafos": 4,
+      "minimo": 3,
+      "insuficientes": false,
+      "longos": []
+    },
+    "n_paragrafos": 4,
+    "paragrafos_insuficientes": false,
+    "paragrafos_longos": [],
+    "grupos_sem_paragrafo_proprio": [
+      "negativas"
+    ],
+    "movimento1_e_movimento2_no_mesmo_paragrafo": false,
+    "formato_invalido": false,
+    "numeros_inventados": [],
+    "rotulos_faltando": [],
+    "ordem_incorreta": false,
+    "vocabulario_peso": false,
+    "resenha_speak": [],
+    "n_resenha_speak": 0,
+    "n_flags": 1
+  },
+  "narrativa_selecao": {
+    "provider": "gemini",
+    "modelo": "gemini-3.7-flash",
+    "n_candidatos": 3,
+    "n_chamadas": 4,
+    "indice_escolhido": 1,
+    "motivo": "menor_severidade",
+    "criterio_decisivo": "empate",
+    "candidatos": [
+      {
+        "indice": 0,
+        "n_flags": 2,
+        "cliches": 0,
+        "repeticao_max": 2,
+        "ritmo": 4,
+        "cobertura": 1.0,
+        "eliminado": true
+      },
+      {
+        "indice": 1,
+        "n_flags": 1,
+        "cliches": 0,
+        "repeticao_max": 2,
+        "ritmo": 7,
+        "cobertura": 1.0,
+        "eliminado": true
+      },
+      {
+        "indice": 2,
+        "n_flags": 2,
+        "cliches": 0,
+        "repeticao_max": 2,
+        "ritmo": 7,
+        "cobertura": 1.0,
+        "eliminado": true
+      }
+    ],
+    "retry": {
+      "n_frases_infratoras": 0,
+      "motivos": [],
+      "n_flags_depois": 1,
+      "aplicado": false
+    },
+    "uso": {
+      "prompt_tokens": 11799,
+      "completion_tokens": 1569,
+      "cache_hit_tokens": 0,
+      "cache_miss_tokens": 11799
+    },
+    "latencia_s": 44.06
+  },
+  "condicoes": {
+    "vale_a_pena": [
+      {
+        "texto": "busca um suspense com clima opressivo e sensação contínua de angústia",
+        "tema_origem": "POS-A",
+        "bucket_origem": "positivas",
+        "tema_texto": "Desconforto e tensão constantes",
+        "rotulo_forca": "muitos"
+      },
+      {
+        "texto": "se interessa por tensões geradas pela excessiva gentileza e passividade dos protagonistas",
+        "tema_origem": "POS-B",
+        "bucket_origem": "positivas",
+        "tema_texto": "Passividade e excesso de gentileza dos protagonistas",
+        "rotulo_forca": "muitos"
+      }
+    ],
+    "talvez_evite": [
+      {
+        "texto": "se irrita com personagens que tomam decisões absurdas sem instinto de autopreservação",
+        "tema_origem": "NEG-A",
+        "bucket_origem": "negativas",
+        "tema_texto": "Personagens burros e sem instinto de sobrevivência",
+        "rotulo_forca": "a maioria"
+      },
+      {
+        "texto": "se incomoda com tramas dependentes de coincidências e atitudes forçadas para avançar",
+        "tema_origem": "NEG-B",
+        "bucket_origem": "negativas",
+        "tema_texto": "Roteiro forçado e ilógico",
+        "rotulo_forca": "cerca de metade"
+      },
+      {
+        "texto": "rejeita suspenses monótonos, previsíveis e lentos para desenvolver tensão",
+        "tema_origem": "NEG-E",
+        "bucket_origem": "negativas",
+        "tema_texto": "Ritmo arrastado e falta de tensão",
+        "rotulo_forca": "alguns",
+        "origem": "leitura_humana"
+      }
+    ],
+    "ordem_colunas": [
+      "vale_a_pena",
+      "talvez_evite"
+    ],
+    "peso": {
+      "vale_a_pena": {
+        "peso_pct": 61,
+        "peso_texto": "~61% das notas",
+        "nota_de_amostra": null
+      },
+      "talvez_evite": {
+        "peso_pct": 11,
+        "peso_texto": "~11% das notas",
+        "nota_de_amostra": null
+      }
+    },
+    "peso_meio": {
+      "pct": 28,
+      "texto": "~28% das notas ficaram no meio-termo"
+    },
+    "origem": "llm",
+    "temas_pedidos": {
+      "vale_a_pena": [
+        "POS-A",
+        "POS-B",
+        "POS-C"
+      ],
+      "talvez_evite": [
+        "NEG-A",
+        "NEG-B",
+        "NEG-C",
+        "NEG-E"
+      ]
+    },
+    "temas_saltados": {
+      "vale_a_pena": [],
+      "talvez_evite": [
+        "NEG-C"
+      ]
+    },
+    "descartadas": [
+      {
+        "texto": "se decepciona com desfechos gratuitos que tentam chocar sem construir significado coerente",
+        "tema_origem": "NEG-C",
+        "lado": "talvez_evite",
+        "flags": [
+          "exemplo_verbatim"
+        ]
+      }
+    ],
+    "retry": {
+      "n_reprovadas": 1,
+      "n_aplicadas": 0,
+      "n_saltadas_pelo_modelo": 0,
+      "n_descartadas": 1
+    },
+    "provider": "gemini",
+    "modelo": "gemini-3.7-flash",
+    "n_candidatos": 3,
+    "n_chamadas": 4,
+    "indice_escolhido": 0,
+    "candidatos": [
+      {
+        "indice": 0,
+        "n_condicoes": 7,
+        "n_flags": 1,
+        "flags": [
+          "exemplo_verbatim"
+        ],
+        "n_temas_cobertos": 7
+      },
+      {
+        "indice": 1,
+        "n_condicoes": 4,
+        "n_flags": 0,
+        "flags": [],
+        "n_temas_cobertos": 4
+      },
+      {
+        "indice": 2,
+        "n_condicoes": 7,
+        "n_flags": 1,
+        "flags": [
+          "sem_discriminacao"
+        ],
+        "n_temas_cobertos": 7
+      }
+    ],
+    "uso": {
+      "prompt_tokens": 11517,
+      "completion_tokens": 948,
+      "cache_hit_tokens": 0,
+      "cache_miss_tokens": 11517
+    },
+    "latencia_s": 18.76,
+    "spec_version": "1.9.50",
+    "sem_condicao_publicavel": [
+      {
+        "tema_origem": "POS-C",
+        "lado": "vale_a_pena",
+        "regra": "R6/R12",
+        "origem": "leitura_humana"
+      }
+    ]
+  }
+}

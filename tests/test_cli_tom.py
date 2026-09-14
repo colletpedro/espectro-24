@@ -346,8 +346,14 @@ def test_ano_do_bruto_evita_a_rede(tmp_path, monkeypatch, _iso_env):
         recebido.update(ano=ano, ano_fonte=ano_fonte)
         return {"titulo": "Cure", "ano": 1997, "fonte": "tmdb"}, None, None
     monkeypatch.setattr(cli, "buscar_ficha", fake_buscar)
+    # `--no-eixos` [piloto de expansão]: o `coleta` PARCIAL deste teste (só
+    # ano e identidade, sem `histograma_bruto`/`orcamento_paginas_por_nivel`)
+    # faz `ids_analisados_do_bruto` selecionar uma amostra que a produção
+    # nunca selecionaria — 16 das 120 fora da classificação de `cure`. Até
+    # aqui isso virava um bloco de eixos com `n` encolhido em silêncio; com a
+    # guarda de C14.8 é recusa (exit 6). Eixos não é o que este teste mede.
     cli.main(["--slug", "cure", "--reuse-synthesis", "--out-dir", str(tmp_path),
-              "--tom", "estruturado"])
+              "--tom", "estruturado", "--no-eixos"])
     assert chamado == [], "o bruto tinha o ano — a rede não devia ser tocada"
     assert recebido == {"ano": 1997, "ano_fonte": "letterboxd"}
 
@@ -363,3 +369,71 @@ def test_ficha_indisponivel_AVISA_a_consequencia(tmp_path, monkeypatch,
               "--tom", "estruturado"])
     err = capsys.readouterr().err
     assert "Nenhuma busca heurística" in err
+
+
+# =====================================================================
+# `contraste` ausente do bloco de eixos — n < MARGEM_N_MINIMO (§2.5)
+# =====================================================================
+# Defeito real: `woman-of-fire` (piloto de expansão, 2026-09) tem o menor
+# bucket com n=9. `eixos.montar_bloco` OMITE a chave `contraste` de
+# propósito nesse caso — é o estado "não medido", nunca `valorativo`
+# (ver `eixos.py`, comentário sobre `bloco["contraste"] = estado`). O CLI
+# indexava `bloco['contraste']` direto no print de telemetria e quebrava o
+# filme inteiro com `KeyError` — um filme obscuro (perfil que produz bucket
+# abaixo do piso) não publicava por causa de uma LINHA DE LOG, não da
+# medição em si.
+
+def test_bloco_sem_contraste_nao_quebra_o_cli(tmp_path, monkeypatch, _iso_env,
+                                              capsys):
+    _escreve_json(tmp_path, slug="cure")
+    _mock_narrate(monkeypatch)
+    monkeypatch.setattr(cli, "buscar_ficha", lambda *a, **k: (None, None, None))
+
+    bloco_sem_contraste = {
+        "taxonomia_id": "t1",
+        "margem": {"lei": "lift^2 * n >= 2085136/1000000",
+                   "constante_quadrada": [2085136, 1000000],
+                   "n": 9, "limiar_pp": 48.13},
+        "margem_lift_pp": 48.13,
+        "linhas": [],
+        "rotulagem": {"n_chamadas": 0, "falharam": [], "fora_da_taxonomia": {}},
+        # SEM "contraste" — reproduz `eixos.montar_bloco` com n<10.
+    }
+    assert "contraste" not in bloco_sem_contraste
+    monkeypatch.setattr(cli, "montar_eixos", lambda *a, **k: bloco_sem_contraste)
+
+    cli.main(["--slug", "cure", "--reuse-synthesis", "--out-dir", str(tmp_path),
+              "--tom", "estruturado"])  # não pode levantar KeyError
+
+    salvo = json.loads((tmp_path / "cure.json").read_text(encoding="utf-8"))
+    assert "eixos" in salvo and "contraste" not in salvo["eixos"]
+    err = capsys.readouterr().err
+    # o rótulo explícito distingue "não medido" de qualquer estado real —
+    # nunca pode aparecer como se fosse "valorativo" ou "tematico".
+    assert "contraste=sem_estado (n<10)" in err
+
+
+def test_amostra_nao_classificada_sai_com_codigo_6_e_nao_grava(
+        tmp_path, monkeypatch, _iso_env, capsys):
+    """[piloto de expansão, `ABERTO.md` C14.8] Ao contrário do resto do bloco
+    de eixos, a amostra divergente NÃO é aditiva: o filme não publica. Nada
+    é gravado — o JSON anterior fica byte a byte — e a saída diz por quê."""
+    from espectro24.eixos import AmostraNaoClassificada
+    _escreve_json(tmp_path, slug="cure")
+    antes = (tmp_path / "cure.json").read_bytes()
+    _mock_narrate(monkeypatch)
+    monkeypatch.setattr(cli, "buscar_ficha", lambda *a, **k: (None, None, None))
+
+    def recusa(*a, **k):
+        raise AmostraNaoClassificada("positivas: 1 de 40 analisadas sem "
+                                     "classificação (viewing:1493797951)")
+    monkeypatch.setattr(cli, "montar_eixos", recusa)
+    monkeypatch.setattr(cli, "write_json", lambda *a, **k: pytest.fail(
+        "gravou o JSON de um filme com amostra divergente"))
+
+    with pytest.raises(SystemExit) as e:
+        cli.main(["--slug", "cure", "--reuse-synthesis", "--out-dir",
+                  str(tmp_path), "--tom", "estruturado"])
+    assert e.value.code == 6
+    assert (tmp_path / "cure.json").read_bytes() == antes
+    assert "viewing:1493797951" in capsys.readouterr().err

@@ -311,18 +311,111 @@ def test_rotulo_forca_suprimido_nos_estados_de_piso():
 # BRIEFING — as garantias por construção
 # ===========================================================================
 
-def test_briefing_nao_tem_algarismo_em_nenhum_dos_35():
+def test_briefing_nao_tem_algarismo_proibido_em_nenhum_filme():
     """A garantia "zero dígitos" do §3[V] é mais fraca aqui do que lá — o
     briefing precisa carregar a paráfrase (P4 REVISADO) e a paráfrase não é
     limpa. MEDIDO: 1 tema do catálogo tem algarismo, e ele está fora do
-    top-3. Este teste é onde um filme novo que reabra o buraco aparece."""
+    top-3. Este teste é onde um filme novo que reabra o buraco aparece.
+
+    [piloto de expansão] Era `..._em_nenhum_dos_35` e afirmava
+    `not any(ch.isdigit() ...)` sobre o texto inteiro. O piloto trouxe o
+    primeiro caso real no top-3 — `pinocchio-2022` NEG-F, "Comparação com o
+    clássico de 1940" — e o dono aprovou a exceção de ano em nome de tema.
+    A asserção agora é `algarismos_proibidos_no_briefing == []`: o ano na
+    forma estreita passa; qualquer outro algarismo, em qualquer linha, falha
+    como antes."""
     for caminho in sorted(RESULTADO.glob("*.json")):
         d = json.loads(caminho.read_text(encoding="utf-8"))
         b = C.montar_briefing(d)
         if b is None:
             continue
-        texto = C.serializar_briefing(b)
-        assert not any(ch.isdigit() for ch in texto), d["slug"]
+        assert C.algarismos_proibidos_no_briefing(b) == [], d["slug"]
+
+
+def _output_com_tema(tema, exemplo="o grupo comenta isso com frequência"):
+    """Um filme mínimo cujo tema de topo nas positivas é `tema`."""
+    def bucket(nome, t, ex):
+        return {"bucket": nome, "estado_piso": "completa", "modo": "completo",
+                "share_real": 40,
+                "temas": [{"tema": t, "mencoes_aproximadas": 12,
+                           "n_reviews_analisadas": 40,
+                           "exemplo_parafraseado": ex}]}
+    return {"slug": "x", "buckets": [
+        bucket("positivas", tema, exemplo),
+        bucket("negativas", "Ritmo lento", "acharam o andamento arrastado")]}
+
+
+def test_briefing_nao_tem_algarismo_ano_em_nome_de_tema_PASSA():
+    """O caso real, e o único lado que a exceção abre."""
+    d = json.loads((RESULTADO / "pinocchio-2022.json").read_text(
+        encoding="utf-8"))
+    b = C.montar_briefing(d)
+    texto = C.serializar_briefing(b)
+    assert "Comparação com o clássico de 1940" in texto   # o ano CHEGA ao modelo
+    assert C.algarismos_proibidos_no_briefing(b) == []
+
+
+@pytest.mark.parametrize("tema", [
+    "Comparação com o clássico de 1940",
+    "Versão de 2022",
+    "Diferenças para o original de 1940, da Disney",
+    "Remake do filme lançado em 1978",
+])
+def test_briefing_nao_tem_algarismo_formas_de_ano_admitidas(tema):
+    b = C.montar_briefing(_output_com_tema(tema))
+    assert C.algarismos_proibidos_no_briefing(b) == []
+    assert C.anos_em_nome_de_tema(tema)
+
+
+@pytest.mark.parametrize("tema", [
+    # quantidade, percentual, contagem, denominador — o que a regra protege
+    "Os primeiros 30 minutos",
+    "34% das notas",
+    "Clássico de 1940%",
+    "3 de 40 reviews",
+    "Nota 4,5 de 5",
+    "Mais de 2000 figurantes",
+    "Elenco de 2000 figurantes",
+    "Cerca de 1990",
+    "Em torno de 2000",
+    "Por volta de 1990",
+    "Duração de 1940 minutos",
+    # algarismo que não é ano de quatro dígitos
+    "Parte 2 da franquia",
+    "Sexta-Feira 13",
+    "Versão de 19400",
+    "Versão de 1940.5",
+    # década, não obra
+    "Terror dos anos 2000",
+    # ano legítimo FORA da forma — a estreiteza é deliberada: o destino é
+    # reescrever o tema sem o ano
+    "O remake de 2022 e o original",
+    "1940 contra 2022",
+])
+def test_briefing_nao_tem_algarismo_de_quantidade_FALHA(tema):
+    b = C.montar_briefing(_output_com_tema(tema))
+    assert C.algarismos_proibidos_no_briefing(b), tema
+
+
+def test_briefing_nao_tem_algarismo_ano_na_parafrase_nao_tem_excecao():
+    """A exceção é do NOME do tema. A mesma forma na paráfrase continua
+    proibida: é lá que as quantidades moram."""
+    b = C.montar_briefing(_output_com_tema(
+        "Comparação com o clássico",
+        exemplo="muitos compararam com o clássico de 1940"))
+    assert C.algarismos_proibidos_no_briefing(b) == ["1940"]
+
+
+def test_a_excecao_de_ano_nao_chega_ao_texto_da_condicao():
+    """A exceção é do INSUMO. A condição que o leitor lê continua com zero
+    algarismo — mesmo quando repete o ano que o tema admitiu."""
+    d = json.loads((RESULTADO / "pinocchio-2022.json").read_text(
+        encoding="utf-8"))
+    idx = C.indexar(d)
+    cond = {"lado": "talvez_evite", "tema_origem": "NEG-F",
+            "texto": "espera a mesma ousadia do clássico de 1940"}
+    assert idx["NEG-F"]["tema"] == "Comparação com o clássico de 1940"
+    assert "digito" in C.validar(cond, idx)
 
 
 def test_briefing_nao_nomeia_o_filme():
@@ -410,8 +503,12 @@ def test_extrair_tolera_prosa_em_volta_do_json():
 
 
 def test_extrair_devolve_estrutura_vazia_em_lixo():
-    assert C.extrair("não é json") == {"vale_a_pena": [], "talvez_evite": []}
-    assert C.extrair("") == {"vale_a_pena": [], "talvez_evite": []}
+    """[piloto de expansão] A estrutura vazia ganhou `sem_condicao: []` — a
+    mesma forma que `extrair` devolve para JSON bom, para o consumidor nunca
+    distinguir "lixo" de "nada declarado" por chave ausente."""
+    vazio = {"vale_a_pena": [], "talvez_evite": [], "sem_condicao": []}
+    assert C.extrair("não é json") == vazio
+    assert C.extrair("") == vazio
 
 
 def test_estagio_registrado_em_config():
@@ -563,7 +660,18 @@ def test_peso_meio_nao_aparece_quando_as_colunas_ja_somam_o_filme(godfather):
 def test_peso_meio_usa_a_regua_do_DEFEITO_e_nao_uma_proxy():
     """O critério é "as duas colunas somam menos de 80%", que é como o defeito
     foi medido — não `share_meio >= 20`, que é quase a mesma coisa e pega
-    `pearl-2022`, cujas colunas somam 81% e que o defeito não inclui."""
+    `pearl-2022`, cujas colunas somam 81% e que o defeito não inclui.
+
+    [piloto de expansão, 2026-09] **`com_linha == alvos` virou
+    `alvos <= com_linha`.** `alvos` são os 8 filmes que motivaram a régua —
+    a prova de que ela NÃO é a proxy continua sendo `pearl-2022` ficar de
+    fora (linha acima), e essa prova não muda com o catálogo. A igualdade
+    exigia também que NENHUM outro filme jamais satisfizesse o critério —
+    mas um catálogo maior tem mais chance de ter outro filme cujas colunas
+    também somem menos de 80%, e isso não é regressão nenhuma da régua, é
+    aritmética: mais filmes, mais candidatos. Manter só o subconjunto prova
+    exatamente o que o nome do teste promete (a régua certa, não a proxy)
+    sem fingir que a lista de 8 é definitiva."""
     pearl = _idx("pearl-2022")
     assert C.peso_do_meio(pearl) is None
     alvos = {"napoleon-2023", "friday-the-13th-2009", "wonka",
@@ -575,7 +683,7 @@ def test_peso_meio_usa_a_regua_do_DEFEITO_e_nao_uma_proxy():
         idx = C.indexar(d)
         if idx and C.peso_do_meio(idx):
             com_linha.add(d["slug"])
-    assert com_linha == alvos
+    assert alvos <= com_linha, f"algum dos 8 conhecidos sumiu: {alvos - com_linha}"
 
 
 def test_peso_meio_viaja_no_bloco_publicado():
@@ -634,3 +742,374 @@ def test_expectativa_e_reputacao_sao_assunto_legitimo():
     p = C.PROMPT_CONDICOES
     assert "EXPECTATIVA E REPUTAÇÃO SÃO ASSUNTO LEGÍTIMO" in p
     assert "grande reputação não correspondem a altas expectativas" in p
+
+
+# ===========================================================================
+# [piloto de expansão] TRAVA × TEXTO DE AUTORIA HUMANA — opção (a)
+# ===========================================================================
+
+HUMANO = C.ORIGEM_HUMANA
+
+# As sete correções do dono ao lote `0ec05ad3e326` que a trava reprovava —
+# texto EXATO de `correcoes-piloto-18.json`, recortado só da abertura. São
+# aprovadas por definição; `lexicas` é o que cada uma dispara, MEDIDO.
+SETE_DO_DONO = [
+    ("C010", "drive-my-car", "POS-B",
+     "se interessa por vínculos entre personagens marcados por perdas, culpa "
+     "e solidão", ["ancora_nao_verificavel", "sem_discriminacao"]),
+    ("C020", "force-majeure-2014", "POS-F",
+     "aceita lentidão e escolhas narrativas controversas quando coerentes "
+     "com a proposta", ["ancora_nao_verificavel", "sem_discriminacao"]),
+    # só `exemplo_verbatim`, pelos nomes — a exceção (c) o resolve na régua
+    ("C026", "get-out-2017", "POS-B",
+     "valoriza a intensidade e a credibilidade de Daniel Kaluuya e Allison "
+     "Williams", []),
+    ("C058", "memories-of-murder", "POS-A",
+     "aprecia interpretações fortes de figuras complexas e de conduta "
+     "ambivalente", ["ancora_nao_verificavel"]),
+    ("C103", "the-second-mother", "POS-A",
+     "se interessa pelas divisões de classe presentes nas relações dentro de "
+     "casa", ["ancora_nao_verificavel", "sem_discriminacao"]),
+    ("C127", "whiplash-2014", "POS-A",
+     "valoriza a força e a naturalidade de J.K. Simmons e Miles Teller",
+     ["sem_discriminacao"]),
+    # cópia REAL de quatro palavras da paráfrase, sem nome nenhum
+    ("C138", "zama", "POS-E",
+     "valoriza aspectos técnicos e temáticos apesar de possível "
+     "distanciamento e desorientação", ["exemplo_verbatim"]),
+]
+
+
+@pytest.mark.parametrize("numero,slug,tid,texto,lexicas", SETE_DO_DONO,
+                         ids=[s[0] for s in SETE_DO_DONO])
+def test_texto_humano_passa_pelos_exatos_e_recebe_aviso_nos_lexicos(
+        numero, slug, tid, texto, lexicas):
+    idx = _idx(slug)
+    humano = {**_cond("vale_a_pena", texto, tid), "origem": HUMANO}
+    assert C.validar_com_avisos(humano, idx) == ([], lexicas)
+    assert C.validar(humano, idx) == []
+
+
+@pytest.mark.parametrize("numero,slug,tid,texto,lexicas", SETE_DO_DONO,
+                         ids=[s[0] for s in SETE_DO_DONO])
+def test_o_mesmo_texto_como_saida_do_modelo_fica_sob_a_trava_completa(
+        numero, slug, tid, texto, lexicas):
+    """A metade obrigatória do par: SEM a marca de autoria, cada flag léxica
+    continua travando e nada vira aviso."""
+    idx = _idx(slug)
+    assert C.validar_com_avisos(_cond("vale_a_pena", texto, tid), idx) == (
+        lexicas, [])
+
+
+def test_flags_lexicas_sao_exatamente_1c_1d_e_a_discriminacao():
+    """A partição aprovada pelo dono. Qualquer flag a mais aqui é afrouxar a
+    trava do texto humano por inferência."""
+    assert C.FLAGS_LEXICAS == {"ancora_nao_verificavel", "tema_verbatim",
+                               "exemplo_verbatim", "sem_discriminacao"}
+
+
+@pytest.mark.parametrize("lado,texto,tema,flag", [
+    ("vale_a_pena", "aprecia interpretações fortes de 2 figuras complexas",
+     "POS-A", "digito"),
+    ("vale_a_pena", 'aprecia "interpretações fortes" de figuras complexas',
+     "POS-A", "aspas"),
+    ("vale_a_pena", "aprecia interpretações fortes de figuras complexas e de "
+     "conduta ambivalente num filme longo e muito escuro", "POS-A",
+     "comprimento"),
+    ("vale_a_pena", "aprecia, como a maioria, interpretações fortes de "
+     "figuras complexas", "POS-A", "quantidade_escrita"),
+    ("vale_a_pena", "aprecia interpretações fortes que o público elogia em "
+     "figuras complexas", "POS-A", "escopo_generalizado"),
+    ("vale_a_pena", "se você é do tipo que aprecia interpretações fortes de "
+     "figuras complexas", "POS-A", "perfil_de_leitor"),
+    ("vale_a_pena", "aprecia interpretações fortes de figuras complexas",
+     "POS-Z", "ancora_inexistente"),
+    ("talvez_evite", "aprecia interpretações fortes de figuras complexas",
+     "POS-A", "ancora_de_outro_bucket"),
+    ("vale_a_pena", '{"texto": "aprecia interpretações fortes de figuras '
+     'complexas"}', "POS-A", "formato_invalido"),
+])
+def test_texto_humano_continua_travado_pelos_validadores_exatos(
+        lado, texto, tema, flag):
+    humano = {**_cond(lado, texto, tema), "origem": HUMANO}
+    trava, _ = C.validar_com_avisos(humano, _idx("memories-of-murder"))
+    assert flag in trava
+    assert flag not in C.FLAGS_LEXICAS
+
+
+def test_a_saida_do_modelo_nao_tem_como_se_declarar_humana():
+    """A trava do texto do modelo é ESTRUTURAL: `extrair` monta a condição
+    campo a campo, e uma `origem` escrita pelo modelo não chega adiante."""
+    texto = SETE_DO_DONO[3][3]
+    bruto = json.dumps({"vale_a_pena": [
+        {"texto": texto, "tema_origem": "POS-A", "origem": HUMANO}],
+        "talvez_evite": []})
+    c = C.extrair(bruto)["vale_a_pena"][0]
+    assert "origem" not in c
+    assert C.validar(c, _idx("memories-of-murder")) == ["ancora_nao_verificavel"]
+
+    d = json.loads((RESULTADO / "memories-of-murder.json").read_text(
+        encoding="utf-8"))
+    out = C.gerar(d, n=1, gerar=_fake([bruto, bruto]))
+    assert out["vale_a_pena"] == []
+    assert out["descartadas"][0]["flags"] == ["ancora_nao_verificavel"]
+
+
+# ===========================================================================
+# [piloto de expansão] A exceção de NOME PRÓPRIO nos dois verbatim — opção (c)
+# ===========================================================================
+
+def test_excecao_de_nome_proprio_vale_nos_dois_verbatim(godfather):
+    """`tema_verbatim` tem a exceção desde a v1.9.35; `exemplo_verbatim`
+    passa a ter. C026, como texto do MODELO (sem marca de autoria): a
+    sequência copiada é "Daniel Kaluuya e Allison Williams" — só nomes."""
+    alvo = next(t for t in godfather.values()
+                if t["tema"] == "Transformação de Michael Corleone")
+    assert "tema_verbatim" not in C.validar(
+        _cond("vale_a_pena", "quer ver a transformação de Michael Corleone",
+              alvo["id"]), godfather)
+    c026 = SETE_DO_DONO[2][3]
+    assert C.validar(_cond("vale_a_pena", c026, "POS-B"),
+                     _idx("get-out-2017")) == []
+
+
+def test_excecao_de_nome_proprio_nao_libera_copia_de_frase(nap):
+    """A exceção é para a sequência feita SÓ de nomes. Nome colado à frase de
+    outra pessoa continua cópia ("…a vida pessoal de Napoleão", o par da
+    rodada 1, que "tirar os nomes e recontar" teria liberado); e cópia sem
+    nome nenhum (C138) continua cópia."""
+    alvo = next(t for t in nap.values()
+                if t["tema"] == "Abordagem pessoal e íntima do personagem")
+    assert "napoleao" in C.nomes_proprios(alvo["exemplo"])
+    assert "exemplo_verbatim" in C.validar(
+        _cond("vale_a_pena",
+              "prefere ver as inseguranças e a vida pessoal de Napoleão",
+              alvo["id"]), nap)
+    assert C.validar(_cond("vale_a_pena", SETE_DO_DONO[6][3], "POS-E"),
+                     _idx("zama")) == ["exemplo_verbatim"]
+
+
+# ===========================================================================
+# [piloto de expansão] SEM CONDIÇÃO PUBLICÁVEL — a recusa declarada
+# ===========================================================================
+
+def test_validar_recusa_conjunto_fechado_tema_pedido_e_motivo_curto():
+    lado_de = {"POS-A": "vale_a_pena"}
+    ok = {"tema_origem": "POS-A", "regra": "R6",
+          "motivo": "o tema usa só o desfecho"}
+    assert C.validar_recusa(ok, lado_de) == []
+    assert C.validar_recusa({**ok, "regra": "R6/R12"}, lado_de) == []
+    assert C.validar_recusa({**ok, "regra": "R9"}, lado_de) == [
+        "recusa_regra_invalida"]
+    assert C.validar_recusa({**ok, "regra": "R6/R9"}, lado_de) == [
+        "recusa_regra_invalida"]
+    assert C.validar_recusa({**ok, "regra": ""}, lado_de) == [
+        "recusa_regra_invalida"]
+    assert C.validar_recusa({**ok, "tema_origem": "POS-B"}, lado_de) == [
+        "recusa_tema_nao_pedido"]
+    assert C.validar_recusa({**ok, "lado": "talvez_evite"}, lado_de) == [
+        "recusa_de_outro_lado"]
+    assert C.validar_recusa({**ok, "motivo": ""}, lado_de) == [
+        "recusa_sem_motivo"]
+    assert C.validar_recusa({**ok, "motivo": " ".join(["x"] * 20)},
+                            lado_de) == []
+    assert C.validar_recusa({**ok, "motivo": " ".join(["x"] * 21)},
+                            lado_de) == ["recusa_motivo_longo"]
+    assert C.validar_recusa({**ok, "origem": "outra"}, lado_de) == [
+        "recusa_origem_invalida"]
+
+
+def test_as_tres_recusas_do_dono_sao_validas():
+    """C024, C051, C089 — texto do dono, verbatim."""
+    for regra, motivo in [
+            ("R6", "o tema usa exclusivamente características do desfecho "
+                   "como critério de decisão"),
+            ("R2", "o tema relata dificuldade e incompreensão, mas não "
+                   "sustenta aprovação desse desafio"),
+            ("R6/R12", "retirar o desfecho transformaria um detalhe final em "
+                       "característica da experiência inteira")]:
+        assert C.validar_recusa(
+            {"tema_origem": "X", "regra": regra, "motivo": motivo,
+             "origem": HUMANO}, {"X": "vale_a_pena"}) == []
+
+
+def test_extrair_le_e_normaliza_sem_condicao():
+    bruto = json.dumps({"vale_a_pena": [], "talvez_evite": [],
+                        "sem_condicao": [{"tema_origem": " pos-c ",
+                                          "regra": "r6 / r12",
+                                          "motivo": " sem lastro ",
+                                          "origem": HUMANO}]})
+    assert C.extrair(bruto)["sem_condicao"] == [
+        {"tema_origem": "POS-C", "regra": "R6/R12", "motivo": "sem lastro"}]
+
+
+LIMPAS_NAP = {
+    "Abordagem pessoal e íntima do personagem":
+        "quer um Napoleão íntimo, não o estadista",
+    "Impacto visual e direção de arte":
+        "valoriza fotografia, figurinos e cenários deslumbrantes",
+}
+
+
+def _nap_briefing():
+    d = json.loads((RESULTADO / "napoleon-2023.json").read_text(
+        encoding="utf-8"))
+    b = C.montar_briefing(d)
+    limpas = [(t["id"], LIMPAS_NAP[t["tema"]]) for t in b["selecao"]["vale_a_pena"]
+              if t["tema"] in LIMPAS_NAP]
+    assert len(limpas) == 2, "os dois temas de texto limpo têm de estar pedidos"
+    return d, b, limpas
+
+
+def _resp(conds=(), recusas=()):
+    return json.dumps({"vale_a_pena": [{"texto": t, "tema_origem": i}
+                                       for i, t in conds],
+                       "talvez_evite": [],
+                       "sem_condicao": [{"tema_origem": i, "regra": r,
+                                         "motivo": "a paráfrase não sustenta "
+                                                   "frase honesta"}
+                                        for i, r in recusas]})
+
+
+def test_recusa_declarada_conta_como_resolvida_e_o_silencio_nao():
+    """O defeito que o canal fecha: a amostra que RECUSA um tema perdia
+    para a que o escrevia. Agora recusa válida conta; silêncio, não."""
+    _, b, [(a, ta), (x, _)] = _nap_briefing()
+    silencio = C.extrair(_resp([(a, ta)]))
+    declara = C.extrair(_resp([(a, ta)], [(x, "R1")]))
+    assert C.selecionar_candidato([silencio, declara], b)["indice"] == 1
+    # recusa com regra fora do conjunto não conta — e custa flag
+    invalida = C.extrair(_resp([(a, ta)], [(x, "R9")]))
+    assert C.selecionar_candidato([invalida, silencio], b)["indice"] == 1
+
+
+def test_desempate_vence_quem_escreveu_mais():
+    """Cobertura e flags iguais: vence quem ESCREVEU. Sem isto, recusar é o
+    caminho de menor atrito — recusa válida não tem flag."""
+    _, b, [(a, ta), (x, tx)] = _nap_briefing()
+    declara = C.extrair(_resp([(a, ta)], [(x, "R1")]))
+    escreve = C.extrair(_resp([(a, ta), (x, tx)]))
+    esc = C.selecionar_candidato([declara, escreve], b)
+    assert esc["indice"] == 1
+    assert [c["n_temas_resolvidos"] for c in esc["candidatos"]] == [2, 2]
+    assert [c["n_flags"] for c in esc["candidatos"]] == [0, 0]
+
+
+def test_tema_nas_duas_listas_vira_tema_repetido_nas_duas_pontas():
+    _, b, [(a, ta), _] = _nap_briefing()
+    m = C._medir(C.extrair(_resp([(a, ta)], [(a, "R1")])), b)
+    assert "tema_repetido" in m["condicoes"][0]["flags"]
+    assert "tema_repetido" in m["recusas"][0]["flags"]
+    assert m["n_temas_recusados"] == 0
+
+
+def test_gerar_publica_a_recusa_e_NAO_puxa_o_proximo_tema():
+    d, b, [(a, ta), (x, _)] = _nap_briefing()
+    out = C.gerar(d, n=1, gerar=_fake([_resp([(a, ta)], [(x, "R6")])]))
+    assert out["sem_condicao_publicavel"] == [{
+        "tema_origem": x, "lado": "vale_a_pena", "regra": "R6",
+        "motivo": "a paráfrase não sustenta frase honesta",
+        "origem": "modelo"}]
+    assert x not in out["temas_saltados"]["vale_a_pena"]
+    assert x not in {c["tema_origem"] for c in out["vale_a_pena"]}
+    # a seleção é a do código, antes e depois da recusa
+    assert out["temas_pedidos"] == {l: [t["id"] for t in b["selecao"][l]]
+                                    for l in C.LADOS}
+    publicados = {c["tema_origem"] for l in C.LADOS for c in out[l]}
+    assert publicados <= set(sum(out["temas_pedidos"].values(), []))
+
+
+def test_recusa_no_retry_vale_e_a_frase_reprovada_fica_registrada():
+    d, _, [(a, _), _] = _nap_briefing()
+    ruim = _resp([(a, "gosta de 3 batalhas")])
+    retry = _resp([], [(a, "R1")])
+    out = C.gerar(d, n=1, gerar=_fake([ruim, retry]))
+    assert [c["tema_origem"] for c in out["descartadas"]] == [a]
+    assert [r["tema_origem"] for r in out["sem_condicao_publicavel"]] == [a]
+    assert out["retry"]["n_recusadas_pelo_modelo"] == 1
+
+
+def test_recusa_invalida_fica_registrada_e_nao_publica():
+    d, _, [(a, ta), (x, _)] = _nap_briefing()
+    out = C.gerar(d, n=1, gerar=_fake([_resp([(a, ta)], [(x, "R9")])]))
+    assert out["sem_condicao_publicavel"] == []
+    assert [(r["tema_origem"], r["flags"]) for r in out["recusas_invalidas"]
+            ] == [(x, ["recusa_regra_invalida"])]
+    assert x in out["temas_saltados"]["vale_a_pena"]      # silêncio
+
+
+def test_prompt_carrega_o_canal_de_recusa_com_o_conjunto_fechado():
+    import re
+    p = C.PROMPT_CONDICOES
+    assert '"sem_condicao"' in p
+    assert set(re.findall(r"\bR\d+\b", p)) == set(C.REGRAS_DE_RECUSA)
+    assert "declarar não é saída fácil" in p
+    assert "NÃO põe outro tema no lugar" in p
+
+
+# ===========================================================================
+# [piloto de expansão] O PAR diante da recusa
+# ===========================================================================
+
+def test_pares_obrigatorios_sao_a_mesma_computacao_da_selecao():
+    for caminho in sorted(RESULTADO.glob("*.json")):
+        d = json.loads(caminho.read_text(encoding="utf-8"))
+        idx = C.indexar(d)
+        if not idx:
+            continue
+        base = C.selecionar(idx, par_obrigatorio=False)
+        sel = C.selecionar(idx)
+        pares = C.pares_obrigatorios(idx)
+        for lado in C.LADOS:
+            forcados = {p["forcado"] for p in pares if p["lado_forcado"] == lado}
+            assert forcados == ({t["id"] for t in sel[lado]}
+                                - {t["id"] for t in base[lado]}), (d["slug"], lado)
+
+
+def _par_das_batalhas(nap):
+    return next(p for p in C.pares_obrigatorios(nap)
+                if nap[p["forcado"]]["tema"] == "Batalhas decepcionantes")
+
+
+def _bloco_do_par(p, recusado):
+    lado_rec = p["lado_base"] if recusado == p["base"] else p["lado_forcado"]
+    b = {p["lado_base"]: [{"texto": "base", "tema_origem": p["base"]}],
+         p["lado_forcado"]: [{"texto": "forçado", "tema_origem": p["forcado"]}],
+         "temas_pedidos": {p["lado_base"]: [p["base"]],
+                           p["lado_forcado"]: [p["forcado"]]},
+         "temas_saltados": {l: [] for l in C.LADOS},
+         "sem_condicao_publicavel": [{"tema_origem": recusado,
+                                      "lado": lado_rec, "regra": "R1",
+                                      "motivo": "m", "origem": "modelo"}]}
+    b[lado_rec] = []
+    return b
+
+
+def test_forcado_recusado_o_base_publica_com_a_marca_par_recusado(nap):
+    """O caso `napoleon`: se a objeção das HATERS às batalhas é recusada, as
+    batalhas bonitas continuam na página — marcadas, para a revisão julgar
+    se sozinhas achatam a recepção. Tirá-las puniria o tema mais citado."""
+    p = _par_das_batalhas(nap)
+    b = C.consolidar_recusas(_bloco_do_par(p, p["forcado"]), nap)
+    assert b[p["lado_base"]] == [{"texto": "base", "tema_origem": p["base"],
+                                  "par_recusado": p["forcado"]}]
+    assert b["temas_saltados"] == {l: [] for l in C.LADOS}
+    assert C.inconsistencias_de_recusa(b, nap) == []
+
+
+def test_base_recusado_desfaz_o_par_e_o_forcado_sai(nap):
+    p = _par_das_batalhas(nap)
+    b = C.consolidar_recusas(_bloco_do_par(p, p["base"]), nap)
+    assert b[p["lado_forcado"]] == []
+    assert b["par_desfeito"] == [{"texto": "forçado", "tema_origem": p["forcado"],
+                                  "lado": p["lado_forcado"],
+                                  "tema_base": p["base"]}]
+    assert b["temas_saltados"] == {l: [] for l in C.LADOS}
+    assert C.consolidar_recusas(b, nap) == b                 # idempotente
+
+
+def test_par_nao_consolidado_e_inconsistencia(nap):
+    p = _par_das_batalhas(nap)
+    cru = _bloco_do_par(p, p["base"])           # o forçado ainda na coluna
+    assert any("par não consolidado" in x
+               for x in C.inconsistencias_de_recusa(cru, nap))

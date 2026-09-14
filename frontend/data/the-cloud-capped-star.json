@@ -1,0 +1,1526 @@
+{
+  "slug": "the-cloud-capped-star",
+  "data_coleta": "2026-09-13T05:22:44.728970+00:00",
+  "spec_version": "1.9.50",
+  "total_reviews_observadas": 371,
+  "reviews_url": "https://letterboxd.com/film/the-cloud-capped-star/reviews/",
+  "ficha": {
+    "titulo": "Estrela Encoberta de Nuvens",
+    "sinopse_oficial": "Conta a trágica história de uma bonita filha de uma família de classe média refugiada do Paquistão, vivendo nos suburbios de Calcutá em condições modestas. Neeta sacrifica tudo por sua família, seu dinheiro, sua felicidade pessoal, sua saúde, enquanto seu esforço raramente é reconhecido por aqueles que estão a sua volta.",
+    "sinopse_fallback_en": false,
+    "generos": [
+      "Drama"
+    ],
+    "duracao_min": 127,
+    "diretor": "Ritwik Kumar Ghatak",
+    "diretor_transliterado": false,
+    "ano": 1960,
+    "fonte": "tmdb",
+    "tmdb_id": 59239,
+    "tmdb_fetched_at": "2026-09-10T20:04:16+00:00",
+    "poster_path": "/l9zeGA6ckSfhoQw4dbIG0GnmGb2.jpg",
+    "poster_largura": null,
+    "poster_altura": null,
+    "backdrop_paths": [
+      "/oAox7z3d94YqwRHTrQOyEZooK94.jpg",
+      "/b6VR1AKWEs4OJqTscANnvQm4WuC.jpg",
+      "/gCt232j1OteePAyGqMwNx6Xg46g.jpg",
+      "/8WvyXisR8dbOUBW6sFVxZ1ruGFj.jpg",
+      "/25bmkeKBBX44uayEnyBWQ5o9OBU.jpg",
+      "/hZk2emzgT3hJHLGILjLvQ0PZbXo.jpg",
+      "/bIXIVaFCuA1tSnctg6Vl5JzuSrC.jpg",
+      "/cozYcNfedJLwQKlaegcuSPYkS45.jpg",
+      "/8kdoCv1ZAYxWvH8ftuWLX0vmqkX.jpg",
+      "/1mccSxkIzRms08qvzKYllGzCDqv.jpg"
+    ],
+    "backdrop_path": "/b6VR1AKWEs4OJqTscANnvQm4WuC.jpg",
+    "backdrop_largura": 1600,
+    "backdrop_altura": 900,
+    "poster_sem_texto_path": null,
+    "poster_sem_texto_largura": null,
+    "poster_sem_texto_altura": null,
+    "galeria_stills": [
+      {
+        "still_path": "/b6VR1AKWEs4OJqTscANnvQm4WuC.jpg",
+        "still_largura": 1600,
+        "still_altura": 900
+      },
+      {
+        "still_path": "/oAox7z3d94YqwRHTrQOyEZooK94.jpg",
+        "still_largura": 1480,
+        "still_altura": 833
+      },
+      {
+        "still_path": "/1mccSxkIzRms08qvzKYllGzCDqv.jpg",
+        "still_largura": 2048,
+        "still_altura": 1152
+      },
+      {
+        "still_path": "/20Rls9LIfQMqQqVHy3lgfMX6qSu.jpg",
+        "still_largura": 1920,
+        "still_altura": 1080
+      },
+      {
+        "still_path": "/25bmkeKBBX44uayEnyBWQ5o9OBU.jpg",
+        "still_largura": 1480,
+        "still_altura": 833
+      },
+      {
+        "still_path": "/8kdoCv1ZAYxWvH8ftuWLX0vmqkX.jpg",
+        "still_largura": 1480,
+        "still_altura": 833
+      },
+      {
+        "still_path": "/bIXIVaFCuA1tSnctg6Vl5JzuSrC.jpg",
+        "still_largura": 1480,
+        "still_altura": 833
+      },
+      {
+        "still_path": "/cozYcNfedJLwQKlaegcuSPYkS45.jpg",
+        "still_largura": 1600,
+        "still_altura": 900
+      },
+      {
+        "still_path": "/elHPbIrd4BcuOJqmNrJAZb9tXZy.jpg",
+        "still_largura": 2048,
+        "still_altura": 1152
+      },
+      {
+        "still_path": "/hZk2emzgT3hJHLGILjLvQ0PZbXo.jpg",
+        "still_largura": 1480,
+        "still_altura": 833
+      },
+      {
+        "still_path": "/jt7KbwpJAdx3AzFVTaNtHu0m9yu.jpg",
+        "still_largura": 1920,
+        "still_altura": 1080
+      },
+      {
+        "still_path": "/qypZJhZizt7Ai9etiG1zCUiDIZP.jpg",
+        "still_largura": 1920,
+        "still_altura": 1080
+      }
+    ],
+    "ano_fonte": "letterboxd",
+    "identidade": {
+      "versao": 1,
+      "status": "validada",
+      "slug": "the-cloud-capped-star",
+      "titulo_letterboxd": "The Cloud-Capped Star",
+      "ano_letterboxd": 1960,
+      "tmdb_id_letterboxd": 59239,
+      "tmdb_id_escolhido": 59239,
+      "fonte_id": "letterboxd",
+      "titulo_tmdb_campo": "alternative_title",
+      "titulo_tmdb_correspondente": "The Cloud-Capped Star",
+      "ano_tmdb": 1960,
+      "ano_divergente": false
+    }
+  },
+  "distribuicao": {
+    "n_notas_total": 7921,
+    "por_nivel": {
+      "0.5": 18,
+      "1.0": 35,
+      "1.5": 42,
+      "2.0": 124,
+      "2.5": 225,
+      "3.0": 555,
+      "3.5": 955,
+      "4.0": 2330,
+      "4.5": 1513,
+      "5.0": 2124
+    },
+    "por_bucket": {
+      "negativas": 3,
+      "medianas": 10,
+      "positivas": 87
+    },
+    "fonte": "letterboxd_histograma"
+  },
+  "coleta": {
+    "slug": "the-cloud-capped-star",
+    "coletado_em": "2026-09-10T18:51:24.945589+00:00",
+    "versao_coletor": "1.9.6",
+    "ordenacao_usada": "by/added",
+    "histograma_bruto": {
+      "0.5": 18,
+      "1.0": 35,
+      "1.5": 42,
+      "2.0": 124,
+      "2.5": 225,
+      "3.0": 555,
+      "3.5": 955,
+      "4.0": 2330,
+      "4.5": 1513,
+      "5.0": 2124
+    },
+    "orcamento_paginas_por_nivel": {
+      "0.5": 1,
+      "1.0": 3,
+      "1.5": 3,
+      "2.0": 9,
+      "2.5": 6,
+      "3.0": 10,
+      "3.5": 2,
+      "4.0": 5,
+      "4.5": 4,
+      "5.0": 5
+    },
+    "paginas_gastas_por_nivel": {
+      "0.5": 1,
+      "1.0": 1,
+      "1.5": 2,
+      "2.0": 3,
+      "2.5": 4,
+      "3.0": 7,
+      "3.5": 2,
+      "4.0": 5,
+      "4.5": 4,
+      "5.0": 5
+    },
+    "paradas_por_limite": [
+      "2.5",
+      "3.5",
+      "4.0",
+      "4.5",
+      "5.0"
+    ],
+    "contagem_bruta_por_nivel": {
+      "0.5": 8,
+      "1.0": 8,
+      "1.5": 14,
+      "2.0": 29,
+      "2.5": 39,
+      "3.0": 81,
+      "3.5": 24,
+      "4.0": 60,
+      "4.5": 48,
+      "5.0": 60
+    },
+    "contagem_estimada_valida_por_nivel": {
+      "0.5": 3,
+      "1.0": 2,
+      "1.5": 6,
+      "2.0": 16,
+      "2.5": 18,
+      "3.0": 40,
+      "3.5": 12,
+      "4.0": 30,
+      "4.5": 28,
+      "5.0": 31
+    },
+    "motivo_parada_por_nivel": {
+      "0.5": "material_esgotado",
+      "1.0": "material_esgotado",
+      "1.5": "material_esgotado",
+      "2.0": "material_esgotado",
+      "2.5": "orcamento_esgotado",
+      "3.0": "material_esgotado",
+      "3.5": "orcamento_esgotado",
+      "4.0": "orcamento_esgotado",
+      "4.5": "orcamento_esgotado",
+      "5.0": "orcamento_esgotado"
+    },
+    "paginas_base_por_nivel": {
+      "0.5": 1,
+      "1.0": 1,
+      "1.5": 2,
+      "2.0": 3,
+      "2.5": 4,
+      "3.0": 7,
+      "3.5": 2,
+      "4.0": 5,
+      "4.5": 4,
+      "5.0": 5
+    },
+    "paginas_extensao_por_nivel": {
+      "0.5": 0,
+      "1.0": 0,
+      "1.5": 0,
+      "2.0": 0,
+      "2.5": 0,
+      "3.0": 0,
+      "3.5": 0,
+      "4.0": 0,
+      "4.5": 0,
+      "5.0": 0
+    },
+    "extensao_por_bucket": {
+      "negativas": {
+        "paginas_base": 7,
+        "paginas_extensao": 2,
+        "extras_por_nivel": {
+          "0.5": 1,
+          "1.5": 1
+        },
+        "motivo_parada": "material_esgotado",
+        "n_validas_pos_base": 27,
+        "n_validas_pos_extensao": 27,
+        "meta": 50
+      },
+      "medianas": {
+        "paginas_base": 11,
+        "paginas_extensao": 0,
+        "extras_por_nivel": {},
+        "motivo_parada": "meta_atingida",
+        "n_validas_pos_base": 58,
+        "n_validas_pos_extensao": 58,
+        "meta": 50
+      },
+      "positivas": {
+        "paginas_base": 16,
+        "paginas_extensao": 0,
+        "extras_por_nivel": {},
+        "motivo_parada": "meta_atingida",
+        "n_validas_pos_base": 96,
+        "n_validas_pos_extensao": 96,
+        "meta": 50
+      }
+    },
+    "profundidade_sondagem": {
+      "nivel_sondado": 4.0,
+      "profundidade": 34,
+      "exata": false,
+      "requisicoes": 6,
+      "motivo": "encontrada"
+    },
+    "profundidade_estimada_por_nivel": {
+      "0.5": 1,
+      "1.0": 1,
+      "1.5": 1,
+      "2.0": 2,
+      "2.5": 3,
+      "3.0": 8,
+      "3.5": 14,
+      "4.0": 34,
+      "4.5": 22,
+      "5.0": 31
+    },
+    "janela_temporal": {
+      "total": {
+        "n": 370,
+        "min": "2014-04-09",
+        "max": "2026-09-09",
+        "p5": "2020-06-07",
+        "p50": "2026-02-15",
+        "p95": "2026-08-26"
+      },
+      "por_bucket": {
+        "negativas": {
+          "n": 59,
+          "min": "2014-04-09",
+          "max": "2026-06-16",
+          "p5": "2020-06-07",
+          "p50": "2023-02-07",
+          "p95": "2026-03-21"
+        },
+        "medianas": {
+          "n": 120,
+          "min": "2015-10-28",
+          "max": "2026-08-26",
+          "p5": "2019-11-10",
+          "p50": "2024-04-11",
+          "p95": "2026-05-20"
+        },
+        "positivas": {
+          "n": 191,
+          "min": "2018-07-23",
+          "max": "2026-09-09",
+          "p5": "2026-01-21",
+          "p50": "2026-06-25",
+          "p95": "2026-08-31"
+        }
+      }
+    },
+    "dias_por_100_paginas": {
+      "n_paginas": 8,
+      "pagina_min": 1,
+      "pagina_max": 8,
+      "dias": 55,
+      "dias_por_100_paginas": 785.7142857142857,
+      "paginas_para_1_ano": 46
+    },
+    "identidade_letterboxd": {
+      "slug": "the-cloud-capped-star",
+      "titulo": "The Cloud-Capped Star",
+      "ano": 1960,
+      "tmdb_id_letterboxd": 59239,
+      "fonte": "pagina_letterboxd"
+    },
+    "ano_lancamento": 1960,
+    "ano_fonte": "letterboxd",
+    "n_reviews_bruto": 371
+  },
+  "buckets": [
+    {
+      "bucket": "negativas",
+      "alvo": 40,
+      "modo": "reduzido",
+      "estado_piso": "completa",
+      "n_validas": 27,
+      "share_real": 3,
+      "composicao_alvo": {
+        "0.5": 3,
+        "1.0": 6,
+        "1.5": 8,
+        "2.0": 23
+      },
+      "composicao_atingida": {
+        "0.5": 3,
+        "1.0": 2,
+        "1.5": 6,
+        "2.0": 16
+      },
+      "cascata_por_degrau": {
+        "150": 27
+      },
+      "deficit_redistribuido": 0,
+      "distribuicao_pagina_origem": {
+        "n": 27,
+        "min": 1,
+        "max": 3,
+        "p5": 1,
+        "p50": 1,
+        "p95": 3,
+        "fracao_profunda": 0.0
+      },
+      "janela_amostra": {
+        "n": 27,
+        "min": "2020-06-07",
+        "max": "2026-06-16",
+        "p5": "2020-09-16",
+        "p50": "2024-03-18",
+        "p95": "2026-03-27"
+      },
+      "niveis": [
+        {
+          "nivel": 0.5,
+          "n_validas": 3,
+          "n_alvo": 3,
+          "n_brutas": 8,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 0,
+          "n_descartadas_curtas": 5,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 0,
+          "motivos_descarte": {
+            "truncada_sem_texto": 0,
+            "spoiler": 0,
+            "abaixo_min_chars": 5,
+            "excedente_cota": 0,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 1
+        },
+        {
+          "nivel": 1.0,
+          "n_validas": 2,
+          "n_alvo": 6,
+          "n_brutas": 8,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 0,
+          "n_descartadas_curtas": 6,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 0,
+          "motivos_descarte": {
+            "truncada_sem_texto": 0,
+            "spoiler": 0,
+            "abaixo_min_chars": 6,
+            "excedente_cota": 0,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 1
+        },
+        {
+          "nivel": 1.5,
+          "n_validas": 6,
+          "n_alvo": 8,
+          "n_brutas": 14,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 0,
+          "n_descartadas_curtas": 8,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 0,
+          "motivos_descarte": {
+            "truncada_sem_texto": 0,
+            "spoiler": 0,
+            "abaixo_min_chars": 8,
+            "excedente_cota": 0,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 2
+        },
+        {
+          "nivel": 2.0,
+          "n_validas": 16,
+          "n_alvo": 23,
+          "n_brutas": 29,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 0,
+          "n_descartadas_curtas": 13,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 0,
+          "motivos_descarte": {
+            "truncada_sem_texto": 0,
+            "spoiler": 0,
+            "abaixo_min_chars": 13,
+            "excedente_cota": 0,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 3
+        }
+      ],
+      "temas": [
+        {
+          "tema": "Melodrama excessivo e acúmulo de sofrimento",
+          "mencoes_aproximadas": 20,
+          "n_reviews_analisadas": 27,
+          "exemplo_parafraseado": "As reviews negativas criticam o filme por ser um melodrama que insiste em empilhar desgraças sobre a protagonista, tornando a narrativa repetitiva e arrastada.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Ritmo lento e duração excessiva",
+          "mencoes_aproximadas": 15,
+          "n_reviews_analisadas": 27,
+          "exemplo_parafraseado": "Muitos espectadores consideram o ritmo extremamente lento e a duração de duas horas excessiva, com momentos que parecem se arrastar sem avanço significativo.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Atuações fracas ou exageradas",
+          "mencoes_aproximadas": 12,
+          "n_reviews_analisadas": 27,
+          "exemplo_parafraseado": "As atuações são frequentemente descritas como exageradas, teatrais ou sem nuance, com destaque para críticas à falta de expressividade da protagonista.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Personagens unidimensionais e caricaturais",
+          "mencoes_aproximadas": 10,
+          "n_reviews_analisadas": 27,
+          "exemplo_parafraseado": "Os personagens são vistos como caricaturas sem profundidade, cujas ações previsíveis e comportamentos egoístas não soam convincentes ou humanos.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Música e trilha sonora incômodas",
+          "mencoes_aproximadas": 9,
+          "n_reviews_analisadas": 27,
+          "exemplo_parafraseado": "A trilha sonora e as canções são apontadas como irritantes ou mal inseridas, com cortes abruptos que prejudicam a experiência.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Mensagem problemática ou romantização do sofrimento",
+          "mencoes_aproximadas": 8,
+          "n_reviews_analisadas": 27,
+          "exemplo_parafraseado": "Algumas reviews criticam a forma como o filme romantiza o sofrimento feminino e reforça clichês misóginos, em vez de oferecer uma crítica social eficaz.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        }
+      ],
+      "observacao_geral": "As reviews negativas deste grupo destacam principalmente o melodrama excessivo, o ritmo lento e as atuações fracas como os principais defeitos do filme. Apesar de reconhecerem a beleza da fotografia, muitos espectadores consideram a narrativa repetitiva e os personagens unidimensionais, resultando em uma experiência arrastada e pouco envolvente.",
+      "idioma_invalido": false,
+      "escopo_suspeito": false
+    },
+    {
+      "bucket": "medianas",
+      "alvo": 40,
+      "modo": "completo",
+      "estado_piso": "completa",
+      "n_validas": 40,
+      "share_real": 10,
+      "composicao_alvo": {
+        "2.5": 12,
+        "3.0": 28
+      },
+      "composicao_atingida": {
+        "2.5": 12,
+        "3.0": 28
+      },
+      "cascata_por_degrau": {
+        "150": 40
+      },
+      "deficit_redistribuido": 0,
+      "distribuicao_pagina_origem": {
+        "n": 40,
+        "min": 1,
+        "max": 6,
+        "p5": 1,
+        "p50": 3,
+        "p95": 6,
+        "fracao_profunda": 0.0
+      },
+      "janela_amostra": {
+        "n": 40,
+        "min": "2021-07-13",
+        "max": "2026-06-27",
+        "p5": "2021-11-21",
+        "p50": "2025-02-02",
+        "p95": "2026-05-31"
+      },
+      "niveis": [
+        {
+          "nivel": 2.5,
+          "n_validas": 12,
+          "n_alvo": 12,
+          "n_brutas": 39,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 1,
+          "n_descartadas_curtas": 20,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 0,
+          "motivos_descarte": {
+            "truncada_sem_texto": 0,
+            "spoiler": 1,
+            "abaixo_min_chars": 20,
+            "excedente_cota": 6,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 4
+        },
+        {
+          "nivel": 3.0,
+          "n_validas": 28,
+          "n_alvo": 28,
+          "n_brutas": 81,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 1,
+          "n_descartadas_curtas": 40,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 0,
+          "motivos_descarte": {
+            "truncada_sem_texto": 0,
+            "spoiler": 1,
+            "abaixo_min_chars": 40,
+            "excedente_cota": 12,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 7
+        }
+      ],
+      "temas": [
+        {
+          "tema": "Melodrama excessivo e martírio feminino",
+          "mencoes_aproximadas": 15,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "Este grupo critica o excesso de sofrimento imposto à protagonista, visto como melodrama repetitivo e por vezes sádico, que insiste no martírio feminino de forma pouco sutil.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Ritmo lento e arrastado",
+          "mencoes_aproximadas": 12,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "Diversas reviews medianas consideram que o filme é lento, tedioso e que a narrativa demora a engrenar, tornando a experiência arrastada para parte do público.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Fotografia e enquadramentos belos",
+          "mencoes_aproximadas": 11,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "As reviews medianas elogiam a fotografia e a composição visual do filme, destacando a beleza dos enquadramentos e o uso expressivo da luz e dos close-ups.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Trilha sonora e desenho de som",
+          "mencoes_aproximadas": 10,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "A música e o som são frequentemente mencionados, com comentários positivos sobre as canções e o uso expressivo do som, mas também críticas à falta de coordenação com a narrativa.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Falta de conexão emocional e dificuldade cultural",
+          "mencoes_aproximadas": 9,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "Vários espectadores relatam dificuldade em se envolver emocionalmente com a história, seja por barreiras culturais ou por não serem tocados pelo drama apresentado.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Atuações teatrais e personagens unidimensionais",
+          "mencoes_aproximadas": 8,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "Algumas reviews apontam atuações excessivamente teatrais e personagens sem profundidade, especialmente a protagonista, vista como unidimensional e passiva.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        }
+      ],
+      "observacao_geral": "As reviews medianas analisadas destacam a beleza visual e a força da trilha sonora, mas criticam o ritmo lento, o excesso de melodrama e a falta de conexão emocional. Este grupo reconhece a importância histórica do filme, porém considera que seus elementos não se sustentam plenamente para todos.",
+      "idioma_invalido": false,
+      "escopo_suspeito": false
+    },
+    {
+      "bucket": "positivas",
+      "alvo": 40,
+      "modo": "completo",
+      "estado_piso": "completa",
+      "n_validas": 40,
+      "share_real": 87,
+      "composicao_alvo": {
+        "3.5": 6,
+        "4.0": 13,
+        "4.5": 9,
+        "5.0": 12
+      },
+      "composicao_atingida": {
+        "3.5": 6,
+        "4.0": 13,
+        "4.5": 9,
+        "5.0": 12
+      },
+      "cascata_por_degrau": {
+        "150": 40
+      },
+      "deficit_redistribuido": 0,
+      "distribuicao_pagina_origem": {
+        "n": 40,
+        "min": 1,
+        "max": 8,
+        "p5": 1,
+        "p50": 3,
+        "p95": 8,
+        "fracao_profunda": 0.25
+      },
+      "janela_amostra": {
+        "n": 40,
+        "min": "2025-05-02",
+        "max": "2026-09-04",
+        "p5": "2026-01-22",
+        "p50": "2026-07-07",
+        "p95": "2026-09-04"
+      },
+      "niveis": [
+        {
+          "nivel": 3.5,
+          "n_validas": 6,
+          "n_alvo": 6,
+          "n_brutas": 24,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 1,
+          "n_descartadas_curtas": 11,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 0,
+          "motivos_descarte": {
+            "truncada_sem_texto": 0,
+            "spoiler": 1,
+            "abaixo_min_chars": 11,
+            "excedente_cota": 6,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 2
+        },
+        {
+          "nivel": 4.0,
+          "n_validas": 13,
+          "n_alvo": 13,
+          "n_brutas": 60,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 2,
+          "n_descartadas_curtas": 27,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 1,
+          "motivos_descarte": {
+            "truncada_sem_texto": 1,
+            "spoiler": 2,
+            "abaixo_min_chars": 27,
+            "excedente_cota": 17,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 5
+        },
+        {
+          "nivel": 4.5,
+          "n_validas": 9,
+          "n_alvo": 9,
+          "n_brutas": 47,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 2,
+          "n_descartadas_curtas": 18,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 1,
+          "motivos_descarte": {
+            "truncada_sem_texto": 1,
+            "spoiler": 2,
+            "abaixo_min_chars": 18,
+            "excedente_cota": 17,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 4
+        },
+        {
+          "nivel": 5.0,
+          "n_validas": 12,
+          "n_alvo": 12,
+          "n_brutas": 60,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 2,
+          "n_descartadas_curtas": 27,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 4,
+          "motivos_descarte": {
+            "truncada_sem_texto": 4,
+            "spoiler": 2,
+            "abaixo_min_chars": 27,
+            "excedente_cota": 15,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 5
+        }
+      ],
+      "temas": [
+        {
+          "tema": "Atuação e personagens",
+          "mencoes_aproximadas": 20,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "As reviews elogiam a atuação de Supriya Choudhury como Neeta e a caracterização dos personagens, destacando a força emocional e a autenticidade das performances.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Trilha sonora e desenho de som",
+          "mencoes_aproximadas": 18,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "O uso da música tradicional e os efeitos sonoros expressivos, como estalos e chicotadas, são frequentemente citados como elementos que amplificam o impacto emocional e a atmosfera do filme.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Fotografia e composição visual",
+          "mencoes_aproximadas": 16,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "A fotografia em preto e branco, com enquadramentos cuidadosos e uso expressivo de luz e sombra, é destacada como um dos pontos altos, criando imagens marcantes e simbólicas.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Melodrama e emoção",
+          "mencoes_aproximadas": 15,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "O melodrama intenso e a carga emocional são vistos como centrais, com alguns considerando excessivo, mas na maioria das vezes eficaz e comovente.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Contexto pós-partição e críticas sociais",
+          "mencoes_aproximadas": 12,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "A abordagem da Partição de Bengala, do deslocamento e da exploração de uma mulher pela família é reconhecida como uma metáfora poderosa das feridas históricas e das estruturas sociais opressivas.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Ritmo e duração",
+          "mencoes_aproximadas": 5,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "Algumas reviews mencionam que o ritmo é lento e que a duração pode ser um desafio, embora a experiência compense.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        }
+      ],
+      "observacao_geral": "As reviews positivas destacam a força emocional, a maestria técnica e o impacto duradouro deste clássico indiano, com ênfase nas atuações, no som e na fotografia, além de sua relevância histórica e social.",
+      "idioma_invalido": false,
+      "escopo_suspeito": false
+    }
+  ],
+  "eixos": {
+    "taxonomia_id": "ebab2667de74",
+    "margem": {
+      "lei": "lift^2 * n >= 2085136/1000000",
+      "constante_quadrada": [
+        2085136,
+        1000000
+      ],
+      "n": 27,
+      "limiar_pp": 27.79
+    },
+    "margem_lift_pp": 27.79,
+    "linhas": [
+      {
+        "eixo": "ritmo",
+        "por_bucket": {
+          "negativas": {
+            "mencoes": 10,
+            "de_n": 27,
+            "freq_pct": 37.0,
+            "lift_pp": 14.5,
+            "acima_da_margem": false,
+            "tema": "Ritmo lento e duração excessiva",
+            "exemplo_parafraseado": "Muitos espectadores consideram o ritmo extremamente lento e a duração de duas horas excessiva, com momentos que parecem se arrastar sem avanço significativo.",
+            "temas_no_mesmo_eixo": []
+          },
+          "medianas": {
+            "mencoes": 9,
+            "de_n": 40,
+            "freq_pct": 22.5,
+            "lift_pp": -14.5,
+            "acima_da_margem": false,
+            "tema": "Ritmo lento e arrastado",
+            "exemplo_parafraseado": "Diversas reviews medianas consideram que o filme é lento, tedioso e que a narrativa demora a engrenar, tornando a experiência arrastada para parte do público.",
+            "temas_no_mesmo_eixo": []
+          },
+          "positivas": {
+            "mencoes": 2,
+            "de_n": 40,
+            "freq_pct": 5.0,
+            "lift_pp": -32.0,
+            "acima_da_margem": false,
+            "tema": "Ritmo e duração",
+            "exemplo_parafraseado": "Algumas reviews mencionam que o ritmo é lento e que a duração pode ser um desafio, embora a experiência compense.",
+            "temas_no_mesmo_eixo": []
+          }
+        },
+        "bullet_de": {
+          "negativas": null,
+          "medianas": null,
+          "positivas": null
+        }
+      },
+      {
+        "eixo": "atuacao",
+        "por_bucket": {
+          "negativas": {
+            "mencoes": 8,
+            "de_n": 27,
+            "freq_pct": 29.6,
+            "lift_pp": 12.1,
+            "acima_da_margem": false,
+            "tema": "Atuações fracas ou exageradas",
+            "exemplo_parafraseado": "As atuações são frequentemente descritas como exageradas, teatrais ou sem nuance, com destaque para críticas à falta de expressividade da protagonista.",
+            "temas_no_mesmo_eixo": []
+          },
+          "medianas": {
+            "mencoes": 5,
+            "de_n": 40,
+            "freq_pct": 12.5,
+            "lift_pp": -17.1,
+            "acima_da_margem": false,
+            "tema": "Atuações teatrais e personagens unidimensionais",
+            "exemplo_parafraseado": "Algumas reviews apontam atuações excessivamente teatrais e personagens sem profundidade, especialmente a protagonista, vista como unidimensional e passiva.",
+            "temas_no_mesmo_eixo": []
+          },
+          "positivas": {
+            "mencoes": 7,
+            "de_n": 40,
+            "freq_pct": 17.5,
+            "lift_pp": -12.1,
+            "acima_da_margem": false,
+            "tema": "Atuação e personagens",
+            "exemplo_parafraseado": "As reviews elogiam a atuação de Supriya Choudhury como Neeta e a caracterização dos personagens, destacando a força emocional e a autenticidade das performances.",
+            "temas_no_mesmo_eixo": []
+          }
+        },
+        "bullet_de": {
+          "negativas": null,
+          "medianas": null,
+          "positivas": null
+        }
+      },
+      {
+        "eixo": "direcao_imagem",
+        "por_bucket": {
+          "negativas": {
+            "mencoes": 13,
+            "de_n": 27,
+            "freq_pct": 48.1,
+            "lift_pp": -14.4,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "medianas": {
+            "mencoes": 16,
+            "de_n": 40,
+            "freq_pct": 40.0,
+            "lift_pp": -22.5,
+            "acima_da_margem": false,
+            "tema": "Fotografia e enquadramentos belos",
+            "exemplo_parafraseado": "As reviews medianas elogiam a fotografia e a composição visual do filme, destacando a beleza dos enquadramentos e o uso expressivo da luz e dos close-ups.",
+            "temas_no_mesmo_eixo": []
+          },
+          "positivas": {
+            "mencoes": 25,
+            "de_n": 40,
+            "freq_pct": 62.5,
+            "lift_pp": 14.4,
+            "acima_da_margem": false,
+            "tema": "Fotografia e composição visual",
+            "exemplo_parafraseado": "A fotografia em preto e branco, com enquadramentos cuidadosos e uso expressivo de luz e sombra, é destacada como um dos pontos altos, criando imagens marcantes e simbólicas.",
+            "temas_no_mesmo_eixo": []
+          }
+        },
+        "bullet_de": {
+          "negativas": "frequencia",
+          "medianas": "frequencia",
+          "positivas": "frequencia"
+        }
+      },
+      {
+        "eixo": "roteiro_estrutura",
+        "por_bucket": {
+          "negativas": {
+            "mencoes": 24,
+            "de_n": 27,
+            "freq_pct": 88.9,
+            "lift_pp": 13.9,
+            "acima_da_margem": false,
+            "tema": "Personagens unidimensionais e caricaturais",
+            "exemplo_parafraseado": "Os personagens são vistos como caricaturas sem profundidade, cujas ações previsíveis e comportamentos egoístas não soam convincentes ou humanos.",
+            "temas_no_mesmo_eixo": []
+          },
+          "medianas": {
+            "mencoes": 30,
+            "de_n": 40,
+            "freq_pct": 75.0,
+            "lift_pp": -13.9,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "positivas": {
+            "mencoes": 28,
+            "de_n": 40,
+            "freq_pct": 70.0,
+            "lift_pp": -18.9,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          }
+        },
+        "bullet_de": {
+          "negativas": "frequencia",
+          "medianas": "frequencia",
+          "positivas": "frequencia"
+        }
+      },
+      {
+        "eixo": "som_trilha",
+        "por_bucket": {
+          "negativas": {
+            "mencoes": 12,
+            "de_n": 27,
+            "freq_pct": 44.4,
+            "lift_pp": -13.1,
+            "acima_da_margem": false,
+            "tema": "Música e trilha sonora incômodas",
+            "exemplo_parafraseado": "A trilha sonora e as canções são apontadas como irritantes ou mal inseridas, com cortes abruptos que prejudicam a experiência.",
+            "temas_no_mesmo_eixo": []
+          },
+          "medianas": {
+            "mencoes": 15,
+            "de_n": 40,
+            "freq_pct": 37.5,
+            "lift_pp": -20.0,
+            "acima_da_margem": false,
+            "tema": "Trilha sonora e desenho de som",
+            "exemplo_parafraseado": "A música e o som são frequentemente mencionados, com comentários positivos sobre as canções e o uso expressivo do som, mas também críticas à falta de coordenação com a narrativa.",
+            "temas_no_mesmo_eixo": []
+          },
+          "positivas": {
+            "mencoes": 23,
+            "de_n": 40,
+            "freq_pct": 57.5,
+            "lift_pp": 13.1,
+            "acima_da_margem": false,
+            "tema": "Trilha sonora e desenho de som",
+            "exemplo_parafraseado": "O uso da música tradicional e os efeitos sonoros expressivos, como estalos e chicotadas, são frequentemente citados como elementos que amplificam o impacto emocional e a atmosfera do filme.",
+            "temas_no_mesmo_eixo": []
+          }
+        },
+        "bullet_de": {
+          "negativas": null,
+          "medianas": null,
+          "positivas": null
+        }
+      },
+      {
+        "eixo": "tom_atmosfera",
+        "por_bucket": {
+          "negativas": {
+            "mencoes": 4,
+            "de_n": 27,
+            "freq_pct": 14.8,
+            "lift_pp": -17.7,
+            "acima_da_margem": false,
+            "tema": "Melodrama excessivo e acúmulo de sofrimento",
+            "exemplo_parafraseado": "As reviews negativas criticam o filme por ser um melodrama que insiste em empilhar desgraças sobre a protagonista, tornando a narrativa repetitiva e arrastada.",
+            "temas_no_mesmo_eixo": []
+          },
+          "medianas": {
+            "mencoes": 9,
+            "de_n": 40,
+            "freq_pct": 22.5,
+            "lift_pp": -10.0,
+            "acima_da_margem": false,
+            "tema": "Melodrama excessivo e martírio feminino",
+            "exemplo_parafraseado": "Este grupo critica o excesso de sofrimento imposto à protagonista, visto como melodrama repetitivo e por vezes sádico, que insiste no martírio feminino de forma pouco sutil.",
+            "temas_no_mesmo_eixo": []
+          },
+          "positivas": {
+            "mencoes": 13,
+            "de_n": 40,
+            "freq_pct": 32.5,
+            "lift_pp": 10.0,
+            "acima_da_margem": false,
+            "tema": "Melodrama e emoção",
+            "exemplo_parafraseado": "O melodrama intenso e a carga emocional são vistos como centrais, com alguns considerando excessivo, mas na maioria das vezes eficaz e comovente.",
+            "temas_no_mesmo_eixo": []
+          }
+        },
+        "bullet_de": {
+          "negativas": null,
+          "medianas": null,
+          "positivas": null
+        }
+      },
+      {
+        "eixo": "impacto_emocional",
+        "por_bucket": {
+          "negativas": {
+            "mencoes": 7,
+            "de_n": 27,
+            "freq_pct": 25.9,
+            "lift_pp": -24.1,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "medianas": {
+            "mencoes": 12,
+            "de_n": 40,
+            "freq_pct": 30.0,
+            "lift_pp": -20.0,
+            "acima_da_margem": false,
+            "tema": "Falta de conexão emocional e dificuldade cultural",
+            "exemplo_parafraseado": "Vários espectadores relatam dificuldade em se envolver emocionalmente com a história, seja por barreiras culturais ou por não serem tocados pelo drama apresentado.",
+            "temas_no_mesmo_eixo": []
+          },
+          "positivas": {
+            "mencoes": 20,
+            "de_n": 40,
+            "freq_pct": 50.0,
+            "lift_pp": 20.0,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          }
+        },
+        "bullet_de": {
+          "negativas": null,
+          "medianas": null,
+          "positivas": null
+        }
+      },
+      {
+        "eixo": "comparacoes",
+        "por_bucket": {
+          "negativas": {
+            "mencoes": 11,
+            "de_n": 27,
+            "freq_pct": 40.7,
+            "lift_pp": -9.3,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "medianas": {
+            "mencoes": 16,
+            "de_n": 40,
+            "freq_pct": 40.0,
+            "lift_pp": -10.0,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "positivas": {
+            "mencoes": 20,
+            "de_n": 40,
+            "freq_pct": 50.0,
+            "lift_pp": 9.3,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          }
+        },
+        "bullet_de": {
+          "negativas": null,
+          "medianas": null,
+          "positivas": null
+        }
+      },
+      {
+        "eixo": "expectativa",
+        "por_bucket": {
+          "negativas": {
+            "mencoes": 4,
+            "de_n": 27,
+            "freq_pct": 14.8,
+            "lift_pp": -7.7,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "medianas": {
+            "mencoes": 9,
+            "de_n": 40,
+            "freq_pct": 22.5,
+            "lift_pp": 7.5,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "positivas": {
+            "mencoes": 6,
+            "de_n": 40,
+            "freq_pct": 15.0,
+            "lift_pp": -7.5,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          }
+        },
+        "bullet_de": {
+          "negativas": null,
+          "medianas": null,
+          "positivas": null
+        }
+      },
+      {
+        "eixo": "critica_social",
+        "por_bucket": {
+          "negativas": {
+            "mencoes": 10,
+            "de_n": 27,
+            "freq_pct": 37.0,
+            "lift_pp": -3.0,
+            "acima_da_margem": false,
+            "tema": "Mensagem problemática ou romantização do sofrimento",
+            "exemplo_parafraseado": "Algumas reviews criticam a forma como o filme romantiza o sofrimento feminino e reforça clichês misóginos, em vez de oferecer uma crítica social eficaz.",
+            "temas_no_mesmo_eixo": []
+          },
+          "medianas": {
+            "mencoes": 16,
+            "de_n": 40,
+            "freq_pct": 40.0,
+            "lift_pp": 3.0,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "positivas": {
+            "mencoes": 14,
+            "de_n": 40,
+            "freq_pct": 35.0,
+            "lift_pp": -5.0,
+            "acima_da_margem": false,
+            "tema": "Contexto pós-partição e críticas sociais",
+            "exemplo_parafraseado": "A abordagem da Partição de Bengala, do deslocamento e da exploração de uma mulher pela família é reconhecida como uma metáfora poderosa das feridas históricas e das estruturas sociais opressivas.",
+            "temas_no_mesmo_eixo": []
+          }
+        },
+        "bullet_de": {
+          "negativas": null,
+          "medianas": null,
+          "positivas": null
+        }
+      }
+    ],
+    "contraste": "valorativo",
+    "rotulagem": {
+      "n_chamadas": 3,
+      "falharam": [],
+      "fora_da_taxonomia": {},
+      "houve_retentativa": []
+    },
+    "spec_version": "1.9.50",
+    "verificador": {
+      "aplicado": true,
+      "variante": "V2_alvo",
+      "passada": 1,
+      "eixo": "impacto_emocional",
+      "n_removidas_no_corpus": 2781
+    }
+  },
+  "narrativa": "Lançado em 1960 e dirigido por Ritwik Kumar Ghatak, o drama Estrela Encoberta de Nuvens acompanha a trajetória de uma jovem em uma família de classe média refugiada nos subúrbios de Calcutá. Na trama, ela realiza constantes sacrifícios pessoais, financeiros e de saúde por seus parentes, sem que seu empenho encontre o devido reconhecimento ao seu redor.\n\nA obra se estrutura como uma narrativa melodramática de cadência lenta, sustentada por uma densa ambientação sonora e forte presença de contrastes visuais. O tom foca no acúmulo contínuo de adversidades vivenciadas no cotidiano familiar.\n\nOs diferentes olhares coincidem quanto aos traços constitutivos da obra, mas divergem frontalmente sobre a eficácia do seu resultado. Na grande maioria das notas (~87%), uma parcela expressiva destaca a força das atuações e dos personagens, enquanto muitos enfatizam a expressividade da trilha sonora e do desenho de som, e vários elogiam a composição visual e a fotografia. Sob a perspectiva de quem compõe uma fração mínima das notas (~10%), boa parte critica o melodrama excessivo centrado no martírio da protagonista e um número considerável aponta o ritmo lento e arrastado da projeção, ainda que muitos reconheçam a beleza dos enquadramentos. Já para quem se posiciona em uma fração ainda menor das notas (~3%), a maior parte reprova o acúmulo de sofrimento por considerá-lo excessivo, perto da metade rejeita o ritmo lento aliado à longa duração, e uma parcela expressiva vê as atuações como exageradas ou teatrais.",
+  "verificacao_narrativa": {
+    "quantificador_fora_de_faixa": [],
+    "quantificador_repetido": [],
+    "paragrafos": {
+      "n_paragrafos": 3,
+      "minimo": 3,
+      "insuficientes": false,
+      "longos": []
+    },
+    "n_paragrafos": 3,
+    "paragrafos_insuficientes": false,
+    "paragrafos_longos": [],
+    "grupos_sem_paragrafo_proprio": [
+      "medianas",
+      "negativas"
+    ],
+    "movimento1_e_movimento2_no_mesmo_paragrafo": false,
+    "formato_invalido": false,
+    "numeros_inventados": [],
+    "rotulos_faltando": [],
+    "ordem_incorreta": false,
+    "vocabulario_peso": false,
+    "resenha_speak": [],
+    "n_resenha_speak": 0,
+    "n_flags": 1
+  },
+  "narrativa_selecao": {
+    "provider": "gemini",
+    "modelo": "gemini-3.7-flash",
+    "n_candidatos": 3,
+    "n_chamadas": 4,
+    "indice_escolhido": 2,
+    "motivo": "menor_severidade",
+    "criterio_decisivo": "empate",
+    "candidatos": [
+      {
+        "indice": 0,
+        "n_flags": 2,
+        "cliches": 0,
+        "repeticao_max": 2,
+        "ritmo": 12,
+        "cobertura": 1.0,
+        "eliminado": true
+      },
+      {
+        "indice": 1,
+        "n_flags": 1,
+        "cliches": 0,
+        "repeticao_max": 2,
+        "ritmo": 5,
+        "cobertura": 1.0,
+        "eliminado": true
+      },
+      {
+        "indice": 2,
+        "n_flags": 1,
+        "cliches": 0,
+        "repeticao_max": 2,
+        "ritmo": 11,
+        "cobertura": 1.0,
+        "eliminado": true
+      }
+    ],
+    "retry": {
+      "n_frases_infratoras": 0,
+      "motivos": [],
+      "n_flags_depois": 1,
+      "aplicado": false
+    },
+    "uso": {
+      "prompt_tokens": 11758,
+      "completion_tokens": 1538,
+      "cache_hit_tokens": 0,
+      "cache_miss_tokens": 11758
+    },
+    "latencia_s": 39.51
+  },
+  "condicoes": {
+    "vale_a_pena": [
+      {
+        "texto": "busca atuações autênticas comoventes e personagens construídos com grande força emocional",
+        "tema_origem": "POS-A",
+        "bucket_origem": "positivas",
+        "tema_texto": "Atuação e personagens",
+        "rotulo_forca": "muitos"
+      },
+      {
+        "texto": "aprecia efeitos sonoros expressivos e música tradicional integrados à atmosfera da história",
+        "tema_origem": "POS-B",
+        "bucket_origem": "positivas",
+        "tema_texto": "Trilha sonora e desenho de som",
+        "rotulo_forca": "muitos"
+      },
+      {
+        "texto": "valoriza fotografia em preto e branco com uso expressivo de luz e sombra",
+        "tema_origem": "POS-C",
+        "bucket_origem": "positivas",
+        "tema_texto": "Fotografia e composição visual",
+        "rotulo_forca": "muitos"
+      },
+      {
+        "texto": "se envolve com melodramas intensos e comoventes, mesmo quando beiram o excesso",
+        "tema_origem": "POS-D",
+        "bucket_origem": "positivas",
+        "tema_texto": "Melodrama e emoção",
+        "rotulo_forca": "muitos",
+        "origem": "leitura_humana"
+      },
+      {
+        "texto": "tolera um andamento vagaroso e desafiador em favor de uma experiência recompensadora",
+        "tema_origem": "POS-F",
+        "bucket_origem": "positivas",
+        "tema_texto": "Ritmo e duração",
+        "rotulo_forca": "alguns"
+      }
+    ],
+    "talvez_evite": [
+      {
+        "texto": "se desgasta com melodramas focados no acúmulo repetitivo de sofrimento da protagonista",
+        "tema_origem": "NEG-A",
+        "bucket_origem": "negativas",
+        "tema_texto": "Melodrama excessivo e acúmulo de sofrimento",
+        "rotulo_forca": "a maioria"
+      },
+      {
+        "texto": "se frustra com ritmos excessivamente lentos que parecem se arrastar sem avanços",
+        "tema_origem": "NEG-B",
+        "bucket_origem": "negativas",
+        "tema_texto": "Ritmo lento e duração excessiva",
+        "rotulo_forca": "cerca de metade"
+      },
+      {
+        "texto": "se incomoda com atuações teatrais exageradas e falta de nuance nas interpretações",
+        "tema_origem": "NEG-C",
+        "bucket_origem": "negativas",
+        "tema_texto": "Atuações fracas ou exageradas",
+        "rotulo_forca": "muitos"
+      },
+      {
+        "texto": "se incomoda com inserções musicais irritantes ou transições sonoras com cortes abruptos",
+        "tema_origem": "NEG-E",
+        "bucket_origem": "negativas",
+        "tema_texto": "Música e trilha sonora incômodas",
+        "rotulo_forca": "muitos"
+      }
+    ],
+    "ordem_colunas": [
+      "vale_a_pena",
+      "talvez_evite"
+    ],
+    "peso": {
+      "vale_a_pena": {
+        "peso_pct": 87,
+        "peso_texto": "~87% das notas",
+        "nota_de_amostra": null
+      },
+      "talvez_evite": {
+        "peso_pct": 3,
+        "peso_texto": "~3% das notas",
+        "nota_de_amostra": "amostra pequena"
+      }
+    },
+    "peso_meio": null,
+    "origem": "llm",
+    "temas_pedidos": {
+      "vale_a_pena": [
+        "POS-A",
+        "POS-B",
+        "POS-C",
+        "POS-D",
+        "POS-F"
+      ],
+      "talvez_evite": [
+        "NEG-A",
+        "NEG-B",
+        "NEG-C",
+        "NEG-E"
+      ]
+    },
+    "temas_saltados": {
+      "vale_a_pena": [],
+      "talvez_evite": []
+    },
+    "descartadas": [],
+    "retry": null,
+    "provider": "gemini",
+    "modelo": "gemini-3.7-flash",
+    "n_candidatos": 3,
+    "n_chamadas": 3,
+    "indice_escolhido": 0,
+    "candidatos": [
+      {
+        "indice": 0,
+        "n_condicoes": 9,
+        "n_flags": 0,
+        "flags": [],
+        "n_temas_cobertos": 9
+      },
+      {
+        "indice": 1,
+        "n_condicoes": 9,
+        "n_flags": 3,
+        "flags": [
+          "ancora_nao_verificavel",
+          "exemplo_verbatim",
+          "sem_discriminacao"
+        ],
+        "n_temas_cobertos": 9
+      },
+      {
+        "indice": 2,
+        "n_condicoes": 9,
+        "n_flags": 0,
+        "flags": [],
+        "n_temas_cobertos": 9
+      }
+    ],
+    "uso": {
+      "prompt_tokens": 8373,
+      "completion_tokens": 1255,
+      "cache_hit_tokens": 0,
+      "cache_miss_tokens": 8373
+    },
+    "latencia_s": 14.96,
+    "spec_version": "1.9.50"
+  }
+}

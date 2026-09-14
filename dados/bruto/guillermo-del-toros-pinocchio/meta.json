@@ -1,0 +1,289 @@
+{
+  "slug": "guillermo-del-toros-pinocchio",
+  "coletado_em": "2026-09-10T19:37:49.434080+00:00",
+  "versao_coletor": "1.9.6",
+  "ordenacao_usada": "by/added",
+  "histograma_bruto": {
+    "0.5": 1778,
+    "1.0": 4328,
+    "1.5": 2944,
+    "2.0": 14397,
+    "2.5": 16604,
+    "3.0": 67857,
+    "3.5": 104623,
+    "4.0": 238179,
+    "4.5": 114265,
+    "5.0": 149165
+  },
+  "orcamento_paginas_por_nivel": {
+    "0.5": 1,
+    "1.0": 3,
+    "1.5": 2,
+    "2.0": 10,
+    "2.5": 6,
+    "3.0": 10,
+    "3.5": 3,
+    "4.0": 6,
+    "4.5": 3,
+    "5.0": 4
+  },
+  "paginas_gastas_por_nivel": {
+    "0.5": 1,
+    "1.0": 3,
+    "1.5": 2,
+    "2.0": 10,
+    "2.5": 6,
+    "3.0": 10,
+    "3.5": 3,
+    "4.0": 6,
+    "4.5": 3,
+    "5.0": 4
+  },
+  "paradas_por_limite": [
+    "0.5",
+    "1.0",
+    "1.5",
+    "2.0",
+    "2.5",
+    "3.0",
+    "3.5",
+    "4.0",
+    "4.5",
+    "5.0"
+  ],
+  "contagem_bruta_por_nivel": {
+    "0.5": 12,
+    "1.0": 36,
+    "1.5": 24,
+    "2.0": 120,
+    "2.5": 72,
+    "3.0": 120,
+    "3.5": 36,
+    "4.0": 72,
+    "4.5": 36,
+    "5.0": 48
+  },
+  "contagem_estimada_valida_por_nivel": {
+    "0.5": 5,
+    "1.0": 15,
+    "1.5": 7,
+    "2.0": 28,
+    "2.5": 22,
+    "3.0": 36,
+    "3.5": 10,
+    "4.0": 20,
+    "4.5": 9,
+    "5.0": 14
+  },
+  "motivo_parada_por_nivel": {
+    "0.5": "orcamento_esgotado",
+    "1.0": "orcamento_esgotado",
+    "1.5": "orcamento_esgotado",
+    "2.0": "orcamento_esgotado",
+    "2.5": "orcamento_esgotado",
+    "3.0": "orcamento_esgotado",
+    "3.5": "orcamento_esgotado",
+    "4.0": "orcamento_esgotado",
+    "4.5": "orcamento_esgotado",
+    "5.0": "orcamento_esgotado"
+  },
+  "paginas_base_por_nivel": {
+    "0.5": 1,
+    "1.0": 3,
+    "1.5": 2,
+    "2.0": 10,
+    "2.5": 6,
+    "3.0": 10,
+    "3.5": 3,
+    "4.0": 6,
+    "4.5": 3,
+    "5.0": 4
+  },
+  "paginas_extensao_por_nivel": {
+    "0.5": 0,
+    "1.0": 0,
+    "1.5": 0,
+    "2.0": 0,
+    "2.5": 0,
+    "3.0": 0,
+    "3.5": 0,
+    "4.0": 0,
+    "4.5": 0,
+    "5.0": 0
+  },
+  "extensao_por_bucket": {
+    "negativas": {
+      "paginas_base": 16,
+      "paginas_extensao": 0,
+      "extras_por_nivel": {},
+      "motivo_parada": "meta_atingida",
+      "n_validas_pos_base": 55,
+      "n_validas_pos_extensao": 55,
+      "meta": 50
+    },
+    "medianas": {
+      "paginas_base": 16,
+      "paginas_extensao": 0,
+      "extras_por_nivel": {},
+      "motivo_parada": "meta_atingida",
+      "n_validas_pos_base": 58,
+      "n_validas_pos_extensao": 58,
+      "meta": 50
+    },
+    "positivas": {
+      "paginas_base": 16,
+      "paginas_extensao": 0,
+      "extras_por_nivel": {},
+      "motivo_parada": "meta_atingida",
+      "n_validas_pos_base": 53,
+      "n_validas_pos_extensao": 53,
+      "meta": 50
+    }
+  },
+  "profundidade_sondagem": {
+    "nivel_sondado": 4.0,
+    "profundidade": 256,
+    "exata": false,
+    "requisicoes": 4,
+    "motivo": "teto_plataforma"
+  },
+  "profundidade_estimada_por_nivel": {
+    "0.5": 2,
+    "1.0": 5,
+    "1.5": 3,
+    "2.0": 15,
+    "2.5": 18,
+    "3.0": 73,
+    "3.5": 112,
+    "4.0": 256,
+    "4.5": 123,
+    "5.0": 160
+  },
+  "janela_temporal": {
+    "total": {
+      "n": 576,
+      "min": "2019-01-17",
+      "max": "2026-09-10",
+      "p5": "2025-05-25",
+      "p50": "2026-07-25",
+      "p95": "2026-09-09"
+    },
+    "por_bucket": {
+      "negativas": {
+        "n": 192,
+        "min": "2022-11-10",
+        "max": "2026-09-09",
+        "p5": "2025-04-28",
+        "p50": "2026-05-05",
+        "p95": "2026-08-25"
+      },
+      "medianas": {
+        "n": 192,
+        "min": "2019-01-17",
+        "max": "2026-09-10",
+        "p5": "2025-07-01",
+        "p50": "2026-08-09",
+        "p95": "2026-09-07"
+      },
+      "positivas": {
+        "n": 192,
+        "min": "2022-11-08",
+        "max": "2026-09-10",
+        "p5": "2025-12-07",
+        "p50": "2026-09-06",
+        "p95": "2026-09-10"
+      }
+    }
+  },
+  "dias_por_100_paginas": {
+    "n_paginas": 17,
+    "pagina_min": 1,
+    "pagina_max": 128,
+    "dias": 129,
+    "dias_por_100_paginas": 101.5748031496063,
+    "paginas_para_1_ano": 359
+  },
+  "dias_por_100_paginas_por_nivel": {
+    "1.0": {
+      "n_paginas": 3,
+      "pagina_min": 1,
+      "pagina_max": 3,
+      "dias": 158,
+      "dias_por_100_paginas": 7900.0,
+      "paginas_para_1_ano": 5
+    },
+    "1.5": {
+      "n_paginas": 2,
+      "pagina_min": 1,
+      "pagina_max": 2,
+      "dias": 63,
+      "dias_por_100_paginas": 6300.0,
+      "paginas_para_1_ano": 6
+    },
+    "2.0": {
+      "n_paginas": 10,
+      "pagina_min": 1,
+      "pagina_max": 11,
+      "dias": 204,
+      "dias_por_100_paginas": 2040.0,
+      "paginas_para_1_ano": 18
+    },
+    "2.5": {
+      "n_paginas": 6,
+      "pagina_min": 1,
+      "pagina_max": 9,
+      "dias": 129,
+      "dias_por_100_paginas": 1612.5,
+      "paginas_para_1_ano": 23
+    },
+    "3.0": {
+      "n_paginas": 10,
+      "pagina_min": 1,
+      "pagina_max": 36,
+      "dias": 171,
+      "dias_por_100_paginas": 488.57142857142856,
+      "paginas_para_1_ano": 75
+    },
+    "3.5": {
+      "n_paginas": 3,
+      "pagina_min": 1,
+      "pagina_max": 28,
+      "dias": 76,
+      "dias_por_100_paginas": 281.48148148148147,
+      "paginas_para_1_ano": 130
+    },
+    "4.0": {
+      "n_paginas": 6,
+      "pagina_min": 1,
+      "pagina_max": 128,
+      "dias": 133,
+      "dias_por_100_paginas": 104.7244094488189,
+      "paginas_para_1_ano": 349
+    },
+    "4.5": {
+      "n_paginas": 3,
+      "pagina_min": 1,
+      "pagina_max": 31,
+      "dias": 46,
+      "dias_por_100_paginas": 153.33333333333334,
+      "paginas_para_1_ano": 238
+    },
+    "5.0": {
+      "n_paginas": 4,
+      "pagina_min": 1,
+      "pagina_max": 40,
+      "dias": 37,
+      "dias_por_100_paginas": 94.87179487179488,
+      "paginas_para_1_ano": 385
+    }
+  },
+  "ano_lancamento": 2022,
+  "ano_fonte": "letterboxd",
+  "identidade_letterboxd": {
+    "slug": "guillermo-del-toros-pinocchio",
+    "titulo": "Guillermo del Toro's Pinocchio",
+    "ano": 2022,
+    "tmdb_id_letterboxd": 555604,
+    "fonte": "pagina_letterboxd"
+  }
+}

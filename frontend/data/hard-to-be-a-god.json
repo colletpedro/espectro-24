@@ -1,0 +1,1543 @@
+{
+  "slug": "hard-to-be-a-god",
+  "data_coleta": "2026-09-13T05:29:38.836686+00:00",
+  "spec_version": "1.9.50",
+  "total_reviews_observadas": 576,
+  "reviews_url": "https://letterboxd.com/film/hard-to-be-a-god/reviews/",
+  "ficha": {
+    "titulo": "É Difícil Ser Um Deus",
+    "sinopse_oficial": "A group of scientists is sent to the planet Arkanar to help the local civilization, which is in the Medieval phase of its own history, to find the right path to progress. Their task is a difficult one: they cannot interfere violently and in no case can they kill. The scientist Rumata tries to save the local intellectuals from their punishment and cannot avoid taking a position.",
+    "sinopse_fallback_en": true,
+    "generos": [
+      "Drama",
+      "Ficção científica"
+    ],
+    "duracao_min": 177,
+    "diretor": "Aleksei German Sr.",
+    "diretor_transliterado": false,
+    "ano": 2013,
+    "fonte": "tmdb",
+    "tmdb_id": 110402,
+    "tmdb_fetched_at": "2026-09-10T20:06:21+00:00",
+    "poster_path": "/jelBaA0yNBzN9bUvYB8y3ACGa0l.jpg",
+    "poster_largura": 1068,
+    "poster_altura": 1599,
+    "backdrop_paths": [
+      "/iEOKiQs1Exyuu5eNK3MT8pyen0e.jpg",
+      "/iNhaEPAgAinPuA4fkimowUrWniy.jpg",
+      "/DEsQKueXDsikeFFxZsJuspIRUp.jpg",
+      "/igm9ZtXa4Zrvl8z6ER7utkJQiCq.jpg",
+      "/pCGtWodIP7bMKPTlICqSleTMowq.jpg",
+      "/5LIAw85XYyAjvb9VPFfZjcv6brV.jpg",
+      "/dQiMx19rWZ4UkXbhHpoV91OQUfc.jpg",
+      "/xKmVH7BVxXkDKjBeGwzfKa3YEgW.jpg",
+      "/uzKcyWTEPdBOBy5lsvaV3Jc7rIU.jpg",
+      "/enbx2xd4B1APr87KNvCmrWdIaar.jpg"
+    ],
+    "backdrop_path": "/iEOKiQs1Exyuu5eNK3MT8pyen0e.jpg",
+    "backdrop_largura": 3840,
+    "backdrop_altura": 2160,
+    "poster_sem_texto_path": null,
+    "poster_sem_texto_largura": null,
+    "poster_sem_texto_altura": null,
+    "galeria_stills": [
+      {
+        "still_path": "/iEOKiQs1Exyuu5eNK3MT8pyen0e.jpg",
+        "still_largura": 3840,
+        "still_altura": 2160
+      },
+      {
+        "still_path": "/DEsQKueXDsikeFFxZsJuspIRUp.jpg",
+        "still_largura": 1280,
+        "still_altura": 720
+      },
+      {
+        "still_path": "/1s1gzSx6Fw5tY4Jkcqeg98HVwpC.jpg",
+        "still_largura": 3840,
+        "still_altura": 2160
+      },
+      {
+        "still_path": "/7FKsAiYKghd7rwWWi2tYZIJWUqf.jpg",
+        "still_largura": 3840,
+        "still_altura": 2160
+      },
+      {
+        "still_path": "/aIzThCxxDj2MnuGg17B09UutRCw.jpg",
+        "still_largura": 3840,
+        "still_altura": 2160
+      },
+      {
+        "still_path": "/dQiMx19rWZ4UkXbhHpoV91OQUfc.jpg",
+        "still_largura": 3840,
+        "still_altura": 2160
+      },
+      {
+        "still_path": "/enbx2xd4B1APr87KNvCmrWdIaar.jpg",
+        "still_largura": 3840,
+        "still_altura": 2160
+      },
+      {
+        "still_path": "/igm9ZtXa4Zrvl8z6ER7utkJQiCq.jpg",
+        "still_largura": 1394,
+        "still_altura": 784
+      },
+      {
+        "still_path": "/mhHOqmC4uEtU1OcHWTyWrY6JiBE.jpg",
+        "still_largura": 3840,
+        "still_altura": 2160
+      },
+      {
+        "still_path": "/s5day3yimIcvXAsGUY070gAKJ8x.jpg",
+        "still_largura": 3840,
+        "still_altura": 2160
+      },
+      {
+        "still_path": "/tJsiioK7jSO0khPI99JcvlGuROC.jpg",
+        "still_largura": 3840,
+        "still_altura": 2160
+      },
+      {
+        "still_path": "/uHjy3jJ5qYjt5NV8fSrBUZpQjjQ.jpg",
+        "still_largura": 3840,
+        "still_altura": 2160
+      }
+    ],
+    "ano_fonte": "letterboxd",
+    "identidade": {
+      "versao": 1,
+      "status": "validada",
+      "slug": "hard-to-be-a-god",
+      "titulo_letterboxd": "Hard to Be a God",
+      "ano_letterboxd": 2013,
+      "tmdb_id_letterboxd": 110402,
+      "tmdb_id_escolhido": 110402,
+      "fonte_id": "letterboxd",
+      "titulo_tmdb_campo": "title",
+      "titulo_tmdb_correspondente": "Hard to Be a God",
+      "ano_tmdb": 2014,
+      "ano_divergente": true
+    }
+  },
+  "distribuicao": {
+    "n_notas_total": 18101,
+    "por_nivel": {
+      "0.5": 241,
+      "1.0": 437,
+      "1.5": 388,
+      "2.0": 911,
+      "2.5": 927,
+      "3.0": 2026,
+      "3.5": 2276,
+      "4.0": 4409,
+      "4.5": 2641,
+      "5.0": 3845
+    },
+    "por_bucket": {
+      "negativas": 11,
+      "medianas": 16,
+      "positivas": 73
+    },
+    "fonte": "letterboxd_histograma"
+  },
+  "coleta": {
+    "slug": "hard-to-be-a-god",
+    "coletado_em": "2026-09-10T19:33:53.694286+00:00",
+    "versao_coletor": "1.9.6",
+    "ordenacao_usada": "by/added",
+    "histograma_bruto": {
+      "0.5": 241,
+      "1.0": 437,
+      "1.5": 388,
+      "2.0": 911,
+      "2.5": 927,
+      "3.0": 2026,
+      "3.5": 2276,
+      "4.0": 4409,
+      "4.5": 2641,
+      "5.0": 3845
+    },
+    "orcamento_paginas_por_nivel": {
+      "0.5": 2,
+      "1.0": 4,
+      "1.5": 3,
+      "2.0": 7,
+      "2.5": 6,
+      "3.0": 10,
+      "3.5": 3,
+      "4.0": 5,
+      "4.5": 3,
+      "5.0": 5
+    },
+    "paginas_gastas_por_nivel": {
+      "0.5": 2,
+      "1.0": 4,
+      "1.5": 3,
+      "2.0": 7,
+      "2.5": 6,
+      "3.0": 10,
+      "3.5": 3,
+      "4.0": 5,
+      "4.5": 3,
+      "5.0": 5
+    },
+    "paradas_por_limite": [
+      "0.5",
+      "1.0",
+      "1.5",
+      "2.0",
+      "2.5",
+      "3.0",
+      "3.5",
+      "4.0",
+      "4.5",
+      "5.0"
+    ],
+    "contagem_bruta_por_nivel": {
+      "0.5": 24,
+      "1.0": 48,
+      "1.5": 36,
+      "2.0": 84,
+      "2.5": 72,
+      "3.0": 120,
+      "3.5": 36,
+      "4.0": 60,
+      "4.5": 36,
+      "5.0": 60
+    },
+    "contagem_estimada_valida_por_nivel": {
+      "0.5": 12,
+      "1.0": 26,
+      "1.5": 21,
+      "2.0": 42,
+      "2.5": 38,
+      "3.0": 68,
+      "3.5": 20,
+      "4.0": 31,
+      "4.5": 18,
+      "5.0": 36
+    },
+    "motivo_parada_por_nivel": {
+      "0.5": "orcamento_esgotado",
+      "1.0": "orcamento_esgotado",
+      "1.5": "orcamento_esgotado",
+      "2.0": "orcamento_esgotado",
+      "2.5": "orcamento_esgotado",
+      "3.0": "orcamento_esgotado",
+      "3.5": "orcamento_esgotado",
+      "4.0": "orcamento_esgotado",
+      "4.5": "orcamento_esgotado",
+      "5.0": "orcamento_esgotado"
+    },
+    "paginas_base_por_nivel": {
+      "0.5": 2,
+      "1.0": 4,
+      "1.5": 3,
+      "2.0": 7,
+      "2.5": 6,
+      "3.0": 10,
+      "3.5": 3,
+      "4.0": 5,
+      "4.5": 3,
+      "5.0": 5
+    },
+    "paginas_extensao_por_nivel": {
+      "0.5": 0,
+      "1.0": 0,
+      "1.5": 0,
+      "2.0": 0,
+      "2.5": 0,
+      "3.0": 0,
+      "3.5": 0,
+      "4.0": 0,
+      "4.5": 0,
+      "5.0": 0
+    },
+    "extensao_por_bucket": {
+      "negativas": {
+        "paginas_base": 16,
+        "paginas_extensao": 0,
+        "extras_por_nivel": {},
+        "motivo_parada": "meta_atingida",
+        "n_validas_pos_base": 98,
+        "n_validas_pos_extensao": 98,
+        "meta": 50
+      },
+      "medianas": {
+        "paginas_base": 16,
+        "paginas_extensao": 0,
+        "extras_por_nivel": {},
+        "motivo_parada": "meta_atingida",
+        "n_validas_pos_base": 106,
+        "n_validas_pos_extensao": 106,
+        "meta": 50
+      },
+      "positivas": {
+        "paginas_base": 16,
+        "paginas_extensao": 0,
+        "extras_por_nivel": {},
+        "motivo_parada": "meta_atingida",
+        "n_validas_pos_base": 102,
+        "n_validas_pos_extensao": 102,
+        "meta": 50
+      }
+    },
+    "profundidade_sondagem": {
+      "nivel_sondado": 4.0,
+      "profundidade": 64,
+      "exata": false,
+      "requisicoes": 7,
+      "motivo": "encontrada"
+    },
+    "profundidade_estimada_por_nivel": {
+      "0.5": 3,
+      "1.0": 6,
+      "1.5": 6,
+      "2.0": 13,
+      "2.5": 13,
+      "3.0": 29,
+      "3.5": 33,
+      "4.0": 64,
+      "4.5": 38,
+      "5.0": 56
+    },
+    "janela_temporal": {
+      "total": {
+        "n": 576,
+        "min": "2013-08-04",
+        "max": "2026-09-10",
+        "p5": "2024-09-15",
+        "p50": "2026-02-18",
+        "p95": "2026-08-29"
+      },
+      "por_bucket": {
+        "negativas": {
+          "n": 192,
+          "min": "2013-08-04",
+          "max": "2026-09-08",
+          "p5": "2022-11-07",
+          "p50": "2025-11-04",
+          "p95": "2026-08-07"
+        },
+        "medianas": {
+          "n": 192,
+          "min": "2015-03-09",
+          "max": "2026-09-07",
+          "p5": "2024-10-09",
+          "p50": "2026-01-03",
+          "p95": "2026-08-21"
+        },
+        "positivas": {
+          "n": 192,
+          "min": "2016-01-27",
+          "max": "2026-09-10",
+          "p5": "2025-07-19",
+          "p50": "2026-07-16",
+          "p95": "2026-09-01"
+        }
+      }
+    },
+    "dias_por_100_paginas": {
+      "n_paginas": 12,
+      "pagina_min": 1,
+      "pagina_max": 16,
+      "dias": 349,
+      "dias_por_100_paginas": 2326.6666666666665,
+      "paginas_para_1_ano": 16
+    },
+    "identidade_letterboxd": {
+      "slug": "hard-to-be-a-god",
+      "titulo": "Hard to Be a God",
+      "ano": 2013,
+      "tmdb_id_letterboxd": 110402,
+      "fonte": "pagina_letterboxd"
+    },
+    "ano_lancamento": 2013,
+    "ano_fonte": "letterboxd",
+    "n_reviews_bruto": 576
+  },
+  "buckets": [
+    {
+      "bucket": "negativas",
+      "alvo": 40,
+      "modo": "completo",
+      "estado_piso": "completa",
+      "n_validas": 40,
+      "share_real": 11,
+      "composicao_alvo": {
+        "0.5": 5,
+        "1.0": 9,
+        "1.5": 8,
+        "2.0": 18
+      },
+      "composicao_atingida": {
+        "0.5": 5,
+        "1.0": 9,
+        "1.5": 8,
+        "2.0": 18
+      },
+      "cascata_por_degrau": {
+        "150": 40
+      },
+      "deficit_redistribuido": 0,
+      "distribuicao_pagina_origem": {
+        "n": 40,
+        "min": 1,
+        "max": 6,
+        "p5": 1,
+        "p50": 3,
+        "p95": 6,
+        "fracao_profunda": 0.3
+      },
+      "janela_amostra": {
+        "n": 40,
+        "min": "2014-01-12",
+        "max": "2026-09-03",
+        "p5": "2025-01-05",
+        "p50": "2025-09-11",
+        "p95": "2026-09-01"
+      },
+      "niveis": [
+        {
+          "nivel": 0.5,
+          "n_validas": 5,
+          "n_alvo": 5,
+          "n_brutas": 24,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 0,
+          "n_descartadas_curtas": 10,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 2,
+          "motivos_descarte": {
+            "truncada_sem_texto": 2,
+            "spoiler": 0,
+            "abaixo_min_chars": 10,
+            "excedente_cota": 7,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 2
+        },
+        {
+          "nivel": 1.0,
+          "n_validas": 9,
+          "n_alvo": 9,
+          "n_brutas": 48,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 1,
+          "n_descartadas_curtas": 21,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 3,
+          "motivos_descarte": {
+            "truncada_sem_texto": 3,
+            "spoiler": 1,
+            "abaixo_min_chars": 21,
+            "excedente_cota": 14,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 4
+        },
+        {
+          "nivel": 1.5,
+          "n_validas": 8,
+          "n_alvo": 8,
+          "n_brutas": 36,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 0,
+          "n_descartadas_curtas": 15,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 0,
+          "motivos_descarte": {
+            "truncada_sem_texto": 0,
+            "spoiler": 0,
+            "abaixo_min_chars": 15,
+            "excedente_cota": 13,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 3
+        },
+        {
+          "nivel": 2.0,
+          "n_validas": 18,
+          "n_alvo": 18,
+          "n_brutas": 84,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 0,
+          "n_descartadas_curtas": 41,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 1,
+          "motivos_descarte": {
+            "truncada_sem_texto": 1,
+            "spoiler": 0,
+            "abaixo_min_chars": 41,
+            "excedente_cota": 24,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 7
+        }
+      ],
+      "temas": [
+        {
+          "tema": "Imundície e nojo excessivos",
+          "mencoes_aproximadas": 28,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "As reviews negativas reclamam que o filme é dominado por sujeira, excrementos, vômitos e outros fluidos corporais, usados de forma gratuita e repetitiva, tornando a experiência repulsiva em vez de artística.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Ritmo lento e duração excessiva",
+          "mencoes_aproximadas": 22,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "Muitos espectadores consideram o ritmo arrastado e a longa duração um teste de paciência, sem recompensa narrativa, com cenas que parecem se repetir indefinidamente.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Roteiro confuso e sem coesão",
+          "mencoes_aproximadas": 19,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "A falta de uma linha narrativa clara e a sensação de que a história não vai a lugar algum são críticas frequentes, com diálogos incoerentes e eventos aleatórios.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Personagens e atuações insuportáveis",
+          "mencoes_aproximadas": 14,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "As críticas apontam personagens repulsivos, atuações exageradas e a ausência de alguém com quem se importar, com comportamentos gratuitos e irritantes.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Direção pretensiosa e vazia",
+          "mencoes_aproximadas": 12,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "Alguns consideram o filme pretensioso, com uma mensagem banal ou inexistente, e decisões de direção que parecem zombar da paciência do espectador.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Cinematografia e design de produção elogiados, mas não salvam",
+          "mencoes_aproximadas": 10,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "Apesar de reconhecerem a qualidade técnica e a construção de mundo, os críticos afirmam que isso não compensa a experiência desagradável e tediosa.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        }
+      ],
+      "observacao_geral": "As reviews negativas deste grupo destacam principalmente o excesso de sujeira e nojo, o ritmo arrastado e a falta de uma narrativa coerente como os principais defeitos do filme. Mesmo quando elogiam aspectos técnicos, consideram que estes não justificam a experiência penosa.",
+      "idioma_invalido": false,
+      "escopo_suspeito": false
+    },
+    {
+      "bucket": "medianas",
+      "alvo": 40,
+      "modo": "completo",
+      "estado_piso": "completa",
+      "n_validas": 40,
+      "share_real": 16,
+      "composicao_alvo": {
+        "2.5": 13,
+        "3.0": 27
+      },
+      "composicao_atingida": {
+        "2.5": 13,
+        "3.0": 27
+      },
+      "cascata_por_degrau": {
+        "150": 40
+      },
+      "deficit_redistribuido": 0,
+      "distribuicao_pagina_origem": {
+        "n": 40,
+        "min": 1,
+        "max": 14,
+        "p5": 1,
+        "p50": 5,
+        "p95": 9,
+        "fracao_profunda": 0.35
+      },
+      "janela_amostra": {
+        "n": 40,
+        "min": "2015-03-09",
+        "max": "2026-09-04",
+        "p5": "2024-11-22",
+        "p50": "2026-02-04",
+        "p95": "2026-08-31"
+      },
+      "niveis": [
+        {
+          "nivel": 2.5,
+          "n_validas": 13,
+          "n_alvo": 13,
+          "n_brutas": 72,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 0,
+          "n_descartadas_curtas": 31,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 3,
+          "motivos_descarte": {
+            "truncada_sem_texto": 3,
+            "spoiler": 0,
+            "abaixo_min_chars": 31,
+            "excedente_cota": 25,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 6
+        },
+        {
+          "nivel": 3.0,
+          "n_validas": 27,
+          "n_alvo": 27,
+          "n_brutas": 120,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 1,
+          "n_descartadas_curtas": 51,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 0,
+          "motivos_descarte": {
+            "truncada_sem_texto": 0,
+            "spoiler": 1,
+            "abaixo_min_chars": 51,
+            "excedente_cota": 41,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 10
+        }
+      ],
+      "temas": [
+        {
+          "tema": "Imersão sensorial no grotesco (sujeira, fluidos, nojeira)",
+          "mencoes_aproximadas": 26,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "Este grupo destaca que o filme é extremamente imersivo em sua representação de sujeira, com corpos, ambientes e objetos cobertos de lama, sangue, urina e fezes, causando uma sensação física de repulsa e desconforto.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Dificuldade de acompanhar a narrativa",
+          "mencoes_aproximadas": 21,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "Várias reviews medianas relatam que a história é confusa e de difícil compreensão, com diálogos ininteligíveis e falta de clareza sobre quem são os personagens e o que está acontecendo, exigindo consulta externa para entender a trama.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Ritmo lento e longa duração",
+          "mencoes_aproximadas": 17,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "Muitas reviews medianas apontam que o ritmo é arrastado e que a duração de quase três horas se torna cansativa, com longos trechos em que nada significativo acontece.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Direção de fotografia e planos sequência marcantes",
+          "mencoes_aproximadas": 13,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "As reviews medianas elogiam a fotografia em preto e branco, os planos sequência elaborados e a câmera inquieta que se aproxima dos rostos, criando uma estética única e hipnótica.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Design de produção e figurinos impressionantes",
+          "mencoes_aproximadas": 12,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "Este grupo reconhece o enorme trabalho de design de produção e figurino, que constrói um mundo medieval sujo, cruel e visualmente coerente, com atenção obsessiva aos detalhes.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Premissa interessante, mas execução frustrante",
+          "mencoes_aproximadas": 10,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "Várias reviews medianas consideram a premissa de ficção científica em um planeta medieval intrigante, mas sentem que a adaptação não a explora bem e que o resultado é confuso e pouco envolvente.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        }
+      ],
+      "observacao_geral": "As reviews medianas analisadas destacam a imersão sensorial no grotesco, a dificuldade de acompanhar a narrativa, o ritmo lento e a longa duração, ao mesmo tempo que reconhecem a fotografia, os planos sequência e o design de produção como pontos fortes. A maioria expressa que, apesar do valor técnico e da premissa interessante, a experiência é exaustiva e pouco recompensadora emocionalmente.",
+      "idioma_invalido": false,
+      "escopo_suspeito": false
+    },
+    {
+      "bucket": "positivas",
+      "alvo": 40,
+      "modo": "completo",
+      "estado_piso": "completa",
+      "n_validas": 40,
+      "share_real": 73,
+      "composicao_alvo": {
+        "3.5": 7,
+        "4.0": 13,
+        "4.5": 8,
+        "5.0": 12
+      },
+      "composicao_atingida": {
+        "3.5": 7,
+        "4.0": 13,
+        "4.5": 8,
+        "5.0": 12
+      },
+      "cascata_por_degrau": {
+        "150": 40
+      },
+      "deficit_redistribuido": 0,
+      "distribuicao_pagina_origem": {
+        "n": 40,
+        "min": 1,
+        "max": 16,
+        "p5": 1,
+        "p50": 3,
+        "p95": 16,
+        "fracao_profunda": 0.375
+      },
+      "janela_amostra": {
+        "n": 40,
+        "min": "2016-01-27",
+        "max": "2026-09-08",
+        "p5": "2025-07-16",
+        "p50": "2026-07-23",
+        "p95": "2026-09-05"
+      },
+      "niveis": [
+        {
+          "nivel": 3.5,
+          "n_validas": 7,
+          "n_alvo": 7,
+          "n_brutas": 36,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 1,
+          "n_descartadas_curtas": 14,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 1,
+          "motivos_descarte": {
+            "truncada_sem_texto": 1,
+            "spoiler": 1,
+            "abaixo_min_chars": 14,
+            "excedente_cota": 13,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 3
+        },
+        {
+          "nivel": 4.0,
+          "n_validas": 13,
+          "n_alvo": 13,
+          "n_brutas": 60,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 1,
+          "n_descartadas_curtas": 28,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 0,
+          "motivos_descarte": {
+            "truncada_sem_texto": 0,
+            "spoiler": 1,
+            "abaixo_min_chars": 28,
+            "excedente_cota": 18,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 5
+        },
+        {
+          "nivel": 4.5,
+          "n_validas": 8,
+          "n_alvo": 8,
+          "n_brutas": 36,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 0,
+          "n_descartadas_curtas": 18,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 0,
+          "motivos_descarte": {
+            "truncada_sem_texto": 0,
+            "spoiler": 0,
+            "abaixo_min_chars": 18,
+            "excedente_cota": 10,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 3
+        },
+        {
+          "nivel": 5.0,
+          "n_validas": 12,
+          "n_alvo": 12,
+          "n_brutas": 60,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 2,
+          "n_descartadas_curtas": 22,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 3,
+          "motivos_descarte": {
+            "truncada_sem_texto": 3,
+            "spoiler": 2,
+            "abaixo_min_chars": 22,
+            "excedente_cota": 21,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 5
+        }
+      ],
+      "temas": [
+        {
+          "tema": "Imersão sensorial e worldbuilding",
+          "mencoes_aproximadas": 30,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "As reviews destacam que o filme cria um mundo tão denso e tátil que o espectador sente como se tivesse sido transportado para dentro dele, com cenários, figurinos e detalhes que transbordam a tela e tornam a experiência quase documental.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Sujeira, imundície e repulsa",
+          "mencoes_aproximadas": 24,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "Muitas reviews enfatizam a presença constante de lama, excrementos, sangue e outras sujeiras, descrevendo o filme como repulsivo e ao mesmo tempo fascinante, com uma estética que provoca desde nojo até necessidade de banho após a sessão.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Narrativa confusa e difícil de acompanhar",
+          "mencoes_aproximadas": 22,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "Este grupo aponta que a trama é fragmentada e praticamente incompreensível, exigindo paciência ou pesquisa externa para ser minimamente entendida, e que o filme não se esforça para facilitar o acompanhamento.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Fotografia e direção marcantes",
+          "mencoes_aproximadas": 20,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "As reviews elogiam a fotografia em preto e branco, os planos longos e a câmera que se move de forma inquieta e intrusiva, criando uma sensação de claustrofobia e imersão que muitos consideram uma conquista técnica e artística.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Atmosfera opressiva e alegórica",
+          "mencoes_aproximadas": 14,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "Várias reviews interpretam o filme como uma alegoria sobre violência, estupidez, autoritarismo e a condição humana, retratando um mundo opressivo e sem saída que serve como reflexo de questões históricas e sociais.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Duração e ritmo desafiadores",
+          "mencoes_aproximadas": 12,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "Algumas reviews comentam que as quase três horas de projeção e o ritmo lento tornam a experiência cansativa e exigem esforço, embora esse mesmo aspecto seja visto por outras como parte da imersão proposta pelo filme.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        }
+      ],
+      "observacao_geral": "As reviews positivas descrevem este filme como uma experiência sensorial intensa e imersiva, marcada por um worldbuilding detalhado e uma estética suja e opressiva, mas frequentemente difícil de acompanhar narrativamente. Este grupo destaca a fotografia e a direção como pontos altos, ao mesmo tempo que reconhece a duração e o ritmo como desafios.",
+      "idioma_invalido": false,
+      "escopo_suspeito": false
+    }
+  ],
+  "eixos": {
+    "taxonomia_id": "ebab2667de74",
+    "margem": {
+      "lei": "lift^2 * n >= 2085136/1000000",
+      "constante_quadrada": [
+        2085136,
+        1000000
+      ],
+      "n": 40,
+      "limiar_pp": 22.83
+    },
+    "margem_lift_pp": 22.83,
+    "linhas": [
+      {
+        "eixo": "ritmo",
+        "por_bucket": {
+          "negativas": {
+            "mencoes": 24,
+            "de_n": 40,
+            "freq_pct": 60.0,
+            "lift_pp": 15.0,
+            "acima_da_margem": false,
+            "tema": "Ritmo lento e duração excessiva",
+            "exemplo_parafraseado": "Muitos espectadores consideram o ritmo arrastado e a longa duração um teste de paciência, sem recompensa narrativa, com cenas que parecem se repetir indefinidamente.",
+            "temas_no_mesmo_eixo": []
+          },
+          "medianas": {
+            "mencoes": 18,
+            "de_n": 40,
+            "freq_pct": 45.0,
+            "lift_pp": -15.0,
+            "acima_da_margem": false,
+            "tema": "Ritmo lento e longa duração",
+            "exemplo_parafraseado": "Muitas reviews medianas apontam que o ritmo é arrastado e que a duração de quase três horas se torna cansativa, com longos trechos em que nada significativo acontece.",
+            "temas_no_mesmo_eixo": []
+          },
+          "positivas": {
+            "mencoes": 15,
+            "de_n": 40,
+            "freq_pct": 37.5,
+            "lift_pp": -22.5,
+            "acima_da_margem": false,
+            "tema": "Duração e ritmo desafiadores",
+            "exemplo_parafraseado": "Algumas reviews comentam que as quase três horas de projeção e o ritmo lento tornam a experiência cansativa e exigem esforço, embora esse mesmo aspecto seja visto por outras como parte da imersão proposta pelo filme.",
+            "temas_no_mesmo_eixo": []
+          }
+        },
+        "bullet_de": {
+          "negativas": null,
+          "medianas": null,
+          "positivas": null
+        }
+      },
+      {
+        "eixo": "atuacao",
+        "por_bucket": {
+          "negativas": {
+            "mencoes": 6,
+            "de_n": 40,
+            "freq_pct": 15.0,
+            "lift_pp": 0.0,
+            "acima_da_margem": false,
+            "tema": "Personagens e atuações insuportáveis",
+            "exemplo_parafraseado": "As críticas apontam personagens repulsivos, atuações exageradas e a ausência de alguém com quem se importar, com comportamentos gratuitos e irritantes.",
+            "temas_no_mesmo_eixo": []
+          },
+          "medianas": {
+            "mencoes": 3,
+            "de_n": 40,
+            "freq_pct": 7.5,
+            "lift_pp": -7.5,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "positivas": {
+            "mencoes": 6,
+            "de_n": 40,
+            "freq_pct": 15.0,
+            "lift_pp": 0.0,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          }
+        },
+        "bullet_de": {
+          "negativas": null,
+          "medianas": null,
+          "positivas": null
+        }
+      },
+      {
+        "eixo": "direcao_imagem",
+        "por_bucket": {
+          "negativas": {
+            "mencoes": 29,
+            "de_n": 40,
+            "freq_pct": 72.5,
+            "lift_pp": -5.0,
+            "acima_da_margem": false,
+            "tema": "Direção pretensiosa e vazia",
+            "exemplo_parafraseado": "Alguns consideram o filme pretensioso, com uma mensagem banal ou inexistente, e decisões de direção que parecem zombar da paciência do espectador.",
+            "temas_no_mesmo_eixo": [
+              "Cinematografia e design de produção elogiados, mas não salvam"
+            ]
+          },
+          "medianas": {
+            "mencoes": 24,
+            "de_n": 40,
+            "freq_pct": 60.0,
+            "lift_pp": -17.5,
+            "acima_da_margem": false,
+            "tema": "Direção de fotografia e planos sequência marcantes",
+            "exemplo_parafraseado": "As reviews medianas elogiam a fotografia em preto e branco, os planos sequência elaborados e a câmera inquieta que se aproxima dos rostos, criando uma estética única e hipnótica.",
+            "temas_no_mesmo_eixo": [
+              "Design de produção e figurinos impressionantes"
+            ]
+          },
+          "positivas": {
+            "mencoes": 31,
+            "de_n": 40,
+            "freq_pct": 77.5,
+            "lift_pp": 5.0,
+            "acima_da_margem": false,
+            "tema": "Imersão sensorial e worldbuilding",
+            "exemplo_parafraseado": "As reviews destacam que o filme cria um mundo tão denso e tátil que o espectador sente como se tivesse sido transportado para dentro dele, com cenários, figurinos e detalhes que transbordam a tela e tornam a experiência quase documental.",
+            "temas_no_mesmo_eixo": [
+              "Fotografia e direção marcantes"
+            ]
+          }
+        },
+        "bullet_de": {
+          "negativas": "frequencia",
+          "medianas": "frequencia",
+          "positivas": "frequencia"
+        }
+      },
+      {
+        "eixo": "roteiro_estrutura",
+        "por_bucket": {
+          "negativas": {
+            "mencoes": 34,
+            "de_n": 40,
+            "freq_pct": 85.0,
+            "lift_pp": 7.5,
+            "acima_da_margem": false,
+            "tema": "Roteiro confuso e sem coesão",
+            "exemplo_parafraseado": "A falta de uma linha narrativa clara e a sensação de que a história não vai a lugar algum são críticas frequentes, com diálogos incoerentes e eventos aleatórios.",
+            "temas_no_mesmo_eixo": []
+          },
+          "medianas": {
+            "mencoes": 31,
+            "de_n": 40,
+            "freq_pct": 77.5,
+            "lift_pp": -7.5,
+            "acima_da_margem": false,
+            "tema": "Dificuldade de acompanhar a narrativa",
+            "exemplo_parafraseado": "Várias reviews medianas relatam que a história é confusa e de difícil compreensão, com diálogos ininteligíveis e falta de clareza sobre quem são os personagens e o que está acontecendo, exigindo consulta externa para entender a trama.",
+            "temas_no_mesmo_eixo": [
+              "Premissa interessante, mas execução frustrante"
+            ]
+          },
+          "positivas": {
+            "mencoes": 25,
+            "de_n": 40,
+            "freq_pct": 62.5,
+            "lift_pp": -22.5,
+            "acima_da_margem": false,
+            "tema": "Narrativa confusa e difícil de acompanhar",
+            "exemplo_parafraseado": "Este grupo aponta que a trama é fragmentada e praticamente incompreensível, exigindo paciência ou pesquisa externa para ser minimamente entendida, e que o filme não se esforça para facilitar o acompanhamento.",
+            "temas_no_mesmo_eixo": []
+          }
+        },
+        "bullet_de": {
+          "negativas": "frequencia",
+          "medianas": "frequencia",
+          "positivas": null
+        }
+      },
+      {
+        "eixo": "som_trilha",
+        "por_bucket": {
+          "negativas": {
+            "mencoes": 3,
+            "de_n": 40,
+            "freq_pct": 7.5,
+            "lift_pp": -5.0,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "medianas": {
+            "mencoes": 5,
+            "de_n": 40,
+            "freq_pct": 12.5,
+            "lift_pp": 0.0,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "positivas": {
+            "mencoes": 5,
+            "de_n": 40,
+            "freq_pct": 12.5,
+            "lift_pp": 0.0,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          }
+        },
+        "bullet_de": {
+          "negativas": null,
+          "medianas": null,
+          "positivas": null
+        }
+      },
+      {
+        "eixo": "tom_atmosfera",
+        "por_bucket": {
+          "negativas": {
+            "mencoes": 17,
+            "de_n": 40,
+            "freq_pct": 42.5,
+            "lift_pp": -32.5,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "medianas": {
+            "mencoes": 22,
+            "de_n": 40,
+            "freq_pct": 55.0,
+            "lift_pp": -20.0,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "positivas": {
+            "mencoes": 30,
+            "de_n": 40,
+            "freq_pct": 75.0,
+            "lift_pp": 20.0,
+            "acima_da_margem": false,
+            "tema": "Atmosfera opressiva e alegórica",
+            "exemplo_parafraseado": "Várias reviews interpretam o filme como uma alegoria sobre violência, estupidez, autoritarismo e a condição humana, retratando um mundo opressivo e sem saída que serve como reflexo de questões históricas e sociais.",
+            "temas_no_mesmo_eixo": []
+          }
+        },
+        "bullet_de": {
+          "negativas": null,
+          "medianas": null,
+          "positivas": "frequencia"
+        }
+      },
+      {
+        "eixo": "impacto_emocional",
+        "por_bucket": {
+          "negativas": {
+            "mencoes": 21,
+            "de_n": 40,
+            "freq_pct": 52.5,
+            "lift_pp": -10.0,
+            "acima_da_margem": false,
+            "tema": "Imundície e nojo excessivos",
+            "exemplo_parafraseado": "As reviews negativas reclamam que o filme é dominado por sujeira, excrementos, vômitos e outros fluidos corporais, usados de forma gratuita e repetitiva, tornando a experiência repulsiva em vez de artística.",
+            "temas_no_mesmo_eixo": []
+          },
+          "medianas": {
+            "mencoes": 18,
+            "de_n": 40,
+            "freq_pct": 45.0,
+            "lift_pp": -17.5,
+            "acima_da_margem": false,
+            "tema": "Imersão sensorial no grotesco (sujeira, fluidos, nojeira)",
+            "exemplo_parafraseado": "Este grupo destaca que o filme é extremamente imersivo em sua representação de sujeira, com corpos, ambientes e objetos cobertos de lama, sangue, urina e fezes, causando uma sensação física de repulsa e desconforto.",
+            "temas_no_mesmo_eixo": []
+          },
+          "positivas": {
+            "mencoes": 25,
+            "de_n": 40,
+            "freq_pct": 62.5,
+            "lift_pp": 10.0,
+            "acima_da_margem": false,
+            "tema": "Sujeira, imundície e repulsa",
+            "exemplo_parafraseado": "Muitas reviews enfatizam a presença constante de lama, excrementos, sangue e outras sujeiras, descrevendo o filme como repulsivo e ao mesmo tempo fascinante, com uma estética que provoca desde nojo até necessidade de banho após a sessão.",
+            "temas_no_mesmo_eixo": []
+          }
+        },
+        "bullet_de": {
+          "negativas": null,
+          "medianas": null,
+          "positivas": null
+        }
+      },
+      {
+        "eixo": "comparacoes",
+        "por_bucket": {
+          "negativas": {
+            "mencoes": 20,
+            "de_n": 40,
+            "freq_pct": 50.0,
+            "lift_pp": 0.0,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "medianas": {
+            "mencoes": 17,
+            "de_n": 40,
+            "freq_pct": 42.5,
+            "lift_pp": -7.5,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "positivas": {
+            "mencoes": 20,
+            "de_n": 40,
+            "freq_pct": 50.0,
+            "lift_pp": 0.0,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          }
+        },
+        "bullet_de": {
+          "negativas": null,
+          "medianas": null,
+          "positivas": null
+        }
+      },
+      {
+        "eixo": "expectativa",
+        "por_bucket": {
+          "negativas": {
+            "mencoes": 8,
+            "de_n": 40,
+            "freq_pct": 20.0,
+            "lift_pp": 5.0,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "medianas": {
+            "mencoes": 4,
+            "de_n": 40,
+            "freq_pct": 10.0,
+            "lift_pp": -10.0,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "positivas": {
+            "mencoes": 6,
+            "de_n": 40,
+            "freq_pct": 15.0,
+            "lift_pp": -5.0,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          }
+        },
+        "bullet_de": {
+          "negativas": null,
+          "medianas": null,
+          "positivas": null
+        }
+      },
+      {
+        "eixo": "critica_social",
+        "por_bucket": {
+          "negativas": {
+            "mencoes": 5,
+            "de_n": 40,
+            "freq_pct": 12.5,
+            "lift_pp": -7.5,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "medianas": {
+            "mencoes": 8,
+            "de_n": 40,
+            "freq_pct": 20.0,
+            "lift_pp": 2.5,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "positivas": {
+            "mencoes": 7,
+            "de_n": 40,
+            "freq_pct": 17.5,
+            "lift_pp": -2.5,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          }
+        },
+        "bullet_de": {
+          "negativas": null,
+          "medianas": null,
+          "positivas": null
+        }
+      }
+    ],
+    "contraste": "valorativo",
+    "rotulagem": {
+      "n_chamadas": 3,
+      "falharam": [],
+      "fora_da_taxonomia": {},
+      "houve_retentativa": []
+    },
+    "spec_version": "1.9.50",
+    "verificador": {
+      "aplicado": true,
+      "variante": "V2_alvo",
+      "passada": 1,
+      "eixo": "impacto_emocional",
+      "n_removidas_no_corpus": 2781
+    }
+  },
+  "narrativa": "Lançado em 2013 e dirigido por Aleksei German Sr., o drama de ficção científica É Difícil Ser Um Deus acompanha um grupo de cientistas enviados ao planeta Arkanar, cuja civilização se encontra na fase equivalente à Idade Média de sua própria história, com o objetivo de orientá-la rumo ao progresso sem recorrer à violência. Em meio a esse cenário, o cientista Rumata tenta salvar os intelectuais locais de punições e se vê incapaz de evitar tomar uma posição.\n\nA experiência de visualização se apoia em uma atmosfera densa, com uma ambientação marcada pela presença constante de lama, sujeira e fluidos corporais em planos detalhados. A estrutura narrativa adota um ritmo lento e cadenciado ao longo de quase três horas de duração, apresentando uma condução fragmentada e hermética.\n\nOs diferentes grupos analisados concordam sobre os traços centrais que compõem o filme, discordando no veredito sobre o funcionamento da obra. Na grande maioria das notas (~73%), a maior parcela destaca a imersão sensorial profunda e a densidade do universo construído, enquanto perto da metade enfatiza a onipresença de sujeira, imundície e repulsa, e cerca de metade relata o enfrentamento de uma narrativa confusa e difícil de acompanhar.\n\nNuma parcela das notas (~16%), sob a ótica desse grupo, a maior parte examina a imersão sensorial no grotesco e nos fluidos corporais, aproximadamente metade aponta a dificuldade de acompanhar a narrativa e um número considerável salienta o ritmo lento associado à longa duração. Por fim, numa fração mínima das notas (~11%), na leitura dessas avaliações, grande parte critica a imundície e o nojo excessivos, metade deles reprova o ritmo lento e a duração excessiva, e uma parcela expressiva aponta a falta de coesão do roteiro.",
+  "verificacao_narrativa": {
+    "quantificador_fora_de_faixa": [],
+    "quantificador_repetido": [
+      {
+        "construcao": "aproximadamente metade",
+        "n": 4
+      }
+    ],
+    "paragrafos": {
+      "n_paragrafos": 4,
+      "minimo": 3,
+      "insuficientes": false,
+      "longos": []
+    },
+    "n_paragrafos": 4,
+    "paragrafos_insuficientes": false,
+    "paragrafos_longos": [],
+    "grupos_sem_paragrafo_proprio": [
+      "negativas"
+    ],
+    "movimento1_e_movimento2_no_mesmo_paragrafo": false,
+    "formato_invalido": false,
+    "numeros_inventados": [],
+    "rotulos_faltando": [],
+    "ordem_incorreta": false,
+    "vocabulario_peso": false,
+    "resenha_speak": [],
+    "n_resenha_speak": 0,
+    "n_flags": 2
+  },
+  "narrativa_selecao": {
+    "provider": "gemini",
+    "modelo": "gemini-3.7-flash",
+    "n_candidatos": 3,
+    "n_chamadas": 4,
+    "indice_escolhido": 1,
+    "motivo": "menor_severidade",
+    "criterio_decisivo": "ritmo",
+    "candidatos": [
+      {
+        "indice": 0,
+        "n_flags": 2,
+        "cliches": 0,
+        "repeticao_max": 1,
+        "ritmo": 7,
+        "cobertura": 1.0,
+        "eliminado": true
+      },
+      {
+        "indice": 1,
+        "n_flags": 2,
+        "cliches": 0,
+        "repeticao_max": 1,
+        "ritmo": 12,
+        "cobertura": 1.0,
+        "eliminado": true
+      },
+      {
+        "indice": 2,
+        "n_flags": 2,
+        "cliches": 0,
+        "repeticao_max": 1,
+        "ritmo": 9,
+        "cobertura": 0.667,
+        "eliminado": true
+      }
+    ],
+    "retry": {
+      "n_frases_infratoras": 1,
+      "motivos": [
+        "construcao_repetida"
+      ],
+      "n_flags_depois": 2,
+      "aplicado": false
+    },
+    "uso": {
+      "prompt_tokens": 12348,
+      "completion_tokens": 1667,
+      "cache_hit_tokens": 0,
+      "cache_miss_tokens": 12348
+    },
+    "latencia_s": 36.24
+  },
+  "condicoes": {
+    "vale_a_pena": [
+      {
+        "texto": "busca uma imersão tátil em um universo denso e ricamente detalhado",
+        "tema_origem": "POS-A",
+        "bucket_origem": "positivas",
+        "tema_texto": "Imersão sensorial e worldbuilding",
+        "rotulo_forca": "a maioria"
+      },
+      {
+        "texto": "se interessa por uma estética visceral e crua que provoca fascínio e repulsa",
+        "tema_origem": "POS-B",
+        "bucket_origem": "positivas",
+        "tema_texto": "Sujeira, imundície e repulsa",
+        "rotulo_forca": "cerca de metade"
+      },
+      {
+        "texto": "aprecia planos longos e fotografia em preto e branco com câmera intrusiva",
+        "tema_origem": "POS-D",
+        "bucket_origem": "positivas",
+        "tema_texto": "Fotografia e direção marcantes",
+        "rotulo_forca": "muitos"
+      },
+      {
+        "texto": "tolera uma longa duração e andamento lento em troca de maior imersão",
+        "tema_origem": "POS-F",
+        "bucket_origem": "positivas",
+        "tema_texto": "Duração e ritmo desafiadores",
+        "rotulo_forca": "muitos"
+      }
+    ],
+    "talvez_evite": [
+      {
+        "texto": "se incomoda com o excesso de sujeira e fluidos corporais de teor repulsivo",
+        "tema_origem": "NEG-A",
+        "bucket_origem": "negativas",
+        "tema_texto": "Imundície e nojo excessivos",
+        "rotulo_forca": "a maioria"
+      },
+      {
+        "texto": "se cansa com narrativas longas de andamento arrastado e cenas repetitivas",
+        "tema_origem": "NEG-B",
+        "bucket_origem": "negativas",
+        "tema_texto": "Ritmo lento e duração excessiva",
+        "rotulo_forca": "cerca de metade"
+      },
+      {
+        "texto": "rejeita histórias sem fio condutor claro, com diálogos incoerentes e eventos desconexos",
+        "tema_origem": "NEG-C",
+        "bucket_origem": "negativas",
+        "tema_texto": "Roteiro confuso e sem coesão",
+        "rotulo_forca": "muitos"
+      },
+      {
+        "texto": "acha que apuro técnico e visual não compensam uma experiência desagradável e tediosa",
+        "tema_origem": "NEG-F",
+        "bucket_origem": "negativas",
+        "tema_texto": "Cinematografia e design de produção elogiados, mas não salvam",
+        "rotulo_forca": "alguns"
+      }
+    ],
+    "ordem_colunas": [
+      "vale_a_pena",
+      "talvez_evite"
+    ],
+    "peso": {
+      "vale_a_pena": {
+        "peso_pct": 73,
+        "peso_texto": "~73% das notas",
+        "nota_de_amostra": null
+      },
+      "talvez_evite": {
+        "peso_pct": 11,
+        "peso_texto": "~11% das notas",
+        "nota_de_amostra": null
+      }
+    },
+    "peso_meio": null,
+    "origem": "llm",
+    "temas_pedidos": {
+      "vale_a_pena": [
+        "POS-A",
+        "POS-B",
+        "POS-C",
+        "POS-D",
+        "POS-F"
+      ],
+      "talvez_evite": [
+        "NEG-A",
+        "NEG-B",
+        "NEG-C",
+        "NEG-F"
+      ]
+    },
+    "temas_saltados": {
+      "vale_a_pena": [],
+      "talvez_evite": []
+    },
+    "descartadas": [],
+    "retry": null,
+    "provider": "gemini",
+    "modelo": "gemini-3.7-flash",
+    "n_candidatos": 3,
+    "n_chamadas": 3,
+    "indice_escolhido": 2,
+    "candidatos": [
+      {
+        "indice": 0,
+        "n_condicoes": 9,
+        "n_flags": 1,
+        "flags": [
+          "sem_discriminacao"
+        ],
+        "n_temas_cobertos": 9
+      },
+      {
+        "indice": 1,
+        "n_condicoes": 9,
+        "n_flags": 1,
+        "flags": [
+          "exemplo_verbatim"
+        ],
+        "n_temas_cobertos": 9
+      },
+      {
+        "indice": 2,
+        "n_condicoes": 9,
+        "n_flags": 0,
+        "flags": [],
+        "n_temas_cobertos": 9
+      }
+    ],
+    "uso": {
+      "prompt_tokens": 8502,
+      "completion_tokens": 1249,
+      "cache_hit_tokens": 0,
+      "cache_miss_tokens": 8502
+    },
+    "latencia_s": 17.36,
+    "spec_version": "1.9.50",
+    "sem_condicao_publicavel": [
+      {
+        "tema_origem": "POS-C",
+        "lado": "vale_a_pena",
+        "regra": "R2",
+        "origem": "leitura_humana"
+      }
+    ]
+  }
+}

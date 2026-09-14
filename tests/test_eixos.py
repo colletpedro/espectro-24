@@ -276,20 +276,46 @@ def test_classificacao_orfa_da_selecao_antiga_nao_infla_o_denominador():
     assert linha["por_bucket"]["negativas"]["mencoes"] == 20  # NÃO 33
 
 
-def test_bloco_declara_a_sobreposicao_quando_ha_divergencia():
-    """§[D3]: quando as duas amostras (classificada e analisada) DIVERGEM, o
-    JSON tem de dizer o tamanho da divergência sem que ninguém precise
-    remedi-la à mão. [v1.9.15] E a frequência é calculada só sobre a
-    INTERSECÇÃO — `n_classificadas` é o filtrado (10), nunca o total bruto
-    (40): é o que impede o denominador de inflar com classificação órfã, o
-    bug real achado ao rodar a extensão (`cure` saltando de 40 para 53)."""
+def test_analisada_sem_classificacao_FALHA_ALTO_em_vez_de_declarar():
+    """[piloto de expansão, `ABERTO.md` C14.8] Até aqui este cenário — 30 das
+    40 analisadas fora da classificação — montava o bloco com
+    `n_classificadas == 10` e só DECLARAVA a divergência em
+    `fonte_classificacao`. É o mesmo mecanismo que encolheu `get-out-2017` de
+    40 para 39 sem aviso: o filtro só remove, e o `n` publicado é o que
+    sobrou. Agora é erro — o bloco não é montado.
+
+    (O outro sentido da divergência, classificada SEM estar analisada, é o
+    acúmulo legítimo de §[D3] e continua filtrado:
+    `test_classificacao_orfa_da_selecao_antiga_nao_infla_o_denominador`.)"""
     cls = _uniforme({"negativas": [("ritmo", 24)]}, n=40)
     analisadas = {"negativas": {f"negativas:{i}" for i in range(30, 70)}}
-    bloco = E.montar_bloco(cls, analisadas=analisadas, temas_por_eixo={})
-    fonte = bloco["fonte_classificacao"]["por_bucket"]["negativas"]
-    assert fonte["n_classificadas"] == 10   # intersecção: ids 30-39 (10 de 40)
-    assert fonte["n_analisadas"] == 40
-    assert fonte["sobreposicao_com_analisadas"] == 10
+    with pytest.raises(E.AmostraNaoClassificada, match="30 de 40"):
+        E.montar_bloco(cls, analisadas=analisadas, temas_por_eixo={})
+
+
+def test_get_out_2017_classificada_com_40_publicacao_com_41_candidatas_FALHA():
+    """O caso REAL, reproduzido. A classificação viu 40 reviews nas positivas.
+    A publicação recoletou e encontrou 41 candidatas — as 40 e uma nova; a
+    seleção, com cota 40, ficou com a nova e deixou uma das classificadas de
+    fora. Sem a guarda o bloco saía com `n = 39`, sem erro nem aviso."""
+    classificadas = [f"viewing:{i}" for i in range(40)]
+    cls = {b: {rid: ["ritmo"] if i < 20 else [] for i, rid in
+               enumerate(classificadas)}
+           for b in ("negativas", "medianas", "positivas")}
+    candidatas = classificadas + ["viewing:1493797951"]          # 41
+    selecionadas = candidatas[:39] + candidatas[40:]              # 40, com a nova
+    analisadas = {"negativas": set(classificadas),
+                  "medianas": set(classificadas),
+                  "positivas": set(selecionadas)}
+    assert len(analisadas["positivas"]) == 40
+
+    # o que acontecia antes: nenhum erro, e 39 no denominador
+    filtrada = E._filtrar_pela_analisada(cls, analisadas)
+    assert E.n_efetivo(E.frequencias(filtrada)) == 39
+
+    with pytest.raises(E.AmostraNaoClassificada,
+                       match=r"positivas: 1 de 40 .*viewing:1493797951"):
+        E.montar_bloco(cls, analisadas=analisadas, temas_por_eixo={})
 
 
 def test_fonte_classificacao_e_omitida_quando_as_populacoes_sao_iguais():
@@ -307,13 +333,23 @@ def test_fonte_classificacao_e_omitida_quando_as_populacoes_sao_iguais():
 
 def test_fonte_classificacao_aparece_se_qualquer_bucket_divergir():
     """Um bucket unificado e outro não: a chave PRECISA aparecer, porque
-    ainda há divergência a declarar em algum lugar do filme."""
+    ainda há divergência a declarar em algum lugar do filme.
+
+    [piloto de expansão] A divergência que sobra DECLARÁVEL é a de bucket
+    sem informação de `analisadas` (quem chamou não a tem). A de review
+    analisada fora da classificação deixou de ser declarada: é recusada."""
     cls = _uniforme({"negativas": [("ritmo", 24)], "positivas": [("ritmo", 10)]},
                     n=40)
-    analisadas = {"negativas": {f"negativas:{i}" for i in range(40)},
-                  "positivas": {f"positivas:{i}" for i in range(30, 70)}}
-    bloco = E.montar_bloco(cls, analisadas=analisadas, temas_por_eixo={})
+    sem_info = {"negativas": {f"negativas:{i}" for i in range(40)}}
+    bloco = E.montar_bloco(cls, analisadas=sem_info, temas_por_eixo={})
     assert "fonte_classificacao" in bloco
+    assert bloco["fonte_classificacao"]["por_bucket"]["positivas"][
+        "n_analisadas"] == 0
+
+    divergente = {"negativas": {f"negativas:{i}" for i in range(40)},
+                  "positivas": {f"positivas:{i}" for i in range(30, 70)}}
+    with pytest.raises(E.AmostraNaoClassificada):
+        E.montar_bloco(cls, analisadas=divergente, temas_por_eixo={})
 
 
 def test_bloco_sem_classificacao_nenhuma_e_None():
@@ -402,11 +438,27 @@ def catalogo():
     return saida
 
 
-def test_catalogo_tem_os_35_filmes_classificados(catalogo):
-    assert len(catalogo) == 35
+def test_catalogo_tem_todos_os_filmes_do_catalogo_classificados(catalogo):
+    """[piloto de expansão, 2026-09] Deixou de fixar `35`. A expansão faz
+    esse número crescer por construção; o que continua travado é a
+    RELAÇÃO — o conjunto classificado (`consenso_verificado.jsonl`, filtrado
+    pela seleção de produção) bate exatamente com o catálogo canônico
+    (`votacao-3/consenso.jsonl`, a mesma fonte que `frontend/build_data.py`
+    e `publicar_catalogo.py` usam): nenhum filme do catálogo fica sem
+    classificação, e nenhuma classificação sobra de um filme fora dele."""
+    import json as _j
+    from pathlib import Path
+    caminho_consenso = Path(__file__).resolve().parent.parent / (
+        "resultado/votacao-3/consenso.jsonl")
+    if not caminho_consenso.exists():
+        pytest.skip("consenso.jsonl indisponível")
+    do_catalogo = {_j.loads(l)["slug"] for l in
+                   caminho_consenso.read_text(encoding="utf-8").splitlines()
+                   if l.strip()}
+    assert set(catalogo) == do_catalogo
 
 
-def test_catalogo_reproduz_7_tematicos_e_28_valorativos(catalogo):
+def test_catalogo_reproduz_o_contraste_publicado(catalogo):
     """[v1.9.34] **A contagem do catálogo sob a LEI POR `n` (§2.5).**
 
     A história desta asserção, porque ela é o sentinela do catálogo inteiro e
@@ -432,18 +484,52 @@ def test_catalogo_reproduz_7_tematicos_e_28_valorativos(catalogo):
 
     Se a lei, a constante, o piso, a métrica de lift ou a escolha de `n`
     mudarem, é aqui que o catálogo inteiro reclama.
+
+    [piloto de expansão, 2026-09] **Deixou de fixar a proporção e a lista
+    exata de temáticos.** Um catálogo que cresce muda os dois por
+    construção — não é regressão, é o produto funcionando. A verificação
+    "a lei reclama se mudar" não precisa de um número fixo para valer: ela
+    fica MAIS forte comparando, filme a filme, o `contraste` RE-DERIVADO
+    aqui (direto de `E.contraste`/`E.lifts`/`E.frequencias`, sem passar por
+    `montar_bloco`) contra o `contraste` que está PUBLICADO em
+    `resultado/<slug>.json` — a mesma checagem que a proporção fixa fazia
+    por amostragem indireta, agora exata e por filme.
+
+    **`sem_estado` deixou de ser um `assert == []` isolado.** Um filme
+    CLASSIFICADO mas ainda não PUBLICADO (achado real do piloto:
+    `woman-of-fire`, n=9 < `MARGEM_N_MINIMO` — `eixos.contraste` OMITE a
+    chave de propósito, §2.5) fica em `sem_estado` aqui sem que isso seja
+    erro nenhum; a asserção certa não é "nenhum classificado fica sem
+    estado" — é "todo PUBLICADO concorda com o que a lei recalcula", estado
+    ausente incluído. A comparação abaixo lê `publicado.get("contraste")`
+    (`None` quando a chave falta, a MESMA leitura que a produção faz) e
+    compara direto contra o re-derivado — cobre concordância de PRESENÇA e
+    de VALOR num só laço, sem caso especial para "os dois ausentes".
     """
+    import json as _j
+    from pathlib import Path
+    raiz = Path(__file__).resolve().parent.parent
     estados = {slug: E.contraste(E.lifts(E.frequencias(cls)),
                                  n=E.n_efetivo(E.frequencias(cls)))
                for slug, cls in catalogo.items()}
-    tematicos = sorted(s for s, e in estados.items() if e == "tematico")
-    valorativos = [s for s, e in estados.items() if e == "valorativo"]
-    sem_estado = sorted(s for s, e in estados.items() if e is None)
 
-    assert (len(tematicos), len(valorativos), len(sem_estado)) == (7, 28, 0)
-    assert tematicos == ["anatomy-of-a-fall", "barbie", "cats-2019", "cure",
-                         "obsession-2025", "oppenheimer-2023", "the-substance"]
-    assert sem_estado == []
+    divergentes = []
+    n_comparados = 0
+    for slug, estado in estados.items():
+        p = raiz / "resultado" / f"{slug}.json"
+        if not p.exists():
+            continue    # classificado, ainda não publicado — não comparável
+        publicado = (_j.loads(p.read_text(encoding="utf-8")).get("eixos") or {}
+                     ).get("contraste")
+        n_comparados += 1
+        if publicado != estado:
+            divergentes.append((slug, estado, publicado))
+    if n_comparados < 30:
+        pytest.skip(f"poucos filmes publicados para comparar ({n_comparados})")
+    assert divergentes == [], (
+        "contraste re-derivado diverge do publicado (slug, re-derivado, "
+        f"publicado): {divergentes}")
+    assert "obsession-2025" in {s for s, e in estados.items() if e == "tematico"}
 
 
 def test_os_6_filmes_que_publicavam_causa_sem_lastro_saem_de_tematico(catalogo):

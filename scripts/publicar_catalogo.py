@@ -27,6 +27,7 @@ Uso:
 from __future__ import annotations
 
 import argparse
+import contextlib
 import json
 import subprocess
 import sys
@@ -111,19 +112,52 @@ def checar_tamanho_do_lote(slugs: list[str], republicar_tudo: bool) -> None:
         f"confirmação: {LIMITE_LOTE_SEM_CONFIRMACAO}).\n"
         f"Motivo: nenhum deles tem `spec_version` igual a {SPEC_VERSION}, "
         f"então o checkpoint os trata como pendentes.\n"
-        f"Cada um refaz coleta de rede (~2s por requisição, sem paralelismo) "
-        f"e sobrescreve o histórico `passadas` do meta.json do bruto.\n"
+        f"Cada um refaz síntese, rotulagem e narrativa (chamadas pagas de "
+        f"LLM; a coleta roda em --offline, sobre o cache) e sobrescreve o "
+        f"histórico `passadas` do meta.json do bruto.\n"
         f"Se é isso mesmo que você quer, repita com --republicar-tudo.\n"
         f"Para regerar SÓ o veredito (§3[V]), sem tocar em rede nem em "
         f"nenhum estágio a montante, use scripts/gerar_veredito.py.")
 
 
+def checar_amostra_antes_de_publicar(slug: str) -> None:
+    """[piloto de expansão, `ABERTO.md` C14.8 (B)] A guarda de
+    `eixos.checar_amostra_classificada`, aplicada ANTES do subprocesso.
+
+    Com o CLI em `--offline`, a amostra que ele vai selecionar é a que o
+    bruto persistido dá hoje — e é essa que `ids_analisados_do_bruto` lê, com
+    zero rede e zero LLM. Divergindo da classificação de produção, o filme é
+    RECUSADO aqui; sem esta checagem, a mesma guarda só dispararia dentro do
+    CLI, depois de a síntese já ter sido paga.
+
+    A guarda de dentro do CLI continua: esta é a mais barata, aquela é a que
+    vale para qualquer caminho.
+    """
+    from espectro24 import eixos as E
+    from espectro24 import pipeline as P
+
+    # `_carregar_consenso_producao` resolve os caminhos relativos à raiz do
+    # repositório, como o CLI (que roda com `cwd=RAIZ`).
+    with contextlib.chdir(RAIZ):
+        catalogo, _ = P._carregar_consenso_producao(E)
+        do_filme = (catalogo or {}).get(slug)
+        if not do_filme:
+            return          # sem classificação: não há o que divergir
+        E.checar_amostra_classificada(do_filme, P.ids_analisados_do_bruto(slug))
+
+
 def publicar_um(slug: str) -> dict:
     t0 = time.time()
     try:
+        # `--offline` (C14.8 (A)): sem ele, TODA publicação rodava a coleta
+        # de rede de novo, e o Letterboxd é site vivo — em `get-out-2017` 3
+        # requisições novas trouxeram uma review não classificada para a
+        # amostra, e `n` caiu de 40 para 39 em silêncio. Offline, a amostra
+        # só pode vir do bruto já persistido. Página ausente do cache vira
+        # `FetchError` (rc≠0), nunca uma recoleta.
         r = subprocess.run(
             [sys.executable, "-m", "espectro24.cli", "--slug", slug,
-             "--tom", "ambos"],
+             "--tom", "ambos", "--offline"],
             cwd=RAIZ, capture_output=True, text=True, timeout=TIMEOUT_S)
         rc, stdout, stderr, expirou = r.returncode, r.stdout, r.stderr, False
     except subprocess.TimeoutExpired as e:
@@ -153,6 +187,21 @@ def cmd_publicar(slugs: list[str], republicar_tudo: bool = False) -> None:
             pulados += 1
             continue
         print(f"  [ ] {slug}: publicando...", flush=True)
+        try:
+            checar_amostra_antes_de_publicar(slug)
+        except ValueError as e:
+            # Registrado no log como qualquer tentativa: uma recusa sem
+            # rastro seria outra ausência silenciosa.
+            res = {"slug": slug, "ok": False, "elapsed_s": 0.0,
+                   "returncode": None, "expirou": False,
+                   "recusado_antes_do_cli": type(e).__name__,
+                   "motivo": str(e)}
+            with LOG.open("a", encoding="utf-8") as fh:
+                fh.write(json.dumps(res, ensure_ascii=False) + "\n")
+            print(f"  [✗] {slug}: RECUSADO antes do CLI "
+                  f"({type(e).__name__}) — {e}")
+            falhas += 1
+            continue
         res = publicar_um(slug)
         with LOG.open("a", encoding="utf-8") as fh:
             fh.write(json.dumps(res, ensure_ascii=False) + "\n")
@@ -219,6 +268,8 @@ def _linha_retentativa_llm(linhas_log: dict) -> None:
     """
     com, sem, total, por_tipo = 0, 0, 0, {}
     for r in linhas_log.values():
+        if r.get("recusado_antes_do_cli"):
+            continue        # nenhum LLM rodou: nem "zero", nem "sem telemetria"
         tel = r.get("retentativa_llm")
         if tel is None:
             sem += 1

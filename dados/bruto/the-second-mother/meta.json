@@ -1,0 +1,281 @@
+{
+  "slug": "the-second-mother",
+  "coletado_em": "2026-09-10T19:03:17.991593+00:00",
+  "versao_coletor": "1.9.6",
+  "ordenacao_usada": "by/added",
+  "histograma_bruto": {
+    "0.5": 156,
+    "1.0": 294,
+    "1.5": 246,
+    "2.0": 1075,
+    "2.5": 1498,
+    "3.0": 6692,
+    "3.5": 11858,
+    "4.0": 39223,
+    "4.5": 24936,
+    "5.0": 63598
+  },
+  "orcamento_paginas_por_nivel": {
+    "0.5": 1,
+    "1.0": 3,
+    "1.5": 2,
+    "2.0": 10,
+    "2.5": 6,
+    "3.0": 10,
+    "3.5": 1,
+    "4.0": 5,
+    "4.5": 3,
+    "5.0": 7
+  },
+  "paginas_gastas_por_nivel": {
+    "0.5": 1,
+    "1.0": 2,
+    "1.5": 2,
+    "2.0": 8,
+    "2.5": 6,
+    "3.0": 10,
+    "3.5": 1,
+    "4.0": 5,
+    "4.5": 3,
+    "5.0": 7
+  },
+  "paradas_por_limite": [
+    "0.5",
+    "1.0",
+    "1.5",
+    "2.0",
+    "2.5",
+    "3.0",
+    "3.5",
+    "4.0",
+    "4.5",
+    "5.0"
+  ],
+  "contagem_bruta_por_nivel": {
+    "0.5": 12,
+    "1.0": 24,
+    "1.5": 24,
+    "2.0": 96,
+    "2.5": 72,
+    "3.0": 120,
+    "3.5": 12,
+    "4.0": 60,
+    "4.5": 36,
+    "5.0": 84
+  },
+  "contagem_estimada_valida_por_nivel": {
+    "0.5": 3,
+    "1.0": 8,
+    "1.5": 2,
+    "2.0": 26,
+    "2.5": 17,
+    "3.0": 33,
+    "3.5": 1,
+    "4.0": 15,
+    "4.5": 13,
+    "5.0": 22
+  },
+  "motivo_parada_por_nivel": {
+    "0.5": "orcamento_esgotado",
+    "1.0": "orcamento_esgotado",
+    "1.5": "orcamento_esgotado",
+    "2.0": "orcamento_esgotado",
+    "2.5": "orcamento_esgotado",
+    "3.0": "orcamento_esgotado",
+    "3.5": "orcamento_esgotado",
+    "4.0": "orcamento_esgotado",
+    "4.5": "orcamento_esgotado",
+    "5.0": "orcamento_esgotado"
+  },
+  "paginas_base_por_nivel": {
+    "0.5": 1,
+    "1.0": 2,
+    "1.5": 2,
+    "2.0": 8,
+    "2.5": 6,
+    "3.0": 10,
+    "3.5": 1,
+    "4.0": 5,
+    "4.5": 3,
+    "5.0": 7
+  },
+  "paginas_extensao_por_nivel": {
+    "0.5": 0,
+    "1.0": 0,
+    "1.5": 0,
+    "2.0": 0,
+    "2.5": 0,
+    "3.0": 0,
+    "3.5": 0,
+    "4.0": 0,
+    "4.5": 0,
+    "5.0": 0
+  },
+  "extensao_por_bucket": {
+    "negativas": {
+      "paginas_base": 13,
+      "paginas_extensao": 0,
+      "extras_por_nivel": {},
+      "motivo_parada": "meta_atingida",
+      "n_validas_pos_base": 50,
+      "n_validas_pos_extensao": 50,
+      "meta": 50
+    },
+    "medianas": {
+      "paginas_base": 16,
+      "paginas_extensao": 0,
+      "extras_por_nivel": {},
+      "motivo_parada": "meta_atingida",
+      "n_validas_pos_base": 50,
+      "n_validas_pos_extensao": 50,
+      "meta": 50
+    },
+    "positivas": {
+      "paginas_base": 16,
+      "paginas_extensao": 0,
+      "extras_por_nivel": {},
+      "motivo_parada": "meta_atingida",
+      "n_validas_pos_base": 51,
+      "n_validas_pos_extensao": 51,
+      "meta": 50
+    }
+  },
+  "profundidade_sondagem": {
+    "nivel_sondado": 5.0,
+    "profundidade": 256,
+    "exata": false,
+    "requisicoes": 4,
+    "motivo": "teto_plataforma"
+  },
+  "profundidade_estimada_por_nivel": {
+    "0.5": 1,
+    "1.0": 1,
+    "1.5": 1,
+    "2.0": 4,
+    "2.5": 6,
+    "3.0": 27,
+    "3.5": 48,
+    "4.0": 158,
+    "4.5": 100,
+    "5.0": 256
+  },
+  "janela_temporal": {
+    "total": {
+      "n": 564,
+      "min": "2016-04-11",
+      "max": "2026-09-10",
+      "p5": "2025-03-11",
+      "p50": "2026-07-08",
+      "p95": "2026-09-09"
+    },
+    "por_bucket": {
+      "negativas": {
+        "n": 180,
+        "min": "2016-04-11",
+        "max": "2026-09-08",
+        "p5": "2025-02-05",
+        "p50": "2026-02-01",
+        "p95": "2026-08-21"
+      },
+      "medianas": {
+        "n": 192,
+        "min": "2022-08-06",
+        "max": "2026-09-10",
+        "p5": "2026-02-14",
+        "p50": "2026-07-14",
+        "p95": "2026-09-04"
+      },
+      "positivas": {
+        "n": 192,
+        "min": "2023-11-13",
+        "max": "2026-09-10",
+        "p5": "2026-05-17",
+        "p50": "2026-09-06",
+        "p95": "2026-09-09"
+      }
+    }
+  },
+  "dias_por_100_paginas": {
+    "n_paginas": 14,
+    "pagina_min": 1,
+    "pagina_max": 128,
+    "dias": 109,
+    "dias_por_100_paginas": 85.8267716535433,
+    "paginas_para_1_ano": 425
+  },
+  "dias_por_100_paginas_por_nivel": {
+    "1.0": {
+      "n_paginas": 2,
+      "pagina_min": 1,
+      "pagina_max": 2,
+      "dias": 168,
+      "dias_por_100_paginas": 16800.0,
+      "paginas_para_1_ano": 2
+    },
+    "1.5": {
+      "n_paginas": 3,
+      "pagina_min": 1,
+      "pagina_max": 3,
+      "dias": 264,
+      "dias_por_100_paginas": 13200.0,
+      "paginas_para_1_ano": 3
+    },
+    "2.0": {
+      "n_paginas": 9,
+      "pagina_min": 1,
+      "pagina_max": 9,
+      "dias": 532,
+      "dias_por_100_paginas": 6650.0,
+      "paginas_para_1_ano": 5
+    },
+    "2.5": {
+      "n_paginas": 6,
+      "pagina_min": 1,
+      "pagina_max": 6,
+      "dias": 186,
+      "dias_por_100_paginas": 3720.0,
+      "paginas_para_1_ano": 10
+    },
+    "3.0": {
+      "n_paginas": 10,
+      "pagina_min": 1,
+      "pagina_max": 14,
+      "dias": 138,
+      "dias_por_100_paginas": 1061.5384615384614,
+      "paginas_para_1_ano": 34
+    },
+    "4.0": {
+      "n_paginas": 5,
+      "pagina_min": 1,
+      "pagina_max": 40,
+      "dias": 73,
+      "dias_por_100_paginas": 187.17948717948718,
+      "paginas_para_1_ano": 195
+    },
+    "4.5": {
+      "n_paginas": 3,
+      "pagina_min": 1,
+      "pagina_max": 25,
+      "dias": 62,
+      "dias_por_100_paginas": 258.3333333333333,
+      "paginas_para_1_ano": 141
+    },
+    "5.0": {
+      "n_paginas": 7,
+      "pagina_min": 1,
+      "pagina_max": 128,
+      "dias": 115,
+      "dias_por_100_paginas": 90.55118110236221,
+      "paginas_para_1_ano": 403
+    }
+  },
+  "ano_lancamento": 2015,
+  "ano_fonte": "letterboxd",
+  "identidade_letterboxd": {
+    "slug": "the-second-mother",
+    "titulo": "The Second Mother",
+    "ano": 2015,
+    "tmdb_id_letterboxd": 310569,
+    "fonte": "pagina_letterboxd"
+  }
+}

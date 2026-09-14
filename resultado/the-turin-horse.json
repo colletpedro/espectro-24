@@ -1,0 +1,1702 @@
+{
+  "slug": "the-turin-horse",
+  "data_coleta": "2026-09-13T05:28:36.728107+00:00",
+  "spec_version": "1.9.50",
+  "total_reviews_observadas": 576,
+  "reviews_url": "https://letterboxd.com/film/the-turin-horse/reviews/",
+  "ficha": {
+    "titulo": "O Cavalo de Turim",
+    "sinopse_oficial": "Turim, 3 de Janeiro de 1889. O filósofo Friedrich Nietzsche sai de casa. Ali perto um camponês luta com a teimosia do seu cavalo, que se recusa a obedecer. O homem perde a paciência e começa a chicotear o animal. Nietzsche aproxima-se e tenta impedir a brutalidade dos golpes com o seu próprio corpo. Naquele momento perde os sentidos e é levado para casa onde permanece em silêncio por dois dias. A partir daquele trágico evento Nietzsche nunca mais recuperará a razão, ficando aos cuidados da sua mãe e irmãs até ao dia da sua morte, a 25 de Agosto de 1900. Partindo deste evento, o filme tenta recriar o percurso do camponês, da sua filha, do velho cavalo doente e a sua existência miserável.",
+    "sinopse_fallback_en": false,
+    "generos": [
+      "Drama"
+    ],
+    "duracao_min": 155,
+    "diretor": "Béla Tarr",
+    "diretor_transliterado": false,
+    "ano": 2011,
+    "fonte": "tmdb",
+    "tmdb_id": 81401,
+    "tmdb_fetched_at": "2026-09-10T20:05:56+00:00",
+    "poster_path": "/nwHFQRGE5OyMuscTm1deX9Ssn1u.jpg",
+    "poster_largura": 1068,
+    "poster_altura": 1599,
+    "backdrop_paths": [
+      "/eMgNa5dbU34qyF0KA9DMA4TrEzn.jpg",
+      "/kv5po5ix9oeP2cnEVmBCC4O68yT.jpg",
+      "/rZ55RUuxziaz3N1PS4yhhs44D4P.jpg",
+      "/4kJcPaM25Q3i19GcQqkItXFoVxv.jpg",
+      "/2hg9gYx0113cZg2zj9yMJRZzWrp.jpg",
+      "/aNs9x46DEffrnQ9zWCMRBIyrqkR.jpg",
+      "/gaOHM2ZqbO0f4q8l2xtoWBDtaUF.jpg",
+      "/vk1jfsbTERBF4vLoBTrlUcwCQSd.jpg",
+      "/5BuamCKOJlN6zQFWLouqJDruR7k.jpg",
+      "/jN93gTHEb4GNrjmsI5KNF5tJTFN.jpg"
+    ],
+    "backdrop_path": "/eMgNa5dbU34qyF0KA9DMA4TrEzn.jpg",
+    "backdrop_largura": 3840,
+    "backdrop_altura": 2160,
+    "poster_sem_texto_path": null,
+    "poster_sem_texto_largura": null,
+    "poster_sem_texto_altura": null,
+    "galeria_stills": [
+      {
+        "still_path": "/eMgNa5dbU34qyF0KA9DMA4TrEzn.jpg",
+        "still_largura": 3840,
+        "still_altura": 2160
+      },
+      {
+        "still_path": "/kv5po5ix9oeP2cnEVmBCC4O68yT.jpg",
+        "still_largura": 1920,
+        "still_altura": 1080
+      },
+      {
+        "still_path": "/rZ55RUuxziaz3N1PS4yhhs44D4P.jpg",
+        "still_largura": 3840,
+        "still_altura": 2160
+      },
+      {
+        "still_path": "/aNs9x46DEffrnQ9zWCMRBIyrqkR.jpg",
+        "still_largura": 1920,
+        "still_altura": 1080
+      },
+      {
+        "still_path": "/57a9ouN5mXixvMNLVjw6x5eml7F.jpg",
+        "still_largura": 1280,
+        "still_altura": 720
+      },
+      {
+        "still_path": "/5J1uTMOSz4KSZR57WByuWGOpJal.jpg",
+        "still_largura": 1800,
+        "still_altura": 1013
+      },
+      {
+        "still_path": "/6IPEkVDltv1HCXyXSBUUlyZ8RyB.jpg",
+        "still_largura": 1280,
+        "still_altura": 720
+      },
+      {
+        "still_path": "/9IkV5FrRTPwzWXO0WWHPlqx0Aul.jpg",
+        "still_largura": 1280,
+        "still_altura": 720
+      },
+      {
+        "still_path": "/a6vx6p1CGvwAQy35q3YbZueISIZ.jpg",
+        "still_largura": 1280,
+        "still_altura": 720
+      },
+      {
+        "still_path": "/gaOHM2ZqbO0f4q8l2xtoWBDtaUF.jpg",
+        "still_largura": 2250,
+        "still_altura": 1266
+      },
+      {
+        "still_path": "/tntvxqmCdi5gcpduKhe2sORchiE.jpg",
+        "still_largura": 3024,
+        "still_altura": 1701
+      },
+      {
+        "still_path": "/rCTvSJC697amNgVsRikDGC1tV48.jpg",
+        "still_largura": 1280,
+        "still_altura": 720
+      }
+    ],
+    "ano_fonte": "letterboxd",
+    "identidade": {
+      "versao": 1,
+      "status": "validada",
+      "slug": "the-turin-horse",
+      "titulo_letterboxd": "The Turin Horse",
+      "ano_letterboxd": 2011,
+      "tmdb_id_letterboxd": 81401,
+      "tmdb_id_escolhido": 81401,
+      "fonte_id": "letterboxd",
+      "titulo_tmdb_campo": "title",
+      "titulo_tmdb_correspondente": "The Turin Horse",
+      "ano_tmdb": 2011,
+      "ano_divergente": false
+    }
+  },
+  "distribuicao": {
+    "n_notas_total": 47834,
+    "por_nivel": {
+      "0.5": 396,
+      "1.0": 561,
+      "1.5": 342,
+      "2.0": 1087,
+      "2.5": 1156,
+      "3.0": 3477,
+      "3.5": 4580,
+      "4.0": 12464,
+      "4.5": 9125,
+      "5.0": 14646
+    },
+    "por_bucket": {
+      "negativas": 5,
+      "medianas": 10,
+      "positivas": 85
+    },
+    "fonte": "letterboxd_histograma"
+  },
+  "coleta": {
+    "slug": "the-turin-horse",
+    "coletado_em": "2026-09-10T19:26:53.090148+00:00",
+    "versao_coletor": "1.9.6",
+    "ordenacao_usada": "by/added",
+    "histograma_bruto": {
+      "0.5": 396,
+      "1.0": 561,
+      "1.5": 342,
+      "2.0": 1087,
+      "2.5": 1156,
+      "3.0": 3477,
+      "3.5": 4580,
+      "4.0": 12464,
+      "4.5": 9125,
+      "5.0": 14646
+    },
+    "orcamento_paginas_por_nivel": {
+      "0.5": 3,
+      "1.0": 4,
+      "1.5": 2,
+      "2.0": 7,
+      "2.5": 6,
+      "3.0": 10,
+      "3.5": 2,
+      "4.0": 5,
+      "4.5": 3,
+      "5.0": 6
+    },
+    "paginas_gastas_por_nivel": {
+      "0.5": 3,
+      "1.0": 4,
+      "1.5": 2,
+      "2.0": 7,
+      "2.5": 6,
+      "3.0": 10,
+      "3.5": 2,
+      "4.0": 5,
+      "4.5": 3,
+      "5.0": 6
+    },
+    "paradas_por_limite": [
+      "0.5",
+      "1.0",
+      "1.5",
+      "2.0",
+      "2.5",
+      "3.0",
+      "3.5",
+      "4.0",
+      "4.5",
+      "5.0"
+    ],
+    "contagem_bruta_por_nivel": {
+      "0.5": 36,
+      "1.0": 48,
+      "1.5": 24,
+      "2.0": 84,
+      "2.5": 72,
+      "3.0": 120,
+      "3.5": 24,
+      "4.0": 60,
+      "4.5": 36,
+      "5.0": 72
+    },
+    "contagem_estimada_valida_por_nivel": {
+      "0.5": 14,
+      "1.0": 21,
+      "1.5": 11,
+      "2.0": 36,
+      "2.5": 28,
+      "3.0": 50,
+      "3.5": 10,
+      "4.0": 27,
+      "4.5": 20,
+      "5.0": 29
+    },
+    "motivo_parada_por_nivel": {
+      "0.5": "orcamento_esgotado",
+      "1.0": "orcamento_esgotado",
+      "1.5": "orcamento_esgotado",
+      "2.0": "orcamento_esgotado",
+      "2.5": "orcamento_esgotado",
+      "3.0": "orcamento_esgotado",
+      "3.5": "orcamento_esgotado",
+      "4.0": "orcamento_esgotado",
+      "4.5": "orcamento_esgotado",
+      "5.0": "orcamento_esgotado"
+    },
+    "paginas_base_por_nivel": {
+      "0.5": 3,
+      "1.0": 4,
+      "1.5": 2,
+      "2.0": 7,
+      "2.5": 6,
+      "3.0": 10,
+      "3.5": 2,
+      "4.0": 5,
+      "4.5": 3,
+      "5.0": 6
+    },
+    "paginas_extensao_por_nivel": {
+      "0.5": 0,
+      "1.0": 0,
+      "1.5": 0,
+      "2.0": 0,
+      "2.5": 0,
+      "3.0": 0,
+      "3.5": 0,
+      "4.0": 0,
+      "4.5": 0,
+      "5.0": 0
+    },
+    "extensao_por_bucket": {
+      "negativas": {
+        "paginas_base": 16,
+        "paginas_extensao": 0,
+        "extras_por_nivel": {},
+        "motivo_parada": "meta_atingida",
+        "n_validas_pos_base": 82,
+        "n_validas_pos_extensao": 82,
+        "meta": 50
+      },
+      "medianas": {
+        "paginas_base": 16,
+        "paginas_extensao": 0,
+        "extras_por_nivel": {},
+        "motivo_parada": "meta_atingida",
+        "n_validas_pos_base": 78,
+        "n_validas_pos_extensao": 78,
+        "meta": 50
+      },
+      "positivas": {
+        "paginas_base": 16,
+        "paginas_extensao": 0,
+        "extras_por_nivel": {},
+        "motivo_parada": "meta_atingida",
+        "n_validas_pos_base": 86,
+        "n_validas_pos_extensao": 86,
+        "meta": 50
+      }
+    },
+    "profundidade_sondagem": {
+      "nivel_sondado": 5.0,
+      "profundidade": 232,
+      "exata": false,
+      "requisicoes": 7,
+      "motivo": "encontrada"
+    },
+    "profundidade_estimada_por_nivel": {
+      "0.5": 6,
+      "1.0": 9,
+      "1.5": 5,
+      "2.0": 17,
+      "2.5": 18,
+      "3.0": 55,
+      "3.5": 73,
+      "4.0": 197,
+      "4.5": 145,
+      "5.0": 232
+    },
+    "janela_temporal": {
+      "total": {
+        "n": 576,
+        "min": "2017-11-28",
+        "max": "2026-09-10",
+        "p5": "2025-02-15",
+        "p50": "2026-05-16",
+        "p95": "2026-09-06"
+      },
+      "por_bucket": {
+        "negativas": {
+          "n": 192,
+          "min": "2021-01-21",
+          "max": "2026-09-10",
+          "p5": "2025-03-16",
+          "p50": "2026-03-21",
+          "p95": "2026-08-19"
+        },
+        "medianas": {
+          "n": 192,
+          "min": "2021-05-16",
+          "max": "2026-09-09",
+          "p5": "2024-03-17",
+          "p50": "2026-05-12",
+          "p95": "2026-08-20"
+        },
+        "positivas": {
+          "n": 192,
+          "min": "2017-11-28",
+          "max": "2026-09-10",
+          "p5": "2025-02-19",
+          "p50": "2026-08-24",
+          "p95": "2026-09-09"
+        }
+      }
+    },
+    "dias_por_100_paginas": {
+      "n_paginas": 15,
+      "pagina_min": 1,
+      "pagina_max": 116,
+      "dias": 551,
+      "dias_por_100_paginas": 479.1304347826087,
+      "paginas_para_1_ano": 76
+    },
+    "identidade_letterboxd": {
+      "slug": "the-turin-horse",
+      "titulo": "The Turin Horse",
+      "ano": 2011,
+      "tmdb_id_letterboxd": 81401,
+      "fonte": "pagina_letterboxd"
+    },
+    "ano_lancamento": 2011,
+    "ano_fonte": "letterboxd",
+    "n_reviews_bruto": 576
+  },
+  "origem_paginas": {
+    "_histograma/the-turin-horse.html": "cache",
+    "the-turin-horse/pages/by_added/rated_5_page_4.html": "cache",
+    "the-turin-horse/pages/by_added/rated_5_page_16.html": "cache",
+    "the-turin-horse/pages/by_added/rated_5_page_64.html": "cache",
+    "the-turin-horse/pages/by_added/rated_5_page_256.html": "cache",
+    "the-turin-horse/pages/by_added/rated_5_page_160.html": "cache",
+    "the-turin-horse/pages/by_added/rated_5_page_208.html": "cache",
+    "the-turin-horse/pages/by_added/rated_5_page_232.html": "cache",
+    "the-turin-horse/pages/by_added/rated_0_5_page_1.html": "cache",
+    "the-turin-horse/pages/by_added/rated_0_5_page_2.html": "cache",
+    "the-turin-horse/pages/by_added/rated_0_5_page_3.html": "cache",
+    "the-turin-horse/fulltext/viewing_1475148518.html": "cache",
+    "the-turin-horse/fulltext/viewing_1321223575.html": "cache",
+    "the-turin-horse/fulltext/viewing_1321123276.html": "cache",
+    "the-turin-horse/fulltext/viewing_1113836330.html": "cache",
+    "the-turin-horse/pages/by_added/rated_1_page_1.html": "cache",
+    "the-turin-horse/pages/by_added/rated_1_page_2.html": "cache",
+    "the-turin-horse/pages/by_added/rated_1_page_3.html": "cache",
+    "the-turin-horse/pages/by_added/rated_1_page_4.html": "cache",
+    "the-turin-horse/fulltext/viewing_1450567707.html": "cache",
+    "the-turin-horse/fulltext/viewing_1418105318.html": "cache",
+    "the-turin-horse/fulltext/viewing_1357386603.html": "cache",
+    "the-turin-horse/fulltext/viewing_1254523586.html": "cache",
+    "the-turin-horse/fulltext/viewing_1207953650.html": "cache",
+    "the-turin-horse/fulltext/viewing_1189270576.html": "cache",
+    "the-turin-horse/fulltext/viewing_1158270986.html": "cache",
+    "the-turin-horse/pages/by_added/rated_1_5_page_1.html": "cache",
+    "the-turin-horse/pages/by_added/rated_1_5_page_2.html": "cache",
+    "the-turin-horse/fulltext/viewing_1435245954.html": "cache",
+    "the-turin-horse/fulltext/viewing_1362441230.html": "cache",
+    "the-turin-horse/pages/by_added/rated_2_page_1.html": "cache",
+    "the-turin-horse/pages/by_added/rated_2_page_2.html": "cache",
+    "the-turin-horse/pages/by_added/rated_2_page_3.html": "cache",
+    "the-turin-horse/pages/by_added/rated_2_page_4.html": "cache",
+    "the-turin-horse/pages/by_added/rated_2_page_5.html": "cache",
+    "the-turin-horse/pages/by_added/rated_2_page_6.html": "cache",
+    "the-turin-horse/pages/by_added/rated_2_page_8.html": "cache",
+    "the-turin-horse/fulltext/viewing_1468994699.html": "cache",
+    "the-turin-horse/fulltext/viewing_1367629540.html": "cache",
+    "the-turin-horse/fulltext/viewing_1359041471.html": "cache",
+    "the-turin-horse/fulltext/viewing_1357891578.html": "cache",
+    "the-turin-horse/fulltext/viewing_1294648271.html": "cache",
+    "the-turin-horse/fulltext/viewing_1252307800.html": "cache",
+    "the-turin-horse/fulltext/viewing_1231345724.html": "cache",
+    "the-turin-horse/fulltext/viewing_1216745440.html": "cache",
+    "the-turin-horse/fulltext/viewing_1214314138.html": "cache",
+    "the-turin-horse/fulltext/viewing_1212712495.html": "cache",
+    "the-turin-horse/fulltext/viewing_1191355894.html": "cache",
+    "the-turin-horse/fulltext/viewing_1165724072.html": "cache",
+    "the-turin-horse/fulltext/viewing_1146419183.html": "cache",
+    "the-turin-horse/fulltext/viewing_1123343213.html": "cache",
+    "the-turin-horse/fulltext/viewing_1100666470.html": "cache",
+    "the-turin-horse/fulltext/viewing_1086610212.html": "cache",
+    "the-turin-horse/fulltext/viewing_900457396.html": "cache",
+    "the-turin-horse/fulltext/viewing_855128237.html": "cache",
+    "the-turin-horse/fulltext/viewing_802985274.html": "cache",
+    "the-turin-horse/pages/by_added/rated_2_5_page_1.html": "cache",
+    "the-turin-horse/pages/by_added/rated_2_5_page_2.html": "cache",
+    "the-turin-horse/pages/by_added/rated_2_5_page_3.html": "cache",
+    "the-turin-horse/pages/by_added/rated_2_5_page_4.html": "cache",
+    "the-turin-horse/pages/by_added/rated_2_5_page_5.html": "cache",
+    "the-turin-horse/pages/by_added/rated_2_5_page_9.html": "cache",
+    "the-turin-horse/fulltext/viewing_1488591055.html": "cache",
+    "the-turin-horse/fulltext/viewing_1433549974.html": "cache",
+    "the-turin-horse/fulltext/viewing_1430670472.html": "cache",
+    "the-turin-horse/fulltext/viewing_1357872059.html": "cache",
+    "the-turin-horse/fulltext/viewing_1327419226.html": "cache",
+    "the-turin-horse/fulltext/viewing_1314315285.html": "cache",
+    "the-turin-horse/fulltext/viewing_1255965331.html": "cache",
+    "the-turin-horse/fulltext/viewing_1254602996.html": "cache",
+    "the-turin-horse/fulltext/viewing_1001682349.html": "cache",
+    "the-turin-horse/fulltext/viewing_982306986.html": "cache",
+    "the-turin-horse/fulltext/viewing_952187810.html": "cache",
+    "the-turin-horse/fulltext/viewing_942491695.html": "cache",
+    "the-turin-horse/pages/by_added/rated_3_page_1.html": "cache",
+    "the-turin-horse/pages/by_added/rated_3_page_2.html": "cache",
+    "the-turin-horse/pages/by_added/rated_3_page_3.html": "cache",
+    "the-turin-horse/pages/by_added/rated_3_page_4.html": "cache",
+    "the-turin-horse/pages/by_added/rated_3_page_5.html": "cache",
+    "the-turin-horse/pages/by_added/rated_3_page_6.html": "cache",
+    "the-turin-horse/pages/by_added/rated_3_page_7.html": "cache",
+    "the-turin-horse/pages/by_added/rated_3_page_8.html": "cache",
+    "the-turin-horse/pages/by_added/rated_3_page_14.html": "cache",
+    "the-turin-horse/pages/by_added/rated_3_page_28.html": "cache",
+    "the-turin-horse/fulltext/viewing_1483177824.html": "cache",
+    "the-turin-horse/fulltext/viewing_1445304674.html": "cache",
+    "the-turin-horse/fulltext/viewing_1437784228.html": "cache",
+    "the-turin-horse/fulltext/viewing_1424054140.html": "cache",
+    "the-turin-horse/fulltext/viewing_1412084741.html": "cache",
+    "the-turin-horse/fulltext/viewing_1411450560.html": "cache",
+    "the-turin-horse/fulltext/viewing_1408381264.html": "cache",
+    "the-turin-horse/fulltext/viewing_1364923188.html": "cache",
+    "the-turin-horse/fulltext/viewing_1349686877.html": "cache",
+    "the-turin-horse/fulltext/viewing_1340134969.html": "cache",
+    "the-turin-horse/fulltext/viewing_1325891887.html": "cache",
+    "the-turin-horse/fulltext/viewing_1300646470.html": "cache",
+    "the-turin-horse/fulltext/viewing_1292869145.html": "cache",
+    "the-turin-horse/fulltext/viewing_1277956652.html": "cache",
+    "the-turin-horse/fulltext/viewing_1263309166.html": "cache",
+    "the-turin-horse/fulltext/viewing_1157891088.html": "cache",
+    "the-turin-horse/fulltext/viewing_1154826283.html": "cache",
+    "the-turin-horse/fulltext/viewing_1148527033.html": "cache",
+    "the-turin-horse/fulltext/viewing_1146491507.html": "cache",
+    "the-turin-horse/pages/by_added/rated_3_5_page_1.html": "cache",
+    "the-turin-horse/pages/by_added/rated_3_5_page_2.html": "cache",
+    "the-turin-horse/fulltext/viewing_1489381443.html": "cache",
+    "the-turin-horse/fulltext/viewing_1463408728.html": "cache",
+    "the-turin-horse/fulltext/viewing_1452213569.html": "cache",
+    "the-turin-horse/pages/by_added/rated_4_page_1.html": "cache",
+    "the-turin-horse/pages/by_added/rated_4_page_2.html": "cache",
+    "the-turin-horse/pages/by_added/rated_4_page_3.html": "cache",
+    "the-turin-horse/pages/by_added/rated_4_page_4.html": "cache",
+    "the-turin-horse/pages/by_added/rated_4_page_49.html": "cache",
+    "the-turin-horse/fulltext/viewing_1486595086.html": "cache",
+    "the-turin-horse/fulltext/viewing_1473481749.html": "cache",
+    "the-turin-horse/fulltext/viewing_1466451797.html": "cache",
+    "the-turin-horse/fulltext/viewing_1461045272.html": "cache",
+    "the-turin-horse/fulltext/viewing_1458535382.html": "cache",
+    "the-turin-horse/fulltext/viewing_1446553725.html": "cache",
+    "the-turin-horse/fulltext/viewing_1450769984.html": "cache",
+    "the-turin-horse/fulltext/viewing_1145980932.html": "cache",
+    "the-turin-horse/fulltext/viewing_1145542979.html": "cache",
+    "the-turin-horse/pages/by_added/rated_4_5_page_1.html": "cache",
+    "the-turin-horse/pages/by_added/rated_4_5_page_2.html": "cache",
+    "the-turin-horse/pages/by_added/rated_4_5_page_36.html": "cache",
+    "the-turin-horse/fulltext/viewing_1475347413.html": "cache",
+    "the-turin-horse/fulltext/viewing_1471932629.html": "cache",
+    "the-turin-horse/fulltext/viewing_1471467318.html": "cache",
+    "the-turin-horse/fulltext/viewing_1467211898.html": "cache",
+    "the-turin-horse/fulltext/viewing_1166259079.html": "cache",
+    "the-turin-horse/fulltext/viewing_1165367970.html": "cache",
+    "the-turin-horse/fulltext/viewing_1164093533.html": "cache",
+    "the-turin-horse/fulltext/viewing_1162151919.html": "cache",
+    "the-turin-horse/fulltext/viewing_1161838478.html": "cache",
+    "the-turin-horse/pages/by_added/rated_5_page_1.html": "cache",
+    "the-turin-horse/pages/by_added/rated_5_page_2.html": "cache",
+    "the-turin-horse/pages/by_added/rated_5_page_3.html": "cache",
+    "the-turin-horse/pages/by_added/rated_5_page_58.html": "cache",
+    "the-turin-horse/pages/by_added/rated_5_page_116.html": "cache",
+    "the-turin-horse/fulltext/viewing_1486971089.html": "cache",
+    "the-turin-horse/fulltext/viewing_1486563968.html": "cache",
+    "the-turin-horse/fulltext/viewing_1483584126.html": "cache",
+    "the-turin-horse/fulltext/viewing_1483434205.html": "cache",
+    "the-turin-horse/fulltext/viewing_1482711795.html": "cache",
+    "the-turin-horse/fulltext/viewing_1480357224.html": "cache",
+    "the-turin-horse/fulltext/viewing_1480165977.html": "cache",
+    "the-turin-horse/fulltext/viewing_1479842148.html": "cache",
+    "the-turin-horse/fulltext/viewing_1477595066.html": "cache",
+    "the-turin-horse/fulltext/viewing_1472009592.html": "cache",
+    "the-turin-horse/fulltext/viewing_1468061047.html": "cache",
+    "the-turin-horse/fulltext/viewing_1168765975.html": "cache",
+    "the-turin-horse/fulltext/viewing_815025183.html": "cache",
+    "the-turin-horse/fulltext/viewing_810198920.html": "cache",
+    "the-turin-horse/film_page.html": "cache"
+  },
+  "buckets": [
+    {
+      "bucket": "negativas",
+      "alvo": 40,
+      "modo": "completo",
+      "estado_piso": "completa",
+      "n_validas": 40,
+      "share_real": 5,
+      "composicao_alvo": {
+        "0.5": 7,
+        "1.0": 9,
+        "1.5": 6,
+        "2.0": 18
+      },
+      "composicao_atingida": {
+        "0.5": 7,
+        "1.0": 9,
+        "1.5": 6,
+        "2.0": 18
+      },
+      "cascata_por_degrau": {
+        "150": 40
+      },
+      "deficit_redistribuido": 0,
+      "distribuicao_pagina_origem": {
+        "n": 40,
+        "min": 1,
+        "max": 6,
+        "p5": 1,
+        "p50": 3,
+        "p95": 6,
+        "fracao_profunda": 0.3
+      },
+      "janela_amostra": {
+        "n": 40,
+        "min": "2023-09-08",
+        "max": "2026-09-05",
+        "p5": "2025-11-25",
+        "p50": "2026-03-10",
+        "p95": "2026-08-22"
+      },
+      "niveis": [
+        {
+          "nivel": 0.5,
+          "n_validas": 7,
+          "n_alvo": 7,
+          "n_brutas": 36,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 1,
+          "n_descartadas_curtas": 21,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 0,
+          "motivos_descarte": {
+            "truncada_sem_texto": 0,
+            "spoiler": 1,
+            "abaixo_min_chars": 21,
+            "excedente_cota": 7,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 3
+        },
+        {
+          "nivel": 1.0,
+          "n_validas": 9,
+          "n_alvo": 9,
+          "n_brutas": 48,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 1,
+          "n_descartadas_curtas": 26,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 0,
+          "motivos_descarte": {
+            "truncada_sem_texto": 0,
+            "spoiler": 1,
+            "abaixo_min_chars": 26,
+            "excedente_cota": 12,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 4
+        },
+        {
+          "nivel": 1.5,
+          "n_validas": 6,
+          "n_alvo": 6,
+          "n_brutas": 24,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 0,
+          "n_descartadas_curtas": 12,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 1,
+          "motivos_descarte": {
+            "truncada_sem_texto": 1,
+            "spoiler": 0,
+            "abaixo_min_chars": 12,
+            "excedente_cota": 5,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 2
+        },
+        {
+          "nivel": 2.0,
+          "n_validas": 18,
+          "n_alvo": 18,
+          "n_brutas": 84,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 0,
+          "n_descartadas_curtas": 48,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 0,
+          "motivos_descarte": {
+            "truncada_sem_texto": 0,
+            "spoiler": 0,
+            "abaixo_min_chars": 48,
+            "excedente_cota": 18,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 7
+        }
+      ],
+      "temas": [
+        {
+          "tema": "Ritmo excessivamente lento e tedioso",
+          "mencoes_aproximadas": 38,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "As críticas deste grupo descrevem a experiência de assistir ao filme como arrastada e entediante, com cenas que se estendem sem propósito claro, levando alguns a acelerar a reprodução ou até desistir no meio. A repetição de ações cotidianas sem variação significativa é apontada como um fator que torna a obra difícil de suportar.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Falta de enredo e desenvolvimento de personagens",
+          "mencoes_aproximadas": 28,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "Muitas reviews afirmam que o filme carece de uma história envolvente, com personagens sem profundidade ou motivações que despertem interesse. A ausência de diálogos e de arcos narrativos claros faz com que a experiência pareça vazia e monótona, sem nada para se apegar emocionalmente.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Pretensão artística e elitismo percebido",
+          "mencoes_aproximadas": 22,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "Este grupo critica o que considera uma postura pretensiosa do diretor e de seus admiradores, sugerindo que a obra valoriza a dificuldade e o tédio como se fossem virtudes artísticas. Alguns expressam frustração com a ideia de que apenas uma audiência específica, supostamente mais culta, seria capaz de apreciar o filme, tratando a incompreensão como falha do espectador.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Uso repetitivo da trilha sonora e som",
+          "mencoes_aproximadas": 15,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "A trilha sonora, caracterizada por um refrão de cordas que se repete incessantemente, é mencionada como um elemento que intensifica a sensação de monotonia e desgaste. O som do vento, onipresente, também é citado como fator que contribui para a atmosfera opressiva, mas que se torna cansativo ao longo do tempo.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Fotografia bela mas insuficiente para sustentar o filme",
+          "mencoes_aproximadas": 14,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "Várias reviews reconhecem a qualidade da fotografia em preto e branco e a composição visual cuidadosa, mas argumentam que esses aspectos não compensam a falta de envolvimento narrativo ou emocional. A beleza das imagens é vista como um atrativo isolado que não justifica a duração extensa e o ritmo arrastado.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Comparações desfavoráveis com outras obras ou diretores",
+          "mencoes_aproximadas": 12,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "Algumas críticas comparam o filme a trabalhos anteriores do próprio diretor ou a cineastas como Tarkovski, Fellini e Bergman, considerando-o inferior em termos de narrativa e profundidade. A obra é por vezes descrita como uma versão menos eficaz de outras produções que também exploram o cotidiano ou o pessimismo, mas conseguem manter o interesse.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        }
+      ],
+      "observacao_geral": "As reviews negativas deste grupo destacam principalmente o ritmo excessivamente lento, a falta de uma narrativa envolvente e a percepção de pretensão artística. Apesar de reconhecerem qualidades técnicas como a fotografia, a maioria considera a experiência tediosa e emocionalmente vazia, com críticas recorrentes à repetição de cenas e à ausência de desenvolvimento de personagens.",
+      "idioma_invalido": false,
+      "escopo_suspeito": false
+    },
+    {
+      "bucket": "medianas",
+      "alvo": 40,
+      "modo": "completo",
+      "estado_piso": "completa",
+      "n_validas": 40,
+      "share_real": 10,
+      "composicao_alvo": {
+        "2.5": 10,
+        "3.0": 30
+      },
+      "composicao_atingida": {
+        "2.5": 10,
+        "3.0": 30
+      },
+      "cascata_por_degrau": {
+        "150": 40
+      },
+      "deficit_redistribuido": 0,
+      "distribuicao_pagina_origem": {
+        "n": 40,
+        "min": 1,
+        "max": 28,
+        "p5": 1,
+        "p50": 5,
+        "p95": 14,
+        "fracao_profunda": 0.35
+      },
+      "janela_amostra": {
+        "n": 40,
+        "min": "2024-04-02",
+        "max": "2026-09-09",
+        "p5": "2026-01-07",
+        "p50": "2026-04-25",
+        "p95": "2026-09-01"
+      },
+      "niveis": [
+        {
+          "nivel": 2.5,
+          "n_validas": 10,
+          "n_alvo": 10,
+          "n_brutas": 72,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 1,
+          "n_descartadas_curtas": 43,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 0,
+          "motivos_descarte": {
+            "truncada_sem_texto": 0,
+            "spoiler": 1,
+            "abaixo_min_chars": 43,
+            "excedente_cota": 18,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 6
+        },
+        {
+          "nivel": 3.0,
+          "n_validas": 30,
+          "n_alvo": 30,
+          "n_brutas": 120,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 3,
+          "n_descartadas_curtas": 67,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 0,
+          "motivos_descarte": {
+            "truncada_sem_texto": 0,
+            "spoiler": 3,
+            "abaixo_min_chars": 67,
+            "excedente_cota": 20,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 10
+        }
+      ],
+      "temas": [
+        {
+          "tema": "Ritmo lento e repetitivo",
+          "mencoes_aproximadas": 35,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "Muitas reviews medianas apontam que o ritmo é excessivamente lento e a repetição de ações cotidianas torna a experiência arrastada e cansativa, apesar de reconhecerem a intenção por trás dessa escolha.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Fotografia e estética visual",
+          "mencoes_aproximadas": 28,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "A fotografia em preto e branco e os planos longos são frequentemente elogiados como visualmente impressionantes, com enquadramentos que se assemelham a pinturas, mesmo quando o filme é considerado tedioso.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Temas existenciais e niilismo",
+          "mencoes_aproximadas": 22,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "As reviews medianas destacam que o filme aborda temas como niilismo, desespero existencial e a luta humana, mas alguns consideram que a mensagem é óbvia ou excessivamente densa.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Trilha sonora e som",
+          "mencoes_aproximadas": 12,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "A música e o som do vento são mencionados como elementos que intensificam a atmosfera opressiva, embora a repetição da trilha sonora possa incomodar alguns espectadores.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Dificuldade de envolvimento emocional",
+          "mencoes_aproximadas": 10,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "Várias reviews medianas relatam que, apesar de admirarem a proposta, não conseguiram se envolver emocionalmente ou sentir conexão com os personagens, resultando em uma experiência mais intelectual que sensitiva.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Duração excessiva",
+          "mencoes_aproximadas": 9,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "Algumas reviews medianas consideram que o filme se estende além do necessário, com cenas que poderiam ser encurtadas sem prejuízo para a obra.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        }
+      ],
+      "observacao_geral": "As reviews medianas analisadas indicam uma recepção dividida: este grupo reconhece a qualidade técnica e a profundidade temática do filme, mas critica o ritmo lento, a repetição e a falta de envolvimento emocional, resultando em uma experiência admirada por alguns e considerada tediosa por outros.",
+      "idioma_invalido": false,
+      "escopo_suspeito": false
+    },
+    {
+      "bucket": "positivas",
+      "alvo": 40,
+      "modo": "completo",
+      "estado_piso": "completa",
+      "n_validas": 40,
+      "share_real": 85,
+      "composicao_alvo": {
+        "3.5": 5,
+        "4.0": 12,
+        "4.5": 9,
+        "5.0": 14
+      },
+      "composicao_atingida": {
+        "3.5": 5,
+        "4.0": 12,
+        "4.5": 9,
+        "5.0": 14
+      },
+      "cascata_por_degrau": {
+        "150": 40
+      },
+      "deficit_redistribuido": 0,
+      "distribuicao_pagina_origem": {
+        "n": 40,
+        "min": 1,
+        "max": 116,
+        "p5": 1,
+        "p50": 3,
+        "p95": 58,
+        "fracao_profunda": 0.3
+      },
+      "janela_amostra": {
+        "n": 40,
+        "min": "2025-02-19",
+        "max": "2026-09-10",
+        "p5": "2025-11-19",
+        "p50": "2026-08-27",
+        "p95": "2026-09-08"
+      },
+      "niveis": [
+        {
+          "nivel": 3.5,
+          "n_validas": 5,
+          "n_alvo": 5,
+          "n_brutas": 24,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 0,
+          "n_descartadas_curtas": 14,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 0,
+          "motivos_descarte": {
+            "truncada_sem_texto": 0,
+            "spoiler": 0,
+            "abaixo_min_chars": 14,
+            "excedente_cota": 5,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 2
+        },
+        {
+          "nivel": 4.0,
+          "n_validas": 12,
+          "n_alvo": 12,
+          "n_brutas": 60,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 0,
+          "n_descartadas_curtas": 32,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 1,
+          "motivos_descarte": {
+            "truncada_sem_texto": 1,
+            "spoiler": 0,
+            "abaixo_min_chars": 32,
+            "excedente_cota": 15,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 5
+        },
+        {
+          "nivel": 4.5,
+          "n_validas": 9,
+          "n_alvo": 9,
+          "n_brutas": 36,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 1,
+          "n_descartadas_curtas": 14,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 1,
+          "motivos_descarte": {
+            "truncada_sem_texto": 1,
+            "spoiler": 1,
+            "abaixo_min_chars": 14,
+            "excedente_cota": 11,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 3
+        },
+        {
+          "nivel": 5.0,
+          "n_validas": 14,
+          "n_alvo": 14,
+          "n_brutas": 72,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 2,
+          "n_descartadas_curtas": 40,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 1,
+          "motivos_descarte": {
+            "truncada_sem_texto": 1,
+            "spoiler": 2,
+            "abaixo_min_chars": 40,
+            "excedente_cota": 15,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 6
+        }
+      ],
+      "temas": [
+        {
+          "tema": "Ritmo lento e repetição intencional",
+          "mencoes_aproximadas": 18,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "Várias reviews positivas destacam que a lentidão e a repetição das rotinas não são defeitos, mas escolhas deliberadas que criam uma experiência imersiva e hipnótica, forçando o espectador a sentir o peso da existência.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Fotografia em preto e branco e planos longos",
+          "mencoes_aproximadas": 15,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "A fotografia em preto e branco de textura rica e os longos planos sequências são frequentemente elogiados como elementos que conferem uma beleza austera e quase pictórica ao filme.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Nihilismo e peso da existência",
+          "mencoes_aproximadas": 14,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "Muitas reviews associam o filme a uma profunda reflexão sobre o nihilismo, a falta de sentido e a dureza da vida, descrevendo-o como uma obra que transmite desesperança e vazio existencial.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Trilha sonora marcante e som ambiente",
+          "mencoes_aproximadas": 9,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "A trilha sonora hipnótica e o som constante do vento são citados como componentes essenciais que amplificam a atmosfera opressiva e a monotonia da experiência.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Temas filosóficos e referências a Nietzsche",
+          "mencoes_aproximadas": 8,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "Algumas reviews mencionam a conexão com a filosofia de Nietzsche e a história do colapso mental do filósofo, interpretando o filme como uma exploração de conceitos como o eterno retorno e a decadência.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Atmosfera opressiva e experiência sensorial",
+          "mencoes_aproximadas": 7,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "O filme é descrito como uma experiência sensorial intensa e opressiva, que envolve o espectador em um ambiente hostil e melancólico, muitas vezes comparado a uma instalação artística ou a um estado meditativo.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        }
+      ],
+      "observacao_geral": "As reviews positivas deste grupo destacam a maestria técnica de Béla Tarr, especialmente na fotografia em preto e branco e nos planos longos, e valorizam a abordagem niilista e existencial do filme. A lentidão e a repetição são vistas como escolhas intencionais que criam uma experiência imersiva e reflexiva, embora alguns reconheçam que a obra exige paciência e pode ser emocionalmente pesada.",
+      "idioma_invalido": false,
+      "escopo_suspeito": false
+    }
+  ],
+  "eixos": {
+    "taxonomia_id": "ebab2667de74",
+    "margem": {
+      "lei": "lift^2 * n >= 2085136/1000000",
+      "constante_quadrada": [
+        2085136,
+        1000000
+      ],
+      "n": 40,
+      "limiar_pp": 22.83
+    },
+    "margem_lift_pp": 22.83,
+    "linhas": [
+      {
+        "eixo": "ritmo",
+        "por_bucket": {
+          "negativas": {
+            "mencoes": 33,
+            "de_n": 40,
+            "freq_pct": 82.5,
+            "lift_pp": 12.5,
+            "acima_da_margem": false,
+            "tema": "Ritmo excessivamente lento e tedioso",
+            "exemplo_parafraseado": "As críticas deste grupo descrevem a experiência de assistir ao filme como arrastada e entediante, com cenas que se estendem sem propósito claro, levando alguns a acelerar a reprodução ou até desistir no meio. A repetição de ações cotidianas sem variação significativa é apontada como um fator que torna a obra difícil de suportar.",
+            "temas_no_mesmo_eixo": []
+          },
+          "medianas": {
+            "mencoes": 28,
+            "de_n": 40,
+            "freq_pct": 70.0,
+            "lift_pp": -12.5,
+            "acima_da_margem": false,
+            "tema": "Ritmo lento e repetitivo",
+            "exemplo_parafraseado": "Muitas reviews medianas apontam que o ritmo é excessivamente lento e a repetição de ações cotidianas torna a experiência arrastada e cansativa, apesar de reconhecerem a intenção por trás dessa escolha.",
+            "temas_no_mesmo_eixo": [
+              "Duração excessiva"
+            ]
+          },
+          "positivas": {
+            "mencoes": 21,
+            "de_n": 40,
+            "freq_pct": 52.5,
+            "lift_pp": -30.0,
+            "acima_da_margem": false,
+            "tema": "Ritmo lento e repetição intencional",
+            "exemplo_parafraseado": "Várias reviews positivas destacam que a lentidão e a repetição das rotinas não são defeitos, mas escolhas deliberadas que criam uma experiência imersiva e hipnótica, forçando o espectador a sentir o peso da existência.",
+            "temas_no_mesmo_eixo": []
+          }
+        },
+        "bullet_de": {
+          "negativas": "frequencia",
+          "medianas": "frequencia",
+          "positivas": null
+        }
+      },
+      {
+        "eixo": "atuacao",
+        "por_bucket": {
+          "negativas": {
+            "mencoes": 2,
+            "de_n": 40,
+            "freq_pct": 5.0,
+            "lift_pp": -7.5,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "medianas": {
+            "mencoes": 2,
+            "de_n": 40,
+            "freq_pct": 5.0,
+            "lift_pp": -7.5,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "positivas": {
+            "mencoes": 5,
+            "de_n": 40,
+            "freq_pct": 12.5,
+            "lift_pp": 7.5,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          }
+        },
+        "bullet_de": {
+          "negativas": null,
+          "medianas": null,
+          "positivas": null
+        }
+      },
+      {
+        "eixo": "direcao_imagem",
+        "por_bucket": {
+          "negativas": {
+            "mencoes": 13,
+            "de_n": 40,
+            "freq_pct": 32.5,
+            "lift_pp": -22.5,
+            "acima_da_margem": false,
+            "tema": "Fotografia bela mas insuficiente para sustentar o filme",
+            "exemplo_parafraseado": "Várias reviews reconhecem a qualidade da fotografia em preto e branco e a composição visual cuidadosa, mas argumentam que esses aspectos não compensam a falta de envolvimento narrativo ou emocional. A beleza das imagens é vista como um atrativo isolado que não justifica a duração extensa e o ritmo arrastado.",
+            "temas_no_mesmo_eixo": []
+          },
+          "medianas": {
+            "mencoes": 21,
+            "de_n": 40,
+            "freq_pct": 52.5,
+            "lift_pp": -2.5,
+            "acima_da_margem": false,
+            "tema": "Fotografia e estética visual",
+            "exemplo_parafraseado": "A fotografia em preto e branco e os planos longos são frequentemente elogiados como visualmente impressionantes, com enquadramentos que se assemelham a pinturas, mesmo quando o filme é considerado tedioso.",
+            "temas_no_mesmo_eixo": []
+          },
+          "positivas": {
+            "mencoes": 22,
+            "de_n": 40,
+            "freq_pct": 55.0,
+            "lift_pp": 2.5,
+            "acima_da_margem": false,
+            "tema": "Fotografia em preto e branco e planos longos",
+            "exemplo_parafraseado": "A fotografia em preto e branco de textura rica e os longos planos sequências são frequentemente elogiados como elementos que conferem uma beleza austera e quase pictórica ao filme.",
+            "temas_no_mesmo_eixo": []
+          }
+        },
+        "bullet_de": {
+          "negativas": null,
+          "medianas": null,
+          "positivas": null
+        }
+      },
+      {
+        "eixo": "roteiro_estrutura",
+        "por_bucket": {
+          "negativas": {
+            "mencoes": 23,
+            "de_n": 40,
+            "freq_pct": 57.5,
+            "lift_pp": 2.5,
+            "acima_da_margem": false,
+            "tema": "Falta de enredo e desenvolvimento de personagens",
+            "exemplo_parafraseado": "Muitas reviews afirmam que o filme carece de uma história envolvente, com personagens sem profundidade ou motivações que despertem interesse. A ausência de diálogos e de arcos narrativos claros faz com que a experiência pareça vazia e monótona, sem nada para se apegar emocionalmente.",
+            "temas_no_mesmo_eixo": []
+          },
+          "medianas": {
+            "mencoes": 18,
+            "de_n": 40,
+            "freq_pct": 45.0,
+            "lift_pp": -12.5,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "positivas": {
+            "mencoes": 22,
+            "de_n": 40,
+            "freq_pct": 55.0,
+            "lift_pp": -2.5,
+            "acima_da_margem": false,
+            "tema": "Temas filosóficos e referências a Nietzsche",
+            "exemplo_parafraseado": "Algumas reviews mencionam a conexão com a filosofia de Nietzsche e a história do colapso mental do filósofo, interpretando o filme como uma exploração de conceitos como o eterno retorno e a decadência.",
+            "temas_no_mesmo_eixo": []
+          }
+        },
+        "bullet_de": {
+          "negativas": "frequencia",
+          "medianas": null,
+          "positivas": null
+        }
+      },
+      {
+        "eixo": "som_trilha",
+        "por_bucket": {
+          "negativas": {
+            "mencoes": 6,
+            "de_n": 40,
+            "freq_pct": 15.0,
+            "lift_pp": -15.0,
+            "acima_da_margem": false,
+            "tema": "Uso repetitivo da trilha sonora e som",
+            "exemplo_parafraseado": "A trilha sonora, caracterizada por um refrão de cordas que se repete incessantemente, é mencionada como um elemento que intensifica a sensação de monotonia e desgaste. O som do vento, onipresente, também é citado como fator que contribui para a atmosfera opressiva, mas que se torna cansativo ao longo do tempo.",
+            "temas_no_mesmo_eixo": []
+          },
+          "medianas": {
+            "mencoes": 8,
+            "de_n": 40,
+            "freq_pct": 20.0,
+            "lift_pp": -10.0,
+            "acima_da_margem": false,
+            "tema": "Trilha sonora e som",
+            "exemplo_parafraseado": "A música e o som do vento são mencionados como elementos que intensificam a atmosfera opressiva, embora a repetição da trilha sonora possa incomodar alguns espectadores.",
+            "temas_no_mesmo_eixo": []
+          },
+          "positivas": {
+            "mencoes": 12,
+            "de_n": 40,
+            "freq_pct": 30.0,
+            "lift_pp": 10.0,
+            "acima_da_margem": false,
+            "tema": "Trilha sonora marcante e som ambiente",
+            "exemplo_parafraseado": "A trilha sonora hipnótica e o som constante do vento são citados como componentes essenciais que amplificam a atmosfera opressiva e a monotonia da experiência.",
+            "temas_no_mesmo_eixo": []
+          }
+        },
+        "bullet_de": {
+          "negativas": null,
+          "medianas": null,
+          "positivas": null
+        }
+      },
+      {
+        "eixo": "tom_atmosfera",
+        "por_bucket": {
+          "negativas": {
+            "mencoes": 13,
+            "de_n": 40,
+            "freq_pct": 32.5,
+            "lift_pp": -27.5,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "medianas": {
+            "mencoes": 20,
+            "de_n": 40,
+            "freq_pct": 50.0,
+            "lift_pp": -10.0,
+            "acima_da_margem": false,
+            "tema": "Temas existenciais e niilismo",
+            "exemplo_parafraseado": "As reviews medianas destacam que o filme aborda temas como niilismo, desespero existencial e a luta humana, mas alguns consideram que a mensagem é óbvia ou excessivamente densa.",
+            "temas_no_mesmo_eixo": []
+          },
+          "positivas": {
+            "mencoes": 24,
+            "de_n": 40,
+            "freq_pct": 60.0,
+            "lift_pp": 10.0,
+            "acima_da_margem": false,
+            "tema": "Nihilismo e peso da existência",
+            "exemplo_parafraseado": "Muitas reviews associam o filme a uma profunda reflexão sobre o nihilismo, a falta de sentido e a dureza da vida, descrevendo-o como uma obra que transmite desesperança e vazio existencial.",
+            "temas_no_mesmo_eixo": [
+              "Atmosfera opressiva e experiência sensorial"
+            ]
+          }
+        },
+        "bullet_de": {
+          "negativas": null,
+          "medianas": null,
+          "positivas": "frequencia"
+        }
+      },
+      {
+        "eixo": "impacto_emocional",
+        "por_bucket": {
+          "negativas": {
+            "mencoes": 23,
+            "de_n": 40,
+            "freq_pct": 57.5,
+            "lift_pp": -5.0,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "medianas": {
+            "mencoes": 25,
+            "de_n": 40,
+            "freq_pct": 62.5,
+            "lift_pp": 0.0,
+            "acima_da_margem": false,
+            "tema": "Dificuldade de envolvimento emocional",
+            "exemplo_parafraseado": "Várias reviews medianas relatam que, apesar de admirarem a proposta, não conseguiram se envolver emocionalmente ou sentir conexão com os personagens, resultando em uma experiência mais intelectual que sensitiva.",
+            "temas_no_mesmo_eixo": []
+          },
+          "positivas": {
+            "mencoes": 25,
+            "de_n": 40,
+            "freq_pct": 62.5,
+            "lift_pp": 0.0,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          }
+        },
+        "bullet_de": {
+          "negativas": null,
+          "medianas": "frequencia",
+          "positivas": "frequencia"
+        }
+      },
+      {
+        "eixo": "comparacoes",
+        "por_bucket": {
+          "negativas": {
+            "mencoes": 19,
+            "de_n": 40,
+            "freq_pct": 47.5,
+            "lift_pp": -2.5,
+            "acima_da_margem": false,
+            "tema": "Comparações desfavoráveis com outras obras ou diretores",
+            "exemplo_parafraseado": "Algumas críticas comparam o filme a trabalhos anteriores do próprio diretor ou a cineastas como Tarkovski, Fellini e Bergman, considerando-o inferior em termos de narrativa e profundidade. A obra é por vezes descrita como uma versão menos eficaz de outras produções que também exploram o cotidiano ou o pessimismo, mas conseguem manter o interesse.",
+            "temas_no_mesmo_eixo": []
+          },
+          "medianas": {
+            "mencoes": 20,
+            "de_n": 40,
+            "freq_pct": 50.0,
+            "lift_pp": 2.5,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "positivas": {
+            "mencoes": 17,
+            "de_n": 40,
+            "freq_pct": 42.5,
+            "lift_pp": -7.5,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          }
+        },
+        "bullet_de": {
+          "negativas": null,
+          "medianas": null,
+          "positivas": null
+        }
+      },
+      {
+        "eixo": "expectativa",
+        "por_bucket": {
+          "negativas": {
+            "mencoes": 11,
+            "de_n": 40,
+            "freq_pct": 27.5,
+            "lift_pp": 5.0,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "medianas": {
+            "mencoes": 7,
+            "de_n": 40,
+            "freq_pct": 17.5,
+            "lift_pp": -10.0,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "positivas": {
+            "mencoes": 9,
+            "de_n": 40,
+            "freq_pct": 22.5,
+            "lift_pp": -5.0,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          }
+        },
+        "bullet_de": {
+          "negativas": null,
+          "medianas": null,
+          "positivas": null
+        }
+      },
+      {
+        "eixo": "critica_social",
+        "por_bucket": {
+          "negativas": {
+            "mencoes": 11,
+            "de_n": 40,
+            "freq_pct": 27.5,
+            "lift_pp": 15.0,
+            "acima_da_margem": false,
+            "tema": "Pretensão artística e elitismo percebido",
+            "exemplo_parafraseado": "Este grupo critica o que considera uma postura pretensiosa do diretor e de seus admiradores, sugerindo que a obra valoriza a dificuldade e o tédio como se fossem virtudes artísticas. Alguns expressam frustração com a ideia de que apenas uma audiência específica, supostamente mais culta, seria capaz de apreciar o filme, tratando a incompreensão como falha do espectador.",
+            "temas_no_mesmo_eixo": []
+          },
+          "medianas": {
+            "mencoes": 3,
+            "de_n": 40,
+            "freq_pct": 7.5,
+            "lift_pp": -20.0,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "positivas": {
+            "mencoes": 5,
+            "de_n": 40,
+            "freq_pct": 12.5,
+            "lift_pp": -15.0,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          }
+        },
+        "bullet_de": {
+          "negativas": null,
+          "medianas": null,
+          "positivas": null
+        }
+      }
+    ],
+    "contraste": "valorativo",
+    "rotulagem": {
+      "n_chamadas": 3,
+      "falharam": [],
+      "fora_da_taxonomia": {},
+      "houve_retentativa": []
+    },
+    "spec_version": "1.9.50",
+    "verificador": {
+      "aplicado": true,
+      "variante": "V2_alvo",
+      "passada": 1,
+      "eixo": "impacto_emocional",
+      "n_removidas_no_corpus": 2781
+    }
+  },
+  "narrativa": "Dirigido por Béla Tarr e lançado em 2011, o drama O Cavalo de Turim parte do episódio histórico envolvendo o filósofo Friedrich Nietzsche e um animal em Turim no final do século XIX. A partir desse evento, o longa-metragem acompanha o percurso de um camponês, de sua filha e de seu cavalo doente em uma existência miserável.\n\nA experiência do filme se constrói por meio de um ritmo acentuadamente lento e da repetição sistemática de rotinas diárias, estruturadas em planos longos e em uma fotografia em preto e branco. A composição apoia-se em uma atmosfera sonora constante, conduzindo uma ambientação austera voltada a temas existenciais.\n\nEm termos de recepção, os grupos concordam sobre o que o filme é e discordam sobre se ele funciona. Na grande maioria das notas (~85%), uma parcela expressiva defende que o ritmo lento e a repetição intencional compõem uma proposta imersiva sobre a rotina. Da mesma forma, boa parte exalta a fotografia em preto e branco e os planos longos por sua qualidade estética, enquanto vários enfatizam a abordagem sobre o niilismo e o peso da existência como uma reflexão contundente.\n\nNuma fração mínima das notas (~10%), segundo essa avaliação, praticamente todos sentem o ritmo lento e repetitivo como cansativo, embora a maior parte admire a fotografia e a estética visual, com cerca de metade comentando os temas existenciais e o niilismo. Por fim, sob a ótica presente numa fração ainda menor das notas (~5%), quase todos rejeitam o ritmo excessivamente lento e tedioso, enquanto a maior parcela aponta a falta de enredo e desenvolvimento de personagens, e metade deles critica a percepção de pretensão artística e elitismo.",
+  "verificacao_narrativa": {
+    "quantificador_fora_de_faixa": [],
+    "quantificador_repetido": [],
+    "paragrafos": {
+      "n_paragrafos": 4,
+      "minimo": 3,
+      "insuficientes": false,
+      "longos": []
+    },
+    "n_paragrafos": 4,
+    "paragrafos_insuficientes": false,
+    "paragrafos_longos": [],
+    "grupos_sem_paragrafo_proprio": [
+      "negativas"
+    ],
+    "movimento1_e_movimento2_no_mesmo_paragrafo": false,
+    "formato_invalido": false,
+    "numeros_inventados": [],
+    "rotulos_faltando": [],
+    "ordem_incorreta": false,
+    "vocabulario_peso": false,
+    "resenha_speak": [],
+    "n_resenha_speak": 0,
+    "n_flags": 1
+  },
+  "narrativa_selecao": {
+    "provider": "gemini",
+    "modelo": "gemini-3.7-flash",
+    "n_candidatos": 3,
+    "n_chamadas": 4,
+    "indice_escolhido": 1,
+    "motivo": "menor_severidade",
+    "criterio_decisivo": "empate",
+    "candidatos": [
+      {
+        "indice": 0,
+        "n_flags": 2,
+        "cliches": 0,
+        "repeticao_max": 1,
+        "ritmo": 9,
+        "cobertura": 1.0,
+        "eliminado": true
+      },
+      {
+        "indice": 1,
+        "n_flags": 1,
+        "cliches": 0,
+        "repeticao_max": 1,
+        "ritmo": 10,
+        "cobertura": 1.0,
+        "eliminado": true
+      },
+      {
+        "indice": 2,
+        "n_flags": 2,
+        "cliches": 0,
+        "repeticao_max": 1,
+        "ritmo": 11,
+        "cobertura": 1.0,
+        "eliminado": true
+      }
+    ],
+    "retry": {
+      "n_frases_infratoras": 0,
+      "motivos": [],
+      "n_flags_depois": 1,
+      "aplicado": false
+    },
+    "uso": {
+      "prompt_tokens": 12715,
+      "completion_tokens": 1591,
+      "cache_hit_tokens": 0,
+      "cache_miss_tokens": 12715
+    },
+    "latencia_s": 37.96
+  },
+  "condicoes": {
+    "vale_a_pena": [
+      {
+        "texto": "busca uma experiência imersiva e hipnótica construída pelo ritmo lento e rotinas repetitivas",
+        "tema_origem": "POS-A",
+        "bucket_origem": "positivas",
+        "tema_texto": "Ritmo lento e repetição intencional",
+        "rotulo_forca": "muitos"
+      },
+      {
+        "texto": "aprecia uma fotografia austera em preto e branco com planos-sequência longos e pictóricos",
+        "tema_origem": "POS-B",
+        "bucket_origem": "positivas",
+        "tema_texto": "Fotografia em preto e branco e planos longos",
+        "rotulo_forca": "muitos"
+      },
+      {
+        "texto": "se interessa por reflexões sobre o niilismo, o vazio existencial e a desesperança",
+        "tema_origem": "POS-C",
+        "bucket_origem": "positivas",
+        "tema_texto": "Nihilismo e peso da existência",
+        "rotulo_forca": "muitos"
+      },
+      {
+        "texto": "valoriza uma trilha sonora hipnótica combinada ao som constante do vento opressivo",
+        "tema_origem": "POS-D",
+        "bucket_origem": "positivas",
+        "tema_texto": "Trilha sonora marcante e som ambiente",
+        "rotulo_forca": "alguns"
+      },
+      {
+        "texto": "procura uma experiência sensorial meditativa e intensa em uma atmosfera melancólica e hostil",
+        "tema_origem": "POS-F",
+        "bucket_origem": "positivas",
+        "tema_texto": "Atmosfera opressiva e experiência sensorial",
+        "rotulo_forca": "alguns"
+      }
+    ],
+    "talvez_evite": [
+      {
+        "texto": "se cansa com narrativas arrastadas e repetições de ações cotidianas sem propósito claro",
+        "tema_origem": "NEG-A",
+        "bucket_origem": "negativas",
+        "tema_texto": "Ritmo excessivamente lento e tedioso",
+        "rotulo_forca": "quase todos"
+      },
+      {
+        "texto": "prefere histórias com arcos narrativos claros, diálogos frequentes e personagens com profundidade emocional",
+        "tema_origem": "NEG-B",
+        "bucket_origem": "negativas",
+        "tema_texto": "Falta de enredo e desenvolvimento de personagens",
+        "rotulo_forca": "a maioria"
+      },
+      {
+        "texto": "se incomoda com obras que aparentam pretensão artística ao valorizar tédio e dificuldade",
+        "tema_origem": "NEG-C",
+        "bucket_origem": "negativas",
+        "tema_texto": "Pretensão artística e elitismo percebido",
+        "rotulo_forca": "cerca de metade"
+      },
+      {
+        "texto": "se irrita com temas musicais incessantes e som contínuo de vento que geram desgaste",
+        "tema_origem": "NEG-D",
+        "bucket_origem": "negativas",
+        "tema_texto": "Uso repetitivo da trilha sonora e som",
+        "rotulo_forca": "muitos"
+      },
+      {
+        "texto": "acha que uma bela fotografia em preto e branco não sustenta uma narrativa arrastada",
+        "tema_origem": "NEG-E",
+        "bucket_origem": "negativas",
+        "tema_texto": "Fotografia bela mas insuficiente para sustentar o filme",
+        "rotulo_forca": "muitos"
+      },
+      {
+        "texto": "espera força narrativa e profundidade comparáveis às de obras semelhantes",
+        "tema_origem": "NEG-F",
+        "bucket_origem": "negativas",
+        "tema_texto": "Comparações desfavoráveis com outras obras ou diretores",
+        "rotulo_forca": "muitos",
+        "origem": "leitura_humana"
+      }
+    ],
+    "ordem_colunas": [
+      "vale_a_pena",
+      "talvez_evite"
+    ],
+    "peso": {
+      "vale_a_pena": {
+        "peso_pct": 85,
+        "peso_texto": "~85% das notas",
+        "nota_de_amostra": null
+      },
+      "talvez_evite": {
+        "peso_pct": 5,
+        "peso_texto": "~5% das notas",
+        "nota_de_amostra": null
+      }
+    },
+    "peso_meio": null,
+    "origem": "llm",
+    "temas_pedidos": {
+      "vale_a_pena": [
+        "POS-A",
+        "POS-B",
+        "POS-C",
+        "POS-D",
+        "POS-F"
+      ],
+      "talvez_evite": [
+        "NEG-A",
+        "NEG-B",
+        "NEG-C",
+        "NEG-D",
+        "NEG-E",
+        "NEG-F"
+      ]
+    },
+    "temas_saltados": {
+      "vale_a_pena": [],
+      "talvez_evite": []
+    },
+    "descartadas": [],
+    "retry": null,
+    "provider": "gemini",
+    "modelo": "gemini-3.7-flash",
+    "n_candidatos": 3,
+    "n_chamadas": 3,
+    "indice_escolhido": 0,
+    "candidatos": [
+      {
+        "indice": 0,
+        "n_condicoes": 11,
+        "n_flags": 0,
+        "flags": [],
+        "n_temas_cobertos": 11
+      },
+      {
+        "indice": 1,
+        "n_condicoes": 11,
+        "n_flags": 0,
+        "flags": [],
+        "n_temas_cobertos": 11
+      },
+      {
+        "indice": 2,
+        "n_condicoes": 11,
+        "n_flags": 2,
+        "flags": [
+          "exemplo_verbatim",
+          "sem_discriminacao"
+        ],
+        "n_temas_cobertos": 11
+      }
+    ],
+    "uso": {
+      "prompt_tokens": 9396,
+      "completion_tokens": 1576,
+      "cache_hit_tokens": 0,
+      "cache_miss_tokens": 9396
+    },
+    "latencia_s": 18.39,
+    "spec_version": "1.9.50"
+  }
+}

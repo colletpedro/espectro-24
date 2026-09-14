@@ -502,6 +502,10 @@ def montar_eixos(slug: str, output: dict, analisadas: dict[str, set[str]],
     if not do_filme:
         return None
 
+    # A mesma guarda que `montar_bloco` aplica, ANTES da rotulagem: um filme
+    # que vai ser recusado não paga a chamada de [D3] primeiro. NÃO é aditiva
+    # como o resto deste bloco — amostra divergente é erro, nunca `None`.
+    E.checar_amostra_classificada(do_filme, analisadas)
     tabela, telemetria = rotular_output(output, client_call=client_call,
                                         provider=provider, model=model)
     bloco = E.montar_bloco(do_filme, analisadas, tabela)

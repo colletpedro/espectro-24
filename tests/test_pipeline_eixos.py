@@ -72,17 +72,28 @@ def test_bloco_carrega_a_telemetria_da_rotulagem(output):
     assert bloco["rotulagem"]["n_chamadas"] == 2
 
 
-def test_sobreposicao_com_as_analisadas_entra_no_bloco(output):
-    """[v1.9.15] `n_classificadas` é a INTERSECÇÃO com `analisadas`, não o
-    total de linhas classificadas naquele bucket — do contrário, reviews
-    classificadas fora da seleção de produção inflariam o denominador (o bug
-    real achado ao unificar as duas populações, Entrega 1)."""
+def test_analisada_sem_classificacao_e_RECUSADA_antes_da_rotulagem(output):
+    """[piloto de expansão, `ABERTO.md` C14.8] Este cenário — 20 das 40
+    analisadas fora da classificação — montava o bloco com `n = 20` e só
+    declarava a divergência (era o que este teste afirmava até aqui, como
+    `(20, 40, 20)` em `fonte_classificacao`). Agora é erro, e o erro vem
+    ANTES da rotulagem [D3]: um filme que vai ser recusado não paga a chamada.
+
+    O sentido legítimo (classificada sem estar analisada, que o filtro
+    remove) continua em `test_eixos.py::test_classificacao_orfa_da_selecao_
+    antiga_nao_infla_o_denominador`."""
+    from espectro24 import eixos as E
     analisadas = {"negativas": {f"v{i}" for i in range(20, 60)}}
-    bloco = P.montar_eixos("filme-x", output, analisadas, consenso=_consenso(),
-                           client_call=_cliente())
-    fonte = bloco["fonte_classificacao"]["por_bucket"]["negativas"]
-    assert (fonte["n_classificadas"], fonte["n_analisadas"],
-            fonte["sobreposicao_com_analisadas"]) == (20, 40, 20)
+    chamou = []
+
+    def cliente(system, user, model):
+        chamou.append(1)
+        return _cliente()(system, user, model)
+
+    with pytest.raises(E.AmostraNaoClassificada, match="20 de 40"):
+        P.montar_eixos("filme-x", output, analisadas, consenso=_consenso(),
+                       client_call=cliente)
+    assert chamou == [], "a rotulagem [D3] foi paga antes da recusa"
 
 
 def test_ids_analisados_do_bruto_reproduz_a_selecao_de_producao():

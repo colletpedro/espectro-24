@@ -1,0 +1,1600 @@
+{
+  "slug": "memories-of-murder",
+  "data_coleta": "2026-09-13T05:17:21.171667+00:00",
+  "spec_version": "1.9.50",
+  "total_reviews_observadas": 540,
+  "reviews_url": "https://letterboxd.com/film/memories-of-murder/reviews/",
+  "ficha": {
+    "titulo": "Memórias de um Assassino",
+    "sinopse_oficial": "Província de Gyunggi, 1986. O corpo de uma jovem mulher, brutalmente estuprada e depois assassinada, é encontrado no campo. Dois meses depois, ocorreram outros crimes semelhantes. Em um país que nunca havia conhecido tais atrocidades, o boato de um assassino em série crescia a cada dia. Uma unidade especial da polícia é então criada na região para encontrar o culpado rapidamente.",
+    "sinopse_fallback_en": false,
+    "generos": [
+      "Crime",
+      "Drama",
+      "Thriller"
+    ],
+    "duracao_min": 131,
+    "diretor": "Bong Joon-ho",
+    "diretor_transliterado": false,
+    "ano": 2003,
+    "fonte": "tmdb",
+    "tmdb_id": 11423,
+    "tmdb_fetched_at": "2026-09-10T19:56:28+00:00",
+    "poster_path": "/hT5TIl0YjjJQNGhPM84k2jzL7Jv.jpg",
+    "poster_largura": 2000,
+    "poster_altura": 3000,
+    "backdrop_paths": [
+      "/6Kn6qW3an3DkPl3MahWemTzrjCt.jpg",
+      "/2NArMoObkAbnIPvqlHC3gRGsfBb.jpg",
+      "/bBOgInuYcKB5rorSvRJ9PmSMxAn.jpg",
+      "/xRNCVrGMGIrUDgz4PLtMT7CdLYe.jpg",
+      "/93jHHGMF3EOE5uiCri6roHkDOCZ.jpg",
+      "/nJEswspdYdRJllWGfBYHW7sKqpz.jpg",
+      "/ezM83izEkEnKNdgbrM9SKAZ7naP.jpg",
+      "/gMHYowuHjQiIxSjQWpuISRjizNT.jpg",
+      "/fkv5Z8nC4UGdazruaVcDq6hKCt4.jpg",
+      "/1IW1zv35kh7ArR9oF0k1OcpErha.jpg"
+    ],
+    "backdrop_path": "/6Kn6qW3an3DkPl3MahWemTzrjCt.jpg",
+    "backdrop_largura": 3840,
+    "backdrop_altura": 2160,
+    "poster_sem_texto_path": "/v5gdTWCpyUi4Xv3kXL09yllZrw2.jpg",
+    "poster_sem_texto_largura": 2000,
+    "poster_sem_texto_altura": 3000,
+    "galeria_stills": [
+      {
+        "still_path": "/6Kn6qW3an3DkPl3MahWemTzrjCt.jpg",
+        "still_largura": 3840,
+        "still_altura": 2160
+      },
+      {
+        "still_path": "/2NArMoObkAbnIPvqlHC3gRGsfBb.jpg",
+        "still_largura": 3840,
+        "still_altura": 2160
+      },
+      {
+        "still_path": "/gMHYowuHjQiIxSjQWpuISRjizNT.jpg",
+        "still_largura": 1920,
+        "still_altura": 1080
+      },
+      {
+        "still_path": "/7BnYJEq8sWNW8zO7qBUZWEcqhQ6.jpg",
+        "still_largura": 1600,
+        "still_altura": 900
+      },
+      {
+        "still_path": "/wdUghFTcbuIqM49qdfamSewbRle.jpg",
+        "still_largura": 1600,
+        "still_altura": 900
+      },
+      {
+        "still_path": "/rOAPcGQsptYdG94KMS6ljDD4P8D.jpg",
+        "still_largura": 1600,
+        "still_altura": 900
+      },
+      {
+        "still_path": "/288hNU3gBHhLMG2z1DHwWMU7EZg.jpg",
+        "still_largura": 1280,
+        "still_altura": 720
+      },
+      {
+        "still_path": "/4geMFWggqFePe1BvfcRfdNfwvxe.jpg",
+        "still_largura": 1920,
+        "still_altura": 1080
+      },
+      {
+        "still_path": "/7ca6JZ1KdE7207SQVxKIeWGUGJp.jpg",
+        "still_largura": 3840,
+        "still_altura": 2160
+      },
+      {
+        "still_path": "/fRgh1sMxq1Ugm0E1QJIvU5DXmvW.jpg",
+        "still_largura": 1280,
+        "still_altura": 720
+      },
+      {
+        "still_path": "/kRLAmBthnM98wU82hOM1TdoEy0D.jpg",
+        "still_largura": 1280,
+        "still_altura": 720
+      },
+      {
+        "still_path": "/xslxDBxvj2kyXx2PLZU5HdIe0JB.jpg",
+        "still_largura": 3840,
+        "still_altura": 2160
+      }
+    ],
+    "ano_fonte": "letterboxd",
+    "identidade": {
+      "versao": 1,
+      "status": "validada",
+      "slug": "memories-of-murder",
+      "titulo_letterboxd": "Memories of Murder",
+      "ano_letterboxd": 2003,
+      "tmdb_id_letterboxd": 11423,
+      "tmdb_id_escolhido": 11423,
+      "fonte_id": "letterboxd",
+      "titulo_tmdb_campo": "title",
+      "titulo_tmdb_correspondente": "Memories of Murder",
+      "ano_tmdb": 2003,
+      "ano_divergente": false
+    }
+  },
+  "distribuicao": {
+    "n_notas_total": 1098638,
+    "por_nivel": {
+      "0.5": 784,
+      "1.0": 1626,
+      "1.5": 1504,
+      "2.0": 6600,
+      "2.5": 10130,
+      "3.0": 46821,
+      "3.5": 93895,
+      "4.0": 311568,
+      "4.5": 285037,
+      "5.0": 340673
+    },
+    "por_bucket": {
+      "negativas": 1,
+      "medianas": 5,
+      "positivas": 94
+    },
+    "fonte": "letterboxd_histograma"
+  },
+  "coleta": {
+    "slug": "memories-of-murder",
+    "coletado_em": "2026-09-10T18:23:09.676826+00:00",
+    "versao_coletor": "1.9.6",
+    "ordenacao_usada": "by/added",
+    "histograma_bruto": {
+      "0.5": 784,
+      "1.0": 1626,
+      "1.5": 1504,
+      "2.0": 6600,
+      "2.5": 10130,
+      "3.0": 46821,
+      "3.5": 93895,
+      "4.0": 311568,
+      "4.5": 285037,
+      "5.0": 340673
+    },
+    "orcamento_paginas_por_nivel": {
+      "0.5": 1,
+      "1.0": 3,
+      "1.5": 2,
+      "2.0": 10,
+      "2.5": 6,
+      "3.0": 10,
+      "3.5": 2,
+      "4.0": 5,
+      "4.5": 4,
+      "5.0": 5
+    },
+    "paginas_gastas_por_nivel": {
+      "0.5": 1,
+      "1.0": 2,
+      "1.5": 2,
+      "2.0": 8,
+      "2.5": 6,
+      "3.0": 10,
+      "3.5": 2,
+      "4.0": 5,
+      "4.5": 4,
+      "5.0": 5
+    },
+    "paradas_por_limite": [
+      "0.5",
+      "1.0",
+      "1.5",
+      "2.0",
+      "2.5",
+      "3.0",
+      "3.5",
+      "4.0",
+      "4.5",
+      "5.0"
+    ],
+    "contagem_bruta_por_nivel": {
+      "0.5": 12,
+      "1.0": 24,
+      "1.5": 24,
+      "2.0": 96,
+      "2.5": 72,
+      "3.0": 120,
+      "3.5": 24,
+      "4.0": 60,
+      "4.5": 48,
+      "5.0": 60
+    },
+    "contagem_estimada_valida_por_nivel": {
+      "0.5": 4,
+      "1.0": 7,
+      "1.5": 8,
+      "2.0": 32,
+      "2.5": 19,
+      "3.0": 21,
+      "3.5": 7,
+      "4.0": 22,
+      "4.5": 13,
+      "5.0": 16
+    },
+    "motivo_parada_por_nivel": {
+      "0.5": "orcamento_esgotado",
+      "1.0": "orcamento_esgotado",
+      "1.5": "orcamento_esgotado",
+      "2.0": "orcamento_esgotado",
+      "2.5": "orcamento_esgotado",
+      "3.0": "orcamento_esgotado",
+      "3.5": "orcamento_esgotado",
+      "4.0": "orcamento_esgotado",
+      "4.5": "orcamento_esgotado",
+      "5.0": "orcamento_esgotado"
+    },
+    "paginas_base_por_nivel": {
+      "0.5": 1,
+      "1.0": 2,
+      "1.5": 2,
+      "2.0": 8,
+      "2.5": 6,
+      "3.0": 10,
+      "3.5": 2,
+      "4.0": 5,
+      "4.5": 4,
+      "5.0": 5
+    },
+    "paginas_extensao_por_nivel": {
+      "0.5": 0,
+      "1.0": 0,
+      "1.5": 0,
+      "2.0": 0,
+      "2.5": 0,
+      "3.0": 0,
+      "3.5": 0,
+      "4.0": 0,
+      "4.5": 0,
+      "5.0": 0
+    },
+    "extensao_por_bucket": {
+      "negativas": {
+        "paginas_base": 13,
+        "paginas_extensao": 0,
+        "extras_por_nivel": {},
+        "motivo_parada": "meta_atingida",
+        "n_validas_pos_base": 51,
+        "n_validas_pos_extensao": 51,
+        "meta": 50
+      },
+      "medianas": {
+        "paginas_base": 16,
+        "paginas_extensao": 0,
+        "extras_por_nivel": {},
+        "motivo_parada": "meta_atingida",
+        "n_validas_pos_base": 50,
+        "n_validas_pos_extensao": 50,
+        "meta": 50
+      },
+      "positivas": {
+        "paginas_base": 16,
+        "paginas_extensao": 0,
+        "extras_por_nivel": {},
+        "motivo_parada": "meta_atingida",
+        "n_validas_pos_base": 58,
+        "n_validas_pos_extensao": 58,
+        "meta": 50
+      }
+    },
+    "profundidade_sondagem": {
+      "nivel_sondado": 5.0,
+      "profundidade": 256,
+      "exata": false,
+      "requisicoes": 4,
+      "motivo": "teto_plataforma"
+    },
+    "profundidade_estimada_por_nivel": {
+      "0.5": 1,
+      "1.0": 1,
+      "1.5": 1,
+      "2.0": 5,
+      "2.5": 8,
+      "3.0": 35,
+      "3.5": 71,
+      "4.0": 234,
+      "4.5": 214,
+      "5.0": 256
+    },
+    "janela_temporal": {
+      "total": {
+        "n": 576,
+        "min": "2016-09-01",
+        "max": "2026-09-10",
+        "p5": "2026-08-06",
+        "p50": "2026-08-31",
+        "p95": "2026-09-10"
+      },
+      "por_bucket": {
+        "negativas": {
+          "n": 156,
+          "min": "2026-04-20",
+          "max": "2026-09-10",
+          "p5": "2026-08-04",
+          "p50": "2026-08-22",
+          "p95": "2026-09-08"
+        },
+        "medianas": {
+          "n": 228,
+          "min": "2024-03-13",
+          "max": "2026-09-10",
+          "p5": "2026-08-18",
+          "p50": "2026-08-30",
+          "p95": "2026-09-08"
+        },
+        "positivas": {
+          "n": 192,
+          "min": "2016-09-01",
+          "max": "2026-09-10",
+          "p5": "2026-08-29",
+          "p50": "2026-09-09",
+          "p95": "2026-09-10"
+        }
+      }
+    },
+    "dias_por_100_paginas": {
+      "n_paginas": 16,
+      "pagina_min": 1,
+      "pagina_max": 64,
+      "dias": 8,
+      "dias_por_100_paginas": 12.698412698412698,
+      "paginas_para_1_ano": 2874
+    },
+    "identidade_letterboxd": {
+      "slug": "memories-of-murder",
+      "titulo": "Memories of Murder",
+      "ano": 2003,
+      "tmdb_id_letterboxd": 11423,
+      "fonte": "pagina_letterboxd"
+    },
+    "ano_lancamento": 2003,
+    "ano_fonte": "letterboxd",
+    "n_reviews_bruto": 576
+  },
+  "origem_paginas": {
+    "_histograma/memories-of-murder.html": "cache",
+    "memories-of-murder/pages/by_added/rated_5_page_4.html": "cache",
+    "memories-of-murder/pages/by_added/rated_5_page_16.html": "cache",
+    "memories-of-murder/pages/by_added/rated_5_page_64.html": "cache",
+    "memories-of-murder/pages/by_added/rated_5_page_256.html": "cache",
+    "memories-of-murder/pages/by_added/rated_0_5_page_1.html": "cache",
+    "memories-of-murder/pages/by_added/rated_1_page_1.html": "cache",
+    "memories-of-murder/pages/by_added/rated_1_page_2.html": "cache",
+    "memories-of-murder/fulltext/viewing_1465021328.html": "cache",
+    "memories-of-murder/fulltext/viewing_1457632808.html": "cache",
+    "memories-of-murder/pages/by_added/rated_1_5_page_1.html": "cache",
+    "memories-of-murder/pages/by_added/rated_1_5_page_2.html": "cache",
+    "memories-of-murder/fulltext/viewing_1470507529.html": "cache",
+    "memories-of-murder/fulltext/viewing_1469454941.html": "cache",
+    "memories-of-murder/pages/by_added/rated_2_page_1.html": "cache",
+    "memories-of-murder/pages/by_added/rated_2_page_2.html": "cache",
+    "memories-of-murder/pages/by_added/rated_2_page_3.html": "cache",
+    "memories-of-murder/pages/by_added/rated_2_page_4.html": "cache",
+    "memories-of-murder/pages/by_added/rated_2_page_5.html": "cache",
+    "memories-of-murder/pages/by_added/rated_2_page_6.html": "cache",
+    "memories-of-murder/pages/by_added/rated_2_page_7.html": "cache",
+    "memories-of-murder/pages/by_added/rated_2_page_8.html": "cache",
+    "memories-of-murder/fulltext/viewing_1460661080.html": "cache",
+    "memories-of-murder/fulltext/viewing_1457081150.html": "cache",
+    "memories-of-murder/fulltext/viewing_1451679169.html": "cache",
+    "memories-of-murder/fulltext/viewing_1450494223.html": "cache",
+    "memories-of-murder/fulltext/viewing_1445890407.html": "cache",
+    "memories-of-murder/fulltext/viewing_1438755452.html": "cache",
+    "memories-of-murder/fulltext/viewing_1433234570.html": "cache",
+    "memories-of-murder/fulltext/viewing_1432782193.html": "cache",
+    "memories-of-murder/pages/by_added/rated_2_5_page_1.html": "cache",
+    "memories-of-murder/pages/by_added/rated_2_5_page_2.html": "cache",
+    "memories-of-murder/pages/by_added/rated_2_5_page_3.html": "cache",
+    "memories-of-murder/pages/by_added/rated_2_5_page_4.html": "cache",
+    "memories-of-murder/pages/by_added/rated_2_5_page_5.html": "cache",
+    "memories-of-murder/pages/by_added/rated_2_5_page_6.html": "cache",
+    "memories-of-murder/fulltext/viewing_1489447202.html": "cache",
+    "memories-of-murder/fulltext/viewing_1475896034.html": "cache",
+    "memories-of-murder/fulltext/viewing_1466913679.html": "cache",
+    "memories-of-murder/fulltext/viewing_1464548702.html": "cache",
+    "memories-of-murder/fulltext/viewing_1463394851.html": "cache",
+    "memories-of-murder/fulltext/viewing_1460340219.html": "cache",
+    "memories-of-murder/pages/by_added/rated_3_page_1.html": "cache",
+    "memories-of-murder/pages/by_added/rated_3_page_2.html": "cache",
+    "memories-of-murder/pages/by_added/rated_3_page_3.html": "cache",
+    "memories-of-murder/pages/by_added/rated_3_page_4.html": "cache",
+    "memories-of-murder/pages/by_added/rated_3_page_5.html": "cache",
+    "memories-of-murder/pages/by_added/rated_3_page_6.html": "cache",
+    "memories-of-murder/pages/by_added/rated_3_page_7.html": "cache",
+    "memories-of-murder/pages/by_added/rated_3_page_8.html": "cache",
+    "memories-of-murder/pages/by_added/rated_3_page_9.html": "cache",
+    "memories-of-murder/pages/by_added/rated_3_page_18.html": "cache",
+    "memories-of-murder/fulltext/viewing_1488757555.html": "cache",
+    "memories-of-murder/fulltext/viewing_1483600619.html": "cache",
+    "memories-of-murder/fulltext/viewing_1480800697.html": "cache",
+    "memories-of-murder/fulltext/viewing_1477509250.html": "cache",
+    "memories-of-murder/fulltext/viewing_1476604866.html": "cache",
+    "memories-of-murder/fulltext/viewing_1474906771.html": "cache",
+    "memories-of-murder/pages/by_added/rated_3_5_page_1.html": "cache",
+    "memories-of-murder/pages/by_added/rated_3_5_page_2.html": "cache",
+    "memories-of-murder/fulltext/viewing_1490192743.html": "cache",
+    "memories-of-murder/pages/by_added/rated_4_page_1.html": "cache",
+    "memories-of-murder/pages/by_added/rated_4_page_2.html": "cache",
+    "memories-of-murder/pages/by_added/rated_4_page_3.html": "cache",
+    "memories-of-murder/pages/by_added/rated_4_page_4.html": "cache",
+    "memories-of-murder/pages/by_added/rated_4_page_58.html": "cache",
+    "memories-of-murder/fulltext/viewing_1490610671.html": "cache",
+    "memories-of-murder/fulltext/viewing_1490257338.html": "cache",
+    "memories-of-murder/fulltext/viewing_1490234746.html": "cache",
+    "memories-of-murder/fulltext/viewing_1489841107.html": "cache",
+    "memories-of-murder/fulltext/viewing_1489604792.html": "cache",
+    "memories-of-murder/fulltext/viewing_1473514195.html": "cache",
+    "memories-of-murder/pages/by_added/rated_4_5_page_1.html": "cache",
+    "memories-of-murder/pages/by_added/rated_4_5_page_2.html": "cache",
+    "memories-of-murder/pages/by_added/rated_4_5_page_3.html": "cache",
+    "memories-of-murder/pages/by_added/rated_4_5_page_54.html": "cache",
+    "memories-of-murder/fulltext/viewing_1490593280.html": "cache",
+    "memories-of-murder/fulltext/viewing_1490531463.html": "cache",
+    "memories-of-murder/fulltext/viewing_1489706072.html": "cache",
+    "memories-of-murder/fulltext/viewing_1476063308.html": "cache",
+    "memories-of-murder/pages/by_added/rated_5_page_1.html": "cache",
+    "memories-of-murder/pages/by_added/rated_5_page_2.html": "cache",
+    "memories-of-murder/pages/by_added/rated_5_page_3.html": "cache",
+    "memories-of-murder/fulltext/viewing_1490557524.html": "cache",
+    "memories-of-murder/fulltext/viewing_1490506064.html": "cache",
+    "memories-of-murder/fulltext/viewing_1490468697.html": "cache",
+    "memories-of-murder/fulltext/viewing_1489803138.html": "cache",
+    "memories-of-murder/fulltext/viewing_1477722678.html": "cache",
+    "memories-of-murder/film_page.html": "cache"
+  },
+  "buckets": [
+    {
+      "bucket": "negativas",
+      "alvo": 40,
+      "modo": "completo",
+      "estado_piso": "completa",
+      "n_validas": 40,
+      "share_real": 1,
+      "composicao_alvo": {
+        "0.5": 3,
+        "1.0": 6,
+        "1.5": 6,
+        "2.0": 25
+      },
+      "composicao_atingida": {
+        "0.5": 3,
+        "1.0": 6,
+        "1.5": 6,
+        "2.0": 25
+      },
+      "cascata_por_degrau": {
+        "150": 40
+      },
+      "deficit_redistribuido": 0,
+      "distribuicao_pagina_origem": {
+        "n": 40,
+        "min": 1,
+        "max": 8,
+        "p5": 1,
+        "p50": 2,
+        "p95": 8,
+        "fracao_profunda": 0.0
+      },
+      "janela_amostra": {
+        "n": 40,
+        "min": "2026-04-20",
+        "max": "2026-09-10",
+        "p5": "2026-08-05",
+        "p50": "2026-08-23",
+        "p95": "2026-09-08"
+      },
+      "niveis": [
+        {
+          "nivel": 0.5,
+          "n_validas": 3,
+          "n_alvo": 3,
+          "n_brutas": 12,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 1,
+          "n_descartadas_curtas": 7,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 0,
+          "motivos_descarte": {
+            "truncada_sem_texto": 0,
+            "spoiler": 1,
+            "abaixo_min_chars": 7,
+            "excedente_cota": 1,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 1
+        },
+        {
+          "nivel": 1.0,
+          "n_validas": 6,
+          "n_alvo": 6,
+          "n_brutas": 24,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 1,
+          "n_descartadas_curtas": 16,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 0,
+          "motivos_descarte": {
+            "truncada_sem_texto": 0,
+            "spoiler": 1,
+            "abaixo_min_chars": 16,
+            "excedente_cota": 1,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 2
+        },
+        {
+          "nivel": 1.5,
+          "n_validas": 6,
+          "n_alvo": 6,
+          "n_brutas": 24,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 3,
+          "n_descartadas_curtas": 13,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 0,
+          "motivos_descarte": {
+            "truncada_sem_texto": 0,
+            "spoiler": 3,
+            "abaixo_min_chars": 13,
+            "excedente_cota": 2,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 2
+        },
+        {
+          "nivel": 2.0,
+          "n_validas": 25,
+          "n_alvo": 25,
+          "n_brutas": 96,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 3,
+          "n_descartadas_curtas": 60,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 1,
+          "motivos_descarte": {
+            "truncada_sem_texto": 1,
+            "spoiler": 3,
+            "abaixo_min_chars": 60,
+            "excedente_cota": 7,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 8
+        }
+      ],
+      "temas": [
+        {
+          "tema": "Ritmo lento e arrastado",
+          "mencoes_aproximadas": 12,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "Várias reviews deste grupo reclamam que o filme é excessivamente lento, com longos trechos em que nada parece avançar, tornando a experiência entediante e difícil de acompanhar até o fim.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Tom de comédia deslocado",
+          "mencoes_aproximadas": 11,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "Este grupo critica a mistura de humor com a investigação séria, dizendo que as piadas e momentos cômicos, como quedas e chutes, quebram a tensão e soam inadequadas diante da brutalidade dos crimes.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Roteiro confuso e sem foco",
+          "mencoes_aproximadas": 10,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "Algumas reviews apontam que a narrativa se perde em subtramas e reviravoltas sem propósito, com diálogos confusos e falta de clareza sobre o que o filme quer dizer, resultando em uma experiência arrastada e insatisfatória.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Personagens incompetentes e antipáticos",
+          "mencoes_aproximadas": 9,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "Para este grupo, os policiais são retratados como violentos, incompetentes e pouco carismáticos, o que torna difícil se importar com a investigação ou torcer por qualquer um deles.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Final frustrante e sem resolução",
+          "mencoes_aproximadas": 8,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "Muitas críticas negativas destacam que a ausência de uma conclusão clara sobre o caso deixa a sensação de tempo perdido, frustrando as expectativas construídas ao longo do filme.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Superestimado e supervalorizado",
+          "mencoes_aproximadas": 7,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "Algumas reviews questionam o status de obra-prima, afirmando que o filme é superestimado e que seu valor é exagerado por parte do público e da crítica.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        }
+      ],
+      "observacao_geral": "As reviews negativas deste grupo destacam principalmente o ritmo lento, o tom de comédia deslocado e a falta de resolução do enredo, além de considerarem o filme superestimado. Em geral, a insatisfação se concentra na condução da narrativa e no desenvolvimento dos personagens.",
+      "idioma_invalido": false,
+      "escopo_suspeito": false
+    },
+    {
+      "bucket": "medianas",
+      "alvo": 40,
+      "modo": "completo",
+      "estado_piso": "completa",
+      "n_validas": 40,
+      "share_real": 5,
+      "composicao_alvo": {
+        "2.5": 7,
+        "3.0": 33
+      },
+      "composicao_atingida": {
+        "2.5": 9,
+        "3.0": 31
+      },
+      "cascata_por_degrau": {
+        "150": 40
+      },
+      "deficit_redistribuido": 2,
+      "distribuicao_pagina_origem": {
+        "n": 40,
+        "min": 1,
+        "max": 18,
+        "p5": 1,
+        "p50": 5,
+        "p95": 12,
+        "fracao_profunda": 0.4
+      },
+      "janela_amostra": {
+        "n": 40,
+        "min": "2026-01-02",
+        "max": "2026-09-09",
+        "p5": "2026-08-17",
+        "p50": "2026-08-30",
+        "p95": "2026-09-08"
+      },
+      "niveis": [
+        {
+          "nivel": 2.5,
+          "n_validas": 9,
+          "n_alvo": 7,
+          "n_brutas": 72,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 4,
+          "n_descartadas_curtas": 46,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 3,
+          "motivos_descarte": {
+            "truncada_sem_texto": 3,
+            "spoiler": 4,
+            "abaixo_min_chars": 46,
+            "excedente_cota": 10,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 6
+        },
+        {
+          "nivel": 3.0,
+          "n_validas": 31,
+          "n_alvo": 33,
+          "n_brutas": 156,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 5,
+          "n_descartadas_curtas": 115,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 5,
+          "motivos_descarte": {
+            "truncada_sem_texto": 5,
+            "spoiler": 5,
+            "abaixo_min_chars": 115,
+            "excedente_cota": 0,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 10
+        }
+      ],
+      "temas": [
+        {
+          "tema": "Ritmo lento e arrastado",
+          "mencoes_aproximadas": 12,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "Várias reviews medianas reclamam que o filme é lento, especialmente na primeira metade, com momentos arrastados e falta de acontecimentos que prendam a atenção.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Final frustrante ou pouco conclusivo",
+          "mencoes_aproximadas": 11,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "Este grupo destaca que a ausência de uma resolução concreta para o mistério gera frustração, embora alguns reconheçam que a escolha faz sentido por ser baseado em fatos reais.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Incompetência e violência policial",
+          "mencoes_aproximadas": 10,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "As reviews medianas apontam que os detetives são retratados como incompetentes e violentos, o que incomoda e dificulta a empatia com os protagonistas.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Atuações e direção elogiadas",
+          "mencoes_aproximadas": 9,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "Mesmo com ressalvas, muitas reviews medianas elogiam a atuação do elenco, especialmente do protagonista, e a direção habilidosa de Bong Joon-ho.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Fotografia e atmosfera marcantes",
+          "mencoes_aproximadas": 9,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "A fotografia e a atmosfera sombria e chuvosa são frequentemente citadas como pontos fortes, criando uma ambientação que contribui para o tom do filme.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Excesso de cenas de luta cômicas",
+          "mencoes_aproximadas": 8,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "Algumas reviews medianas mencionam que as cenas de violência física, como chutes voadores, soam exageradas ou cômicas, quebrando a seriedade da trama.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        }
+      ],
+      "observacao_geral": "As reviews medianas (2,5–3 estrelas) indicam uma recepção morna: reconhecem qualidades técnicas, mas criticam o ritmo lento, a falta de conclusão e a dificuldade de se conectar com os protagonistas. Este grupo não endossa a aclamação unânime, apontando que o filme é bom, porém superestimado.",
+      "idioma_invalido": false,
+      "escopo_suspeito": false
+    },
+    {
+      "bucket": "positivas",
+      "alvo": 40,
+      "modo": "completo",
+      "estado_piso": "completa",
+      "n_validas": 40,
+      "share_real": 94,
+      "composicao_alvo": {
+        "3.5": 4,
+        "4.0": 12,
+        "4.5": 11,
+        "5.0": 13
+      },
+      "composicao_atingida": {
+        "3.5": 4,
+        "4.0": 12,
+        "4.5": 11,
+        "5.0": 13
+      },
+      "cascata_por_degrau": {
+        "150": 40
+      },
+      "deficit_redistribuido": 0,
+      "distribuicao_pagina_origem": {
+        "n": 40,
+        "min": 1,
+        "max": 64,
+        "p5": 1,
+        "p50": 2,
+        "p95": 64,
+        "fracao_profunda": 0.225
+      },
+      "janela_amostra": {
+        "n": 40,
+        "min": "2016-09-01",
+        "max": "2026-09-10",
+        "p5": "2026-04-18",
+        "p50": "2026-09-09",
+        "p95": "2026-09-10"
+      },
+      "niveis": [
+        {
+          "nivel": 3.5,
+          "n_validas": 4,
+          "n_alvo": 4,
+          "n_brutas": 24,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 1,
+          "n_descartadas_curtas": 16,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 0,
+          "motivos_descarte": {
+            "truncada_sem_texto": 0,
+            "spoiler": 1,
+            "abaixo_min_chars": 16,
+            "excedente_cota": 3,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 2
+        },
+        {
+          "nivel": 4.0,
+          "n_validas": 12,
+          "n_alvo": 12,
+          "n_brutas": 60,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 1,
+          "n_descartadas_curtas": 37,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 0,
+          "motivos_descarte": {
+            "truncada_sem_texto": 0,
+            "spoiler": 1,
+            "abaixo_min_chars": 37,
+            "excedente_cota": 10,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 5
+        },
+        {
+          "nivel": 4.5,
+          "n_validas": 11,
+          "n_alvo": 11,
+          "n_brutas": 48,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 6,
+          "n_descartadas_curtas": 29,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 0,
+          "motivos_descarte": {
+            "truncada_sem_texto": 0,
+            "spoiler": 6,
+            "abaixo_min_chars": 29,
+            "excedente_cota": 2,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 4
+        },
+        {
+          "nivel": 5.0,
+          "n_validas": 13,
+          "n_alvo": 13,
+          "n_brutas": 60,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 3,
+          "n_descartadas_curtas": 39,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 2,
+          "motivos_descarte": {
+            "truncada_sem_texto": 2,
+            "spoiler": 3,
+            "abaixo_min_chars": 39,
+            "excedente_cota": 3,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 5
+        }
+      ],
+      "temas": [
+        {
+          "tema": "Atuações e personagens complexos",
+          "mencoes_aproximadas": 14,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "As atuações são elogiadas e os detetives são descritos como personagens moralmente ambíguos, cujas personalidades e métodos se desgastam ao longo da trama.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Fotografia e atmosfera",
+          "mencoes_aproximadas": 12,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "A fotografia, a paleta de cores e a construção de atmosfera sombria e opressiva são frequentemente destacadas como pontos altos.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Ritmo e duração",
+          "mencoes_aproximadas": 10,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "O ritmo é percebido como lento no início, mas a tensão crescente e a boa condução fazem com que a duração prolongada não seja um problema.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Final impactante",
+          "mencoes_aproximadas": 9,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "O desfecho é considerado marcante, deixando uma impressão duradoura e provocando reflexão sobre a história real.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Baseado em fatos reais",
+          "mencoes_aproximadas": 8,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "A inspiração em um caso real é vista como um fator que amplia o impacto emocional e a relevância da obra.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Crítica à incompetência policial",
+          "mencoes_aproximadas": 7,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "A representação da polícia como despreparada e seus métodos questionáveis são apontados como um dos temas centrais do filme.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        }
+      ],
+      "observacao_geral": "As reviews positivas destacam a combinação de atuações fortes, fotografia marcante e atmosfera tensa. Este grupo também valoriza a abordagem realista da investigação e o impacto do final, apesar de críticas pontuais ao ritmo inicial.",
+      "idioma_invalido": false,
+      "escopo_suspeito": false
+    }
+  ],
+  "eixos": {
+    "taxonomia_id": "ebab2667de74",
+    "margem": {
+      "lei": "lift^2 * n >= 2085136/1000000",
+      "constante_quadrada": [
+        2085136,
+        1000000
+      ],
+      "n": 40,
+      "limiar_pp": 22.83
+    },
+    "margem_lift_pp": 22.83,
+    "linhas": [
+      {
+        "eixo": "ritmo",
+        "por_bucket": {
+          "negativas": {
+            "mencoes": 14,
+            "de_n": 40,
+            "freq_pct": 35.0,
+            "lift_pp": -2.5,
+            "acima_da_margem": false,
+            "tema": "Ritmo lento e arrastado",
+            "exemplo_parafraseado": "Várias reviews deste grupo reclamam que o filme é excessivamente lento, com longos trechos em que nada parece avançar, tornando a experiência entediante e difícil de acompanhar até o fim.",
+            "temas_no_mesmo_eixo": []
+          },
+          "medianas": {
+            "mencoes": 15,
+            "de_n": 40,
+            "freq_pct": 37.5,
+            "lift_pp": 2.5,
+            "acima_da_margem": false,
+            "tema": "Ritmo lento e arrastado",
+            "exemplo_parafraseado": "Várias reviews medianas reclamam que o filme é lento, especialmente na primeira metade, com momentos arrastados e falta de acontecimentos que prendam a atenção.",
+            "temas_no_mesmo_eixo": []
+          },
+          "positivas": {
+            "mencoes": 10,
+            "de_n": 40,
+            "freq_pct": 25.0,
+            "lift_pp": -12.5,
+            "acima_da_margem": false,
+            "tema": "Ritmo e duração",
+            "exemplo_parafraseado": "O ritmo é percebido como lento no início, mas a tensão crescente e a boa condução fazem com que a duração prolongada não seja um problema.",
+            "temas_no_mesmo_eixo": []
+          }
+        },
+        "bullet_de": {
+          "negativas": null,
+          "medianas": null,
+          "positivas": null
+        }
+      },
+      {
+        "eixo": "atuacao",
+        "por_bucket": {
+          "negativas": {
+            "mencoes": 6,
+            "de_n": 40,
+            "freq_pct": 15.0,
+            "lift_pp": -10.0,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "medianas": {
+            "mencoes": 10,
+            "de_n": 40,
+            "freq_pct": 25.0,
+            "lift_pp": 10.0,
+            "acima_da_margem": false,
+            "tema": "Atuações e direção elogiadas",
+            "exemplo_parafraseado": "Mesmo com ressalvas, muitas reviews medianas elogiam a atuação do elenco, especialmente do protagonista, e a direção habilidosa de Bong Joon-ho.",
+            "temas_no_mesmo_eixo": []
+          },
+          "positivas": {
+            "mencoes": 5,
+            "de_n": 40,
+            "freq_pct": 12.5,
+            "lift_pp": -12.5,
+            "acima_da_margem": false,
+            "tema": "Atuações e personagens complexos",
+            "exemplo_parafraseado": "As atuações são elogiadas e os detetives são descritos como personagens moralmente ambíguos, cujas personalidades e métodos se desgastam ao longo da trama.",
+            "temas_no_mesmo_eixo": []
+          }
+        },
+        "bullet_de": {
+          "negativas": null,
+          "medianas": null,
+          "positivas": null
+        }
+      },
+      {
+        "eixo": "direcao_imagem",
+        "por_bucket": {
+          "negativas": {
+            "mencoes": 11,
+            "de_n": 40,
+            "freq_pct": 27.5,
+            "lift_pp": -5.0,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "medianas": {
+            "mencoes": 12,
+            "de_n": 40,
+            "freq_pct": 30.0,
+            "lift_pp": -2.5,
+            "acima_da_margem": false,
+            "tema": "Fotografia e atmosfera marcantes",
+            "exemplo_parafraseado": "A fotografia e a atmosfera sombria e chuvosa são frequentemente citadas como pontos fortes, criando uma ambientação que contribui para o tom do filme.",
+            "temas_no_mesmo_eixo": []
+          },
+          "positivas": {
+            "mencoes": 13,
+            "de_n": 40,
+            "freq_pct": 32.5,
+            "lift_pp": 2.5,
+            "acima_da_margem": false,
+            "tema": "Fotografia e atmosfera",
+            "exemplo_parafraseado": "A fotografia, a paleta de cores e a construção de atmosfera sombria e opressiva são frequentemente destacadas como pontos altos.",
+            "temas_no_mesmo_eixo": []
+          }
+        },
+        "bullet_de": {
+          "negativas": null,
+          "medianas": null,
+          "positivas": null
+        }
+      },
+      {
+        "eixo": "roteiro_estrutura",
+        "por_bucket": {
+          "negativas": {
+            "mencoes": 34,
+            "de_n": 40,
+            "freq_pct": 85.0,
+            "lift_pp": -7.5,
+            "acima_da_margem": false,
+            "tema": "Roteiro confuso e sem foco",
+            "exemplo_parafraseado": "Algumas reviews apontam que a narrativa se perde em subtramas e reviravoltas sem propósito, com diálogos confusos e falta de clareza sobre o que o filme quer dizer, resultando em uma experiência arrastada e insatisfatória.",
+            "temas_no_mesmo_eixo": [
+              "Personagens incompetentes e antipáticos",
+              "Final frustrante e sem resolução"
+            ]
+          },
+          "medianas": {
+            "mencoes": 37,
+            "de_n": 40,
+            "freq_pct": 92.5,
+            "lift_pp": 7.5,
+            "acima_da_margem": false,
+            "tema": "Final frustrante ou pouco conclusivo",
+            "exemplo_parafraseado": "Este grupo destaca que a ausência de uma resolução concreta para o mistério gera frustração, embora alguns reconheçam que a escolha faz sentido por ser baseado em fatos reais.",
+            "temas_no_mesmo_eixo": []
+          },
+          "positivas": {
+            "mencoes": 32,
+            "de_n": 40,
+            "freq_pct": 80.0,
+            "lift_pp": -12.5,
+            "acima_da_margem": false,
+            "tema": "Final impactante",
+            "exemplo_parafraseado": "O desfecho é considerado marcante, deixando uma impressão duradoura e provocando reflexão sobre a história real.",
+            "temas_no_mesmo_eixo": []
+          }
+        },
+        "bullet_de": {
+          "negativas": "frequencia",
+          "medianas": "frequencia",
+          "positivas": "frequencia"
+        }
+      },
+      {
+        "eixo": "som_trilha",
+        "por_bucket": {
+          "negativas": {
+            "mencoes": 2,
+            "de_n": 40,
+            "freq_pct": 5.0,
+            "lift_pp": 0.0,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "medianas": {
+            "mencoes": 2,
+            "de_n": 40,
+            "freq_pct": 5.0,
+            "lift_pp": 0.0,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "positivas": {
+            "mencoes": 1,
+            "de_n": 40,
+            "freq_pct": 2.5,
+            "lift_pp": -2.5,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          }
+        },
+        "bullet_de": {
+          "negativas": null,
+          "medianas": null,
+          "positivas": null
+        }
+      },
+      {
+        "eixo": "tom_atmosfera",
+        "por_bucket": {
+          "negativas": {
+            "mencoes": 10,
+            "de_n": 40,
+            "freq_pct": 25.0,
+            "lift_pp": -7.5,
+            "acima_da_margem": false,
+            "tema": "Tom de comédia deslocado",
+            "exemplo_parafraseado": "Este grupo critica a mistura de humor com a investigação séria, dizendo que as piadas e momentos cômicos, como quedas e chutes, quebram a tensão e soam inadequadas diante da brutalidade dos crimes.",
+            "temas_no_mesmo_eixo": []
+          },
+          "medianas": {
+            "mencoes": 11,
+            "de_n": 40,
+            "freq_pct": 27.5,
+            "lift_pp": -5.0,
+            "acima_da_margem": false,
+            "tema": "Excesso de cenas de luta cômicas",
+            "exemplo_parafraseado": "Algumas reviews medianas mencionam que as cenas de violência física, como chutes voadores, soam exageradas ou cômicas, quebrando a seriedade da trama.",
+            "temas_no_mesmo_eixo": []
+          },
+          "positivas": {
+            "mencoes": 13,
+            "de_n": 40,
+            "freq_pct": 32.5,
+            "lift_pp": 5.0,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          }
+        },
+        "bullet_de": {
+          "negativas": null,
+          "medianas": null,
+          "positivas": null
+        }
+      },
+      {
+        "eixo": "impacto_emocional",
+        "por_bucket": {
+          "negativas": {
+            "mencoes": 17,
+            "de_n": 40,
+            "freq_pct": 42.5,
+            "lift_pp": -10.0,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "medianas": {
+            "mencoes": 21,
+            "de_n": 40,
+            "freq_pct": 52.5,
+            "lift_pp": 5.0,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "positivas": {
+            "mencoes": 19,
+            "de_n": 40,
+            "freq_pct": 47.5,
+            "lift_pp": -5.0,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          }
+        },
+        "bullet_de": {
+          "negativas": "frequencia",
+          "medianas": "frequencia",
+          "positivas": null
+        }
+      },
+      {
+        "eixo": "comparacoes",
+        "por_bucket": {
+          "negativas": {
+            "mencoes": 16,
+            "de_n": 40,
+            "freq_pct": 40.0,
+            "lift_pp": -10.0,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "medianas": {
+            "mencoes": 16,
+            "de_n": 40,
+            "freq_pct": 40.0,
+            "lift_pp": -10.0,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "positivas": {
+            "mencoes": 20,
+            "de_n": 40,
+            "freq_pct": 50.0,
+            "lift_pp": 10.0,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          }
+        },
+        "bullet_de": {
+          "negativas": null,
+          "medianas": null,
+          "positivas": "frequencia"
+        }
+      },
+      {
+        "eixo": "expectativa",
+        "por_bucket": {
+          "negativas": {
+            "mencoes": 11,
+            "de_n": 40,
+            "freq_pct": 27.5,
+            "lift_pp": 2.5,
+            "acima_da_margem": false,
+            "tema": "Superestimado e supervalorizado",
+            "exemplo_parafraseado": "Algumas reviews questionam o status de obra-prima, afirmando que o filme é superestimado e que seu valor é exagerado por parte do público e da crítica.",
+            "temas_no_mesmo_eixo": []
+          },
+          "medianas": {
+            "mencoes": 10,
+            "de_n": 40,
+            "freq_pct": 25.0,
+            "lift_pp": -2.5,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "positivas": {
+            "mencoes": 9,
+            "de_n": 40,
+            "freq_pct": 22.5,
+            "lift_pp": -5.0,
+            "acima_da_margem": false,
+            "tema": "Baseado em fatos reais",
+            "exemplo_parafraseado": "A inspiração em um caso real é vista como um fator que amplia o impacto emocional e a relevância da obra.",
+            "temas_no_mesmo_eixo": []
+          }
+        },
+        "bullet_de": {
+          "negativas": null,
+          "medianas": null,
+          "positivas": null
+        }
+      },
+      {
+        "eixo": "critica_social",
+        "por_bucket": {
+          "negativas": {
+            "mencoes": 13,
+            "de_n": 40,
+            "freq_pct": 32.5,
+            "lift_pp": -2.5,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "medianas": {
+            "mencoes": 11,
+            "de_n": 40,
+            "freq_pct": 27.5,
+            "lift_pp": -7.5,
+            "acima_da_margem": false,
+            "tema": "Incompetência e violência policial",
+            "exemplo_parafraseado": "As reviews medianas apontam que os detetives são retratados como incompetentes e violentos, o que incomoda e dificulta a empatia com os protagonistas.",
+            "temas_no_mesmo_eixo": []
+          },
+          "positivas": {
+            "mencoes": 14,
+            "de_n": 40,
+            "freq_pct": 35.0,
+            "lift_pp": 2.5,
+            "acima_da_margem": false,
+            "tema": "Crítica à incompetência policial",
+            "exemplo_parafraseado": "A representação da polícia como despreparada e seus métodos questionáveis são apontados como um dos temas centrais do filme.",
+            "temas_no_mesmo_eixo": []
+          }
+        },
+        "bullet_de": {
+          "negativas": null,
+          "medianas": null,
+          "positivas": null
+        }
+      }
+    ],
+    "contraste": "valorativo",
+    "rotulagem": {
+      "n_chamadas": 3,
+      "falharam": [],
+      "fora_da_taxonomia": {},
+      "houve_retentativa": []
+    },
+    "spec_version": "1.9.50",
+    "verificador": {
+      "aplicado": true,
+      "variante": "V2_alvo",
+      "passada": 1,
+      "eixo": "impacto_emocional",
+      "n_removidas_no_corpus": 2781
+    }
+  },
+  "narrativa": "Lançado em 2003 e dirigido por Bong Joon-ho, Memórias de um Assassino é uma produção que combina drama, crime e suspense, ambientada na Coreia do Sul. A narrativa acompanha a criação de uma unidade policial especial encarregada de investigar e solucionar com rapidez uma série inédita de assassinatos brutais em uma província rural.\n\nA experiência cinematográfica apoia-se em uma atmosfera sombria e opressiva, conduzida por um ritmo deliberadamente cadenciado ao longo de sua duração. A dinâmica transita entre a seriedade da investigação criminal e os atritos de comportamento dentro da rotina dos investigadores.\n\nDe modo geral, os diferentes grupos avaliam os mesmos elementos da obra, divergindo no veredito sobre a eficácia de sua execução. Na grande maioria das notas (~94%), boa parte ressalta a força das atuações e a complexidade moral dos detetives. Uma parcela expressiva valoriza a composição da fotografia e a criação do clima tenso, enquanto uma fatia menor pondera que, apesar do ritmo pausado no início, a tensão crescente sustenta o tempo de duração.\n\nPara quem se posiciona numa fração mínima das notas (~5%), vários queixam-se do ritmo lento e arrastado da narrativa. Um número considerável manifesta frustração diante de um desfecho pouco conclusivo para o mistério, e alguns apontam incômodo com os métodos violentos e a incompetência policial.\n\nPor fim, para quem está numa fração ainda menor das notas (~1%), muitos consideram a obra excessivamente lenta, tornando o andamento cansativo. Uma parcela expressiva vê o tom de comédia como algo deslocado diante da gravidade dos crimes, e uma parte avalia que o roteiro se torna confuso e perde a clareza de foco.",
+  "verificacao_narrativa": {
+    "quantificador_fora_de_faixa": [],
+    "quantificador_repetido": [],
+    "paragrafos": {
+      "n_paragrafos": 5,
+      "minimo": 3,
+      "insuficientes": false,
+      "longos": []
+    },
+    "n_paragrafos": 5,
+    "paragrafos_insuficientes": false,
+    "paragrafos_longos": [],
+    "grupos_sem_paragrafo_proprio": [],
+    "movimento1_e_movimento2_no_mesmo_paragrafo": false,
+    "formato_invalido": false,
+    "numeros_inventados": [],
+    "rotulos_faltando": [],
+    "ordem_incorreta": false,
+    "vocabulario_peso": false,
+    "resenha_speak": [],
+    "n_resenha_speak": 0,
+    "n_flags": 0
+  },
+  "narrativa_selecao": {
+    "provider": "gemini",
+    "modelo": "gemini-3.7-flash",
+    "n_candidatos": 3,
+    "n_chamadas": 4,
+    "indice_escolhido": 1,
+    "motivo": "menor_severidade",
+    "criterio_decisivo": "empate",
+    "candidatos": [
+      {
+        "indice": 0,
+        "n_flags": 1,
+        "cliches": 0,
+        "repeticao_max": 2,
+        "ritmo": 4,
+        "cobertura": 1.0,
+        "eliminado": true
+      },
+      {
+        "indice": 1,
+        "n_flags": 1,
+        "cliches": 0,
+        "repeticao_max": 2,
+        "ritmo": 5,
+        "cobertura": 1.0,
+        "eliminado": true
+      },
+      {
+        "indice": 2,
+        "n_flags": 2,
+        "cliches": 0,
+        "repeticao_max": 2,
+        "ritmo": 9,
+        "cobertura": 0.889,
+        "eliminado": true
+      }
+    ],
+    "retry": {
+      "n_frases_infratoras": 1,
+      "motivos": [
+        "numero_inventado"
+      ],
+      "n_flags_depois": 0,
+      "aplicado": true
+    },
+    "uso": {
+      "prompt_tokens": 11821,
+      "completion_tokens": 1582,
+      "cache_hit_tokens": 0,
+      "cache_miss_tokens": 11821
+    },
+    "latencia_s": 40.06
+  },
+  "condicoes": {
+    "vale_a_pena": [
+      {
+        "texto": "aprecia interpretações fortes de figuras complexas e de conduta ambivalente",
+        "tema_origem": "POS-A",
+        "bucket_origem": "positivas",
+        "tema_texto": "Atuações e personagens complexos",
+        "rotulo_forca": "muitos",
+        "origem": "leitura_humana",
+        "avisos": [
+          "ancora_nao_verificavel"
+        ]
+      },
+      {
+        "texto": "valoriza uma fotografia expressiva com atmosfera sombria e visual opressivo",
+        "tema_origem": "POS-B",
+        "bucket_origem": "positivas",
+        "tema_texto": "Fotografia e atmosfera",
+        "rotulo_forca": "muitos"
+      },
+      {
+        "texto": "aceita um início compassado em favor de uma tensão crescente e bem conduzida",
+        "tema_origem": "POS-C",
+        "bucket_origem": "positivas",
+        "tema_texto": "Ritmo e duração",
+        "rotulo_forca": "alguns"
+      }
+    ],
+    "talvez_evite": [
+      {
+        "texto": "se incomoda com um ritmo excessivamente lento e trechos que parecem não avançar",
+        "tema_origem": "NEG-A",
+        "bucket_origem": "negativas",
+        "tema_texto": "Ritmo lento e arrastado",
+        "rotulo_forca": "muitos"
+      },
+      {
+        "texto": "rejeita toques cômicos ou humor físico em meio a uma investigação brutal",
+        "tema_origem": "NEG-B",
+        "bucket_origem": "negativas",
+        "tema_texto": "Tom de comédia deslocado",
+        "rotulo_forca": "muitos"
+      },
+      {
+        "texto": "se frustra com narrativas dispersas em subtramas e diálogos com pouca clareza",
+        "tema_origem": "NEG-C",
+        "bucket_origem": "negativas",
+        "tema_texto": "Roteiro confuso e sem foco",
+        "rotulo_forca": "alguns"
+      }
+    ],
+    "ordem_colunas": [
+      "vale_a_pena",
+      "talvez_evite"
+    ],
+    "peso": {
+      "vale_a_pena": {
+        "peso_pct": 94,
+        "peso_texto": "~94% das notas",
+        "nota_de_amostra": null
+      },
+      "talvez_evite": {
+        "peso_pct": 1,
+        "peso_texto": "~1% das notas",
+        "nota_de_amostra": null
+      }
+    },
+    "peso_meio": null,
+    "origem": "llm",
+    "temas_pedidos": {
+      "vale_a_pena": [
+        "POS-A",
+        "POS-B",
+        "POS-C"
+      ],
+      "talvez_evite": [
+        "NEG-A",
+        "NEG-B",
+        "NEG-C"
+      ]
+    },
+    "temas_saltados": {
+      "vale_a_pena": [],
+      "talvez_evite": []
+    },
+    "descartadas": [],
+    "retry": null,
+    "provider": "gemini",
+    "modelo": "gemini-3.7-flash",
+    "n_candidatos": 3,
+    "n_chamadas": 3,
+    "indice_escolhido": 0,
+    "candidatos": [
+      {
+        "indice": 0,
+        "n_condicoes": 6,
+        "n_flags": 0,
+        "flags": [],
+        "n_temas_cobertos": 6
+      },
+      {
+        "indice": 1,
+        "n_condicoes": 6,
+        "n_flags": 1,
+        "flags": [
+          "exemplo_verbatim"
+        ],
+        "n_temas_cobertos": 6
+      },
+      {
+        "indice": 2,
+        "n_condicoes": 6,
+        "n_flags": 0,
+        "flags": [],
+        "n_temas_cobertos": 6
+      }
+    ],
+    "uso": {
+      "prompt_tokens": 7992,
+      "completion_tokens": 890,
+      "cache_hit_tokens": 0,
+      "cache_miss_tokens": 7992
+    },
+    "latencia_s": 17.57,
+    "spec_version": "1.9.50"
+  }
+}

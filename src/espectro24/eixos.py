@@ -27,6 +27,12 @@ filmes cuja classificação foi estendida (ver `pipeline.amostra_do_bruto` e
 `sobreposicao_com_analisadas == n_classificadas == n_analisadas`. Filmes que
 ainda não passaram pela extensão continuam com a divergência antiga,
 declarada como sempre.
+
+**[piloto de expansão] Review ANALISADA e não classificada deixou de ser
+declarável: é erro** (`checar_amostra_classificada`). Medido antes de ligar
+a guarda, com zero rede: nos 55 filmes classificados, só `get-out-2017` (a
+contaminação observada) e `a-brighter-summer-day` (não publicado) têm review
+analisada fora da classificação.
 """
 from __future__ import annotations
 
@@ -68,7 +74,8 @@ __all__ = ["EIXOS", "LIVRE", "TAXONOMIA_ID",
            "CONSENSO_PADRAO", "CONSENSO_VERIFICADO",
            "carregar_classificacao", "frequencias",
            "fracao", "lifts", "n_efetivo", "limiar_pp", "acima_da_margem",
-           "contraste", "bullets", "montar_bloco"]
+           "contraste", "bullets", "montar_bloco",
+           "AmostraNaoClassificada", "checar_amostra_classificada"]
 
 
 # --- carregamento ----------------------------------------------------------
@@ -358,6 +365,64 @@ def _filtrar_pela_analisada(
     return fora
 
 
+class AmostraNaoClassificada(ValueError):
+    """A amostra ANALISADA tem review que a classificação nunca viu.
+
+    `ValueError` pelo mesmo estatuto dos outros erros de dado deste caminho
+    (taxonomia divergente, manifesto ausente, verificado desatualizado): quem
+    está inconsistente é o corpus, não o código.
+    """
+
+
+def checar_amostra_classificada(
+    classificacao: dict[str, dict[str, list[str]]],
+    analisadas: dict[str, Iterable[str]],
+) -> None:
+    """[piloto de expansão, `ABERTO.md` C14.8] FALHA ALTO se a amostra que a
+    síntese leu tem review AUSENTE da classificação — nunca encolhe `n` em
+    silêncio.
+
+    **O defeito medido.** `get-out-2017`, piloto de 2026-09: a publicação
+    recoletou da rede DEPOIS da classificação, uma review nova entrou nas 40
+    analisadas das positivas sem nunca ter sido classificada, e
+    `_filtrar_pela_analisada` — que só REMOVE, nunca completa — deixou 39. O
+    denominador publicado caiu de 40 para 39 (limiar 22,83pp → 23,12pp) sem
+    erro nem aviso: só um número um pouco menor.
+
+    **A checagem tem UMA direção, e é deliberada.** Classificada sem estar
+    analisada é o acúmulo legítimo de §[D3] (`cure`: 53 classificadas, 40
+    analisadas) — é para isso que `_filtrar_pela_analisada` existe. Analisada
+    sem estar classificada é sempre defeito, qualquer que seja a causa:
+    recoleta no meio (a observada), bug futuro na extensão da classificação,
+    edição manual do corpus. A guarda pega a CLASSE, não a causa — por isso
+    continua valendo com `publicar_catalogo` rodando o CLI em `--offline`.
+
+    Bucket com `analisadas` vazio/ausente não é checado: é o "quem chamou não
+    tem essa informação" de `_filtrar_pela_analisada`, e ali a divergência
+    continua declarada por `fonte_classificacao`.
+    """
+    faltam: dict[str, list[str]] = {}
+    for bucket, ids in analisadas.items():
+        ids = set(ids or ())
+        if not ids:
+            continue
+        fora = ids - set(classificacao.get(bucket) or {})
+        if fora:
+            faltam[bucket] = sorted(fora)
+    if not faltam:
+        return
+    detalhe = "; ".join(
+        f"{b}: {len(ids)} de {len(set(analisadas[b]))} analisadas sem "
+        f"classificação ({', '.join(ids[:5])}{' …' if len(ids) > 5 else ''})"
+        for b, ids in faltam.items())
+    raise AmostraNaoClassificada(
+        "a amostra analisada diverge da classificada — publicar encolheria o "
+        f"denominador em silêncio. {detalhe}. Causas conhecidas: recoleta de "
+        "rede entre a classificação e a publicação (o CLI tem de rodar com "
+        "--offline), ou review no bruto que a classificação não viu (estender "
+        "a classificação antes de publicar).")
+
+
 def montar_bloco(classificacao: dict[str, dict[str, list[str]]],
                  analisadas: dict[str, Iterable[str]],
                  temas_por_eixo: dict[str, dict[str, dict[str, str]]],
@@ -384,6 +449,9 @@ def montar_bloco(classificacao: dict[str, dict[str, list[str]]],
     if not classificacao:
         return None
 
+    # ANTES do filtro: o filtro só remove, e é exatamente por só remover que
+    # uma review analisada e não classificada virava um `n` menor em silêncio.
+    checar_amostra_classificada(classificacao, analisadas)
     classificacao = _filtrar_pela_analisada(classificacao, analisadas)
     freqs = frequencias(classificacao)
     n = n_efetivo(freqs)
