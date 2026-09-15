@@ -116,6 +116,14 @@ def medir(slug: str) -> dict:
                for e, b in chaves
                if (cel(ca, (e, b), "mencoes"), cel(ca, (e, b), "de_n"))
                != (cel(cn, (e, b), "mencoes"), cel(cn, (e, b), "de_n"))]
+    # `verificador.n_removidas_no_corpus` é uma contagem GLOBAL, carimbada no
+    # bloco na hora da publicação: qualquer remoção em QUALQUER filme a move.
+    # Regravá-la num filme cujas contagens não mudaram seria diff sem
+    # conteúdo — o carimbo só acompanha o corpus quando o PRÓPRIO filme
+    # mudou. Mesmo precedente de `aplicar_lei_margem._bloco_novo`, que
+    # preserva o `verificador` do artefato.
+    if not mencoes and "verificador" in antes and "verificador" in novo:
+        novo["verificador"] = antes["verificador"]
     ba, bn = _bullets(antes), _bullets(novo)
     bullets = [f"{e}: {ba.get(e)} -> {bn.get(e)}"
                for e in sorted(set(ba) | set(bn)) if ba.get(e) != bn.get(e)]

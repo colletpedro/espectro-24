@@ -248,7 +248,8 @@ def rodar_passe(variante: str, n_passe: int, reviews: list[dict],
                         "id": review["id"], "n_chars": review["n_chars"],
                         "confirma": confirma, "frase": frase, "alvo": alvo,
                         "uso": resp["uso"], "provider": resp["provider"],
-                        "modelo": resp["modelo"]}
+                        "modelo": resp["modelo"],
+                        "latencia_s": resp["latencia_s"]}
             marca = resp["fallback_conteudo"]
         except Exception as e:  # noqa: BLE001
             registro = {"ok": False, "variante": variante, "passe": n_passe,

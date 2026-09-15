@@ -40,6 +40,7 @@ sys.path.insert(0, str(RAIZ / "src"))
 from espectro24.config import SPEC_VERSION  # noqa: E402
 from espectro24.synthesize import (  # noqa: E402
     parse_linha_telemetria_fallback,
+    parse_linha_telemetria_latencia,
     parse_linha_telemetria_llm,
 )
 
@@ -180,6 +181,9 @@ def publicar_um(slug: str) -> dict:
             # [2026-09-14] Mesmo canal, mesma razão: as unidades que o
             # DeepSeek recusou por conteúdo e o Gemini processou.
             "fallback_conteudo": parse_linha_telemetria_fallback(stderr),
+            # [2026-09-14] latência por estágio do CLI (síntese, rotulagem):
+            # a distribuição que vai calibrar `LLM_PRAZO_PAREDE_S`.
+            "latencia_llm": parse_linha_telemetria_latencia(stderr),
             "stdout_tail": stdout[-3000:], "stderr_tail": stderr[-6000:]}
 
 

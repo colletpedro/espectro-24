@@ -18368,16 +18368,7 @@ window.ESPECTRO_DATA = {
           "passada": 1,
           "eixo": "impacto_emocional",
           "n_removidas_no_corpus": 2781
-        },
-        "verificacao_pendente": [
-          {
-            "bucket": "negativas",
-            "id": "viewing:1311567647",
-            "eixo": "impacto_emocional",
-            "motivo": "erro_TypeError",
-            "erro": "TypeError: 'NoneType' object is not subscriptable"
-          }
-        ]
+        }
       },
       "narrativa": "Lançado em 2021 sob a direção de Ryusuke Hamaguchi, o drama Drive My Car acompanha Yusuke Kafuku dois anos após a morte de sua esposa. Convidado para dirigir uma peça em um festival de teatro na cidade de Hiroshima, ele conhece Misaki, uma jovem reservada indicada para ser sua motorista. Convivendo no trajeto cotidiano, o protagonista é levado a confrontar o mistério de sua antiga parceira que ainda o assombra.\n\nA experiência da obra se caracteriza por uma condução em ritmo lento ao longo de quase três horas de duração, estruturada em diálogos prolongados e uma atmosfera de contemplação.\n\nOs diferentes grupos concordam sobre o que o filme é e discordam fundamentalmente sobre se ele funciona. Na grande maioria das notas (~87%), a maior parte enfatiza o tratamento do luto e da culpa ao longo da narrativa. Nesse mesmo conjunto, uma parcela expressiva destaca o vínculo desenvolvido entre Kafuku e Misaki, ao passo que muitos tecem elogios à fotografia e ao rigor estético da composição visual.\n\nSob a ótica de quem se encontra numa fração mínima das notas (~10%), a maioria aponta incômodo diante da duração excessiva e do ritmo lento do longa-metragem. Apesar dessa ressalva, boa parte desse grupo ressalta os méritos da fotografia e da estética, enquanto alguns reconhecem a qualidade das atuações e a profundidade emocional.\n\nPor fim, para quem se posiciona numa fração ainda menor das notas (~3%), cerca de metade rejeita o andamento lento e a extensão da produção. Dentro desse segmento, um número considerável reclama da aparente falta de emoção e de atuações apáticas, enquanto vários criticam a presença de um roteiro confuso estruturado em diálogos prolongados.",
       "verificacao_narrativa": {
@@ -26158,16 +26149,7 @@ window.ESPECTRO_DATA = {
           "passada": 1,
           "eixo": "impacto_emocional",
           "n_removidas_no_corpus": 2781
-        },
-        "verificacao_pendente": [
-          {
-            "bucket": "medianas",
-            "id": "viewing:1029424328",
-            "eixo": "impacto_emocional",
-            "motivo": "erro_TypeError",
-            "erro": "TypeError: 'NoneType' object is not subscriptable"
-          }
-        ]
+        }
       },
       "narrativa": "Lançado em 2014 e dirigido por Ruben Östlund, o drama Força Maior acompanha uma família sueca em uma viagem de férias para esquiar nas montanhas. Durante um almoço no restaurante do resort, a iminência de uma avalanche desestabiliza a convivência, colocando o casamento de Tomas e Ebba à prova enquanto o marido tenta manter a todo custo seu papel de patriarca.\n\nA produção estrutura-se a partir de um ritmo contemplativo e lento, ambientada na frieza das paisagens nevadas. A experiência é pautada por uma atmosfera constante de desconforto e tensão social entre os presentes.\n\nNa grande maioria das notas (~80%), boa parte dos relatos elogia a forma como a obra examina a masculinidade frágil e as oscilações do ego masculino. Uma parcela expressiva ressalta as discussões provocadas sobre papéis de gênero e expectativas no casamento, enquanto vários sublinham a presença de um humor incômodo que intensifica a sensação de constrangimento.\n\nNuma parcela das notas (~17%), a perspectiva torna-se mais reservada: muitos chamam a atenção para o egoísmo e a fragilidade do protagonista diante dos acontecimentos. No entanto, um número considerável considera que o ritmo lento e a duração excessiva tornam a narrativa cansativa, ainda que boa parte valorize a qualidade visual da fotografia e os cenários de montanha.\n\nEm tom de rejeição, numa fração mínima das notas (~4%), cerca de metade aponta o ritmo arrastado e a duração excessiva como falhas determinantes da experiência. Além disso, uma parcela expressiva critica a superficialidade e as atitudes dos personagens, ao passo que muitos julgam rasa ou problemática a mensagem em torno dos papéis de gênero e da masculinidade frágil.",
       "verificacao_narrativa": {
@@ -33542,10 +33524,10 @@ window.ESPECTRO_DATA = {
                 "temas_no_mesmo_eixo": []
               },
               "medianas": {
-                "mencoes": 18,
+                "mencoes": 17,
                 "de_n": 40,
-                "freq_pct": 45.0,
-                "lift_pp": -17.5,
+                "freq_pct": 42.5,
+                "lift_pp": -20.0,
                 "acima_da_margem": false,
                 "tema": "Imersão sensorial no grotesco (sujeira, fluidos, nojeira)",
                 "exemplo_parafraseado": "Este grupo destaca que o filme é extremamente imersivo em sua representação de sujeira, com corpos, ambientes e objetos cobertos de lama, sangue, urina e fezes, causando uma sensação física de repulsa e desconforto.",
@@ -33702,17 +33684,8 @@ window.ESPECTRO_DATA = {
           "variante": "V2_alvo",
           "passada": 1,
           "eixo": "impacto_emocional",
-          "n_removidas_no_corpus": 2781
-        },
-        "verificacao_pendente": [
-          {
-            "bucket": "medianas",
-            "id": "viewing:1024049819",
-            "eixo": "impacto_emocional",
-            "motivo": "erro_TypeError",
-            "erro": "TypeError: 'NoneType' object is not subscriptable"
-          }
-        ]
+          "n_removidas_no_corpus": 2782
+        }
       },
       "narrativa": "Lançado em 2013 e dirigido por Aleksei German Sr., o drama de ficção científica É Difícil Ser Um Deus acompanha um grupo de cientistas enviados ao planeta Arkanar, cuja civilização se encontra na fase equivalente à Idade Média de sua própria história, com o objetivo de orientá-la rumo ao progresso sem recorrer à violência. Em meio a esse cenário, o cientista Rumata tenta salvar os intelectuais locais de punições e se vê incapaz de evitar tomar uma posição.\n\nA experiência de visualização se apoia em uma atmosfera densa, com uma ambientação marcada pela presença constante de lama, sujeira e fluidos corporais em planos detalhados. A estrutura narrativa adota um ritmo lento e cadenciado ao longo de quase três horas de duração, apresentando uma condução fragmentada e hermética.\n\nOs diferentes grupos analisados concordam sobre os traços centrais que compõem o filme, discordando no veredito sobre o funcionamento da obra. Na grande maioria das notas (~73%), a maior parcela destaca a imersão sensorial profunda e a densidade do universo construído, enquanto perto da metade enfatiza a onipresença de sujeira, imundície e repulsa, e cerca de metade relata o enfrentamento de uma narrativa confusa e difícil de acompanhar.\n\nNuma parcela das notas (~16%), sob a ótica desse grupo, a maior parte examina a imersão sensorial no grotesco e nos fluidos corporais, aproximadamente metade aponta a dificuldade de acompanhar a narrativa e um número considerável salienta o ritmo lento associado à longa duração. Por fim, numa fração mínima das notas (~11%), na leitura dessas avaliações, grande parte critica a imundície e o nojo excessivos, metade deles reprova o ritmo lento e a duração excessiva, e uma parcela expressiva aponta a falta de coesão do roteiro.",
       "verificacao_narrativa": {
@@ -43024,16 +42997,7 @@ window.ESPECTRO_DATA = {
           "passada": 1,
           "eixo": "impacto_emocional",
           "n_removidas_no_corpus": 2781
-        },
-        "verificacao_pendente": [
-          {
-            "bucket": "negativas",
-            "id": "viewing:1474734368",
-            "eixo": "impacto_emocional",
-            "motivo": "erro_TypeError",
-            "erro": "TypeError: 'NoneType' object is not subscriptable"
-          }
-        ]
+        }
       },
       "narrativa": "Lançado em 2003 e dirigido por Bong Joon-ho, Memórias de um Assassino é uma produção que combina drama, crime e suspense, ambientada na Coreia do Sul. A narrativa acompanha a criação de uma unidade policial especial encarregada de investigar e solucionar com rapidez uma série inédita de assassinatos brutais em uma província rural.\n\nA experiência cinematográfica apoia-se em uma atmosfera sombria e opressiva, conduzida por um ritmo deliberadamente cadenciado ao longo de sua duração. A dinâmica transita entre a seriedade da investigação criminal e os atritos de comportamento dentro da rotina dos investigadores.\n\nDe modo geral, os diferentes grupos avaliam os mesmos elementos da obra, divergindo no veredito sobre a eficácia de sua execução. Na grande maioria das notas (~94%), boa parte ressalta a força das atuações e a complexidade moral dos detetives. Uma parcela expressiva valoriza a composição da fotografia e a criação do clima tenso, enquanto uma fatia menor pondera que, apesar do ritmo pausado no início, a tensão crescente sustenta o tempo de duração.\n\nPara quem se posiciona numa fração mínima das notas (~5%), vários queixam-se do ritmo lento e arrastado da narrativa. Um número considerável manifesta frustração diante de um desfecho pouco conclusivo para o mistério, e alguns apontam incômodo com os métodos violentos e a incompetência policial.\n\nPor fim, para quem está numa fração ainda menor das notas (~1%), muitos consideram a obra excessivamente lenta, tornando o andamento cansativo. Uma parcela expressiva vê o tom de comédia como algo deslocado diante da gravidade dos crimes, e uma parte avalia que o roteiro se torna confuso e perde a clareza de foco.",
       "verificacao_narrativa": {
@@ -57001,16 +56965,7 @@ window.ESPECTRO_DATA = {
           "passada": 1,
           "eixo": "impacto_emocional",
           "n_removidas_no_corpus": 2781
-        },
-        "verificacao_pendente": [
-          {
-            "bucket": "positivas",
-            "id": "viewing:1364816145",
-            "eixo": "impacto_emocional",
-            "motivo": "erro_TypeError",
-            "erro": "TypeError: 'NoneType' object is not subscriptable"
-          }
-        ]
+        }
       },
       "narrativa": "Lançado no ano de 2022 sob a direção de Robert Zemeckis, o longa-metragem Pinóquio apresenta 111 minutos de duração e combina os gêneros de fantasia, aventura e família. A narrativa reconstitui o conto do boneco de madeira em uma arrepiante aventura para virar um menino de verdade, recontado para uma nova experiência audiovisual.\n\nNa maioria das notas (~60%), a maior parte das análises critica fortemente a falta de alma e artificialidade observadas no filme, apontando um resultado excessivamente frio. Cerca de metade expressa insatisfação explícita com o CGI e efeitos visuais ruins, destacando elementos digitais que soam artificiais. Além disso, uma parcela expressiva reforça a desnecessidade do remake, argumentando que a adaptação não se justifica diante do impacto já estabelecido pelo material original.\n\nNuma parcela das notas (~25%), para quem está nessa faixa intermediária de avaliação, boa parte pondera sobre os efeitos visuais e CGI, reconhecendo competência técnica em determinadas passagens e falhas em outros trechos. Vários recorrem à comparação com a animação original e outros remakes para medir o peso das alterações promovidas. Complementando essa leitura, um número considerável de textos se dedica a comentar a atuação de Tom Hanks e elenco.\n\nNuma parcela menor das notas (~15%), sob a perspectiva dessa parcela favorável, muitos destacam com entusiasmo a fidelidade e nostalgia em relação ao clássico durante a história. Boa parte aprova com clareza o uso dos efeitos visuais e design de produção no desenvolvimento dos cenários, enquanto uma fatia menor dirige suas impressões positivas para as atuações do elenco.",
       "verificacao_narrativa": {
@@ -58541,16 +58496,7 @@ window.ESPECTRO_DATA = {
           "passada": 1,
           "eixo": "impacto_emocional",
           "n_removidas_no_corpus": 2781
-        },
-        "verificacao_pendente": [
-          {
-            "bucket": "negativas",
-            "id": "viewing:1205585573",
-            "eixo": "impacto_emocional",
-            "motivo": "erro_TypeError",
-            "erro": "TypeError: 'NoneType' object is not subscriptable"
-          }
-        ]
+        }
       },
       "narrativa": "Lançado em 1994 e dirigido por Béla Tarr, o drama O Tango de Satã acompanha os moradores de uma pequena aldeia húngara que lidam com os desdobramentos do fechamento da fábrica local após o fim do comunismo. Na expectativa de receber um pagamento em dinheiro, a comunidade é surpreendida pelo retorno de um antigo habitante que propõe a criação de uma comuna coletiva.\n\nA experiência da obra é estruturada a partir de uma duração longa e de um ritmo cadenciado e lento, conduzido por planos contínuos e fotografia em preto e branco. A ambientação retrata um cenário constante de desolação, decadência e isolamento rural.\n\nNa grande maioria das notas (~88%), a maior parte ressalta que a duração estendida e o ritmo lento contribuem para aprofundar a imersão na narrativa. Nesse mesmo conjunto, cerca de metade enaltece a fotografia e os planos longos, enquanto boa parte enfatiza a construção de uma atmosfera opressiva e a representação da miséria.\n\nPara o grupo situado numa fração mínima das notas (~7%), a experiência é vista de forma dividida. A quase totalidade aponta a duração excessiva como um obstáculo e aproximadamente metade critica o ritmo lento e arrastado, ainda que uma parcela expressiva preserve elogios à fotografia e à estética.\n\nPor fim, sob a perspectiva de uma fração ainda menor das notas (~5%), o descontentamento se sobressai: praticamente todos condenam a duração excessiva e o ritmo lento. Somado a isso, a maioria reclama da falta de conteúdo narrativo e do tédio, enquanto vários rejeitam a inclusão de uma cena com animal por crueldade.",
       "verificacao_narrativa": {

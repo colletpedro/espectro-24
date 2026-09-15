@@ -1407,16 +1407,7 @@
       "passada": 1,
       "eixo": "impacto_emocional",
       "n_removidas_no_corpus": 2781
-    },
-    "verificacao_pendente": [
-      {
-        "bucket": "negativas",
-        "id": "viewing:1311567647",
-        "eixo": "impacto_emocional",
-        "motivo": "erro_TypeError",
-        "erro": "TypeError: 'NoneType' object is not subscriptable"
-      }
-    ]
+    }
   },
   "narrativa": "Lançado em 2021 sob a direção de Ryusuke Hamaguchi, o drama Drive My Car acompanha Yusuke Kafuku dois anos após a morte de sua esposa. Convidado para dirigir uma peça em um festival de teatro na cidade de Hiroshima, ele conhece Misaki, uma jovem reservada indicada para ser sua motorista. Convivendo no trajeto cotidiano, o protagonista é levado a confrontar o mistério de sua antiga parceira que ainda o assombra.\n\nA experiência da obra se caracteriza por uma condução em ritmo lento ao longo de quase três horas de duração, estruturada em diálogos prolongados e uma atmosfera de contemplação.\n\nOs diferentes grupos concordam sobre o que o filme é e discordam fundamentalmente sobre se ele funciona. Na grande maioria das notas (~87%), a maior parte enfatiza o tratamento do luto e da culpa ao longo da narrativa. Nesse mesmo conjunto, uma parcela expressiva destaca o vínculo desenvolvido entre Kafuku e Misaki, ao passo que muitos tecem elogios à fotografia e ao rigor estético da composição visual.\n\nSob a ótica de quem se encontra numa fração mínima das notas (~10%), a maioria aponta incômodo diante da duração excessiva e do ritmo lento do longa-metragem. Apesar dessa ressalva, boa parte desse grupo ressalta os méritos da fotografia e da estética, enquanto alguns reconhecem a qualidade das atuações e a profundidade emocional.\n\nPor fim, para quem se posiciona numa fração ainda menor das notas (~3%), cerca de metade rejeita o andamento lento e a extensão da produção. Dentro desse segmento, um número considerável reclama da aparente falta de emoção e de atuações apáticas, enquanto vários criticam a presença de um roteiro confuso estruturado em diálogos prolongados.",
   "verificacao_narrativa": {

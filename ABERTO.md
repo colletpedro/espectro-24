@@ -171,11 +171,16 @@ foi conferido separadamente.
 ### C3. Instabilidade do verificador de `impacto_emocional` (5 filmes)
 Registrada, não corrigida.
 
-**[2026-09-14] Continua ABERTA.** A retentativa filme a filme das 12
-falhas de JSON (C16, rodada 3) parou em 6 de 11 filmes por sobrecarga do
-DeepSeek, e nenhuma das 12 recebeu veredito novo. As 6 retentadas estão
-marcadas `verificacao_pendente` no JSON publicado; as outras 6 reviews (5
-filmes), só no consenso verificado.
+**[2026-09-14] Continua ABERTA, com metade resolvida.** Das 12 falhas de
+JSON: 6 foram retentadas com a fila do DeepSeek normal (C16, rodada 6) e
+receberam veredito — 5 confirmaram `impacto_emocional`, 1 removeu
+(`hard-to-be-a-god`/medianas); nenhum estado publicado mudou. As outras 6
+(5 filmes: `speak-no-evil-2022`, `the-cloud-capped-star`,
+`the-turin-horse`, `whiplash-2014`, `zama` ×2) seguem SEM veredito, por
+decisão do dono (marcadas sem retentar na rodada 4) e visíveis como
+`verificacao_pendente` no JSON publicado. O mecanismo da instabilidade —
+falha de JSON não determinística que deixa a marcação depender da rodada —
+não mudou.
 
 **Medição nova (piloto de expansão, 2026-09-10) — um segundo mecanismo, da
 mesma família. Não corrigido.**
@@ -1122,7 +1127,8 @@ Reproduzido na review que falhou (902 s) e numa review de CONTROLE que já
 tinha veredito (`viewing:1437760141`, 901 s) — a mesma resposta. Não é o
 texto das reviews; é a fila do provider.
 
-**Três achados do adaptador, NÃO corrigidos:**
+**Três achados do adaptador, NÃO corrigidos nesta rodada (tratados na
+rodada 5, abaixo):**
 1. A sobrecarga vem como 200, não como 5xx, então `_com_retentativa` não a
    vê como transporte. O acesso a `choices[0]` vira
    `TypeError: 'NoneType' object is not subscriptable` — é o motivo gravado
@@ -1163,6 +1169,146 @@ JSON PUBLICADO ainda não refletia isso. Rodado `republicar_eixos.py --slug X`
 (retentadas na rodada 3, contra o DeepSeek sobrecarregado) e 6 com
 `erro_JSONDecodeError` (marcadas sem retentar, rodada 4). Nenhuma foi
 verificada de fato; nenhum estado publicado mudou em nenhuma.
+
+**Rodada 5 (2026-09-14) — o adaptador passa a reconhecer a sobrecarga. Decisão
+do dono: detecção implementada como desenhada; prazo de parede MEDIDO antes de
+escolhido; UMA retentativa, não três.**
+
+**Medição da latência por estágio — o que existia.** A latência por chamada
+NÃO estava gravada em nenhum registro de produção dos quatro estágios
+DeepSeek: os registros de passe, do verificador, a telemetria de rotulagem e
+os buckets de síntese guardam `uso`, não tempo. O que existe:
+- classificação: mediana 1,6 s por review (estudo de 120 reviews,
+  `MEDICAO_CONTAGEM_E_AB.md`), sem cauda registrada;
+- síntese — o prompt maior, onde um prazo curto cortaria chamada legítima:
+  limite DERIVADO do log de publicação. Por filme, tempo total menos a
+  latência da narrativa do mesmo run = 3 sínteses + 3 rotulagens + overhead:
+  **p50 28,5 s · p95 82,8 s · máximo 89,5 s** em 50 filmes. Nenhuma síntese
+  isolada passou de 89,5 s; a típica fica em ~10 s. Não dá p99 por chamada:
+  a unidade medida é o filme;
+- verificador e rotulagem: nada gravado;
+- os outros `latencia_s` do repositório são do Gemini (narrativa, veredito,
+  condições, comparações antigas) — não servem para o DeepSeek.
+
+**Prazo de parede: 90 s por tentativa** (`LLM_PRAZO_PAREDE_S`). Critério:
+acima da maior latência legítima plausível e 10× abaixo dos 900 s da fila.
+Cobre o pior caso derivado da síntese, que é a soma de SEIS chamadas; para os
+estágios de JSON curto (mediana ~1,6 s) é folga larga. **Um parâmetro só para
+os quatro estágios** — nenhum precisou de valor próprio com o dado que existe.
+É ponto de partida, não ótimo: a latência passa a ser gravada por estágio
+(`latencia_s` em cada registro de classificação e do verificador; linha
+`Latências do LLM:` no stderr do CLI com n/p50/p95/p99/máx de síntese e
+rotulagem, gravada pelo harness em `publicacao_log.jsonl` como
+`latencia_llm`). Imposto por fora do SDK, numa thread DAEMON: a de
+`concurrent.futures` não é daemon, e o CLI ficaria pendurado na saída até a
+chamada abandonada terminar. **Custo declarado:** a chamada que estoura
+continua rodando em segundo plano e a resposta, se vier, é descartada — numa
+chamada paga, é pagar por trabalho jogado fora. Não é impeditivo; é a razão
+de o prazo não ser agressivo.
+
+**Detecção.** HTTP 200 sem `choices` é conferido dentro da tentativa
+(`_resposta_deepseek_valida`): com a assinatura da fila (prefixo "We were
+unable to start processing your request" — o número de segundos é parâmetro
+do provider) vira `LLMSobrecarga` com a mensagem real; com outro erro no
+corpo, `LLMRespostaComErro`, não retentada. Nenhum dos dois vira mais
+`TypeError`.
+
+**Retentativa: UMA, com espera de 30 s ±25%** (`LLM_RETENTATIVAS_INDISPONIVEL`
+= 1, `LLM_BACKOFF_INDISPONIVEL_S` = 30), só para chamada NÃO PROCESSADA
+(`LLMSobrecarga` ou `LLMPrazoExcedido`). Critério: fila cheia agora tende a
+continuar cheia nos segundos seguintes; 30 s é 15× o primeiro backoff de
+transporte, o bastante para uma fila que oscila, pouco perto de uma fila
+parada. Pior caso por unidade: 90 + 30 + 90 ≈ 3,5 min (antes: ~45 min).
+Esgotando, a exceção sobe com o motivo real e as tentativas. O transporte (5xx,
+conexão) continua como estava: `LLM_MAX_TENTATIVAS` = 3, backoff 2 s · 4 s.
+Efeito colateral a registrar: o timeout de leitura do SDK (180 s) deixa de
+ser alcançado no DeepSeek — o prazo de parede dispara antes — e o prazo
+também limita as retentativas internas do SDK da OpenAI (`max_retries=2` por
+padrão), que antes podiam empilhar sob as nossas.
+
+**Por estágio, esgotando:**
+- **verificador:** `ok: False` com o motivo real → `verificacao_pendente`
+  com motivo `erro_LLMSobrecarga` / `erro_LLMPrazoExcedido`, visível no
+  bloco `eixos` publicado — o mecanismo da rodada 2;
+- **classificação:** `ok: False` com o motivo real; a review não entra no
+  consenso e a guarda `AmostraNaoClassificada` recusa publicar o filme —
+  falha alta;
+- **rotulagem:** a célula fica sem frase, com o motivo em
+  `rotulagem.motivos_falha`. **Precisou de ajuste próprio:** o laço de 2
+  tentativas de `rotular_bucket` empilharia uma segunda rodada de ~3,5 min
+  sobre a do adaptador; agora ele NÃO retenta depois de `LLMIndisponivel`;
+- **síntese: tratada igual, e o custo é o filme.** A unidade é o bucket, e a
+  exceção sobe: o CLI sai com rc≠0 e o harness grava o motivo real no log.
+  Publicar um bucket sem temas, marcado, seria decisão de produto — não
+  tomada. A consequência medida: as sínteses já pagas dos outros buckets do
+  filme são refeitas quando o filme é republicado. Não justifica
+  paciência maior para a síntese — com a fila parada, mais espera só
+  atrasa a mesma falha.
+
+**Não tratado:** o fallback para o Gemini dentro dos estágios (recusa de
+conteúdo) usa o timeout próprio do Gemini (180 s), que funciona — o problema
+de conexão viva foi observado só no DeepSeek. **Proposta, não implementada:**
+um disjuntor por processo (após N chamadas não processadas seguidas, as
+seguintes falham na hora). Com fila parada, a classificação de 300 filmes
+ainda gastaria ~3,5 min por unidade até cada uma falhar; o disjuntor é o que
+transformaria isso em uma falha só.
+
+Testes: `tests/test_sobrecarga_llm.py` (14), sobre o SDK REAL da OpenAI com
+transporte falso (`httpx.MockTransport`) — o 200 de erro chega a
+`deepseek_resposta` exatamente como o SDK o monta. Cobre: a exceção nova com a
+mensagem real; outro erro no corpo sem retentativa; uma retentativa, não
+três, com a espera longa; sobrecarga seguida de resposta normal; o transporte
+com o teto de antes; o prazo de parede disparando em 0,2 s (não 900 s) com a
+thread abandonada daemon; resposta normal intacta; latência gravada; e,
+esgotando, verificador pendente com o motivo real, classificação `ok: False`,
+rotulagem sem empilhar e síntese falhando alto. Nenhuma asserção afrouxada.
+Suíte: 1999 coletados / 1993 passam / 5 falhas conhecidas / 1 xfail.
+
+**Rodada 6 (2026-09-14) — as 6 retentativas refeitas, com o adaptador novo e a
+fila normal.** Sonda antes: uma chamada pelo adaptador novo respondeu em
+2,2 s, sem retentativa. Mesmo método da rodada 3: snapshot novo do consenso
+verificado com hash por filme; por filme, na ordem,
+`aplicar-producao --slug X` → conferência (só a linha da review retentada
+pode mudar) → `republicar_eixos.py`, que mede e só grava sem mudança de
+estado.
+
+| filme | review | veredito | efeito publicado |
+|---|---|---|---|
+| `drive-my-car` | negativas `viewing:1311567647` | confirma | só sai a marca |
+| `force-majeure-2014` | medianas `viewing:1029424328` | confirma | só sai a marca |
+| `hard-to-be-a-god` | medianas `viewing:1024049819` | **remove** | `impacto_emocional`/medianas 18/40 → 17/40 (lift −17,5 → −20,0 pp) |
+| `memories-of-murder` | negativas `viewing:1474734368` | confirma | só sai a marca |
+| `pinocchio-2022` | positivas `viewing:1364816145` | confirma | só sai a marca |
+| `satantango` | negativas `viewing:1205585573` | confirma | só sai a marca |
+
+- **Nenhum estado publicado mudou** em nenhum dos 6: contraste, `n`,
+  células na margem, bullets e os briefings de narrativa/veredito/condições
+  idênticos. A remoção em `hard-to-be-a-god` muda um NÚMERO publicado (uma
+  célula, −1 menção), longe da margem de 22,83 pp.
+- Integridade: 49 de 55 filmes com hash idêntico ao snapshot; as 6 linhas
+  alteradas são exatamente as 6 reviews, e em nenhuma outro eixo mudou.
+- **Efeito colateral achado e CORRIGIDO na mesma rodada:**
+  `verificador.n_removidas_no_corpus` é uma contagem GLOBAL carimbada no
+  bloco, e a remoção em `hard-to-be-a-god` a levou de 2781 para 2782. O
+  harness regravava o valor atual em todo bloco reconstruído, então
+  `memories-of-murder`, `pinocchio-2022` e `satantango` ganharam um
+  2781 → 2782 sem conteúdo, e 3 testes de `test_republicar_eixos.py`
+  passaram a falhar: o filme de controle deixou de reconstruir idêntico.
+  A asserção não foi afrouxada; o harness mudou. **Regra: o carimbo só
+  acompanha o corpus quando as contagens do PRÓPRIO filme mudam** — mesmo
+  precedente de `aplicar_lei_margem._bloco_novo`, que preserva o
+  `verificador` do artefato. Os 3 filmes voltaram a 2781 (valor do snapshot
+  anterior à rodada, restante do carimbo idêntico); só `hard-to-be-a-god`,
+  cuja contagem mudou, diz 2782. Conferido depois: os 6 filmes e o controle
+  `burning-2018` reconstroem idênticos ao publicado, e o diff de cada um
+  contra o commit é só a marca saindo (mais a célula de `hard-to-be-a-god`).
+  +2 testes fixam a regra nos dois sentidos.
+- **Estado final das 12:** 6 verificadas de fato (5 confirmam, 1 remove), sem
+  marca; 6 pendentes (`erro_JSONDecodeError`, os 5 filmes da rodada 4), com
+  `verificacao_pendente` no JSON publicado. Retentá-las agora seria possível
+  (a fila está normal) — não feito, por não estar no pedido.
+- Suíte ao fim da rodada: 2001 coletados / 1995 passam / 5 falhas
+  conhecidas (as mesmas) / 1 xfail. Nenhuma asserção afrouxada.
 
 ### C17. Referências quebradas após `docs/arquivo-de-estudos/` sair do git (2026-09-14)
 

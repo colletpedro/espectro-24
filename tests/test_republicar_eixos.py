@@ -129,6 +129,41 @@ def test_recusa_quando_o_estado_publicado_muda(tmp_path, monkeypatch,
     assert json.loads(arq.read_text(encoding="utf-8")) == publicado
 
 
+def test_carimbo_global_nao_se_move_sem_mudanca_de_contagem(tmp_path, monkeypatch):
+    """`n_removidas_no_corpus` é global: uma remoção em OUTRO filme o move.
+    Num filme cujas contagens não mudaram, a republicação mantém o carimbo
+    publicado — senão todo filme tocado ganharia um diff sem conteúdo."""
+    arq = _copia(tmp_path, monkeypatch)
+    publicado = _adulterar(
+        arq, lambda e: e["verificador"].__setitem__("n_removidas_no_corpus", 1))
+    m = R.medir(CONTROLE)
+    assert m["mencoes"] == [] and m["bloco_identico"] is True
+    assert m["bloco_novo"]["verificador"] == publicado["eixos"]["verificador"]
+
+
+def test_carimbo_global_acompanha_o_corpus_quando_a_contagem_muda(tmp_path, monkeypatch):
+    """Quando a contagem do PRÓPRIO filme muda, o carimbo é o do corpus
+    atual — é a execução do verificador que produziu os números novos."""
+    import contextlib
+
+    from espectro24 import eixos as E
+    from espectro24 import pipeline as P
+
+    arq = _copia(tmp_path, monkeypatch)
+
+    def outra_contagem(e):
+        cel = next(iter(e["linhas"][0]["por_bucket"].values()))
+        cel["mencoes"] += 1
+        e["verificador"]["n_removidas_no_corpus"] = 1
+
+    _adulterar(arq, outra_contagem)
+    m = R.medir(CONTROLE)
+    assert m["mencoes"]
+    with contextlib.chdir(R.RAIZ):
+        _, meta = P._carregar_consenso_producao(E)
+    assert m["bloco_novo"]["verificador"] == meta
+
+
 def test_aceitar_mudanca_so_com_a_flag_explicita(tmp_path, monkeypatch):
     arq = _copia(tmp_path, monkeypatch)
     _adulterar(arq, _outro_contraste)

@@ -30,6 +30,7 @@ célula sem frase, registrado em telemetria.
 from __future__ import annotations
 
 import json
+import time
 from typing import Any, Callable
 
 from .taxonomia import EIXOS, LIVRE, definicoes
@@ -102,11 +103,16 @@ def rotular_bucket(bucket_nome: str, temas: list[dict],
     call, modelo = _resolver(client_call, model, provider)
     system, user = build_system_prompt(), build_user_message(bucket_nome, temas)
 
+    from .synthesize import LLMIndisponivel, _registrar_latencia_llm
+
     bruto = None
     for tentativa in range(2):
         saida["n_chamadas"] += 1
         try:
+            t0 = time.monotonic()
             resposta = call(system, user, modelo)
+            if client_call is None:
+                _registrar_latencia_llm(ESTAGIO, time.monotonic() - t0)
             bruto = _parse(resposta)
             if bruto is None:
                 saida["motivos_falha"].append("json_invalido")
@@ -116,6 +122,11 @@ def rotular_bucket(bucket_nome: str, temas: list[dict],
             # descobriria (sem fallback nesta etapa, por decisão do dono).
             bruto = None
             saida["motivos_falha"].append(_motivo_falha(e))
+            if isinstance(e, LLMIndisponivel):
+                # O adaptador já fez a ÚNICA retentativa de chamada não
+                # processada; uma segunda aqui empilharia mais ~3,5 min
+                # sobre uma fila que acabou de se declarar cheia.
+                break
         if bruto is not None:
             break
         saida["houve_retentativa"] = True

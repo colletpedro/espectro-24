@@ -5,20 +5,19 @@
   "fonte": "resultado/votacao-3/consenso.jsonl",
   "fonte_n_linhas": 7844,
   "n_candidatas": 5834,
-  "n_verificadas": 5832,
-  "n_falharam": 12,
+  "n_verificadas": 5838,
+  "n_falharam": 6,
   "pendentes_por_motivo": {
-    "erro_JSONDecodeError": 6,
-    "erro_TypeError": 6
+    "erro_JSONDecodeError": 6
   },
   "n_fallback_conteudo": 1,
-  "n_removidas": 2781,
-  "n_chamadas": 5832,
+  "n_removidas": 2782,
+  "n_chamadas": 5838,
   "uso": {
-    "prompt_tokens": 3884832,
-    "completion_tokens": 218448,
-    "cache_hit_tokens": 2057600,
-    "cache_miss_tokens": 1827232
+    "prompt_tokens": 3889410,
+    "completion_tokens": 218683,
+    "cache_hit_tokens": 2060928,
+    "cache_miss_tokens": 1828482
   },
-  "custo_usd": 0.3227392
+  "custo_usd": 0.32298931840000006
 }

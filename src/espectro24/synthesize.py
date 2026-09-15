@@ -41,7 +41,10 @@ from .config import (
     FALLBACK_CONTEUDO_PROVIDER,
     LLM_MAX_TENTATIVAS,
     LLM_BACKOFF_BASE_SEGUNDOS,
+    LLM_BACKOFF_INDISPONIVEL_S,
     LLM_BACKOFF_JITTER,
+    LLM_PRAZO_PAREDE_S,
+    LLM_RETENTATIVAS_INDISPONIVEL,
     LLM_MAX_TOKENS,
     LLM_TIMEOUT_MS,
     MAX_TEMAS,
@@ -166,6 +169,33 @@ class LLMTransportError(LLMError):
     levantada para erro de conteúdo/autenticação/cota/parâmetro inválido:
     esses sobem imediatamente, sem retentar (ver `_erros_transporte_llm`).
     """
+
+
+class LLMIndisponivel(LLMError):
+    """[2026-09-14] O provider NÃO PROCESSOU a chamada — sobrecarga declarada
+    no corpo, ou prazo de parede estourado. Classe própria porque o
+    tratamento é outro: é estado da FILA, não da rede, e retentar em 2 s não
+    adianta (ver `LLM_RETENTATIVAS_INDISPONIVEL`). A mensagem é sempre o
+    motivo real — é ela que vai para o registro de falha e para a marca
+    `verificacao_pendente`."""
+
+
+class LLMSobrecarga(LLMIndisponivel):
+    """HTTP 200 sem `choices` com o corpo de erro de FILA do DeepSeek
+    (`"We were unable to start processing your request within the
+    900-second timeout limit..."`). Medido em 2026-09-14: ~900 s de espera
+    por chamada, e ele não chega como 5xx — sem esta classe, virava
+    `TypeError` no acesso a `choices[0]`."""
+
+
+class LLMPrazoExcedido(LLMIndisponivel):
+    """A tentativa passou de `LLM_PRAZO_PAREDE_S`. A chamada continua numa
+    thread em segundo plano e a resposta, se vier, é descartada."""
+
+
+class LLMRespostaComErro(LLMError):
+    """HTTP 200 sem `choices` e com OUTRO erro no corpo — não é a assinatura
+    de fila, então não é retentado: a mensagem real sobe para o chamador."""
 
 
 class ProviderError(RuntimeError):
@@ -428,8 +458,72 @@ def deepseek_resposta(system: str, user: str, model: str, *, max_tokens: int,
     # é transporte (não fala com a rede), e recriá-la a cada tentativa
     # descartaria a conexão reaproveitada que `deepseek_client` existe para
     # dar (v1.9.4).
+    # [2026-09-14] Cada TENTATIVA tem prazo de parede, e a resposta é
+    # conferida antes de subir: HTTP 200 sem `choices` vira exceção com o
+    # motivo real (`_resposta_deepseek_valida`), que `_com_retentativa`
+    # reconhece. Os dois ficam DENTRO da tentativa — a retentativa continua
+    # tendo uma implementação só.
     return _com_retentativa(
-        "deepseek", model, lambda: client.chat.completions.create(**kwargs))
+        "deepseek", model,
+        lambda: _resposta_deepseek_valida(_com_prazo_de_parede(
+            lambda: client.chat.completions.create(**kwargs),
+            LLM_PRAZO_PAREDE_S, "deepseek", model)))
+
+
+# A assinatura da fila cheia, como o DeepSeek a devolveu em 2026-09-14. Prefixo,
+# não a frase inteira: o número de segundos no fim é parâmetro do provider.
+_ASSINATURA_SOBRECARGA_DEEPSEEK = "We were unable to start processing your request"
+
+
+def _resposta_deepseek_valida(resp):
+    """A resposta, se ela tem `choices`; senão, a exceção com o motivo que o
+    CORPO declara. O SDK monta a resposta sem validar, então um 200 de erro
+    chega como `ChatCompletion` com `choices=None` e o erro em
+    `model_extra` — e o primeiro sintoma era um `TypeError` longe daqui."""
+    if getattr(resp, "choices", None):
+        return resp
+    extras = getattr(resp, "model_extra", None)
+    erro = extras.get("error") if isinstance(extras, dict) else None
+    if erro is None:
+        erro = getattr(resp, "error", None)
+    msg = (erro.get("message") if isinstance(erro, dict)
+           else (str(erro) if erro else None))
+    if msg and msg.startswith(_ASSINATURA_SOBRECARGA_DEEPSEEK):
+        raise LLMSobrecarga(f"deepseek não processou a chamada: {msg}")
+    raise LLMRespostaComErro(
+        f"deepseek devolveu resposta sem `choices`: {msg or 'sem mensagem de erro'}")
+
+
+def _com_prazo_de_parede(chamada, prazo_s: float, provider: str, model: str):
+    """`chamada()` com relógio ABSOLUTO — o timeout de leitura do SDK não
+    serve quando a conexão fica viva sem entregar a resposta.
+
+    Thread DAEMON, de propósito: uma thread de `concurrent.futures` não é
+    daemon, e o interpretador espera por ela na saída — o CLI ficaria
+    pendurado até a chamada abandonada terminar (até ~900 s). Estourado o
+    prazo, a chamada segue rodando em segundo plano e a resposta, se vier,
+    é descartada: numa chamada paga, é trabalho pago e jogado fora
+    (ver `LLM_PRAZO_PAREDE_S`)."""
+    caixa: dict = {}
+    pronto = threading.Event()
+
+    def alvo():
+        try:
+            caixa["resposta"] = chamada()
+        except BaseException as e:  # noqa: BLE001 — repassada ao chamador
+            caixa["erro"] = e
+        finally:
+            pronto.set()
+
+    threading.Thread(target=alvo, daemon=True, name=f"llm-{provider}").start()
+    if not pronto.wait(prazo_s):
+        raise LLMPrazoExcedido(
+            f"{provider}/{model}: sem resposta em {prazo_s:g} s (prazo de "
+            "parede) — a chamada segue em segundo plano e a resposta, se "
+            "vier, é descartada")
+    if "erro" in caixa:
+        raise caixa["erro"]
+    return caixa["resposta"]
 
 
 def deepseek_uso(resp) -> dict:
@@ -558,6 +652,67 @@ def _erros_transporte_llm(provider: str) -> tuple[type[BaseException], ...]:
                         f"definida — use um de {sorted(PROVIDER_CLIENTS)}.")
 
 
+def _backoff_indisponivel() -> float:
+    """[2026-09-14] A espera antes da ÚNICA retentativa de chamada não
+    processada — mesmo jitter do transporte, base `LLM_BACKOFF_INDISPONIVEL_S`."""
+    return LLM_BACKOFF_INDISPONIVEL_S * random.uniform(
+        1 - LLM_BACKOFF_JITTER, 1 + LLM_BACKOFF_JITTER)
+
+
+# [2026-09-14] Latência por ESTÁGIO, acumulada por processo — a medição que o
+# prazo de parede não teve. Registrada só onde o estágio é conhecido e a
+# chamada é de produção (DeepSeek respondeu): `resposta_json_com_fallback`
+# (classificação, verificador), `_ChamadaComFallback` (síntese) e
+# `rotulagem.rotular_bucket`. É o tempo da chamada inteira, retentativas
+# incluídas.
+_latencias_llm: dict[str, list[float]] = {}
+_lock_latencias = threading.Lock()
+
+
+def _registrar_latencia_llm(estagio: str, segundos: float) -> None:
+    with _lock_latencias:
+        _latencias_llm.setdefault(estagio, []).append(segundos)
+
+
+def _quantil(valores: list[float], p: float) -> float:
+    v = sorted(valores)
+    return v[min(len(v) - 1, int(p * len(v)))]
+
+
+def telemetria_latencia_llm() -> dict[str, dict]:
+    """`{estagio: {n, p50, p95, p99, max}}` em segundos."""
+    with _lock_latencias:
+        dados = {k: list(v) for k, v in _latencias_llm.items()}
+    return {e: {"n": len(v), "p50": round(_quantil(v, .50), 2),
+                "p95": round(_quantil(v, .95), 2),
+                "p99": round(_quantil(v, .99), 2), "max": round(max(v), 2)}
+            for e, v in sorted(dados.items()) if v}
+
+
+def resetar_telemetria_latencia_llm() -> None:
+    with _lock_latencias:
+        _latencias_llm.clear()
+
+
+PREFIXO_TELEMETRIA_LATENCIA = "Latências do LLM:"
+
+
+def linha_telemetria_latencia() -> str:
+    return (f"{PREFIXO_TELEMETRIA_LATENCIA} "
+            f"{json.dumps(telemetria_latencia_llm(), sort_keys=True)}")
+
+
+def parse_linha_telemetria_latencia(texto: str) -> dict | None:
+    """`None` quando a linha não está no stderr — "não sei", não "zero"."""
+    for linha in reversed(texto.splitlines()):
+        if linha.startswith(PREFIXO_TELEMETRIA_LATENCIA):
+            try:
+                return json.loads(linha[len(PREFIXO_TELEMETRIA_LATENCIA):])
+            except json.JSONDecodeError:
+                return None
+    return None
+
+
 def _backoff_llm(tentativa: int) -> float:
     """`2s · 4s` com jitter de ±25% — mesma fórmula do Fetcher (§2.4). O
     jitter evita que várias chamadas do mesmo lote, tropeçando no mesmo
@@ -662,10 +817,24 @@ def _com_retentativa(provider: str, model: str, chamada):
     """
     erros_transporte = _erros_transporte_llm(provider)
     ultimo_erro: BaseException | None = None
-    for tentativa in range(1, LLM_MAX_TENTATIVAS + 1):
+    tentativa = 0        # contra o teto de TRANSPORTE (`LLM_MAX_TENTATIVAS`)
+    nao_processadas = 0  # [2026-09-14] contra `LLM_RETENTATIVAS_INDISPONIVEL`
+    while True:
         try:
             return chamada()
+        except LLMIndisponivel as e:
+            # Fila cheia ou prazo de parede: UMA retentativa, com espera
+            # longa. Esgotando, sobe com o motivo real — nada de
+            # `LLMTransportError` genérico por cima do que o provider disse.
+            _registrar_retentativa_llm(type(e).__name__)
+            nao_processadas += 1
+            if nao_processadas > LLM_RETENTATIVAS_INDISPONIVEL:
+                raise type(e)(f"{e} [desistiu após {nao_processadas} "
+                              "tentativa(s) não processada(s)]") from e
+            time.sleep(_backoff_indisponivel())
+            continue
         except erros_transporte as e:
+            tentativa += 1
             _registrar_retentativa_llm(type(e).__name__)
             ultimo_erro = e
             if tentativa == LLM_MAX_TENTATIVAS:
@@ -893,16 +1062,21 @@ def resposta_json_com_fallback(system: str, user: str, model: str, *,
     em `deepseek_resposta`; 4xx sem retentar). `estagio`/`unidade`
     identificam a troca na telemetria.
     """
+    t0 = time.monotonic()
     try:
         resp = deepseek_resposta(system, user, model, max_tokens=max_tokens,
                                  json_mode=True, client=client)
     except Exception as e:
         if not recusa_de_conteudo(e):
             raise
-        return _json_no_fallback(system, user, estagio, unidade)
+        r = _json_no_fallback(system, user, estagio, unidade)
+        r["latencia_s"] = round(time.monotonic() - t0, 2)
+        return r
+    dt = time.monotonic() - t0
+    _registrar_latencia_llm(estagio, dt)
     return {"texto": resp.choices[0].message.content, "provider": "deepseek",
             "modelo": model, "uso": deepseek_uso(resp),
-            "fallback_conteudo": None}
+            "fallback_conteudo": None, "latencia_s": round(dt, 2)}
 
 
 def resposta_classificacao(system: str, user: str, model: str, *,
@@ -964,7 +1138,11 @@ class _ChamadaComFallback:
     def __call__(self, system: str, user: str) -> str:
         if self.fallback is None:
             try:
-                return self._call(system, user, self.modelo)
+                t0 = time.monotonic()
+                texto = self._call(system, user, self.modelo)
+                if self._habilitado:
+                    _registrar_latencia_llm("sintese", time.monotonic() - t0)
+                return texto
             except Exception as e:
                 if not (self._habilitado and recusa_de_conteudo(e)):
                     raise

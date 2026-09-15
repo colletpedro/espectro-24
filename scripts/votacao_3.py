@@ -181,6 +181,7 @@ def classificar_passe(n_passe: int, limite: int | None = None) -> None:
                 "eixos": eixos, "temas_livres": livres,
                 "eixos_invalidos": invalidos, "uso": resp["uso"],
                 "provider": resp["provider"], "modelo": resp["modelo"],
+                "latencia_s": resp["latencia_s"],
             }
             marca = resp["fallback_conteudo"]
         except Exception as e:  # noqa: BLE001

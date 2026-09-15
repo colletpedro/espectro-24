@@ -1392,16 +1392,7 @@
       "passada": 1,
       "eixo": "impacto_emocional",
       "n_removidas_no_corpus": 2781
-    },
-    "verificacao_pendente": [
-      {
-        "bucket": "negativas",
-        "id": "viewing:1474734368",
-        "eixo": "impacto_emocional",
-        "motivo": "erro_TypeError",
-        "erro": "TypeError: 'NoneType' object is not subscriptable"
-      }
-    ]
+    }
   },
   "narrativa": "Lançado em 2003 e dirigido por Bong Joon-ho, Memórias de um Assassino é uma produção que combina drama, crime e suspense, ambientada na Coreia do Sul. A narrativa acompanha a criação de uma unidade policial especial encarregada de investigar e solucionar com rapidez uma série inédita de assassinatos brutais em uma província rural.\n\nA experiência cinematográfica apoia-se em uma atmosfera sombria e opressiva, conduzida por um ritmo deliberadamente cadenciado ao longo de sua duração. A dinâmica transita entre a seriedade da investigação criminal e os atritos de comportamento dentro da rotina dos investigadores.\n\nDe modo geral, os diferentes grupos avaliam os mesmos elementos da obra, divergindo no veredito sobre a eficácia de sua execução. Na grande maioria das notas (~94%), boa parte ressalta a força das atuações e a complexidade moral dos detetives. Uma parcela expressiva valoriza a composição da fotografia e a criação do clima tenso, enquanto uma fatia menor pondera que, apesar do ritmo pausado no início, a tensão crescente sustenta o tempo de duração.\n\nPara quem se posiciona numa fração mínima das notas (~5%), vários queixam-se do ritmo lento e arrastado da narrativa. Um número considerável manifesta frustração diante de um desfecho pouco conclusivo para o mistério, e alguns apontam incômodo com os métodos violentos e a incompetência policial.\n\nPor fim, para quem está numa fração ainda menor das notas (~1%), muitos consideram a obra excessivamente lenta, tornando o andamento cansativo. Uma parcela expressiva vê o tom de comédia como algo deslocado diante da gravidade dos crimes, e uma parte avalia que o roteiro se torna confuso e perde a clareza de foco.",
   "verificacao_narrativa": {

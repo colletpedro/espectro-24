@@ -634,6 +634,54 @@ PROSA_MAX_TOKENS = 16000
 # (~110s numa chamada com thinking) e converte trava permanente em erro.
 LLM_TIMEOUT_MS = 180_000
 
+# [2026-09-14] SOBRECARGA do DeepSeek — prazo de parede e UMA retentativa
+# (ABERTO.md C16, rodadas 3 e 5). Medido: com a fila cheia, o DeepSeek segura
+# a conexão ~900 s e devolve HTTP 200 SEM `choices`, com o corpo
+# `{"error": {"message": "We were unable to start processing your request
+# within the 900-second timeout limit. Please try again later."}}`. O
+# `LLM_TIMEOUT_MS` acima NÃO dispara (a conexão não fica ociosa o bastante
+# para o timeout de leitura do httpx), e `_com_retentativa` não via o 200
+# como falha — virava `TypeError` no acesso a `choices[0]`.
+#
+# PRAZO DE PAREDE — relógio absoluto por TENTATIVA, imposto por fora do SDK.
+# Critério: acima da maior latência LEGÍTIMA plausível de uma chamada
+# DeepSeek, e muito abaixo dos 900 s da fila. A latência por chamada NÃO
+# estava gravada em nenhum registro de produção. O que existe:
+#   - classificação: mediana 1,6 s por review (estudo de 120 reviews,
+#     `MEDICAO_CONTAGEM_E_AB.md`; sem cauda registrada);
+#   - síntese (o prompt maior, onde um prazo curto cortaria chamada
+#     legítima): limite DERIVADO do log de publicação — por filme, tempo
+#     total menos a latência da narrativa = 3 sínteses + 3 rotulagens +
+#     overhead: p50 28,5 s, p95 82,8 s, máximo 89,5 s em 50 filmes. Nenhuma
+#     síntese isolada passou de 89,5 s; a típica fica em ~10 s;
+#   - verificador e rotulagem: nada gravado (mesma forma da classificação,
+#     JSON curto).
+# 90 s cobre o pior caso derivado da síntese — que é a soma de SEIS
+# chamadas — e fica 10× abaixo da espera da fila. É ponto de partida, não
+# ótimo: a latência passa a ser gravada por estágio (`latencia_s` nos
+# registros de classificação e verificador; linha `Latências do LLM:` no
+# stderr do CLI, que o harness grava no log de publicação), e o uso vira a
+# medição. Um parâmetro só para os quatro estágios: o prazo é teto para a
+# síntese e folga larga para os de JSON curto.
+# CUSTO DECLARADO: a chamada que estoura CONTINUA rodando numa thread em
+# segundo plano, e a resposta, se vier, é descartada. Numa chamada paga,
+# é pagar por trabalho jogado fora — razão para o prazo não ser agressivo.
+LLM_PRAZO_PAREDE_S = 90
+
+# UMA retentativa (não três) quando o provider não processa a chamada —
+# sobrecarga declarada no corpo OU prazo de parede estourado. Fila cheia
+# agora tende a continuar cheia nos segundos seguintes: o backoff de
+# transporte (2 s · 4 s) não espera nada perto do necessário, e três
+# tentativas de ~90 s dariam ~4,5 min por unidade. Pior caso com isto:
+# 90 + 30 + 90 ≈ 3,5 min. Esgotando, falha com o motivo real e a unidade
+# fica pendente (verificador, classificação) ou o filme não publica
+# (síntese) — nunca em silêncio.
+LLM_RETENTATIVAS_INDISPONIVEL = 1
+# A espera antes dela: 30 s (±`LLM_BACKOFF_JITTER`) — 15× o primeiro backoff
+# de transporte; o bastante para uma fila que oscila esvaziar, pouco perto
+# dos 900 s de uma fila parada (e aí a retentativa falha rápido).
+LLM_BACKOFF_INDISPONIVEL_S = 30.0
+
 
 def nota_para_url(n: float) -> str:
     """Formato decimal da nota na URL (§2.1): 3.0 -> '3', 3.5 -> '3.5'."""

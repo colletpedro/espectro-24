@@ -44,7 +44,8 @@ from .render import (
 )
 from .narrador import narrar, telemetria_para_json
 from .synthesize import (ProviderError, linha_telemetria_fallback,
-                         linha_telemetria_llm, telemetria_fallback_conteudo)
+                         linha_telemetria_latencia, linha_telemetria_llm,
+                         telemetria_fallback_conteudo)
 
 
 def _parse_args(argv):
@@ -434,6 +435,9 @@ def main(argv=None):
               + ", ".join(f"{f['estagio']}:{f['unidade']}" for f in fb),
               file=sys.stderr)
     print(linha_telemetria_fallback(), file=sys.stderr)
+    # [2026-09-14] Latência por estágio (síntese, rotulagem) — a medição que
+    # o prazo de parede (`LLM_PRAZO_PAREDE_S`) não teve para ser escolhido.
+    print(linha_telemetria_latencia(), file=sys.stderr)
 
 
 if __name__ == "__main__":
