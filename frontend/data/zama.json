@@ -1307,14 +1307,7 @@
         "id": "viewing:1414135189",
         "eixo": "impacto_emocional",
         "motivo": "erro_JSONDecodeError",
-        "erro": "JSONDecodeError: Extra data: line 3 column 1 (char 99)"
-      },
-      {
-        "bucket": "positivas",
-        "id": "viewing:1487064786",
-        "eixo": "impacto_emocional",
-        "motivo": "erro_JSONDecodeError",
-        "erro": "JSONDecodeError: Extra data: line 1 column 147 (char 146)"
+        "erro": "JSONDecodeError: Extra data: line 1 column 98 (char 97)"
       }
     ]
   },

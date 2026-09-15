@@ -171,16 +171,18 @@ foi conferido separadamente.
 ### C3. Instabilidade do verificador de `impacto_emocional` (5 filmes)
 Registrada, não corrigida.
 
-**[2026-09-14] Continua ABERTA, com metade resolvida.** Das 12 falhas de
-JSON: 6 foram retentadas com a fila do DeepSeek normal (C16, rodada 6) e
-receberam veredito — 5 confirmaram `impacto_emocional`, 1 removeu
-(`hard-to-be-a-god`/medianas); nenhum estado publicado mudou. As outras 6
-(5 filmes: `speak-no-evil-2022`, `the-cloud-capped-star`,
-`the-turin-horse`, `whiplash-2014`, `zama` ×2) seguem SEM veredito, por
-decisão do dono (marcadas sem retentar na rodada 4) e visíveis como
-`verificacao_pendente` no JSON publicado. O mecanismo da instabilidade —
-falha de JSON não determinística que deixa a marcação depender da rodada —
-não mudou.
+**[2026-09-14] FECHADA PARCIALMENTE (ver C16, rodada 7, para o detalhe
+completo).** Das 12 falhas de JSON originais: **9 receberam veredito real**
+(7 confirmam `impacto_emocional`, 2 removem — `hard-to-be-a-god`/medianas e
+`the-cloud-capped-star`/positivas), com o JSON publicado atualizado e sem
+mudança de contraste/margem/bullet/briefing em nenhuma. **1 tem veredito
+real mas NÃO publicado por decisão do dono** (`speak-no-evil-2022` — a
+remoção mudaria bullets). **2 continuam sem veredito**
+(`whiplash-2014`/medianas e `zama`/negativas) — não por sobrecarga (essa
+causa foi corrigida, C16 rodada 5), mas por `JSONDecodeError` recorrente e
+não determinístico do modelo nessas reviews específicas: a causa de origem
+da C3, que NÃO foi corrigida por este trabalho e permanece aberta. Retentar
+de novo tem chance real de passar (não determinístico), sem garantia.
 
 **Medição nova (piloto de expansão, 2026-09-10) — um segundo mecanismo, da
 mesma família. Não corrigido.**
@@ -1309,6 +1311,84 @@ estado.
   (a fila está normal) — não feito, por não estar no pedido.
 - Suíte ao fim da rodada: 2001 coletados / 1995 passam / 5 falhas
   conhecidas (as mesmas) / 1 xfail. Nenhuma asserção afrouxada.
+
+**Rodada 7 (2026-09-14) — as 6 reviews restantes, com o adaptador de
+sobrecarga já no ar.** Sonda antes: 2,2 s, sem retentativa — mesma fila
+normal da rodada 6. Mesmo método: por filme, na ordem, `--slug` restrito;
+medição ANTES de gravar; PARAR se o estado publicado mudar.
+
+| filme | review | veredito | efeito publicado |
+|---|---|---|---|
+| `speak-no-evil-2022` | medianas `viewing:1477019671` | **remove** | **`estado_publicado_mudou: true` — NÃO GRAVADO** |
+| `the-cloud-capped-star` | positivas `viewing:1255160718` | remove | `impacto_emocional`/positivas 20/40 → 19/40 (lift 20,0 → 17,5 pp) |
+| `the-turin-horse` | positivas `viewing:1466699858` | confirma | só sai a marca |
+| `whiplash-2014` | medianas `viewing:1478219894` | **FALHOU DE NOVO** | nada muda — bloco reconstruído idêntico ao publicado, sem escrita |
+| `zama` | negativas `viewing:1414135189` | **FALHOU DE NOVO**, erro diferente (char 99 → char 97) | review continua pendente |
+| `zama` | positivas `viewing:1487064786` | confirma | marca sai; a outra review de `zama` continua pendente |
+
+**`speak-no-evil-2022` — o caso previsto, medido ANTES de gravar, PARADO.**
+O DeepSeek confirmou desta vez que o verificador REMOVE
+`impacto_emocional` da review (`confirma: false`). Medido, não aplicado:
+
+- `estado_publicado_mudou: true`;
+- `mencoes`: `impacto_emocional`/medianas 19/40 → 18/40 (lift −20,0 →
+  −22,5 pp);
+- **dois bullets mudam:** o bullet de `impacto_emocional` em `medianas`
+  SOME (deixa de ser `frequencia`); o bucket `medianas` ganha um bullet
+  novo em `comparacoes` (era `None`, vira `frequencia`) — a MESMA
+  substituição de bullet que o piloto de 2026-09 tinha previsto;
+- contraste, `n`, margem e os três briefings ficam iguais.
+
+**Nada foi gravado.** O JSON publicado de `speak-no-evil-2022` continua
+com `impacto_emocional`/medianas em 19/40 e `verificacao_pendente` (o
+estado de antes desta rodada). O veredito REAL já está em
+`consenso_verificado.jsonl` (a chamada ao verificador não é reversível: ela
+já aconteceu e o dado é o dado) — só o bloco `eixos` do JSON publicado, que
+`republicar_eixos.py` se recusa a escrever sem `--aceitar-mudanca-de-estado`,
+ficou para trás.
+
+**Duas falhas NÃO relacionadas à sobrecarga.** `whiplash-2014` e uma das
+duas reviews de `zama` falharam de novo com `JSONDecodeError` — mensagens
+DIFERENTES da tentativa anterior (char 95 antes, char 95 de novo em
+whiplash; char 99 → char 97 em zama), confirmando o diagnóstico original da
+C3: é o modelo produzindo JSON malformado de forma não determinística nessa
+review específica, não fila cheia. O adaptador novo (rodada 5) não tem o
+que fazer aqui — não é `LLMSobrecarga` nem `LLMPrazoExcedido`, é
+`json.JSONDecodeError` no parsing normal, retentada 0 vezes a mais (por
+decisão de escopo: o script já não retenta JSON inválido em cima da
+retentativa do adaptador, ABERTO.md rodada anterior de C16 "Entrega 2").
+
+**Integridade:** conferido por hash, 51 de 55 filmes idênticos ao snapshot
+desta rodada; as 5 linhas que mudam são exatamente as 5 reviews com
+veredito novo (a 6ª, `speak-no-evil-2022`, teve o consenso atualizado mas
+o JSON publicado preservado, de propósito).
+
+**Status final de C3 — FECHADA PARCIALMENTE, com causa remanescente
+IDENTIFICADA, não corrigida.**
+- Das 12 reviews originais: **9 têm veredito real** (7 confirmam
+  `impacto_emocional`, 2 removem — `hard-to-be-a-god` na rodada 6 e
+  `the-cloud-capped-star` nesta). **1 tem veredito real mas NÃO publicado**
+  por decisão do dono (`speak-no-evil-2022`, mudaria bullets). **2
+  continuam sem veredito** (`whiplash-2014` e uma review de `zama`) — não
+  por sobrecarga, mas por JSON malformado recorrente e não determinístico
+  do modelo nessa review específica.
+- **A causa de origem da instabilidade do V2_alvo — JSON malformado não
+  determinístico — NÃO foi corrigida e não tinha como ser por este
+  trabalho**: a sobrecarga do DeepSeek (rodada 5) e a instabilidade de
+  parsing (C3 original) são dois mecanismos DIFERENTES que produzem o
+  mesmo sintoma (`ok: False`, review sem veredito). A rodada 5 resolveu o
+  primeiro; o segundo é o que a C3 já descrevia antes desta sessão
+  (`JSONDecodeError`, taxa 0,19%–0,87%, sem correção proposta).
+- **Consequência prática:** `whiplash-2014` e `zama` continuam publicados
+  com `verificacao_pendente`; retentar de novo tem chance de sucesso (é
+  não determinístico — 8 de 8 reviews antigas passaram ao serem refeitas,
+  no piloto original), mas nenhuma garantia. `speak-no-evil-2022` tem
+  veredito pronto, aguardando decisão sobre publicar a mudança de bullet.
+
+Suíte ao fim da rodada: 2001 coletados / 1995 passam / 5 falhas conhecidas
+(as mesmas) / 1 xfail. Nenhuma asserção afrouxada; nenhum arquivo novo de
+teste (o método reusa `republicar_eixos.py` e
+`verificador_impacto.aplicar-producao`, já testados).
 
 ### C17. Referências quebradas após `docs/arquivo-de-estudos/` sair do git (2026-09-14)
 

@@ -66061,7 +66061,7 @@ window.ESPECTRO_DATA = {
                 "mencoes": 7,
                 "de_n": 27,
                 "freq_pct": 25.9,
-                "lift_pp": -24.1,
+                "lift_pp": -21.6,
                 "acima_da_margem": false,
                 "tema": null,
                 "exemplo_parafraseado": null,
@@ -66071,17 +66071,17 @@ window.ESPECTRO_DATA = {
                 "mencoes": 12,
                 "de_n": 40,
                 "freq_pct": 30.0,
-                "lift_pp": -20.0,
+                "lift_pp": -17.5,
                 "acima_da_margem": false,
                 "tema": "Falta de conexão emocional e dificuldade cultural",
                 "exemplo_parafraseado": "Vários espectadores relatam dificuldade em se envolver emocionalmente com a história, seja por barreiras culturais ou por não serem tocados pelo drama apresentado.",
                 "temas_no_mesmo_eixo": []
               },
               "positivas": {
-                "mencoes": 20,
+                "mencoes": 19,
                 "de_n": 40,
-                "freq_pct": 50.0,
-                "lift_pp": 20.0,
+                "freq_pct": 47.5,
+                "lift_pp": 17.5,
                 "acima_da_margem": false,
                 "tema": null,
                 "exemplo_parafraseado": null,
@@ -66228,17 +66228,8 @@ window.ESPECTRO_DATA = {
           "variante": "V2_alvo",
           "passada": 1,
           "eixo": "impacto_emocional",
-          "n_removidas_no_corpus": 2781
-        },
-        "verificacao_pendente": [
-          {
-            "bucket": "positivas",
-            "id": "viewing:1255160718",
-            "eixo": "impacto_emocional",
-            "motivo": "erro_JSONDecodeError",
-            "erro": "JSONDecodeError: Expecting ',' delimiter: line 1 column 102 (char 101)"
-          }
-        ]
+          "n_removidas_no_corpus": 2784
+        }
       },
       "narrativa": "Lançado em 1960 e dirigido por Ritwik Kumar Ghatak, o drama Estrela Encoberta de Nuvens acompanha a trajetória de uma jovem em uma família de classe média refugiada nos subúrbios de Calcutá. Na trama, ela realiza constantes sacrifícios pessoais, financeiros e de saúde por seus parentes, sem que seu empenho encontre o devido reconhecimento ao seu redor.\n\nA obra se estrutura como uma narrativa melodramática de cadência lenta, sustentada por uma densa ambientação sonora e forte presença de contrastes visuais. O tom foca no acúmulo contínuo de adversidades vivenciadas no cotidiano familiar.\n\nOs diferentes olhares coincidem quanto aos traços constitutivos da obra, mas divergem frontalmente sobre a eficácia do seu resultado. Na grande maioria das notas (~87%), uma parcela expressiva destaca a força das atuações e dos personagens, enquanto muitos enfatizam a expressividade da trilha sonora e do desenho de som, e vários elogiam a composição visual e a fotografia. Sob a perspectiva de quem compõe uma fração mínima das notas (~10%), boa parte critica o melodrama excessivo centrado no martírio da protagonista e um número considerável aponta o ritmo lento e arrastado da projeção, ainda que muitos reconheçam a beleza dos enquadramentos. Já para quem se posiciona em uma fração ainda menor das notas (~3%), a maior parte reprova o acúmulo de sofrimento por considerá-lo excessivo, perto da metade rejeita o ritmo lento aliado à longa duração, e uma parcela expressiva vê as atuações como exageradas ou teatrais.",
       "verificacao_narrativa": {
@@ -75519,16 +75510,7 @@ window.ESPECTRO_DATA = {
           "passada": 1,
           "eixo": "impacto_emocional",
           "n_removidas_no_corpus": 2781
-        },
-        "verificacao_pendente": [
-          {
-            "bucket": "positivas",
-            "id": "viewing:1466699858",
-            "eixo": "impacto_emocional",
-            "motivo": "erro_JSONDecodeError",
-            "erro": "JSONDecodeError: Extra data: line 3 column 1 (char 83)"
-          }
-        ]
+        }
       },
       "narrativa": "Dirigido por Béla Tarr e lançado em 2011, o drama O Cavalo de Turim parte do episódio histórico envolvendo o filósofo Friedrich Nietzsche e um animal em Turim no final do século XIX. A partir desse evento, o longa-metragem acompanha o percurso de um camponês, de sua filha e de seu cavalo doente em uma existência miserável.\n\nA experiência do filme se constrói por meio de um ritmo acentuadamente lento e da repetição sistemática de rotinas diárias, estruturadas em planos longos e em uma fotografia em preto e branco. A composição apoia-se em uma atmosfera sonora constante, conduzindo uma ambientação austera voltada a temas existenciais.\n\nEm termos de recepção, os grupos concordam sobre o que o filme é e discordam sobre se ele funciona. Na grande maioria das notas (~85%), uma parcela expressiva defende que o ritmo lento e a repetição intencional compõem uma proposta imersiva sobre a rotina. Da mesma forma, boa parte exalta a fotografia em preto e branco e os planos longos por sua qualidade estética, enquanto vários enfatizam a abordagem sobre o niilismo e o peso da existência como uma reflexão contundente.\n\nNuma fração mínima das notas (~10%), segundo essa avaliação, praticamente todos sentem o ritmo lento e repetitivo como cansativo, embora a maior parte admire a fotografia e a estética visual, com cerca de metade comentando os temas existenciais e o niilismo. Por fim, sob a ótica presente numa fração ainda menor das notas (~5%), quase todos rejeitam o ritmo excessivamente lento e tedioso, enquanto a maior parcela aponta a falta de enredo e desenvolvimento de personagens, e metade deles critica a percepção de pretensão artística e elitismo.",
       "verificacao_narrativa": {
@@ -84589,14 +84571,7 @@ window.ESPECTRO_DATA = {
             "id": "viewing:1414135189",
             "eixo": "impacto_emocional",
             "motivo": "erro_JSONDecodeError",
-            "erro": "JSONDecodeError: Extra data: line 3 column 1 (char 99)"
-          },
-          {
-            "bucket": "positivas",
-            "id": "viewing:1487064786",
-            "eixo": "impacto_emocional",
-            "motivo": "erro_JSONDecodeError",
-            "erro": "JSONDecodeError: Extra data: line 1 column 147 (char 146)"
+            "erro": "JSONDecodeError: Extra data: line 1 column 98 (char 97)"
           }
         ]
       },
