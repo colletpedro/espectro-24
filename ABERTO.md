@@ -171,18 +171,39 @@ foi conferido separadamente.
 ### C3. Instabilidade do verificador de `impacto_emocional` (5 filmes)
 Registrada, não corrigida.
 
-**[2026-09-14] FECHADA PARCIALMENTE (ver C16, rodada 7, para o detalhe
-completo).** Das 12 falhas de JSON originais: **9 receberam veredito real**
-(7 confirmam `impacto_emocional`, 2 removem — `hard-to-be-a-god`/medianas e
-`the-cloud-capped-star`/positivas), com o JSON publicado atualizado e sem
-mudança de contraste/margem/bullet/briefing em nenhuma. **1 tem veredito
-real mas NÃO publicado por decisão do dono** (`speak-no-evil-2022` — a
-remoção mudaria bullets). **2 continuam sem veredito**
-(`whiplash-2014`/medianas e `zama`/negativas) — não por sobrecarga (essa
-causa foi corrigida, C16 rodada 5), mas por `JSONDecodeError` recorrente e
-não determinístico do modelo nessas reviews específicas: a causa de origem
-da C3, que NÃO foi corrigida por este trabalho e permanece aberta. Retentar
-de novo tem chance real de passar (não determinístico), sem garantia.
+**[2026-09-15] ABERTA. O trabalho de 14–15/09 NÃO a fechou: ele corrigiu
+OUTRO mecanismo, que produz o mesmo sintoma.**
+
+Dois mecanismos distintos deixam uma review CONTADA sem veredito do
+verificador (`ok: False`, `impacto_emocional` mantido pela política
+conservadora):
+
+| | (A) sobrecarga do DeepSeek | (B) JSON malformado do verificador |
+|---|---|---|
+| o que acontece | a requisição NÃO É PROCESSADA: HTTP 200 sem `choices`, erro de fila no corpo, depois de ~900 s | a requisição É processada, a resposta chega, mas o conteúdo não parseia (`Extra data`, `Expecting ','`) |
+| visto em | 14/09, C16 rodada 3 (6 de 6 chamadas, e uma de controle) | desde o piloto: as 8 falhas da rodada original e as 14 do piloto — a medição que ABRIU esta C3 |
+| determinismo | estado da fila do provider, afeta qualquer texto | por review: a mesma falha numa rodada e passa em outra, e a posição do erro muda entre tentativas |
+| status | **CORRIGIDO** no adaptador: detecção, prazo de parede, uma retentativa (C16 rodada 5) e disjuntor (rodada 8) | **NÃO corrigido. É esta C3.** |
+
+**Onde isso deixa as 12 reviews que estavam sem veredito em 14/09:**
+- **10 com veredito publicado:** 7 confirmam `impacto_emocional`; 3 removem.
+  As remoções são `hard-to-be-a-god`/medianas, `the-cloud-capped-star`/positivas
+  e `speak-no-evil-2022`/medianas. Esta última foi publicada em 15/09 por
+  decisão do dono e mudou dois bullets.
+- **2 sem veredito, por (B):** `whiplash-2014`/medianas e `zama`/negativas.
+  Falharam de novo com a fila NORMAL (C16 rodada 7), com `JSONDecodeError` em
+  posição diferente da tentativa anterior. Seguem pendentes e marcadas
+  `verificacao_pendente` no JSON publicado. **Não retentadas, por decisão do
+  dono:** sem entender o mecanismo, retentar é rolar o dado — pode passar, e
+  o que se aprende com isso é nada.
+
+**Para fechar esta C3 falta entender (B):** por que o modelo devolve texto
+além do objeto JSON nessas reviews (segundo objeto? comentário depois do
+fechamento? o `alvo` com aspas não escapadas?). Com isso, decidir entre
+corrigir o parsing, o prompt, ou aceitar a taxa medida (0,19%–0,87%) com a
+marca visível. Ler as respostas cruas dessas 2 reviews — hoje não
+persistidas: o registro guarda só a mensagem do `JSONDecodeError` — é o
+primeiro passo.
 
 **Medição nova (piloto de expansão, 2026-09-10) — um segundo mecanismo, da
 mesma família. Não corrigido.**
@@ -1389,6 +1410,90 @@ Suíte ao fim da rodada: 2001 coletados / 1995 passam / 5 falhas conhecidas
 (as mesmas) / 1 xfail. Nenhuma asserção afrouxada; nenhum arquivo novo de
 teste (o método reusa `republicar_eixos.py` e
 `verificador_impacto.aplicar-producao`, já testados).
+
+**Rodada 8 (2026-09-15) — `speak-no-evil-2022` publicado; disjuntor
+implementado.**
+
+**`speak-no-evil-2022`, publicado por decisão do dono.** Manter o JSON antigo
+era preservar uma marcação que só sobreviveu porque uma chamada anterior
+falhou. Remedido antes de gravar (idêntico à rodada 7) e gravado com
+`republicar_eixos.py --aplicar --aceitar-mudanca-de-estado`:
+- `impacto_emocional`, `bullet_de`: `medianas` `frequencia` → **nenhum**
+  (negativas e positivas seguem `frequencia`);
+- `comparacoes`, `bullet_de`: `medianas` nenhum → **`frequencia`**;
+- `impacto_emocional`/medianas 19/40 → 18/40 (lift −20,0 → −22,5 pp);
+- efeito colateral: `impacto_emocional`/positivas continua 27/40, mas o lift
+  vai de 20,0 para 22,5 pp, porque o lift é relativo aos outros buckets. Isso
+  deixa a célula **0,33 pp abaixo da margem de 22,83 pp**, e
+  `acima_da_margem` segue `False` — a célula mais perto de cruzar entre os
+  filmes tocados nesta sessão;
+- contraste (`valorativo`), `n` (40) e os briefings de narrativa, veredito e
+  condições idênticos — as condições revisadas à mão continuam valendo;
+- `verificador.n_removidas_no_corpus` 2781 → 2784, correto pela regra da
+  rodada 6: as contagens do filme mudaram;
+- conferido por hash: 113 de 114 arquivos publicados (`resultado/*.json`,
+  `frontend/data/*.json`, consenso verificado, manifesto) idênticos; só o
+  JSON do próprio filme mudou.
+
+**Disjuntor do DeepSeek — implementado com o desenho aprovado.**
+- estado em ARQUIVO (`config.CIRCUITO_ARQUIVO` = `dados/lote/circuito_deepseek.json`,
+  já no `.gitignore`), porque o lote de publicação roda um subprocesso por
+  filme e um disjuntor em memória recomeçaria fechado a cada um;
+- abre em 3 `LLMSobrecarga` SEGUIDAS (`CIRCUITO_LIMIAR_SOBRECARGAS`),
+  contadas depois da retentativa do adaptador e globalmente, entre threads e
+  processos. `LLMPrazoExcedido` NÃO conta; qualquer resposta válida zera a
+  contagem;
+- escopo global, não por estágio: o portão fica em `deepseek_resposta`, por
+  onde passam classificação, rotulagem, verificador e síntese;
+- aberto, toda chamada DeepSeek falha na hora com `LLMCircuitoAberto`, sem
+  tocar a rede e sem entrar na retentativa;
+- reabertura por sonda com prazo FIXO de 5 min (`CIRCUITO_REABERTURA_S`).
+  Vencido o prazo, a chamada passa de verdade: se responde, fecha; se volta
+  `LLMSobrecarga`, reabre por mais 5 min, mantendo `aberto_desde`. Sem
+  exponencial nesta versão: não há dado sobre duração de sobrecarga, e a
+  latência só agora é gravada;
+- a falha por disjuntor aberto usa o mecanismo que já existia:
+  - no verificador vira `ok: False` com motivo `circuito_aberto`
+    (`_motivo_pendencia`) e marca `verificacao_pendente`;
+  - na classificação vira `ok: False` com o motivo no erro;
+  - na rotulagem, a subclasse de `LLMIndisponivel` impede empilhar
+    retentativas;
+  - na síntese, o filme falha alto, como em qualquer sobrecarga;
+  - nada é abortado e nada se perde: a reexecução retenta só o pendente;
+- abertura, reabertura e fechamento são avisados no stderr, que o harness
+  grava no log de publicação;
+- escrita atômica (temporário + `os.replace`) sem lock de arquivo entre
+  processos, com `threading.Lock` dentro do processo. O trade-off está
+  registrado em comentário no código: corrida rara produz log ruidoso (uma
+  sobrecarga não contada, um aviso duplicado), nunca dado incorreto. No lote
+  de publicação os filmes rodam em sequência, então a corrida nem acontece
+  ali;
+- arquivo ausente ou ilegível = FECHADO: defeito no disjuntor nunca barra
+  tráfego sozinho; sucesso com estado limpo não escreve no disco.
+
+**Isolamento de teste.** Como o estado é arquivo, ele também valeria entre
+TESTES: três testes de sobrecarga seguidos abririam o disjuntor real e
+quebrariam todo teste seguinte — e a próxima execução de produção. Um fixture
+autouse em `tests/conftest.py` dá a cada teste um arquivo próprio. Conferido:
+`dados/lote/circuito_deepseek.json` não existe antes nem depois da suíte
+inteira.
+
+Testes: `tests/test_disjuntor_deepseek.py` (16), sobre o SDK real da OpenAI
+com transporte falso. Cobrem:
+- abre em 3 seguidas, não em 2, e aberto não chama a rede;
+- NÃO abre com `LLMPrazoExcedido`;
+- sucesso zera a contagem e, com estado limpo, não escreve no disco;
+- o estado sobrevive entre processos: abre num subprocesso e barra no outro;
+  a contagem soma entre processos;
+- antes do prazo segue barrado; a sonda que responde fecha, e a que volta
+  sobrecarga reabre por mais um prazo;
+- com disjuntor aberto, o verificador marca `circuito_aberto` e a
+  reexecução retenta só o pendente; a classificação grava `ok: False`;
+- o arquivo mora em `dados/lote/` e o git o ignora; a escrita não deixa
+  temporário e um arquivo corrompido vale fechado.
+
+Nenhuma asserção afrouxada. Suíte: 2017 coletados / 2011 passam / 5 falhas
+conhecidas (as mesmas) / 1 xfail.
 
 ### C17. Referências quebradas após `docs/arquivo-de-estudos/` sair do git (2026-09-14)
 

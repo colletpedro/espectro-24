@@ -30,12 +30,18 @@ import json
 import os
 import random
 import re
+import sys
 import threading
 import time
+from datetime import datetime, timezone
+from pathlib import Path
 
 from .config import (
     BUCKETS,
     BUCKET_ALVO,
+    CIRCUITO_ARQUIVO,
+    CIRCUITO_LIMIAR_SOBRECARGAS,
+    CIRCUITO_REABERTURA_S,
     FALLBACK_CONTEUDO_MAX_TOKENS_JSON,
     FALLBACK_CONTEUDO_MODELO,
     FALLBACK_CONTEUDO_PROVIDER,
@@ -191,6 +197,13 @@ class LLMSobrecarga(LLMIndisponivel):
 class LLMPrazoExcedido(LLMIndisponivel):
     """A tentativa passou de `LLM_PRAZO_PAREDE_S`. A chamada continua numa
     thread em segundo plano e a resposta, se vier, é descartada."""
+
+
+class LLMCircuitoAberto(LLMIndisponivel):
+    """[2026-09-15] O disjuntor do DeepSeek está aberto: a chamada NEM SAIU.
+    Levantada antes da retentativa — falhar rápido é o objetivo inteiro. A
+    mensagem começa com `circuito_aberto:`, que é o motivo que o registro de
+    falha e a marca `verificacao_pendente` carregam."""
 
 
 class LLMRespostaComErro(LLMError):
@@ -463,11 +476,21 @@ def deepseek_resposta(system: str, user: str, model: str, *, max_tokens: int,
     # motivo real (`_resposta_deepseek_valida`), que `_com_retentativa`
     # reconhece. Os dois ficam DENTRO da tentativa — a retentativa continua
     # tendo uma implementação só.
-    return _com_retentativa(
-        "deepseek", model,
-        lambda: _resposta_deepseek_valida(_com_prazo_de_parede(
-            lambda: client.chat.completions.create(**kwargs),
-            LLM_PRAZO_PAREDE_S, "deepseek", model)))
+    # [2026-09-15] O disjuntor fica FORA da retentativa, nas duas pontas:
+    # barra antes (aberto = a chamada nem sai) e conta depois (só o
+    # `LLMSobrecarga` FINAL, já retentado, conta como uma sobrecarga).
+    _circuito_barrar(model)
+    try:
+        resp = _com_retentativa(
+            "deepseek", model,
+            lambda: _resposta_deepseek_valida(_com_prazo_de_parede(
+                lambda: client.chat.completions.create(**kwargs),
+                LLM_PRAZO_PAREDE_S, "deepseek", model)))
+    except LLMSobrecarga as e:
+        _circuito_registrar_sobrecarga(str(e))
+        raise
+    _circuito_registrar_sucesso()
+    return resp
 
 
 # A assinatura da fila cheia, como o DeepSeek a devolveu em 2026-09-14. Prefixo,
@@ -524,6 +547,122 @@ def _com_prazo_de_parede(chamada, prazo_s: float, provider: str, model: str):
     if "erro" in caixa:
         raise caixa["erro"]
     return caixa["resposta"]
+
+
+# ===========================================================================
+# DISJUNTOR do DeepSeek (2026-09-15, ABERTO.md C16 rodada 8)
+# ===========================================================================
+# Parâmetros e o porquê de cada um: `config.CIRCUITO_*`. O estado mora em
+# ARQUIVO (`CIRCUITO_ARQUIVO`) porque o lote de publicação roda um subprocesso
+# por filme; um disjuntor em memória recomeçaria fechado a cada um.
+#
+# Estado: `{provider, seguidas, aberto, aberto_desde, reabre_em,
+# reabre_em_epoch, ultimo_motivo, atualizado_em}`. Arquivo ausente ou
+# ilegível = FECHADO: a falha do disjuntor nunca pode barrar tráfego sozinha.
+#
+# TRADE-OFF DECLARADO (decisão do dono, 2026-09-15): escrita ATÔMICA
+# (temporário + `os.replace`) e SEM lock de arquivo entre processos. Dentro
+# de um processo, um `threading.Lock` serializa a leitura-modificação-escrita
+# das 8 threads dos scripts de lote. ENTRE processos, duas escritas quase
+# simultâneas podem se sobrepor: uma sobrecarga deixa de ser contada (o
+# disjuntor abre uma chamada depois) ou a mensagem de abertura sai duas vezes
+# no log. Isso produz LOG RUIDOSO, nunca DADO INCORRETO: o disjuntor só decide
+# se uma chamada sai; toda unidade barrada vira `ok: False` / pendente pelo
+# mecanismo de sempre, e a reexecução a retenta. `os.replace` garante que
+# nenhum leitor vê um JSON pela metade. O lote de publicação, que é o caso dos
+# 300, roda os filmes em SEQUÊNCIA — a corrida entre processos nem acontece
+# nele.
+#
+# A sonda também não tem lock: depois de `reabre_em`, TODA chamada que chegar
+# passa de verdade até alguém gravar o resultado. Com 8 threads, até 8 sondas
+# simultâneas — custo limitado, e o mesmo resultado para todas.
+
+_lock_circuito = threading.Lock()
+
+
+def _iso(epoch: float) -> str:
+    return datetime.fromtimestamp(epoch, timezone.utc).isoformat(timespec="seconds")
+
+
+def _circuito_ler() -> dict:
+    try:
+        estado = json.loads(Path(CIRCUITO_ARQUIVO).read_text(encoding="utf-8"))
+    except (OSError, ValueError):
+        return {}
+    return estado if isinstance(estado, dict) else {}
+
+
+def _circuito_gravar(estado: dict) -> None:
+    arq = Path(CIRCUITO_ARQUIVO)
+    arq.parent.mkdir(parents=True, exist_ok=True)
+    tmp = arq.with_name(f".{arq.name}.{os.getpid()}.{threading.get_ident()}.tmp")
+    tmp.write_text(json.dumps(estado, ensure_ascii=False, indent=1),
+                   encoding="utf-8")
+    os.replace(tmp, arq)
+
+
+def estado_circuito() -> dict:
+    """O estado do disjuntor como está no disco — `{}` quando fechado e limpo."""
+    return _circuito_ler()
+
+
+def _circuito_barrar(model: str) -> None:
+    """Levanta `LLMCircuitoAberto` se o disjuntor está aberto e a sonda ainda
+    não venceu. Vencida, deixa a chamada passar: ela É a sonda."""
+    estado = _circuito_ler()
+    if not estado.get("aberto"):
+        return
+    if time.time() >= float(estado.get("reabre_em_epoch") or 0):
+        return
+    raise LLMCircuitoAberto(
+        f"circuito_aberto: deepseek/{model} — disjuntor aberto desde "
+        f"{estado.get('aberto_desde')} após {estado.get('seguidas')} "
+        f"sobrecargas seguidas; sonda em {estado.get('reabre_em')} "
+        f"(último motivo: {str(estado.get('ultimo_motivo', ''))[:160]})")
+
+
+def _circuito_registrar_sobrecarga(motivo: str) -> None:
+    """Uma chamada terminou em `LLMSobrecarga`: soma, e abre (ou reabre, se
+    era a sonda) ao atingir o limiar."""
+    with _lock_circuito:
+        anterior = _circuito_ler()
+        agora = time.time()
+        seguidas = int(anterior.get("seguidas") or 0) + 1
+        abrir = seguidas >= CIRCUITO_LIMIAR_SOBRECARGAS
+        estado = {"provider": "deepseek", "seguidas": seguidas, "aberto": abrir,
+                  "ultimo_motivo": motivo[:300], "atualizado_em": _iso(agora)}
+        if abrir:
+            estado["aberto_desde"] = (anterior.get("aberto_desde")
+                                      if anterior.get("aberto") else _iso(agora))
+            estado["reabre_em_epoch"] = agora + CIRCUITO_REABERTURA_S
+            estado["reabre_em"] = _iso(estado["reabre_em_epoch"])
+        _circuito_gravar(estado)
+    if abrir:
+        verbo = "REABERTO (a sonda voltou sobrecarga)" if anterior.get("aberto") else "ABERTO"
+        print(f"⚠️  DISJUNTOR DO DEEPSEEK {verbo} após {seguidas} sobrecargas "
+              f"seguidas — toda chamada DeepSeek falha na hora até a sonda em "
+              f"{estado['reabre_em']}.", file=sys.stderr)
+
+
+def _circuito_registrar_sucesso() -> None:
+    """Uma resposta válida: zera a contagem e fecha. Sem estado a limpar, não
+    escreve nada — o caminho de milhares de chamadas não toca o disco."""
+    if not _circuito_precisa_limpar(_circuito_ler()):
+        return
+    with _lock_circuito:
+        anterior = _circuito_ler()
+        if not _circuito_precisa_limpar(anterior):
+            return
+        _circuito_gravar({"provider": "deepseek", "seguidas": 0, "aberto": False,
+                          "fechado_por": "resposta_valida",
+                          "atualizado_em": _iso(time.time())})
+    if anterior.get("aberto"):
+        print("✓ disjuntor do DeepSeek FECHADO: a sonda respondeu.",
+              file=sys.stderr)
+
+
+def _circuito_precisa_limpar(estado: dict) -> bool:
+    return bool(estado.get("seguidas") or estado.get("aberto"))
 
 
 def deepseek_uso(resp) -> dict:

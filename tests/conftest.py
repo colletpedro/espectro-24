@@ -5,6 +5,8 @@ import sys
 from pathlib import Path
 from types import SimpleNamespace
 
+import pytest
+
 ROOT = Path(__file__).resolve().parent.parent
 SRC = ROOT / "src"
 FIXTURES = ROOT / "fixtures"
@@ -50,6 +52,25 @@ def histograma_de_contagens(**por_bucket: int) -> dict[float, int]:
 # maior parte das asserções de prosa (rótulo de peso "~79%", marcação
 # "antecipada" para 3%) foi escrita ao longo das versões v1.4.0–v1.8.2.
 CONTAGENS_3_17_79 = {"negativas": 345, "medianas": 1725, "positivas": 7930}
+
+
+@pytest.fixture(autouse=True)
+def _disjuntor_deepseek_isolado(tmp_path, monkeypatch):
+    """[2026-09-15] O disjuntor do DeepSeek guarda estado em ARQUIVO
+    (`config.CIRCUITO_ARQUIVO`, em `dados/lote/`) — é o que o faz valer entre
+    processos. Isso também o faz valer entre TESTES: sem este fixture, três
+    testes de sobrecarga seguidos abririam o disjuntor REAL do repositório, e
+    todo teste seguinte que chama `deepseek_resposta` falharia com
+    `LLMCircuitoAberto` — e a próxima execução de produção também.
+
+    Cada teste recebe um arquivo próprio, vazio (= fechado). Não é
+    configuração de teste afrouxando nada: é isolamento de um efeito colateral
+    de disco, do mesmo tipo que o bloqueio de `load_dotenv` em
+    `test_contrato_falha_lote_classificacao.py`.
+    """
+    from espectro24 import synthesize as S
+
+    monkeypatch.setattr(S, "CIRCUITO_ARQUIVO", tmp_path / "circuito_deepseek.json")
 
 
 class FakeFetcher:

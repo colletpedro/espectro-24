@@ -884,7 +884,12 @@ def _motivo_pendencia(erro: str) -> dict:
     """O motivo de uma candidata ter ficado sem veredito, a partir do `erro`
     gravado no registro de falha — a recusa de conteúdo separada do resto,
     porque é a que o fallback deveria ter resolvido."""
-    if erro.startswith("FallbackDeConteudoFalhou"):
+    if erro.startswith("LLMCircuitoAberto"):
+        # [2026-09-15] O disjuntor do DeepSeek estava aberto: a chamada nem
+        # saiu. Motivo próprio, porque é o único pendente que se resolve
+        # sozinho quando a fila volta — reexecutar retenta só ele.
+        motivo = "circuito_aberto"
+    elif erro.startswith("FallbackDeConteudoFalhou"):
         motivo = "recusa_de_conteudo_e_fallback_falhou"
     elif MOTIVO_RECUSA_CONTEUDO in erro:
         motivo = "recusa_de_conteudo"

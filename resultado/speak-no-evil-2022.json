@@ -1232,10 +1232,10 @@
             "temas_no_mesmo_eixo": []
           },
           "medianas": {
-            "mencoes": 19,
+            "mencoes": 18,
             "de_n": 40,
-            "freq_pct": 47.5,
-            "lift_pp": -20.0,
+            "freq_pct": 45.0,
+            "lift_pp": -22.5,
             "acima_da_margem": false,
             "tema": "Final impactante e controverso",
             "exemplo_parafraseado": "O desfecho é descrito como brutal, chocante ou excessivamente niilista, dividindo opiniões entre os que o consideram eficaz e os que o acham gratuito ou pouco crível.",
@@ -1245,7 +1245,7 @@
             "mencoes": 27,
             "de_n": 40,
             "freq_pct": 67.5,
-            "lift_pp": 20.0,
+            "lift_pp": 22.5,
             "acima_da_margem": false,
             "tema": null,
             "exemplo_parafraseado": null,
@@ -1254,7 +1254,7 @@
         },
         "bullet_de": {
           "negativas": "frequencia",
-          "medianas": "frequencia",
+          "medianas": null,
           "positivas": "frequencia"
         }
       },
@@ -1294,7 +1294,7 @@
         },
         "bullet_de": {
           "negativas": null,
-          "medianas": null,
+          "medianas": "frequencia",
           "positivas": null
         }
       },
@@ -1392,17 +1392,8 @@
       "variante": "V2_alvo",
       "passada": 1,
       "eixo": "impacto_emocional",
-      "n_removidas_no_corpus": 2781
-    },
-    "verificacao_pendente": [
-      {
-        "bucket": "medianas",
-        "id": "viewing:1477019671",
-        "eixo": "impacto_emocional",
-        "motivo": "erro_JSONDecodeError",
-        "erro": "JSONDecodeError: Extra data: line 3 column 1 (char 118)"
-      }
-    ]
+      "n_removidas_no_corpus": 2784
+    }
   },
   "narrativa": "Lançado em 2022 e dirigido por Christian Tafdrup, o longa-metragem de terror, suspense e drama Não Fale o Mal acompanha uma família dinamarquesa que passa férias na Toscana. Após fazerem amizade com uma família holandesa, eles aceitam o convite para passar um fim de semana na residência dos novos conhecidos, até que uma sucessão de mal-entendidos revela que os anfitriões não são quem pareciam ser.\n\nA experiência é estruturada sobre um ritmo lento e gradual, estabelecendo uma atmosfera densa pautada pelo acúmulo contínuo de tensão psicológica e desconforto.\n\nOs registros indicam que as diferentes faixas de avaliação debatem os mesmos temas centrais, discordando estritamente no veredito sobre o funcionamento da produção. Na maioria das notas (~61%), uma parcela expressiva ressalta o clima constante de desconforto e tensão ao longo da narrativa. Ao mesmo tempo, boa parte desse grupo examina a postura passiva e a extrema polidez dos protagonistas diante das situações, enquanto um número considerável salienta o desfecho impactante e brutal.\n\nPara quem se posiciona numa parcela das notas (~28%), a maior parte critica a passividade excessiva dos personagens principais e a aparente falta de instinto de sobrevivência. Ainda assim, muitos destacam de forma positiva as atuações e os aspectos técnicos, ao passo que vários apontam o ritmo lento e a construção do desconforto. Já sob a ótica de uma fração mínima das notas (~11%), a maior parcela reprova o comportamento dos personagens por julgá-los desprovidos de instinto, cerca de metade vê o roteiro como forçado e ilógico, e muitos avaliam o final como pretensioso e insatisfatório.",
   "verificacao_narrativa": {

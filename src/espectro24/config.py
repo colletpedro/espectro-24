@@ -682,6 +682,40 @@ LLM_RETENTATIVAS_INDISPONIVEL = 1
 # dos 900 s de uma fila parada (e aí a retentativa falha rápido).
 LLM_BACKOFF_INDISPONIVEL_S = 30.0
 
+# [2026-09-15] DISJUNTOR do DeepSeek (ABERTO.md C16, rodada 8). Com a fila
+# parada, cada unidade gasta ~3,5 min (90 + 30 + 90) até falhar; na expansão
+# de 300 filmes isso trava o pipeline por horas produzindo nada. O disjuntor
+# troca esse custo por unidade por um custo ÚNICO: depois de
+# `CIRCUITO_LIMIAR_SOBRECARGAS` chamadas SEGUIDAS terminando em
+# `LLMSobrecarga` — já depois da retentativa do adaptador —, toda chamada
+# DeepSeek falha na hora com `LLMCircuitoAberto`, em qualquer thread e em
+# qualquer processo, até a sonda de reabertura.
+#
+# Só `LLMSobrecarga` conta: é o provider DECLARANDO a fila cheia. O prazo de
+# parede (`LLMPrazoExcedido`) é suposição NOSSA e pode ser prompt grande
+# legítimo — contá-lo abriria o disjuntor com lentidão que não é sobrecarga.
+# 3, porque com a retentativa interna são 6 chamadas reais recusadas antes de
+# abrir (~6 min de confirmação, pagos UMA vez no sistema inteiro). Qualquer
+# resposta válida zera a contagem. Escopo GLOBAL, não por estágio: a fila é
+# do provider — classificação, rotulagem, verificador e síntese batem no
+# mesmo endpoint da mesma conta.
+CIRCUITO_LIMIAR_SOBRECARGAS = 3
+# Aberto, o disjuntor deixa passar chamada de verdade (a sonda) depois deste
+# prazo: se ela responde, fecha; se volta `LLMSobrecarga`, reabre por mais um
+# prazo. FIXO nesta versão — não há dado sobre a duração típica de uma
+# sobrecarga, e a latência só agora passou a ser gravada; exponencial fica
+# para a v2, com dado real (decisão do dono).
+CIRCUITO_REABERTURA_S = 300
+# Em ARQUIVO, não em memória: `publicar_catalogo.py` roda cada filme num
+# SUBPROCESSO novo, e um disjuntor em memória recomeçaria fechado a cada
+# filme — não protegeria justamente o lote dos 300. `dados/lote/` já está no
+# `.gitignore` como estado local de uma rodada. Caminho ABSOLUTO (raiz do
+# repositório), para valer igual de qualquer diretório de trabalho.
+from pathlib import Path as _Path  # noqa: E402
+
+CIRCUITO_ARQUIVO = (_Path(__file__).resolve().parents[2]
+                    / "dados" / "lote" / "circuito_deepseek.json")
+
 
 def nota_para_url(n: float) -> str:
     """Formato decimal da nota na URL (§2.1): 3.0 -> '3', 3.5 -> '3.5'."""
