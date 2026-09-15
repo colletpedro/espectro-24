@@ -171,6 +171,12 @@ foi conferido separadamente.
 ### C3. Instabilidade do verificador de `impacto_emocional` (5 filmes)
 Registrada, não corrigida.
 
+**[2026-09-14] Continua ABERTA.** A retentativa filme a filme das 12
+falhas de JSON (C16, rodada 3) parou em 6 de 11 filmes por sobrecarga do
+DeepSeek, e nenhuma das 12 recebeu veredito novo. As 6 retentadas estão
+marcadas `verificacao_pendente` no JSON publicado; as outras 6 reviews (5
+filmes), só no consenso verificado.
+
 **Medição nova (piloto de expansão, 2026-09-10) — um segundo mecanismo, da
 mesma família. Não corrigido.**
 
@@ -1075,6 +1081,124 @@ Testes da rodada: +12 em `test_fallback_conteudo.py`; `ALVOS_LLM` ganhou
 `resposta_json_com_fallback` (aperta, pelo mesmo motivo). Nenhuma asserção
 afrouxada. Suíte: 1977 coletados / 1971 passam / 5 falhas conhecidas / 1
 xfail.
+
+**Rodada 3 (2026-09-14) — retentativa filme a filme das 12 reviews sem
+verificação. PARADA em 6 de 11 filmes: o DeepSeek não processou nenhuma
+chamada.**
+
+**Método** (decisão do dono: retentar não restaura um valor — produz um
+veredito novo, que pode remover a marcação):
+- por filme, na ordem: `verificador_impacto.py aplicar-producao --slug X`;
+- conferência de `consenso_verificado.jsonl` contra um snapshot anterior,
+  por hash de filme e por linha: só as linhas dos ids retentados podem
+  mudar;
+- `scripts/republicar_eixos.py` (novo): regrava SÓ o bloco `eixos`, com
+  zero LLM e zero rede. As frases das células são relidas do publicado
+  (`eixos.temas_do_bloco`, extraído de `aplicar_lei_margem.py`), e a
+  proveniência vem de `pipeline.anexar_proveniencia` (extraído de
+  `montar_eixos`). Ele mede contraste, células cruzando a margem, bullets,
+  `n` e os briefings de narrativa/veredito/condições, e RECUSA gravar se
+  qualquer um mudar. Preserva o fim de arquivo do original.
+- Sanidade antes da primeira chamada: `burning-2018` e
+  `a-brighter-summer-day` remontam byte a byte iguais ao publicado; nos 11
+  filmes, a única diferença era a marca nova.
+
+**Resultado** — `drive-my-car`, `force-majeure-2014`, `hard-to-be-a-god`,
+`memories-of-murder`, `pinocchio-2022`, `satantango`:
+- as 6 retentativas FALHARAM, e nenhuma produziu veredito;
+- nenhum estado publicado mudou: contraste, margem, bullets, contagens e os
+  três briefings idênticos;
+- cada filme foi republicado só com `verificacao_pendente` (10 linhas de
+  diff por arquivo);
+- consenso verificado: 6 linhas alteradas (só o motivo da pendência, de
+  `erro_JSONDecodeError` para `erro_TypeError`); 49 de 55 filmes com hash
+  idêntico ao snapshot, e os outros 6 são exatamente os retentados.
+
+**Causa, medida com a resposta crua:** sobrecarga do DeepSeek. A resposta
+chega com HTTP 200 depois de ~900 s, sem `choices`, e com o corpo
+`{"error": {"message": "We were unable to start processing your request
+within the 900-second timeout limit. Please try again later."}}`.
+Reproduzido na review que falhou (902 s) e numa review de CONTROLE que já
+tinha veredito (`viewing:1437760141`, 901 s) — a mesma resposta. Não é o
+texto das reviews; é a fila do provider.
+
+**Três achados do adaptador, NÃO corrigidos:**
+1. A sobrecarga vem como 200, não como 5xx, então `_com_retentativa` não a
+   vê como transporte. O acesso a `choices[0]` vira
+   `TypeError: 'NoneType' object is not subscriptable` — é o motivo gravado
+   nas 6 marcas: verdadeiro, mas não diz a causa.
+2. O timeout de 180 s do SDK não protege: a conexão fica aberta ~900 s,
+   porque o servidor a mantém viva enquanto a requisição espera na fila.
+3. O mesmo vale para classificação e síntese: com o DeepSeek neste estado,
+   o pipeline inteiro espera 15 min por chamada antes de falhar.
+
+**NÃO rodados:** `speak-no-evil-2022`, `the-cloud-capped-star`,
+`the-turin-horse`, `whiplash-2014` e `zama` (6 reviews).
+
+**Pendência de instabilidade do V2_alvo (C3): NÃO fechada.**
+
+Testes da rodada: +8 em `tests/test_republicar_eixos.py` (LLM e rede
+envenenados). Suíte: 1985 coletados / 1979 passam / 5 falhas conhecidas / 1
+xfail.
+
+**Rodada 4 (2026-09-14) — decisão do dono: marcar os 5 restantes SEM
+retentar.** Com o DeepSeek nesse estado, retentar custaria ~900 s por review
+para receber o mesmo erro; a transparência (marca visível) é o que importa
+agora, não o resultado da chamada. `consenso_verificado.jsonl` já carregava
+`verificacao_pendente` para essas 6 reviews desde a escrita global da rodada
+2 (que sempre cobre o consenso inteiro, independente de `--slug`) — só o
+JSON PUBLICADO ainda não refletia isso. Rodado `republicar_eixos.py --slug X`
+(medir, depois aplicar) nos 5 filmes, ZERO chamada ao verificador:
+
+- os 5 confirmam `estado_publicado_mudou: false` — só a marca entra;
+- **`speak-no-evil-2022`, com atenção redobrada:** contraste `valorativo` →
+  `valorativo`, n 40 → 40, zero células cruzando margem, zero bullets, zero
+  briefing mudando. Correto: SEM retentativa a marcação de
+  `impacto_emocional` não muda, então nada que dependa dela pode mudar;
+- `zama` carrega as 2 pendências (`negativas`/`viewing:1414135189` e
+  `positivas`/`viewing:1487064786`), os outros 4 filmes uma cada.
+
+**Estado final: as 12 reviews (11 filmes) estão marcadas
+`verificacao_pendente` no JSON publicado** — 6 com motivo `erro_TypeError`
+(retentadas na rodada 3, contra o DeepSeek sobrecarregado) e 6 com
+`erro_JSONDecodeError` (marcadas sem retentar, rodada 4). Nenhuma foi
+verificada de fato; nenhum estado publicado mudou em nenhuma.
+
+### C17. Referências quebradas após `docs/arquivo-de-estudos/` sair do git (2026-09-14)
+
+O commit que removeu `galeria-de-stills/`, `piloto-expansao/` e
+`revisao-condicoes/` do rastreamento (política da sessão: estudo fica
+untracked) deixou os arquivos no disco, mas nada no repositório versionado
+os garante presentes num clone limpo. **Dívida conhecida, não corrigida —
+não é regressão desta sessão**, já existia antes: esses três diretórios só
+entraram no git por engano no commit anterior, e as referências abaixo já
+apontavam para caminhos untracked antes disso.
+
+**Sete referências em `ABERTO.md`** apontam para arquivos que só existem no
+disco de quem rodou a sessão: linhas 252, 541, 551, 554, 716, 755 e 1063
+(nesta numeração) — `ETAPA_0_PROPOSTA.md`, `RELATORIO_piloto-18.md`,
+`lote-piloto-18-corrigido/`, `PROPOSTA_POS_REVISAO_PILOTO_18.md`,
+`ROTULAGEM_PARES_piloto-18.md`, `ROTULAGEM_PARES_catalogo-35.md` e
+`insumo-proximo-lote/`. As linhas 252 e 541 já se declaravam "untracked" —
+a numeração muda a cada edição do arquivo, o texto não.
+
+**Quatro testes dependem desses arquivos** e, num clone limpo, falham ou são
+pulados (o mesmo que já acontecia antes desta sessão tocar o repositório):
+`test_aplicar_revisao_condicoes.py`, `test_pares_para_rotulagem.py`,
+`test_publicar_condicoes.py`, `test_relatorio_revisao_condicoes.py`.
+
+**Dois scripts gravam nesses diretórios por padrão:**
+`pares_para_rotulagem.py` e `relatorio_revisao_condicoes.py`
+(`revisao-condicoes/`).
+
+**O `.gitignore` cobre só os três diretórios, de propósito** — um padrão
+para `docs/arquivo-de-estudos/` inteiro ignoraria as 7 subpastas já
+rastreadas desde `85a8f11` (`aceite-e-mapa`, `classificacao`, `coleta`,
+`condicoes-de-decisao`, `editor-e-narrador`, `margem-de-lift` — que inclui
+`ESTUDO_MARGEM_20PP.md`, a referência viva — e `spec-estrutura`).
+
+**Não corrigido nesta sessão** — nem os caminhos, nem os testes, nem os
+scripts. Decisão do dono: registrar, não consertar.
 
 ---
 

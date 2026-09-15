@@ -122,6 +122,30 @@ def carregar_classificacao(caminho: str | Path,
     return fora
 
 
+def temas_do_bloco(bloco: dict) -> dict[str, dict[str, dict]]:
+    """`{bucket: {eixo: {tema, exemplo_parafraseado, temas_no_mesmo_eixo}}}`
+    remontado de um bloco `eixos` JÁ PUBLICADO — o formato que `montar_bloco`
+    recebe como `temas_por_eixo`.
+
+    É o que permite recalcular o bloco sem LLM: as frases de §[D3] não são
+    reescritas, são RELIDAS. Extraído de `scripts/aplicar_lei_margem.py`
+    (2026-09-14), que o usava sozinho, para que a republicação por retentativa
+    do verificador (`scripts/republicar_eixos.py`) use a MESMA regra — uma
+    regra, uma implementação.
+    """
+    fora: dict[str, dict[str, dict]] = {}
+    for linha in bloco.get("linhas") or []:
+        for bucket, cel in (linha.get("por_bucket") or {}).items():
+            if cel.get("tema") is None and not cel.get("temas_no_mesmo_eixo"):
+                continue
+            fora.setdefault(bucket, {})[linha["eixo"]] = {
+                "tema": cel.get("tema"),
+                "exemplo_parafraseado": cel.get("exemplo_parafraseado"),
+                "temas_no_mesmo_eixo": list(cel.get("temas_no_mesmo_eixo") or []),
+            }
+    return fora
+
+
 def proveniencia_por_review(caminho: str | Path, slug: str
                             ) -> dict[str, dict[str, dict[str, Any]]]:
     """[2026-09-14] `{bucket: {id: marcas}}` das reviews de `slug` cuja

@@ -63,21 +63,12 @@ def _slugs() -> list[str]:
                   if json.loads(p.read_text(encoding="utf-8")).get("eixos"))
 
 
-def _temas_do_publicado(bloco: dict) -> dict:
-    """`{bucket: {eixo: {tema, exemplo_parafraseado, temas_no_mesmo_eixo}}}`
-    remontado do bloco JÁ PUBLICADO. É isto que garante zero LLM: as frases de
-    §[D3] não são reescritas, são relidas."""
-    fora: dict[str, dict[str, dict]] = {}
-    for linha in bloco.get("linhas") or []:
-        for bucket, cel in (linha.get("por_bucket") or {}).items():
-            if cel.get("tema") is None and not cel.get("temas_no_mesmo_eixo"):
-                continue
-            fora.setdefault(bucket, {})[linha["eixo"]] = {
-                "tema": cel.get("tema"),
-                "exemplo_parafraseado": cel.get("exemplo_parafraseado"),
-                "temas_no_mesmo_eixo": list(cel.get("temas_no_mesmo_eixo") or []),
-            }
-    return fora
+# `{bucket: {eixo: {tema, exemplo_parafraseado, temas_no_mesmo_eixo}}}`
+# remontado do bloco JÁ PUBLICADO. É isto que garante zero LLM: as frases de
+# §[D3] não são reescritas, são relidas. [2026-09-14] Movido para
+# `eixos.temas_do_bloco` — agora também usado por `republicar_eixos.py`; o
+# nome antigo continua apontando para a implementação única.
+_temas_do_publicado = E.temas_do_bloco
 
 
 def _briefing_antigo(doc: dict) -> dict | None:

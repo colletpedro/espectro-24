@@ -8,7 +8,8 @@
   "n_verificadas": 5832,
   "n_falharam": 12,
   "pendentes_por_motivo": {
-    "erro_JSONDecodeError": 12
+    "erro_JSONDecodeError": 6,
+    "erro_TypeError": 6
   },
   "n_fallback_conteudo": 1,
   "n_removidas": 2781,

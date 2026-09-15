@@ -18368,7 +18368,16 @@ window.ESPECTRO_DATA = {
           "passada": 1,
           "eixo": "impacto_emocional",
           "n_removidas_no_corpus": 2781
-        }
+        },
+        "verificacao_pendente": [
+          {
+            "bucket": "negativas",
+            "id": "viewing:1311567647",
+            "eixo": "impacto_emocional",
+            "motivo": "erro_TypeError",
+            "erro": "TypeError: 'NoneType' object is not subscriptable"
+          }
+        ]
       },
       "narrativa": "Lançado em 2021 sob a direção de Ryusuke Hamaguchi, o drama Drive My Car acompanha Yusuke Kafuku dois anos após a morte de sua esposa. Convidado para dirigir uma peça em um festival de teatro na cidade de Hiroshima, ele conhece Misaki, uma jovem reservada indicada para ser sua motorista. Convivendo no trajeto cotidiano, o protagonista é levado a confrontar o mistério de sua antiga parceira que ainda o assombra.\n\nA experiência da obra se caracteriza por uma condução em ritmo lento ao longo de quase três horas de duração, estruturada em diálogos prolongados e uma atmosfera de contemplação.\n\nOs diferentes grupos concordam sobre o que o filme é e discordam fundamentalmente sobre se ele funciona. Na grande maioria das notas (~87%), a maior parte enfatiza o tratamento do luto e da culpa ao longo da narrativa. Nesse mesmo conjunto, uma parcela expressiva destaca o vínculo desenvolvido entre Kafuku e Misaki, ao passo que muitos tecem elogios à fotografia e ao rigor estético da composição visual.\n\nSob a ótica de quem se encontra numa fração mínima das notas (~10%), a maioria aponta incômodo diante da duração excessiva e do ritmo lento do longa-metragem. Apesar dessa ressalva, boa parte desse grupo ressalta os méritos da fotografia e da estética, enquanto alguns reconhecem a qualidade das atuações e a profundidade emocional.\n\nPor fim, para quem se posiciona numa fração ainda menor das notas (~3%), cerca de metade rejeita o andamento lento e a extensão da produção. Dentro desse segmento, um número considerável reclama da aparente falta de emoção e de atuações apáticas, enquanto vários criticam a presença de um roteiro confuso estruturado em diálogos prolongados.",
       "verificacao_narrativa": {
@@ -26149,7 +26158,16 @@ window.ESPECTRO_DATA = {
           "passada": 1,
           "eixo": "impacto_emocional",
           "n_removidas_no_corpus": 2781
-        }
+        },
+        "verificacao_pendente": [
+          {
+            "bucket": "medianas",
+            "id": "viewing:1029424328",
+            "eixo": "impacto_emocional",
+            "motivo": "erro_TypeError",
+            "erro": "TypeError: 'NoneType' object is not subscriptable"
+          }
+        ]
       },
       "narrativa": "Lançado em 2014 e dirigido por Ruben Östlund, o drama Força Maior acompanha uma família sueca em uma viagem de férias para esquiar nas montanhas. Durante um almoço no restaurante do resort, a iminência de uma avalanche desestabiliza a convivência, colocando o casamento de Tomas e Ebba à prova enquanto o marido tenta manter a todo custo seu papel de patriarca.\n\nA produção estrutura-se a partir de um ritmo contemplativo e lento, ambientada na frieza das paisagens nevadas. A experiência é pautada por uma atmosfera constante de desconforto e tensão social entre os presentes.\n\nNa grande maioria das notas (~80%), boa parte dos relatos elogia a forma como a obra examina a masculinidade frágil e as oscilações do ego masculino. Uma parcela expressiva ressalta as discussões provocadas sobre papéis de gênero e expectativas no casamento, enquanto vários sublinham a presença de um humor incômodo que intensifica a sensação de constrangimento.\n\nNuma parcela das notas (~17%), a perspectiva torna-se mais reservada: muitos chamam a atenção para o egoísmo e a fragilidade do protagonista diante dos acontecimentos. No entanto, um número considerável considera que o ritmo lento e a duração excessiva tornam a narrativa cansativa, ainda que boa parte valorize a qualidade visual da fotografia e os cenários de montanha.\n\nEm tom de rejeição, numa fração mínima das notas (~4%), cerca de metade aponta o ritmo arrastado e a duração excessiva como falhas determinantes da experiência. Além disso, uma parcela expressiva critica a superficialidade e as atitudes dos personagens, ao passo que muitos julgam rasa ou problemática a mensagem em torno dos papéis de gênero e da masculinidade frágil.",
       "verificacao_narrativa": {
@@ -33685,7 +33703,16 @@ window.ESPECTRO_DATA = {
           "passada": 1,
           "eixo": "impacto_emocional",
           "n_removidas_no_corpus": 2781
-        }
+        },
+        "verificacao_pendente": [
+          {
+            "bucket": "medianas",
+            "id": "viewing:1024049819",
+            "eixo": "impacto_emocional",
+            "motivo": "erro_TypeError",
+            "erro": "TypeError: 'NoneType' object is not subscriptable"
+          }
+        ]
       },
       "narrativa": "Lançado em 2013 e dirigido por Aleksei German Sr., o drama de ficção científica É Difícil Ser Um Deus acompanha um grupo de cientistas enviados ao planeta Arkanar, cuja civilização se encontra na fase equivalente à Idade Média de sua própria história, com o objetivo de orientá-la rumo ao progresso sem recorrer à violência. Em meio a esse cenário, o cientista Rumata tenta salvar os intelectuais locais de punições e se vê incapaz de evitar tomar uma posição.\n\nA experiência de visualização se apoia em uma atmosfera densa, com uma ambientação marcada pela presença constante de lama, sujeira e fluidos corporais em planos detalhados. A estrutura narrativa adota um ritmo lento e cadenciado ao longo de quase três horas de duração, apresentando uma condução fragmentada e hermética.\n\nOs diferentes grupos analisados concordam sobre os traços centrais que compõem o filme, discordando no veredito sobre o funcionamento da obra. Na grande maioria das notas (~73%), a maior parcela destaca a imersão sensorial profunda e a densidade do universo construído, enquanto perto da metade enfatiza a onipresença de sujeira, imundície e repulsa, e cerca de metade relata o enfrentamento de uma narrativa confusa e difícil de acompanhar.\n\nNuma parcela das notas (~16%), sob a ótica desse grupo, a maior parte examina a imersão sensorial no grotesco e nos fluidos corporais, aproximadamente metade aponta a dificuldade de acompanhar a narrativa e um número considerável salienta o ritmo lento associado à longa duração. Por fim, numa fração mínima das notas (~11%), na leitura dessas avaliações, grande parte critica a imundície e o nojo excessivos, metade deles reprova o ritmo lento e a duração excessiva, e uma parcela expressiva aponta a falta de coesão do roteiro.",
       "verificacao_narrativa": {
@@ -42997,7 +43024,16 @@ window.ESPECTRO_DATA = {
           "passada": 1,
           "eixo": "impacto_emocional",
           "n_removidas_no_corpus": 2781
-        }
+        },
+        "verificacao_pendente": [
+          {
+            "bucket": "negativas",
+            "id": "viewing:1474734368",
+            "eixo": "impacto_emocional",
+            "motivo": "erro_TypeError",
+            "erro": "TypeError: 'NoneType' object is not subscriptable"
+          }
+        ]
       },
       "narrativa": "Lançado em 2003 e dirigido por Bong Joon-ho, Memórias de um Assassino é uma produção que combina drama, crime e suspense, ambientada na Coreia do Sul. A narrativa acompanha a criação de uma unidade policial especial encarregada de investigar e solucionar com rapidez uma série inédita de assassinatos brutais em uma província rural.\n\nA experiência cinematográfica apoia-se em uma atmosfera sombria e opressiva, conduzida por um ritmo deliberadamente cadenciado ao longo de sua duração. A dinâmica transita entre a seriedade da investigação criminal e os atritos de comportamento dentro da rotina dos investigadores.\n\nDe modo geral, os diferentes grupos avaliam os mesmos elementos da obra, divergindo no veredito sobre a eficácia de sua execução. Na grande maioria das notas (~94%), boa parte ressalta a força das atuações e a complexidade moral dos detetives. Uma parcela expressiva valoriza a composição da fotografia e a criação do clima tenso, enquanto uma fatia menor pondera que, apesar do ritmo pausado no início, a tensão crescente sustenta o tempo de duração.\n\nPara quem se posiciona numa fração mínima das notas (~5%), vários queixam-se do ritmo lento e arrastado da narrativa. Um número considerável manifesta frustração diante de um desfecho pouco conclusivo para o mistério, e alguns apontam incômodo com os métodos violentos e a incompetência policial.\n\nPor fim, para quem está numa fração ainda menor das notas (~1%), muitos consideram a obra excessivamente lenta, tornando o andamento cansativo. Uma parcela expressiva vê o tom de comédia como algo deslocado diante da gravidade dos crimes, e uma parte avalia que o roteiro se torna confuso e perde a clareza de foco.",
       "verificacao_narrativa": {
@@ -56965,7 +57001,16 @@ window.ESPECTRO_DATA = {
           "passada": 1,
           "eixo": "impacto_emocional",
           "n_removidas_no_corpus": 2781
-        }
+        },
+        "verificacao_pendente": [
+          {
+            "bucket": "positivas",
+            "id": "viewing:1364816145",
+            "eixo": "impacto_emocional",
+            "motivo": "erro_TypeError",
+            "erro": "TypeError: 'NoneType' object is not subscriptable"
+          }
+        ]
       },
       "narrativa": "Lançado no ano de 2022 sob a direção de Robert Zemeckis, o longa-metragem Pinóquio apresenta 111 minutos de duração e combina os gêneros de fantasia, aventura e família. A narrativa reconstitui o conto do boneco de madeira em uma arrepiante aventura para virar um menino de verdade, recontado para uma nova experiência audiovisual.\n\nNa maioria das notas (~60%), a maior parte das análises critica fortemente a falta de alma e artificialidade observadas no filme, apontando um resultado excessivamente frio. Cerca de metade expressa insatisfação explícita com o CGI e efeitos visuais ruins, destacando elementos digitais que soam artificiais. Além disso, uma parcela expressiva reforça a desnecessidade do remake, argumentando que a adaptação não se justifica diante do impacto já estabelecido pelo material original.\n\nNuma parcela das notas (~25%), para quem está nessa faixa intermediária de avaliação, boa parte pondera sobre os efeitos visuais e CGI, reconhecendo competência técnica em determinadas passagens e falhas em outros trechos. Vários recorrem à comparação com a animação original e outros remakes para medir o peso das alterações promovidas. Complementando essa leitura, um número considerável de textos se dedica a comentar a atuação de Tom Hanks e elenco.\n\nNuma parcela menor das notas (~15%), sob a perspectiva dessa parcela favorável, muitos destacam com entusiasmo a fidelidade e nostalgia em relação ao clássico durante a história. Boa parte aprova com clareza o uso dos efeitos visuais e design de produção no desenvolvimento dos cenários, enquanto uma fatia menor dirige suas impressões positivas para as atuações do elenco.",
       "verificacao_narrativa": {
@@ -58496,7 +58541,16 @@ window.ESPECTRO_DATA = {
           "passada": 1,
           "eixo": "impacto_emocional",
           "n_removidas_no_corpus": 2781
-        }
+        },
+        "verificacao_pendente": [
+          {
+            "bucket": "negativas",
+            "id": "viewing:1205585573",
+            "eixo": "impacto_emocional",
+            "motivo": "erro_TypeError",
+            "erro": "TypeError: 'NoneType' object is not subscriptable"
+          }
+        ]
       },
       "narrativa": "Lançado em 1994 e dirigido por Béla Tarr, o drama O Tango de Satã acompanha os moradores de uma pequena aldeia húngara que lidam com os desdobramentos do fechamento da fábrica local após o fim do comunismo. Na expectativa de receber um pagamento em dinheiro, a comunidade é surpreendida pelo retorno de um antigo habitante que propõe a criação de uma comuna coletiva.\n\nA experiência da obra é estruturada a partir de uma duração longa e de um ritmo cadenciado e lento, conduzido por planos contínuos e fotografia em preto e branco. A ambientação retrata um cenário constante de desolação, decadência e isolamento rural.\n\nNa grande maioria das notas (~88%), a maior parte ressalta que a duração estendida e o ritmo lento contribuem para aprofundar a imersão na narrativa. Nesse mesmo conjunto, cerca de metade enaltece a fotografia e os planos longos, enquanto boa parte enfatiza a construção de uma atmosfera opressiva e a representação da miséria.\n\nPara o grupo situado numa fração mínima das notas (~7%), a experiência é vista de forma dividida. A quase totalidade aponta a duração excessiva como um obstáculo e aproximadamente metade critica o ritmo lento e arrastado, ainda que uma parcela expressiva preserve elogios à fotografia e à estética.\n\nPor fim, sob a perspectiva de uma fração ainda menor das notas (~5%), o descontentamento se sobressai: praticamente todos condenam a duração excessiva e o ritmo lento. Somado a isso, a maioria reclama da falta de conteúdo narrativo e do tédio, enquanto vários rejeitam a inclusão de uma cena com animal por crueldade.",
       "verificacao_narrativa": {
@@ -61554,7 +61608,16 @@ window.ESPECTRO_DATA = {
           "passada": 1,
           "eixo": "impacto_emocional",
           "n_removidas_no_corpus": 2781
-        }
+        },
+        "verificacao_pendente": [
+          {
+            "bucket": "medianas",
+            "id": "viewing:1477019671",
+            "eixo": "impacto_emocional",
+            "motivo": "erro_JSONDecodeError",
+            "erro": "JSONDecodeError: Extra data: line 3 column 1 (char 118)"
+          }
+        ]
       },
       "narrativa": "Lançado em 2022 e dirigido por Christian Tafdrup, o longa-metragem de terror, suspense e drama Não Fale o Mal acompanha uma família dinamarquesa que passa férias na Toscana. Após fazerem amizade com uma família holandesa, eles aceitam o convite para passar um fim de semana na residência dos novos conhecidos, até que uma sucessão de mal-entendidos revela que os anfitriões não são quem pareciam ser.\n\nA experiência é estruturada sobre um ritmo lento e gradual, estabelecendo uma atmosfera densa pautada pelo acúmulo contínuo de tensão psicológica e desconforto.\n\nOs registros indicam que as diferentes faixas de avaliação debatem os mesmos temas centrais, discordando estritamente no veredito sobre o funcionamento da produção. Na maioria das notas (~61%), uma parcela expressiva ressalta o clima constante de desconforto e tensão ao longo da narrativa. Ao mesmo tempo, boa parte desse grupo examina a postura passiva e a extrema polidez dos protagonistas diante das situações, enquanto um número considerável salienta o desfecho impactante e brutal.\n\nPara quem se posiciona numa parcela das notas (~28%), a maior parte critica a passividade excessiva dos personagens principais e a aparente falta de instinto de sobrevivência. Ainda assim, muitos destacam de forma positiva as atuações e os aspectos técnicos, ao passo que vários apontam o ritmo lento e a construção do desconforto. Já sob a ótica de uma fração mínima das notas (~11%), a maior parcela reprova o comportamento dos personagens por julgá-los desprovidos de instinto, cerca de metade vê o roteiro como forçado e ilógico, e muitos avaliam o final como pretensioso e insatisfatório.",
       "verificacao_narrativa": {
@@ -66220,7 +66283,16 @@ window.ESPECTRO_DATA = {
           "passada": 1,
           "eixo": "impacto_emocional",
           "n_removidas_no_corpus": 2781
-        }
+        },
+        "verificacao_pendente": [
+          {
+            "bucket": "positivas",
+            "id": "viewing:1255160718",
+            "eixo": "impacto_emocional",
+            "motivo": "erro_JSONDecodeError",
+            "erro": "JSONDecodeError: Expecting ',' delimiter: line 1 column 102 (char 101)"
+          }
+        ]
       },
       "narrativa": "Lançado em 1960 e dirigido por Ritwik Kumar Ghatak, o drama Estrela Encoberta de Nuvens acompanha a trajetória de uma jovem em uma família de classe média refugiada nos subúrbios de Calcutá. Na trama, ela realiza constantes sacrifícios pessoais, financeiros e de saúde por seus parentes, sem que seu empenho encontre o devido reconhecimento ao seu redor.\n\nA obra se estrutura como uma narrativa melodramática de cadência lenta, sustentada por uma densa ambientação sonora e forte presença de contrastes visuais. O tom foca no acúmulo contínuo de adversidades vivenciadas no cotidiano familiar.\n\nOs diferentes olhares coincidem quanto aos traços constitutivos da obra, mas divergem frontalmente sobre a eficácia do seu resultado. Na grande maioria das notas (~87%), uma parcela expressiva destaca a força das atuações e dos personagens, enquanto muitos enfatizam a expressividade da trilha sonora e do desenho de som, e vários elogiam a composição visual e a fotografia. Sob a perspectiva de quem compõe uma fração mínima das notas (~10%), boa parte critica o melodrama excessivo centrado no martírio da protagonista e um número considerável aponta o ritmo lento e arrastado da projeção, ainda que muitos reconheçam a beleza dos enquadramentos. Já para quem se posiciona em uma fração ainda menor das notas (~3%), a maior parte reprova o acúmulo de sofrimento por considerá-lo excessivo, perto da metade rejeita o ritmo lento aliado à longa duração, e uma parcela expressiva vê as atuações como exageradas ou teatrais.",
       "verificacao_narrativa": {
@@ -75501,7 +75573,16 @@ window.ESPECTRO_DATA = {
           "passada": 1,
           "eixo": "impacto_emocional",
           "n_removidas_no_corpus": 2781
-        }
+        },
+        "verificacao_pendente": [
+          {
+            "bucket": "positivas",
+            "id": "viewing:1466699858",
+            "eixo": "impacto_emocional",
+            "motivo": "erro_JSONDecodeError",
+            "erro": "JSONDecodeError: Extra data: line 3 column 1 (char 83)"
+          }
+        ]
       },
       "narrativa": "Dirigido por Béla Tarr e lançado em 2011, o drama O Cavalo de Turim parte do episódio histórico envolvendo o filósofo Friedrich Nietzsche e um animal em Turim no final do século XIX. A partir desse evento, o longa-metragem acompanha o percurso de um camponês, de sua filha e de seu cavalo doente em uma existência miserável.\n\nA experiência do filme se constrói por meio de um ritmo acentuadamente lento e da repetição sistemática de rotinas diárias, estruturadas em planos longos e em uma fotografia em preto e branco. A composição apoia-se em uma atmosfera sonora constante, conduzindo uma ambientação austera voltada a temas existenciais.\n\nEm termos de recepção, os grupos concordam sobre o que o filme é e discordam sobre se ele funciona. Na grande maioria das notas (~85%), uma parcela expressiva defende que o ritmo lento e a repetição intencional compõem uma proposta imersiva sobre a rotina. Da mesma forma, boa parte exalta a fotografia em preto e branco e os planos longos por sua qualidade estética, enquanto vários enfatizam a abordagem sobre o niilismo e o peso da existência como uma reflexão contundente.\n\nNuma fração mínima das notas (~10%), segundo essa avaliação, praticamente todos sentem o ritmo lento e repetitivo como cansativo, embora a maior parte admire a fotografia e a estética visual, com cerca de metade comentando os temas existenciais e o niilismo. Por fim, sob a ótica presente numa fração ainda menor das notas (~5%), quase todos rejeitam o ritmo excessivamente lento e tedioso, enquanto a maior parcela aponta a falta de enredo e desenvolvimento de personagens, e metade deles critica a percepção de pretensão artística e elitismo.",
       "verificacao_narrativa": {
@@ -78564,7 +78645,16 @@ window.ESPECTRO_DATA = {
           "passada": 1,
           "eixo": "impacto_emocional",
           "n_removidas_no_corpus": 2781
-        }
+        },
+        "verificacao_pendente": [
+          {
+            "bucket": "medianas",
+            "id": "viewing:1478219894",
+            "eixo": "impacto_emocional",
+            "motivo": "erro_JSONDecodeError",
+            "erro": "JSONDecodeError: Extra data: line 3 column 1 (char 95)"
+          }
+        ]
       },
       "narrativa": "Lançado em 2014 sob a direção de Damien Chazelle, Whiplash: Em Busca da Perfeição é um drama e thriller musical que acompanha Andrew em seu objetivo de ser o melhor baterista de sua geração. O jovem chama a atenção do impiedoso mestre do jazz Terence Fletcher, que ultrapassa os limites e transforma essa dedicação em uma obsessão que coloca em risco sua saúde física e mental.\n\nA experiência cinematográfica é pautada por uma atmosfera de tensão contínua e por um ritmo de intensidade constante. A ambientação e a estrutura dramática estabelecem um tom de rigor e atrito permanente no espaço dos ensaios musicais.\n\nOs três grupos concordam sobre o que o filme é e discordam sobre se ele funciona, convergindo nos temas e divergindo no veredito. Na grande maioria das notas (~93%), uma parcela expressiva ressalta as atuações marcantes, enquanto boa parte enfatiza a representação da obsessão e da busca pela perfeição. Nesse mesmo grupo, vários destacam a tensão e a intensidade que permeiam a narrativa.\n\nPara quem está nessa faixa, numa fração mínima das notas (~6%), muitos reconhecem o impacto das atuações e um número considerável observa o ritmo e a tensão, ainda que uma fatia menor teça ressalvas quanto ao personagem do instrutor e seus métodos de ensino.\n\nJá sob a leitura presente numa fração ainda menor das notas (~1%), a maior parte reprova a romantização do abuso e da toxicidade, boa parte se incomoda com personagens desagradáveis e sem profundidade, e vários apontam um ritmo arrastado que resulta em uma experiência angustiante.",
       "verificacao_narrativa": {
@@ -84546,7 +84636,23 @@ window.ESPECTRO_DATA = {
           "passada": 1,
           "eixo": "impacto_emocional",
           "n_removidas_no_corpus": 2781
-        }
+        },
+        "verificacao_pendente": [
+          {
+            "bucket": "negativas",
+            "id": "viewing:1414135189",
+            "eixo": "impacto_emocional",
+            "motivo": "erro_JSONDecodeError",
+            "erro": "JSONDecodeError: Extra data: line 3 column 1 (char 99)"
+          },
+          {
+            "bucket": "positivas",
+            "id": "viewing:1487064786",
+            "eixo": "impacto_emocional",
+            "motivo": "erro_JSONDecodeError",
+            "erro": "JSONDecodeError: Extra data: line 1 column 147 (char 146)"
+          }
+        ]
       },
       "narrativa": "Dirigido por Lucrecia Martel e lançado em 2017, Zama é um drama histórico ambientado no final do século XVIII. A narrativa acompanha Don Diego de Zama, um magistrado espanhol que cumpre castigo em Assunção enquanto aguarda uma transferência para Buenos Aires, decidindo posteriormente se juntar a uma expedição em busca de um lendário fora-da-lei por terras distantes.\n\nA obra estrutura sua experiência em um ritmo pausado e contemplativo, apoiando-se em uma ambientação histórica marcada por estagnação e densidade sensorial.\n\nNa maioria das notas (~66%), uma parcela expressiva ressalta o ritmo lento e a atmosfera opressiva como elementos centrais da proposta. Além disso, muitos enfatizam a qualidade da fotografia, do som e da direção de arte, enquanto vários destacam a representação crítica voltada ao colonialismo e à burocracia.\n\nNessa perspectiva, presente numa parcela das notas (~25%), a maior parte relata que o andamento arrastado provoca uma sensação de duração excessiva. Ao mesmo tempo, boa parte reconhece o valor técnico da fotografia, da arte e do som, e uma fatia menor sublinha a atuação de Daniel Giménez Cacho no papel principal.\n\nPara a visão expressa numa fração mínima das notas (~9%), grande parte aponta o ritmo lento e o tédio como pontos centrais do descontentamento. Ademais, um número considerável menciona confusão e falta de compreensão dos acontecimentos, e uma parcela expressiva critica o roteiro e o desenvolvimento da narrativa por considerá-los fracos.",
       "verificacao_narrativa": {

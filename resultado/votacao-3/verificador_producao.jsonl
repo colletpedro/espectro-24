@@ -5853,3 +5853,9 @@
 {"ok": true, "variante": "V2_alvo", "passe": 1, "id": "viewing:1329078039", "n_chars": 642, "confirma": true, "frase": "I also found myself struggling to understand what is happening in the story", "alvo": "espectador", "uso": {"prompt_tokens": 637, "completion_tokens": 34, "cache_hit_tokens": 384, "cache_miss_tokens": 253}}
 {"ok": true, "variante": "V2_alvo", "passe": 1, "id": "viewing:1457304524", "n_chars": 854, "confirma": true, "frase": "果然睡著好幾次", "alvo": "espectador", "uso": {"prompt_tokens": 1100, "completion_tokens": 27, "cache_hit_tokens": 896, "cache_miss_tokens": 204}}
 {"ok": true, "variante": "V2_alvo", "passe": 1, "id": "viewing:1343536508", "n_chars": 2510, "confirma": true, "frase": "leading me to almost cry in the last scene", "alvo": "espectador", "uso": {"prompt_tokens": 1050, "completion_tokens": 30, "cache_hit_tokens": 0, "cache_miss_tokens": 1050}, "provider": "gemini", "modelo": "gemini-3.7-flash", "fallback_conteudo": {"de": "deepseek", "para": "gemini", "modelo": "gemini-3.7-flash", "motivo": "Content Exists Risk"}}
+{"ok": false, "variante": "V2_alvo", "passe": 1, "id": "viewing:1311567647", "erro": "TypeError: 'NoneType' object is not subscriptable"}
+{"ok": false, "variante": "V2_alvo", "passe": 1, "id": "viewing:1029424328", "erro": "TypeError: 'NoneType' object is not subscriptable"}
+{"ok": false, "variante": "V2_alvo", "passe": 1, "id": "viewing:1024049819", "erro": "TypeError: 'NoneType' object is not subscriptable"}
+{"ok": false, "variante": "V2_alvo", "passe": 1, "id": "viewing:1474734368", "erro": "TypeError: 'NoneType' object is not subscriptable"}
+{"ok": false, "variante": "V2_alvo", "passe": 1, "id": "viewing:1364816145", "erro": "TypeError: 'NoneType' object is not subscriptable"}
+{"ok": false, "variante": "V2_alvo", "passe": 1, "id": "viewing:1205585573", "erro": "TypeError: 'NoneType' object is not subscriptable"}

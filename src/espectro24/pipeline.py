@@ -526,34 +526,48 @@ def montar_eixos(slug: str, output: dict, analisadas: dict[str, set[str]],
             # default silencioso.
             bloco["verificador"] = verificador_meta
         if consenso is None:
-            # [2026-09-14] Proveniência das reviews CONTADAS neste bloco,
-            # lida do MESMO arquivo de onde veio a classificação. Mesma
-            # política de `verificador`: cada chave só existe quando há o
-            # que declarar.
-            # - `fallback_conteudo`: classificação (`passes`) e/ou veredito
-            #   do verificador (`verificador`) feitos pelo Gemini;
-            # - `verificacao_pendente`: `impacto_emocional` contado sem ter
-            #   sido verificado — o estado que até aqui não aparecia no JSON.
+            # Lida do MESMO arquivo de onde veio a classificação.
             caminho = (E.CONSENSO_VERIFICADO if verificador_meta is not None
                        else E.CONSENSO_PADRAO)
-            prov = E.proveniencia_por_review(caminho, slug)
-            fallbacks, pendentes = [], []
-            for b in sorted(prov):
-                contadas = set(analisadas.get(b) or ())
-                for rid in sorted(prov[b]):
-                    if rid not in contadas:
-                        continue
-                    m = prov[b][rid]
-                    troca = {k: m[k] for k in ("passes", "verificador") if k in m}
-                    if troca:
-                        fallbacks.append({"bucket": b, "id": rid, **troca})
-                    if "verificacao_pendente" in m:
-                        pendentes.append({"bucket": b, "id": rid,
-                                          **m["verificacao_pendente"]})
-            if fallbacks:
-                bloco["fallback_conteudo"] = fallbacks
-            if pendentes:
-                bloco["verificacao_pendente"] = pendentes
+            anexar_proveniencia(bloco, slug, analisadas, caminho)
+    return bloco
+
+
+def anexar_proveniencia(bloco: dict, slug: str,
+                        analisadas: dict, caminho) -> dict:
+    """[2026-09-14] Proveniência das reviews CONTADAS no bloco, lida de
+    `caminho` (o consenso de onde veio a classificação). Mesma política de
+    `verificador`: cada chave só existe quando há o que declarar.
+
+    - `fallback_conteudo`: classificação (`passes`) e/ou veredito do
+      verificador (`verificador`) feitos pelo Gemini;
+    - `verificacao_pendente`: `impacto_emocional` contado sem ter sido
+      verificado — o estado que até aqui não aparecia no JSON.
+
+    Extraído de `montar_eixos` para que a republicação só-do-bloco
+    (`scripts/republicar_eixos.py`) aplique a MESMA regra. Muta e devolve
+    `bloco`.
+    """
+    from . import eixos as E
+
+    prov = E.proveniencia_por_review(caminho, slug)
+    fallbacks, pendentes = [], []
+    for b in sorted(prov):
+        contadas = set(analisadas.get(b) or ())
+        for rid in sorted(prov[b]):
+            if rid not in contadas:
+                continue
+            m = prov[b][rid]
+            troca = {k: m[k] for k in ("passes", "verificador") if k in m}
+            if troca:
+                fallbacks.append({"bucket": b, "id": rid, **troca})
+            if "verificacao_pendente" in m:
+                pendentes.append({"bucket": b, "id": rid,
+                                  **m["verificacao_pendente"]})
+    if fallbacks:
+        bloco["fallback_conteudo"] = fallbacks
+    if pendentes:
+        bloco["verificacao_pendente"] = pendentes
     return bloco
 
 
