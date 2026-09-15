@@ -28839,10 +28839,10 @@ window.ESPECTRO_DATA = {
             2085136,
             1000000
           ],
-          "n": 39,
-          "limiar_pp": 23.12
+          "n": 40,
+          "limiar_pp": 22.83
         },
-        "margem_lift_pp": 23.12,
+        "margem_lift_pp": 22.83,
         "linhas": [
           {
             "eixo": "ritmo",
@@ -28869,9 +28869,9 @@ window.ESPECTRO_DATA = {
               },
               "positivas": {
                 "mencoes": 5,
-                "de_n": 39,
-                "freq_pct": 12.8,
-                "lift_pp": -4.7,
+                "de_n": 40,
+                "freq_pct": 12.5,
+                "lift_pp": -5.0,
                 "acima_da_margem": false,
                 "tema": null,
                 "exemplo_parafraseado": null,
@@ -28901,17 +28901,17 @@ window.ESPECTRO_DATA = {
                 "mencoes": 13,
                 "de_n": 40,
                 "freq_pct": 32.5,
-                "lift_pp": 4.3,
+                "lift_pp": 2.5,
                 "acima_da_margem": false,
                 "tema": "Atuações elogiadas",
                 "exemplo_parafraseado": "Várias reviews medianas destacam a atuação do protagonista como excelente, com menções específicas à sua performance e à carreira que o filme impulsionou.",
                 "temas_no_mesmo_eixo": []
               },
               "positivas": {
-                "mencoes": 11,
-                "de_n": 39,
-                "freq_pct": 28.2,
-                "lift_pp": -4.3,
+                "mencoes": 12,
+                "de_n": 40,
+                "freq_pct": 30.0,
+                "lift_pp": -2.5,
                 "acima_da_margem": false,
                 "tema": "Atuações",
                 "exemplo_parafraseado": "Este grupo elogia as atuações, com destaque para Daniel Kaluuya e Allison Williams, que entregam performances intensas e críveis.",
@@ -28941,7 +28941,7 @@ window.ESPECTRO_DATA = {
                 "mencoes": 4,
                 "de_n": 40,
                 "freq_pct": 10.0,
-                "lift_pp": 2.3,
+                "lift_pp": 2.5,
                 "acima_da_margem": false,
                 "tema": null,
                 "exemplo_parafraseado": null,
@@ -28949,9 +28949,9 @@ window.ESPECTRO_DATA = {
               },
               "positivas": {
                 "mencoes": 3,
-                "de_n": 39,
-                "freq_pct": 7.7,
-                "lift_pp": -2.3,
+                "de_n": 40,
+                "freq_pct": 7.5,
+                "lift_pp": -2.5,
                 "acima_da_margem": false,
                 "tema": "Direção de Jordan Peele",
                 "exemplo_parafraseado": "Este grupo destaca a estreia de Jordan Peele na direção como impressionante, mostrando talento para equilibrar terror, humor e crítica social.",
@@ -28992,10 +28992,10 @@ window.ESPECTRO_DATA = {
                 ]
               },
               "positivas": {
-                "mencoes": 29,
-                "de_n": 39,
-                "freq_pct": 74.4,
-                "lift_pp": -10.6,
+                "mencoes": 30,
+                "de_n": 40,
+                "freq_pct": 75.0,
+                "lift_pp": -10.0,
                 "acima_da_margem": false,
                 "tema": "Reviravoltas e roteiro",
                 "exemplo_parafraseado": "As reviews positivas apontam que as reviravoltas são impactantes e o roteiro é bem construído, com detalhes que se conectam e recompensam a atenção.",
@@ -29015,7 +29015,7 @@ window.ESPECTRO_DATA = {
                 "mencoes": 0,
                 "de_n": 40,
                 "freq_pct": 0.0,
-                "lift_pp": -5.1,
+                "lift_pp": -5.0,
                 "acima_da_margem": false,
                 "tema": null,
                 "exemplo_parafraseado": null,
@@ -29025,7 +29025,7 @@ window.ESPECTRO_DATA = {
                 "mencoes": 1,
                 "de_n": 40,
                 "freq_pct": 2.5,
-                "lift_pp": -2.6,
+                "lift_pp": -2.5,
                 "acima_da_margem": false,
                 "tema": null,
                 "exemplo_parafraseado": null,
@@ -29033,9 +29033,9 @@ window.ESPECTRO_DATA = {
               },
               "positivas": {
                 "mencoes": 2,
-                "de_n": 39,
-                "freq_pct": 5.1,
-                "lift_pp": 2.6,
+                "de_n": 40,
+                "freq_pct": 5.0,
+                "lift_pp": 2.5,
                 "acima_da_margem": false,
                 "tema": null,
                 "exemplo_parafraseado": null,
@@ -29055,7 +29055,7 @@ window.ESPECTRO_DATA = {
                 "mencoes": 9,
                 "de_n": 40,
                 "freq_pct": 22.5,
-                "lift_pp": -21.1,
+                "lift_pp": -22.5,
                 "acima_da_margem": false,
                 "tema": null,
                 "exemplo_parafraseado": null,
@@ -29065,7 +29065,7 @@ window.ESPECTRO_DATA = {
                 "mencoes": 11,
                 "de_n": 40,
                 "freq_pct": 27.5,
-                "lift_pp": -16.1,
+                "lift_pp": -17.5,
                 "acima_da_margem": false,
                 "tema": "Suspense psicológico e tensão",
                 "exemplo_parafraseado": "Algumas reviews medianas elogiam a construção de tensão psicológica e o clima inquietante, mas outras não sentem medo suficiente para um filme de terror.",
@@ -29074,10 +29074,10 @@ window.ESPECTRO_DATA = {
                 ]
               },
               "positivas": {
-                "mencoes": 17,
-                "de_n": 39,
-                "freq_pct": 43.6,
-                "lift_pp": 16.1,
+                "mencoes": 18,
+                "de_n": 40,
+                "freq_pct": 45.0,
+                "lift_pp": 17.5,
                 "acima_da_margem": false,
                 "tema": "Tensão e suspense",
                 "exemplo_parafraseado": "As reviews positivas mencionam que o filme constrói uma tensão crescente desde o início, mantendo o espectador apreensivo e envolvido.",
@@ -29099,7 +29099,7 @@ window.ESPECTRO_DATA = {
                 "mencoes": 13,
                 "de_n": 40,
                 "freq_pct": 32.5,
-                "lift_pp": -11.1,
+                "lift_pp": -10.0,
                 "acima_da_margem": false,
                 "tema": null,
                 "exemplo_parafraseado": null,
@@ -29109,7 +29109,7 @@ window.ESPECTRO_DATA = {
                 "mencoes": 16,
                 "de_n": 40,
                 "freq_pct": 40.0,
-                "lift_pp": -3.6,
+                "lift_pp": -2.5,
                 "acima_da_margem": false,
                 "tema": null,
                 "exemplo_parafraseado": null,
@@ -29117,9 +29117,9 @@ window.ESPECTRO_DATA = {
               },
               "positivas": {
                 "mencoes": 17,
-                "de_n": 39,
-                "freq_pct": 43.6,
-                "lift_pp": 3.6,
+                "de_n": 40,
+                "freq_pct": 42.5,
+                "lift_pp": 2.5,
                 "acima_da_margem": false,
                 "tema": null,
                 "exemplo_parafraseado": null,
@@ -29157,9 +29157,9 @@ window.ESPECTRO_DATA = {
               },
               "positivas": {
                 "mencoes": 9,
-                "de_n": 39,
-                "freq_pct": 23.1,
-                "lift_pp": -6.9,
+                "de_n": 40,
+                "freq_pct": 22.5,
+                "lift_pp": -7.5,
                 "acima_da_margem": false,
                 "tema": null,
                 "exemplo_parafraseado": null,
@@ -29196,10 +29196,10 @@ window.ESPECTRO_DATA = {
                 "temas_no_mesmo_eixo": []
               },
               "positivas": {
-                "mencoes": 11,
-                "de_n": 39,
-                "freq_pct": 28.2,
-                "lift_pp": -16.8,
+                "mencoes": 12,
+                "de_n": 40,
+                "freq_pct": 30.0,
+                "lift_pp": -15.0,
                 "acima_da_margem": false,
                 "tema": null,
                 "exemplo_parafraseado": null,
@@ -29219,7 +29219,7 @@ window.ESPECTRO_DATA = {
                 "mencoes": 21,
                 "de_n": 40,
                 "freq_pct": 52.5,
-                "lift_pp": 14.0,
+                "lift_pp": 15.0,
                 "acima_da_margem": false,
                 "tema": "Crítica ao roteiro e à abordagem do racismo",
                 "exemplo_parafraseado": "Algumas reviews criticam o roteiro por ser simplista, maniqueísta ou por não aprofundar bem o tema do racismo, resultando em uma mensagem pouco sutil.",
@@ -29237,9 +29237,9 @@ window.ESPECTRO_DATA = {
               },
               "positivas": {
                 "mencoes": 15,
-                "de_n": 39,
-                "freq_pct": 38.5,
-                "lift_pp": -14.0,
+                "de_n": 40,
+                "freq_pct": 37.5,
+                "lift_pp": -15.0,
                 "acima_da_margem": false,
                 "tema": "Comentário social e racismo",
                 "exemplo_parafraseado": "As reviews positivas destacam que o filme aborda o racismo de forma inteligente, especialmente o racismo velado e disfarçado de elogios, educação e falsa aceitação, tornando a experiência desconfortável e assustadora.",
@@ -29254,27 +29254,6 @@ window.ESPECTRO_DATA = {
           }
         ],
         "contraste": "valorativo",
-        "fonte_classificacao": {
-          "arquivo": "resultado/votacao-3/consenso.jsonl",
-          "criterio": "votacao_3_consenso_2_de_3",
-          "por_bucket": {
-            "negativas": {
-              "n_classificadas": 40,
-              "n_analisadas": 40,
-              "sobreposicao_com_analisadas": 40
-            },
-            "medianas": {
-              "n_classificadas": 40,
-              "n_analisadas": 40,
-              "sobreposicao_com_analisadas": 40
-            },
-            "positivas": {
-              "n_classificadas": 39,
-              "n_analisadas": 40,
-              "sobreposicao_com_analisadas": 39
-            }
-          }
-        },
         "rotulagem": {
           "n_chamadas": 3,
           "falharam": [],
@@ -29287,7 +29266,7 @@ window.ESPECTRO_DATA = {
           "variante": "V2_alvo",
           "passada": 1,
           "eixo": "impacto_emocional",
-          "n_removidas_no_corpus": 2781
+          "n_removidas_no_corpus": 2785
         }
       },
       "narrativa": "Lançado em 2017 e dirigido por Jordan Peele, Corra! transita entre os gêneros de mistério, thriller e terror. O enredo se desenvolve quando Chris viaja com sua namorada, Rose, até o interior para conhecer a família dela durante um fim de semana. O comportamento inicialmente solícito dos anfitriões dá lugar a uma sequência de eventos cada vez mais inquietantes, que conduzem o protagonista a revelações surpreendentes.\n\nA condução da narrativa estabelece uma dinâmica de suspense psicológico que se intensifica de maneira gradual ao longo das cenas. A estrutura combina convenções clássicas do terror a modulações de humor, sustentando uma ambientação de desconforto constante e tensão psicológica.\n\nAs análises sobre a obra convergem quanto aos seus aspectos centrais, concentrando a divergência no veredito sobre o funcionamento desses elementos. Na grande maioria das notas (~87%), cerca de metade destaca o peso do comentário social e a abordagem do racismo, enquanto boa parte elogia a qualidade das atuações e uma parcela expressiva ressalta o domínio na criação de tensão e suspense.\n\nEm contrapartida, sob a ótica de uma fração mínima das notas (~11%), vários aprovam as atuações apresentadas, mas alguns consideram o roteiro previsível e uma parte pondera sobre a execução da mensagem e da crítica social. Já na leitura de uma fração ainda menor das notas (~2%), um número considerável critica a previsibilidade da trama, muitos apontam um ritmo lento associado à falta de tensão, e uma fatia menor define o longa-metragem como superestimado.",
@@ -29366,6 +29345,143 @@ window.ESPECTRO_DATA = {
           "cache_miss_tokens": 11695
         },
         "latencia_s": 31.51
+      },
+      "condicoes": {
+        "vale_a_pena": [
+          {
+            "texto": "busca uma abordagem inteligente e desconfortável sobre o racismo velado",
+            "tema_origem": "POS-A",
+            "bucket_origem": "positivas",
+            "tema_texto": "Comentário social e racismo",
+            "rotulo_forca": "cerca de metade"
+          },
+          {
+            "texto": "valoriza a intensidade e a credibilidade de Daniel Kaluuya e Allison Williams",
+            "tema_origem": "POS-B",
+            "bucket_origem": "positivas",
+            "tema_texto": "Atuações",
+            "rotulo_forca": "muitos",
+            "origem": "leitura_humana"
+          },
+          {
+            "texto": "aprecia um suspense com tensão crescente que mantém o clima apreensivo",
+            "tema_origem": "POS-C",
+            "bucket_origem": "positivas",
+            "tema_texto": "Tensão e suspense",
+            "rotulo_forca": "muitos"
+          }
+        ],
+        "talvez_evite": [
+          {
+            "texto": "se incomoda com tramas previsíveis e reviravoltas fáceis de antecipar",
+            "tema_origem": "NEG-A",
+            "bucket_origem": "negativas",
+            "tema_texto": "Previsibilidade da trama",
+            "rotulo_forca": "muitos"
+          },
+          {
+            "texto": "se desaponta com narrativas arrastadas de introdução longa e pouca tensão",
+            "tema_origem": "NEG-B",
+            "bucket_origem": "negativas",
+            "tema_texto": "Ritmo lento e falta de tensão",
+            "rotulo_forca": "muitos"
+          },
+          {
+            "texto": "rejeita roteiros com mensagens pouco sutis e abordagem simplista do racismo",
+            "tema_origem": "NEG-D",
+            "bucket_origem": "negativas",
+            "tema_texto": "Crítica ao roteiro e à abordagem do racismo",
+            "rotulo_forca": "alguns"
+          },
+          {
+            "texto": "se incomoda com atuações fracas ou deslocadas, apesar de exceções no elenco",
+            "tema_origem": "NEG-E",
+            "bucket_origem": "negativas",
+            "tema_texto": "Atuações irregulares",
+            "rotulo_forca": "alguns",
+            "origem": "leitura_humana"
+          }
+        ],
+        "ordem_colunas": [
+          "vale_a_pena",
+          "talvez_evite"
+        ],
+        "peso": {
+          "vale_a_pena": {
+            "peso_pct": 87,
+            "peso_texto": "~87% das notas",
+            "nota_de_amostra": null
+          },
+          "talvez_evite": {
+            "peso_pct": 2,
+            "peso_texto": "~2% das notas",
+            "nota_de_amostra": null
+          }
+        },
+        "peso_meio": null,
+        "origem": "llm",
+        "temas_pedidos": {
+          "vale_a_pena": [
+            "POS-A",
+            "POS-B",
+            "POS-C"
+          ],
+          "talvez_evite": [
+            "NEG-A",
+            "NEG-B",
+            "NEG-C",
+            "NEG-D",
+            "NEG-E"
+          ]
+        },
+        "temas_saltados": {
+          "vale_a_pena": [],
+          "talvez_evite": []
+        },
+        "descartadas": [],
+        "retry": null,
+        "provider": "gemini",
+        "modelo": "gemini-3.7-flash",
+        "n_candidatos": 3,
+        "n_chamadas": 3,
+        "indice_escolhido": 2,
+        "candidatos": [
+          {
+            "indice": 0,
+            "n_condicoes": 8,
+            "n_flags": 2,
+            "flags": [
+              "ancora_nao_verificavel",
+              "sem_discriminacao"
+            ],
+            "n_temas_cobertos": 8
+          },
+          {
+            "indice": 1,
+            "n_condicoes": 8,
+            "n_flags": 2,
+            "flags": [
+              "ancora_nao_verificavel",
+              "sem_discriminacao"
+            ],
+            "n_temas_cobertos": 8
+          },
+          {
+            "indice": 2,
+            "n_condicoes": 8,
+            "n_flags": 0,
+            "flags": [],
+            "n_temas_cobertos": 8
+          }
+        ],
+        "uso": {
+          "prompt_tokens": 8253,
+          "completion_tokens": 1132,
+          "cache_hit_tokens": 0,
+          "cache_miss_tokens": 8253
+        },
+        "latencia_s": 17.82,
+        "spec_version": "1.9.50"
       }
     },
     "guillermo-del-toros-pinocchio": {
@@ -63225,13 +63341,6 @@ window.ESPECTRO_DATA = {
             "bucket_origem": "positivas",
             "tema_texto": "Desenvolvimento de personagens",
             "rotulo_forca": "alguns"
-          },
-          {
-            "texto": "gosta de desfechos em aberto que criam forte expectativa para continuações",
-            "tema_origem": "POS-E",
-            "bucket_origem": "positivas",
-            "tema_texto": "Cliffhanger e expectativa pela continuação",
-            "rotulo_forca": "alguns"
           }
         ],
         "talvez_evite": [
@@ -64827,13 +64936,6 @@ window.ESPECTRO_DATA = {
             "bucket_origem": "negativas",
             "tema_texto": "Roteiro fraco e previsível",
             "rotulo_forca": "muitos"
-          },
-          {
-            "texto": "se frustra quando premissas promissoras se perdem em subtramas mal exploradas",
-            "tema_origem": "NEG-C",
-            "bucket_origem": "negativas",
-            "tema_texto": "Subaproveitamento do potencial da premissa",
-            "rotulo_forca": "alguns"
           },
           {
             "texto": "se desmotiva com elencos coadjuvantes sem carisma e atuações mornas",

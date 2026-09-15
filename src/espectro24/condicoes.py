@@ -128,6 +128,21 @@ def indexar(output: dict) -> dict:
     return idx
 
 
+def eixos_do_tema(doc: dict, bucket: str, tema: str) -> list[str]:
+    """Os eixos em que [D3] pôs este tema, lidos do bloco `eixos` publicado:
+    a célula (`tema`) e os que colidiram nela (`temas_no_mesmo_eixo`).
+
+    É a régua da R13 na publicação (`publicar_condicoes.retidas_pela_r13`) e
+    a categoria `expectativa` do relatório de revisão — a mesma função nos
+    dois, para que o que o dono lê como `expectativa` seja o que não publica."""
+    eixos = []
+    for linha in (doc.get("eixos") or {}).get("linhas") or []:
+        cel = (linha.get("por_bucket") or {}).get(bucket) or {}
+        if tema in [cel.get("tema")] + list(cel.get("temas_no_mesmo_eixo") or []):
+            eixos.append(linha["eixo"])
+    return eixos
+
+
 # ===========================================================================
 # Casamento lexical — herdado da v1.9.22, não reimplementado
 # ===========================================================================

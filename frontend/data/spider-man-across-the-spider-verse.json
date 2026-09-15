@@ -1443,13 +1443,6 @@
         "bucket_origem": "positivas",
         "tema_texto": "Desenvolvimento de personagens",
         "rotulo_forca": "alguns"
-      },
-      {
-        "texto": "gosta de desfechos em aberto que criam forte expectativa para continuações",
-        "tema_origem": "POS-E",
-        "bucket_origem": "positivas",
-        "tema_texto": "Cliffhanger e expectativa pela continuação",
-        "rotulo_forca": "alguns"
       }
     ],
     "talvez_evite": [

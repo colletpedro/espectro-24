@@ -18,6 +18,12 @@ Uso:
 Sem `--slug`, usa o catálogo publicado (`CATALOGO`). `--dry-run` reporta o
 que seria classificado sem gastar nenhuma chamada.
 
+[C14.1] O filme é REGISTRADO em `amostra["filmes"]` (entrada de
+`classificar_10.entrada_do_filme`, a mesma de `montar_amostra()`) antes de
+qualquer chamada paga. Sem isso o consenso descartava o filme em silêncio;
+agora o consenso recusa filme classificado e não registrado
+(`votacao_3.FilmeForaDaAmostra`).
+
 Depois de rodar, `python scripts/votacao_3.py consenso` precisa ser chamado
 para que `resultado/votacao-3/consenso.jsonl` incorpore as novas linhas —
 este script já faz isso ao final, a menos que `--sem-consenso` seja passado.
@@ -33,8 +39,7 @@ RAIZ = Path(__file__).resolve().parent.parent
 sys.path.insert(0, str(RAIZ / "src"))
 sys.path.insert(0, str(RAIZ / "scripts"))
 
-from classificar_10 import perfil_de, taxonomia_id  # noqa: E402
-from espectro24.bruto import carregar  # noqa: E402
+from classificar_10 import entrada_do_filme, taxonomia_id  # noqa: E402
 from espectro24 import eixos as E  # noqa: E402
 from espectro24.pipeline import amostra_do_bruto  # noqa: E402
 from espectro24.uniao_amostra import reviews_faltantes  # noqa: E402
@@ -42,6 +47,7 @@ from votacao_3 import (  # noqa: E402
     ARQ_AMOSTRA,
     ARQ_CONSENSO,
     ARQ_PASSE,
+    checar_filmes_registrados,
     classificar_passe,
     cmd_consenso,
 )
@@ -69,16 +75,17 @@ def _faltantes_por_slug(slugs: list[str]) -> dict[str, dict[str, list]]:
     return fora
 
 
-def _perfil_de_slug(slug: str) -> str:
-    meta, _ = carregar(slug, raiz=str(RAIZ_BRUTO))
-    hist = {float(k): v for k, v in (meta.get("histograma_bruto") or {}).items()}
-    return perfil_de(slug, hist) if hist else "?"
+def _acrescentar_a_amostra(faltantes: dict[str, dict[str, list]]
+                           ) -> tuple[int, list[str]]:
+    """Registra cada filme em `amostra["filmes"]` (se ainda não estiver) e
+    soma as reviews faltantes ao `amostra.json` de `votacao_3.py`, no MESMO
+    formato que ele já usa. Devolve `(linhas novas, filmes registrados)` —
+    `(0, [])` se já estava tudo lá: execução idempotente.
 
-
-def _acrescentar_a_amostra(faltantes: dict[str, dict[str, list]]) -> int:
-    """Soma as reviews faltantes ao `amostra.json` de `votacao_3.py`, no
-    MESMO formato que ele já usa. Devolve quantas linhas foram acrescentadas
-    (0 se já estavam todas lá, execução idempotente)."""
+    [C14.1] Registrar o filme faz parte do fluxo: sem a entrada, o consenso
+    descartava o filme depois das chamadas pagas. A entrada vem de
+    `classificar_10.entrada_do_filme`, a mesma função de `montar_amostra()`.
+    Entradas já registradas não são tocadas."""
     amostra = json.loads(ARQ_AMOSTRA.read_text(encoding="utf-8"))
     tid_atual = taxonomia_id()
     if amostra["taxonomia_id"] != tid_atual:
@@ -86,29 +93,35 @@ def _acrescentar_a_amostra(faltantes: dict[str, dict[str, list]]) -> int:
             f"amostra.json sob taxonomia {amostra['taxonomia_id']!r}, "
             f"prompt atual é {tid_atual!r} — não é seguro estender.")
 
+    registrados = {f["slug"]: f for f in amostra["filmes"]}
+    filmes_novos = []
+    for slug in faltantes:
+        if slug not in registrados:
+            registrados[slug] = entrada_do_filme(slug)
+            amostra["filmes"].append(registrados[slug])
+            filmes_novos.append(slug)
+
     ja = {(r["slug"], r["bucket"], r["id"]) for r in amostra["reviews"]}
-    perfis = {}
     n_novas = 0
     for slug, por_bucket in faltantes.items():
-        if slug not in perfis:
-            perfis[slug] = _perfil_de_slug(slug)
+        perfil = registrados[slug]["perfil"]
         for bucket, reviews in por_bucket.items():
             for r in reviews:
                 chave = (slug, bucket, r.id)
                 if chave in ja:
                     continue
                 amostra["reviews"].append({
-                    "slug": slug, "perfil": perfis[slug], "bucket": bucket,
+                    "slug": slug, "perfil": perfil, "bucket": bucket,
                     "id": r.id, "nivel": r.nivel, "n_chars": r.n_chars,
                     "texto": r.texto,
                 })
                 ja.add(chave)
                 n_novas += 1
 
-    if n_novas:
+    if n_novas or filmes_novos:
         ARQ_AMOSTRA.write_text(json.dumps(amostra, ensure_ascii=False, indent=2),
                                encoding="utf-8")
-    return n_novas
+    return n_novas, filmes_novos
 
 
 def main() -> None:
@@ -133,18 +146,30 @@ def main() -> None:
               + f" = {n_slug}")
     print(f"\nTotal faltante: {total} reviews -> {total * 3} chamadas "
           f"(votação de 3)")
+    registrados = {f["slug"] for f in
+                   json.loads(ARQ_AMOSTRA.read_text(encoding="utf-8"))["filmes"]}
+    a_registrar = [s for s in slugs if s not in registrados]
+    if a_registrar:
+        print(f"Filmes a registrar em amostra['filmes']: {a_registrar}")
 
-    if args.dry_run or total == 0:
-        if total == 0:
-            print("Nada a classificar — a amostra já cobre a produção.")
+    if args.dry_run:
+        return
+
+    # Registro ANTES de qualquer chamada paga, e mesmo sem review faltante:
+    # um filme classificado e não registrado é o que o consenso recusa.
+    n_novas, filmes_novos = _acrescentar_a_amostra(faltantes)
+    print(f"\n{n_novas} linhas novas e {len(filmes_novos)} filme(s) "
+          f"registrado(s) em {ARQ_AMOSTRA.relative_to(RAIZ)}"
+          + (f": {filmes_novos}" if filmes_novos else ""))
+    checar_filmes_registrados(
+        json.loads(ARQ_AMOSTRA.read_text(encoding="utf-8")), [])
+
+    if total == 0:
+        print("Nada a classificar — a amostra já cobre a produção.")
         return
 
     from dotenv import load_dotenv
     load_dotenv(RAIZ / ".env")
-
-    n_novas = _acrescentar_a_amostra(faltantes)
-    print(f"\n{n_novas} linhas novas acrescentadas a "
-          f"{ARQ_AMOSTRA.relative_to(RAIZ)}")
 
     for n_passe in (1, 2, 3):
         print(f"\n--- passe {n_passe} ---")

@@ -53,6 +53,7 @@ from classificar_10 import (  # noqa: E402 — MESMO prompt/eixos/amostra/adapta
     PRECO_ENTRADA_MISS,
     PRECO_SAIDA,
     SEMENTE,
+    SLUGS_BRUTOS_RETIRADOS,
     SYSTEM,
     _lifts_do_filme,
     _mediana,
@@ -293,6 +294,33 @@ def _consensuar(passes: list[dict[tuple, dict]], chaves: list[tuple],
     return saida
 
 
+class FilmeForaDaAmostra(RuntimeError):
+    """Filme com reviews na amostra ou classificação nos passes, mas sem
+    entrada em `amostra["filmes"]`. O consenso filtra por essa lista, então
+    sem esta falha o filme some do consenso depois das chamadas pagas, sem
+    erro nem aviso (ABERTO.md C14.1: 7.068 chamadas no piloto)."""
+
+
+def checar_filmes_registrados(amostra: dict,
+                              passes: list[dict[tuple, dict]]) -> None:
+    """Falha ALTO se algum filme classificado ou amostrado não está em
+    `amostra["filmes"]`. Filme retirado de propósito
+    (`classificar_10.SLUGS_BRUTOS_RETIRADOS`) continua nos passes, que são
+    append-only, e é o único descarte permitido."""
+    registrados = {f["slug"] for f in amostra["filmes"]}
+    na_amostra = {r["slug"] for r in amostra["reviews"]} - registrados
+    classificados = ({c[0] for p in passes for c in p} - registrados
+                     - SLUGS_BRUTOS_RETIRADOS)
+    if na_amostra or classificados:
+        raise FilmeForaDaAmostra(
+            "filme(s) fora de amostra['filmes'] — o consenso os descartaria "
+            f"em silêncio. Com reviews na amostra: {sorted(na_amostra)}; "
+            f"classificados nos passes: {sorted(classificados)}. Registre com "
+            "`estender_classificacao_producao.py --slug X` (usa "
+            "`classificar_10.entrada_do_filme`) ou, se o filme foi retirado, "
+            "ponha-o em `classificar_10.SLUGS_BRUTOS_RETIRADOS`. Nada gravado.")
+
+
 def cmd_consenso() -> None:
     """[Entrega 1] Junta os passes 1-3 por chave e grava o consenso — só
     entra na saída quem pertence ao conjunto de FILMES da amostra corrente e
@@ -300,9 +328,14 @@ def cmd_consenso() -> None:
     append-only; sem esse cruzamento, um filme retirado continuaria voltando
     ao catálogo. O filtro é por slug, não por review: a amostra recebe
     extensões de cobertura de produção, e regenerar sua base não pode apagar
-    classificações ainda válidas de um filme ativo."""
+    classificações ainda válidas de um filme ativo.
+
+    [C14.1] Filme classificado e não registrado NÃO é filtrado: é
+    `FilmeForaDaAmostra`, antes de escrever. Só os retirados de propósito
+    passam pelo filtro."""
     passes = [_ler_passe(n) for n in (1, 2, 3)]
     amostra = json.loads(ARQ_AMOSTRA.read_text(encoding="utf-8"))
+    checar_filmes_registrados(amostra, passes)
     chaves_amostra = {
         (r["slug"], r["bucket"], r["id"]) for r in amostra["reviews"]
     }

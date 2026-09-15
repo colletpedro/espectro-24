@@ -141,6 +141,10 @@ polaridade se inverte conforme o grupo, e é isso que cria o conflito.
 lista continua literal; a aplicação por REGRA (eixo de origem) está proposta,
 com medição, em C14.16 — e a medição achou 2 itens `expectativa` já no ar.
 
+**2026-09-15:** a lista SAIU do código. A R13 é aplicada por regra (C14.16
+FECHADA), e os 2 itens no ar foram retirados. O destino do eixo (condições ou
+veredito) continua sendo a decisão aberta deste item.
+
 ### B3. Fase 1 → Fase 2: as condições substituem o veredito?
 
 A coexistência (condições + veredito + bullets juntos) é declaradamente **Fase
@@ -284,9 +288,10 @@ mascarava a divergência entre corpus e ficha, foi removido.
 ### C14. BLOQUEANTES DA EXPANSÃO (~300 filmes) — medidos no piloto de 20 (2026-09-10)
 Registrados pelo piloto da ETAPA 0 (estudo untracked em
 `docs/arquivo-de-estudos/piloto-expansao/ETAPA_0_PROPOSTA.md`). Corrigidos
-até agora: 6 (crash de n<10) e 8 (recoleta na publicação, na causa; o
-`get-out-2017` já publicado continua contaminado). Enquanto qualquer um
-estiver aberto, os 300 não devem ser disparados.
+até agora: 1 (descarte silencioso no consenso, 2026-09-15), 6 (crash de
+n<10), 8 (recoleta na publicação; `get-out-2017` republicado com n=40 em
+2026-09-15) e 16 (R13 por regra, 2026-09-15). Enquanto qualquer um estiver
+aberto, os 300 não devem ser disparados.
 
 1. **Filme novo é descartado pelo consenso em silêncio, DEPOIS das chamadas
    pagas.** `scripts/estender_classificacao_producao.py` acrescenta reviews a
@@ -302,6 +307,40 @@ estiver aberto, os 300 não devem ser disparados.
    `talk-to-me-2022`, `the-godfather`, `wicked-2024`, `wonka` — bruto
    recoletado em 22/08, entradas de 10–16/08). Nenhum leitor de produção lê o
    campo (`eixos.carregar_classificacao` lê só `taxonomia_id`).
+
+   **RESOLVIDO (2026-09-15).** Verificado antes de implementar, zero rede:
+   - **O contorno manual produziu o que o caminho oficial produz.** As 55
+     entradas foram comparadas campo a campo, e na ordem das chaves, com
+     `montar_amostra()` rodado hoje sobre o bruto. 48 são idênticas, e **as
+     20 do piloto estão entre elas**: nenhum metadado divergente. As 7
+     diferentes são as 7 dos 35 nomeadas acima, e só em `n_por_bucket`.
+   - **O achado lateral continua verdadeiro depois da correção.** As 7
+     seguem defasadas, e registrar não reescreve entrada existente (há teste
+     para isso). Quem lê `amostra["filmes"]`: o consenso lê só `slug`, os
+     relatórios de `votacao_3`/`gate_taxonomia` leem `perfil`, e o único que
+     lê `n_por_bucket` é o relatório de estudo de `classificar_10.py`.
+   
+   Correção:
+   - `classificar_10.entrada_do_filme(slug)` é a entrada de UM filme,
+     extraída de `montar_amostra()`; a saída deste é byte a byte idêntica
+     (4.677.771 bytes, antes e depois).
+   - `estender_classificacao_producao.py` registra o filme por essa função
+     ANTES da primeira chamada paga, e registra também quando não falta
+     review: é o conserto gratuito do estado do piloto. Em seguida confere o
+     registro e recusa pagar se ele faltar.
+   - `votacao_3.cmd_consenso` chama `checar_filmes_registrados` antes de
+     escrever: filme com review na amostra, ou classificado nos passes, fora
+     de `amostra["filmes"]` levanta `FilmeForaDaAmostra`, e o consenso não é
+     gravado. O único descarte que continua permitido é o do filme retirado
+     de propósito (`SLUGS_BRUTOS_RETIRADOS`; hoje `obsession-2026`, 38
+     registros por passe).
+   - Testes: `tests/test_registro_filme_amostra.py` (12). Cobrem a falha alta
+     (inclusive o estado exato do piloto), o registro com a entrada de
+     `montar_amostra()`, o registro antes do primeiro passe, a
+     idempotência, o dry-run que não grava, e a recusa de pagar sem
+     registro.
+   - Primeiro uso real: `get-out-2017` (item 8). A reexecução do dry-run
+     depois dele dá 0 faltantes.
 2. **`--republicar-tudo` sem `--slug` republica os 32 do catálogo**
    (`publicar_catalogo.filmes_pendentes`), refazendo a coleta de rede e
    apagando `passadas` (C10). A guarda `LIMITE_LOTE_SEM_CONFIRMACAO = 5` exige
@@ -471,6 +510,45 @@ estiver aberto, os 300 não devem ser disparados.
    `get-out-2017`. Com o filme excluído, `planejar()` passa nos 52 restantes.
    Harness e testes intocados: voltam a passar quando a amostra do filme
    voltar a ser consistente.
+
+   **FECHADO (2026-09-15): `get-out-2017` republicado com n=40, por decisão
+   do dono (classificar a review).**
+   - **Classificação.** Feita pelo caminho oficial já corrigido (item 1):
+     `estender_classificacao_producao.py --slug get-out-2017`. Uma review
+     (positivas, `viewing:1493797951`), 3 chamadas DeepSeek, todas `ok`,
+     nenhum fallback.
+   - **Consenso.** Passou de 7.844 para 7.845 linhas. Pelo hash por filme,
+     só `get-out-2017` mudou (120 → 121).
+   - **Verificador.** `aplicar-producao --slug get-out-2017`: 1 chamada,
+     `confirma=False`. `impacto_emocional` sai da review, que fica com
+     `atuacao`, `expectativa`, `roteiro_estrutura` e `tom_atmosfera`. No
+     consenso verificado só `get-out-2017` mudou;
+     `n_removidas_no_corpus` foi de 2.784 para 2.785. As 2 pendentes da C3
+     não foram tocadas.
+   - **Medido antes de gravar** (`republicar_eixos.py`, sem `--aplicar`):
+     - contraste continua `valorativo`;
+     - nenhuma célula cruza a margem;
+     - bullets idênticos;
+     - briefings de narrativa, veredito e condições idênticos;
+     - `n` vai de 39 para 40, e o limiar de 23,12 para 22,83 pp.
+   - **O efeito do lift relativo apareceu, sem cruzar.**
+     `tom_atmosfera`/negativas é de um bucket que não foi tocado, e o lift
+     dela vai de −21,1 para −22,5 pp. `critica_social`/medianas continua em
+     −22,5, mas o limiar desce. As duas ficam 0,33 pp abaixo da margem,
+     a mesma distância de `speak-no-evil-2022`.
+   - **Gravado** com `--aplicar --aceitar-mudanca-de-estado`: a única
+     mudança de estado é o `n`, que era o pedido. Só a chave `eixos` mudou.
+     `fonte_classificacao` sai, porque só existe quando classificada ≠
+     analisada.
+   - **Testes.** Os 2 testes de `test_aplicar_lei_margem.py` acima voltaram
+     a passar.
+   - **Condições publicadas (2026-09-15, aval do dono).** Saíram do lote
+     corrigido do piloto com `publicar_condicoes --slug get-out-2017`: 7
+     condições (3 em `vale_a_pena`, 4 em `talvez_evite`), com C030 (NEG-C)
+     retida pela regra. No arquivo, só `condicoes` entrou, no fim; o resto
+     ficou na ordem.
+   - **Continua aberto.** O achado lateral do checkpoint (`_ja_publicado`
+     não enxerga contaminação) não foi corrigido.
 9. **A busca da home não indexa o título do Letterboxd** (complementa E2). Ela
    indexa `ficha.titulo` (pt-BR do TMDB) e o slug; com filme internacional, o
    título que o leitor conhece falha: "memories of murder" e "get out"
@@ -719,7 +797,8 @@ estiver aberto, os 300 não devem ser disparados.
       condições, 2 retiradas (C030, C134), 3 sem condição publicável.
       **Nada publicado**: publicar espera o aval do dono.
 
-16. **R13 por REGRA, não por enumeração — PROPOSTO, NÃO IMPLEMENTADO.**
+16. **R13 por REGRA, não por enumeração — FECHADO (2026-09-15), estado no
+    fim do item.**
     `RETIRADAS` (`publicar_condicoes.py`) é literal; nesta sessão só ganhou
     C030 e C134. A R13 retém um EIXO e a lista enumera ITENS: com 300
     filmes ela diverge em silêncio, e o modo de falha é publicar o que a
@@ -745,6 +824,68 @@ estiver aberto, os 300 não devem ser disparados.
       regra (reter o que a [D3] classificou mal).
     Decisões do dono: (1) aplicar por regra; (2) o destino dos 2 no ar;
     (3) tema sem eixo bloqueia ou passa.
+
+    **2026-09-15 — DECIDIDO E IMPLEMENTADO.**
+    - **As decisões.**
+      - (a) Os 2 no ar SAEM: foram publicados por lista incompleta, não por
+        decisão.
+      - (b) Tema sem eixo BLOQUEIA o filme (`CondicaoInvalida`), não passa.
+      - (c) A lista literal some depois de validada.
+    - **Implementação.** `publicar_condicoes.retidas_pela_r13` retém a
+      condição cujo tema está em `EIXO_RETIDO_R13 = "expectativa"`, lido do
+      bloco `eixos` do filme. A leitura é por `condicoes.eixos_do_tema`, a
+      função que era `relatorio_revisao_condicoes._eixos_do_tema` e que o
+      relatório agora reusa. `RETIRADAS` não existe mais.
+    - **Validação antes de remover a lista**, zero LLM:
+      - a regra retém as 8 (`get-out-2017` pelo lote corrigido);
+      - além delas retém exatamente os 3 medidos acima;
+      - o dry-run do lote corrigido do piloto é idêntico sob a lista e sob
+        a regra: 18 filmes, 134 condições, 2 retiradas.
+    - **(a) aplicado**, com `publicar_condicoes --slug` sobre o bloco
+      publicado e medido antes:
+      - `talk-to-me-2022`: `talvez_evite` passa de 4 para 3 condições;
+      - `spider-man-across-the-spider-verse`: `vale_a_pena` passa de 4
+        para 3 condições;
+      - nenhuma coluna vazia nem abaixo do menor lado do catálogo (2);
+      - o diff de cada arquivo é só o item, 7 linhas removidas.
+    - **Achado do (a).** `spider-man` POS-E era o tema FORÇADO pelo par
+      obrigatório de NEG-A. Saiu sem marcar `par_recusado` no base, como nos
+      precedentes: `whiplash-2014` NEG-F e EEAAO NEG-F eram forçados por
+      POS-A e também foram retirados sem marca.
+    - **(b) atinge 2 filmes com o item NO AR:** `im-still-here-2024` POS-E
+      (*Valor histórico e educativo*) e `mother-2017` POS-A (*Símbolos e
+      metáforas religiosas*). NÃO foram republicados nesta sessão. A
+      próxima publicação de condições desses dois filmes será recusada até
+      alguém decidir o tema (reclassificar, retirar à mão ou aceitar).
+      **O que se sabe da causa: é INFERÊNCIA, porque a resposta crua da
+      rotulagem não é persistida.** A telemetria da rotulagem guarda os
+      rótulos descartados por estarem fora da taxonomia, mas não diz de
+      qual tema eles eram.
+      - `im-still-here-2024`: positivas tem exatamente 1 tema sem eixo
+        (POS-E) e exatamente 1 rótulo descartado, `crítica_social` com
+        acento — o eixo válido é `critica_social`. O mais provável é que o
+        tema tenha perdido o eixo por um erro de grafia do modelo.
+      - `mother-2017`: são 2 temas sem eixo, MED-A (*Simbologia e
+        alegoria*) e POS-A. O único rótulo descartado (`crítica_social`) é
+        das medianas. POS-A não tem rótulo descartado nenhum: o modelo
+        simplesmente não lhe deu eixo. MED-A não é tema de condição.
+    - **`publicar_condicoes` preserva o fim de arquivo do original.** A
+      republicação trocava o `\n` final do JSON do CLI, um diff sem
+      conteúdo; a regra agora é a mesma de `republicar_eixos`.
+    - **Testes, nenhuma asserção afrouxada.**
+      - O teste da lista literal virou a validação no dado: a regra ⊇ as 8,
+        e as extras são exatamente as 3.
+      - Novos: o lote do piloto sai igual; os 2 do (a) não publicam e
+        nenhuma coluna esvazia; tema sem eixo bloqueia (os 2 casos reais e
+        um sintético); `RETIRADAS` não pode voltar; fim de arquivo
+        preservado.
+    - **Continua aberto.** Os dois códigos "R13" (o do prompt e o do
+      relatório) não cobrem o mesmo caso (item 13, último ponto).
+
+    Suíte ao fim de 2026-09-15: **2038 coletados, 2034 passam, 3 falham, 1
+    xfail.** Os 2 testes de `get-out-2017` voltaram a passar. As 3 falhas
+    restantes são as de `woman-of-fire` (duas, item 6) e a do hero (item
+    10).
 
 17. **Rotulagem dos 38 pares obrigatórios — MATERIAL PRONTO, espera o
     dono.** `docs/arquivo-de-estudos/revisao-condicoes/ROTULAGEM_PARES_piloto-18.md`

@@ -153,28 +153,12 @@ def montar_amostra() -> dict:
         slug = d.name
         if slug in SLUGS_BRUTOS_RETIRADOS:
             continue
-        meta, todas = carregar(slug)
-        hist = {float(k): v for k, v in meta.get("histograma_bruto", {}).items()}
-        if not hist:
+        filme = _filme_da_amostra(slug)
+        if filme is None:
             continue
-        sel = selecionar(todas, hist)
-        total = sum(hist.values()) or 1
-        shares = {nome: round(100 * sum(v for k, v in hist.items() if lo <= k <= hi)
-                              / total)
-                  for nome, (lo, hi) in FRONTEIRAS.items()}
-        linha = {"slug": slug, "total_notas": sum(hist.values()),
-                 "shares": shares,
-                 "bucket_dominante": max(shares, key=shares.get),
-                 "n_por_bucket": {n: b.n_final for n, b in sel.items()},
-                 "estado_piso": {n: b.estado_piso for n, b in sel.items()}}
-        linha["perfil"] = perfil_de(slug, hist)
+        linha, reviews = filme
         resumo.append(linha)
-        for nome, bucket in sel.items():
-            for n in sorted(bucket.niveis):
-                for r in bucket.niveis[n].validas:
-                    itens.append({"slug": slug, "perfil": linha["perfil"],
-                                  "bucket": nome, "id": r.id, "nivel": r.nivel,
-                                  "n_chars": r.n_chars, "texto": r.texto})
+        itens.extend(reviews)
     return {
         "taxonomia_id": taxonomia_id(),
         "taxonomia": list(EIXOS),
@@ -185,6 +169,49 @@ def montar_amostra() -> dict:
         "filmes": resumo,
         "reviews": itens,
     }
+
+
+def _filme_da_amostra(slug: str) -> tuple[dict, list[dict]] | None:
+    """A entrada de `amostra["filmes"]` e as reviews de UM filme. `None` quando
+    o bruto não tem histograma (o filme não entra na amostra)."""
+    meta, todas = carregar(slug)
+    hist = {float(k): v for k, v in (meta or {}).get("histograma_bruto", {}).items()}
+    if not hist:
+        return None
+    sel = selecionar(todas, hist)
+    total = sum(hist.values()) or 1
+    shares = {nome: round(100 * sum(v for k, v in hist.items() if lo <= k <= hi)
+                          / total)
+              for nome, (lo, hi) in FRONTEIRAS.items()}
+    linha = {"slug": slug, "total_notas": sum(hist.values()),
+             "shares": shares,
+             "bucket_dominante": max(shares, key=shares.get),
+             "n_por_bucket": {n: b.n_final for n, b in sel.items()},
+             "estado_piso": {n: b.estado_piso for n, b in sel.items()}}
+    linha["perfil"] = perfil_de(slug, hist)
+    itens = []
+    for nome, bucket in sel.items():
+        for n in sorted(bucket.niveis):
+            for r in bucket.niveis[n].validas:
+                itens.append({"slug": slug, "perfil": linha["perfil"],
+                              "bucket": nome, "id": r.id, "nivel": r.nivel,
+                              "n_chars": r.n_chars, "texto": r.texto})
+    return linha, itens
+
+
+def entrada_do_filme(slug: str) -> dict:
+    """A entrada de `amostra["filmes"]` de um filme, pela MESMA função que
+    `montar_amostra()` usa para todos. É por ela que
+    `estender_classificacao_producao.py` registra um filme novo (C14.1): o
+    consenso só aceita filme registrado aqui."""
+    if slug in SLUGS_BRUTOS_RETIRADOS:
+        raise ValueError(f"{slug}: bruto retirado do corpus de produção "
+                         "(SLUGS_BRUTOS_RETIRADOS) — não pode ser registrado.")
+    filme = _filme_da_amostra(slug)
+    if filme is None:
+        raise ValueError(f"{slug}: bruto sem `histograma_bruto` — sem ele não "
+                         "há entrada de amostra (perfil, shares).")
+    return filme[0]
 
 
 _ARTHOUSE = {"perfect-days-2023", "anatomy-of-a-fall", "aftersun",

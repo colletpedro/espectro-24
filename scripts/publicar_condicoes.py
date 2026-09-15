@@ -35,12 +35,18 @@ técnica que pegou o footgun de republicação: envenenar os pontos de entrada
 com `pytest.fail` e rodar de verdade.
 
 **AS CONDIÇÕES DO EIXO `expectativa` NÃO SÃO PUBLICADAS** (§0, pendência
-editorial nomeada; R13 do relatório de revisão). A lista é literal aqui, e
-não uma regra derivada do eixo, de propósito: é uma decisão editorial sobre
-frases específicas, tomada por uma leitura humana, e derivá-la de um eixo
-faria o conjunto mudar sozinho quando o catálogo mudasse. **Essa escolha
-está sob revisão** (`ABERTO.md`, C14.16): com 300 filmes a lista mantida à
-mão diverge em silêncio, e o modo de falha é publicar o que a R13 proíbe.
+editorial nomeada; R13 do relatório de revisão). **Por REGRA, desde
+2026-09-15** (`ABERTO.md` C14.16, decisão do dono): retém a condição cujo
+tema de origem [D3] pôs em `expectativa`, lido do bloco `eixos` do próprio
+filme (`condicoes.eixos_do_tema`, a régua do relatório). Até então era uma
+lista literal de 8 itens; com 300 filmes ela divergia em silêncio, e o modo
+de falha dela é publicar o que a R13 proíbe. O da regra é reter o que a [D3]
+classificou mal — ausência, nunca publicação indevida. Validada antes de a
+lista sair: reproduz os 8, e retém mais 2 que estavam no ar
+(`talk-to-me-2022` NEG-C, `spider-man-across-the-spider-verse` POS-E).
+
+**Tema sem eixo BLOQUEIA o filme.** Sem eixo a regra não sabe se o tema é
+`expectativa`; passar seria falhar aberta.
 
 Uso:
     python scripts/publicar_condicoes.py --de /tmp/cond --todos --dry-run
@@ -61,20 +67,8 @@ from espectro24 import condicoes as C  # noqa: E402
 RESULTADO_DIR = RAIZ / "resultado"
 CHAVE = "condicoes"
 
-# §0 — as retiradas pela leitura humana (R13). Literal, e o comentário do
-# topo diz por que não é derivado do eixo — e que isso está sob revisão.
-RETIRADAS = {
-    # as seis da FASE 1, catálogo de 35
-    ("the-godfather", "NEG-B"),
-    ("hereditary", "NEG-B"),
-    ("interstellar", "NEG-B"),
-    ("longlegs", "NEG-B"),
-    ("parasite-2019", "NEG-C"),
-    ("everything-everywhere-all-at-once", "NEG-F"),
-    # as duas do piloto-18 (C030 e C134 do lote `0ec05ad3e326`)
-    ("get-out-2017", "NEG-C"),
-    ("whiplash-2014", "NEG-F"),
-}
+# §0 — o eixo cujas condições a R13 retém. Regra, não lista: ver o topo.
+EIXO_RETIDO_R13 = "expectativa"
 
 
 class CondicaoInvalida(Exception):
@@ -83,13 +77,35 @@ class CondicaoInvalida(Exception):
     nada na página dissesse isso."""
 
 
-def aplicar_retiradas(slug: str, bloco: dict) -> tuple[dict, int]:
-    """Tira do bloco as condições retiradas, sem tocar em mais nada."""
+def retidas_pela_r13(slug: str, bloco: dict, doc: dict) -> set[str]:
+    """Os `tema_origem` das condições do bloco que a R13 retém: o tema está
+    em `EIXO_RETIDO_R13` no bloco `eixos` publicado do filme. Tema sem eixo
+    (ou fora do índice) levanta `CondicaoInvalida` — bloqueia o filme."""
+    idx = C.indexar(doc)
+    retidas = set()
+    for lado in C.LADOS:
+        for c in bloco.get(lado) or []:
+            tid = c.get("tema_origem")
+            t = idx.get(tid)
+            eixos = C.eixos_do_tema(doc, t["bucket"], t["tema"]) if t else []
+            if not eixos:
+                raise CondicaoInvalida(
+                    f"{slug} [{tid}]: tema sem eixo no bloco `eixos` — a R13 "
+                    "não tem como saber se é `expectativa`. BLOQUEIO do filme "
+                    "(regra que falha aberta não protege); decisão humana.")
+            if EIXO_RETIDO_R13 in eixos:
+                retidas.add(tid)
+    return retidas
+
+
+def aplicar_retiradas(slug: str, bloco: dict, doc: dict) -> tuple[dict, int]:
+    """Tira do bloco as condições retidas pela R13, sem tocar em mais nada."""
+    retidas = retidas_pela_r13(slug, bloco, doc)
     bloco = json.loads(json.dumps(bloco))          # cópia, não muta a origem
     n = 0
     for lado in C.LADOS:
         antes = bloco.get(lado) or []
-        depois = [c for c in antes if (slug, c.get("tema_origem")) not in RETIRADAS]
+        depois = [c for c in antes if c.get("tema_origem") not in retidas]
         n += len(antes) - len(depois)
         bloco[lado] = depois
     return bloco, n
@@ -129,9 +145,10 @@ def validar_bloco(slug: str, bloco: dict, idx: dict) -> dict[str, list[str]]:
 
 def publicar_um(slug: str, origem: Path, *, dry_run: bool) -> dict:
     alvo = RESULTADO_DIR / f"{slug}.json"
-    doc = json.loads(alvo.read_text(encoding="utf-8"))
+    original = alvo.read_text(encoding="utf-8")
+    doc = json.loads(original)
     bruto = json.loads((origem / f"{slug}.json").read_text(encoding="utf-8"))
-    bloco, n_retiradas = aplicar_retiradas(slug, bruto[CHAVE])
+    bloco, n_retiradas = aplicar_retiradas(slug, bruto[CHAVE], doc)
 
     avisos = validar_bloco(slug, bloco, C.indexar(doc))
     # O aviso fica REGISTRADO na condição publicada: é a trilha de que a
@@ -146,7 +163,11 @@ def publicar_um(slug: str, origem: Path, *, dry_run: bool) -> dict:
         # A chave entra no FIM, estatuto aditivo (ficha §3[F], distribuição
         # §3[G]) — a ordem das chaves de topo existentes não se mexe.
         doc[CHAVE] = bloco
-        alvo.write_text(json.dumps(doc, ensure_ascii=False, indent=2) + "\n",
+        # Preserva o fim de arquivo do original (mesma regra de
+        # `republicar_eixos.aplicar`): o JSON republicado pelo CLI não tem
+        # `\n` final, e trocá-lo seria diff sem conteúdo.
+        fim = "\n" if original.endswith("\n") else ""
+        alvo.write_text(json.dumps(doc, ensure_ascii=False, indent=2) + fim,
                         encoding="utf-8")
     return {"slug": slug, "n": n, "retiradas": n_retiradas, "avisos": avisos,
             "sem_condicao": len(bloco.get("sem_condicao_publicavel") or [])}

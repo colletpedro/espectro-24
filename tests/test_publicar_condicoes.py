@@ -164,6 +164,19 @@ def test_publicar_altera_APENAS_a_chave_condicoes(sandbox, origem, documento):
             f"`condicoes`")
 
 
+@pytest.mark.parametrize("fim", ["", "\n"])
+def test_preserva_o_fim_de_arquivo_do_original(sandbox, origem, fim):
+    """O JSON republicado pelo CLI não tem `\\n` final; o de condições tinha.
+    Trocar o fim de linha é diff sem conteúdo (mesma regra de
+    `republicar_eixos`) — apareceu ao retirar os dois `expectativa` no ar."""
+    alvo = sandbox / f"{SLUG}.json"
+    alvo.write_text(alvo.read_text(encoding="utf-8").rstrip("\n") + fim,
+                    encoding="utf-8")
+    _pc().publicar_um(SLUG, origem, dry_run=False)
+    texto = alvo.read_text(encoding="utf-8")
+    assert texto.endswith("}" + fim) and not texto.endswith("}\n" + fim)
+
+
 def test_dry_run_nao_escreve_nada(sandbox, origem, documento):
     _pc().publicar_um(SLUG, origem, dry_run=True)
     depois = json.loads((sandbox / f"{SLUG}.json").read_text(encoding="utf-8"))
@@ -220,25 +233,142 @@ def test_as_seis_retiradas_nao_sao_publicadas(sandbox, origem):
     assert "NEG-B" not in ids
 
 
-def test_a_lista_de_retiradas_e_literal_e_completa():
-    """São oito, nomeadas. Se alguém derivar isto do eixo, o conjunto passa a
-    mudar sozinho quando o catálogo mudar — e é decisão editorial sobre
-    frases específicas, não uma regra.
+# As oito da antiga lista literal (seis da FASE 1 + C030 e C134 do piloto).
+# A lista saiu do código em 2026-09-15 (C14.16); fica aqui como gabarito.
+OITO_DA_LISTA = {
+    ("the-godfather", "NEG-B"),
+    ("hereditary", "NEG-B"),
+    ("interstellar", "NEG-B"),
+    ("longlegs", "NEG-B"),
+    ("parasite-2019", "NEG-C"),
+    ("everything-everywhere-all-at-once", "NEG-F"),
+    ("get-out-2017", "NEG-C"),
+    ("whiplash-2014", "NEG-F"),
+}
 
-    [piloto de expansão] Eram seis; entram C030 (`get-out-2017` NEG-C) e
-    C134 (`whiplash-2014` NEG-F), os dois de `expectativa` do piloto, que a
-    lista literal deixaria publicar contra a R13. A aplicação por REGRA
-    (eixo de origem) está proposta e não implementada (`ABERTO.md`)."""
-    assert _pc().RETIRADAS == {
-        ("the-godfather", "NEG-B"),
-        ("hereditary", "NEG-B"),
-        ("interstellar", "NEG-B"),
-        ("longlegs", "NEG-B"),
-        ("parasite-2019", "NEG-C"),
-        ("everything-everywhere-all-at-once", "NEG-F"),
-        ("get-out-2017", "NEG-C"),
-        ("whiplash-2014", "NEG-F"),
+
+def _temas_retidos_no_catalogo():
+    """`(slug, tema)` de todo tema de condição PEDIDO no catálogo que a regra
+    retém — `get-out-2017` pelo lote corrigido, o único sem bloco publicado."""
+    import votacao_3 as v3
+    slugs = {json.loads(l)["slug"] for l in
+             v3.ARQ_CONSENSO.read_text(encoding="utf-8").splitlines() if l.strip()}
+    fora = set()
+    for slug in slugs:
+        doc = json.loads((RAIZ / "resultado" / f"{slug}.json").read_text(
+            encoding="utf-8"))
+        bloco = doc.get("condicoes")
+        if bloco is None and (CORRIGIDO / f"{slug}.json").exists():
+            bloco = _bloco_corrigido(slug)
+        if not bloco:
+            continue
+        idx = C.indexar(doc)
+        for lado in C.LADOS:
+            for tid in (bloco.get("temas_pedidos") or {}).get(lado) or []:
+                t = idx[tid]
+                if _pc().EIXO_RETIDO_R13 in C.eixos_do_tema(doc, t["bucket"],
+                                                            t["tema"]):
+                    fora.add((slug, tid))
+    return fora
+
+
+def test_a_r13_e_REGRA_e_a_lista_literal_nao_existe_mais():
+    """Decisão do dono (C14.16): a lista mantida à mão divergia em silêncio
+    com o catálogo. Se ela voltar, volta o modo de falha dela."""
+    assert not hasattr(_pc(), "RETIRADAS")
+    assert _pc().EIXO_RETIDO_R13 == "expectativa"
+
+
+def test_a_regra_reproduz_as_oito_da_lista_e_so_retem_as_tres_medidas():
+    """Validação feita ANTES de a lista sair, travada no dado real: a regra
+    retém as oito, e além delas exatamente os três temas que a medição
+    achou — dois no ar até 2026-09-15 e um nunca publicado. Um quarto é
+    conversa, não surpresa: a classificação mudou por baixo de um filme."""
+    if not (RAIZ / "resultado" / "votacao-3" / "consenso.jsonl").exists():
+        pytest.skip("catálogo ausente neste checkout")
+    retidos = _temas_retidos_no_catalogo()
+    assert OITO_DA_LISTA <= retidos
+    assert retidos - OITO_DA_LISTA == {
+        ("talk-to-me-2022", "NEG-C"),
+        ("spider-man-across-the-spider-verse", "POS-E"),
+        ("mother-2017", "POS-C"),
     }
+
+
+def test_o_lote_do_piloto_sai_igual_sob_a_regra(capsys):
+    """O dry-run do lote corrigido dava 134 condições e 2 retiradas (C030,
+    C134) sob a lista; sob a regra dá o mesmo."""
+    if not CORRIGIDO.exists():
+        pytest.skip("lote corrigido do piloto ausente neste checkout")
+    total = retiradas = 0
+    for p in sorted(CORRIGIDO.glob("*.json")):
+        r = _pc().publicar_um(p.stem, CORRIGIDO, dry_run=True)
+        total += r["n"]
+        retiradas += r["retiradas"]
+    assert (total, retiradas) == (134, 2)
+
+
+# Os dois itens que a lista incompleta deixou no ar, com o texto publicado.
+NO_AR_ATE_2026_09_15 = {
+    "talk-to-me-2022": ("talvez_evite", {
+        "texto": "se frustra quando premissas promissoras se perdem em "
+                 "subtramas mal exploradas",
+        "tema_origem": "NEG-C", "bucket_origem": "negativas",
+        "tema_texto": "Subaproveitamento do potencial da premissa",
+        "rotulo_forca": "alguns"}),
+    "spider-man-across-the-spider-verse": ("vale_a_pena", {
+        "texto": "gosta de desfechos em aberto que criam forte expectativa "
+                 "para continuações",
+        "tema_origem": "POS-E", "bucket_origem": "positivas",
+        "tema_texto": "Cliffhanger e expectativa pela continuação",
+        "rotulo_forca": "alguns"}),
+}
+
+
+@pytest.mark.parametrize("slug", sorted(NO_AR_ATE_2026_09_15))
+def test_os_dois_expectativa_que_estavam_no_ar_nao_publicam(
+        tmp_path, monkeypatch, slug):
+    """Decisão (a) do dono: se a R13 diz que `expectativa` não publica, eles
+    não deveriam estar lá. Com a condição de volta na origem, a regra a tira
+    — e nenhuma coluna fica vazia."""
+    res = _sandbox_de(tmp_path, monkeypatch, slug)
+    doc = json.loads((res / f"{slug}.json").read_text(encoding="utf-8"))
+    bloco = json.loads(json.dumps(doc["condicoes"]))
+    lado, cond = NO_AR_ATE_2026_09_15[slug]
+    if cond["tema_origem"] not in {c["tema_origem"] for c in bloco[lado]}:
+        bloco[lado].append(cond)
+    r = _pc().publicar_um(slug, _origem_com(tmp_path, slug, bloco),
+                          dry_run=False)
+    assert r["retiradas"] == 1
+    pub = json.loads((res / f"{slug}.json").read_text(encoding="utf-8"))
+    assert cond["tema_origem"] not in {c["tema_origem"]
+                                       for c in pub["condicoes"][lado]}
+    assert all(pub["condicoes"][l] for l in C.LADOS)
+
+
+@pytest.mark.parametrize("slug,tema", [("im-still-here-2024", "POS-E"),
+                                       ("mother-2017", "POS-A")])
+def test_tema_sem_eixo_BLOQUEIA_o_filme(tmp_path, monkeypatch, slug, tema):
+    """Decisão (b) do dono: sem eixo a regra não sabe se é `expectativa`, e
+    regra que falha aberta não protege. Os dois casos reais do catálogo."""
+    res = _sandbox_de(tmp_path, monkeypatch, slug)
+    doc = json.loads((res / f"{slug}.json").read_text(encoding="utf-8"))
+    assert tema in {c["tema_origem"] for l in C.LADOS
+                    for c in doc["condicoes"][l]}
+    with pytest.raises(_pc().CondicaoInvalida) as e:
+        _pc().publicar_um(slug, _origem_com(tmp_path, slug, doc["condicoes"]),
+                          dry_run=True)
+    assert f"[{tema}]" in str(e.value) and "sem eixo" in str(e.value)
+
+
+def test_tema_sem_eixo_bloqueia_mesmo_sem_nenhum_expectativa(sandbox, origem,
+                                                             monkeypatch):
+    """A trava não depende de o filme ter tema `expectativa`: basta o bloco
+    `eixos` não conhecer o tema de uma condição."""
+    monkeypatch.setattr(C, "eixos_do_tema", lambda doc, b, t: [])
+    with pytest.raises(_pc().CondicaoInvalida) as e:
+        _pc().publicar_um(SLUG, origem, dry_run=True)
+    assert "sem eixo" in str(e.value)
 
 
 # ===========================================================================
