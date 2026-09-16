@@ -362,6 +362,10 @@ aberto, os 300 não devem ser disparados.
    Gemini 3.7 Flash usado nesta conta (US$ 0,75/M entrada, 3,75/M saída)
    **dobra em 1/1/2027** (1,50/7,50) — qualquer projeção de custo para os
    300 feita depois dessa data precisa recalcular, não só reescalar.
+
+   **2026-09-15 — a subestimação NÃO é a mesma em todo estágio Gemini.**
+   Medida agora em condições (item 18): 2,25×, não 3,8×. As duas ficam
+   registradas, com o estágio ao lado — usar a de um estágio no outro erra.
 4. **Scraping: 23,7 h medidas para 300, não 16 h.** 284 s/filme (mediana
    256, 177–457), 115,8 req/filme a 2,46 s/req. A projeção anterior usava o
    perfil do lote 1 (77,7 req/filme). Filmes obscuros pedem MAIS requisições
@@ -371,6 +375,10 @@ aberto, os 300 não devem ser disparados.
    classificação ~51 s + verificador ~12 s + publicação 60 s + condições
    ~18 s ≈ 7 min/filme → **~35 h para 300**, e **~US$ 31** pelo custo real
    do item 3 (sem veredito, que não foi gerado no piloto e falta medir).
+
+   **2026-09-15 — custo recalculado no item 18: ≈ US$ 33 hoje, ≈ US$ 58
+   depois de 1/1/2027.** A diferença para os ~US$ 31 aqui é o braço de
+   condições adotado (0,0324/geração medido, contra 0,025 estimado).
 5. **Disco — bloqueante condicional.** Medido **3,2 GiB livres (99%)** em
    2026-09-10, antes da coleta; em 2026-09-13 o volume tem **32 GiB livres
    (84%)**, espaço liberado fora da sessão do piloto. O cache HTML
@@ -643,6 +651,10 @@ aberto, os 300 não devem ser disparados.
     MÁQUINA (scraping, LLM); o item 4 (~35h/~US$31 para 300) é o pipeline
     até a publicação SEM condições — a leitura humana de 2.300 itens é
     tempo adicional, do dono, fora da conta.
+
+    **2026-09-15 — recalculado no item 18 sob o briefing adotado: ≈ 44
+    itens para leitura humana em 300 filmes**, não ~345. É a mesma taxa
+    medida em 55 filmes aplicada à escala, não medição direta em 300.
 12. **Relatório de revisão por lote — contorno do item 11, não solução
     (2026-09-13).** `scripts/relatorio_revisao_condicoes.py` gera, por
     lote, um markdown autocontido para o dono passar À MÃO por uma IA
@@ -711,7 +723,10 @@ aberto, os 300 não devem ser disparados.
 
     **Continua aberto:**
     - **taxa de recusa** — só existe na primeira geração sob o canal novo;
-      nenhuma geração foi feita nesta sessão;
+      nenhuma geração foi feita nesta sessão. **MEDIDA no item 18
+      (2026-09-15): 6,0% no braço sem as três mudanças do item 14, 3,9% no
+      braço adotado — o variante recusa MENOS, não mais; a guarda de
+      sobre-recusa não disparou.**
     - **exposição da chave, MEDIDA na telemetria existente:** em 12 dos 35
       filmes e 2 dos 18 os três candidatos tinham ao menos uma flag. Nesses,
       "menos flags" decide antes de "quem escreveu mais", e um candidato que
@@ -745,6 +760,12 @@ aberto, os 300 não devem ser disparados.
     - **Teto teórico:** cerca de 7,8% de duvidosos, sem previsão. Medir
       exige regerar (18 filmes ≈ US$ 0,45 só dá direção; 53 filmes ≈ US$ 1,3
       para separar do acaso). Briefing NÃO alterado.
+
+    **2026-09-15 — MEDIDO no experimento pareado (item 18): 3,7% nos temas
+    com ressalva, contra os 13,3% do braço sem as três mudanças** — melhor
+    que o teto teórico de 7,8% estimado aqui, porque aquele teto não
+    contava com o canal de recusa (item 13) reduzindo o braço controle
+    antes mesmo do briefing novo. Briefing ADOTADO como default.
 15. **Os validadores LÉXICOS reprovavam 7 das 18 correções do dono (39%) —
     (a)+(c) implementadas em 2026-09-14; o dry-run passa 18/18, publicação
     espera o aval do dono (estado no fim do item).** O dry-run de
@@ -869,6 +890,13 @@ aberto, os 300 não devem ser disparados.
         alegoria*) e POS-A. O único rótulo descartado (`crítica_social`) é
         das medianas. POS-A não tem rótulo descartado nenhum: o modelo
         simplesmente não lhe deu eixo. MED-A não é tema de condição.
+      **Decisão do dono (2026-09-15): deixar como está.** As duas condições
+      seguem no ar; nada é rerrotulado agora. O bloqueio só dispara se as
+      condições desses filmes forem republicadas, e aí a decisão volta.
+      Recomendação registrada, não aprovada: refazer a rotulagem só se um
+      dos dois precisar ser republicado, e medir no catálogo inteiro,
+      antes dos 300, quantos temas perderam o eixo por rótulo fora da
+      taxonomia (como `crítica_social`, com acento).
     - **`publicar_condicoes` preserva o fim de arquivo do original.** A
       republicação trocava o `\n` final do JSON do CLI, um diff sem
       conteúdo; a regra agora é a mesma de `republicar_eixos`.
@@ -955,6 +983,108 @@ aberto, os 300 não devem ser disparados.
       menor dos custos medidos. Os dois gabaritos (108 pares) ficam como
       conjunto de teste para qualquer régua futura — e ela terá de ser
       desenhada sem olhar para eles, ou validada num terceiro lote.
+
+18. **Experimento de briefing — ADOTADO como default de produção
+    (2026-09-15).** Resolve os itens 13 e 14: as três mudanças propostas no
+    item 14 (marca de ressalva R2, exemplos contrastivos R1, regra global de
+    arco R6/9h) foram implementadas como briefing SELECIONÁVEL
+    (`condicoes.VARIANTE_EXPERIMENTO`), testadas num experimento pareado
+    PRÉ-REGISTRADO antes de qualquer geração
+    (`docs/arquivo-de-estudos/experimento-briefing/ETAPA_0_DESENHO.md`) e,
+    com o resultado dentro da regra de decisão escrita ANTES da rotulagem,
+    viraram o default de `condicoes.gerar` no mesmo dia.
+
+    **Desenho, MEDIDO.** 55 filmes, os dois braços (`controle` = prompt e
+    briefing de antes; `variante` = os três acima), best-of-3 + retry iguais
+    à produção, 208 gerações. Réplica dupla nos 94 temas com ressalva
+    (estrato M) para dar poder ao desfecho principal; réplica única numa
+    amostra de 80 temas sem ressalva (estrato U), como guarda de regressão.
+    Rotulagem CEGA pelo dono: 506 itens, braço e réplica escondidos por
+    numeração embaralhada e hash do mapeamento impresso no relatório
+    (`aac57fbf…`), motivo das recusas oculto até o fim.
+
+    **Resultado, MEDIDO — todos os quatro testes pré-registrados:**
+    | desfecho | controle | variante | p |
+    |---|---|---|---|
+    | primário — duvidosos em M (94 temas × 2 réplicas) | 13,3% | 3,7% | **0,0010** |
+    | G1 — sobre-recusa, 436 temas | 13 só controle | 4 só variante | 0,049 (direção BOA) |
+    | G2 — rendimento confirmado em M | 149 | 168 | 0,0007 (direção BOA) |
+    | G3 — regressão em U (80 temas) | 3 só controle | 1 só variante | 0,625 (sem diferença) |
+
+    Significativo a favor e nenhuma guarda piorou → a regra de decisão
+    (seção 10.4 do desenho) manda ADOTAR. Sensibilidade nos 69 temas de M
+    fora dos filmes já vistos no piloto (dado genuinamente novo): p = 0,016.
+
+    **O que NÃO foi provado, e é para não ser lido como validado
+    individualmente.** R1 e a regra de arco (9h) não tinham poder nesta
+    escala — o dono marcou DUVIDOSO por R1 só 2 vezes e por R6-arco só 3, no
+    braço controle INTEIRO (94×2 + 80 temas). As duas entram porque o
+    PACOTE das três passou, não porque cada uma se sustenta isolada.
+    Registrado também em `condicoes.gerar`, ao lado do parâmetro.
+
+    **Implementação.** `condicoes.gerar(..., variante=VARIANTE_EXPERIMENTO)`
+    é o novo default. `variante=None` continua existindo, byte a byte o
+    prompt e o briefing de antes — para reproduzir o braço `controle` ou
+    reverter, não para uso corrente. `scripts/gerar_condicoes.py` ganhou
+    `--variante legado` para o mesmo fim; sem a flag, usa o default novo.
+    Suíte: **2062 coletados** (+24 desde a C14.16: 23 testes do briefing
+    variante e mais 1 líquido da correção de default), 2058 passam, as
+    mesmas 3 falhas de antes (itens 6 e 10), nenhuma asserção afrouxada.
+
+    **Custo real, MEDIDO pelos contadores crus (raciocínio incluído) —
+    corrige o item 3.** A subestimação do `uso` gravado **varia por
+    estágio**, e usar a de um estágio no outro erra:
+    - **narrativa: 3,8×** (medido no piloto, item 3 — 10.173 tokens de
+      raciocínio contra 1.384 visíveis);
+    - **condições: 2,25×** (medido aqui — 958.679 de raciocínio contra
+      257.116 visíveis, nas 208 gerações do experimento).
+
+    Condições reais no braço adotado (`variante`): **US$ 0,0324/geração**
+    (US$ 3,37 em 104 gerações), 30% acima da projeção de 0,025 usada até
+    aqui.
+
+    **Projeção dos 300, recalculada** (classificação/verificador/
+    síntese/rotulagem em DeepSeek, preço fixo; narrativa e condições em
+    Gemini, dobram em 1/1/2027):
+
+    | | por filme, hoje | por filme, depois de 1/1/2027 |
+    |---|---:|---:|
+    | classificação+verificador+síntese+rotulagem (DeepSeek) | 0,0252 | 0,0252 |
+    | narrativa (Gemini) | 0,0518 | 0,1036 |
+    | condições (Gemini, braço adotado) | 0,0324 | 0,0648 |
+    | **total** (sem veredito) | **≈ US$ 0,110** | **≈ US$ 0,194** |
+
+    Para 300 filmes: **≈ US$ 33 hoje, ≈ US$ 58 depois de 1/1/2027** — contra
+    a projeção antiga de ~US$ 31 do item 4, que usava 0,025 nas condições.
+
+    **Carga de revisão humana dos 300, sob a taxa nova — atualiza o item
+    11.** Taxa de duvidoso pareada, ponderada pela fração de temas com
+    ressalva medida no catálogo (96/444 = 21,6%, item 14):
+    - **braço adotado (variante): ≈ 1,8%** (3,7% em M, 1,3% em U);
+    - controle (só com o canal de recusa do item 13, sem as três mudanças):
+      ≈ 5,8% — já bem abaixo dos 14,9% originais, que são de ANTES do canal
+      de recusa e não comparáveis diretamente.
+
+    Com 8,07 temas pedidos/filme (item 14, 444/55) e 300 filmes: **≈ 2.421
+    itens gerados**, dos quais **≈ 44 para leitura humana** sob o briefing
+    adotado — contra a estimativa antiga de ~345 (14,9% de ~2.300, item 11).
+    **Não é medição direta em 300 filmes**, é a mesma taxa medida em 55
+    aplicada à escala; o catálogo de 300 é mais obscuro que o de hoje (item
+    4), e nada garante que a taxa de duvidoso se comporte igual em filme
+    pouco comentado.
+
+    **Achado a acompanhar, não decidido.** O braço variante teve MAIS
+    descartes pelo validador automático que o controle (8 contra 4 em 436
+    temas, réplica 1 — 1,8% contra 0,9%). Nenhuma das três guardas acusou
+    isso (a guarda cobre recusa DECLARADA e regressão de duvidoso, não
+    descarte pelo validador léxico), e o volume é pequeno demais para
+    testar à parte. Registrado para olhar se vira padrão na primeira
+    geração em volume real.
+
+    Material completo, untracked:
+    `docs/arquivo-de-estudos/experimento-briefing/` (desenho, pré-registro,
+    as duas gerações por filme com contadores crus, os dois relatórios de
+    rotulagem cega, o mapeamento selado e o resultado da análise).
 
 ### C15. DeepSeek vs. Gemini na classificação/rotulagem — fundamento corrigido, três medições novas
 

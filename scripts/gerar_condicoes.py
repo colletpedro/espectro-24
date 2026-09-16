@@ -19,6 +19,12 @@ escrever em `resultado/` — e recusa explicitamente se apontarem para lá.
 Uso:
     python scripts/gerar_condicoes.py --todos --saida /tmp/cond/exec1
     python scripts/gerar_condicoes.py --slug the-godfather --saida /tmp/x
+
+**[2026-09-15] Sem `--variante`, usa o briefing DEFAULT de `condicoes.gerar`**
+— desde esta data, o vencedor do experimento pareado
+(`docs/arquivo-de-estudos/experimento-briefing/`, ver ABERTO.md C14.18), não
+mais o de antes. `--variante legado` reproduz o braço `controle` do
+experimento byte a byte, para comparação ou reversão.
 """
 from __future__ import annotations
 
@@ -65,11 +71,18 @@ def _checar_saida(destino: Path) -> None:
             "estiver aberta.")
 
 
-def gerar_um(slug: str, destino: Path, *, n: int, modelo: str | None) -> dict:
+# `--variante` deste script, não o parâmetro de `condicoes.gerar` — aqui
+# `None` significa "usa o default de `gerar()`" (o vencedor do experimento);
+# só `"legado"` força o braço `controle`, explícito, nunca por omissão.
+VARIANTE_CLI = {None: C.VARIANTE_EXPERIMENTO, "legado": None}
+
+
+def gerar_um(slug: str, destino: Path, *, n: int, modelo: str | None,
+             variante_cli: str | None) -> dict:
     origem = RESULTADO_DIR / f"{slug}.json"
     d = json.loads(origem.read_text(encoding="utf-8"))
     t0 = time.time()
-    bloco = C.gerar(d, n=n, model=modelo)
+    bloco = C.gerar(d, n=n, model=modelo, variante=VARIANTE_CLI[variante_cli])
     dt = time.time() - t0
     destino.mkdir(parents=True, exist_ok=True)
     (destino / f"{slug}.json").write_text(
@@ -87,6 +100,10 @@ def main() -> None:
     ap.add_argument("--n", type=int, default=None,
                     help="best-of-N (default: config.BEST_OF_N)")
     ap.add_argument("--modelo", default=None)
+    ap.add_argument("--variante", choices=["legado"], default=None,
+                    help="omitido = default de produção (o vencedor do "
+                         "experimento de briefing); 'legado' força o braço "
+                         "`controle` de antes do experimento")
     args = ap.parse_args()
 
     destino = Path(args.saida)
@@ -100,14 +117,18 @@ def main() -> None:
     if not slugs:
         raise SystemExit("nada a fazer: use --todos ou --slug")
 
+    print(f"variante: {VARIANTE_CLI[args.variante] or 'legado (controle, "
+          f"pré-2026-09-15)'}", flush=True)
     resumo = []
     for slug in slugs:
-        r = gerar_um(slug, destino, n=n, modelo=args.modelo)
+        r = gerar_um(slug, destino, n=n, modelo=args.modelo,
+                    variante_cli=args.variante)
         b = r["bloco"] or {}
         nc = len(b.get("vale_a_pena", [])) + len(b.get("talvez_evite", []))
         ped = sum(len(v) for v in (b.get("temas_pedidos") or {}).values())
         # `recusou` é a taxa que a revisão precisa medir na primeira
-        # geração sob o canal de recusa (ABERTO C14.13).
+        # geração sob o canal de recusa (ABERTO C14.13); medida em volume
+        # pela primeira vez no experimento de briefing (C14.18): sem piora.
         print(f"{slug:40} pediu {ped:2}  publicou {nc:2}  "
               f"descartou {len(b.get('descartadas') or [])}  "
               f"recusou {len(b.get('sem_condicao_publicavel') or [])}  "

@@ -413,6 +413,93 @@ def risco_de_spoiler(tema: dict) -> bool:
     return any(r.search(plano) for r in _RE_SPOILER)
 
 
+# ===========================================================================
+# [experimento de briefing] MARCA DE RESSALVA — parte do briefing DE PRODUÇÃO
+# desde 2026-09-15; ver ABERTO.md C14.18
+# ===========================================================================
+# **O defeito medido.** Na revisão do lote `piloto-18`, 25 das 141 paráfrases
+# têm conector de ressalva; a condição tirou o conector em 22 das 25, e 7 dos
+# 8 duvidosos de R2 estão nesses 25. A regra 5 do prompt já manda carregar a
+# ressalva — repetir a regra geral não é o que falta. A correção LOCALIZA a
+# instrução, como a marca de spoiler faz, com o mesmo argumento de assimetria
+# de custo: marca de briefing nunca reprova nada.
+#
+# **Era selecionável; agora é o DEFAULT de `gerar()`** (o parâmetro
+# `variante` da função, mais abaixo). Ficou provado pelo experimento pareado
+# pré-registrado (`docs/arquivo-de-estudos/experimento-briefing/`, 2026-09-15,
+# 55 filmes, os dois braços, rotulagem cega): 13,3% → 3,7% de duvidosos nos
+# temas marcados (p = 0,0010), sensibilidade positiva em dado novo (p =
+# 0,016), três guardas sem piora. `variante=None` continua existindo,
+# reproduzindo o briefing de ANTES do experimento byte a byte — para
+# reprodução do experimento ou reversão, não para uso corrente. O ESTRATO do
+# experimento foi definido por `ressalvas_do_tema`, sobre a paráfrase —
+# anterior ao tratamento e idêntica nos dois braços. O léxico é o que
+# reproduz a contagem do piloto (25 de 141).
+VARIANTE_EXPERIMENTO = "experimento-briefing"    # produção desde 2026-09-15
+VARIANTES = (None, VARIANTE_EXPERIMENTO)
+
+_CONECTORES_DE_RESSALVA = (
+    "embora", "apesar", "mas", "com excecao", "porem", "contudo",
+    "no entanto", "ainda que", "entretanto",
+)
+_RE_RESSALVA = re.compile(
+    r"(?<![a-z])(?:" + "|".join(re.escape(c) for c in _CONECTORES_DE_RESSALVA)
+    + r")(?![a-z])")
+
+
+def _checar_variante(variante: str | None) -> None:
+    if variante not in VARIANTES:
+        raise ValueError(f"variante {variante!r} desconhecida — use uma de "
+                         f"{VARIANTES}")
+
+
+def _plano_posicional(texto: str) -> str:
+    """Minúsculo e sem acento, UM caractere para cada caractere do original —
+    a posição de um casamento vale no texto original, que é o citado."""
+    return "".join(
+        (unicodedata.normalize("NFKD", ch)[:1].lower()[:1] or ch) for ch in texto)
+
+
+def _ate(plano: str, ini: int, fins: str) -> int:
+    for i in range(ini, len(plano)):
+        if plano[i] in fins:
+            return i
+    return len(plano)
+
+
+def ressalvas_do_tema(tema: dict) -> list[str]:
+    """Os trechos de ressalva da paráfrase, citados do texto original.
+
+    Conector que ABRE a frase ("Embora X, Y") → o trecho vai até a vírgula:
+    é a oração concessiva. Conector no MEIO ("X, mas Y") → vai até o fim da
+    frase. Trecho contido num já citado não se repete. Vazio = sem marca.
+    """
+    ex = tema.get("exemplo") or ""
+    plano = _plano_posicional(ex)
+    trechos: list[str] = []
+    for m in _RE_RESSALVA.finditer(plano):
+        antes = plano[:m.start()].rstrip()
+        abre_frase = not antes or antes[-1] in ".;!?"
+        fim = _ate(plano, m.end(), ",.;!?" if abre_frase else ".;!?")
+        t = ex[m.start():fim].strip()
+        if t and not any(t in o for o in trechos):
+            trechos.append(t)
+    return trechos
+
+
+def marca_de_ressalva(trechos: list[str]) -> str:
+    """A linha do briefing variante. Sem algarismo e sem número de regra, pela
+    mesma garantia da marca de spoiler; o trecho é citado da paráfrase, que o
+    briefing já carrega."""
+    return ("       RESSALVA NESTE TEMA: "
+            + "; ".join(f"«{t}»" for t in trechos)
+            + ". Carregue as DUAS metades — o que o grupo afirma E esta "
+              "ressalva —, com conector (embora, apesar de, mas) ou com verbo "
+              "de concessão (aceita, tolera, mesmo com). Se a ressalva não "
+              "couber na frase, DECLARE o tema em `sem_condicao`, com a regra "
+              "e o motivo.")
+
+
 def peso_do_meio(idx: dict) -> dict | None:
     """[v1.9.37] O peso do MEIO-TERMO, quando ele é grande e não tem coluna.
 
@@ -515,7 +602,8 @@ def algarismos_proibidos_no_tema(tema: str) -> list[str]:
     return re.findall(r"\d+", _mascarar_anos_do_tema(tema))
 
 
-def algarismos_proibidos_no_briefing(b: dict) -> list[str]:
+def algarismos_proibidos_no_briefing(b: dict, *,
+                                     variante: str | None = None) -> list[str]:
     """Os algarismos do briefing serializado que a regra NÃO admite. Vazio =
     limpo.
 
@@ -526,7 +614,7 @@ def algarismos_proibidos_no_briefing(b: dict) -> list[str]:
     mascarado = {**b, "selecao": {
         lado: [{**t, "tema": _mascarar_anos_do_tema(t["tema"])} for t in ts]
         for lado, ts in b["selecao"].items()}}
-    return re.findall(r"\d+", serializar_briefing(mascarado))
+    return re.findall(r"\d+", serializar_briefing(mascarado, variante=variante))
 
 
 # ===========================================================================
@@ -565,8 +653,14 @@ def montar_briefing(output: dict) -> dict | None:
     }
 
 
-def serializar_briefing(b: dict) -> str:
+def serializar_briefing(b: dict, *, variante: str | None = None) -> str:
     """O briefing como texto, para a mensagem do usuário.
+
+    [experimento de briefing, 2026-09-15] `variante=None` é o briefing de
+    ANTES do experimento, byte a byte — não é mais o default de produção (que
+    é `gerar()`, não esta função; ver o parâmetro `variante` de `gerar`).
+    `VARIANTE_EXPERIMENTO` acrescenta a marca de ressalva — e só ela: a
+    seleção, a ordem e as demais linhas não mudam.
 
     **Nenhum algarismo sai daqui, e o título do filme também não** — as duas
     garantias do §3[V], herdadas literalmente. Uma exceção, estreita e por
@@ -578,6 +672,7 @@ def serializar_briefing(b: dict) -> str:
     O PESO e a NOTA DE AMOSTRA não entram: são concatenados pelo código na
     renderização, fora da saída do modelo. Determinística.
     """
+    _checar_variante(variante)
     L: list[str] = []
     for lado in b["ordem_colunas"]:
         bucket = BUCKET_DO_LADO[lado]
@@ -605,6 +700,10 @@ def serializar_briefing(b: dict) -> str:
                          "virada sobre a compreensão do filme. Sem "
                          "formulação com lastro, DECLARE o tema em "
                          "`sem_condicao`, com a regra e o motivo.")
+            if variante == VARIANTE_EXPERIMENTO:
+                trechos = ressalvas_do_tema(t)
+                if trechos:
+                    L.append(marca_de_ressalva(trechos))
         L.append("")
     if b["meio_dominante"]:
         L += ["O MEIO-TERMO É O MAIOR GRUPO DA RECEPÇÃO. O peso dos grupos é "
@@ -794,6 +893,96 @@ Responda APENAS com JSON puro:
 
 Cada tema recebido aparece UMA vez: numa das duas listas de condições OU em \
 `sem_condicao` — nunca nas duas."""
+
+
+# ===========================================================================
+# [experimento de briefing] PROMPT VARIANTE — três trocas, e só elas
+# ===========================================================================
+# Construído por SUBSTITUIÇÃO sobre o de produção, com cada âncora conferida:
+# se o prompt de produção mudar e uma âncora sumir, o módulo não importa —
+# melhor que um variante que deixou, em silêncio, de ser "produção + três
+# trocas". As trocas:
+#
+#   R1 — o "adjetivo avaliativo" abstrato da regra 2 vira os seis casos reais
+#        do piloto (os duvidosos de R1), no formato "o grupo diz X → escrever
+#        Y é RUIM". Só o lado RUIM: a correção é TIRAR a palavra. Sem
+#        validador de lista fechada — qualquer lista de hoje sairia destes seis
+#        casos, e o recall medido sobre eles seria circular.
+#   R2 — a regra 5 passa a apontar para a marca de ressalva do briefing.
+#   R6 — regra 9h, arco como trajetória, com os casos C010 e C058. O BOM de
+#        C058 é o texto do dono; o de C010 NÃO é: o do dono acrescenta "culpa
+#        e solidão", que a paráfrase não diz, e ensinaria o contrário da regra
+#        2 logo acima. Desfecho fica com o canal de recusa, que já existe.
+#
+# Os oito temas cujo texto entra aqui são IN-SAMPLE e ficam fora da análise.
+
+_TROCAS_DO_VARIANTE = (
+    ("2. FIDELIDADE. Só existe o que está no tema recebido. É PROIBIDO "
+     "introduzir assunto, adjetivo avaliativo, nome de pessoa ou informação de "
+     "enredo que não esteja ali.",
+     """\
+2. FIDELIDADE. Só existe o que está no tema recebido. É PROIBIDO introduzir \
+assunto, nome de pessoa ou informação de enredo que não esteja ali — e também \
+QUALIFICADOR que o grupo não usou: intenção, gênero, intensidade, status ou \
+juízo. O erro costuma ser UMA palavra, e a correção é TIRÁ-LA, não trocá-la \
+por outra. Casos reais:
+
+  · o grupo elogia a ambiguidade → RUIM: "ambiguidade deliberada" (intenção \
+que ninguém atribuiu)
+  · o grupo diz que o filme expõe a desigualdade no ambiente doméstico → \
+RUIM: "dramas que retratam hierarquias" (gênero que ninguém nomeou)
+  · o grupo compara o filme a trabalhos do diretor e de outros cineastas → \
+RUIM: "clássicos de mestres autorais" (status de cânone que ninguém conferiu)
+  · o grupo elogia atuações intensas e realistas → RUIM: "atuações que \
+conduzem um confronto marcante" (enredo e avaliação acrescentados)
+  · o grupo diz que o filme expõe a violência do sistema colonial → RUIM: \
+"críticas contundentes ao colonialismo" (intensidade que ninguém afirmou)
+  · o grupo valoriza os aspectos técnicos e temáticos → RUIM: "o rigor \
+técnico e temático" (qualidade específica no lugar de um elogio genérico)"""),
+    ("Ou ela carrega as duas, ou você declara o tema sem condição (regra 6, "
+     "código R2).",
+     "Ou ela carrega as duas, ou você declara o tema sem condição (regra 6, "
+     "código R2). Quando o briefing trouxer RESSALVA NESTE TEMA, o trecho "
+     "citado é justamente a metade que costuma sumir: carregue-a com conector "
+     "(embora, apesar de, mas) ou com verbo de concessão (aceita, tolera, "
+     "mesmo com)."),
+    ("10. ESCOPO.",
+     """\
+9h. ARCO É TRAJETÓRIA, MESMO SEM DESFECHO. A evolução de um personagem ou de \
+uma relação AO LONGO do filme — o que se desenvolve, se aproxima, se desgasta, \
+se transforma — é arco, e narrá-la diz ao leitor o que procurar. Nomeie o \
+TRAÇO, não a TRAJETÓRIA:
+
+  RUIM: aprecia o desenvolvimento gradual de confiança e cura mútua entre \
+personagens feridos
+  BOM:  se interessa por um vínculo de confiança entre personagens feridos
+  RUIM: aprecia atuações fortes e personagens moralmente ambíguos que se \
+desgastam na trama
+  BOM:  aprecia interpretações fortes de figuras complexas e de conduta \
+ambivalente
+
+10. ESCOPO."""),
+)
+
+
+def _aplicar_trocas(texto: str, trocas) -> str:
+    for velho, novo in trocas:
+        if texto.count(velho) != 1:
+            raise RuntimeError("âncora do prompt variante ausente ou repetida: "
+                               f"{velho[:60]!r}")
+        texto = texto.replace(velho, novo)
+    return texto
+
+
+PROMPT_CONDICOES_VARIANTE = _aplicar_trocas(PROMPT_CONDICOES,
+                                            _TROCAS_DO_VARIANTE)
+
+
+def prompt_de(variante: str | None) -> str:
+    """O prompt de sistema de cada braço. `None` é o de ANTES do experimento
+    (2026-09-15) — não é o default de produção; ver `gerar()`."""
+    _checar_variante(variante)
+    return PROMPT_CONDICOES if variante is None else PROMPT_CONDICOES_VARIANTE
 
 
 # ===========================================================================
@@ -1422,11 +1611,39 @@ def _somar(usos: list[dict]) -> dict:
 
 
 def gerar(output: dict, *, n: int = BEST_OF_N, provider: str | None = None,
-          model: str | None = None, gerar=None) -> dict | None:
+          model: str | None = None, gerar=None,
+          variante: str | None = VARIANTE_EXPERIMENTO) -> dict | None:
     """O bloco `condicoes` do JSON de resultado, pronto para gravar.
 
     `gerar` é o ponto de injeção dos testes: `(system, user) -> (bruto, uso,
     latencia_s)`.
+
+    [experimento de briefing, 2026-09-15] **O DEFAULT DESTE PARÂMETRO MUDOU.**
+    `variante=VARIANTE_EXPERIMENTO` é produção DESDE 2026-09-15: o briefing
+    marca a ressalva por tema (R2), o prompt troca a regra abstrata de
+    fidelidade pelos seis casos reais do piloto (R1) e ganha a regra global de
+    arco (9h, R6). `variante=None` continua existindo, byte a byte o prompt e
+    o briefing de ANTES do experimento — não para uso corrente, e sim para
+    REPRODUZIR o braço `controle` do experimento ou para REVERTER se um
+    defeito aparecer em volume (ver `ABERTO.md`, C14.18).
+
+    **O que sustenta a troca — experimento pareado pré-registrado**
+    (`docs/arquivo-de-estudos/experimento-briefing/`, 55 filmes, os dois
+    braços, rotulagem cega): desfecho primário 13,3% → 3,7% de duvidosos nos
+    94 temas com ressalva (p = 0,0010, teste de troca de sinal), sensibilidade
+    positiva nos 69 temas fora dos filmes já vistos no piloto (p = 0,016), e
+    as três guardas pré-registradas sem piora — sobre-recusa (p = 0,049, na
+    direção BOA: o variante recusa MENOS), rendimento confirmado (p = 0,0007,
+    também a favor) e regressão nos temas sem ressalva (p = 0,625, sem
+    diferença).
+
+    **O que NÃO foi provado, e não deve ser lido como validado
+    individualmente.** R1 (os exemplos contrastivos) e a regra de arco (9h)
+    não tinham poder nesta escala: o rotulador marcou DUVIDOSO por R1 só 2
+    vezes e por R6-arco só 3, no braço controle INTEIRO (94 temas × 2
+    réplicas + 80 de checagem) — abaixo do que qualquer teste distingue de
+    acaso. As duas entram no default porque o PACOTE das três mudanças
+    passou, não porque cada uma se sustenta isolada. Ver ABERTO.md, C14.18.
 
     **Não existe template determinístico de fallback, e é decisão de
     desenho.** Um template de condição seria "vale a pena se você gosta de
@@ -1436,10 +1653,12 @@ def gerar(output: dict, *, n: int = BEST_OF_N, provider: str | None = None,
     deste estágio é o VEREDITO**, que continua sendo gerado e renderizado ao
     lado (§0, FASE 1).
     """
+    _checar_variante(variante)
     b = montar_briefing(output)
     if b is None:
         return None
-    user = serializar_briefing(b)
+    user = serializar_briefing(b, variante=variante)
+    system = prompt_de(variante)
 
     if gerar is None:
         provider = S.provider_do_estagio(ESTAGIO, provider)
@@ -1452,7 +1671,7 @@ def gerar(output: dict, *, n: int = BEST_OF_N, provider: str | None = None,
 
     candidatos, usos, latencias = [], [], []
     for _ in range(n):
-        bruto, uso, dt = gerar(PROMPT_CONDICOES, user)
+        bruto, uso, dt = gerar(system, user)
         usos.append(uso)
         latencias.append(dt)
         candidatos.append(extrair(bruto))
@@ -1466,7 +1685,7 @@ def gerar(output: dict, *, n: int = BEST_OF_N, provider: str | None = None,
     # Degrau único: se alguma CONDIÇÃO tem flag, retry DIRECIONADO só delas.
     # (Recusa inválida não vai ao retry: fica registrada e o tema, sem voz.)
     if any(c["flags"] for c in medida["condicoes"]):
-        bruto, uso, dt = gerar(PROMPT_CONDICOES,
+        bruto, uso, dt = gerar(system,
                                user + "\n\n" + prompt_retry(medida))
         usos.append(uso)
         latencias.append(dt)
@@ -1583,4 +1802,6 @@ def gerar(output: dict, *, n: int = BEST_OF_N, provider: str | None = None,
     bloco = consolidar_recusas(bloco, idx)
     bloco["origem"] = ("llm" if any(bloco[l] for l in LADOS)
                        else "abstencao")
+    if variante is not None:
+        bloco["variante"] = variante
     return bloco
