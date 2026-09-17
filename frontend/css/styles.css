@@ -1743,6 +1743,37 @@ body.lightbox-aberto { overflow: hidden; }
 .group.is-tinted[data-group="medianas"]  { background: #e3b23c08; border-radius: var(--radius); padding: 14px 16px; }
 .group.is-tinted[data-group="positivas"] { background: #4d90e508; border-radius: var(--radius); padding: 14px 16px; }
 
+/* [2026-09-17] NOTA EDITORIAL do grupo — "modo reduzido" saiu do alerta
+   de sistema abaixo (`.mode-warning`) para esta gramática, a mesma do
+   disclosure `.theme__toggle` ("APROFUNDAR"): rótulo mono maiúsculo
+   pequeno, cor herdada do grupo, sem caixa, sem borda, sem ícone. Um
+   filete fino em cima é o único separador — o mesmo dispositivo editorial
+   que o resto da página usa para dividir seções (`.site-footer`,
+   `.creditos__bloco`), nunca uma caixa com fundo. NUNCA escondido — mesma
+   regra de produto do `.mode-warning`, só a linguagem visual muda: isto é
+   contexto (amostra pequena É sinal, não defeito), não um erro do
+   sistema. Ver ABERTO.md B5. */
+.group-note {
+  margin: 14px 0 6px;
+  padding-top: 10px;
+  border-top: 1px solid var(--border-soft);
+  font-size: 0.85rem;
+  line-height: 1.5;
+  color: var(--text-dim);
+}
+.group-note__label {
+  display: block;
+  font-family: var(--mono);
+  font-size: 0.64rem;
+  font-weight: 500;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  margin-bottom: 4px;
+}
+.group[data-group="negativas"] .group-note__label { color: var(--neg); }
+.group[data-group="medianas"]  .group-note__label { color: var(--med); }
+.group[data-group="positivas"] .group-note__label { color: var(--pos); }
+
 /* aviso de modo degradado — NUNCA escondido (regra de produto) */
 .mode-warning {
   display: flex;

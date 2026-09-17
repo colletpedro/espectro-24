@@ -1676,10 +1676,26 @@
     // apoiar essa cautela num número visível na barra — o aviso é onde ela
     // mora agora, e por isso continua sem nenhum algarismo de review
     // (`n_validas`/`alvo` seguem no JSON, só não em texto).
+    //
+    // [2026-09-17] "Modo reduzido" saiu do alerta de sistema (`warnBox`,
+    // caixa+ícone+borda âmbar) para uma nota editorial (`groupNote`,
+    // mesma gramática do disclosure "APROFUNDAR": rótulo mono maiúsculo
+    // na cor do PRÓPRIO grupo, sem caixa, sem ícone). Motivo: medido no
+    // catálogo de 99 filmes (ABERTO.md B5/B6-adjacente), amostra reduzida
+    // em `negativas` é sobretudo sinal de filme bem avaliado (Clube da
+    // Luta, O Poderoso Chefão, Soul, The Truman Show — nunca zero
+    // negativas, só abaixo do piso de 40) — não um problema de coleta, e
+    // o alerta de sistema contava a história errada. `sem_analise`,
+    // `idioma` e `escopo` (abaixo) continuam no `warnBox`: são debt
+    // editorial real (revisão manual pendente ou ausência total de
+    // análise temática), não uma nota demográfica benigna, e merecem
+    // continuar lendo como alerta.
     if (b.modo === "reduzido") {
-      el.appendChild(warnBox(
-        "Modo reduzido: amostra pequena para este grupo. "
-        + "Interprete com cautela."));
+      var ADJETIVO_GRUPO = {negativas: "negativas", medianas: "medianas",
+                            positivas: "positivas"};
+      el.appendChild(groupNote(
+        "Poucas críticas " + ADJETIVO_GRUPO[b.bucket] + " reúnem "
+        + "profundidade suficiente para compor este grupo."));
     }
     if (b.modo === "sem_analise") {
       var w = warnBox("Sem análise temática: amostra insuficiente neste grupo.");
@@ -1824,6 +1840,23 @@
       row.appendChild(ex);
     }
     return row;
+  }
+
+  // [2026-09-17] Nota editorial discreta — para avisos que são contexto,
+  // não alerta de sistema. Mesma gramática visual do `.theme__toggle`
+  // ("APROFUNDAR"): rótulo mono maiúsculo pequeno, cor herdada do grupo
+  // via `.group[data-group=...] .group-note__label` em styles.css, sem
+  // caixa, sem borda, sem ícone. `role="note"` continua (é um aside, não
+  // um erro), e continua SEMPRE visível — mesma regra de produto do
+  // `warnBox`, só a linguagem visual muda.
+  function groupNote(html) {
+    var el = document.createElement("div");
+    el.className = "group-note";
+    el.setAttribute("role", "note");
+    el.innerHTML =
+      '<span class="group-note__label">Leia com cautela</span>' +
+      '<span class="group-note__texto">' + html + '</span>';
+    return el;
   }
 
   function warnBox(html) {
